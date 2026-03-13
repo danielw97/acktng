@@ -2905,6 +2905,16 @@ D 0 3260 3 1 iron door cave side closed
 S
 #SPECIALS
 M 3201 spec_policeman
+M 3202 spec_rr_road_clerk
+M 3203 spec_rr_warden_captain
+M 3204 spec_rr_charter_keeper
+M 3205 spec_rr_convoy_marshal
+M 3210 spec_rr_peddler
+M 3211 spec_rr_shrine_keeper
+M 3212 spec_rr_ferryman
+M 3213 spec_rr_camp_cook
 M 3229 spec_cast_undead
+M 3235 spec_rr_pilgrim
+M 3236 spec_rr_ruin_scavenger
 S
 #$

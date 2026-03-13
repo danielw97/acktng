@@ -107,6 +107,16 @@ DECLARE_SPEC_FUN(spec_gnf_joint_scout);
 DECLARE_SPEC_FUN(spec_gnf_toll_collector);
 DECLARE_SPEC_FUN(spec_gnf_customs);
 DECLARE_SPEC_FUN(spec_gnf_courier);
+DECLARE_SPEC_FUN(spec_rr_road_clerk);
+DECLARE_SPEC_FUN(spec_rr_warden_captain);
+DECLARE_SPEC_FUN(spec_rr_charter_keeper);
+DECLARE_SPEC_FUN(spec_rr_convoy_marshal);
+DECLARE_SPEC_FUN(spec_rr_peddler);
+DECLARE_SPEC_FUN(spec_rr_shrine_keeper);
+DECLARE_SPEC_FUN(spec_rr_ferryman);
+DECLARE_SPEC_FUN(spec_rr_camp_cook);
+DECLARE_SPEC_FUN(spec_rr_pilgrim);
+DECLARE_SPEC_FUN(spec_rr_ruin_scavenger);
 
 void do_massivestrike(CHAR_DATA *ch);
 
@@ -254,6 +264,26 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_gnf_customs;
    if (!str_cmp(name, "spec_gnf_courier"))
       return spec_gnf_courier;
+   if (!str_cmp(name, "spec_rr_road_clerk"))
+      return spec_rr_road_clerk;
+   if (!str_cmp(name, "spec_rr_warden_captain"))
+      return spec_rr_warden_captain;
+   if (!str_cmp(name, "spec_rr_charter_keeper"))
+      return spec_rr_charter_keeper;
+   if (!str_cmp(name, "spec_rr_convoy_marshal"))
+      return spec_rr_convoy_marshal;
+   if (!str_cmp(name, "spec_rr_peddler"))
+      return spec_rr_peddler;
+   if (!str_cmp(name, "spec_rr_shrine_keeper"))
+      return spec_rr_shrine_keeper;
+   if (!str_cmp(name, "spec_rr_ferryman"))
+      return spec_rr_ferryman;
+   if (!str_cmp(name, "spec_rr_camp_cook"))
+      return spec_rr_camp_cook;
+   if (!str_cmp(name, "spec_rr_pilgrim"))
+      return spec_rr_pilgrim;
+   if (!str_cmp(name, "spec_rr_ruin_scavenger"))
+      return spec_rr_ruin_scavenger;
 
    return 0;
 }
@@ -400,6 +430,26 @@ char *rev_spec_lookup(void *func)
       return "spec_gnf_customs";
    if (func == spec_gnf_courier)
       return "spec_gnf_courier";
+   if (func == spec_rr_road_clerk)
+      return "spec_rr_road_clerk";
+   if (func == spec_rr_warden_captain)
+      return "spec_rr_warden_captain";
+   if (func == spec_rr_charter_keeper)
+      return "spec_rr_charter_keeper";
+   if (func == spec_rr_convoy_marshal)
+      return "spec_rr_convoy_marshal";
+   if (func == spec_rr_peddler)
+      return "spec_rr_peddler";
+   if (func == spec_rr_shrine_keeper)
+      return "spec_rr_shrine_keeper";
+   if (func == spec_rr_ferryman)
+      return "spec_rr_ferryman";
+   if (func == spec_rr_camp_cook)
+      return "spec_rr_camp_cook";
+   if (func == spec_rr_pilgrim)
+      return "spec_rr_pilgrim";
+   if (func == spec_rr_ruin_scavenger)
+      return "spec_rr_ruin_scavenger";
 
    return 0;
 }
@@ -472,6 +522,16 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_gnf_toll_collector\n\r");
    strcat(buf, "       spec_gnf_customs       \n\r");
    strcat(buf, "       spec_gnf_courier       \n\r");
+   strcat(buf, "       spec_rr_road_clerk     \n\r");
+   strcat(buf, "       spec_rr_warden_captain \n\r");
+   strcat(buf, "       spec_rr_charter_keeper \n\r");
+   strcat(buf, "       spec_rr_convoy_marshal \n\r");
+   strcat(buf, "       spec_rr_peddler        \n\r");
+   strcat(buf, "       spec_rr_shrine_keeper  \n\r");
+   strcat(buf, "       spec_rr_ferryman       \n\r");
+   strcat(buf, "       spec_rr_camp_cook      \n\r");
+   strcat(buf, "       spec_rr_pilgrim        \n\r");
+   strcat(buf, "       spec_rr_ruin_scavenger \n\r");
 
    return;
 }
@@ -3184,6 +3244,324 @@ bool spec_gnf_courier(CHAR_DATA *ch)
       "The relay keeps both cities informed on road conditions, faction activity, and travel safety. Better than waiting for a rider weekly.",
       "Lantern badge gets me through both city gates and the forest checkpoints at any hour. That's the compact's guarantee.",
       "Urgent dispatch, I run it in one stage. No overnight. I've done the full road in fourteen hours when needed."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+/*
+ * Roc Road ambient specials.
+ * Pattern: 8-way gate (~12.5% chance), 50/50 act vs say, always returns FALSE.
+ */
+
+bool spec_rr_road_clerk(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n makes a precise tally-mark in $s census ledger, counting the day's wagon traffic.",
+      "$n stamps a travel record with the Ledger Watch seal, adding it to the day's stack.",
+      "$n checks the relay station dispatch box, comparing its contents against $s daily log.",
+      "$n brushes road dust from $s ink-stained robes and returns to the portable writing desk.",
+      "$n squints at a wax tablet notation, scratches out an error, and rewrites it cleanly.",
+      "$n affixes a notation slip to the tally-board with a copper tack, adding to layers of records."
+   };
+   static const char *says[] = {
+      "Road funding is calculated from documented traffic counts. Every unmarked wagon is coin the charter never sees.",
+      "The Ledger Watch requires three verification marks per day. I've already filed two. The third goes out at sundown.",
+      "Midgaard's Magistrate Ledgerhouse receives monthly summaries. My daily tallies form the base data for road repair appropriations.",
+      "A blank entry on the census roll is a gap in the civic record. I don't leave gaps.",
+      "Yes, I count every traveler. No, you are not exempt. The hash-mark takes two seconds. Stand still."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 5)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_rr_warden_captain(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n studies a patrol assignment board, adjusting shift notations with a chalk stick.",
+      "$n paces the warden post perimeter, checking sight-lines along both stretches of road.",
+      "$n reads a dispatch report, folds it precisely, and slides it into the locked post-box.",
+      "$n reviews a wanted notice against $s register, then pins it to the duty-board with practiced authority.",
+      "$n speaks a quiet word with a junior warden, gesturing toward the road's western stretch.",
+      "$n polishes the badge of rank on $s chest with a corner of the patrol cloak, force of long habit."
+   };
+   static const char *says[] = {
+      "This post covers the full charter march from the gate to the boundary stone. Three wardens per shift, rotating dawn and dusk.",
+      "The Three Civic Oaths are not decoration. Every warden recites them at shift change. Every single shift.",
+      "I've requisitioned repair crews for the drainage channel at the grain field crossing. The order is six weeks old. It's still pending.",
+      "Any report of trouble west of the boundary stone goes to both my log and the convoy compact. Joint jurisdiction means joint notification.",
+      "The warden who doesn't know every face on their stretch doesn't know their stretch. Walk it until you do."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 5)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_rr_charter_keeper(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n works a stiff brush along a charter marker slab, clearing lichen from the carved letters.",
+      "$n dips a small brush into a pot of blue pigment and carefully repaints a faded inscription.",
+      "$n leans close to a worn marker, tracing the oldest layer of text with one finger.",
+      "$n marks a slab number in a maintenance register, noting the date and condition.",
+      "$n straightens from a finished slab and moves to the next, adjusting the pigment pot on $s belt."
+   };
+   static const char *says[] = {
+      "Three eras of script on most of these slabs. The oldest predates Midgaard's current charter system by at least two centuries.",
+      "The inscriptions are the road's legal memory. As long as they're legible, the charter is defensible in arbitration.",
+      "Someone tried to chip off a slab last season. Probably a collector. The Magistrate Ledgerhouse treats it as property destruction.",
+      "I repaint in Midgaard blue because that's the authorized pigment. Using the wrong blue is a recordkeeping violation. I know how that sounds.",
+      "The pre-charter text underneath — mostly boundary claims and toll schedules. Very old, very clear about who was here first."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_rr_convoy_marshal(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n raises $s signal horn and blows two short blasts, directing a wagon to the waiting lane.",
+      "$n checks a cargo manifest against $s route schedule, tracing columns with a gloved finger.",
+      "$n calls out convoy spacing instructions to a driver, gesturing the required gap with both arms.",
+      "$n marks a departure time in the route ledger, comparing it against the estimated schedule.",
+      "$n adjusts the compass-and-wall sash at $s chest and scans the road west with practiced efficiency.",
+      "$n speaks through the brass speaking-trumpet, relaying convoy departure clearance down the line."
+   };
+   static const char *says[] = {
+      "Convoy compact schedules run on the tide clock, not the sun. If you don't know the difference, don't drive for Kiess.",
+      "I have wagons staged and escorts short. Until the escorts arrive, nothing moves. That is not negotiable.",
+      "Midgaard charter authority ends at the boundary stone. West of there, convoy marshal clearance is the operative document.",
+      "The compass-and-wall mark on a manifest means the Trade Syndics have verified the cargo and guaranteed the route. It means something.",
+      "Emergency compact twelve authorizes marshal override of warden orders in active convoy situations. I have a copy if anyone wants to check."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 5)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_rr_peddler(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n reorganizes the wares on $s handcart, hanging the loudest pots where travelers will hear them.",
+      "$n holds up a small sealed vial to the light, checking the contents before repacking it.",
+      "$n scribbles a price adjustment in $s trade ledger, rubbing out the old figure with a thumb.",
+      "$n shifts the handcart to the road verge as a convoy passes, then rattles back into position.",
+      "$n counts coins from a belt pouch, rechecks the amount, and slides them back with practiced speed."
+   };
+   static const char *says[] = {
+      "Three days from Midgaard, two to Kiess if the road's clear. I run it twice a month. Know every pothole.",
+      "Best thing I carry? Waterproofing wax and spare lamp wicks. Every patrol warden needs them. Regular customers.",
+      "Heard there's tollbreak trouble at the ford. I came the long way around. Add a day, keep my goods.",
+      "Kiess prices are better for finished goods. Midgaard pays more for raw materials and old script rubbings. I move both ways.",
+      "The ridge hills are wolf territory after dark. I sleep at the mule rest now, not the open verge. Learned that the hard way."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_rr_shrine_keeper(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n fills the shrine's lamp hollow with a careful measure of oil from a small flask.",
+      "$n traces the carved blessing text with one finger, lips moving silently.",
+      "$n places a spray of fresh wildflowers in the shrine's hollow, replacing the dried ones.",
+      "$n sweeps fallen leaves away from the shrine base with a small broom.",
+      "$n checks the carved lettering for weathering damage, noting affected characters with a small mark."
+   };
+   static const char *says[] = {
+      "The blessing is older than the road. The shrine was here first. The road builders worked around it.",
+      "I serve the road, not either city. Midgaard wardens leave coin. Kiess marshals leave rations. I thank both and serve neither.",
+      "The text reads: safe passage in, safe passage out, and honest account of what passes between. That's the whole blessing.",
+      "Travelers used to leave tokens and written names here. It's less common now. The road feels less sacred than it once did.",
+      "Three waystone shrines between here and the hills. I tend all three. The oil cache is at the base of each one."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_rr_ferryman(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n tests the punt's mooring rope, checking the iron ring on the bank for rust.",
+      "$n runs a hand along the punt's flat bottom, checking for splits in the planking.",
+      "$n scans the river current upstream, reading the water's color and speed with a practiced eye.",
+      "$n adjusts the fare board on its post, straightening the board against the wind.",
+      "$n poles the punt a few feet out and back, checking the balance under $s own weight."
+   };
+   static const char *says[] = {
+      "Current's running fast today. Add ten minutes to the crossing. I'll pole from the upstream side.",
+      "Fare's posted in both Midgaard coin and Kiess trade credit. I take either. I don't take barter — too much argument.",
+      "Downstream there's a spot where the bank undercuts. Don't walk the verge south of the ford at night. The ground gives.",
+      "The contraband runners use the river shallows half a mile south. The wardens know and don't have enough people.",
+      "I've crossed this river thousands of times. The ford stones haven't shifted in forty years. The crossing is sound."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_rr_camp_cook(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n stirs the cookpot with a long ladle, adding a pinch of salt from the tin.",
+      "$n sets a row of clay bowls ready beside the fire, wiping each one clean with a rag.",
+      "$n fans the cookfire with a square of oiled cloth, building the heat evenly.",
+      "$n tastes a spoonful of the stew, makes a face, and reaches for the salt tin again.",
+      "$n breaks a dry root vegetable in half and drops both pieces into the bubbling pot."
+   };
+   static const char *says[] = {
+      "Stew's ready when the wardens come off rotation. Enough for the convoy crew too if they brought bowls.",
+      "Root vegetables from the farmland stretch, dried meat from the last Kiess resupply. Hot and it won't give you the gripes.",
+      "I've been cooking for road crews since before the last road tax revision. Long time to learn what keeps people moving.",
+      "Convoy marshals pay in Kiess credit. Wardens pay in Midgaard coin. I balance both columns and it comes out square most months.",
+      "The fire's banked low at night. No need to announce yourself to every ridge wolf on the Banner Hills."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_rr_pilgrim(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n lowers $s pack to the ground, rolling $s shoulders with a wince of relief.",
+      "$n takes a careful drink from the clay water jar, allowing only a measured sip.",
+      "$n adjusts the cord holding $s sandals together, retying a knot that has slipped loose.",
+      "$n reads a worn slip of paper, folds it carefully, and tucks it back into a pocket.",
+      "$n stands at the road's edge and looks west for a long moment before resuming the walk."
+   };
+   static const char *says[] = {
+      "How far to the next waystone shrine? I've been walking since the gate and I haven't seen water.",
+      "I know how I look. I've been on this road for eight days. I know how long it takes.",
+      "The wardens at the gate told me the road west was clear. They said that three days ago.",
+      "There's a shrine keeper a few miles back who gave me oil for my lamp without being asked. The road still has grace in it.",
+      "I'm not lost. I know exactly where I'm going. I'm just not certain I'll make it."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_rr_ruin_scavenger(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n taps a fragment of carved stone with $s small hammer, listening to the ring.",
+      "$n makes a charcoal rubbing of an inscription, pressing the cloth carefully against the stone.",
+      "$n sifts loose rubble through gloved fingers, setting aside pieces that show worked edges.",
+      "$n compares a rubbing against a reference sketch in $s field notebook, nodding at a match.",
+      "$n sweeps debris from a section of ancient flagstone, revealing the worn relief beneath."
+   };
+   static const char *says[] = {
+      "The Granite Arcade in Midgaard pays for authenticated rubbings. Authenticated means I witnessed the inscription in place.",
+      "This road bed has three layers underneath. The deepest layer predates everything with a name. I've found script nobody can read.",
+      "Don't disturb the marked cairns further in. The ruin custodians react to that. I learned by watching someone else learn.",
+      "The best fragments are the ones that were buried, not exposed. Burial preserves the script. Counterintuitive but true.",
+      "I'm not a thief. Every piece I recover goes to the Midgaard archive with full provenance documentation."
    };
 
    if (!IS_AWAKE(ch) || is_fighting(ch))
