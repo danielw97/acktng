@@ -21,7 +21,7 @@ PROF    =
 #SOLARIS_FLAG = -Dsun -DSYSV -Wno-char-subscripts
 #SOLARIS_LINK = -lnsl -lsocket -lresolv
 
-C_FLAGS = -O -g2 -Wall -DACK_43 $(PROF) $(SOLARIS_FLAG)
+C_FLAGS = -O -g2 -Wall -DACK_43 $(PROF) $(SOLARIS_FLAG) -Iheaders -Iai/headers -Itests/headers
 L_FLAGS = -O -g2 -lcrypt $(PROF) $(SOLARIS_LINK)
 
 OBJDIR = build/obj
@@ -109,15 +109,15 @@ purge:
 	rm -rf $(OBJDIR) tests/unit-test-* ack ack.exe ../area/core *~
 	$(MAKE) -C ../web clean
 
-$(OBJDIR)/%.o: %.c ack.h
+$(OBJDIR)/%.o: %.c headers/ack.h
 	@mkdir -p $(dir $@)
 	$(CC) -c $(C_FLAGS) -o $@ $<
 
-$(OBJDIR)/ai/%.o: ai/%.c ack.h
+$(OBJDIR)/ai/%.o: ai/%.c headers/ack.h
 	@mkdir -p $(dir $@)
 	$(CC) -c $(C_FLAGS) -I. -o $@ $<
 
-$(OBJDIR)/tests/%.o: tests/%.c ack.h
+$(OBJDIR)/tests/%.o: tests/%.c headers/ack.h
 	@mkdir -p $(dir $@)
 	$(CC) -c $(C_FLAGS) -I. -o $@ $<
 
