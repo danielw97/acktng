@@ -89,17 +89,19 @@ random table gated by mob level and cast it on a fighting target.
 
 ---
 
-## Ambient city specials
+## Midgaard ambient specials
+
+**Builder policy: these specials are specific to Midgaard (`area/midgaard.are`) and must not be assigned to mobs in other areas.** Their speech references Midgaard-specific institutions (the Violet Compact, the Lantern Reforms, the Lantern Registry, the Temple of the Resounding Heart) and their flavor is grounded in Midgaard's civic lore. Using them in other cities produces anachronistic or incoherent NPC dialogue.
 
 These fire out of combat only. They use `number_bits(3)` as an 8-way gate (approximately 12.5% chance per pulse that anything happens), then randomly emit an action (`act()`) or a spoken line (`do_say()`). They always return `FALSE` — they provide atmosphere, not game-state changes.
 
 | Special | Flavor / setting | Sample lines |
 |---|---|---|
-| `spec_lamplighter` | Lamp maintenance worker. Trims wicks, checks oil levels, consults route cards. | *"No ward unlit, no traveler uncounted — that's the Oath, and that's the work."* |
-| `spec_warden` | Arcane-compact checkpoint warden. Checks sigils, consults registry ledger, references containment doctrine. | *"All arcane goods require registry notation before this threshold. The Compact is clear."* |
-| `spec_vendor` | Street market vendor. Calls out goods, discusses tariffs and supply chains. | *"Tariff board raised the western-goods levy again. Prices have to reflect it, nothing personal."* |
-| `spec_lay_sister` | Temple memorial keeper. Tends lamps at markers, reads liturgy, recites the Three Oaths. | *"The Temple maintains rolls of the uncounted. Those removed from the ledgers are still remembered here."* |
-| `spec_laborer` | Day laborer. Handles heavy loads, checks day-tokens, talks about working conditions. | *"Levy goes up, day-rate stays flat. Cinder debt, they call it — compounds whether you pay or not."* |
+| `spec_lamplighter` | **Midgaard only.** Lamp maintenance worker on the Kindling Watch route. Trims wicks, checks oil levels, consults route cards, references the Lantern Registry. | *"No ward unlit, no traveler uncounted — that's the Oath, and that's the work."* |
+| `spec_warden` | **Midgaard only.** Violet Compact arcane-checkpoint warden. Checks sigils, consults registry ledger, references Compact containment doctrine and passage to the below. | *"All arcane goods require registry notation before this threshold. The Compact is clear."* |
+| `spec_vendor` | **Midgaard only.** Midgaard crossroads street market vendor. Calls out goods, references Roc Road supply chains and Midgaard-specific tariff boards. | *"Tariff board raised the western-goods levy again. Prices have to reflect it, nothing personal."* |
+| `spec_lay_sister` | **Midgaard only.** Temple of the Resounding Heart memorial keeper. Tends lamps, reads liturgy, recites the Three Oaths as observed in Midgaard's Temple tradition. | *"The Temple maintains rolls of the uncounted. Those removed from the ledgers are still remembered here."* |
+| `spec_laborer` | **Midgaard only.** Midgaard day laborer. References Midgaard-specific day-token system, cinder debt, and work-broker practices. | *"Levy goes up, day-rate stays flat. Cinder debt, they call it — compounds whether you pay or not."* |
 
 ---
 
@@ -116,6 +118,36 @@ distinctive voice and behavior. All follow the same ambient-only pattern
 | `spec_kiess_scout` | Forest Confusion scout, Wall Command intelligence feed | Post-patrol debrief behavior: marks maps, discusses mist-line movement, shares centaur sign reports and bell-post status. | *"The mist line's moved another three hundred paces north since last week. That's fast for this season."* |
 | `spec_kiess_orator` | Prism Square orator | Civic speech delivery: addresses an audience with a prepared speech on founding compact history, Evermeet's fall, and the city's design principles. Always emits both an action and a speech. | *"Three factions, one peace code. Not because they agree — they rarely agree — but because the alternative is Evermeet."* |
 | `spec_kiess_wall_officer` | Wall Command duty officer | Military command room behavior: reviews duty roster, traces patrol routes on tactical map, dispatches couriers, speaks on doctrine and threat posture. | *"Wall Command doesn't guess at threat levels. We assess, we document, we act on evidence. That is the doctrine."* |
+
+---
+
+## Kowloon ambient specials
+
+Specials introduced for the Kowloon area (`area/kowloon.are`) to give the
+city's NPCs distinctive civic voice grounded in the Neon Covenant's history
+and the five founding institutions. All follow the same ambient-only pattern
+(8-way gate, action or speech, always return `FALSE`) unless noted otherwise.
+
+| Special | Intended mob roles | Flavor / setting | Sample lines |
+|---|---|---|---|
+| `spec_kowloon_shopkeeper` | All Kowloon shop NPCs: weaponsmith, armorsmith, reagent keeper, provisioner, fletcher, jeweler, pawn broker, chandler, general merchant | Western market floor: hangs wares on hooks (old floating-stall tradition), checks jade inspection ribbons, greets arrivals, discusses Ledgerhouse dues, Guild Concordat minimums, and tariff-cleared goods. | *"Everything on this counter is Ledgerhouse-cleared. Tariff paid, weights checked, ribbon current."* |
+| `spec_kowloon_gate_captain` | The four gate captains (Jade, Iron, Lantern, Tide) and Harbor Syndic inspector | Gate inspection and security doctrine: reviews manifests against the Syndic ledger, scans approaches, signals subordinate guards, checks courier permits, references the seasonal rotation policy. | *"Seasonal rotation isn't tradition — it's policy. No one builds loyalty at a chokepoint. The Covenant was specific."* |
+| `spec_kowloon_courier` | Lantern-runners and courier messengers of the Courier Lantern Office | Dispatch and route service: checks seal integrity, consults route cards, polishes the brass lantern badge, records delivery confirmations, scans junction bulletin boards. | *"The badge gets you through any gate at any hour. You'd be surprised how useful that is at second bell."* |
+| `spec_kowloon_innkeeper` | Copper Tide innkeeper at the Inn | Inn hospitality with southern-quarter frontier character: checks guest ledger, adjusts counter lamp, sets tea for arrivals, references the city's promise to receive battered travelers. | *"If you're recall-safe and breathing, Kowloon will receive you. That's the city's oldest promise. We're just where you start."* |
+| `spec_kowloon_corsair` | River corsairs of Captain Blacktide Shen's probing crews (hostile mobs in harbor/dock areas) | Reconnaissance and threat: watches patrol timing, marks dock patterns, references Blacktide Shen's three-year surveillance campaign. Fires out of combat only; always returns `FALSE`. | *"Shen knows these channels better than the Syndic charts do. Every gate timing, every patrol gap. Patience is strategy."* |
+| `spec_kowloon_sweeper` | Street sweeper | Municipal maintenance with flood-control context: pushes debris into storm-drain grates, marks sector tallies, explains the drainage system's importance to flood survival. | *"The drainage has to stay clear. Flood season, one blocked grate backs up a whole district quadrant."* |
+| `spec_kowloon_magistracy` | Plaza inspector, civic scribe, customs clerk | Jade Magistracy civic authority: stamps permit filings, checks display ribbons against the audit register, cites the Covenant Schedule, explains the color-coded licensing system. | *"The Covenant established civic law above clan retaliation. That's not an opinion, it's the first article."* |
+| `spec_kowloon_shrine` | Shrine keeper at temple junction | Temple Circle shrine maintenance: sweeps offering bowls, relights incense, tends base lanterns, recites the Three Oaths, references Yen-Mak and the Temple's sanctuary exemption. | *"First Oath: No ward unlit, no traveler uncounted. The Temple observes this at every shrine, whether or not the city does."* |
+| `spec_kowloon_vendor` | Street food vendor, caravan caller | Delta street commerce: stirs rice porridge on a charcoal brazier, calls out to foot traffic, tracks the cart's daily route through district junctions, discusses caravan tariffs. | *"I follow the foot traffic. Courier crossing in the morning, provisioner junction at midday, harbor spine before dusk."* |
+| `spec_kowloon_laborer` | Harbor dockhand, harbor porter, pump attendant, delta fisherman | Coppersalt-route dock labor: shifts heavy cargo, checks day-token assignments, explains the Syndic's weight-based pay scale, references flood-season hazard rates. | *"Harbor work feeds the city. The cargo comes in, the city eats. Simple as that. They just don't pay us like it matters."* |
+
+### Kowloon builder notes
+
+- `spec_kowloon_shopkeeper` is the standard ambient special for all Kowloon service shops. Assign to any merchant NPC with a `#SHOPS` entry.
+- `spec_kowloon_gate_captain` doubles for Harbor Syndic inspectors at the docks — the manifest-checking flavor applies equally to both roles.
+- `spec_kowloon_corsair` is assigned to hostile mob types (alignment negative, `aggressive` flag set). It fires **only out of combat**, providing ambient menace before engagement. Combat is initiated by the `aggressive` act flag, not by this special.
+- `spec_thief` (the gold-stealing NPC behavior special) is appropriate for Kowloon pickpockets — it is a functional mechanic, not area-specific flavor, so it crosses areas.
+- Do **not** use `spec_lamplighter`, `spec_warden`, `spec_vendor`, `spec_lay_sister`, or `spec_laborer` for Kowloon mobs. These are Midgaard-specific. Use the `spec_kowloon_*` equivalents instead.
 
 ---
 

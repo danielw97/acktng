@@ -88,6 +88,16 @@ DECLARE_SPEC_FUN(spec_kiess_innkeeper);
 DECLARE_SPEC_FUN(spec_kiess_scout);
 DECLARE_SPEC_FUN(spec_kiess_orator);
 DECLARE_SPEC_FUN(spec_kiess_wall_officer);
+DECLARE_SPEC_FUN(spec_kowloon_shopkeeper);
+DECLARE_SPEC_FUN(spec_kowloon_gate_captain);
+DECLARE_SPEC_FUN(spec_kowloon_courier);
+DECLARE_SPEC_FUN(spec_kowloon_innkeeper);
+DECLARE_SPEC_FUN(spec_kowloon_corsair);
+DECLARE_SPEC_FUN(spec_kowloon_sweeper);
+DECLARE_SPEC_FUN(spec_kowloon_magistracy);
+DECLARE_SPEC_FUN(spec_kowloon_shrine);
+DECLARE_SPEC_FUN(spec_kowloon_vendor);
+DECLARE_SPEC_FUN(spec_kowloon_laborer);
 
 void do_massivestrike(CHAR_DATA *ch);
 
@@ -197,6 +207,26 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_kiess_orator;
    if (!str_cmp(name, "spec_kiess_wall_officer"))
       return spec_kiess_wall_officer;
+   if (!str_cmp(name, "spec_kowloon_shopkeeper"))
+      return spec_kowloon_shopkeeper;
+   if (!str_cmp(name, "spec_kowloon_gate_captain"))
+      return spec_kowloon_gate_captain;
+   if (!str_cmp(name, "spec_kowloon_courier"))
+      return spec_kowloon_courier;
+   if (!str_cmp(name, "spec_kowloon_innkeeper"))
+      return spec_kowloon_innkeeper;
+   if (!str_cmp(name, "spec_kowloon_corsair"))
+      return spec_kowloon_corsair;
+   if (!str_cmp(name, "spec_kowloon_sweeper"))
+      return spec_kowloon_sweeper;
+   if (!str_cmp(name, "spec_kowloon_magistracy"))
+      return spec_kowloon_magistracy;
+   if (!str_cmp(name, "spec_kowloon_shrine"))
+      return spec_kowloon_shrine;
+   if (!str_cmp(name, "spec_kowloon_vendor"))
+      return spec_kowloon_vendor;
+   if (!str_cmp(name, "spec_kowloon_laborer"))
+      return spec_kowloon_laborer;
 
    return 0;
 }
@@ -305,6 +335,26 @@ char *rev_spec_lookup(void *func)
       return "spec_kiess_orator";
    if (func == spec_kiess_wall_officer)
       return "spec_kiess_wall_officer";
+   if (func == spec_kowloon_shopkeeper)
+      return "spec_kowloon_shopkeeper";
+   if (func == spec_kowloon_gate_captain)
+      return "spec_kowloon_gate_captain";
+   if (func == spec_kowloon_courier)
+      return "spec_kowloon_courier";
+   if (func == spec_kowloon_innkeeper)
+      return "spec_kowloon_innkeeper";
+   if (func == spec_kowloon_corsair)
+      return "spec_kowloon_corsair";
+   if (func == spec_kowloon_sweeper)
+      return "spec_kowloon_sweeper";
+   if (func == spec_kowloon_magistracy)
+      return "spec_kowloon_magistracy";
+   if (func == spec_kowloon_shrine)
+      return "spec_kowloon_shrine";
+   if (func == spec_kowloon_vendor)
+      return "spec_kowloon_vendor";
+   if (func == spec_kowloon_laborer)
+      return "spec_kowloon_laborer";
 
    return 0;
 }
@@ -358,6 +408,16 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_kiess_scout        \n\r");
    strcat(buf, "       spec_kiess_orator       \n\r");
    strcat(buf, "       spec_kiess_wall_officer \n\r");
+   strcat(buf, "       spec_kowloon_shopkeeper \n\r");
+   strcat(buf, "       spec_kowloon_gate_captain\n\r");
+   strcat(buf, "       spec_kowloon_courier     \n\r");
+   strcat(buf, "       spec_kowloon_innkeeper   \n\r");
+   strcat(buf, "       spec_kowloon_corsair     \n\r");
+   strcat(buf, "       spec_kowloon_sweeper    \n\r");
+   strcat(buf, "       spec_kowloon_magistracy \n\r");
+   strcat(buf, "       spec_kowloon_shrine     \n\r");
+   strcat(buf, "       spec_kowloon_vendor     \n\r");
+   strcat(buf, "       spec_kowloon_laborer    \n\r");
 
    return;
 }
@@ -2469,6 +2529,321 @@ bool spec_kiess_wall_officer(CHAR_DATA *ch)
       "Wall Command doesn't guess at threat levels. We assess, we document, we act on evidence. That is the doctrine.",
       "The Withered Depths blight is moving. Slowly — but moving. Scouts returning with blight-edge data get full debrief priority.",
       "Kiess survives because its walls are manned and its gates have discipline. Everything else this city does depends on that foundation."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+/*
+ * Kowloon ambient NPC specials — shopkeepers, gate captains, couriers,
+ * innkeepers, and the river corsairs of Captain Blacktide Shen.
+ */
+
+bool spec_kowloon_shopkeeper(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n hangs a display item on a wall hook rather than setting it on the table — an old floating-market habit.",
+      "$n checks a displayed item's jade inspection ribbon, confirming it's still current-season certified.",
+      "$n glances up as you enter and offers a practiced nod of professional welcome.",
+      "$n straightens the display counter, aligning items with the precision of someone who measures by eye.",
+      "$n reviews the day's inventory tally against stock, marking each confirmed item with a practiced stroke."
+   };
+   static const char *says[] = {
+      "Everything on this counter is Ledgerhouse-cleared. Tariff paid, weights checked, ribbon current.",
+      "My family's been selling on hooks since before these walls were built. Tables are for the new arrivals.",
+      "The Guild Concordat sets our floor prices. I can't go below that — but I can throw in the wrap at no charge.",
+      "Jade ribbon expired, we don't sell it. Magistracy comes through quarterly and they check. I don't need that trouble.",
+      "Supply run from the western trade came in two days ago. You're getting first-season goods, not leftovers."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_kowloon_gate_captain(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n reviews a manifest against the Syndic's inspection ledger, marking entries with a precise notation.",
+      "$n steps to the threshold and scans the approaches beyond the gate with hard, practiced eyes.",
+      "$n signals a subordinate guard with a brief hand gesture, directing attention to a passing figure.",
+      "$n checks a courier's travel permit against the day's registered messengers, then waves them through.",
+      "$n consults the rotation schedule posted on the gate wall, confirming the incoming shift timing."
+   };
+   static const char *says[] = {
+      "Seasonal rotation isn't tradition — it's policy. No one builds loyalty at a chokepoint. The Covenant was specific.",
+      "Every departure logged, every arrival registered. If you're leaving through this gate, your name goes in the ledger.",
+      "Corsair probes have been testing the eastern approaches. Tide Gate is watching for pattern timing. We share intelligence between posts.",
+      "The gate's character changes with who's posting, but the protocol doesn't. That's the point of a protocol.",
+      "Carry your documents visible from the checkpoint. I don't have time to search your pack, and neither do you."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_kowloon_courier(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n checks a dispatch pouch's seal for tampering before shouldering it — ingrained professional habit.",
+      "$n consults a route card, noting a shortcut through the registry quarter with a quick finger-trace.",
+      "$n polishes the brass lantern badge on $s vest, the mark of Courier Lantern Office passage rights.",
+      "$n records a delivery confirmation in a small field ledger, then stows it without pausing stride.",
+      "$n scans a bulletin board at the junction corner, checking for priority rerouting notices."
+   };
+   static const char *says[] = {
+      "The badge gets you through any gate at any hour. You'd be surprised how useful that is at second bell.",
+      "CLO runs the census, the post, the recall registry, and the relay stations. We count everyone inside these walls.",
+      "I know every shortcut between here and the Jade Gate. You need fast delivery anywhere in this city, come to us.",
+      "Sealed dispatch means sealed. I don't read them, I don't hold them. I deliver, I confirm, I move.",
+      "Last week I ran the Iron Gate route four times before Bell Watch. That's corsair intel — frequent updates."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_kowloon_innkeeper(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n checks the guest ledger, running a finger down tonight's registered occupants.",
+      "$n adjusts the lamp behind the counter, raising the wick for the evening trade.",
+      "$n sets a fresh cup of tea on the counter without being asked, for a recently arrived traveler.",
+      "$n notes a room key in the ledger with a careful hand, confirming the night's arrangement.",
+      "$n wipes the counter with a cloth, keeping the workspace clear between transactions."
+   };
+   static const char *says[] = {
+      "Southern quarter sees more faces than any district in the city. We don't ask where you've been, just how many nights.",
+      "Rooms are by the night, meals extra. Warden patrol comes through twice a bell — you'll sleep undisturbed.",
+      "If you're recall-safe and breathing, Kowloon will receive you. That's the city's oldest promise. We're just where you start.",
+      "The Inn district sits on old flood-refuge terraces. Solid ground, tested ground. Best sleep you'll get in the delta.",
+      "Leave word at the Postmaster's if you're heading out for more than two days. CLO tracks departures — good to be on the list."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_kowloon_corsair(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n watches the harbor approaches with calculating eyes, noting the patrol timing.",
+      "$n marks a rough sketch of dock timing in charcoal on the back of a tariff card.",
+      "$n exchanges a brief, quiet gesture with a passing figure and continues without stopping.",
+      "$n scans a Harbor Syndic notice board, memorizing the updated patrol rotation.",
+      "$n moves to a shadowed position near the dock approach, tracking a Warden guard's circuit timing."
+   };
+   static const char *says[] = {
+      "Shen knows these channels better than the Syndic charts do. Every gate timing, every patrol gap. Patience is strategy.",
+      "This isn't a raid — this is a probe. We learn their timing tonight. We act when we know what they know.",
+      "The Iron Gate convoy runs at third bell. Twice a week, same route. Someone in the Syndic is selling information.",
+      "Blacktide Shen has been watching this city for three years. Every gate, every shift change, every weakness.",
+      "The Harbor Syndics posted a bounty. They can post all the gold they want — Shen doesn't come out of the channels for that."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_kowloon_sweeper(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n pushes debris toward a storm-drain grate with steady strokes of a bamboo broom.",
+      "$n pauses to empty a small collection bin into the waste cart at the corner.",
+      "$n marks a chalk tally on the district maintenance board, noting the sector complete.",
+      "$n sweeps around the base of a color-marked post, working methodically toward the curb.",
+      "$n clears accumulated silt from a drain grate with the broom's edge, checking the flow."
+   };
+   static const char *says[] = {
+      "Dawn sweep runs from first bell to Bronze Watch. Sector's mine from the courier crossing south to the flood terrace.",
+      "The drainage has to stay clear. Flood season, one blocked grate backs up a whole district quadrant. Ask anyone who was here for the third monsoon.",
+      "Six districts, twelve sweepers, one rotation schedule. The Magistracy posts it at the registry each month.",
+      "People think this is just cleaning. It's flood control. Every grate I clear is a grate that drains when the rain comes.",
+      "Bell Watch marks the shift change. I'm here before the market opens, gone before the crowds arrive. That's how it works."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_kowloon_magistracy(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n reviews a stack of permit filings, stamping each with a jade-green seal in practiced succession.",
+      "$n marks a chalk annotation on the public notice board, citing a licensing provision by section.",
+      "$n pauses to check a merchant's display ribbon against the Magistracy's current audit register.",
+      "$n consults a pocket copy of the Covenant Schedule, cross-referencing a statute by section number.",
+      "$n makes a notation in $s field ledger after observing the square, expression professionally neutral."
+   };
+   static const char *says[] = {
+      "Jade ribbon means the Magistracy audited the weights this season. No ribbon, no Concordat standing.",
+      "The Schedule is public record. Any citizen can cite it in a dispute. Most people don't bother learning it, which is how most disputes happen.",
+      "Gold lacquer on the doorframe means the merchant posted bond against fraud. It's not decoration — it's a legal instrument.",
+      "The Covenant established civic law above clan retaliation. That's not an opinion, it's the first article. Enforceable since the founding.",
+      "Civil disputes unresolved by the seventh day escalate to the covenant stone. Most people settle on the sixth day."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_kowloon_shrine(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n sweeps the offering bowl at the base of the shrine, clearing wilted petals with practiced care.",
+      "$n relights a stick of incense from a small striker, holding it steady until the smoke rises evenly.",
+      "$n refills the lamp oil in the shrine's base lantern, checking the level with a careful fingertip.",
+      "$n traces the carved dedication text with one finger, lips moving silently in memorization.",
+      "$n places a fresh offering of pressed flowers at the shrine base, straightening the arrangement."
+   };
+   static const char *says[] = {
+      "First Oath: No ward unlit, no traveler uncounted. The Temple observes this at every shrine, whether or not the city does.",
+      "Second Oath: No judgment hidden, no sentence unrecorded. We remind the city of what it promised, one shrine at a time.",
+      "Third Oath: No levy taken that cannot be borne. The hardest one to keep. We hear the disputes — we don't resolve them, but we remember them.",
+      "The Temple answers to no secular authority while tending the sick. That exemption has been in the Covenant since the founding. We don't let people forget it.",
+      "There is a shrine for Yen-Mak in every district. The delta remembers what the ledgers removed."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_kowloon_vendor(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n stirs a pot of spiced rice porridge over the charcoal brazier, releasing a fragrant cloud of steam.",
+      "$n calls out to passing foot traffic, holding up a small wrapped portion in invitation.",
+      "$n ladles a serving into a clay bowl and accepts a coin with the practiced ease of long repetition.",
+      "$n adjusts the charcoal bed with a long iron fork, managing the heat for the midday rush.",
+      "$n wipes down the handcart's folding counter between orders, keeping the workspace clear."
+   };
+   static const char *says[] = {
+      "Hot rice porridge, dried fish, pickled greens — delta standard since before the walls were built. Fills you up, won't slow you down.",
+      "Bell Watch is the best time to buy. I knock down what's left before I move the cart east for the afternoon crowd.",
+      "Market season's lighter this quarter. Caravan tariffs went up again — everything from the inland roads is priced higher now.",
+      "I follow the foot traffic. Courier crossing in the morning, provisioner junction at midday, harbor spine before dusk.",
+      "Salt-rice and black tea — that's the delta working meal. Syndic clerks, dock haulers, Warden patrols, they all eat here."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_kowloon_laborer(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n shifts a heavy load from one shoulder to the other, finding a better balance point.",
+      "$n pauses to check the day-token stamp on $s wrist against the dock's posting board.",
+      "$n wipes sweat from $s face with a cloth tucked in $s belt, then picks the work back up.",
+      "$n drags a rope coil to a new position at the dock edge, moving with the weight-smart efficiency of long practice.",
+      "$n tests a tie-down knot with a hard pull before stepping back, satisfied with the result."
+   };
+   static const char *says[] = {
+      "Day-token says Coppersalt-route work today. That means the heavy haul from the Tide Gate wharf. Long shift.",
+      "Syndic pay scale is set by cargo weight, not hours. You move fast, you earn. You move slow, you starve.",
+      "Flood season they pay a hazard rate. You'd think that'd be worth celebrating, but it means the drainage channels are backing up.",
+      "Pump rotation is every two bells. I'm on third circuit — I don't sit down until Bell Watch, and even then maybe not.",
+      "Harbor work feeds the city. The cargo comes in, the city eats. Simple as that. They just don't pay us like it matters."
    };
 
    if (!IS_AWAKE(ch) || is_fighting(ch))
