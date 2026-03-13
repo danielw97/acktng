@@ -325,10 +325,13 @@ static int container_item_count(const OBJ_DATA *container)
 
 int keep_chest_put_denial_reason(const OBJ_DATA *container_obj, const OBJ_DATA *obj)
 {
+   int keep_chest_capacity;
+
    if (!is_keep_chest(container_obj))
       return KEEP_CHEST_PUT_ALLOWED;
 
-   if (container_item_count(container_obj) >= 50)
+   keep_chest_capacity = (container_obj->value[3] > 0) ? container_obj->value[3] : 50;
+   if (container_item_count(container_obj) >= keep_chest_capacity)
       return KEEP_CHEST_PUT_ERR_FULL;
 
    if (obj != NULL && (obj->item_type == ITEM_CORPSE_PC || obj->item_type == ITEM_CORPSE_NPC || obj->item_type == ITEM_CONTAINER))

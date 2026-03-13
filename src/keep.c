@@ -17,6 +17,48 @@ int keep_chest_max_items(void)
     return 50;
 }
 
+static int keep_storage_tier(int max_items)
+{
+    int base = keep_chest_max_items();
+
+    if (max_items <= base)
+        return 0;
+
+    return (max_items - base + 4) / 5;
+}
+
+static int keep_storage_upgrade_cost(int current_max_items)
+{
+    return (keep_storage_tier(current_max_items) + 1) * 50;
+}
+
+static int keep_storage_next_max_items(int current_max_items)
+{
+    int base = keep_chest_max_items();
+
+    if (current_max_items < base)
+        return base + 5;
+
+    return current_max_items + 5;
+}
+
+
+#ifdef UNIT_TEST_KEEP
+int keep_storage_tier_for_test(int max_items)
+{
+    return keep_storage_tier(max_items);
+}
+
+int keep_storage_upgrade_cost_for_test(int current_max_items)
+{
+    return keep_storage_upgrade_cost(current_max_items);
+}
+
+int keep_storage_next_max_items_for_test(int current_max_items)
+{
+    return keep_storage_next_max_items(current_max_items);
+}
+#endif
 
 void keep_format_chest_short_descr(const char *owner_name, char *dest, size_t dest_size)
 {
@@ -55,7 +97,23 @@ int keep_is_customization_command(const char *arg)
 
 int keep_is_upgrade_command(const char *arg)
 {
-    return (arg != NULL && (!str_cmp(arg, "regen") || !str_cmp(arg, "inside")));
+    return (arg != NULL && (!str_cmp(arg, "regen") || !str_cmp(arg, "inside") || !str_cmp(arg, "storage")));
+}
+
+static OBJ_DATA *keep_find_chest_in_room(const ROOM_INDEX_DATA *room)
+{
+    OBJ_DATA *obj;
+
+    if (room == NULL)
+        return NULL;
+
+    for (obj = room->first_content; obj != NULL; obj = obj->next_content)
+    {
+        if (obj->item_type == ITEM_CONTAINER && IS_SET(obj->value[1], CONT_KEEP_CHEST))
+            return obj;
+    }
+
+    return NULL;
 }
 
 int keep_player_can_customize(const CHAR_DATA *ch)
@@ -268,7 +326,7 @@ void do_keep(CHAR_DATA *ch, char *argument)
             return;
         }
 
-        send_to_char("Syntax: keep create | keep title <string> | keep desc <string> | keep regen | keep inside | keep healer\n\r", ch);
+        send_to_char("Syntax: keep create | keep title <string> | keep desc <string> | keep regen | keep inside | keep storage | keep healer\n\r", ch);
         return;
     }
 
@@ -277,6 +335,7 @@ void do_keep(CHAR_DATA *ch, char *argument)
         int qp_cost;
         int room_flag;
         const char *flag_name;
+        OBJ_DATA *keep_chest;
 
         if (ch->pcdata->keep_vnum <= 0)
         {
@@ -295,6 +354,40 @@ void do_keep(CHAR_DATA *ch, char *argument)
             qp_cost = 100;
             room_flag = ROOM_REGEN;
             flag_name = "regen";
+        }
+        else if (!str_cmp(arg1, "storage"))
+        {
+            int current_max_items;
+            int new_max_items;
+            char buf[MAX_STRING_LENGTH];
+
+            keep_chest = keep_find_chest_in_room(ch->in_room);
+            if (keep_chest == NULL)
+            {
+                send_to_char("Your keep chest cannot be found. Contact an immortal.\n\r", ch);
+                return;
+            }
+
+            current_max_items = keep_chest->value[3];
+            if (current_max_items <= 0)
+                current_max_items = keep_chest_max_items();
+
+            qp_cost = keep_storage_upgrade_cost(current_max_items);
+            if (ch->quest_points < qp_cost)
+            {
+                send_to_char("You do not have enough quest points for that upgrade.\n\r", ch);
+                return;
+            }
+
+            new_max_items = keep_storage_next_max_items(current_max_items);
+            ch->quest_points -= qp_cost;
+            keep_chest->value[3] = new_max_items;
+            save_chest(keep_chest);
+
+            snprintf(buf, sizeof(buf), "Keep storage expanded to %d items for %d quest points.\n\r", new_max_items, qp_cost);
+            send_to_char(buf, ch);
+            act("$n expands keep chest storage.", ch, NULL, NULL, TO_ROOM);
+            return;
         }
         else
         {
@@ -427,7 +520,7 @@ void do_keep(CHAR_DATA *ch, char *argument)
 
     if (str_cmp(arg1, "create"))
     {
-        send_to_char("Syntax: keep create | keep title <string> | keep desc <string> | keep regen | keep inside | keep healer\n\r", ch);
+        send_to_char("Syntax: keep create | keep title <string> | keep desc <string> | keep regen | keep inside | keep storage | keep healer\n\r", ch);
         return;
     }
 
