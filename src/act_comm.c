@@ -623,7 +623,7 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
       ch->position = position;
       break;
 
-   case CHANNEL_QUEST:
+   case CHANNEL_INVASION:
       sprintf(buf, "%s $n: $t.", verb);
       position = ch->position;
       ch->position = POS_STANDING;
@@ -789,9 +789,9 @@ void do_music(CHAR_DATA *ch, char *argument)
    return;
 }
 
-void do_quest2(CHAR_DATA *ch, char *argument)
+void do_invasion_talk(CHAR_DATA *ch, char *argument)
 {
-   talk_channel(ch, argument, CHANNEL_QUEST, "@@a[@@cINVASION@@a]@@W");
+   talk_channel(ch, argument, CHANNEL_INVASION, "@@a[@@cINVASION@@a]@@W");
    return;
 }
 void do_game(CHAR_DATA *ch, char *argument)

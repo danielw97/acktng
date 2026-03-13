@@ -776,7 +776,7 @@ static void invasion_boss_trash_talk(void)
     if (invasion_boss == NULL || invasion_boss->is_free)
         return;
 
-    do_quest2(invasion_boss, (char *)invasion_boss_trash_talk_for_profile(invasion_boss_profile));
+    do_invasion_talk(invasion_boss, (char *)invasion_boss_trash_talk_for_profile(invasion_boss_profile));
 }
 
 
@@ -1551,7 +1551,7 @@ void invasion_rooms_update(void)
 
         quest_msg = invasion_gertrude_quest_message_for_explosions(invasion_gertrude_explosions);
         if (quest_msg != NULL && gertrude != NULL && !gertrude->is_free)
-            do_quest2(gertrude, (char *)quest_msg);
+            do_invasion_talk(gertrude, (char *)quest_msg);
 
         if (invasion_gertrude_should_fall_for_explosions(invasion_gertrude_explosions))
         {
