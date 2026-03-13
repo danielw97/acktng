@@ -309,6 +309,12 @@ The `|` extension fields `strong_magic`, `weak_magic`, `resist`, and `suscept` a
 - `shadow` = `256` (`ELE_SHADOW`)
 - `poison` = `512` (`ELE_POISON`)
 
+### 5.5a) Mobile special functions
+
+A mobile may be assigned a special function (`spec_fun`) in the `#SPECIALS` section of the area file. Special functions run periodically to give the mob autonomous behavior — ambient atmosphere, law enforcement, breath weapons, NPC scripts, and more.
+
+See **`docs/mob_specials_spec.md`** for the complete list of available special functions with descriptions of their behavior, builder policies (including the rule that `spec_summon_*` must never be set in area files), and sample output.
+
 ### 5.6) Mobile program trigger names
 
 For inline mobile program blocks (`> <prog_type_name> ...`), the loader accepts these trigger type names:

@@ -170,40 +170,66 @@ S
 
 Allowed `<spec_fun_name>` values (from `spec_lookup()` in `src/special.c`):
 
-Builder policy: mob specials beginning with `spec_summon_` must **never** be set in area files. These are assigned at runtime by summon systems only.
-Builder policy: any mob special beginning with `spec_keep` may only be assigned manually by a human (not by automation/tools).
+For full descriptions of each special's behavior, builder policies, and usage
+guidance, see **`docs/mob_specials_spec.md`**.
 
+Builder policy: mob specials beginning with `spec_summon_` must **never** be set in area files. These are assigned at runtime by summon systems only.
+Builder policy: any mob special beginning with `spec_keep_` may only be assigned manually by a human (not by automation/tools).
+
+**Breath weapon specials:**
 - `spec_breath_any`
 - `spec_breath_acid`
 - `spec_breath_fire`
 - `spec_breath_frost`
 - `spec_breath_gas`
 - `spec_breath_lightning`
+
+**Combat caster specials:**
 - `spec_cast_adept`
 - `spec_cast_cleric`
 - `spec_cast_judge`
 - `spec_cast_mage`
 - `spec_cast_undead`
+- `spec_cast_cadaver`
+- `spec_cast_bigtime`
+
+**Law enforcement specials:**
 - `spec_executioner`
-- `spec_fido`
 - `spec_guard` (alias of `spec_policeman` in lookup return)
+- `spec_policeman`
+- `spec_mino_guard`
+
+**NPC behavior specials:**
+- `spec_fido`
 - `spec_janitor`
 - `spec_mayor`
 - `spec_poison`
 - `spec_thief`
-- `spec_policeman`
-- `spec_cast_cadaver`
+- `spec_rewield`
 - `spec_undead`
 - `spec_stephen`
-- `spec_rewield`
-- `spec_sylai_priest`
-- `spec_cast_bigtime`
 - `spec_sage`
 - `spec_wizardofoz`
 - `spec_vamp_hunter`
-- `spec_mino_guard`
 - `spec_tax_man`
-- `spec_keep_physical_captain`
+- `spec_sylai_priest`
+- `spec_keep_physical_captain` (human-assignment only)
+
+**Ambient city specials:**
+- `spec_lamplighter`
+- `spec_warden`
+- `spec_vendor`
+- `spec_lay_sister`
+- `spec_laborer`
+
+**Kiess ambient specials:**
+- `spec_kiess_shopkeeper`
+- `spec_kiess_innkeeper`
+- `spec_kiess_scout`
+- `spec_kiess_orator`
+- `spec_kiess_wall_officer`
+
+**Summon specials (runtime-only — do not set in area files):**
 - `spec_summon_water`
 - `spec_summon_fire`
 - `spec_summon_earth`
