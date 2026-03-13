@@ -476,6 +476,179 @@ This redesign explicitly aligns with broader setting motifs used in other plans/
 
 ---
 
+## Propositions
+
+Six static propositions target the Gloamvault, offered by three city postmasters according to each city's institutional interest in the vault. Two independent entry points (non-chain) allow players to begin from either Kiess or Kowloon, with Midgaard and Kowloon chains progressing toward boss-level warrants. Two propositions culminate in boss kills (Ossuary Champion, Matriarch Velastra).
+
+### Proposition ID 48 — Gloamvault threshold audit: novice interdiction
+
+| Field | Value |
+|---|---|
+| **File** | `49.prop` |
+| **Static ID** | 48 |
+| **Prerequisite** | -1 (none — chain entry point) |
+| **Type** | 1 (kill variety) |
+| **Num Targets** | 3 |
+| **Target Vnums** | `30100 30102 30117` (Ash Acolyte, Grave Choir Novice, Bone Lantern Bearer) |
+| **Kill Needed** | 0 |
+| **Level Range** | 5-12 |
+| **Offerer Vnum** | 13001 (Kiess Postmaster) |
+| **Reward Gold** | 800 |
+| **Reward QP** | 2 |
+| **Reward Item** | 0 0 (none) |
+
+**Narrative rationale:** Kiess's Syndic Council archives preserve oath-law templates derived from Bell Synod originals, brought to Evermeet by Kel'Shadra missionaries before the vault's fall. Institutional memory clerks have detected renewed activity signatures consistent with active novice intake — bells tolling on schedules that should have ceased generations ago. The postmaster needs field confirmation that the Gloamvault's onboarding apparatus is still processing initiates, and wants the lowest-tier operators disrupted so Kiess route analysts can assess whether the vault poses a threat to Roc Road traffic.
+
+**Accept message:** Kiess institutional monitors have flagged renewed bell activity from the Gloamvault of Kel'Shadra, consistent with active novice intake. The Syndic Council wants field verification: enter the upper vault and engage the novice-tier operators — acolytes, choir novices, and lantern bearers — to confirm that the vault's onboarding machinery is still functional. Route analysts need your kill reports before they can update the threat classification for southern approaches.
+
+**Completion message:** Your field reports confirm what the Syndic Council feared: the Gloamvault's intake apparatus is not merely residual — it is actively processing new arrivals through confession and classification routines. The postmaster has forwarded your observations to both the Temple of Concord and Wall Command for institutional review. Kiess now treats the southern vault threshold as a live hazard zone rather than a sealed ruin.
+
+---
+
+### Proposition ID 49 — Violet Compact enforcement: stalker suppression
+
+| Field | Value |
+|---|---|
+| **File** | `50.prop` |
+| **Static ID** | 49 |
+| **Prerequisite** | 48 |
+| **Type** | 3 (kill count) |
+| **Num Targets** | 1 |
+| **Target Vnums** | `30115` (Vault Stalker) |
+| **Kill Needed** | 5 |
+| **Level Range** | 8-15 |
+| **Offerer Vnum** | 3015 (Midgaard Postmaster) |
+| **Reward Gold** | 1200 |
+| **Reward QP** | 3 |
+| **Reward Item** | 0 0 (none) |
+
+**Narrative rationale:** Midgaard's Violet Compact registry checkpoint at the Reliquary Arch (room 3005) has reported vault stalkers breaching the jurisdictional threshold — gauze-wrapped ambush predators that move only when candlelight flickers. Under the Compact's Containment Era framework, anything that crosses the arch from below is Midgaard's enforcement problem. The magistrate's office has authorized a suppression contract: five confirmed stalker kills to re-establish the boundary. This proposition chains from ID 48 because Kiess's threat assessment (confirming active vault operations) triggered Midgaard's Compact enforcement protocols.
+
+**Accept message:** The Violet Compact registry at Midgaard's Reliquary Arch has logged multiple threshold breaches by vault stalkers — hostile entities emerging from the Gloamvault into civic jurisdiction. Under Containment Era protocols, this triggers suppression authority. Enter the vault and kill five vault stalkers to re-establish the Compact boundary. Registry inspectors cannot resume threshold patrols until the stalker population is reduced to manageable levels.
+
+**Completion message:** Five vault stalker kills confirmed and logged against the Compact registry. Threshold breach reports have dropped to pre-alert levels, and registry inspectors have resumed patrols at the Reliquary Arch. The magistrate's office notes that your suppression work has restored enough jurisdictional confidence for the Exchange to consider deeper enforcement warrants targeting the vault's command structure.
+
+---
+
+### Proposition ID 50 — Covenant precedent recovery: militant purge
+
+| Field | Value |
+|---|---|
+| **File** | `51.prop` |
+| **Static ID** | 50 |
+| **Prerequisite** | -1 (none — chain entry point) |
+| **Type** | 1 (kill variety) |
+| **Num Targets** | 3 |
+| **Target Vnums** | `30105 30108 30116` (Carrion Templar, Thorn Reliquary Knight, Funerary Warden) |
+| **Kill Needed** | 0 |
+| **Level Range** | 10-17 |
+| **Offerer Vnum** | 14001 (Kowloon Postmaster) |
+| **Reward Gold** | 1400 |
+| **Reward QP** | 3 |
+| **Reward Item** | 0 0 (none) |
+
+**Narrative rationale:** Kowloon's Jade Magistracy records reference Kel'Shadra oath-law precedents in their own founding legal corpus — the Neon Covenant's structure of witnessed oaths and public judgment shares conceptual lineage with the vault's Witness/Offer/Bind doctrine. Covenant scholars circulate apocryphal extracts citing "southern bell crypts" as cautionary examples of single-institution memory custody, but the original source documents remain inaccessible behind the Reliquary Host's militant patrols. Postmaster Lin needs the militant order forces — templars, knights, and wardens — disrupted so Kowloon's recovery teams can approach the Ash Scriptorium.
+
+**Accept message:** Kowloon's covenant scholars have long cited the Gloamvault's oath-law frameworks as foundational precedent for the Neon Covenant, but the original source documents are locked behind the vault's militant order patrols. The Jade Magistracy has authorized a clearance contract: engage and defeat one each of the Carrion Templars, Reliquary Knights, and Funerary Wardens to create a viable approach corridor toward the Scriptorium of Ash. Recovery teams are standing by pending your field clearance.
+
+**Completion message:** Militant order resistance along the recovery corridor has been broken. Kowloon's covenant scholars report that preliminary access to the Scriptorium approaches is now viable, and the Jade Magistracy has dispatched a sealed assessment to the Courier Lantern Office regarding next steps. The Ash Cult cells have already begun citing your clearance work in their sermons — an institution that required outside force to reach its own archives is, they argue, an institution that has already consumed its purpose.
+
+---
+
+### Proposition ID 51 — Registry priority warrant: Ossuary Champion
+
+| Field | Value |
+|---|---|
+| **File** | `52.prop` |
+| **Static ID** | 51 |
+| **Prerequisite** | 49 |
+| **Type** | 1 (kill variety) |
+| **Num Targets** | 1 |
+| **Target Vnums** | `30113` (Ossuary Champion) |
+| **Kill Needed** | 0 |
+| **Level Range** | 15-20 |
+| **Offerer Vnum** | 3015 (Midgaard Postmaster) |
+| **Reward Gold** | 2000 |
+| **Reward QP** | 4 |
+| **Reward Item** | 0 0 (none) |
+
+**Narrative rationale:** With stalker threats at the threshold suppressed, Midgaard's magistrates have escalated enforcement to a priority warrant targeting the Ossuary Champion — the rune-plated military enforcer whose patrol routes through the Reliquary Bastion block registry inspectors from documenting the vault's armory-catacomb interface. The Champion embodies the vault's doctrine that compliance is the highest martial virtue, and his continued presence represents an active jurisdictional challenge to the Violet Compact's authority. This is a boss-target proposition: the Champion is flagged `boss` and occupies a `no_mob` room in Zone F.
+
+**Accept message:** Midgaard's magistrate court has authorized a priority enforcement warrant targeting the Ossuary Champion of the Gloamvault — the military enforcer whose presence in the Reliquary Bastion prevents registry inspectors from completing their Compact-mandated audit. This is a high-risk contract: the Champion is a fortified combatant armored in rune-etched plate and chained relics, and he does not negotiate. Destroy him so the registry can document what the vault has been arming behind its sealed doors.
+
+**Completion message:** The Ossuary Champion has been destroyed, and registry inspectors have entered the Reliquary Bastion for the first time since the Violet Compact was signed. Preliminary audit reports describe armory-scale weapon cages and sepulcher knight stalls — a standing military infrastructure that the Compact was never informed of. The magistrate's office has classified the audit findings and is preparing civic briefings. Your warrant execution has opened a door that Midgaard's institutions will not be able to close again.
+
+---
+
+### Proposition ID 52 — Jade Magistracy deep audit: warlock suppression
+
+| Field | Value |
+|---|---|
+| **File** | `53.prop` |
+| **Static ID** | 52 |
+| **Prerequisite** | 50 |
+| **Type** | 3 (kill count) |
+| **Num Targets** | 1 |
+| **Target Vnums** | `30110` (Ashen Warlock) |
+| **Kill Needed** | 4 |
+| **Level Range** | 14-20 |
+| **Offerer Vnum** | 14001 (Kowloon Postmaster) |
+| **Reward Gold** | 1800 |
+| **Reward QP** | 4 |
+| **Reward Item** | 0 0 (none) |
+
+**Narrative rationale:** With the militant order's patrol routes disrupted, Kowloon's recovery teams have identified a secondary obstacle: the Ashen Warlocks maintain ward networks throughout the Sanguine Cloisters and deeper zones that prevent sustained access to the vault's archival core. Their fingertips leak violet sparks that re-seal passages and corrupt recovered documents. The Jade Magistracy needs four confirmed warlock kills to collapse enough of the ward lattice for covenant scholars to reach the original oath-law templates that predate Velastra's doctrinal revisions.
+
+**Accept message:** Kowloon's recovery teams report that the Ashen Warlocks maintain active ward networks that re-seal passages and corrupt any documents carried through their zones. The Jade Magistracy needs the ward lattice collapsed before covenant scholars can safely extract the original oath-law templates. Kill four Ashen Warlocks to disrupt the ward infrastructure sufficiently for archival recovery operations.
+
+**Completion message:** Four Ashen Warlocks have been destroyed and the ward lattice across the vault's middle zones has collapsed into inert fragments. Kowloon's covenant scholars have begun extracting documents from the Scriptorium approaches, and preliminary translations confirm what the Jade Magistracy suspected: the original Kel'Shadra oath-law templates predate Velastra's doctrinal revisions by centuries, and the differences are significant enough to challenge several foundational precedents in the Neon Covenant's own legal corpus. The Magistracy has sealed these findings pending further review — and further action.
+
+---
+
+### Proposition ID 53 — Final covenant judgment: Matriarch Velastra
+
+| Field | Value |
+|---|---|
+| **File** | `54.prop` |
+| **Static ID** | 53 |
+| **Prerequisite** | 52 |
+| **Type** | 1 (kill variety) |
+| **Num Targets** | 1 |
+| **Target Vnums** | `30114` (Matriarch Velastra) |
+| **Kill Needed** | 0 |
+| **Level Range** | 18-20 |
+| **Offerer Vnum** | 14001 (Kowloon Postmaster) |
+| **Reward Gold** | 3000 |
+| **Reward QP** | 5 |
+| **Reward Item** | 0 0 (none) |
+
+**Narrative rationale:** The Jade Magistracy has determined that the Gloamvault's recursive institutional machinery cannot be interrupted while Matriarch Velastra maintains her throne in the Inner Gloamvault. She is the administrative apex that replaced "Last Witness" with "Last Authority," and her continued presence processes every recovered document through self-serving doctrinal filters before it can reach the outside world. Kowloon's covenant tradition considers her removal a covenant-level obligation: the original oath-law templates that the Neon Covenant's founding legal corpus derives from cannot be authentically recovered while her apparatus recycles them into justifications for her own rule. This is a boss-target proposition: Velastra is flagged `boss` and occupies a `no_mob` room in Zone I.
+
+**Accept message:** The Jade Magistracy has issued a covenant-level judgment: Matriarch Velastra of the Gloamvault must be removed. She is the administrative intelligence that transformed Kel'Shadra's preservation mandate into an engine of self-perpetuation, and every document recovered from the vault passes through her doctrinal apparatus before it reaches the outside world. Descend to the Inner Gloamvault and destroy her. The covenant scholars warn that defeating Velastra does not destroy the vault — but it interrupts its recursive self-justification long enough for original records to become accessible again.
+
+**Completion message:** Matriarch Velastra has been destroyed in her throne crypt, and the Inner Gloamvault's administrative recursion has stalled. Kowloon's covenant scholars report that original Kel'Shadra records are surfacing unfiltered for the first time in living memory — oath-law templates, confession ledgers, and founding charter fragments that predate every doctrinal revision Velastra imposed. The Jade Magistracy has classified the recovery as the most significant legal discovery since the Neon Covenant's ratification. The Ash Cult preachers are already composing sermons: the vault that existed to preserve witness was itself the final thing that needed witnessing.
+
+---
+
+### Proposition Chain Summary
+
+```
+Chain A (Kiess → Midgaard):
+  48 (Kiess, non-chain)  →  49 (Midgaard, chain)  →  51 (Midgaard, boss: Ossuary Champion)
+
+Chain B (Kowloon):
+  50 (Kowloon, non-chain)  →  52 (Kowloon, chain)  →  53 (Kowloon, boss: Matriarch Velastra)
+```
+
+**Design notes:**
+- Chain A begins at Kiess (institutional detection) and escalates through Midgaard's Violet Compact enforcement machinery, culminating in the mid-boss.
+- Chain B operates entirely through Kowloon's covenant scholarship apparatus, escalating from militant clearance through ward suppression to the final boss.
+- Both chains are independent — players can pursue either or both without cross-chain prerequisites.
+- Level ranges respect the Gloamvault's 5-20 target band, with boss propositions gated at the upper end.
+- No item rewards are specified; gold and QP scale with difficulty and chain depth.
+
+---
+
 ## Deliverables for Build Phase (Out of Scope for This Document)
 
 1. Rewrite all 75 room names/descriptions/exits in `gloamvault.are`.
