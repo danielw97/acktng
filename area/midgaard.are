@@ -180,10 +180,6 @@ Grey granite pillars support a covered arcade that shelters this stretch of the 
 
 ~
 0 1
-D0
-~
-~
-0 -1 15512
 D1
 ~
 ~
@@ -198,11 +194,15 @@ D3
 0 -1 3008
 S
 #3010
-@@WSaffron Walk@@N~
-Warm ochre plaster coats the buildings along this walk, and the street takes its name from the saffron traders who once dominated the block before the spice markets consolidated further south. The aroma of lamp oil and dried herbs still lingers in the sheltered doorways, and a saint's niche carved into the eastern wall holds a cluster of tallow candles kept lit by neighbourhood custom. Foot traffic thins here compared to the busier market stretches, giving the walk a contemplative pace that suits the apothecaries and bookbinders who have taken over the old spice stalls.
+@@yThe Northern Gate@@N~
+The stone arch of @@WMidgaard@@N's northern gate frames the open road beyond the city walls, its weathered lintel carved with principal northern destinations and the distances between them measured in days of travel. Iron-banded doors stand open during daylight hours and are sealed by the nightwatch at curfew, their hinges maintained by a dedicated gate-keeper whose work order log hangs in a brass case beside the mechanism. A guardpost flanks the inner side of the passage, staffed by city wardens who log departures and arrivals in a leather-bound transit register. The pavement at the gate's threshold is polished smooth by years of foot traffic, and a carved milestone embedded in the outer cobblestones marks the official boundary of @@WMidgaard@@N's civic jurisdiction to the north.
 
 ~
-0 1
+1 1
+D0
+~
+~
+0 -1 15512
 D1
 ~
 ~
@@ -608,8 +608,8 @@ D3
 0 -1 3028
 S
 #3030
-@@WThe Southern Wild Gate@@N~
-A reinforced civic gatehouse controls the passage to @@dSepulcher Pasture@@N, its iron-banded doors standing open during daylight but watched by a permanent guard detail. The gate's stonework is heavier than the surrounding buildings, with deep-set arrow loops flanking the passage and a portcullis groove visible above the lintel. Municipal bulletins posted beside the gate warn travelers of conditions beyond the walls, and a milestone plaque embedded in the pavement marks distances to the nearest waystations. The air here carries a green dampness from the wildlands beyond, distinct from the dry mineral scent of the city's interior. A faded banner bearing the city seal hangs from a bracket above the gate, its fabric softened by seasons of wind and rain.
+@@gThe Sepulcher Gate@@N~
+A reinforced hatch set flush in the plaza's stone floor marks the controlled descent to @@dSepulcher Pasture@@N beneath @@WMidgaard@@N, its iron ring-pull fitted with a locking bar that the city night wardens engage after dark to prevent unauthorized entry. The surrounding plaza is kept clear of market stalls by ordinance, maintaining the open approach that emergency access to the underground routes requires. Warning notices on iron brackets describe the conditions below: fluctuating @@ggas pockets@@N, documented undead activity in the lower passages, and the provisional nature of the mapped routes. The stonework here is heavier than the surrounding buildings, built to military specifications for underground access points across the city's defensive infrastructure.
 
 ~
 1 1
@@ -850,7 +850,7 @@ D3
 S
 #3041
 @@WCedar Square@@N~
-The western gate-ward junction of the third ring opens where Cedar Square meets the @@yRoc Road@@N, the overland route that leads west toward Kiess and the ruins of fallen Evermeet. A stone milestone set into the pavement marks the formal boundary of @@WMidgaard@@N's civic jurisdiction, its face inscribed with distances to the nearest waystations along the western corridor. Gate wardens maintain a checkpoint here, their kiosk decorated with posted travel advisories and a map-board showing known hazards on the Roc Road. The architecture transitions at this point from city stone to the heavier gatehouse construction of the Fortification Era, and the foot traffic includes a visible proportion of armed travelers preparing for departure. A carved city-seal pillar stands beside the western exit, its base polished smooth by the hands of those who touch it for luck before setting out.
+The western margin of the third commercial ring opens at Cedar Square, where older stone construction speaks to the neighborhood's pre-Lantern Reform origins. A carved milestone embedded in the corner pavement records distances to the principal markets and civic offices, updated during the last cadastral survey. Gate wardens maintain a checkpoint at the end of the block, their kiosk decorated with posted travel advisories for the commercial routes. The architecture transitions here from the inner ring's finished civic stonework to the heavier, plainer construction of the outer residential quarter.
 
 ~
 0 1
@@ -866,10 +866,6 @@ D2
 ~
 ~
 0 -1 3061
-D3
-Roc Road.~
-~
-0 -1 3230
 S
 #3042
 @@WSilver Marketwalk@@N~
@@ -1102,8 +1098,8 @@ D3
 0 -1 3050
 S
 #3052
-@@WThe Western Caravan Gate@@N~
-A broad stone arch marks the western caravan entrance to @@WMidgaard@@N, wide enough for two laden wagons to pass abreast and flanked by guard towers whose arrow loops command the approach road. Customs officers maintain an inspection station inside the arch, where incoming cargo is weighed, assessed, and stamped before proceeding to the market districts. The pavement beneath the arch is grooved by decades of iron-rimmed wheels, and the walls bear carved distance markers indicating the leagues to major trading destinations. Posted travel bulletins warn of bandit activity and road conditions on the western routes, their information updated weekly by the Road Warden Liaison. The gate's keystone bears the city seal flanked by carved sheaves of grain, symbolizing the trade that sustains @@WMidgaard@@N's prosperity.
+@@WThe Caravan Crossing@@N~
+The caravan crossing at this junction serves as a convergence point for commercial traffic moving between the wholesale district and the market avenues, wide enough for two laden wagons to pass abreast. Customs officers maintain an assessment station in a ground-floor office facing the intersection, where incoming cargo is weighed and stamped before proceeding to the markets. The pavement beneath the central arch is grooved by decades of iron-rimmed wheels, and the walls bear carved trade-route markers for the major commercial destinations. The junction's wide turning radius, unusual in this part of the city, was designed to accommodate the large wagons that service the wholesale district.
 
 ~
 1 1
@@ -1287,7 +1283,7 @@ D3
 S
 #3060
 @@WLantern Promenade@@N~
-The eastern promenade at this tier serves as the primary departure point for the @@yEastern Desert@@N caravan routes, and the atmosphere shifts noticeably from civic to frontier. Desert-grade travel gear is displayed outside several supply shops, and the foot traffic includes sun-darkened traders in loose desert robes alongside the usual city residents. A mounted @@Wbulletin board@@N near the eastern exit posts caravan schedules, water-source reports, and warnings about sandstorms and hostile creatures along the eastern routes. The iron @@ylantern@@N poles here are fitted with sand-guards to protect the flames from the gritty wind that sometimes blows in from the desert approaches. A carved stone pillar bearing the city seal marks the formal boundary of @@WMidgaard@@N's eastern jurisdiction.
+The eastern promenade at this tier continues the city's tradition of ceremonial lantern placement, with iron @@ylantern@@N poles fitted with sand-guards suited to the gritty wind that sometimes blows in from the eastern approaches. The foot traffic includes supply merchants and outfitters who serve the long-distance routes, and their warehouses occupy the ground floors of the surrounding buildings. A carved stone pillar bearing the city seal marks the formal boundary of @@WMidgaard@@N's eastern administrative district. The buildings here show the heavier construction favored in the outer rings, with blast-rated shutters on the windows and iron-banded doors built to withstand the stresses of cargo loading and unloading.
 
 ~
 0 1
@@ -1295,10 +1291,6 @@ D0
 ~
 ~
 0 -1 3040
-D1
-Eastern Desert.~
-~
-0 -1 8500
 D2
 ~
 ~
@@ -2221,11 +2213,11 @@ D3
 0 -1 3099
 S
 #3101
-@@WCedar Square@@N~
-The sixth ring of Cedar Square marks the transition into @@WMidgaard@@N's institutional quarter, where the residential buildings give way to larger structures housing civic offices and charitable organizations. A public bench stands at the corner, its wooden slats worn smooth by decades of use, and the street widens slightly to accommodate the foot traffic generated by the government buildings. The cedar timber framing persists here as a decorative element rather than a structural one, bolted to stone facades as an homage to the quarter's origins.
+@@yThe Western Gate@@N~
+The broad stone arch of @@WMidgaard@@N's western gate stands at the formal terminus of the sixth ring, its iron-banded doors open during daylight and monitored by a permanent guard detail at all hours. The pavement beneath the arch is worn by the heavy passage of wagons on the @@yRoc Road@@N, and carved distance markers in the gatehouse walls indicate the leagues to the principal western destinations. Travel advisories posted beside the gate warn of road conditions and known hazards along the western route toward Kiess, updated weekly by the Road Warden Liaison stationed here. The gate's keystone bears the city's seal flanked by the @@ydouble wheel@@N of the Cartwright's Compact, symbols of the commercial traffic that built this quarter.
 
 ~
-0 1
+1 1
 D0
 ~
 ~
@@ -2234,6 +2226,14 @@ D1
 ~
 ~
 0 -1 3102
+D2
+~
+~
+0 -1 3121
+D3
+Roc Road.~
+~
+0 -1 3230
 S
 #3102
 @@WSilver Marketwalk@@N~
@@ -2249,6 +2249,10 @@ D1
 ~
 ~
 0 -1 3103
+D2
+~
+~
+0 -1 3122
 D3
 ~
 ~
@@ -2268,6 +2272,10 @@ D1
 ~
 ~
 0 -1 3104
+D2
+~
+~
+0 -1 3123
 D3
 ~
 ~
@@ -2287,6 +2295,10 @@ D1
 ~
 ~
 0 -1 3105
+D2
+~
+~
+0 -1 3124
 D3
 ~
 ~
@@ -2306,6 +2318,10 @@ D1
 ~
 ~
 0 -1 3106
+D2
+~
+~
+0 -1 3125
 D3
 ~
 ~
@@ -2325,6 +2341,10 @@ D1
 ~
 ~
 0 -1 3107
+D2
+~
+~
+0 -1 3126
 D3
 ~
 ~
@@ -2344,6 +2364,10 @@ D1
 ~
 ~
 0 -1 3108
+D2
+~
+~
+0 -1 3127
 D3
 ~
 ~
@@ -2363,6 +2387,10 @@ D1
 ~
 ~
 0 -1 3109
+D2
+~
+~
+0 -1 3128
 D3
 ~
 ~
@@ -2630,15 +2658,19 @@ D3
 0 -1 3118
 S
 #3120
-@@WLantern Promenade@@N~
-The promenade on the institutional tier serves as the eastern boundary of the temple-and-civic district, its wider walkway providing a transitional space between the formal offices and the more commercial streets to the south. The @@ylantern@@N poles here are decorated with the temple's flame-and-heart emblem cast in iron, a unique touch that distinguishes this stretch from the utilitarian fixtures found elsewhere on the promenade. A town crier's station at the corner serves as the official point for public announcements.
+@@yThe Eastern Gate@@N~
+The eastern gate of @@WMidgaard@@N stands at the end of the sixth ring, its stone arch marking the formal transition from the city's ordered streets to the @@yEastern Desert@@N routes beyond. A mounted @@Wbulletin board@@N near the gate posts caravan schedules, water-source reports, and warnings about sandstorms and hostile creatures along the eastern routes. The gate wardens here maintain a thorough inspection procedure, reflecting the higher-risk nature of the desert approaches. A carved stone pillar bearing the city seal stands beside the gate, its base polished smooth by the hands of travelers who touch it for luck before setting out into the desert.
 
 ~
-0 1
+1 1
 D0
 ~
 ~
 0 -1 3100
+D1
+Eastern Desert.~
+~
+0 -1 8500
 D2
 ~
 ~
@@ -2654,6 +2686,10 @@ S
 
 ~
 17420 11
+D0
+~
+~
+0 -1 3101
 D2
 ~
 ~
@@ -2665,6 +2701,10 @@ This military outfitting hall is dominated by rows of weapon racks and @@Warmour
 
 ~
 17420 11
+D0
+~
+~
+0 -1 3102
 D2
 ~
 ~
@@ -2676,6 +2716,10 @@ A refined clothier's workshop fills this stone-vaulted room, its walls hung with
 
 ~
 17420 11
+D0
+~
+~
+0 -1 3103
 D2
 ~
 ~
@@ -2687,6 +2731,10 @@ Arcane supplies and spell components fill the shelves of this dimly-lit shop, it
 
 ~
 17420 11
+D0
+~
+~
+0 -1 3104
 D2
 ~
 ~
@@ -2698,6 +2746,10 @@ A practical supply depot fills this stone-floored hall with the organised clutte
 
 ~
 17420 11
+D0
+~
+~
+0 -1 3105
 D2
 ~
 ~
@@ -2709,6 +2761,10 @@ This military depot operates under emergency charter authority, its walls lined 
 
 ~
 17420 11
+D0
+~
+~
+0 -1 3106
 D2
 ~
 ~
@@ -2720,6 +2776,10 @@ A bureaucratic trading hall where @@cchartered contracts@@N, tactical commission
 
 ~
 17420 11
+D0
+~
+~
+0 -1 3107
 D2
 ~
 ~
@@ -2731,6 +2791,10 @@ A busy clearinghouse where bounty postings, expedition commissions, and reward c
 
 ~
 17420 11
+D0
+~
+~
+0 -1 3108
 D2
 ~
 ~
@@ -3933,8 +3997,8 @@ D3
 0 -1 3187
 S
 #3189
-@@yNorthwall Astral Gate@@N~
-Bronze astrolabes and rotating mirrors frame the northern breach in @@WMidgaard@@N's defensive perimeter where scholars and dimensional travelers chart impossible constellations before committing to the roads beyond the city walls. The passage bends into geometries that the eye refuses to resolve — the @@castral planes@@N pressing close against the thinned boundary between the material city and the spaces beyond it. City stewards have reinforced this junction with extra @@ylanterns@@N, @@cwarding sigils@@N painted in phosphorescent blue on the archway stones, and civic notices reminding travelers to register their destination with the Ward Office before departure. The gate sees steady traffic from arcanists, planar researchers, and the occasional adventurer drawn by reports of phenomena in the regions accessible through the breach. A carved stone lintel above the gate bears the inscription of the @@pViolet Compact's@@N Article Seven, which requires all extraplanar transit points within the city limits to maintain minimum staffing and illumination at all hours.
+@@yThe Southern Astral Gate@@N~
+Bronze astrolabes and rotating mirrors frame this junction in @@WMidgaard@@N's southern defensive perimeter where scholars and dimensional travelers chart impossible constellations before committing to planar routes beyond the city walls. The passage bends into geometries that the eye refuses to resolve — the @@castral planes@@N pressing close against the thinned boundary between the material city and the spaces beyond it. City stewards have reinforced this junction with extra @@ylanterns@@N, @@cwarding sigils@@N painted in phosphorescent blue on the archway stones, and civic notices reminding travelers to register their destination with the Ward Office before departure. The gate sees steady traffic from arcanists, planar researchers, and the occasional adventurer drawn by reports of phenomena accessible through the breach. A carved stone lintel above the gate bears the inscription of the @@pViolet Compact's@@N Article Seven, which requires all extraplanar transit points within the city limits to maintain minimum staffing and illumination at all hours.
 
 ~
 0 1
