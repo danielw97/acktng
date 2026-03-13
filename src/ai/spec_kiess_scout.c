@@ -104,7 +104,7 @@ bool spec_kiess_scout(CHAR_DATA *ch)
             if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire is marked on the northern threat registry. Shadow-binding constructs, layered void elements. Only approach it if you're confident in your range.";
             if (hint_count > 0)
             {
-               do_say(ch, hints[number_range(0, hint_count - 1)]);
+               do_say(ch, (char *)hints[number_range(0, hint_count - 1)]);
                return FALSE;
             }
          }

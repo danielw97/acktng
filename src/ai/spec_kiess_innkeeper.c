@@ -57,7 +57,7 @@ bool spec_kiess_innkeeper(CHAR_DATA *ch)
          if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire isn't a name I hear often, but the guests who mention it are always the experienced ones. Shadow-bound structure, deep void elements. Not for someone who hasn't done serious dungeon work.";
          if (hint_count > 0)
          {
-            do_say(ch, hints[number_range(0, hint_count - 1)]);
+            do_say(ch, (char *)hints[number_range(0, hint_count - 1)]);
             return FALSE;
          }
       }

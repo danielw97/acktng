@@ -112,7 +112,7 @@ bool spec_rr_warden_captain(CHAR_DATA *ch)
                if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire is on the warden long-range threat assessment — shadow constructs, void-bound defenders. High-capability work. Make sure your field record reflects that level before you approach it.";
                if (hint_count > 0)
                {
-                  do_say(ch, hints[number_range(0, hint_count - 1)]);
+                  do_say(ch, (char *)hints[number_range(0, hint_count - 1)]);
                   return FALSE;
                }
             }

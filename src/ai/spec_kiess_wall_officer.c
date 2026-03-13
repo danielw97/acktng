@@ -98,7 +98,7 @@ bool spec_kiess_wall_officer(CHAR_DATA *ch)
             if (lv >= 25 && lv <= 40) hints[hint_count++] = "The Umbra Heartspire is on our long-range threat registry. Shadow-aligned construction, void-bound defenders. Recommend you have solid field experience before approaching it.";
             if (hint_count > 0)
             {
-               do_say(ch, hints[number_range(0, hint_count - 1)]);
+               do_say(ch, (char *)hints[number_range(0, hint_count - 1)]);
                return FALSE;
             }
          }

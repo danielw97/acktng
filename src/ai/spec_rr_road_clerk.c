@@ -93,7 +93,7 @@ bool spec_rr_road_clerk(CHAR_DATA *ch)
             if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire departures require an extended declaration in the census record — shadow construct territory, void alignment. The data shows experienced operatives making that run. Document your departure if you're heading there.";
             if (hint_count > 0)
             {
-               do_say(ch, hints[number_range(0, hint_count - 1)]);
+               do_say(ch, (char *)hints[number_range(0, hint_count - 1)]);
                return FALSE;
             }
          }
