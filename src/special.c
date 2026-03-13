@@ -98,6 +98,15 @@ DECLARE_SPEC_FUN(spec_kowloon_magistracy);
 DECLARE_SPEC_FUN(spec_kowloon_shrine);
 DECLARE_SPEC_FUN(spec_kowloon_vendor);
 DECLARE_SPEC_FUN(spec_kowloon_laborer);
+DECLARE_SPEC_FUN(spec_gnf_road_warden);
+DECLARE_SPEC_FUN(spec_gnf_lamplighter);
+DECLARE_SPEC_FUN(spec_gnf_peddler);
+DECLARE_SPEC_FUN(spec_gnf_mire_speaker);
+DECLARE_SPEC_FUN(spec_gnf_everkeeper);
+DECLARE_SPEC_FUN(spec_gnf_joint_scout);
+DECLARE_SPEC_FUN(spec_gnf_toll_collector);
+DECLARE_SPEC_FUN(spec_gnf_customs);
+DECLARE_SPEC_FUN(spec_gnf_courier);
 
 void do_massivestrike(CHAR_DATA *ch);
 
@@ -227,6 +236,24 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_kowloon_vendor;
    if (!str_cmp(name, "spec_kowloon_laborer"))
       return spec_kowloon_laborer;
+   if (!str_cmp(name, "spec_gnf_road_warden"))
+      return spec_gnf_road_warden;
+   if (!str_cmp(name, "spec_gnf_lamplighter"))
+      return spec_gnf_lamplighter;
+   if (!str_cmp(name, "spec_gnf_peddler"))
+      return spec_gnf_peddler;
+   if (!str_cmp(name, "spec_gnf_mire_speaker"))
+      return spec_gnf_mire_speaker;
+   if (!str_cmp(name, "spec_gnf_everkeeper"))
+      return spec_gnf_everkeeper;
+   if (!str_cmp(name, "spec_gnf_joint_scout"))
+      return spec_gnf_joint_scout;
+   if (!str_cmp(name, "spec_gnf_toll_collector"))
+      return spec_gnf_toll_collector;
+   if (!str_cmp(name, "spec_gnf_customs"))
+      return spec_gnf_customs;
+   if (!str_cmp(name, "spec_gnf_courier"))
+      return spec_gnf_courier;
 
    return 0;
 }
@@ -355,6 +382,24 @@ char *rev_spec_lookup(void *func)
       return "spec_kowloon_vendor";
    if (func == spec_kowloon_laborer)
       return "spec_kowloon_laborer";
+   if (func == spec_gnf_road_warden)
+      return "spec_gnf_road_warden";
+   if (func == spec_gnf_lamplighter)
+      return "spec_gnf_lamplighter";
+   if (func == spec_gnf_peddler)
+      return "spec_gnf_peddler";
+   if (func == spec_gnf_mire_speaker)
+      return "spec_gnf_mire_speaker";
+   if (func == spec_gnf_everkeeper)
+      return "spec_gnf_everkeeper";
+   if (func == spec_gnf_joint_scout)
+      return "spec_gnf_joint_scout";
+   if (func == spec_gnf_toll_collector)
+      return "spec_gnf_toll_collector";
+   if (func == spec_gnf_customs)
+      return "spec_gnf_customs";
+   if (func == spec_gnf_courier)
+      return "spec_gnf_courier";
 
    return 0;
 }
@@ -418,6 +463,15 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_kowloon_shrine     \n\r");
    strcat(buf, "       spec_kowloon_vendor     \n\r");
    strcat(buf, "       spec_kowloon_laborer    \n\r");
+   strcat(buf, "       spec_gnf_road_warden   \n\r");
+   strcat(buf, "       spec_gnf_lamplighter   \n\r");
+   strcat(buf, "       spec_gnf_peddler       \n\r");
+   strcat(buf, "       spec_gnf_mire_speaker  \n\r");
+   strcat(buf, "       spec_gnf_everkeeper    \n\r");
+   strcat(buf, "       spec_gnf_joint_scout   \n\r");
+   strcat(buf, "       spec_gnf_toll_collector\n\r");
+   strcat(buf, "       spec_gnf_customs       \n\r");
+   strcat(buf, "       spec_gnf_courier       \n\r");
 
    return;
 }
@@ -2844,6 +2898,292 @@ bool spec_kowloon_laborer(CHAR_DATA *ch)
       "Flood season they pay a hazard rate. You'd think that'd be worth celebrating, but it means the drainage channels are backing up.",
       "Pump rotation is every two bells. I'm on third circuit — I don't sit down until Bell Watch, and even then maybe not.",
       "Harbor work feeds the city. The cargo comes in, the city eats. Simple as that. They just don't pay us like it matters."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+/*
+ * Great Northern Forest ambient NPC specials — road wardens, lamp-keepers,
+ * peddlers, Mire-Speaker clan, Everkeepers, joint-commission scouts,
+ * fen toll collectors, customs officers, and Courier Lantern runners.
+ */
+
+bool spec_gnf_road_warden(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n scans the treeline with practiced eyes, one hand resting on $s blade hilt.",
+      "$n checks the condition of a nearby waystone, testing the iron lantern bracket for rust.",
+      "$n marks something in a field ledger, then tucks it back into $s patrol coat.",
+      "$n adjusts the joint-commission sash at $s waist, straightening the dual-city insignia.",
+      "$n pauses at a road drainage ditch and kicks a clump of leaf debris clear with a boot.",
+      "$n taps a waystone twice with a knuckle — two taps for 'passage clear', the old road signal."
+   };
+   static const char *says[] = {
+      "Road's open. Commission checked it this morning. Travel north with your documents visible.",
+      "Split-pine badge means joint authority. Midgaard law south, Kowloon compact north, forest charter in between.",
+      "If you see ash-painted faces off the road, don't engage. Signal any warden and move clear.",
+      "Every warden on this road answers to the joint commission. We report to both cities equally. That's the charter.",
+      "Lantern posts need oil at the next bend. If you pass before dark, the oil cache is at the base of the stone."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 5)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_gnf_lamplighter(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n refills a waystone lantern from an oil flask, steadying the reservoir with practiced hands.",
+      "$n trims a charred lamp wick with small snips, working down the post-line.",
+      "$n checks the iron bracket of a Lantern Road post, testing for rust and loosening.",
+      "$n marks a post number in $s maintenance log, counting the day's route from south to north.",
+      "$n patches a cracked lamp-glass with pitch and hemp cord, a temporary fix until Midgaard sends glass."
+   };
+   static const char *says[] = {
+      "The Lantern Road gets its name because the posts stay lit. My job is making sure that's true every night.",
+      "Rootbound mischief knocked two posts over near the Mosswater ford. I've been filing incident reports for months.",
+      "Midgaard treasury funds the oil. Kowloon provides the lamp glass in the north. We share the maintenance. That's the compact.",
+      "No ward unlit. That's the first road oath. I've walked this line in winter storms to keep it.",
+      "Count seventeen from the south gate — that's the post where the original iron was cast by Ilren Voss herself. Still holding."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_gnf_peddler(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n rummages through $s pack, reorganizing the goods inside with practiced efficiency.",
+      "$n holds up a small vial to the light: northern resin, sealed and fresh.",
+      "$n notes a price in $s trade ledger, tallying the day's sales with a stub of charcoal.",
+      "$n shifts $s pack to the other shoulder, wincing at the familiar ache.",
+      "$n calls out to a passing figure, offering a wave and a quick display of wares."
+   };
+   static const char *says[] = {
+      "Northern resin from the Ironpine Rise is what moves. Wardens need it for sealing dispatches, healers for wounds.",
+      "Ashfang trouble north of the Bends. I came down two days ago and heard raiding horns in the Ironpine. Travel cautious.",
+      "Mire-clan trade works if you know their system. They don't want coin — they want iron nails, lamp oil, and salt.",
+      "The road's cheaper than you'd think if you know who to ask for passage tithe. I pay in dried fish and everyone's happy.",
+      "Three Kowloon caravans came south last week, all moving fast. Best gossip on the road, and it only costs you a copper."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_gnf_mire_speaker(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n tests the tension on $s reed fish-trap with a careful pull, nodding at the result.",
+      "$n bundles a handful of fen herbs with a length of reed-cord, hanging them to dry.",
+      "$n crouches to read the dark water's surface, noting the color and current beneath.",
+      "$n watches a distant heron with concentrated attention, reading something in its slow movement.",
+      "$n splices two sections of woven reed cord together with quick, sure movements."
+   };
+   static const char *says[] = {
+      "The black channels here run east-west. Follow a heron going south and you'll find a ford. That's old fen-reading.",
+      "Quickmud shows white at the edge before it swallows. Step only where the reeds grow double-thick.",
+      "Fever-bark grows on the north side of the hummocks. Two inches of bark soaked overnight. Mire-Speakers have used it for three generations.",
+      "We were here before the road. We'll be here after. The Mire-Speakers gave permission for the bridge. That permission can be withdrawn.",
+      "Passage tithe in the Bends isn't coin. It's salt, iron, lamp oil, or honest labor. We remember every deal we've made."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_gnf_everkeeper(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n kneels at the edge of a planting ring, pressing earth around a young ironpine seedling.",
+      "$n runs $s hand along the bark of a standing ironpine, eyes closed as if listening.",
+      "$n marks a seven-circle pattern in the earth with a carved stick, murmuring in an old tongue.",
+      "$n examines a section of ironpine bark, noting the ring patterns with the attention of a scholar.",
+      "$n sets seven small stones in a careful circle at the base of a great ironpine."
+   };
+   static const char *says[] = {
+      "Seven seedlings for every ironpine felled. That is the law of the grove. The Everkeepers made it the law of the sky.",
+      "These trunks are the pillars. Without them the sky has no support. Laugh if you wish. The ironpine was here before your cities.",
+      "The Rootbound corruption is spreading up the root-network. I've charted its progress for seven seasons. It moves toward the old groves.",
+      "Ilren Voss understood. Her road bends around every Everkeeper grove still standing. She asked us before she built. Remember that.",
+      "A dead ironpine grove is an open sky. The sky falls slowly, but it falls."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_gnf_joint_scout(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n marks a notation on $s patrol map with the joint-commission cipher.",
+      "$n scans the treeline with alert, resting eyes — the watchfulness of someone in field-recovery.",
+      "$n checks $s commission writ, confirming the dual-city seal is still intact.",
+      "$n counts boot-prints on the soft shoulder of the road with careful attention.",
+      "$n exchanges a quiet hand-signal with a fellow patrol as they pass."
+   };
+   static const char *says[] = {
+      "Joint commission patrol means dual authority. I write to Midgaard's rangers and Kowloon's wardens both. One incident, two ledgers.",
+      "Ashfang sign in the Ironpine Rise. Prints were a day old. We've notified both city commands. Standard protocol.",
+      "The road's safe if you stay on it. The moment you step off to investigate something interesting, the risk calculates differently.",
+      "Three patrol pairs cover the road from gate to gate on stagger. You'll see wardens every few hours if the rotation holds.",
+      "Forest charter says no army may march this road in war formation. One patrol at a time. That rule has held for two generations."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_gnf_toll_collector(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n reviews a passage-tithe ledger, running a finger down columns of goods received.",
+      "$n weighs a measure of salt against a small balance scale on $s table.",
+      "$n marks an entry in $s ledger with careful notation, dating and signing it.",
+      "$n checks the seal on a cargo crate, comparing it against $s manifest sheet.",
+      "$n stamps a travel permit with the bridge-crossing seal, adding it to a day's stack."
+   };
+   static const char *says[] = {
+      "Passage tithe at this crossing: one measure salt, two iron nails, or one lamp oil flask. Relic rate. Set when the road was built.",
+      "I maintain ledgers going back forty years at this post. The tithe records are the road's memory — everything passes, everything's counted.",
+      "Sealed cargo gets a crossing but goes in the inspection queue. The fen charter is specific about undeclared goods.",
+      "You'd be surprised how many people try to argue about the tithe. It hasn't changed in two centuries. I have documentation.",
+      "The Passage Tithe kept this road alive through the Ash Winters. Grain and salt kept the waystations running when coin was worthless."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_gnf_customs(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n checks a caravan manifest against $s customs registry, verifying the dual-marks.",
+      "$n examines a cargo seal for the correct thread-knot pattern on the Kowloon side.",
+      "$n calls out to an approaching traveler, gesturing toward the inspection lane.",
+      "$n updates the chalkboard behind $s post, erasing old tariff rates and chalking new ones.",
+      "$n stamps a document with the northern customs seal, adding the day's date in precise script."
+   };
+   static const char *says[] = {
+      "All northbound manifests require dual marks: Midgaard wax and Kowloon thread-knot. That's the fifth article of the forest charter.",
+      "Inspection wait time is posted on the board. Sealed diplomatic pouches go straight through. Livestock takes longest.",
+      "Smuggling through the fen channels bypasses my post — not the Kowloon magistracy. Their reach is longer than mine.",
+      "Current tariff on processed timber: four measures per cart. Raw timber: two measures. Treaty-fixed. I don't negotiate.",
+      "The road has been open two hundred years. This customs post has been here for one hundred and sixty. We know what shouldn't be crossing."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_gnf_courier(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n checks the seal on $s dispatch pouch before tucking it firmly under $s arm.",
+      "$n marks a waystation signature in $s relay log, confirming arrival at this point.",
+      "$n scans the road ahead and behind before setting off again at a measured pace.",
+      "$n checks $s bronze CLO badge at $s collar, the standard-bearer of Courier Lantern passage rights.",
+      "$n adjusts $s pack to balance the weight of sealed dispatches against the distance remaining."
+   };
+   static const char *says[] = {
+      "CLO relay runs from the Granite Arcade to the Iron Gate. Eight waystation stops. I run the northern half.",
+      "Sealed dispatches mean no reading, no delay, no questions. I deliver to the named recipient only.",
+      "The relay keeps both cities informed on road conditions, faction activity, and travel safety. Better than waiting for a rider weekly.",
+      "Lantern badge gets me through both city gates and the forest checkpoints at any hour. That's the compact's guarantee.",
+      "Urgent dispatch, I run it in one stage. No overnight. I've done the full road in fourteen hours when needed."
    };
 
    if (!IS_AWAKE(ch) || is_fighting(ch))
