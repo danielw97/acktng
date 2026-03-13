@@ -25,7 +25,7 @@ D1
 The great @@Bgate@@N of Midgaard looms to the east.
 ~
 ~
-0 -1 3041
+0 -1 3101
 D3
 The road stretches west past @@Wmarker slabs@@N and @@Btax cairns@@N.
 ~
@@ -522,16 +522,16 @@ The road leads east through the @@Wdust@@N.
 ~
 ~
 0 -1 3227
+D2
+A @@pbranch road@@N leads south into the sun-baked @@pwastes@@N.
+~
+~
+0 -1 3262
 D3
 The road continues west toward the @@WCrossroads@@N.
 ~
 ~
 0 -1 3229
-D2
-A @@pbranch road@@N leads south into the sun-baked @@pwastes@@N.
-~
-~
-0 -1 3262
 S
 #3229
 @@WRoc Road, Approach to the Crossroads@@N~
@@ -1637,7 +1637,7 @@ The beach gives way to a stretch of @@asalt marsh@@N where tidal channels snake 
 0 10
 D0
 A @@Wcovered entrance@@N to an old @@bhotel@@N is visible to the north.
-~
+~
 ~
 0 -1 4449
 D1
