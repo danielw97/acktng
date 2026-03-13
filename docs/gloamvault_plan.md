@@ -478,7 +478,7 @@ This redesign explicitly aligns with broader setting motifs used in other plans/
 
 ## Propositions
 
-Six static propositions target the Gloamvault, offered by three city postmasters according to each city's institutional interest in the vault. Two independent entry points (non-chain) allow players to begin from either Kiess or Kowloon, with Midgaard and Kowloon chains progressing toward boss-level warrants. Two propositions culminate in boss kills (Ossuary Champion, Matriarch Velastra).
+Seven static propositions target the Gloamvault, offered by three city postmasters according to each city's institutional interest in the vault. Three independent entry points (non-chain) allow players to begin from Midgaard, Kiess, or Kowloon, with Midgaard and Kowloon chains progressing toward boss-level warrants. Two propositions culminate in boss kills (Ossuary Champion, Matriarch Velastra).
 
 ### Proposition ID 54 — Gloamvault threshold audit: novice interdiction
 
@@ -630,6 +630,31 @@ Six static propositions target the Gloamvault, offered by three city postmasters
 
 ---
 
+### Proposition ID 55 — Compact jurisdiction survey: vault functionary assessment
+
+| Field | Value |
+|---|---|
+| **File** | `56.prop` |
+| **Static ID** | 55 |
+| **Prerequisite** | -1 (none — chain entry point) |
+| **Type** | 1 (kill variety) |
+| **Num Targets** | 3 |
+| **Target Vnums** | `30101 30103 30118` (Crypt Usher, Bone Scrivener, Crypt Interrogator) |
+| **Kill Needed** | 0 |
+| **Level Range** | 8-14 |
+| **Offerer Vnum** | 3015 (Midgaard Postmaster) |
+| **Reward Gold** | 1000 |
+| **Reward QP** | 2 |
+| **Reward Item** | 0 0 (none) |
+
+**Narrative rationale:** Midgaard's Violet Compact registry at the Reliquary Arch has jurisdiction over anything that crosses the threshold, but the registry has never classified the vault's internal administrative hierarchy. The functionary tier — ushers who direct traffic through processional corridors, scriveners who maintain oath ledgers in bone-ink, and interrogators who process confessions into sentencing queues — represents the vault's bureaucratic backbone. The magistrate's office needs field intelligence on whether these roles are still staffed and operationally active, because a vault with functioning administration is a jurisdictional entity under Compact law, not merely a ruin with squatters. This is an independent Midgaard entry point that does not require prior Kiess or Kowloon intelligence.
+
+**Accept message:** The Violet Compact registry needs to determine whether the Gloamvault operates as a functioning institution or an abandoned ruin — the legal distinction matters for jurisdictional classification. Enter the vault and engage one each of the administrative functionaries: crypt ushers who manage processional traffic, bone scriveners who maintain the oath ledgers, and crypt interrogators who run the confession apparatus. Your kill reports will tell the magistrate's office whether the vault still has a working chain of command.
+
+**Completion message:** Your field reports confirm that the Gloamvault's administrative apparatus is fully operational: ushers direct traffic on standing schedules, scriveners maintain active ledgers, and interrogators process confessions into real sentencing queues. The magistrate's office has formally reclassified the vault from "sealed ruin" to "active extra-jurisdictional institution" under Compact law — a designation that authorizes deeper enforcement actions and obligates the registry to maintain ongoing surveillance. The Reliquary Arch checkpoint is being upgraded accordingly.
+
+---
+
 ### Proposition Chain Summary
 
 ```
@@ -638,12 +663,16 @@ Chain A (Kiess → Midgaard):
 
 Chain B (Kowloon):
   50 (Kowloon, non-chain)  →  52 (Kowloon, chain)  →  53 (Kowloon, boss: Matriarch Velastra)
+
+Standalone (Midgaard):
+  55 (Midgaard, non-chain)
 ```
 
 **Design notes:**
 - Chain A begins at Kiess (institutional detection) and escalates through Midgaard's Violet Compact enforcement machinery, culminating in the mid-boss.
 - Chain B operates entirely through Kowloon's covenant scholarship apparatus, escalating from militant clearance through ward suppression to the final boss.
-- Both chains are independent — players can pursue either or both without cross-chain prerequisites.
+- Proposition 55 is a standalone Midgaard entry point focused on jurisdictional classification of the vault's administrative tier — it does not chain into either boss sequence.
+- All three chains are independent — players can pursue any or all without cross-chain prerequisites.
 - Level ranges respect the Gloamvault's 5-20 target band, with boss propositions gated at the upper end.
 - No item rewards are specified; gold and QP scale with difficulty and chain depth.
 
