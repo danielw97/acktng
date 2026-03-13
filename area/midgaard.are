@@ -8,7 +8,7 @@ I 0 0
 V 3001 3200
 X 0
 F 15
-U @@WThe morning bell rings across @@yMidgaard@@N@@W as the city stirs to life once more.@@N~
+U @@WThe watch bell sounds from Guard Headquarters — @@yMidgaard@@N@@W's lamp-routes reset and the patrol lines turn.@@N~
 O Virant~
 R stephen ~
 W stephen ~
@@ -4868,6 +4868,96 @@ A meticulous armourer who tailors arcane vestments for hedge mages and archons a
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
+#3162
+lamplighter~
+a lamplighter~
+A lamplighter moves along the street with a long brass hook pole, checking the city's lamp-posts.
+~
+One of the Lantern Registry's route-workers, this lamplighter follows a chalk-marked circuit that has been walked every watch cycle since the Lantern Reforms first mapped it. A leather satchel hangs from one shoulder, weighted with oil flasks and spare wick-stock, and a long brass hook pole serves as both tool and walking staff. The faint smell of lamp oil clings to everything they wear.
+~
+65 0 150 S
+5 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#3163
+warden ward-sigil~
+a ward-sigil warden~
+A warden in a violet-banded sash stands at the threshold, registry ledger in hand.
+~
+This warden's authority derives from the Violet Compact — the civic agreement that bureaucratized rather than eradicated the flow of arcane materials through @@WMidgaard@@N. The violet band across their grey coat marks them as a licensed threshold inspector, empowered to demand documentation from anyone crossing with arcane goods. Their ledger is bound in pale leather and bears ward sigils that glow faintly when near unregistered materials.
+~
+67 0 400 S
+18 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#3164
+sister lay-sister volunteer~
+a temple lay-sister~
+A lay-sister in plain grey robes pauses near the memorial wall, murmuring a quiet observance.
+~
+Not ordained but devoted, this lay-sister volunteers through the Temple of the Resounding Heart's civic program, which sends lay members into the city's public spaces to tend memorial sites and recite the Three Civic Oaths at posted hours. She carries a small lamp in one hand and a worn booklet of civic liturgy in the other, her lips moving in the rote of daily observance.
+~
+65 0 80 S
+6 2
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#3165
+laborer day-mark worker~
+a day-mark laborer~
+A laborer moves through the street with the trudging gait of someone who has been working since first light.
+~
+Day-mark laborers are the backbone of @@WMidgaard@@N's manual economy: registered workers who receive stamped day tokens each morning and are paid by the circuit. Their token must match the day's stamp at the Registry gate or they are classed as shadow residents — undocumented and outside civic protection. The tired set of this one's shoulders suggests the token today came late.
+~
+65 0 30 S
+3 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#3166
+vendor merchant market~
+a market vendor~
+A vendor stands behind a low table spread with goods, calling out to passing pedestrians.
+~
+One of @@WMidgaard@@N's independent licensed traders, this vendor holds a street permit rather than a full guild charter. The goods on the table reflect the crossroads character of the city: carved pieces from the northern forest routes, eastern-sourced spice jars, and surplus leather stock from the armorer quarter — all stamped with the Ledgerhouse tariff mark.
+~
+67 0 600 S
+7 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#3167
+warden road~
+a road warden~
+A road warden in worn travel gear stands at the gate, watching the road approach with steady eyes.
+~
+The road warden system was formalized during the Ash-and-Iron Decades, when raids severed @@WMidgaard@@N's northern trade routes and the city needed route-security beyond the standard cityguard. Road wardens are technically militia auxiliaries, trained by the Guard Command but funded by the Guild Concordat — reflecting the uneasy marriage between public safety and commercial interest that defines most of @@WMidgaard@@N's institutional arrangements.
+~
+67 0 300 S
+15 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
 #3057
@@ -7478,7 +7568,20 @@ G 0 3055 100
 G 0 3056 100 
 G 0 3058 100 
 G 0 3059 100 
-G 0 3060 100 
+G 0 3060 100
+M 0 3162 3 3020       Lamplighter on Lantern Promenade
+M 0 3162 3 3040       Lamplighter on Lantern Promenade (west ring)
+M 0 3162 3 3016       Lamplighter on Verdant Causeway
+M 0 3163 1 3005       Ward-sigil warden at Violet Reliquary Arch
+M 0 3164 2 3107       Temple lay-sister at Marble Ring memorial wall
+M 0 3164 2 3016       Temple lay-sister on Verdant Causeway
+M 0 3165 5 3003       Day-mark laborer at Crimson Concourse
+M 0 3165 5 3022       Day-mark laborer at Silver Marketwalk
+M 0 3165 5 3023       Day-mark laborer at Crimson Concourse (outer ring)
+M 0 3166 2 3001       Market vendor at Cedar Square
+M 0 3166 2 3011       Market vendor at Azure Plaza
+M 0 3167 2 3030       Road warden at Southern Wild Gate
+M 0 3167 2 3041       Road warden at Cedar Square (east gate approach)
 S
 #SPECIALS
 M 3020 spec_rewield
@@ -7495,5 +7598,11 @@ M 3050 spec_cast_undead
 M 3012 spec_cast_adept
 M 3005 spec_thief
 M 3011 spec_executioner
+M 3162 spec_lamplighter
+M 3163 spec_warden
+M 3164 spec_lay_sister
+M 3165 spec_laborer
+M 3166 spec_vendor
+M 3167 spec_policeman
 S
 #$
