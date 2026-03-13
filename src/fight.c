@@ -877,7 +877,7 @@ static void act_avoidance_notvict(CHAR_DATA *ch, CHAR_DATA *victim, const char *
    }
 }
 
-int get_level_scaled_avoidance_floor(CHAR_DATA *ch, CHAR_DATA *victim, int base_chance)
+int get_level_scaled_avoidance_baseline(CHAR_DATA *ch, CHAR_DATA *victim, int base_chance)
 {
    int level_diff = 0;
 
@@ -923,12 +923,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    if (IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS))
       max_avoidance += 20;
 
-   int parry = get_parry(victim) - get_evasion_piercing(ch);
-   int parry_floor = get_level_scaled_avoidance_floor(ch, victim, 10);
-   if (parry > 0)
-      parry += (get_psuedo_level(victim) - get_psuedo_level(ch)) / 2;
-   if (parry < parry_floor)
-      parry = parry_floor;
+   int parry = get_level_scaled_avoidance_baseline(ch, victim, 10) + get_parry(victim) - get_evasion_piercing(ch);
    if (!can_see(ch, victim) && parry > 0)
       parry += 20;
    if (!can_see(victim, ch) && parry > 0)
@@ -959,12 +954,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       return TRUE;
    }
 
-   int block = get_block(victim) - get_evasion_piercing(ch);
-   int block_floor = get_level_scaled_avoidance_floor(ch, victim, 30);
-   if (block > 0)
-      block += (get_psuedo_level(victim) - get_psuedo_level(ch)) / 2;
-   if (block < block_floor)
-      block = block_floor;
+   int block = get_level_scaled_avoidance_baseline(ch, victim, 30) + get_block(victim) - get_evasion_piercing(ch);
    if (!can_see(ch, victim) && block > 0)
       block += 20;
    if (!can_see(victim, ch) && block > 0)
@@ -995,12 +985,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       return TRUE;
    }
 
-   int dodge = get_dodge(victim) - get_evasion_piercing(ch);
-   int dodge_floor = get_level_scaled_avoidance_floor(ch, victim, 10);
-   if (dodge > 0)
-      dodge += (get_psuedo_level(victim) - get_psuedo_level(ch)) / 2;
-   if (dodge < dodge_floor)
-      dodge = dodge_floor;
+   int dodge = get_level_scaled_avoidance_baseline(ch, victim, 10) + get_dodge(victim) - get_evasion_piercing(ch);
    if (!can_see(ch, victim) && dodge > 0)
       dodge += 20;
    if (!can_see(victim, ch) && dodge > 0)
