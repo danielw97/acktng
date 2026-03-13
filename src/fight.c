@@ -890,9 +890,12 @@ int get_level_scaled_avoidance_floor(CHAR_DATA *ch, CHAR_DATA *victim, int base_
     * Baseline avoidance expectations:
     *  - PC vs PC and NPC vs NPC: equal levels anchor the baseline.
     *  - NPC victim vs PC attacker: victim being 20 levels higher anchors the baseline.
+ *  - NPC attacker vs PC victim: attacker being 20 levels higher anchors the baseline.
     */
    if (!IS_NPC(ch) && IS_NPC(victim))
       level_diff -= 20;
+   else if (IS_NPC(ch) && !IS_NPC(victim))
+      level_diff += 20;
 
    base_chance -= abs(level_diff) / 2;
 

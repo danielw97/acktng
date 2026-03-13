@@ -556,6 +556,12 @@ static void test_level_scaled_avoidance_floor_baselines(void)
     victim.act = ACT_IS_NPC;
     victim.level = 70;
     assert(get_level_scaled_avoidance_floor(&attacker, &victim, 10) == 10);
+
+    attacker.act = ACT_IS_NPC;
+    attacker.level = 70;
+    victim.act = 0;
+    victim.level = 50;
+    assert(get_level_scaled_avoidance_floor(&attacker, &victim, 10) == 10);
 }
 
 static void test_level_scaled_avoidance_floor_level_gap_scaling(void)
