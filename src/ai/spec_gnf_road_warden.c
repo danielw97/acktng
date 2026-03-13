@@ -165,7 +165,7 @@ bool spec_gnf_road_warden(CHAR_DATA *ch)
       return FALSE;
 
    /* Slow patrol: move on average once every 16 seconds (1/16 chance per 1s tick) */
-   if (number_bits(4) != 0)
+   if (number_range(1, 16) != 1)
       return TRUE;
 
    /* Determine next room along the route */
