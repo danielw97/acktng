@@ -549,6 +549,204 @@ Objects use their own independent vnum namespace starting at `21000`, assigned s
 
 ---
 
+## Propositions (Static Quest Templates)
+
+The Catacombs of Nightfall support seven static propositions distributed across all three city postmasters. These propositions tie directly into the area's civic-corruption and forest-covenant narratives, giving players structured quest arcs that reinforce the lore while exploring the catacombs.
+
+### File Slot Assignments
+
+- **File `15` (static ID `14`)**: only unused slot in the loadable range (`1`-`48`).
+- **Files `49`, `57`-`61`**: require increasing `PROP_MAX_STATIC_PROPOSITIONS` from `48` to at least `62` in `src/proposition.h`.
+- File `49` (static ID `48`) does not currently exist. Files `57`-`61` (static IDs `56`-`60`) are new files.
+
+### Proposition Summary Table
+
+| File | ID | Title | Prereq | Type | Targets | Kill# | Level | Offerer | Gold | QP | Reward Item |
+|---|---:|---|---:|---:|---|---:|---|---:|---:|---:|---|
+| `15` | 14 | Gateworks vermin purge | -1 | 1 | `21000 21001 21003` | 0 | 10-19 | 3015 | 800 | 2 | — |
+| `49` | 48 | Reclaim labor disruption order | -1 | 3 | `21014` | 5 | 18-25 | 14001 | 1600 | 3 | — |
+| `57` | 56 | Processional corridor threat assessment | -1 | 1 | `21005 21006 21010` | 0 | 14-25 | 3015 | 1200 | 2 | — |
+| `58` | 57 | Toll-Warden removal order | 56 | 3 | `21026` | 1 | 18-25 | 3015 | 1800 | 3 | — |
+| `59` | 58 | Sealed Names injunction: Matriarch strike | 57 | 3 | `21029` | 1 | 22-25 | 3015 | 3000 | 5 | Injunction medallion |
+| `60` | 59 | Covenant fracture investigation | -1 | 1 | `21011 21015 21017` | 0 | 18-25 | 13001 | 1400 | 3 | — |
+| `61` | 60 | Final audit termination: Sepulcher Lich | 59 | 3 | `21030` | 1 | 22-25 | 13001 | 3200 | 5 | Auditor's covenant seal |
+
+### Chain Structure
+
+**Chain A — Midgaard Civic Authority (3 propositions, offerer `3015`):**
+1. `57` (ID `56`): Processional corridor threat assessment (entry, no prereq)
+2. `58` (ID `57`): Toll-Warden removal order (prereq: `56`, targets mini-boss `21026`)
+3. `59` (ID `58`): Sealed Names injunction: Matriarch strike (prereq: `57`, targets boss `21029`, reward item)
+
+**Chain B — Kiess Forest Covenant (2 propositions, offerer `13001`):**
+1. `60` (ID `59`): Covenant fracture investigation (entry, no prereq)
+2. `61` (ID `60`): Final audit termination: Sepulcher Lich (prereq: `59`, targets boss `21030`, reward item)
+
+**Non-chain propositions:**
+- `15` (ID `14`): Gateworks vermin purge (Midgaard `3015`, entry-level)
+- `49` (ID `48`): Reclaim labor disruption order (Kowloon `14001`, mid-level)
+
+### Detailed Proposition Specifications
+
+#### `15.prop` — Gateworks vermin purge (ID `14`)
+
+```
+Gateworks vermin purge
+-1 1 3 0 10 19 3015 800 2 0 0
+21000 21001 21003
+Midgaard civic wardens need the upper gateworks cleared before structural survey teams can assess the collapsed intake halls. Vermin nesting in the ash tunnels and chapel vaults have made the entry corridors impassable. Kill one ash tunnel rat, one ledger mite, and one chapel carrion bat to establish a safe perimeter for the surveyors.
+The survey perimeter is secure. Midgaard's structural assessors can now enter the upper gateworks without contending with vermin swarms, and the first intake-hall condition reports are already being drafted for the Magistrate Ledgerhouse.
+```
+
+- **Type:** 1 (kill variety) — kill one of each listed target.
+- **Targets:** ash tunnel rat (`21000`), ledger mite (`21001`), chapel carrion bat (`21003`).
+- **Level range:** 10-19.
+- **Offerer:** The Postmaster, Midgaard (`3015`).
+- **Rewards:** 800 gold, 2 qp.
+- **Thematic rationale:** Midgaard civic administration commissions basic pest clearance as a prerequisite for deeper institutional assessment. This is the lowest-level Catacombs proposition and serves as an introduction to the area for newer players.
+
+#### `49.prop` — Reclaim labor disruption order (ID `48`)
+
+```
+Reclaim labor disruption order
+-1 3 1 5 18 25 14001 1600 3 0 0
+21014
+Kowloon's Jade Magistracy has flagged Nightfall's active reclaim processing as parallel to Black Ledger forced-labor requisitions documented in Kowloon's own sealed archives. Postmaster Lin wants the reclaim circles disrupted. Kill five reclaim circle acolytes to collapse the active processing chains and establish that coercive posthumous labor violates intercity compact law.
+The reclaim circles have gone cold. Kowloon's covenant scholars confirm that the disruption matches precedent from Black Ledger interdiction protocols: once the active practitioners are removed, the institutional machinery loses its binding force. Postmaster Lin has filed the engagement report with the Jade Magistracy as evidence supporting the proposed Intercity Posthumous Labor Prohibition.
+```
+
+- **Type:** 3 (kill count) — kill 5 of the listed target.
+- **Target:** reclaim circle acolyte (`21014`).
+- **Level range:** 18-25.
+- **Offerer:** Postmaster Lin, Kowloon (`14001`).
+- **Rewards:** 1600 gold, 3 qp.
+- **Thematic rationale:** Kowloon's independent legal tradition provides an outside perspective on Nightfall's institutional horror. The Jade Magistracy recognizes the reclaim rites as structurally identical to Black Ledger forced labor — a parallel that connects Nightfall to the broader world's institutional corruption themes. This non-chain proposition gives Kowloon a direct stake in the Catacombs narrative.
+
+#### `57.prop` — Processional corridor threat assessment (ID `56`, Chain A start)
+
+```
+Processional corridor threat assessment
+-1 1 3 0 14 25 3015 1200 2 0 0
+21005 21006 21010
+Midgaard's tribunal dispatches require a current threat assessment of the processional corridors and bellcrypt wing before authorizing deeper operations into Nightfall. The Lantern Reform-era halls are now occupied by hostile undead that were once processional attendants and bellcrypt wardens. Engage one processional ghoul, one chain penitent, and one bellcrypt warden to document current threat levels and confirm that the institutional dead have turned aggressive.
+The threat assessment is filed. Midgaard's tribunal dispatches now have confirmed engagement data showing that processional attendants and bellcrypt wardens have fully turned hostile — no longer performing institutional functions, but attacking on sight. This authorizes the next phase of Nightfall remediation operations.
+```
+
+- **Type:** 1 (kill variety) — kill one of each listed target.
+- **Targets:** processional ghoul (`21005`), chain penitent (`21006`), bellcrypt warden (`21010`).
+- **Level range:** 14-25.
+- **Offerer:** The Postmaster, Midgaard (`3015`).
+- **Rewards:** 1200 gold, 2 qp.
+- **Thematic rationale:** First link in the Midgaard civic authority chain. The tribunal needs field intelligence before issuing removal orders — this reflects the bureaucratic caution that characterizes Midgaard's approach to its own failed institutions. Targets span the processional (zone 2) and bellcrypt (zone 7) subzones, requiring mid-depth exploration.
+
+#### `58.prop` — Toll-Warden removal order (ID `57`, Chain A middle)
+
+```
+Toll-Warden removal order
+56 3 1 1 18 25 3015 1800 3 0 0
+21026
+With the threat assessment confirming hostile occupation of the processional and bellcrypt corridors, Midgaard's tribunal has issued a formal removal order for the Nightfall Toll-Warden. This undead checkpoint officer continues to enforce obsolete intake protocols at the Cinder Toll Gatehouse, blocking all authorized access to the deeper institutional corridors. Execute the removal order and clear the gatehouse checkpoint.
+The Toll-Warden has been removed and the Cinder Toll Gatehouse is no longer enforcing dead-letter intake protocols. Midgaard's tribunal clerks note with grim irony that the warden's toll ledger was still current — it had been recording every living intruder who passed through the checkpoint, maintaining perfect bureaucratic form even in undeath. The deeper corridors are now accessible for the final phase of operations.
+```
+
+- **Type:** 3 (kill count) — kill 1 of the listed target.
+- **Target:** Nightfall Toll-Warden (`21026`, mini-boss, zone 5).
+- **Prerequisite:** static ID `56` (file `57`, processional corridor threat assessment).
+- **Level range:** 18-25.
+- **Offerer:** The Postmaster, Midgaard (`3015`).
+- **Rewards:** 1800 gold, 3 qp.
+- **Thematic rationale:** Second link in the Midgaard chain. The removal order is a formal judicial instrument — Midgaard doesn't just send adventurers to kill things; it issues writs. The Toll-Warden is an appropriate mid-chain target: a named mini-boss that gates physical access to the deeper catacombs, mirroring the quest chain's narrative progression from assessment to active intervention.
+
+#### `59.prop` — Sealed Names injunction: Matriarch strike (ID `58`, Chain A final, boss target)
+
+```
+Sealed Names injunction: Matriarch strike
+57 3 1 1 22 25 3015 3000 5 0 0
+21029
+The Nightveil Matriarch's continued custody of the Sealed Name tablets constitutes an ongoing violation of the Oath of Stone: "No judgment hidden, no sentence unrecorded." Her control over the master registry enables the entire reclamation apparatus — every forced raise, every coerced labor assignment, every spirit denied its rest traces back to her authority over sealed names. Midgaard's High Archive has ratified a final injunction. Execute it.
+The Matriarch's authority over the Sealed Names is broken. Midgaard's archival recovery teams are already cataloging the master registry tablets, and the first batch of previously sealed names has been forwarded to the Temple of the Resounding Heart for proper memorial inscription. The tribunal notes that this is the first successful enforcement of the Oath of Stone against a Nightfall authority figure since the Violet Compact era — a precedent that will reshape how Midgaard addresses its other institutional failures.
+@@pa sealed-names injunction medallion@@N
+sealed names injunction medallion
+A heavy medallion bearing the Midgaard tribunal's injunction seal lies here, its violet lacquer cracked from the force of enforcement.
+128
+192
+3
+65536
+```
+
+- **Type:** 3 (kill count) — kill 1 of the listed target.
+- **Target:** Nightveil Matriarch, Keeper of Sealed Names (`21029`, boss, zone 19).
+- **Prerequisite:** static ID `57` (file `58`, Toll-Warden removal order).
+- **Level range:** 22-25.
+- **Offerer:** The Postmaster, Midgaard (`3015`).
+- **Rewards:** 3000 gold, 5 qp.
+- **Reward object:** sealed-names injunction medallion.
+  - Wear flags: `128` (neck).
+  - Extra flags: `192` (`ITEM_MAGIC` + `ITEM_NODROP`).
+  - Weight: `3` (caster archetype).
+  - Item apply: `65536` (`detect_undead`).
+- **Thematic rationale:** The chain's climax. The injunction is a legal instrument, not just a kill order — the Matriarch isn't being assassinated; she's being served. The reward medallion is a neck-slot caster item with `detect_undead`, thematically representing the tribunal's authority to identify and adjudicate the undead. The `detect_undead` apply is directly useful in the Catacombs and connects the reward to the area's ongoing threat. Purple color coding (`@@p`) in the item short description aligns with the Nightfall Chromatic Doctrine's association of purple with authority and necro-liturgy.
+
+#### `60.prop` — Covenant fracture investigation (ID `59`, Chain B start)
+
+```
+Covenant fracture investigation
+-1 1 3 0 18 25 13001 1400 3 0 0
+21011 21015 21017
+Kiess route clerks have received formal petitions from Cairn-Keeper delegates forwarded through Lantern Road dispatch channels. The Split-Pine Compact burial covenants were violated in Nightfall's covenant fracture galleries, and the forest dead were converted to reclaim stock in breach of every oath sworn at the original compact signing. Before mediators can enter to document the violations, hostile spirits must be cleared. Engage one oath registrar wight, one covenant fracture specter, and one sealed-name keeper to secure the galleries for inspection.
+The covenant galleries are secured. Kiess mediators have entered with Cairn-Keeper observers and confirmed what the forest delegates feared: systematic conversion of covenant-protected dead into reclaim labor, with falsified registry entries covering the transfers. The documentation is being compiled for formal protest under Split-Pine Compact arbitration procedures. But the forest delegates note that documentation alone will not release the spirits still bound in the deeper sepulcher — that requires eliminating the source of binding authority.
+```
+
+- **Type:** 1 (kill variety) — kill one of each listed target.
+- **Targets:** oath registrar wight (`21011`), covenant fracture specter (`21015`), sealed-name keeper (`21017`).
+- **Level range:** 18-25.
+- **Offerer:** Postmaster of Kiess (`13001`).
+- **Rewards:** 1400 gold, 3 qp.
+- **Thematic rationale:** First link in the Kiess forest covenant chain. Kiess serves as the diplomatic intermediary between Midgaard's civic systems and the Great Northern Forest's covenant traditions. The targets span the registry (zone 3), covenant fracture galleries (zone 13), and deeper keeper zones — requiring exploration of the areas where the Split-Pine Compact was most directly violated. The completion message foreshadows the chain's boss-targeting conclusion.
+
+#### `61.prop` — Final audit termination: Sepulcher Lich (ID `60`, Chain B final, boss target)
+
+```
+Final audit termination: Sepulcher Lich
+59 3 1 1 22 25 13001 3200 5 0 0
+21030
+The Sepulcher Lich — self-styled "Last Auditor of the Dead" — maintains the binding ledgers that keep forest spirits trapped in reclaim service. Every covenant-protected name on its audit rolls is a living violation of the Split-Pine Compacts. Cairn-Keeper delegates have invoked the compact's enforcement clause for the first time in recorded history, and Kiess is obligated to act. Destroy the Lich and collapse the audit apparatus so the forest dead can finally be released from civic ledger claims.
+The Last Auditor is silenced. Kiess's covenant mediators report that the binding ledgers have begun to dissolve without the Lich's animating authority, and the first forest spirits have already departed the rootglass ossuary chambers — heading north, as Cairn-Keeper tradition holds, toward the Cold Throne. The Split-Pine Compact's enforcement clause has been validated for the first time, establishing that covenant burial protections survive institutional corruption. Kiess has forwarded copies of the engagement record to both Midgaard's Magistrate Ledgerhouse and Kowloon's Jade Magistracy as precedent documentation.
+@@da shattered audit ledger clasp@@N
+shattered audit ledger clasp
+A tarnished clasp torn from the Sepulcher Lich's master ledger lies here, its registry sigils still faintly glowing.
+8192
+192
+2
+512
+```
+
+- **Type:** 3 (kill count) — kill 1 of the listed target.
+- **Target:** Sepulcher Lich, Last Auditor of the Dead (`21030`, boss, zone 19).
+- **Prerequisite:** static ID `59` (file `60`, covenant fracture investigation).
+- **Level range:** 22-25.
+- **Offerer:** Postmaster of Kiess (`13001`).
+- **Rewards:** 3200 gold, 5 qp.
+- **Reward object:** shattered audit ledger clasp.
+  - Wear flags: `8192` (finger).
+  - Extra flags: `192` (`ITEM_MAGIC` + `ITEM_NODROP`).
+  - Weight: `2` (caster archetype).
+  - Item apply: `512` (`det_mag`).
+- **Thematic rationale:** The chain's climax frames the Lich's destruction as a legal enforcement action under Split-Pine Compact arbitration, not mere monster-slaying. The reward is a finger-slot caster item with `det_mag` (detect magic), representing the forensic-legal authority to identify magical bindings and institutional enchantments — directly useful for players investigating the Catacombs' remaining ward systems. The dark grey color coding (`@@d`) in the item short description aligns with the Nightfall Chromatic Doctrine's association of dark grey with old engineering and civic ruin. The completion message's reference to spirits heading north toward the Cold Throne connects to the Great Northern Forest integration targets and Cairn-Keeper ancestor communion traditions documented in the area plan.
+
+### Implementation Notes
+
+1. **Cap increase assumed.** Files `49` and `57`-`61` fall above the current `PROP_MAX_STATIC_PROPOSITIONS` (`48`). The cap is assumed to be increased to at least `62` before these files are loaded.
+2. **Postmaster selection rationale.**
+   - **Midgaard (`3015`)** handles the civic authority chain and entry-level clearance because Nightfall is Midgaard's failed institution. The Oath of Stone, the Violet Compact, and the tribunal writ system are all Midgaard instruments.
+   - **Kiess (`13001`)** handles the forest covenant chain because Kiess mediates between Midgaard civic systems and Great Northern Forest covenant traditions via the Lantern Road dispatch network.
+   - **Kowloon (`14001`)** handles the standalone reclaim disruption because Kowloon's Jade Magistracy provides an independent legal perspective, recognizing Nightfall's reclaim operations as structurally parallel to Kowloon's own Black Ledger institutional abuses.
+3. **Level gating.** All propositions fall within the Catacombs' target level band of 10-25. Chain prerequisites provide natural difficulty progression: assessment (14+) → mini-boss removal (18+) → boss strike (22+).
+4. **Reward object design.** Both boss-targeting chain-final propositions include custom reward objects following established patterns from existing propositions (extra flags `192` = `ITEM_MAGIC` + `ITEM_NODROP`, caster-weight archetype, thematically appropriate `item_apply`). The `detect_undead` and `det_mag` applies are directly useful in the Catacombs environment.
+5. **Target vnum validation.** All target vnums reference mobs defined in this plan's mobile roster (`21000`-`21054`). Implementers must verify that the referenced mobs exist in the final area file before creating the `.prop` files.
+
+---
+
 ## Reset and Encounter Philosophy
 
 - Keep reset cadence brisk but not swarm-heavy at entry.
