@@ -33,7 +33,8 @@ bool spec_kiess_innkeeper(CHAR_DATA *ch)
    if (number_bits(3) != 0)
       return FALSE;
 
-   /* Level-based area hints: random pick from eligible zones */
+   /* 50/50: area hint or standard dialogue */
+   if (number_range(0, 1) == 0)
    {
       CHAR_DATA *hint_plr = NULL;
       for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)

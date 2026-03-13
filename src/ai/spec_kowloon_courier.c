@@ -33,66 +33,76 @@ bool spec_kowloon_courier(CHAR_DATA *ch)
    if (number_bits(3) != 0)
       return FALSE;
 
-   /* Quest-completion reactions */
-   for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+   switch (number_range(0, 2))
    {
-      if (IS_NPC(plr) || plr->pcdata == NULL)
-         continue;
-
-      /* Quest 17 (id 16): Mosswater smuggler interdiction — offerer 13033 (Kowloon) */
-      if (plr->pcdata->completed_static_quests[16])
+      case 0:  /* Quest completion recognition */
       {
-         act("$n glances toward $N and touches the brim of $s cap in a courier's brief salute.", ch, NULL, plr, TO_NOTVICT);
-         act("$n glances toward you and touches the brim of $s cap in a courier's brief salute.", ch, NULL, plr, TO_VICT);
-         do_say(ch, "Mosswater route is running clean now. Relay times on the northern circuit came down half a bell after those smugglers were cleared. That's operationally significant for the CLO schedule.");
-         return FALSE;
-      }
+         CHAR_DATA *qplr[8];
+         int qid[8];
+         int nq = 0;
 
-      /* Quest 18 (id 17): Northern Crown predator survey — offerer 14021 (Kowloon) */
-      if (plr->pcdata->completed_static_quests[17])
-      {
-         act("$n pauses $s route card work and acknowledges $N with a brief nod.", ch, NULL, plr, TO_NOTVICT);
-         act("$n pauses $s route card work and acknowledges you with a brief nod.", ch, NULL, plr, TO_VICT);
-         do_say(ch, "Northern Crown zone assessment is in the registry now. We updated the field courier routing to avoid the predator corridors your survey confirmed. The map is more accurate for it.");
-         return FALSE;
-      }
-
-      /* Quest 1 (id 0): Route reconnaissance — Kiess-area quest, relevant to courier routes */
-      if (plr->pcdata->completed_static_quests[0])
-      {
-         act("$n catches $N's eye with the quick recognition of someone who reads the route reports.", ch, NULL, plr, TO_NOTVICT);
-         act("$n catches your eye with the quick recognition of someone who reads the route reports.", ch, NULL, plr, TO_VICT);
-         do_say(ch, "Forest of Confusion approach data you filed came through the CLO relay. Courier dispatch rescheduled two northern handoffs based on your threat marks. Good data.");
-         return FALSE;
-      }
-   }
-
-   /* Level-based area hints: random pick from eligible zones */
-   {
-      CHAR_DATA *hint_plr = NULL;
-      for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
-      {
-         if (!IS_NPC(plr) && plr->pcdata != NULL)
+         for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
          {
-            hint_plr = plr;
-            break;
+            if (IS_NPC(plr) || plr->pcdata == NULL)
+               continue;
+            if (plr->pcdata->completed_static_quests[16]) { qplr[nq] = plr; qid[nq++] = 16; }
+            if (plr->pcdata->completed_static_quests[17]) { qplr[nq] = plr; qid[nq++] = 17; }
+            if (plr->pcdata->completed_static_quests[0])  { qplr[nq] = plr; qid[nq++] = 0;  }
          }
-      }
-      if (hint_plr != NULL)
-      {
-         const char *hints[5];
-         int hint_count = 0;
-         int lv = hint_plr->level;
-         if (lv >= 5  && lv <= 20) hints[hint_count++] = "If you're still building your field experience, the Gloamvault northwest of Kiess runs on our secondary circuit. Cult structure — CLO doesn't post couriers inside, but we know the perimeter. Worth your time at that level.";
-         if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs show up in our routing notes as a restricted zone — CLO routes around it. Undead concentration, multi-level vault. If you're capable of clearing such things, it's worth charting.";
-         if (lv >= 15 && lv <= 30) hints[hint_count++] = "Sepulcher Pasture is east of the crossroads, on the far side of the banner hills. CLO routes couriers around it — burial cult territory, bone-remnant activity. Worth charting if you're capable of handling what's in there.";
-         if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse is marked as a relay detour on the western circuit — eclipse cult site, relic guardians on every approach. CLO avoids it, but field operatives at your level might want to investigate.";
-         if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire sits at the edge of the CLO routing zone — shadow construct territory, too unpredictable for courier paths. High-capability field work if you're ready for that kind of engagement.";
-         if (hint_count > 0)
+
+         if (nq > 0)
          {
-            do_say(ch, hints[number_range(0, hint_count - 1)]);
-            return FALSE;
+            int pick = number_range(0, nq - 1);
+            plr = qplr[pick];
+            switch (qid[pick])
+            {
+               case 16:
+                  act("$n glances toward $N and touches the brim of $s cap in a courier's brief salute.", ch, NULL, plr, TO_NOTVICT);
+                  act("$n glances toward you and touches the brim of $s cap in a courier's brief salute.", ch, NULL, plr, TO_VICT);
+                  do_say(ch, "Mosswater route is running clean now. Relay times on the northern circuit came down half a bell after those smugglers were cleared. That's operationally significant for the CLO schedule.");
+                  return FALSE;
+               case 17:
+                  act("$n pauses $s route card work and acknowledges $N with a brief nod.", ch, NULL, plr, TO_NOTVICT);
+                  act("$n pauses $s route card work and acknowledges you with a brief nod.", ch, NULL, plr, TO_VICT);
+                  do_say(ch, "Northern Crown zone assessment is in the registry now. We updated the field courier routing to avoid the predator corridors your survey confirmed. The map is more accurate for it.");
+                  return FALSE;
+               case 0:
+                  act("$n catches $N's eye with the quick recognition of someone who reads the route reports.", ch, NULL, plr, TO_NOTVICT);
+                  act("$n catches your eye with the quick recognition of someone who reads the route reports.", ch, NULL, plr, TO_VICT);
+                  do_say(ch, "Forest of Confusion approach data you filed came through the CLO relay. Courier dispatch rescheduled two northern handoffs based on your threat marks. Good data.");
+                  return FALSE;
+            }
          }
+         break;
+      }
+      case 1:  /* Area hint */
+      {
+         CHAR_DATA *hint_plr = NULL;
+         for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+         {
+            if (!IS_NPC(plr) && plr->pcdata != NULL)
+            {
+               hint_plr = plr;
+               break;
+            }
+         }
+         if (hint_plr != NULL)
+         {
+            const char *hints[5];
+            int hint_count = 0;
+            int lv = hint_plr->level;
+            if (lv >= 5  && lv <= 20) hints[hint_count++] = "If you're still building your field experience, the Gloamvault northwest of Kiess runs on our secondary circuit. Cult structure — CLO doesn't post couriers inside, but we know the perimeter. Worth your time at that level.";
+            if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs show up in our routing notes as a restricted zone — CLO routes around it. Undead concentration, multi-level vault. If you're capable of clearing such things, it's worth charting.";
+            if (lv >= 15 && lv <= 30) hints[hint_count++] = "Sepulcher Pasture is east of the crossroads, on the far side of the banner hills. CLO routes couriers around it — burial cult territory, bone-remnant activity. Worth charting if you're capable of handling what's in there.";
+            if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse is marked as a relay detour on the western circuit — eclipse cult site, relic guardians on every approach. CLO avoids it, but field operatives at your level might want to investigate.";
+            if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire sits at the edge of the CLO routing zone — shadow construct territory, too unpredictable for courier paths. High-capability field work if you're ready for that kind of engagement.";
+            if (hint_count > 0)
+            {
+               do_say(ch, hints[number_range(0, hint_count - 1)]);
+               return FALSE;
+            }
+         }
+         break;
       }
    }
 

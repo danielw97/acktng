@@ -46,66 +46,76 @@ bool spec_gnf_road_warden(CHAR_DATA *ch)
    /* Occasional flavor — with quest-reactive and level-hint priority */
    if (number_bits(3) == 0)
    {
-      /* Quest-completion reactions */
-      for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+      switch (number_range(0, 2))
       {
-         if (IS_NPC(plr) || plr->pcdata == NULL)
-            continue;
-
-         /* Quest 16 (id 15): Lantern Road wolf cull */
-         if (plr->pcdata->completed_static_quests[15])
+         case 0:  /* Quest completion recognition */
          {
-            act("$n glances at $N and taps the waystone twice — an informal acknowledgment.", ch, NULL, plr, TO_NOTVICT);
-            act("$n glances at you and taps the waystone twice — an informal acknowledgment.", ch, NULL, plr, TO_VICT);
-            do_say(ch, "Lantern Road wolf count is down. Courier relay times improved by a quarter bell since the cull. Commission logged it. The road's safer for the work you did there.");
-            return FALSE;
-         }
+            CHAR_DATA *qplr[8];
+            int qid[8];
+            int nq = 0;
 
-         /* Quest 27 (id 26): Mirrorbark Predator Census */
-         if (plr->pcdata->completed_static_quests[26])
-         {
-            act("$n adjusts $s patrol log and acknowledges $N with a warden's brief nod.", ch, NULL, plr, TO_NOTVICT);
-            act("$n adjusts $s patrol log and acknowledges you with a warden's brief nod.", ch, NULL, plr, TO_VICT);
-            do_say(ch, "Mirrorbark predator census filed with both city commands. Commission updated the corridor hazard ratings based on your count. Clean data — easier to patrol when the numbers are real.");
-            return FALSE;
-         }
-
-         /* Quest 1 (id 0): Route reconnaissance — forest approach roads */
-         if (plr->pcdata->completed_static_quests[0])
-         {
-            act("$n marks something in $s ledger and glances at $N with quiet recognition.", ch, NULL, plr, TO_NOTVICT);
-            act("$n marks something in $s ledger and glances at you with quiet recognition.", ch, NULL, plr, TO_VICT);
-            do_say(ch, "Your catrat threat data is in the commission route file now. Dispatch rescheduled two waypoint relays based on the pattern you confirmed. That's what field reports are for.");
-            return FALSE;
-         }
-      }
-
-      /* Level-based area hints: random pick from eligible zones */
-      {
-         CHAR_DATA *hint_plr = NULL;
-         for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
-         {
-            if (!IS_NPC(plr) && plr->pcdata != NULL)
+            for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
             {
-               hint_plr = plr;
-               break;
+               if (IS_NPC(plr) || plr->pcdata == NULL)
+                  continue;
+               if (plr->pcdata->completed_static_quests[15]) { qplr[nq] = plr; qid[nq++] = 15; }
+               if (plr->pcdata->completed_static_quests[26]) { qplr[nq] = plr; qid[nq++] = 26; }
+               if (plr->pcdata->completed_static_quests[0])  { qplr[nq] = plr; qid[nq++] = 0;  }
             }
-         }
-         if (hint_plr != NULL)
-         {
-            const char *hints[5];
-            int hint_count = 0;
-            int lv = hint_plr->level;
-            if (lv >= 5  && lv <= 20) hints[hint_count++] = "Not up to forest-level work yet? The Gloamvault north of Kiess is where most travelers find their range before hitting the main road. Cult ruin, manageable scope. Start there.";
-            if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs are off the road commission's direct jurisdiction — undead vault complex, multi-layer structure. Commission logs departures in that direction from travelers past their early postings.";
-            if (lv >= 15 && lv <= 30) hints[hint_count++] = "Sepulcher Pasture is east of the crossroads — off our patrol jurisdiction, but the commission cross-files data from there. Burial cult territory, bone activity. Worth your time if you're ready for mid-range work.";
-            if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse sits outside road commission jurisdiction but gets noted in the extended threat registry — eclipse cult site, relic guardians. Operatives at your range tend to log it before moving on to heavier work.";
-            if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire is on the commission's long-range threat list — shadow constructs, void-alignment. Road wardens don't patrol near it, but we track reports from field operatives who do. High-capability territory.";
-            if (hint_count > 0)
+
+            if (nq > 0)
             {
-               do_say(ch, hints[number_range(0, hint_count - 1)]);
-               return FALSE;
+               int pick = number_range(0, nq - 1);
+               plr = qplr[pick];
+               switch (qid[pick])
+               {
+                  case 15:
+                     act("$n glances at $N and taps the waystone twice — an informal acknowledgment.", ch, NULL, plr, TO_NOTVICT);
+                     act("$n glances at you and taps the waystone twice — an informal acknowledgment.", ch, NULL, plr, TO_VICT);
+                     do_say(ch, "Lantern Road wolf count is down. Courier relay times improved by a quarter bell since the cull. Commission logged it. The road's safer for the work you did there.");
+                     return FALSE;
+                  case 26:
+                     act("$n adjusts $s patrol log and acknowledges $N with a warden's brief nod.", ch, NULL, plr, TO_NOTVICT);
+                     act("$n adjusts $s patrol log and acknowledges you with a warden's brief nod.", ch, NULL, plr, TO_VICT);
+                     do_say(ch, "Mirrorbark predator census filed with both city commands. Commission updated the corridor hazard ratings based on your count. Clean data — easier to patrol when the numbers are real.");
+                     return FALSE;
+                  case 0:
+                     act("$n marks something in $s ledger and glances at $N with quiet recognition.", ch, NULL, plr, TO_NOTVICT);
+                     act("$n marks something in $s ledger and glances at you with quiet recognition.", ch, NULL, plr, TO_VICT);
+                     do_say(ch, "Your catrat threat data is in the commission route file now. Dispatch rescheduled two waypoint relays based on the pattern you confirmed. That's what field reports are for.");
+                     return FALSE;
+               }
             }
+            break;
+         }
+         case 1:  /* Area hint */
+         {
+            CHAR_DATA *hint_plr = NULL;
+            for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+            {
+               if (!IS_NPC(plr) && plr->pcdata != NULL)
+               {
+                  hint_plr = plr;
+                  break;
+               }
+            }
+            if (hint_plr != NULL)
+            {
+               const char *hints[5];
+               int hint_count = 0;
+               int lv = hint_plr->level;
+               if (lv >= 5  && lv <= 20) hints[hint_count++] = "Not up to forest-level work yet? The Gloamvault north of Kiess is where most travelers find their range before hitting the main road. Cult ruin, manageable scope. Start there.";
+               if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs are off the road commission's direct jurisdiction — undead vault complex, multi-layer structure. Commission logs departures in that direction from travelers past their early postings.";
+               if (lv >= 15 && lv <= 30) hints[hint_count++] = "Sepulcher Pasture is east of the crossroads — off our patrol jurisdiction, but the commission cross-files data from there. Burial cult territory, bone activity. Worth your time if you're ready for mid-range work.";
+               if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse sits outside road commission jurisdiction but gets noted in the extended threat registry — eclipse cult site, relic guardians. Operatives at your range tend to log it before moving on to heavier work.";
+               if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire is on the commission's long-range threat list — shadow constructs, void-alignment. Road wardens don't patrol near it, but we track reports from field operatives who do. High-capability territory.";
+               if (hint_count > 0)
+               {
+                  do_say(ch, hints[number_range(0, hint_count - 1)]);
+                  return FALSE;
+               }
+            }
+            break;
          }
       }
 

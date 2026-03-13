@@ -33,57 +33,70 @@ bool spec_kowloon_gate_captain(CHAR_DATA *ch)
    if (number_bits(3) != 0)
       return FALSE;
 
-   /* Quest-completion reactions */
-   for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+   switch (number_range(0, 2))
    {
-      if (IS_NPC(plr) || plr->pcdata == NULL)
-         continue;
-
-      /* Quest 17 (id 16): Mosswater smuggler interdiction */
-      if (plr->pcdata->completed_static_quests[16])
+      case 0:  /* Quest completion recognition */
       {
-         act("$n marks $N's ledger entry with a second notation — the gate captain's acknowledgment mark.", ch, NULL, plr, TO_NOTVICT);
-         act("$n marks your ledger entry with a second notation.", ch, NULL, plr, TO_VICT);
-         do_say(ch, "Mosswater route has been showing cleaner traffic since your work there. We've updated the gate watch pattern accordingly. The Syndics noticed the cargo manifest discrepancy rate dropped.");
-         return FALSE;
-      }
+         CHAR_DATA *qplr[8];
+         int qid[8];
+         int nq = 0;
 
-      /* Quest 18 (id 17): Northern Crown predator survey */
-      if (plr->pcdata->completed_static_quests[17])
-      {
-         act("$n glances at the registry and then at $N with the attention of someone cross-referencing a report.", ch, NULL, plr, TO_NOTVICT);
-         act("$n glances at the registry and then at you with the attention of someone cross-referencing a report.", ch, NULL, plr, TO_VICT);
-         do_say(ch, "Northern Crown survey is on file with the Gate Registry. We've marked the confirmed predator corridors in the outbound travel advisories. Your data reduced the guesswork on that approach considerably.");
-         return FALSE;
-      }
-   }
-
-   /* Level-based area hints: random pick from eligible zones */
-   {
-      CHAR_DATA *hint_plr = NULL;
-      for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
-      {
-         if (!IS_NPC(plr) && plr->pcdata != NULL)
+         for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
          {
-            hint_plr = plr;
-            break;
+            if (IS_NPC(plr) || plr->pcdata == NULL)
+               continue;
+            if (plr->pcdata->completed_static_quests[16]) { qplr[nq] = plr; qid[nq++] = 16; }
+            if (plr->pcdata->completed_static_quests[17]) { qplr[nq] = plr; qid[nq++] = 17; }
          }
-      }
-      if (hint_plr != NULL)
-      {
-         const char *hints[5];
-         int hint_count = 0;
-         int lv = hint_plr->level;
-         if (lv >= 5  && lv <= 20) hints[hint_count++] = "First posting in the region? The Gloamvault northwest of Kiess is where most field-capable travelers test themselves before pushing into the northern forest. Gate registry shows a lot of departures in that direction at your range.";
-         if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs come up in outbound travel declarations — undead vault complex, multi-level. Gate registry logs departures in that direction for operatives past their initial field range.";
-         if (lv >= 15 && lv <= 30) hints[hint_count++] = "Heading east? Sepulcher Pasture is past the crossroads. We log departures in that direction — it's active territory, burial cult remnants, bone-work. The registry shows returns from travelers in your range. Proceed with documentation current.";
-         if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse is on our extended threat registration list. Eclipse cult site — operatives clearing it tend to log significant engagement before departure. The registry shows returns from your level tier.";
-         if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire departures require an extended absence declaration at the registry — shadow construct territory, deep engagement expected. Gate records show it draws experienced operatives. Log your departure if you're heading there.";
-         if (hint_count > 0)
+
+         if (nq > 0)
          {
-            do_say(ch, hints[number_range(0, hint_count - 1)]);
-            return FALSE;
+            int pick = number_range(0, nq - 1);
+            plr = qplr[pick];
+            switch (qid[pick])
+            {
+               case 16:
+                  act("$n marks $N's ledger entry with a second notation — the gate captain's acknowledgment mark.", ch, NULL, plr, TO_NOTVICT);
+                  act("$n marks your ledger entry with a second notation.", ch, NULL, plr, TO_VICT);
+                  do_say(ch, "Mosswater route has been showing cleaner traffic since your work there. We've updated the gate watch pattern accordingly. The Syndics noticed the cargo manifest discrepancy rate dropped.");
+                  return FALSE;
+               case 17:
+                  act("$n glances at the registry and then at $N with the attention of someone cross-referencing a report.", ch, NULL, plr, TO_NOTVICT);
+                  act("$n glances at the registry and then at you with the attention of someone cross-referencing a report.", ch, NULL, plr, TO_VICT);
+                  do_say(ch, "Northern Crown survey is on file with the Gate Registry. We've marked the confirmed predator corridors in the outbound travel advisories. Your data reduced the guesswork on that approach considerably.");
+                  return FALSE;
+            }
          }
+         break;
+      }
+      case 1:  /* Area hint */
+      {
+         CHAR_DATA *hint_plr = NULL;
+         for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+         {
+            if (!IS_NPC(plr) && plr->pcdata != NULL)
+            {
+               hint_plr = plr;
+               break;
+            }
+         }
+         if (hint_plr != NULL)
+         {
+            const char *hints[5];
+            int hint_count = 0;
+            int lv = hint_plr->level;
+            if (lv >= 5  && lv <= 20) hints[hint_count++] = "First posting in the region? The Gloamvault northwest of Kiess is where most field-capable travelers test themselves before pushing into the northern forest. Gate registry shows a lot of departures in that direction at your range.";
+            if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs come up in outbound travel declarations — undead vault complex, multi-level. Gate registry logs departures in that direction for operatives past their initial field range.";
+            if (lv >= 15 && lv <= 30) hints[hint_count++] = "Heading east? Sepulcher Pasture is past the crossroads. We log departures in that direction — it's active territory, burial cult remnants, bone-work. The registry shows returns from travelers in your range. Proceed with documentation current.";
+            if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse is on our extended threat registration list. Eclipse cult site — operatives clearing it tend to log significant engagement before departure. The registry shows returns from your level tier.";
+            if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire departures require an extended absence declaration at the registry — shadow construct territory, deep engagement expected. Gate records show it draws experienced operatives. Log your departure if you're heading there.";
+            if (hint_count > 0)
+            {
+               do_say(ch, hints[number_range(0, hint_count - 1)]);
+               return FALSE;
+            }
+         }
+         break;
       }
    }
 

@@ -34,57 +34,70 @@ bool spec_rr_road_clerk(CHAR_DATA *ch)
    if (number_bits(3) != 0)
       return FALSE;
 
-   /* Quest-completion reactions */
-   for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+   switch (number_range(0, 2))
    {
-      if (IS_NPC(plr) || plr->pcdata == NULL)
-         continue;
-
-      /* Quest 15 (id 14): Gateworks vermin purge */
-      if (plr->pcdata->completed_static_quests[14])
+      case 0:  /* Quest completion recognition */
       {
-         act("$n looks up from the tally-board and marks $N's entry with a second notation.", ch, NULL, plr, TO_NOTVICT);
-         act("$n looks up from the tally-board and marks your entry with a second notation.", ch, NULL, plr, TO_VICT);
-         do_say(ch, "Gateworks vermin count is down. Traffic has resumed at standard rate through that section. My census numbers normalized within two days of the purge. Good work — the data shows it.");
-         return FALSE;
-      }
+         CHAR_DATA *qplr[8];
+         int qid[8];
+         int nq = 0;
 
-      /* Quest 16 (id 15): Lantern Road wolf cull */
-      if (plr->pcdata->completed_static_quests[15])
-      {
-         act("$n pauses $s tally work and acknowledges $N with a precise nod.", ch, NULL, plr, TO_NOTVICT);
-         act("$n pauses $s tally work and acknowledges you with a precise nod.", ch, NULL, plr, TO_VICT);
-         do_say(ch, "Lantern Road wolf toll is down. I can confirm it in the courier relay times — delivery delays on that section dropped by nearly a third since the cull. The census reflects improved throughput.");
-         return FALSE;
-      }
-   }
-
-   /* Level-based area hints: random pick from eligible zones */
-   {
-      CHAR_DATA *hint_plr = NULL;
-      for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
-      {
-         if (!IS_NPC(plr) && plr->pcdata != NULL)
+         for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
          {
-            hint_plr = plr;
-            break;
+            if (IS_NPC(plr) || plr->pcdata == NULL)
+               continue;
+            if (plr->pcdata->completed_static_quests[14]) { qplr[nq] = plr; qid[nq++] = 14; }
+            if (plr->pcdata->completed_static_quests[15]) { qplr[nq] = plr; qid[nq++] = 15; }
          }
-      }
-      if (hint_plr != NULL)
-      {
-         const char *hints[5];
-         int hint_count = 0;
-         int lv = hint_plr->level;
-         if (lv >= 5  && lv <= 20) hints[hint_count++] = "New to the road? Travelers who log Gloamvault as a prior destination tend to show up on the census in better shape than those who don't. Northwest of Kiess — old cult ruin, good first field posting.";
-         if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs show up in traveler declaration forms — undead concentration, vault access. Census records show returns from operatives past their initial field range. Worth noting on your route card.";
-         if (lv >= 15 && lv <= 30) hints[hint_count++] = "Sepulcher Pasture sees regular traveler traffic in your range. East of the crossroads, past the banner hills. Make sure your census entry is current before you head out — I note the returns.";
-         if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse shows up in the extended departure declarations — eclipse cult site, relic guardians on approach. Census logs show returns from operatives in your capability range.";
-         if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire departures require an extended declaration in the census record — shadow construct territory, void alignment. The data shows experienced operatives making that run. Document your departure if you're heading there.";
-         if (hint_count > 0)
+
+         if (nq > 0)
          {
-            do_say(ch, hints[number_range(0, hint_count - 1)]);
-            return FALSE;
+            int pick = number_range(0, nq - 1);
+            plr = qplr[pick];
+            switch (qid[pick])
+            {
+               case 14:
+                  act("$n looks up from the tally-board and marks $N's entry with a second notation.", ch, NULL, plr, TO_NOTVICT);
+                  act("$n looks up from the tally-board and marks your entry with a second notation.", ch, NULL, plr, TO_VICT);
+                  do_say(ch, "Gateworks vermin count is down. Traffic has resumed at standard rate through that section. My census numbers normalized within two days of the purge. Good work — the data shows it.");
+                  return FALSE;
+               case 15:
+                  act("$n pauses $s tally work and acknowledges $N with a precise nod.", ch, NULL, plr, TO_NOTVICT);
+                  act("$n pauses $s tally work and acknowledges you with a precise nod.", ch, NULL, plr, TO_VICT);
+                  do_say(ch, "Lantern Road wolf toll is down. I can confirm it in the courier relay times — delivery delays on that section dropped by nearly a third since the cull. The census reflects improved throughput.");
+                  return FALSE;
+            }
          }
+         break;
+      }
+      case 1:  /* Area hint */
+      {
+         CHAR_DATA *hint_plr = NULL;
+         for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+         {
+            if (!IS_NPC(plr) && plr->pcdata != NULL)
+            {
+               hint_plr = plr;
+               break;
+            }
+         }
+         if (hint_plr != NULL)
+         {
+            const char *hints[5];
+            int hint_count = 0;
+            int lv = hint_plr->level;
+            if (lv >= 5  && lv <= 20) hints[hint_count++] = "New to the road? Travelers who log Gloamvault as a prior destination tend to show up on the census in better shape than those who don't. Northwest of Kiess — old cult ruin, good first field posting.";
+            if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs show up in traveler declaration forms — undead concentration, vault access. Census records show returns from operatives past their initial field range. Worth noting on your route card.";
+            if (lv >= 15 && lv <= 30) hints[hint_count++] = "Sepulcher Pasture sees regular traveler traffic in your range. East of the crossroads, past the banner hills. Make sure your census entry is current before you head out — I note the returns.";
+            if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse shows up in the extended departure declarations — eclipse cult site, relic guardians on approach. Census logs show returns from operatives in your capability range.";
+            if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire departures require an extended declaration in the census record — shadow construct territory, void alignment. The data shows experienced operatives making that run. Document your departure if you're heading there.";
+            if (hint_count > 0)
+            {
+               do_say(ch, hints[number_range(0, hint_count - 1)]);
+               return FALSE;
+            }
+         }
+         break;
       }
    }
 

@@ -45,66 +45,76 @@ bool spec_gnf_joint_scout(CHAR_DATA *ch)
    /* Occasional flavor — with quest-reactive and level-hint priority */
    if (number_bits(3) == 0)
    {
-      /* Quest-completion reactions */
-      for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+      switch (number_range(0, 2))
       {
-         if (IS_NPC(plr) || plr->pcdata == NULL)
-            continue;
-
-         /* Quest 19 (id 18): Ironpine Rise Ashfang suppression */
-         if (plr->pcdata->completed_static_quests[18])
+         case 0:  /* Quest completion recognition */
          {
-            act("$n pauses $s route scan and gives $N a scout's brief acknowledgment nod.", ch, NULL, plr, TO_NOTVICT);
-            act("$n pauses $s route scan and gives you a scout's brief acknowledgment nod.", ch, NULL, plr, TO_VICT);
-            do_say(ch, "Ironpine Rise sign has cleared. Commission updated the threat assessment — Ashfang pattern moved back to the deep north. Both city commands filed acknowledgment. Good work in there.");
-            return FALSE;
-         }
+            CHAR_DATA *qplr[8];
+            int qid[8];
+            int nq = 0;
 
-         /* Quest 20 (id 19): Rootbound perimeter probe */
-         if (plr->pcdata->completed_static_quests[19])
-         {
-            act("$n stops $s patrol motion and acknowledges $N with the careful attention of someone who's read the after-action notes.", ch, NULL, plr, TO_NOTVICT);
-            act("$n stops $s patrol motion and acknowledges you with the careful attention of someone who's read the after-action notes.", ch, NULL, plr, TO_VICT);
-            do_say(ch, "Rootbound perimeter probe is filed. Commission adjusted the eastern patrol boundary based on your contact data. Blight markers are moving slower than last assessment — your count helps explain why.");
-            return FALSE;
-         }
-
-         /* Quest 27 (id 26): Mirrorbark Predator Census */
-         if (plr->pcdata->completed_static_quests[26])
-         {
-            act("$n glances at $N with the practiced recognition of someone comparing a face to a field report.", ch, NULL, plr, TO_NOTVICT);
-            act("$n glances at you with the practiced recognition of someone comparing a face to a field report.", ch, NULL, plr, TO_VICT);
-            do_say(ch, "Mirrorbark census came through both ledgers. Commission updated the predator corridor map for that section — three species confirmed, behavior consistent with your report. Reliable data.");
-            return FALSE;
-         }
-      }
-
-      /* Level-based area hints: random pick from eligible zones */
-      {
-         CHAR_DATA *hint_plr = NULL;
-         for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
-         {
-            if (!IS_NPC(plr) && plr->pcdata != NULL)
+            for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
             {
-               hint_plr = plr;
-               break;
+               if (IS_NPC(plr) || plr->pcdata == NULL)
+                  continue;
+               if (plr->pcdata->completed_static_quests[18]) { qplr[nq] = plr; qid[nq++] = 18; }
+               if (plr->pcdata->completed_static_quests[19]) { qplr[nq] = plr; qid[nq++] = 19; }
+               if (plr->pcdata->completed_static_quests[26]) { qplr[nq] = plr; qid[nq++] = 26; }
             }
-         }
-         if (hint_plr != NULL)
-         {
-            const char *hints[5];
-            int hint_count = 0;
-            int lv = hint_plr->level;
-            if (lv >= 5  && lv <= 20) hints[hint_count++] = "Not ready for the forest yet? The Gloamvault northwest of Kiess is where commission scouts calibrate before rotating into the main patrol area. Cult structure, limited footprint — good orientation ground.";
-            if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs are off the commission's direct patrol zone, but we cross-file reports — undead vault complex, layered structure. Commission scouts who've run it say it's a solid step up from the Gloamvault.";
-            if (lv >= 15 && lv <= 30) hints[hint_count++] = "Sepulcher Pasture sits east of the crossroads — outside the forest commission jurisdiction, but we cross-file threat data. Bone-remnant activity, burial cult. Good field experience if you're in that range.";
-            if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse is logged in commission records as a high-threat sacred site. Eclipse cult construction, relic guardians. Commission doesn't patrol it, but we track reports from operatives who do.";
-            if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire is at the edge of the commission's eastern cross-file range — shadow alignment, void constructs. Commission assessment marks it as upper-tier field work. Check your capabilities before approaching.";
-            if (hint_count > 0)
+
+            if (nq > 0)
             {
-               do_say(ch, hints[number_range(0, hint_count - 1)]);
-               return FALSE;
+               int pick = number_range(0, nq - 1);
+               plr = qplr[pick];
+               switch (qid[pick])
+               {
+                  case 18:
+                     act("$n pauses $s route scan and gives $N a scout's brief acknowledgment nod.", ch, NULL, plr, TO_NOTVICT);
+                     act("$n pauses $s route scan and gives you a scout's brief acknowledgment nod.", ch, NULL, plr, TO_VICT);
+                     do_say(ch, "Ironpine Rise sign has cleared. Commission updated the threat assessment — Ashfang pattern moved back to the deep north. Both city commands filed acknowledgment. Good work in there.");
+                     return FALSE;
+                  case 19:
+                     act("$n stops $s patrol motion and acknowledges $N with the careful attention of someone who's read the after-action notes.", ch, NULL, plr, TO_NOTVICT);
+                     act("$n stops $s patrol motion and acknowledges you with the careful attention of someone who's read the after-action notes.", ch, NULL, plr, TO_VICT);
+                     do_say(ch, "Rootbound perimeter probe is filed. Commission adjusted the eastern patrol boundary based on your contact data. Blight markers are moving slower than last assessment — your count helps explain why.");
+                     return FALSE;
+                  case 26:
+                     act("$n glances at $N with the practiced recognition of someone comparing a face to a field report.", ch, NULL, plr, TO_NOTVICT);
+                     act("$n glances at you with the practiced recognition of someone comparing a face to a field report.", ch, NULL, plr, TO_VICT);
+                     do_say(ch, "Mirrorbark census came through both ledgers. Commission updated the predator corridor map for that section — three species confirmed, behavior consistent with your report. Reliable data.");
+                     return FALSE;
+               }
             }
+            break;
+         }
+         case 1:  /* Area hint */
+         {
+            CHAR_DATA *hint_plr = NULL;
+            for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+            {
+               if (!IS_NPC(plr) && plr->pcdata != NULL)
+               {
+                  hint_plr = plr;
+                  break;
+               }
+            }
+            if (hint_plr != NULL)
+            {
+               const char *hints[5];
+               int hint_count = 0;
+               int lv = hint_plr->level;
+               if (lv >= 5  && lv <= 20) hints[hint_count++] = "Not ready for the forest yet? The Gloamvault northwest of Kiess is where commission scouts calibrate before rotating into the main patrol area. Cult structure, limited footprint — good orientation ground.";
+               if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs are off the commission's direct patrol zone, but we cross-file reports — undead vault complex, layered structure. Commission scouts who've run it say it's a solid step up from the Gloamvault.";
+               if (lv >= 15 && lv <= 30) hints[hint_count++] = "Sepulcher Pasture sits east of the crossroads — outside the forest commission jurisdiction, but we cross-file threat data. Bone-remnant activity, burial cult. Good field experience if you're in that range.";
+               if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse is logged in commission records as a high-threat sacred site. Eclipse cult construction, relic guardians. Commission doesn't patrol it, but we track reports from operatives who do.";
+               if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire is at the edge of the commission's eastern cross-file range — shadow alignment, void constructs. Commission assessment marks it as upper-tier field work. Check your capabilities before approaching.";
+               if (hint_count > 0)
+               {
+                  do_say(ch, hints[number_range(0, hint_count - 1)]);
+                  return FALSE;
+               }
+            }
+            break;
          }
       }
 

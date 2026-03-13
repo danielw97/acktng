@@ -32,56 +32,66 @@ bool spec_kiess_orator(CHAR_DATA *ch)
    if (number_bits(3) != 0)
       return FALSE;
 
-   /* Quest-completion reactions */
-   for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+   switch (number_range(0, 2))
    {
-      if (IS_NPC(plr) || plr->pcdata == NULL)
-         continue;
-
-      /* Quest 1 (id 0): Route reconnaissance: Forest of Confusion */
-      if (plr->pcdata->completed_static_quests[0])
+      case 0:  /* Quest completion recognition */
       {
-         act("$n raises $s voice to address the assembled crowd with particular emphasis.", ch, NULL, NULL, TO_ROOM);
-         do_say(ch, quest_complete_speeches[0]);
-         return FALSE;
-      }
+         int qid[4];
+         int nq = 0;
 
-      /* Quest 10 (id 9): Greenveil Spur clearance */
-      if (plr->pcdata->completed_static_quests[9])
-      {
-         act("$n raises $s voice to address the assembled crowd with particular emphasis.", ch, NULL, NULL, TO_ROOM);
-         do_say(ch, quest_complete_speeches[1]);
-         return FALSE;
-      }
-   }
-
-   /* Level-based area hints: random pick from eligible zones */
-   {
-      CHAR_DATA *hint_plr = NULL;
-      for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
-      {
-         if (!IS_NPC(plr) && plr->pcdata != NULL)
+         for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
          {
-            hint_plr = plr;
-            break;
+            if (IS_NPC(plr) || plr->pcdata == NULL)
+               continue;
+            if (plr->pcdata->completed_static_quests[0]) qid[nq++] = 0;
+            if (plr->pcdata->completed_static_quests[9]) qid[nq++] = 9;
          }
-      }
-      if (hint_plr != NULL)
-      {
-         const char *hints[5];
-         int hint_count = 0;
-         int lv = hint_plr->level;
-         if (lv >= 5  && lv <= 20) hints[hint_count++] = "The Gloamvault to the northwest is not a ruin for the curious — it is a proving ground. Kel'Shadra's cult did not fall easily. Those who have cleared its threshold understand what Kiess's early compact was protecting against.";
-         if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs are not simply an undead infestation — they are a record of what happens when burial doctrine becomes autonomous. The catacombs remember. Field experience there is an education in consequences.";
-         if (lv >= 15 && lv <= 30) hints[hint_count++] = "The Sepulcher Pasture to the east is contested ground. Burial rites performed under competing doctrines, none of them resolved. What you see there is a jurisdiction dispute that became a haunting.";
-         if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse stands as a record of what devotion to astronomical doctrine produces when left unchecked. Eclipse cult, relic guardians, architecture built to outlast its architects. Worth witnessing if you are capable of surviving the visit.";
-         if (lv >= 25 && lv <= 40) hints[hint_count++] = "The Umbra Heartspire is not a dungeon in the conventional sense — it is a void anchor, shadow-aligned, constructed to persist. Field operatives who have cleared it describe a structure that resists documentation. That resistance is itself significant.";
-         if (hint_count > 0)
+
+         if (nq > 0)
          {
-            act("$n addresses the assembled listeners with the measured cadence of a prepared civic speaker.", ch, NULL, NULL, TO_ROOM);
-            do_say(ch, hints[number_range(0, hint_count - 1)]);
-            return FALSE;
+            switch (qid[number_range(0, nq - 1)])
+            {
+               case 0:
+                  act("$n raises $s voice to address the assembled crowd with particular emphasis.", ch, NULL, NULL, TO_ROOM);
+                  do_say(ch, quest_complete_speeches[0]);
+                  return FALSE;
+               case 9:
+                  act("$n raises $s voice to address the assembled crowd with particular emphasis.", ch, NULL, NULL, TO_ROOM);
+                  do_say(ch, quest_complete_speeches[1]);
+                  return FALSE;
+            }
          }
+         break;
+      }
+      case 1:  /* Area hint */
+      {
+         CHAR_DATA *hint_plr = NULL;
+         for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+         {
+            if (!IS_NPC(plr) && plr->pcdata != NULL)
+            {
+               hint_plr = plr;
+               break;
+            }
+         }
+         if (hint_plr != NULL)
+         {
+            const char *hints[5];
+            int hint_count = 0;
+            int lv = hint_plr->level;
+            if (lv >= 5  && lv <= 20) hints[hint_count++] = "The Gloamvault to the northwest is not a ruin for the curious — it is a proving ground. Kel'Shadra's cult did not fall easily. Those who have cleared its threshold understand what Kiess's early compact was protecting against.";
+            if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs are not simply an undead infestation — they are a record of what happens when burial doctrine becomes autonomous. The catacombs remember. Field experience there is an education in consequences.";
+            if (lv >= 15 && lv <= 30) hints[hint_count++] = "The Sepulcher Pasture to the east is contested ground. Burial rites performed under competing doctrines, none of them resolved. What you see there is a jurisdiction dispute that became a haunting.";
+            if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse stands as a record of what devotion to astronomical doctrine produces when left unchecked. Eclipse cult, relic guardians, architecture built to outlast its architects. Worth witnessing if you are capable of surviving the visit.";
+            if (lv >= 25 && lv <= 40) hints[hint_count++] = "The Umbra Heartspire is not a dungeon in the conventional sense — it is a void anchor, shadow-aligned, constructed to persist. Field operatives who have cleared it describe a structure that resists documentation. That resistance is itself significant.";
+            if (hint_count > 0)
+            {
+               act("$n addresses the assembled listeners with the measured cadence of a prepared civic speaker.", ch, NULL, NULL, TO_ROOM);
+               do_say(ch, hints[number_range(0, hint_count - 1)]);
+               return FALSE;
+            }
+         }
+         break;
       }
    }
 
