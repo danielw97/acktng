@@ -1583,24 +1583,6 @@ bool saves_spell args((int level, CHAR_DATA *victim));
 void obj_cast_spell args((int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj));
 bool spell_identify(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj);
 
-/* mob_prog.c */
-#ifdef DUNNO_STRSTR
-char *strstr args((const char *s1, const char *s2));
-#endif
-
-void mprog_wordlist_check args((char *arg, CHAR_DATA *mob, CHAR_DATA *actor, OBJ_DATA *object, void *vo, int type));
-void mprog_percent_check args((CHAR_DATA * mob, CHAR_DATA *actor, OBJ_DATA *object, void *vo, int type));
-void mprog_act_trigger args((char *buf, CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj, void *vo));
-void mprog_bribe_trigger args((CHAR_DATA * mob, CHAR_DATA *ch, int amount));
-void mprog_entry_trigger args((CHAR_DATA * mob));
-void mprog_give_trigger args((CHAR_DATA * mob, CHAR_DATA *ch, OBJ_DATA *obj));
-void mprog_greet_trigger args((CHAR_DATA * mob));
-void mprog_fight_trigger args((CHAR_DATA * mob, CHAR_DATA *ch));
-void mprog_hitprcnt_trigger args((CHAR_DATA * mob, CHAR_DATA *ch));
-void mprog_death_trigger args((CHAR_DATA * mob));
-void mprog_random_trigger args((CHAR_DATA * mob));
-void mprog_speech_trigger args((char *txt, CHAR_DATA *mob));
-
 /*-------*\
 ) quest.c (
 \*-------*/

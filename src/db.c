@@ -230,6 +230,8 @@ int top_reset;
 int top_room;
 int top_shop;
 
+bool MOBtrigger;
+
 /*
  * program locals
  */

@@ -4015,11 +4015,6 @@ void act(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, 
       *point = '\0';
       if (to->desc && can_see_message)
          write_to_buffer(to->desc, buf, point - buf);
-      if (MOBtrigger)
-         mprog_act_trigger(buf, to, ch, obj1, vch);
-      /*
-       * Added by Kahn
-       */
    }
 
    MOBtrigger = TRUE;

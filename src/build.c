@@ -6251,7 +6251,7 @@ void build_clone(CHAR_DATA *ch, char *argument)
        * FIXME:
        * * Copy shop details (if any) across
        * * handle spec_fun
-       * * ignore mob_progs?
+       * * ignore legacy mobile scripts?
        */
 
       send_to_char("Mobile cloned.\n\r", ch);

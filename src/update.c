@@ -934,7 +934,6 @@ void mobile_update(void)
        */
       if (ch->in_room->area->nplayer > 0)
       {
-         mprog_random_trigger(ch);
          /*
           * If ch dies or changes
           * position due to it's random
@@ -1925,7 +1924,6 @@ void aggr_update(void)
 
          while ((mpact = wch->first_mpact) != NULL)
          {
-            mprog_wordlist_check(mpact->buf, wch, mpact->ch, mpact->obj, mpact->vo, ACT_PROG);
             /*
              * Lets hope this check works until something better is in place.
              * * -- Alty

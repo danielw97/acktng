@@ -1042,7 +1042,6 @@ void do_say(CHAR_DATA *ch, char *argument)
       sprintf(buf, "$n says '%s$t%s'.", color_string(ppl, "say"), color_string(ppl, "normal"));
       act(buf, ch, argument, ppl, TO_VICT);
    }
-   mprog_speech_trigger(argument, ch);
    return;
 }
 
