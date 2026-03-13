@@ -110,7 +110,7 @@ bool spec_gnf_joint_scout(CHAR_DATA *ch)
                if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire is at the edge of the commission's eastern cross-file range — shadow alignment, void constructs. Commission assessment marks it as upper-tier field work. Check your capabilities before approaching.";
                if (hint_count > 0)
                {
-                  do_say(ch, hints[number_range(0, hint_count - 1)]);
+                  do_say(ch, (char *)hints[number_range(0, hint_count - 1)]);
                   return FALSE;
                }
             }

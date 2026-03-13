@@ -98,7 +98,7 @@ bool spec_kowloon_courier(CHAR_DATA *ch)
             if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire sits at the edge of the CLO routing zone — shadow construct territory, too unpredictable for courier paths. High-capability field work if you're ready for that kind of engagement.";
             if (hint_count > 0)
             {
-               do_say(ch, hints[number_range(0, hint_count - 1)]);
+               do_say(ch, (char *)hints[number_range(0, hint_count - 1)]);
                return FALSE;
             }
          }

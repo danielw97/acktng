@@ -87,7 +87,7 @@ bool spec_kiess_orator(CHAR_DATA *ch)
             if (hint_count > 0)
             {
                act("$n addresses the assembled listeners with the measured cadence of a prepared civic speaker.", ch, NULL, NULL, TO_ROOM);
-               do_say(ch, hints[number_range(0, hint_count - 1)]);
+               do_say(ch, (char *)hints[number_range(0, hint_count - 1)]);
                return FALSE;
             }
          }
