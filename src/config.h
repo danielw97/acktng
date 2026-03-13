@@ -1297,28 +1297,24 @@
  */
 #if defined(macintosh)
 #define PLAYER_DIR "" /* Player files                 */
-#define NPC_DIR ""
 #define NULL_FILE "proto.are" /* To reserve one stream        */
 #define MOB_DIR ""            /* MOBProg files                */
 #endif
 
 #if defined(MSDOS)
 #define PLAYER_DIR "" /* Player files                 */
-#define NPC_DIR ""
 #define NULL_FILE "nul" /* To reserve one stream        */
 #define MOB_DIR ""      /* MOBProg files                */
 #endif
 
 #if defined(unix)
 #define PLAYER_DIR "../player/" /* Player files                 */
-#define NPC_DIR "../npcs/"
 #define NULL_FILE "/dev/null" /* To reserve one stream        */
 #define MOB_DIR "MOBProgs/"   /* MOBProg files                */
 #endif
 
 #if defined(linux)
 #define PLAYER_DIR "../player/" /* Player files                 */
-#define NPC_DIR "../npcs/"
 #define NULL_FILE "/dev/null" /* To reserve one stream        */
 #define MOB_DIR "MOBProgs/"   /* MOBProg files                */
 #endif

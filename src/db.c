@@ -2586,9 +2586,6 @@ void reset_area(AREA_DATA *pArea)
    return;
 }
 
-/* Nasty hack to get back the address of a loaded mob */
-extern CHAR_DATA *loaded_mob_addr;
-
 /*
  * Create an instance of a mobile.
  */

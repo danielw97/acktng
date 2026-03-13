@@ -106,8 +106,6 @@ char *initial(const char *str)
 
 /*
  * Save a character and inventory.
- * Would be cool to save NPC's too for quest purposes,
- *   some of the infrastructure is provided.
  */
 int loop_counter;
 void save_char_obj(CHAR_DATA *ch)
@@ -179,7 +177,7 @@ void save_char_obj(CHAR_DATA *ch)
    else
       strcpy(buf, ch->name);
 
-   sprintf(strsave, "%s%s", IS_NPC(ch) ? NPC_DIR : PLAYER_DIR, cap_nocol(buf));
+   sprintf(strsave, "%s%s", PLAYER_DIR, cap_nocol(buf));
 #endif
    /*
     * Tack on a .temp to strsave, use as tempstrsave
@@ -630,9 +628,6 @@ static void init_changed_vnum_hash(void)
    fclose(fp);
 }
 
-/* Nasty hack for db.c to get back address of ch */
-CHAR_DATA *loaded_mob_addr;
-
 /*
  * Load a char and inventory into a new ch structure.
  */
@@ -645,26 +640,23 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
    static PC_DATA pcdata_zero;
    char strsave[MAX_INPUT_LENGTH];
    char tempstrsave[MAX_INPUT_LENGTH];
-   char *bufptr, *nmptr;
    CHAR_DATA *ch;
    char buf[MAX_STRING_LENGTH];
    FILE *fp;
    bool found;
-   bool is_npc;
    int foo;
 
    init_changed_vnum_hash();
 
-   if ((d == NULL) /* load npc */
-       && (!system_call))
-      is_npc = TRUE;
-   else
-      is_npc = FALSE;
+   if (d == NULL)
+   {
+      bug("Load_char_obj: NULL descriptor.", 0);
+      return FALSE;
+   }
 
    GET_FREE(ch, char_free);
    clear_char(ch);
 
-   if (!is_npc)
    {
       GET_FREE(ch->pcdata, pcd_free);
       *ch->pcdata = pcdata_zero;
@@ -750,14 +742,6 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
          ch->pcdata->alias[cnt] = str_dup("<none>");
       }
    }
-   else
-   {
-      /*
-       * is NPC
-       */
-      ch->pcdata = NULL;
-      loaded_mob_addr = ch;
-   }
 
    ch->stunTimer = 0;
    ch->first_shield = NULL;
@@ -774,10 +758,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
    ch->old_prompt = str_dup("");
    ch->prompt = str_dup("TYPE HELP PROMPT ");
    ch->last_note = 0;
-   if (is_npc)
-      ch->act = ACT_IS_NPC;
-   else
-      ch->config = CONFIG_BLANK | CONFIG_COMBINE | CONFIG_PROMPT | CONFIG_MAPPER;
+   ch->config = CONFIG_BLANK | CONFIG_COMBINE | CONFIG_PROMPT | CONFIG_MAPPER;
    ch->sex = SEX_NEUTRAL;
    ch->login_sex = -1;
    ch->current_brand = NULL;
@@ -801,39 +782,12 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
     */
 
 #if !defined(machintosh) && !defined(MSDOS)
-   if (is_npc) /* convert spaces to . */
-   {
-      for (nmptr = name, bufptr = buf; *nmptr != 0; nmptr++)
-      {
-         if (*nmptr == ' ')
-            *(bufptr++) = '.';
-         else
-            *(bufptr++) = *nmptr;
-      }
-      *(bufptr) = *nmptr;
-   }
-   else
-      strcpy(buf, name);
-   sprintf(strsave, "%s%s%s%s", is_npc ? NPC_DIR : PLAYER_DIR, initial(buf), "/", cap_nocol(buf));
+   strcpy(buf, name);
+   sprintf(strsave, "%s%s%s%s", PLAYER_DIR, initial(buf), "/", cap_nocol(buf));
 #else
-   /*
-    * Convert npc names to dos compat name.... yuk
-    */
-   if (is_npc)
-   {
-      for (nmptr = ch->name, bufptr = buf; *nmptr != 0; nmptr++)
-      {
-         if (*nmptr != ' ' && *nmptr != '.')
-            *(bufptr++) = *nmptr;
-         if (bufptr - buf == 8)
-            break;
-      }
-      *(bufptr) = 0;
-   }
-   else
-      strcpy(buf, name);
+   strcpy(buf, name);
 
-   sprintf(strsave, "%s%s", is_npc ? NPC_DIR : PLAYER_DIR, cap_nocol(buf));
+   sprintf(strsave, "%s%s", PLAYER_DIR, cap_nocol(buf));
 #endif
 
 #if !defined(macintosh) && !defined(MSDOS)
@@ -889,8 +843,6 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
          word = fread_word(fp);
          if (!str_cmp(word, "PLAYER"))
             fread_char(ch, fp);
-         else if (!str_cmp(word, "MOB"))
-            fread_char(ch, fp);
          else if (!str_cmp(word, "OBJECT"))
             fread_obj(ch, fp);
          else if (!str_cmp(word, "END"))
@@ -908,13 +860,6 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       }
    }
 
-   if (!found && is_npc)
-   {
-      /*
-       * return memory for char back to system.
-       */
-      free_char(ch);
-   }
    return found;
 }
 

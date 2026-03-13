@@ -10,7 +10,7 @@
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SRC_DIR="$SCRIPT_DIR/src"
 AREA_DIR="$SCRIPT_DIR/area"
-NPC_DIR="$SCRIPT_DIR/npcs"
+PLAYER_DIR="$SCRIPT_DIR/player"
 RUN_SECONDS=2
 LOG_FILE="/tmp/mud-integration-test-$$.log"
 
@@ -54,7 +54,7 @@ fi
 # ---------------------------------------------------------------------------
 player_lower=$(echo "$TEST_PLAYER" | tr '[:upper:]' '[:lower:]')
 first_letter=$(echo "$player_lower" | cut -c1)
-rm -f "$NPC_DIR/$first_letter/$player_lower"
+rm -f "$PLAYER_DIR/$first_letter/$player_lower"
 
 # ---------------------------------------------------------------------------
 # Step 3: launch
