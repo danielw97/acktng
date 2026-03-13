@@ -1122,21 +1122,24 @@ bool spec_mayor(CHAR_DATA *ch)
    static const char *path;
    static int pos;
    static bool move;
+   static int last_route_start_hour = -1;
 
    if (!move)
    {
-      if (time_info.hour == 6)
+      if (time_info.hour == 6 && last_route_start_hour != 6)
       {
          path = open_path;
          move = TRUE;
          pos = 0;
+         last_route_start_hour = 6;
       }
 
-      if (time_info.hour == 20)
+      if (time_info.hour == 20 && last_route_start_hour != 20)
       {
          path = close_path;
          move = TRUE;
          pos = 0;
+         last_route_start_hour = 20;
       }
    }
 
