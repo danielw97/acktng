@@ -2,12 +2,12 @@
 
 ## Overview
 
-**Area Name:** `@@cThe Sultan's Palace@@N`  
-**File Name:** `sultans_palace.are`  
-**Intended Level Range:** 30-50 (`I 30 50`)  
-**Vnum Range (fixed):** **30325-30399** (`V 30325 30399`)  
-**Room Count Target:** **75/75 rooms used**  
-**Mob Count Target:** 75/75 mobile vnums used (re-authored roster)  
+**Area Name:** `@@cThe Sultan's Palace@@N` 
+**File Name:** `sultans_palace.are` 
+**Intended Level Range:** 30-50 (`I 30 50`) 
+**Vnum Range (fixed):** **30325-30399** (`V 30325 30399`) 
+**Room Count Target:** **75/75 rooms used** 
+**Mob Count Target:** 75/75 mobile vnums used (re-authored roster) 
 **Object Count Target:** 75/75 object vnums used (re-authored itemization)
 
 ### Redesign Goal
@@ -66,7 +66,7 @@ This redesign directly integrates motifs established in oasis/pyramid planning:
 The area is fully re-zoned into five 15-room bands, using every room vnum once.
 
 ## Zone A — Gate of Petitions (30325-30339, 15 rooms)
-**Function:** public-facing palace threshold, toll petitions, oath verification, caravan adjudication.  
+**Function:** public-facing palace threshold, toll petitions, oath verification, caravan adjudication. 
 **Mood:** formal, crowded-turned-abandoned, still watched by protocol-bound remnants.
 
 - **30325** Moonlit Antechamber (entry nexus; exterior tie retained).
@@ -82,7 +82,7 @@ The area is fully re-zoned into five 15-room bands, using every room vnum once.
 ---
 
 ## Zone B — Court of Measured Waters (30340-30354, 15 rooms)
-**Function:** hydraulic-administrative heart of palace governance.  
+**Function:** hydraulic-administrative heart of palace governance. 
 **Mood:** cool stone, mirrored channels, law encoded as flow control.
 
 - **30340** Amber Cloister (transition from intake to court interior).
@@ -98,7 +98,7 @@ The area is fully re-zoned into five 15-room bands, using every room vnum once.
 ---
 
 ## Zone C — Sultan's Domestic Crescent (30355-30369, 15 rooms)
-**Function:** private palace life, harem politics, steward wings, diplomatic receiving salons.  
+**Function:** private palace life, harem politics, steward wings, diplomatic receiving salons. 
 **Mood:** decadent luxury hollowed by paranoia.
 
 - **30355** Cedar Reception Court (zone entry from hub).
@@ -114,7 +114,7 @@ The area is fully re-zoned into five 15-room bands, using every room vnum once.
 ---
 
 ## Zone D — Necro-Archives Beneath the Court (30370-30384, 15 rooms)
-**Function:** legal-funerary merger layer where records and remains are jointly governed.  
+**Function:** legal-funerary merger layer where records and remains are jointly governed. 
 **Mood:** compressed air, incense ash, judicial fear.
 
 - **30370** Spiral Descent to the Quiet Registry.
@@ -130,7 +130,7 @@ The area is fully re-zoned into five 15-room bands, using every room vnum once.
 ---
 
 ## Zone E — Moon-Cistern Apex and Throne Collapse (30385-30399, 15 rooms)
-**Function:** final convergence of water-law and death-sovereignty; climactic ritual machinery.  
+**Function:** final convergence of water-law and death-sovereignty; climactic ritual machinery. 
 **Mood:** unstable moonlight, flooded mechanics, dynastic catastrophe.
 
 - **30385** Ascendant Cistern Lift (re-emergence into upper sanctum heights).
@@ -195,10 +195,10 @@ Design intent:
 - Keep `30326` as central navigational hub to mirror current player muscle memory.
 - Preserve at least one clean return path from each deep branch to reduce dead-end frustration.
 - Distinguish traversal modes by architecture:
-  - Public/legal halls = broad axial movement.
-  - Domestic crescent = branching side loops.
-  - Necro-archives = layered descent and choke points.
-  - Apex sanctum = linear escalation into boss.
+ - Public/legal halls = broad axial movement.
+ - Domestic crescent = branching side loops.
+ - Necro-archives = layered descent and choke points.
+ - Apex sanctum = linear escalation into boss.
 
 ---
 

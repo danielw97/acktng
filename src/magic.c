@@ -459,7 +459,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
     */
 
    /*
-    * Only MOBprogrammed mobs not charmed can cast spells
+    * Only scripted mobs not charmed can cast spells
     * like PC's -
     * -S- Mod: intelligent mobs can cast too.    NOT ANYMORE :P  Zen
     */

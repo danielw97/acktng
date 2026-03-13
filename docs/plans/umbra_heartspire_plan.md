@@ -156,11 +156,11 @@ Rebuild all existing 55 mob vnums into coherent caste ecology:
 - **11231-11240:** Kiess-derived nobles, chamber officials, mirror retainers.
 - **11241-11249:** Iron-Wake military chain (pikemen -> wardens -> castellan).
 - **11250-11254 (boss set):**
-  - 11250 Thorn-Crowned Castellan
-  - 11251 Lady Vespera, Mirror-Queen
-  - 11252 Marshal of the Iron Wake
-  - 11253 The Astral Mortifier
-  - 11254 Abbot Noctivar, Ebon Hierophant
+ - 11250 Thorn-Crowned Castellan
+ - 11251 Lady Vespera, Mirror-Queen
+ - 11252 Marshal of the Iron Wake
+ - 11253 The Astral Mortifier
+ - 11254 Abbot Noctivar, Ebon Hierophant
 
 Design rules:
 - Maintain progression from disciplined humanoid orders into warped ritual specialists.
@@ -184,18 +184,18 @@ Itemization principles:
 ## Reset and Encounter Cadence
 - Preserve deterministic wing progression with periodic patrol variance.
 - Ensure each wing has:
-  - 1 ambient loop reset,
-  - 1 mini-elite cluster,
-  - 1 gate encounter near wing end.
+ - 1 ambient loop reset,
+ - 1 mini-elite cluster,
+ - 1 gate encounter near wing end.
 - Final convergence should require clearing at least two wing bosses before Noctivar opens to full power (implemented via prog state or reset substitution).
 
 ## Cross-Area Lore Integration Requirements
 - **Midgaard:**
-  - Explicit references to the Violet Compact, Lantern Reforms, and archive legitimacy battles.
-  - Architectural signs that Heartspire once served civic evidence storage before sect capture.
+ - Explicit references to the Violet Compact, Lantern Reforms, and archive legitimacy battles.
+ - Architectural signs that Heartspire once served civic evidence storage before sect capture.
 - **Kiess:**
-  - Echoes of Evermeet ruin-memory, noble funerary protocol, and mirror-court ritualization.
-  - At least one recurring inscription naming Kiess as both heir and warning.
+ - Echoes of Evermeet ruin-memory, noble funerary protocol, and mirror-court ritualization.
+ - At least one recurring inscription naming Kiess as both heir and warning.
 
 
 ## Quests

@@ -2,13 +2,13 @@
 
 ## Overview
 
-**Area Name:** `@@bLost City@@N`  
-**File Name:** `lost_city.are`  
-**Keyword:** `lost city desert ruins`  
-**Level Range:** 35-55 (`I 35 55`)  
-**Vnum Range (fixed):** **30400-30479** (`V 30400 30479`)  
-**Room Count Target:** **80/80 rooms used**  
-**Mob Count Target:** **80/80 mobs rewritten**  
+**Area Name:** `@@bLost City@@N` 
+**File Name:** `lost_city.are` 
+**Keyword:** `lost city desert ruins` 
+**Level Range:** 35-55 (`I 35 55`) 
+**Vnum Range (fixed):** **30400-30479** (`V 30400 30479`) 
+**Room Count Target:** **80/80 rooms used** 
+**Mob Count Target:** **80/80 mobs rewritten** 
 **Object Count Target:** **80/80 objects rewritten**
 
 This plan keeps the existing vnum envelope and performs a complete thematic rebuild of rooms, mobiles, objects, resets, and progression. The current repetitive ruin-lane pattern is replaced with a coherent, lore-anchored city-state ruin tied directly to oasis water-law history and pyramid-era sovereign conflict.

@@ -529,9 +529,9 @@ struct mob_index_data
    sh_int damsizedice;      /* Unused */
    sh_int damplus;          /* Unused */
    int gold;                /* Unused */
-   MPROG_DATA *first_mprog; /* Used by MOBprogram   */
+   MPROG_DATA *first_mprog; /* Used by program   */
    MPROG_DATA *last_mprog;
-   int progtypes; /* Used by MOBprogram   */
+   int progtypes; /* Used by program   */
    int skills;    /* skill flags       */
    int power_skills;
    int cast; /* casting flags  */
@@ -679,9 +679,9 @@ struct char_data
    sh_int wimpy;
    int deaf;
    sh_int cooldown[MAX_SKILL];
-   MPROG_ACT_LIST *first_mpact; /* Used by MOBprogram */
+   MPROG_ACT_LIST *first_mpact; /* Used by program */
    MPROG_ACT_LIST *last_mpact;
-   int mpactnum; /* Used by MOBprogram */
+   int mpactnum; /* Used by program */
    int skills;   /* Used for MOBs */
    int cast;
    int def;
@@ -828,7 +828,7 @@ struct pc_data
 
 
 /*
- * MOBprogram block
+ * program block
  */
 
 struct mob_prog_act_list
@@ -852,8 +852,6 @@ struct mob_prog_data
    char *comlist;
    char *filename;
 };
-
-extern bool MOBtrigger;
 
 struct liq_type
 {
@@ -1140,8 +1138,6 @@ struct area_data
    BUILD_DATA_LIST *last_area_object;
    BUILD_DATA_LIST *first_area_mobile;
    BUILD_DATA_LIST *last_area_mobile;
-   BUILD_DATA_LIST *first_area_mobprog;
-   BUILD_DATA_LIST *last_area_mobprog;
    BUILD_DATA_LIST *first_area_shop;
    BUILD_DATA_LIST *last_area_shop;
    BUILD_DATA_LIST *first_area_specfunc;
@@ -1211,11 +1207,6 @@ struct build_data_list /* Used for storing area file data. */
    void *data;
 };
 
-struct mobprog_item /* For re-creating #MOBPROGS section */
-{
-   MOB_INDEX_DATA *mob;
-   char *filename;
-};
 
 struct lookup_type
 {
@@ -1582,24 +1573,6 @@ bool is_arcane_spell args((int sn));
 bool saves_spell args((int level, CHAR_DATA *victim));
 void obj_cast_spell args((int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj));
 bool spell_identify(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj);
-
-/* mob_prog.c */
-#ifdef DUNNO_STRSTR
-char *strstr args((const char *s1, const char *s2));
-#endif
-
-void mprog_wordlist_check args((char *arg, CHAR_DATA *mob, CHAR_DATA *actor, OBJ_DATA *object, void *vo, int type));
-void mprog_percent_check args((CHAR_DATA * mob, CHAR_DATA *actor, OBJ_DATA *object, void *vo, int type));
-void mprog_act_trigger args((char *buf, CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj, void *vo));
-void mprog_bribe_trigger args((CHAR_DATA * mob, CHAR_DATA *ch, int amount));
-void mprog_entry_trigger args((CHAR_DATA * mob));
-void mprog_give_trigger args((CHAR_DATA * mob, CHAR_DATA *ch, OBJ_DATA *obj));
-void mprog_greet_trigger args((CHAR_DATA * mob));
-void mprog_fight_trigger args((CHAR_DATA * mob, CHAR_DATA *ch));
-void mprog_hitprcnt_trigger args((CHAR_DATA * mob, CHAR_DATA *ch));
-void mprog_death_trigger args((CHAR_DATA * mob));
-void mprog_random_trigger args((CHAR_DATA * mob));
-void mprog_speech_trigger args((char *txt, CHAR_DATA *mob));
 
 /*-------*\
 ) quest.c (

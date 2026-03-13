@@ -80,7 +80,7 @@ This plan fully replaces the current repetitive topology and template-populated 
 47. `#RESETS` must not contain blank lines.
 
 ### Section Order
-48. Follow canonical saver order: `#AREA`, `#ROOMS`, `#MOBILES`, `#MOBPROGS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
+48. Follow canonical saver order: `#AREA`, `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
 
 ### Specials Policy
 49. Mob specials beginning with `spec_summon_` must never be set in area files (runtime-only).
@@ -338,8 +338,8 @@ The expanded 200-room layout divides into 20 thematic subzones of 10 rooms each.
 
 - Final boss arena plus ancillary memory chambers.
 - Boss pair sequence:
-  - **The Nightveil Matriarch, Keeper of Sealed Names** (phase one: authority). Must be flagged `sentinel` + `boss`, placed in room flagged `no_mob`.
-  - **The Sepulcher Lich, Last Auditor of the Dead** (phase two: reclamation). Must be flagged `sentinel` + `boss`, placed in room flagged `no_mob`.
+ - **The Nightveil Matriarch, Keeper of Sealed Names** (phase one: authority). Must be flagged `sentinel` + `boss`, placed in room flagged `no_mob`.
+ - **The Sepulcher Lich, Last Auditor of the Dead** (phase two: reclamation). Must be flagged `sentinel` + `boss`, placed in room flagged `no_mob`.
 - Boss arena room must be flagged `no_mob` (`4`).
 - Both bosses must have `stay_area` (`64`) set.
 - Room descriptions should embody the chilling legal principle: "If the city survives, the dead consent retroactively."
@@ -681,10 +681,10 @@ A heavy medallion bearing the Midgaard tribunal's injunction seal lies here, its
 - **Offerer:** The Postmaster, Midgaard (`3015`).
 - **Rewards:** 3000 gold, 5 qp.
 - **Reward object:** sealed-names injunction medallion.
-  - Wear flags: `128` (neck).
-  - Extra flags: `192` (`ITEM_MAGIC` + `ITEM_NODROP`).
-  - Weight: `3` (caster archetype).
-  - Item apply: `65536` (`detect_undead`).
+ - Wear flags: `128` (neck).
+ - Extra flags: `192` (`ITEM_MAGIC` + `ITEM_NODROP`).
+ - Weight: `3` (caster archetype).
+ - Item apply: `65536` (`detect_undead`).
 - **Thematic rationale:** The chain's climax. The injunction is a legal instrument, not just a kill order — the Matriarch isn't being assassinated; she's being served. The reward medallion is a neck-slot caster item with `detect_undead`, thematically representing the tribunal's authority to identify and adjudicate the undead. The `detect_undead` apply is directly useful in the Catacombs and connects the reward to the area's ongoing threat. Purple color coding (`@@p`) in the item short description aligns with the Nightfall Chromatic Doctrine's association of purple with authority and necro-liturgy.
 
 #### `60.prop` — Covenant fracture investigation (ID `59`, Chain B start)
@@ -728,19 +728,19 @@ A tarnished clasp torn from the Sepulcher Lich's master ledger lies here, its re
 - **Offerer:** Postmaster of Kiess (`13001`).
 - **Rewards:** 3200 gold, 5 qp.
 - **Reward object:** shattered audit ledger clasp.
-  - Wear flags: `8192` (finger).
-  - Extra flags: `192` (`ITEM_MAGIC` + `ITEM_NODROP`).
-  - Weight: `2` (caster archetype).
-  - Item apply: `512` (`det_mag`).
+ - Wear flags: `8192` (finger).
+ - Extra flags: `192` (`ITEM_MAGIC` + `ITEM_NODROP`).
+ - Weight: `2` (caster archetype).
+ - Item apply: `512` (`det_mag`).
 - **Thematic rationale:** The chain's climax frames the Lich's destruction as a legal enforcement action under Split-Pine Compact arbitration, not mere monster-slaying. The reward is a finger-slot caster item with `det_mag` (detect magic), representing the forensic-legal authority to identify magical bindings and institutional enchantments — directly useful for players investigating the Catacombs' remaining ward systems. The dark grey color coding (`@@d`) in the item short description aligns with the Nightfall Chromatic Doctrine's association of dark grey with old engineering and civic ruin. The completion message's reference to spirits heading north toward the Cold Throne connects to the Great Northern Forest integration targets and Cairn-Keeper ancestor communion traditions documented in the area plan.
 
 ### Implementation Notes
 
 1. **Cap increase assumed.** Files `49` and `57`-`61` fall above the current `PROP_MAX_STATIC_QUESTS` (`48`). The cap is assumed to be increased to at least `62` before these files are loaded.
 2. **Postmaster selection rationale.**
-   - **Midgaard (`3015`)** handles the civic authority chain and entry-level clearance because Nightfall is Midgaard's failed institution. The Oath of Stone, the Violet Compact, and the tribunal writ system are all Midgaard instruments.
-   - **Kiess (`13001`)** handles the forest covenant chain because Kiess mediates between Midgaard civic systems and Great Northern Forest covenant traditions via the Lantern Road dispatch network.
-   - **Kowloon (`14001`)** handles the standalone reclaim disruption because Kowloon's Jade Magistracy provides an independent legal perspective, recognizing Nightfall's reclaim operations as structurally parallel to Kowloon's own Black Ledger institutional abuses.
+  - **Midgaard (`3015`)** handles the civic authority chain and entry-level clearance because Nightfall is Midgaard's failed institution. The Oath of Stone, the Violet Compact, and the tribunal writ system are all Midgaard instruments.
+  - **Kiess (`13001`)** handles the forest covenant chain because Kiess mediates between Midgaard civic systems and Great Northern Forest covenant traditions via the Lantern Road dispatch network.
+  - **Kowloon (`14001`)** handles the standalone reclaim disruption because Kowloon's Jade Magistracy provides an independent legal perspective, recognizing Nightfall's reclaim operations as structurally parallel to Kowloon's own Black Ledger institutional abuses.
 3. **Level gating.** All quests fall within the Catacombs' target level band of 10-25. Chain prerequisites provide natural difficulty progression: assessment (14+) → mini-boss removal (18+) → boss strike (22+).
 4. **Reward object design.** Both boss-targeting chain-final quests include custom reward objects following established patterns from existing quests (extra flags `192` = `ITEM_MAGIC` + `ITEM_NODROP`, caster-weight archetype, thematically appropriate `item_apply`). The `detect_undead` and `det_mag` applies are directly useful in the Catacombs environment.
 5. **Target vnum validation.** All target vnums reference mobs defined in this plan's mobile roster (`21000`-`21054`). Implementers must verify that the referenced mobs exist in the final area file before creating the `.prop` files.
@@ -850,7 +850,7 @@ A tarnished clasp torn from the Sepulcher Lich's master ledger lies here, its re
 16. Rewrite resets to match new encounter ecology. Verify no blank lines in `#RESETS`.
 17. Verify all locked door resets have valid key objects in `#OBJECTS`.
 18. Verify boss mob rooms are flagged `no_mob`.
-19. Verify section order: `#AREA`, `#ROOMS`, `#MOBILES`, `#MOBPROGS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
+19. Verify section order: `#AREA`, `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
 20. Validate all authored strings for color/spec compliance. Verify `@@N` terminates all colorized strings.
 21. Validate no in-world description contains numeric vnums.
 22. Validate level spread, spawn density, and boss gating for 10-25 flow.

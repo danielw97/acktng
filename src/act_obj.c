@@ -1029,7 +1029,6 @@ void do_give(CHAR_DATA *ch, char *argument)
             /*
              * trigger_handler( ch, obj, TRIGGER_DROP );
              */
-            mprog_give_trigger(victim, ch, obj);
 
 #ifdef LOTS
             /* Interesting LOTS teaser here...this is how I run my individual quest system */

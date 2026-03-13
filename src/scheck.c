@@ -169,7 +169,7 @@ static void walk_mprog_act_data(MPROG_ACT_LIST *act)
 
 static void walk_mob_index_data(MOB_INDEX_DATA *m)
 {
-   MPROG_DATA *mobprog;
+   MPROG_DATA *script;
    if (!m)
       return;
 
@@ -178,8 +178,8 @@ static void walk_mob_index_data(MOB_INDEX_DATA *m)
    touch(m->long_descr);
    touch(m->description);
    touch(m->target);
-   for (mobprog = m->first_mprog; mobprog; mobprog = mobprog->next)
-      walk_mprog_data(mobprog);
+   for (script = m->first_mprog; script; script = script->next)
+      walk_mprog_data(script);
 }
 
 static void walk_ngroup_data(NPC_GROUP_DATA *ngrp)

@@ -777,13 +777,13 @@ All items include `take(8388608)` in wear_flags.
 ### Boss Mob Resets
 
 ```
-M 0 10125 1 10155  Crypt Pharaoh in Pharaoh's Tomb Chamber
-M 0 10126 1 10200  Desert Gate Guardian in Pyramid's Heart Chamber
-M 0 10127 1 10235  Scarab Colossus in Scarab Colossus Chamber
-M 0 10128 1 10265  High Priest in High Priest's Sanctum
-M 0 10129 1 10290  Eternal Mummy Lord in Eternal Vault Chamber
-M 0 10130 1 10310  Pyramid Drake in Pyramid Drake's Nest
-M 0 10131 1 10324  Sand Sovereign in Summit Throne Room
+M 0 10125 1 10155 Crypt Pharaoh in Pharaoh's Tomb Chamber
+M 0 10126 1 10200 Desert Gate Guardian in Pyramid's Heart Chamber
+M 0 10127 1 10235 Scarab Colossus in Scarab Colossus Chamber
+M 0 10128 1 10265 High Priest in High Priest's Sanctum
+M 0 10129 1 10290 Eternal Mummy Lord in Eternal Vault Chamber
+M 0 10130 1 10310 Pyramid Drake in Pyramid Drake's Nest
+M 0 10131 1 10324 Sand Sovereign in Summit Throne Room
 ```
 
 ### Boss Loot Tables (l/L extensions on boss mobs)
@@ -801,22 +801,22 @@ This guarantees 4 drops: the piece fragment (10125 object), death mask (10140), 
 ### Strong Mob Resets (limit 2–3 each)
 
 ```
-M 0 10132 3 10192  cursed pharaoh's shade (multiple rooms)
-M 0 10132 3 10173  cursed pharaoh's shade (another spawn)
-M 0 10133 2 10170  desert stone titan
-M 0 10133 2 10204  desert stone titan
-M 0 10134 2 10244  pyramid death knight
-M 0 10134 2 10262  pyramid death knight
-M 0 10135 2 10282  sand drake
-M 0 10135 2 10293  sand drake
-M 0 10136 2 10313  golden sphinx
-M 0 10136 2 10319  golden sphinx
-M 0 10185 2 10170  sandstorm elemental
-M 0 10185 2 10203  sandstorm elemental
-M 0 10186 2 10249  ancient obsidian guardian
-M 0 10186 2 10270  ancient obsidian guardian
-M 0 10187 2 10282  greater mummy overlord
-M 0 10187 2 10296  greater mummy overlord
+M 0 10132 3 10192 cursed pharaoh's shade (multiple rooms)
+M 0 10132 3 10173 cursed pharaoh's shade (another spawn)
+M 0 10133 2 10170 desert stone titan
+M 0 10133 2 10204 desert stone titan
+M 0 10134 2 10244 pyramid death knight
+M 0 10134 2 10262 pyramid death knight
+M 0 10135 2 10282 sand drake
+M 0 10135 2 10293 sand drake
+M 0 10136 2 10313 golden sphinx
+M 0 10136 2 10319 golden sphinx
+M 0 10185 2 10170 sandstorm elemental
+M 0 10185 2 10203 sandstorm elemental
+M 0 10186 2 10249 ancient obsidian guardian
+M 0 10186 2 10270 ancient obsidian guardian
+M 0 10187 2 10282 greater mummy overlord
+M 0 10187 2 10296 greater mummy overlord
 ```
 
 ### Trash Mob Resets (representative sample, ~60–80 total resets)
@@ -837,36 +837,36 @@ Each trash mob is followed by one `E` reset for their associated reset gear (ite
 ### Object Resets (O commands, items in rooms)
 
 ```
-O 0 10138 1 10148  Trapdoor key in Forgotten Workshop (Undercroft)
+O 0 10138 1 10148 Trapdoor key in Forgotten Workshop (Undercroft)
 ```
 
 ### Door Resets (D commands)
 
 Per the Doors Summary table above:
 ```
-D 0 8879  1 1   charter road east (Great Oasis side, closed)
-D 0 10166 0 1   stone gate (closed)
-D 0 10167 2 1   stone gate reverse (closed)
-D 0 10177 5 2   heavy trapdoor (locked)
-D 0 10126 4 2   heavy trapdoor reverse (locked)
-D 0 10197 0 1   ancient stone door (closed)
-D 0 10198 2 1   ancient stone door reverse (closed)
-D 0 10234 0 1   stone scarab door (closed)
-D 0 10235 2 1   stone scarab door reverse (closed)
-D 0 10260 4 1   iron-banded archway (closed)
-D 0 10266 5 1   iron-banded archway reverse (closed)
-D 0 10264 0 1   carved stone threshold (closed)
-D 0 10265 2 1   carved stone threshold reverse (closed)
-D 0 10289 0 1   glowing stone arch (closed)
-D 0 10290 2 1   glowing stone arch reverse (closed)
-D 0 10304 4 2   stone sentinel gate (locked)
-D 0 10311 5 2   stone sentinel gate reverse (locked)
-D 0 10309 0 1   bone-adorned gate (closed)
-D 0 10310 2 1   bone-adorned gate reverse (closed)
-D 0 10323 0 1   summit chamber door (closed)
-D 0 10324 2 1   summit chamber door reverse (closed)
-D 0 10154 0 1   root-sealed vault door (closed)
-D 0 10155 2 1   root-sealed vault door reverse (closed)
+D 0 8879 1 1  charter road east (Great Oasis side, closed)
+D 0 10166 0 1  stone gate (closed)
+D 0 10167 2 1  stone gate reverse (closed)
+D 0 10177 5 2  heavy trapdoor (locked)
+D 0 10126 4 2  heavy trapdoor reverse (locked)
+D 0 10197 0 1  ancient stone door (closed)
+D 0 10198 2 1  ancient stone door reverse (closed)
+D 0 10234 0 1  stone scarab door (closed)
+D 0 10235 2 1  stone scarab door reverse (closed)
+D 0 10260 4 1  iron-banded archway (closed)
+D 0 10266 5 1  iron-banded archway reverse (closed)
+D 0 10264 0 1  carved stone threshold (closed)
+D 0 10265 2 1  carved stone threshold reverse (closed)
+D 0 10289 0 1  glowing stone arch (closed)
+D 0 10290 2 1  glowing stone arch reverse (closed)
+D 0 10304 4 2  stone sentinel gate (locked)
+D 0 10311 5 2  stone sentinel gate reverse (locked)
+D 0 10309 0 1  bone-adorned gate (closed)
+D 0 10310 2 1  bone-adorned gate reverse (closed)
+D 0 10323 0 1  summit chamber door (closed)
+D 0 10324 2 1  summit chamber door reverse (closed)
+D 0 10154 0 1  root-sealed vault door (closed)
+D 0 10155 2 1  root-sealed vault door reverse (closed)
 ```
 
 ---
@@ -875,33 +875,33 @@ D 0 10155 2 1   root-sealed vault door reverse (closed)
 
 ```
 #SPECIALS
-M 10125 spec_cast_undead    Crypt Pharaoh
-M 10126 spec_cast_mage      Desert Gate Guardian
-M 10127 spec_cast_mage      Scarab Colossus
-M 10128 spec_cast_bigtime   High Priest
-M 10129 spec_cast_undead    Eternal Mummy Lord
-M 10130 spec_breath_fire    Pyramid Drake
-M 10131 spec_cast_bigtime   Sand Sovereign
-M 10140 spec_poison         giant desert scorpion
-M 10141 spec_cast_undead    tomb robber's ghost (cast flare/shock_grasp)
-M 10145 spec_poison         golden asp
-M 10148 spec_cast_mage      cursed acolyte
-M 10149 spec_cast_undead    desert wight
-M 10151 spec_poison         pyramid cobra
-M 10152 spec_cast_undead    mummified archer (undead caster)
-M 10155 spec_cast_undead    desert shadow
-M 10158 spec_poison         sacred golden cobra
-M 10159 spec_cast_mage      pyramid cultist
-M 10162 spec_cast_undead    pyramid specter
-M 10163 spec_poison         tomb fly swarm
-M 10164 spec_poison         desiccated desert rat
-M 10169 spec_poison         desert sand adder
-M 10172 spec_cast_undead    animated canopic jar
-M 10173 spec_cast_mage      scribal revenant
-M 10175 spec_cast_mage      high priest's thrall
-M 10176 spec_cast_undead    sand wraith
-M 10185 spec_cast_mage      sandstorm elemental
-M 10187 spec_cast_undead    greater mummy overlord
+M 10125 spec_cast_undead  Crypt Pharaoh
+M 10126 spec_cast_mage   Desert Gate Guardian
+M 10127 spec_cast_mage   Scarab Colossus
+M 10128 spec_cast_bigtime  High Priest
+M 10129 spec_cast_undead  Eternal Mummy Lord
+M 10130 spec_breath_fire  Pyramid Drake
+M 10131 spec_cast_bigtime  Sand Sovereign
+M 10140 spec_poison     giant desert scorpion
+M 10141 spec_cast_undead  tomb robber's ghost (cast flare/shock_grasp)
+M 10145 spec_poison     golden asp
+M 10148 spec_cast_mage   cursed acolyte
+M 10149 spec_cast_undead  desert wight
+M 10151 spec_poison     pyramid cobra
+M 10152 spec_cast_undead  mummified archer (undead caster)
+M 10155 spec_cast_undead  desert shadow
+M 10158 spec_poison     sacred golden cobra
+M 10159 spec_cast_mage   pyramid cultist
+M 10162 spec_cast_undead  pyramid specter
+M 10163 spec_poison     tomb fly swarm
+M 10164 spec_poison     desiccated desert rat
+M 10169 spec_poison     desert sand adder
+M 10172 spec_cast_undead  animated canopic jar
+M 10173 spec_cast_mage   scribal revenant
+M 10175 spec_cast_mage   high priest's thrall
+M 10176 spec_cast_undead  sand wraith
+M 10185 spec_cast_mage   sandstorm elemental
+M 10187 spec_cast_undead  greater mummy overlord
 S
 ```
 

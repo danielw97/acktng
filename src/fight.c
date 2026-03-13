@@ -181,8 +181,6 @@ void violence_update(void)
       if ((victim = ch->fighting) == NULL)
          continue;
 
-      mprog_hitprcnt_trigger(ch, victim);
-      mprog_fight_trigger(ch, victim);
 
       /*
        * Assisting

@@ -82,18 +82,18 @@ Coordinates: west->east `x=0..9`, north->south `y=0..9`.
 
 ## NPC Level Targets
 - **City authority and service NPCs:** level **150**, flagged **sentinel**
-  - Executioner (`13055`): flagged **executioner**, **sentinel**, and **boss**; never allowed to move
-  - Postmaster (`13054`)
-  - Quartermaster (`13056`)
-  - All shopkeepers and service keepers (banker, healer, weapon/armor/magic/general, innkeeper, registrar, scribe), each flagged **sentinel**
+ - Executioner (`13055`): flagged **executioner**, **sentinel**, and **boss**; never allowed to move
+ - Postmaster (`13054`)
+ - Quartermaster (`13056`)
+ - All shopkeepers and service keepers (banker, healer, weapon/armor/magic/general, innkeeper, registrar, scribe), each flagged **sentinel**
 - **Ambient city mobs (citizens/guards/patrols not tied to core services):** around level **40** (target range 38-45)
 
 ## Safe-Room Policy (buildings)
 - All interior buildings are flagged **safe**.
 - This includes all shop/service interiors and civic utility buildings, specifically:
-  - Postmaster, Quartermaster, Bank, General Shop, Weapon Shop, Armor Shop, Magic Shop
-  - Healer, Inn, Cartographer/Scribe, and Guild Registrar
-  - Temple and other enclosed civic service spaces
+ - Postmaster, Quartermaster, Bank, General Shop, Weapon Shop, Armor Shop, Magic Shop
+ - Healer, Inn, Cartographer/Scribe, and Guild Registrar
+ - Temple and other enclosed civic service spaces
 - Exterior streets/plazas are not automatically safe unless explicitly designated later for gameplay flow.
 
 ## Building Entrance Policy (dead-end interiors)
@@ -153,10 +153,10 @@ This means buildings do NOT participate in grid traversal. Adjacent street rooms
 - Kiess is fully enclosed by a continuous **city wall** around the outer rectangle (`x=0`, `x=9`, `y=0`, `y=9`).
 - Wall-adjacent perimeter rooms represent battlements, gatehouses, and inner-wall avenues; they do not allow free exits to the wilderness except at designated gates.
 - Only four controlled external links exist:
-  - North Gate: `13005`
-  - South Gate: `13095`
-  - West Gate: `13050`
-  - East Gate: `13059`
+ - North Gate: `13005`
+ - South Gate: `13095`
+ - West Gate: `13050`
+ - East Gate: `13059`
 - Corner perimeter rooms (`13000`, `13009`, `13090`, `13099`) are fortified wall corners/towers with no direct wilderness traversal.
 - Suggested room flags for wall/gatehouse rooms: defensive flavor flags as applicable, with gate doors reset closed for city security.
 
@@ -164,18 +164,18 @@ This means buildings do NOT participate in grid traversal. Adjacent street rooms
 City streets remain open-grid except for controlled access points below. Building rooms are closed-off dead-ends (see Building Entrance Policy) and do not have doors — they simply have one exit.
 
 1. **South Main Gate doors**
-   - `13095 <-> 3243`
-   - Door: south side, heavy gate, closed by reset, unlockable.
+  - `13095 <-> 3243`
+  - Door: south side, heavy gate, closed by reset, unlockable.
 
 ## Street Connectivity Rules
 - All city-sector rooms connect cardinally to adjacent city-sector (or recall_set) rooms unless at the boundary edge.
 - **All inside-sector rooms are dead-ends** (see Building Entrance Policy). They have exactly one exit and no other rooms connect into them except through that single entrance. Adjacent street rooms that border a building have no exit in the building's direction (building wall blocks passage).
 - Boundary rooms are wall-line rooms: they connect inward, and connect outward only at the four designated gate exits.
 - **Navigation pattern:** With 35 buildings as dead-ends, the outdoor street grid (64 rooms) forms an irregular network. The north-south and east-west spines are interrupted by building footprints in the central rows. Primary traversal uses:
-  - **Perimeter wall avenues** (x=0 and x=9 columns): fully connected north-south corridors along both walls
-  - **Row 7 band** (y=7, vnums 13070-13079): nearly complete east-west corridor through the military ring
-  - **Row 2 band** (y=2, vnums 13020-13029): partial east-west corridor through the scholastic district
-  - Buildings are accessed by stepping off these corridors into dead-end interiors
+ - **Perimeter wall avenues** (x=0 and x=9 columns): fully connected north-south corridors along both walls
+ - **Row 7 band** (y=7, vnums 13070-13079): nearly complete east-west corridor through the military ring
+ - **Row 2 band** (y=2, vnums 13020-13029): partial east-west corridor through the scholastic district
+ - Buildings are accessed by stepping off these corridors into dead-end interiors
 - Some street rooms become dead-end pockets (e.g., 13042 connects only south to 13052; 13017 connects only north to 13007). This is intentional — they serve as quiet alcoves adjacent to building entrances.
 
 ## Room Assignment Plan (all 100 rooms, detailed)
@@ -422,34 +422,34 @@ All listed shop items are planned at levels **75-125**, and every level is a **m
 
 ## Monuments, Statues, and Flavor Objects Plan
 - **13055 - Central Prism Plaza:**
-  - Monument: **The Prism of Continuance** (city-defining relic monument tied to Evermeet's legacy)
-  - Flavor objects: prismatic waystones, civic decree obelisk, memorial braziers
+ - Monument: **The Prism of Continuance** (city-defining relic monument tied to Evermeet's legacy)
+ - Flavor objects: prismatic waystones, civic decree obelisk, memorial braziers
 - **13005 - North Gate Approach:**
-  - Monument: **Warden's Arch of Confusion Watch** (honors forest scouts and patrol losses)
-  - Flavor objects: route marker stelae pointing toward the Forest of Confusion, supply manifests on iron lecterns
+ - Monument: **Warden's Arch of Confusion Watch** (honors forest scouts and patrol losses)
+ - Flavor objects: route marker stelae pointing toward the Forest of Confusion, supply manifests on iron lecterns
 - **13095 - South Gate Approach:**
-  - Monument: **Pillar of Returning Caravans** (marks safe return and trade continuity)
-  - Flavor objects: carved caravan tally board, bronze wheel reliefs
+ - Monument: **Pillar of Returning Caravans** (marks safe return and trade continuity)
+ - Flavor objects: carved caravan tally board, bronze wheel reliefs
 - **13050 / 13059 - West/East Gatehouses:**
-  - Statues: paired **Gatekeeper Sentinels** (stone guardians facing outward)
-  - Flavor objects: gate chains, warning gongs, heraldic shields
+ - Statues: paired **Gatekeeper Sentinels** (stone guardians facing outward)
+ - Flavor objects: gate chains, warning gongs, heraldic shields
 - **13035 - Temple of Concord:**
-  - Monument: **Shrine of the Compact Flame** (symbolizes guild-temple civic pact)
-  - Flavor objects: votive racks, concord tablets, ceremonial font
+ - Monument: **Shrine of the Compact Flame** (symbolizes guild-temple civic pact)
+ - Flavor objects: votive racks, concord tablets, ceremonial font
 - **13044 - Bank of Ledgers:**
-  - Flavor objects: gilded ledger pedestals, oath-chest, seal press altar, iron strongbox display
+ - Flavor objects: gilded ledger pedestals, oath-chest, seal press altar, iron strongbox display
 - **13054 - Postmaster of Kiess:**
-  - Flavor objects: dispatch board, courier satchel wall, route clock
+ - Flavor objects: dispatch board, courier satchel wall, route clock
 - **13056 - Quartermaster's Depot:**
-  - Flavor objects: campaign maps, requisition crates, stamped supply racks
+ - Flavor objects: campaign maps, requisition crates, stamped supply racks
 - **13064 - Wayfarer's Inn:**
-  - Flavor objects: painted city map mural, traveler memorial plaque, brass lantern cluster
+ - Flavor objects: painted city map mural, traveler memorial plaque, brass lantern cluster
 - **13066 - Cartographer and Scribe:**
-  - Monument object: **Atlas Pedestal of New Kiess** (updated map showing Evermeet-to-Kiess transition)
-  - Flavor objects: survey tripods, rolled charts, inkstone cabinet
+ - Monument object: **Atlas Pedestal of New Kiess** (updated map showing Evermeet-to-Kiess transition)
+ - Flavor objects: survey tripods, rolled charts, inkstone cabinet
 - **Perimeter wall towers (13000, 13009, 13090, 13099):**
-  - Statues: **The Four Watchers** (named tower sentinels representing North/South/East/West vigilance)
-  - Flavor objects: beacon braziers, weatherworn battle plaques
+ - Statues: **The Four Watchers** (named tower sentinels representing North/South/East/West vigilance)
+ - Flavor objects: beacon braziers, weatherworn battle plaques
 
 ### Flavor Object Implementation Notes
 - Place major monuments in high-traffic civic nodes to reinforce the Evermeet succession narrative.

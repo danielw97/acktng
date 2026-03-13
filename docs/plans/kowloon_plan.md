@@ -42,8 +42,8 @@ See `kowloon_lore.md` for extracted lore.
 - Outer ring (`x=0`, `x=9`, `y=0`, `y=9`) is wall/gate boulevard.
 - `14055` is exact center (row 5, col 5) as recall + civic nexus.
 - Main spines:
-  - **North/South Spine:** column 5 (vnums `14005, 14015, ... 14095`)
-  - **West/East Spine:** row 5 (vnums `14050-14059`)
+ - **North/South Spine:** column 5 (vnums `14005, 14015, ... 14095`)
+ - **West/East Spine:** row 5 (vnums `14050-14059`)
 - Interior districts branch from spines: market, civic, docks, temples, barracks, inns.
 
 ## Shop + Service Requirements (all with one bi-directional exit only)
@@ -95,24 +95,24 @@ All mobile definitions must follow these spec requirements:
 Only controlled perimeter gates use doors. All four gate doors follow the same pattern:
 
 1. **Jade Gate (North):** room `14005` — direction north to wilderness link.
-   - Room `D0` (north) exit line: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1` (no key).
-   - `#RESETS` command `D`: `D 0 14005 0 1` (door north, state `closed`).
-   - Reverse exit on the wilderness-side room must also have `door` bit set.
+  - Room `D0` (north) exit line: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1` (no key).
+  - `#RESETS` command `D`: `D 0 14005 0 1` (door north, state `closed`).
+  - Reverse exit on the wilderness-side room must also have `door` bit set.
 
 2. **Iron Gate (South):** room `14095` — direction south to caravan road/connector.
-   - Room `D2` (south) exit line: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1` (no key).
-   - `#RESETS` command `D`: `D 0 14095 2 1` (door south, state `closed`).
-   - Reverse exit on the connector-side room must also have `door` bit set.
+  - Room `D2` (south) exit line: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1` (no key).
+  - `#RESETS` command `D`: `D 0 14095 2 1` (door south, state `closed`).
+  - Reverse exit on the connector-side room must also have `door` bit set.
 
 3. **Lantern Gate (West):** room `14050` — direction west to wilderness link.
-   - Room `D3` (west) exit line: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1` (no key).
-   - `#RESETS` command `D`: `D 0 14050 3 1` (door west, state `closed`).
-   - Reverse exit on the wilderness-side room must also have `door` bit set.
+  - Room `D3` (west) exit line: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1` (no key).
+  - `#RESETS` command `D`: `D 0 14050 3 1` (door west, state `closed`).
+  - Reverse exit on the wilderness-side room must also have `door` bit set.
 
 4. **Tide Gate (East):** room `14059` — direction east to harbor road/connector.
-   - Room `D1` (east) exit line: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1` (no key).
-   - `#RESETS` command `D`: `D 0 14059 1 1` (door east, state `closed`).
-   - Reverse exit on the connector-side room must also have `door` bit set.
+  - Room `D1` (east) exit line: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1` (no key).
+  - `#RESETS` command `D`: `D 0 14059 1 1` (door east, state `closed`).
+  - Reverse exit on the connector-side room must also have `door` bit set.
 
 All four gates reset to **closed** (state `1`), not locked. Since they are not locked on reset, no key objects are required (spec: key objects are only mandatory when `D` state = `2` locked). `<key_vnum>` is set to `-1` per spec for exits that cannot be locked/unlocked with a key.
 
@@ -136,24 +136,24 @@ Coordinates: row `y=0..9` top-to-bottom, column `x=0..9` left-to-right.
 
 ## District/Room Assignment Plan
 - **Perimeter Boulevard & Wall Ring:**
-  - `14000-14009`, `14010`, `14019`, `14020`, `14029`, `14030`, `14039`, `14040`, `14049`, `14050`, `14059`, `14060`, `14069`, `14070`, `14079`, `14080`, `14089`, `14090-14099`
+ - `14000-14009`, `14010`, `14019`, `14020`, `14029`, `14030`, `14039`, `14040`, `14049`, `14050`, `14059`, `14060`, `14069`, `14070`, `14079`, `14080`, `14089`, `14090-14099`
 - **Civic + Recall Core:**
-  - `14045`, `14054`, `14055`, `14056`, `14065`
+ - `14045`, `14054`, `14055`, `14056`, `14065`
 - **Market Spine (west-central):**
-  - Streets: `14041`, `14051`, `14052`, `14053`
-  - Shops: `14042`, `14043`, `14044`
+ - Streets: `14041`, `14051`, `14052`, `14053`
+ - Shops: `14042`, `14043`, `14044`
 - **Temple/Arcane Spine (east-central):**
-  - Streets: `14057`, `14058`
-  - Services: `14046`, `14047`
+ - Streets: `14057`, `14058`
+ - Services: `14046`, `14047`
 - **Logistics + Finance (south-central):**
-  - Streets: `14062`, `14075`, `14076`
-  - Services: `14061`, `14063`, `14064`, `14066`, `14067`, `14068`, `14074`
+ - Streets: `14062`, `14075`, `14076`
+ - Services: `14061`, `14063`, `14064`, `14066`, `14067`, `14068`, `14074`
 - **Residential + Traveler Support:**
-  - Streets: `14071`, `14072`
-  - Services: `14073`, inn `14081`
+ - Streets: `14071`, `14072`
+ - Services: `14073`, inn `14081`
 - **Post + Admin (north-central):**
-  - Streets: `14022`, `14023`, `14024`, `14025`
-  - Service: `14021` postmaster
+ - Streets: `14022`, `14023`, `14024`, `14025`
+ - Service: `14021` postmaster
 - **Remaining interior vnums not listed above:** standard city streets, plazas, alleys, patrol points, and flavor interiors while preserving rectangular connectivity.
 
 ## Connectivity Rules Summary

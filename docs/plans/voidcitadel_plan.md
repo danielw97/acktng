@@ -111,8 +111,8 @@ Players move through a functioning dead bureaucracy where ritual machinery still
 ### Zone J — Aftermath, Verdict, and Exit Strata (950-999, 50 rooms)
 - Replace short aftermath with large consequence wing.
 - Two post-boss branches:
-  - **Seal Continuity Route:** preserve containment; stabilize dangerous recurrence.
-  - **Witness Release Route:** break recurrence; release partitioned witness-fragments.
+ - **Seal Continuity Route:** preserve containment; stabilize dangerous recurrence.
+ - **Witness Release Route:** break recurrence; release partitioned witness-fragments.
 - Rejoin into shared extraction and epilogue chambers.
 
 **Total rooms:** 30 + 30 + 30 + 30 + 20 + 50 + 50 + 50 + 50 + 50 = **390** (all room vnums used).
@@ -126,36 +126,36 @@ All existing mobs are rewritten around institutional castes and expanded in-rang
 ### Caste Families
 
 1. **Gate Functionaries (610-639)**
-   - Ash Registrars, Bell Marshals, Veil Sentinels.
-   - Role: control ingress/egress and assign classification tags.
+  - Ash Registrars, Bell Marshals, Veil Sentinels.
+  - Role: control ingress/egress and assign classification tags.
 
 2. **Witness Predators (640-699)**
-   - False Witness Hounds, Mirror Bailiffs, Recitation Stalkers.
-   - Role: punish contradiction and force testimony loops.
+  - False Witness Hounds, Mirror Bailiffs, Recitation Stalkers.
+  - Role: punish contradiction and force testimony loops.
 
 3. **Ossuary Executors (700-729)**
-   - Bone Compressors, Chain Gendarmes, Undercroft Captains.
-   - Role: enforce terminal archival outcomes.
+  - Bone Compressors, Chain Gendarmes, Undercroft Captains.
+  - Role: enforce terminal archival outcomes.
 
 4. **Spire Instruments (730-749)**
-   - Null Conductors, Pressure Adepts, Summit Wardens.
-   - Role: maintain void-field harmonics.
+  - Null Conductors, Pressure Adepts, Summit Wardens.
+  - Role: maintain void-field harmonics.
 
 5. **Corridor Recursors (750-799)**
-   - Loop Clerks, Docket Revenants, Iteration Judges.
-   - Role: replay unresolved verdicts.
+  - Loop Clerks, Docket Revenants, Iteration Judges.
+  - Role: replay unresolved verdicts.
 
 6. **Heraldic Officers (800-849)**
-   - Tenfold Emissaries, Oath Heralds, Office Inquisitors.
-   - Role: execute top-tier doctrinal authority.
+  - Tenfold Emissaries, Oath Heralds, Office Inquisitors.
+  - Role: execute top-tier doctrinal authority.
 
 7. **Annex Dissidents and Remnants (850-899)**
-   - Shade Scribes, Unbound Witness Fragments, Defected Handmaidens.
-   - Role: reveal hidden institutional history.
+  - Shade Scribes, Unbound Witness Fragments, Defected Handmaidens.
+  - Role: reveal hidden institutional history.
 
 8. **Core Singulars (900-999)**
-   - Gate Custodians, Pylon Choirs, Recursor Avatar.
-   - Role: final systems defense and consequence logic.
+  - Gate Custodians, Pylon Choirs, Recursor Avatar.
+  - Role: final systems defense and consequence logic.
 
 ### Encounter Philosophy
 

@@ -397,37 +397,37 @@ Per `area_file_spec.md` sections 4.1-5.5:
 ## Faction Families
 
 1. **Court Guard Cohorts** (front-facing military, spears/shields, anti-rush).
-   - `act`: `is_npc` + `stay_area` + `aggressive`. Gate guards add `sentinel`.
-   - Level range: 90-93.
-   - Archetype: melee profile.
+  - `act`: `is_npc` + `stay_area` + `aggressive`. Gate guards add `sentinel`.
+  - Level range: 90-93.
+  - Archetype: melee profile.
 
 2. **Embalmer and Scribe Orders** (debuff, disease, curse stacks, ritual buffs).
-   - `act`: `is_npc` + `stay_area` + `aggressive`. Stationary scribes add `sentinel`.
-   - Level range: 91-95. Scribe-casters use caster profile; embalmers use hybrid profile.
-   - `affected_by`: scribe-casters get `detect_magic` (`16`); embalmers get `detect_hidden` (`32`).
+  - `act`: `is_npc` + `stay_area` + `aggressive`. Stationary scribes add `sentinel`.
+  - Level range: 91-95. Scribe-casters use caster profile; embalmers use hybrid profile.
+  - `affected_by`: scribe-casters get `detect_magic` (`16`); embalmers get `detect_hidden` (`32`).
 
 3. **Catacomb Servitors** (undead laborers, scarabs, wights, corpse-haulers).
-   - `act`: `is_npc` + `stay_area` + `aggressive` + `undead` (`16384`). Construct servants add `no_mind` (`262144`).
-   - Level range: 92-96.
-   - Archetype: melee profile. Scarab swarms use caster profile (poison/disease casting).
-   - `resist`: `fire` (`128`), `physical` (`2`). `suscept`: `holy` (`8`), `water` (`64`).
+  - `act`: `is_npc` + `stay_area` + `aggressive` + `undead` (`16384`). Construct servants add `no_mind` (`262144`).
+  - Level range: 92-96.
+  - Archetype: melee profile. Scarab swarms use caster profile (poison/disease casting).
+  - `resist`: `fire` (`128`), `physical` (`2`). `suscept`: `holy` (`8`), `water` (`64`).
 
 4. **Jackal Tribunal** (judges, executioners, weighers, oath enforcers).
-   - `act`: `is_npc` + `stay_area` + `aggressive`. Executioners add `no_flee` (`16`).
-   - Level range: 94-97. Judges use hybrid profile; executioners use melee profile.
-   - Strong non-boss executioners: add `solo` (`33554432`).
-   - `affected_by`: judges get `detect_invis` (`8`) + `detect_evil` (`4`).
+  - `act`: `is_npc` + `stay_area` + `aggressive`. Executioners add `no_flee` (`16`).
+  - Level range: 94-97. Judges use hybrid profile; executioners use melee profile.
+  - Strong non-boss executioners: add `solo` (`33554432`).
+  - `affected_by`: judges get `detect_invis` (`8`) + `detect_evil` (`4`).
 
 5. **Royal Warline** (named champions tied to gods/war standards).
-   - `act`: `is_npc` + `stay_area` + `aggressive` + `no_flee` (`16`).
-   - Level range: 95-99. Melee profile throughout.
-   - Strong non-boss champions: add `solo` (`33554432`).
+  - `act`: `is_npc` + `stay_area` + `aggressive` + `no_flee` (`16`).
+  - Level range: 95-99. Melee profile throughout.
+  - Strong non-boss champions: add `solo` (`33554432`).
 
 6. **Black Sun Host** (void-tainted elite and final chain entities).
-   - `act`: `is_npc` + `stay_area` + `aggressive` + `undead` (`16384`). Final chain entities add `no_flee` (`16`).
-   - Level range: 97-100. Hybrid profile (void casting + melee).
-   - `affected_by`: `detect_invis` (`8`) + `infrared` (`512`).
-   - `resist`: `shadow` (`256`), `mental` (`4`). `suscept`: `holy` (`8`).
+  - `act`: `is_npc` + `stay_area` + `aggressive` + `undead` (`16384`). Final chain entities add `no_flee` (`16`).
+  - Level range: 97-100. Hybrid profile (void casting + melee).
+  - `affected_by`: `detect_invis` (`8`) + `infrared` (`512`).
+  - `resist`: `shadow` (`256`), `mental` (`4`). `suscept`: `holy` (`8`).
 
 ## Named Boss Ladder (retain iconic names; redefine purpose)
 
@@ -498,31 +498,31 @@ Per `area_file_spec.md` sections 7.3 and 7.6:
 ## Item Families
 
 1. **Set A: Processional Bronze** (levels 90-93, Zone A/B starter gear).
-   - Ceremonial helms (`head`, weight 11-15 tank), processional shields (`hold` + `ITEM_ARMOR`, weight 11-15 tank), bronze spears (`hold` + `ITEM_WEAPON`, `value3 = 11` pierce, weight 6-10 melee), tribute censers (`hold`, `ITEM_TREASURE`, weight 1-5 caster).
-   - `L` level lines: 90-93 range.
+  - Ceremonial helms (`head`, weight 11-15 tank), processional shields (`hold` + `ITEM_ARMOR`, weight 11-15 tank), bronze spears (`hold` + `ITEM_WEAPON`, `value3 = 11` pierce, weight 6-10 melee), tribute censers (`hold`, `ITEM_TREASURE`, weight 1-5 caster).
+  - `L` level lines: 90-93 range.
 
 2. **Set B: Linen of Consecration** (levels 91-95, Zone B caster/ritual gear).
-   - Embalmer hoods (`head`, weight 1-5 caster), consecration wraps (`about`, weight 1-5 caster), scribe staves (`hold` + `ITEM_WEAPON`, `value3 = 7` pound, weight 1-5 caster), ink vials (`hold`, `ITEM_TREASURE`, weight 1-5 caster).
-   - `L` level lines: 91-95 range.
+  - Embalmer hoods (`head`, weight 1-5 caster), consecration wraps (`about`, weight 1-5 caster), scribe staves (`hold` + `ITEM_WEAPON`, `value3 = 7` pound, weight 1-5 caster), ink vials (`hold`, `ITEM_TREASURE`, weight 1-5 caster).
+  - `L` level lines: 91-95 range.
 
 3. **Set C: Ossuary Iron** (levels 92-96, Zone C tank/melee gear).
-   - Salt-forged hauberks (`body`, weight 11-15 tank), bone-plated bucklers (`hold` + `ITEM_ARMOR` + `ITEM_BUCKLER`, weight 11-15 tank), catacomb picks (`hold` + `ITEM_WEAPON`, `value3 = 11` pierce, weight 6-10 melee), carrion hook blades (`hold` + `ITEM_WEAPON`, `value3 = 3` slash, weight 6-10 melee).
-   - `L` level lines: 92-96 range.
+  - Salt-forged hauberks (`body`, weight 11-15 tank), bone-plated bucklers (`hold` + `ITEM_ARMOR` + `ITEM_BUCKLER`, weight 11-15 tank), catacomb picks (`hold` + `ITEM_WEAPON`, `value3 = 11` pierce, weight 6-10 melee), carrion hook blades (`hold` + `ITEM_WEAPON`, `value3 = 3` slash, weight 6-10 melee).
+  - `L` level lines: 92-96 range.
 
 4. **Set D: Tribunal Regalia** (levels 94-97, Zone D hybrid gear).
-   - Jackal judgment masks (`face`, weight 1-5 caster), tribunal robes (`about`, weight 1-5 caster), sentence rods (`hold` + `ITEM_WEAPON`, `value3 = 7` pound, weight 6-10 melee), feather-scale amulets (`neck`, weight 1-5 caster).
-   - `L` level lines: 94-97 range.
+  - Jackal judgment masks (`face`, weight 1-5 caster), tribunal robes (`about`, weight 1-5 caster), sentence rods (`hold` + `ITEM_WEAPON`, `value3 = 7` pound, weight 6-10 melee), feather-scale amulets (`neck`, weight 1-5 caster).
+  - `L` level lines: 94-97 range.
 
 5. **Set E: Solar War Relics** (levels 95-99, Zone E high-offense martial gear).
-   - Sun-forged great khopeshes (`hold` + `ITEM_WEAPON` + `ITEM_TWO_HANDED`, `value3 = 3` slash, weight 6-10 melee), dawn mantles (`shoulders`, weight 6-10 melee), war crown diadems (`head`, weight 6-10 melee), lion-crested gauntlets (`hands`, weight 11-15 tank).
-   - Boss drops: must include `ITEM_BOSS` in `extra_flags`.
-   - `L` level lines: 95-99 range.
+  - Sun-forged great khopeshes (`hold` + `ITEM_WEAPON` + `ITEM_TWO_HANDED`, `value3 = 3` slash, weight 6-10 melee), dawn mantles (`shoulders`, weight 6-10 melee), war crown diadems (`head`, weight 6-10 melee), lion-crested gauntlets (`hands`, weight 11-15 tank).
+  - Boss drops: must include `ITEM_BOSS` in `extra_flags`.
+  - `L` level lines: 95-99 range.
 
 6. **Set F: Black Sun Artifacts** (levels 97-100, Zone F end-tier risk/reward gear).
-   - Void crown (`head`, weight 1-5 caster), death mask (`face`, weight 1-5 caster), black sun scepter (`hold` + `ITEM_WEAPON`, `value3 = 6` blast, weight 1-5 caster), eclipse-forged plate (`body`, weight 11-15 tank), serpent-fang daggers (`hold` + `ITEM_WEAPON`, `value3 = 2` stab, weight 6-10 melee).
-   - Boss drops: must include `ITEM_BOSS` in `extra_flags`.
-   - Loot-table drops: must include `ITEM_LOOT` in `extra_flags`.
-   - `L` level lines: 97-100 range.
+  - Void crown (`head`, weight 1-5 caster), death mask (`face`, weight 1-5 caster), black sun scepter (`hold` + `ITEM_WEAPON`, `value3 = 6` blast, weight 1-5 caster), eclipse-forged plate (`body`, weight 11-15 tank), serpent-fang daggers (`hold` + `ITEM_WEAPON`, `value3 = 2` stab, weight 6-10 melee).
+  - Boss drops: must include `ITEM_BOSS` in `extra_flags`.
+  - Loot-table drops: must include `ITEM_LOOT` in `extra_flags`.
+  - `L` level lines: 97-100 range.
 
 ## Signature Existing Items to Retheme, Not Delete
 
@@ -603,33 +603,33 @@ Per `area_file_spec.md` section 8.3: any exit set to closed or locked via `D` re
 Planned door resets:
 
 1. **Zone A Sun-Lion Gate (30488):** Direction into gate complex.
-   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Sun-Lion Gate Key object.
-   - `D` reset: `D 0 30488 <dir> 1` (closed, not locked — first gate is a checkpoint, not a hard lock).
-   - Reverse exit must also have `door` bit set.
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Sun-Lion Gate Key object.
+  - `D` reset: `D 0 30488 <dir> 1` (closed, not locked — first gate is a checkpoint, not a hard lock).
+  - Reverse exit must also have `door` bit set.
 
 2. **Zone B Priest-King Descent (30544):** Direction down (D5) to catacomb layers.
-   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Priest-King Descent Seal object.
-   - `D` reset: `D 0 30544 5 2` (locked).
-   - Reverse exit on Zone C entry must also have `door` bit set.
-   - Key object (Priest-King Descent Seal) must exist in `#OBJECTS`.
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Priest-King Descent Seal object.
+  - `D` reset: `D 0 30544 5 2` (locked).
+  - Reverse exit on Zone C entry must also have `door` bit set.
+  - Key object (Priest-King Descent Seal) must exist in `#OBJECTS`.
 
 3. **Zone D/E Royal Aperture Stair (30624):** Direction up (D4) to crown sancta.
-   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Royal Aperture Key object.
-   - `D` reset: `D 0 30624 4 2` (locked).
-   - Reverse exit must also have `door` bit set.
-   - Key object (Royal Aperture Key) must exist in `#OBJECTS`.
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Royal Aperture Key object.
+  - `D` reset: `D 0 30624 4 2` (locked).
+  - Reverse exit must also have `door` bit set.
+  - Key object (Royal Aperture Key) must exist in `#OBJECTS`.
 
 4. **Zone F Black Sun Cradle (approach to 30679):** Direction into cradle.
-   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Black Sun Cradle Seal object.
-   - `D` reset: `D 0 <room> <dir> 2` (locked).
-   - Reverse exit on 30679 must also have `door` bit set.
-   - Key object (Black Sun Cradle Seal) must exist in `#OBJECTS`.
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Black Sun Cradle Seal object.
+  - `D` reset: `D 0 <room> <dir> 2` (locked).
+  - Reverse exit on 30679 must also have `door` bit set.
+  - Key object (Black Sun Cradle Seal) must exist in `#OBJECTS`.
 
 5. **Zone F Apex Summit (approach to 30684):** Direction into final encounter room.
-   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Apex Summit Key object.
-   - `D` reset: `D 0 <room> <dir> 2` (locked).
-   - Reverse exit on 30684 must also have `door` bit set.
-   - Key object (Apex Summit Key) must exist in `#OBJECTS`.
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Apex Summit Key object.
+  - `D` reset: `D 0 <room> <dir> 2` (locked).
+  - Reverse exit on 30684 must also have `door` bit set.
+  - Key object (Apex Summit Key) must exist in `#OBJECTS`.
 
 All locked doors (state `2`) have corresponding key objects in `#OBJECTS`. Keys can be placed on gatekeeper mobs via `G` resets or in adjacent rooms via `O` resets.
 
@@ -671,7 +671,7 @@ Per `area_file_spec.md` section 14, the final `.are` file should emit sections i
 1. `#AREA`
 2. `#ROOMS`
 3. `#MOBILES`
-4. `#MOBPROGS` (if any inline mobprogs are used)
+
 5. `#OBJECTS`
 6. `#SHOPS` (none planned for this area)
 7. `#RESETS`

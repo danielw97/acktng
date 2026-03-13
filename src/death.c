@@ -272,7 +272,6 @@ void raw_kill(CHAR_DATA *victim, char *argument)
    one_argument(argument, arg);
 
    stop_fighting(victim, TRUE);
-   mprog_death_trigger(victim);
    if (victim == quest_target)
       quest_target = NULL;
    if (victim == quest_mob)

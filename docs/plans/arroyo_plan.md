@@ -148,21 +148,21 @@ Key anchors:
 ### Primary Factions
 
 1. **Charter Reclaimers** (hostile synod-derived toll zealots):
-   - reclaim old caravan law with coercive "authorized thirst" doctrine.
+  - reclaim old caravan law with coercive "authorized thirst" doctrine.
 2. **Dustbound Court-Dead** (jurisdiction undead):
-   - former clerks, embalmers, oath-witnesses animated by unresolved ledgers.
+  - former clerks, embalmers, oath-witnesses animated by unresolved ledgers.
 3. **Brood of the Resin Matriarch** (scorpion ecosystem):
-   - integrated into ritual spaces; not random wildlife.
+  - integrated into ritual spaces; not random wildlife.
 4. **Fault Elementals** (rite-scar manifestations):
-   - ash, dust, and mineral spirits tied to meridian failure zones.
+  - ash, dust, and mineral spirits tied to meridian failure zones.
 
 ### Mob Vnum Plan
 
 - Use mob vnums sequentially within `19900-20024`.
 - Target **34-40 mob templates** with strict role separation:
-  - trash/core combatants,
-  - elite enforcers (solo flagged),
-  - 2-3 bosses (boss flagged, sentinel, no_flee; in no_mob rooms).
+ - trash/core combatants,
+ - elite enforcers (solo flagged),
+ - 2-3 bosses (boss flagged, sentinel, no_flee; in no_mob rooms).
 
 ---
 
@@ -172,10 +172,10 @@ Key anchors:
 
 - Use object vnums sequentially in-range (same envelope; per-type namespace).
 - Target **45-55 objects**, including:
-  - charter relics (scroll cases, oath tablets, measure rods),
-  - ritual implements (seal knives, moon-ink censers, witness masks),
-  - brood craft drops (resin shields, stinger daggers),
-  - boss-signature gear.
+ - charter relics (scroll cases, oath tablets, measure rods),
+ - ritual implements (seal knives, moon-ink censers, witness masks),
+ - brood craft drops (resin shields, stinger daggers),
+ - boss-signature gear.
 
 ### Itemization Intent
 
@@ -204,9 +204,9 @@ Boss cadence:
 
 - Distinct spawn pockets per district to avoid uniform density.
 - Locked doors only where lore supports institutional barriers:
-  - archive seal door (B),
-  - rite vault gate (D),
-  - reliquary adjudication gate (E).
+ - archive seal door (B),
+ - rite vault gate (D),
+ - reliquary adjudication gate (E).
 - Any locked reset state requires valid key vnum object and `EX_ISDOOR` on both sides.
 
 ---

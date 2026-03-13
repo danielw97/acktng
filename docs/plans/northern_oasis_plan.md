@@ -126,11 +126,11 @@ Entry/combat zone. Caravan mile stones, wind-worn watch cairns, predatory fauna.
 
 - Sector: `desert` (`10`) throughout.
 - Key rooms:
-  - **8700** Eastern Desert Road Junction (important room, 5+ sentence description; external connector from Eastern Desert charter routes).
-  - **8710** Charter Mile Marker Ridge (first branch hub; important room, 5+ sentence description with `E` extra descriptions for charter stone inscriptions).
-  - **8720** Reaver Ambush Wash (combat hotspot; narrow terrain with high mob density).
-  - **8730** Windbreak Cairn Circle (lore room; important room, 5+ sentence description with `E` extra descriptions for weathered survey glyphs).
-  - **8739** Oasis Threshold (transition into settlement; important room, 5+ sentence description).
+ - **8700** Eastern Desert Road Junction (important room, 5+ sentence description; external connector from Eastern Desert charter routes).
+ - **8710** Charter Mile Marker Ridge (first branch hub; important room, 5+ sentence description with `E` extra descriptions for charter stone inscriptions).
+ - **8720** Reaver Ambush Wash (combat hotspot; narrow terrain with high mob density).
+ - **8730** Windbreak Cairn Circle (lore room; important room, 5+ sentence description with `E` extra descriptions for weathered survey glyphs).
+ - **8739** Oasis Threshold (transition into settlement; important room, 5+ sentence description).
 
 ### Band 2: Reedline Intake Quarter (8740-8779, 40 rooms)
 
@@ -139,11 +139,11 @@ Social + utility zone. Wells, sluice gates, maintenance walkways, ration court. 
 - Sector: mix of `city` (`1`) for open-air wells and plazas and `inside` (`11`) for sluice chambers and ration court interiors.
 - Indoor rooms use `room_flags` including `indoors` (`8`).
 - Key rooms:
-  - **8740** Intake Gate (important room, 5+ sentence description; named exit `^intake gate` discoverable in description).
-  - **8748** Main Well Plaza (central hub; important room, 5+ sentence description).
-  - **8755** Sluice Control Chamber (inside sector; important room, 5+ sentence description with `E` extra descriptions for sluice mechanisms and flow gauges).
-  - **8765** Ration Court Hall (inside sector; important room, 5+ sentence description; civil arbitration for water quota disputes).
-  - **8779** Reed Terrace Passage (connects to Cairn Market; important room).
+ - **8740** Intake Gate (important room, 5+ sentence description; named exit `^intake gate` discoverable in description).
+ - **8748** Main Well Plaza (central hub; important room, 5+ sentence description).
+ - **8755** Sluice Control Chamber (inside sector; important room, 5+ sentence description with `E` extra descriptions for sluice mechanisms and flow gauges).
+ - **8765** Ration Court Hall (inside sector; important room, 5+ sentence description; civil arbitration for water quota disputes).
+ - **8779** Reed Terrace Passage (connects to Cairn Market; important room).
 
 ### Band 3: Cairn Market and Ledger Ward (8780-8819, 40 rooms)
 
@@ -151,11 +151,11 @@ Trade/civil zone. Contract scribes, weighing courts, bonded caravans. Quest hook
 
 - Sector: `city` (`1`) for outdoor market stalls and plazas; `inside` (`11`) for scribe offices and weighing court interiors.
 - Key rooms:
-  - **8780** Cairn Market Entrance (important room, 5+ sentence description).
-  - **8790** Weighing Court (lore-critical arbitration room; inside sector; important room, 5+ sentence description with chained `E` extra descriptions for ledger entries, forged seals, and manifest disputes).
-  - **8800** Bonded Caravan Yard (outdoor staging area; important room, 5+ sentence description).
-  - **8808** Scribe's Archive Hall (inside sector; important room with `E` extra descriptions for charter copies, survey records, and pyramid-era requisition marks).
-  - **8819** Ledger Ward Rear Gate (connects to Dry Cistern Undercut; important room).
+ - **8780** Cairn Market Entrance (important room, 5+ sentence description).
+ - **8790** Weighing Court (lore-critical arbitration room; inside sector; important room, 5+ sentence description with chained `E` extra descriptions for ledger entries, forged seals, and manifest disputes).
+ - **8800** Bonded Caravan Yard (outdoor staging area; important room, 5+ sentence description).
+ - **8808** Scribe's Archive Hall (inside sector; important room with `E` extra descriptions for charter copies, survey records, and pyramid-era requisition marks).
+ - **8819** Ledger Ward Rear Gate (connects to Dry Cistern Undercut; important room).
 
 ### Band 4: Dry Cistern Undercut (8820-8859, 40 rooms)
 
@@ -163,12 +163,12 @@ Dungeon loop. Partial collapses, old Keeper tunnels, scavenger nests. Primary so
 
 - Sector: `inside` (`11`) throughout; `room_flags` includes `indoors` (`8`) and `dark` (`1`).
 - Key rooms:
-  - **8820** Cistern Access Shaft (zone entry; important room, 5+ sentence description; vertical connector via D4 up / D5 down exits).
-  - **8830** Collapsed Keeper Tunnel (lore room with Keeper-era survey instruments embedded in walls; important room, 5+ sentence description).
-  - **8838** Scavenger Nest Den (high mob density; combat hub).
-  - **8845** Old Sluice Junction (old hydraulic infrastructure; important room with `E` extra descriptions for ancient flow marks and measurement glyphs).
-  - **8852** Salt-Jackal Ritual Chamber (cult mini-boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description).
-  - **8859** Deep Cistern Passage (connects to High Adjudicator Terrace; important room).
+ - **8820** Cistern Access Shaft (zone entry; important room, 5+ sentence description; vertical connector via D4 up / D5 down exits).
+ - **8830** Collapsed Keeper Tunnel (lore room with Keeper-era survey instruments embedded in walls; important room, 5+ sentence description).
+ - **8838** Scavenger Nest Den (high mob density; combat hub).
+ - **8845** Old Sluice Junction (old hydraulic infrastructure; important room with `E` extra descriptions for ancient flow marks and measurement glyphs).
+ - **8852** Salt-Jackal Ritual Chamber (cult mini-boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description).
+ - **8859** Deep Cistern Passage (connects to High Adjudicator Terrace; important room).
 
 ### Band 5: High Adjudicator Terrace (8860-8899, 40 rooms)
 
@@ -176,12 +176,12 @@ Boss + resolution zone. Water-court chamber, shrine to oath-stones, final confli
 
 - Sector: mix of `city` (`1`) for outdoor terrace and shrine rooms and `inside` (`11`) for court chamber and archive interiors.
 - Key rooms:
-  - **8860** Terrace Approach Stair (important room, 5+ sentence description; transition from undercut to adjudication zone).
-  - **8870** Oath-Stone Shrine (lore-critical room; important room, 5+ sentence description with chained `E` extra descriptions for oath-stone inscriptions tracing back to Keeper-era Water Court traditions).
-  - **8880** High Adjudicator's Antechamber (pre-boss staging; important room, 5+ sentence description).
-  - **8890** Water Court Chamber (primary boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description; named exit `^court chamber` discoverable in description).
-  - **8895** Archive of Disputed Quotas (lore room; inside sector; chained `E` extra descriptions for contradicting quota records).
-  - **8899** Northern Road (external connector toward northern routes and Northern Pyramid approach; important room, 5+ sentence description).
+ - **8860** Terrace Approach Stair (important room, 5+ sentence description; transition from undercut to adjudication zone).
+ - **8870** Oath-Stone Shrine (lore-critical room; important room, 5+ sentence description with chained `E` extra descriptions for oath-stone inscriptions tracing back to Keeper-era Water Court traditions).
+ - **8880** High Adjudicator's Antechamber (pre-boss staging; important room, 5+ sentence description).
+ - **8890** Water Court Chamber (primary boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description; named exit `^court chamber` discoverable in description).
+ - **8895** Archive of Disputed Quotas (lore room; inside sector; chained `E` extra descriptions for contradicting quota records).
+ - **8899** Northern Road (external connector toward northern routes and Northern Pyramid approach; important room, 5+ sentence description).
 
 ### Connectivity Principles
 
@@ -233,35 +233,35 @@ Per `area_file_spec.md` sections 4.1-5.5:
 ### Faction Roster
 
 1. **Reedline Wardens** (order faction)
-   - Intake guards, sluice engineers, quota enforcers, anti-poison monitors, reed maintenance crew.
-   - `act`: `is_npc` + `stay_area` + `sentinel` (for stationary guards/engineers). Non-aggressive.
-   - Level range: 45-55.
-   - Archetype: melee profile (guards) and hybrid profile (engineers with light defensive casting).
+  - Intake guards, sluice engineers, quota enforcers, anti-poison monitors, reed maintenance crew.
+  - `act`: `is_npc` + `stay_area` + `sentinel` (for stationary guards/engineers). Non-aggressive.
+  - Level range: 45-55.
+  - Archetype: melee profile (guards) and hybrid profile (engineers with light defensive casting).
 
 2. **Cairn Brokers** (neutral-pragmatic)
-   - Contract scribes, weighing clerks, caravan arbitrators, seal inspectors, trade authenticators.
-   - `act`: `is_npc` + `stay_area` + `sentinel`. Non-aggressive.
-   - Level range: 45-50.
-   - Archetype: hybrid profile (light arms, some utility).
+  - Contract scribes, weighing clerks, caravan arbitrators, seal inspectors, trade authenticators.
+  - `act`: `is_npc` + `stay_area` + `sentinel`. Non-aggressive.
+  - Level range: 45-50.
+  - Archetype: hybrid profile (light arms, some utility).
 
 3. **Sunscar Reavers** (hostile)
-   - Skirmishers, route cutters, wagon raiders, beast-handlers.
-   - `act`: `is_npc` + `stay_area` + `aggressive`. Route cutters add `no_flee` (`16`).
-   - Level range: 45-60 (skirmishers low, beast-handlers high).
-   - Archetype: melee profile. Beast-handlers use hybrid profile.
+  - Skirmishers, route cutters, wagon raiders, beast-handlers.
+  - `act`: `is_npc` + `stay_area` + `aggressive`. Route cutters add `no_flee` (`16`).
+  - Level range: 45-60 (skirmishers low, beast-handlers high).
+  - Archetype: melee profile. Beast-handlers use hybrid profile.
 
 4. **Salt-Jackal Offshoot** (limited cult presence, hostile)
-   - Cistern rite-keepers, oath-twisting acolytes, brine ritualists.
-   - `act`: `is_npc` + `stay_area` + `aggressive`. Rite-keepers add `sentinel` (stationed at ritual nodes).
-   - Level range: 50-60.
-   - Archetype: caster profile (ritual casting). Brine ritualists use hybrid profile.
-   - `affected_by`: rite-keepers get `detect_hidden` (`32`).
+  - Cistern rite-keepers, oath-twisting acolytes, brine ritualists.
+  - `act`: `is_npc` + `stay_area` + `aggressive`. Rite-keepers add `sentinel` (stationed at ritual nodes).
+  - Level range: 50-60.
+  - Archetype: caster profile (ritual casting). Brine ritualists use hybrid profile.
+  - `affected_by`: rite-keepers get `detect_hidden` (`32`).
 
 5. **Approach Dune Fauna** (hostile)
-   - Sand vipers, dune jackals, glass scorpions, carrion kites.
-   - `act`: `is_npc` + `stay_area` + `aggressive` + `no_mind` (`262144`).
-   - Level range: 45-55.
-   - Archetype: melee profile. Sand vipers add poison spec (`spec_poison` in `#SPECIALS`).
+  - Sand vipers, dune jackals, glass scorpions, carrion kites.
+  - `act`: `is_npc` + `stay_area` + `aggressive` + `no_mind` (`262144`).
+  - Level range: 45-55.
+  - Archetype: melee profile. Sand vipers add poison spec (`spec_poison` in `#SPECIALS`).
 
 ### Boss Ladder
 
@@ -318,34 +318,34 @@ Per `area_file_spec.md` sections 7.3 and 7.6:
 ### Item Families
 
 1. **Desert Approach Set** (levels 45-55, traveler gear)
-   - Wind-worn veils (`head`, weight 1-5 caster), caravan wraps (`about`, weight 11-15 tank), charter bucklers (`hold` + `ITEM_BUCKLER`, weight 11-15 tank), wayfinder rods (`hold` + `ITEM_WEAPON`, `value3 = 7` pound, weight 1-5 caster).
-   - `L` level lines: 45-55 range.
+  - Wind-worn veils (`head`, weight 1-5 caster), caravan wraps (`about`, weight 11-15 tank), charter bucklers (`hold` + `ITEM_BUCKLER`, weight 11-15 tank), wayfinder rods (`hold` + `ITEM_WEAPON`, `value3 = 7` pound, weight 1-5 caster).
+  - `L` level lines: 45-55 range.
 
 2. **Warden Service Gear** (levels 45-60, military-utility)
-   - Intake guard helms (`head`, weight 11-15 tank), sluice engineer's bracers (`wrist`, weight 11-15 tank), quota enforcement truncheons (`hold` + `ITEM_WEAPON`, `value3 = 8` crush, weight 6-10 melee), reed-maintenance sickles (`hold` + `ITEM_WEAPON`, `value3 = 3` slash, weight 6-10 melee).
-   - `L` level lines: 45-60 range.
+  - Intake guard helms (`head`, weight 11-15 tank), sluice engineer's bracers (`wrist`, weight 11-15 tank), quota enforcement truncheons (`hold` + `ITEM_WEAPON`, `value3 = 8` crush, weight 6-10 melee), reed-maintenance sickles (`hold` + `ITEM_WEAPON`, `value3 = 3` slash, weight 6-10 melee).
+  - `L` level lines: 45-60 range.
 
 3. **Cairn Market Trade Goods** (levels 45-50, utility/caster)
-   - Authenticator's loupe (`hold`, `ITEM_TREASURE`, weight 1-5 caster), contract seal rings (`finger`, weight 1-5 caster), weighing court tokens (`hold`, `ITEM_TREASURE`, weight 1-5 caster), bonded caravan pendants (`neck`, weight 1-5 caster).
-   - `L` level lines: 45-50 range.
+  - Authenticator's loupe (`hold`, `ITEM_TREASURE`, weight 1-5 caster), contract seal rings (`finger`, weight 1-5 caster), weighing court tokens (`hold`, `ITEM_TREASURE`, weight 1-5 caster), bonded caravan pendants (`neck`, weight 1-5 caster).
+  - `L` level lines: 45-50 range.
 
 4. **Reaver Spoils** (levels 45-60, salvaged military)
-   - Salvaged route-cutter blades (`hold` + `ITEM_WEAPON`, `value3 = 3` slash, weight 6-10 melee), raider's hooked spears (`hold` + `ITEM_WEAPON` + `ITEM_TWO_HANDED`, `value3 = 11` pierce, weight 6-10 melee), storm-patched cloaks (`about`, weight 11-15 tank).
-   - `L` level lines: 45-60 range.
+  - Salvaged route-cutter blades (`hold` + `ITEM_WEAPON`, `value3 = 3` slash, weight 6-10 melee), raider's hooked spears (`hold` + `ITEM_WEAPON` + `ITEM_TWO_HANDED`, `value3 = 11` pierce, weight 6-10 melee), storm-patched cloaks (`about`, weight 11-15 tank).
+  - `L` level lines: 45-60 range.
 
 5. **Cistern Cult Relics** (levels 50-60, cult-themed)
-   - Salt-jackal masks (`face`, weight 1-5 caster), brine-ritual censers (`hold`, `ITEM_TREASURE`, weight 1-5 caster), cistern oath tokens (`finger`, weight 1-5 caster), corroded ritual daggers (`hold` + `ITEM_WEAPON`, `value3 = 2` stab, weight 6-10 melee).
-   - `L` level lines: 50-60 range.
+  - Salt-jackal masks (`face`, weight 1-5 caster), brine-ritual censers (`hold`, `ITEM_TREASURE`, weight 1-5 caster), cistern oath tokens (`finger`, weight 1-5 caster), corroded ritual daggers (`hold` + `ITEM_WEAPON`, `value3 = 2` stab, weight 6-10 melee).
+  - `L` level lines: 50-60 range.
 
 6. **Adjudicator Court Regalia** (levels 58-65, boss drops)
-   - Warden-Commander's signet (`finger`, weight 1-5 caster), adjudicator's mantle (`shoulders`, weight 11-15 tank), water court gavel (`hold` + `ITEM_WEAPON`, `value3 = 8` crush, weight 6-10 melee), quota doctrine codex (`hold`, `ITEM_TREASURE`, weight 1-5 caster).
-   - Boss drops: must include `ITEM_BOSS` in `extra_flags`.
-   - Loot-table drops: must include `ITEM_LOOT` in `extra_flags`.
-   - `L` level lines: 58-65 range.
+  - Warden-Commander's signet (`finger`, weight 1-5 caster), adjudicator's mantle (`shoulders`, weight 11-15 tank), water court gavel (`hold` + `ITEM_WEAPON`, `value3 = 8` crush, weight 6-10 melee), quota doctrine codex (`hold`, `ITEM_TREASURE`, weight 1-5 caster).
+  - Boss drops: must include `ITEM_BOSS` in `extra_flags`.
+  - Loot-table drops: must include `ITEM_LOOT` in `extra_flags`.
+  - `L` level lines: 58-65 range.
 
 7. **Lore Objects / Quest Hooks** (various levels)
-   - Flow ledger fragments (`ITEM_TREASURE`, `hold`, weight 1-5), charter stone rubbings (`ITEM_TREASURE`, `hold`, weight 1-5), quota dispute writs (`ITEM_TREASURE`, `hold`, weight 1-5), cistern vault keys (`ITEM_KEY`, `hold`, weight 1-5).
-   - Key objects: any key used as `<key_vnum>` for a locked door must exist in `#OBJECTS` with `item_type = ITEM_KEY` (`18`).
+  - Flow ledger fragments (`ITEM_TREASURE`, `hold`, weight 1-5), charter stone rubbings (`ITEM_TREASURE`, `hold`, weight 1-5), quota dispute writs (`ITEM_TREASURE`, `hold`, weight 1-5), cistern vault keys (`ITEM_KEY`, `hold`, weight 1-5).
+  - Key objects: any key used as `<key_vnum>` for a locked door must exist in `#OBJECTS` with `item_type = ITEM_KEY` (`18`).
 
 ### Key Objects for Locked Doors
 
@@ -398,21 +398,21 @@ Per `area_file_spec.md` section 8.3: any exit set to closed or locked via `D` re
 Planned door resets:
 
 1. **Intake Gate (8740):** Direction appropriate to approach from dunes.
-   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Intake Gate Key object.
-   - `D` reset: `D 0 8740 <dir> 1` (closed, not locked — intake gate, opened by wardens).
-   - Reverse exit must also have `door` bit set.
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Intake Gate Key object.
+  - `D` reset: `D 0 8740 <dir> 1` (closed, not locked — intake gate, opened by wardens).
+  - Reverse exit must also have `door` bit set.
 
 2. **Cistern Access Shaft (8820):** Direction down (D5) to Dry Cistern Undercut.
-   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Cistern Hatch Key object.
-   - `D` reset: `D 0 8820 5 2` (locked).
-   - Reverse exit on 8821 (or appropriate vnum) must also have `door` bit set.
-   - Key object (Cistern Hatch Key) must exist in `#OBJECTS`.
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Cistern Hatch Key object.
+  - `D` reset: `D 0 8820 5 2` (locked).
+  - Reverse exit on 8821 (or appropriate vnum) must also have `door` bit set.
+  - Key object (Cistern Hatch Key) must exist in `#OBJECTS`.
 
 3. **Water Court Chamber (8890):** Direction into boss room.
-   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Court Chamber Key object.
-   - `D` reset: `D 0 8890 <dir> 2` (locked).
-   - Reverse exit must also have `door` bit set.
-   - Key object (Court Chamber Key) must exist in `#OBJECTS`.
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Court Chamber Key object.
+  - `D` reset: `D 0 8890 <dir> 2` (locked).
+  - Reverse exit must also have `door` bit set.
+  - Key object (Court Chamber Key) must exist in `#OBJECTS`.
 
 All locked doors (state `2`) have corresponding key objects in `#OBJECTS`. Keys can be placed on gatekeeper mobs via `G` resets or in adjacent rooms via `O` resets.
 
@@ -447,7 +447,7 @@ Per `area_file_spec.md` section 14, the final `.are` file should emit sections i
 1. `#AREA`
 2. `#ROOMS`
 3. `#MOBILES`
-4. `#MOBPROGS` (if any inline mobprogs are used)
+
 5. `#OBJECTS`
 6. `#SHOPS`
 7. `#RESETS`

@@ -50,13 +50,12 @@
 #define BUILD_SEC_AREA 1
 #define BUILD_SEC_ROOMS 2
 #define BUILD_SEC_MOBILES 3
-#define BUILD_SEC_MOBPROGS 4
-#define BUILD_SEC_OBJECTS 5
-#define BUILD_SEC_SHOPS 6
-#define BUILD_SEC_RESETS 7
-#define BUILD_SEC_SPECIALS 8
-#define BUILD_SEC_OBJFUNS 9 /* -S- Mod */
-#define BUILD_SEC_END 10
+#define BUILD_SEC_OBJECTS 4
+#define BUILD_SEC_SHOPS 5
+#define BUILD_SEC_RESETS 6
+#define BUILD_SEC_SPECIALS 7
+#define BUILD_SEC_OBJFUNS 8 /* -S- Mod */
+#define BUILD_SEC_END 9
 #define AREA_VERSION 16
 
 struct save_queue_type
@@ -87,7 +86,6 @@ int AreasModified = 0;
 /* void build_save(); proto in merc.h */
 void build_save_area(void);
 void build_save_mobs(void);
-void build_save_mobprogs(void);
 void build_save_objects(void);
 void build_save_rooms(void);
 void build_save_shops(void);
@@ -95,7 +93,6 @@ void build_save_resets(void);
 void build_save_specs(void);
 void build_save_objfuns(void);
 void build_save_end(void);
-char *mprog_type_to_name(int);
 void vuild_save_flush(void);
 /*  int convert(int lev); */
 /* Convert levels from ack -> envy! */
@@ -212,9 +209,6 @@ void build_save()
       case BUILD_SEC_MOBILES:
          build_save_mobs();
          break;
-      case BUILD_SEC_MOBPROGS:
-         build_save_mobprogs();
-         break;
       case BUILD_SEC_OBJECTS:
          build_save_objects();
          break;
@@ -277,8 +271,6 @@ void build_save_area()
 void build_save_mobs()
 {
    MOB_INDEX_DATA *pMobIndex;
-   MPROG_DATA *mprg;
-   int finish_progs;
 
    if (Pointer == NULL) /* Start */
    {
@@ -332,60 +324,10 @@ void build_save_mobs()
       fprintf(SaveFile, "%i ", pMobIndex->loot_chance[i]);
    fprintf(SaveFile, "\n" );
 
-   mprg = pMobIndex->first_mprog;
-   finish_progs = 0;
-   while (mprg)
-   {
-      if (mprg->filename == NULL)
-      {
-         fprintf(SaveFile, ">%s ", mprog_type_to_name(mprg->type));
-         fprintf(SaveFile, "%s~\n", mprg->arglist);
-         fprintf(SaveFile, "%s~\n", mprg->comlist);
-         finish_progs = 1;
-      }
-      mprg = mprg->next;
-   }
-   if (finish_progs)
-   {
-      fprintf(SaveFile, "|\n");
-   }
-
    Pointer = Pointer->next;
    if (Pointer == NULL) /* End */
    {
       fprintf(SaveFile, "#0\n");
-      Section++;
-   }
-   return;
-}
-
-void build_save_mobprogs()
-{
-   MOB_INDEX_DATA *pMobIndex;
-   MOBPROG_ITEM *pItem;
-
-   if (Pointer == NULL) /* Start */
-   {
-      if (CurSaveArea->first_area_mobprog == NULL)
-      {
-         Section++;
-         return;
-      }
-      send_to_char("Saving mobprogs.\n", CurSaveChar);
-      fprintf(SaveFile, "#MOBPROGS\n");
-
-      Pointer = CurSaveArea->first_area_mobprog;
-   }
-
-   pItem = Pointer->data;
-   pMobIndex = pItem->mob;
-
-   fprintf(SaveFile, "M %i %s\n", pMobIndex->vnum, pItem->filename);
-
-   Pointer = Pointer->next;
-   if (Pointer == NULL) /* End */
-   {
-      fprintf(SaveFile, "S\n");
       Section++;
    }
    return;

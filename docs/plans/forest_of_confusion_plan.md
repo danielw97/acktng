@@ -81,12 +81,12 @@ Row y=1 (vnums 9620-9639): Patrol camps, abandoned survey positions, and the for
 Row y=2 (vnums 9640-9659): The Mirrorbark Switchmaze and its approaches.
 - 9640-9643: Mistroute approaches — the canopy closes fully, light becomes diffuse, and the first mirrorbark trees appear. Their reflective bark surfaces create visual echoes of torchlight.
 - **9644-9659: The Mirrorbark Switchmaze** (16 rooms, all `ROOM_MAZE`)
-  - A dense thicket maze with repeated visual motifs and short looping connectors.
-  - False-loop lattice with 2-3 true exits (south back to approaches, east to row y=2 continuation, north to row y=3).
-  - Theme emphasis: `@@p` mist pressure + `@@G` living bark intelligence.
-  - Clue language: bark reflections — left-reflection indicates south, overhead-reflection indicates true north.
-  - Each room gets unique description despite shared visual motifs; anchors include specific bark patterns, root formations, mist density variations, and sound quality changes.
-  - Dead-end pockets contain optional loot (druidic remnants, Kiess scout equipment).
+ - A dense thicket maze with repeated visual motifs and short looping connectors.
+ - False-loop lattice with 2-3 true exits (south back to approaches, east to row y=2 continuation, north to row y=3).
+ - Theme emphasis: `@@p` mist pressure + `@@G` living bark intelligence.
+ - Clue language: bark reflections — left-reflection indicates south, overhead-reflection indicates true north.
+ - Each room gets unique description despite shared visual motifs; anchors include specific bark patterns, root formations, mist density variations, and sound quality changes.
+ - Dead-end pockets contain optional loot (druidic remnants, Kiess scout equipment).
 
 Row y=3 (vnums 9660-9679): Post-maze thickets, catrat territory, and first broken-one encounters.
 - 9660-9663: Switchmaze exits and recovery — the maze releases into slightly clearer thickets. Catrat family groups establish territory here.
@@ -105,24 +105,24 @@ Row y=3 (vnums 9660-9679): Post-maze thickets, catrat territory, and first broke
 Row y=4 (vnums 9680-9699): The Prism-Fen Knot, neogi warrens, and channel crossings.
 - 9680-9683: Channel Approaches — the terrain drops into shallow ravines where water flows over root-bridges. The mist takes on a crystalline quality as Conclave fragments in the channel beds refract light.
 - 9684-9689: Neogi Warrens — underground passages accessed through concealed entrances in the undergrowth. `inside` sector. The neogi hierarchy operates here: slave pens, guard posts, the master's chamber, and the ruler's throne. Rooms are tight, deliberately claustrophobic.
-  - 9684: Neogi Tunnel Mouth — `inside` sector
-  - 9685: Slave Pen — `inside` sector, `dark`
-  - 9686: Neogi Guard Post — `inside` sector
-  - 9687: Neogi Master's Chamber — `inside` sector
-  - 9688: Neogi Ruler's Hall — `inside` sector, `no_mob`
-  - 9689: Neogi Escape Tunnel — `inside` sector, connects back to surface
+ - 9684: Neogi Tunnel Mouth — `inside` sector
+ - 9685: Slave Pen — `inside` sector, `dark`
+ - 9686: Neogi Guard Post — `inside` sector
+ - 9687: Neogi Master's Chamber — `inside` sector
+ - 9688: Neogi Ruler's Hall — `inside` sector, `no_mob`
+ - 9689: Neogi Escape Tunnel — `inside` sector, connects back to surface
 - 9690-9694: Root-Bridge Crossings — elevated root platforms spanning channels. The bridges shift as the root network redirects water flow.
 - 9695: Dense Woodland Junction — a critical intersection point. **Exit east to room 10000 (Verdant Depths entry). Exit south to room 1000 (Withered Depths entry).** This room is the geographic pivot where the forest's two deeper regions become accessible. `no_mob`.
 - 9696-9699: Deep Channel sections — the channels widen and deepen. Prism-scored fragments visible in the streambeds. Cockatrice territory begins.
 
 Row y=5 (vnums 9700-9719): The Prism-Fen Knot, cockatrice nesting, and hippogriff canopy.
 - **9700-9715: The Prism-Fen Knot** (16 rooms, all `ROOM_MAZE`)
-  - Wetland maze using channels and root-bridges where pathing appears open but folds back.
-  - Mixed `forest`/`water_swim` sectors.
-  - One checkpoint hut at 9707: `inside` sector, `no_mob` — an old Kiess survey station providing re-orientation anchor.
-  - Theme emphasis: `@@a` refracted moisture + `@@b` root/earth hazards.
-  - Clue language: water-sound direction — flowing water on the left indicates east, flowing water ahead indicates north.
-  - Prism-light distortions in the mist create rainbow false-paths; true paths are marked by absence of prismatic effect.
+ - Wetland maze using channels and root-bridges where pathing appears open but folds back.
+ - Mixed `forest`/`water_swim` sectors.
+ - One checkpoint hut at 9707: `inside` sector, `no_mob` — an old Kiess survey station providing re-orientation anchor.
+ - Theme emphasis: `@@a` refracted moisture + `@@b` root/earth hazards.
+ - Clue language: water-sound direction — flowing water on the left indicates east, flowing water ahead indicates north.
+ - Prism-light distortions in the mist create rainbow false-paths; true paths are marked by absence of prismatic effect.
 - 9706: Large Nesting Tree — an ancient old-growth tree massive enough to support hippogriff nests in its upper canopy. The tree is a Verdant-influenced landmark. Exit up to 9716.
 - 9716: Hippogriff Nest — high canopy platform above the mist line. `forest` sector. The air is clear here; the confusion effects are weaker above the canopy.
 - 9717-9719: Fen Exit and Glade Approach — the wetland gives way to drier ground. The canopy opens slightly. Cockatrice territory: cleared areas where the stone-gaze creatures display their crests.
@@ -136,33 +136,33 @@ Row y=5 (vnums 9700-9719): The Prism-Fen Knot, cockatrice nesting, and hippogrif
 
 Row y=6 (vnums 9720-9739): Wemic territory, Ymmas's domain, centaur approaches.
 - 9720-9722: Wemic Hunting Grounds — deep clearings where wemic family bands (male, female, cubs) establish territory. The clearings are Verdant-influenced pockets: the air is clearer, the growth is healthier, and the wemics patrol with territorial precision. `no_mob` flag on wemic den room.
-  - **Exit north from 9722 to room 6600 (external connection, retained from legacy).**
+ - **Exit north from 9722 to room 6600 (external connection, retained from legacy).**
 - 9723-9725: Crystal Scar Approaches — the first visible evidence of Conclave crystal matrices. Root systems exposed by erosion show faintly luminous fragments. The air hums. Survey trench remnants cut narrow lines in the forest floor.
-  - **Exit up from 9725 to room 166 (external connection, retained from legacy).**
+ - **Exit up from 9725 to room 166 (external connection, retained from legacy).**
 - 9726-9732: Ymmas's Domain — a fortified cabin complex in the deep woodland.
-  - 9726: Cabin Approach — the path narrows between sentinel trees. The Guardian Yugoloth patrols here. `no_mob`.
-  - 9727: Strongroom — a sealed chamber within the cabin. `inside`, `no_mob`. Door: locked, requires key.
-  - 9728: Cabin Main Room — `inside` sector. The anomaly: a human-made structure that has not been reclaimed by the forest.
-  - 9729: Cabin Workshop — `inside` sector. Shelves of reagents, star charts, and bound texts.
-  - 9730: Cabin Upper Room — `inside` sector. Ymmas's personal quarters.
-  - 9731: Ymmas's Lair — `inside`, `no_mob`. The mage's sanctum. Ymmas (level 86 boss) resides here.
-  - 9732: Throne Room — `inside`, `no_mob`. A formal audience chamber. The Staff of Summoning is kept here.
+ - 9726: Cabin Approach — the path narrows between sentinel trees. The Guardian Yugoloth patrols here. `no_mob`.
+ - 9727: Strongroom — a sealed chamber within the cabin. `inside`, `no_mob`. Door: locked, requires key.
+ - 9728: Cabin Main Room — `inside` sector. The anomaly: a human-made structure that has not been reclaimed by the forest.
+ - 9729: Cabin Workshop — `inside` sector. Shelves of reagents, star charts, and bound texts.
+ - 9730: Cabin Upper Room — `inside` sector. Ymmas's personal quarters.
+ - 9731: Ymmas's Lair — `inside`, `no_mob`. The mage's sanctum. Ymmas (level 86 boss) resides here.
+ - 9732: Throne Room — `inside`, `no_mob`. A formal audience chamber. The Staff of Summoning is kept here.
 - 9733-9735: Deep Undergrowth — transitional rooms between Ymmas's domain and centaur territory. Dense, dark, and contested.
 - 9736-9739: Centaur Glade Approaches — living-wood boundary markers appear. Woven bone-and-bark windchimes produce territorial tones. The forest shifts from corrupted to carefully maintained.
 
 Row y=7 (vnums 9740-9759): Centaur settlement, the Ashen Lattice maze, and manscorpian approaches.
 - 9740-9747: Centaur Settlement — a secluded glade of living-wood structures.
-  - 9740: Glade Entrance — centaur boundary markers. The forest here is healthier than anywhere else in the area outside the Verdant-influenced pockets.
-  - 9741-9743: Secluded Glade rooms — open spaces between trained trees. Centaur families move between these. `forest` sector.
-  - 9744: Leader's Glade — `no_mob`. The centaur leader holds court here. Centaur oral tradition preserves accounts of the forest before the confusion mists.
-  - 9745-9747: Centaur Huts — `inside` sector. Living-wood structures, doors of woven branches. Each hut has unique character.
+ - 9740: Glade Entrance — centaur boundary markers. The forest here is healthier than anywhere else in the area outside the Verdant-influenced pockets.
+ - 9741-9743: Secluded Glade rooms — open spaces between trained trees. Centaur families move between these. `forest` sector.
+ - 9744: Leader's Glade — `no_mob`. The centaur leader holds court here. Centaur oral tradition preserves accounts of the forest before the confusion mists.
+ - 9745-9747: Centaur Huts — `inside` sector. Living-wood structures, doors of woven branches. Each hut has unique character.
 - **9748-9759: The Ashen Lattice of Scars** (12 rooms, all `ROOM_MAZE`)
-  - Blight-geometry maze built around Conclave scar lines and fungal lattice corridors.
-  - Route feels hostile and deliberate: dead-end bait pockets, elite ambush corners, one reliable traversal lane.
-  - Theme emphasis: `@@d` withered decay + `@@R` breach danger + restrained `@@p` distortion cues.
-  - Clue language: fire-scar depth — the deepest, oldest fire scars mark the original Conclave survey routes, which remain navigable because the crystal resonance that created them also preserved them.
-  - Fungal growth follows Conclave geometric patterns: hexagonal spore formations, lattice-structured mycelium.
-  - 9755: Lattice Core — the densest concentration of crystal resonance at the surface. The air hums audibly. Boss-tier creature territory.
+ - Blight-geometry maze built around Conclave scar lines and fungal lattice corridors.
+ - Route feels hostile and deliberate: dead-end bait pockets, elite ambush corners, one reliable traversal lane.
+ - Theme emphasis: `@@d` withered decay + `@@R` breach danger + restrained `@@p` distortion cues.
+ - Clue language: fire-scar depth — the deepest, oldest fire scars mark the original Conclave survey routes, which remain navigable because the crystal resonance that created them also preserved them.
+ - Fungal growth follows Conclave geometric patterns: hexagonal spore formations, lattice-structured mycelium.
+ - 9755: Lattice Core — the densest concentration of crystal resonance at the surface. The air hums audibly. Boss-tier creature territory.
 
 ### Zone 5: Twin Thresholds (9760-9799, rows y=8-9)
 **Theme:** The north arc forks into Verdant-biased and Withered-biased transition routes. Manscorpian caves. The Spider's web.
@@ -174,14 +174,14 @@ Row y=7 (vnums 9740-9759): Centaur settlement, the Ashen Lattice maze, and mansc
 Row y=8 (vnums 9760-9779): Manscorpian cave maze, the spider's domain, and the Verdant approach.
 - 9760-9762: Deep Woodland Transition — the forest reaches its maximum density. Two distinct environmental flavors begin: healthier growth to the east (Verdant influence), corrupted growth to the west (Withered influence).
 - **9763-9778: Manscorpian Cave Maze** (16 rooms, all `ROOM_MAZE`)
-  - The manscorpian king's domain. Caves accessed through concealed entrances.
-  - `inside` sector throughout. `dark` flag on unlit chambers.
-  - 9763: Cave Mouth — the entrance, guarded by manscorpian sentries.
-  - 9764-9770: Maze of Caves — twisting passages navigated by the manscorpians via scent. Poison hazards.
-  - 9770: Deep Cave Junction — **Exit south to room 10062 (Verdant Depths cave shortcut, retained from legacy).** `no_mob`.
-  - 9771-9774: Inner Caves — the king's territory. More defended, better-lit by bioluminescent fungal growth from the deep root tunnels below.
-  - 9775: King's Chamber — `inside`, `no_mob`. The manscorpian king (level 52, boss) and his aid.
-  - 9776-9778: Cave exits and connecting passages back to surface.
+ - The manscorpian king's domain. Caves accessed through concealed entrances.
+ - `inside` sector throughout. `dark` flag on unlit chambers.
+ - 9763: Cave Mouth — the entrance, guarded by manscorpian sentries.
+ - 9764-9770: Maze of Caves — twisting passages navigated by the manscorpians via scent. Poison hazards.
+ - 9770: Deep Cave Junction — **Exit south to room 10062 (Verdant Depths cave shortcut, retained from legacy).** `no_mob`.
+ - 9771-9774: Inner Caves — the king's territory. More defended, better-lit by bioluminescent fungal growth from the deep root tunnels below.
+ - 9775: King's Chamber — `inside`, `no_mob`. The manscorpian king (level 52, boss) and his aid.
+ - 9776-9778: Cave exits and connecting passages back to surface.
 - 9779: The Spider's Web — a massive web complex spanning multiple trees at the Verdant-Withered boundary. The spider (level 57, solo) hunts here. `no_mob`.
 
 Row y=9 (vnums 9780-9799): The twin threshold approaches and final deep-forest positions.
@@ -250,11 +250,11 @@ Row y=9 (vnums 9780-9799): The twin threshold approaches and final deep-forest p
 ### Door Policy
 - Only man-made checkpoints and quarantine gates use door flags; natural forest transitions are open.
 - Doors required:
-  - Ymmas's strongroom (9727): locked door, requires key (emerald key, vnum 9619)
-  - Ymmas's lair entrance: closed door
-  - Centaur hut doors (9745-9747): closed doors (woven branch construction)
-  - Neogi ruler's hall (9688): closed door
-  - Manscorpian king's chamber (9775): closed door
+ - Ymmas's strongroom (9727): locked door, requires key (emerald key, vnum 9619)
+ - Ymmas's lair entrance: closed door
+ - Centaur hut doors (9745-9747): closed doors (woven branch construction)
+ - Neogi ruler's hall (9688): closed door
+ - Manscorpian king's chamber (9775): closed door
 
 ## Mob/NPC Redesign Plan
 
@@ -480,10 +480,10 @@ Replace legacy generic drops with forest-specific equipment and utility objects.
 - Rewrite all room names/descriptions to eliminate generic repetition.
 - Every room gets at least one unique anchor (sound, smell, landmark, hazard, or lore cue).
 - Split sectors intentionally:
-  - `forest` dominant
-  - `water_swim` for channels/bogs
-  - `field`/`hills` only where terrain supports it
-  - `inside` only for camps, ruins, warrens, huts, or cabins
+ - `forest` dominant
+ - `water_swim` for channels/bogs
+ - `field`/`hills` only where terrain supports it
+ - `inside` only for camps, ruins, warrens, huts, or cabins
 - Preserve readability: avoid color-code spam; emphasize semantic color use.
 - Minimum 3 sentences per room description; important rooms (bosses, junctions, entries) get 5+.
 - No duplicate room descriptions across rooms.

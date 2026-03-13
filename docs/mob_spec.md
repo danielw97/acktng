@@ -17,7 +17,7 @@ A list of mobile records, each introduced by `#<vnum>`, terminated by `#0`:
 <level> <sex>
 <hp_mod> <ac_mod> <hr_mod> <dr_mod>
 [optional extension lines]
-[optional inline mobprog blocks]
+[optional inline script blocks]
 ...
 #0
 ```
@@ -332,7 +332,7 @@ For inline mobile program blocks (`> <prog_type_name> ...`), the loader accepts 
 - `give_prog`
 - `bribe_prog`
 
-Optional inline mobprogs inside a mobile entry:
+Optional inline scripts inside a mobile entry:
 
 ```text
 > <prog_type_name> <arglist>~

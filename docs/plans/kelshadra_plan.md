@@ -108,8 +108,8 @@ At high level, players enter as intruders but become adjudicators of a systemic 
 ## Zone J: The Released/Sealed Afterpath (9528-9549, 22 rooms)
 - Branching aftermath content using the remaining vnums.
 - Two mirrored route families:
-  - **Seal Route:** reinforces prison, hardens Kel'Shadra continuity.
-  - **Release Route:** frees memory-hosts, destabilizes deep wards.
+ - **Seal Route:** reinforces prison, hardens Kel'Shadra continuity.
+ - **Release Route:** frees memory-hosts, destabilizes deep wards.
 - Both routes reconnect to shared extraction corridor.
 
 **Total:** 12+12+12+16+16+16+12+16+16+22 = **150 rooms (all room vnums used)**.
