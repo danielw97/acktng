@@ -13,7 +13,7 @@ bool spec_lay_sister(CHAR_DATA *ch)
       "$n sets a fresh tallow stub beside the others at the base of the memorial stone.",
       "$n folds $s hands and stands in quiet observance before the carved dedication."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "No ward unlit, no traveler uncounted. First Oath. Spoken at every memorial by the book.",
       "No judgment hidden, no sentence unrecorded. Second Oath. The Temple holds to it even when the courts do not.",
       "No levy taken that cannot be borne. Third Oath. The hardest to keep, in my experience.",

@@ -13,7 +13,7 @@ bool spec_gnf_courier(CHAR_DATA *ch)
       "$n checks $s bronze CLO badge at $s collar, the standard-bearer of Courier Lantern passage rights.",
       "$n adjusts $s pack to balance the weight of sealed dispatches against the distance remaining."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "CLO relay runs from the Granite Arcade to the Iron Gate. Eight waystation stops. I run the northern half.",
       "Sealed dispatches mean no reading, no delay, no questions. I deliver to the named recipient only.",
       "The relay keeps both cities informed on road conditions, faction activity, and travel safety. Better than waiting for a rider weekly.",

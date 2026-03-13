@@ -13,7 +13,7 @@ bool spec_rr_pilgrim(CHAR_DATA *ch)
       "$n reads a worn slip of paper, folds it carefully, and tucks it back into a pocket.",
       "$n stands at the road's edge and looks west for a long moment before resuming the walk."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "How far to the next waystone shrine? I've been walking since the gate and I haven't seen water.",
       "I know how I look. I've been on this road for eight days. I know how long it takes.",
       "The wardens at the gate told me the road west was clear. They said that three days ago.",

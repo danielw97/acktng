@@ -13,7 +13,7 @@ bool spec_kowloon_corsair(CHAR_DATA *ch)
       "$n scans a Harbor Syndic notice board, memorizing the updated patrol rotation.",
       "$n moves to a shadowed position near the dock approach, tracking a Warden guard's circuit timing."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Shen knows these channels better than the Syndic charts do. Every gate timing, every patrol gap. Patience is strategy.",
       "This isn't a raid — this is a probe. We learn their timing tonight. We act when we know what they know.",
       "The Iron Gate convoy runs at third bell. Twice a week, same route. Someone in the Syndic is selling information.",

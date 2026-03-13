@@ -13,7 +13,7 @@ bool spec_gnf_lamplighter(CHAR_DATA *ch)
       "$n marks a post number in $s maintenance log, counting the day's route from south to north.",
       "$n patches a cracked lamp-glass with pitch and hemp cord, a temporary fix until Midgaard sends glass."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "The Lantern Road gets its name because the posts stay lit. My job is making sure that's true every night.",
       "Rootbound mischief knocked two posts over near the Mosswater ford. I've been filing incident reports for months.",
       "Midgaard treasury funds the oil. Kowloon provides the lamp glass in the north. We share the maintenance. That's the compact.",

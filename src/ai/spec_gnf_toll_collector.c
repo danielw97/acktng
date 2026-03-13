@@ -13,7 +13,7 @@ bool spec_gnf_toll_collector(CHAR_DATA *ch)
       "$n checks the seal on a cargo crate, comparing it against $s manifest sheet.",
       "$n stamps a travel permit with the bridge-crossing seal, adding it to a day's stack."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Passage tithe at this crossing: one measure salt, two iron nails, or one lamp oil flask. Relic rate. Set when the road was built.",
       "I maintain ledgers going back forty years at this post. The tithe records are the road's memory — everything passes, everything's counted.",
       "Sealed cargo gets a crossing but goes in the inspection queue. The fen charter is specific about undeclared goods.",

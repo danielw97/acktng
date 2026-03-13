@@ -13,7 +13,7 @@ bool spec_kowloon_sweeper(CHAR_DATA *ch)
       "$n sweeps around the base of a color-marked post, working methodically toward the curb.",
       "$n clears accumulated silt from a drain grate with the broom's edge, checking the flow."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Dawn sweep runs from first bell to Bronze Watch. Sector's mine from the courier crossing south to the flood terrace.",
       "The drainage has to stay clear. Flood season, one blocked grate backs up a whole district quadrant. Ask anyone who was here for the third monsoon.",
       "Six districts, twelve sweepers, one rotation schedule. The Magistracy posts it at the registry each month.",

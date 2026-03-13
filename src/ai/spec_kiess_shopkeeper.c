@@ -13,7 +13,7 @@ bool spec_kiess_shopkeeper(CHAR_DATA *ch)
       "$n checks the day's inventory list against the stock behind the counter.",
       "$n sets a fresh lamp on the counter for the afternoon trade hours."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Most of what you need for the frontier is right here. We stock for the road, not the shelf.",
       "Supply shipment came in yesterday — good selection at the moment. Won't last the week.",
       "The Exchange backs the quality of everything on this counter. Kiess doesn't traffic in inferior goods.",

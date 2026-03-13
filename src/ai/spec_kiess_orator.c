@@ -6,7 +6,7 @@
 
 bool spec_kiess_orator(CHAR_DATA *ch)
 {
-   static const char *speeches[] = {
+   static char *speeches[] = {
       "Evermeet was not destroyed in a single night. It was abandoned in a thousand small decisions. Kiess was built so those decisions cannot be made quietly.",
       "The Compact Flame has burned without interruption since the first foundation stone was laid. That continuity is deliberate. Watch it — it is doing something.",
       "Three factions, one peace code. Not because they agree — they rarely agree — but because the alternative is Evermeet. We have seen the alternative.",

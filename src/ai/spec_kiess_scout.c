@@ -13,7 +13,7 @@ bool spec_kiess_scout(CHAR_DATA *ch)
       "$n consults a compass bearing against $s posted route notes, making a small correction.",
       "$n oils the edge of $s blade with a cloth, eyes distant, working from ingrained habit."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "The mist line's moved another three hundred paces north since last week. That's fast for this season.",
       "Bell-post seven is down. Wall Command's rerouting the southern approach until it's back up.",
       "Saw centaur sign at the forest edge. Prints were fresh — probably overnight. Command's been told.",

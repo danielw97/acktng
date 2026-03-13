@@ -13,7 +13,7 @@ bool spec_kowloon_laborer(CHAR_DATA *ch)
       "$n drags a rope coil to a new position at the dock edge, moving with the weight-smart efficiency of long practice.",
       "$n tests a tie-down knot with a hard pull before stepping back, satisfied with the result."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Day-token says Coppersalt-route work today. That means the heavy haul from the Tide Gate wharf. Long shift.",
       "Syndic pay scale is set by cargo weight, not hours. You move fast, you earn. You move slow, you starve.",
       "Flood season they pay a hazard rate. You'd think that'd be worth celebrating, but it means the drainage channels are backing up.",

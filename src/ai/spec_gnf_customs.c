@@ -13,7 +13,7 @@ bool spec_gnf_customs(CHAR_DATA *ch)
       "$n updates the chalkboard behind $s post, erasing old tariff rates and chalking new ones.",
       "$n stamps a document with the northern customs seal, adding the day's date in precise script."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "All northbound manifests require dual marks: Midgaard wax and Kowloon thread-knot. That's the fifth article of the forest charter.",
       "Inspection wait time is posted on the board. Sealed diplomatic pouches go straight through. Livestock takes longest.",
       "Smuggling through the fen channels bypasses my post — not the Kowloon magistracy. Their reach is longer than mine.",

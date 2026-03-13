@@ -13,7 +13,7 @@ bool spec_rr_charter_keeper(CHAR_DATA *ch)
       "$n marks a slab number in a maintenance register, noting the date and condition.",
       "$n straightens from a finished slab and moves to the next, adjusting the pigment pot on $s belt."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Three eras of script on most of these slabs. The oldest predates Midgaard's current charter system by at least two centuries.",
       "The inscriptions are the road's legal memory. As long as they're legible, the charter is defensible in arbitration.",
       "Someone tried to chip off a slab last season. Probably a collector. The Magistrate Ledgerhouse treats it as property destruction.",

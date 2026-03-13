@@ -13,7 +13,7 @@ bool spec_laborer(CHAR_DATA *ch)
       "$n wipes sweat from $s face with a cloth that is not much cleaner than $s hands.",
       "$n studies the route board on the corner wall, tracing the chalk marks with a finger."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Token came late today. One bell late means shadow-class by the Registry clock. Makes no sense.",
       "Levy goes up, day-rate stays flat. Cinder debt, they call it — compounds whether you pay or not.",
       "Work-broker docked two coppers off my token for 'route variance.' I don't even know what that means.",

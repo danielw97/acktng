@@ -13,7 +13,7 @@ bool spec_kowloon_innkeeper(CHAR_DATA *ch)
       "$n notes a room key in the ledger with a careful hand, confirming the night's arrangement.",
       "$n wipes the counter with a cloth, keeping the workspace clear between transactions."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Southern quarter sees more faces than any district in the city. We don't ask where you've been, just how many nights.",
       "Rooms are by the night, meals extra. Warden patrol comes through twice a bell — you'll sleep undisturbed.",
       "If you're recall-safe and breathing, Kowloon will receive you. That's the city's oldest promise. We're just where you start.",

@@ -13,7 +13,7 @@ bool spec_kiess_innkeeper(CHAR_DATA *ch)
       "$n glances at the city map mural and points out a route to a newly arrived guest.",
       "$n sets a fresh lamp on the counter, adjusting the wick for the evening hours."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "First night in Kiess? The memorial plaque by the door has names — not to alarm you, but to remind you to come back.",
       "Roc Road is steady right now. Caravans in both directions. Good time to be traveling.",
       "The inn keeps a posted watch. You'll sleep undisturbed. City compact law holds inside these walls.",

@@ -13,7 +13,7 @@ bool spec_kowloon_magistracy(CHAR_DATA *ch)
       "$n consults a pocket copy of the Covenant Schedule, cross-referencing a statute by section number.",
       "$n makes a notation in $s field ledger after observing the square, expression professionally neutral."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Jade ribbon means the Magistracy audited the weights this season. No ribbon, no Concordat standing.",
       "The Schedule is public record. Any citizen can cite it in a dispute. Most people don't bother learning it, which is how most disputes happen.",
       "Gold lacquer on the doorframe means the merchant posted bond against fraud. It's not decoration — it's a legal instrument.",

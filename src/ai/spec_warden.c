@@ -13,7 +13,7 @@ bool spec_warden(CHAR_DATA *ch)
       "$n glances at a passing figure, then makes a brief notation in $s ledger.",
       "$n taps the checkpoint placard with one finger: 'Arcane materials — registry notation required.'"
    };
-   static const char *says[] = {
+   static char *says[] = {
       "All arcane goods require registry notation before this threshold. The Compact is clear.",
       "If you carry unregistered materials, declare them now. The ledger is open.",
       "The Compact protects you as much as the city, traveler. Documentation is not the enemy.",

@@ -13,7 +13,7 @@ bool spec_vendor(CHAR_DATA *ch)
       "$n calls out, 'Good leather out of the armorer quarter — don't pay shop prices for off-cuts!'",
       "$n waves at a passing pedestrian: 'Fair price, honest weight, Registry-notated goods, citizen!'"
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Tariff board raised the western-goods levy again. Prices have to reflect it, nothing personal.",
       "The Guild Concordat sets minimums, but we independent vendors set our own ceiling. Fair is fair.",
       "You want the Roc Road goods, you pay Roc Road prices. Simple arithmetic.",

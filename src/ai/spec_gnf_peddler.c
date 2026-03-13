@@ -13,7 +13,7 @@ bool spec_gnf_peddler(CHAR_DATA *ch)
       "$n shifts $s pack to the other shoulder, wincing at the familiar ache.",
       "$n calls out to a passing figure, offering a wave and a quick display of wares."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Northern resin from the Ironpine Rise is what moves. Wardens need it for sealing dispatches, healers for wounds.",
       "Ashfang trouble north of the Bends. I came down two days ago and heard raiding horns in the Ironpine. Travel cautious.",
       "Mire-clan trade works if you know their system. They don't want coin — they want iron nails, lamp oil, and salt.",

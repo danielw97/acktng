@@ -14,7 +14,7 @@ bool spec_gnf_road_warden(CHAR_DATA *ch)
       "$n pauses at a road drainage ditch and kicks a clump of leaf debris clear with a boot.",
       "$n taps a waystone twice with a knuckle — two taps for 'passage clear', the old road signal."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Road's open. Commission checked it this morning. Travel north with your documents visible.",
       "Split-pine badge means joint authority. Midgaard law south, Kowloon compact north, forest charter in between.",
       "If you see ash-painted faces off the road, don't engage. Signal any warden and move clear.",

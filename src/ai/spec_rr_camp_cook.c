@@ -13,7 +13,7 @@ bool spec_rr_camp_cook(CHAR_DATA *ch)
       "$n tastes a spoonful of the stew, makes a face, and reaches for the salt tin again.",
       "$n breaks a dry root vegetable in half and drops both pieces into the bubbling pot."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Stew's ready when the wardens come off rotation. Enough for the convoy crew too if they brought bowls.",
       "Root vegetables from the farmland stretch, dried meat from the last Kiess resupply. Hot and it won't give you the gripes.",
       "I've been cooking for road crews since before the last road tax revision. Long time to learn what keeps people moving.",
