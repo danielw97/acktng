@@ -120,18 +120,21 @@ make unit-test-fight        # build only
 
 ---
 
-## Integration Test
+## Integration Tests
 
-### Location
+Two integration tests cover the two connection paths the server supports.
+Both run automatically at the end of `make unit-tests`.
 
-`integration-test.sh` in the repo root.
+### WebSocket integration test
 
-### What It Does
+**Script:** `integration-test.sh`
+
+**Make target:** `make integration-test`
 
 1. **Builds** the server binary (`make ack`)
 2. **Starts** the server from `area/` on a random ephemeral port
 3. **Waits** up to 90 seconds for the TCP port to accept connections
-4. **Runs** a Python WebSocket client that walks the full new-player login flow:
+4. **Runs** a Python WebSocket client (HTTP upgrade → framed messages) that walks the full new-player login flow:
    - Name prompt → name confirmation
    - Password creation → retype password
    - Character creation: sex → race → class selection
@@ -139,22 +142,38 @@ make unit-test-fight        # build only
 5. **Monitors** the running server for 2 seconds checking for crashes
 6. **Shuts down** the server and cleans up
 
-Exit code 0 = pass; exit code 1 = any failure (build error, boot timeout, login failure, crash).
+### Telnet integration test
 
-### Running Manually
+**Script:** `integration-test-telnet.sh`
+
+**Make target:** `make integration-test-telnet`
+
+Identical flow to the WebSocket test, but connects via raw TCP (telnet) instead of WebSocket. The Python client:
+- Handles IAC negotiation sequences (declines all options with WONT/DONT)
+- Strips ANSI escape codes from received text
+- Sends commands with `\r\n` line endings
+
+Uses a different test player name (`Telnetrat`) from the WebSocket test (`Integrat`) so both can run in the same session without save-file conflicts.
+
+### Exit codes (both tests)
+
+- `0` — MUD booted, accepted a player login, and ran without crashing
+- `1` — build failed, MUD crashed, or login happy-path was not reached
+
+### Running manually
 
 ```sh
 cd /path/to/acktng
-./integration-test.sh
+./integration-test.sh          # WebSocket
+./integration-test-telnet.sh   # Telnet
 ```
 
-Or via make:
+Or via make (from `src/`):
 
 ```sh
-cd src && make integration-test
+make integration-test
+make integration-test-telnet
 ```
-
-The integration test runs automatically at the end of `make unit-tests`.
 
 ---
 

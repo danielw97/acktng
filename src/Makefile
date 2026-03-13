@@ -75,7 +75,7 @@ O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o a
 	  stance.o strfuns.o sysdata.o tables.o trigger.o update.o vampyre.o werewolf.o wizutil.o \
 	  write.o $(AI_SPEC_OBJS)
 
-.PHONY: all clean purge unit-tests integration-test web
+.PHONY: all clean purge unit-tests integration-test integration-test-telnet web
 
 all:
 	$(MAKE) clean
@@ -85,6 +85,9 @@ all:
 
 integration-test: ack
 	cd .. && ./integration-test.sh
+
+integration-test-telnet: ack
+	cd .. && ./integration-test-telnet.sh
 
 web:
 	$(MAKE) -C ../web
@@ -428,6 +431,7 @@ unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit
 	./tests/unit-test-item-generation
 	./tests/unit-test-interp
 	$(MAKE) integration-test
+	$(MAKE) integration-test-telnet
 
 
 crusade.unit-test.o: crusade.c
