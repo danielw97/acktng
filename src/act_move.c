@@ -359,6 +359,9 @@ void move_char(CHAR_DATA *ch, int door)
    }
    do_look(ch, "auto");
 
+   if (!IS_NPC(ch))
+      quest_room_notify(ch, ch->in_room);
+
    if (!IS_NPC(ch) && IS_VAMP(ch) && !IS_IMMORTAL(ch))
       check_vamp(ch); /* burn the vampire! */
    mprog_entry_trigger(ch);

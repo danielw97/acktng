@@ -725,6 +725,10 @@ struct quest_data
    int quest_reward_item_vnum;                 /* static item reward vnum      */
    int quest_reward_item_count;                /* static item reward quantity  */
    int quest_static_offerer_vnum;              /* required static turn-in mob  */
+   int quest_cartography_area_num;             /* type 4: target area number   */
+   int quest_cartography_room_count;           /* type 4: rooms to explore     */
+   int quest_cartography_explored_count;       /* type 4: rooms explored       */
+   unsigned char quest_cartography_bits[QUEST_CARTOGRAPHY_BYTES]; /* type 4 explored room bitmap */
 };
 
 struct pc_data
