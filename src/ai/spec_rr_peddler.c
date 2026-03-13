@@ -13,7 +13,7 @@ bool spec_rr_peddler(CHAR_DATA *ch)
       "$n shifts the handcart to the road verge as a convoy passes, then rattles back into position.",
       "$n counts coins from a belt pouch, rechecks the amount, and slides them back with practiced speed."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Three days from Midgaard, two to Kiess if the road's clear. I run it twice a month. Know every pothole.",
       "Best thing I carry? Waterproofing wax and spare lamp wicks. Every patrol warden needs them. Regular customers.",
       "Heard there's tollbreak trouble at the ford. I came the long way around. Add a day, keep my goods.",

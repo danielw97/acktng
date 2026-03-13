@@ -14,7 +14,7 @@ bool spec_rr_road_clerk(CHAR_DATA *ch)
       "$n squints at a wax tablet notation, scratches out an error, and rewrites it cleanly.",
       "$n affixes a notation slip to the tally-board with a copper tack, adding to layers of records."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Road funding is calculated from documented traffic counts. Every unmarked wagon is coin the charter never sees.",
       "The Ledger Watch requires three verification marks per day. I've already filed two. The third goes out at sundown.",
       "Midgaard's Magistrate Ledgerhouse receives monthly summaries. My daily tallies form the base data for road repair appropriations.",

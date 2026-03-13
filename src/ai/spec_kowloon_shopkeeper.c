@@ -13,7 +13,7 @@ bool spec_kowloon_shopkeeper(CHAR_DATA *ch)
       "$n straightens the display counter, aligning items with the precision of someone who measures by eye.",
       "$n reviews the day's inventory tally against stock, marking each confirmed item with a practiced stroke."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Everything on this counter is Ledgerhouse-cleared. Tariff paid, weights checked, ribbon current.",
       "My family's been selling on hooks since before these walls were built. Tables are for the new arrivals.",
       "The Guild Concordat sets our floor prices. I can't go below that — but I can throw in the wrap at no charge.",

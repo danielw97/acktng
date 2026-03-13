@@ -13,7 +13,7 @@ bool spec_rr_ruin_scavenger(CHAR_DATA *ch)
       "$n compares a rubbing against a reference sketch in $s field notebook, nodding at a match.",
       "$n sweeps debris from a section of ancient flagstone, revealing the worn relief beneath."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "The Granite Arcade in Midgaard pays for authenticated rubbings. Authenticated means I witnessed the inscription in place.",
       "This road bed has three layers underneath. The deepest layer predates everything with a name. I've found script nobody can read.",
       "Don't disturb the marked cairns further in. The ruin custodians react to that. I learned by watching someone else learn.",

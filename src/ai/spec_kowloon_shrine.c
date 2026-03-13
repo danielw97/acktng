@@ -13,7 +13,7 @@ bool spec_kowloon_shrine(CHAR_DATA *ch)
       "$n traces the carved dedication text with one finger, lips moving silently in memorization.",
       "$n places a fresh offering of pressed flowers at the shrine base, straightening the arrangement."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "First Oath: No ward unlit, no traveler uncounted. The Temple observes this at every shrine, whether or not the city does.",
       "Second Oath: No judgment hidden, no sentence unrecorded. We remind the city of what it promised, one shrine at a time.",
       "Third Oath: No levy taken that cannot be borne. The hardest one to keep. We hear the disputes — we don't resolve them, but we remember them.",

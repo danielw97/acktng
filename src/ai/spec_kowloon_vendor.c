@@ -13,7 +13,7 @@ bool spec_kowloon_vendor(CHAR_DATA *ch)
       "$n adjusts the charcoal bed with a long iron fork, managing the heat for the midday rush.",
       "$n wipes down the handcart's folding counter between orders, keeping the workspace clear."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Hot rice porridge, dried fish, pickled greens — delta standard since before the walls were built. Fills you up, won't slow you down.",
       "Bell Watch is the best time to buy. I knock down what's left before I move the cart east for the afternoon crowd.",
       "Market season's lighter this quarter. Caravan tariffs went up again — everything from the inland roads is priced higher now.",

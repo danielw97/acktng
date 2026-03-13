@@ -13,7 +13,7 @@ bool spec_gnf_joint_scout(CHAR_DATA *ch)
       "$n counts boot-prints on the soft shoulder of the road with careful attention.",
       "$n exchanges a quiet hand-signal with a fellow patrol as they pass."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Joint commission patrol means dual authority. I write to Midgaard's rangers and Kowloon's wardens both. One incident, two ledgers.",
       "Ashfang sign in the Ironpine Rise. Prints were a day old. We've notified both city commands. Standard protocol.",
       "The road's safe if you stay on it. The moment you step off to investigate something interesting, the risk calculates differently.",

@@ -13,7 +13,7 @@ bool spec_kiess_wall_officer(CHAR_DATA *ch)
       "$n initials the bottom of a stack of patrol reports and files them in the duty log.",
       "$n sends a courier off with a sealed dispatch, watching until they clear the corridor."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "East gate rotation is covered through Dusk Watch. North gate I want two sentries until the mist-line report comes in.",
       "Any scout returning from the northern verge reports to this office directly before the general debrief. Standing order.",
       "Wall Command doesn't guess at threat levels. We assess, we document, we act on evidence. That is the doctrine.",

@@ -14,7 +14,7 @@ bool spec_rr_convoy_marshal(CHAR_DATA *ch)
       "$n adjusts the compass-and-wall sash at $s chest and scans the road west with practiced efficiency.",
       "$n speaks through the brass speaking-trumpet, relaying convoy departure clearance down the line."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Convoy compact schedules run on the tide clock, not the sun. If you don't know the difference, don't drive for Kiess.",
       "I have wagons staged and escorts short. Until the escorts arrive, nothing moves. That is not negotiable.",
       "Midgaard charter authority ends at the boundary stone. West of there, convoy marshal clearance is the operative document.",

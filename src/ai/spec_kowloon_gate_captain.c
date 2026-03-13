@@ -13,7 +13,7 @@ bool spec_kowloon_gate_captain(CHAR_DATA *ch)
       "$n checks a courier's travel permit against the day's registered messengers, then waves them through.",
       "$n consults the rotation schedule posted on the gate wall, confirming the incoming shift timing."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "Seasonal rotation isn't tradition — it's policy. No one builds loyalty at a chokepoint. The Covenant was specific.",
       "Every departure logged, every arrival registered. If you're leaving through this gate, your name goes in the ledger.",
       "Corsair probes have been testing the eastern approaches. Tide Gate is watching for pattern timing. We share intelligence between posts.",

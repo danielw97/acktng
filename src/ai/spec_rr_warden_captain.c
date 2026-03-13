@@ -14,7 +14,7 @@ bool spec_rr_warden_captain(CHAR_DATA *ch)
       "$n speaks a quiet word with a junior warden, gesturing toward the road's western stretch.",
       "$n polishes the badge of rank on $s chest with a corner of the patrol cloak, force of long habit."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "This post covers the full charter march from the gate to the boundary stone. Three wardens per shift, rotating dawn and dusk.",
       "The Three Civic Oaths are not decoration. Every warden recites them at shift change. Every single shift.",
       "I've requisitioned repair crews for the drainage channel at the grain field crossing. The order is six weeks old. It's still pending.",

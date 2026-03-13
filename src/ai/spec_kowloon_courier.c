@@ -13,7 +13,7 @@ bool spec_kowloon_courier(CHAR_DATA *ch)
       "$n records a delivery confirmation in a small field ledger, then stows it without pausing stride.",
       "$n scans a bulletin board at the junction corner, checking for priority rerouting notices."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "The badge gets you through any gate at any hour. You'd be surprised how useful that is at second bell.",
       "CLO runs the census, the post, the recall registry, and the relay stations. We count everyone inside these walls.",
       "I know every shortcut between here and the Jade Gate. You need fast delivery anywhere in this city, come to us.",

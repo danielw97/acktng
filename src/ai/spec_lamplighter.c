@@ -14,7 +14,7 @@ bool spec_lamplighter(CHAR_DATA *ch)
       "$n consults a worn route card from $s coat pocket, muttering a count of posts.",
       "$n refills a lamp from one of the oil flasks on $s shoulder satchel."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "No ward unlit, no traveler uncounted — that's the Oath, and that's the work.",
       "Kindling Watch runs till the Ledger bells. All posts on this lamp-line are checked.",
       "You see a dark corner in this city, report it to the Lantern Registry. I'll have it lit by Ash Watch.",

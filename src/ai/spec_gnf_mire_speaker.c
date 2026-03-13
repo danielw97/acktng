@@ -13,7 +13,7 @@ bool spec_gnf_mire_speaker(CHAR_DATA *ch)
       "$n watches a distant heron with concentrated attention, reading something in its slow movement.",
       "$n splices two sections of woven reed cord together with quick, sure movements."
    };
-   static const char *says[] = {
+   static char *says[] = {
       "The black channels here run east-west. Follow a heron going south and you'll find a ford. That's old fen-reading.",
       "Quickmud shows white at the edge before it swallows. Step only where the reeds grow double-thick.",
       "Fever-bark grows on the north side of the hummocks. Two inches of bark soaked overnight. Mire-Speakers have used it for three generations.",
