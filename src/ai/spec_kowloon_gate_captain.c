@@ -58,27 +58,32 @@ bool spec_kowloon_gate_captain(CHAR_DATA *ch)
       }
    }
 
-   /* Level-based area hints */
-   for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+   /* Level-based area hints: random pick from eligible zones */
    {
-      if (IS_NPC(plr) || plr->pcdata == NULL)
-         continue;
-
-      /* Gloamvault hint for low-level players */
-      if (plr->level >= 5 && plr->level <= 20
-         && !plr->pcdata->completed_static_quests[54]  /* Quest 55: Gloamvault threshold audit */
-         && !plr->pcdata->completed_static_quests[66]) /* Quest 67: Gloamvault cartography */
+      CHAR_DATA *hint_plr = NULL;
+      for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
       {
-         do_say(ch, "First posting in the region? The Gloamvault northwest of Kiess is where most field-capable travelers test themselves before pushing into the northern forest. Gate registry shows a lot of departures in that direction at your range.");
-         return FALSE;
+         if (!IS_NPC(plr) && plr->pcdata != NULL)
+         {
+            hint_plr = plr;
+            break;
+         }
       }
-
-      /* Sepulcher Pasture hint for mid-level players */
-      if (plr->level >= 15 && plr->level <= 30
-         && !plr->pcdata->completed_static_quests[68]) /* Quest 69: Sepulcher Pasture cartography */
+      if (hint_plr != NULL)
       {
-         do_say(ch, "Heading east? Sepulcher Pasture is past the crossroads. We log departures in that direction — it's active territory, burial cult remnants, bone-work. The registry shows returns from travelers in your range. Proceed with documentation current.");
-         return FALSE;
+         const char *hints[5];
+         int hint_count = 0;
+         int lv = hint_plr->level;
+         if (lv >= 5  && lv <= 20) hints[hint_count++] = "First posting in the region? The Gloamvault northwest of Kiess is where most field-capable travelers test themselves before pushing into the northern forest. Gate registry shows a lot of departures in that direction at your range.";
+         if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs come up in outbound travel declarations — undead vault complex, multi-level. Gate registry logs departures in that direction for operatives past their initial field range.";
+         if (lv >= 15 && lv <= 30) hints[hint_count++] = "Heading east? Sepulcher Pasture is past the crossroads. We log departures in that direction — it's active territory, burial cult remnants, bone-work. The registry shows returns from travelers in your range. Proceed with documentation current.";
+         if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse is on our extended threat registration list. Eclipse cult site — operatives clearing it tend to log significant engagement before departure. The registry shows returns from your level tier.";
+         if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire departures require an extended absence declaration at the registry — shadow construct territory, deep engagement expected. Gate records show it draws experienced operatives. Log your departure if you're heading there.";
+         if (hint_count > 0)
+         {
+            do_say(ch, hints[number_range(0, hint_count - 1)]);
+            return FALSE;
+         }
       }
    }
 

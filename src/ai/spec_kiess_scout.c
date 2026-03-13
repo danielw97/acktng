@@ -76,27 +76,32 @@ bool spec_kiess_scout(CHAR_DATA *ch)
       }
    }
 
-   /* Level-based area hints for players who haven't explored nearby zones yet */
-   for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+   /* Level-based area hints: random pick from eligible zones */
    {
-      if (IS_NPC(plr) || plr->pcdata == NULL)
-         continue;
-
-      /* Gloamvault hint for low-level players who haven't done Gloamvault quests */
-      if (plr->level >= 5 && plr->level <= 20
-         && !plr->pcdata->completed_static_quests[54]  /* Quest 55: Gloamvault threshold audit */
-         && !plr->pcdata->completed_static_quests[66]) /* Quest 67: Gloamvault cartography */
+      CHAR_DATA *hint_plr = NULL;
+      for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
       {
-         do_say(ch, "You look like you're still finding your range. The Gloamvault northwest of the city is worth a run — old cult structure, cult remnants still active. Good first dungeon if you're at that level of capability.");
-         return FALSE;
+         if (!IS_NPC(plr) && plr->pcdata != NULL)
+         {
+            hint_plr = plr;
+            break;
+         }
       }
-
-      /* Sepulcher Pasture hint for mid-level players */
-      if (plr->level >= 15 && plr->level <= 30
-         && !plr->pcdata->completed_static_quests[68]) /* Quest 69: Sepulcher Pasture cartography */
+      if (hint_plr != NULL)
       {
-         do_say(ch, "Sepulcher Pasture is east of the crossroads — burial cult territory, bone-remnant activity. If you're operating in that level range, it's solid field work. Not my jurisdiction, but worth noting on your map.");
-         return FALSE;
+         const char *hints[5];
+         int hint_count = 0;
+         int lv = hint_plr->level;
+         if (lv >= 5  && lv <= 20) hints[hint_count++] = "You look like you're still finding your range. The Gloamvault northwest of the city is worth a run — old cult structure, cult remnants still active. Good first dungeon if you're at that level of capability.";
+         if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs are worth charting if you're past your first postings. Undead concentration, layered vault structure — harder than the Gloamvault but a logical next step.";
+         if (lv >= 15 && lv <= 30) hints[hint_count++] = "Sepulcher Pasture is east of the crossroads — burial cult territory, bone-remnant activity. If you're operating in that level range, it's solid field work. Not my jurisdiction, but worth noting on your map.";
+         if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse is high-threat sacred architecture — eclipse cult remnants, relic guardians. Field scouts who've been through it tend to be careful about what they touch in there.";
+         if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire is marked on the northern threat registry. Shadow-binding constructs, layered void elements. Only approach it if you're confident in your range.";
+         if (hint_count > 0)
+         {
+            do_say(ch, hints[number_range(0, hint_count - 1)]);
+            return FALSE;
+         }
       }
    }
 

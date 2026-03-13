@@ -33,27 +33,32 @@ bool spec_kiess_innkeeper(CHAR_DATA *ch)
    if (number_bits(3) != 0)
       return FALSE;
 
-   /* Level-based area hints for guests at appropriate experience levels */
-   for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+   /* Level-based area hints: random pick from eligible zones */
    {
-      if (IS_NPC(plr) || plr->pcdata == NULL)
-         continue;
-
-      /* Gloamvault hint for newer adventurers */
-      if (plr->level >= 5 && plr->level <= 15
-         && !plr->pcdata->completed_static_quests[54]  /* Quest 55: Gloamvault threshold audit */
-         && !plr->pcdata->completed_static_quests[66]) /* Quest 67: Gloamvault cartography */
+      CHAR_DATA *hint_plr = NULL;
+      for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
       {
-         do_say(ch, "If you haven't been to the Gloamvault yet, it's worth the walk. Northwest of the city — old cult ruin, dangerous enough to matter. Good place to calibrate yourself before heading to the forest.");
-         return FALSE;
+         if (!IS_NPC(plr) && plr->pcdata != NULL)
+         {
+            hint_plr = plr;
+            break;
+         }
       }
-
-      /* Sepulcher Pasture hint for mid-level adventurers */
-      if (plr->level >= 15 && plr->level <= 28
-         && !plr->pcdata->completed_static_quests[68]) /* Quest 69: Sepulcher Pasture cartography */
+      if (hint_plr != NULL)
       {
-         do_say(ch, "Heading out east? Sepulcher Pasture is past the crossroads — burial ground territory. Guests who've made the run say it's difficult but worthwhile if you're in the right range for it.");
-         return FALSE;
+         const char *hints[5];
+         int hint_count = 0;
+         int lv = hint_plr->level;
+         if (lv >= 5  && lv <= 20) hints[hint_count++] = "If you haven't been to the Gloamvault yet, it's worth the walk. Northwest of the city — old cult ruin, dangerous enough to matter. Good place to calibrate yourself before heading to the forest.";
+         if (lv >= 10 && lv <= 25) hints[hint_count++] = "Had a guest through last month who'd just come back from the Nightfall Catacombs. Said it was dark work — undead, vault traps, layered down. Appropriate for someone who's already done the Gloamvault run.";
+         if (lv >= 15 && lv <= 30) hints[hint_count++] = "Heading out east? Sepulcher Pasture is past the crossroads — burial ground territory. Guests who've made the run say it's difficult but worthwhile if you're in the right range for it.";
+         if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse comes up in traveler conversation sometimes. Eclipse-cult site, relic guardians. Guests who've been through it tend to need a full night's rest afterward.";
+         if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire isn't a name I hear often, but the guests who mention it are always the experienced ones. Shadow-bound structure, deep void elements. Not for someone who hasn't done serious dungeon work.";
+         if (hint_count > 0)
+         {
+            do_say(ch, hints[number_range(0, hint_count - 1)]);
+            return FALSE;
+         }
       }
    }
 

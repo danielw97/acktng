@@ -80,27 +80,32 @@ bool spec_gnf_road_warden(CHAR_DATA *ch)
          }
       }
 
-      /* Level-based area hints */
-      for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+      /* Level-based area hints: random pick from eligible zones */
       {
-         if (IS_NPC(plr) || plr->pcdata == NULL)
-            continue;
-
-         /* Gloamvault hint for low-level players */
-         if (plr->level >= 5 && plr->level <= 20
-            && !plr->pcdata->completed_static_quests[54]  /* Quest 55: Gloamvault threshold audit */
-            && !plr->pcdata->completed_static_quests[66]) /* Quest 67: Gloamvault cartography */
+         CHAR_DATA *hint_plr = NULL;
+         for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
          {
-            do_say(ch, "Not up to forest-level work yet? The Gloamvault north of Kiess is where most travelers find their range before hitting the main road. Cult ruin, manageable scope. Start there.");
-            return FALSE;
+            if (!IS_NPC(plr) && plr->pcdata != NULL)
+            {
+               hint_plr = plr;
+               break;
+            }
          }
-
-         /* Sepulcher Pasture hint for mid-level players */
-         if (plr->level >= 15 && plr->level <= 30
-            && !plr->pcdata->completed_static_quests[68]) /* Quest 69: Sepulcher Pasture cartography */
+         if (hint_plr != NULL)
          {
-            do_say(ch, "Sepulcher Pasture is east of the crossroads — off our patrol jurisdiction, but the commission cross-files data from there. Burial cult territory, bone activity. Worth your time if you're ready for mid-range work.");
-            return FALSE;
+            const char *hints[5];
+            int hint_count = 0;
+            int lv = hint_plr->level;
+            if (lv >= 5  && lv <= 20) hints[hint_count++] = "Not up to forest-level work yet? The Gloamvault north of Kiess is where most travelers find their range before hitting the main road. Cult ruin, manageable scope. Start there.";
+            if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs are off the road commission's direct jurisdiction — undead vault complex, multi-layer structure. Commission logs departures in that direction from travelers past their early postings.";
+            if (lv >= 15 && lv <= 30) hints[hint_count++] = "Sepulcher Pasture is east of the crossroads — off our patrol jurisdiction, but the commission cross-files data from there. Burial cult territory, bone activity. Worth your time if you're ready for mid-range work.";
+            if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse sits outside road commission jurisdiction but gets noted in the extended threat registry — eclipse cult site, relic guardians. Operatives at your range tend to log it before moving on to heavier work.";
+            if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire is on the commission's long-range threat list — shadow constructs, void-alignment. Road wardens don't patrol near it, but we track reports from field operatives who do. High-capability territory.";
+            if (hint_count > 0)
+            {
+               do_say(ch, hints[number_range(0, hint_count - 1)]);
+               return FALSE;
+            }
          }
       }
 

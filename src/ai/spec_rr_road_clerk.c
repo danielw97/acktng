@@ -59,27 +59,32 @@ bool spec_rr_road_clerk(CHAR_DATA *ch)
       }
    }
 
-   /* Level-based area hints */
-   for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+   /* Level-based area hints: random pick from eligible zones */
    {
-      if (IS_NPC(plr) || plr->pcdata == NULL)
-         continue;
-
-      /* Gloamvault hint for low-level players */
-      if (plr->level >= 5 && plr->level <= 20
-         && !plr->pcdata->completed_static_quests[54]  /* Quest 55: Gloamvault threshold audit */
-         && !plr->pcdata->completed_static_quests[66]) /* Quest 67: Gloamvault cartography */
+      CHAR_DATA *hint_plr = NULL;
+      for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
       {
-         do_say(ch, "New to the road? Travelers who log Gloamvault as a prior destination tend to show up on the census in better shape than those who don't. Northwest of Kiess — old cult ruin, good first field posting.");
-         return FALSE;
+         if (!IS_NPC(plr) && plr->pcdata != NULL)
+         {
+            hint_plr = plr;
+            break;
+         }
       }
-
-      /* Sepulcher Pasture hint for mid-level players */
-      if (plr->level >= 15 && plr->level <= 30
-         && !plr->pcdata->completed_static_quests[68]) /* Quest 69: Sepulcher Pasture cartography */
+      if (hint_plr != NULL)
       {
-         do_say(ch, "Sepulcher Pasture sees regular traveler traffic in your range. East of the crossroads, past the banner hills. Make sure your census entry is current before you head out — I note the returns.");
-         return FALSE;
+         const char *hints[5];
+         int hint_count = 0;
+         int lv = hint_plr->level;
+         if (lv >= 5  && lv <= 20) hints[hint_count++] = "New to the road? Travelers who log Gloamvault as a prior destination tend to show up on the census in better shape than those who don't. Northwest of Kiess — old cult ruin, good first field posting.";
+         if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs show up in traveler declaration forms — undead concentration, vault access. Census records show returns from operatives past their initial field range. Worth noting on your route card.";
+         if (lv >= 15 && lv <= 30) hints[hint_count++] = "Sepulcher Pasture sees regular traveler traffic in your range. East of the crossroads, past the banner hills. Make sure your census entry is current before you head out — I note the returns.";
+         if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse shows up in the extended departure declarations — eclipse cult site, relic guardians on approach. Census logs show returns from operatives in your capability range.";
+         if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire departures require an extended declaration in the census record — shadow construct territory, void alignment. The data shows experienced operatives making that run. Document your departure if you're heading there.";
+         if (hint_count > 0)
+         {
+            do_say(ch, hints[number_range(0, hint_count - 1)]);
+            return FALSE;
+         }
       }
    }
 

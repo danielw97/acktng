@@ -67,27 +67,32 @@ bool spec_kiess_wall_officer(CHAR_DATA *ch)
       }
    }
 
-   /* Level-based area hints */
-   for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+   /* Level-based area hints: random pick from eligible zones */
    {
-      if (IS_NPC(plr) || plr->pcdata == NULL)
-         continue;
-
-      /* Gloamvault hint for low-level players */
-      if (plr->level >= 5 && plr->level <= 20
-         && !plr->pcdata->completed_static_quests[54]  /* Quest 55: Gloamvault threshold audit */
-         && !plr->pcdata->completed_static_quests[66]) /* Quest 67: Gloamvault cartography */
+      CHAR_DATA *hint_plr = NULL;
+      for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
       {
-         do_say(ch, "If you're not yet ready for the northern forest, the Gloamvault is worth your attention first. Cult ruins northwest of the city — active threats, manageable scale. Good assessment ground.");
-         return FALSE;
+         if (!IS_NPC(plr) && plr->pcdata != NULL)
+         {
+            hint_plr = plr;
+            break;
+         }
       }
-
-      /* Sepulcher Pasture hint for mid-level players */
-      if (plr->level >= 15 && plr->level <= 30
-         && !plr->pcdata->completed_static_quests[68]) /* Quest 69: Sepulcher Pasture cartography */
+      if (hint_plr != NULL)
       {
-         do_say(ch, "Sepulcher Pasture is outside our direct jurisdiction, but Wall Command tracks it. Bone-remnant activity, burial cult residue — mid-range threat profile. East of the crossroads if you're ready for that work.");
-         return FALSE;
+         const char *hints[5];
+         int hint_count = 0;
+         int lv = hint_plr->level;
+         if (lv >= 5  && lv <= 20) hints[hint_count++] = "If you're not yet ready for the northern forest, the Gloamvault is worth your attention first. Cult ruins northwest of the city — active threats, manageable scale. Good assessment ground.";
+         if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs are on Wall Command's secondary threat assessment list. Undead-held vault complex — not our jurisdiction, but we cross-file reports. Worth your time if you've outgrown the Gloamvault.";
+         if (lv >= 15 && lv <= 30) hints[hint_count++] = "Sepulcher Pasture is outside our direct jurisdiction, but Wall Command tracks it. Bone-remnant activity, burial cult residue — mid-range threat profile. East of the crossroads if you're ready for that work.";
+         if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse is an eclipse-cult site — Wall Command has filed reports from field operatives who cleared sections of it. High threat, sacred architecture, relic guardians. Worth investigating if you're at that tier.";
+         if (lv >= 25 && lv <= 40) hints[hint_count++] = "The Umbra Heartspire is on our long-range threat registry. Shadow-aligned construction, void-bound defenders. Recommend you have solid field experience before approaching it.";
+         if (hint_count > 0)
+         {
+            do_say(ch, hints[number_range(0, hint_count - 1)]);
+            return FALSE;
+         }
       }
    }
 

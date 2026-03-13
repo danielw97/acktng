@@ -79,27 +79,32 @@ bool spec_gnf_joint_scout(CHAR_DATA *ch)
          }
       }
 
-      /* Level-based area hints */
-      for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+      /* Level-based area hints: random pick from eligible zones */
       {
-         if (IS_NPC(plr) || plr->pcdata == NULL)
-            continue;
-
-         /* Gloamvault hint for low-level players */
-         if (plr->level >= 5 && plr->level <= 20
-            && !plr->pcdata->completed_static_quests[54]  /* Quest 55: Gloamvault threshold audit */
-            && !plr->pcdata->completed_static_quests[66]) /* Quest 67: Gloamvault cartography */
+         CHAR_DATA *hint_plr = NULL;
+         for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
          {
-            do_say(ch, "Not ready for the forest yet? The Gloamvault northwest of Kiess is where commission scouts calibrate before rotating into the main patrol area. Cult structure, limited footprint — good orientation ground.");
-            return FALSE;
+            if (!IS_NPC(plr) && plr->pcdata != NULL)
+            {
+               hint_plr = plr;
+               break;
+            }
          }
-
-         /* Sepulcher Pasture hint for mid-level players */
-         if (plr->level >= 15 && plr->level <= 30
-            && !plr->pcdata->completed_static_quests[68]) /* Quest 69: Sepulcher Pasture cartography */
+         if (hint_plr != NULL)
          {
-            do_say(ch, "Sepulcher Pasture sits east of the crossroads — outside the forest commission jurisdiction, but we cross-file threat data. Bone-remnant activity, burial cult. Good field experience if you're in that range.");
-            return FALSE;
+            const char *hints[5];
+            int hint_count = 0;
+            int lv = hint_plr->level;
+            if (lv >= 5  && lv <= 20) hints[hint_count++] = "Not ready for the forest yet? The Gloamvault northwest of Kiess is where commission scouts calibrate before rotating into the main patrol area. Cult structure, limited footprint — good orientation ground.";
+            if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs are off the commission's direct patrol zone, but we cross-file reports — undead vault complex, layered structure. Commission scouts who've run it say it's a solid step up from the Gloamvault.";
+            if (lv >= 15 && lv <= 30) hints[hint_count++] = "Sepulcher Pasture sits east of the crossroads — outside the forest commission jurisdiction, but we cross-file threat data. Bone-remnant activity, burial cult. Good field experience if you're in that range.";
+            if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse is logged in commission records as a high-threat sacred site. Eclipse cult construction, relic guardians. Commission doesn't patrol it, but we track reports from operatives who do.";
+            if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire is at the edge of the commission's eastern cross-file range — shadow alignment, void constructs. Commission assessment marks it as upper-tier field work. Check your capabilities before approaching.";
+            if (hint_count > 0)
+            {
+               do_say(ch, hints[number_range(0, hint_count - 1)]);
+               return FALSE;
+            }
          }
       }
 

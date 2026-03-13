@@ -67,27 +67,32 @@ bool spec_kowloon_courier(CHAR_DATA *ch)
       }
    }
 
-   /* Level-based area hints */
-   for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+   /* Level-based area hints: random pick from eligible zones */
    {
-      if (IS_NPC(plr) || plr->pcdata == NULL)
-         continue;
-
-      /* Gloamvault hint for low-level players */
-      if (plr->level >= 5 && plr->level <= 20
-         && !plr->pcdata->completed_static_quests[54]  /* Quest 55: Gloamvault threshold audit */
-         && !plr->pcdata->completed_static_quests[66]) /* Quest 67: Gloamvault cartography */
+      CHAR_DATA *hint_plr = NULL;
+      for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
       {
-         do_say(ch, "If you're still building your field experience, the Gloamvault northwest of Kiess runs on our secondary circuit. Cult structure — CLO doesn't post couriers inside, but we know the perimeter. Worth your time at that level.");
-         return FALSE;
+         if (!IS_NPC(plr) && plr->pcdata != NULL)
+         {
+            hint_plr = plr;
+            break;
+         }
       }
-
-      /* Sepulcher Pasture hint for mid-level players */
-      if (plr->level >= 15 && plr->level <= 30
-         && !plr->pcdata->completed_static_quests[68]) /* Quest 69: Sepulcher Pasture cartography */
+      if (hint_plr != NULL)
       {
-         do_say(ch, "Sepulcher Pasture is east of the crossroads, on the far side of the banner hills. CLO routes couriers around it — burial cult territory, bone-remnant activity. Worth charting if you're capable of handling what's in there.");
-         return FALSE;
+         const char *hints[5];
+         int hint_count = 0;
+         int lv = hint_plr->level;
+         if (lv >= 5  && lv <= 20) hints[hint_count++] = "If you're still building your field experience, the Gloamvault northwest of Kiess runs on our secondary circuit. Cult structure — CLO doesn't post couriers inside, but we know the perimeter. Worth your time at that level.";
+         if (lv >= 10 && lv <= 25) hints[hint_count++] = "The Nightfall Catacombs show up in our routing notes as a restricted zone — CLO routes around it. Undead concentration, multi-level vault. If you're capable of clearing such things, it's worth charting.";
+         if (lv >= 15 && lv <= 30) hints[hint_count++] = "Sepulcher Pasture is east of the crossroads, on the far side of the banner hills. CLO routes couriers around it — burial cult territory, bone-remnant activity. Worth charting if you're capable of handling what's in there.";
+         if (lv >= 20 && lv <= 35) hints[hint_count++] = "The Cathedral of the Violet Eclipse is marked as a relay detour on the western circuit — eclipse cult site, relic guardians on every approach. CLO avoids it, but field operatives at your level might want to investigate.";
+         if (lv >= 25 && lv <= 40) hints[hint_count++] = "Umbra Heartspire sits at the edge of the CLO routing zone — shadow construct territory, too unpredictable for courier paths. High-capability field work if you're ready for that kind of engagement.";
+         if (hint_count > 0)
+         {
+            do_say(ch, hints[number_range(0, hint_count - 1)]);
+            return FALSE;
+         }
       }
    }
 
