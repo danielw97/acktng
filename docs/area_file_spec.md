@@ -11,7 +11,7 @@ Recognized section names (saver order shown):
 - `#AREA`
 - `#ROOMS`
 - `#MOBILES`
-- `#MOBPROGS`
+- `#SCRIPTS`
 - `#OBJECTS`
 - `#SHOPS`
 - `#RESETS`
@@ -123,12 +123,12 @@ Parsing stops when the next `#` section header is encountered.
 
 Mobile section details were extracted to [docs/mob_spec.md](mob_spec.md).
 
-## 6) `#MOBPROGS` section
+## 6) `#SCRIPTS` section
 
-External mobprog file bindings, terminated by `S`:
+External script file bindings, terminated by `S`:
 
 ```text
-#MOBPROGS
+#SCRIPTS
 M <mob_vnum> <filename>
 ...
 S
@@ -343,7 +343,7 @@ For all content types (`#MOBILES`, `#ROOMS`, and `#OBJECTS`), vnums must be assi
 1. `#AREA`
 2. `#ROOMS`
 3. `#MOBILES`
-4. `#MOBPROGS`
+4. `#SCRIPTS`
 5. `#OBJECTS`
 6. `#SHOPS`
 7. `#RESETS`

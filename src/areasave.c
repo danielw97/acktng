@@ -50,7 +50,7 @@
 #define BUILD_SEC_AREA 1
 #define BUILD_SEC_ROOMS 2
 #define BUILD_SEC_MOBILES 3
-#define BUILD_SEC_MOBPROGS 4
+#define BUILD_SEC_SCRIPTS 4
 #define BUILD_SEC_OBJECTS 5
 #define BUILD_SEC_SHOPS 6
 #define BUILD_SEC_RESETS 7
@@ -87,7 +87,7 @@ int AreasModified = 0;
 /* void build_save(); proto in merc.h */
 void build_save_area(void);
 void build_save_mobs(void);
-void build_save_mobprogs(void);
+void build_save_scripts(void);
 void build_save_objects(void);
 void build_save_rooms(void);
 void build_save_shops(void);
@@ -212,8 +212,8 @@ void build_save()
       case BUILD_SEC_MOBILES:
          build_save_mobs();
          break;
-      case BUILD_SEC_MOBPROGS:
-         build_save_mobprogs();
+      case BUILD_SEC_SCRIPTS:
+         build_save_scripts();
          break;
       case BUILD_SEC_OBJECTS:
          build_save_objects();
@@ -359,22 +359,22 @@ void build_save_mobs()
    return;
 }
 
-void build_save_mobprogs()
+void build_save_scripts()
 {
    MOB_INDEX_DATA *pMobIndex;
-   MOBPROG_ITEM *pItem;
+   SCRIPT_ITEM *pItem;
 
    if (Pointer == NULL) /* Start */
    {
-      if (CurSaveArea->first_area_mobprog == NULL)
+      if (CurSaveArea->first_area_script == NULL)
       {
          Section++;
          return;
       }
-      send_to_char("Saving mobprogs.\n", CurSaveChar);
-      fprintf(SaveFile, "#MOBPROGS\n");
+      send_to_char("Saving scripts.\n", CurSaveChar);
+      fprintf(SaveFile, "#SCRIPTS\n");
 
-      Pointer = CurSaveArea->first_area_mobprog;
+      Pointer = CurSaveArea->first_area_script;
    }
 
    pItem = Pointer->data;

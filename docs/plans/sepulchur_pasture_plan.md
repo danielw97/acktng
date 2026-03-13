@@ -79,7 +79,7 @@ This plan fully replaces the current repetitive lane-grid presentation with a co
 46. If a door is reset to `locked` via `D` state `2`, `<key_vnum>` must be set to a valid key object vnum (not `-1`), and that key object must exist in `#OBJECTS`.
 
 ### Section Order
-47. Follow canonical saver order: `#AREA`, `#ROOMS`, `#MOBILES`, `#MOBPROGS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
+47. Follow canonical saver order: `#AREA`, `#ROOMS`, `#MOBILES`, `#SCRIPTS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
 
 ### Specials Policy
 48. Mob specials beginning with `spec_summon_` must never be set in area files (runtime-only).

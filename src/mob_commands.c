@@ -26,7 +26,7 @@
  ***************************************************************************/
 
 /***************************************************************************
- *  The MOBprograms have been contributed by N'Atas-ha.  Any support for   *
+ *  The program scripts have been contributed by N'Atas-ha.  Any support for   *
  *  these routines should not be expected from Merc Industries.  However,  *
  *  under no circumstances should the blame for bugs, etc be placed on     *
  *  Merc Industries.  They are not guaranteed to work on all systems due   *
@@ -88,7 +88,7 @@ char *mprog_type_to_name(int type)
 
 /* A trivial rehack of do_mstat.  This doesnt show all the data, but just
  * enough to identify the mob and give its basic condition.  It does however,
- * show the MOBprograms which are set.
+ * show the program scripts which are set.
  */
 
 void do_mpstat(CHAR_DATA *ch, char *argument)
@@ -102,7 +102,7 @@ void do_mpstat(CHAR_DATA *ch, char *argument)
 
    if (arg[0] == '\0')
    {
-      send_to_char("MobProg stat whom?\n\r", ch);
+      send_to_char("Script stat whom?\n\r", ch);
       return;
    }
 
@@ -469,7 +469,7 @@ void do_mpoload(CHAR_DATA *ch, char *argument)
 
 /* lets the mobile purge all objects and other npcs in the room,
    or purge a specified object or mob in the room.  It can purge
-   itself, but this had best be the last command in the MOBprogram
+   itself, but this had best be the last command in the program
    otherwise ugly stuff will happen */
 
 void do_mppurge(CHAR_DATA *ch, char *argument)

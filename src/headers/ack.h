@@ -529,9 +529,9 @@ struct mob_index_data
    sh_int damsizedice;      /* Unused */
    sh_int damplus;          /* Unused */
    int gold;                /* Unused */
-   MPROG_DATA *first_mprog; /* Used by MOBprogram   */
+   MPROG_DATA *first_mprog; /* Used by program   */
    MPROG_DATA *last_mprog;
-   int progtypes; /* Used by MOBprogram   */
+   int progtypes; /* Used by program   */
    int skills;    /* skill flags       */
    int power_skills;
    int cast; /* casting flags  */
@@ -679,9 +679,9 @@ struct char_data
    sh_int wimpy;
    int deaf;
    sh_int cooldown[MAX_SKILL];
-   MPROG_ACT_LIST *first_mpact; /* Used by MOBprogram */
+   MPROG_ACT_LIST *first_mpact; /* Used by program */
    MPROG_ACT_LIST *last_mpact;
-   int mpactnum; /* Used by MOBprogram */
+   int mpactnum; /* Used by program */
    int skills;   /* Used for MOBs */
    int cast;
    int def;
@@ -828,7 +828,7 @@ struct pc_data
 
 
 /*
- * MOBprogram block
+ * program block
  */
 
 struct mob_prog_act_list
@@ -1140,8 +1140,8 @@ struct area_data
    BUILD_DATA_LIST *last_area_object;
    BUILD_DATA_LIST *first_area_mobile;
    BUILD_DATA_LIST *last_area_mobile;
-   BUILD_DATA_LIST *first_area_mobprog;
-   BUILD_DATA_LIST *last_area_mobprog;
+   BUILD_DATA_LIST *first_area_script;
+   BUILD_DATA_LIST *last_area_script;
    BUILD_DATA_LIST *first_area_shop;
    BUILD_DATA_LIST *last_area_shop;
    BUILD_DATA_LIST *first_area_specfunc;
@@ -1211,7 +1211,7 @@ struct build_data_list /* Used for storing area file data. */
    void *data;
 };
 
-struct mobprog_item /* For re-creating #MOBPROGS section */
+struct script_item /* For re-creating #SCRIPTS section */
 {
    MOB_INDEX_DATA *mob;
    char *filename;

@@ -104,7 +104,7 @@ See `rocroad_lore.md` for the full narrative canon extraction and expansion.
 46. `#RESETS` must not contain blank lines.
 
 ### Section Order
-47. Follow canonical saver order: `#AREA`, `#ROOMS`, `#MOBILES`, `#MOBPROGS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
+47. Follow canonical saver order: `#AREA`, `#ROOMS`, `#MOBILES`, `#SCRIPTS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
 
 ### Specials Policy
 48. Mob specials beginning with `spec_summon_` must never be set in area files (runtime-only).

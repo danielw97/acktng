@@ -812,7 +812,7 @@ const struct cmd_type cmd_table[] = {
      C_TYPE_ACTION, C_SHOW_SKILL},
 
     /*
-     * MOBprogram commands.
+     * program commands.
      */
 
     {"mpasound", do_mpasound, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
@@ -1227,7 +1227,7 @@ bool IS_SWITCHED(CHAR_DATA *ch)
    return TRUE;
 }
 
-bool MP_Commands(CHAR_DATA *ch) /* Can MOBProged mobs
+bool MP_Commands(CHAR_DATA *ch) /* Can scripted mobs
                                  * use mpcommands? TRUE if yes.
                                  * - Kahn */
 {

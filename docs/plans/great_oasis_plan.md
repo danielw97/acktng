@@ -592,7 +592,7 @@ Per `area_file_spec.md` section 14, the final `.are` file should emit sections i
 1. `#AREA`
 2. `#ROOMS`
 3. `#MOBILES`
-4. `#MOBPROGS` (if any inline mobprogs are used)
+4. `#SCRIPTS` (if any inline scripts are used)
 5. `#OBJECTS`
 6. `#SHOPS` (none planned for this area; no merchant NPCs with shop functionality)
 7. `#RESETS`

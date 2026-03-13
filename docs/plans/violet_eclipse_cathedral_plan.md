@@ -675,7 +675,7 @@ The canonical section order emitted by the area saver:
 1. `#AREA`
 2. `#ROOMS`
 3. `#MOBILES`
-4. `#MOBPROGS`
+4. `#SCRIPTS`
 5. `#OBJECTS`
 6. `#SHOPS`
 7. `#RESETS`
@@ -683,7 +683,7 @@ The canonical section order emitted by the area saver:
 9. `#OBJFUNS`
 10. `#$`
 
-This area does not currently plan a `#SHOPS` section (no merchant mobs). `#MOBPROGS` is optional and may be added for boss dialogue triggers. `#OBJFUNS` is optional.
+This area does not currently plan a `#SHOPS` section (no merchant mobs). `#SCRIPTS` is optional and may be added for boss dialogue triggers. `#OBJFUNS` is optional.
 
 ## Implementation Checklist
 

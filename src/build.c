@@ -4706,16 +4706,16 @@ void build_delmob(CHAR_DATA *ch, char *argument)
    }
 
    /*
-    * Get rid of mobprogs
+    * Get rid of scripts
     */
    {
-      MPROG_DATA *pMobProg;
-      MPROG_DATA *pNextMobProg;
+      MPROG_DATA *pProg;
+      MPROG_DATA *pNextProg;
 
-      for (pMobProg = pMobIndex->first_mprog; pMobProg != NULL; pMobProg = pNextMobProg)
+      for (pProg = pMobIndex->first_mprog; pProg != NULL; pProg = pNextProg)
       {
-         pNextMobProg = pMobProg->next;
-         PUT_FREE(pMobProg, mprog_free);
+         pNextProg = pProg->next;
+         PUT_FREE(pProg, mprog_free);
       }
    }
 

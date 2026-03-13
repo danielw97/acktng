@@ -32,12 +32,12 @@ This plan replaces the current repetitive room topology and naming with a narrat
 10. **No background codes (`@@0`-`@@7`) and no flashing (`@@f`)** unless explicitly added by a human author.
 
 ### Section Integrity
-11. **Follow canonical saver section order:** `#AREA`, `#ROOMS`, `#MOBILES`, `#MOBPROGS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
+11. **Follow canonical saver section order:** `#AREA`, `#ROOMS`, `#MOBILES`, `#SCRIPTS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
 12. **`#ROOMS` must exist** and must end with `#0` before the next section header.
 13. **`#MOBILES` must terminate with `#0`** before `#OBJECTS`.
 14. **`#OBJECTS` must terminate with `#0`** before `#RESETS`.
 15. **`#RESETS` must not contain blank lines.**
-16. **Optional sections** (`#MOBPROGS`, `#SHOPS`, `#SPECIALS`, `#OBJFUNS`) should be included as needed.
+16. **Optional sections** (`#SCRIPTS`, `#SHOPS`, `#SPECIALS`, `#OBJFUNS`) should be included as needed.
 
 ### Vnum Allocation Policy
 17. **Vnums must be assigned in ascending sequential order** — use lower available vnums before higher ones. Do not leave gaps in sequences.

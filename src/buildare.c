@@ -347,8 +347,8 @@ void build_makearea(CHAR_DATA *ch, char *argument)
    pArea->last_area_shop = NULL;
    pArea->first_area_specfunc = NULL;
    pArea->last_area_specfunc = NULL;
-   pArea->first_area_mobprog = NULL;
-   pArea->last_area_mobprog = NULL;
+   pArea->first_area_script = NULL;
+   pArea->last_area_script = NULL;
 
    area_used[pArea->area_num] = pArea;
 
@@ -487,8 +487,8 @@ void build_addarea(CHAR_DATA *ch, char *argument)
    pArea->last_area_shop = NULL;
    pArea->first_area_specfunc = NULL;
    pArea->last_area_specfunc = NULL;
-   pArea->first_area_mobprog = NULL;
-   pArea->last_area_mobprog = NULL;
+   pArea->first_area_script = NULL;
+   pArea->last_area_script = NULL;
 
    area_used[pArea->area_num] = pArea;
 

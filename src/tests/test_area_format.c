@@ -457,10 +457,10 @@ static void parse_mobiles_section(FILE *fp, char *line, int *line_number, const 
             if (marker == '>')
             {
                 if (strchr(trimmed, '~') == NULL)
-                    fail_area_test(area_path, *line_number, "inline mobprog header must end with '~'");
+                    fail_area_test(area_path, *line_number, "inline script header must end with '~'");
                 consume_tilde_string(fp, line, line_number, area_path);
                 if (!read_line(fp, line, line_number) || skip_space(line)[0] != '|')
-                    fail_area_test(area_path, *line_number, "inline mobprog must terminate with '|'");
+                    fail_area_test(area_path, *line_number, "inline script must terminate with '|'");
                 continue;
             }
 
@@ -806,7 +806,7 @@ static void assert_area_matches_spec(const char *area_path, const VNUM_NODE *glo
             parse_mobiles_section(fp, line, &line_number, area_path);
             continue;
         }
-        if (starts_with(trimmed, "#MOBPROGS"))
+        if (starts_with(trimmed, "#SCRIPTS"))
         {
             parse_specials_section(fp, line, &line_number, area_path, "M");
             continue;

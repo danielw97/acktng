@@ -930,7 +930,7 @@ void mobile_update(void)
          */
 
       /*
-       * MOBprogram random trigger
+       * program random trigger
        */
       if (ch->in_room->area->nplayer > 0)
       {
@@ -989,7 +989,7 @@ void mobile_update(void)
          /*
           * If ch changes position due
           * to it's or someother mob's
-          * movement via MOBProgs,
+          * movement via scripts,
           * continue - Kahn
           */
          if (ch->position < POS_STANDING)

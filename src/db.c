@@ -231,12 +231,12 @@ int top_room;
 int top_shop;
 
 /*
- * MOBprogram locals
+ * program locals
  */
 
 int mprog_name_to_type args((char *name));
 void mprog_file_read args((char *f, MOB_INDEX_DATA *pMobIndex));
-void load_mobprogs args((FILE * fp));
+void load_scripts args((FILE * fp));
 void mprog_read_programs args((FILE * fp, MOB_INDEX_DATA *pMobIndex));
 
 /*
@@ -601,8 +601,8 @@ void boot_db(void)
                load_area(fpArea);
             else if (!str_cmp(word, "MOBILES"))
                load_mobiles(fpArea);
-            else if (!str_cmp(word, "MOBPROGS"))
-               load_mobprogs(fpArea);
+            else if (!str_cmp(word, "SCRIPTS"))
+               load_scripts(fpArea);
             else if (!str_cmp(word, "OBJECTS"))
                load_objects(fpArea);
             else if (!str_cmp(word, "RESETS"))
@@ -723,7 +723,7 @@ void load_area(FILE *fp)
    pArea->last_area_shop = NULL;
    pArea->first_area_specfunc = NULL;
    pArea->last_area_specfunc = NULL;
-   pArea->first_area_mobprog = NULL;
+   pArea->first_area_script = NULL;
    area_revision = -1;
 
    /* MAG Mod for optionals additions to area headers. */
@@ -3989,7 +3989,7 @@ void tail_chain(void)
 }
 
 /*
- * MOBprogram code block
+ * program code block
  */
 /* the functions */
 
@@ -4027,7 +4027,7 @@ char *name;
    return (ERROR_PROG);
 }
 
-/* Had to redo mobprog loading to work with double linked lists. -- Altrag */
+/* Had to redo script loading to work with double linked lists. -- Altrag */
 void mprog_file_read(char *f, MOB_INDEX_DATA *pMobIndex)
 {
    MPROG_DATA *mprog;
@@ -4040,7 +4040,7 @@ void mprog_file_read(char *f, MOB_INDEX_DATA *pMobIndex)
    sprintf(name, "%s%s", MOB_DIR, f);
    if (!(fp = fopen(name, "r")))
    {
-      bug("Mob: %d couldn't opne mobprog file.", pMobIndex->vnum);
+      bug("Mob: %d couldn't opne script file.", pMobIndex->vnum);
       return;
    }
    permf = str_dup(f);
@@ -4081,7 +4081,7 @@ void mprog_file_read(char *f, MOB_INDEX_DATA *pMobIndex)
    return;
 }
 
-void load_mobprogs(FILE *fp)
+void load_scripts(FILE *fp)
 {
    char letter;
    MOB_INDEX_DATA *iMob;
@@ -4091,7 +4091,7 @@ void load_mobprogs(FILE *fp)
       switch (LOWER(letter = fread_letter(fp)))
       {
       default:
-         bug("Load_mobprogs: bad command '%c'.", letter);
+         bug("Load_scripts: bad command '%c'.", letter);
          fread_to_eol(fp);
          break;
       case 's':
@@ -4104,7 +4104,7 @@ void load_mobprogs(FILE *fp)
          value = fread_number(fp);
          if (!(iMob = get_mob_index(value)))
          {
-            bug("Load_mobprogs: vnum %d doesn't exist.", value);
+            bug("Load_scripts: vnum %d doesn't exist.", value);
             fread_to_eol(fp);
             break;
          }
@@ -4127,7 +4127,7 @@ void mprog_read_programs(FILE *fp, MOB_INDEX_DATA *pMobIndex)
          break;
       else if (letter != '>')
       {
-         bug("Load_mobiles: vnum %d MOBPROG char", pMobIndex->vnum);
+         bug("Load_mobiles: vnum %d SCRIPT char", pMobIndex->vnum);
          ungetc(letter, fp);
          return;
       }
@@ -4135,7 +4135,7 @@ void mprog_read_programs(FILE *fp, MOB_INDEX_DATA *pMobIndex)
       switch (type)
       {
       case ERROR_PROG:
-         bug("Load_mobiles: vnum %d MOBPROG type.", pMobIndex->vnum);
+         bug("Load_mobiles: vnum %d SCRIPT type.", pMobIndex->vnum);
          fread_to_eol(fp);
          return;
       case IN_FILE_PROG:

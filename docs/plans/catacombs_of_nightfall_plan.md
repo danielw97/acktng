@@ -80,7 +80,7 @@ This plan fully replaces the current repetitive topology and template-populated 
 47. `#RESETS` must not contain blank lines.
 
 ### Section Order
-48. Follow canonical saver order: `#AREA`, `#ROOMS`, `#MOBILES`, `#MOBPROGS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
+48. Follow canonical saver order: `#AREA`, `#ROOMS`, `#MOBILES`, `#SCRIPTS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
 
 ### Specials Policy
 49. Mob specials beginning with `spec_summon_` must never be set in area files (runtime-only).
@@ -850,7 +850,7 @@ A tarnished clasp torn from the Sepulcher Lich's master ledger lies here, its re
 16. Rewrite resets to match new encounter ecology. Verify no blank lines in `#RESETS`.
 17. Verify all locked door resets have valid key objects in `#OBJECTS`.
 18. Verify boss mob rooms are flagged `no_mob`.
-19. Verify section order: `#AREA`, `#ROOMS`, `#MOBILES`, `#MOBPROGS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
+19. Verify section order: `#AREA`, `#ROOMS`, `#MOBILES`, `#SCRIPTS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
 20. Validate all authored strings for color/spec compliance. Verify `@@N` terminates all colorized strings.
 21. Validate no in-world description contains numeric vnums.
 22. Validate level spread, spawn density, and boss gating for 10-25 flow.

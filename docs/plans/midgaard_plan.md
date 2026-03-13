@@ -88,7 +88,7 @@ See `midgaard_lore.md` for extracted lore.
 42. `#RESETS` must not contain blank lines.
 
 ### Section Order
-43. Follow canonical saver order: `#AREA`, `#ROOMS`, `#MOBILES`, `#MOBPROGS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
+43. Follow canonical saver order: `#AREA`, `#ROOMS`, `#MOBILES`, `#SCRIPTS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
 
 ### Specials Policy
 44. Mob specials beginning with `spec_summon_` must never be set in area files (runtime-only).

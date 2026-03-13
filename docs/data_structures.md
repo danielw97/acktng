@@ -224,13 +224,13 @@ pointed to by `pcdata`; that pointer is `NULL` for mobs.
 | `carry_weight` | `float` | Current carried weight |
 | `carry_number` | `sh_int` | Current number of carried items |
 
-### MOBprogram
+### program scripting
 
 | Field | Type | Description |
 |---|---|---|
-| `first_mpact` | `MPROG_ACT_LIST *` | Head of pending MOBprog action list |
-| `last_mpact` | `MPROG_ACT_LIST *` | Tail of pending MOBprog action list |
-| `mpactnum` | `int` | Count of pending MOBprog actions |
+| `first_mpact` | `MPROG_ACT_LIST *` | Head of pending program action list |
+| `last_mpact` | `MPROG_ACT_LIST *` | Tail of pending program action list |
+| `mpactnum` | `int` | Count of pending program actions |
 
 ---
 

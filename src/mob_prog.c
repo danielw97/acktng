@@ -26,7 +26,7 @@
  ***************************************************************************/
 
 /***************************************************************************
- *  The MOBprograms have been contributed by N'Atas-ha.  Any support for   *
+ *  The program scripts have been contributed by N'Atas-ha.  Any support for   *
  *  these routines should not be expected from Merc Industries.  However,  *
  *  under no circumstances should the blame for bugs, etc be placed on     *
  *  Merc Industries.  They are not guaranteed to work on all systems due   *
@@ -120,7 +120,7 @@ bool mprog_seval(char *lhs, char *opr, char *rhs)
    if (!str_cmp(opr, "!/"))
       return (bool)(str_infix(rhs, lhs));
 
-   bug("Improper MOBprog operator\n\r", 0);
+   bug("Improper script operator\n\r", 0);
    return 0;
 }
 
@@ -144,7 +144,7 @@ bool mprog_veval(int lhs, char *opr, int rhs)
    if (!str_cmp(opr, "|"))
       return (lhs | rhs);
 
-   bug("Improper MOBprog operator\n\r", 0);
+   bug("Improper script operator\n\r", 0);
    return 0;
 }
 
@@ -1027,14 +1027,14 @@ int mprog_do_ifchck(char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor, OBJ_DATA *ob
 
    /*
     * Ok... all the ifchcks are done, so if we didnt find ours then something
-    * * odd happened.  So report the bug and abort the MOBprogram (return error)
+    * * odd happened.  So report the bug and abort the program (return error)
     */
    bug("Mob: %d unknown ifchck", mob->pIndexData->vnum);
    return -1;
 }
 
 /* Quite a long and arduous function, this guy handles the control
- * flow part of MOBprograms.  Basicially once the driver sees an
+ * flow part of program scripts.  Basicially once the driver sees an
  * 'if' attention shifts to here.  While many syntax errors are
  * caught, some will still get through due to the handling of break
  * and errors in the same fashion.  The desire to break out of the
@@ -1043,7 +1043,7 @@ int mprog_do_ifchck(char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor, OBJ_DATA *ob
  * the parser acts as though a break were issued and just bails out
  * at that point. I havent tested all the possibilites, so I'm speaking
  * in theory, but it is 'guaranteed' to work on syntactically correct
- * MOBprograms, so if the mud crashes here, check the mob carefully!
+ * program scripts, so if the mud crashes here, check the mob carefully!
  */
 char *mprog_process_if(char *ifchck, char *com_list, CHAR_DATA *mob,
                        CHAR_DATA *actor, OBJ_DATA *obj, void *vo, CHAR_DATA *rndm)
@@ -1481,7 +1481,7 @@ void mprog_process_cmnd(char *cmnd, CHAR_DATA *mob, CHAR_DATA *actor, OBJ_DATA *
    return;
 }
 
-/* The main focus of the MOBprograms.  This routine is called
+/* The main focus of the program scripts.  This routine is called
  *  whenever a trigger is successful.  It is responsible for parsing
  *  the command list and figuring out what to do. However, like all
  *  complex procedures, everything is farmed out to the other guys.
