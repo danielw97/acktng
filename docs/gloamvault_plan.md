@@ -480,12 +480,12 @@ This redesign explicitly aligns with broader setting motifs used in other plans/
 
 Six static propositions target the Gloamvault, offered by three city postmasters according to each city's institutional interest in the vault. Two independent entry points (non-chain) allow players to begin from either Kiess or Kowloon, with Midgaard and Kowloon chains progressing toward boss-level warrants. Two propositions culminate in boss kills (Ossuary Champion, Matriarch Velastra).
 
-### Proposition ID 48 — Gloamvault threshold audit: novice interdiction
+### Proposition ID 54 — Gloamvault threshold audit: novice interdiction
 
 | Field | Value |
 |---|---|
-| **File** | `49.prop` |
-| **Static ID** | 48 |
+| **File** | `55.prop` |
+| **Static ID** | 54 |
 | **Prerequisite** | -1 (none — chain entry point) |
 | **Type** | 1 (kill variety) |
 | **Num Targets** | 3 |
@@ -511,7 +511,7 @@ Six static propositions target the Gloamvault, offered by three city postmasters
 |---|---|
 | **File** | `50.prop` |
 | **Static ID** | 49 |
-| **Prerequisite** | 48 |
+| **Prerequisite** | 54 |
 | **Type** | 3 (kill count) |
 | **Num Targets** | 1 |
 | **Target Vnums** | `30115` (Vault Stalker) |
@@ -522,7 +522,7 @@ Six static propositions target the Gloamvault, offered by three city postmasters
 | **Reward QP** | 3 |
 | **Reward Item** | 0 0 (none) |
 
-**Narrative rationale:** Midgaard's Violet Compact registry checkpoint at the Reliquary Arch (room 3005) has reported vault stalkers breaching the jurisdictional threshold — gauze-wrapped ambush predators that move only when candlelight flickers. Under the Compact's Containment Era framework, anything that crosses the arch from below is Midgaard's enforcement problem. The magistrate's office has authorized a suppression contract: five confirmed stalker kills to re-establish the boundary. This proposition chains from ID 48 because Kiess's threat assessment (confirming active vault operations) triggered Midgaard's Compact enforcement protocols.
+**Narrative rationale:** Midgaard's Violet Compact registry checkpoint at the Reliquary Arch (room 3005) has reported vault stalkers breaching the jurisdictional threshold — gauze-wrapped ambush predators that move only when candlelight flickers. Under the Compact's Containment Era framework, anything that crosses the arch from below is Midgaard's enforcement problem. The magistrate's office has authorized a suppression contract: five confirmed stalker kills to re-establish the boundary. This proposition chains from ID 54 because Kiess's threat assessment (confirming active vault operations) triggered Midgaard's Compact enforcement protocols.
 
 **Accept message:** The Violet Compact registry at Midgaard's Reliquary Arch has logged multiple threshold breaches by vault stalkers — hostile entities emerging from the Gloamvault into civic jurisdiction. Under Containment Era protocols, this triggers suppression authority. Enter the vault and kill five vault stalkers to re-establish the Compact boundary. Registry inspectors cannot resume threshold patrols until the stalker population is reduced to manageable levels.
 
@@ -634,7 +634,7 @@ Six static propositions target the Gloamvault, offered by three city postmasters
 
 ```
 Chain A (Kiess → Midgaard):
-  48 (Kiess, non-chain)  →  49 (Midgaard, chain)  →  51 (Midgaard, boss: Ossuary Champion)
+  54 (Kiess, non-chain)  →  49 (Midgaard, chain)  →  51 (Midgaard, boss: Ossuary Champion)
 
 Chain B (Kowloon):
   50 (Kowloon, non-chain)  →  52 (Kowloon, chain)  →  53 (Kowloon, boss: Matriarch Velastra)
