@@ -1,0 +1,173 @@
+#AREA
+@@WMidgaard Class Shop Extensions@@N~
+Q 16
+K midgaard_shops~
+L @@W{@@r ALL @@W}@@N~
+N 24
+I 0 0
+V 3300 3349
+X 0
+F 15
+U @@WThe watch bell sounds from Guard Headquarters — @@yMidgaard@@N@@W's lamp-routes reset and the patrol lines turn.@@N~
+O Virant~
+#ROOMS
+#3315
+@@gStorage Annex@@N~
+A narrow back room off the main shop corridor, used for overflow stock and supplier correspondence. Crates are stacked against one wall and a writing desk occupies the opposite corner, covered in invoices and packing manifests. The single door to the north is kept locked outside business hours.
+~
+1036 11
+S
+#0
+#OBJECTS
+#3300
+voidbound amulet~
+a voidbound amulet~
+A voidbound amulet hangs from a display chain above the desk.
+~
+9 0 8388736 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+140
+#3301
+starweave shoulders~
+starweave shoulders~
+Starweave shoulders rest on a padded shoulder-fitting stand.
+~
+9 0 8389120 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+135
+#3302
+runemeld gloves~
+runemeld gloves~
+Runemeld gloves are pinned flat on a velvet display tray.
+~
+9 0 8392704 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+110
+#3303
+arcane step slippers~
+arcane step slippers~
+Arcane step slippers are displayed on a cedar stand.
+~
+9 0 10485760 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+120
+#3304
+resonance mask~
+a resonance mask~
+A resonance mask hovers within a warding circle at eye level.
+~
+9 0 8388624 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+145
+#3305
+veteran gorget~
+a veteran gorget~
+A veteran gorget sits on a steel neck-stand, ring-reinforced and worn to a sheen.
+~
+9 0 8388736 1
+0 0 0 0 0 0 0 0 0 0
+7
+L
+140
+#3306
+martial wristguards~
+martial wristguards~
+Martial wristguards are strapped to a bracket in matching pairs.
+~
+9 0 8390656 1
+0 0 0 0 0 0 0 0 0 0
+7
+L
+135
+#3307
+combat gauntlets~
+combat gauntlets~
+Combat gauntlets are bolted to a flat display board.
+~
+9 0 8392704 1
+0 0 0 0 0 0 0 0 0 0
+7
+L
+115
+#3308
+ironshod boots~
+ironshod boots~
+Ironshod boots stand in a row beside a sizing chart.
+~
+9 0 10485760 1
+0 0 0 0 0 0 0 0 0 0
+7
+L
+120
+#3309
+reaver cloak~
+a reaver cloak~
+A reaver cloak hangs from a broad iron coat-hook.
+~
+9 0 8454144 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+145
+#3310
+stoneguard gorget~
+a stoneguard gorget~
+A stoneguard gorget rests on a reinforced neck-stand.
+~
+9 0 8388736 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+140
+#3311
+fortress pauldrons~
+fortress pauldrons~
+Fortress pauldrons are bolted to a wide shoulder gantry.
+~
+9 0 8389120 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+135
+#3312
+shieldbearer gauntlets~
+shieldbearer gauntlets~
+Shieldbearer gauntlets are mounted on a hand-form beside the shield rack.
+~
+9 0 8392704 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+115
+#3313
+ironwall sabatons~
+ironwall sabatons~
+Ironwall sabatons stand in matched pairs on a reinforced shelf.
+~
+9 0 10485760 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+125
+#3314
+siege cloak~
+a siege cloak~
+A siege cloak hangs from a weight-rated iron rod, its buckles tested.
+~
+9 0 8454144 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+145
+#0
+#$
