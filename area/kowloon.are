@@ -3525,20 +3525,20 @@ M 14020 spec_kowloon_gate_captain
 M 14025 spec_kowloon_courier
 M 14034 spec_kowloon_courier
 * --- Civic inspectors and clerks ---
-M 14023 spec_warden
-M 14026 spec_warden
-M 14030 spec_warden
+M 14023 spec_kowloon_magistracy
+M 14026 spec_kowloon_magistracy
+M 14030 spec_kowloon_magistracy
 M 14041 spec_kowloon_gate_captain
 * --- Harbor and dock workers ---
-M 14024 spec_laborer
-M 14031 spec_laborer
-M 14033 spec_laborer
-M 14043 spec_laborer
+M 14024 spec_kowloon_laborer
+M 14031 spec_kowloon_laborer
+M 14033 spec_kowloon_laborer
+M 14043 spec_kowloon_laborer
 * --- Street life: vendors, shrine, caravan ---
-M 14027 spec_vendor
-M 14028 spec_lay_sister
-M 14029 spec_vendor
-M 14035 spec_lamplighter
+M 14027 spec_kowloon_vendor
+M 14028 spec_kowloon_shrine
+M 14029 spec_kowloon_vendor
+M 14035 spec_kowloon_sweeper
 * --- Criminals ---
 M 14036 spec_thief
 M 14040 spec_kowloon_corsair
