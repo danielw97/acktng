@@ -84,7 +84,7 @@ From then on, Sepulchur Pasture became feared not as a haunted field, but as a p
 ## Key Figures in Pasture History
 
 ### Marshal Edrin Vale (Gate Tariff Reformer)
-A Midgaard gate marshal assigned to impose transparent burden-tithe accounting during the late Ash-and-Iron Decades. Vale served under the same quartermaster doctrine that created the Invasion Quartermaster, Proposition Clerk, and Quest Broker roles in Midgaard's newer Arcana-Requisition Strip. He reduced petty fraud but militarized the intake lanes, turning mourners into queue subjects and grief into a logistics problem. His reforms included synchronized processing with Midgaard's **Bell Watch** and standardized intake forms modeled on the Magistrate Ledgerhouse's property-boundary surveys.
+A Midgaard gate marshal assigned to impose transparent burden-tithe accounting during the late Ash-and-Iron Decades. Vale served under the same quartermaster doctrine that created the Invasion Quartermaster, Quest Clerk, and Quest Broker roles in Midgaard's newer Arcana-Requisition Strip. He reduced petty fraud but militarized the intake lanes, turning mourners into queue subjects and grief into a logistics problem. His reforms included synchronized processing with Midgaard's **Bell Watch** and standardized intake forms modeled on the Magistrate Ledgerhouse's property-boundary surveys.
 
 Vale is revered by clerks, despised by families, and cited by both the **Continuity faction** (as proof that disciplined process prevents chaos) and the **Reckoning faction** (as proof that process can become its own form of cruelty). His tariff seals, stamped with the lion insignia of magistrate authority, are still found embedded in the pasture's gateposts.
 

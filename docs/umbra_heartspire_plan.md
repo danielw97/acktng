@@ -198,18 +198,18 @@ Itemization principles:
   - At least one recurring inscription naming Kiess as both heir and warning.
 
 
-## Propositions
+## Quests
 
-Static propositions for Umbra Heartspire using proposition IDs **40-44** (files `41.prop` through `45.prop`). These contracts are split between Midgaard, Kiess, and Kowloon postmasters and are framed as civic-record recovery and threat containment tied to the Violet Compact crisis around the cathedral.
+Static quests for Umbra Heartspire using quest IDs **40-44** (files `41.prop` through `45.prop`). These contracts are split between Midgaard, Kiess, and Kowloon postmasters and are framed as civic-record recovery and threat containment tied to the Violet Compact crisis around the cathedral.
 
 Postmaster vnums:
 - **Midgaard:** `3015`
 - **Kiess:** `13001`
 - **Kowloon:** `14021`
 
-### Non-Chain Propositions
+### Non-Chain Quests
 
-#### Proposition 40 — Violet Archive Stabilization Sweep (Midgaard)
+#### Quest 40 — Violet Archive Stabilization Sweep (Midgaard)
 
 | Field | Value |
 |---|---|
@@ -231,7 +231,7 @@ Postmaster vnums:
 | **Accept message** | Midgaard's Violet Compact clerks report that oath-wardens, lantern inquisitors, and torn-liturgy scribes are actively destroying admissible testimony inside the Heartspire. Eliminate one of each cell leader so archivists can re-enter with ward escorts and recover surviving ledgers before they are burned or rewritten. |
 | **Completion message** | Compact clerks confirm your sweep disrupted the destruction teams and reopened a safe window for evidence recovery. Midgaard archivists have resumed escorted extraction runs and already report intact testimony bundles that were expected to be lost by nightfall. |
 
-#### Proposition 41 — Evermeet Reliquary Quieting (Kiess)
+#### Quest 41 — Evermeet Reliquary Quieting (Kiess)
 
 | Field | Value |
 |---|---|
@@ -253,11 +253,11 @@ Postmaster vnums:
 | **Accept message** | Kiess memorial couriers cannot keep funeral credentials intact while cracked-reliquary attendants keep ambushing processions and stealing names from sealed caskets. Put down at least six of these attendants to blunt the raids and let Evermeet remembrance rites continue without falsified lineages. |
 | **Completion message** | Kiess heralds report the reliquary ambushes have dropped sharply, and delayed remembrance processions are moving again under guard. Scriptorium notaries have restarted lineage verification using untouched casket seals recovered after your intervention. |
 
-### Chain Propositions
+### Chain Quests
 
 #### Cathedral Severance Chain (Kowloon -> Kowloon -> Midgaard)
 
-##### Proposition 42 — Lantern Syndic Penumbra Audit (chain start)
+##### Quest 42 — Lantern Syndic Penumbra Audit (chain start)
 
 | Field | Value |
 |---|---|
@@ -279,7 +279,7 @@ Postmaster vnums:
 | **Accept message** | Kowloon courier syndics suspect Iron-Wake logisticians are rerouting sealed traffic through the cathedral to evade civic audit and treaty inspection. Remove one barracks captain, one tithe-vault quartermaster, and one veinfire arsenal keeper so the smuggling chain loses its command links before the next moon ledger closes. |
 | **Completion message** | The audit cell confirms the covert routing chain has been interrupted at all three command nodes. Kowloon's treaty ledgers now match declared cargo flow, and Lantern Court inspectors have reopened suspended transit writs pending deeper prosecution. |
 
-##### Proposition 43 — Mirror-Queen injunction service (chain middle, boss-focused)
+##### Quest 43 — Mirror-Queen injunction service (chain middle, boss-focused)
 
 | Field | Value |
 |---|---|
@@ -301,7 +301,7 @@ Postmaster vnums:
 | **Accept message** | With the audit trail exposed, Kowloon magistrates have issued emergency injunctions against the cathedral's two principal enforcers: Lady Vespera, Mirror-Queen, and the Marshal of the Iron Wake. Serve those injunctions by force and end both command authorities before they can relocate witnesses into no-jurisdiction sanctums. |
 | **Completion message** | Both injunction targets are down, and Kowloon's tribunal clerks have certified command collapse in the mirror court and Iron-Wake barracks. Witness couriers report that sealed testimony is finally leaving the Heartspire instead of vanishing behind noble privilege and martial immunity. |
 
-##### Proposition 44 — Noctivar deposition writ (chain end, boss-focused)
+##### Quest 44 — Noctivar deposition writ (chain end, boss-focused)
 
 | Field | Value |
 |---|---|
@@ -323,7 +323,7 @@ Postmaster vnums:
 | **Accept message** | Midgaard's High Archive has ratified a final deposition writ against Abbot Noctivar, whose crownseat court nullifies every prior order through forged ritual precedent. Execute the writ by slaying Noctivar and collapsing his claim to legal supremacy before the Heartspire can reissue counterfeit verdicts under the Violet Compact seal. |
 | **Completion message** | Noctivar's deposition is confirmed, and the Heartspire's counterfeit court authority has fractured across all wings. Midgaard and allied clerks are now sealing the recovered dockets under joint custody, ending the abbot's ability to launder sentence law through shadow liturgy. |
 
-### Proposition Summary Table
+### Quest Summary Table
 
 | Static ID | File | Type | Chain | City | Offerer | Targets | Boss-focused |
 |---|---:|---|---|---|---:|---|---|

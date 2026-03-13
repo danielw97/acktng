@@ -476,11 +476,11 @@ This redesign explicitly aligns with broader setting motifs used in other plans/
 
 ---
 
-## Propositions
+## Quests
 
-Seven static propositions target the Gloamvault, offered by three city postmasters according to each city's institutional interest in the vault. Three independent entry points (non-chain) allow players to begin from Midgaard, Kiess, or Kowloon, with Midgaard and Kowloon chains progressing toward boss-level warrants. Two propositions culminate in boss kills (Ossuary Champion, Matriarch Velastra).
+Seven static quests target the Gloamvault, offered by three city postmasters according to each city's institutional interest in the vault. Three independent entry points (non-chain) allow players to begin from Midgaard, Kiess, or Kowloon, with Midgaard and Kowloon chains progressing toward boss-level warrants. Two quests culminate in boss kills (Ossuary Champion, Matriarch Velastra).
 
-### Proposition ID 54 — Gloamvault threshold audit: novice interdiction
+### Quest ID 54 — Gloamvault threshold audit: novice interdiction
 
 | Field | Value |
 |---|---|
@@ -505,7 +505,7 @@ Seven static propositions target the Gloamvault, offered by three city postmaste
 
 ---
 
-### Proposition ID 49 — Violet Compact enforcement: stalker suppression
+### Quest ID 49 — Violet Compact enforcement: stalker suppression
 
 | Field | Value |
 |---|---|
@@ -522,7 +522,7 @@ Seven static propositions target the Gloamvault, offered by three city postmaste
 | **Reward QP** | 3 |
 | **Reward Item** | 0 0 (none) |
 
-**Narrative rationale:** Midgaard's Violet Compact registry checkpoint at the Reliquary Arch (room 3005) has reported vault stalkers breaching the jurisdictional threshold — gauze-wrapped ambush predators that move only when candlelight flickers. Under the Compact's Containment Era framework, anything that crosses the arch from below is Midgaard's enforcement problem. The magistrate's office has authorized a suppression contract: five confirmed stalker kills to re-establish the boundary. This proposition chains from ID 54 because Kiess's threat assessment (confirming active vault operations) triggered Midgaard's Compact enforcement protocols.
+**Narrative rationale:** Midgaard's Violet Compact registry checkpoint at the Reliquary Arch (room 3005) has reported vault stalkers breaching the jurisdictional threshold — gauze-wrapped ambush predators that move only when candlelight flickers. Under the Compact's Containment Era framework, anything that crosses the arch from below is Midgaard's enforcement problem. The magistrate's office has authorized a suppression contract: five confirmed stalker kills to re-establish the boundary. This quest chains from ID 54 because Kiess's threat assessment (confirming active vault operations) triggered Midgaard's Compact enforcement protocols.
 
 **Accept message:** The Violet Compact registry at Midgaard's Reliquary Arch has logged multiple threshold breaches by vault stalkers — hostile entities emerging from the Gloamvault into civic jurisdiction. Under Containment Era protocols, this triggers suppression authority. Enter the vault and kill five vault stalkers to re-establish the Compact boundary. Registry inspectors cannot resume threshold patrols until the stalker population is reduced to manageable levels.
 
@@ -530,7 +530,7 @@ Seven static propositions target the Gloamvault, offered by three city postmaste
 
 ---
 
-### Proposition ID 50 — Covenant precedent recovery: militant purge
+### Quest ID 50 — Covenant precedent recovery: militant purge
 
 | Field | Value |
 |---|---|
@@ -555,7 +555,7 @@ Seven static propositions target the Gloamvault, offered by three city postmaste
 
 ---
 
-### Proposition ID 51 — Registry priority warrant: Ossuary Champion
+### Quest ID 51 — Registry priority warrant: Ossuary Champion
 
 | Field | Value |
 |---|---|
@@ -572,7 +572,7 @@ Seven static propositions target the Gloamvault, offered by three city postmaste
 | **Reward QP** | 4 |
 | **Reward Item** | 0 0 (none) |
 
-**Narrative rationale:** With stalker threats at the threshold suppressed, Midgaard's magistrates have escalated enforcement to a priority warrant targeting the Ossuary Champion — the rune-plated military enforcer whose patrol routes through the Reliquary Bastion block registry inspectors from documenting the vault's armory-catacomb interface. The Champion embodies the vault's doctrine that compliance is the highest martial virtue, and his continued presence represents an active jurisdictional challenge to the Violet Compact's authority. This is a boss-target proposition: the Champion is flagged `boss` and occupies a `no_mob` room in Zone F.
+**Narrative rationale:** With stalker threats at the threshold suppressed, Midgaard's magistrates have escalated enforcement to a priority warrant targeting the Ossuary Champion — the rune-plated military enforcer whose patrol routes through the Reliquary Bastion block registry inspectors from documenting the vault's armory-catacomb interface. The Champion embodies the vault's doctrine that compliance is the highest martial virtue, and his continued presence represents an active jurisdictional challenge to the Violet Compact's authority. This is a boss-target quest: the Champion is flagged `boss` and occupies a `no_mob` room in Zone F.
 
 **Accept message:** Midgaard's magistrate court has authorized a priority enforcement warrant targeting the Ossuary Champion of the Gloamvault — the military enforcer whose presence in the Reliquary Bastion prevents registry inspectors from completing their Compact-mandated audit. This is a high-risk contract: the Champion is a fortified combatant armored in rune-etched plate and chained relics, and he does not negotiate. Destroy him so the registry can document what the vault has been arming behind its sealed doors.
 
@@ -580,7 +580,7 @@ Seven static propositions target the Gloamvault, offered by three city postmaste
 
 ---
 
-### Proposition ID 52 — Jade Magistracy deep audit: warlock suppression
+### Quest ID 52 — Jade Magistracy deep audit: warlock suppression
 
 | Field | Value |
 |---|---|
@@ -605,7 +605,7 @@ Seven static propositions target the Gloamvault, offered by three city postmaste
 
 ---
 
-### Proposition ID 53 — Final covenant judgment: Matriarch Velastra
+### Quest ID 53 — Final covenant judgment: Matriarch Velastra
 
 | Field | Value |
 |---|---|
@@ -622,7 +622,7 @@ Seven static propositions target the Gloamvault, offered by three city postmaste
 | **Reward QP** | 5 |
 | **Reward Item** | 0 0 (none) |
 
-**Narrative rationale:** The Jade Magistracy has determined that the Gloamvault's recursive institutional machinery cannot be interrupted while Matriarch Velastra maintains her throne in the Inner Gloamvault. She is the administrative apex that replaced "Last Witness" with "Last Authority," and her continued presence processes every recovered document through self-serving doctrinal filters before it can reach the outside world. Kowloon's covenant tradition considers her removal a covenant-level obligation: the original oath-law templates that the Neon Covenant's founding legal corpus derives from cannot be authentically recovered while her apparatus recycles them into justifications for her own rule. This is a boss-target proposition: Velastra is flagged `boss` and occupies a `no_mob` room in Zone I.
+**Narrative rationale:** The Jade Magistracy has determined that the Gloamvault's recursive institutional machinery cannot be interrupted while Matriarch Velastra maintains her throne in the Inner Gloamvault. She is the administrative apex that replaced "Last Witness" with "Last Authority," and her continued presence processes every recovered document through self-serving doctrinal filters before it can reach the outside world. Kowloon's covenant tradition considers her removal a covenant-level obligation: the original oath-law templates that the Neon Covenant's founding legal corpus derives from cannot be authentically recovered while her apparatus recycles them into justifications for her own rule. This is a boss-target quest: Velastra is flagged `boss` and occupies a `no_mob` room in Zone I.
 
 **Accept message:** The Jade Magistracy has issued a covenant-level judgment: Matriarch Velastra of the Gloamvault must be removed. She is the administrative intelligence that transformed Kel'Shadra's preservation mandate into an engine of self-perpetuation, and every document recovered from the vault passes through her doctrinal apparatus before it reaches the outside world. Descend to the Inner Gloamvault and destroy her. The covenant scholars warn that defeating Velastra does not destroy the vault — but it interrupts its recursive self-justification long enough for original records to become accessible again.
 
@@ -630,7 +630,7 @@ Seven static propositions target the Gloamvault, offered by three city postmaste
 
 ---
 
-### Proposition ID 55 — Compact jurisdiction survey: vault functionary assessment
+### Quest ID 55 — Compact jurisdiction survey: vault functionary assessment
 
 | Field | Value |
 |---|---|
@@ -655,7 +655,7 @@ Seven static propositions target the Gloamvault, offered by three city postmaste
 
 ---
 
-### Proposition Chain Summary
+### Quest Chain Summary
 
 ```
 Chain A (Kiess → Midgaard):
@@ -671,9 +671,9 @@ Standalone (Midgaard):
 **Design notes:**
 - Chain A begins at Kiess (institutional detection) and escalates through Midgaard's Violet Compact enforcement machinery, culminating in the mid-boss.
 - Chain B operates entirely through Kowloon's covenant scholarship apparatus, escalating from militant clearance through ward suppression to the final boss.
-- Proposition 55 is a standalone Midgaard entry point focused on jurisdictional classification of the vault's administrative tier — it does not chain into either boss sequence.
+- Quest 55 is a standalone Midgaard entry point focused on jurisdictional classification of the vault's administrative tier — it does not chain into either boss sequence.
 - All three chains are independent — players can pursue any or all without cross-chain prerequisites.
-- Level ranges respect the Gloamvault's 5-20 target band, with boss propositions gated at the upper end.
+- Level ranges respect the Gloamvault's 5-20 target band, with boss quests gated at the upper end.
 - No item rewards are specified; gold and QP scale with difficulty and chain depth.
 
 ---

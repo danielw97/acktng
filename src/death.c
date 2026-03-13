@@ -337,7 +337,7 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
    huggy = 0;
 
     if (!IS_NPC(ch))
-        proposition_kill_notify(ch, victim);
+        quest_kill_notify(ch, victim);
 
    invasion_on_death(victim, ch);
 

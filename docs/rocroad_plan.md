@@ -608,20 +608,20 @@ Notes:
 
 ---
 
-## Propositions Plan
+## Quests Plan
 
-Roc Road propositions are static quests offered by the postmasters of the three connected cities. They reflect the road's role as a contested corridor: Midgaard issues law-enforcement and infrastructure-protection tasks; Kiess issues commerce-protection and frontier-intelligence tasks; Kowloon issues supply-chain and diplomatic tasks that depend on the road remaining open.
+Roc Road quests are static quests offered by the postmasters of the three connected cities. They reflect the road's role as a contested corridor: Midgaard issues law-enforcement and infrastructure-protection tasks; Kiess issues commerce-protection and frontier-intelligence tasks; Kowloon issues supply-chain and diplomatic tasks that depend on the road remaining open.
 
 **Postman vnums:**
 - Midgaard: `3015`
 - Kiess: `13001`
-- Kowloon: TBD (area not yet implemented; mob vnum will be in the `14040-14069` service range per `kowloon_plan.md`). Propositions below use placeholder `0` for the offerer vnum until the Kowloon postmaster mob is created.
+- Kowloon: TBD (area not yet implemented; mob vnum will be in the `14040-14069` service range per `kowloon_plan.md`). Quests below use placeholder `0` for the offerer vnum until the Kowloon postmaster mob is created.
 
-**File location:** `/propositions/N.prop` (N = proposition ID)
+**File location:** `/quests/N.prop` (N = quest ID)
 
-**Existing propositions:** IDs 1-5 are already allocated. Roc Road propositions use IDs **6-14**.
+**Existing quests:** IDs 1-5 are already allocated. Roc Road quests use IDs **6-14**.
 
-**Static proposition file format (5 lines):**
+**Static quest file format (5 lines):**
 1. `<title>`
 2. `<prerequisite_static_id> <prop_type> <num_targets> <kill_needed> <min_level> <offerer_vnum> <reward_gold> <reward_qp> <reward_item_vnum> <reward_item_count>`
 3. `<target_vnum_1> [target_vnum_2] ...`
@@ -632,7 +632,7 @@ Roc Road propositions are static quests offered by the postmasters of the three 
 
 ---
 
-### Proposition 6: Road Predator Cull (Midgaard, non-chain)
+### Quest 6: Road Predator Cull (Midgaard, non-chain)
 
 **File:** `6.prop`
 
@@ -660,7 +660,7 @@ Roc Road propositions are static quests offered by the postmasters of the three 
 
 ---
 
-### Proposition 7: Tollbreak Crew Interdiction (Midgaard, chain start)
+### Quest 7: Tollbreak Crew Interdiction (Midgaard, chain start)
 
 **File:** `7.prop`
 
@@ -688,7 +688,7 @@ Roc Road propositions are static quests offered by the postmasters of the three 
 
 ---
 
-### Proposition 8: Shadow Trade Disruption (Midgaard, chains from 7)
+### Quest 8: Shadow Trade Disruption (Midgaard, chains from 7)
 
 **File:** `8.prop`
 
@@ -716,7 +716,7 @@ Roc Road propositions are static quests offered by the postmasters of the three 
 
 ---
 
-### Proposition 9: Convoy Route Security Assessment (Kiess, non-chain)
+### Quest 9: Convoy Route Security Assessment (Kiess, non-chain)
 
 **File:** `9.prop`
 
@@ -744,7 +744,7 @@ Roc Road propositions are static quests offered by the postmasters of the three 
 
 ---
 
-### Proposition 10: Greenveil Spur Reconnaissance (Kiess, chain start)
+### Quest 10: Greenveil Spur Reconnaissance (Kiess, chain start)
 
 **File:** `10.prop`
 
@@ -772,7 +772,7 @@ Roc Road propositions are static quests offered by the postmasters of the three 
 
 ---
 
-### Proposition 11: Inlet Smuggler Crackdown (Kiess, chains from 10)
+### Quest 11: Inlet Smuggler Crackdown (Kiess, chains from 10)
 
 **File:** `11.prop`
 
@@ -800,7 +800,7 @@ Roc Road propositions are static quests offered by the postmasters of the three 
 
 ---
 
-### Proposition 12: Ruin Custodian Suppression (Midgaard, non-chain)
+### Quest 12: Ruin Custodian Suppression (Midgaard, non-chain)
 
 **File:** `12.prop`
 
@@ -828,7 +828,7 @@ Roc Road propositions are static quests offered by the postmasters of the three 
 
 ---
 
-### Proposition 13: Coastal Hazard Survey (Kowloon, non-chain)
+### Quest 13: Coastal Hazard Survey (Kowloon, non-chain)
 
 **File:** `13.prop`
 
@@ -856,7 +856,7 @@ Roc Road propositions are static quests offered by the postmasters of the three 
 
 ---
 
-### Proposition 14: Transcontinental Corridor Assessment (Kowloon, chains from 13)
+### Quest 14: Transcontinental Corridor Assessment (Kowloon, chains from 13)
 
 **File:** `14.prop`
 
@@ -884,7 +884,7 @@ Roc Road propositions are static quests offered by the postmasters of the three 
 
 ---
 
-### Proposition Summary Table
+### Quest Summary Table
 
 | ID | Title | Type | Offerer | Prereq | Min Lvl | Chain |
 |----|-------|------|---------|--------|---------|-------|
@@ -905,9 +905,9 @@ Roc Road propositions are static quests offered by the postmasters of the three 
 - **Standalone:** 6 (Predator Cull), 9 (Convoy Route Security), 12 (Ruin Suppression)
 
 **Thematic distribution:**
-- Midgaard propositions focus on law enforcement, infrastructure protection, and Reckoning-faction academic access
-- Kiess propositions focus on convoy commerce, route redundancy, and syndic insurance logistics
-- Kowloon propositions focus on diplomatic courier routes, full-corridor visibility, and transcontinental supply chain integrity
+- Midgaard quests focus on law enforcement, infrastructure protection, and Reckoning-faction academic access
+- Kiess quests focus on convoy commerce, route redundancy, and syndic insurance logistics
+- Kowloon quests focus on diplomatic courier routes, full-corridor visibility, and transcontinental supply chain integrity
 
 ---
 
@@ -925,5 +925,5 @@ Roc Road propositions are static quests offered by the postmasters of the three 
 11. Verify all vnums within `3201-3299` range.
 12. Verify all external links preserved (see External Link Inventory).
 13. Verify no vnum mentions in any description text.
-14. Create static proposition files `6.prop` through `14.prop` in `propositions/` directory per the Propositions Plan.
+14. Create static quest files `6.prop` through `14.prop` in `quests/` directory per the Quests Plan.
 15. Run `cd src && make unit-tests` to validate.

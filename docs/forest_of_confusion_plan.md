@@ -490,18 +490,18 @@ Replace legacy generic drops with forest-specific equipment and utility objects.
 - Named exits must be discoverable in room descriptions or extra descriptions.
 - Extra descriptions chain from room description anchors (no orphan keywords).
 
-## Propositions
+## Quests
 
-Static propositions for Forest of Confusion content using IDs `25-34` (files `26.prop` through `35.prop`). These propositions are distributed across Midgaard, Kiess, and Kowloon postmasters and align with courier, customs, and containment priorities tied to the forest's confusion-mist frontier.
+Static quests for Forest of Confusion content using IDs `25-34` (files `26.prop` through `35.prop`). These quests are distributed across Midgaard, Kiess, and Kowloon postmasters and align with courier, customs, and containment priorities tied to the forest's confusion-mist frontier.
 
 Postmaster vnums:
 - **Midgaard:** `3015`
 - **Kiess:** `13001`
 - **Kowloon:** `14021`
 
-### Non-Chain Propositions
+### Non-Chain Quests
 
-#### Proposition 25 — Bell-Post Line Reopening (Kiess)
+#### Quest 25 — Bell-Post Line Reopening (Kiess)
 
 | Field | Value |
 |---|---|
@@ -523,7 +523,7 @@ Postmaster vnums:
 | **Accept message** | Kiess signal keepers cannot keep the southern bell-post line active while catrat packs keep denning under the posts and attacking runners at rope anchors. Thin the young packs around the fringe so repair crews can re-string the warning cords before the next mist surge. |
 | **Completion message** | The bell-post crews report stable footing and fewer attacks while working the line. Kiess dispatch has resumed timed bell checks on the southern verge, restoring the first layer of early warning for patrol routes entering the forest. |
 
-#### Proposition 26 — Mirrorbark Predator Census (Midgaard)
+#### Quest 26 — Mirrorbark Predator Census (Midgaard)
 
 | Field | Value |
 |---|---|
@@ -545,7 +545,7 @@ Postmaster vnums:
 | **Accept message** | Midgaard's caravan insurers need current hazard records from the Mistroute Thickets after conflicting reports about predator migration under the confusion mists. Confirm contact with each major threat type so the Granite Arcade can update courier indemnity rates and route advisories. |
 | **Completion message** | Your field confirmations let Midgaard revise its hazard tables with current data instead of old speculation. Courier contracts through Kiess can now price risk by actual predator distribution rather than blanket high-danger penalties. |
 
-#### Proposition 27 — Conclave Survey Slate Recovery (Kowloon)
+#### Quest 27 — Conclave Survey Slate Recovery (Kowloon)
 
 | Field | Value |
 |---|---|
@@ -567,7 +567,7 @@ Postmaster vnums:
 | **Accept message** | Kowloon's magistrate-couriers are assembling a legal archive of abandoned Conclave claims that still affect northern customs rulings. Retrieve a readable survey slate from the Forest of Confusion so the city can challenge lingering paper rights tied to dead field stations. |
 | **Completion message** | The recovered slate has been transferred to Kowloon's archive clerks for transcription and seal verification. Magistrate aides confirm it contains route geometry that supports nullifying several obsolete Conclave-era toll assertions. |
 
-#### Proposition 28 — Neogi Warrant Service (Kiess)
+#### Quest 28 — Neogi Warrant Service (Kiess)
 
 | Field | Value |
 |---|---|
@@ -589,7 +589,7 @@ Postmaster vnums:
 | **Accept message** | Kiess has authorized a direct warrant against the Neogi ruler coordinating kidnappings from rope-line detachments and salvage crews. Serve the warrant in the warrens and end the command node directing those raids. |
 | **Completion message** | With the Neogi ruler eliminated, Kiess scouts report fragmented slave-taking bands rather than organized raids. Missing-person alerts from the southern camps have already dropped, and warren pressure on channel crossings is easing. |
 
-#### Proposition 29 — Ashen Lattice Containment Sweep (Midgaard)
+#### Quest 29 — Ashen Lattice Containment Sweep (Midgaard)
 
 | Field | Value |
 |---|---|
@@ -611,11 +611,11 @@ Postmaster vnums:
 | **Accept message** | Midgaard's herbal and timber consignments are being rejected as contaminated after passing near the Ashen Lattice scars. Clear representative blight carriers in the scar band so inspectors can certify outbound cargo again. |
 | **Completion message** | Quarantine clerks confirm lower active spore density along inspected routes through the scar band. Midgaard's receiving houses have resumed normal intake for stamped Kiess manifests instead of automatic rejection. |
 
-### Chain Propositions
+### Chain Quests
 
 #### Kiess Wardline Restoration Chain (30-32)
 
-##### Proposition 30 — Wardline Reconsolidation
+##### Quest 30 — Wardline Reconsolidation
 
 | Field | Value |
 |---|---|
@@ -637,7 +637,7 @@ Postmaster vnums:
 | **Accept message** | Kiess ward engineers cannot reset the old druidic marker ring while revenants and greater broken ones keep overrunning the scar perimeter at dusk. Break both threat groups so a repair team can hold position long enough to re-ink the ward lattice. |
 | **Completion message** | Engineers held the perimeter through a full mist cycle and re-established the first wardline interval. The forest still shifts, but the repaired markers now give patrol captains a reliable baseline for route triangulation. |
 
-##### Proposition 31 — Yugoloth Contract Severance
+##### Quest 31 — Yugoloth Contract Severance
 
 | Field | Value |
 |---|---|
@@ -659,7 +659,7 @@ Postmaster vnums:
 | **Accept message** | Intercepted tablets indicate Ymmas hired extraplanar muscle to hold his cabin approaches while he continues experiments in the inner rooms. Eliminate the guardian yugoloth and collapse that contract line before Kiess commits a full strike team. |
 | **Completion message** | The yugoloth's presence has ended, and the cabin perimeter no longer shows coordinated outsider tactics. Kiess command has authorized the final assault window on Ymmas's sanctum while his defenses are still destabilized. |
 
-##### Proposition 32 — Ymmas Lair Strike
+##### Quest 32 — Ymmas Lair Strike
 
 | Field | Value |
 |---|---|
@@ -683,7 +683,7 @@ Postmaster vnums:
 
 #### Kowloon Deep-Courier Security Chain (33-34)
 
-##### Proposition 33 — Cave Route Pacification
+##### Quest 33 — Cave Route Pacification
 
 | Field | Value |
 |---|---|
@@ -705,7 +705,7 @@ Postmaster vnums:
 | **Accept message** | Kowloon courier lantern crews are testing a cave-linked relay route to bypass surface fog banks, but manscorpian patrols are collapsing marker lines before runners can map safe intervals. Remove both common patrol castes so survey crews can complete their relay chart. |
 | **Completion message** | The cave relay team completed a full marker pass with only routine resistance. Kowloon has approved provisional use of the subterranean courier segment for high-priority winter dispatches. |
 
-##### Proposition 34 — Chitin Crown Decapitation
+##### Quest 34 — Chitin Crown Decapitation
 
 | Field | Value |
 |---|---|

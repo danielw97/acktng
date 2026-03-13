@@ -2582,8 +2582,8 @@ D2
 0 -1 3146
 S
 #3127
-@@WThe Proposition Exchange@@N~
-A bureaucratic trading hall where @@cchartered contracts@@N, tactical commissions, and legal propositions are negotiated and stamped with civic authority. The room is divided into consultation booths separated by wooden partitions, each equipped with a writing desk, ink well, and a brass seal press. A central counter staffed by clerks handles the formal registration of agreements, and a wall of pigeonhole shelving behind them stores active contracts sorted by category and expiry date. The air is heavy with the smell of fresh ink and hot sealing wax, and the murmur of low-voiced negotiation provides a constant background hum.
+@@WThe Quest Exchange@@N~
+A bureaucratic trading hall where @@cchartered contracts@@N, tactical commissions, and legal quests are negotiated and stamped with civic authority. The room is divided into consultation booths separated by wooden partitions, each equipped with a writing desk, ink well, and a brass seal press. A central counter staffed by clerks handles the formal registration of agreements, and a wall of pigeonhole shelving behind them stores active contracts sorted by category and expiry date. The air is heavy with the smell of fresh ink and hot sealing wax, and the murmur of low-voiced negotiation provides a constant background hum.
 ~
 17420 11
 D2
@@ -4764,9 +4764,9 @@ A veteran logistician whose organized workspace reflects decades of military sup
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
 #3155
-clerk proposition~
-The Proposition Clerk~
-The Proposition Clerk arranges stamped contracts in neat stacks, a sigil-press at her elbow.
+clerk quest~
+The Quest Clerk~
+The Quest Clerk arranges stamped contracts in neat stacks, a sigil-press at her elbow.
 ~
 A precise bureaucrat who trades in legal wards, sealed favors, and tactical charters. Her meticulous record-keeping and knowledge of @@WMidgaard@@N's regulatory framework make her an essential intermediary for anyone operating within the city's legal system.
 ~
@@ -7435,7 +7435,7 @@ M 0 3154 1 3126       The invasion quartermaster
 G 0 3172 100 
 G 0 3173 100 
 G 0 3174 100 
-M 0 3155 1 3127       The proposition clerk
+M 0 3155 1 3127       The quest clerk
 G 0 3175 100 
 G 0 3176 100 
 G 0 3177 100 
