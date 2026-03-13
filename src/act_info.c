@@ -3365,13 +3365,11 @@ void do_commands(CHAR_DATA *ch, char *argument)
          show_only = 4;
       else if (!str_prefix(arg1, "objects") || !str_prefix(arg1, "manipulation"))
          show_only = 5;
-      else if (!str_prefix(arg1, "intermud") || !str_prefix(arg1, "imc"))
-         show_only = 6;
       else if (!str_prefix(arg1, "imm"))
-         show_only = 7;
+         show_only = 6;
    }
 
-   for (col = 0; col < 8; col++)
+   for (col = 0; col < 7; col++)
    {
       sprintf(show_table[col].buf, "%s:\n\r", cmd_group_names[col]);
       show_table[col].col = 0;
@@ -3411,7 +3409,7 @@ void do_commands(CHAR_DATA *ch, char *argument)
    }
 
    send_to_char(buf1, ch);
-   for (col = 0; col < 8; col++)
+   for (col = 0; col < 7; col++)
    {
       if ((show_only > -1) && (show_only != col))
          continue;
