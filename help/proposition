@@ -10,19 +10,20 @@ rewards. You can hold up to @@Y3@@N propositions at once.
     Ask a postman for a random dynamic proposition and place it in a free slot.
 
   proposition list
-    While with a postman, view all available static propositions and
-    their pseudo-level range requirements.
+    While with a mob that offers static propositions, view available static
+    propositions and their pseudo-level range requirements.
 
   proposition accept <number>
-    While with a postman, accept the numbered static proposition from
-    @@Yproposition list@@N into a free slot (only offered by that specific
-    postmaster).
+    While with the offering mob, accept the numbered static proposition from
+    @@Yproposition list@@N into a free slot.
 
   proposition status
     View progress for every active proposition slot.
 
   proposition complete
-    While with a postman, turn in one completed proposition for rewards.
+    Turn in one completed proposition for rewards.
+    Dynamic propositions require a postman; static propositions require the
+    same mob that offered them.
 
   proposition cancel <slot#>
     Cancel the proposition in the given slot (1-3).
@@ -38,8 +39,8 @@ rewards. You can hold up to @@Y3@@N propositions at once.
      Defeat a specific number of one target mob type.
 
 @@WStatic proposition behavior@@N
-- Static propositions are predefined templates offered by postmen.
-- Each static proposition is tied to a specific postmaster NPC vnum.
+- Static propositions are predefined templates offered by specific mobs.
+- Each static proposition is tied to a specific NPC.
 - Each static proposition has minimum and maximum pseudo-level requirements.
 - After a static proposition is completed and turned in, it is marked complete
   for that character.
@@ -47,12 +48,14 @@ rewards. You can hold up to @@Y3@@N propositions at once.
   cannot be accepted again.
 
 @@WRewards@@N
-- Dynamic propositions reward gold and quest points based on pseudo level.
+- Dynamic propositions reward gold, experience, and quest points based on pseudo level.
 - Static propositions can define fixed gold/quest-point rewards.
 - Static propositions may also grant item rewards on completion.
 
 @@WNotes@@N
-- You must be with a postman for @@Yrequest@@N, @@Ylist@@N, @@Yaccept@@N, and @@Ycomplete@@N.
+- You must be with a postman for @@Yrequest@@N and dynamic @@Ycomplete@@N turn-ins.
+- @@Ylist@@N/@@Yaccept@@N require the matching static-offerer mob to be present.
+- Static @@Ycomplete@@N turn-ins require the same offering mob.
 - @@Ystatus@@N and @@Ycancel@@N can be used anywhere.
 - Cancelling a @@Ydynamic@@N proposition adds a 15 minute cooldown before
   you can request another dynamic proposition.

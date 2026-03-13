@@ -245,13 +245,24 @@ static int canonical_postmaster_vnum(int vnum)
     }
 }
 
-static bool static_prop_offered_by_postman(const STATIC_PROP_TEMPLATE *tpl, CHAR_DATA *postman)
+static CHAR_DATA *find_visible_npc_by_canonical_vnum(CHAR_DATA *ch, int vnum)
 {
-    if (tpl == NULL || postman == NULL || postman->pIndexData == NULL)
-        return FALSE;
+    CHAR_DATA *wch;
 
-    return canonical_postmaster_vnum(tpl->offerer_vnum)
-        == canonical_postmaster_vnum(postman->pIndexData->vnum);
+    if (ch == NULL || ch->in_room == NULL || vnum <= 0)
+        return NULL;
+
+    for (wch = ch->in_room->first_person; wch != NULL; wch = wch->next_in_room)
+    {
+        if (!IS_NPC(wch) || wch->pIndexData == NULL)
+            continue;
+        if (!can_see(ch, wch))
+            continue;
+        if (canonical_postmaster_vnum(wch->pIndexData->vnum) == canonical_postmaster_vnum(vnum))
+            return wch;
+    }
+
+    return NULL;
 }
 
 
@@ -338,6 +349,34 @@ static int proposition_qp(int psuedo_level)
 {
     int lvl = UMAX(1, UMIN(150, psuedo_level));
     return 1 + (19 * (lvl - 1) / 149);
+}
+
+static int proposition_exp(CHAR_DATA *ch)
+{
+    int lvl;
+    int exp;
+
+    if (ch == NULL)
+        return 0;
+
+    /*
+     * Match crusade kill EXP behavior more closely:
+     * - use mob_base for the effective pseudo-level
+     * - apply the 150-250% band at its midpoint (200%) for deterministic rewards
+     * - apply adept reduction and happy hour bonus
+     */
+    lvl = UMAX(1, UMIN(MAX_MOB_LEVEL - 1, get_psuedo_level(ch)));
+    exp = (int)((exp_table[lvl].mob_base * 200L) / 100L);
+
+    if (is_adept(ch))
+        exp /= 1000;
+
+    exp = UMIN(exp, 5000000);
+
+    if (happy_hour)
+        exp *= 2;
+
+    return UMAX(1, exp);
 }
 
 static MOB_INDEX_DATA *find_prop_mob_index(int min_level, int max_level)
@@ -469,6 +508,7 @@ static void clear_proposition_slot(CHAR_DATA *ch, int slot)
     prop->prop_reward_qp = 0;
     prop->prop_reward_item_vnum = 0;
     prop->prop_reward_item_count = 0;
+    prop->prop_static_offerer_vnum = 0;
 
     for (i = 0; i < PROP_MAX_TARGETS; i++)
     {
@@ -493,9 +533,10 @@ static void show_reward_preview(CHAR_DATA *ch, PROPOSITION_DATA *prop)
     char buf[MAX_STRING_LENGTH];
     int gold = prop->prop_static_id >= 0 ? prop->prop_reward_gold : proposition_gold(get_psuedo_level(ch));
     int qp = prop->prop_static_id >= 0 ? prop->prop_reward_qp : proposition_qp(get_psuedo_level(ch));
+    int exp = proposition_exp(ch);
 
-    sprintf(buf, "@@WReward on completion:@@N @@Y%d@@N gold, @@Y%d@@N quest point%s",
-            gold, qp, qp == 1 ? "" : "s");
+    sprintf(buf, "@@WReward on completion:@@N @@Y%d@@N gold, @@Y%d@@N exp, @@Y%d@@N quest point%s",
+            gold, exp, qp, qp == 1 ? "" : "s");
     if (prop->prop_reward_item_vnum > 0 && prop->prop_reward_item_count > 0)
     {
         OBJ_INDEX_DATA *oidx = get_obj_index(prop->prop_reward_item_vnum);
@@ -508,7 +549,7 @@ static void show_reward_preview(CHAR_DATA *ch, PROPOSITION_DATA *prop)
     send_to_char(buf, ch);
 }
 
-static void proposition_list_static(CHAR_DATA *ch, CHAR_DATA *postman)
+static void proposition_list_static(CHAR_DATA *ch)
 {
     int i;
     int ps_lvl;
@@ -523,7 +564,7 @@ static void proposition_list_static(CHAR_DATA *ch, CHAR_DATA *postman)
         if (tpl->id >= 0 && tpl->id < PROP_MAX_STATIC_PROPOSITIONS &&
             ch->pcdata->completed_static_props[tpl->id])
             continue;
-        if (!static_prop_offered_by_postman(tpl, postman))
+        if (find_visible_npc_by_canonical_vnum(ch, tpl->offerer_vnum) == NULL)
             continue;
         if (!static_prop_prerequisite_met(ch, tpl))
             continue;
@@ -561,7 +602,7 @@ static bool static_prop_prerequisite_met(CHAR_DATA *ch, const STATIC_PROP_TEMPLA
     return ch->pcdata->completed_static_props[tpl->prerequisite_static_id];
 }
 
-static void proposition_accept_static(CHAR_DATA *ch, CHAR_DATA *postman, int list_number)
+static void proposition_accept_static(CHAR_DATA *ch, int list_number)
 {
     int slot, i;
     const STATIC_PROP_TEMPLATE *tpl;
@@ -576,9 +617,9 @@ static void proposition_accept_static(CHAR_DATA *ch, CHAR_DATA *postman, int lis
 
     tpl = &static_prop_table[list_number - 1];
 
-    if (!static_prop_offered_by_postman(tpl, postman))
+    if (find_visible_npc_by_canonical_vnum(ch, tpl->offerer_vnum) == NULL)
     {
-        send_to_char("That postmaster does not offer that static proposition.\n\r", ch);
+        send_to_char("That static proposition is not being offered here.\n\r", ch);
         return;
     }
 
@@ -625,6 +666,7 @@ static void proposition_accept_static(CHAR_DATA *ch, CHAR_DATA *postman, int lis
     clear_proposition_slot(ch, slot);
     prop = &ch->pcdata->propositions[slot];
     prop->prop_type = tpl->type;
+    prop->prop_static_offerer_vnum = canonical_postmaster_vnum(tpl->offerer_vnum);
     prop->prop_num_targets = tpl->num_targets;
     prop->prop_kill_needed = tpl->kill_needed;
     prop->prop_static_id = tpl->id;
@@ -933,6 +975,7 @@ void proposition_status(CHAR_DATA *ch)
 void proposition_complete(CHAR_DATA *ch, CHAR_DATA *postman)
 {
     int slot;
+    bool has_completed = FALSE;
     char buf[MAX_STRING_LENGTH];
 
     if (IS_NPC(ch))
@@ -942,21 +985,45 @@ void proposition_complete(CHAR_DATA *ch, CHAR_DATA *postman)
     {
         PROPOSITION_DATA *prop = &ch->pcdata->propositions[slot];
             int gold_reward;
+        int exp_reward;
         int qp_reward;
         int i;
         const STATIC_PROP_TEMPLATE *tpl;
+        CHAR_DATA *turnin_npc = NULL;
 
         if (prop->prop_type == PROP_TYPE_NONE || !prop->prop_completed)
             continue;
 
+        has_completed = TRUE;
+
+        if (prop->prop_static_id >= 0)
+        {
+            int required_vnum = prop->prop_static_offerer_vnum;
+            tpl = find_static_prop_template(prop->prop_static_id);
+            if (required_vnum <= 0 && tpl != NULL)
+                required_vnum = canonical_postmaster_vnum(tpl->offerer_vnum);
+            turnin_npc = find_visible_npc_by_canonical_vnum(ch, required_vnum);
+            if (turnin_npc == NULL)
+                continue;
+        }
+        else
+        {
+            turnin_npc = postman;
+            if (turnin_npc == NULL)
+                continue;
+        }
+
         gold_reward = prop->prop_static_id >= 0 ? prop->prop_reward_gold : proposition_gold(get_psuedo_level(ch));
+        exp_reward = proposition_exp(ch);
         qp_reward = prop->prop_static_id >= 0 ? prop->prop_reward_qp : proposition_qp(get_psuedo_level(ch));
 
-        act("$N reviews your completed proposition and nods approvingly.", ch, NULL, postman, TO_CHAR);
-        act("$N reviews $n's completed proposition and nods approvingly.", ch, NULL, postman, TO_ROOM);
+        act("$N reviews your completed proposition and nods approvingly.", ch, NULL, turnin_npc, TO_CHAR);
+        act("$N reviews $n's completed proposition and nods approvingly.", ch, NULL, turnin_npc, TO_ROOM);
 
         send_to_char("\n\r@@GProposition complete! You receive:@@N\n\r", ch);
         sprintf(buf, "  @@Y%d@@N gold coins\n\r", gold_reward);
+        send_to_char(buf, ch);
+        sprintf(buf, "  @@Y%d@@N experience\n\r", exp_reward);
         send_to_char(buf, ch);
         sprintf(buf, "  @@Y%d@@N quest point%s\n\r", qp_reward, qp_reward == 1 ? "" : "s");
         send_to_char(buf, ch);
@@ -973,6 +1040,7 @@ void proposition_complete(CHAR_DATA *ch, CHAR_DATA *postman)
         }
 
         ch->gold += gold_reward;
+        gain_exp(ch, exp_reward);
         ch->quest_points += qp_reward;
         ch->pcdata->proposition_points += 1;
 
@@ -1002,6 +1070,8 @@ void proposition_complete(CHAR_DATA *ch, CHAR_DATA *postman)
 
     if (!proposition_active(ch))
         send_to_char("You have no proposition to turn in.\n\r", ch);
+    else if (has_completed)
+        send_to_char("You cannot turn that in here yet. Dynamic propositions need a postman; static propositions must be turned in to their offering mob.\n\r", ch);
     else
         send_to_char("You have no completed proposition to turn in yet.\n\r", ch);
 }
@@ -1195,18 +1265,19 @@ void do_proposition(CHAR_DATA *ch, char *argument)
             }
         }
 
-        if (postman == NULL)
-        {
-            send_to_char("You need to be with a postman to do that.\n\r", ch);
-            return;
-        }
-
         if (!str_prefix(arg, "request"))
+        {
+            if (postman == NULL)
+            {
+                send_to_char("You need to be with a postman to do that.\n\r", ch);
+                return;
+            }
             proposition_request(ch, postman);
+        }
         else if (!str_prefix(arg, "complete"))
             proposition_complete(ch, postman);
         else if (!str_prefix(arg, "list"))
-            proposition_list_static(ch, postman);
+            proposition_list_static(ch);
         else
         {
             if (!is_number(arg2))
@@ -1214,7 +1285,7 @@ void do_proposition(CHAR_DATA *ch, char *argument)
                 send_to_char("Usage: proposition accept <number>\n\r", ch);
                 return;
             }
-            proposition_accept_static(ch, postman, atoi(arg2));
+            proposition_accept_static(ch, atoi(arg2));
         }
 
         return;
