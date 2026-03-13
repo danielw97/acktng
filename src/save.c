@@ -428,6 +428,16 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
                     prop->quest_reward_item_vnum,
                     prop->quest_reward_item_count);
             fprintf(fp, "PropStaticOfferer%d %d\n", i, prop->quest_static_offerer_vnum);
+            fprintf(fp, "PropCartArea%d %d\n", i, prop->quest_cartography_area_num);
+            fprintf(fp, "PropCartRooms%d %d\n", i, prop->quest_cartography_room_count);
+            fprintf(fp, "PropCartSeen%d %d\n", i, prop->quest_cartography_explored_count);
+            {
+               int b;
+               fprintf(fp, "PropCartBits%d", i);
+               for (b = 0; b < QUEST_CARTOGRAPHY_BYTES; b++)
+                  fprintf(fp, " %u", (unsigned int)prop->quest_cartography_bits[b]);
+               fprintf(fp, "\n");
+            }
          }
          fprintf(fp, "PropStaticDoneCap %d\n", QUEST_MAX_STATIC_QUESTS);
          for (i = 0; i < QUEST_MAX_STATIC_QUESTS; i++)
@@ -1357,6 +1367,32 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             if (sscanf(word, "PropStaticOfferer%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
             {
                ch->pcdata->quests[quest_i].quest_static_offerer_vnum = fread_number(fp);
+               fMatch = TRUE;
+               break;
+            }
+            if (sscanf(word, "PropCartArea%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            {
+               ch->pcdata->quests[quest_i].quest_cartography_area_num = fread_number(fp);
+               fMatch = TRUE;
+               break;
+            }
+            if (sscanf(word, "PropCartRooms%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            {
+               ch->pcdata->quests[quest_i].quest_cartography_room_count = fread_number(fp);
+               fMatch = TRUE;
+               break;
+            }
+            if (sscanf(word, "PropCartSeen%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            {
+               ch->pcdata->quests[quest_i].quest_cartography_explored_count = fread_number(fp);
+               fMatch = TRUE;
+               break;
+            }
+            if (sscanf(word, "PropCartBits%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            {
+               int b;
+               for (b = 0; b < QUEST_CARTOGRAPHY_BYTES; b++)
+                  ch->pcdata->quests[quest_i].quest_cartography_bits[b] = (unsigned char)fread_number(fp);
                fMatch = TRUE;
                break;
             }

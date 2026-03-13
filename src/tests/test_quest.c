@@ -10,6 +10,7 @@ time_t current_time;
 
 void quest_obj_notify(CHAR_DATA *ch, OBJ_DATA *obj);
 void quest_kill_notify(CHAR_DATA *ch, CHAR_DATA *victim);
+void quest_room_notify(CHAR_DATA *ch, ROOM_INDEX_DATA *room);
 void clear_quest(CHAR_DATA *ch);
 void quest_cancel(CHAR_DATA *ch, int slot);
 void quest_load_static_templates(void);
@@ -264,9 +265,59 @@ static void test_clear_quest_resets_all_slots(void)
         assert(ch.pcdata->quests[i].quest_completed == FALSE);
         assert(ch.pcdata->quests[i].quest_static_id == -1);
         assert(ch.pcdata->quests[i].quest_reward_item_vnum == 0);
+        assert(ch.pcdata->quests[i].quest_cartography_area_num == -1);
+        assert(ch.pcdata->quests[i].quest_cartography_room_count == 0);
+        assert(ch.pcdata->quests[i].quest_cartography_explored_count == 0);
     }
 }
 
+
+
+static void test_cartography_marks_room_once_and_completes(void)
+{
+    PC_DATA pc;
+    CHAR_DATA ch = make_char(&pc);
+    AREA_DATA area;
+    ROOM_INDEX_DATA room1;
+    ROOM_INDEX_DATA room2;
+    BUILD_DATA_LIST node1;
+    BUILD_DATA_LIST node2;
+
+    memset(&area, 0, sizeof(area));
+    memset(&room1, 0, sizeof(room1));
+    memset(&room2, 0, sizeof(room2));
+    memset(&node1, 0, sizeof(node1));
+    memset(&node2, 0, sizeof(node2));
+
+    area.area_num = 77;
+    area.first_area_room = &node1;
+    room1.area = &area;
+    room2.area = &area;
+
+    node1.data = &room1;
+    node1.next = &node2;
+    node2.data = &room2;
+
+    ch.pcdata->quests[0].quest_type = QUEST_TYPE_CARTOGRAPHY;
+    ch.pcdata->quests[0].quest_cartography_area_num = 77;
+    ch.pcdata->quests[0].quest_cartography_room_count = 2;
+    ch.pcdata->quests[0].quest_cartography_explored_count = 0;
+
+    reset_counters();
+    quest_room_notify(&ch, &room1);
+    assert(ch.pcdata->quests[0].quest_cartography_explored_count == 1);
+    assert(ch.pcdata->quests[0].quest_completed == FALSE);
+    assert(save_calls == 1);
+
+    quest_room_notify(&ch, &room1);
+    assert(ch.pcdata->quests[0].quest_cartography_explored_count == 1);
+    assert(save_calls == 1);
+
+    quest_room_notify(&ch, &room2);
+    assert(ch.pcdata->quests[0].quest_cartography_explored_count == 2);
+    assert(ch.pcdata->quests[0].quest_completed == TRUE);
+    assert(save_calls == 2);
+}
 
 static void test_cancel_dynamic_sets_cooldown_and_clears_slot(void)
 {
@@ -368,6 +419,7 @@ int main(void)
     test_kill_progress_works_for_nonzero_slot();
     test_kill_notify_ignores_non_matching_target();
     test_clear_quest_resets_all_slots();
+    test_cartography_marks_room_once_and_completes();
     test_cancel_dynamic_sets_cooldown_and_clears_slot();
     test_cancel_static_does_not_set_cooldown();
     test_loads_static_quests_with_messages_from_files();
