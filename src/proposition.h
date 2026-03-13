@@ -23,7 +23,7 @@
 
 /* Maximum simultaneous quests on a player */
 #define PROP_MAX_QUESTS   3
-#define PROP_MAX_STATIC_QUESTS 48
+#define PROP_MAX_STATIC_QUESTS 62
 
 /* ------------------------------------------------------------------
  * Function prototypes
