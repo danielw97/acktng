@@ -81,6 +81,13 @@ The Woodland is therefore a local proof of Midgaard's larger theme: governance i
 - Midgaard labor and militia slang around "variance," "blind routes," and "escort only" policy is partly rooted in repeated southern-wood incidents.
 - The Woodland provides a nearby theater for quests about administrative overreach, jurisdictional gaps, and falsified reports.
 
+### Rakuen
+
+- Rakuen lies deeper south beyond the Woodland and depends on this unstable corridor for grain supplements, medicine, civic mail, and labor movement.
+- Woodland "variance" is therefore not abstract: every path closure, forged escort seal, or territorial fight directly translates into shortages and governance stress inside Rakuen.
+- During Cinderteeth ash years, visibility collapse and poisoned runoff amplified this effect, converting routine route uncertainty into city-scale supply emergencies.
+- Contracts between Rakuen dispatch houses and Woodland path wardens are a major lore object class (writ boards, route tags, paid-guidance seals, breach notices).
+
 ### Sepulchur Pasture
 
 - Both areas derive from the same southern fringe history beyond the ninth milestone.
