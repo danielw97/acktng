@@ -3387,6 +3387,7 @@ S
 M 169 spec_keep_physical_captain
 M 170 spec_keep_elemental_captain
 M 183 spec_hermit_archon
+M 181 spec_sanctum_keeper
 S
 #OBJFUNS
 O 197 objfun_healing
