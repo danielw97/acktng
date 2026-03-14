@@ -464,6 +464,18 @@ void print_spec_lookup(char *buf)
 }
 
 /*
+ * spec_handle_damage — called from do_damage() whenever an NPC with a
+ * spec_fun takes a hit.  Dispatches to the per-spec damage callback so
+ * each special can react to incoming element damage without coupling
+ * the core damage code to individual boss implementations.
+ */
+void spec_handle_damage(CHAR_DATA *victim, int element, int dam)
+{
+   if (victim->spec_fun == spec_keep_elemental_captain)
+      spec_keep_elemental_captain_damage(victim, element, dam);
+}
+
+/*
  * Core procedure for dragons.
  */
 bool dragon(CHAR_DATA *ch, char *spell_name)

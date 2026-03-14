@@ -3,6 +3,7 @@
 #endif
 #include "magic.h"
 #include "cloak.h"
+#include "special.h"
 
 #include <stdio.h>
 #include <stdlib.h> /* For div_t, div() */
@@ -741,12 +742,9 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
         sp_dam_message(NULL, ch, victim, dam, element, dt, critical);
     victim->hit -= dam;
 
-    /* Track elements received by NPCs with special functions.
-     * spec_keep_elemental_captain (and similar bosses) read spec_behavior2
-     * at cast time to determine whether opposing element was applied during
-     * the charge window. */
+    /* Notify spec damage handlers so boss specials can react to element hits. */
     if (dam > 0 && IS_NPC(victim) && victim->spec_fun != NULL)
-        victim->spec_behavior2 |= element;
+        spec_handle_damage(victim, element, dam);
 
     if (!IS_NPC(victim))
         check_adrenaline(victim, dam);

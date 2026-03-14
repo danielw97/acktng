@@ -88,4 +88,10 @@ char *rev_spec_lookup(void *func);
 void print_spec_lookup(char *buf);
 bool is_player_summon_special(SPEC_FUN *spec_fun);
 
+/* Damage dispatch — call from do_damage() for any NPC with a spec_fun */
+void spec_handle_damage(CHAR_DATA *victim, int element, int dam);
+
+/* Per-spec damage callbacks */
+void spec_keep_elemental_captain_damage(CHAR_DATA *ch, int element, int dam);
+
 #endif

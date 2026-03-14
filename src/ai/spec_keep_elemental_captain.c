@@ -38,6 +38,19 @@
  *                    spec_fun takes a hit.
  */
 
+/* ---------- damage handler ---------- */
+
+/*
+ * Called by special.c:spec_handle_damage() whenever this mob takes a hit.
+ * ORs the incoming element into spec_behavior2 so the cast-round check
+ * can detect whether the opposing element was applied during the charge.
+ */
+void spec_keep_elemental_captain_damage(CHAR_DATA *ch, int element, int dam)
+{
+    (void)dam;
+    ch->spec_behavior2 |= element;
+}
+
 /* ---------- element casts ---------- */
 
 static void do_fire_blast(CHAR_DATA *ch)
