@@ -485,6 +485,8 @@ const struct lookup_type tab_mob_flags[] = {
     {"quartermaster", ACT_QUARTERMASTER, NO_USE},
     {"invasion", ACT_INVASION, NO_USE},
     {"noassist", ACT_NOASSIST, 5000}, /*  mob is designed to not assist no matter what*/
+    {"day_only", ACT_DAYONLY, NO_USE},
+    {"night_only", ACT_NIGHTONLY, NO_USE},
     {NULL, 0}};
 
 /* New bits to handle how mobs act */
@@ -926,7 +928,7 @@ const struct lookup_type tab_mob_race_mods[] = {
 
 /* Now for the functions */
 
-unsigned long int table_lookup(const struct lookup_type *table, char *name)
+unsigned long long int table_lookup(const struct lookup_type *table, char *name)
 {
    int a;
 
@@ -939,7 +941,7 @@ unsigned long int table_lookup(const struct lookup_type *table, char *name)
    return /* table[0].value-1  */ 0;
 }
 
-char *rev_table_lookup(const struct lookup_type *table, unsigned long int number)
+char *rev_table_lookup(const struct lookup_type *table, unsigned long long int number)
 {
    int a;
 
@@ -951,7 +953,7 @@ char *rev_table_lookup(const struct lookup_type *table, unsigned long int number
 
 /* spec: fixed to not assume contiguous bit use */
 
-char *bit_table_lookup(const struct lookup_type *table, unsigned long int number)
+char *bit_table_lookup(const struct lookup_type *table, unsigned long long int number)
 {
    int a;
    static char buf[MAX_STRING_LENGTH];
@@ -1030,7 +1032,7 @@ void wide_table_printout(const struct lookup_type *table, char *buf)
    return;
 }
 
-char *show_values(const struct lookup_type *table, int value, bool fBit)
+char *show_values(const struct lookup_type *table, unsigned long long int value, bool fBit)
 {
 
    char tmp[MAX_STRING_LENGTH];

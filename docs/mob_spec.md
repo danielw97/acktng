@@ -26,6 +26,8 @@ A list of mobile records, each introduced by `#<vnum>`, terminated by `#0`:
 `<long_descr>` is stricter: it must be exactly one text line, followed by a newline, followed by a line containing only `~`.
 There is no valid multi-line alternative for mob `<long_descr>`; under no circumstances may `<long_descr>` text span multiple lines.
 
+`<act>` is parsed as an unsigned 64-bit bitvector. This allows mobile flags above the legacy 32-bit range (for example `day_only`/`night_only`) to be saved and loaded correctly.
+
 Optional extension blocks (detected by leading marker):
 
 - `! <class> <clan> <race> <position> <skills> <cast> <def>`
@@ -247,6 +249,15 @@ Builder note: mobs that should remain in place and not wander (for example, gate
 - `no_blood` = `268435456`
 - `invasion` = `536870912` (runtime-only flag; do not set in area files)
 - `noassist` = `1073741824`
+- `day_only` = `2147483648`
+- `night_only` = `4294967296`
+
+Time-restriction behavior for `day_only` / `night_only`:
+
+- `day_only`: mobile can only spawn and remain active during daytime.
+- `night_only`: mobile can only spawn and remain active during nighttime.
+- If day/night changes while the mobile is fighting, it is not extracted mid-combat; it is extracted as soon as it is no longer fighting.
+- If both flags are set simultaneously, runtime treats the mobile as unrestricted (conflicting configuration fallback).
 
 Legacy keyword note from `tab_mob_flags` in `src/buildtab.c`:
 

@@ -1191,7 +1191,7 @@ void load_mobiles(FILE *fp)
       pMobIndex->long_descr[0] = UPPER(pMobIndex->long_descr[0]);
       pMobIndex->description[0] = UPPER(pMobIndex->description[0]);
 
-      pMobIndex->act = fread_number(fp) | ACT_IS_NPC;
+      pMobIndex->act = fread_number_ull(fp) | ACT_IS_NPC;
       pMobIndex->affected_by = fread_number(fp);
       pMobIndex->pShop = NULL;
       pMobIndex->alignment = fread_number(fp);
@@ -2324,6 +2324,14 @@ void reset_area(AREA_DATA *pArea)
             break;
          }
 
+         if (!((IS_SET(pMobIndex->act, ACT_DAYONLY) && IS_SET(pMobIndex->act, ACT_NIGHTONLY)))
+             && ((IS_SET(pMobIndex->act, ACT_DAYONLY) && !IS_DAYTIME())
+                 || (IS_SET(pMobIndex->act, ACT_NIGHTONLY) && IS_DAYTIME())))
+         {
+            last = FALSE;
+            break;
+         }
+
          mob = create_mobile(pMobIndex);
          just_loaded = TRUE;
 
@@ -3147,6 +3155,56 @@ long fread_number(FILE *fp)
 
    return number;
 }
+
+unsigned long long fread_number_ull(FILE *fp)
+{
+   unsigned long long number;
+   bool sign;
+   char c;
+
+   do
+   {
+      c = getc(fp);
+   } while (isspace(c));
+
+   number = 0;
+
+   sign = FALSE;
+   if (c == '+')
+   {
+      c = getc(fp);
+   }
+   else if (c == '-')
+   {
+      sign = TRUE;
+      c = getc(fp);
+   }
+
+   if (!isdigit(c))
+   {
+      char error_buf[MSL];
+      sprintf(error_buf, "%c", c);
+      bug_string("Fread_number_ull: looking for a digit, found a %s.", error_buf);
+      hang("Error in fread_number_ull");
+   }
+
+   while (isdigit(c))
+   {
+      number = number * 10 + c - '0';
+      c = getc(fp);
+   }
+
+   if (sign)
+      number = 0 - number;
+
+   if (c == '|')
+      number += fread_number_ull(fp);
+   else if (c != ' ')
+      ungetc(c, fp);
+
+   return number;
+}
+
 
 /*
  * Read to end of line (for comments).

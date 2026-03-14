@@ -290,7 +290,7 @@ void build_save_mobs()
    fprintf(SaveFile, "%s~\n", pMobIndex->short_descr);
    fprintf(SaveFile, "%s~\n", pMobIndex->long_descr);
    fprintf(SaveFile, "%s~\n", pMobIndex->description);
-   fprintf(SaveFile, "%i %i %i S\n", pMobIndex->act, pMobIndex->affected_by, pMobIndex->alignment);
+   fprintf(SaveFile, "%llu %i %i S\n", pMobIndex->act, pMobIndex->affected_by, pMobIndex->alignment);
    fprintf(SaveFile, "%i %i\n", pMobIndex->level, pMobIndex->sex);
    fprintf(SaveFile, "%li %i %i %i\n", pMobIndex->hp_mod, pMobIndex->ac_mod, pMobIndex->hr_mod, pMobIndex->dr_mod);
 

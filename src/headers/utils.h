@@ -74,7 +74,8 @@
 #define BIT_29 268435456
 #define BIT_30 536870912
 #define BIT_31 1073741824
-#define BIT_32 2147483648
+#define BIT_32 2147483648ULL
+#define BIT_33 4294967296ULL
 
 /*
  *  SSM stuff
@@ -186,6 +187,8 @@ struct char_ref_type
 #define PLAYTESTER(ch) (!IS_NPC(ch) && IS_SET((ch)->pcdata->pflags, PFLAG_TESTER))
 #define HAS_BODY(ch) (!IS_NPC(ch) || !IS_SET((ch)->act, ACT_NO_BODY))
 #define HAS_MIND(ch) (!IS_NPC(ch) || !IS_SET((ch)->act, ACT_NOMIND))
+#define IS_DAYTIME() (weather_info.sunlight == SUN_RISE || weather_info.sunlight == SUN_LIGHT)
+#define IS_NIGHTTIME() (!IS_DAYTIME())
 #define IS_WEAPON(eq) ((eq) != NULL ? (eq)->item_type == ITEM_WEAPON : FALSE)
 #define IS_SHIELD(eq) ((eq) != NULL ? (eq)->item_type == ITEM_ARMOR : FALSE)
 

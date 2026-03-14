@@ -3,12 +3,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 #include "config.h"
 #define DEC_GLOBALS_H 1
 #include "ack.h"
 
 void db_test_format_status(char *dest, size_t dest_size, const char *prefix, const char *file_name);
+
+
+time_t current_time;
+FILE *fpReserve = NULL;
+
+void hang(const char *str)
+{
+    fprintf(stderr, "hang called in test_db: %s\n", str != NULL ? str : "(null)");
+    abort();
+}
 void db_test_set_area_name(const char *file_name);
 const char *db_test_get_area_name(void);
 int object_spawn_level(int prototype_level, int requested_level);
@@ -944,6 +955,31 @@ static void test_count_file_line_no_trailing_newline(void)
     fclose(fp);
 }
 
+
+static void test_fread_number_ull_reads_large_values(void)
+{
+    FILE *fp = tmpfile();
+    assert(fp != NULL);
+
+    fputs("4294967296 ", fp);
+    rewind(fp);
+    assert(fread_number_ull(fp) == 4294967296ULL);
+
+    fclose(fp);
+}
+
+static void test_fread_number_ull_supports_or_syntax(void)
+{
+    FILE *fp = tmpfile();
+    assert(fp != NULL);
+
+    fputs("1|4294967296 ", fp);
+    rewind(fp);
+    assert(fread_number_ull(fp) == 4294967297ULL);
+
+    fclose(fp);
+}
+
 static void test_count_file_line_single_line_no_newline(void)
 {
     const char *content = "#$";
@@ -967,6 +1003,8 @@ int main(void)
     test_exit_destination_vnums_reference_defined_rooms();
     test_reset_obj_vnums_reference_defined_objects();
     test_count_file_line_normal_file();
+    test_fread_number_ull_reads_large_values();
+    test_fread_number_ull_supports_or_syntax();
     test_count_file_line_no_trailing_newline();
     test_count_file_line_single_line_no_newline();
 
