@@ -498,7 +498,7 @@ struct mob_index_data
    sh_int killed;
    sh_int sex;
    sh_int level;
-   int act;
+   unsigned long long int act;
    int affected_by;
    int aggro_list;
    sh_int alignment;
@@ -644,7 +644,7 @@ struct char_data
    int balance; /* Amount of gold (if any) in bank */
    long exp;
    int intell_exp;
-   int act;
+   unsigned long long int act;
    int config;
    int act_build;  /* for setting what ya editing */
    int build_vnum; /* the current vnum for w-y-e  */
@@ -1213,7 +1213,7 @@ struct build_data_list /* Used for storing area file data. */
 struct lookup_type
 {
    char *text;
-   unsigned long int value;
+   unsigned long long int value;
    int cost; /* if == NO_USE, only creators can set. */
 };
 
@@ -1367,6 +1367,7 @@ OID *get_obj_index args((int vnum));
 RID *get_room_index args((int vnum));
 char fread_letter args((FILE * fp));
 long fread_number args((FILE * fp));
+unsigned long long fread_number_ull args((FILE * fp));
 char *fread_string args((FILE * fp));
 void fread_to_eol args((FILE * fp));
 char *fsave_to_eol args((FILE * fp));
@@ -1651,7 +1652,7 @@ char *build_simpstrdup(char *buf); /* A plug in alternative to str_dup */
 void build_save args((void));
 extern const char *cDirs;
 int get_dir(char);
-char *show_values(const struct lookup_type *table, int value, bool fBit);
+char *show_values(const struct lookup_type *table, unsigned long long int value, bool fBit);
 
 /* Tables.c */
 const char* lookup_race_bit_value(int bit);

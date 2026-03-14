@@ -1354,19 +1354,23 @@ void build_setmob(CHAR_DATA *ch, char *argument)
    /*
     * Check for act flags
     */
-   lvalue = table_lookup(tab_mob_flags, arg2);
-   if (lvalue != 0)
    {
-      /*
-       * Then we've found a value
-       */
-      if (IS_SET(pMob->act, lvalue))
-         REMOVE_BIT(pMob->act, lvalue);
-      else
-         SET_BIT(pMob->act, lvalue);
-      send_to_char("OK.  Act Flag toggled.\n\r", ch);
-      area_modified(pArea);
-      return;
+      unsigned long long int mob_flag;
+
+      mob_flag = table_lookup(tab_mob_flags, arg2);
+      if (mob_flag != 0)
+      {
+         /*
+          * Then we've found a value
+          */
+         if (IS_SET(pMob->act, mob_flag))
+            REMOVE_BIT(pMob->act, mob_flag);
+         else
+            SET_BIT(pMob->act, mob_flag);
+         send_to_char("OK.  Act Flag toggled.\n\r", ch);
+         area_modified(pArea);
+         return;
+      }
    }
 
    /*
@@ -5384,7 +5388,7 @@ void build_listweapons(CHAR_DATA *ch, char *argument)
     */
    for (foo = 0; tab_weapon_types[foo].text != NULL; foo++)
    {
-      sprintf(buf, "@@W%2ld - @@y%10s.   ", tab_weapon_types[foo].value, tab_weapon_types[foo].text);
+      sprintf(buf, "@@W%2llu - @@y%10s.   ", (unsigned long long)tab_weapon_types[foo].value, tab_weapon_types[foo].text);
       send_to_char(buf, ch);
       if ((foo + 1) % 2 == 0)
          send_to_char("\n\r", ch);
@@ -5406,7 +5410,7 @@ void build_listliquids(CHAR_DATA *ch, char *argument)
     */
    for (foo = 0; tab_drink_types[foo].text != NULL; foo++)
    {
-      sprintf(buf, "%2ld - %12s.   ", tab_drink_types[foo].value, tab_drink_types[foo].text);
+      sprintf(buf, "%2llu - %12s.   ", (unsigned long long)tab_drink_types[foo].value, tab_drink_types[foo].text);
       send_to_char(buf, ch);
       if ((foo + 1) % 2 == 0)
          send_to_char("\n\r", ch);

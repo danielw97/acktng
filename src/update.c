@@ -841,6 +841,45 @@ void gain_condition(CHAR_DATA *ch, int iCond, int value)
  * This function takes 25% to 35% of ALL Merc cpu time.
  * -- Furey
  */
+
+static bool mob_is_time_restricted(CHAR_DATA *ch)
+{
+   if (!IS_NPC(ch))
+      return FALSE;
+
+   if (IS_SET(ch->act, ACT_DAYONLY) && IS_SET(ch->act, ACT_NIGHTONLY))
+      return FALSE;
+
+   if (IS_SET(ch->act, ACT_DAYONLY) && !IS_DAYTIME())
+      return TRUE;
+
+   if (IS_SET(ch->act, ACT_NIGHTONLY) && IS_DAYTIME())
+      return TRUE;
+
+   return FALSE;
+}
+
+static void purge_time_restricted_mobs(bool keep_fighting)
+{
+   CHAR_DATA *ch;
+   CHAR_DATA *ch_next;
+
+   CREF(ch_next, CHAR_NEXT);
+   for (ch = first_char; ch != NULL; ch = ch_next)
+   {
+      ch_next = ch->next;
+
+      if (!mob_is_time_restricted(ch))
+         continue;
+
+      if (keep_fighting && ch->fighting != NULL)
+         continue;
+
+      extract_char(ch, TRUE);
+   }
+   CUREF(ch_next);
+}
+
 void mobile_update(void)
 {
    CHAR_DATA *ch;
@@ -861,6 +900,13 @@ void mobile_update(void)
 
       if (!IS_NPC(ch) || ch->in_room == NULL || IS_AFFECTED(ch, AFF_CHARM))
          continue;
+
+      if (mob_is_time_restricted(ch))
+      {
+         if (ch->fighting == NULL)
+            extract_char(ch, TRUE);
+         continue;
+      }
 
       /*
        * Examine call for special procedure
@@ -1170,6 +1216,7 @@ void weather_update(void)
       for (x = 1; x < MAX_CLAN; x++)
          for (y = 1; y < MAX_CLAN; y++)
             politics_data.daily_negotiate_table[x][y] = FALSE;
+      purge_time_restricted_mobs(TRUE);
       break;
    case 12:
 
@@ -1189,6 +1236,7 @@ void weather_update(void)
    case 20:
       weather_info.sunlight = SUN_DARK;
       strcat(buf, "The night has begun.\n\r");
+      purge_time_restricted_mobs(TRUE);
       break;
 
    case 24:

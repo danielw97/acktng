@@ -308,7 +308,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
    fprintf(fp, "HpManaMove   %ld %ld %ld %ld %ld %ld\n", ch->hit, ch->hit, ch->mana, ch->max_mana, ch->move, ch->max_move);
 
    fprintf(fp, "Exp          %ld\n", ch->exp);
-   fprintf(fp, "Act          %d\n", ch->act);
+   fprintf(fp, "Act          %llu\n", ch->act);
    fprintf(fp, "Config       %d\n", ch->config);
    fprintf(fp, "Gold         %d\n", ch->gold);
    fprintf(fp, "AffectedBy   %d\n", ch->affected_by);

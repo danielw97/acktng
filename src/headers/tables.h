@@ -25,9 +25,9 @@
  *  around, comes around.                                                  *
  ***************************************************************************/
 
-extern unsigned long int table_lookup(const struct lookup_type *, char *);
-extern char *rev_table_lookup(const struct lookup_type *, unsigned long int);
-extern char *bit_table_lookup(const struct lookup_type *, unsigned long int);
+extern unsigned long long int table_lookup(const struct lookup_type *, char *);
+extern char *rev_table_lookup(const struct lookup_type *, unsigned long long int);
+extern char *bit_table_lookup(const struct lookup_type *, unsigned long long int);
 extern void table_printout(const struct lookup_type *, char *);
 extern void wide_table_printout(const struct lookup_type *, char *); /* -S- mod */
 

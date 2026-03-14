@@ -952,7 +952,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
            victim->carry_number, victim->carry_weight, victim->quest_points);
    strcat(buf1, buf);
 
-   sprintf(buf, "Age: %d.  Played: %d.  Timer: %d.  Act: %d.\n\r",
+   sprintf(buf, "Age: %d.  Played: %d.  Timer: %d.  Act: %llu.\n\r",
            get_age(victim), (int)victim->played, victim->timer, victim->act);
    strcat(buf1, buf);
 
