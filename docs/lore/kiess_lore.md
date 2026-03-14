@@ -109,3 +109,15 @@ Kiess-centric links that should remain consistent across lore and quests:
 - Kiess <-> Kowloon: enforceable labor templates for northern corridors.
 - Kiess <-> Rakuen: Emergency testimony standards during record loss. Charter consultation — three clerk delegations in the last thirty years have provided legal opinions on whether Rakuen's Southward Compact can be amended (removing self-governance provisions) without triggering the "civic dissolution" that Midgaard's Iron Compact Appeal refusal cited as a constitutional obstacle. Kiess's standing legal opinion: technically yes, practically contestable, safest with third-party review — which Kiess implicitly offers to provide. The Bloom Council has not yet accepted this offer; the Amendment Track faction may do so after the next stewardship rotation. If Kiess certifies a fourth petition, any Midgaard refusal becomes a direct institutional confrontation with Kiess's legal authority. The **Paradise Thesis archival question**: the Canopy Compacts claim an unedited copy of Rakuen's founding Paradise Thesis (with passages critical of Midgaard's registry culture intact) was smuggled to Kiess during the Violet Compact era and filed under the Syndic Council's "Received Southern Documents, Violet Era" collection. Kiess has neither confirmed nor denied this holding. The document, if it exists and if the Clerks' interpretation is correct, would provide grounds for a fourth petition that Midgaard's Charter Sovereignty arguments could not dismiss on the same grounds used in the Iron Compact Appeal refusal.
 - Kiess <-> Mafdet: debt-transfer review rights after maritime departure.
+
+## Rakuen Refusal Cycle Addendum (Kiess Legal Perspective)
+
+Kiess charter jurists classify the Rakuen annexation sequence (Southmark Petition, Ash Plea, Iron Compact Appeal) as the clearest modern example of **responsibility without incorporation**.
+
+Kiess legal schools now use the case to teach three doctrines:
+
+1. **Emergency testimony resilience:** when records are repeatedly destroyed, admissibility standards must preserve witness dignity without collapsing evidentiary thresholds.
+2. **Externalization review:** upstream powers cannot treat downstream casualties as mere statistical variance indefinitely without legitimacy erosion.
+3. **Contradiction preservation:** institutional archives should retain unresolved disagreement rather than enforce single-line narrative closure.
+
+Accordingly, Kiess advisors in Rakuen increasingly support contradiction-ledger methods and multi-city witnessing of grain, casualty, and debt records.

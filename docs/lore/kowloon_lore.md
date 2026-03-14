@@ -121,3 +121,15 @@ Kowloon's highest-impact ties in that matrix are:
 - Kowloon <-> Kiess: labor-contract legality versus throughput pressure.
 - Kowloon <-> Rakuen: Southern Grain Compact (reserve allocation dispatchable within two weeks of formal emergency declaration; activated four times in sixty years), flood-architecture knowledge exchange (Jade Magistracy engineering delegation studied Rakuen's root-weave lower terraces during the last Ledger Vigil; findings not yet shared with Rakuen), route-surcharge friction, Conclave guilt chain triangulation (Kowloon's Black Ledger and Midgaard's trade ledger are two documented transfer points; Rakuen's Garden Ledger is the third — the destination where transferred persons' testimonies were subsequently silenced through the Kel'Shadra witnessing mechanism).
 - Kowloon <-> Mafdet: manifest language and dock conversion disputes.
+
+## Rakuen Grain-Emergency and Annexation Arc Addendum
+
+Kowloon's intercity role in southern stabilization is now defined by the **North-South Grain Ladder**: a reserve-release framework that links Kowloon granary drawdowns to Rakuen-declared flood and ash emergencies.
+
+The annexation refusals by Midgaard (Southmark Petition, Ash Plea, Iron Compact Appeal) altered Kowloon doctrine in three ways:
+
+- **Logistics realism:** Kowloon plans for Rakuen as a chronic emergency partner rather than a soon-to-be annexed Midgaard district.
+- **Price-control law:** emergency price ceilings and anti-hoarding investigations are treated as civic-security functions, not market exceptions.
+- **Witness interoperability:** Kiess clerks are increasingly embedded in Kowloon-Rakuen grain audits to reduce post-crisis legitimacy disputes.
+
+Public-facing lore should frame Kowloon pragmatism as neither sentimental nor punitive: the city feeds Rakuen because corridor collapse in the south destabilizes northern commodity legality in the next season.

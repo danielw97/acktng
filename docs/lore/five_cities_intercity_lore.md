@@ -1,6 +1,6 @@
 # Lore: The Five-City Weave (Midgaard, Kowloon, Kiess, Rakuen, Mafdet)
 
-This document codifies long-arc interactions between the five major civic powers and should be treated as the reference spine for political dialogue, trade contracts, quest hooks, rumor text, and archive records that involve more than one of these cities.
+This document is the intercity canon spine for political dialogue, trade contracts, court records, quest hooks, rumor text, and archive entries involving more than one major city.
 
 ---
 
@@ -9,7 +9,7 @@ This document codifies long-arc interactions between the five major civic powers
 - **Midgaard**: inland legitimacy engine — registries, charters, sealed-warrant governance, codified arbitration. The city that other cities must reckon with regardless of whether they want to.
 - **Kowloon**: northern throughput and labor-delta coordination node. The city that moves things and counts them. Its Neon Covenant governance is the most institutionally stable of the five.
 - **Kiess**: legal-memory city built on Evermeet's ruins along Roc Road. Anti-secrecy charter doctrine, three-power governance, and the most formally principled anti-Conclave record in the five-city network.
-- **Rakuen**: southern disaster-recovery municipality and route-resilience broker. The city that carries costs the other four classify away. Three times petitioned for annexation into Midgaard. Three times refused.
+- **Rakuen**: southern disaster-recovery municipality and route-resilience broker. The city that carries costs the other four classify away. Caught between founding myth and chronic emergency. Three times petitioned for annexation into Midgaard. Three times refused.
 - **Mafdet**: maritime legalization and export conversion authority at the Saltglass Reach's terminus. The city where the inland world meets the sea and is forced to adapt or break.
 
 Together, they form a full-chain legitimacy corridor:
@@ -19,29 +19,59 @@ That chain only functions because all five are present. Remove any one and the o
 
 ---
 
-## II. Chronology of Five-City Interaction
+## II. Grand Timeline of Five-City Interaction
 
-1. **Lantern-Delta Expansion (post-Kowloon founding)**: Midgaard and Kowloon synchronize road-watch and convoy rhythm practices. Evermeet's Roc Road is the primary western trade artery during this period. Mafdet operates as an independent harbor authority with limited inland reach.
+1. **Post-Evermeet Recovery Era**: Kiess and Midgaard stabilize replacement arbitration channels while Kowloon consolidates northern collection routes.
 
-2. **Containment Bureaucracy Period (Violet Compact)**: Midgaard establishes the Sealed Names apparatus and "resettled south" mechanism — displacing populations to southern frontier settlements under welfare-language framing. Mafdet formalizes the Strandline Compact during the Fracture Era.
+2. **Lantern-Delta Expansion (post-Kowloon founding)**: Midgaard and Kowloon synchronize road-watch and convoy rhythm practices. Evermeet's Roc Road is the primary western trade artery during this period. Rakuen receives planned migration under optimistic frontier policy. Mafdet operates as an independent harbor authority with limited inland reach.
 
-3. **City Foundings and Early Five-City Era (post-Evermeet collapse)**: Kiess is founded on Evermeet's ruins and writes anti-sealed-warrant doctrine into its founding charter — a direct challenge to sealed-warrant governance. Rakuen is founded as a southern paradise city and enters official Midgaard maps as a "southern relief city" — conditional recognition without binding support obligations. The "resettled south" mechanism begins routing displaced populations specifically to Rakuen, and a Kel'Shadra witnessing office is established there for testimony suppression. Kiess and Midgaard formalize replacement arbitration channels while Kowloon expands northern supply collection.
+3. **City Foundings and Early Five-City Era (post-Evermeet collapse)**: Kiess is founded on Evermeet's ruins and writes anti-sealed-warrant doctrine into its founding charter — a direct challenge to sealed-warrant governance. Rakuen is founded as a southern paradise city and enters official Midgaard maps as a "southern relief city" — conditional recognition without binding support obligations.
 
-4. **First Annexation Attempt (early Ash-and-Iron Decades)**: Rakuen submits the **Southmark Petition** for full civic annexation to Midgaard. Midgaard refuses on grounds of ledger-compliance non-conformity. Rakuen's political class fractures along the Assimilation League / Compact Purist axis for the first time.
+4. **Containment Bureaucracy Period (Violet Compact)**: Midgaard establishes the Sealed Names apparatus and "resettled south" mechanism — displacing populations to southern frontier settlements under welfare-language framing. The "resettled south" mechanism begins routing displaced populations specifically to Rakuen, and a Kel'Shadra witnessing office is established there for testimony suppression. Kiess contests sealed-order governance. Mafdet formalizes the Strandline Compact during the Fracture Era.
 
-5. **Ash-and-Iron Shock Decades**: Cinderteeth disruptions force emergency rerouting, intensify route predation through the Eccentric Woodland, and drive multi-year rationing in Rakuen. Mafdet's role expands for high-value off-continent diversion during overland collapse windows. Kowloon's emergency grain protocols begin servicing Rakuen through what becomes the Southern Grain Compact framework.
+5. **First Annexation Attempt (early Ash-and-Iron Decades)**: Rakuen files the **Southmark Petition** as southern burden pressure outpaces local capacity. Midgaard refuses on grounds of ledger-compliance non-conformity. Rakuen's political class fractures along the Assimilation League / Compact Purist axis for the first time.
 
-6. **Second Annexation Attempt (late Ash-and-Iron)**: Rakuen submits the **Ash Plea** as an emergency humanitarian appeal. Midgaard refuses on grounds of route instability making administrative integration impractical. The joint route-stability commission meets four times and produces nothing binding. Rakuen's political class further fragments.
+6. **Ash-and-Iron Shock Decades**: Cinderteeth disruptions force emergency rerouting, intensify route predation through the Eccentric Woodland, and drive multi-year rationing in Rakuen. Mafdet's role expands for high-value off-continent diversion during overland collapse windows. Kowloon's emergency grain protocols begin servicing Rakuen through what becomes the Southern Grain Compact framework.
 
-7. **Recovery and Competitive Concord (transition era)**: All five cities cooperate on fraud suppression, anti-counterfeit protocols, and casualty-registry standards. Competition intensifies over seal authority, narrative primacy, and which city's classification is treated as final in disputed cases.
+7. **Second Annexation Attempt (late Ash-and-Iron)**: Rakuen submits the **Ash Plea** as an emergency humanitarian appeal. Midgaard refuses on grounds of route instability making administrative integration impractical. The joint route-stability commission meets four times and produces nothing binding. Rakuen's political class further fragments.
 
-8. **Third Annexation Attempt (Modern Tension Era, eleven years ago)**: Rakuen submits the **Iron Compact Appeal** — the most formally prepared petition, with Kiess legal certification and Mafdet co-signature. Midgaard refuses on constitutional charter-sovereignty grounds. The Amendment Track, Quiet Separatists, and Preservation Coalition emerge as Rakuen's three modern factions. The five-city network's internal tensions are now structured partly around whether and how Rakuen's institutional future resolves.
+8. **Recovery and Competitive Concord (transition era)**: All five cities cooperate on fraud suppression, anti-counterfeit protocols, and casualty-registry standards. Competition intensifies over seal authority, narrative primacy, and which city's classification is treated as final in disputed cases.
 
-9. **Current State**: All five cities cooperate on fraud suppression but compete over fees, narrative authority, and whose seal is treated as final. Rakuen's Quiet Separatists are developing a maritime independence track through Mafdet. Kiess holds a pending charter-consultation offer. Kowloon's Jade Magistracy is studying Rakuen's flood architecture without sharing findings. Midgaard's Continuity and Reckoning factions both have active interests in Rakuen's Garden Ledger records. The next rotation of Rakuen's Bloom Council may install an Amendment Track steward willing to submit a fourth petition.
+9. **Third Annexation Attempt (Modern Tension Era, eleven years ago)**: Rakuen submits the **Iron Compact Appeal** — the most formally prepared petition, with Kiess legal certification and Mafdet co-signature. Midgaard refuses on constitutional charter-sovereignty grounds. The Amendment Track, Quiet Separatists, and Preservation Coalition emerge as Rakuen's three modern factions. The five-city network's internal tensions are now structured partly around whether and how Rakuen's institutional future resolves.
+
+10. **Current State**: All five cities cooperate on fraud suppression but compete over fees, narrative authority, and whose seal is treated as final. High rivalry over seal finality, casualty accountability, historical narrative ownership, and unresolved annexation aftershocks. Rakuen's Quiet Separatists are developing a maritime independence track through Mafdet. Kiess holds a pending charter-consultation offer. Kowloon's Jade Magistracy is studying Rakuen's flood architecture without sharing findings. Midgaard's Continuity and Reckoning factions both have active interests in Rakuen's Garden Ledger records. The next rotation of Rakuen's Bloom Council may install an Amendment Track steward willing to submit a fourth petition.
 
 ---
 
-## III. Bilateral Relations Matrix
+## III. The Annexation Arc as Intercity Turning Point
+
+Rakuen's repeated annexation requests transformed all five-city relations, not only Midgaard-Rakuen ties.
+
+### 1) The Southmark Petition (late Lantern / early Violet)
+
+- Rakuen asked for district incorporation and direct registry integration.
+- Midgaard refused while extending subsidies.
+- Kowloon and Kiess interpreted refusal differently: Kowloon saw fiscal prudence, Kiess saw responsibility avoidance.
+
+### 2) The Ash Plea (Ash-and-Iron crisis window)
+
+- Requested emergency annexation under ashfall disaster law.
+- Midgaard again refused sovereignty transfer but opened emergency aid windows.
+- Mafdet responded by expanding mercy-freight classification for southern cargo volatility.
+
+### 3) The Iron Compact Appeal (late Ash-and-Iron)
+
+- Proposed staged legal integration to avoid sudden administrative shock.
+- Midgaard issued a definitive refusal citing precedent and liability.
+- Result: five-city institutions created indirect compensatory mechanisms while preserving non-annexation.
+
+### 4) Core Irony and Regional Consequence
+
+Rakuen, founded to reject Midgaard procedural dominance, became the city most insistent on joining that system. Midgaard, architect of formalized civic belonging, became the city most insistent on keeping Rakuen external.
+
+That contradiction now drives intercity law.
+
+## IV. Bilateral Relations Matrix (Expanded)
 
 ### 1) Midgaard ↔ Kowloon
 
@@ -179,7 +209,63 @@ This is the most politically layered bilateral relationship in the five-city net
 
 ---
 
-## IV. Multi-City Flashpoints
+### 5) Kowloon ↔ Kiess
+
+- **Alliance:** wage-template legality and anti-coercive labor contracting.
+- **Conflict:** throughput pace (Kowloon) versus procedural rigor (Kiess).
+- **Rakuen effect:** both cities co-witness emergency grain price ceilings for Rakuen declarations.
+- **Standing instrument:** rotating neutral clerk panels for large corridor wage disputes.
+
+---
+
+### 6) Kowloon ↔ Rakuen
+
+- **Alliance:** emergency grain balancing, timber diversion, anti-hoarding surveillance.
+- **Conflict:** risk surcharges, delivery-window disputes, spoilage liability.
+- **Network significance:** this pair anchors the **North-South Grain Ladder**.
+- **Standing instrument:** provisional price ceilings during declared multi-city emergency seasons.
+
+---
+
+### 7) Kowloon ↔ Mafdet
+
+- **Alliance:** northern raw goods into maritime conversion chains.
+- **Conflict:** codex mismatch, reweigh disputes, dockside labor legality conflicts.
+- **Rakuen effect:** priority queue fights when southern mercy freight competes with northern commercial shipments.
+- **Standing instrument:** bilingual cargo codex annex and emergency berth arbitration protocol.
+
+---
+
+### 8) Kiess ↔ Rakuen
+
+- **Alliance:** charter-right advisory missions, emergency testimony and anti-erasure procedures.
+- **Conflict:** Kiess legalism vs Rakuen disaster pragmatism.
+- **Annexation effect:** Kiess supports rights-based integration pathways but cannot compel Midgaard acceptance.
+- **Standing instrument:** admissibility standard for testimony when physical records are destroyed.
+
+---
+
+### 9) Kiess ↔ Mafdet
+
+- **Alliance:** debt and bonded-transfer instrument validation.
+- **Conflict:** distressed inland claim acquisition by maritime ledger houses.
+- **Rakuen effect:** litigation over southern claims purchased during crisis declarations.
+- **Standing instrument:** post-departure review tribunal rights for contested debt transfers.
+
+---
+
+### 10) Rakuen ↔ Mafdet
+
+See detailed entry above in section 4 (Midgaard ↔ Mafdet includes Rakuen dimensions). Key summary:
+
+- **Alliance:** survival goods and medicinal exports routed via mercy freight.
+- **Conflict:** insurance premiums, chain-of-custody breaks, authenticity risk.
+- **Strategic role:** maritime release valve when woodland and inland routes fail.
+- **Standing instrument:** reduced-fee mercy-freight class during verified civic disaster periods.
+
+---
+
+## V. Multi-City Flashpoints (Expanded)
 
 ### A. The Annexation Question (political-constitutional conflict)
 
@@ -243,7 +329,7 @@ The practical effect is that Kiess functions as a partial brake on distress-capt
 
 ---
 
-## V. Durable Alliances and Institutional Agreements
+### C. Annexation Without Annexation (constitutional)
 
 1. **Five-City Corridor Minutes**: Quarterly clerk exchange where each city logs unresolved fraud typologies, updated seal-breach patterns, and new counterfeit document techniques. The Minutes are the five-city network's most consistently maintained shared institution — all five cities participate even during bilateral disputes because the anti-fraud interest supersedes competitive friction.
 
@@ -259,9 +345,37 @@ The practical effect is that Kiess functions as a partial brake on distress-capt
 
 7. **Mercy Freight Classification** (bilateral Rakuen-Mafdet, referenced in five-city framework): Reduced fees and expedited processing for Rakuen survival goods during verified disaster periods. Requires Bloom Council certification countersigned by Ember Wardens. Pre-completed certification templates maintained by Garden Ledger Clerks for activation under active disaster conditions.
 
+8. **Contradiction Ledger Initiative**: Inspired by Kel'Shadra cautionary studies; records conflicts between official narratives rather than redacting one side. No single city controls the Initiative's secretariat — it rotates on the same cycle as the Joint Blacklist custodianship.
+
 ---
 
-## VI. Narrative Guidance for Builders
+## VII. Shared Cultural and Practical Interfaces
+
+
+### 1) Watch Systems
+
+Intercity coordination requires aligning incompatible local time-keeping:
+
+- Midgaard's lantern-line rotations,
+- Kowloon's delta watch drums,
+- Rakuen's living watches,
+- Mafdet's tide-bell dockets,
+- Kiess's witness-clock hearings.
+
+Intercity operations increasingly use a conversion table called the **Five-Watch Concordance**.
+
+### 2) Gate and Dock Rituals
+
+Gate and dock traditions now embed legal signaling:
+
+- white cloth on chain = memorial passage request,
+- green lamp = grain convoy priority,
+- blue tar pitch mark = ash contamination warning,
+- split-wax seal = contested custody.
+
+### 3) Festival Diplomacy
+
+Delegations appear at each other's civic festivals as a soft-law signaling mechanism. Rakuen's **Mercy Gate Night** has become the most politically charged annual event in the five-city weave — it is the only festival where another city's political decisions are memorialized.
 
 - Every intercity quest needs at least **one legal problem** (whose seal, whose jurisdiction, whose classification governs), **one logistics problem** (whose route, whose calendar, whose weather is the actual bottleneck), and **one human-cost problem** (whose death is counted as variance, whose testimony is missing, whose family has an open entry in the Outbound Register).
 
@@ -277,7 +391,36 @@ The practical effect is that Kiess functions as a partial brake on distress-capt
 
 ---
 
-## VII. Cross-Reference Index
+- Midgaard's lantern-line rotations,
+- Kowloon's delta watch drums,
+- Rakuen's living watches,
+- Mafdet's tide-bell dockets,
+- Kiess's witness-clock hearings.
+
+Intercity operations increasingly use a conversion table called the **Five-Watch Concordance**.
+
+### 2) Gate and Dock Rituals
+
+Gate and dock traditions now embed legal signaling:
+
+- white cloth on chain = memorial passage request,
+- green lamp = grain convoy priority,
+- blue tar pitch mark = ash contamination warning,
+- split-wax seal = contested custody.
+
+### 3) Festival Diplomacy
+
+Delegations appear at each other's civic festivals as a soft-law signaling mechanism. Rakuen's Mercy Gate Night has become the most politically charged annual event in the weave.
+
+## VIII. Narrative Guidance for Builders
+
+- Every intercity quest should include one legal conflict, one logistics conflict, and one moral-accountability conflict.
+- Use named treaty instruments repeatedly so institutions feel persistent and lived-in.
+- Let cities disagree in good faith where possible; systemic conflict is usually mandate collision, not cartoon villainy.
+- Annexation Arc references should appear in rumor layers, clerk records, festival speeches, and memorial inscriptions.
+- Keep Conclave and Kel'Shadra references specific: historical mechanism -> modern institutional consequence.
+
+## IX. Cross-Reference Index
 
 - Midgaard city lore: `docs/lore/midgaard_lore.md`
 - Kowloon city lore: `docs/lore/kowloon_lore.md`
@@ -287,5 +430,6 @@ The practical effect is that Kiess functions as a partial brake on distress-capt
 - Kel'Shadra Crypts (Conclave guilt chain / sealed testimony): `docs/lore/kelshadra_lore.md`
 - Eccentric Woodland (Rakuen access corridor): `docs/lore/eccentric_woodland_lore.md`
 - Sepulchur Pasture (casualty registry / deferred-name protocols): `docs/lore/sepulchur_pasture_lore.md`
+- Conclave fallout context: `docs/lore/withered_depths_lore.md`, `docs/lore/sunken_sanctum_lore.md`
 
 

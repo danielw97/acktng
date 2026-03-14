@@ -6,11 +6,13 @@ Built for implementation as a southern deep-forest city reached through the Ecce
 
 ## I. Core Identity
 
-Rakuen is the **failed paradise city** hidden deep south of Midgaard, beyond the unstable approaches of the Eccentric Woodland. It was founded as a proof that civic order and forest harmony could be fused into one ideal settlement: a place of restorative gardens, open granaries, shared rites, and low-wall trust.
+Rakuen is the **failed paradise city** hidden south of Midgaard beyond the unstable approaches of the Eccentric Woodland. It was founded as a deliberate civilizational counter-argument: if Midgaard represented registry, throughput, and procedural endurance, Rakuen would embody recovery, reciprocity, and low-wall trust.
 
-That ideal never fully held. Flood years, canopy blights, fire seasons, ash-darkened seasons tied to the Cinderteeth eruptions, and recurring governance fractures turned Rakuen into a city that still speaks in paradise language while surviving through ration law, repair labor, and denial rituals.
+Its defining paradox is now canonical:
 
-Rakuen's key contradiction is not "utopia became ruin." It is **utopia that refuses to admit it became triage**.
+- Rakuen was founded to escape Midgaard's bureaucratic machinery.
+- Rakuen repeatedly petitioned to be annexed by Midgaard once crisis conditions hardened.
+- Midgaard repeatedly refused annexation while continuing subsidies and oversight.
 
 But there is a second, deeper contradiction — one that defines modern Rakuen politics with an irony its residents feel as physical pressure: **a city founded specifically to escape Midgaard's bureaucratic machinery has spent the last two centuries desperately begging to be absorbed by it**.
 
@@ -19,6 +21,8 @@ The Southward Compact — the founding document — was written in part as a rej
 What they built instead was a city that could not survive without Midgaard's subsidies, could not secure its own access corridor without Midgaard's gate authority, and could not compel disaster relief without Midgaard's institutional recognition. Three formal petitions for annexation — the Southmark Petition, the Ash Plea, and the Iron Compact Appeal — have been submitted across Rakuen's history. All three were refused.
 
 Each refusal remade Rakuen's internal politics. Each refusal deepened the factionalism. Each refusal added another layer to the central performance: a city that calls itself paradise and must continually explain why paradise is in emergency ration protocols.
+
+Rakuen's tragedy is therefore not mere decline. It is **paradise turned triage, then triage denied formal belonging**.
 
 Rakuen should feel inhabited, proud, exhausted, and politically fractured — a place where the founding myth and the daily reality wage a low-grade war on every street corner.
 
@@ -38,6 +42,18 @@ Rakuen was not spontaneously settled. It was proposed, argued over, and delibera
 
 The remaining eight signatories are recorded in the Compact's roster but poorly documented: two additional path-guides, a former Midgaard granary clerk, three temple auxiliaries from different orders, and a merchant factor whose family later became prominent in the Canopy Compact system.
 
+### Additional Founding Voices (PR-588 Tradition)
+
+An alternate oral tradition preserved in certain Canopy Compact records names a different set of founding voices — the **Southward Five** — whose roles partially overlap with the primary Compact signatory accounts:
+
+- **Liora Venn** (temple horticulturist, Midgaard-trained): proposed communal orchards and healing terraces.
+- **Marshal Deren Holt** (retired road-watch captain): designed route-safe clearings without permanent militarization.
+- **Scribe Tamsin Quill** (charter clerk): authored rotational stewardship clauses and public-ledger requirements.
+- **Guide Sero Ashbloom** (woodland path-master): mapped the first viable southern approaches.
+- **Elder Nahal Reedmother** (river-garden elder): established floodplain rites and shared-cistern governance.
+
+Whether these represent the same figures under different names, a parallel coalition, or a later mythologization is disputed by Garden Ledger Clerks who hold the primary Compact roster.
+
 ### The Paradise Thesis: Key Arguments and What They Became
 
 The *Paradise Thesis* was a forty-three-page document. Later editions trimmed it to thirty-one pages by removing the sections most critical of Midgaard's registry culture — a sanitization the Bloom Council approved and the Garden Ledger Clerks have never fully forgiven.
@@ -54,13 +70,21 @@ The Thesis made five central claims:
 
 5. **Forest Integration**: The city would not fight the woodland — it would be designed to coexist with root systems, seasonal flooding, and canopy rhythms. *What it became*: Rakuen's lower terraces genuinely do incorporate tree-root architecture and seasonal flood-routing, which is a real achievement. The upper city, under disaster pressure, increasingly uses reinforced stone that the Woodland treats as obstruction rather than cohabitation.
 
+The founding doctrine text also articulated three interlocked civic conditions for durable social peace:
+
+- **Enoughness** (minimum food/water guarantees),
+- **Seen Labor** (visible and honored maintenance work),
+- **Ritual Repair** (regular public rites for grief and reconciliation).
+
+Rakuen's later politics repeatedly cite the Thesis. Competing factions do not dispute its language; they dispute what "enoughness" means under permanent disaster.
+
 The unedited original *Paradise Thesis* is a source of ongoing political tension. The Bloom Council holds what it claims is the authoritative copy. The Garden Ledger Clerks maintain that their archive holds an earlier draft with the critical Midgaard passages intact. The Canopy Compacts believe both versions are edited and that the full text was smuggled to Kiess during the Violet Compact era for preservation — a claim that Kiess's Syndic Council has neither confirmed nor denied.
 
 ---
 
-## III. Chronological Arc
+## III. Chronological Arc and Deep Founding History
 
-### 1) Founding Generation (First Stone Accord Era): The Southward Ideal
+### 1) Founding Generation (First Stone Accord Era)
 
 During Midgaard's founding-generation consolidation, Verath Solen's coalition won conditional backing from three Midgaard temple orders and one major caravan house for a companion city in the deep woodland. The political framing was careful: Rakuen would not be presented as a critique of Midgaard but as a *complement* to it. Where Midgaard processed throughput and adjudicated disputes, Rakuen would provide rest, healing, and civic renewal. Surplus population — the idealistic, the difficult, the displaced — could be redirected south without the cost of annexation or the embarrassment of expulsion.
 
@@ -74,7 +98,19 @@ The **Bloom Pavilion** was the first permanent civic structure, built in Year 7:
 
 By Year 20, Rakuen had roughly eight hundred residents and was exporting modest surpluses of preserved fruit, forest medicines, and route-guide services back to Midgaard through Dunnmark's path-compact channels. These were good years, and they are the years the Festival of Ever-Bloom ceremonially reconstructs.
 
-### 2) Standardization Century (Lantern Reforms Era): Recognition Without Full Protection
+Midgaard tolerated Rakuen as a pressure-release frontier municipality. Surplus families, social outliers, and difficult disputes were routed south under reformist language. Rakuen leaders believed demonstrable success would eventually produce equal treaty status.
+
+Their ratified charter, the **Southward Compact**, bound households to:
+
+1. common granary duty,
+2. public mediation before private reprisal,
+3. rotating civic stewardship,
+4. strict constraints on hereditary emergency office,
+5. open accounting of food, water, and labor obligations.
+
+Rakuen rejected walls taller than two stories in its first generation. Instead, it built a **Ring of Listening Gates** where stewards recorded arrivals by story, not only name. The first watch schedule, the **Seven Soft Watches**, prioritized weather signs, canopy stress sounds, cistern levels, child and elder care patrols, and smoke-density warnings.
+
+### 2) Standardization Century (Lantern Reforms Era)
 
 As Midgaard standardized roads and civic notation under the Lantern Reforms, Rakuen entered official maps as a "southern relief city" with conditional recognition. Wayfinding marks were posted through what is now called the Eccentric Woodland, but route reliability degraded sharply beyond the first controlled miles.
 
@@ -88,7 +124,7 @@ Rakuen's early councils accepted this arrangement with the belief that moral pre
 
 The Lantern Reforms period also saw the first major expansion of the Garden Ledger system — Rakuen's public accounting of arrivals, resources, and welfare shares. In its Reforms-era form it was a genuine civic innovation: open records, publicly readable, designed to prevent elite capture of communal resources. Visitors from Midgaard and Kiess noted it with admiration. The Kiess Syndic Council sent a clerk delegation to study it. The Garden Ledger in its original form is one of Rakuen's real, uncomplicated achievements.
 
-### 3) Containment Era (Violet Compact): Paradise as Administrative Buffer
+### 3) Containment Era (Violet Compact)
 
 Under Violet Compact governance, Midgaard's registry apparatus began treating Rakuen less as a partner city and more as a **social sorting mechanism**. The term used in Violet Compact administrative correspondence is "southern remediation posting" — persons and obligations awkward to process in core Midgaard districts were resettled south under welfare-language framing.
 
@@ -110,15 +146,13 @@ The Bloom Council did not know the full extent of this. Or — as the Garden Led
 
 This is one of three threads linking Rakuen to the Conclave guilt chain: the same Violet Compact administrative apparatus that routed condemned debtors to the Spirebound Conclave also routed problematic witnesses to Kel'Shadra through Rakuen's southern posting mechanism. Rakuen was not the origin of the wrongdoing. It was the geography that made the wrongdoing invisible.
 
-#### Cinderteeth Shock Window: The Ashfall Monsoon Reaches Rakuen
+### 3) Ashfall Era (Ash-and-Iron Decades)
 
 When the Cinderteeth eruption cycle drove the continental Ashfall Monsoon, Rakuen was hit harder than Midgaard officials initially admitted. Ash-laden rain clogged cistern mouths, soured roof-catchments, and poisoned the kitchen gardens that had anchored Rakuen's self-image as a city of abundance. Canopy ash-load increased branchfall mortality and turned controlled hearth smoke into chronic respiratory hazard in low terraces.
 
 The social impact was decisive: paradise planning assumptions — open-air granaries, lightly fortified commons, rotating voluntary labor — were stress-tested beyond design limits. Emergency ash-clear crews became permanent institutions. The first long-duration ration proclamations were issued under language insisting the measures were temporary.
 
 Midgaard's emergency aid convoys during the Ashfall years were insufficient, irregularly timed, and classified in Midgaard's records as "southern variance relief" rather than civic obligation fulfillment. The distinction mattered: variance relief carried no legal accountability. The Bloom Council filed three formal written protests during this period. None received substantive response. The protests were archived. They became the template for the Southmark Petition.
-
-### 4) Fortification Era (Ash-and-Iron Decades): Disaster Stacking
 
 Rakuen's transition from ideal city to crisis city occurred gradually through compounded shocks with no recovery interval between them:
 
@@ -128,15 +162,22 @@ Rakuen's transition from ideal city to crisis city occurred gradually through co
 - **Orchard blight years** reduced fruit yields below replacement for three consecutive growing cycles. The common orchards that had been Rakuen's proudest material achievement were reduced to maintenance-minimum holding operations.
 - **Route predation in the Woodland** intensified as Midgaard's attention and resources focused on northern and western security. Medicine, tool shipments, and grain imports were intercepted with increasing frequency. The guide-compact system that Caitha Dunnmark had built required continuous renegotiation as Woodland territorial powers shifted.
 
-Lacking Midgaard-scale requisition machinery, Rakuen adopted emergency governance it once rejected:
+Disaster stacking forced emergency institutions Rakuen once condemned. Lacking Midgaard-scale requisition machinery, Rakuen adopted emergency governance it once rejected:
 
 - **Ration towers**: elevated sealed storage structures with controlled distribution points, designed to prevent flood contamination of food reserves. The Bloom Council approved them as temporary emergency welfare infrastructure. They are now permanent neighborhood features.
 - **Salvage courts**: emergency adjudication bodies empowered to requisition building material, labor, and transport animals during declared crisis seasons. The founding circle-mediation system still exists but has no authority over salvage-court decisions.
 - **Labor drafts**: compulsory maintenance assignments for floodwall, causeway, and ash-clear operations. The Paradise Thesis's rotating voluntary stewardship model is technically still in place — the labor drafts are classified as "civic renewal obligations" rather than conscription.
+- **Escorted convoy mandates** and **casualty anonymization systems** became normalized emergency procedures.
 
 By late Ash-and-Iron years, outsiders visiting Rakuen still heard it described by its own residents as "the southern paradise." Internal records describe it as "permanent reconstruction under ceremonial morale doctrine." Both things were true. The gap between them is Rakuen.
 
-### 5) Modern Tension Era: A City of Performed Hope
+Even after militarization, Rakuen retains ceremonial references to the original non-martial watch traditions.
+
+### 4) Modern Tension Era
+
+Rakuen entered official maps as a recognized but partially external partner. Midgaard standardized the first stretches of southern road-marking, but practical route reliability remained controlled by woodland cells and seasonal conditions.
+
+Rakuen's civic confidence peaked in the Lantern Reforms period: orchard exports rose, mediation circles replaced many tribunal escalations, and the Festival Calendar was formalized.
 
 Modern Rakuen remains inhabited, cultured, and politically significant — but no longer stable in the way its founding myth claims. Population sits at roughly two-thirds of Ash-and-Iron peak levels. Several lower-terrace neighborhoods have been formally abandoned after the third flood cycle and are maintained as "rest gardens" — civic language for flood-damage zones too expensive to rebuild but too symbolically loaded to simply leave derelict.
 
@@ -561,7 +602,93 @@ Blend these textures when writing Rakuen spaces, characters, and items:
 
 ---
 
-## Five-City Intercity Cross-Reference
+This is called the **Paradise-Denial Cycle** in modern Rakuen scholarship.
+
+---
+
+## IV. Psychology of Refused Annexation
+
+Refusal reshaped Rakuen's political psyche in repeating cycles:
+
+1. **Petition Hope:** belief that proof of suffering will trigger institutional belonging.
+2. **Administrative Refusal:** Midgaard offers aid without absorption.
+3. **Civic Reinterpretation:** local factions rewrite refusal as either betrayal, warning, or liberation.
+4. **Paradise-Denial Reinforcement:** ceremonial language expands to cover practical failure.
+5. **New Petition Formation:** crisis renews annexation arguments.
+
+This is called the **Paradise-Denial Cycle** in modern Rakuen scholarship.
+
+### Dominant Factions Born from Refusal
+
+- **Southmarkers:** annexation through legal integration and full registry adoption.
+- **Ash Realists:** prioritize survival metrics over founding myth; support transparent ration law.
+- **First Gardeners:** anti-annexation, pro-founding doctrine revival.
+- **Lantern Unionists:** seek confederated status with Midgaard without full annexation.
+- **Quiet Embers:** fatalist youth tendency embracing ritual without institutional faith.
+
+---
+
+## V. Civic Life: Festivals, Architecture, Daily Rhythm
+
+### 1) Festival Calendar
+
+Rakuen's major public festivals are structurally tied to survival systems:
+
+- **Bloomfast Opening:** spring cistern blessing and seed audit; households present public stores.
+- **Lanterns Under Leaf:** midsummer canopy-light festival honoring lost route-guides.
+- **Ashfold Vigil:** masks, lung-cloth rites, and collective ash-sweeping before monsoon.
+- **Floodstep Week:** floating lantern memorials for unnamed dead and missing caravans.
+- **Mercy Gate Night:** annual remembrance of refused petitions; gate chains wrapped in white cloth.
+
+### 2) Architecture
+
+Rakuen architecture is layered civic adaptation:
+
+- **Terrace Gardens:** stepped food belts with ash-screen trellis systems.
+- **Rain-Shoulder Roofs:** broad eaves feeding filtered cistern inlets.
+- **Low-Wall Courts:** founding-era anti-fortress spaces now retrofitted with hidden buttressing.
+- **Breath Towers:** vertical airshafts with cloth-filter arrays for smoke seasons.
+- **Gate-Houses of Listening:** entrance buildings preserving story-led intake ritual.
+
+### 3) Daily Rhythm and Watches
+
+Rakuen's day is divided into **Eight Living Watches** (expanded from the Seven Soft Watches):
+
+1. **Mist Watch** (water checks),
+2. **Spade Watch** (garden labor),
+3. **Ledger Watch** (ration posting),
+4. **Shade Watch** (child/elder circuits),
+5. **Spark Watch** (firebreak checks),
+6. **Ash Watch** (air and roof clearance),
+7. **Gate Watch** (arrival triage),
+8. **Bell-Quiet Watch** (night mediation and memorial).
+
+Superstitions include never closing all gate shutters at once ("the city must keep one ear open") and never eating first harvest fruit before Floodstep offerings.
+
+---
+
+## VI. Key Figures by Era
+
+- **Verath Solen**: principal philosophical founder; author of the *Paradise Thesis*.
+- **Caitha Dunnmark**: logistics architect; author of the *Dunnmark Letters*.
+- **Orn Fallsbridge**: path-guide; first warden of the southern crossing.
+- **Ilya Thornwell**: lead petitioner for the Southmark Petition (Steward-Mediator).
+- **Neris Vale-of-Rain**: lead petitioner for the Ash Plea (Quartermaster).
+- **Cairn Doveknot**: lead petitioner for the Iron Compact Appeal (Acting Warden).
+- **Mara Siltglass**: modern Ash Realist statistician of the Paradise-Denial Cycle.
+- **Brother Olan Reedbell**: Mercy Gate Night liturgist and anti-erasure memorial archivist.
+
+---
+
+## VII. Narrative Implementation Guidance
+
+- Rakuen dialogue should oscillate between beauty language and logistics language.
+- Annexation references should appear in civic records, songs, and gate inscriptions.
+- Political conflict should be factional and procedural, not purely martial.
+- Reuse named petition documents across quests for continuity.
+- Tie every major civic decision to water, grain, or route reliability.
+
+---
 
 For the larger intercity matrix contextualizing Rakuen's pressures: `docs/lore/five_cities_intercity_lore.md`
 
