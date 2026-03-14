@@ -28,6 +28,7 @@ struct static_quest_template_data
     int offerer_vnum;
     int reward_gold;
     int reward_qp;
+    int reward_exp;
     char *reward_obj_short;
     char *reward_obj_name;
     char *reward_obj_long;
@@ -167,7 +168,7 @@ static bool load_static_quest_file(const char *path, int id)
     }
 
     tpl.max_level = 170;
-    if (sscanf(line, "%d %d %d %d %d %d %d %d %d %*d %*d",
+    if (sscanf(line, "%d %d %d %d %d %d %d %d %d %d %*d",
                &tpl.prerequisite_static_id,
                &tpl.type,
                &tpl.num_targets,
@@ -176,9 +177,11 @@ static bool load_static_quest_file(const char *path, int id)
                &tpl.max_level,
                &tpl.offerer_vnum,
                &tpl.reward_gold,
-               &tpl.reward_qp) != 9)
+               &tpl.reward_qp,
+               &tpl.reward_exp) != 10)
     {
-        if (sscanf(line, "%d %d %d %d %d %d %d %d %*d %*d",
+        tpl.reward_exp = 0;
+        if (sscanf(line, "%d %d %d %d %d %d %d %d %d %*d",
                    &tpl.prerequisite_static_id,
                    &tpl.type,
                    &tpl.num_targets,
@@ -186,7 +189,8 @@ static bool load_static_quest_file(const char *path, int id)
                    &tpl.min_level,
                    &tpl.offerer_vnum,
                    &tpl.reward_gold,
-                   &tpl.reward_qp) != 8)
+                   &tpl.reward_qp,
+                   &tpl.reward_exp) != 9)
         {
             bugf("load_static_quest_file: bad numeric line in %s", path);
             free_string(tpl.title);
@@ -664,15 +668,15 @@ void clear_quest(CHAR_DATA *ch)
 static void show_reward_preview(CHAR_DATA *ch, QUEST_DATA *prop)
 {
     char buf[MAX_STRING_LENGTH];
+    const STATIC_PROP_TEMPLATE *tpl = prop->quest_static_id >= 0 ? find_static_quest_template(prop->quest_static_id) : NULL;
     int gold = prop->quest_static_id >= 0 ? prop->quest_reward_gold : quest_gold(get_psuedo_level(ch));
     int qp = prop->quest_static_id >= 0 ? prop->quest_reward_qp : quest_qp(get_psuedo_level(ch));
-    int exp = quest_exp(ch);
+    int exp = (tpl != NULL && tpl->reward_exp > 0) ? tpl->reward_exp : quest_exp(ch);
 
     sprintf(buf, "@@WReward on completion:@@N @@Y%d@@N gold, @@Y%d@@N exp, @@Y%d@@N quest point%s",
             gold, exp, qp, qp == 1 ? "" : "s");
     if (prop->quest_static_id >= 0)
     {
-        const STATIC_PROP_TEMPLATE *tpl = find_static_quest_template(prop->quest_static_id);
         if (static_reward_item_is_valid(tpl))
             sprintf(buf + strlen(buf), ", @@Y1@@N x %s", tpl->reward_obj_short);
     }
@@ -1276,7 +1280,10 @@ void quest_complete(CHAR_DATA *ch, CHAR_DATA *postman)
         }
 
         gold_reward = prop->quest_static_id >= 0 ? prop->quest_reward_gold : quest_gold(get_psuedo_level(ch));
-        exp_reward = quest_exp(ch);
+        if (prop->quest_static_id >= 0 && tpl != NULL && tpl->reward_exp > 0)
+            exp_reward = tpl->reward_exp;
+        else
+            exp_reward = quest_exp(ch);
         qp_reward = prop->quest_static_id >= 0 ? prop->quest_reward_qp : quest_qp(get_psuedo_level(ch));
 
         act("$N reviews your completed quest and nods approvingly.", ch, NULL, turnin_npc, TO_CHAR);
