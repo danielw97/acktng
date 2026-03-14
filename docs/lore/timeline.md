@@ -182,6 +182,7 @@ The world before Midgaard, Kowloon, Kiess, Rakuen, and Mafdet.
 | Event | Category | Sources |
 |-------|----------|---------|
 | The Great Northern Forest is inhabited by three peoples: **Everkeepers** (druidic ironpine tenders), **Mire-Speakers** (fenland herbalists), and **Cairn-Keepers** (megalith ancestor-communion practitioners). | Cultural | great_northern_forest_lore |
+| On the southern grave fringe of the forest, ridge clans related to the Cairn-Keepers and Mire-Speakers maintain the **Thornwood Gravewood** — a burial woodland where face-down oathbreaker interments, thorn-ring containment growth, and ritualized path detours around ancestor stands constitute an active funerary landscape. Beneath the gravewood, an anomalous **crystal substrate** of unknown origin (natural formation, Prism Thesis deposit, or pre-human construction) already responds to burial density and blood contact, though no human community yet recognizes it as such. | Cultural | thornwood_lore |
 | Kowloon's delta is the **Shallow Thousand** — stilts, prayer poles, tide farms, contraband docks. **Lampkeepers** maintain oil beacons; their tradition of tending light without asking payment becomes the seed of Kowloon's civic neutrality. | Cultural | kowloon_lore |
 | **Evermeet** grows complacent over generations. Outer wards neglected, monster pressure intensifies, districts become isolated, supply houses burn. Eventually abandoned to the wildlands. | Catastrophe | kiess_lore |
 | Unrecorded oaths cause cascading failures across the continent: inheritance claims collapse, trade agreements evaporate, bloodlines dispossessed. This crisis motivates the founding of Kel'Shadra's witness traditions. | Political | gloamvault_lore |
@@ -196,7 +197,7 @@ Midgaard and the first civic compacts.
 |-------|----------|---------|
 | **Midgaard's First Stone Accord**: road-security compacts, militia agreements, barter tribunals. The beginning of codified civic order. | Creation/Origin | midgaard_lore |
 | **Shadowmere founded** as a frontier march-town — the **Crownward Compact** mandates guarding transit, taxing goods, and processing war dead before they reach core city districts. | Creation/Origin | shadowmere_lore |
-| The **Harren Charter** establishes Thornwood as a frontier burial-and-timber manor north of Midgaard's grave fringe, monetizing interment access and estate-controlled passage rights. | Creation/Origin | thornwood_lore |
+| The **Harren Charter** grants a frontier lesser house control of a fortified woodland manor on the southern grave fringe, in exchange for maintaining timber extraction, hunting tithes, burial lease fees, and passage taxation for grief caravans on the Midgaard-Shadowmere grave route. The Harren family adopts thorn iconography as heraldic branding and begins administering a secondary burial site that relieves pressure on Midgaard's own Ninth Acre (proto-Sepulchur Pasture). The estate is prosaic and administrative — not yet occult. | Creation/Origin | thornwood_lore |
 
 ---
 
@@ -209,7 +210,7 @@ Midgaard standardizes civic infrastructure. Trade routes formalized.
 | **Lantern Reforms**: paving marks, posted tariffs, district lamp-lines, watch rotations standardized across Midgaard. | Political | midgaard_lore |
 | Ilren Voss leads the expedition that creates the **Lantern Road** through the Great Northern Forest, following game trails and ridgebacks. The **Bent Mile Principle** established: "if a straight road costs ten lives a season, the wiser road bends." | Engineering | great_northern_forest_lore |
 | Shadowmere copies Midgaard's watch-line practices in harsher form. Bell towers replace open forums; witness tablets replace local custom. | Political | shadowmere_lore |
-| Thornwood expands private ossuary throughput and deferred-name burial accounting, converting funerary service into debt administration along the northern grave frontier. | Political | thornwood_lore |
+| Thornwood's **ossuary expansion**: as Midgaard's burial infrastructure strains under volume, the Harren estate scales from secondary burial site to primary death-processing facility. Rapid burial fields, ossuary vaulting, and **deferred naming** records (identity contingent on payment) are introduced. Ritual specialists become production foremen. The grave tunnel connecting Thornwood to the Midgaard-Shadowmere burial route becomes a high-traffic corridor. The estate likely processes sealed warrants and may receive condemned labor. | Political | thornwood_lore |
 | Evermeet's Roc Road becomes the primary western trade artery, connecting Midgaard to the fortified frontier city via standardized road-warden postings and Lantern Reform-era wayfinding. | Political | midgaard_lore |
 
 ---
@@ -238,7 +239,9 @@ Midgaard establishes occult oversight; darker institutional practices emerge.
 | **Violet Compact**: registry-based occult oversight, reliquary checkpoints, oath-ledger protocols. | Political | midgaard_lore |
 | The **Sealed Names apparatus** provides the administrative framework for suppression via sealed warrants, including the **"resettled south" mechanism** — displacing populations under welfare-language cover to southern frontier settlements. | Political | midgaard_lore |
 | Shadowmere issues **Plague Mandate**: rapid intake, forced quarantines, immediate cremation powers. "Temporary became permanent." Processing halls, poison works, deep binding cells built. | Catastrophe | shadowmere_lore |
-| The Thornwood estate transitions from aristocratic burial manor into a cult-bound necrotic forest complex on the Midgaard-Shadowmere grave frontier; manor process, ossuary throughput, and woodland behavior fuse into one predatory system connected to the shared grave tunnel hinge. | Catastrophe | thornwood_lore |
+| The **Root Covenant** forms among Thornwood's grave laborers, bone-washers, and dispossessed kin of deferred-name dead. Doctrinal core: blood opens listening channels, roots carry confession farther than bells, bone remembers debt when paper fails. This is **substrate covenant theology** — direct bargaining with place, not worship of an external deity. The movement reinterprets ridge-clan burial customs as early substrate negotiation. | Cultural | thornwood_lore |
+| Lord Harren, the last living head of the Harren family, co-opts the Root Covenant by granting cult elders advisory roles and commissioning the first systematic exploration of the **cave system and crystal substrate** beneath the estate. Shamans begin conducting rites in direct proximity to the crystal. | Political | thornwood_lore |
+| The **Reversal Event**: cumulative burial density, intensified Root Covenant rites, and direct crystal activation cross a threshold. The substrate shifts from passive reception to active system behavior. Interred dead rise with local morphological adaptations (bark-textured skin, thorn-joint growth). Root systems become tactical infrastructure. Manorial architecture synchronizes with territorial response. Lord Harren is retained as a conscious Estate Revenant. The **Thornwood Lich** emerges from the substrate as an architectural intelligence. Thornwood ceases to be governed as property and begins to operate as an **autonomous necrotic polity**. | Catastrophe | thornwood_lore |
 
 ---
 
@@ -326,6 +329,7 @@ Unresolved conflicts define the present.
 | Great Pyramid's lower courts breached by tomb extraction crews; cult revivals restore fragments of old rites; desert arcane storms amplify dormant seal feedback. Old factional ghosts regain agenda-like behavior. | Cosmic | great_pyramid_lore |
 | Ground tremors near the Southern Pyramid increase in frequency since the Great Pyramid breach — the two structures may be resonating. | Cosmic | southern_pyramid_lore |
 | Midgaard and frontier wardens report renewed disappearances in grave-route patrols near the Thornwood/Shadowmere tunnel hinge, reviving debate over sealed records and jurisdictional responsibility for the northern death corridor. | Political | thornwood_lore, midgaard_lore, shadowmere_lore |
+| Thornwood's **binding is failing**: crystal substrate luminescence has dimmed, root network fidelity is degrading through biological error accumulation, and input reduction (fewer dead arriving than the equilibrium requires) starves the system. Four competing theories circulate: the Lich believes estate coherence will collapse; Lord Harren believes the substrate will seek new input beyond the perimeter; the cult believes a renegotiation is underway; the witches believe the failure already happened and the system is attempting to restart. The Wild Hunt's patrols have extended farther from the estate than in any prior generation. | Catastrophe | thornwood_lore |
 | The Jackal Synod's leadership knows the Northern Pyramid's binding is degrading; positioning cult members to "inherit" power when guardians fail. | Political | northern_pyramid_lore |
 | Rakuen's **Quiet Separatists** explore whether canopy-botanical trade can route directly to Mafdet, bypassing Midgaard's gate registry. | Political | five_cities_intercity_lore, rakuen_lore |
 | Kiess holds a pending charter-consultation offer to Rakuen. The next Bloom Council rotation may install an Amendment Track steward willing to submit a fourth petition. | Political | five_cities_intercity_lore |
@@ -379,6 +383,19 @@ The Keepers' combinatorial writing system fragmentarily survives in:
 
 Sources: eastern_desert_lore, kowloon_lore, saltglass_reach_lore, mafdet_lore
 
+### The Thornwood Assimilation Arc
+A frontier burial estate consumed by its own substrate:
+1. **Gravewood layer** (pre-civic): ridge-clan burial customs and crystal substrate already responsive
+2. **Harren Charter** (founding generation): administrative estate, prosaic death-processing
+3. **Ossuary expansion** (Lantern/Ash-and-Iron): volume-driven corruption, deferred naming, sealed warrant traffic
+4. **Root Covenant** (Containment Era): substrate theology forms among laboring class
+5. **Reversal Event** (post-Containment): manor-forest fusion, Lord Harren retained as revenant, Lich emerges
+6. **Binding failure** (current): system degrading, Wild Hunt extending range, four theories of collapse
+
+Thornwood is the third funerary model alongside Sepulchur Pasture (civic) and the Catacombs of Nightfall (adjudicatory): a manorial-ecological ossuary that absorbed its own administration. Its crystal substrate may connect to the Spirebound Conclave's Prism Thesis deposits, extending the Conclave Guilt Chain into geology.
+
+Sources: thornwood_lore, midgaard_lore, shadowmere_lore, sepulchur_pasture_lore, violet_eclipse_cathedral_lore, great_northern_forest_lore, sunken_sanctum_lore
+
 ### The Cinderteeth Volcanic Thread
 One geological source, multiple civilizational consequences:
 - **Sunken Sanctum collapse** (earliest): seismic event triggers cascade
@@ -414,7 +431,7 @@ Sources: sunken_sanctum_lore, kowloon_lore, great_northern_forest_lore, five_cit
 | mafdet_lore | Era XVII |
 | saltglass_reach_lore | Eras II, IV, VII, XVII |
 | shadowmere_lore | Eras XII, XIII, XV, XIX |
-| thornwood_lore | Eras XII, XIII, XV, XIX, XXI |
+| thornwood_lore | Eras X (Conclave crystal connection), XI (gravewood/substrate), XII, XIII, XV, XIX, XXI |
 | akhenet_lore | Eras II, IV, VII |
 | arroyo_lore | Eras II, IV, VII |
 | scorched_wastes_lore | Eras VII, XXI |
