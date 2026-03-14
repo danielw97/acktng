@@ -27,6 +27,10 @@ D1
 The hunt-road leads east deeper into reaver-held approach territory.~
 ~
 0 -1 8601
+D0
+A northern track departs the hunt-road between two leaning survey markers.~
+~
+0 -1 8880
 S
 #8601
 @@yDrift-Stone Road, Northern Spur@@N~
@@ -36,7 +40,7 @@ S
 D0
 A northern spur leads toward unsettled frontier territory.~
 ~
-0 -1 8880
+0 -1 8881
 D3
 The road returns west toward the Western Gate.~
 ~
@@ -54,7 +58,7 @@ S
 D0
 A northern spur leads toward frontier territory.~
 ~
-0 -1 8881
+0 -1 8882
 D3
 The road returns west.~
 ~
@@ -72,7 +76,7 @@ S
 D0
 A northern spur cuts between low desert berms.~
 ~
-0 -1 8882
+0 -1 8883
 D3
 The road returns west.~
 ~
@@ -94,7 +98,7 @@ S
 D0
 A wider northern spur leads toward frontier territory.~
 ~
-0 -1 8883
+0 -1 8884
 D3
 The road returns west.~
 ~
@@ -112,7 +116,7 @@ S
 D0
 A northern spur departs beyond a pair of crossed spear-shafts.~
 ~
-0 -1 8884
+0 -1 8885
 D3
 The road returns west.~
 ~
@@ -130,7 +134,7 @@ S
 D0
 A northern spur descends into a shallow bowl.~
 ~
-0 -1 8885
+0 -1 8886
 D3
 The road returns west downslope.~
 ~
@@ -148,7 +152,7 @@ S
 D0
 A narrow notch in the north wall leads to a patrol spur.~
 ~
-0 -1 8886
+0 -1 8887
 D3
 The road climbs back out of the gully to the west.~
 ~
@@ -166,7 +170,7 @@ S
 D0
 A northern spur climbs to a surveillance position.~
 ~
-0 -1 8887
+0 -1 8888
 D3
 The road returns west along the escarpment.~
 ~
@@ -184,7 +188,7 @@ S
 D0
 A northern spur continues toward the frontier ridge.~
 ~
-0 -1 8888
+0 -1 8889
 D3
 The road returns west along the approach corridor.~
 ~
