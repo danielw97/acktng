@@ -155,3 +155,13 @@ Blend these textures in writing:
 - **administrative bleed:** stamped passes, subsidy tablets, dispute notices, redacted transport ledgers.
 
 Rakuen should feel inhabited, proud, and exhausted — never a simple fallen ruin.
+
+## Five-City Intercity Cross-Reference
+
+For the larger intercity matrix that contextualizes Rakuen's pressures, see: `docs/lore/five_cities_intercity_lore.md`.
+
+Rakuen's key five-city interaction channels are:
+- Rakuen <-> Midgaard: subsidy dependence and casualty-recognition politics.
+- Rakuen <-> Kowloon: emergency price controls and relief throughput.
+- Rakuen <-> Kiess: charter constraints on disaster-era authority.
+- Rakuen <-> Mafdet: mercy-freight access during overland collapse.

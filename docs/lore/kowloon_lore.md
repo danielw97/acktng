@@ -101,3 +101,13 @@ Kowloon observes three major festivals:
 - **Ashfall Vigil** (autumn): a solemn night when the city extinguishes all lights for one hour at midnight, remembering the years of black rain. When the lights return, the Temple Circle leads a processional chant and the Executioner strikes the covenant stone three times with an iron rod—once for the dead, once for the living, once for those not yet born.
 
 Common superstitions include: never count your coins under violet light (invites the Jade Eels' attention), always enter a gate with your right foot first (ensures you will leave alive), and never speak the Ember Speaker's true name aloud (those who claim to know it tend to disappear).
+
+## Five-City Intercity Cross-Reference
+
+For full-spectrum five-city diplomacy and conflict context, see: `docs/lore/five_cities_intercity_lore.md`.
+
+Kowloon's highest-impact ties in that matrix are:
+- Kowloon <-> Midgaard: convoy safety and tribunal evidence interoperability.
+- Kowloon <-> Kiess: labor-contract legality versus throughput pressure.
+- Kowloon <-> Rakuen: emergency commodity balancing under route instability.
+- Kowloon <-> Mafdet: manifest language and dock conversion disputes.

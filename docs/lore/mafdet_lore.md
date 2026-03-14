@@ -124,3 +124,13 @@ Mafdet depends on Reach checkpoint continuity for manifest provenance and legal 
 - Split iconography: dunes and tide lines; scales and claws; obelisks and mast poles.
 
 These motifs keep Mafdet visibly related to the oasis-pyramid civilization while clearly signaling a maritime-adapted branch of that legacy.
+
+## Five-City Intercity Cross-Reference
+
+For comprehensive five-city political economy and legal interoperability, see: `docs/lore/five_cities_intercity_lore.md`.
+
+Mafdet-related pairings represented there:
+- Mafdet <-> Midgaard: provenance registry versus export-finality competition.
+- Mafdet <-> Kowloon: cargo codex alignment for northern maritime conversion.
+- Mafdet <-> Kiess: debt and bonded-transfer legality review.
+- Mafdet <-> Rakuen: disaster cargo classification and mercy-freight terms.

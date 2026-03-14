@@ -97,3 +97,13 @@ The Verdant Depths — an ancient living woodland with distributed intelligence 
 - **The obsidian disc:** The triune-sealed disc in Kiess's archives is physical evidence of the Conclave's reach. It connects Kiess to the Sunken Sanctum's three doctrines (Ember Canon, Prism Thesis, Pale Ledger) and to the broader institutional chain that links Midgaard, Kowloon, and the Cinderteeth Mountains.
 - **Evermeet's role:** Before its fall, Evermeet may have served as a waypoint for Conclave supply lines and prisoner transfers. Kiess's foundation excavations occasionally turn up artifacts that predate the city's founding and bear Conclave markings.
 - **Sage's Alcove crystal testing:** The Conclave's Sage's Alcove — where crystal shard experiments were conducted — used materials that may have been shipped through Evermeet. The same crystal technology that powered the Prism Thesis experiments produced the residue now contaminating the forest root systems accessible from Kiess's frontier. This makes Kiess's charter prohibition against sealed warrants not merely a legal principle but a practical response to the physical consequences of the Conclave's work.
+
+## Five-City Intercity Cross-Reference
+
+For regional interactions beyond Kiess's local governance frame, consult: `docs/lore/five_cities_intercity_lore.md`.
+
+Kiess-centric links that should remain consistent across lore and quests:
+- Kiess <-> Midgaard: archive transfer and sealed-order legality conflicts.
+- Kiess <-> Kowloon: enforceable labor templates for northern corridors.
+- Kiess <-> Rakuen: emergency testimony standards during record loss.
+- Kiess <-> Mafdet: debt-transfer review rights after maritime departure.
