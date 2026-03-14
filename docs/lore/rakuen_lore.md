@@ -400,6 +400,78 @@ The three major positions — Amendment Track, Quiet Separatists, Preservation C
 
 The political map is fluid enough that no faction can govern alone and stable enough that coalition-building is permanent, exhausting, and necessary.
 
+---
+
+## VIII. Cross-Area Integration
+
+### Midgaard: Subsidy, Liability, and the Archive Wars
+
+Rakuen's relationship with Midgaard is the longest and most structurally entangled of all its connections. Several specific pressure points define it in the current era:
+
+**The Resettlement Chain**: Midgaard's Violet Compact-era practice of "resettled south" administrative transfers has never been formally acknowledged as a policy of testimony suppression. The Garden Ledger Clerks hold records — partially preserved, partially reconstructed — that cross-reference Rakuen's arrival registers with Midgaard's Sealed Names categories. These records are the primary documentary evidence for Rakuen's contribution to the Continuity-vs-Reckoning debate: if Midgaard's Reckoning faction wants to prove that the Violet Compact used resettlement as a silencing mechanism, Rakuen's Garden Ledger is one of the three surviving primary sources. The Continuity faction's position is that the Garden Ledger records are incomplete and cannot be verified against Midgaard's sealed archives. This is technically true. The Clerks' position is that the records are incomplete *because* the Kel'Shadra witnessing office took the completable portions below bell-line.
+
+**The Casualty Classification Dispute**: During Ashfall Monsoon years, Midgaard classified multiple aid failures toward Rakuen as "route-variance events" — meaning no binding obligation. Rakuen's Garden Ledger, conversely, classified the same events as "subsidy contract non-performance." The competing classifications are still live: Midgaard's records show charitable variance-relief expenditure; Rakuen's records show a running deficit of owed-but-unprovided support. Any formal integration process would have to resolve which accounting system is correct. This is one reason the Amendment Track's most ambitious members believe Midgaard will refuse a fourth petition regardless of format.
+
+**Southern Wild Gate Dynamics**: All formal support to Rakuen passes through Midgaard's Southern Wild Gate administration. Gate records control which convoys are cleared for the Woodland approach, which relief shipments are prioritized, and which merchant caravans receive subsidized escort. The Gate's current administration is staffed by officials who are neither hostile to Rakuen nor advocates for it — they are processing-focused bureaucrats applying existing classification rules. The existing classification rules produce the outcomes they produce. Nobody is making a political decision at the Gate; the political decisions were made when the rules were written.
+
+### Eccentric Woodland: The Living Bottleneck
+
+Rakuen cannot be understood without the Eccentric Woodland. It is not merely the route to the city; it is the mechanism by which Rakuen's isolation is maintained and periodically enforced.
+
+The practical Woodland-Rakuen relationship operates through the **guide-compact network** — a web of territorial agreements between Rakuen's Canopy Compacts and the Woodland's various path-warden houses and ritual authorities. Each compact covers a specific corridor segment, negotiated seasonally and denominated in specific goods: forest medicines, rope-and-cordage, preserved fruit, and occasionally labor. When a compact lapses — due to Woodland territorial shifts, internal disputes, or Rakuen's failure to deliver agreed goods — the corresponding corridor segment becomes effectively impassable without independent negotiation, which most travelers cannot do.
+
+The Woodland's predatory bands are not random. The route-predation that intensified during the late Ash-and-Iron decades followed the collapse of specific guide-compact agreements when Rakuen could not deliver contracted goods during disaster years. Some predatory operators are former compact-wardens whose agreements lapsed and who continued exercising territorial authority without the legitimating contract. This history makes Rakuen's Dispatch Houses politically cautious about which route conditions they attribute to "Woodland variance" — some of the variance is directly traceable to Rakuen's own supply failures, which the Bloom Council would prefer not to make public.
+
+### Kel'Shadra: The Sealed Record Problem
+
+The Kel'Shadra Witnessing Compact's operation in Rakuen during the Violet Compact era (described in Section III) left a specific archival gap: several dozen testimonies from resettled Rakuen arrivals who had contested their resettlement terms were accepted by the witnessing office, formally logged — and then routed through Kel'Shadra's descent-accounting system to a classification of "below bell-line; no civic remainder."
+
+These testimonies, if recoverable, would be significant evidence in three separate ongoing disputes:
+1. The Midgaard Reckoning faction's case that the Violet Compact used resettlement as testimony suppression.
+2. Rakuen's own claim that its Garden Ledger deficit figures reflect real, owed support rather than civic mismanagement.
+3. At least four living family lineages in Rakuen whose founding members were among the resettled arrivals — families whose property claims, civic standing, and origin documentation have gaps traceable to the same witnessing-office period.
+
+The Crypts of Kel'Shadra almost certainly contain these records in some form. Access to them would require navigating both the physical Crypt apparatus and the institutional framework of the Bell Synod's surviving successor organizations. Rakuen's Garden Ledger Clerks have twice written formal letters to Kel'Shadra's known archival successors requesting access. Neither letter has received a substantive response.
+
+The Kel'Shadra connection also means Rakuen is one of three documented checkpoints in the guilt chain linking Midgaard's institutional history to the Spirebound Conclave: Midgaard's sealed warrants authorized condemned-debtor transfers; the Violet Compact's Sealed Names apparatus created the administrative framework; Rakuen's southern posting position was where problematic witnesses vanished into Kel'Shadra's descent-accounting system. Rakuen is not the perpetrator in this chain. It is the geography that made the chain's final link invisible.
+
+### Mafdet: The Maritime Survival Channel
+
+When Rakuen's overland supply routes through the Eccentric Woodland collapse — during flood years, fire seasons, or extended route-predation episodes — the only alternative supply channel runs south through the remaining Woodland approaches to Mafdet's maritime network. This is not a comfortable route or a cheap one. It adds weeks of travel time and passes through terrain that makes the Eccentric Woodland look predictable by comparison. But it has been used repeatedly, and its existence is the reason Rakuen has not fully collapsed during extended overland-route failures.
+
+Mafdet's Ledger Houses classify Rakuen cargo under the **mercy-freight** protocol — reduced fees and expedited processing during verified civic disaster periods. This classification was formalized during the late Ash-and-Iron decades as a standing arrangement rather than a case-by-case charitable exception. It represents one of Rakuen's genuine diplomatic achievements: a binding institutional accommodation from a city that treats sentiment as a commercial inefficiency.
+
+The mercy-freight classification comes with conditions: Rakuen must submit a **disaster certification** through recognized channels (the Bloom Council's external correspondence function), the certification must be countersigned by the Ember Wardens as operational verification, and the shipment must meet Mafdet's chain-of-custody standards even under evacuation conditions. These requirements are not onerous under normal circumstances. Under the chaos of an active disaster evacuation, they are genuinely difficult to fulfill. The Garden Ledger Clerks maintain a pre-completed disaster certification template for exactly this reason — the paperwork is drafted in advance so that a crisis does not require creating administrative documentation under fire.
+
+The deeper Mafdet connection has a mercantile texture that the Quiet Separatists have begun to develop politically. Mafdet's Ledger Houses are interested in Rakuen's forest medicine production — specifically the canopy-specific botanical preparations that cannot be produced elsewhere in the five-city network. During periods when Rakuen's overland routes are functioning, this trade flows through Midgaard's registry system. The Quiet Separatists have been quietly exploring whether it could flow directly to Mafdet through the southern maritime channel, bypassing Midgaard's gate authority entirely. This is not yet a formal proposal. It is a significant political development that the Bloom Council has chosen not to notice.
+
+### Kowloon: The Grain Compact
+
+The most durable institutional relationship Rakuen has outside the Midgaard subsidy pipeline is with Kowloon's emergency commodity balancing system. During declared multi-city emergency seasons, Kowloon's Jade Magistracy activates provisional price ceilings on grain and timber — the Common Misery Clause in the five-city intercity framework. This mechanism has functioned reliably for Rakuen four times in the last sixty years, providing grain supplements during periods when Rakuen's own orchards were below yield and overland supply was compromised.
+
+The practical arrangement is called the **Southern Grain Compact** in Rakuen's internal records (Kowloon's records call it the "Extended Emergency Rationing Protocol, Southern Corridor Application"). Under the Compact, Kowloon's House Vao-descended Jade Magistracy maintains a reserve-grain allocation designated for southern corridor relief that can be dispatched within two weeks of a formal emergency declaration.
+
+The relationship has friction. Kowloon's merchants view Rakuen's risk surcharges as opportunistic — prices spike whenever route instability creates a temporary supply shortage, which Kowloon's logistics houses read as market manipulation and Rakuen's Dispatch Houses read as honest reflection of actual transport cost. The dispute is genuinely unresolvable because both readings are correct from different positions in the supply chain.
+
+There is also a knowledge-exchange dimension: Kowloon's Jade Magistracy has been studying Rakuen's flood-routing architecture — specifically the root-weave structural integration of the lower terraces, which represents a different engineering tradition than Kowloon's hydraulic systems. A delegation of Jade Magistracy engineers visited Rakuen during the last Ledger Vigil and spent three days in the lower terraces taking measurements. Their report has not been shared with Rakuen, which the Garden Ledger Clerks note with characteristic precision in their visit-record annotation.
+
+### Kiess: Charter Consultation and the Paradise Thesis Question
+
+Kiess's Syndic Council archives may hold a version of the unedited *Paradise Thesis* — the Canopy Compacts' claim that the full text was smuggled to Kiess during the Violet Compact era has never been confirmed or denied by Kiess's formal institutions. The Syndic Council's policy on unrequested archive inquiries is to neither confirm nor deny holdings until a formal access request is filed through proper channels.
+
+The practical Kiess-Rakuen relationship is more active than this archival mystery. Kiess's charter-right advisory missions have sent clerk delegations to Rakuen three times in the last thirty years — each time at Rakuen's request, each time focused on the same question: can the Southward Compact be amended to remove the self-governance provisions that Midgaard's Iron Compact Appeal refusal cited as a constitutional obstacle, without constituting the "civic dissolution" that Midgaard's Charter Sovereignty office warned against?
+
+Kiess's legal opinion, delivered in careful written form after each delegation, has been consistent: technically yes, the Compact can be amended through a supermajority stewardship process; practically, the amendment would be contestable in any tribunal that accepted Midgaard's constitutional framing; and the safest approach would be to have the amendment reviewed by a neutral third party before submission — which Kiess implicitly offers to be. The Bloom Council has not yet accepted this offer. The Amendment Track considers it the most viable path forward. The Preservation Coalition considers accepting Kiess review a symbolic surrender.
+
+### Sepulchur Pasture: The Uncounted Dead
+
+Disaster dead and unidentified route casualties from Rakuen traffic sometimes enter Midgaard's funerary systems under deferred-name protocols — the administrative mechanism by which the Sepulchur Pasture handles unidentified dead recovered along the southern corridors. The funerary machinery processes the bodies. The names are deferred pending identification. Many are never identified.
+
+Rakuen's Garden Ledger maintains a separate register of persons who departed the city on documented routes and were never confirmed arrived at their destinations. This register — the **Outbound Open Register** — is cross-referenced against Midgaard's deferred-name casualty records annually by a Canopy Compact runner who walks to Midgaard's Southern Receiving office and reads both lists in sequence. The cross-reference rate is approximately thirty percent — roughly one in three unidentified Sepulchur casualties from the southern corridors can be matched to an Outbound Open Register entry with reasonable confidence.
+
+The other seventy percent remain in what both cities' records describe as statistical variance. The Outbound Open Register has 847 active open entries, accumulated over the last forty years. The Bloom Council considers this a route-safety record. The Honest Ledger movement considers it an indictment of the guide-compact system's adequacy. The Garden Ledger Clerks consider it simply the truth, and have been recording it faithfully since the Register was created.
+
+
 
 
 
