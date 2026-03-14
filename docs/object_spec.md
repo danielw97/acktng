@@ -160,6 +160,7 @@ Cross-section policy for object-function alignment:
 - `hooves` = `4194304`
 - `take` = `8388608`
 - `clan_colors` = `16777216`
+- `invasion_emblem` = `33554432`
 
 Note: `ITEM_WEAR_NONE` (`1`) exists in `src/config.h`, but it is not exposed in `tab_wear_flags` and therefore is not a valid builder keyword in area files.
 
@@ -167,6 +168,7 @@ Area policy constraints for object wear flags:
 
 - Every object **must** include `ITEM_TAKE`.
 - No object may include `ITEM_WEAR_CLAN_COLORS`.
+- `invasion_emblem` is a runtime-only wear flag; it must never be authored in area/object files.
 - Object `name`, `short_descr`, and `description` fields must be thematically consistent with the object's non-`take` wear flags (e.g., a `head` item must read as headgear, `wrist` as wristwear, `hold` as a held item).
 
 Builder conventions for held equipment archetypes:
