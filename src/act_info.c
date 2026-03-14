@@ -862,7 +862,26 @@ void show_char_to_char_0(CHAR_DATA *victim, CHAR_DATA *ch)
       safe_strcat(MSL, buf, get_ruler_title(victim->pcdata->ruler_rank, victim->login_sex));
    if (victim->position == POS_STANDING && victim->long_descr[0] != '\0')
    {
-      safe_strcat(MAX_STRING_LENGTH, buf, victim->long_descr);
+      if (IS_NPC(victim))
+      {
+         char mob_long_descr[MAX_STRING_LENGTH];
+         int i;
+         int j = 0;
+
+         for (i = 0; victim->long_descr[i] != '\0' && j < MAX_STRING_LENGTH - 1; i++)
+         {
+            if (victim->long_descr[i] == '\n' || victim->long_descr[i] == '\r')
+               continue;
+            mob_long_descr[j++] = victim->long_descr[i];
+         }
+
+         mob_long_descr[j] = '\0';
+         safe_strcat(MAX_STRING_LENGTH, buf, mob_long_descr);
+         safe_strcat(MAX_STRING_LENGTH, buf, "\n\r");
+      }
+      else
+         safe_strcat(MAX_STRING_LENGTH, buf, victim->long_descr);
+
       safe_strcat(MAX_STRING_LENGTH, buf, color_string(ch, "normal"));
 
      if ((IS_AFFECTED(victim, AFF_CLOAK_FLAMING)) || (IS_AFFECTED(victim, AFF_CLOAK_ABSORPTION)) || (IS_AFFECTED(victim, AFF_CLOAK_REFLECTION)) || (is_affected(victim, skill_lookup("cloak:misery")) || is_affected(victim, skill_lookup("cloak:drain")) || is_affected(victim, skill_lookup("cloak:iron")) || is_affected(victim, skill_lookup("cloak:mental"))) || (is_affected(victim, skill_lookup("cloak:elements"))))
@@ -1208,10 +1227,27 @@ void do_look(CHAR_DATA *ch, char *argument)
             char *string_format(char *str, int *numlines, int width, int height, bool unjust);
             int wid = (IS_NPC(ch) ? 80 : ch->pcdata->term_columns);
 
-            sprintf(out, "%s%s%s\n\r", color_string(ch, "rooms"),
-                    string_format(ch->in_room->description, NULL, wid, 10000,
-                                  !IS_SET(ch->config, CONFIG_JUSTIFY)),
-                    color_string(ch, "normal"));
+            {
+               char room_descr[MAX_STRING_LENGTH];
+               const char *formatted_description = string_format(ch->in_room->description, NULL, wid, 10000,
+                                                                 !IS_SET(ch->config, CONFIG_JUSTIFY));
+               int i;
+               int j = 0;
+
+               for (i = 0; formatted_description[i] != '\0' && j < MAX_STRING_LENGTH - 1; i++)
+               {
+                  if (formatted_description[i] == '\n' || formatted_description[i] == '\r')
+                     continue;
+                  room_descr[j++] = formatted_description[i];
+               }
+
+               room_descr[j] = '\0';
+               out[0] = '\0';
+               safe_strcat(MAX_STRING_LENGTH, out, color_string(ch, "rooms"));
+               safe_strcat(MAX_STRING_LENGTH, out, room_descr);
+               safe_strcat(MAX_STRING_LENGTH, out, color_string(ch, "normal"));
+               safe_strcat(MAX_STRING_LENGTH, out, "\n\r");
+            }
             send_to_char(out, ch);
          }
       }
