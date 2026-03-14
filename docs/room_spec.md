@@ -50,6 +50,7 @@ Room description content requirements:
 - Each room's main `<description>~` must contain at least 3 sentences of text.
 - Important rooms must contain at least 5 sentences of text in the main `<description>~`.
 - Each room's main `<description>~` must be unique to that room (do not reuse identical room descriptions across rooms).
+- Room names and descriptions must not use placeholder/procedural naming patterns (for example, `Staging Corridor 12`, `Room 7`, `Passage 3`) or any equivalent numbered-template text. Names and prose must be authored as in-world, thematic content rather than indexed placeholders.
 - When a room uses a named exit (non-empty `<exit_keyword>`), that exit name must appear in at least one of:
   - the room's main `<description>~`,
   - an object that spawns in the room, or
@@ -59,6 +60,7 @@ Room description content requirements:
 Directional traversal constraints:
 
 - Except in mazes, exits are expected to be bi-directional: if room `A` connects to room `B` through direction `X`, room `B` should provide the opposite-direction exit back to room `A`.
+- This bi-directional expectation also applies to planned cross-area/world links (for example, Area A -> Area B): if an authored connection is intended as a traversable world route, the reverse link in the connected area must be added as part of the same content change.
 - Mazes are explicitly exempt from the bi-directional expectation and may use one-way, asymmetric, or otherwise non-reciprocal exits.
 - Room connections must not loop back in non-linear patterns (for example, `a -> b -> c -> d -> e -> a -> b`) unless the involved vnum set is a maze and every room in that set has `ROOM_MAZE` set.
 - Repeated movement in the same direction must not enter a directional loop unless the involved vnum set is a maze and every room in that set has `ROOM_MAZE` set.
