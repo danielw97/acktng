@@ -7,11 +7,6 @@
 #include "ack.h"
 #include "special.h"
 
-int summon_master_heal_chance_for_test(int master_hit, int master_max_hp, int thematic_bonus);
-int summon_special_count_for_test(void);
-bool summon_special_casts_in_combat_for_test(CHAR_DATA *ch, int index);
-int spec_superboss_index_for_test(CHAR_DATA *mob);
-void spec_death_handler(CHAR_DATA *victim, CHAR_DATA *killer);
 
 struct skill_type skill_table[MAX_SKILL];
 
@@ -78,6 +73,25 @@ int skill_lookup(const char *name)
     return -1;
 }
 
+#define SUMMON_SPECIAL_COUNT 9
+
+static bool summon_special_casts_in_combat(CHAR_DATA *ch, int index)
+{
+    switch (index)
+    {
+    case 0: return spec_summon_water(ch);
+    case 1: return spec_summon_fire(ch);
+    case 2: return spec_summon_earth(ch);
+    case 3: return spec_summon_undead(ch);
+    case 4: return spec_summon_holy(ch);
+    case 5: return spec_summon_shadow(ch);
+    case 6: return spec_summon_metal(ch);
+    case 7: return spec_summon_animate(ch);
+    case 8: return spec_summon_thought(ch);
+    default: return FALSE;
+    }
+}
+
 static void clear_character(CHAR_DATA *ch)
 {
     memset(ch, 0, sizeof(*ch));
@@ -94,14 +108,14 @@ static void initialize_spell_table(void)
 
 static void test_no_chance_when_master_full_or_invalid(void)
 {
-    assert(summon_master_heal_chance_for_test(100, 100, 30) == 0);
-    assert(summon_master_heal_chance_for_test(50, 0, 30) == 0);
+    assert(summon_master_heal_chance(100, 100, 30) == 0);
+    assert(summon_master_heal_chance(50, 0, 30) == 0);
 }
 
 static void test_chance_increases_as_master_hp_drops(void)
 {
-    int high_hp = summon_master_heal_chance_for_test(90, 100, 20);
-    int low_hp = summon_master_heal_chance_for_test(25, 100, 20);
+    int high_hp = summon_master_heal_chance(90, 100, 20);
+    int low_hp = summon_master_heal_chance(25, 100, 20);
 
     assert(high_hp == 30);
     assert(low_hp == 95);
@@ -110,8 +124,8 @@ static void test_chance_increases_as_master_hp_drops(void)
 
 static void test_chance_respects_bounds(void)
 {
-    assert(summon_master_heal_chance_for_test(99, 100, -50) == 5);
-    assert(summon_master_heal_chance_for_test(-10, 100, 0) == 95);
+    assert(summon_master_heal_chance(99, 100, -50) == 5);
+    assert(summon_master_heal_chance(-10, 100, 0) == 95);
 }
 
 static void test_all_summon_specs_cast_in_combat(void)
@@ -128,10 +142,10 @@ static void test_all_summon_specs_cast_in_combat(void)
     summon.level = 80;
     summon.fighting = &target;
 
-    for (int i = 0; i < summon_special_count_for_test(); i++)
+    for (int i = 0; i < SUMMON_SPECIAL_COUNT; i++)
     {
         g_cast_count = 0;
-        assert(summon_special_casts_in_combat_for_test(&summon, i) == TRUE);
+        assert(summon_special_casts_in_combat(&summon, i) == TRUE);
         assert(g_cast_count == 1);
     }
 }
@@ -142,19 +156,19 @@ static void test_superboss_index_identifies_superbosses(void)
     clear_character(&mob);
 
     mob.spec_fun = spec_pyramid_black_sun_shard;
-    assert(spec_superboss_index_for_test(&mob) == SUPERBOSS_PYRAMID_BLACK_SUN_SHARD);
+    assert(spec_superboss_index(&mob) == SUPERBOSS_PYRAMID_BLACK_SUN_SHARD);
 
     mob.spec_fun = spec_keep_elemental_captain;
-    assert(spec_superboss_index_for_test(&mob) == SUPERBOSS_KEEP_ELEMENTAL_CAPTAIN);
+    assert(spec_superboss_index(&mob) == SUPERBOSS_KEEP_ELEMENTAL_CAPTAIN);
 
     mob.spec_fun = spec_keep_physical_captain;
-    assert(spec_superboss_index_for_test(&mob) == SUPERBOSS_KEEP_PHYSICAL_CAPTAIN);
+    assert(spec_superboss_index(&mob) == SUPERBOSS_KEEP_PHYSICAL_CAPTAIN);
 
     mob.spec_fun = spec_breath_any;
-    assert(spec_superboss_index_for_test(&mob) == -1);
+    assert(spec_superboss_index(&mob) == -1);
 
     mob.spec_fun = NULL;
-    assert(spec_superboss_index_for_test(&mob) == -1);
+    assert(spec_superboss_index(&mob) == -1);
 }
 
 static void test_death_handler_awards_reincarnation_point(void)

@@ -499,7 +499,7 @@ void spec_handle_damage(CHAR_DATA *victim, int element, int dam)
  * spec_superboss_index — return the superboss tracking index for a mob,
  * or -1 if the mob is not a superboss.
  */
-static int spec_superboss_index(CHAR_DATA *mob)
+int spec_superboss_index(CHAR_DATA *mob)
 {
    if (mob->spec_fun == spec_pyramid_black_sun_shard)
       return SUPERBOSS_PYRAMID_BLACK_SUN_SHARD;
@@ -509,13 +509,6 @@ static int spec_superboss_index(CHAR_DATA *mob)
       return SUPERBOSS_KEEP_PHYSICAL_CAPTAIN;
    return -1;
 }
-
-#ifdef UNIT_TEST_SPECIAL
-int spec_superboss_index_for_test(CHAR_DATA *mob)
-{
-   return spec_superboss_index(mob);
-}
-#endif
 
 /*
  * spec_death_handler — called from group_gain() when an NPC dies.
@@ -632,45 +625,6 @@ int summon_master_heal_chance(int master_hit, int master_max_hp, int thematic_bo
 
    return URANGE(5, chance_to_heal, 95);
 }
-
-#ifdef UNIT_TEST_SPECIAL
-int summon_master_heal_chance_for_test(int master_hit, int master_max_hp, int thematic_bonus)
-{
-   return summon_master_heal_chance(master_hit, master_max_hp, thematic_bonus);
-}
-
-int summon_special_count_for_test(void)
-{
-   return 9;
-}
-
-bool summon_special_casts_in_combat_for_test(CHAR_DATA *ch, int index)
-{
-   switch (index)
-   {
-   case 0:
-      return spec_summon_water(ch);
-   case 1:
-      return spec_summon_fire(ch);
-   case 2:
-      return spec_summon_earth(ch);
-   case 3:
-      return spec_summon_undead(ch);
-   case 4:
-      return spec_summon_holy(ch);
-   case 5:
-      return spec_summon_shadow(ch);
-   case 6:
-      return spec_summon_metal(ch);
-   case 7:
-      return spec_summon_animate(ch);
-   case 8:
-      return spec_summon_thought(ch);
-   default:
-      return FALSE;
-   }
-}
-#endif
 
 bool spec_summon_heal_master(CHAR_DATA *ch, int thematic_bonus)
 {
