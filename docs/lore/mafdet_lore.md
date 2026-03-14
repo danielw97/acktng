@@ -493,3 +493,15 @@ Mafdet-related pairings represented there:
 - Mafdet <-> Kowloon: cargo codex alignment for northern maritime conversion.
 - Mafdet <-> Kiess: debt and bonded-transfer legality review.
 - Mafdet <-> Rakuen: Mercy-freight classification — formalized as a standing protocol rather than a charitable case-by-case exception, requiring Bloom Council disaster certification countersigned by Ember Wardens. Rakuen's Garden Ledger Clerks maintain pre-completed certification templates for activation under active disaster conditions to address the chain-of-custody compliance problem under evacuation conditions. Mafdet's Ledger Houses have growing commercial interest in Rakuen's canopy-botanical production — forest medicines and preserved preparations unavailable elsewhere in the five-city network. The **Quiet Separatist development**: Rakuen's Canopy Workshop compact-leaders are exploring a direct southern maritime channel that would route canopy-botanical trade to Mafdet without passing through Midgaard's Southern Wild Gate registry. If operational, this would be the most significant shift in Rakuen's economic geography since its founding. Mafdet's Ledger Houses find this commercially attractive. Midgaard's Southern Affairs office is aware of the development. Mafdet's institutional position is officially neutral; commercially, the Ledger Houses' interest is clear.
+
+## Rakuen Mercy-Freight and Annexation Arc Addendum
+
+Mafdet's harbor law now treats Rakuen as a high-volatility humanitarian-commercial hybrid origin. Midgaard's refusal to annex Rakuen after the Southmark Petition, Ash Plea, and Iron Compact Appeal forced maritime institutions to formalize workaround categories rather than rely on inland constitutional resolution.
+
+Key harbor consequences:
+
+- **Mercy-freight codification:** reduced-fee lanes for verified disaster cargo from Rakuen.
+- **Dual-intent manifests:** cargo can be legally tagged as both relief material and bonded collateral, creating frequent tribunal collisions.
+- **Priority-berth disputes:** Rakuen emergency shipments regularly contend with Kowloon commercial throughput for berth timing.
+
+Mafdet judges generally describe this system as **"annexation by paperwork's shadow"**: sovereign lines remain unchanged while practical obligations continue to expand.
