@@ -241,6 +241,7 @@ Shadowmere should always read as a contest between written order and moral colla
 - **Midgaard:** archival teams, reform factions, and military reclaim projects all seek Shadowmere evidence caches.
 - **Sepulchur Pasture:** competing funerary doctrines and shared legal language reveal common institutional ancestry.
 - **Nightfall/Catacomb traditions:** Shadowmere offers a “state” variant of necropolis corruption, less cultic and more administrative.
+- **Thornwood frontier:** the Thornwood estate-forest on the 11085 tunnel hinge demonstrates a parallel, non-state death regime—manorial and cultic rather than civic—on Shadowmere's southern approach.
 - **Roc Road traffic politics:** route control near Shadowmere influences caravan insurance, temple escort rates, and civic tariff debates.
 
 ---

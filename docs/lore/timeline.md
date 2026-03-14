@@ -236,6 +236,7 @@ Midgaard establishes occult oversight; darker institutional practices emerge.
 | **Violet Compact**: registry-based occult oversight, reliquary checkpoints, oath-ledger protocols. | Political | midgaard_lore |
 | The **Sealed Names apparatus** provides the administrative framework for suppression via sealed warrants, including the **"resettled south" mechanism** — displacing populations under welfare-language cover to southern frontier settlements. | Political | midgaard_lore |
 | Shadowmere issues **Plague Mandate**: rapid intake, forced quarantines, immediate cremation powers. "Temporary became permanent." Processing halls, poison works, deep binding cells built. | Catastrophe | shadowmere_lore |
+| The Thornwood estate transitions from aristocratic burial manor into a cult-bound necrotic forest complex on the Midgaard-Shadowmere grave frontier, connected by shared tunnel infrastructure. | Catastrophe | thornwood_lore |
 
 ---
 
