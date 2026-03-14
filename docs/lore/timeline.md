@@ -196,6 +196,7 @@ Midgaard and the first civic compacts.
 |-------|----------|---------|
 | **Midgaard's First Stone Accord**: road-security compacts, militia agreements, barter tribunals. The beginning of codified civic order. | Creation/Origin | midgaard_lore |
 | **Shadowmere founded** as a frontier march-town — the **Crownward Compact** mandates guarding transit, taxing goods, and processing war dead before they reach core city districts. | Creation/Origin | shadowmere_lore |
+| The **Harren Charter** establishes Thornwood as a frontier burial-and-timber manor north of Midgaard's grave fringe, monetizing interment access and estate-controlled passage rights. | Creation/Origin | thornwood_lore |
 
 ---
 
@@ -208,6 +209,7 @@ Midgaard standardizes civic infrastructure. Trade routes formalized.
 | **Lantern Reforms**: paving marks, posted tariffs, district lamp-lines, watch rotations standardized across Midgaard. | Political | midgaard_lore |
 | Ilren Voss leads the expedition that creates the **Lantern Road** through the Great Northern Forest, following game trails and ridgebacks. The **Bent Mile Principle** established: "if a straight road costs ten lives a season, the wiser road bends." | Engineering | great_northern_forest_lore |
 | Shadowmere copies Midgaard's watch-line practices in harsher form. Bell towers replace open forums; witness tablets replace local custom. | Political | shadowmere_lore |
+| Thornwood expands private ossuary throughput and deferred-name burial accounting, converting funerary service into debt administration along the northern grave frontier. | Political | thornwood_lore |
 | Evermeet's Roc Road becomes the primary western trade artery, connecting Midgaard to the fortified frontier city via standardized road-warden postings and Lantern Reform-era wayfinding. | Political | midgaard_lore |
 
 ---
@@ -236,6 +238,7 @@ Midgaard establishes occult oversight; darker institutional practices emerge.
 | **Violet Compact**: registry-based occult oversight, reliquary checkpoints, oath-ledger protocols. | Political | midgaard_lore |
 | The **Sealed Names apparatus** provides the administrative framework for suppression via sealed warrants, including the **"resettled south" mechanism** — displacing populations under welfare-language cover to southern frontier settlements. | Political | midgaard_lore |
 | Shadowmere issues **Plague Mandate**: rapid intake, forced quarantines, immediate cremation powers. "Temporary became permanent." Processing halls, poison works, deep binding cells built. | Catastrophe | shadowmere_lore |
+| The Thornwood estate transitions from aristocratic burial manor into a cult-bound necrotic forest complex on the Midgaard-Shadowmere grave frontier; manor process, ossuary throughput, and woodland behavior fuse into one predatory system connected to the shared grave tunnel hinge. | Catastrophe | thornwood_lore |
 
 ---
 
@@ -287,6 +290,7 @@ Cinderteeth disruptions force emergency rerouting and multi-year crises.
 |-------|----------|---------|
 | **Cinderteeth disruptions** force emergency rerouting, intensify route predation. Multi-year rationing in Rakuen. | Catastrophe | five_cities_intercity_lore |
 | **Shadowmere's Last Bell Crisis**: three contradictory decrees rung in one night (amnesty, lockdown, requisition). Garrisons split, chapel courts split. Necromantic expedients repurposed for political continuity. The city calcifies into mutually hostile systems. | Catastrophe | shadowmere_lore |
+| Great Northern wardens formalize Thornwood's **exclusion-zone** status in convoy and timber writ practice, codifying legal acknowledgment without assumption of direct governance. | Political | thornwood_lore, great_northern_forest_lore |
 | **First Annexation Attempt** (Southmark Petition): Rakuen seeks full civic annexation to Midgaard. Refused on ledger-compliance grounds. | Political | five_cities_intercity_lore, rakuen_lore |
 | Kowloon's emergency grain protocols begin servicing Rakuen — becomes the **Southern Grain Compact** framework. | Political | five_cities_intercity_lore |
 | **Second Annexation Attempt** (Ash Plea): emergency humanitarian appeal. Midgaard refuses on route-instability grounds. Joint route-stability commission meets four times and produces nothing binding. | Political | five_cities_intercity_lore, rakuen_lore |
@@ -321,6 +325,7 @@ Unresolved conflicts define the present.
 |-------|----------|---------|
 | Great Pyramid's lower courts breached by tomb extraction crews; cult revivals restore fragments of old rites; desert arcane storms amplify dormant seal feedback. Old factional ghosts regain agenda-like behavior. | Cosmic | great_pyramid_lore |
 | Ground tremors near the Southern Pyramid increase in frequency since the Great Pyramid breach — the two structures may be resonating. | Cosmic | southern_pyramid_lore |
+| Midgaard and frontier wardens report renewed disappearances in grave-route patrols near the Thornwood/Shadowmere tunnel hinge, reviving debate over sealed records and jurisdictional responsibility for the northern death corridor. | Political | thornwood_lore, midgaard_lore, shadowmere_lore |
 | The Jackal Synod's leadership knows the Northern Pyramid's binding is degrading; positioning cult members to "inherit" power when guardians fail. | Political | northern_pyramid_lore |
 | Rakuen's **Quiet Separatists** explore whether canopy-botanical trade can route directly to Mafdet, bypassing Midgaard's gate registry. | Political | five_cities_intercity_lore, rakuen_lore |
 | Kiess holds a pending charter-consultation offer to Rakuen. The next Bloom Council rotation may install an Amendment Track steward willing to submit a fourth petition. | Political | five_cities_intercity_lore |
@@ -409,6 +414,7 @@ Sources: sunken_sanctum_lore, kowloon_lore, great_northern_forest_lore, five_cit
 | mafdet_lore | Era XVII |
 | saltglass_reach_lore | Eras II, IV, VII, XVII |
 | shadowmere_lore | Eras XII, XIII, XV, XIX |
+| thornwood_lore | Eras XII, XIII, XV, XIX, XXI |
 | akhenet_lore | Eras II, IV, VII |
 | arroyo_lore | Eras II, IV, VII |
 | scorched_wastes_lore | Eras VII, XXI |
