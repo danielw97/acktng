@@ -1,5 +1,6 @@
 CC      = gcc
 PROF    =
+.DEFAULT_GOAL := all
 
 # Debugging flags possible:  DEBUG_MEM DEBUG_MEM_CORRUPT DEBUG_MEM_DUP_FREE
 # DEBUG_MEM is most basic, just checks magic numbers when freeing
