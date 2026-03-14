@@ -100,7 +100,7 @@ The rite's collapse destabilized trust in shared cosmology. At Khar'Daan, this b
 - Seal-priests invoked incompatible closure sequences.
 - Archive guardians received contradictory legal mandates.
 
-During what later texts call the **Week of Sundered Measures**, three key events occurred:
+During what later texts call the **Week of Sundered Measures** — likely contemporaneous with or shortly following the **Week of Impossible Dawns** at the Great Pyramid, when the Black Sun Shard's containment nearly failed and sent destabilization pulses through the obelisk-line network — three key events occurred:
 
 1. **The Black Reed Breach:** lower channels burst into the archive quarter.
 2. **The Cartouche Panic:** noble houses broke seals to retrieve ancestors, spreading contamination.

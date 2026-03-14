@@ -420,10 +420,10 @@ Sources: sunken_sanctum_lore, kowloon_lore, great_northern_forest_lore, five_cit
 | verdant_depths_lore | Eras XI, XXI |
 | withered_depths_lore | Eras X, XXI |
 | sepulchur_pasture_lore | Eras XV, XXI |
-| sultans_palace_lore | Eras IV, VII |
+| sultans_palace_lore | Era VII |
 | khardaan_lore | Eras IV, VII |
 | lost_city_lore | Eras IV, VII |
 | rocroad_lore | Eras XIII, XVI |
-| violet_eclipse_cathedral_lore | Era VI |
-| umbra_heartspire_lore | Era VI |
-| catacombs_of_nightfall_lore | Era VI |
+| violet_eclipse_cathedral_lore | Eras XV, XVI |
+| umbra_heartspire_lore | Eras XV, XVI |
+| catacombs_of_nightfall_lore | Eras XIII, XV |
