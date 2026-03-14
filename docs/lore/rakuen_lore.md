@@ -239,6 +239,50 @@ Three positions now dominate modern Rakuen politics:
 
 All three positions have merit. All three are politically blocked by the other two. This is modern Rakuen.
 
+---
+
+## V. Geography, Architecture, and Access Logic
+
+### Getting There: The Southern Corridor Problem
+
+Rakuen is reached by passing south through Midgaard's Southern Wild Gate into the Eccentric Woodland, then following interior routes maintained by a combination of Rakuen dispatch houses, Woodland guide-compact wardens, and seasonal marker codes. There is no single permanently safe road. Route authority is negotiated, not guaranteed. Floods, fire damage, and Woodland territorial shifts periodically rewrite usable approaches.
+
+The practical experience of reaching Rakuen:
+
+- From Midgaard's Southern Wild Gate, a traveler enters the Woodland under that gate's standard advisory: passage conditions uncontrolled beyond first tree-line.
+- Rakuen maintains a **Dispatch House** just past the Woodland's inner edge — a waystation that functions as orientation point, guide-hire post, and seasonal route board. The route board is updated by Canopy Compact runners twice per week; the information is usually three to five days old.
+- The interior route passes through three approximate zones: the **Near Corridor** (Woodland edge to the Redwater crossing), the **Deep Passage** (crossing to the canopy-height transition), and the **Approach Terraces** (the rising ground below Rakuen's lower district). Each zone has different hazard profiles and different guide-compact operators.
+- Midgaard's official records list the route as "open with advisories." Rakuen's own route logs, which the Garden Ledger Clerks maintain with meticulous candor, list it as "conditionally passable, no-guarantee standard." The difference between these classifications is political, not geographic.
+
+### The City Itself: Vertical Layers
+
+Rakuen is built on rising ground at the edge of the deep canopy — high enough to have a seasonal flood plain below it, low enough to still be under primary canopy cover at its upper terraces. The city reads vertically rather than horizontally:
+
+**The Lower Terraces** — the original flood-plain settlement, now only partially inhabited. These are the oldest structures: root-integrated architecture from Solen's founding generation, where building walls incorporate living tree-root systems as structural elements. Root-weave walls are distinctive and genuinely beautiful; they are also maintenance-intensive in ways that flood-damaged communities cannot always sustain. The lower terraces flood three to four times per decade. The inhabited sections have been elevated on continuous-improvement stilting and causeways that have accreted over generations into a semi-permanent raised street system. The abandoned sections are officially designated "rest gardens" — the Bloom Council's term — and are slowly being reclaimed by the canopy. In the right season, the rest gardens are genuinely striking: flooded and mossy, with root-weave walls still standing, filled with filtered canopy light. Artists and the city's small community of contemplative practitioners use them. Children are warned away from them by parents who know the structural instability is real.
+
+**The Causeway Quarter** — the middle band, built primarily during the Ash-and-Iron decades as the lower terraces became unreliable. The Causeway Quarter is practical architecture: raised stone paths, ration towers at route intersections, sealed storehouses with elevated entrances, public-wash channels designed for ash-clearing efficiency. It is not beautiful. It was not meant to be. The towers cast angular shadows that the lower terraces' organic architecture never did. Residents of the Causeway Quarter tend to be pragmatic about what Rakuen is now: they live in the disaster-infrastructure layer.
+
+The **Central Market** sits at the Causeway Quarter's highest point, where the raised routes converge. It is the most active commercial space in the city and has the slightly improvised character of a market that grew around a logistics node rather than being planned as a market. Stalls occupy the spaces between ration-tower footings. Permanent traders have built lean-to structures against the tower bases with informal city tolerance. The Ember Wardens patrol the Central Market twice daily because ration-tower security is their explicit mandate and they are not going to pretend the market built around it is irrelevant to that mandate.
+
+**The Upper Civic Ring** — the highest inhabited ground, where Rakuen's founding-era civic structures survive. This is where the Bloom Pavilion stands, where the Bloom Council meets, where the Garden Ledger Clerks maintain their archive building, and where Rakuen's small number of wealthy residents have their homes. The Upper Ring has escaped the worst flood damage by virtue of elevation and has been maintained with greater continuity of investment than the districts below it. The gap between Upper Ring aesthetics and Causeway Quarter aesthetics is visible to any traveler who walks from one to the other: carved stone lintels versus functional block walls, flowering window-boxes versus sealed ventilation grilles, public oath circles maintained with swept stone versus ration queues and dispatch boards.
+
+The Upper Ring's **Promise Stone Plaza** holds the six original founding Promise Stones in a semicircle around a central fire pit. The fire is kept burning continuously — it has been extinguished by flood three times and by a catastrophic downburst once, and each time it was relit from the same preserved ember-tinder that the Bloom Council keeps in a sealed case as civic continuity insurance. The fire is Rakuen's most persistent public symbol. The Bloom Council calls it the Founder's Hearth. The Honest Ledger movement calls it a nice fire in an otherwise cold city.
+
+**The Canopy Workshops** — an informal district at the city's eastern edge where the canopy cover is thickest, used primarily by Rakuen's craft production community. Woodworkers, medicine preparers, dye-house operators, and rope-and-cordage makers work here under canopy cover that provides both shade and a functional roof for many operations. The Canopy Workshops are the most economically productive part of modern Rakuen and are governed primarily through the Canopy Compact mutual-aid leagues rather than the Bloom Council or Ember Wardens. The Workshops have their own internal dispute-resolution system, their own route contracts with Woodland guide-compacts, and a strong tradition of institutional independence. They are the closest thing to the Paradise Thesis's rotating stewardship model that actually functions in modern Rakuen — because the Workshop compacts are small enough and trust-dense enough that the model still works at their scale.
+
+### Structural Landmarks
+
+**The Bloom Pavilion**: Open-sided civic hall with a living ivy roof, rebuilt three times. The current ivy cultivar was selected in the Ash-and-Iron decades for ash-resistance. The Pavilion is used for formal civic ceremonies, Bloom Council public sessions, and the Festival of Ever-Bloom's central rites. It smells of old wood and growing things. It is one of the few places in Rakuen's Causeway-Quarter-era landscape where you can see what the founding generation built for.
+
+**The Garden Ledger Archive**: A sealed stone building in the Upper Ring, with flood-resistant lower walls and document-storage vaults dug into the bedrock rather than the flood plain. The Archive's street face has a public posting board where current resource levels, route conditions, and Bloom Council decisions are updated twice weekly. The Archive building has been the site of three formal break-in attempts — all politically motivated, all unsuccessful — which the Garden Ledger Clerks consider a measure of how much the records matter.
+
+**The Southmark Wall**: The original low boundary wall from the founding generation, now partially buried under later construction and largely symbolic. Its northern face has been used as a writing surface for at least three generations of protest notation, public-record postings, and memorial inscriptions. The Bloom Council has twice ordered the wall cleaned; twice, residents restarted the inscriptions within a week. The wall is now officially protected as a "civic memory surface." This is one of the few political compromises in Rakuen's recent history that all factions have accepted.
+
+**The Ration Towers**: There are seven in the Causeway Quarter and two in the Upper Ring. Each is approximately four stories of sealed stone with distribution windows on the second floor — high enough to stay above standard flood water, accessible by a staircase that can be gated. The towers are numbered, not named. Residents have given them informal names anyway: Tower Three is "the Solen Tower" because it was built on the site of his original demonstration orchard. Tower Six is "the Ash Column" because it has a visible ash-stain line at the third-floor mark from the second Ashfall Monsoon.
+
+**The Dispatch Houses**: There are three — one at the Woodland entry point, one in the Causeway Quarter, and one at the Upper Ring for higher-value routing. Each maintains route boards, guide-hire registers, and seasonal passage records. The Dispatch Houses are private operations under Canopy Compact charters, not Bloom Council municipal property. This matters: they are the most reliable information sources in the city precisely because they have commercial incentives for accuracy rather than political incentives for managed optimism.
+
+
 
 
 
