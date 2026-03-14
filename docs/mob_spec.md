@@ -26,6 +26,13 @@ A list of mobile records, each introduced by `#<vnum>`, terminated by `#0`:
 `<long_descr>` is stricter: it must be exactly one text line, followed by a newline, followed by a line containing only `~`.
 There is no valid multi-line alternative for mob `<long_descr>`; under no circumstances may `<long_descr>` text span multiple lines.
 
+Authoring quality policy for mob text fields:
+
+- Mobile `description` strings must not be mass-templated boilerplate reused with only the mob name swapped.
+- Mobile `description` strings should be concise (prefer 1-2 sentences) and should highlight immediately visible identity/behavior rather than repeating generic area prose.
+- Mobile `long_descr` strings should be short ambient lines suitable for in-room presence text; avoid overlong lore paragraphs in `long_descr`.
+- `long_descr` format is strict: one text line, then exactly one newline, then `~` on the next line (no blank spacer line between text and terminator).
+
 `<act>` is parsed as an unsigned 64-bit bitvector. This allows mobile flags above the legacy 32-bit range (for example `day_only`/`night_only`) to be saved and loaded correctly.
 
 Optional extension blocks (detected by leading marker):
