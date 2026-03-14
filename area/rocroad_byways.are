@@ -3846,16 +3846,19 @@ O 0 3471 0 3621 Offering stone in North Alcove
 O 0 3468 0 3589 Inscription rubbing in Inscription Hall
 S
 #SPECIALS
-M 3450 spec_warden
-M 3451 spec_warden
-M 3465 spec_warden
-M 3468 spec_warden
-M 3469 spec_warden
-M 3480 spec_warden
-M 3489 spec_warden
-M 3458 spec_kiess_innkeeper
-M 3482 spec_vendor
-M 3463 spec_vendor
-M 3466 spec_vendor
+M 3450 spec_rr_byways_warden
+M 3451 spec_rr_byways_warden
+M 3454 spec_rr_byways_hermit
+M 3457 spec_rr_byways_ferryman
+M 3458 spec_rr_byways_innkeeper
+M 3465 spec_rr_byways_warden
+M 3466 spec_rr_byways_market
+M 3467 spec_rr_byways_kiess_clerk
+M 3468 spec_rr_byways_warden
+M 3469 spec_rr_byways_midgaard_guard
+M 3480 spec_rr_byways_warden
+M 3482 spec_rr_byways_market
+M 3483 spec_rr_byways_scholar
+M 3489 spec_rr_byways_warden
 S
 #$

@@ -211,6 +211,22 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_rr_pilgrim;
    if (!str_cmp(name, "spec_rr_ruin_scavenger"))
       return spec_rr_ruin_scavenger;
+   if (!str_cmp(name, "spec_rr_byways_warden"))
+      return spec_rr_byways_warden;
+   if (!str_cmp(name, "spec_rr_byways_hermit"))
+      return spec_rr_byways_hermit;
+   if (!str_cmp(name, "spec_rr_byways_innkeeper"))
+      return spec_rr_byways_innkeeper;
+   if (!str_cmp(name, "spec_rr_byways_ferryman"))
+      return spec_rr_byways_ferryman;
+   if (!str_cmp(name, "spec_rr_byways_scholar"))
+      return spec_rr_byways_scholar;
+   if (!str_cmp(name, "spec_rr_byways_market"))
+      return spec_rr_byways_market;
+   if (!str_cmp(name, "spec_rr_byways_kiess_clerk"))
+      return spec_rr_byways_kiess_clerk;
+   if (!str_cmp(name, "spec_rr_byways_midgaard_guard"))
+      return spec_rr_byways_midgaard_guard;
    if (!str_cmp(name, "spec_reach_warden"))
       return spec_reach_warden;
    if (!str_cmp(name, "spec_reach_guide"))
@@ -417,6 +433,22 @@ char *rev_spec_lookup(void *func)
       return "spec_rr_pilgrim";
    if (func == spec_rr_ruin_scavenger)
       return "spec_rr_ruin_scavenger";
+   if (func == spec_rr_byways_warden)
+      return "spec_rr_byways_warden";
+   if (func == spec_rr_byways_hermit)
+      return "spec_rr_byways_hermit";
+   if (func == spec_rr_byways_innkeeper)
+      return "spec_rr_byways_innkeeper";
+   if (func == spec_rr_byways_ferryman)
+      return "spec_rr_byways_ferryman";
+   if (func == spec_rr_byways_scholar)
+      return "spec_rr_byways_scholar";
+   if (func == spec_rr_byways_market)
+      return "spec_rr_byways_market";
+   if (func == spec_rr_byways_kiess_clerk)
+      return "spec_rr_byways_kiess_clerk";
+   if (func == spec_rr_byways_midgaard_guard)
+      return "spec_rr_byways_midgaard_guard";
    if (func == spec_reach_warden)
       return "spec_reach_warden";
    if (func == spec_reach_guide)
@@ -529,6 +561,14 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_rr_camp_cook      \n\r");
    strcat(buf, "       spec_rr_pilgrim        \n\r");
    strcat(buf, "       spec_rr_ruin_scavenger \n\r");
+   strcat(buf, "       spec_rr_byways_warden  \n\r");
+   strcat(buf, "       spec_rr_byways_hermit  \n\r");
+   strcat(buf, "       spec_rr_byways_innkeeper\n\r");
+   strcat(buf, "       spec_rr_byways_ferryman \n\r");
+   strcat(buf, "       spec_rr_byways_scholar  \n\r");
+   strcat(buf, "       spec_rr_byways_market   \n\r");
+   strcat(buf, "       spec_rr_byways_kiess_clerk\n\r");
+   strcat(buf, "       spec_rr_byways_midgaard_guard\n\r");
    strcat(buf, "       spec_reach_warden      \n\r");
    strcat(buf, "       spec_reach_guide       \n\r");
    strcat(buf, "       spec_reach_assessor    \n\r");
