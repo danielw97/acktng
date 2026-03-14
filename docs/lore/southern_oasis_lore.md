@@ -197,6 +197,15 @@ Specific connections:
 - Midgaard scholars who study pyramid inscriptions preferentially use Southern Oasis–certified rubbings because the provenance chain is more trustworthy than artifacts purchased through unregulated Eastern Desert markets.
 - The Mortuary Circle sends copies of Casualty Ledger entries to Midgaard's city archives for permanent storage — a practice that began when the Southern Oasis realized that its own records were vulnerable to the same hazards (fire, flood, cult seizure) that had destroyed the Great Oasis Toll Pavilion's archives.
 
+### Connection to Scorching Sands
+
+The Southern Oasis's **convoy hardening methods** — double-wrap water skins, copper-rim vents on supply crates, and standardized casualty triage drills — became foundational practice in Scorching Sands, where caravan captains adopted them as minimum-competency standards for crossing the heat gauntlet. Southern Oasis convoy departure schools trained many current Scorching Sands arch captains; the casualty triage lexicon used at the Seven Shade Arches' shade stations is largely Southern Oasis vocabulary.
+
+Two specific institutional threads link the two settlements:
+
+- The Southern Oasis Casualty Ledger format is used in Scorching Sands to document heat-death and disappearance incidents on the crossing. Deaths that cannot be attributed to a specific named party under the Scorch Clause's segment liability provisions are forwarded to the Southern Oasis as "unresolved eastern corridor casualties," where they enter the Mortuary Circle's archival queue.
+- The Mortuary Circle's expedition death processing traditionally includes a note on the deceased's last verified location. For caravans that disappeared after leaving the Seven Shade Arches but before reaching the Cinder Gate, this creates a joint record between Scorching Sands' Ember Warden breach dockets and the Southern Oasis's Casualty Ledger — the only circumstance in which the two institutions regularly exchange data.
+
 ### Connection to the Saltglass Reach and Mafdet
 
 The Southern Oasis's casualty-processing and relic-authentication functions extend eastward through the Saltglass Reach to Mafdet's harbor. The relationship is institutional and practical:

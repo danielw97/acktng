@@ -459,3 +459,15 @@ These links should stay atmospheric and diegetic rather than encyclopedic. The g
 
 ### 21i) Saltglass Reach and Mafdet Maritime Extension
 The Great Oasis historically functioned as the last major freshwater arbitration basin for caravans bound east to the coast. Seaward convoys took certified water-right and charter attestations from the oasis, crossed the Saltglass Reach, and converted those claims into harbor contracts at Mafdet. In modern play-space terms, this lets Great Oasis lore naturally reference maritime pricing shocks, ship-cargo demand cycles, and coastal faction pressures without breaking existing canon.
+
+### 21j) Scorching Sands (Eastern Corridor Transition Zone)
+
+The **Scorching Sands** — positioned roughly two to three caravan days east-southeast of the Great Oasis — is the last major inland heat gauntlet before eastbound convoys enter Saltglass Reach territory. It functions as the corridor's primary heat-certification district, and its administrative culture descends directly from Great Oasis legal traditions.
+
+Three specific connections warrant room and NPC-level acknowledgment:
+
+- **Ration lexicon continuity**: Great Oasis–derived water-allotment formulas appear verbatim in Scorching Sands caravan commands. A Water Marshal in Scorching Sands drawing allocations uses the same ration denominations ("full draw," "half draw," "emergency quarter") that originated at the Great Oasis Water Court.
+- **Dispute escalation**: Scorching Sands water-allotment disputes that cannot be resolved locally are formally escalated to Great Oasis citation review, preserving a legal chain from the eastern heat gauntlet back to the corridor's primary water-right authority.
+- **Authentication continuity**: The Great Oasis's characteristic four-witness seal format is the recognized authentication standard that the Burn Ledger built its own kiln-certification records around. Mafdet Ledger Houses checking cargo provenance recognize Great Oasis witness marks as the authoritative chain-of-custody origin upstream of Scorching Sands heat-certification.
+
+Great Oasis authorities view Scorching Sands as both necessity and liability: indispensable for eastbound trade volume, but notorious for legal disputes, disappearance rates, and the persistent problem of forged heat certificates that pass initial inspection but fail post-arrival audit.
