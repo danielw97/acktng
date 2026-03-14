@@ -21,11 +21,11 @@ That chain only functions because all five are present. Remove any one and the o
 
 ## II. Chronology of Five-City Interaction
 
-1. **Early Route Era (post-Evermeet collapse)**: Kiess and Midgaard formalize replacement arbitration channels while Kowloon expands northern supply collection. Rakuen exists as a frontier welfare experiment under provisional Midgaard charter. Mafdet operates as an independent harbor authority with limited inland reach.
+1. **Lantern-Delta Expansion (post-Kowloon founding)**: Midgaard and Kowloon synchronize road-watch and convoy rhythm practices. Evermeet's Roc Road is the primary western trade artery during this period. Mafdet operates as an independent harbor authority with limited inland reach.
 
-2. **Lantern-Delta Expansion**: Midgaard and Kowloon synchronize road-watch and convoy rhythm practices. Kiess's Roc Road becomes the primary western trade artery. Rakuen enters official Midgaard maps as a "southern relief city" — conditional recognition without binding support obligations.
+2. **Containment Bureaucracy Period (Violet Compact)**: Midgaard establishes the Sealed Names apparatus and "resettled south" mechanism — displacing populations to southern frontier settlements under welfare-language framing. Mafdet formalizes the Strandline Compact during the Fracture Era.
 
-3. **Containment Bureaucracy Period (Violet Compact)**: Kiess formally challenges secret warrants used by Midgaard-adjacent agencies, writing anti-sealed-warrant doctrine into its founding charter. Rakuen receives displaced populations under the Violet Compact's "resettled south" mechanism — a welfare-language cover for testimony suppression. Mafdet formalizes the Strandline Compact during the Fracture Era.
+3. **City Foundings and Early Five-City Era (post-Evermeet collapse)**: Kiess is founded on Evermeet's ruins and writes anti-sealed-warrant doctrine into its founding charter — a direct challenge to sealed-warrant governance. Rakuen is founded as a southern paradise city and enters official Midgaard maps as a "southern relief city" — conditional recognition without binding support obligations. The "resettled south" mechanism begins routing displaced populations specifically to Rakuen, and a Kel'Shadra witnessing office is established there for testimony suppression. Kiess and Midgaard formalize replacement arbitration channels while Kowloon expands northern supply collection.
 
 4. **First Annexation Attempt (early Ash-and-Iron Decades)**: Rakuen submits the **Southmark Petition** for full civic annexation to Midgaard. Midgaard refuses on grounds of ledger-compliance non-conformity. Rakuen's political class fractures along the Assimilation League / Compact Purist axis for the first time.
 
