@@ -1,2799 +1,2325 @@
 #AREA
-@@lThe Great Oasis@@N~
+@@a The @@yGreat @@lOasis@@N~
 Q 16
 K the great oasis~
-L @@y{40 60}@@N~
+L @@a{@@y40 60@@a}@@N~
 N 101
 I 40 60
 V 8600 8699
 X 0
 F 12
-U @@yA cool rumor of water rides the @@lbright-blue@@y desert wind.@@N~
-O virant~
+U @@aA cool rumor of water rides the @@ybright-gold@@a desert wind toward the Great Oasis.@@N~
+O Virant~
 R builder~
 W builder~
 #ROOMS
 #8600
-@@ySunward Causeway@@N~
-@@ySunfire spills across broken cistern stones while @@yyellow@@N pennants twitch against the heat.@@N
-
-
-@@lA chipped survey plate marked with @@lblue@@N triangles beside waypoint 8600, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-
-
+@@yApproach Dunes Waypoint 1@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
 ~
-
-
-~
-~
-0 -1 31100
-
-
-@@lA weather-cut obelisk etched with a faded caravan sigil beside waypoint 8601, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-
-
-~
-
-
-~
-~
-
-
-~
-
-
-@@lA trader glyph carved with horizon rune pairs beside waypoint 8602, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA cracked stele painted with sun-prayer hash lines beside waypoint 8603, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-
-
-~
-~
-
-
-~
-~
-
-
-~
-
-
-@@lA prayer-stone scratched with @@bbrown@@N spiral knots beside waypoint 8604, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-
-
-~
-
-
-~
-The trail winds back through the glare.
-
-
-~
-~
-
-
-@@lA sand-polished slab branded with a serpent-eye motif beside waypoint 8605, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA toppled beacon inked with a pilgrim's route chain beside waypoint 8606, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-
-
-~
-D0
-~
-~
-
-
-~
-
-
-~
-
-
-@@lA worn boundary post notched with @@yyellow@@N arrows beside waypoint 8607, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-
-
-~
-
-
-~
-~
-
-
-~
-S
-
-
-@@lA split limestone tile signed with old water tally marks beside waypoint 8608, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA half-buried tablet scored with dry-season warning cuts beside waypoint 8609, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-
-
-@@bNear the marker, a precise triangle-over-triangle emblem hints at a future road into a buried pyramid.@@N
-
-
-~
-The oasis hunt continues ahead through blowing sand.
-
-
-~
-~
-
-
-~
-
-
-@@lA weather-cut obelisk etched with a pilgrim's route chain beside waypoint 8610, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA trader glyph carved with dry-season warning cuts beside waypoint 8611, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA cracked stele painted with horizon rune pairs beside waypoint 8612, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-
-
-~
-
-
-~
-
-
-~
-~
-
-
-@@lA prayer-stone scratched with a serpent-eye motif beside waypoint 8613, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA sand-polished slab branded with old water tally marks beside waypoint 8614, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-
-
-~
-
-
-~
-
-
-~
-~
-
-
-@@lA toppled beacon inked with a faded caravan sigil beside waypoint 8615, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-
-
-~
-
-
-~
-
-
-~
-~
-
-
-@@lA worn boundary post notched with @@bbrown@@N spiral knots beside waypoint 8616, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA split limestone tile signed with @@yyellow@@N arrows beside waypoint 8617, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-
-
-~
-
-
-~
-
-
-~
-~
-
-
-@@lA half-buried tablet scored with @@lblue@@N triangles beside waypoint 8618, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-
-
-~
-
-
-~
-
-
-~
-~
-
-
-@@lA chipped survey plate marked with sun-prayer hash lines beside waypoint 8619, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA trader glyph carved with @@lblue@@N triangles beside waypoint 8620, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-
-
-~
-
-
-~
-
-
-~
-~
-
-
-@@lA cracked stele painted with a faded caravan sigil beside waypoint 8621, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-
-
-~
-The oasis hunt continues ahead through blowing sand.
-
-
-~
-~
-
-
-~
-
-
-@@lA prayer-stone scratched with horizon rune pairs beside waypoint 8622, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-
-
-@@bA carved map fragment here ends in a sharply drawn pyramid face beyond this oasis.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA sand-polished slab branded with sun-prayer hash lines beside waypoint 8623, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-
-
-~
-
-
-~
-
-
-~
-~
-
-
-@@lA toppled beacon inked with @@bbrown@@N spiral knots beside waypoint 8624, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA worn boundary post notched with a serpent-eye motif beside waypoint 8625, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA split limestone tile signed with a pilgrim's route chain beside waypoint 8626, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA half-buried tablet scored with @@yyellow@@N arrows beside waypoint 8627, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA chipped survey plate marked with old water tally marks beside waypoint 8628, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-
-
-~
-
-
-~
-~
-
-
-~
-S
-
-
-@@lA weather-cut obelisk etched with dry-season warning cuts beside waypoint 8629, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA cracked stele painted with a pilgrim's route chain beside waypoint 8630, giving this square hunt-road a measured rhythm.@@N
-
-
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-
-
-~
-
-
-~
-~
-
-
-~
-
-
-@@lA prayer-stone scratched with dry-season warning cuts beside waypoint 8631, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA sand-polished slab branded with horizon rune pairs beside waypoint 8632, giving this square hunt-road a measured rhythm.@@N
-
-
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-
-
-~
-
-
-~
-~
-
-
-~
-
-
-@@lA toppled beacon inked with a serpent-eye motif beside waypoint 8633, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-
-
-~
-
-
-~
-
-
-~
-~
-
-
-@@lA worn boundary post notched with old water tally marks beside waypoint 8634, giving this square hunt-road a measured rhythm.@@N
-
-
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA split limestone tile signed with a faded caravan sigil beside waypoint 8635, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-
-
-~
-D1
-The trail winds back through the glare.
-
-
-~
-~
-
-
-~
-
-
-@@lA half-buried tablet scored with @@bbrown@@N spiral knots beside waypoint 8636, giving this square hunt-road a measured rhythm.@@N
-
-
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-
-
-~
-
-
-~
-
-
-~
-@@yBlue noon glare hardens a basin of fossil shells where jackal tracks tangle toward the east.@@N
-
-
-@@lA chipped survey plate marked with @@yyellow@@N arrows beside waypoint 8637, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-
-
-~
-
-
-~
-~
-
-
-~
-
-
-@@lA weather-cut obelisk etched with @@lblue@@N triangles beside waypoint 8638, giving this square hunt-road a measured rhythm.@@N
-
-
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-
-
-~
-
-
-~
-
-
-~
-~
-
-
-@@lA trader glyph carved with sun-prayer hash lines beside waypoint 8639, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA prayer-stone scratched with @@lblue@@N triangles beside waypoint 8640, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-
-
-~
-
-
-~
-
-
-~
-~
-
-
-@@lA sand-polished slab branded with a faded caravan sigil beside waypoint 8641, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-
-
-@@bThree stacked triangular glyphs suggest engineers once planned a pyramid approach from this route.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-
-@@lA toppled beacon inked with horizon rune pairs beside waypoint 8642, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-
-
-~
-
-
-~
-~
-
-
-~
-
-
-@@lA worn boundary post notched with sun-prayer hash lines beside waypoint 8643, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-
-
-~
-
-
-~
-
-
-~
-~
-
-
-@@lA split limestone tile signed with @@bbrown@@N spiral knots beside waypoint 8644, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA half-buried tablet scored with a serpent-eye motif beside waypoint 8645, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-
-
-~
-D1
-
-
-~
-
-
-~
-~
-
-
-@@lA chipped survey plate marked with a pilgrim's route chain beside waypoint 8646, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA weather-cut obelisk etched with @@yyellow@@N arrows beside waypoint 8647, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-
-
-~
-
-
-~
-
-
-~
-~
-
-
-@@lA trader glyph carved with old water tally marks beside waypoint 8648, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-
-
-~
-
-
-~
-D3
-
-
-~
-
-
-@@lA cracked stele painted with dry-season warning cuts beside waypoint 8649, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA sand-polished slab branded with a pilgrim's route chain beside waypoint 8650, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA toppled beacon inked with dry-season warning cuts beside waypoint 8651, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-
-
-~
-
-
-~
-
-
-~
-~
-
-
-@@lA worn boundary post notched with horizon rune pairs beside waypoint 8652, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA split limestone tile signed with a serpent-eye motif beside waypoint 8653, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-
-
-~
-The trail winds back through the glare.
-
-
-~
-~
-
-
-~
-
-
-@@lA half-buried tablet scored with old water tally marks beside waypoint 8654, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA chipped survey plate marked with a faded caravan sigil beside waypoint 8655, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA weather-cut obelisk etched with @@bbrown@@N spiral knots beside waypoint 8656, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA trader glyph carved with @@yyellow@@N arrows beside waypoint 8657, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA cracked stele painted with @@lblue@@N triangles beside waypoint 8658, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA prayer-stone scratched with sun-prayer hash lines beside waypoint 8659, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-
-
-~
-
-
-~
-
-
-~
-~
-
-
-@@lA toppled beacon inked with @@lblue@@N triangles beside waypoint 8660, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA worn boundary post notched with a faded caravan sigil beside waypoint 8661, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA split limestone tile signed with horizon rune pairs beside waypoint 8662, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-
-
-~
-
-
-~
-
-
-~
-~
-
-
-@@lA half-buried tablet scored with sun-prayer hash lines beside waypoint 8663, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-
-
-@@bCut limestone chips at your feet look quarried, not natural, and they point toward a hidden pyramid site.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA chipped survey plate marked with @@bbrown@@N spiral knots beside waypoint 8664, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-
-
-~
-
-
-~
-~
-
-
-~
-
-~
-The trail winds back through the glare.
-
-
-~
-~
-
-
-~
-S
-
-
-@@lA chipped survey plate marked with winding route marks beside waypoint 8669, keeping this measured path aligned with the oasis search.@@N
-
-
-@@yThe route briefly widens here before narrowing toward the heart of the basin.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA weathered route tablet etched with old caravan notches beside waypoint 8670 marks a turning toward greener rumors.@@N
-
-
-@@yThe air feels a touch less dry, as if hidden water is finally near.@@N
-
-
-~
-
-
-~
-~
-
-
-~
-
-
-~
-
-
-@@lA split limestone tile signed with dry-season warning cuts beside waypoint 8671, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA half-buried tablet scored with horizon rune pairs beside waypoint 8672, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA chipped survey plate marked with a serpent-eye motif beside waypoint 8673, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-
-
-~
-The trail winds back through the glare.
-
-
-~
-~
-
-
-~
-S
-
-
-@@lA weather-cut obelisk etched with old water tally marks beside waypoint 8674, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA trader glyph carved with a faded caravan sigil beside waypoint 8675, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-
-
-~
-
-
-~
-~
-
-
-~
-
-
-@@lA cracked stele painted with @@bbrown@@N spiral knots beside waypoint 8676, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA trader glyph carved with a serpent-eye motif beside waypoint 8693, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-
-
-~
-
-
-~
-~
-
-
-~
-The oasis hunt continues ahead through blowing sand.
-
-
-~
-~
-
-
-@@lA sand-polished slab scored with route glyphs beside waypoint 8679 marks this spur as a deliberate connector in the hunt.@@N
-
-
-@@yThe wind shifts here, tugging you between the main approach and a hidden side-run.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA cracked stele painted with faded direction arrows beside waypoint 8680 ties this link-road back into the oasis circuit.@@N
-
-
-@@yEvery step from here feels guided, as if the route was laid for this exact search.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA half-buried tablet scored with a faded caravan sigil beside waypoint 8681, giving this square hunt-road a measured rhythm.@@N
-
-
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-
-
-~
-
-
-~
-~
-
-
-~
-
-
-@@lA chipped survey plate marked with horizon rune pairs beside waypoint 8682, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA weather-cut obelisk etched with sun-prayer hash lines beside waypoint 8683, giving this square hunt-road a measured rhythm.@@N
-
-
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-
-
-~
-
-
-~
-~
-
-
-~
-
-
-@@lA trader glyph carved with @@bbrown@@N spiral knots beside waypoint 8684, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-
-
-~
-
-
-~
-
-~
-
-
-@@lA cracked stele painted with a serpent-eye motif beside waypoint 8685, giving this square hunt-road a measured rhythm.@@N
-
-
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA prayer-stone scratched with a pilgrim's route chain beside waypoint 8686, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA sand-polished slab branded with @@yyellow@@N arrows beside waypoint 8687, giving this square hunt-road a measured rhythm.@@N
-
-
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-
-
-~
-The oasis hunt continues ahead through blowing sand.
-
-
-~
-~
-
-
-~
-S
-
-
-@@lA toppled beacon inked with old water tally marks beside waypoint 8688, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-
-
-@@bAn angular funerary sigil implies this oasis may someday connect to a pyramid necropolis.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA worn boundary post notched with dry-season warning cuts beside waypoint 8689, giving this square hunt-road a measured rhythm.@@N
-
-
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-
-
-~
-
-
-~
-D3
-
-
-~
-
-
-@@lA half-buried tablet scored with a pilgrim's route chain beside waypoint 8690, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA chipped survey plate marked with dry-season warning cuts beside waypoint 8691, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA weather-cut obelisk etched with horizon rune pairs beside waypoint 8692, giving this square hunt-road a measured rhythm.@@N
-
-~
-
-
-~
-D3
-The oasis hunt continues ahead through blowing sand.
-
-
-~
-~
-
-
-@@lA cracked stele painted with old water tally marks beside waypoint 8694, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA prayer-stone scratched with a faded caravan sigil beside waypoint 8695, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-
-
-~
-D1
-The trail winds back through the glare.
-
-
-~
-~
-
-
-~
-
-
-@@lA sand-polished slab branded with @@bbrown@@N spiral knots beside waypoint 8696, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA toppled beacon inked with @@yyellow@@N arrows beside waypoint 8697, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-@@lA worn boundary post notched with @@lblue@@N triangles beside waypoint 8698, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-
-
-~
-
-
-~
-D3
-The oasis hunt continues ahead through blowing sand.
-
-
-~
-~
-
-
-@@lA split limestone tile signed with sun-prayer hash lines beside waypoint 8699, giving this square hunt-road a measured rhythm.@@N
-
-
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-
-
-~
-~
-0 -1 8637
-S
-#8637
-@@yPalmward Causeway@@N~
-@@yBlue noon glare hardens a basin of fossil shells where jackal tracks tangle toward the east.@@N
-
-@@lA chipped survey plate marked with @@yyellow@@N arrows beside waypoint 8637, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-
-~
 0 10
 D1
-The trail winds back through the glare.
-
-~
+The route continues deeper into the oasis complex.~
 ~
+0 -1 8601
+D3
+The caravan road returns west into the Eastern Desert.~
+~
+0 -1 8519
+S
+#8601
+@@yApproach Dunes Waypoint 2@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8600
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8602
+D0
+A marked spur leads north toward unsettled frontier works.~
+~
+0 -1 8880
+S
+#8602
+@@yApproach Dunes Waypoint 3@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8601
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8603
+D0
+A marked spur leads north toward unsettled frontier works.~
+~
+0 -1 8881
+S
+#8603
+@@yApproach Dunes Waypoint 4@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8602
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8604
+D0
+A marked spur leads north toward unsettled frontier works.~
+~
+0 -1 8882
+S
+#8604
+@@yApproach Dunes Waypoint 5@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8603
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8605
+D0
+A marked spur leads north toward unsettled frontier works.~
+~
+0 -1 8883
+S
+#8605
+@@yApproach Dunes Waypoint 6@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8604
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8606
+D0
+A marked spur leads north toward unsettled frontier works.~
+~
+0 -1 8884
+S
+#8606
+@@yApproach Dunes Waypoint 7@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8605
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8607
+D0
+A marked spur leads north toward unsettled frontier works.~
+~
+0 -1 8885
+S
+#8607
+@@yApproach Dunes Waypoint 8@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8606
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8608
+D0
+A marked spur leads north toward unsettled frontier works.~
+~
+0 -1 8886
+S
+#8608
+@@yApproach Dunes Waypoint 9@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8607
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8609
+D0
+A marked spur leads north toward unsettled frontier works.~
+~
+0 -1 8887
+S
+#8609
+@@yApproach Dunes Waypoint 10@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8608
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8610
+D0
+A marked spur leads north toward unsettled frontier works.~
+~
+0 -1 8888
+S
+#8610
+@@yApproach Dunes Waypoint 11@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8609
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8611
+S
+#8611
+@@yApproach Dunes Waypoint 12@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8610
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8612
+S
+#8612
+@@yApproach Dunes Waypoint 13@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+0 10
+The path bends back toward earlier ground.~
+~
+0 -1 8611
+The route continues deeper into the oasis complex.~
+0 -1 8613
+#8613
+@@yApproach Dunes Waypoint 14@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+~
+D3
+The path bends back toward earlier ground.~
+0 -1 8612
+D1
+The route continues deeper into the oasis complex.~
+0 -1 8614
+#8614
+@@yApproach Dunes Waypoint 15@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+~
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8613
+The route continues deeper into the oasis complex.~
+0 -1 8615
+#8615
+@@yApproach Dunes Waypoint 16@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+~
+0 10
+The path bends back toward earlier ground.~
+0 -1 8614
+D1
+The route continues deeper into the oasis complex.~
+0 -1 8616
+#8616
+@@yApproach Dunes Waypoint 17@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+0 10
+The path bends back toward earlier ground.~
+0 -1 8615
+The route continues deeper into the oasis complex.~
+~
+0 -1 8617
+#8617
+@@yApproach Dunes Waypoint 18@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+0 10
+The path bends back toward earlier ground.~
+0 -1 8616
+The route continues deeper into the oasis complex.~
+0 -1 8618
+#8618
+@@yApproach Dunes Waypoint 19@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+~
+0 10
+The path bends back toward earlier ground.~
+0 -1 8617
+D1
+The route continues deeper into the oasis complex.~
+0 -1 8619
+#8619
+@@yApproach Dunes Waypoint 20@@N~
+@@yWind-scoured dunes crowd a measured hunt-road where broken survey stones still point travelers toward water.@@N
+@@bCharter cairns and jackal-marked milestones show the Dune Reavers now tax what the old Water Court once kept free.@@N
+@@aA faint cool shimmer to the east promises the Great Oasis beyond the heat.@@N
+~
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8618
+The route continues deeper into the oasis complex.~
+0 -1 8620
+S
+#8620
+@@aLiving Basin Waypoint 1@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
+~
+0 10
+The path bends back toward earlier ground.~
+0 -1 8619
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8621
+#8621
+@@aLiving Basin Waypoint 2@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
+0 10
+The path bends back toward earlier ground.~
+0 -1 8620
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8622
+#8622
+@@aLiving Basin Waypoint 3@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8621
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8623
+#8623
+@@aLiving Basin Waypoint 4@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
+~
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8622
+The route continues deeper into the oasis complex.~
+0 -1 8624
+S
+#8624
+@@aLiving Basin Waypoint 5@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
+~
+0 10
+The path bends back toward earlier ground.~
+0 -1 8623
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8625
+#8625
+@@aLiving Basin Waypoint 6@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
+~
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8624
+The route continues deeper into the oasis complex.~
+0 -1 8626
+S
+#8626
+@@aLiving Basin Waypoint 7@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
+~
+0 10
+The path bends back toward earlier ground.~
+0 -1 8625
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8627
+#8627
+@@aLiving Basin Waypoint 8@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
+~
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8626
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8628
+S
+#8628
+@@aLiving Basin Waypoint 9@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
+~
+0 10
+The path bends back toward earlier ground.~
+0 -1 8627
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8629
+#8629
+@@aLiving Basin Waypoint 10@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
+~
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8628
+The route continues deeper into the oasis complex.~
+0 -1 8630
+S
+#8630
+@@aLiving Basin Waypoint 11@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
+~
+0 10
+The path bends back toward earlier ground.~
+~
+0 -1 8629
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8631
+#8631
+@@aLiving Basin Waypoint 12@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
+~
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8630
+The route continues deeper into the oasis complex.~
+~
+0 -1 8632
+S
+#8632
+@@aLiving Basin Waypoint 13@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
+~
+0 10
+The path bends back toward earlier ground.~
+0 -1 8631
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8633
+#8633
+@@aLiving Basin Waypoint 14@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8632
+The route continues deeper into the oasis complex.~
+0 -1 8634
+S
+#8634
+@@aLiving Basin Waypoint 15@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
+~
+0 10
+The path bends back toward earlier ground.~
+0 -1 8633
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8635
+#8635
+@@aLiving Basin Waypoint 16@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
+~
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8634
+The route continues deeper into the oasis complex.~
 0 -1 8636
-D3
-The oasis hunt continues ahead through blowing sand.
-
-~
-~
-0 -1 8638
-S
-#8638
-@@yPalmward Traverse@@N~
-@@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
-
-@@lA weather-cut obelisk etched with @@lblue@@N triangles beside waypoint 8638, giving this square hunt-road a measured rhythm.@@N
-
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-
-~
+#8636
+@@aLiving Basin Waypoint 17@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
 0 10
-D1
-The trail winds back through the glare.
-
-~
-~
+The path bends back toward earlier ground.~
+0 -1 8635
+The route continues deeper into the oasis complex.~
 0 -1 8637
-D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+#8637
+@@aLiving Basin Waypoint 18@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
 ~
-0 -1 8639
-S
-#8639
-@@yPalmward Corridor@@N~
-@@yBlue noon glare hardens a line of reed stakes while @@yyellow@@N pennants twitch against the heat.@@N
-
-@@lA trader glyph carved with sun-prayer hash lines beside waypoint 8639, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-
-~
+D3
+The path bends back toward earlier ground.~
+0 -1 8636
+The route continues deeper into the oasis complex.~
+0 -1 8638
+#8638
+@@aLiving Basin Waypoint 19@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
 0 10
-D1
-The trail winds back through the glare.
-
-~
+The path bends back toward earlier ground.~
+0 -1 8637
+The route continues deeper into the oasis complex.~
+0 -1 8639
+#8639
+@@aLiving Basin Waypoint 20@@N~
+@@aPalm shade and clear spring channels gather around mudbrick courts where Spring Wardens broker fair draw at every cistern mouth.@@N
+@@yLedger-era gauges, basin ladders, and stone tally boards keep each ration line disciplined even in crowded hours.@@N
+@@bCaravan bells and low argument carry between market awnings as the oasis tries to remain neutral ground.@@N
+0 10
+The path bends back toward earlier ground.~
 ~
 0 -1 8638
-D2
-The oasis hunt continues ahead through blowing sand.
-
-~
-~
+The route continues deeper into the oasis complex.~
 0 -1 8640
-S
 #8640
-@@ySunward Crossing@@N~
-@@ySunfire spills across a drift-choked wash where old bootprints turn and disappear.@@N
-
-@@lA prayer-stone scratched with @@lblue@@N triangles beside waypoint 8640, giving this square hunt-road a measured rhythm.@@N
-
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-
-~
+@@pToll Pavilion Ruins Waypoint 1@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
 0 10
-D0
-The trail winds back through the glare.
-
-~
-~
+The path bends back toward earlier ground.~
 0 -1 8639
 D1
-The oasis hunt continues ahead through blowing sand.
-
-~
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8641
 S
 #8641
-@@yAmberwake Path@@N~
-@@yMirage-light crowns sun-cracked clay pans while the desert hums like a taut bowstring.@@N
-
-@@lA sand-polished slab branded with a faded caravan sigil beside waypoint 8641, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-
-@@bThree stacked triangular glyphs suggest engineers once planned a pyramid approach from this route.@@N
-
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
+@@pToll Pavilion Ruins Waypoint 2@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
 ~
-0 -1 8642
 D3
-The trail winds back through the glare.
-
-~
-~
+The path bends back toward earlier ground.~
 0 -1 8640
-D0
-Quarried limestone fragments embedded in the sand mark the ancient engineer's road leading north toward the pyramid.
-
-~
-~
-0 -1 30580
-S
-#8642
-@@yMirage Run@@N~
-@@yA furnace gust rolls over an arc of lapis cairns where @@bbrown@@N grit stings your lips and eyes.@@N
-
-@@lA toppled beacon inked with horizon rune pairs beside waypoint 8642, giving this square hunt-road a measured rhythm.@@N
-
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
-~
-0 -1 8643
-D3
-The trail winds back through the glare.
-
-~
-~
-0 -1 8641
-S
-#8643
-@@yCairnline March@@N~
-@@yAn ochre haze blankets broken cistern stones where jackal tracks tangle toward the east.@@N
-
-@@lA worn boundary post notched with sun-prayer hash lines beside waypoint 8643, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
-~
-0 -1 8644
-D3
-The trail winds back through the glare.
-
-~
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8642
+#8642
+@@pToll Pavilion Ruins Waypoint 3@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
+~
+D3
+The path bends back toward earlier ground.~
+0 -1 8641
+The route continues deeper into the oasis complex.~
+0 -1 8643
+#8643
+@@pToll Pavilion Ruins Waypoint 4@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
+0 10
+The path bends back toward earlier ground.~
+0 -1 8642
+The route continues deeper into the oasis complex.~
+0 -1 8644
 S
 #8644
-@@yDustveil Bend@@N~
-@@ySalt-dust whispers around half-buried trade jars while @@yyellow@@N pennants twitch against the heat.@@N
-
-@@lA split limestone tile signed with @@bbrown@@N spiral knots beside waypoint 8644, giving this square hunt-road a measured rhythm.@@N
-
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-
-~
+@@pToll Pavilion Ruins Waypoint 5@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
 0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
-~
-0 -1 8645
-D3
-The trail winds back through the glare.
-
-~
+The path bends back toward earlier ground.~
 ~
 0 -1 8643
-S
-#8645
-@@ySunward Way@@N~
-@@ySunfire spills across a drift-choked wash where old bootprints turn and disappear.@@N
-
-@@lA half-buried tablet scored with a serpent-eye motif beside waypoint 8645, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
-~
-0 -1 8646
-D3
-The trail winds back through the glare.
-
-~
-~
-0 -1 8644
-S
-#8646
-@@yAmberwake Causeway@@N~
-@@yMirage-light crowns sun-cracked clay pans while the desert hums like a taut bowstring.@@N
-
-@@lA chipped survey plate marked with a pilgrim's route chain beside waypoint 8646, giving this square hunt-road a measured rhythm.@@N
-
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
-~
-0 -1 8647
-D3
-The trail winds back through the glare.
-
-~
-~
+The route continues deeper into the oasis complex.~
 0 -1 8645
-S
-#8647
-@@yMirage Traverse@@N~
-@@yA furnace gust rolls over an arc of lapis cairns where @@bbrown@@N grit stings your lips and eyes.@@N
-
-@@lA weather-cut obelisk etched with @@yyellow@@N arrows beside waypoint 8647, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-
-~
+#8645
+@@pToll Pavilion Ruins Waypoint 6@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
 0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
-~
-0 -1 8648
-D3
-The trail winds back through the glare.
-
-~
+The path bends back toward earlier ground.~
+0 -1 8644
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8646
-S
-#8648
-@@yCairnline Corridor@@N~
-@@yAn ochre haze blankets broken cistern stones where jackal tracks tangle toward the east.@@N
-
-@@lA trader glyph carved with old water tally marks beside waypoint 8648, giving this square hunt-road a measured rhythm.@@N
-
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
+#8646
+@@pToll Pavilion Ruins Waypoint 7@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
 ~
-0 -1 8649
 D3
-The trail winds back through the glare.
-
-~
+The path bends back toward earlier ground.~
+0 -1 8645
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8647
-S
-#8649
-@@yDustveil Reach@@N~
-@@ySalt-dust whispers around half-buried trade jars while @@yyellow@@N pennants twitch against the heat.@@N
-
-@@lA cracked stele painted with dry-season warning cuts beside waypoint 8649, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-
-~
+#8647
+@@pToll Pavilion Ruins Waypoint 8@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
 0 10
-D2
-The oasis hunt continues ahead through blowing sand.
-
-~
-~
-0 -1 8650
-D3
-The trail winds back through the glare.
-
-~
-~
+The path bends back toward earlier ground.~
+0 -1 8646
+The route continues deeper into the oasis complex.~
 0 -1 8648
-S
-#8650
-@@yPalmward Path@@N~
-@@yBlue noon glare hardens collapsed watering troughs where old bootprints turn and disappear.@@N
-
-@@lA sand-polished slab branded with a pilgrim's route chain beside waypoint 8650, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-
-~
+#8648
+@@pToll Pavilion Ruins Waypoint 9@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
+~
 0 10
-D0
-The trail winds back through the glare.
-
-~
+The path bends back toward earlier ground.~
+0 -1 8647
+The route continues deeper into the oasis complex.~
+0 -1 8649
+#8649
+@@pToll Pavilion Ruins Waypoint 10@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
+0 10
+The path bends back toward earlier ground.~
+0 -1 8648
+The route continues deeper into the oasis complex.~
+0 -1 8650
+#8650
+@@pToll Pavilion Ruins Waypoint 11@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
+0 10
+The path bends back toward earlier ground.~
 ~
 0 -1 8649
-D3
-The oasis hunt continues ahead through blowing sand.
-
-~
-~
+The route continues deeper into the oasis complex.~
 0 -1 8651
-S
 #8651
-@@yPalmward Run@@N~
-@@yBlue noon glare hardens a basin of fossil shells where jackal tracks tangle toward the east.@@N
-
-@@lA toppled beacon inked with dry-season warning cuts beside waypoint 8651, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-
-~
+@@pToll Pavilion Ruins Waypoint 12@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
 0 10
-D1
-The trail winds back through the glare.
-
-~
-~
+The path bends back toward earlier ground.~
 0 -1 8650
-D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8652
-S
 #8652
-@@yPalmward March@@N~
-@@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
-
-@@lA worn boundary post notched with horizon rune pairs beside waypoint 8652, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-
-~
+@@pToll Pavilion Ruins Waypoint 13@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
 0 10
-D1
-The trail winds back through the glare.
-
-~
+The path bends back toward earlier ground.~
 ~
 0 -1 8651
-D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8653
-S
 #8653
-@@yPalmward Bend@@N~
-@@yBlue noon glare hardens a line of reed stakes while @@yyellow@@N pennants twitch against the heat.@@N
-
-@@lA split limestone tile signed with a serpent-eye motif beside waypoint 8653, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-
-~
+@@pToll Pavilion Ruins Waypoint 14@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
 0 10
-D1
-The trail winds back through the glare.
-
-~
-~
+The path bends back toward earlier ground.~
 0 -1 8652
-D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8654
-S
 #8654
-@@yPalmward Way@@N~
-@@yBlue noon glare hardens an old caravan marker where @@bbrown@@N grit stings your lips and eyes.@@N
-
-@@lA half-buried tablet scored with old water tally marks beside waypoint 8654, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-
-~
+@@pToll Pavilion Ruins Waypoint 15@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
 0 10
-D1
-The trail winds back through the glare.
-
-~
-~
+The path bends back toward earlier ground.~
 0 -1 8653
-D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8655
 S
 #8655
-@@yPalmward Causeway@@N~
-@@yBlue noon glare hardens collapsed watering troughs where old bootprints turn and disappear.@@N
-
-@@lA chipped survey plate marked with a faded caravan sigil beside waypoint 8655, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-
-~
+@@pToll Pavilion Ruins Waypoint 16@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
+~
 0 10
-D1
-The trail winds back through the glare.
-
-~
+D3
+The path bends back toward earlier ground.~
 ~
 0 -1 8654
-D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8656
 S
 #8656
-@@yPalmward Traverse@@N~
-@@yBlue noon glare hardens a basin of fossil shells where jackal tracks tangle toward the east.@@N
-
-@@lA weather-cut obelisk etched with @@bbrown@@N spiral knots beside waypoint 8656, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-
-~
+@@pToll Pavilion Ruins Waypoint 17@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
+~
 0 10
-D1
-The trail winds back through the glare.
-
-~
+D3
+The path bends back toward earlier ground.~
 ~
 0 -1 8655
-D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8657
 S
 #8657
-@@yPalmward Corridor@@N~
-@@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
-
-@@lA trader glyph carved with @@yyellow@@N arrows beside waypoint 8657, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-
-~
+@@pToll Pavilion Ruins Waypoint 18@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
+~
 0 10
-D1
-The trail winds back through the glare.
-
-~
+D3
+The path bends back toward earlier ground.~
 ~
 0 -1 8656
-D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8658
 S
 #8658
-@@yPalmward Reach@@N~
-@@yBlue noon glare hardens a line of reed stakes while @@yyellow@@N pennants twitch against the heat.@@N
-
-@@lA cracked stele painted with @@lblue@@N triangles beside waypoint 8658, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-
-~
+@@pToll Pavilion Ruins Waypoint 19@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
+~
 0 10
-D1
-The trail winds back through the glare.
-
-~
+D3
+The path bends back toward earlier ground.~
 ~
 0 -1 8657
-D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+D1
+A reinforced gate guards the way east.~
 ~
-0 -1 8659
+1 8647 8659
 S
 #8659
-@@yPalmward Crossing@@N~
-@@yBlue noon glare hardens an old caravan marker where @@bbrown@@N grit stings your lips and eyes.@@N
-
-@@lA prayer-stone scratched with sun-prayer hash lines beside waypoint 8659, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-
-~
+@@pToll Pavilion Ruins Waypoint 20@@N~
+@@pCollapsed toll arches and smoke-stained plaques mark the Wellmouth Creed quarter, where ritual authority replaces civil law.@@N
+@@yOld court ledgers lie pried from shelves, their witness seals repurposed into cult charms and threat notices.@@N
+@@RArmed acolytes watch every crossing, deciding who may pass toward the inner sanctum.@@N
+~
 0 10
-D1
-The trail winds back through the glare.
-
-~
+D3
+The path bends back toward earlier ground.~
 ~
 0 -1 8658
-D2
-The oasis hunt continues ahead through blowing sand.
-
-~
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8660
 S
 #8660
-@@ySunward Run@@N~
-@@ySunfire spills across sun-cracked clay pans where jackal tracks tangle toward the east.@@N
-
-@@lA toppled beacon inked with @@lblue@@N triangles beside waypoint 8660, giving this square hunt-road a measured rhythm.@@N
-
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-
-~
+@@lCistern Ring Waypoint 1@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
+~
 0 10
-D0
-The trail winds back through the glare.
-
-~
+D3
+The path bends back toward earlier ground.~
 ~
 0 -1 8659
 D1
-The oasis hunt continues ahead through blowing sand.
-
-~
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8661
 S
 #8661
-@@yAmberwake March@@N~
-@@yMirage-light crowns an arc of lapis cairns while @@yyellow@@N pennants twitch against the heat.@@N
-
-@@lA worn boundary post notched with a faded caravan sigil beside waypoint 8661, giving this square hunt-road a measured rhythm.@@N
-
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
+@@lCistern Ring Waypoint 2@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
 ~
-0 -1 8662
+0 10
 D3
-The trail winds back through the glare.
-
-~
+The path bends back toward earlier ground.~
 ~
 0 -1 8660
-S
-#8662
-@@yMirage Bend@@N~
-@@yA furnace gust rolls over broken cistern stones where old bootprints turn and disappear.@@N
-
-@@lA split limestone tile signed with horizon rune pairs beside waypoint 8662, giving this square hunt-road a measured rhythm.@@N
-
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-
-~
-0 10
 D1
-The oasis hunt continues ahead through blowing sand.
-
-~
-~
-0 -1 8663
-D3
-The trail winds back through the glare.
-
-~
-~
-0 -1 8661
-S
-#8663
-@@yCairnline Way@@N~
-@@yAn ochre haze blankets half-buried trade jars while the desert hums like a taut bowstring.@@N
-
-@@lA half-buried tablet scored with sun-prayer hash lines beside waypoint 8663, giving this square hunt-road a measured rhythm.@@N
-
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-
-@@bCut limestone chips at your feet look quarried, not natural, and they point toward a hidden pyramid site.@@N
-
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
-~
-0 -1 8669
-D3
-The trail winds back through the glare.
-
-~
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8662
 S
-#8664
-@@yDustveil Causeway@@N~
-@@ySalt-dust whispers around a drift-choked wash where @@bbrown@@N grit stings your lips and eyes.@@N
-
-@@lA chipped survey plate marked with @@bbrown@@N spiral knots beside waypoint 8664, giving this square hunt-road a measured rhythm.@@N
-
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
+#8662
+@@lCistern Ring Waypoint 3@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
 ~
-0 -1 8670
+0 10
 D3
-The trail winds back through the glare.
-
-~
+The path bends back toward earlier ground.~
+~
+0 -1 8661
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8663
 S
-#8665
-@@ySunward Traverse@@N~
-@@ySunfire spills across sun-cracked clay pans where jackal tracks tangle toward the east.@@N
-~
+#8663
+@@lCistern Ring Waypoint 4@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
+~
 0 10
-D0
-The trail winds back through the glare.
-
-~
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8662
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8664
-D3
-The oasis hunt continues ahead through blowing sand.
-
-~
-~
-0 -1 8671
 S
-#8669
-@@yPalmward Approach@@N~
-@@yBlue noon glare hardens a drift-choked wash where the wind carries a cooler scent from deeper in the hunt-road.@@N
-
-@@lA chipped survey plate marked with winding route marks beside waypoint 8669, keeping this measured path aligned with the oasis search.@@N
-
-@@yThe route briefly widens here before narrowing toward the heart of the basin.@@N
-
-~
+#8664
+@@lCistern Ring Waypoint 5@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
+~
 0 10
-D0
-The trail winds back through the glare.
-
-~
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8663
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8665
+S
+#8665
+@@lCistern Ring Waypoint 6@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
 ~
 0 -1 8664
 D1
-The oasis hunt continues ahead through blowing sand.
-
-~
+The route continues deeper into the oasis complex.~
+~
+0 -1 8666
+S
+#8666
+@@lCistern Ring Waypoint 7@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8665
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8667
+S
+#8667
+@@lCistern Ring Waypoint 8@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8666
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8668
+S
+#8668
+@@lCistern Ring Waypoint 9@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8667
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8669
+S
+#8669
+@@lCistern Ring Waypoint 10@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8668
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8670
 S
 #8670
-@@yPalmward Threshold@@N~
-@@yBlue noon glare hardens around broken marker stones where heat-haze bends the horizon into wavering bands.@@N
-
-@@lA weathered route tablet etched with old caravan notches beside waypoint 8670 marks a turning toward greener rumors.@@N
-
-@@yThe air feels a touch less dry, as if hidden water is finally near.@@N
-
-~
+@@lCistern Ring Waypoint 11@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
+~
 0 10
-D0
-The trail winds back through the glare.
-
-~
-~
-0 -1 8665
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
-~
-0 -1 8671
 D3
-A narrower cut through the dunes bends away from the main track.
-
-~
+The path bends back toward earlier ground.~
 ~
 0 -1 8669
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8671
 S
 #8671
-@@yPalmward Bend@@N~
-@@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
-
-@@lA split limestone tile signed with dry-season warning cuts beside waypoint 8671, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-
-~
-0 10
-D1
-The trail winds back through the glare.
-
-~
+@@lCistern Ring Waypoint 12@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
 ~
-0 -1 8665
+0 10
 D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+The path bends back toward earlier ground.~
+~
+0 -1 8670
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8672
 S
 #8672
-@@yPalmward Way@@N~
-@@yBlue noon glare hardens a line of reed stakes while @@yyellow@@N pennants twitch against the heat.@@N
-
-@@lA half-buried tablet scored with horizon rune pairs beside waypoint 8672, giving this square hunt-road a measured rhythm.@@N
-
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-
-~
+@@lCistern Ring Waypoint 13@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
+~
 0 10
-D1
-The trail winds back through the glare.
-
-~
+D3
+The path bends back toward earlier ground.~
 ~
 0 -1 8671
-D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8673
 S
 #8673
-@@yPalmward Causeway@@N~
-@@yBlue noon glare hardens an old caravan marker where @@bbrown@@N grit stings your lips and eyes.@@N
-
-@@lA chipped survey plate marked with a serpent-eye motif beside waypoint 8673, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-
-~
+@@lCistern Ring Waypoint 14@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
+~
 0 10
-D1
-The trail winds back through the glare.
-
-~
+D3
+The path bends back toward earlier ground.~
 ~
 0 -1 8672
-D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8674
 S
 #8674
-@@yPalmward Traverse@@N~
-@@yBlue noon glare hardens collapsed watering troughs where old bootprints turn and disappear.@@N
-
-@@lA weather-cut obelisk etched with old water tally marks beside waypoint 8674, giving this square hunt-road a measured rhythm.@@N
-
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-
-~
+@@lCistern Ring Waypoint 15@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
+~
 0 10
-D1
-The trail winds back through the glare.
-
-~
+D3
+The path bends back toward earlier ground.~
 ~
 0 -1 8673
-D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8675
 S
 #8675
-@@yPalmward Corridor@@N~
-@@yBlue noon glare hardens a basin of fossil shells where jackal tracks tangle toward the east.@@N
-
-@@lA trader glyph carved with a faded caravan sigil beside waypoint 8675, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-
-~
+@@lCistern Ring Waypoint 16@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
+~
 0 10
-D1
-The trail winds back through the glare.
-
-~
+D3
+The path bends back toward earlier ground.~
 ~
 0 -1 8674
-D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8676
 S
 #8676
-@@yPalmward Reach@@N~
-@@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
-
-@@lA cracked stele painted with @@bbrown@@N spiral knots beside waypoint 8676, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-
-~
+@@lCistern Ring Waypoint 17@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
+~
 0 10
-D1
-The trail winds back through the glare.
-
-~
-~
-0 -1 8691
 D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+The path bends back toward earlier ground.~
 ~
-0 -1 8680
+0 -1 8675
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8677
 S
-#8693
-@@yPalmward Corridor@@N~
-@@yBlue noon glare hardens collapsed watering troughs where old bootprints turn and disappear.@@N
-
-@@lA trader glyph carved with a serpent-eye motif beside waypoint 8693, giving this square hunt-road a measured rhythm.@@N
-
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-
-~
+#8677
+@@lCistern Ring Waypoint 18@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
+~
 0 10
-D0
-The trail winds back through the glare.
-
-~
-~
-0 -1 8679
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
-~
-0 -1 8681
 D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+The path bends back toward earlier ground.~
 ~
-0 -1 8694
+0 -1 8676
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8678
+S
+#8678
+@@lCistern Ring Waypoint 19@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8677
+D1
+A reinforced gate guards the way east.~
+~
+1 8648 8679
 S
 #8679
-@@yAmberwake Spur@@N~
-@@yMirage-light pools between weathered stones where old caravan footprints overlap in looping circles.@@N
-
-@@lA sand-polished slab scored with route glyphs beside waypoint 8679 marks this spur as a deliberate connector in the hunt.@@N
-
-@@yThe wind shifts here, tugging you between the main approach and a hidden side-run.@@N
-
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
+@@lCistern Ring Waypoint 20@@N~
+@@lStone stairs descend around the ancient cistern ring where Keeper engineers once calibrated flow for three oases at once.@@N
+@@bSalt bloom and fossil shell bands reveal how far the waterline has fallen since the Ninth Meridian calamity.@@N
+@@aArchive niches and sluice wheels survive in fragments, stubborn records against deliberate forgetting.@@N
 ~
-0 -1 8693
+0 10
 D3
-A narrow side-run slips along the edge of the basin.
-
-~
+The path bends back toward earlier ground.~
+~
+0 -1 8678
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8680
 S
 #8680
-@@yAmberwake Link@@N~
-@@yMirage-light crowns a line of half-buried stones while the desert hushes as though listening.@@N
-
-@@lA cracked stele painted with faded direction arrows beside waypoint 8680 ties this link-road back into the oasis circuit.@@N
-
-@@yEvery step from here feels guided, as if the route was laid for this exact search.@@N
-
-~
+@@lFlooded East Cistern Waypoint 1@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
+~
 0 10
-D1
-The trail winds back through the glare.
-
-~
+D3
+The path bends back toward earlier ground.~
 ~
 0 -1 8679
-D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8681
 S
 #8681
-@@yAmberwake Way@@N~
-@@yMirage-light crowns broken cistern stones where @@bbrown@@N grit stings your lips and eyes.@@N
-
-@@lA half-buried tablet scored with a faded caravan sigil beside waypoint 8681, giving this square hunt-road a measured rhythm.@@N
-
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-
-~
+@@lFlooded East Cistern Waypoint 2@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
+~
 0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8680
 D1
-The oasis hunt continues ahead through blowing sand.
-
-~
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8682
-D3
-The trail winds back through the glare.
-
-~
-~
-0 -1 8693
 S
 #8682
-@@yMirage Causeway@@N~
-@@yA furnace gust rolls over half-buried trade jars where jackal tracks tangle toward the east.@@N
-
-@@lA chipped survey plate marked with horizon rune pairs beside waypoint 8682, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
+@@lFlooded East Cistern Waypoint 3@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
 ~
-0 -1 8683
+0 10
 D3
-The trail winds back through the glare.
-
-~
+The path bends back toward earlier ground.~
 ~
 0 -1 8681
-S
-#8683
-@@yCairnline Traverse@@N~
-@@yAn ochre haze blankets a drift-choked wash while @@yyellow@@N pennants twitch against the heat.@@N
-
-@@lA weather-cut obelisk etched with sun-prayer hash lines beside waypoint 8683, giving this square hunt-road a measured rhythm.@@N
-
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-
-~
-0 10
 D1
-The oasis hunt continues ahead through blowing sand.
-
-~
-~
-0 -1 8684
-D3
-The trail winds back through the glare.
-
-~
-~
-0 -1 8682
-S
-#8684
-@@yDustveil Corridor@@N~
-@@ySalt-dust whispers around sun-cracked clay pans where old bootprints turn and disappear.@@N
-
-@@lA trader glyph carved with @@bbrown@@N spiral knots beside waypoint 8684, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
-~
-0 -1 8685
-D3
-The trail winds back through the glare.
-~
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8683
 S
-#8685
-@@ySunward Reach@@N~
-@@ySunfire spills across an arc of lapis cairns while the desert hums like a taut bowstring.@@N
-
-@@lA cracked stele painted with a serpent-eye motif beside waypoint 8685, giving this square hunt-road a measured rhythm.@@N
-
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
+#8683
+@@lFlooded East Cistern Waypoint 4@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
 ~
-0 -1 8686
+0 10
 D3
-The trail winds back through the glare.
-
-~
+The path bends back toward earlier ground.~
+~
+0 -1 8682
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8684
 S
-#8686
-@@yAmberwake Crossing@@N~
-@@yMirage-light crowns broken cistern stones where @@bbrown@@N grit stings your lips and eyes.@@N
-
-@@lA prayer-stone scratched with a pilgrim's route chain beside waypoint 8686, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
+#8684
+@@lFlooded East Cistern Waypoint 5@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
 ~
-0 -1 8687
+0 10
 D3
-The trail winds back through the glare.
-
-~
+The path bends back toward earlier ground.~
+~
+0 -1 8683
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8685
 S
-#8687
-@@yMirage Path@@N~
-@@yA furnace gust rolls over half-buried trade jars where jackal tracks tangle toward the east.@@N
-
-@@lA sand-polished slab branded with @@yyellow@@N arrows beside waypoint 8687, giving this square hunt-road a measured rhythm.@@N
-
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
+#8685
+@@lFlooded East Cistern Waypoint 6@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
 ~
-0 -1 8688
+0 10
 D3
-The trail winds back through the glare.
-
-~
+The path bends back toward earlier ground.~
+~
+0 -1 8684
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8686
 S
-#8688
-@@yCairnline Run@@N~
-@@yAn ochre haze blankets a drift-choked wash while @@yyellow@@N pennants twitch against the heat.@@N
-
-@@lA toppled beacon inked with old water tally marks beside waypoint 8688, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-
-@@bAn angular funerary sigil implies this oasis may someday connect to a pyramid necropolis.@@N
-
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-
-~
+#8686
+@@lFlooded East Cistern Waypoint 7@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
 ~
-0 -1 8689
+0 10
 D3
-The trail winds back through the glare.
-
-~
+The path bends back toward earlier ground.~
+~
+0 -1 8685
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8687
 S
-#8689
-@@yDustveil March@@N~
-@@ySalt-dust whispers around sun-cracked clay pans where old bootprints turn and disappear.@@N
-
-@@lA worn boundary post notched with dry-season warning cuts beside waypoint 8689, giving this square hunt-road a measured rhythm.@@N
-
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-
-~
-0 10
-D2
-The oasis hunt continues ahead through blowing sand.
-
-~
+#8687
+@@lFlooded East Cistern Waypoint 8@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
 ~
-0 -1 8690
+0 10
 D3
-The trail winds back through the glare.
-
-~
+The path bends back toward earlier ground.~
+~
+0 -1 8686
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8688
 S
-#8690
-@@yPalmward Way@@N~
-@@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
-
-@@lA half-buried tablet scored with a pilgrim's route chain beside waypoint 8690, giving this square hunt-road a measured rhythm.@@N
-
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-
-~
+#8688
+@@lFlooded East Cistern Waypoint 9@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
+~
 0 10
-D0
-The trail winds back through the glare.
-
-~
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8687
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8689
+S
+#8689
+@@lFlooded East Cistern Waypoint 10@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
+~
+0 10
 D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+The path bends back toward earlier ground.~
+~
+0 -1 8688
+The route continues deeper into the oasis complex.~
+S
+#8690
+@@lFlooded East Cistern Waypoint 11@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8689
+D1
+The route continues deeper into the oasis complex.~
 ~
 0 -1 8691
 S
 #8691
-@@yPalmward Causeway@@N~
-@@yBlue noon glare hardens a line of reed stakes while @@yyellow@@N pennants twitch against the heat.@@N
-
-@@lA chipped survey plate marked with dry-season warning cuts beside waypoint 8691, giving this square hunt-road a measured rhythm.@@N
-
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-
-~
+@@lFlooded East Cistern Waypoint 12@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
+~
 0 10
-D1
-The trail winds back through the glare.
-
-~
+The path bends back toward earlier ground.~
 ~
 0 -1 8690
+D1
+The route continues deeper into the oasis complex.~
+~
+@@lFlooded East Cistern Waypoint 13@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
+~
 D3
-The oasis hunt continues ahead through blowing sand.
-
-~
+The path bends back toward earlier ground.~
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8693
+S
+#8693
+@@lFlooded East Cistern Waypoint 14@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
+~
+0 10
+The path bends back toward earlier ground.~
 ~
 0 -1 8692
-S
-#8692
-@@yPalmward Traverse@@N~
-@@yBlue noon glare hardens an old caravan marker where @@bbrown@@N grit stings your lips and eyes.@@N
-
-@@lA weather-cut obelisk etched with horizon rune pairs beside waypoint 8692, giving this square hunt-road a measured rhythm.@@N
-~
-0 10
 D1
-The trail winds back through the glare.
-
+The route continues deeper into the oasis complex.~
+@@lFlooded East Cistern Waypoint 15@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
+~
+D3
+The path bends back toward earlier ground.~
+D1
+The route continues deeper into the oasis complex.~
+@@lFlooded East Cistern Waypoint 16@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
+~
+D3
+The path bends back toward earlier ground.~
+D1
+The route continues deeper into the oasis complex.~
+@@lFlooded East Cistern Waypoint 17@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
+~
+D3
+The path bends back toward earlier ground.~
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8697
+S
+#8697
+@@lFlooded East Cistern Waypoint 18@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8696
+D1
+A reinforced gate guards the way east.~
+~
+1 8649 8698
+S
+#8698
+@@lFlooded East Cistern Waypoint 19@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
+~
+0 10
+D3
+The path bends back toward earlier ground.~
+~
+0 -1 8697
+D1
+The route continues deeper into the oasis complex.~
+~
+0 -1 8699
+S
+#8699
+@@lFlooded East Cistern Waypoint 20@@N~
+@@lFloodwater laps against carved vault walls in the drowned east works, each chamber colder and deeper than the last.@@N
+@@pScratched liturgy and panic marks overlap on the stone where crews fled the first tremors of the basin war.@@N
+@@RThe aquifer's current carries a predatory pulse that warns the Oasis Wyrm is never far away.@@N
+~
+0 10
+The path bends back toward earlier ground.~
+~
+0 -1 8698
+D2
+A southern canal road descends toward the Southern Oasis.~
+~
+0 -1 9800
+S
+#0
+#MOBILES
+#8600
+great oasis dune reaver scout~
+@@yDune Reaver Scout@@N~
+@@yDune Reaver Scout@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+45 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8601
+great oasis dune reaver spearman~
+@@yDune Reaver Spearman@@N~
+@@yDune Reaver Spearman@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+45 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8602
+great oasis dune reaver bowhand~
+@@yDune Reaver Bowhand@@N~
+@@yDune Reaver Bowhand@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+46 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8603
+great oasis dune reaver quartermaster~
+@@yDune Reaver Quartermaster@@N~
+@@yDune Reaver Quartermaster@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+46 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8604
+great oasis dune reaver banner-caller~
+@@yDune Reaver Banner-Caller@@N~
+@@yDune Reaver Banner-Caller@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+47 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8605
+great oasis spring warden tender~
+@@ySpring Warden Tender@@N~
+@@ySpring Warden Tender@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+47 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8606
+great oasis spring warden channeler~
+@@ySpring Warden Channeler@@N~
+@@ySpring Warden Channeler@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+48 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8607
+great oasis basin ledger scribe~
+@@yBasin Ledger Scribe@@N~
+@@yBasin Ledger Scribe@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+48 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8608
+great oasis basin gate marshal~
+@@yBasin Gate Marshal@@N~
+@@yBasin Gate Marshal@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+49 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8609
+great oasis basin palm guard~
+@@yBasin Palm Guard@@N~
+@@yBasin Palm Guard@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+49 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8610
+great oasis basin water broker~
+@@yBasin Water Broker@@N~
+@@yBasin Water Broker@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+50 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8611
+great oasis basin witness clerk~
+@@yBasin Witness Clerk@@N~
+@@yBasin Witness Clerk@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+50 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8612
+great oasis basin lantern keeper~
+@@yBasin Lantern Keeper@@N~
+@@yBasin Lantern Keeper@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+51 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8613
+great oasis wellmouth acolyte~
+@@yWellmouth Acolyte@@N~
+@@yWellmouth Acolyte@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+51 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8614
+great oasis wellmouth censer-bearer~
+@@yWellmouth Censer-Bearer@@N~
+@@yWellmouth Censer-Bearer@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+52 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8615
+great oasis wellmouth oathblade~
+@@yWellmouth Oathblade@@N~
+@@yWellmouth Oathblade@@N keeps watch over the contested waters.
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+65 0 0 S
+52 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8616
+great oasis wellmouth veil adept~
+@@yWellmouth Veil Adept@@N~
+@@yWellmouth Veil Adept@@N keeps watch over the contested waters.
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+65 0 0 S
+53 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8617
+great oasis wellmouth cantor~
+@@yWellmouth Cantor@@N~
+@@yWellmouth Cantor@@N keeps watch over the contested waters.
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+53 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8618
+great oasis wellmouth confessor~
+@@yWellmouth Confessor@@N~
+@@yWellmouth Confessor@@N keeps watch over the contested waters.
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+65 0 0 S
+54 0
+#8619
+great oasis wellmouth record flayer~
+@@yWellmouth Record Flayer@@N~
+@@yWellmouth Record Flayer@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+54 0
+#8620
+great oasis wellmouth rite captain~
+@@yWellmouth Rite Captain@@N~
+@@yWellmouth Rite Captain@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+55 0
+#8621
+great oasis wellmouth sand curate~
+@@yWellmouth Sand Curate@@N~
+@@yWellmouth Sand Curate@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+55 0
+#8622
+great oasis wellmouth hierophant~
+@@yWellmouth Hierophant@@N~
+@@yWellmouth Hierophant@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+73 48 0 S
+#8623
+great oasis cistern archivist~
+@@yCistern Archivist@@N~
+@@yCistern Archivist@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+56 0
+#8624
+great oasis cistern wheelwright~
+@@yCistern Wheelwright@@N~
+@@yCistern Wheelwright@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+57 0
+#8625
+great oasis cistern shell diver~
+@@yCistern Shell Diver@@N~
+@@yCistern Shell Diver@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+57 0
+#8626
+great oasis cistern salt mason~
+@@yCistern Salt Mason@@N~
+@@yCistern Salt Mason@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+58 0
+#8627
+great oasis cistern guardian eternal~
+@@yCistern Guardian Eternal@@N~
+@@yCistern Guardian Eternal@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 520 0 S
+58 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 2 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8628
+great oasis east cistern lurker~
+@@yEast Cistern Lurker@@N~
+@@yEast Cistern Lurker@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+#8629
+great oasis east cistern harrower~
+@@yEast Cistern Harrower@@N~
+@@yEast Cistern Harrower@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+59 0
+#8630
+great oasis east cistern leviathan-spawn~
+@@yEast Cistern Leviathan-Spawn@@N~
+@@yEast Cistern Leviathan-Spawn@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+65 0 0 S
+60 0
+#8631
+great oasis oasis wyrm~
+@@yOasis Wyrm@@N~
+@@yOasis Wyrm@@N keeps watch over the contested waters.
+~
+This figure bears dust, salt, and ritual marks of the Great Oasis struggle for control.
+~
+73 520 0 S
+60 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 66 128
++ 0 0 0 0 0 0 0 0 0
+l 150 8644 8645 8646 0 0 0 0 0 0 
+L 40 35 25 0 0 0 0 0 0 
+#8600
+great oasis oasis relic 8600~
+@@aOasis Relic 8600@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8388616 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+40
+#8601
+great oasis oasis relic 8601~
+@@aOasis Relic 8601@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8388624 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+41
+#8602
+great oasis oasis relic 8602~
+@@aOasis Relic 8602@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8388672 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+42
+#8603
+great oasis oasis relic 8603~
+@@aOasis Relic 8603@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8388736 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+43
+#8604
+great oasis oasis relic 8604~
+@@aOasis Relic 8604@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8389120 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+44
+#8605
+great oasis oasis relic 8605~
+@@aOasis Relic 8605@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8389632 1
+5
+#8606
+great oasis oasis relic 8606~
+@@aOasis Relic 8606@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8390656 1
+5
+#8607
+great oasis oasis relic 8607~
+@@aOasis Relic 8607@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8392704 1
+5
+#8608
+great oasis oasis relic 8608~
+@@aOasis Relic 8608@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8396800 1
+5
+#8609
+great oasis oasis relic 8609~
+@@aOasis Relic 8609@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8421376 1
+5
+#8610
+great oasis oasis relic 8610~
+@@aOasis Relic 8610@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8454144 1
+5
+#8611
+great oasis oasis relic 8611~
+@@aOasis Relic 8611@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8519680 1
+5
+#8612
+great oasis oasis relic 8612~
+@@aOasis Relic 8612@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8650752 1
+5
+#8613
+great oasis oasis relic 8613~
+@@aOasis Relic 8613@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 9437184 1
+5
+#8614
+great oasis oasis relic 8614~
+@@aOasis Relic 8614@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 10485760 1
+5
+#8615
+great oasis oasis relic 8615~
+@@aOasis Relic 8615@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8388616 1
+5
+#8616
+great oasis oasis relic 8616~
+@@aOasis Relic 8616@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8388624 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+56
+#8617
+great oasis oasis relic 8617~
+@@aOasis Relic 8617@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8388672 1
+5
+L
+57
+#8618
+great oasis oasis relic 8618~
+@@aOasis Relic 8618@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8388736 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+58
+#8619
+great oasis oasis relic 8619~
+@@aOasis Relic 8619@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8389120 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+59
+#8620
+great oasis oasis relic 8620~
+@@aOasis Relic 8620@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8389632 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+60
+#8621
+great oasis oasis relic 8621~
+@@aOasis Relic 8621@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8390656 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+40
+#8622
+great oasis oasis relic 8622~
+@@aOasis Relic 8622@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8392704 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+41
+#8623
+great oasis oasis relic 8623~
+@@aOasis Relic 8623@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8396800 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+42
+#8624
+great oasis oasis relic 8624~
+@@aOasis Relic 8624@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+43
+#8625
+great oasis oasis relic 8625~
+@@aOasis Relic 8625@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8454144 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+44
+#8626
+great oasis oasis relic 8626~
+@@aOasis Relic 8626@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8519680 1
+0 0 0 0 0 0 0 0 0 0
+5
+#8627
+great oasis oasis relic 8627~
+@@aOasis Relic 8627@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8650752 1
+5
+#8628
+great oasis oasis relic 8628~
+@@aOasis Relic 8628@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 9437184 1
+5
+#8629
+great oasis oasis relic 8629~
+@@aOasis Relic 8629@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 10485760 1
+5
+#8630
+great oasis oasis relic 8630~
+@@aOasis Relic 8630@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8388616 1
+5
+#8631
+great oasis oasis relic 8631~
+@@aOasis Relic 8631@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8388624 1
+5
+#8632
+great oasis oasis relic 8632~
+@@aOasis Relic 8632@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8388672 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+51
+#8633
+great oasis oasis relic 8633~
+@@aOasis Relic 8633@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8388736 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+52
+#8634
+great oasis oasis relic 8634~
+@@aOasis Relic 8634@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8389120 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+53
+#8635
+great oasis oasis relic 8635~
+@@aOasis Relic 8635@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8389632 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+54
+#8636
+great oasis oasis relic 8636~
+@@aOasis Relic 8636@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8390656 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+55
+great oasis oasis relic 8637~
+@@aOasis Relic 8637@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8392704 1
+5
+56
+great oasis oasis relic 8638~
+@@aOasis Relic 8638@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8396800 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+57
+#8639
+great oasis oasis relic 8639~
+@@aOasis Relic 8639@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+58
+#8640
+great oasis oasis relic 8640~
+@@aOasis Relic 8640@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8454144 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+59
+#8641
+great oasis oasis relic 8641~
+@@aOasis Relic 8641@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8519680 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+60
+#8642
+great oasis oasis relic 8642~
+@@aOasis Relic 8642@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 8650752 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+40
+#8643
+great oasis oasis relic 8643~
+@@aOasis Relic 8643@@N~
+A preserved Great Oasis relic waits here for whoever can claim it.~
+9 0 9437184 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+41
+#8644
+great oasis wyrmscale torque~
+@@RWyrmscale Torque@@N~
+A boss relic from the deep cistern glints with dangerous provenance.~
+9 134217792 8388608 1
+0 0 0 0 0 0 0 0 0 0
+10
+L
+60
+#8645
+great oasis aquifer fang~
+@@RAquifer Fang@@N~
+A boss relic from the deep cistern glints with dangerous provenance.~
+9 134217792 8388608 1
+10
+#8646
+great oasis courtbreaker idol~
+@@RCourtbreaker Idol@@N~
+A boss relic from the deep cistern glints with dangerous provenance.~
+9 134217792 8388608 1
+0 0 0 0 0 0 0 0 0 0
+10
+L
+60
+#8647
+great oasis synod sanctum key~
+@@lSynod Sanctum Key@@N~
+A small marked key has been left here beside worn stone.~
+18 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+50
+#8648
+great oasis cistern gate key~
+@@lCistern Gate Key@@N~
+A small marked key has been left here beside worn stone.~
+18 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+50
+#8649
+great oasis wyrm lair key~
+@@lWyrm Lair Key@@N~
+A small marked key has been left here beside worn stone.~
+18 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+50
+#SHOPS
+0
+M 0 8600 1 8600 oasis population
+E 0 8600 1 0 issue kit
+M 0 8601 1 8603 oasis population
+E 0 8601 1 1 issue kit
+M 0 8602 1 8606 oasis population
+E 0 8602 1 2 issue kit
+M 0 8603 1 8609 oasis population
+E 0 8603 1 3 issue kit
+M 0 8604 1 8612 oasis population
+E 0 8604 1 4 issue kit
+M 0 8605 1 8615 oasis population
+E 0 8605 1 5 issue kit
+M 0 8606 1 8618 oasis population
+E 0 8606 1 6 issue kit
+M 0 8607 1 8621 oasis population
+E 0 8607 1 7 issue kit
+M 0 8608 1 8624 oasis population
+E 0 8608 1 8 issue kit
+M 0 8609 1 8627 oasis population
+E 0 8609 1 9 issue kit
+M 0 8610 1 8630 oasis population
+E 0 8610 1 10 issue kit
+M 0 8611 1 8633 oasis population
+E 0 8611 1 11 issue kit
+M 0 8612 1 8636 oasis population
+E 0 8612 1 12 issue kit
+M 0 8613 1 8639 oasis population
+E 0 8613 1 13 issue kit
+M 0 8614 1 8642 oasis population
+E 0 8614 1 14 issue kit
+M 0 8615 1 8645 oasis population
+E 0 8615 1 15 issue kit
+M 0 8616 1 8648 oasis population
+E 0 8616 1 16 issue kit
+M 0 8617 1 8651 oasis population
+E 0 8617 1 17 issue kit
+M 0 8618 1 8654 oasis population
+E 0 8618 1 18 issue kit
+M 0 8619 1 8657 oasis population
+E 0 8619 1 0 issue kit
+M 0 8620 1 8660 oasis population
+E 0 8620 1 1 issue kit
+M 0 8621 1 8663 oasis population
+E 0 8621 1 2 issue kit
+M 0 8622 1 8666 oasis population
+E 0 8622 1 3 issue kit
+M 0 8623 1 8669 oasis population
+E 0 8623 1 4 issue kit
+M 0 8624 1 8672 oasis population
+E 0 8624 1 5 issue kit
+M 0 8625 1 8675 oasis population
+E 0 8625 1 6 issue kit
+M 0 8626 1 8678 oasis population
+E 0 8626 1 7 issue kit
+M 0 8627 1 8681 oasis population
+E 0 8627 1 8 issue kit
+M 0 8628 1 8684 oasis population
+E 0 8628 1 9 issue kit
+M 0 8629 1 8687 oasis population
+E 0 8629 1 10 issue kit
+M 0 8630 1 8690 oasis population
+E 0 8630 1 11 issue kit
+M 0 8631 1 8693 oasis population
+E 0 8631 1 12 issue kit
+O 0 8647 1 8656 sanctum key cache
+O 0 8648 1 8676 cistern key cache
+O 0 8649 1 8696 lair key cache
+D 0 8658 1 2
+D 0 8678 1 2
+D 0 8697 1 2
+S
+#SPECIALS
+M 8622 spec_cast_cleric
+M 8627 spec_cast_cleric
+S
+#OBJFUNS
 ~
 ~
 0 -1 8691
