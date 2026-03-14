@@ -82,6 +82,8 @@ The forest is not empty. It is home to:
 - **Rootbound cult remnants** who reject both cities and practice dangerous old rites. The Rootbound believe the forest itself is a sleeping deity whose dreams shape reality, and that the Lantern Road is a wound in the deity's flesh. Their sabotage of road infrastructure, lamp-posts, and bridge pilings makes them the most actively dangerous faction in the forest. Their leader, known as the Thornmother, is believed to operate from a hidden grove deep in the Ancestor Deeps. Kowloon's Wardens of Iron have posted a bounty; Midgaard's rangers consider her a priority target.
 - **Thornwood exclusion zone:** wardens classify the Thornwood estate-forest as a southern fringe anomaly linked to grave-route tunnels and Shadowmere's approach corridors. It is technically within the broader northern woodland belt, but excluded from ordinary Lantern Road timber and escort contracts due to necrotic contamination and unstable path behavior.
 
+Warden cartographers mark Thornwood with a non-standard hazard sigil rather than a normal district tint, and convoy writs treat its perimeter as a legal exception area: route promises remain valid around it, but never through it. This administrative carve-out is politically useful because it lets both Midgaard and Kowloon acknowledge Thornwood as real while denying full jurisdictional responsibility for what happens inside.
+
 Most conflict is not full war but contested territory. Near-road inhabitants tolerate traffic for trade. Deep interior factions punish intrusion, creating a natural level gradient as danger rises with distance from the Lantern Road.
 
 ### Faction Timeline for Encounter Design

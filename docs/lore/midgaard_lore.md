@@ -242,6 +242,14 @@ Tie Midgaard’s updated narrative to the established world plans without changi
 - **Intelligence flow:** Forest scouts report sightings to Midgaard’s Guard Command. Requisition rooms should include mentions of bounty postings for Ashfang raiders and warnings about Thornmother cultist activity.
 - **Historical roots:** Midgaard’s founding as a "fortified caravan exchange" is directly tied to the forest corridor’s role as a trade route. The First Stone Accord’s principle of "all roads must return to a watched square" was developed in response to ambush risks on forest roads.
 
+
+### Thornwood Frontier (grave-route hinge via room 11085)
+- **Physical relation:** Thornwood and Shadowmere both connect through the grave tunnel hinge at room `11085`, creating a northern mortuary corridor that sits outside Midgaard's public ceremonial routes but inside its practical risk envelope.
+- **Registry contradiction:** Midgaard's formal civic ledgers underreport Thornwood activity, yet requisition side-records and hazard notices acknowledge repeated incidents tied to thorned estate woods cargo and personnel losses. This mismatch should appear in archive room flavor as crossed-out labels, duplicate incident numbers, or partial docket references.
+- **Faction leverage:** Reckoning-aligned archivists treat Thornwood as evidence that death administration abuse was not isolated to Shadowmere; Continuity-aligned officials frame it as an unmanaged private frontier anomaly outside direct civic control.
+- **Economic shadow:** Midgaard crafts and scriptoria circles occasionally receive high-density thornwood covers and fittings through intermediated contracts. Publicly these are cataloged as northern hardwood lots; privately, quality marks and contamination cautions suggest Thornwood provenance.
+- **Operational doctrine:** Guard and tunnel-watch briefings should treat Thornwood adjacency as a doctrine edge-case: avoid pursuit into root-shift zones, never stage casualties in local soil, and verify identity using dual witness plus physical token due to documented impersonation by estate dead.
+
 ### Kowloon (vnums 14000–14099)
 - **Trade corridor:** Midgaard and Kowloon are connected via the Great Northern Forest (Midgaard → forest → Kowloon Iron Gate). Merchant traffic between the two cities sustains both economies.
 - **Shared bureaucratic lineage:** Both cities developed registry systems, lantern-based wayfinding, and tariff frameworks independently but in parallel. Midgaard’s Lantern Reforms and Kowloon’s Courier Lantern Office share conceptual DNA from frontier logistics needs.
