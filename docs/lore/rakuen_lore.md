@@ -471,6 +471,97 @@ Rakuen's Garden Ledger maintains a separate register of persons who departed the
 
 The other seventy percent remain in what both cities' records describe as statistical variance. The Outbound Open Register has 847 active open entries, accumulated over the last forty years. The Bloom Council considers this a route-safety record. The Honest Ledger movement considers it an indictment of the guide-compact system's adequacy. The Garden Ledger Clerks consider it simply the truth, and have been recording it faithfully since the Register was created.
 
+---
+
+## IX. Thematic Pillars
+
+1. **Paradise can survive as language after it fails as infrastructure.** Rakuen's ceremonies, architecture, and civic rhetoric still speak the founding ideal. The daily machinery speaks triage. Both coexist. Neither erases the other.
+
+2. **Peripheral cities inherit risks that core cities classify away.** Midgaard's "variance relief" framing is not malice — it is an institutional habit of externalizing costs to places that cannot compel accountability. Rakuen is the most documented example of where those classified-away risks land.
+
+3. **Disaster governance becomes identity, not temporary exception.** The Ember Wardens were meant to be temporary. The labor drafts were temporary. The ration towers were temporary. Rakuen is a city composed entirely of temporary measures that became permanent.
+
+4. **The irony of escape.** You cannot build a city that rejects bureaucracy and then ask bureaucracy to save you. Rakuen's founders understood this; their descendants have had to live it. The city's central tragedy is not that the ideal failed — it is that the failure was predictable from the founding design, and the founders built it anyway because the alternative was to stay in Midgaard.
+
+5. **Institutional memory is a weapon.** The Garden Ledger exists because the founders understood that whoever controls the record controls the narrative. The Clerks have used it faithfully. The Bloom Council has used it selectively. The Kel'Shadra witnessing office used it to make things disappear. The same tool, the same information, three different wielders and three different politics.
+
+6. **Cinderteeth shocks rewrite southern politics for generations.** The Ashfall Monsoons did not merely damage Rakuen's infrastructure. They destroyed the planning assumptions that the founding compact was built on, forcing the adoption of emergency structures that then calcified into permanent governance.
+
+7. **Hope can be sincere and still weaponized.** The Festival of Ever-Bloom is genuinely moving and genuinely exploited. The Promise Stones are genuinely revered and genuinely invoked to block necessary repairs. The Founder's Hearth is genuinely continuous and genuinely used as a symbol of legitimacy by an institution that has made the original founders' choices impossible.
+
+---
+
+## X. Adventure and Narrative Hooks
+
+1. **The Broken Orchard Audit**: Garden Ledger pages prove food yields were falsified for morale targets tied to Midgaard's subsidy qualification formulas. If true, Rakuen has been receiving subsidy for yields it did not produce — and the understated yields are the actual evidence of how inadequate the subsidy was.
+
+2. **The Kel'Shadra Access Request**: A family in Rakuen has learned that their founding ancestor's resettlement testimony was routed below bell-line. They need someone to enter the Kel'Shadra Crypts and recover it — not for property claims, but because they want to know what she said. The Bloom Council wants the request filed through official channels where it can be delayed indefinitely. The Garden Ledger Clerks want it to succeed because the recovered testimony would corroborate their archive's Violet Compact records.
+
+3. **The Southmark Escort Scandal**: Forged Midgaard gate seals and fake Woodland guide-compact contracts are rerouting caravans into ambush corridors. Someone in the Near Corridor is using authentic-looking documentation — close enough to pass initial inspection — which means either the forgeries are coming from someone with intimate knowledge of both gate-seal formats and guide-compact language, or someone inside one of those systems is selling access.
+
+4. **The Floodwall Charter Crisis**: The Ember Wardens seek emergency authority to build a permanent flood barrier in the lower terraces that would require demolishing two surviving root-weave founding-era structures. The Preservation Coalition invokes the Low-Wall Principle. The structures in question are also where the oldest surviving Promise Stones are mounted. The Wardens have flood-risk data showing the terraces will be inundated in the next two seasons without the barrier.
+
+5. **The Fourth Petition Question**: The Amendment Track has drafted language for a fourth annexation petition based on Kiess's legal opinion and the Compact amendment path. They need someone to carry a confidential document to Kiess for independent review before the Bloom Council's next rotation installs an Amendment Track steward who could submit it — the current Preservation Coalition steward will table it the moment she sees it. The document must arrive in Kiess before the rotation and be reviewed and returned with Kiess certification within forty days.
+
+6. **The Quiet Separatists' Maritime Test**: A Canopy Workshop compact-leader wants to run a test shipment of Rakuen's high-value canopy botanicals directly to Mafdet through the southern maritime channel, bypassing Midgaard's gate registry. If it works, it establishes a proof-of-concept for genuine supply-chain independence. If it is intercepted by Midgaard gate officials, it becomes a diplomatic incident. She needs escorts who can be trusted not to mention the job to anyone with Midgaard connections.
+
+7. **The Black Register Discrepancy**: A Ledger Vigil challenge filed three years ago by a lower-terrace resident claims that her district's ration allocation has been systematically miscalculated for eleven years — not by accident, but because the Canopy Compact runner who transcribes the Ember Wardens' allocation numbers made a consistent copying error that compounds annually. The mathematical evidence is in the challenge register. No one has acted on it. The Ember Wardens say it is a Bloom Council matter. The Bloom Council says it is an Ember Warden matter. The Clerks have escalated it to both three times. She is now asking for someone with no institutional ties to follow the paper trail.
+
+8. **The Paradise Thesis Recovery**: The Canopy Compacts' claim that an unedited copy of the *Paradise Thesis* was smuggled to Kiess during the Violet Compact era has never been investigated directly. A Garden Ledger Clerk has cross-referenced correspondence dates and routes and identified a specific Kiess archive collection — the Syndic Council's "Received Southern Documents, Violet Era" — that the document would have been catalogued under. Getting Kiess to grant access requires navigating the Syndic Council's formal access-request process, which requires an institutional sponsor, which Rakuen officially lacks since the Bloom Council has not submitted the formal request. The Clerks cannot submit it. The Compacts cannot submit it. Someone with standing in Kiess would need to.
+
+---
+
+## XI. Room, NPC, and Object Tone Guide
+
+Blend these textures when writing Rakuen spaces, characters, and items:
+
+**Ideal-city residue** (the founding generation's physical legacy):
+- Root-weave walls where tree-root systems are incorporated as structural elements
+- Promise Stones — carved granite oath-markers, maintained but often cracked and repaired
+- Public oath circles in civic plazas, worn smooth by generations of use
+- Bloom Pavilion's living ivy roof, the ivy a different cultivar than the original but maintained for continuity
+- Open terrace design in upper districts: shade-oriented, communal-facing, built for cooperation
+
+**Disaster wear** (the Ash-and-Iron era's physical legacy):
+- Ash-stain lines on tower walls marking monsoon high-water marks
+- Flood marks on causeway stones at shin height in some corridors
+- Patched sections of root-weave walls where flood damage was repaired with plain stone, visible as mismatched textures
+- Ration counters at tower windows: functional, permanent, the wood worn by three generations of hands
+- Sealed ventilation grilles replacing open ones, fitted during the Ashfall years and never removed
+
+**Forest pressure** (the canopy's continuous claim on the built environment):
+- Root-heave in older pavings where tree roots have lifted stone
+- Invasive canopy growth through upper-storey window openings in abandoned lower-terrace buildings
+- Route boards near the Dispatch Houses marked with fading dye and revised daily — the information is time-critical and the medium reflects it
+- Moss on north-facing walls regardless of how recently they were cleared — the canopy moisture is persistent
+
+**Administrative bleed** (the governance machinery's material presence):
+- Stamped dispatch passes, subsidy tablets, dispute-notice boards
+- Redacted transport ledgers in the Garden Ledger Archive, where entries have been crossed through with differing ink — some crossings are legitimate corrections, some are the product of the Bloom Council's selective editing, and it is not always obvious which is which
+- Ration allocation notices posted on tower walls, updated weekly, with amendment notices layered over old ones rather than replaced
+- Guide-compact seals on cargo bales — small wax impressions indicating which path-compact operator cleared the goods through which corridor segment
+
+**Character voice patterns**:
+- Ember Wardens speak in operational shorthand: conditions, protocols, distances, timelines.
+- Garden Ledger Clerks speak precisely and completely, which sometimes reads as cold — they are not cold, they are accurate.
+- Bloom Council members speak in civic-ceremony language even in private, which gives their ordinary statements a slightly formal quality.
+- Canopy Compact wardens speak in compact-specific terminology mixed with Woodland-route vocabulary that outsiders find opaque until they have spent a few days in the city.
+- Lower-terrace residents speak in flood-cycle practical language: water levels, repair seasons, Firstlight distribution windows.
+- Upper Ring residents speak of founding values with a sincerity that reads as either genuine conviction or very sophisticated denial depending on what they are refusing to acknowledge at the time.
+
+---
+
+## Five-City Intercity Cross-Reference
+
+For the larger intercity matrix contextualizing Rakuen's pressures: `docs/lore/five_cities_intercity_lore.md`
+
+Rakuen's key five-city interaction channels:
+- **Rakuen ↔ Midgaard**: Subsidy dependency, casualty-recognition politics, resettlement chain, the three refused annexation petitions, archive disputes.
+- **Rakuen ↔ Kowloon**: Southern Grain Compact, emergency price ceilings, flood-architecture knowledge exchange, route-surcharge friction.
+- **Rakuen ↔ Kiess**: Charter consultation, Paradise Thesis archival question, amendment-track legal support.
+- **Rakuen ↔ Mafdet**: Mercy-freight protocol, canopy-botanical trade interest, Quiet Separatist maritime-independence development.
+- **Rakuen ↔ Kel'Shadra**: Sealed testimony records, Violet Compact guilt chain, recovery-access problem.
+
 
 
 
