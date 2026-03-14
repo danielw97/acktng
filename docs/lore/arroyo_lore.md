@@ -197,8 +197,9 @@ The Arroyo is a **corridor hinge-zone**:
 - From the **oases**, it inherits water-right law and measurement bureaucracy.
 - From the **pyramids**, it inherits death-jurisdiction ideology and inscriptional absolutism.
 - From the **desert collapse**, it inherits coercive simplification and predatory opportunism.
+- From the **Saltglass Reach**, it shares thematic DNA: both the Arroyo's canyon-court system and the Reach's cairn-court system transformed geographic features (canyon walls, cairn markers) into jurisdictional boundaries. Some of the Arroyo's "thirst oath" vocabulary appears in adapted form on Reach cairn tablets, suggesting that the two regions were once part of the same legal-linguistic tradition. The Arroyo's Charter Reclaimers — synod-descended militants who enforce passage law through extortion checkpoints — are functionally identical to the Saltglass Reach's competing toll claimants, differing only in terrain (canyon vs. open desert) and the degree of Synod theological influence.
 
-This makes the Arroyo a narrative bridge for players moving between oasis civic arcs and pyramid metaphysical arcs.
+This makes the Arroyo a narrative bridge for players moving between oasis civic arcs, pyramid metaphysical arcs, and the coastal trade system that the Saltglass Reach and Mafdet represent.
 
 ---
 

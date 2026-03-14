@@ -275,6 +275,16 @@ Apex convergence of command, seal doctrine, and sovereign residue. Tone should b
 - Pyramid claimants seek cartouches proving succession rights.
 - Merchants fund expeditions to disable guardian spillover on caravan roads.
 - Syncretic cults attempt to fuse solar and underworld rites again, risking a second catastrophe.
+- Mafdet's Quarantine Ledger seeks Khar'Daani hazard classification tablets to validate their own containment class system, which descends from Khar'Daan's funerary-bureaucratic procedures. The tablets would either confirm or invalidate centuries of maritime hazard assessment practice.
+- A Red Sand Accounts broker commissions recovery of Khar'Daani dynasty seals that could authenticate (or forge) high-value relic provenance for the Mafdet export market.
+
+## Connection to the Saltglass Reach and Mafdet
+
+Khar'Daan's funerary-bureaucratic tradition directly influenced the maritime world through the Saltglass Reach's **Sealed Route** — the southern cairn chain that was dedicated to funerary and relic consignments. The quarantine inspection protocols that the Sealed Route enforced were derived from Khar'Daani procedures for handling remains and ritual objects. When the Sealed Route collapsed during the Fracture Era, the quarantine tradition migrated to Mafdet, where it became the port's relic quarantine doctrine.
+
+Mafdet's **Quarantine Ledger** — the institution that classifies pyramid-origin artifacts by hazard level for maritime transport — is the direct institutional descendant of Khar'Daan's containment-class system. The four-tier classification (Class One through Class Four) maps to Khar'Daani categories that originally distinguished between remains that were safely sealed, remains requiring periodic inspection, remains requiring specialist custodians, and remains that should never be moved. The maritime adaptation replaced "remains" with "artifacts" and "custodians" with "sealed holds," but the logic is identical.
+
+This lineage means that Khar'Daan's administrative innovations — often dismissed as the obsessions of a dead civilization — are still actively governing how the living world handles its most dangerous physical heritage. The Quarantine Ledger's Hazard Scribes are, in a meaningful sense, Khar'Daan's last functioning bureaucrats.
 
 ---
 

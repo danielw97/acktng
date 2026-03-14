@@ -41,13 +41,19 @@ This area should narratively bridge nearby desert and pyramid content, creating 
 
 ### Connection to the Saltglass Reach and Mafdet (eastward littoral extension)
 
-The Eastern Desert does not end at the last inland dunes. Its surviving road logic continues east into the **Saltglass Reach**, where caravan law transitions into maritime contract law at the beach-port of **Mafdet**. Historically, this transition happened through tariff cairn stations that certified cargo origin, assessed shore conversion levies, and stamped manifests for dockside loading.
+The Eastern Desert does not end at the last inland dunes. Its surviving road logic continues east into the **Saltglass Reach**, where caravan law transitions into maritime contract law at the beach-port of **Mafdet**. Historically, this transition happened through tariff cairn stations that certified cargo origin, assessed shore conversion levies, and stamped manifests for dockside loading. The Reach's three parallel cairn lines (Swift Line, Heavy Road, and Sealed Route) were direct extensions of the Eastern Desert's charter stone network, using identical notation formats and witness-seal conventions.
+
+The transition from inland to maritime law was formalized through a process called the **Shoreward Conversion**, in which cargo, contracts, and legal obligations were translated from water-debt denominations to maritime risk-assessment standards at a boundary stone called the **Shoreward Seal**. This conversion was not merely bureaucratic; it represented a fundamental reconceptualization of value — from a water-based economy to a risk-based economy — and required specialist clerks trained in both legal traditions.
+
+The Keepers of Measure developed a **Littoral Branch** of Measure Script for coastal use, adapting their combinatorial glyph system to encode tidal observations, cargo-draft calculations, and storm-warning data. This Littoral Branch survives in adapted form as the basis of Mafdet's Ledger House notation system, making Mafdet's commercial records the most accessible entry point for scholars studying Measure Script — the maritime context provides practical reference points that the inland system's astronomical-theological layers lack.
 
 Specific connections:
-- Charter Mile Marker fragments in Zone A should mention "shoreward certification" and old references to Reach-bound freight.
-- Zone B ledger rooms should include redacted entries for coastward tariff disputes, foreshadowing Mafdet's ledger houses.
-- Zone C convoy fortifications should show architectural adaptation for long-haul cargo protection to the coast (rope-bolted crate anchors, sailcloth salvage, anti-salt wrapping).
-- Zone D inscriptions can include partial directional compounds that pair obelisk bearings with tide-cycle timing, hinting at Measure Script's littoral branch later preserved in Mafdet port records.
+- Charter Mile Marker fragments in Zone A should mention "shoreward certification" and old references to Reach-bound freight. Some markers bear directional glyphs pointing toward the Saltglass Reach's cairn line system.
+- Zone B ledger rooms should include redacted entries for coastward tariff disputes, foreshadowing Mafdet's ledger houses. Some entries reference "Shoreward Assessors" and "shore conversion schedules."
+- Zone C convoy fortifications should show architectural adaptation for long-haul cargo protection to the coast (rope-bolted crate anchors, sailcloth salvage, anti-salt wrapping). The fortification style transitions from pure desert military to hybrid desert-maritime, with evidence of wind-baffle construction techniques later adopted in Mafdet's Ledger Quarter.
+- Zone D inscriptions can include partial directional compounds that pair obelisk bearings with tide-cycle timing, hinting at Measure Script's Littoral Branch later preserved in Mafdet port records. These compounds are the oldest surviving evidence of the Keepers' attempt to extend their measurement system to the ocean.
+- The Ninth Meridian catastrophe's thermal pulse propagated eastward through the dry Iseth Reach channel, creating the Saltglass Reach's Glasswind Belts. The same energy that shattered Zone D's cistern infrastructure fused the Reach's sand into glass — making the Glasswind Belts a geological continuation of the disaster visible in the Eastern Desert's deepest zones.
+- The Jackal Synod's Eclipsed Tongues faction operates in both the Eastern Desert and the Saltglass Reach, using Glasswind routes to move relic components and ritual materials toward Mafdet's harbor for maritime export beyond oasis scrutiny.
 
 ### Connection to the Northern Pyramid (vnums 10125-10324, levels 100-120)
 

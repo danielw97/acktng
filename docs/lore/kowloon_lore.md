@@ -72,6 +72,16 @@ Kowloon welcomes all levels because danger around the delta never truly ended. N
 
 The city's service geometry reflects this practical ethos: key shops cluster near traversal spines so adventurers can resupply without navigating the full grid, interiors are single-access for auditability and theft prevention, and quartermaster logistics are positioned near the central recall nexus so recovering parties can rearm fast. Kowloon does not romanticize adventurers—it processes them with the same brisk efficiency it applies to cargo manifests and tax filings. But it pays fairly, heals without prejudice, and never asks where you came from, only what you can carry.
 
+### Connection to the Saltglass Reach and Mafdet
+
+Kowloon's Jade Magistracy has identified Mafdet's Ledger House notation as a relative of their own record-keeping system — both descended from the **Littoral Branch** of the Keepers of Measure's combinatorial writing system. The Jade Clerks' independent reconstruction of volumetric-legal Measure Script aligns more closely with the Littoral Branch than with the inland system, suggesting that the trade documents they used as source material may have been maritime in origin — carried to Kowloon by coastal routes rather than overland caravans.
+
+This discovery has prompted the Jade Magistracy to fund research expeditions seeking Littoral Branch source documents at **Measure's Rest**, the Saltglass Reach Wardens' cairn tablet library. The expeditions are politically sensitive: the Reach Wardens demand payment in information (they want to know what the Jade Clerks are building with the data), and Mafdet's Ledger Houses view the Jade Clerks' interest as a potential challenge to their commercial monopoly on maritime legal notation.
+
+If confirmed, a historical maritime trade link between Mafdet and Kowloon's delta ports would rewrite corridor commercial history. It would mean that the Keepers' measurement civilization reached the sea in two directions — east to Mafdet and (through unknown intermediaries) to Kowloon's delta — and that the two maritime adaptations evolved independently for centuries before modern scholars noticed the family resemblance.
+
+Kowloon's **Neon Covenant** principle of "one ledger, one ration code" echoes Mafdet's **Strandline Compact** principle of "dual attestation" — both reflect the same underlying conviction that documentary precision is the foundation of civic trust. The institutional parallels are striking: both cities were founded by practical compacts forged during crisis (Kowloon's Ashfall Monsoon, Mafdet's Fracture Era), both cities' governance divides power among three-to-five blocs that prevent any single institution from dominating, and both cities treat measurement and documentation as the primary instruments of social order.
+
 ### Enemies, Tensions, and Rumors
 Peace in Kowloon is durable, not gentle. Ongoing tensions include:
 

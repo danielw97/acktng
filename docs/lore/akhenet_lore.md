@@ -187,8 +187,9 @@ These names should appear in inscriptions, item lore, and NPC dialogue to keep a
 - **Southern Pyramid:** doctrinal and seismic influence source; tremors and descent symbolism in Akh'enet are interpreted through Moon Sovereign narratives.
 - **Great Pyramid / Jackal Tribunal legacy:** sentence language in Akh'enet courts is a degraded descendant of higher tribunal formulae.
 - **Eastern Desert routes:** caravan law and toll-memory from desert roads converge here before fragmenting toward pyramid fronts.
+- **Saltglass Reach and Mafdet:** Akh'enet's role as a "jurisdictional hinge" between oasis and pyramid law has a structural parallel in the Saltglass Reach's function as a hinge between inland and maritime law. Both sites attempted to reconcile incompatible legal traditions through procedural compromise. Akh'enet's "double rulings" (adjudicating cases under both surface law and tomb law simultaneously) prefigure the Reach's **dual-seal attestation** and Mafdet's **dual-attestation** protocol. Relic fragments originating in Akh'enet that reach Mafdet's harbor are classified under a special sub-category in the Quarantine Ledger because they tend to carry both oasis and pyramid provenance signatures simultaneously — making them uniquely difficult to assess under either system alone. Some Mafdet Ledger House scholars argue that the Shoreward Conversion's success was informed by lessons learned from Akh'enet's failure: the coast simplified what the inland hinge overcomplicated.
 
-Akh'enet should therefore feel like connective tissue among oasis governance, pyramid ideology, and road survival economies.
+Akh'enet should therefore feel like connective tissue among oasis governance, pyramid ideology, road survival economies, and — through the relic trade — the maritime export system that Mafdet now administers.
 
 ---
 

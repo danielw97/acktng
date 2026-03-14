@@ -192,8 +192,10 @@ Every room should show at least one trace of former purpose and one trace of pos
 - **Great/Northern/Southern Oasis:** references to charter formulas, ration debt language, and cistern governance titles.
 - **Northern/Southern/Great Pyramid arcs:** references to twin-sovereign doctrinal split and the failed synthesis model.
 - **Eastern desert routes:** evidence that caravan law corridors degraded into reaver and cult toll zones.
+- **Saltglass Reach:** the Scorched Wastes and the Saltglass Reach are **twin scars** of the same catastrophe. The Ninth Meridian thermal pulse that created the Wastes propagated eastward through the dry Iseth Reach channel, creating the Glasswind Belts at attenuated intensity. The Wastes received the full force; the Reach received the echo. Rooms in the Wastes' eastern margins should show the transition: burn-glass gives way to wind-cut silica, and volcanic-fused stone grades into salt-crusted glass shards. The Reach is what the Wastes would look like if the catastrophe had been less severe — survivable, navigable, but permanently altered.
+- **Mafdet:** relic traffic from the Scorched Wastes occasionally reaches Mafdet through indirect routes (usually via Eastern Desert caravan lanes or Reach whisper routes). The Quarantine Ledger classifies Wastes-origin artifacts under the highest default hazard level because the thermal and metaphysical overprinting that created the Wastes tends to produce artifacts with unstable containment properties. A relic recovered from the Burned Meridian's heart zones is treated as presumptive Class Three until proven otherwise.
 
-The area should feel like a transitional scar connecting those histories, not an isolated monster desert.
+The area should feel like a transitional scar connecting those histories, not an isolated monster desert. The Scorched Wastes are the corridor's most violent lesson in what happens when incompatible legal and theological systems are forced to operate simultaneously on failing infrastructure.
 
 ---
 

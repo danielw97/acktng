@@ -181,6 +181,18 @@ Kowloon's Jade Magistracy maintains a branch office in the oasis caravan yards (
 
 Kiess sits on Roc Road west of Midgaard, at the far western end of the continental trade network. The Great Oasis sits in the east, connected to Kiess through Midgaard and the eastern caravan routes. Trade goods that originate in Kiess pass through Midgaard and then eastward to the oasis and the Eastern Desert beyond. The Temple of Concord in Kiess preserves a version of the Charter of Passage prayer that has been adapted into a civic benediction for departing merchants — evidence of how oasis legal-religious traditions diffused westward through the trade network.
 
+### 8g) Connection to the Saltglass Reach and Mafdet
+
+The Great Oasis is the institutional headwater for most of the legal and measurement systems that operate at the eastern coast. Though hundreds of miles from the sea, the Great Oasis's influence reaches Mafdet through three institutional channels:
+
+**Calibration continuity:** Mafdet's Tide Ledger Hall maintains its **Saltweight standard** in calibration with the Great Oasis Measure — the volumetric-weight reference that the Keepers of Measure established at the Great Oasis Measuring House. Annual calibration reports travel between the two institutions via Sand-Sea Carters' Guild caravans, and the Measuring House sends back certified reference weights. This calibration exchange is the last surviving institutional link between the Keepers' inland system and their Littoral Branch extension at the coast. A "measure" in Mafdet is the same physical quantity as a "measure" at the Great Oasis, even though the two institutions have been administratively independent for centuries.
+
+**Witness-seal provenance:** Great Oasis witness-seal formulas appear in adapted form on Saltglass Reach cairn tablets and in Mafdet's dual-attestation cargo documentation. The adaptation added maritime assessment categories but preserved the Great Oasis's characteristic four-witness format. Cargo bearing Great Oasis witness marks receives preferential treatment at Mafdet — faster processing, lower insurance rates — because the Great Oasis's authentication reputation extends across the entire corridor.
+
+**Littoral Branch connection:** The Keepers of Measure developed the **Littoral Branch** of Measure Script at tide obelisks on the eastern coast, adapting the Great Oasis Measuring House's combinatorial glyph system for tidal and maritime use. This Littoral Branch survives as the foundation of Mafdet's Ledger House notation. The Great Oasis therefore has a direct scribal lineage connection to Mafdet's commercial culture — the same measurement obsession, adapted from springs to tides.
+
+The Great Oasis views Mafdet with institutional respect and mild bewilderment. The Spring Wardens understand that their legal traditions govern commercial practice at a port they have never seen. They approve of the calibration continuity (measurement discipline is sacred) but find the maritime adaptations alien — the concept of "risk assessment" replacing "water-debt assessment" as the primary value metric is philosophically disturbing to an institution that considers water the ultimate measure of all things.
+
 ---
 
 ## 9) The Fauna of the Oasis
