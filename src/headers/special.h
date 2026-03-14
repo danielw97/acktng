@@ -87,6 +87,7 @@ DECLARE_SPEC_FUN(spec_rr_pilgrim);
 DECLARE_SPEC_FUN(spec_rr_ruin_scavenger);
 DECLARE_SPEC_FUN(spec_pyramid_black_sun_shard);
 DECLARE_SPEC_FUN(spec_keep_elemental_captain);
+DECLARE_SPEC_FUN(spec_hermit_archon);
 
 SPEC_FUN *spec_lookup(const char *name);
 char *rev_spec_lookup(void *func);
@@ -107,5 +108,6 @@ int summon_master_heal_chance(int master_hit, int master_max_hp, int thematic_bo
 
 /* Per-spec damage callbacks */
 void spec_keep_elemental_captain_damage(CHAR_DATA *ch, int element, int dam);
+void spec_hermit_archon_damage(CHAR_DATA *ch, int element, int dam);
 
 #endif
