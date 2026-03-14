@@ -31,6 +31,9 @@ AI_SPEC_SRCS = \
 	  ai/spec_rr_charter_keeper.o ai/spec_rr_convoy_marshal.o \
 	  ai/spec_rr_peddler.o ai/spec_rr_shrine_keeper.o ai/spec_rr_ferryman.o \
 	  ai/spec_rr_camp_cook.o ai/spec_rr_pilgrim.o ai/spec_rr_ruin_scavenger.o \
+	  ai/spec_reach_warden.o ai/spec_reach_guide.o ai/spec_reach_assessor.o \
+	  ai/spec_reach_outrider.o ai/spec_reach_scavenger.o ai/spec_reach_tidewright.o \
+	  ai/spec_reach_carter.o ai/spec_reach_smuggler.o \
 	  ai/spec_pyramid_black_sun_shard.o \
 	  ai/spec_keep_elemental_captain.o \
 	  ai/spec_hermit_archon.o \

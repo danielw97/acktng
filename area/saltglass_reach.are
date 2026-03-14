@@ -9211,6 +9211,76 @@ M 0 31198 1 31486 1
 M 0 31199 2 31489 1
 S
 #SPECIALS
+M 31100 spec_reach_warden
+M 31101 spec_reach_warden
+M 31102 spec_reach_warden
+M 31103 spec_reach_guide
+M 31104 spec_reach_outrider
+M 31105 spec_reach_carter
+M 31106 spec_reach_carter
+M 31107 spec_reach_assessor
+M 31108 spec_reach_carter
+M 31109 spec_reach_tidewright
+M 31111 spec_fido
+M 31116 spec_poison
+M 31117 spec_poison
+M 31119 spec_reach_warden
+M 31122 spec_reach_warden
+M 31123 spec_reach_assessor
+M 31124 spec_reach_outrider
+M 31125 spec_reach_scavenger
+M 31126 spec_poison
+M 31128 spec_cast_undead
+M 31131 spec_poison
+M 31132 spec_poison
+M 31134 spec_breath_acid
+M 31135 spec_reach_guide
+M 31136 spec_reach_guide
+M 31137 spec_reach_smuggler
+M 31138 spec_reach_smuggler
+M 31139 spec_cast_cleric
+M 31140 spec_breath_fire
+M 31142 spec_breath_fire
+M 31145 spec_breath_acid
+M 31146 spec_reach_scavenger
+M 31147 spec_reach_scavenger
+M 31148 spec_reach_scavenger
+M 31150 spec_reach_outrider
+M 31151 spec_reach_outrider
+M 31153 spec_reach_warden
+M 31154 spec_reach_warden
+M 31155 spec_reach_tidewright
+M 31156 spec_reach_tidewright
+M 31157 spec_reach_tidewright
+M 31159 spec_cast_undead
+M 31160 spec_reach_assessor
+M 31161 spec_reach_smuggler
+M 31162 spec_reach_smuggler
+M 31163 spec_cast_bigtime
+M 31164 spec_cast_bigtime
+M 31165 spec_breath_gas
+M 31166 spec_cast_undead
+M 31168 spec_cast_undead
+M 31171 spec_cast_undead
+M 31174 spec_poison
+M 31176 spec_poison
+M 31177 spec_thief
+M 31179 spec_cast_undead
+M 31180 spec_reach_carter
+M 31181 spec_reach_carter
+M 31182 spec_reach_warden
+M 31183 spec_guard
+M 31184 spec_cast_undead
+M 31187 spec_cast_cleric
+M 31188 spec_cast_undead
+M 31189 spec_cast_undead
+M 31190 spec_cast_cleric
+M 31193 spec_cast_undead
+M 31194 spec_breath_any
+M 31195 spec_cast_bigtime
+M 31196 spec_cast_judge
+M 31197 spec_cast_bigtime
+M 31198 spec_reach_warden
 S
 #OBJFUNS
 S

@@ -211,6 +211,22 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_rr_pilgrim;
    if (!str_cmp(name, "spec_rr_ruin_scavenger"))
       return spec_rr_ruin_scavenger;
+   if (!str_cmp(name, "spec_reach_warden"))
+      return spec_reach_warden;
+   if (!str_cmp(name, "spec_reach_guide"))
+      return spec_reach_guide;
+   if (!str_cmp(name, "spec_reach_assessor"))
+      return spec_reach_assessor;
+   if (!str_cmp(name, "spec_reach_outrider"))
+      return spec_reach_outrider;
+   if (!str_cmp(name, "spec_reach_scavenger"))
+      return spec_reach_scavenger;
+   if (!str_cmp(name, "spec_reach_tidewright"))
+      return spec_reach_tidewright;
+   if (!str_cmp(name, "spec_reach_carter"))
+      return spec_reach_carter;
+   if (!str_cmp(name, "spec_reach_smuggler"))
+      return spec_reach_smuggler;
    if (!str_cmp(name, "spec_pyramid_black_sun_shard"))
       return spec_pyramid_black_sun_shard;
    if (!str_cmp(name, "spec_keep_elemental_captain"))
@@ -395,6 +411,22 @@ char *rev_spec_lookup(void *func)
       return "spec_rr_pilgrim";
    if (func == spec_rr_ruin_scavenger)
       return "spec_rr_ruin_scavenger";
+   if (func == spec_reach_warden)
+      return "spec_reach_warden";
+   if (func == spec_reach_guide)
+      return "spec_reach_guide";
+   if (func == spec_reach_assessor)
+      return "spec_reach_assessor";
+   if (func == spec_reach_outrider)
+      return "spec_reach_outrider";
+   if (func == spec_reach_scavenger)
+      return "spec_reach_scavenger";
+   if (func == spec_reach_tidewright)
+      return "spec_reach_tidewright";
+   if (func == spec_reach_carter)
+      return "spec_reach_carter";
+   if (func == spec_reach_smuggler)
+      return "spec_reach_smuggler";
    if (func == spec_pyramid_black_sun_shard)
       return "spec_pyramid_black_sun_shard";
    if (func == spec_keep_elemental_captain)
@@ -485,6 +517,14 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_rr_camp_cook      \n\r");
    strcat(buf, "       spec_rr_pilgrim        \n\r");
    strcat(buf, "       spec_rr_ruin_scavenger \n\r");
+   strcat(buf, "       spec_reach_warden      \n\r");
+   strcat(buf, "       spec_reach_guide       \n\r");
+   strcat(buf, "       spec_reach_assessor    \n\r");
+   strcat(buf, "       spec_reach_outrider    \n\r");
+   strcat(buf, "       spec_reach_scavenger   \n\r");
+   strcat(buf, "       spec_reach_tidewright  \n\r");
+   strcat(buf, "       spec_reach_carter      \n\r");
+   strcat(buf, "       spec_reach_smuggler    \n\r");
    strcat(buf, "       spec_pyramid_black_sun_shard\n\r");
    strcat(buf, "       spec_keep_elemental_captain\n\r");
    strcat(buf, "       spec_hermit_archon\n\r");
