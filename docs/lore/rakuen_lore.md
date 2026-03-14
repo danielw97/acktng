@@ -282,6 +282,74 @@ The Upper Ring's **Promise Stone Plaza** holds the six original founding Promise
 
 **The Dispatch Houses**: There are three — one at the Woodland entry point, one in the Causeway Quarter, and one at the Upper Ring for higher-value routing. Each maintains route boards, guide-hire registers, and seasonal passage records. The Dispatch Houses are private operations under Canopy Compact charters, not Bloom Council municipal property. This matters: they are the most reliable information sources in the city precisely because they have commercial incentives for accuracy rather than political incentives for managed optimism.
 
+---
+
+## VI. Daily Rhythm, Festivals, and Superstitions
+
+### The Watch System
+
+Rakuen does not use bells for timekeeping in the way Kowloon or Midgaard do — bell-towers require maintenance investment the city has not consistently sustained, and ash accumulation in bell housings was a recurring problem during the Ashfall years. Instead, Rakuen's day is structured around the **canopy light cycle** as interpreted by the Canopy Compact wardens, who maintain a practical timekeeping tradition based on shadow lengths and canopy brightness levels rather than mechanical instruments.
+
+The day is divided into six named periods, used by all factions regardless of political affiliation:
+
+- **Firstlight**: dawn to mid-morning. Ration-tower distribution windows open. Guide-compact dispatch runners begin route checks. This is the busiest and most cooperative hour in Rakuen — scarcity management is a collective activity that transcends political faction.
+- **Work-High**: mid-morning to midday. Primary labor period. Floodwall inspection patrols move through the Causeway Quarter. The Garden Ledger Archive's public posting board is updated. Salvage court sessions run for declared emergency maintenance items.
+- **Noon Rest**: the midday heat-and-shadow period when canopy density makes outdoor work uncomfortable. Not a formal rest by law but observed by custom across all districts. The Bloom Pavilion keeps water available during Noon Rest as a founding-generation tradition; it is one of the few open-access commons still functioning as intended.
+- **Afternoon Mark**: mid-afternoon. The commercial heart of the day — the Central Market's peak hours. Dispatch Houses post afternoon route updates. Canopy Workshop production shifts change. Neighborhood council sessions run during Afternoon Mark because attendance is highest when the working day has not yet ended but morning obligations are done.
+- **Dusk-Work**: late afternoon into evening. The second labor period, usually lighter than Work-High. Ember Wardens do their second market patrol. The Dispatch Houses close their windows. Route travelers aim to be inside city bounds before Dusk-Work ends.
+- **Nightwatch**: full dark until Firstlight. Ember Wardens maintain a reduced patrol circuit. The Canopy Workshops' overnight-fire stations stay lit — partly for craft operations, partly because the light is practical security. The Promise Stone Plaza fire is tended on nightwatch rotation by a volunteer roster that has kept continuous service for over two centuries.
+
+### The Three Major Festivals
+
+**The Festival of Ever-Bloom** (spring, approximately fourteen days after the first reliable canopy bud-break)
+
+Rakuen's largest and most politically complicated civic ceremony. It commemorates the founding generation and the promise of Verath Solen's Paradise Thesis. The festival runs for three days.
+
+*Day one — the Walk of Promises*: Citizens walk the old founding route from the Woodland entry Dispatch House through the Lower Terraces to the Upper Ring, stopping at each Promise Stone to hear the compact's founding pledges read aloud by a rotating civic reader (not a Bloom Council official — the reader is chosen by neighborhood compact lottery to prevent institutional capture). Travelers and outsiders are welcome on the Walk and are given a green thread to wear as a guest-mark; by tradition, no commercial transaction, debt collection, or dispute escalation may be directed at a person wearing the thread during the three days.
+
+*Day two — the Orchard Open*: The common orchards — what remains of them — are opened for free harvest regardless of ration-system allocation. For one day, the founding promise of the common orchard is literally performed: walk in, take what you need, no paperwork. The Ember Wardens are notably absent from the orchards on this day by standing tradition, even though the tradition directly suspends ration-allocation protocol. This is one of the few moments where the Bloom Council's ceremonial authority supersedes the Ember Wardens' operational authority, and the Wardens accept it because the festival costs them very little and buys enormous social cooperation for the rest of the year.
+
+*Day three — the Bloom Council's Open Session*: The Bloom Council holds a fully public session in the Bloom Pavilion with open attendance and a public comment period. By tradition, any resident may speak for three minutes without interruption. The Honest Ledger movement uses this session aggressively. The Preservation Coalition uses it defensively. The Quiet Separatists use it theatrically. It is the most politically electric day in Rakuen's civic calendar and the one day where the gap between founding ideals and current reality is actively, publicly argued rather than managed through ceremony.
+
+After the Open Session, the Founder's Hearth is ceremonially refreshed with new wood, and the evening is given to informal celebration — the only part of the festival that operates on something close to the original founding-generation intent.
+
+**The Ledger Vigil** (midsummer, during the longest daylight period)
+
+A solemn three-day public accounting event, much less celebrated than the Festival of Ever-Bloom but considered by the Garden Ledger Clerks the most important civic ceremony. During the Ledger Vigil, the Garden Ledger's current-year records are read aloud in the Archive's public anteroom: resource levels, route-condition logs, labor-draft assignments, incoming resettlement records, Ember Warden emergency declarations. Everything is read publicly. Citizens may challenge any entry they have direct knowledge of. Challenges are recorded in an annex register and must be addressed by the next Ledger Vigil.
+
+The Ledger Vigil was originally the mechanism by which Solen's open-abundance accounting system was made real. It has become the mechanism by which Rakuen's managed optimism is occasionally, painfully checked against reality. Attendance at the full Vigil reading is low — it takes the better part of three days — but the annex challenge register is always full, and several of Rakuen's most significant political crises have begun as Ledger Vigil challenges that could not be explained away.
+
+Outside the Archive, during the Vigil evenings, informal markets run with a specific custom: prices must be stated aloud before any transaction, and anyone who hears a price they believe is wrong may say so publicly without social penalty. This "honest price" custom has no legal force but has become a festival identity marker — during Ledger Vigil evenings, Rakuen residents perform honesty as a social good even when it costs them something.
+
+**The Founder's Reckoning** (autumn, on the anniversary of the Southmark Petition's submission date)
+
+The most politically contested of Rakuen's festivals and the one the Bloom Council would most like to quietly retire. The Founder's Reckoning marks the anniversary of the first annexation petition — not the refusal, the submission — and is framed differently by every faction.
+
+The Bloom Council calls it a commemoration of Rakuen's civic aspiration. The Honest Ledger movement calls it an accountability day. The Quiet Separatists call it the day Rakuen asks the wrong question. The Preservation Coalition calls it a reminder of Midgaard's obligation.
+
+The festival has no fixed format. There is no Walk, no Open Session, no prescribed ceremony. What it has is a tradition of **public debate** — neighborhood squares, the Promise Stone Plaza, the Causeway Quarter's market intersections — where anyone can argue any position about Rakuen's political situation without institutional censure. The debates are sometimes heated. They have resulted in physical altercations twice in the last twenty years. The Ember Wardens patrol in higher numbers but with orders to intervene only in violence, not in argument.
+
+The most politically significant annual event of the Founder's Reckoning is the **reading of the refusals**: the full text of Midgaard's three petition responses, read aloud at the Promise Stone Plaza at midday. The reader is by custom a Garden Ledger Clerk. The Bloom Council has proposed four times that a partial reading be substituted for the full text; all four proposals have been voted down.
+
+### Superstitions and Daily Practice
+
+- **Never let the Founder's Hearth go cold by inattention** — only by flood or force. An intentional extinguishing is considered a statement of political surrender that no faction, not even the Quiet Separatists, will publicly endorse.
+
+- **Enter the Lower Terraces' rest gardens only in pairs**. The structural instability reasoning is practical, but the cultural weight is heavier: the rest gardens are where the people Rakuen could not hold ended up, and something about entering alone feels like an invitation to join them.
+
+- **When you hear an Ember Warden's horn at night, count the blasts before you move**: one blast means fire, two means flood, three means route-collapse (the city is cut off), four means something worse. Most residents have never heard four. Everyone knows what four means.
+
+- **Before a long journey through the Woodland, write your name in the Dispatch House register**. Not because the Dispatch House can help you if you don't come back — they can't. Because it means someone will notice.
+
+- **Keep a green thread from the Festival of Ever-Bloom's Walk**. Traveler's luck. The thread is the sign that Rakuen's founding promise still extends to strangers. Carrying it, even outside the city, is a small assertion that the promise was real.
+
+- **Do not tell a Garden Ledger Clerk that something is "close enough."** This is not superstition so much as practical advice with a long institutional history behind it.
+
+- **The ration number is never wrong to your face**. If your allocation seems short, you file a Ledger Vigil challenge. You do not argue with the tower clerk. The tower clerks did not create the shortage and they cannot survive a hundred daily arguments about it.
+
+- **When a Promise Stone cracks, the neighborhood where it stands must repair it within one season** — not because the Bloom Council requires it (though they do) but because a cracked Promise Stone left unrepaired means the neighborhood no longer believes the promise. No neighborhood wants that said about it publicly, regardless of what they believe privately.
+
+
 
 
 
