@@ -127,6 +127,20 @@ Small splinter groups using moon-rite language to claim control over death route
 
 ---
 
+## 8.5) Connection to the Saltglass Reach and Mafdet
+
+Khepra-Lesh's role as a "jurisdictional hinge-city" that attempted to reconcile oasis water-law and pyramid funerary jurisdiction has a structural successor in the Saltglass Reach's **Shoreward Conversion** system and Mafdet's **dual-attestation** protocol. Both represent attempts to reconcile incompatible legal traditions through procedural compromise:
+
+- Khepra-Lesh tried to reconcile oasis law and pyramid law under one court. The Shoreward Conversion tries to reconcile inland law and maritime law through standardized translation procedures.
+- Khepra-Lesh produced "double rulings" (one case adjudicated under two legal systems). Mafdet produces "dual attestation" (one cargo assessed under two legal systems).
+- Khepra-Lesh failed because its two legal traditions hardened into mutually exclusive sovereignties. Mafdet has succeeded (so far) because the sea imposes practical discipline: ships cannot wait for theological debates.
+
+This parallel is not accidental. Some Mafdet Ledger House scholars argue that the Shoreward Conversion was deliberately designed to avoid Khepra-Lesh's mistakes — that the Reach's Shoreward Assessors studied the lost city's failure and built a simpler, faster system that prioritized throughput over juridical perfection. Whether this is historical fact or institutional mythology, the functional lesson is clear: the corridor's legal traditions can be reconciled, but only if the reconciliation is practical rather than doctrinal.
+
+Relic fragments from Khepra-Lesh that reach Mafdet are classified under the same special sub-category as Akh'enet artifacts — dual-provenance objects bearing both oasis and pyramid legal signatures that resist clean classification under either system alone.
+
+---
+
 ## 9) Cultural Practices and Material Signatures
 
 - **Dual-script tablets:** one face for volumetric law, one face for funerary jurisdiction.

@@ -248,11 +248,45 @@ Narrative tone should emphasize **institutional survival under scarcity** — th
 
 ## Addendum: Eastern Littoral Continuation (Saltglass Reach and Mafdet)
 
-The Oasis-Pyramid Corridor's logistic logic continues east beyond the inland desert into the **Saltglass Reach**, then terminates at the beach-port of **Mafdet**. In corridor terms, Mafdet is the sea-facing equivalent of an oasis adjudication node: it converts witness-marked caravan cargo into shipborne contract cargo.
+The Oasis-Pyramid Corridor's logistic logic continues east beyond the inland desert into the **Saltglass Reach**, then terminates at the beach-port of **Mafdet**. In corridor terms, Mafdet is the sea-facing equivalent of an oasis adjudication node: it converts witness-marked caravan cargo into shipborne contract cargo. But the littoral extension is not merely a geographic appendage; it represents the corridor civilization's most successful adaptation — the translation of an entire legal-economic system from one environment to another.
 
-Continuity points for implementers:
-- Water-court and charter witness formulas from the oases appear in Mafdet's manifest attestation language.
-- Reach tariff cairn stations serve as legal handoff points between inland caravan jurisdiction and harbor law.
-- Relic quarantine doctrine in Mafdet descends from corridor containment practice developed for pyramid-era hazards.
+### The Shoreward Conversion as Corridor Endpoint
 
-This extension preserves the setting's central thesis: road law, water law, and monument law were always part of one integrated civilizational system that could adapt from dunes to docks.
+The corridor's defining institutional innovation — measurement as governance — reaches its most practical expression at the coast. The **Shoreward Conversion** process, in which cargo is legally translated from inland water-debt assessment to maritime risk assessment, is the corridor thesis in action: the same obsession with documented, witnessed, calibrated exchange that drove the Keepers of Measure, the Salt Ledger Kingdoms, and the oasis Water Courts now operates at the interface between land and sea.
+
+The conversion requires specialist clerks trained in both legal traditions — the same institutional bilingualism that Khepra-Lesh attempted between oasis law and pyramid law, and that the Sultan's Palace attempted between water-court pragmatism and funerary absolutism. The difference is that the Shoreward Conversion succeeded where those attempts failed, because the maritime context imposed a natural discipline: ships cannot wait for theological debates. The sea demands practical resolution.
+
+### Measure Script's Littoral Branch
+
+The Keepers of Measure developed a **Littoral Branch** of their combinatorial writing system for coastal use, adapting their glyph system to encode tidal observations, cargo-draft calculations, and storm-warning data. This branch represents the last major expansion of Measure Script before the system's collapse. It survived through the **Tidewright** community — coastal scribes who split during the Fracture Era into Landward Tidewrights (preserving full Measure Script at Reach cairn stations) and Seaward Tidewrights (simplifying the script for Mafdet's maritime commerce).
+
+The Littoral Branch is significant to corridor scholars because it demonstrates that Measure Script was more adaptable than its inland collapse suggests. The system failed inland not because it was inherently brittle but because the astronomical-theological layers that the Salt Ledger Kingdoms and pyramid courts added to the Keepers' original practical system made it too complex to survive institutional fragmentation. The Littoral Branch, which never acquired those layers, remained functional.
+
+Kowloon's Jade Clerks have identified the Littoral Branch as the closest match to their own reconstructed volumetric-legal notation, suggesting historical maritime trade contact between the Reach/Mafdet corridor and Kowloon's delta ports — a connection that would have bypassed the inland caravan system entirely.
+
+### Mafdet as the Corridor's Maritime Pole
+
+Mafdet and Midgaard now constitute the corridor's two **authentication poles** for high-value antiquities. Midgaard dominates inland registry prestige through its Violet Compact documentation systems. Mafdet dominates maritime export legitimacy through its Quarantine Ledger and dual-attestation protocol. An artifact authenticated at both cities carries the most trusted provenance in the corridor.
+
+Mafdet's Quarantine Ledger classifies pyramid relics by origin because hazard profiles differ across the three pyramid traditions:
+- **Solar Court relics**: memory-distortion effects (Black Sun Shard proximity). Containment Class Two or Three.
+- **Sand Sovereign relics**: binding and desiccation effects. Containment Class One or Two.
+- **Moon Sovereign relics**: silence and dissolution effects. Containment Class Two or Three, occasional Class Four.
+
+This classification system descends from Khar'Daan's funerary-bureaucratic procedures for categorizing remains by hazard level — administrative technology that migrated through the Reach's Sealed Route to Mafdet, where it was adapted for maritime cargo handling.
+
+### The Guardian Tradition
+
+Mafdet's civic theology — the guardian cult of the swift, clawed executioner who punishes oath-breakers — represents a religious tradition that predates the corridor's dynastic civilizations. The guardian did not emerge from Keeper measurement culture, Salt Ledger extraction, or pyramid funerary theology. It emerged from the coastal communities' need for a trust-enforcement mechanism that did not depend on shared law. This makes the **Shrine of the First Claw** the corridor's only major judicial institution that is not descended from the Keepers of Measure or the Solar Court.
+
+The Shrine's independence irritates the Jackal Synod, which claims universal oath-jurisdiction across the corridor. The Shrine's position: the Synod's jurisdiction ends where the sea begins.
+
+### Continuity Points for Implementers
+
+- Water-court and charter witness formulas from the oases appear in Mafdet's manifest attestation language. Mafdet's Saltweight standard is calibrated to the Great Oasis Measure, maintaining volumetric continuity across the entire corridor.
+- Reach tariff cairn stations serve as legal handoff points between inland caravan jurisdiction and harbor law. The three cairn lines (Swift Line, Heavy Road, Sealed Route) extended the Eastern Desert's charter stone network to the coast.
+- Relic quarantine doctrine in Mafdet descends from corridor containment practice developed for pyramid-era hazards, specifically from Khar'Daan's funerary-bureaucratic hazard classification procedures.
+- The Ninth Meridian catastrophe's thermal pulse propagated through the dry Iseth channel to create the Saltglass Reach's Glasswind Belts — making the Reach a geological continuation of the same disaster that created the Scorched Wastes.
+- The Jackal Synod's Eclipsed Tongues faction exploits the Reach as a smuggling corridor, moving relic components toward Mafdet for maritime export beyond oasis oversight.
+
+This extension preserves the setting's central thesis: road law, water law, and monument law were always part of one integrated civilizational system that could adapt from dunes to docks. The corridor does not end at the coast; it transforms.

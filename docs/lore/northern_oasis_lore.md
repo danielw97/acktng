@@ -191,6 +191,15 @@ Specific connections:
 - The Northern Oasis's Trust Ledger system and Kowloon's Jade Clerk registry methodology share a common ancestor: both descend from the Keepers' census tradition, which produced the desert road-charter population counts. The structural similarities are visible in the documents' formatting — columnar notation, witness-seal conventions, and the same emphasis on documented process over arbitrary authority.
 - House Vao (Kowloon's Grain Wardens) preserved diluted versions of the Northern Oasis's water rationing methodology, adapted for grain and staple management. The adaptation is imperfect — grain rationing does not require the precision of water rationing — but the institutional logic is recognizable.
 
+### Connection to the Saltglass Reach and Mafdet
+
+The Northern Oasis's relationship to the eastern coast is institutional rather than geographic. Though the Northern Oasis is the corridor settlement most distant from the sea, its authentication systems extend to the maritime world through two mechanisms:
+
+Specific connections:
+- Mafdet's Ledger House clerks accept Northern Oasis witness seals as **premium provenance marks**. Cargo bearing a Northern Oasis authentication stamp loads faster at Mafdet and at lower insurance rates than undocumented shipments, because the Northern Oasis's institutional reputation for precision extends to its document verification practices. In commercial terms, a Northern Oasis stamp is worth more than its geographic proximity would suggest.
+- The Saltglass Reach Wardens issue **transit ration tokens** modeled on the Northern Oasis's ceramic allotment stamps. The Reach tokens track caravan water consumption during the crossing, using the same denomination system and the same non-transferable design. Caravan captains who are familiar with Northern Oasis ration procedures find the Reach system intuitively readable — evidence of institutional continuity across the corridor.
+- The Northern Oasis's Cairn Brokers have received inquiries from Mafdet's Quarantine Ledger about historical relic traffic through the oasis. The Quarantine Ledger suspects that some artifacts reaching Mafdet with Northern Oasis authentication stamps may have bypassed proper inland hazard assessment, since the Northern Oasis's Trust Ledger system was designed for commercial authentication, not relic hazard classification. The Brokers insist their authentication stamps certify origin and legitimacy, not safety — a distinction that the Quarantine Ledger finds inadequate.
+
 ---
 
 ## Material Culture Notes for Authoring Consistency

@@ -194,8 +194,9 @@ The Sultan's Palace is a cautionary hinge in corridor history:
 3. It shows how death-jurisdiction can overtake civic law when institutions lose witness trust.
 4. It explains why later oasis reforms insist on distributed, material proof.
 5. It explains why pyramid-adjacent legal language still carries both prestige and fear.
+6. It provides a negative example that the Saltglass Reach's Shoreward Conversion and Mafdet's Strandline Compact deliberately avoided. Where the Sultan tried to make all legal traditions answer to one throne, the coastal system distributed authority across three blocs (Harbor Wardens, Ledger Houses, Sand-Sea Carters' Guild) with a constitutional veto mechanism. The palace's Corrective Harmonization — rewriting records under sovereign pretext — is precisely what Mafdet's dual-attestation protocol was designed to prevent: no single authority can alter documentation without the other system's witness mark detecting the change.
 
-In narrative terms, the palace transforms regional lore from "old ruins with curses" into a political history of institutional failure under environmental stress.
+In narrative terms, the palace transforms regional lore from "old ruins with curses" into a political history of institutional failure under environmental stress. It also serves as the corridor's most explicit warning about what happens when legal reconciliation is attempted through sovereign centralization rather than distributed procedural compromise — a warning that the eastern coastal institutions appear to have heeded.
 
 ---
 

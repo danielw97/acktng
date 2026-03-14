@@ -197,6 +197,17 @@ Specific connections:
 - Midgaard scholars who study pyramid inscriptions preferentially use Southern Oasis–certified rubbings because the provenance chain is more trustworthy than artifacts purchased through unregulated Eastern Desert markets.
 - The Mortuary Circle sends copies of Casualty Ledger entries to Midgaard's city archives for permanent storage — a practice that began when the Southern Oasis realized that its own records were vulnerable to the same hazards (fire, flood, cult seizure) that had destroyed the Great Oasis Toll Pavilion's archives.
 
+### Connection to the Saltglass Reach and Mafdet
+
+The Southern Oasis's casualty-processing and relic-authentication functions extend eastward through the Saltglass Reach to Mafdet's harbor. The relationship is institutional and practical:
+
+Specific connections:
+- The Southern Oasis Mortuary Circle's Casualty Ledger formats are used by the Saltglass Reach Wardens to record deaths on the Reach. Deaths in the Reach are documented using Southern Oasis formats and forwarded to the Southern Oasis for archival — preserving the corridor principle that desert deaths are administrative events requiring institutional processing.
+- The Bazaar Syndics' relic authentication certificates are accepted by Mafdet's Quarantine Ledger as premium inland provenance documentation. A relic authenticated at the Southern Oasis loads faster at Mafdet and at lower insurance rates than undocumented artifacts. This gives the Syndics economic leverage over the maritime export market even though they operate hundreds of miles from the coast.
+- The Mortuary Circle maintains a correspondence with Mafdet's Quarantine Ledger regarding relic hazard classifications. When the Circle processes expedition casualties bearing unknown artifact types, they send hazard descriptions to Mafdet's Hazard Scribes for maritime assessment. This ensures that relics entering the maritime system have been assessed by both pyramid-frontier specialists and maritime-transport specialists.
+- Southern Pyramid relics that reach Mafdet through the Southern Oasis carry the most trusted provenance in the maritime market: Southern Oasis authentication (pyramid-frontier expertise) plus Mafdet dual attestation (inland-maritime verification). This dual-authentication chain commands premium prices and is the primary reason Midgaard-funded collectors prefer Southern Oasis–sourced artifacts over Eastern Desert–sourced alternatives.
+- The Jackal Synod's Eclipsed Tongues faction at the Southern Oasis is doctrinally connected to Synod Whisper Cells operating in the Saltglass Reach. The cells exploit the Reach as a smuggling corridor, moving relic components toward Mafdet for maritime export beyond oasis oversight. The Bastion Wardens are aware of this connection but lack the resources to patrol beyond the Southern Oasis's perimeter.
+
 ### Connection to Kowloon (vnums 14000-14099)
 
 Kowloon's relationship to the Southern Oasis is more distant than its relationship to the Eastern Desert or Great Oasis, but the connection exists through shared legal-bureaucratic DNA. Kowloon's Jade Magistracy maintains records of desert trade route law descended from the same Keeper-of-Measure tradition that the Southern Oasis's Bastion Wardens enforce.
