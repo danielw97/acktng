@@ -160,6 +160,15 @@ As the upper Gloamvault absorbed neighboring oath-business, the deep Crypts expa
 
 These galleries contain the most explicit links to broader world institutions (Midgaard registry systems, frontier warrant practices, and sanitized oath-law exports). They are where the rhetoric of sacred duty is thinnest and the language of administration dominates.
 
+One documented expansion corridor in the Interface Galleries was specifically associated with the **Rakuen Witnessing Compact** — a Bell Synod witnessing office established in Rakuen during the Violet Compact era, nominally to provide testimony-preservation services for "resettled south" arrivals (persons displaced from Midgaard's core districts under welfare-language framing). In practice, testimonies from resettled arrivals that could embarrass Midgaard's Violet Compact administration were accepted by the witnessing office, formally registered, and then routed through the descent accounting system to a classification of *"below bell-line; no civic remainder."*
+
+The Rakuen witnessing office's transit records occupy a sealed section of the Interface Galleries designated **"Southward Remediation Intake — Violet Compact Period."** These records include:
+- Several dozen individual testimony registrations from resettled Rakuen arrivals who had contested their resettlement terms.
+- The administrative routing documents showing how those testimonies were classified and transferred below bell-line.
+- Correspondence between the Rakuen witnessing office and the Chamber of Redactions regarding "testimony requiring civic finishing" — using Auditor Veyra Sorn's own language from the Context Supremacy memorandum.
+
+These records are significant beyond Kel'Shadra's own institutional history. They constitute the third point in a triangular guilt chain: Midgaard's sealed warrants authorized the resettlements; the Violet Compact's Sealed Names apparatus provided the administrative framework; the Rakuen witnessing office is where the problematic testimonies disappeared into the Crypt apparatus. Rakuen's Garden Ledger Clerks have twice sent formal letters requesting access to this section. Both letters are filed in the same gallery, unanswered, in a folder labeled *"Petitions: Pending — No Institutional Authority to Process."*
+
 The deeper one travels in these galleries, the clearer the transformation becomes: religion did not temper bureaucracy; bureaucracy consumed religion.
 
 ---
