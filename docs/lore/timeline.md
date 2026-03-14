@@ -108,7 +108,6 @@ The great oath-archive institution rises, corrupts, and fractures.
 | The **Crypts of Kel'Shadra** are excavated for deep enforcement: the **Chamber of Redactions**, **Warden Sepulcher Compact**, and **Inverse Chancel** are established. Annihilation recorded as paperwork. | Creation/Origin | kelshadra_lore |
 | **Velastran consolidation**: under Velastra and the Veiled Office, motto shifts from "Last Witness" to "Last Authority." Approved narratives fast-tracked; dangerous narratives delayed or partitioned. | Political | kelshadra_summary_lore |
 | The **Void Citadel** is built to industrialize testimony recurrence — extraction, projection, and iterative replay until resistance decays. The **Recurrence Chancery**, **Null Spire Conductorate**, **Heraldic Ten**, and **Annex Scribes** are established. | Creation/Origin | voidcitadel_lore |
-| The **Rakuen Witnessing Compact** — a Bell Synod office in Rakuen — routes embarrassing testimonies from Violet Compact-era resettled arrivals through descent accounting to "below bell-line; no civic remainder." | Political | kelshadra_lore |
 
 ---
 
@@ -209,7 +208,7 @@ Midgaard standardizes civic infrastructure. Trade routes formalized.
 | **Lantern Reforms**: paving marks, posted tariffs, district lamp-lines, watch rotations standardized across Midgaard. | Political | midgaard_lore |
 | Ilren Voss leads the expedition that creates the **Lantern Road** through the Great Northern Forest, following game trails and ridgebacks. The **Bent Mile Principle** established: "if a straight road costs ten lives a season, the wiser road bends." | Engineering | great_northern_forest_lore |
 | Shadowmere copies Midgaard's watch-line practices in harsher form. Bell towers replace open forums; witness tablets replace local custom. | Political | shadowmere_lore |
-| Kowloon and Midgaard synchronize road-watch and convoy rhythm practices (**Lantern-Delta Expansion**). Evermeet's Roc Road becomes primary western trade artery. | Political | five_cities_intercity_lore |
+| Evermeet's Roc Road becomes the primary western trade artery, connecting Midgaard to the fortified frontier city via standardized road-warden postings and Lantern Reform-era wayfinding. | Political | midgaard_lore |
 
 ---
 
@@ -224,6 +223,7 @@ The Cinderteeth eruptions devastate the delta and forge a city from catastrophe.
 | In the fourth year, six surviving houses convene on the basalt outcrop and forge the **Neon Covenant** — inked in phosphorescent squid dye. Six houses bring irreplaceable contributions: ferry masters, grain wardens, iron hands, jade clerks, temple wardens, lantern runners. Three hard promises: one wall/one law, one ledger/one ration code, one square/final judgment. | Creation/Origin | kowloon_lore |
 | The same Cinderteeth volcanic cycle causes the **Ash Winters** in the Great Northern Forest: three successive ash-laden winters blanket the canopy, poison streams, kill a third of large game. | Catastrophe | great_northern_forest_lore |
 | The **Passage Tithe** system is forged in the Great Northern Forest — caravans pay in grain, salt, lamp oil, and iron nails. | Political | great_northern_forest_lore |
+| Midgaard and Kowloon synchronize road-watch and convoy rhythm practices (**Lantern-Delta Expansion**). Evermeet's Roc Road becomes the primary western trade artery. | Political | five_cities_intercity_lore |
 
 ---
 
@@ -234,9 +234,7 @@ Midgaard establishes occult oversight; darker institutional practices emerge.
 | Event | Category | Sources |
 |-------|----------|---------|
 | **Violet Compact**: registry-based occult oversight, reliquary checkpoints, oath-ledger protocols. | Political | midgaard_lore |
-| Midgaard's **"resettled south" mechanism** — displacing populations under welfare-language cover for testimony suppression. Persons sent to Rakuen; their testimonies routed through Kel'Shadra's descent accounting to be silenced. | Political | kelshadra_lore, five_cities_intercity_lore |
-| The **Sealed Names apparatus** provides the administrative framework for suppression via sealed warrants. | Political | midgaard_lore |
-| Kiess formally challenges Midgaard's sealed-warrant governance, writing **anti-sealed-warrant doctrine** into its founding charter: "no sealed warrant issued by a predecessor authority shall bind a Kiess citizen." | Political | kiess_lore |
+| The **Sealed Names apparatus** provides the administrative framework for suppression via sealed warrants, including the **"resettled south" mechanism** — displacing populations under welfare-language cover to southern frontier settlements. | Political | midgaard_lore |
 | Shadowmere issues **Plague Mandate**: rapid intake, forced quarantines, immediate cremation powers. "Temporary became permanent." Processing halls, poison works, deep binding cells built. | Catastrophe | shadowmere_lore |
 
 ---
@@ -251,6 +249,9 @@ New cities rise from old failures.
 | **Kiess is founded** on Evermeet's foundations along Roc Road. Built by design, not accident — walled rectangle with predictable streets, controlled gates. The **Central Prism** recovered from Evermeet's civic hall serves as continuity anchor. Three-power governance: **Compact Temples**, **Trade Syndics**, **Wall Command**. | Creation/Origin | kiess_lore |
 | The **Syndic Council** discovers an obsidian disc bearing the Spirebound Conclave's triune seal during foundation excavations, confirming the Conclave's reach extended to Evermeet. | Discovery | kiess_lore |
 | **Rakuen founded** as the "failed paradise city" south of Midgaard — a proof that civic order and forest harmony could fuse. The **Southward Compact** written as rejection of Midgaard's registry culture. The **Paradise Thesis** articulates the founding vision. | Creation/Origin | rakuen_lore |
+| Kiess's founding charter includes **anti-sealed-warrant doctrine** — "no sealed warrant issued by a predecessor authority shall bind a Kiess citizen" — a direct response to discovery that Evermeet issued sealed warrants transferring condemned debtors to the Conclave, and a standing repudiation of Midgaard's Violet Compact-era practices. | Political | kiess_lore |
+| Midgaard's Violet Compact **"resettled south" mechanism** begins routing displaced populations to Rakuen under welfare-language framing. Persons with inconvenient testimony sent to Rakuen; their testimonies routed through Kel'Shadra's descent accounting to be silenced. | Political | kelshadra_lore, five_cities_intercity_lore, rakuen_lore |
+| The **Rakuen Witnessing Compact** — a Kel'Shadra Bell Synod witnessing office established in Rakuen during the ongoing Violet Compact era — routes embarrassing testimonies from resettled arrivals through descent accounting to "below bell-line; no civic remainder." | Political | kelshadra_lore, rakuen_lore |
 
 ---
 
@@ -395,16 +396,16 @@ Sources: sunken_sanctum_lore, kowloon_lore, great_northern_forest_lore, five_cit
 | northern_pyramid_lore | Eras V, VIII |
 | southern_pyramid_lore | Eras V, VIII |
 | gloamvault_lore | Era VI |
-| kelshadra_lore | Eras VI, IX |
+| kelshadra_lore | Eras VI, IX, XVI |
 | kelshadra_summary_lore | Eras VI, IX, XXI |
 | voidcitadel_lore | Era VI |
 | sunken_sanctum_lore | Era X |
 | great_northern_forest_lore | Eras XI, XIII, XIV, XVIII |
 | kowloon_lore | Eras XI, XIV |
-| kiess_lore | Eras XV, XVI |
+| kiess_lore | Era XVI |
 | rakuen_lore | Eras XVI, XIX, XXI |
 | midgaard_lore | Eras XII, XIII, XV, XXI |
-| five_cities_intercity_lore | Eras XIII, XV, XIX, XX, XXI |
+| five_cities_intercity_lore | Eras XIV, XVI, XIX, XX, XXI |
 | mafdet_lore | Era XVII |
 | saltglass_reach_lore | Eras II, IV, VII, XVII |
 | shadowmere_lore | Eras XII, XIII, XV, XIX |
