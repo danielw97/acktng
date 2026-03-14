@@ -260,6 +260,14 @@ The Scorched Wastes and the Saltglass Reach share a common cause: both were phys
 
 Midgaard archival and authentication culture influences trade standards applied to Reach cargo records. Midgaard and coastal authorities both contest who defines "valid" provenance for high-value antiquities. Midgaard's Violet Compact registry protocols — designed for arcane material containment — have been adapted by some Reach Wardens as models for relic transit documentation, creating an institutional connection between Midgaard's urban containment culture and the Reach's desert transit culture.
 
+### Rakuen (southern forest city, five-city network)
+
+Rakuen does not normally connect to Mafdet through the Saltglass Reach. Its primary Mafdet channel is a southern maritime route that bypasses the Reach entirely. However, a political faction in Rakuen — the **Quiet Separatists** — is developing a direct maritime channel to Mafdet specifically to circumvent Midgaard's gate authority. This channel, if operational, would also bypass the Reach Wardens and the Sand-Sea Carters' Guild, eliminating both institutions' toll and transit-seal revenue from Rakuen-bound cargo.
+
+The Reach Wardens regard this as an authority challenge. If a Rakuen-Mafdet direct route becomes established and commercially significant, it sets a precedent: cargo can reach Mafdet without Reach inspection. The Wardens' transit seals become less valuable. The Wardens' political response would likely be to attempt to assert jurisdiction over the southern channel's approach — claiming that any overland leg of the route falls under Reach Warden authority. Whether Mafdet's Harbor Wardens would support or contest this jurisdictional extension is an open question that the Strandline Compact's "harbor first" principle does not resolve.
+
+The Sand-Sea Carters' Guild's response would be commercial rather than jurisdictional: they would likely pressure the Strandline Compact's governance mechanisms to slow harbor access for Rakuen-origin shipments arriving outside Guild caravan chains. The Guild has used this pressure tactic before against non-Guild operators. Its effectiveness against a city operating under mercy-freight classification is untested.
+
 ### Kowloon
 
 Kowloon's Jade Clerks have identified Littoral Branch Measure Script as the closest match to their own reconstructed volumetric-legal notation. This suggests historical maritime trade contact between the Reach/Mafdet corridor and Kowloon's delta ports — a connection that would have bypassed the inland caravan system entirely. The Jade Clerks are quietly funding expeditions to Measure's Rest (the Reach Wardens' cairn tablet library) seeking source documents that could confirm this maritime link.
