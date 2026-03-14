@@ -173,4 +173,111 @@ This is the most politically layered bilateral relationship in the five-city net
 
 **Standing agreement**: Mercy-freight class with reduced fees during verified civic disaster periods, requiring Bloom Council certification countersigned by Ember Wardens. Chain-of-custody relaxation protocols during formally declared evacuations.
 
+---
+
+## IV. Multi-City Flashpoints
+
+### A. The Annexation Question (political-constitutional conflict)
+
+The most durable unresolved tension in the five-city network is Rakuen's position relative to Midgaard. Three refused annexation petitions have created a factional structure inside Rakuen that now has five-city implications: if the Amendment Track takes Rakuen's Bloom Council stewardship and submits a fourth petition with Kiess legal certification, Midgaard faces a refusal decision that would constitute a direct institutional confrontation with Kiess. If the Quiet Separatists succeed in routing Rakuen's canopy-botanical trade through Mafdet, Midgaard loses its gate-leverage over the southern supply chain. If the Preservation Coalition holds, the status quo continues — a managed dependency that serves Midgaard's institutional interests and exhausts Rakuen's political class.
+
+Every five-city institution has a stake in the resolution. Kiess has offered legal support to the Amendment Track. Mafdet's Ledger Houses are quietly interested in the Quiet Separatist maritime proposal. Kowloon has said nothing publicly and is studying Rakuen's flood architecture without sharing findings — a form of hedged investment in whatever Rakuen becomes. Midgaard's Continuity faction wants the status quo; Midgaard's Reckoning faction wants the Garden Ledger records opened, which requires Rakuen to remain viable as an independent archive rather than being absorbed into Midgaard's registry system (where the records would fall under Continuity faction access controls).
+
+The irony: Midgaard's Reckoning faction has an institutional interest in Rakuen *not* being annexed, because an independent Rakuen controls an independent archive.
+
+### B. Seal Sovereignty Wars (administrative conflict)
+
+Disputes over whose institutional seal is dispositive in fraud investigations. Midgaard pushes archive precedence (history establishes identity). Mafdet pushes dock attestation finality (what ships actually carry is the commercial reality). Kiess pushes due-process sequence (no determination is valid without procedure). Kowloon and Rakuen push practical chain-of-custody realities (what documentation actually traveled with the goods is what matters).
+
+These disputes are not abstract. They determine, in contested cases, who pays for losses, who is liable for misrepresentation, and whose institutional authority is recognized as final. The five-city network has no supreme tribunal. Seal disputes that reach impasse are either tabled, settled by bilateral negotiation, or become standing grievances that recur in modified form.
+
+Rakuen's position in seal disputes is consistently weak because the Garden Ledger's format is non-standard relative to Midgaard's registry protocols (this was the Southmark Petition's stated obstacle) and because "southern relief city" classification depresses the institutional standing of Rakuen-issued documentation in multi-city proceedings. This is one of the operational costs of refused annexation that the Annexation Arc's proponents cite most concretely.
+
+### C. The Conclave Guilt Chain (historical-ethical conflict)
+
+The Spirebound Conclave's condemned-debtor transfer apparatus involved at least three of the five cities:
+
+- **Midgaard**: sealed warrants authorizing transfers; trade ledger records of payment received; the Granite Arcade entry ("forty iron bars and six condemned debtors") as the most damning surviving document.
+- **Kowloon**: proto-Kowloon delta settlements made parallel transfers; the Black Ledger — if it exists — contains the corresponding records; the Ash Cult cells that currently threaten Kowloon's infrastructure are a downstream consequence of the same cultural rupture the Conclave represented.
+- **Rakuen**: not a transfer participant but the geography where transferred persons' subsequent testimonies were channeled through the Kel'Shadra witnessing mechanism to a classification of "below bell-line; no civic remainder." Rakuen is the third point on the triangular evidence structure that no single city's Reckoning faction has yet fully assembled.
+
+Kiess has formally repudiated Conclave-adjacent practices in its founding charter. Mafdet's Shrine of the First Claw's trust-enforcement tradition operates on principles explicitly opposed to the Conclave's coercive model. Both cities are invested in the guilt chain being acknowledged; neither city was a primary participant.
+
+The five-city Conclave guilt question is: which institutional acknowledgment would be proportionate, and who would have to make it? Midgaard's Reckoning faction wants public archive access. Kowloon's Reckoning faction wants the Black Ledger unsealed. Rakuen's Garden Ledger Clerks want the Kel'Shadra records recovered. All three recoveries would be mutually reinforcing — each document corroborates the others. All three are being suppressed by different institutions for overlapping reasons.
+
+### D. Casualty Ownership (ethical conflict)
+
+Unidentified dead recovered on intercity corridors trigger funding and memorial disputes: who pays, who records, who is publicly accountable. Rakuen's Outbound Open Register has 847 active open entries — persons who left Rakuen and were never confirmed arrived anywhere. Approximately thirty percent cross-reference to Midgaard's deferred-name casualty records at Sepulchur Pasture. The remaining seventy percent are statistical variance in both cities' official accounting.
+
+The Transit Memorial Compact establishes minimum standards for naming, recording, and repatriating intercity dead. In practice, the Compact's standards are met for deaths that occur in documented, supervised transit — convoy casualties, gate-incident records. They are not met for deaths that occur in the Eccentric Woodland's unmonitored interior, which is where most of Rakuen's Outbound Open Register entries originate.
+
+The ethical question the Compact cannot resolve: if Midgaard controls the gate that admits travelers to the Woodland approach, and Midgaard disclaims responsibility for what happens in the Woodland interior, and the Woodland interior is the location of approximately 70% of Rakuen's undocumented dead — then Midgaard's gate-authority creates the risk that Midgaard's variance-classification extinguishes. This is the argument the Honest Ledger movement makes at every Founder's Reckoning festival. No five-city institution has formally responded to it.
+
+### E. Relic and Hazard Classification (safety conflict)
+
+Cities disagree on when a recovered object is history, evidence, contraband, or active threat. These differences produce jurisdiction collisions:
+
+- Midgaard treats objects recovered from sealed Conclave-adjacent sites as archival artifacts subject to registry protocols.
+- Mafdet's Shrine of the First Claw treats certain objects as potential oath-breakers requiring swift-court disposition.
+- Kiess's Temple of Concord treats some of the same objects as theologically hazardous artifacts requiring compact-flame consecration before handling.
+- Kowloon's eastern-corridor thaumaturgic exchange treats objects with residual enchantment as commercial salvage requiring hazard assessment before valuation.
+- Rakuen's Garden Ledger treats recovered objects as provenance questions: who owned it, when, under what terms, and what does their resettlement record say about how it was acquired.
+
+No object can simultaneously be an archival artifact (Midgaard), a potential oath-breaker (Mafdet), a theological hazard (Kiess), commercial salvage (Kowloon), and a provenance question (Rakuen). The classification collision is a recurring source of quest-worthy jurisdiction disputes.
+
+### F. Debt and Distress Capture (economic conflict)
+
+Crises in Rakuen and peripheral corridors create discounted claim markets. During disaster seasons, Rakuen's commercial obligations — debts owed to merchants, route contracts with Woodland guides, storage agreements with suppliers — become available at significant discount because Rakuen cannot currently service them at face value. Mafdet's Ledger Houses and Kowloon's logistics syndicates buy these discounted claims as investments, expecting to recover face value once conditions stabilize.
+
+Kiess's position is that purchasing distressed claims from cities under active duress is structurally identical to the coercive debt practices its charter prohibits. Kiess cannot prevent the purchases — it has no jurisdiction over Mafdet's commercial operations — but it can and does refuse to certify debt instruments that it judges were acquired under duress conditions. This certification refusal has commercial consequences: Kiess-uncertified debt instruments trade at discount in the five-city commercial market, which reduces the profit margin on distress-claim purchases.
+
+The practical effect is that Kiess functions as a partial brake on distress-capture economics without having the authority to stop them. The brake is imperfect. It is more than nothing.
+
+---
+
+## V. Durable Alliances and Institutional Agreements
+
+1. **Five-City Corridor Minutes**: Quarterly clerk exchange where each city logs unresolved fraud typologies, updated seal-breach patterns, and new counterfeit document techniques. The Minutes are the five-city network's most consistently maintained shared institution — all five cities participate even during bilateral disputes because the anti-fraud interest supersedes competitive friction.
+
+2. **Common Misery Clause**: Temporary tariff and fee controls during declared mass-casualty seasons. Activates provisionally based on any two cities' joint declaration; a third city can challenge the declaration within fourteen days. Has been activated six times in network history; challenged twice; both challenges resolved in favor of maintaining the clause. Rakuen has been the beneficiary in four of the six activations.
+
+3. **Reciprocal Witness Passage**: Protected travel status for certified witnesses and archive couriers. The most frequently invoked standing agreement in the network, used continuously for testimony transportation between cities. Rakuen's Garden Ledger Clerks use it to transport challenge-register annex documents to Midgaard's Southern Receiving office for the annual Outbound Open Register cross-reference.
+
+4. **Joint Blacklist of Forged Seals**: Continuously updated anti-fraud index distributed to gates, docks, and caravanserais. Maintained by a rotating secretariat that changes cities every three years. Currently held by Kiess, which is considered the most procedurally trustworthy custodian by all five cities for different reasons.
+
+5. **Transit Memorial Compact**: Minimum standards for naming, recording, and repatriating intercity dead. Rakuen's Outbound Open Register represents the Compact's most systematic implementation in the network — and simultaneously the most persistent evidence of the Compact's inadequacy for deaths in unmonitored corridor interiors.
+
+6. **Southern Grain Compact** (bilateral Kowloon-Rakuen, referenced in five-city framework): Reserve grain allocation dispatchable within two weeks of formal emergency declaration. Has functioned as the difference between managed scarcity and famine in Rakuen four times. Kowloon's Jade Magistracy considers it a standing charitable mechanism; Rakuen's Garden Ledger Clerks consider it a documented institutional obligation. The characterization difference matters for whether Kowloon's future political leadership can choose to discontinue it.
+
+7. **Mercy Freight Classification** (bilateral Rakuen-Mafdet, referenced in five-city framework): Reduced fees and expedited processing for Rakuen survival goods during verified disaster periods. Requires Bloom Council certification countersigned by Ember Wardens. Pre-completed certification templates maintained by Garden Ledger Clerks for activation under active disaster conditions.
+
+---
+
+## VI. Narrative Guidance for Builders
+
+- Every intercity quest needs at least **one legal problem** (whose seal, whose jurisdiction, whose classification governs), **one logistics problem** (whose route, whose calendar, whose weather is the actual bottleneck), and **one human-cost problem** (whose death is counted as variance, whose testimony is missing, whose family has an open entry in the Outbound Register).
+
+- Avoid single-villain framing. Five-city conflict is system friction between valid but competing mandates. The Registry Bureau official who refuses Rakuen's petition is following the rules correctly. The rules are the problem, not the official.
+
+- Reuse the same agreement names — Common Misery Clause, Transit Memorial Compact, Southern Grain Compact, mercy-freight classification — across NPC dialogue to imply administrative continuity. The agreements should feel like things characters have lived with for years, not exposition.
+
+- When writing rumors, include contradictory versions based on city perspective. From Midgaard, the Annexation Arc is Rakuen's persistent refusal to bring its governance into conformity. From Rakuen, it is Midgaard's persistent refusal to accept the obligations that come with the authority it already exercises. From Kiess, it is a constitutional question that should have been resolved twenty years ago. From Mafdet, it is a commercial opportunity if the Quiet Separatists succeed. From Kowloon, it is a logistics problem: whatever Rakuen becomes, the grain still needs to move.
+
+- The Conclave guilt chain is the five-city network's deepest buried secret. The documents that would prove it are in three different cities' archives, controlled by three different factions, for three different suppression reasons. A player who collects all three document types would have something that none of the five cities' Continuity factions could explain away individually but all of them would work together to prevent being combined.
+
+- Rakuen's political trajectory should feel contingent — not inevitable. The Amendment Track could win the next stewardship rotation and submit a fourth petition that Midgaard either accepts or refuses in a way that changes everything. The Quiet Separatists could make the Mafdet maritime channel operational, which changes Rakuen's economic geography regardless of the petition question. Or the Preservation Coalition could hold, the status quo could continue, and Rakuen could remain exactly where it has been for sixty years: functional, exhausted, proud, and refused.
+
+---
+
+## VII. Cross-Reference Index
+
+- Midgaard city lore: `docs/lore/midgaard_lore.md`
+- Kowloon city lore: `docs/lore/kowloon_lore.md`
+- Kiess city lore: `docs/lore/kiess_lore.md`
+- Rakuen city lore: `docs/lore/rakuen_lore.md`
+- Mafdet city lore: `docs/lore/mafdet_lore.md`
+- Kel'Shadra Crypts (Conclave guilt chain / sealed testimony): `docs/lore/kelshadra_lore.md`
+- Eccentric Woodland (Rakuen access corridor): `docs/lore/eccentric_woodland_lore.md`
+- Sepulchur Pasture (casualty registry / deferred-name protocols): `docs/lore/sepulchur_pasture_lore.md`
+
 
