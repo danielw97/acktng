@@ -209,7 +209,7 @@ Midgaard standardizes civic infrastructure. Trade routes formalized.
 | **Lantern Reforms**: paving marks, posted tariffs, district lamp-lines, watch rotations standardized across Midgaard. | Political | midgaard_lore |
 | Ilren Voss leads the expedition that creates the **Lantern Road** through the Great Northern Forest, following game trails and ridgebacks. The **Bent Mile Principle** established: "if a straight road costs ten lives a season, the wiser road bends." | Engineering | great_northern_forest_lore |
 | Shadowmere copies Midgaard's watch-line practices in harsher form. Bell towers replace open forums; witness tablets replace local custom. | Political | shadowmere_lore |
-| Kowloon and Midgaard synchronize road-watch and convoy rhythm practices (**Lantern-Delta Expansion**). Kiess's Roc Road becomes primary western trade artery. | Political | five_cities_intercity_lore |
+| Kowloon and Midgaard synchronize road-watch and convoy rhythm practices (**Lantern-Delta Expansion**). Evermeet's Roc Road becomes primary western trade artery. | Political | five_cities_intercity_lore |
 
 ---
 
