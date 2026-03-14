@@ -367,3 +367,20 @@ Midgaard-specific sections that map directly into that framework include:
 - Midgaard <-> Kiess legal doctrine friction around sealed authority.
 - Midgaard <-> Rakuen subsidy and casualty-accountability disputes.
 - Midgaard <-> Mafdet seal-precedence rivalry in relic/export legitimacy.
+
+## Rakuen Annexation Arc Addendum (Cross-City Consistency)
+
+Midgaard's civic canon now recognizes three formal Rakuen annexation petitions as defining modern southern policy tension:
+
+1. **Southmark Petition** (administrative incorporation request),
+2. **Ash Plea** (disaster-law emergency annexation request),
+3. **Iron Compact Appeal** (staged legal integration request).
+
+All three were formally refused by Midgaard while subsidy and operational support expanded. This created the policy paradox often described in clerk correspondence as **"governance without sovereignty"**: Midgaard shapes Rakuen's practical institutions through aid, verification, and corridor enforcement, but does not accept annexation liability.
+
+Archive and tribunal dialogue should reflect two competing Midgaard readings:
+
+- **Continuity reading:** refusal preserved systemic stability and prevented annexation-precedent cascade.
+- **Reckoning reading:** refusal converted Rakuen into a permanent externalized burden while preserving Midgaard legitimacy optics.
+
+This addendum should be used in southern gate records, requisition logs, and civic debate text whenever Rakuen appears.

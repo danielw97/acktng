@@ -1,131 +1,203 @@
 # Lore: The Five-City Weave (Midgaard, Kowloon, Kiess, Rakuen, Mafdet)
 
-This document codifies long-arc interactions between the five major civic powers and should be treated as the reference spine for political dialogue, trade contracts, quest hooks, rumor text, and archive records that involve more than one of these cities.
+This document is the intercity canon spine for political dialogue, trade contracts, court records, quest hooks, rumor text, and archive entries involving more than one major city.
 
 ## I. Strategic Snapshot
 
-- **Midgaard**: inland legitimacy engine (registries, charters, codified arbitration).
-- **Kowloon**: northern throughput and labor-delta coordination node.
-- **Kiess**: legal-memory city built around anti-secrecy charter doctrine.
-- **Rakuen**: southern disaster-recovery municipality and route-resilience broker.
-- **Mafdet**: maritime legalization and export conversion authority.
+- **Midgaard**: inland legitimacy engine (registries, charters, codified arbitration, procedural prestige).
+- **Kowloon**: northern throughput and labor-delta coordination authority (grain reserve timing, route discipline).
+- **Kiess**: anti-secrecy legal-memory city (charter constraints, witness rights, review doctrine).
+- **Rakuen**: southern survival municipality caught between founding myth and chronic emergency.
+- **Mafdet**: maritime legality and export conversion authority (quarantine, bonded shipment finality).
 
-Together, they form a full-chain legitimacy corridor:
-**origin claim -> overland custody -> dispute adjudication -> hazard screening -> ocean transfer**.
+Together, they create a full-chain legitimacy corridor:
+**origin claim -> overland custody -> dispute adjudication -> hazard screening -> maritime conversion**.
 
-## II. Chronology of Five-City Interaction
+## II. Grand Timeline of Five-City Interaction
 
-1. **Early Route Era (post-Evermeet collapse):** Kiess and Midgaard formalize replacement arbitration channels while Kowloon expands northern supply collection.
-2. **Lantern-Delta Expansion:** Midgaard and Kowloon synchronize road-watch and convoy rhythm practices to reduce raid losses.
-3. **Containment Bureaucracy Period:** Kiess challenges secret warrants used by Midgaard-adjacent agencies; Rakuen receives displaced populations under provisional charters.
-4. **Ash-and-Iron Shock Decades:** Cinderteeth disruptions force emergency rerouting through Rakuen corridors and increase Mafdet's role for high-value off-continent diversion.
-5. **Current Competitive Concord:** all five cities cooperate on fraud suppression but compete over fees, narrative authority, and whose seal is treated as final.
+1. **Post-Evermeet Recovery Era:** Kiess and Midgaard stabilize replacement arbitration channels while Kowloon consolidates northern collection routes.
+2. **Lantern-Delta Expansion:** Midgaard and Kowloon synchronize watch rhythms; Rakuen receives planned migration under optimistic frontier policy.
+3. **Violet Containment Period:** burden externalization increases; Rakuen absorbs displaced populations while Kiess contests sealed-order governance.
+4. **Ash-and-Iron Shock Decades:** Cinderteeth disruptions force emergency rerouting, grain emergency regimes, and maritime conversion through Mafdet.
+5. **Annexation Arc (Rakuen-centric):** Southmark Petition, Ash Plea, Iron Compact Appeal all seek Midgaard annexation and are denied.
+6. **Modern Competitive Concord:** high cooperation against fraud, high rivalry over seal finality, casualty accountability, and historical narrative ownership.
 
-## III. Bilateral Relations Matrix
+## III. The Annexation Arc as Intercity Turning Point
+
+Rakuen's repeated annexation requests transformed all five-city relations, not only Midgaard-Rakuen ties.
+
+### 1) The Southmark Petition
+
+- Rakuen asked for district incorporation and direct registry integration.
+- Midgaard refused while extending subsidies.
+- Kowloon and Kiess interpreted refusal differently: Kowloon saw fiscal prudence, Kiess saw responsibility avoidance.
+
+### 2) The Ash Plea
+
+- Requested emergency annexation under ashfall disaster law.
+- Midgaard again refused sovereignty transfer but opened emergency aid windows.
+- Mafdet responded by expanding mercy-freight classification for southern cargo volatility.
+
+### 3) The Iron Compact Appeal
+
+- Proposed staged legal integration to avoid sudden administrative shock.
+- Midgaard issued a definitive refusal citing precedent and liability.
+- Result: five-city institutions created indirect compensatory mechanisms while preserving non-annexation.
+
+### 4) Core Irony and Regional Consequence
+
+Rakuen, founded to reject Midgaard procedural dominance, became the city most insistent on joining that system. Midgaard, architect of formalized civic belonging, became the city most insistent on keeping Rakuen external.
+
+That contradiction now drives intercity law.
+
+## IV. Bilateral Relations Matrix (Expanded)
 
 ## 1) Midgaard <-> Kowloon
 
-- **Alliance layer:** convoy safety standards, tariff comparability, and shared anti-counterfeit protocols for timber/ore manifests.
-- **Conflict layer:** Midgaard archivists frame northern agreements as "derived law," while Kowloon ward offices claim practical primacy from route enforcement.
-- **Difficulty:** seasonal corridor closures cause dispute over liability windows and spoilage claims.
-- **Standing agreement:** reciprocal recognition of watch-captain incident logs for tribunal evidence.
+- **Alliance:** convoy safety standards, anti-counterfeit manifests, synchronized watch logs.
+- **Conflict:** archive precedence (Midgaard) versus route-proven enforcement primacy (Kowloon).
+- **Rakuen effect:** recurring debate over who should absorb southern emergency deficits.
+- **Standing instrument:** reciprocal watch-captain incident logs admissible across both tribunals.
 
 ## 2) Midgaard <-> Kiess
 
-- **Alliance layer:** shared tribunal literacy, clerk exchanges, and oath-record formats.
-- **Conflict layer:** Kiess rejects sealed-order governance patterns tied to Violet Compact style administration.
-- **Difficulty:** old Evermeet salvage claims collide with Midgaard charter-language assumptions.
-- **Standing agreement:** dual-filing rule for sensitive extradition and archive transfer disputes.
+- **Alliance:** clerk exchange, oath-record compatibility, tribunal literacy.
+- **Conflict:** Kiess rejects secretive warrant continuities tied to containment-era governance.
+- **Rakuen effect:** Kiess treats annexation refusals as evidence of selective responsibility.
+- **Standing instrument:** dual-filing requirement for sensitive extradition and archive-transfer disputes.
 
 ## 3) Midgaard <-> Rakuen
 
-- **Alliance layer:** Midgaard subsidy pipelines stabilize Rakuen food, wall, and route maintenance budgets.
-- **Conflict layer:** Rakuen accuses Midgaard of classifying southern casualties as statistical variance rather than civic obligation.
-- **Difficulty:** forged permits and escort seals proliferate where subsidy verification is slow.
-- **Standing agreement:** deferred-name casualty registry sharing for unidentified dead recovered along southern corridors.
+- **Alliance:** food, wall-repair, and route-maintenance subsidies.
+- **Conflict:** annexation refusals, casualty-accountability disputes, burden-export accusations.
+- **Administrative paradox:** Midgaard exerts influence comparable to partial rule while denying sovereign responsibility.
+- **Standing instrument:** deferred-name casualty registry protocol for southern unidentified dead.
 
 ## 4) Midgaard <-> Mafdet
 
-- **Alliance layer:** cross-acceptance of provenance markers for relic and luxury cargo.
-- **Conflict layer:** registry prestige (Midgaard) versus export finality (Mafdet).
-- **Difficulty:** quarantine classification mismatch (archival artifact vs hazardous relic).
-- **Standing agreement:** conditional seal-bridging protocol for bonded high-risk shipments.
+- **Alliance:** provenance marker interoperability and high-value shipment attestation.
+- **Conflict:** registry prestige vs export finality.
+- **Rakuen effect:** disputes over whether southern crisis cargo is humanitarian freight, bonded debt collateral, or salvage commodity.
+- **Standing instrument:** conditional seal-bridging protocol for high-risk bonded cargo.
 
 ## 5) Kowloon <-> Kiess
 
-- **Alliance layer:** labor contracts routed through Kiess legal templates to reduce coercive debt abuse in northern hiring.
-- **Conflict layer:** Kowloon logistics houses view Kiess procedural rigor as throughput drag.
-- **Difficulty:** witness availability across long northern routes complicates contract enforcement.
-- **Standing agreement:** rotating neutral clerks for large corridor wage disputes.
+- **Alliance:** wage-template legality and anti-coercive labor contracting.
+- **Conflict:** throughput pace (Kowloon) versus procedural rigor (Kiess).
+- **Rakuen effect:** both cities co-witness emergency grain price ceilings for Rakuen declarations.
+- **Standing instrument:** rotating neutral clerk panels for large corridor wage disputes.
 
 ## 6) Kowloon <-> Rakuen
 
-- **Alliance layer:** emergency grain and timber balancing during southern flood/ash events.
-- **Conflict layer:** Kowloon merchants treat Rakuen risk surcharges as opportunistic inflation.
-- **Difficulty:** no single stable route calendar; weather and blight shift windows constantly.
-- **Standing agreement:** provisional price ceilings during declared multi-city emergency seasons.
+- **Alliance:** emergency grain balancing, timber diversion, anti-hoarding surveillance.
+- **Conflict:** risk surcharges, delivery-window disputes, spoilage liability.
+- **Network significance:** this pair anchors the **North-South Grain Ladder**.
+- **Standing instrument:** provisional price ceilings during declared multi-city emergency seasons.
 
 ## 7) Kowloon <-> Mafdet
 
-- **Alliance layer:** northern raw goods (timber, ore, resin) to maritime conversion chains.
-- **Conflict layer:** manifest language mismatches produce frequent reweigh and delay penalties.
-- **Difficulty:** dockside labor politics differ sharply from delta convoy labor governance.
-- **Standing agreement:** bilingual cargo codex annex used in disputed unloading cases.
+- **Alliance:** northern raw goods into maritime conversion chains.
+- **Conflict:** codex mismatch, reweigh disputes, dockside labor legality conflicts.
+- **Rakuen effect:** priority queue fights when southern mercy freight competes with northern commercial shipments.
+- **Standing instrument:** bilingual cargo codex annex and emergency berth arbitration protocol.
 
 ## 8) Kiess <-> Rakuen
 
-- **Alliance layer:** charter-right advisory missions; Kiess clerks help Rakuen resist emergency overreach.
-- **Conflict layer:** Rakuen officials see Kiess legalism as unrealistic under active disaster pressure.
-- **Difficulty:** evidence preservation is weak in repeatedly damaged districts.
-- **Standing agreement:** emergency testimony standards accepted when records are physically destroyed.
+- **Alliance:** charter-right advisory missions, emergency testimony and anti-erasure procedures.
+- **Conflict:** Kiess legalism vs Rakuen disaster pragmatism.
+- **Annexation effect:** Kiess supports rights-based integration pathways but cannot compel Midgaard acceptance.
+- **Standing instrument:** admissibility standard for testimony when physical records are destroyed.
 
 ## 9) Kiess <-> Mafdet
 
-- **Alliance layer:** legal instrument validation for debt, salvage, and bonded storage.
-- **Conflict layer:** Kiess contests Mafdet ledger houses purchasing distressed inland claims too aggressively.
-- **Difficulty:** maritime urgency often bypasses deliberative legal review.
-- **Standing agreement:** post-departure review tribunal rights for contested debt transfers.
+- **Alliance:** debt and bonded-transfer instrument validation.
+- **Conflict:** distressed inland claim acquisition by maritime ledger houses.
+- **Rakuen effect:** litigation over southern claims purchased during crisis declarations.
+- **Standing instrument:** post-departure review tribunal rights for contested debt transfers.
 
 ## 10) Rakuen <-> Mafdet
 
-- **Alliance layer:** Rakuen survival goods exit through Mafdet when overland reliability collapses.
-- **Conflict layer:** Mafdet insurers mark Rakuen cargo as high-uncertainty, driving punitive premiums.
-- **Difficulty:** chain-of-custody breaks during evacuations.
-- **Standing agreement:** "mercy freight" class with reduced fees during verified civic disaster periods.
+- **Alliance:** survival goods and medicinal exports routed via mercy freight.
+- **Conflict:** insurance premiums, chain-of-custody breaks, authenticity risk.
+- **Strategic role:** maritime release valve when woodland and inland routes fail.
+- **Standing instrument:** reduced-fee mercy-freight class during verified civic disaster periods.
 
-## IV. Multi-City Flashpoints
+## V. Multi-City Flashpoints (Expanded)
 
-### A. Seal Sovereignty Wars (administrative conflict)
-Disputes over whose seal is dispositive in fraud investigations. Midgaard pushes archive precedence; Mafdet pushes dock attestation finality; Kiess pushes due-process sequence; Kowloon and Rakuen push practical chain-of-custody realities.
+### A. Seal Sovereignty Wars (administrative)
 
-### B. Casualty Ownership (ethical conflict)
-Unidentified dead recovered on intercity corridors trigger funding and memorial disputes: who pays, who records, who is publicly accountable.
+Whose seal is final in fraud cases? Midgaard (archive precedence), Mafdet (dock attestation), Kiess (due-process sequence), Kowloon/Rakuen (custody reality under emergency).
 
-### C. Relic Hazard Classification (safety conflict)
-Cities disagree on when a recovered object is history, evidence, contraband, or active threat. These differences produce quest-worthy jurisdiction collisions.
+### B. Casualty Ownership (ethical)
 
-### D. Debt and Distress Capture (economic conflict)
-Crises in Rakuen and peripheral corridors create discounted claim markets that Mafdet and Kowloon houses buy, with Kiess and Midgaard contesting legitimacy.
+Unidentified dead along southern and intercity corridors trigger disputes over who records, who pays, and who must publicly acknowledge systemic causation.
 
-## V. Durable Alliances and Institutional Agreements
+### C. Annexation Without Annexation (constitutional)
 
-1. **Five-City Corridor Minutes:** quarterly clerk exchange where each city logs unresolved fraud typologies.
+How far can Midgaard shape Rakuen's institutions while denying annexation? This remains the region's most sensitive legitimacy dispute.
+
+### D. Relic Hazard Classification (safety)
+
+History, evidence, contraband, or active threat? The same object may receive four legal identities across five cities.
+
+### E. Debt and Distress Capture (economic)
+
+Rakuen crises trigger discounted claim markets. Mafdet and Kowloon houses buy distressed paper; Kiess and Midgaard contest legality and disclosure.
+
+### F. Conclave Guilt Chain Allocation (historical)
+
+Who bears responsibility for fallout from Conclave secrecy systems that produced downstream social and ecological damage? Narrative control of this issue shapes present reparations politics.
+
+## VI. Five-City Institutional Instruments
+
+1. **Five-City Corridor Minutes:** quarterly unresolved fraud typology exchange.
 2. **Common Misery Clause:** temporary tariff and fee controls during declared mass-casualty seasons.
-3. **Reciprocal Witness Passage:** protected travel status for certified witnesses and archive couriers.
-4. **Joint Blacklist of Forged Seals:** continuously updated anti-fraud index distributed to gates, docks, and caravanserais.
+3. **Reciprocal Witness Passage:** protected status for certified witnesses and archive couriers.
+4. **Joint Forged-Seal Blacklist:** continuously updated anti-fraud index distributed to gates, docks, and caravanserais.
 5. **Transit Memorial Compact:** minimum standards for naming, recording, and repatriating intercity dead.
+6. **North-South Grain Ladder Protocol:** Kowloon-to-Rakuen emergency reserve release with Kiess witness oversight.
+7. **Mercy Freight Harmonization Addendum:** synchronized humanitarian cargo treatment across inland and maritime authorities.
+8. **Contradiction Ledger Initiative:** inspired by Kel'Shadra cautionary studies; records conflicts between official narratives rather than redacting one side.
 
-## VI. Narrative Guidance for Builders
+## VII. Shared Cultural and Practical Interfaces
 
-- Give every intercity quest at least **one legal problem**, **one logistics problem**, and **one human-cost problem**.
-- Avoid single-villain framing; five-city conflict is mostly system friction between valid but competing mandates.
-- Reuse the same agreement names (Common Misery Clause, Transit Memorial Compact, etc.) across NPC dialogue to imply administrative continuity.
-- When writing rumors, include contradictory versions based on city perspective to preserve political texture.
+### 1) Watch Systems
 
-## VII. Cross-Reference Index
+- Midgaard's lantern-line rotations,
+- Kowloon's delta watch drums,
+- Rakuen's living watches,
+- Mafdet's tide-bell dockets,
+- Kiess's witness-clock hearings.
+
+Intercity operations increasingly use a conversion table called the **Five-Watch Concordance**.
+
+### 2) Gate and Dock Rituals
+
+Gate and dock traditions now embed legal signaling:
+
+- white cloth on chain = memorial passage request,
+- green lamp = grain convoy priority,
+- blue tar pitch mark = ash contamination warning,
+- split-wax seal = contested custody.
+
+### 3) Festival Diplomacy
+
+Delegations appear at each other's civic festivals as a soft-law signaling mechanism. Rakuen's Mercy Gate Night has become the most politically charged annual event in the weave.
+
+## VIII. Narrative Guidance for Builders
+
+- Every intercity quest should include one legal conflict, one logistics conflict, and one moral-accountability conflict.
+- Use named treaty instruments repeatedly so institutions feel persistent and lived-in.
+- Let cities disagree in good faith where possible; systemic conflict is usually mandate collision, not cartoon villainy.
+- Annexation Arc references should appear in rumor layers, clerk records, festival speeches, and memorial inscriptions.
+- Keep Conclave and Kel'Shadra references specific: historical mechanism -> modern institutional consequence.
+
+## IX. Cross-Reference Index
 
 - Midgaard city lore: `docs/lore/midgaard_lore.md`
 - Kowloon city lore: `docs/lore/kowloon_lore.md`
 - Kiess city lore: `docs/lore/kiess_lore.md`
 - Rakuen city lore: `docs/lore/rakuen_lore.md`
 - Mafdet city lore: `docs/lore/mafdet_lore.md`
+- Kel'Shadra memory systems: `docs/lore/kelshadra_lore.md`
+- Conclave fallout context: `docs/lore/withered_depths_lore.md`, `docs/lore/sunken_sanctum_lore.md`

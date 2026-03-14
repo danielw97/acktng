@@ -203,3 +203,17 @@ The Crypts matter because they are not an anomaly. They are an exaggeration of t
 - **Finale framing:** The end-state should center on the fate of memory governance, not merely entity slaying.
 
 This keeps Kel'Shadra's redesigned area thematically distinct, lore-deep, and integrated with the established Gloamvault arc.
+
+## Rakuen Interface Note: Memory Practice Without Redaction Empire
+
+Recent cross-city scholarship identifies Rakuen's post-disaster record reforms as a selective adaptation of Kel'Shadra-era memory infrastructure principles.
+
+Rakuen borrowed methods, not doctrine:
+
+- duplicate ledgers across separate risk zones,
+- dual-witness casualty deposition,
+- contradiction flags in place of silent erasure.
+
+Rakuen explicitly rejects Kel'Shadra's coercive legacy (classification as punishment, enforced narrative singularity, disappearance by procedure). This distinction matters for builders: references to Kel'Shadra in Rakuen or five-city files should emphasize cautionary inheritance rather than ideological continuity.
+
+Intercity archivists call this split model **"memory without dominion"**.

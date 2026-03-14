@@ -473,3 +473,15 @@ Mafdet-related pairings represented there:
 - Mafdet <-> Kowloon: cargo codex alignment for northern maritime conversion.
 - Mafdet <-> Kiess: debt and bonded-transfer legality review.
 - Mafdet <-> Rakuen: disaster cargo classification and mercy-freight terms.
+
+## Rakuen Mercy-Freight and Annexation Arc Addendum
+
+Mafdet's harbor law now treats Rakuen as a high-volatility humanitarian-commercial hybrid origin. Midgaard's refusal to annex Rakuen after the Southmark Petition, Ash Plea, and Iron Compact Appeal forced maritime institutions to formalize workaround categories rather than rely on inland constitutional resolution.
+
+Key harbor consequences:
+
+- **Mercy-freight codification:** reduced-fee lanes for verified disaster cargo from Rakuen.
+- **Dual-intent manifests:** cargo can be legally tagged as both relief material and bonded collateral, creating frequent tribunal collisions.
+- **Priority-berth disputes:** Rakuen emergency shipments regularly contend with Kowloon commercial throughput for berth timing.
+
+Mafdet judges generally describe this system as **"annexation by paperwork's shadow"**: sovereign lines remain unchanged while practical obligations continue to expand.

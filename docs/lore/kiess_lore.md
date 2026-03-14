@@ -107,3 +107,15 @@ Kiess-centric links that should remain consistent across lore and quests:
 - Kiess <-> Kowloon: enforceable labor templates for northern corridors.
 - Kiess <-> Rakuen: emergency testimony standards during record loss.
 - Kiess <-> Mafdet: debt-transfer review rights after maritime departure.
+
+## Rakuen Refusal Cycle Addendum (Kiess Legal Perspective)
+
+Kiess charter jurists classify the Rakuen annexation sequence (Southmark Petition, Ash Plea, Iron Compact Appeal) as the clearest modern example of **responsibility without incorporation**.
+
+Kiess legal schools now use the case to teach three doctrines:
+
+1. **Emergency testimony resilience:** when records are repeatedly destroyed, admissibility standards must preserve witness dignity without collapsing evidentiary thresholds.
+2. **Externalization review:** upstream powers cannot treat downstream casualties as mere statistical variance indefinitely without legitimacy erosion.
+3. **Contradiction preservation:** institutional archives should retain unresolved disagreement rather than enforce single-line narrative closure.
+
+Accordingly, Kiess advisors in Rakuen increasingly support contradiction-ledger methods and multi-city witnessing of grain, casualty, and debt records.
