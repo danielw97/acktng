@@ -435,6 +435,8 @@ void objfun_healing(OBJ_DATA *obj, CHAR_DATA *keeper)
    act("$p blankets $n @@Win a @@mhealing @@Waura@@N!", keeper, obj, NULL, TO_ROOM);
    act("$p blankets you in a @@mhealing @@Waura@@N!", keeper, obj, NULL, TO_CHAR);
    obj_cast_spell(sn, obj->level, keeper, keeper, obj);
+   if (!IS_NPC(keeper))
+      keeper->alignment = URANGE(-1000, keeper->alignment + 5, 1000);
    return;
 }
 
