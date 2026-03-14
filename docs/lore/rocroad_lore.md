@@ -80,7 +80,7 @@ Midgaard's imprint appears in three durable systems and runs deeper than civic i
 - The western dead — casualties of the Evermeet Collapse, caravan ambushes, and refugee exposure — were routed to Midgaard's **Sepulchur Pasture** when other facilities were overwhelmed. Memorial markers along the eastern road bands originally served as collection points for bodies being transported back to the city.
 
 ### 5. Intelligence Pipeline
-- Midgaard's **Guard Command** and Kiess's **Wall Command** share a complementary intelligence system through the road. Midgaard provides eastern and northern intelligence (desert trade conditions, Ashfang warband activity, northern route status). Kiess provides western frontier intelligence (forest mist activity, creature movements, frontier threat assessments). Dispatch tablets flow in both directions along Roc Road.
+- Midgaard's **Guard Command** and Kiess's **Wall Command** share a complementary intelligence system through the road. Midgaard provides eastern and northern intelligence (desert trade conditions, Ashfang warband activity, northern route status). Kiess provides eastern frontier intelligence (forest mist activity, creature movements, frontier threat assessments). Dispatch tablets flow in both directions along Roc Road.
 - The **Road Warden Liaison** NPC in Midgaard (planned for the city rebuild) delivers Kiessward dispatch intelligence and Lantern Road status reports. These documents reference Roc Road conditions as a matter of routine — road wardens are the connective tissue between both cities' security apparatus.
 
 ## Kiess Influence on Roc Road
