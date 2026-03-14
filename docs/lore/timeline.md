@@ -332,7 +332,7 @@ Unresolved conflicts define the present.
 | Kowloon's Jade Magistracy identifies Mafdet's Ledger House notation as a relative of their own system — both descended from the Keepers' **Littoral Branch**. Research expeditions to **Measure's Rest** underway. | Discovery | kowloon_lore, saltglass_reach_lore |
 | Mafdet's **Red Sand Accounts** (aggressive debt-leverage consortium) eye a potential Rakuen-to-Mafdet channel. | Political | five_cities_intercity_lore |
 | Kowloon's **Ash Cult** cells sabotage floodworks; the **Ember Speaker** may have sent emissaries south to Rakuen through the Eccentric Woodland. | War/Conflict | kowloon_lore |
-| The Withered Depths blight — originating from Conclave field-trial sites — threatens Kiess's western and northern borderlands. | Catastrophe | withered_depths_lore, kiess_lore |
+| The Withered Depths blight — originating from Conclave field-trial sites — threatens Kiess's eastern and northern borderlands. | Catastrophe | withered_depths_lore, kiess_lore |
 | Kel'Shadra's Crypts and Void Citadel remain active as a "machine without legitimate sovereign" — surviving officers, loops, constructs, and doctrinal ghosts continue operating inherited procedures. | Cosmic | kelshadra_summary_lore |
 | Rakuen's Outbound Open Register has **847 active open entries** — persons who left and were never confirmed arrived. ~30% cross-reference to Midgaard's deferred-name casualty records at Sepulchur Pasture. | Political | five_cities_intercity_lore |
 

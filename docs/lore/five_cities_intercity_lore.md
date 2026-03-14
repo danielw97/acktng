@@ -57,7 +57,7 @@ That chain only functions because all five are present. Remove any one and the o
 
 ### 2) Midgaard ↔ Kiess
 
-**Alliance layer**: Shared tribunal literacy, clerk exchanges, oath-record formats, and road-warden intelligence sharing along the Roc Road. Kiess provides western frontier intelligence; Midgaard provides eastern and northern intelligence. Both fund road wardens who maintain the primary east-west artery.
+**Alliance layer**: Shared tribunal literacy, clerk exchanges, oath-record formats, and road-warden intelligence sharing along the Roc Road. Kiess provides eastern frontier intelligence; Midgaard provides eastern and northern intelligence. Both fund road wardens who maintain the primary east-west artery.
 
 **Conflict layer**: Kiess's founding charter explicitly repudiates sealed-warrant governance — a direct response to Evermeet's participation in the Conclave's transfer apparatus and a standing implicit critique of Midgaard's Violet Compact era. The charter clause requiring "no sealed warrant issued by a predecessor authority shall bind a Kiess citizen" was written specifically to prevent what Midgaard's Continuity faction insists was acceptable wartime triage.
 
