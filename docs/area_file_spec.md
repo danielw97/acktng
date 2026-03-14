@@ -210,6 +210,11 @@ Builder policy: any mob special beginning with `spec_keep_` may only be assigned
 - `spec_lay_sister`
 - `spec_laborer`
 
+**Scorching Sands ambient specials:**
+- `spec_ss_cinder_broker`
+- `spec_ss_manifest_warden`
+- `spec_ss_kiln_overseer`
+
 **Kiess ambient specials:**
 - `spec_kiess_shopkeeper`
 - `spec_kiess_innkeeper`
