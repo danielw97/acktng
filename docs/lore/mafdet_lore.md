@@ -334,6 +334,16 @@ Kiess's Trade Syndics maintain commercial intelligence about Mafdet's cargo sche
 
 The Scorched Wastes' "Meridian Intake March" — the destroyed corridor that once fed caravans between oasis and pyramid systems — is the historical twin of the Saltglass Reach. Both were jurisdictional transition corridors; both were physically transformed by the Ninth Meridian catastrophe. The Reach survived (barely) because it was farther from the catastrophe's epicenter. The Wastes did not. Relic traffic from the Wastes occasionally reaches Mafdet through indirect routes, and the Quarantine Ledger classifies Wastes-origin artifacts under the highest default hazard level.
 
+### Rakuen (southern disaster-recovery city, five-city network)
+
+Rakuen is not in the oasis-pyramid corridor and does not connect to Mafdet through the Saltglass Reach. Its relationship with Mafdet is a separate channel — a southern alternative supply route used when Rakuen's overland routes through the Eccentric Woodland collapse during flood, fire, or route-predation crises.
+
+**Mercy-freight classification**: Rakuen goods arriving via the southern channel are classified under the **mercy-freight protocol** — a standing arrangement (formalized during the late Ash-and-Iron Decades) providing reduced fees and expedited processing during verified civic disaster periods. The classification requires Bloom Council disaster certification countersigned by the Ember Wardens. Rakuen's Garden Ledger Clerks maintain pre-completed certification templates for activation under active disaster conditions, specifically to address the chain-of-custody compliance challenge under evacuation conditions. Mercy-freight shipments still require Shoreward Conversion (dual attestation under both inland and maritime standards) — the classification waives fees, not documentation requirements.
+
+**Canopy-botanical trade**: Mafdet's Shoreward House and Quarantine Ledger have identified Rakuen's forest-medicine production as a commercially interesting trade stream. Canopy-specific botanical preparations unavailable elsewhere in the five-city network would enter Mafdet's system through standard Shoreward Conversion assessment. Most Rakuen botanicals are expected to classify as Quarantine Ledger Class One (safe for open transport), with some potent preparations potentially Class Two. The Shoreward House clerks who have processed Rakuen mercy-freight shipments are familiar with the preparation types and could expedite assessment.
+
+**Red Sand Accounts interest**: The Red Sand Accounts' systematic distress-claim acquisition apparatus positions Rakuen — which has been in near-continuous economic near-distress for decades — as an attractive long-term target. A direct Rakuen-Mafdet channel, if opened, would bring Rakuen's commercial obligations into Mafdet's court jurisdiction without the buffer of Midgaard's gate oversight. The Shrine of the First Claw would enforce any oath-sealed instruments; the Accounts are skilled drafters of such instruments. The Quarantine Ledger and the Strandline Compact's "harbor first" principle provide institutional constraints on Accounts overreach, but neither was designed with Rakuen's specific vulnerability in mind.
+
 ---
 
 ## IX) Story Hooks for Area and Quest Integration
