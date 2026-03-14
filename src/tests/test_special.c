@@ -5,14 +5,38 @@
 
 #define DEC_GLOBALS_H 1
 #include "ack.h"
+#include "special.h"
 
 int summon_master_heal_chance_for_test(int master_hit, int master_max_hp, int thematic_bonus);
 int summon_special_count_for_test(void);
 bool summon_special_casts_in_combat_for_test(CHAR_DATA *ch, int index);
+int spec_superboss_index_for_test(CHAR_DATA *mob);
+void spec_death_handler(CHAR_DATA *victim, CHAR_DATA *killer);
 
 struct skill_type skill_table[MAX_SKILL];
 
+/* Stubs for spec_fun pointers used in death handler tests */
+bool spec_pyramid_black_sun_shard(CHAR_DATA *ch) { (void)ch; return FALSE; }
+bool spec_keep_elemental_captain(CHAR_DATA *ch) { (void)ch; return FALSE; }
+bool spec_keep_physical_captain(CHAR_DATA *ch) { (void)ch; return FALSE; }
+bool spec_breath_any(CHAR_DATA *ch) { (void)ch; return FALSE; }
+
 static int g_cast_count = 0;
+static int g_send_count = 0;
+
+void send_to_char(const char *txt, CHAR_DATA *ch)
+{
+    (void)txt;
+    (void)ch;
+    g_send_count++;
+}
+
+bool is_same_group(CHAR_DATA *ach, CHAR_DATA *bch)
+{
+    (void)ach;
+    (void)bch;
+    return TRUE;
+}
 
 int get_max_hp(CHAR_DATA *ch)
 {
@@ -112,12 +136,154 @@ static void test_all_summon_specs_cast_in_combat(void)
     }
 }
 
+static void test_superboss_index_identifies_superbosses(void)
+{
+    CHAR_DATA mob;
+    clear_character(&mob);
+
+    mob.spec_fun = spec_pyramid_black_sun_shard;
+    assert(spec_superboss_index_for_test(&mob) == SUPERBOSS_PYRAMID_BLACK_SUN_SHARD);
+
+    mob.spec_fun = spec_keep_elemental_captain;
+    assert(spec_superboss_index_for_test(&mob) == SUPERBOSS_KEEP_ELEMENTAL_CAPTAIN);
+
+    mob.spec_fun = spec_keep_physical_captain;
+    assert(spec_superboss_index_for_test(&mob) == SUPERBOSS_KEEP_PHYSICAL_CAPTAIN);
+
+    mob.spec_fun = spec_breath_any;
+    assert(spec_superboss_index_for_test(&mob) == -1);
+
+    mob.spec_fun = NULL;
+    assert(spec_superboss_index_for_test(&mob) == -1);
+}
+
+static void test_death_handler_awards_reincarnation_point(void)
+{
+    CHAR_DATA victim;
+    CHAR_DATA killer;
+    PC_DATA pcdata;
+    ROOM_INDEX_DATA room;
+
+    clear_character(&victim);
+    clear_character(&killer);
+    memset(&pcdata, 0, sizeof(pcdata));
+    memset(&room, 0, sizeof(room));
+
+    victim.spec_fun = spec_pyramid_black_sun_shard;
+    victim.short_descr = "the Black Sun Shard";
+    victim.in_room = &room;
+    room.first_person = &killer;
+
+    killer.next_in_room = NULL;
+    killer.pcdata = &pcdata;
+    killer.act = 0; /* not NPC */
+
+    g_send_count = 0;
+    spec_death_handler(&victim, &killer);
+
+    assert(pcdata.superboss_kills[SUPERBOSS_PYRAMID_BLACK_SUN_SHARD] == TRUE);
+    assert(pcdata.reincarnation_data[REINCARNATION_POINTS] == 1);
+    assert(g_send_count == 1);
+}
+
+static void test_death_handler_no_double_award(void)
+{
+    CHAR_DATA victim;
+    CHAR_DATA killer;
+    PC_DATA pcdata;
+    ROOM_INDEX_DATA room;
+
+    clear_character(&victim);
+    clear_character(&killer);
+    memset(&pcdata, 0, sizeof(pcdata));
+    memset(&room, 0, sizeof(room));
+
+    victim.spec_fun = spec_keep_elemental_captain;
+    victim.short_descr = "the Elemental Captain";
+    victim.in_room = &room;
+    room.first_person = &killer;
+
+    killer.next_in_room = NULL;
+    killer.pcdata = &pcdata;
+    killer.act = 0;
+
+    pcdata.superboss_kills[SUPERBOSS_KEEP_ELEMENTAL_CAPTAIN] = TRUE;
+    pcdata.reincarnation_data[REINCARNATION_POINTS] = 5;
+
+    g_send_count = 0;
+    spec_death_handler(&victim, &killer);
+
+    assert(pcdata.superboss_kills[SUPERBOSS_KEEP_ELEMENTAL_CAPTAIN] == TRUE);
+    assert(pcdata.reincarnation_data[REINCARNATION_POINTS] == 5);
+    assert(g_send_count == 0);
+}
+
+static void test_death_handler_ignores_non_superboss(void)
+{
+    CHAR_DATA victim;
+    CHAR_DATA killer;
+    PC_DATA pcdata;
+    ROOM_INDEX_DATA room;
+
+    clear_character(&victim);
+    clear_character(&killer);
+    memset(&pcdata, 0, sizeof(pcdata));
+    memset(&room, 0, sizeof(room));
+
+    victim.spec_fun = spec_breath_any;
+    victim.short_descr = "a dragon";
+    victim.in_room = &room;
+    room.first_person = &killer;
+
+    killer.next_in_room = NULL;
+    killer.pcdata = &pcdata;
+    killer.act = 0;
+
+    g_send_count = 0;
+    spec_death_handler(&victim, &killer);
+
+    assert(pcdata.reincarnation_data[REINCARNATION_POINTS] == 0);
+    assert(g_send_count == 0);
+}
+
+static void test_death_handler_skips_npcs(void)
+{
+    CHAR_DATA victim;
+    CHAR_DATA npc;
+    CHAR_DATA killer;
+    ROOM_INDEX_DATA room;
+
+    clear_character(&victim);
+    clear_character(&npc);
+    clear_character(&killer);
+    memset(&room, 0, sizeof(room));
+
+    victim.spec_fun = spec_pyramid_black_sun_shard;
+    victim.short_descr = "the Black Sun Shard";
+    victim.in_room = &room;
+    room.first_person = &npc;
+
+    npc.next_in_room = NULL;
+    npc.act = ACT_IS_NPC;
+    npc.pcdata = NULL;
+
+    g_send_count = 0;
+    spec_death_handler(&victim, &killer);
+
+    assert(g_send_count == 0);
+}
+
 int main(void)
 {
     test_no_chance_when_master_full_or_invalid();
     test_chance_increases_as_master_hp_drops();
     test_chance_respects_bounds();
     test_all_summon_specs_cast_in_combat();
+    test_superboss_index_identifies_superbosses();
+    test_death_handler_awards_reincarnation_point();
+    test_death_handler_no_double_award();
+    test_death_handler_ignores_non_superboss();
+    test_death_handler_skips_npcs();
 
     puts("test_special: all tests passed");
     return 0;

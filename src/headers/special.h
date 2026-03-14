@@ -96,6 +96,9 @@ bool is_player_summon_special(SPEC_FUN *spec_fun);
 /* Damage dispatch — call from do_damage() for any NPC with a spec_fun */
 void spec_handle_damage(CHAR_DATA *victim, int element, int dam);
 
+/* Death dispatch — call from group_gain() when an NPC dies */
+void spec_death_handler(CHAR_DATA *victim, CHAR_DATA *killer);
+
 /* Per-spec damage callbacks */
 void spec_keep_elemental_captain_damage(CHAR_DATA *ch, int element, int dam);
 

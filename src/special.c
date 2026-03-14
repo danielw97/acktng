@@ -496,6 +496,68 @@ void spec_handle_damage(CHAR_DATA *victim, int element, int dam)
 }
 
 /*
+ * spec_superboss_index — return the superboss tracking index for a mob,
+ * or -1 if the mob is not a superboss.
+ */
+static int spec_superboss_index(CHAR_DATA *mob)
+{
+   if (mob->spec_fun == spec_pyramid_black_sun_shard)
+      return SUPERBOSS_PYRAMID_BLACK_SUN_SHARD;
+   if (mob->spec_fun == spec_keep_elemental_captain)
+      return SUPERBOSS_KEEP_ELEMENTAL_CAPTAIN;
+   if (mob->spec_fun == spec_keep_physical_captain)
+      return SUPERBOSS_KEEP_PHYSICAL_CAPTAIN;
+   return -1;
+}
+
+#ifdef UNIT_TEST_SPECIAL
+int spec_superboss_index_for_test(CHAR_DATA *mob)
+{
+   return spec_superboss_index(mob);
+}
+#endif
+
+/*
+ * spec_death_handler — called from group_gain() when an NPC dies.
+ * Checks if the dead mob is a superboss and awards a reincarnation
+ * point to each group member who has not killed this superboss before.
+ */
+void spec_death_handler(CHAR_DATA *victim, CHAR_DATA *killer)
+{
+   int sb_index;
+   CHAR_DATA *gch;
+   char buf[MAX_STRING_LENGTH];
+
+   if (victim == NULL || victim->spec_fun == NULL)
+      return;
+
+   sb_index = spec_superboss_index(victim);
+   if (sb_index < 0)
+      return;
+
+   for (gch = victim->in_room->first_person; gch != NULL; gch = gch->next_in_room)
+   {
+      if (IS_NPC(gch) || gch->pcdata == NULL)
+         continue;
+
+      if (!is_same_group(gch, killer))
+         continue;
+
+      if (gch->pcdata->superboss_kills[sb_index])
+         continue;
+
+      gch->pcdata->superboss_kills[sb_index] = TRUE;
+      gch->pcdata->reincarnation_data[REINCARNATION_POINTS]++;
+
+      sprintf(buf,
+         "@@a*** You have slain @@e%s@@a for the first time! ***\n\r"
+         "@@a*** You have been awarded @@W1 reincarnation point@@a! ***@@N\n\r",
+         victim->short_descr);
+      send_to_char(buf, gch);
+   }
+}
+
+/*
  * Core procedure for dragons.
  */
 bool dragon(CHAR_DATA *ch, char *spell_name)

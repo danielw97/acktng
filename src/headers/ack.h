@@ -822,6 +822,7 @@ struct pc_data
    int invasion_rewards[3];
    int post_quest_points;
    int quest_dynamic_cooldown_until;        /* earliest time for new dynamic prop */
+   bool superboss_kills[MAX_SUPERBOSS];
    /* --- Quest quest system --- */
    QUEST_DATA quests[QUEST_MAX_QUESTS];
    bool completed_static_quests[QUEST_MAX_STATIC_QUESTS];
