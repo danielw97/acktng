@@ -350,3 +350,13 @@ Embed cross-area references through:
 - **Quest hooks:** conflicting accounts of shared historical events that point players toward investigation in connected areas.
 
 ---
+
+## Five-City Intercity Cross-Reference
+
+For comprehensive political, economic, and legal interactions involving Midgaard, Kowloon, Kiess, Rakuen, and Mafdet, use the shared reference document: `docs/lore/five_cities_intercity_lore.md`.
+
+Midgaard-specific sections that map directly into that framework include:
+- Midgaard <-> Kowloon convoy and tariff coordination.
+- Midgaard <-> Kiess legal doctrine friction around sealed authority.
+- Midgaard <-> Rakuen subsidy and casualty-accountability disputes.
+- Midgaard <-> Mafdet seal-precedence rivalry in relic/export legitimacy.
