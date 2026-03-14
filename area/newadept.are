@@ -2304,24 +2304,28 @@ and her gaze sweeps the courtyard with the calm alertness of someone who expects
 l 150 192 193 194 195 196 197 0 0 0 
 L 20 20 20 15 15 10 0 0 0 
 #170
-A Guard Captain~
-@@WA Guard @@BCaptain@@N~
-@@WA Guard @@BCaptain@@N stands here.
+The Elemental Captain~
+@@RThe @@BElemental @@RCaptain@@N~
+@@RThe @@BElemental @@RCaptain@@N stands here, crackling with elemental energy.
 
 ~
-This figure stands unnervingly still, their features indistinct as though seen through
+Each plate of this captain's armour is inscribed with runes of fire, air, water, and
 
-foggy glass. Something about them feels unfinished, like a half-formed thought.
+earth, cycling through a slow aurora of colour that betrays the volatile power within.
+
+Unlike the Captain who commands raw steel, this one commands the fundamental forces of
+
+nature itself — and she is not patient.
 
 ~
-1 0 0 S
-1 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
+33554435 1698558 0 S
+166 1
+120000 -2500 1000 1000
+! 0 0 0 7 536607 0 80
+| 0 0 65604 0 0 4095 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+l 200 233 234 235 236 237 238 0 0 0
+L 20 20 15 15 15 10 0 0 0
 #171
 A Wizard's Servant~
 @@WA Wizard's @@BServant@@N~
@@ -3212,6 +3216,60 @@ A crude iron ring lies here, vibrating with barely contained power~
 7
 L
 150
+#233
+Elemental Captain's Circlet~
+@@RElemental @@BCaptain's @@RCirclet@@N~
+A glowing circlet lies here, warm to the touch~
+9 201326656 8388616 145
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#234
+Elemental Captain's Hauberk~
+@@RElemental @@BCaptain's @@RHauberk@@N~
+A rune-inscribed hauberk lies here, radiating faint elemental warmth~
+9 201326656 8650752 1049
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#235
+Elemental Captain's Vambraces~
+@@RElemental @@BCaptain's @@RVambraces@@N~
+A pair of vambraces lies here, trailing wisps of elemental energy~
+9 201326656 8390656 4353
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#236
+Elemental Captain's Greaves~
+@@RElemental @@BCaptain's @@RGreaves@@N~
+A pair of greaves lies here, scorched and frost-tinged at once~
+9 201326656 9437184 1
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#237
+Elemental Captain's Boots~
+@@RElemental @@BCaptain's @@RBoots@@N~
+A pair of boots lies here, crackling faintly with residual energy~
+9 201326656 10485760 1
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#238
+The Four-Wind Blade~
+@@RThe @@BFour-Wind @@RBlade@@N~
+A blade suffused with elemental power lies here~
+5 201326656 8421376 1
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
 #0
 #RESETS
 D 0 168 1 1 (null)
@@ -3327,6 +3385,7 @@ M 0 183 1 257 (null)
 S
 #SPECIALS
 M 169 spec_keep_physical_captain
+M 170 spec_keep_elemental_captain
 S
 #OBJFUNS
 O 197 objfun_healing

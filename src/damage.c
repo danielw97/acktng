@@ -3,6 +3,7 @@
 #endif
 #include "magic.h"
 #include "cloak.h"
+#include "special.h"
 
 #include <stdio.h>
 #include <stdlib.h> /* For div_t, div() */
@@ -740,6 +741,11 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
     else if (dt != -1)
         sp_dam_message(NULL, ch, victim, dam, element, dt, critical);
     victim->hit -= dam;
+
+    /* Notify spec damage handlers so boss specials can react to element hits. */
+    if (dam > 0 && IS_NPC(victim) && victim->spec_fun != NULL)
+        spec_handle_damage(victim, element, dam);
+
     if (!IS_NPC(victim))
         check_adrenaline(victim, dam);
 

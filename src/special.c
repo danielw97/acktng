@@ -203,6 +203,8 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_rr_ruin_scavenger;
    if (!str_cmp(name, "spec_pyramid_black_sun_shard"))
       return spec_pyramid_black_sun_shard;
+   if (!str_cmp(name, "spec_keep_elemental_captain"))
+      return spec_keep_elemental_captain;
 
    return 0;
 }
@@ -371,6 +373,8 @@ char *rev_spec_lookup(void *func)
       return "spec_rr_ruin_scavenger";
    if (func == spec_pyramid_black_sun_shard)
       return "spec_pyramid_black_sun_shard";
+   if (func == spec_keep_elemental_captain)
+      return "spec_keep_elemental_captain";
 
    return 0;
 }
@@ -454,8 +458,21 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_rr_pilgrim        \n\r");
    strcat(buf, "       spec_rr_ruin_scavenger \n\r");
    strcat(buf, "       spec_pyramid_black_sun_shard\n\r");
+   strcat(buf, "       spec_keep_elemental_captain\n\r");
 
    return;
+}
+
+/*
+ * spec_handle_damage — called from do_damage() whenever an NPC with a
+ * spec_fun takes a hit.  Dispatches to the per-spec damage callback so
+ * each special can react to incoming element damage without coupling
+ * the core damage code to individual boss implementations.
+ */
+void spec_handle_damage(CHAR_DATA *victim, int element, int dam)
+{
+   if (victim->spec_fun == spec_keep_elemental_captain)
+      spec_keep_elemental_captain_damage(victim, element, dam);
 }
 
 /*
