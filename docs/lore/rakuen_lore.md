@@ -602,10 +602,6 @@ Blend these textures when writing Rakuen spaces, characters, and items:
 
 ---
 
-This is called the **Paradise-Denial Cycle** in modern Rakuen scholarship.
-
----
-
 ## IV. Psychology of Refused Annexation
 
 Refusal reshaped Rakuen's political psyche in repeating cycles:
@@ -690,6 +686,8 @@ Superstitions include never closing all gate shutters at once ("the city must ke
 
 ---
 
+## VIII. Cross-Reference Index
+
 For the larger intercity matrix contextualizing Rakuen's pressures: `docs/lore/five_cities_intercity_lore.md`
 
 Rakuen's key five-city interaction channels:
@@ -698,6 +696,15 @@ Rakuen's key five-city interaction channels:
 - **Rakuen ↔ Kiess**: Charter consultation, Paradise Thesis archival question, amendment-track legal support.
 - **Rakuen ↔ Mafdet**: Mercy-freight protocol, canopy-botanical trade interest, Quiet Separatist maritime-independence development.
 - **Rakuen ↔ Kel'Shadra**: Sealed testimony records, Violet Compact guilt chain, recovery-access problem.
+
+- Midgaard city lore: `docs/lore/midgaard_lore.md`
+- Kowloon city lore: `docs/lore/kowloon_lore.md`
+- Kiess city lore: `docs/lore/kiess_lore.md`
+- Mafdet city lore: `docs/lore/mafdet_lore.md`
+- Kel'Shadra Crypts (Conclave guilt chain / sealed testimony): `docs/lore/kelshadra_lore.md`
+- Eccentric Woodland (Rakuen access corridor): `docs/lore/eccentric_woodland_lore.md`
+- Sepulchur Pasture (casualty registry / deferred-name protocols): `docs/lore/sepulchur_pasture_lore.md`
+- Conclave fallout context: `docs/lore/withered_depths_lore.md`, `docs/lore/sunken_sanctum_lore.md`
 
 
 
