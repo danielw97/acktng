@@ -402,6 +402,32 @@ Remaining rooms: conversion clerk offices, seal storage rooms, undercroft passag
 
 ---
 
+## New Mob Specials: Saltglass Reach Ambient Specials
+
+The Saltglass Reach requires **8 new area-specific ambient specials** to bring its factions and institutions to life. These follow the established ambient-only pattern (8-way gate via `number_bits(3)`, action or speech, always return `FALSE`). **Do not assign to mobs outside the Saltglass Reach.**
+
+| Special | Intended mob roles | Flavor / setting | Sample lines |
+|---|---|---|---|
+| `spec_reach_warden` | Reach Warden patrol sentinels, toll gate guards, barracks officers | Desert patrol authority: scans the horizon, checks transit seal validity, marks patrol ledger, adjusts sun-hood, taps cairn marker with staff for soundness. References the Keeper survey inheritance, cairn tablet library at Measure's Rest, and the jurisdiction dispute with Mafdet's Harbor Wardens. | *"Transit seal current? Good. The Reach still has law, whatever the Harbor Wardens claim."* / *"Every cairn between here and the Seal carries our mark. That is not tradition — it is jurisdiction."* / *"Measure's Rest holds tablets older than Mafdet's harbor chain. We were here first. We remain."* |
+| `spec_reach_guide` | Glasswalk Guide NPCs, guide camp attendants, route song keepers | Hereditary desert navigation: reads glass color underfoot, tests crust by tapping with chitin-soled staff, hums route song fragments, ties fresh cord markers, checks wind direction by tossing sand. References the neutrality tradition, glass-reading skill, and pre-Measure oral navigation. | *"Milky glass, firm step. Amber glass, watch your feet. Violet glass, turn back. The colors don't lie."* / *"We guided before the Keepers carved their first obelisk. The songs remember routes the stones forgot."* / *"I guide anyone who pays. Warden, Outrider, Synod — the glass does not care about your politics."* |
+| `spec_reach_assessor` | Shoreward Assessor revenants, toll clerks, conversion table scribes, Landward Tidewrights | Jurisdictional assessment: weighs imaginary cargo, consults conversion tables, stamps invisible seals, mutters legal formulas, dips quill in dry inkwell. References the Shoreward Tables, the Water-Debt Discharge, dual attestation, and the three-route toll schedules. | *"Water-debt: forty-seven measures, offset against Great Oasis charter series nine. Shore conversion: pending at the Seal."* / *"The Tables do not lie. What the inland weighs in water, the sea weighs in risk. The conversion is exact."* / *"Dual attestation requires both marks — inland witness and maritime seal. One without the other is void."* |
+| `spec_reach_outrider` | Red Sand debt collectors, Red Sand assessors, Red Sand enforcers | Commercial predation: examines cargo manifests with predatory interest, calculates interest on wax tablet, adjusts brass scales, whispers debt terms, marks distressed caravan identifiers. References Mafdet's Red Sand Accounts, exploitative lending, and the legal trap of shore conversion rates. | *"Distressed cargo at shore conversion rates? That interest compounds before you reach the dock."* / *"The Red Sand Accounts extend credit to anyone. Repayment, however, is not optional."* / *"Your manifest shows water-debt outstanding. We can consolidate that. The terms are... reasonable."* |
+| `spec_reach_scavenger` | Cairn Scavenger crew members, relic hunters, scavenger lookouts | Ruin stripping: chips mortar from cairn joints, pries bronze fittings with a chisel, examines tablet fragments against lamplight, wraps salvage in oiled cloth, glances nervously for Warden patrols. References the salvage law gray zone, Mafdet buyer prices, and the tension between history and profit. | *"Bronze fittings fetch six measures at the Strand. A legible tablet? Ten times that. History pays."* / *"Salvage law is clear — abandoned structures are fair claim. The Wardens just disagree about what 'abandoned' means."* / *"Careful with that seal-stone. Cracked, it's gravel. Intact, a Kowloon scholar will pay a season's wages."* |
+| `spec_reach_tidewright` | Landward Tidewright scholars, Measure Script preservationists | Archaic script preservation: traces glyphs on practice tablets, compares Littoral Branch notation against inland Measure Script, mutters tidal calculations, dips shadow-rod into sand to check angle, copies faded inscriptions. References the Tidewright Schism, the Seaward branch's departure to Mafdet, and Kowloon's Jade Clerk interest. | *"The Seaward Tidewrights simplified until the Script lost its soul. We preserve the full form. That is our vow."* / *"Tidal glyph: third-quarter rise, strong northerly, draft clearance marginal. The notation is precise to the hour."* / *"The Jade Clerks from Kowloon write with questions. We answer in Script. If they cannot read it, we are doing our work."* |
+| `spec_reach_carter` | Sand-Sea Carters' Guild members, cargo transfer workers, carter camp cooks | Caravan-to-ship logistics: checks sled runner condition, retarps cargo against salt spray, sorts manifests into inland and maritime stacks, tests rope tension, signals to approaching wagons. References the Guild's transit monopoly, the Strandline Compact, and the seasonal cargo schedule. | *"Sled to dock, dock to hold. That is the Carter's road. Everything between the oasis and the ship passes through our hands."* / *"The Guild keeps the cargo moving. Without us, the manifests pile up and the ships wait empty."* / *"Season's almost over. Three more convoys, then Scour winds shut the Flats for a month."* |
+| `spec_reach_smuggler` | Synod courier ambient (out-of-combat only), Whisper Cell lookouts | Clandestine operations: peers through glass-shard screen, wraps relic component in liturgical cloth, traces Eclipsed Tongues glyph in sand, checks dead-drop cache, listens for patrol footsteps. References the Ninth Meridian as divine judgment, the sacredness of fused glass, and the smuggling route network. Fires out of combat only; combat initiated by `aggressive` flag. | *"The fire that made this glass was not catastrophe. It was purification. The Ninth Meridian proved it."* / *"The whisper routes bypass the cairns. What the Wardens cannot inspect, the Wardens cannot confiscate."* / *"The Tongues speak of a second firing. When the glass glows again, the judgment resumes."* |
+
+### Ambient Special Implementation Notes
+
+- All 8 specials follow the standard ambient template: `!IS_AWAKE(ch) || is_fighting(ch)` guard, then `number_bits(3) != 0` gate (~12.5% per pulse), then action-or-say split. Always return `FALSE`.
+- Each special needs 6 action lines and 6 speech lines for variety.
+- Source files: `src/ai/spec_reach_*.c` (one file per special).
+- Register in `spec_lookup()`, `rev_spec_lookup()`, and `print_spec_lookup()` in `src/special.c`.
+- Add `ai/spec_reach_*.o` entries to the `AI_SPEC_OBJS` block in `src/Makefile`.
+- Document in `docs/mob_specials_spec.md` under a new "Saltglass Reach ambient specials" section.
+
+---
+
 ## Encounter and Faction Design
 
 ### Primary Factions
@@ -432,56 +458,385 @@ Remaining rooms: conversion clerk offices, seal storage rooms, undercroft passag
 7. **Jurisdictional Manifestations** (hostile — Shoreward Threshold only):
    - Revenants of Shoreward Assessors, animated toll-marshals, and conversion-engine constructs. The unresolved legal contradictions of the Reach given hostile physical form.
 
-### Mob Vnum Plan
+---
 
-Use mob vnums sequentially within `31100-31499`. Target **65-80 mob templates**:
+## Full Mob Roster (31100-31199, 100 mob templates)
 
-| Category | Count | Level Range | Notes |
-|---|---:|---|---|
-| Reach Warden patrols | 6-8 | 55-65 | Mix of friendly sentinels and corrupted hostiles |
-| Red Sand Outriders | 5-7 | 60-72 | Commercial predators, solo-flagged elites |
-| Synod Whisper Cells | 6-8 | 58-70 | Cult operatives, casters with shadow/fire |
-| Cairn Scavengers | 5-7 | 55-65 | Relic hunters, melee focus |
-| Salt Flat fauna | 5-6 | 55-62 | Crickets, kites, salt-adapted creatures |
-| Glasswind fauna | 6-8 | 60-70 | Glass scorpions, glassworms, glass-adapted predators |
-| Tidemouth fauna | 4-6 | 58-65 | Crabs, amphibious creatures |
-| Cairn station defenders | 4-6 | 62-72 | Remnant guards, construct sentinels |
-| Sealed Route horrors | 5-7 | 65-75 | Quarantine breach manifestations, relic hazards |
-| Shoreward revenants | 6-8 | 70-78 | Jurisdictional undead, conversion-engine constructs |
-| Mini-bosses | 3-4 | 68-75 | Solo flagged; see boss cadence below |
-| Major bosses | 3-4 | 75-80 | Boss flagged, sentinel, no_flee; in no_mob rooms |
+Mob vnums are assigned sequentially. Each entry lists vnum, name, level, act flags, key combat traits, district placement, and special function assignment.
 
-### Boss Cadence
+### District A Mobs: Oasis Staging Grounds (Friendly/Neutral NPCs + Light Hostiles)
 
-- **Mini-boss: Glassworm Burrower Queen** (District D, ~31275) — fauna apex predator of the Belts.
-- **Mini-boss: Whisper Cell Commandant** (District F, ~31393) — Synod operative leader.
-- **Mini-boss: Cairn Scavenger Warlord** (District E, ~31315) — relic hunter faction leader.
-- **Boss: Shoreward Revenant** (31492) — undead Shoreward Assessor, caster/melee hybrid. Level 75.
-- **Boss: Toll-Marshal of the Three Routes** (31494) — animated enforcer of all three route systems simultaneously, martial elite. Level 78.
-- **Boss: Arbiter of the Conversion** (31498) — the Shoreward Conversion itself given hostile sentience, final encounter. Level 80. Casts from both inland (earth, fire) and maritime (water, air) traditions.
+| Vnum | Name | Lvl | Act Flags | Role | Special |
+|---:|---|---:|---|---|---|
+| 31100 | reach warden gate sentinel | 58 | `is_npc sentinel stay_area` | Toll gate guard, non-aggressive | `spec_reach_warden` |
+| 31101 | reach warden patrol leader | 60 | `is_npc sentinel stay_area` | Barracks officer, quest offerer | `spec_reach_warden` |
+| 31102 | reach warden cartographer | 58 | `is_npc sentinel stay_area` | Transit seal office, quest offerer | `spec_reach_warden` |
+| 31103 | glasswalk guide recruiter | 56 | `is_npc sentinel stay_area` | Guide camp hiring post | `spec_reach_guide` |
+| 31104 | red sand counting clerk | 60 | `is_npc sentinel stay_area` | Red Sand counting house, non-aggressive NPC | `spec_reach_outrider` |
+| 31105 | caravan provisioner | 55 | `is_npc sentinel stay_area` | Provisioner's Row shopkeeper | `spec_reach_carter` |
+| 31106 | sand-sea carter | 56 | `is_npc stay_area` | Caravan staging yard worker | `spec_reach_carter` |
+| 31107 | reach transit clerk | 57 | `is_npc sentinel stay_area` | Transit seal office bureaucrat | `spec_reach_assessor` |
+| 31108 | drywell attendant | 55 | `is_npc sentinel stay_area` | Well keeper, ambient | `spec_reach_carter` |
+| 31109 | cairn tablet reader | 58 | `is_npc sentinel stay_area` | Scholarly annex, lore NPC | `spec_reach_tidewright` |
+| 31110 | caravan drover | 55 | `is_npc stay_area` | Animal pen worker | — |
+| 31111 | staging yard rat | 55 | `is_npc aggressive stay_area` | Light trash mob | `spec_fido` |
+
+### District B Mobs: Mirror Flats North — Swift Line (Fauna + Warden Patrols)
+
+| Vnum | Name | Lvl | Act Flags | Role | Special |
+|---:|---|---:|---|---|---|
+| 31112 | salt cricket swarm | 56 | `is_npc aggressive stay_area no_body` | Swarm mob, light damage, disorienting | — |
+| 31113 | salt cricket swarm leader | 58 | `is_npc aggressive stay_area no_body` | Quest target, slightly harder swarm variant | — |
+| 31114 | cairn kite | 57 | `is_npc aggressive stay_area` | Raptor predator, patrols salt flats | — |
+| 31115 | cairn kite alpha | 60 | `is_npc aggressive stay_area solo` | Quest target, stronger raptor | — |
+| 31116 | salt crust lurker | 58 | `is_npc aggressive stay_area` | Ambush predator hiding in salt deposits | `spec_poison` |
+| 31117 | brine serpent | 59 | `is_npc aggressive stay_area` | Mineral seep predator | `spec_poison` |
+| 31118 | corrupted warden toll-thief | 60 | `is_npc aggressive stay_area` | Degraded Warden extorting caravans, quest target | — |
+| 31119 | swift line warden patrol | 58 | `is_npc stay_area` | Friendly patrol, non-aggressive | `spec_reach_warden` |
+| 31120 | salt-blinded drifter | 56 | `is_npc aggressive stay_area` | Lost traveler gone mad from reflection | — |
+| 31121 | mineral crust elemental | 62 | `is_npc aggressive stay_area no_body` | Salt-animated elemental, earth strong | — |
+
+### District C Mobs: Mirror Flats South — Heavy Road (Faction + Fauna Mix)
+
+| Vnum | Name | Lvl | Act Flags | Role | Special |
+|---:|---|---:|---|---|---|
+| 31122 | heavy road warden sentinel | 60 | `is_npc sentinel stay_area` | Assessment station guard | `spec_reach_warden` |
+| 31123 | waystation cistern keeper | 58 | `is_npc sentinel stay_area` | Cistern lore NPC | `spec_reach_assessor` |
+| 31124 | red sand outrider scout | 62 | `is_npc aggressive stay_area` | Outrider advance party | `spec_reach_outrider` |
+| 31125 | convoy graveyard scavenger | 60 | `is_npc aggressive stay_area` | Scavenger picking through wrecked convoys | `spec_reach_scavenger` |
+| 31126 | salt flat viper | 58 | `is_npc aggressive stay_area` | Venomous snake, salt-adapted | `spec_poison` |
+| 31127 | brine pool predator | 60 | `is_npc aggressive stay_area` | Ambush hunter at water sources | — |
+| 31128 | assessment station ghost | 62 | `is_npc aggressive stay_area undead no_body` | Spectral toll clerk | `spec_cast_undead` |
+| 31129 | heavy road caravan guard | 58 | `is_npc stay_area` | Non-aggressive caravan escort NPC | — |
+| 31130 | salt slab golem | 64 | `is_npc aggressive stay_area solo` | Construct defender of old assessment station | — |
+
+### District D Mobs: Glasswind Belts (Glass Fauna + Synod + Guides)
+
+| Vnum | Name | Lvl | Act Flags | Role | Special |
+|---:|---|---:|---|---|---|
+| 31131 | glass scorpion | 62 | `is_npc aggressive stay_area` | Glass-carapace predator, venomous | `spec_poison` |
+| 31132 | glass scorpion matriarch | 65 | `is_npc aggressive stay_area solo` | Larger scorpion, quest target | `spec_poison` |
+| 31133 | glassworm burrower | 63 | `is_npc aggressive stay_area` | Subsurface ambush worm | — |
+| 31134 | glassworm tunnel sentinel | 66 | `is_npc aggressive stay_area solo` | Larger worm, guards tunnel network, quest target | `spec_breath_acid` |
+| 31135 | glasswalk guide pathfinder | 60 | `is_npc sentinel stay_area` | Neutral guide at waystation | `spec_reach_guide` |
+| 31136 | glasswalk guide elder | 63 | `is_npc sentinel stay_area` | Senior guide, quest offerer | `spec_reach_guide` |
+| 31137 | synod whisper courier | 62 | `is_npc aggressive stay_area` | Smuggler carrying relic components | `spec_reach_smuggler` |
+| 31138 | synod lookout | 60 | `is_npc aggressive stay_area` | Whisper Cell sentry, quest target | `spec_reach_smuggler` |
+| 31139 | synod ritual keeper | 64 | `is_npc aggressive stay_area` | Cult caster, quest target | `spec_cast_cleric` |
+| 31140 | thermal fault elemental | 66 | `is_npc aggressive stay_area no_body` | Fire/earth elemental at fault ridge, quest target | `spec_breath_fire` |
+| 31141 | vitrified sand horror | 65 | `is_npc aggressive stay_area no_body` | Glass-animated construct, quest target | — |
+| 31142 | molten glass sentinel | 67 | `is_npc aggressive stay_area solo no_body` | Fire-element guardian of thermal anomaly, quest target | `spec_breath_fire` |
+| 31143 | shardstorm wind spirit | 63 | `is_npc aggressive stay_area no_body` | Air elemental carrying glass debris | — |
+| 31144 | amber glass crawler | 61 | `is_npc aggressive stay_area` | Insect adapted to amber-tinted glass zones | — |
+| 31145 | glassworm burrower queen | 70 | `is_npc aggressive sentinel stay_area boss no_flee` | **MINI-BOSS**: apex fauna predator of the Belts | `spec_breath_acid` |
+
+### District E Mobs: Cairn Line Ruins — Measure's Rest (Multi-Faction + Scholars)
+
+| Vnum | Name | Lvl | Act Flags | Role | Special |
+|---:|---|---:|---|---|---|
+| 31146 | cairn scavenger | 62 | `is_npc aggressive stay_area` | Generic relic hunter | `spec_reach_scavenger` |
+| 31147 | cairn scavenger digger | 60 | `is_npc aggressive stay_area` | Laborer stripping bronze fittings | `spec_reach_scavenger` |
+| 31148 | cairn scavenger lookout | 61 | `is_npc aggressive stay_area` | Sentry watching for Warden patrols | `spec_reach_scavenger` |
+| 31149 | cairn scavenger warlord | 70 | `is_npc aggressive sentinel stay_area boss no_flee` | **MINI-BOSS**: relic hunter faction leader | — |
+| 31150 | red sand debt collector | 64 | `is_npc aggressive stay_area` | Outrider field agent, quest target | `spec_reach_outrider` |
+| 31151 | red sand assessor | 66 | `is_npc aggressive stay_area` | Outrider cargo evaluator, quest target | `spec_reach_outrider` |
+| 31152 | red sand enforcer | 68 | `is_npc aggressive stay_area solo` | Outrider muscle, quest target | — |
+| 31153 | measure's rest warden guard | 64 | `is_npc sentinel stay_area` | Fortress guard, non-aggressive | `spec_reach_warden` |
+| 31154 | warden commander | 68 | `is_npc sentinel stay_area` | Faction leader, quest offerer | `spec_reach_warden` |
+| 31155 | landward tidewright | 62 | `is_npc sentinel stay_area` | Archaic scribe preserving Measure Script | `spec_reach_tidewright` |
+| 31156 | kowloon scholar | 60 | `is_npc sentinel stay_area` | Jade Clerk-funded researcher, quest offerer | `spec_reach_tidewright` |
+| 31157 | tablet restoration apprentice | 58 | `is_npc sentinel stay_area` | Scholar's assistant | `spec_reach_tidewright` |
+| 31158 | cairn station construct | 66 | `is_npc aggressive sentinel stay_area` | Ancient stone guardian of cairn ruins | — |
+| 31159 | toll cairn specter | 64 | `is_npc aggressive stay_area undead no_body` | Ghost of a toll clerk, haunts ruined stations | `spec_cast_undead` |
+| 31160 | forgery detection scribe | 60 | `is_npc sentinel stay_area` | Identifies fake tablets, ambient NPC | `spec_reach_assessor` |
+
+### District F Mobs: Sealed Route Remnants (Synod + Quarantine Horrors)
+
+| Vnum | Name | Lvl | Act Flags | Role | Special |
+|---:|---|---:|---|---|---|
+| 31161 | synod tunnel sentry | 65 | `is_npc aggressive stay_area` | Smuggler tunnel guard, quest target | `spec_reach_smuggler` |
+| 31162 | synod relic handler | 66 | `is_npc aggressive stay_area` | Cult specialist moving contraband | `spec_reach_smuggler` |
+| 31163 | synod eclipsed chanter | 68 | `is_npc aggressive stay_area` | Shadow/fire caster, ritual room priest | `spec_cast_bigtime` |
+| 31164 | whisper cell commandant | 72 | `is_npc aggressive sentinel stay_area boss no_flee` | **MINI-BOSS**: Synod operative leader, quest target | `spec_cast_bigtime` |
+| 31165 | quarantine breach horror | 68 | `is_npc aggressive stay_area no_body` | Relic hazard escaped containment, quest target | `spec_breath_gas` |
+| 31166 | containment ward specter | 66 | `is_npc aggressive stay_area undead no_body` | Undead quarantine scribe | `spec_cast_undead` |
+| 31167 | sealed crate aberration | 67 | `is_npc aggressive stay_area no_body` | Animated relic container, cold/shadow | — |
+| 31168 | relic provenance ghost | 65 | `is_npc aggressive stay_area undead no_body` | Southern Pyramid provenance spirit | `spec_cast_undead` |
+| 31169 | funerary consignment golem | 69 | `is_npc aggressive stay_area solo` | Construct guarding sealed cargo | — |
+| 31170 | quarantine escort revenant | 67 | `is_npc aggressive stay_area undead` | Undead armed escort from the Fracture Era | — |
+| 31171 | sealed route marker spirit | 64 | `is_npc aggressive stay_area undead no_body` | Ghost bound to abandoned route markers | `spec_cast_undead` |
+
+### District G Mobs: Tidemouth Approach (Coastal Fauna + Jurisdiction NPCs)
+
+| Vnum | Name | Lvl | Act Flags | Role | Special |
+|---:|---|---:|---|---|---|
+| 31172 | tidemouth crab | 60 | `is_npc aggressive stay_area` | Amphibious crustacean, burrow hazard | — |
+| 31173 | tidemouth crab broodmother | 65 | `is_npc aggressive stay_area solo` | Larger crab, quest target | — |
+| 31174 | tidal pool lurker | 62 | `is_npc aggressive stay_area` | Ambush predator in coastal pools | `spec_poison` |
+| 31175 | brackish channel eel | 60 | `is_npc aggressive stay_area` | Aquatic predator in tidal channels | — |
+| 31176 | saltmarsh serpent | 63 | `is_npc aggressive stay_area` | Venomous coastal snake | `spec_poison` |
+| 31177 | tidemouth raider | 64 | `is_npc aggressive stay_area` | Bandit preying on coastal transition zone, quest target | `spec_thief` |
+| 31178 | rogue outrider | 65 | `is_npc aggressive stay_area` | Red Sand agent gone independent, quest target | — |
+| 31179 | jurisdiction specter | 66 | `is_npc aggressive stay_area undead no_body` | Ghost of a boundary dispute, quest target | `spec_cast_undead` |
+| 31180 | sand-sea carter teamster | 58 | `is_npc sentinel stay_area` | Guild cargo transfer worker, non-aggressive | `spec_reach_carter` |
+| 31181 | carter camp cook | 56 | `is_npc sentinel stay_area` | Camp services NPC | `spec_reach_carter` |
+| 31182 | tidemouth warden post commander | 64 | `is_npc sentinel stay_area` | Contested jurisdiction officer, quest offerer | `spec_reach_warden` |
+| 31183 | harbor warden forward scout | 62 | `is_npc sentinel stay_area` | Mafdet jurisdiction, non-aggressive | `spec_guard` |
+| 31184 | coastal fog phantom | 63 | `is_npc aggressive stay_area night_only undead no_body` | Fog-season apparition, night only | `spec_cast_undead` |
+| 31185 | dune scarab swarm | 59 | `is_npc aggressive stay_area no_body` | Coastal insect swarm | — |
+
+### District H Mobs: Shoreward Threshold (Revenants + Bosses)
+
+| Vnum | Name | Lvl | Act Flags | Role | Special |
+|---:|---|---:|---|---|---|
+| 31186 | assessment hall guardian | 70 | `is_npc aggressive sentinel stay_area` | Stone construct defending conversion halls | — |
+| 31187 | shoreward clerk revenant | 68 | `is_npc aggressive stay_area undead` | Undead assessor, conversion table caster | `spec_cast_cleric` |
+| 31188 | toll-gate wraith | 70 | `is_npc aggressive stay_area undead no_body` | Incorporeal toll enforcer | `spec_cast_undead` |
+| 31189 | water-debt phantom | 69 | `is_npc aggressive stay_area undead no_body` | Ghost bound to the Discharge Basin | `spec_cast_undead` |
+| 31190 | risk assumption shade | 71 | `is_npc aggressive stay_area undead no_body` | Spirit of the Oath Court | `spec_cast_cleric` |
+| 31191 | conversion engine construct | 72 | `is_npc aggressive stay_area solo` | Ancient jurisdictional machinery given life | — |
+| 31192 | dual-seal sentinel | 73 | `is_npc aggressive sentinel stay_area solo` | Construct guarding the Dual Attestation Chamber | — |
+| 31193 | undercroft watcher | 71 | `is_npc aggressive stay_area undead` | Revenant guarding the sealed sub-level | `spec_cast_undead` |
+| 31194 | fractured authority elemental | 74 | `is_npc aggressive stay_area solo no_body` | Manifestation of competing laws, earth/water | `spec_breath_any` |
+| 31195 | shoreward revenant | 75 | `is_npc aggressive sentinel stay_area boss no_flee undead` | **BOSS**: Dead Assessor, caster/melee hybrid | `spec_cast_bigtime` |
+| 31196 | toll-marshal of the three routes | 78 | `is_npc aggressive sentinel stay_area boss no_flee` | **BOSS**: Animated enforcer of all three routes | `spec_cast_judge` |
+| 31197 | arbiter of the conversion | 80 | `is_npc aggressive sentinel stay_area boss no_flee no_body` | **FINAL BOSS**: The Shoreward Conversion given hostile sentience | `spec_cast_bigtime` |
+| 31198 | reach warden officer | 66 | `is_npc sentinel stay_area` | Warden at Sealed Route approach, quest offerer | `spec_reach_warden` |
+| 31199 | shoreward seal guardian | 72 | `is_npc aggressive sentinel stay_area solo` | Elite construct at the Seal itself | — |
+
+### Boss Cadence Summary
+
+| Boss | Vnum | Room | Level | Type | Special |
+|---|---:|---|---:|---|---|
+| Glassworm Burrower Queen | 31145 | ~31275 (District D) | 70 | Mini-boss | `spec_breath_acid` |
+| Cairn Scavenger Warlord | 31149 | ~31315 (District E) | 70 | Mini-boss | — |
+| Whisper Cell Commandant | 31164 | ~31393 (District F) | 72 | Mini-boss | `spec_cast_bigtime` |
+| Shoreward Revenant | 31195 | 31492 (District H) | 75 | Boss | `spec_cast_bigtime` |
+| Toll-Marshal of the Three Routes | 31196 | 31494 (District H) | 78 | Boss | `spec_cast_judge` |
+| Arbiter of the Conversion | 31197 | 31498 (District H) | 80 | Final Boss | `spec_cast_bigtime` |
+
+### Specials Assignment Summary
+
+| Special | Assigned To |
+|---|---|
+| `spec_reach_warden` | 31100, 31101, 31102, 31119, 31122, 31153, 31154, 31182, 31198 |
+| `spec_reach_guide` | 31103, 31135, 31136 |
+| `spec_reach_assessor` | 31107, 31123, 31160 |
+| `spec_reach_outrider` | 31104, 31124, 31150, 31151 |
+| `spec_reach_scavenger` | 31146, 31147, 31148 |
+| `spec_reach_tidewright` | 31109, 31155, 31156, 31157 |
+| `spec_reach_carter` | 31105, 31106, 31108, 31180, 31181 |
+| `spec_reach_smuggler` | 31137, 31138, 31161, 31162 |
+| `spec_poison` | 31116, 31117, 31126, 31131, 31132, 31174, 31176 |
+| `spec_cast_undead` | 31128, 31159, 31166, 31168, 31171, 31179, 31184, 31188, 31189, 31193 |
+| `spec_cast_cleric` | 31139, 31187, 31190 |
+| `spec_cast_bigtime` | 31163, 31164, 31195, 31197 |
+| `spec_cast_judge` | 31196 |
+| `spec_breath_fire` | 31140, 31142 |
+| `spec_breath_acid` | 31134, 31145 |
+| `spec_breath_gas` | 31165 |
+| `spec_breath_any` | 31194 |
+| `spec_fido` | 31111 |
+| `spec_thief` | 31177 |
+| `spec_guard` | 31183 |
 
 ---
 
-## Object Design Plan
+## Full Object Roster (31100-31224, 125 objects)
 
-### Object Vnum Plan
+Object vnums are assigned sequentially. Each entry lists vnum, name, item type, wear flags, extra flags, weight range, and thematic notes.
 
-Use object vnums sequentially within `31100-31499`. Target **80-100 objects**:
+### Keys (31100-31104)
 
-| Category | Count | Notes |
-|---|---:|---|
-| Charter relics | 8-10 | Survey stones, oath tablets, measure rods, transit seals |
-| Toll-era equipment | 8-10 | Bronze scales, assessor tools, conversion table fragments |
-| Guide craft | 6-8 | Glasswalk shoes, route-song scrolls, glass-reading lenses |
-| Synod contraband | 6-8 | Cult ritual materials, smuggled relic components |
-| Environmental drops | 8-10 | Salt crystals, glass shards, crab chitin, scorpion stingers |
-| Cairn salvage | 6-8 | Bronze fittings, tablet fragments, survey instruments |
-| Faction gear | 10-12 | Warden patrol equipment, Outrider ledgers, Scavenger tools |
-| Keys | 4-6 | For locked doors in Districts E, F, H |
-| Boss signature drops | 6-8 | Unique boss loot with `ITEM_BOSS` flag |
-| Weapons | 10-12 | Themed melee and caster weapons across level range |
-| Armor | 10-12 | Themed protective gear across wear slots |
-| Consumables | 4-6 | Food, potions, light sources for crossing |
+| Vnum | Name | Type | Wear | Extra | Wt | Notes |
+|---:|---|---|---|---|---:|---|
+| 31100 | warden archive key | key | take | — | 1 | Unlocks Measure's Rest Sealed Archive (31326) |
+| 31101 | quarantine seal key | key | take | — | 1 | Unlocks Sealed Relic Vault (31373) |
+| 31102 | shoreward threshold key | key | take | — | 1 | Unlocks Undercroft Descent (31485) |
+| 31103 | cairn station master key | key | take | — | 1 | Unlocks internal cairn station doors |
+| 31104 | synod cipher key | key | take | — | 1 | Unlocks Synod smuggler tunnel hidden door |
+
+### Weapons (31105-31124)
+
+| Vnum | Name | Type | Wear | Extra | Wt | value3 | Notes |
+|---:|---|---|---|---|---:|---:|---|
+| 31105 | salt-crusted bronze khopesh | weapon | hold take | — | 8 | 3 (slash) | Mirror Flats melee drop, sickle-sword with brine patina |
+| 31106 | glasswalk guide's chitin staff | weapon | hold take | two-handed | 4 | 7 (pound) | Guide weapon, chitin-and-resin construction |
+| 31107 | cairn scavenger's pry bar | weapon | hold take | — | 9 | 8 (crush) | Heavy iron tool repurposed as weapon |
+| 31108 | red sand assessor's stylus blade | weapon | hold take | — | 3 | 2 (stab) | Disguised weapon, sharp bronze writing implement |
+| 31109 | synod eclipse dagger | weapon | hold take | — | 3 | 11 (pierce) | Ritual knife with Eclipsed Tongues glyphs |
+| 31110 | warden patrol spear | weapon | hold take | two-handed | 7 | 11 (pierce) | Standard Reach Warden patrol weapon |
+| 31111 | glass-shard flensing knife | weapon | hold take | — | 4 | 1 (slice) | Glassworm-tooth blade, caster weight |
+| 31112 | toll-marshal's triple-headed flail | weapon | hold take | two-handed boss | 10 | 7 (pound) | Boss drop: Toll-Marshal. Three route-branded heads |
+| 31113 | arbiter's gavel of conversion | weapon | hold take | boss | 5 | 8 (crush) | Boss drop: Arbiter. Basalt judicial hammer, inscribed with dual notation |
+| 31114 | brine-forged scimitar | weapon | hold take | — | 8 | 3 (slash) | Tidemouth melee drop, salt-crystal edge |
+| 31115 | shoreward revenant's quill-sword | weapon | hold take | boss | 6 | 2 (stab) | Boss drop: Shoreward Revenant. Elongated stylus-blade |
+| 31116 | glassworm stinger lance | weapon | hold take | two-handed | 7 | 11 (pierce) | Crafted from glassworm tail barb |
+| 31117 | cairn kite talon dagger | weapon | hold take | — | 4 | 5 (claw) | Raptor-talon blade, light caster weapon |
+| 31118 | assessment scale mace | weapon | hold take | — | 9 | 7 (pound) | Bronze balance arm repurposed as bludgeon |
+| 31119 | tidemouth crab-claw gauntlet | weapon | hold take | fist | 10 | 0 (hit) | Fist weapon: chitin claw mounted on leather glove |
+| 31120 | thermal fault obsidian blade | weapon | hold take | — | 6 | 3 (slash) | Volcanic glass sword from thermal anomaly zone |
+| 31121 | sand-sea carter's cargo hook | weapon | hold take | — | 8 | 9 (grep) | Dock-loading hook, heavy melee |
+| 31122 | landward tidewright's inscribing rod | weapon | hold take | wand | 2 | 7 (pound) | Wand: Measure Script focus implement |
+| 31123 | quarantine ward staff | weapon | hold take | two-handed | 3 | 7 (pound) | Sealed Route containment focus, caster two-hander |
+| 31124 | glassworm queen's fang | weapon | hold take | boss | 7 | 11 (pierce) | Boss drop: Glassworm Queen. Acid-etched crystalline fang |
+
+### Armor — Head/Face/Neck (31125-31134)
+
+| Vnum | Name | Type | Wear | Extra | Wt | Notes |
+|---:|---|---|---|---|---:|---|
+| 31125 | salt-bleached sun hood | armor | head take | — | 4 | Mirror Flats head protection, linen and salt-stiffened leather |
+| 31126 | glasswalk guide's tinted goggles | armor | face take | — | 2 | Glass-reading eye protection, smoked-glass lenses |
+| 31127 | reach warden's patrol helm | armor | head take | — | 9 | Bronze helm with survey-mark crest |
+| 31128 | cairn kite feather gorget | armor | neck take | — | 4 | Raptor-feather collar, light neck protection |
+| 31129 | synod eclipse mask | armor | face take | — | 3 | Eclipsed Tongues ritual mask, dark glass and leather |
+| 31130 | shoreward assessor's circlet | armor | head take | boss | 5 | Boss drop: Shoreward Revenant. Bronze circlet with dual-notation inscription |
+| 31131 | red sand factor's silk veil | armor | face take | — | 2 | Desert sun protection and identity concealment |
+| 31132 | toll-cairn sentinel's basalt helm | armor | head take | — | 14 | Heavy stone-reinforced helm, tank weight |
+| 31133 | tidemouth salt-crust collar | armor | neck take | — | 8 | Mineral-encrusted neck guard, maritime motif |
+| 31134 | arbiter's jurisdictional crown | armor | head take | boss | 6 | Boss drop: Arbiter. Basalt crown with inland and maritime law inscriptions |
+
+### Armor — Body/About/Shoulders (31135-31144)
+
+| Vnum | Name | Type | Wear | Extra | Wt | Notes |
+|---:|---|---|---|---|---:|---|
+| 31135 | glasswalk guide's leather jerkin | armor | body take | — | 7 | Chitin-reinforced desert leather, melee weight |
+| 31136 | warden patrol brigandine | armor | body take | — | 12 | Bronze-studded patrol armor, tank weight |
+| 31137 | synod whisper cloak | armor | about take | — | 3 | Dark cloth cloak with cult sigils woven in |
+| 31138 | cairn scavenger's oiled duster | armor | about take | — | 7 | Weather-resistant salvage coat |
+| 31139 | red sand outrider's silk surcoat | armor | body take | — | 4 | Fine commercial attire doubling as light armor |
+| 31140 | shoreward table vestment | armor | about take | — | 5 | Assessor's ceremonial robe with conversion tables embroidered |
+| 31141 | toll-marshal's triple-route tabard | armor | body take | boss | 11 | Boss drop: Toll-Marshal. Tabard bearing all three route insignia |
+| 31142 | salt-crusted mantle | armor | shoulders take | — | 8 | Mineral-encrusted shoulder piece, Mirror Flats origin |
+| 31143 | glassworm-hide pauldrons | armor | shoulders take | — | 10 | Translucent chitin shoulder guards |
+| 31144 | tidemouth waxed storm cloak | armor | about take | — | 7 | Maritime-influenced weather cloak, resin-sealed |
+
+### Armor — Arms/Wrist/Hands (31145-31154)
+
+| Vnum | Name | Type | Wear | Extra | Wt | Notes |
+|---:|---|---|---|---|---:|---|
+| 31145 | reach warden's bronze vambraces | armor | arms take | — | 10 | Standard Warden arm protection |
+| 31146 | glasswalk guide's chitin bracers | armor | wrist take | — | 3 | Glass-resistant wrist guards |
+| 31147 | cairn scavenger's work gloves | armor | hands take | — | 7 | Reinforced leather digging gloves |
+| 31148 | synod courier's wrist wraps | armor | wrist take | — | 2 | Dyed cloth bindings with hidden pockets |
+| 31149 | red sand enforcer's gauntlets | armor | hands take | — | 10 | Brass-knuckled gloves for debt collection |
+| 31150 | shoreward revenant's seal-stamp gloves | armor | hands take | boss | 4 | Boss drop: Shoreward Revenant. Ink-stained gloves that still press ghost-seals |
+| 31151 | assessment hall stone bracers | armor | wrist take | — | 13 | Heavy construct-origin arm guards |
+| 31152 | tidemouth crab-shell gauntlets | armor | hands take | — | 11 | Chitin-plated coastal fighting gloves |
+| 31153 | thermal fault obsidian bracers | armor | wrist take | — | 6 | Volcanic glass arm guards from anomaly zone |
+| 31154 | conversion engine gear-mesh sleeves | armor | arms take | — | 12 | Mechanical arm coverings from the undercroft |
+
+### Armor — Waist/Legs/Feet (31155-31164)
+
+| Vnum | Name | Type | Wear | Extra | Wt | Notes |
+|---:|---|---|---|---|---:|---|
+| 31155 | glasswalk chitin-soled sandals | armor | feet take | — | 5 | The famous glasswalk shoes: heavy leather with resin soles |
+| 31156 | salt-crusted desert boots | armor | feet take | — | 8 | Mirror Flats footwear, mineral-stiffened leather |
+| 31157 | reach warden's patrol belt | armor | waist take | — | 7 | Utility belt with seal pouch and ration hooks |
+| 31158 | cairn scavenger's tool belt | armor | waist take | — | 8 | Chisel loops, tablet wrapping, bronze-fitting pouch |
+| 31159 | synod eclipse leggings | armor | legs take | — | 4 | Dark-dyed ritual legwear |
+| 31160 | tidemouth brackish waders | armor | legs take | — | 9 | Waterproofed coastal leg protection |
+| 31161 | arbiter's basalt greaves | armor | legs take | boss | 13 | Boss drop: Arbiter. Stone-and-bronze leg armor |
+| 31162 | heavy road caravan boots | armor | feet take | — | 10 | Thick-soled boots for loaded sled following |
+| 31163 | toll-marshal's route-branded belt | armor | waist take | boss | 9 | Boss drop: Toll-Marshal. Belt buckle with three route symbols |
+| 31164 | shoreward seal stone greaves | armor | legs take | — | 14 | Heavy basalt-reinforced leg armor, tank weight |
+
+### Shields and Held Items (31165-31174)
+
+| Vnum | Name | Type | Wear | Extra | Wt | Notes |
+|---:|---|---|---|---|---:|---|
+| 31165 | warden's transit seal buckler | armor | hold take | buckler | 8 | Small shield stamped with Reach survey marks |
+| 31166 | cairn capstone shield | armor | hold take | — | 13 | Heavy shield carved from cairn stone |
+| 31167 | glassworm-shell roundshield | armor | hold take | — | 10 | Translucent chitin shield, melee weight |
+| 31168 | shoreward table fragment shield | armor | hold take | boss | 11 | Boss drop: conversion ratio chart on bronze backing |
+| 31169 | red sand ledger tome | treasure | hold take | — | 3 | Held item: Outrider's debt calculation book |
+| 31170 | glasswalk guide's route-song scroll | treasure | hold take | — | 2 | Held item: encoded navigation chant |
+| 31171 | landward tidewright's glyph tablet | treasure | hold take | — | 4 | Held item: Littoral Branch practice tablet |
+| 31172 | synod relic component pouch | treasure | hold take | — | 3 | Held item: smuggled ritual materials |
+| 31173 | shoreward seal wax stamp | treasure | hold take | — | 2 | Held item: maritime seal press |
+| 31174 | toll-marshal's jurisdiction scepter | treasure | hold take | boss | 6 | Boss drop: Toll-Marshal. Triple-headed authority rod |
+
+### Armor — Miscellaneous Slots (31175-31184)
+
+| Vnum | Name | Type | Wear | Extra | Wt | Notes |
+|---:|---|---|---|---|---:|---|
+| 31175 | cairn kite feather earring | armor | ear take | — | 1 | Raptor-feather ear adornment |
+| 31176 | salt crystal pendant | armor | neck take | — | 2 | Mirror Flats mineral necklace |
+| 31177 | synod eclipse signet | armor | finger take | — | 1 | Eclipsed Tongues cult ring |
+| 31178 | warden survey compass ring | armor | finger take | — | 2 | Keeper-era directional aid |
+| 31179 | glassworm tooth amulet | armor | neck take | — | 3 | Trophy pendant from Belts |
+| 31180 | red sand bronze chain | armor | neck take | — | 5 | Outrider status chain, heavy links |
+| 31181 | tidemouth barnacle-crusted bangle | armor | wrist take | — | 4 | Coastal wrist decoration with maritime motif |
+| 31182 | shoreward dual-notation pendant | armor | neck take | boss | 3 | Boss drop: Arbiter. Pendant inscribed both desert and tide glyphs |
+| 31183 | cairn station guardian's halo-sigil | armor | halo take | — | 1 | Floating glyph above ancient construct |
+| 31184 | glasswalk aura ward | armor | aura take | — | 1 | Guide's protective aura, chitin-and-glass charm |
+
+### Environmental Drops and Loot-Table Items (31185-31204)
+
+All items in this section have `ITEM_LOOT` set in extra flags. Boss-source items also have `ITEM_BOSS`.
+
+| Vnum | Name | Type | Wear | Extra | Wt | Notes |
+|---:|---|---|---|---|---:|---|
+| 31185 | salt cricket carapace | treasure | take | loot | 2 | Mirror Flats fauna drop |
+| 31186 | glass scorpion stinger | treasure | take | loot | 3 | Glasswind Belt fauna drop, venomous |
+| 31187 | glassworm segment | treasure | take | loot | 4 | Subsurface fauna drop, translucent chitin |
+| 31188 | tidemouth crab shell | treasure | take | loot | 5 | Coastal fauna drop |
+| 31189 | cairn kite tail feather | treasure | take | loot | 1 | Raptor drop, used in fletching |
+| 31190 | amber glass shard | treasure | take | loot | 2 | Glasswind material, thermal fault proximity indicator |
+| 31191 | violet glass fragment | treasure | take | loot | 2 | Eclipse-rite residue glass, Synod sacred material |
+| 31192 | milky glass chip | treasure | take | loot | 2 | Pre-catastrophe glass, stable and safe |
+| 31193 | salt crystal cluster | treasure | take | loot | 3 | Mirror Flats mineral specimen |
+| 31194 | bronze cairn fitting | treasure | take | loot | 4 | Stripped from cairn stations by scavengers |
+| 31195 | shoreward table fragment | treasure | take | loot | 3 | Conversion ratio chart on stone chip |
+| 31196 | synod liturgical scroll | treasure | take | loot | 1 | Eclipsed Tongues religious text |
+| 31197 | red sand debt token | treasure | take | loot | 1 | Outrider loan instrument, brass disc |
+| 31198 | warden transit seal blank | treasure | take | loot | 2 | Unstamped seal disc, valuable to forgers |
+| 31199 | tidal glyph rubbing | treasure | take | loot | 1 | Littoral Branch inscription copy |
+| 31200 | quarantine ward fragment | treasure | take | loot | 3 | Sealed Route containment marker piece |
+| 31201 | glassworm queen acid gland | treasure | take | loot boss | 4 | Boss drop: Glassworm Queen |
+| 31202 | scavenger warlord's trophy pouch | treasure | take | loot boss | 3 | Boss drop: Cairn Scavenger Warlord |
+| 31203 | commandant's cipher codex | treasure | take | loot boss | 2 | Boss drop: Whisper Cell Commandant |
+| 31204 | arbiter's fractured seal-stone | treasure | take | loot boss | 5 | Boss drop: Arbiter of the Conversion |
+
+### Quest Items (31205-31207)
+
+| Vnum | Name | Type | Wear | Extra | Wt | Notes |
+|---:|---|---|---|---|---:|---|
+| 31205 | forged cairn tablet | quest | take | — | 3 | Quest 93 collect target: fabricated historical precedent |
+| 31206 | reach survey waypoint marker | quest | take | — | 2 | Cartography quest series tracking item |
+| 31207 | southern pyramid relic crate seal | quest | take | — | 1 | Provenance tracking for Sealed Route quests |
+
+### Consumables and Utility (31208-31218)
+
+| Vnum | Name | Type | Wear | Extra | Wt | Notes |
+|---:|---|---|---|---|---:|---|
+| 31208 | reach warden's ration brick | food | take | — | 3 | Compressed travel food, salt-preserved |
+| 31209 | salt-preserved caravan jerky | food | take | — | 2 | Standard crossing provisions |
+| 31210 | brackish well water flask | drink_con | take | — | 4 | Mineral-tainted but drinkable water |
+| 31211 | glasswalk route-lamp | light | take | — | 3 | Shielded lantern for Belt navigation |
+| 31212 | cairn station oil lamp | light | take | — | 4 | Repurposed survey lamp from cairn ruins |
+| 31213 | salt-crystal torch | light | take | — | 3 | Mineral-fueled light source, Mirror Flats |
+| 31214 | antivenom poultice | potion | take | — | 1 | Counter for glass scorpion / serpent venom |
+| 31215 | shoreward assessment stamp | treasure | take | — | 1 | Decorative/trade item: old conversion seal |
+| 31216 | transit ration token | treasure | take | — | 1 | Ceramic allotment stamp modeled on Northern Oasis design |
+| 31217 | glasswalk shoe repair kit | treasure | take | — | 3 | Chitin and resin sole patches, trade goods |
+| 31218 | cairn tablet transcription | treasure | take | — | 2 | Scholar's copy of historical toll schedules |
+
+### Containers (31219-31221)
+
+| Vnum | Name | Type | Wear | Extra | Wt | Notes |
+|---:|---|---|---|---|---:|---|
+| 31219 | warden dispatch satchel | container | take | — | 3 | Patrol communication bag |
+| 31220 | cairn scavenger's salvage sack | container | take | — | 4 | Large carry bag for stripped materials |
+| 31221 | synod courier's sealed pouch | container | take | — | 2 | Contraband transport container |
+
+### Furniture (31222-31224)
+
+| Vnum | Name | Type | Wear | Extra | Wt | Notes |
+|---:|---|---|---|---|---:|---|
+| 31222 | warden barracks cot | furniture | — | — | 15 | Rest furniture in District A barracks |
+| 31223 | glasswalk guide's desert bedroll | furniture | — | — | 8 | Rest furniture in guide camps |
+| 31224 | cairn station stone bench | furniture | — | — | 15 | Rest furniture in cairn interiors |
 
 ### Itemization Intent
 
@@ -490,6 +845,7 @@ Use object vnums sequentially within `31100-31499`. Target **80-100 objects**:
 - Boss drops should visibly bridge the inland-maritime divide: weapons inscribed with both desert glyph and tide notation, armor with salt-crust and barnacle motifs.
 - Extra descriptions on key objects should contain inscription text in the three voice styles (Survey-Administrative, Legal-Conversion, Guide-Oral).
 - Keyed doors in Districts E (Measure's Rest sealed archive), F (sealed relic vault), and H (undercroft descent) each have explicit key objects.
+- All loot-table items have `ITEM_LOOT`. All boss-source items have both `ITEM_LOOT` and `ITEM_BOSS`.
 
 ---
 
