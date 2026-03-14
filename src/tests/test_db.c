@@ -1,4 +1,5 @@
 #include <assert.h>
+#include <setjmp.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,6 +26,9 @@ const char *db_test_get_area_name(void);
 int object_spawn_level(int prototype_level, int requested_level);
 int count_file_line(FILE *fp);
 
+static int area_validation_failure_count = 0;
+static jmp_buf area_validation_jmp;
+static int area_validation_jmp_active = 0;
 
 static void test_object_spawn_level_uses_requested_level_when_present(void)
 {
@@ -129,8 +133,24 @@ static void fail_area_validation(const char *area_name, int area_line, const cha
     va_end(args);
 
     fputc('\n', stderr);
+    area_validation_failure_count++;
+
+    if (area_validation_jmp_active)
+        longjmp(area_validation_jmp, 1);
+
     exit(1);
 }
+
+static int get_area_validation_failure_count(void)
+{
+    return area_validation_failure_count;
+}
+
+static void reset_area_validation_failure_count(void)
+{
+    area_validation_failure_count = 0;
+}
+
 
 static int current_area_line(FILE *fp)
 {
@@ -456,6 +476,8 @@ static void test_mock_load_all_areas_and_validate_formats(void)
 
     assert(list_fp != NULL);
 
+    reset_area_validation_failure_count();
+
     while (fgets(area_name, sizeof(area_name), list_fp) != NULL)
     {
         char *nl = strpbrk(area_name, "\r\n");
@@ -482,20 +504,26 @@ static void test_mock_load_all_areas_and_validate_formats(void)
 
         assert(area_fp != NULL);
 
-        validate_area_uses_only_assigned_vnums(area_fp, area_name);
-
-        while (read_non_empty_line(area_fp, line, sizeof(line)))
+        area_validation_jmp_active = 1;
+        if (setjmp(area_validation_jmp) == 0)
         {
-            if (line_starts_with(line, "#ROOMS"))
-                validate_rooms_section_exit_format(area_fp, area_name);
-            else if (line_starts_with(line, "#MOBILES"))
-                validate_mobiles_section_format(area_fp, area_name);
+            validate_area_uses_only_assigned_vnums(area_fp, area_name);
+
+            while (read_non_empty_line(area_fp, line, sizeof(line)))
+            {
+                if (line_starts_with(line, "#ROOMS"))
+                    validate_rooms_section_exit_format(area_fp, area_name);
+                else if (line_starts_with(line, "#MOBILES"))
+                    validate_mobiles_section_format(area_fp, area_name);
+            }
         }
 
+        area_validation_jmp_active = 0;
         fclose(area_fp);
     }
 
     fclose(list_fp);
+    assert(get_area_validation_failure_count() == 0);
 }
 
 static void test_area_list_has_no_duplicate_entries(void)
@@ -509,6 +537,8 @@ static void test_area_list_has_no_duplicate_entries(void)
         list_fp = fopen("area/area.lst", "r");
 
     assert(list_fp != NULL);
+
+    reset_area_validation_failure_count();
 
     while (fgets(area_name, sizeof(area_name), list_fp) != NULL)
     {
@@ -571,6 +601,8 @@ static void test_area_index_vnums_have_no_duplicates(void)
         list_fp = fopen("area/area.lst", "r");
 
     assert(list_fp != NULL);
+
+    reset_area_validation_failure_count();
 
     while (fgets(area_name, sizeof(area_name), list_fp) != NULL)
     {
@@ -682,6 +714,8 @@ static void collect_all_defined_vnums(int *room_defined, int *obj_defined)
         list_fp = fopen("area/area.lst", "r");
 
     assert(list_fp != NULL);
+
+    reset_area_validation_failure_count();
 
     while (fgets(area_name, sizeof(area_name), list_fp) != NULL)
     {
@@ -795,6 +829,8 @@ static void test_exit_destination_vnums_reference_defined_rooms(void)
         list_fp = fopen("area/area.lst", "r");
     assert(list_fp != NULL);
 
+    reset_area_validation_failure_count();
+
     while (fgets(area_name, sizeof(area_name), list_fp) != NULL)
     {
         char *nl = strpbrk(area_name, "\r\n");
@@ -869,6 +905,8 @@ static void test_reset_obj_vnums_reference_defined_objects(void)
     if (list_fp == NULL)
         list_fp = fopen("area/area.lst", "r");
     assert(list_fp != NULL);
+
+    reset_area_validation_failure_count();
 
     while (fgets(area_name, sizeof(area_name), list_fp) != NULL)
     {
