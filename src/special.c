@@ -133,6 +133,16 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_lay_sister;
    if (!str_cmp(name, "spec_laborer"))
       return spec_laborer;
+   if (!str_cmp(name, "spec_city_messenger"))
+      return spec_city_messenger;
+   if (!str_cmp(name, "spec_park_keeper"))
+      return spec_park_keeper;
+   if (!str_cmp(name, "spec_records_keeper"))
+      return spec_records_keeper;
+   if (!str_cmp(name, "spec_posting_clerk"))
+      return spec_posting_clerk;
+   if (!str_cmp(name, "spec_harbor_hand"))
+      return spec_harbor_hand;
    if (!str_cmp(name, "spec_kiess_shopkeeper"))
       return spec_kiess_shopkeeper;
    if (!str_cmp(name, "spec_kiess_innkeeper"))
@@ -303,6 +313,16 @@ char *rev_spec_lookup(void *func)
       return "spec_lay_sister";
    if (func == spec_laborer)
       return "spec_laborer";
+   if (func == spec_city_messenger)
+      return "spec_city_messenger";
+   if (func == spec_park_keeper)
+      return "spec_park_keeper";
+   if (func == spec_records_keeper)
+      return "spec_records_keeper";
+   if (func == spec_posting_clerk)
+      return "spec_posting_clerk";
+   if (func == spec_harbor_hand)
+      return "spec_harbor_hand";
    if (func == spec_kiess_shopkeeper)
       return "spec_kiess_shopkeeper";
    if (func == spec_kiess_innkeeper)

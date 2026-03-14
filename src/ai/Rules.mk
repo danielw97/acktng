@@ -12,7 +12,10 @@ AI_SPEC_SRCS = \
 	  ai/spec_sylai_priest.o ai/spec_cast_bigtime.o ai/spec_sage.o \
 	  ai/spec_wizardofoz.o ai/spec_vamp_hunter.o ai/spec_tax_man.o \
 	  ai/spec_lamplighter.o ai/spec_warden.o ai/spec_vendor.o \
-	  ai/spec_lay_sister.o ai/spec_laborer.o ai/spec_keep_physical_captain.o \
+	  ai/spec_lay_sister.o ai/spec_laborer.o \
+	  ai/spec_city_messenger.o ai/spec_park_keeper.o ai/spec_records_keeper.o \
+	  ai/spec_posting_clerk.o ai/spec_harbor_hand.o \
+	  ai/spec_keep_physical_captain.o \
 	  ai/spec_kiess_shopkeeper.o ai/spec_kiess_innkeeper.o ai/spec_kiess_scout.o \
 	  ai/spec_kiess_orator.o ai/spec_kiess_wall_officer.o \
 	  ai/spec_kowloon_shopkeeper.o ai/spec_kowloon_gate_captain.o \
