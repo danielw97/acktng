@@ -1921,7 +1921,7 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear)
       return;
    }
 
-   if ((!IS_NPC(ch) && ch->desc->connected != CON_SETTING_STATS) && ((IS_OBJ_STAT(obj, ITEM_ANTI_EVIL) && IS_EVIL(ch)) || (IS_OBJ_STAT(obj, ITEM_ANTI_GOOD) && IS_GOOD(ch)) || (IS_OBJ_STAT(obj, ITEM_ANTI_NEUTRAL) && IS_NEUTRAL(ch))))
+   if ((!IS_NPC(ch) && ch->desc->connected != CON_SETTING_STATS) && ((IS_OBJ_STAT(obj, ITEM_ANTI_EVIL) && IS_EVIL(ch)) || (IS_OBJ_STAT(obj, ITEM_ANTI_GOOD) && IS_GOOD(ch))))
    {
       act("You feel $p slither out of your grasp, and back into your inventory!", ch, obj, NULL, TO_CHAR);
       act("$p slithers out of $n's hands and back into $s inventory!", ch, obj, NULL, TO_ROOM);

@@ -1420,8 +1420,6 @@ char *extra_bit_name(int extra_flags)
       safe_strcat(MAX_STRING_LENGTH, buf, " anti-good");
    if (extra_flags & ITEM_ANTI_EVIL)
       safe_strcat(MAX_STRING_LENGTH, buf, " anti-evil");
-   if (extra_flags & ITEM_ANTI_NEUTRAL)
-      safe_strcat(MAX_STRING_LENGTH, buf, " anti-neutral");
    if (extra_flags & ITEM_NOREMOVE)
       safe_strcat(MAX_STRING_LENGTH, buf, " noremove");
    if (extra_flags & ITEM_INVENTORY)

@@ -163,9 +163,8 @@ struct char_ref_type
 #define IS_IMMORTAL(ch) (get_trust(ch) >= LEVEL_IMMORTAL)
 #define IS_HERO(ch) (get_trust(ch) >= LEVEL_HERO)
 #define IS_AFFECTED(ch, sn) (IS_SET((ch)->affected_by, (sn)))
-#define IS_GOOD(ch) (ch->alignment >= 350)
-#define IS_EVIL(ch) (ch->alignment <= -350)
-#define IS_NEUTRAL(ch) (!IS_GOOD(ch) && !IS_EVIL(ch))
+#define IS_GOOD(ch) (ch->alignment >= 0)
+#define IS_EVIL(ch) (ch->alignment < 0)
 
 #define IS_AWAKE(ch) (ch->position > POS_SLEEPING)
 

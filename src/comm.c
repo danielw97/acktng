@@ -2143,7 +2143,7 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
             sprintf(buf2, "%d", ch->alignment);
          else
             sprintf(buf2, "%s", IS_GOOD(ch) ? "good" : IS_EVIL(ch) ? "evil"
-                                                                   : "neutral");
+                                                                   : "good");
          i = buf2;
          break;
       case 'r':

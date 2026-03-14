@@ -2259,11 +2259,6 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
          align_direction = -1;
          change_align = TRUE;
       }
-      else if (!str_prefix(arg2, neutralgodname))
-      {
-         align_direction = 0;
-         change_align = TRUE;
-      }
       else if (!str_prefix(arg2, "judge"))
       {
          align_direction = 0;
@@ -2377,8 +2372,6 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
             align_change *= 1.3;
          if (IS_SET(obj->extra_flags, ITEM_ANTI_EVIL))
             align_change *= -.3;
-         if (IS_SET(obj->extra_flags, ITEM_ANTI_NEUTRAL))
-            align_change *= 1.1;
          sprintf(buf, "@@a" goodgodname "@@N gives you %d gold coins for your sacrifice.\n\r", gp);
          send_to_char(buf, ch);
          act("@@N$n sacrifices $p to @@a" goodgodname "@@N.", ch, obj, NULL, TO_ROOM);
@@ -2390,27 +2383,9 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
             align_change *= -.3;
          if (IS_SET(obj->extra_flags, ITEM_ANTI_EVIL))
             align_change *= 1.5;
-         if (IS_SET(obj->extra_flags, ITEM_ANTI_NEUTRAL))
-            align_change *= 1.25;
          sprintf(buf, "@@e" evilgodname "@@N gives you %d gold coins for your sacrifice.\n\r", gp);
          send_to_char(buf, ch);
          act("@@N$n sacrifices $p to @@e" evilgodname "@@N.", ch, obj, NULL, TO_ROOM);
-      }
-      if (align_direction == 0)
-      {
-         if (ch->alignment > 200)
-            align_direction = -1;
-         else if (ch->alignment < -200)
-            align_direction = 1;
-         if (IS_SET(obj->extra_flags, ITEM_ANTI_GOOD))
-            align_change *= 1.5;
-         if (IS_SET(obj->extra_flags, ITEM_ANTI_EVIL))
-            align_change *= 1.5;
-         if (IS_SET(obj->extra_flags, ITEM_ANTI_NEUTRAL))
-            align_change *= -.3;
-         sprintf(buf, "@@l" neutralgodname "@@N gives you %d gold coins for your sacrifice.\n\r", gp);
-         send_to_char(buf, ch);
-         act("@@N$n sacrifices $p to @@l" neutralgodname "@@N.", ch, obj, NULL, TO_ROOM);
       }
       if (obj->item_type == ITEM_BEACON || obj->item_type == ITEM_LIGHT || obj->item_type == ITEM_PORTAL || obj->item_type == ITEM_FOOD)
          align_change /= 10;

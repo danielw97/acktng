@@ -1927,11 +1927,6 @@ bool spell_dispel_evil(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
       return TRUE;
    }
 
-   if (IS_NEUTRAL(victim))
-   {
-      act("$N does not seem to be affected.", ch, NULL, victim, TO_CHAR);
-      return TRUE;
-   }
 
    dam = dice(level, 4);
    if (saves_spell(level, victim))

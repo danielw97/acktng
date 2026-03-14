@@ -846,7 +846,6 @@ bool valid_target(CHAR_DATA *ch, CHAR_DATA *victim, int l)
 
    //   if ( ( IS_GOOD( ch )    && IS_GOOD( victim    ) )
    //   || (   IS_EVIL( ch )    && IS_EVIL( victim    ) )
-   //   || (   IS_NEUTRAL( ch ) && IS_NEUTRAL( victim ) ) )
    //      return FALSE;
 
    if ((ch->spec_fun == spec_lookup("spec_vamp_hunter")) && (IS_NPC(victim)) && (number_percent() < 20))
