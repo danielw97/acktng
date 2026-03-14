@@ -1,0 +1,486 @@
+#AREA
+@@y@@xPort Mafdet@@N~
+Q 16
+K mafdet~
+L @@W(@@l55 80@@W)@@N~
+N 312
+I 55 80
+V 14200 14399
+X 0
+F 15
+U @@lthe harbor chain of @@yPort Mafdet@@l descends with the dawn@@N~
+O Virant~
+#ROOMS
+#14200
+@@bTidemouth Trail, Western Edge@@N~
+@@bThe Saltglass Reach ends here in a long exhale of salt crust and wind-scoured gravel, the last coherent surface before the dunes begin their slow dissolution into shoreline chaos.@@N The pale ground carries the ghost of a road — two parallel furrows worn by countless caravan wheels — but the furrows fade within a hundred paces eastward into a braided mess of dune crossings and tidal channels. @@lA smell of brine arrives from the east in irregular pulses, stronger when the wind turns off the sea, cutting through the dusty Reach air like a blade slipped between ledger pages.@@N To the west, the Saltglass corridor continues its long reach toward the interior, its route-marker cairns visible for a short distance before heat shimmer consumes them. @@yA Survey-Administrative inscription carved into a flat stone at the trail's edge reads: TIDEMOUTH BOUNDARY — SHOREWARD CONVERSION REQUIRED — PRESENT TRANSIT SEAL AT LANDWARD GATE.@@N Every caravan that has passed here has left some residue: broken wheel spokes, emptied waterskins, a discarded sandal sole, the ash ring of a cooking fire.
+~
+0 10
+D1
+~
+~
+0 -1 14201
+D3
+~
+~
+0 -1 31499
+E
+flat stone inscription~
+@@yThe survey inscription is deeply cut, formal in its geometry, and repeated in a smaller hand underneath in maritime Measure Script: SHOREWARD CONVERSION MANDATORY — SALTWEIGHT STANDARD APPLIES EASTWARD OF THIS MARKER. The dual-language notation is a Littoral Branch requirement dating to the first formal Reach-to-harbor agreements.@@N
+~
+S
+#14201
+@@bTidemouth Trail, Dune Fork@@N~
+@@bThe trail breaks apart at this low rise, where wind has built a sand barrier just high enough to divide foot traffic into two channels.@@N To the north, a harder surface of compressed gravel and shell grit leads up into the @@bdune ridges@@N visible against the sky — the high-dune path that Glasswalk Guides prefer for its stable footing. To the south, the ground drops into a brackish depression where tidal infiltration has softened the sand and left a mirror-flat expanse of standing water at high tide. @@lGull cries carry from the east, and the damp smell of the tidal flat is unmistakable to the south.@@N The fork is marked with a pair of stacked cairn stones, one painted with a horizontal stripe of red ochre to indicate the wet-flat route and one left bare for the dune passage.
+~
+0 10
+D0
+~
+~
+0 -1 14202
+D1
+~
+~
+0 -1 14201
+D2
+~
+~
+0 -1 14203
+D3
+~
+~
+0 -1 14200
+E
+cairn stones~
+@@bThe two cairn stones are a standard Glasswalk Guide route marker. The bare stone indicates the dune route is passable in dry conditions; the ochre-striped stone warns that the flat route is tidal-dependent and should not be taken if recent rainfall or high tide is likely.@@N
+~
+S
+#14202
+@@bNorthern Dune Margin@@N~
+@@bThe dune margin here is a transitional strip where the Saltglass Reach's compact surface gives way to loose sand built in long ridges by prevailing westerly winds.@@N Glasswalk shoes grip the compressed crests reasonably well, but the slopes between ridges shift unpredictably underfoot. Shell fragments from past beach lines are pressed into the sand in horizontal bands, evidence that the shoreline was once much farther inland. @@bA dusty haze hangs low along the ridge line, thickening to the north where the dunes stack higher before dropping toward the coast.@@N The grinding sound of wind-driven sand is constant here, a fine scouring that leaves exposed metal with a matte finish within hours.
+~
+0 10
+D1
+~
+~
+0 -1 14205
+D2
+~
+~
+0 -1 14201
+S
+#14203
+@@bSouthern Tidal Entry@@N~
+@@bThe ground descends sharply into a tidal depression here, where the Saltglass Reach's mineral surface becomes waterlogged and treacherous at high tide.@@N The soil is a grey-brown clay shot through with coils of dried seagrass, and the surface cracks under foot pressure in ways that suggest shallow standing water just beneath. Small mounds of excavated sand mark @@btidemouth crab burrows@@N distributed across the flat at regular intervals, each surrounded by a scatter of shell chip debris. @@lThe flat smells of sulphur, salt, and the particular sweetness of decomposing seagrass.@@N Deeper into the flat, the ground shimmers with what might be thin standing water or might be flat-surface heat distortion — it is impossible to tell from a distance.
+~
+0 2
+D1
+~
+~
+0 -1 14204
+D0
+~
+~
+0 -1 14201
+S
+#14204
+@@bBrackish Channel Crossing@@N~
+@@lA shallow brackish channel cuts across the tidal flat here, wide enough to require several careful steps through ankle-deep water that carries a bitter mineral taste.@@N The channel bottom is packed sand and broken shell, stable enough to cross but treacherous for draft animals and loaded wagon wheels, which explains the remains of an improvised plank bridge — now half-collapsed — that a previous caravan group left in place. @@bThe water is the colour of old brass, stained by the @@ldissolved Saltglass minerals carried down from the Reach.@@N @@bOn the far bank, @@bcrab burrow holes@@N are denser, their entrances freshly turned in the moist soil.@@N The sound of water moving against the channel banks is faint but continuous, driven by tidal pressure even this far inland.
+~
+0 2
+D1
+~
+~
+0 -1 14207
+D3
+~
+~
+0 -1 14203
+D0
+~
+~
+0 -1 14210
+E
+crab burrow holes~
+@@bThe burrow holes here are large enough to trap a boot. Each entrance is rimmed with a collar of excavated clay pellets, which the tidemouth crabs use to seal their tunnels at high tide. Disturbing a burrow rim tends to draw an aggressive response from the occupant.@@N
+~
+S
+#14205
+@@bHigh Dune Ridge Road@@N~
+@@bThe crest of the dune ridge provides a surprisingly firm surface, packed by years of caravan traffic into something close to a true road.@@N Glasswalk Guide route songs describe this stretch as "the first breath of solid ground after the glass" — a reference to the Saltglass Reach's harder mirror surface giving way briefly to proper dune. To the north, a @@bdark notch in the ridgeline@@N marks where the old cairn station's collapsed structure has left a visible scar. @@bThe eastern horizon is beginning to show the first hints of coastal haze — a white-grey veil that signals the proximity of the sea.@@N The wind here is direct and gritty, carrying both dune dust and the occasional salt particle that leaves white deposits on dark clothing.
+~
+0 10
+D1
+~
+~
+0 -1 14206
+D3
+~
+~
+0 -1 14202
+D0
+~
+~
+0 -1 14208
+E
+dark notch~
+@@bThe dark notch in the ridgeline to the north is the collapsed Cairn Station, a Reach Warden post that handled transit seal verification for the final stretch of the Reach corridor. The structure caved in several years ago; the roof timbers and Saltglass tablet frames are visible from the crest.@@N
+~
+S
+#14206
+@@bCairn Marker Pass@@N~
+@@bA low pass between two dune ridges opens here, marked by a row of stacked cairn stones painted with the Reach Warden's blue-grey survey colour.@@N The cairns are in varying states of maintenance: the westernmost is freshly re-stacked and correctly marked, while the eastern end of the row has been disturbed, with several stones thrown aside and the paint scratched off in patterns that suggest deliberate defacement rather than weather damage. @@yA Glasswalk Guide notation carved into the largest stone reads: BEARING EAST-NORTHEAST — TIDEMOUTH DUNE PASS — REEF VISIBLE AT LOW TIDE — WATER AT SHOREWARD SEAL.@@N The pass is narrow enough that laden pack animals must cross single-file.
+~
+0 10
+D1
+~
+~
+0 -1 14209
+D3
+~
+~
+0 -1 14205
+E
+disturbed cairns~
+@@bThe defaced cairns and scattered stones suggest someone wanted to remove the formal Reach Warden route markers, either to disorient arrivals or to erase evidence of transit seal requirement. The scratched paint reveals old notation beneath — an earlier survey layer using a different measurement system.@@N
+~
+S
+#14207
+@@bSouthern Tidal Flat, Middle Stretch@@N~
+@@lThe tidal flat opens here into its widest section, a broad expanse of grey-tan sand that dries unevenly and catches foot traffic with sudden soft patches.@@N The surface alternates between firm crust and loose wet clay in a pattern that experienced travellers learn to read by colour — the paler sections are dry and walkable, the darker patches are wetter than they appear. @@bSmall transparent crabs dart between burrow mouths at the margins, vanishing when approached.@@N The flat ends to the east where the ground begins to rise toward harder sand and eventually the approach road to the gate. Three long-dead camel carcasses lie in varying stages of decay along the eastern edge, the bones still locked in position as if the animals sat down and refused to continue.
+~
+0 2
+D1
+~
+~
+0 -1 14211
+D3
+~
+~
+0 -1 14204
+S
+#14208
+@@bCollapsed Cairn Station@@N~
+@@yThe Reach Warden station here has been collapsed for long enough that young saltbush has rooted in the debris, its pale stems threading through the broken Saltglass tablet frames.@@N The roof structure came down in a single event — the main ridge beam snapped and pulled the entire assembly inward — and the remains are compressed into a low mound rather than scattered widely. @@yTablet fragments are visible throughout the debris: inventory inspection records, transit seal registers, and what appears to be an overdue ration report addressed to a Warden post three stations back along the Reach.@@N A partial wall still stands to the north, preserving a half-legible Survey-Administrative inscription that once displayed the full transit procedure for arriving caravans. @@bThe collapsed station marks the western edge of what was once the Tidemouth Dune checkpoint zone, before the administrative boundary was moved to the Shoreward Seal.@@N
+~
+0 10
+D2
+~
+~
+0 -1 14205
+E
+tablet fragments~
+@@yThe tablet fragments visible in the debris include portions of transit seal registers, cargo inspection records, and one partially intact ration authorization. The Survey-Administrative notation is compact and formulaic: DATE / CARAVAN ID / TRANSIT SEAL NUMBER / DEPARTURE HEADING. Several tablets show scrape marks suggesting they were altered after being recorded.@@N
+~
+E
+partial wall inscription~
+@@yThe half-legible inscription on the standing wall reads: TIDEMOUTH CHECKPOINT — TRANSIT SEAL MUST BE PRESENTED — SHOREWARD CONVERSION MANDATORY — FAILURE TO COMPLY SUBJECTS CARGO TO CONFISCATION. The lower portion has been weathered away, but the official Survey-Administrative seal is still visible in the upper left corner.@@N
+~
+S
+#14209
+@@bNorthern Path, Scavenger Approach@@N~
+@@bThe northern dune path narrows here as it descends from the ridge crest toward a broad natural hollow sheltered by two converging dune walls.@@N The shelter makes this area unusually quiet — wind passes overhead rather than through it — and the soft sand shows the layered imprint of previous camps. @@bFresh fire ash in a scraped pit, gnawed bone fragments, and the smell of rancid animal fat indicate recent occupation that was not caravan-related.@@N To the north, voices have been heard — not caravan calls, but the shorter, harder speech of people engaged in work rather than travel. The eastern descent from here is gradual, leading down toward the boundary zone.
+~
+0 10
+D1
+~
+~
+0 -1 14214
+D3
+~
+~
+0 -1 14206
+D0
+~
+~
+0 -1 14212
+S
+#14210
+@@bCrab Burrow Field@@N~
+@@lThe tidal flat here is so heavily colonised by tidemouth crabs that the ground is effectively hollow in places — a sheet of crusted sand over a network of burrow tunnels.@@N A wrong step collapses a section of the surface, dropping one leg into a crab chamber where the occupant responds with the instinctive violence of something defending its tunnel. @@bThe crabs themselves are grey-tan, the size of a large boot, with claws that work in a scissors motion designed for seizing and crushing rather than for speed.@@N The smell of the flat is sharper here due to the decomposing organic material the crabs carry into their burrows. Moving through this area slowly and watching for the dark concentric rings that mark burrow exits is the only safe approach.
+~
+0 2
+D2
+~
+~
+0 -1 14204
+S
+#14211
+@@bSouthern Flat, Eastern Shore@@N~
+@@lThe tidal flat ends here at a band of shell grit and compacted sand where the ground firms up enough for reliable footing.@@N The transition from flat to approach ground is marked by a long windrow of dried seagrass and light shell debris blown inland by the prevailing easterly. @@lThe sea smell is strong now — brine and fish oil and the faint sweetness of tide-washed timber.@@N The ground rises gently northward from here, climbing toward the legal boundary zone where the Shoreward Seal marks the transition from Reach jurisdiction to Mafdet authority. Small tide marker poles — short stakes with coloured rags at their tops — are staked into the ground along the windrow at irregular intervals.
+~
+0 2
+D3
+~
+~
+0 -1 14207
+D0
+~
+~
+0 -1 14216
+S
+#14212
+@@bScavenger Ridge Camp@@N~
+@@bThe hollow between dune walls is occupied by a permanent-feeling camp that has accumulated months of debris around its core.@@N A lean-to of salvaged timber and sailcloth leans against the north dune face, and beneath it sits an assortment of sorted salvage: rope coils, damaged packs stripped of usable hardware, and cargo labels cut from crates in bundles tied with twine. @@bThe fire pit is ringed with large stones taken from cairn markers — the Reach Warden paint still visible on several of them.@@N The camp's occupants are clearly monitoring the Tidemouth approach; a watcher's position has been scraped into the dune crest above with a clear sightline to the main trail. This is not a traveller's camp; it is a predator's base.
+~
+0 10
+D1
+~
+~
+0 -1 14213
+D2
+~
+~
+0 -1 14209
+S
+#14213
+@@bScavenger Lookout Post@@N~
+@@bA scraped-out platform on the dune crest serves as the camp's forward observation point, with a clear view westward down the trail toward the Saltglass Reach's eastern terminus.@@N The lookout is equipped with minimal comfort — a folded blanket, a water jug, a pile of thrown stones — but has been used extensively. @@bSignal notches cut into the eastern face of the dune crest connect this position visually to the main camp below, allowing the watcher to track arrivals at the Tidemouth without being seen themselves.@@N The view eastward is also clear: the Shoreward Seal boundary stone is visible as a dark vertical shape against the pale ground.
+~
+0 10
+D3
+~
+~
+0 -1 14212
+S
+#14214
+@@bNorthern Dune, Final Descent@@N~
+@@bThe dune path descends steeply here, the northern dune road losing its ridge elevation as the ground angles toward the open approach zone below.@@N The descent is loose — slipping is easy, especially with a loaded pack — and the footing becomes firmer only at the base, where wind has compacted the sand against a harder underlying layer. @@bScrape marks on the dune face show that previous travellers have carved crude footholds at the steepest section.@@N The approach zone below is visible as a wide flat corridor between the final dune line and the walls of the city beyond. The Shoreward Seal boundary stone is visible to the south.
+~
+0 10
+D1
+~
+~
+0 -1 14215
+D3
+~
+~
+0 -1 14209
+S
+#14215
+@@bShore Approach, Northern Edge@@N~
+@@bThe descent from the dunes meets the broad approach corridor here at its northern margin, where the sand transitions to a firmer, gravelled surface scored by caravan wheel ruts.@@N The full width of the approach zone opens southward from this point — an open, flat expanse with the Shoreward Seal's basalt column visible at its centre. @@bThe sea wind is unobstructed here, arriving from the east with enough force to lean against.@@N The walls of the city are now visible above the horizon, and the sound of the harbor — chains, rigging, and the irregular percussion of timber piers — begins to be audible in the brief pauses between wind gusts.
+~
+0 10
+D2
+~
+~
+0 -1 14216
+D3
+~
+~
+0 -1 14214
+S
+#14216
+@@yThe Shoreward Seal@@N~
+@@yA basalt column stands at the centre of the approach corridor, twice the height of a person and polished smooth on its eastern face.@@N The column is inscribed on four sides in two different legal registers — the western face carries the Survey-Administrative notation of the Saltglass Reach authority, and the eastern face bears the Harbor-Operational Measure Script of Mafdet's Shoreward Compact. Together they define the legal threshold: west of this marker, inland charter law applies; east, maritime contract law governs all cargo obligations. @@yThe inscription on the western face reads: EASTERN LIMIT OF SALTGLASS REACH JURISDICTION — TRANSIT SEALS MUST BE CURRENT — CARAVAN MANIFESTS PRESENTED FOR SHOREWARD CONVERSION AT LANDWARD GATE.@@N @@lThe eastern face in Measure Script reads: SALTWEIGHT STANDARD ASSUMES JURISDICTION — ALL CARGO WEIGHTS RECALIBRATED TO HARBOR MEASURE FROM THIS POINT.@@N The ground around the base of the column has been worn smooth by the feet of travellers stopping to read it, and several small tokens — a bent coin, a cairn chalk stick, a fragment of coloured thread — have been left at its base. The column itself is in excellent repair, recently re-inscribed along the Survey-Administrative face, and has clearly been maintained with deliberate care.
+~
+0 2
+D1
+~
+~
+0 -1 14217
+D0
+~
+~
+0 -1 14215
+D2
+~
+~
+0 -1 14211
+E
+western face inscription~
+@@yThe full Survey-Administrative text on the western face includes a certification clause: ANY CARAVAN TRANSITING WITHOUT CURRENT TRANSIT SEAL IS SUBJECT TO CONFISCATION OF CARGO EQUIVALENT TO OUTSTANDING TOLL LIABILITY — CLAIM DISPUTES ADJUDICATED AT SHOREWARD HOUSE, MAFDET LEDGER QUARTER. The notation style is the formal Reach administrative register, compact and tightly kerned.@@N
+~
+E
+eastern face inscription~
+@@lThe Measure Script on the eastern face continues below the main declaration: HARBOR MEASURE EQUIVALENCES POSTED AT ASSESSMENT COURTYARD — HARBOR CHAIN DESCENDS AT DAWN — SALTWEIGHT STANDARD MAINTAINED BY TIDE LEDGER AUTHORITY. The script is confident and economical, with the practical directness of people who write for working readers, not archivists.@@N
+~
+S
+#14217
+@@bApproach Road, Western Stretch@@N~
+@@bThe approach road proper begins here east of the boundary marker, a prepared surface of tamped gravel and broken shell that has been maintained against the dune winds.@@N The road runs east-west between the boundary and the gate, wide enough for two wagon teams to pass with care. @@yFaded painted markers on stone posts at the road's edge mark intervals, each post carrying a distance notation in the Shoreward Compact's harbor-measure system.@@N The city's walls are now clearly visible ahead, their basalt lower courses darkened with decades of salt spray. The gate tower is unmistakable — wider than the walls flanking it, with a signal lantern housing at the top.
+~
+0 2
+D1
+~
+~
+0 -1 14218
+D3
+~
+~
+0 -1 14216
+S
+#14218
+@@bCaravan Trail, Open Approach@@N~
+@@bThe open section of the approach road feels exposed — wind comes unimpeded off the water to the east, and the flat ground provides no shelter.@@N Several caravans are visible at different distances, each moving at the deliberate pace of loaded animals on uncertain footing. @@bA flock of harbor gulls has settled on the approach road ahead, indifferent to the foot traffic, picking at something scattered across the gravel.@@N The gate is close enough now that individual figures on the gate platform are distinguishable — the dark shapes of guards watching the approach with professional stillness.
+~
+0 2
+D1
+~
+~
+0 -1 14219
+D3
+~
+~
+0 -1 14217
+S
+#14219
+@@bCaravan Rest Hollow@@N~
+@@bA shallow natural depression beside the approach road has been improved with a low stone windbreak, creating a staging area where caravans can wait for gate inspection without blocking the road.@@N The hollow is well-used — the ground is hard-packed and stained with animal waste, and a water trough cut from a single piece of basalt has been placed along the windbreak's inner face. @@yA notice board mounted on a post carries several weathered announcements in multiple scripts: gate hours, Shoreward Conversion fees, and a warning about falsified transit seals.@@N To the south, the remains of the abandoned assessment hall are partially visible over the windbreak edge.
+~
+0 2
+D1
+~
+~
+0 -1 14220
+D3
+~
+~
+0 -1 14218
+D2
+~
+~
+0 -1 14221
+E
+notice board~
+@@yThe notice board's most recent addition, in fresh ink over older text: FALSIFIED TRANSIT SEALS SUBJECT TO IMMEDIATE CARGO CONFISCATION AND BOND LEVY — RED SAND ACCOUNTS DEBT INSTRUMENTS NOT ACCEPTED AS BOND — APPEAL TO SHOREWARD HOUSE WITHIN THREE DAYS OF GATE REFUSAL. An older notice beneath lists current Saltweight conversion rates for the season.@@N
+~
+S
+#14220
+@@bLandward Gate Approach@@N~
+@@bThe final staging area before the gate is a broad cobbled yard where arriving caravans assemble for inspection, their wagons drawn into parallel lines that the gate guards direct into inspection lanes.@@N Animal smell, harness leather, and chalk dust mix with the stronger sea-brine that now comes directly off the harbor beyond the city walls. @@yGate inspection clerks move between wagon teams with folding writing boards, checking transit seals against a master register and marking cargo manifests for Shoreward Conversion.@@N The gate itself is visible ahead, a fortified arch in the basalt wall with its iron-reinforced doors standing open during the day and its inspection lantern lit at all hours. To the north, the ruined toll post is visible on a slight rise.
+~
+0 1
+D1
+~
+~
+0 -1 14223
+D3
+~
+~
+0 -1 14219
+D0
+~
+~
+0 -1 14222
+S
+#14221
+@@bAbandoned Assessment Hall@@N~
+@@bThe old assessment hall is a substantial ruin — thick stone walls still standing to full height on three sides, the fourth collapsed inward across a floor buried in accumulated dune sand.@@N The building predates the current gate structure by at least two generations; its architectural style uses the wider basalt blocks of an earlier quarrying tradition. @@yColumn niches along the inner walls once held standing bronze balance arms for cargo weighing; the niches are empty now, but the anchor bolt holes are still visible and cut to a precision that speaks to the serious commercial purpose this building once served.@@N The transition of the assessment function to the gate customs yard made this building redundant, and it has been abandoned to slow collapse.
+~
+0 1
+D0
+~
+~
+0 -1 14219
+S
+#14222
+@@bAncient Toll Post@@N~
+@@bA tall stone post on a slight rise north of the approach road marks an even older administrative layer — a toll collection point from before the Shoreward Seal system formalized the boundary zone.@@N The post is carved with inscription layers from at least three distinct periods: the bottom section in a pre-Reach notation that only Littoral Branch archivists read confidently, the middle in the older Survey-Administrative register, and the top in the current dual-script format. @@yThe uppermost inscription is still legible: MAFDET APPROACH TOLL — RATES POSTED QUARTERLY BY SHOREWARD COMPACT AUTHORITY.@@N The toll post is no longer in official use, but caravan guides sometimes stop here to orient themselves using the worn direction lines carved into its base.
+~
+0 1
+D2
+~
+~
+0 -1 14220
+S
+#14223
+@@bGate Road, Western Approach@@N~
+@@bThe final section of the approach road is cobbled in a pattern that matches the street cobbling inside the city walls — a deliberate visual continuity that signals to arriving caravaneers that they are already entering Mafdet's jurisdiction even before crossing the threshold.@@N The cobbles are worn smooth at the centre by the grinding of iron wagon wheels, rougher at the edges where foot traffic is lighter. @@bThe gate arch ahead frames a compressed view of the city interior: a slice of city street, wagon wheels, and the corner of a building facade.@@N The gate inspection clerks are positioned to either side, their folding writing boards open, their expressions the practiced neutral of bureaucrats who have seen every variety of caravan irregularity.
+~
+0 1
+D1
+~
+~
+0 -1 14224
+D3
+~
+~
+0 -1 14220
+S
+#14224
+@@yThe Landward Gate of Mafdet@@N~
+@@yThe gate arch is built in the same dark basalt as the wall, but wider and more deeply carved — every surface carries some notation, from the founding charter text inscribed across the lintel in the Survey-Administrative register to the Measure Script harbor-authority seal cut into the keystone.@@N The iron-reinforced doors are massive, each requiring a team of four to swing, and they are held open by chain catches set into the cobble during daylight hours. A signal lantern in a housing above the arch burns day and night, its light calibrated to be visible from the signal tower in the harbor. @@yGate guards occupy posts to either side of the arch, their posture suggesting long practice rather than immediate alert — this is a routine inspection post, not a military position.@@N The air here is a sharply defined boundary of its own: west of the arch, the Reach's dust and mineral smell; east, the city's composite of salt, tar, animal dung, and cooked food. @@lFrom the gate, the view east opens into the lower Carter's Way with its constant caravan traffic and the distant glint of harbor water.@@N The gate represents the full weight of the Shoreward Compact's jurisdictional transition — every obligation, right, and legal standing carried by an incoming caravan is formally reinterpreted here.
+~
+4 1
+D1
+^gate doors~
+~
+1 -1 14225
+D3
+~
+~
+0 -1 14223
+S
+#14225
+@@bGate Checkpoint@@N~
+@@bThe inner side of the gate contains a customs checkpoint where cargo manifests are formally stamped and transit seals are collected.@@N A long table under the gate arch's inner vault holds manifest registration ledgers and a set of Saltweight reference measures used to spot-check declared cargo weights. @@yThe stamps and seals behind the table are organised in a rack by category: transit clearance, Shoreward Conversion confirmation, hazard-class notation, and quarantine referral.@@N The checkpoint guards work efficiently and without warmth — the system is well-practised and leaves little room for confusion or negotiation.
+~
+4 1
+D1
+~
+~
+0 -1 14227
+D3
+^gate doors~
+~
+1 -1 14224
+D2
+~
+~
+0 -1 14226
+S
+#14226
+@@bGuardhouse Alcove@@N~
+@@bThe guardhouse alcove is a recessed chamber in the gate wall where the duty guards maintain their roster materials, spare equipment, and a rotating two-person resting post.@@N Weapon racks hold replacement patrol equipment; a corkboard carries current shift schedules and a standing order from the Harbor Warden commander regarding transit seal forgery procedures. @@bThe alcove smells of boot oil, chalk dust, and the particular staleness of a small room occupied continuously without adequate ventilation.@@N This is strictly a working space, not designed for visitors.
+~
+4 11
+D0
+~
+~
+0 -1 14225
+S
+#14227
+@@bGate Road, Eastern Side@@N~
+@@bEast of the checkpoint, the gate road opens into a short transitional stretch between the inspection point and the Customs Yard, where cleared caravans assemble before dispersing into the city.@@N The cobbles here are in better repair than the approach road — maintained at city expense — and the width narrows slightly where the gate wall's inner face creates a pinch point. @@bThe smell of the city is now dominant: cart grease, coal smoke from the forges to the north, and the salt-wood composite of a working harbor a short distance east.@@N Cleared wagon teams are already visible in the yard ahead, their drivers pulling on harnesses to redirect animals that have gone stubbornly still.
+~
+4 1
+D1
+~
+~
+0 -1 14228
+D3
+~
+~
+0 -1 14225
+S
+#14228
+@@bGate Customs Yard@@N~
+@@bThe Customs Yard is a broad enclosed space just inside the gate, walled on three sides with the gate itself as the fourth, where cleared caravans reorganize before entering the city proper.@@N Wagon teams are repositioned here, cargo is re-lashed after inspection disturbance, and caravan drovers negotiate the order of march with each other in the clipped shorthand of people who have made this journey before. @@yA manifest registration office at the yard's eastern end handles final Shoreward Conversion documentation, staffed by clerks who work standing up and carry their ledgers on leather-bound boards.@@N The Customs Yard marks the last formally controlled space before the open streets of the Carters' Quarter begin.
+~
+4 1
+D1
+~
+~
+0 -1 14229
+D3
+~
+~
+0 -1 14227
+S
+#14229
+@@bCustoms Processing Hall@@N~
+@@bThe Processing Hall is a roofed space adjacent to the Customs Yard where complex manifest disputes and Shoreward Conversion calculations are resolved.@@N Long tables carry reference materials: Saltweight calibration charts, current conversion-ratio tables, and the official Shoreward Compact tariff schedules for the current trading season. @@yA large chalkboard on the eastern wall displays today's conversion rates in summary form, updated each morning by a Ledger House clerk.@@N The hall's business is paperwork — cargo disputes, transit seal discrepancies, and hazard-class reclassification requests — handled with the formal indifference of people who process dozens of identical cases per day.
+~
+0 11
+D1
+~
+~
+0 -1 14230
+D3
+~
+~
+0 -1 14228
+S
+#0

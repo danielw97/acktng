@@ -297,6 +297,19 @@ Builder editor mapping:
 
 - `addreset put <obj-vnum> <container-vnum>` emits reset command `P` with `arg1=<obj-vnum>`, `arg2=0`, and `arg3=<container-vnum>`.
 
+Shop inventory stocking pattern:
+
+- Shop inventory is stocked by issuing `G` resets (give to previous mob) immediately after the `M` reset that spawns the shopkeeper mob.
+- Each `G` reset gives one object type to that shopkeeper; the shopkeeper then sells those items.
+- Use `G 0 <obj_vnum> <limit>` where limit is typically 5 to allow multiple simultaneous copies.
+- Example sequence: `M 0 <keeper_vnum> 1 <room_vnum>` followed by one or more `G 0 <item_vnum> 5` lines.
+
+Door reset both-sides requirement:
+
+- When a door is reset to `closed` (state 1) or `locked` (state 2) via `D`, both sides of the door must be reset with matching `D` commands.
+- For a door between rooms A and B: issue `D 0 <roomA> <dir_to_B> <state>` and `D 0 <roomB> <dir_to_A> <state>`.
+- Both exits must also have the `door` (`EX_ISDOOR`, bit `1`) flag set in their room `D<door>` entries.
+
 Reset vnum validity rule:
 
 - Resets must reference valid vnums for the target type required by the command (room/mobile/object as applicable).
