@@ -31,6 +31,10 @@ AI_SPEC_SRCS = \
 	  ai/spec_rr_charter_keeper.o ai/spec_rr_convoy_marshal.o \
 	  ai/spec_rr_peddler.o ai/spec_rr_shrine_keeper.o ai/spec_rr_ferryman.o \
 	  ai/spec_rr_camp_cook.o ai/spec_rr_pilgrim.o ai/spec_rr_ruin_scavenger.o \
+	  ai/spec_rr_byways_warden.o ai/spec_rr_byways_hermit.o \
+	  ai/spec_rr_byways_innkeeper.o ai/spec_rr_byways_ferryman.o \
+	  ai/spec_rr_byways_scholar.o ai/spec_rr_byways_market.o \
+	  ai/spec_rr_byways_kiess_clerk.o ai/spec_rr_byways_midgaard_guard.o \
 	  ai/spec_reach_warden.o ai/spec_reach_guide.o ai/spec_reach_assessor.o \
 	  ai/spec_reach_outrider.o ai/spec_reach_scavenger.o ai/spec_reach_tidewright.o \
 	  ai/spec_reach_carter.o ai/spec_reach_smuggler.o \
