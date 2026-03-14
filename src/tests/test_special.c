@@ -14,6 +14,7 @@ struct skill_type skill_table[MAX_SKILL];
 bool spec_pyramid_black_sun_shard(CHAR_DATA *ch) { (void)ch; return FALSE; }
 bool spec_keep_elemental_captain(CHAR_DATA *ch) { (void)ch; return FALSE; }
 bool spec_keep_physical_captain(CHAR_DATA *ch) { (void)ch; return FALSE; }
+bool spec_hermit_archon(CHAR_DATA *ch) { (void)ch; return FALSE; }
 bool spec_breath_any(CHAR_DATA *ch) { (void)ch; return FALSE; }
 
 static int g_cast_count = 0;
@@ -163,6 +164,9 @@ static void test_superboss_index_identifies_superbosses(void)
 
     mob.spec_fun = spec_keep_physical_captain;
     assert(spec_superboss_index(&mob) == SUPERBOSS_KEEP_PHYSICAL_CAPTAIN);
+
+    mob.spec_fun = spec_hermit_archon;
+    assert(spec_superboss_index(&mob) == SUPERBOSS_HERMIT_ARCHON);
 
     mob.spec_fun = spec_breath_any;
     assert(spec_superboss_index(&mob) == -1);

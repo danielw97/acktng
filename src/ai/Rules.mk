@@ -32,7 +32,8 @@ AI_SPEC_SRCS = \
 	  ai/spec_rr_peddler.o ai/spec_rr_shrine_keeper.o ai/spec_rr_ferryman.o \
 	  ai/spec_rr_camp_cook.o ai/spec_rr_pilgrim.o ai/spec_rr_ruin_scavenger.o \
 	  ai/spec_pyramid_black_sun_shard.o \
-	  ai/spec_keep_elemental_captain.o
+	  ai/spec_keep_elemental_captain.o \
+	  ai/spec_hermit_archon.o
 
 AI_SUMMON_SRCS = ai/spec_summon_water.o ai/spec_summon_fire.o ai/spec_summon_earth.o \
 	  ai/spec_summon_undead.o ai/spec_summon_holy.o ai/spec_summon_shadow.o \
