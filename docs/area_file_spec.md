@@ -243,6 +243,11 @@ S
 
 Allowed `<obj_fun_name>` values (from `obj_fun_lookup()` in `src/obj_fun.c`):
 
+Builder policy constraints for object-function/flag alignment:
+
+- Any object with `ITEM_LIFESTEALER` in `extra_flags` must also include `ITEM_ANTI_GOOD`.
+- Any object assigned `objfun_healing` in `#OBJFUNS` must include `ITEM_ANTI_EVIL` in `extra_flags`.
+
 - `objfun_giggle`
 - `objfun_cast_fight`
 - `objfun_sword_aggro`

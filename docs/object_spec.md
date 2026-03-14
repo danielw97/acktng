@@ -92,6 +92,8 @@ Area-authored object definitions must **not** set `ITEM_GENERATED`; that flag is
 
 `BOSS` extra-flag usage policy: any item that can drop from a boss mob must include the `BOSS` item extra flag, regardless of how it is delivered (loot-table drop via `l`/`L` or normal equipment/inventory placed through resets).
 
+`LIFESTEALER` extra-flag usage policy: any object that includes `ITEM_LIFESTEALER` must also include `ITEM_ANTI_GOOD`.
+
 - `ITEM_GENERATED` = `1`
 - `ITEM_BIND_EQUIP` = `2`
 - `ITEM_NODISARM` = `4`
@@ -124,6 +126,10 @@ Area-authored object definitions must **not** set `ITEM_GENERATED`; that flag is
 - `ITEM_EXTRA_WAND` = `536870912`
 - `ITEM_FIST` = `1073741824`
 - `ITEM_TWO_HANDED` = `2147483648`
+
+Cross-section policy for object-function alignment:
+
+- Any object assigned `objfun_healing` in `#OBJFUNS` must include `ITEM_ANTI_EVIL` in `extra_flags`.
 
 ### 7.3) Item `wear_flags` bitvector
 
