@@ -217,6 +217,8 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_keep_elemental_captain;
    if (!str_cmp(name, "spec_hermit_archon"))
       return spec_hermit_archon;
+   if (!str_cmp(name, "spec_sanctum_keeper"))
+      return spec_sanctum_keeper;
 
    return 0;
 }
@@ -399,6 +401,8 @@ char *rev_spec_lookup(void *func)
       return "spec_keep_elemental_captain";
    if (func == spec_hermit_archon)
       return "spec_hermit_archon";
+   if (func == spec_sanctum_keeper)
+      return "spec_sanctum_keeper";
 
    return 0;
 }
@@ -484,6 +488,7 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_pyramid_black_sun_shard\n\r");
    strcat(buf, "       spec_keep_elemental_captain\n\r");
    strcat(buf, "       spec_hermit_archon\n\r");
+   strcat(buf, "       spec_sanctum_keeper\n\r");
 
    return;
 }
@@ -500,6 +505,8 @@ void spec_handle_damage(CHAR_DATA *victim, int element, int dam)
       spec_keep_elemental_captain_damage(victim, element, dam);
    if (victim->spec_fun == spec_hermit_archon)
       spec_hermit_archon_damage(victim, element, dam);
+   if (victim->spec_fun == spec_sanctum_keeper)
+      spec_sanctum_keeper_damage(victim, element, dam);
 }
 
 /*
@@ -516,6 +523,8 @@ int spec_superboss_index(CHAR_DATA *mob)
       return SUPERBOSS_KEEP_PHYSICAL_CAPTAIN;
    if (mob->spec_fun == spec_hermit_archon)
       return SUPERBOSS_HERMIT_ARCHON;
+   if (mob->spec_fun == spec_sanctum_keeper)
+      return SUPERBOSS_SANCTUM_KEEPER;
    return -1;
 }
 
