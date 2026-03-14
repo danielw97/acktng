@@ -39,6 +39,11 @@ E
 charter marker slabs~
 The @@Wcharter marker slabs@@N are rectangular stone uprights spaced at regular intervals along the road's edge.  Each bears inscriptions in three eras of script, the oldest barely legible and the newest in crisp Midgaard charter-hand.  The most common text is a jurisdictional declaration: @@W"By order of the Magistrate Ledgerhouse, this road stands under continuous charter authority."@@N  Beneath the newest text, traces of older declarations in unfamiliar script are still faintly visible.
 ~
+D0
+A @@Bcivic road@@N leads north toward the Midgaard outer district.
+~
+~
+0 -1 3595
 S
 #3202
 @@WThe Charter Road@@N~
@@ -87,6 +92,11 @@ E
 three civic oaths~
 The @@BThree Civic Oaths@@N are carved into a polished stone panel set into the warden post wall.  The text reads: @@B"No ward unlit, no traveler uncounted"@@N (the Oath of Light), @@B"No judgment hidden, no sentence unrecorded"@@N (the Oath of Stone), and @@B"No levy taken that cannot be borne"@@N (the Oath of Bread).  The lettering is deep-cut and recently repainted in Midgaard blue.
 ~
+D0
+A @@Wtrack@@N leads north to the warden barracks complex.
+~
+~
+0 -1 3450
 S
 #3204
 @@WRoc Road, Farmland Verge@@N~
@@ -191,6 +201,11 @@ E
 iron bracket~
 The @@Biron bracket@@N is a heavy forged fixture bolted into the signal cairn, designed to hold a tall wooden pole.  Flakes of blue paint cling to the bracket where a @@BLantern Watch@@N standard was once mounted.  Road wardens occasionally hang an oil lantern from it during night patrols, but the original signal system has been defunct for generations.
 ~
+D0
+A @@Wtail path@@N leads north into the Banner Hills ridge.
+~
+~
+0 -1 3470
 S
 #3210
 @@WRoc Road, Three Pennant Rise@@N~
@@ -423,6 +438,11 @@ E
 ledger post~
 The @@yledger post@@N is a wooden stand with a sloped writing shelf and a heavy iron document box bolted to its base.  The box is locked and rusted shut, but the initials of convoy clerks are scratched into the shelf in overlapping layers.  A faded Kiess @@ycompass-and-wall mark@@N is painted on the roof beam, identifying this as an official recording station of the Trade Syndic's route ledger system.
 ~
+D2
+A @@apath@@N leads south to the river ford village.
+~
+~
+0 -1 3485
 S
 #3223
 @@WRoc Road, West of the River@@N~
@@ -532,6 +552,11 @@ The road continues west toward the @@WCrossroads@@N.
 ~
 ~
 0 -1 3229
+D0
+A @@Wdust trail@@N leads north toward the Dustward Waystation.
+~
+~
+0 -1 3505
 S
 #3229
 @@WRoc Road, Approach to the Crossroads@@N~
@@ -614,6 +639,11 @@ E
 toll stone~
 The @@ptoll stone@@N is a monolithic slab of dark granite, taller than a man and twice as wide, its surface layered with carved decrees.  The oldest inscription is in a pre-charter script that refers to @@p"the road tax of the ridge people."@@N  Above it, Midgaard charter text declares formal jurisdiction.  Above that, a Kiess Trade Syndic proclamation asserts convoy-compact authority over commercial traffic.  The most recent addition is a military commandant's requisition order from the Ash-and-Iron Decades, never officially rescinded.
 ~
+D2
+A @@ytrack@@N leads south to the crossroads open market.
+~
+~
+0 -1 3540
 S
 #3233
 @@WRoc Road, Crossroads West@@N~
@@ -759,6 +789,11 @@ E
 convoy insurance post~
 The @@yconvoy insurance post@@N is a roofed wooden stand displaying current rate schedules for convoy compact insurance.  The rates vary by cargo type, declared value, and escort strength.  A locked iron box at the base holds blank waiver forms.  The Kiess @@ycompass-and-wall mark@@N is prominently displayed, and a smaller notice in Midgaard charter-hand acknowledges the post's authority @@y"within the terms of Emergency Compact Twelve."@@N
 ~
+D0
+A @@ybroad road@@N leads north to the outer district of Kiess.
+~
+~
+0 -1 3560
 S
 #3241
 @@WRoc Road, Kiess Outerwall Sight@@N~
@@ -819,6 +854,11 @@ E
 weathered stone~
 The @@pweathered stone@@N is a flat slab of dark granite set into the road's edge at ground level.  The name @@p"Evermeet"@@N is carved deep into the stone in a formal script, its letters still crisp despite centuries of wear.  Over this, the name @@y"Kiess"@@N has been painted in bold trade notation, renewed regularly.  The layering tells the road's western history: a fortified city fell, a trade city rose on its foundations, and the road that connected both to the east endured through the change.
 ~
+D5
+A @@pcrack@@N in the road foundation leads down into the Evermeet underfoundation.
+~
+~
+0 -1 3575
 S
 #3244
 @@GA Small Forest Path@@N~
@@ -895,6 +935,11 @@ E
 herb garden~
 The @@Gherb garden@@N grows in the sheltered center of the stone ring, its plants arranged in deliberate rows.  Elfwort, yellowcap, and feverfew grow beside varieties that resist identification.  Someone tends this garden still — the soil is recently turned and the plants are pruned — though no gardener is visible.
 ~
+D5
+A @@Gcrevice@@N in the clearing floor leads down into the forest hollow below.
+~
+~
+0 -1 3520
 S
 #3248
 @@GA Forest Path, Deep Spur@@N~
@@ -1137,6 +1182,11 @@ The @@Wcave@@N above is accessible through the sinkhole opening.
 ~
 ~
 0 -1 3260
+D5
+A @@alower passage@@N descends into the Inlet cave network below.
+~
+~
+0 -1 3615
 S
 #3262
 @@pRoc Road, Dusty Wastes@@N~
