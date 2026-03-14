@@ -349,6 +349,58 @@ The most politically significant annual event of the Founder's Reckoning is the 
 
 - **When a Promise Stone cracks, the neighborhood where it stands must repair it within one season** — not because the Bloom Council requires it (though they do) but because a cracked Promise Stone left unrepaired means the neighborhood no longer believes the promise. No neighborhood wants that said about it publicly, regardless of what they believe privately.
 
+---
+
+## VII. Political Structure and Social Reality
+
+### The Bloom Council
+
+The Bloom Council is the heir to the founding stewardship doctrine — the nominal government of Rakuen, charged with maintaining the Southward Compact's self-governance provisions and presiding over public ceremonies. Its formal authority covers charter interpretation, civic ceremony, external diplomatic correspondence (including the three annexation petitions), and the appointment of Garden Ledger Clerks to their archive positions.
+
+What the Bloom Council does not formally control: ration allocation (Ember Wardens), neighborhood-level governance (Canopy Compacts), route authority (Dispatch Houses and guide-compact networks), and the day-to-day emergency decisions that constitute most of what actually governs Rakuen's residents.
+
+The Council has eleven seats, filled by rotating stewardship terms of four years with a two-term maximum before mandatory rotation. The rotating maximum was the founding generation's anti-dynastic safeguard; in practice, former stewards serve as "senior counsel" in an advisory capacity that carries significant informal authority and no term limits. The class of permanent senior counsel is exactly the institutional capture that Solen's rotating-stewardship principle was designed to prevent.
+
+Current Senior Steward: **Yven Callast**, a Preservation Coalition member who has held the Stewardship seat through one full term and is in the middle of a second. Callast is widely understood to be the last Preservation Coalition steward likely to hold the position — the Amendment Track has enough council plurality to take the Stewardship at the next rotation. She is managing a transition she considers a capitulation and doing it with enough administrative competence that her opponents respect her even as they outmaneuver her.
+
+### The Ember Wardens
+
+Rakuen's disaster-response corps, claiming institutional descent from Orn Fallsbridge's path-warden tradition. In practice, the Ember Wardens are the functional government of Rakuen under the permanent emergency governance protocols that have been continuously renewed since the first Ashfall Monsoon.
+
+The Wardens manage: all seven Causeway Quarter ration towers, floodwall inspection and maintenance, canopy-strike fire response, ash-clear labor drafts, route security requests for the Near Corridor, and salvage-court emergency adjudication for declared crisis seasons. This is a substantial administrative apparatus. The Wardens also conduct the twice-daily market patrol that is nominally about ration-tower security and functionally about civil order in the city's most crowded space.
+
+Warden Commander: **Brek Sallows**, a former Canopy Workshop compact-warden who moved into Ember Warden service after a flood killed four Workshop colleagues whose deaths he considers attributable to inadequate early-warning infrastructure. Sallows has no political faction and has refused recruitment by all three. He is trusted by almost everyone and liked by almost no one, which he considers evidence he is doing the job correctly. He supports the Amendment Track position privately but will not say so publicly because he considers it outside the Wardens' institutional scope.
+
+### The Garden Ledger Clerks
+
+Rakuen's public-accounting officials and, in practice, its most politically contentious institution. The Garden Ledger is the city's founding accountability mechanism: every resource allocation, arrival registration, labor-draft assignment, and emergency declaration goes into the Ledger. The Clerks maintain the records with a commitment to completeness that other institutions find inconvenient.
+
+The Clerks' archive contains: the full original Garden Ledger from Year 1 (partially damaged by flood and fire but largely intact), the Dunnmark Letters (including the suppressed passages), all three annexation petition submissions and refusals, the Kel'Shadra witnessing office correspondence (filed and accessible under the Violet Compact records — the Clerks never agreed to seal it), and fourteen years of Ledger Vigil challenge registers that document every significant dispute between official Bloom Council positions and resident-reported reality.
+
+Head Clerk: **Senne Arrath**, who has held the position for nine years and shows no interest in the mandatory-rotation principle because the Bloom Council technically appoints Head Clerks and has never tried to remove her. Arrath is the Amendment Track's most useful intellectual resource and its most frustrating ally: she will give any faction access to any record they are entitled to see, which means she gives everyone ammunition and controls none of the targeting.
+
+### The Canopy Compacts
+
+Rakuen's neighborhood mutual-aid leagues, which have evolved from welfare-sharing groups into the de facto local governments for their districts. There are nine active Compacts covering Rakuen's inhabited areas, plus two dormant Compacts for partially abandoned lower-terrace neighborhoods that technically still hold their charter status.
+
+Each Compact manages: neighborhood water-sharing arrangements, voluntary labor pools for maintenance tasks, informal dispute resolution through circle-mediation (the founding model's only functional survivor at scale), local fire-watch and flood-watch rosters, and — most importantly — the network of route contracts with Woodland guide-compact operators that ensure each neighborhood's supply lines remain functional.
+
+The Compacts vary significantly in character. The Canopy Workshop Compact is the wealthiest and most politically independent. The Lower Terrace Compact is the most disaster-affected and most politically volatile — it is the primary source of Honest Ledger movement membership. The Upper Ring Compact is the most conservative and most closely aligned with the Bloom Council.
+
+The Compacts are the institution that most closely resembles what Verath Solen intended. They are also the institution that Midgaard has the least understanding of, because they are not documented in registry formats Midgaard recognizes and their authority derives from social trust rather than charter grant. In the Iron Compact Appeal, Colwen Dast's Integration Compact proposal did not include the Canopy Compacts in the district-council framework, which the Compacts considered an inadvertent revelation of how little the Bloom Council understood its own city. Several Compact leaders believe this omission was a significant reason the Appeal failed — that Midgaard read it and saw a governance structure without coherent local authority, because the local authority was invisible to the petition's format.
+
+### The Factional Map in Practice
+
+The three major positions — Amendment Track, Quiet Separatists, Preservation Coalition — do not map cleanly onto institutions:
+
+- The **Bloom Council** is currently Preservation Coalition-controlled but trending Amendment Track. Its next rotation will likely shift the balance.
+- The **Ember Wardens** are officially apolitical. In practice, Warden Commander Sallows's operational choices align with Amendment Track priorities: he has spent two years quietly building the documentation case that Midgaard's subsidy pipeline is structurally insufficient, which is the Amendment Track's central argument.
+- The **Garden Ledger Clerks** are institutionally non-partisan but provide disproportionate documentary support to Amendment Track and Honest Ledger positions because accurate records, when read clearly, tend to support the faction that advocates for honest accounting.
+- The **Canopy Compacts** split across all three positions by neighborhood, with the Workshop Compact and Upper Ring Compact leaning Quiet Separatist and the Lower Terrace and Causeway Compacts leaning Amendment Track.
+
+The political map is fluid enough that no faction can govern alone and stable enough that coalition-building is permanent, exhausting, and necessary.
+
+
 
 
 
