@@ -49,7 +49,8 @@ This plan rebuilds the woodland as Midgaard's unstable southern corridor and Rak
 24. Strong non-boss elites must include `solo` (`33554432`).
 25. Within each sub-region, non-sentinel mobs must be confined by `sentinel` flag or `no_mob` room walls so they cannot wander out of their sub-region.
 26. No builder-set `invasion` flag (`536870912`); this is a runtime-only flag.
-27. Do not set `AFF_VAMP_HEALING` (`33554432`) in `affected_by` on any mob in area files.
+27. Mobs intended to appear only during daytime must include `day_only` (`2147483648`) in `act`; mobs intended to appear only during nighttime must include `night_only` (`4294967296`). Do not set both simultaneously (runtime treats both-set as unrestricted). Time-gated mobs in Eccentric Woodland (e.g., nighttime ambush bands, daytime patrol wardens) must use these flags rather than relying on description text alone.
+28. Do not set `AFF_VAMP_HEALING` (`33554432`) in `affected_by` on any mob in area files.
 28. Every object must include `take` (`8388608`) in `wear_flags`.
 29. No object may include `clan_colors` (`16777216`) in `wear_flags`.
 30. Loot-table items must have `ITEM_LOOT` (`67108864`) in `extra_flags`; any item that can drop from a boss must also have `ITEM_BOSS` (`134217728`).
@@ -210,6 +211,7 @@ Traversal target: average full clear 70-95 minutes at-level; efficient route 40-
 - Stationary mobs (guards, questgivers, vendors): add `sentinel` (`2`).
 - Strong non-boss elites: add `solo` (`33554432`).
 - Do not set `invasion` (`536870912`) — runtime-only.
+- Time-gated mobs (nighttime ambush bands, daytime patrol wardens): set `day_only` (`2147483648`) or `night_only` (`4294967296`) as appropriate. Do not set both flags simultaneously.
 - Sub-region containment: every mob in a sub-region must be either flagged `sentinel` or confined by `no_mob`-flagged room walls, so mobs cannot wander outside their designated sub-zone.
 
 ### Boss Ladder (5 bosses)
@@ -351,6 +353,7 @@ The Bell-Eater Stag (7385) is an apex boss without a dedicated standalone quest 
 - [ ] Bosses include `sentinel` + `boss`, placed only in `no_mob` rooms.
 - [ ] Strong non-boss elites include `solo`.
 - [ ] Sub-region mobs are sentinel-flagged or enclosed by `no_mob` walls.
+- [ ] Time-gated mobs use `day_only` or `night_only` act flags; neither flag sets both simultaneously.
 - [ ] No `AFF_VAMP_HEALING` set in any `affected_by` field.
 
 ### Objects
