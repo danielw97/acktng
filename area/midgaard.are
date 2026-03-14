@@ -7952,7 +7952,7 @@ G 0 3071 100
 
 M 0 3006 1 3049       A Captain (selling boats) at Levee
 
-M 0 3007 1 3050       Sailor training in the warehouse
+M 0 3007 1 3050       Stevedore at levee warehouse
 
 M 0 3046 1 3048       Filthy (bartender) in Grubby Inn 
 
@@ -8106,15 +8106,11 @@ E 0 3034 99 5           vest
 
 E 0 3018 99 13           belt
 
-M 0 3063 5 3026       A Mercenary (at Dark Alley)
+M 0 3063 2 3022       City messenger at Silver Marketwalk
 
-E 0 3021 100 16            wields a shortsword
+M 0 3064 2 3050       Harbor hand at Levee
 
-M 0 3064 3 3007       A Happy Drunk (at Inn)
-
-M 0 3065 2 3044       A Beggar in poor alley
-
-M 0 3065 2 3048       A Beggar in Grubby Inn
+M 0 3065 1 3022       Street physician at Silver Marketwalk
 
 M 0 3062 15 3024      The Cute Little Doggy Fido (at Poor Alley)
 
@@ -8124,7 +8120,7 @@ M 0 3062 15 3016      The Cute Little Doggy Fido (at Main Street)
 
 M 0 3062 15 3012      The Cute Little Doggy Fido (at Main Street)
 
-M 0 3066 1 3026       The Alley Cat (at Dark Alley)
+M 0 3066 1 3026       Watch constable at Dark Alley
 
 M 0 3061 5 3006       The janitor (at Inn Entrance)
 
@@ -8152,15 +8148,15 @@ M 0 3120 1 3106       Sexton in Park Cafe
 
 G 0 3121 2               A rusty old key (to graveyard)
 
-M 0 3121 1 3114       Swan in Pond
+M 0 3121 1 3109       Park groundskeeper at Park
 
-M 0 3122 1 3114       Duckling in Pond
+M 0 3122 1 3114       Fountain tender at Pond
 
-M 0 3123 1 3109       Sparrow in Park
+M 0 3123 1 3113       Street musician at Park
 
-M 0 3124 2 3113       Duck 1 in Park
+M 0 3124 1 3001       Flower seller at Cedar Square
 
-M 0 3124 2 3115       Duck 2 in Park
+M 0 3124 1 3113       Flower seller at Park
 
 M 0 3140 1 3142       Captain of the Guard in H.Q.
 
@@ -8168,13 +8164,9 @@ G 0 3122 2               Give Captain A wooden key to the desk.
 
 G 0 3137 2               Give Captain A steel key to the jail.
 
-M 0 3141 4 3142       Mad Guard in H.Q.
+M 0 3141 2 3142       Duty sergeant in H.Q.
 
-M 0 3141 4 3142       Mad Guard in H.Q.
-
-M 0 3141 4 3142       Mad Guard in H.Q.
-
-M 0 3141 4 3142       Mad Guard in H.Q.
+M 0 3141 2 3142       Duty sergeant in H.Q.
 
 O 0 3130 1 3142       Load the desk
 
@@ -8326,7 +8318,7 @@ E 0 3016 99 1           signet ring
 
 E 0 3037 199 16         sword
 
-M 0 3144 1 3120       Town Crier
+M 0 3144 1 3120       Posting clerk at Notice Board
 
 O 0 3047 0 3037 (null)
 
@@ -8336,11 +8328,9 @@ E 0 3038 0 16 (null)
 
 O 0 3135 0 3086 (null)
 
-M 0 3099 1 3002 (null)
+M 0 3099 1 3002       Records keeper at civic archives
 
-M 0 3066 2 3046 (null)
-
-M 0 3066 3 3047 (null)
+M 0 3066 1 3003       Watch constable at Crimson Concourse
 
 M 0 3012 1 3054 (null)
 
@@ -8351,6 +8341,20 @@ O 0 3049 0 3056 (null)
 O 0 3052 0 3062 (null)
 
 O 0 3014 0 3025 (null)
+
+M 0 3001 1 3001       Bread seller at Cedar Square
+
+M 0 3008 1 3035       Kennel keeper at pet shop
+
+M 0 3090 2 3137       Apprentice scribe at town hall
+
+M 0 3091 2 3020       Civic courier at Main Street
+
+M 0 3092 2 3044       Night-soil carter at Poor Alley
+
+M 0 3093 2 3003       Water carrier at Crimson Concourse
+
+M 0 3094 2 3016       Pipe inspector at Verdant Causeway
 
 M 0 3015 1 3121       The Postmaster
 
@@ -8580,5 +8584,24 @@ M 3164 spec_lay_sister
 M 3165 spec_laborer
 M 3166 spec_vendor
 M 3167 spec_warden
+M 3001 spec_vendor
+M 3007 spec_harbor_hand
+M 3008 spec_vendor
+M 3063 spec_city_messenger
+M 3064 spec_harbor_hand
+M 3065 spec_cast_adept
+M 3066 spec_policeman
+M 3090 spec_laborer
+M 3091 spec_laborer
+M 3092 spec_laborer
+M 3093 spec_laborer
+M 3094 spec_laborer
+M 3099 spec_records_keeper
+M 3121 spec_park_keeper
+M 3122 spec_laborer
+M 3123 spec_vendor
+M 3124 spec_vendor
+M 3141 spec_policeman
+M 3144 spec_posting_clerk
 S
 #$
