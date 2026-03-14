@@ -334,6 +334,13 @@ Tie Midgaard’s updated narrative to the established world plans without changi
 - **Southern continuity band:** Midgaard, the Eccentric Woodland, the Kel'Shadra crypt route, and Sepulchur Pasture should be treated as one connected narrative zone of declining administrative certainty. Room and NPC text can reinforce this by sharing motifs (variance reports, disputed witness accounts, reused civic notices, and oath language fraying under stress).
 - **Institutional contrast function:** The Woodland helps explain Midgaard's strategic hierarchy: resources are concentrated on corridors with high interstate or trade consequence (Roc Road, northern charter routes), while chronic local hazards are triaged through warning, documentation, and liability management.
 
+### Rakuen (deep south via Eccentric Woodland)
+- **Peripheral partner city, not annexed district:** Rakuen originated as a southward settlement project tied to Midgaard's founding and reform-era overflow management. It is politically adjacent to Midgaard history but never fully integrated into Midgaard enforcement depth.
+- **Access dependency through unstable corridor:** All official support to Rakuen is mediated by Southern Wild Gate administration plus Eccentric Woodland route conditions, producing chronic mismatch between "route open" paperwork and material delivery.
+- **Cinderteeth-era liability dispute:** During Ashfall Monsoon years tied to Cinderteeth eruptions, Midgaard classified several Rakuen aid failures as route-variance events rather than civic obligation breaches; this remains a live archive and tribunal controversy.
+- **Archive-politics relevance:** Rakuen's Garden Ledger-style records are key evidence in modern Continuity-vs-Reckoning arguments about whether Midgaard exported social risk south under humanitarian language.
+- **Strategic asymmetry:** Midgaard funds heavily chartered corridors (north/west) while treating Rakuen support as contingency expenditure, reinforcing canon themes of triage governance and managed liability.
+
 ### Integration Methods
 Embed cross-area references through:
 - **Room inscriptions and plaques:** carved names, dates, and treaty references in civic architecture.
