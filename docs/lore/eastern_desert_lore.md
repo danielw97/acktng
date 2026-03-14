@@ -295,3 +295,11 @@ While the area engine does not natively support time-of-day room description var
 - **Seasonal markers**: inscription fragments should reference the three seasons of the old desert calendar — **Flood** (when the Iseth Reach ran), **Measure** (the dry productive season when surveys and construction occurred), and **Ash** (the dormant season when all but emergency travel ceased). These seasons no longer correspond to actual climate variation, but the Synod still observes them ritually.
 
 ---
+
+---
+
+## Scorching Sands Cross-Reference
+
+Scorching Sands is canonically an east-southeastern Eastern Desert subregion, but detailed treatment (placement heuristics, faction doctrine, the Scorch Clause, and landmark-level authoring guidance) is maintained in `docs/lore/scorching_sands_lore.md`.
+
+Within this file, keep references minimal: Scorching Sands should be mentioned only when explaining eastbound progression from charter-road interior zones toward Saltglass Reach conversion corridors.
