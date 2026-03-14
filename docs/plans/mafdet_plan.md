@@ -151,19 +151,25 @@ Sub-region boundary: rooms 14224 (no_mob) and 14228 (no_mob) prevent approach-zo
 
 ### District B: Carters' Yard & Market Streets (14230-14264, 35 rooms)
 
-**Theme:** The Sand-Sea Carters' Guild's operational headquarters and the commercial strip that connects the gate to the city interior. Noisy, dusty, and crowded — the smell of draft animals, leather, and chalky Reach dust mixes with the first hints of salt air from the harbor. The Guild controls throughput; the Red Sand Accounts watch for distressed cargo to acquire.
+**Theme:** The Sand-Sea Carters' Guild's operational headquarters and the commercial strip that connects the gate to the city interior. Noisy, dusty, and crowded — the smell of draft animals, leather, and chalky Reach dust mixes with the first hints of salt air from the harbor. The Guild controls throughput; the Red Sand Accounts watch for distressed cargo to acquire. This district houses most of Mafdet's essential services — the shops, inn, quartermaster, and postmaster that sustain both caravans and harbor operations.
 
 **Sector types:** city (1) for streets/yards, inside (11) for buildings.
 
-**Layout concept:** A broad main road (the Carter's Way) runs east from the gate toward the harbor, with the Carters' Yard sprawling to the north and a market bazaar branching to the south. Side streets create a loose grid in this district, but building footprints break the regularity. The Yard has a stable compound, harness workshops, and a waystation depot.
+**Layout concept:** A broad main road (the Carter's Way) runs east from the gate toward the harbor, with the Carters' Yard sprawling to the north and a market bazaar branching to the south. Side streets create a loose grid in this district, but building footprints break the regularity. The Yard has a stable compound, harness workshops, and a waystation depot. Service buildings branch off as dead-end interiors from adjacent street rooms, each with exactly one bi-directional exit.
 
 Key anchors:
 - `14230` **Carter's Way, Western End** (main road beginning, dust and noise).
+- `14232` **Postmaster's Hall** (inside, safe, dead-end from 14230; mail and courier dispatch, sentinel postman NPC).
 - `14234` **Sand-Sea Carters' Guild Hall** (Guild headquarters, inside, sentinel NPCs, extra descriptions for guild charter and waystation maps).
+- `14236` **Quartermaster's Depot** (inside, safe, dead-end from 14234; expedition and patrol supplies, sentinel quartermaster NPC).
 - `14238` **Caravan Assembly Yard** (open staging area, draft animals, wagon repair).
+- `14240` **The Saltwind Inn** (inside, safe, dead-end from 14238; lodging for arriving caravaneers and departing sailors, sentinel innkeeper NPC, 5+ sentences, extra descriptions for a painted harbor map mural and a traveler's notice board).
 - `14242` **Red Sand Accounts Field Office** (inside, Red Sand broker NPC, ominous legal documents visible).
+- `14244` **Ironwright's Forge** (inside, safe, dead-end from 14246; weapon shop, sentinel weaponsmith NPC, caravan blades and harbor cutlasses).
 - `14246` **Market of the Shoreward Tables** (open-air bazaar, stone conversion-ratio charts mounted on walls, 5+ sentences).
+- `14248` **Shoreward Armory** (inside, safe, dead-end from 14246; armor shop, sentinel armorer NPC, salt-resistant leathers and maritime plate).
 - `14250` **Provisioner's Row** (food, water, and travel supplies).
+- `14252` **Reach Provisions** (inside, safe, dead-end from 14250; general goods shop, sentinel provisioner NPC, caravan staples and glasswalk equipment).
 - `14254` **Waystation Supply Depot** (Guild emergency stores, glasswalk shoes, cached water).
 - `14258` **Carter's Way, Eastern End** (transition toward Ledger Quarter, salt air strengthening).
 - `14262` **Southern Market Alley** (narrow commercial lane, pickpocket danger).
@@ -178,7 +184,9 @@ Key anchors:
 
 Key anchors:
 - `14265` **Ledger Quarter Gate** (entry from Carter's Way, thick walls, wind baffles).
+- `14267` **Bank of the Strandline Compact** (inside, safe, dead-end from 14265; sentinel banker NPC with `bank` act flag, gilt-bronze strongboxes and ledger-sealed deposit vaults, extra descriptions for Saltweight coinage standards).
 - `14269` **Tide Ledger Hall** (largest Ledger House, inside, 5+ sentences, extra descriptions for Saltweight reference scales and calibration marks).
+- `14271` **Hazard Scribe's Reagent Archive** (inside, safe, dead-end from 14273; magic shop, sentinel mage-merchant NPC, arcane reagents and Quarantine-grade containment supplies).
 - `14273` **Shoreward House** (inland-maritime conversion specialists, inside, bilingual legal inscriptions).
 - `14277` **Assessment Courtyard** (central open space, bronze scales, cargo weighing, 5+ sentences).
 - `14281` **Storm Ledger Vault** (bonded escrow storage, inside, locked door requiring Storm Ledger Key).
@@ -198,6 +206,7 @@ Key anchors:
 
 Key anchors:
 - `14305` **Harbor Gate** (entry from Ledger Quarter, first full view of the cove, 5+ sentences).
+- `14307` **Harbor Healer's Station** (inside, safe, dead-end from 14305; sentinel healer NPC with `heal` act flag, a triage room for injured dockworkers and arriving caravaneers, coral-lime walls and bundles of dried coastal herbs).
 - `14309` **North Pier, Cargo Loading** (timber on stone, Strand Folk basalt visible at low waterline).
 - `14313` **Commercial Quay** (bulk cargo transfer, Saltweight verification point).
 - `14317` **Harbormaster's Office** (inside, sentinel NPC, Harbor Register, 5+ sentences).
@@ -250,6 +259,152 @@ Key anchors:
 
 ---
 
+## Shop + Service Requirements
+
+All service rooms below are **inside-sector** (`sector_type = 11`) rooms flagged **safe** (`room_flags = 1024`) with exactly one bi-directional exit to one cardinally adjacent street room. No service room has more than one connecting direction. All service-to-street connections are between cardinally adjacent rooms.
+
+### Service Room Table
+
+| Service Room Vnum | Room Name | Street Room Vnum | Direction from Street | Service Role |
+|---|---|---|---|---|
+| 14232 | Postmaster's Hall | 14230 | east | Postmaster (mail/courier) |
+| 14236 | Quartermaster's Depot | 14234 | east | Quartermaster (supplies) |
+| 14240 | The Saltwind Inn | 14238 | south | Innkeeper (rent/save) |
+| 14244 | Ironwright's Forge | 14246 | west | Weapon shop |
+| 14248 | Shoreward Armory | 14246 | east | Armor shop |
+| 14252 | Reach Provisions | 14250 | south | General goods shop |
+| 14267 | Bank of the Strandline Compact | 14265 | south | Banker |
+| 14271 | Hazard Scribe's Reagent Archive | 14273 | west | Magic shop |
+| 14307 | Harbor Healer's Station | 14305 | south | Healer |
+
+**Rule:** No shop/service room has more than one connecting direction. All are dead-end interiors accessed from a single adjacent street/yard room.
+
+### Service NPC Definitions (all level 150, all flagged `is_npc|sentinel|stay_area`)
+
+**Act flag reference values:** `is_npc`=1, `sentinel`=2, `stay_area`=64, `bank`=32768, `heal`=4096, `postman`=524288.
+
+| Mob Vnum | Name | Level | Room | Act Flags | Service Role | Notes |
+|---|---|---|---|---|---|---|
+| 14200 | the Postmaster of Mafdet | 150 | 14232 | is_npc, sentinel, stay_area, postman | Postmaster | Mail and courier dispatch; handles Reach-to-harbor correspondence |
+| 14201 | the Quartermaster of Mafdet | 150 | 14236 | is_npc, sentinel, stay_area | Quartermaster | Expedition and patrol supplies |
+| 14202 | the Innkeeper of the Saltwind | 150 | 14240 | is_npc, sentinel, stay_area | Innkeeper | Rent/save services; rooms for arriving caravaneers |
+| 14203 | a Mafdet ironwright | 150 | 14244 | is_npc, sentinel, stay_area | Weapon shop | Forges caravan blades and harbor cutlasses |
+| 14204 | a Shoreward armorer | 150 | 14248 | is_npc, sentinel, stay_area | Armor shop | Salt-resistant leathers and maritime plate |
+| 14205 | a Reach provisioner | 150 | 14252 | is_npc, sentinel, stay_area | General goods shop | Caravan staples, glasswalk equipment, trail rations |
+| 14206 | a Strandline Compact banker | 150 | 14267 | is_npc, sentinel, stay_area, bank | Banker | Deposits and currency exchange under Compact authority |
+| 14207 | a Hazard Scribe reagent dealer | 150 | 14271 | is_npc, sentinel, stay_area | Magic shop | Arcane reagents and containment-grade materials |
+| 14208 | the Harbor Healer of Mafdet | 150 | 14307 | is_npc, sentinel, stay_area, heal | Healer | Triage for dockworkers, sailors, and caravan wounded |
+
+### Shops Plan
+
+| Keeper Vnum | Room | Buy Types | Profit Buy | Profit Sell | Open | Close | Notes |
+|---|---|---|---|---|---|---|---|
+| 14203 | 14244 | 5 0 0 0 0 | 120 | 80 | 0 | 23 | Weapon shop — buys weapons (ITEM_WEAPON=5) |
+| 14204 | 14248 | 9 0 0 0 0 | 120 | 80 | 0 | 23 | Armor shop — buys armor (ITEM_ARMOR=9) |
+| 14205 | 14252 | 0 0 0 0 0 | 120 | 80 | 0 | 23 | General shop — buys anything |
+| 14207 | 14271 | 2 4 10 0 0 | 130 | 70 | 0 | 23 | Magic shop — buys scrolls (2), staves (4), potions (10) |
+
+All shops open 24 hours. Profit buy/sell values: 120/80 standard rates; magic shop uses 130/70 reflecting arcane rarity.
+
+### Shop Inventory Plan (thematic stock targets, all levels multiples of 5)
+
+#### 14244 — Ironwright's Forge (Weapon Shop, 16 items, levels 55-80)
+- Reach Road Caravan Knife (Lv 55)
+- Tidemouth Trail Machete (Lv 55)
+- Carter's Way Shortsword (Lv 60)
+- Glasswalk Guide's Staff (Lv 60)
+- Harness-Hook Flail (Lv 65)
+- Salt-Crusted Cutlass (Lv 65)
+- Harbor Loading Gaff (Lv 70)
+- Shoreward Assessor's Mace (Lv 70)
+- Cairn Scavenger's Pry Blade (Lv 75)
+- Quay Concord Boarding Axe (Lv 75)
+- Red Sand Enforcer's Rapier (Lv 75)
+- Warden Patrol Halberd (Lv 80)
+- Breakwater Watch Trident (Lv 80)
+- Strandline Compact Pike (Lv 80)
+- Tide Ledger Seal Hammer (Lv 80)
+- Ironwright's Masterwork Falchion (Lv 80)
+
+#### 14248 — Shoreward Armory (Armor Shop, 16 items, levels 55-80)
+- Glasswalk Chitin Sandals (Lv 55)
+- Tidemouth Salt-Leather Vest (Lv 55)
+- Carter's Dust-Guard Cloak (Lv 60)
+- Reach Warden Patrol Bracers (Lv 60)
+- Sand-Sea Guild Travel Helm (Lv 65)
+- Tar-Sealed Harbor Coat (Lv 65)
+- Shoreward Conversion Buckler (Lv 70)
+- Assessment Yard Scale Vest (Lv 70)
+- Storm Ledger Iron Greaves (Lv 75)
+- Quay Concord Bosun Shield (Lv 75)
+- Harbor Warden Half-Plate (Lv 75)
+- Quarantine Handler's Gauntlets (Lv 80)
+- Tidewall Barnacle-Plate Boots (Lv 80)
+- Compact Authority Kite Shield (Lv 80)
+- Breakwater Watch Gorget (Lv 80)
+- Shoreward Armorer's Masterwork Cuirass (Lv 80)
+
+#### 14252 — Reach Provisions (General Goods Shop, 18 items, levels 55-80)
+- Salt-Dried Trail Rations (Lv 55)
+- Reach Road Waterskin (Lv 55)
+- Glasswalk Shoe Repair Kit (Lv 60)
+- Tidemouth Crab-Gut Rope Coil (Lv 60)
+- Cairn Station Chalk Bundle (Lv 65)
+- Carter's Signal Whistle (Lv 65)
+- Harbor-Grade Lantern Oil (Lv 65)
+- Ledger Wax Seal Kit (Lv 70)
+- Shoreward Table Reference Card (Lv 70)
+- Quarantine Containment Pouch (Lv 70)
+- Storm Escrow Receipt Case (Lv 75)
+- Saltweight Calibration Token (Lv 75)
+- Harbor Chain Grease Pot (Lv 75)
+- Draft-Depth Sounding Line (Lv 80)
+- Signal Tower Lens Cloth (Lv 80)
+- Strand Folk Navigation Chart (Lv 80)
+- Compact Authority Travel Pass (Lv 80)
+- Reach Provisions Field Pack (Lv 80)
+
+#### 14271 — Hazard Scribe's Reagent Archive (Magic Shop, 16 items, levels 55-80)
+- Littoral Branch Inscription Ink (Lv 55)
+- Tidal Measure Chalk Stick (Lv 55)
+- Glasswind Shard Focus (Lv 60)
+- Keeper-Era Barometric Vial (Lv 60)
+- Shoreward Conversion Scroll (Lv 65)
+- Quarantine Detection Charm (Lv 65)
+- Tide Obelisk Glyph Rubbing (Lv 70)
+- Storm Warning Rune Stone (Lv 70)
+- Hazard Scribe's Assessment Lens (Lv 75)
+- Containment Class Seal Ring (Lv 75)
+- Littoral Branch Translation Folio (Lv 75)
+- Eclipse-Ward Talisman (Lv 80)
+- Measure Script Decryption Tablet (Lv 80)
+- Quarantine Vault Nullification Rod (Lv 80)
+- Synod-Trace Detection Crystal (Lv 80)
+- Hazard Registry Reference Scroll (Lv 80)
+
+### Service NPC Reset Plan
+
+| Command | Mob Vnum | Limit | Room Vnum | Notes |
+|---|---|---|---|---|
+| M 0 | 14200 | 1 | 14232 | Postmaster in Postmaster's Hall |
+| M 0 | 14201 | 1 | 14236 | Quartermaster in Quartermaster's Depot |
+| M 0 | 14202 | 1 | 14240 | Innkeeper in The Saltwind Inn |
+| M 0 | 14203 | 1 | 14244 | Weaponsmith in Ironwright's Forge |
+| M 0 | 14204 | 1 | 14248 | Armorer in Shoreward Armory |
+| M 0 | 14205 | 1 | 14252 | Provisioner in Reach Provisions |
+| M 0 | 14206 | 1 | 14267 | Banker in Bank of the Strandline Compact |
+| M 0 | 14207 | 1 | 14271 | Magic dealer in Hazard Scribe's Reagent Archive |
+| M 0 | 14208 | 1 | 14307 | Healer in Harbor Healer's Station |
+
+### Safe-Room + Building Policy
+
+- All nine service rooms listed above are flagged `safe` (`room_flags = 1024`) and use `inside` sector (`sector_type = 11`).
+- Each service room is a strict dead-end with exactly one bi-directional entrance/exit to an adjacent street room.
+- No service room is used as a transit shortcut; each is entered for a specific purpose and exited back to the same street node.
+- Outdoor streets, plazas, and harbor areas remain non-safe by default; safety is enforced by law NPC presence and factional patrol.
+
+---
+
 ## Encounter and Faction Design
 
 ### Primary Factions
@@ -298,12 +453,15 @@ Key anchors:
 ### Mob Vnum Plan
 
 - Use mob vnums sequentially within `14200-14399`.
-- Target **48-55 mob templates** with strict role separation:
+- **Mob vnums 14200-14208** are reserved for the nine service NPCs defined in the Shop + Service Requirements section above.
+- Remaining mob templates begin at vnum **14209** and continue sequentially.
+- Target **55-62 mob templates total** (including 9 service NPCs) with strict role separation:
+  - Service NPCs (9 templates, vnums 14200-14208): postmaster, quartermaster, innkeeper, weaponsmith, armorer, provisioner, banker, magic dealer, healer. All level 150, sentinel, stay_area.
   - Approach-zone wildlife (6-8 templates): beach jackals, tidemouth crabs, tidepool eels, cairn kites, glass scorpion stragglers.
   - Approach-zone hostiles (4-5 templates): cairn scavengers, Red Sand outriders, Reach patrol deserters.
   - City ambient/non-combatant (8-10 templates): dock workers, caravan drovers, merchants, clerks, sailors, guild workers.
   - City law/sentinel (4-5 templates): Harbor Wardens, gate guards, Guild guards, Shrine enforcers.
-  - City service NPCs (8-10 templates): shopkeepers, Harbormaster, Ledger House heads, Strand Rememberer elder.
+  - City landmark NPCs (4-6 templates): Harbormaster, Ledger House heads, Strand Rememberer elder, Shrine adjudicator.
   - Undercroft hostiles (6-8 templates): Synod smugglers, Synod couriers, Synod ritual acolytes, Synod cell leader.
   - Bosses (3 templates):
     - **Mini-boss** at `14298` — Quarantine Ledger Abomination (containment breach, animated hazard-class relic).
@@ -324,7 +482,8 @@ Key anchors:
 
 ### Service NPC Levels
 
-- **Service/sentinel NPCs** (shopkeepers, Harbormaster, Ledger House heads): level `150` baseline for resilience.
+- **Core service NPCs** (postmaster, quartermaster, innkeeper, weaponsmith, armorer, provisioner, banker, magic dealer, healer — vnums 14200-14208): level `150`, all flagged `is_npc|sentinel|stay_area` plus role-specific flags (`postman`, `bank`, `heal`). See Shop + Service Requirements for full definitions.
+- **Landmark/faction NPCs** (Harbormaster, Ledger House heads, Strand Rememberer elder): level `150` baseline for resilience, flagged `sentinel|stay_area`.
 - **Law enforcement NPCs** (Harbor Wardens, gate guards): level `120-140`.
 - **Ambient city NPCs** (dock workers, merchants, clerks): level `40-55`.
 
@@ -335,7 +494,7 @@ Key anchors:
 ### Object Vnum Plan
 
 - Use object vnums sequentially in-range (`14200-14399`).
-- Target **55-65 objects**, including:
+- Target **120-130 objects** (including 66 shop inventory items across 4 shops), including:
 
 **Approach-zone items (vnums 14200-14214):**
 - Glasswalk shoes (footwear, chitin-and-resin soled sandals).
@@ -511,16 +670,19 @@ Locked doors only where lore supports institutional barriers. All locked doors r
 
 1. Populate all 200 rooms with unique names, descriptions, exits, and extra descriptions within vnum range `14200-14399`.
 2. Build topology following the organic coastal layout — verify bi-directional exits, no illegal loops, no ROOM_MAZE unless intentional maze.
-3. Create all mob templates (48-55) with proper act flags, level assignments, and faction alignment.
-4. Create all object templates (55-65) with proper item types, wear flags, extra descriptions, and inscriptional language.
-5. Create 3 key objects for locked doors; verify every locked-on-reset door has a valid key vnum and corresponding key object.
-6. Build `#SHOPS` entries for provisioners and traders in Districts B and D.
-7. Build `#RESETS` with spawn distribution matching the plan density per district.
-8. Build `#SPECIALS` entries for all mobs with special functions.
-9. Assign `#OBJFUNS` if any objects warrant special behavior.
-10. Align all strings and structures to `docs/area_file_spec.md` constraints.
-11. Validate no-vnum-in-text policy across all descriptions.
-12. Verify boss mobs are `sentinel` + `boss` + `no_flee` in `no_mob` rooms.
-13. Verify all mobs have `stay_area` and are either `sentinel` or enclosed by `no_mob` boundary rooms.
-14. Run area parser/load checks and in-game traversal sanity pass.
-15. Run `cd src && make unit-tests` to validate.
+3. Verify all 9 service rooms (postmaster, quartermaster, inn, weapon shop, armor shop, general shop, bank, magic shop, healer) are inside-sector, safe-flagged dead-ends with exactly one bi-directional exit each.
+4. Create all mob templates (55-62) with proper act flags, level assignments, and faction alignment.
+5. Create all 9 service NPCs (vnums 14200-14208) with correct role-specific act flags (`postman`, `bank`, `heal`), all level 150, all `is_npc|sentinel|stay_area`.
+6. Create all object templates (120-130 total) with proper item types, wear flags, extra descriptions, and inscriptional language.
+7. Create all 66 shop inventory items across 4 shops with level-appropriate stats.
+8. Create 3 key objects for locked doors; verify every locked-on-reset door has a valid key vnum and corresponding key object.
+9. Build `#SHOPS` entries for the 4 shops (weapon, armor, general, magic) with correct keeper vnums and buy types.
+10. Build `#RESETS` with spawn distribution matching the plan density per district, including all 9 service NPC resets (limit 1 each).
+11. Build `#SPECIALS` entries for all mobs with special functions.
+12. Assign `#OBJFUNS` if any objects warrant special behavior.
+13. Align all strings and structures to `docs/area_file_spec.md` constraints.
+14. Validate no-vnum-in-text policy across all descriptions.
+15. Verify boss mobs are `sentinel` + `boss` + `no_flee` in `no_mob` rooms.
+16. Verify all mobs have `stay_area` and are either `sentinel` or enclosed by `no_mob` boundary rooms.
+17. Run area parser/load checks and in-game traversal sanity pass.
+18. Run `cd src && make unit-tests` to validate.
