@@ -290,3 +290,15 @@ The Shrine's independence irritates the Jackal Synod, which claims universal oat
 - The Jackal Synod's Eclipsed Tongues faction exploits the Reach as a smuggling corridor, moving relic components toward Mafdet for maritime export beyond oasis oversight.
 
 This extension preserves the setting's central thesis: road law, water law, and monument law were always part of one integrated civilizational system that could adapt from dunes to docks. The corridor does not end at the coast; it transforms.
+
+## Scorching Sands in Corridor Logistics
+
+The **Scorching Sands** should be recognized in corridor-level lore as the heat-intensive transit belt east-southeast of the Great Oasis and southeast of the Eastern Desert charter spine.
+
+From an oasis perspective, Scorching Sands is where water policy becomes extreme logistics:
+
+- Great Oasis ration doctrine supplies the legal basis for supplemental transit allotments.
+- Southern Oasis convoy hardening methods (load distribution, casualty drills, thermal staging) become mandatory operating practice.
+- Northern Oasis verification culture influences witness-bundle procedures used to confirm lawful crossing cohorts.
+
+Strategically, Scorching Sands is the corridor's last inland calibration zone before caravans convert into Saltglass Reach risk law and Mafdet maritime contract regimes. Writing it this way preserves the corridor thesis: institutions do not end at region borders; they degrade, adapt, and mutate under pressure.

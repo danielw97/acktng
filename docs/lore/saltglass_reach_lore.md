@@ -367,3 +367,23 @@ Example fragments:
 3. The glass and salt terrain is not random hazard; it is **evidence of catastrophe** (Iseth Reach drying, Ninth Meridian thermal pulse).
 4. Factions compete not for territory but for **legal authority** — the right to issue seals, collect tolls, and define valid passage.
 5. The Reach's institutional DNA comes from the oasis-pyramid corridor; its practical reality comes from the sea. Every room should show **both inheritances**.
+
+## VIII) Inland Precursor: Scorching Sands
+
+Before caravans enter the Reach's first true Mirror Flat and Glasswind systems, many routes pass through the **Scorching Sands** — an east-southeastern Eastern Desert subregion of ember dunes, kiln basins, and ashglass rims.
+
+Scorching Sands matters to Reach lore for three reasons:
+
+1. **Geological continuity:** ashglass rims in Scorching Sands are transitional formation zones that precede the Reach's mature glass belts.
+2. **Legal continuity:** the Scorch Clause (thermal-liability route segmentation and heat-certification doctrine) is the administrative precursor to Shoreward conversion tables.
+3. **Operational continuity:** convoy practices common in the Reach (staged heat marches, distributed water-carry doctrine, segment-level liability logs) were field-tested in Scorching Sands before being standardized at cairn stations.
+
+### Placement Relationship
+
+- Scorching Sands lies roughly one caravan day west of early Reach bands.
+- The region's Cinder Gate checkpoints function as informal pre-screening nodes for cargo that will later be certified at Shoreward Seal stations.
+- Mafdet's stricter ledger houses often require additional scrutiny when manifests lack recognizable Scorching Sands heat-certification marks.
+
+Treating Scorching Sands as an inland precursor ensures the Reach feels like a continuation of evolving systems rather than a sudden biome-and-law reset.
+
+---
