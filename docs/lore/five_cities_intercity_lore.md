@@ -17,28 +17,28 @@ Together, they create a full-chain legitimacy corridor:
 
 1. **Post-Evermeet Recovery Era:** Kiess and Midgaard stabilize replacement arbitration channels while Kowloon consolidates northern collection routes.
 2. **Lantern-Delta Expansion:** Midgaard and Kowloon synchronize watch rhythms; Rakuen receives planned migration under optimistic frontier policy.
-3. **Violet Containment Period:** burden externalization increases; Rakuen absorbs displaced populations while Kiess contests sealed-order governance.
-4. **Ash-and-Iron Shock Decades:** Cinderteeth disruptions force emergency rerouting, grain emergency regimes, and maritime conversion through Mafdet.
-5. **Annexation Arc (Rakuen-centric):** Southmark Petition, Ash Plea, Iron Compact Appeal all seek Midgaard annexation and are denied.
-6. **Modern Competitive Concord:** high cooperation against fraud, high rivalry over seal finality, casualty accountability, and historical narrative ownership.
+3. **Late Lantern / Early Violet Pivot:** Rakuen files the **Southmark Petition** as southern burden pressure outpaces local capacity.
+4. **Violet Containment Period:** burden externalization increases; Rakuen absorbs displaced populations while Kiess contests sealed-order governance.
+5. **Ash-and-Iron Shock Decades:** Cinderteeth disruptions force emergency rerouting, grain emergency regimes, and maritime conversion through Mafdet; Rakuen files the **Ash Plea** and later the **Iron Compact Appeal**, both refused.
+6. **Modern Competitive Concord:** high cooperation against fraud, high rivalry over seal finality, casualty accountability, historical narrative ownership, and unresolved annexation aftershocks.
 
 ## III. The Annexation Arc as Intercity Turning Point
 
 Rakuen's repeated annexation requests transformed all five-city relations, not only Midgaard-Rakuen ties.
 
-### 1) The Southmark Petition
+### 1) The Southmark Petition (late Lantern / early Violet)
 
 - Rakuen asked for district incorporation and direct registry integration.
 - Midgaard refused while extending subsidies.
 - Kowloon and Kiess interpreted refusal differently: Kowloon saw fiscal prudence, Kiess saw responsibility avoidance.
 
-### 2) The Ash Plea
+### 2) The Ash Plea (Ash-and-Iron crisis window)
 
 - Requested emergency annexation under ashfall disaster law.
 - Midgaard again refused sovereignty transfer but opened emergency aid windows.
 - Mafdet responded by expanding mercy-freight classification for southern cargo volatility.
 
-### 3) The Iron Compact Appeal
+### 3) The Iron Compact Appeal (late Ash-and-Iron)
 
 - Proposed staged legal integration to avoid sudden administrative shock.
 - Midgaard issued a definitive refusal citing precedent and liability.
