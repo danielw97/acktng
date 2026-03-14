@@ -236,6 +236,7 @@ Midgaard establishes occult oversight; darker institutional practices emerge.
 | Event | Category | Sources |
 |-------|----------|---------|
 | **Violet Compact**: registry-based occult oversight, reliquary checkpoints, oath-ledger protocols. | Political | midgaard_lore |
+| The Wizard's Keep is chartered north of Midgaard as a supervised arcane academy: train adepts for civic service, centralize dangerous texts, and prevent a second Conclave-style autonomous research regime. | Creation/Origin | wizards_keep_lore |
 | The **Sealed Names apparatus** provides the administrative framework for suppression via sealed warrants, including the **"resettled south" mechanism** — displacing populations under welfare-language cover to southern frontier settlements. | Political | midgaard_lore |
 | Shadowmere issues **Plague Mandate**: rapid intake, forced quarantines, immediate cremation powers. "Temporary became permanent." Processing halls, poison works, deep binding cells built. | Catastrophe | shadowmere_lore |
 | The Thornwood estate transitions from aristocratic burial manor into a cult-bound necrotic forest complex on the Midgaard-Shadowmere grave frontier; manor process, ossuary throughput, and woodland behavior fuse into one predatory system connected to the shared grave tunnel hinge. | Catastrophe | thornwood_lore |
@@ -289,6 +290,7 @@ Cinderteeth disruptions force emergency rerouting and multi-year crises.
 | Event | Category | Sources |
 |-------|----------|---------|
 | **Cinderteeth disruptions** force emergency rerouting, intensify route predation. Multi-year rationing in Rakuen. | Catastrophe | five_cities_intercity_lore |
+| The Wizard's Keep transitions from scholastic enclave to fortified containment academy: courtyard drill doctrine expanded, inquisitorial audits normalized, and novice movement segmented by rank-locked routes. | Political | wizards_keep_lore |
 | **Shadowmere's Last Bell Crisis**: three contradictory decrees rung in one night (amnesty, lockdown, requisition). Garrisons split, chapel courts split. Necromantic expedients repurposed for political continuity. The city calcifies into mutually hostile systems. | Catastrophe | shadowmere_lore |
 | Great Northern wardens formalize Thornwood's **exclusion-zone** status in convoy and timber writ practice, codifying legal acknowledgment without assumption of direct governance. | Political | thornwood_lore, great_northern_forest_lore |
 | **First Annexation Attempt** (Southmark Petition): Rakuen seeks full civic annexation to Midgaard. Refused on ledger-compliance grounds. | Political | five_cities_intercity_lore, rakuen_lore |
@@ -306,6 +308,7 @@ Cinderteeth disruptions force emergency rerouting and multi-year crises.
 | **Common Misery Clause** established: temporary tariff controls during mass-casualty seasons. Activated six times in network history. | Political | five_cities_intercity_lore |
 | **Joint Blacklist of Forged Seals**: continuously updated anti-fraud index. Currently held by Kiess. | Political | five_cities_intercity_lore |
 | **Transit Memorial Compact**: minimum standards for naming, recording, and repatriating intercity dead. | Political | five_cities_intercity_lore |
+| A classified records crisis at the Wizard's Keep culminates in the Burnt Records Incident: selective destruction of clandestine archive shelves while a sealed lockbox cache is preserved for restricted custody. | Political | wizards_keep_lore |
 
 ---
 
@@ -335,6 +338,7 @@ Unresolved conflicts define the present.
 | The Withered Depths blight — originating from Conclave field-trial sites — threatens Kiess's western and northern borderlands. | Catastrophe | withered_depths_lore, kiess_lore |
 | Kel'Shadra's Crypts and Void Citadel remain active as a "machine without legitimate sovereign" — surviving officers, loops, constructs, and doctrinal ghosts continue operating inherited procedures. | Cosmic | kelshadra_summary_lore |
 | Rakuen's Outbound Open Register has **847 active open entries** — persons who left and were never confirmed arrived. ~30% cross-reference to Midgaard's deferred-name casualty records at Sepulchur Pasture. | Political | five_cities_intercity_lore |
+| Internal records conflict at the Wizard's Keep: sealed corridors, destroyed archive caches, and disputed authority between Sanctum custody officers and reformist adepts drive a quiet legitimacy crisis. | Political | wizards_keep_lore |
 
 ---
 
@@ -410,6 +414,7 @@ Sources: sunken_sanctum_lore, kowloon_lore, great_northern_forest_lore, five_cit
 | kiess_lore | Era XVI |
 | rakuen_lore | Eras XVI, XIX, XXI |
 | midgaard_lore | Eras XII, XIII, XV, XXI |
+| wizards_keep_lore | Eras XV, XIX, XX, XXI |
 | five_cities_intercity_lore | Eras XIV, XVI, XIX, XX, XXI |
 | mafdet_lore | Era XVII |
 | saltglass_reach_lore | Eras II, IV, VII, XVII |
