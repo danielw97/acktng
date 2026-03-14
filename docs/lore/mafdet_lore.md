@@ -308,6 +308,16 @@ The oases remain adjudication sources for water-right and caravan-origin claims.
 
 Mafdet depends on Reach checkpoint continuity for manifest provenance and legal transition from caravan to harbor jurisdiction. The Reach Wardens and Mafdet's Harbor Wardens share jurisdiction over the Tidemouth Dunes — an overlap that creates periodic friction but also ensures that no cargo can reach Mafdet without passing through at least one checkpoint authority.
 
+### Scorching Sands
+
+The **Scorching Sands** — the last major inland heat gauntlet before the Saltglass Reach — functions as the corridor's primary heat-certification district, and its documentary outputs have direct practical consequences for Mafdet's cargo assessment systems.
+
+**Heat-certification marks**: Mafdet Ledger Houses classify cargo bearing recognizable Scorching Sands heat-certification marks on seal ceramics and wax capsules as lower fraud risk for relic consignments. The marks provide a thermal exposure history that inland-only documents lack — evidence that a seal survived verifiable heat conditions between origin and coast. Manifests bearing these marks receive expedited hazard review from the Quarantine Ledger's Hazard Scribes, reducing processing time for east-bound relic cargo.
+
+**The Cinder Gate pre-screening function**: The Cinder Gate at Scorching Sands' eastern margin informally pre-screens manifests before Reach entry. Mafdet Ledger House factors have standing agreements with Ember Warden contacts at the Gate to flag shipments lacking heat-certification. This pre-screening is not legally mandatory under any current instrument, but cargo arriving at Mafdet that lacks Scorching Sands documentation faces harder scrutiny at dual-attestation assessment — because its absence suggests either an irregular route or deliberate avoidance of the heat-certification requirement.
+
+**Cinder Broker routes**: Ashbound Reaver–affiliated Cinder Brokers operate contested routes linking Scorching Sands kiln contraband to Mafdet tidewall caches. The Red Sand Accounts maintain awareness of these routes and occasionally use them as indirect acquisition channels for distressed cargo that never formally entered the dual-attestation system. The Quarantine Ledger regards Cinder Broker–sourced artifacts with maximum suspicion; they cannot be provenance-cleared without independent attestation because the broker route constitutes a documented chain-of-custody break.
+
 ### Eastern Desert
 
 The Eastern Desert's caravan charter system is the upstream source for most of the cargo documentation that Mafdet processes. The Ledger Houses' inland-assessment expertise is built on understanding Eastern Desert charter formulas, toll notation, and witness-seal conventions. Shoreward House clerks are trained to read Eastern Desert charter stones as part of their professional qualification.

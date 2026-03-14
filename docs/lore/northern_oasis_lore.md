@@ -191,6 +191,12 @@ Specific connections:
 - The Northern Oasis's Trust Ledger system and Kowloon's Jade Clerk registry methodology share a common ancestor: both descend from the Keepers' census tradition, which produced the desert road-charter population counts. The structural similarities are visible in the documents' formatting — columnar notation, witness-seal conventions, and the same emphasis on documented process over arbitrary authority.
 - House Vao (Kowloon's Grain Wardens) preserved diluted versions of the Northern Oasis's water rationing methodology, adapted for grain and staple management. The adaptation is imperfect — grain rationing does not require the precision of water rationing — but the institutional logic is recognizable.
 
+### Connection to Scorching Sands
+
+The Northern Oasis's **verification culture** — its insistence on witness-stick bundles, co-signed ration records, and multi-party authentication — extended eastward into Scorching Sands through the corridor's unified caravan bureaucracy. Northern Oasis Cairn Brokers developed the witness-stick bundle protocol as a compact authentication format for caravans too small to carry full tablet-form documentation. The Scorching Sands corridor adopted this format for legal cohort-crossing certification, and it remains in use at the Seven Shade Arches as a simplified confirmation that a convoy has witness-verified participation in a mandated cooling halt.
+
+Practically, this means a convoy that originates at or passes through the Northern Oasis carries documentation that Scorching Sands' Ember Wardens consider high-legitimacy. Disputes over whether a caravan's passage was properly witnessed can be resolved by tracing the Northern Oasis seal impression on the crossing cohort record back to the originating broker's Trust Ledger entry — a chain that, when intact, is considered among the most legally secure provenance routes in the corridor.
+
 ### Connection to the Saltglass Reach and Mafdet
 
 The Northern Oasis's relationship to the eastern coast is institutional rather than geographic. Though the Northern Oasis is the corridor settlement most distant from the sea, its authentication systems extend to the maritime world through two mechanisms:

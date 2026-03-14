@@ -65,9 +65,16 @@ Scorching Sands was therefore one of the first places where "distance" and "dang
 
 ### II) Ledger Kingdom Kiln-House Period
 
-As dynastic trade expanded, crown contractors built **kiln houses** in the basin margins to fire seal-ceramics, amphora stoppers, and heat-hardened convoy fittings. These industrial compounds became the logistical heart of the region.
+As dynastic trade expanded, crown contractors built **kiln houses** in the basin margins to fire seal-ceramics, amphora stoppers, and heat-hardened convoy fittings. These industrial compounds became the logistical heart of the region. The most significant was the **Bassek Compound**, named for Master Kiln-Keeper Orulan Bassek — a crown contractor who consolidated three competing kiln operations into one regulated complex and established the standardized firing protocols that all subsequent Scorching Sands certification depended on. His stone tablets, listing temperature grades, clay compositions, and seal classification hierarchies, are among the oldest surviving technical records in the corridor.
 
-The key innovation was **sun-fired verification clay**: shipment tags that changed color irreversibly when exposed to tampering heat or unauthorized re-firing. This made Scorching Sands famous as a fraud-resistant certification district.
+The key innovation was **sun-fired verification clay**: shipment tags that changed color irreversibly when exposed to tampering heat or unauthorized re-firing. This made Scorching Sands famous as a fraud-resistant certification district. Bassek's refinement was a graduated seven-color system: each color tier corresponded to a specific temperature range, so an experienced clerk could read a seal's entire heat exposure history from its hue alone.
+
+The kiln economy required a distinct labor structure that persisted well beyond the Ledger Kingdom period:
+
+- **Kiln-Masters** (crown contractors): licensed operators who held firing rights under charter. They bore financial responsibility for every seal issued at their compound and could be stripped of their license for documented certification fraud.
+- **Seal Clerks**: scribal staff who recorded every batch — clay lot, firing time, color result, and assigned cargo manifest — in the Burn Ledger's predecessor documents. Their records were the legal chain of custody for all certified goods passing through.
+- **Furnace Hands**: labor workers who operated the kilns, mixed clay, and managed fuel supplies. In the kiln economy's early period these were indentured workers under charter obligation; by the Charter Wars period many had formed informal guilds and sold their skill competitively.
+- **Heat Calibrators**: the highest-prestige technical role — surveyors who measured kiln temperatures against standardized clay test tiles, adjudicated disputed color results, and served as expert witnesses in certification fraud cases. Their calibration rods and tile sets were treated as instruments of law, not merely tools of craft.
 
 ### III) Charter Wars and Convoy Militarization
 
@@ -137,16 +144,38 @@ A regional jackal faction that interprets heat as purgative truth. They brand fa
 ## Settlement, Infrastructure, and Landmarks
 
 ### 1) The Burn Ledger
-A semi-buried audit hall where kiln batches, water allocations, and convoy passage fees were co-recorded. Most tablets are cracked by heat shock, but surviving fragments are invaluable to Midgaard and Kowloon legal historians.
+
+A semi-buried audit hall complex where kiln batches, water allocations, and convoy passage fees were co-recorded in the same administrative archive — the physical embodiment of the Scorch Clause's integrated record philosophy. The main hall ran three parallel record functions: **Kiln Certification Vault** (recording every batch by firing date, clay lot, and assigned manifest), **Water Allotment Court** (logging every caravan's ration claim against route segment and load class), and **Transit Fee Register** (tallying toll receipts indexed by convoy charter number).
+
+Most ceramic tablets are cracked by heat shock from the Ninth Meridian secondary pulse, but surviving fragments are invaluable: Midgaard legal historians prize them for pre-collapse toll law, and Kowloon Jade Clerks have identified inscription fragments that align closely with reconstructed volumetric-legal Measure Script, suggesting the Ledger used a hybrid notation distinct from both inland and Littoral Branch variants.
+
+The complex has three structurally distinct zones. The **Upper Hall** is partially collapsed but accessible; this is where most salvage expeditions focus. The **Mid-Vault**, where the most sensitive water-allotment records were kept, is buried under two meters of heat-fused debris. The **Deep Archive**, which holds pre-Charter-War kiln master licenses and early Scorch Clause draft documents, has been sealed since a post-collapse sink-fall created a dangerous drop at the entrance. Ember Warden Archivists have mapped but not cleared the Deep Archive — they lack the engineering resources and fear disturbing its thermal vent proximity.
 
 ### 2) The Seven Shade Arches
-Ruined waystation arcades aligned to afternoon shadow progression. Caravans still use the arches to pace mandatory cooling halts.
+
+A ruined waystation arcade built by Keeper survey crews to serve as both a cooling station and a legal calibration point. The seven arches are not merely decorative: they were positioned to cast precise sequential shadows during afternoon sun movement, with each arch-shadow reaching a specific pavement mark at a different hour. Caravans were legally required to cross the arches only when their shadow-mark fell on the designated "safe cooling window" indicator, ensuring no convoy attempted the post-arch dune crossing during Breathfire phase.
+
+The alignment was designed by **Survey-Marshal Ireth Sevan**, the Keeper official responsible for the region's earliest thermal anomaly documentation. Her engineering calculus treated time and heat as joint legal variables — a philosophical innovation that predated the full Scorch Clause by at least two generations. Fragments of her original survey notation survive on the arch keystones, partially legible to trained Measure Script readers.
+
+Today, five of the seven arches still stand. Two collapsed during the Charter Wars period, when one arch was deliberately undermined to deny shade-station access to a rival faction during a siege. Caravans still use the surviving arches to pace mandatory cooling halts, preserving the function if not the legal calibration. The Calibrators faction of the Ember Wardens has surveyed the arches for restoration, but reconstructing the shadow-timing grid would require new gnomon marks and a dedicated survey season — resources not currently available.
 
 ### 3) The Ember Crucible
-Largest surviving kiln complex, now split between Warden stewardship and Synod encroachment. Contains layered graffiti showing three centuries of legal formula drift.
+
+The largest surviving kiln complex in Scorching Sands and the primary industrial-legal artifact of the Ledger Kingdom period. In its peak operation the Crucible contained **nine active kiln chambers** arranged in a horseshoe configuration around a central clay-mixing court, with a separate **Seal Inspection Hall** where Heat Calibrators adjudicated color-result disputes and Seal Clerks issued final certification. At peak capacity the Crucible processed three caravan seasons' worth of seal certification simultaneously, making it functionally indispensable to commerce across the entire eastern corridor.
+
+The complex's current state is contested on three levels. The northern kiln chambers and the Inspection Hall are claimed and partially maintained by the **Ember Warden Calibrators**, who use the surviving kiln infrastructure to issue limited heat-certification for modern caravans — the only functioning certification service east of the Great Oasis. The southern chambers have been encroached upon by the **Cauterist Synod's Purifiers**, who have converted two decommissioned kilns into ritual furnaces for "seal-burning" rites — ceremonies in which counterfeit certificates are incinerated as a public declaration of doctrinal purity. The eastern service tunnels, which connect the kiln chambers to fuel storage, are claimed by neither faction and serve as a gray-zone used by Cinder Brokers for dead-drop exchanges.
+
+The **layered graffiti** on the Crucible walls constitutes one of the richest documentary records in the region. The lowest layer is Keeper-style calibration notation. Above it are Ledger Kingdom production tallies and legal formulae. The Charter Wars layer adds threat language, faction marks, and altered toll schedules. Post-collapse and modern layers include Synod liturgy, Warden operational notes, and caravan warnings. Any single wall can thus preserve four distinct historical moments in ascending order.
 
 ### 4) The Cinder Gate
-A chokepoint between dune field and ashglass rim, marked by fused stone piers. Considered the "last inland witness point" before Saltglass-bound risk contracts dominate.
+
+A chokepoint between the Ember Dunes and the first true Ashglass Rim belt, marked by two massive fused-stone pier columns that once supported a roofed inspection station. The Gate is not a walled fortification but a **jurisdictional threshold**: in the Ledger Kingdom period, all eastbound cargo passed through here for a final inland certification check before the Scorch Clause's segment liability shifted to the Reach-bound portion of the journey. Westbound cargo received a re-entry stamp confirming it had returned without unauthorized Saltglass-origin additions.
+
+The pier columns are composed of ordinary sandstone that partially fused under the Ninth Meridian secondary thermal pulse, creating a visually striking striated surface — bands of original tan stone alternating with amber-and-black fused zones. The structural integrity is questionable, but both columns have stood for centuries and show no sign of imminent collapse.
+
+In practical terms the Gate still functions as an **informal pre-screening point** for Mafdet-bound cargo manifests. Reach Wardens operating from the other side send occasional representatives to check incoming manifests against their transit-ration token system, while Mafdet Ledger House factors have standing agreements with certain Ember Wardens to flag shipments lacking recognizable heat-certification marks. None of this inspection is legally mandatory under current corridor law, but every experienced caravan captain treats the Gate as effectively obligatory: cargo that passes through without appropriate documentation faces much harder scrutiny at every Reach checkpoint ahead.
+
+The Cinder Brokers maintain a permanent but unofficial presence at the Gate — not through open occupation, but through a network of informal contacts among the water-sellers, shade-merchants, and livestock traders who cluster around the only reliable stopping point on this stretch. The Gate's information flow is arguably as valuable as its inspection function.
 
 ---
 
@@ -431,7 +460,31 @@ These roles help blend lore and gameplay while keeping social systems legible.
 
 ---
 
-## Cross-Area Narrative Connectors
+## Notable Figures (Historical and Contemporary)
+
+These named individuals anchor the lore at specific historical moments and provide hooks for NPC design, quest motivation, and document flavor text.
+
+### Historical Figures
+
+**Survey-Marshal Ireth Sevan** *(late Age of Measures)*
+The Keeper official responsible for the earliest systematic documentation of Scorching Sands as a thermal anomaly corridor requiring special treatment. Sevan developed the dual-marker timing system (obelisks paired with heat-rod drift) and designed the Seven Shade Arches' shadow-calibration layout. Her records represent the philosophical turning point in which "distance" and "danger" were first formally decoupled in charter law. Fragments of her survey notation survive on Arch keystones and in a single surviving Burn Ledger pre-collapse index. Keeper traditionalists regard her as the finest field surveyor who never held an office in the Measuring House; critics argue her thermal-anomaly protocols were overspecialized and contributed to the region's later administrative isolation.
+
+**Master Kiln-Keeper Orulan Bassek** *(Ledger Kingdom mid-period)*
+The crown contractor who built and consolidated the Bassek Compound and developed the graduated seven-color sun-fired verification clay system. Bassek came from a family of Eastern Desert seal-clerks and applied their administrative precision to industrial-scale kiln certification. His surviving technical tablets are the oldest known systematic documentation of heat-as-legal-instrument thinking — the intellectual foundation of the Scorch Clause. The Ember Crucible's Seal Inspection Hall was modeled on Bassek's original compound layout. He is remembered in Warden oral tradition as "the man who taught the sun to sign its name."
+
+**Warden-Sergeant Caleph Dunmar** *(Charter Wars period)*
+The most celebrated Ember Warden commander in the region's history. Dunmar held the Seven Shade Arches against an Ashbound siege for forty-three days during the most violent Charter Wars confrontation in Scorching Sands, successfully protecting a Great Oasis–bound water convoy that would otherwise have been seized. He is credited with codifying the Warden's defensive doctrine: fight near shade infrastructure, target water carriers before weapon specialists, force enemies into exposed channels. The two collapsed arches are attributed to the siege — Dunmar allegedly authorized undermining one arch to deny the attackers a staging point, accepting the permanent loss to preserve the mission. The Pragmatist faction within the Ember Wardens claims his legacy; the Archivists dispute his willingness to destroy infrastructure.
+
+**Arch-Juror Sethis of the Blue Flame** *(post-collapse Cauterist Synod founding period)*
+The Cauterist Synod leader who first documented the "blue-burning kiln" phenomenon — a kiln at the Ember Crucible's eastern margin that produces a distinctive blue-tinged flame under specific atmospheric conditions — and developed the doctrinal claim that flame color is a divine indicator of oath-truth. Sethis codified the Sun Juror practice of adjudicating disputed oaths by burning representative materials in the kiln and reading the smoke. His writings are the foundational text of the Cauterist Synod; both the Purifiers and the Sun Jurors claim his direct doctrinal lineage, while the Witness-Burners argue he would have condemned his own texts as "tainted law" under strict application of his final doctrine.
+
+### Contemporary Figures
+
+**Marshal-Comptroller Vesna of the Twelve Arches** *(current Ember Warden Calibrators leader)*
+The current head of the Calibrators bloc within the Ember Wardens. Vesna took her title from Sevan's original arch design: she considers herself the direct procedural heir of the survey tradition. She has spent fifteen years attempting to rebuild the Burn Ledger's Deep Archive access and restore the Seven Shade Arches' timing calibration — projects perpetually blocked by resource shortages and Synod encroachment. She maintains correspondence with both Great Oasis water-right courts and Mafdet Ledger Houses, making her the most administratively connected figure in the region. She distrusts Pragmatists and despises Witness-Burners in roughly equal measure.
+
+**Cinder Broker Harrak Dune-Hand** *(current Ashbound Reaver / Cinder Broker figure)*
+The most prominent active Cinder Broker operating through Scorching Sands, Harrak is technically a Reaver-affiliated operator but maintains relationships with every faction in the region. He specializes in facilitating commerce that no officially recognized party can openly conduct: relic fragments disguised as furnace waste, altered witness tablets moving toward Mafdet, dead-drop contracts between Synod cells and Reach smugglers. Harrak's nickname derives from an old burn scar across his left hand — reportedly acquired in a dispute over a forged heat certificate. He operates from the Cinder Gate's informal contact network and is simultaneously valued (as an information conduit), despised (as a profiteer from institutional collapse), and feared (because he knows enough about every faction's gray-zone activities to be catastrophically dangerous if he chose to talk).
 
 ### Connection to Great Oasis
 
@@ -457,6 +510,21 @@ These roles help blend lore and gameplay while keeping social systems legible.
 
 - Mafdet ledger houses classify Scorching-certified cargo as lower fraud risk.
 - Cinder Brokers run contested routes linking kiln contraband to tidewall caches.
+- The Quarantine Ledger's Hazard Scribes are trained to identify authentic Scorching Sands heat-certification marks on seal ceramics and wax capsules; manifests bearing these marks receive expedited hazard review for relic cargo, as the marks provide thermal exposure history that inland-only documents lack.
+
+### Connection to the Scorched Wastes
+
+Scorching Sands and the **Scorched Wastes** share a common geological origin — the Ninth Meridian catastrophe — but represent different intensities of the same disaster.
+
+The Scorched Wastes absorbed the burn wave directly, when the failed eclipse rite's thermal surge propagated through intact cistern infrastructure and funerary script matrices simultaneously, producing sustained heat at catastrophic intensity. Scorching Sands, positioned east-southeast of the Wastes along the Iseth sediment corridor, received a **secondary thermal pulse** — attenuated by distance and disrupted by the fractured limestone shelf underlying the region, but still powerful enough to:
+
+- permanently destabilize the old kiln calibration marks by shifting the regional baseline temperature,
+- fuse exposed basin surfaces into the ashglass rim formations that now define the region's eastern margin,
+- collapse several Burn Ledger sub-vaults whose foundation substrates cracked under heat stress.
+
+The critical distinction: the Scorched Wastes were overwritten at a cosmological level (the burn wave carried corrupted script matrices and hydraulic pressure inversion). Scorching Sands was overwritten at a geological and industrial level — its institutions degraded, its records partially destroyed, its terrain permanently altered, but without the Wastes' metaphysical contamination. This means Scorching Sands ruins are physically dangerous but not ritually hazardous the way Wastes ruins can be.
+
+Writers should treat Scorching Sands as the **readable edge** of the Wastes' disaster: scholars who cannot safely enter the Wastes can study secondary effects here at reduced personal risk — a fact that makes the Burn Ledger particularly valuable to researchers trying to understand pre-catastrophe corridor conditions.
 
 ---
 

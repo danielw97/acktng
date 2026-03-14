@@ -39,6 +39,7 @@ The **Keepers of Measure** govern through calibration, not armies — road stone
 | Twelve **Obelisk Lines** are erected across the desert as instruments — their shadows mark legal travel windows, ration allotment days, and safe convoy departures. | Engineering | eastern_desert_lore |
 | The **charter road system** is established: charter stones at intervals record distance, toll rate, and legal witness seals. Night-travel prohibition enforced (obelisk shadows useless after dark). | Political | eastern_desert_lore, northern_pyramid_lore |
 | The Keepers extend their survey network eastward, establishing **tide obelisks** along the coast and developing the **Littoral Branch** of Measure Script for maritime contexts. | Engineering | saltglass_reach_lore |
+| **Survey-Marshal Ireth Sevan** formally documents Scorching Sands as a thermal anomaly corridor and develops the dual-marker timing system (obelisks plus heat-rod drift) — the first formal decoupling of "distance" and "danger" in charter law. The **Seven Shade Arches** waystation is constructed using her shadow-calibration design. | Discovery | scorching_sands_lore |
 | The **Iseth Reach** (river distributary) feeds the eastern road network and oasis water table, connecting the entire system hydraulically. | Engineering | eastern_desert_lore, great_pyramid_lore |
 | Akh'enet begins as the **Third Southern Register** — a calibrated road gate where surveyors reconcile caravan manifests. | Creation/Origin | akhenet_lore |
 | The Arroyo functions as a branch of the Iseth watershed's seasonal spill system, where water volume is translated into legal obligation. | Political | arroyo_lore |
@@ -76,6 +77,8 @@ Merchant houses transform Keeper survey law into hereditary authority. Kings pro
 | **Caravan Yards** established outside the waystone circle — organized staging areas with route-based sectors. Peak population swells from 300 to 2,000+. | Engineering | great_oasis_lore |
 | Akh'enet expands from road gate into a **mortuary-port city** under Salt Ledger dynasts: caravan hospitals, embalmer terraces, witness courts. The **Reed Ledger Wardens** and **Jackal Balance Court** are founded. | Creation/Origin | akhenet_lore |
 | **Shoreward Assessors** become the Saltglass Reach's first permanent professional class, building assessment halls and creating the **Shoreward Tables** for inland-to-maritime conversion. | Political | saltglass_reach_lore |
+| **Master Kiln-Keeper Orulan Bassek** consolidates kiln operations in Scorching Sands, establishing the **Bassek Compound** and developing the graduated seven-color **sun-fired verification clay** system. Scorching Sands becomes the corridor's preeminent fraud-resistant certification district. The **Burn Ledger** complex is built as the co-archive for kiln batches, water allocations, and convoy passage fees. | Engineering | scorching_sands_lore |
+| The **Scorch Clause** is formalized as a standard contract rider for eastern corridor trade: cargo transiting Scorching Sands receives supplemental water allocation, heat-certification requirements for seals, and segment-level liability allocation. It is the earliest legal mechanism anticipating the Saltglass Reach's maritime risk segmentation. | Political | scorching_sands_lore |
 | The three-route system is established through the Saltglass Reach: **Swift Line**, **Heavy Road**, and **Sealed Route**. | Engineering | saltglass_reach_lore |
 | The last unified Salt Ledger ruler divides his realm between twin heirs: the **Sand Sovereign** (surface, sun, trade routes) and the **Moon Sovereign** (underground, death rites, underworld metaphysics). | Political | northern_pyramid_lore, southern_pyramid_lore |
 
@@ -128,6 +131,8 @@ The attempt to harness cosmic forces shatters the desert civilization.
 | The **Fall of the Open Road**: trade confederates withdraw protection. Outposts burn. Governance collapses into reaver strongholds, cult toll courts, and abandoned cistern vaults. | Catastrophe | eastern_desert_lore |
 | The **Last Sand Regent** orders a burial court beneath the observatory, attempting an eclipse-preservation rite combining Sand Sovereign solar preservation with Moon Sovereign underworld anchoring. The rite preserves command intent without human judgment — a policy engine on autopilot. | Catastrophe | eastern_desert_lore |
 | The **Cairn Wars** erupt in the Saltglass Reach. The **Reach Wardens** seize the Swift Line; armed caravan leagues take the Heavy Road; the Sealed Route is abandoned. | War/Conflict | saltglass_reach_lore |
+| Scorching Sands absorbs the **secondary thermal pulse** from the Ninth Meridian catastrophe — attenuated by distance from the Scorched Wastes but sufficient to destabilize old kiln calibration marks, fuse basin surfaces into ashglass rim formations, and collapse several Burn Ledger sub-vaults. The secondary pulse distinguishes Scorching Sands from the Wastes: no metaphysical contamination, but permanent geological and industrial damage. Surviving kiln compounds are repurposed by emerging factions for rites, cremation fraud, and contraband destruction. The **Cauterist Synod** takes root in abandoned kiln mouths. | Catastrophe | scorching_sands_lore |
+| **Warden-Sergeant Caleph Dunmar** holds the Seven Shade Arches for forty-three days against Ashbound siege, protecting a Great Oasis–bound water convoy. His defensive doctrine — fight near shade infrastructure, target water carriers first — becomes the foundational Ember Warden combat doctrine. Two arches are permanently destroyed during the engagement. | War/Conflict | scorching_sands_lore |
 | Akh'enet suffers the **Bellwind Collapse**: tremor chains rupture undersluice infrastructure. Aquifer backflow, court bells sound continuously, archive vaults flood. The Court doubles down on descent rites; Wardens demand secular control. Caravan leagues withdraw. | Catastrophe | akhenet_lore |
 
 ---
@@ -423,6 +428,7 @@ Sources: sunken_sanctum_lore, kowloon_lore, great_northern_forest_lore, five_cit
 | akhenet_lore | Eras II, IV, VII |
 | arroyo_lore | Eras II, IV, VII |
 | scorched_wastes_lore | Eras VII, XXI |
+| scorching_sands_lore | Eras II, IV, VII |
 | northern_oasis_lore | Eras II, IV, VII |
 | southern_oasis_lore | Eras II, IV, VII |
 | oasis_pyramid_lore | Eras IV, V |
