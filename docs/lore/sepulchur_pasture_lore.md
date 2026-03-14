@@ -144,6 +144,13 @@ Sepulchur Pasture’s operations follow Midgaard’s **Seven Watches**, though t
 - **Political tension:** The pasture is a flashpoint for the Continuity-vs-Reckoning divide. Continuity officials defend the Tithe system as necessary civic infrastructure. Reckoning advocates point to the deferred-name rolls and the Unindexed Years as evidence that the pasture participated in systematic erasure.
 - **Folk belief:** Midgaard residents use violet chalk on thresholds to mean “witness requested.” In the pasture, violet chalk on a grave marker means “name disputed” — a usage that evolved from the city custom but carries heavier weight.
 
+
+### Eccentric Woodland (south of Midgaard)
+- **Shared frontier ancestry:** Both Sepulchur Pasture and the Eccentric Woodland descend from the same pre-Lantern southern fringe beyond the ninth milestone, where guidance depended on bell walkers and local memory rather than civic survey.
+- **Administrative split:** Midgaard institutionalized the pasture as funerary infrastructure while leaving the Woodland as an escorted-but-unannexed hazard zone. Together they show two failure modes of the same city: over-bureaucratized grief and under-governed violence.
+- **Casualty pipeline:** Woodland incidents periodically feed unidentified or contested remains into pasture intake ledgers, where "deferred name" procedures can erase context from already-fragmentary accounts.
+- **Narrative contrast:** The pasture's horror is procedural extraction; the Woodland's horror is unstable authority. Linking rumor lines between them strengthens the broader "south of Midgaard" continuity band.
+
 ### Catacombs of Nightfall
 - **Parallel institutions:** Both the pasture and Nightfall began as sanctioned civic-funerary operations attached to Midgaard’s expanding administrative machine. Both processed the dead through a sequence of identification, adjudication, and interment. Both corrupted from within as administrative power replaced mourning with extraction.
 - **Doctrinal divergence:** Nightfall developed the doctrine of **Sealed Names** — names hidden from public rolls for “civic continuity.” The pasture developed the doctrine of **Deferred Names** — names held pending claim. The distinction between “sealed” and “deferred” is the distinction between deliberate concealment and systematic neglect, but the outcome for the dead is the same: they are unnamed, unclaimed, and unquiet.
