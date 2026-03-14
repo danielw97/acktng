@@ -305,6 +305,14 @@ Reset vnum validity rule:
 
 From `src/test_area_format.c`, `src/test_wood_area.c`, and `src/test_db.c`:
 
+### area.lst ordering constraint
+
+The `area/area.lst` file must list areas in non-decreasing order by `V` minimum vnum. Ties (same minimum) are further resolved by non-decreasing `V` maximum vnum. `test_area_format.c` enforces this at every test run and will fail with a diagnostic if the order is violated.
+
+Practical rule: when inserting a new area or expanding an existing area's `V` range, verify that its position in `area.lst` remains consistent with its new minimum vnum. See `docs/area_index.md` for the current ordered list.
+
+Note: `V` envelopes may overlap between areas (e.g., two areas can both declare ranges that share an integer). The ordering check is on minimum vnums only, not on range exclusivity. What must remain globally unique are the individual room, mobile, and object vnums actually defined inside each area's `#ROOMS`, `#MOBILES`, and `#OBJECTS` sections.
+
 - `#ROOMS` must exist.
 - `#ROOMS` must end with `#0` before the next section header.
 - Inside `#ROOMS`, each room body may contain only `D`, `E`, or `S` entries.
