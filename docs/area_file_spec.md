@@ -334,6 +334,15 @@ For all content types (`#MOBILES`, `#ROOMS`, and `#OBJECTS`), vnums must be assi
 - When gaps exist in an area's assigned vnum range, fill those gaps wherever possible before assigning new higher vnums.
 - For `#ROOMS`, attempt to use all room vnums in the area's assigned range (i.e., fill every available room-vnum slot where practical).
 
+## 13.2) Area quest design constraints
+
+Area quest design (when authoring quest sets for an area) must satisfy all of the following:
+
+- Every area must include at least one quest whose target is a boss.
+- New areas must include at least one cartography quest, unless explicitly specified otherwise.
+- The final quest in any quest chain must reward a piece of equipment.
+- Any quest that targets a boss must reward a piece of equipment.
+
 ## 14) Canonical section order emitted by saver
 
 `areasave.c` writes sections in this order when present:
