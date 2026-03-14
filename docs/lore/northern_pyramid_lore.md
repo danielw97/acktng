@@ -161,7 +161,7 @@ The event lasted approximately seven days and then subsided. The pyramid's bindi
 
 ---
 
-## The Twin Sovereigns: Brothers in Opposition
+## The Twin Sovereigns: Siblings in Opposition
 
 The Sand Sovereign and the Moon Sovereign were twin siblings — not merely political rivals but halves of a single dynastic inheritance. Their father, the last unified ruler of the Salt Ledger line, divided his realm between them in his death decree: the Sand Sovereign received dominion over "all that the sun touches" (surface territory, trade routes, astronomical authority), while the Moon Sovereign received dominion over "all that the sun does not reach" (underground resources, death rites, the metaphysics of the underworld).
 
