@@ -1165,7 +1165,7 @@
 #define ITEM_BLESS 256
 #define ITEM_ANTI_GOOD 512
 #define ITEM_ANTI_EVIL 1024
-#define ITEM_ANTI_NEUTRAL 2048
+#define ITEM_UNUSED_ANTI_NEUTRAL 2048 /* intentionally unused (anti-neutral removed) */
 #define ITEM_NOREMOVE 4096
 #define ITEM_INVENTORY 8192
 #define ITEM_NOSAVE 16384       /* For "quest" items :) */

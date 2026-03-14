@@ -1984,10 +1984,8 @@ void do_score(CHAR_DATA *ch, char *argument)
       strcpy(buf, "@@ysaintly.");
    else if (ch->alignment > 300)
       strcpy(buf, "@@ygood.");
-   else if (ch->alignment > 10)
-      strcpy(buf, "@@ykind.");
-   else if (ch->alignment > -100)
-      strcpy(buf, "@@yneutral.");
+   else if (ch->alignment >= 0)
+      strcpy(buf, "@@ygood.");
    else if (ch->alignment > -350)
       strcpy(buf, "@@ymean.");
    else if (ch->alignment > -700)

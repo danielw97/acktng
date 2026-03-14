@@ -108,8 +108,8 @@ bool spell_know_alignment(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *
       msg = "$N is of excellent moral character.";
    else if (ap > 100)
       msg = "$N is often kind and thoughtful.";
-   else if (ap > -100)
-      msg = "$N doesn't have a firm moral commitment.";
+   else if (ap >= 0)
+      msg = "$N is often kind and thoughtful.";
    else if (ap > -350)
       msg = "$N lies to $S friends.";
    else if (ap > -700)
