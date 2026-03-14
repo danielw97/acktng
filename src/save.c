@@ -406,6 +406,13 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
               ch->pcdata->invasion_rewards[1],
               ch->pcdata->invasion_rewards[2]);
       fprintf(fp, "QuestPoints %d\n", ch->pcdata->post_quest_points);
+      {
+         int sb;
+         fprintf(fp, "SuperbossKills");
+         for (sb = 0; sb < MAX_SUPERBOSS; sb++)
+            fprintf(fp, " %d", ch->pcdata->superboss_kills[sb] ? 1 : 0);
+         fprintf(fp, "\n");
+      }
       fprintf(fp, "PropDynCooldown %d\n", ch->pcdata->quest_dynamic_cooldown_until);
       {
          int i, k;
@@ -738,6 +745,8 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       }
       for (foo = 0; foo < QUEST_MAX_STATIC_QUESTS; foo++)
          ch->pcdata->completed_static_quests[foo] = FALSE;
+      for (foo = 0; foo < MAX_SUPERBOSS; foo++)
+         ch->pcdata->superboss_kills[foo] = FALSE;
       for (foo = 0; foo < MAX_REMORT; foo++)
          ch->remort[foo] = -1;
       for (foo = 0; foo < MAX_CLASS; foo++)
@@ -1545,6 +1554,15 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             else
                ch->pcdata->learned[sn] = value;
             fMatch = TRUE;
+         }
+
+         if (!str_cmp(word, "SuperbossKills") && !IS_NPC(ch))
+         {
+            int sb;
+            for (sb = 0; sb < MAX_SUPERBOSS; sb++)
+               ch->pcdata->superboss_kills[sb] = fread_number(fp) ? TRUE : FALSE;
+            fMatch = TRUE;
+            break;
          }
 
          break;

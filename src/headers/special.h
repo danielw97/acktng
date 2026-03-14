@@ -96,6 +96,15 @@ bool is_player_summon_special(SPEC_FUN *spec_fun);
 /* Damage dispatch — call from do_damage() for any NPC with a spec_fun */
 void spec_handle_damage(CHAR_DATA *victim, int element, int dam);
 
+/* Death dispatch — call from group_gain() when an NPC dies */
+void spec_death_handler(CHAR_DATA *victim, CHAR_DATA *killer);
+
+/* Superboss tracking — returns index into superboss_kills[], or -1 */
+int spec_superboss_index(CHAR_DATA *mob);
+
+/* Heal chance calculation for summons */
+int summon_master_heal_chance(int master_hit, int master_max_hp, int thematic_bonus);
+
 /* Per-spec damage callbacks */
 void spec_keep_elemental_captain_damage(CHAR_DATA *ch, int element, int dam);
 

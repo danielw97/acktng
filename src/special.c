@@ -496,6 +496,61 @@ void spec_handle_damage(CHAR_DATA *victim, int element, int dam)
 }
 
 /*
+ * spec_superboss_index — return the superboss tracking index for a mob,
+ * or -1 if the mob is not a superboss.
+ */
+int spec_superboss_index(CHAR_DATA *mob)
+{
+   if (mob->spec_fun == spec_pyramid_black_sun_shard)
+      return SUPERBOSS_PYRAMID_BLACK_SUN_SHARD;
+   if (mob->spec_fun == spec_keep_elemental_captain)
+      return SUPERBOSS_KEEP_ELEMENTAL_CAPTAIN;
+   if (mob->spec_fun == spec_keep_physical_captain)
+      return SUPERBOSS_KEEP_PHYSICAL_CAPTAIN;
+   return -1;
+}
+
+/*
+ * spec_death_handler — called from group_gain() when an NPC dies.
+ * Checks if the dead mob is a superboss and awards a reincarnation
+ * point to each group member who has not killed this superboss before.
+ */
+void spec_death_handler(CHAR_DATA *victim, CHAR_DATA *killer)
+{
+   int sb_index;
+   CHAR_DATA *gch;
+   char buf[MAX_STRING_LENGTH];
+
+   if (victim == NULL || victim->spec_fun == NULL)
+      return;
+
+   sb_index = spec_superboss_index(victim);
+   if (sb_index < 0)
+      return;
+
+   for (gch = victim->in_room->first_person; gch != NULL; gch = gch->next_in_room)
+   {
+      if (IS_NPC(gch) || gch->pcdata == NULL)
+         continue;
+
+      if (!is_same_group(gch, killer))
+         continue;
+
+      if (gch->pcdata->superboss_kills[sb_index])
+         continue;
+
+      gch->pcdata->superboss_kills[sb_index] = TRUE;
+      gch->pcdata->reincarnation_data[REINCARNATION_POINTS]++;
+
+      sprintf(buf,
+         "@@a*** You have slain @@e%s@@a for the first time! ***\n\r"
+         "@@a*** You have been awarded @@W1 reincarnation point@@a! ***@@N\n\r",
+         victim->short_descr);
+      send_to_char(buf, gch);
+   }
+}
+
+/*
  * Core procedure for dragons.
  */
 bool dragon(CHAR_DATA *ch, char *spell_name)
@@ -570,45 +625,6 @@ int summon_master_heal_chance(int master_hit, int master_max_hp, int thematic_bo
 
    return URANGE(5, chance_to_heal, 95);
 }
-
-#ifdef UNIT_TEST_SPECIAL
-int summon_master_heal_chance_for_test(int master_hit, int master_max_hp, int thematic_bonus)
-{
-   return summon_master_heal_chance(master_hit, master_max_hp, thematic_bonus);
-}
-
-int summon_special_count_for_test(void)
-{
-   return 9;
-}
-
-bool summon_special_casts_in_combat_for_test(CHAR_DATA *ch, int index)
-{
-   switch (index)
-   {
-   case 0:
-      return spec_summon_water(ch);
-   case 1:
-      return spec_summon_fire(ch);
-   case 2:
-      return spec_summon_earth(ch);
-   case 3:
-      return spec_summon_undead(ch);
-   case 4:
-      return spec_summon_holy(ch);
-   case 5:
-      return spec_summon_shadow(ch);
-   case 6:
-      return spec_summon_metal(ch);
-   case 7:
-      return spec_summon_animate(ch);
-   case 8:
-      return spec_summon_thought(ch);
-   default:
-      return FALSE;
-   }
-}
-#endif
 
 bool spec_summon_heal_master(CHAR_DATA *ch, int thematic_bonus)
 {

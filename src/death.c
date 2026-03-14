@@ -1,4 +1,5 @@
 #include "globals.h"
+#include "special.h"
 
 extern POL_DATA politics_data;
 extern CHAR_DATA *quest_target;
@@ -339,6 +340,7 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
         quest_kill_notify(ch, victim);
 
    invasion_on_death(victim, ch);
+   spec_death_handler(victim, ch);
 
    base = victim->exp; /* Now share this out... */
 
