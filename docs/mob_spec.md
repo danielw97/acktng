@@ -227,6 +227,8 @@ Builder note: set the `aggressive` flag for mobs whose intended behavior is to i
 
 Builder note: mobs that should remain in place and not wander (for example, gate guards) should be flagged with `act sentinel`.
 
+Builder note: if a mob is intended to appear only during daytime, it must include the `DAYONLY`/`day_only` act flag. If a mob is intended to appear only during nighttime, it must include the `NIGHTONLY`/`night_only` act flag.
+
 - `is_npc` = `1`
 - `sentinel` = `2`
 - `scavenger` = `4`

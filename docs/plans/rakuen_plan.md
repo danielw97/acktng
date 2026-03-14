@@ -61,8 +61,9 @@ Rakuen is built as a vertically layered, politically fractured city that still p
 24. Strong non-boss elites must include `solo` (`33554432`).
 25. Civic/guard mobs that must not wander must include `sentinel` (`2`).
 26. Do not set `invasion` flag in area files (runtime-only).
-27. Do not assign `spec_summon_*` specials in area files. Do not assign `spec_keep_*` specials in area files.
-28. Permitted ambient city specials: `spec_vendor`, `spec_laborer`, `spec_warden`, `spec_lamplighter`, `spec_janitor`.
+27. If a mob is intended to appear only during daytime, it must include the `day_only` act flag. If a mob is intended to appear only during nighttime, it must include the `night_only` act flag.
+28. Do not assign `spec_summon_*` specials in area files. Do not assign `spec_keep_*` specials in area files.
+29. Permitted ambient city specials: `spec_vendor`, `spec_laborer`, `spec_warden`, `spec_lamplighter`, `spec_janitor`.
 
 ### Object Rules
 
