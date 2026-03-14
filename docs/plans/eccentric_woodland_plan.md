@@ -21,32 +21,56 @@ This plan rebuilds the woodland as Midgaard's unstable southern corridor and Rak
 2. Owner must be `O Virant~`.
 3. Envelope must be `V 7300 7699`; all rooms/mobs/objects remain inside.
 4. Keep canonical section order: `#AREA`, `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
+5. Area files must not contain comments; comment syntax is not part of the accepted on-disk format (exception: `*` comment lines are allowed in `#MOBILES`, `#SPECIALS`, and `#OBJFUNS` sections only).
 
 ### String/Description Requirements
-5. All strings terminate with `~`.
-6. No blank lines inside area strings (`\n\n` disallowed).
-7. No vnums in in-world description text.
-8. Mobile `long_descr` is exactly one text line then `~` line.
-9. Mobile `description` ends with exactly one trailing newline before `~`.
-10. Room descriptions end with exactly one trailing newline before `~`.
-11. Object extra-description text ends with exactly one trailing newline before `~`.
+6. All strings terminate with `~`.
+7. No blank lines inside area strings (`\n\n` disallowed).
+8. No vnums in in-world description text (rooms, mobs, objects, extra descriptions, exit descriptions).
+9. Mobile `long_descr` is exactly one text line then `~` line; no multi-line `long_descr` text.
+10. Mobile `description` ends with exactly one trailing newline before `~`.
+11. Room descriptions end with exactly one trailing newline before `~`.
+12. Object extra-description text ends with exactly one trailing newline before `~`.
 
 ### Room/Topology Requirements
-12. Every room in `7300-7699` exists and has unique description text.
-13. Exits are bidirectional except deliberate maze behavior.
-14. Maze rooms must use `ROOM_MAZE` (`524288`).
-15. Boss rooms must be `no_mob` (`4`).
-16. Exit keywords must be discoverable in room text/object/extra-description.
+13. Every room in `7300-7699` exists and has unique description text.
+14. Room descriptions must not be identical across rooms.
+15. Each room's main `<description>~` must contain at least 3 sentences of text; important/landmark rooms must contain at least 5 sentences.
+16. Room names and descriptions must not use placeholder or procedural naming patterns (e.g., `Corridor 12`, `Room 7`); names must be authored as in-world thematic content.
+17. Exits are bidirectional except deliberate maze behavior; cross-area links also require the reverse exit in the connected area.
+18. Maze rooms must use `ROOM_MAZE` (`524288`); every room in a maze vnum set must have this flag; only `ROOM_MAZE` rooms may use non-linear or looping exits.
+19. Boss rooms must be `no_mob` (`4`).
+20. Named exits (non-empty `<exit_keyword>`) must be discoverable in the room's main description, an object in the room, or an `E` extra description. Door-style named exits prefix the keyword with `^`.
+21. If a door is reset to locked via `#RESETS D` state `2`, `<key_vnum>` must be a valid key object vnum (not `-1`) and that key object must exist in `#OBJECTS`.
 
 ### Mob/Object/Reset Requirements
-17. All mobs include `stay_area` (`64`).
-18. Boss mobs include `sentinel` (`2`) + `boss` (`67108864`) and live only in `no_mob` rooms.
-19. Strong non-boss elites include `solo` (`33554432`).
-20. No builder-set `invasion` flag.
-21. Every object includes `ITEM_TAKE` (`8388608`).
-22. No object uses `ITEM_WEAR_CLAN_COLORS` (`16777216`).
-23. Loot-table items use `ITEM_LOOT` (`67108864`); boss loot also uses `ITEM_BOSS` (`134217728`).
-24. `#RESETS` has no blank lines; lock/key resets use valid key vnums.
+22. All mobs must include `is_npc` (`1`) + `stay_area` (`64`).
+23. Boss mobs must include `sentinel` (`2`) + `boss` (`67108864`) and live only in `no_mob` rooms.
+24. Strong non-boss elites must include `solo` (`33554432`).
+25. Within each sub-region, non-sentinel mobs must be confined by `sentinel` flag or `no_mob` room walls so they cannot wander out of their sub-region.
+26. No builder-set `invasion` flag (`536870912`); this is a runtime-only flag.
+27. Do not set `AFF_VAMP_HEALING` (`33554432`) in `affected_by` on any mob in area files.
+28. Every object must include `take` (`8388608`) in `wear_flags`.
+29. No object may include `clan_colors` (`16777216`) in `wear_flags`.
+30. Loot-table items must have `ITEM_LOOT` (`67108864`) in `extra_flags`; any item that can drop from a boss must also have `ITEM_BOSS` (`134217728`).
+31. Area-authored objects must not set `ITEM_GENERATED` (`1`) in `extra_flags`; that flag is runtime-managed.
+32. Item stats are generated at runtime; area files must not define handcrafted stat values. Author identity/behavior data only (type, flags, wear, apply, value layout, weight, level).
+33. Object `name~` values must be unique within the area (no duplicate item names in the same area file).
+34. Object weight encodes archetype: `1-5` = caster, `6-10` = melee, `11-15` = tank.
+35. `ITEM_WEAPON` objects must include both `hold` and `take` in `wear_flags`.
+36. Weapon `value3` must be thematically consistent with the weapon's concept; `value3 = 0` (`hit`) may only be used if the object also has `ITEM_FIST` in `extra_flags`.
+37. Two-handed weapons whose name/description clearly indicates a two-handed archetype must include `ITEM_TWO_HANDED` (`2147483648`) in `extra_flags`.
+38. Any object assigned `objfun_healing` in `#OBJFUNS` must include `ITEM_ANTI_EVIL` (`1024`) in `extra_flags`.
+39. Any object with `ITEM_LIFESTEALER` (`33554432`) must also include `ITEM_ANTI_GOOD` (`512`) in `extra_flags`.
+40. `#RESETS` must not contain blank lines; lock/key resets must use valid key vnums within the area envelope.
+41. Mobile loot tables: `loot_amount` must be greater than `0` for loot drops to be attempted; the sum of all `loot_chance[x]` values on an `L` line must be `<= 100`.
+42. Bitvector hygiene: do not persist undefined or unknown bits in any bitvector-backed field.
+
+### Quest Design Requirements
+43. Every area must include at least one quest whose target is a boss.
+44. Every area must include at least one cartography quest.
+45. The final quest in every quest chain must reward a piece of equipment.
+46. Any quest that targets a boss must reward a piece of equipment.
 
 ---
 
@@ -180,6 +204,14 @@ Traversal target: average full clear 70-95 minutes at-level; efficient route 40-
 5. **Midgaard Interface NPCs (8 mobs):** auditors, gate liaisons, variance clerks.
 6. **Rakuen Dispatch NPCs (6 mobs):** couriers, supply runners, compact envoys.
 
+### Mob Act Flag Policy
+- All mobs: `is_npc` (`1`) + `stay_area` (`64`) are mandatory.
+- Hostile mobs that initiate combat on sight: add `aggressive` (`32`).
+- Stationary mobs (guards, questgivers, vendors): add `sentinel` (`2`).
+- Strong non-boss elites: add `solo` (`33554432`).
+- Do not set `invasion` (`536870912`) — runtime-only.
+- Sub-region containment: every mob in a sub-region must be either flagged `sentinel` or confined by `no_mob`-flagged room walls, so mobs cannot wander outside their designated sub-zone.
+
 ### Boss Ladder (5 bosses)
 1. **Sealbreaker Valt** (7542): forged escort syndicate chief.
 2. **Abbess of the Black Vow** (7509): ritual house war-priestess.
@@ -187,7 +219,7 @@ Traversal target: average full clear 70-95 minutes at-level; efficient route 40-
 4. **Warden-Defector Hadrik** (7589): ex-compact commander turned corridor tyrant.
 5. **Marrow Ledger of Ninth Acre** (7629): identity-stripping memory entity at funerary seam.
 
-All bosses: `stay_area + sentinel + boss`, placed in `no_mob` rooms.
+All bosses: `is_npc` + `stay_area` + `sentinel` + `boss`, placed exclusively in `no_mob` rooms. Boss loot objects carry both `ITEM_LOOT` and `ITEM_BOSS` in `extra_flags`.
 
 ---
 
@@ -205,48 +237,68 @@ All bosses: `stay_area + sentinel + boss`, placed in `no_mob` rooms.
 - **Predator Counterfeit Set:** forged escort badges, fake dispatch writs.
 - **Rakuen Dispatch Set:** ration markers, emergency courier satchels, compact tablets.
 
-All loot-generated objects flagged `ITEM_LOOT`; boss drops include `ITEM_BOSS`.
+### Object Authoring Policy
+- All loot-generated objects: `ITEM_LOOT` (`67108864`) in `extra_flags`; boss drops also include `ITEM_BOSS` (`134217728`).
+- Every object must include `take` (`8388608`) in `wear_flags`; no object may include `clan_colors` (`16777216`).
+- Do not set `ITEM_GENERATED` (`1`) in `extra_flags`; that flag is runtime-managed.
+- Item stats are generated at runtime from level and runtime parameters. Author only identity/behavior data (type, flags, wear, apply selector, value layout, weight, level via `L` entry). Do not hand-tune stat values.
+- Object weight encodes archetype: `1-5` caster, `6-10` melee, `11-15` tank.
+- `ITEM_WEAPON` objects must include both `hold` and `take` in `wear_flags`.
+- Weapon `value3` must match weapon concept; `value3 = 0` (`hit`) only if `ITEM_FIST` is also set.
+- Two-handed weapons with a clearly two-handed name/description must include `ITEM_TWO_HANDED` (`2147483648`) in `extra_flags`.
+- Object `name~` values must be unique within the area; no duplicate item names in the same area file.
+- Object `name`, `short_descr`, and `description` must be thematically consistent with non-`take` wear flags (head items read as headgear, wrist as wristwear, held items as held objects, etc.).
 
 ---
 
 ## Quest Plan (includes cartography + boss contracts)
 
-Assume static quest cap expanded to `64` (`PROP_MAX_STATIC_QUESTS`) so Eccentric Woodland can use IDs `48-57` (`49.prop-58.prop`).
+### Quest File Range
+The current static quest load cap is `PROP_MAX_STATIC_QUESTS = 48`, meaning only `1.prop`–`48.prop` are loaded at startup. Eccentric Woodland quests require **expanding the cap to at least `58`** in `src/` before the quest files below will be active. This is a required code change, not an area-file change. Until the cap is raised, quest files `49.prop`–`58.prop` will be silently ignored at boot. Quest file numbering below uses static IDs `48-57` (files `49.prop-58.prop`).
+
+### Equipment Reward Policy
+Per spec section 13.2:
+- Any quest that targets a boss **must** reward a piece of equipment.
+- The final quest in every chain **must** reward a piece of equipment.
+- Equipment rewards are authored as a custom reward-object block in the `.prop` file; the block specifies short description, keywords, long description, wear flags, extra flags, weight, and item-apply selector.
 
 ### Core Exploration Chain
-1. **Quest 48 — Southern Variance Recon (Midgaard)**  
-   Type 1; targets three low-zone route predators.
-2. **Quest 49 — Bell-Fog Cartography Survey (Midgaard Cartographers' Dispute tie-in)**  
-   Type 2 collection quest; recover 5 survey rubbings from anchor rooms in Zones A/B/C.  
-   **This is the required cartography quest.**
-3. **Quest 50 — Forged Escort Seal Crackdown (Midgaard)**  
-   Type 1; kill forged-escort officers and recover stamp blocks.
+1. **Quest 48 (49.prop) — Southern Variance Recon (Midgaard)**
+   Type 1; targets three low-zone route predators. Rewards gold + QP.
+2. **Quest 49 (50.prop) — Bell-Fog Cartography Survey (Midgaard Cartographers' Dispute tie-in)**
+   Type 2 collection quest; recover 5 survey rubbings from anchor rooms in Zones A/B/C.
+   **This is the required cartography quest.** Rewards gold + QP; this is a chain-internal quest and need not supply equipment.
+3. **Quest 50 (51.prop) — Forged Escort Seal Crackdown (Midgaard)**
+   Type 1; kill forged-escort officers and recover stamp blocks. Final quest of Core Exploration Chain — **must reward a piece of equipment.**
 
 ### Corridor Stabilization Chain (Rakuen logistics)
-4. **Quest 51 — Dispatch Lane Reopening (Rakuen envoy)**  
-   Type 3; kill-count against lapsed compact raiders.
-5. **Quest 52 — Causeway Compact Proofs (Rakuen envoy)**  
-   Type 2; collect compact tablets and breach notices.
-6. **Quest 53 — Defector Command Severance (boss)**  
-   Type 3; target **Warden-Defector Hadrik**.
+4. **Quest 51 (52.prop) — Dispatch Lane Reopening (Rakuen envoy)**
+   Type 3; kill-count against lapsed compact raiders. Rewards gold + QP.
+5. **Quest 52 (53.prop) — Causeway Compact Proofs (Rakuen envoy)**
+   Type 2; collect compact tablets and breach notices. Rewards gold + QP.
+6. **Quest 53 (54.prop) — Defector Command Severance (boss)**
+   Type 3; target **Warden-Defector Hadrik**. Final quest of Corridor Stabilization Chain and boss target — **must reward a piece of equipment.**
 
 ### Ritual House Arc
-7. **Quest 54 — Oath Court Schism Inquiry**  
-   Type 1; eliminate rival oath enforcers.
-8. **Quest 55 — Black Vow Decapitation (boss)**  
-   Type 3; target **Abbess of the Black Vow**.
+7. **Quest 54 (55.prop) — Oath Court Schism Inquiry**
+   Type 1; eliminate rival oath enforcers. Rewards gold + QP.
+8. **Quest 55 (56.prop) — Black Vow Decapitation (boss)**
+   Type 3; target **Abbess of the Black Vow**. Final quest of Ritual House Arc and boss target — **must reward a piece of equipment.**
 
 ### High-End Boss Arc
-9. **Quest 56 — Sealbreaker Execution Writ (boss)**  
-   Type 3; target **Sealbreaker Valt**.
-10. **Quest 57 — Ninth Acre Name-Recovery Rite (boss finale)**  
-    Type 1; targets **Marrow Ledger of Ninth Acre** + elite attendants.
+9. **Quest 56 (57.prop) — Sealbreaker Execution Writ (boss)**
+   Type 3; target **Sealbreaker Valt**. Boss target — **must reward a piece of equipment.**
+10. **Quest 57 (58.prop) — Ninth Acre Name-Recovery Rite (boss finale)**
+    Type 1; targets **Marrow Ledger of Ninth Acre** + elite attendants. Final quest of High-End Boss Arc and boss target — **must reward a piece of equipment.**
+
+### Bell-Eater Stag
+The Bell-Eater Stag (7385) is an apex boss without a dedicated standalone quest chain above. Either add it as a target to an existing boss quest or create an additional quest; do not leave a boss without at least one quest targeting it.
 
 ### Quest Offerers (planned)
-- Midgaard Southern Affairs auditor (north gate cluster).
-- Midgaard Lantern Registry cartographer (north edge mobile).
-- Rakuen dispatch envoy (south threshold cluster).
-- Neutral bell-keeper mediator (mid-zone refuge room).
+- Midgaard Southern Affairs auditor (north gate cluster, vnum in Zone A).
+- Midgaard Lantern Registry cartographer (north edge mobile, vnum in Zone A/B).
+- Rakuen dispatch envoy (south threshold cluster, vnum in Zone H).
+- Neutral bell-keeper mediator (mid-zone refuge room, vnum in Zone B/C).
 
 ---
 
@@ -262,23 +314,67 @@ Assume static quest cap expanded to `64` (`PROP_MAX_STATIC_QUESTS`) so Eccentric
 ## Implementation Sequence
 1. Update `#AREA` header (`Q 16`, `O Virant~`, `V 7300 7699`, keyword/levels/reset msg).
 2. Author 400-room braided topology, then validate reverse-exit integrity (except maze exceptions).
-3. Add maze flags and clue-language consistency.
-4. Add 96 mobiles with strict flag policy and boss-room placement.
-5. Add 118 objects with wear/extra-flag compliance.
-6. Build resets with valid keys/doors; remove blank lines.
-7. Add quest files (`49.prop-58.prop`) and wire offerer vnums.
-8. Validate north/south external links (Midgaard + Rakuen endpoint reservation).
+3. Verify room descriptions: each at least 3 sentences; landmark/boss-approach rooms at least 5 sentences; all descriptions unique; no placeholder names.
+4. Add maze flags and clue-language consistency; confirm all maze vnum sets are fully flagged `ROOM_MAZE`.
+5. Add 96 mobiles with strict flag policy (`is_npc + stay_area` mandatory; boss flags; solo for elites; sub-region containment via sentinel or no_mob walls).
+6. Add 118 objects with wear/extra-flag compliance (unique names, no handcrafted stats, weight archetype policy, weapon value3 consistency, two-handed flag where required).
+7. Build resets with valid keys/doors; remove blank lines; verify loot table `loot_amount > 0` and `L` line sums `<= 100`.
+8. Expand `PROP_MAX_STATIC_QUESTS` to at least `58` in `src/` (required code change before quest files go live).
+9. Add quest files (`49.prop-58.prop`), wire offerer vnums, add equipment reward blocks to all boss-targeting and chain-final quests.
+10. Validate north/south external links (Midgaard + Rakuen endpoint reservation).
 
 ---
 
 ## Acceptance Checklist
+
+### Header and Structure
 - [ ] `wood.are` header complies (`Q 16`, `O Virant~`, `V 7300 7699`).
-- [ ] All 400 room vnums `7300-7699` are implemented.
+- [ ] Section order: `#AREA`, `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
+- [ ] No comment lines outside the permitted sections (`#MOBILES`, `#SPECIALS`, `#OBJFUNS`).
+
+### Rooms and Topology
+- [ ] All 400 room vnums `7300-7699` are implemented; no gaps in vnum sequence.
 - [ ] Layout is braided/looped (not square-grid only).
-- [ ] Maze room sets flagged `ROOM_MAZE`.
+- [ ] All maze room sets fully flagged `ROOM_MAZE`; only those rooms use looping/non-linear exits.
+- [ ] Every room description is unique, contains at least 3 sentences, and contains no vnum references.
+- [ ] Landmark and boss-approach rooms contain at least 5 sentences.
+- [ ] No placeholder or procedural room names.
+- [ ] Named exits are discoverable in room description, object, or extra description.
+- [ ] All locked-on-reset doors have `<key_vnum>` pointing to a valid key object in `#OBJECTS`.
+
+### External Links
 - [ ] Midgaard north link retained (`7302 <-> 3190`).
 - [ ] Rakuen south link planned (`7698 <-> 14600`) and documented for Rakuen build.
-- [ ] All mobs include `stay_area`; bosses use `sentinel + boss` in `no_mob` rooms.
-- [ ] Object flags comply (`ITEM_TAKE`, loot/boss rules, no clan colors).
-- [ ] Quest suite includes cartography quest and multiple boss quests.
+
+### Mobiles
+- [ ] All mobs include `is_npc` + `stay_area`; no `invasion` flag set.
+- [ ] Bosses include `sentinel` + `boss`, placed only in `no_mob` rooms.
+- [ ] Strong non-boss elites include `solo`.
+- [ ] Sub-region mobs are sentinel-flagged or enclosed by `no_mob` walls.
+- [ ] No `AFF_VAMP_HEALING` set in any `affected_by` field.
+
+### Objects
+- [ ] Every object includes `take` in `wear_flags`; no object includes `clan_colors`.
+- [ ] No object sets `ITEM_GENERATED` in `extra_flags`.
+- [ ] Loot-table objects have `ITEM_LOOT`; boss drops also have `ITEM_BOSS`.
+- [ ] No handcrafted stat values; item level set via `L` entry only.
+- [ ] All object `name~` values are unique within the area.
+- [ ] Object weight matches archetype (1-5 caster, 6-10 melee, 11-15 tank).
+- [ ] Weapons include both `hold` and `take` in `wear_flags`.
+- [ ] Weapon `value3 = 0` only if `ITEM_FIST` is set; two-handed weapons with two-handed identity carry `ITEM_TWO_HANDED`.
+
+### Resets
+- [ ] `#RESETS` contains no blank lines.
+- [ ] Mob loot tables have `loot_amount > 0`; `L` line sums are `<= 100`.
+
+### Quests
+- [ ] `PROP_MAX_STATIC_QUESTS` raised to at least `58` in `src/` before quest files are active.
+- [ ] Quest suite includes at least one cartography quest (Quest 49).
+- [ ] All five bosses have at least one quest targeting them.
+- [ ] All boss-targeting quests include equipment reward blocks.
+- [ ] All chain-final quests include equipment reward blocks.
+
+### Lore and Tone
 - [ ] Text/lore tone matches Eccentric Woodland contradiction pillars.
+- [ ] Color theme uses Variance Canopy Palette; no `@@k`, no background codes, no flashing.
+- [ ] No bitvector fields contain undefined or unknown bits.
