@@ -243,3 +243,16 @@ When implementing rooms/mobs/objects in any corridor area:
 7. **Use the Jackal-derived cult spectrum intentionally.** Each corridor area has its own cult presence (Synod, Wellmouth Creed, Salt-Jackal Offshoot, Tribunal Splinters). These cults are doctrinally distinct but share liturgical vocabulary. Players who travel the corridor should recognize cognate phrases used in different contexts — the same words meaning different things at different points along the spectrum from cosmic containment to personal intimidation.
 
 Narrative tone should emphasize **institutional survival under scarcity** — the ongoing cost of maintaining civilizational coherence in a world where the water is running out, the pyramids are waking up, and the measurement systems that once held everything together are showing their age.
+
+---
+
+## Addendum: Eastern Littoral Continuation (Saltglass Reach and Mafdet)
+
+The Oasis-Pyramid Corridor's logistic logic continues east beyond the inland desert into the **Saltglass Reach**, then terminates at the beach-port of **Mafdet**. In corridor terms, Mafdet is the sea-facing equivalent of an oasis adjudication node: it converts witness-marked caravan cargo into shipborne contract cargo.
+
+Continuity points for implementers:
+- Water-court and charter witness formulas from the oases appear in Mafdet's manifest attestation language.
+- Reach tariff cairn stations serve as legal handoff points between inland caravan jurisdiction and harbor law.
+- Relic quarantine doctrine in Mafdet descends from corridor containment practice developed for pyramid-era hazards.
+
+This extension preserves the setting's central thesis: road law, water law, and monument law were always part of one integrated civilizational system that could adapt from dunes to docks.

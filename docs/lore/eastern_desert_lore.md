@@ -39,6 +39,16 @@ The redesign treats these not as disconnected motifs, but as pieces of one histo
 
 This area should narratively bridge nearby desert and pyramid content, creating a cohesive world-historical arc:
 
+### Connection to the Saltglass Reach and Mafdet (eastward littoral extension)
+
+The Eastern Desert does not end at the last inland dunes. Its surviving road logic continues east into the **Saltglass Reach**, where caravan law transitions into maritime contract law at the beach-port of **Mafdet**. Historically, this transition happened through tariff cairn stations that certified cargo origin, assessed shore conversion levies, and stamped manifests for dockside loading.
+
+Specific connections:
+- Charter Mile Marker fragments in Zone A should mention "shoreward certification" and old references to Reach-bound freight.
+- Zone B ledger rooms should include redacted entries for coastward tariff disputes, foreshadowing Mafdet's ledger houses.
+- Zone C convoy fortifications should show architectural adaptation for long-haul cargo protection to the coast (rope-bolted crate anchors, sailcloth salvage, anti-salt wrapping).
+- Zone D inscriptions can include partial directional compounds that pair obelisk bearings with tide-cycle timing, hinting at Measure Script's littoral branch later preserved in Mafdet port records.
+
 ### Connection to the Northern Pyramid (vnums 10125-10324, levels 100-120)
 
 The Northern Pyramid was constructed by the **Sand Sovereign**, a dynastic heir of the Salt Ledger Kingdoms who elevated the old road-taxation apparatus into monumental funerary architecture. The Eastern Desert's Keepers of Measure and their obelisk-line survey system were the direct predecessors of the Northern Pyramid's astronomical alignment chambers. When players encounter the Twelve Obelisks in Zone D, they are standing in the same calibration tradition that the Sand Sovereign later scaled into pyramid-sized precision.

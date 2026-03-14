@@ -444,3 +444,6 @@ When writing room text, mob dialogue, and lore objects in this area, prefer recu
 - **Moral ambiguity in stewardship** (Spring Wardens, oasis wyrm dilemma, sanctum-style preservation ethics)
 
 These links should stay atmospheric and diegetic rather than encyclopedic. The goal is to let attentive players feel that the Great Oasis is not an isolated dungeon but a pressure point where the setting's legal, ecological, and theological histories intersect.
+
+### 21i) Saltglass Reach and Mafdet Maritime Extension
+The Great Oasis historically functioned as the last major freshwater arbitration basin for caravans bound east to the coast. Seaward convoys took certified water-right and charter attestations from the oasis, crossed the Saltglass Reach, and converted those claims into harbor contracts at Mafdet. In modern play-space terms, this lets Great Oasis lore naturally reference maritime pricing shocks, ship-cargo demand cycles, and coastal faction pressures without breaking existing canon.
