@@ -381,6 +381,8 @@ The Scorched Wastes' "Meridian Intake March" — the destroyed corridor that onc
 - Beacon fire sconces on seaward-facing walls — ceremonial now, once functional.
 - Guardian claw marks scratched into beach stone at the tide line — the oldest surviving inscriptions in Mafdet.
 
+These motifs keep Mafdet visibly related to the oasis-pyramid civilization while clearly signaling a maritime-adapted branch of that legacy.
+
 ---
 
 ## XI) Voice, Inscription, and Diegetic Text Style Guide
@@ -459,3 +461,15 @@ Mafdet's position at the meeting point of desert and sea creates a distinct envi
 4. Commerce is not neutral backdrop; it is the **primary social activity** and the lens through which all other concerns (security, religion, politics, history) are evaluated.
 5. The sea is not merely a scenic element; it is a **legal boundary** that transforms every institution, obligation, and relationship that crosses it.
 6. Mafdet should feel like a place where the corridor civilization's institutions have been **pressure-tested by the ocean** — simplified, hardened, and made practical in ways that inland institutions never had to be.
+
+---
+
+## Five-City Intercity Cross-Reference
+
+For comprehensive five-city political economy and legal interoperability, see: `docs/lore/five_cities_intercity_lore.md`.
+
+Mafdet-related pairings represented there:
+- Mafdet <-> Midgaard: provenance registry versus export-finality competition.
+- Mafdet <-> Kowloon: cargo codex alignment for northern maritime conversion.
+- Mafdet <-> Kiess: debt and bonded-transfer legality review.
+- Mafdet <-> Rakuen: disaster cargo classification and mercy-freight terms.
