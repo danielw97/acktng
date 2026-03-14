@@ -18,10 +18,10 @@ Path to the Wizard's Keep~
 This is a simple path. To the north, the Wizard's Keep can be seen, a majestic
 
 
-place for adepts. A dense forest can be seen below.
+place for adepts. A dense forest can be seen below.
 
 
-~
+~
 16384 11
 D0
 ~
@@ -37,16 +37,16 @@ Path to Keep~
 The path continues on, stretching north towards the Wizard's Keep. Birds can
 
 
-be heard all around, and the sun shines brightly. Little can be seen of
+be heard all around, and the sun shines brightly. Little can be seen of
 
 
-anything to the sides of the path, the forest so dense that you cannot see a
+anything to the sides of the path, the forest so dense that you cannot see a
 
 
-thing. The smell of the forest is overwhelming.
+thing. The smell of the forest is overwhelming.
 
 
-~
+~
 0 11
 D0
 ~
@@ -62,16 +62,16 @@ Path to Keep~
 The path continues on, stretching north towards the Wizard's Keep. Birds can
 
 
-be heard all around, and the sun shines brightly. Little can be seen of
+be heard all around, and the sun shines brightly. Little can be seen of
 
 
-anything to the sides of the path, the forest so dense that you cannot see a
+anything to the sides of the path, the forest so dense that you cannot see a
 
 
-thing. A faint scent of smoke wafts in from the east.
+thing. A faint scent of smoke wafts in from the east.
 
 
-~
+~
 4 11
 D0
 ~
@@ -91,13 +91,13 @@ Road to Keep~
 The road widens here as it approaches the Keep from the south. Worn cobblestones
 
 
-line the path, smoothed by years of marching boots. A faint shimmer of magic
+line the path, smoothed by years of marching boots. A faint shimmer of magic
 
 
-lingers in the air, and the Keep's imposing silhouette looms just to the north.
+lingers in the air, and the Keep's imposing silhouette looms just to the north.
 
 
-~
+~
 0 11
 D0
 ~
@@ -121,16 +121,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -146,16 +146,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -171,16 +171,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -196,16 +196,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -221,16 +221,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -246,13 +246,13 @@ Corner of the path around the Keep~
 To the east and the north, a path around the keep stretches. To the south and
 
 
-the west, a dense forest grows, of which only trees can be seen. The sun
+the west, a dense forest grows, of which only trees can be seen. The sun
 
 
-shines brightly above, giving an almost cheerful feeling to the area.
+shines brightly above, giving an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D0
 ~
@@ -268,13 +268,13 @@ Northern Keep Path~
 The path curves gently around the northern face of the Keep. The great stone
 
 
-walls loom to the west, slick with moisture from the surrounding moat. A
+walls loom to the west, slick with moisture from the surrounding moat. A
 
 
-cold wind channels through here, carrying the smell of still water.
+cold wind channels through here, carrying the smell of still water.
 
 
-~
+~
 0 11
 D0
 ~
@@ -290,13 +290,13 @@ Northern Keep Path~
 The northern stretch of the outer path runs straight and silent. The Keep's
 
 
-battlements are clearly visible above, and the occasional flash of a torch
+battlements are clearly visible above, and the occasional flash of a torch
 
 
-can be seen as a guard makes their rounds far above.
+can be seen as a guard makes their rounds far above.
 
 
-~
+~
 0 11
 D0
 ~
@@ -312,13 +312,13 @@ Narrow Northern Path~
 The path here is particularly narrow, the moat pressing close on the north
 
 
-side and a dense wall of brambles choking the southern edge. A single weathered
+side and a dense wall of brambles choking the southern edge. A single weathered
 
 
-milestone marks the midpoint of the northern walk.
+milestone marks the midpoint of the northern walk.
 
 
-~
+~
 0 11
 D0
 ~
@@ -334,13 +334,13 @@ Eastern Keep Path~
 The path begins to widen as it turns south, the moat receding behind you.
 
 
-The stone walls of the Keep's eastern face stretch ahead, and the distant
+The stone walls of the Keep's eastern face stretch ahead, and the distant
 
 
-chirping of birds from the southern forest can be heard again.
+chirping of birds from the southern forest can be heard again.
 
 
-~
+~
 0 11
 D0
 ~
@@ -356,13 +356,13 @@ Corner of the path around the Keep~
 To the east and the south, a path around the keep stretches. To the north and
 
 
-the west, a dense forest grows, of which only trees can be seen. The sun
+the west, a dense forest grows, of which only trees can be seen. The sun
 
 
-shines brightly above, giving an almost cheerful feeling to the area.
+shines brightly above, giving an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -378,16 +378,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -403,16 +403,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -428,16 +428,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -453,16 +453,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -478,13 +478,13 @@ Corner of the path around the Keep~
 To the west and the north, a path around the keep stretches. To the south and
 
 
-the east, a dense forest grows, of which only trees can be seen. The sun
+the east, a dense forest grows, of which only trees can be seen. The sun
 
 
-shines brightly above, giving an almost cheerful feeling to the area.
+shines brightly above, giving an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D0
 ~
@@ -500,13 +500,13 @@ Northwestern Keep Path~
 The northwestern corner of the outer path curves tightly around the Keep. The
 
 
-stone here is older, worn smooth by centuries of wind and rain. Moss clings to
+stone here is older, worn smooth by centuries of wind and rain. Moss clings to
 
 
-the base of the Keep's wall and a raven watches from atop the battlements.
+the base of the Keep's wall and a raven watches from atop the battlements.
 
 
-~
+~
 0 11
 D0
 ~
@@ -522,13 +522,13 @@ Northern Keep Path~
 The northern path stretches east and west along the Keep's rear face. The moat
 
 
-here is dark and deep, its surface perfectly still. No sound comes from within
+here is dark and deep, its surface perfectly still. No sound comes from within
 
 
-the Keep's walls on this side, lending the path an eerie quiet.
+the Keep's walls on this side, lending the path an eerie quiet.
 
 
-~
+~
 0 11
 D0
 ~
@@ -544,13 +544,13 @@ Narrow Northern Path~
 A narrow section of the outer path runs here, hemmed in by the moat to the
 
 
-south and a crumbling retaining wall to the north. Weeds push up between the
+south and a crumbling retaining wall to the north. Weeds push up between the
 
 
-cobblestones, and the air smells faintly of algae and cold stone.
+cobblestones, and the air smells faintly of algae and cold stone.
 
 
-~
+~
 0 11
 D0
 ~
@@ -566,13 +566,13 @@ Eastern Keep Path~
 The path widens slightly here as it passes beneath a cracked buttress. A few
 
 
-loose stones have fallen from the Keep's upper parapet and lie scattered at
+loose stones have fallen from the Keep's upper parapet and lie scattered at
 
 
-the path's edge. The moat laps quietly against the stone to the south.
+the path's edge. The moat laps quietly against the stone to the south.
 
 
-~
+~
 0 11
 D0
 ~
@@ -588,13 +588,13 @@ Corner of the path around the Keep~
 To the west and the south, a path around the keep stretches. To the north and
 
 
-the east, a dense forest grows, of which only trees can be seen. The sun
+the east, a dense forest grows, of which only trees can be seen. The sun
 
 
-shines brightly above, giving an almost cheerful feeling to the area.
+shines brightly above, giving an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D2
 ~
@@ -610,16 +610,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -635,16 +635,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -660,16 +660,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -685,16 +685,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -710,16 +710,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -735,16 +735,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -760,16 +760,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -785,16 +785,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -810,16 +810,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -835,16 +835,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -860,16 +860,16 @@ Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
 
-can see a moat that is completely impassable. To the south, a dense forest
+can see a moat that is completely impassable. To the south, a dense forest
 
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
 
-an almost cheerful feeling to the area.
+an almost cheerful feeling to the area.
 
 
-~
+~
 0 11
 D1
 ~
@@ -885,13 +885,13 @@ Hermit's Side Path~
 A narrow side path branches off from the main road here, cutting through a
 
 
-thicket of gnarled trees. The way is overgrown and clearly seldom used, yet
+thicket of gnarled trees. The way is overgrown and clearly seldom used, yet
 
 
-boot prints in the soft mud suggest someone passes this way with purpose.
+boot prints in the soft mud suggest someone passes this way with purpose.
 
 
-~
+~
 0 11
 D3
 ~
@@ -903,16 +903,16 @@ Gate of the Wizard's Keep~
 To the north, a large gate can be seen in front of the Wizard's Keep. It is a
 
 
-double-sided gate made of strong oak wood, banded by mithril. The path towards
+double-sided gate made of strong oak wood, banded by mithril. The path towards
 
 
-the gate is kept very clean, the cobblestones almost shining brightly in the
+the gate is kept very clean, the cobblestones almost shining brightly in the
 
 
-sun.
+sun.
 
 
-~
+~
 4 11
 D0
 ~
@@ -928,16 +928,16 @@ Courtyard~
 The inner courtyard of the Wizard's Keep spreads out before you, enclosed by
 
 
-tall stone walls on all sides. A worn flagstone path cuts through the centre,
+tall stone walls on all sides. A worn flagstone path cuts through the centre,
 
 
-and a dry fountain stands at the middle, its basin cracked and forgotten. The
+and a dry fountain stands at the middle, its basin cracked and forgotten. The
 
 
-smell of torch smoke and steel lingers in the still air.
+smell of torch smoke and steel lingers in the still air.
 
 
-~
+~
 0 11
 D0
 ~
@@ -961,16 +961,16 @@ Courtyard~
 The eastern section of the courtyard is quieter than the main gate area. A
 
 
-row of iron-bound weapon racks line the eastern wall, some still bearing
+row of iron-bound weapon racks line the eastern wall, some still bearing
 
 
-training weapons. The shadows of the Keep's towers stretch long across the
+training weapons. The shadows of the Keep's towers stretch long across the
 
 
-flagstones at this hour.
+flagstones at this hour.
 
 
-~
+~
 0 11
 D0
 ~
@@ -990,16 +990,16 @@ Courtyard~
 The western portion of the courtyard holds a small barracks building, its
 
 
-shutters thrown open to the morning air. The sound of snoring and the clank
+shutters thrown open to the morning air. The sound of snoring and the clank
 
 
-of armour being donned can be heard from within. A guardsman's discarded
+of armour being donned can be heard from within. A guardsman's discarded
 
 
-boot lies near the entrance.
+boot lies near the entrance.
 
 
-~
+~
 0 11
 D0
 ~
@@ -1019,16 +1019,16 @@ Courtyard~
 The northern edge of the courtyard abuts the Keep's main keep building. A
 
 
-set of heavy oak double doors dominates the northern wall, their iron fittings
+set of heavy oak double doors dominates the northern wall, their iron fittings
 
 
-polished bright. The flagstones here are swept clean, and two iron braziers
+polished bright. The flagstones here are swept clean, and two iron braziers
 
 
-flank the entrance, their flames guttering in the breeze.
+flank the entrance, their flames guttering in the breeze.
 
 
-~
+~
 0 11
 D0
 ~
@@ -1052,13 +1052,13 @@ Courtyard~
 A corner of the courtyard, sheltered from the wind by the intersecting walls.
 
 
-A lone apple tree grows here, its branches heavy with fruit that no one seems
+A lone apple tree grows here, its branches heavy with fruit that no one seems
 
 
-to bother harvesting. Fallen apples rot softly in the grass at its base.
+to bother harvesting. Fallen apples rot softly in the grass at its base.
 
 
-~
+~
 0 11
 D0
 ~
@@ -1078,16 +1078,16 @@ Courtyard~
 The western corner of the courtyard is poorly lit, the torches on the nearby
 
 
-wall having burned down to stubs. Crates of supplies are stacked against the
+wall having burned down to stubs. Crates of supplies are stacked against the
 
 
-western wall, some open and partially emptied. The smell of salted meat and
+western wall, some open and partially emptied. The smell of salted meat and
 
 
-straw drifts from them.
+straw drifts from them.
 
 
-~
+~
 0 11
 D0
 ~
@@ -1107,16 +1107,16 @@ Courtyard~
 The courtyard's northern interior lies just before the great Keep doors. This
 
 
-area is strictly maintained, and the flagstones are clean enough to eat from.
+area is strictly maintained, and the flagstones are clean enough to eat from.
 
 
-Two enchanted lanterns hang from wrought-iron posts, casting a cold blue light
+Two enchanted lanterns hang from wrought-iron posts, casting a cold blue light
 
 
-that never flickers. The air here smells faintly of arcane reagents.
+that never flickers. The air here smells faintly of arcane reagents.
 
 
-~
+~
 0 11
 D0
 ~
@@ -1140,16 +1140,16 @@ Courtyard~
 A narrow slice of the courtyard wedged between the Keep's eastern wall and a
 
 
-storage outbuilding. Barrels of oil for the torches are stacked here, along
+storage outbuilding. Barrels of oil for the torches are stacked here, along
 
 
-with spare chains and iron hooks. A rat darts between the barrels at your
+with spare chains and iron hooks. A rat darts between the barrels at your
 
 
-approach.
+approach.
 
 
-~
+~
 0 11
 D1
 ~
@@ -1165,16 +1165,16 @@ Courtyard~
 The rear western corner of the courtyard is dim and largely unvisited. A
 
 
-broken cart leans against the wall, one wheel missing. Rotting canvas covers
+broken cart leans against the wall, one wheel missing. Rotting canvas covers
 
 
-a pile of something unidentifiable, and the flagstones here are cracked and
+a pile of something unidentifiable, and the flagstones here are cracked and
 
 
-uneven underfoot.
+uneven underfoot.
 
 
-~
+~
 0 11
 D2
 ~
@@ -1190,16 +1190,16 @@ A Guard's Tower~
 The base of the eastern guard tower rises here, its stone steps spiraling
 
 
-upward into the darkness. Arrow slits in the walls allow thin shafts of
+upward into the darkness. Arrow slits in the walls allow thin shafts of
 
 
-light to enter, and a small table bearing a half-eaten loaf of bread and an
+light to enter, and a small table bearing a half-eaten loaf of bread and an
 
 
-empty cup suggests the tower is occupied. The smell of lamp oil is strong.
+empty cup suggests the tower is occupied. The smell of lamp oil is strong.
 
 
-~
+~
 4 11
 D1
 ~
@@ -1215,16 +1215,16 @@ Eastern Tower Top~
 The upper level of the eastern guard tower commands an excellent view of the
 
 
-courtyard below and the outer road beyond the main gate. A loaded crossbow
+courtyard below and the outer road beyond the main gate. A loaded crossbow
 
 
-rests on the battlements, and a bedroll in the corner suggests a guard rests
+rests on the battlements, and a bedroll in the corner suggests a guard rests
 
 
-here when not on watch. The wind is sharp and cold at this height.
+here when not on watch. The wind is sharp and cold at this height.
 
 
-~
+~
 0 11
 D5
 ~
@@ -1236,16 +1236,16 @@ Guard's Tower~
 The base of the western guard tower is darker than its eastern counterpart,
 
 
-the arrow slits on this side partially blocked by years of accumulated grime.
+the arrow slits on this side partially blocked by years of accumulated grime.
 
 
-A rack of spears lines one wall, and a locked chest sits beneath the stairs.
+A rack of spears lines one wall, and a locked chest sits beneath the stairs.
 
 
-Worn boot-marks trace a familiar path across the floor.
+Worn boot-marks trace a familiar path across the floor.
 
 
-~
+~
 4 11
 D3
 ~
@@ -1261,16 +1261,16 @@ Western Tower Top~
 The summit of the western guard tower offers a sweeping view over the Keep's
 
 
-western walls and the winding outer path below. A signal mirror mounted on
+western walls and the winding outer path below. A signal mirror mounted on
 
 
-a swivel bracket faces the road, used to warn of approaching visitors. The
+a swivel bracket faces the road, used to warn of approaching visitors. The
 
 
-air up here tastes of iron and cold sky.
+air up here tastes of iron and cold sky.
 
 
-~
+~
 0 11
 D5
 ~
@@ -1282,19 +1282,19 @@ Entrance to the Wizard's Keep~
 The main entrance hall of the Wizard's Keep stretches before you. A vaulted
 
 
-ceiling of pale stone arches overhead, carved with faded arcane runes that
+ceiling of pale stone arches overhead, carved with faded arcane runes that
 
 
-still faintly glow. Twin rows of iron torch sconces line the walls, and a
+still faintly glow. Twin rows of iron torch sconces line the walls, and a
 
 
-thick carpet runner of deep violet stretches from the outer door to the inner
+thick carpet runner of deep violet stretches from the outer door to the inner
 
 
-passages ahead. The air hums with contained magical energy.
+passages ahead. The air hums with contained magical energy.
 
 
-~
+~
 4 11
 D0
 ~
@@ -1310,19 +1310,19 @@ Keep Antechamber~
 A transition chamber between the Keep's entrance and its inner passages. The
 
 
-walls here are paneled in dark oak, hung with faded tapestries depicting
+walls here are paneled in dark oak, hung with faded tapestries depicting
 
 
-battles fought by long-dead wizards. A suit of empty armour stands in one
+battles fought by long-dead wizards. A suit of empty armour stands in one
 
 
-corner, its visor raised as if watching the door. Faint magical wards shimmer
+corner, its visor raised as if watching the door. Faint magical wards shimmer
 
 
-across the threshold to the south.
+across the threshold to the south.
 
 
-~
+~
 0 11
 D2
 ~
@@ -1342,16 +1342,16 @@ Entrance to the Rotunda~
 The passage opens into a grand circular antechamber that serves as the
 
 
-threshold to the Keep's central rotunda. The polished marble floor reflects
+threshold to the Keep's central rotunda. The polished marble floor reflects
 
 
-the light of floating arcane orbs drifting lazily overhead. Passages lead
+the light of floating arcane orbs drifting lazily overhead. Passages lead
 
 
-north into the rotunda proper, and a staircase descends into the basement below.
+north into the rotunda proper, and a staircase descends into the basement below.
 
 
-~
+~
 0 11
 D0
 ~
@@ -1379,16 +1379,16 @@ Rotunda~
 The western arc of the grand rotunda curves gently around you. The polished
 
 
-stone floor is inlaid with a mosaic depicting celestial constellations, and
+stone floor is inlaid with a mosaic depicting celestial constellations, and
 
 
-tall arched windows of blue-tinted glass allow filtered light to fall across
+tall arched windows of blue-tinted glass allow filtered light to fall across
 
 
-the patterns. The smell of old parchment and arcane chemicals permeates the air.
+the patterns. The smell of old parchment and arcane chemicals permeates the air.
 
 
-~
+~
 0 11
 D1
 ~
@@ -1404,16 +1404,16 @@ Rotunda~
 A southern alcove of the rotunda holds a long reading bench and a glass-fronted
 
 
-cabinet filled with rolled scrolls. Most are sealed with wax and appear
+cabinet filled with rolled scrolls. Most are sealed with wax and appear
 
 
-untouched for years. A single candle burns on the bench, nearly spent, as
+untouched for years. A single candle burns on the bench, nearly spent, as
 
 
-though someone was here recently and left in haste.
+though someone was here recently and left in haste.
 
 
-~
+~
 0 11
 D0
 ~
@@ -1433,16 +1433,16 @@ Rotunda~
 The northern arc of the rotunda is dominated by a massive carved stone map of
 
 
-the surrounding lands, set into the floor. Magical markers glow faintly at
+the surrounding lands, set into the floor. Magical markers glow faintly at
 
 
-points of interest, though many have faded over the years. The ceiling here
+points of interest, though many have faded over the years. The ceiling here
 
 
-is painted with a sweeping mural of the sky at midnight.
+is painted with a sweeping mural of the sky at midnight.
 
 
-~
+~
 0 11
 D2
 ~
@@ -1458,16 +1458,16 @@ Rotunda~
 A quiet eastern alcove of the rotunda serves as a small meditation space. A
 
 
-low circular dais of pale stone sits in the centre, and cushions arranged
+low circular dais of pale stone sits in the centre, and cushions arranged
 
 
-around it suggest it was once used for group study or ritual. The arcane orbs
+around it suggest it was once used for group study or ritual. The arcane orbs
 
 
-overhead pulse slowly, as if in rhythm with something unseen.
+overhead pulse slowly, as if in rhythm with something unseen.
 
 
-~
+~
 0 11
 D0
 ~
@@ -1483,19 +1483,19 @@ Rotunda~
 The southern curve of the rotunda connects its various alcoves. A series of
 
 
-carved archways lead off to the reading alcove and the western arc, and a
+carved archways lead off to the reading alcove and the western arc, and a
 
 
-decorative fountain set into the wall here trickles softly, the water glowing
+decorative fountain set into the wall here trickles softly, the water glowing
 
 
-with a faint blue luminescence. Magical glyphs have been etched into the
+with a faint blue luminescence. Magical glyphs have been etched into the
 
 
-stone basin.
+stone basin.
 
 
-~
+~
 0 11
 D0
 ~
@@ -1511,16 +1511,16 @@ Basement~
 Stone steps lead down into the Keep's basement, a low-ceilinged space of
 
 
-bare rock and packed earth. The air is damp and cool, smelling of old stone
+bare rock and packed earth. The air is damp and cool, smelling of old stone
 
 
-and something faintly sulphurous. Wooden shelves line the rough walls, bearing
+and something faintly sulphurous. Wooden shelves line the rough walls, bearing
 
 
-crates, kegs, and a collection of items covered by dusty canvas.
+crates, kegs, and a collection of items covered by dusty canvas.
 
 
-~
+~
 0 11
 D2
 ~
@@ -1536,16 +1536,16 @@ Basement Storage Hall~
 A wide corridor in the Keep's basement serves as its main storage hall. The
 
 
-ceiling is low and reinforced with heavy timber beams. Barrels of salted
+ceiling is low and reinforced with heavy timber beams. Barrels of salted
 
 
-provisions and racks of preserved reagents line both walls. The floor is
+provisions and racks of preserved reagents line both walls. The floor is
 
 
-uneven, worn down by years of foot traffic to and from the kitchen above.
+uneven, worn down by years of foot traffic to and from the kitchen above.
 
 
-~
+~
 0 11
 D0
 ~
@@ -1565,16 +1565,16 @@ Basement Corridor~
 The corridor narrows as it leads deeper into the basement. The torches here
 
 
-are fewer, and long stretches of shadow pool between them. The faint sound of
+are fewer, and long stretches of shadow pool between them. The faint sound of
 
 
-dripping water echoes from somewhere further ahead, and the air grows noticeably
+dripping water echoes from somewhere further ahead, and the air grows noticeably
 
 
-colder.
+colder.
 
 
-~
+~
 0 11
 D0
 ~
@@ -1590,16 +1590,16 @@ Entrance to Prison~
 A heavy iron door, now standing open, marks the entrance to the Keep's old
 
 
-prison wing. The door's hinges are rusted and screech when moved, and old
+prison wing. The door's hinges are rusted and screech when moved, and old
 
 
-bloodstains dark the threshold stone. A smell of damp straw and despair wafts
+bloodstains dark the threshold stone. A smell of damp straw and despair wafts
 
 
-from the cells beyond.
+from the cells beyond.
 
 
-~
+~
 0 11
 D1
 ~
@@ -1615,16 +1615,16 @@ Prison Cell~
 A single damp cell, its walls scratched with the tally marks of a long-gone
 
 
-prisoner. A rusted chain bolted to the wall still bears a broken manacle, and
+prisoner. A rusted chain bolted to the wall still bears a broken manacle, and
 
 
-a pile of mouldy straw in the corner serves as the remnant of a bed. The only
+a pile of mouldy straw in the corner serves as the remnant of a bed. The only
 
 
-light is a thin sliver from the door crack behind you.
+light is a thin sliver from the door crack behind you.
 
 
-~
+~
 0 11
 D3
 ~
@@ -1636,19 +1636,19 @@ Wine Cellar~
 The Keep's wine cellar is a vaulted stone room lined floor to ceiling with
 
 
-wooden racks. Most of the bottles are coated in thick dust, though a few
+wooden racks. Most of the bottles are coated in thick dust, though a few
 
 
-recent additions stand out by their cleaner labels. A small table and two
+recent additions stand out by their cleaner labels. A small table and two
 
 
-stools in the corner suggest the cellar is still visited for more than just
+stools in the corner suggest the cellar is still visited for more than just
 
 
-inventory. The smell of old wine and damp wood is pleasantly strong.
+inventory. The smell of old wine and damp wood is pleasantly strong.
 
 
-~
+~
 0 11
 D3
 ~
@@ -1660,16 +1660,16 @@ Entrance to the Foyer~
 A formal passage connecting the rotunda antechamber to the Keep's grand foyer.
 
 
-The walls are hung with portraits of past wizards, their painted eyes seeming
+The walls are hung with portraits of past wizards, their painted eyes seeming
 
 
-to follow you as you pass. The floor is polished white marble, and a faint
+to follow you as you pass. The floor is polished white marble, and a faint
 
 
-echo turns every footstep into a small announcement of your presence.
+echo turns every footstep into a small announcement of your presence.
 
 
-~
+~
 0 11
 D0
 ~
@@ -1685,19 +1685,19 @@ Foyer~
 The grand foyer of the Wizard's Keep is a sweeping space of high ceilings and
 
 
-pale stone. Enchanted chandeliers hang overhead, their crystals casting
+pale stone. Enchanted chandeliers hang overhead, their crystals casting
 
 
-prismatic light across the marble floor. Wide corridors lead in every direction,
+prismatic light across the marble floor. Wide corridors lead in every direction,
 
 
-and the murmur of voices and distant arcane activity filters through from the
+and the murmur of voices and distant arcane activity filters through from the
 
 
-passages ahead.
+passages ahead.
 
 
-~
+~
 4 11
 D0
 ~
@@ -1721,16 +1721,16 @@ Foyer~
 The northern section of the foyer narrows into a more intimate corridor, its
 
 
-walls lined with glass display cases holding magical artefacts. Each case is
+walls lined with glass display cases holding magical artefacts. Each case is
 
 
-sealed with an arcane lock and bears a small plaque in a flowing script. The
+sealed with an arcane lock and bears a small plaque in a flowing script. The
 
 
-air here carries a constant low hum, as if the artefacts are restless.
+air here carries a constant low hum, as if the artefacts are restless.
 
 
-~
+~
 4 11
 D0
 ~
@@ -1754,16 +1754,16 @@ Foyer~
 A wide landing within the foyer connects the upper display corridor to the
 
 
-central passages. A broad staircase of pale marble descends to a lower level,
+central passages. A broad staircase of pale marble descends to a lower level,
 
 
-and a pair of ornate iron doors to the north lead further into the Keep's
+and a pair of ornate iron doors to the north lead further into the Keep's
 
 
-interior. The scent of magical reagents is noticeably stronger here.
+interior. The scent of magical reagents is noticeably stronger here.
 
 
-~
+~
 4 11
 D0
 ~
@@ -1787,19 +1787,19 @@ Foyer - NORTH SECRET CODE FOR DOOR~
 A long corridor terminates at a reinforced door set with a complex runic lock.
 
 
-The sigils on the door glow faintly with a cold white light, and the air
+The sigils on the door glow faintly with a cold white light, and the air
 
 
-before it crackles with suppressed magical energy. Only those who speak the
+before it crackles with suppressed magical energy. Only those who speak the
 
 
-correct incantation may pass beyond. The walls here are bare stone, stripped
+correct incantation may pass beyond. The walls here are bare stone, stripped
 
 
-of any decoration.
+of any decoration.
 
 
-~
+~
 4 11
 D0
 ~
@@ -1823,19 +1823,19 @@ Foyer Lobby~
 A small side lobby off the main foyer corridor. A wooden bench along one wall
 
 
-bears a few discarded cloaks and a forgotten satchel. A notice board on the
+bears a few discarded cloaks and a forgotten satchel. A notice board on the
 
 
-opposite wall is pinned with messages and schedules, most of them faded beyond
+opposite wall is pinned with messages and schedules, most of them faded beyond
 
 
-legibility. The floor here is scratched and dull compared to the polished
+legibility. The floor here is scratched and dull compared to the polished
 
 
-marble of the main foyer.
+marble of the main foyer.
 
 
-~
+~
 0 11
 D1
 ~
@@ -1851,19 +1851,19 @@ Foyer Lobby~
 A narrow lobby annexe to the main foyer corridor, its ceiling lower than the
 
 
-grand passages nearby. A reading lectern stands near the east wall, an open
+grand passages nearby. A reading lectern stands near the east wall, an open
 
 
-tome resting upon it. The text inside is written in a cipher no ordinary
+tome resting upon it. The text inside is written in a cipher no ordinary
 
 
-scholar could decipher, and the pages turn of their own accord every few
+scholar could decipher, and the pages turn of their own accord every few
 
 
-minutes.
+minutes.
 
 
-~
+~
 0 11
 D2
 ~
@@ -1879,16 +1879,16 @@ Foyer Lobby~
 A corner room connecting two lobby passages, sparsely furnished with a wooden
 
 
-chest and a wall-mounted torch that burns with a soft violet flame rather than
+chest and a wall-mounted torch that burns with a soft violet flame rather than
 
 
-the usual orange. The unusual flame casts strange shadows and makes the room
+the usual orange. The unusual flame casts strange shadows and makes the room
 
 
-feel slightly uneasy to linger in.
+feel slightly uneasy to linger in.
 
 
-~
+~
 0 11
 D0
 ~
@@ -1908,16 +1908,16 @@ Foyer Lobby~
 A secondary corridor of the foyer lobby runs east to west. The walls here are
 
 
-plain plaster, and several doors have been bricked over and painted to blend
+plain plaster, and several doors have been bricked over and painted to blend
 
 
-into the wall, their outlines barely visible. Whatever lay beyond those sealed
+into the wall, their outlines barely visible. Whatever lay beyond those sealed
 
 
-doors is clearly meant to be forgotten.
+doors is clearly meant to be forgotten.
 
 
-~
+~
 0 11
 D0
 ~
@@ -1937,16 +1937,16 @@ Foyer Lobby~
 A quiet corner of the lobby, partially hidden behind a tapestry depicting the
 
 
-founding of the Keep. The tapestry's stitching is extraordinarily fine, and
+founding of the Keep. The tapestry's stitching is extraordinarily fine, and
 
 
-the faces of the wizards shown are eerily lifelike. The corner behind it is
+the faces of the wizards shown are eerily lifelike. The corner behind it is
 
 
-cool and dark, and something small and metallic glints on the floor.
+cool and dark, and something small and metallic glints on the floor.
 
 
-~
+~
 0 11
 D0
 ~
@@ -1966,16 +1966,16 @@ Foyer Lobby~
 A passage along the foyer's eastern edge, its stone floors slightly warmer
 
 
-than the rest of the Keep due to a heating pipe running beneath them. Brass
+than the rest of the Keep due to a heating pipe running beneath them. Brass
 
 
-grates in the floor release gentle waves of warm air, and the sound of a
+grates in the floor release gentle waves of warm air, and the sound of a
 
 
-distant fire crackling can be heard faintly underfoot.
+distant fire crackling can be heard faintly underfoot.
 
 
-~
+~
 0 11
 D0
 ~
@@ -1995,16 +1995,16 @@ Foyer Lobby~
 The southernmost part of the foyer lobby, where the grand passage begins to
 
 
-open up again toward the rotunda. A large mirror set in a gilded frame
+open up again toward the rotunda. A large mirror set in a gilded frame
 
 
-stands against one wall, its surface slightly murky, as though it reflects
+stands against one wall, its surface slightly murky, as though it reflects
 
 
-a slightly different room than the one you stand in.
+a slightly different room than the one you stand in.
 
 
-~
+~
 0 11
 D0
 ~
@@ -2024,16 +2024,16 @@ Foyer Lobby~
 An alcove off the foyer's eastern passage, furnished with a low table and
 
 
-two chairs positioned as if for conversation. A cold cup of tea sits on
+two chairs positioned as if for conversation. A cold cup of tea sits on
 
 
-the table, a thin skin of tannin floating on its surface. Whoever was here
+the table, a thin skin of tannin floating on its surface. Whoever was here
 
 
-left recently, though in haste or simply forgetfulness is unclear.
+left recently, though in haste or simply forgetfulness is unclear.
 
 
-~
+~
 0 11
 D0
 ~
@@ -2049,16 +2049,16 @@ North - SECRET KEYWORD FOR DOOR~
 Beyond the runed door lies a short passage of polished obsidian-black stone.
 
 
-The walls here are unnervingly smooth, as if carved by magical means rather
+The walls here are unnervingly smooth, as if carved by magical means rather
 
 
-than tools. The temperature drops noticeably, and the silence is absolute save
+than tools. The temperature drops noticeably, and the silence is absolute save
 
 
-for the distant sound of something rhythmic and mechanical further ahead.
+for the distant sound of something rhythmic and mechanical further ahead.
 
 
-~
+~
 0 11
 D0
 ~
@@ -2074,16 +2074,16 @@ Secret Passageway~
 A concealed passage, its entrance masked by a section of false wall. The
 
 
-stonework here is lighter in colour than the surrounding Keep, suggesting
+stonework here is lighter in colour than the surrounding Keep, suggesting
 
 
-it was added later. The passage is narrow, forcing single-file movement, and
+it was added later. The passage is narrow, forcing single-file movement, and
 
 
-the floor is bare stone free of dust, suggesting it is used with some regularity.
+the floor is bare stone free of dust, suggesting it is used with some regularity.
 
 
-~
+~
 4 11
 D1
 ~
@@ -2099,16 +2099,16 @@ Secret Passageway~
 The hidden passage continues, curving gradually to the east. The walls are
 
 
-rough-hewn and unpainted, in stark contrast to the Keep's finished interiors.
+rough-hewn and unpainted, in stark contrast to the Keep's finished interiors.
 
 
-Grooves in the stone suggest a portcullis once sealed this passage, though the
+Grooves in the stone suggest a portcullis once sealed this passage, though the
 
 
-mechanism is long since gone.
+mechanism is long since gone.
 
 
-~
+~
 0 11
 D1
 ~
@@ -2124,16 +2124,16 @@ Secret Passageway~
 A deeper section of the secret passage, far from the bustle of the Keep above.
 
 
-The air here is cold and still, and the only light comes from a line of
+The air here is cold and still, and the only light comes from a line of
 
 
-dim phosphorescent moss growing along the base of the wall. The passage
+dim phosphorescent moss growing along the base of the wall. The passage
 
 
-smells of damp rock and old secrets.
+smells of damp rock and old secrets.
 
 
-~
+~
 0 11
 D1
 ~
@@ -2149,16 +2149,16 @@ Secret Passageway~
 The secret passage descends slightly here, the floor sloping downward at a
 
 
-gentle angle. Water seeps through a crack in the ceiling, leaving a dark stain
+gentle angle. Water seeps through a crack in the ceiling, leaving a dark stain
 
 
-on the stone below. Faint scratches on the eastern wall look like they may once
+on the stone below. Faint scratches on the eastern wall look like they may once
 
 
-have been writing, but the marks have been deliberately defaced.
+have been writing, but the marks have been deliberately defaced.
 
 
-~
+~
 4 11
 D1
 ~
@@ -2174,19 +2174,19 @@ Secret Room~
 A hidden chamber concealed at the end of the secret passage. The room is small
 
 
-but clearly once served an important purpose: a heavy iron desk is bolted to
+but clearly once served an important purpose: a heavy iron desk is bolted to
 
 
-the floor, its surface scarred by fire, and a scorched bookcase holds nothing
+the floor, its surface scarred by fire, and a scorched bookcase holds nothing
 
 
-but ash. Whatever knowledge was stored here was destroyed with great care. A
+but ash. Whatever knowledge was stored here was destroyed with great care. A
 
 
-single sealed iron box remains untouched in the corner, its lock intact.
+single sealed iron box remains untouched in the corner, its lock intact.
 
 
-~
+~
 4 11
 D4
 ~
@@ -2198,19 +2198,19 @@ End of the Road...for now.~
 The passage through the obsidian corridor terminates abruptly at a blank wall.
 
 
-The surface is perfectly smooth and faintly warm to the touch, and a circular
+The surface is perfectly smooth and faintly warm to the touch, and a circular
 
 
-groove in the stone suggests a door once opened here. Whatever mechanism
+groove in the stone suggests a door once opened here. Whatever mechanism
 
 
-operated it has been removed, leaving only the ghost of a threshold and the
+operated it has been removed, leaving only the ghost of a threshold and the
 
 
-tantalising sense that something important lies just beyond.
+tantalising sense that something important lies just beyond.
 
 
-~
+~
 0 11
 D2
 ~
@@ -2224,14 +2224,14 @@ A Patrolman of the Keep~
 @@WA @@BPatrolman@@W of the Keep@@N~
 @@WA @@BPatrolman@@W of the Keep@@N is here, pacing a well-worn circuit of the grounds.
 
-~
+~
 This patrolman is clad in serviceable chainmail bearing the Keep's blue and silver sigil.
 
-They move with a practiced rhythm, eyes scanning the road without pause or hesitation.
+They move with a practiced rhythm, eyes scanning the road without pause or hesitation.
 
-A shortsword hangs at their hip and a battered shield is strapped across their back.
+A shortsword hangs at their hip and a battered shield is strapped across their back.
 
-~
+~
 16777317 27372 0 S
 161 1
 10000 -500 1000 300
@@ -2245,14 +2245,14 @@ A Guardsman of the Keep~
 @@WA @@BGuardsman @@Wof the Keep@@N~
 @@WA @@BGuardsman @@Wof the Keep@@N stands watch at his post.
 
-~
+~
 The guardsman is a broad-shouldered figure in polished plate, his expression unreadable
 
-beneath the rim of his great helm. He holds his halberd with easy confidence, and the
+beneath the rim of his great helm. He holds his halberd with easy confidence, and the
 
-Keep's crest gleams on the breast of his surcoat.
+Keep's crest gleams on the breast of his surcoat.
 
-~
+~
 33554435 18624 0 S
 167 1
 15000 0 1200 500
@@ -2266,14 +2266,14 @@ A Grumpy Hermit~
 @@WA Grumpy @@BHermit@@N~
 @@WA Grumpy @@BHermit@@N is here, glaring at you with undisguised irritation.
 
-~
+~
 The hermit is a wiry, weathered figure in a tattered cloak that has seen better decades.
 
-Deep-set eyes burn with surprising intelligence despite his dishevelled appearance,
+Deep-set eyes burn with surprising intelligence despite his dishevelled appearance,
 
-and his gnarled hands rest on a knotted walking staff worn smooth by years of use.
+and his gnarled hands rest on a knotted walking staff worn smooth by years of use.
 
-~
+~
 33554435 0 0 S
 166 1
 0 0 0 0
@@ -2287,14 +2287,14 @@ A Guard Captain~
 @@WA Guard @@BCaptain@@N~
 @@WA Guard @@BCaptain@@N stands here, overseeing the Keep with sharp authority.
 
-~
+~
 The Guard Captain is a tall, iron-jawed veteran whose half-plate bears numerous nicks
 
-and scratches from past campaigns. A captain's ribbon at her collar marks her rank,
+and scratches from past campaigns. A captain's ribbon at her collar marks her rank,
 
-and her gaze sweeps the courtyard with the calm alertness of someone who expects trouble.
+and her gaze sweeps the courtyard with the calm alertness of someone who expects trouble.
 
-~
+~
 33554435 1698558 0 S
 166 1
 100000 -2000 1000 1000
@@ -2304,41 +2304,37 @@ and her gaze sweeps the courtyard with the calm alertness of someone who expects
 l 150 192 193 194 195 196 197 0 0 0 
 L 20 20 20 15 15 10 0 0 0 
 #170
-The Elemental Captain~
-@@RThe @@BElemental @@RCaptain@@N~
-@@RThe @@BElemental @@RCaptain@@N stands here, crackling with elemental energy.
+A Guard Captain~
+@@WA Guard @@BCaptain@@N~
+@@WA Guard @@BCaptain@@N stands here.
 
-~
-Each plate of this captain's armour is inscribed with runes of fire, air, water, and
+~
+This figure stands unnervingly still, their features indistinct as though seen through
 
-earth, cycling through a slow aurora of colour that betrays the volatile power within.
+foggy glass. Something about them feels unfinished, like a half-formed thought.
 
-Unlike the Captain who commands raw steel, this one commands the fundamental forces of
-
-nature itself — and she is not patient.
-
-~
-33554435 1698558 0 S
-166 1
-120000 -2500 1000 1000
-! 0 0 0 7 536607 0 80
-| 0 0 65604 0 0 4095 0
+~
+1 0 0 S
+1 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 200 233 234 235 236 237 238 0 0 0
-L 20 20 15 15 15 10 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #171
 A Wizard's Servant~
 @@WA Wizard's @@BServant@@N~
 @@WA Wizard's @@BServant@@N is here, quietly attending to their duties.
 
-~
+~
 The servant moves with quiet efficiency, their plain grey uniform immaculate despite
 
-the nature of their work. They carry a basket of linens and spare not a glance for
+the nature of their work. They carry a basket of linens and spare not a glance for
 
-visitors, though a faint shimmer about their eyes hints at an enchanted compulsion.
+visitors, though a faint shimmer about their eyes hints at an enchanted compulsion.
 
-~
+~
 1073741825 0 0 S
 168 1
 5000 -1000 0 0
@@ -2352,14 +2348,14 @@ A Keep Drudge~
 @@WA Keep @@BDrudge@@N~
 @@WA Keep @@BDrudge@@N is here, hauling supplies with plodding determination.
 
-~
+~
 The drudge is a stocky figure in rough canvas work clothes, arms laden with crates
 
-and bundles. Their face is set in a permanent expression of resigned effort, and
+and bundles. Their face is set in a permanent expression of resigned effort, and
 
-callused hands suggest a lifetime spent in physical labour within the Keep's walls.
+callused hands suggest a lifetime spent in physical labour within the Keep's walls.
 
-~
+~
 1107296257 18624 0 S
 166 1
 25000 0 2000 0
@@ -2373,14 +2369,14 @@ A Keep Guard~
 @@WA Keep @@BGuard@@N~
 @@WA Keep @@BGuard@@N stands here, guarding the courtyard with vigilant eyes.
 
-~
+~
 The guard is armoured in a simple steel breastplate and open-faced helmet, their
 
-posture rigid and formal. A short sword hangs at their belt and they hold a spear
+posture rigid and formal. A short sword hangs at their belt and they hold a spear
 
-upright, its butt resting on the flagstones with a faint clank as they shift weight.
+upright, its butt resting on the flagstones with a faint clank as they shift weight.
 
-~
+~
 33554433 16576 0 S
 166 1
 2000 0 1000 500
@@ -2394,14 +2390,14 @@ A Keep Sentinel~
 @@WA Keep @@BSentinel@@N~
 @@WA Keep @@BSentinel@@N stands here, radiating an aura of cold authority.
 
-~
+~
 The Sentinel towers over ordinary guards, clad head to toe in blackened plate etched
 
-with arcane sigils that faintly glow in dim light. Their visor is permanently lowered
+with arcane sigils that faintly glow in dim light. Their visor is permanently lowered
 
-and no sound comes from within the armour, yet their presence alone commands silence.
+and no sound comes from within the armour, yet their presence alone commands silence.
 
-~
+~
 11 8320 0 S
 170 1
 40000 -2000 1500 500
@@ -2415,14 +2411,14 @@ A Keep Arcanist~
 @@WA Keep @@BArcanist@@N~
 @@WA Keep @@BArcanist@@N paces here, muttering arcane formulae beneath their breath.
 
-~
+~
 The arcanist is a lean figure in layered robes of deep blue, their cowl pushed back
 
-to reveal pale eyes that occasionally flash with inner light. Ink stains their fingers
+to reveal pale eyes that occasionally flash with inner light. Ink stains their fingers
 
-up to the knuckles, and a focus ring on their right hand pulses with contained energy.
+up to the knuckles, and a focus ring on their right hand pulses with contained energy.
 
-~
+~
 33554433 8320 0 S
 168 1
 55000 -1500 2000 800
@@ -2436,14 +2432,14 @@ A Keep Inquisitor~
 @@WA Keep @@BInquisitor@@N~
 @@WA Keep @@BInquisitor@@N stands here, studying you with cold and measured suspicion.
 
-~
+~
 The inquisitor wears a dark uniform trimmed with silver, bearing the Keep's sigil at
 
-the breast in cold steel. Their gaze is direct and unblinking, cataloguing every detail
+the breast in cold steel. Their gaze is direct and unblinking, cataloguing every detail
 
-about you, and one hand rests habitually on the grip of the blade at their hip.
+about you, and one hand rests habitually on the grip of the blade at their hip.
 
-~
+~
 33554435 18624 0 S
 165 1
 65000 -1800 2200 900
@@ -2457,14 +2453,14 @@ A Tower Watcher~
 @@WA Tower @@BWatcher@@N~
 @@WA Tower @@BWatcher@@N stands at the battlements here, crossbow in hand.
 
-~
+~
 The watcher wears a grey cloak that blends almost perfectly with the weathered stone
 
-around them, making them easy to overlook until they move. A loaded crossbow sits
+around them, making them easy to overlook until they move. A loaded crossbow sits
 
-steady in their hands and a quiver of bolts hangs at their hip, well within reach.
+steady in their hands and a quiver of bolts hangs at their hip, well within reach.
 
-~
+~
 33554433 27372 0 S
 165 1
 45000 -1000 1800 600
@@ -2478,14 +2474,14 @@ A Keep Jailer~
 @@WA Keep @@BJailer@@N~
 @@WA Keep @@BJailer@@N sits here, turning a ring of keys over thick fingers.
 
-~
+~
 The jailer is a heavyset figure with a shaved head and small, watchful eyes. A studded
 
-leather jerkin strains across their broad shoulders, and an iron-headed club hangs
+leather jerkin strains across their broad shoulders, and an iron-headed club hangs
 
-from a hook at their belt, its head dark with old stains that tell their own story.
+from a hook at their belt, its head dark with old stains that tell their own story.
 
-~
+~
 33554433 18624 0 S
 162 1
 50000 -1200 2000 700
@@ -2499,14 +2495,14 @@ A Rotunda Scholar~
 @@WA Rotunda @@BScholar@@N~
 @@WA Rotunda @@BScholar@@N stands here, surrounded by a slow orbit of floating scrolls.
 
-~
+~
 The scholar is a slight figure in ink-spotted robes, their eyes moving rapidly across
 
-the floating pages around them. They make constant small notes with a quill that
+the floating pages around them. They make constant small notes with a quill that
 
-writes of its own accord, never pausing even as they turn to regard you with curiosity.
+writes of its own accord, never pausing even as they turn to regard you with curiosity.
 
-~
+~
 1073741825 0 0 S
 168 1
 40000 -1000 1500 600
@@ -2520,14 +2516,14 @@ A Foyer Warden~
 @@WA Foyer @@BWarden@@N~
 @@WA Foyer @@BWarden@@N patrols here with measured, deliberate steps.
 
-~
+~
 The warden is clad in polished half-plate bearing the Keep's crest, every buckle
 
-fastened with precision and every surface free of dust. They pause at each door
+fastened with precision and every surface free of dust. They pause at each door
 
-to test its lock before moving on, unhurried and utterly reliable in their routine.
+to test its lock before moving on, unhurried and utterly reliable in their routine.
 
-~
+~
 33554435 18624 0 S
 167 1
 70000 -2000 2500 1000
@@ -2541,18 +2537,18 @@ The Keeper of the Sanctum~
 @@WThe @@BKeeper @@Wof the Sanctum@@N~
 @@WThe @@BKeeper @@Wof the Sanctum@@N stands here, wreathed in arcs of crackling arcane energy.
 
-~
+~
 The Keeper is an ancient figure whose age is impossible to determine, their face
 
-smooth yet somehow ageless beneath a crown of cold light. Their robes are etched
+smooth yet somehow ageless beneath a crown of cold light. Their robes are etched
 
-with living runes that shift and writhe as though alive, and the air around them
+with living runes that shift and writhe as though alive, and the air around them
 
-crackles and distorts, bending reality slightly in their presence. Their eyes hold
+crackles and distorts, bending reality slightly in their presence. Their eyes hold
 
-the absolute cold authority of one who has held power for centuries unchallenged.
+the absolute cold authority of one who has held power for centuries unchallenged.
 
-~
+~
 33554435 1698558 0 S
 163 1
 500000 -3000 3000 2000
@@ -2566,18 +2562,18 @@ The Vault Sentinel~
 @@WThe @@BVault @@WSentinel@@N~
 @@WThe @@BVault @@WSentinel@@N looms here, its forge-coal eyes burning with warding fury.
 
-~
+~
 The Vault Sentinel is a towering construct of blackened iron, its body etched from
 
-helm to boot with warding runes that flare brilliant red when it senses intruders.
+helm to boot with warding runes that flare brilliant red when it senses intruders.
 
-It moves with an eerie mechanical grace, servos of enchanted steel grinding softly
+It moves with an eerie mechanical grace, servos of enchanted steel grinding softly
 
-with each step. A single burning gem is set into its chest, its core and its heart,
+with each step. A single burning gem is set into its chest, its core and its heart,
 
-and to shatter it would be to silence the construct forever.
+and to shatter it would be to silence the construct forever.
 
-~
+~
 11 8320 0 S
 170 1
 400000 -3500 3500 1500
@@ -2591,19 +2587,19 @@ The Hermit Archon~
 @@WThe @@BHermit @@WArchon@@N~
 @@WThe @@BHermit @@WArchon@@N crouches here, radiating barely contained magical fury.
 
-~
+~
 The Hermit Archon appears ancient beyond reckoning, a hunched figure in robes so
 
-tattered they are held together by little more than pride and enchantment. Yet
+tattered they are held together by little more than pride and enchantment. Yet
 
-his frame is iron-hard beneath those rags, hardened by centuries of solitary vigil,
+his frame is iron-hard beneath those rags, hardened by centuries of solitary vigil,
 
-and his eyes burn with the accumulated fury of a guardian who has suffered countless
+and his eyes burn with the accumulated fury of a guardian who has suffered countless
 
-intrusions. The air around him smells of ozone and old forest, wild and dangerous.
+intrusions. The air around him smells of ozone and old forest, wild and dangerous.
 
-~
-33554435 1698558 0 S
+~
+33554483 1698558 0 S
 166 1
 450000 -3000 3000 2000
 ! 0 0 0 7 537607 860160 80
@@ -3212,60 +3208,6 @@ Archon's Feral Ring~
 @@WArchon's @@BFeral Ring@@N~
 A crude iron ring lies here, vibrating with barely contained power~
 9 201326656 8396800 98305
-0 0 0 0 0 0 0 0 0 0
-7
-L
-150
-#233
-Elemental Captain's Circlet~
-@@RElemental @@BCaptain's @@RCirclet@@N~
-A glowing circlet lies here, warm to the touch~
-9 201326656 8388616 145
-0 0 0 0 0 0 0 0 0 0
-7
-L
-150
-#234
-Elemental Captain's Hauberk~
-@@RElemental @@BCaptain's @@RHauberk@@N~
-A rune-inscribed hauberk lies here, radiating faint elemental warmth~
-9 201326656 8650752 1049
-0 0 0 0 0 0 0 0 0 0
-7
-L
-150
-#235
-Elemental Captain's Vambraces~
-@@RElemental @@BCaptain's @@RVambraces@@N~
-A pair of vambraces lies here, trailing wisps of elemental energy~
-9 201326656 8390656 4353
-0 0 0 0 0 0 0 0 0 0
-7
-L
-150
-#236
-Elemental Captain's Greaves~
-@@RElemental @@BCaptain's @@RGreaves@@N~
-A pair of greaves lies here, scorched and frost-tinged at once~
-9 201326656 9437184 1
-0 0 0 0 0 0 0 0 0 0
-7
-L
-150
-#237
-Elemental Captain's Boots~
-@@RElemental @@BCaptain's @@RBoots@@N~
-A pair of boots lies here, crackling faintly with residual energy~
-9 201326656 10485760 1
-0 0 0 0 0 0 0 0 0 0
-7
-L
-150
-#238
-The Four-Wind Blade~
-@@RThe @@BFour-Wind @@RBlade@@N~
-A blade suffused with elemental power lies here~
-5 201326656 8421376 1
 0 0 0 0 0 0 0 0 0 0
 7
 L
