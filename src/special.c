@@ -219,6 +219,12 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_hermit_archon;
    if (!str_cmp(name, "spec_sanctum_keeper"))
       return spec_sanctum_keeper;
+   if (!str_cmp(name, "spec_ss_cinder_broker"))
+      return spec_ss_cinder_broker;
+   if (!str_cmp(name, "spec_ss_manifest_warden"))
+      return spec_ss_manifest_warden;
+   if (!str_cmp(name, "spec_ss_kiln_overseer"))
+      return spec_ss_kiln_overseer;
 
    return 0;
 }
@@ -403,6 +409,12 @@ char *rev_spec_lookup(void *func)
       return "spec_hermit_archon";
    if (func == spec_sanctum_keeper)
       return "spec_sanctum_keeper";
+   if (func == spec_ss_cinder_broker)
+      return "spec_ss_cinder_broker";
+   if (func == spec_ss_manifest_warden)
+      return "spec_ss_manifest_warden";
+   if (func == spec_ss_kiln_overseer)
+      return "spec_ss_kiln_overseer";
 
    return 0;
 }
@@ -489,6 +501,9 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_keep_elemental_captain\n\r");
    strcat(buf, "       spec_hermit_archon\n\r");
    strcat(buf, "       spec_sanctum_keeper\n\r");
+   strcat(buf, "       spec_ss_cinder_broker\n\r");
+   strcat(buf, "       spec_ss_manifest_warden\n\r");
+   strcat(buf, "       spec_ss_kiln_overseer\n\r");
 
    return;
 }

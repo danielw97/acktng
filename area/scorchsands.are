@@ -1,42 +1,43 @@
 #AREA
-The Scorching Sands~
+@@yThe @@eScorching @@bSands@@N~
 Q 16
-K scorching sands desert~
-L @@y65  @@R85~
+K scorching_sands~
+L @@y65  @@e85@@N~
 N 299
 I 65 85
 V 29900 29974
 F 15
-U @@yThe desert winds shift, reshaping the dunes of the Scorching Sands.@@N~
+U @@eHeat rolls over the Scorching Sands as convoy law and survival doctrine collide once more.@@N~
+O Virant~
 #MOBILES
 #29900
-desert sidewinder~
-a desert sidewinder~
-A desert sidewinder coils in the sand, its scales glinting in the harsh sun.
+ash scorpion scout~
+an ash scorpion scout~
+An ash scorpion scout tests the sand with raised claws.
 ~
-This deadly serpent has sun-bleached scales that blend perfectly with the sand. Its forked tongue flickers as it tastes the air for prey, venom glistening on exposed fangs.
+Its carapace is matte black with ember-red seams that vent tiny threads of heat. The creature moves in measured bursts, as if it has learned convoy rhythm from stalking march columns. Its tail is short but muscular, built for repeated strikes rather than one decisive thrust.
 ~
 97 0 0 S
 70 0
 0 0 0 0
 ! 0 0 0 0 1025 0 0
 #29901
-sand scarab~
-a sand scarab~
-A massive sand scarab burrows through the loose earth here.
+cinder kite harrier~
+a cinder kite harrier~
+A cinder kite harrier circles low, searching for weakness.
 ~
-This oversized beetle has a carapace of burnished gold, hardened by the relentless desert sun. Its mandibles click together with a sharp, threatening rhythm.
+This rangy carrion bird rides thermal updrafts with unnerving patience. Burn-scored feathers line its wings, and its hooked beak is chipped from tearing cured hide packs. It tracks exhaustion the way a broker tracks debt, waiting for one mistake.
 ~
 97 0 0 S
 72 0
 0 0 0 0
 ! 0 0 0 0 1025 0 0
 #29902
-dust devil~
-a dust devil~
-A swirling dust devil spins angrily across the ground.
+kiln adder~
+a kiln adder~
+A kiln adder coils among warm stone seams.
 ~
-This minor elemental is a tight vortex of sand and scorching wind. Tiny rocks and debris orbit its whirling form, pelting anything that draws too close.
+The serpent's scales shine like fired ceramic, each plate edged with pale ash. It prefers cracks that breathe residual heat and lashes out at anything disturbing its pocket. A sulfur tang follows it wherever it slides.
 ~
 97 0 0 S
 74 0
@@ -44,55 +45,55 @@ This minor elemental is a tight vortex of sand and scorching wind. Tiny rocks an
 ! 0 0 0 0 1025 0 0
 | 128 64 0 0 0 128 64
 #29903
-sunbleached skeleton~
-a sunbleached skeleton~
-A sunbleached skeleton stands here, jawbone creaking in a silent scream.
+ledger mummy porter~
+a ledger mummy porter~
+A ledger mummy porter shuffles here with sealed satchels.
 ~
-This animated corpse has been stripped of all flesh by the desert heat. Its bones are chalk-white and brittle, yet it moves with unnatural purpose, eye sockets burning with pale light.
+Faded wrappings bind this undead laborer from neck to heel, and waxed tags still hang from its belt. Clay tally tablets are strapped to its chest in brittle layers. Even in death it keeps walking the route it was assigned.
 ~
 16481 0 -750 S
 73 0
 0 0 0 0
 ! 0 0 0 0 1025 0 4
 #29904
-desert raider scout~
-a desert raider scout~
-A desert raider scout crouches here, scanning the horizon.
+convoy triage marshal~
+a convoy triage marshal~
+A convoy triage marshal checks vent-wrap bundles with practiced speed.
 ~
-Wrapped in dusty linens with a curved blade at the hip, this weathered scout serves as the eyes and ears of the raider warband. A jagged scar crosses one sun-darkened cheek.
+Sun-hardened skin and copper-rimmed goggles mark this veteran of Southern Oasis drills. Every strap on their kit is reinforced for rapid casualty response under heat surge conditions. Their tone is clipped, efficient, and impossible to ignore.
 ~
 97 0 -500 S
 75 1
 0 0 0 0
 ! 0 0 0 0 3074 0 0
 #29905
-giant scorpion~
-a giant scorpion~
-A giant scorpion scuttles across the ground, pincers raised.
+witness elder of the crossing~
+a witness elder of the crossing~
+A witness elder of the crossing studies carved sticks in careful silence.
 ~
-This monstrous arachnid is the size of a large dog, its segmented tail curling overhead with a barbed stinger dripping caustic venom. Its chitinous armor is dark as obsidian.
+Age has bent their frame but sharpened their attention to detail. Bundles of witness sticks hang from a corded sash, each notch representing a legal cohort. They recite names, timings, and burdens from memory without pause.
 ~
 97 0 0 S
 76 0
 0 0 0 0
 ! 0 0 0 0 3074 0 0
 #29906
-tomb guardian~
-a tomb guardian~
-A tomb guardian stands at silent attention, ancient weapon raised.
+cinder broker enforcer~
+a cinder broker enforcer~
+A cinder broker enforcer watches passing traffic with predatory calm.
 ~
-This armored undead warrior still wears the corroded remnants of ceremonial plate. Its hollow eyes glow with a cold blue fire, bound by ancient magic to protect this place for eternity.
+Layered wraps hide plated armor beneath, and a queue-tally baton hangs beside a brutal side blade. The enforcer works for profit, not doctrine, and treats law as another negotiable commodity. Their eyes never stop counting who carries what.
 ~
 16481 0 -750 S
 78 0
 10 0 0 0
 ! 0 0 0 0 3074 0 4
 #29907
-sand wraith~
-a sand wraith~
-A sand wraith drifts through the air, trailing wisps of dust.
+toll hijacker captain~
+a toll hijacker captain~
+A toll hijacker captain has seized this checkpoint by force.
 ~
-This spectral figure is composed of swirling sand and shadow. Its form shifts constantly, sometimes resembling a robed figure, sometimes dissolving into a formless cloud of grit.
+Soot-dark lacquer and scavenged insignia create a parody of official authority. The captain carries stolen seal stamps and issues threats in the language of charter procedure. Around their neck hangs a chain of confiscated transit tokens.
 ~
 16481 0 -750 S
 77 0
@@ -100,33 +101,33 @@ This spectral figure is composed of swirling sand and shadow. Its form shifts co
 ! 0 0 0 0 1025 2162688 4
 | 256 128 0 0 0 256 8
 #29908
-dune stalker~
-a dune stalker~
-A dune stalker prowls the area, its tawny hide blending with the terrain.
+channel cutthroat~
+a channel cutthroat~
+A channel cutthroat waits in the lee of broken stone.
 ~
-This large predatory cat has a sandy coat covered in faint rosette markings. Its powerful legs and oversized paws carry it silently across the dunes as it hunts for prey.
+Lean and dust-caked, this raider fights in short explosive bursts designed for narrow lanes. Their gauntlets are wrapped in kiln cloth to mute contact against rock. They favor ambush over fair engagement and retreat before discipline can regroup.
 ~
 97 0 0 S
 79 0
 0 0 0 0
 ! 0 0 0 0 3074 0 0
 #29909
-desert bandit~
-a desert bandit~
-A desert bandit lurks here, eyeing you with open hostility.
+forged witness thief~
+a forged witness thief~
+A forged witness thief palms counterfeit markers with quick fingers.
 ~
-This rough-looking brigand wears mismatched armor scavenged from previous victims. A cruel grin splits a face darkened by sun and sand, and stolen trinkets hang from a leather belt.
+Fine tools and stolen carving blanks rattle in hidden pockets along their belt. They sell false cohort proof to the desperate, then vanish before contradictions surface. Their smile is easy, but their exit routes are easier.
 ~
 97 0 -500 S
 80 1
 0 0 0 0
 ! 0 0 0 0 3074 0 0
 #29910
-mummified priest~
-a mummified priest~
-A mummified priest shuffles forward, bandaged hands outstretched.
+channel falsifier~
+a channel falsifier~
+A channel falsifier inks corrections into old route ledgers.
 ~
-Ancient linen wrappings cover this desiccated corpse from head to toe. Faded hieroglyphs are painted across the stained bandages, and a dull amber glow pulses from behind its empty eye sockets.
+This saboteur carries wax capsules, cracked seals, and spare tally strips. They alter mileage and load records to redirect caravans toward paid ambush lines. Heat has stained their hands a permanent yellow-brown from hurried work.
 ~
 16481 0 -750 S
 82 0
@@ -134,11 +135,11 @@ Ancient linen wrappings cover this desiccated corpse from head to toe. Faded hie
 ! 0 0 0 0 1025 10240 8
 | 128 64 0 0 0 128 64
 #29911
-sandstone golem~
-a sandstone golem~
-A sandstone golem looms here, its massive fists clenched.
+broker intimidator~
+a broker intimidator~
+A broker intimidator leans on a spear and scans the queue.
 ~
-Carved from a single enormous block of desert sandstone, this construct towers over most creatures. Ancient runes are etched deep into its torso, pulsing with a faint amber light that animates its heavy limbs.
+Broad-shouldered and wrapped in patched caravan cloth, this thug specializes in pressure rather than precision. They memorize who argues too loudly and who appears underprotected. Their preferred tactic is to separate witnesses before disputes are heard.
 ~
 33554529 0 0 S
 83 0
@@ -146,77 +147,77 @@ Carved from a single enormous block of desert sandstone, this construct towers o
 ! 0 0 0 0 1051652 0 0
 | 32 16 0 0 0 32 16
 #29912
-carrion vulture~
-a carrion vulture~
-A carrion vulture perches nearby, watching with beady eyes.
+seal clerk remnant~
+a seal clerk remnant~
+A seal clerk remnant arranges cracked tablets into strict order.
 ~
-This enormous scavenger bird has a wingspan wider than a man is tall. Its bald head is stained with old blood, and its hooked beak can crack bone with ease.
+The clerk's robes are threadbare but still stamped with faded registry marks. They continue filing certifications no authority now honors, driven by routine older than current law. Their stylus hand trembles only when interrupted.
 ~
 97 0 0 S
 71 0
 0 0 0 0
 ! 0 0 0 0 1025 0 0
 #29913
-venomous asp~
-a venomous asp~
-A venomous asp lies coiled among the rocks, hood flared.
+ration adjudicator remnant~
+a ration adjudicator remnant~
+A ration adjudicator remnant reviews loss claims aloud.
 ~
-This deadly serpent has distinctive dark bands running the length of its sinuous body. When threatened, it rears up and spreads a wide hood, displaying vivid warning patterns.
+Ink-streaked sleeves and a battered counting frame mark this survivor of countless disputes. They quote burden formulae from memory and reject emotional pleas without hesitation. Even armed raiders sometimes wait for their ruling.
 ~
 97 0 0 S
 74 0
 0 0 0 0
 ! 0 0 0 0 1025 0 0
 #29914
-desert nomad warrior~
-a desert nomad warrior~
-A desert nomad warrior stands guard, weapon at the ready.
+gate scrivener remnant~
+a gate scrivener remnant~
+A gate scrivener remnant copies manifest marks onto fresh slates.
 ~
-This hardened fighter wears layered desert robes over boiled leather armor. Years of survival in the wastes have honed a lean and dangerous physique. Cold eyes peer from beneath a wrapped headscarf.
+Their workspace is a portable desk of scorched wood strapped to a reinforced frame. Each inscription is neat despite blowing grit and shouting brokers. They believe records matter because records outlast empires.
 ~
 97 0 -500 S
 81 1
 0 0 0 0
 ! 0 0 0 0 3074 0 0
 #29915
-jackal pack leader~
-a jackal pack leader~
-A jackal pack leader snarls, baring yellowed fangs.
+ash scorpion reaver~
+an ash scorpion reaver~
+An ash scorpion reaver drags itself from a hot fissure.
 ~
-This large jackal is heavily scarred from countless territorial fights. Its fur is matted and coarse, and it moves with the confident swagger of a dominant predator accustomed to driving off rivals.
+Larger than common scouts, this specimen bears old blade breaks embedded in its shell. It survives by crushing through pack frames and feeding on stored salts. Heat shimmer clings to it like a cloak.
 ~
 97 0 0 S
 76 1
 0 0 0 0
 ! 0 0 0 0 3074 0 0
 #29916
-tomb beetle swarm~
-a tomb beetle swarm~
-A seething swarm of tomb beetles carpets the ground here.
+cinder kite pack alpha~
+a cinder kite pack alpha~
+A cinder kite pack alpha shrieks and dives across the lane.
 ~
-Thousands of small black beetles move as a single mass, their tiny legs creating a disturbing chittering sound. They consume anything organic in their path, stripping flesh from bone in moments.
+Scars around one eye and a torn outer wing feather mark repeated fights over collapse sites. The alpha drives smaller kites forward, then steals first claim from the fallen. Its cry sounds like glass under strain.
 ~
 65601 0 0 S
 73 0
 0 0 0 0
 ! 0 0 0 0 1025 0 0
 #29917
-cursed archaeologist~
-a cursed archaeologist~
-A cursed archaeologist stumbles about, muttering incoherently.
+fired-clay sentinel~
+a fired-clay sentinel~
+A fired-clay sentinel stands immobile beside a cracked seal rack.
 ~
-Once a scholar seeking ancient treasures, this wretched figure is now trapped between life and death by a tomb curse. Tattered expedition gear hangs from a gaunt frame, and maddened eyes dart about wildly.
+This construct was molded for kiln security and hardened in extreme heat. Hairline fractures glow when it moves, venting orange light through layered clay plates. It obeys original custody protocols with lethal certainty.
 ~
 16481 0 -500 S
 80 1
 0 0 0 0
 ! 0 0 0 0 3074 2162688 4
 #29918
-sand elemental~
-a sand elemental~
-A towering sand elemental churns and roars before you.
+cauterist acolyte~
+a cauterist acolyte~
+A cauterist acolyte traces heated sigils across the stone.
 ~
-This massive creature is a living pillar of compacted sand and grit. It shifts between a vaguely humanoid shape and a raging sandstorm, grinding anything caught within its form to dust.
+Burn-gilded robes and scarified forearms mark initiation into the Cauterist Synod. The acolyte treats thermal pain as doctrine and revision as worship. Their voice rises and falls like a furnace draft.
 ~
 33554529 0 0 S
 84 0
@@ -224,22 +225,22 @@ This massive creature is a living pillar of compacted sand and grit. It shifts b
 ! 0 0 0 0 1051652 33554464 0
 | 32 16 0 0 0 34 16
 #29919
-desert ghoul~
-a desert ghoul~
-A desert ghoul crouches here, gnawing on old bones.
+brand cantor~
+a brand cantor~
+A brand cantor chants cadence over a ring of glowing coals.
 ~
-This emaciated undead creature has leathery skin pulled taut over protruding bones. Its elongated claws are caked with dried blood, and it exudes a nauseating stench of decay and hot sand.
+Iron hymn tags hang from a chain belt and strike each other with every movement. The cantor's litany recasts legal clauses as sacramental threats. Smoke stains their teeth and fingertips alike.
 ~
 33554529 0 -750 S
 85 0
 10 0 0 0
 ! 0 0 0 0 1051652 0 8
 #29920
-Pharaoh Kha'zuul~
-Pharaoh Kha'zuul~
-@@RPharaoh Kha'zuul sits upon a crumbling throne, radiating ancient power.@@N
+Orulan Bassek's Bound Assessor~
+Orulan Bassek's Bound Assessor~
+@@eOrulan Bassek's Bound Assessor stands beside a seal table, refusing all passage.@@N
 ~
-Clad in ornate golden armor tarnished by millennia, this undead pharaoh still commands a terrifying regal presence. A crown of blackened gold rests upon a desiccated brow, and eyes of molten amber burn with fury at any who dare intrude upon the royal tomb.
+Bound in layered kiln-wax bands and legal script, this revenant assessor still audits every load that enters the old compound. Its gaze burns with institutional fury, and each motion leaves a trail of ash in the air. It speaks in formal certification clauses that ended centuries ago, yet each word carries binding weight.
 ~
 67108979 0 -1000 S
 90 1
@@ -248,11 +249,11 @@ Clad in ornate golden armor tarnished by millennia, this undead pharaoh still co
 | 128 64 0 1051652 10240 162 72
 + 5 3 0 3 0 5 5 0 0
 #29921
-Scorpion Queen~
-the Scorpion Queen~
-@@RThe Scorpion Queen rears up on segmented legs, her massive stinger poised to strike.@@N
+re-firing deacon~
+a re-firing deacon~
+A re-firing deacon tends heat pits with relentless devotion.
 ~
-This gargantuan scorpion is the undisputed matriarch of the desert caves. Her chitinous shell is layered in thick plates of midnight black, and her stinger pulses with a sickly green venom potent enough to fell giants.
+Heavy gloves and chain-linked censers protect this Synod zealot from blistering drafts. The deacon oversees emergency recertification rites and brands dissenters as unfit for transit. Their measured pace hides explosive violence.
 ~
 67108979 0 -500 S
 90 2
@@ -261,11 +262,11 @@ This gargantuan scorpion is the undisputed matriarch of the desert caves. Her ch
 | 512 4 0 1051652 0 514 4
 + 5 3 0 0 0 5 5 0 0
 #29922
-Lich Lord Sethari~
-Lich Lord Sethari~
-@@RLich Lord Sethari hovers above a runic circle, skeletal hands crackling with dark energy.@@N
+crucible warden~
+a crucible warden~
+A crucible warden blocks the approach with shield raised.
 ~
-This ancient sorcerer transcended death long ago, and the centuries have reduced the body to little more than a robed skeleton. Pinpoints of violet flame burn in hollow eye sockets, and the air around the lich hums with barely contained magical force.
+Plate segments of fused mineral and iron cover this veteran enforcer from throat to heel. Their helm is etched with queue numerals and thermal warning marks. They uphold Cinder Gate order through intimidation first and steel second.
 ~
 67108979 0 -1000 S
 90 1
@@ -274,11 +275,11 @@ This ancient sorcerer transcended death long ago, and the centuries have reduced
 | 260 2 0 1025 2162688 260 2
 + 10 3 0 5 0 3 3 0 0
 #29923
-Warlord Drahk~
-Warlord Drahk~
-@@RWarlord Drahk towers here in spiked armor, a massive cleaver resting on one shoulder.@@N
+Warden of the Striated Piers~
+the Warden of the Striated Piers~
+@@eThe Warden of the Striated Piers patrols beneath banded stone, judging every traveler.@@N
 ~
-The feared leader of the desert raiders is a mountain of scarred muscle and cruelty. Heavy spiked plate armor covers a frame built for war, and the warlord's cold gaze promises a brutal end to all who challenge the warband's dominion over these sands.
+This formidable gate enforcer wears striated armor that mirrors the fused columns of the Gate itself. A heavy polearm rests in one hand, while the other carries a manifest slate marked with punitive annotations. The Warden knows both inland charter law and Reach pre-screen doctrine, using whichever rule causes the most compliance.
 ~
 67108979 0 -1000 S
 90 1
@@ -287,1930 +288,1483 @@ The feared leader of the desert raiders is a mountain of scarred muscle and crue
 | 2 4 0 1650432 0 2 4
 + 5 5 0 0 0 8 8 3 0
 #29924
-desert hyena~
-a desert hyena~
-A mangy desert hyena slinks through the shadows, ribs visible beneath matted fur.
+The Ember Crucible Regent~
+the Ember Crucible Regent~
+@@RThe Ember Crucible Regent rises within the heat-core, crowned in sparks and old authority.@@N
 ~
-This gaunt scavenger has a spotted, dusty coat and powerful jaws designed for crushing bone. Its yellow eyes gleam with feral cunning, and a low growl rumbles from its scarred throat.
-~
-97 0 0 S
-70 0
-0 0 0 0
-! 0 0 0 0 1025 0 0
-#29925
-sand viper~
-a sand viper~
-A sand viper lies coiled in a depression, nearly invisible against the dust.
-~
-This thick-bodied serpent has sand-colored scales mottled with darker diamonds along its spine. Its triangular head and heat-sensing pits mark it as a pit viper, and venom drips from hinged fangs.
-~
-97 0 0 S
-71 0
-0 0 0 0
-! 0 0 0 0 1025 0 0
-#29926
-scorched zombie~
-a scorched zombie~
-A scorched zombie shambles forward, blackened flesh cracking with each step.
-~
-This walking corpse has been baked to a leathery husk by the desert sun, its skin split and charred. Wisps of acrid smoke rise from its joints, and its hollow eye sockets glow with a dull ember light.
-~
-16481 0 -750 S
-73 0
-0 0 0 0
-! 0 0 0 0 1025 0 4
-#29927
-dust imp~
-a dust imp~
-A dust imp flutters in the air, cackling and throwing handfuls of grit.
-~
-This diminutive fiend has leathery wings, a pointed tail, and skin the color of dried clay. Its oversized eyes burn with malicious glee, and tiny horns curl from its wrinkled forehead.
-~
-97 0 -500 S
-72 0
-0 0 0 0
-! 0 0 0 0 1025 0 0
-| 128 64 0 0 0 128 64
-#29928
-bone collector~
-a bone collector~
-A bone collector crouches here, sorting through a pile of remains with skeletal fingers.
-~
-This emaciated undead creature wears a cloak stitched from dried skin and carries a sack overflowing with bones. Its long fingers end in sharpened nails, and it regards the living with hungry calculation.
-~
-16481 0 -750 S
-74 0
-0 0 0 0
-! 0 0 0 0 1025 0 4
-#29929
-tomb spider~
-a tomb spider~
-A tomb spider clings to the ceiling, its pale body blending with the stone.
-~
-This oversized arachnid has a ghostly white carapace and legs spanning several feet. Its many eyes reflect light like polished onyx, and silk threads trail from its spinnerets in thin gossamer lines.
-~
-97 0 0 S
-75 0
-0 0 0 0
-! 0 0 0 0 1025 0 0
-#29930
-desiccated hound~
-a desiccated hound~
-A desiccated hound paces restlessly, dried tendons creaking with each stride.
-~
-This undead canine has been preserved by the arid climate, its mummified hide stretched taut over a wiry frame. Yellowed fangs jut from a lipless muzzle, and it tracks movement with empty eye sockets.
-~
-16481 0 -750 S
-71 0
-0 0 0 0
-! 0 0 0 0 1025 0 4
-#29931
-sandstorm djinn~
-a sandstorm djinn~
-A sandstorm djinn hovers here, its lower body dissolving into a column of whirling sand.
-~
-This powerful elemental has the torso and arms of a muscular humanoid formed from compacted sand, while its lower half is a perpetual cyclone of grit and dust. Lightning crackles between its fingers.
-~
-97 0 0 S
-78 0
-0 0 0 0
-! 0 0 0 0 1025 0 0
-| 128 64 0 0 0 128 64
-#29932
-raider berserker~
-a raider berserker~
-A raider berserker paces here, covered in ritual scars and war paint.
-~
-This heavily muscled warrior has wild eyes and skin decorated with swirling patterns of ash and blood. Ritual scars crisscross bare arms thick with corded muscle, and a frothing rage simmers barely below the surface.
-~
-97 0 -500 S
-77 1
-0 0 0 0
-! 0 0 0 0 3074 0 0
-#29933
-ancient mummy~
-an ancient mummy~
-An ancient mummy stands rigid, tattered wrappings trailing from outstretched arms.
-~
-This towering figure is wrapped in layers of stained linen bandages, some of which have unraveled to reveal dark, preserved flesh beneath. Golden amulets and protective scarabs are woven into the wrappings.
-~
-16481 0 -750 S
-76 0
-0 0 0 0
-! 0 0 0 0 1025 0 4
-#29934
-petrified sentinel~
-a petrified sentinel~
-A petrified sentinel stands motionless, its stone surface etched with arcane runes.
-~
-This humanoid figure appears carved from solid sandstone, but the faint grinding of stone joints reveals it as an animate guardian. Protective runes glow faintly across its broad chest and massive fists.
-~
-97 0 0 S
-79 0
-0 0 0 0
-! 0 0 0 0 3074 0 0
-#29935
-canyon raptor~
-a canyon raptor~
-A canyon raptor perches on a rocky ledge, its talons scraping stone.
-~
-This large predatory bird has dusty brown plumage and a wickedly hooked beak designed for tearing flesh. Its keen eyes scan the ground below, and powerful legs end in razor-sharp talons.
+A towering figure of armor, ashglass, and contained furnace light, the Regent embodies the final merger of administration and hazard. Its chest cavity glows like a kiln mouth, and each strike lands with concussive heat. Around it drift fragments of seal plates and burned registry tags, orbiting like relics of a failed legal order.
 ~
 97 0 0 S
 70 0
 0 0 0 0
 ! 0 0 0 0 1025 0 0
-#29936
-ember scorpion~
-an ember scorpion~
-An ember scorpion glows with inner heat, its carapace pulsing orange and red.
-~
-This fearsome arachnid has a carapace that radiates heat like cooling magma, cracked with lines of glowing orange. Its stinger drips with superheated venom that sizzles when it hits the ground.
-~
-97 0 0 S
-73 0
-0 0 0 0
-! 0 0 0 0 1025 0 0
-#29937
-sand horror~
-a sand horror~
-A sand horror rises from the ground, a writhing mass of tentacles and grinding sand.
-~
-This aberrant creature has no fixed form, constantly shifting between a vaguely humanoid shape and a churning pillar of sand and grasping pseudopods. Multiple eye-like clusters of black glass peer out from its shifting mass.
-~
-97 0 -500 S
-80 0
-0 0 0 0
-! 0 0 0 0 3074 0 0
-| 128 64 0 0 0 128 64
 #0
 #OBJECTS
-#29900
-tattered desert turban~
-a tattered desert turban~
-A tattered desert turban has been discarded here in the sand.~
-9 128 8388616 1
-0 0 0 0 0 0 0 0 0 0
-3
-A
-17 -80
-L
-70
-#29901
-sun-scorched leather vest~
-a sun-scorched leather vest~
-A sun-scorched leather vest lies crumpled on the ground.~
-9 128 8650752 1
-0 0 0 0 0 0 0 0 0 0
-7
-A
-17 -82
-L
-72
-#29902
-pair of sandworn boots~
-a pair of sandworn boots~
-A pair of sandworn boots sit here, caked with dust.~
-9 128 10485760 1
-0 0 0 0 0 0 0 0 0 0
-12
-A
-17 -81
-L
-71
-#29903
-dusty nomad cloak~
-a dusty nomad's cloak~
-A dusty nomad's cloak lies draped over a rock.~
-9 128 8454144 1
-0 0 0 0 0 0 0 0 0 0
-4
-A
-17 -83
-L
-73
-#29904
-weathered bronze scimitar~
-a weathered bronze scimitar~
-A weathered bronze scimitar is half-buried in the sand.~
-5 128 8421376 1
-0 0 0 3 0 0 0 0 0 0
-8
-A
-18 7
-A
-19 7
-L
-75
-#29905
-scorpion chitin bracer~
-a scorpion chitin bracer~
-A bracer fashioned from scorpion chitin rests on the ground.~
-9 128 8390656 1
-0 0 0 0 0 0 0 0 0 0
-13
-A
-17 -84
-L
-74
-#29906
-cracked bone necklace~
-a cracked bone necklace~
-A necklace of cracked bones lies in a small heap.~
-9 128 8388736 1
-0 0 0 0 0 0 0 0 0 0
-2
-A
-17 -86
-L
-76
-#29907
-pair of tomb raider gloves~
-a pair of tomb raider's gloves~
-A pair of tomb raider's gloves have been left behind here.~
-9 128 8392704 1
-0 0 0 0 0 0 0 0 0 0
-9
-A
-17 -82
-L
-72
-#29908
-serpent fang dagger~
-a serpent fang dagger~
-A dagger fashioned from a serpent's fang lies on the ground.~
-5 128 8421376 1
-0 0 0 2 0 0 0 0 0 0
-5
-A
-18 7
-A
-19 7
-L
-73
-#29909
-sand-caked war belt~
-a sand-caked war belt~
-A sand-caked war belt has been abandoned here.~
-9 128 8519680 1
-0 0 0 0 0 0 0 0 0 0
-14
-A
-17 -87
-L
-77
-#29910
-pair of raider arm guards~
-a pair of raider's arm guards~
-A pair of raider's arm guards lie on the dusty ground.~
-9 128 8389632 1
-0 0 0 0 0 0 0 0 0 0
-6
-A
-17 -88
-L
-78
-#29911
-scarab amulet~
-a scarab amulet~
-A small scarab amulet glints in the sand.~
-9 128 8388736 1
-0 0 0 0 0 0 0 0 0 0
-1
-A
-17 -80
-L
-70
-#29912
-pair of dune strider leggings~
-a pair of dune strider's leggings~
-A pair of dune strider's leggings lie in a dusty heap.~
-9 128 9437184 1
-0 0 0 0 0 0 0 0 0 0
-11
-A
-17 -89
-L
-79
-#29913
-vulture feather shoulder drape~
-a vulture feather shoulder drape~
-A shoulder drape made of vulture feathers rests here.~
-9 128 8389120 1
-0 0 0 0 0 0 0 0 0 0
-10
-A
-17 -84
-L
-74
-#29914
-jackal hide face wrap~
-a jackal hide face wrap~
-A face wrap made from jackal hide lies on the ground.~
-9 128 8388624 1
-0 0 0 0 0 0 0 0 0 0
-3
-A
-17 -85
-L
-75
-#29915
-crumbling stone shield~
-a crumbling stone shield~
-A crumbling stone shield leans against a wall.~
-9 128 8421376 1
-0 0 0 0 0 0 0 0 0 0
-15
-A
-17 -90
-L
-80
-#29916
-desert hawk earring~
-a desert hawk earring~
-A small earring shaped like a desert hawk lies in the dust.~
-9 128 8388672 1
-0 0 0 0 0 0 0 0 0 0
-2
-A
-17 -81
-L
-71
-#29917
-corroded iron mace~
-a corroded iron mace~
-A corroded iron mace lies discarded on the ground.~
-5 128 8421376 1
-0 0 0 7 0 0 0 0 0 0
-8
-A
-18 7
-A
-19 7
-L
-76
-#29918
-sand-blasted finger ring~
-a sand-blasted finger ring~
-A sand-blasted finger ring has been dropped here.~
-9 128 8396800 1
-0 0 0 0 0 0 0 0 0 0
-1
-A
-17 -88
-L
-78
-#29919
-tomb guardian halberd~
-a tomb guardian's halberd~
-A tomb guardian's halberd stands propped against the wall.~
-5 4294967424 8421376 1
-0 0 0 3 0 0 0 0 0 0
-14
-A
-18 7
-A
-19 7
-L
-80
-#29920
-crown of pharaoh kha'zuul~
-the crown of Pharaoh Kha'zuul~
-An ornate golden crown radiates ancient power from where it rests.~
-9 192 8388616 1
-0 0 0 0 0 0 0 0 0 0
-4
-A
-17 -95
-L
-85
-#29921
-scorpion queen carapace~
-the scorpion queen's carapace~
-A suit of armor crafted from the scorpion queen's carapace lies here.~
-9 192 8650752 1
-0 0 0 0 0 0 0 0 0 0
-15
-A
-17 -95
-L
-85
-#29922
-staff of lich lord sethari~
-the staff of Lich Lord Sethari~
-A gnarled staff thrumming with dark energy leans against the wall.~
-5 192 8421376 1
-0 0 0 7 0 0 0 0 0 0
-3
-A
-18 7
-A
-19 7
-L
-85
-#29923
-warlord drahk war cleaver~
-Warlord Drahk's war cleaver~
-A massive war cleaver with a notched blade rests on the ground.~
-5 4294967488 8421376 1
-0 0 0 3 0 0 0 0 0 0
-10
-A
-18 7
-A
-19 7
-L
-85
-#29924
-pharaoh golden gauntlets~
-the pharaoh's golden gauntlets~
-A pair of ornate golden gauntlets gleam softly in the dim light.~
-9 192 8392704 1
-0 0 0 0 0 0 0 0 0 0
-7
-A
-17 -95
-L
-85
 #29925
-scorpion queen stinger blade~
-the scorpion queen's stinger blade~
-A wicked blade fashioned from a giant scorpion stinger lies here.~
-5 192 8421376 1
-0 0 0 11 0 0 0 0 0 0
-9
-A
-18 7
-A
-19 7
-L
-85
-#29926
-lich shadowed robes~
-the lich's shadowed robes~
-A set of robes woven from living shadow pools on the floor.~
-9 192 8454144 1
+burnt witness-stick bundle~
+@@ya burnt witness-stick bundle@@N~
+A burnt witness-stick bundle has been set down here for review.
+~
+8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 2
-A
-17 -95
 L
-85
+69
+#29926
+seven-color assay shard set~
+@@ba seven-color assay shard set@@N~
+A seven-color assay shard set lies here in a padded roll.
+~
+8 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+69
 #29927
-warlord spiked pauldrons~
-the warlord's spiked pauldrons~
-A pair of brutal spiked pauldrons sits on the ground.~
-9 192 8389120 1
+falsified scorch-clause tablet~
+@@ea falsified scorch-clause tablet@@N~
+A falsified scorch-clause tablet rests here, edges chipped and re-inked.
+~
+8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-13
-A
-17 -95
+2
 L
-85
+69
 #29928
-scorched bone ring~
-a scorched bone ring~
-A ring carved from blackened bone lies in the dust.~
-9 128 8396800 1
+cinder gate transit token~
+@@ca cinder gate transit token@@N~
+A cinder gate transit token glints here under a skin of dust.
+~
+8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
-A
-17 -83
+2
 L
-73
+69
 #29929
-sand-crusted anklet~
-a sand-crusted anklet~
-An anklet crusted with compacted sand rests on the ground.~
-9 128 10485760 1
+bassek vault key~
+@@Wa Bassek vault key@@N~
+A Bassek vault key lies here on a split leather thong.
+~
+18 0 8388608 0
+29929 0 0 0 0 0 0 0 0 0
+1
+L
+68
+#29930
+crucible valve key~
+@@Wa crucible valve key@@N~
+A crucible valve key rests here, warm to the touch.
+~
+18 0 8388608 0
+29930 0 0 0 0 0 0 0 0 0
+1
+L
+76
+#29931
+registrar's heatproof satchel~
+@@da registrar's heatproof satchel@@N~
+A registrar's heatproof satchel has been dropped here.
+~
+8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-12
-A
-17 -82
+2
+L
+69
+#29932
+ashglass survey slate~
+@@ca ashglass survey slate@@N~
+An ashglass survey slate leans here against a stone marker.
+~
+8 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+69
+#29933
+convoy kiln-hide mantle~
+@@ya convoy kiln-hide mantle@@N~
+A convoy kiln-hide mantle lies here in folded layers.
+~
+9 67108864 12582912 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+70
+#29934
+charter-edged khopesh~
+@@ea charter-edged khopesh@@N~
+A charter-edged khopesh has been left here in the sand.
+~
+5 67108864 8421376 1
+0 0 0 3 0 0 0 0 0 0
+10
 L
 72
-#29930
-dusty linen cowl~
-a dusty linen cowl~
-A dusty linen cowl has been dropped here.~
-9 128 8388616 1
+#29935
+witness-scribed spear~
+@@Wa witness-scribed spear@@N~
+A witness-scribed spear stands here with its butt sunk in grit.
+~
+5 67108864 8421376 1
+0 0 0 3 0 0 0 0 0 0
+10
+L
+72
+#29936
+seal-clasped harness~
+@@ba seal-clasped harness@@N~
+A seal-clasped harness lies here with brass fittings dulled by ash.
+~
+9 67108864 8388608 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+70
+#29937
+conversion-stamped buckler~
+@@ca conversion-stamped buckler@@N~
+A conversion-stamped buckler rests here beside a broken crate hoop.
+~
+9 335544384 8421376 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+75
+#29938
+ashglass gaiters~
+@@da pair of ashglass gaiters@@N~
+A pair of ashglass gaiters lies here, straps still intact.
+~
+9 67108864 8388608 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+70
+#29939
+kiln-vent gauntlets~
+@@ea pair of kiln-vent gauntlets@@N~
+A pair of kiln-vent gauntlets has been set down here.
+~
+9 67108864 8388608 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+70
+#29940
+scorchproof veil~
+@@ya scorchproof veil@@N~
+A scorchproof veil flutters here in the shifting heatwind.
+~
+9 67108864 8388608 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+70
+#29941
+warden relay baton~
+@@Wa warden relay baton@@N~
+A warden relay baton lies here with faded queue marks.
+~
+8 67108864 8388608 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+69
+#29942
+channel cutthroat knife~
+@@ea channel cutthroat knife@@N~
+A channel cutthroat knife lies here, recently cleaned.
+~
+5 67108864 8421376 1
+0 0 0 3 0 0 0 0 0 0
+10
+L
+72
+#29943
+broker signal cord~
+@@ca broker signal cord@@N~
+A broker signal cord hangs here from a cracked peg.
+~
+8 67108864 8388608 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+69
+#29944
+triage vent-wrap kit~
+@@ba triage vent-wrap kit@@N~
+A triage vent-wrap kit sits here beside split ceramic tags.
+~
+8 67108864 8388608 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+69
+#29945
+fused-rim cuirass~
+@@da fused-rim cuirass@@N~
+A fused-rim cuirass has been propped here against a column.
+~
+9 67108864 12582912 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+70
+#29946
+glasswind ward ring~
+@@ca glasswind ward ring@@N~
+A glasswind ward ring glitters here among ash grains.
+~
+8 67108864 8388608 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+69
+#29947
+striated pier helm~
+@@Wa striated pier helm@@N~
+A striated pier helm rests here, brim etched with thermal bands.
+~
+9 67108864 8388608 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+70
+#29948
+ember crucible talisman~
+@@ea ember crucible talisman@@N~
+An ember crucible talisman lies here, humming faintly.
+~
+8 67108864 8388608 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+69
+#29949
+ember-regent sigil core~
+@@Rthe ember-regent sigil core@@N~
+The ember-regent sigil core smolders here with contained heat.
+~
+8 201326592 8388608 1
 0 0 0 0 0 0 0 0 0 0
 3
-A
-17 -84
 L
-74
-#29931
-dried sinew necklace~
-a dried sinew necklace~
-A necklace woven from dried sinew lies in a coil.~
-9 128 8388736 1
-0 0 0 0 0 0 0 0 0 0
-2
-A
-17 -85
-L
-75
-#29932
-bleached hide vest~
-a bleached hide vest~
-A vest of bleached animal hide lies crumpled here.~
-9 128 8650752 1
-0 0 0 0 0 0 0 0 0 0
-7
-A
-17 -86
-L
-76
-#29933
-threadbare desert sash~
-a threadbare desert sash~
-A threadbare sash of sun-faded cloth lies here.~
-9 128 8454144 1
-0 0 0 0 0 0 0 0 0 0
-4
-A
-17 -83
-L
-73
-#29934
-cracked clay bracer~
-a cracked clay bracer~
-A bracer fashioned from fired clay lies on the ground.~
-9 128 8390656 1
-0 0 0 0 0 0 0 0 0 0
-13
-A
-17 -85
-L
-75
-#29935
-sand spider silk gloves~
-a pair of sand spider silk gloves~
-A pair of gloves woven from spider silk rests here.~
-9 128 8392704 1
-0 0 0 0 0 0 0 0 0 0
-9
-A
-17 -84
-L
-74
-#29936
-bone shard dagger~
-a bone shard dagger~
-A crude dagger fashioned from sharpened bone lies on the ground.~
-5 128 8421376 1
-0 0 0 2 0 0 0 0 0 0
-5
-A
-18 7
-A
-19 7
-L
-74
-#29937
-tattered sand wrap~
-a tattered sand wrap~
-A tattered wrap of sand-stained cloth lies here.~
-9 128 8519680 1
-0 0 0 0 0 0 0 0 0 0
-14
-A
-17 -84
-L
-74
-#29938
-desert hawk feather earring~
-a desert hawk feather earring~
-An earring adorned with a desert hawk feather lies in the sand.~
-9 128 8388672 1
-0 0 0 0 0 0 0 0 0 0
-2
-A
-17 -82
-L
-72
-#29939
-petrified wood shield~
-a petrified wood shield~
-A shield carved from petrified wood leans against a rock.~
-9 128 8421376 1
-0 0 0 0 0 0 0 0 0 0
-15
-A
-17 -88
-L
-78
-#29940
-tomb raider leg wraps~
-a pair of tomb raider's leg wraps~
-A pair of leg wraps made from scavenged tomb cloth sit here.~
-9 128 9437184 1
-0 0 0 0 0 0 0 0 0 0
-11
-A
-17 -86
-L
-76
-#29941
-dried scorpion tail whip~
-a dried scorpion tail whip~
-A whip fashioned from a dried scorpion tail lies coiled on the ground.~
-5 128 8421376 1
-0 0 0 3 0 0 0 0 0 0
-8
-A
-18 7
-A
-19 7
-L
-76
+85
 #0
 #ROOMS
 #29900
-@@yWindswept Dunes@@N~
-@@yHot wind drives stinging sand across a vast expanse of rolling dunes. The sky above is a merciless white glare, and the horizon shimmers with heat haze in every direction. Faint tracks in the sand suggest that creatures pass through here, though the shifting dunes quickly erase all evidence.
-  The dunes rise and fall like frozen waves, their crests trailing ribbons of sand into the scalding air. Somewhere in the distance, a low moan echoes across the wasteland as the wind funnels through unseen rock formations. The heat is suffocating, pressing down like a physical weight.@@N
+The Charter Heatline~
+@@yThe Charter Heatline@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The western track from the Eastern Desert enters here beneath heat-shivered air and old jurisdiction stones. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
-D2
+D1
 ~
 ~
-0 0 29901
+0 -1 29901
 S
 #29901
-@@yShifting Sand Expanse@@N~
-@@yThe sand here is fine and loose, swallowing each footstep ankle-deep. Desiccated scrub brush clings to the slopes of the dunes, rattling in the constant wind. A crumbling stone obelisk is visible to the east, while the terrain drops into sun-baked flats to the south.
-  Heat mirages ripple across the sand, conjuring phantom lakes and ghostly towers on the horizon. The dunes stretch endlessly in every direction, their shifting surfaces erasing all sense of direction. A faint sulfurous smell rises from sun-baked mineral deposits beneath the sand.@@N
+Surveyor's Wind Post~
+@@ySurveyor's Wind Post@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A broken wind post still carries brass alignment vanes that once set convoy timing between shade intervals. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
-D0
-~
-~
-0 0 29900
 D1
 ~
 ~
-0 0 29902
-D2
+0 -1 29902
+D3
 ~
 ~
-0 0 29903
+0 -1 29900
 S
 #29902
-@@yCrumbling Obelisk@@N~
-@@yA weathered stone obelisk rises from the sand, its carved hieroglyphs nearly obliterated by centuries of wind erosion. The base is surrounded by scattered rubble and half-buried stone blocks. Whatever monument once stood here has been reduced to this single defiant pillar.
-  Fragments of colored tile and shattered pottery litter the ground around the obelisk's base, remnants of offerings left by long-dead pilgrims. The remaining hieroglyphs hint at warnings to trespassers, though the language is too ancient to decipher with certainty.@@N
+Split of the Three Convoys~
+@@ySplit of the Three Convoys@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Three hardened paths diverge at this stamped junction where clerks once recorded crew rotations and ration liabilities. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
+D0
+~
+~
+0 -1 29930
+D1
+~
+~
+0 -1 29903
 D3
 ~
 ~
-0 0 29901
+0 -1 29901
+D4
+~
+~
+0 -1 29945
 S
 #29903
-@@ySun-Baked Flats@@N~
-@@yThe dunes give way to a broad hardpan flat baked to cracked ceramic by the relentless sun. Thin salt deposits create white veins across the tan earth. Bleached bones of unlucky travelers and animals litter the ground in scattered clusters.
-  The flat extends in a broad sweep, its surface crackling underfoot like broken pottery. Dried salt flats shimmer blindingly where the sun catches them. The skeletal remains of a caravan wagon lie half-swallowed by the earth, its wooden ribs bleached to the same bone-white as the surrounding remains.@@N
+Great Oasis Ration Spur~
+@@yGreat Oasis Ration Spur@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The spur from Great Oasis arrives with disciplined pack spacing and clipped ration calls that survive from water-law doctrine. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
-D0
-~
-~
-0 0 29901
 D1
 ~
 ~
-0 0 29904
-D2
+0 -1 29904
+D3
 ~
 ~
-0 0 29906
+0 -1 29902
 S
 #29904
-@@yBleached Bone Field@@N~
-@@yCountless bones protrude from the cracked earth in grotesque arrangements, a graveyard of creatures that perished crossing this merciless flat. Vultures circle overhead, patient and watchful. The bones clatter softly whenever the wind picks up.
-  Some of the larger skeletons are still partially articulated, frozen in their final moments of desperate crawling toward water that never came. Sun-cracked skulls grin upward at the pitiless sky. The ground between the remains is littered with rusted buckles, corroded coins, and fragments of sun-rotted leather.@@N
+Southern Hardening Track~
+@@ySouthern Hardening Track@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Southern Oasis drill marks scar the stones where crews practiced vent-wrap swaps and casualty triage under blowing ash. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
 D1
 ~
 ~
-0 0 29905
+0 -1 29905
 D3
 ~
 ~
-0 0 29903
+0 -1 29903
 S
 #29905
-@@yVulture's Perch@@N~
-@@yA cluster of dead trees stands here, their bleached trunks stripped bare by the elements. Large vultures roost in the twisted branches, hunched and silent, occasionally spreading tattered wings to catch the thermal updrafts that rise from the scorching sand.
-  The ground beneath the trees is splattered with droppings and littered with regurgitated bone pellets. The vultures regard all movement below with patient, calculating interest, their bald heads swiveling in eerie unison. A pungent carrion stench hangs thick in the still air.@@N
+Witness-Stick Clearing~
+@@yWitness-Stick Clearing@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Bundles of witness sticks hang from pegged poles so crossing cohorts can prove who marched which segment together. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
+D1
+~
+~
+0 -1 29906
 D3
 ~
 ~
-0 0 29904
+0 -1 29904
 S
 #29906
-@@yDry Riverbed@@N~
-@@yA wide channel of smooth stones and cracked mud marks a river that dried up long ago. The banks rise steeply on either side, creating a natural corridor through the landscape. Occasional patches of thorny scrub have taken root between the water-worn rocks.
-  Smooth river stones of every color carpet the channel floor, polished by centuries of rushing water that has long since vanished. Deep cracks in the dried mud have curled upward at the edges like brittle parchment. The shade from the high banks offers some relief from the sun, but the trapped air is stifling and still.@@N
+Leeward Dune Shelf~
+@@yLeeward Dune Shelf@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A shallow leeward shelf gives brief relief from crosswind, though heat still rolls off the sand like an opened furnace. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
-D0
-~
-~
-0 0 29903
 D1
 ~
 ~
-0 0 29907
-D2
+0 -1 29907
+D3
 ~
 ~
-0 0 29908
+0 -1 29905
 S
 #29907
-@@yAncient Well@@N~
-@@yA circular stone well stands in a shallow depression, its rim worn smooth by countless hands over many centuries. The bucket rope has long since rotted away, and peering into the dark shaft reveals nothing but dry emptiness far below.
-  Carved symbols ring the well's exterior, prayers to forgotten water gods etched by desperate hands. A faint, dry updraft rises from the shaft, carrying the dusty scent of deep stone. Several small offerings of beads and carved figurines have been left on the rim by travelers hoping the water might return.@@N
+False-Cool Mirage Pan~
+@@yFalse-Cool Mirage Pan@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A reflective pan of pale crust throws convincing illusions of shade pools that have lured many caravans off safe lines. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
-D2
+D1
 ~
 ~
-0 0 29909
+0 -1 29908
 D3
 ~
 ~
-0 0 29906
+0 -1 29906
 S
 #29908
-@@yCanyon Mouth@@N~
-@@yThe dry riverbed narrows into a steep-walled canyon, the rock faces scored with horizontal striations from ancient flood waters. A dark cave opening yawns in the southern wall, exhaling cool air that smells faintly of chitin and something worse.
-  The canyon walls tower overhead, their layered strata telling a geological story of ancient seas and vanished rivers. Loose scree crunches underfoot, and the echoes of each footstep bounce between the narrow walls. Dark stains around the cave mouth suggest something regularly drags prey inside.@@N
+Ash Scorpion Scrape~
+@@yAsh Scorpion Scrape@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Scored trenches and broken carapace plates show where ash scorpions molt and defend their burrows at dusk. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
-D0
+D1
 ~
 ~
-0 0 29906
-D2
+0 -1 29909
+D3
 ~
 ~
-0 0 29950
+0 -1 29907
 S
 #29909
-@@ySandstone Arch@@N~
-@@yA natural arch of layered sandstone spans the trail here, eroded into a graceful curve by millennia of wind. The stone is banded in shades of amber and rust, and the sheltered area beneath offers a brief respite from the punishing desert sun.
-  Travelers have scratched names and dates into the softer stone beneath the arch, some dating back centuries. A cairn of flat stones marks the junction of several trails, and small lizards bask on the sun-warmed rock, darting into crevices at the slightest disturbance.@@N
+Burned Cargo Scatter~
+@@yBurned Cargo Scatter@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Charred crate hoops and burst amphora shards lie in a fan where a convoy failed under heat inversion and panic. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
-D0
-~
-~
-0 0 29907
 D1
 ~
 ~
-0 0 29910
-D2
+0 -1 29910
+D3
 ~
 ~
-0 0 29911
+0 -1 29908
 S
 #29910
-@@yDesert Crossroads@@N~
-@@ySeveral faint trails converge at this barren junction marked by a sun-bleached wooden signpost. The sign's painted directions have long since faded, leaving only bare splintered wood. Boot prints and cart tracks in the hard-packed sand suggest regular traffic heading east.
-  A pile of discarded water skins and broken sandals marks this as a rest stop for desert travelers, though the picked-over remains suggest bandits monitor the crossroads. Scuff marks and dried bloodstains in the sand hint at ambushes past.@@N
+Cracked Shade Arch I~
+@@yCracked Shade Arch I@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The first surviving shade arch stands cracked but legible, its schedule marks still used for march pacing. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
+D0
+~
+~
+0 -1 29922
 D1
 ~
 ~
-0 0 29963
+0 -1 29911
 D3
 ~
 ~
-0 0 29909
+0 -1 29909
 S
 #29911
-@@yOasis of Shimmering Sands@@N~
-@@yA small oasis pools in a rocky basin, fed by a trickle of water seeping from cracked stone. A few stubborn palms provide dappled shade, and the air here carries a faint coolness. Animal tracks of every description crowd the muddy banks of the shallow water.
-  The water is clear but shallow, reflecting the palm fronds above in a shimmering mirror. Dragonflies hover over the surface, and the gentle plop of small frogs punctuates the relative quiet. This precious water source draws every living thing for miles, making it both a sanctuary and a hunting ground.@@N
+Cinder Channel Mouth~
+@@yCinder Channel Mouth@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The ground drops into wind-sheltered channels where sound carries farther than sight and ambush lanes begin. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-2 10
-D0
-~
-~
-0 0 29909
-D2
+32 10
+D1
 ~
 ~
-0 0 29912
+0 -1 29912
+D3
+~
+~
+0 -1 29910
+D4
+~
+~
+0 -1 29930
 S
 #29912
-@@yPalm Grove@@N~
-@@yA cluster of date palms grows from the sandy soil, their fronds providing blessed shade from the brutal sun. Fallen dates litter the ground, attracting insects and small lizards. The grove extends southward along a shallow depression in the terrain.
-  The palms sway gently in a breeze that barely reaches the ground level, their rustling fronds creating a soothing whisper. Beetle tracks wind between the trunks, and the sweet fermenting smell of overripe dates mingles with the earthy scent of rare moisture in the soil.@@N
+Drift Ledger Cairn~
+@@yDrift Ledger Cairn@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A cairn of legal tablets has been restacked many times, each layer adding edits to old toll and burden clauses. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-0 10
-D0
-~
-~
-0 0 29911
+32 10
 D1
 ~
 ~
-0 0 29913
-D2
+0 -1 29913
+D3
 ~
 ~
-0 0 29914
+0 -1 29911
 S
 #29913
-@@yMerchant's Ruin@@N~
-@@yThe collapsed remains of a merchant's outpost lie scattered across the sand. Broken wagon wheels, shattered pottery, and torn fabric speak to a violent end. Scorch marks on the remaining timbers suggest raiders were responsible for the destruction.
-  A partially collapsed stone foundation is all that remains of what was once a trading post. Shards of glazed pottery from distant lands crunch underfoot, and faded scraps of silk flutter from splintered beams. The sand has already begun reclaiming the ruins.@@N
+Dust Oath Circle~
+@@yDust Oath Circle@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Travelers still form oath circles here before committing eastward, repeating formulas older than any current authority. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
+D1
+~
+~
+0 -1 29914
 D3
 ~
 ~
-0 0 29912
+0 -1 29912
 S
 #29914
-@@yTemple Forecourt@@N~
-@@ySmooth flagstones emerge from beneath the encroaching sand, forming a broad courtyard before an ancient structure to the south. Toppled columns line what was once a grand processional avenue, and faded carvings of desert deities adorn every stone surface.
-  The scale of the architecture speaks to a civilization of great power and ambition. Fallen column drums lie scattered like discarded building blocks, each taller than a person. Traces of red and blue paint cling to protected crevices in the stone, hinting at the vibrant colors that once adorned this approach.@@N
+Gateward Ascent~
+@@yGateward Ascent@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The path climbs toward the Gate quarter, where inspection language grows sharper and mercy grows scarce. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
-D0
+D1
 ~
 ~
-0 0 29912
-D2
+0 -1 29915
+D3
 ~
 ~
-0 0 29915
+0 -1 29913
 S
 #29915
-@@ySphinx Gate@@N~
-@@yTwo enormous sphinx statues flank a monumental gateway, their stone faces weathered but still radiating stern authority. The passage between them leads south into shadowed depths. To the east, a toppled colossus lies half-buried in the drifting sand.
-  Each sphinx is carved from a single massive block of granite, their lion bodies crouched in eternal vigilance. Faint traces of gold leaf still cling to their headdresses, and their eyes seem to track movement with unsettling awareness. The gateway between them exhales cold, tomb-scented air.@@N
+Bassek Compound Forecourt~
+@@bBassek Compound Forecourt@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Collapsed kiln buildings ring a forecourt stamped with Bassek-era batch marks and shipment seals. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
-D0
-~
-~
-0 0 29914
 D1
 ~
 ~
-0 0 29916
-D2
+0 -1 29916
+D3
 ~
 ~
-0 0 29917
+0 -1 29914
+D5
+~
+~
+0 -1 29902
 S
 #29916
-@@yCracked Colossus@@N~
-@@yA titanic stone statue lies broken on its side, half-consumed by the desert. The carved face still bears traces of painted features, gazing skyward with sightless eyes. Sand has drifted into the cracks and hollows of the enormous form.
-  The colossus must have stood thirty feet tall when whole. Its outstretched stone hand lies palm-up in the sand, large enough to stand in. Chisel marks along the fracture line suggest the toppling was deliberate, perhaps by conquering invaders seeking to erase the memory of the king it depicted.@@N
+Seal Clerk Arcade~
+@@bSeal Clerk Arcade@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Arcade benches and slate stands show where seal clerks once verified heat tags before cargo changed custody. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
+D1
+~
+~
+0 -1 29917
 D3
 ~
 ~
-0 0 29915
+0 -1 29915
 S
 #29917
-@@yTemple Entrance@@N~
-@@yMassive stone doors stand ajar at the base of the ancient structure, revealing a dark passage descending into the earth below. Carved warnings in a dead language border the entrance, and the air rising from the depths carries the musty scent of sealed tombs.
-  The doors themselves are masterworks of carved stone, depicting the journey of the dead through the underworld. Deep grooves in the threshold show where they were forced open by tomb robbers long ago. Dried offerings and burnt-out torches litter the entrance, abandoned by those who lost their nerve.@@N
+Furnace Hands' Barrack Ruin~
+@@bFurnace Hands' Barrack Ruin@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Barrack walls are blackened by vent bursts and crowded with names of crews who never made the return march. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
-D0
+D1
 ~
 ~
-0 0 29915
-D5
+0 -1 29918
+D3
 ~
 ~
-0 0 29918
+0 -1 29916
 S
 #29918
-@@bTemple Antechamber@@N~
-@@bSteps descend into a vaulted antechamber of dressed sandstone blocks. Faded murals cover the walls, depicting scenes of ancient desert kingdoms in pigments of ochre and lapis. The air is cool and still, sealed away from the desert above for uncounted centuries.
-  The vaulted ceiling is supported by carved pillars shaped like bound papyrus stalks, their surfaces covered in protective hieroglyphs. A thick layer of undisturbed dust covers the floor except where recent intruders have left tracks. The temperature drop from the surface is dramatic and immediate.@@N
+Seven-Color Assay Hall~
+@@bSeven-Color Assay Hall@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Faded assay bands still stripe the hall, mapping the seven heat classes that governed legal certification. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
-D2
-~
-~
-0 0 29919
-D4
+40 11
+D1
 ~
 ~
-0 0 29917
+0 -1 29919
+D3
+~
+~
+0 -1 29917
 S
 #29919
-@@bPillared Hall@@N~
-@@bRows of massive stone pillars march into the gloom, each carved with spiraling hieroglyphs that once recorded the deeds of forgotten rulers. The ceiling vanishes into darkness overhead, and footsteps echo sharply off the polished stone floor.
-  The pillars are arranged in two parallel rows, creating a grand processional nave that speaks of ceremonies and processions long past. Faint scratching sounds emanate from the shadows between the columns, and the polished floor reflects what little light enters, creating ghostly doubles of every movement.@@N
+Sun-Fired Tag Kiln~
+@@bSun-Fired Tag Kiln@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A compact kiln chamber holds shattered tag molds and scorched racks where ceramic proofs were fired. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
-D0
-~
-~
-0 0 29918
+40 11
 D1
 ~
 ~
-0 0 29920
-D2
+0 -1 29920
+D3
 ~
 ~
-0 0 29922
+0 -1 29918
 S
 #29920
-@@bHieroglyph Corridor@@N~
-@@bEvery surface of this narrow corridor is covered in densely packed hieroglyphs, carved with painstaking precision into the limestone walls. The symbols seem to shift in the flickering torchlight, creating an unsettling illusion of movement.
-  The hieroglyphs tell stories of divine judgment, depicting weighing of hearts and trials of the dead. Some sections have been scratched over or deliberately defaced, as if someone tried to alter the recorded history. A faint humming vibration resonates through the stone, barely perceptible but deeply unsettling.@@N
+Collapsed Firing Tunnel~
+@@bCollapsed Firing Tunnel@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The tunnel roof has sunk into jagged shelves, and warm gas breathes through cracks in irregular pulses. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
+40 11
 D1
 ~
 ~
-0 0 29921
+0 -1 29921
 D3
 ~
 ~
-0 0 29919
+0 -1 29919
 S
 #29921
-@@bStatue Gallery@@N~
-@@bLife-sized stone statues of warriors, priests, and nobles line both walls of this long gallery. Each figure is carved in exquisite detail, frozen in postures of devotion or martial readiness. Their stone eyes seem to follow movement through the chamber.
-  Each statue holds authentic weapons and wears carved replicas of ceremonial garments, preserved in stone for eternity. Several have been damaged, missing heads or arms, and one has been toppled entirely, shattering across the gallery floor. The intact figures maintain their vigil with eerie patience.@@N
+Breath-Burn Basin~
+@@bBreath-Burn Basin@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Heat pools in this basin with little warning, turning routine movement into a timing exercise. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
-D2
+32 10
+D1
 ~
 ~
-0 0 29925
+0 -1 29922
 D3
 ~
 ~
-0 0 29920
+0 -1 29920
 S
 #29922
-@@bOffering Chamber@@N~
-@@bStone altars stand at the cardinal points of this circular chamber, their surfaces stained dark by centuries of ritual offerings. Clay vessels and ceremonial blades litter the dusty floor, and the faint scent of ancient incense still lingers in the stale air.
-  The domed ceiling above is painted with a faded star map, its constellations no longer matching the night sky after millennia of stellar drift. Channels carved into the floor once directed ritual fluids from the altars to a central drain, now clogged with dust and debris.@@N
+Dual-Marker Calibration Slab~
+@@bDual-Marker Calibration Slab@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A broad slab carries twin survey systems, one Keeper measure-script and one later charter conversion hand. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
-D0
-~
-~
-0 0 29919
+32 10
 D1
 ~
 ~
-0 0 29924
+0 -1 29923
 D2
 ~
 ~
-0 0 29923
+0 -1 29910
+D3
+~
+~
+0 -1 29921
 S
 #29923
-@@bTrapped Hallway@@N~
-@@bThis corridor's stone tiles are slightly uneven, some depressed more than others. Small holes dot the walls at regular intervals, their dark interiors hinting at hidden mechanisms. The bones of less cautious explorers lie scattered near several of the more obvious pressure plates.
-  Closer inspection reveals the remains of spring-loaded dart launchers behind the wall openings, most now corroded beyond function. A few pressure plates have been deliberately jammed with wedged stones by previous explorers. The acrid residue of ancient poison still stains the dart tips embedded in the far wall.@@N
+Burn Ledger Annex~
+@@bBurn Ledger Annex@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Tablet niches run in long rows, preserving production tallies beside ration disputes and punitive annotations. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
-D0
-~
-~
-0 0 29922
-D2
+40 11
+D1
 ~
 ~
-0 0 29928
+0 -1 29924
 D3
 ~
 ~
-0 0 29927
+0 -1 29922
 S
 #29924
-@@bBurial Alcove@@N~
-@@bRecessed niches line the walls of this cramped chamber, each containing the wrapped remains of lesser servants entombed to attend their masters in the afterlife. Tattered linen and shards of funerary pottery crunch underfoot.
-  Some of the burial niches have been disturbed, their occupants dragged out and stripped of valuables by looters. A few mummified faces peer out from intact wrappings, their features frozen in expressions that suggest they were not entirely willing participants in their eternal service.@@N
+Cauterist Graffito Wall~
+@@bCauterist Graffito Wall@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Synod slogans overwrite older fiscal text here, but underlight still reveals erased fraud notes. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
+32 10
+D1
+~
+~
+1 29929 29925
 D3
 ~
 ~
-0 0 29922
+0 -1 29923
 S
 #29925
-@@bSarcophagus Room@@N~
-@@bAn ornate stone sarcophagus dominates the center of this chamber, its lid carved with a serene sleeping face. Canopic jars stand in alcoves along the walls, and fine gold dust coats every surface, giving the room an otherworldly shimmer.
-  The sarcophagus lid has been partially shifted, revealing darkness within. Elaborate protective spells are carved into the lid's underside in gold-filled hieroglyphs. The canopic jars are carved from alabaster, each topped with the head of a different guardian spirit.@@N
+Kiln Master's Seal Vault~
+@@bKiln Master's Seal Vault@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A sealed chamber once controlled high-grade tags and emergency clauses reserved for convoy crisis authority. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
-D0
-~
-~
-0 0 29921
-D2
+40 11
+D1
 ~
 ~
-0 0 29926
+0 -1 29926
+D3
+~
+~
+1 29929 29924
 S
 #29926
-@@bGuardian Chamber@@N~
-@@bThis fortified room was clearly designed as a defensive position. Arrow slits are cut into the thick walls, and stone barricades provide cover. Racks along the walls once held weapons, though most have been claimed by rust and time.
-  The strategic placement of this chamber at a chokepoint in the tomb speaks to the builders' paranoia about intruders. Murder holes in the ceiling once allowed defenders to rain death from above. Scattered bronze arrowheads and corroded sword fragments tell of battles fought here in ages past.@@N
+Charred Amphora Yard~
+@@bCharred Amphora Yard@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Stacks of amphora necks and lid seals create brittle lanes through an old storage yard. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
-D0
+32 10
+D1
 ~
 ~
-0 0 29925
+0 -1 29927
+D3
+~
+~
+0 -1 29925
 S
 #29927
-@@bCollapsed Passage@@N~
-@@bA partial cave-in has choked this corridor with rubble, leaving only a narrow gap to squeeze through. Dust motes hang in the still air, and the cracked ceiling groans ominously. Fresh scratch marks on the stones suggest something has been clawing its way through.
-  Massive stone blocks have shifted and cracked, creating a precarious maze of leaning walls and unstable debris. The air is thick with ancient stone dust that catches in the throat. Somewhere beyond the rubble, a faint scraping sound echoes through the gaps.@@N
+Ration Dispute Court~
+@@bRation Dispute Court@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Stone seats face a scorched dais where adjudicators measured loss claims against witness statements. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
+32 10
 D1
 ~
 ~
-0 0 29923
+0 -1 29928
+D3
+~
+~
+0 -1 29926
 S
 #29928
-@@bFlooded Chamber@@N~
-@@bStagnant water covers the floor of this low-ceilinged room to knee depth, seeping from cracks in the ancient stonework. The surface is covered with a thin film of mineral deposits, and the walls are slick with moisture and pale fungal growth.
-  The water is murky and warm, with an unpleasant metallic taste to the air above it. Submerged stone furnishings create hidden obstacles beneath the opaque surface. Pale, eyeless cave fish dart away from disturbances, and the constant dripping from the ceiling creates an irregular percussion.@@N
+Ashfall Escarpment Stairs~
+@@bAshfall Escarpment Stairs@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Steep stairs climb the escarpment in switchbacks, linking kiln traffic to the rim routes above. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
+32 10
 D0
 ~
 ~
-0 0 29923
+0 -1 29946
 D1
 ~
 ~
-0 0 29929
-D2
+0 -1 29929
+D3
 ~
 ~
-0 0 29932
+0 -1 29927
 S
 #29929
-@@bMosaic Room@@N~
-@@bThe floor of this chamber is an intricate mosaic depicting a great desert battle between rival pharaohs. Tiny colored tiles of glass and stone create a vivid scene of chariots, warriors, and raining arrows. Portions have been damaged by water and time.
-  The artistry is remarkable, with individual warriors rendered in such detail that their expressions of rage and fear are clearly visible. Gold and lapis tiles highlight the victorious pharaoh's chariot at the mosaic's center. Sections where tiles have been pried loose reveal the careful mortar work beneath.@@N
+Warden Relay Niche~
+@@bWarden Relay Niche@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A recessed relay niche holds soot-stained posting boards used by wardens and contracted runners. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
+32 10
 D1
 ~
 ~
-0 0 29930
-D2
-~
-~
-0 0 29931
+0 -1 29930
 D3
 ~
 ~
-0 0 29928
+0 -1 29928
 S
 #29930
-@@bTreasure Vault Antechamber@@N~
-@@bThis small room is dominated by a massive stone door in the eastern wall, sealed shut with heavy bronze bolts corroded green with age. Scratch marks and tool gouges around the frame suggest many failed attempts to force entry over the centuries.
-  The door is carved with images of guardian serpents intertwined around a central seal of office. Broken tools and discarded pry bars litter the floor, testament to the door's unyielding construction. A faint draft seeps through the hairline gap between door and frame, carrying the scent of old metal.@@N
+North Channel Descent~
+@@eNorth Channel Descent@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The descent narrows into channels where visibility shrinks and footfall echoes from both sides. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
-D3
-~
-~
-0 0 29929
-S
-#29931
-@@bSacred Pool@@N~
-@@bA natural spring feeds a shallow pool of surprisingly clear water in a basin carved from the living rock. Offerings of coins and small statues lie beneath the surface, and the water glows with a faint phosphorescence from minerals dissolved in its depths.
-  The spring bubbles up from a fissure in the bedrock with a gentle, constant murmur. Ancient carvings around the pool's rim depict water deities receiving the prayers of the faithful. The phosphorescent glow gives the chamber an otherworldly beauty, casting rippling light patterns across the ceiling.@@N
-~
-10 11
-D0
-~
-~
-0 0 29929
-S
-#29932
-@@bInscription Hall@@N~
-@@bThis long hall serves as a record chamber, its walls covered floor to ceiling with columns of meticulously carved text. The inscriptions chronicle the reign of the entombed pharaoh, from ascension to conquest to the construction of this very tomb.
-  The precision of the carving is extraordinary, each hieroglyph as crisp as the day it was cut. Running fingers along the text reveals the depth and confidence of the stone mason's hand. Later sections of the chronicle appear rushed, the hieroglyphs smaller and more tightly packed, as if the scribes were running out of wall space or time.@@N
-~
-8 11
-D0
-~
-~
-0 0 29928
+32 10
 D1
 ~
 ~
-0 0 29933
+0 -1 29931
+D2
+~
+~
+0 -1 29902
 D3
 ~
 ~
-0 0 29936
-S
-#29933
-@@bRitual Chamber@@N~
-@@bBlackened scorch marks radiate outward from a stone circle etched into the floor of this domed chamber. Residual magical energy makes the air crackle faintly, and arcane symbols glow with a dim phosphorescence along the curved walls.
-  The ritual circle is deeply incised into the stone, its lines filled with a dark metalite substance that absorbs light. Hair stands on end upon entering the room, and a persistent tingling sensation crawls across exposed skin. The dome overhead amplifies even whispered words into resonant echoes.@@N
-~
-8 11
-D2
-~
-~
-0 0 29934
-D3
-~
-~
-0 0 29932
-S
-#29934
-@@bPharaoh's Antechamber@@N~
-@@bGold leaf still clings to the walls of this lavishly decorated room, depicting scenes of the pharaoh's divine ascension. Two stone jackals guard the passage south, their jeweled eyes gleaming with an inner light that seems almost alive.
-  The wealth displayed here is staggering even in its diminished state. Sheets of hammered gold cover the walls in overlapping panels, each depicting a stage of the pharaoh's journey to godhood. The jackal guardians are carved from black basalt, their ruby eyes seeming to pulse with a watchful awareness.@@N
-~
-8 11
-D0
-~
-~
-0 0 29933
-D2
-~
-~
-0 0 29935
-S
-#29935
-@@RPharaoh's Throne Room@@N~
-@@RA vast chamber stretches before you, its vaulted ceiling supported by columns of polished obsidian. At the far end, a golden throne sits upon a raised dais, flanked by braziers that burn with unnatural violet flame. The air thrums with ancient power.
-  The obsidian columns reflect the violet firelight in dark, liquid ripples along their polished surfaces. The throne itself is carved from a single block of gold-veined quartz, its back shaped like a spread-winged sun disk. The atmosphere is charged with millennia of accumulated magical energy, making the air thick and difficult to breathe.@@N
-~
-12 11
-D0
-~
-~
-0 0 29934
-S
-#29936
-@@bHidden Passage@@N~
-@@bBehind a cleverly disguised section of wall lies this narrow secret corridor. The stones here are rougher and less decorated than the main tomb, suggesting this passage was built for servants or as an emergency escape route for the tomb builders.
-  The walls are unfinished limestone, still bearing the chisel marks of hurried construction. Soot stains on the ceiling mark where torches were carried in haste. A few crude graffiti scratched by ancient workers survive on the walls, simple prayers and the names of forgotten laborers.@@N
-~
-8 11
-D1
-~
-~
-0 0 29932
-D2
-~
-~
-0 0 29937
-S
-#29937
-@@bSecret Treasury@@N~
-@@bThis concealed vault contains stone shelves lined with dusty amphorae and sealed clay jars. A few have been broken open, revealing desiccated herbs and oils meant to preserve the dead. A dark shaft in the floor descends even deeper into the earth.
-  The shelves are carved directly from the rock walls, each jar carefully labeled with hieratic script identifying its contents. The broken vessels have spilled their desiccated contents across the floor, filling the air with a complex fragrance of ancient spices and resinous oils. The shaft in the floor drops into absolute darkness.@@N
-~
-8 11
-D0
-~
-~
-0 0 29936
+0 -1 29929
 D5
 ~
 ~
-0 0 29938
+0 -1 29911
 S
-#29938
-@@bCatacomb Entrance@@N~
-@@bRough-hewn steps descend from the treasury above into a network of cramped tunnels carved from solid bedrock. The air here is thick with dust and the faint sweet odor of ancient decay. Crude torch sconces line the walls at irregular intervals.
-  The steps are worn concave from centuries of foot traffic, their surfaces slippery with condensation. The tunnels ahead branch and twist, clearly expanded over many generations of use. Iron brackets for long-vanished torches are corroded to brittle shells, and the sweet decay smell grows stronger deeper in.@@N
+#29931
+Split Channel Run~
+@@eSplit Channel Run@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Three cut paths branch around old flood scars, forcing convoy leaders to gamble on speed or cover. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
-D2
+32 10
+D1
 ~
 ~
-0 0 29939
+0 -1 29932
+D3
+~
+~
+0 -1 29930
+S
+#29932
+Smuggler's Sidecut~
+@@eSmuggler's Sidecut@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A cramped sidecut bypass skirts official markers and smells of pitch, rope, and hurried barter. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
+~
+32 10
+D1
+~
+~
+0 -1 29933
+D3
+~
+~
+0 -1 29931
+S
+#29933
+Overhung Heat Shelf~
+@@eOverhung Heat Shelf@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A stone overhang throws hard shadow at noon, making this shelf a favored lookout and ambush perch. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
+~
+32 10
+D1
+~
+~
+0 -1 29934
+D3
+~
+~
+0 -1 29932
+S
+#29934
+Collapsed Culvert Mouth~
+@@eCollapsed Culvert Mouth@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Broken culvert rings choke the route into a killing funnel where carts must pass one at a time. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
+~
+32 10
+D1
+~
+~
+0 -1 29935
+D3
+~
+~
+0 -1 29933
+S
+#29935
+Cloudburst Scour Mark~
+@@eCloudburst Scour Mark@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Ancient flood scoring climbs the walls, proof that rare cloudbursts can still erase entire traces. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
+~
+32 10
+D1
+~
+~
+0 -1 29936
+D3
+~
+~
+0 -1 29934
+S
+#29936
+Rope-Bridge Slot~
+@@eRope-Bridge Slot@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Anchors for a suspended crossing bite into opposite walls above a narrow, treacherous slot. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
+~
+32 10
+D1
+~
+~
+0 -1 29937
+D3
+~
+~
+0 -1 29935
 D4
 ~
 ~
-0 0 29937
+0 -1 29948
+S
+#29937
+Cinder Kite Roost~
+@@eCinder Kite Roost@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Cinder kites wheel and nest along warm ledges, descending whenever they scent fresh collapse. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
+~
+32 10
+D1
+~
+~
+0 -1 29938
+D3
+~
+~
+0 -1 29936
+S
+#29938
+Broker Whisper Post~
+@@eBroker Whisper Post@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A shaded notch serves as a broker contact point where warnings, prices, and threats trade hands. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
+~
+32 10
+D1
+~
+~
+0 -1 29939
+D3
+~
+~
+0 -1 29937
 S
 #29939
-@@bBone-Lined Corridor@@N~
-@@bHuman bones have been stacked with disturbing precision along both walls of this corridor, femurs and tibias forming neat rows with skulls placed at regular intervals. The macabre display stretches into the darkness ahead, creating walls of the dead.
-  The bones are dry and yellowed with age, some crumbling at the slightest vibration. The skulls are arranged facing outward, their empty eye sockets creating an endless audience of the dead. Occasionally a bone shifts and clatters to the floor, the sound echoing through the tunnels with unnerving volume.@@N
+Hijacked Toll Station~
+@@eHijacked Toll Station@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The station's tariff slate is still mounted, now revised by armed crews who levy passage at bladepoint. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
-D0
-~
-~
-0 0 29938
+32 10
 D1
 ~
 ~
-0 0 29940
-D2
+0 -1 29940
+D3
 ~
 ~
-0 0 29941
+0 -1 29938
 S
 #29940
-@@bOssuary@@N~
-@@bThis domed chamber is filled with towering piles of skeletal remains, sorted by type. Skulls form one mound, ribcages another, long bones yet another. The sheer volume of remains suggests this place served as a mass burial site for generations.
-  The sorted piles rise nearly to the domed ceiling, thousands of individuals reduced to categorized heaps. The organizational precision is both methodical and deeply disturbing. A fine bone dust covers everything, stirred into choking clouds by any movement through the chamber.@@N
+Witness Pyre Turn~
+@@eWitness Pyre Turn@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A memorial pyre ring marks a turn where testimony failed and a cohort vanished during legal transfer. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
+32 10
 D1
 ~
 ~
-0 0 29949
+0 -1 29941
 D3
 ~
 ~
-0 0 29939
+0 -1 29939
 S
 #29941
-@@bCrypt of the Forgotten@@N~
-@@bUnmarked stone coffins fill this low chamber, stacked three high in places. Whoever was buried here was not important enough to warrant inscriptions or decoration, their identities lost to the ages. A thick layer of dust covers everything.
-  The coffins are rough-hewn and unadorned, their plain surfaces a stark contrast to the ornate sarcophagi of the upper tomb. Many lids have been displaced, revealing empty interiors or scattered remains. The low ceiling forces a hunched posture, adding claustrophobia to the already oppressive atmosphere.@@N
+Channel Tri-Fork~
+@@eChannel Tri-Fork@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The channels split again around basalt ribs, each branch carrying different risks and timing windows. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
-D0
-~
-~
-0 0 29939
+32 10
 D1
 ~
 ~
-0 0 29942
-D2
+0 -1 29942
+D3
 ~
 ~
-0 0 29943
+0 -1 29940
+D4
+~
+~
+0 -1 29953
 S
 #29942
-@@bEmbalming Chamber@@N~
-@@bStone slabs stained dark with ancient fluids stand at the center of this room, surrounded by shelves of dusty canopic jars and tarnished embalming tools. Drainage channels carved into the floor lead to a central collection basin.
-  The embalming slabs are tilted slightly, with grooved channels to direct fluids into clay catch basins below. Tarnished bronze hooks, blades, and long-handled spoons hang from wall pegs, each designed for a specific step in the preservation ritual. A lingering chemical sharpness cuts through the dust.@@N
+Basalt Marker Blind~
+@@eBasalt Marker Blind@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Dark marker stones blend with surrounding rock, making route signs easy to miss under dust shear. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
+32 10
+D1
+~
+~
+0 -1 29943
 D3
 ~
 ~
-0 0 29941
+0 -1 29941
 S
 #29943
-@@bDust-Choked Passage@@N~
-@@bFine powdery dust fills this corridor so thickly that each step sends up choking clouds. The walls are barely visible through the haze, and breathing becomes difficult. Something has been moving through here recently, leaving disturbed trails in the deep dust.
-  The dust lies ankle-deep in places, accumulated over centuries of slow stone erosion. Each footfall produces a muffled crunch and a billowing cloud that hangs in the stagnant air. The trails left by recent passage are wide and erratic, as if whatever made them was dragging something heavy.@@N
+Broken Water Cart Sink~
+@@eBroken Water Cart Sink@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A sunken cart frame and dried skins show where a water train broke axle and discipline together. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-9 11
-D0
-~
-~
-0 0 29941
+32 10
 D1
 ~
 ~
-0 0 29944
-D2
+0 -1 29944
+D3
 ~
 ~
-0 0 29945
+0 -1 29942
 S
 #29944
-@@bChamber of Whispers@@N~
-@@bThe acoustics of this oddly shaped chamber create an unsettling effect where the faintest sound is amplified into ghostly whispers that seem to come from everywhere at once. The curved walls are carved with hundreds of small mouths, all frozen open in silent speech.
-  The carved mouths range from serene to agonized, each unique in expression and positioned to channel sound in disorienting ways. A single spoken word fragments into a dozen overlapping echoes, making it impossible to distinguish real sounds from acoustic phantoms. The effect is deeply unnerving.@@N
+Gate Drain Approach~
+@@eGate Drain Approach@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Drain channels slope toward the Gate quarter, carrying ash and rumor into the inspection zone. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
+32 10
+D0
+~
+~
+0 -1 29960
+D1
+~
+~
+0 -1 29945
 D3
 ~
 ~
-0 0 29943
+0 -1 29943
 S
 #29945
-@@bCursed Vault@@N~
-@@bWarning glyphs are carved into every surface of this sealed chamber, their paint still vivid after centuries. The air is unnaturally cold, and a persistent sense of dread permeates the space. Shattered remains of protective wards litter the threshold.
-  The glyphs pulse with a sickly green luminescence, their magic still potent despite the ages. Frost crystals have formed on the stone surfaces despite the desert above, and each exhaled breath hangs as a visible cloud. The broken ward stones at the entrance crackle with residual energy, their failure having unleashed whatever was sealed within.@@N
+First Fused Crust~
+@@cFirst Fused Crust@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The sand begins to vitrify here, cracking underfoot with a thin musical ring. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-72 11
-D0
-~
-~
-0 0 29943
+32 10
 D1
 ~
 ~
-0 0 29946
+0 -1 29946
+D3
+~
+~
+0 -1 29944
+D5
+~
+~
+0 -1 29902
 S
 #29946
-@@bNecromancer's Workshop@@N~
-@@bThis cluttered chamber served as a workspace for dark rituals. Stone tables hold fragments of bone, dusty vials of dark liquid, and crumbling scrolls covered in forbidden incantations. Chalk circles and arcane diagrams cover the floor.
-  The work tables are cluttered with the detritus of necromantic experimentation: bone fragments arranged in geometric patterns, crystallized reagents in cracked glass vials, and yellowed scrolls whose text writhes when viewed from the corner of one's eye. The chalk diagrams on the floor overlap in layers, each more complex than the last.@@N
+Slag Sheet Traverse~
+@@cSlag Sheet Traverse@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Wide slag sheets overlap in brittle plates that punish careless weight shifts. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
+32 10
+D1
+~
+~
+0 -1 29947
 D2
 ~
 ~
-0 0 29947
+0 -1 29928
 D3
 ~
 ~
-0 0 29945
+0 -1 29945
 S
 #29947
-@@bLich's Antechamber@@N~
-@@bThe temperature drops sharply in this frost-rimed corridor. Ice crystals coat the walls despite the desert above, and each breath comes as a visible cloud. The oppressive weight of powerful magic presses down from all sides, growing stronger to the south.
-  Icicles hang from the ceiling in unnatural formations, some curving sideways as if grown under the influence of warped magical fields. The frost on the walls forms patterns that resemble screaming faces when viewed at certain angles. A deep thrumming vibration rises through the floor, rhythmic as a heartbeat.@@N
+Glass-Sing Dune Crest~
+@@cGlass-Sing Dune Crest@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Wind over fused grit produces a high glass-singing note that masks distant movement. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-72 11
-D0
-~
-~
-0 0 29946
-D2
+32 10
+D1
 ~
 ~
-0 0 29948
+0 -1 29948
+D3
+~
+~
+0 -1 29946
 S
 #29948
-@@RLich's Sanctum@@N~
-@@RA vast circular chamber lies at the heart of the deepest catacombs, illuminated by floating orbs of purple flame. Runic circles are etched into the obsidian floor in concentric rings, and towering bookshelves line the curved walls, filled with ancient tomes of forbidden knowledge.
-  The purple flames cast writhing shadows that move independently of any physical source, dancing across the curved walls in hypnotic patterns. The bookshelves stretch from floor to ceiling, their contents ranging from crumbling papyrus scrolls to leather-bound grimoires that seem to breathe. The concentric runic circles pulse with alternating light, creating a mesmerizing and deeply disturbing rhythm.@@N
+Rim Survey Needle~
+@@cRim Survey Needle@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A tall survey needle marks the old legal baseline for distance and load conversion. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-12 11
-D0
+32 10
+D1
 ~
 ~
-0 0 29947
+0 -1 29949
+D3
+~
+~
+0 -1 29947
+D5
+~
+~
+0 -1 29936
 S
 #29949
-@@bCollapsed Dead End@@N~
-@@bThe tunnel here has partially collapsed, filling the passage with rubble and broken masonry. Fragments of carved stone and shattered pottery are mixed into the debris. A few skeletal hands protrude from beneath the fallen rock.
-  The collapse appears ancient, the fallen stones now cemented together by mineral deposits and centuries of slow moisture seepage. The skeletal hands reaching from the rubble are frozen in desperate clawing gestures, their owners crushed during whatever catastrophe brought down the ceiling.@@N
+Heatquake Scar Fold~
+@@cHeatquake Scar Fold@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A folded scar from past heatquakes splits the route into upper and lower traverses. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
+32 10
+D1
+~
+~
+0 -1 29950
 D3
 ~
 ~
-0 0 29940
+0 -1 29948
 S
 #29950
-@@bCave Entrance@@N~
-@@bThe canyon narrows into a dark cave mouth, the rock walls slick with moisture from some underground source. The temperature drops noticeably as the desert sun is left behind. Claw marks score the stone floor, and the acrid smell of venom permeates the air.
-  The transition from blazing daylight to cave darkness is abrupt and disorienting. Water seeps down the walls in thin rivulets, feeding patches of pale moss that cling to the damp stone. Deep gouges in the cave floor, each several inches wide, suggest the passage of something with enormous claws or a heavy segmented body.@@N
+Shoreward Table Fragment~
+@@cShoreward Table Fragment@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Broken conversion tablets here link inland scorch clauses to littoral shoreward accounting. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
-D0
-~
-~
-0 0 29908
-D2
+32 10
+D1
 ~
 ~
-0 0 29951
+0 -1 29951
+D3
+~
+~
+0 -1 29949
 S
 #29951
-@@bNarrow Tunnel@@N~
-@@bThis cramped passage forces movement in single file, the rough stone walls pressing close on both sides. Sticky webbing clings to the ceiling, and the chittering of unseen creatures echoes from deeper within the cave system.
-  The tunnel walls are scratched with parallel grooves from countless legs and tails scraping past over the years. Desiccated insect husks and shed exoskeleton fragments crunch underfoot, and the webbing overhead trembles with the vibrations of distant movement through the connected tunnel network.@@N
+Vitrified Caravan Ruts~
+@@cVitrified Caravan Ruts@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Frozen wheel ruts shine through the crust, preserving old traffic patterns like a legal fossil. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-9 11
-D0
-~
-~
-0 0 29950
+32 10
 D1
 ~
 ~
-0 0 29952
+0 -1 29952
 D3
 ~
 ~
-0 0 29954
+0 -1 29950
 S
 #29952
-@@bChitinous Cavern@@N~
-@@bThe walls of this natural cavern are encrusted with shed scorpion shells and dried husks of molted exoskeletons. The floor crunches with every step, carpeted in fragments of chitin. Larger intact shells hang from the ceiling like grotesque decorations.
-  Some of the shed exoskeletons are remarkably intact, hollow replicas of the creatures that wore them, split along the back where their owners crawled free. The chitinous carpet crunches and pops with a stomach-turning sound, and a dry, musty odor fills the enclosed space.@@N
+Mafdet Pre-Stamp Cairn~
+@@cMafdet Pre-Stamp Cairn@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Couriers stack pre-stamp cairn stones here before submitting manifests further east. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
-D2
+32 10
+D1
 ~
 ~
-0 0 29953
+0 -1 29953
 D3
 ~
 ~
-0 0 29951
+0 -1 29951
 S
 #29953
-@@bEgg Chamber@@N~
-@@bClusters of translucent eggs the size of melons are attached to every surface of this warm, humid cavern. Some are dark and empty, while others pulse with the movement of developing larvae within. A thick resinous substance holds the clusters in place.
-  The humid air is nearly suffocating, heavy with a sweet organic smell. The viable eggs glow with a faint amber luminescence, and the developing larvae within can be seen curling and uncurling in their gelatinous sacs. Freshly hatched nymphs, pale and nearly transparent, scatter into crevices at any disturbance.@@N
+Warden Ember Watch~
+@@cWarden Ember Watch@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A compact watch post surveys queue movement and flags suspect loads before they reach the piers. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-40 11
-D0
+32 10
+D1
 ~
 ~
-0 0 29952
+0 -1 29954
+D3
+~
+~
+0 -1 29952
+D5
+~
+~
+0 -1 29941
 S
 #29954
-@@bWebbed Passage@@N~
-@@bThick strands of sticky webbing crisscross this passage, making progress difficult. Wrapped bundles hanging from the ceiling contain the desiccated remains of unfortunate creatures. The webs vibrate faintly with the movement of their creator somewhere nearby.
-  The silk is incredibly strong, requiring considerable force to break through. Several of the hanging bundles are disturbingly humanoid in shape, and one still wears the tattered remains of a leather boot protruding from its cocoon. The web strands thrum like bowstrings at the slightest touch.@@N
+Rim Bandit Drift~
+@@cRim Bandit Drift@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Bandit trails braid across wind-polished flats, vanishing as quickly as they appear. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
+32 10
 D1
 ~
 ~
-0 0 29951
-D2
+0 -1 29955
+D3
 ~
 ~
-0 0 29955
+0 -1 29953
 S
 #29955
-@@bGlowing Grotto@@N~
-@@bBioluminescent fungi cling to the damp walls of this spacious grotto, casting everything in an eerie blue-green light. The soft glow reveals a cavern of surprising beauty, with mineral formations creating natural pillars and curtains of crystallized stone.
-  The fungi grow in overlapping shelves of luminous blue and green, pulsing gently as if breathing. Stalactites and stalagmites have fused into flowing columns of crystalline calcite that sparkle in the bioluminescent glow. Tiny cave crickets hop between the fungal colonies, their translucent bodies glowing briefly as they feed.@@N
+Saltglass Foretaste Flats~
+@@cSaltglass Foretaste Flats@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The terrain flattens into reflective bands that foreshadow the harsher glasswinds beyond. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
-D0
-~
-~
-0 0 29954
+32 10
 D1
 ~
 ~
-0 0 29956
-D2
+0 -1 29956
+D3
 ~
 ~
-0 0 29957
+0 -1 29954
 S
 #29956
-@@bMolten Crack@@N~
-@@bA fissure in the cave floor reveals a distant orange glow of magma far below. Waves of heat rise from the crack, and the surrounding stone is warm to the touch. Mineral deposits along the edges have crystallized into colorful formations.
-  The fissure splits the cavern floor in a jagged line, its edges lined with crystals of sulfur and iron oxide in vivid yellows and reds. The heat radiating upward creates shimmering distortions in the air, and occasional deep rumbles from below send fine vibrations through the surrounding stone.@@N
+Cairnline Echo Post~
+@@cCairnline Echo Post@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. An echo post of stacked cairns repeats shouted bearings across the rim in clipped code. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-40 11
+32 10
 D1
 ~
 ~
-0 0 29962
+0 -1 29957
 D3
 ~
 ~
-0 0 29955
+0 -1 29955
 S
 #29957
-@@bScorpion Nest@@N~
-@@bThis large cavern is littered with the remains of countless prey animals, bones picked clean and scattered across the sandy floor. Deep grooves in the stone show where massive scorpion tails have dragged across the surface repeatedly.
-  The bone piles include creatures of every size, from small rodents to what appears to be a full-grown desert horse. The tail grooves are worn inches deep into solid rock, testament to the age and size of the creatures that nest here. A thick musky scent permeates the chamber, marking it as actively occupied territory.@@N
+Fused Pier Shadow~
+@@cFused Pier Shadow@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The silhouette of the Cinder Gate piers looms ahead, striated by fused and unfused stone. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
-D0
-~
-~
-0 0 29955
-D2
+32 10
+D1
 ~
 ~
-0 0 29958
+0 -1 29958
+D3
+~
+~
+0 -1 29956
+D4
+~
+~
+0 -1 29965
 S
 #29958
-@@bVenomous Lair@@N~
-@@bPools of caustic venom have collected in natural depressions across the floor of this foul-smelling cave. The liquid gives off acrid fumes that sting the eyes and throat. Corroded bones and dissolved equipment mark where victims met their end.
-  The venom pools are an oily yellow-green, their surfaces occasionally bubbling as chemical reactions continue breaking down submerged material. Metal equipment has been reduced to pitted, barely recognizable lumps. The fumes are so concentrated that eyes water and the back of the throat burns with each breath.@@N
+Jurisdiction Windbreak~
+@@cJurisdiction Windbreak@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A windbreak wall channels waiting caravans into orderly files for final inland screening. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-40 11
-D0
-~
-~
-0 0 29957
+32 10
 D1
 ~
 ~
-0 0 29959
-D2
+0 -1 29959
+D3
 ~
 ~
-0 0 29960
+0 -1 29957
 S
 #29959
-@@bBrood Chamber@@N~
-@@bSmaller scorpions of various sizes scuttle across the walls and ceiling of this cramped cave. Hundreds of tiny eyes glint in the darkness, and the constant click of small pincers creates an unsettling chorus. This appears to be a nursery of sorts.
-  The juvenile scorpions range from fingernail-sized nymphs to adolescents the size of a fist, all sharing the same aggressive territorial behavior as their enormous parents. They swarm over each other in competing clusters, occasionally erupting into brief cannibalistic skirmishes. The clicking and scraping of hundreds of tiny legs creates an unceasing white noise.@@N
+Outer Cinder Queue~
+@@cOuter Cinder Queue@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Queue lanes begin in earnest, with brokers and wardens scanning faces and cargo marks. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
+32 10
+D0
+~
+~
+0 -1 29962
+D1
+~
+~
+0 -1 29960
 D3
 ~
 ~
-0 0 29958
+0 -1 29958
 S
 #29960
-@@bQueen's Antechamber@@N~
-@@bThe tunnel widens dramatically here, the walls polished smooth by the passage of something enormous. Deep gouges in the stone floor and a thick coating of dried venom on every surface mark this as the threshold of a powerful creature's domain.
-  The polished walls reflect a distorted mirror of everything in the tunnel, smeared with a waxy residue from the creature's passage. The venom coating has calcified into a crystalline crust that crunches underfoot and releases a sharp chemical odor when broken. The scale of the gouges in the floor suggest a creature of truly terrifying proportions.@@N
+The Cinder Gate West Pier~
+@@WThe Cinder Gate West Pier@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The west pier rises in banded stone where inland certifications are checked one final time. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
-D0
+32 10
+D1
 ~
 ~
-0 0 29958
+0 -1 29961
 D2
 ~
 ~
-0 0 29961
+0 -1 29944
+D3
+~
+~
+0 -1 29959
 S
 #29961
-@@RScorpion Queen's Den@@N~
-@@RA vast natural cathedral opens up, its ceiling lost in darkness far above. The floor is a carpet of crushed bones and discarded chitin, and massive scorpion tracks crisscross every surface. The air is thick with the chemical reek of concentrated venom.
-  The cavern is immense, its walls curving up and away into unseen heights. Massive stalactites hang from the darkness above like stone fangs, and the bone-littered floor crunches with every step. The concentrated venom fumes are nearly overwhelming, and the echoes of distant clicking and scraping reverberate from every direction.@@N
+The Cinder Gate East Pier~
+@@WThe Cinder Gate East Pier@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Beyond the east pier, Reach-bound doctrine takes over and penalties harden by segment. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-12 11
-D0
+32 10
+D1
 ~
 ~
-0 0 29960
+0 -1 29962
+D3
+~
+~
+0 -1 29960
 S
 #29962
-@@bHidden Burrow@@N~
-@@bA narrow side passage leads to this small, secluded cavern partially hidden behind a curtain of mineral deposits. The floor is covered in fine sand, and claw marks suggest something uses this as a private resting place away from the larger cave system.
-  The mineral curtain creates a natural doorway of translucent flowstone, partially concealing the burrow from the main tunnel. The sand floor shows compressed body impressions where a reptilian creature has coiled repeatedly. A small collection of gnawed bones and shed scales litters one corner.@@N
+Manifest Shade Court~
+@@WManifest Shade Court@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Canvas shade and chipped tables host arguments over manifests, witness marks, and ration tokens. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 11
+32 10
+D1
+~
+~
+0 -1 29963
+D2
+~
+~
+0 -1 29959
 D3
 ~
 ~
-0 0 29956
+0 -1 29961
 S
 #29963
-@@yDesert Trail@@N~
-@@yA worn trail cuts through the sand heading east, marked by occasional cairns of stacked stones. Boot prints and the ruts of heavily laden carts have packed the sand into a firm path. The tracks all lead toward a fortified encampment visible in the distance.
-  Discarded refuse and broken equipment litter the trail margins, dropped by passing raiders too lazy to dispose of them properly. Crude warning totems fashioned from animal skulls and feathers mark the approach at intervals, growing more frequent as the camp draws nearer. The acrid smell of smoke and unwashed bodies carries on the wind.@@N
+Token Ledger Stand~
+@@WToken Ledger Stand@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Ledger stands hold token boards where shortages and substitutions are entered in strict order. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
 D1
 ~
 ~
-0 0 29964
+0 -1 29964
 D3
 ~
 ~
-0 0 29910
+0 -1 29962
 S
 #29964
-@@yLookout Post@@N~
-@@yA crude wooden platform has been erected atop a rocky outcrop, providing a commanding view of the surrounding desert. Tattered banners bearing a crossed-scimitar sigil snap in the wind, and discarded food scraps suggest a recent watch rotation.
-  The platform creaks ominously in the wind, its construction crude but functional. A battered signal horn hangs from a peg, ready to sound the alarm. Empty water skins and gnawed bones scattered across the platform speak to the tedium of long watches under the merciless sun.@@N
+Broker Rope Canopy~
+@@WBroker Rope Canopy@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Rope canopies shelter an information bazaar where every rumor carries a price. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
-D2
+D1
 ~
 ~
-0 0 29965
+0 -1 29965
 D3
 ~
 ~
-0 0 29963
+0 -1 29963
 S
 #29965
-@@yPalisade Gate@@N~
-@@ySharpened wooden stakes lashed together with rope form a crude palisade wall. A gap serves as the main gate into the raider encampment beyond. Skulls mounted on poles flank the entrance as a grim warning to anyone foolish enough to approach uninvited.
-  The palisade is reinforced with stolen wagon parts and scavenged timber, lashed together with a mix of rope and leather thongs. The skulls flanking the gate are sun-bleached and cracked, their jaws wired shut with copper wire. Scratch marks on the gate posts show where blades are regularly tested against the wood.@@N
+Column of Striated Stone~
+@@WColumn of Striated Stone@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A massive striated column preserves thermal bands from the Ninth Meridian pulse. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
-D0
+D1
 ~
 ~
-0 0 29964
-D2
+0 -1 29966
+D3
 ~
 ~
-0 0 29966
+0 -1 29964
+D5
+~
+~
+0 -1 29957
 S
 #29966
-@@yRaider Camp Perimeter@@N~
-@@yThe outer ring of the raider camp is a disorganized sprawl of lean-tos, cooking fires, and staked-out hides. The smell of unwashed bodies and roasting meat hangs heavy in the air. Armed figures move between the shelters with the casual menace of career brigands.
-  Scavenged tarps and stolen canvas create a patchwork of shade over rough sleeping areas. Weapons are kept close at hand everywhere, and the camp has the restless energy of barely controlled violence. Dogs gnaw on bones between the tents, and the ever-present sand has worked its way into every surface.@@N
+Gate Undershadow Passage~
+@@WGate Undershadow Passage@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A narrow passage runs under broken superstructure, useful for flank movement and quiet deals. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
-D0
-~
-~
-0 0 29965
 D1
 ~
 ~
-0 0 29968
-D2
-~
-~
-0 0 29969
+0 -1 29967
 D3
 ~
 ~
-0 0 29967
+0 -1 29965
 S
 #29967
-@@ySupply Tent@@N~
-@@yA large canvas tent serves as the warband's supply depot, its interior crammed with crates, barrels, and sacks of plundered goods. Stolen merchant wares are stacked haphazardly alongside weapons, armor, and provisions for the camp.
-  Merchant guild stamps and trade house seals are still visible on many of the stolen crates, identifying their origins from caravan routes across the region. Spilled grain attracts rats and beetles in the darker corners, and the canvas walls billow gently in the desert breeze.@@N
+Crucible Access Ramp~
+@@WCrucible Access Ramp@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The ramp rises toward restricted kiln machinery still feared by caravan veterans. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-8 10
+32 10
 D1
 ~
 ~
-0 0 29966
+0 -1 29968
+D3
+~
+~
+0 -1 29966
 S
 #29968
-@@yWeapon Rack@@N~
-@@yRows of crude wooden racks hold an assortment of weapons in various states of repair. Notched blades, dented maces, and splintered spear shafts are sorted roughly by type. A grinding wheel and anvil nearby show signs of recent use for maintenance.
-  The weapons range from serviceable to barely functional, most showing the nicks and stains of heavy use. A whetstone sits in a bucket of murky water beside the grinding wheel, and metal filings dust the packed sand beneath the anvil. The air smells of iron filings and weapon oil.@@N
+Ember Crucible Intake~
+@@WEmber Crucible Intake@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Intake channels feed residual heat into old regulators and scorch the air with metallic tang. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
+D1
+~
+~
+1 29930 29969
 D3
 ~
 ~
-0 0 29966
+0 -1 29967
 S
 #29969
-@@yCampfire Ring@@N~
-@@yA large fire pit ringed with flat stones serves as the social center of the raider camp. Charred logs and glowing embers fill the pit, and crude log benches surround it. The sand is littered with bone fragments and empty drink skins from nightly revelry.
-  Scorch marks and spilled ash extend well beyond the stone ring, evidence of fires that grew larger than intended during drunken celebrations. Carved tally marks on the log benches keep score of fights and wagers. The embers still glow hot beneath a layer of white ash, ready to be stoked for the evening meal.@@N
+Thermal Valve Gallery~
+@@WThermal Valve Gallery@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Valve housings line the gallery where only keyed crews once adjusted flow and vent priority. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-32 10
-D0
-~
-~
-0 0 29966
+40 11
 D1
 ~
 ~
-0 0 29971
-D2
-~
-~
-0 0 29972
+0 -1 29970
 D3
 ~
 ~
-0 0 29970
+1 29930 29968
 S
 #29970
-@@ySlave Pen@@N~
-@@yA section of the camp has been fenced off with rope and stakes to form a crude holding pen. Iron shackles are bolted to heavy rocks, and the trampled sand is stained with old blood. The miserable conditions speak to the raiders' cruelty.
-  The shackle chains are rusted but strong, attached to boulders too heavy for any bound captive to move. A crude water trough sits empty and crusted with dried algae. The stench of suffering and fear lingers in the trampled sand, and tattered scraps of clothing caught on the rope fence flutter in the hot wind.@@N
+Seal Re-Firing Chamber~
+@@WSeal Re-Firing Chamber@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Re-firing pits and stamp blocks remain arranged for emergency recertification under duress. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
-32 10
+40 11
 D1
 ~
 ~
-0 0 29969
+0 -1 29971
+D3
+~
+~
+0 -1 29969
 S
 #29971
-@@yFighting Pit@@N~
-@@yA circular depression has been dug into the sand and lined with flat stones to form a crude arena. Dark stains cover the pit floor, and spectator benches made from looted wagon boards ring the perimeter. This is where the raiders settle disputes.
-  The pit floor is stained dark with old blood that no amount of sand can fully absorb. Notches carved into the stone rim keep a grim tally of fights and their outcomes. Discarded weapons too damaged to reuse are piled in a corner, and the spectator benches are worn smooth from regular use.@@N
+The Crucible Heart~
+@@WThe Crucible Heart@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. At the core, the Ember Crucible throbs with unstable heat where authority and catastrophe meet. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
+~
+262184 11
+D1
+~
+~
+0 -1 29972
+D3
+~
+~
+0 -1 29970
+D4
+~
+~
+0 -1 29972
+S
+#29972
+Post-Burn Registry~
+@@WPost-Burn Registry@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Registry desks and cooling racks form the final accounting point after crucible operations. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
+~
+40 11
+D1
+~
+~
+0 -1 29973
+D3
+~
+~
+0 -1 29971
+D5
+~
+~
+0 -1 29971
+S
+#29973
+Eastbound Heavy Road Join~
+@@WEastbound Heavy Road Join@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The heavy road joins here, carrying screened convoys toward Saltglass Reach infrastructure. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
+~
+32 10
+D1
+~
+~
+0 -1 29974
+D3
+~
+~
+0 -1 29972
+S
+#29974
+Mafdet Relay Spur~
+@@WMafdet Relay Spur@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A relay spur angles northeast toward Mafdet channels where inland papers meet littoral scrutiny. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
 32 10
 D3
 ~
 ~
-0 0 29969
-S
-#29972
-@@yWar Tent@@N~
-@@yThis large reinforced tent serves as the command center of the raider warband. A sand table displaying a crude map of the surrounding territory dominates the interior, with carved wooden tokens marking targets and patrol routes across the region.
-  The sand table is surprisingly detailed, showing trade routes, oasis locations, and the positions of rival warbands with carved tokens of different colors. Stolen maps and intercepted dispatches are pinned to the tent walls with daggers. A heavy ironbound chest serves as the warlord's field desk, its surface scarred with blade marks.@@N
-~
-8 10
-D0
-~
-~
-0 0 29969
-D1
-~
-~
-0 0 29974
-D2
-~
-~
-0 0 29973
-S
-#29973
-@@RWarlord's Pavilion@@N~
-@@RA lavish pavilion of heavy canvas and stolen silk stands apart from the rest of the camp, its entrance flanked by lit braziers. Looted tapestries hang inside, and a throne cobbled together from broken furniture sits on a raised platform of packed earth.
-  The pavilion is the largest structure in the camp, its canvas reinforced with layers of stolen silk and leather. Trophies from conquered rivals hang from the tent poles, including weapons, banners, and less savory mementos. The cobbled throne is a grotesque masterwork of broken chair legs, smashed table tops, and hammered-flat shield bosses, padded with stolen cushions.@@N
-~
-12 10
-D0
-~
-~
-0 0 29972
-S
-#29974
-@@yTreasure Hoard@@N~
-@@yChests and strongboxes taken from merchant caravans are piled in this guarded corner of the camp. Most have been broken open, their contents sorted and divided. Coins, gemstones, and trade goods spill from overflowing containers.
-  The plunder represents dozens of successful raids, with goods from across the known trade routes piled in careless abundance. Bolts of fine cloth lie in the sand beside sacks of exotic spices and casks of aged wine. The broken locks and splintered lids tell stories of hasty, brutal access. Despite the wealth on display, guards watch it with the jealous vigilance of those who have killed to take it.@@N
-~
-8 10
-D3
-~
-~
-0 0 29972
+0 -1 29973
 S
 #0
 #RESETS
-M 0 29900 2 29900 desert sidewinder in windswept dunes
-G 1 29911 1 scarab amulet
-M 0 29912 2 29901 carrion vulture in shifting sand expanse
-G 1 29916 1 desert hawk earring
-M 0 29901 2 29902 sand scarab at crumbling obelisk
-M 0 29903 2 29903 sunbleached skeleton on sun-baked flats
-G 1 29904 1 weathered bronze scimitar
-M 0 29904 2 29904 desert raider scout at bleached bone field
-G 1 29908 1 serpent fang dagger
-M 0 29912 2 29905 carrion vulture at vulture perch
-M 0 29902 2 29906 dust devil in dry riverbed
-M 0 29913 2 29907 venomous asp at ancient well
-G 1 29918 1 sand-blasted finger ring
-M 0 29905 2 29908 giant scorpion at canyon mouth
-G 1 29905 1 scorpion chitin bracer
-M 0 29915 2 29909 jackal pack leader at sandstone arch
-G 1 29900 1 tattered desert turban
-M 0 29909 2 29910 desert bandit at desert crossroads
-G 1 29901 1 sun-scorched leather vest
-M 0 29900 2 29911 desert sidewinder at oasis
-M 0 29916 2 29912 tomb beetle swarm in palm grove
-M 0 29917 2 29913 cursed archaeologist at merchant ruin
-G 1 29902 1 pair of sandworn boots
-M 0 29906 2 29914 tomb guardian at temple forecourt
-G 1 29915 1 crumbling stone shield
-M 0 29907 2 29915 sand wraith at sphinx gate
-G 1 29906 1 cracked bone necklace
-M 0 29903 2 29916 sunbleached skeleton at cracked colossus
-G 1 29904 1 weathered bronze scimitar
-M 0 29906 3 29918 tomb guardian in temple antechamber
-G 1 29915 1 crumbling stone shield
-M 0 29910 2 29919 mummified priest in pillared hall
-G 1 29903 1 dusty nomad cloak
-M 0 29916 2 29920 tomb beetle swarm in hieroglyph corridor
-M 0 29911 2 29921 sandstone golem in statue gallery
-G 1 29910 1 pair of raider arm guards
-M 0 29906 3 29922 tomb guardian in offering chamber
-G 1 29915 1 crumbling stone shield
-M 0 29907 2 29923 sand wraith in trapped hallway
-G 1 29906 1 cracked bone necklace
-M 0 29910 2 29924 mummified priest in burial alcove
-G 1 29903 1 dusty nomad cloak
-M 0 29911 2 29925 sandstone golem in sarcophagus room
-G 1 29910 1 pair of raider arm guards
-M 0 29918 2 29926 sand elemental in guardian chamber
-G 1 29909 1 sand-caked war belt
-M 0 29917 2 29927 cursed archaeologist in collapsed passage
-G 1 29902 1 pair of sandworn boots
-M 0 29916 2 29928 tomb beetle swarm in flooded chamber
-M 0 29906 3 29929 tomb guardian in mosaic room
-G 1 29915 1 crumbling stone shield
-M 0 29918 2 29930 sand elemental in treasure vault antechamber
-G 1 29909 1 sand-caked war belt
-M 0 29907 2 29931 sand wraith at sacred pool
-G 1 29906 1 cracked bone necklace
-M 0 29910 2 29932 mummified priest in inscription hall
-G 1 29903 1 dusty nomad cloak
-M 0 29906 3 29933 tomb guardian in ritual chamber
-G 1 29915 1 crumbling stone shield
-M 0 29919 2 29934 desert ghoul in pharaoh antechamber
-G 1 29919 1 tomb guardian halberd
-M 0 29920 1 29935 Pharaoh Kha'zuul in throne room
-G 1 29920 1 crown of pharaoh kha'zuul
-G 1 29924 1 pharaoh golden gauntlets
-M 0 29919 2 29938 desert ghoul at catacomb entrance
-G 1 29919 1 tomb guardian halberd
-M 0 29903 2 29939 sunbleached skeleton in bone-lined corridor
-G 1 29904 1 weathered bronze scimitar
-M 0 29916 2 29940 tomb beetle swarm in ossuary
-M 0 29910 2 29941 mummified priest in crypt of the forgotten
-G 1 29903 1 dusty nomad cloak
-M 0 29907 2 29942 sand wraith in embalming chamber
-G 1 29906 1 cracked bone necklace
-M 0 29919 2 29943 desert ghoul in dust-choked passage
-G 1 29919 1 tomb guardian halberd
-M 0 29917 2 29944 cursed archaeologist in chamber of whispers
-G 1 29902 1 pair of sandworn boots
-M 0 29918 2 29945 sand elemental in cursed vault
-G 1 29909 1 sand-caked war belt
-M 0 29919 2 29946 desert ghoul in necromancer workshop
-G 1 29919 1 tomb guardian halberd
-M 0 29911 2 29947 sandstone golem in lich antechamber
-G 1 29910 1 pair of raider arm guards
-M 0 29922 1 29948 Lich Lord Sethari in lich sanctum
-G 1 29922 1 staff of lich lord sethari
-G 1 29926 1 lich shadowed robes
-M 0 29916 2 29949 tomb beetle swarm at collapsed dead end
-M 0 29905 2 29950 giant scorpion at cave entrance
-G 1 29905 1 scorpion chitin bracer
-M 0 29913 2 29951 venomous asp in narrow tunnel
-G 1 29918 1 sand-blasted finger ring
-M 0 29905 2 29952 giant scorpion in chitinous cavern
-G 1 29905 1 scorpion chitin bracer
-M 0 29916 2 29953 tomb beetle swarm in egg chamber
-M 0 29913 2 29954 venomous asp in webbed passage
-G 1 29918 1 sand-blasted finger ring
-M 0 29905 2 29955 giant scorpion in glowing grotto
-G 1 29905 1 scorpion chitin bracer
-M 0 29908 2 29956 dune stalker at molten crack
-G 1 29914 1 jackal hide face wrap
-M 0 29905 2 29957 giant scorpion in scorpion nest
-G 1 29905 1 scorpion chitin bracer
-M 0 29908 2 29958 dune stalker in venomous lair
-G 1 29914 1 jackal hide face wrap
-M 0 29905 2 29959 giant scorpion in brood chamber
-G 1 29905 1 scorpion chitin bracer
-M 0 29918 2 29960 sand elemental in queen antechamber
-G 1 29909 1 sand-caked war belt
-M 0 29921 1 29961 Scorpion Queen in her den
-G 1 29921 1 scorpion queen carapace
-G 1 29925 1 scorpion queen stinger blade
-M 0 29913 2 29962 venomous asp in hidden burrow
-G 1 29918 1 sand-blasted finger ring
-M 0 29904 2 29963 desert raider scout on desert trail
-G 1 29908 1 serpent fang dagger
-M 0 29904 2 29964 desert raider scout at lookout post
-G 1 29908 1 serpent fang dagger
-M 0 29909 2 29965 desert bandit at palisade gate
-G 1 29901 1 sun-scorched leather vest
-M 0 29914 2 29966 desert nomad warrior at camp perimeter
-G 1 29917 1 corroded iron mace
-M 0 29909 2 29967 desert bandit in supply tent
-G 1 29901 1 sun-scorched leather vest
-M 0 29914 2 29968 desert nomad warrior at weapon rack
-G 1 29917 1 corroded iron mace
-M 0 29904 2 29969 desert raider scout at campfire ring
-G 1 29908 1 serpent fang dagger
-M 0 29909 2 29970 desert bandit in slave pen
-G 1 29901 1 sun-scorched leather vest
-M 0 29914 2 29971 desert nomad warrior in fighting pit
-G 1 29917 1 corroded iron mace
-M 0 29914 2 29972 desert nomad warrior in war tent
-G 1 29917 1 corroded iron mace
-M 0 29923 1 29973 Warlord Drahk in his pavilion
-G 1 29923 1 warlord drahk war cleaver
-G 1 29927 1 warlord spiked pauldrons
-M 0 29909 2 29974 desert bandit guarding treasure hoard
-G 1 29901 1 sun-scorched leather vest
-M 0 29924 2 29903 desert hyena on sun-baked flats
-G 1 29928 1 scorched bone ring
-M 0 29925 2 29906 sand viper in dry riverbed
-G 1 29931 1 dried sinew necklace
-M 0 29926 2 29916 scorched zombie at cracked colossus
-G 1 29932 1 bleached hide vest
-M 0 29927 2 29902 dust imp at crumbling obelisk
-G 1 29933 1 threadbare desert sash
-M 0 29928 2 29904 bone collector at bleached bone field
-G 1 29930 1 dusty linen cowl
-M 0 29929 2 29954 tomb spider in webbed passage
-G 1 29935 1 pair of sand spider silk gloves
-M 0 29930 2 29900 desiccated hound in windswept dunes
-G 1 29929 1 sand-crusted anklet
-M 0 29931 2 29930 sandstorm djinn in treasure vault antechamber
-G 1 29937 1 tattered sand wrap
-M 0 29932 2 29966 raider berserker at camp perimeter
-G 1 29941 1 dried scorpion tail whip
-M 0 29933 2 29924 ancient mummy in burial alcove
-G 1 29940 1 pair of tomb raider leg wraps
-M 0 29934 2 29918 petrified sentinel in temple antechamber
-G 1 29939 1 petrified wood shield
-M 0 29935 2 29905 canyon raptor at vulture perch
-G 1 29938 1 desert hawk feather earring
-M 0 29936 2 29955 ember scorpion in glowing grotto
-G 1 29934 1 cracked clay bracer
-M 0 29937 2 29945 sand horror in cursed vault
-G 1 29936 1 bone shard dagger
+M 0 29900 4 29908
+M 0 29900 3 29954
+M 0 29901 3 29910
+M 0 29901 3 29947
+M 0 29902 3 29907
+M 0 29903 3 29917
+M 0 29904 3 29904
+G 0 29944 1
+G 0 29940 1
+M 0 29905 3 29905
+G 0 29925 1
+M 0 29906 3 29913
+G 0 29942 1
+G 0 29937 1
+M 0 29907 3 29939
+G 0 29927 1
+G 0 29934 1
+M 0 29908 4 29933
+G 0 29942 1
+M 0 29909 3 29932
+G 0 29943 1
+M 0 29910 3 29938
+G 0 29928 1
+M 0 29911 3 29940
+G 0 29935 1
+M 0 29912 3 29901
+M 0 29913 3 29903
+G 0 29931 1
+M 0 29914 3 29916
+G 0 29941 1
+M 0 29915 3 29934
+M 0 29916 3 29937
+M 0 29917 3 29918
+G 0 29945 1
+M 0 29918 4 29924
+G 0 29948 1
+M 0 29919 3 29921
+G 0 29928 1
+M 0 29920 2 29925
+G 0 29934 1
+G 0 29926 1
+M 0 29921 3 29929
+G 0 29939 1
+G 0 29930 1
+M 0 29922 3 29953
+G 0 29945 1
+M 0 29922 3 29967
+G 0 29936 1
+G 0 29947 1
+M 0 29923 2 29960
+G 0 29947 1
+G 0 29946 1
+M 0 29924 1 29971
+G 0 29949 1
+O 0 29929 1 29923
+O 0 29930 1 29967
+O 0 29926 1 29918
+O 0 29927 1 29924
+O 0 29931 1 29962
+O 0 29932 1 29948
+O 0 29933 1 29906
+O 0 29938 1 29946
+O 0 29946 1 29965
+D 0 29924 1 2
+D 0 29925 3 2
+D 0 29968 1 2
+D 0 29969 3 2
+S
+#SPECIALS
+M 29904 spec_ss_kiln_overseer
+M 29905 spec_ss_manifest_warden
+M 29906 spec_ss_cinder_broker
+M 29907 spec_ss_cinder_broker
+M 29912 spec_ss_kiln_overseer
+M 29913 spec_ss_manifest_warden
+M 29914 spec_ss_cinder_broker
+M 29922 spec_ss_manifest_warden
+M 29923 spec_ss_manifest_warden
 S
 #$

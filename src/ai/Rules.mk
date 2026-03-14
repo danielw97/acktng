@@ -34,7 +34,9 @@ AI_SPEC_SRCS = \
 	  ai/spec_pyramid_black_sun_shard.o \
 	  ai/spec_keep_elemental_captain.o \
 	  ai/spec_hermit_archon.o \
-	  ai/spec_sanctum_keeper.o
+	  ai/spec_sanctum_keeper.o \
+	  ai/spec_ss_cinder_broker.o ai/spec_ss_manifest_warden.o \
+	  ai/spec_ss_kiln_overseer.o
 
 AI_SUMMON_SRCS = ai/spec_summon_water.o ai/spec_summon_fire.o ai/spec_summon_earth.o \
 	  ai/spec_summon_undead.o ai/spec_summon_holy.o ai/spec_summon_shadow.o \
