@@ -3618,3 +3618,930 @@ The Tide Ledger QLC specialist bridges the commercial archive function and the Q
 l 100 14267 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
 #0
+#OBJECTS
+* Weapon shop inventory (14200-14215)
+#14200
+reach road caravan knife~
+a reach road caravan knife~
+A serviceable caravan knife with a reach-road-worn handle lies here.~
+5 0 8421376 1
+0 0 0 2 0 0 0 0 0 0
+6
+L
+55
+#14201
+tidemouth trail machete~
+a tidemouth trail machete~
+A wide-bladed trail machete for cutting through Tidemouth brackish brush lies here.~
+5 0 8421376 1
+0 0 0 3 0 0 0 0 0 0
+7
+L
+55
+#14202
+carters way shortsword~
+a Carter's Way shortsword~
+A short straight blade favored by caravan guards on the Carter's Way route lies here.~
+5 0 8421376 1
+0 0 0 1 0 0 0 0 0 0
+7
+L
+60
+#14203
+glasswalk guide staff~
+a Glasswalk Guide's staff~
+A hardened salt-tamarisk staff used by Glasswalk Guides to test ground firmness lies here.~
+5 0 8421376 1
+0 0 0 7 0 0 0 0 0 0
+6
+L
+60
+#14204
+harness hook flail~
+a harness-hook flail~
+A flail made from a weighted harness hook, commonly improvised by caravan workers, lies here.~
+5 0 8421376 1
+0 0 0 7 0 0 0 0 0 0
+8
+L
+65
+#14205
+salt-crusted cutlass~
+a salt-crusted cutlass~
+A cutlass whose edge has been reground past the salt-crust corrosion lies here.~
+5 0 8421376 1
+0 0 0 1 0 0 0 0 0 0
+7
+L
+65
+#14206
+harbor loading gaff~
+a harbor loading gaff~
+A long-handled cargo gaff with a reinforced iron hook lies here.~
+5 0 8421376 1
+0 0 0 11 0 0 0 0 0 0
+8
+L
+70
+#14207
+shoreward assessors mace~
+a Shoreward assessor's mace~
+A bronze-headed mace bearing Saltweight calibration marks on the handle lies here.~
+5 0 8421376 1
+0 0 0 7 0 0 0 0 0 0
+11
+L
+70
+#14208
+cairn scavenger pry blade~
+a cairn scavenger's pry blade~
+A flat-tipped blade ground for prying cairn-station seal bolts lies here.~
+5 0 8421376 1
+0 0 0 2 0 0 0 0 0 0
+7
+L
+75
+#14209
+quay concord boarding axe~
+a Quay Concord boarding axe~
+A short boarding axe bearing the Quay Concord's rope-and-anchor stamp lies here.~
+5 0 8421376 1
+0 0 0 3 0 0 0 0 0 0
+9
+L
+75
+#14210
+red sand enforcer rapier~
+a Red Sand enforcer's rapier~
+A slim commercial-enforcement rapier with the Red Sand Accounts' debt-seal etched on the guard lies here.~
+5 0 8421376 1
+0 0 0 2 0 0 0 0 0 0
+6
+L
+75
+#14211
+warden patrol halberd~
+a Warden patrol halberd~
+A tall pole-weapon combining axe blade and rear spike issued to Harbor Warden patrol details lies here.~
+5 2147483648 8421376 1
+0 0 0 3 0 0 0 0 0 0
+9
+L
+80
+#14212
+breakwater watch trident~
+a Breakwater Watch trident~
+A three-pronged breakwater-watch trident with a weighted end for harbor-floor recovery lies here.~
+5 2147483648 8421376 1
+0 0 0 11 0 0 0 0 0 0
+9
+L
+80
+#14213
+strandline compact pike~
+a Strandline Compact pike~
+A long-hafted enforcement pike bearing the Strandline Compact's dual-seal emblem on the crossguard lies here.~
+5 2147483648 8421376 1
+0 0 0 11 0 0 0 0 0 0
+10
+L
+80
+#14214
+tide ledger seal hammer~
+a Tide Ledger seal hammer~
+A heavy embossing hammer used to stamp Tide Ledger certification seals, repurposed as a weapon, lies here.~
+5 0 8421376 1
+0 0 0 7 0 0 0 0 0 0
+12
+L
+80
+#14215
+ironwright masterwork falchion~
+an Ironwright's masterwork falchion~
+A heavy curved blade ground to the Ironwright's most demanding standard lies here.~
+5 0 8421376 1
+0 0 0 1 0 0 0 0 0 0
+8
+L
+80
+* Armor shop inventory (14216-14231)
+#14216
+glasswalk chitin sandals~
+glasswalk chitin sandals~
+A pair of sandals with chitin-and-resin soles designed to distribute weight on salt crust lies here.~
+9 0 10485760 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+55
+#14217
+tidemouth salt-leather vest~
+a Tidemouth salt-leather vest~
+A stiff-cured leather vest treated against salt-spray corrosion lies here.~
+9 0 8650752 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+55
+#14218
+carters dust-guard cloak~
+a Carter's dust-guard cloak~
+A layered traveling cloak designed to keep Reach dust from clogging weapons and equipment lies here.~
+9 0 8454144 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+60
+#14219
+reach warden patrol bracers~
+Reach Warden patrol bracers~
+A matched pair of patrol bracers bearing faded Reach Warden certification marks lies here.~
+9 0 8390656 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+60
+#14220
+sand-sea guild travel helm~
+a Sand-Sea Guild travel helm~
+A sturdy composite helm bearing the Sand-Sea Carter's Guild waystation-route emblem lies here.~
+9 0 8388616 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+65
+#14221
+tar-sealed harbor coat~
+a tar-sealed harbor coat~
+A heavy sea-coat with seams sealed against harbor spray in the traditional tar-and-wax method lies here.~
+9 0 8454144 1
+0 0 0 0 0 0 0 0 0 0
+10
+L
+65
+#14222
+shoreward conversion buckler~
+a Shoreward conversion buckler~
+A small round buckler with a Shoreward conversion chart inscribed on the inner face lies here.~
+9 268435456 8421376 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+70
+#14223
+assessment yard scale vest~
+an Assessment Yard scale vest~
+A scale-reinforced vest issued to Saltweight assessment yard staff who handle contested cargo lies here.~
+9 0 8650752 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+70
+#14224
+storm ledger iron greaves~
+Storm Ledger iron greaves~
+Heavy iron greaves bearing Storm Ledger escrow-authority stamps on the knee plates lie here.~
+9 0 9437184 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+75
+#14225
+quay concord bosun shield~
+a Quay Concord bosun shield~
+A reinforced harbor-work shield bearing the Quay Concord's chain-and-anchor device lies here.~
+9 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+75
+#14226
+harbor warden half-plate~
+Harbor Warden half-plate~
+A half-plate harness in Harbor Warden livery with storm-brightened salt finish lies here.~
+9 0 8650752 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+75
+#14227
+quarantine handlers gauntlets~
+Quarantine Handler's gauntlets~
+Heavy containment gauntlets rated for Class Two relic handling lie here.~
+9 0 8392704 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+80
+#14228
+tidewall barnacle-plate boots~
+Tidewall barnacle-plate boots~
+Boots reinforced with barnacle-plate panels for stable footing on algae-covered sea walls lie here.~
+9 0 10485760 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+80
+#14229
+compact authority kite shield~
+a Compact Authority kite shield~
+A tall kite shield bearing the Strandline Compact's full bilateral seal in enamel on the face lies here.~
+9 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+15
+L
+80
+#14230
+breakwater watch gorget~
+a Breakwater Watch gorget~
+A reinforced gorget issued to breakwater watch personnel for weather and impact protection lies here.~
+9 0 8388736 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+80
+#14231
+shoreward armorer masterwork cuirass~
+a Shoreward Armorer's masterwork cuirass~
+A masterwork breastplate representing the Shoreward Armory's best construction with full salt-resistance treatment lies here.~
+9 0 8650752 1
+0 0 0 0 0 0 0 0 0 0
+15
+L
+80
+* General shop inventory (14232-14249)
+#14232
+salt-dried trail rations~
+salt-dried trail rations~
+A packet of salt-dried trail rations wrapped in waxed sailcloth lies here.~
+19 0 8388608 1
+8 0 0 0 0 0 0 0 0 0
+1
+L
+55
+#14233
+reach road waterskin~
+a reach road waterskin~
+A heavy-stitched waterskin treated inside with salt-tamarisk resin lies here.~
+17 0 8388608 1
+5 5 0 0 0 0 0 0 0 0
+1
+L
+55
+#14234
+glasswalk shoe repair kit~
+a Glasswalk shoe repair kit~
+A compact kit containing chitin-sole patches and contact resin for field repairs lies here.~
+8 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+60
+#14235
+tidemouth crab-gut rope coil~
+a tidemouth crab-gut rope coil~
+A coil of rope braided from tidemouth crab gut, known for salt-resistance, lies here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+60
+#14236
+cairn station chalk bundle~
+a cairn station chalk bundle~
+A bundle of marking chalk used for cairn-station trail notation lies here.~
+8 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+65
+#14237
+carters signal whistle~
+a Carter's signal whistle~
+A hardwood signal whistle in the Sand-Sea Carter's Guild standard pitch lies here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+65
+#14238
+harbor-grade lantern oil~
+a flask of harbor-grade lantern oil~
+A sealed flask of slow-burn lantern oil rated for harbor weather conditions lies here.~
+8 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+65
+#14239
+ledger wax seal kit~
+a Ledger wax seal kit~
+A flat case containing colored sealing wax and the blank-face tool for applying Ledger Quarter certifications lies here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+70
+#14240
+shoreward table reference card~
+a Shoreward Table reference card~
+A laminated card engraved with the standard Shoreward conversion ratios for the current season lies here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+70
+#14241
+quarantine containment pouch~
+a Quarantine containment pouch~
+A drawstring pouch lined with bitumen-treated canvas for transporting Class One hazard materials lies here.~
+8 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+70
+#14242
+storm escrow receipt case~
+a Storm escrow receipt case~
+A wax-sealed document case carrying Storm Ledger escrow confirmation receipts lies here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+75
+#14243
+saltweight calibration token~
+a Saltweight calibration token~
+A bronze disc bearing the official Saltweight standard mass markings lies here.~
+8 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+75
+#14244
+harbor chain grease pot~
+a harbor chain grease pot~
+A sealed pot of heavy grease formulated for the harbor chain's iron links lies here.~
+8 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+75
+#14245
+draft-depth sounding line~
+a draft-depth sounding line~
+A calibrated sounding line for measuring harbor depth at berth approach positions lies here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+80
+#14246
+signal tower lens cloth~
+a signal tower lens cloth~
+A treated polishing cloth for the signal tower's colored glass signal panels lies here.~
+8 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+80
+#14247
+strand folk navigation chart~
+a Strand Folk navigation chart~
+A handwritten navigation chart using Strand Folk coastal notation lies here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+80
+#14248
+compact authority travel pass~
+a Compact Authority travel pass~
+A sealed document authorizing the holder to transit Mafdet's jurisdiction without standard inspection delays lies here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+80
+#14249
+reach provisions field pack~
+a Reach Provisions field pack~
+A fully stocked field pack loaded with standard Glasswalk expedition supplies lies here.~
+8 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+80
+* Magic shop inventory (14250-14265)
+#14250
+littoral branch inscription ink~
+Littoral Branch inscription ink~
+A sealed vial of ink formulated for inscribing Littoral Branch notation on stone and clay tablets lies here.~
+8 64 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+55
+#14251
+tidal measure chalk stick~
+a tidal measure chalk stick~
+A precisely calibrated chalk stick used in tidal measurement notation lies here.~
+8 64 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+55
+#14252
+glasswind shard focus~
+a Glasswind shard focus~
+A faceted glass fragment from the Glasswind Belts, polished as a focusing element for arcane work, lies here.~
+8 64 8421376 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+60
+#14253
+keeper-era barometric vial~
+a Keeper-Era barometric vial~
+A sealed glass vial from the Keeper period, still maintaining pressure-differential readings, lies here.~
+8 64 8421376 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+60
+#14254
+shoreward conversion scroll~
+a Shoreward conversion scroll~
+A scroll inscribed with the standard conversion formulas for inland-maritime legal translation lies here.~
+2 64 8388608 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+65
+#14255
+quarantine detection charm~
+a Quarantine detection charm~
+A small ward-object that resonates in the presence of uncontained relic-class emanations lies here.~
+8 64 8421376 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+65
+#14256
+tide obelisk glyph rubbing~
+a Tide Obelisk glyph rubbing~
+A rubbing taken from a Tide Obelisk face, capturing navigational glyph sequences in charcoal on rice paper, lies here.~
+8 64 8421376 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+70
+#14257
+storm warning rune stone~
+a storm warning rune stone~
+A basalt tablet inscribed with the harbor-standard storm warning rune sequence lies here.~
+8 64 8421376 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+70
+#14258
+hazard scribe assessment lens~
+a Hazard Scribe's assessment lens~
+A magnifying lens in a brass frame calibrated for Quarantine-class containment evaluation lies here.~
+8 64 8421376 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+75
+#14259
+containment class seal ring~
+a containment class seal ring~
+A stamping ring engraved with the Quarantine Ledger's class certification seal lies here.~
+9 64 8396800 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+75
+#14260
+littoral branch translation folio~
+a Littoral Branch translation folio~
+A bound folio of transcribed Littoral Branch administrative notation with cross-reference to current Compact law lies here.~
+8 64 8421376 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+75
+#14261
+eclipse-ward talisman~
+an Eclipse-Ward talisman~
+A neck-pendant made from eclipse-tide shell, traditionally worn as protection against Synod influence, lies here.~
+9 64 8388736 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+80
+#14262
+measure script decryption tablet~
+a Measure Script decryption tablet~
+A clay tablet inscribed with the current decryption key for the Quarantine Ledger's Measure Script encoding lies here.~
+8 64 8421376 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+80
+#14263
+quarantine vault nullification rod~
+a Quarantine Vault nullification rod~
+A staff-length instrument used to suppress contained relic emanations during transport lies here.~
+4 64 8421376 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+80
+#14264
+synod-trace detection crystal~
+a Synod-trace detection crystal~
+A grown crystal matrix that darkens in the presence of Synod ritual residue lies here.~
+8 64 8421376 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+80
+#14265
+hazard registry reference scroll~
+a Hazard Registry reference scroll~
+A scroll carrying the current Quarantine Ledger hazard registry as of the last filing cycle lies here.~
+2 64 8388608 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+80
+* Key objects (14266-14268)
+#14266
+storm ledger vault key~
+the Storm Ledger Vault key~
+A heavy iron key with the Storm Ledger's bonded escrow seal etched into the bow lies here.~
+18 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+#14267
+archive passage key~
+the Archive Passage key~
+A slender bronze key bearing the Tide Ledger's dual-archive authorization mark lies here.~
+18 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+#14268
+iron undercroft grate key~
+the iron undercroft grate key~
+A heavy iron key designed for the sealed grate separating the upper undercroft from the deep passages lies here.~
+18 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+* Boss drop items (14269-14273)
+#14269
+quarantine abomination containment shard~
+the Quarantine Abomination's containment shard~
+A fragment of the shattered containment matrix pulses with the Abomination's residual administrative force.~
+5 201326592 8421376 1
+0 0 0 6 0 0 0 0 0 0
+3
+L
+70
+#14270
+eclipsed tongue stave hierophant~
+the Hierophant's Eclipsed Tongue Stave~
+A ritual stave carved with Eclipsed Tongues faction glyphs and bound in smuggler's chain lies here.~
+5 2348810240 8421376 1
+0 0 0 7 0 0 0 0 0 0
+3
+L
+76
+#14271
+strandline compact signet ring~
+the Strandline Compact signet ring~
+A broad silver signet ring bearing the full Strandline Compact bilateral seal lies here.~
+9 201326592 8396800 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+76
+#14272
+mafdets claw~
+Mafdet's Claw~
+A luminous feline claw rendered in guardian-blessed bronze, still warm to the touch, lies here.~
+5 201326592 8421376 1
+0 0 0 5 0 0 0 0 0 0
+5
+L
+80
+#14273
+relic shoreward seal~
+the Relic of the Shoreward Seal~
+A basalt fragment inscribed with the dual-jurisdiction text of the Shoreward Seal in both inland charter notation and maritime loading script lies here.~
+8 201326592 8421376 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+80
+* Scatter and loot items (14274-14299)
+#14274
+glasswalk shoes~
+glasswalk shoes~
+A worn pair of Glasswalk shoes with chitin-reinforced soles lies here.~
+9 67108864 10485760 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+55
+#14275
+tidemouth crab shell fragment~
+a tidemouth crab shell fragment~
+A thick plate of tidemouth crab shell, still retaining its salt-deposit banding, lies here.~
+8 67108864 8388608 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+56
+#14276
+scavenger pry bar~
+a scavenger's pry bar~
+A flat iron pry bar ground for extracting cairn-station seal bolts lies here.~
+5 67108864 8421376 1
+0 0 0 2 0 0 0 0 0 0
+8
+L
+60
+#14277
+shattered cairn tablet~
+a shattered cairn tablet fragment~
+A broken fragment of a cairn-station inscription tablet lies here.~
+8 67108864 8388608 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+55
+E
+cairn tablet inscription~
+The surviving text reads in Survey-Administrative voice: "Waystation Levy Schedule — Category: Bonded Cargo — Rate: one part in forty of declared manifest value, payable at eastern terminus. Exemptions: Guild-sealed shipments with valid cairn-station counter-certification."
+~
+#14278
+salt-crusted waterskin~
+a salt-crusted waterskin~
+A waterskin sealed with salt crystal deposits from extended desert use lies here.~
+17 67108864 8388608 1
+5 5 0 0 0 0 0 0 0 0
+1
+L
+55
+#14279
+red sand debt instrument~
+a Red Sand debt instrument~
+A folded commercial document bearing the Red Sand Accounts' enforcement seal lies here.~
+8 67108864 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+62
+E
+debt instrument text~
+The document reads in Legal-Commercial voice: "Conditional Cargo Assignment — the undersigned acknowledges that failure to tender the listed security will trigger immediate conversion of pledged goods to Red Sand Accounts ownership under Compact Ordinance Seven, Section Fourteen, Subsection Three."
+~
+#14280
+reach warden transit seal~
+a Reach Warden transit seal~
+A clay disc bearing a Reach Warden's certification stamp, authorizing transit through a specific approach zone, lies here.~
+8 67108864 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+60
+#14281
+beach jackal pelt~
+a beach jackal pelt~
+A lean beach jackal pelt with characteristic dune-coloring lies here.~
+8 67108864 8388608 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+55
+#14282
+saltweight bronze reference measure~
+a Saltweight bronze reference measure~
+A calibration disc in the Saltweight standard used to verify commercial scales throughout the corridor lies here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+65
+E
+calibration marks~
+The disc's edge is inscribed: "Reference Mass: One Saltweight Standard. Verified under Great Oasis Measure. Tamper evidence: sealed in bitumen lacquer. Reissue voids prior certificates."
+~
+#14283
+shoreward table stone fragment~
+a Shoreward Table stone fragment~
+A fragment of the carved stone conversion chart found in assessment courts throughout the corridor lies here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+65
+E
+table inscription~
+The surviving text reads in Legal-Commercial voice: "Inland-Maritime Conversion: One Reach Rod equals three Compact Fathoms for depth purposes; one Saltweight Unit equals two Maritime Measures for mass purposes. Disputes to Shoreward House within seven days of assessment."
+~
+#14284
+ledger house wax seal stamp~
+a Ledger House wax seal stamp~
+A brass stamp with a blank-face insert for attaching Ledger House certification marks to documents lies here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+50
+#14285
+harbor warden enforcement cudgel~
+a Harbor Warden's enforcement cudgel~
+A weighted truncheon in Harbor Warden livery colors lies here.~
+5 67108864 8421376 1
+0 0 0 7 0 0 0 0 0 0
+11
+L
+120
+#14286
+storm ledger escrow token~
+a Storm Ledger escrow token~
+A brass disc bearing a Storm Ledger bonded-escrow confirmation number lies here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+70
+#14287
+quarantine ledger hazard tag~
+a Quarantine Ledger hazard tag~
+A clay tag stamped with a Quarantine classification mark, indicating the containment class of associated cargo, lies here.~
+8 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+65
+#14288
+sand-sea carters harness kit~
+a Sand-Sea Carter's harness kit~
+A maintenance kit for guild-standard draft animal harnesses lies here.~
+8 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+42
+#14289
+draft-depth marker rod~
+a draft-depth marker rod~
+A slender iron rod bearing Littoral Branch depth notation, used to measure clearance in shallow berths, lies here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+65
+#14290
+harbor chain link~
+a harbor chain link~
+A massive iron link from the harbor entry chain, inscribed with Littoral Branch weather glyphs, lies here.~
+8 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+60
+E
+chain glyphs~
+The glyph sequence reads in Strand Folk-Oral voice: "This link holds the harbor. When the chain is up, the harbor sleeps. When the chain is down, the harbor wakes. The chain has held through seventeen storm seasons."
+~
+#14291
+signal tower lantern glass~
+a signal tower lantern glass~
+A thick disc of colored glass from the signal tower's directional lantern array lies here.~
+8 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+60
+#14292
+captains register entry scroll~
+a Captain's Register entry scroll~
+A wax-sealed scroll recording a vessel's entry in the Quay Concord's Captain's Register lies here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+65
+#14293
+dock workers cargo hook~
+a dock worker's cargo hook~
+A heavy iron cargo hook with a hickory handle, stained with years of loading work, lies here.~
+5 67108864 8421376 1
+0 0 0 11 0 0 0 0 0 0
+8
+L
+62
+#14294
+caulking resin block~
+a caulking resin block~
+A block of dark marine caulking resin used to seal hull and pier planking joints lies here.~
+8 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+60
+#14295
+swift court verdict tablet~
+a Swift Court verdict tablet~
+A wax-sealed clay tablet bearing a recorded verdict of the Swift Court of the First Claw lies here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+72
+E
+verdict text~
+The tablet reads in Guardian-Judicial voice: "Verdict issued under the authority of the First Claw: the claimed obligation is found to exceed what oath permits. The excess is voided. The claimant is bound by the original sworn terms. Recorded by the Shrine adjudicator, witnessed by two claw-marked officers."
+~
+#14296
+claw-marked oath stone~
+a claw-marked oath stone~
+A smooth basalt river-stone bearing four parallel claw marks, the standard form of an oath seal, lies here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+72
+#14297
+synod ritual mask~
+a Synod ritual mask~
+A leather mask painted with the Eclipsed Tongues faction's solar-occlusion emblem lies here.~
+9 67108864 8388624 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+68
+#14298
+eclipsed tongue amulet~
+an Eclipsed Tongue amulet~
+A neck-pendant made from a glass shard from the Glasswind Belts, ground into a tongue-shape and strung on smuggler's cord, lies here.~
+9 67108864 8388736 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+68
+#14299
+funerary ritual component~
+a funerary ritual component~
+A wrapped bundle containing relic-class funerary materials that the Synod is transporting through the undercroft, still sealed in its containment wrapping, lies here.~
+8 67108864 8388608 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+70
+#0
