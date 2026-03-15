@@ -2684,6 +2684,27 @@ numbers, their @@Kcollective bite@@D draining vital energy.@@N
 + 0 0 0 0 0 0 0 0 0
 l 100 1436 1433 0 0 0 0 0 0 0 
 L 50 50 0 0 0 0 0 0 0 
+#1429
+vampire spawn~
+@@Ra vampire spawn@@N~
+@@RA vampire spawn@@D clings to the ceiling with @@Kunnatural ease@@D, eyes like red coals.@@N
+
+~
+@@DA recently-turned vampire still learning its new capabilities - which means it
+
+is @@Runpredictable and dangerous@@D. It combines the physical power of undeath
+
+with incipient magical ability.@@N
+
+~
+16481 524800 -1000 S
+52 1
+0 -70 12 13
+! 0 0 0 7 60238 12 0
+| 0 0 0 0 0 0 0
++ 30 0 0 0 0 0 0 0 0
+l 100 1407 1430 0 0 0 0 0 0 0 
+L 50 50 0 0 0 0 0 0 0 
 #1430
 crypt spider~
 @@Ra crypt spider@@N~
@@ -2934,6 +2955,33 @@ with terrifying effect.@@N
 + 60 0 0 0 0 0 0 0 0
 l 100 1462 1485 0 0 0 0 0 0 0 
 L 50 50 0 0 0 0 0 0 0 
+#1442
+SERAPHINE THE CRIMSON COUNTESS vampire~
+@@KSeraphine the Crimson Countess@@N~
+@@KSeraphine the Crimson Countess@@R reclines languidly, regarding you with @@Kamused contempt@@D.@@N
+
+~
+@@DSeraphine the Crimson Countess is a vampire of vast age and terrible beauty.
+
+She ruled Shadowmere's keep long before Valzareth's ascension and remains
+
+here by @@Rterms of a compact@@D not widely understood. Her power is almost entirely
+
+magical - she casts with @@Kblinding speed and ruinous effect@@D, and her
+
+charisma is a weapon in itself. @@RHer eyes are deep red@@D, her smile @@Kknows
+
+something you do not@@D.@@N
+
+~
+16403 524800 -1000 S
+65 2
+20000 -150 0 0
+! 0 0 0 7 0 1573760 2
+| 0 0 0 0 0 0 0
++ 180 0 0 0 0 0 0 0 0
+l 2 1542 1543 0 0 0 0 0 0 0 
+L 50 90 0 0 0 0 0 0 0 
 #1443
 MORDECHAI THE BONEWARDEN undead champion~
 @@KMordechai the Bonewarden@@N~
@@ -3151,6 +3199,27 @@ overwheling prey before it can respond.@@N
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 1402 1425 0 0 0 0 0 0 0 
+L 50 50 0 0 0 0 0 0 0 
+#1453
+vampire lord~
+@@Ra vampire lord@@N~
+@@RA vampire lord@@D regards you with @@Kreign in its eyes@@D.@@N
+
+~
+@@DAnother of Seraphine's get, the vampire lord has achieved enough power to
+
+act independently. It combines @@Rphysical vampiric might@@D with a
+
+comprehensive suite of @@Kdark magic@@D, making it dangerous at any range.@@N
+
+~
+16481 524800 -1000 S
+58 1
+0 -80 13 14
+! 0 0 0 7 60238 65616 0
+| 0 0 0 0 0 0 0
++ 55 0 0 0 0 0 0 0 0
+l 100 1461 1494 0 0 0 0 0 0 0 
 L 50 50 0 0 0 0 0 0 0 
 #1454
 grave knight~
@@ -6316,7 +6385,9 @@ M 0 1428 3 1432 shadow bat swarm
 
 M 0 1428 3 1472 shadow bat swarm
 
+M 0 1429 2 1443 vampire spawn
 
+M 0 1429 2 1444 vampire spawn
 
 M 0 1430 2 1432 crypt spider
 
@@ -6358,6 +6429,11 @@ E 0 1515 0 4 elite helm
 
 M 0 1441 1 1465 void stalker
 
+M 0 1442 1 1443 SERAPHINE
+
+E 0 1540 0 26 countess gown
+
+E 0 1546 0 4 pale crown
 
 M 0 1443 1 1411 MORDECHAI
 
@@ -6403,7 +6479,9 @@ M 0 1452 3 1431 catacomb crawler
 
 M 0 1452 3 1433 catacomb crawler
 
+M 0 1453 2 1443 vampire lord
 
+M 0 1453 2 1444 vampire lord
 
 M 0 1454 2 1498 grave knight
 
