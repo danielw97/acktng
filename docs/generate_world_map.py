@@ -1290,7 +1290,7 @@ label(ax, 164,38,  'SCORCHING\nSANDS', size=6.5, col='#7A3010', style='italic', 
 label(ax, 178,68,  'SALTGLASS\nREACH', size=6.5, col='#585040', style='italic', weight='bold', rot=-12)
 label(ax, 222,90,  'THE GLEAMING\nEASTERN SEA', size=8.5,
       col=SEA_MID, style='italic', weight='bold', rot=-90)
-label(ax, 132,173, 'NORTHERN REACH', size=7.5, col=SEA_DEEP, style='italic', weight='bold')
+label(ax, 178,170, 'NORTHERN REACH', size=7.5, col=SEA_DEEP, style='italic', weight='bold')
 label(ax, 34,128,  'VERDANT DEPTHS', size=6.5, col=FOREST_DARK, style='italic', weight='bold')
 label(ax, 116,130, 'WITHERED\nDEPTHS', size=6.5, col='#504030', style='italic', weight='bold',
       outline_col=PARCH_LT)
