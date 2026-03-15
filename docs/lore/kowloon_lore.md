@@ -133,3 +133,15 @@ The annexation refusals by Midgaard (Southmark Petition, Ash Plea, Iron Compact 
 - **Witness interoperability:** Kiess clerks are increasingly embedded in Kowloon-Rakuen grain audits to reduce post-crisis legitimacy disputes.
 
 Public-facing lore should frame Kowloon pragmatism as neither sentimental nor punitive: the city feeds Rakuen because corridor collapse in the south destabilizes northern commodity legality in the next season.
+
+## Cinderteeth Cross-Reference
+
+Kowloon's founding trauma, civic mythology, and ongoing security tensions all trace back to the Cinderteeth Mountains:
+- The **Ashfall Monsoon** is a Cinderteeth volcanic event — three years of sustained low-level venting that loaded coastal weather systems with volcanic particulates until the delta's weather became volcanic weather.
+- The **Neon Covenant's** constitutional structures (forty-pound jade seal, tribunal triplicates, the Ashfall Vigil) are disaster-prevention architecture designed specifically to prevent institutional failure during a repeat Cinderteeth event.
+- The **CLO sealed mountain expedition registry** bearing jade Magistracy seals is Kowloon's hidden Conclave-era shame — evidence that the city sent sanctioned recovery teams to the Cinderteeth and suppressed the results.
+- The **Ash Cult cells** in Kowloon are a direct consequence of Cinderteeth geology: displaced Ventspeaker-adjacent communities who migrated into Kowloon after the Ashfall, carrying mountain theological vocabulary translated into urban cell structure.
+- The **Ember Speaker crystal fragment** claim — if the fragment is a functional Bellspine anchor piece — represents a Cinderteeth Conclave artifact in Kowloon's religious underground, with implications for both containment and leverage.
+- The current **exhalation phase** is being tracked by both Kowloon's Wardens of Iron dispatch network and the Jade Magistracy's engineering delegation, with concern that the venting rate pattern resembles pre-Ashfall activity. The comparison has not been published.
+
+For full Cinderteeth institutional history including the Ventspeakers, the Spirebound Conclave, the Conclave Transfer Chain, and the Ash Cult's doctrinal lineage, see: `docs/lore/cinderteeth_mountains_lore.md`.

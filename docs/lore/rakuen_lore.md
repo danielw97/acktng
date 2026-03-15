@@ -705,6 +705,13 @@ Rakuen's key five-city interaction channels:
 - Eccentric Woodland (Rakuen access corridor): `docs/lore/eccentric_woodland_lore.md`
 - Sepulchur Pasture (casualty registry / deferred-name protocols): `docs/lore/sepulchur_pasture_lore.md`
 - Conclave fallout context: `docs/lore/withered_depths_lore.md`, `docs/lore/sunken_sanctum_lore.md`
+- Cinderteeth institutional history (source of Ashfall Monsoons, Ash-and-Iron disruptions, Conclave Transfer Chain, Ash Cult theology): `docs/lore/cinderteeth_mountains_lore.md`
+
+**Cinderteeth-specific Rakuen connections:**
+- The Ashfall Monsoon and second Cinderteeth eruption wave are the primary drivers of Rakuen's chronic emergency identity and the first two annexation petitions.
+- The **Garden Ledger** holds testimony fragments from persons transferred to the Cinderteeth Conclave from Rakuen's founding population zone — making the Garden Ledger the human-cost dimension of the Conclave Transfer Chain. Current Rakuen advocacy groups are developing legal arguments (using Kiess's anti-sealed-warrant doctrine) to activate these testimonies as the basis for successor-institution liability claims against Midgaard and Kowloon.
+- The Ash Cult's **Witness Doctrine** cells in Rakuen are specifically rooted in the city's genuine historical experience of being exported social risk by Midgaard: "the mountain remembers what Midgaard forgot" encodes the Garden Ledger claim. These cells are tolerated as politically useful critics; the Bloom Council does not endorse their theology but declines to suppress their institutional critique.
+- The phrase "mountain-tongue born" in older Rakuen records (used to describe certain early caravan guides) indicates Ventspeaker-adjacent cultural background — persons from Ridgekin highland communities who preserved mountain pattern-recognition knowledge. Several early Rakuen supply routes were established with the assistance of mountain-tongue guides whose route knowledge was never formally archived.
 
 
 
