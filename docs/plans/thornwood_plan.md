@@ -831,3 +831,173 @@ Storage for completed large-scale constructs — the finished marrow fiends and 
 The boundary between the ossuary undercroft and the cave system below — where cut stone gives way to natural limestone and the substrate's geological layer becomes physically accessible. The threshold is marked by a change in construction: the undercroft's mortared stonework ends at a ragged line, and the cave's natural formation begins without a designed transition. Someone has added carved marks at the transition — not the estate's administrative notation, not the Root Covenant's contract script, but the same pre-linguistic pressed handprint in ochre that appears at the grave tunnel hinge, the gravewood threshold, and the cave system's interior. The substrate marked its own boundary.
 - Exits: `west` → 1248 (Marrow Fiend Vault), `down` → 1250 (Zone VII: Cave Mouth)
 
+---
+
+### Zone VII: Cave System and Substrate Core (1250–1270) — 21 Rooms
+
+The deepest layer. Substrate logic is total here. Lord Harren's authority does not reach below the undercroft; the Lich's authority is absolute. The crystal formation, the handprint cave, the high ledge, and the sealed chamber are the architectural heart of what Thornwood actually is. Threat tier 68–80.
+
+**1250 — The Cave Mouth**
+`room_flags: dark no_recall cold` | `sector: inside`
+The natural cave entrance from the ossuary undercroft — the first room of the cave system proper. The floor transitions from cut stone to cave floor: limestone smoothed by water flow over geological time, not by human work. The ceiling drops and the walls become irregular, following the natural formation rather than any planned geometry. The cold here is different from the undercroft's bone-dust cold: it is wet and mineral, carrying the cave system's water table humidity, and it comes with the faint harmonic tone that will intensify throughout the descent. The @@acold blue luminescence@@N of the substrate-connected fungal network begins on the cave walls here, in sparse patches that increase in density with depth.
+- Exits: `up` → 1249 (Cave System Entry Threshold), `north` → 1251 (Crystal Passage Entry)
+
+**1251 — The Crystal Passage Entry**
+`room_flags: dark no_recall cold` | `sector: inside`
+The first sighting of the crystal formation: a vein of pale crystal running through the limestone of the passage's eastern wall, half a meter wide and running floor to ceiling before disappearing into the rock above and below. The crystal carries the same anomalous cold as the surface seep in the gravewood — several degrees below ambient — and produces a faint luminescence that colors the passage walls @@alight blue@@N. The vein is not the formation's extent; it is an exposure point, a place where the geological structure surfaces through the limestone. The formation itself continues in all directions, deeper and wider than any exposure suggests.
+- Exits: `south` → 1250, `north` → 1252 (Low Crystal Gallery), `east` → 1254 (Harmonic Alcove)
+
+**1252 — The Low Crystal Gallery**
+`room_flags: dark no_recall cold` | `sector: inside`
+A gallery where crystal exposures are dense enough to provide significant luminescence without any external light source — the cave walls here glow @@asoft cyan@@N from multiple points, producing a shadowless illumination that makes the space feel larger than it is. The crystal veins here are older and more complex than the passage entry exposure: they branch and interweave through the limestone, and their surfaces show the growth rings of centuries of slow crystal formation. The Root Covenant has carved offering niches into the wall below each major vein — small recesses containing bone chips and pressed handprints in ochre, the same motif as the threshold marks above.
+- Exits: `south` → 1251, `north` → 1255 (Handprint Cave), `west` → 1253 (Water Table Pool)
+
+**1253 — The Water Table Pool**
+`room_flags: dark no_recall cold` | `sector: water_swim`
+A natural pool where the cave system's water table surfaces. The water is cold beyond what the air temperature alone would produce — it carries the crystal substrate's thermal anomaly directly, and its surface is faintly @@aluminescent@@N where the crystal compounds have dissolved into the water column. This pool feeds the substrate water sink in the mire above: the connection is underground and not directly passable, but the water chemistry is identical. The pool's bottom is not visible. Animals do not drink from it. The bone weavers treat the pool's output as a material of specific applications.
+- Exits: `east` → 1252, `south` → 1261 (Secondary Sigil Floor)
+
+**1254 — The Harmonic Alcove**
+`room_flags: dark no_recall cold` | `sector: inside`
+A natural alcove where the crystal formation produces audible harmonic output — the tone that shamans and bone weavers learn to read, here at its clearest and most accessible surface expression. The tone is constant: a single sustained note at the low edge of human hearing, with overtones that shift in a pattern the cult's bone-readers describe as the substrate's "attention state." The alcove's walls carry the crystal frequency's effect on the surrounding limestone — a slow erosion pattern that corresponds to the harmonic's geometry, producing a surface texture that a trained hand can read like Braille.
+- Exits: `west` → 1251, `south` → 1263 (Lichen-Light Passage)
+
+**1255 — The Handprint Cave** ★
+`room_flags: dark no_recall cold` | `sector: inside`
+A chamber whose entire surface — floor, walls, ceiling, every accessible face — is covered with overlapping right handprints in ochre pigment, all in identical posture: palm flat, fingers extended, thumb at right angles. The prints are not all the same size; they range from a small child's to a large adult's, with every intermediate size represented. They overlap at every density, with older prints visible beneath newer ones, the layers building up over what must be centuries of continuous addition. A fresh print — ochre still damp — occupies the chamber's eastern face. Someone was here recently. The prints read, per the Root Covenant's interpretation, as a witness record: every hand that consented to or was consumed by the binding, pressed into the stone as permanent testimony. Whether the most recent print indicates a new addition to the binding's accounting, or something else, is unclear.
+- Exits: `south` → 1252 (Low Crystal Gallery), `east` → 1256 (Consent Inscription Hall), `north` → 1257 (High Cave Ledge)
+
+**1256 — The Consent Inscription Hall**
+`room_flags: dark no_recall cold` | `sector: inside`
+A hall adjacent to the handprint cave where the binding's consent apparatus is documented in text rather than impression. The walls carry a list — names and contract-notations — in a script that blends the binding's formal inscription language with Midgaard's administrative lettering. The entries predate the estate; the oldest are in the ridge-clan marking system. The most recent are in Root Covenant contract-liturgy. The list is long. Many of the names correspond to the deferred-name case numbers in the estate's register above. Whether this means the deferred-name dead are recorded here as binding participants — or binding material — is the central question of the archive problem that the Reckoning faction in Midgaard is trying to answer.
+- Exits: `west` → 1255, `south` → 1262 (Cold Dark Corridor)
+
+**1257 — The High Cave Ledge** ★
+`room_flags: dark no_recall cold` | `sector: inside`
+A natural ledge overlooking the crystal heart basin below — a viewing point where the binding's geometry is visible as a coherent pattern in the cave system's layout. From this vantage, the crystal formation's arrangement in the basin resolves into a shape that matches the sigil inscribed on the wine cellar floor and the sealed chamber below: a complex inscribed circle, executed in geological rather than drawn form, with the crystal veins as the inscribed lines. The pattern shows unmistakable signs of stress: the crystal formation's symmetry is degrading, with several vein sections showing darkening and one major section where the luminescence has gone entirely dark. The binding is failing. It is visible from here in the way that structural damage is visible in a building when you step back far enough to see the whole facade.
+- Exits: `south` → 1255 (Handprint Cave), `down` → 1258 (Crystal Heart Basin), `east` → 1264 (Cave Echo Chamber)
+
+**1258 — The Crystal Heart Basin** ★
+`room_flags: dark no_recall cold no_mob` | `sector: inside`
+The crystal formation's deepest accessible point — a basin of crystal growth at cave-floor level, where the formation is densest and oldest. The basin is roughly circular, perhaps fifteen meters in diameter, with crystal growth rising from the floor in columns and branching forms. The luminescence here should be intense; it is not. The formation is dimming. The cold remains — this is the coldest room in the area — but the light is reduced to a fraction of what the column growth implies it once produced, leaving large sections of the basin in a darkness that the remaining luminescence makes more apparent by contrast. The Root Covenant's four competing theories about the binding's failure are all legible here: the Lich's theory (coherence loss) in the failing geometry, Harren's theory (expanding pressure) in the stressed crystal at the basin edges, the cult's theory (renegotiation demand) in the fresh offering-deposits on the basin floor, and the witches' theory (already failed, restarting) in the new crystal growth beginning at the base of the darkened sections — small, @@adim, and differently structured@@N from the original formation.
+- Exits: `up` → 1257 (High Cave Ledge), `north` → 1259 (Root Network Hub), `east` → 1265 (Ancient Formation Gallery)
+
+**1259 — The Root Network Hub**
+`room_flags: dark no_recall cold` | `sector: inside`
+The underground convergence point of the root systems that distribute the binding's effects across the estate above. The cave ceiling here is penetrated by root-mass descending from the ossuary and gravewood layers — thick cables of biological material that have grown through limestone over generations to reach the crystal formation below. The roots are connected to the crystal at contact points where the rock has been dissolved by the roots' chemistry, allowing direct mineral exchange. The hub is not a metaphor. It is an infrastructure node. The binding's effects move from crystal to root network to surface here, and the operational state of the hub is directly readable in the root cables' condition: some are vigorous; some are degraded; one major cable on the eastern wall has separated from its crystal contact point entirely.
+- Exits: `south` → 1258, `west` → 1260 (Binding Inscription Passage)
+
+**1260 — The Binding Inscription Passage**
+`room_flags: dark no_recall cold` | `sector: inside`
+The lower end of the drain passage inscription system — the cave-level passage where the binding's text reaches its most urgent expression. The inscription here is not on cut stone but on natural limestone, pressed into the cave wall's surface by root-fiber rather than carved by tool. The characters are very small, very dense, and cover every available surface including the floor and ceiling. The content, where it can be read, appears to be the binding's emergency protocols: what the binding does when components fail, what the Lich is authorized to substitute, and what substitutions are explicitly forbidden. The forbidden list is longer than the permitted list.
+- Exits: `east` → 1259 (Root Network Hub), `south` → 1266 (Sealed Chamber Approach)
+
+**1261 — The Secondary Sigil Floor**
+`room_flags: dark no_recall cold` | `sector: inside`
+A natural chamber where the binding's secondary inscription — the sigil identical to the wine cellar's floor inscription — appears in its geological form: the crystal veins in the cave floor have been arranged into the sigil's pattern by the same process that produced the surface seep's crystallization. The arrangement is not perfect; the geological constraints of the formation produce slight variations from the drawn version in the wine cellar. Whether the geological version or the drawn version is the original — whether the Lich inscribed the wine cellar sigil to match a formation it found, or the formation grew toward a sigil the Lich inscribed — is a question about which came first that neither version of the text answers.
+- Exits: `north` → 1253 (Water Table Pool), `east` → 1262 (Cold Dark Corridor)
+
+**1262 — The Cold Dark Corridor**
+`room_flags: dark no_recall cold` | `sector: inside`
+A passage where the crystal substrate's thermal anomaly is strongest and the luminescence has failed entirely, producing absolute darkness combined with cold that registers as physically painful on exposed skin. The cold here is not natural — it is the crystal formation under stress, its thermal regulation failing in the same pattern as its luminescence. The passage connects the secondary sigil floor to the consent inscription hall, running along the binding's eastern margin. Travelers without their own light source are effectively blind; travelers with light source are navigable but uncomfortable. The substrate does not maintain this passage for convenience.
+- Exits: `west` → 1261 (Secondary Sigil Floor), `north` → 1256 (Consent Inscription Hall)
+
+**1263 — The Lichen-Light Passage**
+`room_flags: dark no_recall cold` | `sector: inside`
+A passage colonized by the substrate-connected fungal network that provides the cave system's bioluminescent baseline — the cold blue light visible throughout the formation's healthier sections. Here the fungal growth is dense enough to provide reliable navigation light in @@asoft, unsteady blue@@N. The lichen has grown according to the root network's routing, covering ceiling and walls in patterns that correspond to the binding's geometry: the lichen is densest where the binding is intact and thinner where the binding is degraded, providing a direct visual map of the binding's current status for anyone who knows what they are looking at.
+- Exits: `north` → 1254 (Harmonic Alcove), `south` → 1265 (Ancient Formation Gallery)
+
+**1264 — The Cave Echo Chamber**
+`room_flags: dark no_recall cold` | `sector: inside`
+A natural chamber whose geometry produces sustained echo — sound introduced here reflects and compounds for several seconds before decaying. The substrate uses this chamber's acoustic properties: the crystal harmonic tone, transmitted through the root network, arrives here amplified and sustained, producing a room-filling resonance that the bone weavers' resonance-testing methodology was calibrated against. The echo of voices here is disorienting — what you said three seconds ago is still audible as a slight distortion of what you are saying now. Experienced Root Covenant practitioners use the echo chamber for bone-reading diagnostics, checking the substrate's harmonic against their calibrated expectations.
+- Exits: `west` → 1257 (High Cave Ledge), `south` → 1263 (Lichen-Light Passage)
+
+**1265 — The Ancient Formation Gallery**
+`room_flags: dark no_recall cold` | `sector: inside`
+A gallery displaying the oldest sections of the crystal formation — growth that predates human use of the site and extends back beyond any dateable layer. The crystals here are larger and more complex than the formation's other sections, with internal structures visible as banding and inclusion patterns accumulated over centuries. Their surface texture differs from the younger sections: the new growth is smooth and faceted; the ancient growth is rough and irregular, as though the formation's earliest expansion was exploratory rather than organized. In the gallery's deepest alcove, the crystal carries an internal banding pattern that matches the geometry of the Spirebound Conclave's documented Prism Thesis crystal field trial markings — a match that would be significant if confirmed, connecting Thornwood's substrate to the same experimental program that produced the Withered Depths' blight. The match has not been confirmed. It has not been investigated.
+- Exits: `west` → 1258 (Crystal Heart Basin), `north` → 1263 (Lichen-Light Passage)
+
+**1266 — The Sealed Chamber Approach**
+`room_flags: dark no_recall cold` | `sector: inside`
+The final passage before the Lich's domain — a straight corridor whose walls carry the binding's inscription in its most complete and deliberate form: every clause of the binding's formal text, rendered in the original full-size lettering of the inscription's first section, as though this passage was the version produced when there was still time and space to be thorough. The passage ends at a door of stone fitted into the natural cave wall — not a manufactured door but a stone slab placed to seal the opening, bearing the binding's primary sigil carved into its outward face. The slab is cold to the touch and resonates faintly under pressure.
+- Exits: `north` → 1260 (Binding Inscription Passage), `south` → 1267 (Threshold of the Binding)
+
+**1267 — The Threshold of the Binding** ★
+`room_flags: dark no_recall cold no_recall no_portal no_teleport` | `sector: inside`
+The final threshold before the sealed chamber — the door room where the Harren Estate Register Key is required for passage. The stone slab door is here, its sigil face toward this room. The threshold carries all four of the binding's operating logics simultaneously: the door's carved thorn-motif surround (manorial), the bone-inlay at the door's base (funerary), the root-fiber threading through the door's stone in the same pattern as the wine cellar inscription (forest), and the crystal formation embedded in the door's stone itself glowing at @@plow, pulsed frequency@@N (substrate). The four logics as one mechanism. The door cannot be forced by ordinary means. It responds to the register key because the key's object properties are calibrated to the binding's own authentication layer.
+- Exits: `north` → 1266, `south` → 1268 (Sealed Chamber — key-locked door; key: object 1220)
+- Door: `^sealed stone door` — `EX_ISDOOR` set, reset to locked (state 2), key_vnum = 1220
+
+**1268 — The Sealed Chamber** ★ (Boss room: Thornwood Lich — `no_mob` flag)
+`room_flags: dark indoors no_recall cold no_mob no_portal no_teleport` | `sector: inside`
+The Thornwood Lich's domain — the chamber where the binding's primary sigil is inscribed on the floor and where the Lich occupies both the sigil's center position and the binding's operational interface. The chamber is circular, the inscribed circle filling its entire floor, the lines of the sigil rendered in crystal-inlay that provides the room's only illumination — @@pdim purple@@N at the sigil edges, @@acold blue@@N at the crystal points. The Lich itself does not conform to any expected appearance. It is present, in the way that an architectural principle is present: visible in what the room does rather than in any single located form. When it chooses to speak, the sound comes from the crystal formation rather than from any specific point. It speaks in systems. It does not threaten. It does not explain. It diagnoses. If it addresses an intruder, it is because the intruder has become relevant to the binding's current failure analysis — and that is not good news for the intruder.
+- Exits: `north` → 1267 (key-locked door from this side: `EX_ISDOOR`, can be opened from inside without key)
+- Boss: The Thornwood Lich (mob 1193) — sentinel, boss, no_mob room, spec_cast_undead
+
+**1269 — The Substrate Interface**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+A secondary chamber adjacent to the sealed chamber, connected by a narrow passage in the natural cave wall — accessible, but not the sealed chamber's main entrance. This is where the Lich communicates with the root network: a crystal-dense wall surface carries the binding's transmission layer, and the root cables that descend from the network hub connect to this surface. The Lich's adjustments to the binding — the corrections and calibrations that keep the system in its current degraded-but-functional state — happen here, expressed as changes in the crystal's harmonic output that propagate upward through the root network to the estate's surface behavior. The room has the quality of a control room whose operator has been on continuous duty for a very long time.
+- Exits: `east` → 1268 (Sealed Chamber, via internal passage — does not require key from this side), `north` → 1259 (Root Network Hub)
+
+**1270 — The Deep Cave Egress**
+`room_flags: dark no_recall cold` | `sector: inside`
+A natural upward passage at the cave system's northwestern margin — a crack in the limestone wide enough to climb, leading up through the geological layers toward the gravewood's surface. The climb is long and requires equipment or substrate familiarity to navigate safely. The Thornwood Witch knows this passage. The Root Covenant's senior practitioners know it. For everyone else, it is a crack in the rock that does not obviously lead anywhere. At the top, the passage emerges at the substrate surface seep in the older gravewood — the place where the crystal substrate's surface expression is strongest.
+- Exits: `south` → 1259 (Root Network Hub), `up` → 1213 (Zone IV: Substrate Surface Seep)
+
+---
+
+### Zone VIII: Wild Hunt Patrol Routes (1271–1280) — 10 Rooms
+
+The Wild Hunt's operating territory — the roads, staging grounds, and patrol routes where the estate's mobile enforcement arm projects Thornwood's jurisdiction beyond the fixed perimeter. Night-only content is concentrated here; the Wild Hunt Master and Riders only spawn at night.
+
+**1271 — The Hunt Road Entry**
+`room_flags: dark no_recall` | `sector: forest`
+Where the Wild Hunt's patrol routes begin, accessible from the memorial lane's northern end. The road here is unlike anything else in the burial fields: unnaturally wide, its surface clear of the root-mass that claims every other path, and bordered by trees whose bark has been marked at regular intervals with @@yharren-gold thorn devices@@N pressed in ochre — not the estate's administrative markers but the Hunt's jurisdiction claim, the equivalent of a posted notice. By day the road is simply a wide, clear path. At night the marks in the bark glow faintly, and the path becomes something that has specific rules about who may travel it.
+- Exits: `south` → 1195 (Zone III: Memorial Lane), `north` → 1272 (Antler Marker Crossing)
+
+**1272 — The Antler Marker Crossing**
+`room_flags: dark no_recall` | `sector: forest`
+A crossroads where the Hunt's main patrol road is intersected by a secondary track running east-west — the Hunt's lateral route that allows it to cover the burial field margins and the gravewood's southern fringe in a single circuit. The crossing is marked by four antler installations: genuine antlers driven into the ground at the road corners, their tines oriented outward as territorial indicators. The antler-crown motif repeats: the Wild Hunt Master's authority, expressed in the decorative vocabulary of the pre-estate ridge-clan's hunting traditions. The Hunt has claimed those traditions as its own.
+- Exits: `south` → 1271, `north` → 1273 (Shadow Run), `east` → 1279 (Return Gate), `west` → 1278 (Quarry Cache)
+
+**1273 — The Shadow Run**
+`room_flags: dark no_recall` | `sector: forest`
+A straight stretch of the Hunt road where the substrate's management of the path is most apparent: the trees on either side have had their canopy closed over the road, creating a tunnel effect, and the substrate has cleared the road surface to a smoothness that amplifies the sound of hooves — or would, if the substrate horses made sound. The Shadow Run's purpose is speed; the substrate has optimized this section for the Hunt's movement rate. During the Hunt's return from external patrols, this is where the riders' pace increases to the rate that witnesses describe as "arriving before the horn sound does."
+- Exits: `south` → 1272, `north` → 1274 (Frost-Print Trail)
+
+**1274 — The Frost-Print Trail**
+`room_flags: dark no_recall cold` | `sector: forest`
+The section of the Hunt route where the shadow hounds' frost-prints are densest — the ground here retains the frost impressions of their passage even in daylight, in the pattern of a pack running in loose formation rather than in pairs. The frost-prints are notable for their detail: each print shows claw extension, pad distribution, and gait asymmetry consistent with a specific individual hound, not a template. The pack has individuals. The substrate knows which one left each print. The cold here is not atmospheric — it is localized to the print-bearing ground, radiating upward from the frost impressions rather than downward from the air.
+- Exits: `south` → 1273, `north` → 1275 (Calling Beacon)
+
+**1275 — The Calling Beacon**
+`room_flags: dark no_recall` | `sector: forest`
+The point on the Hunt's road where the Hunt Master sounds the black shadow-bone horn before departing for external patrols. The beacon is not a structure but a position: a specific point where the road widens into a small clearing and where the root network is directly connected to the cave system's harmonic channel — meaning the horn's tone travels through the substrate rather than through air, arriving at its destinations before the Hunt itself does. The ground at the clearing's center is permanently frost-marked from the substrate horses' departures, their standing prints preserved in the same way as the hound prints to the south.
+- Exits: `south` → 1274, `north` → 1276 (Hunt Dispatch Point)
+
+**1276 — The Hunt Dispatch Point** ★ (Boss room: Wild Hunt Master — `no_mob` flag)
+`room_flags: dark no_recall no_mob` | `sector: forest`
+The Wild Hunt Master's operational headquarters — the point from which the Hunt departs and to which it returns. The Master is here when not on patrol: mounted on his substrate horse, the antler crown's root-material tines oriented outward to receive the root network's signals, his face painted with sigils that match the binding's inscription language. He is not at rest. The antlers function as continuous receiving apparatus; he is always processing the estate's territorial status. The Hunt Dispatch connects north to the routes that lead beyond the estate's fixed perimeter — exits that go into the broader woodland and return through the same point. The Hunt's jurisdiction extends as far as its riders travel. The Master's authority is the binding's will expressed as velocity.
+- Exits: `south` → 1275 (Calling Beacon), `west` → 1280 (Night Approach Road)
+- Boss: The Wild Hunt Master (mob 1191) — sentinel, boss, night_only, no_mob room, spec_cast_undead
+
+**1277 — The Birch-Bark Road**
+`room_flags: dark no_recall` | `sector: forest`
+The Hunt's primary patrol corridor beyond the estate's inner zone — a road bordered by white birch trees that the substrate has grown into the Hunt's route as navigation markers. The birch-bark coloring mirrors the substrate horses' coloring; in the dark, the road and its riders become the same pale against the surrounding forest. Sound does not carry here in the normal way — not because the room is quiet, but because the substrate routes ambient sound away from this road, keeping the Hunt's approach silent. The only sound that travels here correctly is the horn's substrate-transmission, which arrives through the ground rather than through air.
+- Exits: `east` → 1276 (Hunt Dispatch Point), `west` → 1280 (Night Approach Road)
+
+**1278 — The Quarry Cache**
+`room_flags: dark no_recall` | `sector: forest`
+Where the Hunt brings material it retrieves from beyond the estate's perimeter — remains, artifacts, or occasionally persons the substrate has determined must be returned. The cache is a natural hollow at the road's western margin, its interior fitted with the same iron hooks and manifest-stands as the estate's surface processing systems. Items brought back by the Hunt are deposited here for processing by the bone weavers or assessment by the Root Covenant, depending on the material's nature. The cache currently holds several bundles of the pale, anomalously cold material that the Hunt retrieves from routes near the grave tunnel hinge — material that the bone weavers assess as substrate-connected but of external origin.
+- Exits: `east` → 1272 (Antler Marker Crossing)
+
+**1279 — The Return Gate**
+`room_flags: dark no_recall` | `sector: forest`
+The eastern arm of the Hunt's lateral route — the point where returning patrols re-enter the estate's inner perimeter after completing their external circuit. A formal thorn-growth arch has developed at this point, biological but architecturally deliberate, framing the transition between external patrol territory and the estate's defined interior. The arch's thorn growth is oriented inward — the same posture as the south thorn-hedge wall — suggesting the substrate considers the return passage more critical than the departure.
+- Exits: `west` → 1272 (Antler Marker Crossing), `south` → 1290 (Zone IX: Thorn Knight Guardpost)
+
+**1280 — The Night Approach Road**
+`room_flags: dark no_recall` | `sector: forest`
+The outermost reach of the Hunt's established patrol territory — a road that leads into the greater woodland beyond Thornwood's fixed perimeter and connects back to the gravewood's southern edge via the Night Ride Path. This is the point where the estate's jurisdiction becomes argument rather than enforcement: the Hunt claims it as territory, the Great Northern Forest wardens' route charts mark it as avoided, and the Shadowmere scouts' maps simply note "do not stop." The road here shows no substrate management — no cleared surface, no marked trees — because the substrate's network does not extend this far with sufficient resolution. The Hunt operates here on authority alone.
+- Exits: `east` → 1276 (Hunt Dispatch Point), `north` → 1215 (Zone IV: Night Ride Path), `west` → 1277 (Birch-Bark Road)
+
