@@ -101,6 +101,16 @@ The Pyramid's judicial function — as a machine that weighs souls and issues ve
 
 Khenari communities in both cities cluster in mortuary and legal districts, often serving as notaries, estate administrators, or death-record keepers. They are valued for their meticulous accuracy but regarded with some wariness — Khenari notaries are famously incorruptible, which makes them useful and inconvenient in equal measure.
 
+### Humans
+
+The relationship between Khenari and humans is organized around mutual utility and persistent mistrust. Humans built the institutions — the court systems, the city governance frameworks, the water-law bureaucracies — within which Khenari death-administration practice operates, and Khenari provide the accuracy and incorruptibility those institutions require but cannot generate internally.
+
+The mistrust runs both ways. Human institutions occasionally need to pressure notaries; Khenari notaries will not be pressured. Khenari observers see, in every record they process, evidence of how often human institutions are built on falsified documents and suppressed evidence. The Khenari's professional composure is not indifference but accumulated awareness held in check by professional discipline.
+
+The most significant human failure in Khenari eyes is the treatment of Akh'enet's factions. Human civic institutions have repeatedly attempted to resolve Akh'enet's three-way factional conflict — Reed Ledger Wardens, Moon Sepulchrists, Salt Jackal Reclaimers — by elevating whichever faction was most convenient to work with. The Khenari experience of this pattern has made them systematically resistant to allowing human institutional interest to shape Khenari internal disputes.
+
+See also: `human_lore.md`
+
 ---
 
 ## Narrative Tone

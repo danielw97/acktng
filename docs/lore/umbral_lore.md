@@ -102,6 +102,16 @@ Umbral communities in Midgaard's deep levels have existed for as long as the cit
 
 The Reckoning faction in Midgaard has quietly cultivated Umbral archive relationships, recognizing that shadow-archives may contain records of the sealed warrants and Conclave transfers that Continuity archivists have deliberately omitted from official records.
 
+### Humans
+
+The Umbral are the human past made visible, which is the primary reason humans find them unsettling. Their shadow-archives contain the actual history of decisions made — the sealed warrants issued, the people transferred, the accountability avoided — and their primary institutional loyalty is to accuracy rather than to any human political outcome. This makes them simultaneously the most useful and the most unmanageable resource that human cities possess.
+
+Human institutions have never successfully decided whether to treat Umbral communities as a resource or a threat, so they treat them as both simultaneously: useful in legal and intelligence functions that require discretion, tolerated in urban deep spaces because suppression is expensive and consistently fails, regarded with wariness because the Umbral's existence proves that human official records are incomplete.
+
+The Gloamvault sits under Midgaard as the permanent evidence that the Umbral were there first. The city was built above the archive. This is not a fact that Midgaard's civic institutions commemorate.
+
+See also: `human_lore.md`
+
 ---
 
 ## Narrative Tone

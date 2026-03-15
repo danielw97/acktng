@@ -92,6 +92,16 @@ Khephari earth-sense and the volcanic activity of the Cinderteeth are in permane
 
 Khephari maintain their own claim to portions of Akh'enet's Necropolis Terraces, where Khephari burial traditions — deep-sand interment followed by scarab emergence, when possible — are embedded in the oldest layers of the mortuary district. They regard the current factional chaos in the ruins with the patient equanimity of people who have watched institutions rise and fall before: the cycle will complete itself.
 
+### Humans
+
+Khephari built the roads to and from the Great Pyramid. This is not a claim requiring human acknowledgment to be true — it is in the stone, in the road gradients and distance markers and tunnel alignments — but Khephari notice when human accounts of the Pyramid's construction omit it. They file that observation alongside their seismic warnings about the Cinderteeth, their early documentation of the Withered Depths' water contamination, and every other instance in which human institutions received Khephari knowledge without acting on it.
+
+The practical relationship is genuinely collaborative. Khephari earth-sense and desert knowledge are essential to safe caravan operation; human commercial infrastructure provides the trading ecosystem within which Khephari service communities operate. This cooperation is real and ongoing. The Khephari do not romanticize it or resent it. They simply track, with the same precision they apply to seismic records, the gap between human institutions' capacity to receive knowledge and their capacity to act on it.
+
+The Ashfall catastrophe sits in that gap as its most catastrophic example. Khephari warnings were documented, submitted, and filed.
+
+See also: `human_lore.md`
+
 ---
 
 ## Narrative Tone

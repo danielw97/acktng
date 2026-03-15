@@ -108,6 +108,16 @@ Most Ushabti reserve judgment on whether the Court's practices are harmful (some
 
 Ushabti who travel to Midgaard often find themselves drawn into the Continuity-versus-Reckoning political conflict in ways they did not expect. Their variance record tradition — the permanent inscription of every judgment deviation and its reasoning — is precisely the kind of institutional accountability mechanism that the Reckoning faction argues Midgaard's archives should contain. Ushabti who share their variance record methodology with Reckoning scholars have inadvertently provided one of the strongest arguments for comprehensive institutional transparency in the scholarly literature.
 
+### Humans
+
+Humans made the Ushabti to embody justice, then failed to maintain the civilization that authorized them. The Solar Court's Seal College understood what it was building — autonomous vessels of cosmic law, given genuine will because genuine judgment requires genuine freedom — and it built accordingly. The Solar Court subsequently collapsed, leaving the Ushabti operating without institutional oversight, without hierarchy, without the ability to have their variance records formally reviewed.
+
+The Ushabti continue anyway, because the Solar Court's purpose — containing the Black Sun Shard, preserving the conditions for memory and judgment — did not expire with the Solar Court's institutions. This decision, made without authorization, is the most consequential autonomous choice the Ushabti have ever made, and they made it in their own judgment that it was right.
+
+What the Ushabti find humans unable to answer cleanly is the implication of their existence: if the Solar Court's purpose survived the Solar Court's collapse, what other obligations survive the collapse of the institutions that created them? The Ashborn misclassified after the Ashfall. The families in the Black Ledger. The forest poisoned by Conclave experiments. The Ushabti do not push this argument. They exist, and their existence asks the question.
+
+See also: `human_lore.md`
+
 ---
 
 ## Narrative Tone

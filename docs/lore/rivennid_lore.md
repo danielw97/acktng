@@ -106,6 +106,16 @@ Rivennid relationship to the Conclave's legacy is the most complex in their poli
 
 What they have settled on, culturally, is that the Conclave's failure was institutional rather than individual: the problem was not that specific people were evil but that an institution organized to pursue knowledge without accountability produced inevitable catastrophe. The Rivennid use this as a persistent lens through which to evaluate other institutions they encounter.
 
+### Humans
+
+The Rivennid are the product of two human cities' worst institutional decisions: Midgaard's sealed warrants and Kowloon's Black Ledger supplied the Conclave with the human subjects whose exploitation funded the research whose byproducts are now corrupting the northern forests and produced the Rivennid themselves. The institutional chain is documented and direct.
+
+The Rivennid do not call this a debt and do not organize around grievance. They call it a fact. They are careful about this distinction. What they do maintain — permanently and with considerable patience — is an interest in both cities confronting the sealed records, not because the past can be undone but because institutions that suppress their worst decisions tend to repeat them. The Withered Depths' corruption of northern trade routes is the physical ongoing consequence of decisions Midgaard and Kowloon made and then sealed. Both cities' northern commerce is affected. The Rivennid find this instructive and say so when asked.
+
+Most humans in Midgaard or Kowloon have never met a Rivennid. The connection between their cities' institutional history and the Rivennid's existence is not part of any civic curriculum. This, too, the Rivennid find instructive.
+
+See also: `human_lore.md`
+
 ---
 
 ## Narrative Tone

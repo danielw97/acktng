@@ -111,6 +111,16 @@ Deltari water-reading skills make them invaluable in the oasis network. They can
 
 The Withered Depths' corruption affects water quality along forest trade routes that Deltari merchants and water-assessors regularly travel. Deltari flow records contain the earliest documented observations of "anomalous decay patterns" in northern forest water systems — observations that Midgaard's arcanist registry filed without action. The Deltari regard this as evidence of institutional water-blindness: a civilization that does not read its water will eventually be destroyed by what it fails to notice.
 
+### Humans
+
+The Deltari built Kowloon and are governed by a city they built. This is not metaphor. The delta's hydraulic infrastructure — the channel management, water-quality monitoring, flood-defense systems, and cistern networks that keep the city alive — was designed and constructed by Deltari communities managing that delta for generations before the Neon Covenant's six houses arrived. The city exists because Deltari knowledge made it possible.
+
+The Jade Magistracy's exclusion of Deltari communities from formal civic power while depending entirely on their practical expertise is the defining dynamic of that relationship. The Black Ledger's sealed census, which includes Deltari among those transferred to the Conclave, is an additional layer: the city's founding institutions not only exploited Deltari expertise but transferred Deltari people to Conclave experimentation and then sealed the record.
+
+Deltari parallel record-keeping — flow records, community ledgers, oral genealogies maintained across generations — is the most effective leverage Deltari communities have against this arrangement. The Jade Magistracy cannot fully suppress records it does not hold. It has tried. It continues to try. The records remain.
+
+See also: `human_lore.md`
+
 ---
 
 ## Narrative Tone

@@ -98,6 +98,16 @@ The city's Continuity faction and the Reckoning faction disagree about Ashborn s
 
 Some Ashborn scholars have noticed the structural parallel between the Blightmother's crystal-preservation matrix and the Conclave's Ember Canon methodology. The Conclave's approach to the forest trials mirrored their approach to Ashborn transformation — fire as catalyst, mineral as preservative, pressure as integration mechanism — but where the Ashborn transformation succeeded in producing viable people, the forest trial produced corrupted fungal horror. This comparison is both illuminating and disturbing to those Ashborn who have traced the Conclave's research lineage back to early observations of their own people.
 
+### Humans
+
+Humans made the Ashborn and then disputed whether they had. The Ashfall Era's volcanic events transformed a subset of human survivors into something physiologically distinct — and then human institutions in Midgaard classified the Ashborn as "ashfall survivors" without separate civic identity, deliberately denying them legal standing in property and inheritance disputes during post-Ashfall reconstruction.
+
+This is not a misunderstanding. It was institutional bad faith, clearly legible in the administrative record to anyone willing to look. The Reckoning faction in Midgaard argues this explicitly. The Continuity faction's silence on the subject is its own answer.
+
+The Ashborn do not organize their lives around this grievance. Their culture processes damage and moves on — the repair is slow, the work continues. They remain in Midgaard's foundry districts, remain essential to the city's metalwork economy, and remain classified in some official records as a subcategory of human rather than a distinct people. The classification does not change what they are. They know what they are. They continue building.
+
+See also: `human_lore.md`
+
 ---
 
 ## Narrative Tone
