@@ -3012,3 +3012,609 @@ D3
 0 -1 14398
 S
 #0
+#MOBILES
+#14200
+the postmaster of Mafdet~
+the Postmaster of Mafdet~
+The Postmaster of Mafdet sorts mail bundles at a carved basalt counter, each parcel stamped with a Reach cairn-station mark and a Mafdet harbor seal.
+~
+The Postmaster of Mafdet is a precise figure whose desk is sorted by cairn-station of origin, each parcel bearing dual-jurisdiction transit notation. The precision of the system reflects long practice maintaining correspondence chains across the inland-to-harbor route.
+~
+524355 0 0 S
+150 0
+0 0 0 0
+! 0 0 0 7 15463 0 16
+#14201
+the quartermaster of Mafdet~
+the Quartermaster of Mafdet~
+The Quartermaster of Mafdet stands at a supply manifest rack, marking inventory against a running tally on a wax tablet fixed beside the depot door.
+~
+The Quartermaster of Mafdet oversees the depot's stock with the systematic efficiency of someone who has managed expedition supply lists across multiple Reach crossings. Every shelf is labeled with a quantity and a reorder threshold.
+~
+67 0 0 S
+150 0
+0 0 0 0
+! 0 0 0 7 15463 0 16
+#14202
+the innkeeper of the Saltwind~
+the Innkeeper of the Saltwind Inn~
+The Innkeeper of the Saltwind Inn stands at the register table, one hand on the room-key rack and the other holding a cloth for the polished mahogany counter.
+~
+The Innkeeper of the Saltwind Inn manages the guest register with unhurried efficiency, noting current occupancy on a small chalk board above the key rack. The inn has hosted arriving caravaneers and departing sailors long enough that the current keeper needs no introduction.
+~
+67 0 0 S
+150 0
+0 0 0 0
+! 0 0 0 7 15463 0 16
+#14203
+a Mafdet ironwright~
+a Mafdet ironwright~
+A Mafdet ironwright leans against the forge's cooling rack, watching the blade tempering bath with practiced patience.
+~
+A Mafdet ironwright works the district's most established metalworking shop, maintaining inventory from caravan blades to harbor cutlasses. The finished weapons on the rack show the clean secondary grind that distinguishes professional work from frontier improvisation.
+~
+67 0 0 S
+150 0
+0 0 0 0
+! 0 0 0 7 15463 0 16
+#14204
+a Shoreward armorer~
+a Shoreward armorer~
+A Shoreward armorer stands behind the workshop counter, fitting a salt-treated leather vest onto an armor stand with careful attention to the shoulder join.
+~
+A Shoreward armorer specializes in the salt-resistant construction that distinguishes harbor-district armor from inland alternatives. The armorer's inventory reflects a practical understanding of Mafdet's threat environment — approach zone wildlife and the harbor's more deliberate violence.
+~
+67 0 0 S
+150 0
+0 0 0 0
+! 0 0 0 7 15463 0 16
+#14205
+a Reach provisioner~
+a Reach Provisioner~
+A Reach Provisioner checks inventory bundles against a wall-mounted stock list, recording each count with a reed pen on a narrow tablet.
+~
+A Reach Provisioner has supplied enough Glasswalk crossings to know which supplies run out first and which are always carried in surplus. The shop's inventory is heavy on water preservation and light-footwear repair, sparse on items that rarely deplete before the Reach's end.
+~
+67 0 0 S
+150 0
+0 0 0 0
+! 0 0 0 7 15463 0 16
+#14206
+a Strandline Compact banker~
+a Strandline Compact banker~
+A Strandline Compact banker stands behind a gilt-bronze strongbox rack, verifying a deposit voucher against the account ledger open on the counter.
+~
+A Strandline Compact banker operates under Compact authority to maintain currency exchange standards across the inland-maritime jurisdictional boundary. The bank's gilt-bronze strongboxes bear dual seals — one Saltweight calibration mark and one Littoral Branch registration.
+~
+32835 0 0 S
+150 0
+0 0 0 0
+! 0 0 0 7 15463 0 16
+#14207
+a Hazard Scribe reagent dealer~
+a Hazard Scribe reagent dealer~
+A Hazard Scribe reagent dealer arranges containment-grade materials on padded display shelves, each item tagged with a Quarantine classification and a handling note.
+~
+A Hazard Scribe reagent dealer maintains the Quarantine Ledger's commercial arm, supplying detection instruments, containment media, and inscription materials used by assessors throughout the district. The classification tags are as carefully maintained as the products themselves.
+~
+67 0 0 S
+150 0
+0 0 0 0
+! 0 0 0 7 15463 0 16
+#14208
+the Harbor Healer of Mafdet~
+the Harbor Healer of Mafdet~
+The Harbor Healer of Mafdet works at a triage bench covered with coral-lime compress cloths and dried coastal herbs, hands moving with the efficiency of someone who sees many patients per tide cycle.
+~
+The Harbor Healer of Mafdet has treated dock injuries, Reach-crossing wounds, and the occasional conflict casualty with equal professional attention. The station's coral-lime walls absorb odor and keep the space cooler than the harbor air outside.
+~
+4163 0 0 S
+150 0
+0 0 0 0
+! 0 0 0 7 15463 0 16
+#14209
+a beach jackal~
+a beach jackal~
+A lean beach jackal prowls the dune's crest, ears flattened against the sea wind, nose working constantly for the salt-and-rot scent of prey.
+~
+This beach jackal is a lean-bodied opportunist adapted to the Tidemouth approach zone, where it competes with seabirds and crab swarms for whatever the tide delivers. It attacks quickly and retreats if cornered, but packs have pulled down injured draft animals on the Reach approach.
+~
+33554529 0 0 S
+55 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14210
+a tidemouth crab~
+a tidemouth crab~
+A tidemouth crab clicks across the salt flat in a sideways scuttle, its broad armored back marked with salt deposit bands that indicate its age.
+~
+This tidemouth crab is one of the large burrowing variety common to the approach zone's tidal flats, shell broad and salt-crusted from years of tidal exposure. The claws are strong enough to snap through harness leather.
+~
+97 0 0 S
+56 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14211
+a tidepool eel~
+a tidepool eel~
+A tidepool eel hangs motionless in the shallows, its mottled brown-gray body blending with algae-covered stone until it strikes.
+~
+This tidepool eel has established a strike territory in the approach zone's tidal pools, lying still until movement triggers its ambush response. The bite delivers a mild paralytic compound from glands behind the jaw that makes its victim easier prey for the scavengers that follow.
+~
+33554529 0 0 S
+57 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14212
+a cairn kite~
+a cairn kite~
+A cairn kite circles overhead on broad thermal wings, its hooked beak and yellow-ringed eyes fixed on the ground below with predatory concentration.
+~
+This cairn kite is a large coastal raptor that nests in the Tidemouth's brackish zone and feeds on any small creature crossing the open approach. It dives at exposed eyes and hands, and a group of them can be as dangerous as a single large predator.
+~
+97 0 0 S
+58 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14213
+a glass scorpion straggler~
+a glass scorpion straggler~
+A glass scorpion straggler crouches between dune crests with its translucent carapace nearly invisible against the salt-pale sand.
+~
+This glass scorpion straggler has wandered from its native territory in the Glasswind Belts, following the moisture trace of the Tidemouth approach. A full-grown specimen, it is significantly more venomous than the juveniles occasionally found closer to the city walls, and its sting delivers a concentrated neurotoxin.
+~
+33554529 0 0 S
+60 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14214
+a coastal gull swarm~
+a coastal gull swarm~
+A shrieking mass of coastal gulls spirals down from the harbor air, drawn by the scent of food or blood on the approach trail.
+~
+This coastal gull swarm is a hazard of the Tidemouth approach that most caravaneers underestimate until the first birds begin striking at exposed skin. Individually harmless, in swarm density they can blind and disorient until the flock disperses.
+~
+97 0 0 S
+55 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14215
+a harbor rat~
+a harbor rat~
+A fat harbor rat crouches in the shadows where the timber pier meets the stone foundation, watching for dropped food or unattended cargo bundles.
+~
+This harbor rat is the common variety found throughout Mafdet's lower waterfront, large and bold from generations of feeding on dock waste. It bites readily when cornered and has been known to gnaw through rope and softer leather given undisturbed access to cargo.
+~
+97 0 0 S
+55 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14216
+a cairn scavenger~
+a cairn scavenger~
+A cairn scavenger crouches beside a collapsed cairn, sorting through the rubble with practiced fingers for inscription tablets or sealed cargo.
+~
+This cairn scavenger works the collapsed cairn stations along the Tidemouth approach, looking for usable tablets, cached supplies, or recently abandoned cargo. Armed with a pry blade and experienced in separating travelers from their loads, cairn scavengers operate in loose packs that dissolve quickly when law enforcement appears.
+~
+97 0 -100 S
+60 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14217
+a Red Sand outrider~
+a Red Sand outrider~
+A Red Sand outrider sits on a low dune crest, watching the approach trail below with the patient attention of someone waiting for a particular opportunity.
+~
+This Red Sand outrider is a commercial enforcer from the Red Sand Accounts, monitoring the approach for caravans in financial distress — goods pledged as security on defaulted debt instruments. The line between commercial enforcement and banditry is narrower in the Tidemouth than the Accounts' city office would prefer to admit.
+~
+33554529 0 -200 S
+62 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14218
+a Reach patrol deserter~
+a Reach patrol deserter~
+A Reach patrol deserter in faded Warden colors makes no attempt to hide that the uniform is no longer backed by any authority, and the weapons now serve private ends.
+~
+This Reach patrol deserter was once employed by an oasis garrison order to patrol the Saltglass Reach approaches, and the former-Warden equipment remains functional even as the authority it once represented has lapsed. Deserters in the Tidemouth zone use their knowledge of patrol patterns to stay ahead of actual law enforcement.
+~
+97 0 -200 S
+63 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14219
+a Red Sand enforcer~
+a Red Sand enforcer~
+A Red Sand enforcer stands in the commercial lane with the settled posture of someone who knows the law, has found its edges, and operates just inside them.
+~
+This Red Sand enforcer is the Accounts' muscle in Mafdet's commercial zones, professional and familiar with both enforcement clauses in Shoreward conversion contracts and the most efficient ways to compel payment. The enforcer's presence is legal under Strandline Compact commercial ordinances the Accounts drafted carefully.
+~
+33554529 0 -300 S
+65 0
+0 0 0 0
+! 0 0 0 7 3 0 1
+#14220
+a cairn scavenger leader~
+a cairn scavenger leader~
+A cairn scavenger leader directs the approach-zone pack with short gestures, coordinating coverage across the dune ridges with efficient authority.
+~
+This cairn scavenger leader runs the Tidemouth approach zone's most organized scavenger group, having consolidated operations after eliminating rival pack leaders over the past year. The leader carries a full set of cairn-station inscription tools capable of forging transit seals and waystation authorization marks.
+~
+33554529 0 -200 S
+62 0
+0 0 0 0
+! 0 0 0 7 3 0 1
+#14221
+a caravan drover~
+a caravan drover~
+A caravan drover guides a string of pack animals through the yard with short commands and practiced lead-rope management.
+~
+This caravan drover has run the Saltglass Reach route enough times that directing a pack string through a crowded yard is automatic. The drover moves with the economical attention of someone who has learned that most yard accidents come from watching the wrong thing.
+~
+65 0 0 S
+40 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14222
+a dock worker~
+a dock worker~
+A dock worker maneuvers a loaded cargo frame across the pier decking, moving with the rolling gait of someone accustomed to working on surfaces that shift.
+~
+This dock worker has spent enough time loading cargo along the harbor front that the Saltweight verification points are reflexive checkpoints rather than procedural obstacles. The work is monotonous and physically demanding, and the dock worker has the characteristic flat affect of someone metering energy across long shifts.
+~
+65 0 0 S
+40 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14223
+a harbor sailor~
+a harbor sailor~
+A harbor sailor moves along the pier with the rolling gait of someone more comfortable on a moving deck than on solid ground.
+~
+This harbor sailor is crew from one of the Quay Concord's registered vessels, currently between loading operations. Sailors waiting between voyages are a common fixture of the harbor front, and most know better than to cause trouble in a port they return to regularly.
+~
+65 0 0 S
+42 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14224
+a Ledger House clerk~
+a Ledger House clerk~
+A Ledger House clerk moves through the archive corridor with a stack of sealed documents tucked under one arm and a notation stylus behind one ear.
+~
+This Ledger House clerk manages document processing for one of the Ledger Quarter's four competing houses, and the quick-reference notation tablet clipped to a belt loop indicates a workload that does not permit extended interruptions. The clerk's ink-stained fingers are an occupational baseline rather than a noteworthy detail.
+~
+67 0 0 S
+45 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14225
+a Sand-Sea Carter journeyman~
+a Sand-Sea Carter journeyman~
+A Sand-Sea Carter journeyman reads a waystation manifest notation on a small wax tablet, cross-referencing it against the Guild's standard route-time formula.
+~
+This Sand-Sea Carter journeyman is completing a route certification that will qualify them for solo Glasswalk escort contracts. The Guild's waystation-to-waystation timing formulas are well established, but the margin for error in the Tidemouth approach zone keeps journey time estimates approximate rather than precise.
+~
+65 0 0 S
+42 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14226
+a Red Sand accounts agent~
+a Red Sand accounts agent~
+A Red Sand accounts agent leafs through a document portfolio with the casual confidence of someone who has found a discrepancy and is deciding when to raise it.
+~
+This Red Sand accounts agent operates from the field office in the Carters' Yard, representing the Accounts' commercial interests in the Reach-to-harbor corridor. The portfolio contains debt instruments, cargo assignment rights, and what the Accounts describe as protective custody agreements.
+~
+97 0 -200 S
+50 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14227
+a Quay Concord bosun~
+a Quay Concord bosun~
+A Quay Concord bosun stands at the pier head with a cargo manifest tablet, checking each load against the registered berth allocation.
+~
+This Quay Concord bosun manages pier-head traffic for one of the harbor's registered vessels, coordinating cargo handoff between dock workers and the ship's loading crew. The bosun's role puts them in regular contact with both the Harbormaster's office and the Storm Ledger's verification points.
+~
+67 0 0 S
+45 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14228
+a harbor merchant~
+a harbor merchant~
+A harbor merchant stands at a folding display table near the commercial quay, goods arranged with the eye of someone who knows which items attract harbor-front traffic.
+~
+This harbor merchant has a regular pitch near the commercial quay and a regular customer base among Quay Concord crews on extended port stays. The inventory rotates with cargo availability rather than following a fixed stock plan.
+~
+67 0 0 S
+42 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14229
+a Tidewall scavenger~
+a Tidewall scavenger~
+A Tidewall scavenger moves along the wall-walk with the close attention of someone cataloguing what is not being watched.
+~
+This Tidewall scavenger works the seaward perimeter's upper walk, looking for unattended cargo, loosely secured hatch covers, or any access point to the wall's lower levels. The scavenger's knowledge of the Tidewall's maintenance access points is more extensive than the Harbor Wardens currently realize.
+~
+97 0 -200 S
+50 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14230
+a drunk harbor sailor~
+a drunk harbor sailor~
+A drunk harbor sailor leans against a bollard with the practiced lean of someone who has learned to calibrate their support requirements.
+~
+This harbor sailor has been between voyages long enough that the transit allowance from the last contract has found its way entirely into shore entertainments. Not dangerous by intent, but unpredictable and operating on reflexes trained in rougher ports.
+~
+97 0 0 S
+45 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14231
+a Harbor Warden~
+a Harbor Warden~
+A Harbor Warden stands post at the harbor-front transit point, watching cargo movement and personnel traffic with measured attention.
+~
+This Harbor Warden enforces the Strandline Compact's authority over port operations, maintaining jurisdiction at the boundary between inland commercial law and maritime charter protocol. The role requires understanding both legal frameworks well enough to apply the correct one to each situation.
+~
+67 0 500 S
+120 0
+0 0 5 5
+! 0 0 0 7 15463 0 4
+#14232
+a gate guard~
+a gate guard~
+A gate guard stands at the Landward Gate transit point, checking entry credentials against the current day's authorization list with methodical thoroughness.
+~
+This gate guard maintains the Landward Gate's checkpoint function under authority of the Strandline Compact's territorial ordinance, which grants Mafdet control over approach-zone access for a defined radius outside the wall. The gate runs three shifts, and this guard's shift has had the usual mix of routine caravans and occasional unusual cases.
+~
+67 0 500 S
+120 0
+0 0 5 5
+! 0 0 0 7 15463 0 4
+#14233
+a Guild guard~
+a Guild guard~
+A Guild guard stands at the Carters' Yard perimeter with the settled posture of someone whose primary function is deterrence rather than active enforcement.
+~
+This Guild guard is employed by the Sand-Sea Carters' Guild to protect the Yard's cargo, animals, and personnel from the approach-zone opportunism that follows every arriving caravan. The guard's jurisdiction ends at the Yard's perimeter, but the Guild has a practical understanding with Harbor Wardens about handoff procedures.
+~
+67 0 500 S
+125 0
+0 0 5 5
+! 0 0 0 7 15463 0 4
+#14234
+a Harbor Warden captain~
+a Harbor Warden captain~
+A Harbor Warden captain moves through the harbor front with the authority of someone who both sets and enforces the standards their subordinates implement.
+~
+This Harbor Warden captain runs the front-facing component of Mafdet's port security apparatus, coordinating patrol assignments and jurisdictional handoffs between the gate, the harbor, and the Ledger Quarter. The captain's informal authority extends into the Tidewall district, though the undercroft's flooded passages are technically outside Warden patrol scope.
+~
+67 0 500 S
+130 0
+0 0 5 5
+! 0 0 0 7 15463 0 4
+#14235
+a Shrine enforcer~
+a Shrine enforcer~
+A Shrine enforcer stands at the terrace perimeter with arms folded and the stillness of someone prepared to wait as long as the situation requires.
+~
+This Shrine enforcer is a sworn judicial officer of the Swift Court of the First Claw, empowered to arrest, detain, and in extreme cases execute judgment under the Guardian-Judicial tradition. The claw marks on the enforcer's forearms are ceremonial scarifications taken at oath-swearing, not combat wounds.
+~
+67 0 800 S
+125 0
+0 0 5 5
+! 0 0 0 7 15463 0 4
+#14236
+the Harbormaster of Mafdet~
+the Harbormaster of Mafdet~
+The Harbormaster of Mafdet stands at the harbor register desk, tracking the current berth occupancy against the tide schedule with practiced precision.
+~
+The Harbormaster of Mafdet holds the Strandline Compact's most operationally demanding appointment, managing harbor access, berth allocation, harbor chain timing, and cargo priority across all vessels in port simultaneously. The Harbor Register on the desk is the legal record of record for all commercial maritime operations in Mafdet's jurisdiction.
+~
+67 0 0 S
+150 0
+0 0 0 0
+! 0 0 0 7 15463 0 16
+#14237
+the Tide Ledger head archivist~
+the Tide Ledger head archivist~
+The Tide Ledger head archivist sits at the senior desk of the hall's inner sanctum, surrounded by sorted reference copies of decades of cargo certification records.
+~
+The Tide Ledger head archivist administers the largest of the Ledger Quarter's four competing houses, managing commercial certification operations and the deeper archive that constitutes the hall's institutional advantage. The archivist holds the key to the Storm Ledger's bonded escrow vault, a security measure established when the vault's contents became too valuable to trust to open access.
+~
+67 0 0 S
+150 0
+0 0 0 0
+! 0 0 0 7 15463 0 16
+l 100 14266 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#14238
+the Strand Rememberer elder~
+the Strand Rememberer elder~
+The Strand Rememberer elder sits in the alcove's carved stone chair, eyes half-closed and hands resting on a knotted cord that serves as a mnemonic index for the oral history collection.
+~
+The Strand Rememberer elder maintains the oral archive of the Strand Folk's coastal navigation tradition, preserving route songs, tidal charts in verse form, and the guardian origin accounts that underpin the Shrine of the First Claw's authority. The elder does not write — the Strand Folk's knowledge transmission is intentionally kept in performance rather than document form.
+~
+67 0 0 S
+150 0
+0 0 0 0
+! 0 0 0 7 15463 0 16
+#14239
+the Quarantine Ledger Abomination~
+the Quarantine Ledger Abomination~
+The Quarantine Ledger Abomination — a Class Three relic whose containment has failed — rotates slowly in the isolation chamber, its form partly coherent and partly dispersed into the cold air.
+~
+The Quarantine Ledger Abomination is what the containment documentation classified as a Category: Animate Hazard — a relic artifact whose accumulated record-influence generated a self-sustaining behavioral loop. It is not alive in any recognizable sense, but it responds to intrusion with the enforcer instinct encoded in the administrative pattern at its core.
+~
+33554547 0 -500 S
+70 0
+100 0 5 5
+! 0 0 0 7 1025 8256 4
+#14240
+the Synod Eclipsed Tongue Hierophant~
+the Synod Eclipsed Tongue Hierophant~
+The Synod Eclipsed Tongue Hierophant stands at the center of the flooded vault in ceremonial regalia, the rites half-completed and the containment seals broken around the artifacts on the vault's raised platform.
+~
+The Synod Eclipsed Tongue Hierophant commands this cell of the Eclipsed Tongues faction — the Synod smuggling operation moving relic contraband through the tidewall undercroft to bypass Quarantine Ledger inspection. The Hierophant's ritual authority determines which artifacts move through which channels and when, making this figure the operational intelligence behind the entire undercroft operation.
+~
+67108979 128 -800 S
+76 0
+200 0 10 10
+! 0 0 0 7 1025 6144 16
+l 100 14270 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#14241
+the Wrath of Mafdet~
+the Wrath of Mafdet~
+The Wrath of Mafdet manifests as a feline shape constructed of guardian-light — a form recalled from the city's founding compact, now hostile to the oath-violation it has detected within the shrine's inner walls.
+~
+The Wrath of Mafdet is the guardian manifestation triggered by the accumulated oath-violation within the Shrine's sanctum — the Synod's relic contraband operation having been conducted in direct violation of the founding compact that established the Shrine's authority. The feline form is not the guardian's natural appearance but the enforcer expression: the shape assumed when judgment has been determined and only execution remains.
+~
+67108979 640 500 S
+80 0
+300 0 15 15
+! 0 0 0 7 1025 14624 16
+l 100 14272 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#14242
+a Synod smuggler~
+a Synod smuggler~
+A Synod smuggler wades through ankle-deep water in the flooded passage, carrying a sealed relic crate with careful attention to keeping it above the waterline.
+~
+This Synod smuggler is part of the Eclipsed Tongues faction's undercroft operation, moving relic contraband through the flooded passages below the Tidewall to bypass Quarantine Ledger inspection protocols. The smuggler's knowledge of the undercroft's tidal patterns determines cargo scheduling as much as any logistical calendar.
+~
+97 0 -500 S
+68 0
+0 0 2 2
+! 0 0 0 7 7171 0 1
+#14243
+a Synod courier~
+a Synod courier~
+A Synod courier moves through the undercroft passages without hesitation, following a memorized route through the flooded chambers that bypasses every standard checkpoint above.
+~
+This Synod courier carries authentication documents and coordination instructions between the undercroft operation and the faction's external contacts. The courier's speed and route knowledge make them a difficult target in the flooded passages, where the water hampers pursuit more than it does their experienced movement.
+~
+33554529 0 -500 S
+70 0
+50 0 3 3
+! 0 0 0 7 7171 0 1
+#14244
+a Synod ritual acolyte~
+a Synod ritual acolyte~
+A Synod ritual acolyte performs maintenance on one of the undercroft's active containment arrangements, adding components to a ring drawn on the stone floor in bitumen and bone ash.
+~
+This Synod ritual acolyte manages the Hierophant's containment work, maintaining the undercroft's active relic storage arrangements and preparing new artifacts for transport. The acolyte's ritual materials include Quarantine-class containment components sourced through the Hazard Scribe's legitimate commercial channels.
+~
+97 0 -500 S
+72 0
+0 0 2 2
+! 0 0 0 7 1025 4360 1
+#14245
+a Synod undercroft guard~
+a Synod undercroft guard~
+A Synod undercroft guard stands in the passage junction with a sealed-link iron grate key on a chain around one wrist, making clear that unauthorized entry is not expected.
+~
+This Synod undercroft guard controls access between the upper undercroft network and the cell's operations center, holding the key to the iron grate that separates the tidal passages from the deeper vault chambers. The guard is experienced in the undercroft's physical environment and fights without the hesitation that unfamiliar terrain would impose.
+~
+33554529 0 -500 S
+74 0
+50 0 3 3
+! 0 0 0 7 7171 0 1
+l 100 14268 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#14246
+a Synod cell warden~
+a Synod cell warden~
+A Synod cell warden coordinates the operation's security with a calm that comes from having neutralized enough interruptions that the procedure is well-rehearsed.
+~
+This Synod cell warden manages the Hierophant's security detail, coordinating the smuggling cell's defensive posture in the undercroft's deep chambers. The warden's authority covers both the physical security arrangements and the enforcement of cell discipline, which is maintained by direct consequence rather than formal hierarchy.
+~
+33554529 0 -500 S
+76 0
+50 0 3 3
+! 0 0 0 7 7171 0 1
+#14247
+a Synod relic porter~
+a Synod relic porter~
+A Synod relic porter transfers a sealed relic container from one storage position to another, following the Hierophant's loading sequence with practiced care for the handling protocols.
+~
+This Synod relic porter moves the undercroft's relic cargo according to the cell's rotation schedule, cycling artifacts through the vault to distribute the containment load and make tracking by external assessment more difficult. The careful handling reflects both training and knowledge that mishandling containment-class artifacts has consequences beyond disciplinary.
+~
+97 0 -500 S
+70 0
+0 0 2 2
+! 0 0 0 7 7171 0 1
+#14248
+a harbor dockhand~
+a harbor dockhand~
+A harbor dockhand with a cargo hook over one shoulder watches the pier approach with the particular attention of someone expecting trouble from an arriving vessel.
+~
+This harbor dockhand has crossed from general dock labor into the informal enforcement role that develops around contested pier space. The cargo hook is a working tool, but the dockhand's posture makes clear it has more than one application.
+~
+97 0 -100 S
+62 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14249
+a Tidewall sentinel~
+a Tidewall sentinel~
+A Tidewall sentinel walks the upper wall-walk perimeter, stopping at each overlook point to check the seaward approach before continuing the circuit.
+~
+This Tidewall sentinel maintains the seaward perimeter watch, a rotation designed to spot approach-by-sea threats before they reach the wall's base. The sentinel's knowledge of the wall's maintenance access points is a security prerequisite for the posting.
+~
+67 0 0 S
+65 0
+0 0 0 0
+! 0 0 0 7 3 0 1
+#14250
+a harbor chain gangler~
+a harbor chain gangler~
+A harbor chain gangler moves along the breakwater causeway with the coordination of someone who has worked the chain mechanism through enough storm cycles to know its tolerances.
+~
+This harbor chain gangler works the breakwater maintenance rotation and winch house crew on alternate cycles, giving them more unsupervised access to the harbor's outer structures than most harbor-front workers. The gangler has parlayed this access into a profitable sideline that does not appear in the Harbor Register.
+~
+97 0 -200 S
+64 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14251
+a breakwater scavenger bird~
+a breakwater scavenger bird~
+A large breakwater scavenger bird stands on the causeway's outermost stone, regarding new arrivals with territorial attention.
+~
+This breakwater scavenger bird is a species native to rocky coastal exposures, larger than a coastal gull and more aggressive about defending feeding territory. It has learned that the harbor chain's operation cycle produces accessible fish in the disturbed water below, and it considers anything approaching the breakwater end to be a competitor.
+~
+97 0 0 S
+62 0
+0 0 0 0
+! 0 0 0 7 1 0 1
+#14252
+a Quarantine Ledger guard~
+a Quarantine Ledger guard~
+A Quarantine Ledger guard stands at the isolation zone perimeter, watching for unauthorized approach to the containment chambers with focused attention.
+~
+This Quarantine Ledger guard is posted at the isolation chamber's entry perimeter, tasked with preventing unauthorized access to containment-class relic storage. The briefing for this posting included specific instructions about what not to touch, and the guard follows them with the motivated compliance of someone who understood the briefing.
+~
+67 0 0 S
+68 0
+0 0 0 0
+! 0 0 0 7 7171 0 1
+#14253
+the Tide Ledger QLC specialist~
+the Tide Ledger QLC specialist~
+The Tide Ledger Quarantine Liaison Coordinator sits at a secondary archive desk, cross-referencing Quarantine Ledger hazard tags against Tide Ledger cargo certifications.
+~
+The Tide Ledger QLC specialist bridges the commercial archive function and the Quarantine Ledger's containment verification protocol, maintaining the authorization chain for relic-class cargo moving through legitimate channels. The specialist holds the key to the Sealed Archive Passage, the inner record vault where the oldest cargo certification history and the Quarantine Ledger's cross-reference concordance are stored.
+~
+67 0 0 S
+70 0
+0 0 0 0
+! 0 0 0 7 7171 0 1
+l 100 14267 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#0
