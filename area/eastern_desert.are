@@ -18,24 +18,18 @@ M No bad room spells allowed.
 #1832
 @@yThe Sunward Caravan Way@@N~
 @@yA broad ribbon of packed sand runs perfectly east and west, bordered by low cairns painted with faded @@ygold@@y that still catch the sun.
-
 @@bHigh above, a clean blue vault throws sharp light across wagon ruts, and each gust carries the dry rasp of distant dunes sliding against stone.
-
 @@yEven with no travelers in sight, the road feels alive with old commerce, as if caravans passed only moments ago and left their heat in the ground.@@N
-
 @@yThe straight alignment makes travel simple, but the silence beyond the road reminds you how quickly a single step off-course can turn hostile.@@N
-
 ~
 4 10
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1833
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1036
@@ -43,24 +37,18 @@ S
 #1833
 @@bBluewind Trade Road@@N~
 @@yThe caravan way here is hard-packed and disciplined, a deliberate line cut through restless desert that refuses to stay still for long.
-
 @@bBlue-shadowed drifts gather at the margins while sun-burnished marker stones stand like patient sentries counting miles to the east.
-
 @@yYour steps stir fine dust that glitters briefly before vanishing, swallowed by a wind that never quite stops speaking.@@N
-
 @@yThe straight alignment makes travel simple, but the silence beyond the road reminds you how quickly a single step off-course can turn hostile.@@N
-
 ~
 4 10
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1834
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1832
@@ -68,30 +56,23 @@ S
 #1834
 @@yThe Sandwright Causeway@@N~
 @@yThis leg of the eastern road is scored with old wheel tracks, deep enough to show how heavily it has been trusted over the years.
-
 @@bA sharp desert breeze sweeps along the straightaway and whistles through broken trade-post timbers half-buried beside the route.
-
 @@yThe horizon shimmers in bands of @@bblue@@y and @@ygold@@y, making distance uncertain and the next rise feel farther than it should.@@N
-
 @@yTo the sides, untouched dunes promise danger and opportunity, but the main road remains an intentional, unbroken guide toward the far east.@@N
-
 ~
 4 10
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1835
 D2
 A slanted track drops into a scorpion wash.
-
 ~
 ~
 0 -1 1912
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1833
@@ -99,13 +80,9 @@ S
 #1835
 @@bDuneglass Transit@@N~
 @@yA long, unwavering causeway divides dunes on both sides, the surface compressed by generations of merchants, scouts, and soldiers.
-
 @@bSunlight bounces off grains the color of hammered brass, then fades into cool cobalt shade where the drifts shoulder up against stone.
-
 @@ySomewhere out in the open waste, canvas rigging snaps in the wind, a faint reminder that this road is still the desert's main artery.@@N
-
 @@yThe straight alignment makes travel simple, but the silence beyond the road reminds you how quickly a single step off-course can turn hostile.@@N
-
 ~
 4 10
 D0
@@ -114,13 +91,11 @@ D0
 0 -1 4439
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1836
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1834
@@ -128,18 +103,13 @@ S
 #1836
 @@yThe Gilded Eastbound Track@@N~
 @@yA broad ribbon of packed sand runs perfectly east and west, bordered by low cairns painted with faded @@ygold@@y that still catch the sun.
-
 @@bHigh above, a clean blue vault throws sharp light across wagon ruts, and each gust carries the dry rasp of distant dunes sliding against stone.
-
 @@yEven with no travelers in sight, the road feels alive with old commerce, as if caravans passed only moments ago and left their heat in the ground.@@N
-
 @@yThe straight alignment makes travel simple, but the silence beyond the road reminds you how quickly a single step off-course can turn hostile.@@N
-
 ~
 4 10
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1837
@@ -149,7 +119,6 @@ D2
 0 -1 5256
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1835
@@ -157,24 +126,18 @@ S
 #1837
 @@bCobalt Mile of Dust@@N~
 @@yThe caravan way here is hard-packed and disciplined, a deliberate line cut through restless desert that refuses to stay still for long.
-
 @@bBlue-shadowed drifts gather at the margins while sun-burnished marker stones stand like patient sentries counting miles to the east.
-
 @@yYour steps stir fine dust that glitters briefly before vanishing, swallowed by a wind that never quite stops speaking.@@N
-
 @@yThe straight alignment makes travel simple, but the silence beyond the road reminds you how quickly a single step off-course can turn hostile.@@N
-
 ~
 4 10
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1838
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1836
@@ -182,30 +145,23 @@ S
 #1838
 @@yThe Pilgrim's Desert Road@@N~
 @@yThis leg of the eastern road is scored with old wheel tracks, deep enough to show how heavily it has been trusted over the years.
-
 @@bA sharp desert breeze sweeps along the straightaway and whistles through broken trade-post timbers half-buried beside the route.
-
 @@yThe horizon shimmers in bands of @@bblue@@y and @@ygold@@y, making distance uncertain and the next rise feel farther than it should.@@N
-
 @@yTo the sides, untouched dunes promise danger and opportunity, but the main road remains an intentional, unbroken guide toward the far east.@@N
-
 ~
 4 10
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1839
 D2
 A trampled descent leads toward forgotten cisterns.
-
 ~
 ~
 0 -1 1872
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1837
@@ -213,24 +169,18 @@ S
 #1839
 @@bAzure-Washed Wagon Route@@N~
 @@yA long, unwavering causeway divides dunes on both sides, the surface compressed by generations of merchants, scouts, and soldiers.
-
 @@bSunlight bounces off grains the color of hammered brass, then fades into cool cobalt shade where the drifts shoulder up against stone.
-
 @@ySomewhere out in the open waste, canvas rigging snaps in the wind, a faint reminder that this road is still the desert's main artery.@@N
-
 @@yThe straight alignment makes travel simple, but the silence beyond the road reminds you how quickly a single step off-course can turn hostile.@@N
-
 ~
 4 10
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1840
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1838
@@ -242,24 +192,18 @@ S
 #1840
 @@yThe Lantern Merchant Road@@N~
 @@yA broad ribbon of packed sand runs perfectly east and west, bordered by low cairns painted with faded @@ygold@@y that still catch the sun.
-
 @@bHigh above, a clean blue vault throws sharp light across wagon ruts, and each gust carries the dry rasp of distant dunes sliding against stone.
-
 @@yEven with no travelers in sight, the road feels alive with old commerce, as if caravans passed only moments ago and left their heat in the ground.@@N
-
 @@yThe straight alignment makes travel simple, but the silence beyond the road reminds you how quickly a single step off-course can turn hostile.@@N
-
 ~
 4 10
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1841
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1839
@@ -271,24 +215,18 @@ S
 #1841
 @@bWhisperdune Highway@@N~
 @@yThe caravan way here is hard-packed and disciplined, a deliberate line cut through restless desert that refuses to stay still for long.
-
 @@bBlue-shadowed drifts gather at the margins while sun-burnished marker stones stand like patient sentries counting miles to the east.
-
 @@yYour steps stir fine dust that glitters briefly before vanishing, swallowed by a wind that never quite stops speaking.@@N
-
 @@yThe straight alignment makes travel simple, but the silence beyond the road reminds you how quickly a single step off-course can turn hostile.@@N
-
 ~
 4 10
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1842
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1840
@@ -296,30 +234,23 @@ S
 #1842
 @@yThe Brass Compass Track@@N~
 @@yThis leg of the eastern road is scored with old wheel tracks, deep enough to show how heavily it has been trusted over the years.
-
 @@bA sharp desert breeze sweeps along the straightaway and whistles through broken trade-post timbers half-buried beside the route.
-
 @@yThe horizon shimmers in bands of @@bblue@@y and @@ygold@@y, making distance uncertain and the next rise feel farther than it should.@@N
-
 @@yTo the sides, untouched dunes promise danger and opportunity, but the main road remains an intentional, unbroken guide toward the far east.@@N
-
 ~
 4 10
 D0
 A narrow rise climbs toward wind-carved obelisks.
-
 ~
 ~
 0 -1 1852
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1843
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1841
@@ -327,24 +258,18 @@ S
 #1843
 @@bSkyfire Sand Road@@N~
 @@yA long, unwavering causeway divides dunes on both sides, the surface compressed by generations of merchants, scouts, and soldiers.
-
 @@bSunlight bounces off grains the color of hammered brass, then fades into cool cobalt shade where the drifts shoulder up against stone.
-
 @@ySomewhere out in the open waste, canvas rigging snaps in the wind, a faint reminder that this road is still the desert's main artery.@@N
-
 @@yThe straight alignment makes travel simple, but the silence beyond the road reminds you how quickly a single step off-course can turn hostile.@@N
-
 ~
 4 10
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1844
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1842
@@ -352,24 +277,18 @@ S
 #1844
 @@yThe Dry Horizon Corridor@@N~
 @@yA broad ribbon of packed sand runs perfectly east and west, bordered by low cairns painted with faded @@ygold@@y that still catch the sun.
-
 @@bHigh above, a clean blue vault throws sharp light across wagon ruts, and each gust carries the dry rasp of distant dunes sliding against stone.
-
 @@yEven with no travelers in sight, the road feels alive with old commerce, as if caravans passed only moments ago and left their heat in the ground.@@N
-
 @@yThe straight alignment makes travel simple, but the silence beyond the road reminds you how quickly a single step off-course can turn hostile.@@N
-
 ~
 4 10
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1845
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1843
@@ -377,24 +296,18 @@ S
 #1845
 @@bBlue Banner Caravan Line@@N~
 @@yThe caravan way here is hard-packed and disciplined, a deliberate line cut through restless desert that refuses to stay still for long.
-
 @@bBlue-shadowed drifts gather at the margins while sun-burnished marker stones stand like patient sentries counting miles to the east.
-
 @@yYour steps stir fine dust that glitters briefly before vanishing, swallowed by a wind that never quite stops speaking.@@N
-
 @@yThe straight alignment makes travel simple, but the silence beyond the road reminds you how quickly a single step off-course can turn hostile.@@N
-
 ~
 4 10
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1846
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1844
@@ -402,30 +315,23 @@ S
 #1846
 @@yThe Goldwake Trade Strip@@N~
 @@yThis leg of the eastern road is scored with old wheel tracks, deep enough to show how heavily it has been trusted over the years.
-
 @@bA sharp desert breeze sweeps along the straightaway and whistles through broken trade-post timbers half-buried beside the route.
-
 @@yThe horizon shimmers in bands of @@bblue@@y and @@ygold@@y, making distance uncertain and the next rise feel farther than it should.@@N
-
 @@yTo the sides, untouched dunes promise danger and opportunity, but the main road remains an intentional, unbroken guide toward the far east.@@N
-
 ~
 4 10
 D0
 A pale trail threads toward shattered sun shrines.
-
 ~
 ~
 0 -1 1892
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1847
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1845
@@ -433,24 +339,18 @@ S
 #1847
 @@bSirocco Wagon Run@@N~
 @@yA long, unwavering causeway divides dunes on both sides, the surface compressed by generations of merchants, scouts, and soldiers.
-
 @@bSunlight bounces off grains the color of hammered brass, then fades into cool cobalt shade where the drifts shoulder up against stone.
-
 @@ySomewhere out in the open waste, canvas rigging snaps in the wind, a faint reminder that this road is still the desert's main artery.@@N
-
 @@yThe straight alignment makes travel simple, but the silence beyond the road reminds you how quickly a single step off-course can turn hostile.@@N
-
 ~
 4 10
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1848
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1846
@@ -458,24 +358,18 @@ S
 #1848
 @@yThe East Gate Desert Road@@N~
 @@yA broad ribbon of packed sand runs perfectly east and west, bordered by low cairns painted with faded @@ygold@@y that still catch the sun.
-
 @@bHigh above, a clean blue vault throws sharp light across wagon ruts, and each gust carries the dry rasp of distant dunes sliding against stone.
-
 @@yEven with no travelers in sight, the road feels alive with old commerce, as if caravans passed only moments ago and left their heat in the ground.@@N
-
 @@yThe straight alignment makes travel simple, but the silence beyond the road reminds you how quickly a single step off-course can turn hostile.@@N
-
 ~
 4 10
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1849
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1847
@@ -483,24 +377,18 @@ S
 #1849
 @@bThe Sunbleached Thoroughfare@@N~
 @@yThe caravan way here is hard-packed and disciplined, a deliberate line cut through restless desert that refuses to stay still for long.
-
 @@bBlue-shadowed drifts gather at the margins while sun-burnished marker stones stand like patient sentries counting miles to the east.
-
 @@yYour steps stir fine dust that glitters briefly before vanishing, swallowed by a wind that never quite stops speaking.@@N
-
 @@yThe straight alignment makes travel simple, but the silence beyond the road reminds you how quickly a single step off-course can turn hostile.@@N
-
 ~
 4 10
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1850
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1848
@@ -508,24 +396,18 @@ S
 #1850
 @@yThe Long Dune Cartway@@N~
 @@yThis leg of the eastern road is scored with old wheel tracks, deep enough to show how heavily it has been trusted over the years.
-
 @@bA sharp desert breeze sweeps along the straightaway and whistles through broken trade-post timbers half-buried beside the route.
-
 @@yThe horizon shimmers in bands of @@bblue@@y and @@ygold@@y, making distance uncertain and the next rise feel farther than it should.@@N
-
 @@yThe straight alignment makes travel simple, but the silence beyond the road reminds you how quickly a single step off-course can turn hostile.@@N
-
 ~
 4 10
 D1
 Further east along the caravan road.
-
 ~
 ~
 0 -1 1851
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1849
@@ -533,13 +415,9 @@ S
 #1851
 @@bThe Far-Eastern Approach@@N~
 @@yA long, unwavering causeway divides dunes on both sides, the surface compressed by generations of merchants, scouts, and soldiers.
-
 @@bSunlight bounces off grains the color of hammered brass, then fades into cool cobalt shade where the drifts shoulder up against stone.
-
 @@ySomewhere out in the open waste, canvas rigging snaps in the wind, a faint reminder that this road is still the desert's main artery.@@N
-
 @@yThe straight alignment makes travel simple, but the silence beyond the road reminds you how quickly a single step off-course can turn hostile.@@N
-
 ~
 0 8
 D1
@@ -548,7 +426,6 @@ D1
 0 -1 1932
 D3
 Back along the caravan road.
-
 ~
 ~
 0 -1 1850
@@ -556,24 +433,18 @@ S
 #1852
 @@bAntechamber of Leaning Obelisks@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8520 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1853
 D2
 The main caravan road lies back toward Midgaard.
-
 ~
 ~
 0 -1 1842
@@ -581,24 +452,18 @@ S
 #1853
 @@yShadowed Obelisk Court@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8521 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1854
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1852
@@ -606,24 +471,18 @@ S
 #1854
 @@bWind-Scored Pillar Path@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8522 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1855
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1853
@@ -631,18 +490,13 @@ S
 #1855
 @@yThe Cerulean Menhir Walk@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8523 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 4 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1856
@@ -652,7 +506,6 @@ D1
 0 -1 5331
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1854
@@ -660,24 +513,18 @@ S
 #1856
 @@bObelisk Driftway@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8524 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1857
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1855
@@ -685,24 +532,18 @@ S
 #1857
 @@yThe Half-Buried Stone Lane@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8525 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1858
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1856
@@ -710,24 +551,18 @@ S
 #1858
 @@bWhistling Pillar Corridor@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8526 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1859
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1857
@@ -735,24 +570,18 @@ S
 #1859
 @@yThe Rattle-Sand Colonnade@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8527 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1860
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1858
@@ -760,24 +589,18 @@ S
 #1860
 @@bLapis Monolith Traverse@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8528 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1861
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1859
@@ -785,24 +608,18 @@ S
 #1861
 @@yCarved-Stone Defile@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8529 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1862
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1860
@@ -810,24 +627,18 @@ S
 #1862
 @@bThe Echoing Menhir Track@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8530 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1863
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1861
@@ -835,24 +646,18 @@ S
 #1863
 @@ySun-Faded Obelisk Alley@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8531 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1864
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1862
@@ -860,24 +665,18 @@ S
 #1864
 @@bBlue-Shadowed Boundary Grounds@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8532 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1865
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1863
@@ -885,24 +684,18 @@ S
 #1865
 @@yThe Crooked Stone Chute@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8533 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1866
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1864
@@ -910,24 +703,18 @@ S
 #1866
 @@bDustcloak Obelisk Reach@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8534 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1867
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1865
@@ -935,24 +722,18 @@ S
 #1867
 @@yThe Ancient Boundary Path@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8535 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1868
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1866
@@ -960,24 +741,18 @@ S
 #1868
 @@bThe Idolbreak Cause@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8536 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1869
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1867
@@ -985,24 +760,18 @@ S
 #1869
 @@yThe Last Pilgrim Spur@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8537 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1870
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1868
@@ -1010,24 +779,18 @@ S
 #1870
 @@bThe Vizier's Outer Hall@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8538 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1871
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1869
@@ -1035,24 +798,18 @@ S
 #1871
 @@yThe Jackal Vizier's Dais@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8539 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 4 10
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1870
 D5
 A dark shaft descends into the sands below, carved steps leading down into ancient shadow.
-
 ~
 ~
 0 -1 5624
@@ -1060,24 +817,18 @@ S
 #1872
 @@yMouth of the Forgotten Cisterns@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8540 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 The main caravan road lies back toward Midgaard.
-
 ~
 ~
 0 -1 1838
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1873
@@ -1085,24 +836,18 @@ S
 #1873
 @@bThe Broken Aquifer Descent@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8541 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1872
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1874
@@ -1110,24 +855,18 @@ S
 #1874
 @@yCracked Basin Gallery@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8542 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1873
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1875
@@ -1135,24 +874,18 @@ S
 #1875
 @@bThe Hollow Reservoir Walk@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8543 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1874
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1876
@@ -1160,24 +893,18 @@ S
 #1876
 @@ySilted Waterworks Lane@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8544 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1875
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1877
@@ -1185,24 +912,18 @@ S
 #1877
 @@bThe Dry Well Arcade@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8545 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1876
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1878
@@ -1210,24 +931,18 @@ S
 #1878
 @@yStairs of Sunken Stone@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8546 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1877
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1879
@@ -1235,24 +950,18 @@ S
 #1879
 @@bThe Cistern Keeper's Run@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8547 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1878
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1880
@@ -1260,24 +969,18 @@ S
 #1880
 @@yThe Dust-Sealed Conduit@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8548 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1879
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1881
@@ -1285,24 +988,18 @@ S
 #1881
 @@bCollapsed Channel Causeway@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8549 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1880
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1882
@@ -1310,24 +1007,18 @@ S
 #1882
 @@yThe Brackish Memory Walk@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8550 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1881
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1883
@@ -1335,24 +1026,18 @@ S
 #1883
 @@bThe Rusted Pulley Court@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8551 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1882
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1884
@@ -1360,24 +1045,18 @@ S
 #1884
 @@yThe Hollow Jar Vestibule@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8552 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1883
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1885
@@ -1385,24 +1064,18 @@ S
 #1885
 @@bEchoes Beneath the Basins@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8553 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1884
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1886
@@ -1410,24 +1083,18 @@ S
 #1886
 @@yThe Lower Spillway@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8554 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1885
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1887
@@ -1435,24 +1102,18 @@ S
 #1887
 @@bThe Reaver's Gathering Way@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8555 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1886
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1888
@@ -1460,24 +1121,18 @@ S
 #1888
 @@yThe Gilded Quarry Floor@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8556 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1887
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1889
@@ -1485,24 +1140,18 @@ S
 #1889
 @@bThe Sand-Cut Pump Hall@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8557 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1888
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1890
@@ -1510,24 +1159,18 @@ S
 #1890
 @@yThe Inner Cistern Vault@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8558 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1889
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1891
@@ -1535,18 +1178,13 @@ S
 #1891
 @@bThrone of the Sand Reaver@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8559 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 4 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1890
@@ -1554,24 +1192,18 @@ S
 #1892
 @@bThe Broken Sun Altar Path@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8560 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1893
 D2
 The main caravan road lies back toward Midgaard.
-
 ~
 ~
 0 -1 1846
@@ -1579,24 +1211,18 @@ S
 #1893
 @@yThe Shrinefall Approach@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8561 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1894
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1892
@@ -1604,24 +1230,18 @@ S
 #1894
 @@bThe Mosaic Dust Court@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8562 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1895
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1893
@@ -1629,24 +1249,18 @@ S
 #1895
 @@yThe Shattered Lintel Walk@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8563 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1896
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1894
@@ -1654,24 +1268,18 @@ S
 #1896
 @@bThe Pale Relic Traverse@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8564 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1897
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1895
@@ -1679,24 +1287,18 @@ S
 #1897
 @@yIncense-Cracked Sanctuary Lane@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8565 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1898
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1896
@@ -1704,24 +1306,18 @@ S
 #1898
 @@bThe Devotional Ruin@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8566 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1899
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1897
@@ -1729,24 +1325,18 @@ S
 #1899
 @@yThe Bleached Offering Floor@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8567 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1900
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1898
@@ -1754,24 +1344,18 @@ S
 #1900
 @@bThe Sapphire Prayer Route@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8568 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1901
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1899
@@ -1779,24 +1363,18 @@ S
 #1901
 @@yThe Hollow Choir Steps@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8569 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1902
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1900
@@ -1804,24 +1382,18 @@ S
 #1902
 @@bThe Lens of Dawn Arcade@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8570 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1903
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1901
@@ -1829,24 +1401,18 @@ S
 #1903
 @@yThe Sand-Choked Reliquary@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8571 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1904
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1902
@@ -1854,24 +1420,18 @@ S
 #1904
 @@bThe Fractured Halo Walk@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8572 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1905
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1903
@@ -1879,24 +1439,18 @@ S
 #1905
 @@yThe Oracle's Outer Ring@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8573 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1906
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1904
@@ -1904,24 +1458,18 @@ S
 #1906
 @@bThe Glasslight Pilgrim Way@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8574 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1907
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1905
@@ -1929,24 +1477,18 @@ S
 #1907
 @@yThe Crumbled Solar Narthex@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8575 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1908
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1906
@@ -1954,24 +1496,18 @@ S
 #1908
 @@bThe Last Acolyte Corridor@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8576 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1909
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1907
@@ -1979,24 +1515,18 @@ S
 #1909
 @@yThe Dawnmirror Threshold@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8577 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1910
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1908
@@ -2004,24 +1534,18 @@ S
 #1910
 @@bThe Inner Sunward Sanctum@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
-
 @@yHere in this pocket of the Eastern Desert, room 8578 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1911
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1909
@@ -2029,18 +1553,13 @@ S
 #1911
 @@ySeat of the Sapphire Oracle@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yThe farther inward you go, the more the route feels curated for ambush and ritual alike, narrowing where stone rises and opening where sightlines fail.
-
 @@yHere in this pocket of the Eastern Desert, room 8579 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 4 10
 D2
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1910
@@ -2048,24 +1567,18 @@ S
 #1912
 @@yThe Scorpion Wash Mouth@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8580 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 The main caravan road lies back toward Midgaard.
-
 ~
 ~
 0 -1 1834
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1913
@@ -2073,24 +1586,18 @@ S
 #1913
 @@bThe Chipped Wadi Descent@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8581 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1912
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1914
@@ -2098,24 +1605,18 @@ S
 #1914
 @@yThe Stingwind Channel@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8582 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1913
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1915
@@ -2123,24 +1624,18 @@ S
 #1915
 @@bThe Dry Torrent Trough@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8583 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1914
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1916
@@ -2148,24 +1643,18 @@ S
 #1916
 @@yThe Razor Gravel Run@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8584 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1915
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1917
@@ -2173,24 +1662,18 @@ S
 #1917
 @@bThe Chitin-Littered Bend@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8585 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1916
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1918
@@ -2198,24 +1681,18 @@ S
 #1918
 @@yThe Venom Dust Funnel@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8586 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1917
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1919
@@ -2223,24 +1700,18 @@ S
 #1919
 @@bThe Sun-Peeled Ravine@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8587 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1918
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1920
@@ -2248,24 +1719,18 @@ S
 #1920
 @@yThe Iron Stinger Way@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8588 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1919
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1921
@@ -2273,24 +1738,18 @@ S
 #1921
 @@bThe Heatshiver Gully@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8589 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1920
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1922
@@ -2298,24 +1757,18 @@ S
 #1922
 @@yThe Thorned Sand Slot@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8590 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1921
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1923
@@ -2323,24 +1776,18 @@ S
 #1923
 @@bThe Bitter Salt Hollow@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8591 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1922
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1924
@@ -2348,24 +1795,18 @@ S
 #1924
 @@yThe Tyrant's Patrol Cut@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8592 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1923
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1925
@@ -2373,24 +1814,18 @@ S
 #1925
 @@bThe Black Chitin Reach@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8593 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1924
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1926
@@ -2398,24 +1833,18 @@ S
 #1926
 @@yThe Dunefang Crossing@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8594 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1925
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1927
@@ -2423,24 +1852,18 @@ S
 #1927
 @@bThe Wadi of Broken Standards@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8595 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1926
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1928
@@ -2448,24 +1871,18 @@ S
 #1928
 @@yThe Carrion Kite Shelf@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8596 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1927
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1929
@@ -2473,24 +1890,18 @@ S
 #1929
 @@bThe Crownless March@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8597 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1928
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1930
@@ -2498,24 +1909,18 @@ S
 #1930
 @@yThe Tyrant's Final Approach@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
-
 @@yA palpable pressure sits on the corridor, as though a dominant will has claimed the entire branch and waits at its end.@@N
-
 @@yHere in this pocket of the Eastern Desert, room 8598 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 0 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1929
 D2
 Deeper into the wing's shifting corridors.
-
 ~
 ~
 0 -1 1931
@@ -2523,18 +1928,13 @@ S
 #1931
 @@bCourt of the Endless Dunes@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
-
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
-
 @@yOld footprints vanish quickly under fresh spill, but the arrangement of rubble suggests repeated patrols and deliberate control.
-
 @@yHere in this pocket of the Eastern Desert, room 8599 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
-
 ~
 4 10
 D0
 Back toward the wing entrance.
-
 ~
 ~
 0 -1 1930
@@ -2546,10 +1946,8 @@ jackal cultist obelisk~
 @@bJackal Cultist of the Obelisks@@N~
 @@bJackal Cultist of the Obelisks@@N stalks the sands here.@@N
 
-
 ~
 @@yA hardened desert fighter wrapped in @@bblue@@y and @@ygolden@@y cloth watches every movement with predatory focus.@@N
-
 
 ~
 1 0 0 S
@@ -2565,10 +1963,8 @@ dune reaver cistern~
 @@yDune Reaver of the Hollow Cisterns@@N~
 @@yDune Reaver of the Hollow Cisterns@@N stalks the sands here.@@N
 
-
 ~
 @@yA hardened desert fighter wrapped in @@bblue@@y and @@ygolden@@y cloth watches every movement with predatory focus.@@N
-
 
 ~
 1 0 0 S
@@ -2584,10 +1980,8 @@ solar acolyte shrine~
 @@bSolar Acolyte of Broken Shrines@@N~
 @@bSolar Acolyte of Broken Shrines@@N stalks the sands here.@@N
 
-
 ~
 @@yA hardened desert fighter wrapped in @@bblue@@y and @@ygolden@@y cloth watches every movement with predatory focus.@@N
-
 
 ~
 1 0 0 S
@@ -2603,10 +1997,8 @@ scorpion marauder wash~
 @@yScorpion Marauder of the Wash@@N~
 @@yScorpion Marauder of the Wash@@N stalks the sands here.@@N
 
-
 ~
 @@yA hardened desert fighter wrapped in @@bblue@@y and @@ygolden@@y cloth watches every movement with predatory focus.@@N
-
 
 ~
 1 0 0 S
@@ -2622,10 +2014,8 @@ azure vizier boss jackal~
 @@bThe Azure Jackal Vizier@@N~
 @@bThe Azure Jackal Vizier@@N stands motionless at the end of the wing, guarding ancient dominion.@@N
 
-
 ~
 @@bBlue sigils@@y pulse across ornate desert armor as this warlord measures intruders with merciless patience.@@N
-
 
 ~
 33554435 0 0 S
@@ -2641,10 +2031,8 @@ gilded reaver boss sand~
 @@yThe Gilded Sand Reaver@@N~
 @@yThe Gilded Sand Reaver@@N stands motionless at the end of the wing, guarding ancient dominion.@@N
 
-
 ~
 @@bBlue sigils@@y pulse across ornate desert armor as this warlord measures intruders with merciless patience.@@N
-
 
 ~
 33554435 0 0 S
@@ -2660,10 +2048,8 @@ sapphire oracle boss sun~
 @@bThe Sapphire Sun Oracle@@N~
 @@bThe Sapphire Sun Oracle@@N stands motionless at the end of the wing, guarding ancient dominion.@@N
 
-
 ~
 @@bBlue sigils@@y pulse across ornate desert armor as this warlord measures intruders with merciless patience.@@N
-
 
 ~
 33554435 0 0 S
@@ -2679,10 +2065,8 @@ tyrant endless dunes boss~
 @@yThe Tyrant of Endless Dunes@@N~
 @@yThe Tyrant of Endless Dunes@@N stands motionless at the end of the wing, guarding ancient dominion.@@N
 
-
 ~
 @@bBlue sigils@@y pulse across ornate desert armor as this warlord measures intruders with merciless patience.@@N
-
 
 ~
 33554435 0 0 S

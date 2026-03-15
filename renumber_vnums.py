@@ -114,8 +114,13 @@ def remap(v_str, mapping, allow_neg1=False):
 
 def transform_area_file(path, mapping, area_vnums_for_this_area):
     """Transform area file in-place using the vnum mapping."""
-    with open(path) as f:
-        lines = f.readlines()
+    with open(path, 'rb') as f:
+        raw = f.read()
+    # Some area files use \n\r (LF+CR) line endings. Python's text mode converts
+    # standalone \r to \n, turning \n\r into \n\n (blank lines). Strip all \r
+    # bytes before processing to normalize to LF-only line endings.
+    raw = raw.replace(b'\r', b'')
+    lines = raw.decode('latin-1').splitlines(keepends=True)
 
     result = []
     section = None

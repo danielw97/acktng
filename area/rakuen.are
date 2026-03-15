@@ -15,7 +15,7 @@ W all~
 #ROOMS
 #4239
 @@gThe Boundary Pillar Road@@N~
-@@gThe woodland releases you here without ceremony — the canopy breaks and the
+@@gThe woodland releases you here without ceremony â the canopy breaks and the
 sky opens in a long southward sweep. A carved granite pillar stands at the
 road's edge, its north face lettered in Midgaard standard script and its south
 face carved with a single word: Rakuen.@@N @@WAdvisory boards flanking the
@@ -42,7 +42,7 @@ S
 stained the pale red that gives the Redwater its name. @@gThe western fork
 curves toward an elevated overlook above the flood channel; the main road
 continues south toward the Dispatch House.@@N @@WA route-board cluster stands
-at the fork, its posts carrying six separate notices — three official, one
+at the fork, its posts carrying six separate notices â three official, one
 citizen-posted complaint about notice proliferation, one response to that
 complaint, and one advisory telling travelers to disregard the last two.@@N
 @@bA broken wagon spoke has been wedged into the fork post as an informal
@@ -67,7 +67,7 @@ S
 @@gSouthward Guide-Post Run@@N~
 @@gThe approach narrows between two rows of carved guide-posts, each bearing
 distance tallies to the Lower Dispatch House, to the Central Market, and to
-the Bloom Pavilion. @@gSome posts carry additional unofficial markings — route
+the Bloom Pavilion. @@gSome posts carry additional unofficial markings â route
 amendments, seasonal warnings, and at least one carving that appears to be a
 satirical caricature of a Bloom Council steward.@@N @@bThe ground here is
 firm but shows the scalloped ridges of seasonal flooding along the verge; the
@@ -94,7 +94,7 @@ S
 @@cRedwater Flood Overlook@@N~
 @@cA broad step of natural bedrock projects above the flood channel here,
 worn smooth by the boots of generations of flood-watchers. @@cThe Redwater
-channel is visible below — presently low and clear, running over sand and
+channel is visible below â presently low and clear, running over sand and
 pebble in long translucent sheets.@@N @@bHigh-water marks are carved into the
 rock face at irregular intervals, some dating back to the early settlement
 years by the style of the numerals. @@bThe highest mark sits considerably
@@ -117,7 +117,7 @@ S
 @@cFlood Warning Drum Platform@@N~
 @@cA raised timber platform supports four barrel drums, each painted with
 flood-season color codes and positioned to be audible across the lower
-approach. @@cThe drums show the scars of regular use — the heads have been
+approach. @@cThe drums show the scars of regular use â the heads have been
 replaced at least twice, and the mallets hanging from the frame posts are
 worn smooth at the grip.@@N @@bThe platform attendant's log is tacked to the
 south post under a rain cover; the most recent entries note 'channel stable,
@@ -137,9 +137,9 @@ D3
 0 -1 4241
 S
 #4244
-@@WLower Dispatch House — Entry Arch@@N~
+@@WLower Dispatch House â Entry Arch@@N~
 @@WThe entry arch of the Lower Dispatch House is built of dressed fieldstone,
-older than the current structure by at least a century — the lintel stone
+older than the current structure by at least a century â the lintel stone
 carries a founding-era carving of a compass rose that has been partially
 obscured by later civic seal stamps.@@N @@bThe floor just inside the arch is
 worn to a concave polish by foot traffic; a shallow scraper bar is set into
@@ -160,7 +160,7 @@ D2
 0 -1 4245
 S
 #4245
-@@WLower Dispatch House — Registration Floor@@N~
+@@WLower Dispatch House â Registration Floor@@N~
 @@WThe registration floor is the operational heart of Rakuen's northern
 approach management. @@WThree counters run parallel along the south wall,
 each staffed for different arrival categories: returning residents, first-time
@@ -187,12 +187,12 @@ D2
 0 -1 4246
 S
 #4246
-@@WLower Dispatch House — Inner Office@@N~
+@@WLower Dispatch House â Inner Office@@N~
 @@WThe inner office is where the senior registrar processes complex arrivals
 and departure records. @@WFiling cabinets line three walls, their drawer
 labels written in a cramped notation system that appears to have been designed
 to be understood only by whoever wrote it.@@N @@bA second desk in the
-southwest corner holds the active amendment file — a stack of paper held flat
+southwest corner holds the active amendment file â a stack of paper held flat
 by a smooth river stone used as a paperweight. @@bThe stone has a small
 carved mark that suggests it was once a Promise Stone fragment; no one in
 the current staff knows how it arrived on the registrar's desk.@@N
@@ -232,7 +232,7 @@ S
 @@bRoute-Board Court Annex@@N~
 @@bThe annex extends the route-board court eastward, handling the overflow of
 notices that the main court's walls can no longer absorb. @@bBoards here tend
-to carry older or more specialized advisories — seasonal route adjustments,
+to carry older or more specialized advisories â seasonal route adjustments,
 guide-compact renewal notices, and a section dedicated to the ongoing
 renegotiation of the eastern approach paths.@@N @@WA hand-lettered sign above
 the annex reads: 'Notices posted here are provisional pending review.'
@@ -304,7 +304,7 @@ S
 @@WThree ways diverge here: east toward the Causeway Quarter along the main
 civic spine, south into the Lower Terraces along the flood-prone residential
 descent, and west back to the stair landing and the approach road.@@N
-@@bA standing stone at the center of the junction is a Promise Stone — one of
+@@bA standing stone at the center of the junction is a Promise Stone â one of
 the founding-era granite markers carved with the Compact's core pledges. @@bThis
 one carries the third pledge, concerning rotating stewardship, partially
 obscured by a bracket-mounted civic notice about current ration allocation
@@ -331,7 +331,7 @@ S
 @@bThe road drops from the junction here, switching into the first of the
 stilted-lane quarter's descending walkways. @@bThe lane is built on timber
 pilings driven into the flood plain, the boards broad and maintained but
-visibly newer than the pilings beneath them — the original boards rotted out
+visibly newer than the pilings beneath them â the original boards rotted out
 during the second flood cycle and the replacement timber came from salvage.@@N
 @@gThe canopy closes in from both sides as the lane descends, and the air
 carries the distinctive smell of damp earth and root matter that marks the
@@ -352,7 +352,7 @@ S
 #4253
 @@bStipled Lane Midway@@N~
 @@bThe lane widens at a timber platform built to serve as a neighborhood
-gathering point — a small community fire basin occupies the center, unlit at
+gathering point â a small community fire basin occupies the center, unlit at
 present, its rim holding the ash of recent use. @@bResidents have hung
 planters from the piling posts; most contain herbs and one ambitious one
 holds a dwarf citrus tree that has been here longer than several of the
@@ -378,7 +378,7 @@ S
 @@bStipled Lane South Spur@@N~
 @@bA narrower spur of the stilted lane curves south and east away from the
 main way, serving the households on the outer edge of the platform. @@bThe
-boards here are slightly different in color — a patch job from the last
+boards here are slightly different in color â a patch job from the last
 major repair season, done in haste and now weathered to near-match.@@N
 @@gA climbing vine has colonized one section of the railing and has been
 allowed to remain; someone has trained it into a rough arch over the entry
@@ -441,7 +441,7 @@ D3
 S
 #4257
 @@gRoot-Weave Quarter Entry@@N~
-@@gThe root-weave houses begin here — structures built into the buttress
+@@gThe root-weave houses begin here â structures built into the buttress
 roots of the ancient flood-plain trees, their walls woven from split root
 cuttings and the gaps chinked with clay mixed with ash. @@gThe technique
 is genuinely old: the founding generation developed it as a way of building
@@ -452,7 +452,7 @@ canopy angles. @@gSome houses have clearly been rebuilt since the original
 construction, their replacement sections slightly more angular and slightly
 less integrated.@@N @@WA Promise Stone is set into the root mass of the
 largest tree at the quarter's entry; this one has no crack and its pledge
-text — concerning civic enoughness — is still fully legible.@@N
+text â concerning civic enoughness â is still fully legible.@@N
 ~
 0 1
 D0
@@ -500,7 +500,7 @@ S
 route around, the path simply stopping at the point where the roots
 become impassable. @@gThree households back onto this dead end, their
 rear walls sharing the root surface.@@N @@gThe residents have turned
-the root face into a communal notice board of sorts — notes, drawings,
+the root face into a communal notice board of sorts â notes, drawings,
 a record of the household children's heights measured against the root
 bark at each Festival season.@@N
 ~
@@ -580,12 +580,12 @@ S
 #4263
 @@cRest Garden Cistern Overlook@@N~
 @@cA cracked stone platform at the center of the rest garden overlooks
-the main cistern access shaft — a circular opening in the ground ringed
+the main cistern access shaft â a circular opening in the ground ringed
 by fitted stone, the shaft descending to the siphon vault and the
 root tunnel system below. @@cThe shaft cover is a heavy iron plate
 with a valve key lock; the plate has been sealed for the current season
 pending the pump keeper's maintenance cycle.@@N @@bBenches ring the
-platform, several with carved names and dates — the garden has served
+platform, several with carved names and dates â the garden has served
 as a mourning space since the Ash-and-Iron years, and the carvings
 include a number of names from the flood casualty lists.@@N @@WA
 Bloom Council notice affixed to the cistern ring reads: 'Access to
@@ -609,7 +609,7 @@ S
 #4264
 @@gRest Garden South Walk@@N~
 @@gThe rest garden's southern walk passes through the densest remaining
-tree cover in the lower terrace zone — tall flood-adapted trees whose
+tree cover in the lower terrace zone â tall flood-adapted trees whose
 canopy was never cleared, maintained as part of the founding generation's
 forest integration principle. @@gBenches here are older and less maintained,
 the wood grey and checked but still sound.@@N @@gThe walk connects east to
@@ -627,12 +627,12 @@ D1
 0 -1 4265
 S
 #4265
-@@bCollapsed Promenade — West Entry@@N~
+@@bCollapsed Promenade â West Entry@@N~
 @@bThe promenade was once a formal civic walk connecting the lower terrace
 neighborhoods. @@bThe third flood cycle undermined the original paving
 and the Bloom Council reclassified the wreckage as 'heritage landscape,'
 a designation that means the rubble is preserved but not repaired.@@N
-@@bThe western entry is the best-maintained section — the paving is
+@@bThe western entry is the best-maintained section â the paving is
 broken but passable, and the original lamp post stubs still stand at
 measured intervals. @@bThe promenade extends east and also branches
 south along the ruined causeway face.@@N
@@ -652,9 +652,9 @@ D3
 0 -1 4264
 S
 #4266
-@@bCollapsed Promenade — South Face@@N~
+@@bCollapsed Promenade â South Face@@N~
 @@bThe south face of the promenade runs along the edge of a significant
-flood drop — the terrain here fell two meters in a single flood season
+flood drop â the terrain here fell two meters in a single flood season
 and was never refilled. @@bThe old promenade railing, bent at an angle
 by the ground shift, still runs along the edge as an accidental barrier
 that prevents anyone from stepping off the drop inadvertently.@@N
@@ -674,11 +674,11 @@ D1
 0 -1 4268
 S
 #4267
-@@bCollapsed Promenade — East Span@@N~
+@@bCollapsed Promenade â East Span@@N~
 @@bThe east span of the promenade is the most heavily damaged section,
 the paving here shifted into a series of tilted slabs that require care
 to cross. @@bBetween two of the larger slabs, a narrow but deep crack
-runs parallel to the walk — the kind of structural failure that the
+runs parallel to the walk â the kind of structural failure that the
 salvage courts flag for assessment and then defer for another season.@@N
 @@WA stenciled notice on the north wall reads: 'Span rated conditionally
 passable. Do not congregate. Weight limit posted at west entry (see
@@ -695,11 +695,11 @@ D3
 0 -1 4265
 S
 #4268
-@@bCollapsed Promenade — East Junction@@N~
+@@bCollapsed Promenade â East Junction@@N~
 @@bThe promenade terminates here at a junction with the ember warden
 floodline approach, the ruined formal walk giving way to the more
 functional stonework of the warden patrol paths. @@bA low wall at the
-junction carries the flood-line marks in orange paint — the elevation
+junction carries the flood-line marks in orange paint â the elevation
 at which the warden stations are activated for emergency flood response.@@N
 @@bThe junction board lists the current floodline protocol status:
 'condition green, standard watch, drum signal optional.'@@N
@@ -721,7 +721,7 @@ S
 #4269
 @@WEmber Warden Floodline Station@@N~
 @@WThe floodline station is a low stone structure built for function rather
-than presence — equipment lockers, a duty log stand, a signal board, and
+than presence â equipment lockers, a duty log stand, a signal board, and
 a narrow covered rest bench. @@WThe station serves as the coordination point
 for the lower terrace flood-watch rotation, with patrol routes extending
 along the promenade and the stilted lane perimeter.@@N @@bA stair in the
@@ -749,7 +749,7 @@ S
 @@WA smaller patrol post extends east from the main floodline station,
 positioned to cover the flood-plain approach that the station proper
 cannot see. @@WThe patrol post has a portable signal mirror and a
-weather instrument mounted on a bracket — a rain-weight gauge used
+weather instrument mounted on a bracket â a rain-weight gauge used
 to track precipitation intensity during storm cycles.@@N @@WA single
 bench faces east toward the flood plain, and a duty assignment board
 on the south wall lists the names of wardens on current rotation.@@N
@@ -767,7 +767,7 @@ S
 #4271
 @@WEmber Warden Outlook Platform@@N~
 @@WThe outlook platform at the eastern end of the floodline patrol route
-provides the longest sightline available in the lower terrace zone —
+provides the longest sightline available in the lower terrace zone â
 clear east to the edge of the canopy workshop district and south along
 the flood-plain margin. @@WA tripod-mounted viewing lens is fixed to
 the platform railing for distance assessment during flood events.@@N
@@ -784,7 +784,7 @@ D3
 0 -1 4270
 S
 #4272
-@@WCauseway Quarter — West Approach@@N~
+@@WCauseway Quarter â West Approach@@N~
 @@WThe road from the terrace junction enters the Causeway Quarter here,
 rising onto the elevated stone rib that gives the district its name. @@WThe
 causeway surface is dressed stone over rubble fill, noticeably more solid
@@ -794,7 +794,7 @@ at the end of the first approach corridor, its storage crown elevated above
 street level on a stone-and-timber frame. @@bThe approach road east continues
 through three more tower clusters before reaching the Central Market.@@N
 @@WA Bloom Council waymark post at the approach junction carries the
-district name and current ration protocol status — the posted status is
+district name and current ration protocol status â the posted status is
 'standard allocation, queue open, no emergency declaration.'@@N
 ~
 0 1
@@ -835,7 +835,7 @@ S
 #4274
 @@WRation Tower Two Approach@@N~
 @@WThe second tower cluster is visible north and east, its distribution
-platform larger than the first tower's — this section serves the
+platform larger than the first tower's â this section serves the
 central causeway households and sees heavier allocation traffic. @@WThe
 approach corridor between towers one and two is one of the few places
 in the quarter with benches for waiting; the benches are always
@@ -862,7 +862,7 @@ S
 @@WThe third tower cluster is the newest, built in response to the
 population distribution shift after the second Redwater flood cycle
 resettled several lower terrace households into the causeway zone.
-@@WThe construction is visibly different — cleaner joinery, more
+@@WThe construction is visibly different â cleaner joinery, more
 uniform stone, less patchwork than the older towers.@@N @@bA descent
 to the south from this approach leads to the tower relay junction
 connecting the causeway to the lower floodline system. @@bThe tower
@@ -881,7 +881,7 @@ S
 #4276
 @@WCauseway-Floodline Relay Junction@@N~
 @@WThe relay junction is where the causeway level meets the lower
-terrace patrol circuit — a stone platform connecting the causeway
+terrace patrol circuit â a stone platform connecting the causeway
 rib to the ember warden floodline station below by a broad stair.
 @@WThe junction is formally classified as a 'civic transition point,'
 which means it has an inspection log, a duty board, and a small
@@ -933,7 +933,7 @@ S
 @@WThe fourth tower sits at the junction of the relay passage and
 the causeway spine, its position chosen to serve the largest
 distribution catchment in the quarter. @@WThe tower is notably
-taller than the others — an extra storage tier was added during
+taller than the others â an extra storage tier was added during
 the Ash-and-Iron years when the orchard blight made grain imports
 the primary caloric source.@@N @@bThe extra tier is visibly newer
 and structurally separate from the lower portion; a professional
@@ -955,15 +955,15 @@ D3
 0 -1 4277
 S
 #4279
-@@WCauseway Spine — Market Approach@@N~
+@@WCauseway Spine â Market Approach@@N~
 @@WThe causeway spine widens here in anticipation of the Central
 Market, the stone rib expanding into a broad plaza approach with
 wider paving and more substantial lamp brackets. @@WThe transition
 from the ration tower district to the market zone is marked by a
-change in the civic signage — allocation notices give way to
+change in the civic signage â allocation notices give way to
 vendor registration boards and market hour announcements.@@N
 @@bA busker's mark is chalked on the paving near the market
-entry — an informal designation that has somehow survived three
+entry â an informal designation that has somehow survived three
 rounds of civic cleaning and been rechalked each time, suggesting
 the buskers have organized.@@N
 ~
@@ -978,11 +978,11 @@ D3
 0 -1 4278
 S
 #4280
-@@WCentral Market — West Deck@@N~
+@@WCentral Market â West Deck@@N~
 @@WThe Central Market is the commercial and social center of the
 Causeway Quarter, built on an elevated stone deck that puts vendors
 at eye level with the causeway population. @@WThe west deck holds
-the permanent stall assignments — weavers, pot-sellers, preserved
+the permanent stall assignments â weavers, pot-sellers, preserved
 food vendors, and the always-contested spice row. @@WArrival from
 the causeway spine enters here, and the mid-city Dispatch House
 is accessible north through the market's rear passage.@@N
@@ -1012,9 +1012,9 @@ D3
 0 -1 4279
 S
 #4281
-@@WCentral Market — North Deck@@N~
+@@WCentral Market â North Deck@@N~
 @@WThe north deck of the Central Market handles the less-established
-vendors — the seasonal stalls, the visiting traders from the woodland
+vendors â the seasonal stalls, the visiting traders from the woodland
 route, and the informal exchange that the Bloom Council officially
 discourages and practically cannot stop. @@WThe energy here is
 slightly different from the south deck: less settled, more negotiable.@@N
@@ -1033,9 +1033,9 @@ D3
 0 -1 4280
 S
 #4282
-@@WCentral Market — Northeast Deck@@N~
+@@WCentral Market â Northeast Deck@@N~
 @@WThe northeast corner of the market deck is where the practical
-and the ceremonial meet — a permanent flower stall operates here
+and the ceremonial meet â a permanent flower stall operates here
 whose vendor has maintained the ever-bloom cultivar inventory
 through three consecutive bad growing seasons through sheer
 determination and a carefully maintained greenhouse on the
@@ -1054,14 +1054,14 @@ D3
 0 -1 4281
 S
 #4283
-@@WCentral Market — South Deck@@N~
+@@WCentral Market â South Deck@@N~
 @@WThe south deck holds the largest single stall: a food preparation
 vendor whose operation has expanded to occupy what was originally
 three separate stall assignments. @@WThe vendor operates entirely
 within Compact regulations, but the regulations apparently allow
 for creative interpretation of stall boundary markers.@@N
 @@bThe south deck also serves as the informal neighborhood court
-for minor disputes — two residents are currently engaged in what
+for minor disputes â two residents are currently engaged in what
 appears to be a mediated disagreement being observed by a small
 audience.@@N
 ~
@@ -1076,10 +1076,10 @@ D3
 0 -1 4284
 S
 #4284
-@@WCentral Market — Southwest Passage@@N~
+@@WCentral Market â Southwest Passage@@N~
 @@WThe southwest passage is nominally a throughway connecting the
 south and west decks, but in practice it has been colonized by the
-smallest and most persistent vendors — cloth-menders, key-cutters,
+smallest and most persistent vendors â cloth-menders, key-cutters,
 and a single operator who appears to trade exclusively in other
 people's appointment times.@@N @@bThe passage is narrow enough
 that two loaded carts cannot pass each other, a fact that generates
@@ -1097,12 +1097,12 @@ D3
 0 -1 4285
 S
 #4285
-@@WCentral Market — West Loop Close@@N~
+@@WCentral Market â West Loop Close@@N~
 @@WThe final section of the market's perimeter walk closes the loop
 back to the west deck, passing the preserved-goods row where dried
 herbs, sealed grain jars, and root-stock preserves are sold in
 quantities designed for household resilience planning. @@WThe vendors
-here tend to be older and quieter than elsewhere in the market —
+here tend to be older and quieter than elsewhere in the market â
 the preserved-goods trade rewards predictability.@@N @@pA small
 handwritten note tacked to the last stall reads: 'Ask about the
 testimony tube. I know what's in it. G.L.C. reference: Vol. 91,
@@ -1119,14 +1119,14 @@ D0
 0 -1 4280
 S
 #4286
-@@WMid-City Dispatch House — Entry Hall@@N~
+@@WMid-City Dispatch House â Entry Hall@@N~
 @@WThe mid-city Dispatch House is the larger of Rakuen's two dispatch
 facilities, handling the full range of civic registration, permit
 processing, and amendment filings for the causeway zone. @@WThe entry
 hall is a vaulted interior space, its ceiling carrying the smoke-marks
 of a fire that the building survived during the second canopy-strike
 season.@@N @@bThe fire marks have been incorporated rather than
-concealed — a small plaque on the entry wall notes the date of the
+concealed â a small plaque on the entry wall notes the date of the
 fire, the names of the residents who contained it, and the fact that
 the building's archive survived undamaged.@@N
 ~
@@ -1141,7 +1141,7 @@ D2
 0 -1 4280
 S
 #4287
-@@WMid-City Dispatch House — Filing Hall@@N~
+@@WMid-City Dispatch House â Filing Hall@@N~
 @@WThe filing hall runs the full depth of the Dispatch House, its
 walls entirely occupied by document cabinets organized by ward,
 year, and subject. @@WThe cabinet labels are in the Garden Ledger
@@ -1163,14 +1163,14 @@ D3
 0 -1 4286
 S
 #4288
-@@WMid-City Dispatch House — Records Room@@N~
+@@WMid-City Dispatch House â Records Room@@N~
 @@WThe records room holds the active civic register for the causeway
-zone — births, household registrations, permit grants, and the
+zone â births, household registrations, permit grants, and the
 ongoing dispute record. @@WThe dispute record alone occupies two full
 cabinets; the senior registrar has noted in the annual report that
 this is not a sign of social dysfunction but of a functioning
 mediation system.@@N @@bA second cabinet in the corner holds the
-Compact amendment track files — documents recording proposed changes
+Compact amendment track files â documents recording proposed changes
 to the founding charter. The cabinet is locked, but the key hangs
 on a hook beside it.@@N
 ~
@@ -1185,11 +1185,11 @@ D3
 0 -1 4287
 S
 #4289
-@@WMid-City Dispatch House — Rear Passage@@N~
+@@WMid-City Dispatch House â Rear Passage@@N~
 @@WThe rear passage of the Dispatch House connects the records room
 to the barracks stair approach outside, providing a staff exit that
 avoids the public filing hall. @@WThe passage is narrow and its
-walls are covered with internal notices — inter-departmental memos,
+walls are covered with internal notices â inter-departmental memos,
 duty rotation schedules, and a long-running informal record of the
 day's strangest filing request, maintained by the staff for reasons
 of morale.@@N
@@ -1209,7 +1209,7 @@ S
 @@WThe barracks approach is an open stone platform between the Dispatch
 House and the stair that climbs to the upper warden levels. @@WA
 parade ground feel has accumulated here despite no official designation
-as such — the stone is swept daily, equipment lockers line the north
+as such â the stone is swept daily, equipment lockers line the north
 wall, and the duty assignment board is the largest and most current
 notice board in the quarter.@@N @@bThe main causeway queue lanes
 extend north from this platform, and the barracks stair ascends east.@@N
@@ -1229,10 +1229,10 @@ D2
 0 -1 4289
 S
 #4291
-@@WEmber Warden Barracks Stair — Lower Landing@@N~
+@@WEmber Warden Barracks Stair â Lower Landing@@N~
 @@WThe lower stair landing is a transitional space between the public
 causeway level and the warden operational levels above. @@WA security
-check station occupies the south wall — a counter where warden
+check station occupies the south wall â a counter where warden
 credentials are verified for access to the upper barracks.@@N
 @@bThe check station log records every access entry and exit; the
 current page shows fourteen entries today, a mix of warden rotations
@@ -1249,7 +1249,7 @@ D3
 0 -1 4290
 S
 #4292
-@@WEmber Warden Barracks Stair — Upper Approach@@N~
+@@WEmber Warden Barracks Stair â Upper Approach@@N~
 @@WThe stair terminates at this access platform, where the barracks
 upper level and the warden training areas are accessible. @@WThe
 upper approach looks out over the causeway quarter roofline to the
@@ -1271,7 +1271,7 @@ D4
 0 -1 4302
 S
 #4293
-@@bCauseway Queue Lane — Entry Node@@N~
+@@bCauseway Queue Lane â Entry Node@@N~
 @@bThe queue lanes are the daily reality of the Causeway Quarter:
 organized waiting spaces for ration allocation, permit processing,
 and amendment filings that together constitute much of civic life
@@ -1293,7 +1293,7 @@ D2
 0 -1 4290
 S
 #4294
-@@bCauseway Queue Lane — Allocation Row@@N~
+@@bCauseway Queue Lane â Allocation Row@@N~
 @@bThe allocation row handles the primary ration distribution queue,
 its marked waiting positions running the length of the lane. @@bThe
 positions are numbered on small stones set into the paving; numbers
@@ -1320,7 +1320,7 @@ S
 @@bCauseway Wash Channel@@N~
 @@bThe wash channel runs along the northern edge of the queue lane
 district, a shallow stone-lined waterway used for civic maintenance
-work — sluicing down the lane paving, feeding the cistern overflow,
+work â sluicing down the lane paving, feeding the cistern overflow,
 and providing ash-scrub water during canopy-fire clearing operations.
 @@bThe channel is currently running at low volume, maintained by
 the seasonal cistern supply.@@N @@bThe channel connects north to
@@ -1337,7 +1337,7 @@ D3
 0 -1 4294
 S
 #4296
-@@bCauseway Storehouse Rib — West@@N~
+@@bCauseway Storehouse Rib â West@@N~
 @@bThe storehouse ribs are elevated stone storage structures built
 perpendicular to the causeway spine, their ribbed shape giving the
 district its name. @@bThe western rib holds preserved grain stores
@@ -1358,7 +1358,7 @@ D2
 0 -1 4294
 S
 #4297
-@@bCauseway Storehouse Rib — Junction@@N~
+@@bCauseway Storehouse Rib â Junction@@N~
 @@bThe storehouse junction connects the wash channel corridor and
 both storehouse ribs, forming the hub of the storage district's
 internal circulation. @@bA tally board at the junction records
@@ -1413,7 +1413,7 @@ approach to the canopy workshop district to the east. @@bThe passage
 is one of the few direct connections between the causeway quarter's
 administrative core and the workshop zone's more independent
 compact-governed territory.@@N @@bA territorial transition notice
-is posted on both walls — one side bearing the Bloom Council civic
+is posted on both walls â one side bearing the Bloom Council civic
 authority seal, the other the Canopy Compact mutual-aid mark. Both
 notices are the same age and have been posted simultaneously, which
 is itself a form of political commentary.@@N
@@ -1431,7 +1431,7 @@ S
 #4300
 @@bEnforcement Corridor@@N~
 @@bThe enforcement corridor leads to the marshal's holding area,
-its character notably different from the civilian lanes — narrower,
+its character notably different from the civilian lanes â narrower,
 with reinforced walls and a lockable gate at the south end. @@bThe
 gate is open at present, the marshal apparently not in residence
 or conducting business elsewhere.@@N @@bA duty notice board on
@@ -1470,19 +1470,19 @@ D0
 0 -1 4300
 S
 #4302
-@@GBloom Pavilion — Main Hall@@N~
+@@GBloom Pavilion â Main Hall@@N~
 @@GThe Bloom Pavilion is Rakuen's oldest civic structure, built in Year Seven
 on a foundation of river-gathered stone and roofed with a living canopy of
 trained ivy and flowering creepers. @@GThe ivy is a different cultivar than
-the original — maintained through three rebuilds and the careful preservation
-of root cuttings — but the living roof has never been interrupted, a fact
+the original â maintained through three rebuilds and the careful preservation
+of root cuttings â but the living roof has never been interrupted, a fact
 the Bloom Council describes as proof that the founding ideal persists.@@N
 @@bThe main hall is open-sided in the traditional manner, its columns carved
 with the founding compact's five principles in rotating repeat. @@bStewardship
 rotation announcements, festival ceremonies, and circle mediations all take
 place on this floor, which has been polished by generations of civic shoes.@@N
 @@WA carved lectern at the hall's center carries the standard Compact text,
-and a framed portrait of Verath Solen hangs on the north pillar — the
+and a framed portrait of Verath Solen hangs on the north pillar â the
 idealist frozen in civically convenient perpetuity.@@N
 ~
 8 11
@@ -1500,9 +1500,9 @@ D5
 0 -1 4292
 S
 #4303
-@@GBloom Pavilion — East Wing@@N~
+@@GBloom Pavilion â East Wing@@N~
 @@GThe east wing of the Pavilion holds the library collection of the
-founding documents — certified copies of the Southward Compact, the
+founding documents â certified copies of the Southward Compact, the
 Paradise Thesis in its currently authorized edition, and the stewardship
 rotation records going back to Year One. @@GThe library is open to any
 resident with a valid registration token; the token requirement was added
@@ -1522,7 +1522,7 @@ D3
 0 -1 4302
 S
 #4304
-@@GBloom Pavilion — Private Council Chamber@@N~
+@@GBloom Pavilion â Private Council Chamber@@N~
 @@GThe private chamber at the far end of the east wing is where the
 Bloom Council holds the portions of its deliberations not conducted
 in public session. @@GThe room's walls carry maps, amendment draft
@@ -1532,7 +1532,7 @@ the same family under different names, which is either the natural
 result of rotating stewardship producing experienced practitioners
 or a systematic evasion of the inheritance constraints, depending
 on which faction you ask.@@N @@bThe chamber has no windows facing
-outside — a privacy feature of the original design. @@bThe only
+outside â a privacy feature of the original design. @@bThe only
 light comes from the entry and from two oil lamps on iron brackets.@@N
 ~
 8 11
@@ -1542,7 +1542,7 @@ D3
 0 -1 4303
 S
 #4305
-@@pGarden Ledger Archive — Main Room@@N~
+@@pGarden Ledger Archive â Main Room@@N~
 @@pThe Garden Ledger Archive is Rakuen's institutional memory, housing
 the public accounting records of every arrival, resource allocation,
 welfare distribution, and civic decision since Year One. @@pThe archive
@@ -1550,7 +1550,7 @@ is technically open to all residents, and the Ledger Clerks take this
 literally: anyone who asks receives access, which has generated ongoing
 friction with the Bloom Council, which takes a more interpretive view
 of 'open records.'@@N @@pThe main room is dominated by the open reference
-shelves — current-year ledger volumes in the standard notation, available
+shelves â current-year ledger volumes in the standard notation, available
 for consultation without staff assistance. @@pA duty clerk sits at the
 south desk, available for navigation help and visibly not neutral about
 the political disputes their archive documents.@@N @@WThe archive connects
@@ -1572,9 +1572,9 @@ D2
 0 -1 4302
 S
 #4306
-@@pGarden Ledger Archive — Reading Room@@N~
-@@pThe reading room holds the mid-period ledger volumes — the Lantern
-Reforms era through the early Ash-and-Iron years — in sequence along
+@@pGarden Ledger Archive â Reading Room@@N~
+@@pThe reading room holds the mid-period ledger volumes â the Lantern
+Reforms era through the early Ash-and-Iron years â in sequence along
 the east wall, with reference tables running down the center for
 extended consultation work. @@pThe Dunnmark Letters occupy a
 dedicated section, the published edition shelved beside a notation
@@ -1594,7 +1594,7 @@ D3
 0 -1 4305
 S
 #4307
-@@pGarden Ledger Archive — Anteroom@@N~
+@@pGarden Ledger Archive â Anteroom@@N~
 @@pThe anteroom connects the public reading room to the restricted
 stacks, where the most sensitive archive materials are held under
 limited-access protocols. @@pA heavy door of iron-banded oak separates
@@ -1616,9 +1616,9 @@ D3
 0 -1 4306
 S
 #4308
-@@pGarden Ledger Archive — Restricted Stacks@@N~
+@@pGarden Ledger Archive â Restricted Stacks@@N~
 @@pThe restricted stacks hold the archive materials the Bloom Council
-has classified under the limited-access protocol — primarily the
+has classified under the limited-access protocol â primarily the
 Violet Compact era resettlement records, the Sealed Names cross-reference
 files, and the contested drafts of the Paradise Thesis with the
 Midgaard-critical passages present. @@pThe Ledger Clerks maintain
@@ -1637,7 +1637,7 @@ archive door~
 S
 #4309
 @@WPromise Stone Plaza@@N~
-@@WThe Promise Stone Plaza is the upper civic ring's central open space —
+@@WThe Promise Stone Plaza is the upper civic ring's central open space â
 a paved terrace set with seven standing Promise Stones arranged in a
 loose arc, each carrying one of the founding compact's core pledges.
 @@WThe plaza is the site of the Festival of Ever-Bloom processions, the
@@ -1671,8 +1671,8 @@ S
 edge of the Promise Stone Plaza, its design based on descriptions of
 the founding-generation communal fire that the settlers used for the
 first ten years before permanent hearths were built in each quarter.
-@@GThe current hearth is a reconstruction — the original was lost in
-the second canopy-strike fire — but the Preservation Coalition has
+@@GThe current hearth is a reconstruction â the original was lost in
+the second canopy-strike fire â but the Preservation Coalition has
 certified the reconstruction as materially faithful.@@N @@bThe hearth
 basin holds a perpetual ember, maintained by a rotating household
 obligation that has been honored without interruption for sixty years.
@@ -1692,7 +1692,7 @@ S
 #4311
 @@GFounder's Hearth Grove@@N~
 @@GThe grove east of the Founder's Hearth is the oldest planting in the
-upper civic ring — trees descended from the founding generation's first
+upper civic ring â trees descended from the founding generation's first
 orchard work, maintained specifically for continuity rather than
 yield. @@GThe trees are past their productive peak and produce only
 token fruit, but the Festival of Ever-Bloom processional route passes
@@ -1712,10 +1712,10 @@ D3
 0 -1 4310
 S
 #4312
-@@WUpper Dispatch House — Main Hall@@N~
+@@WUpper Dispatch House â Main Hall@@N~
 @@WThe upper dispatch house serves the upper civic ring's administrative
 needs and handles the overflow from the mid-city dispatch during high-volume
-periods. @@WThe hall is quieter than its lower counterpart — the upper ring
+periods. @@WThe hall is quieter than its lower counterpart â the upper ring
 population is smaller and its administrative business tends toward the
 complex rather than the routine.@@N @@bA floor hatch in the west corner
 leads down to the root tunnel emergency ascent shaft, classified as a
@@ -1738,7 +1738,7 @@ D5
 0 -1 4338
 S
 #4313
-@@WUpper Dispatch House — Records Annex@@N~
+@@WUpper Dispatch House â Records Annex@@N~
 @@WThe records annex of the upper dispatch handles the stewardship
 rotation documentation and the upper civic ring's amendment filings.
 @@WThe cabinet system here is better maintained than at the lower facility,
@@ -1759,7 +1759,7 @@ S
 #4314
 @@bSteward Residence Entry@@N~
 @@bThe entrance to the steward residential quarter is a formal archway
-with the Bloom Council seal carved into the keystone — added during the
+with the Bloom Council seal carved into the keystone â added during the
 Lantern Reforms era when the rotating stewardship principle was tested
 by a household that argued the residence archway should carry the
 founding compact's open-access pledge instead. @@bThe Council won that
@@ -1828,11 +1828,11 @@ S
 #4317
 @@bOath-Walk Gallery C@@N~
 @@bThe third gallery holds the current-rotation stewards' designation
-placards — the names and terms of the people presently serving. @@bThe
+placards â the names and terms of the people presently serving. @@bThe
 current placards are notably simpler than the commemorative ones: they
 carry only names, term dates, and ward assignments.@@N @@bA small
 additional board near the gallery's east end lists the 'stewardship
-advisors' — the class of professional support staff who technically
+advisors' â the class of professional support staff who technically
 rotate but in practice accumulate institutional memory across multiple
 steward tenures. @@bThe board lists nine names.@@N
 ~
@@ -1869,15 +1869,15 @@ D3
 0 -1 4317
 S
 #4319
-@@pConnecting Ring Passage — Entry@@N~
+@@pConnecting Ring Passage â Entry@@N~
 @@pThe connecting ring passage links the oath-walk galleries to the
 senior steward's private office complex. @@pThe passage is a later
-addition to the upper civic ring — built during the Violet Compact era
+addition to the upper civic ring â built during the Violet Compact era
 when the senior steward's role was formalized as a permanent position
 within the rotating system, a formalization that several Ledger Clerks
 noted at the time created a structural exception to the founding compact's
 rotation principle.@@N @@pThe passage walls are plain dressed stone with
-no placards or notices — a contrast to the gallery that makes the shift
+no placards or notices â a contrast to the gallery that makes the shift
 in institutional character legible.@@N
 ~
 8 11
@@ -1891,13 +1891,13 @@ D1
 0 -1 4320
 S
 #4320
-@@pConnecting Ring Passage — Inner Walk@@N~
+@@pConnecting Ring Passage â Inner Walk@@N~
 @@pThe inner walk of the connecting ring passage is the antechamber to
 the senior steward's office. @@pA waiting bench on the east wall is
 polished by use; the senior steward's schedule, posted on the adjacent
 board, shows appointments blocked in solid increments throughout the
 current and next week.@@N @@pA framed document on the west wall is the
-original senior steward charter from the Violet Compact era — the document
+original senior steward charter from the Violet Compact era â the document
 that created the office. @@pA small annotation at the bottom of the frame,
 in a different hand than the rest, reads: 'This document superseded
 compact provision seven. No public vote. See archive vol. 34, entry 11.'@@N
@@ -1920,7 +1920,7 @@ who enter it. @@pThe Authority Sash of the senior steward's office hangs
 on a rack beside the desk, its colors those of the Bloom Council in its
 current era rather than the founding-generation palette. @@pThe desk is
 clear except for the current amendment file and a small framed copy of
-the Paradise Thesis — the authorized edition, not the full text.@@N
+the Paradise Thesis â the authorized edition, not the full text.@@N
 @@pSenior Steward Colwen Dast works from this office with the efficient
 calm of someone who believes they are right about everything they have
 decided, a belief the amendment filings on the desk may not support.@@N
@@ -1933,9 +1933,9 @@ D3
 0 -1 4320
 S
 #4322
-@@GCanopy Workshop District — Entry Approach@@N~
+@@GCanopy Workshop District â Entry Approach@@N~
 @@GThe transition from the causeway quarter to the canopy workshop district
-is immediate and textural — the pressed stone of the civic spine gives way
+is immediate and textural â the pressed stone of the civic spine gives way
 to platforms built between and around the living trees, the workshop district's
 founding logic being that you build with the canopy rather than clearing it.
 @@GThe dye platforms are the first structures visible from the entry approach:
@@ -1943,7 +1943,7 @@ broad open surfaces stained in layered color from seasons of operation.@@N
 @@WA Canopy Compact mutual-aid notice is posted at the entry, listing the
 current compact membership, work-share obligations, and the fact that the
 compact operates on a separate governance charter from the Bloom Council.
-The notice has been laminated — apparently this information needs protection
+The notice has been laminated â apparently this information needs protection
 from the weather more than most.@@N
 ~
 0 2
@@ -1961,7 +1961,7 @@ D3
 0 -1 4299
 S
 #4323
-@@GCanopy Dye Platform — East Bay@@N~
+@@GCanopy Dye Platform â East Bay@@N~
 @@GThe east bay of the dye platform is the most active in the current
 season, its vats running three colors on a rotation that produces the
 district's characteristic deep blues and rust-earth tones. @@GThe platform
@@ -1981,7 +1981,7 @@ D3
 0 -1 4322
 S
 #4324
-@@GCanopy Ropewalk — Entry Span@@N~
+@@GCanopy Ropewalk â Entry Span@@N~
 @@GThe ropewalk spans are long timber bridges running between the canopy
 trees, where the workshop district's cordage operations are conducted at
 height. @@GThe entry span is at the lowest level, accessed directly from
@@ -2001,11 +2001,11 @@ D2
 0 -1 4322
 S
 #4325
-@@GCanopy Ropewalk — Middle Span@@N~
+@@GCanopy Ropewalk â Middle Span@@N~
 @@GThe middle span is the main working level, where cordage crews run
 fibers between anchor posts to produce the rope lengths used throughout
 the city and exported via the Eccentric Woodland routes. @@GThe span
-sways gently in the canopy air — not alarmingly, but enough to remind
+sways gently in the canopy air â not alarmingly, but enough to remind
 anyone on it that they are suspended in the trees.@@N
 @@GFrom this level the dye platform east bay is visible below, and the
 upper woodcraft shed level can be accessed via the north connecting
@@ -2026,7 +2026,7 @@ D3
 0 -1 4324
 S
 #4326
-@@GCanopy Ropewalk — Upper Span@@N~
+@@GCanopy Ropewalk â Upper Span@@N~
 @@GThe upper span of the ropewalk extends into the canopy at the level
 where the largest trees provide the most stable anchor points. @@GCordage
 work done from this span achieves the longest continuous rope lengths
@@ -2047,7 +2047,7 @@ D3
 0 -1 4325
 S
 #4327
-@@bCanopy Woodcraft Shed — Main Floor@@N~
+@@bCanopy Woodcraft Shed â Main Floor@@N~
 @@bThe woodcraft shed is a semi-enclosed structure where timber from
 the managed canopy harvest is processed into structural components
 for the workshop district's own use and for city maintenance. @@bThe
@@ -2069,8 +2069,8 @@ D2
 0 -1 4326
 S
 #4328
-@@bCanopy Woodcraft Shed — Secondary Bay@@N~
-@@bThe secondary bay handles finishing work — joinery, surface
+@@bCanopy Woodcraft Shed â Secondary Bay@@N~
+@@bThe secondary bay handles finishing work â joinery, surface
 treatment, and the assembly of prefabricated components for the
 current maintenance queue. @@bA project board on the north wall
 lists active contracts from the Ember Warden causeway repair crew,
@@ -2093,11 +2093,11 @@ D3
 0 -1 4327
 S
 #4329
-@@GMedicine Drying Loft — Main Level@@N~
+@@GMedicine Drying Loft â Main Level@@N~
 @@GThe medicine drying lofts occupy the upper level of the shed
 complex, where the dry canopy air accelerates the curing of the
 herbal preparations the district produces. @@GBundles of drying
-plant material hang from every beam and bracket — a systematic
+plant material hang from every beam and bracket â a systematic
 inventory of forest medicine practice.@@N @@GThe loft connects
 east to the deep-cure section where the most delicate preparations
 are processed.@@N
@@ -2113,7 +2113,7 @@ D1
 0 -1 4330
 S
 #4330
-@@GMedicine Drying Loft — Deep Cure Section@@N~
+@@GMedicine Drying Loft â Deep Cure Section@@N~
 @@GThe deep-cure section is partitioned from the main loft to
 provide the controlled conditions required for the most sensitive
 preparations. @@GThe temperature here is slightly lower than the
@@ -2131,7 +2131,7 @@ D3
 0 -1 4329
 S
 #4331
-@@pCompact Mediation Circle — Entry@@N~
+@@pCompact Mediation Circle â Entry@@N~
 @@pThe compact mediation circle operates under the Canopy Compact's
 governance charter, which means it follows the founding-era circle
 mediation protocols rather than the causeway district's salvage
@@ -2152,9 +2152,9 @@ D2
 0 -1 4328
 S
 #4332
-@@pCompact Mediation Circle — Main Floor@@N~
+@@pCompact Mediation Circle â Main Floor@@N~
 @@pThe circle floor is a cleared round platform with seating arranged
-concentrically — no head chair, no elevated position, the spatial
+concentrically â no head chair, no elevated position, the spatial
 design deliberately enforcing the founding compact's principle that
 mediation is between equals. @@pThe seating is old and comfortable,
 the cushion fabric replaced several times with whatever fabric the
@@ -2174,9 +2174,9 @@ D3
 0 -1 4331
 S
 #4333
-@@pCompact Mediation Circle — Witness Alcove@@N~
+@@pCompact Mediation Circle â Witness Alcove@@N~
 @@pThe witness alcove is where testimony is formally received in
-circle proceedings — a slightly set-back position that gives the
+circle proceedings â a slightly set-back position that gives the
 speaker a sense of protected space while remaining within the circle
 geometry. @@pThe alcove wall carries a framed copy of the founding
 compact's mediation provisions, the full text rather than the
@@ -2197,12 +2197,12 @@ S
 @@cThe siphon vault is a damp, low-ceilinged chamber directly beneath
 the rest garden cistern, the access hatch above admitting a column of
 grey light when open. @@cThe vault contains the primary water-routing
-infrastructure for the lower terrace cistern network — a system of
+infrastructure for the lower terrace cistern network â a system of
 stone channels, iron valve wheels, and clay-sealed pressure junctions
 that pre-dates the Ash-and-Iron era modifications by at least two
 generations.@@N @@cThe air smells of wet stone and old iron. @@cA
 pump keeper's duty board is mounted near the valve rack, its log
-current — someone is maintaining this space despite its infrequent
+current â someone is maintaining this space despite its infrequent
 official visitors.@@N
 ~
 9 11
@@ -2222,7 +2222,7 @@ section where the old flood-plain tree roots have grown through the
 tunnel wall, the roots bowing the stone aside and then petrifying
 in place over decades. @@cThe effect is a natural arch of interlocked
 wood and stone that has been incorporated into the tunnel rather
-than cleared — the original tunnel engineers apparently recognized
+than cleared â the original tunnel engineers apparently recognized
 that the roots were structural.@@N @@cWater weeps through the stone
 in several places, forming trails on the tunnel floor that a careful
 step avoids.@@N
@@ -2267,8 +2267,8 @@ S
 @@pThe transfer niche is a widened section of the tunnel with a
 stone shelf and a vertical pipe-access point connecting to the
 archive building above. @@pThe niche was constructed during the
-Violet Compact era and its original purpose — 'secure document
-transfer' — is listed in the archive building's construction notes
+Violet Compact era and its original purpose â 'secure document
+transfer' â is listed in the archive building's construction notes
 without elaboration.@@N @@pThe shelf currently holds a sealed testimony
 tube, wrapped in waxed cloth. @@pThe tube's exterior label is in
 the Garden Ledger notation for documents referred to Kel'Shadra
@@ -2290,7 +2290,7 @@ S
 the upper dispatch house, providing a direct route bypassing the
 public civic ring in declared emergency conditions. @@bThe shaft
 is narrow, its walls fitted with iron rungs set into the stone at
-even intervals. @@bThe rungs are well-maintained — the Ember
+even intervals. @@bThe rungs are well-maintained â the Ember
 Warden pump keeper treats this shaft as a primary duty priority,
 and the maintenance log on the shaft wall is current.@@N @@bThe
 shaft is classified as a 'civic maintenance access point' on
@@ -2347,7 +2347,7 @@ woodland contract guide rakuen~
 ~
 @@bShe is one of the compact-registered guides who operate the Eccentric Woodland southern
 approach under contracted terms. Her route knowledge is current and her price is posted on
-the contract board — she will not negotiate it.@@N
+the contract board â she will not negotiate it.@@N
 ~
 65 0 500 S
 38 2
@@ -2396,7 +2396,7 @@ terrace checkpoint officer rakuen~
 @@Wthe Terrace Checkpoint Officer@@N~
 @@WA Terrace Checkpoint Officer stands at the stair landing, observing arrivals.
 ~
-@@WShe is part of the civic transit authority — a position that the Bloom Council has ruled
+@@WShe is part of the civic transit authority â a position that the Bloom Council has ruled
 is distinct from the Ember Wardens, a distinction that makes her authority over the stair
 landing technically ambiguous. She has decided to ignore the ambiguity.@@N
 ~
@@ -2461,7 +2461,7 @@ root rot scavenger lower terrace rakuen~
 @@gthe Root-Rot Scavenger@@N~
 @@gA root-rot scavenger picks through the damaged root-weave structures.
 ~
-@@gHe operates in the zone between salvage and looting — technically licensed by the salvage
+@@gHe operates in the zone between salvage and looting â technically licensed by the salvage
 court to collect material from structures on the condemned list, practically indistinguishable
 from someone helping themselves. His paperwork is in order.@@N
 ~
@@ -2529,7 +2529,7 @@ ember warden floodline station guard rakuen~
 @@WA Floodline Station Guard stands at the ember warden station, monitoring the approach.
 ~
 @@WHe is assigned to the lower terrace floodline station as the security element during
-non-emergency conditions. His primary function is presence — making it clear that the
+non-emergency conditions. His primary function is presence â making it clear that the
 station is staffed and the flood-watch rotation is active.@@N
 ~
 67 0 250 S
@@ -2593,7 +2593,7 @@ market quarter laborer causeway rakuen~
 @@bthe Market Quarter Laborer@@N~
 @@bA market quarter laborer hauls crates through the market deck.
 ~
-@@bHe works the market deck maintenance rotation — the civic labor obligation that keeps
+@@bHe works the market deck maintenance rotation â the civic labor obligation that keeps
 the market paving repaired, the stall assignments enforced, and the lamp brackets
 functioning. His opinions about specific stall holders are extensive.@@N
 ~
@@ -2619,7 +2619,7 @@ black register smuggler causeway rakuen~
 @@pthe Black-Register Smuggler@@N~
 @@pA black-register smuggler moves through the storehouse district with a loaded pack.
 ~
-@@pHe operates in the allocation shadow economy — moving goods between households that have
+@@pHe operates in the allocation shadow economy â moving goods between households that have
 ration surplus and households that have deficit, outside the Ledger system's tracking.
 The Causeway Enforcement Marshal knows him by description. He knows the marshal's schedule.@@N
 ~
@@ -2645,7 +2645,7 @@ wash channel crew member causeway rakuen~
 @@bthe Wash Channel Crew Member@@N~
 @@bA wash channel crew member maintains the causeway sluice system.
 ~
-@@bHe works the civic maintenance rotation for the causeway wash channel —
+@@bHe works the civic maintenance rotation for the causeway wash channel â
 a labor-draft obligation he has fulfilled consecutively for nine years.
 He does not particularly mind the work and has an encyclopedic knowledge
 of what has gone down the channel over the years.@@N
@@ -2698,7 +2698,7 @@ tower access gatekeeper causeway rakuen~
 @@Wthe Tower Access Gatekeeper@@N~
 @@WA Tower Access Gatekeeper controls the restricted approach to the upper tower levels.
 ~
-@@WHe manages access to the tower platforms above the distribution level — areas containing
+@@WHe manages access to the tower platforms above the distribution level â areas containing
 the allocation control mechanisms that the Bloom Council classifies as 'operational
 infrastructure not requiring public access documentation.' He does not explain this to
 visitors; he just says no.@@N
@@ -2713,7 +2713,7 @@ causeway lamp lighter rakuen~
 @@bA lamplighter moves along the causeway spine, tending the bracket lamps.
 ~
 @@bShe works the lamp maintenance rotation that keeps the causeway lit through
-the evening hours — a civic function so continuously necessary that it has been
+the evening hours â a civic function so continuously necessary that it has been
 maintained without interruption through every emergency protocol and labor
 restructuring in Rakuen's history.@@N
 ~
@@ -2783,7 +2783,7 @@ ember warden liaison captain upper ring rakuen~
 @@Wthe Ember Warden Liaison Captain@@N~
 @@WThe Ember Warden Liaison Captain coordinates between the warden corps and the civic ring.
 ~
-@@WShe occupies the liaison position between the Ember Wardens and the Bloom Council — a
+@@WShe occupies the liaison position between the Ember Wardens and the Bloom Council â a
 role created specifically to manage the ongoing friction between the warden emergency
 mandate and the council's governance authority. She has become very skilled at managing
 friction.@@N
@@ -2797,7 +2797,7 @@ political envoy amendment track rakuen~
 @@pthe Amendment Track Envoy@@N~
 @@pAn Amendment Track political envoy moves through the oath-walk galleries.
 ~
-@@pShe represents the Route Realist bloc in the ongoing amendment process — the faction
+@@pShe represents the Route Realist bloc in the ongoing amendment process â the faction
 that argues Rakuen's governance language should be updated to reflect actual conditions
 rather than founding-era aspirational language. She is persuasive. The Bloom Council
 finds her exhausting.@@N
@@ -2826,7 +2826,7 @@ quiet separatist courier upper ring rakuen~
 @@pthe Quiet Separatist Courier@@N~
 @@pA Quiet Separatist courier moves through the connecting ring passage.
 ~
-@@pShe carries correspondence for the Quiet Separatist faction — the group that has
+@@pShe carries correspondence for the Quiet Separatist faction â the group that has
 concluded annexation is neither achievable nor desirable and that Rakuen should develop
 independent institutional capacity instead. She moves quickly and avoids eye contact
 with anyone near the senior steward's office.@@N
@@ -2925,7 +2925,7 @@ quiet separatist organizer canopy rakuen~
 @@pthe Quiet Separatist Organizer@@N~
 @@pA Quiet Separatist organizer holds a quiet meeting at the mediation circle.
 ~
-@@pHe coordinates the Quiet Separatist faction's workshop district operations — principally
+@@pHe coordinates the Quiet Separatist faction's workshop district operations â principally
 the effort to expand compact mutual-aid networks as an alternative to the Bloom Council's
 allocation system. He does not publicize the meetings. The Bloom Council knows about them
 anyway.@@N
@@ -2952,7 +2952,7 @@ tunnel pump keeper root tunnel rakuen~
 @@cthe Tunnel Pump Keeper@@N~
 @@cThe Tunnel Pump Keeper tends the siphon vault's valve and pump equipment.
 ~
-@@cHe maintains the lower terrace's siphon infrastructure — the valve network,
+@@cHe maintains the lower terrace's siphon infrastructure â the valve network,
 the pressure junctions, and the emergency routing systems that redirect flood
 water during high-cycle events. He works alone, knows the system better than
 anyone, and has opinions about the root tunnel's maintenance priority ranking
@@ -2983,7 +2983,7 @@ ash slick root leech root tunnel rakuen~
 ~
 @@gThe Ash-and-Iron era flood cycles deposited a particular stratum of ash residue
 in the root tunnel system that proved hospitable to these organisms. @@gThis variety
-is adapted to the tunnel environment specifically — smaller than the lower terrace
+is adapted to the tunnel environment specifically â smaller than the lower terrace
 surface variety, faster, and considerably less averse to confined spaces.@@N
 ~
 99 0 -500 S
@@ -3095,7 +3095,7 @@ L
 #4399
 waterlogged ledger satchel rakuen~
 @@ba Waterlogged Ledger Satchel@@N~
-@@bA waterlogged ledger satchel lies here, its leather swollen with absorbed moisture but its contents — several ledger folios sealed in separate oilskin wraps — apparently intact.@@N
+@@bA waterlogged ledger satchel lies here, its leather swollen with absorbed moisture but its contents â several ledger folios sealed in separate oilskin wraps â apparently intact.@@N
 ~
 15 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
@@ -3295,7 +3295,7 @@ L
 #4419
 edited thesis folio upper ring rakuen~
 @@pan Edited Paradise Thesis Folio@@N~
-@@pAn authorized edition of the Paradise Thesis lies here, its cover bearing the Bloom Council certification seal and its text running to thirty-one pages — the twelve pages containing the direct Midgaard critique having been removed between this edition and the previous one.@@N
+@@pAn authorized edition of the Paradise Thesis lies here, its cover bearing the Bloom Council certification seal and its text running to thirty-one pages â the twelve pages containing the direct Midgaard critique having been removed between this edition and the previous one.@@N
 ~
 8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
@@ -3305,7 +3305,7 @@ L
 #4420
 archive challenge ledger upper ring rakuen~
 @@pan Archive Challenge Ledger@@N~
-@@pAn archive challenge ledger lies here — the Garden Ledger Clerk's tool for formally contesting the accuracy of documents in the Bloom Council's authorized collection, filled to within a few pages of completion.@@N
+@@pAn archive challenge ledger lies here â the Garden Ledger Clerk's tool for formally contesting the accuracy of documents in the Bloom Council's authorized collection, filled to within a few pages of completion.@@N
 ~
 16 0 75497536 1
 0 0 0 0 0 0 0 0 0 0
@@ -3363,7 +3363,7 @@ L
 #4425
 oath walk gallery placard upper ring rakuen~
 @@ban Oath-Walk Gallery Placard@@N~
-@@bAn oath-walk gallery placard lies here, its text commemorating a steward from the Ash-and-Iron era whose term ended under emergency provisions — with the supplementary note explaining the circumstances written in a smaller hand and a different ink.@@N
+@@bAn oath-walk gallery placard lies here, its text commemorating a steward from the Ash-and-Iron era whose term ended under emergency provisions â with the supplementary note explaining the circumstances written in a smaller hand and a different ink.@@N
 ~
 8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
@@ -3373,7 +3373,7 @@ L
 #4426
 steward correspondence bundle upper ring rakuen~
 @@pa Steward's Correspondence Bundle@@N~
-@@pA bound correspondence bundle lies here, its contents the working letters of an upper civic ring steward and the replies they received — including three replies from Midgaard officials whose tone suggests they are familiar with the request and have no intention of honoring it.@@N
+@@pA bound correspondence bundle lies here, its contents the working letters of an upper civic ring steward and the replies they received â including three replies from Midgaard officials whose tone suggests they are familiar with the request and have no intention of honoring it.@@N
 ~
 8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
@@ -3423,7 +3423,7 @@ L
 #4431
 dye pigment bundle canopy rakuen~
 @@Ga Dye Pigment Bundle@@N~
-@@GA wrapped bundle of prepared dye pigment lies here, the compact's current production batch labeled by color-code and season — the labeling system the compact adopted to satisfy the Ledger's quality-tracking requirements.@@N
+@@GA wrapped bundle of prepared dye pigment lies here, the compact's current production batch labeled by color-code and season â the labeling system the compact adopted to satisfy the Ledger's quality-tracking requirements.@@N
 ~
 8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
@@ -3443,7 +3443,7 @@ L
 #4433
 compact mutual aid ledger canopy rakuen~
 @@pA Compact Mutual-Aid Ledger@@N~
-@@pA compact mutual-aid ledger lies here, its pages recording the obligation-sharing arrangements among the workshop district's households — who owes what labor to whom, what has been fulfilled, and what the running balance is.@@N
+@@pA compact mutual-aid ledger lies here, its pages recording the obligation-sharing arrangements among the workshop district's households â who owes what labor to whom, what has been fulfilled, and what the running balance is.@@N
 ~
 8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
@@ -3494,14 +3494,14 @@ E
 testimony tube~
 @@pThe testimony tube's label carries the notation code for a deposition transferred to Kel'Shadra
 during the witnessing office period, cross-referenced in Garden Ledger Vol. 91, entry 43. The
-tube has been resealed at least once after its original closure — the wax layers are different
+tube has been resealed at least once after its original closure â the wax layers are different
 colors. Someone brought it back from wherever it was sent. The contents have never been formally
 re-entered into the public Ledger.
 ~
 #4438
 contraband ration satchel root tunnel rakuen~
 @@pa Contraband Ration Satchel@@N~
-@@pA contraband ration satchel lies here, its contents a mix of allocation-tier goods that the tally marks indicate came from multiple different ration source points — the shadow economy's equivalent of diversified sourcing.@@N
+@@pA contraband ration satchel lies here, its contents a mix of allocation-tier goods that the tally marks indicate came from multiple different ration source points â the shadow economy's equivalent of diversified sourcing.@@N
 ~
 15 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
