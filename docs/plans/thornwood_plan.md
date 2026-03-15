@@ -1102,3 +1102,416 @@ A clearing where the substrate's surface expression is strongest above the ossua
 The easternmost point of the estate's accessible territory — a formal gateway of bone-woven construction rather than iron, where the substrate's bone-craft has produced an arch of assembled long bones integrated with root-fiber into a structure as load-bearing as any masonry. The gate is the estate's final territorial marker at its eastern boundary, beyond which the mire's margin and the approach routes connecting to the broader grave tunnel network begin. The bone-arch is not decorated: it is structural, functional, and legible as such. *This land's terms continue until this arch. Beyond this point, you are no longer being processed. You were never not being processed.*
 - Exits: `west` → 1291 (Zone IX: Wraith Passage), `north` → 1227 (Zone V: Broken Causeway)
 
+---
+
+## Mobile Redesign Plan (1150–1193 — 44 Mobs)
+
+All mobs must carry `stay_area` (`64`). Aggressive mobs initiate combat on sight. Sentinel mobs do not wander. Boss mobs are flagged `sentinel` + `boss` and placed only in `no_mob` rooms. Solo mobs are flagged `solo` (`33554432`). Undead mobs carry `undead` (`16384`). Mobs without corporeal form carry `no_body` (`65536`) and `no_blood` (`268435456`) where appropriate.
+
+Level tier guide: Entry/Approach 50–55 | Estate Surface 55–65 | Burial Fields 60–68 | Gravewood 62–70 | Mire 62–70 | Ossuary 65–72 | Cave 68–80 | Named Elites 70–80.
+
+---
+
+### Tier 1 — Entry and Approach (1150–1154) | Level 50–55
+
+**1150 — grave tunnel toll-shade**
+Level 50 | `act: is_npc aggressive stay_area undead no_body` | `aff: infrared`
+Alignment: -500 | Sex: neutral
+`hp_mod: 0 | ac_mod: 0 | hr_mod: 2 | dr_mod: 2`
+A residual presence from the tunnel's pre-estate history — not a Harren estate product but a shadow accumulated in the transit node over generations of funeral convoy traffic. Attacks immediately. No physical form beyond a cold displacement of air and a sound like chain dragging on stone.
+- Placement: Room 1150 (Grave Tunnel Hinge) | Limit 3
+
+**1151 — estate gate wraith**
+Level 52 | `act: is_npc sentinel stay_area undead no_body aggressive` | `aff: infrared detect_invis`
+Alignment: -600 | Sex: neutral
+`hp_mod: 0 | ac_mod: -20 | hr_mod: 3 | dr_mod: 3`
+The Gatewarden, risen and retained at post. Challenges entry with estate protocol before attacking. Still invokes the Harren Charter's passage-authorization requirement. The challenge is brief and procedurally correct and means nothing.
+- Placement: Room 1153 (Gatewarden's Lodge) | Limit 1
+- `spec_guard` (enforces the challenge-before-attack pattern)
+
+**1152 — thorn hedge sentinel**
+Level 53 | `act: is_npc aggressive stay_area undead` | `aff: infrared`
+Alignment: -400 | Sex: neutral
+`hp_mod: 0 | ac_mod: -10 | hr_mod: 3 | dr_mod: 2`
+A perimeter guard whose body has been partially incorporated into the estate's thorn-hedge infrastructure — thorn growth has merged with joints and armor, making the sentinel visually part of the hedge until it moves. Responds to movement through the perimeter zone.
+- Placement: Rooms 1155, 1156 (Hedge Walls) | Limit 2 each
+
+**1153 — corpse-cart revenant**
+Level 51 | `act: is_npc aggressive stay_area undead` | `aff: infrared`
+Alignment: -350 | Sex: neutral
+`hp_mod: 0 | ac_mod: 0 | hr_mod: 2 | dr_mod: 3`
+A former cart-driver, risen still in the posture of handling a vehicle that no longer exists. Moves with the deliberate, route-following gait of a worker completing a fixed task. Attacks anything that interrupts the route.
+- Placement: Room 1154 (Forecourt Approach) | Limit 2
+
+**1154 — approach road phantom**
+Level 54 | `act: is_npc aggressive stay_area undead no_body night_only` | `aff: infrared sneak`
+Alignment: -500 | Sex: neutral
+`hp_mod: 0 | ac_mod: -15 | hr_mod: 4 | dr_mod: 3`
+Visible only at night, this presence patrols the lantern alley and approach road. During the day, nothing is here. At night, the dead lanterns cast no light but something moves between them. Aggressive on contact.
+- Placement: Room 1157 (Lantern Alley) | Limit 2 | `night_only`
+
+---
+
+### Tier 2 — Estate Surface (1155–1163) | Level 55–65
+
+**1155 — estate household wraith**
+Level 57 | `act: is_npc sentinel stay_area undead no_body aggressive` | `aff: infrared invisible`
+Alignment: -500 | Sex: neutral
+`hp_mod: 0 | ac_mod: -20 | hr_mod: 3 | dr_mod: 4`
+A domestic servant, risen to perform empty household duties. Carries nothing. Moves between service points on a fixed route. Attacks intruders who disrupt the routine. Refers to rooms by their original function names.
+- Placement: Rooms 1160, 1168, 1170 (interior manor and service yard) | Limit 1 each
+
+**1156 — thorn knight**
+Level 60 | `act: is_npc aggressive stay_area undead` | `aff: infrared`
+Alignment: -600 | Sex: neutral
+`hp_mod: 0 | ac_mod: -40 | hr_mod: 5 | dr_mod: 5`
+A former estate guard, risen as the Thorn Knight standard pattern: armored, briar growth at joints and crest, movement disciplined and tactical. Challenges before attacking (jurisdictional form, not warning). Fights like a trained soldier.
+- `! 0 0 0 7 3 0 0`
+- Placement: Rooms 1157, 1158, 1159, 1166 | Limit 1–2 per room
+
+**1157 — blackened thorn knight**
+Level 64 | `act: is_npc aggressive stay_area undead solo` | `aff: infrared`
+Alignment: -700 | Sex: neutral
+`hp_mod: 0 | ac_mod: -60 | hr_mod: 7 | dr_mod: 6`
+The fully fused variant — original armor consumed by biological growth that has preserved the shape while replacing the material. Gait is wrong in a specific way: the briar-grown joint replacements produce movement that is simultaneously more precise and less human. Much harder than the standard thorn knight.
+- `! 0 0 0 7 1027 0 0` (2_attack + nodisarm + notrip)
+- Placement: Rooms 1162, 1163 | Limit 1 each
+
+**1158 — manor steward revenant**
+Level 58 | `act: is_npc sentinel stay_area undead aggressive` | `aff: infrared detect_invis`
+Alignment: -550 | Sex: neutral
+`hp_mod: 0 | ac_mod: -25 | hr_mod: 4 | dr_mod: 4`
+The household's administrative lead, risen to manage the dead staff with the same authority it held in life. Invokes precedence rules and household hierarchy. Attacks when its administrative authority is challenged — which trespass constitutes by definition.
+- Placement: Room 1160 (Great Hall) | Limit 1
+
+**1159 — chapel cultist**
+Level 56 | `act: is_npc stay_area` | `aff: detect_magic`
+Alignment: -200 | Sex: neutral
+`hp_mod: 0 | ac_mod: 0 | hr_mod: 2 | dr_mod: 2`
+A living Root Covenant practitioner, engaged in chapel rite-work. Not aggressive — the cult does not attack without cause — but will defend itself. Recites transfer formulas: prayer-clauses that sound like contract terms and contract terms that sound like prayers.
+- `! 0 0 0 7 0 4 0` (mag_missile cast)
+- Placement: Rooms 1166, 1167 | Limit 2 total
+
+**1160 — covenant elder**
+Level 63 | `act: is_npc sentinel stay_area solo` | `aff: detect_magic detect_invis`
+Alignment: -300 | Sex: neutral
+`hp_mod: 0 | ac_mod: -30 | hr_mod: 4 | dr_mod: 4`
+A senior Root Covenant practitioner with decades of substrate exposure. Not aggressive, but not safe — will attack if the assembly ground or ritual sites are disrupted. Thorn-pattern tattoos have developed real thorn growth inward through the skin. Voice carries harmonic undertones.
+- `! 0 0 0 7 0 2052 4` (flamestrike + faerie_fire cast; cure_serious def)
+- Placement: Room 1286 (Cult Assembly Ground) | Limit 1
+- `spec_cast_cleric`
+
+**1161 — covenant bone-reader**
+Level 60 | `act: is_npc aggressive stay_area` | `aff: detect_magic`
+Alignment: -400 | Sex: neutral
+`hp_mod: 0 | ac_mod: -20 | hr_mod: 3 | dr_mod: 5`
+A Root Covenant specialist in substrate-reading through bone-resonance assessment. Found in the burial fields and ossuary approaches. Aggressive when the bone-reading work is interrupted. Carries bone-reading tools as improvised weapons.
+- `! 0 0 0 7 0 512 0` (faerie_fire cast)
+- Placement: Rooms 1186, 1234 | Limit 1 each
+
+**1162 — estate cook specter**
+Level 55 | `act: is_npc sentinel stay_area undead no_body` | `aff: infrared`
+Alignment: -400 | Sex: neutral
+`hp_mod: 0 | ac_mod: -10 | hr_mod: 2 | dr_mod: 3`
+The kitchen specter, performing the motions of meal preparation with nothing in its hands. Not immediately aggressive — it performs, it does not respond, until a threshold of disruption is crossed. Then it responds with the particular fury of something that has been interrupted mid-task for eternity and will not tolerate it again.
+- Placement: Room 1168 (Kitchen) | Limit 1
+
+**1163 — stable revenant**
+Level 57 | `act: is_npc aggressive stay_area undead` | `aff: infrared`
+Alignment: -500 | Sex: neutral
+`hp_mod: 0 | ac_mod: -15 | hr_mod: 4 | dr_mod: 4`
+The former stable hand, risen and still working. Attacks intruders in the stable area with the tools of stable work: a hoof pick, a stable fork. The substrate horses it tends do not react to combat in their stall. This is either because they have no threat-response programming or because the stable hand being attacked is not their concern.
+- Placement: Room 1171 (Stable Block) | Limit 1
+
+---
+
+### Tier 3 — Burial Fields and Charnel Verge (1164–1168) | Level 60–68
+
+**1164 — deferred-name revenant**
+Level 61 | `act: is_npc aggressive stay_area undead` | `aff: infrared`
+Alignment: -650 | Sex: neutral
+`hp_mod: 0 | ac_mod: -30 | hr_mod: 5 | dr_mod: 5`
+One of the deferred-name dead who was never named — interred under a case number, the naming rite never paid, the fee never collected. Rose with the Reversal carrying the compound anger of institutional abandonment. Attacks without challenge — the jurisdictional form does not apply to those the jurisdiction failed.
+- Placement: Rooms 1183, 1184, 1185 | Limit 2 per room
+
+**1165 — bone processing laborer**
+Level 63 | `act: is_npc aggressive stay_area undead` | `aff: infrared`
+Alignment: -550 | Sex: neutral
+`hp_mod: 0 | ac_mod: -30 | hr_mod: 5 | dr_mod: 6`
+A former grave laborer from the ossuary expansion era, evaluated on volume not dignity, risen still performing the processing routine. Attacks anything in the processing zone that is not material to be processed — the distinction between intruder and intake has collapsed.
+- Placement: Rooms 1182, 1186 | Limit 2 per room
+
+**1166 — charnel verge watcher**
+Level 65 | `act: is_npc aggressive stay_area undead solo` | `aff: infrared detect_invis`
+Alignment: -700 | Sex: neutral
+`hp_mod: 0 | ac_mod: -50 | hr_mod: 6 | dr_mod: 6`
+A boundary-enforcer stationed at the charnel verge gate — the equivalent of a Thorn Knight for the burial field zone rather than the manor perimeter. Challenges entry to the burial fields with the same procedural language as the gate wraith, and attacks with comparable discipline.
+- `! 0 0 0 7 99 0 0` (2_attack + nodisarm + notrip + punch)
+- Placement: Room 1180 (Charnel Verge Gate) | Limit 1
+- `spec_undead`
+
+**1167 — exhumation crow**
+Level 60 | `act: is_npc aggressive stay_area scavenger` | `aff: flying`
+Alignment: -200 | Sex: neutral
+`hp_mod: 0 | ac_mod: -20 | hr_mod: 6 | dr_mod: 4`
+A corvid adapted to the burial field's substrate-rich environment — larger than a natural crow, with bark-textured feathers and the same berry-red eye color as the substrate horses. Scavenges the burial field's organic output and attacks intruders opportunistically. Travels in loose groups.
+- Placement: Rooms 1181, 1184, 1185, 1189 | Limit 3 per room
+
+**1168 — ossuary monk**
+Level 66 | `act: is_npc aggressive stay_area undead` | `aff: infrared`
+Alignment: -600 | Sex: neutral
+`hp_mod: 0 | ac_mod: -40 | hr_mod: 5 | dr_mod: 6`
+A former religious operative from the charnel chapel, risen in the burial field. Recites the charnel chapel's inscription as attack-accompanying speech — the prayer-debt formula — as though naming the offense in the substrate's language might satisfy the filing requirement the attack is making.
+- `! 0 0 0 7 0 2048 4` (flamestrike cast; cure_light def)
+- Placement: Rooms 1192, 1193 | Limit 1 each
+
+---
+
+### Tier 4 — Older Gravewood and Mire (1169–1179) | Level 62–70
+
+**1169 — ridge-clan shade**
+Level 63 | `act: is_npc aggressive stay_area undead no_body` | `aff: infrared`
+Alignment: -400 | Sex: neutral
+`hp_mod: 0 | ac_mod: -30 | hr_mod: 5 | dr_mod: 5`
+Pre-estate burial dead, disturbed by the Harren estate's expansion into their burial ground. The substrate has risen them, but not in the estate's administrative mold — they are older, different in their behavioral logic, attacking with the territorial response of ancestors defending their ground rather than guards enforcing a charter.
+- `| 0 0 0 0 0 256 2` (strong: shadow; suscept: physical)
+- Placement: Rooms 1199, 1200, 1201 | Limit 2 per room
+
+**1170 — thornwood shaman**
+Level 67 | `act: is_npc sentinel stay_area solo` | `aff: detect_magic detect_hidden`
+Alignment: 0 | Sex: neutral
+`hp_mod: 0 | ac_mod: -40 | hr_mod: 4 | dr_mod: 5`
+A living shaman who negotiates with the substrate rather than serves it. Not aggressive by default — will not attack unless threatened or the boundary stones are disturbed. Speaks in precise, non-absolute language about the substrate's current state. Provides the gravewood's only non-hostile interaction point.
+- `! 0 0 0 7 0 4098 12` (mag_missile + flamestrike cast; cure_serious + heal def)
+- Placement: Room 1211 (Shaman's Hollow) | Limit 1
+- `spec_cast_mage`
+
+**1171 — root weave cultist**
+Level 64 | `act: is_npc aggressive stay_area` | `aff: detect_magic`
+Alignment: -500 | Sex: neutral
+`hp_mod: 0 | ac_mod: -25 | hr_mod: 4 | dr_mod: 5`
+A junior cultist who has spent too long in the gravewood and has drifted from the organized cult's operational discipline. The thorn-pattern tattoos have begun developing real growth inward, and the cultist's threat assessment has simplified to substrate-protective aggression.
+- `! 0 0 0 7 0 512 0` (faerie_fire cast)
+- Placement: Rooms 1202, 1206, 1212 | Limit 2 per room
+
+**1172 — substrate-adapted root-crawler**
+Level 65 | `act: is_npc aggressive stay_area no_body no_mind` | `aff: infrared`
+Alignment: -800 | Sex: neutral
+`hp_mod: 0 | ac_mod: -35 | hr_mod: 6 | dr_mod: 6`
+Something that was not always this. The substrate's integration process produced a result here that exceeds the original template — what it began as is no longer guessable from what it has become. Moves through root-mass as readily as through open space. No intelligence perceptible beyond territorial aggression.
+- `| 0 0 32 0 0 2 0` (strong: earth; suscept: fire)
+- Placement: Rooms 1203, 1210 | Limit 1 each
+
+**1173 — face-down risen**
+Level 64 | `act: is_npc aggressive stay_area undead no_flee` | `aff: infrared`
+Alignment: -900 | Sex: neutral
+`hp_mod: 0 | ac_mod: -35 | hr_mod: 6 | dr_mod: 7`
+An oathbreaker burial from the pre-estate ridge-clan community, risen wrong: face-down posture preserved in animation, movement a lurching inversion of normal locomotion. Attacks with the fury of something that has been pressed into the earth face-first for centuries against its will. Will not flee.
+- `| 0 0 0 0 0 256 0` (strong: shadow)
+- Placement: Rooms 1200, 1209 | Limit 1 each
+
+**1174 — thorn ring guardian**
+Level 66 | `act: is_npc aggressive sentinel stay_area` | `aff: infrared detect_invis`
+Alignment: -600 | Sex: neutral
+`hp_mod: 0 | ac_mod: -45 | hr_mod: 6 | dr_mod: 6`
+Assigned to protect the old thorn rings. Does not roam. Attacks any approach to the thorn-ring interiors. The guardian's nature is unclear — it may be an Estate Dead variant, a substrate construct, or something the substrate assembled specifically for ring-protection that has no other category.
+- Placement: Rooms 1201, 1190 (Thorn-Ringed Plots) | Limit 1 each
+
+**1175 — mire lurker**
+Level 65 | `act: is_npc aggressive stay_area no_blood` | `aff: infrared`
+Alignment: -500 | Sex: neutral
+`hp_mod: 0 | ac_mod: -40 | hr_mod: 7 | dr_mod: 6`
+Substrate-adapted beings whose skin has the color and texture of deep mud. Silent in water, slow on land. Effectively invisible in the mire's fog. Attack with a grip-and-pull technique that exploits the unstable mire terrain.
+- `| 0 0 64 0 0 512 128` (strong: water; suscept: poison, fire)
+- Placement: Rooms 1217, 1218, 1221, 1222 | Limit 2 per room
+
+**1176 — deep mire shade**
+Level 67 | `act: is_npc aggressive stay_area undead no_body no_blood` | `aff: infrared`
+Alignment: -700 | Sex: neutral
+`hp_mod: 0 | ac_mod: -50 | hr_mod: 6 | dr_mod: 7`
+Older than the mire itself — cold presences that may be substrate output expressed as localized dread. Rise from the water and affect those who pass through the mire with a psychological cold as much as thermal. Effectively impossible to see until engaged.
+- `| 0 0 0 0 0 256 2` (strong: shadow; suscept: physical)
+- Placement: Rooms 1219, 1220, 1228 | Limit 1 per room
+
+**1177 — sulfur-bloated corpse**
+Level 62 | `act: is_npc aggressive stay_area undead no_blood` | `aff: infrared`
+Alignment: -400 | Sex: neutral
+`hp_mod: 0 | ac_mod: 0 | hr_mod: 3 | dr_mod: 5`
+The terminal product of the alchemical runoff channel's effect on interred remains: a body saturated with the mire's chemical deposits to the point of bloating, risen by the substrate but chemically altered enough that contact risks secondary poisoning.
+- `| 0 0 0 0 0 512 128` (strong: poison; suscept: fire)
+- `spec_poison`
+- Placement: Rooms 1224, 1230 | Limit 2 per room
+
+**1178 — fog shrine attendant**
+Level 68 | `act: is_npc aggressive stay_area sentinel solo` | `aff: infrared detect_magic`
+Alignment: -600 | Sex: neutral
+`hp_mod: 0 | ac_mod: -55 | hr_mod: 7 | dr_mod: 7`
+Something that tends the fog shrine — not a cultist, not a shade, not a construct in any recognized category. Present at the shrine island. What it was before it became this is not answerable from its current appearance. Attacks those who approach the shrine platform.
+- `! 0 0 0 7 0 4098 8` (mag_missile + flamestrike; cure_critic def)
+- Placement: Room 1223 (Fog Shrine) | Limit 1
+
+**1179 — substrate water-thing**
+Level 66 | `act: is_npc aggressive stay_area no_mind no_blood no_body` | `aff: infrared`
+Alignment: -800 | Sex: neutral
+`hp_mod: 0 | ac_mod: -40 | hr_mod: 5 | dr_mod: 6`
+An entity from the substrate's water table interface — water and crystal-compound given a minimal operational form by the substrate's processes. Has no discernible anatomy. Present near the black water pool and substrate water sink.
+- `| 0 0 64 0 0 512 128` (strong: water; suscept: poison, fire)
+- Placement: Rooms 1220, 1231 | Limit 1 each
+
+---
+
+### Tier 5 — Ossuary Undercroft (1180–1184) | Level 65–72
+
+**1180 — bone weaver journeyman**
+Level 66 | `act: is_npc aggressive stay_area` | `aff: infrared`
+Alignment: -400 | Sex: neutral
+`hp_mod: 0 | ac_mod: -35 | hr_mod: 5 | dr_mod: 6`
+A practitioner of bone craft at the journeyman level — skilled enough for sorting and basic construction, not yet authorized for high-grade resonance work. Describes combat in terms of joinery and structural failure rather than victory and defeat.
+- Placement: Rooms 1234, 1235 | Limit 2 per room
+
+**1181 — bone weaver master**
+Level 70 | `act: is_npc aggressive stay_area solo` | `aff: infrared detect_magic`
+Alignment: -500 | Sex: neutral
+`hp_mod: 0 | ac_mod: -65 | hr_mod: 8 | dr_mod: 8`
+The senior bone weaver — responsible for high-grade work and construct assembly supervision. Fights with precise, economical violence, applying craft discipline to combat the way a master applies it to construction.
+- `! 0 0 0 7 1091 0 0` (2_attack + nodisarm + notrip + punch + headbutt)
+- `l 100 1205 0 0 0`
+- `L 100 0 0 0 0`
+- Placement: Room 1238 (Bone-Weaver's Workshop) | Limit 1
+
+**1182 — marrow construct**
+Level 68 | `act: is_npc aggressive stay_area undead no_blood no_body` | `aff: infrared`
+Alignment: -600 | Sex: neutral
+`hp_mod: 0 | ac_mod: -55 | hr_mod: 7 | dr_mod: 7`
+A mid-scale bone construct — assembled from dozens of sources, fused at joints with substrate-mediated bonding. Was never alive as a unified being. Architecture that moves. Responds to substrate-level direction rather than vocal commands.
+- `| 0 0 32 0 0 512 128` (strong: earth; suscept: poison, fire)
+- Placement: Rooms 1241, 1247 | Limit 2 per room
+
+**1183 — marrow fiend**
+Level 72 | `act: is_npc aggressive stay_area undead no_blood no_body solo` | `aff: infrared`
+Alignment: -700 | Sex: neutral
+`hp_mod: 0 | ac_mod: -80 | hr_mod: 9 | dr_mod: 9`
+A large-scale construct, four meters in height, with excess limbs and articulated bone-plate coverage. The bone-weaver masters' finest operational product. Deployed from the marrow fiend vault when the binding requires physical enforcement at a scale beyond the estate dead.
+- `! 0 0 0 7 1091 0 0`
+- `| 0 0 32 0 0 512 128`
+- `l 100 1206 0 0 0`
+- `L 100 0 0 0 0`
+- Placement: Room 1248 (Marrow Fiend Vault) | Limit 2
+
+**1184 — ossuary elder**
+Level 69 | `act: is_npc aggressive sentinel stay_area undead` | `aff: infrared detect_invis`
+Alignment: -600 | Sex: neutral
+`hp_mod: 0 | ac_mod: -60 | hr_mod: 7 | dr_mod: 7`
+The former overseer of the ossuary system, risen as an administrative undead managing the vault operations. Challenges with ossuary protocol: "State your case-number. Unauthorized access to vault sections is subject to estate processing." Does not wait for an answer.
+- `! 0 0 0 7 99 0 4` (2_attack + nodisarm + notrip + punch; cure_light def)
+- Placement: Room 1233 (Upper Undercroft Hall) | Limit 1
+
+---
+
+### Tier 6 — Cave System (1185–1188) | Level 68–75
+
+**1185 — crystal cave stalker**
+Level 70 | `act: is_npc aggressive stay_area no_mind` | `aff: infrared`
+Alignment: -800 | Sex: neutral
+`hp_mod: 0 | ac_mod: -60 | hr_mod: 8 | dr_mod: 8`
+A predatory presence that has developed in the cave system's crystal-rich environment — neither undead nor construct but a biological form shaped by long exposure to the substrate's chemistry. Crystalline texture along the skin's dorsal surfaces. Attacks with the efficiency of a predator rather than the purpose of a soldier.
+- `| 0 0 32 0 0 512 0` (strong: earth; suscept: poison)
+- Placement: Rooms 1251, 1252, 1264 | Limit 2 per room
+
+**1186 — binding watcher**
+Level 72 | `act: is_npc aggressive sentinel stay_area undead` | `aff: infrared detect_invis detect_magic`
+Alignment: -700 | Sex: neutral
+`hp_mod: 0 | ac_mod: -70 | hr_mod: 9 | dr_mod: 8`
+Assigned to guard the cave system's binding-critical areas — the handprint cave, the secondary sigil floor, the consent inscription hall. Stationed; does not patrol. Attacks any approach to the protected surfaces with the absolute priority of something whose sole function is protection of a specific point.
+- `| 0 0 0 0 0 256 0` (strong: shadow)
+- Placement: Rooms 1255, 1261, 1256 | Limit 1 each
+
+**1187 — substrate echo**
+Level 71 | `act: is_npc aggressive stay_area undead no_body no_blood` | `aff: infrared`
+Alignment: -900 | Sex: neutral
+`hp_mod: 0 | ac_mod: -65 | hr_mod: 8 | dr_mod: 9`
+An echo entity — a resonance phenomenon from the crystal formation that has achieved sufficient coherence to function as an autonomous presence. Not a product of a specific death. May represent the substrate's earliest proto-consciousness before the Reversal completed. Attacks with cold and displacement rather than physical impact.
+- `| 0 0 0 0 0 256 2` (strong: shadow; suscept: physical)
+- `spec_cast_undead`
+- Placement: Rooms 1258, 1259, 1265 | Limit 1 each
+
+**1188 — cave root horror**
+Level 73 | `act: is_npc aggressive stay_area no_mind` | `aff: infrared`
+Alignment: -700 | Sex: neutral
+`hp_mod: 0 | ac_mod: -75 | hr_mod: 10 | dr_mod: 9`
+A section of the root network that has achieved mobile expression — a mass of root-fiber and crystal compound that moves through the cave using the root network's internal connections as a travel medium, emerging where needed. Territorially aggressive throughout the cave system.
+- `| 0 0 32 0 0 512 0` (strong: earth; suscept: fire)
+- Placement: Rooms 1260, 1263, 1270 | Limit 1 each
+
+---
+
+### Named Elites and Bosses (1189–1193) | Level 70–80
+
+**1189 — The Thornwood Witch** ★
+Level 72 | `act: is_npc sentinel stay_area solo` | `aff: detect_magic detect_invis detect_hidden`
+Alignment: 0 | Sex: female
+`hp_mod: 50 | ac_mod: -80 | hr_mod: 8 | dr_mod: 8`
+The oldest human in the wood, possibly predating the estate itself. Operates independently of both Lord Harren and the Lich, answers to neither, tolerated by both because her knowledge of the substrate's historical behavior is irreplaceable. Not aggressive. Will negotiate. Speaks in the shaman's precise non-absolute language. Not safe.
+- `! 0 0 0 7 0 6146 12` (mag_missile + flamestrike + mind_bolt cast; cure_serious + heal def)
+- `spec_cast_mage`
+- Loot: none (she is negotiable, not a combat objective; fights back if attacked)
+- Placement: Room 1211 (Shaman's Hollow) | Limit 1
+
+**1190 — Lord Harren, the Estate Revenant** ★
+Level 76 | `act: is_npc sentinel stay_area solo boss undead` | `aff: infrared detect_invis detect_evil`
+Alignment: -800 | Sex: male
+`hp_mod: 100 | ac_mod: -100 | hr_mod: 10 | dr_mod: 10`
+The last living head of the Harren family, risen and retained at his estate. Fully conscious and aware, bark-patterned skin, the administrative livery intact. Receives visitors. Can negotiate. Remembers being alive and governing as a living man. This memory is his defining characteristic and his defining torment. He is the cruelest product of the Reversal: complete awareness trapped in a system he cannot modify. When combat begins, he invokes the charter. The charter has no legal standing. He invokes it anyway.
+- `! 0 0 0 7 1091 4096 8` (2_attack + nodisarm + notrip + punch + headbutt; earthquake cast; cure_critic def)
+- `spec_cast_undead`
+- `l 100 1215 1216 0 0`
+- `L 60 40 0 0`
+- Placement: Room 1161 (Receiving Room — `no_mob`) | Limit 1
+
+**1191 — The Wild Hunt Master** ★
+Level 74 | `act: is_npc sentinel stay_area solo boss undead night_only` | `aff: infrared detect_invis flying`
+Alignment: -700 | Sex: male
+`hp_mod: 80 | ac_mod: -90 | hr_mod: 10 | dr_mod: 9`
+The Wild Hunt's commander — mounted on a substrate horse, antler crown's root-material tines oriented outward as sensory apparatus, face painted with the binding's sigil-marks. Present only at night. The antler crown is not decorative; it receives root-network signals even at distance, meaning the Hunt Master knows what is happening across the entire estate's perimeter while the Hunt is away. The black shadow-bone horn at his side transmits through the substrate rather than through air.
+- `! 0 0 0 7 1091 4096 4` (2_attack + nodisarm + notrip + punch + headbutt; earthquake cast; cure_serious def)
+- `spec_cast_undead`
+- `l 100 1217 0 0 0`
+- `L 100 0 0 0`
+- Placement: Room 1276 (Hunt Dispatch Point — `no_mob`) | Limit 1 | `night_only`
+
+**1192 — Bone-Weave Overseer Malsthen** ★
+Level 73 | `act: is_npc sentinel stay_area solo boss` | `aff: infrared detect_magic`
+Alignment: -600 | Sex: neutral
+`hp_mod: 80 | ac_mod: -90 | hr_mod: 10 | dr_mod: 10`
+The ossuary undercroft's apex craftsman — the practitioner who oversees the in-progress large-scale construct on the assembly floor and who has been sourcing material from undocumented substrate routes. Describes combat in the vocabulary of construction load-bearing and structural failure. Fights with the precision and economy of a master craftsman. The construct-in-progress is their life's work. Interrupting it is the only thing that produces genuine anger.
+- `! 0 0 0 7 1091 0 4` (2_attack + nodisarm + notrip + punch + headbutt; cure_serious def)
+- `spec_cast_undead`
+- `l 100 1218 0 0 0`
+- `L 100 0 0 0`
+- Placement: Room 1247 (Construct Assembly Floor — flagged `no_mob` in final area file) | Limit 1
+
+**1193 — The Thornwood Lich** ★
+Level 80 | `act: is_npc sentinel stay_area boss undead no_body` | `aff: infrared detect_invis detect_magic sanctuary`
+Alignment: -1000 | Sex: neutral
+`hp_mod: 200 | ac_mod: -150 | hr_mod: 12 | dr_mod: 12`
+The substrate intelligence that emerged from the crystal formation during the Reversal — what the Root Covenant's theology made literal, or what was always latent in the geological layer, or what assembled itself from centuries of absorbed memory-traces. Not human. May never have been. Sees estate, forest, and ossuary as one body. Speaks in systems. Does not threaten. Does not explain. Diagnoses. If it addresses an intruder, it is because the intruder has become relevant to the binding's current failure analysis.
+- `! 0 0 0 7 0 33554434 14` (mag_missile + mind_bolt cast; cure_light + cure_serious + cure_critic def)
+- `| 0 0 0 0 0 256 2` (strong: shadow; suscept: physical)
+- `spec_cast_undead`
+- `l 100 1219 0 0 0`
+- `L 100 0 0 0`
+- Placement: Room 1268 (Sealed Chamber — `no_mob`) | Limit 1
+
+---
+
+### Mobile Spec Compliance Summary
+
+- All 44 mobs carry `stay_area` (`64`). ✓
+- All aggressive mobs (`aggressive` = `32`) are hostile undead, feral creatures, or corrupted operatives — not civilian NPCs. ✓
+- Boss mobs (1190, 1191, 1192, 1193) carry `sentinel` + `boss` flags and are placed in `no_mob` rooms. ✓
+- Solo mobs (1157, 1160, 1166, 1170, 1174, 1178, 1181, 1183, 1189, 1190, 1191, 1192, 1193) carry `solo` flag. ✓
+- Undead mobs carry `undead` flag. Corporeal-absent mobs carry `no_body` and/or `no_blood`. ✓
+- The Thornwood Witch (1189) is `sentinel`, `solo`, non-aggressive — consistent with interface-specialist lore. ✓
+- `invasion` flag not set on any mob. ✓
+- `day_only` not used on any mob. `night_only` used only on 1154 (approach phantom) and 1191 (Hunt Master). ✓
+
