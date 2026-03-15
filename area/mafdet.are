@@ -1617,4 +1617,670 @@ D1
 ~
 0 -1 14268
 S
+#14305
+@@lHarbor Gate@@N~
+@@lThe Harbor Gate of Mafdet opens the full cove to view — not a military gate but a commercial threshold, a wide stone archway whose passage marks the moment when the city's documentary bureaucracy yields to the physical reality of maritime operations.@@N The cove is immediately ahead: a natural basin reinforced with stone breakwaters on the northern and southern arms, the harbor chain's iron links arcing across the mouth from the Signal Tower to the Tidewall anchor point. @@lTide and weather have shaped the stone of the harbor front into organic curves that no architect planned — the basalt lower courses of every building are smoothed by spray and stained with mineral deposits in colours ranging from pale ochre to deep green.@@N The harbor smells of salt, tar, rope hemp, and the particular sweetness of wet timber that has been alternately soaked and dried for decades. The sound of commercial loading is constant: shouted cargo calls, the creak of block-and-tackle, and the rhythmic strike of cargo hooks against wooden crate sides. @@lThe Harbor Healer's Station is accessible to the south — a permanent triage point for the injuries that dock work produces at a frequency the city has long since accepted as operational background.@@N The northern pier arm extends into the cove from here; the harbor front proper runs south toward the signal tower and eventually the Tidewall.
+~
+0 1
+D1
+~
+~
+0 -1 14306
+D3
+~
+~
+0 -1 14302
+D2
+~
+~
+0 -1 14307
+E
+harbor chain~
+@@lThe harbor chain is a serious engineering achievement — iron links each the size of a grown person's forearm, connected to a winch house at the southern harbor arm and to a fixed anchor at the Signal Tower base. The chain is raised at dawn and lowered at dusk, and the raising is announced by a single long tone from the signal tower. Ships in the cove must be fully moored before the chain descends.@@N
+~
+S
+#14306
+@@lHarbor Front, Northern Approach@@N~
+@@bThe northern approach to the harbor front follows the wall of the city's northern edge, where the buildings lean toward the water and the street becomes progressively narrower as cargo movement dominates pedestrian space.@@N Cargo loads swing on ropes between pier-level and street-level storage in both directions, and experienced harbor workers navigate the street with a particular head-ducked agility that newcomers learn quickly or learn painfully. @@lThe North Pier's cargo loading bay is accessible to the north and east; the commercial quay is further along the northern harbor arm.@@N A permanent Harbor Warden checkpoint at the street narrowing verifies that all cargo moving between pier and street is logged against a registered manifest.
+~
+0 1
+D1
+~
+~
+0 -1 14309
+D3
+~
+~
+0 -1 14305
+S
+#14307
+@@lHarbor Healer's Station@@N~
+@@lThe Harbor Healer's Station is a triage room built into the harbor front's southern face, its coral-lime walls maintaining the cool temperature that helps stabilise injured dockworkers during the initial treatment period.@@N Bundles of dried coastal herbs hang from the ceiling above the treatment tables — plant medicines sourced from the tidal flat margins north of the city, used in poultices and infusions that the Harbor Healer has found effective for the particular injuries that dock work produces. @@lThe treatment tables are built wide and low to accommodate workers being brought in on cargo boards.@@N The Station operates continuously during harbor hours and maintains overnight watch for marine injuries and hypothermic incidents. The Harbor Healer is a fixture of the dock district, known to every regular worker, and respected for a medical practice that covers both standard injuries and the stranger conditions that arise from contact with relic-class cargo that has leaked containment.
+~
+1032 11
+D0
+~
+~
+0 -1 14305
+S
+#14308
+@@lNorth Pier, Approach Road@@N~
+@@lThe approach road to the North Pier runs along the harbor front's northern arm, its surface a mix of stone paving and compacted cargo debris — rope ends, spilled salt, wood shavings, and the occasional dropped cargo label.@@N The smell of the harbor is strongest here: bilge water, treated hemp rope, tar caulking, and the particular smell of wet wool that working sailors carry permanently. @@lThe Strand Folk basalt foundations of the original pier structure are visible at the waterline — darker stone, more precisely fitted than the later construction above them, and noticeably eroded into smooth curves by decades of tidal contact.@@N Harbor workers move cargo here in a continuous chain, the loading rhythm as familiar and persistent as the sound of the waves.
+~
+0 1
+D1
+~
+~
+0 -1 14309
+D3
+~
+~
+0 -1 14306
+S
+#14309
+@@lNorth Pier, Cargo Loading@@N~
+@@lThe North Pier's cargo loading section is the primary commercial entry point for eastbound goods leaving Mafdet by sea — a wide timber-on-stone platform extending over the water with crane fixtures at regular intervals.@@N The pier surface is rough with anti-slip scoring and salt crystal accumulation, and the boards flex slightly underfoot in the sections where the timber is aging. @@lThe Strand Folk basalt visible at the waterline on the pier supports is noticeably smoother than the timber above it — the original foundation, still bearing the Strand Folk construction marks that Littoral Branch archivists date to the period before the Shoreward Compact's formalisation.@@N Cargo is loaded here by teams of four using crane fixtures — a loading method efficient enough that a standard caravan load can be transferred to a vessel in a single working shift.
+~
+0 1
+D1
+~
+~
+0 -1 14310
+D3
+~
+~
+0 -1 14308
+D2
+~
+~
+0 -1 14306
+E
+strand folk basalt~
+@@lThe Strand Folk basalt at the waterline bears carved construction marks in a notation system that predates all current Ledger Quarter script systems. Littoral Branch scholars have documented these marks but not fully translated them; the working consensus is that they represent load-bearing specifications and tidal monitoring marks from the people who first built a permanent pier structure at this location.@@N
+~
+S
+#14310
+@@lNorth Pier, Mid-Section@@N~
+@@lThe middle section of the North Pier is where active loading operations concentrate during peak periods — four cranes working simultaneously, cargo teams crossing paths in both directions in a coordination that seems chaotic but runs on established protocol.@@N The water below is harbour-green in the shallows near the pier supports, deepening to the blue-black of harbour depth within ten paces of the edge. @@lMooring lines from two or three vessels are always attached to the pier rings here.@@N Sailors from anchored ships call instructions to the dock teams in a mix of harbor-operational Measure Script and trade-route pidgin that regular dock workers understand well enough to execute without confusion.
+~
+0 1
+D1
+~
+~
+0 -1 14311
+D3
+~
+~
+0 -1 14309
+S
+#14311
+@@lNorth Pier, Eastern End@@N~
+@@lThe eastern end of the North Pier extends furthest into the harbor, its final section narrowing to accommodate only a single-file passage and offering the most direct view of the open water beyond the harbor mouth.@@N The harbor chain's northern attachment point is visible from here — a massive iron ring set into the pier's terminal post, from which the chain descends to the water when lowered. @@lThe sound of open water is cleaner at the pier's end — the harbor sounds fade slightly and the salt wind arrives unfiltered from the sea.@@N A mooring capstan at the pier's terminal handles the heaviest vessels and shows the wear of continuous use.
+~
+0 1
+D2
+~
+~
+0 -1 14312
+D3
+~
+~
+0 -1 14310
+S
+#14312
+@@lPier Arm, Eastern Face@@N~
+@@lThe eastern face of the pier arm runs south from the North Pier's end toward the main harbor front, providing the cove's inner wall a view of the full harbor basin.@@N Mooring rings are set into the stone face at intervals sized for different vessel classes. @@lThe harbor floor is visible through clear water in sections — the sand bottom of the cove's natural basin, studded with the anchor-worn depressions left by decades of regular anchoring.@@N Harbor gulls have colonised the mooring ring posts, using the iron fittings as perch points and disputing territory with a noise that carries over the general harbor sound like a needle through cloth.
+~
+0 1
+D2
+~
+~
+0 -1 14313
+D0
+~
+~
+0 -1 14311
+S
+#14313
+@@lCommercial Quay@@N~
+@@lThe Commercial Quay is the primary bulk cargo transfer point of the North Pier arm — a wide stone platform where goods are weighed against the Saltweight standard before transfer to either harbor-side storage or direct ship loading.@@N Two Harbor Warden weight inspectors maintain a continuous presence here, their Saltweight verification scales mounted permanently into the quay stone. @@yThe inspection process is quick for pre-cleared manifests and more protracted for cargo flagged during Ledger Quarter documentation — a distinction that makes the Commercial Quay a bottleneck for cargo operators who cut corners in the Ledger Quarter.@@N The view from the quay takes in the full northern harbor arm and the Signal Tower beyond the harbor front — a clean sightline that the Harbor Wardens use to monitor approach traffic.
+~
+0 1
+D2
+~
+~
+0 -1 14314
+D3
+~
+~
+0 -1 14312
+S
+#14314
+@@lHarbor Front, North-Central@@N~
+@@lThe north-central harbor front is the busiest pedestrian section of the harbor district — the primary circulation route between the pier arms, the Harbormaster's office, and the Captain's Register Hall.@@N Cargo movement crosses foot traffic in both directions here, and the Harbor Wardens keep a visible presence to prevent the friction from becoming dangerous. @@lThe signal tower is clearly visible from this section, its glass lantern housing catching the light at every angle.@@N The Harbormaster's Office frontage is visible to the south-east, its notice boards carrying the current day's berth assignments.
+~
+0 1
+D1
+~
+~
+0 -1 14315
+D3
+~
+~
+0 -1 14313
+D2
+~
+~
+0 -1 14317
+S
+#14315
+@@lHarbor Front, Central Walk@@N~
+@@lThe Central Walk runs along the harbor front's wide stone promenade, the main public face of the cove where the harbor's working character is visible in full.@@N Moored vessels are visible in both directions — their masts rising above the pier level to form a forest of timber and rope above the stone. @@lThe harbor chain's arc is visible across the cove mouth, and the Signal Tower rises at the southern end of the main pier.@@N The smell here is the most concentrated expression of everything the harbor produces: salt, tar, fish, rope, and the particular warm-machine smell of an active winch house working against a loaded cargo.
+~
+0 1
+D1
+~
+~
+0 -1 14316
+D3
+~
+~
+0 -1 14314
+D2
+~
+~
+0 -1 14321
+S
+#14316
+@@lHarbor Front, Signal Tower Approach@@N~
+@@lThe approach to the Signal Tower crosses the widest section of the harbor front promenade, where the stone is worn smooth by decades of foot traffic and cargo wheel grinding.@@N The tower itself rises just ahead — stone, wide at the base, narrowing through three galleries to the lantern crown. @@lThe Captain's Register Hall is accessible to the east from this section.@@N Harbor Warden patrols move through this area on a regular rotation, their presence more visible near the tower than elsewhere on the front.
+~
+0 1
+D1
+~
+~
+0 -1 14321
+D3
+~
+~
+0 -1 14315
+D1
+~
+~
+0 -1 14329
+S
+#14317
+@@lHarbormaster's Office@@N~
+@@lThe Harbormaster's Office is the operational command centre of Mafdet's harbor — a wide interior room whose north and east walls are covered entirely in the Harbor Register, a continuously maintained record of every vessel, berth, cargo, and commercial interaction in the cove.@@N The Register itself is a living document: clerks update it in real time from pier reports delivered on runners, and the Harbormaster reads the current state by walking the length of the wall, each section representing a specific aspect of harbour operations. @@lBerth assignment boards, weather logs, chain schedule records, and the Quay Concord's commercial traffic register all feed into the Harbormaster's synthesis.@@N The Harbormaster's personal judgment about harbor priorities — which vessels get early berth access, which cargo inspections get expedited, which disputes between ship captains and dock operators get formal resolution — shapes the commercial flow of the entire port. @@lThe office windows face both the harbor front and the cove, allowing the Harbormaster to maintain visual contact with operations at all times.@@N The Harbor Register on the wall is sufficiently complete that a Ledger Quarter archivist once described it as the single most comprehensive real-time commercial record in the corridor.
+~
+0 11
+D0
+~
+~
+0 -1 14314
+E
+harbor register~
+@@lThe Harbor Register is organized by berth number, with each berth's current occupant, arrival time, declared cargo, manifest status, and departure estimate on a single board. A secondary section tracks the cargo inspection queue — vessels waiting for Ledger Quarter clearance before they can complete unloading. A third section records the chain schedule and any modifications to standard timing. At the very end, a running tally of commercial tonnage for the current season, compared to the same period in the previous three years.@@N
+~
+S
+#14318
+@@lHarbor Front, Winch Road@@N~
+@@lThe Winch Road is the internal service corridor running behind the harbor front's main buildings, connecting the cargo crane winch houses to the pier-side storage facilities and the Harbor Chain Winch House.@@N Winch operators and maintenance workers use this route; it is not a public thoroughfare but access is not formally restricted either. @@lThe smell of machine oil and hot metal from the winch mechanisms is stronger here than anywhere else on the front.@@N Grease marks on the walls show the path that maintenance workers take when servicing the crane cables — a regular job in the salt environment that destroys metal faster than almost anywhere inland.
+~
+0 1
+D1
+~
+~
+0 -1 14319
+D3
+~
+~
+0 -1 14314
+S
+#14319
+@@lHarbor Front, South-Central@@N~
+@@lThe south-central harbor front carries the transition from the northern commercial piers to the bonded cargo area of the South Pier — a zone where the cargo character shifts from bulk commercial goods to the sealed, authenticated shipments under Storm Ledger jurisdiction.@@N The street here is quieter than the northern section — fewer casual workers, more formally attired cargo inspectors with documentation boards. @@lThe South Pier is visible ahead, its surface marked with the Storm Ledger's weather-and-weight iconography painted onto the pier boards at regular intervals.@@N A Harbor Warden posts permanently here at the transition between regular and bonded cargo zones, checking the Storm Ledger authentication marks on cargo passing south.
+~
+0 1
+D1
+~
+~
+0 -1 14320
+D3
+~
+~
+0 -1 14318
+S
+#14320
+@@lHarbor Front, Bonded Approach@@N~
+@@lThe approach to the South Pier's bonded cargo section is the last point where unrestricted public access is available — beyond here, Storm Ledger jurisdiction restricts movement to registered cargo operators and their licensed representatives.@@N A stone marker engraved with the Storm Ledger's authority text defines the boundary; Compact law gives Harbor Wardens authority to stop and question anyone crossing it without visible cargo documentation. @@lThe marker text is formal and specific: STORM LEDGER JURISDICTION BEGINS — ALL CARGO MOVEMENT SUBJECT TO WEATHER-RISK BOND VERIFICATION — MANIFEST REQUIRED FOR PASSAGE.@@N The South Pier itself is visible beyond the marker, its timber darker and more weathered than the North Pier — this section predates the last pier reconstruction by two decades.
+~
+0 1
+D1
+~
+~
+0 -1 14333
+D3
+~
+~
+0 -1 14319
+S
+#14321
+@@lSignal Tower Base@@N~
+@@lThe base of the Signal Tower is a wide stone platform built at the harbor front's edge, where the stone of the shore meets the masonry of the tower foundation.@@N The tower rises from a basalt plinth that carries the Littoral Branch construction marks of the original builders — this was the first permanent structure built at Mafdet's location, a coastal observation post that predates the city itself. @@lGlass-enclosed lantern panels on the tower face are visible at each gallery level, their coloured glass inserts stored in racks at the base and swapped by signal operators to compose the messages the tower transmits.@@N The lantern rotation schedule is posted at the base: signal codes for standard harbor operations, emergency codes for chain failure or vessel distress, and the daily timing sequence that synchronizes harbor operations from dawn through dusk. Stairs ascend through the tower's interior to the upper galleries and the crown lantern.
+~
+0 1
+D0
+~
+~
+0 -1 14322
+D3
+~
+~
+0 -1 14315
+E
+signal codes~
+@@lThe standard signal codes posted at the tower base include: long-red = harbor chain raising (dawn), long-red twice = harbor chain lowering (dusk), alternating red-white = vessel in distress, steady green = all-clear for approach, steady blue = inspection required before entry, flashing white = emergency — harbor closed. The codes are calibrated so that a vessel's crew can read them from the harbor mouth.@@N
+~
+E
+littoral branch construction marks~
+@@lThe construction marks on the basalt plinth are in the same notation system as those at the North Pier foundation — Littoral Branch survey notation, predating all current script systems in the Ledger Quarter archives. The marks here are more elaborate than the pier marks, suggesting this was a primary construction site rather than a secondary support. One mark, larger than the others, appears to represent a directional bearing — a coastal orientation marker for the survey network the Strand Folk built along this shore.@@N
+~
+S
+#14322
+@@lSignal Tower, First Gallery@@N~
+@@lThe first gallery of the Signal Tower provides a view over the harbor front roofline — high enough to see the full arc of the northern pier arm and the Harbormaster's Office courtyard, but not yet high enough for the full harbor view.@@N The gallery is a working level: signal equipment storage, cable management for the lantern systems, and a duty station where the signal operator maintains the schedule and receives reports from harbor-level runners. @@lThe glass lantern panels stored here fill an entire wall — red, white, green, blue, and the yellow used for the weather-warning sequence — and the smell of lamp oil permeates the gallery from the lantern mechanism overhead.@@N The stairs continue upward to the second gallery and the crown.
+~
+0 11
+D2
+~
+~
+0 -1 14321
+D4
+~
+~
+0 -1 14323
+S
+#14323
+@@lSignal Tower, Second Gallery@@N~
+@@lThe second gallery is the signal operator's primary working position — high enough to see the full harbor basin and the approach beyond the chain, and equipped with the mechanism that controls the main lantern direction and colour.@@N The view here is partial in one direction and complete in another: the harbor front and cove are in full view, but the Tidewall behind the tower blocks the seaward horizon. @@lThe signal mechanism is a rotating drum with coloured glass inserts, driven by a hand-cranked gear system that the signal operator works while calling out the message to a recorder below.@@N Duty rotations here are four-hour shifts because the concentration required to maintain signal accuracy across the full operating sequence is intense.
+~
+0 11
+D2
+~
+~
+0 -1 14322
+D4
+~
+~
+0 -1 14325
+S
+#14324
+@@lSignal Tower, Upper Stair@@N~
+@@lThe upper stair connects the second gallery to the tower crown, a tighter spiral than the lower sections with the lantern mechanism's counterweight system running through the stair's central column.@@N The temperature drops noticeably at this height — the sea wind is unimpeded and comes directly through the ventilation gaps in the tower's stone. @@lThe sound of the harbor recedes below; at this elevation, the dominant sound is wind and the creak of the lantern mechanism.@@N The crown is directly above.
+~
+0 11
+D2
+~
+~
+0 -1 14323
+D4
+~
+~
+0 -1 14325
+S
+#14325
+@@lSignal Tower Crown@@N~
+@@lThe Signal Tower Crown offers the most comprehensive view of Mafdet's harbor that any fixed position provides — the complete cove basin visible in every direction, the harbor chain's full arc, the breakwater causeway extending east into the harbor mouth, and the Tidewall's seaward face reflecting morning light.@@N @@lTo the north, the North Pier arms extend into the cove, their crane fixtures visible as angular shapes above the pier level.@@N To the south, the South Pier and the Tidewall walk curve away toward the seaward perimeter. The breakwater causeway is visible as a narrow stone line running east from the harbor front toward the deep water. @@lThe Shrine Terrace is visible on the upper city's basalt rise to the northwest — the claw-marked spire at its centre is the highest point visible from the tower.@@N The chain attachment points are clearly visible from this height: the northern anchor at the pier terminal and the winch house position on the southern harbor arm. The chain's current state — raised — is confirmed by its visible arc above the water's surface. The sea beyond the chain is open, and at least two vessels are visible on the outer approach: one inbound, one holding position outside the chain's range.
+~
+0 11
+D5
+~
+~
+0 -1 14324
+E
+breakwater causeway~
+@@lThe breakwater causeway appears from this height as a narrow stone line running east from the harbor front, narrowing as it extends until the far end is barely wide enough for two people. The breakwater itself rises from the water on both sides of the causeway, its stone face wave-battered and encrusted with barnacle colonies that give it a grey-white fringe. The end of the causeway — the breakwater's furthest point — appears as a small stone platform.@@N
+~
+E
+harbor chain~
+@@lThe harbor chain at full arc shows its scale clearly from the tower crown. Each link is visible as a distinct element of the arc, and the colour difference between the upper links (newer, less corroded) and the older chain sections (darker, more pitted) suggests the chain has been partially renewed in sections rather than replaced entirely. The winch mechanism at the chain's southern end is visible as a dark structure against the Tidewall stone.@@N
+~
+S
+#14326
+@@lHarbor Front, Eastern Walk@@N~
+@@lThe Eastern Walk is the section of harbor front closest to the water — the stone promenade that runs directly above the shore, with the cove visible to the east over a low seawall and the harbor buildings to the west.@@N Sailors and dock workers use this as a transit route between the pier ends and the harbor facilities; it is also where cargo overflow is temporarily staged when the pier surface reaches capacity. @@lThe seawall here is low enough to sit on, and workers on break frequently do exactly that, facing east toward the cove.@@N The breakwater causeway access is visible from the eastern walk — the gate that controls public access to the causeway is in the seawall at the walk's eastern end.
+~
+0 1
+D1
+~
+~
+0 -1 14327
+D3
+~
+~
+0 -1 14314
+S
+#14327
+@@lHarbor Front, Breakwater Junction@@N~
+@@lThe junction at the breakwater access is the point where the harbor front's main circulation meets the narrow path that leads out to the breakwater.@@N A gate in the seawall marks the boundary — publicly accessible when the harbor is in normal operation, closed during severe weather events that make the causeway dangerous. @@lThe gate is currently open, and the first section of the breakwater causeway extends east from the gate arch.@@N Harbor Wardens monitor this junction during high-traffic periods; the breakwater is narrow enough that two-directional cargo movement would be dangerous.
+~
+0 1
+D1
+~
+~
+0 -1 14341
+D3
+~
+~
+0 -1 14326
+S
+#14328
+@@lHarbor Front, Southern Curve Start@@N~
+@@lThe harbor front curves south here, the geometry of the natural cove pulling the stone promenade away from the straight line of the northern arm and into a gradual southward arc.@@N The curve is the natural result of the cove's asymmetric shape — the southern arm is longer and more gradually inclined than the northern, creating a harbor that curves rather than squares. @@lThe Storm Ledger's bonded cargo piers are visible on the southern arm; the Tidewall begins its distinctive profile further south.@@N The light is different on the southern curve — the prevailing wind comes from the east here rather than the northeast, and the sea spray reaches the promenade more consistently.
+~
+0 1
+D1
+~
+~
+0 -1 14333
+D3
+~
+~
+0 -1 14327
+S
+#14329
+@@lCaptain's Register Hall@@N~
+@@lThe Captain's Register Hall is the Quay Concord's formal administrative presence in the harbor district — a spacious interior room that maintains the Concord's parallel record to the Harbor Register, tracking every vessel operating in the cove from the ship captain's perspective rather than the Harbormaster's.@@N The two registers together create the complete commercial record of the harbor: the Harbormaster's version emphasises cargo throughput and berth management; the Concord's version emphasises vessel status, captain accountability, and maritime contract terms. @@lWhere the two registers disagree, the dispute goes to the Shoreward House for resolution.@@N The hall's interior is calmer than the harbor front outside — ship captains come here to negotiate cargo terms, review the Concord's dispute resolution records, and register new commercial arrangements with the harbor authority. @@lNautical charts cover the eastern wall, including the most recent depth soundings of the approach channel and a detailed map of the harbor basin's current configuration.@@N The Quay Concord's standing charter is displayed near the entrance: a statement of the Concord's purpose that doubles as a statement of the principles that distinguish professional maritime operators from casual ones.
+~
+0 11
+D3
+~
+~
+0 -1 14316
+E
+nautical charts~
+@@lThe nautical charts on the eastern wall include the approach from the open sea to the harbor mouth, showing the shoal areas to the north and the deep channel that runs close to the southern breakwater arm. A current tide table is pinned over an older chart, annotating the depth at the harbor chain with the tide's current phase. One chart shows the historical harbor configuration from before the most recent breakwater extension, which is annotated with the date and contracted builder.@@N
+~
+S
+#14330
+@@lHarbor Front, Chain Winch Approach@@N~
+@@lThe approach to the Harbor Chain Winch House runs along the harbor front's southern section, where the commercial character of the northern piers gives way to the operational infrastructure that controls the harbor's security.@@N The chain mechanism's daily operation is audible on this approach — the grinding of gears during raising and lowering that the entire harbor hears as a signal for the day's commercial rhythm. @@lThe Winch House building is visible ahead, a heavy stone structure built specifically to contain and protect the mechanism against both weather and sabotage.@@N Harbor Wardens maintain an elevated presence in this section; the chain mechanism is classified as harbor-critical infrastructure.
+~
+0 1
+D1
+~
+~
+0 -1 14337
+D3
+~
+~
+0 -1 14328
+S
+#14331
+@@lHarbor Front, Southern Pier Approach@@N~
+@@lThe southern pier approach is a service road that connects the main harbor front circulation to the South Pier's bonded cargo facilities.@@N The surface here carries heavier cargo movement than the pedestrian promenade — carts and handled loads moving between the Storm Ledger's vault and the bonded pier. @@lHarbor Warden inspectors work from fixed positions along this approach, checking Storm Ledger authentication marks against their registers.@@N The South Pier extends east from the approach road's end; the Harbor Chain Winch House occupies the inner face of the southern harbor arm.
+~
+0 1
+D1
+~
+~
+0 -1 14333
+D3
+~
+~
+0 -1 14330
+S
+#14332
+@@lHarbor Front, Tidewall Junction@@N~
+@@lThe junction at the harbor front's southern end marks the transition between the working harbor district and the Tidewall's residential and defensive zone.@@N The character of the street changes here — commercial cargo movement decreases, and the people present shift from dock workers and cargo inspectors to Tidewall residents, off-duty sailors, and the occasional Strand Rememberer making the walk between the harbor front and the Tidewall.@@N @@lThe Tidewall's barnacle-crusted seaward face is partially visible over the building roofline at the junction's east end.@@N The street narrows here as it approaches the Tidewall entrance.
+~
+0 1
+D1
+~
+~
+0 -1 14349
+D3
+~
+~
+0 -1 14330
+D4
+~
+~
+0 -1 14387
+S
+#14333
+@@lSouth Pier, Bonded Cargo@@N~
+@@lThe South Pier is the Storm Ledger's operational home in the harbor district — the section of pier where high-value, weather-risk-bonded cargo is held between the Ledger Quarter's Storm Ledger Vault and the vessels that will carry it to its destination.@@N The pier surface is cleaner than the North Pier — less casual cargo movement, more formalised handling — and the Storm Ledger's authentication marks appear on the pier posts, the cargo crane housings, and the mooring ring plates. @@yThe bonded cargo held here is among the highest-value material that moves through Mafdet: relic-adjacent goods, precious metals, and high-grade commodities whose maritime insurance requires both Storm Ledger custody and Compact authentication.@@N The Harbor Wardens maintain two permanent inspectors on the South Pier even when no cargo movement is underway. The pier extends east toward the southern breakwater, where the chain's southern anchor point is visible.
+~
+0 1
+D1
+~
+~
+0 -1 14334
+D3
+~
+~
+0 -1 14331
+S
+#14334
+@@lSouth Pier, Eastern Section@@N~
+@@lThe eastern section of the South Pier approaches the breakwater junction and the southern mooring area where vessels waiting for Storm Ledger clearance anchor in the calm of the cove's inner basin.@@N The water depth here is greater than the North Pier — the southern arm of the natural cove is deeper, which is why the Storm Ledger's heaviest cargo vessels prefer this berth. @@lThe pier boards here are newer than the approach sections — this end was extended recently to accommodate vessels with deeper draught.@@N The chain anchor point at the pier's southern terminal is visible ahead, a massive iron fitting that serves as the chain's fixed anchor during daily operations.
+~
+0 1
+D1
+~
+~
+0 -1 14335
+D3
+~
+~
+0 -1 14333
+S
+#14335
+@@lSouth Pier, Chain Terminal@@N~
+@@lThe chain terminal marks the south pier's furthest operational reach — the fixed anchor point for the harbor chain's southern end, from which the chain sweeps north across the cove mouth to the Signal Tower's base.@@N The anchor fitting is a massive bronze casting set into the pier's terminal post, with a manual release mechanism that allows the chain to be disconnected in emergency situations. @@lThe chain itself, when raised, creates an arc of iron that appears deceptively lightweight at this distance but represents a barrier that no unassisted vessel can pass.@@N Storm damage patching is visible on the pier boards here — the terminal position takes the brunt of weather that enters the cove mouth before the chain is raised.
+~
+0 1
+D1
+~
+~
+0 -1 14336
+D3
+~
+~
+0 -1 14334
+S
+#14336
+@@lSouth Pier, End Berth@@N~
+@@lThe southernmost berth on the South Pier is the Storm Ledger's most secure mooring position — the single berth that the Harbor Wardens can completely isolate from the rest of the pier with a heavy chain across the pier's width.@@N Vessels carrying Class Two or Class Three cargo hold here rather than in the main pier section, their cargoes remaining aboard until Quarantine Ledger clearance is received. @@lThe berth is frequently occupied; the volume of potentially hazardous cargo passing through Mafdet has increased over the past two seasons, driven by the same factors that have increased Quarantine Ledger business.@@N From the end berth, the view east takes in the full open sea beyond the harbor chain.
+~
+0 1
+D3
+~
+~
+0 -1 14335
+S
+#14337
+@@lHarbor Chain Winch House@@N~
+@@lThe Winch House is the mechanical heart of the harbor — the building that houses the gear system that raises and lowers the harbor chain, and the heavy bronze counterweights that make the chain's daily cycle manageable by a crew of four rather than requiring a dozen.@@N The mechanism itself is visible through the interior — the drive shaft, the gear reduction system, the cable drum, and the chains that connect the mechanism to the chain link that runs to the harbor ring. @@lThe Winch House smells strongly of machine oil and hot metal; the mechanism runs at a specific temperature range, and deviations from this range are the first indicator of mechanical stress that could compromise the chain's reliability.@@N The chain's daily raising is a precision operation — too fast and the chain whips in a way that can damage vessels in its path; too slow and the harbor's commercial timing is disrupted. The Winch Master who manages this operation is one of the most technically experienced people in the harbor.
+~
+0 11
+D3
+~
+~
+0 -1 14330
+S
+#14338
+@@lHarbor Front, Western Service Lane@@N~
+@@lThe service lane running west of the main harbor front provides access to the buildings behind the waterfront — storage warehouses, equipment depots, and the cargo brokers who prefer to operate away from the direct sight of the Harbor Wardens.@@N The lane is narrow but navigable for hand carts, and its secondary position makes it a common route for cargo that its owners prefer to move with minimal official attention. @@lThe Harbor Wardens are aware of this preference and conduct irregular patrols through the service lane at unpredictable intervals.@@N The lane smells of the composite of storage — preserved goods, tool oil, and the damp-stone smell of warehouse walls that have absorbed moisture through multiple seasons.
+~
+0 1
+D1
+~
+~
+0 -1 14339
+D3
+~
+~
+0 -1 14318
+S
+#14339
+@@lHarbor Front, Sailors' Quarter@@N~
+@@lThe sailors' quarter is the informal zone south of the main harbor front where off-duty crew members from moored vessels spend their time — a cluster of drinking establishments, food vendors, and makeshift entertainment options that have built up organically around the working harbor.@@N The establishments here operate without Compact certification and with the pragmatic understanding that sailors on shore leave have specific needs that formal commercial licensing does not accommodate well. @@lThe Harbor Wardens tolerate the quarter as long as it stays within its understood boundaries; incidents that spill north into the commercial zone receive a different response.@@N The noise here is louder and less organised than the harbor front proper — competing music, shouted conversations, and the particular sound of a brawl being resolved by its participants rather than by authority.
+~
+0 1
+D1
+~
+~
+0 -1 14340
+D3
+~
+~
+0 -1 14338
+S
+#14340
+@@lHarbor Front, Sailors' Quarter, East@@N~
+@@lThe eastern edge of the sailors' quarter faces directly onto the harbor front promenade, where the working harbor and its informal economy exist in immediate proximity.@@N Sailors who have been aboard for weeks move between the harbor and the quarter with the particular purposefulness of people who know exactly how long their shore leave lasts and what they intend to do with it. @@lA fish vendor operates from a fixed stall at this corner, selling smoked and fresh harbor catch to anyone who passes — harbor workers, sailors, and the occasional Ledger Quarter clerk looking to avoid the formal eating establishments near the Quarter Gate.@@N The smell of smoked fish and salt water is the dominant note here, under which the various smells of the sailors' quarter compete.
+~
+0 1
+D3
+~
+~
+0 -1 14339
+D2
+~
+~
+0 -1 14326
+S
+#14341
+@@lBreakwater Causeway@@N~
+@@lThe breakwater causeway is a narrow stone path extending east from the harbor front, built atop the breakwater's mass to provide access to the deep-water inspection point at the breakwater's end.@@N The causeway is barely wide enough for two people to pass each other if both lean slightly toward the water — a constraint that creates a social navigation challenge when cargo movement is underway. @@lThe water is visible on both sides: the calmer harbor basin to the north and the more exposed approach water to the south.@@N Sea spray reaches the causeway surface constantly, keeping the stone wet and slippery, and the footing requires attention even for experienced harbor workers. The breakwater itself rises below the causeway path, its stone face barnacle-encrusted and wave-scored.
+~
+0 1
+D1
+~
+~
+0 -1 14342
+D3
+~
+~
+0 -1 14327
+S
+#14342
+@@lBreakwater Causeway, Middle@@N~
+@@lThe middle section of the breakwater causeway is the most exposed part of the harbor approach — far enough from the shore to be beyond the buildings' wind-break effect and close enough to the harbor mouth that the open-sea swell lifts the water around the breakwater base perceptibly.@@N The causeway surface here is permanently stained with spray minerals, and the stone is rougher than at the shore end — the Compact has scored additional grip channels into the surface at this point after several incidents involving workers losing footing. @@lOn a calm day, the sea floor is visible through clear water on the southern side — the sand and rock bottom of the approach channel, with the dark shapes of anchored vessel chains running down to their anchor stones.@@N Harbor inspection tasks brought to the causeway midpoint typically involve checking the integrity of the harbor chain at its mid-arc, which requires reaching over the northern edge with a measurement rod.
+~
+0 1
+D1
+~
+~
+0 -1 14344
+D3
+~
+~
+0 -1 14341
+S
+#14343
+@@lBreakwater Causeway, Storm-Weathered Section@@N~
+@@lA section of the causeway has been repaired after storm damage — the patchwork is visible in the stone colour and fitting quality, newer grey-white material filling the gaps in the original darker breakwater stone.@@N The repair is structurally sound but the surface transition is slightly irregular, creating a small step that catches feet in low light. @@lThe sound of the sea is loudest here — the breakwater's mass redirects the wave energy and the causeway sits directly above the most active wave-impact zone.@@N The view north from this section takes in the full harbor basin interior, with the Signal Tower and the harbor buildings visible in profile against the sky.
+~
+0 1
+D1
+~
+~
+0 -1 14344
+D3
+~
+~
+0 -1 14342
+S
+#14344
+@@lBreakwater Causeway, Eastern Approach@@N~
+@@lThe eastern approach to the breakwater's end narrows to a single-file path where the causeway's stone widens slightly at the breakwater's terminal mass.@@N The sea is present on three sides at this point — the harbor basin to the north, the open approach channel to the south, and the deep water ahead. @@lThe spray from waves striking the breakwater's eastern face comes up and over the causeway path at irregular intervals, saltwater arriving horizontally when the wind is from the east.@@N The breakwater end is just ahead — the furthest point of stone extending into the harbor approach, marked by a small bronze fitting where the harbor chain's mid-span support is attached.
+~
+0 1
+D1
+~
+~
+0 -1 14345
+D3
+~
+~
+0 -1 14343
+S
+#14345
+@@lBreakwater End@@N~
+@@lThe breakwater's furthest point is a small stone platform exposed on three sides to open water — the harbor basin to the north, the approach channel to the south, and the open sea directly east.@@N From here, the full sweep of the cove is visible: the harbor chain in its raised position spanning the harbor mouth from this point to the Signal Tower; the two pier arms extending into the basin from the northern and southern harbor front; the Shrine Terrace's basalt platform visible above the city's roofline to the northwest. @@lThe sea beyond the chain shows its depth immediately — the bright coastal shallows transition within a short distance to the deep blue of open water.@@N The breakwater end bears a bronze inspection fitting where Harbor Warden chain-monitors attach their measurement equipment for daily chain-integrity checks. The fitting itself carries the chain's northern mid-span support, and when the chain is raised, it is possible to reach out and touch the iron links from this platform. @@lThe sound here is simply the sea — wind, wave, and the creak of the chain at its attachment point.@@N The platform has no shelter of any kind; weather that reaches the harbor mouth reaches the breakwater end unmodified.
+~
+4 1
+D3
+~
+~
+0 -1 14344
+E
+harbor chain fitting~
+@@lThe bronze fitting at the breakwater end carries a date stamp from the Shoreward Compact's third year — the same period as the harbor map mural in the Saltwind Inn, suggesting the breakwater extension and the Signal Tower's current configuration were part of the same major harbor development program. The chain link that passes through the fitting shows the darkened surface of decades of salt contact on its outer face, bright metal on the inner face where the link moves through the fitting daily.@@N
+~
+S
+#14346
+@@lHarbor Front, Southern Extension@@N~
+@@lThe southern extension of the harbor front connects the main pier area to the Tidewall approach, a longer stretch of promenade where the commercial density decreases and the residential character of the Tidewall begins to appear in building facades.@@N Shell-inlay decorative work on the older buildings here marks the Strand Folk architectural contribution to this part of the city — a decorative tradition that uses collected tidal material rather than quarried stone for accent work. @@lThe Tidewall's profile is fully visible from this section, its seaward face rising above the harbor front buildings to its north.@@N The street is quieter here — fewer working dock sounds, more the conversational sound of a residential area conducting its ordinary business.
+~
+0 1
+D1
+~
+~
+0 -1 14347
+D3
+~
+~
+0 -1 14332
+S
+#14347
+@@lHarbor Front, Tidewall Approach@@N~
+@@lThe final stretch of harbor front before the Tidewall entrance carries the transition from harbor district to defensive perimeter — the street narrows and the buildings lean closer, their upper stories overhanging the path in a way that is characteristic of the Tidewall's compressed residential construction.@@N A Strand Rememberer marker stone is set into the street at this transition — a small basalt plaque inscribed with words in the oldest layer of the Strand Folk notation, which translates roughly as: HERE THE WATER AND THE WALL MEET — REMEMBER WHAT THE WATER REMEMBERS. @@lThe marker stone is worn smooth from decades of hands touching it — a habit the Strand Rememberers encourage as a form of oral tradition transmission by touch.@@N The Tidewall entrance is immediately south.
+~
+0 1
+D1
+~
+~
+0 -1 14350
+D3
+~
+~
+0 -1 14346
+S
+#14348
+@@lHarbor Front, Commerce and Craft Row@@N~
+@@lThe Commerce and Craft Row is a secondary commercial strip between the main harbor front and the southern residential district, where specialist craft workers supply the specific needs of harbor operations — rope makers, caulkers, sail menders, and maritime instrument makers.@@N The shops here are small and technical, their owners specialists in materials science applied to the specific requirements of salt-air operation. @@lCaulking resin blocks are stacked outside the caulker's shop; sail cloth hangs in panels above the menders' work tables.@@N The craft workers here are more at ease than the harbor front's commercial brokers — their skills are less fungible and their clients are repeat customers with established relationships.
+~
+0 1
+D3
+~
+~
+0 -1 14339
+D0
+~
+~
+0 -1 14346
+S
+#14349
+@@lHarbor Front, Southern Curve@@N~
+@@lThe southern curve of the harbor front is the transition point where the cove's geometry draws the working harbor toward the Tidewall's seaward perimeter — the natural cove shape bending the harbor district southward until it meets the defensive wall.@@N The view from this curve takes in the full length of the harbor front in both directions: the pier arms to the north and the Tidewall's northern face to the south. @@lSalt spray is more consistent here than anywhere on the front, the south-to-east prevailing wind pushing the harbor surface against the curve.@@N The Tidewall begins its distinctive profile to the south, the older construction of its lower courses visible in the slightly irregular stonework of its base. The transition from harbor district to Tidewall district is more gradual here than the architectural shift at the Ledger Quarter — the city simply continues southward until the wall absorbs it.
+~
+0 1
+D2
+~
+~
+0 -1 14350
+D0
+~
+~
+0 -1 14346
+D3
+~
+~
+0 -1 14332
+S
 #0
