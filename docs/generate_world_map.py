@@ -34,37 +34,38 @@ PARCH_MID  = '#DDB870'
 PARCH_LT   = '#EDD080'
 PARCH_PALE = '#F5E0A0'
 
-SEA_DEEP   = '#2A4A6A'
-SEA_MID    = '#3A6080'
-SEA_LT     = '#5A8098'
-SEA_PALE   = '#7AABB8'
-RIVER_COL  = '#4A7898'
+SEA_DEEP   = '#1A3A62'
+SEA_MID    = '#2A5580'
+SEA_LT     = '#4A7898'
+SEA_PALE   = '#6AAAB8'
+RIVER_COL  = '#3A6E98'
 
-FOREST_INK = '#1E3A14'
-FOREST_DARK= '#2A5020'
-FOREST_MID = '#3A7030'
-FOREST_LT  = '#5A9040'
+FOREST_INK = '#0E2A0A'
+FOREST_DARK= '#1A4A14'
+FOREST_MID = '#2A6820'
+FOREST_LT  = '#4A8830'
 
-DESERT_BRN = '#A07828'
-DESERT_TAN = '#C89848'
-DESERT_PALE= '#E0BE80'
+DESERT_BRN = '#8A6018'
+DESERT_TAN = '#C49030'
+DESERT_PALE= '#DEBA70'
 
-MTN_DARK   = '#3A2C1C'
-MTN_MID    = '#5A4838'
-MTN_LT     = '#8A7860'
-MTN_SNOW   = '#ECE8E0'
+MTN_DARK   = '#2E2018'
+MTN_MID    = '#524030'
+MTN_LT     = '#806850'
+MTN_SNOW   = '#F0EDE4'
 
-SCORCH_COL = '#7A3818'
-ASH_COL    = '#706050'
-SALT_COL   = '#C8C0A8'
-VOID_COL   = '#18082A'
-VOID_LT    = '#3A1858'
-CRYPT_COL  = '#2A1820'
-BLIGHT_COL = '#302818'
+SCORCH_COL = '#7A2A10'
+ASH_COL    = '#605848'
+SALT_COL   = '#D0C8B0'
+VOID_COL   = '#120622'
+VOID_LT    = '#341448'
+CRYPT_COL  = '#201018'
+BLIGHT_COL = '#241C10'
 
 BLOOD_RED  = '#8B1010'
 FIRE_ORG   = '#C84010'
-TEAL_NEON  = '#007070'
+TEAL_NEON  = '#008080'
+BLIGHT_PURPLE = '#6A3878'
 
 W, H = 240, 180   # data-space dimensions
 
@@ -76,18 +77,19 @@ def make_parchment(w_px=2880, h_px=2160):
     img = Image.new('RGB', (w_px, h_px))
     pix = img.load()
 
-    # Base gradient: warm golden-brown, slightly darker at edges
+    # Base gradient: rich warm parchment, darker at edges
     for y in range(h_px):
         for x in range(w_px):
             fx, fy = x / w_px, y / h_px
-            # Radial vignette factor
+            # Radial vignette factor (stronger edge darkening)
             vx = (fx - 0.5) * 2
             vy = (fy - 0.5) * 2
-            vign = 1.0 - 0.45 * (vx*vx + vy*vy) ** 0.5
-            # Vertical warm gradient
-            r = int((220 - 18 * fy) * vign)
-            g = int((190 - 22 * fy) * vign)
-            b = int((130 - 20 * fy) * vign)
+            vign = 1.0 - 0.55 * (vx*vx + vy*vy) ** 0.55
+            # Diagonal warm gradient for depth
+            diag = (fx * 0.3 + fy * 0.7)
+            r = int((228 - 20 * diag + 8 * math.sin(fx*8)) * vign)
+            g = int((195 - 28 * diag + 5 * math.cos(fy*6)) * vign)
+            b = int((128 - 22 * diag) * vign)
             pix[x, y] = (max(0,min(255,r)), max(0,min(255,g)), max(0,min(255,b)))
 
     # Noise passes
@@ -557,7 +559,7 @@ def lore_scroll(ax, cx, cy, w, h, text, text_size=4.5, col=INK_FADED,
 # ═══════════════════════════════════════════════════════════
 #  FIGURE SETUP
 # ═══════════════════════════════════════════════════════════
-fig = plt.figure(figsize=(24, 18), dpi=130)
+fig = plt.figure(figsize=(26, 19.5), dpi=180)
 ax  = fig.add_axes([0, 0, 1, 1])
 ax.set_xlim(0, W)
 ax.set_ylim(0, H)
@@ -569,13 +571,13 @@ parch_img = make_parchment(w_px=1440, h_px=1080)
 ax.imshow(parch_img, extent=[0, W, 0, H], origin='upper',
           aspect='auto', zorder=0, alpha=1.0)
 
-# Soft vignette overlay
+# Soft vignette overlay — stronger edges for depth
 vx = np.linspace(-1, 1, 400)
 vy = np.linspace(-1, 1, 300)
 VX, VY = np.meshgrid(vx, vy)
-vign = np.clip((VX**2 + VY**2)**0.6 * 0.55, 0, 1)
+vign = np.clip((VX**2 + VY**2)**0.55 * 0.65, 0, 1)
 ax.imshow(vign, extent=[0, W, 0, H], origin='upper', aspect='auto',
-          cmap='Greys', alpha=0.28, zorder=1)
+          cmap='Greys', alpha=0.32, zorder=1)
 
 # ═══════════════════════════════════════════════════════════
 #  WATER BODIES
@@ -586,22 +588,26 @@ sea_pts = [
     (W, 0), (W, H), (196,H), (193,162),(188,142),(192,122),
     (186,102),(191,82),(189,62),(193,42),(188,22),(195,0)
 ]
-fill_region(ax, sea_pts, SEA_DEEP, alpha=0.68, edge_color=SEA_MID,
-            edge_lw=1.0, zorder=3, tension=15)
+fill_region(ax, sea_pts, SEA_DEEP, alpha=0.82, edge_color=SEA_MID,
+            edge_lw=1.2, zorder=3, tension=15)
 
-# Sea shimmer lines
-for yi in np.arange(5, 175, 5.5):
-    xs_w = np.linspace(198, W-2, 80)
-    ys_w = yi + 0.6 * np.sin(xs_w * 0.5 + yi)
-    ax.plot(xs_w, ys_w, color=SEA_LT, linewidth=0.35, alpha=0.22, zorder=4)
+# Sea shimmer lines — layered for depth
+for yi in np.arange(4, 175, 4.2):
+    xs_w = np.linspace(198, W-2, 100)
+    ys_w = yi + 0.55 * np.sin(xs_w * 0.55 + yi * 0.8)
+    ax.plot(xs_w, ys_w, color=SEA_LT, linewidth=0.40, alpha=0.28, zorder=4)
+for yi in np.arange(6, 175, 9):
+    xs_w = np.linspace(200, W-1, 60)
+    ys_w = yi + 0.30 * np.cos(xs_w * 0.9 + yi)
+    ax.plot(xs_w, ys_w, color=SEA_PALE, linewidth=0.25, alpha=0.18, zorder=4)
 
 # Northern sea (Kowloon reach)
 north_sea_pts = [
     (68,H),(68,165),(80,167),(95,170),(112,172),(130,170),
     (150,166),(168,162),(182,164),(193,162),(196,H)
 ]
-fill_region(ax, north_sea_pts, SEA_MID, alpha=0.62, edge_color=SEA_LT,
-            edge_lw=0.8, zorder=3, tension=12)
+fill_region(ax, north_sea_pts, SEA_MID, alpha=0.78, edge_color=SEA_LT,
+            edge_lw=1.0, zorder=3, tension=12)
 
 # ═══════════════════════════════════════════════════════════
 #  RIVERS
@@ -648,9 +654,16 @@ desert_pts = [
     (118,42),(136,38),(158,40),(178,46),(190,58),(188,80),(178,88),
     (160,90),(140,88),(125,80),(115,68),(112,54)
 ]
-fill_region(ax, desert_pts, DESERT_TAN, alpha=0.58, edge_color=DESERT_BRN,
-            edge_lw=0.7, zorder=4)
-hatch_region(ax, desert_pts, DESERT_BRN, dot_count=200, size=0.5, alpha=0.12, zorder=5)
+fill_region(ax, desert_pts, DESERT_TAN, alpha=0.68, edge_color=DESERT_BRN,
+            edge_lw=0.9, zorder=4)
+hatch_region(ax, desert_pts, DESERT_BRN, dot_count=260, size=0.6, alpha=0.14, zorder=5)
+# Inner warm gold highlight
+desert_inner = [
+    (126,50),(144,46),(162,48),(178,56),(180,72),(170,82),
+    (154,84),(140,82),(128,74),(120,62),(118,52)
+]
+fill_region(ax, desert_inner, '#D4A030', alpha=0.20, edge_color=None,
+            edge_lw=0, zorder=5)
 
 # Scorched Wastes
 scorch_pts = [(100,62),(116,58),(126,62),(128,72),(120,80),(108,82),(98,76),(96,68)]
@@ -673,14 +686,22 @@ for _ in range(35):
     sy = RNG.uniform(60,78)
     ax.plot(sx, sy, '+', color='white', markersize=2.8, alpha=0.75, zorder=6)
 
-# Great Northern Forest — base fill
+# Great Northern Forest — base fill (two-layer for depth)
 forest_pts = [
     (28,118),(50,115),(72,118),(94,120),(114,118),(136,116),(158,120),
     (168,128),(165,148),(150,155),(132,158),(112,156),(92,158),(72,154),
     (52,150),(34,144),(20,136),(18,124)
 ]
-fill_region(ax, forest_pts, FOREST_DARK, alpha=0.38, edge_color=FOREST_INK,
-            edge_lw=0.8, zorder=4)
+fill_region(ax, forest_pts, FOREST_DARK, alpha=0.52, edge_color=FOREST_INK,
+            edge_lw=1.0, zorder=4)
+# Inner lighter layer for depth
+forest_inner_pts = [
+    (36,122),(60,120),(82,122),(100,122),(118,120),(140,120),(160,125),
+    (163,142),(150,150),(132,154),(112,152),(90,153),(70,150),
+    (54,147),(36,140),(24,132),(22,126)
+]
+fill_region(ax, forest_inner_pts, FOREST_MID, alpha=0.28, edge_color=None,
+            edge_lw=0, zorder=4)
 
 # Withered Depths blight
 wither_pts = [(103,124),(120,120),(130,124),(128,140),(116,145),(102,138)]
@@ -696,24 +717,36 @@ fill_region(ax, thorn_pts, '#202E10', alpha=0.52, edge_color=FOREST_INK,
 #  MOUNTAINS
 # ═══════════════════════════════════════════════════════════
 
-# Cinderteeth Mountains — main volcanic range
+# Cinderteeth Mountains — main volcanic range (expanded, more dramatic)
 cinderteeth = [
-    (136,121),(140,126),(144,120),(148,128),(152,122),
-    (156,130),(160,124),(164,118),(148,134),(142,131),(155,136),
+    (132,118),(136,121),(140,126),(144,120),(148,128),(152,122),
+    (156,130),(160,124),(164,118),(168,122),(170,116),
+    (148,134),(142,131),(155,136),(158,128),(134,124),
+    (138,130),(162,120),(166,126),
 ]
-mountain_range(ax, cinderteeth, base_h=5.8, base_w=4.8,
-               col='#5A2E18', shadow='#3A1A0A', snow='#EDE8E0', zorder=11)
-# Volcanic fire glow
+mountain_range(ax, cinderteeth, base_h=6.2, base_w=5.0,
+               col='#5A2E18', shadow='#2E1208', snow='#F0EBE2', zorder=11)
+# Second tier — smaller outlier peaks
+cinderteeth_foothills = [
+    (130,115),(134,118),(162,115),(170,118),(172,112),
+    (126,122),(128,128),(174,122)
+]
+mountain_range(ax, cinderteeth_foothills, base_h=3.8, base_w=3.2,
+               col=MTN_MID, shadow=MTN_DARK, snow=MTN_SNOW, zorder=10)
+# Volcanic fire glow — two active vents
 for vp in [(148,129),(156,131)]:
-    for r, al in [(7,0.15),(5,0.20),(3,0.28)]:
-        ax.add_patch(plt.Circle(vp, r, color='#CC3300', alpha=al, zorder=10))
-    ax.plot(vp[0], vp[1]+6.5, '^', color=FIRE_ORG, markersize=6, alpha=0.8, zorder=12)
-    ax.plot(vp[0], vp[1]+6.5, '^', color='#FF6600', markersize=3.5, alpha=0.9, zorder=13)
-    # Smoke
-    for pi in range(6):
-        ax.add_patch(plt.Circle((vp[0]+RNG.uniform(-1,1), vp[1]+8+pi*2.5),
-                                 0.7+pi*0.4, color='#686060',
-                                 alpha=0.14-pi*0.02, zorder=11))
+    for r, al in [(9,0.10),(6,0.18),(3.5,0.28),(2,0.38)]:
+        ax.add_patch(plt.Circle(vp, r, color='#DD2800', alpha=al, zorder=10))
+    ax.plot(vp[0], vp[1]+6.5, '^', color=FIRE_ORG, markersize=7, alpha=0.85, zorder=12)
+    ax.plot(vp[0], vp[1]+6.5, '^', color='#FF7700', markersize=4, alpha=0.95, zorder=13)
+    # Lava glow on surrounding terrain
+    ax.add_patch(plt.Circle(vp, 14, color='#882200', alpha=0.06, zorder=9))
+    # Smoke plumes — billowing upward
+    for pi in range(8):
+        sx = vp[0] + RNG.uniform(-1.5, 1.5)
+        ax.add_patch(plt.Circle((sx, vp[1]+8+pi*2.8),
+                                 0.8+pi*0.5, color='#504844',
+                                 alpha=max(0.01, 0.16-pi*0.018), zorder=11))
 
 # West border ridges (Iseth Wilds)
 west_mts = [(11,82),(13,90),(11,98),(13,106),(11,114),(13,121)]
@@ -730,15 +763,19 @@ mountain_range(ax, south_mts, base_h=4.0, base_w=3.2, col=MTN_LT,
 # ═══════════════════════════════════════════════════════════
 
 forest_cluster_specs = [
-    (38,130,11,55), (56,135,10,50), (74,133,11,55),
-    (92,130,10,50), (108,132,10,48), (128,130,9,45),
-    (148,135,9,42), (30,138,8,38),  (50,143,9,44),
-    (70,140,10,50), (90,143,9,46),  (110,142,8,38),
-    (130,140,9,42), (148,138,8,38),
-    (24,128,6,28),  (160,138,7,32),
+    (38,130,11,72), (56,135,10,68), (74,133,11,72),
+    (92,130,10,66), (108,132,10,64), (128,130,9,60),
+    (148,135,9,58), (30,138,8,50),  (50,143,9,60),
+    (70,140,10,66), (90,143,9,62),  (110,142,8,52),
+    (130,140,9,58), (148,138,8,52),
+    (24,128,6,38),  (160,138,7,44),
+    # Extra density clusters
+    (42,138,7,44), (62,142,8,50), (80,136,7,42),
+    (96,138,8,48), (114,136,7,40), (136,134,8,46),
+    (156,132,7,38), (38,144,6,34), (158,142,6,32),
 ]
 for cx_, cy_, r_, c_ in forest_cluster_specs:
-    forest_cluster(ax, cx_, cy_, r_, count=c_, h_range=(1.6,3.0), zorder=9)
+    forest_cluster(ax, cx_, cy_, r_, count=c_, h_range=(1.6,3.2), zorder=9)
 
 # Withered Depths — dead trees
 for _ in range(38):
@@ -746,8 +783,8 @@ for _ in range(38):
     wy = RNG.uniform(122,142)
     dead_tree(ax, wx, wy, h=RNG.uniform(2.2,4.0), zorder=9)
 
-# Thornwood — gnarled trees
-for _ in range(35):
+# Thornwood — gnarled trees (denser)
+for _ in range(55):
     wx = RNG.uniform(67,88)
     wy = RNG.uniform(64,83)
     gnarled_tree(ax, wx, wy, h=RNG.uniform(2.0,3.8), zorder=9)
@@ -823,6 +860,28 @@ ax.plot(188, 92, 'D', color='none', markersize=9,
         markeredgecolor=INK, markeredgewidth=0.8, zorder=15)
 ax.add_patch(mpatches.Arc((188,92), 7, 7, angle=0, theta1=30, theta2=150,
                             color=GOLD, linewidth=0.6, alpha=0.45, zorder=14))
+
+# Sultan's Palace — opulent desert capital near Great Pyramid
+city_symbol(ax, 183, 66, size=1.6, col='#7A5000', crown=True, zorder=16)
+for r_, al_ in [(4.5,0.15),(3.0,0.22)]:
+    ax.add_patch(plt.Circle((183,66), r_, fill=False,
+                             edgecolor=GOLD_LT, linewidth=0.7,
+                             alpha=al_, zorder=15))
+
+# Akh'enet — City of the Eclipsed Ledger (desert trade hub)
+city_symbol(ax, 160, 80, size=1.4, col='#5A3808', crown=False, zorder=16)
+# Eclipsed ledger symbol — overlapping circles
+for r_, al_ in [(3.5,0.16),(2.2,0.22)]:
+    ax.add_patch(plt.Circle((160,80), r_, fill=False,
+                             edgecolor='#8A6020', linewidth=0.6,
+                             alpha=al_, zorder=15))
+
+# Spirebound Conclave ruins — in Cinderteeth foothills
+ruin_sym(ax, 138, 116, size=1.6, col='#7050B0', zorder=12)
+ruin_sym(ax, 142, 114, size=1.2, col='#604090', zorder=12)
+ax.add_patch(plt.Circle((140,115), 5.5, fill=False,
+                         edgecolor='#7050B0', linewidth=0.6,
+                         alpha=0.22, linestyle=':', zorder=11))
 
 # ═══════════════════════════════════════════════════════════
 #  CITIES
@@ -930,32 +989,32 @@ for wchx, wchy, puff_ang in [(17,162,0),(232,150,180)]:
 # ═══════════════════════════════════════════════════════════
 
 # ── Major Cities ────────────────────────────────────────────
-label(ax, 63, 98,  'MIDGAARD',  size=10.5, col=INK, weight='bold')
-label(ax, 24, 92,  'KIESS',     size=9.0,  col=INK, weight='bold')
-label(ax, 60, 80.5,'RAKUEN',    size=8.0,  col=INK_FADED, style='italic')
-label(ax, 115,159, 'KOWLOON',   size=10.0, col='#1A2A3A', weight='bold')
-label(ax, 188,80,  'MAFDET',    size=8.5,  col='#1A2030', weight='bold')
+label(ax, 63, 99.5,'MIDGAARD',  size=12.5, col=INK, weight='bold')
+label(ax, 24, 93,  'KIESS',     size=10.5, col=INK, weight='bold')
+label(ax, 60, 80.5,'RAKUEN',    size=9.0,  col=INK_FADED, style='italic', weight='bold')
+label(ax, 115,160, 'KOWLOON',   size=11.5, col='#1A2A3A', weight='bold')
+label(ax, 188,80,  'MAFDET',    size=10.0, col='#1A2030', weight='bold')
 
 # ── Regions ─────────────────────────────────────────────────
-label(ax, 85,140,  'THE GREAT NORTHERN FOREST', size=8.0,
+label(ax, 85,140,  'THE GREAT NORTHERN FOREST', size=9.5,
       col=FOREST_INK, style='italic', weight='bold')
-label(ax, 152,138, 'CINDERTEETH\nMOUNTAINS', size=7.5,
-      col='#5A2010', weight='bold')
-label(ax, 148,57,  'EASTERN DESERT', size=7.5,
+label(ax, 152,138, 'CINDERTEETH\nMOUNTAINS', size=8.5,
+      col='#4A1808', weight='bold')
+label(ax, 148,57,  'EASTERN DESERT', size=8.5,
       col=DESERT_BRN, style='italic', weight='bold')
-label(ax, 112,71,  'SCORCHED\nWASTES', size=6.5, col=SCORCH_COL, style='italic')
-label(ax, 164,38,  'SCORCHING\nSANDS', size=6.0, col='#904010', style='italic')
-label(ax, 178,68,  'SALTGLASS\nREACH', size=6.0, col='#686050', style='italic', rot=-12)
-label(ax, 220,90,  'THE GLEAMING\nEASTERN SEA', size=7.5,
+label(ax, 112,71,  'SCORCHED\nWASTES', size=7.0, col=SCORCH_COL, style='italic', weight='bold')
+label(ax, 164,38,  'SCORCHING\nSANDS', size=6.5, col='#7A3010', style='italic', weight='bold')
+label(ax, 178,68,  'SALTGLASS\nREACH', size=6.5, col='#585040', style='italic', weight='bold', rot=-12)
+label(ax, 222,90,  'THE GLEAMING\nEASTERN SEA', size=8.5,
       col=SEA_MID, style='italic', weight='bold', rot=-90)
-label(ax, 132,173, 'NORTHERN REACH', size=7.0, col=SEA_DEEP, style='italic', weight='bold')
-label(ax, 34,128,  'VERDANT DEPTHS', size=5.8, col=FOREST_DARK, style='italic')
-label(ax, 116,130, 'WITHERED\nDEPTHS', size=5.8, col=BLIGHT_COL, style='italic',
+label(ax, 132,173, 'NORTHERN REACH', size=7.5, col=SEA_DEEP, style='italic', weight='bold')
+label(ax, 34,128,  'VERDANT DEPTHS', size=6.5, col=FOREST_DARK, style='italic', weight='bold')
+label(ax, 116,130, 'WITHERED\nDEPTHS', size=6.5, col='#504030', style='italic', weight='bold',
       outline_col=PARCH_LT)
-label(ax, 22,120,  'FOREST OF\nCONFUSION', size=5.5, col=FOREST_MID, style='italic')
-label(ax, 76,73,   'THORNWOOD', size=6.0, col='#1A2E08', style='italic', weight='bold')
-label(ax, 10,60,   'ISETH\nWILDS', size=6.0, col=MTN_MID, style='italic')
-label(ax, 75,18,   'SUNKEN REACHES', size=5.8, col=MTN_LT, style='italic')
+label(ax, 22,122,  'FOREST OF\nCONFUSION', size=6.0, col=FOREST_MID, style='italic', weight='bold')
+label(ax, 76,73,   'THORNWOOD', size=6.5, col='#0E2408', style='italic', weight='bold')
+label(ax, 10,60,   'ISETH\nWILDS', size=6.5, col=MTN_MID, style='italic', weight='bold')
+label(ax, 75,18,   'SUNKEN REACHES', size=6.0, col=MTN_LT, style='italic')
 
 # ── Oases & Water ───────────────────────────────────────────
 label(ax, 138,82,  'GREAT\nOASIS', size=7.0, col='#1A3A5A', style='italic', weight='bold')
@@ -979,6 +1038,10 @@ label(ax, 74, 26,  'SEPULCHUR\nPASTURE', size=5.8, col='#3A2818', style='italic'
 # ── Special Sites ───────────────────────────────────────────
 label(ax, 160, 62, 'KHEPRA-LESH\n(Ruined)', size=5.5, col='#7A6040', style='italic')
 label(ax, 188, 96, 'SHRINE OF\nTHE FIRST CLAW', size=5.0, col='#7A5010', style='italic')
+label(ax, 183, 62, "SULTAN'S\nPALACE", size=5.5, col='#7A5000', style='italic', weight='bold')
+label(ax, 160, 76, "AKH'ENET", size=5.8, col='#6A4810', style='italic', weight='bold')
+label(ax, 140, 111, 'SPIREBOUND\nCONCLAVE (RUINS)', size=4.8, col='#7050B0', style='italic',
+      outline_col='#100820')
 label(ax, 128, 115,'SUNKEN\nSANCTUM', size=6.5, col='#7050B0',
       weight='bold', outline_col='#0A0418')
 
@@ -1021,8 +1084,8 @@ for lx, ly, lw, lh, lt in lore_scrolls:
 # ═══════════════════════════════════════════════════════════
 #  TITLE CARTOUCHE
 # ═══════════════════════════════════════════════════════════
-cx_cart, cy_cart = 13, 150
-cw_cart, ch_cart = 70, 24
+cx_cart, cy_cart = 68, 163
+cw_cart, ch_cart = 100, 12
 
 # Drop shadow
 ax.add_patch(FancyBboxPatch(
@@ -1048,23 +1111,23 @@ for fx, fy in [(cx_cart+3.5, cy_cart+3.5),
 
 # Title text
 mid_cart = cx_cart + cw_cart/2
-ax.text(mid_cart, cy_cart+ch_cart-5.5, 'THE KNOWN WORLD',
-        fontsize=13.5, fontweight='bold', color=INK, ha='center',
+ax.text(mid_cart, cy_cart+ch_cart-3.5, 'THE KNOWN WORLD',
+        fontsize=15.0, fontweight='bold', color=INK, ha='center',
         va='center', fontfamily='DejaVu Serif', zorder=43,
-        path_effects=[pe.withStroke(linewidth=2.5, foreground=PARCH_LT)])
-ax.text(mid_cart, cy_cart+ch_cart-11, 'of the  ACK!MUD  Realm',
-        fontsize=9.0, color=INK_FADED, ha='center', va='center',
+        path_effects=[pe.withStroke(linewidth=3.0, foreground=PARCH_LT)])
+ax.text(mid_cart, cy_cart+ch_cart-8.5, 'of the  ACK!MUD  Realm',
+        fontsize=9.5, color=INK_FADED, ha='center', va='center',
         fontfamily='DejaVu Serif', style='italic', zorder=43)
-ax.text(mid_cart, cy_cart+5.5,
-        '\u2741  Where Memory Holds, There Law Endures  \u2741',
-        fontsize=5.8, color=GOLD, ha='center', va='center',
+ax.text(mid_cart, cy_cart+2.5,
+        'Where Memory Holds, There Law Endures',
+        fontsize=6.0, color=GOLD, ha='center', va='center',
         fontfamily='DejaVu Serif', style='italic', zorder=43)
 
 # ═══════════════════════════════════════════════════════════
 #  LEGEND
 # ═══════════════════════════════════════════════════════════
-lx_leg, ly_leg = 13, 30
-lw_leg, lh_leg = 42, 58
+lx_leg, ly_leg = 198, 48
+lw_leg, lh_leg = 38, 68
 
 ax.add_patch(FancyBboxPatch(
     (lx_leg, ly_leg), lw_leg, lh_leg,
@@ -1111,7 +1174,7 @@ for i, (sym, col, lbl) in enumerate(legend_items):
 # ═══════════════════════════════════════════════════════════
 #  SCALE BAR
 # ═══════════════════════════════════════════════════════════
-sb_x, sb_y = 15, 22
+sb_x, sb_y = 198, 122
 for xi, col_ in [(0, INK),(12.5, PARCH_LT),(12.5, INK)]:
     ax.add_patch(mpatches.Rectangle(
         (sb_x+xi, sb_y-1), 12.5, 2.5,
@@ -1146,7 +1209,7 @@ ax.text(W/2, 7.8,
 #  SAVE
 # ═══════════════════════════════════════════════════════════
 out = '/home/user/acktng/docs/world_map.png'
-plt.savefig(out, dpi=130, bbox_inches='tight',
-            facecolor=PARCH_PALE, edgecolor='none')
+plt.savefig(out, dpi=180, bbox_inches='tight',
+            facecolor='#2A1808', edgecolor='none')
 plt.close()
 print(f'Saved → {out}')
