@@ -60,23 +60,30 @@ Optional extension blocks (detected by leading marker):
 - `l <loot_amount> <loot[0..MAX_LOOT-1]>`
 - `L <loot_chance[0..MAX_LOOT-1]>`
 
-`MAX_LOOT` is **9**. This means:
-- Every `l` line must contain exactly **10** whitespace-separated integers: `loot_amount` followed by 9 vnum fields. Unused slots must be filled with `0`.
-- Every `L` line must contain exactly **9** whitespace-separated integers: one chance value per loot slot. Unused slots must be `0`.
+**`MAX_LOOT = 9`**: the loot array always has exactly 9 slots. Both the `l` and `L` lines must contain exactly 9 values after their leading field, with unused slots padded to `0`. The file validator enforces this strictly.
 
-Example of a mob with one loot item in slot 0 and the rest unused:
+Concrete field counts:
+- `l` line: `l <loot_amount> <v0> <v1> <v2> <v3> <v4> <v5> <v6> <v7> <v8>` — 10 fields total
+- `L` line: `L <c0> <c1> <c2> <c3> <c4> <c5> <c6> <c7> <c8>` — exactly 9 fields
+
+Example (one guaranteed drop, all other slots unused):
 ```
 l 100 1205 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
 ```
 
-Example of a mob with two loot items in slots 0 and 1:
+Example (two-item pool, slots 0 and 1, rates 60/40):
 ```
 l 100 1215 1216 0 0 0 0 0 0 0
 L 60 40 0 0 0 0 0 0 0
 ```
 
-The test loader enforces field counts: providing fewer than 10 values on an `l` line or fewer than 9 values on an `L` line causes an area format test failure.
+Example (pool of 3 items, drop rates 20/34/46):
+```
+l 1 1150 1151 1152 0 0 0 0 0 0
+L 20 34 46 0 0 0 0 0 0
+```
+
 
 Loot table semantics:
 - `loot_amount` must be greater than 0 for loot drops to be attempted.
