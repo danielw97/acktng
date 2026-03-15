@@ -483,4 +483,518 @@ D3
 ~
 0 -1 14228
 S
+#14230
+@@bCarter's Way, Western End@@N~
+@@bThe western end of Carter's Way opens from the Customs Processing Hall into the first full street of the city, wider than the gate passage and loud with the overlapping noise of caravan operations and commercial activity.@@N Chalk dust from unsecured cargo bags drifts across the cobbles, and draft animal smell is thick enough to taste. @@bTo the east, the Postmaster's Hall is visible as a whitewashed facade with its courier window open and a queue of six or seven people waiting.@@N The street surface is well-maintained here — the Sand-Sea Carters' Guild contracts its upkeep and guards its quality as a matter of operational pride. Caravan workers move with the brisk efficiency of people who are paid by throughput rather than by the hour.
+~
+0 1
+D1
+~
+~
+0 -1 14232
+D3
+~
+~
+0 -1 14229
+D0
+~
+~
+0 -1 14231
+S
+#14231
+@@bCarter's Way, Northern Stretch@@N~
+@@bThe Carter's Way bends northward here, following the natural curve of the approach toward the Carters' Guild complex while the market district branches south.@@N The street is crowded with hand carts, pack animals, and people moving in multiple directions — the intersection of incoming caravan traffic, outgoing supplies, and the constant lateral flow of city residents. @@bThe smell of the Guild's stable yard is unmistakable to the north.@@N A painted distance marker on the corner wall gives the distance to the Landward Gate and to the harbor front in Mafdet harbor-measure units.
+~
+0 1
+D1
+~
+~
+0 -1 14233
+D2
+~
+~
+0 -1 14230
+D0
+~
+~
+0 -1 14260
+S
+#14232
+@@yPostmaster's Hall@@N~
+@@yThe Postmaster's Hall is a narrow but deep building with a long counter running its length, behind which shelves of sorted correspondence and sealed courier packages rise to the ceiling.@@N The Postmaster operates an efficient system for sorting Reach-to-harbor correspondence: inland messages arrive by Glasswalk Guide courier and are logged, held, or forwarded to harbor-bound ships; sea-route messages are sorted for Reach distribution on the next outbound caravan. @@yA standing rate card on the counter lists current courier fees by distance and urgency level.@@N The room smells of wax, ink, and dry paper — the particular environment of a professional correspondence operation that moves high volume without error.
+~
+1032 11
+D3
+~
+~
+0 -1 14230
+S
+#14233
+@@bCarters' Guild Approach@@N~
+@@bThe Guild Approach is a short passage between Carter's Way and the Sand-Sea Carters' Guild Hall, its walls hung with route announcements, waystation condition reports, and the Guild's current fee schedule for cargo handling.@@N Draymen and handlers move through constantly, carrying harness hardware, repair materials, and the thick canvas wrapping the Guild uses for waterproof cargo protection. @@bThe passage entrance bears the Guild's mark — a stylised wagon wheel with a radiant spoke pattern — carved in relief above the arch.@@N The Guild Hall itself is visible ahead; the stable yard is accessible through a side door to the north.
+~
+0 1
+D1
+~
+~
+0 -1 14235
+D3
+~
+~
+0 -1 14231
+D0
+~
+~
+0 -1 14234
+S
+#14234
+@@ySand-Sea Carters' Guild Hall@@N~
+@@yThe Guild Hall is the operational command centre of the Sand-Sea Carters' Guild — a wide, timber-floored room with a vaulted ceiling, map boards covering the north wall, and a row of dispatch desks where Guild masters manage waystation reports, caravan manifests, and route condition updates.@@N The Guild controls all licensed cargo movement between the Saltglass Reach and the Mafdet harbor, which means the maps here are more current and more detailed than anything in the official Ledger Quarter archives. @@yGuild charter inscriptions run along the eastern wall in a formal hand that contrasts with the working chaos on the desk surfaces below.@@N The Guild master's private office is accessible from the rear; the Quartermaster's Depot is through the east door.
+~
+0 11
+D2
+~
+~
+0 -1 14233
+D1
+~
+~
+0 -1 14236
+E
+guild charter~
+@@yThe Guild charter text on the eastern wall reads in part: THE SAND-SEA CARTERS' GUILD HOLDS EXCLUSIVE LICENSED AUTHORITY FOR CARGO TRANSIT BETWEEN THE SALTGLASS REACH AND PORT MAFDET — ALL CARGO MUST BE REGISTERED WITH THE GUILD BEFORE PRESENTATION AT THE LANDWARD GATE — VIOLATIONS SUBJECT TO LICENSE FORFEIT AND CARGO LEVY. Below this, a list of founding members in a different hand, some names crossed through and replaced.@@N
+~
+E
+map boards~
+@@yThe map boards show the full Saltglass Reach corridor with waystation positions, current condition ratings, alternate routes marked in red when a section is compromised, and a running tally of caravan arrivals for the current season. A separate smaller board shows the harbor's current berth assignments and expected departure schedules.@@N
+~
+S
+#14235
+@@bCaravan Draft Lane@@N~
+@@bThe draft lane is a wide paved strip along the Guild Hall's northern exterior, designed to allow loaded wagon teams to manoeuvre without entering the street.@@N Harness racks, wheel-repair stands, and a row of water troughs for draft animals line the lane's edges. @@bThe sound of smithing from the harness workshop to the east carries clearly here, metal on metal in a rhythm that speaks to production rather than repair.@@N Guild handlers move cargo between wagons with practiced speed, checking off items on folded manifest copies as they go.
+~
+0 1
+D1
+~
+~
+0 -1 14237
+D2
+~
+~
+0 -1 14233
+S
+#14236
+@@yQuartermaster's Depot@@N~
+@@yThe Quartermaster's Depot is a well-stocked interior room where the Guild maintains expedition and patrol supplies for both outbound caravans and the Reach Warden posts along the Saltglass corridor.@@N Shelves carry cached water containers, glasswalk shoes in multiple sizes, repair materials for wagon wheels and harness fittings, and the dense nutritional trail rations that sustain Glasswalk Guides across the Reach's most demanding stretches. @@yThe Quartermaster works from a standing desk covered in requisition records and maintains a mental inventory that inspectors have repeatedly verified to be accurate to within a single item.@@N This depot is not a public shop — it serves Guild operations only — but travellers with genuine need and Guild connections sometimes negotiate access.
+~
+1032 11
+D3
+~
+~
+0 -1 14234
+S
+#14237
+@@bHarness Workshop Row@@N~
+@@bThe harness workshop runs along the northern side of the Guild's stable complex, a row of open-fronted work bays where leatherworkers, metal smiths, and rope makers repair and fabricate the equipment that keeps caravan animals functional.@@N The smell of raw hide, tanning chemicals, and hot metal competes for dominance. @@bCompleted harness sets hang on wooden forms above each bay, and the floor is thick with offcuts of leather and rope.@@N The quality of work here is consistently high — a badly repaired harness that fails on the Saltglass Reach becomes a liability claim the Guild must settle.
+~
+0 1
+D1
+~
+~
+0 -1 14238
+D3
+~
+~
+0 -1 14235
+S
+#14238
+@@bCaravan Assembly Yard@@N~
+@@bThe Assembly Yard is a large open area where caravans form up for departure or reorganize after arrival, their wagon teams arranged in the sequence that maximises stability and minimises the time required to clear the gate.@@N The yard surface is beaten earth reinforced with coarse gravel, and the wheel ruts are deep enough to threaten ankles. @@bA central post carries a current route-condition board updated each morning by the Guild's waystation network.@@N The yard is always busy — at least four wagon teams are present at any given time in various stages of assembly or disbanding. The Saltwind Inn's sign is visible to the south.
+~
+0 1
+D1
+~
+~
+0 -1 14239
+D3
+~
+~
+0 -1 14237
+D2
+~
+~
+0 -1 14240
+S
+#14239
+@@bCarter's Way, Assembly Stretch@@N~
+@@bThe stretch of Carter's Way east of the Assembly Yard carries the heaviest commercial traffic in the district — this is where caravan loads transition from the Guild's management to the market district, and the street becomes a negotiating floor rather than a transit corridor.@@N Cargo brokers work from folding tables along the kerb, matching incoming loads to outgoing buyers before the Guild clearance stamp is even dry. @@bThe smell of the market bazaar's spice and oil trade begins to arrive from the south here.@@N A Red Sand Accounts field representative can usually be found near the corner, watching the cargo flow with the patient attention of someone making complex calculations.
+~
+0 1
+D1
+~
+~
+0 -1 14241
+D3
+~
+~
+0 -1 14238
+S
+#14240
+@@yThe Saltwind Inn@@N~
+@@yThe Saltwind Inn occupies a converted cargo warehouse whose broad floor plan has been divided into sleeping alcoves, a common eating area, and a narrow taproom running along the eastern wall.@@N The Inn serves both arriving caravaneers who need to sleep before facing the Ledger Quarter's paperwork, and departing sailors who prefer the quieter pace of the Carter's district to the pier-side establishments near the harbor. @@lA painted harbor map mural covers the north wall — the best existing visual representation of Mafdet's cove, pier configuration, and breakwater approach, painted by an unknown hand with navigational accuracy.@@N A traveller's notice board near the entrance carries a layered history of posted messages: current berth openings, caravan assembly requests, route condition reports, and several older sheets that have never been removed. @@yThe Innkeeper maintains a strict no-weapons-drawn policy enforced not by guards but by the Innkeeper's personal reputation for remembering faces and banning troublemakers by name across the entire Shoreward Compact.@@N The common room smells of cooked fish, salt bread, and the particular woody sweetness of the palm-sap wine the Inn imports from Kowloon through the harbor.
+~
+1032 11
+D0
+~
+~
+0 -1 14238
+E
+harbor map mural~
+@@lThe mural depicts the Mafdet cove from an elevated perspective that could only have been painted from the Signal Tower Crown or from a ship's mast at anchor. The harbor chain is shown in its raised position, its arc spanning the cove mouth. Depth soundings are marked at regular intervals in the deep water. A small notation in the corner reads: PAINTED THIRD YEAR OF THE CURRENT COMPACT — UPDATED AFTER BREAKWATER EXTENSION.@@N
+~
+E
+traveller's notice board~
+@@yThe notice board's most recent postings include a berthing announcement for a Quay Concord vessel seeking eastbound cargo, a warning about Red Sand debt collectors operating near the scavenger approach zone, and a handwritten personal message in three languages addressed to a name that has been partially obscured by a newer posting.@@N
+~
+S
+#14241
+@@bCarter's Way, Market Bend@@N~
+@@bThe street bends here at the transition between the Guild district and the market zone, marked by a painted corner stone that Guild workers call the Tariff Bend — the point where cargo ownership effectively transitions from transit classification to commercial sale.@@N The noise level increases sharply at the bend; the market bazaar is close enough that individual vendor calls are audible. @@bA Red Sand Accounts field office occupies a narrow building to the south, its shutters half-closed even during business hours.@@N The bend is also where pickpocket activity concentrates — the crowd transition and directional confusion create the optimal conditions for opportunistic theft.
+~
+0 1
+D1
+~
+~
+0 -1 14243
+D3
+~
+~
+0 -1 14239
+D2
+~
+~
+0 -1 14242
+S
+#14242
+@@RRed Sand Accounts Field Office@@N~
+@@RThe Red Sand Accounts field office is a narrow room with heavy shutters and a single counter where a broker receives clients — or more precisely, receives caravan operators who have run out of other options.@@N The office is spare and functional: a counter, two chairs, a locked cabinet full of debt instruments, and the broker's elaborate rate card displayed where clients cannot miss it. @@RThe terms on the card are legal under maritime contract law, which is precisely why the Red Sand Accounts established their main operations in Mafdet rather than at the inland oases where Reach charter law provides more debtor protection.@@N Ominous legal documents with wax seals are visible on the counter — active debt instruments in various stages of collection, their language dense with clauses that translate simply as: the borrower pays, or the Red Sand Accounts takes equivalent cargo.
+~
+0 11
+D0
+~
+~
+0 -1 14241
+S
+#14243
+@@bMarket Approach@@N~
+@@bThe approach to the Market of the Shoreward Tables is a short commercial strip where smaller vendors operate from fixed stalls rather than the market's stone-mounted display tables.@@N Dried coastal herbs, bottled oils, handmade rope work, and secondhand gear are the primary offerings here, sold by people who cannot afford market stall fees. @@bTo the south, the Southern Market Alley branches toward a denser, narrower commercial zone that runs parallel to the market's edge.@@N The crowd thickens here as foot traffic from multiple directions converges on the market entrance. Pickpockets work this zone with professional subtlety.
+~
+0 1
+D1
+~
+~
+0 -1 14245
+D3
+~
+~
+0 -1 14241
+D2
+~
+~
+0 -1 14262
+S
+#14244
+@@yIronwright's Forge@@N~
+@@yThe Ironwright's Forge is Mafdet's premier blade and tool shop, operated by a master smith who learned the trade on the Reach caravan routes and returned with an understanding of exactly what working travellers need to survive.@@N The shop carries blades calibrated for practical use rather than display: caravan knives that can quarter rope or lever open crates, cutlasses weighted for draw speed rather than finesse, and a selection of striking weapons suited to dock work and cargo defence. @@yDisplays carry items at every price point from the entrance to the back — deliberate layout that ensures even a cash-light caravan worker sees something they can afford.@@N The forge itself operates in a rear bay whose heat is perceptible at the front counter, and the smell of hot steel and quench water is constant.
+~
+1032 11
+D1
+~
+~
+0 -1 14246
+S
+#14245
+@@bMarket Street Junction@@N~
+@@bThe street junction marks the transition from the caravan-commercial district to the open market zone, where the Market of the Shoreward Tables occupies the broad square to the south.@@N From this point, the Ironwright's Forge is visible to the southwest and the Shoreward Armory's painted sign is visible to the southeast. @@bThe market itself opens broadly to the south, its stone conversion-ratio tables visible along the perimeter walls.@@N A steady stream of buyers moves south and a roughly equal stream of satisfied or disappointed customers moves north, creating a constant two-directional foot flow that requires active navigation.
+~
+0 1
+D1
+~
+~
+0 -1 14249
+D3
+~
+~
+0 -1 14243
+D2
+~
+~
+0 -1 14246
+S
+#14246
+@@yMarket of the Shoreward Tables@@N~
+@@yThe Market of the Shoreward Tables is Mafdet's primary commercial bazaar, its name derived from the mounted stone charts along the perimeter walls that display the current Saltweight-to-harbor-measure conversion ratios and commodity price standards.@@N Vendors occupy stone-fronted stall positions rather than portable setups — a Compact requirement that ensures accountability and prevents the rapid overnight conversion of residential frontage into commercial space that has plagued other port markets. @@yThe Ironwright's Forge is accessible from the western wall, the Shoreward Armory from the eastern.@@N The stone conversion-ratio charts are updated weekly by a Tide Ledger Hall clerk and are treated as authoritative for all commercial disputes that occur within the market's boundaries — a designation that makes this square both a trading floor and an informal court. @@lThe market's noise is a layered composition: vendor calls, price negotiations, animal protest, and the background percussion of the harbour three streets east.@@N The market operates from dawn to dusk under Compact authority; the narrow lanes around its edges continue to trade informally after hours, primarily in goods that benefit from reduced visibility.
+~
+0 1
+D0
+~
+~
+0 -1 14245
+D3
+~
+~
+0 -1 14244
+D1
+~
+~
+0 -1 14248
+D2
+~
+~
+0 -1 14247
+E
+conversion-ratio charts~
+@@yThe stone charts list current ratios for the most common cargo categories: grain, salt, preserved fish, timber, metal bar stock, and luxury goods. Each entry shows the Great Oasis Saltweight standard value, the Mafdet harbor-measure equivalent, and the current market adjustment factor. A notation at the bottom reads: RATIOS CERTIFIED BY TIDE LEDGER HALL — DISPUTES FILED AT SHOREWARD HOUSE WITHIN THREE DAYS OF TRANSACTION.@@N
+~
+S
+#14247
+@@bMarket Square, Southern Wing@@N~
+@@bThe southern wing of the market square is quieter and less formally organised than the main trading area, its stalls occupied by vendors who deal in secondhand goods, obscure imports, and goods whose provenance is better left unexamined closely.@@N A smell of old rope, fish paste, and secondhand leather competes with the cooking smoke from a small brazier where a vendor of salt-dried fish does steady business. @@bThe Compact's conversion-ratio authority is somewhat weaker here at the market's edge, and pricing tends to be more negotiable.@@N At the far southern end, a service alley provides access to the buildings backing onto the market from the south.
+~
+0 1
+D0
+~
+~
+0 -1 14246
+S
+#14248
+@@yShoreward Armory@@N~
+@@yThe Shoreward Armory specialises in protective equipment designed for the specific demands of Reach caravan travel and harbor operations: salt-resistant leather, maritime plate with drainage channels to prevent waterlogging, and load-bearing harness systems that serve as both equipment carry and light armour.@@N The armorer was formerly a Harbor Warden before establishing the shop and brings an operational knowledge of what armour fails in tidal conditions, in sandstorm exposure, and in the particular violence of dock disputes. @@yEvery item carries a simple quality mark — three horizontal lines — that the armorer guarantees against workmanship defects for a full season of daily use.@@N The shop's inventory covers all body positions from head to foot with particular depth in torso and hand armour, the two areas the armorer considers most critical for working protection.
+~
+1032 11
+D3
+~
+~
+0 -1 14246
+S
+#14249
+@@bMarket Street, Eastern End@@N~
+@@bThe eastern end of Market Street transitions from the bazaar's commercial energy to a quieter commercial-residential mix where provisioning shops and supply depots serve the outgoing trade rather than the incoming.@@N The street is slightly uphill here, giving a clear view back toward the market square and, above the roofline, the distant sail-white of the harbor's signal tower. @@bTo the south, the Southern Goods Lane offers access to secondary provisioners and overflow market operations.@@N The salt smell is now stronger than the dust smell — a reliable indicator of harbor proximity.
+~
+0 1
+D1
+~
+~
+0 -1 14250
+D3
+~
+~
+0 -1 14245
+D2
+~
+~
+0 -1 14261
+S
+#14250
+@@bProvisioner's Row@@N~
+@@bProvisioner's Row is a short commercial strip dedicated to outfitting caravans and equipping harbor operations — a functional complement to the bazaar's more mixed trade.@@N Trail rations, preserved water, glasswalk supplies, and nautical consumables fill the street-level displays. @@bThe Reach Provisions shop to the south serves the land-based trade; the nautical provisions further east are oriented toward ship chandlery.@@N Cargo-weighing scales are set into the street kerb at regular intervals — a Compact requirement for any street where goods change hands — and vendors use them openly to demonstrate honest measure.
+~
+0 1
+D1
+~
+~
+0 -1 14251
+D3
+~
+~
+0 -1 14249
+D2
+~
+~
+0 -1 14252
+S
+#14251
+@@bSupply Lane@@N~
+@@bThe Supply Lane connects Provisioner's Row to the Waystation Forecourt, a utilitarian passage that carries the bulk of the Guild's internal supply movement on wheeled carts.@@N The lane is wide enough for a single cart and paved with flat stone that carries the wear marks of constant wheeled traffic. @@bWarehouse access doors line both sides, each stencilled with the Guild's wheel mark and a cargo category code.@@N The lane smells of pine resin, salt-preservation chemicals, and the particular mineral sharpness of cached Saltglass water brought in from the Reach waystation network.
+~
+0 1
+D1
+~
+~
+0 -1 14253
+D3
+~
+~
+0 -1 14250
+S
+#14252
+@@yReach Provisions@@N~
+@@yReach Provisions is a well-stocked general goods shop that understands exactly what a caravan arriving from or departing toward the Saltglass Reach actually needs.@@N The inventory reflects genuine operational knowledge: glasswalk shoes in the correct sole weights for different Reach surface conditions, salt-preservation pouches sized for the quantities a small patrol carries, and trail rations formulated to resist the Reach's temperature extremes. @@yThe provisioner sources directly from the Glasswalk Guide cooperative and from Reach Warden station surplus, which means the stock quality is consistently higher than what comparable inland markets offer.@@N A standing display near the door carries current Reach condition notes — surface quality, water availability at waystation intervals, and any hazard notifications from recent caravan reports.
+~
+1032 11
+D0
+~
+~
+0 -1 14250
+S
+#14253
+@@bWaystation Forecourt@@N~
+@@bThe Waystation Forecourt is a covered staging area where Guild emergency supply caches are maintained for caravans that arrive in distressed condition from the Reach.@@N Glasswalk shoe racks line the east wall — replacement sizes available immediately without waiting for the main shop to process a purchase order. @@bCached water containers and emergency ration bundles are stacked on platforms at the room's centre, tagged with the Guild emergency protocols.@@N The Forecourt operates on a Guild reimbursement system: distressed caravans can take what they need against a Guild emergency credit that is documented and settled at the Shoreward House within thirty days.
+~
+0 1
+D1
+~
+~
+0 -1 14254
+D3
+~
+~
+0 -1 14251
+S
+#14254
+@@bWaystation Supply Depot@@N~
+@@bThe Waystation Supply Depot is the Guild's deep storage facility — a long room with floor-to-ceiling shelving holding reserve stocks of everything the waystation network might require on short notice.@@N The inventory is managed on a first-in-first-out rotation to prevent spoilage, and the Quartermaster conducts physical counts weekly. @@bA small office at the rear handles waystation resupply orders — the logistical coordination that keeps the Saltglass Reach's cairn stations viable.@@N The Depot does not serve individual buyers; it is a Guild internal resource that occasionally has surplus available for sale when a waystation network upgrade changes inventory requirements.
+~
+0 1
+D1
+~
+~
+0 -1 14255
+D3
+~
+~
+0 -1 14253
+S
+#14255
+@@bCarter's Way, Eastern Section@@N~
+@@bThe eastern section of Carter's Way narrows slightly as the commercial buildings on either side lean closer together — an organic consequence of construction pressure in the years after the Shoreward Compact formalised Mafdet's position as the primary transit node.@@N The street here carries a different energy than the western end: less caravan movement, more lateral commercial traffic between the Ledger Quarter and the harbor. @@bThe Red Sand Accounts' zone of influence is palpable here — their field representatives move through the street with the deliberate patience of people who are always waiting for someone to become financially desperate enough to approach them.@@N The sound of the harbor is now clearly audible between street noise peaks.
+~
+0 1
+D1
+~
+~
+0 -1 14256
+D3
+~
+~
+0 -1 14254
+S
+#14256
+@@RRed Sand Territory Block@@N~
+@@RThis block of Carter's Way has been informally claimed by the Red Sand Accounts as their operational territory — most of the commercial activity here involves the Accounts directly or tangentially.@@N Distressed cargo brokers conduct negotiations in doorways. Debt instruments change hands in low voices. @@RThe street here carries the particular tension of a financial predator's hunting ground — everyone present is either the hunter or the prey, and the distinction is not always immediately clear.@@N The Red Sand Accounts operate within the strict letter of Shoreward Compact commercial law; what they do is legal, profitable, and corrosive to every caravan that passes through a difficult season.
+~
+0 1
+D1
+~
+~
+0 -1 14257
+D3
+~
+~
+0 -1 14255
+S
+#14257
+@@bContested Commercial Strip@@N~
+@@bThe strip between the Red Sand territory and the Ledger Quarter approach carries the friction of a boundary zone — commercial establishments here compete for clientele in an environment where neither the Guild's authority nor the Ledger Quarter's documentary formalism fully controls.@@N Small cargo brokers, independent manifest scribes, and at least two currency changers of questionable licensing operate from ground-floor frontages. @@bThe street level is busier than the building interiors suggest; most of the real business happens in the foot-traffic negotiating zone between storefronts.@@N The Ledger Quarter's gate tower is visible at the street's eastern end, its carved wall-inscriptions legible even from this distance.
+~
+0 1
+D1
+~
+~
+0 -1 14258
+D3
+~
+~
+0 -1 14256
+S
+#14258
+@@bCarter's Way, Eastern End@@N~
+@@bThe eastern end of Carter's Way terminates at the transition to the Ledger Quarter, marked by a change in street surface from the Guild's maintained cobble to the Compact's formal cut-stone paving.@@N The shift is immediately perceptible underfoot — the stones are larger, more precisely set, and slightly elevated to channel surface water away from the archive buildings on either side. @@bThe smell of wax, lamp oil, and old paper reaches the street here from the Ledger Quarter's archive ventilation.@@N Foot traffic thins at this transition; the Ledger Quarter's documentary bureaucracy discourages casual passage.
+~
+0 1
+D1
+~
+~
+0 -1 14259
+D3
+~
+~
+0 -1 14257
+D2
+~
+~
+0 -1 14263
+S
+#14259
+@@bEastern Junction, Carter's Way@@N~
+@@bThe junction at the eastern end of Carter's Way provides the last open-street orientation point before the Ledger Quarter's enclosed passages absorb navigation.@@N From here, the harbor is visible through a gap between buildings — a compressed slice of @@lwater, pier timber, and the white sail-shape of a moored vessel.@@N The junction carries a permanent cluster of people who have stopped to consult maps or read the posted Ledger Quarter entry requirements displayed on a stone notice board at the corner. Ledger Quarter clerks pass through with the quick stride of people who know exactly where they are going.
+~
+0 1
+D1
+~
+~
+0 -1 14264
+D3
+~
+~
+0 -1 14258
+S
+#14260
+@@bNorthern Market Extension@@N~
+@@bThe Northern Market Extension is a short dead-end street north of Carter's Way where northern-district vendors operate under a secondary Compact licence that permits trade in goods not covered by the main market's Saltweight certification requirement.@@N This includes artistic works, handcraft, personal effects, and small-quantity specialty items that would be impractical to process through the main conversion-ratio system. @@bThe street is quieter than the market proper and carries a more diverse selection of unusual objects.@@N Several of the vendors here source from Reach waystation surplus, Kowloon imports, and the contents of caravan packs sold by debtors through the Red Sand Accounts.
+~
+0 1
+D2
+~
+~
+0 -1 14231
+S
+#14261
+@@bSouthern Goods Lane@@N~
+@@bThe Southern Goods Lane runs south from Market Street into a quieter commercial zone serving the residential districts behind the market district's main streets.@@N Neighbourhood provisioners, small-scale food vendors, and repair services occupy the lane's frontages — a lower-energy complement to the main commercial activity one street north. @@bThe lane ends in a small turning area used by delivery carts that serve the residential blocks.@@N The smell of home cooking and the sound of a domestic argument from an upper window give the lane a more lived-in quality than the commercial streets above it.
+~
+0 1
+D0
+~
+~
+0 -1 14249
+S
+#14262
+@@bSouthern Market Alley@@N~
+@@bThe Southern Market Alley is a narrow lane that runs along the market square's southern edge, providing rear access to market stalls and a secondary commercial strip for vendors who prefer the reduced Compact oversight that comes with alley positioning.@@N The lane is compressed — two people with full packs cannot pass each other comfortably — and the overhead signage of competing vendors reduces the light to a warm dimness. @@bPickpocket activity in this alley is persistent enough that experienced travellers keep one hand on their purse and the other on their pack.@@N The alley continues south into the Deep Market South, where the commercial density increases even as the Compact's authority decreases.
+~
+0 1
+D0
+~
+~
+0 -1 14243
+D2
+~
+~
+0 -1 14263
+S
+#14263
+@@bDeep Market South@@N~
+@@bThe Deep Market South is at the edge of the Compact's commercial jurisdiction — technically within Mafdet's boundaries, technically subject to the Shoreward Tables conversion system, but practically operating on a different set of rules where the primary currency is trust, reputation, and the absence of official documentation.@@N Small stalls sell items of uncertain provenance. Prices are negotiated in low voices and frequently settled in trade rather than coin. @@bSeveral of the regular vendors here operate with the kind of habitual watchfulness that suggests experience with rapid inventory concealment.@@N The alley dead-ends at a locked gate that supposedly leads to the drainage easement but which experienced locals know as an emergency exit used by vendors who need to relocate suddenly.
+~
+0 1
+D0
+~
+~
+0 -1 14262
+S
+#14264
+@@bCarter's Way, Harbor Approach@@N~
+@@bThe final stretch of Carter's Way before the Ledger Quarter opens the harbor view fully for the first time — between two buildings at the street's eastern end, the full cove is visible, its surface carrying the @@lreflected silver of morning or the deep-@@lblue depth of afternoon.@@N The emotional register of the street changes here; caravan workers who have spent days on the Reach often stop at this point and hold still for a moment, breathing the harbor air. @@bThe Ledger Quarter's gate is immediately ahead, its carved wall-text advertising the documentation services within.@@N The transition from Carter's Way to the Ledger Quarter is the transition from physical transit to its administrative formalization — from moving the cargo to making the cargo official.
+~
+0 1
+D1
+~
+~
+0 -1 14265
+D3
+~
+~
+0 -1 14259
+S
 #0
