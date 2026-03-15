@@ -296,46 +296,6 @@ int exp_to_level_vamp(int level)
    return (exp);
 }
 
-int exp_to_level_wolf(int level)
-{
-   int exp = 0;
-
-   switch (level)
-   {
-   case 0:
-   case 1:
-   case 3:
-   case 4:
-   case 5:
-      exp = (250 + level * 5);
-      break;
-   case 6:
-   case 7:
-   case 8:
-   case 9:
-      exp = (300 + level * 6);
-      break;
-   case 10:
-   case 11:
-   case 12:
-      exp = (400 + level * 6);
-      break;
-   case 13:
-   case 14:
-   case 15:
-   case 16:
-      exp = (550 + level * 6.5);
-      break;
-   case 17:
-   case 18:
-   case 19:
-   case 20:
-      exp = (500 + level * 7);
-      break;
-   }
-   return (exp);
-}
-
 int exp_for_mobile(int level, CHAR_DATA *mob)
 {
    int value, base_value;

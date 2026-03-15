@@ -1010,9 +1010,6 @@ bool can_use_skill(CHAR_DATA *ch, int gsn)
    if (!IS_VAMP(ch) && skill_table[gsn].flag2 == VAMP)
       return FALSE;
 
-   if (!IS_WOLF(ch) && skill_table[gsn].flag2 == WOLF)
-      return FALSE;
-
    if (gsn == gsn_enhanced_damage && ch->pcdata->reincarnations[CLASS_WAR] > 0)
       return TRUE;
 
@@ -1130,9 +1127,6 @@ bool raise_skill(CHAR_DATA *ch, int gsn)
       return TRUE;
 
    if (!IS_VAMP(ch) && skill_table[gsn].flag2 == VAMP)
-      return FALSE;
-
-   if (!IS_WOLF(ch) && skill_table[gsn].flag2 == WOLF)
       return FALSE;
 
    if (!can_use_skill(ch, gsn))
@@ -1286,9 +1280,6 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
       REMOVE_BIT(ch->affected_by, paf->bitvector);
       mod = 0 - mod;
    }
-
-   if (paf->type == skill_lookup("Enraged"))
-      REMOVE_BIT(ch->pcdata->pflags, PFLAG_RAGED);
 
    /*
     * Check for weapon wielding.
@@ -1467,10 +1458,6 @@ void affect_to_char(CHAR_DATA *ch, AFFECT_DATA *paf)
    LINK(paf_new, ch->first_affect, ch->last_affect, next, prev);
 
    affect_modify(ch, paf_new, TRUE);
-
-   if (paf_new->type == skill_lookup("Enraged"))
-      if (!IS_NPC(ch) && IS_WOLF(ch))
-         SET_BIT(ch->pcdata->pflags, PFLAG_RAGED);
 
    return;
 }

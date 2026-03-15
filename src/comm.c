@@ -2260,18 +2260,7 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          i = buf2;
          break;
       case 'F':
-         if (!IS_NPC(ch) && IS_WOLF(ch))
-         {
-            if (IS_RAGED(ch))
-               sprintf(buf2, "%s", "GAROU");
-            else if (IS_SHIFTED(ch))
-               sprintf(buf2, "%s", "LUPIS");
-            else
-               sprintf(buf2, "%s", "HUMANUS");
-         }
-
-         else
-            sprintf(buf2, " ");
+         sprintf(buf2, " ");
          i = buf2;
          break;
 

@@ -2852,7 +2852,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
          send_to_char("Not on NPCs.\n\r", ch);
          return;
       }
-      if (IS_VAMP(victim) || IS_WOLF(victim))
+      if (IS_VAMP(victim))
       {
          send_to_char("@@eDone!!!@@N\n\r", ch);
          victim->pcdata->bloodlust_max = value;

@@ -79,11 +79,6 @@ void do_stance(CHAR_DATA *ch, char *argument)
         send_to_char("Not for Npcs!\n\r", ch);
         return;
     }
-    if (IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-    {
-        send_to_char("This form is not capable of fighting Stances.\n\r", ch);
-        return;
-    }
 
     one_argument(argument, arg);
 

@@ -471,12 +471,6 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
    buf[0] = '\0';
    ansi[0] = '\0';
 
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)) && (channel != CHANNEL_HOWL))
-   {
-      send_to_char("You are too @@rENRAGED @@NTo talk to mortals!\n\r", ch);
-      return;
-   }
-
    /*
     * Allows immortals to communicate in silent rooms
     */
@@ -578,12 +572,6 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
       sprintf(buf, "$n %s: '$t'.\n\r", verb);
       break;
 
-   case CHANNEL_HOWL:
-      sprintf(buf, "%sYou %s '%s'.%s\n\r", color_string(ch, "race"), verb, argument, color_string(ch, "normal"));
-      send_to_char(buf, ch);
-      sprintf(buf, "$n %ss '$t'.\n\r", verb);
-      break;
-
    case CHANNEL_RACE:
       sprintf(buf, "%s%s %s: '%s'.%s\n\r",
               color_string(ch, "race"), verb, ch->name, argument, color_string(ch, "normal"));
@@ -645,8 +633,6 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
       break;
    }
    {
-      bool has_howled = FALSE;
-
       for (d = first_desc; d != NULL; d = d->next)
       {
          CHAR_DATA *och;
@@ -680,26 +666,6 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
                continue;
             if (channel == CHANNEL_ADEPT && vch->adept_level < 1)
                continue;
-            if ((channel == CHANNEL_HOWL) && (!IS_WOLF(och)))
-            {
-               if (och->in_room->area != ch->in_room->area)
-                  continue;
-               else
-               {
-                  if (och->in_room == ch->in_room)
-                  {
-                     if (!has_howled)
-                     {
-                        check_social(ch, "howl", "");
-                        has_howled = TRUE;
-                     }
-                  }
-                  else
-                     send_to_char("@@rAn eerie @@bHowl@@r sends chills up your spine.@@N\n\r", och);
-                  continue;
-               }
-            }
-
             position = vch->position;
             if (channel != CHANNEL_SHOUT && channel != CHANNEL_YELL)
                vch->position = POS_STANDING;
@@ -856,31 +822,6 @@ void do_familytalk(CHAR_DATA *ch, char *argument)
    return;
 }
 
-void do_howl(CHAR_DATA *ch, char *argument)
-{
-   /*
-    * char buf[MAX_STRING_LENGTH];
-    */
-
-   if (IS_NPC(ch))
-   {
-      send_to_char("NPCs cannot use this channel.\n\r", ch);
-      return;
-   }
-
-   if (!IS_WOLF(ch))
-   {
-      check_social(ch, "howl", "");
-      return;
-   }
-
-   /*
-    * sprintf( buf, "[%s]", get_family_name ( ch ) );
-    */
-   talk_channel(ch, argument, CHANNEL_HOWL, "@@bHowl@@N");
-   return;
-}
-
 void do_newbie(CHAR_DATA *ch, char *argument)
 {
    talk_channel(ch, argument, CHANNEL_NEWBIE, "newbie");
@@ -1013,12 +954,6 @@ void do_say(CHAR_DATA *ch, char *argument)
 {
    char buf[MAX_STRING_LENGTH];
    CHAR_DATA *ppl;
-
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("You are too @@rENRAGED @@NTo talk to mortals!\n\r", ch);
-      return;
-   }
 
    if (IS_SET(ch->in_room->room_flags, ROOM_QUIET) && !IS_IMMORTAL(ch))
    {
@@ -1200,12 +1135,6 @@ void do_tell(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("You are too @@rENRAGED @@NTo talk to mortals!\n\r", ch);
-      return;
-   }
-
    if ((!IS_NPC(ch)) && (IS_SET(ch->pcdata->pflags, PFLAG_AFK)))
    {
       REMOVE_BIT(ch->pcdata->pflags, PFLAG_AFK);
@@ -1237,12 +1166,6 @@ void do_tell(CHAR_DATA *ch, char *argument)
       send_to_char("They aren't here.\n\r", ch);
       return;
    }
-   if (!IS_NPC(victim) && IS_WOLF(victim) && (IS_SHIFTED(victim) || IS_RAGED(victim)))
-   {
-      send_to_char("They can't hear you.\n\r", ch);
-      return;
-   }
-
    if (!IS_NPC(victim) && !victim->desc)
    {
       act("Sorry, but $N is currently link dead.", ch, NULL, victim, TO_CHAR);
@@ -1312,12 +1235,6 @@ void do_reply(CHAR_DATA *ch, char *argument)
    CHAR_DATA *victim;
    int position;
 
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("You are too @@rENRAGED @@NTo talk to mortals!\n\r", ch);
-      return;
-   }
-
    if (!IS_NPC(ch) && IS_SET(ch->act, PLR_SILENCE))
    {
       send_to_char("Your message didn't get through.\n\r", ch);
@@ -1329,12 +1246,6 @@ void do_reply(CHAR_DATA *ch, char *argument)
       send_to_char("They aren't here.\n\r", ch);
       return;
    }
-   if (!IS_NPC(victim) && IS_WOLF(victim) && (IS_SHIFTED(victim) || IS_RAGED(victim)))
-   {
-      send_to_char("They can't hear you.\n\r", ch);
-      return;
-   }
-
    if (IS_SET(victim->in_room->room_flags, ROOM_QUIET) && !IS_IMMORTAL(ch))
    {
       act("$N is in a quiet room.  $E can't hear you.", ch, NULL, victim, TO_CHAR);
@@ -2087,11 +1998,6 @@ void do_gtell(CHAR_DATA *ch, char *argument)
 {
    char buf[MAX_STRING_LENGTH];
    CHAR_DATA *gch;
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("You are too @@rENRAGED @@NTo talk to mortals!\n\r", ch);
-      return;
-   }
 
    if (argument[0] == '\0')
    {
@@ -2311,12 +2217,6 @@ void do_tongue(CHAR_DATA *ch, char *argument)
    buf2[0] = '\0';
    buf3[0] = '\0';
 
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("You are too @@rENRAGED @@NTo talk to mortals!\n\r", ch);
-      return;
-   }
-
    if (!IS_NPC(ch) && ch->pcdata->condition[COND_DRUNK] > 10)
       argument = slur_text(argument);
 
@@ -2467,12 +2367,6 @@ void do_whisper(CHAR_DATA *ch, char *argument)
    CHAR_DATA *victim;
    int position;
 
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("You are too @@rENRAGED @@NTo talk to mortals!\n\r", ch);
-      return;
-   }
-
    if (!IS_NPC(ch) && IS_SET(ch->act, PLR_SILENCE))
    {
       send_to_char("Your whispering skills seem rusty today.\n\r", ch);
@@ -2498,12 +2392,6 @@ void do_whisper(CHAR_DATA *ch, char *argument)
       send_to_char("They aren't here.\n\r", ch);
       return;
    }
-   if (!IS_NPC(victim) && IS_WOLF(victim) && (IS_SHIFTED(victim) || IS_RAGED(victim)))
-   {
-      send_to_char("They can't hear you.\n\r", ch);
-      return;
-   }
-
    if (!IS_IMMORTAL(ch) && !IS_AWAKE(victim))
    {
       act("$E can't hear you.", ch, 0, victim, TO_CHAR);
@@ -2528,12 +2416,6 @@ void do_ask(CHAR_DATA *ch, char *argument)
    char arg[MAX_INPUT_LENGTH];
    CHAR_DATA *victim;
    int position;
-
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("You are too @@rENRAGED @@NTo talk to mortals!\n\r", ch);
-      return;
-   }
 
    if (!IS_NPC(ch) && IS_SET(ch->act, PLR_SILENCE))
    {
@@ -2560,12 +2442,6 @@ void do_ask(CHAR_DATA *ch, char *argument)
       send_to_char("They aren't here.\n\r", ch);
       return;
    }
-   if (!IS_NPC(victim) && IS_WOLF(victim) && (IS_SHIFTED(victim) || IS_RAGED(victim)))
-   {
-      send_to_char("They can't hear you.\n\r", ch);
-      return;
-   }
-
    if (!IS_IMMORTAL(ch) && !IS_AWAKE(victim))
    {
       act("$E can't hear you.", ch, 0, victim, TO_CHAR);
@@ -2604,11 +2480,6 @@ void do_beep(CHAR_DATA *ch, char *argument)
    CHAR_DATA *victim;
 
    one_argument(argument, arg1);
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("You are too @@rENRAGED @@NTo talk to mortals!\n\r", ch);
-      return;
-   }
 
    if (arg1[0] == '\0')
    {
@@ -2619,12 +2490,6 @@ void do_beep(CHAR_DATA *ch, char *argument)
    if ((victim = get_char_world(ch, arg1)) == NULL)
    {
       send_to_char("Couldn't find the victim.\n\r", ch);
-      return;
-   }
-
-   if (!IS_NPC(victim) && IS_WOLF(victim) && (IS_SHIFTED(victim) || IS_RAGED(victim)))
-   {
-      send_to_char("They can't hear you.\n\r", ch);
       return;
    }
 

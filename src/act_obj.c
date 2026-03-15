@@ -343,11 +343,6 @@ int keep_chest_put_denial_reason(const OBJ_DATA *container_obj, const OBJ_DATA *
 void get_obj(CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container)
 {
 
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
-      return;
-   }
 
    if (!CAN_WEAR(obj, ITEM_TAKE) || obj->item_type == ITEM_CORPSE_PC)
    {
@@ -680,11 +675,6 @@ void do_put(CHAR_DATA *ch, char *argument)
    OBJ_DATA *container_obj;
    OBJ_DATA *obj;
 
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
-      return;
-   }
    pre_parse(argument, victim_name, container_name, object_list);
 
    if (object_list[0] == '\0')
@@ -1112,11 +1102,6 @@ void do_fill(CHAR_DATA *ch, char *argument)
    OBJ_DATA *fountain;
    bool found;
 
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
-      return;
-   }
 
    one_argument(argument, arg);
 
@@ -1588,11 +1573,6 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 {
    char buf[MSL];
 
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
-      return;
-   }
 
    if (!IS_NPC(ch) && IS_SET(obj->extra_flags, ITEM_BUCKLER) && !can_use_skill(ch, gsn_two_handed))
    {
@@ -2089,11 +2069,6 @@ void do_wear(CHAR_DATA *ch, char *argument)
    char arg[MAX_INPUT_LENGTH];
    OBJ_DATA *obj;
    sh_int num_unique = 0;
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
-      return;
-   }
 
    {
       OBJ_DATA *obj_next;
@@ -2195,11 +2170,6 @@ void do_remove(CHAR_DATA *ch, char *argument)
 {
    char arg[MAX_INPUT_LENGTH];
    OBJ_DATA *obj;
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
-      return;
-   }
 
    one_argument(argument, arg);
    if (arg[0] == '\0')
@@ -2435,11 +2405,6 @@ void do_quaff(CHAR_DATA *ch, char *argument)
 {
    char arg[MAX_INPUT_LENGTH];
    OBJ_DATA *obj;
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
-      return;
-   }
 
    one_argument(argument, arg);
    if (arg[0] == '\0')
@@ -2476,11 +2441,6 @@ void do_recite(CHAR_DATA *ch, char *argument)
    CHAR_DATA *victim;
    OBJ_DATA *scroll;
    OBJ_DATA *obj;
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
-      return;
-   }
 
    argument = one_argument(argument, arg1);
    argument = one_argument(argument, arg2);
@@ -2525,11 +2485,6 @@ void do_brandish(CHAR_DATA *ch, char *argument)
    CHAR_DATA *vch_next;
    OBJ_DATA *staff;
    int sn;
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
-      return;
-   }
 
    if (((staff = get_eq_char(ch, WEAR_HOLD_HAND_L)) == NULL) || (staff->item_type != ITEM_STAFF))
       if (((staff = get_eq_char(ch, WEAR_HOLD_HAND_R)) == NULL) || (staff->item_type != ITEM_STAFF))
@@ -2599,11 +2554,6 @@ void do_brandish(CHAR_DATA *ch, char *argument)
    CHAR_DATA *victim;
    OBJ_DATA *wand;
    OBJ_DATA *obj;
-   if( !IS_NPC( ch ) && IS_WOLF( ch ) && ( IS_SHIFTED( ch ) || IS_RAGED( ch ) ) )
-   {
-      send_to_char( "Your claws are too clumsy!!!@@N\n\r", ch );
-      return;
-   }
 
    one_argument( argument, arg );
    if( arg[0] == '\0' && !is_fighting(ch) )
@@ -2691,11 +2641,6 @@ void do_steal(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
-      return;
-   }
 
    argument = one_argument(argument, arg1);
    argument = one_argument(argument, arg2);
@@ -3045,11 +2990,6 @@ void do_buy(CHAR_DATA *ch, char *argument)
       do_say(keeper, "I don't serve VAMPIRES!! Be gone evil one!");
       return;
    }
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      do_say(keeper, "I don't deal with @@bBeasts@@N Be gone!!!@@N\n\r");
-      return;
-   }
 
    if (IS_SET(ch->in_room->room_flags, ROOM_PET_SHOP))
    {
@@ -3205,11 +3145,6 @@ void do_list(CHAR_DATA *ch, char *argument)
       do_say(keeper, "I don't serve VAMPIRES!! Be gone evil one!");
       return;
    }
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      do_say(keeper, "I don't deal with @@bBeasts@@N Be gone!!!@@N\n\r");
-      return;
-   }
 
    if (IS_SET(ch->in_room->room_flags, ROOM_PET_SHOP))
    {
@@ -3319,11 +3254,6 @@ void do_value(CHAR_DATA *ch, char *argument)
       do_say(keeper, "I don't serve VAMPIRES!! Be gone evil one!");
       return;
    }
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      do_say(keeper, "I don't deal with @@bBeasts@@N Be gone!!!@@N\n\r");
-      return;
-   }
 
    if ((obj = get_obj_carry(ch, arg)) == NULL)
    {
@@ -3366,11 +3296,6 @@ void do_donate(CHAR_DATA *ch, char *argument)
    int place_to_put_it = ROOM_VNUM_MISC_DONATE;
    ROOM_INDEX_DATA *room = NULL;
    argument = one_argument(argument, arg);
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
-      return;
-   }
 
    if (arg[0] == '\0')
    {
@@ -3471,11 +3396,6 @@ void do_adapt(CHAR_DATA *ch, char *argument)
    long diff;    /* ratio to change stuff by */
    int pen;      /* additional penalty */
    int cost;
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
-      return;
-   }
 
    cost = (ch->level * 250);
    argument = one_argument(argument, arg);
@@ -3612,11 +3532,6 @@ void do_cdonate(CHAR_DATA *ch, char *argument)
    OBJ_DATA *obj;
    int place_to_put_it;
    ROOM_INDEX_DATA *room;
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
-      return;
-   }
 
    argument = one_argument(argument, arg);
    if (IS_NPC(ch))
@@ -3713,11 +3628,6 @@ void do_appraise(CHAR_DATA *ch, char *argument)
 {
    OBJ_DATA *obj;
    void *vo;
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
-      return;
-   }
 
    if (argument[0] == '\0')
    {
@@ -3899,11 +3809,6 @@ void do_bid(CHAR_DATA *ch, char *argument)
    extern int auction_stage;
    extern bool auction_flop;
    int amount = 0;
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
-      return;
-   }
 
    if (IS_NPC(ch))
    {
@@ -3972,11 +3877,6 @@ void do_auction(CHAR_DATA *ch, char *argument)
    void *vo = NULL;
    if (IS_NPC(ch))
       return;
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
-      return;
-   }
 
    argument = one_argument(argument, arg);
    if ((IS_IMMORTAL(ch)) && ((!str_cmp(arg, "stop")) || (!str_cmp(arg, "take"))))
@@ -4133,11 +4033,6 @@ void do_connect(CHAR_DATA *ch, char *argument)
    OBJ_DATA *new_ob;
    char arg1[MAX_STRING_LENGTH], arg2[MAX_STRING_LENGTH];
    char buf[MAX_STRING_LENGTH];
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
-      return;
-   }
 
    argument = one_argument(argument, arg1);
    argument = one_argument(argument, arg2);

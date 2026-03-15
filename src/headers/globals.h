@@ -140,10 +140,7 @@ extern sh_int gsn_charge;
 extern sh_int gsn_unit_tactics;
 extern sh_int gsn_spinfist;
 
-extern sh_int gsn_imprint;
-extern sh_int gsn_scent;
 extern sh_int gsn_scout;
-extern sh_int gsn_decapitate;
 extern sh_int gsn_potency;
 extern sh_int gsn_thaumatergy;
 extern sh_int gsn_warcry;
@@ -377,7 +374,6 @@ DECLARE_DO_FUN(do_check_areas);
 DECLARE_DO_FUN(do_check_area);
 
 DECLARE_DO_FUN(do_ofindlev);
-DECLARE_DO_FUN(do_howl);
 
 /****************************
  * Now the 'standard' stuff:*
@@ -627,15 +623,6 @@ DECLARE_DO_FUN(do_mapper);
 DECLARE_DO_FUN(do_mgive);
 DECLARE_DO_FUN(do_email);
 DECLARE_DO_FUN(do_findreset);
-
-/*
- * Werwolf
- */
-DECLARE_DO_FUN(do_rage);
-DECLARE_DO_FUN(do_howl);
-DECLARE_DO_FUN(do_tribe);
-DECLARE_DO_FUN(do_scent);
-DECLARE_DO_FUN(do_imprint);
 
 /* Reincarnate */
 DECLARE_DO_FUN(do_reincarnate);

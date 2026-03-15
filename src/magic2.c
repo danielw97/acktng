@@ -162,7 +162,7 @@ bool spell_locate_object(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
 
       for (in_obj = ob; in_obj->in_obj != NULL; in_obj = in_obj->in_obj)
          ;
-      if ((in_obj->carried_by != NULL) && (IS_IMMORTAL(in_obj->carried_by) || (!IS_NPC(in_obj->carried_by) && IS_WOLF(in_obj->carried_by) && (IS_SHIFTED(in_obj->carried_by) || (IS_RAGED(in_obj->carried_by))))))
+      if ((in_obj->carried_by != NULL) && IS_IMMORTAL(in_obj->carried_by))
          continue;
 
       if (in_obj->carried_by != NULL)
@@ -1435,7 +1435,7 @@ bool spell_detection(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
       for (in_obj = ob; in_obj->in_obj != NULL; in_obj = in_obj->in_obj)
          ;
-      if ((in_obj->carried_by != NULL) && (IS_IMMORTAL(in_obj->carried_by) || (!IS_NPC(in_obj->carried_by) && IS_WOLF(in_obj->carried_by) && (IS_SHIFTED(in_obj->carried_by) || (IS_RAGED(in_obj->carried_by))))))
+      if ((in_obj->carried_by != NULL) && IS_IMMORTAL(in_obj->carried_by))
          break;
 
       if (in_obj->carried_by != NULL)

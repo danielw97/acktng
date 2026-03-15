@@ -144,18 +144,6 @@ bool spell_embrace(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       return FALSE;
    }
 
-   if (IS_WOLF(victim))
-   {
-      send_to_char("A sudden awareness comes over you, as you peer into their soul and see a @@bGarou@@N!!!\n\r", ch);
-      if (!IS_AWAKE(victim))
-         do_wake(victim, "");
-      if (victim->position < POS_STANDING)
-         do_stand(victim, "");
-      if (ch->position < POS_STANDING)
-         do_stand(ch, "");
-      multi_hit(ch, victim, TYPE_UNDEFINED);
-      return FALSE;
-   }
 
    if (IS_NPC(victim))
    {

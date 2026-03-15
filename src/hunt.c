@@ -591,10 +591,7 @@ void do_hunt(CHAR_DATA *ch, char *argument)
       send_to_char("Hunt for whom?\n\r", ch);
       return;
    }
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-      victim = get_char_world(ch, arg);
-   else
-      victim = (get_trust(ch) >= MAX_LEVEL ? get_char_world(ch, arg) : get_char_area(ch, arg));
+   victim = (get_trust(ch) >= MAX_LEVEL ? get_char_world(ch, arg) : get_char_area(ch, arg));
    if (victim == ch)
    {
       if (ch->hunting)
@@ -637,8 +634,6 @@ void do_hunt(CHAR_DATA *ch, char *argument)
    if (can_use_skill(ch, gsn_hunt))
       chance += 75;
 
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-      chance = ((MAX_WOLF_LEVEL - ch->pcdata->generation) * 4) + ch->pcdata->vamp_level;
 
    if (chance < number_percent())
    {
@@ -659,9 +654,7 @@ void do_hunt(CHAR_DATA *ch, char *argument)
     * Max_level people can hunt through the world, and anyone who has
     * practiced over 70% can hunt through doors.. -- Alty
     */
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-      ch->hunt_flags = HUNT_WORLD | HUNT_OPENDOOR | HUNT_UNLOCKDOOR | HUNT_PICKDOOR;
-   else if (!IS_NPC(ch))
+   if (!IS_NPC(ch))
    {
       ch->hunt_flags = 0;
 

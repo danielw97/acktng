@@ -341,26 +341,6 @@ void advance_level_vamp(CHAR_DATA *ch)
    return;
 }
 
-void advance_level_wolf(CHAR_DATA *ch)
-{
-   char buf[MAX_STRING_LENGTH];
-   int add_prac;
-   int add_bloodlust, add_max_skills;
-
-   add_bloodlust = (number_range(1, ((MAX_WOLF_LEVEL / 2) - ch->pcdata->generation))) +
-                   (((MAX_WOLF_LEVEL / 2) - ch->pcdata->generation) / 2);
-   add_prac = number_range(1, UMAX(2, ((MAX_WOLF_LEVEL / 2) - ch->pcdata->generation)));
-   add_max_skills = add_prac;
-
-   ch->pcdata->bloodlust_max += add_bloodlust;
-   ch->pcdata->vamp_pracs += add_prac;
-   ch->pcdata->vamp_skill_max += add_max_skills;
-   sprintf(buf, "@@NYou gain: %d @@rRage Ability@@N, and %d @@bWerewolf Practices. .@@N\n\r", add_bloodlust, add_prac);
-
-   send_to_char(buf, ch);
-   return;
-}
-
 void gain_exp(CHAR_DATA *ch, long_int gain)
 {
    if (IS_IMMORTAL(ch))
@@ -628,8 +608,6 @@ int mana_gain(CHAR_DATA *ch)
          if (IS_VAMP(ch) && ch->pcdata->bloodlust == -10)
             gain = (5 + ch->level / 25);
 
-         if (IS_WOLF(ch) && IS_RAGED(ch))
-            gain = 0;
       }
       if (!is_fighting(ch))
          gain *= 5;
@@ -753,29 +731,6 @@ int move_gain(CHAR_DATA *ch)
 }
 
 #ifndef UNIT_TEST_UPDATE
-
-void gain_rage(CHAR_DATA *ch)
-{
-   sh_int rage_gain = 0;
-   sh_int current_rage = 0;
-
-   if (IS_NPC(ch) || !IS_WOLF(ch))
-      return;
-
-   if (IS_RAGED(ch))
-      current_rage = ch->pcdata->bloodlust_max;
-   else if (IS_SHIFTED(ch))
-      current_rage = UMAX(1, (ch->pcdata->bloodlust_max / 5));
-   else
-      current_rage = UMAX(1, (ch->pcdata->bloodlust_max / 10));
-
-   rage_gain = number_range(1, (MAX_WOLF_LEVEL / 2 - ch->pcdata->generation));
-
-   if (ch->pcdata->bloodlust >= current_rage)
-      ch->pcdata->bloodlust = UMIN((ch->pcdata->bloodlust + rage_gain), current_rage);
-   else
-      ch->pcdata->bloodlust = UMIN(current_rage, (ch->pcdata->bloodlust + rage_gain));
-}
 
 void gain_bloodlust(CHAR_DATA *ch, int value)
 {
@@ -1514,8 +1469,6 @@ void char_update(void)
       if (ch->is_free != FALSE)
          continue;
 
-      if (!IS_NPC(ch) && IS_WOLF(ch))
-         gain_rage(ch);
 
       /*
        * Find dude with oldest save time.
@@ -1787,11 +1740,6 @@ void objfun_update(void)
 
       if (obj->obj_fun != NULL)
       {
-         if (obj->carried_by != NULL)
-         {
-            if (!IS_NPC(obj->carried_by) && IS_WOLF(obj->carried_by) && (IS_SHIFTED(obj->carried_by) || IS_RAGED(obj->carried_by)))
-               continue;
-         }
          (*obj->obj_fun)(obj, obj->carried_by);
       }
    }

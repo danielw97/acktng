@@ -786,24 +786,6 @@ void show_char_to_char_0(CHAR_DATA *victim, CHAR_DATA *ch)
    sprintf(buf, "%s", color_string(ch, "mobiles"));
    buf2[0] = '\0';
 
-   /* This is temporary....
-    * Zen  WOLF
-    *
-    */
-   if (!IS_NPC(victim) && IS_WOLF(victim))
-   {
-      if (IS_SHIFTED(victim))
-      {
-         send_to_char("A large wolf scampers before you.@@N\n\r", ch);
-         return;
-      }
-      else if (IS_RAGED(victim))
-      {
-         send_to_char("A @@bWEREWOLF in @@rFULL RAGE stands before you!\n\r", ch);
-         return;
-      }
-   }
-
    if (!IS_NPC(victim))
    {
       /*
@@ -1088,10 +1070,6 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 
    found = FALSE;
 
-   if (!IS_NPC(victim) && IS_WOLF(victim) && (IS_SHIFTED(victim) || IS_RAGED(victim)))
-   {
-   }
-   else
    {
       for (iWear = 0; iWear < MAX_WEAR; iWear++)
       {
@@ -1286,7 +1264,7 @@ void do_look(CHAR_DATA *ch, char *argument)
          send_to_char(out, ch);
       }
 
-      if (!IS_NPC(ch) && (IS_VAMP(ch) || IS_WOLF(ch)))
+      if (!IS_NPC(ch) && IS_VAMP(ch))
          if (ch->in_room->first_mark_list != NULL)
          {
             MARK_LIST_MEMBER *marks;
@@ -1294,18 +1272,13 @@ void do_look(CHAR_DATA *ch, char *argument)
 
             for (marks = ch->in_room->first_mark_list; marks != NULL; marks = marks->next)
 
-               if (((marks->mark->type == WOLF) && IS_WOLF(ch)) || ((marks->mark->type == VAMP) && IS_VAMP(ch)))
+               if ((marks->mark->type == VAMP) && IS_VAMP(ch))
                   num_marks++;
             if (num_marks > 0)
             {
                char marksbuf[MSL];
 
-               if (IS_WOLF(ch))
-               {
-                  sprintf(marksbuf, "@@aThis room has @@W%d @@a%s@@W.@@N\n\r", num_marks,
-                          (num_marks > 1) ? "scents" : "scent");
-               }
-               else if (IS_VAMP(ch))
+               if (IS_VAMP(ch))
                {
                   sprintf(marksbuf, "@@mThis room has @@W%d @@eBlood%s@@N.\n\r", num_marks,
                           (num_marks > 1) ? "Signs" : "Sign");
@@ -1722,8 +1695,7 @@ void do_score(CHAR_DATA *ch, char *argument)
            IS_NPC(ch) ? ch->short_descr : ch->name,
            IS_NPC(ch) ? "" : ch->pcdata->title,
            IS_NPC(ch) ? "n/a" : race_table[ch->race].race_title,
-           IS_VAMP(ch) ? "@@e(Vampire)@@N" : IS_WOLF(ch) ? "@@r(Werewolf)@@N"
-                                                         : "",
+           IS_VAMP(ch) ? "@@e(Vampire)@@N" : "",
            IS_NPC(ch) ? "n/a" : clan_table[ch->pcdata->clan].clan_name);
    my_get_age(ch, buf);
    send_to_char(buf, ch);
@@ -1900,19 +1872,6 @@ void do_score(CHAR_DATA *ch, char *argument)
          sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
          send_to_char(buf2, ch);
          sprintf(buf, "@@WFAMILY: %s", get_family_name(ch));
-         sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
-         send_to_char(buf2, ch);
-      }
-      else if (IS_WOLF(ch))
-      {
-         sprintf(buf, "@@eRAGE@@W: @@e%d@@W/@@e%d@@N", ch->pcdata->bloodlust, ch->pcdata->bloodlust_max);
-         sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
-         send_to_char(buf2, ch);
-         sprintf(buf, "@@rTribe Rank@@W:@@N %d  @@yTribe Standing@@W:@@N %s   @@GKnowledge Avail:@@N %d",
-                 ch->pcdata->vamp_level, get_tribe_standing_name(ch->pcdata->generation), ch->pcdata->vamp_pracs);
-         sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
-         send_to_char(buf2, ch);
-         sprintf(buf, "@@bTRIBE: %s", get_tribe_name(ch));
          sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
          send_to_char(buf2, ch);
       }
@@ -2632,12 +2591,6 @@ void do_who(CHAR_DATA *ch, char *argument)
 
 void do_inventory(CHAR_DATA *ch, char *argument)
 {
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("All your inventory has transformed into fur!!!@@N\n\r", ch);
-      return;
-   }
-
    send_to_char("You are carrying:\n\r", ch);
    show_list_to_char(ch->first_carry, ch, TRUE, TRUE);
    return;
@@ -2658,11 +2611,6 @@ void do_compare(CHAR_DATA *ch, char *argument)
    int value1;
    int value2;
    char *msg;
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("All your inventory has transformed into fur!!!@@N\n\r", ch);
-      return;
-   }
 
    argument = one_argument(argument, arg1);
    argument = one_argument(argument, arg2);
@@ -2776,7 +2724,7 @@ void do_where(CHAR_DATA *ch, char *argument)
       found = FALSE;
       for (d = first_desc; d; d = d->next)
       {
-         if (d->connected == CON_PLAYING && (victim = d->character) != NULL && !IS_NPC(victim) && victim->in_room != NULL && victim->in_room->area == ch->in_room->area && can_see(ch, victim) && (!IS_WOLF(victim) || (!IS_SHIFTED(victim) && !IS_RAGED(victim))))
+         if (d->connected == CON_PLAYING && (victim = d->character) != NULL && !IS_NPC(victim) && victim->in_room != NULL && victim->in_room->area == ch->in_room->area && can_see(ch, victim))
          {
             found = TRUE;
             sprintf(buf, "%-28s %s\n\r", victim->name, victim->in_room->name);
@@ -3337,10 +3285,6 @@ void do_socials(CHAR_DATA *ch, char *argument)
  * if ( cmd_table[cmd].level == VAMP_ONLY
  * && !IS_VAMP( ch ) )
  * continue;
- * if ( cmd_table[cmd].level == WOLF_ONLY
- * && !IS_WOLF( ch ) )
- * continue;
- *
  * sprintf( buf, "%-12s", cmd_table[cmd].name );
  * safe_strcat(MAX_STRING_LENGTH, buf1, buf );
  * if ( ++col % 6 == 0 )
@@ -3423,8 +3367,6 @@ void do_commands(CHAR_DATA *ch, char *argument)
             continue;
 
          if (cmd_table[cmd].level == VAMP_ONLY && !IS_VAMP(ch))
-            continue;
-         if (cmd_table[cmd].level == WOLF_ONLY && !IS_WOLF(ch))
             continue;
          /*	     if ( cmd_table[cmd].level == SYSTEM_ONLY
                   && get_trust( ch ) < L_SUP )
@@ -4113,7 +4055,7 @@ void do_slist(CHAR_DATA *ch, char *argument)
       {
          if (skill_table[sn].name == NULL)
             break;
-         if ((skill_table[sn].skill_level[class] != level) || (skill_table[sn].flag2 == VAMP) || (skill_table[sn].flag2 == WOLF))
+         if ((skill_table[sn].skill_level[class] != level) || (skill_table[sn].flag2 == VAMP))
             continue;
          if ((adept_class) && (skill_table[sn].flag1 == ADEPT))
          {
@@ -4582,7 +4524,6 @@ void do_gain(CHAR_DATA *ch, char *argument)
    bool remort = FALSE;
    bool vamp = FALSE;
    bool adept = FALSE;
-   bool wolf = FALSE;
    int vamp_cost = 0;
    sh_int morts_at_max = 0;
    sh_int remorts_at_max = 0;
@@ -4713,15 +4654,6 @@ void do_gain(CHAR_DATA *ch, char *argument)
       }
    }
 
-   if (!str_prefix("WEREWOLF", argument))
-   {
-      if (IS_WOLF(ch))
-      {
-         any = TRUE;
-         wolf = TRUE;
-      }
-   }
-
    if (!found)
    {
       send_to_char("That's not a class!\n\r", ch);
@@ -4737,9 +4669,7 @@ void do_gain(CHAR_DATA *ch, char *argument)
    /*
     * Ok, so now class should be valid.  Check if enough exp and valid
     */
-   if (wolf)
-      vamp_cost = exp_to_level_wolf(ch->pcdata->vamp_level);
-   else if (vamp)
+   if (vamp)
       vamp_cost = exp_to_level_vamp(ch->pcdata->vamp_level);
    else if (remort)
    {
@@ -4794,35 +4724,10 @@ void do_gain(CHAR_DATA *ch, char *argument)
          return;
       }
    }
-   else if (wolf)
-   {
-      if (ch->pcdata->vamp_exp < vamp_cost)
-      {
-         send_to_char("@@NYour @@rtribe@@N does not consider you worthy!@@N!!\n\r", ch);
-         return;
-      }
-   }
-
    else if (ch->exp < cost)
    {
       sprintf(buf, "Cost is %ld Exp.  You only have %ld (%ld short).\n\r", (long)cost, ch->exp, ((long)cost - ch->exp));
       send_to_char(buf, ch);
-      return;
-   }
-
-   if ((wolf) && (ch->pcdata->vamp_level < (MAX_WOLF_LEVEL - (ch->pcdata->generation * 2))))
-   {
-      c = ADVANCE_WOLF;
-      send_to_char("@@NYour @@rTribe@@N increases your standing@@N!!!\n\r", ch);
-      ch->pcdata->vamp_exp -= vamp_cost;
-      advance_level_wolf(ch);
-      ch->pcdata->vamp_level += 1;
-      do_save(ch, "");
-      return;
-   }
-   else if (wolf)
-   {
-      send_to_char("@@NYour @@rTribe @@Ndenies your request@@N.\n\r", ch);
       return;
    }
 
@@ -5587,7 +5492,7 @@ void do_loot(CHAR_DATA *ch, char *argument)
     * begin checking for lootability
     */
 
-   if ((ch->pcdata->clan == 0) && (!IS_SET(ch->pcdata->pflags, PFLAG_PKOK)) && (!IS_VAMP(ch) && !IS_WOLF(ch)))
+   if ((ch->pcdata->clan == 0) && (!IS_SET(ch->pcdata->pflags, PFLAG_PKOK)) && (!IS_VAMP(ch)))
    {
       send_to_char("You cannot loot corpses.\n\r", ch);
       return;
@@ -5599,7 +5504,7 @@ void do_loot(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if ((ch->pcdata->clan == corpse->value[2]) || ((IS_SET(ch->pcdata->pflags, PFLAG_PKOK)) && (corpse->value[0] == 1)) || ((IS_WOLF(ch) || IS_VAMP(ch)) && (corpse->value[0] == 1)))
+   if ((ch->pcdata->clan == corpse->value[2]) || ((IS_SET(ch->pcdata->pflags, PFLAG_PKOK)) && (corpse->value[0] == 1)) || (IS_VAMP(ch) && (corpse->value[0] == 1)))
    {
       counter = number_range(1, 100);
 

@@ -168,12 +168,6 @@ struct char_ref_type
 
 #define IS_AWAKE(ch) (ch->position > POS_SLEEPING)
 
-#define IS_WOLF(ch) (IS_NPC(ch) ? FALSE : IS_SET(ch->pcdata->pflags, PFLAG_WEREWOLF))
-#define IS_SHIFTED(ch) (IS_NPC(ch) ? FALSE : IS_SET(ch->pcdata->pflags, PFLAG_SHIFTED) ? TRUE \
-                                                                                       : FALSE)
-#define IS_RAGED(ch) (IS_NPC(ch) ? FALSE : IS_SET(ch->pcdata->pflags, PFLAG_RAGED) ? TRUE \
-                                                                                   : FALSE)
-
 #define IS_OUTSIDE(ch) (!IS_SET((ch)->in_room->room_flags, ROOM_INDOORS))
 
 #define WAIT_STATE(ch, npulse) ((ch)->wait = UMAX((ch)->wait, (npulse)))
@@ -200,9 +194,8 @@ struct char_ref_type
 /*
  * Description macros.
  */
-#define PERS(ch, looker) (can_see(looker, (ch)) ? (IS_NPC(ch) ? (ch)->short_descr : (IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch))) ? "A Large @@bWolf@@N" \
-                                                                                                                                      : (ch)->name)          \
-                          : IS_IMMORTAL(ch)     ? "A Mystical Being"                                                                                         \
+#define PERS(ch, looker) (can_see(looker, (ch)) ? (IS_NPC(ch) ? (ch)->short_descr : (ch)->name) \
+                          : IS_IMMORTAL(ch)     ? "A Mystical Being"                             \
                                                 : "Someone")
 #define NAME(ch) (IS_NPC(ch) ? (ch)->short_descr : (ch)->name)
 

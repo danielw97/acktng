@@ -123,15 +123,6 @@ void violence_update(void)
          }
       }
 
-      /* Healing rapidly for raged wolves  */
-
-      if (!IS_NPC(ch) && IS_WOLF(ch) && IS_RAGED(ch))
-      {
-         if (!is_affected(ch, skill_lookup("Enraged")))
-            REMOVE_BIT(ch->pcdata->pflags, PFLAG_RAGED);
-         ch->hit = (UMIN(get_max_hp(ch), (ch->hit + get_max_hp(ch) / 150)));
-      }
-
       /* slight damage for players in a speeded stance, simulates fatigue */
 
       if (!IS_NPC(ch) && (stance_app[ch->stance].speed_mod > 1))
@@ -684,7 +675,7 @@ void check_killer(CHAR_DATA *ch, CHAR_DATA *victim)
     * So are killers and thieves.
     */
    if (IS_NPC(victim) || IS_SET(victim->act, PLR_KILLER) || IS_SET(victim->in_room->room_flags, ROOM_PK) /* -S- Mod */
-       || IS_SET(victim->act, PLR_THIEF) || IS_VAMP(victim) || IS_WOLF(victim)                           /*
+       || IS_SET(victim->act, PLR_THIEF) || IS_VAMP(victim)                                              /*
                                                                                                           * || ( ch->fighting == victim )  */
        || (ch == victim))
       return;
@@ -1052,9 +1043,6 @@ int get_parry(CHAR_DATA *ch)
       {
          return 0;
       }
-      if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-         return 0;
-
       chance = get_curr_str(ch);
    }
    chance += cloak_adept_defense_bonus(ch);
@@ -1103,9 +1091,6 @@ int get_dodge(CHAR_DATA *ch)
    }
    chance += cloak_adept_defense_bonus(ch);
 
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-      chance += 20;
-
    chance += stance_app[ch->stance].speed_mod;
    chance += get_speed(ch) * 5;
 
@@ -1150,9 +1135,6 @@ int get_block(CHAR_DATA *ch)
    }
    else
    {
-
-      if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-         return 0;
 
       chance = get_curr_con(ch);
    }
@@ -1217,9 +1199,6 @@ int get_counter(CHAR_DATA *ch)
    chance += get_speed(ch) * 5;
 
    chance += cloak_adept_defense_bonus(ch);
-
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-      chance += 20;
 
    return chance;
 }

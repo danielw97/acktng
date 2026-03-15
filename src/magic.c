@@ -115,15 +115,6 @@ int mana_cost(CHAR_DATA *ch, int sn)
 
    if (IS_VAMP(ch) && (skill_table[sn].flag2 == VAMP))
       cost = skill_table[sn].min_mana;
-   if (skill_table[sn].flag2 == WOLF)
-   {
-      if (IS_NPC(ch))
-         return 5000;
-      if (IS_WOLF(ch))
-      {
-         cost = skill_table[sn].min_mana;
-      }
-   }
    if (IS_NPC(ch))
       cost /= 2;
    if (!IS_NPC(ch) && (skill_table[sn].flag2 == NORM))
@@ -471,12 +462,6 @@ void do_cast(CHAR_DATA *ch, char *argument)
     * return;
     */
 
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("You are too @@rENRAGED @@NTo cast spells!\n\r", ch);
-      return;
-   }
-
    target_name = one_argument(argument, arg1);
    one_argument(target_name, arg2);
 
@@ -497,7 +482,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
    /*
     * Check if in a no-magic room
     */
-   if (!char_login && IS_SET(ch->in_room->room_flags, ROOM_NO_MAGIC) && (skill_table[sn].flag2 != WOLF))
+   if (!char_login && IS_SET(ch->in_room->room_flags, ROOM_NO_MAGIC))
    {
       send_to_char("Some strange force prevents you casting the spell!\n\r", ch);
       return;
@@ -512,7 +497,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
    if (npc_remort_cast_blocked(ch, sn))
       return;
 
-   if (!can_use_skill(ch, sn) || ((skill_table[sn].flag2 == VAMP) && (!IS_VAMP(ch))) || ((skill_table[sn].flag2 == WOLF) && (!IS_WOLF(ch))))
+   if (!can_use_skill(ch, sn) || ((skill_table[sn].flag2 == VAMP) && (!IS_VAMP(ch))))
    {
       send_to_char("You can't do that.\n\r", ch);
       return;
@@ -524,8 +509,6 @@ void do_cast(CHAR_DATA *ch, char *argument)
       return;
    }
    if (IS_NPC(ch) && skill_table[sn].flag2 == VAMP)
-      return;
-   if (IS_NPC(ch) && skill_table[sn].flag2 == WOLF)
       return;
 
    mana = mana_cost(ch, sn);
@@ -656,16 +639,6 @@ void do_cast(CHAR_DATA *ch, char *argument)
       else
          ;
    }
-   if (!IS_WOLF(ch) && (skill_table[sn].flag2 == WOLF))
-   {
-      send_to_char("Huh?\n\r", ch);
-      return;
-   }
-   if (skill_table[sn].flag2 == WOLF && (!IS_NPC(ch) && IS_WOLF(ch)) && ch->pcdata->bloodlust < mana)
-   {
-      send_to_char("@@bYou aren't able to summon enough @@rRAGE@@N!!\n\r", ch);
-      return;
-   }
    else if (ch->mana < mana)
    {
       send_to_char("You don't have enough mana.\n\r", ch);
@@ -705,8 +678,6 @@ void do_cast(CHAR_DATA *ch, char *argument)
 
          if (IS_VAMP(ch) && (skill_table[sn].flag2 == VAMP))
             ch->pcdata->bloodlust -= mana / 2;
-         else if (skill_table[sn].flag2 == WOLF && (!IS_NPC(ch) && IS_WOLF(ch)))
-            ch->pcdata->bloodlust -= mana / 3;
          else
             ch->mana -= mana / 2;
          return;
@@ -746,7 +717,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
       if (!IS_NPC(ch) && is_mental_power_spell(sn))
          ch->mental_power++;
 
-      if ((skill_table[sn].flag2 == VAMP) || (skill_table[sn].flag2 == WOLF))
+      if (skill_table[sn].flag2 == VAMP)
       {
          ch->pcdata->bloodlust -= mana;
       }
@@ -795,7 +766,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
             if (!IS_NPC(ch) && is_mental_power_spell(sn))
                ch->mental_power++;
 
-            if ((skill_table[sn].flag2 == VAMP) || (skill_table[sn].flag2 == WOLF))
+            if (skill_table[sn].flag2 == VAMP)
             {
                ch->pcdata->bloodlust -= mana;
             }
@@ -846,7 +817,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
             if (!IS_NPC(ch) && is_mental_power_spell(sn))
                ch->mental_power++;
 
-            if ((skill_table[sn].flag2 == VAMP) || (skill_table[sn].flag2 == WOLF))
+            if (skill_table[sn].flag2 == VAMP)
             {
                ch->pcdata->bloodlust -= mana;
             }
@@ -1646,12 +1617,6 @@ bool spell_dispel_magic(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    AFFECT_DATA *paf_next;
    int chance;
 
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("You are too @@rENRAGED @@NTo cast spells!\n\r", ch);
-      return FALSE;
-   }
-
    if (target_name[0] == '\0' && !is_fighting(ch))
    {
       send_to_char("Dispel who or what??\n\r", ch);
@@ -1750,8 +1715,6 @@ bool spell_dispel_magic(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
       for (paf = victim->first_affect; paf != NULL; paf = paf_next)
       {
          paf_next = paf->next;
-         if (paf->type == skill_lookup("Enraged"))
-            continue;
          if ((obj) || (victim == ch->fighting))
          {
             switch (paf->bitvector)
