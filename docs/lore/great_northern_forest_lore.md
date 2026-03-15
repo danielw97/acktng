@@ -71,7 +71,7 @@ Midgaard's influence is strongest in the southern verge and along the road:
 - Lamp-keepers are paid from Midgaard's civic treasury through a line item that has survived every budget dispute for two centuries, a testament to how essential the road is to Midgaard's economy.
 - Southern patrol camps fly Midgaard's colors and operate under Midgaard's civil law, though enforcement becomes informal beyond the first few road-miles.
 - Timber surveyors from Midgaard's Woodwrights Guild conduct annual assessments of the southern verge, marking trees approved for harvest with the Guild's green chalk seal. Unauthorized felling is punished by confiscation of tools and a season's ban from the road.
-- The Granite Arcade in Midgaard, the northernmost point on the city's main spine (room `3009`), serves as the administrative hub for all forest-related commerce, contracts, and ranger writs. Its north exit opens directly onto the Lantern Road's southern approach.
+- The Granite Arcade in Midgaard, the northernmost point on the city's main spine (room `925`), serves as the administrative hub for all forest-related commerce, contracts, and ranger writs. Its north exit opens directly onto the Lantern Road's southern approach.
 
 ### The Hidden Peoples
 The forest is not empty. It is home to:

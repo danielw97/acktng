@@ -5,7 +5,7 @@ K scorched wastes desert~
 L 65 to 85~
 N 54
 I 65 85
-V 22500 22574
+V 4881 4955
 X 0
 F 15
 U @@bA scorching desert wind sweeps through the Scorched Wastes.@@N~
@@ -13,431 +13,431 @@ O virant~
 R all~
 W all~
 #ROOMS
-#22500
+#4881
 @@bThe Cracked Wastes Gate@@N~
 @@bSun-split earth stretches in every direction beneath a merciless sky. Ruins rise faintly to the north, rolling dunes beckon east and west, and a canyon cuts into the rock to the south. This is the edge of the Scorched Wastes, where the desert begins in earnest.@@N
-~
+~
 32 10
 D0
 ~
 ~
-0 0 22501
+0 0 4882
 D1
 ~
 ~
-0 0 22510
+0 0 4891
 D2
 ~
 ~
-0 0 22515
+0 0 4896
 D3
 ~
 ~
-0 0 22523
+0 0 4904
 D5
 ~
 ~
-0 0 8507
+0 0 1839
 S
-#22501
+#4882
 @@bBone-Bleached Road@@N~
 @@bThe remains of an ancient paved road stretch north and south, most of its stones long since swallowed by sand. Scattered bones of pack animals and travelers lie half-buried along the verge.@@N
-~
+~
 32 10
 D0
 ~
 ~
-0 0 22502
+0 0 4883
 D2
 ~
 ~
-0 0 22500
+0 0 4881
 S
-#22502
+#4883
 @@bTemple Road Fork@@N~
 @@bThe old road splits here. A crumbling stone marker, its inscription worn away, points north toward the ruins and east toward something half-buried in the dunes. The heat is immense.@@N
-~
+~
 32 10
 D0
 ~
 ~
-0 0 22503
+0 0 4884
 D1
 ~
 ~
-0 0 22506
+0 0 4887
 D2
 ~
 ~
-0 0 22501
+0 0 4882
 S
-#22503
+#4884
 @@bOuter Temple Grounds@@N~
 @@bBroken columns and shattered paving stones mark the outer edge of an ancient temple complex. Fine sand fills every crevice. The main structure looms to the north, dark and foreboding.@@N
-~
+~
 32 10
 D0
 ~
 ~
-0 0 22504
+0 0 4885
 D2
 ~
 ~
-0 0 22502
+0 0 4883
 S
-#22504
+#4885
 @@bHall of Fallen Priests@@N~
 @@bThe interior of the outer temple hall is dim and stifling. Hieroglyphs cover every wall, many depicting scenes of judgment and death. The air reeks of incense long since turned to dust. An inner sanctum lies beyond.@@N
-~
+~
 8 11
 D0
 ~
 ~
-0 0 22505
+0 0 4886
 D2
 ~
 ~
-0 0 22503
+0 0 4884
 S
-#22505
+#4886
 @@yPharaoh's Sanctum@@N~
 @@yGolden light filters through cracked stone ceilings, illuminating a massive sarcophagus at the chamber's center. The walls are inscribed with warding curses. An oppressive supernatural dread fills this space.@@N
-~
+~
 12 11
 D2
 ~
 ~
-0 0 22504
+0 0 4885
 S
-#22506
+#4887
 @@bEastern Ruins Wing@@N~
 @@bCollapsed walls and half-buried columns spread across the sand here. Fragments of painted pottery and corroded bronze fittings hint at the civilization that once thrived in this place. Deeper ruins lie to the east.@@N
-~
+~
 32 10
 D1
 ~
 ~
-0 0 22507
+0 0 4888
 D3
 ~
 ~
-0 0 22502
+0 0 4883
 S
-#22507
+#4888
 @@bSunken Colonnade@@N~
 @@bA row of towering pillars lines a sunken corridor, their bases lost in drifting sand. The columns cast long shadows at dawn and dusk but offer little shelter at midday. The passage continues east through a low arch.@@N
-~
+~
 8 11
 D1
 ~
 ~
-0 0 22508
+0 0 4889
 D3
 ~
 ~
-0 0 22506
+0 0 4887
 S
-#22508
+#4889
 @@bKhepri's Burrow Entrance@@N~
 @@bThe floor here has collapsed inward, revealing a deep shaft bored through the stone by something enormous. The walls of the shaft are polished smooth by the passage of a massive chitinous body. A low chittering resonates from the dark tunnel to the north.@@N
-~
+~
 8 11
 D0
 ~
 ~
-0 0 22509
+0 0 4890
 D3
 ~
 ~
-0 0 22507
+0 0 4888
 S
-#22509
+#4890
 @@yKhepri's Chamber@@N~
 @@yThe chamber below the burrow is vast, floored with a deep layer of shed beetle carapaces. Iridescent shells cover the walls. The air thrums with the presence of something ancient and enormous coiled at the center of the room.@@N
-~
+~
 12 11
 D2
 ~
 ~
-0 0 22508
+0 0 4889
 S
-#22510
+#4891
 @@bThe Serpent Dunes@@N~
 @@bRolling sand dunes stretch to the east, their rippled surfaces betraying the hidden movement of things beneath. The tracks of large serpents crisscross the sand. The air shimmers with heat mirages.@@N
-~
+~
 32 10
 D1
 ~
 ~
-0 0 22511
+0 0 4892
 D3
 ~
 ~
-0 0 22500
+0 0 4881
 S
-#22511
+#4892
 @@bViper's Basin@@N~
 @@bA shallow depression in the dunes collects windblown debris and the cast-off skins of desert serpents. The basin narrows into a rocky channel to the east. Something moves beneath the sand ahead.@@N
-~
+~
 32 10
 D1
 ~
 ~
-0 0 22512
+0 0 4893
 D3
 ~
 ~
-0 0 22510
+0 0 4891
 S
-#22512
+#4893
 @@bWithered Oasis@@N~
 @@bThe dried husk of what was once an oasis remains here, a ring of dead palms standing over a cracked and empty basin. The bones of animals that died waiting for water still litter the ground. A passage leads south.@@N
-~
+~
 32 10
 D2
 ~
 ~
-0 0 22513
+0 0 4894
 D3
 ~
 ~
-0 0 22511
+0 0 4892
 S
-#22513
+#4894
 @@bDry Riverbed@@N~
 @@bAn ancient riverbed runs through here, bone-dry and cracked. Bleached driftwood and the hulks of long-dead river creatures suggest this was once a lively waterway. The terrain grows rougher to the south.@@N
-~
+~
 32 10
 D0
 ~
 ~
-0 0 22512
+0 0 4893
 D2
 ~
 ~
-0 0 22514
+0 0 4895
 S
-#22514
+#4895
 @@bAsp's Den@@N~
 @@bThe riverbed narrows into a shadowed overhang that forms a natural den. The ground is thick with shed scales and old bones. The heat here is suffocating. The den is a dead end, all exits blocked by collapsed stone.@@N
-~
+~
 8 11
 D0
 ~
 ~
-0 0 22513
+0 0 4894
 S
-#22515
+#4896
 @@bCanyon Mouth@@N~
 @@bThe desert floor drops away here into the mouth of a wide canyon. Wind whips through the gap with surprising force, carrying stinging particles of grit. The canyon walls glow amber in the light. The path descends to the south.@@N
-~
+~
 32 4
 D0
 ~
 ~
-0 0 22500
+0 0 4881
 D2
 ~
 ~
-0 0 22516
+0 0 4897
 S
-#22516
+#4897
 @@bThe Deep Gulch@@N~
 @@bTowering canyon walls block the sky to a narrow ribbon overhead. The floor is littered with boulders that have sheared off the walls over centuries. Passages lead north, south, and east.@@N
-~
+~
 32 4
 D0
 ~
 ~
-0 0 22515
+0 0 4896
 D1
 ~
 ~
-0 0 22520
+0 0 4901
 D2
 ~
 ~
-0 0 22517
+0 0 4898
 S
-#22517
+#4898
 @@bScorpion Hollow@@N~
 @@bA wide hollow at the canyon's base, shaded by overhanging rock and reeking of something caustic. The floor is riddled with burrow holes just large enough for a person to squeeze through if they were desperate enough.@@N
-~
+~
 8 11
 D0
 ~
 ~
-0 0 22516
+0 0 4897
 D2
 ~
 ~
-0 0 22518
+0 0 4899
 S
-#22518
+#4899
 @@bQueen's Antechamber@@N~
 @@bThe hollow deepens here into a cavern whose walls weep mineral-stained moisture. The stench of venom is overwhelming. Chitinous shed exoskeletons of enormous size are stacked against the walls. Something vast stirs beyond.@@N
-~
+~
 32 4
 D0
 ~
 ~
-0 0 22517
+0 0 4898
 D2
 ~
 ~
-0 0 22519
+0 0 4900
 S
-#22519
+#4900
 @@rThe Scorpion Queen's Lair@@N~
 @@rThe cavern opens into a massive vaulted space, every surface slick with venom residue. Thousands of baby scorpions carpet the floor. The Scorpion Queen herself dominates the center of the chamber, filling it nearly wall to wall.@@N
-~
+~
 4 11
 D0
 ~
 ~
-0 0 22518
+0 0 4899
 S
-#22520
+#4901
 @@bRocky Crags@@N~
 @@bJagged stone outcroppings jut from the canyon wall, creating a maze of narrow passages and dead-drop ledges. Dark hollows in the stone provide shelter for things that dislike sunlight. The crags run east through the canyon wall.@@N
-~
+~
 32 4
 D1
 ~
 ~
-0 0 22521
+0 0 4902
 D3
 ~
 ~
-0 0 22516
+0 0 4897
 S
-#22521
+#4902
 @@bStone Maze Overlook@@N~
 @@bAn elevated ledge offers a view across the canyon below and the desert beyond. The stone here has been worn into unusual shapes by centuries of wind erosion. Strange angular carvings, too regular to be natural, cover one wall. A flat expanse continues east.@@N
-~
+~
 32 4
 D1
 ~
 ~
-0 0 22522
+0 0 4903
 D3
 ~
 ~
-0 0 22520
+0 0 4901
 S
-#22522
+#4903
 @@bBleached Flats@@N~
 @@bA flat stone expanse bleached nearly white by the sun. Nothing grows here. Nothing is buried here. The silence is complete except for the distant howl of wind. A dead end confronts any who venture this far east.@@N
-~
+~
 32 10
 D3
 ~
 ~
-0 0 22521
+0 0 4902
 S
-#22523
+#4904
 @@bWestern Sands@@N~
 @@bA sea of deep, loose sand stretches to the west. Progress is slow and exhausting. The wind creates new dunes constantly, burying landmarks. Distant silhouettes suggest ruins or something worse in the haze.@@N
-~
+~
 32 10
 D1
 ~
 ~
-0 0 22500
+0 0 4881
 D3
 ~
 ~
-0 0 22524
+0 0 4905
 S
-#22524
+#4905
 @@bNomad Burial Grounds@@N~
 @@bThe sands here are dotted with cairns of stacked stone marking ancient graves. Many have been disturbed, their contents scattered. A cursed feeling pervades the air. Paths lead east, west, and south.@@N
-~
+~
 32 10
 D1
 ~
 ~
-0 0 22523
+0 0 4904
 D2
 ~
 ~
-0 0 22528
+0 0 4909
 D3
 ~
 ~
-0 0 22525
+0 0 4906
 S
-#22525
+#4906
 @@bThe Rolling Dunes@@N~
 @@bMassive crescent-shaped dunes tower overhead, constantly reshaped by the wind. The sand is deep enough to swallow a person whole. Strange rhythmic thumps suggest something enormous moves beneath the surface to the west.@@N
-~
+~
 32 10
 D1
 ~
 ~
-0 0 22524
+0 0 4905
 D3
 ~
 ~
-0 0 22526
+0 0 4907
 S
-#22526
+#4907
 @@bAncient Quarry@@N~
 @@bHuge blocks of sandstone have been cut and removed from this open quarry over centuries, leaving a stepped pit in the desert floor. Massive quarried blocks still wait to be moved. Something has made its home here among the stones.@@N
-~
+~
 32 4
 D1
 ~
 ~
-0 0 22525
+0 0 4906
 D3
 ~
 ~
-0 0 22527
+0 0 4908
 S
-#22527
+#4908
 @@gThe Colossus Arena@@N~
 @@gA vast stone bowl carved from the quarry deepens into an arena floor many feet below. The walls are inscribed with runes of binding and containment. Colossal footprints in the sand are the only warning before the ground shakes.@@N
-~
+~
 12 11
 D1
 ~
 ~
-0 0 22526
+0 0 4907
 S
-#22528
+#4909
 @@bCrumbled Nomad Camp@@N~
 @@bThe ruins of a nomad encampment rot in the sun here. Broken tent poles, scattered cooking gear, and the remains of pack animals tell a grim story. Whatever happened here, no one survived to carry word.@@N
-~
+~
 32 10
 D0
 ~
 ~
-0 0 22524
+0 0 4905
 D2
 ~
 ~
-0 0 22529
+0 0 4910
 S
-#22529
+#4910
 @@bSalt Flats@@N~
 @@bA blinding white expanse of salt crust stretches to the horizon. The ground crackles underfoot. Heat distortion makes distances impossible to judge. Nothing lives here by choice. The path north leads back to less desolate ground.@@N
-~
+~
 32 10
 D0
 ~
 ~
-0 0 22528
+0 0 4909
 S
 #0
 #MOBILES
-#22530
+#4911
 sand viper~
 @@ra sand viper@@N~
 @@rA sand viper coils here, tongue flicking in the blazing heat.@@N
-~
+~
 A lean desert serpent with rust-red scales built for ambush in the dunes.
-~
+~
 97 0 0 S
 70 0
 0 0 0 0
@@ -446,13 +446,13 @@ A lean desert serpent with rust-red scales built for ambush in the dunes.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22531
+#4912
 dust scorpion~
 @@ya dust scorpion@@N~
 @@yA dust scorpion skitters across the hot sand, pincers raised.@@N
-~
+~
 A pale-carapaced scorpion that blends almost perfectly with the desert dust.
-~
+~
 97 0 0 S
 72 0
 0 0 0 0
@@ -461,13 +461,13 @@ A pale-carapaced scorpion that blends almost perfectly with the desert dust.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22532
+#4913
 desert vulture~
 @@ga desert vulture@@N~
 @@gA desert vulture circles low, eyeing everything with cold patience.@@N
-~
+~
 A gaunt carrion bird with sun-bleached feathers and a wickedly hooked beak.
-~
+~
 97 0 0 S
 73 0
 0 0 0 0
@@ -476,13 +476,13 @@ A gaunt carrion bird with sun-bleached feathers and a wickedly hooked beak.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22533
+#4914
 bone gnoll~
 @@ba bone gnoll@@N~
 @@bA bone gnoll snarls, clutching looted weapons in its mangy grip.@@N
-~
+~
 A hunched hyena-headed raider draped in stolen desert gear and bleached trophies.
-~
+~
 2097249 0 -500 S
 74 1
 0 0 0 0
@@ -491,13 +491,13 @@ A hunched hyena-headed raider draped in stolen desert gear and bleached trophies
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22534
+#4915
 sand wraith~
 @@pa sand wraith@@N~
 @@pA sand wraith drifts through the air, trailing wisps of spectral dust.@@N
-~
+~
 A barely-visible spirit of a traveler who perished in the desert, now bound to the scorching sands.
-~
+~
 2113633 0 -750 S
 75 0
 0 0 1 1
@@ -506,13 +506,13 @@ A barely-visible spirit of a traveler who perished in the desert, now bound to t
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22535
+#4916
 dune raider~
 @@ba dune raider@@N~
 @@bA dune raider stands ready, sun-weathered face twisted into a cruel leer.@@N
-~
+~
 A scarred nomadic bandit who preys on any unfortunate enough to cross the wastes.
-~
+~
 2097249 0 -500 S
 76 1
 0 0 0 0
@@ -521,13 +521,13 @@ A scarred nomadic bandit who preys on any unfortunate enough to cross the wastes
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22536
+#4917
 cactus fiend~
 @@ra cactus fiend@@N~
 @@rA cactus fiend lurches forward, its spine-covered limbs flailing.@@N
-~
+~
 A bizarre plant-creature that has grown a crude mockery of limbs from desert cactus growth.
-~
+~
 97 0 0 S
 77 0
 0 0 0 0
@@ -536,13 +536,13 @@ A bizarre plant-creature that has grown a crude mockery of limbs from desert cac
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22537
+#4918
 giant scarab~
 @@ya giant scarab@@N~
 @@yA giant scarab beetle clicks its mandibles menacingly.@@N
-~
+~
 An enormous iridescent beetle the size of a large dog, armored in nigh-impenetrable chitin.
-~
+~
 97 0 0 S
 78 0
 0 0 0 0
@@ -551,13 +551,13 @@ An enormous iridescent beetle the size of a large dog, armored in nigh-impenetra
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22538
+#4919
 desert hyena~
 @@ba desert hyena@@N~
 @@bA desert hyena paces in tight circles, hackles raised and cackling.@@N
-~
+~
 A lean, vicious hyena adapted to the harsh desert, its laugh echoing off stone walls.
-~
+~
 97 0 -100 S
 79 0
 0 0 0 0
@@ -566,13 +566,13 @@ A lean, vicious hyena adapted to the harsh desert, its laugh echoing off stone w
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22539
+#4920
 bleached skeleton~
 @@ga bleached skeleton@@N~
 @@gA bleached skeleton staggers through the sands, drawn by the scent of the living.@@N
-~
+~
 The remnants of some long-dead warrior, reanimated by dark desert magic and relentless heat.
-~
+~
 16481 0 -1000 S
 80 0
 0 0 0 0
@@ -581,13 +581,13 @@ The remnants of some long-dead warrior, reanimated by dark desert magic and rele
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22540
+#4921
 nomad marauder~
 @@ba nomad marauder@@N~
 @@bA nomad marauder stands guard, watching with dark suspicious eyes.@@N
-~
+~
 A hardened desert warrior draped in stolen traveling gear, selling violence for profit.
-~
+~
 2097249 0 -500 S
 80 1
 0 0 0 0
@@ -596,13 +596,13 @@ A hardened desert warrior draped in stolen traveling gear, selling violence for 
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22541
+#4922
 rock troll~
 @@ga rock troll@@N~
 @@gA rock troll squats in the dust, its stony hide radiating trapped heat.@@N
-~
+~
 A massive troll whose thick skin has fused with mineral deposits from years in the desert sun.
-~
+~
 2097249 0 -250 S
 82 1
 2 2 2 2
@@ -611,13 +611,13 @@ A massive troll whose thick skin has fused with mineral deposits from years in t
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22542
+#4923
 sand elemental~
 @@ya sand elemental@@N~
 @@yA sand elemental whirls into shape, a vortex of burning grit and fury.@@N
-~
+~
 A towering creature of pure desert wind and sand, holding vague humanoid form through raw elemental will.
-~
+~
 2359393 0 0 S
 83 0
 2 2 2 2
@@ -626,13 +626,13 @@ A towering creature of pure desert wind and sand, holding vague humanoid form th
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22543
+#4924
 scorched mummy~
 @@ya scorched mummy@@N~
 @@yA scorched mummy lurches forward, trailing desiccated wrappings.@@N
-~
+~
 An ancient burial wrapping stretched over brittle bones, the corpse charred black by desert heat and sorcery.
-~
+~
 16481 0 -1000 S
 84 0
 2 0 0 2
@@ -641,13 +641,13 @@ An ancient burial wrapping stretched over brittle bones, the corpse charred blac
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22544
+#4925
 crimson asp~
 @@ra crimson asp@@N~
 @@rA crimson asp rears up, its vivid red hood flaring wide.@@N
-~
+~
 A brilliantly colored serpent whose venom can kill an ox in minutes, named for the blood-red bands along its scales.
-~
+~
 97 0 0 S
 85 0
 0 0 1 1
@@ -656,13 +656,13 @@ A brilliantly colored serpent whose venom can kill an ox in minutes, named for t
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22545
+#4926
 sandstorm wraith~
 @@pa sandstorm wraith@@N~
 @@pA sandstorm wraith howls, its form flickering between solid and spectral.@@N
-~
+~
 A wraith born within a killing sandstorm, forever seeking to drag the living into its endless gale.
-~
+~
 16481 0 -1000 S
 85 0
 2 0 2 2
@@ -671,13 +671,13 @@ A wraith born within a killing sandstorm, forever seeking to drag the living int
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22546
+#4927
 pharaoh wrath~
 @@yPharaoh's Wrath@@N~
 @@yPharaoh's Wrath rises from the golden sarcophagus, trailing ancient curses.@@N
-~
+~
 The awakened undead spirit of a desert pharaoh, wrapped in crackling funerary magic and golden burial armor.
-~
+~
 69222467 0 -1000 S
 90 1
 10 10 10 10
@@ -686,13 +686,13 @@ The awakened undead spirit of a desert pharaoh, wrapped in crackling funerary ma
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22547
+#4928
 khepri scarab lord~
 @@yKhepri the Scarab Lord@@N~
 @@yKhepri the Scarab Lord bursts from the tunnel floor in an avalanche of chittering beetles.@@N
-~
+~
 An enormous scarab god made of thousands of living beetles bound together, its mandibles large enough to shear through solid stone.
-~
+~
 69206083 0 -250 S
 90 0
 10 10 10 10
@@ -701,13 +701,13 @@ An enormous scarab god made of thousands of living beetles bound together, its m
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22548
+#4929
 scorpion queen~
 @@rThe Scorpion Queen@@N~
 @@rThe Scorpion Queen rises from the depths, her venom-slick stinger arcing overhead.@@N
-~
+~
 A colossal desert scorpion, nearly ten feet tall, whose venom is said to boil the blood of any creature it strikes.
-~
+~
 69206083 0 -250 S
 90 2
 10 10 10 10
@@ -716,13 +716,13 @@ A colossal desert scorpion, nearly ten feet tall, whose venom is said to boil th
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#22549
+#4930
 dune colossus~
 @@gThe Dune Colossus@@N~
 @@gThe Dune Colossus lumbers to its feet, shaking loose tonnes of sand with each movement.@@N
-~
+~
 An ancient stone giant encased in fused desert rock, so large its footsteps leave craters in the sand.
-~
+~
 69468227 0 0 S
 90 1
 15 15 15 15
@@ -733,11 +733,11 @@ l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0 
 #0
 #OBJECTS
-#22550
+#4931
 sandy leather cap~
 @@ba sandy leather cap@@N~
 A travel-worn leather cap caked in desert sand.
-~
+~
 9 128 8388616 1
 0 0 0 0 0 0 0 0 0 0
 8
@@ -747,11 +747,11 @@ A
 19 2
 L
 70
-#22551
+#4932
 cracked bone mask~
 @@ba cracked bone mask@@N~
 A face mask fashioned from gnoll bones, cracked by years under the harsh sun.
-~
+~
 9 128 8388624 1
 0 0 0 0 0 0 0 0 0 0
 6
@@ -761,11 +761,11 @@ A
 18 2
 L
 72
-#22552
+#4933
 scorpion chitin chestplate~
 @@ya scorpion chitin chestplate@@N~
 Thick overlapping plates of scorpion shell, hardened into serviceable body armor.
-~
+~
 9 128 8650752 1
 0 0 0 0 0 0 0 0 0 0
 13
@@ -775,11 +775,11 @@ A
 20 15
 L
 75
-#22553
+#4934
 raider chainmail shirt~
 @@ba raider chainmail shirt@@N~
 Battered ringmail stitched together from a dozen looted corpses' armaments.
-~
+~
 9 128 8650752 1
 0 0 0 0 0 0 0 0 0 0
 11
@@ -789,11 +789,11 @@ A
 19 3
 L
 74
-#22554
+#4935
 sand worn vambraces~
 @@ba sand worn vambraces@@N~
 Heavy leather arm guards polished smooth by constant abrasion from blowing sand.
-~
+~
 9 128 8389632 1
 0 0 0 0 0 0 0 0 0 0
 8
@@ -803,11 +803,11 @@ A
 18 2
 L
 73
-#22555
+#4936
 nomad turquoise ring~
 @@ca nomad turquoise ring@@N~
 A crude copper band set with a chunk of raw desert turquoise, warm to the touch.
-~
+~
 9 128 8396800 1
 0 0 0 0 0 0 0 0 0 0
 2
@@ -817,11 +817,11 @@ A
 20 20
 L
 76
-#22556
+#4937
 vulture bone necklace~
 @@ga vulture bone necklace@@N~
 Hollow vulture bones strung on a cord of braided sinew, rattling with each movement.
-~
+~
 9 128 8388736 1
 0 0 0 0 0 0 0 0 0 0
 3
@@ -831,11 +831,11 @@ A
 20 15
 L
 71
-#22557
+#4938
 desert raider scimitar~
 @@ba desert raider scimitar@@N~
 A curved blade worn to a dull edge but still capable of splitting bone.
-~
+~
 5 128 8421376 1
 0 4 8 3 0 0 0 0 0 0
 8
@@ -845,11 +845,11 @@ A
 19 5
 L
 74
-#22558
+#4939
 dune hardened buckler~
 @@ya dune hardened buckler@@N~
 A small shield reinforced with fused desert glass and chitin, nearly as hard as steel.
-~
+~
 9 536871040 8421376 1
 0 0 0 0 0 0 0 0 0 0
 12
@@ -859,11 +859,11 @@ A
 20 15
 L
 77
-#22559
+#4940
 sand etched wristband~
 @@ca sand etched wristband@@N~
 A wide wristband covered in etched desert glyphs that hum faintly with residual energy.
-~
+~
 9 128 8390656 1
 0 0 0 0 0 0 0 0 0 0
 4
@@ -873,11 +873,11 @@ A
 22 15
 L
 78
-#22560
+#4941
 gnoll hide boots~
 @@ba gnoll hide boots@@N~
 Thick boots crafted from tanned gnoll hide, hardened and shaped for desert terrain.
-~
+~
 9 128 10485760 1
 0 0 0 0 0 0 0 0 0 0
 9
@@ -887,11 +887,11 @@ A
 22 20
 L
 73
-#22561
+#4942
 bleached bone gauntlets~
 @@ga bleached bone gauntlets@@N~
 Gauntlets assembled from polished desert creature bones, bound tight with sinew.
-~
+~
 9 128 8392704 1
 0 0 0 0 0 0 0 0 0 0
 12
@@ -901,11 +901,11 @@ A
 19 3
 L
 79
-#22562
+#4943
 mummy linen wrappings~
 @@ya mummy linen wrappings@@N~
 Ancient burial linen unwound from a mummy, stiff with preserving oils and dark magic.
-~
+~
 9 128 8454144 1
 0 0 0 0 0 0 0 0 0 0
 9
@@ -915,11 +915,11 @@ A
 20 20
 L
 80
-#22563
+#4944
 scorpion tail whip~
 @@ra scorpion tail whip@@N~
 A segmented scorpion tail preserved whole and used as a cruel whip weapon.
-~
+~
 5 128 8421376 1
 0 4 6 4 0 0 0 0 0 0
 6
@@ -929,11 +929,11 @@ A
 19 5
 L
 76
-#22564
+#4945
 troll hide belt~
 @@ga troll hide belt@@N~
 A wide belt cut from troll hide, still faintly warm and nearly as tough as iron.
-~
+~
 9 128 8519680 1
 0 0 0 0 0 0 0 0 0 0
 9
@@ -943,11 +943,11 @@ A
 20 20
 L
 78
-#22565
+#4946
 crystallized sand shield~
 @@ya crystallized sand shield@@N~
 A large shield formed of sand fused into glass by intense heat, reinforced with iron straps.
-~
+~
 9 128 8421376 1
 0 0 0 0 0 0 0 0 0 0
 11
@@ -957,11 +957,11 @@ A
 20 20
 L
 80
-#22566
+#4947
 nomad bone dagger~
 @@ba nomad bone dagger@@N~
 A dagger carved from the shin-bone of a large desert creature, sharpened to a lethal point.
-~
+~
 5 128 8421376 1
 0 3 7 2 0 0 0 0 0 0
 7
@@ -971,11 +971,11 @@ A
 19 4
 L
 72
-#22567
+#4948
 carved scarab amulet~
 @@ya carved scarab amulet@@N~
 A soapstone amulet carved in the likeness of a scarab beetle, pulsing with dim magic.
-~
+~
 9 128 8388736 1
 0 0 0 0 0 0 0 0 0 0
 3
@@ -985,11 +985,11 @@ A
 20 20
 L
 80
-#22568
+#4949
 pharaoh death crown~
 @@yPharaoh's Death Crown@@N~
 A golden crown adorned with the asp and vulture, radiating a cold aura of ancient power.
-~
+~
 9 192 8388616 1
 0 0 0 0 0 0 0 0 0 0
 5
@@ -1001,11 +1001,11 @@ A
 18 5
 L
 85
-#22569
+#4950
 khepri sacred carapace~
 @@yKhepri's Sacred Carapace@@N~
 A massive chest-piece formed from Khepri's own shed shell, alive with faint beetle movement beneath the surface.
-~
+~
 9 192 8650752 1
 0 0 0 0 0 0 0 0 0 0
 14
@@ -1017,11 +1017,11 @@ A
 19 5
 L
 85
-#22570
+#4951
 scorpion queen venomfang~
 @@rScorpion Queen's Venomfang@@N~
 A curved stinger blade carved from the Scorpion Queen's claw, still seeping venom.
-~
+~
 5 192 8421376 1
 0 5 10 2 0 0 0 0 0 0
 8
@@ -1031,11 +1031,11 @@ A
 19 8
 L
 85
-#22571
+#4952
 colossus stone fists~
 @@gColossus Stone Fists@@N~
 Gauntlets hewn from the living rock of the Dune Colossus itself, radiating seismic force.
-~
+~
 9 192 8392704 1
 0 0 0 0 0 0 0 0 0 0
 14
@@ -1047,11 +1047,11 @@ A
 20 30
 L
 85
-#22572
+#4953
 khepri chitin shoulderguards~
 @@yKhepri's Chitin Shoulderguards@@N~
 Enormous shoulder plates molded from the Scarab Lord's outer carapace, humming with buried magic.
-~
+~
 9 192 8389120 1
 0 0 0 0 0 0 0 0 0 0
 13
@@ -1061,11 +1061,11 @@ A
 20 40
 L
 85
-#22573
+#4954
 pharaoh binding linen~
 @@yPharaoh's Binding Linen@@N~
 Funerary linen wound with golden thread, binding ancient curses into a wearable mantle.
-~
+~
 9 192 8454144 1
 0 0 0 0 0 0 0 0 0 0
 9
@@ -1077,11 +1077,11 @@ A
 19 5
 L
 85
-#22574
+#4955
 scorpion queen leg guards~
 @@rScorpion Queen's Leg Guards@@N~
 Curved plates of chitin harvested from the Scorpion Queen's legs, each one as thick as a shield.
-~
+~
 9 192 9437184 1
 0 0 0 0 0 0 0 0 0 0
 13
@@ -1093,219 +1093,219 @@ L
 85
 #0
 #RESETS
-M 0 22530 4 22501 
+M 0 4911 4 4882
 
-M 0 22530 4 22501 
+M 0 4911 4 4882
 
-M 0 22531 3 22502 
+M 0 4912 3 4883
 
-M 0 22531 3 22502 
+M 0 4912 3 4883
 
-M 0 22532 2 22503 
+M 0 4913 2 4884
 
-M 0 22533 3 22503 
+M 0 4914 3 4884
 
-G 0 22557 5 
+G 0 4938 5
 
-G 0 22550 5 
+G 0 4931 5
 
-M 0 22534 2 22504 
+M 0 4915 2 4885
 
-G 0 22559 5 
+G 0 4940 5
 
-M 0 22546 1 22505 
+M 0 4927 1 4886
 
-G 0 22568 1 
+G 0 4949 1
 
-G 0 22573 1 
+G 0 4954 1
 
-M 0 22533 3 22506 
+M 0 4914 3 4887
 
-G 0 22557 5 
+G 0 4938 5
 
-G 0 22550 5 
+G 0 4931 5
 
-M 0 22536 2 22506 
+M 0 4917 2 4887
 
-M 0 22535 4 22507 
+M 0 4916 4 4888
 
-G 0 22563 5 
+G 0 4944 5
 
-G 0 22551 5 
+G 0 4932 5
 
-M 0 22535 4 22507 
+M 0 4916 4 4888
 
-G 0 22563 5 
+G 0 4944 5
 
-G 0 22551 5 
+G 0 4932 5
 
-M 0 22537 4 22508 
+M 0 4918 4 4889
 
-M 0 22537 4 22508 
+M 0 4918 4 4889
 
-M 0 22547 1 22509 
+M 0 4928 1 4890
 
-G 0 22569 1 
+G 0 4950 1
 
-G 0 22572 1 
+G 0 4953 1
 
-M 0 22530 4 22510 
+M 0 4911 4 4891
 
-M 0 22530 4 22510 
+M 0 4911 4 4891
 
-M 0 22532 2 22510 
+M 0 4913 2 4891
 
-M 0 22538 2 22511 
+M 0 4919 2 4892
 
-M 0 22538 2 22511 
+M 0 4919 2 4892
 
-M 0 22544 3 22512 
+M 0 4925 3 4893
 
-M 0 22544 3 22512 
+M 0 4925 3 4893
 
-M 0 22531 3 22513 
+M 0 4912 3 4894
 
-M 0 22537 4 22513 
+M 0 4918 4 4894
 
-M 0 22544 3 22514 
+M 0 4925 3 4895
 
-M 0 22540 4 22515 
+M 0 4921 4 4896
 
-G 0 22557 5 
+G 0 4938 5
 
-G 0 22554 5 
+G 0 4935 5
 
-M 0 22540 4 22515 
+M 0 4921 4 4896
 
-G 0 22557 5 
+G 0 4938 5
 
-G 0 22554 5 
+G 0 4935 5
 
-M 0 22541 3 22516 
+M 0 4922 3 4897
 
-G 0 22565 5 
+G 0 4946 5
 
-G 0 22561 5 
+G 0 4942 5
 
-M 0 22540 4 22516 
+M 0 4921 4 4897
 
-G 0 22557 5 
+G 0 4938 5
 
-G 0 22554 5 
+G 0 4935 5
 
-M 0 22542 4 22517 
+M 0 4923 4 4898
 
-G 0 22555 5 
+G 0 4936 5
 
-G 0 22559 5 
+G 0 4940 5
 
-M 0 22542 4 22517 
+M 0 4923 4 4898
 
-G 0 22555 5 
+G 0 4936 5
 
-G 0 22559 5 
+G 0 4940 5
 
-M 0 22543 3 22518 
+M 0 4924 3 4899
 
-G 0 22562 5 
+G 0 4943 5
 
-G 0 22556 5 
+G 0 4937 5
 
-M 0 22543 3 22518 
+M 0 4924 3 4899
 
-G 0 22562 5 
+G 0 4943 5
 
-G 0 22556 5 
+G 0 4937 5
 
-M 0 22548 1 22519 
+M 0 4929 1 4900
 
-G 0 22570 1 
+G 0 4951 1
 
-G 0 22574 1 
+G 0 4955 1
 
-M 0 22539 2 22520 
+M 0 4920 2 4901
 
-G 0 22566 5 
+G 0 4947 5
 
-M 0 22539 2 22520 
+M 0 4920 2 4901
 
-G 0 22566 5 
+G 0 4947 5
 
-M 0 22543 3 22521 
+M 0 4924 3 4902
 
-G 0 22562 5 
+G 0 4943 5
 
-G 0 22556 5 
+G 0 4937 5
 
-M 0 22545 4 22522 
+M 0 4926 4 4903
 
-G 0 22567 5 
+G 0 4948 5
 
-M 0 22545 4 22522 
+M 0 4926 4 4903
 
-G 0 22567 5 
+G 0 4948 5
 
-M 0 22535 4 22523 
+M 0 4916 4 4904
 
-G 0 22563 5 
+G 0 4944 5
 
-G 0 22551 5 
+G 0 4932 5
 
-M 0 22533 3 22523 
+M 0 4914 3 4904
 
-G 0 22557 5 
+G 0 4938 5
 
-G 0 22550 5 
+G 0 4931 5
 
-M 0 22534 2 22524 
+M 0 4915 2 4905
 
-G 0 22559 5 
+G 0 4940 5
 
-M 0 22540 4 22524 
+M 0 4921 4 4905
 
-G 0 22557 5 
+G 0 4938 5
 
-G 0 22554 5 
+G 0 4935 5
 
-M 0 22541 3 22525 
+M 0 4922 3 4906
 
-G 0 22565 5 
+G 0 4946 5
 
-G 0 22561 5 
+G 0 4942 5
 
-M 0 22536 2 22525 
+M 0 4917 2 4906
 
-M 0 22541 3 22526 
+M 0 4922 3 4907
 
-G 0 22565 5 
+G 0 4946 5
 
-G 0 22561 5 
+G 0 4942 5
 
-M 0 22542 4 22526 
+M 0 4923 4 4907
 
-G 0 22555 5 
+G 0 4936 5
 
-G 0 22559 5 
+G 0 4940 5
 
-M 0 22549 1 22527 
+M 0 4930 1 4908
 
-G 0 22571 1 
+G 0 4952 1
 
-M 0 22542 4 22528 
+M 0 4923 4 4909
 
-G 0 22555 5 
+G 0 4936 5
 
-G 0 22559 5 
+G 0 4940 5
 
-M 0 22537 4 22528 
+M 0 4918 4 4909
 
-M 0 22545 4 22529 
+M 0 4926 4 4910
 
-G 0 22567 5 
+G 0 4948 5
 
-M 0 22545 4 22529 
+M 0 4926 4 4910
 
-G 0 22567 5 
+G 0 4948 5
 
 S
 #$

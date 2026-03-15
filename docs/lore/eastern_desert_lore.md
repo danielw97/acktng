@@ -55,7 +55,7 @@ Specific connections:
 - The Ninth Meridian catastrophe's thermal pulse propagated eastward through the dry Iseth Reach channel, creating the Saltglass Reach's Glasswind Belts. The same energy that shattered Zone D's cistern infrastructure fused the Reach's sand into glass — making the Glasswind Belts a geological continuation of the disaster visible in the Eastern Desert's deepest zones.
 - The Jackal Synod's Eclipsed Tongues faction operates in both the Eastern Desert and the Saltglass Reach, using Glasswind routes to move relic components and ritual materials toward Mafdet's harbor for maritime export beyond oasis scrutiny.
 
-### Connection to the Northern Pyramid (vnums 10125-10324, levels 100-120)
+### Connection to the Northern Pyramid (vnums 2864-3063, levels 100-120)
 
 The Northern Pyramid was constructed by the **Sand Sovereign**, a dynastic heir of the Salt Ledger Kingdoms who elevated the old road-taxation apparatus into monumental funerary architecture. The Eastern Desert's Keepers of Measure and their obelisk-line survey system were the direct predecessors of the Northern Pyramid's astronomical alignment chambers. When players encounter the Twelve Obelisks in Zone D, they are standing in the same calibration tradition that the Sand Sovereign later scaled into pyramid-sized precision.
 
@@ -64,7 +64,7 @@ Specific connections:
 - The astrolabe glass motif in Zone C (Blueglass Dune Crest) prefigures the Northern Pyramid's grand astrolabe chambers.
 - The Synod's ritual vocabulary derives from the same liturgical tradition as the Northern Pyramid's curse-ward priesthood; players who learn Synod terminology in the Eastern Desert will recognize cognate phrases carved into pyramid walls.
 
-### Connection to the Southern Pyramid (vnums 11450-11649, levels 120-140)
+### Connection to the Southern Pyramid (vnums 3139-3338, levels 120-140)
 
 The Southern Pyramid was built by the **Moon Sovereign**, twin sibling and rival of the Sand Sovereign. Where the Northern Pyramid ascends, the Southern Pyramid descends into the earth through seven tiers consecrated to aspects of death: silence, decay, shadow, bone, venom, fire, and void. The Eastern Desert's failed Ninth Meridian eclipse rite was a last attempt to reconcile the two sovereigns' competing cosmologies — sun-ascendant versus underworld-descendant.
 
@@ -82,7 +82,7 @@ Specific connections:
 - Caravan quartermasters in Zone A carry route manifests sealed with oasis witness marks.
 - The Iseth Reach (vanished river, Lore Bible section 7) once connected the eastern road network to the oasis water table; its drying severed the logistical link and isolated the Eastern Desert's cistern infrastructure.
 
-### Connection to Midgaard (vnums 3001-3200)
+### Connection to Midgaard (vnums 917-1116)
 
 Midgaard's city archives preserve late-era expedition charters and salvage law tablets from the Eastern Desert. The city's pragmatic trade culture treated the collapsed desert road network as a resource extraction opportunity: survey crews were sent to map cistern ruins for recoverable stonework, and academic expeditions cataloged obelisk inscriptions for the Midgaard historical society.
 
@@ -90,7 +90,7 @@ Specific connections:
 - Object lore on salt ledger tablets (Zone B) should reference Midgaard archival catalog numbers, establishing that some desert artifacts have already been removed and are studied in the city.
 - The Blind Oracle of the Ninth Meridian may reference "western scholars" who visit periodically to copy inscriptions.
 
-### Connection to Kowloon (vnums 14000-14099)
+### Connection to Kowloon (vnums 3439-3538)
 
 Kowloon's Jade Magistracy maintains records of desert trade route law that descend from the same Keeper-of-Measure legal tradition. The Neon Covenant's insistence on "one ledger, one ration code" echoes the Salt Ledger Kingdoms' water-debt accounting system. This is not coincidence — Kowloon's founding House Jien (the Jade Clerks) employed scribal methods directly imported from the desert's collapsed ledger courts.
 
@@ -99,11 +99,11 @@ Specific connections:
 - House Vao (the Grain Wardens) of Kowloon preserved diluted versions of the Eastern Desert's water arbitration law, which they adapted for grain and staple management.
 - The Courier Lantern Office's registry methodology descends from the same census tradition that produced the desert's road-charter population counts.
 
-### Connection to Kiess (vnums 13000-13099)
+### Connection to Kiess (vnums 3339-3438)
 
 Kiess sits on Roc Road west of Midgaard, on the far western end of the continental trade network. While geographically distant from the Eastern Desert, Kiess's Trade Syndics maintain commercial intelligence about desert route conditions relayed through Midgaard's markets, and the Temple of Concord preserves religious texts that include fragments of Keeper-of-Measure survey prayers — repurposed as civic benedictions.
 
-### Connection to the Great Northern Forest (vnums 15500-15999)
+### Connection to the Great Northern Forest (vnums 3739-4238)
 
 The connection is indirect but real. The Great Northern Forest's Passage Tithe system — caravans paying in grain, salt, lamp oil, and iron nails — descends from the same "levy in kind, not coin" economic philosophy that governed the Eastern Desert's water-right toll roads. The Ash Winters that devastated the Northern Forest were caused by the same Cinderteeth volcanic activity that contributed to the Eastern Desert's prolonged drought cycle. Both regions suffered ecological collapse from the same distant geological event, and both evolved similar privatized-militia responses (the forest's hired bow-clan escorts mirror the desert's Charter War mercenary crews).
 
@@ -165,7 +165,7 @@ Mob and room lore can leverage this fracture: conflicting graffiti in shrine cor
 ### 10) The Last Sand Regent as Tragic Antagonist
 The Regent should read as more than a generic tyrant. In surviving pre-fall inscriptions, the regent figure appears as a mathematically devout administrator terrified of civil collapse. Their fatal flaw was certainty: the belief that enough precision, coercion, and ritual could force a broken climate back into compliance.
 
-By the time players reach Zone E, environmental storytelling should reveal that the Regent's final rite was framed as a self-sacrifice for continuity. The horror is that the ritual succeeded only in preserving command intent without human judgment. What remains in 8599 is a policy engine with a royal memory -- still issuing decrees in the language of duty while annihilating the living world it claims to safeguard.
+By the time players reach Zone E, environmental storytelling should reveal that the Regent's final rite was framed as a self-sacrifice for continuity. The horror is that the ritual succeeded only in preserving command intent without human judgment. What remains in 1931 is a policy engine with a royal memory -- still issuing decrees in the language of duty while annihilating the living world it claims to safeguard.
 
 ### 11) Material Culture Notes for Authoring Consistency
 To keep descriptions cohesive, use recurring physical motifs tied to each historical era:
@@ -250,7 +250,7 @@ Key concepts for room and object descriptions:
 - **Eclipse calendars** (found in Zone D obelisks and Zone E galleries): interlocking stone discs that predicted eclipse events decades in advance. The accuracy of these calendars was the basis for the Ninth Meridian Doctrine's fatal overconfidence — the astronomers correctly predicted the eclipse but incorrectly believed they could harness it.
 - **The Ninth Sun**: not literally a ninth sun, but the astronomical term for the specific eclipse conjunction that occurs once every 847 years when nine celestial bodies (sun, moon, and seven bright stars the Keepers tracked) align along the eastern meridian. The Regent's court astrologers believed this alignment could be "anchored" by ritual, suspending drought cycles. The experiment failed catastrophically.
 
-The Eclipse Lens Gallery (room 8592) should be described as a working instrument chamber, not a mystical shrine. The horror of Zone E is not that the Regent's court practiced magic — it is that they practiced science with insufficient understanding and refused to accept negative results.
+The Eclipse Lens Gallery (room 1924) should be described as a working instrument chamber, not a mystical shrine. The horror of Zone E is not that the Regent's court practiced magic — it is that they practiced science with insufficient understanding and refused to accept negative results.
 
 ### 18) Salt as Currency, Sacrament, and Weapon
 

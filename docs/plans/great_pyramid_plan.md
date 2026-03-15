@@ -6,9 +6,9 @@
 - **Area name (retained):** `@@yThe Great Pyramid@@N`
 - **Keyword direction:** move from broad `pyramid ancient egypt pharaoh` to a focused, searchable set keyed to the new identity (`greatpyramid solarcourt blacksun covenant`) while preserving legacy `pyramid` discoverability.
 - **Level range (retained):** `I 90 100`
-- **Vnum envelope (strictly retained):** `V 30480 30684`
-- **Envelope size:** 205 vnums
-- **Current envelope usage:** 205 rooms, 91 mobs, 86 objects
+- **Vnum envelope (strictly retained):** `V 5411 5615`
+- **Envelope size:** 40 vnums
+- **Current envelope usage:** 40 rooms, 91 mobs, 86 objects
 - **Rebuild intent:** Redesign **all rooms, all mobiles, and all objects** to align with a unified narrative of royal ascension, funerary judgment, and an imprisoned anti-solar force.
 
 This plan keeps the existing vnum envelope intact while replacing the area’s structure with a cleaner floor progression, stronger lore continuity, and a tighter encounter arc from outer approach to apex seal.
@@ -28,7 +28,7 @@ All directives per `area_file_spec.md` section 3:
 - `L @@W(@@y90 100@@W)@@N~` — white parens, yellow level numbers, white close paren, reset, `~`-terminated
 - `N <allocate at implementation time>` — area number; must be confirmed unused across all loaded area files
 - `I 90 100` — min/max level; controls mob-level gating and area matching
-- `V 30480 30684` — full 205-vnum envelope; all rooms, mobs, and objects must stay within this range
+- `V 5411 5615` — full 40-vnum envelope; all rooms, mobs, and objects must stay within this range
 - `F 15` — reset frequency in minutes
 - `U @@yancient stone groans as desert wind funnels through the Great Pyramid’s sealed passages@@N~` — reset message; no double-newlines, `~`-terminated
 - `O Virant~` — area owner must always be Virant (owner policy)
@@ -104,20 +104,20 @@ Players enter through the public façade, descend into the true death-economy, c
 
 ## Vnum Allocation (Strict Envelope Use)
 
-All content remains within `30480-30684`.
+All content remains within `5411-5615`.
 
-### Rooms (`30480-30684`, 205 total)
+### Rooms (`5411-5615`, 40 total)
 
 Use all room vnums sequentially with a floor-based macro layout:
 
-- **Zone A (30480-30509): Dune Approach & Processional Court** — 30 rooms
-- **Zone B (30510-30544): Priestly Works & State Galleries** — 35 rooms
-- **Zone C (30545-30584): Catacomb Transit & Servitor Depths** — 40 rooms
-- **Zone D (30585-30624): Halls of Weighing & Royal Archives** — 40 rooms
-- **Zone E (30625-30654): Crown Ascension & Divine War Sancta** — 30 rooms
-- **Zone F (30655-30684): Black Sun Vault & Apex Seal** — 30 rooms
+- **Zone A (5411-5440): Dune Approach & Processional Court** — 30 rooms
+- **Zone B (5441-5475): Priestly Works & State Galleries** — 35 rooms
+- **Zone C (5476-5515): Catacomb Transit & Servitor Depths** — 40 rooms
+- **Zone D (5516-5555): Halls of Weighing & Royal Archives** — 40 rooms
+- **Zone E (5556-5585): Crown Ascension & Divine War Sancta** — 30 rooms
+- **Zone F (5586-5615): Black Sun Vault & Apex Seal** — 30 rooms
 
-### Mobiles (`30480-30570`, 91 total)
+### Mobiles (`5411-5501`, 91 total)
 
 Maintain full existing mobile range and reassign by faction families:
 
@@ -128,7 +128,7 @@ Maintain full existing mobile range and reassign by faction families:
 - 13 Royal warline champions
 - 10 Apex/Black Sun entities (including final chain)
 
-### Objects (`30480-30565`, 86 total)
+### Objects (`5411-5496`, 86 total)
 
 Retain full object range; redesign into item sets and encounter drops:
 
@@ -159,7 +159,7 @@ Per `area_file_spec.md` sections 8.1 and 8.2:
 
 - **Outdoor desert rooms** (dune approach, causeway, exterior plazas): `sector_type = desert` (`10`)
 - **Interior rooms** (all pyramid interior halls, chambers, galleries, crypts, vaults): `sector_type = inside` (`11`), `room_flags` includes `indoors` (`8`)
-- **Boss rooms** (Zone D mini-boss 30615, Zone E bosses, Zone F final encounters): `room_flags` includes `no_mob` (`4`) per boss placement policy
+- **Boss rooms** (Zone D mini-boss 5546, Zone E bosses, Zone F final encounters): `room_flags` includes `no_mob` (`4`) per boss placement policy
 - **Deep interior rooms** (Zone C through Zone F): `room_flags` includes `no_teleport` (`16384`) and `no_recall` (`8192`), except hub/transit rooms that allow recall for escape
 - **Zone A outdoor rooms**: `room_flags` includes `hot` (`32`) for desert heat hazard flavor
 - **No rooms use `ROOM_MAZE`** (`524288`); this area does not contain mazes
@@ -169,9 +169,9 @@ Per `area_file_spec.md` sections 8.1 and 8.2:
 Per `area_file_spec.md` section 13.1:
 
 - Room vnums must be assigned in ascending sequential order with no gaps.
-- All 205 room vnums (30480-30684) must be used; fill every available room-vnum slot.
-- Mobile vnums must be assigned in ascending sequential order with no gaps, starting from 30480.
-- Object vnums must be assigned in ascending sequential order with no gaps, starting from 30480.
+- All 40 room vnums (5411-5615) must be used; fill every available room-vnum slot.
+- Mobile vnums must be assigned in ascending sequential order with no gaps, starting from 5411.
+- Object vnums must be assigned in ascending sequential order with no gaps, starting from 5411.
 
 ## Directional Traversal Constraints
 
@@ -179,7 +179,7 @@ Per `area_file_spec.md` section 8:
 
 - **All exits must be bi-directional**: if room A connects to room B through direction X, room B must provide the opposite-direction exit back to room A. No one-way exits (this area is not a maze).
 - **No directional loops**: repeated movement in the same direction must not return to a previously visited room. The spec prohibits room connection loops (e.g., `a -> b -> c -> a`) unless all rooms in the set are flagged `ROOM_MAZE`.
-- **Branching paths replace loops**: the plan uses hub-and-spoke branching from 5 major hub rooms (30509, 30544, 30584, 30624, 30654) rather than circular loops. Players choose branches and backtrack through hubs.
+- **Branching paths replace loops**: the plan uses hub-and-spoke branching from 5 major hub rooms (5440, 5475, 5515, 5555, 5585) rather than circular loops. Players choose branches and backtrack through hubs.
 - **External exits preserved** where legacy worldgraph depends on them, but contextualized via renamed rooms/exits with bi-directional counterparts.
 - **Door usage** limited to ritual gates, vault shutters, and seal barriers. Every door exit must have `EX_ISDOOR` (`1`) set in `<locks>`. Door initial state (open/closed/locked) is authored through `#RESETS` command `D`, not through room exit `<locks>` bits. Any locked door (`D` state `2`) must have `<key_vnum>` set to a valid key object vnum, and that key object must exist in `#OBJECTS`.
 - **Named exits** use `^` prefix on keywords (e.g., `^sun-lion gate`, `^weighing stair`, `^golden lift`) so movement messaging treats them as standalone noun phrases. Each named exit keyword must appear in the room's `<description>~`, an object in the room, or an `E` extra description.
@@ -188,7 +188,7 @@ Per `area_file_spec.md` section 8:
 
 ## Zone-by-Zone Room Plan
 
-## Zone A (30480-30509): Dune Approach & Processional Court
+## Zone A (5411-5440): Dune Approach & Processional Court
 
 **Narrative role:** The visible, political face of the pyramid.
 
@@ -198,19 +198,19 @@ Per `area_file_spec.md` section 8:
 
 **Key rooms:**
 
-- `30480` **The Wind-Cut Causeway** (new entry anchor)
-- `30484` **The Court of Tall Banners** (public military display)
-- `30488` **The Sun-Lion Gate** (first hard checkpoint)
-- `30502` **Hall of Tribute Tallies** (bureaucratic flavor hub)
-- `30509` **The Processional Sink Stair** (drop into Zone B)
+- `5411` **The Wind-Cut Causeway** (new entry anchor)
+- `5415` **The Court of Tall Banners** (public military display)
+- `5419` **The Sun-Lion Gate** (first hard checkpoint)
+- `5433` **Hall of Tribute Tallies** (bureaucratic flavor hub)
+- `5440` **The Processional Sink Stair** (drop into Zone B)
 
 **Room flags and sector types:**
 
-- Outdoor rooms (30480-30487): `sector_type = desert` (`10`), `room_flags` includes `hot` (`32`).
-- Transitional rooms (30488-30509): `sector_type = inside` (`11`), `room_flags` includes `indoors` (`8`).
-- Entry anchor 30480: important room, 5+ sentence description.
-- Sun-Lion Gate 30488: named exit `^sun-lion gate` discoverable in description; `EX_ISDOOR` set; door state authored via `#RESETS` `D`.
-- Hub room 30509: important room, 5+ sentence description.
+- Outdoor rooms (5411-5418): `sector_type = desert` (`10`), `room_flags` includes `hot` (`32`).
+- Transitional rooms (5419-5440): `sector_type = inside` (`11`), `room_flags` includes `indoors` (`8`).
+- Entry anchor 5411: important room, 5+ sentence description.
+- Sun-Lion Gate 5419: named exit `^sun-lion gate` discoverable in description; `EX_ISDOOR` set; door state authored via `#RESETS` `D`.
+- Hub room 5440: important room, 5+ sentence description.
 
 **Design notes:**
 
@@ -218,7 +218,7 @@ Per `area_file_spec.md` section 8:
 - Two optional side branches with early lore tablets (branch from hub, dead-end with lore payoff, backtrack).
 - Multiple `E` extra descriptions on obelisks and cartouches for environmental storytelling.
 
-## Zone B (30510-30544): Priestly Works & State Galleries
+## Zone B (5441-5475): Priestly Works & State Galleries
 
 **Narrative role:** Where kingship is manufactured by ritual and recordkeeping.
 
@@ -227,25 +227,25 @@ Per `area_file_spec.md` section 8:
 
 **Key rooms:**
 
-- `30513` **The Chamber of Seven Inks**
-- `30518` **The Embalmer’s Kiln Corridor**
-- `30526` **Gallery of Oathbound Viziers**
-- `30533` **The Scribe-Lattice Rotunda**
-- `30544` **The Priest-King Descent** (to catacomb layers)
+- `5444` **The Chamber of Seven Inks**
+- `5449` **The Embalmer’s Kiln Corridor**
+- `5457` **Gallery of Oathbound Viziers**
+- `5464` **The Scribe-Lattice Rotunda**
+- `5475` **The Priest-King Descent** (to catacomb layers)
 
 **Room flags and sector types:**
 
 - All rooms: `sector_type = inside` (`11`), `room_flags` includes `indoors` (`8`).
-- Hub room 30544: important room, 5+ sentence description.
-- Lore rooms (30513, 30526, 30533): `E` extra descriptions for inscriptions, seals, and doctrine tablets; keyword chains anchored in main `<description>~`.
+- Hub room 5475: important room, 5+ sentence description.
+- Lore rooms (5444, 5457, 5464): `E` extra descriptions for inscriptions, seals, and doctrine tablets; keyword chains anchored in main `<description>~`.
 
 **Design notes:**
 
 - Add frequent `E` descriptions for decrees, seals, and altered doctrine.
 - Mid-tier caster mobs introduced here.
-- First ritual-lock/key motif appears: locked door at 30544 (Priest-King Descent) requires a key object that must exist in `#OBJECTS`.
+- First ritual-lock/key motif appears: locked door at 5475 (Priest-King Descent) requires a key object that must exist in `#OBJECTS`.
 
-## Zone C (30545-30584): Catacomb Transit & Servitor Depths
+## Zone C (5476-5515): Catacomb Transit & Servitor Depths
 
 **Narrative role:** Labor and death infrastructure hidden beneath the state temple.
 
@@ -254,18 +254,18 @@ Per `area_file_spec.md` section 8:
 
 **Key rooms:**
 
-- `30548` **The Bone Conveyor Hall**
-- `30556` **Crypt of Interrupted Names**
-- `30563` **The Carrion Drain Junction**
-- `30572` **Servitor Barracks of Linen and Salt**
-- `30584` **The Gate of Weighed Breath** (transition to judgment complex)
+- `5479` **The Bone Conveyor Hall**
+- `5487` **Crypt of Interrupted Names**
+- `5494` **The Carrion Drain Junction**
+- `5503` **Servitor Barracks of Linen and Salt**
+- `5515` **The Gate of Weighed Breath** (transition to judgment complex)
 
 **Room flags and sector types:**
 
 - All rooms: `sector_type = inside` (`11`), `room_flags` includes `indoors` (`8`), `no_teleport` (`16384`), `no_recall` (`8192`).
-- Exception: transit room 30584 (Gate of Weighed Breath) omits `no_recall` so players can escape between zones.
+- Exception: transit room 5515 (Gate of Weighed Breath) omits `no_recall` so players can escape between zones.
 - Mini-boss alcove: `room_flags` includes `no_mob` (`4`).
-- Hub room 30584: important room, 5+ sentence description.
+- Hub room 5515: important room, 5+ sentence description.
 
 **Design notes:**
 
@@ -273,7 +273,7 @@ Per `area_file_spec.md` section 8:
 - Heavier undead + construct mix.
 - One optional mini-boss alcove grants tribunal key fragment.
 
-## Zone D (30585-30624): Halls of Weighing & Royal Archives
+## Zone D (5516-5555): Halls of Weighing & Royal Archives
 
 **Narrative role:** Theology becomes machinery; souls are audited like ledgers.
 
@@ -282,19 +282,19 @@ Per `area_file_spec.md` section 8:
 
 **Key rooms:**
 
-- `30589` **The First Weighing Dais**
-- `30597` **Hall of Confessions Unheard**
-- `30603` **Archive of Corrected Dynasties**
-- `30615` **Tribunal of the Jackal Masks** (major mini-boss)
-- `30624` **The Royal Aperture Stair** (ascension start)
+- `5520` **The First Weighing Dais**
+- `5528` **Hall of Confessions Unheard**
+- `5534` **Archive of Corrected Dynasties**
+- `5546` **Tribunal of the Jackal Masks** (major mini-boss)
+- `5555` **The Royal Aperture Stair** (ascension start)
 
 **Room flags and sector types:**
 
 - All rooms: `sector_type = inside` (`11`), `room_flags` includes `indoors` (`8`), `no_teleport` (`16384`), `no_recall` (`8192`).
-- Exception: transit room 30624 (Royal Aperture Stair) omits `no_recall`.
-- Tribunal mini-boss room 30615: `room_flags` includes `no_mob` (`4`); important room, 5+ sentence description.
-- Hub room 30624: important room, 5+ sentence description.
-- Lore rooms (30589, 30597, 30603): heavy `E` extra descriptions for weighing inscriptions, confession tablets, and corrected dynasty records; keyword chains anchored in main `<description>~`.
+- Exception: transit room 5555 (Royal Aperture Stair) omits `no_recall`.
+- Tribunal mini-boss room 5546: `room_flags` includes `no_mob` (`4`); important room, 5+ sentence description.
+- Hub room 5555: important room, 5+ sentence description.
+- Lore rooms (5520, 5528, 5534): heavy `E` extra descriptions for weighing inscriptions, confession tablets, and corrected dynasty records; keyword chains anchored in main `<description>~`.
 
 **Design notes:**
 
@@ -302,7 +302,7 @@ Per `area_file_spec.md` section 8:
 - Encounter scripts should punish pure burst and reward control/interrupt play.
 - Multiple side chambers provide set-piece loot paths.
 
-## Zone E (30625-30654): Crown Ascension & Divine War Sancta
+## Zone E (5556-5585): Crown Ascension & Divine War Sancta
 
 **Narrative role:** Military-divine layer where pharaoh is recast as cosmic warlord.
 
@@ -311,18 +311,18 @@ Per `area_file_spec.md` section 8:
 
 **Key rooms:**
 
-- `30627` **The Spear Vault of Dawn**
-- `30634` **The Chamber of Two Crowns**
-- `30641` **Sanctum of Horus-Bound Steel**
-- `30648` **The Lioness Blood Court**
-- `30654` **The Golden Lift of Ascension**
+- `5558` **The Spear Vault of Dawn**
+- `5565` **The Chamber of Two Crowns**
+- `5572` **Sanctum of Horus-Bound Steel**
+- `5579` **The Lioness Blood Court**
+- `5585` **The Golden Lift of Ascension**
 
 **Room flags and sector types:**
 
 - All rooms: `sector_type = inside` (`11`), `room_flags` includes `indoors` (`8`), `no_teleport` (`16384`), `no_recall` (`8192`).
-- Exception: transit room 30654 (Golden Lift of Ascension) omits `no_recall`.
-- Boss rooms (Lady Sekhmet's Blood Court 30648, Avatar of Ra's chamber): `room_flags` includes `no_mob` (`4`); important rooms, 5+ sentence descriptions.
-- Hub room 30654: important room, 5+ sentence description; named exit `^golden lift` discoverable in description.
+- Exception: transit room 5585 (Golden Lift of Ascension) omits `no_recall`.
+- Boss rooms (Lady Sekhmet's Blood Court 5579, Avatar of Ra's chamber): `room_flags` includes `no_mob` (`4`); important rooms, 5+ sentence descriptions.
+- Hub room 5585: important room, 5+ sentence description; named exit `^golden lift` discoverable in description.
 
 **Design notes:**
 
@@ -330,7 +330,7 @@ Per `area_file_spec.md` section 8:
 - Heavy elite placement; paced safe pockets for recovery.
 - Signature boss relic drops begin here.
 
-## Zone F (30655-30684): Black Sun Vault & Apex Seal
+## Zone F (5586-5615): Black Sun Vault & Apex Seal
 
 **Narrative role:** The hidden truth—solar kingship exists to restrain a devouring star-fragment.
 
@@ -339,19 +339,19 @@ Per `area_file_spec.md` section 8:
 
 **Key rooms:**
 
-- `30658` **The Inverted Sun Gallery**
-- `30663` **The Chamber of Broken Cartouches**
-- `30671` **Vault of the First Betrayal**
-- `30679` **The Black Sun Cradle**
-- `30684` **The Absolute Summit** (final encounter room retained as title anchor)
+- `5589` **The Inverted Sun Gallery**
+- `5594` **The Chamber of Broken Cartouches**
+- `5602` **Vault of the First Betrayal**
+- `5610` **The Black Sun Cradle**
+- `5615` **The Absolute Summit** (final encounter room retained as title anchor)
 
 **Room flags and sector types:**
 
 - All rooms: `sector_type = inside` (`11`), `room_flags` includes `indoors` (`8`), `no_teleport` (`16384`), `no_recall` (`8192`).
-- Exception: final room 30684 (The Absolute Summit) omits `no_recall` so players can escape after the final encounter.
-- All boss rooms (30671 Vault of the First Betrayal, 30679 Black Sun Cradle, 30684 The Absolute Summit): `room_flags` includes `no_mob` (`4`); important rooms, 5+ sentence descriptions.
+- Exception: final room 5615 (The Absolute Summit) omits `no_recall` so players can escape after the final encounter.
+- All boss rooms (5602 Vault of the First Betrayal, 5610 Black Sun Cradle, 5615 The Absolute Summit): `room_flags` includes `no_mob` (`4`); important rooms, 5+ sentence descriptions.
 - Named exits: `^inverted sun gallery`, `^black sun cradle` discoverable in descriptions.
-- Locked seal barriers: doors into 30679 and 30684 require key objects; `EX_ISDOOR` set; door state authored via `#RESETS` `D` state `2`; corresponding key objects must exist in `#OBJECTS`.
+- Locked seal barriers: doors into 5610 and 5615 require key objects; `EX_ISDOOR` set; door state authored via `#RESETS` `D` state `2`; corresponding key objects must exist in `#OBJECTS`.
 
 **Design notes:**
 
@@ -367,8 +367,8 @@ Per `area_file_spec.md` section 8:
 
 Per `area_file_spec.md` section 13.1:
 
-- Mob vnums must be assigned in ascending sequential order with no gaps, starting from 30480.
-- Fully rewrite all 91 mob templates through contiguous sequential slots **30480-30570** (staying within the 30480-30684 vnum envelope).
+- Mob vnums must be assigned in ascending sequential order with no gaps, starting from 5411.
+- Fully rewrite all 91 mob templates through contiguous sequential slots **5411-5501** (staying within the 5411-5615 vnum envelope).
 
 ### Mobile Spec Compliance (all mobs)
 
@@ -427,7 +427,7 @@ Per `area_file_spec.md` sections 4.1-5.5:
   - `act`: `is_npc` + `stay_area` + `aggressive` + `undead` (`16384`). Final chain entities add `no_flee` (`16`).
   - Level range: 97-100. Hybrid profile (void casting + melee).
   - `affected_by`: `detect_invis` (`8`) + `infrared` (`512`).
-  - `resist`: `shadow` (`256`), `mental` (`4`). `suscept`: `holy` (`8`).
+  - `resist`: `shadow` (`82`), `mental` (`4`). `suscept`: `holy` (`8`).
 
 ## Named Boss Ladder (retain iconic names; redefine purpose)
 
@@ -458,9 +458,9 @@ All boss mobs: `act` includes `is_npc` + `stay_area` + `sentinel` + `boss` + `ag
 
 Per `area_file_spec.md` section 13.1:
 
-- Object vnums must be assigned in ascending sequential order with no gaps, starting from 30480.
-- Fully replace current object concepts beginning at **30480**.
-- Expand through contiguous sequential slots (through **30565**) while staying within the 30480-30684 vnum envelope.
+- Object vnums must be assigned in ascending sequential order with no gaps, starting from 5411.
+- Fully replace current object concepts beginning at **5411**.
+- Expand through contiguous sequential slots (through **5496**) while staying within the 5411-5615 vnum envelope.
 - Within the area, object `<name>~` values must be unique (no duplicate item names in the same area file).
 
 ### Object Spec Compliance (all objects)
@@ -534,12 +534,12 @@ Per `area_file_spec.md` sections 7.3 and 7.6:
 
 Per `area_file_spec.md` section 8.3: if any door is reset to locked (`D` state `2`), `<key_vnum>` must be set to a valid key object vnum, and that key object must exist in `#OBJECTS`. Plan the following key objects:
 
-- **Sun-Lion Gate Key** (for Zone A Sun-Lion Gate door at 30488): `ITEM_KEY`, `hold` + `take`, weight 1.
-- **Priest-King Descent Seal** (for Zone B descent door at 30544): `ITEM_KEY`, `hold` + `take`, weight 1.
+- **Sun-Lion Gate Key** (for Zone A Sun-Lion Gate door at 5419): `ITEM_KEY`, `hold` + `take`, weight 1.
+- **Priest-King Descent Seal** (for Zone B descent door at 5475): `ITEM_KEY`, `hold` + `take`, weight 1.
 - **Tribunal Gate Seal** (for Zone C/D mini-boss alcove door): `ITEM_KEY`, `hold` + `take`, weight 1.
-- **Royal Aperture Key** (for Zone D/E transition at 30624): `ITEM_KEY`, `hold` + `take`, weight 1.
-- **Black Sun Cradle Seal** (for Zone F sealed door into 30679): `ITEM_KEY`, `hold` + `take`, weight 1.
-- **Apex Summit Key** (for Zone F final door into 30684): `ITEM_KEY`, `hold` + `take`, weight 1.
+- **Royal Aperture Key** (for Zone D/E transition at 5555): `ITEM_KEY`, `hold` + `take`, weight 1.
+- **Black Sun Cradle Seal** (for Zone F sealed door into 5610): `ITEM_KEY`, `hold` + `take`, weight 1.
+- **Apex Summit Key** (for Zone F final door into 5615): `ITEM_KEY`, `hold` + `take`, weight 1.
 
 ## Objectization Quality Rules
 
@@ -552,7 +552,7 @@ Per `area_file_spec.md` section 8.3: if any door is reset to locked (`D` state `
 ## Connectivity & Navigation Plan
 
 - Mainline progression is mostly linear by zone but each zone has 2–3 meaningful side branches.
-- Hubs at `30509`, `30544`, `30584`, `30624`, `30654`.
+- Hubs at `5440`, `5475`, `5515`, `5555`, `5585`.
 - No confusing dead-end spam: dead ends must include either lore payoff, loot payoff, or traversal unlock.
 - Use named exits (`^sun-lion gate`, `^weighing stair`, `^golden lift`) with explicit mention in room descriptions.
 - Maintain bi-directional logic for normal travel; one-way ritual drops only where lore justifies and recovery route exists.
@@ -570,12 +570,12 @@ Per `area_file_spec.md` section 12:
 
 Format: `M 0 <mob_vnum> <limit> <room_vnum> <notes>`
 
-- **Zone A (Dune Approach):** Reset Court Guard Cohorts at plaza/gate rooms. Reset lion-gate sentinels at 30488 (sentinel, limit 1). Limit 1-2 per mob.
-- **Zone B (Priestly Works):** Reset Embalmer and Scribe Order mobs at gallery/archive rooms (30513, 30518, 30526, 30533). Reset boss High Priest Amenhotep at end of Zone B (limit 1).
-- **Zone C (Catacomb Transit):** Reset Catacomb Servitors throughout (wights at 30548, 30556; scarab swarms at 30563; construct servants at 30572). Reset zone mini-boss at optional alcove (limit 1).
-- **Zone D (Halls of Weighing):** Reset Jackal Tribunal mobs at weighing/archive rooms (30589, 30597, 30603). Reset boss Vizier Khamsin at 30615 (limit 1). Reset Champion of Anubis at Zone D/E transition (limit 1).
-- **Zone E (Crown Ascension):** Reset Royal Warline champions at trophy/armory rooms (30627, 30634, 30641). Reset bosses Avatar of Ra and Lady Sekhmet at their respective rooms (limit 1 each). Reset High Sorceress Neferu (limit 1).
-- **Zone F (Black Sun Vault):** Reset Black Sun Host entities throughout (30658, 30663, 30671). Reset bosses Pharaoh Ramesses, Tomb Architect, Apep, and Golden Colossus at their respective rooms (limit 1 each).
+- **Zone A (Dune Approach):** Reset Court Guard Cohorts at plaza/gate rooms. Reset lion-gate sentinels at 5419 (sentinel, limit 1). Limit 1-2 per mob.
+- **Zone B (Priestly Works):** Reset Embalmer and Scribe Order mobs at gallery/archive rooms (5444, 5449, 5457, 5464). Reset boss High Priest Amenhotep at end of Zone B (limit 1).
+- **Zone C (Catacomb Transit):** Reset Catacomb Servitors throughout (wights at 5479, 5487; scarab swarms at 5494; construct servants at 5503). Reset zone mini-boss at optional alcove (limit 1).
+- **Zone D (Halls of Weighing):** Reset Jackal Tribunal mobs at weighing/archive rooms (5520, 5528, 5534). Reset boss Vizier Khamsin at 5546 (limit 1). Reset Champion of Anubis at Zone D/E transition (limit 1).
+- **Zone E (Crown Ascension):** Reset Royal Warline champions at trophy/armory rooms (5558, 5565, 5572). Reset bosses Avatar of Ra and Lady Sekhmet at their respective rooms (limit 1 each). Reset High Sorceress Neferu (limit 1).
+- **Zone F (Black Sun Vault):** Reset Black Sun Host entities throughout (5589, 5594, 5602). Reset bosses Pharaoh Ramesses, Tomb Architect, Apep, and Golden Colossus at their respective rooms (limit 1 each).
 
 ### Object Resets (`O` command)
 
@@ -602,33 +602,33 @@ Per `area_file_spec.md` section 8.3: any exit set to closed or locked via `D` re
 
 Planned door resets:
 
-1. **Zone A Sun-Lion Gate (30488):** Direction into gate complex.
+1. **Zone A Sun-Lion Gate (5419):** Direction into gate complex.
   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Sun-Lion Gate Key object.
-  - `D` reset: `D 0 30488 <dir> 1` (closed, not locked — first gate is a checkpoint, not a hard lock).
+  - `D` reset: `D 0 5419 <dir> 1` (closed, not locked — first gate is a checkpoint, not a hard lock).
   - Reverse exit must also have `door` bit set.
 
-2. **Zone B Priest-King Descent (30544):** Direction down (D5) to catacomb layers.
+2. **Zone B Priest-King Descent (5475):** Direction down (D5) to catacomb layers.
   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Priest-King Descent Seal object.
-  - `D` reset: `D 0 30544 5 2` (locked).
+  - `D` reset: `D 0 5475 5 2` (locked).
   - Reverse exit on Zone C entry must also have `door` bit set.
   - Key object (Priest-King Descent Seal) must exist in `#OBJECTS`.
 
-3. **Zone D/E Royal Aperture Stair (30624):** Direction up (D4) to crown sancta.
+3. **Zone D/E Royal Aperture Stair (5555):** Direction up (D4) to crown sancta.
   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Royal Aperture Key object.
-  - `D` reset: `D 0 30624 4 2` (locked).
+  - `D` reset: `D 0 5555 4 2` (locked).
   - Reverse exit must also have `door` bit set.
   - Key object (Royal Aperture Key) must exist in `#OBJECTS`.
 
-4. **Zone F Black Sun Cradle (approach to 30679):** Direction into cradle.
+4. **Zone F Black Sun Cradle (approach to 5610):** Direction into cradle.
   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Black Sun Cradle Seal object.
   - `D` reset: `D 0 <room> <dir> 2` (locked).
-  - Reverse exit on 30679 must also have `door` bit set.
+  - Reverse exit on 5610 must also have `door` bit set.
   - Key object (Black Sun Cradle Seal) must exist in `#OBJECTS`.
 
-5. **Zone F Apex Summit (approach to 30684):** Direction into final encounter room.
+5. **Zone F Apex Summit (approach to 5615):** Direction into final encounter room.
   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Apex Summit Key object.
   - `D` reset: `D 0 <room> <dir> 2` (locked).
-  - Reverse exit on 30684 must also have `door` bit set.
+  - Reverse exit on 5615 must also have `door` bit set.
   - Key object (Apex Summit Key) must exist in `#OBJECTS`.
 
 All locked doors (state `2`) have corresponding key objects in `#OBJECTS`. Keys can be placed on gatekeeper mobs via `G` resets or in adjacent rooms via `O` resets.
@@ -694,7 +694,7 @@ To harmonize with adjacent pyramid/desert plans:
 ## Implementation Checklist
 
 ### Rooms
-- [ ] Populate all 205 room vnums (30480-30684) in ascending sequential order with no gaps.
+- [ ] Populate all 40 room vnums (5411-5615) in ascending sequential order with no gaps.
 - [ ] Write unique `<description>~` for every room (minimum 3 sentences; 5+ for important rooms).
 - [ ] Assign correct `sector_type` (`desert` for outdoor Zone A rooms, `inside` for all interior rooms) and `room_flags` per zone requirements.
 - [ ] Set `no_mob` on all boss rooms.
@@ -707,7 +707,7 @@ To harmonize with adjacent pyramid/desert plans:
 - [ ] Preserve required worldgraph external connectors while renaming and recontextualizing local rooms.
 
 ### Mobiles
-- [ ] Write all 91 mob templates (vnums 30480-30570) in ascending sequential order with no gaps.
+- [ ] Write all 91 mob templates (vnums 5411-5501) in ascending sequential order with no gaps.
 - [ ] Ensure all mobs have `is_npc` + `stay_area` in `act` flags.
 - [ ] Ensure boss mobs have `sentinel` + `boss` + `no_flee` and are placed only in `no_mob` rooms.
 - [ ] Ensure strong non-boss mobs have `solo` flag.
@@ -719,7 +719,7 @@ To harmonize with adjacent pyramid/desert plans:
 - [ ] Assign elemental affinities via `|` extension: undead mobs `suscept` includes `holy`; construct mobs `resist` includes `fire`.
 
 ### Objects
-- [ ] Write all 86 object templates (vnums 30480-30565) in ascending sequential order with no gaps.
+- [ ] Write all 86 object templates (vnums 5411-5496) in ascending sequential order with no gaps.
 - [ ] Ensure unique `<name>~` for every object in the area.
 - [ ] Ensure all objects include `ITEM_TAKE` in `wear_flags`.
 - [ ] Ensure no objects include `ITEM_WEAR_CLAN_COLORS`.
@@ -755,7 +755,7 @@ To harmonize with adjacent pyramid/desert plans:
 
 ### Final Validation
 - [ ] Validate complete area file format against `docs/area_file_spec.md`.
-- [ ] Verify all vnums within `V 30480 30684` envelope.
+- [ ] Verify all vnums within `V 5411 5615` envelope.
 - [ ] Verify `#ROOMS` and `#MOBILES` and `#OBJECTS` each terminate with `#0`.
 - [ ] Verify `#RESETS`, `#SPECIALS` each terminate with `S`.
 - [ ] Verify canonical section order.

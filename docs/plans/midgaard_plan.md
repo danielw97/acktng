@@ -4,11 +4,11 @@
 - **Area Name (current):** `@@WThe City of @@yMidgaard@@N`
 - **File Name:** `midgaard.are`
 - **Keyword:** `midgaard`
-- **Current Vnum Range:** `3001-3200`
-- **Vnum Envelope Size:** 200
-- **Current Room Utilization:** 200/200 rooms used (`3001-3200`)
-- **Current Mobile Utilization:** 56 mobiles in-range (up to `3161`)
-- **Current Object Utilization:** 183 objects in-range (up to `3198`)
+- **Current Vnum Range:** `917-1116`
+- **Vnum Envelope Size:** 35
+- **Current Room Utilization:** 35/35 rooms used (`917-1116`)
+- **Current Mobile Utilization:** 56 mobiles in-range (up to `1077`)
+- **Current Object Utilization:** 18 objects in-range (up to `1114`)
 - **Layout Basis:** Preserve the existing implemented city footprint and connectivity, then expand by deepening district identity, quest/lore hooks, NPC roles, and room narrative differentiation (not by changing the core map geometry).
 
 ---
@@ -22,7 +22,7 @@ See `midgaard_lore.md` for extracted lore.
 ### Area Header
 1. `Q 16` directive is mandatory.
 2. Owner line must be `O Virant~` (area header owner policy).
-3. `V 3001 3200` defines the vnum envelope; all authored rooms, mobiles, and objects must stay inside this range.
+3. `V 917 1116` defines the vnum envelope; all authored rooms, mobiles, and objects must stay inside this range.
 
 ### Vnum Allocation
 4. Vnums for rooms, mobiles, and objects must be assigned in ascending sequential order with no gaps.
@@ -44,14 +44,14 @@ See `midgaard_lore.md` for extracted lore.
 ### Layout Preservation
 15. Maintain the existing topological city layout; expansions are additive in detail and function, not a re-architecture.
 16. Preserve all external world links already implemented from Midgaard:
-  - `3005 -> 30100` (Gloamvault link)
-  - `3014 -> 9551` (Dungeon link)
-  - `3025 -> 21000` (Ossuary/transport court link)
-  - `3030 -> 30175`
-  - `3041 -> 3230`
-  - `3060 -> 8500`
-  - `3189 -> 5600`
-  - `3190 -> 7302`
+  - `921 -> 5031` (Gloamvault link)
+  - `930 -> 2294` (Dungeon link)
+  - `941 -> 4681` (Ossuary/transport court link)
+  - `946 -> 5106`
+  - `957 -> 1146`
+  - `976 -> 1832`
+  - `1105 -> 5600`
+  - `1106 -> 1434`
 
 ### Room Constraints
 17. Each room description must contain at least 3 sentences; important rooms must contain at least 5 sentences.
@@ -104,7 +104,7 @@ Midgaard already reads as a **20x10 civic lattice** with repeated avenue naming 
   - Function: trade, legal notices, guild traffic, cityguard visibility.
 
 2. **Reliquary + Carceral Axis**
-  - Anchors: `3005` (**Violet Reliquary Arch**) and `3014` (**Dungeon Intake Yard**).
+  - Anchors: `921` (**Violet Reliquary Arch**) and `930` (**Dungeon Intake Yard**).
   - Function: controlled transition to high-risk/occult and penal spaces.
 
 3. **Sanctuary and Service Quarter**
@@ -112,7 +112,7 @@ Midgaard already reads as a **20x10 civic lattice** with repeated avenue naming 
   - Function: practical city sustainment, religious legitimacy, traveler support.
 
 4. **Newer Arcana-Requisition Strip (already present in high vnums)**
-  - Anchors: `3122-3128`, `3161-3163` style rooms/NPCs.
+  - Anchors: `1038-1044`, `1077-1079` style rooms/NPCs.
   - Function: modernized outfitting, quest/quest brokerage, invasion logistics.
 
 5. **Gateward Connectors**
@@ -155,11 +155,11 @@ A five-color civic palette that matches Midgaard’s existing naming and atmosph
 - Keep existing names where strong.
 - Rewrite generic repeated description blocks so each corridor segment signals function and social class.
 
-## B. Reliquary-Dungeon Threshold Arc (`3005`, `3014`, connected approaches)
+## B. Reliquary-Dungeon Threshold Arc (`921`, `930`, connected approaches)
 **Goal:** make the city’s occult/carceral threshold narratively coherent.
 
-- `3005` remains the formal warded descent point; expand description to include registry sigils, oath plaques, and controlled access protocol.
-- `3014` becomes intake bureaucracy + moral pressure point (scribes, bonds, mercy petitions).
+- `921` remains the formal warded descent point; expand description to include registry sigils, oath plaques, and controlled access protocol.
+- `930` becomes intake bureaucracy + moral pressure point (scribes, bonds, mercy petitions).
 - Approach rooms gain visual escalation: brighter civic colors fading into violet-cyan ward language.
 - Add rumor-bearing low-level NPCs (clerks, petitioners, exhausted guards).
 
@@ -170,7 +170,7 @@ A five-color civic palette that matches Midgaard’s existing naming and atmosph
 - Introduce memorial boards and public rites references in room descriptions.
 - Create light quest hooks around missing persons, burial records, and ward maintenance offerings.
 
-## D. Arcana / Outfitters / Requisitions Expansion (`3122-3128`, `3161-3163` cluster)
+## D. Arcana / Outfitters / Requisitions Expansion (`1038-1044`, `1077-1079` cluster)
 **Goal:** formalize this as Midgaard’s “new bureaucracy of conflict readiness.”
 
 - Themed as a post-crisis civic complex where adventurers process gear, contracts, and sanctioned risk.
@@ -196,7 +196,7 @@ A five-color civic palette that matches Midgaard’s existing naming and atmosph
 - Keep iconic Midgaard roles: mayor, town crier, cityguards, postmaster, healer, bartender, artisan vendors, janitor, flavor civilians/animals.
 - Refresh descriptions/dialogue to reflect district identity and current civic tensions.
 
-### New NPC Additions (within free vnums `3162-3200`)
+### New NPC Additions (within free vnums `1078-1116`)
 Proposed additions focus on lore delivery and district function:
 
 1. **Registry Archivist of Lantern Hall** (lawful lore source, ledger quests)
@@ -289,7 +289,7 @@ Proposed additions focus on lore delivery and district function:
 ---
 
 ## Room Rewrite and Differentiation Strategy
-Because all 200 room vnums are already occupied, expansion is delivered through **qualitative room differentiation**:
+Because all 35 room vnums are already occupied, expansion is delivered through **qualitative room differentiation**:
 
 1. **Tier 1 (landmarks):** major hubs receive bespoke multi-paragraph descriptions and lore anchors. These are "important rooms" under the spec and must contain at least 5 sentences.
 2. **Tier 2 (corridors):** repeated base templates replaced with district-specific variants (materials, sounds, professions, signage). Must contain at least 3 sentences.
@@ -322,12 +322,12 @@ This preserves existing mechanics while making traversal feel like meaningful ur
 - Mark existing repetitive descriptions for rewrite priority.
 
 ### Phase 2: Landmark Rewrite
-- Rewrite key anchor rooms first (`3005`, `3014`, `3049`, temple/post office/arcana hubs, external connectors).
+- Rewrite key anchor rooms first (`921`, `930`, `965`, temple/post office/arcana hubs, external connectors).
 - Align lore vocabulary across civic, temple, and requisition hubs.
 
 ### Phase 3: NPC + Dialogue Expansion
 - Update existing NPC descriptions/dialogue.
-- Add new civic/lore NPCs in free vnum space (`3162-3200`).
+- Add new civic/lore NPCs in free vnum space (`1078-1116`).
 - Wire dialogue cues for cross-area hooks.
 
 ### Phase 4: Object + Reset Enrichment
@@ -335,7 +335,7 @@ This preserves existing mechanics while making traversal feel like meaningful ur
 - Update resets to populate new ambient civic life without overcrowding.
 
 ### Phase 5: Cohesion and Spec Validation
-- Verify vnum containment (`3001-3200` only).
+- Verify vnum containment (`917-1116` only).
 - Verify color policy compliance and readability.
 - Verify external links unchanged and clearly signposted.
 - Verify room/mob/object text avoids vnum mentions.

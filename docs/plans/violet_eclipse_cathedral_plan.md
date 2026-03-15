@@ -5,7 +5,7 @@
 - **File Name:** `violet_eclipse_cathedral.are`
 - **Keyword:** `violet eclipse cathedral gothic dark`
 - **Intended Levels:** 20-35
-- **Vnum Range:** `30250-30324`
+- **Vnum Range:** `5181-5255`
 - **Vnum Count:** 75 (all room vnums used)
 - **Reset Rate:** 20
 - **Design Intent:** Full rebuild of rooms, mobiles, objects, and resets while retaining current area envelope and using every room.
@@ -43,7 +43,7 @@ K violet eclipse cathedral gothic dark~
 L @@W(@@a20 35@@W)@@N~
 N 8
 I 20 35
-V 30250 30324
+V 5181 5255
 X 0
 F 20
 U @@mAmethyst@@N and @@dobsidian@@N hues dominate this terror-soaked gothic cathedral.~
@@ -56,7 +56,7 @@ Directive compliance notes:
 - `L`: level label string with color codes; uses only approved `colist` codes (`@@W`, `@@a`, `@@N`).
 - `N 8`: area number (integer).
 - `I 20 35`: min/max level.
-- `V 30250 30324`: vnum envelope. All `#ROOMS`, `#MOBILES`, and `#OBJECTS` entry vnums must stay within this range per structural constraint (section 13).
+- `V 5181 5255`: vnum envelope. All `#ROOMS`, `#MOBILES`, and `#OBJECTS` entry vnums must stay within this range per structural constraint (section 13).
 - `X 0`: map offset.
 - `F 20`: reset rate (ticks between area resets).
 - `U`: reset message, tilde-terminated, uses approved color codes only.
@@ -66,103 +66,103 @@ Directive compliance notes:
 ## Structural Layout (All 75 Rooms Used)
 The cathedral remains a central spine with five branch doctrines and a terminal throne route.
 
-### Central Spine (30250-30264)
-1. **30250 Shattered Rose Gate** - world entry from Roc Road; broken civic checkpoint stones visible.
-2. **30251 Censer-Fog Vestibule** - intake haze and witness sorting.
-3. **30252 Pilgrim's Lament Walk** - penitent movement lane.
-4. **30253 Gargoyle Choir Landing** - surveillance balconies.
-5. **30254 Narthex of Stilled Wings** - first major junction hub.
-6. **30255 Sepulchral Procession** - doctrine corridor toward reliquary branch.
-7. **30256 Chalice Echo Hall** - second hub with cloister branch.
-8. **30257 Veil of Black Incense** - third hub toward thorn scriptoria.
-9. **30258 Mauve Lantern Arcade** - fourth hub toward moonbone wing.
-10. **30259 Cathedral Midspine** - convergent interior checkpoint.
-11. **30260 Litany Crossing** - mnemonic inscription hall.
-12. **30261 Roseglass Transept** - color doctrine teaching room.
-13. **30262 Funeral Bell Gallery** - auditory indexing of rites.
-14. **30263 Reliquary Axis** - final warning corridor.
-15. **30264 Eclipse High Nave** - spine capstone and visual anchor.
+### Central Spine (5181-5195)
+1. **5181 Shattered Rose Gate** - world entry from Roc Road; broken civic checkpoint stones visible.
+2. **5182 Censer-Fog Vestibule** - intake haze and witness sorting.
+3. **5183 Pilgrim's Lament Walk** - penitent movement lane.
+4. **5184 Gargoyle Choir Landing** - surveillance balconies.
+5. **5185 Narthex of Stilled Wings** - first major junction hub.
+6. **5186 Sepulchral Procession** - doctrine corridor toward reliquary branch.
+7. **5187 Chalice Echo Hall** - second hub with cloister branch.
+8. **5188 Veil of Black Incense** - third hub toward thorn scriptoria.
+9. **5189 Mauve Lantern Arcade** - fourth hub toward moonbone wing.
+10. **5190 Cathedral Midspine** - convergent interior checkpoint.
+11. **5191 Litany Crossing** - mnemonic inscription hall.
+12. **5192 Roseglass Transept** - color doctrine teaching room.
+13. **5193 Funeral Bell Gallery** - auditory indexing of rites.
+14. **5194 Reliquary Axis** - final warning corridor.
+15. **5195 Eclipse High Nave** - spine capstone and visual anchor.
 
-### Crimson Sanguine Choir Wing (30265-30276)
-16. **30265 Blood Psalm Entry**
-17. **30266 Velvet Wound Cloister**
-18. **30267 Hemorrhage Chapel**
-19. **30268 Dirge-Stained Aisle**
-20. **30269 Scarlet Organ Loft**
-21. **30270 Sable Choir Stalls**
-22. **30271 Crypt-Glass Passage**
-23. **30272 Vesper Thorn Niche**
-24. **30273 Mourner's Spiral**
-25. **30274 Black Mass Rotunda**
-26. **30275 Candled Casket Hall**
-27. **30276 Throne of the Crimson Matron** (**Wing Boss A**)
+### Crimson Sanguine Choir Wing (5196-5207)
+16. **5196 Blood Psalm Entry**
+17. **5197 Velvet Wound Cloister**
+18. **5198 Hemorrhage Chapel**
+19. **5199 Dirge-Stained Aisle**
+20. **5200 Scarlet Organ Loft**
+21. **5201 Sable Choir Stalls**
+22. **5202 Crypt-Glass Passage**
+23. **5203 Vesper Thorn Niche**
+24. **5204 Mourner's Spiral**
+25. **5205 Black Mass Rotunda**
+26. **5206 Candled Casket Hall**
+27. **5207 Throne of the Crimson Matron** (**Wing Boss A**)
 
-### Amethyst Reliquary Wing (30277-30288)
-28. **30277 Reliquary Mouth**
-29. **30278 Crown of Violet Icons**
-30. **30279 Lantern of Closed Eyes**
-31. **30280 Cat's-Eye Apse**
-32. **30281 Incantor's Crosshall**
-33. **30282 Amethyst Sacristy**
-34. **30283 Votive Bone Gallery**
-35. **30284 Whisper Reliquary**
-36. **30285 Starless Relic Court**
-37. **30286 Chained Saint Corridor**
-38. **30287 Miter of Night**
-39. **30288 Seat of Lady Noctyra** (**Wing Boss B**)
+### Amethyst Reliquary Wing (5208-5219)
+28. **5208 Reliquary Mouth**
+29. **5209 Crown of Violet Icons**
+30. **5210 Lantern of Closed Eyes**
+31. **5211 Cat's-Eye Apse**
+32. **5212 Incantor's Crosshall**
+33. **5213 Amethyst Sacristy**
+34. **5214 Votive Bone Gallery**
+35. **5215 Whisper Reliquary**
+36. **5216 Starless Relic Court**
+37. **5217 Chained Saint Corridor**
+38. **5218 Miter of Night**
+39. **5219 Seat of Lady Noctyra** (**Wing Boss B**)
 
-### Obsidian Cloister Wing (30289-30300)
-40. **30289 Basalt Threshold**
-41. **30290 Ink-Well Cloister**
-42. **30291 Abjurer's Cross**
-43. **30292 Obsidian Lectern Hall**
-44. **30293 Sealed Homily Lane**
-45. **30294 Nocturne Scriptor**
-46. **30295 Blind Archivum**
-47. **30296 Wax-Etched Court**
-48. **30297 Ash Quire Stacks**
-49. **30298 Penitent's Margin**
-50. **30299 Vellum Catacomb**
-51. **30300 Abbot Vharos's Reliquary** (**Wing Boss C**)
+### Obsidian Cloister Wing (5220-5231)
+40. **5220 Basalt Threshold**
+41. **5221 Ink-Well Cloister**
+42. **5222 Abjurer's Cross**
+43. **5223 Obsidian Lectern Hall**
+44. **5224 Sealed Homily Lane**
+45. **5225 Nocturne Scriptor**
+46. **5226 Blind Archivum**
+47. **5227 Wax-Etched Court**
+48. **5228 Ash Quire Stacks**
+49. **5229 Penitent's Margin**
+50. **5230 Vellum Catacomb**
+51. **5231 Abbot Vharos's Reliquary** (**Wing Boss C**)
 
-### Thorned Scriptorium Wing (30301-30312)
-52. **30301 Briar Stair**
-53. **30302 Gothic Script Gate**
-54. **30303 Splintered Margin**
-55. **30304 Thorn-Pierced Hall**
-56. **30305 Cardinal's Footway**
-57. **30306 Ivory Quill Court**
-58. **30307 Sanguine Annotation**
-59. **30308 Binder's Ossuary**
-60. **30309 Inkblight Rotunda**
-61. **30310 Razorleaf Balcony**
-62. **30311 Needled Crossing**
-63. **30312 Sanctum of the Thorn Cardinal** (**Wing Boss D**)
+### Thorned Scriptorium Wing (5232-5243)
+52. **5232 Briar Stair**
+53. **5233 Gothic Script Gate**
+54. **5234 Splintered Margin**
+55. **5235 Thorn-Pierced Hall**
+56. **5236 Cardinal's Footway**
+57. **5237 Ivory Quill Court**
+58. **5238 Sanguine Annotation**
+59. **5239 Binder's Ossuary**
+60. **5240 Inkblight Rotunda**
+61. **5241 Razorleaf Balcony**
+62. **5242 Needled Crossing**
+63. **5243 Sanctum of the Thorn Cardinal** (**Wing Boss D**)
 
-### Moonbone Ossuary Wing + Finale (30313-30324)
-64. **30313 Moonbone Entry**
-65. **30314 Silver Shroud Court**
-66. **30315 Pale Sarcophagus Line**
-67. **30316 Noctilucent Pillars**
-68. **30317 Widow's Reliquary**
-69. **30318 Echoing Ossicle Hall**
-70. **30319 Sable Mortuary Walk**
-71. **30320 Corpse-Lily Atrium**
-72. **30321 Maw of Quiet Bells**
-73. **30322 Nightglass Corridor**
-74. **30323 Penumbral Last Rite**
-75. **30324 Throne of the Violet Hierophant** (**Final Boss**)
+### Moonbone Ossuary Wing + Finale (5244-5255)
+64. **5244 Moonbone Entry**
+65. **5245 Silver Shroud Court**
+66. **5246 Pale Sarcophagus Line**
+67. **5247 Noctilucent Pillars**
+68. **5248 Widow's Reliquary**
+69. **5249 Echoing Ossicle Hall**
+70. **5250 Sable Mortuary Walk**
+71. **5251 Corpse-Lily Atrium**
+72. **5252 Maw of Quiet Bells**
+73. **5253 Nightglass Corridor**
+74. **5254 Penumbral Last Rite**
+75. **5255 Throne of the Violet Hierophant** (**Final Boss**)
 
 ## Connectivity Requirements
 - Preserve linear readability through each wing while retaining return loops to the spine.
 - Branch entry points remain at:
- - `30254 -> 30265` (Narthex hub south to Crimson Sanguine Choir)
- - `30255 -> 30277` (Sepulchral Procession east to Amethyst Reliquary)
- - `30256 -> 30289` (Chalice Echo Hall west to Obsidian Cloister)
- - `30257 -> 30301` (Veil of Black Incense east to Thorned Scriptorium)
- - `30258 -> 30313` (Mauve Lantern Arcade down to Moonbone Ossuary)
-- Final route pressure should escalate from `30313` onward with minimal bypass.
-- Keep world ingress at `30250` and no alternate external escape except intentional builder hook.
+ - `5185 -> 5196` (Narthex hub south to Crimson Sanguine Choir)
+ - `5186 -> 5208` (Sepulchral Procession east to Amethyst Reliquary)
+ - `5187 -> 5220` (Chalice Echo Hall west to Obsidian Cloister)
+ - `5188 -> 5232` (Veil of Black Incense east to Thorned Scriptorium)
+ - `5189 -> 5244` (Mauve Lantern Arcade down to Moonbone Ossuary)
+- Final route pressure should escalate from `5244` onward with minimal bypass.
+- Keep world ingress at `5181` and no alternate external escape except intentional builder hook.
 
 ### Exit Specification Compliance (per `room_spec.md`)
 
@@ -178,10 +178,10 @@ All exits must follow `D<door>` format with three fields: `<exit_description>~`,
 
 | Room | Direction | Keyword | Key Vnum | Notes |
 |---|---|---|---|---|
-| 30264 (Eclipse High Nave) | north to 30313 | `^eclipse gate` | 30250 | Unlocks Moonbone descent; key drops from mini-elite |
-| 30276 (Throne of the Crimson Matron) | south (return) | `^bloodstained door` | -1 | Closes on entry, not locked |
-| 30312 (Sanctum of the Thorn Cardinal) | south (return) | `^thorned iron gate` | -1 | Closes on entry, not locked |
-| 30323 (Penumbral Last Rite) | north to 30324 | `^violet threshold` | 30251 | Final boss gate; key from pre-boss encounter |
+| 5195 (Eclipse High Nave) | north to 5244 | `^eclipse gate` | 5181 | Unlocks Moonbone descent; key drops from mini-elite |
+| 5207 (Throne of the Crimson Matron) | south (return) | `^bloodstained door` | -1 | Closes on entry, not locked |
+| 5243 (Sanctum of the Thorn Cardinal) | south (return) | `^thorned iron gate` | -1 | Closes on entry, not locked |
+| 5254 (Penumbral Last Rite) | north to 5255 | `^violet threshold` | 5182 | Final boss gate; key from pre-boss encounter |
 
 ## Room Specification Details (per `room_spec.md`)
 
@@ -190,8 +190,8 @@ All exits must follow `D<door>` format with three fields: `<exit_description>~`,
 All rooms use these base `room_flags` values:
 
 - **Standard cathedral rooms:** `indoors` (8) — all rooms are enclosed indoor spaces.
-- **Boss rooms (30276, 30288, 30300, 30312, 30324):** `indoors | no_mob` (8 | 4 = 12) — boss rooms must be flagged `no_mob` per mob spec boss placement policy.
-- **Entry room 30250 (Shattered Rose Gate):** `indoors` (8) — the entry threshold is covered but visually transitional.
+- **Boss rooms (5207, 5219, 5231, 5243, 5255):** `indoors | no_mob` (8 | 4 = 12) — boss rooms must be flagged `no_mob` per mob spec boss placement policy.
+- **Entry room 5181 (Shattered Rose Gate):** `indoors` (8) — the entry threshold is covered but visually transitional.
 - No rooms use `no_recall`, `no_teleport`, `no_magic`, `dark`, `safe`, `pk`, or `maze` unless encounter design demands it.
 
 ### Sector Type
@@ -211,14 +211,14 @@ Per `room_spec.md`:
 
 Each room should include at least one `E` extra description for environmental detail (inscriptions, architecture, objects of interest). Extra description chains are allowed but must be anchored: at least one keyword in the chain must appear in the room's main description.
 
-## Mobile Redesign Plan (30250-30304)
+## Mobile Redesign Plan (5181-5235)
 
 Rebuild all existing mob vnums into role-defined institutional castes. Per `mob_spec.md`, each mobile record requires: `player_name~`, `short_descr~`, `long_descr~` (strict single-line format), `description~`, main data line (`<act> <affected_by> <alignment> S`), stats line (`<level> <sex>`), and modifier line (`<hp_mod> <ac_mod> <hr_mod> <dr_mod>`).
 
 ### Mandatory Act Flags (per `mob_spec.md` builder policy)
 
 - **All mobs:** must include `is_npc` (1) + `stay_area` (64) = minimum `act` base of 65.
-- **Boss mobs (30300-30304):** must additionally include `sentinel` (2) + `boss` (67108864) = `act` includes `1 | 2 | 64 | 67108864 = 67108931`.
+- **Boss mobs (5231-5235):** must additionally include `sentinel` (2) + `boss` (67108864) = `act` includes `1 | 2 | 64 | 67108864 = 67108931`.
 - **Strong non-boss mobs (mini-elites/gate guards):** must include `solo` (33554432) + `sentinel` (2).
 - **Patrol mobs (ambient wanderers within a wing):** `stay_area` (64) only; `sentinel` omitted so they wander within their wing. Each wing must be enclosed by `no_mob` rooms or all patrol mobs must be `sentinel` to prevent cross-wing migration.
 - **Sentinel mobs (fixed-position guards):** `sentinel` (2) + `stay_area` (64).
@@ -243,32 +243,32 @@ All mobs should include the `!` extension line for class, race, position, and co
 
 Guidance per mob role:
 - **Melee enforcers (sentries, marshals, custodians):** hybrid or melee profile skills, `cast` = 0 or minimal, `def` = `cure_light` (2) or `cure_serious` (4).
-- **Caster clergy (scribes, clerics, cantors):** caster profile skills, `cast` includes appropriate offensive spells (e.g., `flamestrike` 2048, `faerie_fire` 512, `mind_flail` 8192), `def` includes `heal` (16) or `cure_critic` (8).
+- **Caster clergy (scribes, clerics, cantors):** caster profile skills, `cast` includes appropriate offensive spells (e.g., `flamestrike` 840, `faerie_fire` 512, `mind_flail` 8192), `def` includes `heal` (16) or `cure_critic` (8).
 - **Boss mobs:** full extension lines (`!`, `|`, `+`) with tuned stats. Include loot table (`l`/`L`) for boss drops.
 
 ### Level Distribution (area range 20-35)
 
 | Tier | Vnums | Level Range | Role |
 |---|---|---|---|
-| Spine trash | 30250-30254 | 20-23 | Intake vergers, censer bailiffs |
-| Spine mid | 30255-30259 | 24-27 | Processional sentries, litany marshals |
-| Wing trash | 30260-30269 | 22-26 | Choir inquisitors, blood-psalm enforcers |
-| Wing mid | 30270-30279 | 25-29 | Reliquary clerics, icon wardens |
-| Wing upper | 30280-30289 | 27-31 | Null scribes, seal notaries, archive suppressors |
-| Wing elite | 30290-30299 | 29-33 | Thorn canonicalists, penitence marshals, ossuary custodians |
-| Bosses | 30300-30304 | 30-35 | Named boss encounters |
+| Spine trash | 5181-5185 | 20-23 | Intake vergers, censer bailiffs |
+| Spine mid | 5186-5190 | 24-27 | Processional sentries, litany marshals |
+| Wing trash | 5191-5200 | 22-26 | Choir inquisitors, blood-psalm enforcers |
+| Wing mid | 5201-5210 | 25-29 | Reliquary clerics, icon wardens |
+| Wing upper | 5211-5220 | 27-31 | Null scribes, seal notaries, archive suppressors |
+| Wing elite | 5221-5230 | 29-33 | Thorn canonicalists, penitence marshals, ossuary custodians |
+| Bosses | 5231-5235 | 30-35 | Named boss encounters |
 
 ### Boss Mob Mapping
 
 | Mob Vnum | Name | Encounter Room | Level | Act Flags |
 |---|---|---|---|---|
-| 30300 | The Crimson Matron Ilyra | 30276 | 30 | `is_npc sentinel stay_area boss aggressive` |
-| 30301 | Lady Noctyra, Mirrored Censer Regent | 30288 | 32 | `is_npc sentinel stay_area boss aggressive` |
-| 30302 | Abbot Vharos, Null-Halo Archivist | 30300 | 33 | `is_npc sentinel stay_area boss aggressive` |
-| 30303 | Thorn Cardinal Seredh | 30312 | 34 | `is_npc sentinel stay_area boss aggressive` |
-| 30304 | The Violet Hierophant | 30324 | 35 | `is_npc sentinel stay_area boss aggressive` |
+| 5231 | The Crimson Matron Ilyra | 5207 | 30 | `is_npc sentinel stay_area boss aggressive` |
+| 5232 | Lady Noctyra, Mirrored Censer Regent | 5219 | 32 | `is_npc sentinel stay_area boss aggressive` |
+| 5233 | Abbot Vharos, Null-Halo Archivist | 5231 | 33 | `is_npc sentinel stay_area boss aggressive` |
+| 5234 | Thorn Cardinal Seredh | 5243 | 34 | `is_npc sentinel stay_area boss aggressive` |
+| 5235 | The Violet Hierophant | 5255 | 35 | `is_npc sentinel stay_area boss aggressive` |
 
-All boss encounter rooms (30276, 30288, 30300, 30312, 30324) must have `no_mob` (4) set in `room_flags`.
+All boss encounter rooms (5207, 5219, 5231, 5243, 5255) must have `no_mob` (4) set in `room_flags`.
 
 ### Mob `long_descr` Format Reminder
 
@@ -282,7 +282,7 @@ Per `mob_spec.md`: `long_descr` must be exactly one text line, followed by a new
 
 `description` must end with exactly one trailing newline before `~`. No extra blank lines.
 
-## Object Redesign Plan (30250-30319)
+## Object Redesign Plan (5181-5250)
 
 All object vnums should be rebuilt into progression sets that reflect the multi-color doctrine. Per `object_spec.md`, each object record requires: `name~`, `short_descr~`, `description~`, header line (`<item_type> <extra_flags> <wear_flags> <item_apply>`), values line (10 integers), and `<weight>`.
 
@@ -302,14 +302,14 @@ All object vnums should be rebuilt into progression sets that reflect the multi-
 
 | Tier | Vnums | Item Level (L) | Role | Weight Range |
 |---|---|---|---|---|
-| Entry/Spine | 30250-30259 | 20-24 | Balanced survivability gear | Mixed 1-15 |
-| Spine upper | 30260-30269 | 24-28 | Progression gear, first color-themed pieces | Mixed 1-15 |
-| Wing midgame | 30270-30279 | 26-30 | Crimson offense set pieces | 6-10 (melee focus) |
-| Wing midgame | 30280-30289 | 26-30 | Violet control / Obsidian null set pieces | 1-5 (caster focus) |
-| Boss drops | 30290-30299 | 30-34 | Named signature equipment with inscription `E` text | Mixed |
-| Boss drops | 30300-30304 | 32-35 | Elite boss signature items | Mixed |
-| Quest rewards | 30305-30308 | 28-35 | Chain quest reward objects (see quest section) | Per role |
-| Rare relics | 30309-30319 | 28-35 | Reliquary pieces tied to Compact/eclipse lore | Mixed |
+| Entry/Spine | 5181-5190 | 20-24 | Balanced survivability gear | Mixed 1-15 |
+| Spine upper | 5191-5200 | 24-28 | Progression gear, first color-themed pieces | Mixed 1-15 |
+| Wing midgame | 5201-5210 | 26-30 | Crimson offense set pieces | 6-10 (melee focus) |
+| Wing midgame | 5211-5220 | 26-30 | Violet control / Obsidian null set pieces | 1-5 (caster focus) |
+| Boss drops | 5221-5230 | 30-34 | Named signature equipment with inscription `E` text | Mixed |
+| Boss drops | 5231-5235 | 32-35 | Elite boss signature items | Mixed |
+| Quest rewards | 5236-5239 | 28-35 | Chain quest reward objects (see quest section) | Per role |
+| Rare relics | 5240-5250 | 28-35 | Reliquary pieces tied to Compact/eclipse lore | Mixed |
 
 ### Key Object Definitions
 
@@ -317,8 +317,8 @@ Key objects required for locked doors:
 
 | Vnum | Name | Item Type | Wear Flags | Notes |
 |---|---|---|---|---|
-| 30250 | `eclipse gate key` | 18 (key) | `take` (8388608) | Unlocks 30264->30313 eclipse gate |
-| 30251 | `violet threshold key` | 18 (key) | `take` (8388608) | Unlocks 30323->30324 final boss gate |
+| 5181 | `eclipse gate key` | 18 (key) | `take` (8388608) | Unlocks 5195->5244 eclipse gate |
+| 5182 | `violet threshold key` | 18 (key) | `take` (8388608) | Unlocks 5254->5255 final boss gate |
 
 ### Boss Drop Objects (must include `ITEM_BOSS`)
 
@@ -365,10 +365,10 @@ Per `area_file_spec.md` section 12, resets use the `#RESETS` section terminated 
 
 | Room | Door Dir | State | Key Vnum | Notes |
 |---|---|---|---|---|
-| 30264 | north (0) | 2 (locked) | 30250 | Eclipse gate to Moonbone wing |
-| 30276 | south (2) | 1 (closed) | -1 | Crimson Matron boss room return |
-| 30312 | south (2) | 1 (closed) | -1 | Thorn Cardinal boss room return |
-| 30323 | north (0) | 2 (locked) | 30251 | Violet threshold to final boss |
+| 5195 | north (0) | 2 (locked) | 5181 | Eclipse gate to Moonbone wing |
+| 5207 | south (2) | 1 (closed) | -1 | Crimson Matron boss room return |
+| 5243 | south (2) | 1 (closed) | -1 | Thorn Cardinal boss room return |
+| 5254 | north (0) | 2 (locked) | 5182 | Violet threshold to final boss |
 
 All doors reset via `D` must have `EX_ISDOOR` (1) set in the room's `D<door>` exit `<locks>` field. Locked doors (state 2) must have a valid key vnum pointing to an existing key object in `#OBJECTS`.
 
@@ -382,18 +382,18 @@ Each wing must include:
 
 ### Spine Encounter Cadence
 
-- Rooms 30250-30254 (entry zone): 2-3 trash mobs per room, intake vergers and censer bailiffs.
-- Rooms 30255-30264 (mid-spine): 1-2 mobs per room with escalating levels, processional sentries.
+- Rooms 5181-5185 (entry zone): 2-3 trash mobs per room, intake vergers and censer bailiffs.
+- Rooms 5186-5195 (mid-spine): 1-2 mobs per room with escalating levels, processional sentries.
 - Decorative/atmospheric object resets (`O`) in spine rooms for ambiance (censers, ledgers, broken seals).
 
 ### Boss Encounter Object Resets
 
 Each boss room should include 1-2 `O` resets for ceremonial objects (thematic props that reinforce the boss identity):
-- 30276 (Crimson Matron): blood-psalm lectern, crimson candelabra.
-- 30288 (Lady Noctyra): mirrored censer stand, violet icon shelf.
-- 30300 (Abbot Vharos): null-seal writing desk, obsidian ledger rack.
-- 30312 (Thorn Cardinal): thorn-pierced confession rail, ink-stained vellum stack.
-- 30324 (Violet Hierophant): eclipse throne pedestal, gold-edged verdict scroll rack.
+- 5207 (Crimson Matron): blood-psalm lectern, crimson candelabra.
+- 5219 (Lady Noctyra): mirrored censer stand, violet icon shelf.
+- 5231 (Abbot Vharos): null-seal writing desk, obsidian ledger rack.
+- 5243 (Thorn Cardinal): thorn-pierced confession rail, ink-stained vellum stack.
+- 5255 (Violet Hierophant): eclipse throne pedestal, gold-edged verdict scroll rack.
 
 ### Spine Atmospheric Object Resets
 
@@ -416,18 +416,18 @@ Per `area_file_spec.md` sections 10-11:
 Proposed `#SPECIALS`:
 ```text
 #SPECIALS
-M 30300 spec_cast_cleric
-M 30301 spec_cast_cleric
-M 30302 spec_cast_undead
-M 30303 spec_cast_cleric
-M 30304 spec_cast_judge
+M 5231 spec_cast_cleric
+M 5232 spec_cast_cleric
+M 5233 spec_cast_undead
+M 5234 spec_cast_cleric
+M 5235 spec_cast_judge
 S
 ```
 
 ## Proposition / Quest Plan for Violet Eclipse Cathedral
 
 ### Existing Proposition Status
-No existing `.prop` templates currently target `30250-30324`; therefore new cathedral-specific propositions are required.
+No existing `.prop` templates currently target `5181-5255`; therefore new cathedral-specific propositions are required.
 
 ### Static Quest ID Allocation
 Use IDs **61-65** (`62.prop` through `66.prop`) for this area's first proposition set.
@@ -451,9 +451,9 @@ Each `.prop` file structure:
   - item-apply selector (integer)
 
 Offerer vnums:
-- Midgaard postmaster: `3015`
-- Kiess postmaster: `13001`
-- Kowloon postmaster: `14021`
+- Midgaard postmaster: `931`
+- Kiess postmaster: `3340`
+- Kowloon postmaster: `3460`
 
 ---
 
@@ -469,18 +469,18 @@ Offerer vnums:
 | num_targets | 3 |
 | kill_needed | 0 |
 | level range | 22-30 |
-| offerer_vnum | 3015 |
+| offerer_vnum | 931 |
 | reward_gold | 2400 |
 | reward_qp | 3 |
 | reward_item_vnum | 0 |
 | reward_item_count | 0 |
-| targets | `30252 30255 30261` |
+| targets | `5183 5186 5192` |
 
 Prop file content:
 ```text
 Compact intake disruption sweep
--1 1 3 0 22 30 3015 2400 3 0 0
-30252 30255 30261
+-1 1 3 0 22 30 931 2400 3 0 0
+5183 5186 5192
 The Violet Compact's intake tribunal still processes the unwilling. Disrupt their processional enforcers.
 The intake lines have gone quiet. For now.
 ```
@@ -499,12 +499,12 @@ The intake lines have gone quiet. For now.
 | num_targets | 1 |
 | kill_needed | 1 |
 | level range | 27-34 |
-| offerer_vnum | 13001 |
+| offerer_vnum | 3340 |
 | reward_gold | 3800 |
 | reward_qp | 4 |
-| reward_item_vnum | 30305 |
+| reward_item_vnum | 5236 |
 | reward_item_count | 1 |
-| targets | `30301` |
+| targets | `5232` |
 
 Custom reward object block (7 lines):
 - short: `@@mNoctyra's Mirrored Censer Chain@@N`
@@ -518,8 +518,8 @@ Custom reward object block (7 lines):
 Prop file content:
 ```text
 Reliquary regent injunction
--1 3 1 1 27 34 13001 3800 4 30305 1
-30301
+-1 3 1 1 27 34 3340 3800 4 5236 1
+5232
 Lady Noctyra's mirrored censer still swings in the reliquary nave. End her regency.
 The censer's arc has stopped. Noctyra's liturgy is broken.
 @@mNoctyra's Mirrored Censer Chain@@N
@@ -545,18 +545,18 @@ A mirrored censer chain swings in a slow, soundless arc.
 | num_targets | 2 |
 | kill_needed | 0 |
 | level range | 29-35 |
-| offerer_vnum | 13001 |
+| offerer_vnum | 3340 |
 | reward_gold | 4600 |
 | reward_qp | 5 |
-| reward_item_vnum | 30306 |
+| reward_item_vnum | 5237 |
 | reward_item_count | 1 |
-| targets | `30296 30302` |
+| targets | `5227 5233` |
 
 Custom reward object block:
 - short: `@@dVharos's Null-Sigil Bracers@@N`
 - keywords: `vharos null sigil bracers obsidian`
 - long: `A pair of obsidian bracers etched with erasure seals rests here.`
-- wear_flags: `8389632` (`arms` 1024 | `take` 8388608)
+- wear_flags: `8389632` (`arms` 315 | `take` 8388608)
 - extra_flags: `134217792` (`ITEM_MAGIC` 64 | `ITEM_BOSS` 134217728)
 - weight: `12` (tank item)
 - item_apply: `1` (`nada`)
@@ -564,8 +564,8 @@ Custom reward object block:
 Prop file content:
 ```text
 Null-halo archive seizure
-62 1 2 0 29 35 13001 4600 5 30306 1
-30296 30302
+62 1 2 0 29 35 3340 4600 5 5237 1
+5227 5233
 Abbot Vharos's null-seal archivum suppresses all unredacted witness. Seize the archive stacks and silence his scribes.
 The null-halos have dimmed. Vharos's archive yields its secrets.
 @@dVharos's Null-Sigil Bracers@@N
@@ -591,12 +591,12 @@ A pair of obsidian bracers etched with erasure seals rests here.
 | num_targets | 1 |
 | kill_needed | 1 |
 | level range | 31-35 |
-| offerer_vnum | 14021 |
+| offerer_vnum | 3460 |
 | reward_gold | 5600 |
 | reward_qp | 6 |
-| reward_item_vnum | 30307 |
+| reward_item_vnum | 5238 |
 | reward_item_count | 1 |
-| targets | `30303` |
+| targets | `5234` |
 
 Custom reward object block:
 - short: `@@eSeredh's Thornscript Girdle@@N`
@@ -610,8 +610,8 @@ Custom reward object block:
 Prop file content:
 ```text
 Thorn cardinal writ execution
-63 3 1 1 31 35 14021 5600 6 30307 1
-30303
+63 3 1 1 31 35 3460 5600 6 5238 1
+5234
 Thorn Cardinal Seredh militarized the confession halls. Execute the outstanding writ against his office.
 Seredh's thorned quill has scratched its last sentence.
 @@eSeredh's Thornscript Girdle@@N
@@ -637,27 +637,27 @@ A barbed ritual girdle lies coiled beside a torn vellum sash.
 | num_targets | 1 |
 | kill_needed | 1 |
 | level range | 33-35 |
-| offerer_vnum | 3015 |
-| reward_gold | 7600 |
+| offerer_vnum | 931 |
+| reward_gold | 1732 |
 | reward_qp | 8 |
-| reward_item_vnum | 30308 |
+| reward_item_vnum | 5239 |
 | reward_item_count | 1 |
-| targets | `30304` |
+| targets | `5235` |
 
 Custom reward object block:
 - short: `@@yEclipse Verdict Regalia@@N`
 - keywords: `eclipse verdict regalia gold violet hierophant`
 - long: `A gold-edged violet regalia mantle is folded with ritual precision.`
 - wear_flags: `8454144` (`about` 65536 | `take` 8388608)
-- extra_flags: `134218880` (`ITEM_MAGIC` 64 | `ITEM_ANTI_EVIL` 1024 | `ITEM_BOSS` 134217728)
+- extra_flags: `134218880` (`ITEM_MAGIC` 64 | `ITEM_ANTI_EVIL` 315 | `ITEM_BOSS` 134217728)
 - weight: `11` (tank item)
 - item_apply: `1` (`nada`)
 
 Prop file content:
 ```text
 Violet throne final deposition
-64 3 1 1 33 35 3015 7600 8 30308 1
-30304
+64 3 1 1 33 35 931 1732 8 5239 1
+5235
 The Violet Hierophant issues irreversible eclipse judgments from the Moonbone throne. Depose the final authority.
 The eclipse is over. The throne sits empty, its sentences voided.
 @@yEclipse Verdict Regalia@@N
@@ -688,15 +688,15 @@ This area does not currently plan a `#SHOPS` section (no merchant mobs). . `#OBJ
 ## Implementation Checklist
 
 ### Structure and Format
-1. Write `#AREA` header with all mandatory directives (`Q 16`, `O Virant~`, `V 30250 30324`).
-2. Ensure all 75 room vnums (30250-30324) are present in `#ROOMS`, terminated by `#0`.
+1. Write `#AREA` header with all mandatory directives (`Q 16`, `O Virant~`, `V 5181 5255`).
+2. Ensure all 75 room vnums (5181-5255) are present in `#ROOMS`, terminated by `#0`.
 3. Ensure all room descriptions contain 3+ sentences (5+ for hubs and boss rooms), are unique, and end with one trailing newline before `~`.
 4. All exits are bi-directional (no maze rooms). Named exit keywords are discoverable in descriptions.
 5. All rooms use `sector_type = 11` (inside) and `room_flags` include `indoors` (8).
-6. Boss rooms (30276, 30288, 30300, 30312, 30324) include `no_mob` (4) in `room_flags`.
+6. Boss rooms (5207, 5219, 5231, 5243, 5255) include `no_mob` (4) in `room_flags`.
 
 ### Mobiles
-7. Rebuild 55 mobs (30250-30304) in `#MOBILES`, terminated by `#0`.
+7. Rebuild 55 mobs (5181-5235) in `#MOBILES`, terminated by `#0`.
 8. All mobs include `is_npc` (1) + `stay_area` (64) in `act` flags.
 9. Boss mobs include `sentinel` (2) + `boss` (67108864) in `act` flags.
 10. Strong non-boss mobs include `solo` (33554432) in `act` flags.
@@ -706,14 +706,14 @@ This area does not currently plan a `#SHOPS` section (no merchant mobs). . `#OBJ
 14. Include loot tables (`l`/`L`) for boss mobs.
 
 ### Objects
-15. Rebuild 70 objects (30250-30319) in `#OBJECTS`, terminated by `#0`.
+15. Rebuild 70 objects (5181-5250) in `#OBJECTS`, terminated by `#0`.
 16. All objects include `ITEM_TAKE` (8388608) in `wear_flags`.
 17. Boss-drop items include `ITEM_BOSS` (134217728) in `extra_flags`.
 18. Loot-table items include `ITEM_LOOT` (67108864) in `extra_flags`.
 19. No object sets `ITEM_GENERATED` (1) or `ITEM_WEAR_CLAN_COLORS` (16777216).
 20. All object names are unique within the area.
 21. Weapon objects have `hold` (32768) + `take` (8388608) in `wear_flags`, and thematically consistent `value3`.
-22. Key objects (30250, 30251) use `item_type = 18`.
+22. Key objects (5181, 5182) use `item_type = 18`.
 23. All objects include `L <level>` entry.
 
 ### Resets
@@ -732,5 +732,5 @@ This area does not currently plan a `#SHOPS` section (no merchant mobs). . `#OBJ
 ### Color and Policy
 31. Validate color policy: `@@k` absent, no background codes (`@@0`-`@@7`), no flashing code (`@@f`).
 32. All color sequences close with `@@N`.
-33. Confirm all vnums stay within `V 30250 30324` envelope.
+33. Confirm all vnums stay within `V 5181 5255` envelope.
 34. File ends with `#$` marker.

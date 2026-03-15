@@ -1,3 +1,4 @@
 .vscode/*
 web/soewholist.html
 web/whocount.html
+__pycache__/

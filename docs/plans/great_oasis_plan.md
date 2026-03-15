@@ -6,7 +6,7 @@
 **File Name:** `the_great_oasis.are`
 **Keyword:** `the great oasis`
 **Level Range:** 40-60 (`I 40 60`)
-**Vnum Range (fixed):** **8600-8699** (`V 8600 8699`)
+**Vnum Range (fixed):** **1932-2031** (`V 1932 2031`)
 **Room Count Target:** 100/100 vnums used
 **Design Goal:** Replace the current corridor-heavy spiral desert with a coherent oasis destination area: contested approaches through reaver-held dunes, a living oasis basin with neutral Spring Warden community, ruined Toll Pavilion occupied by Wellmouth Creed cultists, an underground cistern complex preserving deep history, and a flooded aquifer boss lair that poses a moral dilemma.
 
@@ -39,7 +39,7 @@ All directives per `area_file_spec.md` section 3:
 - `L @@a{@@y40 60@@a}@@N~` — cyan braces, yellow level numbers, cyan close brace, reset, `~`-terminated
 - `N 101` — area number (preserved from current file)
 - `I 40 60` — min/max level; controls mob-level gating and area matching
-- `V 8600 8699` — full 100-vnum envelope; all rooms, mobs, and objects must stay within this range
+- `V 1932 2031` — full 100-vnum envelope; all rooms, mobs, and objects must stay within this range
 - `F 12` — reset frequency in minutes (preserved from current file)
 - `U @@aA cool rumor of water rides the @@ybright-gold@@a desert wind toward the Great Oasis.@@N~` — reset message; no double-newlines, `~`-terminated
 - `O Virant~` — area owner must always be Virant (owner policy)
@@ -84,7 +84,7 @@ See `great_oasis_lore.md` for the complete lore bible.
 
 ## Cross-Area Lore Integration
 
-### Connection to the Eastern Desert (vnums 8500-8599, levels 30-100)
+### Connection to the Eastern Desert (vnums 1832-1931, levels 30-100)
 
 The Great Oasis is the Eastern Desert's geographical destination. The old caravan road that forms the Eastern Desert's Zone A spine terminates at the oasis's western approach. The two areas share a continuous historical narrative: the Eastern Desert documents the road network's collapse, while the Great Oasis documents what happened at the network's most important node.
 
@@ -93,23 +93,23 @@ Specific connections:
 - The Jackal Synod's oasis chapter (Wellmouth Creed) is a doctrinal cousin of the three Eastern Desert Synod factions. Oasis Synod NPCs reference "the desert brothers" with kinship and contempt.
 - Dune Reavers at the oasis are organizationally linked to the Eastern Desert's Reaver Confederates but better supplied and more cautious.
 
-### Connection to the Southern Oasis (vnums 9800-9999)
+### Connection to the Southern Oasis (vnums 2539-2738)
 
 The southern exit leads toward the Southern Oasis. The two oases were historically linked by the **Twin Basin Compact** — a mutual-aid water agreement that failed during the post-Ninth Meridian drought. The southern approach wadi shows evidence of compact infrastructure: relay stations, water-jar caches, and signal towers.
 
-### Connection to the Northern Pyramid (vnums 10125-10324, levels 100-120)
+### Connection to the Northern Pyramid (vnums 2864-3063, levels 100-120)
 
-The northern exits (currently connecting to vnums 8880-8888, reserved for future construction) point toward territory between the oasis and the Northern Pyramid. The oasis's Measuring House astronomical records contain the earliest known reference to the Northern Pyramid site. The Sand Sovereign used oasis-trained engineers for the pyramid's construction.
+The northern exits (currently connecting to vnums 2212-2220, reserved for future construction) point toward territory between the oasis and the Northern Pyramid. The oasis's Measuring House astronomical records contain the earliest known reference to the Northern Pyramid site. The Sand Sovereign used oasis-trained engineers for the pyramid's construction.
 
-### Connection to Midgaard (vnums 3001-3200)
+### Connection to Midgaard (vnums 917-1116)
 
 Midgaard's archives contain the **Oasis Folios** — copied water-court documents and astronomical tables purchased from oasis refugees. Midgaard scholars occasionally visit the oasis to compare copies against surviving inscriptions.
 
-### Connection to Kowloon (vnums 14000-14099)
+### Connection to Kowloon (vnums 3439-3538)
 
 Kowloon's Jade Clerks' water-debt accounting methodology is directly borrowed from the oasis Water Court's ledger system. Kowloon traders who visit the oasis recognize the old ledger tablets with professional interest.
 
-### Connection to Kiess (vnums 13000-13099)
+### Connection to Kiess (vnums 3339-3438)
 
 The Temple of Concord in Kiess preserves a version of the Charter of Passage prayer adapted into a civic benediction — evidence of oasis legal-religious traditions diffusing westward through the trade network.
 
@@ -117,19 +117,19 @@ The Temple of Concord in Kiess preserves a version of the Charter of Passage pra
 
 ## Narrative Structure (Act-Based)
 
-### Act I - The Contested Approaches (8600-8619)
+### Act I - The Contested Approaches (1932-1951)
 Players arrive through reaver-held approach dunes, encountering privatized violence in the shell of old civic infrastructure. Charter stones, ambush gullies, and toll barricades establish the factional landscape. The distant shimmer of palm crowns on the horizon draws players forward.
 
-### Act II - The Living Oasis (8620-8639)
+### Act II - The Living Oasis (1952-1971)
 Players enter the palm ring and discover the oasis basin — a living community, not a ruin. The Spring Wardens provide neutral anchor, the Last Reed Tender delivers deep lore, and the first signs of Synod encroachment become visible. Water, shade, and relative safety create a mid-area rest point.
 
-### Act III - The Toll Pavilion and Synod Quarter (8640-8659)
+### Act III - The Toll Pavilion and Synod Quarter (1972-1991)
 Players enter the ruined Toll Pavilion, now occupied by the Wellmouth Creed. Administrative grandeur overlaid with cult appropriation. Escalating Synod hostility, ritual chambers, and the Hierophant's sanctum create the area's primary factional combat zone.
 
-### Act IV - The Cistern Ring and Deep History (8660-8679)
+### Act IV - The Cistern Ring and Deep History (1992-2011)
 Players descend into the underground cistern complex. Engineering marvels, historical inscriptions, and structural decay tell the story of the oasis's managed decline. Ancient dangers (guardians, traps, unstable chambers) replace surface faction threats.
 
-### Act V - The Flooded East Cistern and Wyrm's Lair (8680-8699)
+### Act V - The Flooded East Cistern and Wyrm's Lair (2012-2031)
 Players enter the flooded depths where the Oasis Wyrm has taken up residence. The dilemma is communicated: the wyrm threatens the archives but sustains the springs. The final boss fight is a choice with consequences, not merely a difficulty spike.
 
 ---
@@ -159,8 +159,8 @@ Per `area_file_spec.md` sections 8.1 and 8.2:
 - **Outdoor oasis rooms** (palm ring, basin margin, garden terraces): `sector_type = forest` (`3`) — the palm canopy and vegetation justify non-desert classification
 - **Water rooms** (basin pool, flooded cistern passages): `sector_type = water_swim` (`6`)
 - **Interior rooms** (cistern vaults, pavilion interiors, Synod chambers, wyrm's lair): `sector_type = inside` (`11`), `room_flags` includes `indoors` (`8`)
-- **Boss rooms** (8659, 8679, 8699): `room_flags` includes `no_mob` (`4`) per boss placement policy
-- **Flooded cistern rooms** (Zone E, 8680-8699): `room_flags` includes `no_teleport` (`16384`) and `no_recall` (`8192`), except entry room 8680 and exit room 8699 which allow recall for escape
+- **Boss rooms** (1991, 2011, 2031): `room_flags` includes `no_mob` (`4`) per boss placement policy
+- **Flooded cistern rooms** (Zone E, 2012-2031): `room_flags` includes `no_teleport` (`16384`) and `no_recall` (`8192`), except entry room 2012 and exit room 2031 which allow recall for escape
 - **No rooms use `ROOM_MAZE`** (`524288`); this area does not contain mazes
 
 ### Vnum Allocation Policy
@@ -168,74 +168,74 @@ Per `area_file_spec.md` sections 8.1 and 8.2:
 Per `area_file_spec.md` section 13.1:
 
 - Room vnums must be assigned in ascending sequential order with no gaps.
-- All 100 room vnums (8600-8699) must be used; fill every available room-vnum slot.
+- All 100 room vnums (1932-2031) must be used; fill every available room-vnum slot.
 
-### Zone A: Approach Dunes and Reaver Territory (8600-8619, 20 rooms)
+### Zone A: Approach Dunes and Reaver Territory (1932-1951, 20 rooms)
 - Western and southern approach routes through reaver-controlled desert.
 - Sector: `desert` throughout.
 - Includes toll barricades, ambush gullies, charter stone ruins, reaver camps, and the first distant views of the palm ring.
 - Key rooms:
- - **8600** Western Gate — entry from the Eastern Desert (vnum 8519 west). Important room, 5+ sentence description. First view of the distant oasis shimmer. Preserves external connection.
- - **8601-8609** Northern approach exits — connect north to vnums 8880-8888 (future construction). Preserves all nine northern external connections from the current area (with 8609 as both connector and bend waypoint).
- - **8609** Southeastern bend — preserved from current layout as a structural waypoint linking the northern connectors to the southern approach.
- - **8610** Reaver Toll Barricade — first hostile chokepoint. Important room, 5+ sentence description. Salvaged timber walls, seized trade goods, armed sentries.
- - **8614** Burned Convoy Basin — evidence of recent reaver violence. Overturned wagons, scattered cargo, bloodstained sand.
- - **8618** Reave-Captain's Yard — the reaver leader's fortified camp in the old caravan staging area. Important room, 5+ sentence description. The Reave-Captain's command post.
- - **8619** Palm Ring Threshold — the transition from harsh desert to sheltered oasis. Important room, 5+ sentence description. Temperature drops, wind dies, palm fronds arch overhead.
+ - **1932** Western Gate — entry from the Eastern Desert (vnum 1851 west). Important room, 5+ sentence description. First view of the distant oasis shimmer. Preserves external connection.
+ - **1933-1941** Northern approach exits — connect north to vnums 2212-2220 (future construction). Preserves all nine northern external connections from the current area (with 1941 as both connector and bend waypoint).
+ - **1941** Southeastern bend — preserved from current layout as a structural waypoint linking the northern connectors to the southern approach.
+ - **1942** Reaver Toll Barricade — first hostile chokepoint. Important room, 5+ sentence description. Salvaged timber walls, seized trade goods, armed sentries.
+ - **1946** Burned Convoy Basin — evidence of recent reaver violence. Overturned wagons, scattered cargo, bloodstained sand.
+ - **1950** Reave-Captain's Yard — the reaver leader's fortified camp in the old caravan staging area. Important room, 5+ sentence description. The Reave-Captain's command post.
+ - **1951** Palm Ring Threshold — the transition from harsh desert to sheltered oasis. Important room, 5+ sentence description. Temperature drops, wind dies, palm fronds arch overhead.
 
-### Zone B: The Living Oasis (8620-8639, 20 rooms)
+### Zone B: The Living Oasis (1952-1971, 20 rooms)
 - The oasis proper: palm ring, basin margin, Spring Warden settlement, garden terraces.
 - Mix of `forest` (palm canopy rooms) and `water_swim` (basin edge rooms) sectors.
 - Includes the neutral warden community, Last Reed Tender's garden, waystone circle fragments, and the first views of the Toll Pavilion ruins.
 - Key rooms:
- - **8620** North Cistern Wellhead — Spring Warden water distribution point. Important room, 5+ sentence description. The rationing queue, the clerk's ledger table, the functional sluice.
- - **8625** Central Basin Shore — the heart of the oasis. Important room, 5+ sentence description with `E` extra descriptions for the basin, the water, and the distant ruins. `sector_type = water_swim`.
- - **8628** The Last Garden — the Reed Tender's surviving terrace. Important room, 5+ sentence description. Date palms, medicinal herbs, flowers. The last cultivated garden in the eastern desert.
- - **8630** Western Waystone — one of the twelve charter stones, pointing toward the Eastern Desert road. `E` extra description for the inscription.
- - **8632** Southwestern Waystone — pointing toward the Southern Oasis. `E` extra description referencing the Twin Basin Compact.
- - **8635** Warden Watch Tower — the militia's observation post overlooking the basin. Important room, 5+ sentence description.
- - **8639** Pavilion Approach — the boundary between warden territory and Synod-held ruins. Important room, 5+ sentence description. Visible Synod modifications begin: hanging censers, painted symbols.
+ - **1952** North Cistern Wellhead — Spring Warden water distribution point. Important room, 5+ sentence description. The rationing queue, the clerk's ledger table, the functional sluice.
+ - **1957** Central Basin Shore — the heart of the oasis. Important room, 5+ sentence description with `E` extra descriptions for the basin, the water, and the distant ruins. `sector_type = water_swim`.
+ - **1960** The Last Garden — the Reed Tender's surviving terrace. Important room, 5+ sentence description. Date palms, medicinal herbs, flowers. The last cultivated garden in the eastern desert.
+ - **1962** Western Waystone — one of the twelve charter stones, pointing toward the Eastern Desert road. `E` extra description for the inscription.
+ - **1964** Southwestern Waystone — pointing toward the Southern Oasis. `E` extra description referencing the Twin Basin Compact.
+ - **1967** Warden Watch Tower — the militia's observation post overlooking the basin. Important room, 5+ sentence description.
+ - **1971** Pavilion Approach — the boundary between warden territory and Synod-held ruins. Important room, 5+ sentence description. Visible Synod modifications begin: hanging censers, painted symbols.
 
-### Zone C: Toll Pavilion Ruins and Synod Quarter (8640-8659, 20 rooms)
+### Zone C: Toll Pavilion Ruins and Synod Quarter (1972-1991, 20 rooms)
 - The ruined Toll Pavilion, now the Wellmouth Creed's stronghold.
 - Sector: `inside` throughout (roofed colonnade and pavilion interiors).
 - `room_flags` includes `indoors` (`8`).
 - Escalating Synod hostility. Ritual chambers, chanting halls, the Hierophant's sanctum.
 - Key rooms:
- - **8640** Shattered Colonnade Entry — the pavilion's former grand entrance. Important room, 5+ sentence description. Broken columns, hanging censers, painted jackal sigils. Named exit `^colonnade~` discoverable in description.
- - **8644** The Broken Dais — where the High Water Judge once presided. Important room, 5+ sentence description with `E` extra descriptions for the cracked judicial platform and the crude altar built atop it.
- - **8648** Basin Chanting Hall — where Synod chanters maintain the continuous liturgy. Important room, 5+ sentence description. The sound of rhythmic chanting fills the space.
- - **8652** Salt Oath Chamber — where Wellmouth Priests perform consecrated salt rituals. Important room, 5+ sentence description with `E` extra descriptions for the salt circles and ritual basins.
- - **8656** Blood Libation Pool — where offerings are poured into the spring channels. Important room, 5+ sentence description. Blood-stain patterns on limestone, the metallic smell of old offerings.
- - **8659** Wellmouth Hierophant's Sanctum — mini-boss room. `room_flags` includes `no_mob`. Important room, 5+ sentence description. The cult leader's private chamber, decorated with spring-water relics and dream-interpretation charts.
+ - **1972** Shattered Colonnade Entry — the pavilion's former grand entrance. Important room, 5+ sentence description. Broken columns, hanging censers, painted jackal sigils. Named exit `^colonnade~` discoverable in description.
+ - **1976** The Broken Dais — where the High Water Judge once presided. Important room, 5+ sentence description with `E` extra descriptions for the cracked judicial platform and the crude altar built atop it.
+ - **1980** Basin Chanting Hall — where Synod chanters maintain the continuous liturgy. Important room, 5+ sentence description. The sound of rhythmic chanting fills the space.
+ - **1984** Salt Oath Chamber — where Wellmouth Priests perform consecrated salt rituals. Important room, 5+ sentence description with `E` extra descriptions for the salt circles and ritual basins.
+ - **1988** Blood Libation Pool — where offerings are poured into the spring channels. Important room, 5+ sentence description. Blood-stain patterns on limestone, the metallic smell of old offerings.
+ - **1991** Wellmouth Hierophant's Sanctum — mini-boss room. `room_flags` includes `no_mob`. Important room, 5+ sentence description. The cult leader's private chamber, decorated with spring-water relics and dream-interpretation charts.
 
-### Zone D: Cistern Ring and Deep History (8660-8679, 20 rooms)
+### Zone D: Cistern Ring and Deep History (1992-2011, 20 rooms)
 - The underground cistern complex beneath the oasis.
 - Sector: `inside` throughout.
 - `room_flags` includes `indoors` (`8`).
 - Engineering marvels, historical inscriptions, structural decay, ancient guardians.
 - Key rooms:
- - **8660** North Cistern Descent — stairway down from the warden wellhead. Important room, 5+ sentence description. Fitted limestone walls, sluice channels, water-level gauges.
- - **8664** Sluice Control Chamber — the old hydraulic regulation center. Important room, 5+ sentence description with `E` extra descriptions for the sluice mechanisms, calibration marks, and engineering inscriptions.
- - **8668** The Ledger Vault — archive room containing surviving salt tablets and charter documents. Important room, 5+ sentence description with multiple `E` extra descriptions for individual tablets and ledger entries.
- - **8672** Collapsed South Cistern — the war-damaged chamber. Rubble, cracked vaults, evidence of the Battle of the Dry Basin. Structural instability.
- - **8675** West Cistern (Dry) — the old agricultural irrigation reservoir, now bone-dry. Inscription on the wall records the last day water flowed here.
- - **8678** East Cistern Access — the threshold to the flooded depths. Important room, 5+ sentence description. Water laps at the stone floor. The temperature drops sharply. Something moves below.
- - **8679** Cistern Guardian Chamber — mini-boss room. `room_flags` includes `no_mob`. Important room, 5+ sentence description. An ancient construct or preserved sentinel still executing centuries-old guard protocols.
+ - **1992** North Cistern Descent — stairway down from the warden wellhead. Important room, 5+ sentence description. Fitted limestone walls, sluice channels, water-level gauges.
+ - **1996** Sluice Control Chamber — the old hydraulic regulation center. Important room, 5+ sentence description with `E` extra descriptions for the sluice mechanisms, calibration marks, and engineering inscriptions.
+ - **2000** The Ledger Vault — archive room containing surviving salt tablets and charter documents. Important room, 5+ sentence description with multiple `E` extra descriptions for individual tablets and ledger entries.
+ - **2004** Collapsed South Cistern — the war-damaged chamber. Rubble, cracked vaults, evidence of the Battle of the Dry Basin. Structural instability.
+ - **2007** West Cistern (Dry) — the old agricultural irrigation reservoir, now bone-dry. Inscription on the wall records the last day water flowed here.
+ - **2010** East Cistern Access — the threshold to the flooded depths. Important room, 5+ sentence description. Water laps at the stone floor. The temperature drops sharply. Something moves below.
+ - **2011** Cistern Guardian Chamber — mini-boss room. `room_flags` includes `no_mob`. Important room, 5+ sentence description. An ancient construct or preserved sentinel still executing centuries-old guard protocols.
 
-### Zone E: Flooded East Cistern and Wyrm's Lair (8680-8699, 20 rooms)
+### Zone E: Flooded East Cistern and Wyrm's Lair (2012-2031, 20 rooms)
 - The flooded cistern depths where the Oasis Wyrm has taken residence.
 - Sector: `water_swim` for flooded passages, `inside` for partially-drained chambers.
 - `room_flags` includes `indoors` (`8`), `no_teleport` (`16384`), `no_recall` (`8192`).
-- Exception: entry room 8680 and boss room 8699 allow recall (omit `no_recall`).
+- Exception: entry room 2012 and boss room 2031 allow recall (omit `no_recall`).
 - Key rooms:
- - **8680** Flooded Stairwell — zone entry, partially submerged. Important room, 5+ sentence description. Exempt from `no_recall`. Water chest-deep and cold. Keeper inscriptions visible above the waterline.
- - **8684** Submerged Archive — the drowned record hall. Important room, 5+ sentence description with `E` extra descriptions for waterlogged tablets and ruined scrolls. The lore the wyrm guards.
- - **8688** Aquifer Channel — a natural waterway the wyrm uses to access the deep aquifer. Important room, 5+ sentence description. Current pulls southward. Mineral deposits on the walls glow faintly.
- - **8692** Wyrm's Antechamber — final pre-boss staging room. Important room, 5+ sentence description. Shed scales, mineral-encrusted bones, the temperature plunges. The water here is unnaturally still.
- - **8694** Spring Vent Chamber — a side room where one of the surviving springs rises. `E` extra description explaining the wyrm's accidental role in keeping the vent clear. Lore object placement.
- - **8698** The Deep Pool — the largest flooded chamber. Important room, 5+ sentence description. The wyrm's territory marker: the water is clear enough to see the bottom forty feet below.
- - **8699** Lair of the Oasis Wyrm — final boss room. `room_flags` includes `no_mob`. Exempt from `no_recall`. Important room, 5+ sentence description. The wyrm's nest: mineral-encrusted walls, aquifer inflow channel, the massive creature coiled around the deepest spring vent.
+ - **2012** Flooded Stairwell — zone entry, partially submerged. Important room, 5+ sentence description. Exempt from `no_recall`. Water chest-deep and cold. Keeper inscriptions visible above the waterline.
+ - **2016** Submerged Archive — the drowned record hall. Important room, 5+ sentence description with `E` extra descriptions for waterlogged tablets and ruined scrolls. The lore the wyrm guards.
+ - **2020** Aquifer Channel — a natural waterway the wyrm uses to access the deep aquifer. Important room, 5+ sentence description. Current pulls southward. Mineral deposits on the walls glow faintly.
+ - **2024** Wyrm's Antechamber — final pre-boss staging room. Important room, 5+ sentence description. Shed scales, mineral-encrusted bones, the temperature plunges. The water here is unnaturally still.
+ - **2026** Spring Vent Chamber — a side room where one of the surviving springs rises. `E` extra description explaining the wyrm's accidental role in keeping the vent clear. Lore object placement.
+ - **2030** The Deep Pool — the largest flooded chamber. Important room, 5+ sentence description. The wyrm's territory marker: the water is clear enough to see the bottom forty feet below.
+ - **2031** Lair of the Oasis Wyrm — final boss room. `room_flags` includes `no_mob`. Exempt from `no_recall`. Important room, 5+ sentence description. The wyrm's nest: mineral-encrusted walls, aquifer inflow channel, the massive creature coiled around the deepest spring vent.
 
 ### Connectivity Principles
 
@@ -243,39 +243,39 @@ Per `area_file_spec.md` section 8 directional traversal constraints:
 
 - **All exits must be bi-directional**: if room A connects to room B through direction X, room B must provide the opposite-direction exit back to room A. No one-way exits (this area is not a maze).
 - **No directional loops**: repeated movement in the same direction must not return to a previously visited room. The spec prohibits room connection loops (e.g., `a -> b -> c -> a`) unless all rooms in the set are flagged `ROOM_MAZE`.
-- **Branching paths replace loops**: the plan uses hub-and-spoke branching from 4 major hub rooms (Reaver Toll Barricade 8610, Central Basin Shore 8625, Shattered Colonnade Entry 8640, North Cistern Descent 8660) rather than circular loops. Players choose branches and backtrack through hubs.
+- **Branching paths replace loops**: the plan uses hub-and-spoke branching from 4 major hub rooms (Reaver Toll Barricade 1942, Central Basin Shore 1957, Shattered Colonnade Entry 1972, North Cistern Descent 1992) rather than circular loops. Players choose branches and backtrack through hubs.
 - **Multiple traversal options between macro-zones**: at least 2 branching paths connect each pair of adjacent zones, providing route variety without circular loops.
 - **External exits preserved** at all current connection points:
- - Room 8600 west to vnum 8519 (Eastern Desert)
- - Rooms 8601-8609 north to vnums 8880-8888 (future construction). This preserves the full existing northern connector count while keeping 8600 focused on the primary western entry role.
- - Room 8699 south to vnum 9800 (Southern Oasis)
+ - Room 1932 west to vnum 1851 (Eastern Desert)
+ - Rooms 1933-1941 north to vnums 2212-2220 (future construction). This preserves the full existing northern connector count while keeping 1932 focused on the primary western entry role.
+ - Room 2031 south to vnum 2539 (Southern Oasis)
 - **Door usage** limited to the Hierophant's sanctum and the east cistern access. Every door exit must have `EX_ISDOOR` (`1`) set in `<locks>`. Door initial state authored through `#RESETS` `D` command. Any locked door (`D` state `2`) must have `<key_vnum>` set to a valid key object vnum.
 - **Named exits** use `^` prefix on keywords (e.g., `^colonnade~`, `^cistern gate~`) so movement messaging treats them as standalone noun phrases. Each named exit keyword must appear in the room's `<description>~`, an object in the room, or an `E` extra description.
 
 ### External Connection Map
 
 ```
-          [8880] [8881] [8882] [8883] [8884] [8885] [8886] [8887] [8888]
+          [2212] [2213] [2214] [2215] [2216] [2217] [2218] [2219] [2220]
            |   |   |   |   |   |   |   |   |
-          [8601] [8602] [8603] [8604] [8605] [8606] [8607] [8608] [8609]
+          [1933] [1934] [1935] [1936] [1937] [1938] [1939] [1940] [1941]
            \   \   \   |   /   /   /   /
-[8519] ---W--- [8600] -------- ZONE A: APPROACH DUNES -------- [8610] Toll Barricade
+[1851] ---W--- [1932] -------- ZONE A: APPROACH DUNES -------- [1942] Toll Barricade
  (Eastern               |               |
-  Desert)           [8619] Palm Ring Threshold   Reaver Camps
+  Desert)           [1951] Palm Ring Threshold   Reaver Camps
                     |
                 ZONE B: LIVING OASIS
-             [8620]-[8625 Basin]-[8639 Pavilion Approach]
+             [1952]-[1957 Basin]-[1971 Pavilion Approach]
                  |          |
-             [8660] Cistern    ZONE C: TOLL PAVILION
-             Descent       [8640]-[8659 Hierophant]
+             [1992] Cistern    ZONE C: TOLL PAVILION
+             Descent       [1972]-[1991 Hierophant]
                 |
             ZONE D: CISTERN RING
-             [8660]-[8678]-[8679 Guardian]
+             [1992]-[2010]-[2011 Guardian]
                  |
             ZONE E: FLOODED DEPTHS
-             [8680]-[8699 Wyrm Lair]
+             [2012]-[2031 Wyrm Lair]
                      |
-                    [9800]
+                    [2539]
                   (Southern Oasis)
 ```
 
@@ -287,10 +287,10 @@ Per `area_file_spec.md` section 8 directional traversal constraints:
 
 Per `area_file_spec.md` section 13.1:
 
-- Mob vnums must be assigned in ascending sequential order with no gaps, starting from 8600.
-- Fully rewrite existing vnums **8600-8611**.
-- Expand roster through contiguous sequential slots **8612-8631** (staying within the 8600-8699 vnum envelope).
-- Target composition: ~32 mob templates (vnums 8600-8631).
+- Mob vnums must be assigned in ascending sequential order with no gaps, starting from 1932.
+- Fully rewrite existing vnums **1932-1943**.
+- Expand roster through contiguous sequential slots **1944-1963** (staying within the 1932-2031 vnum envelope).
+- Target composition: ~32 mob templates (vnums 1932-1963).
 
 ### Mobile Spec Compliance (all mobs)
 
@@ -322,14 +322,14 @@ Per `area_file_spec.md` sections 4.1-5.5:
   - `act`: `is_npc` + `stay_area` + `sentinel` (for stationary NPCs). Non-aggressive.
   - Level range: 40-50.
   - Archetype: hybrid profile (light arms, some defensive casting).
-  - Mob vnums: **8600-8604** (5 templates).
+  - Mob vnums: **1932-1936** (5 templates).
 
 2. **Lore NPCs** (neutral, non-combat)
   - Last Reed Tender, Midgaard Scholar (visiting).
   - `act`: `is_npc` + `stay_area` + `sentinel`. Non-aggressive.
   - Level range: 40-45.
   - No combat extensions needed (flavor NPCs).
-  - Mob vnums: **8605-8606** (2 templates).
+  - Mob vnums: **1937-1938** (2 templates).
 
 3. **Dune Reavers (Oasis Band)** (hostile opportunists)
   - Reaver sentries, toll enforcers, beast-handlers, the Reave-Captain of the Yard.
@@ -337,14 +337,14 @@ Per `area_file_spec.md` sections 4.1-5.5:
   - Level range: 40-55 (sentries low, Reave-Captain high).
   - Archetype: melee profile. Beast-handlers use hybrid profile.
   - The Reave-Captain: `act` adds `solo` (`33554432`) + `no_flee` (`16`). Level 55.
-  - Mob vnums: **8607-8612** (6 templates).
+  - Mob vnums: **1939-1944** (6 templates).
 
 4. **Oasis Fauna** (hostile predators)
   - Glass scorpions, basin vipers, sand jackals, dune stalkers.
   - `act`: `is_npc` + `stay_area` + `aggressive` + `no_mind` (`262144`).
   - Level range: 40-50.
   - Archetype: melee profile. Basin vipers add poison spec (`spec_poison` in `#SPECIALS`).
-  - Mob vnums: **8613-8616** (4 templates).
+  - Mob vnums: **1945-1948** (4 templates).
 
 5. **Jackal Synod — Wellmouth Creed** (hostile cult faction)
   - Spring Acolytes, Basin Chanters, Wellmouth Priests, the Wellmouth Hierophant.
@@ -352,7 +352,7 @@ Per `area_file_spec.md` sections 4.1-5.5:
   - Level range: 45-60 (acolytes low, Hierophant boss-level).
   - Archetype: hybrid profile (ritual casting + melee). Basin Chanters use caster profile.
   - `affected_by`: Wellmouth Priests get `detect_hidden` (`32`); Hierophant gets `detect_magic` (`16`) + `detect_hidden` (`32`).
-  - Mob vnums: **8617-8622** (6 templates including Hierophant).
+  - Mob vnums: **1949-1954** (6 templates including Hierophant).
 
 6. **Cistern Guardians** (ancient construct/preserved defenders)
   - Oathbound Cistern Sentinels, Sluice Wardens, Archive Keepers.
@@ -361,7 +361,7 @@ Per `area_file_spec.md` sections 4.1-5.5:
   - Archetype: melee profile (sentinels), hybrid profile (Archive Keepers with defensive casting).
   - `affected_by`: `infrared` (`512`).
   - `resist`: `physical` (`2`). `suscept`: `water` (`64`).
-  - Mob vnums: **8623-8627** (5 templates).
+  - Mob vnums: **1955-1959** (5 templates).
 
 7. **Flooded Depths Fauna** (aquifer creatures)
   - Aquifer eels, mineral crabs, blind cave fish swarms.
@@ -369,21 +369,21 @@ Per `area_file_spec.md` sections 4.1-5.5:
   - Level range: 48-58.
   - Archetype: melee profile.
   - `resist`: `water` (`64`). `suscept`: `fire` (`128`).
-  - Mob vnums: **8628-8630** (3 templates).
+  - Mob vnums: **1960-1962** (3 templates).
 
 8. **The Oasis Wyrm** (final boss)
-  - Mob vnum: **8631**.
+  - Mob vnum: **1963**.
   - Details in Boss Ladder section below.
 
 ### Boss Ladder
 
 All boss mobs: `act` includes `is_npc` + `stay_area` + `sentinel` + `boss` (`67108864`) + `aggressive` + `no_flee`. Placed only in rooms flagged `no_mob`.
 
-- **Mini-boss 1 (8659, Zone C):** The Wellmouth Hierophant. Mob vnum **8622**. Level 55. Hybrid profile with offensive ritual casting. Assigned `spec_cast_cleric` in `#SPECIALS`. `act` adds `remember` (`8`). `affected_by`: `detect_hidden` (`32`) + `detect_magic` (`16`). Items dropped must include `ITEM_BOSS` flag.
+- **Mini-boss 1 (1991, Zone C):** The Wellmouth Hierophant. Mob vnum **1954**. Level 55. Hybrid profile with offensive ritual casting. Assigned `spec_cast_cleric` in `#SPECIALS`. `act` adds `remember` (`8`). `affected_by`: `detect_hidden` (`32`) + `detect_magic` (`16`). Items dropped must include `ITEM_BOSS` flag.
 
-- **Mini-boss 2 (8679, Zone D):** The Cistern Guardian Eternal. Mob vnum **8627**. Level 58. Melee profile with heavy defense. Assigned `spec_cast_cleric` in `#SPECIALS`. `affected_by`: `infrared` (`512`) + `detect_invis` (`8`). Items dropped must include `ITEM_BOSS` flag.
+- **Mini-boss 2 (2011, Zone D):** The Cistern Guardian Eternal. Mob vnum **1959**. Level 58. Melee profile with heavy defense. Assigned `spec_cast_cleric` in `#SPECIALS`. `affected_by`: `infrared` (`512`) + `detect_invis` (`8`). Items dropped must include `ITEM_BOSS` flag.
 
-- **Final Boss (8699, Zone E):** The Oasis Wyrm. Mob vnum **8631**. Level 60. Melee profile with strong area attacks. `act` adds `remember` (`8`). `affected_by`: `infrared` (`512`) + `detect_invis` (`8`). `resist`: `water` (`64`) + `physical` (`2`). `suscept`: `fire` (`128`). Items dropped must include `ITEM_BOSS` flag. Loot table (`l`/`L`) used for boss drops.
+- **Final Boss (2031, Zone E):** The Oasis Wyrm. Mob vnum **1963**. Level 60. Melee profile with strong area attacks. `act` adds `remember` (`8`). `affected_by`: `infrared` (`512`) + `detect_invis` (`8`). `resist`: `water` (`64`) + `physical` (`2`). `suscept`: `fire` (`128`). Items dropped must include `ITEM_BOSS` flag. Loot table (`l`/`L`) used for boss drops.
 
 ### Rewrite of Current Named Mobs
 
@@ -408,10 +408,10 @@ All boss mobs: `act` includes `is_npc` + `stay_area` + `sentinel` + `boss` (`671
 
 Per `area_file_spec.md` section 13.1:
 
-- Object vnums must be assigned in ascending sequential order with no gaps, starting from 8600.
-- Fully replace current object concepts beginning at **8600**.
-- Expand through contiguous sequential slots (suggested through **8649**) while staying within the 8600-8699 vnum envelope.
-- Target composition: ~50 object templates (vnums 8600-8649).
+- Object vnums must be assigned in ascending sequential order with no gaps, starting from 1932.
+- Fully replace current object concepts beginning at **1932**.
+- Expand through contiguous sequential slots (suggested through **1981**) while staying within the 1932-2031 vnum envelope.
+- Target composition: ~50 object templates (vnums 1932-1981).
 - Within the area, object `<name>~` values must be unique (no duplicate item names in the same area file).
 
 ### Object Spec Compliance (all objects)
@@ -450,42 +450,42 @@ Per `area_file_spec.md` sections 7.3 and 7.6:
 1. **Reaver Salvage Set** (levels 40-50, martial desert gear)
   - Salvaged toll-blades (`hold` + `ITEM_WEAPON`, `value3 = 3` slash, weight 6-10 melee), sand cloaks (`about`, weight 11-15 tank), reaver bucklers (`hold` + `ITEM_BUCKLER`, weight 11-15 tank), dune boots (`feet`, weight 6-10 melee), toll-chain hauberks (`body`, weight 11-15 tank).
   - `L` level lines: 40-50 range.
-  - Vnums: **8600-8609** (10 templates).
+  - Vnums: **1932-1941** (10 templates).
 
 2. **Spring Warden Issue** (levels 40-48, utility/defensive)
   - Warden wraps (`about`, weight 1-5 caster), cistern lanterns (`hold`, `ITEM_LIGHT`, weight 1-5), basin-clay shields (`hold`, `ITEM_ARMOR`, weight 11-15 tank), warden staffs (`hold` + `ITEM_WEAPON`, `value3 = 7` pound, weight 6-10 melee).
   - `L` level lines: 40-48 range.
-  - Vnums: **8610-8615** (6 templates).
+  - Vnums: **1942-1947** (6 templates).
 
 3. **Wellmouth Creed Relics** (levels 45-55, cult-themed)
   - Jackal censers (`hold`, `ITEM_TREASURE`, weight 1-5 caster), wellmouth masks (`face`, weight 1-5 caster), anointing blades (`hold` + `ITEM_WEAPON`, `value3 = 1` slice, weight 6-10 melee), salt-oath rings (`finger`, weight 1-5 caster), chanter's robes (`body`, weight 1-5 caster), blood libation bowls (`hold`, `ITEM_TREASURE`, weight 1-5 caster).
   - `L` level lines: 45-55 range.
-  - Vnums: **8616-8625** (10 templates).
+  - Vnums: **1948-1957** (10 templates).
 
 4. **Cistern Antiquities** (levels 50-58, ancient engineering relics)
   - Calibration rods (`hold` + `ITEM_WEAPON`, `value3 = 7` pound, weight 6-10 melee), sluice-gate levers (`hold` + `ITEM_WEAPON` + `ITEM_TWO_HANDED`, `value3 = 11` pierce, weight 6-10 melee), cistern mail (`body`, weight 11-15 tank), limestone gauntlets (`hands`, weight 11-15 tank), keeper's circlet (`head`, weight 1-5 caster).
   - `L` level lines: 50-58 range.
-  - Vnums: **8626-8633** (8 templates).
+  - Vnums: **1958-1965** (8 templates).
 
 5. **Wyrm's Hoard / Boss Drops** (levels 55-60, elite)
   - Wyrm-scale hauberk (`body`, weight 11-15 tank), mineral-fang blade (`hold` + `ITEM_WEAPON`, `value3 = 11` pierce, weight 6-10 melee), aquifer-stone ring (`finger`, weight 1-5 caster), wyrm-eye amulet (`neck`, weight 1-5 caster), deep-spring mantle (`about`, weight 1-5 caster), hierophant's eclipse staff (`hold` + `ITEM_WEAPON` + `ITEM_TWO_HANDED`, `value3 = 7` pound, weight 1-5 caster), guardian's eternal plate (`body`, weight 11-15 tank).
   - Boss drops: must include `ITEM_BOSS` in `extra_flags`.
   - Loot-table drops: must include `ITEM_LOOT` in `extra_flags`.
   - `L` level lines: 55-60 range.
-  - Vnums: **8634-8643** (10 templates).
+  - Vnums: **1966-1975** (10 templates).
 
 6. **Lore Objects and Keys** (various levels)
   - Salt ledger tablet (`ITEM_TREASURE`, `hold`, weight 1-5), charter passage stone (`ITEM_TREASURE`, `hold`, weight 6-10), Keeper's water-level gauge (`ITEM_TREASURE`, `hold`, weight 1-5), Synod sanctum key (`ITEM_KEY`, `hold`, weight 1-5), cistern gate key (`ITEM_KEY`, `hold`, weight 1-5), wyrm lair key (`ITEM_KEY`, `hold`, weight 1-5).
   - Key objects: any key used as `<key_vnum>` for a locked door must exist in `#OBJECTS` with `item_type = ITEM_KEY` (`18`).
-  - Vnums: **8644-8649** (6 templates).
+  - Vnums: **1976-1981** (6 templates).
 
 ### Key Objects for Locked Doors
 
 Per `area_file_spec.md` section 8.3: if any door is reset to locked (`D` state `2`), `<key_vnum>` must be set to a valid key object vnum, and that key object must exist in `#OBJECTS`. Plan the following key objects:
 
-- **Synod Sanctum Key** (vnum 8647, for Zone C Hierophant's sanctum door at room 8658): `ITEM_KEY`, `hold` + `take`, weight 1.
-- **Cistern Gate Key** (vnum 8648, for Zone D east cistern access door at room 8678): `ITEM_KEY`, `hold` + `take`, weight 1.
-- **Wyrm Lair Key** (vnum 8649, for Zone E deep pool door at room 8697): `ITEM_KEY`, `hold` + `take`, weight 1.
+- **Synod Sanctum Key** (vnum 1979, for Zone C Hierophant's sanctum door at room 1990): `ITEM_KEY`, `hold` + `take`, weight 1.
+- **Cistern Gate Key** (vnum 1980, for Zone D east cistern access door at room 2010): `ITEM_KEY`, `hold` + `take`, weight 1.
+- **Wyrm Lair Key** (vnum 1981, for Zone E deep pool door at room 2029): `ITEM_KEY`, `hold` + `take`, weight 1.
 
 ### Mechanical Tone
 
@@ -506,17 +506,17 @@ Per `area_file_spec.md` section 12:
 
 Format: `M 0 <mob_vnum> <limit> <room_vnum> <notes>`
 
-- **Zone A (Approach Dunes):** Reset Reaver sentries at toll points (8610, 8612). Reset Reaver toll enforcers at approach rooms (8604, 8606, 8614). Reset Reave-Captain at 8618. Reset dune stalkers at outer dune rooms (8602, 8608). Reset glass scorpions at margin rooms (8605, 8615). Limit 1-2 per mob.
-- **Zone B (Living Oasis):** Reset Spring Warden NPCs at community rooms (Warden of the Last Spring at 8620, Water Clerk at 8620, Watch Captain at 8635, Basin Keeper at 8625). Reset Last Reed Tender at 8628. Reset Midgaard Scholar at 8630. Reset sand jackals at palm-ring margin rooms (8622, 8637). Reset basin vipers at water-edge rooms (8624, 8626). Limit 1 per mob.
-- **Zone C (Toll Pavilion):** Reset Spring Acolytes at entry rooms (8641, 8643). Reset Basin Chanters at chanting hall (8648). Reset Wellmouth Priests at ritual rooms (8652, 8656). Reset mini-boss Wellmouth Hierophant at 8659 (limit 1).
-- **Zone D (Cistern Ring):** Reset Oathbound Cistern Sentinels at guard rooms (8662, 8666, 8674). Reset Sluice Wardens at mechanism rooms (8664, 8670). Reset Archive Keepers at ledger rooms (8668). Reset mini-boss Cistern Guardian Eternal at 8679 (limit 1).
-- **Zone E (Flooded Depths):** Reset aquifer eels at flooded passages (8682, 8686, 8690). Reset mineral crabs at side chambers (8684, 8694). Reset blind cave fish swarms at channel rooms (8688, 8696). Reset final boss Oasis Wyrm at 8699 (limit 1).
+- **Zone A (Approach Dunes):** Reset Reaver sentries at toll points (1942, 1944). Reset Reaver toll enforcers at approach rooms (1936, 1938, 1946). Reset Reave-Captain at 1950. Reset dune stalkers at outer dune rooms (1934, 1940). Reset glass scorpions at margin rooms (1937, 1947). Limit 1-2 per mob.
+- **Zone B (Living Oasis):** Reset Spring Warden NPCs at community rooms (Warden of the Last Spring at 1952, Water Clerk at 1952, Watch Captain at 1967, Basin Keeper at 1957). Reset Last Reed Tender at 1960. Reset Midgaard Scholar at 1962. Reset sand jackals at palm-ring margin rooms (1954, 1969). Reset basin vipers at water-edge rooms (1956, 1958). Limit 1 per mob.
+- **Zone C (Toll Pavilion):** Reset Spring Acolytes at entry rooms (1973, 1975). Reset Basin Chanters at chanting hall (1980). Reset Wellmouth Priests at ritual rooms (1984, 1988). Reset mini-boss Wellmouth Hierophant at 1991 (limit 1).
+- **Zone D (Cistern Ring):** Reset Oathbound Cistern Sentinels at guard rooms (1994, 1998, 2006). Reset Sluice Wardens at mechanism rooms (1996, 2002). Reset Archive Keepers at ledger rooms (2000). Reset mini-boss Cistern Guardian Eternal at 2011 (limit 1).
+- **Zone E (Flooded Depths):** Reset aquifer eels at flooded passages (2014, 2018, 2022). Reset mineral crabs at side chambers (2016, 2026). Reset blind cave fish swarms at channel rooms (2020, 2028). Reset final boss Oasis Wyrm at 2031 (limit 1).
 
 ### Object Resets (`O` command)
 
 Format: `O 0 <obj_vnum> <limit> <room_vnum> <notes>`
 
-- Place lore objects (salt ledger tablet, charter passage stone, Keeper's water-level gauge) at key lore rooms (8630, 8668, 8694) for atmospheric pickup.
+- Place lore objects (salt ledger tablet, charter passage stone, Keeper's water-level gauge) at key lore rooms (1962, 2000, 2026) for atmospheric pickup.
 - Place key objects on gatekeeper mobs via `G`/`E` resets or in adjacent rooms via `O` resets.
 
 ### Equipment Resets (`G`/`E` commands)
@@ -540,28 +540,28 @@ Per `area_file_spec.md` section 8.3: any exit set to closed or locked via `D` re
 
 Planned door resets:
 
-1. **Zone C Synod Sanctum (room 8658):** Direction to 8659 (Hierophant's sanctum).
-  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: 8647 (Synod Sanctum Key).
-  - `D` reset: `D 0 8658 <dir> 2` (locked).
-  - Reverse exit on 8659 must also have `door` bit set.
-  - Key object (Synod Sanctum Key, vnum 8647) exists in `#OBJECTS`.
+1. **Zone C Synod Sanctum (room 1990):** Direction to 1991 (Hierophant's sanctum).
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: 1979 (Synod Sanctum Key).
+  - `D` reset: `D 0 1990 <dir> 2` (locked).
+  - Reverse exit on 1991 must also have `door` bit set.
+  - Key object (Synod Sanctum Key, vnum 1979) exists in `#OBJECTS`.
 
-2. **Zone D East Cistern Access (room 8678):** Direction to 8680 (flooded stairwell).
-  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: 8648 (Cistern Gate Key).
-  - `D` reset: `D 0 8678 5 2` (locked, direction down).
-  - Reverse exit on 8680 must also have `door` bit set.
-  - Key object (Cistern Gate Key, vnum 8648) exists in `#OBJECTS`.
+2. **Zone D East Cistern Access (room 2010):** Direction to 2012 (flooded stairwell).
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: 1980 (Cistern Gate Key).
+  - `D` reset: `D 0 2010 5 2` (locked, direction down).
+  - Reverse exit on 2012 must also have `door` bit set.
+  - Key object (Cistern Gate Key, vnum 1980) exists in `#OBJECTS`.
 
-3. **Zone E Deep Pool (room 8697):** Direction to 8699 (Wyrm's lair).
-  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: 8649 (Wyrm Lair Key).
-  - `D` reset: `D 0 8697 <dir> 2` (locked).
-  - Reverse exit on 8699 must also have `door` bit set.
-  - Key object (Wyrm Lair Key, vnum 8649) exists in `#OBJECTS`.
+3. **Zone E Deep Pool (room 2029):** Direction to 2031 (Wyrm's lair).
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: 1981 (Wyrm Lair Key).
+  - `D` reset: `D 0 2029 <dir> 2` (locked).
+  - Reverse exit on 2031 must also have `door` bit set.
+  - Key object (Wyrm Lair Key, vnum 1981) exists in `#OBJECTS`.
 
 All three doors reset to **locked** (state `2`). Keys can be placed on gatekeeper mobs via `G` resets or in adjacent rooms via `O` resets:
 - Synod Sanctum Key: dropped by or equipped on a Wellmouth Priest in a Zone C room.
-- Cistern Gate Key: found in the Ledger Vault (8668) or on an Archive Keeper mob.
-- Wyrm Lair Key: found in the Spring Vent Chamber (8694) or on a mineral crab mob.
+- Cistern Gate Key: found in the Ledger Vault (2000) or on an Archive Keeper mob.
+- Wyrm Lair Key: found in the Spring Vent Chamber (2026) or on a mineral crab mob.
 
 ### Spawn Philosophy
 
@@ -605,22 +605,22 @@ Per `area_file_spec.md` section 14, the final `.are` file should emit sections i
 ## Implementation Checklist
 
 ### Rooms
-- [ ] Populate all 100 room vnums (8600-8699) in ascending sequential order with no gaps.
+- [ ] Populate all 100 room vnums (1932-2031) in ascending sequential order with no gaps.
 - [ ] Write unique `<description>~` for every room (minimum 3 sentences; 5+ for important rooms).
 - [ ] Assign correct `sector_type` (`desert` for approach, `forest` for palm ring, `water_swim` for basin/flooded, `inside` for interiors) and `room_flags` per zone requirements.
-- [ ] Set `no_mob` on all boss rooms (8659, 8679, 8699).
-- [ ] Set `no_teleport` + `no_recall` on Zone E rooms (except 8680, 8699).
+- [ ] Set `no_mob` on all boss rooms (1991, 2011, 2031).
+- [ ] Set `no_teleport` + `no_recall` on Zone E rooms (except 2012, 2031).
 - [ ] Set `indoors` on all interior rooms (Zones C, D, E interior).
 - [ ] Ensure all exits are bi-directional with no directional loops.
 - [ ] Ensure all named exits use `^` prefix and are discoverable in room description, objects, or extra descriptions.
 - [ ] Ensure all extra-description keyword chains are anchored in the room's main `<description>~`.
 - [ ] Preserve all required worldgraph external connectors:
- - 8600 west to 8519 (Eastern Desert)
- - 8601-8609 north to 8880-8888 (future construction)
- - 8699 south to 9800 (Southern Oasis)
+ - 1932 west to 1851 (Eastern Desert)
+ - 1933-1941 north to 2212-2220 (future construction)
+ - 2031 south to 2539 (Southern Oasis)
 
 ### Mobiles
-- [ ] Write all ~32 mob templates (vnums 8600-8631) in ascending sequential order with no gaps.
+- [ ] Write all ~32 mob templates (vnums 1932-1963) in ascending sequential order with no gaps.
 - [ ] Ensure all mobs have `is_npc` + `stay_area` in `act` flags.
 - [ ] Ensure boss mobs have `sentinel` + `boss` + `no_flee` and are placed only in `no_mob` rooms.
 - [ ] Ensure strong non-boss mobs have `solo` flag.
@@ -630,7 +630,7 @@ Per `area_file_spec.md` section 14, the final `.are` file should emit sections i
 - [ ] Set `l`/`L` loot tables on boss mobs with valid object vnums; loot items have `ITEM_LOOT`.
 
 ### Objects
-- [ ] Write all ~50 object templates (vnums 8600-8649) in ascending sequential order with no gaps.
+- [ ] Write all ~50 object templates (vnums 1932-1981) in ascending sequential order with no gaps.
 - [ ] Ensure unique `<name>~` for every object in the area.
 - [ ] Ensure all objects include `ITEM_TAKE` in `wear_flags`.
 - [ ] Ensure no objects include `ITEM_WEAR_CLAN_COLORS`.
@@ -640,7 +640,7 @@ Per `area_file_spec.md` section 14, the final `.are` file should emit sections i
 - [ ] Assign correct weight ranges (1-5 caster, 6-10 melee, 11-15 tank).
 - [ ] Ensure weapon `value3` is thematically consistent; no `value3=0` without `ITEM_FIST`.
 - [ ] Ensure two-handed weapons have `ITEM_TWO_HANDED` flag.
-- [ ] Create all three key objects (Synod Sanctum Key 8647, Cistern Gate Key 8648, Wyrm Lair Key 8649).
+- [ ] Create all three key objects (Synod Sanctum Key 1979, Cistern Gate Key 1980, Wyrm Lair Key 1981).
 
 ### Resets
 - [ ] Write `M` resets for all planned mob placements with appropriate limits.
@@ -662,7 +662,7 @@ Per `area_file_spec.md` section 14, the final `.are` file should emit sections i
 
 ### Final Validation
 - [ ] Validate complete area file format against `docs/area_file_spec.md`.
-- [ ] Verify all vnums within `V 8600 8699` envelope.
+- [ ] Verify all vnums within `V 1932 2031` envelope.
 - [ ] Verify `#ROOMS` and `#MOBILES` and `#OBJECTS` each terminate with `#0`.
 - [ ] Verify `#RESETS`, `#SPECIALS` each terminate with `S`.
 - [ ] Verify canonical section order.

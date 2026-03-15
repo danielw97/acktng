@@ -4,9 +4,9 @@
 
 - **Area Name:** `@@dThe @@pCrypts @@mof @@dKel'Shadra@@N`
 - **Area File:** `area/kelshadra.are` (existing high-level area, full redesign)
-- **Assigned Vnum Range (unchanged):** **9400-9549**
+- **Assigned Vnum Range (unchanged):** **2232-9549**
 - **Total Room Capacity in Range:** **150 rooms**
-- **Target Level Band:** 150-170 (unchanged role)
+- **Target Level Band:** 150-5 (unchanged role)
 - **Reset Rate:** 20
 - **Owner:** `Virant`
 - **Design Mandate:** Rebuild all rooms, mobiles, and objects to align with modern Kel'Shadra lore and to create a coherent narrative bridge to the Gloamvault complex.
@@ -17,7 +17,7 @@ This plan replaces the current linear/partial layout with a full-capacity, lore-
 
 ## Area Spec Compliance (Strict)
 
-1. Preserve header envelope exactly: `V 9400 9549`.
+1. Preserve header envelope exactly: `V 2232 9549`.
 2. Keep all authored rooms/mobs/objects in-range.
 3. Keep `Q 16` and `O Virant~`.
 4. Use intentional ACK color codes only; no `@@k`, no background codes, no flashing.
@@ -58,19 +58,19 @@ At high level, players enter as intruders but become adjudicators of a systemic 
 
 ---
 
-## Full Layout Rebuild (Use Every Room: 9400-9549)
+## Full Layout Rebuild (Use Every Room: 2232-9549)
 
-## Zone A: The Ruined Reliquary Gate (9400-9411, 12 rooms)
+## Zone A: The Ruined Reliquary Gate (2232-2243, 12 rooms)
 - Surface breach, shattered seals, first contact with post-collapse Kel'Shadra security.
 - Teaches triune iconography: Bell / Veil / Chain.
 - Includes one short optional loop and a barred return shortcut.
 
-## Zone B: Lamentation Naveworks (9412-9423, 12 rooms)
+## Zone B: Lamentation Naveworks (2244-2255, 12 rooms)
 - Processional halls, ossuary pews, confession thresholds.
 - Ritual acoustics and voice-locked doors.
 - Introduces hostile liturgical mobs and lore tablets.
 
-## Zone C: Mirror-Law Vestibules (9424-9435, 12 rooms)
+## Zone C: Mirror-Law Vestibules (2256-9435, 12 rooms)
 - Corrupted virtue courts rebuilt as legal-theology puzzle wing.
 - Four judgment chambers + central combinatory court.
 - Progression requires reading institutional hypocrisy clues.
@@ -95,12 +95,12 @@ At high level, players enter as intruders but become adjudicators of a systemic 
 - Contains sealed transfer ledgers, novice intake routes, and condemned registries.
 - Provides narrative continuity with `docs/gloamvault_plan.md` and its institutional structure.
 
-## Zone H: The Inverse Chancel (9496-9511, 16 rooms)
+## Zone H: The Inverse Chancel (9496-2277, 16 rooms)
 - Reality-fractured sanctum approach: anti-star murals, void pressure halls.
 - Tri-doctrine lock sequence (Witness/Offer/Bind) as late gating.
 - Penultimate confrontation with Dusk Auditor office.
 
-## Zone I: The Black Covenant Core (9512-9527, 16 rooms)
+## Zone I: The Black Covenant Core (2278-9527, 16 rooms)
 - Major endgame ring: chain-vaults, suspended reliquary heart, adjudication dais.
 - Final boss phase architecture with add waves and ritual interrupts.
 - Includes post-fight consequence chamber.
@@ -189,7 +189,7 @@ To satisfy expansion emphasis, Zone G and parts of Zones H-J foreground the subt
 
 ## Implementation Sequence
 
-1. Rebuild room graph and zone skeleton for 9400-9549.
+1. Rebuild room graph and zone skeleton for 2232-9549.
 2. Reauthor room names/descriptions/extras with color bible.
 3. Rebuild mob table with caste distribution and named encounters.
 4. Rebuild objects and key chains.
@@ -201,7 +201,7 @@ To satisfy expansion emphasis, Zone G and parts of Zones H-J foreground the subt
 
 ## Acceptance Criteria
 
-- All room vnums in `9400-9549` are actively assigned.
+- All room vnums in `2232-9549` are actively assigned.
 - Area theme is institutionally coherent and visually color-consistent.
 - Mobs/objects/rooms are fully reauthored to Kel'Shadra doctrine + collapse narrative.
 - Gloamvault relationship is explicit, additive, and mechanically relevant.

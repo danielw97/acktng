@@ -1634,7 +1634,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
    }
 }
 
-#define TEMP_VNUM 3090
+#define TEMP_VNUM 1006
 
 extern int top_obj_index;
 

@@ -197,7 +197,7 @@ The Ashen Lattice earned its name from the fire scarring that marks its oldest t
 
 ## VI. Cross-Area Lore Integration
 
-### Connection to Kiess (vnums 13000-13099)
+### Connection to Kiess (vnums 3339-3438)
 
 Kiess is the Forest of Confusion's logistics and recovery base. The relationship is defined by practical dependency and institutional frustration:
 
@@ -210,7 +210,7 @@ Kiess is the Forest of Confusion's logistics and recovery base. The relationship
 
 The Forest of Confusion is Kiess's **unresolved frontier debt**: a place the city can enter, map, and fight in, but cannot yet fully domesticate.
 
-### Connection to the Verdant Depths (vnums 10000-10124)
+### Connection to the Verdant Depths (vnums 2739-2863)
 
 The Verdant Depths lie beyond the forest's northern reaches, accessible through a controlled transition in the dense woodland zone. The Forest of Confusion is the Verdant Depths' outermost defense perimeter — the zone of deliberate disorientation that the woodland's distributed intelligence maintains to discourage penetration toward its ancient core.
 
@@ -219,7 +219,7 @@ The Verdant Depths lie beyond the forest's northern reaches, accessible through 
 - Creatures in the forest's healthier zones (treants, hippogriffs, canopy-hunting fauna) operate as components of the Verdant immune response, shaped by millennia of selective pressure into territorial enforcers that cull blight-tainted organisms.
 - The transition from Forest of Confusion to Verdant Depths should feel like crossing from chaos to purpose: the disorientation lifts, the trees grow taller, the forest's attention becomes palpable rather than diffuse.
 
-### Connection to the Withered Depths (vnums 1000-1149)
+### Connection to the Withered Depths (vnums 291-440)
 
 The Withered Depths lie beneath and beyond the forest's most corrupted northern reaches, accessible through a second controlled transition in the dense woodland zone. The Forest of Confusion's magical disorientation component — the deteriorating druidic quarantine — is the Withered Depths' outermost symptom.
 
@@ -228,7 +228,7 @@ The Withered Depths lie beneath and beyond the forest's most corrupted northern 
 - Broken ones and other corruption-displaced creatures in the forest's mid-depth zones are products of the same institutional failure that created the Withered Depths: abandoned Conclave experiments, degrading containment, and preservation magic operating without purpose.
 - The transition from Forest of Confusion to Withered Depths should feel like crossing from confusion to wrongness: the disorientation gives way to clarity, but the clarity reveals a landscape where nothing dies properly and everything that should have decomposed persists in a state of animate rot.
 
-### Connection to Midgaard (vnums 3001-3200)
+### Connection to Midgaard (vnums 917-1116)
 
 Midgaard's relationship with the Forest of Confusion is mediated through Kiess and the Roc Road trade corridor:
 
@@ -236,7 +236,7 @@ Midgaard's relationship with the Forest of Confusion is mediated through Kiess a
 - The institutional chain linking Midgaard's sealed warrants to the Conclave's field trials (see `withered_depths_lore.md`, section IV) means the city bears indirect responsibility for the forest's condition. The forest's corruption is, in a very real sense, the long-term consequence of Midgaard's founding-era institutional crimes.
 - Midgaard's Granite Arcade archives contain ranger reports describing the Forest of Confusion as a "persistent navigation hazard" — filed as natural-history curiosities rather than strategic intelligence, a categorization that reflects the city's institutional tendency to ignore inconvenient data about its own past.
 
-### Connection to the Great Northern Forest (vnums 15500-15999)
+### Connection to the Great Northern Forest (vnums 3739-4238)
 
 The Forest of Confusion occupies the southwestern margin of the same continental forest system that extends northward through the Great Northern Forest to Kowloon's approaches. The ecological connection is direct: root-network signaling from the Verdant Depths propagates through the Forest of Confusion and into the Great Northern Forest's southern approaches. Red moss blooms in the Ancestor Deeps — warning signs of corrupted groves — may indicate that the Withered Depths' blight is spreading along these root channels, using the Forest of Confusion as a corridor.
 

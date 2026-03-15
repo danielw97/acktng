@@ -12,21 +12,21 @@ Evermeet did not fall in a single night. Over generations, its sprawling distric
 
 ### The Central Prism
 
-The city was planned around a luminous civic keystone known as the **Central Prism** (room `13055`), a continuity anchor recovered from the ruins of Evermeet's civic hall. The Prism is both memorial and practical center: public law, messaging, provisioning, and magical logistics are all positioned within steps of it, so travelers can recover, orient, and re-enter the frontier quickly. The Executioner stationed at the Prism is the visible instrument of the compact's uncompromising enforcement of peace inside city limits — disputes are mediated in the square, but violent breach of city law is answered immediately and publicly.
+The city was planned around a luminous civic keystone known as the **Central Prism** (room `3394`), a continuity anchor recovered from the ruins of Evermeet's civic hall. The Prism is both memorial and practical center: public law, messaging, provisioning, and magical logistics are all positioned within steps of it, so travelers can recover, orient, and re-enter the frontier quickly. The Executioner stationed at the Prism is the visible instrument of the compact's uncompromising enforcement of peace inside city limits — disputes are mediated in the square, but violent breach of city law is answered immediately and publicly.
 
 ### Three-Power Governance
 
 Founding charters divide Kiess governance among three factions held in deliberate tension:
 
-- **The Compact Temples** maintain sanctuary law, civic rites, and the Prism's memorial functions. The Temple of Concord (room `13035`) is their seat, housing the Shrine of the Compact Flame that symbolizes the original founding pact.
-- **The Trade Syndics** maintain market continuity, caravan contracts, and commerce infrastructure. Their administrative annex (room `13031`) coordinates the flow of goods along Roc Road from Midgaard and the frontier.
-- **Wall Command** maintains gate discipline, patrol rotation, and the city's four watchtowers. Their headquarters (room `13088`) oversees the sentries, scouts, and military supply lines that keep the walls staffed.
+- **The Compact Temples** maintain sanctuary law, civic rites, and the Prism's memorial functions. The Temple of Concord (room `3374`) is their seat, housing the Shrine of the Compact Flame that symbolizes the original founding pact.
+- **The Trade Syndics** maintain market continuity, caravan contracts, and commerce infrastructure. Their administrative annex (room `3370`) coordinates the flow of goods along Roc Road from Midgaard and the frontier.
+- **Wall Command** maintains gate discipline, patrol rotation, and the city's four watchtowers. Their headquarters (room `3427`) oversees the sentries, scouts, and military supply lines that keep the walls staffed.
 
 No single faction dominates. The Executioner post at the Central Prism is the legal mechanism that binds all three to a common peace code: each faction holds a seat on the tribunal, and each can invoke the Executioner's authority against the others if the compact is breached.
 
 ### Roc Road and the Eastern Approach
 
-Kiess's primary connection to the wider world runs east through the **East Gate** (room `13095`) onto Roc Road. This ancient highway connects to Midgaard, making Kiess the western terminus for caravans, adventurers, and military expeditions traveling between the civilized heartlands and the frontier. The north, east, and south approaches connect to Kiess's land borderlands, while the city's western edge opens to the sea and its harbor approaches.
+Kiess's primary connection to the wider world runs east through the **East Gate** (room `3434`) onto Roc Road. This ancient highway connects to Midgaard, making Kiess the western terminus for caravans, adventurers, and military expeditions traveling between the civilized heartlands and the frontier. The north, east, and south approaches connect to Kiess's land borderlands, while the city's western edge opens to the sea and its harbor approaches.
 
 ### The Forest of Confusion
 
@@ -58,7 +58,7 @@ The Verdant Depths — an ancient living woodland with distributed intelligence 
 
 ### Cross-Area Lore Integration
 
-#### Connection to Midgaard (vnums 3001–3200)
+#### Connection to Midgaard (vnums 917–1116)
 - **Roc Road commerce:** The Roc Road running east to Midgaard is Kiess's economic lifeline. Trade manifests, military supply coordination, and diplomatic dispatches flow along the road. Midgaard's Guard Command and Kiess's Wall Command share provisioning doctrine and emergency charter frameworks developed during the border wars.
 - **Shared institutional guilt:** Both cities' archives contain records of Conclave transfers. Midgaard's Reckoning faction and Kiess's charter prohibition represent two different responses to the same historical crime — exposure versus prevention. The Granite Arcade trade ledger entry in Midgaard—"forty iron bars and six condemned debtors" to "the mountain academy"—has a parallel in Kiess's obsidian disc, forming two points on the same institutional chain.
 - **Road Wardens:** Both cities fund road wardens who maintain the Roc Road. Kiess scouts' debriefing posts forward reports to Midgaard's road warden command.
@@ -70,12 +70,12 @@ The Verdant Depths — an ancient living woodland with distributed intelligence 
 - **Moon Sovereign theological discomfort:** Reports from the Southern Pyramid describing the Moon Sovereign's doctrine of lunar sovereignty and cyclical descent have reached the Temple of Concord through Midgaard's scholarly networks. The Temple's compact-flame theology — emphasizing civic renewal through collective light — finds the Moon Sovereign's emphasis on descent-into-darkness as a path to renewal theologically troubling. Temple records contain margin notes expressing this discomfort, and some compact theologians have argued that the Moon Sovereign's doctrine represents the same institutional nihilism that produced the Conclave.
 - **Oasis-Pyramid Corridor commerce:** The unified corridor thesis — treating the eastern desert's oases and pyramids as a single integrated system — reaches Kiess through Trade Syndic intelligence summaries. Kiess's markets receive authenticated desert artifacts, oasis herbs, and pyramid relics that have passed through both Southern Oasis provenance certification and Midgaard's authentication apparatus. The trade chain positions Kiess as a western consumer of goods that traverse the entire corridor.
 
-#### Connection to the Great Northern Forest (vnums 15500–15999)
+#### Connection to the Great Northern Forest (vnums 3739–4238)
 - **Indirect route:** The Great Northern Forest lies north of Midgaard, accessible from Kiess via the Roc Road east to Midgaard and then north. Forest products — timber, ore, herbs — reach Kiess through this trade chain.
 - **Ashfang intelligence:** Reports of Ashfang warband activity and Rootbound cult movements in the forest reach Kiess through Midgaard's road warden dispatches, informing Wall Command's threat assessments for the western frontier.
 - **Lantern Road connection:** The Lantern Road — Midgaard's formalized trade artery through the Great Northern Forest — feeds goods into the Roc Road corridor that sustains Kiess. Disruptions on the Lantern Road (Ashfang blockades, Rootbound cult activity) ripple through Midgaard's markets and reach Kiess as supply shortages and price increases within days.
 
-#### Connection to the Forest of Confusion (vnums 9600+)
+#### Connection to the Forest of Confusion (vnums 2339+)
 - **Northern frontier:** The Forest of Confusion is Kiess's most immediate wilderness threat, lying north of the city. Kiess serves as the staging base for expeditions into its disorienting depths.
 - **Three-force collision:** The forest represents the overlap of Kiess civic order, Verdant Depths ecological intelligence, and Withered Conclave residue. The confusion mists that give the forest its name are not natural weather but a failed druidic quarantine — an attempt to contain Withered Conclave blight that instead merged with the Verdant Depths' ecological intelligence to produce disorienting psychoactive fog.
 - **Wall Command frontier operations:** Wall Command organizes patrol rotations, rope-line corridors, and bell-post networks to maintain navigable routes through the forest's southern verge. Rope-line corridors — physical guide-ropes anchored between marked trees — allow patrols to navigate the mist-fields without becoming disoriented. Bell-post networks provide auditory navigation when visibility drops to zero. Wall Command's dispatch tablets — filed with route notation and threat assessments — are forwarded to Midgaard's road warden command as intelligence bulletins.
@@ -83,13 +83,13 @@ The Verdant Depths — an ancient living woodland with distributed intelligence 
 - **Temple of Concord moral lessons:** The Temple of Concord uses the Forest of Confusion as a cautionary reference in civic recitations. The forest's three-force collision — civic order, living ecology, and corrupted Conclave residue — is presented as a parable of what happens when institutional power (the Conclave) operates without accountability. The obsidian disc in the Syndic Council Annex, bearing the Conclave's triune seal, is referenced in these lessons as physical proof.
 - **Creature threats:** Centaurs, Ymmas, manscorpians, and neogi inhabit the forest. Kiess bounty boards and Wall Command threat briefings reference these creatures regularly. The named maze regions — including the Mire-Speakers' fungal garden territories — represent zones of particular danger and particular value, as the pharmacological resources harvested there command high prices in Kiess's markets.
 
-#### Connection to the Verdant Depths (vnums 10000–10124)
+#### Connection to the Verdant Depths (vnums 2739–2863)
 - **Kiess scouts as primary intelligence source:** Kiess scouts operating through the Forest of Confusion are the primary source of intelligence about the Verdant Depths' deeper reaches. Their reports — filed at north-ring debriefing posts — describe the three-aspect ecology (growth, decay, predation) and the Heartwood Guardians who protect the core. These reports are incorporated into Wall Command threat assessments and forwarded to Midgaard.
 - **Mire-Speaker pharmacological tradition:** Mire-Speaker compounds — particularly anti-fungal preparations and mist-fever treatments derived from deep-forest organisms — reach Kiess healers through forest trade routes. Declining availability of these deep-forest preparations (as Withered Depths blight pushes the Mire-Speakers' range inward) has become a supply concern for Kiess's central-ward medical operations.
 - **Temple of Concord incorporation:** The Temple of Concord incorporates deep-forest reports into its moral recitations, presenting the Verdant Depths' distributed intelligence — a forest that thinks in three aspects without central authority — as both a natural wonder and a theological challenge. The forest's ability to sustain itself without a governing compact is either an indictment of civic governance (Reckoning reading) or proof that intelligence without law produces unpredictable danger (Continuity reading).
 - **North-gate bulletin board:** Warnings about Verdant Depths conditions are posted at Kiess's north-gate bulletin board alongside Forest of Confusion patrol updates, creating a layered threat assessment visible to departing expeditions.
 
-#### Connection to the Withered Depths (vnums 1000–1149)
+#### Connection to the Withered Depths (vnums 291–440)
 - **Kiess as primary staging base:** Kiess serves as the primary staging base for expeditions into the Withered Depths, which are accessible through the Forest of Confusion's deeper reaches. Quartermaster supply trains cycle between the depot and forest-edge staging trails.
 - **Full institutional chain:** The Withered Depths lore traces the complete institutional chain from Midgaard's sealed warrants through the Conclave's mountain laboratories to the field-trial sites whose crystal residue became the Blightmother's domain. Kiess sits at the frontier end of this chain — its Wall Command monitors the blight's progression, its healers treat casualties, and its charter prohibition against sealed warrants is a direct response to the same Conclave practices that created the blight.
 - **Temple of Concord cautionary recitations:** The Temple uses the Withered Depths as its most powerful cautionary example: Conclave crystal implants in forest root systems produced the blight that now threatens Kiess's borderlands. The obsidian disc in the Syndic Council Annex is referenced as physical proof that Evermeet participated in the system that created this threat.

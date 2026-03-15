@@ -48,7 +48,7 @@ Scholars who have studied both the Sunken Sanctum's surviving records and the co
 
 If this connection is genuine, the Blightmother is not a natural blight-creature at all but the final product of a Conclave process that completed itself in the absence of human oversight. The crystal matrices implanted in the root systems achieved their designed function — they created a self-sustaining ward entity — but without the Conclave's calibration, the entity optimized for survival rather than service. It wards nothing. It serves no one. It simply grows, consumes, and defends its territory with the single-minded intensity of a preservation enchantment that has forgotten what it was meant to preserve.
 
-The pulsing membrane that seals the Blightmother's sanctum (the locked door between rooms 1134 and 1135) is not organic tissue — it is biological material that has been restructured by crystal resonance into a living lock, functionally identical to the runic seals the Conclave used to protect its vault approaches. The key required to open it (vnum 1001, dropped by a withered druid) likely responds to residual Conclave authority signatures that the druid's equipment absorbed through prolonged exposure.
+The pulsing membrane that seals the Blightmother's sanctum (the locked door between rooms 425 and 426) is not organic tissue — it is biological material that has been restructured by crystal resonance into a living lock, functionally identical to the runic seals the Conclave used to protect its vault approaches. The key required to open it (vnum 292, dropped by a withered druid) likely responds to residual Conclave authority signatures that the druid's equipment absorbed through prolonged exposure.
 
 ---
 
@@ -58,7 +58,7 @@ The pulsing membrane that seals the Blightmother's sanctum (the locked door betw
 
 Long before the Conclave's trials, the forests that would become the Withered Depths were tended by a druidic order whose name has been lost. These druids were not affiliated with either Midgaard or Kowloon — they predated both cities and answered to no civic authority. Their tradition held that the forest was a living archive, that every tree recorded its history in its growth rings, and that the accumulated memory of an old-growth forest was a form of wisdom that human institutions could never match.
 
-The druids maintained the forest through controlled burning, selective planting, and ritual communion with the woodland spirits. Their stone circles — remnants of which survive in the Miasma Bog (Zone 6, rooms 1105–1113) as the "partially submerged ruins of an old druid circle" — served as gathering places for seasonal rituals that synchronized the forest's growth cycles with celestial patterns. The druidic tradition shares conceptual DNA with the **Cairn-Keepers** of the Great Northern Forest's Ancestor Deeps (see `great_northern_forest_lore.md`), who practiced a similar form of ancestor communion at standing stones. Whether the two orders were branches of a single tradition or independent developments is unknown, but their methods — stone circles, ritual calendars, spirit communion — are strikingly parallel.
+The druids maintained the forest through controlled burning, selective planting, and ritual communion with the woodland spirits. Their stone circles — remnants of which survive in the Miasma Bog (Zone 6, rooms 396–404) as the "partially submerged ruins of an old druid circle" — served as gathering places for seasonal rituals that synchronized the forest's growth cycles with celestial patterns. The druidic tradition shares conceptual DNA with the **Cairn-Keepers** of the Great Northern Forest's Ancestor Deeps (see `great_northern_forest_lore.md`), who practiced a similar form of ancestor communion at standing stones. Whether the two orders were branches of a single tradition or independent developments is unknown, but their methods — stone circles, ritual calendars, spirit communion — are strikingly parallel.
 
 ### The Druids and the Conclave
 
@@ -74,7 +74,7 @@ Then the druids died.
 
 The druidic order's decline was not dramatic. It was demographic. Their tradition required decades of apprenticeship, and the order had never been large. As the northern forests became more dangerous — Ashfang warbands (see `great_northern_forest_lore.md`) raiding deeper into the interior, trade route disruptions cutting off the isolated communities that supplied apprentices — recruitment failed. The last generation of druids maintained their counter-rituals with diminishing numbers and failing strength.
 
-The withered druids found in the Heartrot Grove (Zone 7, vnum 1022) are the undead remnants of this final generation. They died at their posts, still performing the containment rituals, and the crystal resonance that they had spent their lives opposing preserved their bodies and bound their spirits to the same endless pattern. They are not hostile by choice — they are hostile because their binding has reduced them to a single behavioral loop: perform the ritual, defend the site, perform the ritual. The "pulsing blight key" (vnum 1001) that they carry is not a key in the conventional sense — it is a ritual implement that the druids used to open and close the containment seals, now corrupted into a mechanism that responds to the Blightmother's own crystal-laced barriers.
+The withered druids found in the Heartrot Grove (Zone 7, vnum 313) are the undead remnants of this final generation. They died at their posts, still performing the containment rituals, and the crystal resonance that they had spent their lives opposing preserved their bodies and bound their spirits to the same endless pattern. They are not hostile by choice — they are hostile because their binding has reduced them to a single behavioral loop: perform the ritual, defend the site, perform the ritual. The "pulsing blight key" (vnum 292) that they carry is not a key in the conventional sense — it is a ritual implement that the druids used to open and close the containment seals, now corrupted into a mechanism that responds to the Blightmother's own crystal-laced barriers.
 
 When the last druids fell, the confusion mists lost their calibrated purpose. Without druidic maintenance, the mists became a symptom rather than a quarantine — diffusing outward in an expanding cloud that made the entire surrounding forest disorienting without actually containing the corruption. The Withered Depths began to spread.
 
@@ -124,7 +124,7 @@ The Withered Depths' corruption operates along a gradient that corresponds to th
 
 **Zone 5 (The Ancient Canopy):** The corruption expressed vertically. The treetop environment shows a different face of the blight — the upper canopy receives enough sunlight to partially counteract the preservation magic, creating a zone where growth and decay cycle rapidly in the same tissue. Branches sprout new growth and rot simultaneously. Vine bridges form and dissolve within days. The creatures here — canopy stalkers, gloomwing moths, corrupted birds of prey — navigate a three-dimensional environment that is constantly restructuring itself.
 
-**Zone 6 (The Miasma Bog):** The corruption's liquid expression. The preservation magic's interaction with groundwater has produced a fetid swamp where organic matter dissolves into a toxic slurry that the crystal resonance prevents from fully breaking down. The water is not merely stagnant — it is chemically active, producing poisonous gases that hang in low clouds above the surface. The partially submerged ruins of the old druid circle (rooms 1105–1113) are the most visible reminder that this zone was once tended woodland, not swampland. The bogs formed when the corruption blocked natural drainage channels, flooding the low ground with water that the crystal resonance converted into a preservation medium for everything it touched.
+**Zone 6 (The Miasma Bog):** The corruption's liquid expression. The preservation magic's interaction with groundwater has produced a fetid swamp where organic matter dissolves into a toxic slurry that the crystal resonance prevents from fully breaking down. The water is not merely stagnant — it is chemically active, producing poisonous gases that hang in low clouds above the surface. The partially submerged ruins of the old druid circle (rooms 396–404) are the most visible reminder that this zone was once tended woodland, not swampland. The bogs formed when the corruption blocked natural drainage channels, flooding the low ground with water that the crystal resonance converted into a preservation medium for everything it touched.
 
 **Zone 7 (The Heartrot Grove):** The corruption's source. This is where the highest concentration of Conclave crystal matrices remains embedded in the root systems, and where the Blightmother has established her nexus. The trees pulse with a sickly purple glow — the visible signature of crystal resonance operating at maximum amplitude without calibration. The ground is spongy and organic, more living tissue than soil, as centuries of unchecked preservation magic have blurred the distinction between earth and organism. The air is oppressive, thick with spore clouds and the ozone scent of active magical discharge.
 
@@ -160,7 +160,7 @@ The three-element signature also appears in the area's boss creatures:
 
 ## VII. Cross-Area Lore Integration
 
-### Connection to the Sunken Sanctum (vnums 9500–9599)
+### Connection to the Sunken Sanctum (vnums 2266–9599)
 
 The Withered Depths are the Sunken Sanctum's ecological legacy. The same institutional carelessness that destroyed the sanctum — an isolated academy that consumed its own people in pursuit of preservation — is expressed in the Depths on a geological timescale. The connection is speculative in-world (no surviving Conclave record explicitly names the trial sites), but adventurers who clear both areas will recognize the parallels.
 
@@ -170,13 +170,13 @@ Specific connections:
 - The withered druids' behavioral loops (perform the ritual, defend the site) mirror the sanctum's bound spirits who "replay unfinished catalogues."
 - The phrase carved repeatedly in the sanctum — "The mountain remembers what we refused" — finds its ecological counterpart in the Withered Depths: the forest remembers what the Conclave implanted and refused to retrieve.
 
-### Connection to the Great Northern Forest (vnums 15500–15999)
+### Connection to the Great Northern Forest (vnums 3739–4238)
 
 The Withered Depths are accessible through the Forest of Confusion, which itself connects to the broader Great Northern Forest network. The ecological relationship is direct: the blight that seeps from the Withered Depths affects timber and herb quality along forest trade routes. Red moss blooms in the Great Northern Forest's Ancestor Deeps (see `great_northern_forest_lore.md`) — the warning sign of corrupted groves — may indicate that the Withered Depths' corruption is spreading beyond the confusion mists' deteriorating quarantine.
 
 The Great Northern Forest's Rootbound cult (see `great_northern_forest_lore.md`) has a complex relationship with the Withered Depths. The Rootbound believe the forest itself is a sleeping deity, and they interpret the corruption as the deity's dream turning into nightmare. The **Thornmother** — the Rootbound's leader, operating from a hidden grove in the Ancestor Deeps — reportedly seeks to commune with the Blightmother, believing the two entities are expressions of the same sleeping will. Whether this is theological delusion or genuine insight into the corruption's nature is unresolved.
 
-### Connection to Midgaard (vnums 3001–3200)
+### Connection to Midgaard (vnums 917–1116)
 
 Midgaard has no direct physical link to the Withered Depths but is affected by the ecological consequences. The institutional chain linking Midgaard's sealed warrants to the Conclave's field trials (see section IV above) means the city bears indirect responsibility for the blight — a fact that feeds the Continuity-vs-Reckoning political tension.
 
@@ -186,19 +186,19 @@ Specific connections:
 - The Granite Arcade archives contain a single trade ledger entry recording payment to "the mountain academy" (the Conclave) — evidence of the institutional pipeline that produced the Withered Depths' corruption.
 - Rangers who patrol the northern reaches of the Great Northern Forest occasionally encounter travelers descending from the Cinderteeth passes who claim to have heard bells ringing inside the mountain — echoes of the sanctum's surviving systems.
 
-### Connection to Kowloon (vnums 14000–14099)
+### Connection to Kowloon (vnums 3439–3538)
 
 Kowloon's connection to the Withered Depths is institutional rather than geographic. The city's Ash Cult cells (see `kowloon_lore.md`) preach that the Conclave's destruction was divine punishment for scholars who defied the mountains' verdict — the same theological argument they apply to the Ashfall Monsoon. The Ember Speaker reportedly claims to possess a fragment of Conclave crystal that "still hums with the mountain's judgment." If authentic, this fragment could provide evidence linking the Conclave's crystal technology to the Withered Depths' corruption.
 
 Kowloon's Courier Lantern Office maintains a sealed registry of mountain expeditions that never returned, dating back to the decades after the sanctum's burial. Some entries bear the jade seals of Kowloon's own Jade Magistracy, suggesting the city once sent sanctioned recovery teams and suppressed the results.
 
-### Connection to Kiess (vnums 13000–13099)
+### Connection to Kiess (vnums 3339–3438)
 
 Kiess is the primary staging base for expeditions into the Forest of Confusion and its deeper reaches. The city's institutional memory of the Conclave is preserved in two forms: the obsidian disc in the Syndic Council Annex bearing the Conclave's triune seal, and the Temple of Concord's cautionary recitations about institutional overreach.
 
 Kiess scouts have reported both the Verdant Depths and the Withered Depths as accessible via Roc Road and the Forest of Confusion. These reports are forwarded to Midgaard's road warden command as intelligence bulletins. The practical consequence: Kiess's Wall Command posts warnings about "blight-tainted zones" on its north-gate bulletin boards, and quartermaster supply trains that cycle between Kiess and forest-edge staging trails carry anti-toxin provisions for scouts entering the confusion mists.
 
-### Connection to the Verdant Depths (vnums 10000–10124)
+### Connection to the Verdant Depths (vnums 2739–2863)
 
 The Verdant Depths and the Withered Depths are twin expressions of the same forest system under different pressures. The Verdant Depths represent the forest's natural power — ancient, predatory, alien, but organically coherent. The Withered Depths represent that same power corrupted by external magical interference.
 

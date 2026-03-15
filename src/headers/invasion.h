@@ -11,7 +11,7 @@
 /* -----------------------------------------------------------------------
  * Tuning constants
  * --------------------------------------------------------------------- */
-#define INVASION_SPAWN_VNUM     3110   /* Gertrude's room – also the target */
+#define INVASION_SPAWN_VNUM     1026   /* Gertrude's room – also the target */
 #define INVASION_START_VNUM     30000  /* Room where the invasion spawns in  */
                                        /* Change this to a suitable entry    */
                                        /* point in your world.               */

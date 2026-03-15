@@ -247,10 +247,10 @@ To align with broader area-writing style in existing docs, the Gloamvault should
 
 ### Midgaard — The Threshold City
 
-The Gloamvault's only current physical entrance runs through Midgaard's Violet Reliquary Arch (room `3005`), a registry checkpoint established during Midgaard's Containment Era under the Violet Compact. This makes the Gloamvault not merely adjacent to Midgaard — it is jurisdictionally defined by it. When a player descends from room `3005` into room `30100`, they cross a threshold that Midgaard's civic doctrine has spent generations trying to manage.
+The Gloamvault's only current physical entrance runs through Midgaard's Violet Reliquary Arch (room `921`), a registry checkpoint established during Midgaard's Containment Era under the Violet Compact. This makes the Gloamvault not merely adjacent to Midgaard — it is jurisdictionally defined by it. When a player descends from room `921` into room `5031`, they cross a threshold that Midgaard's civic doctrine has spent generations trying to manage.
 
 **The Violet Compact and the Gloamvault:**
-Midgaard's Violet Compact legalized tightly bounded occult handling under registry supervision. Its three principles — registry primacy, containment over destruction, and civic oversight of thresholds — were designed specifically for passages like the one leading to the Gloamvault. The Ward-Sigil Inspectors who patrol the approach to room `3005` are direct descendants of the Compact's original checkpoint wardens. Their violet lacquer, posted civic notices, and ward sigils are all elements mandated by Compact text.
+Midgaard's Violet Compact legalized tightly bounded occult handling under registry supervision. Its three principles — registry primacy, containment over destruction, and civic oversight of thresholds — were designed specifically for passages like the one leading to the Gloamvault. The Ward-Sigil Inspectors who patrol the approach to room `921` are direct descendants of the Compact's original checkpoint wardens. Their violet lacquer, posted civic notices, and ward sigils are all elements mandated by Compact text.
 
 But the Compact's reach stops at the threshold. Below ground, Midgaard has no enforcement capacity. Persons who descend are considered to have "left Midgaard" for jurisdictional purposes — a legal fiction that allows the city to maintain its identity as an ordered, lawful place while acknowledging that order has limits. This ambiguity is central to the Gloamvault's narrative: the vault has always existed in the space between civic control and abandoned authority.
 
@@ -343,7 +343,7 @@ Higher-tier shadow crypt areas can reveal where Velastra's copied doctrine migra
 
 ## The Gloamvault's Relationship to Midgaard's Undercity
 
-The physical entrance to the Gloamvault runs through Midgaard's Violet Reliquary Arch at room `3005`. This is not a random dungeon entrance — it is a jurisdictional threshold, managed under the Violet Compact's civic oversight of thresholds.
+The physical entrance to the Gloamvault runs through Midgaard's Violet Reliquary Arch at room `921`. This is not a random dungeon entrance — it is a jurisdictional threshold, managed under the Violet Compact's civic oversight of thresholds.
 
 During the vault's operational centuries, the threshold was a busy administrative border. Bell Synod representatives maintained an above-ground office near the Arch, processing confession tariff payments, scheduling testimony appointments, and issuing descent permits. Midgaard's Ward-Sigil Inspectors monitored traffic at the threshold but had no authority below it. The arrangement was mutually convenient: Midgaard collected regulatory fees, and the vault operated with institutional independence.
 

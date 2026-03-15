@@ -6,8 +6,8 @@
 **File Name:** `the_northern_oasis.are`
 **Keyword:** `the northern oasis`
 **Level Range:** 45-65 (`I 45 65`)
-**Vnum Range (fixed):** **8700-8899** (`V 8700 8899`)
-**Room Count Target:** 200/200 vnums used
+**Vnum Range (fixed):** **2032-2231** (`V 2032 2231`)
+**Room Count Target:** 35/35 vnums used
 **Design Goal:** Replace repetitive lane/patrol generation with a coherent story area: a functioning but politically strained oasis quarter where water adjudication, caravan protection, and relic trafficking intersect. The Northern Oasis is the measured frontier of the Great Oasis system — the place where water becomes policy.
 
 This plan keeps the existing vnum envelope exactly as assigned and fully reworks room flow, encounter identity, objectization, and narrative progression.
@@ -64,7 +64,7 @@ All directives per `area_file_spec.md` section 3:
 - `L @@W(@@l45 65@@W)@@N~` — white parens, blue level numbers, white close paren, reset, `~`-terminated
 - `N <allocate at implementation time>` — area number; must be confirmed unused across all loaded area files
 - `I 45 65` — min/max level; controls mob-level gating and area matching
-- `V 8700 8899` — full 200-vnum envelope; all rooms, mobs, and objects must stay within this range
+- `V 2032 2231` — full 35-vnum envelope; all rooms, mobs, and objects must stay within this range
 - `F 15` — reset frequency in minutes
 - `U @@awater trickles through the intake sluices as the Northern Oasis measures another day@@N~` — reset message; no double-newlines, `~`-terminated
 - `O Virant~` — area owner must always be Virant (owner policy)
@@ -87,7 +87,7 @@ Per `area_file_spec.md` section 2:
 
 ## Area Structure (Room Topology)
 
-Target ~200 rooms in five connected bands, using all vnums 8700-8899:
+Target ~35 rooms in five connected bands, using all vnums 2032-2231:
 
 ### Room Description Requirements (spec compliance)
 
@@ -118,70 +118,70 @@ Per `area_file_spec.md` sections 8.1 and 8.2:
 Per `area_file_spec.md` section 13.1:
 
 - Room vnums must be assigned in ascending sequential order with no gaps.
-- All 200 room vnums (8700-8899) must be used; fill every available room-vnum slot.
+- All 35 room vnums (2032-2231) must be used; fill every available room-vnum slot.
 
-### Band 1: North Approach Dunes (8700-8739, 40 rooms)
+### Band 1: North Approach Dunes (2032-2071, 40 rooms)
 
 Entry/combat zone. Caravan mile stones, wind-worn watch cairns, predatory fauna. Multiple ingress paths from eastern approaches.
 
 - Sector: `desert` (`10`) throughout.
 - Key rooms:
- - **8700** Eastern Desert Road Junction (important room, 5+ sentence description; external connector from Eastern Desert charter routes).
- - **8710** Charter Mile Marker Ridge (first branch hub; important room, 5+ sentence description with `E` extra descriptions for charter stone inscriptions).
- - **8720** Reaver Ambush Wash (combat hotspot; narrow terrain with high mob density).
- - **8730** Windbreak Cairn Circle (lore room; important room, 5+ sentence description with `E` extra descriptions for weathered survey glyphs).
- - **8739** Oasis Threshold (transition into settlement; important room, 5+ sentence description).
+ - **2032** Eastern Desert Road Junction (important room, 5+ sentence description; external connector from Eastern Desert charter routes).
+ - **2042** Charter Mile Marker Ridge (first branch hub; important room, 5+ sentence description with `E` extra descriptions for charter stone inscriptions).
+ - **2052** Reaver Ambush Wash (combat hotspot; narrow terrain with high mob density).
+ - **2062** Windbreak Cairn Circle (lore room; important room, 5+ sentence description with `E` extra descriptions for weathered survey glyphs).
+ - **2071** Oasis Threshold (transition into settlement; important room, 5+ sentence description).
 
-### Band 2: Reedline Intake Quarter (8740-8779, 40 rooms)
+### Band 2: Reedline Intake Quarter (2072-2111, 40 rooms)
 
 Social + utility zone. Wells, sluice gates, maintenance walkways, ration court. Neutral-to-guarded interactions.
 
 - Sector: mix of `city` (`1`) for open-air wells and plazas and `inside` (`11`) for sluice chambers and ration court interiors.
 - Indoor rooms use `room_flags` including `indoors` (`8`).
 - Key rooms:
- - **8740** Intake Gate (important room, 5+ sentence description; named exit `^intake gate` discoverable in description).
- - **8748** Main Well Plaza (central hub; important room, 5+ sentence description).
- - **8755** Sluice Control Chamber (inside sector; important room, 5+ sentence description with `E` extra descriptions for sluice mechanisms and flow gauges).
- - **8765** Ration Court Hall (inside sector; important room, 5+ sentence description; civil arbitration for water quota disputes).
- - **8779** Reed Terrace Passage (connects to Cairn Market; important room).
+ - **2072** Intake Gate (important room, 5+ sentence description; named exit `^intake gate` discoverable in description).
+ - **2080** Main Well Plaza (central hub; important room, 5+ sentence description).
+ - **2087** Sluice Control Chamber (inside sector; important room, 5+ sentence description with `E` extra descriptions for sluice mechanisms and flow gauges).
+ - **2097** Ration Court Hall (inside sector; important room, 5+ sentence description; civil arbitration for water quota disputes).
+ - **2111** Reed Terrace Passage (connects to Cairn Market; important room).
 
-### Band 3: Cairn Market and Ledger Ward (8780-8819, 40 rooms)
+### Band 3: Cairn Market and Ledger Ward (2112-2151, 40 rooms)
 
 Trade/civil zone. Contract scribes, weighing courts, bonded caravans. Quest hooks tied to manifests, shortages, and forged seals.
 
 - Sector: `city` (`1`) for outdoor market stalls and plazas; `inside` (`11`) for scribe offices and weighing court interiors.
 - Key rooms:
- - **8780** Cairn Market Entrance (important room, 5+ sentence description).
- - **8790** Weighing Court (lore-critical arbitration room; inside sector; important room, 5+ sentence description with chained `E` extra descriptions for ledger entries, forged seals, and manifest disputes).
- - **8800** Bonded Caravan Yard (outdoor staging area; important room, 5+ sentence description).
- - **8808** Scribe's Archive Hall (inside sector; important room with `E` extra descriptions for charter copies, survey records, and pyramid-era requisition marks).
- - **8819** Ledger Ward Rear Gate (connects to Dry Cistern Undercut; important room).
+ - **2112** Cairn Market Entrance (important room, 5+ sentence description).
+ - **2122** Weighing Court (lore-critical arbitration room; inside sector; important room, 5+ sentence description with chained `E` extra descriptions for ledger entries, forged seals, and manifest disputes).
+ - **2132** Bonded Caravan Yard (outdoor staging area; important room, 5+ sentence description).
+ - **2140** Scribe's Archive Hall (inside sector; important room with `E` extra descriptions for charter copies, survey records, and pyramid-era requisition marks).
+ - **2151** Ledger Ward Rear Gate (connects to Dry Cistern Undercut; important room).
 
-### Band 4: Dry Cistern Undercut (8820-8859, 40 rooms)
+### Band 4: Dry Cistern Undercut (2152-2191, 40 rooms)
 
 Dungeon loop. Partial collapses, old Keeper tunnels, scavenger nests. Primary source of relic drops and mini-boss encounters.
 
 - Sector: `inside` (`11`) throughout; `room_flags` includes `indoors` (`8`) and `dark` (`1`).
 - Key rooms:
- - **8820** Cistern Access Shaft (zone entry; important room, 5+ sentence description; vertical connector via D4 up / D5 down exits).
- - **8830** Collapsed Keeper Tunnel (lore room with Keeper-era survey instruments embedded in walls; important room, 5+ sentence description).
- - **8838** Scavenger Nest Den (high mob density; combat hub).
- - **8845** Old Sluice Junction (old hydraulic infrastructure; important room with `E` extra descriptions for ancient flow marks and measurement glyphs).
- - **8852** Salt-Jackal Ritual Chamber (cult mini-boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description).
- - **8859** Deep Cistern Passage (connects to High Adjudicator Terrace; important room).
+ - **2152** Cistern Access Shaft (zone entry; important room, 5+ sentence description; vertical connector via D4 up / D5 down exits).
+ - **2162** Collapsed Keeper Tunnel (lore room with Keeper-era survey instruments embedded in walls; important room, 5+ sentence description).
+ - **2170** Scavenger Nest Den (high mob density; combat hub).
+ - **2177** Old Sluice Junction (old hydraulic infrastructure; important room with `E` extra descriptions for ancient flow marks and measurement glyphs).
+ - **2184** Salt-Jackal Ritual Chamber (cult mini-boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description).
+ - **2191** Deep Cistern Passage (connects to High Adjudicator Terrace; important room).
 
-### Band 5: High Adjudicator Terrace (8860-8899, 40 rooms)
+### Band 5: High Adjudicator Terrace (2192-2231, 40 rooms)
 
 Boss + resolution zone. Water-court chamber, shrine to oath-stones, final conflict. Outcome framing should support faction choices.
 
 - Sector: mix of `city` (`1`) for outdoor terrace and shrine rooms and `inside` (`11`) for court chamber and archive interiors.
 - Key rooms:
- - **8860** Terrace Approach Stair (important room, 5+ sentence description; transition from undercut to adjudication zone).
- - **8870** Oath-Stone Shrine (lore-critical room; important room, 5+ sentence description with chained `E` extra descriptions for oath-stone inscriptions tracing back to Keeper-era Water Court traditions).
- - **8880** High Adjudicator's Antechamber (pre-boss staging; important room, 5+ sentence description).
- - **8890** Water Court Chamber (primary boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description; named exit `^court chamber` discoverable in description).
- - **8895** Archive of Disputed Quotas (lore room; inside sector; chained `E` extra descriptions for contradicting quota records).
- - **8899** Northern Road (external connector toward northern routes and Northern Pyramid approach; important room, 5+ sentence description).
+ - **2192** Terrace Approach Stair (important room, 5+ sentence description; transition from undercut to adjudication zone).
+ - **2202** Oath-Stone Shrine (lore-critical room; important room, 5+ sentence description with chained `E` extra descriptions for oath-stone inscriptions tracing back to Keeper-era Water Court traditions).
+ - **2212** High Adjudicator's Antechamber (pre-boss staging; important room, 5+ sentence description).
+ - **2222** Water Court Chamber (primary boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description; named exit `^court chamber` discoverable in description).
+ - **2227** Archive of Disputed Quotas (lore room; inside sector; chained `E` extra descriptions for contradicting quota records).
+ - **2231** Northern Road (external connector toward northern routes and Northern Pyramid approach; important room, 5+ sentence description).
 
 ### Connectivity Principles
 
@@ -189,7 +189,7 @@ Per `area_file_spec.md` section 8 directional traversal constraints:
 
 - **All exits must be bi-directional**: if room A connects to room B through direction X, room B must provide the opposite-direction exit back to room A. No one-way exits (this area is not a maze).
 - **No directional loops**: repeated movement in the same direction must not return to a previously visited room. The spec prohibits room connection loops (e.g., `a -> b -> c -> a`) unless all rooms in the set are flagged `ROOM_MAZE`.
-- **Hub-and-spoke structure**: the plan uses hub rooms at band transitions (Oasis Threshold 8739, Main Well Plaza 8748, Cairn Market Entrance 8780, Cistern Access Shaft 8820, Terrace Approach Stair 8860) to provide route variety without circular loops.
+- **Hub-and-spoke structure**: the plan uses hub rooms at band transitions (Oasis Threshold 2071, Main Well Plaza 2080, Cairn Market Entrance 2112, Cistern Access Shaft 2152, Terrace Approach Stair 2192) to provide route variety without circular loops.
 - **Multiple traversal options between bands**: at least 2 branching paths connect each pair of adjacent bands, providing route variety without circular loops.
 - **External exits preserved** where legacy worldgraph depends on them, but contextualized via renamed rooms/exits with bi-directional counterparts.
 - **Door usage** limited to intake gates, cistern hatches, and court doors. Every door exit must have `EX_ISDOOR` (`1`) set in `<locks>`. Door initial state (open/closed/locked) is authored through `#RESETS` command `D`, not through room exit `<locks>` bits. Any locked door (`D` state `2`) must have `<key_vnum>` set to a valid key object vnum, and that key object must exist in `#OBJECTS`.
@@ -203,8 +203,8 @@ Per `area_file_spec.md` section 8 directional traversal constraints:
 
 Per `area_file_spec.md` section 13.1:
 
-- Mob vnums must be assigned in ascending sequential order with no gaps, starting from 8700.
-- Target composition: ~45 mob templates (vnums 8700-8744).
+- Mob vnums must be assigned in ascending sequential order with no gaps, starting from 2032.
+- Target composition: ~45 mob templates (vnums 2032-2076).
 
 ### Mobile Spec Compliance (all mobs)
 
@@ -267,8 +267,8 @@ Per `area_file_spec.md` sections 4.1-5.5:
 
 All boss mobs: `act` includes `is_npc` + `stay_area` + `sentinel` + `boss` + `aggressive` + `no_flee`. Placed only in rooms flagged `no_mob`.
 
-- **Secondary Boss (8852, Band 4):** Cistern Scavenger-Matriarch. Level 58. Melee profile with bestial combat. `act` adds `remember` (`8`). `affected_by`: `infrared` (`512`). Items dropped must include `ITEM_BOSS` flag. Loot table (`l`/`L`) used for boss drops.
-- **Primary Boss (8890, Band 5):** Warden-Commander (corrupted by scarcity politics — civil tragedy angle). Level 65. Hybrid profile with strong melee and defensive casting. `act` adds `remember` (`8`). Assigned `spec_cast_cleric` in `#SPECIALS`. `affected_by`: `detect_invis` (`8`), `infrared` (`512`). Items dropped must include `ITEM_BOSS` flag. Loot table (`l`/`L`) used for boss drops.
+- **Secondary Boss (2184, Band 4):** Cistern Scavenger-Matriarch. Level 58. Melee profile with bestial combat. `act` adds `remember` (`8`). `affected_by`: `infrared` (`512`). Items dropped must include `ITEM_BOSS` flag. Loot table (`l`/`L`) used for boss drops.
+- **Primary Boss (2222, Band 5):** Warden-Commander (corrupted by scarcity politics — civil tragedy angle). Level 65. Hybrid profile with strong melee and defensive casting. `act` adds `remember` (`8`). Assigned `spec_cast_cleric` in `#SPECIALS`. `affected_by`: `detect_invis` (`8`), `infrared` (`512`). Items dropped must include `ITEM_BOSS` flag. Loot table (`l`/`L`) used for boss drops.
 
 ---
 
@@ -278,9 +278,9 @@ All boss mobs: `act` includes `is_npc` + `stay_area` + `sentinel` + `boss` + `ag
 
 Per `area_file_spec.md` section 13.1:
 
-- Object vnums must be assigned in ascending sequential order with no gaps, starting from 8700.
-- Expand through contiguous sequential slots (suggested through **8764**) while staying within the 8700-8899 vnum envelope.
-- Target composition: ~65 object templates (vnums 8700-8764).
+- Object vnums must be assigned in ascending sequential order with no gaps, starting from 2032.
+- Expand through contiguous sequential slots (suggested through **2096**) while staying within the 2032-2231 vnum envelope.
+- Target composition: ~65 object templates (vnums 2032-2096).
 - Within the area, object `<name>~` values must be unique (no duplicate item names in the same area file).
 
 ### Object Spec Compliance (all objects)
@@ -351,9 +351,9 @@ Per `area_file_spec.md` sections 7.3 and 7.6:
 
 Per `area_file_spec.md` section 8.3: if any door is reset to locked (`D` state `2`), `<key_vnum>` must be set to a valid key object vnum, and that key object must exist in `#OBJECTS`. Plan the following key objects:
 
-- **Intake Gate Key** (for Intake Gate 8740 door): `ITEM_KEY`, `hold` + `take`, weight 1.
-- **Cistern Hatch Key** (for Cistern Access Shaft 8820 door): `ITEM_KEY`, `hold` + `take`, weight 1.
-- **Court Chamber Key** (for Water Court Chamber 8890 door): `ITEM_KEY`, `hold` + `take`, weight 1.
+- **Intake Gate Key** (for Intake Gate 2072 door): `ITEM_KEY`, `hold` + `take`, weight 1.
+- **Cistern Hatch Key** (for Cistern Access Shaft 2152 door): `ITEM_KEY`, `hold` + `take`, weight 1.
+- **Court Chamber Key** (for Water Court Chamber 2222 door): `ITEM_KEY`, `hold` + `take`, weight 1.
 
 ---
 
@@ -368,17 +368,17 @@ Per `area_file_spec.md` section 12:
 
 Format: `M 0 <mob_vnum> <limit> <room_vnum> <notes>`
 
-- **Band 1 (North Approach Dunes):** Reset dune fauna across approach rooms (sand vipers, dune jackals, glass scorpions at 8705, 8712, 8720, 8725). Reset Sunscar Reaver skirmishers at ambush rooms (8720, 8728). Limit 1-2 per mob.
-- **Band 2 (Reedline Intake Quarter):** Reset Reedline Warden guards at intake rooms (8740, 8748, 8755). Reset sluice engineers at Control Chamber (8755). Limit 1 per mob.
-- **Band 3 (Cairn Market and Ledger Ward):** Reset Cairn Broker NPCs at market rooms (8780, 8790, 8800, 8808). Reset Sunscar Reaver scouts at market periphery (8785). Limit 1 per mob.
-- **Band 4 (Dry Cistern Undercut):** Reset cistern scavenger fauna (8825, 8830, 8838). Reset Salt-Jackal Offshoot cult mobs at ritual nodes (8845, 8852). Reset secondary boss Cistern Scavenger-Matriarch at 8852 (limit 1).
-- **Band 5 (High Adjudicator Terrace):** Reset Reedline Warden elite guards at terrace rooms (8860, 8870, 8880). Reset primary boss Warden-Commander at 8890 (limit 1).
+- **Band 1 (North Approach Dunes):** Reset dune fauna across approach rooms (sand vipers, dune jackals, glass scorpions at 2037, 2044, 2052, 2057). Reset Sunscar Reaver skirmishers at ambush rooms (2052, 2060). Limit 1-2 per mob.
+- **Band 2 (Reedline Intake Quarter):** Reset Reedline Warden guards at intake rooms (2072, 2080, 2087). Reset sluice engineers at Control Chamber (2087). Limit 1 per mob.
+- **Band 3 (Cairn Market and Ledger Ward):** Reset Cairn Broker NPCs at market rooms (2112, 2122, 2132, 2140). Reset Sunscar Reaver scouts at market periphery (2117). Limit 1 per mob.
+- **Band 4 (Dry Cistern Undercut):** Reset cistern scavenger fauna (2157, 2162, 2170). Reset Salt-Jackal Offshoot cult mobs at ritual nodes (2177, 2184). Reset secondary boss Cistern Scavenger-Matriarch at 2184 (limit 1).
+- **Band 5 (High Adjudicator Terrace):** Reset Reedline Warden elite guards at terrace rooms (2192, 2202, 2212). Reset primary boss Warden-Commander at 2222 (limit 1).
 
 ### Object Resets (`O` command)
 
 Format: `O 0 <obj_vnum> <limit> <room_vnum> <notes>`
 
-- Place lore objects (flow ledger fragments, charter stone rubbings) in key lore rooms (8730, 8808, 8870) for atmospheric pickup.
+- Place lore objects (flow ledger fragments, charter stone rubbings) in key lore rooms (2062, 2140, 2202) for atmospheric pickup.
 - Place key objects near their corresponding doors or on gatekeeper mobs via `G`/`E` resets.
 
 ### Equipment Resets (`G`/`E` commands)
@@ -397,20 +397,20 @@ Per `area_file_spec.md` section 8.3: any exit set to closed or locked via `D` re
 
 Planned door resets:
 
-1. **Intake Gate (8740):** Direction appropriate to approach from dunes.
+1. **Intake Gate (2072):** Direction appropriate to approach from dunes.
   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Intake Gate Key object.
-  - `D` reset: `D 0 8740 <dir> 1` (closed, not locked — intake gate, opened by wardens).
+  - `D` reset: `D 0 2072 <dir> 1` (closed, not locked — intake gate, opened by wardens).
   - Reverse exit must also have `door` bit set.
 
-2. **Cistern Access Shaft (8820):** Direction down (D5) to Dry Cistern Undercut.
+2. **Cistern Access Shaft (2152):** Direction down (D5) to Dry Cistern Undercut.
   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Cistern Hatch Key object.
-  - `D` reset: `D 0 8820 5 2` (locked).
-  - Reverse exit on 8821 (or appropriate vnum) must also have `door` bit set.
+  - `D` reset: `D 0 2152 5 2` (locked).
+  - Reverse exit on 2153 (or appropriate vnum) must also have `door` bit set.
   - Key object (Cistern Hatch Key) must exist in `#OBJECTS`.
 
-3. **Water Court Chamber (8890):** Direction into boss room.
+3. **Water Court Chamber (2222):** Direction into boss room.
   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Court Chamber Key object.
-  - `D` reset: `D 0 8890 <dir> 2` (locked).
+  - `D` reset: `D 0 2222 <dir> 2` (locked).
   - Reverse exit must also have `door` bit set.
   - Key object (Court Chamber Key) must exist in `#OBJECTS`.
 
@@ -434,9 +434,9 @@ Per `area_file_spec.md` section 10:
 
 Per `area_file_spec.md` section 9:
 
-- **Main Well Plaza (8748):** Reedline Warden water vendor mob sells provisions. `<keeper>` = vendor mob vnum, appropriate `<buy_type>` slots, reasonable profit margins, daytime operating hours.
-- **Cairn Market Entrance (8780):** Cairn Broker trade goods vendor. Similar shop configuration.
-- **Bonded Caravan Yard (8800):** Caravan outfitter selling travel gear. Similar shop configuration.
+- **Main Well Plaza (2080):** Reedline Warden water vendor mob sells provisions. `<keeper>` = vendor mob vnum, appropriate `<buy_type>` slots, reasonable profit margins, daytime operating hours.
+- **Cairn Market Entrance (2112):** Cairn Broker trade goods vendor. Similar shop configuration.
+- **Bonded Caravan Yard (2132):** Caravan outfitter selling travel gear. Similar shop configuration.
 
 ---
 
@@ -459,9 +459,9 @@ Per `area_file_spec.md` section 14, the final `.are` file should emit sections i
 
 ## Reset and Economy Plan
 
-- **Early (Bands 1-2, 8700-8779):** Desert approach navigation, fauna encounters, intake quarter exploration, social NPC interactions. Reedline Warden and dune fauna populate the scene. Level 45-55 content.
-- **Mid (Band 3, 8780-8819):** Market trade, arbitration disputes, manifest quests, peripheral reaver encounters. Cairn Brokers and quest hooks. Level 50-55 content.
-- **Late (Bands 4-5, 8820-8899):** Cistern dungeon delve, cult encounters, boss showdowns, water-court resolution. Salt-Jackal cult and both bosses. Level 55-65 content.
+- **Early (Bands 1-2, 2032-2111):** Desert approach navigation, fauna encounters, intake quarter exploration, social NPC interactions. Reedline Warden and dune fauna populate the scene. Level 45-55 content.
+- **Mid (Band 3, 2112-2151):** Market trade, arbitration disputes, manifest quests, peripheral reaver encounters. Cairn Brokers and quest hooks. Level 50-55 content.
+- **Late (Bands 4-5, 2152-2231):** Cistern dungeon delve, cult encounters, boss showdowns, water-court resolution. Salt-Jackal cult and both bosses. Level 55-65 content.
 
 Loot profile:
 - Distinct reset clusters by district (approach, market, undercut, terrace).
@@ -483,18 +483,18 @@ Implementation should prioritize:
 ## Implementation Checklist
 
 ### Rooms
-- [ ] Populate all 200 room vnums (8700-8899) in ascending sequential order with no gaps.
+- [ ] Populate all 35 room vnums (2032-2231) in ascending sequential order with no gaps.
 - [ ] Write unique `<description>~` for every room (minimum 3 sentences; 5+ for important rooms).
 - [ ] Assign correct `sector_type` (`desert` for approach, `city` for settlement, `inside` for interiors) and `room_flags` per band requirements.
-- [ ] Set `no_mob` on all boss rooms (8852, 8890).
-- [ ] Set `dark` on Dry Cistern Undercut rooms (8820-8859).
+- [ ] Set `no_mob` on all boss rooms (2184, 2222).
+- [ ] Set `dark` on Dry Cistern Undercut rooms (2152-2191).
 - [ ] Ensure all exits are bi-directional with no directional loops.
 - [ ] Ensure all named exits use `^` prefix and are discoverable in room description, objects, or extra descriptions.
 - [ ] Ensure all extra-description keyword chains are anchored in the room's main `<description>~`.
 - [ ] Preserve required worldgraph external connectors while renaming and recontextualizing local rooms.
 
 ### Mobiles
-- [ ] Write all ~45 mob templates (vnums 8700-8744) in ascending sequential order with no gaps.
+- [ ] Write all ~45 mob templates (vnums 2032-2076) in ascending sequential order with no gaps.
 - [ ] Ensure all mobs have `is_npc` + `stay_area` in `act` flags.
 - [ ] Ensure boss mobs have `sentinel` + `boss` + `no_flee` and are placed only in `no_mob` rooms.
 - [ ] Ensure strong non-boss mobs have `solo` flag.
@@ -504,7 +504,7 @@ Implementation should prioritize:
 - [ ] Set `l`/`L` loot tables on boss mobs with valid object vnums; loot items have `ITEM_LOOT`.
 
 ### Objects
-- [ ] Write all ~65 object templates (vnums 8700-8764) in ascending sequential order with no gaps.
+- [ ] Write all ~65 object templates (vnums 2032-2096) in ascending sequential order with no gaps.
 - [ ] Ensure unique `<name>~` for every object in the area.
 - [ ] Ensure all objects include `ITEM_TAKE` in `wear_flags`.
 - [ ] Ensure no objects include `ITEM_WEAR_CLAN_COLORS`.
@@ -535,7 +535,7 @@ Implementation should prioritize:
 
 ### Final Validation
 - [ ] Validate complete area file format against `docs/area_file_spec.md`.
-- [ ] Verify all vnums within `V 8700 8899` envelope.
+- [ ] Verify all vnums within `V 2032 2231` envelope.
 - [ ] Verify `#ROOMS` and `#MOBILES` and `#OBJECTS` each terminate with `#0`.
 - [ ] Verify `#RESETS`, `#SPECIALS` each terminate with `S`.
 - [ ] Verify canonical section order.

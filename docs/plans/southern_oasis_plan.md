@@ -6,8 +6,8 @@
 **File Name:** `the_southern_oasis.are`
 **Keyword:** `the southern oasis`
 **Level Range:** 50-70 (`I 50 70`)
-**Vnum Range (fixed):** **9800-9999** (`V 9800 9999`)
-**Room Count Target:** 200/200 vnums used
+**Vnum Range (fixed):** **2539-2738** (`V 2539 2738`)
+**Room Count Target:** 35/35 vnums used
 **Design Goal:** Replace the current repetitive "future pyramid road" lane pattern and rebuild the area as an active civic-military basin linked to southern pyramid expeditions and regional trade. The Southern Oasis is the fortified hinge between oasis civil life and pyramid frontier risk — an armed staging ground, not a patrol template.
 
 This plan keeps the existing vnum envelope exactly as assigned and fully reworks room flow, encounter identity, objectization, and narrative progression.
@@ -63,7 +63,7 @@ All directives per `area_file_spec.md` section 3:
 - `L @@W(@@l50 70@@W)@@N~` — white parens, blue level numbers, white close paren, reset, `~`-terminated
 - `N <allocate at implementation time>` — area number; must be confirmed unused across all loaded area files
 - `I 50 70` — min/max level; controls mob-level gating and area matching
-- `V 9800 9999` — full 200-vnum envelope; all rooms, mobs, and objects must stay within this range
+- `V 2539 2738` — full 35-vnum envelope; all rooms, mobs, and objects must stay within this range
 - `F 15` — reset frequency in minutes
 - `U @@lwater drums echo through the Southern Oasis as convoy lanterns flare along the causeway@@N~` — reset message; no double-newlines, `~`-terminated
 - `O Virant~` — area owner must always be Virant (owner policy)
@@ -86,7 +86,7 @@ Per `area_file_spec.md` section 2:
 
 ## Area Structure (Room Topology)
 
-Target ~200 rooms in six district sets, using all vnums 9800-9999:
+Target ~35 rooms in six district sets, using all vnums 2539-2738:
 
 ### Room Description Requirements (spec compliance)
 
@@ -118,81 +118,81 @@ Per `area_file_spec.md` sections 8.1 and 8.2:
 Per `area_file_spec.md` section 13.1:
 
 - Room vnums must be assigned in ascending sequential order with no gaps.
-- All 200 room vnums (9800-9999) must be used; fill every available room-vnum slot.
+- All 35 room vnums (2539-2738) must be used; fill every available room-vnum slot.
 
-### District 1: Lantern Causeway (9800-9834, 35 rooms)
+### District 1: Lantern Causeway (2539-2573, 35 rooms)
 
 Entry spine and external connectors. Convoy choke points, permit checks, caravan camp edges.
 
 - Sector: `city` (`1`) for paved causeway rooms; `desert` (`10`) for outer approach dunes.
 - Key rooms:
- - **9800** Western Causeway Gate (important room, 5+ sentence description; external connector to Great Oasis routes).
- - **9808** Lantern Inspection Post (convoy permit checkpoint; important room, 5+ sentence description).
- - **9815** Caravan Camp Margin (hub connecting to Bazaar and Bastion districts; important room, 5+ sentence description).
- - **9825** Eastern Approach Road (external connector toward Eastern Desert charter routes).
- - **9834** Southern Causeway Fork (transition toward South Survey Gate; important room, 5+ sentence description).
+ - **2539** Western Causeway Gate (important room, 5+ sentence description; external connector to Great Oasis routes).
+ - **2547** Lantern Inspection Post (convoy permit checkpoint; important room, 5+ sentence description).
+ - **2554** Caravan Camp Margin (hub connecting to Bazaar and Bastion districts; important room, 5+ sentence description).
+ - **2564** Eastern Approach Road (external connector toward Eastern Desert charter routes).
+ - **2573** Southern Causeway Fork (transition toward South Survey Gate; important room, 5+ sentence description).
 
-### District 2: Canopy Bazaar (9835-9869, 35 rooms)
+### District 2: Canopy Bazaar (2574-2608, 35 rooms)
 
 Social and economic hub. Brokers, quartermasters, relic appraisers, dispute clerks.
 
 - Sector: `city` (`1`) throughout.
 - Key rooms:
- - **9835** Bazaar Entrance Arch (important room, 5+ sentence description).
- - **9842** Quartermaster's Exchange (trade hub; important room with `E` extra descriptions for posted manifests).
- - **9850** Relic Appraisal Court (lore room; important room, 5+ sentence description with chained `E` extra descriptions for examined relics).
- - **9858** Dispute Clerks' Gallery (civil arbitration hall; inside sector).
- - **9869** Bazaar Rear Gate (connects to Sluice Bastion).
+ - **2574** Bazaar Entrance Arch (important room, 5+ sentence description).
+ - **2581** Quartermaster's Exchange (trade hub; important room with `E` extra descriptions for posted manifests).
+ - **2589** Relic Appraisal Court (lore room; important room, 5+ sentence description with chained `E` extra descriptions for examined relics).
+ - **2597** Dispute Clerks' Gallery (civil arbitration hall; inside sector).
+ - **2608** Bazaar Rear Gate (connects to Sluice Bastion).
 
-### District 3: Sluice Bastion (9870-9899, 30 rooms)
+### District 3: Sluice Bastion (2609-2638, 30 rooms)
 
 Military-water infrastructure. Gatehouses, pump works, ration locks, defensive terraces.
 
 - Sector: mix of `city` (`1`) for outdoor fortification terraces and `inside` (`11`) for interior pump works and gatehouse rooms.
 - Indoor rooms use `room_flags` including `indoors` (`8`).
 - Key rooms:
- - **9870** Bastion Outer Gate (important room, 5+ sentence description; named exit `^bastion gate` discoverable in description).
- - **9878** Pump Works Central (lore-critical engineering room; inside sector; important room, 5+ sentence description with `E` extra descriptions for sluice mechanisms).
- - **9885** Ration Lock Chamber (important room; inside sector).
- - **9892** Warden Command Terrace (important room, 5+ sentence description; outdoor sector).
- - **9899** Bastion Rear Passage (connects to Embalmer's Yard and Sub-Basin Tunnels).
+ - **2609** Bastion Outer Gate (important room, 5+ sentence description; named exit `^bastion gate` discoverable in description).
+ - **2617** Pump Works Central (lore-critical engineering room; inside sector; important room, 5+ sentence description with `E` extra descriptions for sluice mechanisms).
+ - **2624** Ration Lock Chamber (important room; inside sector).
+ - **2631** Warden Command Terrace (important room, 5+ sentence description; outdoor sector).
+ - **2638** Bastion Rear Passage (connects to Embalmer's Yard and Sub-Basin Tunnels).
 
-### District 4: Embalmer's Yard Annex (9900-9924, 25 rooms)
+### District 4: Embalmer's Yard Annex (2639-2663, 25 rooms)
 
 Former preparation quarter repurposed for expedition dead. Introduces pyramid funerary bleed-through without becoming a tomb zone.
 
 - Sector: `inside` (`11`) throughout; `room_flags` includes `indoors` (`8`).
 - Key rooms:
- - **9900** Embalmer's Yard Gate (important room, 5+ sentence description; named exit `^yard gate` discoverable in description).
- - **9906** Preparation Hall (lore room with embalming motifs from Southern Pyramid tradition; important room, 5+ sentence description).
- - **9912** Casualty Ledger Archive (chained `E` extra descriptions for expedition death records and pyramid-origin curse notations).
- - **9918** Mortuary Circle Sanctum (Tribunal Splinter secondary boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description).
- - **9924** Sealed Descent (connects to Sub-Basin Tunnels via locked door).
+ - **2639** Embalmer's Yard Gate (important room, 5+ sentence description; named exit `^yard gate` discoverable in description).
+ - **2645** Preparation Hall (lore room with embalming motifs from Southern Pyramid tradition; important room, 5+ sentence description).
+ - **2651** Casualty Ledger Archive (chained `E` extra descriptions for expedition death records and pyramid-origin curse notations).
+ - **2657** Mortuary Circle Sanctum (Tribunal Splinter secondary boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description).
+ - **2663** Sealed Descent (connects to Sub-Basin Tunnels via locked door).
 
-### District 5: Sub-Basin Tunnels (9925-9959, 35 rooms)
+### District 5: Sub-Basin Tunnels (2664-2698, 35 rooms)
 
 Smuggler channels, sink chambers, hostile fauna/cult ambushes.
 
 - Sector: `inside` (`11`) throughout; `room_flags` includes `indoors` (`8`) and `dark` (`1`).
 - Key rooms:
- - **9925** Tunnel Access Shaft (important room, 5+ sentence description; vertical connector via D4 up / D5 down exits).
- - **9935** Smuggler's Cache (loot room with contraband relic fragments).
- - **9942** Sink Chamber (hazard room with water/collapse danger; important room, 5+ sentence description).
- - **9950** Cult Ambush Junction (Tribunal Splinter patrol hub).
- - **9959** Deep Basin Access (connects to South Survey Gate district).
+ - **2664** Tunnel Access Shaft (important room, 5+ sentence description; vertical connector via D4 up / D5 down exits).
+ - **2674** Smuggler's Cache (loot room with contraband relic fragments).
+ - **2681** Sink Chamber (hazard room with water/collapse danger; important room, 5+ sentence description).
+ - **2689** Cult Ambush Junction (Tribunal Splinter patrol hub).
+ - **2698** Deep Basin Access (connects to South Survey Gate district).
 
-### District 6: South Survey Gate (9960-9999, 40 rooms)
+### District 6: South Survey Gate (2699-2738, 40 rooms)
 
 Forward command for pyramid-road claims and legal jurisdiction conflict. Boss zone and southern transition.
 
 - Sector: mix of `city` (`1`) for military plaza rooms and `inside` (`11`) for command chambers.
 - Key rooms:
- - **9960** Survey Gate Approach (important room, 5+ sentence description; transition from tunnels to military zone).
- - **9970** Forward Command Hall (important room, 5+ sentence description; inside sector; named exit `^command hall` discoverable).
- - **9980** Jurisdiction Court (lore-critical room where water-law and pyramid-claim doctrines collide; important room, 5+ sentence description with chained `E` extra descriptions).
- - **9990** Marshal's Redoubt (pre-boss staging; important room, 5+ sentence description).
- - **9995** South Survey Gate (primary boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description).
- - **9999** Southern Road (external connector toward Southern Pyramid approach routes; important room, 5+ sentence description).
+ - **2699** Survey Gate Approach (important room, 5+ sentence description; transition from tunnels to military zone).
+ - **2709** Forward Command Hall (important room, 5+ sentence description; inside sector; named exit `^command hall` discoverable).
+ - **2719** Jurisdiction Court (lore-critical room where water-law and pyramid-claim doctrines collide; important room, 5+ sentence description with chained `E` extra descriptions).
+ - **2729** Marshal's Redoubt (pre-boss staging; important room, 5+ sentence description).
+ - **2734** South Survey Gate (primary boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description).
+ - **2738** Southern Road (external connector toward Southern Pyramid approach routes; important room, 5+ sentence description).
 
 ### Connectivity Principles
 
@@ -200,7 +200,7 @@ Per `area_file_spec.md` section 8 directional traversal constraints:
 
 - **All exits must be bi-directional**: if room A connects to room B through direction X, room B must provide the opposite-direction exit back to room A. No one-way exits (this area is not a maze).
 - **No directional loops**: repeated movement in the same direction must not return to a previously visited room. The spec prohibits room connection loops (e.g., `a -> b -> c -> a`) unless all rooms in the set are flagged `ROOM_MAZE`.
-- **Hub-and-spoke structure**: the plan uses hub rooms at district transitions (Caravan Camp Margin 9815, Bastion Outer Gate 9870, Embalmer's Yard Gate 9900, Survey Gate Approach 9960) to provide route variety without circular loops.
+- **Hub-and-spoke structure**: the plan uses hub rooms at district transitions (Caravan Camp Margin 2554, Bastion Outer Gate 2609, Embalmer's Yard Gate 2639, Survey Gate Approach 2699) to provide route variety without circular loops.
 - **Multiple traversal options between districts**: at least 2 branching paths connect each pair of adjacent districts, providing route variety without circular loops.
 - **External exits preserved** where legacy worldgraph depends on them, but contextualized via renamed rooms/exits with bi-directional counterparts.
 - **Door usage** limited to bastion gates, vault shutters, and embalmer seals. Every door exit must have `EX_ISDOOR` (`1`) set in `<locks>`. Door initial state (open/closed/locked) is authored through `#RESETS` command `D`, not through room exit `<locks>` bits. Any locked door (`D` state `2`) must have `<key_vnum>` set to a valid key object vnum, and that key object must exist in `#OBJECTS`.
@@ -214,8 +214,8 @@ Per `area_file_spec.md` section 8 directional traversal constraints:
 
 Per `area_file_spec.md` section 13.1:
 
-- Mob vnums must be assigned in ascending sequential order with no gaps, starting from 9800.
-- Target composition: ~50 mob templates (vnums 9800-9849).
+- Mob vnums must be assigned in ascending sequential order with no gaps, starting from 2539.
+- Target composition: ~50 mob templates (vnums 2539-2588).
 
 ### Mobile Spec Compliance (all mobs)
 
@@ -279,8 +279,8 @@ Per `area_file_spec.md` sections 4.1-5.5:
 
 All boss mobs: `act` includes `is_npc` + `stay_area` + `sentinel` + `boss` + `aggressive` + `no_flee`. Placed only in rooms flagged `no_mob`.
 
-- **Secondary Boss (9918, District 4):** Tribunal Splinter Adjudicator. Level 65. Caster profile with curse-verdict mechanics. Assigned `spec_cast_cleric` in `#SPECIALS`. `affected_by`: `detect_invis` (`8`), `detect_hidden` (`32`). Items dropped must include `ITEM_BOSS` flag. Loot table (`l`/`L`) used for boss drops.
-- **Primary Boss (9995, District 6):** Survey Gate Marshal. Level 70. Hybrid profile with strong melee and defensive casting. `act` adds `remember` (`8`). Assigned `spec_cast_judge` in `#SPECIALS`. `affected_by`: `detect_invis` (`8`), `infrared` (`512`). Items dropped must include `ITEM_BOSS` flag. Loot table (`l`/`L`) used for boss drops.
+- **Secondary Boss (2657, District 4):** Tribunal Splinter Adjudicator. Level 65. Caster profile with curse-verdict mechanics. Assigned `spec_cast_cleric` in `#SPECIALS`. `affected_by`: `detect_invis` (`8`), `detect_hidden` (`32`). Items dropped must include `ITEM_BOSS` flag. Loot table (`l`/`L`) used for boss drops.
+- **Primary Boss (2734, District 6):** Survey Gate Marshal. Level 70. Hybrid profile with strong melee and defensive casting. `act` adds `remember` (`8`). Assigned `spec_cast_judge` in `#SPECIALS`. `affected_by`: `detect_invis` (`8`), `infrared` (`512`). Items dropped must include `ITEM_BOSS` flag. Loot table (`l`/`L`) used for boss drops.
 
 ---
 
@@ -290,9 +290,9 @@ All boss mobs: `act` includes `is_npc` + `stay_area` + `sentinel` + `boss` + `ag
 
 Per `area_file_spec.md` section 13.1:
 
-- Object vnums must be assigned in ascending sequential order with no gaps, starting from 9800.
-- Expand through contiguous sequential slots (suggested through **9870**) while staying within the 9800-9999 vnum envelope.
-- Target composition: ~71 object templates (vnums 9800-9870).
+- Object vnums must be assigned in ascending sequential order with no gaps, starting from 2539.
+- Expand through contiguous sequential slots (suggested through **2609**) while staying within the 2539-2738 vnum envelope.
+- Target composition: ~71 object templates (vnums 2539-2609).
 - Within the area, object `<name>~` values must be unique (no duplicate item names in the same area file).
 
 ### Object Spec Compliance (all objects)
@@ -359,10 +359,10 @@ Per `area_file_spec.md` sections 7.3 and 7.6:
 
 Per `area_file_spec.md` section 8.3: if any door is reset to locked (`D` state `2`), `<key_vnum>` must be set to a valid key object vnum, and that key object must exist in `#OBJECTS`. Plan the following key objects:
 
-- **Bastion Gate Key** (for Bastion Outer Gate 9870 door): `ITEM_KEY`, `hold` + `take`, weight 1.
-- **Embalmer's Seal Key** (for Embalmer's Yard Gate 9900 door): `ITEM_KEY`, `hold` + `take`, weight 1.
-- **Sealed Descent Key** (for District 4-to-5 transition 9924 door): `ITEM_KEY`, `hold` + `take`, weight 1.
-- **Command Hall Key** (for Forward Command Hall 9970 door): `ITEM_KEY`, `hold` + `take`, weight 1.
+- **Bastion Gate Key** (for Bastion Outer Gate 2609 door): `ITEM_KEY`, `hold` + `take`, weight 1.
+- **Embalmer's Seal Key** (for Embalmer's Yard Gate 2639 door): `ITEM_KEY`, `hold` + `take`, weight 1.
+- **Sealed Descent Key** (for District 4-to-5 transition 2663 door): `ITEM_KEY`, `hold` + `take`, weight 1.
+- **Command Hall Key** (for Forward Command Hall 2709 door): `ITEM_KEY`, `hold` + `take`, weight 1.
 
 ---
 
@@ -377,18 +377,18 @@ Per `area_file_spec.md` section 12:
 
 Format: `M 0 <mob_vnum> <limit> <room_vnum> <notes>`
 
-- **District 1 (Lantern Causeway):** Reset Bastion Warden sentries at causeway checkpoints (9800, 9808, 9825). Reset convoy marshals at Caravan Camp Margin (9815). Limit 1-2 per mob.
-- **District 2 (Canopy Bazaar):** Reset Bazaar Syndic NPCs at trade rooms (9842, 9850, 9858). Reset relic appraisers at Appraisal Court (9850). Limit 1 per mob.
-- **District 3 (Sluice Bastion):** Reset Bastion Warden guards at gate and terrace rooms (9870, 9878, 9892). Reset pump engineers at Pump Works Central (9878). Limit 1 per mob.
-- **District 4 (Embalmer's Yard):** Reset Mortuary Circle embalmers at preparation rooms (9906, 9912). Reset secondary boss Tribunal Splinter Adjudicator at 9918 (limit 1).
-- **District 5 (Sub-Basin Tunnels):** Reset tunnel fauna across tunnel rooms (tunnel scorpions, basin vipers at 9930, 9935, 9942). Reset smuggler operatives at 9935, 9950. Limit 1-2 per mob.
-- **District 6 (South Survey Gate):** Reset Tribunal Splinter hostile mobs at approach rooms (9960, 9970). Reset Bastion Warden elite guards at Marshal's Redoubt (9990). Reset primary boss Survey Gate Marshal at 9995 (limit 1).
+- **District 1 (Lantern Causeway):** Reset Bastion Warden sentries at causeway checkpoints (2539, 2547, 2564). Reset convoy marshals at Caravan Camp Margin (2554). Limit 1-2 per mob.
+- **District 2 (Canopy Bazaar):** Reset Bazaar Syndic NPCs at trade rooms (2581, 2589, 2597). Reset relic appraisers at Appraisal Court (2589). Limit 1 per mob.
+- **District 3 (Sluice Bastion):** Reset Bastion Warden guards at gate and terrace rooms (2609, 2617, 2631). Reset pump engineers at Pump Works Central (2617). Limit 1 per mob.
+- **District 4 (Embalmer's Yard):** Reset Mortuary Circle embalmers at preparation rooms (2645, 2651). Reset secondary boss Tribunal Splinter Adjudicator at 2657 (limit 1).
+- **District 5 (Sub-Basin Tunnels):** Reset tunnel fauna across tunnel rooms (tunnel scorpions, basin vipers at 2669, 2674, 2681). Reset smuggler operatives at 2674, 2689. Limit 1-2 per mob.
+- **District 6 (South Survey Gate):** Reset Tribunal Splinter hostile mobs at approach rooms (2699, 2709). Reset Bastion Warden elite guards at Marshal's Redoubt (2729). Reset primary boss Survey Gate Marshal at 2734 (limit 1).
 
 ### Object Resets (`O` command)
 
 Format: `O 0 <obj_vnum> <limit> <room_vnum> <notes>`
 
-- Place lore objects (water-court writs, convoy manifests) in key lore rooms (9850, 9912, 9980) for atmospheric pickup.
+- Place lore objects (water-court writs, convoy manifests) in key lore rooms (2589, 2651, 2719) for atmospheric pickup.
 - Place key objects near their corresponding doors or on gatekeeper mobs via `G`/`E` resets.
 
 ### Equipment Resets (`G`/`E` commands)
@@ -407,26 +407,26 @@ Per `area_file_spec.md` section 8.3: any exit set to closed or locked via `D` re
 
 Planned door resets:
 
-1. **Bastion Outer Gate (9870):** Direction appropriate to approach.
+1. **Bastion Outer Gate (2609):** Direction appropriate to approach.
   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Bastion Gate Key object.
-  - `D` reset: `D 0 9870 <dir> 1` (closed, not locked — military gate, opened by guards).
+  - `D` reset: `D 0 2609 <dir> 1` (closed, not locked — military gate, opened by guards).
   - Reverse exit must also have `door` bit set.
 
-2. **Embalmer's Yard Gate (9900):** Direction appropriate to approach.
+2. **Embalmer's Yard Gate (2639):** Direction appropriate to approach.
   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Embalmer's Seal Key object.
-  - `D` reset: `D 0 9900 <dir> 2` (locked).
+  - `D` reset: `D 0 2639 <dir> 2` (locked).
   - Reverse exit must also have `door` bit set.
   - Key object (Embalmer's Seal Key) must exist in `#OBJECTS`.
 
-3. **Sealed Descent (9924):** Direction down (D5) to Sub-Basin Tunnels.
+3. **Sealed Descent (2663):** Direction down (D5) to Sub-Basin Tunnels.
   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Sealed Descent Key object.
-  - `D` reset: `D 0 9924 5 2` (locked).
-  - Reverse exit on 9925 must also have `door` bit set.
+  - `D` reset: `D 0 2663 5 2` (locked).
+  - Reverse exit on 2664 must also have `door` bit set.
   - Key object (Sealed Descent Key) must exist in `#OBJECTS`.
 
-4. **Forward Command Hall (9970):** Direction into command hall.
+4. **Forward Command Hall (2709):** Direction into command hall.
   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Command Hall Key object.
-  - `D` reset: `D 0 9970 <dir> 2` (locked).
+  - `D` reset: `D 0 2709 <dir> 2` (locked).
   - Reverse exit must also have `door` bit set.
   - Key object (Command Hall Key) must exist in `#OBJECTS`.
 
@@ -451,8 +451,8 @@ Per `area_file_spec.md` section 10:
 
 Per `area_file_spec.md` section 9:
 
-- **Quartermaster's Exchange (9842):** Bazaar Syndic quartermaster mob sells general goods. `<keeper>` = quartermaster mob vnum, appropriate `<buy_type>` slots, reasonable profit margins, operating hours matching daytime trade.
-- **Relic Appraisal Court (9850):** Relic appraiser mob buys/sells treasures. Similar shop configuration.
+- **Quartermaster's Exchange (2581):** Bazaar Syndic quartermaster mob sells general goods. `<keeper>` = quartermaster mob vnum, appropriate `<buy_type>` slots, reasonable profit margins, operating hours matching daytime trade.
+- **Relic Appraisal Court (2589):** Relic appraiser mob buys/sells treasures. Similar shop configuration.
 
 ---
 
@@ -475,9 +475,9 @@ Per `area_file_spec.md` section 14, the final `.are` file should emit sections i
 
 ## Reset and Progression Plan
 
-- **Early (Districts 1-2, 9800-9869):** Navigation and social exploration, caravan camp encounters, bazaar trade interactions, light combat with smugglers on periphery. Bastion Warden and Bazaar Syndic NPCs populate the scene. Level 50-55 content.
-- **Mid (Districts 3-4, 9870-9924):** Military infrastructure exploration, Mortuary Circle encounters, Tribunal Splinter hostiles begin appearing. Locked doors gate progression. Level 55-65 content.
-- **Late (Districts 5-6, 9925-9999):** Underground hazard traversal, cult ambushes, boss encounters, jurisdiction showdown. Tribunal Splinter and boss mobs. Level 65-70 content.
+- **Early (Districts 1-2, 2539-2608):** Navigation and social exploration, caravan camp encounters, bazaar trade interactions, light combat with smugglers on periphery. Bastion Warden and Bazaar Syndic NPCs populate the scene. Level 50-55 content.
+- **Mid (Districts 3-4, 2609-2663):** Military infrastructure exploration, Mortuary Circle encounters, Tribunal Splinter hostiles begin appearing. Locked doors gate progression. Level 55-65 content.
+- **Late (Districts 5-6, 2664-2738):** Underground hazard traversal, cult ambushes, boss encounters, jurisdiction showdown. Tribunal Splinter and boss mobs. Level 65-70 content.
 
 Loot profile:
 - Water-law insignia, convoy gear, anti-heat kit, authenticated relic fragments.
@@ -488,18 +488,18 @@ Loot profile:
 ## Implementation Checklist
 
 ### Rooms
-- [ ] Populate all 200 room vnums (9800-9999) in ascending sequential order with no gaps.
+- [ ] Populate all 35 room vnums (2539-2738) in ascending sequential order with no gaps.
 - [ ] Write unique `<description>~` for every room (minimum 3 sentences; 5+ for important rooms).
 - [ ] Assign correct `sector_type` (`city` for causeway/bazaar, `desert` for approach, `inside` for interiors) and `room_flags` per district requirements.
-- [ ] Set `no_mob` on all boss rooms (9918, 9995).
-- [ ] Set `dark` on Sub-Basin Tunnel rooms (9925-9959).
+- [ ] Set `no_mob` on all boss rooms (2657, 2734).
+- [ ] Set `dark` on Sub-Basin Tunnel rooms (2664-2698).
 - [ ] Ensure all exits are bi-directional with no directional loops.
 - [ ] Ensure all named exits use `^` prefix and are discoverable in room description, objects, or extra descriptions.
 - [ ] Ensure all extra-description keyword chains are anchored in the room's main `<description>~`.
 - [ ] Preserve required worldgraph external connectors while renaming and recontextualizing local rooms.
 
 ### Mobiles
-- [ ] Write all ~50 mob templates (vnums 9800-9849) in ascending sequential order with no gaps.
+- [ ] Write all ~50 mob templates (vnums 2539-2588) in ascending sequential order with no gaps.
 - [ ] Ensure all mobs have `is_npc` + `stay_area` in `act` flags.
 - [ ] Ensure boss mobs have `sentinel` + `boss` + `no_flee` and are placed only in `no_mob` rooms.
 - [ ] Ensure strong non-boss mobs have `solo` flag.
@@ -509,7 +509,7 @@ Loot profile:
 - [ ] Set `l`/`L` loot tables on boss mobs with valid object vnums; loot items have `ITEM_LOOT`.
 
 ### Objects
-- [ ] Write all ~71 object templates (vnums 9800-9870) in ascending sequential order with no gaps.
+- [ ] Write all ~71 object templates (vnums 2539-2609) in ascending sequential order with no gaps.
 - [ ] Ensure unique `<name>~` for every object in the area.
 - [ ] Ensure all objects include `ITEM_TAKE` in `wear_flags`.
 - [ ] Ensure no objects include `ITEM_WEAR_CLAN_COLORS`.
@@ -541,7 +541,7 @@ Loot profile:
 
 ### Final Validation
 - [ ] Validate complete area file format against `docs/area_file_spec.md`.
-- [ ] Verify all vnums within `V 9800 9999` envelope.
+- [ ] Verify all vnums within `V 2539 2738` envelope.
 - [ ] Verify `#ROOMS` and `#MOBILES` and `#OBJECTS` each terminate with `#0`.
 - [ ] Verify `#RESETS`, `#SPECIALS` each terminate with `S`.
 - [ ] Verify canonical section order.

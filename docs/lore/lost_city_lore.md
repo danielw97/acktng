@@ -1,6 +1,6 @@
 # Lore Bible: Lost City
 
-This document defines the canon lore foundation for the Lost City area (`lost_city.are`, vnums 30400-30479). It is written to align tightly with the Oasis-Pyramid corridor narrative, especially the Great/Northern/Southern Oasis and the Northern/Southern/Great Pyramid lore.
+This document defines the canon lore foundation for the Lost City area (`lost_city.are`, vnums 5331-5410). It is written to align tightly with the Oasis-Pyramid corridor narrative, especially the Great/Northern/Southern Oasis and the Northern/Southern/Great Pyramid lore.
 
 ---
 

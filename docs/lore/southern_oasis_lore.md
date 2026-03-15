@@ -133,7 +133,7 @@ This philosophical alignment is unintentional and largely unrecognized by Southe
 
 ## Cross-Area Lore Connections
 
-### Connection to the Great Oasis (vnums 8600-8699, levels 40-60)
+### Connection to the Great Oasis (vnums 1932-2031, levels 40-60)
 
 The Great Oasis is the Southern Oasis's parent institution and ongoing source of legal precedent. The Water Court's charter formulas, the Measuring House's calibration standards, and the cistern ring's hydraulic engineering principles all traveled south during the Keeper era and were adapted to local conditions. Players who visit both areas will recognize shared legal vocabulary, similar oath-stone conventions, and parallel cistern architecture — but will also notice that the Southern versions are harder, more militarized, and less ceremonially elaborate.
 
@@ -143,7 +143,7 @@ Specific connections:
 - Bazaar Syndic relic authentication certificates reference Great Oasis Water Court catalog numbers, establishing a provenance chain that external buyers (especially from Midgaard) require before purchasing pyramid artifacts.
 - The Compact Crisis is mentioned in lore at both oases but is interpreted differently: at the Great Oasis, it is a regrettable historical necessity; at the Southern Oasis, it is a betrayal that justified permanent institutional independence.
 
-### Connection to the Eastern Desert (vnums 8500-8599, levels 30-100)
+### Connection to the Eastern Desert (vnums 1832-1931, levels 30-100)
 
 The Eastern Desert feeds caravans, salvage crews, and charter traffic into the Southern Oasis's staging infrastructure. Charter stone conventions, ration stamp vocabulary, and Keeper-era measurement motifs on the Eastern Desert's road system are directly continuous with the Southern Oasis's administrative architecture. The Lantern Causeway's mile markers use the same distance notation and toll-rate inscription format as the Eastern Desert's charter stones — a surviving fragment of the unified road system that once connected all desert settlements.
 
@@ -153,7 +153,7 @@ Specific connections:
 - Salt-crystal tablets from the Eastern Desert's Salt Ledger Kingdom tradition appear in the Southern Oasis's Casualty Ledger Archive as the oldest record medium in the collection — predating papyrus and ceramic, and providing material evidence of the administrative continuity between the desert road network and the oasis system.
 - The Iseth Reach — the vanished river documented in Eastern Desert lore — once connected the eastern road network to the same aquifer that feeds both the Great Oasis and the Southern Oasis. Its drying severed the logistical link that had sustained the entire oasis corridor and is the deep geological cause of the Compact Crisis.
 
-### Connection to the Northern Oasis (vnums 8700-8899, levels 45-65)
+### Connection to the Northern Oasis (vnums 2032-2231, levels 45-65)
 
 The Northern Oasis provides intake verification and audited manifests that Southern authorities convert into convoy-ready logistics. The two oases form the twin administrative poles of the Oasis-Pyramid Corridor: the north counts, the south arms.
 
@@ -162,7 +162,7 @@ Specific connections:
 - The Northern Oasis's Reedline Wardens and the Southern Oasis's Bastion Wardens use parallel ration calculation methodologies — both descended from the Keepers of Measure — but the Northern version calculates quotas for intake (how much water to allow in) while the Southern version calculates quotas for expenditure (how much water to allow out for expeditions).
 - The Northern Oasis's Dry Cistern Undercut and the Southern Oasis's Sub-Basin Tunnels are geologically part of the same aquifer system. Old Keeper-era tunnels in both oases show evidence of the same hydraulic engineering tradition, and the Salt-Jackal cult presence in the Northern Oasis's cisterns is doctrinally related to the Tribunal Splinter presence in the Southern Oasis's tunnels — both are local expressions of the same degraded Jackal Tribunal tradition.
 
-### Connection to the Southern Pyramid (vnums 11450-11649, levels 120-140)
+### Connection to the Southern Pyramid (vnums 3139-3338, levels 120-140)
 
 The Southern Pyramid exerts continuous strategic pressure on the Southern Oasis through expedition demand, relic flow, and casualty return. The Southern Oasis is the pyramid's administrative rear echelon — the place where the human costs of exploration are documented, the profits are taxed, and the dead are counted.
 
@@ -172,7 +172,7 @@ Specific connections:
 - The South Survey Gate marks the jurisdictional boundary between oasis charter law and pyramid sovereign territory. Expedition permit language on the gate's charter stones shifts from water-debt notation to tribute language — the same bureaucratic transition that appears on the Northern Pyramid's approach road, but with Moon Sovereign descent-theology replacing Sand Sovereign ascent-theology.
 - Ground tremors from the Southern Pyramid have increased in frequency since the Great Pyramid's lower courts were breached. Southern Oasis residents attribute the tremors to "the Moon Sovereign stirring," a folk interpretation that aligns uncomfortably closely with the actual lore: the Moon Sovereign's nadir rite may be responding to the resonance between the three pyramids' containment/binding systems.
 
-### Connection to the Northern Pyramid (vnums 10125-10324, levels 100-120)
+### Connection to the Northern Pyramid (vnums 2864-3063, levels 100-120)
 
 The Northern Pyramid's influence on the Southern Oasis is indirect but real. The Sand Sovereign and Moon Sovereign were twin siblings whose rival cosmologies — ascending solar legitimacy versus descending underworld authority — defined the entire desert civilization's late-era schism. The Southern Oasis sits on the Moon Sovereign's side of this divide, and its institutions carry the imprint of the underworld-descent theology even when they do not consciously acknowledge it.
 
@@ -180,7 +180,7 @@ Specific connections:
 - Northern Pyramid expedition reports that reach the Southern Oasis through caravan traffic provide comparative data that the Mortuary Circle uses to distinguish Sand Sovereign–origin curses from Moon Sovereign–origin curses on expedition casualties. The two curse traditions are physiologically different: Northern Pyramid curses tend toward desiccation and binding (containment math applied to the body), while Southern Pyramid curses tend toward silence and dissolution (descent theology applied to identity).
 - The Sand Sovereign's astronomical alignment chambers and the Moon Sovereign's geological descent shafts are both descended from the same Keeper-era measurement tradition, but adapted in opposite directions. Room inscriptions at the Southern Oasis — particularly in the Embalmer's Yard and the Jurisdiction Court — contain fragments of both traditions, reflecting the settlement's position on the boundary between the two cosmologies.
 
-### Connection to the Great Pyramid (vnums 10500-10699, levels 130-170)
+### Connection to the Great Pyramid (vnums 10500-10699, levels 130-5)
 
 The Great Pyramid is the eldest and most powerful of the three pyramids, and its influence pervades the entire desert civilization. The Southern Oasis's connection to the Great Pyramid is mediated through the Jackal Tribunal tradition: the original Tribunal was a department of the Great Pyramid's Solar Court, and every subsequent iteration — the Synod in the Eastern Desert, the Splinters at the Southern Oasis — is a degraded descendant.
 
@@ -188,7 +188,7 @@ Specific connections:
 - The Tribunal Splinters' curse-verdict tradition traces back through three stages of degradation to the Great Pyramid's Jackal Tribunal sentence inscriptions: cosmic containment (Solar Court) → military binding (Jackal Tribunal) → toll enforcement (Synod) → personal intimidation (Splinters). Each stage strips away purpose while retaining language.
 - The Mortuary Circle's Casualty Ledger format preserves faint echoes of the Great Pyramid's Ledger Priest census methodology. Both use columnar notation, witness-seal conventions, and documented process — administrative DNA that traveled from the Solar Court through the oasis Water Courts to the Southern Oasis's death-claim bureaucracy.
 
-### Connection to Midgaard (vnums 3001-3200)
+### Connection to Midgaard (vnums 917-1116)
 
 Midgaard's city archives, academic institutions, and salvage contractors rely on Southern-authenticated provenance while outsourcing frontier risk to local institutions.
 
@@ -217,7 +217,7 @@ Specific connections:
 - Southern Pyramid relics that reach Mafdet through the Southern Oasis carry the most trusted provenance in the maritime market: Southern Oasis authentication (pyramid-frontier expertise) plus Mafdet dual attestation (inland-maritime verification). This dual-authentication chain commands premium prices and is the primary reason Midgaard-funded collectors prefer Southern Oasis–sourced artifacts over Eastern Desert–sourced alternatives.
 - The Jackal Synod's Eclipsed Tongues faction at the Southern Oasis is doctrinally connected to Synod Whisper Cells operating in the Saltglass Reach. The cells exploit the Reach as a smuggling corridor, moving relic components toward Mafdet for maritime export beyond oasis oversight. The Bastion Wardens are aware of this connection but lack the resources to patrol beyond the Southern Oasis's perimeter.
 
-### Connection to Kowloon (vnums 14000-14099)
+### Connection to Kowloon (vnums 3439-3538)
 
 Kowloon's relationship to the Southern Oasis is more distant than its relationship to the Eastern Desert or Great Oasis, but the connection exists through shared legal-bureaucratic DNA. Kowloon's Jade Magistracy maintains records of desert trade route law descended from the same Keeper-of-Measure tradition that the Southern Oasis's Bastion Wardens enforce.
 

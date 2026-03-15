@@ -7,7 +7,7 @@
 **Keyword:** `khardaan necropolis desert dune ancient burial` 
 **Area Number:** `N 115` 
 **Level Range:** `I 60 80` 
-**Vnum Range (fixed):** **31000-31099** (`V 31000 31099`) 
+**Vnum Range (fixed):** **5624-5723** (`V 5624 5723`) 
 **Room Count Target:** **100/100 rooms used** 
 **Primary Design Goal:** Rebuild the area as a coherent drowned-funerary megasite tied directly to oasis water politics and pyramid dynasty theology, while preserving the exact vnum envelope and fully repurposing every room.
 
@@ -38,7 +38,7 @@ Use `docs/area_file_spec.md` strictly:
 
 - `Q 16` mandatory.
 - `O Virant~` must use exact owner policy casing.
-- `V 31000 31099` unchanged.
+- `V 5624 5723` unchanged.
 - All strings `~`-terminated.
 - No blank-line double newlines inside area strings.
 - No vnums in in-world text.
@@ -86,156 +86,156 @@ The area is rebuilt into 10 themed districts of 10 rooms each.
 
 | District | Vnums | Theme | Gameplay Role |
 |---|---|---|---|
-| I. Sunken Approach | 31000-31009 | Outer ruins and entry gates | Orientation, first combat pass |
-| II. Scoured Barrens | 31010-31019 | Beast-dominated badlands | Fauna pressure, elite miniboss |
-| III. Processional Necropolis | 31020-31029 | Tomb roads and priest sectors | Undead/caster mix |
-| IV. Cistern Verge | 31030-31039 | Flood interfaces and sluices | Hazard navigation |
-| V. Mortuary Workshops | 31040-31049 | Embalming industry | Debuff-heavy encounters |
-| VI. Archive Sink | 31050-31059 | Drowned libraries | Lore/combat hybrid |
-| VII. Oathguard Bastion | 31060-31069 | Military funerary quarter | Construct/revenant tank fights |
-| VIII. Sealed Reliquaries | 31070-31079 | High sancta and curse vaults | Puzzle routing, elite packs |
-| IX. Drowned Court | 31080-31089 | Flooded governance core | Faction convergence |
-| X. Phylactery Crown | 31090-31099 | Final gauntlet and capstone | Endgame bosses |
+| I. Sunken Approach | 5624-5633 | Outer ruins and entry gates | Orientation, first combat pass |
+| II. Scoured Barrens | 5634-5643 | Beast-dominated badlands | Fauna pressure, elite miniboss |
+| III. Processional Necropolis | 5644-5653 | Tomb roads and priest sectors | Undead/caster mix |
+| IV. Cistern Verge | 5654-5663 | Flood interfaces and sluices | Hazard navigation |
+| V. Mortuary Workshops | 5664-5673 | Embalming industry | Debuff-heavy encounters |
+| VI. Archive Sink | 5674-5683 | Drowned libraries | Lore/combat hybrid |
+| VII. Oathguard Bastion | 5684-5693 | Military funerary quarter | Construct/revenant tank fights |
+| VIII. Sealed Reliquaries | 5694-5703 | High sancta and curse vaults | Puzzle routing, elite packs |
+| IX. Drowned Court | 5704-5713 | Flooded governance core | Faction convergence |
+| X. Phylactery Crown | 5714-5723 | Final gauntlet and capstone | Endgame bosses |
 
 ---
 
-## Room-by-Room Allocation (31000-31099)
+## Room-by-Room Allocation (5624-5723)
 
-### I. Sunken Approach (31000-31009)
+### I. Sunken Approach (5624-5633)
 
-- 31000 The Sunken Threshold — collapsed marker arch; zone entry.
-- 31001 Field of Broken Obelisks — shattered boundary stelae and warning glyphs.
-- 31002 The Crumbled Gatehouse — first choke and guardian reset point.
-- 31003 Sand-Choked Promenade — half-buried processional avenue.
-- 31004 The Grand Colonnade — exposed noble route with wind traps.
-- 31005 Hall of the Forgotten Sun — faded royal iconography, intro to schism lore.
-- 31006 Chamber of Burial Masks — identity-loss motif; masking rites.
-- 31007 The Ossuary Vaults — stacked common dead; swarm encounter.
-- 31008 Descent to Khar'Daan — transition to lower city.
-- 31009 Inner Sanctum Antechamber — district handoff hub.
+- 5624 The Sunken Threshold — collapsed marker arch; zone entry.
+- 5625 Field of Broken Obelisks — shattered boundary stelae and warning glyphs.
+- 5626 The Crumbled Gatehouse — first choke and guardian reset point.
+- 5627 Sand-Choked Promenade — half-buried processional avenue.
+- 5628 The Grand Colonnade — exposed noble route with wind traps.
+- 5629 Hall of the Forgotten Sun — faded royal iconography, intro to schism lore.
+- 5630 Chamber of Burial Masks — identity-loss motif; masking rites.
+- 5631 The Ossuary Vaults — stacked common dead; swarm encounter.
+- 5632 Descent to Khar'Daan — transition to lower city.
+- 5633 Inner Sanctum Antechamber — district handoff hub.
 
-### II. Scoured Barrens (31010-31019)
+### II. Scoured Barrens (5634-5643)
 
-- 31010 The Desert Escarpment — exposure and ranged predator pressure.
-- 31011 Ruins of the Serpent Shrine — serpent cult remains.
-- 31012 The Viper Den — venom fauna nest.
-- 31013 Fossil-Ribbed Alcove — predatory ambush pocket.
-- 31014 The Basilisk Pit — petrification-themed hazard room.
-- 31015 The Scorpion Wastes — attrition crossing.
-- 31016 Scorpion Warren Entrance — swarm ingress choke.
-- 31017 The Brood Chamber — concentrated venom burst fight.
-- 31018 Fossil-Ribbed Grotto — hidden transit toward deeper wings.
-- 31019 Lair of the Scorpion Queen — district miniboss anchor.
+- 5634 The Desert Escarpment — exposure and ranged predator pressure.
+- 5635 Ruins of the Serpent Shrine — serpent cult remains.
+- 5636 The Viper Den — venom fauna nest.
+- 5637 Fossil-Ribbed Alcove — predatory ambush pocket.
+- 5638 The Basilisk Pit — petrification-themed hazard room.
+- 5639 The Scorpion Wastes — attrition crossing.
+- 5640 Scorpion Warren Entrance — swarm ingress choke.
+- 5641 The Brood Chamber — concentrated venom burst fight.
+- 5642 Fossil-Ribbed Grotto — hidden transit toward deeper wings.
+- 5643 Lair of the Scorpion Queen — district miniboss anchor.
 
-### III. Processional Necropolis (31020-31029)
+### III. Processional Necropolis (5644-5653)
 
-- 31020 Court of Interred Petitioners — prayer wall and common rites.
-- 31021 Natron Procession Lane — embalmer traffic path.
-- 31022 Gate of Measured Silence — legal-funerary checkpoint.
-- 31023 Reliquary of Opened Names — identity catalog vault.
-- 31024 Chamber of Canopic Weights — body-part tithe accounting.
-- 31025 Salt Mummifier's Walk — ritual labor corridor.
-- 31026 Hall of Chitin Lamps — scarab-lit funerary aisle.
-- 31027 Oathbreaker's Crossing — fallen guardian memorial.
-- 31028 Sump of the Canopic Leech — contamination hazard.
-- 31029 The Sunken Hierophant's Dais — caster miniboss node.
+- 5644 Court of Interred Petitioners — prayer wall and common rites.
+- 5645 Natron Procession Lane — embalmer traffic path.
+- 5646 Gate of Measured Silence — legal-funerary checkpoint.
+- 5647 Reliquary of Opened Names — identity catalog vault.
+- 5648 Chamber of Canopic Weights — body-part tithe accounting.
+- 5649 Salt Mummifier's Walk — ritual labor corridor.
+- 5650 Hall of Chitin Lamps — scarab-lit funerary aisle.
+- 5651 Oathbreaker's Crossing — fallen guardian memorial.
+- 5652 Sump of the Canopic Leech — contamination hazard.
+- 5653 The Sunken Hierophant's Dais — caster miniboss node.
 
-### IV. Cistern Verge (31030-31039)
+### IV. Cistern Verge (5654-5663)
 
-- 31030 Colossus Intake Causeway — giant machinery approach.
-- 31031 Ashen Embalmer Gallery — gas/salt cloud combat terrain.
-- 31032 Skirmisher Drainway — revenant patrol route.
-- 31033 Resin Hulk Pump Hall — heavy construct station.
-- 31034 Drowned Annalist Niche — archive ghost node.
-- 31035 Canal Stalker Trench — low-visibility melee room.
-- 31036 Obelisk Shard Runoff — moving hazard corridor.
-- 31037 Hieratic Furnace Chapel — war-priest liturgy chamber.
-- 31038 Sarcophagus Breaker Yard — siege construct arena.
-- 31039 Keeper of Sealed Tides — district cap boss.
+- 5654 Colossus Intake Causeway — giant machinery approach.
+- 5655 Ashen Embalmer Gallery — gas/salt cloud combat terrain.
+- 5656 Skirmisher Drainway — revenant patrol route.
+- 5657 Resin Hulk Pump Hall — heavy construct station.
+- 5658 Drowned Annalist Niche — archive ghost node.
+- 5659 Canal Stalker Trench — low-visibility melee room.
+- 5660 Obelisk Shard Runoff — moving hazard corridor.
+- 5661 Hieratic Furnace Chapel — war-priest liturgy chamber.
+- 5662 Sarcophagus Breaker Yard — siege construct arena.
+- 5663 Keeper of Sealed Tides — district cap boss.
 
-### V. Mortuary Workshops (31040-31049)
+### V. Mortuary Workshops (5664-5673)
 
-- 31040 Phylactery Sentinel Gate — hard guard entry.
-- 31041 Hall of Resin Crucibles — crafting/ritual industry.
-- 31042 Chamber of Linen Hooks — preparation chamber.
-- 31043 Natron Kiln Arcade — heat/salt hazard lane.
-- 31044 Basin of Bitter Oils — alchemical poisons.
-- 31045 Cartouche Press Foundry — inscription forging line.
-- 31046 Gallery of Red Needles — surgical rite tools.
-- 31047 House of Quiet Knives — embalmer elite patrol.
-- 31048 Perfuming Court — incense-based caster effects.
-- 31049 Workshop Overseer's Loge — miniboss and key drop.
+- 5664 Phylactery Sentinel Gate — hard guard entry.
+- 5665 Hall of Resin Crucibles — crafting/ritual industry.
+- 5666 Chamber of Linen Hooks — preparation chamber.
+- 5667 Natron Kiln Arcade — heat/salt hazard lane.
+- 5668 Basin of Bitter Oils — alchemical poisons.
+- 5669 Cartouche Press Foundry — inscription forging line.
+- 5670 Gallery of Red Needles — surgical rite tools.
+- 5671 House of Quiet Knives — embalmer elite patrol.
+- 5672 Perfuming Court — incense-based caster effects.
+- 5673 Workshop Overseer's Loge — miniboss and key drop.
 
-### VI. Archive Sink (31050-31059)
+### VI. Archive Sink (5674-5683)
 
-- 31050 Flooded Ledger Vestibule — transition into drowned stacks.
-- 31051 Scroll-Drift Arcade — debris flow and difficult movement.
-- 31052 Chamber of Dissolved Ink — visibility and dot pressure.
-- 31053 Scriptorium of Lost Tributaries — oasis linkage records.
-- 31054 Hall of Dynastic Errata — rewritten royal decrees.
-- 31055 Sunken Catalog Rotunda — radial navigation hub.
-- 31056 Vault of Salt Tablets — durable legal archive.
-- 31057 Whispering Index Well — lore-heavy spirit room.
-- 31058 Broken Surveyor's Gallery — road/oasis calibration maps.
-- 31059 Archivist's Drowned Throne — major caster boss.
+- 5674 Flooded Ledger Vestibule — transition into drowned stacks.
+- 5675 Scroll-Drift Arcade — debris flow and difficult movement.
+- 5676 Chamber of Dissolved Ink — visibility and dot pressure.
+- 5677 Scriptorium of Lost Tributaries — oasis linkage records.
+- 5678 Hall of Dynastic Errata — rewritten royal decrees.
+- 5679 Sunken Catalog Rotunda — radial navigation hub.
+- 5680 Vault of Salt Tablets — durable legal archive.
+- 5681 Whispering Index Well — lore-heavy spirit room.
+- 5682 Broken Surveyor's Gallery — road/oasis calibration maps.
+- 5683 Archivist's Drowned Throne — major caster boss.
 
-### VII. Oathguard Bastion (31060-31069)
+### VII. Oathguard Bastion (5684-5693)
 
-- 31060 Parade Ground of Last Vows — revenant muster square.
-- 31061 Barracks of Sealed Helms — military dead storage.
-- 31062 Hall of Rusted Khopeshes — weapon reliquary.
-- 31063 Shield-Ring Portico — defensive gauntlet.
-- 31064 Chamber of Three Standards — faction war memorial.
-- 31065 Dune Oath Tribunal — judgement chamber.
-- 31066 Sentinel Assembly Vault — construct spawning floor.
-- 31067 Bridge of Iron Bands — narrow tactical crossing.
-- 31068 Reliquary Guardwell — high-density patrol room.
-- 31069 Commander of the Bound Cohort — martial miniboss.
+- 5684 Parade Ground of Last Vows — revenant muster square.
+- 5685 Barracks of Sealed Helms — military dead storage.
+- 5686 Hall of Rusted Khopeshes — weapon reliquary.
+- 5687 Shield-Ring Portico — defensive gauntlet.
+- 5688 Chamber of Three Standards — faction war memorial.
+- 5689 Dune Oath Tribunal — judgement chamber.
+- 5690 Sentinel Assembly Vault — construct spawning floor.
+- 5691 Bridge of Iron Bands — narrow tactical crossing.
+- 5692 Reliquary Guardwell — high-density patrol room.
+- 5693 Commander of the Bound Cohort — martial miniboss.
 
-### VIII. Sealed Reliquaries (31070-31079)
+### VIII. Sealed Reliquaries (5694-5703)
 
-- 31070 First Reliquary Ring — curse-gated outer circle.
-- 31071 Hall of Closed Canopi — contamination containment.
-- 31072 Shrine of Sunless Coronation — illegitimate succession lore.
-- 31073 Mirror of Dry Tides — puzzle reflection chamber.
-- 31074 Chamber of Hanging Cartouches — name-binding hazards.
-- 31075 Vault of Gilded Wrappings — elite burial cache.
-- 31076 Corridor of Recited Curses — chant-trigger ambushes.
-- 31077 Second Reliquary Ring — tightening navigation loop.
-- 31078 Antechamber of Seventy Seals — pre-capstone lock.
-- 31079 Reliquary Adjudicator — elite gatekeeper fight.
+- 5694 First Reliquary Ring — curse-gated outer circle.
+- 5695 Hall of Closed Canopi — contamination containment.
+- 5696 Shrine of Sunless Coronation — illegitimate succession lore.
+- 5697 Mirror of Dry Tides — puzzle reflection chamber.
+- 5698 Chamber of Hanging Cartouches — name-binding hazards.
+- 5699 Vault of Gilded Wrappings — elite burial cache.
+- 5700 Corridor of Recited Curses — chant-trigger ambushes.
+- 5701 Second Reliquary Ring — tightening navigation loop.
+- 5702 Antechamber of Seventy Seals — pre-capstone lock.
+- 5703 Reliquary Adjudicator — elite gatekeeper fight.
 
-### IX. Drowned Court (31080-31089)
+### IX. Drowned Court (5704-5713)
 
-- 31080 Runed Flood Sluice — active control mechanism.
-- 31081 Coffer Hall of Night Sand — treasury under silt.
-- 31082 Vowkeeper Portico — oath inscription plaza.
-- 31083 Basin of Stilled Echoes — acoustics-based hazard.
-- 31084 Hanging Gallery of Masks — elite ancestry display.
-- 31085 Vault of Sundered Cartouches — identity rupture lore.
-- 31086 Corridor of Blackened Reeds — marshlike intrusion zone.
-- 31087 Third Reliquary Ring — final routing ring.
-- 31088 Annalist's Spiral — lore staircase toward finale.
-- 31089 Lower Ward Concourse — convergence staging room.
+- 5704 Runed Flood Sluice — active control mechanism.
+- 5705 Coffer Hall of Night Sand — treasury under silt.
+- 5706 Vowkeeper Portico — oath inscription plaza.
+- 5707 Basin of Stilled Echoes — acoustics-based hazard.
+- 5708 Hanging Gallery of Masks — elite ancestry display.
+- 5709 Vault of Sundered Cartouches — identity rupture lore.
+- 5710 Corridor of Blackened Reeds — marshlike intrusion zone.
+- 5711 Third Reliquary Ring — final routing ring.
+- 5712 Annalist's Spiral — lore staircase toward finale.
+- 5713 Lower Ward Concourse — convergence staging room.
 
-### X. Phylactery Crown (31090-31099)
+### X. Phylactery Crown (5714-5723)
 
-- 31090 Catacomb of Bent Obelisks — unstable final ascent.
-- 31091 Reliquary Verge — no-return threshold.
-- 31092 Sealed Tide Rotunda — flood-pressure boss prelude.
-- 31093 Chamber of Iron Papyrus — final ritual text engine.
-- 31094 Sanctified Intake — water-heart of necropolis.
-- 31095 Reliquary Crown — high sanctum platform.
-- 31096 Hall of Immured Names — bound-soul corridor.
-- 31097 Bridge of Gilded Dust — exposed transit into apex.
-- 31098 Tomb of the Seventh Seal — penultimate lock chamber.
-- 31099 Phylactery Apex — final encounter and area climax.
+- 5714 Catacomb of Bent Obelisks — unstable final ascent.
+- 5715 Reliquary Verge — no-return threshold.
+- 5716 Sealed Tide Rotunda — flood-pressure boss prelude.
+- 5717 Chamber of Iron Papyrus — final ritual text engine.
+- 5718 Sanctified Intake — water-heart of necropolis.
+- 5719 Reliquary Crown — high sanctum platform.
+- 5720 Hall of Immured Names — bound-soul corridor.
+- 5721 Bridge of Gilded Dust — exposed transit into apex.
+- 5722 Tomb of the Seventh Seal — penultimate lock chamber.
+- 5723 Phylactery Apex — final encounter and area climax.
 
 ---
 
 ## Mob Redesign Plan
 
-Keep current mobile vnums (`31000-31040`) but rewrite identities into a coherent ecology/faction stack:
+Keep current mobile vnums (`5624-5664`) but rewrite identities into a coherent ecology/faction stack:
 
 - **Fauna Layer:** scorpions, vipers, basilisks, scarabs adapted to mineralized flood residue.
 - **Labor-Dead Layer:** embalmers, acolytes, mummifiers maintaining obsolete rites.
@@ -244,14 +244,14 @@ Keep current mobile vnums (`31000-31040`) but rewrite identities into a coherent
 - **Apex Layer:** Dread Pharaoh complex reframed as phylactery-state rulership.
 
 Boss cadence across route:
-- Mid bosses: 31019, 31029, 31039, 31049, 31059, 31069, 31079.
-- Final chain: 31095-31099 tied to 31015/31023/31024/31030/31040 equivalents.
+- Mid bosses: 5643, 5653, 5663, 5673, 5683, 5693, 5703.
+- Final chain: 5719-5723 tied to 5639/5647/5648/5654/5664 equivalents.
 
 ---
 
 ## Objectization Plan
 
-Use existing object envelope (`31000-31070`) to support district progression:
+Use existing object envelope (`5624-5694`) to support district progression:
 
 - Early set: sand-worn expedition gear with anti-venom and movement utility.
 - Mid set: embalmer/archivist relics with resist poison, resist curse, mana sustain.
@@ -273,7 +273,7 @@ Object flavor should visibly mix gold/lapis/salt/water motifs and reference oasi
 
 ## Implementation Guardrails
 
-1. Preserve all area-owned content strictly inside `31000-31099`.
+1. Preserve all area-owned content strictly inside `5624-5723`.
 2. Use all 100 room vnums with distinct purpose.
 3. Keep room graph readable: one main spine, multiple loops, optional challenge branches.
 4. Encode lore in room text, mob descriptions, object extra descriptions, and reset composition.

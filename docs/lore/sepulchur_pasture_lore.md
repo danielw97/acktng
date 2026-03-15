@@ -138,8 +138,8 @@ Sepulchur Pasture’s operations follow Midgaard’s **Seven Watches**, though t
 
 ## Cross-Area Lore Connections
 
-### Midgaard (vnums 3001-3200)
-- **Physical link:** Midgaard room 3030 connects south to The Withered Gate (30175). This is Midgaard’s primary funerary egress — the route taken by death-carts, mourning processions, and Compact adjudicators.
+### Midgaard (vnums 917-1116)
+- **Physical link:** Midgaard room 946 connects south to The Withered Gate (5106). This is Midgaard’s primary funerary egress — the route taken by death-carts, mourning processions, and Compact adjudicators.
 - **Institutional overlap:** The pasture is an extension of Midgaard’s civic-legal-temple institutional triad. The same Magistrate Ledgerhouse that publishes the Civic Survey, the same Temple of the Resounding Heart that maintains memorial rolls, and the same Violet Compact bureaucracy that controls the Reliquary Arch all exercise jurisdiction over the pasture’s operations.
 - **Political tension:** The pasture is a flashpoint for the Continuity-vs-Reckoning divide. Continuity officials defend the Tithe system as necessary civic infrastructure. Reckoning advocates point to the deferred-name rolls and the Unindexed Years as evidence that the pasture participated in systematic erasure.
 - **Folk belief:** Midgaard residents use violet chalk on thresholds to mean “witness requested.” In the pasture, violet chalk on a grave marker means “name disputed” — a usage that evolved from the city custom but carries heavier weight.
@@ -157,7 +157,7 @@ Sepulchur Pasture’s operations follow Midgaard’s **Seven Watches**, though t
 - **Bell connections:** Nightfall’s four-bell cycle (intake, adjudication, lament, reclamation) directly parallels the pasture’s gravebell traditions. The Nightfall doctrine that the Fourth Bell (reclamation summons) was forbidden echoes in the pasture’s fear that the bell answering itself represents an unauthorized fourth toll — the dead reclaiming their own names.
 - **Key figures:** The pasture’s Archivist Mor Taland and Nightfall’s Archivist Nhal Sereth both practiced archival resistance — encoding true records into marginalia and hidden ledgers. Whether they were part of a broader network of registrar dissenters or arrived at the same response independently is an open question.
 
-### Gloamvault of Kel’Shadra (vnums 30100+)
+### Gloamvault of Kel’Shadra (vnums 5031+)
 - **Oath doctrine:** The Gloamvault’s Kel’Shadra Order believed that spoken oaths bind the living and the dead alike, and that breaking an oath to the dead is the gravest form of perjury. The pasture’s deferred-name system — which effectively suspends the city’s obligation to the dead until a claimant appears — violates this principle directly. Kel’Shadra remnants, if any still exist, would view the pasture as an institutional oath-breaker.
 - **Proximity:** The Gloamvault entrance lies beneath Midgaard’s Violet Reliquary Arch. The pasture lies just beyond Midgaard’s southern gate. Both are threshold spaces where the city manages its relationship with death and memory. The Gloamvault descends; the pasture extends outward. Between them, Midgaard is surrounded by its own unfinished business with the dead.
 

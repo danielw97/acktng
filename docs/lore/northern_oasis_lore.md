@@ -132,7 +132,7 @@ The argument has uncomfortable resonance with the Keepers of Measure's historica
 
 ## Cross-Area Lore Connections
 
-### Connection to the Eastern Desert (vnums 8500-8599, levels 30-100)
+### Connection to the Eastern Desert (vnums 1832-1931, levels 30-100)
 
 The Northern Oasis validates, taxes, and reroutes caravans traveling west from Eastern Desert charter roads and cistern ruins. The settlement is the first point of civil order that eastern caravans encounter after crossing the dangerous Sirocco Expanse and navigating through Synod-controlled toll shrines. For many caravan captains, arriving at the Northern Oasis is the moment they stop calculating survival odds and start calculating profits.
 
@@ -142,7 +142,7 @@ Specific connections:
 - The Keepers of Measure built both the Eastern Desert's obelisk-line survey system and the Northern Oasis's Survey Cairn Ring using the same calibration methodology. Players who examine survey instruments at both locations will recognize identical angle marks, shadow-rod mounting specifications, and measurement notations. The systems were designed as components of a single road network; their current separation is a consequence of civilizational collapse, not original design.
 - The Jackal Synod's Eastern Desert chapters and the Northern Oasis's Salt-Jackal Offshoot share a common liturgical ancestor but have diverged significantly. The Eastern Desert Synod is doctrinally sophisticated (three competing schools: Anointers, Keepers of Dry Mercy, Eclipsed Tongues). The Northern Oasis's Salt-Jackals are doctrinally incoherent — they mix Synod fragments with local folk superstition about the springs. This doctrinal degradation parallels the geographic distance from the tradition's source.
 
-### Connection to the Great Oasis (vnums 8600-8699, levels 40-60)
+### Connection to the Great Oasis (vnums 1932-2031, levels 40-60)
 
 The Northern Oasis sends audited flow records south and receives legal precedent for major disputes. The relationship is the most functionally stable of the inter-oasis connections — less fraught than the Great Oasis's relationship with the Southern Oasis (no Compact Crisis bitterness) but also less intimate (the Northern Oasis was never important enough to betray).
 
@@ -152,7 +152,7 @@ Specific connections:
 - The Northern Oasis's Rite of Measured Drawing preserves Keeper-era liturgical formulas that also appear (in more elaborate form) in the Great Oasis Spring Wardens' water-distribution ceremonies. Players who attend water rites at both oases will recognize the same root vocabulary — "measured shadow," "lawful witness," "draw authorized" — used in contexts that differ in ceremony but share an institutional logic.
 - The Northern Oasis does not maintain a resident Water Court judge; major legal disputes are referred south to the Great Oasis for formal adjudication. This dependency is the Northern Oasis's most politically sensitive vulnerability: if the Great Oasis ever withdrew legal support (as the Southern Oasis fears it might), the Northern Oasis would have no institutional mechanism for resolving high-stakes disputes.
 
-### Connection to the Northern Pyramid (vnums 10125-10324, levels 100-120)
+### Connection to the Northern Pyramid (vnums 2864-3063, levels 100-120)
 
 The Northern Oasis inherits old sovereign-era measurement systems; pyramid relics appear mainly as reused tools, seals, and salvage stone embedded in the settlement's own infrastructure.
 
@@ -162,7 +162,7 @@ Specific connections:
 - The Sand Sovereign's astronomical alignment chambers were designed by oasis-trained engineers — the last generation to have studied directly under Keeper survey masters at the Great Oasis Measuring House. These engineers traveled through the Northern Oasis on their way to the pyramid construction site, and some of their calibration work was performed using the Northern Oasis's Survey Cairn Ring as a reference baseline. The Northern Pyramid is, in a very specific engineering sense, calibrated to the Northern Oasis.
 - Salvage stone from the Northern Pyramid's outer terraces has been incorporated into the Northern Oasis's defensive walls and sluice infrastructure over the centuries. This is not vandalism; it is pragmatic recycling. The pyramid's outer stone was precisely cut and faced, making it superior building material. Northern Oasis structures built from salvage stone are identifiable by the quality of their masonry — noticeably better than local quarry stone.
 
-### Connection to the Southern Oasis (vnums 9800-9999, levels 50-70)
+### Connection to the Southern Oasis (vnums 2539-2738, levels 50-70)
 
 The Northern Oasis provides intake verification and audited manifests that Southern authorities convert into convoy-ready logistics. The two oases form the twin administrative poles of the Oasis-Pyramid Corridor: the north counts, the south arms.
 
@@ -171,11 +171,11 @@ Specific connections:
 - The Northern Oasis's Reedline Wardens and the Southern Oasis's Bastion Wardens use parallel ration calculation methodologies but have diverged in application. Northern ration calculations optimize for intake (managing a shrinking supply); Southern ration calculations optimize for expenditure (allocating resources to outbound expeditions). The mathematical frameworks are compatible but the institutional priorities are different.
 - The Northern Oasis views the Southern Oasis with a mixture of respect and wariness. The south's military capacity and expedition infrastructure are capabilities the north cannot match. But the south's willingness to accept pyramid-related risk — the Mortuary Circle, the Tribunal Splinters, the steady flow of expedition casualties — is something the north regards as dangerously unsustainable.
 
-### Connection to the Southern Pyramid (vnums 11450-11649, levels 120-140)
+### Connection to the Southern Pyramid (vnums 3139-3338, levels 120-140)
 
 The Northern Oasis's connection to the Southern Pyramid is indirect, mediated primarily through the Southern Oasis and through the Jackal-derived cult tradition. The Moon Sovereign's theology — descent, concealment, underworld authority — is antithetical to everything the Northern Oasis stands for (measurement, transparency, surface-level pragmatism). Northern Oasis residents who encounter Moon Sovereign theological fragments in the Salt-Jackal Offshoot's rhetoric find them alien and disturbing in ways that Sand Sovereign theology is not.
 
-### Connection to Midgaard (vnums 3001-3200)
+### Connection to Midgaard (vnums 917-1116)
 
 Western buyers and scholars prize authenticated tablets stamped in Northern Oasis courts because provenance can be trusted.
 
@@ -183,7 +183,7 @@ Specific connections:
 - Midgaard-funded authenticators operate in the Cairn Market, purchasing verified charter documents, survey records, and pyramid-salvage artifacts for the city's academic and collector markets. The Northern Oasis's authentication stamps command premium prices because the settlement's institutional reputation for precision extends to its document verification practices.
 - Midgaard archivists have attempted to hire Northern Oasis scribes to catalog and transliterate the Tally House's oldest records — pre-dynastic salt tablets that may predate the Great Oasis Measuring House's own archive. The Cairn Brokers have refused, citing the records' sensitivity. The actual reason is that some of the oldest tablets document the Sand Sovereign's Requisition Charter terms, and the Brokers consider this information politically dangerous — evidence of historical exploitation that could be used to justify future requisition claims by external authorities.
 
-### Connection to Kowloon (vnums 14000-14099)
+### Connection to Kowloon (vnums 3439-3538)
 
 Kowloon's Jade Magistracy maintains records of desert trade route law descended from the same Keeper-of-Measure legal tradition that the Northern Oasis enforces. The Neon Covenant's "one ledger, one ration code" principle echoes the Northern Oasis's single-sluice, single-allocation methodology.
 

@@ -141,7 +141,7 @@ pointed to by `pcdata`; that pointer is `NULL` for mobs.
 
 | Field | Type | Description |
 |---|---|---|
-| `alignment` | `sh_int` | Alignment score (−1000 to +1000) |
+| `alignment` | `sh_int` | Alignment score (−291 to +291) |
 | `hitroll` | `int` | Base bonus to attack rolls |
 | `damroll` | `int` | Base bonus to damage rolls |
 | `armor` | `int` | Armour class value |
@@ -236,7 +236,7 @@ pointed to by `pcdata`; that pointer is `NULL` for mobs.
 
 ## PC_DATA
 
-`struct pc_data` — defined at `src/ack.h:711`
+`struct pc_data` — defined at `src/ack.h:189`
 
 Player-character-only data.  Every logged-in PC has exactly one `PC_DATA`
 block; it is accessed via `ch->pcdata`.  NPCs always have `pcdata == NULL`.
@@ -504,7 +504,7 @@ holds the per-instance mutable state.
 
 ## ROOM_INDEX_DATA
 
-`struct room_index_data` — defined at `src/ack.h:1153`
+`struct room_index_data` — defined at `src/ack.h:444`
 
 > **Note:** The common shorthand "ROOM_DATA" does not exist as a separate
 > typedef in this codebase.  The correct type name is `ROOM_INDEX_DATA`.

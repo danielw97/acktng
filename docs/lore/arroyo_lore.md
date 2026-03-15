@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This lore document defines the canonical thematic identity for the Arroyo rewrite (`19900-20024`). It aligns the area with Oasis-Pyramid corridor continuity while preserving the Arroyo's identity as a dangerous canyon biome. The Arroyo is a **jurisdictional wound in stone**: part dry flood channel, part legal ruin, part funerary machine.
+This lore document defines the canonical thematic identity for the Arroyo rewrite (`4439-4563`). It aligns the area with Oasis-Pyramid corridor continuity while preserving the Arroyo's identity as a dangerous canyon biome. The Arroyo is a **jurisdictional wound in stone**: part dry flood channel, part legal ruin, part funerary machine.
 
 ---
 

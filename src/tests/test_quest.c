@@ -402,12 +402,12 @@ static void test_loads_umbra_heartspire_static_chain(void)
 
 static void test_postmaster_aliases_map_to_active_city_vnums(void)
 {
-    assert(quest_unit_canonical_postmaster_vnum(13001) == 13001);
-    assert(quest_unit_canonical_postmaster_vnum(13021) == 13001);
-    assert(quest_unit_canonical_postmaster_vnum(14001) == 14001);
-    assert(quest_unit_canonical_postmaster_vnum(14021) == 14001);
-    assert(quest_unit_canonical_postmaster_vnum(0) == 14001);
-    assert(quest_unit_canonical_postmaster_vnum(3015) == 3015);
+    assert(quest_unit_canonical_postmaster_vnum(3340) == 3340);
+    assert(quest_unit_canonical_postmaster_vnum(3360) == 3340);
+    assert(quest_unit_canonical_postmaster_vnum(3440) == 3440);
+    assert(quest_unit_canonical_postmaster_vnum(3460) == 3440);
+    assert(quest_unit_canonical_postmaster_vnum(0) == 3440);
+    assert(quest_unit_canonical_postmaster_vnum(931) == 931);
 }
 
 int main(void)

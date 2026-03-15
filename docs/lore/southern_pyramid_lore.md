@@ -91,7 +91,7 @@ The southern approach route preserves the administrative infrastructure of this 
 
 - **Relay stations** at regular intervals along the wadi once housed emergency water-jar caches and signal towers for inter-oasis communication. Their ruins now serve as landmarks for the approach road.
 - **Charter language** on the approach road markers references the Great Oasis Water Court's jurisdiction, not the pyramid's own authority. The Moon Sovereign deliberately chose to build beyond the Water Court's effective territorial reach — close enough to draw on oasis logistics for construction supply, far enough that oasis legal authority could not interfere with the pyramid's internal governance.
-- **The Reedbound Span of Lantern** (room 9819, the southern basin connector) was historically a toll-inspection point where oasis charter guards verified that expeditions heading south carried sufficient provisions and proper documentation. The toll language on surviving markers uses oasis witness-seal conventions, establishing continuity with the Great Oasis's legal traditions.
+- **The Reedbound Span of Lantern** (room 2558, the southern basin connector) was historically a toll-inspection point where oasis charter guards verified that expeditions heading south carried sufficient provisions and proper documentation. The toll language on surviving markers uses oasis witness-seal conventions, establishing continuity with the Great Oasis's legal traditions.
 
 The practical consequence for narrative texture is that the Southern Pyramid's approach rooms should feel like a jurisdictional boundary crossing: players leave the remnants of oasis civil order and enter territory where the only surviving authority is the pyramid's own internal logic. Road markers transition from practical navigation aids to warning tablets. Charter language shifts from commercial toll assessment to theological threat.
 
@@ -146,7 +146,7 @@ When the Great Pyramid's containment nearly failed, the Southern Pyramid experie
 
 This event is recorded in the Rot Warden's chamber inscriptions as "the grief of those who knew first." The phrasing suggests the Southern Pyramid's connection to the anti-light source provided advance warning of the containment failure — the tier wardens sensed the surge before it manifested at the surface. The obsidian tears were not a malfunction but a sympathetic response: the structure's own volcanic-glass substrate resonating with the Shard's destabilization pulse.
 
-Residual obsidian tear-marks should appear as environmental details in tier warden chambers (especially 11560, the Rot Warden's Chamber, where the inscription is preserved). These marks are visually distinctive — dark glassy streaks on otherwise matte sandstone — and serve as physical evidence that the Southern Pyramid is not merely a passive tomb but an active sensor connected to the anti-light source.
+Residual obsidian tear-marks should appear as environmental details in tier warden chambers (especially 3249, the Rot Warden's Chamber, where the inscription is preserved). These marks are visually distinctive — dark glassy streaks on otherwise matte sandstone — and serve as physical evidence that the Southern Pyramid is not merely a passive tomb but an active sensor connected to the anti-light source.
 
 ---
 

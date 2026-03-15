@@ -5,7 +5,7 @@ K arroyo~
 L 55-75~
 N 199
 I 55 75
-V 19900 20024
+V 4439 4563
 X 0
 F 15
 U The hot wind shifts the sand, reshaping the arroyo.~
@@ -13,1762 +13,1762 @@ O virant~
 R all~
 W all~
 #ROOMS
-#19900
+#4439
 Mouth of the Arroyo~
 The @@bparched earth@@N cracks beneath your feet as the canyon walls begin to rise on either side, marking the entrance to a vast @@Rdry riverbed@@N that stretches into the haze.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19901
+0 0 4440
 D2
 ~
 ~
-0 0 8503
+0 0 1835
 S
-#19901
+#4440
 Arroyo Entrance~
 @@RSandstone walls@@N tower above, their surfaces carved by eons of flash floods into smooth, undulating patterns that catch the harsh sunlight.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19902
+0 0 4441
 D2
 ~
 ~
-0 0 19900
+0 0 4439
 S
-#19902
+#4441
 Shallow Canyon Opening~
 The canyon opens slightly here, allowing @@ybright sunlight@@N to pour down onto a floor of loose gravel and @@bsun-cracked clay@@N.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19903
+0 0 4442
 D2
 ~
 ~
-0 0 19901
+0 0 4440
 S
-#19903
+#4442
 Eroded Canyon Path~
 Deep grooves in the @@bcanyon floor@@N trace the path of ancient water, now dry as bone, winding between @@Rrust-colored boulders@@N.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19904
+0 0 4443
 D2
 ~
 ~
-0 0 19902
+0 0 4441
 S
-#19904
+#4443
 Dusty Switchback~
 The arroyo bends sharply here around a massive @@Rsandstone pillar@@N worn smooth by centuries of wind and the occasional violent flood.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19906
+0 0 4445
 D2
 ~
 ~
-0 0 19903
+0 0 4442
 D4
 ~
 ~
-0 0 19905
+0 0 4444
 S
-#19905
+#4444
 Crumbling Ledge~
 A narrow ledge of @@gcrumbling rock@@N provides precarious footing above the main canyon floor, with loose scree shifting underfoot.
-~
+~
 0 4
 D5
 ~
 ~
-0 0 19904
+0 0 4443
 S
-#19906
+#4445
 Wind-Carved Passage~
 The wind has sculpted this section of canyon into bizarre shapes, @@Rred arches@@N and pillars creating a natural gallery of stone.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19907
+0 0 4446
 D2
 ~
 ~
-0 0 19904
+0 0 4443
 S
-#19907
+#4446
 Sandy Wash~
 Fine @@btan sand@@N fills this low point in the arroyo to ankle depth, making each step a laborious effort through the yielding ground.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19910
+0 0 4449
 D1
 ~
 ~
-0 0 19908
+0 0 4447
 D2
 ~
 ~
-0 0 19906
+0 0 4445
 S
-#19908
+#4447
 Boulder Strewn Path~
 Massive @@gboulders@@N fallen from the canyon rim litter the path here, forcing travelers to climb over or squeeze between them.
-~
+~
 0 4
 D0
 ~
 ~
-0 0 19909
+0 0 4448
 D3
 ~
 ~
-0 0 19907
+0 0 4446
 S
-#19909
+#4448
 Widening Canyon~
 The canyon walls spread apart here, revealing a broader expanse of @@bcracked earth@@N dotted with the withered husks of dead brush.
-~
+~
 0 10
 D2
 ~
 ~
-0 0 19908
+0 0 4447
 S
-#19910
+#4449
 Sun-Blasted Clearing~
 A wide @@ysun-blasted clearing@@N opens up where the arroyo forks, the relentless heat creating shimmering mirages above the baked ground.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19911
+0 0 4450
 D2
 ~
 ~
-0 0 19907
+0 0 4446
 S
-#19911
+#4450
 Dry Riverbed~
 Smooth, water-worn stones line the floor of this @@bbone-dry riverbed@@N that once carried torrents of mountain snowmelt to the plains below.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19912
+0 0 4451
 D2
 ~
 ~
-0 0 19910
+0 0 4449
 S
-#19912
+#4451
 Cracked Clay Basin~
 The earth here has dried into a mosaic of @@bcracked clay tiles@@N, each one curling at the edges like pages of an ancient book.
-~
+~
 0 10
 D1
 ~
 ~
-0 0 19913
+0 0 4452
 D2
 ~
 ~
-0 0 19911
+0 0 4450
 S
-#19913
+#4452
 Petrified Driftwood~
 Enormous logs of @@gpetrified wood@@N lie scattered across the riverbed, turned to stone by millennia of mineral-rich water that no longer flows.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19914
+0 0 4453
 D3
 ~
 ~
-0 0 19912
+0 0 4451
 S
-#19914
+#4453
 Gravel Bar~
 A long bar of @@bsorted gravel@@N rises slightly above the riverbed floor, deposited by a flood that roared through here in some forgotten age.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19915
+0 0 4454
 D2
 ~
 ~
-0 0 19913
+0 0 4452
 S
-#19915
+#4454
 Dry Waterfall~
 A @@Rscarred rock face@@N marks where a waterfall once thundered into a plunge pool, now nothing but a dusty depression filled with rubble.
-~
+~
 0 4
 D0
 ~
 ~
-0 0 19916
+0 0 4455
 D2
 ~
 ~
-0 0 19914
+0 0 4453
 S
-#19916
+#4455
 Sunken Channel~
 The riverbed drops here into a deeper channel cut into the @@bbedrock@@N, its walls polished smooth by ancient currents.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19917
+0 0 4456
 D2
 ~
 ~
-0 0 19915
+0 0 4454
 S
-#19917
+#4456
 Fossil Bed~
 Fragments of ancient shells and @@gfossils@@N protrude from the exposed rock layers, remnants of an ocean that existed before memory.
-~
+~
 0 10
 D1
 ~
 ~
-0 0 19918
+0 0 4457
 D2
 ~
 ~
-0 0 19916
+0 0 4455
 S
-#19918
+#4457
 Bleached Stone Crossing~
 Flat @@ystones bleached white@@N by the sun form a natural stepping-stone path across the widest section of the dry riverbed.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19919
+0 0 4458
 D3
 ~
 ~
-0 0 19917
+0 0 4456
 S
-#19919
+#4458
 Oxbow Bend~
 The old river carved a sweeping oxbow here, leaving a @@bcurved depression@@N surrounded by higher ground on three sides.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19920
+0 0 4459
 D2
 ~
 ~
-0 0 19918
+0 0 4457
 S
-#19920
+#4459
 Silt Flat~
 A vast expanse of @@bfine silt@@N stretches out, so perfectly flat that every footprint remains visible as a dark impression.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19921
+0 0 4460
 D2
 ~
 ~
-0 0 19919
+0 0 4458
 S
-#19921
+#4460
 Stranded Pool~
 A shallow, @@bstagnant pool@@N of murky water somehow persists here, fed by unseen seepage from deep within the canyon walls.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19922
+0 0 4461
 D2
 ~
 ~
-0 0 19920
+0 0 4459
 S
-#19922
+#4461
 Ripple Marks~
 Preserved @@bripple marks@@N in the hardened silt tell of the river's last flow, frozen in time like a stone photograph.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19923
+0 0 4462
 D2
 ~
 ~
-0 0 19921
+0 0 4460
 S
-#19923
+#4462
 Chalky Embankment~
 A high embankment of @@ychalky white earth@@N rises along the riverbed edge, striped with bands of color from different geological eras.
-~
+~
 0 4
 D0
 ~
 ~
-0 0 19924
+0 0 4463
 D2
 ~
 ~
-0 0 19922
+0 0 4461
 S
-#19924
+#4463
 Tangled Root Bed~
 The @@gexposed root systems@@N of long-dead trees create a tangled web above the riverbed, gnarled and hard as iron.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19925
+0 0 4464
 D2
 ~
 ~
-0 0 19923
+0 0 4462
 S
-#19925
+#4464
 Dusty Confluence~
 Two @@bdry tributaries@@N merge here, their combined channel slightly wider as the arroyo pushes deeper into the canyon system.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19926
+0 0 4465
 D2
 ~
 ~
-0 0 19924
+0 0 4463
 S
-#19926
+#4465
 Scorched Flats~
 The ground here is @@Rscorched black@@N in patches where brush fires have swept through, leaving only ash and stubborn rock.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19927
+0 0 4466
 D2
 ~
 ~
-0 0 19925
+0 0 4464
 S
-#19927
+#4466
 Heat-Cracked Mesa~
 A low @@bmesa@@N of heat-cracked stone rises from the canyon floor, its surface too hot to touch for more than a moment.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19928
+0 0 4467
 D2
 ~
 ~
-0 0 19926
+0 0 4465
 S
-#19928
+#4467
 Mirage Flat~
 Waves of @@yheat shimmer@@N rise from the baked earth, creating phantom pools of water that vanish upon approach.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19929
+0 0 4468
 D2
 ~
 ~
-0 0 19927
+0 0 4466
 S
-#19929
+#4468
 Charred Gulch~
 Blackened @@gstumps@@N of ancient trees line this narrow gulch, victims of a fire that burned so hot it cracked the surrounding stone.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19930
+0 0 4469
 D2
 ~
 ~
-0 0 19928
+0 0 4467
 S
-#19930
+#4469
 Alkali Pan~
 A @@ywhite crust@@N of alkali minerals coats the ground, crunching and crumbling beneath every step in this desolate flat.
-~
+~
 0 10
 D2
 ~
 ~
-0 0 19929
+0 0 4468
 D3
 ~
 ~
-0 0 19931
+0 0 4470
 S
-#19931
+#4470
 Blistered Hardpan~
 The @@bhardpan earth@@N has blistered and buckled under relentless sun, forming treacherous bumps and hollows across the terrain.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19932
+0 0 4471
 D1
 ~
 ~
-0 0 19930
+0 0 4469
 S
-#19932
+#4471
 Cinder Field~
 Volcanic @@gcinders@@N from some ancient eruption carpet the ground, their dark mass absorbing heat and radiating it back mercilessly.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19933
+0 0 4472
 D2
 ~
 ~
-0 0 19931
+0 0 4470
 S
-#19933
+#4472
 Burnt Ridge~
 A low @@Rridge of fire-scarred rock@@N runs east to west, its surface pitted and rough from extreme thermal stress.
-~
+~
 0 4
 D0
 ~
 ~
-0 0 19934
+0 0 4473
 D2
 ~
 ~
-0 0 19932
+0 0 4471
 S
-#19934
+#4473
 Parched Basin~
 This wide @@bbasin@@N collects the worst of the canyon heat, the air so thick and still that breathing feels like inhaling fire.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19935
+0 0 4474
 D2
 ~
 ~
-0 0 19933
+0 0 4472
 S
-#19935
+#4474
 Sulfur Seep~
 The faint stench of @@ysulfur@@N rises from cracks in the earth where yellowish mineral deposits stain the surrounding rock.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19936
+0 0 4475
 D2
 ~
 ~
-0 0 19934
+0 0 4473
 S
-#19936
+#4475
 Glassrock Shelf~
 A shelf of @@ynatural glass@@N formed by lightning strikes catches the sunlight and throws dazzling reflections across the canyon walls.
-~
+~
 0 10
 D1
 ~
 ~
-0 0 19937
+0 0 4476
 D2
 ~
 ~
-0 0 19935
+0 0 4474
 S
-#19937
+#4476
 Ember Wash~
 Streaks of @@Rred and orange minerals@@N wash down the canyon wall here, creating the illusion that the stone itself is burning.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19938
+0 0 4477
 D3
 ~
 ~
-0 0 19936
+0 0 4475
 S
-#19938
+#4477
 Dry Thunder Canyon~
 The canyon narrows and the @@bwalls rise steeply@@N, channeling wind into a constant low moan that sounds like distant thunder.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19939
+0 0 4478
 D2
 ~
 ~
-0 0 19937
+0 0 4476
 S
-#19939
+#4478
 Thermal Vent~
 Hot air blasts upward from a crack in the @@Rcanyon floor@@N, carrying the scent of superheated minerals from far below.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19940
+0 0 4479
 D2
 ~
 ~
-0 0 19938
+0 0 4477
 S
-#19940
+#4479
 Scorched Crossing~
 Fire-blackened @@gstone slabs@@N form a natural bridge over a deep crack in the canyon floor, their surfaces slick with heat glaze.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19941
+0 0 4480
 D2
 ~
 ~
-0 0 19939
+0 0 4478
 S
-#19941
+#4480
 Narrow Gorge Entrance~
 The canyon walls close in dramatically here, forming a @@gnarrow gorge@@N barely wide enough for two to walk abreast.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 19942
+0 0 4481
 D2
 ~
 ~
-0 0 19940
+0 0 4479
 S
-#19942
+#4481
 Slot Canyon~
 Towering @@Rwalls of striated sandstone@@N rise dozens of feet on either side, the sky reduced to a thin ribbon of blue far above.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 19943
+0 0 4482
 D2
 ~
 ~
-0 0 19941
+0 0 4480
 S
-#19943
+#4482
 Squeeze Through~
 The gorge narrows further until the @@Rrough stone walls@@N nearly touch, forcing passage through a tight, claustrophobic gap.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 19944
+0 0 4483
 D2
 ~
 ~
-0 0 19942
+0 0 4481
 S
-#19944
+#4483
 Echoing Passage~
 Every sound reverberates endlessly in this section of @@gnarrow gorge@@N, footsteps becoming a cascade of phantom echoes.
-~
+~
 0 5
 D2
 ~
 ~
-0 0 19943
+0 0 4482
 D3
 ~
 ~
-0 0 19945
+0 0 4484
 S
-#19945
+#4484
 Choke Point~
 Fallen @@bboulders@@N partially block the gorge here, creating a natural choke point that funnels all passage through a single gap.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 19946
+0 0 4485
 D1
 ~
 ~
-0 0 19944
+0 0 4483
 S
-#19946
+#4485
 Overhang Shadows~
 Massive @@grock overhangs@@N block the sun entirely, plunging this stretch of gorge into cool, shadowed twilight.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 19947
+0 0 4486
 D2
 ~
 ~
-0 0 19945
+0 0 4484
 S
-#19947
+#4486
 Seeping Wall~
 Moisture seeps from a @@gcrevice@@N in the gorge wall, leaving dark stains and a thin film of algae on the otherwise bone-dry stone.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 19948
+0 0 4487
 D2
 ~
 ~
-0 0 19946
+0 0 4485
 S
-#19948
+#4487
 Twisted Passage~
 The gorge twists sharply, the @@Rred walls@@N layered with bands of darker minerals that spiral like the inside of a shell.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 19949
+0 0 4488
 D2
 ~
 ~
-0 0 19947
+0 0 4486
 S
-#19949
+#4488
 Rockfall Zone~
 Loose @@grocks and debris@@N litter the gorge floor here, evidence of recent collapses from the crumbling walls above.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 19950
+0 0 4489
 D2
 ~
 ~
-0 0 19948
+0 0 4487
 S
-#19950
+#4489
 Drip Hollow~
 A small hollow in the gorge wall collects @@bmineral-rich drips@@N into a tiny, rust-colored pool barely a handspan wide.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 19951
+0 0 4490
 D2
 ~
 ~
-0 0 19949
+0 0 4488
 S
-#19951
+#4490
 Wind Funnel~
 The gorge channels wind into a @@yconstant gale@@N here, the air thick with stinging grit that scours exposed skin.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 19952
+0 0 4491
 D2
 ~
 ~
-0 0 19950
+0 0 4489
 S
-#19952
+#4491
 Carved Notch~
 Ancient hands carved @@gsymbols@@N into the gorge walls at this narrow point, their meaning lost to time and erosion.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 19953
+0 0 4492
 D2
 ~
 ~
-0 0 19951
+0 0 4490
 S
-#19953
+#4492
 Deep Fissure~
 A @@bdeep fissure@@N splits the gorge floor, dropping into darkness so complete that no bottom is visible.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 19954
+0 0 4493
 D2
 ~
 ~
-0 0 19952
+0 0 4491
 S
-#19954
+#4493
 Lichen Gallery~
 Patches of @@Rred and orange lichen@@N cling to the gorge walls, the only sign of life in this otherwise sterile stone corridor.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 19955
+0 0 4494
 D2
 ~
 ~
-0 0 19953
+0 0 4492
 S
-#19955
+#4494
 Gorge Opening~
 The oppressive walls of the gorge finally begin to spread apart, revealing the @@bbroader canyon@@N beyond.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 19956
+0 0 4495
 D2
 ~
 ~
-0 0 19954
+0 0 4493
 S
-#19956
+#4495
 Ruins Approach~
 @@gCrumbling stone foundations@@N emerge from the canyon floor, the first signs of an ancient settlement built into the arroyo walls.
-~
+~
 0 2
 D0
 ~
 ~
-0 0 19957
+0 0 4496
 D2
 ~
 ~
-0 0 19955
+0 0 4494
 S
-#19957
+#4496
 Collapsed Gateway~
 A @@Rmassive stone archway@@N has partially collapsed, its keystone cracked but still holding against gravity's patient pull.
-~
+~
 0 2
 D0
 ~
 ~
-0 0 19958
+0 0 4497
 D2
 ~
 ~
-0 0 19956
+0 0 4495
 S
-#19958
+#4497
 Rubble-Strewn Court~
 What was once a broad courtyard is now a maze of @@gfallen pillars@@N and shattered flagstones choked with windblown sand.
-~
+~
 0 2
 D1
 ~
 ~
-0 0 19959
+0 0 4498
 D2
 ~
 ~
-0 0 19957
+0 0 4496
 S
-#19959
+#4498
 Eroded Stairway~
 Worn @@bstone steps@@N climb along the canyon wall, their edges rounded by centuries of wind until they are barely recognizable.
-~
+~
 0 4
 D0
 ~
 ~
-0 0 19960
+0 0 4499
 D3
 ~
 ~
-0 0 19958
+0 0 4497
 S
-#19960
+#4499
 Sunken Chamber~
 The floor has collapsed into a @@gsunken chamber@@N below, revealing walls decorated with faded murals of a flowing river.
-~
+~
 0 11
 D0
 ~
 ~
-0 0 19961
+0 0 4500
 D2
 ~
 ~
-0 0 19959
+0 0 4498
 S
-#19961
+#4500
 Broken Colonnade~
 A row of @@Rbroken columns@@N lines what was once a covered walkway, their carved surfaces still bearing traces of geometric patterns.
-~
+~
 0 2
 D2
 ~
 ~
-0 0 19960
+0 0 4499
 D3
 ~
 ~
-0 0 19962
+0 0 4501
 S
-#19962
+#4501
 Sand-Choked Hall~
 @@bDrifted sand@@N fills this ruined hall nearly to the ceiling, leaving only a narrow crawl space along one crumbling wall.
-~
+~
 0 11
 D0
 ~
 ~
-0 0 19963
+0 0 4502
 D1
 ~
 ~
-0 0 19961
+0 0 4500
 S
-#19963
+#4502
 Cistern Ruins~
 The remains of an ancient @@gcistern@@N dominate this area, its stone basin cracked and dry but still impressively engineered.
-~
+~
 0 2
 D0
 ~
 ~
-0 0 19964
+0 0 4503
 D2
 ~
 ~
-0 0 19962
+0 0 4501
 S
-#19964
+#4503
 Toppled Obelisk~
 A massive @@Robelisk@@N lies toppled across the ruins, its surface covered in etched glyphs that glow faintly in the desert heat.
-~
+~
 0 2
 D0
 ~
 ~
-0 0 19965
+0 0 4504
 D2
 ~
 ~
-0 0 19963
+0 0 4502
 S
-#19965
+#4504
 Shattered Shrine~
 The remains of a @@ysmall shrine@@N huddle against the canyon wall, its altar cracked in two and its offerings long since turned to dust.
-~
+~
 0 2
 D0
 ~
 ~
-0 0 19975
+0 0 4514
 D2
 ~
 ~
-0 0 19964
+0 0 4503
 D5
 ~
 ~
-0 0 19966
+0 0 4505
 S
-#19966
+#4505
 Vault Entrance~
 A @@gheavy stone door@@N hangs ajar, revealing a dark passage that descends into an underground vault beneath the ruins.
-~
+~
 0 11
 D0
 ~
 ~
-0 0 19967
+0 0 4506
 D4
 ~
 ~
-0 0 19965
+0 0 4504
 S
-#19967
+#4506
 Underground Passage~
 Cool @@gstone walls@@N close in around a passage that burrows beneath the canyon, the air stale but mercifully free of the surface heat.
-~
+~
 0 11
 D0
 ~
 ~
-0 0 19968
+0 0 4507
 D2
 ~
 ~
-0 0 19966
+0 0 4505
 S
-#19968
+#4507
 Collapsed Library~
 Fragments of @@bstone tablets@@N and clay cylinders litter the floor of what was once a library, their inscriptions mostly illegible.
-~
+~
 0 11
 D0
 ~
 ~
-0 0 19969
+0 0 4508
 D2
 ~
 ~
-0 0 19967
+0 0 4506
 S
-#19969
+#4508
 Frescoed Chamber~
 Faded @@Rfrescoes@@N depicting a great river and thriving city cover the walls of this underground chamber, a record of what was lost.
-~
+~
 0 11
 D0
 ~
 ~
-0 0 19970
+0 0 4509
 D2
 ~
 ~
-0 0 19968
+0 0 4507
 S
-#19970
+#4509
 Burial Alcove~
 Niches carved into the @@gstone walls@@N once held the honored dead, but most have been broken open and their contents scattered.
-~
+~
 0 11
 D0
 ~
 ~
-0 0 19971
+0 0 4510
 D2
 ~
 ~
-0 0 19969
+0 0 4508
 S
-#19971
+#4510
 Dust-Filled Corridor~
 A long @@bcorridor@@N stretches through the ruins, its ceiling sagging dangerously and its floor ankle-deep in fine dust.
-~
+~
 0 11
 D0
 ~
 ~
-0 0 19972
+0 0 4511
 D2
 ~
 ~
-0 0 19970
+0 0 4509
 S
-#19972
+#4511
 Ritual Circle~
 Concentric @@Rcircles@@N have been carved into the stone floor, radiating outward from a central basin stained dark with age.
-~
+~
 0 2
 D0
 ~
 ~
-0 0 19973
+0 0 4512
 D2
 ~
 ~
-0 0 19971
+0 0 4510
 S
-#19973
+#4512
 Watchpost Ruins~
 The remains of an elevated @@gwatchpost@@N offer a view down the canyon in both directions, though its walls have mostly crumbled.
-~
+~
 0 4
 D0
 ~
 ~
-0 0 19974
+0 0 4513
 D2
 ~
 ~
-0 0 19972
+0 0 4511
 S
-#19974
+#4513
 Granary Remains~
 Rows of @@bbroken clay jars@@N line the walls of this storage room, their contents long since consumed by time and vermin.
-~
+~
 0 11
 D2
 ~
 ~
-0 0 19973
+0 0 4512
 S
-#19975
+#4514
 Ruins Edge~
 The ancient settlement ends abruptly here, the @@gcanyon floor@@N resuming its natural state beyond the last crumbling wall.
-~
+~
 0 2
 D0
 ~
 ~
-0 0 19976
+0 0 4515
 D2
 ~
 ~
-0 0 19965
+0 0 4504
 S
-#19976
+#4515
 Scorpion Hollows~
 The ground becomes @@bsoft and sandy@@N here, pockmarked with burrow holes of varying sizes that speak of a thriving scorpion colony.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19977
+0 0 4516
 D2
 ~
 ~
-0 0 19975
+0 0 4514
 S
-#19977
+#4516
 Chitinous Tunnels~
 Discarded @@bscorpion shells@@N crunch underfoot as narrow tunnels branch off in every direction from this central hollow.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19980
+0 0 4519
 D2
 ~
 ~
-0 0 19976
+0 0 4515
 D3
 ~
 ~
-0 0 19978
+0 0 4517
 S
-#19978
+#4517
 Egg Chamber~
 Clusters of @@yleathery eggs@@N are tucked into sandy depressions throughout this warm, sheltered hollow in the canyon wall.
-~
+~
 0 10
 D1
 ~
 ~
-0 0 19977
+0 0 4516
 D3
 ~
 ~
-0 0 19979
+0 0 4518
 S
-#19979
+#4518
 Venom Pool~
 A shallow depression filled with @@Rgreenish liquid@@N gives off acrid fumes where scorpion venom has collected and concentrated.
-~
+~
 0 10
 D1
 ~
 ~
-0 0 19978
+0 0 4517
 S
-#19980
+#4519
 Shed Exoskeleton Field~
 Dozens of shed @@bexoskeletons@@N in various sizes litter the ground, creating a crunchy carpet of hollow chitin.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19981
+0 0 4520
 D2
 ~
 ~
-0 0 19977
+0 0 4516
 S
-#19981
+#4520
 Scorpion Feeding Ground~
 The remains of various @@gcanyon creatures@@N lie scattered about, picked clean by the voracious scorpion swarms.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19982
+0 0 4521
 D2
 ~
 ~
-0 0 19980
+0 0 4519
 S
-#19982
+#4521
 Sandy Burrow~
 A wide @@bburrow entrance@@N gapes in the canyon wall, the sand around it scored with countless claw marks.
-~
+~
 0 10
 D1
 ~
 ~
-0 0 19983
+0 0 4522
 D2
 ~
 ~
-0 0 19981
+0 0 4520
 S
-#19983
+#4522
 Stinger Grove~
 Discarded @@Rstingers@@N the length of short swords jut from the sand where molting scorpions have shed their old weapons.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19984
+0 0 4523
 D3
 ~
 ~
-0 0 19982
+0 0 4521
 S
-#19984
+#4523
 Chitinous Arch~
 An arch formed from the fused @@bexoskeletons@@N of countless dead scorpions spans the path, cemented by some resinous secretion.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19985
+0 0 4524
 D2
 ~
 ~
-0 0 19983
+0 0 4522
 S
-#19985
+#4524
 Drone Nest~
 Smaller scorpions swarm in @@bwrithing masses@@N through this section of the hollows, covering the ground like a living carpet.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19986
+0 0 4525
 D2
 ~
 ~
-0 0 19984
+0 0 4523
 S
-#19986
+#4525
 Prey Cache~
 The mummified remains of @@glarger prey@@N have been dragged here and partially buried in sand as a food store.
-~
+~
 0 10
 D2
 ~
 ~
-0 0 19985
+0 0 4524
 D5
 ~
 ~
-0 0 19987
+0 0 4526
 S
-#19987
+#4526
 Resin Tunnel~
 The walls of this tunnel are coated in @@bhardened resin@@N secreted by the scorpion colony, giving them a glossy amber sheen.
-~
+~
 0 11
 D0
 ~
 ~
-0 0 19988
+0 0 4527
 D4
 ~
 ~
-0 0 19986
+0 0 4525
 S
-#19988
+#4527
 Warm Hollow~
 Geothermal heat radiates from the @@Rcanyon floor@@N here, creating the perfect incubation temperature for the scorpion broods.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19989
+0 0 4528
 D2
 ~
 ~
-0 0 19987
+0 0 4526
 S
-#19989
+#4528
 Pheromone Trail~
 A @@ypungent chemical smell@@N hangs thick in the air along this trail, marking a major scorpion highway through the hollows.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19990
+0 0 4529
 D2
 ~
 ~
-0 0 19988
+0 0 4527
 S
-#19990
+#4529
 Matriarch Approach~
 The @@bburrowed passages@@N converge toward a large chamber ahead, the walls here scored by something far larger than the common scorpions.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19991
+0 0 4530
 D2
 ~
 ~
-0 0 19989
+0 0 4528
 S
-#19991
+#4530
 Bone Waste Threshold~
 The first scattered @@gbones@@N appear half-buried in the sand, growing denser with each step toward the heart of this grim expanse.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19992
+0 0 4531
 D2
 ~
 ~
-0 0 19990
+0 0 4529
 S
-#19992
+#4531
 Bone-Paved Path~
 A path of @@gcrushed and compacted bones@@N has been worn smooth by some heavy traffic, creating a grisly walkway.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19995
+0 0 4534
 D1
 ~
 ~
-0 0 19993
+0 0 4532
 D2
 ~
 ~
-0 0 19991
+0 0 4530
 S
-#19993
+#4532
 Rib Cage Thicket~
 Enormous @@grib cages@@N of long-extinct beasts jut from the earth like the frames of overturned ships.
-~
+~
 0 10
 D1
 ~
 ~
-0 0 19994
+0 0 4533
 D3
 ~
 ~
-0 0 19992
+0 0 4531
 S
-#19994
+#4533
 Skull Mound~
 A massive @@gmound of skulls@@N from hundreds of different creatures has been deliberately piled here by unknown hands.
-~
+~
 0 10
 D3
 ~
 ~
-0 0 19993
+0 0 4532
 S
-#19995
+#4534
 Ossuary Pit~
 A deep @@gpit@@N filled to overflowing with skeletal remains gapes in the canyon floor, bones protruding at every angle.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19996
+0 0 4535
 D2
 ~
 ~
-0 0 19992
+0 0 4531
 S
-#19996
+#4535
 Marrow Dust Plain~
 The ground is carpeted in @@ybone dust@@N so fine it rises in clouds with every step, coating everything in a pale film.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19997
+0 0 4536
 D2
 ~
 ~
-0 0 19995
+0 0 4534
 S
-#19997
+#4536
 Ivory Spire~
 A towering @@gspire of fused bones@@N rises from the waste, bound together by dark magic into an impossible pillar.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 19998
+0 0 4537
 D2
 ~
 ~
-0 0 19996
+0 0 4535
 S
-#19998
+#4537
 Charnel Hollow~
 This @@gdepression@@N in the canyon floor is thick with the stench of ancient decay, bones heaped in untidy piles.
-~
+~
 0 10
 D1
 ~
 ~
-0 0 19999
+0 0 4538
 D2
 ~
 ~
-0 0 19997
+0 0 4536
 S
-#19999
+#4538
 Gnawed Passage~
 The bones lining this passage bear @@gteeth marks@@N from something that has been systematically gnawing them for marrow.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 20000
+0 0 4539
 D3
 ~
 ~
-0 0 19998
+0 0 4537
 S
-#20000
+#4539
 Rattling Corridor~
 Wind passing through the countless @@ghollow bones@@N creates a constant eerie rattling that fills this section of canyon.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 20001
+0 0 4540
 D2
 ~
 ~
-0 0 19999
+0 0 4538
 S
-#20001
+#4540
 Graveyard of Giants~
 The @@gimmense bones@@N of creatures that defy identification lie scattered here, each femur taller than a man.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 20002
+0 0 4541
 D2
 ~
 ~
-0 0 20000
+0 0 4539
 S
-#20002
+#4541
 Skeletal Arch~
 Two massive @@grib bones@@N curve upward from either side of the path and meet overhead, forming a grotesque archway.
-~
+~
 0 10
 D2
 ~
 ~
-0 0 20001
+0 0 4540
 D5
 ~
 ~
-0 0 20003
+0 0 4542
 S
-#20003
+#4542
 Calcified Pool~
 A pool of @@ystained water@@N has calcified everything it touches, coating nearby bones in a chalky white mineral crust.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 20004
+0 0 4543
 D4
 ~
 ~
-0 0 20002
+0 0 4541
 S
-#20004
+#4543
 Femur Bridge~
 An enormous @@gfemur bone@@N serves as a natural bridge over a deep crevice, its surface worn smooth by countless crossings.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 20005
+0 0 4544
 D2
 ~
 ~
-0 0 20003
+0 0 4542
 S
-#20005
+#4544
 Bone Waste Depths~
 The @@gbones@@N here are stacked so deep and thick that the original canyon floor is completely invisible beneath layers of remains.
-~
+~
 0 10
 D0
 ~
 ~
-0 0 20006
+0 0 4545
 D2
 ~
 ~
-0 0 20004
+0 0 4543
 S
-#20006
+#4545
 Deep Canyon Descent~
 The canyon plunges downward steeply here, the @@Rwalls rising ever higher@@N as the path descends toward the ancient heart of the arroyo.
-~
+~
 0 5
 D2
 ~
 ~
-0 0 20005
+0 0 4544
 D5
 ~
 ~
-0 0 20007
+0 0 4546
 S
-#20007
+#4546
 Sunless Trench~
 So deep is the canyon here that @@gsunlight never reaches@@N the floor, leaving the passage in perpetual cool shadow.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 20008
+0 0 4547
 D4
 ~
 ~
-0 0 20006
+0 0 4545
 S
-#20008
+#4547
 Mineral Vein Crossing~
 Veins of @@yglittering minerals@@N thread through the exposed canyon walls, remnants of volcanic activity from ages past.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 20009
+0 0 4548
 D2
 ~
 ~
-0 0 20007
+0 0 4546
 S
-#20009
+#4548
 Echoing Abyss~
 The canyon @@gopens into a vast abyss@@N, the far wall barely visible through the dusty air that fills this enormous natural chamber.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 20010
+0 0 4549
 D2
 ~
 ~
-0 0 20008
+0 0 4547
 S
-#20010
+#4549
 Lava Tube Remnant~
 An ancient @@Rlava tube@@N has been cut open by the canyon's erosion, its glassy walls reflecting what little light penetrates this deep.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 20012
+0 0 4551
 D1
 ~
 ~
-0 0 20011
+0 0 4550
 D2
 ~
 ~
-0 0 20009
+0 0 4548
 S
-#20011
+#4550
 Crystal Grotto~
 Clusters of @@yrough crystals@@N protrude from the walls and ceiling, their facets catching and multiplying any available light.
-~
+~
 0 11
 D3
 ~
 ~
-0 0 20010
+0 0 4549
 S
-#20012
+#4551
 Basalt Column Gallery~
 Regular @@gbasalt columns@@N form a natural colonnade along the deep canyon, their hexagonal shapes eerily architectural.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 20013
+0 0 4552
 D2
 ~
 ~
-0 0 20010
+0 0 4549
 S
-#20013
+#4552
 Geothermal Vent~
 Plumes of @@yhot steam@@N hiss from cracks in the canyon floor, the air uncomfortably warm and thick with mineral tang.
-~
+~
 0 5
 D1
 ~
 ~
-0 0 20014
+0 0 4553
 D2
 ~
 ~
-0 0 20012
+0 0 4551
 S
-#20014
+#4553
 Obsidian Flow~
 A frozen flow of @@gobsidian@@N covers the canyon floor here, its glassy black surface treacherous and razor-sharp at the edges.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 20015
+0 0 4554
 D3
 ~
 ~
-0 0 20013
+0 0 4552
 S
-#20015
+#4554
 Whispering Depths~
 Faint @@gwhispers@@N seem to emanate from the very stone, the deep canyon playing tricks with acoustics and sanity alike.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 20016
+0 0 4555
 D2
 ~
 ~
-0 0 20014
+0 0 4553
 S
-#20016
+#4555
 Sulfurous Cavern~
 A side cavern reeks of @@ysulfur@@N, its walls encrusted with bright yellow deposits and its air barely breathable.
-~
+~
 0 11
 D2
 ~
 ~
-0 0 20015
+0 0 4554
 D5
 ~
 ~
-0 0 20017
+0 0 4556
 S
-#20017
+#4556
 Petrified Forest~
 The @@gstumps of petrified trees@@N stand in silent rows here, a fossilized forest entombed deep within the canyon walls.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 20018
+0 0 4557
 D4
 ~
 ~
-0 0 20016
+0 0 4555
 S
-#20018
+#4557
 Magma Seep~
 A thin @@Rseep of magma@@N oozes sluggishly from a crack in the canyon wall, its dull red glow providing the only light.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 20019
+0 0 4558
 D2
 ~
 ~
-0 0 20017
+0 0 4556
 S
-#20019
+#4558
 Precipice of the Deep~
 The path narrows to a @@gknife-edge precipice@@N above a yawning darkness, the canyon at its deepest and most treacherous here.
-~
+~
 0 5
 D0
 ~
 ~
-0 0 20020
+0 0 4559
 D2
 ~
 ~
-0 0 20018
+0 0 4557
 S
-#20020
+#4559
 Matriarch's Den~
 An enormous @@bcavern@@N opens up, its floor covered in shed chitin and the remains of countless victims offered to the brood queen.
-~
+~
 4 11
 D0
 ~
 ~
-0 0 20021
+0 0 4560
 D2
 ~
 ~
-0 0 20019
+0 0 4558
 S
-#20021
+#4560
 Warden's Post~
 A @@ybroad stone platform@@N dominates this chamber, carved with protective runes that still pulse faintly with ancient power.
-~
+~
 4 11
 D0
 ~
 ~
-0 0 20022
+0 0 4561
 D2
 ~
 ~
-0 0 20020
+0 0 4559
 S
-#20022
+#4561
 Throne of Dust~
 A @@bgrim throne room@@N hewn from the living canyon walls holds a seat of compacted earth and bone, wreathed in swirling dust.
-~
+~
 4 11
 D0
 ~
 ~
-0 0 20023
+0 0 4562
 D2
 ~
 ~
-0 0 20021
+0 0 4560
 S
-#20023
+#4562
 Bone Sanctum~
 The walls of this @@gvast chamber@@N are lined floor to ceiling with bones arranged in intricate, deliberate patterns of dark power.
-~
+~
 4 11
 D0
 ~
 ~
-0 0 20024
+0 0 4563
 D2
 ~
 ~
-0 0 20022
+0 0 4561
 S
-#20024
+#4563
 Heart of the Arroyo~
 This @@Rcolossal natural chamber@@N pulses with elemental energy, the walls glowing dull red and the air itself charged with power.
-~
+~
 4 11
 D2
 ~
 ~
-0 0 20023
+0 0 4562
 S
 #0
 #MOBILES
-#19900
+#4439
 dust devil whirlwind~
 a @@bdusty whirlwind@@N~
 A swirling @@bcolumn of dust@@N spins violently across the cracked earth.
-~
+~
 This miniature cyclone of sand and grit tears along the canyon floor,
-stripping flesh from bone with abrasive fury.
-~
+stripping flesh from bone with abrasive fury.
+~
 97 0 -100 S
 55 0
 0 0 0 0
@@ -1777,14 +1777,14 @@ This miniature cyclone of sand and grit tears along the canyon floor,
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19901
+#4440
 canyon viper serpent~
 a @@Rcanyon viper@@N~
 A @@Rrust-colored viper@@N lies coiled among the sun-baked rocks.
-~
+~
 Russet scales blend perfectly with the red sandstone as the viper waits
-with venomous patience for an unwary traveler.
-~
+with venomous patience for an unwary traveler.
+~
 97 0 -200 S
 58 0
 0 0 0 0
@@ -1793,14 +1793,14 @@ Russet scales blend perfectly with the red sandstone as the viper waits
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19902
+#4441
 sand scorpion~
 a @@bgiant sand scorpion@@N~
 A @@bgiant scorpion@@N scuttles across the dry riverbed, its stinger poised.
-~
+~
 Covered in dusty brown chitin, this massive scorpion clicks its pincers
-menacingly as venom drips from a barbed stinger.
-~
+menacingly as venom drips from a barbed stinger.
+~
 97 0 -300 S
 60 0
 0 0 0 0
@@ -1809,14 +1809,14 @@ Covered in dusty brown chitin, this massive scorpion clicks its pincers
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19903
+#4442
 arroyo scavenger jackal~
 an @@garroyo scavenger@@N~
 A gaunt @@gjackal@@N gnaws on a sun-bleached bone near the canyon wall.
-~
+~
 Ribs showing through mangy fur, this desperate scavenger has grown bold
-from hunger and will attack anything that moves.
-~
+from hunger and will attack anything that moves.
+~
 97 0 -150 S
 62 0
 0 0 0 0
@@ -1825,14 +1825,14 @@ Ribs showing through mangy fur, this desperate scavenger has grown bold
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19904
+#4443
 sunbleached skeleton undead~
 a @@ysunbleached skeleton@@N~
 A @@yskeleton@@N shambles forward, its bones bleached white by the desert sun.
-~
+~
 Animated by some lingering curse, this skeletal figure drags a rusted blade
-through the dust as empty eye sockets glow with pale malice.
-~
+through the dust as empty eye sockets glow with pale malice.
+~
 16481 0 -500 S
 64 0
 0 0 0 0
@@ -1841,14 +1841,14 @@ Animated by some lingering curse, this skeletal figure drags a rusted blade
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19905
+#4444
 canyon stalker lizard~
 a @@Rcanyon stalker@@N~
 A massive @@Rlizard@@N clings motionless to the sandstone wall, watching.
-~
+~
 This enormous reptile is nearly invisible against the red rock. Its muscular
-limbs end in hooked claws that grip the stone with frightening ease.
-~
+limbs end in hooked claws that grip the stone with frightening ease.
+~
 97 0 -200 S
 65 0
 0 0 0 0
@@ -1857,14 +1857,14 @@ This enormous reptile is nearly invisible against the red rock. Its muscular
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19906
+#4445
 desert wraith spirit~
 a @@gdesert wraith@@N~
 A translucent @@gfigure@@N shimmers in the heat haze, drifting above the dust.
-~
+~
 Once a traveler who perished in these canyons, this spectral form now haunts
-the arroyo with a mournful wail that chills the blood.
-~
+the arroyo with a mournful wail that chills the blood.
+~
 278625 0 -700 S
 67 0
 0 0 0 0
@@ -1873,14 +1873,14 @@ Once a traveler who perished in these canyons, this spectral form now haunts
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19907
+#4446
 gila beast lizard~
 a @@bvenomous gila beast@@N~
 A squat @@bbeaded lizard@@N hisses from beneath a sandstone overhang.
-~
+~
 Covered in bumpy black and orange scales, this thick-bodied reptile is far
-larger than any natural gila and exudes a toxic miasma.
-~
+larger than any natural gila and exudes a toxic miasma.
+~
 97 0 -250 S
 68 0
 0 0 0 0
@@ -1889,14 +1889,14 @@ Covered in bumpy black and orange scales, this thick-bodied reptile is far
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19908
+#4447
 sandstone golem construct~
 a @@Rsandstone golem@@N~
 A towering @@Rsandstone golem@@N grinds forward, shedding dust with each step.
-~
+~
 Carved from living rock by forgotten hands, this massive construct defends the
-deep arroyo with relentless, single-minded aggression.
-~
+deep arroyo with relentless, single-minded aggression.
+~
 33816673 0 0 S
 70 0
 5 5 0 0
@@ -1905,14 +1905,14 @@ Carved from living rock by forgotten hands, this massive construct defends the
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19909
+#4448
 canyon bandit outlaw~
 a @@gcanyon bandit@@N~
 A @@gweathered outlaw@@N lurks in the shadows of a narrow crevice.
-~
+~
 Sun-darkened skin and dust-caked leathers mark this hardened criminal who
-preys on travelers foolish enough to enter the arroyo.
-~
+preys on travelers foolish enough to enter the arroyo.
+~
 97 0 -100 S
 72 1
 0 0 0 0
@@ -1921,14 +1921,14 @@ Sun-darkened skin and dust-caked leathers mark this hardened criminal who
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19910
+#4449
 arroyo prowler cat~
 an @@barroyo prowler@@N~
 A tawny @@bgreat cat@@N crouches low, muscles coiled to spring.
-~
+~
 Lean and powerful, this desert predator moves through the canyon with fluid
-grace, its amber eyes locked on prey with predatory focus.
-~
+grace, its amber eyes locked on prey with predatory focus.
+~
 97 0 -200 S
 73 0
 0 0 0 0
@@ -1937,14 +1937,14 @@ Lean and powerful, this desert predator moves through the canyon with fluid
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19911
+#4450
 dust elemental spirit~
 a @@ydust elemental@@N~
 A @@yswirling mass of dust and gravel@@N roils with elemental fury.
-~
+~
 Neither fully solid nor wholly wind, this elemental takes a vaguely humanoid
-shape before dissolving and reforming in a ceaseless grinding storm.
-~
+shape before dissolving and reforming in a ceaseless grinding storm.
+~
 33816673 0 0 S
 75 0
 5 5 0 0
@@ -1953,14 +1953,14 @@ Neither fully solid nor wholly wind, this elemental takes a vaguely humanoid
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19912
+#4451
 red rock serpent snake~
 a @@Rred rock serpent@@N~
 A massive @@Rcrimson serpent@@N slithers between the boulders.
-~
+~
 Thick as a tree trunk and long as a wagon, this enormous snake has scales the
-color of dried blood and fangs that drip with corrosive venom.
-~
+color of dried blood and fangs that drip with corrosive venom.
+~
 97 0 -300 S
 60 0
 0 0 0 0
@@ -1969,14 +1969,14 @@ Thick as a tree trunk and long as a wagon, this enormous snake has scales the
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19913
+#4452
 bone collector undead ghoul~
 a @@gbone collector@@N~
 A hunched @@gfigure@@N drags a sack of rattling bones through the dust.
-~
+~
 This emaciated ghoul obsessively gathers the remains of the arroyo's victims,
-adding to a grisly collection with long, cracked fingernails.
-~
+adding to a grisly collection with long, cracked fingernails.
+~
 16481 0 -600 S
 65 0
 0 0 0 0
@@ -1985,14 +1985,14 @@ This emaciated ghoul obsessively gathers the remains of the arroyo's victims,
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19914
+#4453
 dried husk undead~
 a @@bdried husk@@N~
 A desiccated @@bcorpse@@N lurches forward, trailing wisps of dry skin.
-~
+~
 The desert has mummified this unfortunate soul into a leathery horror that
-still moves with jerky, purposeful malice.
-~
+still moves with jerky, purposeful malice.
+~
 16481 0 -500 S
 58 0
 0 0 0 0
@@ -2001,14 +2001,14 @@ The desert has mummified this unfortunate soul into a leathery horror that
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19915
+#4454
 canyon harpy~
 a @@Rcanyon harpy@@N~
 A @@Rshrieking harpy@@N perches on a rocky ledge, talons scraping stone.
-~
+~
 Leathery wings fold against a gaunt body as the harpy fixes its prey with
-bloodshot eyes and lets out an ear-splitting screech.
-~
+bloodshot eyes and lets out an ear-splitting screech.
+~
 97 0 -400 S
 70 2
 0 0 0 0
@@ -2017,14 +2017,14 @@ Leathery wings fold against a gaunt body as the harpy fixes its prey with
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19916
+#4455
 scorched rattler snake~
 a @@yscorched rattler@@N~
 A @@ythick rattlesnake@@N with heat-blackened scales coils defensively.
-~
+~
 The intense heat of the deep arroyo has darkened this rattlesnake's scales
-to a charcoal hue, and its venom burns like liquid fire.
-~
+to a charcoal hue, and its venom burns like liquid fire.
+~
 97 0 -200 S
 63 0
 0 0 0 0
@@ -2033,14 +2033,14 @@ The intense heat of the deep arroyo has darkened this rattlesnake's scales
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19917
+#4456
 canyon condor bird~
 a @@gcanyon condor@@N~
 A @@gmassive condor@@N circles overhead before diving toward the ground.
-~
+~
 With a wingspan wider than a man is tall, this enormous scavenger bird has
-grown aggressive enough to attack the living in its hunger.
-~
+grown aggressive enough to attack the living in its hunger.
+~
 97 0 -100 S
 66 0
 0 0 0 0
@@ -2049,14 +2049,14 @@ With a wingspan wider than a man is tall, this enormous scavenger bird has
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19918
+#4457
 calcified horror undead~
 a @@ycalcified horror@@N~
 A @@yite-encrusted undead creature@@N grinds forward on mineral-fused joints.
-~
+~
 Mineral deposits have calcified around this shambling corpse, turning it into
-a grotesque statue that somehow still moves with terrible purpose.
-~
+a grotesque statue that somehow still moves with terrible purpose.
+~
 278625 0 -600 S
 71 0
 3 3 0 0
@@ -2065,14 +2065,14 @@ Mineral deposits have calcified around this shambling corpse, turning it into
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19919
+#4458
 arroyo dust spider~
 an @@barroyo dust spider@@N~
 An @@benormous spider@@N the color of dry sand lurks in a crevice.
-~
+~
 Nearly invisible against the canyon floor, this massive arachnid weaves webs
-of silk so tough they can snare a running horse.
-~
+of silk so tough they can snare a running horse.
+~
 97 0 -300 S
 69 0
 0 0 0 0
@@ -2081,14 +2081,14 @@ Nearly invisible against the canyon floor, this massive arachnid weaves webs
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19920
+#4459
 scorpion matriarch queen~
 the @@RScorpion Matriarch@@N~
 The @@RScorpion Matriarch@@N towers here, her carapace glistening with venom.
-~
+~
 Twice the size of a draft horse, this ancient queen scorpion commands the
-swarms of the arroyo from atop a mound of shed exoskeletons.
-~
+swarms of the arroyo from atop a mound of shed exoskeletons.
+~
 67108979 0 -500 S
 80 2
 15 15 10 10
@@ -2097,14 +2097,14 @@ Twice the size of a draft horse, this ancient queen scorpion commands the
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19921
+#4460
 canyon warden guardian~
 the @@yCanyon Warden@@N~
 The @@yCanyon Warden@@N stands immovable, carved from living sandstone.
-~
+~
 This ancient sentinel was shaped from the canyon walls themselves by long-dead
-mages to guard something deep within the arroyo's heart.
-~
+mages to guard something deep within the arroyo's heart.
+~
 67371123 0 0 S
 80 0
 20 20 10 10
@@ -2113,14 +2113,14 @@ This ancient sentinel was shaped from the canyon walls themselves by long-dead
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19922
+#4461
 dust king lord~
 the @@bDust King@@N~
 The @@bDust King@@N sits upon a throne of compacted earth, eyes blazing.
-~
+~
 Once a warlord who ruled these canyons, the Dust King was entombed alive and
-rose again as something far worse, commanding wind and sand.
-~
+rose again as something far worse, commanding wind and sand.
+~
 67125363 0 -1000 S
 80 1
 15 15 15 15
@@ -2129,14 +2129,14 @@ Once a warlord who ruled these canyons, the Dust King was entombed alive and
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19923
+#4462
 bonelord arroyo undead~
 the @@gBonelord of the Arroyo@@N~
 The @@gBonelord of the Arroyo@@N rises from a pile of countless bones.
-~
+~
 Assembled from the skeletal remains of thousands of victims, this towering
-undead horror wears a crown of fused skulls and wields a femur the size of a pillar.
-~
+undead horror wears a crown of fused skulls and wields a femur the size of a pillar.
+~
 67125363 0 -1000 S
 80 0
 20 10 15 15
@@ -2145,14 +2145,14 @@ Assembled from the skeletal remains of thousands of victims, this towering
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19924
+#4463
 aridian sandstorm elemental~
 @@RAridian the Sandstorm@@N~
 @@RAridian the Sandstorm@@N rages here, a cataclysm of wind and stone.
-~
+~
 This primordial elemental is the living heart of the arroyo itself. Towering
-funnels of razor sand orbit a core of molten glass where two furious eyes burn.
-~
+funnels of razor sand orbit a core of molten glass where two furious eyes burn.
+~
 67371123 0 0 S
 80 0
 25 20 20 20
@@ -2161,14 +2161,14 @@ This primordial elemental is the living heart of the arroyo itself. Towering
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19925
+#4464
 sunscorched coyote~
 a @@bsunscorched coyote@@N~
 A @@bmangy coyote@@N with blistered, hairless patches slinks along the canyon.
-~
+~
 Driven mad by heat and thirst, this wretched coyote has lost all fear of
-larger creatures and attacks with desperate ferocity.
-~
+larger creatures and attacks with desperate ferocity.
+~
 97 0 -150 S
 56 0
 0 0 0 0
@@ -2177,14 +2177,14 @@ Driven mad by heat and thirst, this wretched coyote has lost all fear of
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19926
+#4465
 burrowing sand beetle~
 a @@yburrowing sand beetle@@N~
 A @@ylarge beetle@@N with mandibles like shears erupts from the sandy ground.
-~
+~
 This armored insect is the size of a large dog, its iridescent carapace
-shimmering with heat as it clacks razor-edged mandibles.
-~
+shimmering with heat as it clacks razor-edged mandibles.
+~
 97 0 -100 S
 57 0
 0 0 0 0
@@ -2193,14 +2193,14 @@ This armored insect is the size of a large dog, its iridescent carapace
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19927
+#4466
 arroyo centipede crawler~
 an @@Rarroyo centipede@@N~
 An @@Renormous centipede@@N ripples across the ground on hundreds of legs.
-~
+~
 As long as a man is tall, this segmented horror moves with disturbing speed
-and delivers an agonizing venomous bite from oversized fangs.
-~
+and delivers an agonizing venomous bite from oversized fangs.
+~
 97 0 -200 S
 59 0
 0 0 0 0
@@ -2209,14 +2209,14 @@ As long as a man is tall, this segmented horror moves with disturbing speed
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19928
+#4467
 dust mephit imp~
 a @@ydust mephit@@N~
 A cackling @@ysmall creature@@N made of swirling dust and malice flits about.
-~
+~
 This minor elemental being delights in blinding travelers with clouds of
-choking grit while shrieking with high-pitched laughter.
-~
+choking grit while shrieking with high-pitched laughter.
+~
 97 0 -300 S
 61 0
 0 0 0 0
@@ -2225,14 +2225,14 @@ This minor elemental being delights in blinding travelers with clouds of
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19929
+#4468
 canyon rattler snake~
 a @@gcanyon rattler@@N~
 A thick-bodied @@grattlesnake@@N buzzes a warning from a sun-warmed ledge.
-~
+~
 Coiled and ready to strike, this large rattlesnake defends its basking spot
-with the single-minded aggression born of territorial instinct.
-~
+with the single-minded aggression born of territorial instinct.
+~
 97 0 -200 S
 57 0
 0 0 0 0
@@ -2241,14 +2241,14 @@ Coiled and ready to strike, this large rattlesnake defends its basking spot
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19930
+#4469
 petrified guardian statue~
 a @@bpetrified guardian@@N~
 A @@bstone figure@@N that was once a living sentinel stirs with grinding motion.
-~
+~
 Centuries of mineral deposits have turned this ancient guard into living stone,
-but the enchantment that animates it stubbornly refuses to fade.
-~
+but the enchantment that animates it stubbornly refuses to fade.
+~
 33816673 0 0 S
 74 0
 5 5 0 0
@@ -2257,14 +2257,14 @@ Centuries of mineral deposits have turned this ancient guard into living stone,
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19931
+#4470
 desiccated mage undead~
 a @@ydesiccated mage@@N~
 A @@ywithered figure@@N in rotting robes raises skeletal hands crackling with power.
-~
+~
 This long-dead spellcaster still channels arcane energy through brittle bones,
-its hollow eye sockets burning with the remnants of magical knowledge.
-~
+its hollow eye sockets burning with the remnants of magical knowledge.
+~
 16481 0 -700 S
 72 0
 0 0 0 0
@@ -2273,14 +2273,14 @@ This long-dead spellcaster still channels arcane energy through brittle bones,
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19932
+#4471
 arroyo pit viper~
 an @@Rarroyo pit viper@@N~
 An @@Ragile viper@@N with heat-sensing pits drops from a canyon crevice.
-~
+~
 Perfectly adapted to ambush hunting in the dark recesses of the arroyo, this
-viper strikes with blinding speed at any warm body that passes below.
-~
+viper strikes with blinding speed at any warm body that passes below.
+~
 97 0 -200 S
 63 0
 0 0 0 0
@@ -2289,14 +2289,14 @@ Perfectly adapted to ambush hunting in the dark recesses of the arroyo, this
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19933
+#4472
 sandstorm wisp elemental~
 a @@ysandstorm wisp@@N~
 A @@ytight spiral of glowing sand@@N drifts through the air with eerie purpose.
-~
+~
 This minor elemental manifestation pulses with a faint inner light as grains
-of sand orbit its core in an endless, mesmerizing pattern.
-~
+of sand orbit its core in an endless, mesmerizing pattern.
+~
 262241 0 0 S
 66 0
 0 0 0 0
@@ -2305,14 +2305,14 @@ This minor elemental manifestation pulses with a faint inner light as grains
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19934
+#4473
 tomb raider brigand~
 a @@gtomb raider@@N~
 A @@gheavily armed brigand@@N picks through rubble, searching for valuables.
-~
+~
 Clad in mismatched armor looted from ancient burial sites, this ruthless
-scavenger will kill without hesitation to protect claimed territory.
-~
+scavenger will kill without hesitation to protect claimed territory.
+~
 97 0 -100 S
 69 1
 0 0 0 0
@@ -2321,14 +2321,14 @@ Clad in mismatched armor looted from ancient burial sites, this ruthless
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19935
+#4474
 clay golem sentry~
 a @@bclay golem sentry@@N~
 A @@blumbering clay figure@@N blocks the path, its body cracked but unyielding.
-~
+~
 Shaped from the red clay of the arroyo itself, this golem was formed to guard
-the ancient ruins and still obeys its crumbling directive with blind loyalty.
-~
+the ancient ruins and still obeys its crumbling directive with blind loyalty.
+~
 33816673 0 0 S
 68 0
 3 3 0 0
@@ -2337,14 +2337,14 @@ Shaped from the red clay of the arroyo itself, this golem was formed to guard
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19936
+#4475
 ravening vulture bird~
 a @@gravening vulture@@N~
 A @@gmassive vulture@@N with a wingspan wider than a doorway hunches over offal.
-~
+~
 Far larger than any natural bird of prey, this bloated scavenger has grown bold
-enough to attack the living rather than wait for them to expire.
-~
+enough to attack the living rather than wait for them to expire.
+~
 97 0 -100 S
 59 0
 0 0 0 0
@@ -2353,14 +2353,14 @@ Far larger than any natural bird of prey, this bloated scavenger has grown bold
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19937
+#4476
 fossil fiend undead~
 a @@bfossil fiend@@N~
 A @@bskeletal creature@@N of prehistoric origin tears free from the canyon wall.
-~
+~
 Animated by dark magic seeping through the stone, this fossilized predator
-retains the killing instincts it possessed millions of years ago.
-~
+retains the killing instincts it possessed millions of years ago.
+~
 278625 0 -500 S
 71 0
 3 0 0 0
@@ -2369,14 +2369,14 @@ Animated by dark magic seeping through the stone, this fossilized predator
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19938
+#4477
 silt horror ooze~
 a @@bsilt horror@@N~
 A @@bshifting mass of wet silt@@N rises from the ground in a vaguely humanoid form.
-~
+~
 Neither truly alive nor truly dead, this amorphous mass of animated silt
-engulfs and suffocates anything that stumbles into its reach.
-~
+engulfs and suffocates anything that stumbles into its reach.
+~
 262241 0 0 S
 64 0
 2 0 0 0
@@ -2385,14 +2385,14 @@ Neither truly alive nor truly dead, this amorphous mass of animated silt
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19939
+#4478
 burning sand salamander~
 a @@Rburning sand salamander@@N~
 A @@Rfire-orange salamander@@N the size of a horse slithers across scorched rock.
-~
+~
 Wreathed in a shimmer of superheated air, this massive amphibian leaves
-scorched footprints in stone and ignites anything flammable it touches.
-~
+scorched footprints in stone and ignites anything flammable it touches.
+~
 97 0 -200 S
 67 0
 0 0 0 0
@@ -2401,14 +2401,14 @@ Wreathed in a shimmer of superheated air, this massive amphibian leaves
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19940
+#4479
 canyon shade spirit undead~
 a @@gcanyon shade@@N~
 A @@gdark silhouette@@N peels away from the canyon wall, moving against the light.
-~
+~
 Born from the shadow of those who died violently in the arroyo, this shade
-clings to the canyon walls and reaches out with freezing tendrils.
-~
+clings to the canyon walls and reaches out with freezing tendrils.
+~
 16481 0 -800 S
 66 0
 0 0 0 0
@@ -2417,14 +2417,14 @@ Born from the shadow of those who died violently in the arroyo, this shade
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19941
+#4480
 gritclaw badger beast~
 a @@bgritclaw badger@@N~
 A @@bstocky badger@@N the size of a bear snarls from a shallow burrow.
-~
+~
 Massively oversized and ferociously territorial, this badger has claws like
-stone chisels and a temperament that makes cornered wolverines seem docile.
-~
+stone chisels and a temperament that makes cornered wolverines seem docile.
+~
 97 0 -200 S
 62 0
 0 0 0 0
@@ -2433,14 +2433,14 @@ Massively oversized and ferociously territorial, this badger has claws like
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19942
+#4481
 howling dust phantom undead~
 a @@yhowling dust phantom@@N~
 A @@ywailing figure@@N of churning dust and bone fragments drifts overhead.
-~
+~
 The tortured spirit of a sandstorm victim, this phantom wails endlessly as
-it drags a vortex of cutting grit in its spectral wake.
-~
+it drags a vortex of cutting grit in its spectral wake.
+~
 278625 0 -600 S
 74 0
 2 2 0 0
@@ -2449,14 +2449,14 @@ The tortured spirit of a sandstorm victim, this phantom wails endlessly as
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19943
+#4482
 sunstruck berserker human~
 a @@Rsunstruck berserker@@N~
 A @@Rwild-eyed human@@N in tattered rags charges forward, screaming incoherently.
-~
+~
 Driven utterly mad by sun and thirst, this once-rational person now attacks
-anything that moves with the frenzied strength of total insanity.
-~
+anything that moves with the frenzied strength of total insanity.
+~
 97 0 -50 S
 61 1
 0 0 0 0
@@ -2465,14 +2465,14 @@ Driven utterly mad by sun and thirst, this once-rational person now attacks
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#19944
+#4483
 ancient arroyo wurm beast~
 an @@Rancient arroyo wurm@@N~
 An @@Rimmense segmented wurm@@N erupts from the sand with grinding jaws.
-~
+~
 This colossal burrowing creature has haunted the deep arroyo since before
-recorded history, its armored hide scarred by countless battles.
-~
+recorded history, its armored hide scarred by countless battles.
+~
 33554529 0 -300 S
 75 0
 8 5 0 0
@@ -2483,7 +2483,7 @@ l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0 
 #0
 #OBJECTS
-#19900
+#4439
 dusty leather helm~
 a @@bdusty leather helm@@N~
 A @@bdusty leather helm@@N has been discarded here.~
@@ -2492,7 +2492,7 @@ A @@bdusty leather helm@@N has been discarded here.~
 7
 L
 60
-#19901
+#4440
 cracked chitin pauldrons~
 a pair of @@bcracked chitin pauldrons@@N~
 A pair of @@bcracked chitin pauldrons@@N lie in the dust.~
@@ -2501,7 +2501,7 @@ A pair of @@bcracked chitin pauldrons@@N lie in the dust.~
 12
 L
 60
-#19902
+#4441
 sunbaked hide vest~
 a @@ysunbaked hide vest@@N~
 A @@ysunbaked hide vest@@N lies crumpled on the ground.~
@@ -2510,7 +2510,7 @@ A @@ysunbaked hide vest@@N lies crumpled on the ground.~
 11
 L
 60
-#19903
+#4442
 frayed rope belt~
 a @@gfrayed rope belt@@N~
 A @@gfrayed rope belt@@N has been left behind here.~
@@ -2519,7 +2519,7 @@ A @@gfrayed rope belt@@N has been left behind here.~
 3
 L
 60
-#19904
+#4443
 worn sandstone mace~
 a @@bworn sandstone mace@@N~
 A @@bworn sandstone mace@@N lies half-buried in the dirt.~
@@ -2528,7 +2528,7 @@ A @@bworn sandstone mace@@N lies half-buried in the dirt.~
 8
 L
 60
-#19905
+#4444
 canyon viper fang dagger~
 a @@Rviper fang dagger@@N~
 A @@Rdagger@@N fashioned from a viper's fang lies here.~
@@ -2537,7 +2537,7 @@ A @@Rdagger@@N fashioned from a viper's fang lies here.~
 4
 L
 60
-#19906
+#4445
 sand-scoured bracers~
 a pair of @@bsand-scoured bracers@@N~
 A pair of @@bsand-scoured bracers@@N lie discarded here.~
@@ -2546,7 +2546,7 @@ A pair of @@bsand-scoured bracers@@N lie discarded here.~
 7
 L
 60
-#19907
+#4446
 cracked leather leggings~
 a pair of @@gcracked leather leggings@@N~
 A pair of @@gcracked leather leggings@@N have been abandoned here.~
@@ -2555,7 +2555,7 @@ A pair of @@gcracked leather leggings@@N have been abandoned here.~
 10
 L
 60
-#19908
+#4447
 dust-caked boots~
 a pair of @@bdust-caked boots@@N~
 A pair of @@bdust-caked boots@@N sit here gathering more dust.~
@@ -2564,7 +2564,7 @@ A pair of @@bdust-caked boots@@N sit here gathering more dust.~
 9
 L
 62
-#19909
+#4448
 tattered duster~
 a @@gtattered duster@@N~
 A @@gtattered duster@@N hangs limply over a rock.~
@@ -2573,7 +2573,7 @@ A @@gtattered duster@@N hangs limply over a rock.~
 6
 L
 62
-#19910
+#4449
 rusted iron coif~
 a @@grusted iron coif@@N~
 A @@grusted iron coif@@N sits atop a pile of rubble.~
@@ -2582,7 +2582,7 @@ A @@grusted iron coif@@N sits atop a pile of rubble.~
 12
 L
 63
-#19911
+#4450
 scorched hide tunic~
 a @@Rscorched hide tunic@@N~
 A @@Rscorched hide tunic@@N has been tossed aside here.~
@@ -2591,7 +2591,7 @@ A @@Rscorched hide tunic@@N has been tossed aside here.~
 10
 L
 63
-#19912
+#4451
 crumbling stone gauntlets~
 a pair of @@bcrumbling stone gauntlets@@N~
 A pair of @@bcrumbling stone gauntlets@@N rest against the canyon wall.~
@@ -2600,7 +2600,7 @@ A pair of @@bcrumbling stone gauntlets@@N rest against the canyon wall.~
 13
 L
 63
-#19913
+#4452
 sun-bleached bone necklace~
 a @@ysun-bleached bone necklace@@N~
 A @@ynecklace@@N of sun-bleached finger bones lies here.~
@@ -2609,7 +2609,7 @@ A @@ynecklace@@N of sun-bleached finger bones lies here.~
 2
 L
 63
-#19914
+#4453
 jagged obsidian blade~
 a @@gjagged obsidian blade@@N~
 A @@gjagged obsidian blade@@N juts from the sand.~
@@ -2618,7 +2618,7 @@ A @@gjagged obsidian blade@@N juts from the sand.~
 7
 L
 65
-#19915
+#4454
 sandstone tower shield~
 a @@bsandstone tower shield@@N~
 A @@bsandstone tower shield@@N leans against the rock face.~
@@ -2627,7 +2627,7 @@ A @@bsandstone tower shield@@N leans against the rock face.~
 14
 L
 63
-#19916
+#4455
 dry-rotted leather sleeves~
 a pair of @@bdry-rotted leather sleeves@@N~
 A pair of @@bdry-rotted leather sleeves@@N lie in a heap.~
@@ -2636,7 +2636,7 @@ A pair of @@bdry-rotted leather sleeves@@N lie in a heap.~
 8
 L
 65
-#19917
+#4456
 canyon bandit mask~
 a @@gcanyon bandit mask@@N~
 A @@gdust-stained mask@@N favored by canyon bandits lies here.~
@@ -2645,7 +2645,7 @@ A @@gdust-stained mask@@N favored by canyon bandits lies here.~
 5
 L
 65
-#19918
+#4457
 barbed scorpion-tail whip~
 a @@Rbarbed scorpion-tail whip@@N~
 A @@Rwhip@@N fashioned from a scorpion's tail lies coiled here.~
@@ -2654,7 +2654,7 @@ A @@Rwhip@@N fashioned from a scorpion's tail lies coiled here.~
 5
 L
 65
-#19919
+#4458
 gritstone ring~
 a @@bgritstone ring@@N~
 A @@brough-hewn ring@@N of compacted gritstone sits in the dirt.~
@@ -2663,7 +2663,7 @@ A @@brough-hewn ring@@N of compacted gritstone sits in the dirt.~
 2
 L
 65
-#19920
+#4459
 hardite chain coif~
 a @@ghardite chain coif@@N~
 A @@gchain coif@@N forged from dark desert iron lies here.~
@@ -2672,7 +2672,7 @@ A @@gchain coif@@N forged from dark desert iron lies here.~
 13
 L
 67
-#19921
+#4460
 tempered canyon-iron breastplate~
 a @@Rtempered canyon-iron breastplate@@N~
 A @@Rbreastplate@@N of hammered canyon iron rests against a boulder.~
@@ -2681,7 +2681,7 @@ A @@Rbreastplate@@N of hammered canyon iron rests against a boulder.~
 14
 L
 67
-#19922
+#4461
 harpy-talon gauntlets~
 a pair of @@yharpy-talon gauntlets@@N~
 A pair of @@ygauntlets@@N fitted with harpy talons lie here.~
@@ -2690,7 +2690,7 @@ A pair of @@ygauntlets@@N fitted with harpy talons lie here.~
 8
 L
 67
-#19923
+#4462
 scorpion chitin greaves~
 a pair of @@bscorpion chitin greaves@@N~
 A pair of @@bchitin greaves@@N crafted from scorpion shells rest here.~
@@ -2699,7 +2699,7 @@ A pair of @@bchitin greaves@@N crafted from scorpion shells rest here.~
 11
 L
 68
-#19924
+#4463
 golem-stone war hammer~
 a @@Rgolem-stone war hammer@@N~
 A massive @@Rwar hammer@@N hewn from golem-stone lies on the ground.~
@@ -2708,7 +2708,7 @@ A massive @@Rwar hammer@@N hewn from golem-stone lies on the ground.~
 10
 L
 68
-#19925
+#4464
 arroyo stalker hide cloak~
 an @@barroyo stalker hide cloak@@N~
 A @@bcloak@@N of mottled stalker hide drapes over a rock.~
@@ -2717,7 +2717,7 @@ A @@bcloak@@N of mottled stalker hide drapes over a rock.~
 9
 L
 68
-#19926
+#4465
 petrified rattlesnake belt~
 a @@gpetrified rattlesnake belt@@N~
 A @@gbelt@@N made from a petrified rattlesnake lies curled here.~
@@ -2726,7 +2726,7 @@ A @@gbelt@@N made from a petrified rattlesnake lies curled here.~
 4
 L
 68
-#19927
+#4466
 sandblasted iron vambraces~
 a pair of @@gsandblasted iron vambraces@@N~
 A pair of @@giron vambraces@@N pitted by sand erosion sit here.~
@@ -2735,7 +2735,7 @@ A pair of @@giron vambraces@@N pitted by sand erosion sit here.~
 11
 L
 70
-#19928
+#4467
 bleached bone sabatons~
 a pair of @@ybleached bone sabatons@@N~
 A pair of @@ybone sabatons@@N fashioned from desert remains sit here.~
@@ -2744,7 +2744,7 @@ A pair of @@ybone sabatons@@N fashioned from desert remains sit here.~
 12
 L
 70
-#19929
+#4468
 dust-forged scimitar~
 a @@ydust-forged scimitar@@N~
 A @@ycurved scimitar@@N with a blade like compressed sand lies here.~
@@ -2753,7 +2753,7 @@ A @@ycurved scimitar@@N with a blade like compressed sand lies here.~
 8
 L
 70
-#19930
+#4469
 canyon warden buckler~
 a @@Rcanyon warden buckler@@N~
 A small @@Rrounded shield@@N etched with canyon runes rests here.~
@@ -2762,7 +2762,7 @@ A small @@Rrounded shield@@N etched with canyon runes rests here.~
 14
 L
 70
-#19931
+#4470
 hardened clay wristguards~
 a pair of @@bhardened clay wristguards@@N~
 A pair of @@bclay wristguards@@N baked hard by the sun sit here.~
@@ -2771,7 +2771,7 @@ A pair of @@bclay wristguards@@N baked hard by the sun sit here.~
 6
 L
 70
-#19932
+#4471
 vulture feather earring~
 a @@gvulture feather earring@@N~
 A @@gfeathered earring@@N dangles from a small stone hook here.~
@@ -2780,7 +2780,7 @@ A @@gfeathered earring@@N dangles from a small stone hook here.~
 1
 L
 65
-#19933
+#4472
 polished sandstone ring~
 a @@bpolished sandstone ring@@N~
 A @@bsmooth ring@@N carved from red sandstone lies in the dust.~
@@ -2789,7 +2789,7 @@ A @@bsmooth ring@@N carved from red sandstone lies in the dust.~
 3
 L
 68
-#19934
+#4473
 pitted iron neck chain~
 a @@gpitted iron neck chain@@N~
 A @@gheavy neck chain@@N of pitted iron links lies here.~
@@ -2798,7 +2798,7 @@ A @@gheavy neck chain@@N of pitted iron links lies here.~
 10
 L
 70
-#19935
+#4474
 matriarch chitin crown~
 the @@RMatriarch's chitin crown@@N~
 A @@Rgleaming crown@@N of hardened scorpion chitin radiates power.~
@@ -2807,7 +2807,7 @@ A @@Rgleaming crown@@N of hardened scorpion chitin radiates power.~
 12
 L
 75
-#19936
+#4475
 venomspine great lance~
 a @@Rvenomspine great lance@@N~
 A @@Rmassive lance@@N tipped with a scorpion's stinger pulses with venom.~
@@ -2816,7 +2816,7 @@ A @@Rmassive lance@@N tipped with a scorpion's stinger pulses with venom.~
 9
 L
 75
-#19937
+#4476
 exoskeletal plate armor~
 a suit of @@bexoskeletal plate armor@@N~
 A suit of @@barmor@@N crafted from interlocking scorpion plates rests here.~
@@ -2825,7 +2825,7 @@ A suit of @@barmor@@N crafted from interlocking scorpion plates rests here.~
 14
 L
 75
-#19938
+#4477
 warden crest pauldrons~
 the @@yWarden's crest pauldrons@@N~
 A pair of @@ystone pauldrons@@N engraved with ancient canyon wards rest here.~
@@ -2834,7 +2834,7 @@ A pair of @@ystone pauldrons@@N engraved with ancient canyon wards rest here.~
 15
 L
 75
-#19939
+#4478
 canyon warden greataxe~
 the @@yCanyon Warden's greataxe@@N~
 A @@ymassive greataxe@@N carved from a single slab of canyon rock hums with power.~
@@ -2843,7 +2843,7 @@ A @@ymassive greataxe@@N carved from a single slab of canyon rock hums with powe
 10
 L
 75
-#19940
+#4479
 warden stone gauntlets~
 the @@yWarden's stone gauntlets@@N~
 A pair of @@ystone gauntlets@@N fused with volcanic glass shimmer with heat.~
@@ -2852,7 +2852,7 @@ A pair of @@ystone gauntlets@@N fused with volcanic glass shimmer with heat.~
 13
 L
 75
-#19941
+#4480
 dust king iron crown~
 the @@bDust King's iron crown@@N~
 A @@bcorroded iron crown@@N wreathed in perpetual dust swirls rests here.~
@@ -2861,7 +2861,7 @@ A @@bcorroded iron crown@@N wreathed in perpetual dust swirls rests here.~
 5
 L
 75
-#19942
+#4481
 dustwalker shroud~
 the @@bDustwalker's shroud@@N~
 A @@bshimmering shroud@@N that seems woven from dust and shadow drapes the ground.~
@@ -2870,7 +2870,7 @@ A @@bshimmering shroud@@N that seems woven from dust and shadow drapes the groun
 3
 L
 75
-#19943
+#4482
 sandsteel longsword~
 a @@gsandsteel longsword@@N~
 A @@glongsword@@N forged from magically compressed sand gleams here.~
@@ -2879,7 +2879,7 @@ A @@glongsword@@N forged from magically compressed sand gleams here.~
 7
 L
 75
-#19944
+#4483
 bonelord skull helm~
 the @@gBonelord's skull helm@@N~
 A @@ghelm@@N fashioned from fused skulls radiates dark energy.~
@@ -2888,7 +2888,7 @@ A @@ghelm@@N fashioned from fused skulls radiates dark energy.~
 14
 L
 75
-#19945
+#4484
 ossified tower shield~
 an @@gossified tower shield@@N~
 A @@gmassive shield@@N of layered bone plates leans against the wall.~
@@ -2897,7 +2897,7 @@ A @@gmassive shield@@N of layered bone plates leans against the wall.~
 15
 L
 75
-#19946
+#4485
 femur of the fallen~
 the @@gFemur of the Fallen@@N~
 A @@gcolossal bone club@@N pulses with necrotic energy.~
@@ -2906,7 +2906,7 @@ A @@gcolossal bone club@@N pulses with necrotic energy.~
 11
 L
 75
-#19947
+#4486
 bonelord rib cage armor~
 the @@gBonelord's rib cage armor@@N~
 A @@gbreastplate@@N assembled from interlocking rib bones exudes dread.~
@@ -2915,7 +2915,7 @@ A @@gbreastplate@@N assembled from interlocking rib bones exudes dread.~
 15
 L
 75
-#19948
+#4487
 aridian glass crown~
 @@RAridian's glass crown@@N~
 A @@Rcrown@@N of fused lightning glass crackles with elemental fury.~
@@ -2924,7 +2924,7 @@ A @@Rcrown@@N of fused lightning glass crackles with elemental fury.~
 4
 L
 75
-#19949
+#4488
 stormglass greatsword~
 a @@Rstormglass greatsword@@N~
 A @@Rgreatsword@@N of translucent storm glass hums with devastating power.~
@@ -2933,7 +2933,7 @@ A @@Rgreatsword@@N of translucent storm glass hums with devastating power.~
 8
 L
 75
-#19950
+#4489
 sandstorm mantle~
 the @@RSandstorm Mantle@@N~
 A @@Rswirling mantle@@N of living sand and wind hovers above the ground.~
@@ -2942,7 +2942,7 @@ A @@Rswirling mantle@@N of living sand and wind hovers above the ground.~
 2
 L
 75
-#19951
+#4490
 aridian gauntlets of the sirocco~
 the @@RGauntlets of the Sirocco@@N~
 A pair of @@Rgauntlets@@N that radiate waves of searing heat rest here.~
@@ -2951,7 +2951,7 @@ A pair of @@Rgauntlets@@N that radiate waves of searing heat rest here.~
 6
 L
 75
-#19952
+#4491
 molten glass greaves~
 a pair of @@Rmolten glass greaves@@N~
 A pair of @@Rleg guards@@N of volcanic glass glow with inner fire.~
@@ -2960,7 +2960,7 @@ A pair of @@Rleg guards@@N of volcanic glass glow with inner fire.~
 13
 L
 75
-#19953
+#4492
 scorching sands belt~
 the @@yScorching Sands belt@@N~
 A @@ybelt@@N woven from magically heated sand grains shimmers with energy.~
@@ -2969,7 +2969,7 @@ A @@ybelt@@N woven from magically heated sand grains shimmers with energy.~
 4
 L
 75
-#19954
+#4493
 matriarch venom ring~
 the @@RMatriarch's venom ring@@N~
 A @@Rring@@N set with a crystallized drop of scorpion venom glows faintly.~
@@ -2978,7 +2978,7 @@ A @@Rring@@N set with a crystallized drop of scorpion venom glows faintly.~
 1
 L
 75
-#19955
+#4494
 warden earthstone amulet~
 the @@yWarden's earthstone amulet@@N~
 An @@yamulet@@N containing a shard of living canyon stone thrums with power.~
@@ -2987,7 +2987,7 @@ An @@yamulet@@N containing a shard of living canyon stone thrums with power.~
 5
 L
 75
-#19956
+#4495
 bonelord marrow bracers~
 the @@gBonelord's marrow bracers@@N~
 A pair of @@gbracers@@N of polished bone filled with glowing marrow rest here.~
@@ -2996,7 +2996,7 @@ A pair of @@gbracers@@N of polished bone filled with glowing marrow rest here.~
 8
 L
 75
-#19957
+#4496
 dust king desiccated boots~
 the @@bDust King's desiccated boots@@N~
 A pair of @@bboots@@N of magically hardened leather that never crumble sit here.~
@@ -3005,7 +3005,7 @@ A pair of @@bboots@@N of magically hardened leather that never crumble sit here.
 9
 L
 75
-#19958
+#4497
 canyon warden stone shield~
 the @@yCanyon Warden's stone shield@@N~
 A @@ymassive shield@@N carved from a single canyon boulder radiates stability.~
@@ -3014,7 +3014,7 @@ A @@ymassive shield@@N carved from a single canyon boulder radiates stability.~
 15
 L
 75
-#19959
+#4498
 arroyo sandcaster wand~
 an @@yarroyo sandcaster wand@@N~
 A @@ywand@@N of petrified wood tipped with a swirling sand orb floats here.~
@@ -3025,379 +3025,379 @@ L
 75
 #0
 #RESETS
-M 0 19900 2 19901 load mob
+M 0 4439 2 4440   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19901 2 19904 load mob
+M 0 4440 2 4443   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19902 2 19907 load mob
+M 0 4441 2 4446   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19903 2 19910 load mob
+M 0 4442 2 4449   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19904 2 19913 load mob
+M 0 4443 2 4452   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19905 2 19916 load mob
+M 0 4444 2 4455   load mob
 
-E 0 19914 0 15 equip gear
+E 0 4453 0 15   equip gear
 
-E 0 19911 0 18 equip gear
+E 0 4450 0 18   equip gear
 
-E 0 19910 0 3 equip gear
+E 0 4449 0 3   equip gear
 
-M 0 19906 2 19919 load mob
+M 0 4445 2 4458   load mob
 
-E 0 19914 0 15 equip gear
+E 0 4453 0 15   equip gear
 
-E 0 19911 0 18 equip gear
+E 0 4450 0 18   equip gear
 
-E 0 19910 0 3 equip gear
+E 0 4449 0 3   equip gear
 
-M 0 19907 2 19922 load mob
+M 0 4446 2 4461   load mob
 
-E 0 19914 0 15 equip gear
+E 0 4453 0 15   equip gear
 
-E 0 19911 0 18 equip gear
+E 0 4450 0 18   equip gear
 
-E 0 19910 0 3 equip gear
+E 0 4449 0 3   equip gear
 
-M 0 19908 2 19925 load mob
+M 0 4447 2 4464   load mob
 
-E 0 19929 0 15 equip gear
+E 0 4468 0 15   equip gear
 
-E 0 19921 0 18 equip gear
+E 0 4460 0 18   equip gear
 
-E 0 19920 0 3 equip gear
+E 0 4459 0 3   equip gear
 
-M 0 19909 2 19928 load mob
+M 0 4448 2 4467   load mob
 
-E 0 19929 0 15 equip gear
+E 0 4468 0 15   equip gear
 
-E 0 19921 0 18 equip gear
+E 0 4460 0 18   equip gear
 
-E 0 19920 0 3 equip gear
+E 0 4459 0 3   equip gear
 
-M 0 19910 2 19931 load mob
+M 0 4449 2 4470   load mob
 
-E 0 19929 0 15 equip gear
+E 0 4468 0 15   equip gear
 
-E 0 19921 0 18 equip gear
+E 0 4460 0 18   equip gear
 
-E 0 19920 0 3 equip gear
+E 0 4459 0 3   equip gear
 
-M 0 19911 2 19934 load mob
+M 0 4450 2 4473   load mob
 
-E 0 19929 0 15 equip gear
+E 0 4468 0 15   equip gear
 
-E 0 19921 0 18 equip gear
+E 0 4460 0 18   equip gear
 
-E 0 19920 0 3 equip gear
+E 0 4459 0 3   equip gear
 
-M 0 19912 2 19937 load mob
+M 0 4451 2 4476   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19913 2 19940 load mob
+M 0 4452 2 4479   load mob
 
-E 0 19914 0 15 equip gear
+E 0 4453 0 15   equip gear
 
-E 0 19911 0 18 equip gear
+E 0 4450 0 18   equip gear
 
-E 0 19910 0 3 equip gear
+E 0 4449 0 3   equip gear
 
-M 0 19914 2 19943 load mob
+M 0 4453 2 4482   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19915 2 19946 load mob
+M 0 4454 2 4485   load mob
 
-E 0 19929 0 15 equip gear
+E 0 4468 0 15   equip gear
 
-E 0 19921 0 18 equip gear
+E 0 4460 0 18   equip gear
 
-E 0 19920 0 3 equip gear
+E 0 4459 0 3   equip gear
 
-M 0 19916 2 19949 load mob
+M 0 4455 2 4488   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19917 2 19952 load mob
+M 0 4456 2 4491   load mob
 
-E 0 19914 0 15 equip gear
+E 0 4453 0 15   equip gear
 
-E 0 19911 0 18 equip gear
+E 0 4450 0 18   equip gear
 
-E 0 19910 0 3 equip gear
+E 0 4449 0 3   equip gear
 
-M 0 19918 2 19955 load mob
+M 0 4457 2 4494   load mob
 
-E 0 19929 0 15 equip gear
+E 0 4468 0 15   equip gear
 
-E 0 19921 0 18 equip gear
+E 0 4460 0 18   equip gear
 
-E 0 19920 0 3 equip gear
+E 0 4459 0 3   equip gear
 
-M 0 19919 2 19958 load mob
+M 0 4458 2 4497   load mob
 
-E 0 19914 0 15 equip gear
+E 0 4453 0 15   equip gear
 
-E 0 19911 0 18 equip gear
+E 0 4450 0 18   equip gear
 
-E 0 19910 0 3 equip gear
+E 0 4449 0 3   equip gear
 
-M 0 19925 2 19961 load mob
+M 0 4464 2 4500   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19926 2 19964 load mob
+M 0 4465 2 4503   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19927 2 19967 load mob
+M 0 4466 2 4506   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19928 2 19970 load mob
+M 0 4467 2 4509   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19929 2 19973 load mob
+M 0 4468 2 4512   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19930 2 19976 load mob
+M 0 4469 2 4515   load mob
 
-E 0 19929 0 15 equip gear
+E 0 4468 0 15   equip gear
 
-E 0 19921 0 18 equip gear
+E 0 4460 0 18   equip gear
 
-E 0 19920 0 3 equip gear
+E 0 4459 0 3   equip gear
 
-M 0 19931 2 19979 load mob
+M 0 4470 2 4518   load mob
 
-E 0 19929 0 15 equip gear
+E 0 4468 0 15   equip gear
 
-E 0 19921 0 18 equip gear
+E 0 4460 0 18   equip gear
 
-E 0 19920 0 3 equip gear
+E 0 4459 0 3   equip gear
 
-M 0 19932 2 19982 load mob
+M 0 4471 2 4521   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19933 2 19985 load mob
+M 0 4472 2 4524   load mob
 
-E 0 19914 0 15 equip gear
+E 0 4453 0 15   equip gear
 
-E 0 19911 0 18 equip gear
+E 0 4450 0 18   equip gear
 
-E 0 19910 0 3 equip gear
+E 0 4449 0 3   equip gear
 
-M 0 19934 2 19988 load mob
+M 0 4473 2 4527   load mob
 
-E 0 19914 0 15 equip gear
+E 0 4453 0 15   equip gear
 
-E 0 19911 0 18 equip gear
+E 0 4450 0 18   equip gear
 
-E 0 19910 0 3 equip gear
+E 0 4449 0 3   equip gear
 
-M 0 19935 2 19991 load mob
+M 0 4474 2 4530   load mob
 
-E 0 19914 0 15 equip gear
+E 0 4453 0 15   equip gear
 
-E 0 19911 0 18 equip gear
+E 0 4450 0 18   equip gear
 
-E 0 19910 0 3 equip gear
+E 0 4449 0 3   equip gear
 
-M 0 19936 2 19994 load mob
+M 0 4475 2 4533   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19937 2 19997 load mob
+M 0 4476 2 4536   load mob
 
-E 0 19929 0 15 equip gear
+E 0 4468 0 15   equip gear
 
-E 0 19921 0 18 equip gear
+E 0 4460 0 18   equip gear
 
-E 0 19920 0 3 equip gear
+E 0 4459 0 3   equip gear
 
-M 0 19938 2 20000 load mob
+M 0 4477 2 4539   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19939 2 20003 load mob
+M 0 4478 2 4542   load mob
 
-E 0 19914 0 15 equip gear
+E 0 4453 0 15   equip gear
 
-E 0 19911 0 18 equip gear
+E 0 4450 0 18   equip gear
 
-E 0 19910 0 3 equip gear
+E 0 4449 0 3   equip gear
 
-M 0 19940 2 20006 load mob
+M 0 4479 2 4545   load mob
 
-E 0 19914 0 15 equip gear
+E 0 4453 0 15   equip gear
 
-E 0 19911 0 18 equip gear
+E 0 4450 0 18   equip gear
 
-E 0 19910 0 3 equip gear
+E 0 4449 0 3   equip gear
 
-M 0 19941 2 20009 load mob
+M 0 4480 2 4548   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19942 2 20012 load mob
+M 0 4481 2 4551   load mob
 
-E 0 19929 0 15 equip gear
+E 0 4468 0 15   equip gear
 
-E 0 19921 0 18 equip gear
+E 0 4460 0 18   equip gear
 
-E 0 19920 0 3 equip gear
+E 0 4459 0 3   equip gear
 
-M 0 19943 2 20015 load mob
+M 0 4482 2 4554   load mob
 
-E 0 19904 0 15 equip gear
+E 0 4443 0 15   equip gear
 
-E 0 19902 0 18 equip gear
+E 0 4441 0 18   equip gear
 
-E 0 19900 0 3 equip gear
+E 0 4439 0 3   equip gear
 
-M 0 19944 2 20018 load mob
+M 0 4483 2 4557   load mob
 
-E 0 19929 0 15 equip gear
+E 0 4468 0 15   equip gear
 
-E 0 19921 0 18 equip gear
+E 0 4460 0 18   equip gear
 
-E 0 19920 0 3 equip gear
+E 0 4459 0 3   equip gear
 
-M 0 19920 1 20020 load boss
+M 0 4459 1 4559   load boss
 
-E 0 19936 0 15 equip boss gear
+E 0 4475 0 15   equip boss gear
 
-E 0 19937 0 18 equip boss gear
+E 0 4476 0 18   equip boss gear
 
-E 0 19935 0 3 equip boss gear
+E 0 4474 0 3   equip boss gear
 
-E 0 19954 0 13 equip boss gear
+E 0 4493 0 13   equip boss gear
 
-M 0 19921 1 20021 load boss
+M 0 4460 1 4560   load boss
 
-E 0 19939 0 15 equip boss gear
+E 0 4478 0 15   equip boss gear
 
-E 0 19938 0 9 equip boss gear
+E 0 4477 0 9   equip boss gear
 
-E 0 19940 0 12 equip boss gear
+E 0 4479 0 12   equip boss gear
 
-E 0 19955 0 7 equip boss gear
+E 0 4494 0 7   equip boss gear
 
-M 0 19922 1 20022 load boss
+M 0 4461 1 4561   load boss
 
-E 0 19943 0 15 equip boss gear
+E 0 4482 0 15   equip boss gear
 
-E 0 19942 0 16 equip boss gear
+E 0 4481 0 16   equip boss gear
 
-E 0 19941 0 3 equip boss gear
+E 0 4480 0 3   equip boss gear
 
-E 0 19957 0 21 equip boss gear
+E 0 4496 0 21   equip boss gear
 
-M 0 19923 1 20023 load boss
+M 0 4462 1 4562   load boss
 
-E 0 19946 0 15 equip boss gear
+E 0 4485 0 15   equip boss gear
 
-E 0 19947 0 18 equip boss gear
+E 0 4486 0 18   equip boss gear
 
-E 0 19944 0 3 equip boss gear
+E 0 4483 0 3   equip boss gear
 
-E 0 19956 0 11 equip boss gear
+E 0 4495 0 11   equip boss gear
 
-M 0 19924 1 20024 load boss
+M 0 4463 1 4563   load boss
 
-E 0 19949 0 15 equip boss gear
+E 0 4488 0 15   equip boss gear
 
-E 0 19950 0 16 equip boss gear
+E 0 4489 0 16   equip boss gear
 
-E 0 19948 0 3 equip boss gear
+E 0 4487 0 3   equip boss gear
 
-E 0 19951 0 12 equip boss gear
+E 0 4490 0 12   equip boss gear
 
-E 0 19952 0 20 equip boss gear
+E 0 4491 0 20   equip boss gear
 
-E 0 19953 0 17 equip boss gear
+E 0 4492 0 17   equip boss gear
 
 S
 #$
