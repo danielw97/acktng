@@ -60,6 +60,24 @@ Optional extension blocks (detected by leading marker):
 - `l <loot_amount> <loot[0..MAX_LOOT-1]>`
 - `L <loot_chance[0..MAX_LOOT-1]>`
 
+`MAX_LOOT` is **9**. This means:
+- Every `l` line must contain exactly **10** whitespace-separated integers: `loot_amount` followed by 9 vnum fields. Unused slots must be filled with `0`.
+- Every `L` line must contain exactly **9** whitespace-separated integers: one chance value per loot slot. Unused slots must be `0`.
+
+Example of a mob with one loot item in slot 0 and the rest unused:
+```
+l 100 1205 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+```
+
+Example of a mob with two loot items in slots 0 and 1:
+```
+l 100 1215 1216 0 0 0 0 0 0 0
+L 60 40 0 0 0 0 0 0 0
+```
+
+The test loader enforces field counts: providing fewer than 10 values on an `l` line or fewer than 9 values on an `L` line causes an area format test failure.
+
 Loot table semantics:
 - `loot_amount` must be greater than 0 for loot drops to be attempted.
 - `loot_amount` is percent-based with overflow in 100-point chunks: `50` = 50% chance to drop one item, `100` = exactly one item, `150` = one guaranteed + 50% chance for a second, `300` = exactly three items.

@@ -87,7 +87,7 @@ The old `wood.are` (vnums 7300–7399) had the following bidirectional cross-are
 | `voidcitadel`/`umbra_heartspire` 11200 | `midgaard` 3232 | Heartspire ↔ Midgaard |
 | `withered_depths` 1000 | `confusn` 9695 | Withered Depths ↔ Forest of Confusion |
 | `verdantgreen` 10000 | `confusn` 9695 | Verdant Depths ↔ Forest of Confusion |
-| `thornwood` 1150 | `graveyard` 11085 | Thornwood ↔ Graveyard |
+| `thornwood` 1150 | `graveyard` 11085 | **Planned** — exit removed from `thornwood.are` pending `graveyard.are` implementation |
 | `shadowmere` 1400 | `graveyard` 11085 | Shadowmere ↔ Graveyard |
 | `hell` 1601 | `vecna_tomb` 20689 | Hell ↔ Vecna Tomb |
 | `akhenet` 2000 | `eastern_desert` 8508 | Akh'enet ↔ Eastern Desert |
@@ -130,3 +130,4 @@ The old `wood.are` (vnums 7300–7399) had the following bidirectional cross-are
 | From | Dir | To | Notes |
 |------|-----|----|-------|
 | `wood` 7698 | south | Rakuen 14600 | Eccentric Woodland south exit to Rakuen North Dispatch Gate. Requires a future Rakuen area file with `V` covering 14600 and a reverse exit `14600 north → 7698`. |
+| `thornwood` 1150 | south | `graveyard` 11085 | Thornwood entry room → Graveyard. Exit was removed from `thornwood.are` because `graveyard.are` is not yet built. Requires a future graveyard area file with a reverse exit `11085 → 1150`. |
