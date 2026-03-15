@@ -997,4 +997,624 @@ D3
 ~
 0 -1 14259
 S
+#14265
+@@yLedger Quarter Gate@@N~
+@@yThe Ledger Quarter Gate is not a gate in any military sense — it is a formal architectural threshold, a carved stone archway whose inscriptions announce to all who pass that they are entering the documentary heart of Mafdet.@@N The carved text above the arch, in three registers of legal script, reads: ALL CARGO ENTERING THIS QUARTER IS SUBJECT TO SALTWEIGHT STANDARD ASSESSMENT — MANIFESTS MUST BE PRESENTED TO THE LEDGER OF RECORD — CONVERSION DISPUTES ADJUDICATED AT SHOREWARD HOUSE. @@yThe walls here are thicker than elsewhere in the city — fire resistance being a primary design requirement for archive construction — and the air smells immediately of wax, bitumen, and old paper.@@N The bank of the Strandline Compact is accessible to the south; the main Ledger Quarter passage continues east.
+~
+0 11
+D1
+~
+~
+0 -1 14266
+D3
+~
+~
+0 -1 14264
+D2
+~
+~
+0 -1 14267
+S
+#14266
+@@yManuscript Passage@@N~
+@@yThe Manuscript Passage is a covered corridor running east from the Quarter Gate, its stone ceiling vaulted to accommodate the tall storage shelves that line both walls.@@N The shelves hold registered cargo manifests in date order — year after year of completed commercial documentation representing every major cargo movement through Mafdet's history. @@yThe Tide Ledger Hall opens to the north through a wide archway; the passage continues east toward the deeper Ledger Quarter streets.@@N The smell of old paper and dried wax seals is concentrated here, and the light is dim even at midday, filtered through high narrow ventilation slits that keep the archive atmosphere stable.
+~
+0 11
+D1
+~
+~
+0 -1 14268
+D3
+~
+~
+0 -1 14265
+D0
+~
+~
+0 -1 14269
+S
+#14267
+@@yBank of the Strandline Compact@@N~
+@@yThe Bank of the Strandline Compact occupies a reinforced building whose entrance is faced in polished basalt and whose interior is lit by high clerestory windows that illuminate the transaction floor without admitting the street.@@N Gilt-bronze strongboxes are mounted on the wall behind the teller counter, each sealed with the Compact's double-authentication wax and bearing a ledger reference number. @@yThe transaction counter runs the full width of the building and is staffed by clerks who combine the social warmth of archive staff with the numerical precision of instrument calibrators.@@N The bank operates on the Saltweight coinage standard — deposits and withdrawals are calculated against the Tide Ledger Hall's daily rate, and foreign currency is converted at the posted rate before being accepted. A framed statement on the wall reads: ALL DEPOSITS BACKED BY TIDEWALL BOND RESERVE.
+~
+1032 11
+D0
+~
+~
+0 -1 14265
+E
+saltweight coinage standard~
+@@yThe Saltweight coinage standard is the Great Oasis Measure applied to currency: each coin denomination corresponds to a fixed weight of refined metal, and the Bank's transaction scales are certified quarterly against the Tide Ledger Hall's master weight set. The framed rate schedule behind the counter shows the current conversion from Kowloon jade-credit to Saltweight coin, updated weekly.@@N
+~
+S
+#14268
+@@yLedger Lane, Western Section@@N~
+@@yLedger Lane is the main east-west commercial artery of the Ledger Quarter, its stone paving wider and more precisely laid than Carter's Way and its building frontages uniform in height and material — a Compact design requirement for the archive district that prevents structural irregularities from creating fire paths.@@N Conversion scribes and manifest notaries occupy the street-level offices, their services available to any cargo operator who needs documentation formalised. @@yA narrow passage to the south accesses the inner courtyard network; the lane continues east toward the Assessment Courtyard.@@N The lane carries foot traffic of a specific character: purposeful, document-carrying, and moving between specific building destinations rather than browsing.
+~
+0 11
+D1
+~
+~
+0 -1 14270
+D3
+~
+~
+0 -1 14266
+D2
+~
+~
+0 -1 14279
+S
+#14269
+@@yTide Ledger Hall@@N~
+@@yThe Tide Ledger Hall is the largest and most authoritative of Mafdet's four Ledger Houses — the official custodian of the Saltweight standard, the certifying authority for all harbor-measure conversions, and the first point of arbitration for cargo disputes.@@N The Hall's main chamber is vast for the Ledger Quarter: a double-height room with a gallery level, its walls covered in reference scales from floor to ceiling — bronze weight sets, calibrated measure rods, and conversion charts in multiple script systems. @@yThe master weight set occupies a central display case: seven bronze reference measures of descending size, each certified by the Great Oasis Measure Authority and marked with a triple-seal validation stamp.@@N Archive clerks move between the gallery and main floor retrieving specific historical manifests on request, their familiarity with the filing system visible in the efficiency of their movement. The Hall also maintains the current conversion-ratio board that is copied each week to the Market of the Shoreward Tables. @@lThe Tide Ledger Hall's authority extends across all four Ledger Houses by virtue of holding the primary Saltweight standard; the other three Houses certify against its master weights.@@N Littoral Branch notation marks on the gallery columns indicate this building's original function as a coastal survey archive before the Shoreward Compact reorganised the Ledger Quarter's hierarchy.
+~
+0 11
+D2
+~
+~
+0 -1 14266
+E
+master weight set~
+@@yThe seven bronze reference measures are maintained at a constant temperature by the Hall's archive management protocols. Each is inscribed with its mass in three notation systems: Great Oasis Saltweight, Mafdet harbor-measure, and Kowloon jade-weight equivalent. The certification stamps include a date of last verification against the Great Oasis master standard — the most recent is less than a season old.@@N
+~
+E
+calibration marks~
+@@yThe calibration marks on the gallery columns are Littoral Branch survey notation — a coastal measurement system predating the Saltweight standard. Archivists have preserved them as historical record rather than operational tool, but the Tide Ledger Hall's oldest archives include records translated directly from this earlier system, which is why Littoral Branch notation equivalences are maintained in the conversion-ratio tables.@@N
+~
+S
+#14270
+@@yAssessment Plaza Approach@@N~
+@@yThe Assessment Plaza Approach is a wide street section between the Ledger Lane and the central Assessment Courtyard, its edges lined with cargo weighing stations where arriving shipments are measured before proceeding to documentation.@@N The weighing stations are bronze-fitted and built into stone platforms that cannot be shifted by the weight of contested cargo. @@yManifest scribes circulate between stations, recording declared weights against measured actuals and flagging discrepancies for the Assessment Courtyard's resolution process.@@N The approach sees the heaviest cargo movement in the Ledger Quarter, and the street is accordingly wider and more heavily paved than the archive lanes to either side.
+~
+0 11
+D1
+~
+~
+0 -1 14272
+D3
+~
+~
+0 -1 14268
+S
+#14271
+@@yHazard Scribe's Reagent Archive@@N~
+@@yThe Hazard Scribe's Reagent Archive occupies a reinforced interior room whose shelves carry a specialised inventory of arcane reagents, containment materials, and assessment instruments used in the Quarantine Ledger's relic evaluation process.@@N The reagent dealer who operates the archive was formerly a Quarantine Ledger scribe and maintains an inventory calibrated precisely to the kinds of containment problems that arise in a port handling relic-class cargo from multiple pyramid traditions. @@ySmall wax-sealed vials, inscription inks, and calibration instruments share shelf space with larger containment canisters marked with the Quarantine Ledger's hazard classification symbols.@@N The archive smells of mineral reagent, preservation chemicals, and the faint acrid quality of something that has recently been contained rather than simply stored.
+~
+1032 11
+D1
+~
+~
+0 -1 14273
+S
+#14272
+@@yConversion Scribes' Walk@@N~
+@@yThe Conversion Scribes' Walk is a covered passage running between the Assessment Plaza and the Shoreward House, lined with the offices of independent conversion scribes who provide the documentation service that translates inland Reach cargo classifications into maritime contract-law equivalents.@@N Each office is a narrow room with a single desk, a reference library, and a queue position at the door — the scribes take clients on a first-come basis and compete on accuracy, speed, and knowledge of commercial case law rather than on price. @@yThe Shoreward House is accessible to the north through the scribes' passage; the Hazard Scribe's Reagent Archive is accessible from Shoreward House going west.@@N The walk smells of fresh ink, since conversion scribes work continuously, and produces a constant background sound of pen on paper.
+~
+0 11
+D1
+~
+~
+0 -1 14274
+D3
+~
+~
+0 -1 14270
+D0
+~
+~
+0 -1 14273
+S
+#14273
+@@yShoreward House@@N~
+@@yShoreward House is the specialist institution that manages the legal translation between inland Reach charter law and Mafdet maritime contract law — the Shoreward Conversion in its fullest bureaucratic form.@@N The building's interior is divided into two symmetrical sections: the western half decorated in the Survey-Administrative notation of the Reach system, the eastern in the Measure Script of the harbor authority. @@yBilingual legal inscriptions run along both walls simultaneously, recording the same clause in both legal registers side by side — a deliberate architectural statement about the institution's bridging function.@@N Shoreward House clerks are among the most technically educated in the Ledger Quarter, required to be fluent in both legal systems to a level that allows them to identify ambiguities that arise at the boundary between the two. @@yThe Hazard Scribe's Reagent Archive is accessible from the western office corridor.@@N Shoreward House also manages the appeal process for gate refusals, which places it in a structural tension with the Harbor Wardens who execute those refusals.
+~
+0 11
+D2
+~
+~
+0 -1 14272
+D3
+~
+~
+0 -1 14271
+E
+bilingual inscriptions~
+@@yA sample clause paired on both walls demonstrates the translation challenge: the inland version reads, in Survey-Administrative: CARGO WEIGHT LIABILITY ASSESSED AT POINT OF MANIFEST REGISTRATION AND FIXED FOR TRANSIT DURATION. The maritime version in Measure Script reads: CARGO WEIGHT LIABILITY SUBJECT TO SALTWATER ADJUSTMENT — VOLUME EXPANSION DURING TRANSIT ACKNOWLEDGED — FINAL WEIGHT ASSESSED AT POINT OF DELIVERY. The legal implications of those two formulations in a weight-based tariff dispute are significant enough to employ Shoreward House's entire staff full time.@@N
+~
+S
+#14274
+@@yLedger Lane, Eastern Section@@N~
+@@yThe eastern section of Ledger Lane narrows as it approaches the Storm Ledger and Quarantine Ledger zones — the two most restricted sections of the Ledger Quarter.@@N Building frontages here are smoother and more heavily sealed — iron shutters instead of wooden, bitumen-coated threshold strips under every door. @@yThe fire-containment design becomes more deliberate as the lane approaches the archive vaults.@@N Foot traffic thins considerably from the western section; the eastern Ledger Quarter is not a through-street and the only visitors with purpose here are those with specific business at the Storm Ledger or the Quarantine Ledger offices.
+~
+0 11
+D1
+~
+~
+0 -1 14276
+D3
+~
+~
+0 -1 14272
+S
+#14275
+@@yLedger Quarter, Inner Courtyard@@N~
+@@yThe Inner Courtyard is an enclosed open space at the centre of the Ledger Quarter block, its walls vented by deep-cut slots that allow air circulation while preventing fire from spreading between the archive buildings.@@N A central fountain — non-functional, its basin used for dry document transport in sealed carriers — anchors the courtyard's geometry. @@yThe vaulted arcade running around the courtyard's perimeter provides covered passage between the archive buildings in all weather conditions.@@N The courtyard's primary function is circulation between buildings — it connects the Tide Ledger Hall wing to the eastern archive complex and provides a fire break that the Compact's building codes require between any two archival structures.
+~
+0 11
+D1
+~
+~
+0 -1 14276
+D3
+~
+~
+0 -1 14268
+S
+#14276
+@@yLedger Court, Storm Passage@@N~
+@@yThe Storm Passage connects the main Ledger Lane to the Storm Ledger Vault area, its name derived from the Storm Ledger's function as the bonded escrow authority for high-value cargo held against maritime weather risk.@@N The passage walls carry the Storm Ledger's institutional markings — a stylised wave over a weight symbol — and the floor is slightly elevated to ensure any water intrusion during severe coastal storms runs toward the courtyard drain rather than into the vault. @@yA branch passage to the north leads toward the Assessment Courtyard's formal weighing floor.@@N The Storm Passage is more heavily guarded than the main lane — the Storm Ledger handles cargo whose combined value is often the largest concentration of commercial wealth in the city.
+~
+0 11
+D1
+~
+~
+0 -1 14277
+D3
+~
+~
+0 -1 14274
+D0
+~
+~
+0 -1 14275
+S
+#14277
+@@yAssessment Courtyard@@N~
+@@yThe Assessment Courtyard is the gravitational centre of the Ledger Quarter — a broad open-roofed space where the formal weighing of contested and high-value cargo occurs, and where disputes between the four Ledger Houses are adjudicated before they escalate to the Shoreward House appeal process.@@N Five bronze scales occupy the courtyard's centre, each calibrated against the Tide Ledger Hall's master weight set and each attended by a Compact-licensed assessor whose certification is renewed annually. @@yThe surrounding arcade carries eight relief carvings depicting the eight founding commercial agreements of the Shoreward Compact, each accompanied by the seals of the signatories.@@N Cargo manifests for high-value shipments are presented here for weight verification before the Ledger of Record is closed — a process that occasionally turns confrontational when a declared weight differs significantly from the measured actual. The Storm Ledger Vault is accessible from the eastern side; the Quarantine Ledger complex is further east still. @@lStairs to the Shrine Terrace climb from the northern wall, carved basalt steps that ascend to the upper city above the Ledger Quarter roofline.@@N The courtyard is the only outdoor space in the Ledger Quarter that receives full sun from midday through afternoon, and the bronze scales gleam visibly even from the upper stair level.
+~
+0 11
+D1
+~
+~
+0 -1 14279
+D3
+~
+~
+0 -1 14276
+D4
+~
+~
+0 -1 14385
+E
+bronze scales~
+@@yThe five bronze scales are maintained to a tolerance of one part in a thousand — a precision standard that the Compact requires for any scale used in formal assessment. Each scale carries a certification plate with the last verification date, the name of the certifying assessor, and the master weight reference used. Unofficial cargo weighing done elsewhere in the city is legally valid only if the scale used is certified to the same standard.@@N
+~
+E
+founding carvings~
+@@yThe eight relief carvings depict: the First Cairn Agreement between the Reach Wardens and the early Mafdet settlement; the Saltweight Adoption that standardised measurement; the Quay Concord's formation; the Storm Ledger establishment; the Quarantine Ledger's creation after the first relic-class cargo incident; the Littoral Branch connection; the Four Ledger House Recognition; and the Tidewall Compact that governed the seaward construction. The signatures on the Quarantine Ledger carving include a notation in an unfamiliar script that archivists have not definitively translated.@@N
+~
+S
+#14278
+@@yLedger Quarter, South Passage@@N~
+@@yThe South Passage connects the Assessment Courtyard zone to the Quarantine Ledger complex on the district's southeastern edge, its architecture shifting from the main Ledger Quarter's warm stone to a cooler, more deliberately sterile construction.@@N The passage floor slopes slightly — a deliberate drainage design that moves any liquid toward the main courtyard rather than toward the Quarantine archive. @@yThe walls here are smooth and routinely cleaned; Quarantine Ledger protocols require that nothing accumulate on surfaces in the containment corridor.@@N The smell changes here too: the wax-and-paper smell of the main archives gives way to the mineral cold of containment materials and the faint chemical sharpness of preservation reagents.
+~
+0 11
+D1
+~
+~
+0 -1 14282
+D3
+~
+~
+0 -1 14279
+S
+#14279
+@@yStorm Ledger Approach@@N~
+@@yThe approach to the Storm Ledger's bonded escrow vault is through a short secure passage off the Assessment Courtyard's eastern side, the walls here carrying the Storm Ledger's weather-and-weight iconography in formal relief.@@N The passage is guarded at all hours — the Storm Ledger holds cargo against maritime risk bonds, which means its vault contains some of the highest-value goods that move through Mafdet. @@yA brief schedule of current weather-hold classifications is posted on the passage wall: which cargo categories are currently under Storm Ledger bond pending the season's final weather assessment.@@N The vault door itself is visible at the passage end, iron-reinforced and sealed with the Storm Ledger's wax authentication.
+~
+0 11
+D0
+~
+~
+0 -1 14281
+D3
+~
+~
+0 -1 14277
+D2
+~
+~
+0 -1 14278
+S
+#14280
+@@yAssessment Courtyard, Northern Annex@@N~
+@@yThe northern annex of the Assessment Courtyard is a secondary weighing area used for smaller cargo consignments that do not require the main floor's formal protocol.@@N Small-scale merchants and individual travellers with cargo under the threshold for formal assessment bring their goods here, where a simplified verification process produces a stamped receipt sufficient for market-level commerce. @@yA Strandline Compact notice specifies exactly what cargo values require formal assessment versus this simplified process.@@N The annex connects northward to the stairway approach for the Shrine Terrace, which rises above the Ledger Quarter's roofline.
+~
+0 11
+D2
+~
+~
+0 -1 14277
+D0
+~
+~
+0 -1 14275
+S
+#14281
+@@yStorm Ledger Vault@@N~
+@@yThe Storm Ledger Vault is a sealed bonded storage chamber where high-value cargo is held under weather-risk escrow — goods whose maritime insurance requires physical custody until the bonding authority releases the storm-risk period.@@N The vault is built to the highest structural standard in the Ledger Quarter: stone walls of double thickness, iron-reinforced ceiling, and a floor raised above the courtyard level to prevent flood damage. @@yCargo containers here are sealed with the Storm Ledger's authentication wax and tagged with their escrow reference numbers, bond amounts, and release conditions.@@N The vault is cold — deliberately maintained at lower temperature than the surrounding rooms to reduce the risk of organic cargo spoilage — and the silence here is the particular silence of a space designed to be secure rather than inhabited. A faint smell of the sea comes through the ventilation system, which sources fresh air from a duct that opens at the Tidewall rather than at street level to prevent document ash from entering during any fire elsewhere in the Quarter.
+~
+4 11
+D2
+~
+~
+1 14266 14279
+S
+#14282
+@@yQuarantine Ledger Corridor@@N~
+@@yThe Quarantine Ledger Corridor connects the main Ledger Quarter passage system to the Quarantine Ledger's restricted complex, its design reflecting the Compact's long experience with the management of potentially hazardous relic-class cargo.@@N The corridor is double-walled — an inner passage within an outer shell, with a narrow inspection gap between them accessible only by Quarantine Ledger staff. @@yThe ventilation here moves air outward from the Quarantine complex toward the exterior, never inward, which prevents any contaminated atmosphere from mixing with the main archive air.@@N A standing notice at the corridor entrance lists the current quarantine status for each active relic class and specifies the protocols for personnel moving between the Quarantine zone and the main Ledger Quarter.
+~
+0 11
+D1
+~
+~
+0 -1 14285
+D3
+~
+~
+0 -1 14278
+D0
+~
+~
+0 -1 14283
+S
+#14283
+@@yQuarantine Ledger, Outer Office@@N~
+@@yThe outer office of the Quarantine Ledger handles the intake documentation for relic-class cargo arriving at Mafdet — the classification assessment, hazard designation, and routing assignment that determines whether cargo goes to standard harbor processing or to the Quarantine Isolation Chamber.@@N Quarantine scribes work here in pairs, a protocol requirement ensuring that no single clerk makes a hazard classification decision without a co-witness. @@yThe outer office is separated from the main Quarantine complex by a secondary corridor that the Compact calls the Air Break — a ventilated gap designed to prevent atmospheric contamination from reaching the outer office.@@N The outer office smells of preservation reagent and carries a faint mineral cold that seems disproportionate to the climate outside.
+~
+0 11
+D2
+~
+~
+0 -1 14282
+D0
+~
+~
+0 -1 14284
+S
+#14284
+@@yQuarantine Ledger, Classification Review Room@@N~
+@@yThe Classification Review Room is where Quarantine scribes compare incoming relic-class cargo against the Quarantine Ledger's historical hazard database — an archive of every assessed relic-class incident across the full corridor from Khar'Daan to the harbor.@@N Classification tablets lining the north wall describe each known hazard category with its containment requirements, monitoring protocols, and release conditions. @@yThe database extends to Midgaard Violet Compact registry references in the older sections, noting cross-jurisdictional relic-class incidents where Compact and Mafdet assessment frameworks diverged.@@N A notation in a recent hand at the end of the most recent volume reads: CLASS THREE CONTAINMENT CURRENTLY ACTIVE — ISOLATION CHAMBER IN USE — ACCESS RESTRICTED TO SENIOR SCRIBE AND ABOVE.
+~
+0 11
+D0
+~
+~
+0 -1 14283
+D2
+~
+~
+0 -1 14285
+S
+#14285
+@@yQuarantine Ledger Office@@N~
+@@yThe Quarantine Ledger Office is the administrative centre of Mafdet's relic hazard management system, a formal chamber where Senior Scribes receive the highest-classification cargo assessments and make the determinations that protect the harbor from containment failures.@@N Sealed containers of various classes line the northern shelves — each tagged, cross-referenced, and monitored on a regular schedule. @@yCold radiates from the eastern wall, where the passage to the Isolation Chamber is sealed with a bitumen-coated iron door whose temperature is measurably lower than the surrounding stone.@@N The Senior Scribe's desk carries current monitoring logs, a sealed correspondence file from the Midgaard Violet Compact registry, and what appears to be a Khar'Daan funerary quarantine notation in the old bureaucratic-funerary hand. An artifact held in the Isolation Chamber is radiating detectable cold even through the sealed door; the monitoring log records this as a Class Three indicator.
+~
+0 11
+D0
+~
+~
+0 -1 14284
+D1
+~
+~
+0 -1 14286
+E
+cold eastern wall~
+@@yThe temperature differential at the eastern wall is significant enough to feel. The Quarantine Ledger's monitoring protocols include hourly temperature measurements at this wall as an indicator of whether the Class Three containment in the Isolation Chamber is stable. The current readings show the cold is slightly more intense than the baseline — a fact recorded without annotation in the monitoring log.@@N
+~
+S
+#14286
+@@yQuarantine Ledger, Eastern Passage@@N~
+@@yThe passage east of the Quarantine Office carries increasing levels of containment design — the walls here are coated with a mineral compound that the Hazard Scribes describe as "neutralising," though they decline to specify what it neutralises.@@N The floor is slightly tacky underfoot due to the same coating applied in a thicker layer along the passage centreline. @@yThe ventilation here moves air actively toward the east wall's exhaust point, creating a barely perceptible draft that always blows away from the main Ledger Quarter.@@N A second iron door at the passage's east end leads to the archive complex beyond; a third leads south toward the sealed archive passage.
+~
+0 11
+D1
+~
+~
+0 -1 14287
+D3
+~
+~
+0 -1 14285
+D2
+~
+~
+0 -1 14289
+S
+#14287
+@@yQuarantine Ledger, Deep Archive@@N~
+@@yThe deep archive of the Quarantine Ledger holds the full historical assessment record for every relic-class cargo that has passed through Mafdet — going back to the earliest days of the Shoreward Compact and the first formal recognition that funerary-class relics from the pyramid traditions required special handling.@@N The archive is dense: tablets, scrolls, wax-sealed case files, and bound ledger books all filed in the precise sequence the Quarantine classification system requires. @@yKhar'Daan funerary-bureaucratic containment protocols appear in the oldest sections, alongside Arroyo-tradition thirst-oath cargo documentation and what appears to be an early Violet Compact relic registry from a period before the Midgaard archive standardised its notation.@@N The archive is cross-referenced to the Assessment Courtyard's founding records and the Storm Ledger's weather-risk bond history, which creates a complete documentary trail for every high-value cargo movement in Mafdet's history.
+~
+0 11
+D3
+~
+~
+0 -1 14286
+D1
+~
+~
+0 -1 14288
+S
+#14288
+@@ySealed Archive Approach@@N~
+@@yThe approach to the Sealed Archive Passage is a short dead-end corridor whose primary purpose is to create a physical and documentary gap between the Quarantine Ledger's working archive and the oldest sealed records beyond.@@N A standing notice here enumerates the access protocols: Senior Scribe authorization required, paired entry mandatory, monitoring log entry before and after. @@yThe floor here is visibly cleaner than anywhere else in the Ledger Quarter — swept on every shift change as part of the containment protocols.@@N The Sealed Archive Passage is immediately east, its door carrying both a mechanical key lock and a wax authentication seal that must be broken and replaced on each entry.
+~
+0 11
+D3
+~
+~
+0 -1 14287
+D1
+~
+~
+0 -1 14289
+S
+#14289
+@@ySealed Archive Passage@@N~
+@@yThe Sealed Archive Passage is a narrow, deliberately undecorated corridor that exists purely as a transition zone between the Quarantine Ledger's working offices and the deep archive vaults beyond.@@N The passage is sealed at its entry by a heavy iron door locked with the Archive Key — a key whose location the Senior Scribe maintains in a sealed envelope logged with the Assessment Courtyard's records. @@yBeyond the entry door, the passage continues east in complete silence except for the subtle sound of ventilation and the very faint hum that comes from the vault beyond — a sound that the archive protocols describe without explanation as "normal ambient for Class-adjacent storage."@@N The passage itself contains nothing; its function is entirely liminal, a controlled transition between accessible and restricted.
+~
+4 11
+D3
+~
+~
+1 14267 14288
+D1
+~
+~
+0 -1 14291
+S
+#14290
+@@yArchive Antechamber@@N~
+@@yThe archive antechamber beyond the sealed passage is a small room where researchers document their intent before accessing the deep vault, a Compact requirement ensuring that every entry to the oldest records is associated with a stated purpose.@@N A formal entry register on a stone reading stand records name, authorization level, purpose of access, and time of entry. @@yThe antechamber is cold enough to see breath — a side effect of the deep archive's proximity to the Class Three containment environment.@@N A narrow corridor leads east to the Deep Archive Vault; a southern branch reaches toward the older Class-adjacent storage sections.
+~
+0 11
+D3
+~
+~
+0 -1 14289
+D1
+~
+~
+0 -1 14291
+D2
+~
+~
+0 -1 14292
+S
+#14291
+@@yDeep Archive Corridor@@N~
+@@yThe deep archive corridor carries the oldest sections of the Ledger Quarter's documentary history — the administrative records that predate the Shoreward Compact's formalisation and document the settlement that became Mafdet before its current institutional structure.@@N Tablet cases here use a storage system from an older Littoral Branch archiving tradition: horizontal stacking rather than the vertical filing of the current system. @@yThe Kowloon connection is visible here in the naming conventions used on the oldest tabs — the Jade Clerk notation parallels are unmistakable to anyone familiar with both archive systems.@@N The corridor leads east to the Deep Archive Vault, the most complete and oldest set of records in the Ledger Quarter.
+~
+0 11
+D1
+~
+~
+0 -1 14293
+D3
+~
+~
+0 -1 14290
+S
+#14292
+@@yClass-Adjacent Storage Section@@N~
+@@yThe class-adjacent storage section holds relic-class items that have been cleared through the Quarantine Ledger assessment process but cannot be released into general commercial circulation due to ongoing monitoring requirements.@@N The items here are not dangerous in the Class Three sense — they have been cleared of immediate hazard — but they carry residual classification requirements that keep them in Compact custody pending a formal release determination. @@yThe cold that radiates from the Isolation Chamber section is perceptible here as a mild chill rather than the sharp cold of the active containment area.@@N Several crates bear Khar'Daan provenance marks; others carry the three-pyramid notation used for objects whose funerary origin has not been definitively attributed to a single tradition.
+~
+0 11
+D0
+~
+~
+0 -1 14290
+S
+#14293
+@@yDeep Archive Vault@@N~
+@@yThe Deep Archive Vault is the oldest continuously maintained documentary record in Mafdet — a chamber whose oldest layers date to the Littoral Branch's initial coastal survey operations, long before the current Shoreward Compact formalised the city's legal structure.@@N The vault is organised in chronological strata: the oldest records against the west wall in Littoral Branch tablet format, progressing eastward through the first Reach-to-harbor agreements, the early Saltweight adoption, and eventually reaching the current Compact period in the eastern sections. @@yKowloon connection records appear in the middle strata — the Jade Clerk notation that parallels the Tide Ledger Hall's own system, evidence of a long-standing east-coast commercial relationship that predates the current Compact.@@N The vault's oldest sections include tablets in notation systems that have been partially but not completely translated, their purpose inferred from context rather than read directly. A fragment from what appears to be an Arroyo-tradition thirst-oath document appears in one of the middle strata, suggesting commercial contact with that tradition earlier than the current historical consensus assumes. @@lThe vault is maintained at a slightly elevated humidity compared to the working archive — a conservation requirement for the oldest organic document materials.@@N The cold from the Isolation Chamber is only faintly perceptible at this distance.
+~
+0 11
+D3
+~
+~
+0 -1 14291
+D1
+~
+~
+0 -1 14295
+E
+oldest records~
+@@yThe oldest records in Littoral Branch tablet format include coastal survey measurements, tide-station readings, and what appear to be the earliest administrative records of a settlement at this location — before it bore the name Mafdet. The notation is precise and functional, oriented entirely toward operational record-keeping rather than historical documentation. The survey coordinates, if correctly translated, place the original settlement slightly south of the current harbor front.@@N
+~
+E
+kowloon connection records~
+@@yThe Kowloon connection records include shipment manifests, exchange rate agreements, and a series of letters in a commercial correspondence format that the Jade Clerk notation scholars identify as the same system still used in Kowloon's administrative archive. The letters discuss cargo routing, tariff negotiation, and at least one dispute involving a relic-class item whose description matches a Pyramid provenance but whose routing came from the eastern sea route rather than overland.@@N
+~
+S
+#14294
+@@yQuarantine Ledger, Isolation Approach@@N~
+@@yThe approach to the Quarantine Isolation Chamber is a sealed zone — no unauthorized personnel, no active cargo movement, no open flames.@@N The mineral cold that characterises the Isolation Chamber's vicinity is strong here, cold enough to be uncomfortable for extended periods. @@yThe ventilation system is loudest here — the active airflow that maintains the containment atmosphere creates a constant low hum that has been present long enough to be recorded in the monitoring logs as baseline.@@N The isolation chamber door is visible at the corridor's end, its iron surface laced with white frost that the current monitoring log describes simply as "within acceptable parameters."
+~
+0 11
+D0
+~
+~
+0 -1 14296
+D2
+~
+~
+0 -1 14286
+S
+#14295
+@@yDeep Archive, Eastern Extension@@N~
+@@yThe eastern extension of the deep archive holds the Quarantine Ledger's historical precedent files — the documented cases of relic-class cargo incidents and their resolution, used as the primary reference for current classification decisions.@@N The precedent files include incidents from the Great Pyramid, the Northern Pyramid, and the Southern Pyramid traditions, each catalogued by hazard class, resolution method, and time required for full clearance. @@yThe most recent entries involve incidents with Khar'Daan funerary cargo whose containment required coordination with the Midgaard Violet Compact.@@N A sealed case at the eastern end of the precedent file section carries a notation: CLASS THREE ACTIVE — INCIDENT DOCUMENTATION ONGOING — DO NOT FILE UNTIL RESOLUTION CONFIRMED.
+~
+0 11
+D3
+~
+~
+0 -1 14293
+D1
+~
+~
+0 -1 14296
+E
+precedent files~
+@@yThe oldest precedent files describe relic-class incidents from before the formal Quarantine Ledger existed — incidents managed on an ad hoc basis by the early Shoreward Compact. The most detailed is a case involving a cargo of funerary objects from the Northern Pyramid tradition that arrived with forged provenance documentation and had to be contained for six months before clearance was approved. The containment method used is described in detail that suggests it was improvised rather than protocol-based.@@N
+~
+S
+#14296
+@@yIsolation Chamber Anteroom@@N~
+@@yThe anteroom before the Quarantine Isolation Chamber is the last human-occupied space in the Quarantine complex — a small room where monitoring equipment records temperature, atmospheric composition, and what the protocols describe as "resonance indicators" without further specification.@@N The cold here is sharp and consistent, not the variable chill of a cool room but the flat cold of active containment. @@yMonitoring equipment covers most available wall space, and a fresh entry in the log records that resonance indicators have increased slightly since the last shift.@@N The chamber door beyond is triple-sealed: mechanical lock, wax authentication, and a third seal in a notation the current monitoring logs describe as "Khar'Daan-tradition containment script" added by the original depositing party.
+~
+0 11
+D0
+~
+~
+0 -1 14294
+D2
+~
+~
+0 -1 14295
+D1
+~
+~
+0 -1 14298
+S
+#14297
+@@yQuarantine Ledger, Archive Passage West@@N~
+@@yA connecting passage between the Quarantine Ledger complex and the main Assessment Courtyard zone allows monitoring staff to rotate between their post and the main Ledger Quarter without traversing the full corridor network.@@N The passage is deliberately plain — no archive material is stored here, no decoration applied — since this is a movement corridor only. @@yThe contrast with the document-dense main archive lanes is sharp; this passage is intentionally empty to ensure that nothing is inadvertently moved between the containment zone and the general archive.@@N Air movement in this passage is faster than in the main corridors, drawn by the ventilation differential between the Quarantine complex and the rest of the Ledger Quarter.
+~
+0 11
+D1
+~
+~
+0 -1 14299
+D3
+~
+~
+0 -1 14282
+S
+#14298
+@@yQuarantine Isolation Chamber@@N~
+@@yThe Quarantine Isolation Chamber is a sealed room of deliberate emptiness — no furniture, no shelving, no organic material of any kind except the containment object at its centre.@@N The object itself is in a basalt crate sealed with Khar'Daan containment script and the Quarantine Ledger's triple-authentication wax: a relic of the funerary tradition whose hazard classification is Class Three, meaning active, unpredictable, and incompletely understood. The cold in this room is the cold of the object rather than the room — it radiates from the sealed crate with a directional quality, stronger on the near side. @@yThe Quarantine Ledger's assessment documentation, visible through the anteroom window, describes the object as an animated hazard-class relic — a containment vessel that was once used to hold and direct funerary energy and has continued to do so after its original context was lost.@@N The monitoring logs record a consistent pattern: the cold intensifies at dawn, stabilises through the day, and diminishes slightly at night. The morning intensification was the first indicator that something had gone wrong with the original containment arrangement. @@RThe chamber walls bear score marks from a previous containment failure — a breach that was resolved but not without damage.@@N Access to this chamber has been restricted since the Class Three designation was applied.
+~
+4 11
+D3
+~
+~
+0 -1 14296
+S
+#14299
+@@yLedger Quarter, Circuit Passage@@N~
+@@yThe circuit passage is a secondary corridor that connects the Quarantine Ledger zone to the main Ledger Quarter's eastern access, allowing staff movement without disturbing the primary archive lanes.@@N The passage is functional architecture — direct, undecorated, designed for movement rather than documentation. @@yA service entry at the passage's south end accesses the building's mechanical systems: the ventilation equipment, the drainage control, and the temperature monitoring apparatus that feeds into the Quarantine Ledger's monitoring logs.@@N The circuit passage connects ultimately to the Ledger Quarter's main throughway and the passage toward the harbor approach.
+~
+0 11
+D1
+~
+~
+0 -1 14300
+D3
+~
+~
+0 -1 14297
+S
+#14300
+@@yLedger Quarter, Eastern Throughway@@N~
+@@yThe eastern throughway connects the Quarantine Ledger circuit to the Harbor Approach, a wide passage that marks the transition from the Ledger Quarter's dense archive environment to the open harbor-front zone.@@N The walls here carry the last of the Ledger Quarter's institutional markings — the Shoreward Compact's harbor-seal symbol where the archive zone ends and the harbor zone begins. @@yVentilation improves sharply at this point; the harbor wind reaches the throughway directly through a covered but open-fronted passage that opens onto the Harbor Approach road.@@N The smell shifts from the Ledger Quarter's wax-and-paper composite to the salt, tar, and timber smell of the harbor district.
+~
+0 11
+D1
+~
+~
+0 -1 14301
+D3
+~
+~
+0 -1 14299
+S
+#14301
+@@yLedger Quarter, Harbor Vestibule@@N~
+@@yThe harbor vestibule is the last enclosed space of the Ledger Quarter before the Harbor Gate — a short roofed passage that functions as a weather break between the archive district's temperature-controlled environment and the open harbor front.@@N Notice boards here carry current harbor operational announcements: berth assignments, chain schedule, signal tower messages from the previous day, and the Harbormaster's current cargo priority list. @@yThe vestibule is where Ledger Quarter clerks and Harbor Front workers interact most frequently — passing documentation between the two jurisdictional zones that together manage Mafdet's commercial throughput.@@N The sound of the harbor is clearly audible here — the creak of mooring lines, the percussion of cargo loading, and the overlapping calls of dock workers and ship officers.
+~
+0 11
+D1
+~
+~
+0 -1 14302
+D3
+~
+~
+0 -1 14300
+S
+#14302
+@@yLedger Quarter, Harbor Approach@@N~
+@@yThe Harbor Approach is the final room of the Ledger Quarter and the first room of the transition to the Harbor Front — an in-between space with the institutional weight of the archive district behind it and the working noise of the harbor ahead.@@N @@lThe cove opens fully ahead for the first time since entering the Ledger Quarter — a broad sweep of @@lwater reflecting the sky, the pier timber extending out from the harbor front, and the harbor chain's arc visible in the middle distance.@@N @@yThe Ledger Quarter's carved wall-text ends here abruptly on the western face; the eastern face is bare stone, leaving the transition visually clean.@@N The Harbor Gate is immediately east, and through it the full sensory experience of the working harbor begins.
+~
+0 11
+D1
+~
+~
+0 -1 14305
+D3
+~
+~
+0 -1 14301
+S
+#14303
+@@yLedger Quarter, Northwest Corner@@N~
+@@yThe northwest corner of the Ledger Quarter is a quiet administrative zone where the four Ledger Houses maintain their inter-institutional coordination staff — clerks whose job is to ensure that the Houses' overlapping documentary claims do not create unresolvable precedence conflicts.@@N The work here is entirely internal — no public-facing service, no cargo movement, just the careful maintenance of the inter-House agreement framework that keeps the Ledger Quarter's four competing institutions functional. @@yA meeting table dominates the room, surrounded by chairs that show the wear of long, frequently-interrupted sessions.@@N The northwest corner has access to the main Manuscript Passage to the south, making it a convenient hub for document routing between the Tide Ledger Hall and the Assessment Courtyard.
+~
+0 11
+D1
+~
+~
+0 -1 14268
+D2
+~
+~
+0 -1 14280
+S
+#14304
+@@yLedger Quarter, Southwest Archive Annex@@N~
+@@yThe Southwest Archive Annex holds overflow documentation from the Tide Ledger Hall — records that are not currently active but cannot yet be transferred to the Deep Archive due to the ongoing monitoring requirements of the cases they document.@@N The cases here are all resolved but recent — cargo disputes settled within the last three years, weather-risk bonds released within the last two, transit seal violations cleared within the last year. @@yThe annex is a working part of the Ledger Quarter's document cycle rather than a dead archive, and staff access it regularly to retrieve precedent information.@@N The Conversion Scribes' Walk is accessible from the east, which makes the annex a natural complement to the scribes' reference needs.
+~
+0 11
+D0
+~
+~
+0 -1 14272
+D1
+~
+~
+0 -1 14268
+S
 #0
