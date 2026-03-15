@@ -89,8 +89,6 @@ static void reset_equipment(void)
 static void test_get_parry_guard_clauses(void)
 {
     CHAR_DATA ch;
-    OBJ_DATA weapon;
-    PC_DATA pc;
 
     clear_character(&ch);
     ch.position = POS_SLEEPING;
