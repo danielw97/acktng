@@ -74,6 +74,8 @@ The old `wood.are` (vnums 1432–1531) had bidirectional cross-area connections 
 | `voidcitadel`/`umbra_heartspire` 3064 | `midgaard` 1148 | Heartspire ↔ Midgaard |
 | `withered_depths` 291 | `confusn` 2434 | Withered Depths ↔ Forest of Confusion |
 | `verdantgreen` 2739 | `confusn` 2434 | Verdant Depths ↔ Forest of Confusion |
+| `confusn` 2537 | `great_northern_forest` 3739 | Forest of Confusion ↔ Great Northern Forest (north-south continental link) |
+| `great_northern_forest` 3739 | `confusn` 2537 | Great Northern Forest ↔ Forest of Confusion (south entry) |
 | `akhenet` 792 | `eastern_desert` 1840 | Akh'enet ↔ Eastern Desert |
 | `eastern_desert` 1871 | `khardaan` 5624 | Eastern Desert ↔ Khar'Daan (down shaft) |
 | `khardaan` 5624 | `eastern_desert` 1871 | Khar'Daan ↔ Eastern Desert (up shaft) |
