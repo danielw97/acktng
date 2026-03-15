@@ -39,6 +39,7 @@ The **Keepers of Measure** govern through calibration, not armies — road stone
 | Twelve **Obelisk Lines** are erected across the desert as instruments — their shadows mark legal travel windows, ration allotment days, and safe convoy departures. | Engineering | eastern_desert_lore |
 | The **charter road system** is established: charter stones at intervals record distance, toll rate, and legal witness seals. Night-travel prohibition enforced (obelisk shadows useless after dark). | Political | eastern_desert_lore, northern_pyramid_lore |
 | The Keepers extend their survey network eastward, establishing **tide obelisks** along the coast and developing the **Littoral Branch** of Measure Script for maritime contexts. | Engineering | saltglass_reach_lore |
+| Keeper anomaly tablets distinguish **distance** from **danger** in Cinderteeth-adjacent routing law — one of the earliest explicit legal treatments of volcanic risk as a governable variable rather than an act of fate. | Political | cinderteeth_mountains |
 | **Survey-Marshal Ireth Sevan** formally documents Scorching Sands as a thermal anomaly corridor and develops the dual-marker timing system (obelisks plus heat-rod drift) — the first formal decoupling of "distance" and "danger" in charter law. The **Seven Shade Arches** waystation is constructed using her shadow-calibration design. | Discovery | scorching_sands_lore |
 | The **Iseth Reach** (river distributary) feeds the eastern road network and oasis water table, connecting the entire system hydraulically. | Engineering | eastern_desert_lore, great_pyramid_lore |
 | Akh'enet begins as the **Third Southern Register** — a calibrated road gate where surveyors reconcile caravan manifests. | Creation/Origin | akhenet_lore |
@@ -175,6 +176,7 @@ The mountain academy that turned preservation into predation.
 | **Volunteers become condemned debtors and political prisoners**, transferred under sealed warrants countersigned by proto-civic institutions (predecessors of Midgaard's guild courts and Kowloon's Jade Magistracy). **Flamebound Sentinels**, **Shadow Stalkers**, **Gravelurkers**, and **Spirit Mages** created. | Catastrophe | sunken_sanctum_lore |
 | Three factions emerge: **Ember Canon** (will through suffering/fire), **Prism Thesis** (structure through crystal harmonics), **Pale Ledger** (spirit imprinting). Each sabotages the others' proofs. | War/Conflict | sunken_sanctum_lore |
 | **The Conclave catastrophe**: seismic event + internal sabotage. Upper firestorm, mid-level crystal resonance break, lower flood inversion. The sanctum is entombed by regional policy — declared cursed, upper approaches deliberately collapsed. | Catastrophe | sunken_sanctum_lore |
+| Surviving route houses in the Cinderteeth adopt the first **Silent Bell Protocol** after repeated pass disappearances: unexplained subsurface resonance triggers immediate convoy dispersal and ridge evacuation. | Discovery | cinderteeth_mountains |
 | Before the fall, the **Prism Thesis** faction conducts forest field trials, implanting resonance crystals in old-growth root systems. These abandoned sites eventually become the **Withered Depths** blight. | Catastrophe | sunken_sanctum_lore, withered_depths_lore |
 | Midgaard's civic predecessors record payment of "forty iron bars and six condemned debtors" to "the mountain academy." | Political | sunken_sanctum_lore |
 
@@ -230,6 +232,7 @@ The Cinderteeth eruptions devastate the delta and forge a city from catastrophe.
 | The third year: flash flood swallows the village of **Yen-Mak** — 600 souls drowned. Survivors crawl onto a basalt outcrop and are rescued by former enemies. | Catastrophe | kowloon_lore |
 | In the fourth year, six surviving houses convene on the basalt outcrop and forge the **Neon Covenant** — inked in phosphorescent squid dye. Six houses bring irreplaceable contributions: ferry masters, grain wardens, iron hands, jade clerks, temple wardens, lantern runners. Three hard promises: one wall/one law, one ledger/one ration code, one square/final judgment. | Creation/Origin | kowloon_lore |
 | The same Cinderteeth volcanic cycle causes the **Ash Winters** in the Great Northern Forest: three successive ash-laden winters blanket the canopy, poison streams, kill a third of large game. | Catastrophe | great_northern_forest_lore |
+| Ashfall-era coastal chemistry shocks force emergency regulation of **ashglass, sulfur derivatives, and contaminated salt harvests**, seeding later littoral risk-pricing doctrine in Saltglass and Mafdet markets. | Engineering | cinderteeth_mountains, saltglass_reach_lore, mafdet_lore |
 | The **Passage Tithe** system is forged in the Great Northern Forest — caravans pay in grain, salt, lamp oil, and iron nails. | Political | great_northern_forest_lore |
 | Midgaard and Kowloon synchronize road-watch and convoy rhythm practices (**Lantern-Delta Expansion**). Evermeet's Roc Road becomes the primary western trade artery. | Political | five_cities_intercity_lore |
 
@@ -298,6 +301,7 @@ Cinderteeth disruptions force emergency rerouting and multi-year crises.
 | Event | Category | Sources |
 |-------|----------|---------|
 | **Cinderteeth disruptions** force emergency rerouting, intensify route predation. Multi-year rationing in Rakuen. | Catastrophe | five_cities_intercity_lore |
+| Route houses in the Cinderteeth standardize **mask-before-tarps** and double-water protocols after the Ashblind Convoy losses, and these procedures are adopted into intercity convoy handbooks. | Discovery | cinderteeth_mountains |
 | The Wizard's Keep transitions from scholastic enclave to fortified containment academy: courtyard drill doctrine expanded, inquisitorial audits normalized, and novice movement segmented by rank-locked routes. | Political | wizards_keep_lore |
 | **Shadowmere's Last Bell Crisis**: three contradictory decrees rung in one night (amnesty, lockdown, requisition). Garrisons split, chapel courts split. Necromantic expedients repurposed for political continuity. The city calcifies into mutually hostile systems. | Catastrophe | shadowmere_lore |
 | Great Northern wardens formalize Thornwood's **exclusion-zone** status in convoy and timber writ practice, codifying legal acknowledgment without assumption of direct governance. | Political | thornwood_lore, great_northern_forest_lore |
@@ -348,6 +352,7 @@ Unresolved conflicts define the present.
 | Kel'Shadra's Crypts and Void Citadel remain active as a "machine without legitimate sovereign" — surviving officers, loops, constructs, and doctrinal ghosts continue operating inherited procedures. | Cosmic | kelshadra_summary_lore |
 | Rakuen's Outbound Open Register has **847 active open entries** — persons who left and were never confirmed arrived. ~30% cross-reference to Midgaard's deferred-name casualty records at Sepulchur Pasture. | Political | five_cities_intercity_lore |
 | Internal records conflict at the Wizard's Keep: sealed corridors, destroyed archive caches, and disputed authority between Sanctum custody officers and reformist adepts drive a quiet legitimacy crisis. | Political | wizards_keep_lore |
+| Renewed low-grade venting and irregular tremor spacing across the Cinderteeth trigger cross-city disputes over salvage legality, contaminated-goods pricing, and whether Conclave-adjacent red zones should be reopened under supervised witness chains. | Political | cinderteeth_mountains, five_cities_intercity_lore |
 
 ---
 
@@ -413,7 +418,7 @@ One geological source, multiple civilizational consequences:
 - **Cinderteeth disruptions**: Ash-and-Iron Decades crises in Rakuen
 - **Ash Cult**: modern Kowloon cells worship eruptions as divine judgment
 
-Sources: sunken_sanctum_lore, kowloon_lore, great_northern_forest_lore, five_cities_intercity_lore
+Sources: cinderteeth_mountains, sunken_sanctum_lore, kowloon_lore, great_northern_forest_lore, five_cities_intercity_lore
 
 ---
 
@@ -461,3 +466,4 @@ Sources: sunken_sanctum_lore, kowloon_lore, great_northern_forest_lore, five_cit
 | violet_eclipse_cathedral_lore | Eras XV, XVI |
 | umbra_heartspire_lore | Eras XV, XVI |
 | catacombs_of_nightfall_lore | Eras XIII, XV |
+| cinderteeth_mountains | Eras II, X, XIV, XIX, XXI |
