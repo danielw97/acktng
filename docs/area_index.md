@@ -18,16 +18,12 @@ The `area.lst` file must remain in non-decreasing order by `V` minimum vnum (see
 | `midgaard.are` | 3001–3200 | 0 (city) | The City of Midgaard | `midgaard` |
 | `rocroad.are` | 3201–3299 | 10–120 | Roc Road and the Forest Path | `rocroad` |
 | `midgaard_shops.are` | 3300–3349 | 0 (city) | Midgaard Class Shop Extensions | `midgaard_shops` |
-| `gigant.are` | 3400–3449 | 10–35 | The City of Giganthia | `gigantia` |
 | `rocroad_byways.are` | 3450–3649 | 10–120 | Roc Road Byways and Warrens | `rocroad_byways` |
-| `school.are` | 3700–3779 | 1–10 | SoE Kindergarden | `soekindergarden` |
 | `asylum_grounds.are` | 3900–3999 | 30–60 | The Miskatonic Asylum Grounds | `asylum` |
 | `hotel.are` | 4400–4449 | 30–60 | The Hotel | `hotel` |
 | `maze_of_icarus.are` | 4950–4999 | 150 | The Maze of Icarus | `icarusmaze` |
 | `isle.are` | 5001–5099 | 50–70 | The Lost Isle | `lostisle` |
 | `asylum_lower.are` | 5100–5199 | 115–135 | Underneath the Asylum | `underasylum` |
-| `gnome.are` | 6000–6099 | 10–60 | Erin's Burrow | `erinsburrow` |
-| `warcamp.are` | 6600–6631 | 80–95 | The Minotaur's Warcamp | `minotaurcamp` |
 | `farmlands.are` | 7200–7299 | 90–110 | The Farmlands | `farm` |
 | `wood.are` | 7300–7699 | 18–92 | The Eccentric Woodland | `eccentricwoodland` |
 | `crimson_mist.are` | 8350–8499 | 130–150 | The Crimson Mist | `crimson_mist` |
@@ -50,7 +46,6 @@ The `area.lst` file must remain in non-decreasing order by `V` minimum vnum (see
 | `great_northern_forest.are` | 15500–15999 | 1–170 | The Great Northern Forest | `greatnorthernforest` |
 | `asylum_inside.are` | 16000–16099 | 75–95 | The Miskatonic Asylum | `asyluminside` |
 | `arroyo.are` | 19900–20024 | 55–75 | The Arroyo | `arroyo` |
-| `ackschool.are` | 20100–20149 | 1–10 | SoE Mud University | `soeuniversity` |
 | `newschool.are` | 20200–20299 | 1–10 | Academy of Adventure | `soeacademy` |
 | `vecna_tomb.are` | 20600–20799 | 95–110 | The Tomb of Vecna the Lich | `vecna` |
 | `forest_preserve.are` | 20800–20849 | 1–10 | Whispering Forest Preserve | `forestpreserve` |

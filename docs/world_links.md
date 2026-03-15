@@ -49,7 +49,6 @@ The old `wood.are` (vnums 7300–7399) had the following bidirectional cross-are
 |--------------|----------|-------------|--------------------------|--------|
 | `graveyard` 11086 | → | `wood` 7303 | Old woodland side-exit (graveyard passage) | **Deprecated** |
 | `asylum_grounds` 3900 | → | `wood` 7315 | Old woodland side-exit (asylum shortcut) | **Deprecated** |
-| `gnome` 6036 | → | `wood` 7317 | Old woodland side-exit (Erin's Burrow link) | **Deprecated** |
 | `sunken_sanctum` 9500 | → | `wood` 7323 | Old woodland side-exit (sanctum passage) | **Deprecated** |
 | `kelshadra` 9400 | → | `wood` 7324 | Old woodland side-exit (Kel'Shadra passage) | **Deprecated** |
 | `garmaine` 30000 | → | `wood` 7310 | Old woodland side-exit (Garmaine link) | **Deprecated** |
@@ -90,16 +89,11 @@ The old `wood.are` (vnums 7300–7399) had the following bidirectional cross-are
 | `verdantgreen` 10000 | `confusn` 9695 | Verdant Depths ↔ Forest of Confusion |
 | `thornwood` 1150 | `graveyard` 11085 | Thornwood ↔ Graveyard |
 | `shadowmere` 1400 | `graveyard` 11085 | Shadowmere ↔ Graveyard |
-| `minokeep` 1380 | `warcamp` 6624 | Minokeep ↔ Warcamp |
 | `hell` 1601 | `vecna_tomb` 20689 | Hell ↔ Vecna Tomb |
 | `akhenet` 2000 | `eastern_desert` 8508 | Akh'enet ↔ Eastern Desert |
-| `gigant` 3401 | `rocroad` 3242 | Giganthia ↔ Roc Road |
-| `gigant` 3430 | `school` 3700 | Giganthia ↔ School |
-| `school` 3717 | `ackschool` 20125 | School ↔ SoE University |
 | `school` 3744 | `newschool` 20200 | School ↔ Academy of Adventure |
 | `asylum_grounds` 3966 | `asylum_inside` 16000 | Asylum Grounds ↔ Asylum Inside |
 | `asylum_lower` 5100 | `asylum_inside` 16030 | Asylum Lower ↔ Asylum Inside |
-| `warcamp` 6600 | `confusn` 9722 | Warcamp ↔ Forest of Confusion |
 | `eastern_desert` 8503 | `arroyo` 19900 | Eastern Desert ↔ Arroyo |
 | `eastern_desert` 8504 | `sultans_palace` 30325 | Eastern Desert ↔ Sultan's Palace |
 | `eastern_desert` 8507 | `scorched_wastes` 22500 | Eastern Desert ↔ Scorched Wastes |
@@ -117,7 +111,6 @@ The old `wood.are` (vnums 7300–7399) had the following bidirectional cross-are
 | `kowloon` 14095 | `great_northern_forest` 15994 | Kowloon ↔ GNF |
 | `asylum_inside` 16000 | `asylum_grounds` 3966 | Asylum Inside ↔ Grounds |
 | `asylum_inside` 16030 | `asylum_lower` 5100 | Asylum Inside ↔ Lower |
-| `ackschool` 20100 | `midgaard` 3757 | SoE University ↔ Midgaard |
 | `newschool` 20200 | `midgaard` 3744 | Academy ↔ Midgaard |
 | `newschool` 20200 | `forest_preserve` 20800 | Academy ↔ Forest Preserve |
 | `vecna_tomb` 20689 | `hell` 1601 | Vecna Tomb ↔ Hell |
