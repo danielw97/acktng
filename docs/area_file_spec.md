@@ -287,6 +287,46 @@ Commands used by validation/editor paths:
 - `P`: put object into previous room-reset object/container (`arg1` object vnum, `arg2` limit, `arg3` container object vnum)
 - `A`: obsolete; loader/checker still recognize it
 
+### `E` command wear_loc values
+
+`wear_loc` in the `E` reset command maps to `WEAR_*` constants from `src/headers/config.h`:
+
+| Value | Constant | Slot |
+|------:|----------|------|
+| 0 | `WEAR_LIGHT` | light source |
+| 1 | `WEAR_HALO` | halo |
+| 2 | `WEAR_AURA` | aura |
+| 3 | `WEAR_HORNS` | horns |
+| 4 | `WEAR_HEAD` | head |
+| 5 | `WEAR_FACE` | face |
+| 6 | `WEAR_BEAK` | beak |
+| 7 | `WEAR_EAR_L` | left ear |
+| 8 | `WEAR_EAR_R` | right ear |
+| 9 | `WEAR_NECK_1` | neck (first) |
+| 10 | `WEAR_NECK_2` | neck (second) |
+| 11 | `WEAR_WINGS` | wings |
+| 12 | `WEAR_SHOULDERS` | shoulders |
+| 13 | `WEAR_ARMS` | arms |
+| 14 | `WEAR_WRIST_L` | left wrist |
+| 15 | `WEAR_WRIST_R` | right wrist |
+| 16 | `WEAR_HANDS` | hands |
+| 17 | `WEAR_FINGER_L` | left finger |
+| 18 | `WEAR_FINGER_R` | right finger |
+| 19 | `WEAR_CLAWS` | claws |
+| 20 | `WEAR_HOLD_HAND_L` | left hand hold |
+| 21 | `WEAR_HOLD_HAND_R` | right hand hold (primary weapon/shield slot) |
+| 22 | `WEAR_TWO_HANDED` | two-handed weapon |
+| 23 | `WEAR_BUCKLER` | buckler |
+| 24 | `WEAR_ABOUT` | about body (cloak) |
+| 25 | `WEAR_WAIST` | waist |
+| 26 | `WEAR_BODY` | body |
+| 27 | `WEAR_TAIL` | tail |
+| 28 | `WEAR_LEGS` | legs |
+| 29 | `WEAR_FEET` | feet |
+| 30 | `WEAR_HOOVES` | hooves |
+
+The object's `wear_flags` must include the corresponding `ITEM_WEAR_*` bit for the chosen `wear_loc`, or the equip will silently fail at runtime. `WEAR_CLAN_COLORS` (31) and `WEAR_INVASION_EMBLEM` (32) are runtime-only and must not be used in `E` resets.
+
 Builder editor mapping:
 
 - `addreset put <obj-vnum> <container-vnum>` emits reset command `P` with `arg1=<obj-vnum>`, `arg2=0`, and `arg3=<container-vnum>`.
@@ -307,6 +347,10 @@ Door reset both-sides requirement:
 Reset vnum validity rule:
 
 - Resets must reference valid vnums for the target type required by the command (room/mobile/object as applicable).
+
+Cross-area object dependency warning:
+
+- When rebuilding an area and changing its object vnum layout, other area files may contain `G`, `E`, or `P` resets that reference the old object vnums. Such references become invalid and cause `test_db` to fail with "reset references undefined object vnum". Before finalising a vnum reassignment, search all `.are` files for `G`, `E`, and `P` lines that reference any vnum in the rebuilt area's envelope, and update or remove those references. The `area/area_index.md` and `docs/world_links.md` documents can help identify which areas are likely to have cross-area dependencies.
 
 ## 13) Structural constraints enforced by tests
 
