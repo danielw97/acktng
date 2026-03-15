@@ -135,11 +135,7 @@ void make_corpse(CHAR_DATA *ch, char *argument)
          {
             bool clans_in_war = are_clans_hostile(ch->pcdata->clan, target->pcdata->clan, &politics_data);
 
-            if ((IS_WOLF(ch)) && (IS_VAMP(target) || IS_WOLF(target)))
-            {
-               leave_corpse = TRUE;
-               corpse->value[0] = 1;
-            }
+
             if (IS_SET(ch->pcdata->pflags, PFLAG_PKOK))
                corpse->value[0] = 1;
             if (clans_in_war)
@@ -458,9 +454,6 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
 
          gch->pcdata->vamp_exp += vamp_exp;
 
-      if (!IS_NPC(gch) && IS_WOLF(gch))
-
-         gch->pcdata->vamp_exp += vamp_exp;
 
       if (!IS_NPC(gch) && !can_use_skill(gch, gsn_emotion_control))
       {

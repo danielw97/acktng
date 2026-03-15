@@ -89,12 +89,9 @@
 #define MAX_MOB_LEVEL 171
 #define MAX_ADEPT 20
 #define MAX_VAMP_LEVEL 20
-#define MAX_WOLF_LEVEL 20
 #define ADVANCE_VAMP 16
 #define ADVANCE_ADEPT 32
-#define ADVANCE_WOLF 64
 #define MAX_FAMILY 5
-#define MAX_TRIBE 5
 #define MAX_SUPER 4
 
 #define STAT_MAX 30
@@ -225,7 +222,6 @@
 
 #define NORM 1
 #define VAMP 2
-#define WOLF 3
 
 /*
  * Quest mob personalities
@@ -300,7 +296,6 @@
 
 #define VAMPIRE_RECALL 9001
 #define LIQUID_BLOOD 13
-#define WOLF_RECALL 3001
 
 /*
  * Well known object virtual numbers.
@@ -436,7 +431,6 @@
 #define CLAN_ONLY -1
 #define BOSS_ONLY -2
 #define VAMP_ONLY -3
-#define WOLF_ONLY -4
 
 /*
  * Time and weather stuff.
@@ -761,9 +755,6 @@
 #define PFLAG_CLAN_ARMOURER 128
 #define PFLAG_CLAN_LEADER 256
 #define PFLAG_SUPER_COUNCIL 512
-#define PFLAG_WEREWOLF 1024
-#define PFLAG_RAGED 2048
-#define PFLAG_SHIFTED 4096
 #define PFLAG_RULER BIT_14
 #define PFLAG_BLIND_PLAYER BIT_15
 #define PFLAG_TESTER BIT_16
@@ -795,7 +786,6 @@
 #define CHANNEL_DIPLOMAT 2097152
 #define CHANNEL_CRUSADE 4194304
 #define CHANNEL_REMORTTALK 8388608
-#define CHANNEL_HOWL BIT_25
 #define CHANNEL_ADEPT BIT_26
 /* #define CHANNEL_MAUCTION        67108864  */
 #define CHANNEL_OOC BIT_27

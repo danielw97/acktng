@@ -2394,14 +2394,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     ""},
 
    {
-    MORTAL, WOLF,
-    "imprint", {20, 10, 10, 10, 10, 10},
-    spell_null, TAR_IGNORE, POS_STANDING,
-    &gsn_imprint, SLOT( 0 ), 0, 0, FALSE,
-    "", "!INSTRUCT!",
-    ""},
-
-   {
     MORTAL, NORM,
     "warcry", {NO_USE, NO_USE, NO_USE, 10, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
@@ -2758,14 +2750,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     ""},
 
    {
-    MORTAL, WOLF,
-    "scent", {5, 1, 1, 1, 1, 1},
-    spell_null, TAR_IGNORE, POS_STANDING,
-    &gsn_scent, SLOT( 0 ), 0, 24, FALSE,
-    "", "",
-    ""},
-
-   {
     REMORT, NORM,
     "holy light", {NO_USE, 43, NO_USE, NO_USE, NO_USE, NO_USE,
                 82, 14, NO_USE, NO_USE, NO_USE, NO_USE},
@@ -2943,54 +2927,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "@@NThe @@rshield@@N protecting $n shatters!!"},
 
    {
-    REMORT, WOLF,
-    "Rage:wolven strength", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
-    spell_null, TAR_IGNORE, POS_FIGHTING,
-    NULL, SLOT( 650 ), 0, 0, FALSE,
-    "", "",
-    ""},
-
-   {
-    REMORT, WOLF,
-    "Rage:sharpened claws", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
-    spell_null, TAR_IGNORE, POS_FIGHTING,
-    NULL, SLOT( 651 ), 0, 0, FALSE,
-    "", "",
-    ""},
-
-   {
-    REMORT, WOLF,
-    "Rage:disregard for pain", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
-    spell_null, TAR_IGNORE, POS_FIGHTING,
-    NULL, SLOT( 652 ), 0, 0, FALSE,
-    "", "",
-    ""},
-
-   {
-    REMORT, WOLF,
-    "Enraged", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
-    spell_null, TAR_IGNORE, POS_FIGHTING,
-    NULL, SLOT( 653 ), 0, 0, FALSE,
-    "", "",
-    ""},
-
-   {
-    MORTAL, WOLF,
-    "tribal claw", {NO_USE, 15, 15, 15, 15, 15},
-    spell_tribe_claw, TAR_CHAR_DEFENSIVE, POS_STANDING,
-    NULL, SLOT( 655 ), 50, 24, FALSE,
-    "", "",
-    ""},
-
-   {
-    MORTAL, WOLF,
-    "mark", {10, 5, 5, 5, 5, 5},
-    spell_wolf_mark, TAR_IGNORE, POS_STANDING,
-    NULL, SLOT( 656 ), 5, 24, FALSE,
-    "", "",
-    ""},
-
-   {
     MORTAL, VAMP,
     "bloodsign", {12, 8, 10, 9, 7, 8},
     spell_blood_sign, TAR_IGNORE, POS_STANDING,
@@ -3076,14 +3012,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     spell_corrupt_bond, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 665 ), 100, 12, FALSE,
     "", "",
-    ""},
-
-   {
-    MORTAL, NORM,
-    "decapitate", {NO_USE, 45, NO_USE, 60, NO_USE, NO_USE},
-    spell_null, TAR_IGNORE, POS_FIGHTING,
-    &gsn_decapitate, SLOT( 0 ), 0, 0, FALSE,
-    "", "!decapitate!",
     ""},
 
    {

@@ -403,13 +403,13 @@ block; it is accessed via `ch->pcdata`.  NPCs always have `pcdata == NULL`.
 | `prop_kill_needed` | `int` | Type-3 quest: total kills required |
 | `prop_kill_count` | `int` | Type-3 quest: kills completed so far |
 
-### Vampire / Werewolf specifics
+### Vampire specifics
 
 | Field | Type | Description |
 |---|---|---|
-| `bloodlust` | `int` | Werewolf rage points |
-| `bloodlust_max` | `int` | Maximum werewolf rage |
-| `vamp_level` | `int` | Vampire / werewolf form level |
+| `bloodlust` | `int` | Vampire blood supply |
+| `bloodlust_max` | `int` | Maximum vampire blood supply |
+| `vamp_level` | `int` | Vampire form level |
 | `vamp_bloodlust_max` | `int` | Maximum vampire bloodlust |
 | `vamp_skill_num` | `int` | Active vampire skill slot |
 | `vamp_skill_max` | `int` | Maximum vampire skills available |

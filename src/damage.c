@@ -749,9 +749,6 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
     if (!IS_NPC(victim))
         check_adrenaline(victim, dam);
 
-    if (!IS_NPC(victim) && IS_WOLF(victim) && (dam > 350))
-        do_rage(victim, "FORCE");
-
     bool shortfight_round = short_fight_round_active(ch, victim);
 
     if (cloak_reactive_can_trigger(element))
@@ -883,40 +880,6 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
         case POS_DEAD:
             if ((sil_weapon = get_eq_char(ch, WEAR_HOLD_HAND_L)) == NULL)
                 sil_weapon = get_eq_char(ch, WEAR_HOLD_HAND_R);
-            /*            if (IS_WOLF(victim) && (!IS_NPC(ch)) && (ch->pcdata->learned[gsn_decapitate] != 0) && (sil_weapon != NULL) && (IS_SET(sil_weapon->extra_flags, ITEM_SILVER)))
-                        {
-                            int chance;
-
-                            chance = IS_NPC(ch) ? ch->level * 2 : ch->pcdata->learned[gsn_decapitate];
-                            chance += 25;
-
-                            if ((victim->pcdata->vamp_level * 5) > ch->level)
-                                chance -= (victim->pcdata->vamp_level * 5) - ch->level;
-
-                            if (number_percent() < chance)
-                            {
-                                act("You DECAPITATE $N's head off with one skillful stroke!", ch, NULL, victim, TO_CHAR);
-                                act("$n DECAPITATES $N's head off with one skillful stroke!", ch, NULL, victim, TO_NOTVICT);
-                                send_to_char("You suddenly feel the world is spinning away from you!", victim);
-                                send_to_char("You have been DECAPITATED!!", victim);
-                                send_to_char("You feel the rage of the wolf flow from your body.....\n\r", victim);
-                                send_to_char("You THINK you are dead!  Ooops....\n\r", victim);
-                            }
-
-                            REMOVE_BIT(victim->pcdata->pflags, PFLAG_WEREWOLF);
-                            victim->pcdata->vamp_level = 0;
-                            victim->pcdata->vamp_exp = 0;
-                            victim->pcdata->bloodlust = 0;
-                            victim->pcdata->bloodlust_max = 0;
-                            victim->pcdata->generation = -1;
-                            victim->pcdata->vamp_bloodline = 0;
-                            victim->pcdata->recall_vnum = 3001;
-
-                            for (sn = 0; sn <= MAX_SKILL; sn++)
-                                if ((skill_table[sn].flag2 == WOLF) && (victim->pcdata->learned[sn] > 0))
-                                    victim->pcdata->learned[sn] = 0;
-                        }*/
-
             act("$n is DEAD!!", victim, 0, 0, TO_ROOM);
             send_to_char("You have been KILLED!!\n\r\n\r", victim);
             break;
@@ -1133,38 +1096,6 @@ void update_pos(CHAR_DATA *victim)
             }
         }
 
-        /*
-         * drop stuff if is (WANTED)
-         */
-        if ((victim->fighting != NULL) && (!IS_NPC(victim->fighting)) && (IS_WOLF(victim->fighting)))
-        {
-            counter = number_range(4, 8);
-
-            while (counter > 0)
-            {
-                num = number_range(1, UMIN(1, victim->carry_number));
-                obj = victim->first_carry;
-                if (obj == NULL)
-                    break;
-
-                for (obj = victim->first_carry; obj != NULL; obj = obj->next_in_carry_list)
-                {
-                    num = num - 1;
-                    if (num == 0)
-                        break;
-                }
-
-                if (obj == NULL)
-                    continue;
-
-                if (obj != NULL && !IS_SET(obj->extra_flags, ITEM_NOLOOT))
-                {
-                    obj_from_char(obj);
-                    obj_to_room(obj, victim->in_room);
-                }
-                counter = counter - 1;
-            }
-        }
         char_from_room(victim);
         char_to_room(victim, get_room_index(victim->pcdata->recall_vnum));
         act("A mist floats in, and forms into $n's corpse!", victim, NULL, NULL, TO_ROOM);
@@ -1317,11 +1248,6 @@ void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critica
 
     if (short_fight_round_active(ch, victim))
         short_fight_total_damage += dam;
-
-    if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-    {
-        dt = TYPE_HIT + 5; /* claw attack */
-    }
 
     for (dam_table_num = 0; dam_table[dam_table_num].min_dam > dam; dam_table_num++)
         ;

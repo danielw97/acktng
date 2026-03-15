@@ -1551,9 +1551,6 @@ bool spell_heat_armor(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       {
          if (prev_carried != NULL)
          {
-            if ((!IS_NPC(victim) && IS_WOLF(victim)) && (!IS_RAGED(victim) && !IS_SHIFTED(victim)))
-
-               SET_BIT(prev_carried->item_apply, ITEM_APPLY_HEATED);
             return TRUE;
          }
          else
@@ -1563,9 +1560,6 @@ bool spell_heat_armor(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       }
       else
       {
-         if ((!IS_NPC(victim) && IS_WOLF(victim)) && (!IS_RAGED(victim) && !IS_SHIFTED(victim)))
-
-            SET_BIT(heated_item->item_apply, ITEM_APPLY_HEATED);
          return TRUE;
       }
    }
@@ -1631,19 +1625,6 @@ bool spell_retri_strike(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
                   continue;
                else
                   break;
-            }
-            if (heated_item == NULL)
-            {
-               if (prev_carried != NULL)
-               {
-                  if ((!IS_NPC(vch) && IS_WOLF(vch)) && (!IS_RAGED(vch) && !IS_SHIFTED(vch)))
-                     SET_BIT(prev_carried->item_apply, ITEM_APPLY_HEATED);
-               }
-            }
-            else
-            {
-               if ((!IS_NPC(vch) && IS_WOLF(vch)) && (!IS_RAGED(vch) && !IS_SHIFTED(vch)))
-                  SET_BIT(heated_item->item_apply, ITEM_APPLY_HEATED);
             }
          }
          continue;

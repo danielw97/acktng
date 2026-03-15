@@ -796,20 +796,6 @@ const struct cmd_type cmd_table[] = {
     {"findreset", do_findreset, POS_DEAD, L_HER, LOG_NORMAL,
      C_TYPE_IMM, C_SHOW_ALWAYS},
     /*
-     * Werewolf commands
-     */
-    {"howl", do_howl, POS_DEAD, WOLF_ONLY, LOG_NORMAL,
-     C_TYPE_COMM, C_SHOW_ALWAYS},
-    {"tribe", do_tribe, POS_DEAD, WOLF_ONLY, LOG_NORMAL,
-     C_TYPE_INFO, C_SHOW_ALWAYS},
-    {"rage", do_rage, POS_FIGHTING, WOLF_ONLY, LOG_NORMAL,
-     C_TYPE_ACTION, C_SHOW_SKILL},
-    {"imprint", do_imprint, POS_STANDING, WOLF_ONLY, LOG_NORMAL,
-     C_TYPE_ACTION, C_SHOW_SKILL},
-    {"scent", do_scent, POS_STANDING, WOLF_ONLY, LOG_NORMAL,
-     C_TYPE_ACTION, C_SHOW_SKILL},
-
-    /*
      * program commands.
      */
 
@@ -977,9 +963,6 @@ void interpret(CHAR_DATA *ch, char *argument)
       if (cmd_table[cmd].level == VAMP_ONLY && !IS_NPC(ch) && !IS_VAMP(ch) && (ch->level != L_GOD))
          continue;
 
-      if (cmd_table[cmd].level == WOLF_ONLY && !IS_NPC(ch) && !IS_WOLF(ch) && (ch->level != L_GOD))
-         continue;
-
       if (command[0] == cmd_table[cmd].name[0] && !str_cmp(command, cmd_table[cmd].name) && (cmd_table[cmd].level <= trust || MP_Commands(ch)))
       {
          found = TRUE;
@@ -998,9 +981,6 @@ void interpret(CHAR_DATA *ch, char *argument)
             continue;
 
          if (cmd_table[cmd].level == VAMP_ONLY && !IS_NPC(ch) && !IS_VAMP(ch) && (ch->level != L_GOD))
-            continue;
-
-         if (cmd_table[cmd].level == WOLF_ONLY && !IS_NPC(ch) && !IS_WOLF(ch) && (ch->level != L_GOD))
             continue;
 
          if (command[0] == cmd_table[cmd].name[0] && !str_prefix(command, cmd_table[cmd].name) && (cmd_table[cmd].level <= trust || MP_Commands(ch)))

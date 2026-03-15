@@ -317,7 +317,7 @@ void move_char(CHAR_DATA *ch, int door)
       }
       else
       {
-         if (IS_NPC(ch) || (!IS_NPC(ch) && (IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))))
+         if (IS_NPC(ch))
             snprintf(move_buf, sizeof(move_buf), "$L$n %s $T.", "wanders");
          else
          {
@@ -334,7 +334,7 @@ void move_char(CHAR_DATA *ch, int door)
     * && ( IS_NPC(ch) || !IS_SET(ch->act, PLR_WIZINVIS) ) )
     */
    {
-      if (IS_NPC(ch) || (!IS_NPC(ch) && (IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))))
+      if (IS_NPC(ch))
          sprintf(move_buf, "$L$n %s $T.", "wanders in from");
       else
       {

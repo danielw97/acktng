@@ -643,8 +643,6 @@ void do_cwhere(CHAR_DATA *ch, char *argument)
       {
          if (victim->pcdata->clan != ch->pcdata->clan)
             continue;
-         if (!IS_NPC(victim) && IS_WOLF(victim) && (IS_SHIFTED(victim) || IS_RAGED(victim)))
-            continue;
 
          found = TRUE;
          sprintf(buf, "%-28s %s ", victim->name, victim->in_room->name);

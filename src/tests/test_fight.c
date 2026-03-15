@@ -105,15 +105,6 @@ static void test_get_parry_guard_clauses(void)
     assert(get_parry(&ch) == 0);
     skill_available = TRUE;
 
-    clear_character(&ch);
-    memset(&weapon, 0, sizeof(weapon));
-    weapon.item_type = ITEM_WEAPON;
-    right_hand = &weapon;
-    memset(&pc, 0, sizeof(pc));
-    ch.pcdata = &pc;
-    SET_BIT(ch.pcdata->pflags, PFLAG_WEREWOLF);
-    SET_BIT(ch.pcdata->pflags, PFLAG_SHIFTED);
-    assert(get_parry(&ch) == 0);
     reset_equipment();
 }
 
@@ -171,10 +162,9 @@ static void test_get_parry_weapon_slot_fallbacks(void)
     reset_equipment();
 }
 
-static void test_get_dodge_guard_and_wolf_bonus(void)
+static void test_get_dodge_guard_clauses(void)
 {
     CHAR_DATA ch;
-    PC_DATA pc;
 
     clear_character(&ch);
     ch.position = POS_SLEEPING;
@@ -188,17 +178,6 @@ static void test_get_dodge_guard_and_wolf_bonus(void)
     skill_available = FALSE;
     assert(get_dodge(&ch) == 0);
     skill_available = TRUE;
-
-    clear_character(&ch);
-    memset(&pc, 0, sizeof(pc));
-    ch.pcdata = &pc;
-    SET_BIT(ch.pcdata->pflags, PFLAG_WEREWOLF);
-    SET_BIT(ch.pcdata->pflags, PFLAG_RAGED);
-    ch.hitroll = 15;
-    ch.wait = 1;
-    ch.stance = 2;
-    ch.dodge_mod = 2;
-    assert(get_dodge(&ch) == 45);
 }
 
 static void test_get_dodge_npc_and_cap(void)
@@ -239,11 +218,10 @@ static void test_get_block_shield_requirements_and_buckler(void)
     reset_equipment();
 }
 
-static void test_get_block_standard_shield_and_wolf_lockout(void)
+static void test_get_block_standard_shield(void)
 {
     CHAR_DATA ch;
     OBJ_DATA shield;
-    PC_DATA pc;
 
     clear_character(&ch);
     memset(&shield, 0, sizeof(shield));
@@ -256,12 +234,6 @@ static void test_get_block_standard_shield_and_wolf_lockout(void)
     ch.block_mod = 4;
     ch.affected_by = AFF_CLOAK_ADEPT;
     assert(get_block(&ch) == 45);
-
-    memset(&pc, 0, sizeof(pc));
-    ch.pcdata = &pc;
-    SET_BIT(ch.pcdata->pflags, PFLAG_WEREWOLF);
-    SET_BIT(ch.pcdata->pflags, PFLAG_SHIFTED);
-    assert(get_block(&ch) == 0);
 
     reset_equipment();
 }
@@ -334,21 +306,6 @@ static void test_get_counter_applies_modifiers(void)
     reset_equipment();
 }
 
-static void test_get_counter_wolf_bonus_for_pc(void)
-{
-    CHAR_DATA ch;
-    PC_DATA pc;
-
-    clear_character(&ch);
-    memset(&pc, 0, sizeof(pc));
-    ch.pcdata = &pc;
-    SET_BIT(ch.pcdata->pflags, PFLAG_WEREWOLF);
-    SET_BIT(ch.pcdata->pflags, PFLAG_RAGED);
-
-    ch.hitroll = 20;
-    ch.wait = 1;
-    assert(get_counter(&ch) == 47);
-}
 
 static void test_get_counter_npc_ignores_can_use_skill(void)
 {
@@ -606,14 +563,13 @@ int main(void)
     test_get_parry_guard_clauses();
     test_get_parry_composition_and_cap();
     test_get_parry_weapon_slot_fallbacks();
-    test_get_dodge_guard_and_wolf_bonus();
+    test_get_dodge_guard_clauses();
     test_get_dodge_npc_and_cap();
     test_get_block_shield_requirements_and_buckler();
-    test_get_block_standard_shield_and_wolf_lockout();
+    test_get_block_standard_shield();
     test_get_block_npc_left_shield_and_cap();
     test_get_counter_requires_awake_and_training();
     test_get_counter_applies_modifiers();
-    test_get_counter_wolf_bonus_for_pc();
     test_get_counter_npc_ignores_can_use_skill();
     test_shortfight_can_broadcast_room_summary_requires_room();
     test_shortfight_can_broadcast_room_summary_requires_same_room();

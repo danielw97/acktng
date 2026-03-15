@@ -10,12 +10,6 @@ void do_backstab(CHAR_DATA *ch, char *argument)
 {
    char arg[MSL];
 
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("You cannot do that while in this form.\n\r", ch);
-      return;
-   }
-
    if (!can_use_skill_message(ch, gsn_backstab))
       return;
 
@@ -33,12 +27,6 @@ void do_backstab(CHAR_DATA *ch, char *argument)
 void do_circle(CHAR_DATA *ch, char *argument)
 {
    char arg[MSL];
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("You cannot do that while in this form.\n\r", ch);
-      return;
-   }
-
    if (!can_use_skill_message(ch, gsn_circle))
       return;
 
@@ -246,12 +234,6 @@ bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
    char buf[MAX_STRING_LENGTH];
    CHAR_DATA *victim;
    AFFECT_DATA af;
-
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      send_to_char("You cannot do that while in this form.\n\r", ch);
-      return FALSE;
-   }
 
    if (!can_use_skill_message(ch, gsn))
       return FALSE;

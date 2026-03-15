@@ -1015,45 +1015,6 @@ char *strip_color(const char *orig, const char *strip)
    strcpy(b, orig);
    return buf;
 }
-char *get_tribe_standing_name(int standing)
-{
-
-   switch (standing)
-   {
-   case 0:
-      return "@@mEternal@@N";
-      break;
-   case 1:
-      return "@@rEldest@@N";
-      break;
-   case 2:
-      return "@@rMate@@N";
-      break;
-   case 3:
-      return "@@eWarder@@N";
-      break;
-   case 4:
-      return "@@GGuardian@@N";
-      break;
-   case 5:
-      return "@@aSentry@@N";
-      break;
-   case 6:
-      return "@@yElder@@N";
-
-   case 7:
-      return "@@rAdult@@N";
-      break;
-   case 8:
-      return "@@RYounger@@N";
-      break;
-   case 9:
-      return "@@bCub@@N";
-      break;
-   }
-   return "@@WCUB@@N";
-}
-
 char *get_moon_phase_name(void)
 {
 
@@ -1522,19 +1483,3 @@ char *get_family_name(CHAR_DATA *ch)
    }
 }
 
-char *get_tribe_name(CHAR_DATA *ch)
-{
-   switch (ch->pcdata->vamp_bloodline)
-   {
-   default:
-      return "Renegade!";
-   case 1:
-      return "@@WNOT SET@@N";
-   case 2:
-      return "@@WNOT SET@@N";
-   case 3:
-      return "@@WNOT SET@@N";
-   case 4:
-      return "@@WNOT SET@@N";
-   }
-}

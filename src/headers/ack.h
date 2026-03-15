@@ -748,7 +748,7 @@ struct pc_data
    char *host;                          /* Used to tell PC last login site */
    sh_int failures;                     /* Failed logins */
    sh_int clan;                         /* will be used to denote clan membership */
-   int generation; /* Used for vamps */ /* were_age for wolves */
+   int generation; /* Used for vamps */
    sh_int perm_str;
    sh_int perm_int;
    sh_int perm_wis;
@@ -765,7 +765,7 @@ struct pc_data
    sh_int mod_dex;
    sh_int mod_con;
    sh_int condition[3];
-   int bloodlust; /* rage points for wolves */
+   int bloodlust;
    int bloodlust_max;
    sh_int pagelen;
    unsigned int learned[MAX_SKILL];
@@ -783,7 +783,7 @@ struct pc_data
    sh_int order[MAX_CLASS]; /* Class Order */
    sh_int index[MAX_CLASS]; /* the order of each class! */
    int monitor;             /* monitor channel for imms */
-   int vamp_level;          /* were level */
+   int vamp_level;
    int vamp_bloodlust_max;
    int vamp_skill_num;
    int vamp_skill_max;
@@ -1304,7 +1304,6 @@ void list_who_to_output args((void));
 void set_title args((CHAR_DATA * ch, char *title));
 char *color_string args((CHAR_DATA * CH, char *argument));
 char *get_family_name args((CHAR_DATA * ch));
-char *get_tribe_name args((CHAR_DATA * ch));
 void do_learned args( (CHAR_DATA *ch, char *argument) );
 void do_stancehelp args( (CHAR_DATA *ch, char *argument) );
 void do_rmodhelp args( (CHAR_DATA *ch, char *argument) );
@@ -1565,7 +1564,6 @@ bool is_remort args((CHAR_DATA * ch));
 int exp_to_level_vamp args((int level));
 long exp_to_level_adept args((CHAR_DATA * ch));
 void reset_gain_stats args((CHAR_DATA * ch));
-int exp_to_level_wolf args((int level));
 int get_item_value args((OBJ_DATA * obj));
 
 /* magic.c */
@@ -1630,7 +1628,6 @@ void trigger_handler args((CHAR_DATA * ch, OBJ_DATA *obj, int trigger));
 void advance_level args((CHAR_DATA * ch, int class, bool show));
 void advance_level_remort args((CHAR_DATA * ch, int class, bool show));
 void advance_level_adept args((CHAR_DATA * ch, int class, bool show));
-void advance_level_wolf args((CHAR_DATA * ch));
 void advance_level_vamp args((CHAR_DATA * ch));
 void gain_exp args((CHAR_DATA * ch, int gain));
 void gain_bloodlust args((CHAR_DATA * ch, int value));

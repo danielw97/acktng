@@ -291,12 +291,6 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim)
     }
 
 
-    if (!IS_NPC(victim) && IS_WOLF(victim) && (IS_SHIFTED(victim) || IS_RAGED(victim)))
-    {
-        send_to_char("How do you expect to disarm a werewolf of their claws?!?\n\r", ch);
-        return;
-    }
-
     WAIT_STATE(ch, 18);
 
     chance = 0;
