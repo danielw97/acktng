@@ -2164,7 +2164,31 @@ void do_help(CHAR_DATA *ch, char *argument)
       if (pHelp->level > get_trust(ch))
          continue;
 
-      if (is_name(argument, pHelp->keyword))
+      if (!str_cmp(argument, pHelp->keyword))
+      {
+         if (pHelp->level >= 0 && str_cmp(argument, "imotd"))
+         {
+            send_to_char(pHelp->keyword, ch);
+            send_to_char("\n\r", ch);
+         }
+
+         /*
+          * Strip leading '.' to allow initial blanks.
+          */
+         if (pHelp->text[0] == '.')
+            send_to_char(pHelp->text + 1, ch);
+         else
+            send_to_char(pHelp->text, ch);
+         return;
+      }
+   }
+
+   for (pHelp = first_help; pHelp != NULL; pHelp = pHelp->next)
+   {
+      if (pHelp->level > get_trust(ch))
+         continue;
+
+      if (!str_prefix(argument, pHelp->keyword))
       {
          if (pHelp->level >= 0 && str_cmp(argument, "imotd"))
          {
@@ -5290,7 +5314,7 @@ void do_shelp(CHAR_DATA *ch, char *argument)
       if (pHelp->level > get_trust(ch))
          continue;
 
-      if (is_name(search_term, pHelp->keyword))
+      if (!str_prefix(search_term, pHelp->keyword))
       {
          if (pHelp->level >= 0)
          {
