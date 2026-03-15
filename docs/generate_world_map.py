@@ -231,7 +231,7 @@ def mountain(ax, cx, cy, h=5.0, w=4.5, snow_frac=0.28, zorder=11,
     # Outline
     ax.add_patch(plt.Polygon([peak, left, right],
                               fill=False, edgecolor=MTN_DARK,
-                              linewidth=0.5, alpha=0.5, zorder=zorder+2))
+                              linewidth=0.8, alpha=0.7, zorder=zorder+2))
 
 def mountain_range(ax, peaks, base_h=5.0, base_w=4.5, scatter=True,
                    zorder=11, **kw):
@@ -480,7 +480,7 @@ def compass_rose(ax, cx, cy, size=9):
         ly = cy + (size*1.65) * math.cos(math.radians(ang))
         ax.text(lx, ly, label, fontsize=7.5, fontweight='bold',
                 color=INK, ha='center', va='center',
-                fontfamily='serif', zorder=33)
+                fontfamily='DejaVu Serif', zorder=33)
     # Center jewel
     ax.add_patch(plt.Circle((cx,cy), size*0.14,
                              color=GOLD_LT, alpha=0.95, zorder=34))
@@ -536,22 +536,22 @@ def label(ax, x, y, text, size=7, col=INK, style='normal', weight='normal',
     oc = outline_col if outline_col else PARCH_PALE
     ax.text(x, y, text, fontsize=size, color=col, style=style,
             fontweight=weight, rotation=rot, zorder=zorder-1,
-            ha=ha, va=va, fontfamily='serif',
+            ha=ha, va=va, fontfamily='DejaVu Serif',
             path_effects=[pe.withStroke(linewidth=2.8, foreground=oc)])
     ax.text(x, y, text, fontsize=size, color=col, style=style,
             fontweight=weight, rotation=rot, zorder=zorder,
-            ha=ha, va=va, fontfamily='serif')
+            ha=ha, va=va, fontfamily='DejaVu Serif')
 
-def lore_scroll(ax, cx, cy, w, h, text, text_size=5.0, col=INK_FADED,
+def lore_scroll(ax, cx, cy, w, h, text, text_size=4.5, col=INK_FADED,
                 bg=PARCH_LT, edge=INK_LIGHT, zorder=22):
     """Small lore-quote scroll box."""
     ax.add_patch(FancyBboxPatch((cx-w/2, cy-h/2), w, h,
                   boxstyle='round,pad=0.6',
                   facecolor=bg, edgecolor=edge,
-                  linewidth=0.7, alpha=0.78, zorder=zorder-1))
+                  linewidth=0.7, alpha=0.65, zorder=zorder-1))
     ax.text(cx, cy, text, fontsize=text_size, color=col,
             ha='center', va='center', style='italic',
-            fontfamily='serif', zorder=zorder,
+            fontfamily='DejaVu Serif', zorder=zorder,
             wrap=True, multialignment='center')
 
 # ═══════════════════════════════════════════════════════════
@@ -609,7 +609,7 @@ fill_region(ax, north_sea_pts, SEA_MID, alpha=0.62, edge_color=SEA_LT,
 
 # Main river from Cinderteeth → Kowloon delta
 river_main = [(148,124),(142,131),(136,138),(128,145),(122,152),(118,160),(115,167)]
-draw_smooth_line(ax, river_main, RIVER_COL, lw=3.2, alpha=0.50, zorder=6)
+draw_smooth_line(ax, river_main, RIVER_COL, lw=3.8, alpha=0.50, zorder=6)
 draw_smooth_line(ax, river_main, SEA_LT, lw=1.4, alpha=0.30, zorder=7)
 
 # Delta fingers
@@ -620,7 +620,7 @@ for dx, dy_end in [(-9,168),(-3,170),(4,169),(11,168)]:
 
 # Western forest river
 west_river = [(58,118),(66,126),(78,134),(92,144),(104,152),(112,160)]
-draw_smooth_line(ax, west_river, RIVER_COL, lw=2.2, alpha=0.42, zorder=6)
+draw_smooth_line(ax, west_river, RIVER_COL, lw=2.6, alpha=0.42, zorder=6)
 
 # Small tributary (oasis → desert edge)
 draw_smooth_line(ax,
@@ -793,19 +793,19 @@ ruin_sym(ax, 163, 66.5, size=1.3, col='#7A6840', zorder=11)
 void_citadel_sym(ax, 76, 40, size=2.0, zorder=14)
 
 # Kel'Shadra crypts skull mark
-ax.add_patch(plt.Circle((70,52), 3.5, color=CRYPT_COL, alpha=0.55, zorder=12))
+ax.add_patch(plt.Circle((70,52), 2.5, color=CRYPT_COL, alpha=0.55, zorder=12))
 ax.text(70, 52, '☠', color='#6A3A4A', fontsize=11, ha='center', va='center',
         alpha=0.80, zorder=13)
 
 # Gloamvault
-ax.add_patch(plt.Circle((66,60), 2.8, color='#281820', alpha=0.50, zorder=12))
+ax.add_patch(plt.Circle((66,60), 2.0, color='#281820', alpha=0.50, zorder=12))
 ax.text(66, 60, '☽', color='#5A3A5A', fontsize=8, ha='center', va='center',
         alpha=0.75, zorder=13)
 
 # Crypt connecting crack-lines
 for ang in np.linspace(0,2*math.pi,9)[:-1]:
-    ex = 76 + 6.5*math.cos(ang)
-    ey = 40 + 6.5*math.sin(ang)
+    ex = 76 + 4.5*math.cos(ang)
+    ey = 40 + 4.5*math.sin(ang)
     ax.plot([76, ex], [40, ey], color=VOID_LT,
             linewidth=0.45, alpha=0.25, zorder=12)
 
@@ -897,7 +897,7 @@ for sx, sy, scale in [(210,45,1.0),(220,95,1.2),(214,135,0.95)]:
             markersize=int(6.5*scale), alpha=0.50, zorder=8)
     ax.text(sx, sy-scale*5.5, 'HERE BE\nDRAGONS',
             fontsize=4.8, color=SEA_MID, ha='center', style='italic',
-            fontfamily='serif', alpha=0.50, zorder=8)
+            fontfamily='DejaVu Serif', alpha=0.50, zorder=8)
 
 # Sailing ship in northern sea
 for shx, shy in [(148,172),(168,170)]:
@@ -991,32 +991,32 @@ label(ax, 155,72,  'Caravan Road', size=5.0, col=DESERT_BRN, style='italic', rot
 ax.add_patch(plt.Circle((150,60), 3.5, fill=False, edgecolor=DESERT_BRN,
                           linewidth=0.6, alpha=0.35, linestyle='--', zorder=10))
 ax.text(150, 57, 'JACKAL\nSYNOD', fontsize=4.2, color=DESERT_BRN,
-        ha='center', style='italic', fontfamily='serif', alpha=0.60, zorder=11)
+        ha='center', style='italic', fontfamily='DejaVu Serif', alpha=0.60, zorder=11)
 
 ax.text(145, 83, 'Spring\nWardens', fontsize=4.0, color=SEA_DEEP,
-        ha='center', style='italic', fontfamily='serif', alpha=0.55, zorder=11)
+        ha='center', style='italic', fontfamily='DejaVu Serif', alpha=0.55, zorder=11)
 
 ax.text(70, 38, 'Bell\nSynod', fontsize=4.0, color=INK_FADED,
-        ha='center', style='italic', fontfamily='serif', alpha=0.50, zorder=11)
+        ha='center', style='italic', fontfamily='DejaVu Serif', alpha=0.50, zorder=11)
 
 ax.text(128, 110, 'Spirebound\nConclave\n(Ruins)', fontsize=4.0,
-        ha='center', style='italic', fontfamily='serif', alpha=0.55,
+        ha='center', style='italic', fontfamily='DejaVu Serif', alpha=0.55,
         zorder=11, color='#7050B0')
 
 # ═══════════════════════════════════════════════════════════
 #  LORE SCROLLS
 # ═══════════════════════════════════════════════════════════
 lore_scrolls = [
-    (152, 112, 34, 9, '"Here the mountain bleeds fire\nand the sky remembers ash."'),
-    (115, 160, 32, 8, '"One wall, one law.\nOne ledger, one ration code."'),
-    (175, 72,  32, 9, '"The Black Sun consumes names.\nWrite all things in stone."'),
-    (76,  30,  32, 8, '"The dead keep better records\nthan the living."'),
-    (24, 100,  32, 8, '"Old Evermeet sings\nbeneath these stones."'),
-    (143, 55,  32, 8, '"Measured thirst survives.\nUnmeasured thirst is war."'),
-    (128, 105, 34, 9, '"Flame, crystal, spirit — three bonds.\nAll three broke."'),
+    (152, 112, 30, 7, '"Here the mountain bleeds fire\nand the sky remembers ash."'),
+    (115, 160, 28, 6, '"One wall, one law.\nOne ledger, one ration code."'),
+    (175, 72,  28, 7, '"The Black Sun consumes names.\nWrite all things in stone."'),
+    (76,  30,  28, 6, '"The dead keep better records\nthan the living."'),
+    (24, 100,  28, 6, '"Old Evermeet sings\nbeneath these stones."'),
+    (143, 55,  28, 6, '"Measured thirst survives.\nUnmeasured thirst is war."'),
+    (128, 105, 30, 7, '"Flame, crystal, spirit — three bonds.\nAll three broke."'),
 ]
 for lx, ly, lw, lh, lt in lore_scrolls:
-    lore_scroll(ax, lx, ly, lw, lh, lt, text_size=5.0)
+    lore_scroll(ax, lx, ly, lw, lh, lt, text_size=4.5)
 
 # ═══════════════════════════════════════════════════════════
 #  TITLE CARTOUCHE
@@ -1050,21 +1050,21 @@ for fx, fy in [(cx_cart+3.5, cy_cart+3.5),
 mid_cart = cx_cart + cw_cart/2
 ax.text(mid_cart, cy_cart+ch_cart-5.5, 'THE KNOWN WORLD',
         fontsize=13.5, fontweight='bold', color=INK, ha='center',
-        va='center', fontfamily='serif', zorder=43,
+        va='center', fontfamily='DejaVu Serif', zorder=43,
         path_effects=[pe.withStroke(linewidth=2.5, foreground=PARCH_LT)])
 ax.text(mid_cart, cy_cart+ch_cart-11, 'of the  ACK!MUD  Realm',
         fontsize=9.0, color=INK_FADED, ha='center', va='center',
-        fontfamily='serif', style='italic', zorder=43)
+        fontfamily='DejaVu Serif', style='italic', zorder=43)
 ax.text(mid_cart, cy_cart+5.5,
         '\u2741  Where Memory Holds, There Law Endures  \u2741',
         fontsize=5.8, color=GOLD, ha='center', va='center',
-        fontfamily='serif', style='italic', zorder=43)
+        fontfamily='DejaVu Serif', style='italic', zorder=43)
 
 # ═══════════════════════════════════════════════════════════
 #  LEGEND
 # ═══════════════════════════════════════════════════════════
 lx_leg, ly_leg = 13, 30
-lw_leg, lh_leg = 44, 62
+lw_leg, lh_leg = 42, 58
 
 ax.add_patch(FancyBboxPatch(
     (lx_leg, ly_leg), lw_leg, lh_leg,
@@ -1077,7 +1077,7 @@ ax.add_patch(FancyBboxPatch(
 
 ax.text(lx_leg+lw_leg/2, ly_leg+lh_leg-5,
         'LEGEND', fontsize=8.5, fontweight='bold', color=INK,
-        ha='center', fontfamily='serif', zorder=42,
+        ha='center', fontfamily='DejaVu Serif', zorder=42,
         path_effects=[pe.withStroke(linewidth=2, foreground=PARCH_LT)])
 
 legend_items = [
@@ -1097,7 +1097,7 @@ legend_items = [
     ('- -', DESERT_BRN,'Caravan Road'),
 ]
 for i, (sym, col, lbl) in enumerate(legend_items):
-    iy = ly_leg + lh_leg - 13 - i * 3.7
+    iy = ly_leg + lh_leg - 13 - i * 3.5
     if sym in ('—', '- -'):
         ls = '--' if '- -' in sym else '-'
         ax.plot([lx_leg+3, lx_leg+10], [iy+0.4, iy+0.4],
@@ -1105,8 +1105,8 @@ for i, (sym, col, lbl) in enumerate(legend_items):
     else:
         ax.text(lx_leg+6, iy+0.4, sym, fontsize=7, color=col,
                 ha='center', va='center', zorder=42)
-    ax.text(lx_leg+12, iy+0.4, lbl, fontsize=5.5, color=INK_FADED,
-            va='center', fontfamily='serif', zorder=42)
+    ax.text(lx_leg+12, iy+0.4, lbl, fontsize=5.2, color=INK_FADED,
+            va='center', fontfamily='DejaVu Serif', zorder=42)
 
 # ═══════════════════════════════════════════════════════════
 #  SCALE BAR
@@ -1114,17 +1114,17 @@ for i, (sym, col, lbl) in enumerate(legend_items):
 sb_x, sb_y = 15, 22
 for xi, col_ in [(0, INK),(12.5, PARCH_LT),(12.5, INK)]:
     ax.add_patch(mpatches.Rectangle(
-        (sb_x+xi, sb_y-1), 12.5, 2.0,
+        (sb_x+xi, sb_y-1), 12.5, 2.5,
         color=col_, alpha=0.85 if col_ == INK else 0.70, zorder=41))
 ax.add_patch(mpatches.Rectangle(
-    (sb_x, sb_y-1.2), 25, 2.4,
+    (sb_x, sb_y-1.2), 25, 2.9,
     fill=False, edgecolor=INK, linewidth=0.8, alpha=0.75, zorder=42))
 for tick_x, tick_lbl in [(sb_x,'0'),(sb_x+12.5,'50'),(sb_x+25,'100')]:
-    ax.plot(tick_x, sb_y+1.2, '|', color=INK, markersize=4, alpha=0.75, zorder=42)
+    ax.plot(tick_x, sb_y+1.45, '|', color=INK, markersize=4, alpha=0.75, zorder=42)
     ax.text(tick_x, sb_y-2.5, tick_lbl, fontsize=5.5, color=INK,
-            ha='center', fontfamily='serif', zorder=43)
+            ha='center', fontfamily='DejaVu Serif', zorder=43)
 ax.text(sb_x+12.5, sb_y+3.0, 'LEAGUES', fontsize=5.0, color=INK_FADED,
-        ha='center', style='italic', fontfamily='serif', zorder=43)
+        ha='center', style='italic', fontfamily='DejaVu Serif', zorder=43)
 
 # ═══════════════════════════════════════════════════════════
 #  COMPASS ROSE
@@ -1140,7 +1140,7 @@ ax.text(W/2, 7.8,
         'Cartographed by the Granite Arcade of Midgaard'
         '  \u2014  Third Age, Containment Era',
         fontsize=5.8, color=INK_FADED, ha='center', style='italic',
-        fontfamily='serif', alpha=0.80, zorder=65)
+        fontfamily='DejaVu Serif', alpha=0.80, zorder=65)
 
 # ═══════════════════════════════════════════════════════════
 #  SAVE
