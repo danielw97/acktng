@@ -60,7 +60,7 @@ This is why the Martial Artist tradition is categorically a second-apprenticeshi
 
 ## V. Cross-References
 
-- **Timeline**: Post-Ninth Meridian era (Monk and Brawler traditions in crossroads city contact), Ash-and-Iron Decades (formalization of cross-training through competition results)
+- **Timeline**: Era XI (mountain monastery Interior Forms origin; harbor pit fighting culture origin), Era XIV (Kowloon's founding brings monastery lineages and pit fighters into sustained contact; mutual discovery of incompleteness begins), Era XIX (Ash-and-Iron Decades: monastery-pit synthesis codified; first Martial Artists; chi integration discovery)
 - **Monk**: Component tradition; Interior Forms; chi work; breath and structural timing
 - **Brawler**: Component tradition; pit-tested technique; physical impact methodology; pressure and attrition
 - **Kowloon**: Harbor district synthesis context; Monk-Brawler cross-training incubation environment
