@@ -707,7 +707,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       ch->pcdata->mkilled = 0;
       ch->pcdata->pflags = 0;
       ch->pcdata->has_exp_fix = 0;
-      ch->pcdata->recall_vnum = 3110;
+      ch->pcdata->recall_vnum = ROOM_VNUM_TEMPLE;
       ch->pcdata->mana_from_gain = -1;
       ch->pcdata->hp_from_gain = -1;
       ch->pcdata->move_from_gain = -1;
@@ -1517,7 +1517,14 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             fMatch = TRUE;
             break;
          }
-         KEY("RecallVnum", ch->pcdata->recall_vnum, fread_number(fp));
+         if (!str_cmp(word, "RecallVnum"))
+         {
+            ch->pcdata->recall_vnum = fread_number(fp);
+            if (ch->pcdata->recall_vnum == 3001 || ch->pcdata->recall_vnum == 3110)
+               ch->pcdata->recall_vnum = ROOM_VNUM_TEMPLE;
+            fMatch = TRUE;
+            break;
+         }
 
          break;
 
