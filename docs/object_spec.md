@@ -36,11 +36,17 @@ Per-object trailing entries:
 
 - `A` then `<location> <modifier>` on next line (object affect)
 - `E` then `<keyword>~` and `<description>~` (extra description)
-- `L` then `<level>` on next line
+- `L` then `<level>` on next line — the level integer appears on its own line immediately after the `L` line:
+  ```
+  L
+  55
+  ```
 
 For `E` entries, `<description>` must include exactly one trailing newline before the terminating `~`.
 
 Loader stops this trailing-entry loop at first unrecognized marker (which starts next object/terminator).
+
+Object records must not be separated by blank lines. No blank lines are allowed anywhere inside `#OBJECTS`.
 
 Within an area, object `<name>~` values must be unique (no duplicate item names in the same area file).
 
