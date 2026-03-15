@@ -785,7 +785,7 @@ struct pc_data
    sh_int quest_points;
 
    char *ignore_list[MAX_IGNORES]; /* Ignore this person */
-   sh_int recall_vnum;
+   int recall_vnum;
    int keep_vnum;
    int keep_healer_bought;
    int keep_healer_vnum;
