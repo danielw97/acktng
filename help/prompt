@@ -27,8 +27,6 @@ Prompt all gives you a default prompt.
 
  %t for current time of day.
 
- %F for wolf form (HUMANUS/LUPIS/GAROU, werewolves only).
-
  %c for a newline in the prompt.
 
  %% for a literal percent sign.
