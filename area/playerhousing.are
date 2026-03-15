@@ -27,10 +27,28 @@ D5
 ~
 0 -1 917
 S
+#64802
+Virant's Keep~
+Keep of Virant~
+214020 11
+D5
+~
+~
+0 -1 3001
+S
 #0
 #OBJECTS
 #64801
 Virant keep_chest~
+virant's Keep Chest~
+Virant's Keep Chest rests here.~
+15 8388608 0 1
+10000 21 -1 50 0 0 0 0 0 0
+100
+L
+1
+#64802
+Virant keep chest~
 Virant's Keep Chest~
 Virant's Keep Chest rests here.~
 15 8388608 0 1
@@ -39,4 +57,7 @@ Virant's Keep Chest rests here.~
 L
 1
 #0
+#RESETS
+O 0 64802 1 64802 (null)
+S
 #$
