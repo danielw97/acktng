@@ -1513,7 +1513,7 @@ void quest_cancel(CHAR_DATA *ch, int slot)
 
     if (slot < 0 || slot >= QUEST_MAX_QUESTS)
     {
-        send_to_char("Usage: quest cancel <slot# 1-3>\n\r", ch);
+        send_to_char("Usage: quest cancel <slot# 1-5>\n\r", ch);
         return;
     }
 
@@ -1567,7 +1567,7 @@ void do_quest(CHAR_DATA *ch, char *argument)
     {
         if (!is_number(arg2))
         {
-            send_to_char("Usage: quest cancel <slot# 1-3>\n\r", ch);
+            send_to_char("Usage: quest cancel <slot# 1-5>\n\r", ch);
             return;
         }
         quest_cancel(ch, atoi(arg2) - 1);
