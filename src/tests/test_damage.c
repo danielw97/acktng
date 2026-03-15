@@ -69,10 +69,6 @@ static void test_should_handle_victim_death(void)
     assert(should_handle_victim_death(&victim));
 
     victim.act = 0;
-    SET_BIT(victim.pcdata->pflags, PFLAG_VAMP);
-    assert(!should_handle_victim_death(&victim));
-    victim.pcdata->pflags = 0;
-
     victim.position = POS_FIGHTING;
     assert(!should_handle_victim_death(&victim));
 

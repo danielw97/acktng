@@ -1007,9 +1007,6 @@ bool can_use_skill(CHAR_DATA *ch, int gsn)
    if (IS_NPC(ch))
       return TRUE;
 
-   if (!IS_VAMP(ch) && skill_table[gsn].flag2 == VAMP)
-      return FALSE;
-
    if (gsn == gsn_enhanced_damage && ch->pcdata->reincarnations[CLASS_WAR] > 0)
       return TRUE;
 
@@ -1125,9 +1122,6 @@ bool raise_skill(CHAR_DATA *ch, int gsn)
 
    if (IS_NPC(ch))
       return TRUE;
-
-   if (!IS_VAMP(ch) && skill_table[gsn].flag2 == VAMP)
-      return FALSE;
 
    if (!can_use_skill(ch, gsn))
       return FALSE;
@@ -2442,14 +2436,7 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 
    if (!fPull)
    {
-      if (!IS_VAMP(ch))
-      {
-         char_to_room(ch, get_room_index(ROOM_VNUM_MORIBUND));
-      }
-      else
-      {
-         char_to_room(ch, get_room_index(VAMPIRE_RECALL));
-      }
+      char_to_room(ch, get_room_index(ROOM_VNUM_MORIBUND));
       return;
    }
 
@@ -2507,10 +2494,7 @@ void extract_char(CHAR_DATA *ch, bool fPull)
       MEMBER_DATA *imember;
       MEMBER_DATA *imember_next;
 
-      if (IS_VAMP(ch))
-         this_council = SUPER_VAMP;
-      else
-         this_council = SUPER_NONE;
+      this_council = SUPER_NONE;
       if (this_council != SUPER_NONE && super_councils[this_council].council_time > 0)
          for (imember = super_councils[this_council].first_member; imember != NULL; imember = imember_next)
          {

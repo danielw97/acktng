@@ -1538,12 +1538,6 @@ bool spell_hypnosis(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    if (IS_AFFECTED(victim, AFF_CHARM) || IS_AFFECTED(ch, AFF_CHARM) || level - 5 < victim->level || saves_spell(level, victim))
       return TRUE;
-   if (IS_VAMP(victim) && (IS_NPC(victim)))
-   {
-      send_to_char("Wow, it seems to be immune--imagine that!\n\r", ch);
-      return TRUE;
-   }
-
    if (victim->master)
       stop_follower(victim);
    add_follower(victim, ch);

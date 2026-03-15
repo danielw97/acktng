@@ -611,11 +611,7 @@ bool is_safe(CHAR_DATA *ch, CHAR_DATA *victim)
       return FALSE;
    if (IS_SET(victim->act, PLR_THIEF))
       return FALSE;
-   /*
-    * Vampires are considered PKOK
-    */
-
-   if (!IS_NPC(ch) && !IS_NPC(victim) && (IS_SET(victim->pcdata->pflags, PFLAG_PKOK) || IS_SET(victim->pcdata->pflags, PFLAG_VAMP)) && (IS_SET(ch->pcdata->pflags, PFLAG_PKOK) || IS_SET(ch->pcdata->pflags, PFLAG_VAMP)))
+   if (!IS_NPC(ch) && !IS_NPC(victim) && IS_SET(victim->pcdata->pflags, PFLAG_PKOK) && IS_SET(ch->pcdata->pflags, PFLAG_PKOK))
       return FALSE;
 
    if (((victim->level < 10) || (victim->level + 20 < ch->level)) && (!IS_NPC(victim)) && (!IS_NPC(ch)))
@@ -675,7 +671,7 @@ void check_killer(CHAR_DATA *ch, CHAR_DATA *victim)
     * So are killers and thieves.
     */
    if (IS_NPC(victim) || IS_SET(victim->act, PLR_KILLER) || IS_SET(victim->in_room->room_flags, ROOM_PK) /* -S- Mod */
-       || IS_SET(victim->act, PLR_THIEF) || IS_VAMP(victim)                                              /*
+       || IS_SET(victim->act, PLR_THIEF)                                                                  /*
                                                                                                           * || ( ch->fighting == victim )  */
        || (ch == victim))
       return;

@@ -477,8 +477,7 @@ const struct lookup_type tab_mob_flags[] = {
     {"postman", ACT_POSTMAN, 1000},          /* handles letters */
     {"rewield", ACT_REWIELD, 1000},          /* looks for better weapons */
     {"reequip", ACT_RE_EQUIP, 1000},         /* looks for better armor */
-    {"vampire", ACT_VAMPIRE, 1000000},
-    {"no_hunt", ACT_NO_HUNT, NO_USE},
+{"no_hunt", ACT_NO_HUNT, NO_USE},
     {"solo", ACT_SOLO, 5000}, /*  mob is designed to fight solo */
     {"no_blood", ACT_NOBLOOD, 4000},
     {"boss", ACT_BOSS, NO_USE},

@@ -80,10 +80,8 @@ bool area_resetting_global;
 bool mem_log;
 sh_int gsn_martial_arts;
 sh_int gsn_dual_fist;
-sh_int gsn_stake;
 sh_int gsn_dualwield;
 sh_int gsn_stun;
-sh_int gsn_feed;
 sh_int gsn_knee;
 sh_int gsn_shadow;
 sh_int gsn_appraise;
@@ -162,7 +160,6 @@ sh_int gsn_mass_invis;
 sh_int gsn_poison;
 sh_int gsn_sleep;
 sh_int gsn_disguise;
-sh_int gsn_instruct;
 sh_int gsn_adrenaline;
 sh_int gsn_frenzy;
 sh_int gsn_emotion_control;
@@ -438,10 +435,6 @@ void boot_db(void)
          case SUPER_NONE:
             sprintf(buf, "%s", "ORDINARIES");
             break;
-         case SUPER_VAMP:
-            sprintf(buf, "%s", "@@rJUSTICARS@@N");
-            break;
-
          default:
             sprintf(buf, "%s", "NONE");
             break;

@@ -135,7 +135,7 @@ bool shortfight_should_emit_before_victim_raw_kill(int shortfight_round_active_n
 
 bool should_handle_victim_death(const CHAR_DATA *victim)
 {
-    return victim != NULL && victim->position == POS_DEAD && (IS_NPC(victim) || !IS_VAMP(victim) || deathmatch);
+    return victim != NULL && victim->position == POS_DEAD;
 }
 
 bool should_emit_shortfight_kill_summary(CHAR_DATA *ch, CHAR_DATA *victim)
@@ -858,7 +858,7 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
 
     update_pos(victim);
 
-    if ((IS_NPC(victim) || !IS_VAMP(victim)) && !(deathmatch))
+    if (!(deathmatch))
     {
         switch (victim->position)
         {
@@ -1004,15 +1004,8 @@ bool do_lifesteal(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual, 
  */
 void update_pos(CHAR_DATA *victim)
 {
-    char buf[MAX_STRING_LENGTH];
-    OBJ_DATA *obj;
-    int num, counter;
-
     if (victim->hit > 0)
     {
-        if (IS_SET(victim->affected_by, AFF_VAMP_HEALING))
-            REMOVE_BIT(victim->affected_by, AFF_VAMP_HEALING);
-
         if (victim->position <= POS_STUNNED && victim->stunTimer == 0)
         {
             act("$n stands, and gets to $s feet.", victim, NULL, NULL, TO_ROOM);
@@ -1020,151 +1013,6 @@ void update_pos(CHAR_DATA *victim)
         }
         return;
     }
-    if (IS_VAMP(victim) && (victim->hit < 1) && !IS_SET(victim->affected_by, AFF_VAMP_HEALING) && !IS_NPC(victim) && !(deathmatch))
-    {
-        CHAR_DATA *check;
-
-        if (!IS_NPC(victim))
-            gain_exp(victim, 0 - (victim->exp / 4));
-
-        sprintf(buf, "%s (vampire) has been misted!", victim->name);
-        monitor_chan(buf, MONITOR_COMBAT);
-
-        act("$n turns to mist and floats away....", victim, NULL, NULL, TO_ROOM);
-        act("You turn to mist and float back to the morgue...", victim, NULL, NULL, TO_CHAR);
-
-        /* Universe -  need to add junk here */
-        if (IS_VAMP(victim) && ((victim->fighting != NULL) && !IS_NPC(victim->fighting)))
-        {
-            counter = number_range(2, 4);
-
-            while (counter > 0)
-            {
-                num = number_range(1, UMIN(1, victim->carry_number));
-                obj = victim->first_carry;
-                if (obj == NULL)
-                    break;
-
-                for (obj = victim->first_carry; obj != NULL; obj = obj->next_in_carry_list)
-                {
-                    num = num - 1;
-                    if (num == 0)
-                        break;
-                }
-
-                if (obj == NULL)
-                    continue;
-
-                if (obj != NULL && !IS_SET(obj->extra_flags, ITEM_NOLOOT))
-                {
-                    obj_from_char(obj);
-                    obj_to_room(obj, victim->in_room);
-                }
-                counter = counter - 1;
-            }
-        }
-        /*
-         * drop stuff if is (WANTED)
-         */
-        if ((IS_SET(victim->act, PLR_KILLER) || IS_SET(victim->act, PLR_THIEF)) && ((victim->fighting != NULL) && ((!IS_NPC(victim->fighting)) || (!str_cmp(rev_spec_lookup(victim->fighting->spec_fun), "spec_executioner")))))
-        {
-            counter = number_range(2, 3);
-
-            while (counter > 0)
-            {
-                num = number_range(1, UMIN(1, victim->carry_number));
-                obj = victim->first_carry;
-                if (obj == NULL)
-                    break;
-
-                for (obj = victim->first_carry; obj != NULL; obj = obj->next_in_carry_list)
-                {
-                    num = num - 1;
-                    if (num == 0)
-                        break;
-                }
-
-                if (obj == NULL)
-                    continue;
-
-                if (obj != NULL && !IS_SET(obj->extra_flags, ITEM_NOLOOT))
-                {
-                    obj_from_char(obj);
-                    obj_to_room(obj, victim->in_room);
-                }
-                counter = counter - 1;
-            }
-        }
-
-        char_from_room(victim);
-        char_to_room(victim, get_room_index(victim->pcdata->recall_vnum));
-        act("A mist floats in, and forms into $n's corpse!", victim, NULL, NULL, TO_ROOM);
-
-        SET_BIT(victim->affected_by, AFF_VAMP_HEALING);
-
-        stop_fighting(victim, TRUE);
-        victim->hit = -20;
-        for (check = first_char; check != NULL; check = check->next)
-        {
-            if (check->hunting == victim)
-                end_hunt(check);
-        }
-        return;
-    }
-
-    if (IS_VAMP(victim) && IS_SET(victim->affected_by, AFF_VAMP_HEALING) && !(deathmatch) && !IS_NPC(victim))
-    {
-
-        /*
-         * Then they don't really die... just regen slowly...!
-         */
-        if (victim->hit < -20)
-            victim->hit = -20;
-
-        if (victim->hit == -20)
-        {
-            act("$n's body slowly regains it's shape!", victim, NULL, NULL, TO_ROOM);
-            send_to_char("Your body slowly regains it's shape!\n\r", victim);
-            victim->hit++;
-            victim->position = POS_MORTAL;
-        }
-        else if (victim->hit > -20 && victim->hit < -15)
-            victim->hit++;
-        else if (victim->hit == -15)
-        {
-            act("$n's skin grows back into place!", victim, NULL, NULL, TO_ROOM);
-            send_to_char("Your skin grows back into place!\n\r", victim);
-            victim->hit++;
-        }
-        else if (victim->hit > -15 && victim->hit < -10)
-            victim->hit++;
-        else if (victim->hit == -10)
-        {
-            act("$n's wounds form scar tissue and vanish!", victim, NULL, NULL, TO_ROOM);
-            send_to_char("Your wounds form scar tissue and vanish!\n\r", victim);
-            victim->hit++;
-        }
-        else if (victim->hit > -10 && victim->hit < -5)
-            victim->hit++;
-        else if (victim->hit == -5)
-        {
-            act("$n's looks like $s old self again.", victim, NULL, NULL, TO_ROOM);
-            send_to_char("Your look like your old self again.\n\r", victim);
-            victim->hit++;
-        }
-        else if (victim->hit > -5 && victim->hit < -1)
-            victim->hit++;
-        else
-        {
-            REMOVE_BIT(victim->affected_by, AFF_VAMP_HEALING);
-            victim->position = POS_STUNNED;
-            victim->hit = 5;
-        }
-        return;
-    }
-
-    if ((!IS_NPC(victim)) && (IS_VAMP(victim)) && !(deathmatch))
-        return;
 
     if (IS_NPC(victim) && victim->hit <= 0)
     {

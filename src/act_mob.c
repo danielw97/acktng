@@ -826,19 +826,6 @@ bool valid_target(CHAR_DATA *ch, CHAR_DATA *victim, int l)
          return FALSE;
 
    /*
-    * if IS vamp_hunter, make sure target is a player vamp
-    */
-
-   if ((IS_VAMP(victim)) && (!IS_NPC(victim)) && (ch->spec_fun != spec_lookup("spec_vamp_hunter")))
-      return FALSE;
-
-   /*
-    * don't attack NPC VAMPS (they can't die )
-    */
-   if ((IS_VAMP(victim)) && (IS_NPC(victim)))
-      return FALSE;
-
-   /*
     * Only kill victims of similar level
     */
    if (((get_psuedo_level(victim) - get_psuedo_level(ch)) > -7) || ((get_psuedo_level(ch) - get_psuedo_level(victim)) > 12))

@@ -390,14 +390,6 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
       fprintf(fp, "AttrMax      %d %d %d %d %d\n",
               ch->pcdata->max_str, ch->pcdata->max_int, ch->pcdata->max_wis, ch->pcdata->max_dex, ch->pcdata->max_con);
 
-      fprintf(fp, "Bloodlust    %d\n", ch->pcdata->bloodlust);
-      fprintf(fp, "Bloodlustmax   %d\n", ch->pcdata->bloodlust_max);
-      fprintf(fp, "Vamplevel      %d\n", ch->pcdata->vamp_level);
-      fprintf(fp, "Vampexp       %d\n", ch->pcdata->vamp_exp);
-      fprintf(fp, "Vampskillnum  %d\n", ch->pcdata->vamp_skill_num);
-      fprintf(fp, "Vampskillmax  %d\n", ch->pcdata->vamp_skill_max);
-      fprintf(fp, "Vampbloodline %d\n", ch->pcdata->vamp_bloodline);
-      fprintf(fp, "Vamppracs     %d\n", ch->pcdata->vamp_pracs);
       fprintf(fp, "Hasexpfix     %d\n", ch->pcdata->has_exp_fix);
       fprintf(fp, "Questpoints   %d\n", ch->quest_points);
       fprintf(fp, "InvasionPoints %d\n", ch->pcdata->invasion_points);
@@ -695,7 +687,6 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       ch->pcdata->perm_wis = 13;
       ch->pcdata->perm_dex = 13;
       ch->pcdata->perm_con = 13;
-      ch->pcdata->bloodlust = 24;
       ch->pcdata->keep_vnum = 0;
       ch->pcdata->keep_healer_bought = 0;
       ch->pcdata->keep_healer_vnum = 0;
@@ -1077,8 +1068,6 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
       case 'B':
          KEY("Balance", ch->balance, fread_number(fp));
-         KEY("Bloodlust", ch->pcdata->bloodlust, fread_number(fp));
-         KEY("Bloodlustmax", ch->pcdata->bloodlust_max, fread_number(fp));
          if (!IS_NPC(ch))
          {
             SKEY("Bamfin", ch->pcdata->bamfin, fread_string(fp));
@@ -1595,13 +1584,6 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             fMatch = TRUE;
             break;
          }
-
-         KEY("Vamplevel", ch->pcdata->vamp_level, fread_number(fp));
-         KEY("Vampexp", ch->pcdata->vamp_exp, fread_number(fp));
-         KEY("Vampbloodline", ch->pcdata->vamp_bloodline, fread_number(fp));
-         KEY("Vampskillnum", ch->pcdata->vamp_skill_num, fread_number(fp));
-         KEY("Vampskillmax", ch->pcdata->vamp_skill_max, fread_number(fp));
-         KEY("Vamppracs", ch->pcdata->vamp_pracs, fread_number(fp));
 
          break;
 

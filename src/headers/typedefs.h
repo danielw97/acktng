@@ -212,8 +212,6 @@ typedef struct mob_prog_act_list MPROG_ACT_LIST; /* program */
 /* MAG Mod */
 typedef struct build_data_list BUILD_DATA_LIST; /* Online Building */
 
-/* Zen Mod */
-typedef struct vamp_exp_table VAMP_EXP_TABLE;
 typedef struct magic_shield MAGIC_SHIELD;
 typedef struct politics_data_type POL_DATA;
 typedef struct council_data COUNCIL_DATA;

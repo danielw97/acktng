@@ -241,9 +241,7 @@ DECLARE_SPELL_FUN(spell_hellspawn);
 DECLARE_SPELL_FUN(spell_travel);
 DECLARE_SPELL_FUN(spell_flare);
 DECLARE_SPELL_FUN(spell_mystic_armor);
-DECLARE_SPELL_FUN(spell_blood_leach);
 DECLARE_SPELL_FUN(spell_seal_room);
-DECLARE_SPELL_FUN(spell_shade);               /* Slot 542 */
 DECLARE_SPELL_FUN(spell_deflect_weapon);      /* slot 600 */
 DECLARE_SPELL_FUN(spell_black_hand);          /* slot 601 */
 DECLARE_SPELL_FUN(spell_throw_needle);        /* slot 602 */
@@ -253,8 +251,6 @@ DECLARE_SPELL_FUN(spell_ice_bolt);            /* slot 605 */
 DECLARE_SPELL_FUN(spell_waterelem);           /* slot 606 */
 DECLARE_SPELL_FUN(spell_skeleton);            /* slot 607 */
 DECLARE_SPELL_FUN(spell_poison_weapon);       /* slot 608 */
-DECLARE_SPELL_FUN(spell_embrace);             /* slot 609 */
-DECLARE_SPELL_FUN(spell_mesmerise);           /* slot 610 */
 DECLARE_SPELL_FUN(spell_fireelem);            /* slot 612 */
 DECLARE_SPELL_FUN(spell_rune_fire);           /* slot 613 */
 DECLARE_SPELL_FUN(spell_rune_shock);          /* slot 614 */
@@ -268,14 +264,12 @@ DECLARE_SPELL_FUN(spell_cloak_absorb);        /* slot 621 */
 DECLARE_SPELL_FUN(spell_cloak_reflect);       /* slot 622 */
 DECLARE_SPELL_FUN(spell_cloak_flaming);       /* slot 623 */
 DECLARE_SPELL_FUN(spell_cloak_elements);      /* slot 624 */
-DECLARE_SPELL_FUN(spell_cloak_darkness);      /* slot 624 */
 DECLARE_SPELL_FUN(spell_room_dispel);         /* slot 625 */
 DECLARE_SPELL_FUN(spell_cloak_adept);         /* slot 626 */
 DECLARE_SPELL_FUN(spell_cloak_regen);         /* slot 627 */
 DECLARE_SPELL_FUN(spell_throw_star);          /* slot 628 */
 DECLARE_SPELL_FUN(spell_soul_net);            /* slot 629 */
 DECLARE_SPELL_FUN(spell_condense_soul);       /* slot 630 */
-DECLARE_SPELL_FUN(spell_blood_walk);          /* slot 631 */
 DECLARE_SPELL_FUN(spell_restoration);         /* slot 632 */
 DECLARE_SPELL_FUN(spell_infuse);              /* slot 633 */
 DECLARE_SPELL_FUN(spell_holy_light);          /* slot 634 */
@@ -296,8 +290,6 @@ DECLARE_SPELL_FUN(spell_shadowshield);        /* slot 648 */
 DECLARE_SPELL_FUN(spell_thoughtshield);       /* slot 649 */
 DECLARE_SPELL_FUN(spell_tribe_claw);          /* slot 655 */
 DECLARE_SPELL_FUN(spell_wolf_mark);           /* slot 656 */
-DECLARE_SPELL_FUN(spell_blood_sign);          /* 657 */
-DECLARE_SPELL_FUN(spell_blood_sense);         /* 658 */
 DECLARE_SPELL_FUN(spell_summon_pegasus);      /* slot 659 */
 DECLARE_SPELL_FUN(spell_summon_nightmare);    /* slot 660 */
 DECLARE_SPELL_FUN(spell_summon_beast);        /* 661 */
