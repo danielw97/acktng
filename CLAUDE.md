@@ -61,6 +61,8 @@ cd src && make unit-tests
 
 This runs all unit tests and the integration test. The CI workflow (`.github/workflows/validate-open-prs.yml`) runs this same command on every open PR.
 
+**Unit tests should always be written for changes where possible.** When modifying or adding functionality, add a corresponding unit test in `src/tests/` to cover the new or changed behavior.
+
 ## Repository Structure
 
 ```
