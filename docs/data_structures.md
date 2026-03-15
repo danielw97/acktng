@@ -348,7 +348,7 @@ block; it is accessed via `ch->pcdata`.  NPCs always have `pcdata == NULL`.
 |---|---|---|
 | `clan` | `sh_int` | Clan membership ID |
 | `ruler_rank` | `sh_int` | Rank in the influence / ruler system |
-| `generation` | `int` | Vampire generation or Werewolf age |
+| `generation` | `int` | Generation tracking field |
 | `monitor` | `int` | Channel bitfield for immortal monitoring |
 
 ### Ignore list
@@ -402,20 +402,6 @@ block; it is accessed via `ch->pcdata`.  NPCs always have `pcdata == NULL`.
 | `prop_target_done[PROP_MAX_TARGETS]` | `bool []` | Completion flag per target slot |
 | `prop_kill_needed` | `int` | Type-3 quest: total kills required |
 | `prop_kill_count` | `int` | Type-3 quest: kills completed so far |
-
-### Vampire specifics
-
-| Field | Type | Description |
-|---|---|---|
-| `bloodlust` | `int` | Vampire blood supply |
-| `bloodlust_max` | `int` | Maximum vampire blood supply |
-| `vamp_level` | `int` | Vampire form level |
-| `vamp_bloodlust_max` | `int` | Maximum vampire bloodlust |
-| `vamp_skill_num` | `int` | Active vampire skill slot |
-| `vamp_skill_max` | `int` | Maximum vampire skills available |
-| `vamp_bloodline` | `int` | Vampire bloodline type |
-| `vamp_exp` | `int` | Vampire-specific experience |
-| `vamp_pracs` | `int` | Vampire practice sessions |
 
 ### OLC / property editing
 

@@ -765,8 +765,6 @@ struct pc_data
    sh_int mod_dex;
    sh_int mod_con;
    sh_int condition[3];
-   int bloodlust;
-   int bloodlust_max;
    sh_int pagelen;
    unsigned int learned[MAX_SKILL];
    char *header;  /* header used for message */
@@ -783,13 +781,6 @@ struct pc_data
    sh_int order[MAX_CLASS]; /* Class Order */
    sh_int index[MAX_CLASS]; /* the order of each class! */
    int monitor;             /* monitor channel for imms */
-   int vamp_level;
-   int vamp_bloodlust_max;
-   int vamp_skill_num;
-   int vamp_skill_max;
-   int vamp_bloodline;
-   int vamp_exp;
-   int vamp_pracs;
    sh_int has_exp_fix;
    sh_int quest_points;
 
@@ -1303,7 +1294,6 @@ void list_who_to_output args((void));
 /* act_info.c */
 void set_title args((CHAR_DATA * ch, char *title));
 char *color_string args((CHAR_DATA * CH, char *argument));
-char *get_family_name args((CHAR_DATA * ch));
 void do_learned args( (CHAR_DATA *ch, char *argument) );
 void do_stancehelp args( (CHAR_DATA *ch, char *argument) );
 void do_rmodhelp args( (CHAR_DATA *ch, char *argument) );
@@ -1628,16 +1618,13 @@ void trigger_handler args((CHAR_DATA * ch, OBJ_DATA *obj, int trigger));
 void advance_level args((CHAR_DATA * ch, int class, bool show));
 void advance_level_remort args((CHAR_DATA * ch, int class, bool show));
 void advance_level_adept args((CHAR_DATA * ch, int class, bool show));
-void advance_level_vamp args((CHAR_DATA * ch));
 void gain_exp args((CHAR_DATA * ch, int gain));
-void gain_bloodlust args((CHAR_DATA * ch, int value));
 void gain_condition args((CHAR_DATA * ch, int iCond, int value));
 void update_handler args((void));
 void caravan_update args((void));
 bool check_rewield args((CHAR_DATA * ch));
 bool check_re_equip args((CHAR_DATA * ch));
 void auction_update args((void));
-void check_vamp args((CHAR_DATA * ch));
 
 /* write.c */
 void write_start args((char **dest, void *retfunc, void *retparm, CHAR_DATA *ch));

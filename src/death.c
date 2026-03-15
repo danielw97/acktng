@@ -44,12 +44,6 @@ void make_corpse(CHAR_DATA *ch, char *argument)
    if (deathmatch)
       return;
 
-   /*
-    * Vampire bodies crumble to dust when really killed
-    */
-   if (IS_VAMP(ch) && !IS_NPC(ch))
-      return;
-
    if (IS_NPC(ch))
    {
       if ((ch->in_room != NULL) && IS_SET(ch->in_room->affected_by, ROOM_BV_SOUL_NET))
@@ -279,7 +273,7 @@ void raw_kill(CHAR_DATA *victim, char *argument)
       quest_mob = NULL;
    }
 
-   if ((IS_NPC(victim) || !IS_VAMP(victim)) && (victim->is_free == FALSE) && (victim->in_room != NULL))
+   if (victim->is_free == FALSE && victim->in_room != NULL)
       make_corpse(victim, arg);
 
    for (check = first_char; check != NULL; check = check->next)
@@ -317,8 +311,6 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
    int huggy; /* To work out exp gained */
    int funky; /* Hope you LOVE these var names, Mag */
    int base;
-   int vamp_exp;
-
    /*
     * Monsters don't get kill xp's or alignment changes.
     * P-killing doesn't help either.
@@ -432,15 +424,11 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
       if ((abs((get_psuedo_level(gch) - get_psuedo_level(victim))) > 21) || (get_psuedo_level(gch) > (get_psuedo_level(victim) + 15)))
       {
          funky = 0;
-         vamp_exp = 0;
       }
-      else
-         vamp_exp = 1;
 
       if ((abs((get_psuedo_level(ch) - get_psuedo_level(victim))) > 21) || (get_psuedo_level(ch) > (get_psuedo_level(victim) + 15)))
       {
          funky = 0;
-         vamp_exp = 0;
       }
 
       if (is_adept(gch))
@@ -449,11 +437,6 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
       sprintf(buf, "You Receive %d Experience Points.\n\r", funky);
       send_to_char(buf, gch);
       gain_exp(gch, funky);
-
-      if (IS_VAMP(gch) && !IS_NPC(gch))
-
-         gch->pcdata->vamp_exp += vamp_exp;
-
 
       if (!IS_NPC(gch) && !can_use_skill(gch, gsn_emotion_control))
       {

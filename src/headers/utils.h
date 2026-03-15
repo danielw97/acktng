@@ -157,7 +157,6 @@ struct char_ref_type
 /*
  * Character macros.
  */
-#define IS_VAMP(ch) (IS_NPC(ch) ? IS_SET(ch->act, ACT_VAMPIRE) : IS_SET(ch->pcdata->pflags, PFLAG_VAMP))
 #define IS_UNDEAD(ch) (IS_NPC(ch) ? IS_SET(ch->act, ACT_UNDEAD) : FALSE)
 #define IS_NPC(ch) (IS_SET((ch)->act, ACT_IS_NPC))
 #define IS_IMMORTAL(ch) (get_trust(ch) >= LEVEL_IMMORTAL)

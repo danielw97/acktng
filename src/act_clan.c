@@ -916,8 +916,6 @@ void do_council(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (IS_VAMP(ch)) /* add other super checks here later */
-      this_council = SUPER_VAMP;
    GET_FREE(member, member_free);
 
    member->this_member = ch;
@@ -1006,11 +1004,6 @@ void do_council(CHAR_DATA *ch, char *argument)
                send_to_char("Not on NPCS!!\n\r", ch);
                return;
             }
-            else if (this_council == SUPER_VAMP && !IS_VAMP(victim))
-            {
-               send_to_char("They are not a VAMPYRE!!\n\r", ch);
-               return;
-            }
             else
             {
                sprintf(buf, "%s is now a member of the Council of %s!\n\r", victim->name,
@@ -1045,21 +1038,14 @@ void do_council(CHAR_DATA *ch, char *argument)
                send_to_char("Not on NPCS!!\n\r", ch);
                return;
             }
-            else if (this_council == SUPER_VAMP && !IS_VAMP(victim))
-            {
-               send_to_char("They are not a VAMPYRE!!\n\r", ch);
-               return;
-            }
             else
             {
-               sprintf(buf, "%s has been outcast from the @@eKindred@@N by the %s, and is now a @@dRENEGADE@@N!!!!\n\r",
+               sprintf(buf, "%s has been outcast by the %s.\n\r",
                        victim->name, super_councils[this_council].council_name);
                send_to_char(buf, ch);
-               sprintf(buf,
-                       "You have been @@ROUTCAST@@N from the @@eKindred@@N by the %s, and are now a @@dRenegade@@N!!!!!\n\r",
+               sprintf(buf, "You have been outcast by the %s.\n\r",
                        super_councils[this_council].council_name);
                send_to_char(buf, victim);
-               victim->pcdata->vamp_bloodline = 0;
                do_save(victim, "");
             }
          }

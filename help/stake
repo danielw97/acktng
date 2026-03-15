@@ -1,7 +1,0 @@
-level 5
-keywords stake
----
-Syntax: stake <target>
-
-Attempt to stake a vampyre target in combat.
-This command is available from level 5.

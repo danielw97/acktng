@@ -88,10 +88,7 @@
 #define MAX_MORTAL (MAX_LEVEL - 5)
 #define MAX_MOB_LEVEL 171
 #define MAX_ADEPT 20
-#define MAX_VAMP_LEVEL 20
-#define ADVANCE_VAMP 16
 #define ADVANCE_ADEPT 32
-#define MAX_FAMILY 5
 #define MAX_SUPER 4
 
 #define STAT_MAX 30
@@ -221,7 +218,6 @@
 #define ADEPT 3
 
 #define NORM 1
-#define VAMP 2
 
 /*
  * Quest mob personalities
@@ -250,7 +246,6 @@
  * Defined in #MOBILES.
  */
 #define MOB_VNUM_CITYGUARD 3060
-#define MOB_VNUM_VAMPIRE 3404
 #define MOB_VNUM_DOGGY 65327
 #define MOB_VNUM_ZOMBIE 11004
 #define MOB_VNUM_STALKER 65349
@@ -294,7 +289,6 @@
 #define PULSE_RAUCTION (30 * PULSE_PER_SECOND)
 #define PULSE_MAUCTION (30 * PULSE_PER_SECOND)
 
-#define VAMPIRE_RECALL 9001
 #define LIQUID_BLOOD 13
 
 /*
@@ -365,7 +359,6 @@
 #define C_SHOW_SKILL 1
 
 #define SUPER_NONE 0
-#define SUPER_VAMP 1
 #define SUPER_WOLF 2
 #define SUPER_BLESSED 3
 
@@ -430,7 +423,6 @@
 
 #define CLAN_ONLY -1
 #define BOSS_ONLY -2
-#define VAMP_ONLY -3
 
 /*
  * Time and weather stuff.
@@ -748,7 +740,6 @@
 #define PFLAG_PKOK 1
 #define PFLAG_AFK 2
 #define PFLAG_AMBAS 4
-#define PFLAG_VAMP 8
 #define PFLAG_CLAN_DIPLOMAT 16
 #define PFLAG_CLAN_BOSS 32
 #define PFLAG_CLAN_TREASURER 64
@@ -782,7 +773,6 @@
 #define CHANNEL_ALLRACE 131072
 #define CHANNEL_HERMIT 262144 /* Turns off ALL channels */
 #define CHANNEL_BEEP 524288
-#define CHANNEL_FAMILY 1048576
 #define CHANNEL_DIPLOMAT 2097152
 #define CHANNEL_CRUSADE 4194304
 #define CHANNEL_REMORTTALK 8388608
@@ -966,7 +956,6 @@
 #define ACT_POSTMAN 524288                               /* Postmaster     */
 #define ACT_REWIELD 1048576                              /* Uses better weapons  */
 #define ACT_RE_EQUIP 2097152                             /* Uses better equipment */
-#define ACT_VAMPIRE 8388608                              /* Vampire mob    */
 #define ACT_NO_HUNT 16777216                             /* Mob cannot be hunted */
 #define ACT_SOLO 33554432                                /* Mob is buffed for solo combat */
 #define ACT_BOSS BIT_27                                  /* Mob is buffed for boss combat */
@@ -1090,7 +1079,6 @@
 #define AFF_BLASTED BIT_23
 #define AFF_REMORT_CURSE BIT_24
 #define AFF_CONFUSED BIT_25
-#define AFF_VAMP_HEALING BIT_26 /* DO NOT USE IN OLC! */
 #define AFF_HOLD BIT_27
 #define AFF_PARALYSIS BIT_28
 #define AFF_CLOAK_ADEPT BIT_29
@@ -1166,7 +1154,6 @@
 #define ITEM_MYTHIC BIT_19
 #define ITEM_LEGENDARY BIT_20
 #define ITEM_RARE BIT_21
-#define ITEM_VAMP BIT_22 /* player must be a vampyre */
 #define ITEM_NOLOOT BIT_23
 #define ITEM_NOSAC BIT_24
 #define ITEM_UNIQUE BIT_25

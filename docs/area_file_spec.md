@@ -194,7 +194,6 @@ Builder policy: any mob special beginning with `spec_keep_` may only be assigned
 - `spec_stephen`
 - `spec_sage`
 - `spec_wizardofoz`
-- `spec_vamp_hunter`
 - `spec_tax_man`
 - `spec_sylai_priest`
 - `spec_keep_physical_captain` (human-assignment only)

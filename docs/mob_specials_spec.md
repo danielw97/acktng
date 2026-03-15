@@ -195,10 +195,6 @@ Fires while standing. Each tick: teleports to a random room in the world, emitti
 
 Fires while standing. Teleports to a random room. Targets a random player who has either more than 100,000 gold on hand or more than 1,000,000 in the bank. Deducts 1% of the player's total wealth (bank-first, then on hand). Logs the transaction to `MONITOR_MOB`. Calls `do_save` on the target.
 
-### `spec_vamp_hunter` (`src/ai/spec_vamp_hunter.c`)
-
-Fires only when the mob is already hunting a vampire player. On a 21-way random gate, either does nothing or sends one of three threatening messages via `do_tell` or `do_yell`. Does not initiate combat — the mob must already have been set hunting externally.
-
 ### `spec_sylai_priest` (`src/ai/spec_sylai_priest.c`)
 
 Room-specific: only activates in room 439. Fires during combat. Each tick: 30% chance to attempt, then 60% success rate. On success, shoves the fighting player off the outcrop into room 433 (30%) or 436 (70%). Announces the shove, calls `stop_fighting`, moves the player, and shows them the new room description.

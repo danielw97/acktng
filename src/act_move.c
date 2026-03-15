@@ -362,9 +362,7 @@ void move_char(CHAR_DATA *ch, int door)
    if (!IS_NPC(ch))
       quest_room_notify(ch, ch->in_room);
 
-   if (!IS_NPC(ch) && IS_VAMP(ch) && !IS_IMMORTAL(ch))
-      check_vamp(ch); /* burn the vampire! */
-   ch->using_named_door = FALSE;
+ch->using_named_door = FALSE;
    return;
 }
 
@@ -1141,10 +1139,7 @@ void do_recall(CHAR_DATA *ch, char *argument)
     * if ( IS_NPC( ch ) || ch->level < 6 )
     */
 
-   if (IS_VAMP(ch))
-      location = get_room_index(VAMPIRE_RECALL);
-   else
-      location = get_room_index(ROOM_VNUM_TEMPLE);
+   location = get_room_index(ROOM_VNUM_TEMPLE);
 
    if (!IS_NPC(ch))
    {

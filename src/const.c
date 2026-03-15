@@ -1197,7 +1197,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     ""},
 
    {
-    MORTAL, VAMP,
+    MORTAL, NORM,
     "energy drain", {15, 7, 8, 11, 9, 13},
     spell_energy_drain, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 25 ), 12, 12, TRUE,
@@ -1663,14 +1663,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     ""},
 
    {
-    MORTAL, VAMP,
-    "shade", {12, 7, 6, 8, 7, 13},
-    spell_shade, TAR_IGNORE, POS_STANDING,
-    NULL, SLOT( 542 ), 5, 12, FALSE,
-    "", "The room gets lighter.",
-    ""},
-
-   {
     MORTAL, NORM,
     "shield", {9, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_shield, TAR_CHAR_DEFENSIVE, POS_STANDING,
@@ -1926,13 +1918,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
 
 
-   {
-    MORTAL, VAMP,
-    "cloak:darkness", {18, 13, 14, 14, 16, 15},
-    spell_cloak_darkness, TAR_CHAR_DEFENSIVE, POS_STANDING,
-    NULL, SLOT( 224 ), 45, 12, FALSE,
-    "", "The @@dcloak@@N around your body fades.",
-    "@@NThe @@dcloak@@N around $n's body fades."},
 
 
 
@@ -1986,13 +1971,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "blast of lightning", "!Lightning Breath!",
     ""},
 
-   {
-    MORTAL, VAMP,
-    "blood leach", {8, 4, 3, 4, 4, 5},
-    spell_blood_leach, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
-    NULL, SLOT( 540 ), 6, 12, FALSE,
-    "", "Your body feels stronger again.",
-    ""},
 
 
 /*
@@ -2151,14 +2129,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_equip_wand, SLOT( 0 ), 0, 0, FALSE,
     "", "!Equip Wand!",
-    ""},
-
-   {
-    MORTAL, VAMP,
-    "feed", {1, 1, 1, 1, 1, 1},
-    spell_null, TAR_IGNORE, POS_STANDING,
-    &gsn_feed, SLOT( 0 ), 0, 24, FALSE,
-    "", "!feed!",
     ""},
 
    {
@@ -2351,14 +2321,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     ""},
 
    {
-    MORTAL, NORM,
-    "stake", {NO_USE, 45, NO_USE, 60, NO_USE, NO_USE},
-    spell_null, TAR_IGNORE, POS_STANDING,
-    &gsn_stake, SLOT( 0 ), 0, 24, FALSE,
-    "", NULL,
-    ""},
-
-   {
     REMORT, NORM,
     "stun", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
                 NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
@@ -2374,14 +2336,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_disguise, SLOT( 0 ), 0, 0, FALSE,
     "", "!Disguise!",
-    ""},
-
-   {
-    MORTAL, VAMP,
-    "instruct", {10, 5, 5, 5, 5, 5},
-    spell_null, TAR_IGNORE, POS_STANDING,
-    &gsn_instruct, SLOT( 0 ), 0, 0, FALSE,
-    "", "!INSTRUCT!",
     ""},
 
    {
@@ -2557,25 +2511,11 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
 
 
-   {
-    MORTAL, VAMP,
-    "embrace", {86, 15, 15, 15, 15, 15},
-    spell_embrace, TAR_CHAR_DEFENSIVE, POS_STANDING,
-    NULL, SLOT( 609 ), 15, 24, FALSE,
-    "", "!EMBRACE!",
-    ""},
 
 
 
 
 
-   {
-    MORTAL, VAMP,
-    "mesmerise", {5, 2, 2, 2, 2, 2},
-    spell_mesmerise, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
-    NULL, SLOT( 610 ), 4, 8, FALSE,
-    "", "!MESMERISE!",
-    ""},
 
 
 
@@ -2721,14 +2661,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     spell_condense_soul, TAR_OBJ_INV, POS_STANDING,
     NULL, SLOT( 630 ), 800, 24, FALSE,
     "", "!Soul Potion!",
-    ""},
-
-   {
-    MORTAL, VAMP,
-    "blood walk", {20, 19, 20, 18, 19, 20},
-    spell_blood_walk, TAR_IGNORE, POS_STANDING,
-    NULL, SLOT( 631 ), 40, 48, FALSE,
-    "", "!blood walk!!",
     ""},
 
    {
@@ -2925,22 +2857,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     NULL, SLOT( 649 ), 400, 12, FALSE,
     "", "@@NThe @@rshield@@N shatters!!",
     "@@NThe @@rshield@@N protecting $n shatters!!"},
-
-   {
-    MORTAL, VAMP,
-    "bloodsign", {12, 8, 10, 9, 7, 8},
-    spell_blood_sign, TAR_IGNORE, POS_STANDING,
-    NULL, SLOT( 657 ), 5, 24, FALSE,
-    "", "",
-    ""},
-
-   {
-    MORTAL, VAMP,
-    "bloodsense", {10, 3, 3, 3, 3, 3},
-    spell_blood_sense, TAR_IGNORE, POS_STANDING,
-    NULL, SLOT( 658 ), 1, 24, FALSE,
-    "", "",
-    ""},
 
    {
     REMORT, NORM,

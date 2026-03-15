@@ -577,7 +577,6 @@ int quest_is_valid_crusade_mobile(CHAR_DATA *target, int min_level, int max_leve
       return 0;
 
    if ((target->level < min_level) || (target->level > max_level)
-       || (IS_VAMP(target))
        || (IS_SET(target->in_room->area->flags, AREA_NOSHOW))
        || (IS_SET(target->act, ACT_SENTINEL))
        || (IS_SET(target->act, ACT_PET))
@@ -689,7 +688,7 @@ CHAR_DATA *get_quest_giver(int min_level, int max_level)
        * as train/prac mobs, healers, etc
        */
 
-      if ((target->level < min_level) || (target->level > max_level) || (IS_VAMP(target)) || (IS_SET(target->in_room->area->flags, AREA_NOSHOW)) || (IS_SET(target->act, ACT_SENTINEL)) || (IS_SET(target->act, ACT_PET)) || (IS_SET(target->act, ACT_INVASION)) || (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_stephen")) || (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_tax_man")))
+      if ((target->level < min_level) || (target->level > max_level) || (IS_SET(target->in_room->area->flags, AREA_NOSHOW)) || (IS_SET(target->act, ACT_SENTINEL)) || (IS_SET(target->act, ACT_PET)) || (IS_SET(target->act, ACT_INVASION)) || (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_stephen")) || (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_tax_man")))
 
          continue;
       {

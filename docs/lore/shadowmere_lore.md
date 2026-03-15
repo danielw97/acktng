@@ -55,7 +55,7 @@ The city did not fall in one battle; it calcified into mutually hostile systems.
 
 The present realm is a layered occupation:
 - oathbound military dead enforcing obsolete orders,
-- vampire courts claiming continuity through bloodline precedent,
+- aristocratic regimes claiming continuity through bloodline precedent,
 - binder-clerics preserving legal forms detached from justice,
 - plague-adapted fauna thriving in hydrological waste zones,
 - opportunist scavengers feeding on all of it.
@@ -109,7 +109,7 @@ Undead soldiers and officers bound to emergency command articles. They patrol wa
 
 ### 2) The Crimson Household
 
-A vampiric aristocratic regime occupying former administrative and domestic compounds. They claim legal continuity through bloodline custody of estate charters and emergency steward writs. Their rule is ceremonially refined and operationally cruel.
+An aristocratic regime occupying former administrative and domestic compounds. They claim legal continuity through bloodline custody of estate charters and emergency steward writs. Their rule is ceremonially refined and operationally cruel.
 
 **Identity markers:** audience rituals, blood-cask logistics, portrait surveillance.
 
@@ -145,7 +145,7 @@ Rooms should feel like steps in a process: intake -> classification -> confineme
 
 ### C) Nobility as Occupation
 
-The vampire court is not decorative gothic flavor. It is a predatory elite exploiting legal vacuum and inherited symbols.
+The Crimson Household court is not decorative gothic flavor. It is a predatory elite exploiting legal vacuum and inherited symbols.
 
 ### D) Memory as Battlefield
 
@@ -195,7 +195,7 @@ Back-end logistics and final authority points (vaults, observatory, execution gr
 
 ### The Countess-Regent of Ashwine
 
-A vampire sovereign who frames predation as stewardship. She speaks in terms of continuity, debt inheritance, and blood as the last trustworthy contract medium.
+An aristocratic sovereign who frames predation as stewardship. She speaks in terms of continuity, debt inheritance, and bloodline right as the last trustworthy contract medium.
 
 ### Marshal-Lector Veyr, Oath of the Last Bell
 

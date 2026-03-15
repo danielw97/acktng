@@ -1264,29 +1264,6 @@ void do_look(CHAR_DATA *ch, char *argument)
          send_to_char(out, ch);
       }
 
-      if (!IS_NPC(ch) && IS_VAMP(ch))
-         if (ch->in_room->first_mark_list != NULL)
-         {
-            MARK_LIST_MEMBER *marks;
-            sh_int num_marks = 0;
-
-            for (marks = ch->in_room->first_mark_list; marks != NULL; marks = marks->next)
-
-               if ((marks->mark->type == VAMP) && IS_VAMP(ch))
-                  num_marks++;
-            if (num_marks > 0)
-            {
-               char marksbuf[MSL];
-
-               if (IS_VAMP(ch))
-               {
-                  sprintf(marksbuf, "@@mThis room has @@W%d @@eBlood%s@@N.\n\r", num_marks,
-                          (num_marks > 1) ? "Signs" : "Sign");
-               }
-               send_to_char(marksbuf, ch);
-            }
-         }
-
       show_room_list_to_char(ch->in_room->first_content, ch, FALSE, FALSE);
       show_char_to_char(ch->in_room->first_person, ch);
       {
@@ -1691,11 +1668,10 @@ void do_score(CHAR_DATA *ch, char *argument)
    int cnt;
    const int score_inner_width = 78;
 
-   sprintf(buf, "@@y%s%s, Race: %s%s, Clan: %s\n\rAge: ",
+   sprintf(buf, "@@y%s%s, Race: %s, Clan: %s\n\rAge: ",
            IS_NPC(ch) ? ch->short_descr : ch->name,
            IS_NPC(ch) ? "" : ch->pcdata->title,
            IS_NPC(ch) ? "n/a" : race_table[ch->race].race_title,
-           IS_VAMP(ch) ? "@@e(Vampire)@@N" : "",
            IS_NPC(ch) ? "n/a" : clan_table[ch->pcdata->clan].clan_name);
    my_get_age(ch, buf);
    send_to_char(buf, ch);
@@ -1862,19 +1838,6 @@ void do_score(CHAR_DATA *ch, char *argument)
       sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
       send_to_char(buf2, ch);
 
-      if (IS_VAMP(ch))
-      {
-         sprintf(buf, "@@eBLOODLUST@@W: @@e%d@@W/@@e%d@@N", ch->pcdata->bloodlust, ch->pcdata->bloodlust_max);
-         sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
-         send_to_char(buf2, ch);
-         sprintf(buf, "@@dKindred Rank:@@N %d  @@rGeneration:@@N %d   @@mKnowledge Avail:@@N %d",
-                 ch->pcdata->vamp_level, ch->pcdata->generation, ch->pcdata->vamp_pracs);
-         sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
-         send_to_char(buf2, ch);
-         sprintf(buf, "@@WFAMILY: %s", get_family_name(ch));
-         sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
-         send_to_char(buf2, ch);
-      }
    }
    sprintf(buf, "%s", "");
    sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
@@ -2903,9 +2866,8 @@ void do_consider(CHAR_DATA *ch, char *argument)
    buf = "";
 
    /* LLolth added the following code to make consider show more information */
-   /* root@vampyre.net */
 
-   drdiff = (get_damroll(ch) - get_damroll(victim));
+drdiff = (get_damroll(ch) - get_damroll(victim));
    if (drdiff >= 20)
       buf2 = "You hit alot harder than $E.";
    if (drdiff <= 10)
@@ -3366,8 +3328,6 @@ void do_commands(CHAR_DATA *ch, char *argument)
          if (cmd_table[cmd].level == BOSS_ONLY && !IS_SET(ch->act, PLR_CLAN_LEADER))
             continue;
 
-         if (cmd_table[cmd].level == VAMP_ONLY && !IS_VAMP(ch))
-            continue;
          /*	     if ( cmd_table[cmd].level == SYSTEM_ONLY
                   && get_trust( ch ) < L_SUP )
                 continue;
@@ -3489,11 +3449,7 @@ struct chan_type channels[] = {
      "[ +ALLCLAN  ] You hear ALL clan channels.\n\r",
      "[ -allclan  ] You don't hear ALL clan channels.\n\r"},
 
-    {CHANNEL_FAMILY, 0, "vampyre",
-     "",
-     ""},
-
-    {CHANNEL_DIPLOMAT, 0, "diplomat",
+{CHANNEL_DIPLOMAT, 0, "diplomat",
      "[ +DIPLOMAT ] You hear diplomatic negotioations.\n\r",
      "[ -diplomat ] YOU do not hear diplomatic negotiations\n\r"},
 
@@ -4055,7 +4011,7 @@ void do_slist(CHAR_DATA *ch, char *argument)
       {
          if (skill_table[sn].name == NULL)
             break;
-         if ((skill_table[sn].skill_level[class] != level) || (skill_table[sn].flag2 == VAMP))
+         if (skill_table[sn].skill_level[class] != level)
             continue;
          if ((adept_class) && (skill_table[sn].flag1 == ADEPT))
          {
@@ -4522,9 +4478,7 @@ void do_gain(CHAR_DATA *ch, char *argument)
    bool found = FALSE;
    int c; /* The class to gain in */
    bool remort = FALSE;
-   bool vamp = FALSE;
    bool adept = FALSE;
-   int vamp_cost = 0;
    sh_int morts_at_max = 0;
    sh_int remorts_at_max = 0;
    sh_int num_remorts = 0;
@@ -4645,15 +4599,6 @@ void do_gain(CHAR_DATA *ch, char *argument)
       }
    }
 
-   if (!str_prefix("VAMPYRE", argument))
-   {
-      if (IS_VAMP(ch))
-      {
-         any = TRUE;
-         vamp = TRUE;
-      }
-   }
-
    if (!found)
    {
       send_to_char("That's not a class!\n\r", ch);
@@ -4669,9 +4614,7 @@ void do_gain(CHAR_DATA *ch, char *argument)
    /*
     * Ok, so now class should be valid.  Check if enough exp and valid
     */
-   if (vamp)
-      vamp_cost = exp_to_level_vamp(ch->pcdata->vamp_level);
-   else if (remort)
+   if (remort)
    {
       if (ch->lvl[c % MAX_CLASS] < MAX_MORTAL)
       {
@@ -4716,36 +4659,13 @@ void do_gain(CHAR_DATA *ch, char *argument)
       cost = exp_to_level(ch, c);
    }
 
-   if (vamp)
-   {
-      if (ch->pcdata->vamp_exp < vamp_cost)
-      {
-         send_to_char("@@NYou have not yet mastered your current knowledge of the ways of the @@dKINDRED@@N!!\n\r", ch);
-         return;
-      }
-   }
-   else if (ch->exp < cost)
+   if (ch->exp < cost)
    {
       sprintf(buf, "Cost is %ld Exp.  You only have %ld (%ld short).\n\r", (long)cost, ch->exp, ((long)cost - ch->exp));
       send_to_char(buf, ch);
       return;
    }
 
-   if ((vamp) && (ch->pcdata->vamp_level < (MAX_VAMP_LEVEL - (ch->pcdata->generation / 2))))
-   {
-      c = ADVANCE_VAMP;
-      send_to_char("@@NYou gain more power in the ways of the @@dKindred@@N!!!\n\r", ch);
-      ch->pcdata->vamp_exp -= vamp_cost;
-      advance_level_vamp(ch);
-      ch->pcdata->vamp_level += 1;
-      do_save(ch, "");
-      return;
-   }
-   else if (vamp)
-   {
-      send_to_char("@@NYou have reached the epitome of Rank in the ways of the @@eKindred@@N.\n\r", ch);
-      return;
-   }
    if ((adept) && (ch->adept[c] < MAX_ADEPT))
    {
       send_to_char("@@WYou have reached another step on the stairway to Wisdom!!!@@N\n\r", ch);
@@ -5492,7 +5412,7 @@ void do_loot(CHAR_DATA *ch, char *argument)
     * begin checking for lootability
     */
 
-   if ((ch->pcdata->clan == 0) && (!IS_SET(ch->pcdata->pflags, PFLAG_PKOK)) && (!IS_VAMP(ch)))
+   if ((ch->pcdata->clan == 0) && (!IS_SET(ch->pcdata->pflags, PFLAG_PKOK)))
    {
       send_to_char("You cannot loot corpses.\n\r", ch);
       return;
@@ -5504,7 +5424,7 @@ void do_loot(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if ((ch->pcdata->clan == corpse->value[2]) || ((IS_SET(ch->pcdata->pflags, PFLAG_PKOK)) && (corpse->value[0] == 1)) || (IS_VAMP(ch) && (corpse->value[0] == 1)))
+   if ((ch->pcdata->clan == corpse->value[2]) || ((IS_SET(ch->pcdata->pflags, PFLAG_PKOK)) && (corpse->value[0] == 1)))
    {
       counter = number_range(1, 100);
 

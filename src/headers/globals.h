@@ -41,10 +41,8 @@
  * These are skill_lookup return values for common skills and spells.
  */
 extern sh_int gsn_martial_arts; /* For unarmed fighting */
-extern sh_int gsn_stake;
 extern sh_int gsn_dualwield;
 extern sh_int gsn_stun;
-extern sh_int gsn_feed;
 extern sh_int gsn_shadow;
 extern sh_int gsn_appraise;
 extern sh_int gsn_climb;
@@ -128,7 +126,6 @@ extern sh_int gsn_mass_invis;
 extern sh_int gsn_poison;
 extern sh_int gsn_sleep;
 extern sh_int gsn_disguise;
-extern sh_int gsn_instruct;
 extern sh_int gsn_teach;
 extern sh_int gsn_adrenaline;
 extern sh_int gsn_frenzy;
@@ -279,7 +276,6 @@ DECLARE_DO_FUN(do_dog);
 DECLARE_DO_FUN(do_donate);
 DECLARE_DO_FUN(do_edit);
 DECLARE_DO_FUN(do_enter);
-DECLARE_DO_FUN(do_feed);
 DECLARE_DO_FUN(do_fights);
 DECLARE_DO_FUN(do_finger);
 DECLARE_DO_FUN(do_flame);
@@ -327,7 +323,6 @@ DECLARE_DO_FUN(do_smash);
 DECLARE_DO_FUN(do_shadowform);
 DECLARE_DO_FUN(do_shelp);
 DECLARE_DO_FUN(do_sstat);
-DECLARE_DO_FUN(do_stake);
 DECLARE_DO_FUN(do_status);
 DECLARE_DO_FUN(do_stun);
 DECLARE_DO_FUN(do_togbuild);
@@ -567,10 +562,8 @@ DECLARE_DO_FUN(do_ignore);
       NEW SKILLS  (SRZ)
 
 */
-DECLARE_DO_FUN(do_family);
 DECLARE_DO_FUN(do_qpspend);
 DECLARE_DO_FUN(do_disguise);
-DECLARE_DO_FUN(do_instruct);
 DECLARE_DO_FUN(do_frenzy);
 DECLARE_DO_FUN(do_adrenaline);
 DECLARE_DO_FUN(do_target);
@@ -596,7 +589,6 @@ DECLARE_DO_FUN(do_negotiate);
  */
 
 DECLARE_DO_FUN(do_diptalk);
-DECLARE_DO_FUN(do_familytalk);
 DECLARE_DO_FUN(do_remorttalk);
 DECLARE_DO_FUN(do_crusade);
 DECLARE_DO_FUN(do_adepttalk); /* contrib by Hermes   */

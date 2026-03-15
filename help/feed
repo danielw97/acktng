@@ -1,7 +1,0 @@
-level -3
-keywords feed
----
-Syntax: feed <target>
-
-Vampyre feeding command used during combat situations.
-Only vampyres (or appropriate admin trust) may use this command.
