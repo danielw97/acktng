@@ -403,11 +403,6 @@ Game trails continue east into wilder forest.
 ~
 ~
 0 -1 9617
-D2
-A maintained trail leads south toward the lower forest roads.
-~
-~
-0 -1 9052
 D3
 The patrol road leads west, still partially navigable.
 ~
@@ -3107,11 +3102,6 @@ the wemics have learned to avoid it. Crystal scar approaches begin beyond the
 boundary.
 ~
 0 3
-D0
-A trail leads north toward lands beyond.
-~
-~
-0 -1 6600
 D1
 The forest darkens to the east as crystal scars appear.
 ~

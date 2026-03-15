@@ -1844,9 +1844,9 @@ void build_setmob(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg2, "l8") || !str_cmp(arg2,"loot8"))
    {
-      if (value < 1 || value > 32766)
+      if (value < 1 || value > MAX_VNUM)
       {
-         send_to_char("loot8 range is 1 to 32766.\n\r", ch);
+         send_to_char("loot8 range is 1 to 65535.\n\r", ch);
          return;
       }
       pMob->loot[8] = value;
@@ -1856,9 +1856,9 @@ void build_setmob(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg2, "l7") || !str_cmp(arg2,"loot7"))
    {
-      if (value < 1 || value > 32766)
+      if (value < 1 || value > MAX_VNUM)
       {
-         send_to_char("loot7 range is 1 to 32766.\n\r", ch);
+         send_to_char("loot7 range is 1 to 65535.\n\r", ch);
          return;
       }
       pMob->loot[7] = value;
@@ -1868,9 +1868,9 @@ void build_setmob(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg2, "l6") || !str_cmp(arg2,"loot6"))
    {
-      if (value < 1 || value > 32766)
+      if (value < 1 || value > MAX_VNUM)
       {
-         send_to_char("loot6 range is 1 to 32766.\n\r", ch);
+         send_to_char("loot6 range is 1 to 65535.\n\r", ch);
          return;
       }
       pMob->loot[6] = value;
@@ -1880,9 +1880,9 @@ void build_setmob(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg2, "l5") || !str_cmp(arg2,"loot5"))
    {
-      if (value < 1 || value > 32766)
+      if (value < 1 || value > MAX_VNUM)
       {
-         send_to_char("loot5 range is 1 to 32766.\n\r", ch);
+         send_to_char("loot5 range is 1 to 65535.\n\r", ch);
          return;
       }
       pMob->loot[5] = value;
@@ -1892,9 +1892,9 @@ void build_setmob(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg2, "l4") || !str_cmp(arg2,"loot4"))
    {
-      if (value < 1 || value > 32766)
+      if (value < 1 || value > MAX_VNUM)
       {
-         send_to_char("loot4 range is 1 to 32766.\n\r", ch);
+         send_to_char("loot4 range is 1 to 65535.\n\r", ch);
          return;
       }
       pMob->loot[4] = value;
@@ -1904,9 +1904,9 @@ void build_setmob(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg2, "l3") || !str_cmp(arg2,"loot3"))
    {
-      if (value < 1 || value > 32766)
+      if (value < 1 || value > MAX_VNUM)
       {
-         send_to_char("loot3 range is 1 to 32766.\n\r", ch);
+         send_to_char("loot3 range is 1 to 65535.\n\r", ch);
          return;
       }
       pMob->loot[3] = value;
@@ -1916,9 +1916,9 @@ void build_setmob(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg2, "l2") || !str_cmp(arg2,"loot2"))
    {
-      if (value < 1 || value > 32766)
+      if (value < 1 || value > MAX_VNUM)
       {
-         send_to_char("loot2 range is 1 to 32766.\n\r", ch);
+         send_to_char("loot2 range is 1 to 65535.\n\r", ch);
          return;
       }
       pMob->loot[2] = value;
@@ -1928,9 +1928,9 @@ void build_setmob(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg2, "l1") || !str_cmp(arg2,"loot1"))
    {
-      if (value < 1 || value > 32766)
+      if (value < 1 || value > MAX_VNUM)
       {
-         send_to_char("loot1 range is 1 to 32766.\n\r", ch);
+         send_to_char("loot1 range is 1 to 65535.\n\r", ch);
          return;
       }
       pMob->loot[1] = value;
@@ -1940,9 +1940,9 @@ void build_setmob(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg2, "l0") || !str_cmp(arg2,"loot0"))
    {
-      if (value < 1 || value > 32766)
+      if (value < 1 || value > MAX_VNUM)
       {
-         send_to_char("loot0 range is 1 to 32766.\n\r", ch);
+         send_to_char("loot0 range is 1 to 65535.\n\r", ch);
          return;
       }
       pMob->loot[0] = value;
@@ -3303,7 +3303,7 @@ void build_dig(CHAR_DATA *ch, char *argument)
 
    if (vnum < 0 || vnum > MAX_VNUM)
    {
-      send_to_char("Vnum must be between 0 and 32767.\n\r", ch);
+      send_to_char("Vnum must be between 0 and 65535.\n\r", ch);
       return;
    }
 
@@ -3418,9 +3418,9 @@ void build_addmob(CHAR_DATA *ch, char *argument)
 
    vnum = is_number(arg1) ? atoi(arg1) : -1;
 
-   if (vnum < 0 || vnum > 32767)
+   if (vnum < 0 || vnum > MAX_VNUM)
    {
-      send_to_char("Vnum must be between 0 and 32767.\n\r", ch);
+      send_to_char("Vnum must be between 0 and 65535.\n\r", ch);
       return;
    }
 
@@ -3508,9 +3508,9 @@ void build_addobject(CHAR_DATA *ch, char *argument)
 
    vnum = is_number(arg1) ? atoi(arg1) : -1;
 
-   if (vnum < 0 || vnum > 32767)
+   if (vnum < 0 || vnum > MAX_VNUM)
    {
-      send_to_char("Vnum must be between 0 and 32767.\n\r", ch);
+      send_to_char("Vnum must be between 0 and 65535.\n\r", ch);
       return;
    }
 

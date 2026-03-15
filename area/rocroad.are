@@ -19,40 +19,48 @@ M No bad room spells allowed.
 #3201
 @@WThe Midgaard Gate Road@@N~
 The @@Wash-mortar paving@@N of Roc Road begins here at the threshold of @@BMidgaard's West Gate@@N, stretching westward in a broad two-wagon lane between rows of stone @@Wcharter marker slabs@@N.  The road surface is the characteristic gray-purple aggregate of the city's oldest civic works, worn smooth by centuries of wheel ruts and boot-heels.  @@BRoad warden sigils@@N are freshly repainted on every upright surface, each one a small declaration that jurisdiction extends beyond the walls.  A tall @@ypetition board@@N stands beside the first relay station, its surface layered with weather-worn complaint notices and official response stamps dating back generations.  Drainage channels cut with precision along both verges carry rainwater away from the road-bed in the careful geometry of the @@WLantern Reforms@@N, functional after all these centuries.
-~
+
+~
 0 1
 D1
 The great @@Bgate@@N of Midgaard looms to the east.
-~
+
+~
 ~
 0 -1 3101
 D3
 The road stretches west past @@Wmarker slabs@@N and @@Btax cairns@@N.
-~
+
+~
 ~
 0 -1 3202
 E
 petition board~
 The @@ypetition board@@N is a tall oak frame bolted to an iron post, its surface divided into columns by copper tacks.  Notices in varying states of decay record complaints about road conditions, toll disputes, and claims for lost cargo, each stamped with the dated seal of the @@BMagistrate Ledgerhouse@@N.  The oldest readable entry demands reimbursement for a broken axle caused by a drainage gap that has since been repaired.
-~
+
+~
 E
 charter marker slabs~
 The @@Wcharter marker slabs@@N are rectangular stone uprights spaced at regular intervals along the road's edge.  Each bears inscriptions in three eras of script, the oldest barely legible and the newest in crisp Midgaard charter-hand.  The most common text is a jurisdictional declaration: @@W"By order of the Magistrate Ledgerhouse, this road stands under continuous charter authority."@@N  Beneath the newest text, traces of older declarations in unfamiliar script are still faintly visible.
-~
+
+~
 D0
 A @@Bcivic road@@N leads north toward the Midgaard outer district.
-~
+
+~
 ~
 0 -1 3595
 S
 #3202
 @@WThe Charter Road@@N~
 The road continues west between @@Wstone marker slabs@@N and aged @@ytax cairns@@N that line both verges.  Most of the cairns are symbolic now, their toll-collection function long absorbed by the city gates, but @@Broad clerks@@N still make notation marks on them as a record-keeping ritual.  Census tally-boards hang from iron brackets at a small @@Brelay station@@N set back from the road, where the @@BLedger Watch@@N closes out daily traffic counts.  The ash-mortar surface is still firm here, holding the deep impressions of countless wagon wheels.
-~
+
+~
 0 1
 D1
 The @@Bgate of Midgaard@@N is visible to the east.
-~
+
+~
 ~
 0 -1 3201
 D2
@@ -61,789 +69,936 @@ D2
 0 -1 30250
 D3
 The road continues west past more @@Wcivic markers@@N.
-~
+
+~
 ~
 0 -1 3203
 E
 tax cairns~
 The @@ytax cairns@@N are waist-high stone pillars with flat tops, each bearing a bronze plaque stamped with toll rates from at least two different eras.  The newer rates are crossed out and annotated with the notation @@y"collected at gate — mark only"@@N in a road clerk's hand.  A few coins have been left atop the nearest cairn, either as superstition or as a gesture to the old toll custom.
-~
+
+~
 E
 relay station~
 The @@Brelay station@@N is a small stone shelter with an open front, built to provide cover for the road wardens who man this checkpoint during the @@BLantern Watch@@N rotation.  A wooden rack inside holds signal lanterns, oiled cloaks, and a locked dispatch box.  A painted slate board on the wall tracks patrol assignments in chalk notation.
-~
+
+~
 S
 #3203
 @@WRoc Road, Warden Post@@N~
 A permanent @@Bwarden post@@N occupies the south side of the road, its stone walls bearing the @@BThree Civic Oaths@@N in carved letters that road wardens recite at every shift change.  The road is still wide and well-maintained here, the ash-mortar surface cracked in places but dutifully patched with fresh aggregate.  @@yWagon traffic@@N is steady, with drivers calling out their manifest codes to the checkpoint wardens as they pass.
-~
+
+~
 0 1
 D1
 The road leads east toward @@WMidgaard@@N.
-~
+
+~
 ~
 0 -1 3202
 D3
 The road continues west through @@Wsettled farmland@@N.
-~
+
+~
 ~
 0 -1 3204
 E
 three civic oaths~
 The @@BThree Civic Oaths@@N are carved into a polished stone panel set into the warden post wall.  The text reads: @@B"No ward unlit, no traveler uncounted"@@N (the Oath of Light), @@B"No judgment hidden, no sentence unrecorded"@@N (the Oath of Stone), and @@B"No levy taken that cannot be borne"@@N (the Oath of Bread).  The lettering is deep-cut and recently repainted in Midgaard blue.
-~
+
+~
 D0
 A @@Wtrack@@N leads north to the warden barracks complex.
-~
+
+~
 ~
 0 -1 3450
 S
 #3204
 @@WRoc Road, Farmland Verge@@N~
 The stone-set road passes between cultivated fields that stretch north and south in orderly strips.  Low @@Wdrystone walls@@N separate the road from the farmland, their tops smoothed by generations of travelers sitting to rest.  A @@ysupply wagon@@N turning circle has been worn into the verge at a crossroad with a farm track, and deep ruts in the earth show where heavy loads are regularly transferred between road wagons and field carts.
-~
+
+~
 0 2
 D1
 The road leads east toward the @@Bwarden post@@N.
-~
+
+~
 ~
 0 -1 3203
 D3
 The road continues west through @@Wfarmland@@N.
-~
+
+~
 ~
 0 -1 3205
 S
 #3205
 @@WRoc Road, Grain Fields@@N~
 Golden grain fields ripple in the breeze on both sides of the road, their harvest essential to the @@yconvoy schedules@@N that keep Kiess fed.  A @@Wmilestone@@N stands at the verge, its face carved with the distance to Midgaard in the old measurement system and painted with the newer @@yconvoy tally marks@@N in Kiess trade notation.  The road surface begins to show its age here, the ash-mortar yielding to packed earth in places where repairs have been deferred.
-~
+
+~
 0 2
 D1
 The road leads east through @@Wfarmland@@N.
-~
+
+~
 ~
 0 -1 3204
 D3
 The road continues west toward rising ground.
-~
+
+~
 ~
 0 -1 3206
 E
 milestone~
 The @@Wmilestone@@N bears two layers of inscription.  The deeper-cut text gives a distance figure in the old charter measurement system, using a unit that predates Midgaard's current standards.  Over this, someone has painted @@yKiess route notation@@N in the compass-and-wall style: a distance figure, a threat assessment code, and the date of the last convoy to pass this point.  The Kiess marks are renewed regularly; the old charter text endures beneath them.
-~
+
+~
 S
 #3206
 @@WRoc Road, Pasture Stretch@@N~
 Cattle pastures replace the grain fields as the road moves further from the city.  The @@Wdrystone walls@@N are taller here, built to contain livestock rather than merely mark boundaries.  A @@ydrover's rest@@N — a flat stone bench beside a shallow trough fed by a pipe from a nearby spring — provides water for both animals and travelers.  The road surface is packed earth now, the ash-mortar long since ended.
-~
+
+~
 0 2
 D1
 The road leads east through @@Wgrain fields@@N.
-~
+
+~
 ~
 0 -1 3205
 D3
 The road continues west toward the @@Whills@@N ahead.
-~
+
+~
 ~
 0 -1 3207
 S
 #3207
 @@WRoc Road, Last Farmstead@@N~
 The last farmstead before the hills stands north of the road, its stone walls bearing both a Midgaard @@Bcharter plaque@@N and a Kiess @@yconvoy insurance mark@@N, evidence of the dual jurisdiction that defines this corridor.  The fields end here, replaced by rough grazing land dotted with gorse and bracken.  A @@Broad warden milestone@@N marks the edge of the settled zone with a carved hand pointing west and the words @@W"Banner Hills — maintain arms."@@N
-~
+
+~
 0 2
 D1
 The road leads east through @@Wpasture land@@N.
-~
+
+~
 ~
 0 -1 3206
 D3
 The road climbs west into the @@Whills@@N.
-~
+
+~
 ~
 0 -1 3208
 S
 #3208
 @@WRoc Road, Hill Approach@@N~
 The ground rises steadily and the road begins to curve along the contours of the first low hills.  @@WRetaining walls@@N of military-grade stonework appear along the downhill edge, overbuilt for civilian traffic, their iron clamp-marks dating them to the Ash-and-Iron Decades when supply columns needed secure passage.  Loose gravel crunches underfoot where the packed earth surface has eroded.  Wind picks up as the road gains altitude, carrying the scent of wild thyme from the hillside.
-~
+
+~
 0 2
 D1
 The road descends east toward the @@Wfarmland@@N.
-~
+
+~
 ~
 0 -1 3207
 D3
 The road climbs west into the @@Whillside@@N.
-~
+
+~
 ~
 0 -1 3209
 S
 #3209
 @@WRoc Road, Outer Hill Crest@@N~
 The road crests the first ridge of the Banner Hills, offering a panoramic view back toward the distant walls of @@BMidgaard@@N to the east.  A rusted @@Biron bracket@@N mounted on a stone cairn marks where a signal pole once stood, its semaphore flags long rotted but the mount still serviceable.  The road surface is loose gravel and exposed rock here, with the retaining walls holding the downhill edge against erosion.  Ridge wolves have been seen hunting these exposed slopes.
-~
+
+~
 0 4
 D1
 The road descends east toward the @@Wfarms@@N.
-~
+
+~
 ~
 0 -1 3208
 D3
 The road winds west deeper into the @@Whills@@N.
-~
+
+~
 ~
 0 -1 3210
 E
 iron bracket~
 The @@Biron bracket@@N is a heavy forged fixture bolted into the signal cairn, designed to hold a tall wooden pole.  Flakes of blue paint cling to the bracket where a @@BLantern Watch@@N standard was once mounted.  Road wardens occasionally hang an oil lantern from it during night patrols, but the original signal system has been defunct for generations.
-~
+
+~
 D0
 A @@Wtail path@@N leads north into the Banner Hills ridge.
-~
+
+~
 ~
 0 -1 3470
 S
 #3210
 @@WRoc Road, Three Pennant Rise@@N~
 The road switchbacks sharply up @@WThree Pennant Rise@@N, named for the military banner standards that once marked rally points during the border wars.  The @@Wretaining walls@@N are at their most imposing here, holding the road against a steep drop to the north.  Loose stones tumble down the slope when the wind gusts, and the surface underfoot is treacherous gravel.  A carved @@pway-mark@@N on the cliff face shows a hand pointing west with the word @@p"Courier"@@N — a memorial to a dispatch rider lost here during the Evermeet Collapse.
-~
+
+~
 0 4
 D1
 The road descends east along the @@Wswitchback@@N.
-~
+
+~
 ~
 0 -1 3209
 D3
 The road climbs west through the @@Whills@@N.
-~
+
+~
 ~
 0 -1 3211
 E
 way-mark~
 The @@pway-mark@@N is a hand-sized carving chiseled directly into the cliff face, its edges softened by weather.  The pointing hand and the word @@p"Courier"@@N are all that remain of a longer inscription.  Local wardens call this spot @@W"Courier's Grief"@@N and leave small stones at the base of the carving when they pass, a quiet acknowledgment of the dispatch rider who died here carrying sealed warrants from Evermeet during the city's final days.
-~
+
+~
 S
 #3211
 @@WRoc Road, Iron Drum Shoulder@@N~
 The road rounds the exposed shoulder of a hill the wardens call @@WIron Drum Shoulder@@N, where the wind hammers against the rock face with a deep, resonant boom.  The @@Wretaining wall@@N on the downhill side has partially collapsed, leaving a gap that drops away into a boulder-strewn ravine.  A temporary wooden railing has been lashed across the break, its rope bindings showing signs of recent replacement.  The road is fully exposed to weather here, with no shelter between this point and the pass ahead.
-~
+
+~
 0 4
 D1
 The road descends east along @@WThree Pennant Rise@@N.
-~
+
+~
 ~
 0 -1 3210
 D3
 The road continues west toward the @@Wpass@@N.
-~
+
+~
 ~
 0 -1 3212
 S
 #3212
 @@WBanner Hills Pass, East Approach@@N~
 The road narrows to a single-wagon width as it enters the high @@Wpass@@N between the Banner Hills.  Rock walls close in on both sides, their surfaces scored by centuries of wagon axles scraping the stone.  A @@Bwatch cairn@@N stands at the approach, its flat top blackened by signal fires lit during threat alerts.  The wind funnels through the pass with enough force to stagger an unburdened traveler, carrying with it the sharp scent of exposed stone and high-altitude scrub.
-~
+
+~
 0 5
 D1
 The road descends east through the @@Whills@@N.
-~
+
+~
 ~
 0 -1 3211
 D3
 The road continues west through the @@Wnarrow pass@@N.
-~
+
+~
 ~
 0 -1 3213
 E
 watch cairn~
 The @@Bwatch cairn@@N is a man-high pile of flat stones with a broad, blackened top where signal fires have been lit during threat alerts.  Iron rings are set into its sides for tethering lanterns or signal poles.  The stones at the base are carved with @@Bwarden tally marks@@N recording the dates of watch rotations going back decades.
-~
+
+~
 S
 #3213
 @@WBanner Hills Pass@@N~
 The road passes through the narrowest section of the @@Whigh pass@@N, where the rock walls rise high enough to block direct sunlight for most of the day.  The stone underfoot is polished smooth by the passage of countless feet and hooves.  A natural alcove in the east wall has been improved into a crude @@Bshelter@@N with a stone bench and a rusted iron lantern hook, offering minimal refuge from the wind that howls through the gap.  Claw marks on the rock walls suggest that ridge cats use this pass as a hunting corridor.
-~
+
+~
 0 5
 D1
 The road leads east through the @@Wpass approach@@N.
-~
+
+~
 ~
 0 -1 3212
 D3
 The road opens west onto the @@Wfar side@@N of the hills.
-~
+
+~
 ~
 0 -1 3214
 S
 #3214
 @@WBanner Hills Pass, West Approach@@N~
 The pass opens onto the western face of the Banner Hills, and the terrain drops away in a series of switchbacks toward the lowlands below.  The views are expansive: the green line of a river valley is visible to the west, and beyond it the drier country of the Dustward Verge shimmers in the distance.  A @@Wsignal pole@@N rises from a stone base at the switchback crest, its iron bracket still holding a tattered strip of blue cloth.  The road surface returns to loose gravel as the descent begins.
-~
+
+~
 0 5
 D1
 The road enters the @@Wnarrow pass@@N to the east.
-~
+
+~
 ~
 0 -1 3213
 D3
 The road descends west in @@Wswitchbacks@@N.
-~
+
+~
 ~
 0 -1 3215
 S
 #3215
 @@WBanner Hills, Western Switchbacks@@N~
 The road descends through steep switchbacks on the western face of the hills, each turn offering a different angle on the landscape below.  @@WRetaining walls@@N of the same military-grade stonework as the eastern approach hold the road against the slope.  The air warms noticeably as the altitude drops, and scrubby bushes give way to taller growth in the sheltered gullies between the switchback turns.  The gravel surface is deeply rutted where heavy wagons have braked on the descent.
-~
+
+~
 0 4
 D1
 The road climbs east toward the @@Wpass@@N.
-~
+
+~
 ~
 0 -1 3214
 D3
 The road continues its @@Wdescent@@N to the west.
-~
+
+~
 ~
 0 -1 3216
 S
 #3216
 @@WBanner Hills, Lower Slopes@@N~
 The gradient eases as the road approaches the base of the hills.  Stands of wind-stunted trees appear along the verges, their branches permanently bent eastward by the prevailing gales.  A @@ymule rest@@N — a widened section of road with a stone water trough — provides a staging area where convoy teams reorganize after the difficult hill crossing.  The packed earth surface is firmer here, showing the transition from hill country to river valley.
-~
+
+~
 0 4
 D1
 The road climbs east into the @@Whills@@N.
-~
+
+~
 ~
 0 -1 3215
 D3
 The road continues west toward the @@Wvalley@@N.
-~
+
+~
 ~
 0 -1 3217
 S
 #3217
 @@WRoc Road, Hill Foot@@N~
 The Banner Hills rise behind you to the east, their crests sharp against the sky.  The road levels out at the foot of the hills and runs straight toward the river valley ahead.  A @@Wboundary stone@@N marks the approximate limit of reliable Midgaard patrol coverage, its inscription worn but still readable: @@B"Beyond this mark, maintain your own watch."@@N  The road surface is hard-packed earth in fair condition, maintained by convoy traffic rather than civic repair crews.
-~
+
+~
 0 4
 D1
 The road climbs east into the @@WBanner Hills@@N.
-~
+
+~
 ~
 0 -1 3216
 D3
 The road continues west toward the @@Wriver@@N.
-~
+
+~
 ~
 0 -1 3218
 E
 boundary stone~
 The @@Wboundary stone@@N is a squat, weathered pillar bearing the last official Midgaard patrol-limit inscription on this stretch of road.  The carved text warns travelers to @@B"maintain your own watch"@@N beyond this point.  Someone has scratched a @@yKiess trade symbol@@N onto the stone's reverse face, as if to say that where Midgaard's authority ends, Kiess's commerce begins.
-~
+
+~
 S
 #3218
 @@WRoc Road, Valley Approach@@N~
 The road runs across open ground between the hills behind and the river valley ahead.  Tall grass and wildflowers line the verges, and the sound of running water grows audible to the west.  A @@yconvoy staging marker@@N — a painted wooden post bearing Kiess route notation — indicates that the River Ledger Crossing lies ahead.  The air is cooler here, carrying moisture from the river, and the ground softens underfoot.
-~
+
+~
 0 2
 D1
 The road leads east toward the @@Whills@@N.
-~
+
+~
 ~
 0 -1 3217
 D3
 The road continues west toward the @@ariver@@N.
-~
+
+~
 ~
 0 -1 3219
 S
 #3219
 @@WRoc Road, River Approach@@N~
 The road descends gently toward the @@ariver@@N, the sound of water now a steady murmur.  Thick vegetation crowds the verges where the moisture supports dense growth.  A @@Wstone waymark@@N stands at a bend in the road, its face carved with the symbol of the @@aRiver Ledger@@N — an open book crossed by flowing water — marking the approach to the ancient ford.  The ground is damp and the wheel ruts are deep where wagons have churned the soft earth.
-~
+
+~
 0 2
 D1
 The road leads east toward @@Wopen ground@@N.
-~
+
+~
 ~
 0 -1 3218
 D3
 The road continues west toward the @@acrossing@@N.
-~
+
+~
 ~
 0 -1 3220
 S
 #3220
 @@aThe River Ledger Ford, East Bank@@N~
 The road widens into a broad approach to the @@aRiver Ledger Crossing@@N, where ancient flagstones have been laid across the riverbed to form a stable ford.  The @@Wstone bridge abutments@@N show three layers of repair: original dry-stone from the first road canon, hasty military reinforcement marked with iron clamps from the border wars, and Kiess-funded reconstruction bearing the @@yTrade Syndic's compass-and-wall mark@@N.  A @@Bwaystone shrine@@N stands at the east bank, its lamp shelf empty but its carved blessing still legible.  The water rushes cold and clear over the ancient flagstones, rising no higher than mid-calf at the ford's center.
-~
+
+~
 0 2
 D1
 The road leads east toward the @@Wvalley@@N.
-~
+
+~
 ~
 0 -1 3219
 D3
 The @@aflagged ford@@N leads west across the river.
-~
+
+~
 ~
 0 -1 3221
 E
 waystone shrine~
 The @@Bwaystone shrine@@N is a knee-high stone pillar with a hollowed top that once held an oil lamp.  The carved text is a blessing for safe crossing, written in an old script that road wardens no longer read aloud but still acknowledge with a nod as they pass.  Dried wildflowers have been placed in the lamp hollow by some anonymous traveler.
-~
+
+~
 E
 stone bridge abutments~
 The @@Wstone bridge abutments@@N are massive blocks of fitted stone flanking the ford approach, each layer of repair clearly distinct.  The oldest dry-stone work is smooth and expertly fitted without mortar.  Above it, rough iron-clamped blocks were added during the border wars, their placement hasty but solid.  The topmost layer bears the @@ycompass-and-wall crest@@N of the Kiess Trade Syndics, carved into dressed stone blocks mortared with modern aggregate.
-~
+
+~
 S
 #3221
 @@aThe River Ledger Ford@@N~
 You stand in the middle of the @@ariver ford@@N, cold water rushing over ancient flagstones that have borne the weight of centuries of crossing traffic.  The stones are worn smooth but still stable, fitted together so precisely that the current cannot dislodge them.  Upstream the river narrows between steep banks choked with willow and sedge.  Downstream, the current widens and slows, and thick vegetation along the banks provides concealment that @@Rcontraband runners@@N have exploited for generations.
-~
+
+~
 0 6
 D1
 The @@aeast bank@@N of the ford lies behind you.
-~
+
+~
 ~
 0 -1 3220
 D3
 The @@awest bank@@N lies ahead across the rushing water.
-~
+
+~
 ~
 0 -1 3222
 S
 #3222
 @@aThe River Ledger Ford, West Bank@@N~
 The road climbs the @@awest bank@@N of the river, the flagstones of the ford giving way to a muddy approach churned by generations of hooves and wheels.  A Kiess @@yledger post@@N — a roofed wooden stand where convoy clerks once recorded every crossing in triplicate — stands at the bank's edge, its writing shelf warped but its iron document box still bolted shut.  The road ahead runs straight into drier country, and the moisture that sustained the river valley begins to thin.
-~
+
+~
 0 2
 D1
 The @@aflagged ford@@N leads east across the river.
-~
+
+~
 ~
 0 -1 3221
 D3
 The road continues west toward drier ground.
-~
+
+~
 ~
 0 -1 3223
 E
 ledger post~
 The @@yledger post@@N is a wooden stand with a sloped writing shelf and a heavy iron document box bolted to its base.  The box is locked and rusted shut, but the initials of convoy clerks are scratched into the shelf in overlapping layers.  A faded Kiess @@ycompass-and-wall mark@@N is painted on the roof beam, identifying this as an official recording station of the Trade Syndic's route ledger system.
-~
+
+~
 D2
 A @@apath@@N leads south to the river ford village.
-~
+
+~
 ~
 0 -1 3485
 S
 #3223
 @@WRoc Road, West of the River@@N~
 The road dries quickly west of the river crossing, the ground firming under a thin layer of gravel that has been spread over the mud.  The vegetation thins to scrub grass and low thorns.  A @@Wstone marker@@N at the verge bears both Midgaard charter text and Kiess route notation painted over it, the jurisdictional overlap here made physically visible.  Wheel ruts are deep but orderly, channeled by the gravel into straight lines.
-~
+
+~
 0 2
 D1
 The road leads east toward the @@ariver crossing@@N.
-~
+
+~
 ~
 0 -1 3222
 D3
 The road continues west into drier @@Wcountry@@N.
-~
+
+~
 ~
 0 -1 3224
 S
 #3224
 @@WRoc Road, Thinning Verge@@N~
 The landscape grows sparser as the road moves further from the river.  Dry grass and thorny scrub replace the lush growth of the valley.  An old @@yrequisition depot@@N foundation — a rectangular depression in the roadside earth, its dressed-stone edges still visible — marks where military supply stores were cached during the Ash-and-Iron Decades.  The road surface is hard-packed clay, cracked in a web of lines during dry weather.
-~
+
+~
 0 2
 D1
 The road leads east toward the @@ariver@@N.
-~
+
+~
 ~
 0 -1 3223
 D3
 The road continues west into the @@Wdust@@N.
-~
+
+~
 ~
 0 -1 3225
 E
 requisition depot~
 The @@yrequisition depot@@N foundation is a shallow rectangular depression in the earth, roughly ten paces by six.  The corners are defined by dressed stone blocks sunk into the ground, and the interior still shows the faint grid pattern of storage racks that once organized military supplies.  Scavengers have picked the site clean of anything valuable, but the stone blocks bear carved inventory codes in the abbreviated hand of Midgaard's military ledger system.
-~
+
+~
 S
 #3225
 @@WRoc Road, Parched Stretch@@N~
 The road runs through increasingly arid terrain where the ground is baked hard and the air shimmers with heat.  Sparse tufts of drought-resistant grass cling to the verges.  A @@pweathered milestone@@N stands at a slight bend in the road, its inscriptions in a script older than either Midgaard or Kiess, referencing jurisdictions that no longer exist.  Dust scavenger birds circle lazily overhead, riding the thermals above the sun-baked earth.
-~
+
+~
 0 10
 D1
 The road leads east toward @@Wgreener ground@@N.
-~
+
+~
 ~
 0 -1 3224
 D3
 The road continues west through the @@Wdusty verge@@N.
-~
+
+~
 ~
 0 -1 3226
 E
 weathered milestone~
 The @@pweathered milestone@@N is a tapering stone column carved with text in a pre-charter script that even Midgaard archivists struggle to fully translate.  The visible characters reference boundary claims, toll schedules, and at least one proper name that appears nowhere in surviving records.  The dry climate has preserved the inscriptions far better than rain-eroded eastern markers, making these the oldest readable road documents on Roc Road.
-~
+
+~
 S
 #3226
 @@WRoc Road, Dustward Verge@@N~
 The heart of the @@WDustward Verge@@N stretches in all directions, a flat expanse of cracked earth and bleached scrub under a punishing sky.  The road is identifiable mainly by its slight elevation above the surrounding terrain, a remnant of the original road-bed grading.  A cluster of @@pbroken boundary stones@@N lies tumbled beside the road where some ancient border was once marked with care and has since been forgotten by every institution that succeeded it.
-~
+
+~
 0 10
 D1
 The road leads east through the @@Wdust@@N.
-~
+
+~
 ~
 0 -1 3225
 D3
 The road continues west through the @@Wverge@@N.
-~
+
+~
 ~
 0 -1 3227
 S
 #3227
 @@WRoc Road, Scavenger Flats@@N~
 The flat terrain makes visibility excellent in all directions, but it also means there is no cover.  @@RDust scavenger birds@@N perch on the exposed @@pboundary markers@@N that dot the verge at irregular intervals, their dark shapes stark against the pale sky.  Relic pickers have been at work here: small excavation holes pock the roadside where bronze fittings and corroded toll hardware have been dug from the earth for sale in Midgaard's antiquities market.
-~
+
+~
 0 10
 D1
 The road leads east through the @@Wverge@@N.
-~
+
+~
 ~
 0 -1 3226
 D3
 The road continues west toward @@Whigher ground@@N.
-~
+
+~
 ~
 0 -1 3228
 S
 #3228
 @@WRoc Road, Verge End@@N~
 The terrain begins to change as the road leaves the driest stretch behind.  Sparse grass gives way to denser scrub, and the cracked earth softens as underground moisture returns.  A @@yconvoy milestone@@N painted with fresh Kiess route notation marks the approach to the Crossroads region ahead.  The road surface improves slightly, showing evidence of recent gravel resurfacing funded by Trade Syndic maintenance contracts.
-~
+
+~
 0 2
 D1
 The road leads east through the @@Wdust@@N.
-~
+
+~
 ~
 0 -1 3227
 D2
 A @@pbranch road@@N leads south into the sun-baked @@pwastes@@N.
-~
+
+~
 ~
 0 -1 3262
 D3
 The road continues west toward the @@WCrossroads@@N.
-~
+
+~
 ~
 0 -1 3229
 D0
 A @@Wdust trail@@N leads north toward the Dustward Waystation.
-~
+
+~
 ~
 0 -1 3505
 S
 #3229
 @@WRoc Road, Approach to the Crossroads@@N~
 The road widens as it approaches the @@WCrossroads@@N zone, the most politically contested section of the entire route.  @@BMidgaard-chartered milestones@@N stand beside @@yKiess-painted route markers@@N, and the physical overlap of authority is visible in every surface.  A @@Bwarden relay station@@N faces a @@yconvoy marshal's dispatch post@@N across the same clearing, their competing jurisdictions separated by nothing but a dusty stretch of road.
-~
+
+~
 0 2
 D1
 The road leads east through the @@Wverge@@N.
-~
+
+~
 ~
 0 -1 3228
 D3
 The road continues west toward the @@Wcrossroads hub@@N.
-~
+
+~
 ~
 0 -1 3230
 S
 #3230
 @@WRoc Road, Outer Crossroads@@N~
 The first evidence of the @@WCrossroads@@N settlement appears: a @@yfence line@@N of salvaged timber marks where traveling merchants have established semi-permanent market positions along the road's edge.  The ground is hard-packed by heavy foot traffic, and the air carries a mix of wood smoke, animal dung, and the sharp tang of trade goods.  Competing @@Bcharter sigils@@N and @@ytrade marks@@N cover every available surface.
-~
+
+~
 0 2
 D1
 The road leads east toward the @@Wapproach@@N.
-~
+
+~
 ~
 0 -1 3229
 D3
 The road continues west into the @@Wcrossroads@@N.
-~
+
+~
 ~
 0 -1 3231
 S
 #3231
 @@WRoc Road, Crossroads East@@N~
 The road passes through the eastern margin of the @@WCrossroads Compact@@N, where the density of @@ymerchant stalls@@N and @@Bwarden posts@@N increases sharply.  A broad @@pstone circle@@N set into the ground to the south marks one of the abandoned neutral arbitration rings, modeled on the @@pOath-Crossing@@N tradition.  The ring's boundary stones are still intact, but the ground within is overgrown, evidence of a failed truce from an earlier era.
-~
+
+~
 0 2
 D1
 The road leads east through the @@Wouter crossroads@@N.
-~
+
+~
 ~
 0 -1 3230
 D3
 The road continues west toward the @@Wcrossroads hub@@N.
-~
+
+~
 ~
 0 -1 3232
 E
 stone circle~
 The @@pstone circle@@N is a ring of flat-topped boundary stones sunk into the earth, each carved with a different jurisdictional seal.  The design follows the @@pOath-Crossing@@N pattern from the Great Northern Forest: a neutral ground where representatives of competing powers could negotiate under mutual witness.  The seals represent at least three distinct authorities, two of which no longer exist.  Weeds grow between the stones, and the ground within the circle is untrodden.
-~
+
+~
 S
 #3232
 @@WThe Crossroads Hub@@N~
 The @@WCrossroads@@N itself is a broad clearing where multiple routes converge.  The main road continues east toward @@BMidgaard@@N and west toward @@yKiess@@N, while branch paths lead north and south into different terrain.  A massive @@ptoll stone@@N stands at the clearing's center, its surface carved with overlapping decrees from at least four eras of authority, each claiming jurisdiction over the intersection.  @@yConvoy wagons@@N and @@Bwarden patrols@@N share the space in uneasy proximity.  This is the political heart of Roc Road, where competing institutions overlap and no single authority governs unchallenged.
-~
+
+~
 4 2
 D0
 A @@ppath@@N leads north toward dark spires on the horizon.
-~
+
+~
 ~
 0 -1 11200
 D1
 The road leads east through the @@WCrossroads@@N.
-~
+
+~
 ~
 0 -1 3231
 D3
 The road continues west through the @@WCrossroads@@N.
-~
+
+~
 ~
 0 -1 3233
 D5
 A @@pnarrow stair@@N descends into darkness below the road.
-~
+
+~
 ~
 0 -1 610
 E
 toll stone~
 The @@ptoll stone@@N is a monolithic slab of dark granite, taller than a man and twice as wide, its surface layered with carved decrees.  The oldest inscription is in a pre-charter script that refers to @@p"the road tax of the ridge people."@@N  Above it, Midgaard charter text declares formal jurisdiction.  Above that, a Kiess Trade Syndic proclamation asserts convoy-compact authority over commercial traffic.  The most recent addition is a military commandant's requisition order from the Ash-and-Iron Decades, never officially rescinded.
-~
+
+~
 D2
 A @@ytrack@@N leads south to the crossroads open market.
-~
+
+~
 ~
 0 -1 3540
 S
 #3233
 @@WRoc Road, Crossroads West@@N~
 The western edge of the @@WCrossroads@@N clearing gives way to rougher ground where the branch routes diverge.  A @@Rscorched patch@@N of earth marks where a merchant's stall was burned during a jurisdictional dispute, the ash still visible in the packed soil.  The road ahead splits: the main route continues west toward Kiess, while a narrower @@Gforest path@@N branches south into the canopy of the Greenveil Spur.
-~
+
+~
 0 2
 D1
 The road leads east through the @@WCrossroads hub@@N.
-~
+
+~
 ~
 0 -1 3232
 D2
 A @@Gnarrow path@@N leads south into the forest.
-~
+
+~
 ~
 0 -1 3244
 D3
 The road continues west toward @@yKiess@@N.
-~
+
+~
 ~
 0 -1 3234
 S
 #3234
 @@WRoc Road, West of the Crossroads@@N~
 The road runs west from the @@WCrossroads@@N through transitional terrain where scrub gives way to scattered trees.  A @@yconvoy dispatch rider's post@@N stands at the roadside, its wooden message board bearing fresh notices in Kiess trade notation.  @@BWall Command@@N dispatch tablets bound for Midgaard pass through this stretch, carried by riders who stop only long enough to change horses.  The competing authority marks thin as the road moves further from the intersection.
-~
+
+~
 0 2
 D1
 The road leads east toward the @@WCrossroads@@N.
-~
+
+~
 ~
 0 -1 3233
 D3
 The road continues west toward @@yKiess@@N.
-~
+
+~
 ~
 0 -1 3235
 S
 #3235
 @@WRoc Road, Escort Staging@@N~
 A widened section of road serves as a @@yconvoy staging area@@N where armed escorts are organized for the approach to Kiess.  Iron @@yhitching rings@@N are bolted into stone posts along both verges, and the ground is churned to mud by the constant traffic of pack animals.  A @@Bmilitary notice board@@N bears postings from both Midgaard's Guard Command and Kiess's Wall Command, their competing intelligence assessments displayed side by side without comment.
-~
+
+~
 0 2
 D1
 The road leads east toward the @@WCrossroads@@N.
-~
+
+~
 ~
 0 -1 3234
 D3
 The road continues west toward @@yKiess@@N.
-~
+
+~
 ~
 0 -1 3236
 S
 #3236
 @@WRoc Road, Treaty Marker@@N~
 The road passes a tall @@ptreaty marker@@N — a carved stone pillar bearing the text of an old jurisdictional agreement between Midgaard and Kiess that defined patrol responsibilities along this stretch.  The agreement has been superseded by newer compacts, but no one has removed the marker.  Scattered trees provide dappled shade over the road, and birdsong replaces the harsher sounds of the exposed verge.
-~
+
+~
 0 2
 D1
 The road leads east toward the @@Wstaging area@@N.
-~
+
+~
 ~
 0 -1 3235
 D3
 The road continues west through @@Gscattered woodland@@N.
-~
+
+~
 ~
 0 -1 3237
 E
 treaty marker~
 The @@ptreaty marker@@N is a squared stone pillar carved with formal text in both Midgaard charter-hand and Kiess trade notation.  The agreement it records divided patrol responsibilities by distance from each city, with the Crossroads designated as a shared jurisdiction zone.  Marginal annotations in a later hand note that the agreement was @@p"superseded by Emergency Compact Twelve"@@N but never formally rescinded.
-~
+
+~
 S
 #3237
 @@WRoc Road, Thinning Woodland@@N~
 The scattered trees grow denser as the road enters a transitional zone between open country and the deeper forests near Kiess.  The road surface is packed earth in reasonable condition, maintained by Kiess convoy traffic that keeps the ruts level and the verges trimmed.  A @@yroute marker@@N painted with the distance to Kiess's gate stands at a gentle curve, its numbers refreshed with each convoy cycle.
-~
+
+~
 0 3
 D1
 The road leads east through @@Wscattered trees@@N.
-~
+
+~
 ~
 0 -1 3236
 D3
 The road continues west through @@Gdenser woodland@@N.
-~
+
+~
 ~
 0 -1 3238
 S
 #3238
 @@WRoc Road, Woodland Corridor@@N~
 Tall trees now arch over the road from both sides, their branches meeting overhead to form a @@Gnatural canopy@@N that filters the light into shifting patterns on the packed earth below.  The air is cooler and damper here, carrying the scent of leaf mold and damp bark.  A @@yconvoy bell-post@@N stands at the roadside, its iron bell designed to be rung as a signal when wagon trains are approaching from either direction.  An east-branching @@Wside track@@N leads toward a settlement visible through the trees.
-~
+
+~
 0 3
 D1
 The road leads east through @@Gscattered woodland@@N.
-~
+
+~
 ~
 0 -1 3237
 D3
 The road continues west through @@Gdense forest@@N.
-~
+
+~
 ~
 0 -1 3239
 E
 convoy bell-post~
 The @@yconvoy bell-post@@N is a tall iron post topped with a heavy bronze bell.  A pull-rope hangs from the clapper, frayed but serviceable.  Kiess trade notation painted on the post indicates the bell code: one ring for eastbound traffic, two for westbound, three for emergency.  The bell's surface is dented from years of use and shows traces of verdigris.
-~
+
+~
 S
 #3239
 @@WRoc Road, Deep Canopy@@N~
 The forest canopy is at its densest here, the road running through a @@Ggreen tunnel@@N of interlocking branches that block most direct sunlight.  The packed earth surface is soft with fallen leaves.  A @@Broad warden patrol marker@@N — a blue-painted blaze on a tree trunk — indicates that this stretch is still within the nominal patrol range of the Kiess-Midgaard joint commission, though actual patrols are infrequent this far from either city.
-~
+
+~
 0 3
 D1
 The road leads east through the @@Gcanopy@@N.
-~
+
+~
 ~
 0 -1 3238
 D3
 The road continues west toward @@yKiess@@N.
-~
+
+~
 ~
 0 -1 3240
 S
 #3240
 @@WRoc Road, Kiess Approach@@N~
 The trees begin to thin as the road nears the western terminus.  The road surface improves, showing evidence of regular maintenance funded by Kiess's Trade Syndics.  A @@yconvoy insurance post@@N stands at the roadside, its notice board bearing rate schedules and liability waiver forms for merchants entering Kiess's market jurisdiction.  The distant walls of @@yKiess@@N are visible through gaps in the canopy ahead.
-~
+
+~
 0 3
 D1
 The road leads east through @@Gdeep forest@@N.
-~
+
+~
 ~
 0 -1 3239
 D3
 The road continues west toward the @@yKiess gate@@N.
-~
+
+~
 ~
 0 -1 3241
 E
 convoy insurance post~
 The @@yconvoy insurance post@@N is a roofed wooden stand displaying current rate schedules for convoy compact insurance.  The rates vary by cargo type, declared value, and escort strength.  A locked iron box at the base holds blank waiver forms.  The Kiess @@ycompass-and-wall mark@@N is prominently displayed, and a smaller notice in Midgaard charter-hand acknowledges the post's authority @@y"within the terms of Emergency Compact Twelve."@@N
-~
+
+~
 D0
 A @@ybroad road@@N leads north to the outer district of Kiess.
-~
+
+~
 ~
 0 -1 3560
 S
 #3241
 @@WRoc Road, Kiess Outerwall Sight@@N~
 The walls of @@yKiess@@N are clearly visible ahead, their @@yfortified silhouette@@N rising above the treeline.  The road is well-maintained here, its surface dressed with fresh gravel and its verges trimmed clean by Kiess road crews.  A @@ygate approach marker@@N painted with the compass-and-wall crest announces the final stretch before the city, and @@Bconvoy guards@@N in Kiess livery patrol the road with practiced alertness.
-~
+
+~
 0 3
 D0
 The road continues north toward the @@yKiess gate@@N.
-~
+
+~
 ~
 0 -1 3242
 D1
 The road leads east through the @@Gforest@@N.
-~
+
+~
 ~
 0 -1 3240
 S
 #3242
 @@WRoc Road, Kiess Gate Approach@@N~
 The road straightens for the final approach to @@yKiess's East Gate@@N, with a @@Wbranch track@@N leading east toward a distant settlement visible through the trees.  A @@Broad warden relay@@N and a Kiess @@ygate inspection post@@N stand opposite each other at the road's edge, marking the final jurisdictional handoff point.  The packed earth gives way to cobblestones laid by Kiess engineering crews, the transition to city infrastructure unmistakable underfoot.
-~
-0 3
-D1
-A @@Wbranch track@@N leads east toward a distant settlement.
-~
+
 ~
-0 -1 3401
+0 3
 D2
 The road leads south toward the @@Gforest@@N.
-~
+
+~
 ~
 0 -1 3241
 D3
 The road continues west toward @@yKiess@@N.
-~
+
+~
 ~
 0 -1 3243
 E
 gate inspection post~
 The @@ygate inspection post@@N is a stone booth manned by Kiess gate wardens who check convoy manifests and merchant credentials before allowing entry.  A slate board lists current tariff rates and prohibited goods.  The booth bears the @@ycompass-and-wall mark@@N of the Trade Syndics and a secondary seal from @@BWall Command@@N, indicating shared gate authority between commercial and military jurisdictions.
-~
+
+~
 S
 #3243
 @@yThe Kiess Gate Road@@N~
 The road reaches its western terminus at the threshold of @@yKiess's East Gate@@N, the fortified entrance to the trade city that anchors the western end of Roc Road.  Kiess's walls rise high and strong, built on the foundations of old Evermeet and improved with the hard-won engineering of a city that learned from its predecessor's fall.  A @@pweathered stone@@N set into the road's edge bears two names: the older @@p"Evermeet"@@N carved deep in the stone, and the newer @@y"Kiess"@@N painted boldly over it.  The road that began at Midgaard's civic formality ends here at Kiess's commercial pragmatism — two cities linked by a single contested artery.
-~
+
+~
 0 3
 D1
 The road leads east toward the @@Wgate approach@@N.
-~
+
+~
 ~
 0 -1 3242
 D3
@@ -853,980 +1008,1143 @@ D3
 E
 weathered stone~
 The @@pweathered stone@@N is a flat slab of dark granite set into the road's edge at ground level.  The name @@p"Evermeet"@@N is carved deep into the stone in a formal script, its letters still crisp despite centuries of wear.  Over this, the name @@y"Kiess"@@N has been painted in bold trade notation, renewed regularly.  The layering tells the road's western history: a fortified city fell, a trade city rose on its foundations, and the road that connected both to the east endured through the change.
-~
+
+~
 D5
 A @@pcrack@@N in the road foundation leads down into the Evermeet underfoundation.
-~
+
+~
 ~
 0 -1 3575
 S
 #3244
 @@GA Small Forest Path@@N~
 A @@Gnarrow path@@N leads south from the Crossroads into the canopy of the @@GGreenveil Spur@@N, where the air turns cool and damp and the light dims beneath interlocking branches.  The path is barely wide enough for a single traveler, its surface soft with decades of fallen leaves.  This was once a hidden movement route for refugees and dissidents during the border wars, and the trees still bear @@Gblazed marks@@N that guided those who knew the code.
-~
+
+~
 0 3
 D0
 The @@Wpath@@N leads north to the Crossroads.
-~
+
+~
 ~
 0 -1 3233
 D2
 The @@Gforest path@@N continues south into deeper canopy.
-~
+
+~
 ~
 0 -1 3245
 E
 blazed marks~
 The @@Gblazed marks@@N are shallow cuts in the bark of trailside trees, each mark a simple geometric shape.  They follow no pattern obvious to a casual observer, but to someone trained in the old refugee route codes, they indicate direction, distance to water, and the location of concealed supply caches.  Most of the caches they reference are long emptied, but the marks endure.
-~
+
+~
 S
 #3245
 @@GA Forest Path, Druidic Traces@@N~
 The @@Gforest path@@N passes through a section of woodland where the trees are older and larger than those near the main road.  Moss-covered @@Gstone markers@@N stand at intervals beside the path, their shapes too regular to be natural but too weathered to read.  The air smells of damp earth and growing things, and the silence is broken only by birdsong and the distant drip of water.  Some of these markers were once practical waystations, later sanctified by survivor communities.
-~
+
+~
 0 3
 D0
 The @@Gpath@@N leads north toward the Crossroads.
-~
+
+~
 ~
 0 -1 3244
 D2
 The @@Gforest path@@N continues south through old growth.
-~
+
+~
 ~
 0 -1 3246
 S
 #3246
 @@GA Forest Path, Bent Trees@@N~
 The path curves south through a section where the trees grow at unnatural angles, their trunks bent as if pushed by a force that no longer blows.  A @@Gfallen shrine@@N — a stone basin cracked in half and overgrown with moss — lies beside the path, its original purpose unclear.  The air here carries a faint charge, like the aftermath of a distant storm, and the leaves rustle without visible wind.
-~
+
+~
 0 3
 D0
 The @@Gpath@@N leads north through the old growth.
-~
+
+~
 ~
 0 -1 3245
 D3
 The @@Gpath@@N bends west through bent trees.
-~
+
+~
 ~
 0 -1 3247
 S
 #3247
 @@GA Forest Path, Sanctuary Clearing@@N~
 The path opens into a small clearing where a ring of @@Gstanding stones@@N surrounds a patch of short grass.  The stones are carved with simple @@Gvow-marks@@N — crossed lines and circles that survivors of the border wars used to record communal promises.  A @@Gherb garden@@N has taken root in the sheltered center of the ring, its plants medicinal varieties that someone once cultivated here with care.  The canopy opens just enough to let sunlight reach the clearing floor.
-~
+
+~
 0 3
 D1
 The @@Gpath@@N leads east through bent trees.
-~
+
+~
 ~
 0 -1 3246
 D3
 The @@Gpath@@N continues west deeper into the forest.
-~
+
+~
 ~
 0 -1 3248
 E
 standing stones~
 The @@Gstanding stones@@N are waist-high pillars of rough-hewn granite arranged in a circle roughly ten paces across.  Each stone bears simple carved marks: crossed lines, circles, and short hash-counts that follow no formal script.  These are @@Gvow-marks@@N from the border war era, records of communal promises made by refugee communities who used the forest spur as sanctuary.
-~
+
+~
 E
 herb garden~
 The @@Gherb garden@@N grows in the sheltered center of the stone ring, its plants arranged in deliberate rows.  Elfwort, yellowcap, and feverfew grow beside varieties that resist identification.  Someone tends this garden still — the soil is recently turned and the plants are pruned — though no gardener is visible.
-~
+
+~
 D5
 A @@Gcrevice@@N in the clearing floor leads down into the forest hollow below.
-~
+
+~
 ~
 0 -1 3520
 S
 #3248
 @@GA Forest Path, Deep Spur@@N~
 The path runs west through the deepest section of the @@GGreenveil Spur@@N, where the canopy is so thick that twilight reigns at midday.  The air is heavy with moisture and the smell of decaying leaves.  @@GFaint sounds@@N — cracking twigs, rustling undergrowth — suggest the presence of creatures or spirits in the surrounding darkness.  A @@Gbranch fork@@N ahead leads north toward a stone path and continues west.
-~
+
+~
 0 3
 D0
 A @@Gside path@@N leads north toward a stone path through the trees.
-~
+
+~
 ~
 0 -1 3249
 D1
 The @@Gpath@@N leads east toward the sanctuary clearing.
-~
+
+~
 ~
 0 -1 3247
 D3
 The @@Gpath@@N continues west through deep forest.
-~
+
+~
 ~
 0 -1 3251
 S
 #3249
 @@GA Small Stone Path@@N~
 A @@Wnarrow stone path@@N branches north from the forest spur, its flat stones set with deliberate care into the forest floor.  The path is old and overgrown, with moss filling the gaps between stones, but it remains passable.  The canopy thins along this route, and glimpses of a tall structure are visible through the trees to the north.
-~
+
+~
 0 3
 D0
 The @@Wstone path@@N continues north toward a tall structure.
-~
+
+~
 ~
 0 -1 3250
 D2
 The @@Gforest path@@N leads south into the deep spur.
-~
+
+~
 ~
 0 -1 3248
 S
 #3250
 @@WEnd of the Stone Path@@N~
 The @@Wstone path@@N ends at the edge of the forest where a tall, ancient @@pbuilding@@N is visible to the north.  The structure looks very old, its stonework darkened by centuries of weather.  The forest gives way to open ground here, and the air shifts from the damp green of the canopy to the drier scent of field and hill.
-~
-0 3
-D0
-A @@Wpath@@N leads north toward the ancient building.
-~
+
 ~
-0 -1 4449
+0 3
 D2
 The @@Wstone path@@N leads south into the forest.
-~
+
+~
 ~
 0 -1 3249
 S
 #3251
 @@GA Forest Path, Spirit Ward@@N~
 The forest path passes through a stretch where the trees are marked with @@Gward symbols@@N — carved rings and crossed lines that glow faintly with a residual luminescence.  The air is unnaturally still here, and the usual forest sounds are muffled as if heard through water.  This was the outer boundary of the druidic ward system that once protected the forest from exploitation.  Whatever power maintained these wards has weakened but not entirely dissipated.
-~
+
+~
 4 3
 D1
 The @@Gpath@@N leads east through the deep spur.
-~
+
+~
 ~
 0 -1 3248
 D3
 The @@Gpath@@N continues west toward the forest edge.
-~
+
+~
 ~
 0 -1 3252
 E
 ward symbols~
 The @@Gward symbols@@N are carved directly into the bark of the oldest trees, their lines filled with a pale luminescent substance that still faintly glows.  The symbols are a mix of geometric patterns and stylized leaf-forms that belong to no recognized druidic tradition in current records.  Whatever magic they once channeled is fading, but the residual charge makes the hair on your arms stand on end when you pass close.
-~
+
+~
 S
 #3252
 @@GForest Edge, Above the Inlet@@N~
 The forest thins abruptly at the edge of a @@acoastal cliff@@N, and the view opens to reveal a small sea @@ainlet@@N far below.  The path ends here at the clifftop, where a rough descent leads down to a @@atiny beach@@N at the base of the cliff.  The sound of waves and the cry of seabirds replace the forest's muffled quiet.  The transition from green canopy to open sky is sudden and dramatic.
-~
+
+~
 0 3
 D1
 The @@Gforest path@@N leads east into the canopy.
-~
+
+~
 ~
 0 -1 3251
-D4
-A @@Wclimb@@N leads up to an elevated vantage point.
-~
-~
-0 -1 7200
 D5
 A rough @@apath@@N descends the cliff to the beach below.
-~
+
+~
 ~
 0 -1 3253
 S
 #3253
 @@aA Tiny Beach@@N~
 You stand on a narrow strip of sand at the base of the cliff, hemmed in by the massive trees of the forest above and the @@ainlet waters@@N to the west.  The sand is coarse and mixed with broken shells.  A small @@Wiron door@@N is set into the cliff face to the east, its surface rusted but its hinges still functional.  The inlet continues west into deeper water, and the sound of waves echoes off the cliff walls.
-~
+
+~
 0 10
 D1
 A small @@Wiron door@@N is set into the cliff face.
-~
+
+~
 ^iron door~
 1 -1 3260
 D3
 The @@ainlet waters@@N stretch west.
-~
+
+~
 ~
 0 -1 3254
 D4
 A rough @@apath@@N climbs the cliff to the forest above.
-~
+
+~
 ~
 0 -1 3252
 S
 #3254
 @@aIn the Inlet@@N~
 You wade through the shallow waters of the @@ainlet@@N, which continues west toward the open sea and back east toward the tiny beach.  The water is cold and clear, rising to knee depth, and the sandy bottom is firm enough to walk on.  The cliff walls rise high on both sides, their surfaces streaked with mineral deposits and dotted with the nests of seabirds.  The further west you go, the deeper the water becomes.
-~
+
+~
 0 6
 D1
 The @@abeach@@N lies to the east.
-~
+
+~
 ~
 0 -1 3253
 D3
 The @@ainlet@@N continues west into deeper water.
-~
+
+~
 ~
 0 -1 3255
 S
 #3255
 @@aFurther Along the Inlet@@N~
 The inlet deepens as it approaches the open sea.  The water rises past your waist here, and the current grows stronger.  The cliff walls begin to fall away on the south side, opening toward the coastline.  @@aSalt spray@@N catches on the wind, and the roar of the surf grows louder.  The sandy bottom becomes rockier, with slippery stones making each step uncertain.
-~
+
+~
 0 6
 D1
 The @@ainlet@@N leads east toward shallower water.
-~
+
+~
 ~
 0 -1 3254
 D3
 The water deepens further to the @@awest@@N.
-~
+
+~
 ~
 0 -1 3256
 S
 #3256
 @@aDeep Inlet Water@@N~
 The water is deep here, well over your head, and the current pulls strongly toward the open sea.  The cliff walls have fallen away entirely, and the inlet merges with the broader coastal waters.  @@aDark shapes@@N move beneath the surface — fish, or perhaps something larger.  Only a strong swimmer should venture further west, and the return to shore requires fighting the outbound current.
-~
+
+~
 0 7
 D1
 Shallower water lies to the @@aeast@@N.
-~
+
+~
 ~
 0 -1 3255
 D3
 The open @@asea@@N stretches west.
-~
+
+~
 ~
 0 -1 3257
 S
 #3257
 @@aOpen Water@@N~
 You are in the @@arough coastal waters@@N beyond the inlet, where the sea floor drops away and the waves grow unpredictable.  A small inlet heading inland is visible to the east, while the open sea stretches endlessly to the west.  The water is cold and the current treacherous.  @@aWhitecaps@@N break around you, and the shore seems suddenly very far away.
-~
+
+~
 0 7
 D1
 The @@ainlet@@N lies to the east.
-~
+
+~
 ~
 0 -1 3256
 D3
 The open @@asea@@N continues west.
-~
+
+~
 ~
 0 -1 3258
 S
 #3258
 @@aLost at Sea@@N~
 You are far from shore now, surrounded by @@adark, heaving water@@N on all sides.  The inlet is barely visible as a dark line against the distant cliffs to the east.  The waves are large and irregular, and the cold is numbing.  The sea floor is invisible far below, and the sense of vast, empty depth beneath you is deeply unsettling.
-~
+
+~
 0 7
 D1
 The @@ainlet@@N is faintly visible to the east.
-~
+
+~
 ~
 0 -1 3257
 D3
 The open @@asea@@N stretches further west.
-~
+
+~
 ~
 0 -1 3259
 S
 #3259
 @@aFar Out to Sea@@N~
 You have ventured dangerously far from shore.  The @@awater@@N is dark and cold, the waves towering, and the current pulls you in directions you cannot predict.  Strange shapes move in the depths below.  To the north, a distant @@asea route@@N leads toward unknown waters.  To the east, the faint outline of the coast offers the only hope of return.  This is no place for the ill-prepared.
-~
-0 7
-D0
-A distant @@asea route@@N stretches north.
-~
+
 ~
-0 -1 5083
+0 7
 D1
 The @@acoast@@N is barely visible to the east.
-~
+
+~
 ~
 0 -1 3258
 S
 #3260
 @@WA Small Cave@@N~
 You are inside a small @@Wcave@@N set into the cliff face, entered through the rusted iron door from the beach outside.  The cave is dry despite its proximity to the sea, with walls of smooth stone that show chisel marks from hand-excavation.  A @@Wsinkhole@@N in the floor descends into deeper darkness below.  The air is still and carries the faint smell of old salt and damp stone.  Smugglers used this cave as a cache point during the border wars, and the walls bear scratched @@ytally marks@@N from an era of desperate, concealed commerce.
-~
+
+~
 1 11
 D3
 A small @@Wiron door@@N leads west to the beach.
-~
+
+~
 ^iron door~
 1 -1 3253
 D5
 A @@Wsinkhole@@N drops into darkness below.
-~
+
+~
 ~
 0 -1 3261
 E
 tally marks~
 The @@ytally marks@@N are scratched into the cave walls at waist height, grouped in clusters of five.  They appear to be inventory counts — goods received, goods dispatched — recorded by someone who needed to track commerce without leaving written records.  The marks span different eras, each cluster in a slightly different hand, suggesting that this cache was used by successive generations of shadow traders.
-~
+
+~
 S
 #3261
 @@WA Deep Sinkhole@@N~
 You are in a cramped @@Wsinkhole@@N cut from the living rock below the cave above.  The walls are damp with seepage and the air is thick and stale.  @@RIron chains@@N are bolted to the walls at regular intervals, their purpose unclear — storage anchors, or something more sinister.  The only exit is the climb back up to the cave.  Scratches in the stone suggest that something has been dragged across the floor repeatedly.
-~
+
+~
 5 11
 D4
 The @@Wcave@@N above is accessible through the sinkhole opening.
-~
+
+~
 ~
 0 -1 3260
 D5
 A @@alower passage@@N descends into the Inlet cave network below.
-~
+
+~
 ~
 0 -1 3615
 S
 #3262
 @@pRoc Road, Dusty Wastes@@N~
 The road enters a stretch of sun-baked wasteland where the ancient @@ppaving stones@@N are visible only as a faint depression in the cracked earth.  The air shimmers with heat, and there is no shade anywhere in sight.  @@pBroken fragments@@N of carved stone lie scattered beside the road — remnants of a civilization older than either Midgaard or Kiess, whose ruins dot the landscape ahead.  Dust devils spin across the flat terrain, carrying fine grit that stings exposed skin.
-~
+
+~
 0 10
 D0
 The road leads north toward @@Wgreener country@@N.
-~
+
+~
 ~
 0 -1 3228
 D3
 The road continues west through the @@pwastes@@N.
-~
+
+~
 ~
 0 -1 3263
 S
 #3263
 @@pRoc Road, Bleached Bones@@N~
 The wasteland stretches featureless to the horizon.  @@RBleached bones@@N of large animals lie scattered beside the faint road, silent warnings to those who travel unprepared.  A @@pcrumbling cairn@@N of stacked stones marks the road at regular intervals, placed by unknown hands in a pattern that predates both present-day cities.  The heat is relentless, and the white sky presses down like a lid.
-~
+
+~
 0 10
 D1
 The road leads east through the @@pwastes@@N.
-~
+
+~
 ~
 0 -1 3262
 D3
 The road continues west past more @@pcairns@@N.
-~
+
+~
 ~
 0 -1 3264
 S
 #3264
 @@pRoc Road, Dry Riverbed@@N~
 A dried riverbed cuts across the road here, its banks now nothing but dust and polished stones.  An @@pancient stone bridge@@N still spans the empty channel, its arch intact despite the ages.  The road crosses the bridge in a straight line, the original engineering still sound.  Strange @@pcarved symbols@@N adorn the bridge's parapet, their meaning lost to time.
-~
+
+~
 0 10
 D1
 The road leads east through the @@pwastes@@N.
-~
+
+~
 ~
 0 -1 3263
 D3
 The road continues west past the @@pbridge@@N.
-~
+
+~
 ~
 0 -1 3265
 E
 ancient stone bridge~
 The @@pancient stone bridge@@N is a single-arch span of dressed stone, its blocks fitted with a precision that surpasses anything built in the modern era.  The keystones are carved with interlocking geometric patterns, and the mortar joints are so fine they are almost invisible.  Despite the ages, not a single stone has shifted.
-~
+
+~
 E
 carved symbols~
 The @@pcarved symbols@@N on the bridge parapet are a mix of pictographic and abstract forms.  Some resemble stylized trees, others appear to be mathematical notations.  A recurring motif — a circle divided into eight equal segments — appears at each end of the parapet, possibly a surveyor's mark or a jurisdictional seal from a polity that left no other records.
-~
+
+~
 S
 #3265
 @@pRoc Road, Rock Spires@@N~
 Strange @@prock formations@@N jut from the flat wasteland, carved by ages of wind into eerie spires and natural arches.  The road weaves between them, the ancient paving briefly visible where the rock spires have shielded it from erosion.  @@pStrange markings@@N are carved into some of the formations, their style consistent with the bridge symbols but more elaborate.
-~
+
+~
 0 10
 D1
 The road leads east past the @@pbridge@@N.
-~
+
+~
 ~
 0 -1 3264
 D3
 The road continues west through the @@pspires@@N.
-~
+
+~
 ~
 0 -1 3266
 E
 strange markings~
 The @@pstrange markings@@N are deeply incised into the wind-sculpted rock, protected from erosion by the formations' natural overhangs.  The carvings include what appear to be administrative lists — columns of symbols with associated hash-counts — suggesting that these rocks served as public notice boards for a civilization that built in stone.  Relic hunters have chipped away at the edges of some carvings, damaging the context that might have aided translation.
-~
+
+~
 S
 #3266
 @@pRoc Road, Cairn Line@@N~
 A line of @@pcrumbling stone cairns@@N marks the road through an otherwise featureless stretch of wasteland.  A lone buzzard circles slowly overhead, riding the thermals.  The cairns are placed at intervals that suggest a measurement system, each one carefully positioned relative to the last.  Between the cairns, the road is nothing but a faint track in the dust.
-~
+
+~
 0 10
 D1
 The road leads east through the @@pspires@@N.
-~
+
+~
 ~
 0 -1 3265
 D3
 The road continues west toward @@pless arid ground@@N.
-~
+
+~
 ~
 0 -1 3267
 S
 #3267
 @@pRoc Road, Edge of the Wastes@@N~
 The ground becomes less arid here, and sparse tufts of tough grass begin to appear between the cracked stones.  In the distance to the west, the outlines of @@plarge structures@@N are visible against the sky — the first evidence of the ancient city whose ruins span the next stretch of road.  The transition from dead wasteland to the ruin zone is gradual but unmistakable.
-~
+
+~
 0 10
 D1
 The road leads east through the @@pwastes@@N.
-~
+
+~
 ~
 0 -1 3266
 D3
 The road continues west toward the @@pruins@@N.
-~
+
+~
 ~
 0 -1 3268
 S
 #3268
 @@pRoc Road, Ruin Approach@@N~
 Massive @@pstone blocks@@N, each taller than a man, lie tumbled and scattered across the landscape.  Whatever stood here was once enormous.  The road passes directly through the rubble, the ancient paving emerging clearly where the fallen masonry has shielded it from weather.  Creeping vines have reclaimed much of the stonework, and small animals nest in the gaps between fallen blocks.
-~
+
+~
 0 2
 D1
 The road leads east toward the @@pwastes@@N.
-~
+
+~
 ~
 0 -1 3267
 D3
 The road continues west into the @@pruins@@N.
-~
+
+~
 ~
 0 -1 3269
 S
 #3269
 @@pThe Ancient Ruins, Eastern Quarter@@N~
 You stand among the ruins of a vast, ancient city whose stone bones frame the road on all sides.  @@pBroken columns@@N and shattered walls rise from the earth, carved with intricate patterns and script in a language no living tongue still speaks.  The road surface here is the original @@ppaved avenue@@N of the dead city, broad flagstones fitted with a precision that modern builders cannot replicate.  A profound sense of age radiates from every surface.
-~
+
+~
 0 2
 D1
 The road leads east through the @@prubble@@N.
-~
+
+~
 ~
 0 -1 3268
 D3
 The road continues west through the @@pruins@@N.
-~
+
+~
 ~
 0 -1 3270
 S
 #3270
 @@pThe Ancient Ruins, Grand Avenue@@N~
 A broad @@pavenue@@N paved with great slabs of stone runs east to west through the heart of the ruins.  On either side stand the remnants of grand buildings, their roofs long collapsed but their walls still rising several stories high.  The @@pfacade@@N of the nearest structure displays larger-than-life carved figures engaged in scenes of governance and ceremony.  Time has blurred their features but not diminished the authority they were designed to project.
-~
+
+~
 0 2
 D1
 The road leads east through the @@pruins@@N.
-~
+
+~
 ~
 0 -1 3269
 D3
 The road continues west along the @@pavenue@@N.
-~
+
+~
 ~
 0 -1 3271
 E
 facade~
 The @@pfacade@@N is a wall of dressed stone carved in deep relief.  The figures depicted are robed and crowned, each holding objects that may represent tools of office — a staff, a tablet, a measuring rod.  One central figure extends both hands in a gesture of proclamation, and the surrounding scene appears to show subjects acknowledging a decree.  The style is formal and hierarchical, suggesting a society organized around public displays of legal authority.
-~
+
+~
 S
 #3271
 @@pThe Ancient Ruins, Temple Quarter@@N~
 The ruins here include what must have been a great @@ptemple or palace@@N, its facade still largely intact.  Carved figures larger than life depict scenes of battle, worship, and celebration across the building's front.  @@pStone tablets@@N lie scattered at the building's base, some cracked, others intact, their surfaces covered with dense script that archivists have identified as administrative records rather than religious text.
-~
+
+~
 0 2
 D1
 The road leads east along the @@pavenue@@N.
-~
+
+~
 ~
 0 -1 3270
 D3
 The road continues west through the @@pruins@@N.
-~
+
+~
 ~
 0 -1 3272
 E
 stone tablets~
 The @@pstone tablets@@N are flat slabs of fine-grained stone, each roughly the size of a man's torso.  The script carved into their surfaces is dense and orderly, arranged in columns with regular spacing.  Midgaard archivists who have examined similar tablets believe them to be tax records, census counts, and legal proceedings — the administrative foundation of a civilization that documented everything in stone.  Some of the tablets are cracked, their text interrupted mid-sentence.
-~
+
+~
 S
 #3272
 @@pThe Ancient Ruins, Western Quarter@@N~
 The western end of the ancient city lies in greater ruin than the east.  Here the buildings are almost entirely collapsed, leaving only low ridges of rubble to mark where streets and structures once stood.  The @@ppaved avenue@@N continues through the debris, its stones still level despite the surrounding destruction.  @@pCreeping vines@@N have reclaimed the rubble, their tendrils prying stones apart with patient, vegetable strength.
-~
+
+~
 0 2
 D1
 The road leads east through the @@ptemple quarter@@N.
-~
+
+~
 ~
 0 -1 3271
 D3
 The road continues west beyond the @@pruins@@N.
-~
+
+~
 ~
 0 -1 3273
 S
 #3273
 @@pBeyond the Ruins@@N~
 The ruins end and the road re-emerges onto open terrain.  The earth here is dark and loamy compared to the wastes to the east, enriched by centuries of vegetable decay from the ruin's vine growth.  The smell of salt is faint but unmistakable on the westerly breeze.  @@pBroken masonry@@N from the ruin zone litters the roadside for some distance before the landscape clears entirely.
-~
+
+~
 0 2
 D1
 The road leads east into the @@pruins@@N.
-~
+
+~
 ~
 0 -1 3272
 D3
 The road continues west toward the @@acoast@@N.
-~
+
+~
 ~
 0 -1 3274
 S
 #3274
 @@WRoc Road, Coastal Transition@@N~
 The road descends gently toward the west, and the salt smell grows stronger with every step.  The landscape shifts from inland scrub to coastal vegetation: salt-hardy grasses, low-growing shrubs with thick waxy leaves, and wind-sculpted bushes leaning permanently away from the prevailing sea breeze.  A @@ycoastal route marker@@N painted with Kiess trade notation indicates that the western shore is near.
-~
+
+~
 0 2
 D1
 The road leads east toward the @@pruins@@N.
-~
+
+~
 ~
 0 -1 3273
 D3
 The road continues west toward the @@asea@@N.
-~
+
+~
 ~
 0 -1 3275
 S
 #3275
 @@aRoc Road, Coastal Approach@@N~
 The sound of waves reaches you now, a deep rhythmic booming from beyond the rise ahead.  @@aSeabirds@@N wheel overhead, their cries carrying on the salt wind.  The road surface is deteriorating, the packed earth giving way to sandy patches and exposed rock.  Coarse dune grass encroaches from both verges, and the air is thick with @@asalt spray@@N.
-~
+
+~
 0 2
 D1
 The road leads east toward @@Winland ground@@N.
-~
+
+~
 ~
 0 -1 3274
 D3
 The road climbs west toward the @@aclifftop@@N.
-~
+
+~
 ~
 0 -1 3276
 S
 #3276
 @@aRoc Road, Clifftop View@@N~
 You climb a low rise, and the @@aGreat Western Sea@@N comes into view ahead, filling the horizon from north to south in a vast expanse of deep blue-grey water.  The road descends directly toward the shore, its surface now more sand than earth.  The wind is stronger here, constant and salt-laden, and the vegetation is reduced to low, ground-hugging forms that cling to the sandy soil.
-~
+
+~
 0 4
 D1
 The road descends east away from the @@acliff@@N.
-~
+
+~
 ~
 0 -1 3275
 D3
 The road continues west down toward the @@ashore@@N.
-~
+
+~
 ~
 0 -1 3277
 S
 #3277
 @@aRoc Road, Descending to the Shore@@N~
 The road drops steeply toward the shore.  Wind-sculpted @@acliffs@@N border the road on the north side, their faces streaked with mineral deposits in bands of red and ochre.  To the south, the ground gives way to sandy dunes held together by tough marram grass.  The roar of the surf below fills the air with sound, and @@aspindrift@@N from the wave tops drifts across the road like mist.
-~
+
+~
 0 4
 D1
 The road climbs east toward the @@aclifftop@@N.
-~
+
+~
 ~
 0 -1 3276
 D3
 The road continues west along the @@acliffs@@N.
-~
+
+~
 ~
 0 -1 3278
 S
 #3278
 @@aRoc Road, Sea Road@@N~
 The road now runs along the @@aclifftop@@N, parallel to the coast.  Spectacular views of the sea open to the west and south.  Below the cliffs, waves crash against dark rocks, sending plumes of @@awhite spray@@N skyward.  The road surface is broken stone and compacted sand, maintained by nothing but the passage of the few travelers who venture this far west.  A @@Rrusted iron ring@@N bolted into a rock suggests that ships once moored below these cliffs.
-~
+
+~
 0 4
 D1
 The road leads east down from the @@acliffs@@N.
-~
+
+~
 ~
 0 -1 3277
 D3
 The road continues west along the @@aclifftop@@N.
-~
+
+~
 ~
 0 -1 3279
 S
 #3279
 @@aRoc Road, Sea Cliffs@@N~
 The clifftop road continues west.  Colonies of @@aseabirds@@N nest in the cliff face below, and their raucous cries fill the air.  Far out to sea, the shapes of distant islands are faintly visible on the horizon when the spray clears.  The road is little more than a footpath here, its original engineering long since surrendered to the wind and salt.
-~
+
+~
 0 4
 D1
 The road leads east along the @@acliffs@@N.
-~
+
+~
 ~
 0 -1 3278
 D3
 The road continues west along the @@acoast@@N.
-~
+
+~
 ~
 0 -1 3280
 S
 #3280
 @@aRoc Road, Low Cliffs@@N~
 The cliffs are lower here, and a rough switchback path descends to a narrow @@ashingle beach@@N below.  Looking back east, the long line of the road is visible stretching toward the distant mountains and the hills beyond.  The wind carries the cry of gulls and the steady percussion of waves on stone.  A @@Wruined watchtower@@N stands at the clifftop, its upper stories tumbled into the sea.
-~
+
+~
 0 4
 D1
 The road leads east along the @@acliffs@@N.
-~
+
+~
 ~
 0 -1 3279
 D3
 The road continues west past the @@Wwatchtower@@N.
-~
+
+~
 ~
 0 -1 3281
 E
 ruined watchtower~
 The @@Wruined watchtower@@N is a round stone structure whose upper floors have collapsed into a pile of rubble at its base.  The ground floor is partially intact, its walls bearing @@Bwatch tally marks@@N and the faded remains of a patrol schedule painted in Midgaard charter-hand.  This was once the westernmost manned outpost of Midgaard's road warden network, abandoned when the resources to maintain it could no longer be justified.
-~
+
+~
 S
 #3281
 @@aWestern Cliffs, Broad Headland@@N~
 The clifftop widens here, forming a broad @@aheadland@@N that juts out over the sea.  A few stunted trees, permanently bent by the prevailing wind, cling to the headland's exposed ground.  The road rounds the headland and continues west, its surface now little more than a worn track in the coarse grass.  @@aTidepools@@N glint far below at the base of the cliffs.
-~
+
+~
 0 4
 D1
 The road leads east along the @@acliffs@@N.
-~
+
+~
 ~
 0 -1 3280
 D3
 The road continues west past the @@aheadland@@N.
-~
+
+~
 ~
 0 -1 3282
 S
 #3282
 @@aWestern Cliffs, Sheltered Cove@@N~
 The road narrows as the cliffs close in on the north side.  To the south, the land drops away to a small sheltered @@acove@@N where the waves break gently on a crescent of sand.  A @@Rruined stone watchtower@@N stands at the clifftop, its upper stories collapsed into the sea.  The path forward is exposed to the full force of the coastal wind.
-~
+
+~
 0 4
 D1
 The road leads east toward the @@aheadland@@N.
-~
+
+~
 ~
 0 -1 3281
 D3
 The road descends west toward @@asea level@@N.
-~
+
+~
 ~
 0 -1 3283
 S
 #3283
 @@aRoc Road, Descending to the Beach@@N~
 The road leaves the clifftops and winds down to @@asea level@@N.  A broad sandy beach stretches ahead, with the waves washing gently up the shore.  @@aDriftwood@@N and tangles of seaweed mark the high tide line.  The transition from clifftop wind to beach-level calm is welcome, though the salt air remains heavy and constant.
-~
+
+~
 0 10
 D1
 The road climbs east toward the @@acliffs@@N.
-~
+
+~
 ~
 0 -1 3282
 D3
 The @@abeach@@N stretches west.
-~
+
+~
 ~
 0 -1 3284
 S
 #3284
 @@aThe Western Shore@@N~
 You are on a long, windswept @@abeach@@N at the western edge of the known world.  The sand is pale gold, the water a deep cold blue.  The road ends here at a simple @@Wstone quay@@N, where once ships may have docked to receive overland cargo from the road.  Now the quay stands empty, its bollards rusted and its mooring rings green with @@averdigris@@N.  Seabirds are its only visitors.
-~
+
+~
 0 10
 D1
 The road leads east toward the @@acliffs@@N.
-~
+
+~
 ~
 0 -1 3283
 D3
 The @@abeach@@N continues west.
-~
+
+~
 ~
 0 -1 3285
 E
 stone quay~
 The @@Wstone quay@@N is a flat-topped platform of dressed stone extending a few paces into the surf.  Its construction is solid, built to withstand the battering of heavy seas, but its purpose has passed.  The mooring rings are corroded, the surface is cracked, and sand has drifted into the joints between the stones.  A faded @@yKiess trade mark@@N is carved into the quay's landward face, indicating that this was once an official transfer point in the convoy compact's maritime extension.
-~
+
+~
 S
 #3285
 @@aThe Western Shore, Dune Stretch@@N~
 The beach stretches west past low @@adunes@@N held together by tough marram grass.  The wind is constant here, carrying @@aspindrift@@N from the wave tops.  Footprints in the wet sand suggest others have walked this shore, though not recently.  The dunes rise and fall in gentle undulations, their shapes reshaped by each storm season.
-~
+
+~
 0 10
 D1
 The @@abeach@@N stretches east.
-~
+
+~
 ~
 0 -1 3284
 D3
 The @@abeach@@N continues west.
-~
+
+~
 ~
 0 -1 3286
 S
 #3286
 @@aThe Western Shore, Rock Pools@@N~
 The beach curves gently around a small headland.  @@aRock pools@@N dot the base of the low cliffs to the north, filled with small crabs and anemones.  The dark mouth of a @@asea cave@@N yawns at the base of the nearest cliff, its interior hidden in shadow.  The sand here is coarser, mixed with crushed shell and dark gravel.
-~
+
+~
 0 10
 D1
 The @@abeach@@N stretches east.
-~
+
+~
 ~
 0 -1 3285
 D3
 The @@abeach@@N continues west.
-~
+
+~
 ~
 0 -1 3287
 S
 #3287
 @@aThe Western Shore, Pebble Beach@@N~
 The beach here is covered in smooth, round @@apebbles@@N that crunch and clatter underfoot.  The waves break with a hollow rattling sound as they drag the pebbles back and forth.  A @@Rrusted iron anchor@@N half-buried in the beach hints at old seafaring activity, its flukes corroded but its massive weight still anchoring it firmly to the spot.
-~
+
+~
 0 10
 D1
 The @@abeach@@N stretches east.
-~
+
+~
 ~
 0 -1 3286
 D3
 The @@abeach@@N continues west.
-~
+
+~
 ~
 0 -1 3288
 S
 #3288
 @@aThe Western Shore, Narrows@@N~
 The beach narrows to a thin strip of @@ashingle@@N wedged between sea and cliff.  At high tide this passage would be impassable.  The cliffs here are dramatic, streaked with red and orange @@airon deposits@@N, their bases hollowed by the relentless sea.  Each wave sends spray high enough to soak a traveler standing at the cliff base.
-~
+
+~
 0 10
 D1
 The @@abeach@@N stretches east.
-~
+
+~
 ~
 0 -1 3287
 D3
 The @@abeach@@N continues west.
-~
+
+~
 ~
 0 -1 3289
 S
 #3289
 @@aThe Western Shore, Stranded Timber@@N~
 Massive logs of @@adriftwood@@N lie scattered across the beach, their bark stripped by salt and sand to reveal smooth, pale wood beneath.  Some are large enough to have been ship's timbers, broken free from wrecks far out to sea and carried here by the currents.  The beach is wider here, offering a brief respite from the constricting cliff narrows.
-~
+
+~
 0 10
 D1
 The @@abeach@@N stretches east.
-~
+
+~
 ~
 0 -1 3288
 D3
 The @@abeach@@N continues west.
-~
+
+~
 ~
 0 -1 3290
 S
 #3290
 @@aThe Western Shore, Tidal Flat@@N~
 A broad @@atidal flat@@N extends seaward from the beach at low tide, its surface a mosaic of sand, shell, and shallow pools.  Wading birds probe the flats for food, their long legs leaving delicate tracks in the wet sand.  The open sky feels immense overhead, unbroken by any structure or tree.  The wind carries the smell of kelp and brine.
-~
+
+~
 0 10
 D1
 The @@abeach@@N stretches east.
-~
+
+~
 ~
 0 -1 3289
 D3
 The @@abeach@@N continues west.
-~
+
+~
 ~
 0 -1 3291
 S
 #3291
 @@aThe Western Shore, Salt Marsh@@N~
 The beach gives way to a stretch of @@asalt marsh@@N where tidal channels snake between hummocks of salt-tolerant grass.  The footing is treacherous, the ground soft and waterlogged beneath a thin crust of dried salt.  Crabs scuttle between the channels, and the air is heavy with the smell of decomposing seaweed.  The shore becomes rocky again to the west.
-~
-0 10
-D0
-A @@Wcovered entrance@@N to an old @@bhotel@@N is visible to the north.
-~
+
 ~
-0 -1 4449
+0 10
 D1
 The @@abeach@@N stretches east.
-~
+
+~
 ~
 0 -1 3290
 D3
 The @@ashore@@N continues west over rocks.
-~
+
+~
 ~
 0 -1 3292
 S
 #3292
 @@aThe Western Shore, Rocky Coast@@N~
 The shoreline becomes @@arocky@@N here, the sand replaced by slabs of dark stone that jut out into the surf at sharp angles.  Barnacles and limpets crust every surface below the high-water mark, and the air fills with the sharp crack of waves breaking on stone.  Navigation requires careful footing, picking a path between tide-slick boulders.
-~
+
+~
 0 10
 D1
 The @@ashore@@N leads east past the marsh.
-~
+
+~
 ~
 0 -1 3291
 D3
 The @@arocky shore@@N continues west.
-~
+
+~
 ~
 0 -1 3293
 S
 #3293
 @@aThe Western Shore, Windswept Rocks@@N~
 The wind is fierce here, whipping spray from the wave crests and driving it horizontally across the rocks.  A @@asignal cairn@@N stands at the highest point of the rocky shore, its stones piled by some long-ago traveler or coast watcher.  The rocks are slippery with spray and algae, and every surface glistens with moisture.  The coast curves north ahead, rounding toward the final promontory.
-~
+
+~
 0 10
 D1
 The @@arocky shore@@N leads east.
-~
+
+~
 ~
 0 -1 3292
 D3
 The @@ashore@@N continues west around the curve.
-~
+
+~
 ~
 0 -1 3294
 S
 #3294
 @@aThe Western Shore, Wrack Line@@N~
 A thick line of @@aseaweed and debris@@N marks the storm tide line across the rocks, evidence of the powerful seas that batter this coast.  Among the seaweed lie fragments of worked wood, scraps of rope, and the occasional @@Rcorroded fitting@@N that once belonged to a ship.  The coast stretches on toward a dark promontory visible in the distance.
-~
+
+~
 0 10
 D1
 The @@arocky shore@@N leads east.
-~
+
+~
 ~
 0 -1 3293
 D3
 The @@ashore@@N continues west toward the @@apromontory@@N.
-~
+
+~
 ~
 0 -1 3295
 S
 #3295
 @@aThe Western Shore, Kelp Beds@@N~
 The water offshore is dark with @@akelp@@N, its broad fronds undulating in the swell like slow, green serpents.  The shore here is a mix of rock and coarse shingle, and the kelp smell is overwhelming — a rich, organic reek that saturates the salt air.  @@aSmall fish@@N dart between the kelp holdfasts, visible in the clear water close to shore.
-~
+
+~
 0 10
 D1
 The @@ashore@@N leads east past the wrack line.
-~
+
+~
 ~
 0 -1 3294
 D3
 The @@ashore@@N continues west toward the @@apromontory@@N.
-~
+
+~
 ~
 0 -1 3296
 S
 #3296
 @@aThe Western Shore, Approach to the Promontory@@N~
 The coastline narrows as you approach the @@adark promontory@@N that marks the western terminus of Roc Road's coastal reach.  The rocks grow larger and more angular, black basalt rather than the softer stone of the eastern cliffs.  The surf strikes the promontory's base with tremendous force, sending @@ageysers of spray@@N twenty feet into the air.  The way forward is passable but demands caution.
-~
+
+~
 0 10
 D1
 The @@ashore@@N leads east past the kelp beds.
-~
+
+~
 ~
 0 -1 3295
 D3
 The @@apromontory@@N rises ahead to the west.
-~
+
+~
 ~
 0 -1 3297
 S
 #3297
 @@aThe Promontory Base@@N~
 You stand at the base of the great @@apromontory@@N, a massive thrust of black basalt that juts far out into the sea.  The rock is rough and sharp, broken into angular blocks by the force of countless storms.  A narrow @@apath@@N winds upward along the promontory's spine toward the summit, its route marked by scratches in the rock that may be deliberate trail blazes or natural scoring from the wind.
-~
+
+~
 0 10
 D1
 The @@ashore@@N leads east.
-~
+
+~
 ~
 0 -1 3296
 D4
 A narrow @@apath@@N climbs toward the promontory summit.
-~
+
+~
 ~
 0 -1 3298
 S
 #3298
 @@aThe Promontory, Climbing@@N~
 The path climbs steeply along the promontory's spine, the black basalt dropping away on both sides to the churning sea far below.  The wind up here is savage, strong enough to force you to lean into it.  @@aSalt crystals@@N encrust every surface where spray has dried, giving the rock a ghostly white glaze.  The summit is close above, a flat platform of wind-scoured stone.
-~
+
+~
 4 10
 D3
 The @@asummit@@N is visible above to the west.
-~
+
+~
 ~
 0 -1 3299
 D5
 The path descends to the @@apromontory base@@N below.
-~
+
+~
 ~
 0 -1 3297
 S
 #3299
 @@aThe Promontory Summit@@N~
 You stand at the uttermost western point of Roc Road, atop the great @@ablack promontory@@N that marks the end of the known world's longest overland corridor.  The @@aGreat Western Sea@@N stretches to the horizon in every direction, an infinite expanse of deep water under an enormous sky.  Behind you, the long line of the coast curves eastward, and beyond it the memory of the road unspools: the ruins, the wastes, the hills, the farmland, and distant Midgaard.  The wind howls around the summit, driving spray and salt across the bare rock, and the world feels very large and very old.  A single @@Rweathered iron post@@N stands at the summit's edge, its purpose forgotten but its endurance a testament to the road that brought you here.
-~
+
+~
 4 10
 D1
 The @@apath@@N descends east toward the shore.
-~
+
+~
 ~
 0 -1 3298
 E
 weathered iron post~
 The @@Rweathered iron post@@N is a thick rod of forged iron driven deep into a socket cut in the basalt.  It stands barely waist-high, its surface pitted and reddened by decades of salt corrosion.  There is no plaque, no inscription, and no clue to its original purpose — a signal mount, a navigational marker, or simply someone's declaration that they reached this point and intended to be remembered.  The wind sings through its corrosion holes with a thin, keening note.
-~
+
+~
 S
 #0
 #MOBILES
@@ -1834,13 +2152,19 @@ S
 a midgaard road warden~
 a Midgaard road warden~
 A @@BMidgaard road warden@@N stands here, watching the road with practiced vigilance.
-~
+
+~
 Clad in the blue-grey uniform of the road watch, this warden carries the quiet authority
-of someone who has walked this stretch of road a thousand times.  The Three Civic Oaths
-are stitched into the collar of the patrol cloak, and a well-maintained weapon hangs at
-the ready.  Sharp eyes scan every traveler who passes, cataloging faces against the
-register of wanted notices.
-~
+
+of someone who has walked this stretch of road a thousand times.  The Three Civic Oaths
+
+are stitched into the collar of the patrol cloak, and a well-maintained weapon hangs at
+
+the ready.  Sharp eyes scan every traveler who passes, cataloging faces against the
+
+register of wanted notices.
+
+~
 67 40 750 S
 30 0
 0 0 0 0
@@ -1853,12 +2177,17 @@ L 0 0 0 0 0 0 0 0 0
 a midgaard road clerk~
 a Midgaard road clerk~
 A @@BMidgaard road clerk@@N sits at a portable desk, recording traffic in a heavy ledger.
-~
+
+~
 This clerk wears the ink-stained robes of the Ledger Watch, a quill tucked behind one
-ear and a stack of tally slips weighted down with a stone.  Every passing wagon earns
-a notation, every traveler a hash-mark in the daily census.  The work is tedious but
-vital — road funding depends on documented traffic counts.
-~
+
+ear and a stack of tally slips weighted down with a stone.  Every passing wagon earns
+
+a notation, every traveler a hash-mark in the daily census.  The work is tedious but
+
+vital — road funding depends on documented traffic counts.
+
+~
 65 0 750 S
 20 0
 0 0 0 0
@@ -1871,13 +2200,19 @@ L 0 0 0 0 0 0 0 0 0
 a midgaard road warden captain~
 a Midgaard road warden captain~
 A @@BMidgaard road warden captain@@N surveys the road from a commanding position.
-~
+
+~
 The captain wears a heavier version of the road warden uniform, its blue-grey fabric
-reinforced with leather plates at the shoulders and forearms.  A polished badge of rank
-is pinned to the chest, and the patrol cloak bears extra piping that denotes seniority.
-This officer commands the warden detachment assigned to this stretch and carries the
-authority to requisition civilian labor for emergency road repairs.
-~
+
+reinforced with leather plates at the shoulders and forearms.  A polished badge of rank
+
+is pinned to the chest, and the patrol cloak bears extra piping that denotes seniority.
+
+This officer commands the warden detachment assigned to this stretch and carries the
+
+authority to requisition civilian labor for emergency road repairs.
+
+~
 33554499 40 750 S
 50 0
 0 0 0 0
@@ -1890,13 +2225,19 @@ L 0 0 0 0 0 0 0 0 0
 a charter inscription keeper~
 a charter inscription keeper~
 A @@Wcharter inscription keeper@@N tends to the roadside markers with careful devotion.
-~
+
+~
 This elderly figure moves slowly between the charter marker slabs, brushing away
-lichen with a stiff-bristled brush and repainting inscriptions with a pot of blue
-pigment.  The keeper's robes are those of a Midgaard civic archivist, though the
-callused hands and sun-darkened skin speak of decades spent outdoors.  Every
-legible inscription on the road is this keeper's responsibility.
-~
+
+lichen with a stiff-bristled brush and repainting inscriptions with a pot of blue
+
+pigment.  The keeper's robes are those of a Midgaard civic archivist, though the
+
+callused hands and sun-darkened skin speak of decades spent outdoors.  Every
+
+legible inscription on the road is this keeper's responsibility.
+
+~
 67 0 750 S
 25 0
 0 0 0 0
@@ -1909,13 +2250,19 @@ L 0 0 0 0 0 0 0 0 0
 a kiess convoy marshal~
 a Kiess convoy marshal~
 A @@yKiess convoy marshal@@N coordinates wagon traffic with sharp, efficient gestures.
-~
+
+~
 The marshal wears a long coat bearing the compass-and-wall crest of the Kiess Trade
-Syndics, its pockets bulging with route schedules and cargo manifests.  A signal horn
-hangs from a leather strap across the chest, and a brass speaking-trumpet is tucked
-under one arm.  This is the authority that controls actual traffic flow west of the
-Crossroads — a practical power that Midgaard charter law does not formally recognize.
-~
+
+Syndics, its pockets bulging with route schedules and cargo manifests.  A signal horn
+
+hangs from a leather strap across the chest, and a brass speaking-trumpet is tucked
+
+under one arm.  This is the authority that controls actual traffic flow west of the
+
+Crossroads — a practical power that Midgaard charter law does not formally recognize.
+
+~
 65 0 500 S
 35 0
 0 0 0 0
@@ -1928,13 +2275,19 @@ L 0 0 0 0 0 0 0 0 0
 a kiess quarter agent~
 a Kiess quarter agent~
 A @@yKiess quarter agent@@N tallies supplies on a wax tablet with brisk efficiency.
-~
+
+~
 Dressed in the practical traveling clothes of a trade functionary, the quarter agent
-carries a leather satchel heavy with ledgers, wax tablets, and sealed correspondence.
-Every supply shipment that passes through this stretch of road is weighed against the
-agent's projected needs for the convoy compact's quarterly budget.  A small abacus
-hangs from the satchel strap for quick calculations.
-~
+
+carries a leather satchel heavy with ledgers, wax tablets, and sealed correspondence.
+
+Every supply shipment that passes through this stretch of road is weighed against the
+
+agent's projected needs for the convoy compact's quarterly budget.  A small abacus
+
+hangs from the satchel strap for quick calculations.
+
+~
 65 0 500 S
 25 0
 0 0 0 0
@@ -1947,13 +2300,19 @@ L 0 0 0 0 0 0 0 0 0
 a kiess route ledger scribe~
 a Kiess route ledger scribe~
 A @@yKiess route ledger scribe@@N records debts and obligations in a thick journal.
-~
+
+~
 The scribe sits cross-legged beside the road with a massive leather-bound journal
-open across both knees, writing in the dense, abbreviated notation of the Trade
-Syndic route ledger system.  Every transaction, every debt, every guard obligation
-incurred along this stretch of road finds its way into these pages.  The ink-stained
-fingers never stop moving.
-~
+
+open across both knees, writing in the dense, abbreviated notation of the Trade
+
+Syndic route ledger system.  Every transaction, every debt, every guard obligation
+
+incurred along this stretch of road finds its way into these pages.  The ink-stained
+
+fingers never stop moving.
+
+~
 67 0 500 S
 20 0
 0 0 0 0
@@ -1966,13 +2325,19 @@ L 0 0 0 0 0 0 0 0 0
 a kiess convoy guard~
 a Kiess convoy guard~
 A @@yKiess convoy guard@@N stands watch over a line of trade wagons.
-~
+
+~
 This guard wears the practical armor of a hired escort — leather reinforced with
-iron studs — and carries a heavy weapon with the easy grip of long practice.  The
-compass-and-wall crest is branded into the leather shoulder-guard, identifying the
-guard as a bonded member of the convoy compact's security pool.  Alert eyes track
-every movement near the wagons.
-~
+
+iron studs — and carries a heavy weapon with the easy grip of long practice.  The
+
+compass-and-wall crest is branded into the leather shoulder-guard, identifying the
+
+guard as a bonded member of the convoy compact's security pool.  Alert eyes track
+
+every movement near the wagons.
+
+~
 65 0 500 S
 40 0
 0 0 0 0
@@ -1985,12 +2350,17 @@ L 0 0 0 0 0 0 0 0 0
 a road drover~
 a road drover~
 A @@yroad drover@@N leads a small herd of pack animals along the verge.
-~
+
+~
 Dusty and weatherbeaten, the drover walks with the unhurried gait of someone who
-has spent a lifetime on the road.  A broad-brimmed hat shades a face lined by years
-of sun and wind.  The drover's charges — a mix of mules and heavy ponies — plod
-along in single file, their packs loaded with goods destined for one market or another.
-~
+
+has spent a lifetime on the road.  A broad-brimmed hat shades a face lined by years
+
+of sun and wind.  The drover's charges — a mix of mules and heavy ponies — plod
+
+along in single file, their packs loaded with goods destined for one market or another.
+
+~
 65 0 500 S
 15 0
 0 0 0 0
@@ -2003,13 +2373,19 @@ L 0 0 0 0 0 0 0 0 0
 a peddler of the road~
 a peddler of the road~
 A @@ypeddler of the road@@N rattles past with a handcart loaded with wares.
-~
+
+~
 This traveling merchant pushes a two-wheeled cart hung with pots, pans, tools, and
-trinkets that clank together with every bump in the road.  The peddler's clothes are
-patched and mended in a dozen places, but the goods on display are clean and arranged
-with care.  A cheerful patter of sales talk accompanies every step, directed at anyone
-within earshot.
-~
+
+trinkets that clank together with every bump in the road.  The peddler's clothes are
+
+patched and mended in a dozen places, but the goods on display are clean and arranged
+
+with care.  A cheerful patter of sales talk accompanies every step, directed at anyone
+
+within earshot.
+
+~
 65 0 500 S
 18 0
 0 0 0 0
@@ -2022,13 +2398,19 @@ L 0 0 0 0 0 0 0 0 0
 a waystone shrine keeper~
 a waystone shrine keeper~
 A @@Bwaystone shrine keeper@@N tends a roadside shrine with quiet devotion.
-~
+
+~
 The shrine keeper wears simple brown robes and moves with the unhurried calm of
-someone devoted to a single, endless task.  A cloth bag of cleaning tools and fresh
-lamp oil hangs from a belt, and the keeper's hands are permanently stained with the
-pigments used to maintain the shrine's carved blessings.  This is a person of no
-political faction, serving the road itself rather than either city.
-~
+
+someone devoted to a single, endless task.  A cloth bag of cleaning tools and fresh
+
+lamp oil hangs from a belt, and the keeper's hands are permanently stained with the
+
+pigments used to maintain the shrine's carved blessings.  This is a person of no
+
+political faction, serving the road itself rather than either city.
+
+~
 67 0 750 S
 22 0
 0 0 0 0
@@ -2041,13 +2423,19 @@ L 0 0 0 0 0 0 0 0 0
 a river ferryman~
 a river ferryman~
 A @@ariver ferryman@@N waits by the water's edge, leaning on a long pole.
-~
+
+~
 The ferryman is a broad-shouldered figure in a waterproof coat, standing beside a
-flat-bottomed punt tied to an iron ring on the bank.  The pole is worn smooth by
-years of use, and the ferryman's arms show the heavy muscle of someone who has pushed
-against river currents for a living.  A fare board nailed to a post lists crossing
-prices in both Midgaard coin and Kiess trade credit.
-~
+
+flat-bottomed punt tied to an iron ring on the bank.  The pole is worn smooth by
+
+years of use, and the ferryman's arms show the heavy muscle of someone who has pushed
+
+against river currents for a living.  A fare board nailed to a post lists crossing
+
+prices in both Midgaard coin and Kiess trade credit.
+
+~
 67 0 500 S
 20 0
 0 0 0 0
@@ -2060,13 +2448,19 @@ L 0 0 0 0 0 0 0 0 0
 a road-camp cook~
 a road-camp cook~
 A @@yroad-camp cook@@N stirs a bubbling pot over a small fire.
-~
+
+~
 Soot-stained and cheerful, the cook tends a portable iron cookpot set on a tripod
-over a carefully managed fire.  The smell of stew — heavy on root vegetables, light
-on meat — carries across the road.  A wooden ladle, a stack of clay bowls, and a
-battered tin of salt comprise the cook's entire kitchen.  Convoy crews and road wardens
-alike stop here for a hot meal when their own supplies run short.
-~
+
+over a carefully managed fire.  The smell of stew — heavy on root vegetables, light
+
+on meat — carries across the road.  A wooden ladle, a stack of clay bowls, and a
+
+battered tin of salt comprise the cook's entire kitchen.  Convoy crews and road wardens
+
+alike stop here for a hot meal when their own supplies run short.
+
+~
 65 0 500 S
 15 0
 0 0 0 0
@@ -2079,12 +2473,17 @@ L 0 0 0 0 0 0 0 0 0
 a ridge wolf~
 a ridge wolf~
 A @@Rridge wolf@@N crouches among the rocks, watching with hungry yellow eyes.
-~
+
+~
 This large wolf has adapted to the rocky terrain of the Banner Hills, its grey-brown
-coat blending perfectly with the stone and scrub.  Powerful shoulders and scarred
-flanks mark it as a veteran hunter accustomed to bringing down prey in steep, broken
-ground.  The yellow eyes track your movements with predatory calculation.
-~
+
+coat blending perfectly with the stone and scrub.  Powerful shoulders and scarred
+
+flanks mark it as a veteran hunter accustomed to bringing down prey in steep, broken
+
+ground.  The yellow eyes track your movements with predatory calculation.
+
+~
 97 0 -500 S
 25 0
 0 0 0 0
@@ -2097,12 +2496,17 @@ L 0 0 0 0 0 0 0 0 0
 a ridge cat~
 a ridge cat~
 A @@Rridge cat@@N lies flattened against a rock shelf, barely visible in the shadows.
-~
+
+~
 Tawny and lean, this large hill cat is built for ambush — long legs coiled beneath a
-lithe body, claws extended and sunk into the stone for grip.  The mottled coat provides
-near-perfect camouflage among the hillside rocks.  A low growl vibrates in the cat's
-chest, audible more as a feeling than a sound.
-~
+
+lithe body, claws extended and sunk into the stone for grip.  The mottled coat provides
+
+near-perfect camouflage among the hillside rocks.  A low growl vibrates in the cat's
+
+chest, audible more as a feeling than a sound.
+
+~
 97 0 -500 S
 35 0
 0 0 0 0
@@ -2115,12 +2519,17 @@ L 0 0 0 0 0 0 0 0 0
 a river ambusher snake~
 a river ambusher snake~
 A @@Rriver ambusher snake@@N lies coiled among the reeds at the water's edge.
-~
+
+~
 This thick-bodied serpent is the color of river mud, nearly invisible among the
-waterside vegetation.  Its scales are smooth and wet, and its tongue flicks
-constantly, tasting the air for the scent of warm-blooded prey.  When it strikes,
-it will be without warning and with considerable force.
-~
+
+waterside vegetation.  Its scales are smooth and wet, and its tongue flicks
+
+constantly, tasting the air for the scent of warm-blooded prey.  When it strikes,
+
+it will be without warning and with considerable force.
+
+~
 97 65536 -750 S
 20 0
 0 0 0 0
@@ -2133,13 +2542,19 @@ L 0 0 0 0 0 0 0 0 0
 a dust scavenger bird~
 a dust scavenger bird~
 A @@Rdust scavenger bird@@N circles overhead on broad, ragged wings.
-~
+
+~
 This large carrion bird has a wingspan wider than a man is tall, its dark feathers
-dusty and unkempt.  A naked red head swivels constantly, scanning the ground below
-for anything dead or dying.  When food is spotted, the bird descends in a steep,
-aggressive dive, driving off competitors with powerful wingbeats and a hooked beak
-designed for tearing flesh.
-~
+
+dusty and unkempt.  A naked red head swivels constantly, scanning the ground below
+
+for anything dead or dying.  When food is spotted, the bird descends in a steep,
+
+aggressive dive, driving off competitors with powerful wingbeats and a hooked beak
+
+designed for tearing flesh.
+
+~
 97 524288 -500 S
 30 0
 0 0 0 0
@@ -2152,13 +2567,19 @@ L 0 0 0 0 0 0 0 0 0
 a coastal carrion gull~
 a coastal carrion gull~
 A @@Rcoastal carrion gull@@N wheels overhead, screaming harshly.
-~
+
+~
 Larger and more aggressive than common gulls, this coastal predator has a wingspan
-that casts visible shadow on the ground.  Its plumage is dirty white streaked with
-grey, and its heavy orange beak is stained with the remnants of recent feeding.
-The bird targets anything it considers food, from fish to unguarded provisions to
-travelers too weak to defend themselves.
-~
+
+that casts visible shadow on the ground.  Its plumage is dirty white streaked with
+
+grey, and its heavy orange beak is stained with the remnants of recent feeding.
+
+The bird targets anything it considers food, from fish to unguarded provisions to
+
+travelers too weak to defend themselves.
+
+~
 97 524288 -500 S
 35 0
 0 0 0 0
@@ -2171,13 +2592,19 @@ L 0 0 0 0 0 0 0 0 0
 a plains stalker~
 a plains stalker~
 A @@Rplains stalker@@N moves through the tall grass with lethal silence.
-~
+
+~
 This large, low-slung predator resembles a great cat crossed with something more
-ancient and reptilian.  Its hide is the color of dry grass, and it moves with a
-fluid, boneless grace that makes it nearly invisible in open terrain.  When it
-freezes, only the slow blink of amber eyes betrays its position.  It hunts by
-patience and ambush, closing the final distance in a single explosive charge.
-~
+
+ancient and reptilian.  Its hide is the color of dry grass, and it moves with a
+
+fluid, boneless grace that makes it nearly invisible in open terrain.  When it
+
+freezes, only the slow blink of amber eyes betrays its position.  It hunts by
+
+patience and ambush, closing the final distance in a single explosive charge.
+
+~
 97 0 -500 S
 40 0
 0 0 0 0
@@ -2190,13 +2617,19 @@ L 0 0 0 0 0 0 0 0 0
 a cairn lurker~
 a cairn lurker~
 A @@Rcairn lurker@@N crouches among the rubble, its form barely distinguishable from the stone.
-~
+
+~
 This twisted creature has made the ancient ruins its home, its skin hardened to
-the color and texture of weathered stone.  Long, clawed fingers grip the broken
-masonry with unsettling familiarity, and the eyes that peer from the craggy face
-are flat and hungry.  It haunts the cairns and rubble piles of the ruin bands,
-ambushing travelers who stray too close to the old walls.
-~
+
+the color and texture of weathered stone.  Long, clawed fingers grip the broken
+
+masonry with unsettling familiarity, and the eyes that peer from the craggy face
+
+are flat and hungry.  It haunts the cairns and rubble piles of the ruin bands,
+
+ambushing travelers who stray too close to the old walls.
+
+~
 97 0 -750 S
 50 0
 0 0 0 0
@@ -2209,14 +2642,21 @@ L 0 0 0 0 0 0 0 0 0
 a script-blind revenant~
 a script-blind revenant~
 A @@Rscript-blind revenant@@N stumbles through the ruins, mouthing silent words.
-~
+
+~
 This undead horror was once a clerk or scribe, its desiccated form still wearing
-the rotted remnants of administrative robes.  The eyes are clouded white — blind
-to the living world but somehow still able to sense warm blood nearby.  Its lips
-move constantly, forming the words of legal decrees and tax assessments from an
-era that ended centuries ago.  The old law magic that animated it has degraded
-into nothing but hunger and mechanical repetition.
-~
+
+the rotted remnants of administrative robes.  The eyes are clouded white — blind
+
+to the living world but somehow still able to sense warm blood nearby.  Its lips
+
+move constantly, forming the words of legal decrees and tax assessments from an
+
+era that ended centuries ago.  The old law magic that animated it has degraded
+
+into nothing but hunger and mechanical repetition.
+
+~
 16481 0 -1000 S
 60 0
 0 0 0 0
@@ -2229,13 +2669,19 @@ L 0 0 0 0 0 0 0 0 0
 a relic zealot~
 a relic zealot~
 A @@Rrelic zealot@@N kneels among the ruin stones, clutching a carved tablet to its chest.
-~
+
+~
 Gaunt and wild-eyed, this humanoid figure wears the remnants of robes decorated
-with symbols copied from the ancient ruins.  The zealot has adopted the dead
-civilization's script as a personal creed, carving its symbols into skin and stone
-with equal fervor.  Anyone who approaches the ruins is treated as a trespasser
-against a sovereignty that exists only in the zealot's fractured theology.
-~
+
+with symbols copied from the ancient ruins.  The zealot has adopted the dead
+
+civilization's script as a personal creed, carving its symbols into skin and stone
+
+with equal fervor.  Anyone who approaches the ruins is treated as a trespasser
+
+against a sovereignty that exists only in the zealot's fractured theology.
+
+~
 97 0 -750 S
 45 0
 0 0 0 0
@@ -2248,14 +2694,21 @@ L 0 0 0 0 0 0 0 0 0
 a ruin custodian shade~
 a ruin custodian shade~
 A @@Rruin custodian shade@@N drifts between the broken columns, trailing wisps of shadow.
-~
+
+~
 This spectral figure retains the outline of a robed administrator, its form
-translucent and flickering like heat haze over stone.  It patrols the ruins
-with the mechanical regularity of a guard on rounds, following paths between
-buildings that collapsed centuries ago.  When it encounters the living, it
-reacts as if confronting trespassers in a functioning civic space — with
-authoritative gestures that turn violent when its demands are not understood.
-~
+
+translucent and flickering like heat haze over stone.  It patrols the ruins
+
+with the mechanical regularity of a guard on rounds, following paths between
+
+buildings that collapsed centuries ago.  When it encounters the living, it
+
+reacts as if confronting trespassers in a functioning civic space — with
+
+authoritative gestures that turn violent when its demands are not understood.
+
+~
 16481 0 -1000 S
 55 0
 0 0 0 0
@@ -2268,14 +2721,21 @@ L 0 0 0 0 0 0 0 0 0
 a displaced forest spirit~
 a displaced forest spirit~
 A @@Gdisplaced forest spirit@@N flickers between the trees, its form shifting like wind-blown leaves.
-~
+
+~
 This entity is not quite visible, appearing as a disturbance in the light — a
-ripple of green and shadow that takes the rough shape of a humanoid figure before
-dissolving and reforming.  It was once part of the druidic ward system that
-protected the Greenveil Spur, but without its creators to guide it, the spirit
-has become hostile to all intruders.  The air around it smells of crushed leaves
-and carries a faint electrical charge.
-~
+
+ripple of green and shadow that takes the rough shape of a humanoid figure before
+
+dissolving and reforming.  It was once part of the druidic ward system that
+
+protected the Greenveil Spur, but without its creators to guide it, the spirit
+
+has become hostile to all intruders.  The air around it smells of crushed leaves
+
+and carries a faint electrical charge.
+
+~
 97 0 -500 S
 40 0
 0 0 0 0
@@ -2288,14 +2748,21 @@ L 0 0 0 0 0 0 0 0 0
 a tollbreak enforcer~
 a tollbreak enforcer~
 A @@Rtollbreak enforcer@@N blocks the road, hand resting on a crude weapon.
-~
+
+~
 This hard-faced figure wears mismatched armor scavenged from multiple sources —
-a warden's shoulder-guard here, a convoy guard's iron-studded leather there.  The
-weapon is a heavy club reinforced with iron bands, and the stance is that of
-someone accustomed to violence as a negotiating tool.  The enforcer extracts
-payments from travelers who lack armed escort, operating in the jurisdictional
-gaps between warden and convoy authority.
-~
+
+a warden's shoulder-guard here, a convoy guard's iron-studded leather there.  The
+
+weapon is a heavy club reinforced with iron bands, and the stance is that of
+
+someone accustomed to violence as a negotiating tool.  The enforcer extracts
+
+payments from travelers who lack armed escort, operating in the jurisdictional
+
+gaps between warden and convoy authority.
+
+~
 97 0 -750 S
 40 0
 0 0 0 0
@@ -2308,13 +2775,19 @@ L 0 0 0 0 0 0 0 0 0
 a contraband runner~
 a contraband runner~
 A @@Rcontraband runner@@N moves along the verge with a heavy sack slung over one shoulder.
-~
+
+~
 Quick and furtive, this figure wears dark clothing designed to blend into shadow
-and undergrowth.  The heavy sack contains goods that bypassed the checkpoint toll
-system — medicines, sealed correspondence, or high-value compact goods moved outside
-the official tariff structure.  A short blade is hidden but accessible, and the
-runner's eyes constantly check for patrols.
-~
+
+and undergrowth.  The heavy sack contains goods that bypassed the checkpoint toll
+
+system — medicines, sealed correspondence, or high-value compact goods moved outside
+
+the official tariff structure.  A short blade is hidden but accessible, and the
+
+runner's eyes constantly check for patrols.
+
+~
 97 0 -500 S
 30 0
 0 0 0 0
@@ -2327,13 +2800,19 @@ L 0 0 0 0 0 0 0 0 0
 a forged-seal courier~
 a forged-seal courier~
 A @@Rforged-seal courier@@N hurries past with a leather case clutched to the chest.
-~
+
+~
 This courier carries documents bearing falsified legal seals — forged charter
-stamps, counterfeit convoy manifests, and fabricated debt instruments.  The
-clothing is deliberately nondescript, designed to pass casual inspection as
-legitimate road traffic.  The leather case is locked and chained to the courier's
-wrist, and the expression is one of controlled urgency.
-~
+
+stamps, counterfeit convoy manifests, and fabricated debt instruments.  The
+
+clothing is deliberately nondescript, designed to pass casual inspection as
+
+legitimate road traffic.  The leather case is locked and chained to the courier's
+
+wrist, and the expression is one of controlled urgency.
+
+~
 97 0 -500 S
 25 0
 0 0 0 0
@@ -2346,14 +2825,21 @@ L 0 0 0 0 0 0 0 0 0
 a cave squatter~
 a cave squatter~
 A @@Rcave squatter@@N lurks in the shadows, watching the entrance with wary eyes.
-~
+
+~
 This former laborer or deserter has taken up residence in the cave network,
-serving the Chainmaster's private toll operation in exchange for shelter and a
-share of the take.  The clothing is ragged and salt-stained, the body thin but
-wiry, and the eyes carry the desperate alertness of someone who knows every exit
-and hiding place in the caves.  A makeshift weapon — a length of chain weighted
-with an iron fitting — dangles from one hand.
-~
+
+serving the Chainmaster's private toll operation in exchange for shelter and a
+
+share of the take.  The clothing is ragged and salt-stained, the body thin but
+
+wiry, and the eyes carry the desperate alertness of someone who knows every exit
+
+and hiding place in the caves.  A makeshift weapon — a length of chain weighted
+
+with an iron fitting — dangles from one hand.
+
+~
 97 0 -750 S
 35 0
 0 0 0 0
@@ -2366,15 +2852,23 @@ L 0 0 0 0 0 0 0 0 0
 the toll-reeve without crown~
 the Toll-Reeve Without Crown~
 @@RThe Toll-Reeve Without Crown@@N stands at the crossroads, demanding documents from empty air.
-~
+
+~
 This revenant wears the formal robes of a Midgaard-chartered legal officer,
-their fabric preserved by the same law magic that animates the corpse within.
-A toll-reeve's badge of office is pinned to the chest, its seal still legible
-but its authority long since annulled.  The revenant demands toll documents from
-every traveler, applying legal standards that were obsolete before its death and
-impossible to satisfy after.  The eyes burn with the cold fire of institutional
-betrayal — this officer was abandoned by the charter system it served.
-~
+
+their fabric preserved by the same law magic that animates the corpse within.
+
+A toll-reeve's badge of office is pinned to the chest, its seal still legible
+
+but its authority long since annulled.  The revenant demands toll documents from
+
+every traveler, applying legal standards that were obsolete before its death and
+
+impossible to satisfy after.  The eyes burn with the cold fire of institutional
+
+betrayal — this officer was abandoned by the charter system it served.
+
+~
 67108593 0 -1000 S
 90 0
 0 0 0 0
@@ -2387,15 +2881,23 @@ L 100 0 0 0 0 0 0 0 0
 the greenveil antler-warden~
 the Greenveil Antler-Warden~
 @@RThe Greenveil Antler-Warden@@N blocks the forest path, antlers lowered for the charge.
-~
+
+~
 This creature stands taller than a man at the shoulder, its body that of a
-massive forest stag fused with the flickering green energy of druidic ward magic.
-Antlers spread wide as a doorway, their tines wrapped with living vines that
-pulse with faint light.  The eyes are not those of a beast but of a defense
-system — calculating, impersonal, and categorically hostile to anything that
-enters its patrol territory.  When the last druids died, their ward magic bonded
-to this sentinel, and it has guarded the spur ever since without rest or mercy.
-~
+
+massive forest stag fused with the flickering green energy of druidic ward magic.
+
+Antlers spread wide as a doorway, their tines wrapped with living vines that
+
+pulse with faint light.  The eyes are not those of a beast but of a defense
+
+system — calculating, impersonal, and categorically hostile to anything that
+
+enters its patrol territory.  When the last druids died, their ward magic bonded
+
+to this sentinel, and it has guarded the spur ever since without rest or mercy.
+
+~
 67108593 0 -500 S
 85 0
 0 0 0 0
@@ -2408,15 +2910,23 @@ L 100 0 0 0 0 0 0 0 0
 the inlet chainmaster~
 the Inlet Chainmaster~
 @@RThe Inlet Chainmaster@@N stands in the cave mouth, iron chains wrapped around both fists.
-~
+
+~
 A former convoy guard turned deserter, the Chainmaster seized control of the cave
-network after being denied back wages by the convoy compact.  The muscular frame
-is wrapped in salt-stained leather reinforced with scavenged iron fittings, and
-the signature iron chains — once used to block the cave entrance against unwanted
-visitors — are now wielded as weapons.  The Chainmaster has built a private toll
-empire that mimics the legitimate system, extracting payment from anyone who enters
-the caves.  The eyes are hard and pragmatic, the violence professional.
-~
+
+network after being denied back wages by the convoy compact.  The muscular frame
+
+is wrapped in salt-stained leather reinforced with scavenged iron fittings, and
+
+the signature iron chains — once used to block the cave entrance against unwanted
+
+visitors — are now wielded as weapons.  The Chainmaster has built a private toll
+
+empire that mimics the legitimate system, extracting payment from anyone who enters
+
+the caves.  The eyes are hard and pragmatic, the violence professional.
+
+~
 67108593 0 -750 S
 80 0
 0 0 0 0
@@ -2429,15 +2939,23 @@ L 100 0 0 0 0 0 0 0 0
 the promontory harrower~
 the Promontory Harrower~
 @@RThe Promontory Harrower@@N crouches atop the black basalt, surveying its domain.
-~
+
+~
 This apex predator of the western coast is something between a great cat and a
-sea dragon — scaled along the spine, furred along the flanks, with webbed claws
-that grip the basalt with terrifying purchase.  Its jaws are lined with teeth
-designed for cracking bone and shell alike.  The Harrower has claimed the
-promontory as its territory, and anything that ascends the black rock is met
-with a predator that has never learned to fear anything.  Storm-bleached bone
-fragments litter the rocks around its lair.
-~
+
+sea dragon — scaled along the spine, furred along the flanks, with webbed claws
+
+that grip the basalt with terrifying purchase.  Its jaws are lined with teeth
+
+designed for cracking bone and shell alike.  The Harrower has claimed the
+
+promontory as its territory, and anything that ascends the black rock is met
+
+with a predator that has never learned to fear anything.  Storm-bleached bone
+
+fragments litter the rocks around its lair.
+
+~
 67108593 0 -1000 S
 95 0
 0 0 0 0
@@ -2450,13 +2968,19 @@ L 100 0 0 0 0 0 0 0 0
 a road wagon~
 a road wagon~
 A @@yroad wagon@@N creaks slowly along the road, its wheels clattering on the stone.
-~
+
+~
 This heavy wooden wagon is loaded with barrels and crates secured under oiled
-canvas, drawn by a pair of patient draft horses.  The wagon bears the marks of
-its merchant house in faded paint on the sideboards.  It moves at the pace of
-its slowest animal, a mobile reminder that commerce is the road's reason for
-existence.
-~
+
+canvas, drawn by a pair of patient draft horses.  The wagon bears the marks of
+
+its merchant house in faded paint on the sideboards.  It moves at the pace of
+
+its slowest animal, a mobile reminder that commerce is the road's reason for
+
+existence.
+
+~
 65 65536 500 S
 10 0
 0 0 0 0
@@ -2469,13 +2993,19 @@ L 0 0 0 0 0 0 0 0 0
 a mule train driver~
 a mule train driver~
 A @@ymule train driver@@N walks beside a string of laden mules.
-~
+
+~
 Sunburnt and patient, the mule train driver walks with the rolling gait of
-someone who has spent more years on the road than off it.  A broad hat shades
-a face creased with laugh lines and weather, and a long switch is used more
-for gesture than discipline.  The mules follow the driver with the weary
-obedience of animals that know the routine by heart.
-~
+
+someone who has spent more years on the road than off it.  A broad hat shades
+
+a face creased with laugh lines and weather, and a long switch is used more
+
+for gesture than discipline.  The mules follow the driver with the weary
+
+obedience of animals that know the routine by heart.
+
+~
 65 0 500 S
 12 0
 0 0 0 0
@@ -2488,14 +3018,21 @@ L 0 0 0 0 0 0 0 0 0
 a road-weary pilgrim~
 a road-weary pilgrim~
 A @@Wroad-weary pilgrim@@N trudges along the verge, leaning on a walking staff.
-~
+
+~
 Exhausted and dust-covered, this pilgrim has been walking for many days.  The
-simple traveling robes are worn thin at the knees and elbows, and the sandals
-are held together with cord.  A small pack carries the barest essentials, and
-a clay water jar hangs from the walking staff.  Whether this journey is devotional,
-desperate, or simply the last resort of someone with nowhere else to go is
-impossible to tell from appearance alone.
-~
+
+simple traveling robes are worn thin at the knees and elbows, and the sandals
+
+are held together with cord.  A small pack carries the barest essentials, and
+
+a clay water jar hangs from the walking staff.  Whether this journey is devotional,
+
+desperate, or simply the last resort of someone with nowhere else to go is
+
+impossible to tell from appearance alone.
+
+~
 65 0 500 S
 10 0
 0 0 0 0
@@ -2508,14 +3045,21 @@ L 0 0 0 0 0 0 0 0 0
 a ruin scavenger~
 a ruin scavenger~
 A @@pruin scavenger@@N picks through the rubble, examining fragments of carved stone.
-~
+
+~
 This weathered figure wears practical clothing reinforced with knee-pads and
-heavy gloves, the tools of the trade — a small hammer, a brush, a set of
-chisels — hanging from a belt.  The scavenger searches the ruin bands for
-fragments of old roadwork, bronze fittings, and inscribed stones that have
-value in Midgaard's Granite Arcade antiquities market.  The work is slow and
-careful, more archaeology than theft.
-~
+
+heavy gloves, the tools of the trade — a small hammer, a brush, a set of
+
+chisels — hanging from a belt.  The scavenger searches the ruin bands for
+
+fragments of old roadwork, bronze fittings, and inscribed stones that have
+
+value in Midgaard's Granite Arcade antiquities market.  The work is slow and
+
+careful, more archaeology than theft.
+
+~
 65 0 250 S
 20 0
 0 0 0 0
@@ -2581,7 +3125,8 @@ A rolled @@Wparchment rubbing@@N of a charter inscription lies here.~
 E
 rubbing~
 The @@Wparchment rubbing@@N preserves the text of a roadside charter inscription in charcoal on thin vellum.  The script is in formal Midgaard charter-hand, declaring jurisdictional authority over this stretch of road.  Marginal notes in a different hand identify the inscription's location and date it to the late Lantern Reforms era.
-~
+
+~
 L
 15
 #3207
@@ -2594,7 +3139,8 @@ A thick @@ytrade ledger@@N bound in oil-treated leather lies here.~
 E
 ledger~
 The @@ytrade ledger@@N is filled with dense columns of figures in Kiess trade notation: cargo weights, transit fees, insurance premiums, and guard-obligation tallies.  The entries cover a full quarterly cycle of convoy traffic along Roc Road, with margin annotations noting disputed charges and unresolved debts.
-~
+
+~
 L
 30
 #3208
@@ -2697,7 +3243,8 @@ A flat @@pstone tablet@@N covered in dense script lies here among the rubble.~
 E
 tablet~
 The @@pstone tablet@@N is carved with columns of administrative text in a pre-charter script.  The content appears to be a tax assessment: lists of names, quantities of grain and metal, and assessment dates recorded in a calendrical system that predates Midgaard's founding.  A Reckoning archivist would find this document politically explosive.
-~
+
+~
 L
 45
 #3219

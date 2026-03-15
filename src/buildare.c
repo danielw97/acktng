@@ -410,7 +410,7 @@ void build_addarea(CHAR_DATA *ch, char *argument)
 
    if (vnum < 0 || vnum > MAX_VNUM)
    {
-      send_to_char("Vnum must be between 0 and 32767.\n\r", ch);
+      send_to_char("Vnum must be between 0 and 65535.\n\r", ch);
       return;
    }
 

@@ -1156,7 +1156,7 @@ void load_mobiles(FILE *fp)
 
    for (;;)
    {
-      sh_int vnum;
+      int vnum;
       char letter;
       int iHash;
 
@@ -1311,7 +1311,7 @@ void load_objects(FILE *fp)
 
    for (;;)
    {
-      sh_int vnum;
+      int vnum;
       char letter;
       int iHash;
 
@@ -1629,7 +1629,7 @@ void load_rooms(FILE *fp)
 
    for (;;)
    {
-      sh_int vnum;
+      int vnum;
       char letter;
       int door;
       int iHash;
@@ -1992,7 +1992,7 @@ void fix_exits(void)
          {
             if ((pexit = pRoomIndex->exit[door]) != NULL)
             {
-               if ((pexit->vnum <= 0) || (get_room_index(pexit->vnum) == NULL))
+               if ((pexit->vnum == 0) || (get_room_index(pexit->vnum) == NULL))
                {
                   sprintf(buf, "Bad exit vnum %d in room %d", pexit->vnum, pRoomIndex->vnum);
                   bug(buf, 0);
