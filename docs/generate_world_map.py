@@ -1,923 +1,1152 @@
 #!/usr/bin/env python3
 """
-Generate a stylized fantasy world map for ACK!MUD TNG.
-Based on lore in /docs/lore/
+ACK!MUD TNG — Fantasy World Map Generator  (v2)
+Lore-accurate, hand-drawn antique style.
 """
 
 import numpy as np
+import math, random
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import matplotlib.patheffects as pe
-from matplotlib.patches import FancyArrowPatch, Arc, FancyBboxPatch, Wedge
-from matplotlib.path import Path
-import matplotlib.patches as patches
 import matplotlib.colors as mcolors
-from matplotlib.collections import LineCollection
-import random
-import math
+from matplotlib.path import Path
+from matplotlib.patches import FancyBboxPatch, PathPatch
+from scipy.interpolate import splprep, splev
+from PIL import Image, ImageDraw, ImageFilter, ImageChops
+import io
 
-# ─── Seeded RNG for reproducibility ───────────────────────────────────────────
-rng = random.Random(42)
-np_rng = np.random.RandomState(42)
+RNG  = random.Random(7)
+NRNG = np.random.RandomState(7)
 
-# ─── Canvas setup ─────────────────────────────────────────────────────────────
-fig = plt.figure(figsize=(24, 18), dpi=120)
-ax = fig.add_axes([0, 0, 1, 1])
-ax.set_xlim(0, 240)
-ax.set_ylim(0, 180)
+# ═══════════════════════════════════════════════════════════
+#  PALETTE — antique map ink-on-vellum
+# ═══════════════════════════════════════════════════════════
+INK        = '#2C1A0E'
+INK_FADED  = '#5C3D20'
+INK_LIGHT  = '#8B6040'
+GOLD       = '#9B7310'
+GOLD_LT    = '#C8A030'
+PARCH_DARK = '#C8A060'
+PARCH_MID  = '#DDB870'
+PARCH_LT   = '#EDD080'
+PARCH_PALE = '#F5E0A0'
+
+SEA_DEEP   = '#2A4A6A'
+SEA_MID    = '#3A6080'
+SEA_LT     = '#5A8098'
+SEA_PALE   = '#7AABB8'
+RIVER_COL  = '#4A7898'
+
+FOREST_INK = '#1E3A14'
+FOREST_DARK= '#2A5020'
+FOREST_MID = '#3A7030'
+FOREST_LT  = '#5A9040'
+
+DESERT_BRN = '#A07828'
+DESERT_TAN = '#C89848'
+DESERT_PALE= '#E0BE80'
+
+MTN_DARK   = '#3A2C1C'
+MTN_MID    = '#5A4838'
+MTN_LT     = '#8A7860'
+MTN_SNOW   = '#ECE8E0'
+
+SCORCH_COL = '#7A3818'
+ASH_COL    = '#706050'
+SALT_COL   = '#C8C0A8'
+VOID_COL   = '#18082A'
+VOID_LT    = '#3A1858'
+CRYPT_COL  = '#2A1820'
+BLIGHT_COL = '#302818'
+
+BLOOD_RED  = '#8B1010'
+FIRE_ORG   = '#C84010'
+TEAL_NEON  = '#007070'
+
+W, H = 240, 180   # data-space dimensions
+
+# ═══════════════════════════════════════════════════════════
+#  PARCHMENT TEXTURE  (PIL → numpy → matplotlib imshow)
+# ═══════════════════════════════════════════════════════════
+def make_parchment(w_px=2880, h_px=2160):
+    """Generate a multi-layer aged-parchment texture."""
+    img = Image.new('RGB', (w_px, h_px))
+    pix = img.load()
+
+    # Base gradient: warm golden-brown, slightly darker at edges
+    for y in range(h_px):
+        for x in range(w_px):
+            fx, fy = x / w_px, y / h_px
+            # Radial vignette factor
+            vx = (fx - 0.5) * 2
+            vy = (fy - 0.5) * 2
+            vign = 1.0 - 0.45 * (vx*vx + vy*vy) ** 0.5
+            # Vertical warm gradient
+            r = int((220 - 18 * fy) * vign)
+            g = int((190 - 22 * fy) * vign)
+            b = int((130 - 20 * fy) * vign)
+            pix[x, y] = (max(0,min(255,r)), max(0,min(255,g)), max(0,min(255,b)))
+
+    # Noise passes
+    base = np.array(img).astype(float)
+    for scale, amp in [(8, 18), (20, 12), (55, 8), (120, 5)]:
+        nw, nh = w_px // scale, h_px // scale
+        noise = NRNG.uniform(-1, 1, (nh, nw, 3))
+        # Upsample
+        noise_up = np.array(Image.fromarray(
+            ((noise + 1) * 127).astype(np.uint8)
+        ).resize((w_px, h_px), Image.BILINEAR)).astype(float) - 127
+        base += noise_up * amp / 127
+
+    base = np.clip(base, 0, 255).astype(np.uint8)
+    img = Image.fromarray(base)
+
+    # Stain blobs
+    draw = ImageDraw.Draw(img)
+    for _ in range(180):
+        sx = RNG.randint(0, w_px)
+        sy = RNG.randint(0, h_px)
+        sr = RNG.randint(10, 120)
+        alpha_factor = RNG.uniform(0.03, 0.2)
+        stain_col = RNG.choice([
+            (100, 70, 30), (80, 55, 20), (140, 100, 50),
+            (60, 40, 10), (120, 90, 45)
+        ])
+        # Draw stain as an ellipse
+        draw.ellipse([sx-sr, sy-sr//2, sx+sr, sy+sr//2],
+                     fill=tuple(int(c * alpha_factor + p * (1-alpha_factor))
+                                for c, p in zip(stain_col,
+                                                img.getpixel((min(sx,w_px-1),min(sy,h_px-1))))))
+
+    # Light blur for softness
+    img = img.filter(ImageFilter.GaussianBlur(radius=1.5))
+    return np.array(img) / 255.0
+
+# ═══════════════════════════════════════════════════════════
+#  SPLINE HELPERS
+# ═══════════════════════════════════════════════════════════
+def smooth_polygon(pts, closed=True, tension=0.0, n=400):
+    """Return smoothed x,y arrays via scipy B-spline."""
+    pts = np.array(pts, dtype=float)
+    if closed:
+        pts = np.vstack([pts, pts[:3]])
+    x, y = pts[:,0], pts[:,1]
+    # Remove consecutive duplicates
+    mask = np.concatenate(([True], np.any(np.diff(pts, axis=0) != 0, axis=1)))
+    pts  = pts[mask]
+    x, y = pts[:,0], pts[:,1]
+    k = min(3, len(x)-1)
+    try:
+        tck, _ = splprep([x, y], s=tension, k=k, per=False)
+    except Exception:
+        # Fall back to linear interpolation
+        t_raw = np.linspace(0, 1, len(x))
+        t = np.linspace(0, 1, n)
+        xs = np.interp(t, t_raw, x)
+        ys = np.interp(t, t_raw, y)
+        return xs, ys
+    t = np.linspace(0, 1, n)
+    xs, ys = splev(t, tck)
+    return xs, ys
+
+def smooth_path_patch(pts, closed=True, tension=0.0, n=600, **kwargs):
+    """Create a matplotlib PathPatch from a smoothed polygon."""
+    xs, ys = smooth_polygon(pts, closed=closed, tension=tension, n=n)
+    verts = list(zip(xs, ys))
+    if closed:
+        verts.append(verts[0])
+    codes = [Path.MOVETO] + [Path.LINETO]*(len(verts)-2) + [Path.CLOSEPOLY]
+    return PathPatch(Path(verts, codes), **kwargs)
+
+def smooth_line(pts, tension=0.5, n=300):
+    """Return xs, ys for a smooth open curve."""
+    pts = np.array(pts, dtype=float)
+    x, y = pts[:,0], pts[:,1]
+    k = min(3, len(x)-1)
+    tck, _ = splprep([x, y], s=tension, k=k)
+    xs, ys = splev(np.linspace(0, 1, n), tck)
+    return xs, ys
+
+# ═══════════════════════════════════════════════════════════
+#  DRAWING PRIMITIVES
+# ═══════════════════════════════════════════════════════════
+def fill_region(ax, pts, color, alpha=0.72, edge_color=None, edge_lw=0.8,
+                zorder=5, tension=8):
+    ec = edge_color if edge_color else color
+    patch = smooth_path_patch(pts, tension=tension,
+                               facecolor=color, edgecolor=ec,
+                               linewidth=edge_lw, alpha=alpha, zorder=zorder)
+    ax.add_patch(patch)
+
+def draw_smooth_line(ax, pts, color, lw=1.2, alpha=0.8, zorder=9,
+                     tension=0.5, style='-'):
+    xs, ys = smooth_line(pts, tension=tension)
+    ax.plot(xs, ys, color=color, linewidth=lw, alpha=alpha,
+            zorder=zorder, linestyle=style, solid_capstyle='round')
+
+def hatch_region(ax, pts, color, dot_count=120, size=0.8, alpha=0.25, zorder=6):
+    """Scatter tiny dots inside a polygon for texture."""
+    xs, ys = smooth_polygon(pts)
+    from matplotlib.path import Path as MPath
+    p = MPath(list(zip(xs, ys)))
+    xmin, xmax = xs.min(), xs.max()
+    ymin, ymax = ys.min(), ys.max()
+    dots_x, dots_y = [], []
+    attempts = dot_count * 8
+    while len(dots_x) < dot_count and attempts > 0:
+        tx = NRNG.uniform(xmin, xmax)
+        ty = NRNG.uniform(ymin, ymax)
+        if p.contains_point((tx, ty)):
+            dots_x.append(tx)
+            dots_y.append(ty)
+        attempts -= 1
+    ax.scatter(dots_x, dots_y, s=size, color=color, alpha=alpha, zorder=zorder)
+
+# ═══════════════════════════════════════════════════════════
+#  TERRAIN SYMBOLS
+# ═══════════════════════════════════════════════════════════
+def mountain(ax, cx, cy, h=5.0, w=4.5, snow_frac=0.28, zorder=11,
+             col=MTN_MID, shadow=MTN_DARK, snow=MTN_SNOW):
+    """Single hand-drawn-style mountain."""
+    peak = (cx, cy + h)
+    left  = (cx - w/2, cy)
+    right = (cx + w/2, cy)
+    mid_r = (cx + w * 0.12, cy)  # slightly offset for realism
+    # Shadow face
+    ax.add_patch(plt.Polygon([peak, mid_r, right], color=shadow,
+                              alpha=0.88, zorder=zorder))
+    # Light face
+    ax.add_patch(plt.Polygon([peak, left, mid_r], color=col,
+                              alpha=0.92, zorder=zorder))
+    # Snow cap
+    snow_y = cy + h * (1 - snow_frac)
+    t = snow_frac
+    sl = (cx - w/2*t, snow_y)
+    sr = (cx + w/2*t*0.7, snow_y)
+    ax.add_patch(plt.Polygon([peak, sl, sr], color=snow,
+                              alpha=0.80, zorder=zorder+1))
+    # Outline
+    ax.add_patch(plt.Polygon([peak, left, right],
+                              fill=False, edgecolor=MTN_DARK,
+                              linewidth=0.5, alpha=0.5, zorder=zorder+2))
+
+def mountain_range(ax, peaks, base_h=5.0, base_w=4.5, scatter=True,
+                   zorder=11, **kw):
+    for (px, py) in peaks:
+        dh = RNG.uniform(0.75, 1.25) * base_h if scatter else base_h
+        dw = RNG.uniform(0.80, 1.20) * base_w if scatter else base_w
+        mountain(ax, px, py, h=dh, w=dw, zorder=zorder, **kw)
+
+def tree(ax, cx, cy, h=2.5, col=FOREST_MID, zorder=9):
+    """Single conifer."""
+    trunk_h = h * 0.22
+    ax.plot([cx, cx], [cy, cy + trunk_h], color='#5A3820',
+            linewidth=0.9, zorder=zorder, solid_capstyle='round')
+    tiers = 3
+    for i in range(tiers):
+        frac   = 1.0 - i / tiers * 0.55
+        tw     = h * 0.55 * frac
+        tier_y = cy + trunk_h + i * h * 0.28
+        tri_h  = h * 0.48
+        shade  = tuple(max(0, c - i*12/255) for c in mcolors.to_rgb(col))
+        ax.add_patch(plt.Polygon(
+            [[cx - tw, tier_y], [cx + tw, tier_y], [cx, tier_y + tri_h]],
+            color=shade, alpha=0.90, zorder=zorder+i))
+
+def forest_cluster(ax, cx, cy, radius, count=45, h_range=(1.8,3.2), zorder=9):
+    for _ in range(count):
+        angle = RNG.uniform(0, 2*math.pi)
+        dist  = RNG.uniform(0, radius) ** 0.7 * radius
+        tx = cx + dist * math.cos(angle)
+        ty = cy + dist * math.sin(angle)
+        h  = RNG.uniform(*h_range)
+        col = RNG.choice([FOREST_DARK, FOREST_MID, FOREST_LT,
+                          FOREST_DARK, FOREST_MID])
+        tree(ax, tx, ty, h=h, col=col, zorder=zorder)
+
+def dead_tree(ax, cx, cy, h=3.0, zorder=9):
+    """Bare/dead tree for Withered Depths."""
+    ax.plot([cx, cx], [cy, cy+h], color='#3C2C18', linewidth=1.1,
+            zorder=zorder, solid_capstyle='round')
+    for _ in range(4):
+        ang = RNG.uniform(0.2, math.pi - 0.2) * RNG.choice([-1,1])
+        bl  = RNG.uniform(0.6, 1.5)
+        by  = cy + RNG.uniform(h*0.4, h*0.85)
+        ax.plot([cx, cx + math.cos(ang)*bl], [by, by + math.sin(ang)*bl*0.5],
+                color='#3C2C18', linewidth=0.7, alpha=0.8, zorder=zorder)
+
+def gnarled_tree(ax, cx, cy, h=3.0, zorder=9):
+    """Thornwood gnarled tree."""
+    # Twisted trunk
+    ax.plot([cx, cx + RNG.uniform(-0.4,0.4)], [cy, cy+h],
+            color='#1A0E08', linewidth=1.3, zorder=zorder, solid_capstyle='round')
+    ax.add_patch(plt.Circle((cx, cy+h*0.85), h*0.38,
+                             color='#1E2A0A', alpha=0.80, zorder=zorder+1))
+    ax.add_patch(plt.Circle((cx, cy+h*0.85), h*0.22,
+                             color='#0E1806', alpha=0.65, zorder=zorder+2))
+
+def oasis(ax, cx, cy, r=4.0, zorder=11):
+    # Water
+    ax.add_patch(plt.Circle((cx, cy), r*0.65, color=SEA_MID,
+                             alpha=0.85, zorder=zorder))
+    ax.add_patch(plt.Circle((cx, cy), r*0.40, color=SEA_LT,
+                             alpha=0.55, zorder=zorder+1))
+    # Ripple rings
+    for rr in [r*0.50, r*0.60]:
+        ax.add_patch(plt.Circle((cx, cy), rr, fill=False,
+                                 edgecolor=SEA_PALE, linewidth=0.5,
+                                 alpha=0.45, zorder=zorder+1))
+    # Palms
+    for ang in np.linspace(0, 2*math.pi, 7)[:-1]:
+        px = cx + r*0.82*math.cos(ang)
+        py = cy + r*0.82*math.sin(ang)
+        # trunk lean
+        lean_x = math.cos(ang)*0.4
+        ax.plot([px, px+lean_x], [py, py+2.2],
+                color='#6B4420', linewidth=1.0, zorder=zorder+2)
+        ax.add_patch(plt.Circle((px+lean_x, py+2.2), 1.0,
+                                 color=FOREST_MID, alpha=0.85, zorder=zorder+3))
+
+def pyramid_sym(ax, cx, cy, size=4.0, col='#B89828', zorder=13):
+    h = size * 1.5
+    ax.add_patch(plt.Polygon(
+        [[cx-size, cy], [cx+size, cy], [cx, cy+h]],
+        color=col, alpha=0.90, zorder=zorder,
+        edgecolor=MTN_DARK, linewidth=0.8))
+    # Shadow
+    ax.add_patch(plt.Polygon(
+        [[cx, cy+h], [cx+size, cy], [cx+size*0.08, cy]],
+        color=MTN_DARK, alpha=0.38, zorder=zorder+1))
+    # Eye glow (Black Sun Shard)
+    ax.plot(cx, cy+h*0.55, 'o', color='#CC1100', markersize=3.5,
+            alpha=0.75, zorder=zorder+2)
+
+def city_symbol(ax, cx, cy, size=1.6, col=INK, crown=False, zorder=16):
+    """Medieval town symbol: walled keep with gate-towers."""
+    bw = size * 2.0
+    bh = size * 1.4
+    # Main wall
+    ax.add_patch(mpatches.Rectangle(
+        (cx - bw/2, cy - bh*0.3), bw, bh,
+        color=col, alpha=0.88, zorder=zorder))
+    # Two towers
+    for tx in [cx - bw/2, cx + bw/2 - size*0.6]:
+        ax.add_patch(mpatches.Rectangle(
+            (tx, cy - bh*0.3), size*0.6, bh*1.5,
+            color=col, alpha=0.92, zorder=zorder+1))
+        # Battlements
+        for bx in np.linspace(tx, tx+size*0.6, 4)[:-1]:
+            ax.add_patch(mpatches.Rectangle(
+                (bx, cy - bh*0.3 + bh*1.5),
+                size*0.12, size*0.35,
+                color=col, alpha=0.92, zorder=zorder+2))
+    # Gate arch
+    arch_x = cx - size*0.18
+    ax.add_patch(mpatches.Arc((cx, cy - bh*0.3 + size*0.2),
+                               size*0.36, size*0.5,
+                               angle=0, theta1=0, theta2=180,
+                               color=PARCH_PALE, linewidth=0, zorder=zorder+3))
+    ax.add_patch(mpatches.Rectangle(
+        (arch_x, cy - bh*0.3), size*0.36, size*0.2,
+        color=PARCH_PALE, alpha=0.85, zorder=zorder+3))
+    if crown:
+        for ang in np.linspace(0, 2*math.pi, 6)[:-1]:
+            ax.plot(cx + size*0.5*math.cos(ang),
+                    cy + bh*1.3 + size*0.3*math.sin(ang),
+                    '*', color=GOLD_LT, markersize=5,
+                    zorder=zorder+4, alpha=0.9)
+
+def port_symbol(ax, cx, cy, size=1.4, col=INK, zorder=16):
+    """Port city — tower + anchor."""
+    city_symbol(ax, cx, cy, size=size, col=col, zorder=zorder)
+    # Anchor
+    ax.text(cx + size*1.6, cy, '\u2693', color=SEA_MID,
+            fontsize=7, ha='center', va='center', zorder=zorder+1, alpha=0.6)
+
+def ruin_sym(ax, cx, cy, size=1.5, col=MTN_LT, zorder=12):
+    """Broken column / ruin."""
+    ax.add_patch(mpatches.Rectangle(
+        (cx - size*0.35, cy), size*0.7, size*2.0,
+        color=col, alpha=0.65, zorder=zorder))
+    # Crack
+    ax.plot([cx - size*0.1, cx + size*0.3],
+            [cy + size*0.8, cy + size*1.4],
+            color=MTN_DARK, linewidth=0.5, alpha=0.5, zorder=zorder+1)
+    # Rubble scatter
+    for rx, ry in [(cx-size, cy-size*0.3), (cx+size*0.5, cy-size*0.2),
+                   (cx-size*0.3, cy-size*0.5), (cx+size*0.8, cy-size*0.5)]:
+        ax.plot(rx, ry, 's', color=col, markersize=2.5,
+                alpha=0.55, zorder=zorder)
+
+def sunken_sanctum_sym(ax, cx, cy, size=2.2, zorder=14):
+    """Sunken Sanctum: partially buried, arcane circle with crystal shards."""
+    # Underground halo
+    for r_halo, alpha in [(size*1.4, 0.12), (size*1.0, 0.18), (size*0.65, 0.25)]:
+        ax.add_patch(plt.Circle((cx, cy), r_halo,
+                                 color='#5030A0', alpha=alpha, zorder=zorder-1))
+    # Broken outer ring
+    for seg_start, seg_end in [(10,80),(100,170),(190,350)]:
+        ax.add_patch(mpatches.Arc(
+            (cx, cy), size*2.0, size*2.0,
+            angle=0, theta1=seg_start, theta2=seg_end,
+            color='#8050C0', linewidth=1.2, alpha=0.7, zorder=zorder))
+    # Inner collapsed structure
+    ax.add_patch(mpatches.Rectangle(
+        (cx - size*0.7, cy - size*0.5), size*1.4, size*1.0,
+        color='#3A2A5A', alpha=0.78, edgecolor='#6040A0',
+        linewidth=0.8, zorder=zorder+1))
+    # Crystal shards sticking up
+    shard_positions = [(-size*0.4, size*0.3), (0, size*0.55),
+                       (size*0.35, size*0.2), (-size*0.15, size*0.45)]
+    for spx, spy in shard_positions:
+        sh = RNG.uniform(0.6, 1.1) * size * 0.7
+        sw = sh * 0.22
+        ax.add_patch(plt.Polygon(
+            [[cx+spx-sw, cy+spy], [cx+spx+sw, cy+spy], [cx+spx, cy+spy+sh]],
+            color='#C0A0FF', alpha=0.75, zorder=zorder+2))
+        # Crystal glow
+        ax.add_patch(plt.Circle((cx+spx, cy+spy+sh*0.7),
+                                 sw*1.5, color='#E8D8FF',
+                                 alpha=0.25, zorder=zorder+2))
+    # Entrance crack / stairs going down
+    for i in range(5):
+        step_w = size*0.4 - i*size*0.05
+        step_y = cy - size*0.45 - i*size*0.12
+        ax.plot([cx-step_w, cx+step_w], [step_y, step_y],
+                color='#4030A0', linewidth=0.8, alpha=0.6, zorder=zorder+1)
+    # Arcane rune glow centre
+    ax.plot(cx, cy + size*0.2, 'o', color='#C080FF',
+            markersize=4, alpha=0.8, zorder=zorder+3)
+    ax.plot(cx, cy + size*0.2, 'o', color='white',
+            markersize=2, alpha=0.5, zorder=zorder+4)
+
+def void_citadel_sym(ax, cx, cy, size=2.0, zorder=14):
+    """Void Citadel — dark spiked tower."""
+    # Dark ground stain
+    ax.add_patch(plt.Circle((cx, cy), size*1.2,
+                             color=VOID_COL, alpha=0.28, zorder=zorder-1))
+    # Rays
+    for ang in np.linspace(0, 2*math.pi, 10)[:-1]:
+        rx = cx + size*2.2*math.cos(ang)
+        ry = cy + size*2.2*math.sin(ang)
+        ax.plot([cx, rx], [cy, ry],
+                color=VOID_LT, linewidth=0.5, alpha=0.30, zorder=zorder)
+    # Tower body
+    ax.add_patch(mpatches.Rectangle(
+        (cx - size*0.55, cy - size*0.4), size*1.1, size*2.5,
+        color=VOID_COL, alpha=0.90, zorder=zorder+1))
+    # Spires
+    for sx, sh in [(cx-size*0.3, size*1.2), (cx, size*1.6),
+                   (cx+size*0.3, size*1.1)]:
+        ax.add_patch(plt.Polygon(
+            [[sx-size*0.18, cy+size*2.1], [sx+size*0.18, cy+size*2.1],
+             [sx, cy+size*2.1+sh]],
+            color=VOID_COL, alpha=0.92, zorder=zorder+2))
+    # Glowing window
+    ax.plot(cx, cy+size*1.5, 'o', color=VOID_LT,
+            markersize=3.5, alpha=0.7, zorder=zorder+3)
+
+def compass_rose(ax, cx, cy, size=9):
+    """Ornate compass rose."""
+    # Outer decorative ring
+    for r, lw, col, alpha in [(size*1.45, 1.8, INK, 0.65),
+                               (size*1.30, 0.7, GOLD, 0.55)]:
+        ax.add_patch(plt.Circle((cx,cy), r, fill=False,
+                                 edgecolor=col, linewidth=lw,
+                                 alpha=alpha, zorder=31))
+    ax.add_patch(plt.Circle((cx,cy), size*1.45,
+                             color=PARCH_PALE, alpha=0.80, zorder=30))
+    # Eight-point star
+    for i, ang in enumerate(np.linspace(0, 2*math.pi, 9)[:-1]):
+        cardinal = (i % 2 == 0)
+        tip_len  = size if cardinal else size*0.60
+        tip_x = cx + tip_len * math.sin(ang)
+        tip_y = cy + tip_len * math.cos(ang)
+        base_w = size * (0.28 if cardinal else 0.18)
+        perp_ang = ang + math.pi/2
+        bx1 = cx + base_w * math.sin(perp_ang)
+        by1 = cy + base_w * math.cos(perp_ang)
+        bx2 = cx - base_w * math.sin(perp_ang)
+        by2 = cy - base_w * math.cos(perp_ang)
+        col = GOLD if cardinal else INK_FADED
+        ax.add_patch(plt.Polygon([[tip_x,tip_y],[bx1,by1],[bx2,by2]],
+                                  color=col, alpha=0.92, zorder=32))
+    # Cardinal labels
+    for label, ang in [('N',0),('S',180),('E',90),('W',270)]:
+        lx = cx + (size*1.65) * math.sin(math.radians(ang))
+        ly = cy + (size*1.65) * math.cos(math.radians(ang))
+        ax.text(lx, ly, label, fontsize=7.5, fontweight='bold',
+                color=INK, ha='center', va='center',
+                fontfamily='serif', zorder=33)
+    # Center jewel
+    ax.add_patch(plt.Circle((cx,cy), size*0.14,
+                             color=GOLD_LT, alpha=0.95, zorder=34))
+    ax.add_patch(plt.Circle((cx,cy), size*0.07,
+                             color=BLOOD_RED, alpha=0.90, zorder=35))
+
+def decorative_border(ax):
+    """Layered ornate border — drawn as edge strips only, never covering map content."""
+    m = 3.5
+    bw = 5.0   # border band width
+
+    # Four edge bands (top/bottom/left/right strips)
+    for rx, ry, rw, rh in [
+        (0, 0, W, bw),           # bottom
+        (0, H-bw, W, bw),        # top
+        (0, 0, bw, H),           # left
+        (W-bw, 0, bw, H),        # right
+    ]:
+        ax.add_patch(mpatches.Rectangle((rx, ry), rw, rh,
+                      color=PARCH_DARK, alpha=0.92, zorder=55))
+
+    # Three nested frame lines
+    for offset, lw, col, alpha in [
+        (m,       2.2, INK,       0.88),
+        (m+1.8,   0.8, GOLD,      0.70),
+        (m+3.0,   0.5, INK_FADED, 0.50),
+    ]:
+        ax.add_patch(mpatches.FancyBboxPatch(
+            (offset, offset), W-2*offset, H-2*offset,
+            boxstyle='square,pad=0', fill=False,
+            edgecolor=col, linewidth=lw, alpha=alpha, zorder=56))
+
+    # Corner ornaments
+    for cx2, cy2 in [(m+1.5,m+1.5),(W-m-1.5,m+1.5),(m+1.5,H-m-1.5),(W-m-1.5,H-m-1.5)]:
+        for r, al in [(4.5,0.15),(3.0,0.28),(1.8,0.50)]:
+            ax.add_patch(plt.Circle((cx2,cy2), r,
+                                     color=GOLD, alpha=al, zorder=57))
+        ax.plot(cx2, cy2, '*', color=GOLD_LT, markersize=8,
+                alpha=0.90, zorder=58)
+
+    # Diamond tick marks along inner border edge
+    for xi in np.linspace(14, W-14, 26):
+        for yi in [m+1.0, H-m-1.0]:
+            ax.plot(xi, yi, 'D', color=GOLD, markersize=1.4,
+                    alpha=0.50, zorder=57)
+    for yi in np.linspace(14, H-14, 20):
+        for xi in [m+1.0, W-m-1.0]:
+            ax.plot(xi, yi, 'D', color=GOLD, markersize=1.4,
+                    alpha=0.50, zorder=57)
+
+def label(ax, x, y, text, size=7, col=INK, style='normal', weight='normal',
+          rot=0, zorder=22, ha='center', va='center', outline_col=None):
+    oc = outline_col if outline_col else PARCH_PALE
+    ax.text(x, y, text, fontsize=size, color=col, style=style,
+            fontweight=weight, rotation=rot, zorder=zorder-1,
+            ha=ha, va=va, fontfamily='serif',
+            path_effects=[pe.withStroke(linewidth=2.8, foreground=oc)])
+    ax.text(x, y, text, fontsize=size, color=col, style=style,
+            fontweight=weight, rotation=rot, zorder=zorder,
+            ha=ha, va=va, fontfamily='serif')
+
+def lore_scroll(ax, cx, cy, w, h, text, text_size=5.0, col=INK_FADED,
+                bg=PARCH_LT, edge=INK_LIGHT, zorder=22):
+    """Small lore-quote scroll box."""
+    ax.add_patch(FancyBboxPatch((cx-w/2, cy-h/2), w, h,
+                  boxstyle='round,pad=0.6',
+                  facecolor=bg, edgecolor=edge,
+                  linewidth=0.7, alpha=0.78, zorder=zorder-1))
+    ax.text(cx, cy, text, fontsize=text_size, color=col,
+            ha='center', va='center', style='italic',
+            fontfamily='serif', zorder=zorder,
+            wrap=True, multialignment='center')
+
+# ═══════════════════════════════════════════════════════════
+#  FIGURE SETUP
+# ═══════════════════════════════════════════════════════════
+fig = plt.figure(figsize=(24, 18), dpi=130)
+ax  = fig.add_axes([0, 0, 1, 1])
+ax.set_xlim(0, W)
+ax.set_ylim(0, H)
 ax.set_aspect('equal')
 ax.axis('off')
 
-# ─── PARCHMENT BACKGROUND ─────────────────────────────────────────────────────
-# Multi-layer parchment effect
-parchment_base = '#F5DEB3'   # wheat
-parchment_dark = '#C8A87A'
-parchment_mid  = '#E8C88A'
-ink_color      = '#3B2A1A'
-ink_faded      = '#5C3D2E'
-ink_light      = '#7A5230'
-blood_red      = '#8B1A1A'
-forest_dark    = '#2D4A1E'
-forest_mid     = '#3D6B2A'
-forest_light   = '#5A8A3A'
-forest_pale    = '#7BA85A'
-desert_dark    = '#C8964A'
-desert_mid     = '#D4A85C'
-desert_light   = '#E8C878'
-desert_pale    = '#F0D8A0'
-water_dark     = '#2A4A6B'
-water_mid      = '#3A6B8B'
-water_light    = '#5A8BAA'
-mountain_dark  = '#4A3A2A'
-mountain_mid   = '#6A5A4A'
-mountain_light = '#8A7A6A'
-shadow_color   = '#1A1008'
-gold_color     = '#B8860B'
-gold_light     = '#DAA520'
-ash_color      = '#A09080'
-void_color     = '#1A0A2A'
-void_light     = '#3A2A5A'
-neon_cyan      = '#008B8B'
-salt_color     = '#D0CCC0'
+# Parchment background
+parch_img = make_parchment(w_px=1440, h_px=1080)
+ax.imshow(parch_img, extent=[0, W, 0, H], origin='upper',
+          aspect='auto', zorder=0, alpha=1.0)
 
-# Parchment gradient background
-for i in range(200):
-    y_frac = i / 200
-    color = tuple(
-        a + (b - a) * y_frac
-        for a, b in zip(
-            mcolors.to_rgb('#D4B483'),
-            mcolors.to_rgb('#F0D890')
-        )
-    )
-    ax.axhspan(i * 0.9, (i + 1) * 0.9, color=color, zorder=0)
+# Soft vignette overlay
+vx = np.linspace(-1, 1, 400)
+vy = np.linspace(-1, 1, 300)
+VX, VY = np.meshgrid(vx, vy)
+vign = np.clip((VX**2 + VY**2)**0.6 * 0.55, 0, 1)
+ax.imshow(vign, extent=[0, W, 0, H], origin='upper', aspect='auto',
+          cmap='Greys', alpha=0.28, zorder=1)
 
-# Parchment noise/staining effect
-for _ in range(300):
-    x = np_rng.uniform(0, 240)
-    y = np_rng.uniform(0, 180)
-    r = np_rng.uniform(0.5, 8)
-    alpha = np_rng.uniform(0.02, 0.12)
-    c = rng.choice(['#8B6914', '#5C3D1E', '#C8A45A', '#3B2A0A'])
-    circle = plt.Circle((x, y), r, color=c, alpha=alpha, zorder=1)
-    ax.add_patch(circle)
+# ═══════════════════════════════════════════════════════════
+#  WATER BODIES
+# ═══════════════════════════════════════════════════════════
 
-# ─── HELPER FUNCTIONS ─────────────────────────────────────────────────────────
-
-def draw_mountain_range(ax, peaks, scale=1.0, color=mountain_mid, shadow=mountain_dark, zorder=10):
-    """Draw stylized triangle mountains."""
-    for (px, py) in peaks:
-        h = rng.uniform(3.5, 6.5) * scale
-        w = rng.uniform(3.0, 5.0) * scale
-        # Shadow side
-        shadow_tri = plt.Polygon(
-            [[px, py], [px + w * 0.6, py - h * 0.2], [px + w * 0.15, py + h]],
-            color=shadow, alpha=0.85, zorder=zorder
-        )
-        ax.add_patch(shadow_tri)
-        # Light side
-        light_tri = plt.Polygon(
-            [[px, py], [px - w * 0.6, py - h * 0.2], [px + w * 0.15, py + h]],
-            color=color, alpha=0.9, zorder=zorder
-        )
-        ax.add_patch(light_tri)
-        # Snow cap
-        snow_h = h * 0.25
-        ax.add_patch(plt.Polygon(
-            [[px + w * 0.15, py + h],
-             [px - w * 0.15, py + h - snow_h],
-             [px + w * 0.35, py + h - snow_h]],
-            color='#F0EEE8', alpha=0.7, zorder=zorder + 1
-        ))
-
-def draw_forest(ax, cx, cy, radius, density=30, colors=None, zorder=8):
-    """Draw a cluster of stylized trees."""
-    if colors is None:
-        colors = [forest_dark, forest_mid, forest_light, forest_pale]
-    for _ in range(density):
-        angle = rng.uniform(0, 2 * math.pi)
-        dist  = rng.uniform(0, radius)
-        tx = cx + dist * math.cos(angle)
-        ty = cy + dist * math.sin(angle)
-        th = rng.uniform(1.2, 2.8)
-        col = rng.choice(colors)
-        # Tree trunk
-        ax.plot([tx, tx], [ty, ty + th * 0.3],
-                color='#5C3D2E', linewidth=0.6, zorder=zorder)
-        # Tree canopy (stacked triangles)
-        for k in range(3):
-            frac = 1 - k * 0.28
-            tri_w = th * 0.7 * frac
-            tri_h = th * 0.5
-            tri_y = ty + th * 0.2 + k * th * 0.3
-            ax.add_patch(plt.Polygon(
-                [[tx - tri_w, tri_y],
-                 [tx + tri_w, tri_y],
-                 [tx, tri_y + tri_h]],
-                color=col, alpha=0.88, zorder=zorder + k
-            ))
-
-def draw_water_body(ax, path_verts, path_codes=None, color=water_mid, alpha=0.75, zorder=5):
-    """Fill a water body polygon."""
-    if path_codes is None:
-        codes = [Path.MOVETO] + [Path.LINETO] * (len(path_verts) - 2) + [Path.CLOSEPOLY]
-        path_codes = codes
-    p = Path(path_verts, path_codes)
-    patch = patches.PathPatch(p, facecolor=color, edgecolor=water_dark,
-                               linewidth=1.0, alpha=alpha, zorder=zorder)
-    ax.add_patch(patch)
-
-def wavy_line(ax, x0, y0, x1, y1, amplitude=0.5, freq=8, color=water_mid,
-              lw=1.0, alpha=0.8, zorder=6):
-    """Draw a wavy line (river / coastline accent)."""
-    t = np.linspace(0, 1, 300)
-    xs = x0 + t * (x1 - x0)
-    ys = y0 + t * (y1 - y0)
-    angle = math.atan2(y1 - y0, x1 - x0) + math.pi / 2
-    wave = amplitude * np.sin(t * freq * math.pi * 2)
-    xs += wave * math.cos(angle)
-    ys += wave * math.sin(angle)
-    ax.plot(xs, ys, color=color, linewidth=lw, alpha=alpha, zorder=zorder)
-
-def curvy_road(ax, points, color=ink_faded, lw=1.2, style='--', zorder=9, alpha=0.7):
-    """Draw a road between several points with slight curvature."""
-    xs = [p[0] for p in points]
-    ys = [p[1] for p in points]
-    ax.plot(xs, ys, color=color, linewidth=lw, linestyle=style,
-            alpha=alpha, zorder=zorder, solid_capstyle='round')
-
-def place_label(ax, x, y, text, fontsize=7, color=ink_color, style='normal',
-                weight='normal', rotation=0, zorder=20, ha='center', va='center',
-                outline=True):
-    """Place a styled label with optional outline."""
-    if outline:
-        ax.text(x, y, text, fontsize=fontsize, color='#F0D890',
-                style=style, fontweight=weight, rotation=rotation,
-                zorder=zorder - 1, ha=ha, va=va,
-                fontfamily='serif',
-                path_effects=[pe.withStroke(linewidth=2.5, foreground='#F0D890')])
-    ax.text(x, y, text, fontsize=fontsize, color=color,
-            style=style, fontweight=weight, rotation=rotation,
-            zorder=zorder, ha=ha, va=va, fontfamily='serif')
-
-def city_symbol(ax, x, y, size=1.5, color=ink_color, crown=False, zorder=15):
-    """Draw a stylized city symbol (square with towers)."""
-    # Main keep
-    rect = mpatches.Rectangle((x - size, y - size * 0.8),
-                                size * 2, size * 1.6,
-                                color=color, alpha=0.85, zorder=zorder)
-    ax.add_patch(rect)
-    # Towers
-    for tx in [x - size, x + size - size * 0.6]:
-        tower = mpatches.Rectangle((tx, y - size * 0.8),
-                                    size * 0.6, size * 2.0,
-                                    color=color, alpha=0.9, zorder=zorder + 1)
-        ax.add_patch(tower)
-        # Battlements
-        for bx in np.linspace(tx, tx + size * 0.6, 4)[:-1]:
-            battlement = mpatches.Rectangle((bx, y + size * 1.2),
-                                             size * 0.12, size * 0.4,
-                                             color=color, alpha=0.9, zorder=zorder + 2)
-            ax.add_patch(battlement)
-    if crown:
-        # Crown star for capital
-        for angle in np.linspace(0, 2 * math.pi, 6)[:-1]:
-            ax.plot([x + math.cos(angle) * size * 0.5],
-                    [y + size * 1.8 + math.sin(angle) * size * 0.3],
-                    '*', color=gold_color, markersize=4, zorder=zorder + 3)
-
-def pyramid_symbol(ax, x, y, size=3.0, color=desert_dark, zorder=12):
-    """Draw a stylized pyramid."""
-    tri = plt.Polygon(
-        [[x - size, y], [x + size, y], [x, y + size * 1.6]],
-        color=color, alpha=0.85, edgecolor=ink_color, linewidth=0.8, zorder=zorder
-    )
-    ax.add_patch(tri)
-    # Shading
-    shade = plt.Polygon(
-        [[x, y + size * 1.6], [x + size, y], [x + size * 0.1, y]],
-        color=mountain_dark, alpha=0.4, zorder=zorder + 1
-    )
-    ax.add_patch(shade)
-    # Eye of the pyramid glow (Black Sun Shard)
-    ax.plot(x, y + size * 0.8, 'o', color='#1A0A0A', markersize=4, zorder=zorder + 2)
-    ax.plot(x, y + size * 0.8, 'o', color='#FF4400', markersize=2, alpha=0.8, zorder=zorder + 3)
-
-def oasis_symbol(ax, x, y, radius=3.5, zorder=10):
-    """Draw a stylized oasis."""
-    # Water pool
-    water = plt.Circle((x, y), radius * 0.6, color=water_mid, alpha=0.8, zorder=zorder)
-    ax.add_patch(water)
-    # Inner shimmer
-    ax.add_patch(plt.Circle((x, y), radius * 0.35, color=water_light, alpha=0.5, zorder=zorder + 1))
-    # Palm trees around edge
-    for angle in np.linspace(0, 2 * math.pi, 6)[:-1]:
-        px = x + radius * 0.8 * math.cos(angle)
-        py = y + radius * 0.8 * math.sin(angle)
-        ax.plot([px, px + math.cos(angle) * 0.3],
-                [py, py + 2.0], color='#5C3D2E', linewidth=1.2, zorder=zorder + 1)
-        ax.add_patch(plt.Circle((px + math.cos(angle) * 0.3, py + 2.0),
-                                 1.0, color=forest_mid, alpha=0.85, zorder=zorder + 2))
-
-def ruin_symbol(ax, x, y, size=1.2, color=mountain_light, zorder=11):
-    """Draw a broken tower / ruin symbol."""
-    # Broken column
-    ax.add_patch(mpatches.Rectangle((x - size * 0.4, y),
-                                     size * 0.8, size * 2,
-                                     color=color, alpha=0.7, zorder=zorder))
-    # Rubble
-    for rx, ry in [(x - size, y - size * 0.5), (x + size * 0.5, y - size * 0.3),
-                   (x - size * 0.2, y - size * 0.7)]:
-        ax.plot(rx, ry, 's', color=color, markersize=3, alpha=0.6, zorder=zorder)
-
-def skull_symbol(ax, x, y, size=1.0, color=ink_color, zorder=12):
-    """Draw a simple skull for death-zones."""
-    ax.plot(x, y, 'o', color=color, markersize=size * 5, alpha=0.6, zorder=zorder)
-    ax.text(x, y, '\u2620', color=color, fontsize=size * 8, ha='center', va='center',
-            alpha=0.85, zorder=zorder + 1)
-
-def void_symbol(ax, x, y, size=2.0, zorder=13):
-    """Draw a void/dark citadel symbol."""
-    # Dark star
-    for angle in np.linspace(0, 2 * math.pi, 9)[:-1]:
-        x2 = x + size * math.cos(angle)
-        y2 = y + size * math.sin(angle)
-        ax.plot([x, x2], [y, y2], color=void_color, linewidth=1.5, alpha=0.9, zorder=zorder)
-    ax.plot(x, y, 'o', color=void_light, markersize=size * 3, alpha=0.8, zorder=zorder + 1)
-    ax.plot(x, y, 'o', color='#6A2A8A', markersize=size * 1.5, alpha=0.9, zorder=zorder + 2)
-
-def draw_compass_rose(ax, cx, cy, size=8):
-    """Draw an ornate compass rose."""
-    # Outer ring
-    ax.add_patch(plt.Circle((cx, cy), size * 1.3, color=parchment_mid,
-                              edgecolor=ink_color, linewidth=1.5, alpha=0.9, zorder=30))
-    ax.add_patch(plt.Circle((cx, cy), size * 1.1, color=None, fill=False,
-                              edgecolor=gold_color, linewidth=0.8, alpha=0.7, zorder=31))
-    # Cardinal points
-    directions = [('N', 0), ('S', 180), ('E', 90), ('W', 270)]
-    for label, deg in directions:
-        rad = math.radians(deg)
-        tip_x = cx + size * math.sin(rad)
-        tip_y = cy + size * math.cos(rad)
-        mid_x = cx + size * 0.55 * math.sin(rad)
-        mid_y = cy + size * 0.55 * math.cos(rad)
-        perp_x = size * 0.25 * math.cos(rad)
-        perp_y = -size * 0.25 * math.sin(rad)
-        # Arrow arm (gold for N/S, ink for E/W)
-        col = gold_color if label in ('N', 'S') else ink_faded
-        ax.add_patch(plt.Polygon(
-            [[tip_x, tip_y], [mid_x + perp_x, mid_y + perp_y],
-             [mid_x - perp_x, mid_y - perp_y]],
-            color=col, alpha=0.95, zorder=32
-        ))
-        # Label
-        label_x = cx + (size * 1.55) * math.sin(rad)
-        label_y = cy + (size * 1.55) * math.cos(rad)
-        ax.text(label_x, label_y, label, fontsize=8, fontweight='bold',
-                color=ink_color, ha='center', va='center',
-                fontfamily='serif', zorder=33)
-    # Ordinal points (smaller)
-    for deg in [45, 135, 225, 315]:
-        rad = math.radians(deg)
-        tip_x = cx + size * 0.65 * math.sin(rad)
-        tip_y = cy + size * 0.65 * math.cos(rad)
-        mid_x = cx + size * 0.35 * math.sin(rad)
-        mid_y = cy + size * 0.35 * math.cos(rad)
-        perp_x = size * 0.15 * math.cos(rad)
-        perp_y = -size * 0.15 * math.sin(rad)
-        ax.add_patch(plt.Polygon(
-            [[tip_x, tip_y], [mid_x + perp_x, mid_y + perp_y],
-             [mid_x - perp_x, mid_y - perp_y]],
-            color=ink_faded, alpha=0.8, zorder=32
-        ))
-    # Center jewel
-    ax.add_patch(plt.Circle((cx, cy), size * 0.12, color=gold_color, alpha=0.95, zorder=34))
-    ax.add_patch(plt.Circle((cx, cy), size * 0.07, color='#FF4400', alpha=0.9, zorder=35))
-
-def draw_border(ax):
-    """Draw an ornate decorative border."""
-    margin = 4
-    # Outer double border
-    for lw, offset, col in [(3.0, 0, ink_color), (1.0, 2, gold_color)]:
-        rect = mpatches.FancyBboxPatch(
-            (margin + offset, margin + offset),
-            240 - 2 * (margin + offset), 180 - 2 * (margin + offset),
-            boxstyle='square,pad=0', linewidth=lw,
-            edgecolor=col, facecolor='none', zorder=50
-        )
-        ax.add_patch(rect)
-    # Corner ornaments
-    for cx_corner, cy_corner in [(8, 8), (232, 8), (8, 172), (232, 172)]:
-        for r, alpha in [(5, 0.15), (3.5, 0.25), (2, 0.4)]:
-            ax.add_patch(plt.Circle((cx_corner, cy_corner), r,
-                                     color=gold_color, alpha=alpha, zorder=51))
-        ax.plot(cx_corner, cy_corner, '*', color=gold_color, markersize=8,
-                alpha=0.85, zorder=52)
-    # Decorative dots along border
-    for x in np.linspace(15, 225, 30):
-        for y in [6.5, 173.5]:
-            ax.plot(x, y, '.', color=gold_color, markersize=1.5, alpha=0.5, zorder=51)
-    for y in np.linspace(15, 165, 22):
-        for x in [6.5, 233.5]:
-            ax.plot(x, y, '.', color=gold_color, markersize=1.5, alpha=0.5, zorder=51)
-
-# ══════════════════════════════════════════════════════════════════════════════
-#  WORLD GEOGRAPHY — PAINTING LAYERS (back to front)
-# ══════════════════════════════════════════════════════════════════════════════
-
-# ─── OCEAN / SEA (Eastern coast) ─────────────────────────────────────────────
-sea_verts = [
-    (195, 0), (240, 0), (240, 180), (195, 180),
-    (192, 160), (188, 140), (191, 120), (185, 100),
-    (190, 80),  (188, 60),  (192, 40),  (188, 20),
-    (195, 0)
+# Eastern sea
+sea_pts = [
+    (W, 0), (W, H), (196,H), (193,162),(188,142),(192,122),
+    (186,102),(191,82),(189,62),(193,42),(188,22),(195,0)
 ]
-draw_water_body(ax, sea_verts, color=water_dark, alpha=0.55, zorder=3)
+fill_region(ax, sea_pts, SEA_DEEP, alpha=0.68, edge_color=SEA_MID,
+            edge_lw=1.0, zorder=3, tension=15)
+
 # Sea shimmer lines
-for y_wave in range(10, 175, 6):
-    wavy_line(ax, 197, y_wave, 236, y_wave + 1,
-              amplitude=0.3, freq=12, color=water_light,
-              lw=0.4, alpha=0.25, zorder=4)
+for yi in np.arange(5, 175, 5.5):
+    xs_w = np.linspace(198, W-2, 80)
+    ys_w = yi + 0.6 * np.sin(xs_w * 0.5 + yi)
+    ax.plot(xs_w, ys_w, color=SEA_LT, linewidth=0.35, alpha=0.22, zorder=4)
 
-# ─── NORTHERN SEA / DELTA ────────────────────────────────────────────────────
-north_sea_verts = [
-    (70, 165), (90, 168), (110, 172), (130, 170), (150, 165),
-    (165, 160), (175, 163), (190, 162), (195, 165),
-    (195, 180), (70, 180), (70, 165)
+# Northern sea (Kowloon reach)
+north_sea_pts = [
+    (68,H),(68,165),(80,167),(95,170),(112,172),(130,170),
+    (150,166),(168,162),(182,164),(193,162),(196,H)
 ]
-draw_water_body(ax, north_sea_verts, color=water_mid, alpha=0.55, zorder=3)
+fill_region(ax, north_sea_pts, SEA_MID, alpha=0.62, edge_color=SEA_LT,
+            edge_lw=0.8, zorder=3, tension=12)
 
-# Northern sea shimmer
-for y_wave in range(167, 178, 3):
-    wavy_line(ax, 72, y_wave, 190, y_wave,
-              amplitude=0.4, freq=10, color=water_light,
-              lw=0.5, alpha=0.3, zorder=4)
+# ═══════════════════════════════════════════════════════════
+#  RIVERS
+# ═══════════════════════════════════════════════════════════
 
-# ─── KOWLOON DELTA RIVER FINGERS ────────────────────────────────────────────
-for dx, spread in [(-8, 1.0), (0, 1.2), (8, 0.8), (14, 0.7)]:
-    wavy_line(ax, 115 + dx, 145, 115 + dx * spread, 168,
-              amplitude=0.8, freq=5, color=water_mid,
-              lw=2.5, alpha=0.5, zorder=6)
+# Main river from Cinderteeth → Kowloon delta
+river_main = [(148,124),(142,131),(136,138),(128,145),(122,152),(118,160),(115,167)]
+draw_smooth_line(ax, river_main, RIVER_COL, lw=3.2, alpha=0.50, zorder=6)
+draw_smooth_line(ax, river_main, SEA_LT, lw=1.4, alpha=0.30, zorder=7)
 
-# ─── MAIN RIVER — from Cinderteeth to delta ───────────────────────────────────
-river_points = [
-    (148, 125), (140, 133), (132, 140), (123, 148), (118, 158), (115, 168)
+# Delta fingers
+for dx, dy_end in [(-9,168),(-3,170),(4,169),(11,168)]:
+    draw_smooth_line(ax,
+        [(118+dx, 162),(116+dx*0.8, 165),(113+dx*0.5, 168+dy_end-168)],
+        RIVER_COL, lw=2.0, alpha=0.45, zorder=6)
+
+# Western forest river
+west_river = [(58,118),(66,126),(78,134),(92,144),(104,152),(112,160)]
+draw_smooth_line(ax, west_river, RIVER_COL, lw=2.2, alpha=0.42, zorder=6)
+
+# Small tributary (oasis → desert edge)
+draw_smooth_line(ax,
+    [(138,78),(140,73),(145,68),(152,64)],
+    RIVER_COL, lw=1.0, alpha=0.30, zorder=6, tension=0.3)
+
+# ═══════════════════════════════════════════════════════════
+#  TERRAIN FILLS — from bottom up
+# ═══════════════════════════════════════════════════════════
+
+# Southern barren wastes
+fill_region(ax, [(15,0),(95,0),(100,22),(88,28),(72,24),(60,28),(45,22),(28,26),(15,18)],
+            PARCH_DARK, alpha=0.38, edge_color=DESERT_BRN, edge_lw=0.5, zorder=4)
+
+# Gravelands / Necropolis corridor (south)
+grave_pts = [
+    (55,30),(72,26),(92,30),(98,44),(94,58),(82,66),(68,68),(54,60),(50,46)
 ]
-xs = [p[0] for p in river_points]
-ys = [p[1] for p in river_points]
-wavy_line(ax, xs[0], ys[0], xs[-1], ys[-1],
-          amplitude=1.5, freq=4, color=water_mid, lw=3.5, alpha=0.55, zorder=6)
+fill_region(ax, grave_pts, CRYPT_COL, alpha=0.52, edge_color='#3A2830',
+            edge_lw=0.8, zorder=4)
+hatch_region(ax, grave_pts, '#604040', dot_count=160, size=0.6, alpha=0.18, zorder=5)
 
-# Secondary river — west branch
-wavy_line(ax, 60, 115, 75, 130, amplitude=0.8, freq=5,
-          color=water_mid, lw=2.0, alpha=0.45, zorder=6)
-wavy_line(ax, 75, 130, 100, 148, amplitude=1.0, freq=4,
-          color=water_mid, lw=2.5, alpha=0.45, zorder=6)
-
-# ─── DEEPWELL AQUIFER HINT (underground lines in desert) ─────────────────────
-for dy in [-2, 0, 2]:
-    ax.plot([130, 175], [88 + dy, 88 + dy],
-            color=water_dark, linewidth=0.5, alpha=0.2,
-            linestyle=':', zorder=5)
-
-# ─── SALT FLATS — Saltglass Reach ────────────────────────────────────────────
-salt_verts = [
-    (168, 60), (185, 58), (193, 65), (188, 78), (175, 82), (163, 76), (168, 60)
+# Great Desert Expanse
+desert_pts = [
+    (118,42),(136,38),(158,40),(178,46),(190,58),(188,80),(178,88),
+    (160,90),(140,88),(125,80),(115,68),(112,54)
 ]
-draw_water_body(ax, salt_verts, color=salt_color, alpha=0.65, zorder=5)
+fill_region(ax, desert_pts, DESERT_TAN, alpha=0.58, edge_color=DESERT_BRN,
+            edge_lw=0.7, zorder=4)
+hatch_region(ax, desert_pts, DESERT_BRN, dot_count=200, size=0.5, alpha=0.12, zorder=5)
+
+# Scorched Wastes
+scorch_pts = [(100,62),(116,58),(126,62),(128,72),(120,80),(108,82),(98,76),(96,68)]
+fill_region(ax, scorch_pts, SCORCH_COL, alpha=0.50, edge_color='#5A2010',
+            edge_lw=0.7, zorder=5)
+hatch_region(ax, scorch_pts, '#303030', dot_count=100, size=0.6, alpha=0.22, zorder=6)
+
+# Scorching Sands
+scorch_sand_pts = [(148,38),(168,33),(184,36),(188,50),(174,54),(156,50),(148,38)]
+fill_region(ax, scorch_sand_pts, '#B07030', alpha=0.48, edge_color='#804010',
+            edge_lw=0.6, zorder=5)
+
+# Saltglass Reach
+salt_pts = [(168,58),(186,54),(194,62),(190,78),(176,82),(162,78),(162,64)]
+fill_region(ax, salt_pts, SALT_COL, alpha=0.62, edge_color='#A8A090',
+            edge_lw=0.8, zorder=5)
 # Salt crystal sparkles
-for _ in range(25):
-    sx = rng.uniform(169, 187)
-    sy = rng.uniform(62, 79)
-    ax.plot(sx, sy, '+', color='white', markersize=2.5, alpha=0.8, zorder=6)
-    ax.plot(sx, sy, '+', color='#90A0A8', markersize=2.5, alpha=0.5, zorder=6,
-            transform=ax.transData.__class__(fig.transFigure, ax.transData))
+for _ in range(35):
+    sx = RNG.uniform(166,188)
+    sy = RNG.uniform(60,78)
+    ax.plot(sx, sy, '+', color='white', markersize=2.8, alpha=0.75, zorder=6)
 
-# ─── SCORCHED WASTES ─────────────────────────────────────────────────────────
-scorch_verts = [
-    (105, 68), (118, 65), (128, 68), (130, 78), (122, 85),
-    (110, 84), (100, 78), (105, 68)
+# Great Northern Forest — base fill
+forest_pts = [
+    (28,118),(50,115),(72,118),(94,120),(114,118),(136,116),(158,120),
+    (168,128),(165,148),(150,155),(132,158),(112,156),(92,158),(72,154),
+    (52,150),(34,144),(20,136),(18,124)
 ]
-draw_water_body(ax, scorch_verts, color='#A05030', alpha=0.45, zorder=5)
-# Ash texture
-for _ in range(40):
-    sx = rng.uniform(103, 129)
-    sy = rng.uniform(67, 83)
-    ax.plot(sx, sy, '.', color='#404040', markersize=1.5, alpha=0.4, zorder=6)
+fill_region(ax, forest_pts, FOREST_DARK, alpha=0.38, edge_color=FOREST_INK,
+            edge_lw=0.8, zorder=4)
 
-# ─── GREAT DESERT EXPANSE ─────────────────────────────────────────────────────
-desert_verts = [
-    (120, 45), (135, 40), (155, 42), (175, 48), (188, 60),
-    (186, 80), (175, 85), (158, 88), (140, 85), (128, 78),
-    (118, 70), (115, 58), (120, 45)
+# Withered Depths blight
+wither_pts = [(103,124),(120,120),(130,124),(128,140),(116,145),(102,138)]
+fill_region(ax, wither_pts, BLIGHT_COL, alpha=0.55, edge_color='#282018',
+            edge_lw=0.7, zorder=5)
+
+# Thornwood
+thorn_pts = [(66,66),(80,62),(90,66),(88,80),(78,85),(64,79)]
+fill_region(ax, thorn_pts, '#202E10', alpha=0.52, edge_color=FOREST_INK,
+            edge_lw=0.7, zorder=5)
+
+# ═══════════════════════════════════════════════════════════
+#  MOUNTAINS
+# ═══════════════════════════════════════════════════════════
+
+# Cinderteeth Mountains — main volcanic range
+cinderteeth = [
+    (136,121),(140,126),(144,120),(148,128),(152,122),
+    (156,130),(160,124),(164,118),(148,134),(142,131),(155,136),
 ]
-draw_water_body(ax, desert_verts, color=desert_light, alpha=0.6, zorder=4)
+mountain_range(ax, cinderteeth, base_h=5.8, base_w=4.8,
+               col='#5A2E18', shadow='#3A1A0A', snow='#EDE8E0', zorder=11)
+# Volcanic fire glow
+for vp in [(148,129),(156,131)]:
+    for r, al in [(7,0.15),(5,0.20),(3,0.28)]:
+        ax.add_patch(plt.Circle(vp, r, color='#CC3300', alpha=al, zorder=10))
+    ax.plot(vp[0], vp[1]+6.5, '^', color=FIRE_ORG, markersize=6, alpha=0.8, zorder=12)
+    ax.plot(vp[0], vp[1]+6.5, '^', color='#FF6600', markersize=3.5, alpha=0.9, zorder=13)
+    # Smoke
+    for pi in range(6):
+        ax.add_patch(plt.Circle((vp[0]+RNG.uniform(-1,1), vp[1]+8+pi*2.5),
+                                 0.7+pi*0.4, color='#686060',
+                                 alpha=0.14-pi*0.02, zorder=11))
 
-# Desert dune ripples
-for i in range(15):
-    dy = rng.uniform(45, 83)
-    dx_start = rng.uniform(122, 140)
-    dx_end   = rng.uniform(155, 178)
-    wavy_line(ax, dx_start, dy, dx_end, dy + rng.uniform(-1, 1),
-              amplitude=0.3, freq=15, color=desert_dark,
-              lw=0.4, alpha=0.3, zorder=5)
+# West border ridges (Iseth Wilds)
+west_mts = [(11,82),(13,90),(11,98),(13,106),(11,114),(13,121)]
+mountain_range(ax, west_mts, base_h=4.2, base_w=3.5, col=MTN_MID,
+               shadow=MTN_DARK, snow=MTN_SNOW, zorder=10)
 
-# ─── SCORCHING SANDS ─────────────────────────────────────────────────────────
-scorch_sand_verts = [
-    (148, 40), (165, 35), (180, 38), (186, 50), (175, 52),
-    (158, 48), (148, 40)
+# Southern ridges
+south_mts = [(54,20),(60,16),(68,20),(76,16),(84,20),(92,16),(100,20)]
+mountain_range(ax, south_mts, base_h=4.0, base_w=3.2, col=MTN_LT,
+               shadow=MTN_MID, snow=MTN_SNOW, zorder=10)
+
+# ═══════════════════════════════════════════════════════════
+#  FOREST TREES
+# ═══════════════════════════════════════════════════════════
+
+forest_cluster_specs = [
+    (38,130,11,55), (56,135,10,50), (74,133,11,55),
+    (92,130,10,50), (108,132,10,48), (128,130,9,45),
+    (148,135,9,42), (30,138,8,38),  (50,143,9,44),
+    (70,140,10,50), (90,143,9,46),  (110,142,8,38),
+    (130,140,9,42), (148,138,8,38),
+    (24,128,6,28),  (160,138,7,32),
 ]
-draw_water_body(ax, scorch_sand_verts, color='#C07830', alpha=0.5, zorder=5)
+for cx_, cy_, r_, c_ in forest_cluster_specs:
+    forest_cluster(ax, cx_, cy_, r_, count=c_, h_range=(1.6,3.0), zorder=9)
 
-# ─── GREAT NORTHERN FOREST ───────────────────────────────────────────────────
-forest_verts = [
-    (30, 120), (50, 118), (70, 120), (90, 122), (110, 120),
-    (130, 118), (155, 122), (165, 128), (160, 148), (148, 155),
-    (130, 158), (110, 155), (90, 158), (70, 155), (50, 150),
-    (32, 145), (18, 138), (20, 125), (30, 120)
-]
-draw_water_body(ax, forest_verts, color=forest_dark, alpha=0.35, zorder=4)
-
-# ─── THORNWOOD ───────────────────────────────────────────────────────────────
-thorn_verts = [
-    (68, 68), (80, 65), (88, 70), (85, 82), (75, 86), (65, 80), (68, 68)
-]
-draw_water_body(ax, thorn_verts, color='#2A3A18', alpha=0.5, zorder=5)
-
-# ─── WITHERED DEPTHS blighted zone ──────────────────────────────────────────
-wither_verts = [
-    (105, 128), (118, 124), (128, 128), (126, 140), (115, 144),
-    (104, 138), (105, 128)
-]
-draw_water_body(ax, wither_verts, color='#3A3020', alpha=0.5, zorder=5)
-
-# ─── CATACOMBS / GRAVELANDS (dark underground zones) ─────────────────────────
-grave_verts = [
-    (62, 38), (80, 35), (95, 38), (98, 52), (88, 58),
-    (72, 60), (58, 54), (62, 38)
-]
-draw_water_body(ax, grave_verts, color='#28201A', alpha=0.45, zorder=5)
-
-# ─── CINDERTEETH MOUNTAINS ───────────────────────────────────────────────────
-# Volcanic glow halo
-ax.add_patch(plt.Circle((152, 128), 18, color='#602010', alpha=0.12, zorder=6))
-ax.add_patch(plt.Circle((152, 128), 12, color='#802010', alpha=0.15, zorder=6))
-
-# ══════════════════════════════════════════════════════════════════════════════
-#  TERRAIN FEATURES
-# ══════════════════════════════════════════════════════════════════════════════
-
-# ─── CINDERTEETH MOUNTAINS ───────────────────────────────────────────────────
-cinderteeth_peaks = [
-    (140, 125), (145, 128), (150, 122), (155, 130), (160, 125),
-    (148, 135), (143, 132), (158, 132), (153, 118), (162, 118),
-    (136, 120), (168, 125)
-]
-draw_mountain_range(ax, cinderteeth_peaks, scale=1.4,
-                    color='#5A3020', shadow='#3A1810', zorder=10)
-# Lava/fire at peak
-for peak in [(150, 122), (155, 130)]:
-    ax.plot(peak[0], peak[1] + 9, '^', color='#FF6600', markersize=5,
-            alpha=0.8, zorder=12)
-    ax.plot(peak[0], peak[1] + 9, '^', color='#FF3300', markersize=3,
-            alpha=0.9, zorder=13)
-    # Smoke plume
-    for puff in range(5):
-        py = peak[1] + 10 + puff * 2.5
-        px = peak[0] + rng.uniform(-1, 1)
-        r = 0.5 + puff * 0.4
-        ax.add_patch(plt.Circle((px, py), r, color='#808080', alpha=0.15 - puff * 0.02, zorder=11))
-
-# ─── ISETH REACH BORDER MOUNTAINS (West) ─────────────────────────────────────
-west_mts = [(12, 80), (14, 88), (16, 96), (13, 104), (15, 110), (12, 118)]
-draw_mountain_range(ax, west_mts, scale=0.9, color=mountain_mid, shadow=mountain_dark, zorder=10)
-
-# ─── SOUTHERN RIDGES ─────────────────────────────────────────────────────────
-south_mts = [(55, 22), (60, 18), (68, 22), (74, 18), (82, 22), (90, 18), (98, 22)]
-draw_mountain_range(ax, south_mts, scale=0.85, color=mountain_light, shadow=mountain_mid, zorder=10)
-
-# ─── GREAT NORTHERN FOREST — tree symbols ─────────────────────────────────────
-forest_clusters = [
-    (40, 132, 12, 80),   (58, 138, 10, 60),   (75, 135, 11, 70),
-    (92, 130, 10, 55),   (108, 133, 9, 50),   (125, 130, 10, 55),
-    (142, 135, 9, 50),   (30, 140, 8, 40),    (50, 145, 9, 45),
-    (68, 142, 10, 55),   (88, 145, 9, 50),    (108, 145, 8, 40),
-    (128, 142, 9, 45),   (148, 140, 8, 40),
-]
-for (cx, cy, rad, dens) in forest_clusters:
-    draw_forest(ax, cx, cy, rad, density=dens,
-                colors=[forest_dark, forest_mid, forest_light], zorder=8)
-
-# Withered Depths — dead tree zone
-for _ in range(25):
-    wx = rng.uniform(107, 126)
-    wy = rng.uniform(126, 142)
-    ax.plot([wx, wx], [wy, wy + rng.uniform(1.5, 3.5)],
-            color='#4A3A28', linewidth=0.8, alpha=0.7, zorder=9)
-    # Bare branches
-    for _ in range(3):
-        ang = rng.uniform(0.3, 2.8)
-        blen = rng.uniform(0.5, 1.5)
-        ax.plot([wx, wx + math.cos(ang) * blen],
-                [wy + 3, wy + 3 + math.sin(ang) * blen],
-                color='#4A3A28', linewidth=0.5, alpha=0.6, zorder=9)
+# Withered Depths — dead trees
+for _ in range(38):
+    wx = RNG.uniform(105,128)
+    wy = RNG.uniform(122,142)
+    dead_tree(ax, wx, wy, h=RNG.uniform(2.2,4.0), zorder=9)
 
 # Thornwood — gnarled trees
-for _ in range(30):
-    wx = rng.uniform(69, 87)
-    wy = rng.uniform(67, 84)
-    ax.plot([wx, wx + rng.uniform(-0.5, 0.5)],
-            [wy, wy + rng.uniform(1.8, 3.5)],
-            color='#2A1A0A', linewidth=1.0, alpha=0.75, zorder=9)
-    ax.add_patch(plt.Circle((wx, wy + 3.5), rng.uniform(0.8, 1.5),
-                             color='#2A3A10', alpha=0.7, zorder=10))
+for _ in range(35):
+    wx = RNG.uniform(67,88)
+    wy = RNG.uniform(64,83)
+    gnarled_tree(ax, wx, wy, h=RNG.uniform(2.0,3.8), zorder=9)
 
-# ─── PYRAMIDS ─────────────────────────────────────────────────────────────────
-pyramid_symbol(ax, 173, 60, size=5.0, color='#C8A040', zorder=12)   # Great Pyramid
-pyramid_symbol(ax, 165, 75, size=4.0, color='#B89030', zorder=12)   # Northern Pyramid
-pyramid_symbol(ax, 170, 44, size=4.0, color='#A08028', zorder=12)   # Southern Pyramid
+# ═══════════════════════════════════════════════════════════
+#  SPECIAL FEATURES
+# ═══════════════════════════════════════════════════════════
 
-# Black Sun Shard corona at Great Pyramid
-for r in [6.5, 7.5, 8.5]:
-    ax.add_patch(plt.Circle((173, 68), r, fill=False,
-                             edgecolor='#CC2200', linewidth=0.4, alpha=0.3, zorder=13))
+# ── Three Oases ────────────────────────────────────────────
+oasis(ax, 138, 76, r=5.0, zorder=11)    # Great Oasis
+oasis(ax, 140, 90, r=3.5, zorder=11)    # Northern Oasis
+oasis(ax, 131, 63, r=3.5, zorder=11)    # Southern Oasis
 
-# ─── OASES ────────────────────────────────────────────────────────────────────
-oasis_symbol(ax, 138, 78, radius=5.0, zorder=10)   # Great Oasis
-oasis_symbol(ax, 138, 90, radius=3.5, zorder=10)   # Northern Oasis
-oasis_symbol(ax, 132, 66, radius=3.5, zorder=10)   # Southern Oasis
+# Deepwell confluence marker
+ax.add_patch(plt.Circle((138,76), 4.5, fill=False,
+                         edgecolor=RIVER_COL, linewidth=0.8,
+                         alpha=0.30, linestyle='--', zorder=10))
+ax.add_patch(plt.Circle((138,76), 3.2, fill=False,
+                         edgecolor=RIVER_COL, linewidth=0.5,
+                         alpha=0.20, linestyle=':', zorder=10))
 
-# ─── KHEPRA-LESH (Lost City) — ruined ─────────────────────────────────────────
-ruin_symbol(ax, 158, 65, size=1.8, color='#8A7A5A', zorder=11)
-ruin_symbol(ax, 161, 67, size=1.2, color='#7A6A4A', zorder=11)
-ruin_symbol(ax, 156, 68, size=1.5, color='#8A7A5A', zorder=11)
+# ── Three Pyramids ─────────────────────────────────────────
+pyramid_sym(ax, 175, 60, size=5.5, col='#C0960A', zorder=13)  # Great Pyramid
+pyramid_sym(ax, 167, 76, size=4.2, col='#B08808', zorder=13)  # Northern Pyramid
+pyramid_sym(ax, 172, 42, size=4.2, col='#A07808', zorder=13)  # Southern Pyramid
 
-# ─── VOID / CRYPT COMPLEX (south) ─────────────────────────────────────────────
-void_symbol(ax, 80, 42, size=2.5, zorder=13)   # Void Citadel
-skull_symbol(ax, 73, 50, size=1.0, color='#3A1A1A', zorder=13)   # Kel'Shadra Crypts
-skull_symbol(ax, 68, 56, size=0.8, color='#4A2A1A', zorder=13)   # Gloamvault
+# Black Sun Shard corona (Great Pyramid)
+for r_, al_, ls_ in [(5.5,0.30,'-'),(7.5,0.18,'--'),(9.5,0.10,':')]:
+    ax.add_patch(plt.Circle((175,68.5), r_, fill=False,
+                             edgecolor=BLOOD_RED, linewidth=0.7,
+                             alpha=al_, linestyle=ls_, zorder=12))
+for ang in np.linspace(0,2*math.pi,14)[:-1]:
+    ray_l = RNG.uniform(6,11)
+    ax.plot([175, 175+ray_l*math.cos(ang)],
+            [68.5, 68.5+ray_l*math.sin(ang)],
+            color=BLOOD_RED, linewidth=0.4, alpha=0.15, zorder=11)
 
-# Catacombs crack lines
-for angle in np.linspace(0, 2 * math.pi, 8)[:-1]:
-    ex = 80 + 5 * math.cos(angle)
-    ey = 42 + 5 * math.sin(angle)
-    ax.plot([80, ex], [42, ey], color=void_color, linewidth=0.6, alpha=0.4, zorder=12)
+# Khepra-Lesh ruined city
+ruin_sym(ax, 160, 64, size=1.8, col='#8A7850', zorder=11)
+ruin_sym(ax, 163, 66.5, size=1.3, col='#7A6840', zorder=11)
 
-# ══════════════════════════════════════════════════════════════════════════════
-#  CITIES & SETTLEMENTS
-# ══════════════════════════════════════════════════════════════════════════════
+# ── Void Citadel / Necropolis complex ──────────────────────
+void_citadel_sym(ax, 76, 40, size=2.0, zorder=14)
 
-# ─── MIDGAARD (capital) ───────────────────────────────────────────────────────
-city_symbol(ax, 65, 95, size=2.2, color='#3A2510', crown=True, zorder=15)
+# Kel'Shadra crypts skull mark
+ax.add_patch(plt.Circle((70,52), 3.5, color=CRYPT_COL, alpha=0.55, zorder=12))
+ax.text(70, 52, '☠', color='#6A3A4A', fontsize=11, ha='center', va='center',
+        alpha=0.80, zorder=13)
 
-# ─── KIESS ────────────────────────────────────────────────────────────────────
-city_symbol(ax, 25, 90, size=1.8, color='#2A1A0A', zorder=15)
+# Gloamvault
+ax.add_patch(plt.Circle((66,60), 2.8, color='#281820', alpha=0.50, zorder=12))
+ax.text(66, 60, '☽', color='#5A3A5A', fontsize=8, ha='center', va='center',
+        alpha=0.75, zorder=13)
 
-# ─── KOWLOON (delta city) ─────────────────────────────────────────────────────
-city_symbol(ax, 115, 155, size=1.9, color='#1A2A3A', zorder=15)
-# Neon Covenant glow
-ax.add_patch(plt.Circle((115, 155), 5, fill=False,
-                         edgecolor=neon_cyan, linewidth=1.0, alpha=0.4, zorder=14))
+# Crypt connecting crack-lines
+for ang in np.linspace(0,2*math.pi,9)[:-1]:
+    ex = 76 + 6.5*math.cos(ang)
+    ey = 40 + 6.5*math.sin(ang)
+    ax.plot([76, ex], [40, ey], color=VOID_LT,
+            linewidth=0.45, alpha=0.25, zorder=12)
 
-# ─── RAKUEN ───────────────────────────────────────────────────────────────────
-city_symbol(ax, 60, 78, size=1.5, color='#2A1A0A', zorder=15)
+# ── SUNKEN SANCTUM (western spur of Cinderteeth) ───────────
+sunken_sanctum_sym(ax, 128, 121, size=2.4, zorder=14)
 
-# ─── MAFDET (coastal port) ────────────────────────────────────────────────────
-city_symbol(ax, 187, 75, size=1.6, color='#1A2030', zorder=15)
-# Harbor docks
-for i in range(4):
-    ax.plot([188 + i * 1.5, 188 + i * 1.5], [73, 70],
-            color=ink_color, linewidth=0.8, alpha=0.6, zorder=14)
+# Lava-tube tunnel hinting at Sanctum connection to mountains
+draw_smooth_line(ax,
+    [(128,123),(132,124),(137,124),(141,125)],
+    VOID_LT, lw=0.8, alpha=0.15, zorder=10, style=':')
 
-# ─── SHRINE OF THE FIRST CLAW ─────────────────────────────────────────────────
-ax.plot(185, 90, 'D', color=gold_color, markersize=5, alpha=0.85, zorder=15)
-ax.plot(185, 90, 'D', color='none', markersize=7,
-        markeredgecolor=ink_color, markeredgewidth=0.8, zorder=15)
+# ── Shrine of the First Claw ────────────────────────────────
+ax.plot(188, 92, 'D', color=GOLD_LT, markersize=6.5, alpha=0.88, zorder=15)
+ax.plot(188, 92, 'D', color='none', markersize=9,
+        markeredgecolor=INK, markeredgewidth=0.8, zorder=15)
+ax.add_patch(mpatches.Arc((188,92), 7, 7, angle=0, theta1=30, theta2=150,
+                            color=GOLD, linewidth=0.6, alpha=0.45, zorder=14))
 
-# ══════════════════════════════════════════════════════════════════════════════
+# ═══════════════════════════════════════════════════════════
+#  CITIES
+# ═══════════════════════════════════════════════════════════
+city_symbol(ax, 63, 93,  size=2.0, col=INK,       crown=True,  zorder=16)  # Midgaard
+city_symbol(ax, 24, 88,  size=1.7, col='#2A1A0A', crown=False, zorder=16)  # Kiess
+city_symbol(ax, 60, 76,  size=1.4, col='#2A1A0A', crown=False, zorder=16)  # Rakuen
+port_symbol(ax, 188, 76, size=1.5, col='#1A2030',              zorder=16)  # Mafdet
+# Kowloon — delta city with Neon Covenant ring
+city_symbol(ax, 115, 154, size=1.8, col='#1A2A3A', crown=False, zorder=16)
+for r_, al_, col_ in [(4.0,0.35,TEAL_NEON),(5.8,0.20,TEAL_NEON)]:
+    ax.add_patch(plt.Circle((115,154), r_, fill=False,
+                             edgecolor=col_, linewidth=0.9,
+                             alpha=al_, zorder=15))
+
+# ═══════════════════════════════════════════════════════════
 #  ROADS & TRADE ROUTES
-# ══════════════════════════════════════════════════════════════════════════════
+# ═══════════════════════════════════════════════════════════
 
-road_color   = '#6B4A28'
-lantern_col  = '#8B6914'
-desert_road  = '#A07830'
+road_kw   = dict(lw=1.8, alpha=0.62, zorder=9, tension=0.5)
+lantern_kw= dict(lw=1.5, alpha=0.58, zorder=9, tension=0.5)
+caravan_kw= dict(lw=1.4, alpha=0.55, zorder=9, style='--', tension=0.5)
 
 # Roc Road: Kiess → Midgaard
-curvy_road(ax, [(26, 91), (35, 92), (46, 93), (55, 94), (63, 95)],
-           color=road_color, lw=1.8, style='-', zorder=9, alpha=0.65)
-# Roc Road waypost symbols
-for wp in [(35, 92.5), (46, 93.5)]:
-    ax.plot(wp[0], wp[1], '|', color=road_color, markersize=4, alpha=0.7, zorder=10)
+draw_smooth_line(ax, [(25,89),(35,90),(46,91),(56,92),(62,93)],
+                 '#7A5028', **road_kw)
+# Road mile-post markers
+for mp in [(35,90.5),(46,91.5)]:
+    ax.plot(*mp, '|', color='#7A5028', markersize=5, alpha=0.65, zorder=10)
 
-# Lantern Road: Midgaard → Kowloon (through forest)
-lantern_pts = [(66, 98), (70, 105), (72, 115), (78, 125), (88, 135),
-               (98, 143), (107, 150), (114, 154)]
-curvy_road(ax, lantern_pts, color=lantern_col, lw=1.6, style='-', zorder=9, alpha=0.6)
-# Lantern posts along the road
-for i in range(1, len(lantern_pts) - 1, 2):
+# Lantern Road: Midgaard → Kowloon
+lantern_pts = [(64,96),(68,103),(71,112),(76,122),(84,131),(94,140),(104,148),(112,153)]
+draw_smooth_line(ax, lantern_pts, '#8A6818', **lantern_kw)
+# Lantern glows
+for i in range(1, len(lantern_pts)-1, 2):
     lx, ly = lantern_pts[i]
-    ax.plot(lx, ly, 'o', color=gold_light, markersize=3, alpha=0.7, zorder=10)
-    ax.add_patch(plt.Circle((lx, ly), 1.5, fill=False,
-                              edgecolor=gold_light, linewidth=0.4, alpha=0.3, zorder=10))
+    ax.plot(lx, ly, 'o', color=GOLD_LT, markersize=3.5, alpha=0.7, zorder=10)
+    ax.add_patch(plt.Circle((lx,ly), 2.2, fill=False,
+                             edgecolor=GOLD, linewidth=0.35, alpha=0.28, zorder=10))
 
 # Midgaard → Rakuen road
-curvy_road(ax, [(64, 93), (63, 88), (62, 83), (61, 79)],
-           color=road_color, lw=1.4, style='-', zorder=9, alpha=0.6)
+draw_smooth_line(ax, [(62,91),(61,86),(60,80),(60,77)],
+                 '#7A5028', lw=1.4, alpha=0.55, zorder=9)
 
-# Eastern Desert Caravan Road
-caravan_pts = [(138, 80), (148, 78), (158, 72), (165, 67), (172, 62)]
-curvy_road(ax, caravan_pts, color=desert_road, lw=1.5, style='--', zorder=9, alpha=0.65)
-# Caravan camel markers
-ax.text(153, 75, '~', color=desert_dark, fontsize=7, ha='center', va='center', alpha=0.7, zorder=10, style='italic')
+# Desert Caravan Road
+draw_smooth_line(ax, [(139,78),(150,76),(160,71),(168,65),(175,62)],
+                 DESERT_BRN, **caravan_kw)
+# Caravan symbol
+ax.text(152,74, '☽', color=DESERT_TAN, fontsize=7, ha='center',
+        va='center', alpha=0.55, zorder=10, rotation=90)
 
-# Caravan road to Mafdet (coast)
-curvy_road(ax, [(172, 62), (178, 66), (183, 70), (186, 74)],
-           color=desert_road, lw=1.3, style='--', zorder=9, alpha=0.6)
+# Caravan → Mafdet coast
+draw_smooth_line(ax, [(175,62),(180,66),(184,70),(187,74)],
+                 DESERT_BRN, lw=1.2, alpha=0.50, style='--', zorder=9)
 
-# Road: Midgaard → Catacombs
-curvy_road(ax, [(64, 93), (68, 82), (72, 72), (76, 62), (78, 52), (79, 45)],
-           color='#4A2A1A', lw=1.2, style=':', zorder=9, alpha=0.55)
+# Road from Midgaard to Catacombs
+draw_smooth_line(ax, [(62,91),(65,82),(68,73),(72,62),(74,52),(76,44)],
+                 '#4A2818', lw=1.2, alpha=0.45, style=':', zorder=9)
 
-# ══════════════════════════════════════════════════════════════════════════════
-#  DECORATIVE MAP FEATURES
-# ══════════════════════════════════════════════════════════════════════════════
+# ═══════════════════════════════════════════════════════════
+#  DECORATIVE SEA ELEMENTS
+# ═══════════════════════════════════════════════════════════
 
-# ─── SEA MONSTERS ─────────────────────────────────────────────────────────────
-# Serpent coils in the eastern sea
-for i, (sx, sy) in enumerate([(210, 50), (222, 90), (215, 130)]):
-    scale = 1.0 + i * 0.2
-    for coil_offset in range(4):
-        angle = coil_offset * math.pi / 2
-        cx2 = sx + scale * 3 * math.cos(angle)
-        cy2 = sy + scale * 3 * math.sin(angle)
-        ax.add_patch(plt.Circle((cx2, cy2), scale * 1.8,
-                                 color='#0A3A5A', alpha=0.25, zorder=7))
-    ax.plot(sx + scale * 2, sy + scale * 2, '^',
-            color='#0A4A6A', markersize=int(6 * scale), alpha=0.5, zorder=8)
-    ax.text(sx, sy - scale * 5, 'HERE BE\nDRAGONS',
-            fontsize=4.5, color=water_dark, ha='center', style='italic',
-            fontfamily='serif', alpha=0.55, zorder=8)
+# Sea serpents
+for sx, sy, scale in [(210,45,1.0),(220,95,1.2),(214,135,0.95)]:
+    for ci in range(4):
+        ang_ = ci * math.pi / 2
+        ax.add_patch(plt.Circle(
+            (sx+scale*3.5*math.cos(ang_), sy+scale*3.5*math.sin(ang_)),
+            scale*2.0, color='#0A3050', alpha=0.22, zorder=7))
+    ax.plot(sx+scale*2, sy+scale*2, '^', color='#0A405A',
+            markersize=int(6.5*scale), alpha=0.50, zorder=8)
+    ax.text(sx, sy-scale*5.5, 'HERE BE\nDRAGONS',
+            fontsize=4.8, color=SEA_MID, ha='center', style='italic',
+            fontfamily='serif', alpha=0.50, zorder=8)
 
-# ─── WIND HEADS ───────────────────────────────────────────────────────────────
-for wx, wy, direction in [(18, 160, 0), (230, 155, 180)]:
-    ax.add_patch(plt.Circle((wx, wy), 6, color=parchment_mid,
-                             edgecolor=ink_faded, linewidth=0.8, alpha=0.7, zorder=20))
-    # Cheeks
-    ax.add_patch(plt.Circle((wx - 2, wy), 2.5, color='#E8C090', alpha=0.6, zorder=21))
-    ax.add_patch(plt.Circle((wx + 2, wy), 2.5, color='#E8C090', alpha=0.6, zorder=21))
-    # Wind lines
-    for wl in range(5):
-        wl_len = rng.uniform(6, 14)
-        angle  = math.radians(-20 + wl * 10 + (90 if direction == 0 else -90))
-        wx2 = wx + wl_len * math.cos(angle)
-        wy2 = wy + wl_len * math.sin(angle) * 0.3
-        wavy_line(ax, wx + 5 if direction == 180 else wx - 5, wy + wl - 2,
-                  wx2, wy2, amplitude=0.4, freq=8,
-                  color=water_light, lw=0.7, alpha=0.4, zorder=20)
+# Sailing ship in northern sea
+for shx, shy in [(148,172),(168,170)]:
+    ax.plot([shx-4, shx+4], [shy, shy],  color=INK, lw=1.8, alpha=0.50, zorder=14)
+    ax.plot([shx, shx],     [shy, shy+6], color=INK, lw=1.0, alpha=0.50, zorder=14)
+    ax.add_patch(plt.Polygon(
+        [[shx, shy+6],[shx-4,shy+2],[shx,shy+2]],
+        color='#C8A840', alpha=0.52, zorder=15))
 
-# ─── SAILING SHIP in northern sea ──────────────────────────────────────────────
-ship_x, ship_y = 145, 173
-ax.plot([ship_x - 4, ship_x + 4], [ship_y, ship_y],
-        color=ink_color, linewidth=1.5, alpha=0.55, zorder=15)   # hull
-ax.plot([ship_x, ship_x], [ship_y, ship_y + 6],
-        color=ink_color, linewidth=1.0, alpha=0.55, zorder=15)   # mast
-ax.add_patch(plt.Polygon(
-    [[ship_x, ship_y + 6], [ship_x - 4, ship_y + 2], [ship_x, ship_y + 2]],
-    color='#D4B070', alpha=0.55, zorder=16))                     # sail
+# Wind cherub heads (top-left and mid-right border areas)
+for wchx, wchy, puff_ang in [(17,162,0),(232,150,180)]:
+    ax.add_patch(plt.Circle((wchx,wchy), 5.5, color=PARCH_MID,
+                             edgecolor=INK_LIGHT, linewidth=0.8,
+                             alpha=0.72, zorder=20))
+    ax.add_patch(plt.Circle((wchx-1.5,wchy), 2.0, color='#DDAA80',
+                             alpha=0.60, zorder=21))
+    ax.add_patch(plt.Circle((wchx+1.5,wchy), 2.0, color='#DDAA80',
+                             alpha=0.60, zorder=21))
+    for wi in range(5):
+        pang = math.radians(puff_ang - 30 + wi*15)
+        wl   = RNG.uniform(7,16)
+        wavy_xs = [wchx + (5.5+t*wl)*math.cos(pang) for t in np.linspace(0,1,20)]
+        wavy_ys = [wchy + (5.5+t*wl)*math.sin(pang)
+                   + 0.6*math.sin(t*math.pi*4) for t in np.linspace(0,1,20)]
+        ax.plot(wavy_xs, wavy_ys, color=SEA_LT,
+                linewidth=0.65, alpha=0.35, zorder=20)
 
-# ─── DECORATIVE MEDALLION around Kowloon (Neon Covenant) ─────────────────────
-for r in [7, 9]:
-    ax.add_patch(plt.Circle((115, 155), r, fill=False,
-                             edgecolor=neon_cyan, linewidth=0.5, alpha=0.2,
-                             linestyle='--', zorder=14))
-
-# ─── BLACK SUN SHARD OMINOUS RAYS ─────────────────────────────────────────────
-for angle in np.linspace(0, 2 * math.pi, 16)[:-1]:
-    ray_len = rng.uniform(8, 18)
-    rx = 173 + ray_len * math.cos(angle)
-    ry = 68 + ray_len * math.sin(angle)
-    ax.plot([173, rx], [68, ry],
-            color='#CC0000', linewidth=0.5, alpha=0.2, zorder=11)
-
-# ─── VOID CITADEL DARK RAYS ────────────────────────────────────────────────────
-for angle in np.linspace(0, 2 * math.pi, 12)[:-1]:
-    rx = 80 + 7 * math.cos(angle)
-    ry = 42 + 7 * math.sin(angle)
-    ax.plot([80, rx], [42, ry],
-            color=void_light, linewidth=0.4, alpha=0.25, zorder=12)
-
-# ─── DEEPWELL AQUIFER MARKER ──────────────────────────────────────────────────
-ax.plot(138, 78, 'v', color=water_dark, markersize=8, alpha=0.7, zorder=13)
-ax.add_patch(plt.Circle((138, 78), 6, fill=False,
-                         edgecolor=water_dark, linewidth=0.8, alpha=0.4, zorder=12))
-
-# ══════════════════════════════════════════════════════════════════════════════
+# ═══════════════════════════════════════════════════════════
 #  LABELS
-# ══════════════════════════════════════════════════════════════════════════════
+# ═══════════════════════════════════════════════════════════
 
-# ─── Region / Area labels ─────────────────────────────────────────────────────
-labels = [
-    # (x, y, text, size, color, style, weight, rotation)
-    (115, 165, 'KOWLOON', 10, ink_color, 'normal', 'bold', 0),
-    (65, 99, 'MIDGAARD', 11, ink_color, 'normal', 'bold', 0),
-    (25, 94, 'KIESS', 9, ink_color, 'normal', 'bold', 0),
-    (60, 82, 'RAKUEN', 8.5, ink_color, 'italic', 'normal', 0),
-    (187, 79, 'MAFDET', 8.5, '#1A2030', 'normal', 'bold', 0),
-    (138, 83, 'GREAT\nOASIS', 7.5, '#1A3A5A', 'italic', 'bold', 0),
-    (140, 95, 'NORTHERN\nOASIS', 6.5, '#1A3A5A', 'italic', 'normal', 0),
-    (130, 70, 'SOUTHERN\nOASIS', 6.5, '#1A3A5A', 'italic', 'normal', 0),
-    (173, 55, 'GREAT\nPYRAMID', 7.0, '#7A5010', 'normal', 'bold', 0),
-    (163, 80, 'NORTHERN\nPYRAMID', 6.0, '#7A5010', 'italic', 'normal', 0),
-    (168, 38, 'SOUTHERN\nPYRAMID', 6.0, '#7A5010', 'italic', 'normal', 0),
-    (152, 138, 'CINDERTEETH\nMOUNTAINS', 7.5, '#5A2010', 'normal', 'bold', 0),
-    (85, 140, 'THE GREAT\nNORTHERN FOREST', 8.5, forest_dark, 'italic', 'bold', 0),
-    (148, 60, 'EASTERN\nDESERT', 7.5, desert_dark, 'italic', 'bold', 0),
-    (113, 74, 'SCORCHED\nWASTES', 6.5, '#6A2808', 'italic', 'normal', 0),
-    (165, 40, 'SCORCHING\nSANDS', 6.0, '#904010', 'italic', 'normal', 0),
-    (178, 68, 'SALTGLASS\nREACH', 6.5, '#6A6050', 'italic', 'normal', -15),
-    (157, 65, 'KHEPRA-LESH\n(Ruined)', 5.5, '#7A6A4A', 'italic', 'normal', 0),
-    (80, 48, 'VOID CITADEL', 6.0, void_light, 'normal', 'bold', 0),
-    (72, 56, "KEL'SHADRA\nCRYPTS", 6.0, '#5A2A3A', 'italic', 'bold', 0),
-    (67, 64, 'GLOAMVAULT', 5.5, '#4A2A3A', 'italic', 'normal', 0),
-    (76, 75, 'THORNWOOD', 6.0, '#2A3A18', 'italic', 'bold', 0),
-    (75, 42, 'SEPULCHUR\nPASTURE', 6.0, '#3A2A1A', 'italic', 'normal', 0),
-    (110, 130, 'WITHERED\nDEPTHS', 6.0, '#4A3A28', 'italic', 'normal', 0),
-    (35, 130, 'VERDANT\nDEPTHS', 6.0, forest_dark, 'italic', 'normal', 0),
-    (22, 120, 'FOREST OF\nCONFUSION', 5.5, forest_mid, 'italic', 'normal', 0),
-    (185, 92, 'SHRINE OF\nTHE FIRST CLAW', 5.0, '#7A5010', 'italic', 'normal', 0),
-    (45, 93, 'ROC ROAD', 5.5, road_color, 'italic', 'normal', 5),
-    (90, 120, 'LANTERN ROAD', 5.5, lantern_col, 'italic', 'normal', 55),
-    (155, 75, 'CARAVAN ROAD', 5.0, desert_road, 'italic', 'normal', -20),
-    (220, 90, 'THE GLEAMING\nEASTERN SEA', 7.5, '#3A6A8A', 'italic', 'bold', -90),
-    (135, 175, 'NORTHERN REACH', 7.0, water_dark, 'italic', 'bold', 0),
-    (12, 60, 'ISETH\nWILDS', 6.0, mountain_mid, 'italic', 'normal', 0),
-    (75, 18, 'SUNKEN REACHES', 6.0, mountain_light, 'italic', 'normal', 0),
+# ── Major Cities ────────────────────────────────────────────
+label(ax, 63, 98,  'MIDGAARD',  size=10.5, col=INK, weight='bold')
+label(ax, 24, 92,  'KIESS',     size=9.0,  col=INK, weight='bold')
+label(ax, 60, 80.5,'RAKUEN',    size=8.0,  col=INK_FADED, style='italic')
+label(ax, 115,159, 'KOWLOON',   size=10.0, col='#1A2A3A', weight='bold')
+label(ax, 188,80,  'MAFDET',    size=8.5,  col='#1A2030', weight='bold')
+
+# ── Regions ─────────────────────────────────────────────────
+label(ax, 85,140,  'THE GREAT NORTHERN FOREST', size=8.0,
+      col=FOREST_INK, style='italic', weight='bold')
+label(ax, 152,138, 'CINDERTEETH\nMOUNTAINS', size=7.5,
+      col='#5A2010', weight='bold')
+label(ax, 148,57,  'EASTERN DESERT', size=7.5,
+      col=DESERT_BRN, style='italic', weight='bold')
+label(ax, 112,71,  'SCORCHED\nWASTES', size=6.5, col=SCORCH_COL, style='italic')
+label(ax, 164,38,  'SCORCHING\nSANDS', size=6.0, col='#904010', style='italic')
+label(ax, 178,68,  'SALTGLASS\nREACH', size=6.0, col='#686050', style='italic', rot=-12)
+label(ax, 220,90,  'THE GLEAMING\nEASTERN SEA', size=7.5,
+      col=SEA_MID, style='italic', weight='bold', rot=-90)
+label(ax, 132,173, 'NORTHERN REACH', size=7.0, col=SEA_DEEP, style='italic', weight='bold')
+label(ax, 34,128,  'VERDANT DEPTHS', size=5.8, col=FOREST_DARK, style='italic')
+label(ax, 116,130, 'WITHERED\nDEPTHS', size=5.8, col=BLIGHT_COL, style='italic',
+      outline_col=PARCH_LT)
+label(ax, 22,120,  'FOREST OF\nCONFUSION', size=5.5, col=FOREST_MID, style='italic')
+label(ax, 76,73,   'THORNWOOD', size=6.0, col='#1A2E08', style='italic', weight='bold')
+label(ax, 10,60,   'ISETH\nWILDS', size=6.0, col=MTN_MID, style='italic')
+label(ax, 75,18,   'SUNKEN REACHES', size=5.8, col=MTN_LT, style='italic')
+
+# ── Oases & Water ───────────────────────────────────────────
+label(ax, 138,82,  'GREAT\nOASIS', size=7.0, col='#1A3A5A', style='italic', weight='bold')
+label(ax, 142,95,  'NORTHERN\nOASIS', size=5.8, col='#1A3A5A', style='italic')
+label(ax, 128,67,  'SOUTHERN\nOASIS', size=5.8, col='#1A3A5A', style='italic')
+
+# ── Pyramids ────────────────────────────────────────────────
+label(ax, 175,55,  'GREAT\nPYRAMID', size=7.0, col='#785008', weight='bold')
+label(ax, 165,82,  'NORTHERN\nPYRAMID', size=5.8, col='#785008', style='italic')
+label(ax, 170,36,  'SOUTHERN\nPYRAMID', size=5.8, col='#785008', style='italic')
+
+# ── Necropolis / South ──────────────────────────────────────
+label(ax, 76, 46,  'VOID CITADEL', size=6.0, col=VOID_LT, weight='bold',
+      outline_col='#0A0410')
+label(ax, 68, 56,  "KEL'SHADRA\nCRYPTS", size=5.8, col='#5A283A',
+      style='italic', weight='bold', outline_col='#0A0410')
+label(ax, 64, 63,  'GLOAMVAULT', size=5.5, col='#4A283A', style='italic',
+      outline_col='#0A0410')
+label(ax, 74, 26,  'SEPULCHUR\nPASTURE', size=5.8, col='#3A2818', style='italic')
+
+# ── Special Sites ───────────────────────────────────────────
+label(ax, 160, 62, 'KHEPRA-LESH\n(Ruined)', size=5.5, col='#7A6040', style='italic')
+label(ax, 188, 96, 'SHRINE OF\nTHE FIRST CLAW', size=5.0, col='#7A5010', style='italic')
+label(ax, 128, 115,'SUNKEN\nSANCTUM', size=6.5, col='#7050B0',
+      weight='bold', outline_col='#0A0418')
+
+# ── Roads ───────────────────────────────────────────────────
+label(ax, 44, 90,  'Roc Road', size=5.2, col='#7A5028', style='italic', rot=5)
+label(ax, 88,118,  'Lantern Road', size=5.2, col='#8A6818', style='italic', rot=52)
+label(ax, 155,72,  'Caravan Road', size=5.0, col=DESERT_BRN, style='italic', rot=-22)
+
+# ── Faction seals ───────────────────────────────────────────
+ax.add_patch(plt.Circle((150,60), 3.5, fill=False, edgecolor=DESERT_BRN,
+                          linewidth=0.6, alpha=0.35, linestyle='--', zorder=10))
+ax.text(150, 57, 'JACKAL\nSYNOD', fontsize=4.2, color=DESERT_BRN,
+        ha='center', style='italic', fontfamily='serif', alpha=0.60, zorder=11)
+
+ax.text(145, 83, 'Spring\nWardens', fontsize=4.0, color=SEA_DEEP,
+        ha='center', style='italic', fontfamily='serif', alpha=0.55, zorder=11)
+
+ax.text(70, 38, 'Bell\nSynod', fontsize=4.0, color=INK_FADED,
+        ha='center', style='italic', fontfamily='serif', alpha=0.50, zorder=11)
+
+ax.text(128, 110, 'Spirebound\nConclave\n(Ruins)', fontsize=4.0,
+        ha='center', style='italic', fontfamily='serif', alpha=0.55,
+        zorder=11, color='#7050B0')
+
+# ═══════════════════════════════════════════════════════════
+#  LORE SCROLLS
+# ═══════════════════════════════════════════════════════════
+lore_scrolls = [
+    (152, 112, 34, 9, '"Here the mountain bleeds fire\nand the sky remembers ash."'),
+    (115, 160, 32, 8, '"One wall, one law.\nOne ledger, one ration code."'),
+    (175, 72,  32, 9, '"The Black Sun consumes names.\nWrite all things in stone."'),
+    (76,  30,  32, 8, '"The dead keep better records\nthan the living."'),
+    (24, 100,  32, 8, '"Old Evermeet sings\nbeneath these stones."'),
+    (143, 55,  32, 8, '"Measured thirst survives.\nUnmeasured thirst is war."'),
+    (128, 105, 34, 9, '"Flame, crystal, spirit — three bonds.\nAll three broke."'),
 ]
+for lx, ly, lw, lh, lt in lore_scrolls:
+    lore_scroll(ax, lx, ly, lw, lh, lt, text_size=5.0)
 
-for (x, y, text, size, color, style, weight, rotation) in labels:
-    place_label(ax, x, y, text, fontsize=size, color=color,
-                style=style, weight=weight, rotation=rotation, zorder=22)
-
-# ─── FACTION CRESTS / SEALS ───────────────────────────────────────────────────
-# Jackal Synod seal in Eastern Desert
-ax.text(148, 58, '\u29D6', color=desert_dark, fontsize=10, ha='center', va='center', alpha=0.4, zorder=11)
-ax.text(148, 53, 'JACKAL SYNOD', fontsize=4.5, color=desert_dark,
-        ha='center', style='italic', fontfamily='serif', alpha=0.6, zorder=12)
-
-# Spring Wardens at Great Oasis
-ax.text(145, 82, '\u26C6', color=water_dark, fontsize=7, ha='center', va='center', alpha=0.5, zorder=11)
-ax.text(145, 80, 'Spring Wardens', fontsize=4.0, color=water_dark,
-        ha='center', style='italic', fontfamily='serif', alpha=0.55, zorder=12)
-
-# Bell Synod mark near Catacombs
-ax.text(70, 40, '\u237E', color=ink_faded, fontsize=7, ha='center', va='center', alpha=0.5, zorder=11)
-ax.text(70, 37.5, 'BELL SYNOD', fontsize=4.0, color=ink_faded,
-        ha='center', style='italic', fontfamily='serif', alpha=0.55, zorder=12)
-
-# ══════════════════════════════════════════════════════════════════════════════
+# ═══════════════════════════════════════════════════════════
 #  TITLE CARTOUCHE
-# ══════════════════════════════════════════════════════════════════════════════
-# Ornate scroll cartouche at the top-left
-cartouche_x, cartouche_y = 12, 152
-cartouche_w, cartouche_h = 68, 22
+# ═══════════════════════════════════════════════════════════
+cx_cart, cy_cart = 13, 150
+cw_cart, ch_cart = 70, 24
 
+# Drop shadow
 ax.add_patch(FancyBboxPatch(
-    (cartouche_x, cartouche_y), cartouche_w, cartouche_h,
+    (cx_cart+1.0, cy_cart-1.0), cw_cart, ch_cart,
     boxstyle='round,pad=1.5',
-    facecolor='#F0D878', edgecolor=gold_color,
-    linewidth=2.5, alpha=0.88, zorder=40
-))
+    facecolor=PARCH_DARK, edgecolor='none', alpha=0.55, zorder=39))
+# Main cartouche fill
 ax.add_patch(FancyBboxPatch(
-    (cartouche_x + 1.5, cartouche_y + 1.5), cartouche_w - 3, cartouche_h - 3,
-    boxstyle='round,pad=1',
-    facecolor='none', edgecolor=ink_color,
-    linewidth=0.8, alpha=0.6, zorder=41
-))
-# Corner flourishes on cartouche
-for cx2, cy2 in [(cartouche_x + 3, cartouche_y + 3),
-                  (cartouche_x + cartouche_w - 3, cartouche_y + 3),
-                  (cartouche_x + 3, cartouche_y + cartouche_h - 3),
-                  (cartouche_x + cartouche_w - 3, cartouche_y + cartouche_h - 3)]:
-    ax.plot(cx2, cy2, '*', color=gold_color, markersize=6, alpha=0.8, zorder=42)
+    (cx_cart, cy_cart), cw_cart, ch_cart,
+    boxstyle='round,pad=1.5',
+    facecolor=PARCH_LT, edgecolor=GOLD, linewidth=2.8, alpha=0.92, zorder=40))
+# Inner line
+ax.add_patch(FancyBboxPatch(
+    (cx_cart+1.5, cy_cart+1.5), cw_cart-3, ch_cart-3,
+    boxstyle='round,pad=0.8',
+    facecolor='none', edgecolor=INK, linewidth=0.8, alpha=0.55, zorder=41))
+# Corner flourishes
+for fx, fy in [(cx_cart+3.5, cy_cart+3.5),
+               (cx_cart+cw_cart-3.5, cy_cart+3.5),
+               (cx_cart+3.5, cy_cart+ch_cart-3.5),
+               (cx_cart+cw_cart-3.5, cy_cart+ch_cart-3.5)]:
+    ax.plot(fx, fy, '*', color=GOLD_LT, markersize=7, alpha=0.88, zorder=42)
 
-ax.text(cartouche_x + cartouche_w / 2, cartouche_y + cartouche_h - 5,
-        'THE KNOWN WORLD',
-        fontsize=13, fontweight='bold', color=ink_color,
-        ha='center', va='center', fontfamily='serif', zorder=43,
-        path_effects=[pe.withStroke(linewidth=2, foreground='#F0D878')])
-ax.text(cartouche_x + cartouche_w / 2, cartouche_y + cartouche_h - 11,
-        'of the  ACK!MUD  Realm',
-        fontsize=8.5, color=ink_faded,
-        ha='center', va='center', fontfamily='serif', style='italic', zorder=43)
-ax.text(cartouche_x + cartouche_w / 2, cartouche_y + 5,
-        '\u2728  Where Memory Holds, There Law Endures  \u2728',
-        fontsize=5.5, color=gold_color,
-        ha='center', va='center', fontfamily='serif', style='italic', zorder=43)
+# Title text
+mid_cart = cx_cart + cw_cart/2
+ax.text(mid_cart, cy_cart+ch_cart-5.5, 'THE KNOWN WORLD',
+        fontsize=13.5, fontweight='bold', color=INK, ha='center',
+        va='center', fontfamily='serif', zorder=43,
+        path_effects=[pe.withStroke(linewidth=2.5, foreground=PARCH_LT)])
+ax.text(mid_cart, cy_cart+ch_cart-11, 'of the  ACK!MUD  Realm',
+        fontsize=9.0, color=INK_FADED, ha='center', va='center',
+        fontfamily='serif', style='italic', zorder=43)
+ax.text(mid_cart, cy_cart+5.5,
+        '\u2741  Where Memory Holds, There Law Endures  \u2741',
+        fontsize=5.8, color=GOLD, ha='center', va='center',
+        fontfamily='serif', style='italic', zorder=43)
 
-# ─── SCALE BAR ────────────────────────────────────────────────────────────────
-scale_x, scale_y = 14, 20
-ax.plot([scale_x, scale_x + 25], [scale_y, scale_y],
-        color=ink_color, linewidth=2.0, alpha=0.8, zorder=40)
-for tick_x in [scale_x, scale_x + 12.5, scale_x + 25]:
-    ax.plot([tick_x, tick_x], [scale_y - 0.8, scale_y + 0.8],
-            color=ink_color, linewidth=1.5, alpha=0.8, zorder=40)
-ax.text(scale_x, scale_y - 2.5, '0', fontsize=5.5, color=ink_color,
-        ha='center', fontfamily='serif', zorder=41)
-ax.text(scale_x + 12.5, scale_y - 2.5, '50 leagues', fontsize=5.5, color=ink_color,
-        ha='center', fontfamily='serif', zorder=41)
-ax.text(scale_x + 25, scale_y - 2.5, '100', fontsize=5.5, color=ink_color,
-        ha='center', fontfamily='serif', zorder=41)
-ax.text(scale_x + 12.5, scale_y + 2.5, 'SCALE', fontsize=5, color=ink_faded,
-        ha='center', style='italic', fontfamily='serif', zorder=41)
+# ═══════════════════════════════════════════════════════════
+#  LEGEND
+# ═══════════════════════════════════════════════════════════
+lx_leg, ly_leg = 13, 30
+lw_leg, lh_leg = 44, 62
 
-# ─── COMPASS ROSE ─────────────────────────────────────────────────────────────
-draw_compass_rose(ax, cx=215, cy=28, size=14)
+ax.add_patch(FancyBboxPatch(
+    (lx_leg, ly_leg), lw_leg, lh_leg,
+    boxstyle='round,pad=1.2',
+    facecolor=PARCH_LT, edgecolor=GOLD, linewidth=1.8, alpha=0.88, zorder=40))
+ax.add_patch(FancyBboxPatch(
+    (lx_leg+1.2, ly_leg+1.2), lw_leg-2.4, lh_leg-2.4,
+    boxstyle='round,pad=0.6',
+    facecolor='none', edgecolor=INK_LIGHT, linewidth=0.5, alpha=0.45, zorder=41))
 
-# ─── LEGEND ───────────────────────────────────────────────────────────────────
-leg_x, leg_y = 12, 30
-ax.add_patch(FancyBboxPatch((leg_x, leg_y), 42, 58,
-             boxstyle='round,pad=1', facecolor='#F5E8B0',
-             edgecolor=gold_color, linewidth=1.5, alpha=0.85, zorder=40))
-ax.text(leg_x + 21, leg_y + 54, 'LEGEND', fontsize=8, fontweight='bold',
-        color=ink_color, ha='center', fontfamily='serif', zorder=41)
+ax.text(lx_leg+lw_leg/2, ly_leg+lh_leg-5,
+        'LEGEND', fontsize=8.5, fontweight='bold', color=INK,
+        ha='center', fontfamily='serif', zorder=42,
+        path_effects=[pe.withStroke(linewidth=2, foreground=PARCH_LT)])
 
 legend_items = [
-    ('\u25A0', '#3A2510', 'City / Settlement'),
-    ('\u25B2', mountain_mid, 'Mountain Range'),
-    ('\u25CF', water_mid, 'Water / Oasis'),
-    ('\u25B2', '#C8A040', 'Sacred Pyramid'),
-    ('\u2620', void_color, 'Death / Void Zone'),
-    ('\u25A0', forest_dark, 'Ancient Forest'),
-    ('\u25A0', '#A05030', 'Scorched Wastes'),
-    ('\u25A0', salt_color, 'Salt Flats'),
-    ('\u25C6', gold_color, 'Shrine / Relic'),
-    ('---', desert_road, 'Caravan Road'),
-    ('---', road_color, 'Trade Road'),
-    ('---', lantern_col, 'Lantern Road'),
+    ('■', INK,        'City / Settlement'),
+    ('■', INK,        '★ = Capital City'),
+    ('▲', MTN_MID,    'Mountain Range'),
+    ('●', SEA_MID,    'Water / Oasis'),
+    ('▲', '#B09020',  'Sacred Pyramid'),
+    ('◆', '#7050B0',  'Sunken Sanctum'),
+    ('☠', VOID_COL,   'Void / Death Zone'),
+    ('■', FOREST_DARK,'Ancient Forest'),
+    ('■', SCORCH_COL, 'Scorched Wastes'),
+    ('■', SALT_COL,   'Salt Flats'),
+    ('◆', GOLD_LT,    'Shrine / Relic'),
+    ('—', '#8A6818',  'Lantern Road'),
+    ('—', '#7A5028',  'Trade Road'),
+    ('- -', DESERT_BRN,'Caravan Road'),
 ]
-for i, (sym, col, label) in enumerate(legend_items):
-    iy = leg_y + 48 - i * 4.3
-    if sym == '---':
-        ax.plot([leg_x + 2, leg_x + 8], [iy + 0.5, iy + 0.5],
-                color=col, linewidth=1.5, linestyle='--' if col == desert_road else '-',
-                alpha=0.8, zorder=41)
+for i, (sym, col, lbl) in enumerate(legend_items):
+    iy = ly_leg + lh_leg - 13 - i * 3.7
+    if sym in ('—', '- -'):
+        ls = '--' if '- -' in sym else '-'
+        ax.plot([lx_leg+3, lx_leg+10], [iy+0.4, iy+0.4],
+                color=col, linewidth=1.6, linestyle=ls, alpha=0.80, zorder=42)
     else:
-        ax.text(leg_x + 5, iy, sym, fontsize=7, color=col,
-                ha='center', va='center', zorder=41)
-    ax.text(leg_x + 11, iy, label, fontsize=5.5, color=ink_faded,
-            va='center', fontfamily='serif', zorder=41)
+        ax.text(lx_leg+6, iy+0.4, sym, fontsize=7, color=col,
+                ha='center', va='center', zorder=42)
+    ax.text(lx_leg+12, iy+0.4, lbl, fontsize=5.5, color=INK_FADED,
+            va='center', fontfamily='serif', zorder=42)
 
-# ─── LORE ANNOTATIONS (flavor text on map) ────────────────────────────────────
-lore_texts = [
-    (152, 114, '"Here the mountain bleeds fire\nand the sky remembers ash."', 4.5, '#5A2010'),
-    (100, 165, '"Where five covenants hold\none wall, one law."', 4.5, '#1A2A3A'),
-    (173, 72, '"The Black Sun consumes\nnames. Write in stone."', 4.5, '#8B0000'),
-    (80, 30, '"The dead keep better records\nthan the living."', 4.5, '#3A1A2A'),
-    (25, 102, '"Old Evermeet sings\nbeneath these foundations."', 4.5, '#3A2A1A'),
-    (155, 95, '"Measured thirst survives.\nUnmeasured thirst is war."', 4.5, '#6A4010'),
-]
-for (lx, ly, text, size, col) in lore_texts:
-    ax.add_patch(FancyBboxPatch((lx - 16, ly - 5), 32, 10,
-                 boxstyle='round,pad=0.5', facecolor='#F5E0A0',
-                 edgecolor=col, linewidth=0.5, alpha=0.55, zorder=19))
-    ax.text(lx, ly, text, fontsize=size, color=col, ha='center', va='center',
-            style='italic', fontfamily='serif', zorder=20)
+# ═══════════════════════════════════════════════════════════
+#  SCALE BAR
+# ═══════════════════════════════════════════════════════════
+sb_x, sb_y = 15, 22
+for xi, col_ in [(0, INK),(12.5, PARCH_LT),(12.5, INK)]:
+    ax.add_patch(mpatches.Rectangle(
+        (sb_x+xi, sb_y-1), 12.5, 2.0,
+        color=col_, alpha=0.85 if col_ == INK else 0.70, zorder=41))
+ax.add_patch(mpatches.Rectangle(
+    (sb_x, sb_y-1.2), 25, 2.4,
+    fill=False, edgecolor=INK, linewidth=0.8, alpha=0.75, zorder=42))
+for tick_x, tick_lbl in [(sb_x,'0'),(sb_x+12.5,'50'),(sb_x+25,'100')]:
+    ax.plot(tick_x, sb_y+1.2, '|', color=INK, markersize=4, alpha=0.75, zorder=42)
+    ax.text(tick_x, sb_y-2.5, tick_lbl, fontsize=5.5, color=INK,
+            ha='center', fontfamily='serif', zorder=43)
+ax.text(sb_x+12.5, sb_y+3.0, 'LEAGUES', fontsize=5.0, color=INK_FADED,
+        ha='center', style='italic', fontfamily='serif', zorder=43)
 
-# ─── ORNATE BORDER ────────────────────────────────────────────────────────────
-draw_border(ax)
+# ═══════════════════════════════════════════════════════════
+#  COMPASS ROSE
+# ═══════════════════════════════════════════════════════════
+compass_rose(ax, cx=218, cy=26, size=14)
 
-# ─── PUBLISHER FOOTER ────────────────────────────────────────────────────────
-ax.text(120, 7.5, 'Cartographed by the Granite Arcade of Midgaard  \u2014  Third Age, Containment Era',
-        fontsize=5.5, color=ink_faded, ha='center', style='italic',
-        fontfamily='serif', alpha=0.8, zorder=50)
+# ═══════════════════════════════════════════════════════════
+#  BORDER & FOOTER
+# ═══════════════════════════════════════════════════════════
+decorative_border(ax)
 
-# ══════════════════════════════════════════════════════════════════════════════
+ax.text(W/2, 7.8,
+        'Cartographed by the Granite Arcade of Midgaard'
+        '  \u2014  Third Age, Containment Era',
+        fontsize=5.8, color=INK_FADED, ha='center', style='italic',
+        fontfamily='serif', alpha=0.80, zorder=65)
+
+# ═══════════════════════════════════════════════════════════
 #  SAVE
-# ══════════════════════════════════════════════════════════════════════════════
-output_path = '/home/user/acktng/docs/world_map.png'
-plt.savefig(output_path, dpi=120, bbox_inches='tight',
-            facecolor=parchment_base, edgecolor='none')
+# ═══════════════════════════════════════════════════════════
+out = '/home/user/acktng/docs/world_map.png'
+plt.savefig(out, dpi=130, bbox_inches='tight',
+            facecolor=PARCH_PALE, edgecolor='none')
 plt.close()
-print(f"Map saved to {output_path}")
+print(f'Saved → {out}')
