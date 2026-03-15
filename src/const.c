@@ -166,7 +166,7 @@ const struct race_type race_table[MAX_RACE] = {
     19, 19, 19, 19, 19,
     RACE_MOD_NONE,
     /*
-     * racial wear slots  
+     * racial wear slots
      */
     {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
      TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
@@ -181,241 +181,137 @@ const struct race_type race_table[MAX_RACE] = {
     TRUE /* player race */
     },
 
+   /* Khenari — jackal-folk of Akh'enet: death-keepers, psychopomps, balance-walkers.
+    * WIS 22 grants: spell critical damage, spell critical.
+    * STR:12 INT:18 WIS:22 DEX:16 CON:16 = 84 */
    {
-    "Hlf", "Halfling", 3001, 0,
-    12, 22, 22, 12, 22,
-    RACE_MOD_SMALL | RACE_MOD_WOODLAND,
+    "Khn", "Khenari", 3001, 0,
+    12, 18, 22, 16, 16,
+    RACE_MOD_DARKNESS | RACE_MOD_TAIL,
     {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
      TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
-     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
-    MAX_CLASS, {1, 2, 0, 3, 4, 5},
-    "Thi, Mag, Cle, War, Psi, Pug",
-    "steal \'pick lock\' \'spell critical damage\' \'spell critical\' \'mystical potency\' counter",
-    ELE_EARTH | ELE_MENTAL,
-    ELE_FIRE | ELE_SHADOW,
-    ELE_EARTH | ELE_MENTAL,
-    ELE_FIRE | ELE_POISON,
-    TRUE},
-
-   {
-    "Dwf", "Dwarf", 7536, 0,
-    22, 12, 22, 12, 22,
-    RACE_MOD_SMALL | RACE_MOD_IMMUNE_POISON,
-    {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
-     TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
-     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
-    MAX_CLASS, {4, 1, 5, 3, 0, 2},
-    "War, Cle, Pug, Psi, Thi, Mag",
-    "\'enhanced damage\' counter \'spell critical damage\' \'spell critical\'",
-    ELE_EARTH | ELE_FIRE,
-    ELE_AIR | ELE_MENTAL,
-    ELE_EARTH | ELE_POISON,
-    ELE_AIR | ELE_WATER,
-    TRUE},
-
-   {
-    "Elf", "Elf", 9201, 0,
-    12, 22, 22, 22, 12,
-    RACE_MOD_SMALL | RACE_MOD_WOODLAND,
-    {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
-     TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
-     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
-    MAX_CLASS, {0, 4, 1, 2, 3, 5},
-    "Mag, Thi, War, Psi, Cle, Pug",
-    "\'enhanced critical\' \'mystical potency\' \'spell critical damage\' \'spell critical\'",
-    ELE_AIR | ELE_WATER,
-    ELE_FIRE | ELE_POISON,
-    ELE_AIR | ELE_MENTAL,
-    ELE_FIRE | ELE_SHADOW,
-    TRUE},
-
-   {
-    "Gno", "Gnome", 6015, 0,
-    12, 22, 22, 22, 12,
-    RACE_MOD_TINY | RACE_MOD_IMMUNE_POISON | RACE_MOD_DARKNESS,
-    {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
-     TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
-     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
+     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE},
     MAX_CLASS, {2, 0, 3, 4, 1, 5},
     "Cle, Psi, Mag, Thi, War, Pug",
-    "\'enhanced critical\' sneak \'mystical potency\' \'spell critical damage\' \'spell critical\'",
-    ELE_MENTAL | ELE_AIR,
-    ELE_EARTH | ELE_FIRE,
-    ELE_MENTAL | ELE_POISON,
-    ELE_EARTH | ELE_FIRE,
+    "sneak \'spell critical damage\' \'spell critical\'",
+    ELE_SHADOW | ELE_HOLY,   /* strong magic realms */
+    ELE_PHYSICAL | ELE_FIRE, /* weak */
+    ELE_SHADOW | ELE_MENTAL, /* resist */
+    ELE_FIRE | ELE_PHYSICAL, /* suscept */
     TRUE},
 
+   /* Khephari — scarab-beetle folk of the desert, reborn from the earth.
+    * STR 22 grants: enhanced damage.  CON 22 grants: counter.
+    * STR:22 INT:12 WIS:14 DEX:14 CON:22 = 84 */
    {
-    "Ogr", "Ogre", 3430, 0,
-    22, 12, 12, 22, 22,
-    RACE_MOD_WEAK_MAGIC  | RACE_MOD_LARGE | RACE_MOD_TOUGH_SKIN,
-    {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
-     TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
-     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
-    MAX_CLASS, {5, 1, 3, 2, 0, 4},
-    "Pug, War, Mag, Thi, Cle, Psi",
-    "\'enhanced damage\' \'shield block\' \'enhanced critical\' counter",
-    ELE_EARTH | ELE_POISON,
-    ELE_MENTAL | ELE_HOLY,
-    ELE_PHYSICAL | ELE_POISON,
-    ELE_MENTAL | ELE_HOLY,
-    TRUE},
-   {
-    "Drw", "Drow", 9201, 0,
-    12, 22, 12, 22, 22,
-    RACE_MOD_SLOW_HEAL | RACE_MOD_DARKNESS,
-    {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
-     TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
-     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
-    MAX_CLASS, {0, 4, 3, 2, 1, 5},
-    "Psi, Mag, War, Thi, Cle, Pug",
-    "\'enhanced critical\' \'mind bolt\' \'mystical potency\' counter",
-    ELE_SHADOW | ELE_POISON,
-    ELE_HOLY | ELE_FIRE,
-    ELE_SHADOW | ELE_MENTAL,
-    ELE_HOLY | ELE_FIRE,
-    TRUE},
-
-   {
-    "Lam", "Lamia", 3001, 0,
-    22, 12, 12, 22, 22,
-    RACE_MOD_LARGE | RACE_MOD_IMMUNE_POISON | RACE_MOD_TAIL | RACE_MOD_TOUGH_SKIN,
-    {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
-     TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
-     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE},
-    MAX_CLASS, {3, 5, 4, 0, 1, 2},
-    "Thi, Pug, War, Psi, Mag, Cle",
-    "dodge \'enhanced damage\' \'enhanced critical\' counter",
-    ELE_POISON | ELE_MENTAL,
-    ELE_FIRE | ELE_HOLY,
-    ELE_POISON | ELE_MENTAL,
-    ELE_FIRE | ELE_HOLY,
-    TRUE},
-
-   {
-    "Drc", "Dracon", 3001, 0,
-    22, 22, 12, 12, 22,
-    RACE_MOD_TOUGH_SKIN | RACE_MOD_SLOW_HEAL | RACE_MOD_LARGE | RACE_MOD_TAIL,
-    {TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE,
-     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
-     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE},
-    MAX_CLASS, {0, 1, 4, 2, 5, 3},
-    "Mag, Cle, War, Psi, Pug, Thi",
-    "fly \'fire breath\' \'enhanced damage\' \'mystical potency\' counter",
-    ELE_FIRE | ELE_AIR,
-    ELE_WATER | ELE_MENTAL,
-    ELE_FIRE | ELE_PHYSICAL,
-    ELE_WATER | ELE_MENTAL,
-    TRUE},
-
-   {
-    "Cen", "Centaur", 3001, 0,
-    22, 12, 22, 12, 22,
-    RACE_MOD_LARGE | RACE_MOD_WOODLAND,
-    {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
-     TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
-     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE},
-    MAX_CLASS, {1, 5, 3, 2, 0, 4},
-    "War, Pug, Cle, Thi, Mag, Psi",
-    "hunt \'enhanced damage\' \'spell critical damage\' \'spell critical\'",
-    ELE_EARTH | ELE_AIR,
-    ELE_FIRE | ELE_POISON,
-    ELE_EARTH | ELE_MENTAL,
-    ELE_FIRE | ELE_POISON,
-    TRUE},
-
-   {
-    "Ttn", "Titan", 3001, 0,
-    22, 12, 12, 22, 22,
-    RACE_MOD_HUGE | RACE_MOD_TOUGH_SKIN,
-    {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
-     TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
-     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
-    MAX_CLASS, {5, 2, 3, 4, 0, 1},
-    "Pug, War, Psi, Mag, Cle, Thi",
-    "\'enhanced damage\' \'enhanced critical\' counter",
-    ELE_EARTH | ELE_AIR,
-    ELE_MENTAL | ELE_SHADOW,
-    ELE_EARTH | ELE_PHYSICAL,
-    ELE_MENTAL | ELE_POISON,
-    TRUE},
-
-   {
-    "Sde", "Sidhe", 3001, 0,
-    12, 22, 22, 22, 12,
-    RACE_MOD_TINY,
-    {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
-     TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
-     TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE},
-    MAX_CLASS, {2, 3, 1, 4, 5, 0},
-    "Psi, Thi, Mag, Cle, Pug, War",
-    "\'enhanced critical\' \'spell critical\' \'mystical potency\' \'spell critical damage\'",
-    ELE_MENTAL | ELE_WATER,
-    ELE_FIRE | ELE_EARTH,
-    ELE_MENTAL | ELE_AIR,
-    ELE_FIRE | ELE_EARTH,
-    TRUE},
-
-   {
-    "Min", "Minotaur", 3001, 0,
-    22, 12, 12, 22, 22,
-    RACE_MOD_LARGE | RACE_MOD_TOUGH_SKIN | RACE_MOD_DARKNESS,
+    "Kph", "Khephari", 3001, 0,
+    22, 12, 14, 14, 22,
+    RACE_MOD_LARGE | RACE_MOD_TOUGH_SKIN,
     {TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE,
-     TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
-     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE},
-    MAX_CLASS, {1, 5, 2, 4, 0, 3},
-    "War, Pug, Mag, Cle, Psi, Thi",
-    "\'enhanced damage\' \'enhanced critical\' counter",
-    ELE_EARTH | ELE_SHADOW,
-    ELE_MENTAL | ELE_HOLY,
-    ELE_EARTH | ELE_PHYSICAL,
-    ELE_MENTAL | ELE_HOLY,
-    TRUE},
-   {
-    "Trl", "Troll", 3001, 0,
-    22, 12, 12, 22, 22,
-    RACE_MOD_FAST_HEAL | RACE_MOD_LARGE | RACE_MOD_DARKNESS | RACE_MOD_TOUGH_SKIN,
-    {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
-     TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
+     TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
-    MAX_CLASS, {5, 1, 2, 4, 0, 3},
-    "Pug, War, Cle, Thi, Psi, Mag",
-    "\'stone skin\' \'enhanced damage\' \'enhanced critical\' counter",
-    ELE_WATER | ELE_POISON,
-    ELE_FIRE | ELE_HOLY,
-    ELE_EARTH | ELE_POISON,
-    ELE_FIRE | ELE_HOLY,
+    MAX_CLASS, {4, 3, 2, 0, 5, 1},
+    "War, Pug, Thi, Cle, Mag, Psi",
+    "\'enhanced damage\' counter",
+    ELE_EARTH | ELE_POISON,  /* strong magic realms */
+    ELE_AIR | ELE_MENTAL,    /* weak */
+    ELE_EARTH | ELE_POISON,  /* resist */
+    ELE_AIR | ELE_FIRE,      /* suscept */
     TRUE},
-   {
-    "Und", "Undead", 3001, 0,
-    22, 11, 18, 18, 22,
-    RACE_MOD_DARKNESS | RACE_MOD_IMMUNE_POISON,
-    {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
-     TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
-     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
-    MAX_CLASS, {5, 1, 2, 4, 0, 3},
-    "Pug, War, Cle, Thi, Psi, Mag",
-    "",
-    ELE_SHADOW | ELE_POISON,
-    ELE_HOLY | ELE_FIRE,
-    ELE_SHADOW | ELE_POISON,
-    ELE_HOLY | ELE_FIRE,
-    FALSE},
 
+   /* Ashborn — volcanic fire-kin of the Cinderteeth Mountains.
+    * STR 22 grants: enhanced damage.  CON 22 grants: counter.
+    * STR:22 INT:16 WIS:10 DEX:14 CON:22 = 84 */
    {
-    "Gar", "Gargoyle", 3001, 0,
-    22, 22, 12, 12, 22,
-    RACE_MOD_TOUGH_SKIN | RACE_MOD_SLOW_HEAL | RACE_MOD_LARGE,
-    {TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE,
-     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, FALSE, FALSE,
+    "Asb", "Ashborn", 3001, 0,
+    22, 16, 10, 14, 22,
+    RACE_MOD_LARGE | RACE_MOD_TOUGH_SKIN,
+    {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
+     TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
-    MAX_CLASS, {0, 1, 4, 5, 2, 3},
-    "Mag, War, Psi, Pug, Cle, Thi",
-    "fly \'stone skin\' \'enhanced damage\' \'mystical potency\' counter",
-    ELE_EARTH | ELE_AIR,
-    ELE_MENTAL | ELE_WATER,
-    ELE_EARTH | ELE_FIRE,
-    ELE_MENTAL | ELE_WATER,
+    MAX_CLASS, {2, 3, 4, 0, 5, 1},
+    "War, Pug, Mag, Cle, Thi, Psi",
+    "\'fire breath\' \'enhanced damage\' counter",
+    ELE_FIRE | ELE_EARTH,    /* strong magic realms */
+    ELE_WATER | ELE_MENTAL,  /* weak */
+    ELE_FIRE | ELE_PHYSICAL, /* resist */
+    ELE_WATER | ELE_AIR,     /* suscept */
+    TRUE},
+
+   /* Umbral — shadow-walkers shaped by the Black Sun Shard and the Gloamvault.
+    * INT 22 grants: mystical potency.  DEX 22 grants: enhanced critical.
+    * STR:10 INT:22 WIS:14 DEX:22 CON:16 = 84 */
+   {
+    "Umb", "Umbral", 3001, 0,
+    10, 22, 14, 22, 16,
+    RACE_MOD_DARKNESS | RACE_MOD_SLOW_HEAL,
+    {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
+     TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
+     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
+    MAX_CLASS, {0, 3, 2, 4, 1, 5},
+    "Mag, Psi, Thi, Cle, War, Pug",
+    "sneak \'mystical potency\' \'enhanced critical\'",
+    ELE_SHADOW | ELE_MENTAL, /* strong magic realms */
+    ELE_HOLY | ELE_PHYSICAL, /* weak */
+    ELE_SHADOW | ELE_MENTAL, /* resist */
+    ELE_HOLY | ELE_FIRE,     /* suscept */
+    TRUE},
+
+   /* Rivennid — fungal mycelians born of the Conclave's abandoned trials in the Withered Depths.
+    * INT 22 grants: mystical potency.  CON 22 grants: counter.
+    * STR:14 INT:22 WIS:14 DEX:12 CON:22 = 84 */
+   {
+    "Rvn", "Rivennid", 3001, 0,
+    14, 22, 14, 12, 22,
+    RACE_MOD_DARKNESS | RACE_MOD_TOUGH_SKIN,
+    {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
+     TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
+     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
+    MAX_CLASS, {0, 2, 3, 4, 1, 5},
+    "Mag, Psi, Cle, Thi, War, Pug",
+    "\'mystical potency\' counter",
+    ELE_EARTH | ELE_POISON,  /* strong magic realms */
+    ELE_FIRE | ELE_AIR,      /* weak */
+    ELE_POISON | ELE_EARTH,  /* resist */
+    ELE_FIRE | ELE_HOLY,     /* suscept */
+    TRUE},
+
+   /* Deltari — river delta folk of Kowloon, water-wise traders and Reed Ledger heirs.
+    * WIS 22 grants: spell critical damage, spell critical.
+    * STR:12 INT:18 WIS:22 DEX:18 CON:14 = 84 */
+   {
+    "Del", "Deltari", 3001, 0,
+    12, 18, 22, 18, 14,
+    RACE_MOD_NONE,
+    {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
+     TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
+     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
+    MAX_CLASS, {3, 0, 2, 4, 1, 5},
+    "Cle, Psi, Thi, Mag, War, Pug",
+    "hunt \'spell critical damage\' \'spell critical\'",
+    ELE_WATER | ELE_MENTAL,  /* strong magic realms */
+    ELE_FIRE | ELE_EARTH,    /* weak */
+    ELE_WATER | ELE_POISON,  /* resist */
+    ELE_FIRE | ELE_EARTH,    /* suscept */
+    TRUE},
+
+   /* Ushabti — animated stone guardians of the Great Pyramid, vessels of cosmic law.
+    * STR 22 grants: enhanced damage.  WIS 22 grants: spell critical damage, spell critical.
+    * STR:22 INT:12 WIS:22 DEX:10 CON:18 = 84 */
+   {
+    "Ush", "Ushabti", 3001, 0,
+    22, 12, 22, 10, 18,
+    RACE_MOD_HUGE | RACE_MOD_SLOW_HEAL | RACE_MOD_STONE_SKIN,
+    {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
+     TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
+     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
+    MAX_CLASS, {3, 1, 4, 0, 5, 2},
+    "War, Cle, Pug, Mag, Thi, Psi",
+    "\'stone skin\' \'enhanced damage\' \'spell critical damage\' \'spell critical\'",
+    ELE_EARTH | ELE_HOLY,    /* strong magic realms */
+    ELE_SHADOW | ELE_WATER,  /* weak */
+    ELE_EARTH | ELE_PHYSICAL,/* resist */
+    ELE_SHADOW | ELE_MENTAL, /* suscept */
     TRUE},
 
 };
