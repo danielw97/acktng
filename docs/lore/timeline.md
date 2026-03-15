@@ -519,28 +519,28 @@ Sources: cinderteeth_mountains_lore, sunken_sanctum_lore, kowloon_lore, great_no
 | violet_eclipse_cathedral_lore | Eras XV, XVI |
 | umbra_heartspire_lore | Eras XV, XVI |
 | catacombs_of_nightfall_lore | Eras XIII, XV |
-| warrior | Eras II, VII, XIX |
-| cleric | Eras VII, XV |
-| monk | Era XI |
-| grand_magi | Eras XV, XIX |
-| thief | Era VII |
-| mage | Era XV |
-| sorcerer | Era XV |
-| wizard | Era XV |
-| brawler | Era XI |
+| warrior_lore | Eras II, VII, XIX |
+| cleric_lore | Eras III, VII, XII, XIV |
+| monk_lore | Eras I, II, VII, XI, XIX |
+| grand_magi_lore | Eras III, X, XII, XV, XIX |
+| thief_lore | Eras II, VII, IX, XII |
+| mage_lore | Eras X, XII, XV |
+| sorcerer_lore | Eras X, XII, XV, XIX |
+| wizard_lore | Eras X, XII, XV |
+| brawler_lore | Eras III, XI, XIX |
 | pugilist | Era II |
-| knight | Eras XII, XIX |
-| paladin | Era XIII |
-| swordsman | Eras XII, XIX |
-| assassin | Eras I, XI |
-| nightblade | Era XI |
-| priest | Era XIII |
-| crusader | Eras III, XIX |
-| templar | Eras III, XV |
-| necromancer | Era X |
-| martial_artist | Eras XI, XIX |
-| egomancer | Era XV |
-| kinetimancer | Era XV |
-| psionicist | Eras X, XV |
-| warlock | Era XI |
+| knight_lore | Eras VII, XI, XII, XIX |
+| paladin_lore | Eras III, VIII, XIII, XIV |
+| swordsman_lore | Eras IV, XII, XIX |
+| assassin_lore | Eras I, VII, XII |
+| nightblade_lore | Eras XI, XII |
+| priest_lore | Eras III, XIII, XIV |
+| crusader_lore | Eras III, XI, XII, XV, XIX |
+| templar_lore | Eras III, VIII, XII, XIV |
+| necromancer_lore | Eras III, X, XII |
+| martial_artist_lore | Eras XI, XIX |
+| egomancer_lore | Eras XII, XV |
+| kinetimancer_lore | Eras XII, XV |
+| psionicist_lore | Eras VI, X, XII, XV |
+| warlock_lore | Eras XI, XII |
 | cinderteeth_mountains_lore | Eras I, II, X, XI, XII, XIII, XIV, XV, XVI, XIX, XX, XXI |
