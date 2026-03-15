@@ -44,7 +44,7 @@ The `area.lst` file must remain in non-decreasing order by `V` minimum vnum (see
 | `kiess.are` | 13000–13099 | 0 (city) | Kiess | `kiess` |
 | `kowloon.are` | 14000–14099 | 1–170 | Kowloon | `kowloon` |
 | `great_northern_forest.are` | 15500–15999 | 1–170 | The Great Northern Forest | `greatnorthernforest` |
-| `asylum_inside.are` | 16000–16099 | 75–95 | The Miskatonic Asylum | `asyluminside` |
+| `rakuen.are` | 16000–16199 | 45–95 | Rakuen, City of the Last Promise | `rakuen` |
 | `arroyo.are` | 19900–20024 | 55–75 | The Arroyo | `arroyo` |
 | `newschool.are` | 20200–20299 | 1–10 | Academy of Adventure | `soeacademy` |
 | `vecna_tomb.are` | 20600–20799 | 95–110 | The Tomb of Vecna the Lich | `vecna` |
@@ -67,4 +67,4 @@ The `area.lst` file must remain in non-decreasing order by `V` minimum vnum (see
 - Vnum ranges may overlap between adjacent areas (e.g., `kelshadra` 9400–9549 and `sunken_sanctum` 9500–9599 share 9500–9549 as an envelope). Overlapping envelopes are legal as long as no two areas define the same individual room, mobile, or object vnum.
 - `area.lst` ordering is validated by `test_area_format.c`: each area's `V` minimum must be ≥ the previous area's `V` minimum; ties are broken by `V` maximum. See `area_file_spec.md` §13.
 - `wood.are` was expanded from `V 7300 7399` to `V 7300 7699` as part of the Eccentric Woodland rebuild. The gap between `wood.are` (–7699) and `crimson_mist.are` (8350–) leaves room 7700–8349 unallocated.
-- Planned future area: **Rakuen** (working title) will occupy a vnum range above 14099. The Eccentric Woodland plan reserves room `14600` as the Rakuen north dispatch gate entry point (`7698 south → 14600`); the Rakuen area file must assign `V` to cover at least that vnum.
+- **Rakuen** (`rakuen.are`, vnums 16000–16199) is the Eccentric Woodland's southern neighbor. Room 16000 is the North Dispatch Gate entry, connected bidirectionally to `wood` 7698 (`7698 south → 16000`, `16000 north → 7698`).

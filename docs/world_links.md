@@ -35,11 +35,12 @@ Room 3190 ("The Southern Wild Gate") in `midgaard.are` has exit D2 (south) desti
 | From | Dir | To | Notes | Status |
 |------|-----|----|-------|--------|
 | `wood` 7302 | north | `midgaard` 3190 | Woodland entry ↔ Southern Wild Gate | Active |
-| `wood` 7698 | south | Rakuen 14600 | Woodland south exit → Rakuen North Dispatch Gate | Planned |
+| `wood` 7698 | south | `rakuen` 16000 | Woodland south exit ↔ Rakuen North Dispatch Gate | Active |
+| `rakuen` 16000 | north | `wood` 7698 | Rakuen North Dispatch Gate ↔ Woodland south exit | Active |
 
 The north link (`7302 ↔ 3190`) is the primary canonical entry and must never be removed without updating `midgaard.are` room 3190 D2.
 
-The south link (`7698 → 14600`) requires building the reverse (`14600 north → 7698`) when the Rakuen area is implemented. Until then, 7698's south exit is a one-way planned stub.
+The south link (`7698 ↔ 16000`) is bidirectional: `wood` 7698 D2(south) → 16000 and `rakuen` 16000 D0(north) → 7698.
 
 ### Legacy Links from Old wood.are (Deprecated by Rebuild)
 
@@ -122,6 +123,7 @@ The old `wood.are` (vnums 7300–7399) had the following bidirectional cross-are
 | `violet_eclipse_cathedral` 30250 | `rocroad` 3202 | Cathedral ↔ Roc Road |
 | `sultans_palace` 30325 | `eastern_desert` 8504 | Sultan's Palace ↔ Eastern Desert |
 | `lost_city` 30400 | `eastern_desert` 8523 | Lost City ↔ Eastern Desert |
+| `wood` 7698 | `rakuen` 16000 | Eccentric Woodland ↔ Rakuen |
 
 ---
 
@@ -129,4 +131,4 @@ The old `wood.are` (vnums 7300–7399) had the following bidirectional cross-are
 
 | From | Dir | To | Notes |
 |------|-----|----|-------|
-| `wood` 7698 | south | Rakuen 14600 | Eccentric Woodland south exit to Rakuen North Dispatch Gate. Requires a future Rakuen area file with `V` covering 14600 and a reverse exit `14600 north → 7698`. |
+| *(none)* | — | — | All previously planned links are now active. |
