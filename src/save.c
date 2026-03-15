@@ -870,6 +870,16 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       }
    }
 
+   if (found && (ch->race < 0 || ch->race >= MAX_RACE))
+   {
+      char buf[MAX_STRING_LENGTH];
+      snprintf(buf, sizeof(buf),
+         "load_char_obj: %s had invalid race %d, resetting to Human.",
+         ch->name ? ch->name : "(unknown)", ch->race);
+      monitor_chan(buf, MONITOR_BAD);
+      ch->race = 0;
+   }
+
    return found;
 }
 
