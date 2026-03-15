@@ -34,6 +34,11 @@ A sloped ramp drops toward lower basin lanes.
 ~
 ~
 0 -1 2549
+D3
+The causeway route leads west out of the oasis toward the Saltglass Reach approach corridor.
+~
+~
+0 -1 5742
 E
 patrol web~
 Carved arrows preserve a linear route with deliberate side links for rapid patrol rotation.~

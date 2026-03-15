@@ -2165,6 +2165,11 @@ Footprints descend where the route steps into the next grid lane.
 ~
 ~
 0 -1 2047
+D3
+The approach road leads west out of the oasis toward the Saltglass Reach corridor.
+~
+~
+0 -1 5739
 E
 banners~
 Close inspection of the nearest @@lbright blue@@N banner reveals route-marks and painted arrows indicating the intended progression: west-to-east across a row, then south to the next.

@@ -46,12 +46,13 @@ The south link (`1830 ↔ 4239`) is bidirectional: `wood` 1830 D2(south) → 423
 
 The old `wood.are` (vnums 1432–1531) had bidirectional cross-area connections that were removed when `wood.are` was rebuilt. Two external areas that still exist retain orphaned exits pointing into the woodland; those exits land in rooms with different names and no reverse connection.
 
-| External Area | Ext Room | Destination | Old Woodland Room Purpose | Status |
-|--------------|----------|-------------|--------------------------|--------|
-| `sunken_sanctum` 2266 | → | `wood` 1455 | Old woodland side-exit (sanctum passage) | **Deprecated** |
-| `kelshadra` 2232 | → | `wood` 1456 | Old woodland side-exit (Kel'Shadra passage) | **Deprecated** |
+| External Area | Ext Room | Dir | Destination | Old Woodland Room Purpose | Status |
+|--------------|----------|-----|-------------|--------------------------|--------|
+| `sunken_sanctum` 2266 | D2 (south) | → | `wood` 1455 | Old woodland side-exit (sanctum passage) | **Deprecated** |
+| `kelshadra` 2232 | D0 (north) | → | `wood` 1456 | Old woodland side-exit (Kel'Shadra passage) | **Deprecated** |
+| `kelshadra` 2232 | D4 (up) | → | `wood` 1456 | Same destination as D0 above; second exit in same room | **Deprecated** |
 
-**Action required (future work):** Each external area listed above should have its inbound exit to the woodland removed or redirected. Until that cleanup occurs, players using those exits will arrive in a Zone A/B room in the new Eccentric Woodland with no return path.
+**Action required (future work):** Each external area listed above should have its inbound exits to the woodland removed or redirected. Until that cleanup occurs, players using those exits will arrive in a Zone A/B room in the new Eccentric Woodland with no return path.
 
 ---
 
@@ -64,6 +65,59 @@ The old `wood.are` (vnums 1432–1531) had bidirectional cross-area connections 
 
 ---
 
+## Forest Cluster — confusn / verdantgreen / withered_depths / great_northern_forest
+
+The Forest of Confusion (2339–2538), Verdant Depths (2739–2938), Withered Depths, and Great Northern Forest (3739–4238) are all part of the same continental forest system. All cross-area exits within this cluster are bidirectional.
+
+| From | Dir | To | Notes | Status |
+|------|-----|----|-------|--------|
+| `confusn` 2340 | west | `kiess` 3344 | Forest of Confusion ↔ Kiess | Active |
+| `kiess` 3344 | north | `confusn` 2340 | Kiess ↔ Forest of Confusion | Active |
+| `confusn` 2434 | east | `verdantgreen` 2739 | Forest of Confusion ↔ Verdant Depths (west entry) | Active |
+| `verdantgreen` 2739 | west | `confusn` 2434 | Verdant Depths ↔ Forest of Confusion (west entry) | Active |
+| `confusn` 2434 | south | `withered_depths` 291 | Forest of Confusion ↔ Withered Depths | Active |
+| `withered_depths` 291 | north | `confusn` 2434 | Withered Depths ↔ Forest of Confusion | Active |
+| `confusn` 2509 | south | `verdantgreen` 2801 | Forest of Confusion ↔ Verdant Depths (south entry) | Active |
+| `verdantgreen` 2801 | north | `confusn` 2509 | Verdant Depths ↔ Forest of Confusion (south entry) | Active |
+| `confusn` 2537 | north | `great_northern_forest` 3739 | Forest of Confusion ↔ Great Northern Forest (continental link) | Active |
+| `great_northern_forest` 3739 | south | `confusn` 2537 | Great Northern Forest ↔ Forest of Confusion | Active |
+
+**Note:** `withered_depths` room 291 has two exits pointing to `confusn` 2434: D0 (north) and D3 (west). Both land in the same room. Only D0 is the canonical reverse of `confusn` 2434 D2 (south).
+
+---
+
+## Oasis-Pyramid Corridor
+
+### Great Oasis (1932–2031)
+
+| From | Dir | To | Notes | Status |
+|------|-----|----|-------|--------|
+| `eastern_desert` 1851 | — | `the_great_oasis` 1932 | Eastern Desert ↔ Great Oasis | Active |
+| `the_great_oasis` 1932 | — | `eastern_desert` 1851 | Great Oasis ↔ Eastern Desert | Active |
+| `the_great_oasis` 1933–1941 | — | `the_northern_oasis` 2212–2220 | Great Oasis ↔ Northern Oasis (10 bidirectional pairs) | Active |
+| `the_great_oasis` 2031 | — | `the_southern_oasis` 2539 | Great Oasis ↔ Southern Oasis | Active |
+| `the_great_oasis` 1973 | north | `pyramid` 5511 | Great Oasis Outer Portico ↔ Great Pyramid Desert Approach | Active |
+| `pyramid` 5511 | south | `the_great_oasis` 1973 | Great Pyramid Desert Approach ↔ Great Oasis | Active |
+
+### Northern Oasis (2032–2231)
+
+| From | Dir | To | Notes | Status |
+|------|-----|----|-------|--------|
+| `northern_pyramid` 2895 | — | `the_northern_oasis` 2211 | Northern Pyramid ↔ Northern Oasis | Active |
+| `the_northern_oasis` 2032 | west | `saltglass_reach` 5739 | Northern Oasis entry ↔ Saltglass Reach Northern Approach | Active |
+| `saltglass_reach` 5739 | north | `the_northern_oasis` 2032 | Saltglass Reach Northern Approach ↔ Northern Oasis | Active |
+
+### Southern Oasis (2539–2738)
+
+| From | Dir | To | Notes | Status |
+|------|-----|----|-------|--------|
+| `southern_pyramid` 3140 | — | `the_southern_oasis` 2558 | Southern Pyramid ↔ Southern Oasis (Reedbound Span of Lantern) | Active |
+| `the_southern_oasis` 2558 | — | `southern_pyramid` 3140 | Southern Oasis Reedbound Span ↔ Southern Pyramid | Active |
+| `the_southern_oasis` 2539 | west | `saltglass_reach` 5742 | Southern Oasis entry ↔ Saltglass Reach Southern Approach | Active |
+| `saltglass_reach` 5742 | south | `the_southern_oasis` 2539 | Saltglass Reach Southern Approach ↔ Southern Oasis | Active |
+
+---
+
 ## Other Active Cross-Area Links (summary)
 
 | From | To | Notes |
@@ -72,23 +126,26 @@ The old `wood.are` (vnums 1432–1531) had bidirectional cross-area connections 
 | `playerhousing` 87 | `midgaard` 917 | Housing ↔ Midgaard |
 | `voidcitadel` 88 | `midgaard` 1148 | Void Citadel ↔ Midgaard |
 | `voidcitadel`/`umbra_heartspire` 3064 | `midgaard` 1148 | Heartspire ↔ Midgaard |
-| `withered_depths` 291 | `confusn` 2434 | Withered Depths ↔ Forest of Confusion |
-| `verdantgreen` 2739 | `confusn` 2434 | Verdant Depths ↔ Forest of Confusion |
 | `akhenet` 792 | `eastern_desert` 1840 | Akh'enet ↔ Eastern Desert |
+| `eastern_desert` 1871 | `khardaan` 5624 | Eastern Desert ↔ Khar'Daan (down shaft) |
+| `khardaan` 5624 | `eastern_desert` 1871 | Khar'Daan ↔ Eastern Desert (up shaft) |
 | `eastern_desert` 1835 | `arroyo` 4439 | Eastern Desert ↔ Arroyo |
 | `eastern_desert` 1836 | `sultans_palace` 5256 | Eastern Desert ↔ Sultan's Palace |
 | `eastern_desert` 1839 | `scorched_wastes` 4881 | Eastern Desert ↔ Scorched Wastes |
-| `eastern_desert` 1851 | `the_great_oasis` 1932 | Eastern Desert ↔ Great Oasis |
+| `eastern_desert` 1851 | `scorchsands` 4956 | Eastern Desert ↔ Scorching Sands (south exit) |
 | `eastern_desert` 1855 | `lost_city` 5331 | Eastern Desert ↔ Lost City |
-| `the_great_oasis` 1933–1941 | `the_northern_oasis` 2212–2220 | Great Oasis ↔ Northern Oasis (multi) |
-| `the_great_oasis` 2031 | `the_southern_oasis` 2539 | Great Oasis ↔ Southern Oasis |
-| `kelshadra` 2232 | `wood` 1456 | **Deprecated** (see above) |
-| `sunken_sanctum` 2266 | `wood` 1455 | **Deprecated** (see above) |
+| `scorchsands` 4956 | `eastern_desert` 1851 | Scorching Sands ↔ Eastern Desert |
+| `scorchsands` 5030 | `saltglass_reach` 5724 | Scorching Sands ↔ Saltglass Reach |
+| `saltglass_reach` 5724 | `scorchsands` 5030 | Saltglass Reach ↔ Scorching Sands (west entry) |
+| `saltglass_reach` 6123 | `mafdet` 3539 | Saltglass Reach ↔ Port Mafdet |
+| `mafdet` 3539 | `saltglass_reach` 6123 | Port Mafdet ↔ Saltglass Reach |
+| `kelshadra` 2232 | `wood` 1456 | **Deprecated** (see Eccentric Woodland section) |
+| `sunken_sanctum` 2266 | `wood` 1455 | **Deprecated** (see Eccentric Woodland section) |
 | `pubdun` 2294 | `midgaard` 930 | Public Dungeons ↔ Midgaard |
-| `northern_pyramid` 2895 | `the_northern_oasis` 2211 | Northern Pyramid ↔ Northern Oasis |
 | `kiess` 3398 | `rocroad` 1159 | Kiess ↔ Roc Road |
 | `kowloon` 3534 | `great_northern_forest` 4233 | Kowloon ↔ GNF |
 | `newschool` 4564 | `forest_preserve` 4631 | Academy ↔ Forest Preserve |
+| `newschool` 4586 | `midgaard` 1026 | Academy (room 4586) → Midgaard (one-way secondary exit, no reverse) |
 | `nightfall_catacombs` 4681 | `midgaard` 941 | Catacombs ↔ Midgaard |
 | `gloamvault` 5031 | `midgaard` 921 | Gloamvault ↔ Midgaard |
 | `sepulcher_pasture` 5106 | `midgaard` 946 | Sepulcher Pasture ↔ Midgaard |
