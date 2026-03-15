@@ -174,3 +174,117 @@ Six thematic colors anchor Thornwood's visual identity. Each maps to a specific 
 ### Sepulchur Pasture
 - Thornwood offers the third funerary model in the regional continuum. Objects and room extras should make clear that Thornwood's deferred-naming system predates and may have inspired Sepulchur Pasture's equivalent. The difference: Sepulchur Pasture has an appeals process. Thornwood does not — the substrate is not a bureaucracy, it is geology.
 
+---
+
+## Spatial Topology and Zone Map
+
+Thornwood uses a **radial-branching topology** with the Forecourt of Inheritance (1158) as the central hub. Zones extend outward and downward from this hub. No zone is a dead end. The mire wraps around the eastern and southern margins, connecting back to the gravewood and burial fields to form a loop that is not a directional loop (each connection uses a different pair of rooms). The cave system descends below the ossuary and terminates at the sealed chamber.
+
+### Zone Summary Table
+
+| Zone | Vnums | Theme | Dominant Logic | Threat Tier |
+|------|-------|-------|---------------|-------------|
+| I. Harren Approach | 1150–1157 | Entry corridor, grave tunnel hinge, outer perimeter | Manorial + Forest | 50–55 |
+| II. The Estate Surface | 1158–1179 | Manor house, outbuildings, chapel, gardens — frozen at Reversal | Manorial + Funerary | 55–65 |
+| III. Charnel Verge and Burial Fields | 1180–1197 | Death throughput zone, deferred-name graves, bone processing | Funerary dominant | 60–68 |
+| IV. The Older Gravewood | 1198–1215 | Pre-estate ridge-clan burial ground, Root Covenant sites, shaman territory | Forest dominant | 62–70 |
+| V. The Mire | 1216–1231 | Peripheral wetland, fog shrine, substrate drainage, unstable terrain | Forest + Substrate | 62–70 |
+| VI. Ossuary Undercroft | 1232–1249 | Bone weaver workshops, marrow construct storage, drain passages | Funerary + Substrate | 65–72 |
+| VII. Cave System and Substrate Core | 1250–1270 | Crystal passages, handprint cave, high ledge, sealed chamber | Substrate dominant | 68–80 |
+| VIII. Wild Hunt Patrol Routes | 1271–1280 | Night-only enforcement paths, birch roads, Hunt departure points | Forest + Substrate | 68–74 |
+| IX. Perimeter and Auxiliary Rooms | 1281–1299 | Wall walks, timber stands, cult assembly grounds, archive alcoves, family crypt | All four logics | 55–68 |
+
+### Connectivity Rules
+
+- **Main progression spine:** Entry (Zone I) → Estate Surface hub (Zone II) → branches simultaneously to Charnel Fields (III), Gravewood (IV), and Ossuary descent (VI). The mire (V) is accessible from both the burial fields (III) and the gravewood (IV). The cave (VII) is accessible only from deep within the ossuary (VI). The Wild Hunt routes (VIII) are accessible from the burial fields (III) and gravewood (IV).
+- **No directional loops.** The mire connects to both zones III and IV, but the connections use different room pairs, so repeated movement in one direction does not cycle back.
+- **Depth gates.** The wine cellar (1169) in the estate surface connects down to the ossuary undercroft (1232). The cave system entry (1249) is accessible only from the deepest ossuary room (1248). The sealed chamber (1268) is accessible only through the threshold of the binding (1267), which requires the Harren Estate Register Key (object 1220).
+- **Lateral shortcuts.** The tunnel hinge (1150) provides an external south exit for players to leave the area. The grave tunnel surface exit (1197) in the burial fields connects back up to room 1150, providing an alternate egress from the burial field zone without backtracking through the manor.
+- **Night-only access.** Wild Hunt patrol rooms (1271–1280) are not locked during the day but the Wild Hunt Master and Riders only spawn at night. The approach road phantom (mob 1154) patrols Zone I by night only.
+- **The mire's unstable terrain.** Mire rooms carry `cold` and `dark` room flags to signal hazard. No maze flag is used — the instability is expressed through mob pressure (mire lurkers, deep mire shades) and room descriptions, not disorienting exits.
+
+### Topology Diagram (Schematic)
+
+```
+[Outside / Grave Tunnel Network]
+          |
+     down | up
+          |
+    1150 Grave Tunnel Hinge
+          | north
+    1151 Outer Cobblestone Road
+          | north
+    1152 Iron Gate of Thornwood ←→ 1153 Gatewarden's Lodge
+          | north
+    1154 Forecourt Approach ←→ 1155 North Thorn-Hedge Wall
+          |                  ←→ 1156 South Thorn-Hedge Wall
+          | north
+    1157 Lantern Alley
+          | north
+    1158 Forecourt of Inheritance (CENTRAL HUB)
+   /      |      \       \
+west    north    east    down (via 1169 Wine Cellar)
+  |       |       |            |
+1170   1159     1171      1232 Undercroft Stairs
+Service Thorn    Charnel        → ZONE VI (Ossuary)
+ Yard  Portico  Verge Gate       → ZONE VII (Cave, via 1249)
+  |       |       |
+1171   1160     1181
+  ...  Great   Charnel Verge
+       Hall      → ZONE III (Burial Fields)
+         |         → ZONE VIII (Wild Hunt, via 1271)
+    [ZONE II interior]
+    (manor rooms 1160-1168,
+     chapel 1166-1167,
+     study 1162, gallery 1165,
+     kitchen 1168, wine cellar 1169,
+     outbuildings 1170-1179)
+         |
+    1158 hub also connects:
+         | northwest
+    1198 Gravewood Threshold
+         → ZONE IV (Older Gravewood)
+           → ZONE V (Mire, via 1207 and 1216)
+
+ZONE III (Burial Fields, 1180-1197)
+  connects east → ZONE V (Mire, via 1216)
+  connects south → 1197 (Grave Tunnel Surface Exit → 1150)
+  connects north → ZONE VIII (Wild Hunt, via 1271)
+
+ZONE IV (Older Gravewood, 1198-1215)
+  connects south → ZONE V (Mire, via 1207)
+  connects east → ZONE III (Burial Fields, via 1214)
+  connects south-deep → ZONE VIII (Wild Hunt, via 1215)
+
+ZONE V (Mire, 1216-1231)
+  connects north → ZONE IV (Gravewood, via 1229)
+  connects west → ZONE III (Burial Fields, via 1216)
+  connects northwest → ZONE IX aux (via 1231 substrate sink)
+
+ZONE VI (Ossuary Undercroft, 1232-1249)
+  connects up → ZONE II (Wine Cellar 1169)
+  connects east → ZONE III (Hillside Ossuary Entry 1239, from 1187)
+  connects deep → ZONE VII (Cave Entry 1250, from 1249)
+
+ZONE VII (Cave System, 1250-1270)
+  connects up → ZONE VI (from 1250 to 1249)
+  connects far-up → ZONE IV (Gravewood, via 1270 deep cave egress → 1213)
+  1268 SEALED CHAMBER (boss, no_mob, key-locked door from 1267)
+
+ZONE VIII (Wild Hunt, 1271-1280)
+  connects south → ZONE III (Burial Fields, via 1271)
+  connects west → ZONE IV (Gravewood, via 1280)
+
+ZONE IX (Perimeter/Auxiliary, 1281-1299)
+  connects to ZONE II (manor) and ZONE III (burial fields)
+  at wall walks (1281-1282), timber stands (1284-1285),
+  cult assembly ground (1286), archive rooms (1292-1293),
+  family crypt (1294), Hunt stable (1295)
+```
+
+### External World Links
+
+- **South exit from 1150 (Grave Tunnel Hinge):** Connects into the broader grave tunnel network, giving access to the graveyard area or Midgaard's burial approaches. The reverse link (graveyard area → 1150) must be confirmed and preserved.
+- **Up exit from 1150:** Emerges at 1151 (Outer Cobblestone Road) — the surface world above the tunnel. This bidirectional vertical pair is the area's canonical entry point.
+- The grave tunnel hinge exit direction and destination vnum must be coordinated with the `graveyard.are` (vnum range 11000–11099) file. The specific room in `graveyard.are` that links to 1150 must carry a reciprocal exit.
+
