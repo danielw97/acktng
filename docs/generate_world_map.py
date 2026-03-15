@@ -451,6 +451,37 @@ def void_citadel_sym(ax, cx, cy, size=2.0, zorder=14):
     ax.plot(cx, cy+size*1.5, 'o', color=VOID_LT,
             markersize=3.5, alpha=0.7, zorder=zorder+3)
 
+def cathedral_sym(ax, cx, cy, size=1.8, zorder=14):
+    """Cathedral of the Violet Eclipse — gothic spire with eclipse window."""
+    # Nave body
+    ax.add_patch(mpatches.Rectangle(
+        (cx - size*0.9, cy - size*0.3), size*1.8, size*1.8,
+        color='#2A1040', alpha=0.85, zorder=zorder))
+    # Central spire
+    ax.add_patch(plt.Polygon(
+        [[cx - size*0.28, cy + size*1.5], [cx + size*0.28, cy + size*1.5],
+         [cx, cy + size*3.2]],
+        color='#3C1858', alpha=0.92, zorder=zorder+1))
+    # Two flanking mini-spires
+    for sx in [cx - size*0.7, cx + size*0.7]:
+        ax.add_patch(plt.Polygon(
+            [[sx - size*0.15, cy + size*1.2], [sx + size*0.15, cy + size*1.2],
+             [sx, cy + size*2.2]],
+            color='#321450', alpha=0.85, zorder=zorder+1))
+    # Eclipse rose window
+    ax.add_patch(plt.Circle((cx, cy + size*0.7), size*0.38,
+                             color='#8040C0', alpha=0.55, zorder=zorder+2))
+    ax.add_patch(plt.Circle((cx, cy + size*0.7), size*0.38,
+                             fill=False, edgecolor='#C080F0',
+                             linewidth=0.9, alpha=0.80, zorder=zorder+2))
+    # Half-shadow on rose window
+    ax.add_patch(mpatches.Wedge((cx, cy + size*0.7), size*0.35,
+                                 90, 270, color='#120622',
+                                 alpha=0.50, zorder=zorder+3))
+    # Violet glow halo from spire tip
+    ax.add_patch(plt.Circle((cx, cy + size*3.2), size*0.25,
+                             color='#A060E0', alpha=0.45, zorder=zorder+2))
+
 def compass_rose(ax, cx, cy, size=9):
     """Ornate compass rose."""
     # Outer decorative ring
@@ -713,6 +744,21 @@ thorn_pts = [(66,66),(80,62),(90,66),(88,80),(78,85),(64,79)]
 fill_region(ax, thorn_pts, '#202E10', alpha=0.52, edge_color=FOREST_INK,
             edge_lw=0.7, zorder=5)
 
+# Shadowmere — the Blighted Crownlands (frontier march east of Thornwood)
+shadowmere_pts = [
+    (84,52),(96,48),(108,52),(112,60),(108,70),(96,74),(84,70),(80,62)
+]
+fill_region(ax, shadowmere_pts, '#34202C', alpha=0.52, edge_color='#281820',
+            edge_lw=0.8, zorder=5)
+hatch_region(ax, shadowmere_pts, '#605048', dot_count=120, size=0.6, alpha=0.20, zorder=6)
+
+# Eccentric Woodland — between Midgaard (south gate) and Rakuen
+eccentric_pts = [
+    (53,78),(64,76),(68,82),(67,90),(60,92),(53,90),(51,84)
+]
+fill_region(ax, eccentric_pts, '#1E3C12', alpha=0.44, edge_color=FOREST_INK,
+            edge_lw=0.7, zorder=5)
+
 # ═══════════════════════════════════════════════════════════
 #  MOUNTAINS
 # ═══════════════════════════════════════════════════════════
@@ -788,6 +834,20 @@ for _ in range(55):
     wx = RNG.uniform(67,88)
     wy = RNG.uniform(64,83)
     gnarled_tree(ax, wx, wy, h=RNG.uniform(2.0,3.8), zorder=9)
+
+# Eccentric Woodland trees (mixed, slightly whimsical)
+for _ in range(40):
+    wx = RNG.uniform(53,68)
+    wy = RNG.uniform(78,91)
+    col_ = RNG.choice([FOREST_MID, FOREST_LT, '#3A5A22', FOREST_DARK, '#4A6830'])
+    tree(ax, wx, wy, h=RNG.uniform(1.8,3.0), col=col_, zorder=9)
+
+# Whispering Forest Preserve — light-canopy grove north of Midgaard
+for _ in range(30):
+    wx = RNG.uniform(64,78)
+    wy = RNG.uniform(107,115)
+    col_ = RNG.choice([FOREST_MID, FOREST_LT, '#5A8A38'])
+    tree(ax, wx, wy, h=RNG.uniform(1.6,2.6), col=col_, zorder=9)
 
 # ═══════════════════════════════════════════════════════════
 #  SPECIAL FEATURES
@@ -883,6 +943,63 @@ ax.add_patch(plt.Circle((140,115), 5.5, fill=False,
                          edgecolor='#7050B0', linewidth=0.6,
                          alpha=0.22, linestyle=':', zorder=11))
 
+# ── Cathedral of the Violet Eclipse (western Roc Road approach) ──────────
+cathedral_sym(ax, 46, 92, size=1.8, zorder=14)
+for r_, al_ in [(4.2, 0.16), (2.8, 0.26)]:
+    ax.add_patch(plt.Circle((46, 92), r_, fill=False,
+                             edgecolor='#9040D0', linewidth=0.7,
+                             alpha=al_, zorder=13))
+
+# ── Catacombs of Nightfall (undead labyrinth north of Kel'Shadra) ────────
+ax.add_patch(plt.Circle((72, 65), 2.2, color='#1C1018', alpha=0.55, zorder=12))
+ax.text(72, 65, '✝', color='#5A2840', fontsize=11, ha='center', va='center',
+        alpha=0.82, zorder=13)
+for r_, al_ in [(3.6, 0.14), (5.2, 0.07)]:
+    ax.add_patch(plt.Circle((72, 65), r_, fill=False,
+                             edgecolor='#3C1828', linewidth=0.5,
+                             alpha=al_, linestyle=':', zorder=11))
+
+# ── Umbra Heartspire (shadow archive between Midgaard and Gloamvault) ────
+void_citadel_sym(ax, 70, 79, size=1.3, zorder=13)
+ax.add_patch(plt.Circle((70, 79), 3.5, fill=False,
+                         edgecolor='#5A3060', linewidth=0.5,
+                         alpha=0.22, linestyle=':', zorder=12))
+
+# ── Arroyo — the Jurisdictional Canyon (western Eastern Desert) ──────────
+# Canyon walls
+arroyo_n = [(119,52),(122,54),(126,53),(130,55),(134,54)]
+arroyo_s = [(119,48),(122,50),(126,49),(130,51),(134,50)]
+draw_smooth_line(ax, arroyo_n, '#5A3010', lw=1.6, alpha=0.65, zorder=10, tension=0.2)
+draw_smooth_line(ax, arroyo_s, '#5A3010', lw=1.6, alpha=0.65, zorder=10, tension=0.2)
+# Canyon floor fill
+arroyo_fill = [(119,48),(122,50),(126,49),(130,51),(134,50),
+               (134,54),(130,55),(126,53),(122,54),(119,52)]
+fill_region(ax, arroyo_fill, '#4A2C0A', alpha=0.42, edge_color=None,
+            edge_lw=0, zorder=9, tension=2)
+ruin_sym(ax, 126, 51, size=1.2, col='#6A4828', zorder=12)
+
+# ── Lost City (buried desert ruins, Eastern Desert interior) ────────────
+ruin_sym(ax, 142, 55, size=1.9, col='#8A7040', zorder=12)
+ruin_sym(ax, 146, 57, size=1.4, col='#7A6030', zorder=12)
+ax.add_patch(plt.Circle((144, 56), 5.2, color=DESERT_TAN, alpha=0.10, zorder=9))
+
+# ── Khar'Daan — the Sunken Necropolis (Saltglass Reach border) ──────────
+ax.add_patch(plt.Circle((183, 83), 3.0, color='#20100C', alpha=0.52, zorder=12))
+ax.text(183, 83, '☠', color='#5A2830', fontsize=12, ha='center', va='center',
+        alpha=0.80, zorder=13)
+ruin_sym(ax, 179, 82, size=1.2, col='#4A3020', zorder=11)
+ruin_sym(ax, 185, 81, size=1.0, col='#4A3020', zorder=11)
+ax.add_patch(plt.Circle((183, 83), 5.5, fill=False,
+                         edgecolor=SALT_COL, linewidth=0.6,
+                         alpha=0.28, linestyle=':', zorder=11))
+
+# Shadowmere — blight symbol (ruined keep with plague-cross)
+ruin_sym(ax, 95, 60, size=1.8, col='#5A3A48', zorder=12)
+ruin_sym(ax, 99, 62, size=1.3, col='#4A2A38', zorder=12)
+ax.add_patch(plt.Circle((96, 61), 5.0, fill=False,
+                         edgecolor='#4A2838', linewidth=0.6,
+                         alpha=0.22, linestyle=':', zorder=11))
+
 # ═══════════════════════════════════════════════════════════
 #  CITIES
 # ═══════════════════════════════════════════════════════════
@@ -890,6 +1007,7 @@ city_symbol(ax, 63, 93,  size=2.0, col=INK,       crown=True,  zorder=16)  # Mid
 city_symbol(ax, 24, 88,  size=1.7, col='#2A1A0A', crown=False, zorder=16)  # Kiess
 city_symbol(ax, 60, 76,  size=1.4, col='#2A1A0A', crown=False, zorder=16)  # Rakuen
 port_symbol(ax, 188, 76, size=1.5, col='#1A2030',              zorder=16)  # Mafdet
+city_symbol(ax, 67, 101, size=1.0, col='#3A3010', crown=False, zorder=16)  # Academy of Adventure
 # Kowloon — delta city with Neon Covenant ring
 city_symbol(ax, 115, 154, size=1.8, col='#1A2A3A', crown=False, zorder=16)
 for r_, al_, col_ in [(4.0,0.35,TEAL_NEON),(5.8,0.20,TEAL_NEON)]:
@@ -940,6 +1058,14 @@ draw_smooth_line(ax, [(175,62),(180,66),(184,70),(187,74)],
 # Road from Midgaard to Catacombs
 draw_smooth_line(ax, [(62,91),(65,82),(68,73),(72,62),(74,52),(76,44)],
                  '#4A2818', lw=1.2, alpha=0.45, style=':', zorder=9)
+
+# Branch road: Roc Road → Cathedral of the Violet Eclipse
+draw_smooth_line(ax, [(43,90),(44,91),(46,92)],
+                 '#6A3870', lw=1.0, alpha=0.48, style=':', zorder=9)
+
+# Path: Midgaard → Academy of Adventure (north gate)
+draw_smooth_line(ax, [(63,95),(64,98),(66,100),(67,101)],
+                 '#5A4818', lw=1.0, alpha=0.42, style=':', zorder=9)
 
 # ═══════════════════════════════════════════════════════════
 #  DECORATIVE SEA ELEMENTS
@@ -1044,6 +1170,47 @@ label(ax, 140, 111, 'SPIREBOUND\nCONCLAVE (RUINS)', size=4.8, col='#7050B0', sty
       outline_col='#100820')
 label(ax, 128, 115,'SUNKEN\nSANCTUM', size=6.5, col='#7050B0',
       weight='bold', outline_col='#0A0418')
+
+# ── Shadowmere ──────────────────────────────────────────────────────────
+label(ax, 96,  74,  'SHADOWMERE', size=6.0, col='#5A2A3A', style='italic', weight='bold',
+      outline_col='#080408')
+label(ax, 96,  71,  'Blighted Crownlands', size=4.5, col='#482030', style='italic',
+      outline_col='#080408')
+
+# ── Eccentric Woodland ───────────────────────────────────────────────────
+label(ax, 59,  85,  'ECCENTRIC\nWOODLAND', size=5.5, col=FOREST_INK,
+      style='italic', weight='bold')
+
+# ── Violet Eclipse Cathedral ─────────────────────────────────────────────
+label(ax, 44,  96,  'CATHEDRAL OF\nTHE VIOLET ECLIPSE', size=4.8, col='#7030A0',
+      style='italic', weight='bold', outline_col='#0A0418')
+
+# ── Catacombs of Nightfall ───────────────────────────────────────────────
+label(ax, 76,  61,  'CATACOMBS\nOF NIGHTFALL', size=5.2, col='#5A2030',
+      style='italic', weight='bold', outline_col='#080408')
+
+# ── Umbra Heartspire ─────────────────────────────────────────────────────
+label(ax, 64,  76,  'UMBRA\nHEARTSPIRE', size=5.0, col=VOID_LT,
+      style='italic', outline_col='#0A0418')
+
+# ── Arroyo ───────────────────────────────────────────────────────────────
+label(ax, 126, 57,  'THE ARROYO', size=5.5, col='#6A4010', style='italic', weight='bold')
+
+# ── Lost City ────────────────────────────────────────────────────────────
+label(ax, 144, 61,  'LOST CITY', size=5.8, col='#7A5820', style='italic', weight='bold')
+
+# ── Khar'Daan ────────────────────────────────────────────────────────────
+label(ax, 183, 88,  "KHAR'DAAN", size=5.5, col='#5A2830', style='italic', weight='bold',
+      outline_col='#080408')
+label(ax, 183, 85,  'Sunken Necropolis', size=4.2, col='#4A2020', style='italic',
+      outline_col='#080408')
+
+# ── Academy of Adventure ─────────────────────────────────────────────────
+label(ax, 67,  106, 'ACADEMY OF\nADVENTURE', size=4.8, col='#5A4010', style='italic')
+
+# ── Whispering Forest Preserve ───────────────────────────────────────────
+label(ax, 70,  117, 'WHISPERING\nFOREST PRESERVE', size=4.2, col=FOREST_MID,
+      style='italic')
 
 # ── Roads ───────────────────────────────────────────────────
 label(ax, 44, 90,  'Roc Road', size=5.2, col='#7A5028', style='italic', rot=5)
