@@ -5,7 +5,7 @@ K helps~
 L @@W{@@G SYS @@W}@@N~
 N 0
 I 1 1
-V 32501 32766
+V 65269 65534
 X 0
 F 15
 U You hear the screams of the Dead within your head.~
@@ -14,7 +14,7 @@ R Zenithar~
 W Zenithar~
 S Title not shown on area list.
 #MOBILES
-#32559
+#65327
 dog doggy puppy~
 a small dog~
 A small dog sits here, wagging its tail.
@@ -28,7 +28,7 @@ A small dog sits here, wagging its tail.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#32560
+#65328
 trainer~
 a trainer~
 A trainer stands here, ready to teach.
@@ -42,7 +42,7 @@ A trainer stands here, ready to teach.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#32581
+#65349
 stalker dark~
 a dark stalker~
 A dark stalker lurks here, seeking its prey.
@@ -56,7 +56,7 @@ A dark stalker lurks here, seeking its prey.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#32616
+#65384
 water elemental elemental~
 a water elemental~
 A water elemental churns here.
@@ -70,7 +70,7 @@ A water elemental churns here.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#32617
+#65385
 iron golem~
 an iron golem~
 An iron golem stands here, awaiting commands.
@@ -84,7 +84,7 @@ An iron golem stands here, awaiting commands.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#32618
+#65386
 soul thief~
 a soul thief~
 A soul thief lurks here, hungry for essence.
@@ -98,7 +98,7 @@ A soul thief lurks here, hungry for essence.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#32619
+#65387
 holy avenger~
 a holy avenger~
 A holy avenger stands here, radiating righteousness.
@@ -108,11 +108,11 @@ A holy avenger stands here, radiating righteousness.
 50 0
 0 0 0 0
 ! 0 0 0 0 0 0 0
-| 0 0 0 8 0 0 0
+| 0 0 0 0 0 8 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#32620
+#65388
 diamond golem~
 a diamond golem~
 A diamond golem stands here, gleaming with perfection.
@@ -126,7 +126,7 @@ A diamond golem stands here, gleaming with perfection.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#32624
+#65392
 combat elemental~
 a combat elemental~
 A combat elemental rages here with elemental fury.
@@ -140,7 +140,7 @@ A combat elemental rages here with elemental fury.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#32625
+#65393
 pegasus~
 a majestic pegasus~
 A majestic Pegasus stands here, wings folded gracefully.
@@ -154,7 +154,7 @@ A majestic Pegasus stands here, wings folded gracefully.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#32626
+#65394
 nightmare~
 a demonic nightmare~
 A demonic Nightmare stands here, flames licking at its hooves.
@@ -168,7 +168,7 @@ A demonic Nightmare stands here, flames licking at its hooves.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#32627
+#65395
 elemental beast~
 an elemental beast~
 An elemental beast prowls here.
@@ -182,7 +182,7 @@ An elemental beast prowls here.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#32628
+#65396
 intellect devourer~
 an intellect devourer~
 An intellect devourer pulsates here with alien hunger.
@@ -196,7 +196,7 @@ An intellect devourer pulsates here with alien hunger.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#32629
+#65397
 shadow hound~
 a shadow hound~
 A shadow hound lurks here in the darkness.
@@ -212,196 +212,196 @@ l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
-#32634
+#65402
 coin gold~
 one gold coin~
 One shiny gold coin lies here.~
 20 16384 16777216 0
 1 0 0 0 0 0 0 0 0 0
 1
-#32635
+#65403
 coins gold~
 %d gold coins~
 Several gold coins lie here.~
 20 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 1
-#32642
+#65410
 corpse~
 the corpse of someone~
 The corpse of someone lies here.~
 23 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 10
-#32643
+#65411
 corpse~
 the corpse of someone~
 The corpse of someone lies here.~
 24 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 10
-#32644
+#65412
 head severed~
 a severed head~
 A severed head lies here.~
 13 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 2
-#32645
+#65413
 heart torn~
 a torn heart~
 A torn heart lies here.~
 13 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 1
-#32646
+#65414
 arm sliced~
 a sliced arm~
 A sliced arm lies here.~
 13 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 3
-#32647
+#65415
 leg sliced~
 a sliced leg~
 A sliced leg lies here.~
 13 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 5
-#32648
+#65416
 turd~
 a final turd~
 A final turd lies here.~
 13 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 1
-#32651
+#65419
 spring water~
 a spring of fresh water~
 A spring of fresh water flows here.~
 17 16384 16777216 0
 100 100 0 0 0 0 0 0 0 0
 5
-#32652
+#65420
 mushroom~
 a mushroom~
 A mushroom grows here.~
 19 16384 16777216 0
 5 0 0 0 0 0 0 0 0 0
 1
-#32653
+#65421
 ball light~
 a ball of light~
 A ball of light floats here.~
 1 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 1
-#32655
+#65423
 board~
 a message board~
 A message board stands here.~
 27 0 0 0
 0 0 0 0 0 0 0 0 0 0
 20
-#32659
+#65427
 food~
 some food~
 Some food lies here.~
 19 16384 16777216 0
 10 0 0 0 0 0 0 0 0 0
 1
-#32660
+#65428
 fireblade blade~
 a fireblade~
 A fireblade lies here.~
 5 0 16842752 0
 0 0 0 1 0 0 0 0 0 0
 5
-#32661
+#65429
 token~
 a token~
 A token lies here.~
 8 0 16777216 0
 0 0 0 0 0 0 0 0 0 0
 1
-#32662
+#65430
 window magic~
 a magic window~
 A magic window shimmers here.~
 7 16384 0 0
 0 0 0 0 0 0 0 0 0 0
 1
-#32663
+#65431
 portal magic~
 a glowing portal~
 A glowing portal shimmers here.~
 7 16384 0 0
 0 0 0 0 0 0 0 0 0 0
 1
-#32664
+#65432
 beacon magical~
 a magical beacon~
 A magical beacon lies here.~
 6 0 16777216 0
 0 0 0 0 0 0 0 0 0 0
 1
-#32666
+#65434
 potion soul~
 a soul potion~
 A glowing soul potion lies here.~
 10 0 16777216 0
 50 0 0 0 0 0 0 0 0 0
 1
-#32667
+#65435
 soul captured~
 a captured soul~
 A captured soul floats here.~
 28 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 1
-#32678
+#65446
 token quest~
 a quest token~
 A quest token lies here.~
 16 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 1
-#32679
+#65447
 token quest~
 a quest token~
 A quest token lies here.~
 16 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 1
-#32680
+#65448
 token quest~
 a quest token~
 A quest token lies here.~
 16 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 1
-#32681
+#65449
 token quest~
 a quest token~
 A quest token lies here.~
 16 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 1
-#32682
+#65450
 token quest~
 a quest token~
 A quest token lies here.~
 16 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 1
-#32683
+#65451
 token quest~
 a quest token~
 A quest token lies here.~
 16 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 1
-#32738
+#65506
 conflagration~
 a conflagration~
 A conflagration burns here.~
@@ -410,47 +410,47 @@ A conflagration burns here.~
 1
 #0
 #ROOMS
-#32501
+#65269
 @@WThe Void@@N~
 You float in an endless grey void, suspended between existence and oblivion. There is nothing here but silence.~
 156684 11
 S
-#32522
+#65290
 @@WThe Vault of Lost Souls@@N~
 The remains of adventurers fill this silent chamber. A faint chill pervades the air, and the silence feels heavy with memory.~
 1036 11
 S
-#32544
+#65312
 @@WThe Halls of the Immortals@@N~
 You stand in a grand hall reserved for the immortal staff of this realm. @@WShimmering pillars@@N of pure energy line the chamber, and a sense of absolute peace pervades the air.~
 148492 11
 S
-#32547
+#65315
 @@WThe Builder's Workshop@@N~
 An immaculate workspace where the architects of the realm craft new wonders. Tools and blueprints cover every surface, and the air hums with creative energy.~
 148492 11
 S
-#32555
+#65323
 @@WThe Morgue@@N~
 A stark, cold room where the fallen are brought to rest. Stone slabs line the walls, and the air carries the chill of finality.~
 1036 11
 S
-#32556
+#65324
 @@WThe Moribund Ward@@N~
 A place between life and death, where souls linger on the threshold. The air shimmers faintly with residual energy.~
 1036 11
 S
-#32557
+#65325
 @@WThe Clan Hall@@N~
 A grand meeting hall where clan leaders gather to counsel and strategize. Banners of the great clans hang from the vaulted ceiling.~
 148492 11
 S
-#32558
+#65326
 @@WThe Donation Hall@@N~
 A spacious hall where adventurers leave unwanted goods for others in need. Shelves line the walls, offering a variety of useful items.~
 1036 11
 S
-#32766
+#65534
 @@WThe Apex@@N~
 You stand at the absolute pinnacle of the realm, above all earthly concerns. From here, the entire world stretches out below in breathtaking scope.~
 12 11

@@ -536,7 +536,7 @@ bool spell_teleport(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    for (;;)
    {
-      pRoomIndex = get_room_index(number_range(0, 32767));
+      pRoomIndex = get_room_index(number_range(0, MAX_VNUM));
       if (pRoomIndex == NULL)
          continue;
       if (!IS_SET(pRoomIndex->room_flags, ROOM_PRIVATE) && !IS_SET(pRoomIndex->room_flags, ROOM_SOLITARY) && IS_SET(pRoomIndex->area->flags, AREA_TELEPORT))

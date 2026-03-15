@@ -493,7 +493,7 @@ struct mob_index_data
    char *short_descr;
    char *long_descr;
    char *description;
-   sh_int vnum;
+   unsigned short vnum;
    sh_int count;
    sh_int killed;
    sh_int sex;
@@ -909,7 +909,7 @@ struct obj_index_data
    sh_int level;
    char *short_descr;
    char *description;
-   sh_int vnum;
+   unsigned short vnum;
    int item_type;
    int extra_flags;
    int wear_flags;
@@ -979,7 +979,7 @@ struct exit_data
    bool is_free; /* Ramias:for run-time checks of LINK/UNLINK */
    EXIT_DATA *next;
    ROOM_INDEX_DATA *to_room;
-   sh_int vnum;
+   unsigned short vnum;
    sh_int exit_info;
    sh_int key;
    char *keyword;
@@ -1009,9 +1009,9 @@ struct reset_data
    RESET_DATA *prev;
    char command;
    sh_int ifflag;
-   sh_int arg1;
-   sh_int arg2;
-   sh_int arg3;
+   int arg1;
+   int arg2;
+   int arg3;
    char *notes;
    char *auto_message; /* Ugly - wasteful of space. */
 };
@@ -1183,7 +1183,7 @@ struct room_index_data
    char *description;
    char *auto_message; /* If != NULL, send_to_room each tick */
    sh_int block_timer;
-   sh_int vnum;
+   unsigned short vnum;
    int room_flags;
    sh_int light;
    sh_int sector_type;

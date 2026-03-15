@@ -17,7 +17,7 @@ struct room_index_data
 
 typedef struct room_index_data ROOM_INDEX_DATA;
 
-#define ROOM_VNUM_LIMBO 32501
+#define ROOM_VNUM_LIMBO 65269
 
 static ROOM_INDEX_DATA requested_room = {1234};
 static ROOM_INDEX_DATA limbo_room = {ROOM_VNUM_LIMBO};
@@ -83,12 +83,12 @@ static void test_keep_chest_corpse_save_uses_container_vnum_when_in_room(void)
 
 static void test_keep_chest_corpse_save_uses_default_when_nested_in_object(void)
 {
-    assert(persistent_container_where_vnum_for_save_for_test(4567, 1) == 32555);
+    assert(persistent_container_where_vnum_for_save_for_test(4567, 1) == 65323);
 }
 
 static void test_keep_chest_corpse_save_uses_default_when_room_missing(void)
 {
-    assert(persistent_container_where_vnum_for_save_for_test(0, 0) == 32555);
+    assert(persistent_container_where_vnum_for_save_for_test(0, 0) == 65323);
 }
 
 /*
