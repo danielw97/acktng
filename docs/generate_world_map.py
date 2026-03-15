@@ -739,14 +739,14 @@ wither_pts = [(103,124),(120,120),(130,124),(128,140),(116,145),(102,138)]
 fill_region(ax, wither_pts, BLIGHT_COL, alpha=0.55, edge_color='#282018',
             edge_lw=0.7, zorder=5)
 
-# Thornwood
-thorn_pts = [(66,66),(80,62),(90,66),(88,80),(78,85),(64,79)]
+# Thornwood — necrotic estate-forest at southern fringe of GNF, north of Midgaard
+thorn_pts = [(56,112),(70,110),(84,113),(83,122),(72,126),(58,124),(53,118)]
 fill_region(ax, thorn_pts, '#202E10', alpha=0.52, edge_color=FOREST_INK,
             edge_lw=0.7, zorder=5)
 
-# Shadowmere — the Blighted Crownlands (frontier march east of Thornwood)
+# Shadowmere — the Blighted Crownlands (failed frontier march within the GNF)
 shadowmere_pts = [
-    (84,52),(96,48),(108,52),(112,60),(108,70),(96,74),(84,70),(80,62)
+    (67,128),(80,125),(94,127),(98,134),(94,142),(80,145),(66,141),(62,134)
 ]
 fill_region(ax, shadowmere_pts, '#34202C', alpha=0.52, edge_color='#281820',
             edge_lw=0.8, zorder=5)
@@ -829,10 +829,10 @@ for _ in range(38):
     wy = RNG.uniform(122,142)
     dead_tree(ax, wx, wy, h=RNG.uniform(2.2,4.0), zorder=9)
 
-# Thornwood — gnarled trees (denser)
+# Thornwood — gnarled trees at GNF southern fringe, north of Midgaard
 for _ in range(55):
-    wx = RNG.uniform(67,88)
-    wy = RNG.uniform(64,83)
+    wx = RNG.uniform(55,83)
+    wy = RNG.uniform(111,126)
     gnarled_tree(ax, wx, wy, h=RNG.uniform(2.0,3.8), zorder=9)
 
 # Eccentric Woodland trees (mixed, slightly whimsical)
@@ -841,13 +841,6 @@ for _ in range(40):
     wy = RNG.uniform(78,91)
     col_ = RNG.choice([FOREST_MID, FOREST_LT, '#3A5A22', FOREST_DARK, '#4A6830'])
     tree(ax, wx, wy, h=RNG.uniform(1.8,3.0), col=col_, zorder=9)
-
-# Whispering Forest Preserve — light-canopy grove north of Midgaard
-for _ in range(30):
-    wx = RNG.uniform(64,78)
-    wy = RNG.uniform(107,115)
-    col_ = RNG.choice([FOREST_MID, FOREST_LT, '#5A8A38'])
-    tree(ax, wx, wy, h=RNG.uniform(1.6,2.6), col=col_, zorder=9)
 
 # ═══════════════════════════════════════════════════════════
 #  SPECIAL FEATURES
@@ -894,10 +887,7 @@ ax.add_patch(plt.Circle((70,52), 2.5, color=CRYPT_COL, alpha=0.55, zorder=12))
 ax.text(70, 52, '☠', color='#6A3A4A', fontsize=11, ha='center', va='center',
         alpha=0.80, zorder=13)
 
-# Gloamvault
-ax.add_patch(plt.Circle((66,60), 2.0, color='#281820', alpha=0.50, zorder=12))
-ax.text(66, 60, '☽', color='#5A3A5A', fontsize=8, ha='center', va='center',
-        alpha=0.75, zorder=13)
+# Gloamvault is a subterranean vault inside Midgaard — no separate overworld symbol
 
 # Crypt connecting crack-lines
 for ang in np.linspace(0,2*math.pi,9)[:-1]:
@@ -993,10 +983,10 @@ ax.add_patch(plt.Circle((183, 83), 5.5, fill=False,
                          edgecolor=SALT_COL, linewidth=0.6,
                          alpha=0.28, linestyle=':', zorder=11))
 
-# Shadowmere — blight symbol (ruined keep with plague-cross)
-ruin_sym(ax, 95, 60, size=1.8, col='#5A3A48', zorder=12)
-ruin_sym(ax, 99, 62, size=1.3, col='#4A2A38', zorder=12)
-ax.add_patch(plt.Circle((96, 61), 5.0, fill=False,
+# Shadowmere — blight symbol (ruined fortress within GNF)
+ruin_sym(ax, 84, 135, size=1.8, col='#5A3A48', zorder=12)
+ruin_sym(ax, 88, 137, size=1.3, col='#4A2A38', zorder=12)
+ax.add_patch(plt.Circle((85, 136), 5.0, fill=False,
                          edgecolor='#4A2838', linewidth=0.6,
                          alpha=0.22, linestyle=':', zorder=11))
 
@@ -1007,7 +997,6 @@ city_symbol(ax, 63, 93,  size=2.0, col=INK,       crown=True,  zorder=16)  # Mid
 city_symbol(ax, 24, 88,  size=1.7, col='#2A1A0A', crown=False, zorder=16)  # Kiess
 city_symbol(ax, 60, 76,  size=1.4, col='#2A1A0A', crown=False, zorder=16)  # Rakuen
 port_symbol(ax, 188, 76, size=1.5, col='#1A2030',              zorder=16)  # Mafdet
-city_symbol(ax, 67, 101, size=1.0, col='#3A3010', crown=False, zorder=16)  # Academy of Adventure
 # Kowloon — delta city with Neon Covenant ring
 city_symbol(ax, 115, 154, size=1.8, col='#1A2A3A', crown=False, zorder=16)
 for r_, al_, col_ in [(4.0,0.35,TEAL_NEON),(5.8,0.20,TEAL_NEON)]:
@@ -1062,10 +1051,6 @@ draw_smooth_line(ax, [(62,91),(65,82),(68,73),(72,62),(74,52),(76,44)],
 # Branch road: Roc Road → Cathedral of the Violet Eclipse
 draw_smooth_line(ax, [(43,90),(44,91),(46,92)],
                  '#6A3870', lw=1.0, alpha=0.48, style=':', zorder=9)
-
-# Path: Midgaard → Academy of Adventure (north gate)
-draw_smooth_line(ax, [(63,95),(64,98),(66,100),(67,101)],
-                 '#5A4818', lw=1.0, alpha=0.42, style=':', zorder=9)
 
 # ═══════════════════════════════════════════════════════════
 #  DECORATIVE SEA ELEMENTS
@@ -1138,7 +1123,7 @@ label(ax, 34,128,  'VERDANT DEPTHS', size=6.5, col=FOREST_DARK, style='italic', 
 label(ax, 116,130, 'WITHERED\nDEPTHS', size=6.5, col='#504030', style='italic', weight='bold',
       outline_col=PARCH_LT)
 label(ax, 22,122,  'FOREST OF\nCONFUSION', size=6.0, col=FOREST_MID, style='italic', weight='bold')
-label(ax, 76,73,   'THORNWOOD', size=6.5, col='#0E2408', style='italic', weight='bold')
+label(ax, 68,119,  'THORNWOOD', size=6.5, col='#0E2408', style='italic', weight='bold')
 label(ax, 10,60,   'ISETH\nWILDS', size=6.5, col=MTN_MID, style='italic', weight='bold')
 label(ax, 75,18,   'SUNKEN REACHES', size=6.0, col=MTN_LT, style='italic')
 
@@ -1157,8 +1142,6 @@ label(ax, 76, 46,  'VOID CITADEL', size=6.0, col=VOID_LT, weight='bold',
       outline_col='#0A0410')
 label(ax, 68, 56,  "KEL'SHADRA\nCRYPTS", size=5.8, col='#5A283A',
       style='italic', weight='bold', outline_col='#0A0410')
-label(ax, 64, 63,  'GLOAMVAULT', size=5.5, col='#4A283A', style='italic',
-      outline_col='#0A0410')
 label(ax, 74, 26,  'SEPULCHUR\nPASTURE', size=5.8, col='#3A2818', style='italic')
 
 # ── Special Sites ───────────────────────────────────────────
@@ -1172,9 +1155,9 @@ label(ax, 128, 115,'SUNKEN\nSANCTUM', size=6.5, col='#7050B0',
       weight='bold', outline_col='#0A0418')
 
 # ── Shadowmere ──────────────────────────────────────────────────────────
-label(ax, 96,  74,  'SHADOWMERE', size=6.0, col='#5A2A3A', style='italic', weight='bold',
+label(ax, 80,  147, 'SHADOWMERE', size=6.0, col='#5A2A3A', style='italic', weight='bold',
       outline_col='#080408')
-label(ax, 96,  71,  'Blighted Crownlands', size=4.5, col='#482030', style='italic',
+label(ax, 80,  144, 'Blighted Crownlands', size=4.5, col='#482030', style='italic',
       outline_col='#080408')
 
 # ── Eccentric Woodland ───────────────────────────────────────────────────
@@ -1204,13 +1187,6 @@ label(ax, 183, 88,  "KHAR'DAAN", size=5.5, col='#5A2830', style='italic', weight
       outline_col='#080408')
 label(ax, 183, 85,  'Sunken Necropolis', size=4.2, col='#4A2020', style='italic',
       outline_col='#080408')
-
-# ── Academy of Adventure ─────────────────────────────────────────────────
-label(ax, 67,  106, 'ACADEMY OF\nADVENTURE', size=4.8, col='#5A4010', style='italic')
-
-# ── Whispering Forest Preserve ───────────────────────────────────────────
-label(ax, 70,  117, 'WHISPERING\nFOREST PRESERVE', size=4.2, col=FOREST_MID,
-      style='italic')
 
 # ── Roads ───────────────────────────────────────────────────
 label(ax, 44, 90,  'Roc Road', size=5.2, col='#7A5028', style='italic', rot=5)
