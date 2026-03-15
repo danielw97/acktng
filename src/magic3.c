@@ -1605,7 +1605,6 @@ bool spell_retri_strike(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
          if (vch != ch)
          {
             OBJ_DATA *heated_item = NULL;
-            OBJ_DATA *prev_carried = NULL;
 
             act("@@W$n @@Wis @@eimmolated@@N by the fury released from the $p@@W, and falls to the ground!", vch, staff_obj,
                 NULL, TO_ROOM);
@@ -1617,7 +1616,6 @@ bool spell_retri_strike(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
             {
                if (heated_item->wear_loc == WEAR_NONE)
                   continue;
-               prev_carried = heated_item;
                if (number_range(0, 100) < 25)
                   continue;
                else
