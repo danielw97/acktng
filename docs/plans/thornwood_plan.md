@@ -1001,3 +1001,104 @@ The eastern arm of the Hunt's lateral route — the point where returning patrol
 The outermost reach of the Hunt's established patrol territory — a road that leads into the greater woodland beyond Thornwood's fixed perimeter and connects back to the gravewood's southern edge via the Night Ride Path. This is the point where the estate's jurisdiction becomes argument rather than enforcement: the Hunt claims it as territory, the Great Northern Forest wardens' route charts mark it as avoided, and the Shadowmere scouts' maps simply note "do not stop." The road here shows no substrate management — no cleared surface, no marked trees — because the substrate's network does not extend this far with sufficient resolution. The Hunt operates here on authority alone.
 - Exits: `east` → 1276 (Hunt Dispatch Point), `north` → 1215 (Zone IV: Night Ride Path), `west` → 1277 (Birch-Bark Road)
 
+---
+
+### Zone IX: Perimeter and Auxiliary Rooms (1281–1299) — 19 Rooms
+
+Perimeter wall walks, timber stands, cult assembly grounds, archive alcoves, the Harren family crypt, the Hunt stable court, and remaining lore-carrying auxiliary spaces. All four logics are present here at varying emphasis.
+
+**1281 — The South Wall Walk**
+`room_flags: dark no_recall` | `sector: city`
+The walkway atop the estate's southern perimeter wall, accessible from the south thorn-hedge wall's exterior face. The wall-walk is wide enough for two people side by side and still carries the iron bracket infrastructure for patrol lanterns, all empty. From the wall-top, the southern burial field margins are visible to the east and the estate's formal gardens to the west. The wall-walk's stone carries the thorn-growth's inward pressure visibly: thorn branches have breached the wall's inner face and grown along the parapet, oriented toward the forecourt below.
+- Exits: `east` → 1156 (South Thorn-Hedge Wall), `south` → 1290 (Thorn Knight Guardpost)
+
+**1282 — The North Wall Walk**
+`room_flags: dark no_recall` | `sector: city`
+The northern perimeter wall-walk, mirroring the southern run but with a view over the approach road and the outer thorn-hedge to the north. The estate's territorial boundary is clearest from here: the managed thorn-hedge growth outside the wall marks the outermost extent of Harren administrative claims; the root-fiber threading through the wall's stone marks the substrate's claims, which extend farther. The two boundaries do not coincide.
+- Exits: `west` → 1155 (North Thorn-Hedge Wall), `east` → 1283 (Outer Gate Station North)
+
+**1283 — The Outer Gate Station (North)**
+`room_flags: dark no_recall` | `sector: city`
+A secondary gate in the estate's northern perimeter wall, used historically by the managed timber operations to move lumber from the managed stands without routing through the main forecourt. The gate is iron-barred and intact, though the locking mechanism is now supplemented by thorn growth that functions as both seal and indicator — the growth pattern changes when the gate is opened, and the substrate responds accordingly. A carved stone above the gate reads: *Timber Operations Gate — Estate Authorization Required.*
+- Exits: `west` → 1282, `north` → 1284 (Timber Stands Managed), `east` → 1295 (Hunt Stable Court, via exterior path)
+
+**1284 — The Timber Stands (Managed)**
+`room_flags: dark no_recall` | `sector: forest`
+The estate's managed thornwood timber stands — the trees that represent the Harren estate's original commercial forestry operation. The trees here are maintained: spaced for growth, their lower branches pruned to encourage trunk development, the understory cleared for access. This management is not by human hands; the substrate has continued the groundskeepers' patterns, pruning and spacing according to whatever the estate's forestry records specified. The timber is still harvestable. No one harvests it. The Violet Eclipse Cathedral's procurement agents know where these stands are and what they are worth. They do not come here personally.
+- Exits: `south` → 1283, `west` → 1172 (Stable Yard), `north` → 1285 (Deep Timber Stands)
+
+**1285 — The Deep Timber Stands**
+`room_flags: dark no_recall` | `sector: forest`
+The interior timber stands, where the trees are older and the "deep harvest" grade material is found — the cathedral-grade timber grown near burial sites, which the Violet Eclipse Cathedral's procurement specifications designate as more durable and more dense than surface harvest stock. The substrate's influence on these trees is visible in the bark: the deep-stand thornwood has the same darkening and bark-pattern shift visible in the estate orchard, and the root system surfaces at intervals with the crystalline texture that indicates crystal-substrate chemistry integration. The lumber from these trees is genuinely anomalous. It is also genuinely contaminated, in whatever sense a piece of wood can carry history.
+- Exits: `south` → 1284, `east` → 1297 (Riven Road)
+
+**1286 — The Cult Assembly Ground**
+`room_flags: dark no_recall` | `sector: forest`
+The Root Covenant's primary gathering space for organized collective rites — large enough for the entire living cult population to assemble, cleared of undergrowth by the substrate's management, and bordered by the hedge labyrinth's exterior growth so the site has a natural enclosure. The ground surface carries burn-marks from past assembly fires and the pressure-indentations of many feet in regular pattern — the congregation's standing positions during rite-work are encoded in the ground. A central platform of flat stones provides the presiding elder's position.
+- Exits: `south` → 1177 (Zone II: Hedge Labyrinth Entry), `east` → 1287 (Covenant Offering Site East), `north` → 1288 (Covenant Offering Site West)
+
+**1287 — The Covenant Offering Site (East)**
+`room_flags: dark no_recall` | `sector: forest`
+The eastern blood offering platform — a second root-contact rite site supplementing the gravewood's primary offering platform, positioned to serve the burial field area's cult activities. The platform here is more recently installed than the gravewood site: the stone surface is less stained, the surrounding thorn growth is less established, the substrate response is perceptibly less immediate. The cultists who work this platform are maintaining a station rather than a tradition — extending the cult's ritual operations infrastructure into territory that used to be administered by the estate's burial processing system rather than by the covenant.
+- Exits: `west` → 1286 (Cult Assembly Ground), `south` → 1184 (Zone III: Rapid Burial Fields North), `north` → 1212 (Zone IV: Blood Offering Platform)
+
+**1288 — The Covenant Offering Site (West)**
+`room_flags: dark no_recall` | `sector: forest`
+The western offering platform, positioned near the rose garden ruins — the station that serves the manor's western wing and the garden area's cult operations. The platform here is integrated with the rose garden's bone-arrangement installation, the two elements functioning as a composite site: bone-filing and blood offering in proximity, the substrate receiving both categories of input at the same contact point. The thorn growth around this platform has the most deliberate directionality of any surface-level thorn growth in the area — every stem is oriented toward the platform's center with a precision that suggests the substrate has been optimizing this site for longer than the cult has been using it.
+- Exits: `east` → 1286, `north` → 1184 (Zone III: Rapid Burial Fields North), `south` → 1178 (Zone II: Rose Garden Ruins)
+
+**1289 — The Bone-Path Marker Row**
+`room_flags: dark no_recall` | `sector: field`
+A row of bone markers running north from the deferred-name register stakes — the Root Covenant's territorial demarcation of the burial fields, distinguishing the zones under cult operational management from the zones under estate administrative management (as the dead household staff conceives it). The markers are femurs driven upright into the earth at regular intervals, each bearing a pressed circle-glyph: the cult's filing notation for a registered rite-claim on the ground. This is the cult's version of the estate's boundary-marks — same function, different material and language.
+- Exits: `south` → 1183 (Zone III: Deferred-Name Registers), `north` → 1290 (Thorn Knight Guardpost)
+
+**1290 — The Thorn Knight Guardpost**
+`room_flags: dark no_recall no_mob` | `sector: city`
+A formal guardpost at the estate's outer perimeter crossing-point — a stone structure fitted with the iron hardware of the Thorn Knight's patrol infrastructure: weapon-rack, lantern-mount (empty), challenge-protocol plaque. The plaque reads: *All parties must present authorization of passage. Unauthorized entry subject to estate processing.* The phrase "estate processing" has acquired a meaning that its original author did not intend. The post is staffed. The Thorn Knight here enforces the challenge-protocol as though the estate's charter were in force, as though the challenge had legal standing, as though the word "processing" meant what the administrative manuals said it meant.
+- Exits: `north` → 1289 (Bone-Path Marker Row), `south` → 1281 (South Wall Walk), `east` → 1279 (Zone VIII: Return Gate)
+
+**1291 — The Wraith Passage**
+`room_flags: dark indoors no_recall` | `sector: inside`
+A service corridor connecting the bone processing station to the mire's eastern margin — originally a transit route for moving material between the two zones without crossing the burial field's formal approach roads. Estate Wraiths use this passage to perform the empty household routines they inherited from their living functions: carrying nothing in the pattern of carrying something, moving with the deliberate gait of a worker completing a task, stopping at points that correspond to the original workflow's stations and pausing in the same way that a worker checking a task list would pause. They are performing a role that has no remaining content. The performance continues.
+- Exits: `west` → 1186 (Zone III: Bone Processing Station), `east` → 1231 (Zone V: Substrate Water Sink)
+
+**1292 — The Forgotten Archive Alcove**
+`room_flags: dark indoors no_recall` | `sector: inside`
+A storage alcove within the manor's service wing, discovered mid-process during a Root Covenant archival recovery effort and now accessible but not fully catalogued. The substrate's preservation effect has kept the documents here in better condition than their age warrants: papers from the estate's ossuary expansion period, in good legible condition, documenting the expansion's labor arrangements, the sources of that labor, and the passage records for the grave tunnel during the peak throughput years. Three specific documents in the alcove are marked with a @@ypale-gold seal@@N that matches the Violet Eclipse Cathedral's procurement authorization stamp — connecting the cathedral to the estate's operations in the period when both institutions preferred not to have the connection documented.
+- Exits: `north` → 1170 (Zone II: Service Yard), `east` → 1293 (Tunnel Transfer Records Room)
+
+**1293 — The Tunnel Transfer Records Room**
+`room_flags: dark indoors no_recall` | `sector: inside`
+Where the paperwork from the grave tunnel's transit operations was held — the records of every funeral convoy, every sealed warrant transfer, every private cargo shipment that passed through the estate's tunnel access point. The records are organized by year and convoy type, cross-referenced to both the surface intake records and the ossuary vault assignments. A specific section is marked in the estate clerk's notation as "restricted — by Harren family order" — a designation that, under the estate's charter, meant external auditors could not request those files. The restriction applies to a period corresponding precisely to the sealed warrant traffic documented in Midgaard's Spirebound Conclave transfer records. The Reckoning faction has been trying to access this room for twenty years. They have not been successful.
+- Exits: `west` → 1292, `north` → 1164 (Zone II: Butler's Pantry, via connecting passage)
+
+**1294 — The Harren Family Crypt (Surface)**
+`room_flags: dark no_recall cold` | `sector: hills`
+The above-ground burial vault of the Harren family itself — the mausoleum where the family's own dead were interred, distinct from the estate's commercial burial fields. The crypt's stonework is the estate's finest construction: dark stone with precise joinery, the thorn-and-keyhole device carved on every surface including the interior walls, and a floor inscription in the estate's administrative script that names each interred family member with full title and service dates. The Harren dead are all here — except Lord Harren, who is not interred anywhere because the substrate did not permit him to become a body to be interred. The @@acold@@N in this crypt is different from the cave system's crystal cold: it is the cold of a place where the substrate's attention is fixed and has been fixed for a long time, looking for something specific that the crypt does not contain.
+- Exits: `west` → 1195 (Zone III: Memorial Lane), `south` → 1297 (Riven Road)
+
+**1295 — The Wild Hunt Stable Court**
+`room_flags: dark no_recall` | `sector: city`
+The court where the substrate horses are held between patrols — a formal stable yard adjacent to the estate's original stable block, repurposed for the Hunt's substrate-constructed mounts. The horses here are still: standing in the same absolute stillness as the stable block's occupants, birch-bark pale, berry-red eyes unreflective. The court's cobblestones carry frost-marks from the horses' rest positions in the same pattern as their riding frost-prints — the substrate maintains the thermal anomaly continuously. The court connects to the Hunt's patrol route infrastructure and to the main stable block at the service yard.
+- Exits: `west` → 1172 (Zone II: Stable Yard), `north` → 1283 (Outer Gate Station North), `east` → 1276 (Zone VIII: Hunt Dispatch Point)
+
+**1296 — The Canopy Seal**
+`room_flags: dark no_recall` | `sector: forest`
+A space where the estate's canopy has completed its closure — the thornwood growth overhead has fused into a solid biological mass with no gaps, producing an indoor-like darkness under open sky. The substrate cleared specific openings through the canopy at positions that correspond to the binding's access points; those openings allow narrow columns of light or sky-visibility directly above ritual sites. The canopy seal is the baseline: total occlusion, complete closure, the forest's assertion that it has replaced the sky with something it controls.
+- Exits: `south` → 1284 (Timber Stands Managed), `east` → 1298 (Substrate Seep Glade), `west` → 1286 (Cult Assembly Ground)
+
+**1297 — The Riven Road**
+`room_flags: dark no_recall` | `sector: forest`
+A former service path that has been literally split by root eruption — a section of cobblestone road heaved upward by root pressure in a single event, leaving the path bisected by a raised root-mass running perpendicular to the road's direction. The root eruption's date is unknown but the scale suggests it was not gradual; the stone displacement patterns indicate sudden pressure release. The road is still navigable by climbing over the root-mass at the crossing point. The root-mass at the eruption site carries a substrate cold that is sharper than ambient, suggesting the eruption reached through to the crystal layer below.
+- Exits: `north` → 1285 (Deep Timber Stands), `south` → 1294 (Harren Family Crypt)
+
+**1298 — The Substrate Seep Glade**
+`room_flags: dark no_recall cold` | `sector: forest`
+A clearing where the substrate's surface expression is strongest above the ossuary layer — not the crystal seep of the deep gravewood, but a broader, more diffuse effect: soil temperature several degrees below ambient across the glade's entire surface, the corpse-lily growth that indicates high burial density below, and the root-mass pattern that corresponds to the resonance chamber's geometry directly below. A shaman standing in this glade would know they were standing above the ossuary's most important structural point. The glade is also the space where the substrate's bioluminescent output is visible in daylight — the cold blue of the cave system's fungal network seeping up through the soil to appear as a faint glow at ground level when conditions are right.
+- Exits: `west` → 1296 (Canopy Seal), `south` → 1243 (Zone VI: Resonance Chamber — vertical connection; descending through a natural ground opening)
+
+**1299 — The Bone-Gate Terminus**
+`room_flags: dark no_recall` | `sector: forest`
+The easternmost point of the estate's accessible territory — a formal gateway of bone-woven construction rather than iron, where the substrate's bone-craft has produced an arch of assembled long bones integrated with root-fiber into a structure as load-bearing as any masonry. The gate is the estate's final territorial marker at its eastern boundary, beyond which the mire's margin and the approach routes connecting to the broader grave tunnel network begin. The bone-arch is not decorated: it is structural, functional, and legible as such. *This land's terms continue until this arch. Beyond this point, you are no longer being processed. You were never not being processed.*
+- Exits: `west` → 1291 (Zone IX: Wraith Passage), `north` → 1227 (Zone V: Broken Causeway)
+
