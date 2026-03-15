@@ -1764,3 +1764,224 @@ The teeth of the key match the binding inscription's notation for "authorized th
 - Object level (`L`) entries used for loot items where a level floor is appropriate. ✓
 - `ITEM_LIFESTEALER` not used in this area. ✓
 
+---
+
+## Quest Design (satisfying `area_file_spec.md` §13.2)
+
+Four quests satisfy all mandatory constraints: at least one boss quest, at least one cartography quest, final chain item rewards equipment, and every boss quest rewards equipment.
+
+---
+
+### Quest 1: Cartography of the Harren Estate
+**Type:** Cartography (mandatory for new areas per spec §13.2)
+**Objective:** Survey and document five key locations within Thornwood: the Iron Gate of Thornwood, the Charnel Verge Gate, the Fog Shrine, the Handprint Cave, and the Crystal Heart Basin.
+**Mechanism:** A Thornwood Cartography Writ (or equivalent quest trigger outside the area) asks players to examine specific `E` extra descriptions in each of the five target rooms — each containing a surveyor's notation that, when examined, advances the quest.
+**Reward:** Experience + the @@dcold-resonant bone shard@@N (object 1207) as an intermediate equipment reward.
+**Notes:** The five target rooms span all major zones, incentivizing the full area traversal before the boss loop. The fog shrine and crystal heart entries require navigating the mire and the cave system respectively, making completion a genuine exploration benchmark.
+
+---
+
+### Quest 2: The Archive Recovery
+**Type:** Lore recovery / collection chain
+**Objective:** Recover three specific archive fragments from the estate's frozen interior: the final entries from Lord Harren's journal (room 1162, study — `E` extra), the butler's transition notation (room 1164, pantry — `E` extra), and the restricted tunnel transfer register (room 1293, tunnel records — `E` extra or ground object).
+**Mechanism:** Each fragment is either a ground-reset object or an examined `E` extra that awards a quest item. All three fragments must be in the player's possession simultaneously to complete the chain (or examined in sequence if the quest system tracks flags).
+**Reward:** The @@yHarren Estate Register Key@@N (object 1220) — specifically, recovering the archive fragments leads to finding the key among the butler's pantry materials, providing narrative justification for the key's presence. This makes the key's acquisition story-integrated rather than arbitrary loot.
+**Final chain item:** The key is equipment (usable, has function) — satisfies the requirement that the final quest chain item reward a piece of equipment.
+**Cross-area note:** Archive fragments found here should be cross-referenced in Midgaard's Granite Arcade lore text, offering hooks for players who have already explored that area's contested archive records.
+
+---
+
+### Quest 3: The Lord's Reckoning (Boss Quest — Lord Harren)
+**Type:** Boss quest (mandatory per spec §13.2)
+**Target:** Lord Harren, the Estate Revenant (mob 1190) in the Receiving Room (1161)
+**Prerequisite:** Reaching room 1161 requires navigating through the manor's interior (Zone II), which requires passing Thorn Knight patrols and the manor steward revenant. The Receiving Room is `no_mob` flagged and requires no key — it is accessible to anyone who reaches it.
+**Objective:** Defeat Lord Harren.
+**Reward:** Boss loot table drops one of two boss signature items:
+- **Slot 0 (60% weight):** Lord Harren's Thorn-Crest Sigil Ring (1215) — `ITEM_BOSS ITEM_LOOT ITEM_RARE`
+- **Slot 1 (40% weight):** Binding Iron Gauntlets of the Estate (1216) — `ITEM_BOSS ITEM_LOOT ITEM_RARE`
+**Narrative note:** Lord Harren will negotiate before combat if the player can be made to attempt interaction — a `speech_prog` on his mob triggers a dialogue that invokes the Harren Charter, the estate's audit provisions, and the pending sealed warrant inquiry. None of this prevents the combat. It is what the lore says it is: a man with complete awareness performing legitimacy rituals that have no legal standing, because he cannot stop.
+
+---
+
+### Quest 4: The Binding's Reckoning (Final Boss Quest — Thornwood Lich)
+**Type:** Boss quest (mandatory per spec §13.2) + final chain quest
+**Target:** The Thornwood Lich (mob 1193) in the Sealed Chamber (1268)
+**Prerequisite:**
+1. The Harren Estate Register Key (1220) must be obtained (from Quest 2 or as ground reset in 1292).
+2. The locked door at room 1267 → 1268 must be opened with the key.
+3. Players must navigate the full cave system (Zone VII) to reach 1267.
+**Objective:** Defeat the Thornwood Lich.
+**Reward:** The Thornwood Lich's Substrate Crystal (1219) — `ITEM_BOSS ITEM_LOOT ITEM_LEGENDARY ITEM_MAGIC`. This is the final chain item; it is equipment (held item with active `item_apply` effects). Satisfies the requirement that the final quest chain's final item reward equipment. Also satisfies the requirement that boss quests reward equipment.
+**Narrative note:** The Lich's `death_prog` (if implemented) may emit the binding's failure assessment at the moment of death — the crystal formation's final diagnostic output as the Lich's operational interface goes offline. This is not a dramatic speech; it is a system log. The tone should be exactly as clinical as an engineer's final report on a structure that is about to fail.
+
+---
+
+### Quest Constraint Verification
+
+- ✓ At least one boss quest: Quest 3 (Lord Harren) and Quest 4 (Thornwood Lich) both qualify.
+- ✓ At least one cartography quest: Quest 1.
+- ✓ Final quest chain item rewards equipment: Quest 2's final item is object 1220 (functional key, worn as hold item). Quest 4's final item is object 1219 (held treasure with apply effects). Both qualify.
+- ✓ Every boss quest rewards equipment: Quest 3 rewards 1215 or 1216 (armor/treasure, both boss-flagged). Quest 4 rewards 1219 (treasure with apply, boss-flagged).
+- Optional bonus boss: Bone-Weave Overseer Malsthen (mob 1192) and Wild Hunt Master (mob 1191) also qualify as boss encounters with boss-signature loot (1218 and 1217 respectively), though they are not required by the spec constraint count.
+
+---
+
+## Reset and Encounter Structure
+
+### Population Density by Zone
+
+- **Zone I (Harren Approach, 1150–1157):** Light to moderate. Grave tunnel toll-shades (2–3), gate wraith sentinel (1), thorn hedge sentinels at perimeter walls (2 each), corpse-cart revenants on approach (2), night-only approach phantoms (2). Total: ~12 mob resets.
+- **Zone II (Estate Surface, 1158–1179):** Moderate with named anchors. Thorn knights at key thresholds (6–8), estate wraiths in service rooms (3), chapel cultists in chapel (2), covenant elder sentinel at assembly ground (1), manor steward revenant in Great Hall (1), stable revenant (1), Lord Harren boss in Receiving Room (1). Total: ~17 mob resets.
+- **Zone III (Charnel Verge and Burial Fields, 1180–1197):** Moderate to dense. Deferred-name revenants across burial fields (6), bone processing laborers (4), charnel verge watcher at gate (1), exhumation crows in open field rooms (9), ossuary monks in charnel chapel (2). Total: ~22 mob resets.
+- **Zone IV (Older Gravewood, 1198–1215):** Moderate with specialist presence. Ridge-clan shades at face-down sites (4), thornwood shaman sentinel in hollow (1), root weave cultists at offering sites (4), substrate-adapted root-crawlers (2), face-down risen at oathbreaker graves (2), thorn ring guardians at old rings (2). Total: ~15 mob resets.
+- **Zone V (Mire, 1216–1231):** Moderate hazard pressure. Mire lurkers in crossing rooms (6), deep mire shades at pool and deep sections (3), sulfur-bloated corpses at runoff channels (4), fog shrine attendant sentinel at shrine (1), substrate water-things (2). Total: ~16 mob resets.
+- **Zone VI (Ossuary Undercroft, 1232–1249):** High threat, specialist encounters. Bone weaver journeymen (4), bone weaver master in workshop (1), marrow constructs at vault and assembly (4), marrow fiends in vault (2), ossuary elder sentinel at entry hall (1). Total: ~12 mob resets.
+- **Zone VII (Cave System, 1250–1270):** High threat, substrate creatures. Crystal cave stalkers in crystal passages (6), binding watchers at critical cave rooms (3), substrate echoes (3), cave root horrors (3), Thornwood Lich boss in sealed chamber (1). Total: ~16 mob resets.
+- **Zone VIII (Wild Hunt, 1271–1280):** Night-only boss content. Wild Hunt Riders at patrol stations (4, night only), Wild Hunt Master boss at dispatch (1, night only). Total: ~5 mob resets, all night_only.
+- **Zone IX (Perimeter/Auxiliary, 1281–1299):** Low to moderate supplemental presence. Thorn knight at guardpost (1), estate wraiths in wraith passage (2), additional thorn knights at wall walks (2), covenant bone-readers at offering sites (2). Total: ~7 mob resets.
+
+### Key Reset Commands
+
+**Mobile resets (`M`):**
+- Boss mobs (1190, 1191, 1192, 1193): limit `1` each.
+- Solo mobs (1157, 1160, 1166, 1170, 1174, 1178, 1181, 1183): limit `1` each.
+- Common mobs: limit `2`–`3` per room.
+- Night-only mobs (1154, 1191): flagged with `night_only` in `act`; limits standard.
+
+**Object resets (`O`):**
+- Harren Estate Register Key (1220): O reset in room 1292 (Forgotten Archive Alcove), limit `1`.
+- Cartography quest targets: E extra descriptions in rooms 1152, 1180, 1223, 1255, 1258 serve as in-world survey anchors.
+
+**Equipment resets (`G`/`E`):**
+- Estate gate wraith (1151): E reset with grave warden's hood (1195), wear_loc head (4).
+- Thorn knight (1156): E reset with thorn-motif iron bracers (1194), wear_loc wrist (14/15), and rusted estate patrol blade (1196), wear_loc hold_hand_r (21).
+- Blackened thorn knight (1157): E reset with blackened thorn knight's crest (1201), wear_loc head (4), and thorn knight's briar pauldrons (1200), wear_loc shoulders (12).
+- Chapel cultist (1159): E reset with chapel covenant staff (1202), wear_loc hold_hand_r (21).
+- Lord Harren (1190): loot table (l/L extension in mob definition) for 1215/1216.
+- Wild Hunt Master (1191): loot table for 1217.
+- Bone-Weave Overseer Malsthen (1192): loot table for 1218.
+- Thornwood Lich (1193): loot table for 1219.
+
+**Door resets (`D`):**
+- Room 1267 → 1268 (Threshold of the Binding → Sealed Chamber): locked (state `2`), key = 1220. Both sides must have matching D resets:
+  - `D 0 1267 1 2` (south exit from 1267 to 1268, locked) — direction south = 2 if 1268 is south of 1267; confirm direction in room layout.
+  - `D 0 1268 0 2` (north exit from 1268 to 1267, locked from inside; unlocked from inside without key — note: this is the same state, but players inside can open from within without key per room spec).
+  - Both room exits must have `EX_ISDOOR` (`1`) set in their `D<door>` definitions.
+
+### `#SHOPS` Section
+No shops are planned. Thornwood is not a commercial zone. The estate's trade was conducted through the grave tunnel network and external intermediaries, and that infrastructure no longer operates.
+
+### `#SPECIALS` Section
+
+```
+#SPECIALS
+M 1151 spec_guard
+M 1160 spec_cast_cleric
+M 1166 spec_undead
+M 1170 spec_cast_mage
+M 1181 spec_cast_undead
+M 1187 spec_cast_undead
+M 1188 spec_cast_undead
+M 1189 spec_cast_mage
+M 1190 spec_cast_undead
+M 1191 spec_cast_undead
+M 1192 spec_cast_undead
+M 1193 spec_cast_undead
+M 1177 spec_poison
+S
+```
+
+Note: `spec_summon_*` specials are not used (runtime-only per spec). `spec_keep_*` specials are not set by automation.
+
+### `#OBJFUNS` Section
+No object functions are planned for this area. The object fun mechanics (soul_moan, infused_soul, flaming, etc.) are not required to express Thornwood's identity — the substrate's effects are represented through mob behavior and object descriptions rather than active object functions.
+
+---
+
+## Implementation Checklist
+
+### Phase 1: Area Header and Structure
+- [ ] Normalize `O virant~` to `O Virant~`.
+- [ ] Verify `Q 16` present.
+- [ ] Update area name string to `@@dThornwood, @@ythe Harren Estate@@N~`.
+- [ ] Update level label to `@@y{@@d50@@y-@@d80@@y}@@N~`.
+- [ ] Update reset message to `@@dDeep in @@GThornwood@@d, the roots shift and the @@yHarren gate@@d rattles in windless dark.@@N~`.
+- [ ] Confirm `V 1150 1299` unchanged.
+- [ ] Confirm `I 50 80` preserved.
+- [ ] Confirm `F 15` preserved.
+
+### Phase 2: Room Construction (1150–1299, 150 rooms)
+- [ ] Write all 150 room names and descriptions with unique identity per this plan.
+- [ ] Ensure all room descriptions end with exactly one trailing newline before `~`.
+- [ ] Ensure landmark rooms (marked ★) contain at least 5 sentences; all others at least 3.
+- [ ] Ensure all room descriptions are unique — no identical descriptions.
+- [ ] Define all exits as bidirectional; verify each exit pair against the topology diagram.
+- [ ] Verify no directional loops (no room A → B → C → A outside ROOM_MAZE).
+- [ ] Add named exits with discoverability (appear in main description, object, or E extra).
+- [ ] Prefix named door-style exit keywords with `^`.
+- [ ] Add `E` extra descriptions with anchored keyword chains in target rooms.
+- [ ] Flag boss rooms (1161, 1268, 1276) with `no_mob` (`4`).
+- [ ] Flag cave rooms with `cold` where appropriate.
+- [ ] Flag mire rooms with `cold` and `dark`.
+- [ ] Flag all rooms needing `no_recall`, `no_portal`, `no_teleport` correctly.
+- [ ] Apply correct `sector_type` per room (forest, inside, field, hills, water_swim, water_noswim, city).
+- [ ] Verify room 1150 external exit matches graveyard.are connector vnum.
+- [ ] Verify room 1267 door exit has `EX_ISDOOR` set and `key_vnum = 1220`.
+
+### Phase 3: Mobile Construction (1150–1193, 44 mobs)
+- [ ] Build all 44 mobs in ascending vnum order per this plan.
+- [ ] Ensure `long_descr` is exactly one text line + newline + `~`. No multi-line.
+- [ ] Ensure `description` ends with exactly one newline before `~`.
+- [ ] No vnum appears in any mob description text.
+- [ ] All mobs carry `stay_area` (`64`).
+- [ ] Boss mobs (1190, 1191, 1192, 1193) carry `sentinel` + `boss` flags.
+- [ ] Solo mobs carry `solo` flag.
+- [ ] Undead mobs carry `undead` flag.
+- [ ] Corporeal-absent mobs carry `no_body` and/or `no_blood`.
+- [ ] `aggressive` set only on hostile mobs, not on the Thornwood Witch (1189) or thornwood shaman (1170).
+- [ ] Night-only mobs (1154, 1191) carry `night_only` flag; verify no `day_only` conflicts.
+- [ ] `!` extension lines authored for all mobs with class/skills/cast/def per tier guidelines.
+- [ ] `|` extension lines authored for elemental mobs.
+- [ ] Loot tables (`l`/`L`) authored for loot-carrying mobs; `loot_amount` > 0; `L` values sum to ≤ 100.
+- [ ] Items referenced by loot tables have `ITEM_LOOT` set.
+
+### Phase 4: Object Construction (1194–1220, 27 objects)
+- [ ] Build all 27 objects in ascending vnum order per this plan.
+- [ ] No blank lines between object records in `#OBJECTS`.
+- [ ] All objects carry `ITEM_TAKE` in wear flags.
+- [ ] No object carries `ITEM_WEAR_CLAN_COLORS`.
+- [ ] `ITEM_GENERATED` not set on any object.
+- [ ] Weight archetype encoding correct (1–5 caster, 6–10 melee, 11–15 tank).
+- [ ] Weapons (1196, 1197, 1202, 1205, 1218) carry both `hold` and `take`.
+- [ ] Two-handed weapon (1218) carries `ITEM_TWO_HANDED`.
+- [ ] `value3` thematically consistent for all weapons; `value3 = 0` not used.
+- [ ] Boss items (1215–1219) carry `ITEM_BOSS` + `ITEM_LOOT`.
+- [ ] Standard loot items (1194–1214) carry `ITEM_LOOT` only.
+- [ ] Object names unique within area file.
+- [ ] `E` extra descriptions end with exactly one trailing newline before `~`.
+- [ ] `L` level entries formatted correctly (L on its own line, then level integer on next line).
+
+### Phase 5: Shops, Resets, Specials, Objfuns
+- [ ] No `#SHOPS` section needed (no shopkeepers).
+- [ ] Write all `M` resets for mob placements; verify room vnums are valid.
+- [ ] Write `O` reset for object 1220 in room 1292, limit 1.
+- [ ] Write `G`/`E` resets for mob equipment per the reset section of this plan.
+- [ ] Write `D` resets for locked door (1267 → 1268, state 2, key 1220) — both sides.
+- [ ] Verify `EX_ISDOOR` is set on both sides of every door reset to closed or locked.
+- [ ] Verify key object 1220 exists for the locked door.
+- [ ] Write `#SPECIALS` section per the spec list in this plan.
+- [ ] Write `#OBJFUNS` section — none planned; include `S` terminator.
+- [ ] Verify `#RESETS` contains no blank lines.
+- [ ] Verify all reset vnums reference valid targets.
+
+### Phase 6: Final Validation
+- [ ] Verify all vnums in `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#SHOPS`, `#SPECIALS` stay within 1150–1299.
+- [ ] Verify no duplicate vnums within any section type.
+- [ ] Verify all text fields terminated with `~`; no `\n\n` in any string.
+- [ ] Verify no vnum appears in any in-world description text.
+- [ ] Verify color-code policy: no `@@k`, no background codes, no `@@f`, every fragment terminated with `@@N`.
+- [ ] Verify canonical section order: `#AREA`, `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
+- [ ] Verify `area.lst` ordering is preserved (1150 minimum vnum, between `withered_depths.are` 1000–1149 and `thornwood.are` 1150–1299; ordering already correct since this is a rewrite of the existing entry).
+- [ ] Run `cd src && make unit-tests` and confirm all tests pass including integration test.
+- [ ] Confirm graveyard.are connector room has reciprocal exit to 1150.
+
