@@ -204,18 +204,19 @@ bool spell_magic_missile(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
        9, 9, 9, 9, 9, 10, 10, 10, 10, 10,
        11, 11, 11, 11, 11, 12, 12, 12, 12, 12,
        13, 13, 13, 13, 13, 14, 14, 14, 14, 14};
-   int dam;
+   int dam = 0;
 
    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
    level = UMAX(0, level);
-   dam = number_range(dam_each[level] / 2, dam_each[level] * 2);
-   if (saves_spell(level, victim))
-      dam /= 2;
+
    cnt = 1 + (level >= 30) + (level >= 60) + (level >= 80);
    for (hits = 0; hits < cnt; hits++)
-   {
-      sp_damage(obj, ch, victim, dam, ELEMENT_MENTAL, sn, TRUE);
-   }
+      dam += number_range(dam_each[level] / 2, dam_each[level] * 2);
+
+   if (saves_spell(level, victim))
+      dam /= 2;
+
+   sp_damage(obj, ch, victim, dam, ELEMENT_MENTAL, sn, TRUE);
 
    return TRUE;
 }
@@ -1164,7 +1165,7 @@ bool spell_mind_bolt(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    int cnt;
    int foo;
-   int dam;
+   int dam = 0;
 
    cnt = (level >= 12) + (level >= 30) + (level >= 60) + (ch->level >= 75);
    for (foo = 0; foo < cnt; foo++)
@@ -1172,25 +1173,16 @@ bool spell_mind_bolt(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       if (number_percent() < 30)
          continue;
 
-      int element = ELEMENT_MENTAL;
-
-      if (cnt > 5)
-         element = SIXTH_DIVISOR | ELEMENT_MENTAL;
-      else if (cnt > 4)
-         element = FIFTH_DIVISOR | ELEMENT_MENTAL;
-      else if (cnt > 3)
-         element = FOURTH_DIVISOR | ELEMENT_MENTAL;
-      else if (cnt > 2)
-         element = THIRD_DIVISOR | ELEMENT_MENTAL;
-      else if (cnt > 1)
-         element = SECOND_DIVISOR | ELEMENT_MENTAL;
-
-      dam = number_range(12, 30) + (ch->lvl[CLASS_PSI] * 5 / 4);
-      if (saves_spell(level, victim))
-         dam /= 2;
-
-      sp_damage(obj, ch, victim, dam, element, sn, TRUE);
+      dam += number_range(12, 30) + (ch->lvl[CLASS_PSI] * 5 / 4);
    }
+
+   if (dam <= 0)
+      return TRUE;
+
+   if (saves_spell(level, victim))
+      dam /= 2;
+
+   sp_damage(obj, ch, victim, dam, ELEMENT_MENTAL, sn, TRUE);
    return TRUE;
 }
 
