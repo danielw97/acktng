@@ -270,3 +270,19 @@ To keep descriptions cohesive across all eight zones, use recurring physical mot
 - **The Verdant Sanctum should feel like relief and grief.** After seven zones of corruption, the pristine glade is a reminder of what the forest was before the Conclave's interference. The Verdant Guardian's madness is the emotional climax: a protector who has watched everything it loved be consumed and will not — cannot — stop fighting, even when the fight is hopeless.
 
 ---
+
+## XI. Cinderteeth Connection (Cross-Reference)
+
+The Withered Depths' corruption originates from the **Cinderteeth Mountains**, not from the forest itself. The Spirebound Conclave's **Prism Thesis** faction conducted field trials in forests south of the Cinderteeth, implanting resonance crystals in old-growth root systems to test whether crystal harmonics could bind natural spirits as custodial anchors — the same technique used on human subjects inside the sanctum, applied to forest ecosystems. The trial sites were abandoned when supply routes collapsed; the crystals were never retrieved; the monitoring protocols designed by **Prism Adept Serai** were never resumed.
+
+Key connection points:
+- The Prism Thesis field trials were planned and supervised from the Western Fold sanctum in the Cinderteeth, not from within the forest. The forest was the experimental site; the mountain was the institutional origin.
+- Serai's field trial records, recovered from Sanctum Zone C, describe what to monitor but include no deactivation protocols — she assumed monitoring would continue indefinitely. The assumption that the institution would persist was the critical failure.
+- The crystal fragments embedded in corrupted root systems in the Withered Depths carry the same preservation-enchantment signatures documented in the Cinderteeth's Bellspine crystal anchors — residual magical function from the same Conclave-era technology base.
+- The Cinderteeth's thermophilic fungal networks (natural volcanic-zone ecology) superficially resemble the Withered Depths' corrupted fungal systems, but the biological mechanisms differ. Cinderteeth thermal fungi are naturally stable; Withered Depths networks are Conclave-engineered systems running without oversight. The distinction matters for any remediation research.
+
+The practical implication for adventurers: understanding the Withered Depths' corruption mechanism requires access to Conclave records in the Sunken Sanctum (particularly Prism Adept Serai's field trial documentation in Zone C) or to any surviving Bellspine crystal anchor specimens that can be compared against Withered Depths crystal fragments. The Cinderteeth is not just historical context — it is the key to diagnosis.
+
+For full Cinderteeth institutional history including the Prism Thesis faction, Conclave Transfer Chain, Western Fold site, and Prism Adept Serai's biography, see: `docs/lore/cinderteeth_mountains_lore.md`.
+
+---
