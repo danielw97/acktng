@@ -432,4 +432,42 @@ Delegations appear at each other's civic festivals as a soft-law signaling mecha
 - Sepulchur Pasture (casualty registry / deferred-name protocols): `docs/lore/sepulchur_pasture_lore.md`
 - Conclave fallout context: `docs/lore/withered_depths_lore.md`, `docs/lore/sunken_sanctum_lore.md`
 
+### Class Traditions With Significant Five-City Institutional Presence
+
+Each city maintains specific institutional relationships with practitioner traditions. These cross-references trace those relationships.
+
+**Midgaard** (registry, Guard Command, Continuity/Reckoning tension):
+- Warriors: `docs/lore/warrior_lore.md` — Guard Command officer corps; requisition office system
+- Clerics: `docs/lore/cleric_lore.md` — Violet Compact registry integration; inner/outer tradition politics
+- Mages: `docs/lore/mage_lore.md` — Wizard's Keep registry compliance; Conclave guilt chain documentation
+- Knights: `docs/lore/knight_lore.md` — Guard Command institutional backbone; Compact of Seven Chains doctrine vs. civic obedience
+- Crusaders: `docs/lore/crusader_lore.md` — Reserve depot origin; Ash-and-Iron Decades cross-training
+- Templars: `docs/lore/templar_lore.md` — Violet Compact sanctioned Corps; garrison crisis origin
+- Kinetimancers: `docs/lore/kinetimancer_lore.md` — Registry "enhanced monitoring" classification; unfulfilled oversight mandate
+
+**Kowloon** (Temple Circle, Wardens of Iron, Harbor Syndic, labor relations):
+- Warriors: `docs/lore/warrior_lore.md` — Wardens of Iron; shared provisioning doctrine with Midgaard Guard Command
+- Clerics: `docs/lore/cleric_lore.md` — Temple Circle governance; Ledger Priest lineage in civic administration
+- Brawlers: `docs/lore/brawler_lore.md` — Harbor district fighting pits; Harbor Syndic licensing and enforcement
+- Martial Artists: `docs/lore/martial_artist_lore.md` — Cross-training synthesis incubation; harbor district Monk-Brawler contact
+- Monks: `docs/lore/monk_lore.md` — Harbor district monastery-pit contact; Interior Forms vs. pit testing
+
+**Kiess** (anti-sealed-warrant charter, dispute adjudication, Roc Road):
+- Warriors / Knights: `docs/lore/knight_lore.md` — Roc Road escort function; road-warden intelligence sharing
+- Clerics: `docs/lore/cleric_lore.md` — Anti-sealed-warrant Solar Court scholarship access; no classification suppression
+- Thieves / Assassins: `docs/lore/assassin_lore.md`, `docs/lore/thief_lore.md` — Non-institutional operating context; most permissive five-city jurisdiction for shadow-economy practice
+- Egomancers: `docs/lore/egomancer_lore.md` — Anti-sealed-warrant framework benefits cognitive-arts practitioners
+- Kinetimancers: `docs/lore/kinetimancer_lore.md` — Kinetic Formulist manuscripts accessible in Kiess archive
+
+**Mafdet** (swift courts, Strandline Compact, oath-enforcement, maritime law):
+- Warriors: `docs/lore/warrior_lore.md` — Harbor Wardens; Shrine of the First Claw oath-enforcement
+- Thieves: `docs/lore/thief_lore.md` — Swift-court jurisdiction mapping; oath-breaking threshold constrains fence operations
+- Assassins / Nightblades: `docs/lore/nightblade_lore.md` — Referral chain engagement parameter constraints from swift-court oath doctrine
+
+**Rakuen** (chronic emergency, Garden Ledger, disaster response, annexation politics):
+- Priests: `docs/lore/priest_lore.md` — High-volume death rites and community sustaining under chronic emergency
+- Warriors: `docs/lore/warrior_lore.md` — Disaster-response and wall-maintenance functions; broad emergency experience
+- Thieves: `docs/lore/thief_lore.md` — Garden Ledger Clerks as informal research partners; pragmatic tolerance
+- Monks: `docs/lore/monk_lore.md` — Crisis-period monastery adaptations; compressed training lineage in disaster response
+
 
