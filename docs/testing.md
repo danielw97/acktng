@@ -176,6 +176,29 @@ make integration-test-telnet
 
 ---
 
+## SSM Heap Capacity
+
+The server uses a shared string manager (`src/ssm.c`) to store all area text (room names, descriptions, mob names, object descriptions, etc.) in a fixed-size heap. The heap size is controlled by:
+
+```c
+// src/headers/ssm.h
+#define MAX_CHUNKS 100
+```
+
+`MAX_CHUNKS × CHUNK_SIZE (65520 bytes)` = total string heap size. Adding a large new area with long room and mob descriptions can exhaust the heap during boot, producing:
+
+```
+BUG: SSM: The shared string heap is full!
+```
+
+When this happens the server attempts a defrag pass; if that recovers enough space the boot continues but login may fail because critical strings (login prompts, MOTD, etc.) loaded after the overflow may be empty or truncated.
+
+**Fix:** increase `MAX_CHUNKS` in `src/headers/ssm.h`. A value of `100` supports the current area corpus. If adding another large area causes overflow, increase by 10–15 per ~100 verbose rooms added.
+
+After changing `MAX_CHUNKS` you must recompile `ssm.c` before the change takes effect. A `make ack` after touching `src/ssm.c` (or running `make clean && make ack`) will pick up the new value.
+
+---
+
 ## CI
 
 The GitHub Actions workflow `.github/workflows/validate-open-prs.yml`:
