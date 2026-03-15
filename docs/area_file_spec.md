@@ -23,7 +23,7 @@ Notes:
 - Section order is flexible for loading (the loader dispatches by section name).
 - Some sections are optional.
 - Section names are case-sensitive in area files as written.
-- Area files must not contain comments; comment syntax is not part of the accepted on-disk format.
+- Area files must not contain comments of any kind. No section accepts comment lines. This applies to all sections including `#MOBILES`, `#OBJECTS`, `#RESETS`, `#SPECIALS`, and `#OBJFUNS`.
 
 ## 2) String encoding
 
@@ -122,8 +122,6 @@ Parsing stops when the next `#` section header is encountered.
 
 Mobile section details were extracted to [docs/mob_spec.md](mob_spec.md).
 
-Comment lines beginning with `*` are accepted.
-
 ## 7) `#OBJECTS` section
 
 Object section details were extracted to [docs/object_spec.md](object_spec.md).
@@ -153,8 +151,6 @@ M <mob_vnum> <spec_fun_name>
 ...
 S
 ```
-
-`*` comment lines are accepted.
 
 Allowed `<spec_fun_name>` values (from `spec_lookup()` in `src/special.c`):
 
@@ -244,8 +240,6 @@ O <obj_vnum> <obj_fun_name>
 S
 ```
 
-`*` comment lines are accepted.
-
 Allowed `<obj_fun_name>` values (from `obj_fun_lookup()` in `src/obj_fun.c`):
 
 Builder policy constraints for object-function/flag alignment:
@@ -297,6 +291,19 @@ Builder editor mapping:
 
 - `addreset put <obj-vnum> <container-vnum>` emits reset command `P` with `arg1=<obj-vnum>`, `arg2=0`, and `arg3=<container-vnum>`.
 
+Shop inventory stocking pattern:
+
+- Shop inventory is stocked by issuing `G` resets (give to previous mob) immediately after the `M` reset that spawns the shopkeeper mob.
+- Each `G` reset gives one object type to that shopkeeper; the shopkeeper then sells those items.
+- Use `G 0 <obj_vnum> <limit>` where limit is typically 5 to allow multiple simultaneous copies.
+- Example sequence: `M 0 <keeper_vnum> 1 <room_vnum>` followed by one or more `G 0 <item_vnum> 5` lines.
+
+Door reset both-sides requirement:
+
+- When a door is reset to `closed` (state 1) or `locked` (state 2) via `D`, both sides of the door must be reset with matching `D` commands.
+- For a door between rooms A and B: issue `D 0 <roomA> <dir_to_B> <state>` and `D 0 <roomB> <dir_to_A> <state>`.
+- Both exits must also have the `door` (`EX_ISDOOR`, bit `1`) flag set in their room `D<door>` entries.
+
 Reset vnum validity rule:
 
 - Resets must reference valid vnums for the target type required by the command (room/mobile/object as applicable).
@@ -319,6 +326,7 @@ Note: `V` envelopes may overlap between areas (e.g., two areas can both declare 
 - `D` entries must include two `~` strings and a destination line with exactly three integers.
 - If `#MOBILES` exists, it must terminate with `#0` before `#OBJECTS`.
 - If `#OBJECTS` exists, it must terminate with `#0` before `#RESETS`.
+- `#OBJECTS` must not contain blank lines between object records.
 - `#ROOMS` must contain at least one room in listed area files.
 - Area-owned vnums must stay inside the `#AREA` `V <min> <max>` range:
   - `#ROOMS`, `#MOBILES`, and `#OBJECTS` entry headers (`#<vnum>`)
@@ -332,6 +340,7 @@ Note: `V` envelopes may overlap between areas (e.g., two areas can both declare 
 - Bitvector hygiene: undefined bits must be removed from serialized fields when detected.
   - Do not persist undefined/unknown bits in any bitvector-backed area field.
   - Keep only bits explicitly defined for that field (or documented runtime-only exceptions where applicable).
+- `area/area.lst` must list area files in strictly ascending order by their `V <min>` vnum. Inserting an area out of vnum order causes the `unit-test-area-format` check to fail.
 
 ## 13.1) Vnum allocation policy
 

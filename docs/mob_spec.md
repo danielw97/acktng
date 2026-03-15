@@ -38,6 +38,9 @@ Authoring quality policy for mob text fields:
 Optional extension blocks (detected by leading marker):
 
 - `! <class> <clan> <race> <position> <skills> <cast> <def>`
+  - `<position>` is read from the file but **always discarded**: the loader unconditionally sets the mob's position to `POS_STANDING` (7). Use `7` for clarity.
+  - `<class>` and `<clan>` are read as integers; use `0` for default/unset.
+  - `<race>` must be `>= 0`; use `0` for default. Negative values are reset to `0` by the loader.
 - `| <strong_magic> <weak_magic> <race_mods> <power_skills> <power_cast> <resist> <suscept>`
 - `+ <spellpower_mod> <crit_mod> <crit_mult_mod> <spell_crit_mod> <spell_mult_mod> <parry_mod> <dodge_mod> <block_mod> <pierce_mod>`
 - `l <loot_amount> <loot[0..MAX_LOOT-1]>`
