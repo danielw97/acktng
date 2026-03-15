@@ -28,10 +28,33 @@ Room entries are one of:
   <locks> <key_vnum> <to_room_vnum>
   ```
   - `door` must be 0..5.
-  - destination line must be exactly 3 integers.
-  - Named exits are allowed by setting a non-empty `<exit_keyword>` when it improves room flavor/clarity.
-  - For door-style named exits, prefix the keyword with `^` (for example, `^iron gate`).
+  - **Both tilde-terminated lines are required** — the exit definition always occupies exactly two `~`-terminated lines before the numeric data line. Omitting either `~` line is a parse error.
+  - `<exit_description>` is the passage description text shown when examining the exit (may be empty — just `~` on its own line).
+  - `<exit_keyword>` is the player-facing noun used in movement and door commands (may be empty — just `~` on its own line). Named exits are allowed when it improves room flavor/clarity.
+  - For door-style named exits, prefix the keyword with `^` (for example, `^iron gate`) so movement messaging treats it as a standalone noun phrase.
   - `<key_vnum>` must be the vnum of a key object that unlocks this exit. Use `-1` when no key exists for the exit.
+  - destination line must be exactly 3 integers.
+
+  Worked examples:
+
+  Plain unnamed exit (no door, no key):
+  ```text
+  D2
+  ~
+  ~
+  0 -1 16001
+  ```
+
+  Named door with a key (the `^` prefix makes `unlock cistern hatch` work):
+  ```text
+  D5
+  ~
+  ^cistern hatch~
+  1 16196 16095
+  ```
+  (`locks=1` = `EX_ISDOOR`, `key_vnum=16196`, `dest=16095`)
+
+  A common mistake is placing the keyword text on the first (description) line and leaving the second line empty. This passes the validator because both `~` strings are present, but the exit name will not be recognized in door commands.
 - Extra description:
   ```text
   E

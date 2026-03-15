@@ -60,6 +60,24 @@ Optional extension blocks (detected by leading marker):
 - `l <loot_amount> <loot[0..MAX_LOOT-1]>`
 - `L <loot_chance[0..MAX_LOOT-1]>`
 
+**`MAX_LOOT = 9`**: the loot array always has exactly 9 slots. Both the `l` and `L` lines must contain exactly 9 values after their leading field, with unused slots padded to `0`. The file validator enforces this strictly.
+
+Concrete field counts:
+- `l` line: `l <loot_amount> <v0> <v1> <v2> <v3> <v4> <v5> <v6> <v7> <v8>` — 10 fields total
+- `L` line: `L <c0> <c1> <c2> <c3> <c4> <c5> <c6> <c7> <c8>` — exactly 9 fields
+
+Example (one guaranteed drop of object 16179, all other slots unused):
+```
+l 1 16179 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+```
+
+Example (pool of 3 items, one drawn per reset, drop rates 20/34/46):
+```
+l 1 1150 1151 1152 0 0 0 0 0 0
+L 20 34 46 0 0 0 0 0 0
+```
+
 Loot table semantics:
 - `loot_amount` must be greater than 0 for loot drops to be attempted.
 - `loot_amount` is percent-based with overflow in 100-point chunks: `50` = 50% chance to drop one item, `100` = exactly one item, `150` = one guaranteed + 50% chance for a second, `300` = exactly three items.
