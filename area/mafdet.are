@@ -3619,7 +3619,6 @@ l 100 14267 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
-* Weapon shop inventory (14200-14215)
 #14200
 reach road caravan knife~
 a reach road caravan knife~
@@ -3764,7 +3763,6 @@ A heavy curved blade ground to the Ironwright's most demanding standard lies her
 8
 L
 80
-* Armor shop inventory (14216-14231)
 #14216
 glasswalk chitin sandals~
 glasswalk chitin sandals~
@@ -3909,7 +3907,6 @@ A masterwork breastplate representing the Shoreward Armory's best construction w
 15
 L
 80
-* General shop inventory (14232-14249)
 #14232
 salt-dried trail rations~
 salt-dried trail rations~
@@ -4072,7 +4069,6 @@ A fully stocked field pack loaded with standard Glasswalk expedition supplies li
 8
 L
 80
-* Magic shop inventory (14250-14265)
 #14250
 littoral branch inscription ink~
 Littoral Branch inscription ink~
@@ -4217,7 +4213,6 @@ A scroll carrying the current Quarantine Ledger hazard registry as of the last f
 2
 L
 80
-* Key objects (14266-14268)
 #14266
 storm ledger vault key~
 the Storm Ledger Vault key~
@@ -4239,7 +4234,6 @@ A heavy iron key designed for the sealed grate separating the upper undercroft f
 18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 1
-* Boss drop items (14269-14273)
 #14269
 quarantine abomination containment shard~
 the Quarantine Abomination's containment shard~
@@ -4285,7 +4279,6 @@ A basalt fragment inscribed with the dual-jurisdiction text of the Shoreward Sea
 3
 L
 80
-* Scatter and loot items (14274-14299)
 #14274
 glasswalk shoes~
 glasswalk shoes~
@@ -4552,7 +4545,6 @@ L
 14207 2 4 10 0 0 130 70 0 23
 0
 #RESETS
-* Service NPCs
 M 0 14200 1 14232
 M 0 14201 1 14236
 M 0 14202 1 14240
@@ -4628,7 +4620,6 @@ G 0 14263 5
 G 0 14264 5
 G 0 14265 5
 M 0 14208 1 14307
-* District A: Tidemouth Approach wildlife
 M 0 14209 3 14200
 M 0 14209 2 14202
 M 0 14214 3 14201
@@ -4638,14 +4629,12 @@ M 0 14212 3 14200
 M 0 14212 2 14207
 M 0 14213 1 14208
 M 0 14215 2 14217
-* District A: Approach zone hostiles
 M 0 14216 3 14211
 M 0 14216 2 14208
 M 0 14220 1 14212
 M 0 14217 1 14213
 M 0 14218 2 14209
 M 0 14219 1 14215
-* District B: Carters Yard ambient
 M 0 14221 3 14230
 M 0 14221 2 14238
 M 0 14225 2 14230
@@ -4653,7 +4642,6 @@ M 0 14226 1 14242
 M 0 14228 2 14246
 M 0 14230 2 14259
 M 0 14233 2 14234
-* District C: Ledger Quarter
 M 0 14224 2 14265
 M 0 14224 2 14273
 M 0 14232 2 14282
@@ -4661,7 +4649,6 @@ M 0 14252 2 14285
 M 0 14237 1 14269
 M 0 14253 1 14288
 M 0 14239 1 14298
-* District D: Harbor Front
 M 0 14231 3 14305
 M 0 14231 2 14313
 M 0 14231 2 14349
@@ -4681,12 +4668,10 @@ M 0 14250 2 14341
 M 0 14251 3 14341
 M 0 14215 3 14309
 M 0 14230 2 14313
-* District E: Tidewall upper
 M 0 14249 2 14350
 M 0 14249 2 14362
 M 0 14229 2 14354
 M 0 14238 1 14358
-* District E: Undercroft
 M 0 14242 3 14366
 M 0 14242 2 14370
 M 0 14242 2 14374
@@ -4698,18 +4683,15 @@ M 0 14246 1 14381
 M 0 14247 2 14370
 M 0 14247 2 14374
 M 0 14240 1 14382
-* District F: Shrine Terrace
 M 0 14235 2 14391
 M 0 14235 2 14389
 M 0 14241 1 14395
-* Object room placements
 O 0 14295 1 14391
 O 0 14296 1 14393
 O 0 14286 1 14279
 O 0 14290 2 14341
 O 0 14284 1 14269
 O 0 14288 1 14238
-* Door state resets
 D 0 14224 1 1
 D 0 14225 3 1
 D 0 14281 2 2
