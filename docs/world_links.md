@@ -75,11 +75,19 @@ The old `wood.are` (vnums 1432–1531) had bidirectional cross-area connections 
 | `withered_depths` 291 | `confusn` 2434 | Withered Depths ↔ Forest of Confusion |
 | `verdantgreen` 2739 | `confusn` 2434 | Verdant Depths ↔ Forest of Confusion |
 | `akhenet` 792 | `eastern_desert` 1840 | Akh'enet ↔ Eastern Desert |
+| `eastern_desert` 1871 | `khardaan` 5624 | Eastern Desert ↔ Khar'Daan (down shaft) |
+| `khardaan` 5624 | `eastern_desert` 1871 | Khar'Daan ↔ Eastern Desert (up shaft) |
 | `eastern_desert` 1835 | `arroyo` 4439 | Eastern Desert ↔ Arroyo |
 | `eastern_desert` 1836 | `sultans_palace` 5256 | Eastern Desert ↔ Sultan's Palace |
 | `eastern_desert` 1839 | `scorched_wastes` 4881 | Eastern Desert ↔ Scorched Wastes |
 | `eastern_desert` 1851 | `the_great_oasis` 1932 | Eastern Desert ↔ Great Oasis |
+| `eastern_desert` 1851 | `scorchsands` 4956 | Eastern Desert ↔ Scorching Sands (south exit) |
 | `eastern_desert` 1855 | `lost_city` 5331 | Eastern Desert ↔ Lost City |
+| `scorchsands` 4956 | `eastern_desert` 1851 | Scorching Sands ↔ Eastern Desert |
+| `scorchsands` 5030 | `saltglass_reach` 5724 | Scorching Sands ↔ Saltglass Reach |
+| `saltglass_reach` 5724 | `scorchsands` 5030 | Saltglass Reach ↔ Scorching Sands (west entry) |
+| `saltglass_reach` 6123 | `mafdet` 3539 | Saltglass Reach ↔ Port Mafdet |
+| `mafdet` 3539 | `saltglass_reach` 6123 | Port Mafdet ↔ Saltglass Reach |
 | `the_great_oasis` 1933–1941 | `the_northern_oasis` 2212–2220 | Great Oasis ↔ Northern Oasis (multi) |
 | `the_great_oasis` 2031 | `the_southern_oasis` 2539 | Great Oasis ↔ Southern Oasis |
 | `kelshadra` 2232 | `wood` 1456 | **Deprecated** (see above) |
