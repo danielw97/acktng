@@ -649,3 +649,185 @@ The eastern fringe where the older gravewood meets the estate's commercial buria
 The route through the southern gravewood that the Wild Hunt uses when departing the estate for its perimeter-extension patrols. The path is marked by the Hunt's passage: frost-etched patterns in the bark of the bordering trees, visible as white tracery, and frost-prints pressed into the soil at the intervals of a horse's gait. The path itself is wider than a human-made trail would be and runs with a directness — through root-mass and undergrowth — that is possible only because the substrate clears it for the Hunt's use. At night, sound does not carry normally along this path. During the day, the path is merely a route. At night, it is a jurisdiction.
 - Exits: `north` → 1206 (Whisper Path), `south` → 1280 (Zone VIII: Night Approach Road)
 
+---
+
+### Zone V: The Mire (1216–1231) — 16 Rooms
+
+The peripheral wetland at Thornwood's eastern and southern margins. Funerary runoff, alchemical waste, and substrate water-table seepage have produced a toxic ecology unlike anything else in the estate. Routes are unstable by design — the substrate adjusts subsurface paths to redirect travelers. The fog shrine at the mire's center is the oldest ritual site in Thornwood.
+
+**1216 — The Mire Edge**
+`room_flags: dark no_recall cold` | `sector: field`
+Where solid ground ends without ceremony. The transition is not a cliff or a clear waterline but a gradual yielding: the earth softens underfoot, then wets, then begins to take footprints that fill slowly with dark water. Pale reeds have advanced to this line and stopped — or rather, the reeds mark this line and the mire marks everything beyond it. The smell changes here: from the forest's rot-and-tannin to something sulfurous and flat, the smell of water that has been holding dead material for a very long time. A stepping-stone path begins at the edge, its stones mossy granite pressed into the mire's surface at irregular intervals.
+- Exits: `west` → 1190 (Thorn-Ringed Plots, burial field connection), `east` → 1217 (Stepping Stone Path Entry), `south` → 1230 (Zone IX: Alchemical Runoff Channel approach)
+
+**1217 — The Stepping Stone Path (Entry)**
+`room_flags: dark no_recall cold` | `sector: water_swim`
+The mire's main navigable route, beginning at the eastern edge and proceeding inward along a sequence of moss-covered granite stones that provide marginally stable footing above the waterline. The stones are set at walking intervals and are large enough for one person at a time. The water between them is dark and still, its depth indeterminate — it takes objects thrown into it without audible impact. Pale reeds grow thickly on either side of the stepping path, their stems angled slightly toward the path as though monitoring it.
+- Exits: `west` → 1216, `east` → 1218 (Pale Reed Verge)
+
+**1218 — The Pale Reed Verge**
+`room_flags: dark no_recall cold` | `sector: water_swim`
+A stretch where the stepping-stone path narrows and the reed growth presses in from both sides. The reeds rattle without wind — their movement is substrate output, readable to shamans as a directional indicator. The rattling here is notably irregular, suggesting the substrate is not holding a single direction but cycling through multiple route assessments. The water between the stones is shallower here, with a bottom visible as pale mineral sediment — the crystal substrate's runoff compositing with the mire's organic accumulation into a layer that has the color and texture of old bone.
+- Exits: `west` → 1217, `east` → 1219 (Fog Shroud), `south` → 1226 (Mire Fringe East)
+
+**1219 — The Fog Shroud**
+`room_flags: dark no_recall cold` | `sector: water_swim`
+The fog bank that occupies the mire's central section, dense enough that depth cues become unreliable at distances beyond two arm-lengths. The fog is not weather — it does not thin in wind or burn off in morning sun. It is a permanent product of the substrate's temperature differential: the crystal substrate's cold meeting the mire's decomposition warmth produces a luminous haze that makes the mire appear to glow from inside. Objects in the fog appear at wrong distances. Sound behaves differently here — speech carries farther than expected, footfalls carry shorter. The stepping-stone path continues through the fog, but the stones are not always where you expect them.
+- Exits: `west` → 1218, `east` → 1220 (Black Water Pool), `north` → 1221 (Mire Crossing Central)
+
+**1220 — The Black Water Pool**
+`room_flags: dark no_recall cold` | `sector: water_noswim`
+A pool of notably still, dark water where the stepping-stone path diverts around rather than through. The pool's surface is intact, undisturbed even by the fog — it has the quality of glass, and it reflects nothing accurately. Occasionally the surface breaks without explanation: a ring, a displacement, then stillness again. The pool's chemical composition is the end-product of the mire's entire waste system: burial runoff, alchemical outflow from the distillation building, substrate seepage. Nothing lives in it visibly. Something uses it.
+- Exits: `west` → 1219, `south` → 1224 (Sulfur Vent Channel), `north` → 1221 (Mire Crossing Central)
+
+**1221 — The Mire Crossing (Central)**
+`room_flags: dark no_recall cold` | `sector: water_swim`
+The middle of the mire, where the stepping-stone path is least reliable and the fog is thickest. The substrate adjusts the subsurface at intervals, slightly repositioning the stones or altering the water depth between them. A traveler who memorized the crossing last time will find it subtly different this time — not enough to prevent passage, but enough to prevent certainty. This is the substrate's territorial behavior applied to navigation: it allows passage but maintains ambiguity.
+- Exits: `south` → 1219, `north` → 1222 (Raised Peat Island)
+
+**1222 — The Raised Peat Island**
+`room_flags: dark no_recall` | `sector: field`
+A stable island of compressed peat and sediment near the mire's center, elevated enough above the waterline to provide reliable footing. The island is roughly oval, large enough to encamp a small group. Its edges are ringed with the pale reeds, and its center is clear — kept that way by something's preference. The fog shrine is east of here. The island's peat surface carries clear footprints: human-shaped, but with the thorn-pattern texture of substrate-integrated feet. The island is used.
+- Exits: `south` → 1221, `east` → 1223 (Fog Shrine), `north` → 1229 (Mire Egress North)
+
+**1223 — The Fog Shrine** ★
+`room_flags: dark no_recall cold` | `sector: field`
+The oldest ritual site in Thornwood, predating the estate, the Root Covenant, and possibly the ridge-clan communities whose burial practices partially inspired the cult's theology. The shrine is a stone platform rising from the peat of a secondary island, accessible by a narrow stepping bridge from the raised peat island. The platform bears offerings: corroded bronze pieces, antler sections, small arrangements of animal bones placed with the precision of a filing system rather than the scatter of reverence. At the platform's center, a carved stone figure has been so thoroughly fitted with iron rings driven into its surface that the original form is unguessable — the rings cover every visible surface, overlapping and pressed flush with each other, as though someone found the original figure's identity a problem and decided to file the problem shut. The shrine is @@pcold even relative to the surrounding mire@@N, and carries the strongest harmonic tone anywhere on the surface — the crystal substrate's signature frequency, amplified through the platform's stone into the surrounding peat.
+- Exits: `west` → 1222
+
+**1224 — The Sulfur Vent Channel**
+`room_flags: dark no_recall cold` | `sector: water_swim`
+A drainage channel carrying the mire's sulfurous output toward the eastern margin, its surface marked by periodic gas venting that produces a flat, dead smell and a faint haze at water level. The channel receives runoff from both the burial fields and the cave system's water table. Walking the channel edge is possible but requires attention: the bank is unstable, the water is not swimmable, and the chemical content of the outflow has produced a pale, slightly crystalline deposit along the channel walls that is slippery under foot.
+- Exits: `north` → 1220 (Black Water Pool), `east` → 1225 (Sunken Boundary Wall)
+
+**1225 — The Sunken Boundary Wall**
+`room_flags: dark no_recall cold` | `sector: water_swim`
+The original estate perimeter wall's southern section, which has subsided progressively into the mire over generations as the wetland expanded. The wall's upper courses are still above waterline — visible as a line of dressed stone running east-to-west, its mortar partly replaced by root-fiber that extends into the water below. The Harren boundary marks are still legible on the above-water faces. The wall still functions as a partial barrier: the substrate uses it as a routing anchor, and the water on the estate's interior side of the wall is navigably different from the water on the exterior side.
+- Exits: `west` → 1224, `east` → 1226 (Mire Fringe East)
+
+**1226 — The Mire Fringe East**
+`room_flags: dark no_recall cold` | `sector: water_swim`
+The eastern mire margin, where the water shallows and the ground firms again — the exit point for travelers crossing the mire from west to east. The reeds here are denser and taller than at the entry, and their rattling has a different quality: more insistent, less informational. The substrate does not want travelers to exit here easily. The correct path through the reeds is findable but requires the same kind of attention the crossing demanded — watching where the reeds angle, where the ground rings hollow, where the stepping stones' moss is compressed by recent use.
+- Exits: `north` → 1218 (Pale Reed Verge), `west` → 1225, `east` → 1227 (Broken Causeway)
+
+**1227 — The Broken Causeway**
+`room_flags: dark no_recall` | `sector: field`
+The remains of a stone causeway that the Harren estate built through the mire's eastern margin to improve transit from the burial fields to the ossuary hillside cut. The causeway succeeded for approximately one generation before the substrate began breaking it — first at the joints, then in the middle spans, until the current state: three intact sections, two collapsed sections, and a gap in the middle that requires either swimming or a different route. The collapsed sections are visible as stone rubble just below the waterline, still serviceable as rough stepping ground for those willing to go in to the knee.
+- Exits: `west` → 1226, `north` → 1231 (Substrate Water Sink)
+
+**1228 — The Deep Mire**
+`room_flags: dark no_recall cold` | `sector: water_noswim`
+The mire's deepest section — the area where the water table is highest and where the accumulated material from generations of drainage has produced a depth that is genuinely dangerous. There is no safe crossing through the deep mire; the substrate maintains it as an impassable barrier in the estate's tactical geography. The water here carries a visibility of zero. The surface occasionally expresses large, slow movement — not the breaking of something coming up, but the settling of something very large shifting position far below. The deep mire connects to the cave system's water table; the crystal substrate's influence is visible as @@alight-cyan phosphorescence@@N in the deepest water, reaching up from the cave formations below.
+- Exits: `south` → 1226 (approach only — entering from north not possible; this room is a dangerous dead-end; the only exit is back south)
+
+**1229 — The Mire Egress North**
+`room_flags: dark no_recall` | `sector: forest`
+The northern mire margin where the wetland meets the southern edge of the older gravewood — the connection between the two zones. The ground here is firm enough to walk on but retains the mire's moisture, producing a soft surface where footprints are preserved indefinitely. A thorn-pattern marker post at the margin boundary carries a Root Covenant filing-glyph: a circle with four diagonal lines, indicating that this crossing is a recognized transit point in the cult's route system. The gravewood's trees begin immediately beyond the marker.
+- Exits: `south` → 1222 (Raised Peat Island), `north` → 1210 (Zone IV: Bone-Woven Tree)
+
+**1230 — The Alchemical Runoff Channel**
+`room_flags: dark no_recall` | `sector: water_swim`
+The drainage channel running south from the distillation outbuilding to the mire, carrying decades of alchemical waste: bone oils, botanical extracts, tannin concentrates, and mineral compounds from the distillation process. The channel's walls carry a chemical deposit that has altered the stone's surface texture — smooth and slightly iridescent where the most reactive compounds settled. The water in the channel is not safe to contact; even the mire's residents avoid the channel itself, using the adjacent ground instead. The channel connects east to the mire proper and west to the distillation outbuilding above.
+- Exits: `north` → 1175 (Zone II: Distillation Outbuilding), `east` → 1216 (Mire Edge), `south` → 1231 (Substrate Water Sink)
+
+**1231 — The Substrate Water Sink**
+`room_flags: dark no_recall cold` | `sector: water_swim`
+A natural depression at the mire's southern margin where the substrate's water table surfaces as a steady seep of cold, mineral-rich water from the cave system below. The seep runs contrary to the mire's prevailing drainage: the mire flows generally eastward, but this sink takes water from below and holds it in a small, permanently cold pool that does not drain into the mire proper. The water in the pool carries @@acrystal-mediated luminescence@@N — faint, pale, and cold, identical to the bioluminescence in the cave system's deepest passages. A shaman who knows what they are looking for can read the sink's output as a direct signal from the binding's current state.
+- Exits: `north` → 1227 (Broken Causeway), `west` → 1230 (Alchemical Runoff Channel), `northeast` → 1291 (Zone IX: Wraith Passage)
+
+---
+
+### Zone VI: Ossuary Undercroft (1232–1249) — 18 Rooms
+
+Below the manor and hillside. Funerary and substrate logics are co-dominant here. The bone weavers work in this layer; the drain passages carry the binding's inscription text toward the cave system below. The transition from ossuary to cave is the transition from human-managed funerary industry to the substrate's own domain.
+
+**1232 — The Undercroft Stairs**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+The stone stair descending from the wine cellar's iron hatch into the ossuary undercroft. The stairs are narrow, cold-mortared, and steep — built for function, not comfort. The descent takes a traveler from the wine cellar's ambient cold (already notable) into a qualitatively different cold: the bone-dust dryness of the ossuary layer, where temperature is maintained by the crystal substrate below rather than by any natural process. The stair walls carry the first of the drain passage inscriptions — not the urgent, small-script text of the lower passages, but the full-size, deliberate lettering of the binding's opening clauses.
+- Exits: `up` → 1169 (Wine Cellar), `north` → 1233 (Upper Undercroft Hall)
+
+**1233 — The Upper Undercroft Hall**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+The formal entry to the ossuary layer — the administrative reception space for the undercroft, where intake records were processed before remains were assigned to specific vault sections. A desk and record-stand still occupy the hall's entry end; the records in the stand are organized by the estate's case-number system, cross-referenced to the deferred-name register above. The ossuary's cataloguing system here is meticulous and unsentimental: each entry notes the case number, intake date, bone condition, vault assignment, and processing notes in the bone weaver's abbreviated professional vocabulary. The hall's ceiling is vaulted, and the vault springs carry @@psubstrate-glyph decorations@@N cut into the stone — not the estate's heraldry, but the binding's inscription geometry.
+- Exits: `south` → 1232 (Undercroft Stairs), `north` → 1234 (Bone-Sorting Station), `east` → 1240 (Cut-Stone Passage)
+
+**1234 — The Bone-Sorting Station**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+The first active processing area — where bone weavers perform the initial categorization of material coming in from the hillside ossuary and from the exhumation transit hall. Long stone tables with partitioned sections hold sorted material by type: long bones, flat bones, small bones, skull material, mixed-origin material for the construct assembly floor. The bone weavers' tools are present: measurement gauges, density testers, selection rods for identifying structural-grade material. The station is operational. The sorting continues regardless of visitors. The bone weavers do not pause.
+- Exits: `south` → 1233, `north` → 1235 (Femur Gallery), `east` → 1238 (Bone-Weaver's Workshop)
+
+**1235 — The Femur Gallery**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+A long corridor whose walls have been converted into structural bone storage: femurs and tibiae stacked horizontally in recessed niches, floor to ceiling, their ends facing outward in a pattern that is simultaneously storage and load-bearing structure. The bones are not merely placed — they are integrated with the wall's limestone, held in place by root-fiber threading at the joints, the organic and mineral fused into a composite material that the bone weavers treat as more durable than either component alone. The gallery's floor is polished smooth by generations of foot traffic and cart passage. Sound in the gallery is unusual: it arrives flat, with no echo — the bone-and-root composite absorbs rather than reflects.
+- Exits: `south` → 1234, `north` → 1236 (Skull Vault), `east` → 1242 (Exhumation Transit Hall)
+
+**1236 — The Skull Vault**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+A domed chamber dedicated to skull storage, organized by the bone weavers' categorization system: skulls sorted by density, age-at-death, and "resonance grade" — a quality the bone weavers assess by striking the skull and listening to the harmonic output. Higher-resonance skulls are stored in the inner ring of wall-niches; lower-resonance in the outer ring. The skulls in the inner ring are all from the sealed burial row above — the substrate-connected burials whose resistance to exhumation was eventually overcome through a technique the bone weavers decline to describe in detail. The dome's interior surface carries one complete verse of the binding's inscription text, pressed into the stone in the Root Covenant's contract-liturgy script, circling the dome at eye height.
+- Exits: `south` → 1235, `east` → 1237 (Rib-Cage Armature Chamber)
+
+**1237 — The Rib-Cage Armature Chamber**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+A workshop space where partially assembled construct frames are stored between working sessions. Rib-cage sections — from multiple sources, assembled into larger composite structures — hang from ceiling hooks on chains, their curved geometry holding internal volumes that will eventually house other components. Against the walls, armature sections in various stages of completion: some are clearly recognizable as enlarged human torso-structures; others have departed from the human template entirely, incorporating elements from non-human remains in configurations the substrate appears to have specified.
+- Exits: `west` → 1236, `south` → 1238 (Bone-Weaver's Workshop)
+
+**1238 — The Bone-Weaver's Workshop**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+The master bone weaver's primary working space — where the most demanding construction work is done. Workbenches carry in-progress pieces; tool racks hold implements that have no counterparts in ordinary craft: resonance hammers sized to specific frequency ranges, root-threading needles with substrate-treated tips, structural gauge sets calibrated against the ossuary's material standards. The master bone weaver's bench holds a current project: a hand assembly, five fingers in varying stages of completion, the joints threaded with root-fiber at precisely the same gauge as the bone-woven tree in the gravewood above. The workshop is tidy in the way that a craftsman's space is tidy — everything where it can be found, nothing decorative.
+- Exits: `north` → 1234 (Bone-Sorting Station), `west` → 1237, `south` → 1247 (Construct Assembly Floor)
+
+**1239 — The Hillside Ossuary Entry**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+The connection point between the burial fields above and the ossuary undercroft: the inner face of the hillside cut, where the gated entrance opens into the undercroft's eastern section. The approach from the burial fields (via 1187) deposits arrivals here. The entry chamber is fitted with intake hardware — a scale, a manifest-check stand, a lamp-hook now empty — that mirrors the surface processing equipment above. The duplicate infrastructure is deliberate: the estate maintained parallel processing systems at both the surface and undercroft levels so that remains could be received from above or below without crossing operational paths.
+- Exits: `up` → 1187 (Zone III: Ossuary Hillside Cut), `west` → 1240 (Cut-Stone Passage)
+
+**1240 — The Cut-Stone Passage**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+A passage cut directly into the hillside limestone, older than the formal undercroft construction — this was the original tunnel that predated the Harren estate's systematic ossuary development, part of the same burial-route infrastructure as the grave tunnels connecting to Midgaard and Shadowmere. The walls here carry marks from three distinct eras of use: the pre-estate chisel-work in the stone, Harren-era carved administrative markers, and Root Covenant inscription additions. The passage smells differently from the formal undercroft — older, drier, more mineral, with a trace of the cave system's crystal cold coming from below.
+- Exits: `east` → 1239 (Hillside Ossuary Entry), `west` → 1233 (Upper Undercroft Hall), `south` → 1241 (Deep Ossuary Vault)
+
+**1241 — The Deep Ossuary Vault**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+The densest bone-storage area in the undercroft — a large vaulted chamber where the accumulated processed remains of the estate's operational peak are stacked to the ceiling in organized sections. The sheer volume is the first thing: the chamber holds more material than the surface burial fields would suggest, because the substrate's assimilation of ridge-clan remains into the network added to the estate's material inventory without any corresponding surface interment. The bone weavers treat this vault as their primary raw material supply — a library of structural elements organized by the same cataloguing system as the upper vaults, but more dense and more varied.
+- Exits: `north` → 1240, `south` → 1242 (Exhumation Transit Hall), `down` → 1244 (Drain Passage Entry)
+
+**1242 — The Exhumation Transit Hall**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+The routing corridor between the burial fields (via the hillside cut) and the ossuary processing stations — where remains in transit passed from intake to processing. The hall's walls carry transit records: chalk marks on a slate board updated by each shift of bone-processing laborers, recording what moved where and when. The most recent entries on the board are not in chalk. They are pressed into the slate by root-fiber — the substrate recording its own transit activity in the estate's inherited notation system.
+- Exits: `north` → 1235 (Femur Gallery), `east` → 1239 (Hillside Ossuary Entry)
+
+**1243 — The Resonance Chamber**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+A circular chamber specifically designed for the bone-weaver practice of resonance testing — assessing material by its harmonic output when struck. The chamber's geometry produces natural amplification; a bone struck at the center can be clearly evaluated from the walls. The bone weavers use this chamber for high-grade material assessment, but also for something else: the resonance testing of assembled construct sections, to confirm that the substrate integration is functioning correctly in the finished work. The tone produced by a properly integrated construct section matches the crystal substrate's harmonic signature. The chamber is used regularly; the air carries a faint harmonic afterimage of recent sessions.
+- Exits: `east` → 1241, `south` → 1247 (Construct Assembly Floor)
+
+**1244 — The Drain Passage Entry**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+The beginning of the drain passages — channels originally built to carry water drainage from the ossuary vaults downward to the cave system's water table, now carrying the binding's inscription text on their walls. At full height here, the text is legible as a deliberate, carefully lettered working in the binding's script: the opening of the binding's formal declaration, in large characters with generous spacing. This section reads clearly and confidently. The passage smells of cold mineral and the faint ozone-adjacent quality of the crystal substrate's chemistry.
+- Exits: `up` → 1241 (Deep Ossuary Vault), `down` → 1245 (Upper Drain Passage)
+
+**1245 — The Upper Drain Passage**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+The drain passage's upper middle section, where the binding's inscription text continues. The characters here are smaller — not from a smaller hand, but from a recalibration: the author had more text to fit than the passage's length easily accommodates. The text is still fully legible and the lettering is still controlled, but the density is visibly higher than above, and the wall surface is used more completely. The content shifts here from declaration to specification: where the upper section stated the binding's purpose, this section describes its mechanisms and dependencies.
+- Exits: `up` → 1244, `down` → 1246 (Lower Drain Passage)
+
+**1246 — The Lower Drain Passage**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+The drain passage's final section before the cave system, where the binding's inscription text becomes urgent. The characters are very small now — the lettering of someone who is running out of both space and, possibly, time. The text covers every available surface: walls, ceiling, and the passage floor where it is not covered by water. The content here appears to describe contingencies: what happens if specific components of the binding fail, what substitutions are permitted, what cannot be substituted. The @@pcold blue glow@@N of the crystal substrate's bioluminescent fungal output begins here, coming from below, providing the only light in the passage.
+- Exits: `up` → 1245, `down` → 1250 (Zone VII: Cave Mouth)
+
+**1247 — The Construct Assembly Floor**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+A large open floor where the bone weavers assemble their larger-scale constructs — marrow constructs and bone crypt configurations that cannot be built in the workshop's limited space. The ceiling here is high, allowing for vertical assembly. Chain hoists hang from iron fixtures in the ceiling for lifting large sections. The floor surface is marked with assembly reference lines: geometric guides for positioning limb angles, torso proportions, and articulation junction placement. Current projects in various stages of completion stand along the walls. The largest is not finished. It has been in progress for some time. Its scale exceeds what the estate's ossuary alone could supply — the substrate appears to have been routing material here from sources the bone weavers' records do not document.
+- Exits: `north` → 1238 (Bone-Weaver's Workshop), `east` → 1243 (Resonance Chamber), `south` → 1248 (Marrow Fiend Vault)
+
+**1248 — The Marrow Fiend Vault**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+Storage for completed large-scale constructs — the finished marrow fiends and bone crypt guardians waiting for deployment. The vault is tall and long, and the constructs that occupy it are correspondingly large: four meters or more in height, with excess limbs, rib-cage torsos, and articulated bone-plate coverage that gives them the visual impression of collapsed architecture that has decided to stand up. They are still. The stillness is not inactivity — the substrate holds them in reserve, and the harmonic in this vault is notably stronger than elsewhere in the undercroft, as though the crystal is paying closer attention to this room than to the spaces above.
+- Exits: `north` → 1247, `east` → 1249 (Cave System Entry Threshold)
+
+**1249 — The Cave System Entry Threshold**
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+The boundary between the ossuary undercroft and the cave system below — where cut stone gives way to natural limestone and the substrate's geological layer becomes physically accessible. The threshold is marked by a change in construction: the undercroft's mortared stonework ends at a ragged line, and the cave's natural formation begins without a designed transition. Someone has added carved marks at the transition — not the estate's administrative notation, not the Root Covenant's contract script, but the same pre-linguistic pressed handprint in ochre that appears at the grave tunnel hinge, the gravewood threshold, and the cave system's interior. The substrate marked its own boundary.
+- Exits: `west` → 1248 (Marrow Fiend Vault), `down` → 1250 (Zone VII: Cave Mouth)
+
