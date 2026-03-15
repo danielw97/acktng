@@ -353,6 +353,7 @@
 #define ROOM_VNUM_MORIBUND 65324
 #define ROOM_VNUM_BUILDER 65315
 #define ROOM_VNUM_BODIES 65290
+#define ROOM_VNUM_HALLS 65312  /* The Halls of the Immortals */
 #define ROOM_VNUM_CLAN 65325   /* for leaders only */
 #define ROOM_VNUM_DM_RECALL 3001
 #define ROOM_VNUM_ETHEREAL_PLANE 3850

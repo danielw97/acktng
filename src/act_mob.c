@@ -680,7 +680,7 @@ void mob_is_standing(CHAR_DATA *ch)
    if (able_to_level(ch))
    {
       char_from_room(ch);
-      char_to_room(ch, get_room_index(3758));
+      char_to_room(ch, get_room_index(ROOM_VNUM_LIMBO));
       gain_level(ch);
       return;
       /*
@@ -1161,7 +1161,7 @@ void int_group_handler(NPC_GROUP_DATA *ngroup)
    case GRP_STATE_LEVELING:
    {
       char_from_room(leader);
-      char_to_room(leader, get_room_index(3758));
+      char_to_room(leader, get_room_index(ROOM_VNUM_LIMBO));
       if (able_to_level(leader))
       {
          gain_level(leader);

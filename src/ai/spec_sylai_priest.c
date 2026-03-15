@@ -41,9 +41,9 @@ bool spec_sylai_priest(CHAR_DATA *ch)
    }
 
    if (number_percent() > 70)
-      location = get_room_index(436);
+      location = get_room_index(ROOM_VNUM_LIMBO);
    else
-      location = get_room_index(433);
+      location = get_room_index(ROOM_VNUM_LIMBO);
 
    if (location == NULL)
    {
