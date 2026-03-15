@@ -35,6 +35,20 @@ Authoring quality policy for mob text fields:
 
 `<act>` is parsed as an unsigned 64-bit bitvector. This allows mobile flags above the legacy 32-bit range (for example `day_only`/`night_only`) to be saved and loaded correctly.
 
+### Mobile stat modifier line (`hp_mod ac_mod hr_mod dr_mod`)
+
+The `<hp_mod> <ac_mod> <hr_mod> <dr_mod>` line is required for every mobile record. All four values are signed integers:
+
+- `hp_mod`: added to the mob's base hit-point roll. Positive values increase HP, negative reduce it. Use `0` for an average mob of its level.
+- `ac_mod`: added to the mob's armor class. Negative values improve AC (harder to hit); positive values worsen it. Use `0` for average, `-50` to `-100` for a notably tough mob, `-100` to `-150` for a boss.
+- `hr_mod`: added to the mob's hitroll (accuracy). Use `0` for average; `5`–`10` for a skilled combatant; bosses may use `8`–`12`.
+- `dr_mod`: added to the mob's damroll (damage output). Use `0` for average; `5`–`10` for a hard-hitting mob; bosses may use `8`–`12`.
+
+Practical authoring guidelines:
+- Normal-difficulty mobs: `0 0 2 2` through `0 0 5 5` scaled by level tier.
+- Elite (solo) mobs: add `0 -50 5 5` or similar.
+- Boss mobs: use `0 -100 8 8` through `0 -100 12 12` depending on the boss's tier.
+
 Optional extension blocks (detected by leading marker):
 
 - `! <class> <clan> <race> <position> <skills> <cast> <def>`
