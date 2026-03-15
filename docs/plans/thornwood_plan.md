@@ -457,3 +457,195 @@ What the estate's records call the Rose Garden was the manor's most formal exter
 A former apple and plum orchard at the estate's western edge, now twisted beyond fruiting capacity. The trees still stand in rows — the original planting grid is visible — but the substrate has modified them: the bark has darkened to near-black, the branch angles have shifted toward the manor rather than toward light, and the root systems have surfaced and interlocked with each other in a net that makes walking between the trees slow and careful. The ground between the root-net sections holds small cairns of smooth stones, each one placed by a different hand over a long span of time — the pre-estate ridge-clan practice of marking a path's edge for travelers who might lose their footing.
 - Exits: `east` → 1176 (Garden Terrace), `north` → 1198 (Gravewood Threshold)
 
+---
+
+### Zone III: Charnel Verge and Burial Fields (1180–1197) — 18 Rooms
+
+The operational heart of the estate's death economy. Extends beyond the manor's formal perimeter into the old gravewood's margins. Funerary logic is dominant here; forest logic bleeds in from the east where the burial expansion met the older ridge-clan sites.
+
+**1180 — The Charnel Verge Gate** ★
+`room_flags: dark no_recall` | `sector: city`
+The formal threshold between the manor's domestic estate and the burial operation beyond. A stone arch carries a lintel inscription in Midgaard-standard administrative script: *Interments Processed on Receipt of Authorized Manifest. All Convoy Cargo Subject to Estate Audit.* The arch's stonework is intact, but the passage beneath it smells of old blood and wet earth in a combination that no amount of time has diminished. Thorn growth has traced the arch's curve from the inside, following the stone precisely, as though the substrate approved of the demarcation and wanted to reinforce it biologically. Beyond the arch, the cobblestone ends and packed earth begins — the working surface of the burial fields, not a formal approach. Iron posts to either side carry rusted hooks where the original processing lamps were hung; the lamps are gone, but the hooks remain, and something about their alignment feels like it still means something.
+- Exits: `west` → 1158 (Forecourt of Inheritance), `east` → 1181 (Charnel Verge), `north` → 1194 (Weight-Stone Platform)
+
+**1181 — The Charnel Verge**
+`room_flags: dark no_recall` | `sector: forest`
+The verge itself — the liminal band of ground between the estate's domestic space and the burial fields, where the transition happens. The earth here has a different texture: darker, more compacted, with a faint residual warmth that is not solar. This is the ground that received the most traffic during the estate's operational peak: body-bearing carts, grieving families, bone-processing laborers. The substrate's root-layer is dense just below the surface, and the ground occasionally produces a low sound — not a creak but a settling, as of weight being redistributed.
+- Exits: `west` → 1180, `east` → 1182 (Intake Processing Yard), `south` → 1189 (Corpse-Lily Terraces)
+
+**1182 — The Intake Processing Yard**
+`room_flags: dark no_recall` | `sector: city`
+Where funeral convoys were received, assessed, and sorted. A long stone platform runs the yard's length — the weigh-bench, where coffins were lifted onto the scales and their stated contents verified against the manifest. The scales are still mounted: iron balance arms, stone counterweights, a calibration marker in the stone. The platform's surface carries the stain-record of generations of use: water-marks from washing, rust from iron fittings, darker compounds that do not have a clean name. A row of iron stakes along the south wall held the processing lamps; the stakes remain, bent at uniform angles as though pressed by something coming from the direction of the burial fields.
+- Exits: `west` → 1181, `north` → 1183 (Deferred-Name Registers), `south` → 1184 (Rapid Burial Fields North), `east` → 1186 (Bone Processing Station, via working path)
+
+**1183 — The Deferred-Name Registers**
+`room_flags: dark no_recall` | `sector: city`
+A row of provisional grave markers stretching north along the burial field's intake edge — each a numbered iron stake with a small attached plate giving a case number, an intake date, and a blank field where the name would eventually be filled in when the family paid the naming rite fee. Most plates remain blank. Some are numbered in sequences so dense that the case numbers overlap and have to be read in a specific order to make sense. A ledger-stand at the row's southern end holds the register itself: a thick book of oilskin-wrapped pages, its entries showing that only a fraction of the cases were ever closed. The entries that are closed bear a single stamp: *Named. Filed. Complete.* The entries that were never closed bear a different stamp, added later in a hand that is not the original clerk's: *Pending. Interest accruing.*
+- Exits: `south` → 1182, `north` → 1289 (Zone IX: Bone-Path Marker Row)
+
+**1184 — The Rapid Burial Fields (North)**
+`room_flags: dark no_recall` | `sector: field`
+The northern section of the estate's commercial interment fields — the rapid-burial ground where bodies were processed at volume during the crisis years when Midgaard's own burial infrastructure could not absorb the throughput. The graves here have no markers; the estate's records link each plot to a case number in the deferred-name register. The plots themselves are visible as slight depressions in the earth, too regular to be natural subsidence. Root-mass threads through everything at knee height, integrating the burial density into the substrate's network. The ground sometimes moves.
+- Exits: `north` → 1182, `south` → 1185 (Rapid Burial Fields South), `east` → 1190 (Thorn-Ringed Plots), `west` → 1288 (Zone IX: Covenant Offering Site West)
+
+**1185 — The Rapid Burial Fields (South)**
+`room_flags: dark no_recall` | `sector: field`
+The southern extension of the rapid-burial ground, where the expansion into the older gravewood's margins began. The grave depressions here are less regular — the substrate's original ridge-clan burial network was already present when the Harrens expanded southward, and the commercial interments were overlaid onto existing deep-burial sites without the original community's knowledge. This mixing is why the substrate in this section behaves differently from the northern fields: root behavior is more complex, soil temperature is anomalous, and the sound of root-creak is louder here than anywhere else on the surface.
+- Exits: `north` → 1184, `south` → 1197 (Grave Tunnel Surface Exit), `east` → 1191 (Sealed Burial Row)
+
+**1186 — The Bone Processing Station**
+`room_flags: dark no_recall indoors` | `sector: inside`
+A partially open structure — a stone-roofed shelter without full walls — where exhumed remains were cleaned, sorted, and prepared for ossuary storage. The processing tables are still set up: marble slabs with channels for fluid drainage, racks for drying, bins labeled by bone type in the estate's cataloguing system. The cataloguing system is thorough and unsentimental: femur, tibia, skull, rib-section, miscellaneous small, all given codes that reference the ossuary vault destination. The bins contain residue — dust, mineral compounds, the dried remains of the processing work — but the structure is otherwise clean. Whatever processed things here was meticulous.
+- Exits: `west` → 1182, `south` → 1187 (Ossuary Hillside Cut), `east` → 1291 (Zone IX: Wraith Passage)
+
+**1187 — The Ossuary Hillside Cut**
+`room_flags: dark no_recall` | `sector: hills`
+A cut through the low hillside east of the burial fields, leading down and inward to the hillside ossuary vault entrance. The cutting is stone-faced on both sides, the work of skilled masons — the Harrens built this seriously. Iron gate-frames set into the hillside cut hold the remains of gates that are now more thorn than iron, the original bars having been colonized so completely that the biological growth now provides structural support. The ground slopes downward at a consistent grade, and the smell of bone dust and cold mineral begins here, increasing with depth.
+- Exits: `north` → 1186, `down` → 1239 (Zone VI: Hillside Ossuary Entry)
+
+**1188 — The Memorial Byre**
+`room_flags: dark indoors no_recall` | `sector: inside`
+A stone building at the burial field's western edge, where families who had paid the full naming and memorial rite fee could receive cremated remains in a sealed container and participate in a private ceremony. The byre's interior is designed for grief display: padded benches, a stone ledge for the remains container, alcoves with devotional symbols. The devotional symbols have been replaced with Root Covenant bone arrangements. The bench cushions are still there, though the fabric has decayed to threads. The ledge is empty. No families have come for some time.
+- Exits: `east` → 1181 (Charnel Verge), `north` → 1193 (Charnel Chapel Ruin)
+
+**1189 — The Corpse-Lily Terraces**
+`room_flags: dark no_recall` | `sector: field`
+The terraced section of the burial fields named for the pale, fleshy flower that grows exclusively on substrate-saturated grave soil. Corpse-lilies are not natural — they are an emergent biological output of the substrate's integration with high-density remains, producing a flower with anomalous properties: cold to the touch, faintly luminescent at the petal edges, and capable of surviving conditions that kill ordinary plants. They bloom upside-down, faces toward the soil. The terracing was originally for drainage management; it now creates a series of thorn-rimmed levels descending east, each populated with corpse-lily growth at different stages.
+- Exits: `north` → 1181, `east` → 1190 (Thorn-Ringed Plots), `south` → 1196 (Annex Burial Ground)
+
+**1190 — The Thorn-Ringed Plots**
+`room_flags: dark no_recall` | `sector: forest`
+The oldest section of the original estate burial ground, where the pre-estate ridge-clan containment tradition survived into the commercial era and was adopted, misunderstood, and ultimately validated by the substrate. These plots have genuine containment thorn rings — grown tight over decades around specific graves, their organic material fused into structural barriers. The rings are not decorative. Exhumation attempts on these plots during the estate's ossuary expansion were abandoned when the thorn growth physically resisted digging equipment. The substrate holds these plots sealed. Whatever is inside them, the binding considers it necessary to keep there.
+- Exits: `west` → 1184, `south` → 1191 (Sealed Burial Row), `east` → 1214 (Zone IV: Gravewood Fringe East)
+
+**1191 — The Sealed Burial Row**
+`room_flags: dark no_recall cold` | `sector: forest`
+A straight row of graves running north-to-south where exhumation was impossible — not because of thorn-ring containment but because the substrate itself refused to yield the remains. The estate's processing logs document repeated attempts: tools broke, laborers reported pressure beneath the soil pushing back, and in one documented incident a laborer who persisted was found the following morning asleep on the surface with no memory of the night before. The row has been left alone since. The grave markers here — unlike the deferred-name stakes — are carved stone, some bearing inscriptions that predate the Harren estate entirely. The cold here is notably sharper than in surrounding areas, with a faint @@acrystal-frequency hum@@N just below audible range.
+- Exits: `north` → 1190, `south` → 1185
+
+**1192 — The Charnel Chapel Ruin**
+`room_flags: dark no_recall` | `sector: inside`
+A secondary chapel that served the burial fields directly — separate from the manor's institutional chapel, this was where the grave-workers and corpse-cart laborers could attend services without entering the manor proper. The roof has partially collapsed, and the walls show root-penetration at every joint. The altar stone is intact. On it, in a script that blends Compact liturgy with Root Covenant contract-language, is an inscription that reads as both a prayer and a debt acknowledgment: *The ground has received. The ground is owed. Blood closes what bone opens.*
+- Exits: `south` → 1188 (Memorial Byre), `east` → 1193 (Bone-Cart Path)
+
+**1193 — The Bone-Cart Path**
+`room_flags: dark no_recall` | `sector: field`
+The service route connecting the burial fields to the bone processing station and ossuary entrance, worn smooth by generations of cart traffic carrying exhumed remains for processing and storage. The path is wide enough for a cart and surfaced with compacted grit rather than cobblestone. Root growth has been trimmed back along the cart-lane — the substrate keeps this route clear, suggesting the bone-transit function is still considered operationally necessary. At regular intervals along the path, iron hooks are set at cart-height in wooden stakes, where lanterns would have hung for night operations.
+- Exits: `west` → 1192, `north` → 1186 (Bone Processing Station), `south` → 1194 (Weight-Stone Platform)
+
+**1194 — The Weight-Stone Platform**
+`room_flags: dark no_recall` | `sector: city`
+The formal weight assessment station at the burial field's main axis, where coffins were verified against manifests and assessed for the per-weight burial fee. The scale apparatus here is more substantial than the processing yard's — this is where contested weights were adjudicated, where families could challenge the estate's assessment. The adjudication logbook is still on its stand. The majority of recorded challenges were resolved in the estate's favor. A small iron placard on the scale's frame reads: *Weight disputes subject to estate arbitration. All findings final. No appeals after burial.*
+- Exits: `south` → 1180 (Charnel Verge Gate), `north` → 1195 (Memorial Lane), `east` → 1193 (Bone-Cart Path)
+
+**1195 — The Memorial Lane**
+`room_flags: dark no_recall` | `sector: field`
+The formal processional route reserved for families who had paid the premium memorial service — a wide, paved path lined with low stone markers bearing the estate's thorn device, leading from the charnel verge gate northward toward the burial field's prestige plots. The prestige plots no longer exist as such; the premium-service graves were exhumed along with everything else during the ossuary expansion, and the families who paid for them received no notification. The Lane itself is intact, its markers still standing, its paving still level. It leads to nowhere that corresponds to what it was built to reach.
+- Exits: `south` → 1194, `north` → 1271 (Zone VIII: Hunt Road Entry)
+
+**1196 — The Annex Burial Ground**
+`room_flags: dark no_recall` | `sector: field`
+The overflow section opened when the main burial fields reached capacity — less formally planned, with narrower path access and cruder grave markers. This ground shows the estate's haste more clearly than the main fields: plots are irregular, spacing is inconsistent, and the transition from the commercial interment style into the older gravewood's ridge-clan burial zone happens gradually and without a clear boundary. Root-mass here is the most vigorous anywhere on the surface — the substrate's response to the mixing of new commercial dead with the older, deeper network.
+- Exits: `north` → 1189 (Corpse-Lily Terraces), `east` → 1198 (Gravewood Threshold), `south` → 1209 (Zone IV: Cairn of Sealed Names)
+
+**1197 — The Grave Tunnel Surface Exit**
+`room_flags: dark no_recall` | `sector: field`
+The surface manifestation of the old burial tunnel that connects southward through the estate's subsurface to the grave tunnel hinge at the estate's base. This exit served the estate's convenience in both directions: funeral convoys arriving from Midgaard and Shadowmere could emerge here rather than traveling overland to the main gate, and processed remains could be transferred out of the estate through the tunnel without the visible traffic of cart convoys. The surface opening is framed in old stone, covered by an iron hatch that is now welded shut by thorn growth. The hatch can still be opened by something that understands the substrate's logic — which means it is, in practice, accessible only to the estate's own dead and to the Root Covenant.
+- Exits: `north` → 1185 (Rapid Burial Fields South), `down` → 1150 (Grave Tunnel Hinge — alternate egress)
+
+---
+
+### Zone IV: The Older Gravewood (1198–1215) — 18 Rooms
+
+The pre-estate ridge-clan burial ground, now fully integrated into the substrate's network. Forest logic is dominant here. Every path was originally a detour around an ancestor stand; the substrate has made those detours into the only navigable routes. The shamans and Root Covenant practitioners who work this zone treat the trees as participants in any negotiation.
+
+**1198 — The Gravewood Threshold** ★
+`room_flags: dark no_recall` | `sector: forest`
+Where the estate's managed land gives way to something older. The tree species change abruptly: behind is the estate's managed thornwood, manipulated by cultivation and substrate direction. Ahead are trees that predate the estate by centuries — oaks with boles three meters in diameter, their bark deeply fissured and dark with age. The transition is visible as a line in the ground: on the estate side, root-mass with a grid-like organization corresponding to the estate's planting plan; on the gravewood side, root-mass in a pattern that has no human authorship, dense and complex and old. A stone post at the threshold bears two marks: the Harren thorn device (from when the estate formally annexed this ground) and an older mark beneath it — a pressed handprint in ochre, the same motif that appears in the cave system below. Both marks are still legible. Neither has priority.
+- Exits: `south` → 1158 (Forecourt of Inheritance), `southeast` → 1196 (Annex Burial Ground), `north` → 1199 (Ancestor Stand Entry), `west` → 1179 (Estate Orchard)
+
+**1199 — The Ancestor Stand Entry**
+`room_flags: dark no_recall` | `sector: forest`
+The first ancestor grove encountered on the gravewood's main path — a stand of seven oaks growing in a rough oval around a central clearing that cannot be entered directly. The path detours around the oval's eastern edge, as the ridge-clan practice required: the dead govern that space, and the living have no right of passage through it. The detour is not superstitious avoidance. The root-mass within the oval stands visibly raised above the path level — the substrate holds that space at a different pressure. The trees' lower branches have knitted together over the clearing, forming a roof. What is inside is not visible.
+- Exits: `south` → 1198, `north` → 1201 (Thorn-Ring Circle), `east` → 1200 (Face-Down Grove approach)
+
+**1200 — The Face-Down Grove**
+`room_flags: dark no_recall cold` | `sector: forest`
+The first of the genuine face-down oathbreaker burial sites — a grove where the ridge-clan community interred those who broke sworn covenants, face-down so they could not rise toward the sky. The posture was punitive and prophylactic: the earth was expected to hold what the community rejected. The substrate does. Attempts to dig into this grove produce ground that actively resists — not magically, not suddenly, but with a steady, increasing counter-pressure that builds the deeper you go, as though the geological layer is pressing upward to match any downward force. The trees here lean slightly inward, their canopy closing over the graves. The cold is the same cold as the sealed burial row — @@acrystal-frequency@@N, not atmospheric.
+- Exits: `west` → 1199, `south` → 1214 (Gravewood Fringe East)
+
+**1201 — The Thorn-Ring Circle (Old)**
+`room_flags: dark no_recall` | `sector: forest`
+One of the original ridge-clan containment thorn rings — grown to full maturity over centuries into a solid biological structure nearly two meters high and half a meter thick, enclosing a burial space approximately six meters in diameter. The ring was a sealed verdict: the dead within had been judged and enclosed by the land. The ring's inner surface is smooth where the thorn growth has fused solid; the outer surface is aggressive, with living growth adding new layers annually. This is the substrate's oldest infrastructure. The Root Covenant reveres it without fully understanding it. Even they do not cross inside.
+- Exits: `south` → 1199, `north` → 1202 (Path Detour Through Graves), `east` → 1205 (Second Ancestor Grove)
+
+**1202 — The Path Detour Through Graves**
+`room_flags: dark no_recall` | `sector: forest`
+The ritualized path that the ridge-clan community routed around the major ancestor stands — a deliberate detour that acknowledged the dead's jurisdictional claim over certain spaces. The detour is marked by flat stones set flush with the ground at path-edge intervals, their surfaces bearing directional marks worn almost smooth. Following the marks is not intuitive; the path bends counter to the direction a traveler would choose, and ignoring the marks leads to ground where the substrate's root-pressure makes footing unreliable. The correct path is navigable. The incorrect path is punitive.
+- Exits: `south` → 1201, `north` → 1203 (Root Network Clearing), `west` → 1208 (Ridge-Clan Barrow)
+
+**1203 — The Root Network Clearing**
+`room_flags: dark no_recall` | `sector: forest`
+A natural clearing where the gravewood's root systems have surfaced — not as individual roots but as a coherent network, visible above the ground in braided cable-structures that crisscross the clearing floor. The cables vary from finger-thick to arm-thick, their surfaces alternating smooth and splintered in the pattern that indicates substrate stress vs. stability. A shaman with the knowledge can read the network's current state from here: which directions the substrate is routing energy toward, where pressure is building, whether the binding's integrity is holding in the local section. The clearing smells more strongly of sweet rot and tannin than anywhere else above ground — this is the substrate's ventilation point, where its internal chemistry surfaces.
+- Exits: `south` → 1202, `north` → 1211 (Shaman's Hollow), `east` → 1204 (Witch's Boundary Stones), `west` → 1207 (Mire Approach West)
+
+**1204 — The Witch's Boundary Stones**
+`room_flags: dark no_recall` | `sector: forest`
+A ring of eleven standing stones, waist-high, marking the territorial boundary of the Thornwood Witch's domain. Each stone bears a different mark: some are Harren boundary-notation in estate script, some are Root Covenant contract-glyphs, and some are in a script that predates both — the same pre-estate marking language found on the face-down grove stones and in fragments of the Midgaard Watchers' Cairn site. The Witch has collected all three vocabularies and placed them in conversation. This is not a warning boundary. It is a filing — the Witch's legal claim, expressed in every language the gravewood recognizes.
+- Exits: `west` → 1203, `east` → 1205 (Second Ancestor Grove), `south` → 1213 (Substrate Surface Seep)
+
+**1205 — The Second Ancestor Grove**
+`room_flags: dark no_recall` | `sector: forest`
+A second ancestor stand, older and darker than the first. The grove's canopy has completely closed, making the interior lightless even in daylight. The trees here are the same old-growth oaks, but their root-mass has incorporated a different type of material: the substrate has been building with the remains of the deeper burials below this grove for long enough that the tree roots themselves have taken on mineral properties in the sections nearest the ground — the bark is partially crystalline, carrying the same cold and faint luminescence as the cave system far below. This is the gravewood's deepest surface connection to the substrate layer.
+- Exits: `west` → 1201, `south` → 1204 (Witch's Boundary Stones), `east` → 1206 (Whisper Path)
+
+**1206 — The Whisper Path**
+`room_flags: dark no_recall` | `sector: forest`
+A narrow path maintained by shaman practice — the path where, according to the tradition the shamans preserve, the substrate's output can be heard directly rather than read from secondary signs. The "whisper" is not metaphorical: visitors to this path reliably report hearing a low, irregular sound at the edge of audibility, somewhere between wind and speech, that does not localize to any specific direction. The shamans distinguish between at least four distinct patterns they describe as "attending," "routing," "defending," and "hungry." The fourth pattern is the one they decline to elaborate on.
+- Exits: `west` → 1205, `north` → 1211 (Shaman's Hollow), `south` → 1215 (Night Ride Path)
+
+**1207 — The Mire Approach West**
+`room_flags: dark no_recall` | `sector: forest`
+The western edge of the gravewood where it meets the mire's margins — the transition zone where the forest floor becomes uncertain and the ground's moisture content increases with each step eastward. Pale reeds begin here, their stems visible at the path's edge, already rattling without wind. The trees thin out and their root-mass transitions from the gravewood's dry, complex network to something waterlogged and simplified — the mire's ecology operating on different substrate chemistry. The boundary between forest and mire is not a clean line but a gradient, and the gradient is navigable only because the substrate maintains stepping-stone paths of slightly higher ground.
+- Exits: `east` → 1203 (Root Network Clearing), `south` → 1216 (Zone V: Mire Edge)
+
+**1208 — The Ridge-Clan Barrow**
+`room_flags: dark no_recall` | `sector: hills`
+A proper earthen barrow from the pre-estate burial community — a long mound of piled earth and stone faced with mortarless dry-stone walling at the entrance end. The entrance is sealed with a single upright stone that has not been moved in any documented record. The barrow's outer surface is covered in centuries of moss and thorn growth, making it appear as a natural hill until the stonework becomes visible. The ridge-clan communities buried their honored dead in barrows — facing north, unlike the oathbreaker face-down graves. This barrow is treated by every faction in Thornwood as a protected site: the Harrens' records show it was explicitly excluded from the ossuary expansion plans, the Root Covenant conducts no rites here, and the substrate does not incorporate the barrow's interior into its network. It is the one space in Thornwood that the system leaves alone.
+- Exits: `east` → 1202 (Path Detour Through Graves), `south` → 1209 (Cairn of Sealed Names)
+
+**1209 — The Cairn of Sealed Names**
+`room_flags: dark no_recall` | `sector: forest`
+A cairn of flat river-stones stacked to shoulder height at a crossroads between the older gravewood and the annex burial ground — a point where the two burial traditions intersect. This cairn was built by a community that had watched the Harren estate's deferred-naming practice and understood what was at stake: if the dead could be made nameless by a payment wall, then someone needed to be keeping the names in a form that no clerk could withhold. The stones bear pressed names — dozens of them, in a script that mixes pre-estate ridge-clan marking with Midgaard administrative lettering — names that correspond to the deferred-name case numbers in the estate's register. The cairn is a counter-archive. The substrate has not disturbed it.
+- Exits: `north` → 1208, `east` → 1196 (Annex Burial Ground), `south` → 1210 (Bone-Woven Tree)
+
+**1210 — The Bone-Woven Tree**
+`room_flags: dark no_recall` | `sector: forest`
+A mature oak whose root system has surfaced extensively around its base, and into which — through the root network, not through cutting — the substrate has woven human remains. Femurs appear at root junctions, serving as structural reinforcement. Skulls are cupped in root-forks above head height, their interiors containing a soil-and-crystal compound that may be the substrate's medium. Ribs run along the root cables in parallel. The result is a tree that is also a building, or a building that is also a tree, depending on whether you think function or material is the more fundamental category. The bone-weaving is not crude. It is precise. Each element serves a structural purpose that a builder would recognize.
+- Exits: `north` → 1209, `east` → 1203 (Root Network Clearing), `south` → 1229 (Zone V: Mire Egress North)
+
+**1211 — The Shaman's Hollow**
+`room_flags: dark indoors no_recall` | `sector: inside`
+The Thornwood Witch's residence — a hollow at the base of one of the gravewood's oldest oaks, expanded by root-management over decades into a space large enough for habitation. The interior walls are living root-fiber, formed into shelves, sleeping ledge, and hanging storage. Tools of shaman practice are everywhere: bone-reading sets, thorn-growth maps of the substrate's surface expression, jars of soil samples from different depth layers, a record-keeping system that mixes drawing and inscription in three languages. The Witch herself is rarely here when visitors arrive; her boundary stones suggest she is always somewhere in the gravewood. When she is here, she is not hostile. She is not safe.
+- Exits: `south` → 1203 (Root Network Clearing), `east` → 1206 (Whisper Path)
+
+**1212 — The Blood Offering Platform**
+`room_flags: dark no_recall` | `sector: forest`
+An active Root Covenant ritual site — a flat stone platform at a root-contact point where the substrate's response to blood rites has been demonstrated repeatedly and reliably. The platform's stone surface is stained @@Rdark red@@N in a pattern that shows long use: central deposit, splatter radius, the channels where the offering ran toward the root-contact cracks. Around the platform, the ground carries thorn growth in the pointed, directed pattern that indicates recent substrate attention — the thorns are oriented toward the platform's center, as though the forest is leaning in. The platform is not abandoned. It was used recently.
+- Exits: `west` → 1205 (Second Ancestor Grove), `south` → 1213 (Substrate Surface Seep), `east` → 1287 (Zone IX: Covenant Offering Site East)
+
+**1213 — The Substrate Surface Seep**
+`room_flags: dark no_recall cold` | `sector: forest`
+Where the crystal substrate's influence reaches the surface in visible form: a seep of pale mineral compound welling up through the leaf-litter in a crack that runs roughly east-west, carrying the same cold as the cave system below. The seep is not water — it is a mineral-fluid mixture that maintains temperatures several degrees below ambient indefinitely, crystallizing at its edges into a pale crust. The seep's color is @@alight cyan@@N against the dark forest floor, faintly luminescent. Root-fiber threading through the crack carries the substrate's harmonic in audible range here — the sound the bone-weavers learn to read is clearest at this surface exposure.
+- Exits: `north` → 1204 (Witch's Boundary Stones), `east` → 1212 (Blood Offering Platform), `down` → 1270 (Zone VII: Deep Cave Egress — vertical connection to cave system, one-way down only; the cave provides an upward exit back here)
+
+**1214 — The Gravewood Fringe East**
+`room_flags: dark no_recall` | `sector: forest`
+The eastern fringe where the older gravewood meets the estate's commercial burial fields — the transition zone where ridge-clan burial ground was absorbed into the Harren estate's expansion without acknowledgment. The trees here are younger and less substantial than the gravewood's interior growth; this was the fringe, not the core. The root-mass underfoot shows the mixing: gravewood root patterns from the west, estate-grid root organization from the east, neither fully dominant. @@RDark staining@@N on several trees at eye height, in thin parallel lines, may be the residue of the boundary-marking that the ridge-clan community attempted when they realized the estate was expanding into their burial ground.
+- Exits: `west` → 1200 (Face-Down Grove), `east` → 1190 (Thorn-Ringed Plots)
+
+**1215 — The Night Ride Path**
+`room_flags: dark no_recall` | `sector: forest`
+The route through the southern gravewood that the Wild Hunt uses when departing the estate for its perimeter-extension patrols. The path is marked by the Hunt's passage: frost-etched patterns in the bark of the bordering trees, visible as white tracery, and frost-prints pressed into the soil at the intervals of a horse's gait. The path itself is wider than a human-made trail would be and runs with a directness — through root-mass and undergrowth — that is possible only because the substrate clears it for the Hunt's use. At night, sound does not carry normally along this path. During the day, the path is merely a route. At night, it is a jurisdiction.
+- Exits: `north` → 1206 (Whisper Path), `south` → 1280 (Zone VIII: Night Approach Road)
+
