@@ -5,7 +5,7 @@ K none ~
 L {?? ??}~
 N 3
 I 150 150
-V 86 87
+V 64800 65268
 X 0
 F 10000
 U @@WThe @@ysun@@W shines everywhere.@@N~
@@ -13,12 +13,12 @@ O Virant~
 R Virant~
 W Virant~
 #ROOMS
-#86
+#64800
 New room~
 No description~
 16388 11
 S
-#87
+#64801
 Virant's Keep~
 Keep of Virant~
 214020 11
@@ -29,7 +29,7 @@ D5
 S
 #0
 #OBJECTS
-#87
+#64801
 Virant keep_chest~
 Virant's Keep Chest~
 Virant's Keep Chest rests here.~
