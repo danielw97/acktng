@@ -103,4 +103,4 @@ The old `wood.are` (vnums 7300–7399) had bidirectional cross-area connections 
 
 | From | Dir | To | Notes |
 |------|-----|----|-------|
-| *(none)* | — | — | All previously planned links are now active. |
+| `thornwood` 1150 | south | `graveyard` 11085 | Thornwood entry room → Graveyard. Exit was removed from `thornwood.are` because `graveyard.are` is not yet built. Requires a future graveyard area file with a reverse exit `11085 → 1150`. |

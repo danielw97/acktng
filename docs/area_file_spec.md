@@ -351,6 +351,11 @@ Cross-area object dependency warning:
 
 - When rebuilding an area and changing its object vnum layout, other area files may contain `G`, `E`, or `P` resets that reference the old object vnums. Such references become invalid and cause `test_db` to fail with "reset references undefined object vnum". Before finalising a vnum reassignment, search all `.are` files for `G`, `E`, and `P` lines that reference any vnum in the rebuilt area's envelope, and update or remove those references. The `area/area_index.md` and `docs/world_links.md` documents can help identify which areas are likely to have cross-area dependencies.
 
+Cross-area exit destination validation:
+
+- `test_db` validates that every room exit destination vnum resolves to a room defined in a loaded area (i.e., present in `area/area.lst`). If an exit's destination vnum belongs to an area that does not exist or is not listed in `area.lst`, the test fails with a message like: `exit destination vnum <N> is not a defined room`.
+- **Builder policy:** Do not author room exits that point to areas not yet built or not currently loaded. If a planned cross-area link exists (e.g., documented in `docs/world_links.md`), omit the exit from the `.are` file until the target area is implemented and added to `area.lst`. Describe the connection in room text or notes only. Mark the link as **Planned** in `world_links.md` until both sides exist.
+
 ## 13) Structural constraints enforced by tests
 
 From `src/test_area_format.c`, `src/test_wood_area.c`, and `src/test_db.c`:

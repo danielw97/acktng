@@ -66,17 +66,24 @@ Concrete field counts:
 - `l` line: `l <loot_amount> <v0> <v1> <v2> <v3> <v4> <v5> <v6> <v7> <v8>` — 10 fields total
 - `L` line: `L <c0> <c1> <c2> <c3> <c4> <c5> <c6> <c7> <c8>` — exactly 9 fields
 
-Example (one guaranteed drop of object 16179, all other slots unused):
+Example (one guaranteed drop, all other slots unused):
 ```
-l 1 16179 0 0 0 0 0 0 0 0
+l 100 1205 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
 ```
 
-Example (pool of 3 items, one drawn per reset, drop rates 20/34/46):
+Example (two-item pool, slots 0 and 1, rates 60/40):
+```
+l 100 1215 1216 0 0 0 0 0 0 0
+L 60 40 0 0 0 0 0 0 0
+```
+
+Example (pool of 3 items, drop rates 20/34/46):
 ```
 l 1 1150 1151 1152 0 0 0 0 0 0
 L 20 34 46 0 0 0 0 0 0
 ```
+
 
 Loot table semantics:
 - `loot_amount` must be greater than 0 for loot drops to be attempted.
