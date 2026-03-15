@@ -1515,3 +1515,252 @@ The substrate intelligence that emerged from the crystal formation during the Re
 - `invasion` flag not set on any mob. ✓
 - `day_only` not used on any mob. `night_only` used only on 1154 (approach phantom) and 1191 (Hunt Master). ✓
 
+---
+
+## Object Redesign Plan (1194–1220 — 27 Objects)
+
+All objects carry `ITEM_TAKE` (`8388608`) in wear flags. No object carries `ITEM_WEAR_CLAN_COLORS`. `ITEM_GENERATED` is never set — stats generated at runtime. Weight encodes archetype: 1–5 caster, 6–10 melee, 11–15 tank. Boss-loot items carry `ITEM_BOSS` (`134217728`) + `ITEM_LOOT` (`67108864`). Standard mob loot items carry `ITEM_LOOT` only. Object names must be unique within the area.
+
+Item type values: `armor` = 9, `weapon` = 5, `treasure` = 8, `key` = 18, `light` = 1.
+Wear flag values: `take` = 8388608, `hold` = 32768, `head` = 8, `neck` = 128, `shoulders` = 512, `arms` = 1024, `wrist` = 2048, `hands` = 4096, `finger` = 8192, `about` = 65536, `waist` = 131072, `body` = 262144, `legs` = 1048576, `feet` = 2097152, `face` = 16.
+Weapon attack types: `slice` = 1, `stab` = 2, `slash` = 3, `whip` = 4, `claw` = 5, `blast` = 6, `pound` = 7, `crush` = 8, `pierce` = 11.
+
+---
+
+### Entry-Tier Gear (1194–1197) | Level ~50–57 | Drops from Tier 1 and early Tier 2 mobs
+
+**1194 — thorn-motif iron bracers**
+`item_type: armor (9)` | `extra_flags: ITEM_LOOT` | `wear_flags: wrist take` (2048 + 8388608 = 8390656)
+`value0-9: 0 0 0 0 0 0 0 0 0 0` | `weight: 11` (tank)
+Name: `iron bracers thorn` | Short: `a pair of @@dthorn-motif iron bracers@@N` | Desc: `A pair of iron bracers stamped with the @@yHarren thorn device@@N at the outer cuff, worn smooth by the estate's perimeter patrols.`
+Loot from: thorn hedge sentinels (1152), thorn knight (1156)
+
+**1195 — grave warden's hood**
+`item_type: armor (9)` | `extra_flags: ITEM_LOOT` | `wear_flags: head take` (8 + 8388608 = 8388616)
+`value0-9: 0 0 0 0 0 0 0 0 0 0` | `weight: 13` (tank)
+Name: `hood warden grave` | Short: `a @@dgrave warden's hood@@N` | Desc: `A heavy cloth hood reinforced at the crown with a strip of iron, stitched with the same ochre-and-thorn border used on the estate's patrol livery.`
+Loot from: thorn knight (1156), estate gate wraith (1151) — carried as estate-authority marker
+
+**1196 — rusted estate patrol blade**
+`item_type: weapon (5)` | `extra_flags: ITEM_LOOT` | `wear_flags: hold take` (32768 + 8388608 = 8421376)
+`value0: 0` | `value1: 0` | `value2: 0` | `value3: 3` (slash) | `value4-9: 0` | `weight: 8` (melee)
+Name: `blade patrol estate` | Short: `a @@drusted estate patrol blade@@N` | Desc: `A straight-bladed short sword issued to the Harren estate's perimeter guards, the iron corroded to flaking orange at the edges but still holding an edge where the substrate's preservative chemistry reached it.`
+Loot from: thorn knight (1156), thorn hedge sentinel (1152)
+
+**1197 — corpse-cart driver's whip**
+`item_type: weapon (5)` | `extra_flags: ITEM_LOOT` | `wear_flags: hold take` (8421376)
+`value0-2: 0` | `value3: 4` (whip) | `value4-9: 0` | `weight: 7` (melee)
+Name: `whip driver cart corpse` | Short: `a @@dcorpse-cart driver's whip@@N` | Desc: `A long-handled driving whip whose leather has been treated with the estate's tannin compound, making it unexpectedly durable and carrying a faint smell of sweet rot that no amount of cleaning removes.`
+Loot from: corpse-cart revenant (1153)
+
+---
+
+### Estate Surface Gear (1198–1203) | Level ~58–64 | Drops from Tier 2 mobs
+
+**1198 — manor steward's chain of office**
+`item_type: treasure (8)` | `extra_flags: ITEM_LOOT` | `wear_flags: neck take` (128 + 8388608 = 8388736)
+`value0-9: 0` | `weight: 3` (caster)
+Name: `chain steward manor office` | Short: `a @@ymanor steward's chain of office@@N` | Desc: `A heavy silver-link chain bearing a central medallion stamped with the Harren thorn-and-keyhole device, worn by the estate's senior administrative staff as both identifier and credential. The @@yHarren gold finish@@N on the medallion has survived intact.`
+Loot from: manor steward revenant (1158)
+
+**1199 — the Harren seal ring**
+`item_type: treasure (8)` | `extra_flags: ITEM_LOOT ITEM_MAGIC` | `wear_flags: finger take` (8192 + 8388608 = 8396800) | `item_apply: nada (1)`
+`value0-9: 0` | `weight: 2` (caster)
+Name: `ring seal harren` | Short: `@@ythe Harren seal ring@@N` | Desc: `A gold ring bearing the Harren estate seal — the thorn-and-keyhole device — in intaglio. Pressing it into wax produces the seal that appeared on every document the estate issued. The ring is warm to the touch in an environment where everything else is cold. It remembers the authority it represented, even though that authority is gone.`
+Loot from: manor steward revenant (1158), estate household wraith (1155)
+
+**1200 — thorn knight's briar pauldrons**
+`item_type: armor (9)` | `extra_flags: ITEM_LOOT` | `wear_flags: shoulders take` (512 + 8388608 = 8389120)
+`value0-9: 0` | `weight: 14` (tank)
+Name: `pauldrons briar thorn knight` | Short: `@@Gthorn knight's briar pauldrons@@N` | Desc: `Shoulder armor from which thorn growth has erupted and set, the briars fusing with the original iron in a composite that is heavier and harder than either material alone. The thorn growth follows the pauldron's original contour, suggesting the substrate read the armor's shape and chose to reinforce rather than replace it.`
+Loot from: thorn knight (1156), blackened thorn knight (1157)
+
+**1201 — the blackened thorn knight's crest**
+`item_type: armor (9)` | `extra_flags: ITEM_LOOT` | `wear_flags: head take` (8388616)
+`value0-9: 0` | `weight: 15` (tank)
+Name: `crest helm blackened thorn knight` | Short: `@@dthe blackened thorn knight's crest@@N` | Desc: `A helm whose original iron shape has been entirely consumed by briar growth, the biological material preserving the helmet's form while replacing its material. The crest is fully organic, unnaturally hard, and carries the same cold as the thorn ring guardians who wear it.`
+Loot from: blackened thorn knight (1157)
+
+**1202 — chapel covenant staff**
+`item_type: weapon (5)` | `extra_flags: ITEM_LOOT ITEM_MAGIC` | `wear_flags: hold take` (8421376)
+`value0-2: 0` | `value3: 7` (pound) | `value4-9: 0` | `weight: 4` (caster)
+Name: `staff covenant chapel` | Short: `a @@pchapel covenant staff@@N` | Desc: `A staff of estate thornwood, its upper end fitted with a socket of bone that holds a small crystal shard — substrate material incorporated into a ritual implement. The @@pstaffing notation@@N carved along its length reads as both a covenant clause and a prayer, in the Root Covenant's characteristic blending of legal and devotional register.`
+Loot from: chapel cultist (1159), covenant elder (1160)
+
+**1203 — root-woven armband**
+`item_type: armor (9)` | `extra_flags: ITEM_LOOT` | `wear_flags: wrist take` (8390656)
+`value0-9: 0` | `weight: 9` (melee)
+Name: `armband root woven` | Short: `a @@Groot-woven armband@@N` | Desc: `A wristband of compressed root-fiber, woven into a flat-plate structure by the same technique the bone weavers use for joint reinforcement. Harder than leather, lighter than iron, and carrying the faint tannin smell that marks substrate-integrated biological material.`
+Loot from: covenant bone-reader (1161), root weave cultist (1171)
+
+---
+
+### Burial Field and Ossuary Gear (1204–1208) | Level ~62–68 | Drops from Tier 3 and Tier 5 mobs
+
+**1204 — deferred-name ledger pendant**
+`item_type: treasure (8)` | `extra_flags: ITEM_LOOT ITEM_MAGIC` | `wear_flags: neck take` (8388736) | `item_apply: det_mag (512)`
+`value0-9: 0` | `weight: 2` (caster)
+Name: `pendant ledger deferred name` | Short: `a @@ddeferred-name ledger pendant@@N` | Desc: `A small tablet of bone-pressed material on a cord, bearing a case number from the estate's deferred-name register rather than a name — the standardized identifier issued to those whose families could not pay the naming rite fee. Carrying it produces the specific, cold awareness of existing in a system that has decided your name is contingent.`
+Loot from: deferred-name revenant (1164)
+
+**1205 — bone weaver's jointing awl**
+`item_type: weapon (5)` | `extra_flags: ITEM_LOOT` | `wear_flags: hold take` (8421376)
+`value0-2: 0` | `value3: 11` (pierce) | `value4-9: 0` | `weight: 8` (melee)
+Name: `awl jointing bone weaver` | Short: `a @@dbone weaver's jointing awl@@N` | Desc: `A purpose-built tool for threading root-fiber through bone at joint junctions — long, tapered, and made of a bone-and-metal composite that takes an edge as sharp as steel. In the bone weaver's workshop it is a craft instrument. Outside it, it is simply a piercing weapon of unusually precise manufacture.`
+Loot from: bone weaver journeyman (1180), bone weaver master (1181)
+L
+63
+
+**1206 — ossuary-processed bone vambrace**
+`item_type: armor (9)` | `extra_flags: ITEM_LOOT` | `wear_flags: arms take` (1024 + 8388608 = 8389632)
+`value0-9: 0` | `weight: 10` (melee)
+Name: `vambrace bone ossuary processed` | Short: `an @@dossuary-processed bone vambrace@@N` | Desc: `A forearm guard built from ossuary-grade bone — cleaned, sorted for structural density, and shaped over a root-fiber armature. The substrate's processing gives this material a denser, harder character than natural bone. It carries the faint harmonic resonance of the ossuary's crystal-adjacent storage environment.`
+Loot from: marrow construct (1182), marrow fiend (1183)
+L
+66
+
+**1207 — cold-resonant bone shard**
+`item_type: treasure (8)` | `extra_flags: ITEM_LOOT ITEM_MAGIC` | `wear_flags: hold take` (8421376) | `item_apply: infra (2) det_mag (512)`
+`value0-9: 0` | `weight: 1` (caster)
+Name: `shard bone resonant cold` | Short: `a @@acold-resonant bone shard@@N` | Desc: `A fragment of Thornwood-processed bone that has acquired the substrate's thermal anomaly — it remains several degrees below ambient temperature indefinitely. When struck it produces a tone that matches the crystal formation's harmonic signature, which the bone weavers use to authenticate genuinely substrate-processed material. The tone is faint, persistent, and slightly wrong in the way that sounds produced by things that should be silent are always slightly wrong.`
+Loot from: ossuary elder (1184), bone weaver master (1181)
+L
+65
+
+**1208 — charnel verge shroud**
+`item_type: armor (9)` | `extra_flags: ITEM_LOOT` | `wear_flags: about take` (65536 + 8388608 = 8454144)
+`value0-9: 0` | `weight: 5` (caster)
+Name: `shroud charnel verge` | Short: `a @@dcharnel verge shroud@@N` | Desc: `A heavy ceremonial over-garment worn by the estate's burial processing staff during formal receipt operations — dark fabric treated with the estate's preservative tannin compound, designed to resist moisture and chemical exposure during charnel work. The tannin treatment has darkened the fabric to near-black and given it a particular stiffness at the hem.`
+Loot from: charnel verge watcher (1166), ossuary monk (1168)
+
+---
+
+### Mire and Wild Hunt Gear (1209–1214) | Level ~64–72 | Drops from Tier 4 and Hunt mobs
+
+**1209 — mire lurker hide wrapping**
+`item_type: armor (9)` | `extra_flags: ITEM_LOOT` | `wear_flags: body take` (262144 + 8388608 = 8650752)
+`value0-9: 0` | `weight: 9` (melee)
+Name: `wrapping hide lurker mire` | Short: `@@Gmire lurker hide wrapping@@N` | Desc: `Body wrapping made from the substrate-adapted hide of the mire's apex predator — the same mud-dark material that makes the lurker effectively invisible in its own environment. The hide's water-resistance exceeds any natural leather, and it carries a faint sulfurous smell that is the mire's identifying chemical signature.`
+Loot from: mire lurker (1175)
+L
+62
+
+**1210 — fog shrine offering shard**
+`item_type: treasure (8)` | `extra_flags: ITEM_LOOT ITEM_MAGIC` | `wear_flags: hold take` (8421376) | `item_apply: prot (128)`
+`value0-9: 0` | `weight: 3` (caster)
+Name: `shard offering shrine fog` | Short: `a @@pfog shrine offering shard@@N` | Desc: `A fragment of bronze from the corroded offerings on the fog shrine's platform — old enough that the metal's composition predates the estate and possibly predates the ridge-clan communities. The shard carries a faint protective quality that its original dedicants may have intended or the substrate may have added later. Its function is unclear; its age is not.`
+Loot from: fog shrine attendant (1178)
+L
+65
+
+**1211 — sulfur-chain waist links**
+`item_type: armor (9)` | `extra_flags: ITEM_LOOT` | `wear_flags: waist take` (131072 + 8388608 = 8519680)
+`value0-9: 0` | `weight: 8` (melee)
+Name: `links chain sulfur waist` | Short: `@@dsulfur-chain waist links@@N` | Desc: `A chain of iron links chemically altered by long exposure to the mire's alchemical runoff — the sulfur compounds have produced an iridescent coating that is simultaneously corrosive to contact and strangely protective to the wearer, as though the chemical process selected for a specific surface outcome.`
+Loot from: sulfur-bloated corpse (1177), substrate water-thing (1179)
+
+**1212 — hunt-sigil face mask**
+`item_type: armor (9)` | `extra_flags: ITEM_LOOT` | `wear_flags: face take` (16 + 8388608 = 8388624)
+`value0-9: 0` | `weight: 8` (melee)
+Name: `mask face hunt sigil` | Short: `a @@dhunt-sigil face mask@@N` | Desc: `A leather face mask worn by the Wild Hunt Riders — the sigil markings painted on its surface match the binding's inscription language at a simplified level: the hunt-rank equivalents of the Hunt Master's full-binding face paint. The leather is treated with substrate horse material, giving it the same birch-bark pallor as the Hunt's mounts.`
+Loot from: Wild Hunt Rider — reset in room 1272, 1273
+
+**1213 — substrate horse briar-weave bridle**
+`item_type: treasure (8)` | `extra_flags: ITEM_LOOT ITEM_MAGIC` | `wear_flags: hold take` (8421376) | `item_apply: fly (16384)`
+`value0-9: 0` | `weight: 4` (caster)
+Name: `bridle briar weave horse substrate` | Short: `a @@Gsubstrate horse briar-weave bridle@@N` | Desc: `Tack from a substrate horse — root-fiber and briar woven into harness form, carrying the faint cold of the substrate construction it came from. The bridle's inner surface carries the berry-red color of the substrate horses' eyes, pressed in as a mark rather than dyed. Something about holding it creates a brief, unwanted awareness of being outside very large, very old territorial claims.`
+Loot from: Wild Hunt Rider reset equipment
+
+**1214 — shadow hunt horn shard**
+`item_type: treasure (8)` | `extra_flags: ITEM_LOOT ITEM_MAGIC` | `wear_flags: hold take` (8421376) | `item_apply: det_hid (1024) det_invis (8)`
+`value0-9: 0` | `weight: 3` (caster)
+Name: `shard horn hunt shadow` | Short: `a @@dshadow hunt horn shard@@N` | Desc: `A fragment of the shadow-bone from which the Wild Hunt's signaling horn is constructed — the material that allows the horn's sound to travel through the substrate's root network rather than through air. Even as a fragment it retains this property at a diminished level: pressing it to the ground produces the faint, subsurface sense of distant sound arriving from below rather than above.`
+Loot from: fog shrine attendant (1178), deep mire shade (1176)
+
+---
+
+### Boss Signature Items (1215–1219) | Boss drops only | `ITEM_BOSS` + `ITEM_LOOT`
+
+**1215 — Lord Harren's Thorn-Crest Sigil Ring**
+`item_type: treasure (8)` | `extra_flags: ITEM_BOSS ITEM_LOOT ITEM_RARE ITEM_MAGIC` | `wear_flags: finger take` (8396800) | `item_apply: det_evil (2048) det_mag (512)`
+`value0-9: 0` | `weight: 1` (caster)
+Name: `ring sigil thorn crest harren` | Short: `@@yLord Harren's Thorn-Crest Sigil Ring@@N` | Desc: `The Harren family's authority ring — not the administrative seal ring but the personal authority token, worn by the family's head as a sign of direct power rather than institutional delegation. The @@ythorn-crest device@@N on the bezel is more elaborate than the estate seal, incorporating the binding's primary sigil into the thorn pattern in a way that the Harrens' administrative records never documented. Lord Harren wore this when he attempted to negotiate with the substrate on the grounds of standing. He still wears it. He is parted from it only in defeat.`
+Loot from: Lord Harren (1190) — loot table slot 0, 60% weight
+E
+sigil ring thorn crest~
+The ring's intaglio shows the Harren thorn device, but the keyhole at its center has been replaced with the binding's primary sigil. Whether this modification predates the Reversal or was made after is not answerable from the ring alone.
+~
+
+**1216 — Binding Iron Gauntlets of the Estate**
+`item_type: armor (9)` | `extra_flags: ITEM_BOSS ITEM_LOOT ITEM_RARE` | `wear_flags: hands take` (4096 + 8388608 = 8392704)
+`value0-9: 0` | `weight: 14` (tank)
+Name: `gauntlets iron binding estate` | Short: `@@dthe Binding Iron Gauntlets of the Estate@@N` | Desc: `Iron gauntlets forged with the binding's inscription text worked into the knuckle plates — not decoratively, but as functional inscription, the same way the drain passages carry the binding's text as part of their structure. The gauntlets are warm to the touch where everything in the estate is cold, because the binding's thermal output concentrates at its inscription points. Wearing them creates a faint awareness of the estate's territorial boundaries as a felt pressure.`
+Loot from: Lord Harren (1190) — loot table slot 1, 40% weight
+E
+gauntlets binding inscription~
+The inscription on the knuckle plates corresponds to the middle section of the binding's formal text — the mechanism and dependencies section, the part that describes what happens when components fail.
+~
+
+**1217 — the Wild Hunt Master's Antler Crown**
+`item_type: armor (9)` | `extra_flags: ITEM_BOSS ITEM_LOOT ITEM_RARE ITEM_MAGIC` | `wear_flags: head take` (8388616) | `item_apply: det_hid (1024) infra (2)`
+`value0-9: 0` | `weight: 9` (melee)
+Name: `crown antler hunt master wild` | Short: `@@Gthe Wild Hunt Master's Antler Crown@@N` | Desc: `The Hunt Master's antler crown — root-material tines grown from the substrate rather than harvested from any animal, oriented and shaped by the binding's sensory requirements rather than by any organic growth pattern. Wearing it produces a low, continuous awareness of the root network's surface expression in a radius around the wearer — the same signal the Hunt Master uses to monitor the estate's perimeter from any point on the patrol routes. The awareness is not optional. The crown does not have a passive setting.`
+Loot from: Wild Hunt Master (1191) — loot table slot 0, 100% weight
+E
+antler crown root material~
+The tines are not hollow as natural antler is. They are solid root-fiber, grown to antler shape by substrate direction rather than evolved into it. The difference is not visible. It is felt when worn.
+~
+
+**1218 — the Overseer's Marrow Spear**
+`item_type: weapon (5)` | `extra_flags: ITEM_BOSS ITEM_LOOT ITEM_LEGENDARY ITEM_TWO_HANDED` | `wear_flags: hold take` (8421376)
+`value0-2: 0` | `value3: 11` (pierce) | `value4-9: 0` | `weight: 9` (melee)
+Name: `spear marrow overseer two-handed` | Short: `@@dthe Overseer's Marrow Spear@@N` | Desc: `The Bone-Weave Overseer Malsthen's primary working instrument — a two-handed spear whose shaft is a single length of ossuary-grade bone, its grain running true from base to point, the joint reinforcement at the socket rendered in root-fiber threading so precisely calibrated that the weapon achieves a resonance when swung that matches the crystal substrate's harmonic. The point is shaped, not cast: the bone's natural crystal-adjacent density taken to a tip through the same selective-grinding technique used to finish structural members in the construct assembly process.`
+Loot from: Bone-Weave Overseer Malsthen (1192) — loot table slot 0, 100% weight
+E
+spear bone resonant~
+Striking with the spear produces a tone on impact. The tone matches the substrate's harmonic. This is not coincidence. It is the Overseer's signature: proof that the weapon was made with the same precision as the undercroft's finest constructs.
+~
+
+**1219 — the Thornwood Lich's Substrate Crystal**
+`item_type: treasure (8)` | `extra_flags: ITEM_BOSS ITEM_LOOT ITEM_LEGENDARY ITEM_MAGIC` | `wear_flags: hold take` (8421376) | `item_apply: det_mag (512) prot (128) det_hid (1024)`
+`value0-9: 0` | `weight: 1` (caster)
+Name: `crystal substrate lich thornwood` | Short: `@@athe Thornwood Lich's Substrate Crystal@@N` | Desc: `A single crystal growth taken from the formation at the sealed chamber's sigil-center — the point where the Lich occupies the binding's operational interface. The crystal carries the full thermal anomaly and harmonic signature of the substrate, sustained indefinitely without the cave system's amplification. It is @@acold beyond cold@@N: holding it in an ungloved hand produces the same sensation as the high cave ledge, where the binding's failing geometry is visible as a coherent pattern in the formation below. The crystal sees Thornwood as the Lich sees it: estate, forest, and ossuary as one body. Carrying it transfers a fraction of that perspective to the carrier.`
+Loot from: Thornwood Lich (1193) — loot table slot 0, 100% weight
+E
+crystal substrate binding~
+The crystal's harmonic output has changed since the binding began failing. What the bone-weavers describe as "the voice changing" is audible here in miniature: the tone is the same pitch but the overtone structure is different, the upper harmonics absent, the baseline sustained without the complexity that characterized the formation when the binding was intact.
+~
+
+---
+
+### Key and Quest Items (1220)
+
+**1220 — the Harren Estate Register Key**
+`item_type: key (18)` | `extra_flags: ITEM_NOSAVE ITEM_NODROP` | `wear_flags: hold take` (8421376)
+`value0-9: 0` | `weight: 1`
+Name: `key register estate harren` | Short: `@@ythe Harren Estate Register Key@@N` | Desc: `A brass key bearing the estate's administrative seal — the specific key issued to authorized auditors of the burial records under the original Harren Charter's oversight provisions. This is the key that unlocks the sealed stone door between the binding inscription passage and the sealed chamber below. It works because the door's lock is calibrated to the estate's authentication layer, and the key carries that layer's identifier. Its continued function suggests the authentication system considers auditor access legitimate — or simply that the substrate has decided to allow it, for its own reasons.`
+Drop/Reset: Reset as floor object in room 1292 (Forgotten Archive Alcove) — one-time discovery; limit 1
+Note: Used as `key_vnum` for the locked door at room 1267 → 1268. Must be defined before the `#RESETS` section for the door's key reference to validate.
+E
+key harren register~
+The teeth of the key match the binding inscription's notation for "authorized threshold passage." Whether this was intentional on the part of whoever cut the key, or whether the key was modified by the substrate to serve this purpose, is not answerable from the key alone.
+~
+
+---
+
+### Object Spec Compliance Summary
+
+- All 27 objects carry `ITEM_TAKE`. ✓
+- No object carries `ITEM_WEAR_CLAN_COLORS`. ✓
+- `ITEM_GENERATED` not set on any object. ✓
+- Weight archetype encoding applied to all objects. ✓
+- Boss-signature items (1215–1219) carry `ITEM_BOSS` + `ITEM_LOOT`. ✓
+- Standard loot items (1194–1214) carry `ITEM_LOOT` only. ✓
+- Weapons (1196, 1197, 1202, 1205, 1218) carry both `hold` and `take` in wear flags. ✓
+- Two-handed weapon (1218) carries `ITEM_TWO_HANDED`. ✓
+- `value3 = 0` (hit) not used on any weapon; all `value3` choices are thematically consistent. ✓
+- Object names are unique within the area. ✓
+- No fixed stats defined; stats generated at runtime. ✓
+- Object level (`L`) entries used for loot items where a level floor is appropriate. ✓
+- `ITEM_LIFESTEALER` not used in this area. ✓
+
