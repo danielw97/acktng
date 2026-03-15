@@ -288,3 +288,172 @@ ZONE IX (Perimeter/Auxiliary, 1281-1299)
 - **Up exit from 1150:** Emerges at 1151 (Outer Cobblestone Road) — the surface world above the tunnel. This bidirectional vertical pair is the area's canonical entry point.
 - The grave tunnel hinge exit direction and destination vnum must be coordinated with the `graveyard.are` (vnum range 11000–11099) file. The specific room in `graveyard.are` that links to 1150 must carry a reciprocal exit.
 
+---
+
+## Full Room-by-Room Plan (All 150 Rooms, 1150–1299)
+
+Room flags and sector types are noted. All descriptions end with exactly one trailing newline before `~`. Important rooms (marked **★**) require at least 5 sentences. Standard rooms require at least 3. All exits are bidirectional unless noted.
+
+---
+
+### Zone I: Harren Approach (1150–1157) — 8 Rooms
+
+Entry corridor from the grave tunnel network to the estate's iron gate. Manorial and forest logics first appear here, where the tunnel's neutral infrastructure meets the estate's territorial claim.
+
+**1150 — The Grave Tunnel Hinge** ★
+`room_flags: dark indoors no_recall` | `sector: inside`
+Where the old pre-civic burial tunnel meets the surface approach to the Thornwood estate. This is the transit node shared with Shadowmere's southern march supply routes and Midgaard's funeral convoy traffic — neutral infrastructure neither power controls. The tunnel ceiling is low and sweating limestone, braced with timber so old it has calcified. Carved way-markers from at least three distinct traditions overlap on the eastern wall: a civic registry glyph from Midgaard's road-standards era, a directional slash-mark used by Shadowmere's tunnel scouts, and something older and non-linguistic — a pressed handprint in ochre that may predate the tunnel's formal construction. The smell is mineral and cold, with an undertone of old bone and something faintly sweet that does not belong underground.
+- Exits: `south` → graveyard.are tunnel node (external link), `up` → 1151
+
+**1151 — The Outer Cobblestone Road**
+`room_flags: dark no_recall` | `sector: forest`
+The surface world above the tunnel hinge, where the estate's cobblestone road begins. The paving is ancient and frost-heaved, pushed up in long ridges by root masses that have been growing beneath it for generations. The stones are dark with moisture even in dry weather — the substrate draws groundwater upward through the limestone below. To the north, the road curves toward a silhouette of iron and thorn against a canopy of leafless oaks. Crows occupy every available branch, unmoving.
+- Exits: `down` → 1150, `north` → 1152
+
+**1152 — The Iron Gate of Thornwood** ★
+`room_flags: dark no_recall no_portal` | `sector: forest`
+The estate's defining threshold: a pair of massive wrought-iron gates set into a wall of dark stone, their original ornamental thorn motifs long since fused with genuine briar growth so that the heraldic and the biological have become indistinguishable. The Harren crest — a thorned branch over a keyhole — is still visible on the central boss of the gate, though the @@y crown-gold finish@@N has oxidized to a greenish-black. The bars are wrapped in root-mass at the joints and base, anchoring the gate in ways that make it unclear whether the ironwork or the roots are now the structural element. Beyond the gate, the cobblestone continues into a forecourt dimly visible through the thorn-growth. The gateposts carry rune-carvings too eroded to read in full, though the shapes carry a heaviness that suggests the eye was not meant to rest on them long. A chain and bracket system suggests the gates were once mechanically operated; the mechanism is now biological, responsive not to levers but to the estate's own territorial logic.
+- Exits: `south` → 1151, `north` → 1154, `east` → 1153
+- Named exit: `^iron gate` (north, door; `EX_ISDOOR` set; no lock — the gate stands open but is a real door that can be opened/closed)
+
+**1153 — The Gatewarden's Lodge**
+`room_flags: dark indoors no_recall` | `sector: inside`
+A small stone building pressed against the inner face of the eastern gatepost, where the gate-keeper once logged arrivals, checked credentials, and collected the estate's passage tax. The logbook desk still stands, its surface thick with root-fiber that has threaded up through the floorboards and integrated itself into the wood grain. The most recent legible entry is decades old. A hook on the wall still holds a brass bell — the notification bell used when important visitors required Lord Harren's attention — though the bell now resonates faintly with the substrate's harmonic output rather than with a clapper stroke. The lodge is occupied.
+- Exits: `west` → 1152
+
+**1154 — The Forecourt Approach**
+`room_flags: dark no_recall` | `sector: forest`
+Inside the gate, the cobblestone broadens into a formal approach lined with iron shepherd's-hook lantern posts, all dark, their fuel long oxidized to amber resin inside their housings. The lanterns mark jurisdiction — they were the estate's administrative markers — but have not illuminated anything in living memory. Thorn hedges rise on either side of the path, their growth managed (directed would be more accurate) so the approach corridor feels deliberate. Something about the hedges' angle makes it clear they are oriented toward the path rather than growing away from it. The manor's peaked roof is visible ahead.
+- Exits: `south` → 1152, `north` → 1157, `east` → 1155, `west` → 1156
+
+**1155 — The North Thorn-Hedge Wall**
+`room_flags: dark no_recall` | `sector: forest`
+The northern run of the estate's interior perimeter hedge, where thorn growth has consumed the original stone wall so completely that the wall's outline is only visible as a slight straightness in what otherwise looks like natural woodland. The thorns here grow in layers — outer growth dark-stemmed and aggressive, inner growth pale and fused into structures that resemble architectural arches. The substrate manages this wall. It is not decorative.
+- Exits: `west` → 1154, `east` → 1282 (Zone IX: North Wall Walk)
+
+**1156 — The South Thorn-Hedge Wall**
+`room_flags: dark no_recall` | `sector: forest`
+The southern run of the interior perimeter, mirroring the northern hedge wall but oriented differently — here the thorns grow inward, toward the manor grounds, rather than outward. The difference is not aesthetic. It suggests the substrate is pulling material from the south. Carved stones from the original wall are visible at the hedge's base, their surfaces still bearing Harren boundary-marks worn smooth by root pressure.
+- Exits: `east` → 1154, `west` → 1281 (Zone IX: South Wall Walk)
+
+**1157 — The Lantern Alley**
+`room_flags: dark no_recall` | `sector: forest`
+A formal path between the forecourt approach and the estate's central courtyard, originally lit by lanterns on both sides for the reception of dignified visitors. Fourteen lantern posts remain, seven to each side, their iron scroll-work intact but rusted to a dull orange. The path between them is perfect — not heaved, not overgrown, each cobblestone seated cleanly. This is suspicious. The substrate maintains this path actively, and the smooth surface underfoot is the smoothness of a tongue, not of careful masonry. The manor's entrance portico is visible ahead, its dark stone columns wrapped in early thorn growth.
+- Exits: `south` → 1154, `north` → 1158
+
+---
+
+### Zone II: The Estate Surface (1158–1179) — 22 Rooms
+
+The manor house and its outbuildings, frozen at the moment of the Reversal. Formal spaces preserve the instant of transformation as permanent décor. The manorial and funerary logics are densest here; the forest logic intrudes through every gap.
+
+**1158 — The Forecourt of Inheritance** ★ (CENTRAL HUB)
+`room_flags: dark no_recall` | `sector: city`
+The broad cobblestone forecourt before the manor's entrance, where the estate's administrative life was once conducted openly — arrivals logged, debts assessed, burial contracts signed on portable writing desks that servants carried out for the purpose. It is large enough that the surrounding thorn hedges do not immediately close in; there is real sky visible above, though the canopy has begun to arch over the western edge. The @@yHarren crest@@N is inlaid in the forecourt's central stones — a thorned branch over a keyhole in pale limestone — but root growth has retraced the design in biological material, so the crest appears twice: once in stone, once in living briar pressing up through the mortar. The estate's main entrance is north. Paths lead east to the charnel verge, west to the service wing and older gravewood approaches, southeast to the chapel, and down through the manor's cellar connections to the ossuary. The air here is colder than the approach, with a faint mineral undertone.
+- Exits: `south` → 1157, `north` → 1159 (Thorn Portico), `east` → 1180 (Charnel Verge Gate), `west` → 1170 (Service Yard), `northwest` → 1198 (Gravewood Threshold), `southeast` → 1166 (Chapel Antechamber)
+
+**1159 — The Manor's Thorn Portico**
+`room_flags: dark indoors no_recall` | `sector: inside`
+The formal entrance to the manor house proper: a covered portico of dark stone columns between which thorn growth has been trained into arch-shapes so precise they appear architectural. The original wooden doors behind the columns have been partly consumed by the same growth — their hinges still function but the wood grain has fused with root-fiber, so opening them produces a sound like tearing rather than creaking. A coat-of-arms plaque above the lintel shows the Harren thorn-and-keyhole device, the @@ygold finish@@N still bright where protected by the overhang.
+- Exits: `south` → 1158, `north` → 1160 (Great Hall)
+
+**1160 — The Great Hall** ★
+`room_flags: dark indoors no_recall` | `sector: inside`
+The manor's primary reception space, preserved at the instant of the Reversal with the completeness of an insect in amber. A long table runs the hall's length, set for a dinner that was never finished: plates still hold desiccated food reduced to mineral shapes, goblets stand upright, and the centerpiece — a floral arrangement in a silver bowl — has been replaced by thorn growth that rises from the bowl's interior as though the thorns were always the intended arrangement. Portraits line the walls, each depicting a generation of the Harren family; the eyes have been removed from every portrait, neatly, as though the substrate decided that observation flowed in one direction only. Chandeliers of iron and bone-horn hang from the ceiling, long unlit, threaded through with root-fiber that has used the chandelier chains as a climbing scaffold. @@yHarren heraldic banners@@N along the upper walls bear the thorn-and-keyhole device, their fabric intact and unfaded, though a careful look reveals they are now partly woven from biological material rather than cloth. The hall is cold. The cold is not from the temperature but from whatever the crystal substrate radiates upward through the floor.
+- Exits: `south` → 1159, `north` → 1161 (Receiving Room), `east` → 1163 (Map Room), `west` → 1162 (Lord's Study), `up` → 1165 (Manor Gallery — second floor landing)
+
+**1161 — The Receiving Room** ★ (Boss room: Lord Harren — `no_mob` flag)
+`room_flags: dark indoors no_recall no_mob` | `sector: inside`
+Lord Harren still receives visitors here. The room is unchanged from the Harren Charter era in every physical detail — the audience chair behind the writing desk, the two visitor chairs facing it, the shelved reference volumes along the east wall (estate law, boundary records, tariff tables), the single window overlooking the forecourt, now opaque with thorn growth. What is wrong is the occupant. Lord Harren, the Estate Revenant, sits at the desk as he always did: upright, attentive, formally dressed in the estate's administrative livery. His face is recognizably human and fully alive in expression, but the skin carries a faint bark-pattern, his hands rest flat on the desk with a stillness that no living person maintains without effort, and the eyes — still his eyes, still conscious and aware — move with the deliberate economy of someone who has learned that spontaneous motion costs something. He will negotiate. He remembers being alive. He is the most dangerous thing on the estate's surface.
+- Exits: `south` → 1160, `east` → 1164 (Butler's Pantry)
+
+**1162 — The Lord's Study**
+`room_flags: dark indoors no_recall` | `sector: inside`
+Harren's private working space, smaller and more disordered than the receiving room. The desk here carries the weight of real administrative work — not the performance of authority but its machinery. Papers are stacked in the substrate-preserved state they occupied at the moment of the Reversal: mid-sentence correspondence, half-completed account columns, a journal whose final entries grow increasingly erratic before stopping. The estate's operational records — budget summaries, staff rosters, interment manifests — are mixed with personal notes in a hand that becomes harder to read as the journal progresses. Root-fiber has threaded through the paper stacks but not displaced them; the substrate appears to be preserving the archive, not consuming it.
+- Exits: `east` → 1160, `south` → 1164 (Butler's Pantry, via connecting passage)
+
+**1163 — The Map Room**
+`room_flags: dark indoors no_recall` | `sector: inside`
+The estate's cartographic archive, where Harren administrators managed the physical territory of their charter. Large vellum maps cover the long table and hang from the walls: the estate's original land grant with surveyed boundaries, the grave tunnel route with tributary nodes marked, the interment field plots numbered by intake period, and a partial survey of the old gravewood that stops abruptly at the point where the ridge-clan burial sites begin. Root growth has traced along the map edges as though something finds the boundaries interesting. A @@pdim inscription@@N has been added to one map in a hand that is not the Harrens' — a script that the cult uses for ritual filings, pressed into the vellum as if by something other than a quill.
+- Exits: `west` → 1160
+
+**1164 — The Butler's Pantry**
+`room_flags: dark indoors no_recall` | `sector: inside`
+The administrative hub of the manor's domestic operations: the room from which the household was managed day to day. Ledgers, keys, linen inventories, wage records, and staff duty rosters fill the shelves. The butler's own records are here — a meticulous log of every visitor received, every funeral convoy processed, every payment recorded for passage tax and burial lease. The handwriting maintains its precision until the final pages, where a single repeated annotation begins appearing on otherwise normal entries: a small pressed circle with radial lines, increasing in frequency, until the last entries show nothing else. The pantry smells of congealed beeswax and something older beneath it.
+- Exits: `north` → 1161, `west` → 1162
+
+**1165 — The Manor Gallery**
+`room_flags: dark indoors no_recall` | `sector: inside`
+The manor's second-floor portrait gallery, a long corridor of framed canvases depicting the Harren lineage across six generations. Every portrait has had its eyes removed with precision — not scratched out but cleanly excised, leaving oval absences that look less like damage and more like a consistent modification applied by someone with a coherent purpose. The @@yHarren thorn-and-keyhole device@@N appears in every frame's background: worked into furniture, embroidered on clothing, carved into the landscape behind the subjects. The frames themselves are intact and ornate. The gallery is the most formally maintained space in the manor — the root-fiber that has colonized everything else has left the portrait frames untouched.
+- Exits: `down` → 1160, `east` → 1166 (via connecting stairway)
+
+**1166 — The Chapel of the Harren Estate** ★
+`room_flags: dark indoors no_recall` | `sector: inside`
+The estate's institutional chapel, built under Violet Compact-adjacent auspices to serve the manor household and provide religious certification for the burial rites that formed the estate's primary revenue. The original fittings — altar, pew ranks, devotional niches — survive intact, but the symbols have been overwritten. The Compact-adjacent iconography has been systematically replaced with Root Covenant imagery: thorn patterns cut into the altar stone, bone arrangements in the devotional niches, and a central floor inscription where the compact seal once was, now bearing the cult's contract-liturgy in @@pdeep purple chisel-marks@@N. Candles burn here — real candles, maintained by living hands. The Root Covenant uses this chapel for its organized rites, and the smell of fresh blood and tannin beneath the old stone-and-incense is not from the past.
+- Exits: `northwest` → 1167 (Chapel Antechamber), `east` → 1165 (via stairway connection)
+
+**1167 — The Chapel Antechamber**
+`room_flags: dark indoors no_recall` | `sector: inside`
+The waiting room where the chapel's lay community would gather before services, now serving the same function for the Root Covenant's ritual gatherings. Stone benches line the walls. A board on the north wall once held the week's service schedule in chalk; it now holds a chalk list of "pending filings" — a cultist's phrase for blood offerings owed to the substrate but not yet paid. The list is long.
+- Exits: `southeast` → 1166, `north` → 1158 (Forecourt of Inheritance, via exterior path)
+
+**1168 — The Kitchen and Scullery**
+`room_flags: dark indoors no_recall` | `sector: inside`
+The manor's kitchen, frozen mid-preparation. Pots hang from iron hooks, their contents long reduced to dry mineral compounds. A cutting board still holds a knife. The fire grate is black with old ash. The scullery beyond the kitchen arch is where the household's washing was done — the basin is still half-full of water, though the water is now the color of tannin and has a faint crystal clarity that does not belong to standing water decades old. Something about the kitchen's preservation feels more intentional than the rest: the substrate keeps it cold and dry, which is precisely what you would do if you wanted to use it again.
+- Exits: `east` → 1158 (Forecourt, via exterior kitchen door), `north` → 1160 (Great Hall, via service passage)
+
+**1169 — The Wine Cellar** ★
+`room_flags: dark indoors no_recall cold` | `sector: inside`
+The estate's wine cellar, reached by descending from the kitchen through a flagstone stair. This room is the coldest place in the manor — colder than the cave system below, colder than the mire, cold in the way that glass is cold when it has been storing something much older than the temperature around it. The wine racks are intact, the bottles sealed in wax that has crystallized but not cracked. On the cellar floor, occupying most of the open space between the racks, is the secondary binding inscription — a complex inscribed circle identical in geometry to the one in the sealed chamber far below, rendered in a script that is not carved but grown: the root-fiber threading between floor stones has arranged itself into the sigil's pattern. This was not done by human hands. The @@pbinding geometry@@N glows faintly in the @@acold blue@@N of substrate-connected fungal output from the walls. A iron-banded hatch in the floor descends further, into the ossuary undercroft.
+- Exits: `up` → 1168 (Kitchen), `down` → 1232 (Undercroft Stairs)
+
+**1170 — The Service Yard**
+`room_flags: dark no_recall` | `sector: city`
+The open yard between the manor's domestic wing and its outbuildings, where the estate's working operations were coordinated. Loading areas, storage bays, and the connections to the stable block, distillation outbuilding, and groundskeeper's store all open onto this space. The ground is cobbled in a rougher grade than the formal forecourt — working stone, not display stone. Substrate growth here is less organized than in the manor: the service yard is where the estate's biological layer shows its seams, with root eruptions through paving, thorn growth in irregular directions, and the smell of damp iron and sweet rot stronger than elsewhere.
+- Exits: `east` → 1158 (Forecourt of Inheritance), `north` → 1171 (Stable Block), `west` → 1173 (Groundskeeper's Store), `south` → 1175 (Distillation Outbuilding)
+
+**1171 — The Stable Block**
+`room_flags: dark indoors no_recall` | `sector: inside`
+The manor's stabling facility, built for the estate's working horses and the mounts of visiting funeral convoy escorts. The original horses are long gone. What occupies the stalls now are substrate constructions that approximate equine form: birch-bark pale, berry-red eyes, weight and movement consistent with horses but without breath or sound. They stand in the stalls with the stillness of furniture. The tack room at the stable's western end still holds the estate's original saddle-work and harness, some of it maintained in better condition than it has any right to be.
+- Exits: `south` → 1170, `east` → 1172 (Stable Yard)
+
+**1172 — The Stable Yard**
+`room_flags: dark no_recall` | `sector: city`
+The yard behind the stable block, where horses were exercised and where the estate's working carts were parked. Frost-prints mark the cobblestones — the substrate horses leave these rather than hoofprints. The cart park holds two intact wagons whose wood has been fully colonized by root-fiber, making them immovable. The yard connects north to the timber stands along the estate's managed perimeter.
+- Exits: `west` → 1171, `north` → 1284 (Zone IX: Timber Stands), `east` → 1295 (Zone IX: Hunt Stable Court)
+
+**1173 — The Groundskeeper's Store**
+`room_flags: dark indoors no_recall` | `sector: inside`
+The tool store for the estate's groundskeeping operations — the staff responsible for maintaining the formal gardens, the thorn hedges, and the managed timber stands. Tools hang on the walls in the order their users last placed them: pruning hooks, root-cutting saws, long-handled shears for hedge work. The saws are interesting: the blade teeth are worn in patterns that suggest they were used on material harder than wood. The estate ledger kept here tracks tool condition and assignment — the last entries show items signed out but not returned.
+- Exits: `east` → 1170, `south` → 1174 (Carpenter's Workshop)
+
+**1174 — The Carpenter's Workshop**
+`room_flags: dark indoors no_recall` | `sector: inside`
+Where the estate's thornwood timber was processed into finished goods for internal use and for external sale. The workbenches carry the marks of sustained craft use: saw-cut channels, chisel dents, wax-stain rings. Thornwood shavings still cover the floor, their unusual density and preservative compounds keeping them from degrading in the normal way — the shavings look fresh. A price-list on the wall details the timber grades: surface harvest, managed-stand harvest, deep-interior harvest, the last priced significantly higher with a notation that reads "Cathedral-grade; grade-sort required; consult ledger before committing."
+- Exits: `north` → 1173, `east` → 1175 (Distillation Outbuilding)
+
+**1175 — The Distillation Outbuilding**
+`room_flags: dark indoors no_recall` | `sector: inside`
+The estate's alchemical processing facility, where botanical and bone-derived compounds were extracted for sale and for the estate's own burial-preparation operations. The still-apparatus is intact: copper coils, sealed collection vessels, a furnace grate. The output channels from this building connect southward through the estate's drainage system to the mire. The waste products of decades of alchemical processing — rendered bone oils, tannin concentrates, botanical extracts from thorn-growth — have been depositing in the mire's water table for generations, contributing to the wetland's toxic character. The room smells of @@asulfur and sweet rot@@N.
+- Exits: `north` → 1170 (Service Yard), `west` → 1174, `south` → 1230 (Zone V: Alchemical Runoff Channel)
+
+**1176 — The Garden Terrace**
+`room_flags: dark no_recall` | `sector: forest`
+The estate's formal garden terrace, originally a tiered arrangement of ornamental plantings behind the manor's west wing. The terracing is still visible as stone retaining walls, but the planting beds have been wholly consumed by thorn growth that has replaced every intended species with its own logic. The remaining ornamental structures — a sundial, a stone bench, a low fountain basin — are still present but incorporated: the thorn has grown through them rather than around them, making them part of the hedge geometry rather than decorative counterpoints to it.
+- Exits: `east` → 1158 (Forecourt), `north` → 1177 (Hedge Labyrinth Entry), `south` → 1178 (Rose Garden Ruins)
+
+**1177 — The Hedge Labyrinth Entry**
+`room_flags: dark no_recall` | `sector: forest`
+The entrance to what was once the estate's formal hedge labyrinth — a fashionable garden feature of the Harren period, meant to demonstrate the family's resources and aesthetic sophistication. The original hedges were yew, topiary-shaped to precise geometric patterns. They are now thornwood, and they are no longer geometric — or rather, they have a geometry, but it is not the geometry of the original design. The new pattern corresponds to the binding's inscription geometry, traceable if you can read the binding's script. The labyrinth is navigable. It is not safe.
+- Exits: `south` → 1176, `north` → 1286 (Zone IX: Cult Assembly Ground, via labyrinth pass-through), `east` → 1287 (Zone IX: Covenant Offering Site East)
+
+**1178 — The Rose Garden Ruins**
+`room_flags: dark no_recall` | `sector: forest`
+What the estate's records call the Rose Garden was the manor's most formal exterior space — the area reserved for family ceremonies, the signing of significant contracts, and the reception of distinguished guests who warranted outdoor hospitality. The rose beds are gone. The garden's structure — a circular central clearing with four radiating paths — survives, but the paths are now thorn-lined and the central clearing contains a bone arrangement: femurs and long bones set upright in the earth at regular intervals, too carefully placed to be accidental. This is a Root Covenant installation. The cultists have converted the estate's most ceremonial exterior space into a bone-filing rite site.
+- Exits: `north` → 1176, `west` → 1288 (Zone IX: Covenant Offering Site West)
+
+**1179 — The Estate Orchard**
+`room_flags: dark no_recall` | `sector: forest`
+A former apple and plum orchard at the estate's western edge, now twisted beyond fruiting capacity. The trees still stand in rows — the original planting grid is visible — but the substrate has modified them: the bark has darkened to near-black, the branch angles have shifted toward the manor rather than toward light, and the root systems have surfaced and interlocked with each other in a net that makes walking between the trees slow and careful. The ground between the root-net sections holds small cairns of smooth stones, each one placed by a different hand over a long span of time — the pre-estate ridge-clan practice of marking a path's edge for travelers who might lose their footing.
+- Exits: `east` → 1176 (Garden Terrace), `north` → 1198 (Gravewood Threshold)
+
