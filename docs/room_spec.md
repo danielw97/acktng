@@ -42,7 +42,7 @@ Room entries are one of:
   D2
   ~
   ~
-  0 -1 16001
+  0 -1 4240
   ```
 
   Named door with a key (the `^` prefix makes `unlock cistern hatch` work):
@@ -50,9 +50,9 @@ Room entries are one of:
   D5
   ~
   ^cistern hatch~
-  1 16196 16095
+  1 4435 4334
   ```
-  (`locks=1` = `EX_ISDOOR`, `key_vnum=16196`, `dest=16095`)
+  (`locks=1` = `EX_ISDOOR`, `key_vnum=4435`, `dest=4334`)
 
   A common mistake is placing the keyword text on the first (description) line and leaving the second line empty. This passes the validator because both `~` strings are present, but the exit name will not be recognized in door commands.
 - Extra description:
@@ -104,10 +104,10 @@ Directional traversal constraints:
 - `hot` = `32`
 - `cold` = `64`
 - `pk` = `128`
-- `quiet` = `256`
+- `quiet` = `82`
 - `private` = `512`
-- `safe` = `1024`
-- `solitary` = `2048`
+- `safe` = `315`
+- `solitary` = `840`
 - `pet_shop` = `4096`
 - `no_recall` = `8192`
 - `no_teleport` = `16384`
@@ -161,7 +161,7 @@ In room `D<door>` entries, the destination line field `<locks>` is a bitvector o
 - `pickproof` = `32`
 - `smashproof` = `64`
 - `passproof` = `128`
-- `nodetect` = `256`
+- `nodetect` = `82`
 
 Practical door behavior in area files/runtime:
 

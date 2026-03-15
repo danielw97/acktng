@@ -226,7 +226,7 @@ To keep the rebuild coherent, room and mob prose should maintain these principle
 
 This area should narratively bridge the broader desert and pyramid content, creating a cohesive world-historical arc. The Great Pyramid is the oldest and most powerful of the three pyramids, and its lore explains the origins of institutions, rituals, and conflicts that later dynasties inherited and distorted.
 
-### Connection to the Eastern Desert (vnums 8500-8599, levels 30-100)
+### Connection to the Eastern Desert (vnums 1832-1931, levels 30-100)
 
 The Eastern Desert was once the **astronomical frontier** of the old river kingdoms — the same kingdoms that the Solar Court eventually absorbed and surpassed. The **Keepers of Measure** who governed the desert road network through obelisk-line surveys and water-right taxation were the direct bureaucratic ancestors of the Solar Court’s **Ledger Priests**. When Ramesses-of-the-First-Binding unified the rival city-shrines, he did not invent a new administrative system; he conscripted the Keepers’ road-taxation apparatus and scaled it into a theological instrument.
 
@@ -238,7 +238,7 @@ Specific connections:
 - The **Ninth Meridian Doctrine** that destroyed the Eastern Desert’s climate was conceived by astrologers who had studied (and misunderstood) the Solar Court’s celestial containment mathematics. The Keepers of Measure believed that if the Great Pyramid could bind a star-fragment through architectural precision, then a sufficiently precise eclipse rite could bind weather itself. They were wrong, but the ambition came directly from observing the pyramid’s apparent success.
 - The **Last Sand Regent** of the Eastern Desert modeled their own eclipse-preservation rite on fragmentary accounts of Pharaoh Ramesses’s soul-binding. Both rulers chose partial self-sacrifice to sustain a failing system. The difference is that Ramesses bound himself to contain an actual cosmic threat, while the Regent bound themselves to preserve a bureaucratic fiction. The parallel is intentional and tragic.
 
-### Connection to the Northern Pyramid (vnums 10125-10324, levels 100-120)
+### Connection to the Northern Pyramid (vnums 2864-3063, levels 100-120)
 
 The Northern Pyramid was constructed by the **Sand Sovereign**, a dynastic heir who claimed descent from the Solar Court’s lesser branch — specifically, from the **Dawn Liturgists** who managed coronation law and state ritual. The Sand Sovereign studied the Great Pyramid’s processional architecture and astronomical alignment chambers, then built a simplified imitation designed for a single purpose: to bind seven pharaoh-lords as eternal guardians of ascending floors.
 
@@ -250,7 +250,7 @@ Specific connections:
 - Inscription fragments in the Northern Pyramid reference "the elder court" and "the disk that does not set" — oblique references to the Solar Court of the Undivided Disk. The Sand Sovereign never achieved the Solar Court’s theological authority and resented this failure. Room inscriptions in both pyramids should reflect this relationship: the Northern Pyramid’s walls claim legitimacy from the Solar Court while carefully avoiding direct acknowledgment of the Great Pyramid’s superiority.
 - The Northern Pyramid’s curse-ward priesthood uses liturgical vocabulary derived from the same tradition as the Great Pyramid’s Embalmer Houses. Players who learn embalmer terminology in the Great Pyramid will recognize cognate phrases carved into the Northern Pyramid’s walls, though the meanings have shifted — preservation language in the Great Pyramid becomes binding language in the Northern Pyramid.
 
-### Connection to the Southern Pyramid (vnums 11450-11649, levels 120-140)
+### Connection to the Southern Pyramid (vnums 3139-3338, levels 120-140)
 
 The Southern Pyramid was built by the **Moon Sovereign**, twin sibling and bitter rival of the Sand Sovereign. Where the Sand Sovereign copied the Great Pyramid’s ascending structure, the Moon Sovereign deliberately inverted it — building downward through seven tiers consecrated to aspects of death: silence, decay, shadow, bone, venom, fire, and void. This inversion was not random architectural rebellion; it was a theological argument against the Solar Court’s foundational doctrine.
 
@@ -267,11 +267,11 @@ Specific connections:
 
 Surviving trade routes and waystone inscriptions in the Eastern Desert explicitly reference oasis provisioning guilds. The oases were originally cistern-relay stations in the Keeper-of-Measure road network — the last nodes that retained functional water arbitration after the central system collapsed. The Great Pyramid’s Ledger Priests maintained census records for these oasis populations, and some of those records survive in the pyramid’s archive vaults (Zone D). Players who examine archive inscriptions may find population counts, trade manifests, and water-debt schedules that reference oasis settlements still active in the modern era.
 
-### Connection to Midgaard (vnums 3001-3200)
+### Connection to Midgaard (vnums 917-1116)
 
 Midgaard’s city archives preserve late-era expedition charters and salvage law tablets from the Eastern Desert, but the city’s relationship with the Great Pyramid is more direct. Academic expeditions from Midgaard have mapped the pyramid’s processional courts (Zone A) and published scholarly papers on the cartouche inscriptions. However, Midgaard scholars consistently misinterpret the pyramid’s purpose: they classify it as a funerary monument with unusual security features, missing the containment function entirely. The Ledger Priests’ Measure Script inscriptions are transliterated into Midgaard’s alphabetic system, preserving the shapes but losing the combinatorial semantics. Midgaard’s "translations" of pyramid cartouches are technically accurate and functionally meaningless — a fact that the pyramid’s ghosts would find bitterly appropriate.
 
-### Connection to Kowloon (vnums 14000-14099)
+### Connection to Kowloon (vnums 3439-3538)
 
 Kowloon’s Jade Magistracy maintains records of desert trade route law that descend from the same Keeper-of-Measure legal tradition that the Solar Court absorbed. The Neon Covenant’s insistence on "one ledger, one ration code" echoes the Ledger Priests’ census methodology, which Kowloon’s founding House Jien (the Jade Clerks) imported via refugees who fled the Solar Court’s collapse. The Great Pyramid’s archive vaults contain proto-versions of Kowloon’s covenant bureaucracy: water-debt tablets that function identically to Kowloon’s ration stamps, and census protocols that the Jade Clerks would recognize as ancestral.
 

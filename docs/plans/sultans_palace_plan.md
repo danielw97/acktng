@@ -5,7 +5,7 @@
 **Area Name:** `@@cThe Sultan's Palace@@N` 
 **File Name:** `sultans_palace.are` 
 **Intended Level Range:** 30-50 (`I 30 50`) 
-**Vnum Range (fixed):** **30325-30399** (`V 30325 30399`) 
+**Vnum Range (fixed):** **5256-5330** (`V 5256 5330`) 
 **Room Count Target:** **75/75 rooms used** 
 **Mob Count Target:** 75/75 mobile vnums used (re-authored roster) 
 **Object Count Target:** 75/75 object vnums used (re-authored itemization)
@@ -25,7 +25,7 @@ The redesign preserves the assigned vnum envelope while replacing all rooms, mob
 ## Hard Constraints from `/docs` Specs
 
 - Keep header and records compliant with `Q 16` area format requirements.
-- Keep all authored content inside `30325-30399`.
+- Keep all authored content inside `5256-5330`.
 - Use `O Virant~` in final area header authoring.
 - All strings `~`-terminated; no blank-line double newlines in string payloads.
 - Never mention vnums in any in-world text.
@@ -65,15 +65,15 @@ This redesign directly integrates motifs established in oasis/pyramid planning:
 
 The area is fully re-zoned into five 15-room bands, using every room vnum once.
 
-## Zone A — Gate of Petitions (30325-30339, 15 rooms)
+## Zone A — Gate of Petitions (5256-5270, 15 rooms)
 **Function:** public-facing palace threshold, toll petitions, oath verification, caravan adjudication. 
 **Mood:** formal, crowded-turned-abandoned, still watched by protocol-bound remnants.
 
-- **30325** Moonlit Antechamber (entry nexus; exterior tie retained).
-- **30326** Veiled Gallery (central splitter toward all major wings).
-- **30327-30331** Petition colonnades and registrar corridors.
-- **30332-30335** Seal court, witness alcoves, charter wall.
-- **30336-30339** Intake stair, oath basin, archive queue lanes.
+- **5256** Moonlit Antechamber (entry nexus; exterior tie retained).
+- **5257** Veiled Gallery (central splitter toward all major wings).
+- **5258-5262** Petition colonnades and registrar corridors.
+- **5263-5266** Seal court, witness alcoves, charter wall.
+- **5267-5270** Intake stair, oath basin, archive queue lanes.
 
 ### Zone A encounter profile
 - Mobs: petition ghosts, oath-scribes, rusted gate wardens, ledger jackals.
@@ -81,15 +81,15 @@ The area is fully re-zoned into five 15-room bands, using every room vnum once.
 
 ---
 
-## Zone B — Court of Measured Waters (30340-30354, 15 rooms)
+## Zone B — Court of Measured Waters (5271-5285, 15 rooms)
 **Function:** hydraulic-administrative heart of palace governance. 
 **Mood:** cool stone, mirrored channels, law encoded as flow control.
 
-- **30340** Amber Cloister (transition from intake to court interior).
-- **30341-30345** Sluice observatory walk, gauge chambers, legal aqueduct.
-- **30346-30349** Water court hearing halls and arbitration dais.
-- **30350-30353** Seal vault galleries and tribute valuation rooms.
-- **30354** Throne of Reeds and Copper (zone mini-boss room).
+- **5271** Amber Cloister (transition from intake to court interior).
+- **5272-5276** Sluice observatory walk, gauge chambers, legal aqueduct.
+- **5277-5280** Water court hearing halls and arbitration dais.
+- **5281-5284** Seal vault galleries and tribute valuation rooms.
+- **5285** Throne of Reeds and Copper (zone mini-boss room).
 
 ### Zone B encounter profile
 - Mobs: canal adjudicators, bronze veil guards, aquifer auditors, court herald revenants.
@@ -97,15 +97,15 @@ The area is fully re-zoned into five 15-room bands, using every room vnum once.
 
 ---
 
-## Zone C — Sultan's Domestic Crescent (30355-30369, 15 rooms)
+## Zone C — Sultan's Domestic Crescent (5286-5300, 15 rooms)
 **Function:** private palace life, harem politics, steward wings, diplomatic receiving salons. 
 **Mood:** decadent luxury hollowed by paranoia.
 
-- **30355** Cedar Reception Court (zone entry from hub).
-- **30356-30360** Perfumed gallery chain, lunar tea rooms, mirror antechambers.
-- **30361-30364** Silk dormitories, eunuch posts, handmaiden cloisters.
-- **30365-30368** Diplomatic moon loggias and private strategy salons.
-- **30369** The Sleepless Bedchamber (named elite encounter).
+- **5286** Cedar Reception Court (zone entry from hub).
+- **5287-5291** Perfumed gallery chain, lunar tea rooms, mirror antechambers.
+- **5292-5295** Silk dormitories, eunuch posts, handmaiden cloisters.
+- **5296-5299** Diplomatic moon loggias and private strategy salons.
+- **5300** The Sleepless Bedchamber (named elite encounter).
 
 ### Zone C encounter profile
 - Mobs: moonbound chamberlains, silk oath-sisters, poisoned cupbearers, jealous spirit courtiers.
@@ -113,15 +113,15 @@ The area is fully re-zoned into five 15-room bands, using every room vnum once.
 
 ---
 
-## Zone D — Necro-Archives Beneath the Court (30370-30384, 15 rooms)
+## Zone D — Necro-Archives Beneath the Court (5301-5315, 15 rooms)
 **Function:** legal-funerary merger layer where records and remains are jointly governed. 
 **Mood:** compressed air, incense ash, judicial fear.
 
-- **30370** Spiral Descent to the Quiet Registry.
-- **30371-30374** Bone index halls and mortuary record stacks.
-- **30375-30378** Chamber of Corrected Names, debt ossuary, sentence crypt.
-- **30379-30382** Salt-vault reliquary, embalmer tribunal, witness catacomb.
-- **30383-30384** Blackwater lock and judge-wraith antechamber.
+- **5301** Spiral Descent to the Quiet Registry.
+- **5302-5305** Bone index halls and mortuary record stacks.
+- **5306-5309** Chamber of Corrected Names, debt ossuary, sentence crypt.
+- **5310-5313** Salt-vault reliquary, embalmer tribunal, witness catacomb.
+- **5314-5315** Blackwater lock and judge-wraith antechamber.
 
 ### Zone D encounter profile
 - Mobs: archivist mummies, sentence-ward bailiffs, parchment wraiths, oath-breaker shades.
@@ -129,15 +129,15 @@ The area is fully re-zoned into five 15-room bands, using every room vnum once.
 
 ---
 
-## Zone E — Moon-Cistern Apex and Throne Collapse (30385-30399, 15 rooms)
+## Zone E — Moon-Cistern Apex and Throne Collapse (5316-5330, 15 rooms)
 **Function:** final convergence of water-law and death-sovereignty; climactic ritual machinery. 
 **Mood:** unstable moonlight, flooded mechanics, dynastic catastrophe.
 
-- **30385** Ascendant Cistern Lift (re-emergence into upper sanctum heights).
-- **30386-30390** Lunar pressure halls, cracked observatory bridges, flood vents.
-- **30391-30394** Astral decree vault, drowned minaret interior, broken regnal chapel.
-- **30395-30398** Final gauntlet: mirror-sluice maze, oathfire choir, throne spillway.
-- **30399** The Drowned Sultan's Diadem Throne (final boss room).
+- **5316** Ascendant Cistern Lift (re-emergence into upper sanctum heights).
+- **5317-5321** Lunar pressure halls, cracked observatory bridges, flood vents.
+- **5322-5325** Astral decree vault, drowned minaret interior, broken regnal chapel.
+- **5326-5329** Final gauntlet: mirror-sluice maze, oathfire choir, throne spillway.
+- **5330** The Drowned Sultan's Diadem Throne (final boss room).
 
 ### Zone E encounter profile
 - Mobs: lunar vizier phantoms, drowned janissary elites, moon-engine custodians.
@@ -147,25 +147,25 @@ The area is fully re-zoned into five 15-room bands, using every room vnum once.
 
 ## Mobile Roster Redo (75 vnums)
 
-All mob vnums `30325-30399` are reassigned into coherent factions:
+All mob vnums `5256-5330` are reassigned into coherent factions:
 
-- **Court Protocol Remnants (30325-30339)**: low-mid difficulty administrative undead/constructs.
-- **Hydraulic Tribunal Corps (30340-30354)**: disciplined defenders with control utility.
-- **Domestic Intrigue Circle (30355-30369)**: debuff/control specialists and assassins.
-- **Necro-Archive Judiciary (30370-30384)**: attrition-heavy casters, curse inflictors, anti-recall pressure.
-- **Diadem Catastrophe Guard (30385-30399)**: high-threat elites, culminating in final ruler encounter.
+- **Court Protocol Remnants (5256-5270)**: low-mid difficulty administrative undead/constructs.
+- **Hydraulic Tribunal Corps (5271-5285)**: disciplined defenders with control utility.
+- **Domestic Intrigue Circle (5286-5300)**: debuff/control specialists and assassins.
+- **Necro-Archive Judiciary (5301-5315)**: attrition-heavy casters, curse inflictors, anti-recall pressure.
+- **Diadem Catastrophe Guard (5316-5330)**: high-threat elites, culminating in final ruler encounter.
 
 Named anchors:
-- **Mini-boss (30354):** Regent-Adjutor of the Measured Court.
-- **Elite narrative anchor (30369):** Sleepless Consort of the Moon Pavilion.
-- **Sub-boss (30384):** Warden-Judge of Corrected Names.
-- **Final boss (30399):** Sultan Kheir al-Zafir, Drowned in Oathlight.
+- **Mini-boss (5285):** Regent-Adjutor of the Measured Court.
+- **Elite narrative anchor (5300):** Sleepless Consort of the Moon Pavilion.
+- **Sub-boss (5315):** Warden-Judge of Corrected Names.
+- **Final boss (5330):** Sultan Kheir al-Zafir, Drowned in Oathlight.
 
 ---
 
 ## Objectization Redo (75 vnums)
 
-All object vnums `30325-30399` are repurposed across progression tiers:
+All object vnums `5256-5330` are repurposed across progression tiers:
 
 1. **Administrative relic set** (tablets, seals, bowls, insignia).
 2. **Hydraulic implements** (sluice keys, gauge rods, copper gate tools).
@@ -176,7 +176,7 @@ All object vnums `30325-30399` are repurposed across progression tiers:
 Design intent:
 - Blend caster/melee rewards for level 30-50 progression.
 - Use loreful item descriptions that reference water-law, memory correction, and dynastic collapse.
-- Reserve strongest pieces for 30384 and 30399 encounter loops.
+- Reserve strongest pieces for 5315 and 5330 encounter loops.
 
 ---
 
@@ -192,7 +192,7 @@ Design intent:
 ## Connectivity and Navigation Principles
 
 - Maintain bi-directional exits and avoid non-maze directional loops.
-- Keep `30326` as central navigational hub to mirror current player muscle memory.
+- Keep `5257` as central navigational hub to mirror current player muscle memory.
 - Preserve at least one clean return path from each deep branch to reduce dead-end frustration.
 - Distinguish traversal modes by architecture:
  - Public/legal halls = broad axial movement.
@@ -214,8 +214,8 @@ Design intent:
 
 ## Deliverables in Build Phase
 
-- Fully rewritten room set: 75/75 rooms using vnums 30325-30399.
-- Fully rewritten mobiles: 75/75 mobiles using vnums 30325-30399.
-- Fully rewritten objects: 75/75 objects using vnums 30325-30399.
+- Fully rewritten room set: 75/75 rooms using vnums 5256-5330.
+- Fully rewritten mobiles: 75/75 mobiles using vnums 5256-5330.
+- Fully rewritten objects: 75/75 objects using vnums 5256-5330.
 - Lore-consistent reset graph and boss progression.
 - Color-consistent strings aligned with this plan's five-color theme.

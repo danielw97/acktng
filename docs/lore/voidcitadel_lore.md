@@ -2,7 +2,7 @@
 
 ## Scope
 
-This lore supports a complete reauthor of `voidcitadel.are` within its existing vnum envelope (`610-999`). The Void Citadel is positioned as Kel'Shadra's **recurrence engine**: a high-command complex where testimony was not only judged or buried, but iterated until it produced politically acceptable outcomes. In institutional terms:
+This lore supports a complete reauthor of `voidcitadel.are` within its existing vnum envelope (`88-999`). The Void Citadel is positioned as Kel'Shadra's **recurrence engine**: a high-command complex where testimony was not only judged or buried, but iterated until it produced politically acceptable outcomes. In institutional terms:
 
 - The **Gloamvault** managed confession and classification.
 - The **Crypts of Kel'Shadra** executed deep containment and redaction.
@@ -126,7 +126,7 @@ This is why defeating a boss in the Citadel should feel like interrupting office
 
 ## District Lore Guidance for Reauthored Rooms
 
-### A) Blighted Gate Precinct (610-639)
+### A) Blighted Gate Precinct (88-117)
 
 Historically the ceremonial face of Citadel admission, now fractured into militarized intake. Room writing should mix formal signage with emergency retrofits, indicating that protocol survived longer than confidence.
 
@@ -136,7 +136,7 @@ Use motifs:
 - intake benches with engraved oath prompts,
 - tri-color seals painted over older insignia.
 
-### B) Labyrinth of False Witness (640-669)
+### B) Labyrinth of False Witness (118-147)
 
 Not an irrational maze, but a **compliance labyrinth**: spatially designed to make contradiction exhausting. Dead ends once functioned as waiting niches where clerks observed whether detainees repeated their latest assigned narrative.
 
@@ -146,35 +146,35 @@ Use motifs:
 - mirrored inscriptions,
 - scoring marks counting recitations.
 
-### C) Sanctum Threshold & Audit Ring (670-699)
+### C) Sanctum Threshold & Audit Ring (148-177)
 
 Administrative violence district. Every room should imply measurement: scales, ledgers, timing glyphs, and voice resonance markers. The area tone here is institutional certainty masking panic.
 
-### D) Catacomb Compression Engines (700-729)
+### D) Catacomb Compression Engines (178-207)
 
 The practical underside of recurrence doctrine. Bodies, grave goods, sealed letters, and identity markers were reduced to indexed units. This district should feel mechanically cruel rather than theatrically evil.
 
-### E) Null Spire Ascendant (730-749)
+### E) Null Spire Ascendant (208-227)
 
 Vertical pressure and metaphysical strain. Language should distort gently with height: directional uncertainty, delayed echoes, and non-Euclidean visual cues without becoming unreadable.
 
-### F) Eternal Corridor Recurrence Lattice (750-799)
+### F) Eternal Corridor Recurrence Lattice (228-277)
 
 The heart of procedural horror. Corridors are long because delay itself was punitive. Design text to emphasize administrative duration: faded cycle tallies, stale meal slots, and unchanged docket boards.
 
-### G) Heraldic Crucible (800-849)
+### G) Heraldic Crucible (278-849)
 
 Power theater district. Heraldic displays, choreographed oath circles, and curated military trophies should communicate that legitimacy here was staged as spectacle.
 
-### H) Hidden Memory Annexes (850-899)
+### H) Hidden Memory Annexes (282-899)
 
 Counter-history repository. These rooms carry the most explicit ties to early Kel'Shadra ideals and to dissenting staff who tried to preserve uncensored testimony.
 
-### I) Void-Gate Consequence Core (900-949)
+### I) Void-Gate Consequence Core (286-949)
 
 Cosmological mechanism + legal endpoint. The gate is both device and doctrine: a claim that only one authorized future may proceed.
 
-### J) Aftermath and Verdict Strata (950-999)
+### J) Aftermath and Verdict Strata (289-999)
 
 Do not write as simple treasure epilogue. This district should foreground consequences: reinforced continuity versus witness release, each with costs and incomplete victories.
 

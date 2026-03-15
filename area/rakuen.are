@@ -5,7 +5,7 @@ K rakuen~
 L @@W(@@l45-95@@W)@@N~
 N 35
 I 45 95
-V 16000 16199
+V 4239 4438
 X 0
 F 20
 U @@gwater climbs the old root-weave and Rakuen resets its queues@@N~
@@ -13,7 +13,7 @@ O Virant~
 R all~
 W all~
 #ROOMS
-#16000
+#4239
 @@gThe Boundary Pillar Road@@N~
 @@gThe woodland releases you here without ceremony — the canopy breaks and the
 sky opens in a long southward sweep. A carved granite pillar stands at the
@@ -30,13 +30,13 @@ smaller board, hand-lettered and nailed below the official notices, reads:
 D0
 ~
 ~
-0 -1 7698
+0 -1 1830
 D2
 ~
 ~
-0 -1 16001
+0 -1 4240
 S
-#16001
+#4240
 @@gSplit-Path at the Redwater Braid@@N~
 @@gThe road forks here at a wide stand of flood-scarred alder, the trunk bark
 stained the pale red that gives the Redwater its name. @@gThe western fork
@@ -53,17 +53,17 @@ well below the warning notch.@@N
 D0
 ~
 ~
-0 -1 16000
+0 -1 4239
 D1
 ~
 ~
-0 -1 16003
+0 -1 4242
 D2
 ~
 ~
-0 -1 16002
+0 -1 4241
 S
-#16002
+#4241
 @@gSouthward Guide-Post Run@@N~
 @@gThe approach narrows between two rows of carved guide-posts, each bearing
 distance tallies to the Lower Dispatch House, to the Central Market, and to
@@ -80,17 +80,17 @@ platform.@@N
 D0
 ~
 ~
-0 -1 16001
+0 -1 4240
 D1
 ~
 ~
-0 -1 16004
+0 -1 4243
 D2
 ~
 ~
-0 -1 16005
+0 -1 4244
 S
-#16003
+#4242
 @@cRedwater Flood Overlook@@N~
 @@cA broad step of natural bedrock projects above the flood channel here,
 worn smooth by the boots of generations of flood-watchers. @@cThe Redwater
@@ -107,13 +107,13 @@ descending the far side of the rock step to the south.@@N
 D2
 ~
 ~
-0 -1 16004
+0 -1 4243
 D3
 ~
 ~
-0 -1 16001
+0 -1 4240
 S
-#16004
+#4243
 @@cFlood Warning Drum Platform@@N~
 @@cA raised timber platform supports four barrel drums, each painted with
 flood-season color codes and positioned to be audible across the lower
@@ -130,13 +130,13 @@ the pre-amendment codes should be disregarded.@@N
 D0
 ~
 ~
-0 -1 16003
+0 -1 4242
 D3
 ~
 ~
-0 -1 16002
+0 -1 4241
 S
-#16005
+#4244
 @@WLower Dispatch House — Entry Arch@@N~
 @@WThe entry arch of the Lower Dispatch House is built of dressed fieldstone,
 older than the current structure by at least a century — the lintel stone
@@ -153,13 +153,13 @@ have been under tension for a very long time.@@N
 D0
 ~
 ~
-0 -1 16002
+0 -1 4241
 D2
 ~
 ~
-0 -1 16006
+0 -1 4245
 S
-#16006
+#4245
 @@WLower Dispatch House — Registration Floor@@N~
 @@WThe registration floor is the operational heart of Rakuen's northern
 approach management. @@WThree counters run parallel along the south wall,
@@ -176,17 +176,17 @@ east passage, for those with confirmed onward arrangements.@@N
 D0
 ~
 ~
-0 -1 16005
+0 -1 4244
 D1
 ~
 ~
-0 -1 16008
+0 -1 4247
 D2
 ~
 ~
-0 -1 16007
+0 -1 4246
 S
-#16007
+#4246
 @@WLower Dispatch House — Inner Office@@N~
 @@WThe inner office is where the senior registrar processes complex arrivals
 and departure records. @@WFiling cabinets line three walls, their drawer
@@ -201,13 +201,13 @@ the current staff knows how it arrived on the registrar's desk.@@N
 D0
 ~
 ~
-0 -1 16006
+0 -1 4245
 D2
 ~
 ~
-0 -1 16009
+0 -1 4248
 S
-#16008
+#4247
 @@bRoute-Board Court@@N~
 @@bAn open paved court behind the Dispatch House, its walls covered with
 route-boards carrying current advisory notices for every major path segment
@@ -222,13 +222,13 @@ approach and west back to the Dispatch registration floor.@@N
 D2
 ~
 ~
-0 -1 16010
+0 -1 4249
 D3
 ~
 ~
-0 -1 16006
+0 -1 4245
 S
-#16009
+#4248
 @@bRoute-Board Court Annex@@N~
 @@bThe annex extends the route-board court eastward, handling the overflow of
 notices that the main court's walls can no longer absorb. @@bBoards here tend
@@ -244,13 +244,13 @@ form.'@@N
 D0
 ~
 ~
-0 -1 16007
+0 -1 4246
 D1
 ~
 ~
-0 -1 16010
+0 -1 4249
 S
-#16010
+#4249
 @@bFirst Terrace Stair Foot@@N~
 @@bThe road widens at the base of the first terrace stairs, forming a small
 plaza where arriving travelers can read the causeway map boards before
@@ -266,17 +266,17 @@ landing.@@N
 D0
 ~
 ~
-0 -1 16008
+0 -1 4247
 D2
 ~
 ~
-0 -1 16011
+0 -1 4250
 D3
 ~
 ~
-0 -1 16009
+0 -1 4248
 S
-#16011
+#4250
 @@bTerrace Stair Landing@@N~
 @@bThe stair landing gives a clean sightline back down the approach road to
 the boundary pillar and north into the Eccentric Woodland canopy. @@bThe
@@ -292,13 +292,13 @@ the lower terrace approach divide.@@N
 D0
 ~
 ~
-0 -1 16010
+0 -1 4249
 D1
 ~
 ~
-0 -1 16012
+0 -1 4251
 S
-#16012
+#4251
 @@WTerrace Junction@@N~
 @@WThe terrace junction is the first true decision point inside Rakuen proper.
 @@WThree ways diverge here: east toward the Causeway Quarter along the main
@@ -316,17 +316,17 @@ destinations.@@N
 D1
 ~
 ~
-0 -1 16033
+0 -1 4272
 D2
 ~
 ~
-0 -1 16013
+0 -1 4252
 D3
 ~
 ~
-0 -1 16011
+0 -1 4250
 S
-#16013
+#4252
 @@bStipled Lane Entry Descent@@N~
 @@bThe road drops from the junction here, switching into the first of the
 stilted-lane quarter's descending walkways. @@bThe lane is built on timber
@@ -343,13 +343,13 @@ middle, the crack filled with dark resin and the pledge text still readable.@@N
 D0
 ~
 ~
-0 -1 16012
+0 -1 4251
 D2
 ~
 ~
-0 -1 16014
+0 -1 4253
 S
-#16014
+#4253
 @@bStipled Lane Midway@@N~
 @@bThe lane widens at a timber platform built to serve as a neighborhood
 gathering point — a small community fire basin occupies the center, unlit at
@@ -364,17 +364,17 @@ south while the eastern branch curves toward the root-weave house cluster.@@N
 D0
 ~
 ~
-0 -1 16013
+0 -1 4252
 D1
 ~
 ~
-0 -1 16016
+0 -1 4255
 D2
 ~
 ~
-0 -1 16015
+0 -1 4254
 S
-#16015
+#4254
 @@bStipled Lane South Spur@@N~
 @@bA narrower spur of the stilted lane curves south and east away from the
 main way, serving the households on the outer edge of the platform. @@bThe
@@ -388,13 +388,13 @@ to the eastward fork toward the lane junction south.@@N
 D0
 ~
 ~
-0 -1 16014
+0 -1 4253
 D1
 ~
 ~
-0 -1 16017
+0 -1 4256
 S
-#16016
+#4255
 @@bStipled Lane Watch Post Branch@@N~
 @@bA raised timber watch post occupies the eastern terminus of this branch
 lane, its upper platform affording a clear sightline across the flood
@@ -409,13 +409,13 @@ hand.@@N
 D2
 ~
 ~
-0 -1 16017
+0 -1 4256
 D3
 ~
 ~
-0 -1 16014
+0 -1 4253
 S
-#16017
+#4256
 @@bStipled Lane Junction South@@N~
 @@bThe stilted lane system converges here before transitioning to the
 root-weave quarter, the piling-board construction giving way to
@@ -429,17 +429,17 @@ watch lane returns north and west to the residential platform.@@N
 D0
 ~
 ~
-0 -1 16016
+0 -1 4255
 D2
 ~
 ~
-0 -1 16018
+0 -1 4257
 D3
 ~
 ~
-0 -1 16015
+0 -1 4254
 S
-#16018
+#4257
 @@gRoot-Weave Quarter Entry@@N~
 @@gThe root-weave houses begin here — structures built into the buttress
 roots of the ancient flood-plain trees, their walls woven from split root
@@ -458,17 +458,17 @@ text — concerning civic enoughness — is still fully legible.@@N
 D0
 ~
 ~
-0 -1 16017
+0 -1 4256
 D2
 ~
 ~
-0 -1 16019
+0 -1 4258
 D3
 ~
 ~
-0 -1 16023
+0 -1 4262
 S
-#16019
+#4258
 @@gRoot-Weave House Row@@N~
 @@gA row of root-weave houses lines the approach path, their shared walls
 creating a continuous facade of woven root and clay-chink. @@gLanterns
@@ -484,17 +484,17 @@ for ornament.@@N
 D0
 ~
 ~
-0 -1 16018
+0 -1 4257
 D1
 ~
 ~
-0 -1 16022
+0 -1 4261
 D2
 ~
 ~
-0 -1 16020
+0 -1 4259
 S
-#16020
+#4259
 @@gRoot-Weave House Dead End Lane@@N~
 @@gThis short lane terminates at the base of a root mass too large to
 route around, the path simply stopping at the point where the roots
@@ -508,13 +508,13 @@ bark at each Festival season.@@N
 D0
 ~
 ~
-0 -1 16019
+0 -1 4258
 D3
 ~
 ~
-0 -1 16021
+0 -1 4260
 S
-#16021
+#4260
 @@gRoot-Weave Cross-Lane@@N~
 @@gA cross-lane connects the dead end to the quarter's north loop,
 passing through a low arch formed by two converging root buttresses.
@@ -528,13 +528,13 @@ the archaic script taught by the Garden Ledger tutors.@@N
 D0
 ~
 ~
-0 -1 16022
+0 -1 4261
 D1
 ~
 ~
-0 -1 16020
+0 -1 4259
 S
-#16022
+#4261
 @@gRoot-Weave Quarter North Arc@@N~
 @@gThe north arc of the root-weave quarter curves around the canopy
 edge, the lane following the outer boundary of the old tree stand.
@@ -550,13 +550,13 @@ assessment.@@N
 D2
 ~
 ~
-0 -1 16021
+0 -1 4260
 D3
 ~
 ~
-0 -1 16019
+0 -1 4258
 S
-#16023
+#4262
 @@gRest Garden West Entry@@N~
 @@gThe rest garden occupies a section of formally abandoned lower terrace
 that the Bloom Council has reclassified as civic green space rather than
@@ -571,13 +571,13 @@ overlook.@@N
 D1
 ~
 ~
-0 -1 16018
+0 -1 4257
 D2
 ~
 ~
-0 -1 16024
+0 -1 4263
 S
-#16024
+#4263
 @@cRest Garden Cistern Overlook@@N~
 @@cA cracked stone platform at the center of the rest garden overlooks
 the main cistern access shaft — a circular opening in the ground ringed
@@ -596,17 +596,17 @@ pump station. Valve key held by the duty pump keeper.'@@N
 D0
 ~
 ~
-0 -1 16023
+0 -1 4262
 D2
 ~
 ~
-0 -1 16025
+0 -1 4264
 D5
 cistern hatch~
 ~
-1 16196 16095
+1 4435 4334
 S
-#16025
+#4264
 @@gRest Garden South Walk@@N~
 @@gThe rest garden's southern walk passes through the densest remaining
 tree cover in the lower terrace zone — tall flood-adapted trees whose
@@ -620,13 +620,13 @@ third flood cycle restructured the terrain.@@N
 D0
 ~
 ~
-0 -1 16024
+0 -1 4263
 D1
 ~
 ~
-0 -1 16026
+0 -1 4265
 S
-#16026
+#4265
 @@bCollapsed Promenade — West Entry@@N~
 @@bThe promenade was once a formal civic walk connecting the lower terrace
 neighborhoods. @@bThe third flood cycle undermined the original paving
@@ -641,17 +641,17 @@ south along the ruined causeway face.@@N
 D1
 ~
 ~
-0 -1 16028
+0 -1 4267
 D2
 ~
 ~
-0 -1 16027
+0 -1 4266
 D3
 ~
 ~
-0 -1 16025
+0 -1 4264
 S
-#16027
+#4266
 @@bCollapsed Promenade — South Face@@N~
 @@bThe south face of the promenade runs along the edge of a significant
 flood drop — the terrain here fell two meters in a single flood season
@@ -667,13 +667,13 @@ is reached.@@N
 D0
 ~
 ~
-0 -1 16026
+0 -1 4265
 D1
 ~
 ~
-0 -1 16029
+0 -1 4268
 S
-#16028
+#4267
 @@bCollapsed Promenade — East Span@@N~
 @@bThe east span of the promenade is the most heavily damaged section,
 the paving here shifted into a series of tilted slabs that require care
@@ -688,13 +688,13 @@ amendment board).'@@N
 D2
 ~
 ~
-0 -1 16029
+0 -1 4268
 D3
 ~
 ~
-0 -1 16026
+0 -1 4265
 S
-#16029
+#4268
 @@bCollapsed Promenade — East Junction@@N~
 @@bThe promenade terminates here at a junction with the ember warden
 floodline approach, the ruined formal walk giving way to the more
@@ -708,17 +708,17 @@ at which the warden stations are activated for emergency flood response.@@N
 D0
 ~
 ~
-0 -1 16028
+0 -1 4267
 D1
 ~
 ~
-0 -1 16030
+0 -1 4269
 D3
 ~
 ~
-0 -1 16027
+0 -1 4266
 S
-#16030
+#4269
 @@WEmber Warden Floodline Station@@N~
 @@WThe floodline station is a low stone structure built for function rather
 than presence — equipment lockers, a duty log stand, a signal board, and
@@ -734,17 +734,17 @@ parameters.@@N
 D4
 ~
 ~
-0 -1 16037
+0 -1 4276
 D2
 ~
 ~
-0 -1 16031
+0 -1 4270
 D3
 ~
 ~
-0 -1 16029
+0 -1 4268
 S
-#16031
+#4270
 @@WEmber Warden Patrol Post@@N~
 @@WA smaller patrol post extends east from the main floodline station,
 positioned to cover the flood-plain approach that the station proper
@@ -758,13 +758,13 @@ on the south wall lists the names of wardens on current rotation.@@N
 D0
 ~
 ~
-0 -1 16030
+0 -1 4269
 D1
 ~
 ~
-0 -1 16032
+0 -1 4271
 S
-#16032
+#4271
 @@WEmber Warden Outlook Platform@@N~
 @@WThe outlook platform at the eastern end of the floodline patrol route
 provides the longest sightline available in the lower terrace zone —
@@ -781,9 +781,9 @@ record maintained in Garden Ledger Vol. 88.'@@N
 D3
 ~
 ~
-0 -1 16031
+0 -1 4270
 S
-#16033
+#4272
 @@WCauseway Quarter — West Approach@@N~
 @@WThe road from the terrace junction enters the Causeway Quarter here,
 rising onto the elevated stone rib that gives the district its name. @@WThe
@@ -801,17 +801,17 @@ district name and current ration protocol status — the posted status is
 D1
 ~
 ~
-0 -1 16034
+0 -1 4273
 D2
 ~
 ~
-0 -1 16037
+0 -1 4276
 D3
 ~
 ~
-0 -1 16012
+0 -1 4251
 S
-#16034
+#4273
 @@WRation Tower One Approach@@N~
 @@WThe first ration tower looms at the end of this short corridor, its
 sealed storage crown painted with the district's allocation color-code
@@ -826,13 +826,13 @@ consecutive Garden Ledger efficiency reports.@@N
 D1
 ~
 ~
-0 -1 16035
+0 -1 4274
 D3
 ~
 ~
-0 -1 16033
+0 -1 4272
 S
-#16035
+#4274
 @@WRation Tower Two Approach@@N~
 @@WThe second tower cluster is visible north and east, its distribution
 platform larger than the first tower's — this section serves the
@@ -847,17 +847,17 @@ relay, visible from the corridor as a lower stone structure.@@N
 D1
 ~
 ~
-0 -1 16036
+0 -1 4275
 D2
 ~
 ~
-0 -1 16038
+0 -1 4277
 D3
 ~
 ~
-0 -1 16034
+0 -1 4273
 S
-#16036
+#4275
 @@WRation Tower Three Approach@@N~
 @@WThe third tower cluster is the newest, built in response to the
 population distribution shift after the second Redwater flood cycle
@@ -872,13 +872,13 @@ allocation board lists serving hours and current stock status.@@N
 D2
 ~
 ~
-0 -1 16039
+0 -1 4278
 D3
 ~
 ~
-0 -1 16035
+0 -1 4274
 S
-#16037
+#4276
 @@WCauseway-Floodline Relay Junction@@N~
 @@WThe relay junction is where the causeway level meets the lower
 terrace patrol circuit — a stone platform connecting the causeway
@@ -894,17 +894,17 @@ the second ration tower approach.@@N
 D0
 ~
 ~
-0 -1 16033
+0 -1 4272
 D1
 ~
 ~
-0 -1 16038
+0 -1 4277
 D5
 ~
 ~
-0 -1 16030
+0 -1 4269
 S
-#16038
+#4277
 @@WRation Tower Relay Passage@@N~
 @@WThe relay passage connects the second and fourth tower clusters
 across the mid-causeway grid, a functional throughway that sees
@@ -918,17 +918,17 @@ of the main approaches.@@N
 D0
 ~
 ~
-0 -1 16035
+0 -1 4274
 D1
 ~
 ~
-0 -1 16039
+0 -1 4278
 D3
 ~
 ~
-0 -1 16037
+0 -1 4276
 S
-#16039
+#4278
 @@WRation Tower Four Junction@@N~
 @@WThe fourth tower sits at the junction of the relay passage and
 the causeway spine, its position chosen to serve the largest
@@ -944,17 +944,17 @@ junction between old and new tiers requires monitoring.@@N
 D0
 ~
 ~
-0 -1 16036
+0 -1 4275
 D1
 ~
 ~
-0 -1 16040
+0 -1 4279
 D3
 ~
 ~
-0 -1 16038
+0 -1 4277
 S
-#16040
+#4279
 @@WCauseway Spine — Market Approach@@N~
 @@WThe causeway spine widens here in anticipation of the Central
 Market, the stone rib expanding into a broad plaza approach with
@@ -971,13 +971,13 @@ the buskers have organized.@@N
 D1
 ~
 ~
-0 -1 16041
+0 -1 4280
 D3
 ~
 ~
-0 -1 16039
+0 -1 4278
 S
-#16041
+#4280
 @@WCentral Market — West Deck@@N~
 @@WThe Central Market is the commercial and social center of the
 Causeway Quarter, built on an elevated stone deck that puts vendors
@@ -997,21 +997,21 @@ ration allocation formula.@@N
 D0
 ~
 ~
-0 -1 16047
+0 -1 4286
 D1
 ~
 ~
-0 -1 16042
+0 -1 4281
 D2
 ~
 ~
-0 -1 16046
+0 -1 4285
 D3
 ~
 ~
-0 -1 16040
+0 -1 4279
 S
-#16042
+#4281
 @@WCentral Market — North Deck@@N~
 @@WThe north deck of the Central Market handles the less-established
 vendors — the seasonal stalls, the visiting traders from the woodland
@@ -1026,13 +1026,13 @@ entirely serious.@@N
 D1
 ~
 ~
-0 -1 16043
+0 -1 4282
 D3
 ~
 ~
-0 -1 16041
+0 -1 4280
 S
-#16043
+#4282
 @@WCentral Market — Northeast Deck@@N~
 @@WThe northeast corner of the market deck is where the practical
 and the ceremonial meet — a permanent flower stall operates here
@@ -1047,13 +1047,13 @@ asking.' The flowers are genuinely beautiful.@@N
 D2
 ~
 ~
-0 -1 16044
+0 -1 4283
 D3
 ~
 ~
-0 -1 16042
+0 -1 4281
 S
-#16044
+#4283
 @@WCentral Market — South Deck@@N~
 @@WThe south deck holds the largest single stall: a food preparation
 vendor whose operation has expanded to occupy what was originally
@@ -1069,13 +1069,13 @@ audience.@@N
 D0
 ~
 ~
-0 -1 16043
+0 -1 4282
 D3
 ~
 ~
-0 -1 16045
+0 -1 4284
 S
-#16045
+#4284
 @@WCentral Market — Southwest Passage@@N~
 @@WThe southwest passage is nominally a throughway connecting the
 south and west decks, but in practice it has been colonized by the
@@ -1090,13 +1090,13 @@ in widening.@@N
 D1
 ~
 ~
-0 -1 16044
+0 -1 4283
 D3
 ~
 ~
-0 -1 16046
+0 -1 4285
 S
-#16046
+#4285
 @@WCentral Market — West Loop Close@@N~
 @@WThe final section of the market's perimeter walk closes the loop
 back to the west deck, passing the preserved-goods row where dried
@@ -1112,13 +1112,13 @@ entry 43.'@@N
 D1
 ~
 ~
-0 -1 16045
+0 -1 4284
 D0
 ~
 ~
-0 -1 16041
+0 -1 4280
 S
-#16047
+#4286
 @@WMid-City Dispatch House — Entry Hall@@N~
 @@WThe mid-city Dispatch House is the larger of Rakuen's two dispatch
 facilities, handling the full range of civic registration, permit
@@ -1134,13 +1134,13 @@ the building's archive survived undamaged.@@N
 D1
 ~
 ~
-0 -1 16048
+0 -1 4287
 D2
 ~
 ~
-0 -1 16041
+0 -1 4280
 S
-#16048
+#4287
 @@WMid-City Dispatch House — Filing Hall@@N~
 @@WThe filing hall runs the full depth of the Dispatch House, its
 walls entirely occupied by document cabinets organized by ward,
@@ -1156,13 +1156,13 @@ total stack.@@N
 D1
 ~
 ~
-0 -1 16049
+0 -1 4288
 D3
 ~
 ~
-0 -1 16047
+0 -1 4286
 S
-#16049
+#4288
 @@WMid-City Dispatch House — Records Room@@N~
 @@WThe records room holds the active civic register for the causeway
 zone — births, household registrations, permit grants, and the
@@ -1178,13 +1178,13 @@ on a hook beside it.@@N
 D1
 ~
 ~
-0 -1 16050
+0 -1 4289
 D3
 ~
 ~
-0 -1 16048
+0 -1 4287
 S
-#16050
+#4289
 @@WMid-City Dispatch House — Rear Passage@@N~
 @@WThe rear passage of the Dispatch House connects the records room
 to the barracks stair approach outside, providing a staff exit that
@@ -1198,13 +1198,13 @@ of morale.@@N
 D0
 ~
 ~
-0 -1 16051
+0 -1 4290
 D3
 ~
 ~
-0 -1 16049
+0 -1 4288
 S
-#16051
+#4290
 @@WEmber Warden Barracks Approach@@N~
 @@WThe barracks approach is an open stone platform between the Dispatch
 House and the stair that climbs to the upper warden levels. @@WA
@@ -1218,17 +1218,17 @@ extend north from this platform, and the barracks stair ascends east.@@N
 D0
 ~
 ~
-0 -1 16054
+0 -1 4293
 D1
 ~
 ~
-0 -1 16052
+0 -1 4291
 D2
 ~
 ~
-0 -1 16050
+0 -1 4289
 S
-#16052
+#4291
 @@WEmber Warden Barracks Stair — Lower Landing@@N~
 @@WThe lower stair landing is a transitional space between the public
 causeway level and the warden operational levels above. @@WA security
@@ -1242,13 +1242,13 @@ and administrative visits.@@N
 D1
 ~
 ~
-0 -1 16053
+0 -1 4292
 D3
 ~
 ~
-0 -1 16051
+0 -1 4290
 S
-#16053
+#4292
 @@WEmber Warden Barracks Stair — Upper Approach@@N~
 @@WThe stair terminates at this access platform, where the barracks
 upper level and the warden training areas are accessible. @@WThe
@@ -1264,13 +1264,13 @@ inner wall.@@N
 D3
 ~
 ~
-0 -1 16052
+0 -1 4291
 D4
 ~
 ~
-0 -1 16063
+0 -1 4302
 S
-#16054
+#4293
 @@bCauseway Queue Lane — Entry Node@@N~
 @@bThe queue lanes are the daily reality of the Causeway Quarter:
 organized waiting spaces for ration allocation, permit processing,
@@ -1286,13 +1286,13 @@ the same reason.@@N
 D1
 ~
 ~
-0 -1 16055
+0 -1 4294
 D2
 ~
 ~
-0 -1 16051
+0 -1 4290
 S
-#16055
+#4294
 @@bCauseway Queue Lane — Allocation Row@@N~
 @@bThe allocation row handles the primary ration distribution queue,
 its marked waiting positions running the length of the lane. @@bThe
@@ -1306,17 +1306,17 @@ A queue lane enforcer patrols the row at measured intervals.@@N
 D0
 ~
 ~
-0 -1 16057
+0 -1 4296
 D1
 ~
 ~
-0 -1 16056
+0 -1 4295
 D3
 ~
 ~
-0 -1 16054
+0 -1 4293
 S
-#16056
+#4295
 @@bCauseway Wash Channel@@N~
 @@bThe wash channel runs along the northern edge of the queue lane
 district, a shallow stone-lined waterway used for civic maintenance
@@ -1330,13 +1330,13 @@ the storehouse rib district and east to the storehouse ribs.@@N
 D0
 ~
 ~
-0 -1 16058
+0 -1 4297
 D3
 ~
 ~
-0 -1 16055
+0 -1 4294
 S
-#16057
+#4296
 @@bCauseway Storehouse Rib — West@@N~
 @@bThe storehouse ribs are elevated stone storage structures built
 perpendicular to the causeway spine, their ribbed shape giving the
@@ -1351,13 +1351,13 @@ in its holder.@@N
 D1
 ~
 ~
-0 -1 16058
+0 -1 4297
 D2
 ~
 ~
-0 -1 16055
+0 -1 4294
 S
-#16058
+#4297
 @@bCauseway Storehouse Rib — Junction@@N~
 @@bThe storehouse junction connects the wash channel corridor and
 both storehouse ribs, forming the hub of the storage district's
@@ -1371,17 +1371,17 @@ and the enforcement marshal's district.@@N
 D1
 ~
 ~
-0 -1 16059
+0 -1 4298
 D2
 ~
 ~
-0 -1 16056
+0 -1 4295
 D3
 ~
 ~
-0 -1 16057
+0 -1 4296
 S
-#16059
+#4298
 @@bStorehouse Rear Approach@@N~
 @@bThe rear approach to the storehouse district is a service
 corridor used by stevedores and enforcement patrols. @@bThe
@@ -1396,17 +1396,17 @@ to the storehouse junction.@@N
 D0
 ~
 ~
-0 -1 16060
+0 -1 4299
 D2
 ~
 ~
-0 -1 16061
+0 -1 4300
 D3
 ~
 ~
-0 -1 16058
+0 -1 4297
 S
-#16060
+#4299
 @@bWorkshop District Crossover@@N~
 @@bThe crossover is a narrow passage connecting the storehouse rear
 approach to the canopy workshop district to the east. @@bThe passage
@@ -1422,13 +1422,13 @@ is itself a form of political commentary.@@N
 D1
 ~
 ~
-0 -1 16083
+0 -1 4322
 D2
 ~
 ~
-0 -1 16059
+0 -1 4298
 S
-#16061
+#4300
 @@bEnforcement Corridor@@N~
 @@bThe enforcement corridor leads to the marshal's holding area,
 its character notably different from the civilian lanes — narrower,
@@ -1443,13 +1443,13 @@ currently has three times as many entries as any other category.@@N
 D0
 ~
 ~
-0 -1 16059
+0 -1 4298
 D2
 ~
 ~
-0 -1 16062
+0 -1 4301
 S
-#16062
+#4301
 @@pCauseway Enforcement Marshal's Hold@@N~
 @@pThe marshal's hold is a sealed inner space where the Causeway
 Enforcement Marshal processes detainees, reviews contested
@@ -1467,9 +1467,9 @@ conveys absolute confidence in the correctness of each decision.@@N
 D0
 ~
 ~
-0 -1 16061
+0 -1 4300
 S
-#16063
+#4302
 @@GBloom Pavilion — Main Hall@@N~
 @@GThe Bloom Pavilion is Rakuen's oldest civic structure, built in Year Seven
 on a foundation of river-gathered stone and roofed with a living canopy of
@@ -1489,17 +1489,17 @@ idealist frozen in civically convenient perpetuity.@@N
 D1
 ~
 ~
-0 -1 16064
+0 -1 4303
 D0
 ~
 ~
-0 -1 16066
+0 -1 4305
 D5
 ~
 ~
-0 -1 16053
+0 -1 4292
 S
-#16064
+#4303
 @@GBloom Pavilion — East Wing@@N~
 @@GThe east wing of the Pavilion holds the library collection of the
 founding documents — certified copies of the Southward Compact, the
@@ -1515,13 +1515,13 @@ east, where the morning light is best for document work.@@N
 D1
 ~
 ~
-0 -1 16065
+0 -1 4304
 D3
 ~
 ~
-0 -1 16063
+0 -1 4302
 S
-#16065
+#4304
 @@GBloom Pavilion — Private Council Chamber@@N~
 @@GThe private chamber at the far end of the east wing is where the
 Bloom Council holds the portions of its deliberations not conducted
@@ -1539,9 +1539,9 @@ light comes from the entry and from two oil lamps on iron brackets.@@N
 D3
 ~
 ~
-0 -1 16064
+0 -1 4303
 S
-#16066
+#4305
 @@pGarden Ledger Archive — Main Room@@N~
 @@pThe Garden Ledger Archive is Rakuen's institutional memory, housing
 the public accounting records of every arrival, resource allocation,
@@ -1561,17 +1561,17 @@ north to the Promise Stone Plaza.@@N
 D1
 ~
 ~
-0 -1 16067
+0 -1 4306
 D0
 ~
 ~
-0 -1 16070
+0 -1 4309
 D2
 ~
 ~
-0 -1 16063
+0 -1 4302
 S
-#16067
+#4306
 @@pGarden Ledger Archive — Reading Room@@N~
 @@pThe reading room holds the mid-period ledger volumes — the Lantern
 Reforms era through the early Ash-and-Iron years — in sequence along
@@ -1587,13 +1587,13 @@ focused possessiveness of people who have claimed territory.@@N
 D1
 ~
 ~
-0 -1 16068
+0 -1 4307
 D3
 ~
 ~
-0 -1 16066
+0 -1 4305
 S
-#16068
+#4307
 @@pGarden Ledger Archive — Anteroom@@N~
 @@pThe anteroom connects the public reading room to the restricted
 stacks, where the most sensitive archive materials are held under
@@ -1609,13 +1609,13 @@ A handwritten addendum below reads: 'Or ask Emmer. She knows.'@@N
 D1
 archive door~
 ~
-5 16188 16069
+5 4427 4308
 D3
 ~
 ~
-0 -1 16067
+0 -1 4306
 S
-#16069
+#4308
 @@pGarden Ledger Archive — Restricted Stacks@@N~
 @@pThe restricted stacks hold the archive materials the Bloom Council
 has classified under the limited-access protocol — primarily the
@@ -1633,9 +1633,9 @@ parties would prefer to remain inaccessible.@@N
 D3
 archive door~
 ~
-5 16188 16068
+5 4427 4307
 S
-#16070
+#4309
 @@WPromise Stone Plaza@@N~
 @@WThe Promise Stone Plaza is the upper civic ring's central open space —
 a paved terrace set with seven standing Promise Stones arranged in a
@@ -1655,17 +1655,17 @@ Hearth, and west to the Upper Dispatch House.@@N
 D1
 ~
 ~
-0 -1 16071
+0 -1 4310
 D2
 ~
 ~
-0 -1 16066
+0 -1 4305
 D3
 ~
 ~
-0 -1 16073
+0 -1 4312
 S
-#16071
+#4310
 @@GFounder's Hearth@@N~
 @@GThe Founder's Hearth is a circular stone basin set at the eastern
 edge of the Promise Stone Plaza, its design based on descriptions of
@@ -1683,13 +1683,13 @@ accidentally is treated as a civil matter requiring formal restitution.@@N
 D1
 ~
 ~
-0 -1 16072
+0 -1 4311
 D3
 ~
 ~
-0 -1 16070
+0 -1 4309
 S
-#16072
+#4311
 @@GFounder's Hearth Grove@@N~
 @@GThe grove east of the Founder's Hearth is the oldest planting in the
 upper civic ring — trees descended from the founding generation's first
@@ -1705,13 +1705,13 @@ oath-walk galleries beyond.@@N
 D0
 ~
 ~
-0 -1 16075
+0 -1 4314
 D3
 ~
 ~
-0 -1 16071
+0 -1 4310
 S
-#16073
+#4312
 @@WUpper Dispatch House — Main Hall@@N~
 @@WThe upper dispatch house serves the upper civic ring's administrative
 needs and handles the overflow from the mid-city dispatch during high-volume
@@ -1727,17 +1727,17 @@ days ago.@@N
 D0
 ~
 ~
-0 -1 16074
+0 -1 4313
 D1
 ~
 ~
-0 -1 16070
+0 -1 4309
 D5
 ~
 ~
-0 -1 16099
+0 -1 4338
 S
-#16074
+#4313
 @@WUpper Dispatch House — Records Annex@@N~
 @@WThe records annex of the upper dispatch handles the stewardship
 rotation documentation and the upper civic ring's amendment filings.
@@ -1750,13 +1750,13 @@ residence entry.@@N
 D1
 ~
 ~
-0 -1 16075
+0 -1 4314
 D2
 ~
 ~
-0 -1 16073
+0 -1 4312
 S
-#16075
+#4314
 @@bSteward Residence Entry@@N~
 @@bThe entrance to the steward residential quarter is a formal archway
 with the Bloom Council seal carved into the keystone — added during the
@@ -1772,17 +1772,17 @@ wing.@@N
 D0
 ~
 ~
-0 -1 16076
+0 -1 4315
 D2
 ~
 ~
-0 -1 16072
+0 -1 4311
 D3
 ~
 ~
-0 -1 16074
+0 -1 4313
 S
-#16076
+#4315
 @@bOath-Walk Gallery A@@N~
 @@bThe oath-walk gallery is a covered passage connecting the steward
 residences, its walls hung with placard tributes to former stewards
@@ -1798,13 +1798,13 @@ honored steward's term ended under emergency protocols.@@N
 D1
 ~
 ~
-0 -1 16077
+0 -1 4316
 D2
 ~
 ~
-0 -1 16075
+0 -1 4314
 S
-#16077
+#4316
 @@bOath-Walk Gallery B@@N~
 @@bThe second gallery section holds the records of stewards from the
 Violet Compact and early Modern era. @@bThis section is less visited
@@ -1819,13 +1819,13 @@ There are four such notations.@@N
 D1
 ~
 ~
-0 -1 16078
+0 -1 4317
 D3
 ~
 ~
-0 -1 16076
+0 -1 4315
 S
-#16078
+#4317
 @@bOath-Walk Gallery C@@N~
 @@bThe third gallery holds the current-rotation stewards' designation
 placards — the names and terms of the people presently serving. @@bThe
@@ -1840,13 +1840,13 @@ steward tenures. @@bThe board lists nine names.@@N
 D1
 ~
 ~
-0 -1 16079
+0 -1 4318
 D3
 ~
 ~
-0 -1 16077
+0 -1 4316
 S
-#16079
+#4318
 @@bOath-Walk Gallery D@@N~
 @@bThe final gallery section is the oldest in the walk, its walls carrying
 the earliest placard tributes from the founding and Lantern Reforms
@@ -1862,13 +1862,13 @@ Nobody has removed it.@@N
 D0
 ~
 ~
-0 -1 16080
+0 -1 4319
 D3
 ~
 ~
-0 -1 16078
+0 -1 4317
 S
-#16080
+#4319
 @@pConnecting Ring Passage — Entry@@N~
 @@pThe connecting ring passage links the oath-walk galleries to the
 senior steward's private office complex. @@pThe passage is a later
@@ -1884,13 +1884,13 @@ in institutional character legible.@@N
 D0
 ~
 ~
-0 -1 16079
+0 -1 4318
 D1
 ~
 ~
-0 -1 16081
+0 -1 4320
 S
-#16081
+#4320
 @@pConnecting Ring Passage — Inner Walk@@N~
 @@pThe inner walk of the connecting ring passage is the antechamber to
 the senior steward's office. @@pA waiting bench on the east wall is
@@ -1906,13 +1906,13 @@ compact provision seven. No public vote. See archive vol. 34, entry 11.'@@N
 D1
 ~
 ~
-0 -1 16082
+0 -1 4321
 D3
 ~
 ~
-0 -1 16080
+0 -1 4319
 S
-#16082
+#4321
 @@pSenior Steward Colwen Dast's Private Office@@N~
 @@pThe senior steward's private office is a compact, precisely organized
 space whose every object has been chosen for the signal it sends to those
@@ -1930,9 +1930,9 @@ decided, a belief the amendment filings on the desk may not support.@@N
 D3
 ~
 ~
-0 -1 16081
+0 -1 4320
 S
-#16083
+#4322
 @@GCanopy Workshop District — Entry Approach@@N~
 @@GThe transition from the causeway quarter to the canopy workshop district
 is immediate and textural — the pressed stone of the civic spine gives way
@@ -1950,17 +1950,17 @@ from the weather more than most.@@N
 D0
 ~
 ~
-0 -1 16085
+0 -1 4324
 D1
 ~
 ~
-0 -1 16084
+0 -1 4323
 D3
 ~
 ~
-0 -1 16060
+0 -1 4299
 S
-#16084
+#4323
 @@GCanopy Dye Platform — East Bay@@N~
 @@GThe east bay of the dye platform is the most active in the current
 season, its vats running three colors on a rotation that produces the
@@ -1974,13 +1974,13 @@ connecting stair leads up to the ropewalk spans from the east bay corner.@@N
 D0
 ~
 ~
-0 -1 16086
+0 -1 4325
 D3
 ~
 ~
-0 -1 16083
+0 -1 4322
 S
-#16085
+#4324
 @@GCanopy Ropewalk — Entry Span@@N~
 @@GThe ropewalk spans are long timber bridges running between the canopy
 trees, where the workshop district's cordage operations are conducted at
@@ -1994,13 +1994,13 @@ as the tools they help produce.@@N
 D1
 ~
 ~
-0 -1 16086
+0 -1 4325
 D2
 ~
 ~
-0 -1 16083
+0 -1 4322
 S
-#16086
+#4325
 @@GCanopy Ropewalk — Middle Span@@N~
 @@GThe middle span is the main working level, where cordage crews run
 fibers between anchor posts to produce the rope lengths used throughout
@@ -2015,17 +2015,17 @@ stair.@@N
 D1
 ~
 ~
-0 -1 16087
+0 -1 4326
 D2
 ~
 ~
-0 -1 16084
+0 -1 4323
 D3
 ~
 ~
-0 -1 16085
+0 -1 4324
 S
-#16087
+#4326
 @@GCanopy Ropewalk — Upper Span@@N~
 @@GThe upper span of the ropewalk extends into the canopy at the level
 where the largest trees provide the most stable anchor points. @@GCordage
@@ -2040,13 +2040,13 @@ itself.@@N
 D0
 ~
 ~
-0 -1 16088
+0 -1 4327
 D3
 ~
 ~
-0 -1 16086
+0 -1 4325
 S
-#16088
+#4327
 @@bCanopy Woodcraft Shed — Main Floor@@N~
 @@bThe woodcraft shed is a semi-enclosed structure where timber from
 the managed canopy harvest is processed into structural components
@@ -2062,13 +2062,13 @@ back to the ropewalk upper span.@@N
 D1
 ~
 ~
-0 -1 16089
+0 -1 4328
 D2
 ~
 ~
-0 -1 16087
+0 -1 4326
 S
-#16089
+#4328
 @@bCanopy Woodcraft Shed — Secondary Bay@@N~
 @@bThe secondary bay handles finishing work — joinery, surface
 treatment, and the assembly of prefabricated components for the
@@ -2082,17 +2082,17 @@ drying lofts and north to the compact mediation circle.@@N
 D0
 ~
 ~
-0 -1 16092
+0 -1 4331
 D2
 ~
 ~
-0 -1 16090
+0 -1 4329
 D3
 ~
 ~
-0 -1 16088
+0 -1 4327
 S
-#16090
+#4329
 @@GMedicine Drying Loft — Main Level@@N~
 @@GThe medicine drying lofts occupy the upper level of the shed
 complex, where the dry canopy air accelerates the curing of the
@@ -2106,13 +2106,13 @@ are processed.@@N
 D0
 ~
 ~
-0 -1 16089
+0 -1 4328
 D1
 ~
 ~
-0 -1 16091
+0 -1 4330
 S
-#16091
+#4330
 @@GMedicine Drying Loft — Deep Cure Section@@N~
 @@GThe deep-cure section is partitioned from the main loft to
 provide the controlled conditions required for the most sensitive
@@ -2128,9 +2128,9 @@ ceremonial supply.@@N
 D3
 ~
 ~
-0 -1 16090
+0 -1 4329
 S
-#16092
+#4331
 @@pCompact Mediation Circle — Entry@@N~
 @@pThe compact mediation circle operates under the Canopy Compact's
 governance charter, which means it follows the founding-era circle
@@ -2145,13 +2145,13 @@ current open mediations and available facilitation slots.@@N
 D1
 ~
 ~
-0 -1 16093
+0 -1 4332
 D2
 ~
 ~
-0 -1 16089
+0 -1 4328
 S
-#16093
+#4332
 @@pCompact Mediation Circle — Main Floor@@N~
 @@pThe circle floor is a cleared round platform with seating arranged
 concentrically — no head chair, no elevated position, the spatial
@@ -2167,13 +2167,13 @@ note-taker position, which rotates among the participants.@@N
 D1
 ~
 ~
-0 -1 16094
+0 -1 4333
 D3
 ~
 ~
-0 -1 16092
+0 -1 4331
 S
-#16094
+#4333
 @@pCompact Mediation Circle — Witness Alcove@@N~
 @@pThe witness alcove is where testimony is formally received in
 circle proceedings — a slightly set-back position that gives the
@@ -2190,9 +2190,9 @@ history.@@N
 D3
 ~
 ~
-0 -1 16093
+0 -1 4332
 S
-#16095
+#4334
 @@cSiphon Vault@@N~
 @@cThe siphon vault is a damp, low-ceilinged chamber directly beneath
 the rest garden cistern, the access hatch above admitting a column of
@@ -2209,13 +2209,13 @@ official visitors.@@N
 D1
 ~
 ~
-0 -1 16096
+0 -1 4335
 D4
 cistern hatch~
 ~
-1 16196 16024
+1 4435 4263
 S
-#16096
+#4335
 @@cSubmerged Root Arch Passage@@N~
 @@cThe root arch passage runs east from the siphon vault through a
 section where the old flood-plain tree roots have grown through the
@@ -2231,13 +2231,13 @@ step avoids.@@N
 D1
 ~
 ~
-0 -1 16097
+0 -1 4336
 D3
 ~
 ~
-0 -1 16095
+0 -1 4334
 S
-#16097
+#4336
 @@cMaintenance Culvert Fork@@N~
 @@cThe culvert fork is the root tunnel system's main junction, where
 the primary maintenance channel splits north toward the hidden archive
@@ -2252,17 +2252,17 @@ spare sealing clay, and a lantern with reserve oil.@@N
 D0
 ~
 ~
-0 -1 16098
+0 -1 4337
 D2
 ~
 ~
-0 -1 16099
+0 -1 4338
 D3
 ~
 ~
-0 -1 16096
+0 -1 4335
 S
-#16098
+#4337
 @@pHidden Archive Transfer Niche@@N~
 @@pThe transfer niche is a widened section of the tunnel with a
 stone shelf and a vertical pipe-access point connecting to the
@@ -2278,13 +2278,13 @@ during the witnessing office period. @@pSomebody brought it back.@@N
 D1
 ~
 ~
-0 -1 16099
+0 -1 4338
 D2
 ~
 ~
-0 -1 16097
+0 -1 4336
 S
-#16099
+#4338
 @@bEmergency Ascent Shaft@@N~
 @@bThe emergency ascent shaft connects the root tunnel system to
 the upper dispatch house, providing a direct route bypassing the
@@ -2302,19 +2302,19 @@ its use to those conditions alone.@@N
 D0
 ~
 ~
-0 -1 16097
+0 -1 4336
 D3
 ~
 ~
-0 -1 16098
+0 -1 4337
 D4
 ~
 ~
-0 -1 16073
+0 -1 4312
 S
 #0
 #MOBILES
-#16100
+#4339
 dispatch registrar rakuen~
 @@Wthe Dispatch Registrar@@N~
 @@WThe Dispatch Registrar stands at the registration counter, processing arrival documents.
@@ -2327,7 +2327,7 @@ fast, accurate, and entirely free of judgment.@@N
 40 2
 0 0 3 3
 ! 0 0 0 7 0 0 1
-#16101
+#4340
 canopy compact runner rakuen~
 @@Gthe Canopy Compact Runner@@N~
 @@GA Canopy Compact runner moves briskly through the approach with a satchel of compact notices.
@@ -2340,7 +2340,7 @@ answer questions while still walking.@@N
 35 1
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16102
+#4341
 woodland contract guide rakuen~
 @@bthe Woodland Contract Guide@@N~
 @@bA Woodland Contract Guide waits near the route-board court, available for hire.
@@ -2353,7 +2353,7 @@ the contract board — she will not negotiate it.@@N
 38 2
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16103
+#4342
 exhausted caravan guard rakuen~
 @@bthe Exhausted Caravan Guard@@N~
 @@bAn exhausted caravan guard slumps on a bench near the dispatch entry.
@@ -2366,7 +2366,7 @@ market deck better than most residents and will describe it accurately if asked.
 33 1
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16104
+#4343
 opportunist route broker rakuen~
 @@pthe Opportunist Route Broker@@N~
 @@pAn opportunist route broker watches arrivals from a position near the route-board court.
@@ -2379,7 +2379,7 @@ His route knowledge is genuine. His contract documents are almost certainly forg
 36 1
 0 0 3 3
 ! 0 0 0 7 0 0 1
-#16105
+#4344
 flood drum attendant rakuen~
 @@Wthe Flood Drum Attendant@@N~
 @@WThe Flood Drum Attendant checks the drum equipment at the warning platform.
@@ -2391,7 +2391,7 @@ He takes the drum signal codes seriously and will correct anyone who recites the
 32 1
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16106
+#4345
 terrace checkpoint officer rakuen~
 @@Wthe Terrace Checkpoint Officer@@N~
 @@WA Terrace Checkpoint Officer stands at the stair landing, observing arrivals.
@@ -2404,7 +2404,7 @@ landing technically ambiguous. She has decided to ignore the ambiguity.@@N
 42 2
 0 0 3 3
 ! 0 0 0 7 0 0 1
-#16107
+#4346
 approach guide stump warden rakuen woodland~
 @@gthe Guide Stump Warden@@N~
 @@gA Guide Stump Warden tends the approach guide-posts along the southern woodland run.
@@ -2417,7 +2417,7 @@ original scouting corps, a lineage they cite more often than anyone else finds u
 36 1
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16108
+#4347
 lower terrace compact steward rakuen~
 @@Wthe Lower Terrace Compact Steward@@N~
 @@WA Lower Terrace Compact Steward patrols the stilted lane neighborhood.
@@ -2430,7 +2430,7 @@ He is keeping count.@@N
 45 1
 0 0 3 3
 ! 0 0 0 7 0 0 1
-#16109
+#4348
 flood watch warden lower terrace rakuen~
 @@Wthe Flood-Watch Warden@@N~
 @@WA Flood-Watch Warden monitors the lower terrace perimeter from the stilted lane.
@@ -2443,7 +2443,7 @@ is detailed enough to be useful in the event of an actual flood.@@N
 47 2
 0 0 3 3
 ! 0 0 0 7 0 0 1
-#16110
+#4349
 displaced gardener lower terrace rakuen~
 @@Gthe Displaced Gardener@@N~
 @@GA displaced gardener tends a small plot at the edge of the stilted lane platform.
@@ -2456,7 +2456,7 @@ opinions about soil composition that are possibly more detailed than circumstanc
 40 1
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16111
+#4350
 root rot scavenger lower terrace rakuen~
 @@gthe Root-Rot Scavenger@@N~
 @@gA root-rot scavenger picks through the damaged root-weave structures.
@@ -2469,7 +2469,7 @@ from someone helping themselves. His paperwork is in order.@@N
 38 1
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16112
+#4351
 drowned root revenant undead rakuen~
 @@gthe Drowned-Root Revenant@@N~
 @@gA drowned-root revenant moves through the flooded root-weave zone, its form waterlogged and slow.
@@ -2483,7 +2483,7 @@ for several years.@@N
 50 0
 0 0 5 5
 ! 0 0 7 7 0 0 1
-#16113
+#4352
 rest garden keeper rakuen~
 @@Gthe Rest Garden Keeper@@N~
 @@GThe Rest Garden Keeper tends the civic green space with careful attention.
@@ -2497,7 +2497,7 @@ to each other.@@N
 43 2
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16114
+#4353
 stilted lane squatter lower terrace rakuen~
 @@bthe Stilted Lane Squatter@@N~
 @@bA stilted lane squatter occupies a section of the outer platform not currently assigned.
@@ -2510,7 +2510,7 @@ section for four years. She has put considerable effort into the space.@@N
 35 2
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16115
+#4354
 promenade ruin looter lower terrace rakuen~
 @@bthe Promenade Ruin Looter@@N~
 @@bA promenade ruin looter picks through the collapsed paving for salvageable stone.
@@ -2523,7 +2523,7 @@ relevant parties have been arguing about since Year One-Hundred-and-Thirty-Eight
 40 1
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16116
+#4355
 ember warden floodline station guard rakuen~
 @@Wthe Floodline Station Guard@@N~
 @@WA Floodline Station Guard stands at the ember warden station, monitoring the approach.
@@ -2536,7 +2536,7 @@ station is staffed and the flood-watch rotation is active.@@N
 45 1
 0 0 3 3
 ! 0 0 0 7 0 0 1
-#16117
+#4356
 waterlogged root leech lower terrace rakuen~
 @@gthe Waterlogged Root-Leech@@N~
 @@gA waterlogged root-leech clings to a root mass in the collapsed promenade zone.
@@ -2549,7 +2549,7 @@ territory. @@gThis one is larger than average. The salvage court has been notifi
 48 0
 0 0 4 4
 ! 0 0 7 7 0 0 1
-#16118
+#4357
 lower terrace scavenger hound rakuen~
 @@gthe Scavenger Hound@@N~
 @@gA scavenger hound prowls the collapsed promenade zone.
@@ -2562,7 +2562,7 @@ of evasiveness and the sympathy of the rest garden keeper.@@N
 43 0
 0 0 4 4
 ! 0 0 7 7 0 0 1
-#16119
+#4358
 ration clerk causeway rakuen~
 @@Wthe Ration Clerk@@N~
 @@WA Ration Clerk staffs the distribution counter at the ration tower approach.
@@ -2575,7 +2575,7 @@ considers ambiguity a personal affront.@@N
 48 2
 0 0 3 3
 ! 0 0 0 7 0 0 1
-#16120
+#4359
 tower guard causeway rakuen~
 @@Wthe Tower Guard@@N~
 @@WA Tower Guard stands at the ration tower approach, watching the distribution queue.
@@ -2588,7 +2588,7 @@ frequent than actual security incidents.@@N
 50 2
 0 0 4 4
 ! 0 0 0 7 0 0 1
-#16121
+#4360
 market quarter laborer causeway rakuen~
 @@bthe Market Quarter Laborer@@N~
 @@bA market quarter laborer hauls crates through the market deck.
@@ -2601,7 +2601,7 @@ functioning. His opinions about specific stall holders are extensive.@@N
 45 1
 0 0 3 3
 ! 0 0 0 7 0 0 1
-#16122
+#4361
 market vendor causeway rakuen~
 @@Wthe Market Vendor@@N~
 @@WA Market Vendor tends a stall on the Central Market deck.
@@ -2614,7 +2614,7 @@ allocation formula's effect on her customers is not something she keeps to herse
 47 2
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16123
+#4362
 black register smuggler causeway rakuen~
 @@pthe Black-Register Smuggler@@N~
 @@pA black-register smuggler moves through the storehouse district with a loaded pack.
@@ -2627,7 +2627,7 @@ The Causeway Enforcement Marshal knows him by description. He knows the marshal'
 50 1
 0 0 4 4
 ! 0 0 0 7 0 0 1
-#16124
+#4363
 petition agitator causeway rakuen~
 @@pthe Petition Agitator@@N~
 @@pA petition agitator works the market deck, distributing amendment documents.
@@ -2640,7 +2640,7 @@ petitions are for and will provide it whether or not you asked.@@N
 42 2
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16125
+#4364
 wash channel crew member causeway rakuen~
 @@bthe Wash Channel Crew Member@@N~
 @@bA wash channel crew member maintains the causeway sluice system.
@@ -2654,7 +2654,7 @@ of what has gone down the channel over the years.@@N
 44 1
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16126
+#4365
 storehouse stevedore causeway rakuen~
 @@bthe Storehouse Stevedore@@N~
 @@bA storehouse stevedore moves inventory between the ration ribs on a loading schedule.
@@ -2667,7 +2667,7 @@ the storage ribs versus what the allocation ledger says should be there.@@N
 46 1
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16127
+#4366
 queue lane enforcer causeway rakuen~
 @@Wthe Queue Lane Enforcer@@N~
 @@WA Queue Lane Enforcer patrols the allocation row.
@@ -2680,7 +2680,7 @@ is well-used. The Bloom Council has ruled that her citation authority is valid.@
 52 2
 0 0 4 4
 ! 0 0 0 7 0 0 1
-#16128
+#4367
 dispatch house scrivener causeway rakuen~
 @@Wthe Dispatch Scrivener@@N~
 @@WA Dispatch Scrivener works at a standing desk in the Dispatch filing hall.
@@ -2693,7 +2693,7 @@ amendment will be resolved, and she has been right about the last four.@@N
 50 2
 0 0 3 3
 ! 0 0 0 7 0 0 1
-#16129
+#4368
 tower access gatekeeper causeway rakuen~
 @@Wthe Tower Access Gatekeeper@@N~
 @@WA Tower Access Gatekeeper controls the restricted approach to the upper tower levels.
@@ -2707,7 +2707,7 @@ visitors; he just says no.@@N
 48 1
 0 0 4 4
 ! 0 0 0 7 0 0 1
-#16130
+#4369
 causeway lamp lighter rakuen~
 @@bthe Causeway Lamplighter@@N~
 @@bA lamplighter moves along the causeway spine, tending the bracket lamps.
@@ -2721,7 +2721,7 @@ restructuring in Rakuen's history.@@N
 38 2
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16131
+#4370
 causeway enforcement marshal rakuen boss~
 @@pthe Causeway Enforcement Marshal@@N~
 @@pThe Causeway Enforcement Marshal stands in the enforcement hold, reviewing citations.
@@ -2738,7 +2738,7 @@ not the opinions you might expect.@@N
 ! 0 0 0 7 0 0 1
 l 1 16179 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
-#16132
+#4371
 bloom council steward upper ring rakuen~
 @@Wthe Bloom Council Steward@@N~
 @@WA Bloom Council Steward conducts affairs in the Promise Stone Plaza.
@@ -2752,7 +2752,7 @@ She holds both positions simultaneously.@@N
 60 2
 0 0 3 3
 ! 0 0 0 7 0 0 1
-#16133
+#4372
 garden ledger clerk upper ring rakuen~
 @@pthe Garden Ledger Clerk@@N~
 @@pA Garden Ledger Clerk works in the archive main room.
@@ -2765,7 +2765,7 @@ are expressed only through the precision of her filing.@@N
 58 2
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16134
+#4373
 archive custodian upper ring rakuen~
 @@pthe Archive Custodian@@N~
 @@pThe Archive Custodian tends the reading room and manages the reference collection.
@@ -2778,7 +2778,7 @@ not describe its contents without authorization.@@N
 55 1
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16135
+#4374
 ember warden liaison captain upper ring rakuen~
 @@Wthe Ember Warden Liaison Captain@@N~
 @@WThe Ember Warden Liaison Captain coordinates between the warden corps and the civic ring.
@@ -2792,7 +2792,7 @@ friction.@@N
 62 2
 0 0 4 4
 ! 0 0 0 7 0 0 1
-#16136
+#4375
 political envoy amendment track rakuen~
 @@pthe Amendment Track Envoy@@N~
 @@pAn Amendment Track political envoy moves through the oath-walk galleries.
@@ -2806,7 +2806,7 @@ finds her exhausting.@@N
 55 2
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16137
+#4376
 political envoy preservation coalition rakuen~
 @@pthe Preservation Coalition Envoy@@N~
 @@pA Preservation Coalition envoy occupies a bench in the oath-walk gallery.
@@ -2821,7 +2821,7 @@ point.@@N
 55 1
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16138
+#4377
 quiet separatist courier upper ring rakuen~
 @@pthe Quiet Separatist Courier@@N~
 @@pA Quiet Separatist courier moves through the connecting ring passage.
@@ -2835,7 +2835,7 @@ with anyone near the senior steward's office.@@N
 52 2
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16139
+#4378
 upper dispatch registrar upper ring rakuen~
 @@Wthe Upper Dispatch Registrar@@N~
 @@WThe Upper Dispatch Registrar processes applications at the records annex.
@@ -2849,7 +2849,7 @@ not simply hand it over.@@N
 58 1
 0 0 3 3
 ! 0 0 0 7 0 0 1
-#16140
+#4379
 senior steward colwen dast rakuen boss~
 @@pSenior Steward Colwen Dast@@N~
 @@pSenior Steward Colwen Dast sits at the desk in the private office, the Authority Sash of the office displayed on its rack.
@@ -2866,7 +2866,7 @@ discuss the distinction without prior arrangement.@@N
 ! 0 0 0 7 0 0 1
 l 1 16189 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
-#16141
+#4380
 workshop foremaster canopy rakuen~
 @@Gthe Workshop Foremaster@@N~
 @@GThe Workshop Foremaster oversees the dye platform operations.
@@ -2880,7 +2880,7 @@ you ask.@@N
 55 2
 0 0 3 3
 ! 0 0 0 7 0 0 1
-#16142
+#4381
 cordage crew member canopy rakuen~
 @@Gthe Cordage Crew Member@@N~
 @@GA cordage crew member works the ropewalk span above.
@@ -2893,7 +2893,7 @@ the civic politics happening on the causeway level below.@@N
 50 1
 0 0 3 3
 ! 0 0 0 7 0 0 1
-#16143
+#4382
 herbal preparer canopy rakuen~
 @@Gthe Herbal Preparer@@N~
 @@GA herbal preparer works in the medicine drying loft.
@@ -2906,7 +2906,7 @@ surplus. Her knowledge of forest pharmacology is the kind that takes thirty year
 52 2
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16144
+#4383
 compact mediator canopy rakuen~
 @@pthe Compact Mediator@@N~
 @@pA Compact Mediator prepares the mediation circle for the day's sessions.
@@ -2920,7 +2920,7 @@ court's.@@N
 58 2
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16145
+#4384
 quiet separatist organizer canopy rakuen~
 @@pthe Quiet Separatist Organizer@@N~
 @@pA Quiet Separatist organizer holds a quiet meeting at the mediation circle.
@@ -2934,7 +2934,7 @@ anyway.@@N
 52 1
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16146
+#4385
 dye platform tender canopy rakuen~
 @@Gthe Dye Platform Tender@@N~
 @@GA dye platform tender manages the active vat rotation.
@@ -2947,7 +2947,7 @@ immunity. She is matter-of-fact about the smell.@@N
 48 2
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16147
+#4386
 tunnel pump keeper root tunnel rakuen~
 @@cthe Tunnel Pump Keeper@@N~
 @@cThe Tunnel Pump Keeper tends the siphon vault's valve and pump equipment.
@@ -2962,7 +2962,7 @@ in the annual budget.@@N
 48 1
 0 0 2 2
 ! 0 0 0 7 0 0 1
-#16148
+#4387
 undercroft scavenger root tunnel rakuen~
 @@bthe Undercroft Scavenger@@N~
 @@bAn undercroft scavenger picks through the tunnel maintenance cache.
@@ -2976,7 +2976,7 @@ as a monitoring technique.@@N
 45 1
 0 0 3 3
 ! 0 0 0 7 0 0 1
-#16149
+#4388
 ash slick root leech root tunnel rakuen~
 @@gthe Ash-Slick Root-Leech@@N~
 @@gAn ash-slick root-leech clings to the tunnel wall in the culvert fork.
@@ -2992,7 +2992,7 @@ surface variety, faster, and considerably less averse to confined spaces.@@N
 ! 0 0 7 7 0 0 1
 #0
 #OBJECTS
-#16150
+#4389
 weathered route board slats rakuen~
 @@ba Weathered Route-Board Slat Set@@N~
 @@bA set of weathered timber slats from the route-board cluster at the approach fork lies here, their surfaces carrying faded advisory text in three different hands.@@N
@@ -3002,7 +3002,7 @@ weathered route board slats rakuen~
 3
 L
 35
-#16151
+#4390
 stamped travel writ bundle rakuen~
 @@Wa Stamped Travel Writ Bundle@@N~
 @@WA bundle of stamped transit writs tied with dispatch cord lies here, each writ authorizing passage through a specific section of the Eccentric Woodland approach.@@N
@@ -3012,7 +3012,7 @@ stamped travel writ bundle rakuen~
 2
 L
 40
-#16152
+#4391
 compact rope harness rakuen~
 @@ba Compact Rope Harness@@N~
 @@bA rope harness of compact workmanship lies here, its joints spliced rather than knotted and its fit adjusted for extended wear.@@N
@@ -3022,7 +3022,7 @@ compact rope harness rakuen~
 8
 L
 40
-#16153
+#4392
 flood season marker lantern rakuen~
 @@ca Flood-Season Marker Lantern@@N~
 @@cA flood-season marker lantern lies here, its housing painted in the lower terrace zone's flood-warning orange and fitted with a reflective panel for distance visibility.@@N
@@ -3032,7 +3032,7 @@ flood season marker lantern rakuen~
 4
 L
 35
-#16154
+#4393
 worn dispatch ledger folio rakuen~
 @@Wa Worn Dispatch Ledger Folio@@N~
 @@WA worn dispatch ledger folio lies here, its cover stamped with the Lower Dispatch House seal and its pages dense with arrival records in the standard notation.@@N
@@ -3042,7 +3042,7 @@ worn dispatch ledger folio rakuen~
 3
 L
 45
-#16155
+#4394
 route advisory nail board rakuen~
 @@ba Route Advisory Nail Board@@N~
 @@bA route advisory nail board lies here, its surface studded with the remnant nails of removed notices and carrying three current advisories that have survived the most recent posting cycle.@@N
@@ -3052,7 +3052,7 @@ route advisory nail board rakuen~
 4
 L
 38
-#16156
+#4395
 battered travel coffer rakuen~
 @@ba Battered Travel Coffer@@N~
 @@bA battered travel coffer lies here, its exterior marked with route stamps from multiple Eccentric Woodland waypoints and its interior lined with oilcloth that has survived its contents better than its container.@@N
@@ -3062,7 +3062,7 @@ battered travel coffer rakuen~
 7
 L
 40
-#16157
+#4396
 salvage stilt brace rakuen~
 @@ba Salvage Stilt Brace@@N~
 @@bA salvage stilt brace lies here, its bolt holes showing wear from at least two previous installations and its timber still sound despite the scoring from flood-water debris.@@N
@@ -3072,7 +3072,7 @@ salvage stilt brace rakuen~
 6
 L
 45
-#16158
+#4397
 moss sealed grain jar rakuen~
 @@Ga Moss-Sealed Grain Jar@@N~
 @@GA moss-sealed grain jar lies here, its clay body stoppered with a moss-and-resin seal that has kept the contents dry through at least one flood cycle by the flood marks on the exterior.@@N
@@ -3082,7 +3082,7 @@ moss sealed grain jar rakuen~
 3
 L
 40
-#16159
+#4398
 promise stone votive ribbon rakuen~
 @@Wa Promise Stone Votive Ribbon@@N~
 @@WA votive ribbon of undyed linen lies here, its ends inscribed with two of the founding compact's core pledges in a careful hand, tied and left at a Promise Stone in the Festival tradition.@@N
@@ -3092,7 +3092,7 @@ promise stone votive ribbon rakuen~
 2
 L
 45
-#16160
+#4399
 waterlogged ledger satchel rakuen~
 @@ba Waterlogged Ledger Satchel@@N~
 @@bA waterlogged ledger satchel lies here, its leather swollen with absorbed moisture but its contents — several ledger folios sealed in separate oilskin wraps — apparently intact.@@N
@@ -3102,7 +3102,7 @@ waterlogged ledger satchel rakuen~
 5
 L
 45
-#16161
+#4400
 ember warden floodline flag rakuen~
 @@Wan Ember Warden Floodline Flag@@N~
 @@WA floodline activation flag in the Ember Warden corps' signal orange lies here, its pole bracket still attached, designed to be planted at the flood-activation mark during high-water events.@@N
@@ -3112,7 +3112,7 @@ ember warden floodline flag rakuen~
 3
 L
 47
-#16162
+#4401
 root weave splint bundle rakuen~
 @@ga Root-Weave Splint Bundle@@N~
 @@gA bundle of root-weave repair splints lies here, each strip pre-cut to the standard width and soaked to the correct flexibility for weaving into a damaged root-wall section.@@N
@@ -3122,7 +3122,7 @@ root weave splint bundle rakuen~
 4
 L
 45
-#16163
+#4402
 cracked promenade tile shard rakuen~
 @@ba Cracked Promenade Tile Shard@@N~
 @@bA large shard of the original promenade paving lies here, its underside marked with the founding-era mason's mark and its face carrying a section of the civic inscription that once ran the full length of the promenade walk.@@N
@@ -3132,7 +3132,7 @@ cracked promenade tile shard rakuen~
 5
 L
 45
-#16164
+#4403
 flood season tide gauge rakuen~
 @@ca Flood-Season Tide Gauge@@N~
 @@cA flood-season tide gauge lies here, its scale marked with the reference levels for the lower terrace cistern approach and the Redwater channel's emergency thresholds.@@N
@@ -3142,7 +3142,7 @@ flood season tide gauge rakuen~
 4
 L
 50
-#16165
+#4404
 terrace repair mortar crock rakuen~
 @@ba Terrace-Repair Mortar Crock@@N~
 @@bA sealed crock of terrace-repair mortar lies here, its contents the specialized lime-and-ash mixture developed for the lower terrace's flood-resistant patchwork.@@N
@@ -3152,7 +3152,7 @@ terrace repair mortar crock rakuen~
 6
 L
 47
-#16166
+#4405
 silt caked gardening tool rakuen~
 @@Ga Silt-Caked Gardening Tool@@N~
 @@GA silt-caked gardening tool lies here, its blade coated with the grey-brown silt that marks flood-cycle soil and its handle worn smooth by years of use in the lower terrace plots.@@N
@@ -3162,7 +3162,7 @@ silt caked gardening tool rakuen~
 5
 L
 45
-#16167
+#4406
 ration chit bundle causeway rakuen~
 @@Wa Ration Chit Bundle@@N~
 @@WA bundle of ration chits lies here, each stamped with the current-period allocation authorization and the Bloom Council distribution seal.@@N
@@ -3172,7 +3172,7 @@ ration chit bundle causeway rakuen~
 2
 L
 50
-#16168
+#4407
 sealed grain crate causeway rakuen~
 @@ba Sealed Grain Crate@@N~
 @@bA sealed grain crate lies here, its joints tarred against moisture and its Ledger tally mark indicating a ration-tier reserve allocation.@@N
@@ -3182,7 +3182,7 @@ sealed grain crate causeway rakuen~
 10
 L
 50
-#16169
+#4408
 ash scrub wash tool set causeway rakuen~
 @@bAn Ash-Scrub Wash Tool Set@@N~
 @@bA wash tool set for ash-scrub maintenance lies here, its brushes and scrapers sized for the causeway wash channel's standard sluice width.@@N
@@ -3192,7 +3192,7 @@ ash scrub wash tool set causeway rakuen~
 6
 L
 50
-#16170
+#4409
 market contract tablet causeway rakuen~
 @@Wa Market Contract Tablet@@N~
 @@WA market contract tablet lies here, its surface carrying a vendor stall assignment in the standard Ledger notation with the allocation-period seal and three amendment notations.@@N
@@ -3202,7 +3202,7 @@ market contract tablet causeway rakuen~
 3
 L
 52
-#16171
+#4410
 dispatch seal kit causeway rakuen~
 @@Wa Dispatch Seal Kit@@N~
 @@WA dispatch seal kit lies here, its case holding the current-issue civic stamp, ink block, and authentication paper used for official Dispatch House correspondence.@@N
@@ -3212,7 +3212,7 @@ dispatch seal kit causeway rakuen~
 4
 L
 50
-#16172
+#4411
 tower access medallion causeway rakuen~
 @@Wa Tower Access Medallion@@N~
 @@WA tower access medallion lies here, its face stamped with the Bloom Council tower-management seal and its reverse carrying the access-tier designation.@@N
@@ -3222,7 +3222,7 @@ tower access medallion causeway rakuen~
 2
 L
 50
-#16173
+#4412
 queue lane warden baton causeway rakuen~
 @@ba Queue Lane Warden's Baton@@N~
 @@bA queue lane warden's baton lies here, its grip wrap worn smooth and its surface carrying the standard enforcement-authority markings of the causeway civic patrol.@@N
@@ -3232,7 +3232,7 @@ queue lane warden baton causeway rakuen~
 9
 L
 52
-#16174
+#4413
 black register smuggler pouch causeway rakuen~
 @@pa Black-Register Smuggler's Pouch@@N~
 @@pA smuggler's pouch lies here, its interior divided into sealed compartments sized for the contraband allocation tokens used in the shadow-economy exchanges the Ledger Clerks have been documenting for three years.@@N
@@ -3242,7 +3242,7 @@ black register smuggler pouch causeway rakuen~
 4
 L
 52
-#16175
+#4414
 barracks posting board causeway rakuen~
 @@Wa Barracks Posting Board@@N~
 @@WA barracks posting board lies here, its surface covered with duty assignments, patrol schedules, and three separate notices about the proper notation format for incident reports.@@N
@@ -3252,7 +3252,7 @@ barracks posting board causeway rakuen~
 5
 L
 50
-#16176
+#4415
 storehouse tally ledger causeway rakuen~
 @@ba Storehouse Tally Ledger@@N~
 @@bA storehouse tally ledger lies here, its pages recording the ration rib inventory with the dual-notation system that lets Ledger Clerks and allocation clerks each verify independently.@@N
@@ -3262,7 +3262,7 @@ storehouse tally ledger causeway rakuen~
 4
 L
 52
-#16177
+#4416
 causeway inspection slate causeway rakuen~
 @@ba Causeway Inspection Slate@@N~
 @@bA causeway inspection slate lies here, its surface carrying the structural assessment results for the section of causeway rib most recently inspected, with four items flagged for follow-up.@@N
@@ -3272,7 +3272,7 @@ causeway inspection slate causeway rakuen~
 5
 L
 52
-#16178
+#4417
 warden dispatch lantern causeway rakuen~
 @@Wa Warden's Dispatch Lantern@@N~
 @@WA warden's dispatch lantern lies here, its housing marked with the Ember Warden corps insignia and fitted with a colored-filter ring for the signal protocol used during active enforcement operations.@@N
@@ -3282,7 +3282,7 @@ warden dispatch lantern causeway rakuen~
 5
 L
 55
-#16179
+#4418
 marshal enforcement blade causeway rakuen boss~
 @@pthe Marshal's Enforcement Blade@@N~
 @@pA heavy straight blade bearing the Causeway Enforcement Marshal's authority seal on the ricasso lies here, its edge maintained with the precise care of a weapon that is primarily a symbol and secondarily a threat.@@N
@@ -3292,7 +3292,7 @@ marshal enforcement blade causeway rakuen boss~
 9
 L
 70
-#16180
+#4419
 edited thesis folio upper ring rakuen~
 @@pan Edited Paradise Thesis Folio@@N~
 @@pAn authorized edition of the Paradise Thesis lies here, its cover bearing the Bloom Council certification seal and its text running to thirty-one pages — the twelve pages containing the direct Midgaard critique having been removed between this edition and the previous one.@@N
@@ -3302,7 +3302,7 @@ edited thesis folio upper ring rakuen~
 3
 L
 60
-#16181
+#4420
 archive challenge ledger upper ring rakuen~
 @@pan Archive Challenge Ledger@@N~
 @@pAn archive challenge ledger lies here — the Garden Ledger Clerk's tool for formally contesting the accuracy of documents in the Bloom Council's authorized collection, filled to within a few pages of completion.@@N
@@ -3320,7 +3320,7 @@ entry cites the page, the line, and the passage in the draft that contradicts th
 version. The last entry, in fresher ink, cites the Kel'Shadra witnessing office records and
 adds: 'See testimony tube. Root tunnel. G.L.C. Vol. 91, entry 43.'
 ~
-#16182
+#4421
 council seal box upper ring rakuen~
 @@Wa Council Seal-Box@@N~
 @@WA Bloom Council seal-box lies here, its interior compartments holding the current-issue official seals for the stewardship rotation, amendment filings, and civic correspondence.@@N
@@ -3330,7 +3330,7 @@ council seal box upper ring rakuen~
 5
 L
 60
-#16183
+#4422
 promise stone charcoal rubbing upper ring rakuen~
 @@Wa Promise Stone Charcoal Rubbing@@N~
 @@WA large charcoal rubbing of the Promise Stone plaza's third stone lies here, the founding compact's pledge text coming through clear on the waxed paper despite the stone's age.@@N
@@ -3340,7 +3340,7 @@ promise stone charcoal rubbing upper ring rakuen~
 2
 L
 55
-#16184
+#4423
 hearth ember canister upper ring rakuen~
 @@Ga Hearth Ember Canister@@N~
 @@GA sealed ceramic canister designed for ember transport lies here, its interior insulated to carry a live coal from the Founder's Hearth to wherever it needs to travel.@@N
@@ -3350,7 +3350,7 @@ hearth ember canister upper ring rakuen~
 3
 L
 55
-#16185
+#4424
 unredacted transfer record upper ring rakuen~
 @@pan Unredacted Transfer Record@@N~
 @@pAn unredacted resettlement transfer record from the Violet Compact era lies here, its administrative coding matching the Sealed Names notation that the Ledger Clerks have been cross-referencing for years.@@N
@@ -3360,7 +3360,7 @@ unredacted transfer record upper ring rakuen~
 2
 L
 65
-#16186
+#4425
 oath walk gallery placard upper ring rakuen~
 @@ban Oath-Walk Gallery Placard@@N~
 @@bAn oath-walk gallery placard lies here, its text commemorating a steward from the Ash-and-Iron era whose term ended under emergency provisions — with the supplementary note explaining the circumstances written in a smaller hand and a different ink.@@N
@@ -3370,7 +3370,7 @@ oath walk gallery placard upper ring rakuen~
 2
 L
 60
-#16187
+#4426
 steward correspondence bundle upper ring rakuen~
 @@pa Steward's Correspondence Bundle@@N~
 @@pA bound correspondence bundle lies here, its contents the working letters of an upper civic ring steward and the replies they received — including three replies from Midgaard officials whose tone suggests they are familiar with the request and have no intention of honoring it.@@N
@@ -3380,7 +3380,7 @@ steward correspondence bundle upper ring rakuen~
 3
 L
 65
-#16188
+#4427
 archive shutter key upper ring rakuen~
 @@Wan Archive Shutter Key@@N~
 @@WA heavy iron key lies here, its bow stamped with the Garden Ledger archive seal and its bit cut for the lock on the restricted stacks door.@@N
@@ -3390,7 +3390,7 @@ archive shutter key upper ring rakuen~
 1
 L
 60
-#16189
+#4428
 dast authority sash upper ring rakuen boss~
 @@pDast's Authority Sash@@N~
 @@pThe Authority Sash of the senior steward's office lies here, its woven silk carrying the Bloom Council's current-era colors and the formal insignia of the position it represents.@@N
@@ -3400,7 +3400,7 @@ dast authority sash upper ring rakuen boss~
 5
 L
 80
-#16190
+#4429
 trade ready cordage coil canopy rakuen~
 @@Ga Trade-Ready Cordage Coil@@N~
 @@GA finished cordage coil marked with the Canopy Compact's trade-quality seal lies here, its fiber twist and diameter meeting the specification for the woodland route exchange standard.@@N
@@ -3410,7 +3410,7 @@ trade ready cordage coil canopy rakuen~
 7
 L
 55
-#16191
+#4430
 canopy resin jar canopy rakuen~
 @@Ga Canopy Resin Jar@@N~
 @@GA sealed jar of refined canopy resin lies here, the compact's standard timber-treatment product used throughout Rakuen for sealing roof boards and piling caps against flood moisture.@@N
@@ -3420,7 +3420,7 @@ canopy resin jar canopy rakuen~
 5
 L
 52
-#16192
+#4431
 dye pigment bundle canopy rakuen~
 @@Ga Dye Pigment Bundle@@N~
 @@GA wrapped bundle of prepared dye pigment lies here, the compact's current production batch labeled by color-code and season — the labeling system the compact adopted to satisfy the Ledger's quality-tracking requirements.@@N
@@ -3430,7 +3430,7 @@ dye pigment bundle canopy rakuen~
 4
 L
 52
-#16193
+#4432
 emergency repair kit canopy rakuen~
 @@ban Emergency Repair Kit@@N~
 @@bAn emergency repair kit lies here, its contents the compact standard for rapid structural response: pre-cut timber splints, setting resin, a small mallet, and a waterproofed instruction card.@@N
@@ -3440,7 +3440,7 @@ emergency repair kit canopy rakuen~
 8
 L
 55
-#16194
+#4433
 compact mutual aid ledger canopy rakuen~
 @@pA Compact Mutual-Aid Ledger@@N~
 @@pA compact mutual-aid ledger lies here, its pages recording the obligation-sharing arrangements among the workshop district's households — who owes what labor to whom, what has been fulfilled, and what the running balance is.@@N
@@ -3450,7 +3450,7 @@ compact mutual aid ledger canopy rakuen~
 3
 L
 55
-#16195
+#4434
 medicine loft drying rack weights canopy rakuen~
 @@GMedicine Loft Drying Rack Weights@@N~
 @@GA set of calibrated stone weights used for controlling tension on the drying rack cords in the medicine loft lies here, each weight marked with a production-batch number in the compact's internal notation.@@N
@@ -3460,7 +3460,7 @@ medicine loft drying rack weights canopy rakuen~
 5
 L
 52
-#16196
+#4435
 valve key root tunnel rakuen~
 @@ca Valve Key@@N~
 @@cA heavy iron valve key lies here, its bow stamped with the Ember Warden pump station seal and its bit cut for the cistern access hatch lock in the rest garden above.@@N
@@ -3470,7 +3470,7 @@ valve key root tunnel rakuen~
 1
 L
 48
-#16197
+#4436
 floodgate chain root tunnel rakuen~
 @@ca Floodgate Chain@@N~
 @@cA length of heavy iron floodgate chain lies here, its links sized for the secondary siphon valve system and stamped with the maintenance cycle date.@@N
@@ -3480,7 +3480,7 @@ floodgate chain root tunnel rakuen~
 9
 L
 50
-#16198
+#4437
 sealed testimony tube root tunnel rakuen~
 @@pA Sealed Testimony Tube@@N~
 @@pA sealed waxed-cloth testimony tube lies here, its exterior label in the Garden Ledger notation for documents referred through Kel'Shadra's witnessing office, the date corresponding to the Violet Compact era.@@N
@@ -3498,7 +3498,7 @@ tube has been resealed at least once after its original closure — the wax laye
 colors. Someone brought it back from wherever it was sent. The contents have never been formally
 re-entered into the public Ledger.
 ~
-#16199
+#4438
 contraband ration satchel root tunnel rakuen~
 @@pa Contraband Ration Satchel@@N~
 @@pA contraband ration satchel lies here, its contents a mix of allocation-tier goods that the tally marks indicate came from multiple different ration source points — the shadow economy's equivalent of diversified sourcing.@@N
@@ -3512,112 +3512,112 @@ L
 #SHOPS
 0
 #RESETS
-M 0 16100 1 16006
-M 0 16101 2 16008
-M 0 16102 1 16009
-M 0 16103 1 16010
-M 0 16104 1 16008
-M 0 16105 1 16004
-M 0 16106 1 16011
-M 0 16107 2 16001
-O 0 16150 2 16009
-O 0 16151 2 16006
-O 0 16152 3 16010
-O 0 16153 2 16004
-O 0 16154 2 16007
-O 0 16155 2 16008
-O 0 16156 2 16005
-M 0 16108 1 16014
-M 0 16109 1 16016
-M 0 16110 2 16019
-M 0 16111 1 16020
-M 0 16112 1 16021
-M 0 16113 1 16024
-M 0 16114 1 16015
-M 0 16115 1 16027
-M 0 16116 1 16030
-M 0 16117 1 16028
-M 0 16118 1 16026
-O 0 16157 3 16017
-O 0 16158 3 16023
-O 0 16159 3 16025
-O 0 16160 2 16024
-O 0 16161 2 16030
-O 0 16162 3 16018
-O 0 16163 2 16026
-O 0 16164 2 16029
-O 0 16165 3 16028
-O 0 16166 3 16019
-M 0 16119 1 16034
-M 0 16120 1 16035
-M 0 16121 2 16043
-M 0 16122 1 16046
-M 0 16123 1 16059
-M 0 16124 2 16042
-M 0 16125 1 16056
-M 0 16126 1 16057
-M 0 16127 1 16055
-M 0 16128 1 16048
-M 0 16129 1 16036
-M 0 16130 2 16040
-M 0 16131 1 16062
-O 0 16167 3 16041
-O 0 16168 3 16057
-O 0 16169 2 16056
-O 0 16170 2 16048
-O 0 16171 2 16050
-O 0 16172 2 16036
-O 0 16173 1 16055
-G 0 16179 1
-E 0 16179 1 21
-O 0 16174 2 16059
-O 0 16175 2 16051
-O 0 16176 2 16058
-O 0 16177 2 16054
-O 0 16178 2 16052
-M 0 16132 1 16070
-M 0 16133 1 16066
-M 0 16134 1 16067
-M 0 16135 1 16071
-M 0 16136 2 16081
-M 0 16137 2 16080
-M 0 16138 2 16081
-M 0 16139 1 16074
-G 0 16188 1
-M 0 16140 1 16082
-O 0 16180 2 16064
-O 0 16181 3 16066
-O 0 16182 2 16070
-O 0 16183 3 16070
-O 0 16184 2 16071
-O 0 16185 2 16068
-O 0 16186 3 16077
-O 0 16187 2 16079
-G 0 16189 1
-E 0 16189 1 26
-D 0 16068 1 2
-D 0 16069 3 2
-M 0 16141 1 16083
-M 0 16142 2 16086
-M 0 16143 1 16090
-M 0 16144 1 16093
-M 0 16145 1 16092
-M 0 16146 1 16084
-O 0 16190 3 16087
-O 0 16191 3 16088
-O 0 16192 3 16084
-O 0 16193 2 16089
-O 0 16194 2 16092
-O 0 16195 3 16091
-M 0 16147 1 16095
-G 0 16196 1
-M 0 16148 1 16098
-M 0 16149 1 16097
-O 0 16197 2 16095
-O 0 16198 1 16098
-O 0 16199 2 16097
-D 0 16024 5 2
-D 0 16095 4 2
+M 0 4339 1 4245
+M 0 4340 2 4247
+M 0 4341 1 4248
+M 0 4342 1 4249
+M 0 4343 1 4247
+M 0 4344 1 4243
+M 0 4345 1 4250
+M 0 4346 2 4240
+O 0 4389 2 4248
+O 0 4390 2 4245
+O 0 4391 3 4249
+O 0 4392 2 4243
+O 0 4393 2 4246
+O 0 4394 2 4247
+O 0 4395 2 4244
+M 0 4347 1 4253
+M 0 4348 1 4255
+M 0 4349 2 4258
+M 0 4350 1 4259
+M 0 4351 1 4260
+M 0 4352 1 4263
+M 0 4353 1 4254
+M 0 4354 1 4266
+M 0 4355 1 4269
+M 0 4356 1 4267
+M 0 4357 1 4265
+O 0 4396 3 4256
+O 0 4397 3 4262
+O 0 4398 3 4264
+O 0 4399 2 4263
+O 0 4400 2 4269
+O 0 4401 3 4257
+O 0 4402 2 4265
+O 0 4403 2 4268
+O 0 4404 3 4267
+O 0 4405 3 4258
+M 0 4358 1 4273
+M 0 4359 1 4274
+M 0 4360 2 4282
+M 0 4361 1 4285
+M 0 4362 1 4298
+M 0 4363 2 4281
+M 0 4364 1 4295
+M 0 4365 1 4296
+M 0 4366 1 4294
+M 0 4367 1 4287
+M 0 4368 1 4275
+M 0 4369 2 4279
+M 0 4370 1 4301
+O 0 4406 3 4280
+O 0 4407 3 4296
+O 0 4408 2 4295
+O 0 4409 2 4287
+O 0 4410 2 4289
+O 0 4411 2 4275
+O 0 4412 1 4294
+G 0 4418 1
+E 0 4418 1 21
+O 0 4413 2 4298
+O 0 4414 2 4290
+O 0 4415 2 4297
+O 0 4416 2 4293
+O 0 4417 2 4291
+M 0 4371 1 4309
+M 0 4372 1 4305
+M 0 4373 1 4306
+M 0 4374 1 4310
+M 0 4375 2 4320
+M 0 4376 2 4319
+M 0 4377 2 4320
+M 0 4378 1 4313
+G 0 4427 1
+M 0 4379 1 4321
+O 0 4419 2 4303
+O 0 4420 3 4305
+O 0 4421 2 4309
+O 0 4422 3 4309
+O 0 4423 2 4310
+O 0 4424 2 4307
+O 0 4425 3 4316
+O 0 4426 2 4318
+G 0 4428 1
+E 0 4428 1 26
+D 0 4307 1 2
+D 0 4308 3 2
+M 0 4380 1 4322
+M 0 4381 2 4325
+M 0 4382 1 4329
+M 0 4383 1 4332
+M 0 4384 1 4331
+M 0 4385 1 4323
+O 0 4429 3 4326
+O 0 4430 3 4327
+O 0 4431 3 4323
+O 0 4432 2 4328
+O 0 4433 2 4331
+O 0 4434 3 4330
+M 0 4386 1 4334
+G 0 4435 1
+M 0 4387 1 4337
+M 0 4388 1 4336
+O 0 4436 2 4334
+O 0 4437 1 4337
+O 0 4438 2 4336
+D 0 4263 5 2
+D 0 4334 4 2
 S
 #SPECIALS
 S

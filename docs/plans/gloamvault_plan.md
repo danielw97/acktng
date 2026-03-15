@@ -5,7 +5,7 @@
 - **Area Name:** `@@dThe @@pGloamvault @@mof @@dKel'Shadra@@N`
 - **Area File:** `area/gloamvault.are` (existing area to be fully rebuilt)
 - **Keyword:** `kelshadra gloamvault gothic dungeon`
-- **Assigned Vnum Range (unchanged):** **30100-30174** (75 rooms total)
+- **Assigned Vnum Range (unchanged):** **5031-5105** (75 rooms total)
 - **Target Level Band:** 5-20 (retain onboarding role into Kel'Shadra narrative arc)
 - **Reset Rate:** 20
 - **Reset Message (proposed update):** `@@pViolet bells toll below the stone while ash-lanterns rekindle in the dark.@@N`
@@ -20,8 +20,8 @@ This plan replaces the current repetitive room topology and naming with a narrat
 ### Area Header (`#AREA`)
 1. **`Q 16` directive is mandatory** — required area revision/version; no other value is valid.
 2. **Owner line must be `O Virant~`** — per area header owner policy.
-3. **`V 30100 30174` defines the vnum envelope** — all authored rooms, mobiles, and objects must stay inside this range.
-4. **Keep vnum envelope exactly as assigned:** all rooms, mobs, and objects remain in `30100-30174`, with no out-of-range expansion.
+3. **`V 5031 5105` defines the vnum envelope** — all authored rooms, mobiles, and objects must stay inside this range.
+4. **Keep vnum envelope exactly as assigned:** all rooms, mobs, and objects remain in `5031-5105`, with no out-of-range expansion.
 
 ### String and Color Rules
 5. **All text fields must be `~`-terminated.** Missing `~` causes parse failure.
@@ -79,7 +79,7 @@ The area should teach players that Kel'Shadra is an institution with records, ra
 
 > The current 8 repeated room-name blocks are replaced by 9 thematic subzones with clear progression, loops, and cross-links. Total remains 75 rooms.
 
-### Zone A - The Riven Threshold (30100-30107, 8 rooms)
+### Zone A - The Riven Threshold (5031-5038, 8 rooms)
 **Function:** Entry and tonal setup.
 
 - Collapsed breach, inverted gatehouse, ruined ward pylons.
@@ -90,7 +90,7 @@ The area should teach players that Kel'Shadra is an institution with records, ra
 
 ---
 
-### Zone B - Processional of Ash Bells (30108-30115, 8 rooms)
+### Zone B - Processional of Ash Bells (5039-5046, 8 rooms)
 **Function:** Guided procession corridor with ritual pacing.
 
 - Long vaulted route with branching alcoves for optional lore pickups.
@@ -101,7 +101,7 @@ The area should teach players that Kel'Shadra is an institution with records, ra
 
 ---
 
-### Zone C - Censer Galleries (30116-30123, 8 rooms)
+### Zone C - Censer Galleries (5047-5054, 8 rooms)
 **Function:** Hazard wing with atmosphere-first combat.
 
 - Fume-trough chambers, rotating censer gantries, soot script walls.
@@ -112,7 +112,7 @@ The area should teach players that Kel'Shadra is an institution with records, ra
 
 ---
 
-### Zone D - Choir Crypts (30124-30131, 8 rooms)
+### Zone D - Choir Crypts (5055-5062, 8 rooms)
 **Function:** Sound/echo puzzle identity.
 
 - Catacomb aisles where chants alter perceived pathing.
@@ -123,7 +123,7 @@ The area should teach players that Kel'Shadra is an institution with records, ra
 
 ---
 
-### Zone E - Scriptorium of Ash (30132-30139, 8 rooms)
+### Zone E - Scriptorium of Ash (5063-5070, 8 rooms)
 **Function:** Lore-dense archive core.
 
 - Scriveners' desks, chained codices, oath ledgers, bone-ink wells.
@@ -134,7 +134,7 @@ The area should teach players that Kel'Shadra is an institution with records, ra
 
 ---
 
-### Zone F - Reliquary Bastion (30140-30148, 9 rooms)
+### Zone F - Reliquary Bastion (5071-5079, 9 rooms)
 **Function:** Martial branch and armory-catacomb interface.
 
 - Armor racks, sepulcher knight stalls, reliquary weapon cages.
@@ -145,7 +145,7 @@ The area should teach players that Kel'Shadra is an institution with records, ra
 
 ---
 
-### Zone G - Sanguine Cloisters (30149-30157, 9 rooms)
+### Zone G - Sanguine Cloisters (5080-5088, 9 rooms)
 **Function:** Blood-lit monastic courts.
 
 - Cloister walks around inward garden of black thorns.
@@ -156,7 +156,7 @@ The area should teach players that Kel'Shadra is an institution with records, ra
 
 ---
 
-### Zone H - Sepulcher Descent (30158-30166, 9 rooms)
+### Zone H - Sepulcher Descent (5089-5097, 9 rooms)
 **Function:** Endgame corridor and lock-key synthesis.
 
 - Multi-door descent requiring symbols learned earlier (Crescent/Bell/Veil).
@@ -167,7 +167,7 @@ The area should teach players that Kel'Shadra is an institution with records, ra
 
 ---
 
-### Zone I - The Inner Gloamvault (30167-30174, 8 rooms)
+### Zone I - The Inner Gloamvault (5098-5105, 8 rooms)
 **Function:** Final sanctum.
 
 - Starless nave, suspended reliquary heart, matriarchal throne crypt.
@@ -201,7 +201,7 @@ The area should teach players that Kel'Shadra is an institution with records, ra
 ### Room Flags
 - Most rooms: `indoors` (`8`).
 - Boss encounter rooms (Ossuary Champion in Zone F, Dusk Prelate in Zone H, Matriarch Velastra in Zone I): `no_mob` (`4`) + `indoors` (`8`) = `12`.
-- Safe lore cells (if any designated respite rooms): `safe` (`1024`) + `indoors` (`8`) = `1032`.
+- Safe lore cells (if any designated respite rooms): `safe` (`315`) + `indoors` (`8`) = `323`.
 - Dark rooms (unlit crypts, deep descent chambers): `dark` (`1`) + `indoors` (`8`) = `9`.
 - No rooms use `ROOM_MAZE` (`524288`) — the Gloamvault uses controlled disorientation, not mechanical maze exits.
 
@@ -229,7 +229,7 @@ The area should teach players that Kel'Shadra is an institution with records, ra
 
 ## Mob Roster Redesign (Keep Existing Vnum Pool, Reauthor Identity)
 
-Current pool has 20 mobs (`30100-30119`). Keep count and vnums; rewrite each with unique role and stronger ecology.
+Current pool has 20 mobs (`5031-5050`). Keep count and vnums; rewrite each with unique role and stronger ecology.
 
 ### Rank Architecture
 
@@ -295,7 +295,7 @@ Current pool has 20 mobs (`30100-30119`). Keep count and vnums; rewrite each wit
 - Use the melee profile skill floor/ceiling table for militant-order mobs (Gloom Sentry, Carrion Templar, Reliquary Knight, etc.).
 - Use the hybrid profile for mixed-role mobs (Crypt Interrogator, Violet Lector, Velastra Handmaiden).
 - Use the caster profile for ritual/caster mobs (Ashen Warlock, Umbral Cantor).
-- The `|` extension line should define elemental strong/weak/resist/suscept where thematically appropriate (e.g., `shadow` (`256`) strong magic for shadow-affiliated mobs; `holy` (`8`) susceptibility for undead vault creatures).
+- The `|` extension line should define elemental strong/weak/resist/suscept where thematically appropriate (e.g., `shadow` (`82`) strong magic for shadow-affiliated mobs; `holy` (`8`) susceptibility for undead vault creatures).
 - The `+` extension line defines combat modifier tuning and should be set for boss and elite mobs.
 
 **Loot table design (`l`/`L` extensions):**
@@ -315,7 +315,7 @@ Current pool has 20 mobs (`30100-30119`). Keep count and vnums; rewrite each wit
 
 ## Objectization Redesign (Keep Existing Vnum Pool, Increase Story Value)
 
-Current object pool has 23 objects (`30100-30122`). Keep count/vnums but reauthor to fit zone logic.
+Current object pool has 23 objects (`5031-5053`). Keep count/vnums but reauthor to fit zone logic.
 
 ### Object Families
 
@@ -363,7 +363,7 @@ Current object pool has 23 objects (`30100-30122`). Keep count/vnums but reautho
 
 **Object family wear flag mapping:**
 - Ritual Vestments & Jewelry: `halo` (`1`), `head` (`8`), `neck` (`128`), `about` (`65536`), `finger` (`8192`), `waist` (`131072`).
-- Militant Relics: `shoulders` (`512`), `arms` (`1024`), `wrist` (`2048`), `hands` (`4096`), `body` (`262144`), `legs` (`1048576`), `feet` (`2097152`).
+- Militant Relics: `shoulders` (`512`), `arms` (`315`), `wrist` (`840`), `hands` (`4096`), `body` (`262144`), `legs` (`1048576`), `feet` (`2097152`).
 - Office Implements: `hold` (`32768`) — lector rods and whisperwires are held items.
 - Bestial/Monstrous Pieces: `claws` (`16384`), `tail` (`524288`), `hooves` (`4194304`).
 
@@ -398,7 +398,7 @@ Current object pool has 23 objects (`30100-30122`). Keep count/vnums but reautho
 
 **Vnum validity:**
 - Resets must reference valid vnums for the target type required by the command (room/mobile/object as applicable).
-- All referenced vnums must fall within the `30100-30174` envelope.
+- All referenced vnums must fall within the `5031-5105` envelope.
 
 **Reset logic goals:**
 - Avoid spawn stacking in narrow hallways.
@@ -451,7 +451,7 @@ This redesign explicitly aligns with broader setting motifs used in other plans/
 - Rumor pathways that can bridge to Midgaard/Kiess/Kowloon style archival questing.
 
 ### Midgaard Connection (Primary)
-- The Gloamvault entrance is accessed through Midgaard room `3005` (Violet Reliquary Arch), which is a Violet Compact registry checkpoint. This makes the Gloamvault a jurisdictional threshold under Midgaard's Containment Era framework: persons who descend are considered to have "left Midgaard" for jurisdictional purposes.
+- The Gloamvault entrance is accessed through Midgaard room `921` (Violet Reliquary Arch), which is a Violet Compact registry checkpoint. This makes the Gloamvault a jurisdictional threshold under Midgaard's Containment Era framework: persons who descend are considered to have "left Midgaard" for jurisdictional purposes.
 - Midgaard's Violet Compact legalized bounded occult handling under registry supervision — the Gloamvault is one of the subterranean connections that the Compact was designed to manage.
 - Midgaard's civic archives (Granite Arcade, Magistrate Ledgerhouse) may contain references to Kel'Shadra confession tariffs, disputed inheritance verdicts validated by Gloamvault witnesses, and sealed warrants related to Bell Synod operations.
 - The Gloamvault's oath-ledger system parallels Midgaard's own civic oaths (Oath of Light, Oath of Stone, Oath of Bread) — both cities use formalized vows as instruments of social control, but the Gloamvault weaponized its system where Midgaard idealized its.
@@ -489,11 +489,11 @@ Seven static quests target the Gloamvault, offered by three city postmasters acc
 | **Prerequisite** | -1 (none — chain entry point) |
 | **Type** | 1 (kill variety) |
 | **Num Targets** | 3 |
-| **Target Vnums** | `30100 30102 30117` (Ash Acolyte, Grave Choir Novice, Bone Lantern Bearer) |
+| **Target Vnums** | `5031 5033 5048` (Ash Acolyte, Grave Choir Novice, Bone Lantern Bearer) |
 | **Kill Needed** | 0 |
 | **Level Range** | 5-12 |
-| **Offerer Vnum** | 13001 (Kiess Postmaster) |
-| **Reward Gold** | 800 |
+| **Offerer Vnum** | 3340 (Kiess Postmaster) |
+| **Reward Gold** | 278 |
 | **Reward QP** | 2 |
 | **Reward Item** | 0 0 (none) |
 
@@ -514,15 +514,15 @@ Seven static quests target the Gloamvault, offered by three city postmasters acc
 | **Prerequisite** | 54 |
 | **Type** | 3 (kill count) |
 | **Num Targets** | 1 |
-| **Target Vnums** | `30115` (Vault Stalker) |
+| **Target Vnums** | `5046` (Vault Stalker) |
 | **Kill Needed** | 5 |
 | **Level Range** | 8-15 |
-| **Offerer Vnum** | 3015 (Midgaard Postmaster) |
-| **Reward Gold** | 1200 |
+| **Offerer Vnum** | 931 (Midgaard Postmaster) |
+| **Reward Gold** | 491 |
 | **Reward QP** | 3 |
 | **Reward Item** | 0 0 (none) |
 
-**Narrative rationale:** Midgaard's Violet Compact registry checkpoint at the Reliquary Arch (room 3005) has reported vault stalkers breaching the jurisdictional threshold — gauze-wrapped ambush predators that move only when candlelight flickers. Under the Compact's Containment Era framework, anything that crosses the arch from below is Midgaard's enforcement problem. The magistrate's office has authorized a suppression contract: five confirmed stalker kills to re-establish the boundary. This quest chains from ID 54 because Kiess's threat assessment (confirming active vault operations) triggered Midgaard's Compact enforcement protocols.
+**Narrative rationale:** Midgaard's Violet Compact registry checkpoint at the Reliquary Arch (room 921) has reported vault stalkers breaching the jurisdictional threshold — gauze-wrapped ambush predators that move only when candlelight flickers. Under the Compact's Containment Era framework, anything that crosses the arch from below is Midgaard's enforcement problem. The magistrate's office has authorized a suppression contract: five confirmed stalker kills to re-establish the boundary. This quest chains from ID 54 because Kiess's threat assessment (confirming active vault operations) triggered Midgaard's Compact enforcement protocols.
 
 **Accept message:** The Violet Compact registry at Midgaard's Reliquary Arch has logged multiple threshold breaches by vault stalkers — hostile entities emerging from the Gloamvault into civic jurisdiction. Under Containment Era protocols, this triggers suppression authority. Enter the vault and kill five vault stalkers to re-establish the Compact boundary. Registry inspectors cannot resume threshold patrols until the stalker population is reduced to manageable levels.
 
@@ -539,11 +539,11 @@ Seven static quests target the Gloamvault, offered by three city postmasters acc
 | **Prerequisite** | -1 (none — chain entry point) |
 | **Type** | 1 (kill variety) |
 | **Num Targets** | 3 |
-| **Target Vnums** | `30105 30108 30116` (Carrion Templar, Thorn Reliquary Knight, Funerary Warden) |
+| **Target Vnums** | `5036 5039 5047` (Carrion Templar, Thorn Reliquary Knight, Funerary Warden) |
 | **Kill Needed** | 0 |
 | **Level Range** | 10-17 |
-| **Offerer Vnum** | 14001 (Kowloon Postmaster) |
-| **Reward Gold** | 1400 |
+| **Offerer Vnum** | 3440 (Kowloon Postmaster) |
+| **Reward Gold** | 591 |
 | **Reward QP** | 3 |
 | **Reward Item** | 0 0 (none) |
 
@@ -564,11 +564,11 @@ Seven static quests target the Gloamvault, offered by three city postmasters acc
 | **Prerequisite** | 49 |
 | **Type** | 1 (kill variety) |
 | **Num Targets** | 1 |
-| **Target Vnums** | `30113` (Ossuary Champion) |
+| **Target Vnums** | `5044` (Ossuary Champion) |
 | **Kill Needed** | 0 |
 | **Level Range** | 15-20 |
-| **Offerer Vnum** | 3015 (Midgaard Postmaster) |
-| **Reward Gold** | 2000 |
+| **Offerer Vnum** | 931 (Midgaard Postmaster) |
+| **Reward Gold** | 792 |
 | **Reward QP** | 4 |
 | **Reward Item** | 0 0 (none) |
 
@@ -589,10 +589,10 @@ Seven static quests target the Gloamvault, offered by three city postmasters acc
 | **Prerequisite** | 50 |
 | **Type** | 3 (kill count) |
 | **Num Targets** | 1 |
-| **Target Vnums** | `30110` (Ashen Warlock) |
+| **Target Vnums** | `5041` (Ashen Warlock) |
 | **Kill Needed** | 4 |
 | **Level Range** | 14-20 |
-| **Offerer Vnum** | 14001 (Kowloon Postmaster) |
+| **Offerer Vnum** | 3440 (Kowloon Postmaster) |
 | **Reward Gold** | 1800 |
 | **Reward QP** | 4 |
 | **Reward Item** | 0 0 (none) |
@@ -614,10 +614,10 @@ Seven static quests target the Gloamvault, offered by three city postmasters acc
 | **Prerequisite** | 52 |
 | **Type** | 1 (kill variety) |
 | **Num Targets** | 1 |
-| **Target Vnums** | `30114` (Matriarch Velastra) |
+| **Target Vnums** | `5045` (Matriarch Velastra) |
 | **Kill Needed** | 0 |
 | **Level Range** | 18-20 |
-| **Offerer Vnum** | 14001 (Kowloon Postmaster) |
+| **Offerer Vnum** | 3440 (Kowloon Postmaster) |
 | **Reward Gold** | 3000 |
 | **Reward QP** | 5 |
 | **Reward Item** | 0 0 (none) |
@@ -639,11 +639,11 @@ Seven static quests target the Gloamvault, offered by three city postmasters acc
 | **Prerequisite** | -1 (none — chain entry point) |
 | **Type** | 1 (kill variety) |
 | **Num Targets** | 3 |
-| **Target Vnums** | `30101 30103 30118` (Crypt Usher, Bone Scrivener, Crypt Interrogator) |
+| **Target Vnums** | `5032 5034 5049` (Crypt Usher, Bone Scrivener, Crypt Interrogator) |
 | **Kill Needed** | 0 |
 | **Level Range** | 8-14 |
-| **Offerer Vnum** | 3015 (Midgaard Postmaster) |
-| **Reward Gold** | 1000 |
+| **Offerer Vnum** | 931 (Midgaard Postmaster) |
+| **Reward Gold** | 291 |
 | **Reward QP** | 2 |
 | **Reward Item** | 0 0 (none) |
 
@@ -690,13 +690,13 @@ Standalone (Midgaard):
 
 ## Appendix: Proposed Room Title Skeleton by Vnum Block
 
-- **30100-30107:** Breach Gate, Shard Court, Outer Bellwalk, Oath-Splinter Hall
-- **30108-30115:** Ash Processional, Censer Colonnade, Confession Nicheway
-- **30116-30123:** Smoke Engine Gallery, Resin Vault, Soot Reliquary
-- **30124-30131:** Choir Ossuary, Echo Chantry, Bone Refrain Corridor
-- **30132-30139:** Ledger Nave, Ash Scriptorium, Black Ink Treasury
-- **30140-30148:** Knight Stalls, Armiger Crypt, Champion Drill Nave
-- **30149-30157:** Thorn Cloister, Sanguine Arcade, Veiled Basin Court
-- **30158-30166:** Triple-Sign Descent, Penitent Spiral, Prelate's Sealway
-- **30167-30174:** Inner Gloamvault, Velastra's Throne Crypt, Reliquary Heart, Ashen Egress
+- **5031-5038:** Breach Gate, Shard Court, Outer Bellwalk, Oath-Splinter Hall
+- **5039-5046:** Ash Processional, Censer Colonnade, Confession Nicheway
+- **5047-5054:** Smoke Engine Gallery, Resin Vault, Soot Reliquary
+- **5055-5062:** Choir Ossuary, Echo Chantry, Bone Refrain Corridor
+- **5063-5070:** Ledger Nave, Ash Scriptorium, Black Ink Treasury
+- **5071-5079:** Knight Stalls, Armiger Crypt, Champion Drill Nave
+- **5080-5088:** Thorn Cloister, Sanguine Arcade, Veiled Basin Court
+- **5089-5097:** Triple-Sign Descent, Penitent Spiral, Prelate's Sealway
+- **5098-5105:** Inner Gloamvault, Velastra's Throne Crypt, Reliquary Heart, Ashen Egress
 

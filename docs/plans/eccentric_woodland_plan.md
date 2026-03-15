@@ -5,9 +5,9 @@
 - **File Name:** `wood.are`
 - **Keyword:** `eccentricwoodland`
 - **Intended Levels:** 18-92
-- **Vnum Range (expanded):** `7300-7699`
+- **Vnum Range (expanded):** `1432-1831`
 - **Vnum Envelope Size:** 400
-- **Room Utilization Goal:** 400/400 rooms used (`7300-7699`)
+- **Room Utilization Goal:** 400/400 rooms used (`1432-1831`)
 - **Lore Anchors:** `docs/lore/eccentric_woodland_lore.md`, `docs/lore/midgaard_lore.md`, `docs/lore/rakuen_lore.md`, `docs/lore/sepulchur_pasture_lore.md`
 
 This plan rebuilds the woodland as Midgaard's unstable southern corridor and Rakuen's survival artery: a region of moving path logic, ritualized violence, and bureaucratic denial at the boundary.
@@ -19,7 +19,7 @@ This plan rebuilds the woodland as Midgaard's unstable southern corridor and Rak
 ### Area/Header Requirements
 1. `Q 16` is mandatory (`#AREA`).
 2. Owner must be `O Virant~`.
-3. Envelope must be `V 7300 7699`; all rooms/mobs/objects remain inside.
+3. Envelope must be `V 1432 1831`; all rooms/mobs/objects remain inside.
 4. Keep canonical section order: `#AREA`, `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
 5. Area files must not contain comments; comment syntax is not part of the accepted on-disk format (exception: `*` comment lines are allowed in `#MOBILES`, `#SPECIALS`, and `#OBJFUNS` sections only).
 
@@ -33,7 +33,7 @@ This plan rebuilds the woodland as Midgaard's unstable southern corridor and Rak
 12. Object extra-description text ends with exactly one trailing newline before `~`.
 
 ### Room/Topology Requirements
-13. Every room in `7300-7699` exists and has unique description text.
+13. Every room in `1432-1831` exists and has unique description text.
 14. Room descriptions must not be identical across rooms.
 15. Each room's main `<description>~` must contain at least 3 sentences of text; important/landmark rooms must contain at least 5 sentences.
 16. Room names and descriptions must not use placeholder or procedural naming patterns (e.g., `Corridor 12`, `Room 7`); names must be authored as in-world thematic content.
@@ -60,7 +60,7 @@ This plan rebuilds the woodland as Midgaard's unstable southern corridor and Rak
 35. `ITEM_WEAPON` objects must include both `hold` and `take` in `wear_flags`.
 36. Weapon `value3` must be thematically consistent with the weapon's concept; `value3 = 0` (`hit`) may only be used if the object also has `ITEM_FIST` in `extra_flags`.
 37. Two-handed weapons whose name/description clearly indicates a two-handed archetype must include `ITEM_TWO_HANDED` (`2147483648`) in `extra_flags`.
-38. Any object assigned `objfun_healing` in `#OBJFUNS` must include `ITEM_ANTI_EVIL` (`1024`) in `extra_flags`.
+38. Any object assigned `objfun_healing` in `#OBJFUNS` must include `ITEM_ANTI_EVIL` (`315`) in `extra_flags`.
 39. Any object with `ITEM_LIFESTEALER` (`33554432`) must also include `ITEM_ANTI_GOOD` (`512`) in `extra_flags`.
 40. `#RESETS` must not contain blank lines; lock/key resets must use valid key vnums within the area envelope.
 41. Mobile loot tables: `loot_amount` must be greater than `0` for loot drops to be attempted; the sum of all `loot_chance[x]` values on an `L` line must be `<= 100`.
@@ -108,59 +108,59 @@ Use a **braided-corridor topology** instead of a square grid:
 
 ### Vnum Banding by Macro-Zone
 
-#### Zone A — Northern Gate Verge (7300-7349, 50 rooms)
+#### Zone A — Northern Gate Verge (1432-1481, 50 rooms)
 - Midgaard administrative bleed-through: pass checks, warning placards, escort kiosks.
 - Includes existing historic nucleus rooms (duel room, binding room, circle stones) rewritten to fit modern canon.
-- **Primary external link retained:** `7302 north -> 3190` (Midgaard Southern Wild Gate).
+- **Primary external link retained:** `1434 north -> 1106` (Midgaard Southern Wild Gate).
 - Difficulty: 18-28.
 
-#### Zone B — Bell-Fog Paths (7350-7399, 50 rooms)
+#### Zone B — Bell-Fog Paths (1482-1531, 50 rooms)
 - Older shepherd-priest route memory: bells, fog pockets, guide rods.
 - Dynamic-feeling pathing through repeated motifs and short loops.
 - Difficulty: 24-34.
 
-#### Zone C — Escort Margin Braids (7400-7469, 70 rooms)
+#### Zone C — Escort Margin Braids (1532-1601, 70 rooms)
 - “Managed denial” terrain: patrol endpoints, abandoned survey clearings, forged seal sites.
 - Two switchback braids merge/split repeatedly (no square block layout).
 - Difficulty: 30-44.
 
-#### Zone D — Ritual House Quarter (7470-7529, 60 rooms)
+#### Zone D — Ritual House Quarter (1602-1661, 60 rooms)
 - Black-marble insert architecture “where no quarry should exist.”
 - Duel halls, binding chambers, oath courts, spectator galleries.
 - Rival houses create local safe/unsafe pulses.
 - Difficulty: 40-58.
 
-#### Zone E — Predator Claims and Lapsed Compacts (7530-7599, 70 rooms)
+#### Zone E — Predator Claims and Lapsed Compacts (1662-1731, 70 rooms)
 - Ex-path-warden bands controlling territorial chokepoints.
 - Contract boards, breach notices, stolen convoy manifests.
 - First major boss rung starts here.
 - Difficulty: 50-72.
 
-#### Zone F — Ninth Milestone Tangles (7600-7649, 50 rooms)
+#### Zone F — Ninth Milestone Tangles (1732-1781, 50 rooms)
 - Shared historical seam with Sepulchur traditions.
 - Half-buried stones, identity tags, ledgers of unnamed dead.
 - Ritualized scavenger/warden conflicts.
 - Difficulty: 62-82.
 
-#### Zone G — Southern Dispatch Ruins (7650-7689, 40 rooms)
+#### Zone G — Southern Dispatch Ruins (1782-1821, 40 rooms)
 - Former Rakuen compact waystations and dispatch houses now fractured.
 - Multiple route funnels converge before final causeway.
 - Difficulty: 72-88.
 
-#### Zone H — Rakuen Causeway Threshold (7690-7699, 10 rooms)
+#### Zone H — Rakuen Causeway Threshold (1822-1831, 10 rooms)
 - Cleanest navigation in the area, but highest political tension.
 - Gate records, compact remnants, emergency courier staging.
-- **Primary south external link:** `7698 south -> 14600` (planned Rakuen North Dispatch Gate room).
+- **Primary south external link:** `1830 south -> 14600` (planned Rakuen North Dispatch Gate room).
 - Difficulty: 84-92.
 
 ### Maze Sub-Regions (required flags)
-1. **Driftbell Knot** (`7368-7383`, 16 rooms, `ROOM_MAZE`)  
+1. **Driftbell Knot** (`1500-1515`, 16 rooms, `ROOM_MAZE`)  
    Clue language: bell pitch and echo delay.
-2. **Marble Oath Labyrinth** (`7488-7507`, 20 rooms, `ROOM_MAZE`)  
+2. **Marble Oath Labyrinth** (`1620-1639`, 20 rooms, `ROOM_MAZE`)  
    Clue language: engraved vow fragments indicating true turns.
-3. **Breachwood Snare Maze** (`7564-7587`, 24 rooms, `ROOM_MAZE`)  
+3. **Breachwood Snare Maze** (`1696-1719`, 24 rooms, `ROOM_MAZE`)  
    Clue language: carved guide-rod notch patterns and broken wax-seal colors.
-4. **Ninth Acre Root Spiral** (`7612-7627`, 16 rooms, `ROOM_MAZE`)  
+4. **Ninth Acre Root Spiral** (`1744-1759`, 16 rooms, `ROOM_MAZE`)  
    Clue language: funerary marker orientation and tallow scent.
 
 ---
@@ -168,13 +168,13 @@ Use a **braided-corridor topology** instead of a square grid:
 ## External Connectivity Plan (required narrative and play links)
 
 ### Midgaard North Connection
-- **Hard link:** `7302 north -> 3190` (already canonical in `midgaard.are`).
-- **Return link:** `3190 south -> 7302` retained.
+- **Hard link:** `1434 north -> 1106` (already canonical in `midgaard.are`).
+- **Return link:** `1106 south -> 1434` retained.
 - North edge rooms emphasize pass-check booths, variance postings, and liability language.
 
 ### Rakuen South Connection
-- **Planned hard link:** `7698 south -> 14600` (Rakuen north dispatch gate; reserve in Rakuen plan/envelope).
-- **Return link:** `14600 north -> 7698` required in Rakuen implementation.
+- **Planned hard link:** `1830 south -> 14600` (Rakuen north dispatch gate; reserve in Rakuen plan/envelope).
+- **Return link:** `14600 north -> 1830` required in Rakuen implementation.
 - Southern edge text frames Rakuen dependence on corridor reliability (grain, medicine, mail, labor transit).
 
 ### Optional Future Side Connectors
@@ -185,7 +185,7 @@ Use a **braided-corridor topology** instead of a square grid:
 
 ## Room Program and Encounter Gradient
 - **50 navigation-anchor rooms:** strong landmarks for player reorientation.
-- **220 conflict rooms:** ambush sites, skirmish lanes, choke crossings.
+- **55 conflict rooms:** ambush sites, skirmish lanes, choke crossings.
 - **60 ritual/inside rooms:** oath houses, duel halls, archives, binding chambers.
 - **40 refuge/barter rooms:** survivor burrows, neutral fire pits, guide markets.
 - **30 threshold/quest rooms:** boss arenas, quest hand-in micro-hubs, map survey points.
@@ -214,11 +214,11 @@ Traversal target: average full clear 70-95 minutes at-level; efficient route 40-
 - Sub-region containment: every mob in a sub-region must be either flagged `sentinel` or confined by `no_mob`-flagged room walls, so mobs cannot wander outside their designated sub-zone.
 
 ### Boss Ladder (5 bosses)
-1. **Sealbreaker Valt** (7542): forged escort syndicate chief.
-2. **Abbess of the Black Vow** (7509): ritual house war-priestess.
-3. **The Bell-Eater Stag** (7385): apex predator tied to path drift.
-4. **Warden-Defector Hadrik** (7589): ex-compact commander turned corridor tyrant.
-5. **Marrow Ledger of Ninth Acre** (7629): identity-stripping memory entity at funerary seam.
+1. **Sealbreaker Valt** (1674): forged escort syndicate chief.
+2. **Abbess of the Black Vow** (1641): ritual house war-priestess.
+3. **The Bell-Eater Stag** (1517): apex predator tied to path drift.
+4. **Warden-Defector Hadrik** (1721): ex-compact commander turned corridor tyrant.
+5. **Marrow Ledger of Ninth Acre** (1761): identity-stripping memory entity at funerary seam.
 
 All bosses: `is_npc` + `stay_area` + `sentinel` + `boss`, placed exclusively in `no_mob` rooms. Boss loot objects carry both `ITEM_LOOT` and `ITEM_BOSS` in `extra_flags`.
 
@@ -293,7 +293,7 @@ Per spec section 13.2:
     Type 1; targets **Marrow Ledger of Ninth Acre** + elite attendants. Final quest of High-End Boss Arc and boss target — **must reward a piece of equipment.**
 
 ### Bell-Eater Stag
-The Bell-Eater Stag (7385) is an apex boss without a dedicated standalone quest chain above. Either add it as a target to an existing boss quest or create an additional quest; do not leave a boss without at least one quest targeting it.
+The Bell-Eater Stag (1517) is an apex boss without a dedicated standalone quest chain above. Either add it as a target to an existing boss quest or create an additional quest; do not leave a boss without at least one quest targeting it.
 
 ### Quest Offerers (planned)
 - Midgaard Southern Affairs auditor (north gate cluster, vnum in Zone A).
@@ -313,7 +313,7 @@ The Bell-Eater Stag (7385) is an apex boss without a dedicated standalone quest 
 ---
 
 ## Implementation Sequence
-1. Update `#AREA` header (`Q 16`, `O Virant~`, `V 7300 7699`, keyword/levels/reset msg).
+1. Update `#AREA` header (`Q 16`, `O Virant~`, `V 1432 1831`, keyword/levels/reset msg).
 2. Author 400-room braided topology, then validate reverse-exit integrity (except maze exceptions).
 3. Verify room descriptions: each at least 3 sentences; landmark/boss-approach rooms at least 5 sentences; all descriptions unique; no placeholder names.
 4. Add maze flags and clue-language consistency; confirm all maze vnum sets are fully flagged `ROOM_MAZE`.
@@ -329,12 +329,12 @@ The Bell-Eater Stag (7385) is an apex boss without a dedicated standalone quest 
 ## Acceptance Checklist
 
 ### Header and Structure
-- [ ] `wood.are` header complies (`Q 16`, `O Virant~`, `V 7300 7699`).
+- [ ] `wood.are` header complies (`Q 16`, `O Virant~`, `V 1432 1831`).
 - [ ] Section order: `#AREA`, `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
 - [ ] No comment lines outside the permitted sections (`#MOBILES`, `#SPECIALS`, `#OBJFUNS`).
 
 ### Rooms and Topology
-- [ ] All 400 room vnums `7300-7699` are implemented; no gaps in vnum sequence.
+- [ ] All 400 room vnums `1432-1831` are implemented; no gaps in vnum sequence.
 - [ ] Layout is braided/looped (not square-grid only).
 - [ ] All maze room sets fully flagged `ROOM_MAZE`; only those rooms use looping/non-linear exits.
 - [ ] Every room description is unique, contains at least 3 sentences, and contains no vnum references.
@@ -344,8 +344,8 @@ The Bell-Eater Stag (7385) is an apex boss without a dedicated standalone quest 
 - [ ] All locked-on-reset doors have `<key_vnum>` pointing to a valid key object in `#OBJECTS`.
 
 ### External Links
-- [ ] Midgaard north link retained (`7302 <-> 3190`).
-- [ ] Rakuen south link planned (`7698 <-> 14600`) and documented for Rakuen build.
+- [ ] Midgaard north link retained (`1434 <-> 1106`).
+- [ ] Rakuen south link planned (`1830 <-> 14600`) and documented for Rakuen build.
 
 ### Mobiles
 - [ ] All mobs include `is_npc` + `stay_area`; no `invasion` flag set.

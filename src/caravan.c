@@ -18,7 +18,7 @@
 #include "globals.h"
 
 #define MAX_WORLD_CARAVANS 3
-#define CARAVAN_MOB_VNUM 13019
+#define CARAVAN_MOB_VNUM 3358
 #define CARAVAN_SAY_PULSE_MIN 2
 #define CARAVAN_SAY_PULSE_MAX 5
 #define CARAVAN_SAY_CHANCE 35
@@ -107,12 +107,12 @@ static const char *kowloon_to_kiess_lines[] = {
    "The first scent of pine means we've survived the hard miles and earned the easy lies."};
 
 static const CARAVAN_ROUTE_DATA caravan_routes[] = {
-   {"Midgaard", "Kiess", 3052, 13011, midgaard_to_kiess_lines, sizeof(midgaard_to_kiess_lines) / sizeof(midgaard_to_kiess_lines[0])},
-   {"Midgaard", "Kowloon", 3052, 14083, midgaard_to_kowloon_lines, sizeof(midgaard_to_kowloon_lines) / sizeof(midgaard_to_kowloon_lines[0])},
-   {"Kiess", "Midgaard", 13011, 3052, kiess_to_midgaard_lines, sizeof(kiess_to_midgaard_lines) / sizeof(kiess_to_midgaard_lines[0])},
-   {"Kiess", "Kowloon", 13011, 14083, kiess_to_kowloon_lines, sizeof(kiess_to_kowloon_lines) / sizeof(kiess_to_kowloon_lines[0])},
-   {"Kowloon", "Midgaard", 14083, 3052, kowloon_to_midgaard_lines, sizeof(kowloon_to_midgaard_lines) / sizeof(kowloon_to_midgaard_lines[0])},
-   {"Kowloon", "Kiess", 14083, 13011, kowloon_to_kiess_lines, sizeof(kowloon_to_kiess_lines) / sizeof(kowloon_to_kiess_lines[0])}};
+   {"Midgaard", "Kiess", 968, 3350, midgaard_to_kiess_lines, sizeof(midgaard_to_kiess_lines) / sizeof(midgaard_to_kiess_lines[0])},
+   {"Midgaard", "Kowloon", 968, 3522, midgaard_to_kowloon_lines, sizeof(midgaard_to_kowloon_lines) / sizeof(midgaard_to_kowloon_lines[0])},
+   {"Kiess", "Midgaard", 3350, 968, kiess_to_midgaard_lines, sizeof(kiess_to_midgaard_lines) / sizeof(kiess_to_midgaard_lines[0])},
+   {"Kiess", "Kowloon", 3350, 3522, kiess_to_kowloon_lines, sizeof(kiess_to_kowloon_lines) / sizeof(kiess_to_kowloon_lines[0])},
+   {"Kowloon", "Midgaard", 3522, 968, kowloon_to_midgaard_lines, sizeof(kowloon_to_midgaard_lines) / sizeof(kowloon_to_midgaard_lines[0])},
+   {"Kowloon", "Kiess", 3522, 3350, kowloon_to_kiess_lines, sizeof(kowloon_to_kiess_lines) / sizeof(kowloon_to_kiess_lines[0])}};
 
 static bool is_active_caravan(CHAR_DATA *ch)
 {

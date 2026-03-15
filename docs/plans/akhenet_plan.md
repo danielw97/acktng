@@ -4,9 +4,9 @@
 
 - **Area Name:** `@@yThe Sands of Akh'enet@@N`
 - **File:** `akhenet.are`
-- **Assigned Vnum Range (fixed):** `2000-2149`
+- **Assigned Vnum Range (fixed):** `792-2149`
 - **Level Range:** `70-90`
-- **Room Utilization Target:** **150/150 rooms used** (all room vnums from 2000 through 2149)
+- **Room Utilization Target:** **150/150 rooms used** (all room vnums from 792 through 2149)
 - **Goal:** Fully replace current sparse/linear desert-ruin layout with a complete, lore-consistent oasis-pyramid frontier necropolis tied to the Oasis-Pyramid Corridor.
 
 This plan keeps the exact current area envelope and rebuilds rooms, mobs, objects, resets, and progression to reflect Akh'enet as a living ruin-city where water law, burial theology, and caravan survival collide.
@@ -46,7 +46,7 @@ The area should feel like a border institution under collapse, not a generic des
 - `K sands akhenet desert ruins~`
 - `L @@W(@@y70@@W-@@R90@@W)@@N~`
 - `I 70 90`
-- `V 2000 2149`
+- `V 792 2149`
 - `F 15`
 - `U @@yblistering winds rake Akh'enet as buried bells ring beneath the dunes@@N~`
 - `O Virant~` (owner must be exact-cased per spec)
@@ -62,55 +62,55 @@ String/format constraints to enforce during implementation:
 
 ## Full Room Topology (All 150 Rooms Used)
 
-### District A — Sunbreak March (2000-2019, 20 rooms)
+### District A — Sunbreak March (792-811, 20 rooms)
 **Surface entry dunes and exposed caravan approach.**
 - Gameplay: orientation, early hostiles, weather pressure.
 - Features: shattered waystones, heat mirage spans, caravan wreck markers.
 - Anchor rooms:
- - 2000 **Sunbreak Threshold** (entry hub)
- - 2008 **Survey Obelisk Stump**
- - 2015 **Half-Buried Toll Arch**
- - 2019 **Marchfall Descent Lip** (transition to buried roads)
+ - 792 **Sunbreak Threshold** (entry hub)
+ - 800 **Survey Obelisk Stump**
+ - 807 **Half-Buried Toll Arch**
+ - 811 **Marchfall Descent Lip** (transition to buried roads)
 
-### District B — Keeper Roadworks (2020-2044, 25 rooms)
+### District B — Keeper Roadworks (812-836, 25 rooms)
 **Submerged processional road, legal-marker remnants, drainage channels.**
 - Gameplay: branched lanes, lore-heavy inscriptions, first locked route.
 - Features: measure-script slabs, collapsed milestones, audit niches.
 - Anchor rooms:
- - 2024 **Road Court Kiosk**
- - 2031 **Broken Distance Circle**
- - 2038 **Sluice Gate of Bearings** (keyed door)
- - 2044 **Deepshade Causeway Mouth**
+ - 816 **Road Court Kiosk**
+ - 823 **Broken Distance Circle**
+ - 830 **Sluice Gate of Bearings** (keyed door)
+ - 836 **Deepshade Causeway Mouth**
 
-### District C — Shuttered Bazaar of Reeds (2045-2069, 25 rooms)
+### District C — Shuttered Bazaar of Reeds (837-861, 25 rooms)
 **Buried commercial quarter once tied to Great/Southern Oasis water contracts.**
 - Gameplay: lateral loops, faction negotiation pockets, ambush alleys.
 - Features: reed-weigh halls, ration stamp offices, relic appraisal booths.
 - Anchor rooms:
- - 2050 **Ledger Canopy Rotunda**
- - 2056 **Seal-Fire Notary**
- - 2063 **Caravan Bone Exchange**
- - 2069 **Moon Tax Stairwell**
+ - 842 **Ledger Canopy Rotunda**
+ - 848 **Seal-Fire Notary**
+ - 855 **Caravan Bone Exchange**
+ - 861 **Moon Tax Stairwell**
 
-### District D — Cistern Veins & Undersluices (2070-2094, 25 rooms)
+### District D — Cistern Veins & Undersluices (862-886, 25 rooms)
 **Hydraulic underworks linking Akh'enet to the Deepwell Confluence myth-cycle.**
 - Gameplay: environmental hazard routing, water-control puzzles, ritual sabotage.
 - Features: blue-lit seep halls, pressure doors, drowned record vaults.
 - Anchor rooms:
- - 2072 **Cold Seep Gallery**
- - 2079 **Confluence Gauge Hall**
- - 2086 **Brine Sentence Vault**
- - 2094 **Nadir Pump Antechamber**
+ - 864 **Cold Seep Gallery**
+ - 871 **Confluence Gauge Hall**
+ - 878 **Brine Sentence Vault**
+ - 886 **Nadir Pump Antechamber**
 
-### District E — Necropolis Terraces (2095-2124, 30 rooms)
+### District E — Necropolis Terraces (887-916, 30 rooms)
 **Vertical funerary quarter where Moon Sovereign descent theology overwrote Keeper law.**
 - Gameplay: elite cult packs, curse mechanics, high lore density.
 - Features: tomb balconies, moonwells, jackal verdict stelae.
 - Anchor rooms:
- - 2100 **Terrace of Quiet Debt**
- - 2108 **Jackal Balance Court**
- - 2115 **Moon Ladder Gallery**
- - 2124 **Sepulchral Wind Balcony**
+ - 892 **Terrace of Quiet Debt**
+ - 900 **Jackal Balance Court**
+ - 907 **Moon Ladder Gallery**
+ - 916 **Sepulchral Wind Balcony**
 
 ### District F — Nadir Palace & Astral Well (2125-2149, 25 rooms)
 **Final complex: command necropolis, ritual engine, and boss endcap.**
@@ -127,7 +127,7 @@ String/format constraints to enforce during implementation:
 
 ## Traversal Rules
 
-- Main spine runs 2000 -> 2149 in district order with optional side loops inside each district.
+- Main spine runs 792 -> 2149 in district order with optional side loops inside each district.
 - All exits bidirectional.
 - No non-maze directional loops.
 - Named exits (`^...`) used for ritual doors, legal gates, and special passages.
@@ -139,8 +139,8 @@ String/format constraints to enforce during implementation:
 ## Mob Rebuild Plan
 
 ### Vnum Allocation
-- **Mob templates:** `2000-2049` (50 total; sequential, no gaps)
-- **Boss/mini-boss concentration:** 2042-2049
+- **Mob templates:** `792-841` (50 total; sequential, no gaps)
+- **Boss/mini-boss concentration:** 834-841
 
 ### Faction Sets
 
@@ -165,8 +165,8 @@ String/format constraints to enforce during implementation:
   - Emphasis: resist variance by district.
 
 ### Key Encounters
-- **Mini-boss A (2068):** `The Seal-Break Factor` (jackal forgery master).
-- **Mini-boss B (2118):** `Silent Judge of the Ninth Descent` (cult adjudicator).
+- **Mini-boss A (860):** `The Seal-Break Factor` (jackal forgery master).
+- **Mini-boss B (910):** `Silent Judge of the Ninth Descent` (cult adjudicator).
 - **Final Boss (2148):** `Akhenet Nadir Regent` — fusion of court bureaucracy and moon-rite engine.
 
 Boss rooms flagged `no_mob`; bosses flagged sentinel + boss; strong elites use solo as appropriate.
@@ -176,7 +176,7 @@ Boss rooms flagged `no_mob`; bosses flagged sentinel + boss; strong elites use s
 ## Object Rebuild Plan
 
 ### Vnum Allocation
-- **Object templates:** `2050-2149` (100 total; sequential, no gaps)
+- **Object templates:** `842-2149` (100 total; sequential, no gaps)
 
 ### Item Families
 - **Water-law relics:** ration seals, tally rods, witness tablets.
@@ -187,8 +187,8 @@ Boss rooms flagged `no_mob`; bosses flagged sentinel + boss; strong elites use s
 
 ### Required Keys / Doors
 - Key items for:
- - Sluice Gate of Bearings (2038)
- - Brine Sentence Vault (2086)
+ - Sluice Gate of Bearings (830)
+ - Brine Sentence Vault (878)
  - Court of the Eclipsed Ledger (2148)
 
 ---
@@ -219,9 +219,9 @@ This rebuild explicitly replaces prior sparse desert repetition with:
 
 ## Implementation Checklist
 
-1. Rewrite `#ROOMS` to cover all vnums 2000-2149 (unique descriptions, 3+ sentences; major rooms 5+).
-2. Rebuild `#MOBILES` sequentially 2000-2049 with full extension-line compliance.
-3. Rebuild `#OBJECTS` sequentially 2050-2149 with loot/flags/key integrity.
+1. Rewrite `#ROOMS` to cover all vnums 792-2149 (unique descriptions, 3+ sentences; major rooms 5+).
+2. Rebuild `#MOBILES` sequentially 792-841 with full extension-line compliance.
+3. Rebuild `#OBJECTS` sequentially 842-2149 with loot/flags/key integrity.
 4. Re-author `#RESETS` for district populations, doors, shops, and boss gating.
 5. Validate header and all strings against `docs/area_file_spec.md`.
 6. Run lint/validation pass for exits, vnum envelope, and string termination.

@@ -6,8 +6,8 @@
 - **File Name:** `mafdet.are`
 - **Keyword:** `mafdet`
 - **Level Range:** `55-80` (`I 55 80`)
-- **Vnum Range:** `14200-14399` (`V 14200 14399`)
-- **Total Room Envelope:** **200 rooms** (all room vnums in-range must be used)
+- **Vnum Range:** `3539-3738` (`V 3539 3738`)
+- **Total Room Envelope:** **35 rooms** (all room vnums in-range must be used)
 - **Design Goal:** Build a lore-dense maritime port city at the eastern terminus of the Saltglass Reach, where inland desert law and maritime contract law collide. The area combines a dangerous coastal approach through the Tidemouth Dunes, a factional trade city driven by the Strandline Compact's tripartite governance, and a smuggler-haunted tidewall undercroft beneath the seaward perimeter. The city is not a safe hub — it is a contested jurisdictional frontier where every corridor carries the tension between oasis charter formulas and the pragmatism of the open sea.
 
 ---
@@ -71,7 +71,7 @@ The build must explicitly align with established corridor lore:
 - `L @@W(@@l55 80@@W)@@N~`
 - `N` assigned during implementation (must not conflict with existing area numbers).
 - `I 55 80`
-- `V 14200 14399`
+- `V 3539 3738`
 - `F 15`
 - `O Virant~`
 - `U @@lthe harbor chain of @@yPort Mafdet@@l descends with the dawn@@N~`
@@ -101,7 +101,7 @@ Implementation must follow `docs/area_file_spec.md` requirements, including:
 
 ---
 
-## Room Topology (All 200 Rooms Used)
+## Room Topology (All 35 Rooms Used)
 
 The layout follows Mafdet's organic coastal geography rather than a rectangular grid. The city sits on a natural cove: the landward approach comes from the west through the Tidemouth Dunes, the harbor wraps around the eastern cove, the Shrine Terrace rises above the city center, and the Tidewall forms the seaward perimeter with a hidden undercroft below. Elevation changes use up/down exits. Multiple branching paths and loops create a navigable but non-linear topology.
 
@@ -129,7 +129,7 @@ The area has six districts connected by multiple paths. No district is a dead-en
 
 ---
 
-### District A: Tidemouth Approach & Landward Gate (14200-14229, 30 rooms)
+### District A: Tidemouth Approach & Landward Gate (3539-3568, 30 rooms)
 
 **Theme:** The final band of the Saltglass Reach — brackish channels, crab-burrowed dunes, and the jurisdictional threshold where Reach authority ends and Mafdet's begins. The Shoreward Seal marks the legal boundary. The approach is dangerous: beach jackals, tidepool hazards, and opportunistic cairn scavengers prey on weary caravans.
 
@@ -138,18 +138,18 @@ The area has six districts connected by multiple paths. No district is a dead-en
 **Layout concept:** A winding path through dune ridges and tidal channels, not a straight road. The approach splits into a northern high-dune path and a southern tidal-flat path that reconverge at the Landward Gate. Side branches lead to scavenger camps, abandoned assessment halls, and a collapsed cairn station.
 
 Key anchors:
-- `14200` **Tidemouth Trail, Western Edge** (entry room, 5+ sentences, connection to Saltglass Reach area).
-- `14204` **Brackish Channel Crossing** (tidal flat hazard, crab burrows, movement challenge).
-- `14208` **Collapsed Cairn Station** (Reach Warden ruin, lore extra descriptions for tablet fragments and toll-schedule inscriptions).
-- `14212` **Scavenger Ridge Camp** (cairn scavenger encampment, hostile).
-- `14216` **The Shoreward Seal** (basalt boundary stone, legal threshold landmark, 5+ sentences, extra descriptions for both inland charter notation and maritime loading symbols).
-- `14220` **Landward Gate Approach** (caravan staging yard, first view of Mafdet's walls).
-- `14224` **The Landward Gate of Mafdet** (fortified entry, 5+ sentences, no_mob, door reset closed).
-- `14228` **Gate Customs Yard** (inside the wall, first city room, transition to District B).
+- `3539` **Tidemouth Trail, Western Edge** (entry room, 5+ sentences, connection to Saltglass Reach area).
+- `3543` **Brackish Channel Crossing** (tidal flat hazard, crab burrows, movement challenge).
+- `3547` **Collapsed Cairn Station** (Reach Warden ruin, lore extra descriptions for tablet fragments and toll-schedule inscriptions).
+- `3551` **Scavenger Ridge Camp** (cairn scavenger encampment, hostile).
+- `3555` **The Shoreward Seal** (basalt boundary stone, legal threshold landmark, 5+ sentences, extra descriptions for both inland charter notation and maritime loading symbols).
+- `3559` **Landward Gate Approach** (caravan staging yard, first view of Mafdet's walls).
+- `3563` **The Landward Gate of Mafdet** (fortified entry, 5+ sentences, no_mob, door reset closed).
+- `3567` **Gate Customs Yard** (inside the wall, first city room, transition to District B).
 
-Sub-region boundary: rooms 14224 (no_mob) and 14228 (no_mob) prevent approach-zone mobs from wandering into the city.
+Sub-region boundary: rooms 3563 (no_mob) and 3567 (no_mob) prevent approach-zone mobs from wandering into the city.
 
-### District B: Carters' Yard & Market Streets (14230-14264, 35 rooms)
+### District B: Carters' Yard & Market Streets (3569-3603, 35 rooms)
 
 **Theme:** The Sand-Sea Carters' Guild's operational headquarters and the commercial strip that connects the gate to the city interior. Noisy, dusty, and crowded — the smell of draft animals, leather, and chalky Reach dust mixes with the first hints of salt air from the harbor. The Guild controls throughput; the Red Sand Accounts watch for distressed cargo to acquire. This district houses most of Mafdet's essential services — the shops, inn, quartermaster, and postmaster that sustain both caravans and harbor operations.
 
@@ -158,23 +158,23 @@ Sub-region boundary: rooms 14224 (no_mob) and 14228 (no_mob) prevent approach-zo
 **Layout concept:** A broad main road (the Carter's Way) runs east from the gate toward the harbor, with the Carters' Yard sprawling to the north and a market bazaar branching to the south. Side streets create a loose grid in this district, but building footprints break the regularity. The Yard has a stable compound, harness workshops, and a waystation depot. Service buildings branch off as dead-end interiors from adjacent street rooms, each with exactly one bi-directional exit.
 
 Key anchors:
-- `14230` **Carter's Way, Western End** (main road beginning, dust and noise).
-- `14232` **Postmaster's Hall** (inside, safe, dead-end from 14230; mail and courier dispatch, sentinel postman NPC).
-- `14234` **Sand-Sea Carters' Guild Hall** (Guild headquarters, inside, sentinel NPCs, extra descriptions for guild charter and waystation maps).
-- `14236` **Quartermaster's Depot** (inside, safe, dead-end from 14234; expedition and patrol supplies, sentinel quartermaster NPC).
-- `14238` **Caravan Assembly Yard** (open staging area, draft animals, wagon repair).
-- `14240` **The Saltwind Inn** (inside, safe, dead-end from 14238; lodging for arriving caravaneers and departing sailors, sentinel innkeeper NPC, 5+ sentences, extra descriptions for a painted harbor map mural and a traveler's notice board).
-- `14242` **Red Sand Accounts Field Office** (inside, Red Sand broker NPC, ominous legal documents visible).
-- `14244` **Ironwright's Forge** (inside, safe, dead-end from 14246; weapon shop, sentinel weaponsmith NPC, caravan blades and harbor cutlasses).
-- `14246` **Market of the Shoreward Tables** (open-air bazaar, stone conversion-ratio charts mounted on walls, 5+ sentences).
-- `14248` **Shoreward Armory** (inside, safe, dead-end from 14246; armor shop, sentinel armorer NPC, salt-resistant leathers and maritime plate).
-- `14250` **Provisioner's Row** (food, water, and travel supplies).
-- `14252` **Reach Provisions** (inside, safe, dead-end from 14250; general goods shop, sentinel provisioner NPC, caravan staples and glasswalk equipment).
-- `14254` **Waystation Supply Depot** (Guild emergency stores, glasswalk shoes, cached water).
-- `14258` **Carter's Way, Eastern End** (transition toward Ledger Quarter, salt air strengthening).
-- `14262` **Southern Market Alley** (narrow commercial lane, pickpocket danger).
+- `3569` **Carter's Way, Western End** (main road beginning, dust and noise).
+- `3571` **Postmaster's Hall** (inside, safe, dead-end from 3569; mail and courier dispatch, sentinel postman NPC).
+- `3573` **Sand-Sea Carters' Guild Hall** (Guild headquarters, inside, sentinel NPCs, extra descriptions for guild charter and waystation maps).
+- `3575` **Quartermaster's Depot** (inside, safe, dead-end from 3573; expedition and patrol supplies, sentinel quartermaster NPC).
+- `3577` **Caravan Assembly Yard** (open staging area, draft animals, wagon repair).
+- `3579` **The Saltwind Inn** (inside, safe, dead-end from 3577; lodging for arriving caravaneers and departing sailors, sentinel innkeeper NPC, 5+ sentences, extra descriptions for a painted harbor map mural and a traveler's notice board).
+- `3581` **Red Sand Accounts Field Office** (inside, Red Sand broker NPC, ominous legal documents visible).
+- `3583` **Ironwright's Forge** (inside, safe, dead-end from 3585; weapon shop, sentinel weaponsmith NPC, caravan blades and harbor cutlasses).
+- `3585` **Market of the Shoreward Tables** (open-air bazaar, stone conversion-ratio charts mounted on walls, 5+ sentences).
+- `3587` **Shoreward Armory** (inside, safe, dead-end from 3585; armor shop, sentinel armorer NPC, salt-resistant leathers and maritime plate).
+- `3589` **Provisioner's Row** (food, water, and travel supplies).
+- `3591` **Reach Provisions** (inside, safe, dead-end from 3589; general goods shop, sentinel provisioner NPC, caravan staples and glasswalk equipment).
+- `3593` **Waystation Supply Depot** (Guild emergency stores, glasswalk shoes, cached water).
+- `3597` **Carter's Way, Eastern End** (transition toward Ledger Quarter, salt air strengthening).
+- `3601` **Southern Market Alley** (narrow commercial lane, pickpocket danger).
 
-### District C: Ledger Quarter (14265-14304, 40 rooms)
+### District C: Ledger Quarter (3604-3643, 40 rooms)
 
 **Theme:** The documentary heart of Mafdet — dense, functional architecture built for fire resistance and archive preservation. Thick walls, deep basements, wind-baffled courtyards. The air smells of wax, bitumen, lamp oil, and old paper. Four Ledger Houses compete for commercial influence, and the Quarantine Ledger processes the most dangerous artifacts in the corridor.
 
@@ -183,20 +183,20 @@ Key anchors:
 **Layout concept:** A dense cluster of interconnected courtyards and covered passages, with Ledger House buildings branching off as dead-end interiors. The district is organized around a central Assessment Courtyard where bulk cargo is weighed against the Saltweight standard. The Quarantine Ledger occupies the district's southeastern corner, deliberately isolated from the main document halls. A locked archive vault (key required) protects the most valuable records.
 
 Key anchors:
-- `14265` **Ledger Quarter Gate** (entry from Carter's Way, thick walls, wind baffles).
-- `14267` **Bank of the Strandline Compact** (inside, safe, dead-end from 14265; sentinel banker NPC with `bank` act flag, gilt-bronze strongboxes and ledger-sealed deposit vaults, extra descriptions for Saltweight coinage standards).
-- `14269` **Tide Ledger Hall** (largest Ledger House, inside, 5+ sentences, extra descriptions for Saltweight reference scales and calibration marks).
-- `14271` **Hazard Scribe's Reagent Archive** (inside, safe, dead-end from 14273; magic shop, sentinel mage-merchant NPC, arcane reagents and Quarantine-grade containment supplies).
-- `14273` **Shoreward House** (inland-maritime conversion specialists, inside, bilingual legal inscriptions).
-- `14277` **Assessment Courtyard** (central open space, bronze scales, cargo weighing, 5+ sentences).
-- `14281` **Storm Ledger Vault** (bonded escrow storage, inside, locked door requiring Storm Ledger Key).
-- `14285` **Quarantine Ledger Office** (relic hazard assessment, inside, sealed containers, cold-radiating artifacts).
-- `14289` **Sealed Archive Passage** (locked door requiring Archive Key, leads to deep record vaults).
-- `14293` **Deep Archive Vault** (oldest records, Littoral Branch tablets, Kowloon connection references, inside, 5+ sentences).
-- `14298` **Quarantine Isolation Chamber** (Class Three containment, dangerous relic storage, no_mob, 5+ sentences).
-- `14302` **Ledger Quarter, Harbor Approach** (transition to Harbor Front, first view of the water).
+- `3604` **Ledger Quarter Gate** (entry from Carter's Way, thick walls, wind baffles).
+- `3606` **Bank of the Strandline Compact** (inside, safe, dead-end from 3604; sentinel banker NPC with `bank` act flag, gilt-bronze strongboxes and ledger-sealed deposit vaults, extra descriptions for Saltweight coinage standards).
+- `3608` **Tide Ledger Hall** (largest Ledger House, inside, 5+ sentences, extra descriptions for Saltweight reference scales and calibration marks).
+- `3610` **Hazard Scribe's Reagent Archive** (inside, safe, dead-end from 3612; magic shop, sentinel mage-merchant NPC, arcane reagents and Quarantine-grade containment supplies).
+- `3612` **Shoreward House** (inland-maritime conversion specialists, inside, bilingual legal inscriptions).
+- `3616` **Assessment Courtyard** (central open space, bronze scales, cargo weighing, 5+ sentences).
+- `3620` **Storm Ledger Vault** (bonded escrow storage, inside, locked door requiring Storm Ledger Key).
+- `3624` **Quarantine Ledger Office** (relic hazard assessment, inside, sealed containers, cold-radiating artifacts).
+- `3628` **Sealed Archive Passage** (locked door requiring Archive Key, leads to deep record vaults).
+- `3632` **Deep Archive Vault** (oldest records, Littoral Branch tablets, Kowloon connection references, inside, 5+ sentences).
+- `3637` **Quarantine Isolation Chamber** (Class Three containment, dangerous relic storage, no_mob, 5+ sentences).
+- `3641` **Ledger Quarter, Harbor Approach** (transition to Harbor Front, first view of the water).
 
-### District D: Harbor Front & Piers (14305-14349, 45 rooms)
+### District D: Harbor Front & Piers (3644-3688, 45 rooms)
 
 **Theme:** The working heart of Mafdet — salt-whitened seawalls, timber piers on stone foundations, rope-burned bollards, and the constant sound of wave impact, gull cries, and loading operations. The harbor is a natural cove reinforced with stone breakwaters. The harbor chain stretches across the mouth, raised at dusk and lowered at dawn. Ship captains of the Quay Concord negotiate cargo terms while dock workers load under the Harbor Wardens' supervision.
 
@@ -205,21 +205,21 @@ Key anchors:
 **Layout concept:** The harbor wraps around the cove in a crescent shape. The northern arm holds the main commercial piers and loading quays. The central harbor front is the widest section with the Harbormaster's office, signal tower, and Captain's Register hall. The southern arm curves toward the Tidewall. A breakwater extends east into the water, accessible by a narrow stone causeway. The harbor floor drops from shallow (swim) to deep (no-swim) water at the breakwater line.
 
 Key anchors:
-- `14305` **Harbor Gate** (entry from Ledger Quarter, first full view of the cove, 5+ sentences).
-- `14307` **Harbor Healer's Station** (inside, safe, dead-end from 14305; sentinel healer NPC with `heal` act flag, a triage room for injured dockworkers and arriving caravaneers, coral-lime walls and bundles of dried coastal herbs).
-- `14309` **North Pier, Cargo Loading** (timber on stone, Strand Folk basalt visible at low waterline).
-- `14313` **Commercial Quay** (bulk cargo transfer, Saltweight verification point).
-- `14317` **Harbormaster's Office** (inside, sentinel NPC, Harbor Register, 5+ sentences).
-- `14321` **Signal Tower Base** (stone tower, colored glass lanterns, extra descriptions for signal codes).
-- `14325` **Signal Tower Crown** (up from base, panoramic view, extra descriptions for harbor chain and breakwater, 5+ sentences).
-- `14329` **Captain's Register Hall** (inside, Quay Concord headquarters, parallel record to Harbor Register).
-- `14333` **South Pier, Bonded Cargo** (escrow-sealed shipments, Storm Ledger jurisdiction).
-- `14337` **Harbor Chain Winch House** (mechanism for raising/lowering the harbor chain, inside).
-- `14341` **Breakwater Causeway** (narrow stone path extending into the water, exposed to weather).
-- `14345` **Breakwater End** (furthest point into the harbor, deep water on three sides, no_mob, 5+ sentences).
-- `14349` **Harbor Front, Southern Curve** (transition toward Tidewall district).
+- `3644` **Harbor Gate** (entry from Ledger Quarter, first full view of the cove, 5+ sentences).
+- `3646` **Harbor Healer's Station** (inside, safe, dead-end from 3644; sentinel healer NPC with `heal` act flag, a triage room for injured dockworkers and arriving caravaneers, coral-lime walls and bundles of dried coastal herbs).
+- `3648` **North Pier, Cargo Loading** (timber on stone, Strand Folk basalt visible at low waterline).
+- `3652` **Commercial Quay** (bulk cargo transfer, Saltweight verification point).
+- `3656` **Harbormaster's Office** (inside, sentinel NPC, Harbor Register, 5+ sentences).
+- `3660` **Signal Tower Base** (stone tower, colored glass lanterns, extra descriptions for signal codes).
+- `3664` **Signal Tower Crown** (up from base, panoramic view, extra descriptions for harbor chain and breakwater, 5+ sentences).
+- `3668` **Captain's Register Hall** (inside, Quay Concord headquarters, parallel record to Harbor Register).
+- `3672` **South Pier, Bonded Cargo** (escrow-sealed shipments, Storm Ledger jurisdiction).
+- `3676` **Harbor Chain Winch House** (mechanism for raising/lowering the harbor chain, inside).
+- `3680` **Breakwater Causeway** (narrow stone path extending into the water, exposed to weather).
+- `3684` **Breakwater End** (furthest point into the harbor, deep water on three sides, no_mob, 5+ sentences).
+- `3688` **Harbor Front, Southern Curve** (transition toward Tidewall district).
 
-### District E: Tidewall & Undercroft (14350-14384, 35 rooms)
+### District E: Tidewall & Undercroft (3689-3723, 35 rooms)
 
 **Theme:** The seaward defensive perimeter. The upper Tidewall is built into the wall's thickness — expensive, wet, and prestigious residential and commercial space. Below, the Tidewall's foundations conceal a flooded undercroft: tidal pools, collapsed passages, and smuggler routes used by Synod cells to move relic contraband. This is the area's primary danger zone.
 
@@ -228,18 +228,18 @@ Key anchors:
 **Layout concept:** The upper Tidewall runs north-south along the seaward side, with residential and commercial rooms branching off the wall-walk. Access to the undercroft is through a hidden stairway (down exit with named keyword, discoverable via extra description). The undercroft is a network of flooded passages, tidal pools, and collapsed chambers. It is NOT a maze (no ROOM_MAZE flags) — exits are bi-directional and logically consistent — but the tight, branching layout and dark rooms create navigational challenge. The deepest section contains the Synod smuggling cell's operations center.
 
 Key anchors:
-- `14350` **Tidewall Walk, Northern End** (entry from harbor, salt spray, barnacle-crusted stone).
-- `14354` **Tidewall Residences** (shell-inlay facades, beacon sconces, Strand Folk remnant architecture).
-- `14358` **Strand Rememberer's Alcove** (inside, Strand Rememberer elder NPC, oral tradition keeper, 5+ sentences, extra descriptions for coastal navigation songs and guardian origin stories).
-- `14362` **Tidewall Walk, Southern End** (the wall curves, older construction visible).
-- `14364` **Tidewall Undercroft Stair** (hidden down exit, discoverable, transition to lower level).
-- `14366` **Flooded Foundation Passage** (dark, ankle-deep water, tidepool eels).
-- `14370` **Collapsed Tidal Chamber** (partially flooded, unstable footing).
-- `14374` **Smuggler's Cache** (hidden storage, Synod contraband, extra descriptions for mislabeled relic crates).
-- `14378` **Synod Operations Cell** (no_mob, 5+ sentences, the smuggling cell's command post, ritual materials and funerary components visible).
-- `14382` **Flooded Relic Vault** (deepest undercroft room, Class Three artifact sealed here, humming at dawn, cold to the touch, no_mob, 5+ sentences — boss encounter).
+- `3689` **Tidewall Walk, Northern End** (entry from harbor, salt spray, barnacle-crusted stone).
+- `3693` **Tidewall Residences** (shell-inlay facades, beacon sconces, Strand Folk remnant architecture).
+- `3697` **Strand Rememberer's Alcove** (inside, Strand Rememberer elder NPC, oral tradition keeper, 5+ sentences, extra descriptions for coastal navigation songs and guardian origin stories).
+- `3701` **Tidewall Walk, Southern End** (the wall curves, older construction visible).
+- `3703` **Tidewall Undercroft Stair** (hidden down exit, discoverable, transition to lower level).
+- `3705` **Flooded Foundation Passage** (dark, ankle-deep water, tidepool eels).
+- `3709` **Collapsed Tidal Chamber** (partially flooded, unstable footing).
+- `3713` **Smuggler's Cache** (hidden storage, Synod contraband, extra descriptions for mislabeled relic crates).
+- `3717` **Synod Operations Cell** (no_mob, 5+ sentences, the smuggling cell's command post, ritual materials and funerary components visible).
+- `3721` **Flooded Relic Vault** (deepest undercroft room, Class Three artifact sealed here, humming at dawn, cold to the touch, no_mob, 5+ sentences — boss encounter).
 
-### District F: Shrine Terrace & Upper City (14385-14399, 15 rooms)
+### District F: Shrine Terrace & Upper City (3724-3738, 15 rooms)
 
 **Theme:** The elevated judicial and religious center of Mafdet. The Shrine of the First Claw sits on a basalt terrace visible from both the harbor and the Ledger Quarter. The claw-marked spire is the tallest structure in the city. The terrace is public space: anyone can approach to file a complaint, witness an oath, or observe a Swift Court session. The guardian tradition provides moral gravity without theological complexity.
 
@@ -248,34 +248,34 @@ Key anchors:
 **Layout concept:** The Shrine Terrace is accessed via stone stairways (up exits) from the Ledger Quarter and the Harbor Front. The terrace is a broad platform with the Shrine at its center, the Swift Court on the western face, and the Oath Chamber in the Shrine's interior. The terrace offers views in multiple directions. The area culminates here with the most powerful guardian-cult encounters.
 
 Key anchors:
-- `14385` **Terrace Stair, Ledger Side** (up from Ledger Quarter, carved basalt steps).
-- `14387` **Terrace Stair, Harbor Side** (up from Harbor Front, steeper ascent).
-- `14389` **The Shrine Terrace** (broad basalt platform, claw-marked spire visible, 5+ sentences, extra descriptions for claw iconography and public verdict boards).
-- `14391` **Swift Court of the First Claw** (open-air judicial space, verdict tablets on display boards, 5+ sentences).
-- `14393` **The Oath Chamber** (inside, the First Claw sculpture — worn basalt feline forepaw, 5+ sentences, extra descriptions for oath-sealing ritual and claw marks).
-- `14395` **Shrine Sanctum** (inner shrine, no_mob, guardian presence, 5+ sentences).
-- `14397` **Terrace Overlook, Harbor View** (panoramic view of the harbor and breakwater).
-- `14399` **Terrace Overlook, Reach View** (panoramic view of the Tidemouth Dunes and Saltglass Reach).
+- `3724` **Terrace Stair, Ledger Side** (up from Ledger Quarter, carved basalt steps).
+- `3726` **Terrace Stair, Harbor Side** (up from Harbor Front, steeper ascent).
+- `3728` **The Shrine Terrace** (broad basalt platform, claw-marked spire visible, 5+ sentences, extra descriptions for claw iconography and public verdict boards).
+- `3730` **Swift Court of the First Claw** (open-air judicial space, verdict tablets on display boards, 5+ sentences).
+- `3732` **The Oath Chamber** (inside, the First Claw sculpture — worn basalt feline forepaw, 5+ sentences, extra descriptions for oath-sealing ritual and claw marks).
+- `3734` **Shrine Sanctum** (inner shrine, no_mob, guardian presence, 5+ sentences).
+- `3736` **Terrace Overlook, Harbor View** (panoramic view of the harbor and breakwater).
+- `3738` **Terrace Overlook, Reach View** (panoramic view of the Tidemouth Dunes and Saltglass Reach).
 
 ---
 
 ## Shop + Service Requirements
 
-All service rooms below are **inside-sector** (`sector_type = 11`) rooms flagged **safe** (`room_flags = 1024`) with exactly one bi-directional exit to one cardinally adjacent street room. No service room has more than one connecting direction. All service-to-street connections are between cardinally adjacent rooms.
+All service rooms below are **inside-sector** (`sector_type = 11`) rooms flagged **safe** (`room_flags = 315`) with exactly one bi-directional exit to one cardinally adjacent street room. No service room has more than one connecting direction. All service-to-street connections are between cardinally adjacent rooms.
 
 ### Service Room Table
 
 | Service Room Vnum | Room Name | Street Room Vnum | Direction from Street | Service Role |
 |---|---|---|---|---|
-| 14232 | Postmaster's Hall | 14230 | east | Postmaster (mail/courier) |
-| 14236 | Quartermaster's Depot | 14234 | east | Quartermaster (supplies) |
-| 14240 | The Saltwind Inn | 14238 | south | Innkeeper (rent/save) |
-| 14244 | Ironwright's Forge | 14246 | west | Weapon shop |
-| 14248 | Shoreward Armory | 14246 | east | Armor shop |
-| 14252 | Reach Provisions | 14250 | south | General goods shop |
-| 14267 | Bank of the Strandline Compact | 14265 | south | Banker |
-| 14271 | Hazard Scribe's Reagent Archive | 14273 | west | Magic shop |
-| 14307 | Harbor Healer's Station | 14305 | south | Healer |
+| 3571 | Postmaster's Hall | 3569 | east | Postmaster (mail/courier) |
+| 3575 | Quartermaster's Depot | 3573 | east | Quartermaster (supplies) |
+| 3579 | The Saltwind Inn | 3577 | south | Innkeeper (rent/save) |
+| 3583 | Ironwright's Forge | 3585 | west | Weapon shop |
+| 3587 | Shoreward Armory | 3585 | east | Armor shop |
+| 3591 | Reach Provisions | 3589 | south | General goods shop |
+| 3606 | Bank of the Strandline Compact | 3604 | south | Banker |
+| 3610 | Hazard Scribe's Reagent Archive | 3612 | west | Magic shop |
+| 3646 | Harbor Healer's Station | 3644 | south | Healer |
 
 **Rule:** No shop/service room has more than one connecting direction. All are dead-end interiors accessed from a single adjacent street/yard room.
 
@@ -285,30 +285,30 @@ All service rooms below are **inside-sector** (`sector_type = 11`) rooms flagged
 
 | Mob Vnum | Name | Level | Room | Act Flags | Service Role | Notes |
 |---|---|---|---|---|---|---|
-| 14200 | the Postmaster of Mafdet | 150 | 14232 | is_npc, sentinel, stay_area, postman | Postmaster | Mail and courier dispatch; handles Reach-to-harbor correspondence |
-| 14201 | the Quartermaster of Mafdet | 150 | 14236 | is_npc, sentinel, stay_area | Quartermaster | Expedition and patrol supplies |
-| 14202 | the Innkeeper of the Saltwind | 150 | 14240 | is_npc, sentinel, stay_area | Innkeeper | Rent/save services; rooms for arriving caravaneers |
-| 14203 | a Mafdet ironwright | 150 | 14244 | is_npc, sentinel, stay_area | Weapon shop | Forges caravan blades and harbor cutlasses |
-| 14204 | a Shoreward armorer | 150 | 14248 | is_npc, sentinel, stay_area | Armor shop | Salt-resistant leathers and maritime plate |
-| 14205 | a Reach provisioner | 150 | 14252 | is_npc, sentinel, stay_area | General goods shop | Caravan staples, glasswalk equipment, trail rations |
-| 14206 | a Strandline Compact banker | 150 | 14267 | is_npc, sentinel, stay_area, bank | Banker | Deposits and currency exchange under Compact authority |
-| 14207 | a Hazard Scribe reagent dealer | 150 | 14271 | is_npc, sentinel, stay_area | Magic shop | Arcane reagents and containment-grade materials |
-| 14208 | the Harbor Healer of Mafdet | 150 | 14307 | is_npc, sentinel, stay_area, heal | Healer | Triage for dockworkers, sailors, and caravan wounded |
+| 3539 | the Postmaster of Mafdet | 150 | 3571 | is_npc, sentinel, stay_area, postman | Postmaster | Mail and courier dispatch; handles Reach-to-harbor correspondence |
+| 3540 | the Quartermaster of Mafdet | 150 | 3575 | is_npc, sentinel, stay_area | Quartermaster | Expedition and patrol supplies |
+| 3541 | the Innkeeper of the Saltwind | 150 | 3579 | is_npc, sentinel, stay_area | Innkeeper | Rent/save services; rooms for arriving caravaneers |
+| 3542 | a Mafdet ironwright | 150 | 3583 | is_npc, sentinel, stay_area | Weapon shop | Forges caravan blades and harbor cutlasses |
+| 3543 | a Shoreward armorer | 150 | 3587 | is_npc, sentinel, stay_area | Armor shop | Salt-resistant leathers and maritime plate |
+| 3544 | a Reach provisioner | 150 | 3591 | is_npc, sentinel, stay_area | General goods shop | Caravan staples, glasswalk equipment, trail rations |
+| 3545 | a Strandline Compact banker | 150 | 3606 | is_npc, sentinel, stay_area, bank | Banker | Deposits and currency exchange under Compact authority |
+| 3546 | a Hazard Scribe reagent dealer | 150 | 3610 | is_npc, sentinel, stay_area | Magic shop | Arcane reagents and containment-grade materials |
+| 3547 | the Harbor Healer of Mafdet | 150 | 3646 | is_npc, sentinel, stay_area, heal | Healer | Triage for dockworkers, sailors, and caravan wounded |
 
 ### Shops Plan
 
 | Keeper Vnum | Room | Buy Types | Profit Buy | Profit Sell | Open | Close | Notes |
 |---|---|---|---|---|---|---|---|
-| 14203 | 14244 | 5 0 0 0 0 | 120 | 80 | 0 | 23 | Weapon shop — buys weapons (ITEM_WEAPON=5) |
-| 14204 | 14248 | 9 0 0 0 0 | 120 | 80 | 0 | 23 | Armor shop — buys armor (ITEM_ARMOR=9) |
-| 14205 | 14252 | 0 0 0 0 0 | 120 | 80 | 0 | 23 | General shop — buys anything |
-| 14207 | 14271 | 2 4 10 0 0 | 130 | 70 | 0 | 23 | Magic shop — buys scrolls (2), staves (4), potions (10) |
+| 3542 | 3583 | 5 0 0 0 0 | 120 | 80 | 0 | 23 | Weapon shop — buys weapons (ITEM_WEAPON=5) |
+| 3543 | 3587 | 9 0 0 0 0 | 120 | 80 | 0 | 23 | Armor shop — buys armor (ITEM_ARMOR=9) |
+| 3544 | 3591 | 0 0 0 0 0 | 120 | 80 | 0 | 23 | General shop — buys anything |
+| 3546 | 3610 | 2 4 10 0 0 | 130 | 70 | 0 | 23 | Magic shop — buys scrolls (2), staves (4), potions (10) |
 
 All shops open 24 hours. Profit buy/sell values: 120/80 standard rates; magic shop uses 130/70 reflecting arcane rarity.
 
 ### Shop Inventory Plan (thematic stock targets, all levels multiples of 5)
 
-#### 14244 — Ironwright's Forge (Weapon Shop, 16 items, levels 55-80)
+#### 3583 — Ironwright's Forge (Weapon Shop, 16 items, levels 55-80)
 - Reach Road Caravan Knife (Lv 55)
 - Tidemouth Trail Machete (Lv 55)
 - Carter's Way Shortsword (Lv 60)
@@ -326,7 +326,7 @@ All shops open 24 hours. Profit buy/sell values: 120/80 standard rates; magic sh
 - Tide Ledger Seal Hammer (Lv 80)
 - Ironwright's Masterwork Falchion (Lv 80)
 
-#### 14248 — Shoreward Armory (Armor Shop, 16 items, levels 55-80)
+#### 3587 — Shoreward Armory (Armor Shop, 16 items, levels 55-80)
 - Glasswalk Chitin Sandals (Lv 55)
 - Tidemouth Salt-Leather Vest (Lv 55)
 - Carter's Dust-Guard Cloak (Lv 60)
@@ -344,7 +344,7 @@ All shops open 24 hours. Profit buy/sell values: 120/80 standard rates; magic sh
 - Breakwater Watch Gorget (Lv 80)
 - Shoreward Armorer's Masterwork Cuirass (Lv 80)
 
-#### 14252 — Reach Provisions (General Goods Shop, 18 items, levels 55-80)
+#### 3591 — Reach Provisions (General Goods Shop, 18 items, levels 55-80)
 - Salt-Dried Trail Rations (Lv 55)
 - Reach Road Waterskin (Lv 55)
 - Glasswalk Shoe Repair Kit (Lv 60)
@@ -364,7 +364,7 @@ All shops open 24 hours. Profit buy/sell values: 120/80 standard rates; magic sh
 - Compact Authority Travel Pass (Lv 80)
 - Reach Provisions Field Pack (Lv 80)
 
-#### 14271 — Hazard Scribe's Reagent Archive (Magic Shop, 16 items, levels 55-80)
+#### 3610 — Hazard Scribe's Reagent Archive (Magic Shop, 16 items, levels 55-80)
 - Littoral Branch Inscription Ink (Lv 55)
 - Tidal Measure Chalk Stick (Lv 55)
 - Glasswind Shard Focus (Lv 60)
@@ -386,19 +386,19 @@ All shops open 24 hours. Profit buy/sell values: 120/80 standard rates; magic sh
 
 | Command | Mob Vnum | Limit | Room Vnum | Notes |
 |---|---|---|---|---|
-| M 0 | 14200 | 1 | 14232 | Postmaster in Postmaster's Hall |
-| M 0 | 14201 | 1 | 14236 | Quartermaster in Quartermaster's Depot |
-| M 0 | 14202 | 1 | 14240 | Innkeeper in The Saltwind Inn |
-| M 0 | 14203 | 1 | 14244 | Weaponsmith in Ironwright's Forge |
-| M 0 | 14204 | 1 | 14248 | Armorer in Shoreward Armory |
-| M 0 | 14205 | 1 | 14252 | Provisioner in Reach Provisions |
-| M 0 | 14206 | 1 | 14267 | Banker in Bank of the Strandline Compact |
-| M 0 | 14207 | 1 | 14271 | Magic dealer in Hazard Scribe's Reagent Archive |
-| M 0 | 14208 | 1 | 14307 | Healer in Harbor Healer's Station |
+| M 0 | 3539 | 1 | 3571 | Postmaster in Postmaster's Hall |
+| M 0 | 3540 | 1 | 3575 | Quartermaster in Quartermaster's Depot |
+| M 0 | 3541 | 1 | 3579 | Innkeeper in The Saltwind Inn |
+| M 0 | 3542 | 1 | 3583 | Weaponsmith in Ironwright's Forge |
+| M 0 | 3543 | 1 | 3587 | Armorer in Shoreward Armory |
+| M 0 | 3544 | 1 | 3591 | Provisioner in Reach Provisions |
+| M 0 | 3545 | 1 | 3606 | Banker in Bank of the Strandline Compact |
+| M 0 | 3546 | 1 | 3610 | Magic dealer in Hazard Scribe's Reagent Archive |
+| M 0 | 3547 | 1 | 3646 | Healer in Harbor Healer's Station |
 
 ### Safe-Room + Building Policy
 
-- All nine service rooms listed above are flagged `safe` (`room_flags = 1024`) and use `inside` sector (`sector_type = 11`).
+- All nine service rooms listed above are flagged `safe` (`room_flags = 315`) and use `inside` sector (`sector_type = 11`).
 - Each service room is a strict dead-end with exactly one bi-directional entrance/exit to an adjacent street room.
 - No service room is used as a transit shortcut; each is entered for a specific purpose and exited back to the same street node.
 - Outdoor streets, plazas, and harbor areas remain non-safe by default; safety is enforced by law NPC presence and factional patrol.
@@ -452,11 +452,11 @@ All shops open 24 hours. Profit buy/sell values: 120/80 standard rates; magic sh
 
 ### Mob Vnum Plan
 
-- Use mob vnums sequentially within `14200-14399`.
-- **Mob vnums 14200-14208** are reserved for the nine service NPCs defined in the Shop + Service Requirements section above.
-- Remaining mob templates begin at vnum **14209** and continue sequentially.
+- Use mob vnums sequentially within `3539-3738`.
+- **Mob vnums 3539-3547** are reserved for the nine service NPCs defined in the Shop + Service Requirements section above.
+- Remaining mob templates begin at vnum **3548** and continue sequentially.
 - Target **55-62 mob templates total** (including 9 service NPCs) with strict role separation:
-  - Service NPCs (9 templates, vnums 14200-14208): postmaster, quartermaster, innkeeper, weaponsmith, armorer, provisioner, banker, magic dealer, healer. All level 150, sentinel, stay_area.
+  - Service NPCs (9 templates, vnums 3539-3547): postmaster, quartermaster, innkeeper, weaponsmith, armorer, provisioner, banker, magic dealer, healer. All level 150, sentinel, stay_area.
   - Approach-zone wildlife (6-8 templates): beach jackals, tidemouth crabs, tidepool eels, cairn kites, glass scorpion stragglers.
   - Approach-zone hostiles (4-5 templates): cairn scavengers, Red Sand outriders, Reach patrol deserters.
   - City ambient/non-combatant (8-10 templates): dock workers, caravan drovers, merchants, clerks, sailors, guild workers.
@@ -464,9 +464,9 @@ All shops open 24 hours. Profit buy/sell values: 120/80 standard rates; magic sh
   - City landmark NPCs (4-6 templates): Harbormaster, Ledger House heads, Strand Rememberer elder, Shrine adjudicator.
   - Undercroft hostiles (6-8 templates): Synod smugglers, Synod couriers, Synod ritual acolytes, Synod cell leader.
   - Bosses (3 templates):
-    - **Mini-boss** at `14298` — Quarantine Ledger Abomination (containment breach, animated hazard-class relic).
-    - **Major boss** at `14382` — Synod Eclipsed Tongue Hierophant (cell leader, caster-profile, sanctuaried).
-    - **Final boss** at `14395` — The Wrath of Mafdet (guardian manifestation, feline-form spirit, triggered by oath-violation or Synod presence, boss+sentinel+no_flee, in no_mob room).
+    - **Mini-boss** at `3637` — Quarantine Ledger Abomination (containment breach, animated hazard-class relic).
+    - **Major boss** at `3721` — Synod Eclipsed Tongue Hierophant (cell leader, caster-profile, sanctuaried).
+    - **Final boss** at `3734` — The Wrath of Mafdet (guardian manifestation, feline-form spirit, triggered by oath-violation or Synod presence, boss+sentinel+no_flee, in no_mob room).
 
 ### Mob Level Targets
 
@@ -482,7 +482,7 @@ All shops open 24 hours. Profit buy/sell values: 120/80 standard rates; magic sh
 
 ### Service NPC Levels
 
-- **Core service NPCs** (postmaster, quartermaster, innkeeper, weaponsmith, armorer, provisioner, banker, magic dealer, healer — vnums 14200-14208): level `150`, all flagged `is_npc|sentinel|stay_area` plus role-specific flags (`postman`, `bank`, `heal`). See Shop + Service Requirements for full definitions.
+- **Core service NPCs** (postmaster, quartermaster, innkeeper, weaponsmith, armorer, provisioner, banker, magic dealer, healer — vnums 3539-3547): level `150`, all flagged `is_npc|sentinel|stay_area` plus role-specific flags (`postman`, `bank`, `heal`). See Shop + Service Requirements for full definitions.
 - **Landmark/faction NPCs** (Harbormaster, Ledger House heads, Strand Rememberer elder): level `150` baseline for resilience, flagged `sentinel|stay_area`.
 - **Law enforcement NPCs** (Harbor Wardens, gate guards): level `120-140`.
 - **Ambient city NPCs** (dock workers, merchants, clerks): level `40-55`.
@@ -493,10 +493,10 @@ All shops open 24 hours. Profit buy/sell values: 120/80 standard rates; magic sh
 
 ### Object Vnum Plan
 
-- Use object vnums sequentially in-range (`14200-14399`).
+- Use object vnums sequentially in-range (`3539-3738`).
 - Target **120-130 objects** (including 66 shop inventory items across 4 shops), including:
 
-**Approach-zone items (vnums 14200-14214):**
+**Approach-zone items (vnums 3539-3553):**
 - Glasswalk shoes (footwear, chitin-and-resin soled sandals).
 - Tidemouth crab shell fragment (armor piece or treasure).
 - Cairn scavenger's pry bar (weapon).
@@ -506,7 +506,7 @@ All shops open 24 hours. Profit buy/sell values: 120/80 standard rates; magic sh
 - Reach Warden transit seal (quest item, extra description with cairn-station certification language).
 - Beach jackal pelt (treasure).
 
-**City equipment and trade goods (vnums 14215-14249):**
+**City equipment and trade goods (vnums 3554-3588):**
 - Saltweight bronze reference measure (treasure, extra descriptions with Great Oasis Measure calibration marks).
 - Shoreward Table fragment (treasure, stone slab with conversion-ratio charts, extra description in Legal-Conversion voice).
 - Ledger House wax seal stamp (held item).
@@ -517,7 +517,7 @@ All shops open 24 hours. Profit buy/sell values: 120/80 standard rates; magic sh
 - Draft-depth marker rod (held item, Littoral Branch notation).
 - Various shop items for provisioners and traders.
 
-**Harbor and maritime items (vnums 14250-14269):**
+**Harbor and maritime items (vnums 3589-3608):**
 - Harbor chain link (treasure, inscribed with Littoral Branch weather glyphs, extra description).
 - Signal tower lantern glass (colored, different types for different messages).
 - Captain's Register entry scroll (quest item).
@@ -526,14 +526,14 @@ All shops open 24 hours. Profit buy/sell values: 120/80 standard rates; magic sh
 - Sailcloth wrap (armor, about-wear).
 - Anchor stone fragment (treasure, Strand Folk era).
 
-**Shrine and guardian items (vnums 14270-14284):**
+**Shrine and guardian items (vnums 3609-3623):**
 - Swift Court verdict tablet (held item, wax-sealed, extra description with verdict text in Guardian-Judicial voice).
 - Claw-marked oath stone (quest item, four parallel grooves).
 - Shrine adjudicator's blade (weapon, slice type, ceremonial but functional).
 - Guardian talisman (neck-wear, feline iconography).
 - First Claw inscription rubbing (scroll, extra description with guardian origin text).
 
-**Undercroft and Synod items (vnums 14285-14304):**
+**Undercroft and Synod items (vnums 3624-3643):**
 - Synod ritual mask (face-wear, Eclipsed Tongues iconography).
 - Smuggler's manifest (scroll, false cargo entries, extra description).
 - Mislabeled relic crate lid (treasure, Synod classification forgery visible).
@@ -546,7 +546,7 @@ All shops open 24 hours. Profit buy/sell values: 120/80 standard rates; magic sh
 - Archive Passage Key (key, opens the Sealed Archive Passage door in District C).
 - Undercroft Grate Key (key, opens the grate to the deep undercroft in District E).
 
-**Boss-signature items (vnums 14305-14314, ITEM_BOSS + ITEM_LOOT):**
+**Boss-signature items (vnums 3644-3653, ITEM_BOSS + ITEM_LOOT):**
 - Quarantine Abomination's Containment Shard (weapon or held, from mini-boss).
 - Hierophant's Eclipsed Tongue Stave (weapon, staff-like, from major boss, two-handed).
 - Mafdet's Claw (weapon, claw type, from final boss — guardian-blessed, swift justice motif).
@@ -567,17 +567,17 @@ All shops open 24 hours. Profit buy/sell values: 120/80 standard rates; magic sh
 
 ## Progression and Difficulty Curve
 
-- **14200-14229 (District A):** Onboarding (55-62). Wildlife, scavengers, environmental hazard rooms. Introduces the Saltglass Reach transition and the Shoreward Seal landmark.
-- **14230-14264 (District B):** Commercial pressure (58-65). Red Sand encounters, pickpocket danger, caravan-lane control. Introduces factional tension.
-- **14265-14304 (District C):** Bureaucratic danger (60-68). Mostly safe interiors with dangerous archive guardians and the Quarantine containment breach mini-boss. Key-locked progression gates.
-- **14305-14349 (District D):** Harbor operations (62-72). Hostile sailors, dock-area ambushes, water-based encounters. The breakwater is exposed and dangerous.
-- **14350-14384 (District E):** Tidewall escalation (64-78). Upper Tidewall is moderate; the undercroft ramps to the area's highest sustained difficulty. Synod cells are organized and dangerous.
-- **14385-14399 (District F):** Culmination (72-80). Shrine Terrace elite encounters and the final boss.
+- **3539-3568 (District A):** Onboarding (55-62). Wildlife, scavengers, environmental hazard rooms. Introduces the Saltglass Reach transition and the Shoreward Seal landmark.
+- **3569-3603 (District B):** Commercial pressure (58-65). Red Sand encounters, pickpocket danger, caravan-lane control. Introduces factional tension.
+- **3604-3643 (District C):** Bureaucratic danger (60-68). Mostly safe interiors with dangerous archive guardians and the Quarantine containment breach mini-boss. Key-locked progression gates.
+- **3644-3688 (District D):** Harbor operations (62-72). Hostile sailors, dock-area ambushes, water-based encounters. The breakwater is exposed and dangerous.
+- **3689-3723 (District E):** Tidewall escalation (64-78). Upper Tidewall is moderate; the undercroft ramps to the area's highest sustained difficulty. Synod cells are organized and dangerous.
+- **3724-3738 (District F):** Culmination (72-80). Shrine Terrace elite encounters and the final boss.
 
 Boss cadence:
-- Mini-boss at `14298` (Quarantine Abomination, level 70, solo-flagged).
-- Major boss at `14382` (Synod Hierophant, level 76, boss-flagged).
-- Final boss at `14395` (Wrath of Mafdet, level 80, boss-flagged, no_flee, sentinel).
+- Mini-boss at `3637` (Quarantine Abomination, level 70, solo-flagged).
+- Major boss at `3721` (Synod Hierophant, level 76, boss-flagged).
+- Final boss at `3734` (Wrath of Mafdet, level 80, boss-flagged, no_flee, sentinel).
 
 ---
 
@@ -587,25 +587,25 @@ Boss cadence:
 
 Locked doors only where lore supports institutional barriers. All locked doors require valid key objects.
 
-1. **Landward Gate** (District A, `14224`):
+1. **Landward Gate** (District A, `3563`):
    - Direction: east (into city) / west (out to approach).
    - `<locks>`: `door` bit set. `<key_vnum>`: `-1` (no key, unlockable).
    - `#RESETS` command `D`: state `1` (closed on reset, not locked).
-   - Reverse exit on `14228` (or connected room) must also have `door` bit set.
+   - Reverse exit on `3567` (or connected room) must also have `door` bit set.
 
-2. **Storm Ledger Vault** (District C, `14281`):
+2. **Storm Ledger Vault** (District C, `3620`):
    - Direction: contextual (into vault).
    - `<locks>`: `door` + `locked` + `pickproof`. `<key_vnum>`: Storm Ledger Vault Key vnum.
    - `#RESETS` command `D`: state `2` (locked on reset).
    - Key drops from Storm Ledger Clerk mob or is found in the Ledger Quarter.
 
-3. **Sealed Archive Passage** (District C, `14289`):
+3. **Sealed Archive Passage** (District C, `3628`):
    - Direction: contextual (into deep archive).
    - `<locks>`: `door` + `locked` + `pickproof`. `<key_vnum>`: Archive Passage Key vnum.
    - `#RESETS` command `D`: state `2` (locked on reset).
    - Key drops from Tide Ledger Hall head or is found in the assessment courtyard.
 
-4. **Undercroft Grate** (District E, `14364`):
+4. **Undercroft Grate** (District E, `3703`):
    - Direction: down (into undercroft).
    - `<locks>`: `door` + `locked`. `<key_vnum>`: Undercroft Grate Key vnum.
    - `#RESETS` command `D`: state `2` (locked on reset).
@@ -627,12 +627,12 @@ Locked doors only where lore supports institutional barriers. All locked doors r
 
 | Mob Role | Spec Function | Location | Notes |
 |----------|--------------|----------|-------|
-| Gate Guard Captain | `spec_guard` | 14224 | Law enforcement at Landward Gate |
-| Harbor Warden Captain | `spec_guard` | 14317 | Law enforcement on Harbor Front |
-| Shrine Enforcer | `spec_cast_judge` | 14391 | Swift Court judicial caster |
-| Quarantine Abomination | `spec_cast_undead` | 14298 | Mini-boss, relic-animated entity |
-| Synod Hierophant | `spec_cast_cleric` | 14382 | Major boss, Eclipsed Tongues leader |
-| Wrath of Mafdet | `spec_cast_bigtime` | 14395 | Final boss, guardian manifestation |
+| Gate Guard Captain | `spec_guard` | 3563 | Law enforcement at Landward Gate |
+| Harbor Warden Captain | `spec_guard` | 3656 | Law enforcement on Harbor Front |
+| Shrine Enforcer | `spec_cast_judge` | 3730 | Swift Court judicial caster |
+| Quarantine Abomination | `spec_cast_undead` | 3637 | Mini-boss, relic-animated entity |
+| Synod Hierophant | `spec_cast_cleric` | 3721 | Major boss, Eclipsed Tongues leader |
+| Wrath of Mafdet | `spec_cast_bigtime` | 3734 | Final boss, guardian manifestation |
 | Synod Courier | `spec_thief` | Undercroft | Smuggler with theft behavior |
 | Dock Scavenger | `spec_fido` | Harbor edges | Picks up dropped items |
 | Beach Jackal | `spec_poison` | Approach zone | Venomous bite |
@@ -642,7 +642,7 @@ Locked doors only where lore supports institutional barriers. All locked doors r
 
 ## Connection Plan (External Links)
 
-- **West (14200):** Connection to the Saltglass Reach area (when built). Currently a terminal room with descriptive text indicating the Reach extends westward.
+- **West (3539):** Connection to the Saltglass Reach area (when built). Currently a terminal room with descriptive text indicating the Reach extends westward.
 - **No other external connections initially.** Mafdet is the eastern terminus; the sea is east, not another area. Future connections could include a sea-route link to Kowloon or Rakuen.
 
 ---
@@ -668,11 +668,11 @@ Locked doors only where lore supports institutional barriers. All locked doors r
 
 ## Implementation Checklist
 
-1. Populate all 200 rooms with unique names, descriptions, exits, and extra descriptions within vnum range `14200-14399`.
+1. Populate all 35 rooms with unique names, descriptions, exits, and extra descriptions within vnum range `3539-3738`.
 2. Build topology following the organic coastal layout — verify bi-directional exits, no illegal loops, no ROOM_MAZE unless intentional maze.
 3. Verify all 9 service rooms (postmaster, quartermaster, inn, weapon shop, armor shop, general shop, bank, magic shop, healer) are inside-sector, safe-flagged dead-ends with exactly one bi-directional exit each.
 4. Create all mob templates (55-62) with proper act flags, level assignments, and faction alignment.
-5. Create all 9 service NPCs (vnums 14200-14208) with correct role-specific act flags (`postman`, `bank`, `heal`), all level 150, all `is_npc|sentinel|stay_area`.
+5. Create all 9 service NPCs (vnums 3539-3547) with correct role-specific act flags (`postman`, `bank`, `heal`), all level 150, all `is_npc|sentinel|stay_area`.
 6. Create all object templates (120-130 total) with proper item types, wear flags, extra descriptions, and inscriptional language.
 7. Create all 66 shop inventory items across 4 shops with level-appropriate stats.
 8. Create 3 key objects for locked doors; verify every locked-on-reset door has a valid key vnum and corresponding key object.

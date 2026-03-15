@@ -133,14 +133,14 @@ Their traces should appear as inscriptions, ghostly reenactments, desk records, 
 
 ### Lore Expansion: Zone-by-Zone Story Beats
 
-- **Zone A (9500-9512):** Introduction to ruin-state facts; players infer catastrophe but not intent.
-- **Zone B (9513-9524):** Human cost emerges through barracks rosters, oath tablets, and forced induction logs.
+- **Zone A (2266-2278):** Introduction to ruin-state facts; players infer catastrophe but not intent.
+- **Zone B (2279-9524):** Human cost emerges through barracks rosters, oath tablets, and forced induction logs.
 - **Zone C (9525-9536):** Moral collapse made explicit: experimentation pipeline and failed ascension evidence.
 - **Zone D (9537-9548):** Technical truth of the disaster; sabotage and contradictory lock-state mechanics revealed.
-- **Zone E (9549-9560):** Testimony phase; spirits and records provide names, motives, and disputed accountability.
-- **Zone F (9561-9572):** Physical aftermath; bodies, flood systems, and abandoned emergency engineering.
-- **Zone G (9573-9584):** Judgment architecture; three lock traditions reconciled under player action.
-- **Zone H (9585-9599):** Final synthesis: Continuance was never solved, only deferred into the Reliquary Core.
+- **Zone E (9549-2303):** Testimony phase; spirits and records provide names, motives, and disputed accountability.
+- **Zone F (2304-2315):** Physical aftermath; bodies, flood systems, and abandoned emergency engineering.
+- **Zone G (2316-2327):** Judgment architecture; three lock traditions reconciled under player action.
+- **Zone H (2328-9599):** Final synthesis: Continuance was never solved, only deferred into the Reliquary Core.
 
 ### Lore Expansion: Ending Interpretation
 

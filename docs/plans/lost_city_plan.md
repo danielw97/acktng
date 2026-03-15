@@ -6,7 +6,7 @@
 **File Name:** `lost_city.are` 
 **Keyword:** `lost city desert ruins` 
 **Level Range:** 35-55 (`I 35 55`) 
-**Vnum Range (fixed):** **30400-30479** (`V 30400 30479`) 
+**Vnum Range (fixed):** **5331-5410** (`V 5331 5410`) 
 **Room Count Target:** **80/80 rooms used** 
 **Mob Count Target:** **80/80 mobs rewritten** 
 **Object Count Target:** **80/80 objects rewritten**
@@ -59,7 +59,7 @@ The area is framed as a former **corridor hinge-city** between oasis water admin
 - `L @@W(@@b35 55@@W)@@N~`
 - `N 8` (retain unless global area numbering pass requires migration)
 - `I 35 55`
-- `V 30400 30479`
+- `V 5331 5410`
 - `X 0`
 - `F 20`
 - `U @@bCobalt@@N dusk and @@ymarket-gold@@N dust sweep through the drowned courts of a law-broken desert capital.~`
@@ -69,71 +69,71 @@ The area is framed as a former **corridor hinge-city** between oasis water admin
 
 ---
 
-## Structural Rebuild (Rooms 30400-30479, all used)
+## Structural Rebuild (Rooms 5331-5410, all used)
 
-### District A: Gate of Broken Measures (30400-30409)
+### District A: Gate of Broken Measures (5331-5340)
 Entry zone with caravan-facing ruins and legal markers.
-- 30400 **Sunken Gate of Obelisks** (primary entry hub)
-- 30401-30404 checkpoint lanes, toll plinths, shattered ward towers
-- 30405 **Charter Dust Arcade** (named-exit branch hub)
-- 30406-30408 intake pens and collapsed weigh stations
-- 30409 **Plaza of Unpaid Oaths** (transition to civic core)
+- 5331 **Sunken Gate of Obelisks** (primary entry hub)
+- 5332-5335 checkpoint lanes, toll plinths, shattered ward towers
+- 5336 **Charter Dust Arcade** (named-exit branch hub)
+- 5337-5339 intake pens and collapsed weigh stations
+- 5340 **Plaza of Unpaid Oaths** (transition to civic core)
 
-### District B: Cistern Quarter of the Ledger Court (30410-30419)
+### District B: Cistern Quarter of the Ledger Court (5341-5350)
 Water governance district; civil collapse is readable in architecture.
-- 30410 **First Cistern Mouth**
-- 30411-30414 sluice halls, seal archives, weight-and-volume chambers
-- 30415 **Hall of Four Assessors** (lore-critical room)
-- 30416-30418 flooded adjudication annexes
-- 30419 **Dry Tribunal Steps** (transition to market district)
+- 5341 **First Cistern Mouth**
+- 5342-5345 sluice halls, seal archives, weight-and-volume chambers
+- 5346 **Hall of Four Assessors** (lore-critical room)
+- 5347-5349 flooded adjudication annexes
+- 5350 **Dry Tribunal Steps** (transition to market district)
 
-### District C: Saffron Market Necropolis (30420-30429)
+### District C: Saffron Market Necropolis (5351-5360)
 Hybrid civic/funerary trade quarter where relic economy replaced living commerce.
-- 30420 **Lantern Bazaar Ruin**
-- 30421-30424 salvage rows, relic assay stalls, collapsed caravan inns
-- 30425 **Coin-Basin Crossway** (vertical connector)
-- 30426-30428 mortuary broker courts
-- 30429 **Jackal Tally Yard** (faction front)
+- 5351 **Lantern Bazaar Ruin**
+- 5352-5355 salvage rows, relic assay stalls, collapsed caravan inns
+- 5356 **Coin-Basin Crossway** (vertical connector)
+- 5357-5359 mortuary broker courts
+- 5360 **Jackal Tally Yard** (faction front)
 
-### District D: Solar Docket Avenue (30430-30439)
+### District D: Solar Docket Avenue (5361-5370)
 Sand Sovereign-aligned monumental avenue with legal propaganda.
-- 30430 **Avenue of Ascending Decrees**
-- 30431-30434 gnomon plazas and sun-script colonnades
-- 30435 **Court of Noon Reckoning** (elite patrol node)
-- 30436-30438 guardian barracks and archive choke points
-- 30439 **Apex Relay Stair** (split route)
+- 5361 **Avenue of Ascending Decrees**
+- 5362-5365 gnomon plazas and sun-script colonnades
+- 5366 **Court of Noon Reckoning** (elite patrol node)
+- 5367-5369 guardian barracks and archive choke points
+- 5370 **Apex Relay Stair** (split route)
 
-### District E: Moonbound Descent Wards (30440-30449)
+### District E: Moonbound Descent Wards (5371-5380)
 Moon Sovereign-aligned undercity interfaces and crypt administration.
-- 30440 **Threshold of Seven Descents**
-- 30441-30444 tier-rites offices, embalmer registries, sealed descent ramps
-- 30445 **Registry of Silent Names** (lore-critical room)
-- 30446-30448 venom cistern interfaces and bone-tithe vaults
-- 30449 **Nadir Procession Gate**
+- 5371 **Threshold of Seven Descents**
+- 5372-5375 tier-rites offices, embalmer registries, sealed descent ramps
+- 5376 **Registry of Silent Names** (lore-critical room)
+- 5377-5379 venom cistern interfaces and bone-tithe vaults
+- 5380 **Nadir Procession Gate**
 
-### District F: Eclipse Fracture Concourse (30450-30459)
+### District F: Eclipse Fracture Concourse (5381-5390)
 Schism zone where solar and moon doctrines physically collide.
-- 30450 **Meridian Fracture Court**
-- 30451-30454 collapsed ritual observatories and split inscription walls
-- 30455 **Hall of Contradictory Verdicts** (high-threat narrative hub)
-- 30456-30458 unstable geometry passages / hazard routes
-- 30459 **Black-Sand Bridgehead**
+- 5381 **Meridian Fracture Court**
+- 5382-5385 collapsed ritual observatories and split inscription walls
+- 5386 **Hall of Contradictory Verdicts** (high-threat narrative hub)
+- 5387-5389 unstable geometry passages / hazard routes
+- 5390 **Black-Sand Bridgehead**
 
-### District G: Tyrant Crypt Ring (30460-30469)
+### District G: Tyrant Crypt Ring (5391-5400)
 Late-era authoritarian burial complex repurposed as militarized tomb-state.
-- 30460 **Outer Crypt Bastion**
-- 30461-30464 sarcophagus galleries, curse locks, honor guard bays
-- 30465 **Chamber of the Twin Seals** (mini-boss zone)
-- 30466-30468 blood-ink decree crypts
-- 30469 **Inner Seal Causeway**
+- 5391 **Outer Crypt Bastion**
+- 5392-5395 sarcophagus galleries, curse locks, honor guard bays
+- 5396 **Chamber of the Twin Seals** (mini-boss zone)
+- 5397-5399 blood-ink decree crypts
+- 5400 **Inner Seal Causeway**
 
-### District H: Deep Reliquary and Return Roads (30470-30479)
+### District H: Deep Reliquary and Return Roads (5401-5410)
 Boss endcap + extraction route reconnecting to desert graph.
-- 30470 **Reliquary Sink**
-- 30471-30474 drowned reliquary loops, shard vaults, oath pyres
-- 30475 **Vault of the Hollow Diadem** (primary boss room)
-- 30476-30478 aftermath routes, sealed adjudicator cells
-- 30479 **Ruinward South Track** (external transition room)
+- 5401 **Reliquary Sink**
+- 5402-5405 drowned reliquary loops, shard vaults, oath pyres
+- 5406 **Vault of the Hollow Diadem** (primary boss room)
+- 5407-5409 aftermath routes, sealed adjudicator cells
+- 5410 **Ruinward South Track** (external transition room)
 
 ---
 
@@ -141,33 +141,33 @@ Boss endcap + extraction route reconnecting to desert graph.
 
 - All exits are bi-directional.
 - No one-way trap navigation in baseline traversal.
-- District transitions occur at: 30409, 30419, 30429, 30439, 30449, 30459, 30469.
+- District transitions occur at: 5340, 5350, 5360, 5370, 5380, 5390, 5400.
 - At least one alternate route between each major district pair (mainline + risk path).
 - Locked door states set through `#RESETS` `D` commands (not exit lock bit misuse).
 - Named exits (`^...~`) are supported only where discoverability text is present in room descriptions or extras.
 
 ---
 
-## Mobile Rebuild Plan (`#MOBILES` 30400-30479)
+## Mobile Rebuild Plan (`#MOBILES` 5331-5410)
 
 All 80 mobile templates are rewritten. Sequential, no gaps.
 
 ### Faction bands
-- **30400-30411:** Gate scavengers, oath deserters, dust jackal handlers.
-- **30412-30423:** Cistern clerks, sluice revenants, charter wardens.
-- **30424-30435:** Market relic-brokers, embalmer militias, synod raiders.
-- **30436-30447:** Solar decree guardians, moonbound registrars, schism zealots.
-- **30448-30459:** Eclipse fracture entities, legal-rite phantoms, venom custodians.
-- **30460-30471:** Crypt honor guard, tyrant priests, curse engineers.
-- **30472-30479:** Boss suite and endgame attendants.
+- **5331-5342:** Gate scavengers, oath deserters, dust jackal handlers.
+- **5343-5354:** Cistern clerks, sluice revenants, charter wardens.
+- **5355-5366:** Market relic-brokers, embalmer militias, synod raiders.
+- **5367-5378:** Solar decree guardians, moonbound registrars, schism zealots.
+- **5379-5390:** Eclipse fracture entities, legal-rite phantoms, venom custodians.
+- **5391-5402:** Crypt honor guard, tyrant priests, curse engineers.
+- **5403-5410:** Boss suite and endgame attendants.
 
 ### Key mob anchors
-- **30415** The Fourth Assessor (civil-law mini-boss)
-- **30435** Noon Marshal of Broken Charters (solar elite)
-- **30445** Registrar of Silent Names (moon elite caster)
-- **30455** Meridian Heresiarch (schism enforcer)
-- **30465** Twin-Seal Chamberlain (crypt mini-boss)
-- **30475** The Hollow Diadem, Last Tyrant-Adjuticator (primary boss)
+- **5346** The Fourth Assessor (civil-law mini-boss)
+- **5366** Noon Marshal of Broken Charters (solar elite)
+- **5376** Registrar of Silent Names (moon elite caster)
+- **5386** Meridian Heresiarch (schism enforcer)
+- **5396** Twin-Seal Chamberlain (crypt mini-boss)
+- **5406** The Hollow Diadem, Last Tyrant-Adjuticator (primary boss)
 
 ### Spec policies
 - `is_npc` and `stay_area` on all mobs.
@@ -178,19 +178,19 @@ All 80 mobile templates are rewritten. Sequential, no gaps.
 
 ---
 
-## Object Rebuild Plan (`#OBJECTS` 30400-30479)
+## Object Rebuild Plan (`#OBJECTS` 5331-5410)
 
 All 80 object templates are rewritten. Sequential, no gaps.
 
 ### Object families
-- **30400-30409:** Entry gear, sand-scored utility kit, novice desert salvage tools.
-- **30410-30419:** Charter tablets, water seals, assessor insignia, legal keys.
-- **30420-30429:** Bazaar relics, ritual trade goods, embalmer compounds.
-- **30430-30439:** Solar court armor, decree staves, gnomon sigils.
-- **30440-30449:** Moonbound funerary instruments, veil talismans, descent keys.
-- **30450-30459:** Eclipse-split artifacts, unstable rite foci, hazard drops.
-- **30460-30469:** Tyrant crypt regalia, warded sarcophagus implements.
-- **30470-30479:** Boss-tier relic set, signature weapon/focus, extraction tokens.
+- **5331-5340:** Entry gear, sand-scored utility kit, novice desert salvage tools.
+- **5341-5350:** Charter tablets, water seals, assessor insignia, legal keys.
+- **5351-5360:** Bazaar relics, ritual trade goods, embalmer compounds.
+- **5361-5370:** Solar court armor, decree staves, gnomon sigils.
+- **5371-5380:** Moonbound funerary instruments, veil talismans, descent keys.
+- **5381-5390:** Eclipse-split artifacts, unstable rite foci, hazard drops.
+- **5391-5400:** Tyrant crypt regalia, warded sarcophagus implements.
+- **5401-5410:** Boss-tier relic set, signature weapon/focus, extraction tokens.
 
 ### Keying and locks
 - Distinct key chains for Cistern Quarter, Moon Wards, Crypt Ring, Reliquary Vault.
@@ -220,7 +220,7 @@ All 80 object templates are rewritten. Sequential, no gaps.
 
 ## Deliverables from this Plan
 
-1. Full rewrite of `lost_city.are` within **30400-30479**.
+1. Full rewrite of `lost_city.are` within **5331-5410**.
 2. 80 unique rooms, 80 rewritten mobs, 80 rewritten objects.
 3. Lore-consistent crosslinks to oasis and pyramid narratives.
 4. Spec-clean strings, formats, exits, locks, and reset behavior.

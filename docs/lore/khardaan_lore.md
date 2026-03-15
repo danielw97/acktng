@@ -217,43 +217,43 @@ Khar'Daan's story should always read as a struggle between measured order and wa
 
 ## District Lore Guide (for Room/Mob Writing)
 
-### 31000-31009 — Sunken Approach
+### 5624-5633 — Sunken Approach
 
 Public face of legitimacy: triumphal architecture now damaged but still broadcasting authority. Inscriptions threaten legal and spiritual penalties for unauthorized passage.
 
-### 31010-31019 — Scoured Barrens
+### 5634-5643 — Scoured Barrens
 
 Perimeter where engineered order gave way to ecology. Predatory fauna and raider traces show that external desert pressures have breached the old system.
 
-### 31020-31029 — Processional Necropolis
+### 5644-5653 — Processional Necropolis
 
 Civic dead and priestly labor corridors. The tone is methodical, mournful, bureaucratic.
 
-### 31030-31039 — Cistern Verge
+### 5654-5663 — Cistern Verge
 
 Mechanical heart under stress. Water soundscapes, unstable pressure, and active defensive entities.
 
-### 31040-31049 — Mortuary Workshops
+### 5664-5673 — Mortuary Workshops
 
 Body-processing infrastructure: knives, natron, linen, resin, tools. Industrial-sacred blend.
 
-### 31050-31059 — Archive Sink
+### 5674-5683 — Archive Sink
 
 Knowledge drowned but not erased. Fragmentary tablets, haunted indexing systems, contradictory records.
 
-### 31060-31069 — Oathguard Bastion
+### 5684-5693 — Oathguard Bastion
 
 Militarized death service. Duty without context. Drill architecture and martial funerary aesthetics.
 
-### 31070-31079 — Sealed Reliquaries
+### 5694-5703 — Sealed Reliquaries
 
 High taboo spaces for elite dead and dangerous legal artifacts. Heavy curse language and identity-binding motifs.
 
-### 31080-31089 — Drowned Court
+### 5704-5713 — Drowned Court
 
 Administrative center of late Khar'Daan. Treasury, oath halls, and flood command in partial ruin.
 
-### 31090-31099 — Phylactery Crown
+### 5714-5723 — Phylactery Crown
 
 Apex convergence of command, seal doctrine, and sovereign residue. Tone should be solemn, catastrophic, and final.
 

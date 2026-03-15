@@ -1,6 +1,6 @@
 # Lore Bible: The Great Oasis
 
-This document provides the canonical lore foundation for the Great Oasis area (vnums 8600-8699). All room descriptions, mobile identities, object flavor text, and inscription fragments should be authored in accordance with this lore bible. Cross-references to other areas are noted where relevant.
+This document provides the canonical lore foundation for the Great Oasis area (vnums 1932-2031). All room descriptions, mobile identities, object flavor text, and inscription fragments should be authored in accordance with this lore bible. Cross-references to other areas are noted where relevant.
 
 ---
 
@@ -60,7 +60,7 @@ The caravan yards were the most cosmopolitan space in the eastern desert. Mercha
 
 ## 4) The Ninth Meridian Rite and the Breaking of the Basin
 
-The Great Oasis was not the site of the Ninth Meridian Rite itself — that catastrophic ceremony took place at the Buried Court in the Eastern Desert (vnum 8599). But the oasis suffered its consequences more severely than any other location in the road network.
+The Great Oasis was not the site of the Ninth Meridian Rite itself — that catastrophic ceremony took place at the Buried Court in the Eastern Desert (vnum 1931). But the oasis suffered its consequences more severely than any other location in the road network.
 
 When the rite failed and the drought intensified, the underground springs that fed the Deepwell Confluence began to diminish. The cistern ring, designed for flood regulation rather than drought survival, could not compensate. Within two generations of the rite's failure, the oasis basin had shrunk to less than half its original surface area, and the garden terraces dried to dusty shelves.
 
@@ -85,7 +85,7 @@ The Spring Wardens are the closest thing the oasis has to legitimate authority, 
 The Spring Wardens are not hostile to players. They are a neutral-to-friendly faction that provides context, quest hooks, and a safe anchor point within the area.
 
 ### 5b) The Jackal Synod (Oasis Chapter)
-The ritualist faction evolved into a chapter of the **Jackal Synod**, the militant funerary cult that also controls toll shrines throughout the Eastern Desert (vnums 8500-8599). The oasis chapter occupies the ruins of the Toll Pavilion and the collapsed south and west cistern chambers, which they have repurposed as ritual spaces.
+The ritualist faction evolved into a chapter of the **Jackal Synod**, the militant funerary cult that also controls toll shrines throughout the Eastern Desert (vnums 1832-1931). The oasis chapter occupies the ruins of the Toll Pavilion and the collapsed south and west cistern chambers, which they have repurposed as ritual spaces.
 
 The oasis Synod chapter is doctrinally distinct from the Eastern Desert chapters. While the desert Synod is divided between Anointers of Continuance, Keepers of Dry Mercy, and Eclipsed Tongues, the oasis chapter follows a unique sub-doctrine called the **Wellmouth Creed** — the belief that the oasis springs are the literal mouths of a sleeping earth deity, and that proper ritual observance will cause the deity to "speak water" again. This doctrine is less apocalyptic than the Eclipsed Tongues but more delusional than the Keepers of Dry Mercy: the Wellmouth Creed demands that all water access be mediated through Synod rites, effectively making the cult a shadow water court.
 
@@ -107,7 +107,7 @@ The Great Oasis is not a featureless desert pool. Its physical geography reflect
 ### 6a) The Approach Dunes (West and South)
 The western approach from the Eastern Desert crosses rising dunes that were once flat road surfaces. Sand accumulation over centuries has buried the original road grade, creating a series of dune crests that provide visibility over long distances but make travel exhausting. The old charter stones are half-buried at irregular intervals, their inscriptions scoured but occasionally legible.
 
-The southern approach toward the Southern Oasis (vnum 9800) follows a shallow wadi — a seasonal watercourse that has been dry for generations but retains a distinctive gravel bed and cut banks. The wadi approach is easier walking than the dune approach but offers less visibility, making it favored by reavers for ambush.
+The southern approach toward the Southern Oasis (vnum 2539) follows a shallow wadi — a seasonal watercourse that has been dry for generations but retains a distinctive gravel bed and cut banks. The wadi approach is easier walking than the dune approach but offers less visibility, making it favored by reavers for ambush.
 
 ### 6b) The Palm Ring
 The oasis proper is still partially ringed by date palms — the descendants of trees planted during the Ledger Kingdom's garden terrace period. These palms are no longer cultivated and have reverted to wild growth patterns, but they mark the historical boundary of the irrigated zone. Inside the palm ring, the microclimate shifts noticeably: air temperature drops, humidity increases, and the constant desert wind dies to a murmur. The palm ring is the area's most distinctive environmental feature and should be described as a dramatic transition from harsh desert to sheltered basin.
@@ -146,7 +146,7 @@ Modern evidence of the Reach connection is visible in the dried wadi south of th
 
 ## 8) Cross-Area Lore Integration
 
-### 8a) Connection to the Eastern Desert (vnums 8500-8599, levels 30-100)
+### 8a) Connection to the Eastern Desert (vnums 1832-1931, levels 30-100)
 
 The Great Oasis is the Eastern Desert's geographical destination. The old caravan road that forms the Eastern Desert's Zone A spine terminates at the oasis's western approach. The two areas share a continuous historical narrative: the Eastern Desert documents the road network's collapse, while the Great Oasis documents what happened at the network's most important node.
 
@@ -155,29 +155,29 @@ Specific connections:
 - The Jackal Synod's oasis chapter (Wellmouth Creed) is a doctrinal cousin of the three Eastern Desert Synod factions. Oasis Synod NPCs should occasionally reference "the desert brothers" with a mixture of kinship and contempt — the oasis chapter considers itself closer to the truth because it guards actual water, not dry toll roads.
 - The Dune Reavers at the oasis are organizationally linked to the Eastern Desert's Reaver Confederates. The oasis band is better supplied (they have water access) but smaller (they can only feed a limited garrison). Reaver mob descriptions should reflect this: better-equipped than their desert counterparts but more cautious about provoking fights they cannot afford to lose.
 
-### 8b) Connection to the Southern Oasis (vnums 9800-9999)
+### 8b) Connection to the Southern Oasis (vnums 2539-2738)
 
 The southern exit from the Great Oasis leads toward the Southern Oasis, a separate water source further along the old road network. The two oases were historically linked by the **Twin Basin Compact** — a mutual-aid agreement stipulating that if either oasis suffered spring failure, the other would provide emergency water shipments along the connecting wadi.
 
 The compact failed during the post-Ninth Meridian drought when both oases experienced simultaneous spring reduction. The failure of the Twin Basin Compact is remembered bitterly at both locations and should be referenced in NPC dialogue and inscription fragments. The southern approach wadi still shows evidence of the old compact infrastructure: relay stations, water-jar caches, and signal towers designed for emergency communication between the two sites.
 
-### 8c) Connection to the Northern Pyramid (vnums 10125-10324, levels 100-120)
+### 8c) Connection to the Northern Pyramid (vnums 2864-3063, levels 100-120)
 
-The northern exits from the Great Oasis (currently connecting to vnums 8880-8888, reserved for future construction) point toward territory between the oasis and the Northern Pyramid. The oasis's Measuring House astronomical records — fragments of which survive in the north cistern archives — contain the earliest known reference to the site where the Northern Pyramid would later be built. The Keepers identified it as an optimal astronomical observation point, but they never built there because it lacked water access.
+The northern exits from the Great Oasis (currently connecting to vnums 2212-2220, reserved for future construction) point toward territory between the oasis and the Northern Pyramid. The oasis's Measuring House astronomical records — fragments of which survive in the north cistern archives — contain the earliest known reference to the site where the Northern Pyramid would later be built. The Keepers identified it as an optimal astronomical observation point, but they never built there because it lacked water access.
 
 The Sand Sovereign who later commissioned the Northern Pyramid used oasis-trained engineers and oasis-calibrated instruments for the pyramid's construction. In a real sense, the Northern Pyramid is a child of the Great Oasis's intellectual tradition — its astronomical precision descends directly from the Measuring House's calibration methodology.
 
-### 8d) Connection to Midgaard (vnums 3001-3200)
+### 8d) Connection to Midgaard (vnums 917-1116)
 
 Midgaard's city archives contain a collection called the **Oasis Folios** — a set of copied water-court documents, caravan manifests, and astronomical tables that Midgaard scholars purchased from oasis refugees after the Battle of the Dry Basin. These folios are the most complete surviving record of Ledger Kingdom water law and Keeper astronomical science.
 
 Midgaard-trained scholars occasionally visit the oasis to compare folio copies against surviving inscriptions. These visiting scholars can serve as NPC quest-givers or lore-delivery vehicles, bridging the oasis narrative with Midgaard's archival tradition.
 
-### 8e) Connection to Kowloon (vnums 14000-14099)
+### 8e) Connection to Kowloon (vnums 3439-3538)
 
 Kowloon's Jade Magistracy maintains a branch office in the oasis caravan yards (historically, at least — whether it still functions in the current era is a question for implementation). The Jade Clerks' water-debt accounting methodology is directly borrowed from the oasis Water Court's ledger system, adapted for grain and staple management. Kowloon traders who visit the oasis recognize the old ledger tablets with professional interest: they can read the accounting notation even when they cannot read the surrounding Measure Script text.
 
-### 8f) Connection to Kiess (vnums 13000-13099)
+### 8f) Connection to Kiess (vnums 3339-3438)
 
 Kiess sits on Roc Road west of Midgaard, at the far western end of the continental trade network. The Great Oasis sits in the east, connected to Kiess through Midgaard and the eastern caravan routes. Trade goods that originate in Kiess pass through Midgaard and then eastward to the oasis and the Eastern Desert beyond. The Temple of Concord in Kiess preserves a version of the Charter of Passage prayer that has been adapted into a civic benediction for departing merchants — evidence of how oasis legal-religious traditions diffused westward through the trade network.
 
@@ -401,7 +401,7 @@ Each of the twelve waystones in the waystone circle pointed to a different carav
 4. **The South-Southeastern Stone** — points toward a mining settlement that no longer exists. Inscription references copper and tin trade.
 5. **The Eastern Stone** — points toward the Northern Pyramid approach. Inscription references "the sovereign's commission."
 6. **The East-Northeastern Stone** — points toward highland grazing territories. Route abandoned after the Iseth Reach dried.
-7. **The Northern Stone** — points toward territories reserved for future area construction (vnums 8880-8888). Inscription references a "salt lake beyond the seventh ridge."
+7. **The Northern Stone** — points toward territories reserved for future area construction (vnums 2212-2220). Inscription references a "salt lake beyond the seventh ridge."
 8. **The Northwestward Stone** — points toward Kowloon's trade territory. Inscription references Jade Clerk trade missions.
 9. **The West-Northwestward Stone** — points toward an intermediate waystation (now buried).
 10. **The West-Southwestward Stone** — points toward a second Eastern Desert approach (seasonal alternate route).

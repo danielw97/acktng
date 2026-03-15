@@ -5,12 +5,12 @@ K scorching_sands~
 L @@y65  @@e85@@N~
 N 299
 I 65 85
-V 29900 29974
+V 4956 5030
 F 15
 U @@eHeat rolls over the Scorching Sands as convoy law and survival doctrine collide once more.@@N~
 O Virant~
 #MOBILES
-#29900
+#4956
 ash scorpion scout~
 an ash scorpion scout~
 An ash scorpion scout tests the sand with raised claws.
@@ -21,7 +21,7 @@ Its carapace is matte black with ember-red seams that vent tiny threads of heat.
 70 0
 0 0 0 0
 ! 0 0 0 0 1025 0 0
-#29901
+#4957
 cinder kite harrier~
 a cinder kite harrier~
 A cinder kite harrier circles low, searching for weakness.
@@ -32,7 +32,7 @@ This rangy carrion bird rides thermal updrafts with unnerving patience. Burn-sco
 72 0
 0 0 0 0
 ! 0 0 0 0 1025 0 0
-#29902
+#4958
 kiln adder~
 a kiln adder~
 A kiln adder coils among warm stone seams.
@@ -44,7 +44,7 @@ The serpent's scales shine like fired ceramic, each plate edged with pale ash. I
 0 0 0 0
 ! 0 0 0 0 1025 0 0
 | 128 64 0 0 0 128 64
-#29903
+#4959
 ledger mummy porter~
 a ledger mummy porter~
 A ledger mummy porter shuffles here with sealed satchels.
@@ -55,7 +55,7 @@ Faded wrappings bind this undead laborer from neck to heel, and waxed tags still
 73 0
 0 0 0 0
 ! 0 0 0 0 1025 0 4
-#29904
+#4960
 convoy triage marshal~
 a convoy triage marshal~
 A convoy triage marshal checks vent-wrap bundles with practiced speed.
@@ -66,7 +66,7 @@ Sun-hardened skin and copper-rimmed goggles mark this veteran of Southern Oasis 
 75 1
 0 0 0 0
 ! 0 0 0 0 3074 0 0
-#29905
+#4961
 witness elder of the crossing~
 a witness elder of the crossing~
 A witness elder of the crossing studies carved sticks in careful silence.
@@ -77,7 +77,7 @@ Age has bent their frame but sharpened their attention to detail. Bundles of wit
 76 0
 0 0 0 0
 ! 0 0 0 0 3074 0 0
-#29906
+#4962
 cinder broker enforcer~
 a cinder broker enforcer~
 A cinder broker enforcer watches passing traffic with predatory calm.
@@ -88,7 +88,7 @@ Layered wraps hide plated armor beneath, and a queue-tally baton hangs beside a 
 78 0
 10 0 0 0
 ! 0 0 0 0 3074 0 4
-#29907
+#4963
 toll hijacker captain~
 a toll hijacker captain~
 A toll hijacker captain has seized this checkpoint by force.
@@ -100,7 +100,7 @@ Soot-dark lacquer and scavenged insignia create a parody of official authority. 
 0 0 0 0
 ! 0 0 0 0 1025 2162688 4
 | 256 128 0 0 0 256 8
-#29908
+#4964
 channel cutthroat~
 a channel cutthroat~
 A channel cutthroat waits in the lee of broken stone.
@@ -111,7 +111,7 @@ Lean and dust-caked, this raider fights in short explosive bursts designed for n
 79 0
 0 0 0 0
 ! 0 0 0 0 3074 0 0
-#29909
+#4965
 forged witness thief~
 a forged witness thief~
 A forged witness thief palms counterfeit markers with quick fingers.
@@ -122,7 +122,7 @@ Fine tools and stolen carving blanks rattle in hidden pockets along their belt. 
 80 1
 0 0 0 0
 ! 0 0 0 0 3074 0 0
-#29910
+#4966
 channel falsifier~
 a channel falsifier~
 A channel falsifier inks corrections into old route ledgers.
@@ -134,7 +134,7 @@ This saboteur carries wax capsules, cracked seals, and spare tally strips. They 
 10 0 0 0
 ! 0 0 0 0 1025 10240 8
 | 128 64 0 0 0 128 64
-#29911
+#4967
 broker intimidator~
 a broker intimidator~
 A broker intimidator leans on a spear and scans the queue.
@@ -146,7 +146,7 @@ Broad-shouldered and wrapped in patched caravan cloth, this thug specializes in 
 20 0 0 0
 ! 0 0 0 0 1051652 0 0
 | 32 16 0 0 0 32 16
-#29912
+#4968
 seal clerk remnant~
 a seal clerk remnant~
 A seal clerk remnant arranges cracked tablets into strict order.
@@ -157,7 +157,7 @@ The clerk's robes are threadbare but still stamped with faded registry marks. Th
 71 0
 0 0 0 0
 ! 0 0 0 0 1025 0 0
-#29913
+#4969
 ration adjudicator remnant~
 a ration adjudicator remnant~
 A ration adjudicator remnant reviews loss claims aloud.
@@ -168,7 +168,7 @@ Ink-streaked sleeves and a battered counting frame mark this survivor of countle
 74 0
 0 0 0 0
 ! 0 0 0 0 1025 0 0
-#29914
+#4970
 gate scrivener remnant~
 a gate scrivener remnant~
 A gate scrivener remnant copies manifest marks onto fresh slates.
@@ -179,7 +179,7 @@ Their workspace is a portable desk of scorched wood strapped to a reinforced fra
 81 1
 0 0 0 0
 ! 0 0 0 0 3074 0 0
-#29915
+#4971
 ash scorpion reaver~
 an ash scorpion reaver~
 An ash scorpion reaver drags itself from a hot fissure.
@@ -190,7 +190,7 @@ Larger than common scouts, this specimen bears old blade breaks embedded in its 
 76 1
 0 0 0 0
 ! 0 0 0 0 3074 0 0
-#29916
+#4972
 cinder kite pack alpha~
 a cinder kite pack alpha~
 A cinder kite pack alpha shrieks and dives across the lane.
@@ -201,7 +201,7 @@ Scars around one eye and a torn outer wing feather mark repeated fights over col
 73 0
 0 0 0 0
 ! 0 0 0 0 1025 0 0
-#29917
+#4973
 fired-clay sentinel~
 a fired-clay sentinel~
 A fired-clay sentinel stands immobile beside a cracked seal rack.
@@ -212,7 +212,7 @@ This construct was molded for kiln security and hardened in extreme heat. Hairli
 80 1
 0 0 0 0
 ! 0 0 0 0 3074 2162688 4
-#29918
+#4974
 cauterist acolyte~
 a cauterist acolyte~
 A cauterist acolyte traces heated sigils across the stone.
@@ -224,7 +224,7 @@ Burn-gilded robes and scarified forearms mark initiation into the Cauterist Syno
 20 0 0 0
 ! 0 0 0 0 1051652 33554464 0
 | 32 16 0 0 0 34 16
-#29919
+#4975
 brand cantor~
 a brand cantor~
 A brand cantor chants cadence over a ring of glowing coals.
@@ -235,7 +235,7 @@ Iron hymn tags hang from a chain belt and strike each other with every movement.
 85 0
 10 0 0 0
 ! 0 0 0 0 1051652 0 8
-#29920
+#4976
 Orulan Bassek's Bound Assessor~
 Orulan Bassek's Bound Assessor~
 @@eOrulan Bassek's Bound Assessor stands beside a seal table, refusing all passage.@@N
@@ -248,7 +248,7 @@ Bound in layered kiln-wax bands and legal script, this revenant assessor still a
 ! 0 0 0 0 1650432 10240 24
 | 128 64 0 1051652 10240 162 72
 + 5 3 0 3 0 5 5 0 0
-#29921
+#4977
 re-firing deacon~
 a re-firing deacon~
 A re-firing deacon tends heat pits with relentless devotion.
@@ -261,7 +261,7 @@ Heavy gloves and chain-linked censers protect this Synod zealot from blistering 
 ! 0 0 0 0 1650432 0 0
 | 512 4 0 1051652 0 514 4
 + 5 3 0 0 0 5 5 0 0
-#29922
+#4978
 crucible warden~
 a crucible warden~
 A crucible warden blocks the approach with shield raised.
@@ -274,7 +274,7 @@ Plate segments of fused mineral and iron cover this veteran enforcer from throat
 ! 0 0 0 0 1650432 2162688 24
 | 260 2 0 1025 2162688 260 2
 + 10 3 0 5 0 3 3 0 0
-#29923
+#4979
 Warden of the Striated Piers~
 the Warden of the Striated Piers~
 @@eThe Warden of the Striated Piers patrols beneath banded stone, judging every traveler.@@N
@@ -287,7 +287,7 @@ This formidable gate enforcer wears striated armor that mirrors the fused column
 ! 0 0 0 0 1650432 0 0
 | 2 4 0 1650432 0 2 4
 + 5 5 0 0 0 8 8 3 0
-#29924
+#4980
 The Ember Crucible Regent~
 the Ember Crucible Regent~
 @@RThe Ember Crucible Regent rises within the heat-core, crowned in sparks and old authority.@@N
@@ -300,7 +300,7 @@ A towering figure of armor, ashglass, and contained furnace light, the Regent em
 ! 0 0 0 0 1025 0 0
 #0
 #OBJECTS
-#29925
+#4981
 burnt witness-stick bundle~
 @@ya burnt witness-stick bundle@@N~
 A burnt witness-stick bundle has been set down here for review.
@@ -310,7 +310,7 @@ A burnt witness-stick bundle has been set down here for review.
 2
 L
 69
-#29926
+#4982
 seven-color assay shard set~
 @@ba seven-color assay shard set@@N~
 A seven-color assay shard set lies here in a padded roll.
@@ -320,7 +320,7 @@ A seven-color assay shard set lies here in a padded roll.
 2
 L
 69
-#29927
+#4983
 falsified scorch-clause tablet~
 @@ea falsified scorch-clause tablet@@N~
 A falsified scorch-clause tablet rests here, edges chipped and re-inked.
@@ -330,7 +330,7 @@ A falsified scorch-clause tablet rests here, edges chipped and re-inked.
 2
 L
 69
-#29928
+#4984
 cinder gate transit token~
 @@ca cinder gate transit token@@N~
 A cinder gate transit token glints here under a skin of dust.
@@ -340,7 +340,7 @@ A cinder gate transit token glints here under a skin of dust.
 2
 L
 69
-#29929
+#4985
 bassek vault key~
 @@Wa Bassek vault key@@N~
 A Bassek vault key lies here on a split leather thong.
@@ -350,7 +350,7 @@ A Bassek vault key lies here on a split leather thong.
 1
 L
 68
-#29930
+#4986
 crucible valve key~
 @@Wa crucible valve key@@N~
 A crucible valve key rests here, warm to the touch.
@@ -360,7 +360,7 @@ A crucible valve key rests here, warm to the touch.
 1
 L
 76
-#29931
+#4987
 registrar's heatproof satchel~
 @@da registrar's heatproof satchel@@N~
 A registrar's heatproof satchel has been dropped here.
@@ -370,7 +370,7 @@ A registrar's heatproof satchel has been dropped here.
 2
 L
 69
-#29932
+#4988
 ashglass survey slate~
 @@ca ashglass survey slate@@N~
 An ashglass survey slate leans here against a stone marker.
@@ -380,7 +380,7 @@ An ashglass survey slate leans here against a stone marker.
 2
 L
 69
-#29933
+#4989
 convoy kiln-hide mantle~
 @@ya convoy kiln-hide mantle@@N~
 A convoy kiln-hide mantle lies here in folded layers.
@@ -390,7 +390,7 @@ A convoy kiln-hide mantle lies here in folded layers.
 8
 L
 70
-#29934
+#4990
 charter-edged khopesh~
 @@ea charter-edged khopesh@@N~
 A charter-edged khopesh has been left here in the sand.
@@ -400,7 +400,7 @@ A charter-edged khopesh has been left here in the sand.
 10
 L
 72
-#29935
+#4991
 witness-scribed spear~
 @@Wa witness-scribed spear@@N~
 A witness-scribed spear stands here with its butt sunk in grit.
@@ -410,7 +410,7 @@ A witness-scribed spear stands here with its butt sunk in grit.
 10
 L
 72
-#29936
+#4992
 seal-clasped harness~
 @@ba seal-clasped harness@@N~
 A seal-clasped harness lies here with brass fittings dulled by ash.
@@ -420,7 +420,7 @@ A seal-clasped harness lies here with brass fittings dulled by ash.
 8
 L
 70
-#29937
+#4993
 conversion-stamped buckler~
 @@ca conversion-stamped buckler@@N~
 A conversion-stamped buckler rests here beside a broken crate hoop.
@@ -430,7 +430,7 @@ A conversion-stamped buckler rests here beside a broken crate hoop.
 8
 L
 75
-#29938
+#4994
 ashglass gaiters~
 @@da pair of ashglass gaiters@@N~
 A pair of ashglass gaiters lies here, straps still intact.
@@ -440,7 +440,7 @@ A pair of ashglass gaiters lies here, straps still intact.
 8
 L
 70
-#29939
+#4995
 kiln-vent gauntlets~
 @@ea pair of kiln-vent gauntlets@@N~
 A pair of kiln-vent gauntlets has been set down here.
@@ -450,7 +450,7 @@ A pair of kiln-vent gauntlets has been set down here.
 8
 L
 70
-#29940
+#4996
 scorchproof veil~
 @@ya scorchproof veil@@N~
 A scorchproof veil flutters here in the shifting heatwind.
@@ -460,7 +460,7 @@ A scorchproof veil flutters here in the shifting heatwind.
 8
 L
 70
-#29941
+#4997
 warden relay baton~
 @@Wa warden relay baton@@N~
 A warden relay baton lies here with faded queue marks.
@@ -470,7 +470,7 @@ A warden relay baton lies here with faded queue marks.
 2
 L
 69
-#29942
+#4998
 channel cutthroat knife~
 @@ea channel cutthroat knife@@N~
 A channel cutthroat knife lies here, recently cleaned.
@@ -480,7 +480,7 @@ A channel cutthroat knife lies here, recently cleaned.
 10
 L
 72
-#29943
+#4999
 broker signal cord~
 @@ca broker signal cord@@N~
 A broker signal cord hangs here from a cracked peg.
@@ -490,7 +490,7 @@ A broker signal cord hangs here from a cracked peg.
 2
 L
 69
-#29944
+#5000
 triage vent-wrap kit~
 @@ba triage vent-wrap kit@@N~
 A triage vent-wrap kit sits here beside split ceramic tags.
@@ -500,7 +500,7 @@ A triage vent-wrap kit sits here beside split ceramic tags.
 2
 L
 69
-#29945
+#5001
 fused-rim cuirass~
 @@da fused-rim cuirass@@N~
 A fused-rim cuirass has been propped here against a column.
@@ -510,7 +510,7 @@ A fused-rim cuirass has been propped here against a column.
 8
 L
 70
-#29946
+#5002
 glasswind ward ring~
 @@ca glasswind ward ring@@N~
 A glasswind ward ring glitters here among ash grains.
@@ -520,7 +520,7 @@ A glasswind ward ring glitters here among ash grains.
 2
 L
 69
-#29947
+#5003
 striated pier helm~
 @@Wa striated pier helm@@N~
 A striated pier helm rests here, brim etched with thermal bands.
@@ -530,7 +530,7 @@ A striated pier helm rests here, brim etched with thermal bands.
 8
 L
 70
-#29948
+#5004
 ember crucible talisman~
 @@ea ember crucible talisman@@N~
 An ember crucible talisman lies here, humming faintly.
@@ -540,7 +540,7 @@ An ember crucible talisman lies here, humming faintly.
 2
 L
 69
-#29949
+#5005
 ember-regent sigil core~
 @@Rthe ember-regent sigil core@@N~
 The ember-regent sigil core smolders here with contained heat.
@@ -552,7 +552,7 @@ L
 85
 #0
 #ROOMS
-#29900
+#4956
 The Charter Heatline~
 @@yThe Charter Heatline@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The western track from the Eastern Desert enters here beneath heat-shivered air and old jurisdiction stones. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -560,9 +560,9 @@ The Charter Heatline~
 D1
 ~
 ~
-0 -1 29901
+0 -1 4957
 S
-#29901
+#4957
 Surveyor's Wind Post~
 @@ySurveyor's Wind Post@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A broken wind post still carries brass alignment vanes that once set convoy timing between shade intervals. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -570,13 +570,13 @@ Surveyor's Wind Post~
 D1
 ~
 ~
-0 -1 29902
+0 -1 4958
 D3
 ~
 ~
-0 -1 29900
+0 -1 4956
 S
-#29902
+#4958
 Split of the Three Convoys~
 @@ySplit of the Three Convoys@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Three hardened paths diverge at this stamped junction where clerks once recorded crew rotations and ration liabilities. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -584,21 +584,21 @@ Split of the Three Convoys~
 D0
 ~
 ~
-0 -1 29930
+0 -1 4986
 D1
 ~
 ~
-0 -1 29903
+0 -1 4959
 D3
 ~
 ~
-0 -1 29901
+0 -1 4957
 D4
 ~
 ~
-0 -1 29945
+0 -1 5001
 S
-#29903
+#4959
 Great Oasis Ration Spur~
 @@yGreat Oasis Ration Spur@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The spur from Great Oasis arrives with disciplined pack spacing and clipped ration calls that survive from water-law doctrine. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -606,13 +606,13 @@ Great Oasis Ration Spur~
 D1
 ~
 ~
-0 -1 29904
+0 -1 4960
 D3
 ~
 ~
-0 -1 29902
+0 -1 4958
 S
-#29904
+#4960
 Southern Hardening Track~
 @@ySouthern Hardening Track@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Southern Oasis drill marks scar the stones where crews practiced vent-wrap swaps and casualty triage under blowing ash. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -620,13 +620,13 @@ Southern Hardening Track~
 D1
 ~
 ~
-0 -1 29905
+0 -1 4961
 D3
 ~
 ~
-0 -1 29903
+0 -1 4959
 S
-#29905
+#4961
 Witness-Stick Clearing~
 @@yWitness-Stick Clearing@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Bundles of witness sticks hang from pegged poles so crossing cohorts can prove who marched which segment together. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -634,13 +634,13 @@ Witness-Stick Clearing~
 D1
 ~
 ~
-0 -1 29906
+0 -1 4962
 D3
 ~
 ~
-0 -1 29904
+0 -1 4960
 S
-#29906
+#4962
 Leeward Dune Shelf~
 @@yLeeward Dune Shelf@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A shallow leeward shelf gives brief relief from crosswind, though heat still rolls off the sand like an opened furnace. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -648,13 +648,13 @@ Leeward Dune Shelf~
 D1
 ~
 ~
-0 -1 29907
+0 -1 4963
 D3
 ~
 ~
-0 -1 29905
+0 -1 4961
 S
-#29907
+#4963
 False-Cool Mirage Pan~
 @@yFalse-Cool Mirage Pan@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A reflective pan of pale crust throws convincing illusions of shade pools that have lured many caravans off safe lines. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -662,13 +662,13 @@ False-Cool Mirage Pan~
 D1
 ~
 ~
-0 -1 29908
+0 -1 4964
 D3
 ~
 ~
-0 -1 29906
+0 -1 4962
 S
-#29908
+#4964
 Ash Scorpion Scrape~
 @@yAsh Scorpion Scrape@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Scored trenches and broken carapace plates show where ash scorpions molt and defend their burrows at dusk. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -676,13 +676,13 @@ Ash Scorpion Scrape~
 D1
 ~
 ~
-0 -1 29909
+0 -1 4965
 D3
 ~
 ~
-0 -1 29907
+0 -1 4963
 S
-#29909
+#4965
 Burned Cargo Scatter~
 @@yBurned Cargo Scatter@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Charred crate hoops and burst amphora shards lie in a fan where a convoy failed under heat inversion and panic. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -690,13 +690,13 @@ Burned Cargo Scatter~
 D1
 ~
 ~
-0 -1 29910
+0 -1 4966
 D3
 ~
 ~
-0 -1 29908
+0 -1 4964
 S
-#29910
+#4966
 Cracked Shade Arch I~
 @@yCracked Shade Arch I@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The first surviving shade arch stands cracked but legible, its schedule marks still used for march pacing. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -704,17 +704,17 @@ Cracked Shade Arch I~
 D0
 ~
 ~
-0 -1 29922
+0 -1 4978
 D1
 ~
 ~
-0 -1 29911
+0 -1 4967
 D3
 ~
 ~
-0 -1 29909
+0 -1 4965
 S
-#29911
+#4967
 Cinder Channel Mouth~
 @@yCinder Channel Mouth@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The ground drops into wind-sheltered channels where sound carries farther than sight and ambush lanes begin. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -722,17 +722,17 @@ Cinder Channel Mouth~
 D1
 ~
 ~
-0 -1 29912
+0 -1 4968
 D3
 ~
 ~
-0 -1 29910
+0 -1 4966
 D4
 ~
 ~
-0 -1 29930
+0 -1 4986
 S
-#29912
+#4968
 Drift Ledger Cairn~
 @@yDrift Ledger Cairn@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A cairn of legal tablets has been restacked many times, each layer adding edits to old toll and burden clauses. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -740,13 +740,13 @@ Drift Ledger Cairn~
 D1
 ~
 ~
-0 -1 29913
+0 -1 4969
 D3
 ~
 ~
-0 -1 29911
+0 -1 4967
 S
-#29913
+#4969
 Dust Oath Circle~
 @@yDust Oath Circle@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Travelers still form oath circles here before committing eastward, repeating formulas older than any current authority. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -754,13 +754,13 @@ Dust Oath Circle~
 D1
 ~
 ~
-0 -1 29914
+0 -1 4970
 D3
 ~
 ~
-0 -1 29912
+0 -1 4968
 S
-#29914
+#4970
 Gateward Ascent~
 @@yGateward Ascent@@N lies in the Ember Dunes intake, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The path climbs toward the Gate quarter, where inspection language grows sharper and mercy grows scarce. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -768,13 +768,13 @@ Gateward Ascent~
 D1
 ~
 ~
-0 -1 29915
+0 -1 4971
 D3
 ~
 ~
-0 -1 29913
+0 -1 4969
 S
-#29915
+#4971
 Bassek Compound Forecourt~
 @@bBassek Compound Forecourt@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Collapsed kiln buildings ring a forecourt stamped with Bassek-era batch marks and shipment seals. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -782,17 +782,17 @@ Bassek Compound Forecourt~
 D1
 ~
 ~
-0 -1 29916
+0 -1 4972
 D3
 ~
 ~
-0 -1 29914
+0 -1 4970
 D5
 ~
 ~
-0 -1 29902
+0 -1 4958
 S
-#29916
+#4972
 Seal Clerk Arcade~
 @@bSeal Clerk Arcade@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Arcade benches and slate stands show where seal clerks once verified heat tags before cargo changed custody. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -800,13 +800,13 @@ Seal Clerk Arcade~
 D1
 ~
 ~
-0 -1 29917
+0 -1 4973
 D3
 ~
 ~
-0 -1 29915
+0 -1 4971
 S
-#29917
+#4973
 Furnace Hands' Barrack Ruin~
 @@bFurnace Hands' Barrack Ruin@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Barrack walls are blackened by vent bursts and crowded with names of crews who never made the return march. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -814,13 +814,13 @@ Furnace Hands' Barrack Ruin~
 D1
 ~
 ~
-0 -1 29918
+0 -1 4974
 D3
 ~
 ~
-0 -1 29916
+0 -1 4972
 S
-#29918
+#4974
 Seven-Color Assay Hall~
 @@bSeven-Color Assay Hall@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Faded assay bands still stripe the hall, mapping the seven heat classes that governed legal certification. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -828,13 +828,13 @@ Seven-Color Assay Hall~
 D1
 ~
 ~
-0 -1 29919
+0 -1 4975
 D3
 ~
 ~
-0 -1 29917
+0 -1 4973
 S
-#29919
+#4975
 Sun-Fired Tag Kiln~
 @@bSun-Fired Tag Kiln@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A compact kiln chamber holds shattered tag molds and scorched racks where ceramic proofs were fired. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -842,13 +842,13 @@ Sun-Fired Tag Kiln~
 D1
 ~
 ~
-0 -1 29920
+0 -1 4976
 D3
 ~
 ~
-0 -1 29918
+0 -1 4974
 S
-#29920
+#4976
 Collapsed Firing Tunnel~
 @@bCollapsed Firing Tunnel@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The tunnel roof has sunk into jagged shelves, and warm gas breathes through cracks in irregular pulses. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -856,13 +856,13 @@ Collapsed Firing Tunnel~
 D1
 ~
 ~
-0 -1 29921
+0 -1 4977
 D3
 ~
 ~
-0 -1 29919
+0 -1 4975
 S
-#29921
+#4977
 Breath-Burn Basin~
 @@bBreath-Burn Basin@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Heat pools in this basin with little warning, turning routine movement into a timing exercise. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -870,13 +870,13 @@ Breath-Burn Basin~
 D1
 ~
 ~
-0 -1 29922
+0 -1 4978
 D3
 ~
 ~
-0 -1 29920
+0 -1 4976
 S
-#29922
+#4978
 Dual-Marker Calibration Slab~
 @@bDual-Marker Calibration Slab@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A broad slab carries twin survey systems, one Keeper measure-script and one later charter conversion hand. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -884,17 +884,17 @@ Dual-Marker Calibration Slab~
 D1
 ~
 ~
-0 -1 29923
+0 -1 4979
 D2
 ~
 ~
-0 -1 29910
+0 -1 4966
 D3
 ~
 ~
-0 -1 29921
+0 -1 4977
 S
-#29923
+#4979
 Burn Ledger Annex~
 @@bBurn Ledger Annex@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Tablet niches run in long rows, preserving production tallies beside ration disputes and punitive annotations. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -902,13 +902,13 @@ Burn Ledger Annex~
 D1
 ~
 ~
-0 -1 29924
+0 -1 4980
 D3
 ~
 ~
-0 -1 29922
+0 -1 4978
 S
-#29924
+#4980
 Cauterist Graffito Wall~
 @@bCauterist Graffito Wall@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Synod slogans overwrite older fiscal text here, but underlight still reveals erased fraud notes. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -916,13 +916,13 @@ Cauterist Graffito Wall~
 D1
 ~
 ~
-1 29929 29925
+1 4985 4981
 D3
 ~
 ~
-0 -1 29923
+0 -1 4979
 S
-#29925
+#4981
 Kiln Master's Seal Vault~
 @@bKiln Master's Seal Vault@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A sealed chamber once controlled high-grade tags and emergency clauses reserved for convoy crisis authority. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -930,13 +930,13 @@ Kiln Master's Seal Vault~
 D1
 ~
 ~
-0 -1 29926
+0 -1 4982
 D3
 ~
 ~
-1 29929 29924
+1 4985 4980
 S
-#29926
+#4982
 Charred Amphora Yard~
 @@bCharred Amphora Yard@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Stacks of amphora necks and lid seals create brittle lanes through an old storage yard. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -944,13 +944,13 @@ Charred Amphora Yard~
 D1
 ~
 ~
-0 -1 29927
+0 -1 4983
 D3
 ~
 ~
-0 -1 29925
+0 -1 4981
 S
-#29927
+#4983
 Ration Dispute Court~
 @@bRation Dispute Court@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Stone seats face a scorched dais where adjudicators measured loss claims against witness statements. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -958,13 +958,13 @@ Ration Dispute Court~
 D1
 ~
 ~
-0 -1 29928
+0 -1 4984
 D3
 ~
 ~
-0 -1 29926
+0 -1 4982
 S
-#29928
+#4984
 Ashfall Escarpment Stairs~
 @@bAshfall Escarpment Stairs@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Steep stairs climb the escarpment in switchbacks, linking kiln traffic to the rim routes above. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -972,17 +972,17 @@ Ashfall Escarpment Stairs~
 D0
 ~
 ~
-0 -1 29946
+0 -1 5002
 D1
 ~
 ~
-0 -1 29929
+0 -1 4985
 D3
 ~
 ~
-0 -1 29927
+0 -1 4983
 S
-#29929
+#4985
 Warden Relay Niche~
 @@bWarden Relay Niche@@N lies in the Kiln Basin quarter, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A recessed relay niche holds soot-stained posting boards used by wardens and contracted runners. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -990,13 +990,13 @@ Warden Relay Niche~
 D1
 ~
 ~
-0 -1 29930
+0 -1 4986
 D3
 ~
 ~
-0 -1 29928
+0 -1 4984
 S
-#29930
+#4986
 North Channel Descent~
 @@eNorth Channel Descent@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The descent narrows into channels where visibility shrinks and footfall echoes from both sides. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1004,21 +1004,21 @@ North Channel Descent~
 D1
 ~
 ~
-0 -1 29931
+0 -1 4987
 D2
 ~
 ~
-0 -1 29902
+0 -1 4958
 D3
 ~
 ~
-0 -1 29929
+0 -1 4985
 D5
 ~
 ~
-0 -1 29911
+0 -1 4967
 S
-#29931
+#4987
 Split Channel Run~
 @@eSplit Channel Run@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Three cut paths branch around old flood scars, forcing convoy leaders to gamble on speed or cover. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1026,13 +1026,13 @@ Split Channel Run~
 D1
 ~
 ~
-0 -1 29932
+0 -1 4988
 D3
 ~
 ~
-0 -1 29930
+0 -1 4986
 S
-#29932
+#4988
 Smuggler's Sidecut~
 @@eSmuggler's Sidecut@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A cramped sidecut bypass skirts official markers and smells of pitch, rope, and hurried barter. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1040,13 +1040,13 @@ Smuggler's Sidecut~
 D1
 ~
 ~
-0 -1 29933
+0 -1 4989
 D3
 ~
 ~
-0 -1 29931
+0 -1 4987
 S
-#29933
+#4989
 Overhung Heat Shelf~
 @@eOverhung Heat Shelf@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A stone overhang throws hard shadow at noon, making this shelf a favored lookout and ambush perch. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1054,13 +1054,13 @@ Overhung Heat Shelf~
 D1
 ~
 ~
-0 -1 29934
+0 -1 4990
 D3
 ~
 ~
-0 -1 29932
+0 -1 4988
 S
-#29934
+#4990
 Collapsed Culvert Mouth~
 @@eCollapsed Culvert Mouth@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Broken culvert rings choke the route into a killing funnel where carts must pass one at a time. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1068,13 +1068,13 @@ Collapsed Culvert Mouth~
 D1
 ~
 ~
-0 -1 29935
+0 -1 4991
 D3
 ~
 ~
-0 -1 29933
+0 -1 4989
 S
-#29935
+#4991
 Cloudburst Scour Mark~
 @@eCloudburst Scour Mark@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Ancient flood scoring climbs the walls, proof that rare cloudbursts can still erase entire traces. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1082,13 +1082,13 @@ Cloudburst Scour Mark~
 D1
 ~
 ~
-0 -1 29936
+0 -1 4992
 D3
 ~
 ~
-0 -1 29934
+0 -1 4990
 S
-#29936
+#4992
 Rope-Bridge Slot~
 @@eRope-Bridge Slot@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Anchors for a suspended crossing bite into opposite walls above a narrow, treacherous slot. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1096,17 +1096,17 @@ Rope-Bridge Slot~
 D1
 ~
 ~
-0 -1 29937
+0 -1 4993
 D3
 ~
 ~
-0 -1 29935
+0 -1 4991
 D4
 ~
 ~
-0 -1 29948
+0 -1 5004
 S
-#29937
+#4993
 Cinder Kite Roost~
 @@eCinder Kite Roost@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Cinder kites wheel and nest along warm ledges, descending whenever they scent fresh collapse. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1114,13 +1114,13 @@ Cinder Kite Roost~
 D1
 ~
 ~
-0 -1 29938
+0 -1 4994
 D3
 ~
 ~
-0 -1 29936
+0 -1 4992
 S
-#29938
+#4994
 Broker Whisper Post~
 @@eBroker Whisper Post@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A shaded notch serves as a broker contact point where warnings, prices, and threats trade hands. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1128,13 +1128,13 @@ Broker Whisper Post~
 D1
 ~
 ~
-0 -1 29939
+0 -1 4995
 D3
 ~
 ~
-0 -1 29937
+0 -1 4993
 S
-#29939
+#4995
 Hijacked Toll Station~
 @@eHijacked Toll Station@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The station's tariff slate is still mounted, now revised by armed crews who levy passage at bladepoint. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1142,13 +1142,13 @@ Hijacked Toll Station~
 D1
 ~
 ~
-0 -1 29940
+0 -1 4996
 D3
 ~
 ~
-0 -1 29938
+0 -1 4994
 S
-#29940
+#4996
 Witness Pyre Turn~
 @@eWitness Pyre Turn@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A memorial pyre ring marks a turn where testimony failed and a cohort vanished during legal transfer. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1156,13 +1156,13 @@ Witness Pyre Turn~
 D1
 ~
 ~
-0 -1 29941
+0 -1 4997
 D3
 ~
 ~
-0 -1 29939
+0 -1 4995
 S
-#29941
+#4997
 Channel Tri-Fork~
 @@eChannel Tri-Fork@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The channels split again around basalt ribs, each branch carrying different risks and timing windows. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1170,17 +1170,17 @@ Channel Tri-Fork~
 D1
 ~
 ~
-0 -1 29942
+0 -1 4998
 D3
 ~
 ~
-0 -1 29940
+0 -1 4996
 D4
 ~
 ~
-0 -1 29953
+0 -1 5009
 S
-#29942
+#4998
 Basalt Marker Blind~
 @@eBasalt Marker Blind@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Dark marker stones blend with surrounding rock, making route signs easy to miss under dust shear. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1188,13 +1188,13 @@ Basalt Marker Blind~
 D1
 ~
 ~
-0 -1 29943
+0 -1 4999
 D3
 ~
 ~
-0 -1 29941
+0 -1 4997
 S
-#29943
+#4999
 Broken Water Cart Sink~
 @@eBroken Water Cart Sink@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A sunken cart frame and dried skins show where a water train broke axle and discipline together. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1202,13 +1202,13 @@ Broken Water Cart Sink~
 D1
 ~
 ~
-0 -1 29944
+0 -1 5000
 D3
 ~
 ~
-0 -1 29942
+0 -1 4998
 S
-#29944
+#5000
 Gate Drain Approach~
 @@eGate Drain Approach@@N lies in the Cinder Channel lanes, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Drain channels slope toward the Gate quarter, carrying ash and rumor into the inspection zone. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1216,17 +1216,17 @@ Gate Drain Approach~
 D0
 ~
 ~
-0 -1 29960
+0 -1 5016
 D1
 ~
 ~
-0 -1 29945
+0 -1 5001
 D3
 ~
 ~
-0 -1 29943
+0 -1 4999
 S
-#29945
+#5001
 First Fused Crust~
 @@cFirst Fused Crust@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The sand begins to vitrify here, cracking underfoot with a thin musical ring. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1234,17 +1234,17 @@ First Fused Crust~
 D1
 ~
 ~
-0 -1 29946
+0 -1 5002
 D3
 ~
 ~
-0 -1 29944
+0 -1 5000
 D5
 ~
 ~
-0 -1 29902
+0 -1 4958
 S
-#29946
+#5002
 Slag Sheet Traverse~
 @@cSlag Sheet Traverse@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Wide slag sheets overlap in brittle plates that punish careless weight shifts. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1252,17 +1252,17 @@ Slag Sheet Traverse~
 D1
 ~
 ~
-0 -1 29947
+0 -1 5003
 D2
 ~
 ~
-0 -1 29928
+0 -1 4984
 D3
 ~
 ~
-0 -1 29945
+0 -1 5001
 S
-#29947
+#5003
 Glass-Sing Dune Crest~
 @@cGlass-Sing Dune Crest@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Wind over fused grit produces a high glass-singing note that masks distant movement. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1270,13 +1270,13 @@ Glass-Sing Dune Crest~
 D1
 ~
 ~
-0 -1 29948
+0 -1 5004
 D3
 ~
 ~
-0 -1 29946
+0 -1 5002
 S
-#29948
+#5004
 Rim Survey Needle~
 @@cRim Survey Needle@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A tall survey needle marks the old legal baseline for distance and load conversion. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1284,17 +1284,17 @@ Rim Survey Needle~
 D1
 ~
 ~
-0 -1 29949
+0 -1 5005
 D3
 ~
 ~
-0 -1 29947
+0 -1 5003
 D5
 ~
 ~
-0 -1 29936
+0 -1 4992
 S
-#29949
+#5005
 Heatquake Scar Fold~
 @@cHeatquake Scar Fold@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A folded scar from past heatquakes splits the route into upper and lower traverses. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1302,13 +1302,13 @@ Heatquake Scar Fold~
 D1
 ~
 ~
-0 -1 29950
+0 -1 5006
 D3
 ~
 ~
-0 -1 29948
+0 -1 5004
 S
-#29950
+#5006
 Shoreward Table Fragment~
 @@cShoreward Table Fragment@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Broken conversion tablets here link inland scorch clauses to littoral shoreward accounting. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1316,13 +1316,13 @@ Shoreward Table Fragment~
 D1
 ~
 ~
-0 -1 29951
+0 -1 5007
 D3
 ~
 ~
-0 -1 29949
+0 -1 5005
 S
-#29951
+#5007
 Vitrified Caravan Ruts~
 @@cVitrified Caravan Ruts@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Frozen wheel ruts shine through the crust, preserving old traffic patterns like a legal fossil. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1330,13 +1330,13 @@ Vitrified Caravan Ruts~
 D1
 ~
 ~
-0 -1 29952
+0 -1 5008
 D3
 ~
 ~
-0 -1 29950
+0 -1 5006
 S
-#29952
+#5008
 Mafdet Pre-Stamp Cairn~
 @@cMafdet Pre-Stamp Cairn@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Couriers stack pre-stamp cairn stones here before submitting manifests further east. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1344,13 +1344,13 @@ Mafdet Pre-Stamp Cairn~
 D1
 ~
 ~
-0 -1 29953
+0 -1 5009
 D3
 ~
 ~
-0 -1 29951
+0 -1 5007
 S
-#29953
+#5009
 Warden Ember Watch~
 @@cWarden Ember Watch@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A compact watch post surveys queue movement and flags suspect loads before they reach the piers. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1358,17 +1358,17 @@ Warden Ember Watch~
 D1
 ~
 ~
-0 -1 29954
+0 -1 5010
 D3
 ~
 ~
-0 -1 29952
+0 -1 5008
 D5
 ~
 ~
-0 -1 29941
+0 -1 4997
 S
-#29954
+#5010
 Rim Bandit Drift~
 @@cRim Bandit Drift@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Bandit trails braid across wind-polished flats, vanishing as quickly as they appear. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1376,13 +1376,13 @@ Rim Bandit Drift~
 D1
 ~
 ~
-0 -1 29955
+0 -1 5011
 D3
 ~
 ~
-0 -1 29953
+0 -1 5009
 S
-#29955
+#5011
 Saltglass Foretaste Flats~
 @@cSaltglass Foretaste Flats@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The terrain flattens into reflective bands that foreshadow the harsher glasswinds beyond. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1390,13 +1390,13 @@ Saltglass Foretaste Flats~
 D1
 ~
 ~
-0 -1 29956
+0 -1 5012
 D3
 ~
 ~
-0 -1 29954
+0 -1 5010
 S
-#29956
+#5012
 Cairnline Echo Post~
 @@cCairnline Echo Post@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. An echo post of stacked cairns repeats shouted bearings across the rim in clipped code. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1404,13 +1404,13 @@ Cairnline Echo Post~
 D1
 ~
 ~
-0 -1 29957
+0 -1 5013
 D3
 ~
 ~
-0 -1 29955
+0 -1 5011
 S
-#29957
+#5013
 Fused Pier Shadow~
 @@cFused Pier Shadow@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The silhouette of the Cinder Gate piers looms ahead, striated by fused and unfused stone. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1418,17 +1418,17 @@ Fused Pier Shadow~
 D1
 ~
 ~
-0 -1 29958
+0 -1 5014
 D3
 ~
 ~
-0 -1 29956
+0 -1 5012
 D4
 ~
 ~
-0 -1 29965
+0 -1 5021
 S
-#29958
+#5014
 Jurisdiction Windbreak~
 @@cJurisdiction Windbreak@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A windbreak wall channels waiting caravans into orderly files for final inland screening. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1436,13 +1436,13 @@ Jurisdiction Windbreak~
 D1
 ~
 ~
-0 -1 29959
+0 -1 5015
 D3
 ~
 ~
-0 -1 29957
+0 -1 5013
 S
-#29959
+#5015
 Outer Cinder Queue~
 @@cOuter Cinder Queue@@N lies in the Ashglass Rim transition, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Queue lanes begin in earnest, with brokers and wardens scanning faces and cargo marks. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1450,17 +1450,17 @@ Outer Cinder Queue~
 D0
 ~
 ~
-0 -1 29962
+0 -1 5018
 D1
 ~
 ~
-0 -1 29960
+0 -1 5016
 D3
 ~
 ~
-0 -1 29958
+0 -1 5014
 S
-#29960
+#5016
 The Cinder Gate West Pier~
 @@WThe Cinder Gate West Pier@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The west pier rises in banded stone where inland certifications are checked one final time. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1468,17 +1468,17 @@ The Cinder Gate West Pier~
 D1
 ~
 ~
-0 -1 29961
+0 -1 5017
 D2
 ~
 ~
-0 -1 29944
+0 -1 5000
 D3
 ~
 ~
-0 -1 29959
+0 -1 5015
 S
-#29961
+#5017
 The Cinder Gate East Pier~
 @@WThe Cinder Gate East Pier@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Beyond the east pier, Reach-bound doctrine takes over and penalties harden by segment. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1486,13 +1486,13 @@ The Cinder Gate East Pier~
 D1
 ~
 ~
-0 -1 29962
+0 -1 5018
 D3
 ~
 ~
-0 -1 29960
+0 -1 5016
 S
-#29962
+#5018
 Manifest Shade Court~
 @@WManifest Shade Court@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Canvas shade and chipped tables host arguments over manifests, witness marks, and ration tokens. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1500,17 +1500,17 @@ Manifest Shade Court~
 D1
 ~
 ~
-0 -1 29963
+0 -1 5019
 D2
 ~
 ~
-0 -1 29959
+0 -1 5015
 D3
 ~
 ~
-0 -1 29961
+0 -1 5017
 S
-#29963
+#5019
 Token Ledger Stand~
 @@WToken Ledger Stand@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Ledger stands hold token boards where shortages and substitutions are entered in strict order. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1518,13 +1518,13 @@ Token Ledger Stand~
 D1
 ~
 ~
-0 -1 29964
+0 -1 5020
 D3
 ~
 ~
-0 -1 29962
+0 -1 5018
 S
-#29964
+#5020
 Broker Rope Canopy~
 @@WBroker Rope Canopy@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Rope canopies shelter an information bazaar where every rumor carries a price. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1532,13 +1532,13 @@ Broker Rope Canopy~
 D1
 ~
 ~
-0 -1 29965
+0 -1 5021
 D3
 ~
 ~
-0 -1 29963
+0 -1 5019
 S
-#29965
+#5021
 Column of Striated Stone~
 @@WColumn of Striated Stone@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A massive striated column preserves thermal bands from the Ninth Meridian pulse. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1546,17 +1546,17 @@ Column of Striated Stone~
 D1
 ~
 ~
-0 -1 29966
+0 -1 5022
 D3
 ~
 ~
-0 -1 29964
+0 -1 5020
 D5
 ~
 ~
-0 -1 29957
+0 -1 5013
 S
-#29966
+#5022
 Gate Undershadow Passage~
 @@WGate Undershadow Passage@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A narrow passage runs under broken superstructure, useful for flank movement and quiet deals. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1564,13 +1564,13 @@ Gate Undershadow Passage~
 D1
 ~
 ~
-0 -1 29967
+0 -1 5023
 D3
 ~
 ~
-0 -1 29965
+0 -1 5021
 S
-#29967
+#5023
 Crucible Access Ramp~
 @@WCrucible Access Ramp@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The ramp rises toward restricted kiln machinery still feared by caravan veterans. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1578,13 +1578,13 @@ Crucible Access Ramp~
 D1
 ~
 ~
-0 -1 29968
+0 -1 5024
 D3
 ~
 ~
-0 -1 29966
+0 -1 5022
 S
-#29968
+#5024
 Ember Crucible Intake~
 @@WEmber Crucible Intake@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Intake channels feed residual heat into old regulators and scorch the air with metallic tang. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1592,13 +1592,13 @@ Ember Crucible Intake~
 D1
 ~
 ~
-1 29930 29969
+1 4986 5025
 D3
 ~
 ~
-0 -1 29967
+0 -1 5023
 S
-#29969
+#5025
 Thermal Valve Gallery~
 @@WThermal Valve Gallery@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Valve housings line the gallery where only keyed crews once adjusted flow and vent priority. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1606,13 +1606,13 @@ Thermal Valve Gallery~
 D1
 ~
 ~
-0 -1 29970
+0 -1 5026
 D3
 ~
 ~
-1 29930 29968
+1 4986 5024
 S
-#29970
+#5026
 Seal Re-Firing Chamber~
 @@WSeal Re-Firing Chamber@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Re-firing pits and stamp blocks remain arranged for emergency recertification under duress. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1620,13 +1620,13 @@ Seal Re-Firing Chamber~
 D1
 ~
 ~
-0 -1 29971
+0 -1 5027
 D3
 ~
 ~
-0 -1 29969
+0 -1 5025
 S
-#29971
+#5027
 The Crucible Heart~
 @@WThe Crucible Heart@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. At the core, the Ember Crucible throbs with unstable heat where authority and catastrophe meet. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1634,17 +1634,17 @@ The Crucible Heart~
 D1
 ~
 ~
-0 -1 29972
+0 -1 5028
 D3
 ~
 ~
-0 -1 29970
+0 -1 5026
 D4
 ~
 ~
-0 -1 29972
+0 -1 5028
 S
-#29972
+#5028
 Post-Burn Registry~
 @@WPost-Burn Registry@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. Registry desks and cooling racks form the final accounting point after crucible operations. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1652,17 +1652,17 @@ Post-Burn Registry~
 D1
 ~
 ~
-0 -1 29973
+0 -1 5029
 D3
 ~
 ~
-0 -1 29971
+0 -1 5027
 D5
 ~
 ~
-0 -1 29971
+0 -1 5027
 S
-#29973
+#5029
 Eastbound Heavy Road Join~
 @@WEastbound Heavy Road Join@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. The heavy road joins here, carrying screened convoys toward Saltglass Reach infrastructure. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1670,13 +1670,13 @@ Eastbound Heavy Road Join~
 D1
 ~
 ~
-0 -1 29974
+0 -1 5030
 D3
 ~
 ~
-0 -1 29972
+0 -1 5028
 S
-#29974
+#5030
 Mafdet Relay Spur~
 @@WMafdet Relay Spur@@N lies in the Cinder Gate jurisdiction, where Scorch Clause procedure and raw heat force every traveler to move by discipline rather than comfort. A relay spur angles northeast toward Mafdet channels where inland papers meet littoral scrutiny. Older inscription layers still survive in bands, with Keeper calibration marks below Ledger Kingdom tallies and later Synod edits scratched on top. Convoy crews speak in short ration terms while watching the wind for inversion pulses, because a single mistaken pause can break an entire file. Every surface carries evidence that administration outlived authority here, turning paperwork, witness marks, and survival practice into the same hard ritual.
 ~
@@ -1684,87 +1684,87 @@ Mafdet Relay Spur~
 D3
 ~
 ~
-0 -1 29973
+0 -1 5029
 S
 #0
 #RESETS
-M 0 29900 4 29908
-M 0 29900 3 29954
-M 0 29901 3 29910
-M 0 29901 3 29947
-M 0 29902 3 29907
-M 0 29903 3 29917
-M 0 29904 3 29904
-G 0 29944 1
-G 0 29940 1
-M 0 29905 3 29905
-G 0 29925 1
-M 0 29906 3 29913
-G 0 29942 1
-G 0 29937 1
-M 0 29907 3 29939
-G 0 29927 1
-G 0 29934 1
-M 0 29908 4 29933
-G 0 29942 1
-M 0 29909 3 29932
-G 0 29943 1
-M 0 29910 3 29938
-G 0 29928 1
-M 0 29911 3 29940
-G 0 29935 1
-M 0 29912 3 29901
-M 0 29913 3 29903
-G 0 29931 1
-M 0 29914 3 29916
-G 0 29941 1
-M 0 29915 3 29934
-M 0 29916 3 29937
-M 0 29917 3 29918
-G 0 29945 1
-M 0 29918 4 29924
-G 0 29948 1
-M 0 29919 3 29921
-G 0 29928 1
-M 0 29920 2 29925
-G 0 29934 1
-G 0 29926 1
-M 0 29921 3 29929
-G 0 29939 1
-G 0 29930 1
-M 0 29922 3 29953
-G 0 29945 1
-M 0 29922 3 29967
-G 0 29936 1
-G 0 29947 1
-M 0 29923 2 29960
-G 0 29947 1
-G 0 29946 1
-M 0 29924 1 29971
-G 0 29949 1
-O 0 29929 1 29923
-O 0 29930 1 29967
-O 0 29926 1 29918
-O 0 29927 1 29924
-O 0 29931 1 29962
-O 0 29932 1 29948
-O 0 29933 1 29906
-O 0 29938 1 29946
-O 0 29946 1 29965
-D 0 29924 1 2
-D 0 29925 3 2
-D 0 29968 1 2
-D 0 29969 3 2
+M 0 4956 4 4964
+M 0 4956 3 5010
+M 0 4957 3 4966
+M 0 4957 3 5003
+M 0 4958 3 4963
+M 0 4959 3 4973
+M 0 4960 3 4960
+G 0 5000 1
+G 0 4996 1
+M 0 4961 3 4961
+G 0 4981 1
+M 0 4962 3 4969
+G 0 4998 1
+G 0 4993 1
+M 0 4963 3 4995
+G 0 4983 1
+G 0 4990 1
+M 0 4964 4 4989
+G 0 4998 1
+M 0 4965 3 4988
+G 0 4999 1
+M 0 4966 3 4994
+G 0 4984 1
+M 0 4967 3 4996
+G 0 4991 1
+M 0 4968 3 4957
+M 0 4969 3 4959
+G 0 4987 1
+M 0 4970 3 4972
+G 0 4997 1
+M 0 4971 3 4990
+M 0 4972 3 4993
+M 0 4973 3 4974
+G 0 5001 1
+M 0 4974 4 4980
+G 0 5004 1
+M 0 4975 3 4977
+G 0 4984 1
+M 0 4976 2 4981
+G 0 4990 1
+G 0 4982 1
+M 0 4977 3 4985
+G 0 4995 1
+G 0 4986 1
+M 0 4978 3 5009
+G 0 5001 1
+M 0 4978 3 5023
+G 0 4992 1
+G 0 5003 1
+M 0 4979 2 5016
+G 0 5003 1
+G 0 5002 1
+M 0 4980 1 5027
+G 0 5005 1
+O 0 4985 1 4979
+O 0 4986 1 5023
+O 0 4982 1 4974
+O 0 4983 1 4980
+O 0 4987 1 5018
+O 0 4988 1 5004
+O 0 4989 1 4962
+O 0 4994 1 5002
+O 0 5002 1 5021
+D 0 4980 1 2
+D 0 4981 3 2
+D 0 5024 1 2
+D 0 5025 3 2
 S
 #SPECIALS
-M 29904 spec_ss_kiln_overseer
-M 29905 spec_ss_manifest_warden
-M 29906 spec_ss_cinder_broker
-M 29907 spec_ss_cinder_broker
-M 29912 spec_ss_kiln_overseer
-M 29913 spec_ss_manifest_warden
-M 29914 spec_ss_cinder_broker
-M 29922 spec_ss_manifest_warden
-M 29923 spec_ss_manifest_warden
+M 4960 spec_ss_kiln_overseer
+M 4961 spec_ss_manifest_warden
+M 4962 spec_ss_cinder_broker
+M 4963 spec_ss_cinder_broker
+M 4968 spec_ss_kiln_overseer
+M 4969 spec_ss_manifest_warden
+M 4970 spec_ss_cinder_broker
+M 4978 spec_ss_manifest_warden
+M 4979 spec_ss_manifest_warden
 S
 #$

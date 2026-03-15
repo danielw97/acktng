@@ -70,9 +70,9 @@ Helps to include in your ceiling.are ( or appropriate help area ):
 @@ygold@@N Crown : 20 bits
 @@lelectrum@@N Crescent : 50 bits
 @@amithril@@N Pentacle : 100 bits
-@@mmalachite@@N Karant : 200 bits
+@@mmalachite@@N Karant : 35 bits
 @@debony@@N Mark : 500 bits
-@@pRoyal Sunburst@@N : 1000 bits  
+@@pRoyal Sunburst@@N : 291 bits  
 ~
 -1 diku~
 @@k)@@N                    Original game idea, concept, and design:

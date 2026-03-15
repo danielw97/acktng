@@ -4,13 +4,13 @@
 
 - **Area Name:** `@@G@@WRakuen, @@gCity of the Last Promise@@N`
 - **Area File:** `area/rakuen.are` (new area)
-- **Vnum Envelope (200 total):** `V 16000 16199`
-- **Allocation Model:** 100 rooms (`16000-16099`), 50 mobiles (`16100-16149`), 50 objects (`16150-16199`)
+- **Vnum Envelope (35 total):** `V 4239 4438`
+- **Allocation Model:** 100 rooms (`4239-4338`), 50 mobiles (`4339-4388`), 50 objects (`4389-4438`)
 - **Target Level Band:** 45-95 (urban/woodland political hazard band)
 - **Reset Rate:** 20
 - **Reset Message:** `@@gwater climbs the old root-weave and Rakuen resets its queues@@N`
 - **Owner:** `Virant`
-- **Primary Access:** Eccentric Woodland southern route (room `7698`) connects north into Rakuen entry room `16000`
+- **Primary Access:** Eccentric Woodland southern route (room `1830`) connects north into Rakuen entry room `4239`
 
 Rakuen is built as a vertically layered, politically fractured city that still performs paradise while living under ration law, flood risk, and corridor dependence. Layout, encounters, and objectization must center this contradiction.
 
@@ -21,7 +21,7 @@ Rakuen is built as a vertically layered, politically fractured city that still p
 ### Area Header
 
 1. Use `Q 16` and `O Virant~` in `#AREA`.
-2. Keep all authored rooms/mobs/objects within `16000-16199`.
+2. Keep all authored rooms/mobs/objects within `4239-4438`.
 3. Keep prose free of explicit vnum mentions.
 
 ### String Formatting
@@ -140,26 +140,26 @@ Connectivity policy:
 
 ## External Connectivity
 
-- **Eccentric Woodland link (north entry):** Room `16000` north exit connects to Eccentric Woodland room `7698` south. The Eccentric Woodland plan references this endpoint as the Rakuen north dispatch gate; the implementation assigns it to `16000`. Both sides must be wired symmetrically in the final build.
+- **Eccentric Woodland link (north entry):** Room `4239` north exit connects to Eccentric Woodland room `1830` south. The Eccentric Woodland plan references this endpoint as the Rakuen north dispatch gate; the implementation assigns it to `4239`. Both sides must be wired symmetrically in the final build.
 - Approach content in Zone 1 must preserve the "managed denial" and route-variance tone established in the Eccentric Woodland southern dispatch corridor.
 
 ---
 
 ## Zone Plan (100 Rooms Total)
 
-### Zone 1: Approach Terraces & Woodland Entry (`16000–16012`, 13 rooms)
+### Zone 1: Approach Terraces & Woodland Entry (`4239–4251`, 13 rooms)
 
 **Role:** Transition from Eccentric Woodland uncertainty into Rakuen's managed-entry culture.
 
 Key spaces:
-- Outer guide-marker run (3 rooms — entry approach from woodland, includes room `16000`)
+- Outer guide-marker run (3 rooms — entry approach from woodland, includes room `4239`)
 - Redwater crossing overlook (1 room)
 - Lower Dispatch House entry floor (3 rooms, `indoors`)
 - Route-board court (2 rooms)
 - First terrace stairs and flood warning drums (2 rooms)
 - Terrace junction connecting to Zones 2 and 3 (2 rooms)
 
-Mob focus (`16100–16107`, 8 mobs):
+Mob focus (`4339–4346`, 8 mobs):
 - Dispatch registrar (`sentinel` + `stay_area`)
 - Canopy compact runner (`stay_area`)
 - Woodland contract guide (`stay_area`)
@@ -169,7 +169,7 @@ Mob focus (`16100–16107`, 8 mobs):
 - Terrace checkpoint officer (`sentinel` + `stay_area`, `spec_guard` if law-enforcement)
 - Approach guide stump warden (`stay_area`)
 
-Object focus (`16150–16156`, 7 objects):
+Object focus (`4389–4395`, 7 objects):
 - Weathered route board slats (`board` type, `take`)
 - Stamped travel writ bundle (`quest` type, `take`)
 - Compact rope harness (`armor` type, `body` + `take`)
@@ -180,7 +180,7 @@ Object focus (`16150–16156`, 7 objects):
 
 ---
 
-### Zone 2: Lower Terraces (`16013–16032`, 20 rooms)
+### Zone 2: Lower Terraces (`4252–4271`, 20 rooms)
 
 **Role:** Flood-prone root-weave ruins and inhabited pockets where paradise aesthetics persist under decay.
 
@@ -191,7 +191,7 @@ Subclusters:
 - Collapsed promenade walk (4 rooms)
 - Ember Warden floodline stations (3 rooms)
 
-Mob focus (`16108–16118`, 11 mobs):
+Mob focus (`4347–4357`, 11 mobs):
 - Lower Terrace compact steward (`sentinel` + `stay_area`)
 - Flood-watch warden (`sentinel` + `stay_area`)
 - Displaced gardener (`stay_area`)
@@ -204,7 +204,7 @@ Mob focus (`16108–16118`, 11 mobs):
 - Waterlogged root-leech (`aggressive` + `stay_area`)
 - Lower terrace scavenger hound (`aggressive` + `stay_area`)
 
-Object focus (`16157–16166`, 10 objects):
+Object focus (`4396–4405`, 10 objects):
 - Salvage stilt brace (`treasure` type, `take`)
 - Moss-sealed grain jar (`food` type, `take`)
 - Promise-stone votive ribbon (`treasure` type, `take`)
@@ -218,7 +218,7 @@ Object focus (`16157–16166`, 10 objects):
 
 ---
 
-### Zone 3: Causeway Quarter (`16033–16062`, 30 rooms)
+### Zone 3: Causeway Quarter (`4272–4301`, 30 rooms)
 
 **Role:** Functional disaster-infrastructure core — ration towers, Central Market, Dispatch House, queue politics.
 
@@ -230,7 +230,7 @@ Required anchors:
 - Queue lanes, wash channels, storehouse ribs (9 rooms)
 - **Boss room:** one `no_mob` room for the Causeway Enforcement Marshal
 
-Mob focus (`16119–16131`, 13 mobs):
+Mob focus (`4358–4370`, 13 mobs):
 - Ration clerk (`sentinel` + `stay_area`)
 - Tower guard (hostile, `sentinel` + `stay_area`; `spec_guard` for law-enforcement role)
 - Market quarter laborer (`stay_area`, `spec_laborer`)
@@ -245,7 +245,7 @@ Mob focus (`16119–16131`, 13 mobs):
 - Causeway lamp lighter (`stay_area`, `spec_lamplighter`)
 - **Boss: Causeway Enforcement Marshal** (`is_npc` + `sentinel` + `stay_area` + `boss`; placed in `no_mob` room; loot: `ITEM_BOSS` + `ITEM_LOOT`)
 
-Object focus (`16167–16179`, 13 objects):
+Object focus (`4406–4418`, 13 objects):
 - Ration chit bundle (`quest` type, `take`)
 - Sealed grain crate (`container` type, `take`)
 - Ash-scrub wash tool set (`treasure` type, `take`)
@@ -262,7 +262,7 @@ Object focus (`16167–16179`, 13 objects):
 
 ---
 
-### Zone 4: Upper Civic Ring (`16063–16082`, 20 rooms)
+### Zone 4: Upper Civic Ring (`4302–4321`, 20 rooms)
 
 **Role:** Preserved civic layer where symbolism, governance, and archival power converge.
 
@@ -275,7 +275,7 @@ Required anchors:
 - Connecting ring passage (3 rooms)
 - **Boss room:** one `no_mob` room for Senior Steward Colwen Dast
 
-Mob focus (`16132–16140`, 9 mobs):
+Mob focus (`4371–4379`, 9 mobs):
 - Bloom Council steward (`sentinel` + `stay_area`)
 - Garden Ledger clerk (`sentinel` + `stay_area`)
 - Archive custodian (`sentinel` + `stay_area`)
@@ -286,7 +286,7 @@ Mob focus (`16132–16140`, 9 mobs):
 - Upper Dispatch House registrar (`sentinel` + `stay_area`)
 - **Boss: Senior Steward Colwen Dast** (`is_npc` + `sentinel` + `stay_area` + `boss`; placed in `no_mob` room; loot: `ITEM_BOSS` + `ITEM_LOOT`)
 
-Object focus (`16180–16189`, 10 objects):
+Object focus (`4419–4428`, 10 objects):
 - Edited thesis folio (`treasure` type, `take`)
 - Archive challenge ledger (`quest` type, `take`)
 - Council seal-box (`container` type, `take`)
@@ -300,7 +300,7 @@ Object focus (`16180–16189`, 10 objects):
 
 ---
 
-### Zone 5: Canopy Workshops (`16083–16094`, 12 rooms)
+### Zone 5: Canopy Workshops (`4322–4333`, 12 rooms)
 
 **Role:** Eastern craft district governed by compact mutual-aid logic more than central ceremony.
 
@@ -311,7 +311,7 @@ Subclusters:
 - Medicine drying lofts (2 rooms, `indoors`)
 - Compact mediation circle (3 rooms)
 
-Mob focus (`16141–16146`, 6 mobs):
+Mob focus (`4380–4385`, 6 mobs):
 - Workshop foremaster (`sentinel` + `stay_area`)
 - Cordage crew member (`stay_area`)
 - Herbal preparer (`stay_area`)
@@ -319,7 +319,7 @@ Mob focus (`16141–16146`, 6 mobs):
 - Quiet separatist organizer (`stay_area`)
 - Dye platform tender (`stay_area`)
 
-Object focus (`16190–16195`, 6 objects):
+Object focus (`4429–4434`, 6 objects):
 - Trade-ready cordage coil (`treasure` type, `take`)
 - Canopy resin jar (`treasure` type, `take`)
 - Dye pigment bundle (`treasure` type, `take`)
@@ -329,7 +329,7 @@ Object focus (`16190–16195`, 6 objects):
 
 ---
 
-### Zone 6: Root Tunnels (`16095–16099`, 5 rooms)
+### Zone 6: Root Tunnels (`4334–4338`, 5 rooms)
 
 **Role:** Flooded undercroft beneath terraces; pressure-release corridors and hidden movement lines.
 
@@ -340,12 +340,12 @@ Spaces:
 - Hidden archive transfer niche (1 room, `indoors`)
 - Emergency ascent shaft (1 room, `indoors`)
 
-Mob focus (`16147–16149`, 3 mobs):
+Mob focus (`4386–4388`, 3 mobs):
 - Tunnel pump keeper (`sentinel` + `stay_area`)
 - Undercroft scavenger (`stay_area`)
 - Ash-slick root leech (`aggressive` + `stay_area`)
 
-Object focus (`16196–16199`, 4 objects):
+Object focus (`4435–4438`, 4 objects):
 - Valve key (`key` type, `take`) — unlocks siphon vault access hatch
 - Floodgate chain (`treasure` type, `take`)
 - Sealed testimony tube (`quest` type, `take`)
@@ -359,13 +359,13 @@ Two named bosses, each in a `no_mob`-flagged room, each dropping `ITEM_BOSS` loo
 
 ### Boss 1: Causeway Enforcement Marshal (Zone 3)
 - `act` flags: `is_npc` + `sentinel` + `stay_area` + `boss`
-- Placed only via reset into a `no_mob`-flagged room within `16033–16062`
+- Placed only via reset into a `no_mob`-flagged room within `4272–4301`
 - Boss loot: the Marshal's enforcement blade (`ITEM_BOSS` + `ITEM_LOOT`)
 - Quest target for Zone 3 boss quest
 
 ### Boss 2: Senior Steward Colwen Dast (Zone 4)
 - `act` flags: `is_npc` + `sentinel` + `stay_area` + `boss`
-- Placed only via reset into a `no_mob`-flagged room within `16063–16082`
+- Placed only via reset into a `no_mob`-flagged room within `4302–4321`
 - Boss loot: Dast's authority sash (`ITEM_BOSS` + `ITEM_LOOT`)
 - Quest target for Zone 4 boss quest (final chain quest with equipment reward)
 
@@ -374,12 +374,12 @@ Two named bosses, each in a `no_mob`-flagged room, each dropping `ITEM_BOSS` loo
 ## Mobile Design Summary (50 total)
 
 Allocation by zone:
-- Zone 1 (dispatch/entry): 8 mobs (`16100–16107`)
-- Zone 2 (lower terraces): 11 mobs (`16108–16118`)
-- Zone 3 (causeway quarter): 13 mobs (`16119–16131`, includes 1 boss)
-- Zone 4 (upper civic ring): 9 mobs (`16132–16140`, includes 1 boss)
-- Zone 5 (canopy workshops): 6 mobs (`16141–16146`)
-- Zone 6 (root tunnels): 3 mobs (`16147–16149`)
+- Zone 1 (dispatch/entry): 8 mobs (`4339–4346`)
+- Zone 2 (lower terraces): 11 mobs (`4347–4357`)
+- Zone 3 (causeway quarter): 13 mobs (`4358–4370`, includes 1 boss)
+- Zone 4 (upper civic ring): 9 mobs (`4371–4379`, includes 1 boss)
+- Zone 5 (canopy workshops): 6 mobs (`4380–4385`)
+- Zone 6 (root tunnels): 3 mobs (`4386–4388`)
 
 Behavior rules:
 - All mobs must carry `stay_area`; civic/guard mobs that must not wander must also carry `sentinel`.
@@ -393,12 +393,12 @@ Behavior rules:
 ## Object Design Summary (50 total)
 
 Allocation by zone:
-- Zone 1 (approach): 7 objects (`16150–16156`)
-- Zone 2 (lower terraces): 10 objects (`16157–16166`)
-- Zone 3 (causeway): 13 objects (`16167–16179`, includes 1 boss drop)
-- Zone 4 (upper ring): 10 objects (`16180–16189`, includes 1 boss drop)
-- Zone 5 (workshops): 6 objects (`16190–16195`)
-- Zone 6 (root tunnels): 4 objects (`16196–16199`)
+- Zone 1 (approach): 7 objects (`4389–4395`)
+- Zone 2 (lower terraces): 10 objects (`4396–4405`)
+- Zone 3 (causeway): 13 objects (`4406–4418`, includes 1 boss drop)
+- Zone 4 (upper ring): 10 objects (`4419–4428`, includes 1 boss drop)
+- Zone 5 (workshops): 6 objects (`4429–4434`)
+- Zone 6 (root tunnels): 4 objects (`4435–4438`)
 
 Thematic families:
 - **Administrative material culture** (ledgers, seals, writ cases, board notices): ~12 objects
@@ -423,7 +423,7 @@ Quest file numbers are to be allocated against the global quest index during imp
 
 - **Type:** `1` (kill-variety)
 - **Targets:** three patrol/guard types spread across Zones 1–3 (dispatch registrar family, tower guard family, queue lane enforcer)
-- **Offerer:** dispatch registrar (Zone 1, `16100–16107` range)
+- **Offerer:** dispatch registrar (Zone 1, `4339–4346` range)
 - **Reward:** 6500 gold, 6 qp
 - **Level:** 45–75
 - **Prereq:** `-1`
@@ -433,7 +433,7 @@ Quest file numbers are to be allocated against the global quest index during imp
 - **Type:** `3` (kill-count)
 - **Target:** Causeway Enforcement Marshal (Zone 3 boss)
 - **Kill needed:** 1
-- **Offerer:** dispatch clerk (Zone 3, `16119–16131` range)
+- **Offerer:** dispatch clerk (Zone 3, `4358–4370` range)
 - **Reward:** 7200 gold, 6 qp + equipment piece (the Marshal's enforcement blade)
 - **Level:** 50–80
 - **Prereq:** `-1`
@@ -442,7 +442,7 @@ Quest file numbers are to be allocated against the global quest index during imp
 
 - **Type:** `2` (collect-items)
 - **Targets:** collect 3 archive challenge ledger objects (Zone 4)
-- **Offerer:** Garden Ledger clerk (Zone 4, `16132–16140` range)
+- **Offerer:** Garden Ledger clerk (Zone 4, `4371–4379` range)
 - **Reward:** 6000 gold, 5 qp
 - **Level:** 55–80
 - **Prereq:** `-1`
@@ -452,8 +452,8 @@ Quest file numbers are to be allocated against the global quest index during imp
 - **Type:** `3` (kill-count)
 - **Target:** Senior Steward Colwen Dast (Zone 4 boss)
 - **Kill needed:** 1
-- **Offerer:** political envoy (Zone 4, `16132–16140` range)
-- **Reward:** 8500 gold, 8 qp + equipment piece (Dast's authority sash)
+- **Offerer:** political envoy (Zone 4, `4371–4379` range)
+- **Reward:** 1832 gold, 8 qp + equipment piece (Dast's authority sash)
 - **Level:** 60–90
 - **Prereq:** Quest 3 (static ID of archive seizure quest)
 
@@ -472,12 +472,12 @@ Diegetic locked exits only — no arbitrary dungeon locks:
 
 1. **Archive restricted stacks door** (Zone 4, Upper Civic Ring)
    - Exit: `EX_ISDOOR` set; reset state: locked (`D ... 2`)
-   - Key: archive shutter key (object `16188`)
+   - Key: archive shutter key (object `4427`)
    - Key must be placed on a guarded mob or in a discoverable container via `#RESETS`
 
 2. **Siphon vault access hatch** (Zone 6, Root Tunnels)
    - Exit: `EX_ISDOOR` set; reset state: locked (`D ... 2`)
-   - Key: valve key (object `16196`)
+   - Key: valve key (object `4435`)
    - Key must be placed in Zone 5 or Zone 6 on an appropriate mob/room reset
 
 ---
@@ -505,7 +505,7 @@ Factions are represented via dialogue, patrol overlaps, and object text rather t
 
 ## Cross-Area Integration
 
-- **Eccentric Woodland:** entry room `16000` north connects to EW room `7698` south. Approach rooms preserve "managed denial" and route-variance tone.
+- **Eccentric Woodland:** entry room `4239` north connects to EW room `1830` south. Approach rooms preserve "managed denial" and route-variance tone.
 - **Midgaard:** documents and NPC dialogue reflect subsidy and liability dispute language.
 - **Kiess/Kowloon/Mafdet hooks:** references to amendment review, grain compacts, and maritime fallback networks.
 - **Kel'Shadra linkage:** archive-loss and testimony-disappearance lore appears as record gaps and contested annotations.
@@ -514,10 +514,10 @@ Factions are represented via dialogue, patrol overlaps, and object text rather t
 
 ## Implementation Sequence
 
-1. Write `#AREA` header with strict compliance fields (`Q 16`, `V 16000 16199`, `O Virant~`, keyword, `I 45 95`, `F 20`, reset message).
-2. Build 100-room organic graph across six zones with vertical connectors; wire north entry (`16000`) to EW room `7698` south.
-3. Author 50-mobile roster (`16100–16149`) by institution and district function; assign `stay_area` to all; `sentinel` to civic/guard mobs; boss flags to the two named bosses.
-4. Author 50-object roster (`16150–16199`) with correct `item_type`, wear flags (all include `take`), and extra flags (`ITEM_LOOT`, `ITEM_BOSS` as required).
+1. Write `#AREA` header with strict compliance fields (`Q 16`, `V 4239 4438`, `O Virant~`, keyword, `I 45 95`, `F 20`, reset message).
+2. Build 100-room organic graph across six zones with vertical connectors; wire north entry (`4239`) to EW room `1830` south.
+3. Author 50-mobile roster (`4339–4388`) by institution and district function; assign `stay_area` to all; `sentinel` to civic/guard mobs; boss flags to the two named bosses.
+4. Author 50-object roster (`4389–4438`) with correct `item_type`, wear flags (all include `take`), and extra flags (`ITEM_LOOT`, `ITEM_BOSS` as required).
 5. Write `#RESETS` — civic rhythm, boss room placements (limit 1 each in `no_mob` rooms), door resets for two keyed exits; no blank lines.
 6. Validate exits — all bi-directional; locked doors have valid key vnums and `EX_ISDOOR` set.
 7. Write `#SPECIALS` for applicable ambient city mobs; write `#OBJFUNS` if any object functions are assigned.
@@ -528,15 +528,15 @@ Factions are represented via dialogue, patrol overlaps, and object text rather t
 
 ## Acceptance Checklist
 
-- [ ] Vnum envelope `V 16000 16199` (200 vnums total).
+- [ ] Vnum envelope `V 4239 4438` (35 vnums total).
 - [ ] `Q 16` and `O Virant~` present in `#AREA` header.
 - [ ] Room count exactly 100 with zone split `13/20/30/20/12/5`.
-- [ ] All rooms within `16000–16099`; all mobs within `16100–16149`; all objects within `16150–16199`.
+- [ ] All rooms within `4239–4338`; all mobs within `4339–4388`; all objects within `4389–4438`.
 - [ ] Layout is vertical/organic and clearly non-grid.
 - [ ] Major anchors implemented: Dispatch Houses, Central Market, Bloom Pavilion, Archive, Promise Stone Plaza, Canopy Workshops, Root Tunnels.
 - [ ] Two named bosses in `no_mob` rooms with `sentinel` + `boss` flags.
 - [ ] Political factions and festivals visible in text and encounter ecology.
-- [ ] Eccentric Woodland north entry link (`16000 ↔ 7698`) documented and implemented bidirectionally.
+- [ ] Eccentric Woodland north entry link (`4239 ↔ 1830`) documented and implemented bidirectionally.
 - [ ] Cartography quest included.
 - [ ] Boss quests (both) reward equipment.
 - [ ] Final quest in chain rewards equipment.

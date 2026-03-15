@@ -5,7 +5,7 @@
 - **Area Name:** `@@WThe @@dSepulchur @@pPasture@@N`
 - **Area File (existing):** `area/sepulcher_pasture.are`
 - **Keyword:** `sepulchur sepulcher pasture gravebell funerary tithe`
-- **Assigned Vnum Range (must remain unchanged):** **30175-30249**
+- **Assigned Vnum Range (must remain unchanged):** **5106-5180**
 - **Target Level Band:** **15-30** (preserved)
 - **Reset Rate:** 10 (preserved)
 - **Owner:** `Virant` (normalize header ownership casing)
@@ -19,7 +19,7 @@ This plan fully replaces the current repetitive lane-grid presentation with a co
 ### Area Header
 1. `Q 16` directive is mandatory.
 2. Owner line must be `O Virant~` (area header owner policy — note the existing file uses lowercase `virant`; must normalize to `Virant`).
-3. `V 30175 30249` defines the vnum envelope; all authored rooms, mobiles, and objects must stay inside this range.
+3. `V 5106 5180` defines the vnum envelope; all authored rooms, mobiles, and objects must stay inside this range.
 
 ### Vnum Allocation
 4. Vnums for rooms, mobiles, and objects must be assigned in ascending sequential order with no gaps.
@@ -123,7 +123,7 @@ Corruption enters where policy hardened into exploitation: tithe agents and grav
 
 ## External World Links (Preserved)
 
-- `3030 -> 30175` (Midgaard south-gate connector to The Withered Gate; return via `30175 up -> 3030`)
+- `946 -> 5106` (Midgaard south-gate connector to The Withered Gate; return via `5106 up -> 946`)
 
 This link is already implemented in both areas and must be preserved exactly.
 
@@ -133,157 +133,157 @@ This link is already implemented in both areas and must be preserved exactly.
 
 Cross-type overlap is allowed per spec §13: a room, mobile, and object may share the same numeric vnum as long as each remains unique within its own index type. Per §13.1, rooms should attempt to fill every available vnum slot.
 
-- **Rooms:** `30175-30249` (75 rooms — fills the entire envelope)
-- **Mobiles:** `30175-30196` (22 mobs — overlaps room vnums, which is valid)
-- **Objects:** `30197-30214` (18 objects — overlaps room vnums, which is valid)
+- **Rooms:** `5106-5180` (75 rooms — fills the entire envelope)
+- **Mobiles:** `5106-5127` (22 mobs — overlaps room vnums, which is valid)
+- **Objects:** `5128-5145` (18 objects — overlaps room vnums, which is valid)
 
 ---
 
 ## Full Layout Redesign (75 Rooms)
 
-### Zone 1: Gate-Tithe Forefield (`30175-30189`) — 15 rooms
+### Zone 1: Gate-Tithe Forefield (`5106-5120`) — 15 rooms
 Purpose: onboarding zone where Midgaard death-carts enter, are weighed, inspected, and taxed. Introduces the civic-funerary tone and the Last Burden Tithe process.
 
-- **30175** The Withered Gate (external linkage to Midgaard `3030` preserved; `up` returns to Midgaard)
-- **30176** Cart Weighbridge of Last Burdens
-- **30177** Lantern Docket Post
-- **30178** Salt-Blessed Furrow Bend
-- **30179** Mourners’ Queue Rail
-- **30180** Gravebell Milestone (major crossroad; connects to Zone 2 and Zone 3)
-- **30181** Toll of the Ninth Peal
-- **30182** Tariff Clerk’s Alcove
-- **30183** Salted Cart Yard
-- **30184** Mourner’s Rest Bench
-- **30185** Tithe-Bell Staging Lane
-- **30186** Ash-Mortar Waystone
-- **30187** Corpse-Cart Turnaround
-- **30188** Pallbearer’s Crosswalk
-- **30189** Ninth Acre Boundary Ditch
+- **5106** The Withered Gate (external linkage to Midgaard `946` preserved; `up` returns to Midgaard)
+- **5107** Cart Weighbridge of Last Burdens
+- **5108** Lantern Docket Post
+- **5109** Salt-Blessed Furrow Bend
+- **5110** Mourners’ Queue Rail
+- **5111** Gravebell Milestone (major crossroad; connects to Zone 2 and Zone 3)
+- **5112** Toll of the Ninth Peal
+- **5113** Tariff Clerk’s Alcove
+- **5114** Salted Cart Yard
+- **5115** Mourner’s Rest Bench
+- **5116** Tithe-Bell Staging Lane
+- **5117** Ash-Mortar Waystone
+- **5118** Corpse-Cart Turnaround
+- **5119** Pallbearer’s Crosswalk
+- **5120** Ninth Acre Boundary Ditch
 
-### Zone 2: Registry Furrows (`30190-30204`) — 15 rooms
+### Zone 2: Registry Furrows (`5121-5135`) — 15 rooms
 Purpose: legal-religious administration over remains, inheritance marks, and claimant proceedings. Clerks, scribes, and ledger infrastructure dominate.
 
-- **30190** Inkstone of the Unclaimed
-- **30191** White Ledger Stakes
-- **30192** Oath-Tablet Sluice
-- **30193** Pilgrim’s Hollow (clerk/scribe junction; crossroad to Zone 3)
-- **30194** Sealpress Arcade
-- **30195** Tally of Ashen Sheaves
-- **30196** Widow’s Furrows
-- **30197** Claimant Queue Passage
-- **30198** Deferred-Name Filing Hall
-- **30199** Writ-Stamp Corridor
-- **30200** Witness Affidavit Booth
-- **30201** Ledger Binding Vault
-- **30202** Ink-and-Salt Archive
-- **30203** Registry Bell Niche
-- **30204** Notary’s Overlook
+- **5121** Inkstone of the Unclaimed
+- **5122** White Ledger Stakes
+- **5123** Oath-Tablet Sluice
+- **5124** Pilgrim’s Hollow (clerk/scribe junction; crossroad to Zone 3)
+- **5125** Sealpress Arcade
+- **5126** Tally of Ashen Sheaves
+- **5127** Widow’s Furrows
+- **5128** Claimant Queue Passage
+- **5129** Deferred-Name Filing Hall
+- **5130** Writ-Stamp Corridor
+- **5131** Witness Affidavit Booth
+- **5132** Ledger Binding Vault
+- **5133** Ink-and-Salt Archive
+- **5134** Registry Bell Niche
+- **5135** Notary’s Overlook
 
-### Zone 3: Reliquary Pasture (`30205-30222`) — 18 rooms
+### Zone 3: Reliquary Pasture (`5136-5153`) — 18 rooms
 Purpose: old farm fields converted to cenotaph plots, spirit-break hedges, and reliquary gardens. The agricultural past bleeds through funerary repurposing.
 
-- **30205** Barrowmouth Orchard Verge
-- **30206** Nightsoil Channel (drainage/tithe conduit)
-- **30207** Bleak Orchard of Nameposts
-- **30208** Corpse-Lily Terraces
-- **30209** Scarecrow Reliquary Rows
-- **30210** Bellwind Irrigation Gate
-- **30211** Ashen Tithe Path (subzone anchor; crossroad to Zone 2 and Zone 4)
-- **30212** Cenotaph Hedgerow
-- **30213** Furrow of Unnamed Markers
-- **30214** Grain-Ghost Clearing
-- **30215** Spirit-Break Fence Line
-- **30216** Old Sheaf Altar
-- **30217** Cairn-Marked Pasture Edge
-- **30218** Rootbound Drainage Gully
-- **30219** Bleached Milestone Row
-- **30220** Broken Harvest Shrine
-- **30221** Fog-Choked Furrow
-- **30222** Reliquary Garden Gate
+- **5136** Barrowmouth Orchard Verge
+- **5137** Nightsoil Channel (drainage/tithe conduit)
+- **5138** Bleak Orchard of Nameposts
+- **5139** Corpse-Lily Terraces
+- **5140** Scarecrow Reliquary Rows
+- **5141** Bellwind Irrigation Gate
+- **5142** Ashen Tithe Path (subzone anchor; crossroad to Zone 2 and Zone 4)
+- **5143** Cenotaph Hedgerow
+- **5144** Furrow of Unnamed Markers
+- **5145** Grain-Ghost Clearing
+- **5146** Spirit-Break Fence Line
+- **5147** Old Sheaf Altar
+- **5148** Cairn-Marked Pasture Edge
+- **5149** Rootbound Drainage Gully
+- **5150** Bleached Milestone Row
+- **5151** Broken Harvest Shrine
+- **5152** Fog-Choked Furrow
+- **5153** Reliquary Garden Gate
 
-### Zone 4: Compact Holding Grounds (`30223-30237`) — 15 rooms
+### Zone 4: Compact Holding Grounds (`5154-5168`) — 15 rooms
 Purpose: Violet Compact quarantine pens for cursed, plague-touched, or arcane-active dead. Warded perimeter, adjudication spaces, and containment trenches.
 
-- **30223** Violet Stake Circle
-- **30224** Wardwire Crossfield
-- **30225** Censer Trench of Compliance
-- **30226** Pen of Refused Rites
-- **30227** Witness Lantern Walk
-- **30228** Tribunal Cairn (crossroad to Zone 5)
-- **30229** Quietus Chute
-- **30230** Compact Patrol Track
-- **30231** Quarantine Ditch
-- **30232** Ward-Post Perimeter
-- **30233** Adjudicator’s Bench
-- **30234** Holding Pen Corridor
-- **30235** Violet Seal Threshold
-- **30236** Containment Censer Row
-- **30237** Compact Gate of Final Review
+- **5154** Violet Stake Circle
+- **5155** Wardwire Crossfield
+- **5156** Censer Trench of Compliance
+- **5157** Pen of Refused Rites
+- **5158** Witness Lantern Walk
+- **5159** Tribunal Cairn (crossroad to Zone 5)
+- **5160** Quietus Chute
+- **5161** Compact Patrol Track
+- **5162** Quarantine Ditch
+- **5163** Ward-Post Perimeter
+- **5164** Adjudicator’s Bench
+- **5165** Holding Pen Corridor
+- **5166** Violet Seal Threshold
+- **5167** Containment Censer Row
+- **5168** Compact Gate of Final Review
 
-### Zone 5: Sepulcher Core (`30238-30249`) — 12 rooms
+### Zone 5: Sepulcher Core (`5169-5180`) — 12 rooms
 Purpose: climax wing with command crypt, bell tower, boss encounters, and egress route. Contains the area’s named encounters and the broken institutional heart of the pasture.
 
-- **30238** Chapel of the Last Acre
-- **30239** Bone-Mill Antechamber
-- **30240** Ossuary Lift House
-- **30241** Bellmaster’s Gallery
-- **30242** Reliquary of Deferred Names
-- **30243** Heartcrypt of the Pasture (boss room; must be flagged `no_mob`)
-- **30244** Lantern Return Gate (unlockable shortcut/egress)
-- **30245** Steward’s Vestry
-- **30246** Tariff-Seal Sanctum
-- **30247** Bell Tower Stair
-- **30248** Oath-Wraith Antechamber
-- **30249** Pasture Overlook (final room; provides retreat path back to Zone 1)
+- **5169** Chapel of the Last Acre
+- **5170** Bone-Mill Antechamber
+- **5171** Ossuary Lift House
+- **5172** Bellmaster’s Gallery
+- **5173** Reliquary of Deferred Names
+- **5174** Heartcrypt of the Pasture (boss room; must be flagged `no_mob`)
+- **5175** Lantern Return Gate (unlockable shortcut/egress)
+- **5176** Steward’s Vestry
+- **5177** Tariff-Seal Sanctum
+- **5178** Bell Tower Stair
+- **5179** Oath-Wraith Antechamber
+- **5180** Pasture Overlook (final room; provides retreat path back to Zone 1)
 
 ### Connectivity Rules
 
-- Main forward spine from `30175` through zones in sequence to `30243`.
-- Cross-links at `30180` (Zone 1 → Zone 3), `30193` (Zone 2 ↔ Zone 3), `30211` (Zone 3 → Zone 2/Zone 4), and `30228` (Zone 4 → Zone 5) to provide lateral navigation.
+- Main forward spine from `5106` through zones in sequence to `5174`.
+- Cross-links at `5111` (Zone 1 → Zone 3), `5124` (Zone 2 ↔ Zone 3), `5142` (Zone 3 → Zone 2/Zone 4), and `5159` (Zone 4 → Zone 5) to provide lateral navigation.
 - Compact wing (Zone 4) gates final core access (Zone 5) via three assembled legal tokens (ITEM_PIECE mechanic).
 - At least one non-hostile retreat route from every high-danger cluster.
 - All exits must be bi-directional (spec §8): if room A connects to room B via direction X, room B must provide the opposite-direction exit back to A.
 - When a room uses a named exit (non-empty `<exit_keyword>`), that exit name must appear in the room’s main description, an object in the room, or an `E` extra description.
-- `30244` Lantern Return Gate provides a shortcut egress back to `30180` Gravebell Milestone after core completion.
-- `30249` Pasture Overlook provides a retreat path back to `30189` Ninth Acre Boundary Ditch.
+- `5175` Lantern Return Gate provides a shortcut egress back to `5111` Gravebell Milestone after core completion.
+- `5180` Pasture Overlook provides a retreat path back to `5120` Ninth Acre Boundary Ditch.
 
 ---
 
-## Mobile Redesign Plan (`30175-30196`)
+## Mobile Redesign Plan (`5106-5127`)
 
 ### Population Tiers
 
 #### Tier 1 (Lv 15-19: ambient/entry) — Zone 1 and Zone 2 population
-- **30175** toll-bell acolyte (sentinel, non-aggressive; rings intake bells)
-- **30176** cart-draft mourner (non-aggressive; ambient grief laborer)
-- **30177** ditch lantern-keeper (sentinel, non-aggressive; maintains lane lights)
-- **30178** tithe crow swarmling (aggressive; scavenger pest)
+- **5106** toll-bell acolyte (sentinel, non-aggressive; rings intake bells)
+- **5107** cart-draft mourner (non-aggressive; ambient grief laborer)
+- **5108** ditch lantern-keeper (sentinel, non-aggressive; maintains lane lights)
+- **5109** tithe crow swarmling (aggressive; scavenger pest)
 
 #### Tier 2 (Lv 19-23: core pasture pressure) — Zone 2 and Zone 3 population
-- **30179** ledger-furrow clerk (sentinel, non-aggressive; registry bureaucrat)
-- **30180** scaremask reaper (aggressive; corrupted field worker)
-- **30181** corpse-lily groundsman (aggressive; garden-turned-grave tender)
-- **30182** ash-sleeved pallbearer (aggressive; undead bearer still carrying)
-- **30183** gravebell drudge (aggressive; bell-cursed laborer)
+- **5110** ledger-furrow clerk (sentinel, non-aggressive; registry bureaucrat)
+- **5111** scaremask reaper (aggressive; corrupted field worker)
+- **5112** corpse-lily groundsman (aggressive; garden-turned-grave tender)
+- **5113** ash-sleeved pallbearer (aggressive; undead bearer still carrying)
+- **5114** gravebell drudge (aggressive; bell-cursed laborer)
 
 #### Tier 3 (Lv 23-27: specialists/elites) — Zone 3 and Zone 4 population
-- **30184** violet compact warden (aggressive; Compact quarantine enforcer)
-- **30185** wardwire adjudicator (aggressive; legal-occult judge)
-- **30186** oath-ink embalmer (aggressive; corrupted rite-worker)
-- **30187** reliquary scytheknight (aggressive; armed reliquary guard; flagged `solo`)
-- **30188** pilgrim-claim extortioner (aggressive; toll racketeer; flagged `solo`)
+- **5115** violet compact warden (aggressive; Compact quarantine enforcer)
+- **5116** wardwire adjudicator (aggressive; legal-occult judge)
+- **5117** oath-ink embalmer (aggressive; corrupted rite-worker)
+- **5118** reliquary scytheknight (aggressive; armed reliquary guard; flagged `solo`)
+- **5119** pilgrim-claim extortioner (aggressive; toll racketeer; flagged `solo`)
 
 #### Named Lore NPCs / Bosses (Lv 27-30) — Zone 4 and Zone 5 population
-- **30189** Marshal Edrin Vale, Gate of Final Tariffs (lawful mini-boss; flagged `sentinel`, `solo`; `spec_guard`)
-- **30190** Sister Calvea of the Ninth Peal (ritual caster; flagged `sentinel`, `solo`; `spec_cast_cleric`)
-- **30191** Archivist Mor Taland, Keeper of Deferred Names (record-warden caster; flagged `sentinel`, `solo`; `spec_cast_mage`)
-- **30192** The Bell-Eaten Steward (mutated final custodian; flagged `sentinel`, `boss`; placed in `no_mob` room `30243`; `spec_cast_undead`)
-- **30193** Pasture Heart Wraith (spirit boss tied to broken oaths; flagged `sentinel`, `boss`, `undead`, `no_body`; placed in `no_mob` room `30243`; `spec_cast_undead`)
+- **5120** Marshal Edrin Vale, Gate of Final Tariffs (lawful mini-boss; flagged `sentinel`, `solo`; `spec_guard`)
+- **5121** Sister Calvea of the Ninth Peal (ritual caster; flagged `sentinel`, `solo`; `spec_cast_cleric`)
+- **5122** Archivist Mor Taland, Keeper of Deferred Names (record-warden caster; flagged `sentinel`, `solo`; `spec_cast_mage`)
+- **5123** The Bell-Eaten Steward (mutated final custodian; flagged `sentinel`, `boss`; placed in `no_mob` room `5174`; `spec_cast_undead`)
+- **5124** Pasture Heart Wraith (spirit boss tied to broken oaths; flagged `sentinel`, `boss`, `undead`, `no_body`; placed in `no_mob` room `5174`; `spec_cast_undead`)
 
 #### Ambient/Flavor NPCs (non-combat)
-- **30194** pasture mourner (sentinel, non-aggressive; weeping civilian flavor)
-- **30195** tithe-cart driver (sentinel, non-aggressive; caravan worker)
-- **30196** funerary bell-ringer (sentinel, non-aggressive; operates the gravebell)
+- **5125** pasture mourner (sentinel, non-aggressive; weeping civilian flavor)
+- **5126** tithe-cart driver (sentinel, non-aggressive; caravan worker)
+- **5127** funerary bell-ringer (sentinel, non-aggressive; operates the gravebell)
 
 ### Mob Spec Compliance and Placement Rules
 
@@ -297,8 +297,8 @@ Purpose: climax wing with command crypt, bell tower, boss encounters, and egress
 - Clerks, mourners, flavor NPCs, and civic quest givers must not be aggressive.
 
 **Boss and solo policy:**
-- Boss mobs (`30192`, `30193`) must have `sentinel` + `boss` flags and be placed in `no_mob`-flagged rooms.
-- Strong non-boss named NPCs (`30187`, `30188`, `30189`, `30190`, `30191`) must be flagged `solo` (`33554432`).
+- Boss mobs (`5123`, `5124`) must have `sentinel` + `boss` flags and be placed in `no_mob`-flagged rooms.
+- Strong non-boss named NPCs (`5118`, `5119`, `5120`, `5121`, `5122`) must be flagged `solo` (`33554432`).
 
 **Mobile description format (strict):**
 - `long_descr` must be exactly one text line, then a newline, then `~`. Multi-line `long_descr` is never valid.
@@ -313,7 +313,7 @@ Purpose: climax wing with command crypt, bell tower, boss encounters, and egress
 
 ---
 
-## Object Redesign Plan (`30197-30214`)
+## Object Redesign Plan (`5128-5145`)
 
 ### Item Families
 
@@ -327,42 +327,42 @@ Purpose: climax wing with command crypt, bell tower, boss encounters, and egress
 
 The area uses three legal tokens that combine via the `ITEM_PIECE` mechanic (spec §7.5) to form a fused writ. The fused writ is required to pass through the locked gate between Zone 4 and Zone 5.
 
-- **30197** Token of Receipt (`item_type = 29`, ITEM_PIECE)
+- **5128** Token of Receipt (`item_type = 29`, ITEM_PIECE)
  - `value0`: `0` (no previous piece)
- - `value1`: `30198` (next piece: Token of Witness)
- - `value2`: `30200` (replacement: Fused Writ of Interment)
-- **30198** Token of Witness (`item_type = 29`, ITEM_PIECE)
- - `value0`: `30197` (previous piece: Token of Receipt)
- - `value1`: `30199` (next piece: Token of Interment)
- - `value2`: `30200` (replacement: Fused Writ of Interment)
-- **30199** Token of Interment (`item_type = 29`, ITEM_PIECE)
- - `value0`: `30198` (previous piece: Token of Witness)
+ - `value1`: `5129` (next piece: Token of Witness)
+ - `value2`: `5131` (replacement: Fused Writ of Interment)
+- **5129** Token of Witness (`item_type = 29`, ITEM_PIECE)
+ - `value0`: `5128` (previous piece: Token of Receipt)
+ - `value1`: `5130` (next piece: Token of Interment)
+ - `value2`: `5131` (replacement: Fused Writ of Interment)
+- **5130** Token of Interment (`item_type = 29`, ITEM_PIECE)
+ - `value0`: `5129` (previous piece: Token of Witness)
  - `value1`: `0` (no next piece)
- - `value2`: `30200` (replacement: Fused Writ of Interment)
-- **30200** Fused Writ of Interment (`item_type = 18`, ITEM_KEY)
- - Used as `<key_vnum>` for the locked door between `30237` and `30238`.
+ - `value2`: `5131` (replacement: Fused Writ of Interment)
+- **5131** Fused Writ of Interment (`item_type = 18`, ITEM_KEY)
+ - Used as `<key_vnum>` for the locked door between `5168` and `5169`.
 
 Token drop assignments:
-- Token of Receipt drops from Marshal Edrin Vale (`30189`) or via reset in a Zone 2 room.
-- Token of Witness drops from Sister Calvea (`30190`) or via reset in a Zone 3 room.
-- Token of Interment drops from Archivist Mor Taland (`30191`) or via reset in a Zone 4 room.
+- Token of Receipt drops from Marshal Edrin Vale (`5120`) or via reset in a Zone 2 room.
+- Token of Witness drops from Sister Calvea (`5121`) or via reset in a Zone 3 room.
+- Token of Interment drops from Archivist Mor Taland (`5122`) or via reset in a Zone 4 room.
 
 ### Equipment Objects
 
-- **30201** mourner's lantern hook (hold; caster weight 1-5; `item_type = 1`, ITEM_LIGHT)
-- **30202** toll-cord whip (hold; melee weight 6-10; `item_type = 5`, ITEM_WEAPON; `value3 = 4` whip)
-- **30203** sealpress signet ring (finger; caster weight 1-5; `item_type = 8`, ITEM_TREASURE)
-- **30204** ash-clerk's ledger tablet (hold; caster weight 1-5; `item_type = 8`, ITEM_TREASURE)
-- **30205** corpse-lily charm necklace (neck; caster weight 1-5; `item_type = 8`, ITEM_TREASURE)
-- **30206** scaremask helm (head; tank weight 11-15; `item_type = 9`, ITEM_ARMOR)
-- **30207** pallbearer's iron mantle (about; tank weight 11-15; `item_type = 9`, ITEM_ARMOR)
-- **30208** wardwire compliance band (wrist; melee weight 6-10; `item_type = 9`, ITEM_ARMOR)
-- **30209** violet compact censer (hold; caster weight 1-5; `item_type = 8`, ITEM_TREASURE)
-- **30210** reliquary scythe (hold; melee weight 6-10; `item_type = 5`, ITEM_WEAPON; `value3 = 3` slash; `ITEM_TWO_HANDED`)
-- **30211** bell-eaten crook (hold; melee weight 6-10; `item_type = 5`, ITEM_WEAPON; `value3 = 7` pound; `ITEM_BOSS`, `ITEM_LOOT`)
-- **30212** deferred-name reliquary shard (hold; caster weight 1-5; `item_type = 8`, ITEM_TREASURE; `ITEM_BOSS`, `ITEM_LOOT`)
-- **30213** furrow warden's buckler (hold; tank weight 11-15; `item_type = 9`, ITEM_ARMOR; `ITEM_BUCKLER`)
-- **30214** funerary bell key (hold; `item_type = 18`, ITEM_KEY; weight 1)
+- **5132** mourner's lantern hook (hold; caster weight 1-5; `item_type = 1`, ITEM_LIGHT)
+- **5133** toll-cord whip (hold; melee weight 6-10; `item_type = 5`, ITEM_WEAPON; `value3 = 4` whip)
+- **5134** sealpress signet ring (finger; caster weight 1-5; `item_type = 8`, ITEM_TREASURE)
+- **5135** ash-clerk's ledger tablet (hold; caster weight 1-5; `item_type = 8`, ITEM_TREASURE)
+- **5136** corpse-lily charm necklace (neck; caster weight 1-5; `item_type = 8`, ITEM_TREASURE)
+- **5137** scaremask helm (head; tank weight 11-15; `item_type = 9`, ITEM_ARMOR)
+- **5138** pallbearer's iron mantle (about; tank weight 11-15; `item_type = 9`, ITEM_ARMOR)
+- **5139** wardwire compliance band (wrist; melee weight 6-10; `item_type = 9`, ITEM_ARMOR)
+- **5140** violet compact censer (hold; caster weight 1-5; `item_type = 8`, ITEM_TREASURE)
+- **5141** reliquary scythe (hold; melee weight 6-10; `item_type = 5`, ITEM_WEAPON; `value3 = 3` slash; `ITEM_TWO_HANDED`)
+- **5142** bell-eaten crook (hold; melee weight 6-10; `item_type = 5`, ITEM_WEAPON; `value3 = 7` pound; `ITEM_BOSS`, `ITEM_LOOT`)
+- **5143** deferred-name reliquary shard (hold; caster weight 1-5; `item_type = 8`, ITEM_TREASURE; `ITEM_BOSS`, `ITEM_LOOT`)
+- **5144** furrow warden's buckler (hold; tank weight 11-15; `item_type = 9`, ITEM_ARMOR; `ITEM_BUCKLER`)
+- **5145** funerary bell key (hold; `item_type = 18`, ITEM_KEY; weight 1)
 
 ### Object Spec Compliance
 
@@ -383,7 +383,7 @@ Token drop assignments:
 - Weapons must have `item_type = 5` and wear flags including both `hold` (`32768`) and `take` (`8388608`).
 - `value3` must be thematically consistent with the weapon's concept.
 - `value3 = 0` (`hit`) only valid with `ITEM_FIST` extra flag.
-- The reliquary scythe (`30210`) is a two-handed archetype and must include `ITEM_TWO_HANDED` (`2147483648`).
+- The reliquary scythe (`5141`) is a two-handed archetype and must include `ITEM_TWO_HANDED` (`2147483648`).
 
 ---
 
@@ -405,11 +405,11 @@ Token drop assignments:
 - `O`: Token of Witness placed in a Zone 3 room (reset limit `1`).
 - `O`: Token of Interment placed in a Zone 4 room (reset limit `1`).
 - `G`/`E`: Equipment objects given/equipped to appropriate mobs.
-- Boss mobs (`30192`, `30193`) use loot tables (`l`/`L` extension) for boss signature drops (`30211`, `30212`). These items must have `ITEM_BOSS` and `ITEM_LOOT` set.
+- Boss mobs (`5123`, `5124`) use loot tables (`l`/`L` extension) for boss signature drops (`5142`, `5143`). These items must have `ITEM_BOSS` and `ITEM_LOOT` set.
 
 **Door resets (`D`):**
-- `30237` → `30238` (Compact Gate of Final Review → Chapel of the Last Acre): locked door (`D` state `2`), keyed to Fused Writ of Interment (`30200`). The room exit at `30237` must have `EX_ISDOOR` (`1`) set and `<key_vnum>` = `30200`.
-- `30244` (Lantern Return Gate): closed door (`D` state `1`), opened from the inside after core completion. Must have `EX_ISDOOR` set.
+- `5168` → `5169` (Compact Gate of Final Review → Chapel of the Last Acre): locked door (`D` state `2`), keyed to Fused Writ of Interment (`5131`). The room exit at `5168` must have `EX_ISDOOR` (`1`) set and `<key_vnum>` = `5131`.
+- `5175` (Lantern Return Gate): closed door (`D` state `1`), opened from the inside after core completion. Must have `EX_ISDOOR` set.
 
 ### Loot Table Policy
 - Boss loot items must have `ITEM_BOSS` (`134217728`) and `ITEM_LOOT` (`67108864`) set in `extra_flags`.
@@ -420,11 +420,11 @@ Token drop assignments:
 No shops are planned for this area. The area is a funerary district, not a commercial zone.
 
 ### #SPECIALS Section
-- `M 30189 spec_guard` (Marshal Edrin Vale — lawful gate enforcement)
-- `M 30190 spec_cast_cleric` (Sister Calvea — ritual healing/offense caster)
-- `M 30191 spec_cast_mage` (Archivist Mor Taland — arcane record-warden)
-- `M 30192 spec_cast_undead` (The Bell-Eaten Steward — undead custodian)
-- `M 30193 spec_cast_undead` (Pasture Heart Wraith — spirit boss)
+- `M 5120 spec_guard` (Marshal Edrin Vale — lawful gate enforcement)
+- `M 5121 spec_cast_cleric` (Sister Calvea — ritual healing/offense caster)
+- `M 5122 spec_cast_mage` (Archivist Mor Taland — arcane record-warden)
+- `M 5123 spec_cast_undead` (The Bell-Eaten Steward — undead custodian)
+- `M 5124 spec_cast_undead` (Pasture Heart Wraith — spirit boss)
 
 Note: `spec_summon_*` specials must not be used (runtime-only). `spec_keep*` specials must not be set by automation.
 
@@ -432,8 +432,8 @@ Note: `spec_summon_*` specials must not be used (runtime-only). `spec_keep*` spe
 No object functions are planned for this area.
 
 ### Post-Clear Egress
-- Post-clear reset opens the Lantern Return Gate (`30244`), providing a shortcut back to Gravebell Milestone (`30180`) to reduce repetitive backtracking.
-- Pasture Overlook (`30249`) provides an alternative retreat path back to Zone 1.
+- Post-clear reset opens the Lantern Return Gate (`5175`), providing a shortcut back to Gravebell Milestone (`5111`) to reduce repetitive backtracking.
+- Pasture Overlook (`5180`) provides an alternative retreat path back to Zone 1.
 
 ---
 
@@ -457,7 +457,7 @@ No object functions are planned for this area.
 - [ ] Add named exits with discoverability (in room description, object, or `E` extra).
 - [ ] Prefix named door-style exit keywords with `^`.
 - [ ] Add `E` extra descriptions with anchored keyword chains.
-- [ ] Flag boss rooms (`30243`) with `no_mob` (`4`).
+- [ ] Flag boss rooms (`5174`) with `no_mob` (`4`).
 - [ ] Set appropriate `room_flags` and `sector_type` per zone.
 
 ### Phase 2: Mobile Construction
@@ -471,8 +471,8 @@ No object functions are planned for this area.
 
 ### Phase 3: Object Construction
 - [ ] Build all 18 objects with `ITEM_TAKE` in wear flags.
-- [ ] Set up ITEM_PIECE tokens (`30197`-`30199`) with correct `value0`/`value1`/`value2`.
-- [ ] Create Fused Writ key object (`30200`) as ITEM_KEY.
+- [ ] Set up ITEM_PIECE tokens (`5128`-`5130`) with correct `value0`/`value1`/`value2`.
+- [ ] Create Fused Writ key object (`5131`) as ITEM_KEY.
 - [ ] Ensure unique object names within the area.
 - [ ] Apply correct weight archetype encoding (caster/melee/tank).
 - [ ] Set `ITEM_BOSS` + `ITEM_LOOT` on boss signature items.
@@ -484,16 +484,16 @@ No object functions are planned for this area.
 - [ ] Write `M` resets for all mob placements with appropriate limits.
 - [ ] Write `O` resets for token placements.
 - [ ] Write `G`/`E` resets for mob equipment.
-- [ ] Write `D` resets for locked gate (`30237→30238`, state `2`, key `30200`) and closed gate (`30244`, state `1`).
+- [ ] Write `D` resets for locked gate (`5168→5169`, state `2`, key `5131`) and closed gate (`5175`, state `1`).
 - [ ] Write `#SPECIALS` entries for named mobs.
 - [ ] Verify all reset vnums reference valid targets.
 
 ### Phase 5: Validation
-- [ ] Verify vnum containment (`30175-30249` only).
+- [ ] Verify vnum containment (`5106-5180` only).
 - [ ] Verify all text fields terminated with `~`, no `\n\n`, no vnum mentions.
 - [ ] Verify color-code policy compliance (no `@@k`, no background/flashing codes).
 - [ ] Verify `EX_ISDOOR` set on all exits reset to closed/locked via `D`.
 - [ ] Verify key object exists for every locked door.
-- [ ] Verify area header: `Q 16`, `O Virant~`, `V 30175 30249`.
+- [ ] Verify area header: `Q 16`, `O Virant~`, `V 5106 5180`.
 - [ ] Verify canonical section order.
 - [ ] Run `make unit-tests` from `src/`.

@@ -157,36 +157,36 @@ Toxic gardens, flooded crypts, and corrupted shrines should read as downstream o
 
 ---
 
-## District Lore Guide (1400-1499)
+## District Lore Guide (591-690)
 
-### 1400-1409 — Crown Gate March
+### 591-600 — Crown Gate March
 The old public face: decrees, walls, banners, and warning stones. Introduce the idea that authority here was once recognized, then fractured.
 
-### 1410-1419 — Siege Courtworks
+### 601-610 — Siege Courtworks
 Militarized intake architecture. Torture and interrogation spaces should connect to requisition-era legal justifications.
 
-### 1420-1429 — Chapel of Broken Oaths
+### 611-620 — Chapel of Broken Oaths
 Religious-legal fusion point. This district shows how absolution, sentence, and necromancy were collapsed into one bureaucracy.
 
-### 1430-1439 — Catacomb Warline
+### 621-630 — Catacomb Warline
 Industrial burial corridors and dead soldiery logistics. Tone: disciplined horror, not chaotic gore.
 
-### 1440-1449 — Crimson Household
+### 631-640 — Crimson Household
 Courtly occupation layered atop emergency infrastructure. Tone: polished cruelty and political theater.
 
-### 1450-1459 — Gallows and Toxins
+### 641-650 — Gallows and Toxins
 Punishment as municipal process. Demonstrate commodity chains around poison, sentence execution, and body throughput.
 
-### 1460-1469 — Necropolis Engine
+### 651-660 — Necropolis Engine
 Core machinery of binding, identity seizure, and mass dead management. Heaviest legal-necromantic language lives here.
 
-### 1470-1479 — Fen-Labyrinth Reach
+### 661-670 — Fen-Labyrinth Reach
 Where infrastructure failure ceded territory to altered ecology and navigational terror.
 
-### 1480-1489 — Outer Settlements in Ruin
+### 671-680 — Outer Settlements in Ruin
 Civilian cost of prolonged emergency rule: mills, roads, chapels, and watch sites repurposed or destroyed.
 
-### 1490-1499 — Servitor Spine and Final Watch
+### 681-690 — Servitor Spine and Final Watch
 Back-end logistics and final authority points (vaults, observatory, execution grounds, bell count). End-state: legitimacy reduced to ritualized violence.
 
 ---

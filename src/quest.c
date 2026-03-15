@@ -349,11 +349,11 @@ static int canonical_postmaster_vnum(int vnum)
 {
     switch (vnum)
     {
-    case 13021:
-        return 13001; /* legacy Kiess postmaster vnum */
-    case 14021:
+    case 3360:
+        return 3340; /* legacy Kiess postmaster vnum */
+    case 3460:
     case 0:
-        return 14001; /* legacy/placeholder Kowloon postmaster vnum */
+        return 3440; /* legacy/placeholder Kowloon postmaster vnum */
     default:
         return vnum;
     }

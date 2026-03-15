@@ -5,7 +5,7 @@
 - **File Name:** `rocroad.are`
 - **Keyword:** `rocroad`
 - **Intended Levels:** 10-120 (high-traffic overland corridor with scalable threats)
-- **Vnum Range:** `3201-3299`
+- **Vnum Range:** `1117-1215`
 - **Vnum Count:** 99
 - **Current Room Utilization:** 99/99 (all vnums in-range already assigned to rooms)
 - **Reset Rate:** 10
@@ -30,7 +30,7 @@ See `rocroad_lore.md` for the full narrative canon extraction and expansion.
 - `L @@W(@@a10 120@@W)@@N~`
 - `N 16` (retain existing area index unless reassigned globally)
 - `I 10 120`
-- `V 3201 3299`
+- `V 1117 1215`
 - `X 0`
 - `F 10`
 - `U @@Wwagon wheels rattle and @@ytrade bells@@W ring along Roc Road@@N~`
@@ -44,13 +44,13 @@ See `rocroad_lore.md` for the full narrative canon extraction and expansion.
 ### Area Header
 1. `Q 16` directive is mandatory.
 2. Owner line must be `O Virant~` (area header owner policy). The existing file uses `O stephen~`; this must be updated.
-3. `V 3201 3299` defines the vnum envelope; all authored rooms, mobiles, and objects must stay inside this range.
+3. `V 1117 1215` defines the vnum envelope; all authored rooms, mobiles, and objects must stay inside this range.
 4. Remove `R stephen~` and `W stephen~` ACL directives from the legacy header; set ACLs at implementation time if needed.
 
 ### Vnum Allocation
 5. Vnums for rooms, mobiles, and objects must be assigned in ascending sequential order with no gaps.
 6. Fill existing gaps in the vnum range before assigning new higher vnums.
-7. For rooms, attempt to use all room vnums in the assigned range (fill every available slot where practical). The existing file uses all 99 vnums but in non-sequential order; the rebuild must assign vnums `3201-3299` in ascending order.
+7. For rooms, attempt to use all room vnums in the assigned range (fill every available slot where practical). The existing file uses all 99 vnums but in non-sequential order; the rebuild must assign vnums `1117-1215` in ascending order.
 
 ### String and Description Rules
 8. All text fields terminated by `~`. Strings must not contain back-to-back newlines (`\n\n`).
@@ -118,22 +118,22 @@ The current `rocroad.are` has the following external exits that **must be preser
 
 | Current Vnum | Direction | Destination Vnum | Destination Area | Notes |
 |---|---|---|---|---|
-| 3230 | east | 3041 | Midgaard | **East terminus** — Midgaard West Gate link |
-| 3234 | north | 11200 | Umbra Heartspire | Branch link north (close to Midgaard) |
-| 3238 | down | 610 | External area | Vertical link (sub-road access) |
-| 3240 | east | 9601 | *(removed — Forest of Confusion connects via Kiess north gate, not Roc Road)* | ~~Branch to Forest of Confusion~~ |
-| 3242 | east | 3401 | External area | Branch link east |
-| 3243 | north | 13095 | Kiess | **West terminus** — Kiess South Gate link |
-| 3249 | north | 3290 | Roc Road (internal) | Stone path branch |
-| 3250 | up | 7200 | External area | Vertical link (elevated access) |
-| 3259 | north | 5083 | External sea area | Sea route link |
-| 3291 | north | 4449 | External area | Building/structure link |
+| 1146 | east | 957 | Midgaard | **East terminus** — Midgaard West Gate link |
+| 1150 | north | 3064 | Umbra Heartspire | Branch link north (close to Midgaard) |
+| 1154 | down | 88 | External area | Vertical link (sub-road access) |
+| 1156 | east | 2340 | *(removed — Forest of Confusion connects via Kiess north gate, not Roc Road)* | ~~Branch to Forest of Confusion~~ |
+| 1158 | east | 3401 | External area | Branch link east |
+| 1159 | north | 3434 | Kiess | **West terminus** — Kiess South Gate link |
+| 1165 | north | 1206 | Roc Road (internal) | Stone path branch |
+| 1166 | up | 7200 | External area | Vertical link (elevated access) |
+| 1175 | north | 5083 | External sea area | Sea route link |
+| 1207 | north | 4449 | External area | Building/structure link |
 
 ### New External Links (added in rebuild)
 
 | New Room | Direction | Destination Vnum | Destination Area | Notes |
 |---|---|---|---|---|
-| *(Band A)* | north | 30250 | Cathedral of the Violet Eclipse | Branch link north (very close to Midgaard) |
+| *(Band A)* | north | 5181 | Cathedral of the Violet Eclipse | Branch link north (very close to Midgaard) |
 
 **Rebuild rule:** Every preserved external link above must appear in the rebuilt area file, mapped to the new sequential vnum that replaces the original room. New links must also be implemented. If a connection requires a reciprocal exit in the destination area, coordinate with that area's file.
 
@@ -150,81 +150,81 @@ The existing area already uses all room vnums and serves as a long transit chain
 5. **Maintain reliable traversal** for players who just need to travel, while adding optional side encounters, lore pockets, and mini-threat spikes.
 
 ## Spatial Model (99-room corridor with thematic bands)
-Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus connector micro-zones. All rooms use ascending sequential vnums `3201-3299` with no gaps.
+Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus connector micro-zones. All rooms use ascending sequential vnums `1117-1215` with no gaps.
 
-### Band A — Midgaard Gate March (3201-3211, 11 rooms)
+### Band A — Midgaard Gate March (1117-1127, 11 rooms)
 - **Sector types:** `city` (1) for the first 2 rooms nearest Midgaard gate; `field` (2) for the remaining road through settled farmland.
-- **Room flags:** `0` for most; the east terminus room (3201) is an important room (5+ sentences).
+- **Room flags:** `0` for most; the east terminus room (1117) is an important room (5+ sentences).
 - Stone-set roadway under Midgaard charter markers.
 - Guard relays, tax cairns, and old civic inscriptions.
 - Encounter emphasis: patrols, petitioners, minor bandit scouts, courier traffic.
 - **External links:**
- - Room 3201 connects east to `3041` (Midgaard West Gate). This is the canonical east terminus of Roc Road.
- - One room in this band connects north to `30250` (Cathedral of the Violet Eclipse). Very close to Midgaard — a shadow-liturgical cathedral visible from the road's first stretch.
+ - Room 1117 connects east to `957` (Midgaard West Gate). This is the canonical east terminus of Roc Road.
+ - One room in this band connects north to `5181` (Cathedral of the Violet Eclipse). Very close to Midgaard — a shadow-liturgical cathedral visible from the road's first stretch.
 
-### Band B — Banner Hills and Switchbacks (3212-3219, 8 rooms)
+### Band B — Banner Hills and Switchbacks (1128-1135, 8 rooms)
 - **Sector types:** `hills` (4) for hill-climb rooms; `mountain` (5) for the high pass and switchback rooms.
 - **Room flags:** `0` for most.
 - Steeper terrain, signal poles, weather-exposed pass points.
 - Visual language shifts from civic to frontier military.
 - Encounter emphasis: rockfall hazards, hill raiders, watch outriders.
 
-### Band C — River Ledger Crossing (3220-3227, 8 rooms)
+### Band C — River Ledger Crossing (1136-1143, 8 rooms)
 - **Sector types:** `field` (2) for approach rooms; `water_swim` (6) for the ford room itself; `field` (2) for the far bank.
 - **Room flags:** `0` for most.
 - Ford/bridge complex with customs past and present layered together.
 - Introduces merchant guild tension and smuggling subtext.
 - Encounter emphasis: ferrymen, toll ghosts, river predators, contraband runners.
 
-### Band D — Dustward Verge (3228-3234, 7 rooms)
+### Band D — Dustward Verge (1144-1150, 7 rooms)
 - **Sector types:** `desert` (10) for arid stretches; `field` (2) for transitional rooms.
 - **Room flags:** `0` for most.
 - Drier transition where road maintenance degrades.
 - Old milestone liturgy from pre-Kiess polities resurfaces.
 - Encounter emphasis: scavengers, relic pickers, heat-maddened fauna.
-- **External link:** Room at end of this band connects north to `11200` (Umbra Heartspire). The cathedral-fortress is visible from the road as a dark silhouette against the hills — close enough to Midgaard's jurisdiction that its original charter came from Midgaard's archive system.
+- **External link:** Room at end of this band connects north to `3064` (Umbra Heartspire). The cathedral-fortress is visible from the road as a dark silhouette against the hills — close enough to Midgaard's jurisdiction that its original charter came from Midgaard's archive system.
 
-### Band E — Crossroads Compact (3235-3243, 9 rooms)
+### Band E — Crossroads Compact (1151-1159, 9 rooms)
 - **Sector types:** `field` (2) for road rooms; `forest` (3) for rooms near the forest branch.
 - **Room flags:** `0` for most; crossroads hub room is important (5+ sentences). Boss encounter room flagged `no_mob` (4).
 - The major strategic intersection where branch routes diverge.
 - Rebuilt as a political pressure node with evidence of overlapping jurisdiction.
 - Encounter emphasis: diplomatic envoys, mercenary escorts, opportunist thieves.
 - **External links preserved from this band:**
- - North to `11200` (Umbra Heartspire, from former 3234)
- - Down to `610` (vertical sub-road access, from former 3238)
- - East to `3401` (branch link east, from former 3242)
- - North to `13095` (Kiess South Gate, from former 3243) — this is the **canonical west terminus** of Roc Road.
-- **Note:** The former `3240 east → 9601` (Forest of Confusion) link is **removed** in the rebuild. The Forest of Confusion connects via Kiess's north gate, not directly from Roc Road.
+ - North to `3064` (Umbra Heartspire, from former 1150)
+ - Down to `88` (vertical sub-road access, from former 1154)
+ - East to `3401` (branch link east, from former 1158)
+ - North to `3434` (Kiess South Gate, from former 1159) — this is the **canonical west terminus** of Roc Road.
+- **Note:** The former `1156 east → 2340` (Forest of Confusion) link is **removed** in the rebuild. The Forest of Confusion connects via Kiess's north gate, not directly from Roc Road.
 
-### Band F — Greenveil Spur (3244-3252, 9 rooms)
+### Band F — Greenveil Spur (1160-1168, 9 rooms)
 - **Sector types:** `forest` (3) for all rooms in the forest spur.
 - **Room flags:** `0` for most; boss encounter room flagged `no_mob` (4).
 - Forest-side path that once served as hidden troop and refugee movement line.
 - Becomes a lore-rich optional path with druidic and exile traces.
 - Encounter emphasis: foresters, displaced spirits, poachers, herbalists.
 - **External links preserved from this band:**
- - North to internal stone path rooms (former 3290-3291)
- - Up to `7200` (elevated access, from former 3250)
- - North to `4449` (building/structure link, from former 3291)
+ - North to internal stone path rooms (former 1206-1207)
+ - Up to `7200` (elevated access, from former 1166)
+ - North to `4449` (building/structure link, from former 1207)
 
-### Band G — Inlet, Cave, and Sinkline (3253-3261, 9 rooms)
+### Band G — Inlet, Cave, and Sinkline (1169-1177, 9 rooms)
 - **Sector types:** `water_swim` (6) for shallow water rooms; `water_noswim` (7) for deep water rooms; `desert` (10) for beach rooms; `inside` (11) for cave/sinkhole rooms.
 - **Room flags:** `0` for water and beach; `dark` (1) for cave/sinkhole interiors. Boss encounter room flagged `no_mob` (4).
 - Water-edge and cliff subzone with salvage economy and old smuggler pockets.
 - Encounter emphasis: shoreline hunters, cave squatters, tidebound anomalies.
 - **External links preserved from this band:**
- - North to `5083` (sea route link, from former 3259)
+ - North to `5083` (sea route link, from former 1175)
 - **Door preserved:** Iron door between beach and cave rooms (reset to closed, state 1, matching existing reset).
 
-### Band H — Ruin Run and Weathered Causeway (3262-3274, 13 rooms)
+### Band H — Ruin Run and Weathered Causeway (1178-1190, 13 rooms)
 - **Sector types:** `desert` (10) for arid wasteland rooms; `field` (2) for ruin and post-ruin rooms.
 - **Room flags:** `0` for most; boss encounter room flagged `no_mob` (4).
 - Ancient city fragments integrated into roadbed over centuries.
 - Strongest "deep time" lore in the route.
 - Encounter emphasis: ruin custodians, script-haunted echoes, relic caravans.
 
-### Band I — Western Shore Reach (3275-3299, 25 rooms)
+### Band I — Western Shore Reach (1191-1215, 25 rooms)
 - **Sector types:** `field` (2) for coastal approach rooms; `desert` (10) for beach rooms; `water_swim` (6) for shallow surf; `hills` (4) for clifftop road segments.
 - **Room flags:** `0` for most; the western terminus promontory room is important (5+ sentences).
 - Windblown coast and terminal roadward points linked to Kiess-bound sea trade memory.
@@ -243,8 +243,8 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 
 ## Mobile Redesign (new full roster)
 ### Vnum strategy
-- Use `3201-3299` as the mobile envelope (parallel namespace), with ~36 active mob templates and variant reset mixes.
-- Vnums assigned in ascending sequential order with no gaps, starting at `3201`.
+- Use `1117-1215` as the mobile envelope (parallel namespace), with ~36 active mob templates and variant reset mixes.
+- Vnums assigned in ascending sequential order with no gaps, starting at `1117`.
 
 ### Mob Spec Compliance and Placement Principles
 
@@ -281,77 +281,77 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 
 | Vnum | Name | Level | Act Flags | Band | Notes |
 |------|------|-------|-----------|------|-------|
-| 3201 | a Midgaard road warden | 30 | is_npc, sentinel, stay_area | A | Gate-adjacent patrol; `spec_guard` |
-| 3202 | a Midgaard road clerk | 20 | is_npc, stay_area | A | Tax and census mark recorder |
-| 3203 | a Midgaard road warden captain | 50 | is_npc, sentinel, stay_area, solo | A-B | Senior patrol officer |
-| 3204 | a charter inscription keeper | 25 | is_npc, sentinel, stay_area | A | Maintains legal markers |
+| 1117 | a Midgaard road warden | 30 | is_npc, sentinel, stay_area | A | Gate-adjacent patrol; `spec_guard` |
+| 1118 | a Midgaard road clerk | 20 | is_npc, stay_area | A | Tax and census mark recorder |
+| 1119 | a Midgaard road warden captain | 50 | is_npc, sentinel, stay_area, solo | A-B | Senior patrol officer |
+| 1120 | a charter inscription keeper | 25 | is_npc, sentinel, stay_area | A | Maintains legal markers |
 
 #### Faction 2: Kiess Convoy Syndics (non-aggressive, Bands D-E and road-wide)
 
 | Vnum | Name | Level | Act Flags | Band | Notes |
 |------|------|-------|-----------|------|-------|
-| 3205 | a Kiess convoy marshal | 35 | is_npc, stay_area | E | Caravan leader |
-| 3206 | a Kiess quarter agent | 25 | is_npc, stay_area | D-E | Supply and risk accountant |
-| 3207 | a Kiess route ledger scribe | 20 | is_npc, sentinel, stay_area | E | Records debt and guard obligations |
-| 3208 | a Kiess convoy guard | 40 | is_npc, stay_area | D-E | Armed escort |
+| 1121 | a Kiess convoy marshal | 35 | is_npc, stay_area | E | Caravan leader |
+| 1122 | a Kiess quarter agent | 25 | is_npc, stay_area | D-E | Supply and risk accountant |
+| 1123 | a Kiess route ledger scribe | 20 | is_npc, sentinel, stay_area | E | Records debt and guard obligations |
+| 1124 | a Kiess convoy guard | 40 | is_npc, stay_area | D-E | Armed escort |
 
 #### Faction 3: Independent Wayfolk (non-aggressive, road-wide)
 
 | Vnum | Name | Level | Act Flags | Band | Notes |
 |------|------|-------|-----------|------|-------|
-| 3209 | a road drover | 15 | is_npc, stay_area | A-D | Animal handler |
-| 3210 | a peddler of the road | 18 | is_npc, stay_area | B-E | Traveling merchant |
-| 3211 | a waystone shrine keeper | 22 | is_npc, sentinel, stay_area | C-D | Maintains roadside shrines |
-| 3212 | a river ferryman | 20 | is_npc, sentinel, stay_area | C | River crossing operator |
-| 3213 | a road-camp cook | 15 | is_npc, stay_area | B-D | Campsite laborer |
+| 1125 | a road drover | 15 | is_npc, stay_area | A-D | Animal handler |
+| 1126 | a peddler of the road | 18 | is_npc, stay_area | B-E | Traveling merchant |
+| 1127 | a waystone shrine keeper | 22 | is_npc, sentinel, stay_area | C-D | Maintains roadside shrines |
+| 1128 | a river ferryman | 20 | is_npc, sentinel, stay_area | C | River crossing operator |
+| 1129 | a road-camp cook | 15 | is_npc, stay_area | B-D | Campsite laborer |
 
 #### Faction 4: Frontier Predators (aggressive, band-appropriate levels)
 
 | Vnum | Name | Level | Act Flags | Band | Notes |
 |------|------|-------|-----------|------|-------|
-| 3214 | a ridge wolf | 25 | is_npc, aggressive, stay_area | B | Hill predator |
-| 3215 | a ridge cat | 35 | is_npc, aggressive, stay_area | B-C | Ambush predator |
-| 3216 | a river ambusher snake | 20 | is_npc, aggressive, stay_area | C | Waterside threat |
-| 3217 | a dust scavenger bird | 30 | is_npc, aggressive, stay_area | D-H | Carrion predator |
-| 3218 | a coastal carrion gull | 35 | is_npc, aggressive, stay_area | I | Shore predator |
-| 3219 | a plains stalker | 40 | is_npc, aggressive, stay_area | H-I | Open-ground hunter |
+| 1130 | a ridge wolf | 25 | is_npc, aggressive, stay_area | B | Hill predator |
+| 1131 | a ridge cat | 35 | is_npc, aggressive, stay_area | B-C | Ambush predator |
+| 1132 | a river ambusher snake | 20 | is_npc, aggressive, stay_area | C | Waterside threat |
+| 1133 | a dust scavenger bird | 30 | is_npc, aggressive, stay_area | D-H | Carrion predator |
+| 1134 | a coastal carrion gull | 35 | is_npc, aggressive, stay_area | I | Shore predator |
+| 1135 | a plains stalker | 40 | is_npc, aggressive, stay_area | H-I | Open-ground hunter |
 
 #### Faction 5: Ruin-Touched Hostiles (aggressive, Bands F-H)
 
 | Vnum | Name | Level | Act Flags | Band | Notes |
 |------|------|-------|-----------|------|-------|
-| 3220 | a cairn lurker | 50 | is_npc, aggressive, stay_area | H | Haunts ancient ruins |
-| 3221 | a script-blind revenant | 60 | is_npc, aggressive, stay_area, undead | H | Animated by old law magic |
-| 3222 | a relic zealot | 45 | is_npc, aggressive, stay_area | H | Ideologue using antique script myths |
-| 3223 | a ruin custodian shade | 55 | is_npc, aggressive, stay_area, undead | H | Guardian of old structures |
-| 3224 | a displaced forest spirit | 40 | is_npc, aggressive, stay_area | F | Sanctuary violation specter |
+| 1136 | a cairn lurker | 50 | is_npc, aggressive, stay_area | H | Haunts ancient ruins |
+| 1137 | a script-blind revenant | 60 | is_npc, aggressive, stay_area, undead | H | Animated by old law magic |
+| 1138 | a relic zealot | 45 | is_npc, aggressive, stay_area | H | Ideologue using antique script myths |
+| 1139 | a ruin custodian shade | 55 | is_npc, aggressive, stay_area, undead | H | Guardian of old structures |
+| 1140 | a displaced forest spirit | 40 | is_npc, aggressive, stay_area | F | Sanctuary violation specter |
 
 #### Faction 6: Shadow Trade Cells (aggressive, Bands C-G)
 
 | Vnum | Name | Level | Act Flags | Band | Notes |
 |------|------|-------|-----------|------|-------|
-| 3225 | a tollbreak enforcer | 40 | is_npc, aggressive, stay_area | C-E | Violent extraction crew |
-| 3226 | a contraband runner | 30 | is_npc, aggressive, stay_area | C-G | Smuggler |
-| 3227 | a forged-seal courier | 25 | is_npc, aggressive, stay_area | E | Falsified legal documents |
-| 3228 | a cave squatter | 35 | is_npc, aggressive, stay_area | G | Tide-cave holdout |
+| 1141 | a tollbreak enforcer | 40 | is_npc, aggressive, stay_area | C-E | Violent extraction crew |
+| 1142 | a contraband runner | 30 | is_npc, aggressive, stay_area | C-G | Smuggler |
+| 1143 | a forged-seal courier | 25 | is_npc, aggressive, stay_area | E | Falsified legal documents |
+| 1144 | a cave squatter | 35 | is_npc, aggressive, stay_area | G | Tide-cave holdout |
 
 #### Boss/Elite Encounters (4 bosses, aggressive, sentinel, boss)
 
 | Vnum | Name | Level | Act Flags | Band | Room | Notes |
 |------|------|-------|-----------|------|------|-------|
-| 3229 | the Toll-Reeve Without Crown | 90 | is_npc, sentinel, aggressive, stay_area, boss, no_flee | E | no_mob room | Crossroads legal revenant; undead; `spec_cast_undead` |
-| 3230 | the Greenveil Antler-Warden | 85 | is_npc, sentinel, aggressive, stay_area, boss, no_flee | F | no_mob room | Forest spirit-warrior hybrid |
-| 3231 | the Inlet Chainmaster | 80 | is_npc, sentinel, aggressive, stay_area, boss, no_flee | G | no_mob room | Smuggler captain in tide cave |
-| 3232 | the Promontory Harrower | 95 | is_npc, sentinel, aggressive, stay_area, boss, no_flee | I | no_mob room | Coastal apex predator threat |
+| 1145 | the Toll-Reeve Without Crown | 90 | is_npc, sentinel, aggressive, stay_area, boss, no_flee | E | no_mob room | Crossroads legal revenant; undead; `spec_cast_undead` |
+| 1146 | the Greenveil Antler-Warden | 85 | is_npc, sentinel, aggressive, stay_area, boss, no_flee | F | no_mob room | Forest spirit-warrior hybrid |
+| 1147 | the Inlet Chainmaster | 80 | is_npc, sentinel, aggressive, stay_area, boss, no_flee | G | no_mob room | Smuggler captain in tide cave |
+| 1148 | the Promontory Harrower | 95 | is_npc, sentinel, aggressive, stay_area, boss, no_flee | I | no_mob room | Coastal apex predator threat |
 
 #### Ambient Flavor Mobs (non-aggressive)
 
 | Vnum | Name | Level | Act Flags | Band | Notes |
 |------|------|-------|-----------|------|-------|
-| 3233 | a road wagon | 10 | is_npc, stay_area | A-E | Background traffic |
-| 3234 | a mule train driver | 12 | is_npc, stay_area | B-D | Background traffic |
-| 3235 | a road-weary pilgrim | 10 | is_npc, stay_area | D-I | Stranded traveler |
-| 3236 | a ruin scavenger | 20 | is_npc, stay_area | H | Non-hostile relic picker |
+| 1149 | a road wagon | 10 | is_npc, stay_area | A-E | Background traffic |
+| 1150 | a mule train driver | 12 | is_npc, stay_area | B-D | Background traffic |
+| 1151 | a road-weary pilgrim | 10 | is_npc, stay_area | D-I | Stranded traveler |
+| 1152 | a ruin scavenger | 20 | is_npc, stay_area | H | Non-hostile relic picker |
 
 **Mob combat extensions (`!` line):**
 - Roadwarden and convoy mobs (level 20-50): melee profile, low-mid skills per floor tables.
@@ -367,8 +367,8 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 
 ## Object Redesign (new full roster)
 ### Vnum strategy
-- Use `3201-3299` as the object envelope, target ~42 objects with progression tiers.
-- Vnums assigned in ascending sequential order with no gaps, starting at `3201`.
+- Use `1117-1215` as the object envelope, target ~42 objects with progression tiers.
+- Vnums assigned in ascending sequential order with no gaps, starting at `1117`.
 
 ### Object Spec Compliance
 
@@ -405,73 +405,73 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 
 | Vnum | Name | Item Type | Wear | Weight | Level | Notes |
 |------|------|-----------|------|--------|-------|-------|
-| 3201 | a roadwarden badgeplate | armor | body, take | 11 | 25 | Tank; patrol identification |
-| 3202 | a signal cloak of the road watch | armor | about, take | 6 | 30 | Melee; wind-resistant travel cloak |
-| 3203 | reinforced warden boots | armor | feet, take | 11 | 35 | Tank; road-rated footwear |
-| 3204 | a toll rod of Midgaard charter | weapon | hold, take | 6 | 40 | Melee; value3=7 (pound); legal authority weapon |
-| 3205 | a road warden patrol lantern | light | take | 3 | 20 | Caster; wayfinding light |
-| 3206 | a charter inscription rubbing | trash | take | 1 | 15 | Caster; lore object with E extra desc |
+| 1117 | a roadwarden badgeplate | armor | body, take | 11 | 25 | Tank; patrol identification |
+| 1118 | a signal cloak of the road watch | armor | about, take | 6 | 30 | Melee; wind-resistant travel cloak |
+| 1119 | reinforced warden boots | armor | feet, take | 11 | 35 | Tank; road-rated footwear |
+| 1120 | a toll rod of Midgaard charter | weapon | hold, take | 6 | 40 | Melee; value3=7 (pound); legal authority weapon |
+| 1121 | a road warden patrol lantern | light | take | 3 | 20 | Caster; wayfinding light |
+| 1122 | a charter inscription rubbing | trash | take | 1 | 15 | Caster; lore object with E extra desc |
 
 #### Convoy Gear (Bands D-E, levels 25-55)
 
 | Vnum | Name | Item Type | Wear | Weight | Level | Notes |
 |------|------|-----------|------|--------|-------|-------|
-| 3207 | a Kiess trade ledger | trash | take | 2 | 30 | Caster; lore object with E extra desc |
-| 3208 | a convoy lockbox | container | take | 8 | 35 | Melee; trade container |
-| 3209 | a mule tack harness | armor | waist, take | 7 | 25 | Melee; utility gear |
-| 3210 | a lantern standard pole | weapon | hold, take | 8 | 45 | Melee; value3=7 (pound); improvised weapon |
-| 3211 | a syndic quarter-agent seal | treasure | take | 2 | 40 | Caster; trade authority token |
-| 3212 | a convoy guard shield | armor | hold, take | 13 | 50 | Tank; shield archetype |
+| 1123 | a Kiess trade ledger | trash | take | 2 | 30 | Caster; lore object with E extra desc |
+| 1124 | a convoy lockbox | container | take | 8 | 35 | Melee; trade container |
+| 1125 | a mule tack harness | armor | waist, take | 7 | 25 | Melee; utility gear |
+| 1126 | a lantern standard pole | weapon | hold, take | 8 | 45 | Melee; value3=7 (pound); improvised weapon |
+| 1127 | a syndic quarter-agent seal | treasure | take | 2 | 40 | Caster; trade authority token |
+| 1128 | a convoy guard shield | armor | hold, take | 13 | 50 | Tank; shield archetype |
 
 #### Forest Relics (Band F, levels 30-55)
 
 | Vnum | Name | Item Type | Wear | Weight | Level | Notes |
 |------|------|-----------|------|--------|-------|-------|
-| 3213 | a bark-charm of the old verge | treasure | take | 1 | 35 | Caster; druidic trace relic |
-| 3214 | a branch fetish of the spur | treasure | take | 2 | 40 | Caster; forest spirit ward |
-| 3215 | a herb satchel of the greenveil | container | take | 3 | 30 | Caster; medicinal herb pouch |
-| 3216 | a vow-ribbon of the sanctuary | armor | neck, take | 1 | 45 | Caster; exile community token |
-| 3217 | a moss-wrapped druid staff | weapon | hold, take | 4 | 55 | Caster; value3=8 (crush); two-handed (ITEM_TWO_HANDED) |
+| 1129 | a bark-charm of the old verge | treasure | take | 1 | 35 | Caster; druidic trace relic |
+| 1130 | a branch fetish of the spur | treasure | take | 2 | 40 | Caster; forest spirit ward |
+| 1131 | a herb satchel of the greenveil | container | take | 3 | 30 | Caster; medicinal herb pouch |
+| 1132 | a vow-ribbon of the sanctuary | armor | neck, take | 1 | 45 | Caster; exile community token |
+| 1133 | a moss-wrapped druid staff | weapon | hold, take | 4 | 55 | Caster; value3=8 (crush); two-handed (ITEM_TWO_HANDED) |
 
 #### Ruin Salvage (Band H, levels 40-70)
 
 | Vnum | Name | Item Type | Wear | Weight | Level | Notes |
 |------|------|-----------|------|--------|-------|-------|
-| 3218 | an etched stone tablet | trash | take | 3 | 45 | Caster; lore object with E extra desc (old tax records) |
-| 3219 | a weathered bronze coin | treasure | take | 1 | 40 | Caster; pre-charter currency |
-| 3220 | a fractured sealstone | treasure | take | 2 | 50 | Caster; broken authority seal |
-| 3221 | a ruin-script amulet | armor | neck, take | 3 | 60 | Caster; ancient script pendant |
-| 3222 | a causeway flagstone shard | weapon | hold, take | 9 | 55 | Melee; value3=8 (crush); improvised weapon |
-| 3223 | a script-etched bone knife | weapon | hold, take | 5 | 65 | Caster; value3=2 (stab); relic blade |
+| 1134 | an etched stone tablet | trash | take | 3 | 45 | Caster; lore object with E extra desc (old tax records) |
+| 1135 | a weathered bronze coin | treasure | take | 1 | 40 | Caster; pre-charter currency |
+| 1136 | a fractured sealstone | treasure | take | 2 | 50 | Caster; broken authority seal |
+| 1137 | a ruin-script amulet | armor | neck, take | 3 | 60 | Caster; ancient script pendant |
+| 1138 | a causeway flagstone shard | weapon | hold, take | 9 | 55 | Melee; value3=8 (crush); improvised weapon |
+| 1139 | a script-etched bone knife | weapon | hold, take | 5 | 65 | Caster; value3=2 (stab); relic blade |
 
 #### Coastal Finds (Band I, levels 35-65)
 
 | Vnum | Name | Item Type | Wear | Weight | Level | Notes |
 |------|------|-----------|------|--------|-------|-------|
-| 3224 | a salt-cured leather vest | armor | body, take | 7 | 40 | Melee; coastal wear |
-| 3225 | a barnacled cutlass | weapon | hold, take | 8 | 50 | Melee; value3=3 (slash); corroded naval blade |
-| 3226 | a ropework climbing harness | armor | waist, take | 7 | 35 | Melee; cliff-side utility |
-| 3227 | a sea-glass focus shard | treasure | hold, take | 2 | 55 | Caster; magical focus |
-| 3228 | a driftwood buckler | armor | hold, take | 12 | 45 | Tank; buckler (ITEM_BUCKLER); salvaged shield |
-| 3229 | a privateer signal horn | treasure | take | 4 | 60 | Caster; old maritime call |
+| 1140 | a salt-cured leather vest | armor | body, take | 7 | 40 | Melee; coastal wear |
+| 1141 | a barnacled cutlass | weapon | hold, take | 8 | 50 | Melee; value3=3 (slash); corroded naval blade |
+| 1142 | a ropework climbing harness | armor | waist, take | 7 | 35 | Melee; cliff-side utility |
+| 1143 | a sea-glass focus shard | treasure | hold, take | 2 | 55 | Caster; magical focus |
+| 1144 | a driftwood buckler | armor | hold, take | 12 | 45 | Tank; buckler (ITEM_BUCKLER); salvaged shield |
+| 1145 | a privateer signal horn | treasure | take | 4 | 60 | Caster; old maritime call |
 
 #### Boss Signature Drops (ITEM_LOOT + ITEM_BOSS, one per elite)
 
 | Vnum | Name | Item Type | Wear | Weight | Level | Extra Flags | Notes |
 |------|------|-----------|------|--------|-------|-------------|-------|
-| 3230 | the Toll-Reeve's unsealed warrant | armor | hold, take | 3 | 90 | ITEM_LOOT, ITEM_BOSS | Caster; legal revenant's authority document; shield archetype |
-| 3231 | the Antler-Warden's crown of thorns | armor | head, take | 5 | 85 | ITEM_LOOT, ITEM_BOSS | Caster; forest spirit headpiece |
-| 3232 | the Chainmaster's tide-iron shackle | armor | wrist, take | 9 | 80 | ITEM_LOOT, ITEM_BOSS | Melee; smuggler captain's symbol |
-| 3233 | the Harrower's storm-bone talisman | armor | neck, take | 4 | 95 | ITEM_LOOT, ITEM_BOSS | Caster; apex predator trophy |
+| 1146 | the Toll-Reeve's unsealed warrant | armor | hold, take | 3 | 90 | ITEM_LOOT, ITEM_BOSS | Caster; legal revenant's authority document; shield archetype |
+| 1147 | the Antler-Warden's crown of thorns | armor | head, take | 5 | 85 | ITEM_LOOT, ITEM_BOSS | Caster; forest spirit headpiece |
+| 1148 | the Chainmaster's tide-iron shackle | armor | wrist, take | 9 | 80 | ITEM_LOOT, ITEM_BOSS | Melee; smuggler captain's symbol |
+| 1149 | the Harrower's storm-bone talisman | armor | neck, take | 4 | 95 | ITEM_LOOT, ITEM_BOSS | Caster; apex predator trophy |
 
 #### Utility and Key Items
 
 | Vnum | Name | Item Type | Wear | Weight | Level | Notes |
 |------|------|-----------|------|--------|-------|-------|
-| 3234 | a rusted iron cave key | key | take | 1 | 1 | Key for iron door in Band G cave (if door is set to locked) |
+| 1150 | a rusted iron cave key | key | take | 1 | 1 | Key for iron door in Band G cave (if door is set to locked) |
 
 #### Reserved Object Vnums
-- **3235-3299:** Unallocated (65 vnums). Reserved for additional encounter drops, quest items, shop stock (if a waystation shop is added), and per-band flavor objects added during implementation.
+- **1151-1215:** Unallocated (65 vnums). Reserved for additional encounter drops, quest items, shop stock (if a waystation shop is added), and per-band flavor objects added during implementation.
 
 ### Item families summary
 - **Roadwarden kit:** badgeplates, signal cloaks, reinforced boots, toll rods.
@@ -494,62 +494,62 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 
 ### Mob Resets (`M` commands) — planned distribution
 
-**Band A (3201-3211): Midgaard Gate March**
-- 2x road warden (3201), limit 3, in gate-adjacent rooms (sentinel)
-- 1x road clerk (3202), limit 2
-- 1x road warden captain (3203), limit 1 (solo)
-- 1x charter keeper (3204), limit 1 (sentinel)
-- 2x road drover (3209), limit 3
-- 1x road wagon (3233), limit 2
+**Band A (1117-1127): Midgaard Gate March**
+- 2x road warden (1117), limit 3, in gate-adjacent rooms (sentinel)
+- 1x road clerk (1118), limit 2
+- 1x road warden captain (1119), limit 1 (solo)
+- 1x charter keeper (1120), limit 1 (sentinel)
+- 2x road drover (1125), limit 3
+- 1x road wagon (1149), limit 2
 
-**Band B (3212-3219): Banner Hills**
-- 2x ridge wolf (3214), limit 3
-- 1x ridge cat (3215), limit 2
-- 1x peddler (3210), limit 2
-- 1x road-camp cook (3213), limit 2
+**Band B (1128-1135): Banner Hills**
+- 2x ridge wolf (1130), limit 3
+- 1x ridge cat (1131), limit 2
+- 1x peddler (1126), limit 2
+- 1x road-camp cook (1129), limit 2
 
-**Band C (3220-3227): River Crossing**
-- 1x ferryman (3212), limit 1 (sentinel)
-- 1x shrine keeper (3211), limit 1 (sentinel)
-- 1x river ambusher snake (3216), limit 2
-- 1x tollbreak enforcer (3225), limit 2
-- 1x contraband runner (3226), limit 2
+**Band C (1136-1143): River Crossing**
+- 1x ferryman (1128), limit 1 (sentinel)
+- 1x shrine keeper (1127), limit 1 (sentinel)
+- 1x river ambusher snake (1132), limit 2
+- 1x tollbreak enforcer (1141), limit 2
+- 1x contraband runner (1142), limit 2
 
-**Band D (3228-3234): Dustward Verge**
-- 1x Kiess quarter agent (3206), limit 2
-- 1x dust scavenger bird (3217), limit 3
-- 1x road-weary pilgrim (3235), limit 2
-- 1x mule train driver (3234), limit 2
+**Band D (1144-1150): Dustward Verge**
+- 1x Kiess quarter agent (1122), limit 2
+- 1x dust scavenger bird (1133), limit 3
+- 1x road-weary pilgrim (1151), limit 2
+- 1x mule train driver (1150), limit 2
 
-**Band E (3235-3243): Crossroads Compact**
-- 1x Kiess convoy marshal (3205), limit 1
-- 1x Kiess route ledger scribe (3207), limit 1 (sentinel)
-- 1x Kiess convoy guard (3208), limit 2
-- 1x forged-seal courier (3227), limit 2
-- 1x Toll-Reeve Without Crown (3229), limit 1 (boss, in no_mob room)
+**Band E (1151-1159): Crossroads Compact**
+- 1x Kiess convoy marshal (1121), limit 1
+- 1x Kiess route ledger scribe (1123), limit 1 (sentinel)
+- 1x Kiess convoy guard (1124), limit 2
+- 1x forged-seal courier (1143), limit 2
+- 1x Toll-Reeve Without Crown (1145), limit 1 (boss, in no_mob room)
 
-**Band F (3244-3252): Greenveil Spur**
-- 1x displaced forest spirit (3224), limit 2
-- 1x contraband runner (3226), limit 1
-- 1x Greenveil Antler-Warden (3230), limit 1 (boss, in no_mob room)
+**Band F (1160-1168): Greenveil Spur**
+- 1x displaced forest spirit (1140), limit 2
+- 1x contraband runner (1142), limit 1
+- 1x Greenveil Antler-Warden (1146), limit 1 (boss, in no_mob room)
 
-**Band G (3253-3261): Inlet and Cave**
-- 1x cave squatter (3228), limit 2
-- 1x coastal carrion gull (3218), limit 2
-- 1x Inlet Chainmaster (3231), limit 1 (boss, in no_mob room)
+**Band G (1169-1177): Inlet and Cave**
+- 1x cave squatter (1144), limit 2
+- 1x coastal carrion gull (1134), limit 2
+- 1x Inlet Chainmaster (1147), limit 1 (boss, in no_mob room)
 
-**Band H (3262-3274): Ruin Run**
-- 2x cairn lurker (3220), limit 3
-- 1x script-blind revenant (3221), limit 2
-- 1x relic zealot (3222), limit 2
-- 1x ruin custodian shade (3223), limit 2
-- 1x ruin scavenger (3236), limit 2
+**Band H (1178-1190): Ruin Run**
+- 2x cairn lurker (1136), limit 3
+- 1x script-blind revenant (1137), limit 2
+- 1x relic zealot (1138), limit 2
+- 1x ruin custodian shade (1139), limit 2
+- 1x ruin scavenger (1152), limit 2
 
-**Band I (3275-3299): Western Shore**
-- 2x coastal carrion gull (3218), limit 3
-- 1x plains stalker (3219), limit 2
-- 1x road-weary pilgrim (3235), limit 2
-- 1x Promontory Harrower (3232), limit 1 (boss, in no_mob room)
+**Band I (1191-1215): Western Shore**
+- 2x coastal carrion gull (1134), limit 3
+- 1x plains stalker (1135), limit 2
+- 1x road-weary pilgrim (1151), limit 2
+- 1x Promontory Harrower (1148), limit 1 (boss, in no_mob room)
 
 ### Equipment Resets (`E`/`G` commands)
 - Boss mobs receive equipment resets for their signature items (weapon + armor appropriate to their level and theme).
@@ -570,10 +570,10 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 - No standalone room object spawns planned initially. Lore objects and flavor items will be implemented as room extra descriptions rather than spawned objects, keeping the reset table focused on population management.
 
 ## Gameplay Flow and Difficulty Curve
-- **3201-3220:** lower pressure, high traffic, social/travel readability.
-- **3221-3250:** moderate pressure, mixed social/hostile density.
-- **3251-3275:** elevated pressure with environmental storytelling.
-- **3276-3299:** high volatility optional coast-end challenge, but still traversable with caution.
+- **1117-1136:** lower pressure, high traffic, social/travel readability.
+- **1137-1166:** moderate pressure, mixed social/hostile density.
+- **1167-1191:** elevated pressure with environmental storytelling.
+- **1192-1215:** high volatility optional coast-end challenge, but still traversable with caution.
 
 ## Terminus Gate Connectivity (required)
 - **East end of Roc Road must connect to Midgaard West Gate.**
@@ -596,8 +596,8 @@ No shops are planned for Roc Road. The area is a wilderness travel corridor, not
 
 | Mob Vnum | Spec Function | Reason |
 |----------|--------------|--------|
-| 3201 | spec_guard | Road warden — reacts to criminal-flagged players |
-| 3229 | spec_cast_undead | Toll-Reeve Without Crown — boss undead caster |
+| 1117 | spec_guard | Road warden — reacts to criminal-flagged players |
+| 1145 | spec_cast_undead | Toll-Reeve Without Crown — boss undead caster |
 
 Notes:
 - Most mobs do not need spec functions; their behavior is driven by `act` flags (aggressive, sentinel, etc.).
@@ -613,9 +613,9 @@ Notes:
 Roc Road quests are static quests offered by the postmasters of the three connected cities. They reflect the road's role as a contested corridor: Midgaard issues law-enforcement and infrastructure-protection tasks; Kiess issues commerce-protection and frontier-intelligence tasks; Kowloon issues supply-chain and diplomatic tasks that depend on the road remaining open.
 
 **Postman vnums:**
-- Midgaard: `3015`
-- Kiess: `13001`
-- Kowloon: TBD (area not yet implemented; mob vnum will be in the `14040-14069` service range per `kowloon_plan.md`). Quests below use placeholder `0` for the offerer vnum until the Kowloon postmaster mob is created.
+- Midgaard: `931`
+- Kiess: `3340`
+- Kowloon: TBD (area not yet implemented; mob vnum will be in the `3479-3508` service range per `kowloon_plan.md`). Quests below use placeholder `0` for the offerer vnum until the Kowloon postmaster mob is created.
 
 **File location:** `/quests/N.prop` (N = quest ID)
 
@@ -644,15 +644,15 @@ Roc Road quests are static quests offered by the postmasters of the three connec
 | Num targets | `3` |
 | Kill needed | `0` |
 | Min level | `15` |
-| Offerer vnum | `3015` (Midgaard postman) |
-| Reward gold | `800` |
+| Offerer vnum | `931` (Midgaard postman) |
+| Reward gold | `278` |
 | Reward QP | `2` |
 | Reward item vnum | `0` |
 | Reward item count | `0` |
-| Target vnums | `3214` (ridge wolf), `3215` (ridge cat), `3217` (dust scavenger bird) |
+| Target vnums | `1130` (ridge wolf), `1131` (ridge cat), `1133` (dust scavenger bird) |
 
-**Line 2:** `-1 1 3 0 15 3015 800 2 0 0`
-**Line 3:** `3214 3215 3217`
+**Line 2:** `-1 1 3 0 15 931 278 2 0 0`
+**Line 3:** `1130 1131 1133`
 
 **Accept text:** Road warden command has documented predator incursions along the Banner Hills and Dustward Verge that are delaying courier rotations and forcing convoy escorts to double their watch. Cull one of each primary threat species — ridge wolves, ridge cats, and dust scavenger birds — and report your engagement positions so patrol routes can be adjusted. The postmaster needs confirmation before the next warden shift rotation can be authorized.
 
@@ -672,15 +672,15 @@ Roc Road quests are static quests offered by the postmasters of the three connec
 | Num targets | `1` |
 | Kill needed | `6` |
 | Min level | `30` |
-| Offerer vnum | `3015` (Midgaard postman) |
-| Reward gold | `2000` |
+| Offerer vnum | `931` (Midgaard postman) |
+| Reward gold | `792` |
 | Reward QP | `3` |
 | Reward item vnum | `0` |
 | Reward item count | `0` |
-| Target vnums | `3225` (tollbreak enforcer) |
+| Target vnums | `1141` (tollbreak enforcer) |
 
-**Line 2:** `-1 3 1 6 30 3015 2000 3 0 0`
-**Line 3:** `3225`
+**Line 2:** `-1 3 1 6 30 931 792 3 0 0`
+**Line 3:** `1141`
 
 **Accept text:** Tollbreak crews have seized the River Ledger Crossing approaches and are extracting violent tolls from merchants who lack armed escort. Midgaard's charter authority over the crossing is being openly defied. Eliminate at least six tollbreak enforcers to break their grip on the ford and restore safe passage for bonded traffic. The postmaster requires a body count sufficient to justify redeploying wardens from the Banner Hills garrison.
 
@@ -700,15 +700,15 @@ Roc Road quests are static quests offered by the postmasters of the three connec
 | Num targets | `3` |
 | Kill needed | `0` |
 | Min level | `40` |
-| Offerer vnum | `3015` (Midgaard postman) |
-| Reward gold | `3500` |
+| Offerer vnum | `931` (Midgaard postman) |
+| Reward gold | `1266` |
 | Reward QP | `4` |
 | Reward item vnum | `0` |
 | Reward item count | `0` |
-| Target vnums | `3226` (contraband runner), `3227` (forged-seal courier), `3228` (cave squatter) |
+| Target vnums | `1142` (contraband runner), `1143` (forged-seal courier), `1144` (cave squatter) |
 
-**Line 2:** `7 1 3 0 40 3015 3500 4 0 0`
-**Line 3:** `3226 3227 3228`
+**Line 2:** `7 1 3 0 40 931 1266 4 0 0`
+**Line 3:** `1142 1143 1144`
 
 **Accept text:** With the tollbreak crews broken at the crossing, Reckoning clerks have intercepted forged-seal documents suggesting a deeper shadow network operating between the Crossroads and the inlet caves. Contraband runners, forged-seal couriers, and cave squatters form an interconnected supply chain moving falsified legal instruments and untaxed goods. Disrupt each node of this network before they can reroute through the Greenveil Spur. The postmaster wants evidence that all three cell types have been hit.
 
@@ -728,15 +728,15 @@ Roc Road quests are static quests offered by the postmasters of the three connec
 | Num targets | `1` |
 | Kill needed | `8` |
 | Min level | `20` |
-| Offerer vnum | `13001` (Kiess postman) |
-| Reward gold | `1000` |
+| Offerer vnum | `3340` (Kiess postman) |
+| Reward gold | `291` |
 | Reward QP | `2` |
 | Reward item vnum | `0` |
 | Reward item count | `0` |
-| Target vnums | `3217` (dust scavenger bird) |
+| Target vnums | `1133` (dust scavenger bird) |
 
-**Line 2:** `-1 3 1 8 20 13001 1000 2 0 0`
-**Line 3:** `3217`
+**Line 2:** `-1 3 1 8 20 3340 291 2 0 0`
+**Line 3:** `1133`
 
 **Accept text:** Trade Syndic quartermasters report that dust scavenger birds are harassing mule trains and tearing into unsecured cargo along the Dustward Verge. Convoy insurance claims have spiked, and two scheduled departures have been postponed pending threat reassessment. Thin the scavenger bird population until convoy marshals can certify the route as insurable again. The postmaster needs your kill tally to file with the Syndic Council's risk-adjustment office.
 
@@ -756,15 +756,15 @@ Roc Road quests are static quests offered by the postmasters of the three connec
 | Num targets | `2` |
 | Kill needed | `0` |
 | Min level | `35` |
-| Offerer vnum | `13001` (Kiess postman) |
+| Offerer vnum | `3340` (Kiess postman) |
 | Reward gold | `1800` |
 | Reward QP | `3` |
 | Reward item vnum | `0` |
 | Reward item count | `0` |
-| Target vnums | `3224` (displaced forest spirit), `3226` (contraband runner) |
+| Target vnums | `1140` (displaced forest spirit), `1142` (contraband runner) |
 
-**Line 2:** `-1 1 2 0 35 13001 1800 3 0 0`
-**Line 3:** `3224 3226`
+**Line 2:** `-1 1 2 0 35 3340 1800 3 0 0`
+**Line 3:** `1140 1142`
 
 **Accept text:** Wall Command scouts report that the Greenveil Spur — the convoy reroute used when the main road is compromised — has become impassable. Displaced forest spirits are attacking anything that enters the canopy, and contraband runners have established camps along the path to intercept diverted traffic. Clear both threats so the spur can be recertified as an emergency bypass. The postmaster needs confirmation before convoy marshals can add the spur back to their contingency routing tables.
 
@@ -784,15 +784,15 @@ Roc Road quests are static quests offered by the postmasters of the three connec
 | Num targets | `1` |
 | Kill needed | `10` |
 | Min level | `50` |
-| Offerer vnum | `13001` (Kiess postman) |
+| Offerer vnum | `3340` (Kiess postman) |
 | Reward gold | `4000` |
 | Reward QP | `5` |
 | Reward item vnum | `0` |
 | Reward item count | `0` |
-| Target vnums | `3228` (cave squatter) |
+| Target vnums | `1144` (cave squatter) |
 
-**Line 2:** `10 3 1 10 50 13001 4000 5 0 0`
-**Line 3:** `3228`
+**Line 2:** `10 3 1 10 50 3340 4000 5 0 0`
+**Line 3:** `1144`
 
 **Accept text:** With the Greenveil Spur secured, Wall Command has turned attention to the inlet cave network where the Chainmaster's crew operates a private toll system that undercuts legitimate convoy compact fees. The cave squatters are former laborers and deserters — dangerous not because of individual skill but because they know the road's blind spots from years of service. Purge the cave network of at least ten squatters to collapse the Chainmaster's labor base. The postmaster wants this done before the next convoy scheduling cycle so the Syndic Council can close the insurance loophole that smuggler routes create.
 
@@ -812,15 +812,15 @@ Roc Road quests are static quests offered by the postmasters of the three connec
 | Num targets | `4` |
 | Kill needed | `0` |
 | Min level | `50` |
-| Offerer vnum | `3015` (Midgaard postman) |
+| Offerer vnum | `931` (Midgaard postman) |
 | Reward gold | `4500` |
 | Reward QP | `5` |
 | Reward item vnum | `0` |
 | Reward item count | `0` |
-| Target vnums | `3220` (cairn lurker), `3221` (script-blind revenant), `3222` (relic zealot), `3223` (ruin custodian shade) |
+| Target vnums | `1136` (cairn lurker), `1137` (script-blind revenant), `1138` (relic zealot), `1139` (ruin custodian shade) |
 
-**Line 2:** `-1 1 4 0 50 3015 4500 5 0 0`
-**Line 3:** `3220 3221 3222 3223`
+**Line 2:** `-1 1 4 0 50 931 4500 5 0 0`
+**Line 3:** `1136 1137 1138 1139`
 
 **Accept text:** Reckoning archivists need the Ruin Run corridor cleared for a documentation expedition. The ruin-touched hostiles — cairn lurkers, script-blind revenants, relic zealots, and ruin custodian shades — have made the causeway impassable to unarmed scholars. Eliminate one of each threat type to create a safe transit window. The postmaster emphasizes that this is a civic-academic priority: the tablets in those ruins may contain evidence relevant to ongoing Continuity-Reckoning legal proceedings.
 
@@ -845,10 +845,10 @@ Roc Road quests are static quests offered by the postmasters of the three connec
 | Reward QP | `3` |
 | Reward item vnum | `0` |
 | Reward item count | `0` |
-| Target vnums | `3218` (coastal carrion gull), `3219` (plains stalker), `3216` (river ambusher snake) |
+| Target vnums | `1134` (coastal carrion gull), `1135` (plains stalker), `1132` (river ambusher snake) |
 
 **Line 2:** `-1 1 3 0 40 0 2500 3 0 0`
-**Line 3:** `3218 3219 3216`
+**Line 3:** `1134 1135 1132`
 
 **Accept text:** Kowloon's shipping agents report that the western shore terminus of Roc Road has become too dangerous for the small-boat relay crews who transfer sealed diplomatic pouches between overland couriers and coastal vessels. Carrion gulls harass the landing sites, plains stalkers hunt the approach roads, and river ambushers threaten the waterside transfer points. Survey the full threat spectrum — engage one of each — and report conditions so Kowloon's courier office can determine whether to reroute diplomatic traffic through Kiess's harbor instead.
 
@@ -873,10 +873,10 @@ Roc Road quests are static quests offered by the postmasters of the three connec
 | Reward QP | `6` |
 | Reward item vnum | `0` |
 | Reward item count | `0` |
-| Target vnums | `3214` (ridge wolf), `3225` (tollbreak enforcer), `3220` (cairn lurker), `3228` (cave squatter), `3219` (plains stalker) |
+| Target vnums | `1130` (ridge wolf), `1141` (tollbreak enforcer), `1136` (cairn lurker), `1144` (cave squatter), `1135` (plains stalker) |
 
 **Line 2:** `13 1 5 0 60 0 6000 6 0 0`
-**Line 3:** `3214 3225 3220 3228 3219`
+**Line 3:** `1130 1141 1136 1144 1135`
 
 **Accept text:** Kowloon's covenant registrar has commissioned a full corridor threat assessment spanning the entire length of Roc Road. Diplomatic and commercial traffic flowing from Kowloon through Midgaard and westward to Kiess depends on every segment of this road remaining traversable. Engage one representative threat from each major zone — hills predators, river tollbreak crews, ruin hostiles, cave smugglers, and coastal stalkers — and report the engagement conditions. This is the most comprehensive road survey Kowloon has commissioned since the post-Evermeet reconstruction, and the registrar wants field data from every band.
 
@@ -888,13 +888,13 @@ Roc Road quests are static quests offered by the postmasters of the three connec
 
 | ID | Title | Type | Offerer | Prereq | Min Lvl | Chain |
 |----|-------|------|---------|--------|---------|-------|
-| 6 | Road predator cull | Kill variety (3) | Midgaard (3015) | None | 15 | — |
-| 7 | Tollbreak crew interdiction | Kill count (6) | Midgaard (3015) | None | 30 | Chain start |
-| 8 | Shadow trade disruption | Kill variety (3) | Midgaard (3015) | Prop 7 | 40 | Chains from 7 |
-| 9 | Convoy route security | Kill count (8) | Kiess (13001) | None | 20 | — |
-| 10 | Greenveil Spur reconnaissance | Kill variety (2) | Kiess (13001) | None | 35 | Chain start |
-| 11 | Inlet smuggler crackdown | Kill count (10) | Kiess (13001) | Prop 10 | 50 | Chains from 10 |
-| 12 | Ruin custodian suppression | Kill variety (4) | Midgaard (3015) | None | 50 | — |
+| 6 | Road predator cull | Kill variety (3) | Midgaard (931) | None | 15 | — |
+| 7 | Tollbreak crew interdiction | Kill count (6) | Midgaard (931) | None | 30 | Chain start |
+| 8 | Shadow trade disruption | Kill variety (3) | Midgaard (931) | Prop 7 | 40 | Chains from 7 |
+| 9 | Convoy route security | Kill count (8) | Kiess (3340) | None | 20 | — |
+| 10 | Greenveil Spur reconnaissance | Kill variety (2) | Kiess (3340) | None | 35 | Chain start |
+| 11 | Inlet smuggler crackdown | Kill count (10) | Kiess (3340) | Prop 10 | 50 | Chains from 10 |
+| 12 | Ruin custodian suppression | Kill variety (4) | Midgaard (931) | None | 50 | — |
 | 13 | Coastal hazard survey | Kill variety (3) | Kowloon (TBD) | None | 40 | Chain start |
 | 14 | Transcontinental corridor assessment | Kill variety (5) | Kowloon (TBD) | Prop 13 | 60 | Chains from 13 |
 
@@ -912,9 +912,9 @@ Roc Road quests are static quests offered by the postmasters of the three connec
 ---
 
 ## Deliverables for Build Phase
-1. Rewrite `#ROOMS` entries for all vnums `3201-3299` in ascending sequential order.
-2. Add complete `#MOBILES` roster with faction tagging and level bands (vnums `3201-3236`).
-3. Add complete `#OBJECTS` roster aligned to encounter ecology (vnums `3201-3234`+).
+1. Rewrite `#ROOMS` entries for all vnums `1117-1215` in ascending sequential order.
+2. Add complete `#MOBILES` roster with faction tagging and level bands (vnums `1117-1152`).
+3. Add complete `#OBJECTS` roster aligned to encounter ecology (vnums `1117-1150`+).
 4. Replace `#RESETS` with full population, equipment, loot, and door cadence.
 5. Add `#SPECIALS` for road warden (`spec_guard`) and Toll-Reeve (`spec_cast_undead`).
 6. No `#SHOPS` section (wilderness corridor, no vendors).
@@ -922,7 +922,7 @@ Roc Road quests are static quests offered by the postmasters of the three connec
 8. Terminate with `#$`.
 9. Follow canonical section order: `#AREA`, `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#RESETS`, `#SPECIALS`, `#$`.
 10. Validate parse and policy compliance from `docs/area_file_spec.md`.
-11. Verify all vnums within `3201-3299` range.
+11. Verify all vnums within `1117-1215` range.
 12. Verify all external links preserved (see External Link Inventory).
 13. Verify no vnum mentions in any description text.
 14. Create static quest files `6.prop` through `14.prop` in `quests/` directory per the Quests Plan.

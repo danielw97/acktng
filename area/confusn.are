@@ -5,14 +5,14 @@ K forestconfusion~
 L @@W(@@r10 60@@W)@@N~
 N 13
 I 10 60
-V 9600 9799
+V 2339 2538
 X 32200
 F 15
 U @@Wthe @@pmists @@Wshift and the @@Gforest @@Wrearranges itself...@@N~
 O Virant~
 T You can teleport into here
 #ROOMS
-#9600
+#2339
 @@WSouth Verge Gatehouse@@N~
 A roofless stone archway rises where @@WRoc Road@@N ends and the @@Gforest@@N
 begins. The last @@WKiess waystone@@N stands beside the arch, its compass-and-wall
@@ -27,14 +27,14 @@ D0
 The stair descends into leaf-choked undergrowth and the remnants of camp structures.
 ~
 ~
-0 -1 9620
+0 -1 2359
 D2
 The maintained road stretches south toward Kiess.
 ~
 ~
-0 -1 9601
+0 -1 2340
 S
-#9601
+#2340
 @@WRoc Road Terminus@@N~
 The final stretch of @@WRoc Road@@N runs east to west here, packed earth giving
 way to root-buckled flagstone where the @@Gforest@@N's growth has begun to
@@ -49,19 +49,19 @@ D0
 The stone archway of the gatehouse rises above the undergrowth.
 ~
 ~
-0 -1 9600
+0 -1 2339
 D1
 The patrol road continues east into thickening forest.
 ~
 ~
-0 -1 9602
+0 -1 2341
 D3
 The road stretches west toward the North Gate of Kiess.
 ~
 ~
-0 -1 13005
+0 -1 3344
 S
-#9602
+#2341
 @@WPatrol Road@@N~
 The patrol road narrows as the @@Gcanopy@@N closes overhead, filtering the
 light into dim green columns. Rope-line anchors driven into root buttresses
@@ -74,19 +74,19 @@ D1
 The road continues east, increasingly overgrown.
 ~
 ~
-0 -1 9603
+0 -1 2342
 D3
 The road is clearer to the west, toward the terminus.
 ~
 ~
-0 -1 9601
+0 -1 2340
 D0
 A faint track leads north through the undergrowth.
 ~
 ~
-0 -1 9622
+0 -1 2361
 S
-#9603
+#2342
 @@WPatrol Road@@N~
 Sections of the patrol road have buckled here where thick roots have pushed
 through the packed earth from below. The @@Wbell-post@@N rope that once ran
@@ -99,14 +99,14 @@ D1
 The road continues east past more damaged sections.
 ~
 ~
-0 -1 9604
+0 -1 2343
 D3
 The road is slightly better maintained to the west.
 ~
 ~
-0 -1 9602
+0 -1 2341
 S
-#9604
+#2343
 @@WPatrol Road@@N~
 The road surface has almost vanished under a carpet of leaf litter and creeping
 vine. An equipment cache half-buried by root growth sits beside the path, its
@@ -119,14 +119,14 @@ D1
 The road continues east toward a clearing.
 ~
 ~
-0 -1 9605
+0 -1 2344
 D3
 The road leads west, slightly more passable.
 ~
 ~
-0 -1 9603
+0 -1 2342
 S
-#9605
+#2344
 @@WPatrol Road@@N~
 A collapsed lean-to marks a former rest station along the patrol road. The stone
 fire-ring beside it is cold and moss-covered, its ashes long since washed away
@@ -139,14 +139,14 @@ D1
 The canopy opens ahead into a clearing.
 ~
 ~
-0 -1 9606
+0 -1 2345
 D3
 The road narrows back into the forest to the west.
 ~
 ~
-0 -1 9604
+0 -1 2343
 S
-#9606
+#2345
 @@WBell-Post Clearing@@N~
 An open break in the @@Gcanopy@@N lets diffuse gray light fall on a trampled
 clearing where three @@Wbell-posts@@N converge. Two of the bells hang silent,
@@ -161,19 +161,19 @@ D1
 The patrol road continues east into the forest.
 ~
 ~
-0 -1 9607
+0 -1 2346
 D3
 The road leads west back under the canopy.
 ~
 ~
-0 -1 9605
+0 -1 2344
 D0
 A taut rope-line leads north through the undergrowth.
 ~
 ~
-0 -1 9626
+0 -1 2365
 S
-#9607
+#2346
 @@WPatrol Road@@N~
 East of the bell-post clearing, the patrol road resumes its slow deterioration.
 @@WSurvey stakes@@N with Kiess compass markings appear at intervals, each one
@@ -187,14 +187,14 @@ D1
 The road continues east past more survey stakes.
 ~
 ~
-0 -1 9608
+0 -1 2347
 D3
 The clearing and its bell-posts are visible to the west.
 ~
 ~
-0 -1 9606
+0 -1 2345
 S
-#9608
+#2347
 @@WPatrol Road@@N~
 The @@pmist@@N thickens noticeably along this stretch, rising from ground level
 to waist height. An abandoned equipment cache has been pried open, its contents
@@ -208,14 +208,14 @@ D1
 The road continues east through thickening mist.
 ~
 ~
-0 -1 9609
+0 -1 2348
 D3
 The mist thins slightly to the west.
 ~
 ~
-0 -1 9607
+0 -1 2346
 S
-#9609
+#2348
 @@WPatrol Road@@N~
 The patrol road passes through a slight depression where @@pmist@@N collects in
 a knee-deep pool of gray-violet haze. The air here carries a faint metallic
@@ -229,19 +229,19 @@ D1
 The road continues east, rising slightly out of the depression.
 ~
 ~
-0 -1 9610
+0 -1 2349
 D3
 The road climbs west out of the mist pool.
 ~
 ~
-0 -1 9608
+0 -1 2347
 D0
 A blazed trail leads north through the trees.
 ~
 ~
-0 -1 9629
+0 -1 2368
 S
-#9610
+#2349
 @@WPatrol Road@@N~
 The road rises slightly here, enough to lift above the worst of the @@pmist@@N
 pooling in the depression to the west. A signal mirror has been nailed to a
@@ -255,14 +255,14 @@ D1
 The road continues east toward a junction.
 ~
 ~
-0 -1 9611
+0 -1 2350
 D3
 The road descends west into a misty depression.
 ~
 ~
-0 -1 9609
+0 -1 2348
 S
-#9611
+#2350
 @@WWaystone Junction@@N~
 Two patrol routes once intersected here, their crossing marked by a pair of
 @@Wwaystones@@N bearing the Kiess compass-and-wall crest. The north-south route
@@ -277,17 +277,17 @@ D1
 The road continues east, the canopy closing further.
 ~
 ~
-0 -1 9612
+0 -1 2351
 D3
 The road leads west past the signal mirror.
 ~
 ~
-0 -1 9610
+0 -1 2349
 D0
 An overgrown path leads north through thick undergrowth.
 ~
 ~
-0 -1 9631
+0 -1 2370
 E
 waystones waystone~
 The waystones are carved from local granite, each standing waist-high and
@@ -297,7 +297,7 @@ corroded by decades of mist exposure. Dispatch tablets have been wedged into the
 cracks, recording routes that no longer lead where they claim.
 ~
 S
-#9612
+#2351
 @@WPatrol Road@@N~
 The @@Gcanopy@@N closes fully overhead here, reducing the patrol road to a dim
 corridor of intertwined branches. What little light filters through has a green
@@ -311,14 +311,14 @@ D1
 The narrow corridor continues east.
 ~
 ~
-0 -1 9613
+0 -1 2352
 D3
 The road widens slightly to the west, toward the junction.
 ~
 ~
-0 -1 9611
+0 -1 2350
 S
-#9613
+#2352
 @@WPatrol Road@@N~
 The patrol road's eastern reaches show the forest's encroachment at its most
 aggressive. Root buttresses have pushed through the road surface like slow
@@ -332,14 +332,14 @@ D1
 The road continues east past more root damage.
 ~
 ~
-0 -1 9614
+0 -1 2353
 D3
 The road leads west through the dim canopy corridor.
 ~
 ~
-0 -1 9612
+0 -1 2351
 S
-#9614
+#2353
 @@WPatrol Road@@N~
 The road surface has crumbled entirely in this section, replaced by a web of
 exposed roots that form an uneven but walkable surface. The @@Gforest@@N seems
@@ -353,14 +353,14 @@ D1
 The road continues east toward a cleared area.
 ~
 ~
-0 -1 9615
+0 -1 2354
 D3
 The root-web surface continues west.
 ~
 ~
-0 -1 9613
+0 -1 2352
 S
-#9615
+#2354
 @@WPatrol Road@@N~
 The road approaches a break in the @@Gcanopy@@N ahead where old logging
 activity once cleared the trees. The @@pmist@@N thins slightly here as a faint
@@ -375,19 +375,19 @@ D1
 The road opens into a cleared area to the east.
 ~
 ~
-0 -1 9616
+0 -1 2355
 D3
 The road continues west over a root-web surface.
 ~
 ~
-0 -1 9614
+0 -1 2353
 D0
 A game trail marked by old rope-line leads north.
 ~
 ~
-0 -1 9635
+0 -1 2374
 S
-#9616
+#2355
 @@WSouthern Timber Cut@@N~
 A cleared area where @@WKiess@@N logging teams once worked opens in the forest.
 Stumps show saw marks from organized timber operations, but new @@Ggrowth@@N has
@@ -402,14 +402,14 @@ D1
 Game trails continue east into wilder forest.
 ~
 ~
-0 -1 9617
+0 -1 2356
 D3
 The patrol road leads west, still partially navigable.
 ~
 ~
-0 -1 9615
+0 -1 2354
 S
-#9617
+#2356
 @@dForest Edge@@N~
 The patrol road has dissolved entirely into game trails here, the last evidence
 of Kiess infrastructure a frayed @@Wrope-line@@N fragment tied to a leaning
@@ -423,19 +423,19 @@ D1
 Game trails continue east through dense undergrowth.
 ~
 ~
-0 -1 9618
+0 -1 2357
 D3
 The timber cut clearing is visible to the west.
 ~
 ~
-0 -1 9616
+0 -1 2355
 D0
 A rope-line fragment leads north into the forest.
 ~
 ~
-0 -1 9637
+0 -1 2376
 S
-#9618
+#2357
 @@dForest Edge@@N~
 The game trails narrow to single-file passages between dense thickets of young
 @@Ggrowth@@N. The @@pmist@@N is thick enough here to obscure anything more than
@@ -449,14 +449,14 @@ D1
 The trail continues east to the forest's edge.
 ~
 ~
-0 -1 9619
+0 -1 2358
 D3
 The trails lead west toward slightly more open ground.
 ~
 ~
-0 -1 9617
+0 -1 2356
 S
-#9619
+#2358
 @@dForest Edge@@N~
 The eastern extremity of the patrol road's influence ends here in a tangle of
 game trails and @@Groot@@N systems. The @@pmist@@N moves with purpose in this
@@ -471,12 +471,12 @@ D3
 Trails lead west through the forest edge.
 ~
 ~
-0 -1 9618
+0 -1 2357
 D0
 The mist thickens to the north, swallowing the trail.
 ~
 ~
-0 -1 9639
+0 -1 2378
 E
 ward-stone wardstone~
 The ward-stone is a rough cube of river-washed granite, half-swallowed by root
@@ -485,7 +485,7 @@ but the mist's volatile compounds have corroded the inscriptions to shallow
 grooves. Whatever ward this stone once anchored has long since failed.
 ~
 S
-#9620
+#2359
 @@WRanger Command Post@@N~
 The former command post of the abandoned ranger camp is a low stone structure
 whose roof has been replaced by a taut canvas sheet, still bearing the Kiess
@@ -501,19 +501,19 @@ D1
 The camp's fire-ring and lean-tos are visible to the east.
 ~
 ~
-0 -1 9621
+0 -1 2360
 D2
 A narrow stair climbs south to the gatehouse.
 ~
 ~
-0 -1 9600
+0 -1 2339
 D0
 An overgrown path leads north into the mistroute approaches.
 ~
 ~
-0 -1 9640
+0 -1 2379
 S
-#9621
+#2360
 @@WAbandoned Ranger Camp@@N~
 Fire-scarred stone rings mark where patrol teams once gathered around cook
 fires. Three collapsed lean-tos lean against each other in a rough triangle,
@@ -527,14 +527,14 @@ D1
 More camp structures and a cleared area lie to the east.
 ~
 ~
-0 -1 9622
+0 -1 2361
 D3
 The command post structure is visible to the west.
 ~
 ~
-0 -1 9620
+0 -1 2359
 S
-#9622
+#2361
 @@WAbandoned Ranger Camp@@N~
 The eastern end of the ranger camp features a @@bcleared platform@@N where
 supplies were once staged for distribution. Equipment caches line the platform's
@@ -548,19 +548,19 @@ D1
 An undergrowth trail leads east into the forest.
 ~
 ~
-0 -1 9623
+0 -1 2362
 D2
 A path leads south to the patrol road.
 ~
 ~
-0 -1 9602
+0 -1 2341
 D3
 The fire-rings and lean-tos of the camp center lie west.
 ~
 ~
-0 -1 9621
+0 -1 2360
 S
-#9623
+#2362
 @@WAbandoned Ranger Camp@@N~
 The camp's eastern perimeter dissolves into forest, the boundary between human
 clearing and @@Gwild growth@@N visible as a sharp line where maintained ground
@@ -574,14 +574,14 @@ D1
 An undergrowth trail pushes east into thicker forest.
 ~
 ~
-0 -1 9624
+0 -1 2363
 D3
 The camp's supply platform is visible to the west.
 ~
 ~
-0 -1 9622
+0 -1 2361
 S
-#9624
+#2363
 @@dUndergrowth Trail@@N~
 A narrow trail pushes through dense undergrowth where the @@Gforest@@N has
 reclaimed the northern spur of the patrol road. Vine growth has woven a
@@ -595,14 +595,14 @@ D1
 The trail continues east through the vine canopy.
 ~
 ~
-0 -1 9625
+0 -1 2364
 D3
 The trail leads west toward the camp perimeter.
 ~
 ~
-0 -1 9623
+0 -1 2362
 S
-#9625
+#2364
 @@dUndergrowth Trail@@N~
 The undergrowth trail emerges briefly into a pocket of clearer air where a
 @@bfallen tree@@N has created a gap in the vine canopy. Mushrooms cluster on
@@ -616,19 +616,19 @@ D1
 The vine-covered trail continues east.
 ~
 ~
-0 -1 9626
+0 -1 2365
 D3
 The trail leads west through low vine growth.
 ~
 ~
-0 -1 9624
+0 -1 2363
 D0
 A faint path leads north into thickening mist.
 ~
 ~
-0 -1 9645
+0 -1 2384
 S
-#9626
+#2365
 @@dUndergrowth Trail@@N~
 The undergrowth trail intersects with a taut @@Wrope-line@@N descending from
 the south, one of the few still-functional navigation aids in this section
@@ -642,19 +642,19 @@ D1
 The trail continues east under the vine canopy.
 ~
 ~
-0 -1 9627
+0 -1 2366
 D2
 The rope-line descends south toward the bell-post clearing.
 ~
 ~
-0 -1 9606
+0 -1 2345
 D3
 The trail leads west past a fallen tree.
 ~
 ~
-0 -1 9625
+0 -1 2364
 S
-#9627
+#2366
 @@dUndergrowth Trail@@N~
 The vine canopy thickens again, pressing close enough to brush shoulders. The
 trail here is more tunnel than path, the undergrowth forming walls and ceiling
@@ -668,14 +668,14 @@ D1
 The vine tunnel continues east.
 ~
 ~
-0 -1 9628
+0 -1 2367
 D3
 The trail leads west toward a rope-line crossing.
 ~
 ~
-0 -1 9626
+0 -1 2365
 S
-#9628
+#2367
 @@RFrayed Rope-Line Corridor@@N~
 A once-maintained navigation @@Wrope-line@@N hangs in loops from corroded iron
 stakes along this stretch of trail. The rope was the primary guidance system for
@@ -689,14 +689,14 @@ D1
 The rope-line corridor continues east, the rope increasingly slack.
 ~
 ~
-0 -1 9629
+0 -1 2368
 D3
 The corridor leads west into the vine tunnel.
 ~
 ~
-0 -1 9627
+0 -1 2366
 S
-#9629
+#2368
 @@RFrayed Rope-Line Corridor@@N~
 The rope-line has been severed here by something sharp, the cut clean enough
 to suggest a blade rather than gnawing. The two ends dangle from their stakes,
@@ -710,19 +710,19 @@ D1
 The corridor continues east past the severed rope.
 ~
 ~
-0 -1 9630
+0 -1 2369
 D3
 The rope-line leads west, still partially intact.
 ~
 ~
-0 -1 9628
+0 -1 2367
 D2
 A blazed trail leads south through the trees.
 ~
 ~
-0 -1 9609
+0 -1 2348
 S
-#9630
+#2369
 @@RFrayed Rope-Line Corridor@@N~
 The corridor reaches a point where the rope-line has been tied off to a massive
 @@Groot buttress@@N, creating a deliberate terminus. Beyond the tie-off point,
@@ -736,12 +736,12 @@ D1
 The corridor continues east along the warning perimeter.
 ~
 ~
-0 -1 9631
+0 -1 2370
 D3
 The rope-line leads west, swaying in the mist.
 ~
 ~
-0 -1 9629
+0 -1 2368
 E
 marker warning~
 The warning marker is a flat piece of hardwood nailed to the root buttress with
@@ -750,7 +750,7 @@ block script, the letters filled with red paint that has faded to a dull rust.
 Below the warning, someone has scratched in smaller letters: "bells lie."
 ~
 S
-#9631
+#2370
 @@RFrayed Rope-Line Corridor@@N~
 The final stretch of the rope-line corridor runs along the edge of the warning
 perimeter, where Kiess scouts marked the boundary of reliable navigation. A
@@ -764,19 +764,19 @@ D1
 The warning perimeter continues east.
 ~
 ~
-0 -1 9632
+0 -1 2371
 D2
 A trail leads south to the waystone junction.
 ~
 ~
-0 -1 9611
+0 -1 2350
 D3
 The corridor leads west toward the rope terminus.
 ~
 ~
-0 -1 9630
+0 -1 2369
 S
-#9632
+#2371
 @@WWarning Bell Perimeter@@N~
 One of the outermost @@Wbell-posts@@N in the Kiess warning network stands here,
 its bronze bell green with verdigris but still capable of sound. The post is
@@ -790,14 +790,14 @@ D1
 The perimeter continues east past another bell-post.
 ~
 ~
-0 -1 9633
+0 -1 2372
 D3
 The corridor leads west to the rope-line end.
 ~
 ~
-0 -1 9631
+0 -1 2370
 S
-#9633
+#2372
 @@WWarning Bell Perimeter@@N~
 A second @@Wbell-post@@N stands here, leaning at an angle where root growth has
 shifted its foundation. The bell has fallen from its mount and lies in the leaf
@@ -811,19 +811,19 @@ D1
 The perimeter continues east along the edge of safe territory.
 ~
 ~
-0 -1 9634
+0 -1 2373
 D3
 Another bell-post stands to the west.
 ~
 ~
-0 -1 9632
+0 -1 2371
 D0
 A path leads north into the violet-tinged mist.
 ~
 ~
-0 -1 9653
+0 -1 2392
 S
-#9634
+#2373
 @@WWarning Bell Perimeter@@N~
 The warning perimeter passes through a stretch where the @@Gforest@@N's
 two competing influences are visible side by side. To the south, the trees
@@ -837,14 +837,14 @@ D1
 The perimeter continues east.
 ~
 ~
-0 -1 9635
+0 -1 2374
 D3
 The perimeter leads west past a toppled bell.
 ~
 ~
-0 -1 9633
+0 -1 2372
 S
-#9635
+#2374
 @@WWarning Bell Perimeter@@N~
 The last functional @@Wbell-post@@N on the eastern perimeter stands here, its
 bell producing a clear tone that seems to defy the mist's acoustic dampening.
@@ -858,19 +858,19 @@ D1
 The perimeter continues east toward the southern verge fringe.
 ~
 ~
-0 -1 9636
+0 -1 2375
 D2
 A game trail leads south to the patrol road.
 ~
 ~
-0 -1 9615
+0 -1 2354
 D3
 The perimeter leads west past stressed trees.
 ~
 ~
-0 -1 9634
+0 -1 2373
 S
-#9636
+#2375
 @@dSouthern Verge Fringe@@N~
 The last positions with visible @@WKiess@@N infrastructure stand here at the
 fringe of the southern verge. @@bWard-stones@@N with corroded inscriptions lean
@@ -884,19 +884,19 @@ D1
 The fringe continues east, ward-stones increasingly damaged.
 ~
 ~
-0 -1 9637
+0 -1 2376
 D3
 The warning bell perimeter is visible to the west.
 ~
 ~
-0 -1 9635
+0 -1 2374
 D0
 The mist deepens to the north, marking the thicket boundary.
 ~
 ~
-0 -1 9656
+0 -1 2395
 S
-#9637
+#2376
 @@dSouthern Verge Fringe@@N~
 A cluster of @@bward-stones@@N marks a former quarantine checkpoint, their
 inscriptions still faintly readable as Kiess containment protocols. The
@@ -911,19 +911,19 @@ D1
 The fringe continues east past more corroded ward-stones.
 ~
 ~
-0 -1 9638
+0 -1 2377
 D2
 A trail leads south through the forest edge.
 ~
 ~
-0 -1 9617
+0 -1 2356
 D3
 The fringe leads west toward intact ward-stones.
 ~
 ~
-0 -1 9636
+0 -1 2375
 S
-#9638
+#2377
 @@dSouthern Verge Fringe@@N~
 The ward-stones here have been shattered, their fragments scattered in a
 pattern that suggests deliberate destruction rather than natural decay. The
@@ -937,14 +937,14 @@ D1
 The fringe reaches its eastern extent.
 ~
 ~
-0 -1 9639
+0 -1 2378
 D3
 Intact ward-stones stand to the west.
 ~
 ~
-0 -1 9637
+0 -1 2376
 S
-#9639
+#2378
 @@dSouthern Verge Fringe@@N~
 The eastern end of the southern verge fringe, where the last traces of @@WKiess@@N
 influence give way to unmanaged forest. A single @@bcorroded ward-stone@@N stands
@@ -958,19 +958,19 @@ D2
 The forest edge and its game trails lie to the south.
 ~
 ~
-0 -1 9619
+0 -1 2358
 D3
 The fringe leads west past shattered ward-stones.
 ~
 ~
-0 -1 9638
+0 -1 2377
 D0
 The mist thickens to the north, entering the thickets.
 ~
 ~
-0 -1 9659
+0 -1 2398
 S
-#9640
+#2379
 @@pMistroute Approach@@N~
 The @@Gcanopy@@N closes fully here, sealing out the sky and plunging the forest
 into a permanent twilight. The first @@pmirrorbark@@N trees appear among the
@@ -985,19 +985,19 @@ D1
 More mirrorbark trees are visible to the east through the mist.
 ~
 ~
-0 -1 9641
+0 -1 2380
 D2
 The ranger camp approaches lie to the south.
 ~
 ~
-0 -1 9620
+0 -1 2359
 D0
 The forest deepens to the north, the mist thickening.
 ~
 ~
-0 -1 9660
+0 -1 2399
 S
-#9641
+#2380
 @@pMistroute Approach@@N~
 The @@pmirrorbark@@N trees grow denser here, their reflective surfaces creating
 visual echoes of any light source. A torch held aloft produces a dozen ghost-
@@ -1012,14 +1012,14 @@ D1
 The mirrorbark thicket continues east.
 ~
 ~
-0 -1 9642
+0 -1 2381
 D3
 The mist thins slightly to the west.
 ~
 ~
-0 -1 9640
+0 -1 2379
 S
-#9642
+#2381
 @@pMistroute Approach@@N~
 The trail passes between two massive @@pmirrorbark@@N trunks that form a
 natural gateway into the deeper thickets. The bark surfaces here are polished
@@ -1034,19 +1034,19 @@ D1
 The gateway opens into more mirrorbark forest.
 ~
 ~
-0 -1 9643
+0 -1 2382
 D3
 The mirrorbark thicket leads west.
 ~
 ~
-0 -1 9641
+0 -1 2380
 D0
 A narrow track leads north through the mist.
 ~
 ~
-0 -1 9662
+0 -1 2401
 S
-#9643
+#2382
 @@pMistroute Approach@@N~
 The last recognizable trail before the @@pMirrorbark Switchmaze@@N proper begins.
 A @@bKiess survey post@@N, its markings nearly illegible, bears a scratched
@@ -1061,12 +1061,12 @@ D1
 The mirrorbark wall opens into a narrow passage east.
 ~
 ~
-0 -1 9644
+0 -1 2383
 D3
 Clearer ground lies to the west.
 ~
 ~
-0 -1 9642
+0 -1 2381
 E
 survey post~
 The survey post is a @@bweathered timber stake@@N bearing faded Kiess compass
@@ -1075,7 +1075,7 @@ markings. Below the official markings, someone has scratched in a hurried hand:
 suggesting a survivor who learned the maze's logic and returned to share it.
 ~
 S
-#9644
+#2383
 @@pMirrorbark Switchmaze@@N~
 The @@pmirrorbark@@N forest closes around the trail in a dense thicket of
 reflective trunks. Every surface catches and returns light at angles that
@@ -1090,19 +1090,19 @@ D0
 A gap between trunks leads north, bark reflections overhead.
 ~
 ~
-0 -1 9648
+0 -1 2387
 D1
 A passage twists east through the mirrorbark.
 ~
 ~
-0 -1 9649
+0 -1 2388
 D3
 Clearer air is visible to the west.
 ~
 ~
-0 -1 9643
+0 -1 2382
 S
-#9645
+#2384
 @@pMirrorbark Switchmaze@@N~
 A small clearing within the maze where four @@pmirrorbark@@N trunks form a
 rough square. The reflective surfaces create a disorienting box of images,
@@ -1116,19 +1116,19 @@ D1
 A bark-scaled passage leads east.
 ~
 ~
-0 -1 9646
+0 -1 2385
 D2
 The passage leads south, mist thinning slightly.
 ~
 ~
-0 -1 9625
+0 -1 2364
 D3
 A gap in the trunks opens to the west.
 ~
 ~
-0 -1 9649
+0 -1 2388
 S
-#9646
+#2385
 @@pMirrorbark Switchmaze@@N~
 The maze narrows to a single-file passage where @@pmirrorbark@@N trunks grow
 so close together that their reflective surfaces overlap, creating a continuous
@@ -1143,19 +1143,19 @@ D1
 The passage opens slightly to the east.
 ~
 ~
-0 -1 9647
+0 -1 2386
 D3
 The narrow passage continues west.
 ~
 ~
-0 -1 9645
+0 -1 2384
 D2
 A gap leads south through dense mirrorbark.
 ~
 ~
-0 -1 9648
+0 -1 2387
 S
-#9647
+#2386
 @@pMirrorbark Switchmaze@@N~
 A twisted section of the maze where the @@pmirrorbark@@N trunks have grown at
 angles, leaning into each other and creating a tilted corridor of reflections.
@@ -1169,19 +1169,19 @@ D3
 The tilted corridor continues west.
 ~
 ~
-0 -1 9646
+0 -1 2385
 D0
 A passage opens north between leaning trunks.
 ~
 ~
-0 -1 9651
+0 -1 2390
 D1
 A narrow gap leads east into deeper maze.
 ~
 ~
-0 -1 9652
+0 -1 2391
 S
-#9648
+#2387
 @@pMirrorbark Switchmaze@@N~
 A wider space in the maze where the @@pmirrorbark@@N trunks thin enough to
 allow movement in multiple directions. The bark reflections overhead are strong
@@ -1195,19 +1195,19 @@ D0
 The overhead reflections intensify to the north.
 ~
 ~
-0 -1 9652
+0 -1 2391
 D2
 The passage leads south, reflections flickering.
 ~
 ~
-0 -1 9644
+0 -1 2383
 D1
 A gap between trunks leads east.
 ~
 ~
-0 -1 9653
+0 -1 2392
 S
-#9649
+#2388
 @@pMirrorbark Switchmaze@@N~
 A pocket in the maze where @@pmirrorbark@@N growth has created a small enclosed
 space, almost like a room. The walls of reflective bark return every movement
@@ -1222,19 +1222,19 @@ D1
 A passage leads east through the bark wall.
 ~
 ~
-0 -1 9645
+0 -1 2384
 D3
 A gap opens west into the maze.
 ~
 ~
-0 -1 9644
+0 -1 2383
 D0
 A narrow gap leads north.
 ~
 ~
-0 -1 9654
+0 -1 2393
 S
-#9650
+#2389
 @@pMirrorbark Switchmaze@@N~
 The maze opens into a section where the @@pmirrorbark@@N trunks are older and
 more massive, their reflective surfaces weathered to a matte sheen that absorbs
@@ -1249,17 +1249,17 @@ D2
 The passage leads south through mature mirrorbark.
 ~
 ~
-0 -1 9654
+0 -1 2393
 D0
 A gap between ancient trunks opens north.
 ~
 ~
-0 -1 9655
+0 -1 2394
 D1
 The maze continues east past weathered bark.
 ~
 ~
-0 -1 9651
+0 -1 2390
 E
 carving druidic~
 The carving is old, older than the Kiess survey marks by centuries. It depicts
@@ -1269,7 +1269,7 @@ The spiral's orientation suggests a directional indicator, though what it points
 toward has been lost to time.
 ~
 S
-#9651
+#2390
 @@pMirrorbark Switchmaze@@N~
 The passage runs between @@pmirrorbark@@N trunks of varying age, the younger
 trees' intense reflections contrasting with the older trees' muted surfaces.
@@ -1284,19 +1284,19 @@ D3
 The passage continues west between varied trunks.
 ~
 ~
-0 -1 9650
+0 -1 2389
 D0
 The passage opens north, mist flowing steadily.
 ~
 ~
-0 -1 9661
+0 -1 2400
 D2
 A narrow gap leads south.
 ~
 ~
-0 -1 9647
+0 -1 2386
 S
-#9652
+#2391
 @@pMirrorbark Switchmaze@@N~
 A junction in the maze where three passages converge. The @@pmirrorbark@@N
 reflections here create a kaleidoscopic effect, each passage reflected in the
@@ -1311,19 +1311,19 @@ D0
 The northern passage beckons, overhead reflections strong.
 ~
 ~
-0 -1 9656
+0 -1 2395
 D2
 A passage leads south, reflections kaleidoscoping.
 ~
 ~
-0 -1 9648
+0 -1 2387
 D3
 The western passage winds through dense growth.
 ~
 ~
-0 -1 9647
+0 -1 2386
 S
-#9653
+#2392
 @@pMirrorbark Switchmaze@@N~
 The maze here borders a section where the @@pmirrorbark@@N gives way to
 ordinary trees, creating a zone of contrast where reflective and non-reflective
@@ -1338,19 +1338,19 @@ D2
 A faint path leads south toward the perimeter.
 ~
 ~
-0 -1 9633
+0 -1 2372
 D3
 The maze continues west, reflections intensifying.
 ~
 ~
-0 -1 9648
+0 -1 2387
 D0
 A passage leads north through mixed growth.
 ~
 ~
-0 -1 9657
+0 -1 2396
 S
-#9654
+#2393
 @@pMirrorbark Switchmaze@@N~
 A secluded pocket in the maze where the @@pmirrorbark@@N forms a near-complete
 enclosure. The reflective walls make the small space feel infinite, each
@@ -1365,12 +1365,12 @@ D0
 A passage leads north through the enclosure wall.
 ~
 ~
-0 -1 9650
+0 -1 2389
 D2
 A narrow gap opens south.
 ~
 ~
-0 -1 9649
+0 -1 2388
 E
 equipment druidic satchel~
 The equipment is centuries old, the remnants of a druidic monitoring station
@@ -1381,7 +1381,7 @@ mist-fever. The leather satchel has composted almost entirely, its contents
 returned to the earth.
 ~
 S
-#9655
+#2394
 @@pMirrorbark Switchmaze@@N~
 The maze's northern edge, where the @@pmirrorbark@@N trunks begin to thin and
 the overhead reflections intensify to their strongest. The bark surfaces here
@@ -1396,14 +1396,14 @@ D0
 The mist flows north toward clearer air beyond the maze.
 ~
 ~
-0 -1 9662
+0 -1 2401
 D2
 The maze extends south, reflections muting.
 ~
 ~
-0 -1 9650
+0 -1 2389
 S
-#9656
+#2395
 @@pMirrorbark Switchmaze@@N~
 A section near the maze's center where the @@pmirrorbark@@N reflections reach
 their most intense and confusing. Every surface blazes with reflected light,
@@ -1418,24 +1418,24 @@ D0
 A passage leads north through intense reflections.
 ~
 ~
-0 -1 9660
+0 -1 2399
 D2
 A path leads south, the reflections dimming slightly.
 ~
 ~
-0 -1 9636
+0 -1 2375
 D1
 A gap opens east through blazing bark.
 ~
 ~
-0 -1 9657
+0 -1 2396
 D3
 The reflections thin to the west.
 ~
 ~
-0 -1 9652
+0 -1 2391
 S
-#9657
+#2396
 @@pMirrorbark Switchmaze@@N~
 A transitional section where the @@pmirrorbark@@N reflections become patchy,
 some trunks maintaining their reflective sheen while others have been scarred
@@ -1449,19 +1449,19 @@ D3
 The passage leads west toward the maze center.
 ~
 ~
-0 -1 9656
+0 -1 2395
 D0
 A passage leads north through mixed bark.
 ~
 ~
-0 -1 9663
+0 -1 2402
 D2
 The scratched path continues south.
 ~
 ~
-0 -1 9653
+0 -1 2392
 S
-#9658
+#2397
 @@pMirrorbark Switchmaze@@N~
 A dead-end pocket in the maze where the @@pmirrorbark@@N has grown in a tight
 spiral, creating a small chamber of continuous reflection. The @@pmist@@N
@@ -1476,9 +1476,9 @@ D3
 The only visible passage leads west out of the pocket.
 ~
 ~
-0 -1 9659
+0 -1 2398
 S
-#9659
+#2398
 @@pMirrorbark Switchmaze@@N~
 The eastern edge of the switchmaze, where the @@pmirrorbark@@N trunks grow in a
 ragged line marking the boundary between the maze proper and the thickets
@@ -1493,19 +1493,19 @@ D2
 A path leads south toward the verge fringe.
 ~
 ~
-0 -1 9639
+0 -1 2378
 D3
 The maze continues west through reflective bark.
 ~
 ~
-0 -1 9658
+0 -1 2397
 D0
 The thickets open slightly to the north.
 ~
 ~
-0 -1 9663
+0 -1 2402
 S
-#9660
+#2399
 @@GSwitchmaze Exit@@N~
 The @@pmirrorbark@@N thins abruptly here, the reflective trunks giving way to
 ordinary forest growth as the maze releases its hold. The air feels cleaner,
@@ -1520,19 +1520,19 @@ D0
 The thickets continue north, the growth shifting character.
 ~
 ~
-0 -1 9680
+0 -1 2419
 D1
 A trail leads east through recovering forest.
 ~
 ~
-0 -1 9661
+0 -1 2400
 D2
 The mirrorbark reflections thicken to the south.
 ~
 ~
-0 -1 9656
+0 -1 2395
 S
-#9661
+#2400
 @@GSwitchmaze Exit@@N~
 A clearing where several maze exits converge, creating a small hub of
 navigable space in the post-maze thickets. The @@Gforest@@N here shows signs
@@ -1546,19 +1546,19 @@ D1
 A trail leads east through Verdant-influenced growth.
 ~
 ~
-0 -1 9662
+0 -1 2401
 D3
 The switchmaze exit opens to the west.
 ~
 ~
-0 -1 9660
+0 -1 2399
 D2
 Mirrorbark reflections are visible to the south.
 ~
 ~
-0 -1 9651
+0 -1 2390
 S
-#9662
+#2401
 @@GSwitchmaze Exit@@N~
 The post-maze thickets open into a stretch of relatively clear forest where
 the @@Gcanopy@@N admits dappled sunlight. The @@pmist@@N is thinner here,
@@ -1572,24 +1572,24 @@ D0
 The thickets continue north.
 ~
 ~
-0 -1 9682
+0 -1 2421
 D1
 A trail leads east through predator territory.
 ~
 ~
-0 -1 9663
+0 -1 2402
 D2
 A track leads south into the maze approaches.
 ~
 ~
-0 -1 9642
+0 -1 2381
 D3
 The switchmaze exits lie to the west.
 ~
 ~
-0 -1 9661
+0 -1 2400
 S
-#9663
+#2402
 @@GSwitchmaze Exit@@N~
 The easternmost post-maze clearing, where the forest opens enough to provide
 genuine visibility for the first time since the maze approaches. The @@Gcanopy@@N
@@ -1603,19 +1603,19 @@ D0
 The thickets continue north into catrat territory.
 ~
 ~
-0 -1 9683
+0 -1 2422
 D2
 The mirrorbark maze boundary is visible to the south.
 ~
 ~
-0 -1 9657
+0 -1 2396
 D3
 A trail leads west through predator signs.
 ~
 ~
-0 -1 9662
+0 -1 2401
 S
-#9664
+#2403
 @@dCatrat Warren Approach@@N~
 The undergrowth becomes dense with small-predator signs along this stretch of
 forest. @@aCatrat@@N territorial scratches score every trunk at consistent
@@ -1629,19 +1629,19 @@ D1
 The predator signs intensify to the east.
 ~
 ~
-0 -1 9665
+0 -1 2404
 D3
 The thickets open to the west.
 ~
 ~
-0 -1 9660
+0 -1 2399
 D0
 A narrow track leads north.
 ~
 ~
-0 -1 9684
+0 -1 2423
 S
-#9665
+#2404
 @@dCatrat Warren Approach@@N~
 The catrat territorial markers here show signs of inter-group conflict: crossed
 scratch-marks where two family groups have contested a boundary, and patches of
@@ -1655,14 +1655,14 @@ D1
 The game trail runs east through dense undergrowth.
 ~
 ~
-0 -1 9666
+0 -1 2405
 D3
 The approach continues west, markings thinning.
 ~
 ~
-0 -1 9664
+0 -1 2403
 S
-#9666
+#2405
 @@dCatrat Warren Approach@@N~
 The heart of the catrat territorial zone, where multiple game trails converge
 at a @@bscent post@@N, a trunk whose lower bark has been rubbed raw by
@@ -1676,14 +1676,14 @@ D1
 The trails continue east toward the warren boundary.
 ~
 ~
-0 -1 9667
+0 -1 2406
 D3
 Game trails lead west through the territorial zone.
 ~
 ~
-0 -1 9665
+0 -1 2404
 S
-#9667
+#2406
 @@dCatrat Warren Approach@@N~
 The eastern boundary of the catrat territory, where the predator signs give way
 to something different. The catrat scratch-marks here are higher on the trunks
@@ -1697,14 +1697,14 @@ D1
 The corruption scent strengthens to the east.
 ~
 ~
-0 -1 9668
+0 -1 2407
 D3
 Game trails lead west through the warren heart.
 ~
 ~
-0 -1 9666
+0 -1 2405
 S
-#9668
+#2407
 @@dBroken-One Territory@@N~
 The first evidence of @@dWithered@@N corruption on sentient beings appears here.
 A degraded campsite lies beneath a leaning tree: a stone fire-ring cracked and
@@ -1719,19 +1719,19 @@ D1
 The degraded campsites continue east.
 ~
 ~
-0 -1 9669
+0 -1 2408
 D3
 The catrat territory lies to the west.
 ~
 ~
-0 -1 9667
+0 -1 2406
 D0
 Drag marks lead north through the corrupted undergrowth.
 ~
 ~
-0 -1 9688
+0 -1 2427
 S
-#9669
+#2408
 @@dBroken-One Territory@@N~
 Another degraded campsite, this one showing signs of longer occupation. A
 shelter built from stacked branches has collapsed into a heap, and scattered
@@ -1747,14 +1747,14 @@ D1
 The territory continues east, campsites more degraded.
 ~
 ~
-0 -1 9670
+0 -1 2409
 D3
 Slightly less degraded ground lies to the west.
 ~
 ~
-0 -1 9668
+0 -1 2407
 S
-#9670
+#2409
 @@dBroken-One Territory@@N~
 The campsites here have deteriorated beyond recognition as human settlements.
 What were once shelters are now heaps of organic material, the distinction
@@ -1769,14 +1769,14 @@ D1
 The territory continues east toward its boundary.
 ~
 ~
-0 -1 9671
+0 -1 2410
 D3
 Slightly more recognizable campsites lie west.
 ~
 ~
-0 -1 9669
+0 -1 2408
 S
-#9671
+#2410
 @@dBroken-One Territory@@N~
 The eastern boundary of the broken-one territory, where the @@dWithered@@N
 corruption gives way to a different kind of danger. Concealed entrances to
@@ -1791,14 +1791,14 @@ D1
 Concealed tunnel entrances increase to the east.
 ~
 ~
-0 -1 9672
+0 -1 2411
 D3
 The broken-one territory extends west.
 ~
 ~
-0 -1 9670
+0 -1 2409
 S
-#9672
+#2411
 @@dNeogi Fringe@@N~
 The forest floor here is pockmarked with concealed entrances to underground
 passages, each one a dark mouth exhaling the stale, acrid scent of @@dneogi@@N
@@ -1813,19 +1813,19 @@ D1
 More tunnel entrances are visible to the east.
 ~
 ~
-0 -1 9673
+0 -1 2412
 D3
 The broken-one territory lies to the west.
 ~
 ~
-0 -1 9671
+0 -1 2410
 D0
 A wider tunnel entrance leads north underground.
 ~
 ~
-0 -1 9684
+0 -1 2423
 S
-#9673
+#2412
 @@dNeogi Fringe@@N~
 The tunnel entrances here are larger and less concealed, suggesting more
 frequent use. The ground around the largest entrance has been worn smooth by
@@ -1839,14 +1839,14 @@ D1
 The fringe continues east toward the seep-pools.
 ~
 ~
-0 -1 9674
+0 -1 2413
 D3
 Smaller tunnel entrances dot the ground to the west.
 ~
 ~
-0 -1 9672
+0 -1 2411
 S
-#9674
+#2413
 @@dNeogi Fringe@@N~
 The transition zone between the neogi's underground domain and the forest
 surface. Root buttresses here have been carved with neogi territorial
@@ -1861,14 +1861,14 @@ D1
 The ground slopes east toward the sound of water.
 ~
 ~
-0 -1 9675
+0 -1 2414
 D3
 The neogi fringe extends west, tunnel entrances common.
 ~
 ~
-0 -1 9673
+0 -1 2412
 S
-#9675
+#2414
 @@dNeogi Fringe@@N~
 The final surface position before the seep-pool crossing begins. The ground
 drops noticeably here, and water seeps from the root hollows, collecting in
@@ -1883,14 +1883,14 @@ D1
 Shallow water collects in the hollows to the east.
 ~
 ~
-0 -1 9676
+0 -1 2415
 D3
 The neogi fringe continues west over dry ground.
 ~
 ~
-0 -1 9674
+0 -1 2413
 S
-#9676
+#2415
 @@aSeep-Pool Crossing@@N~
 Shallow water has collected in the hollows between @@Groot buttresses@@N, forming
 a wet barrier between the thickets and the channel system beyond. The pools are
@@ -1905,14 +1905,14 @@ D1
 The seep-pools continue east, water deepening.
 ~
 ~
-0 -1 9677
+0 -1 2416
 D3
 Dry ground rises to the west.
 ~
 ~
-0 -1 9675
+0 -1 2414
 S
-#9677
+#2416
 @@aSeep-Pool Crossing@@N~
 The seep-pools deepen to knee height here, the water flowing slowly east
 toward the channel system. The @@Groot network@@N is visible beneath the clear
@@ -1927,19 +1927,19 @@ D1
 The water continues east, crystal fragments visible below.
 ~
 ~
-0 -1 9678
+0 -1 2417
 D3
 The pools shallow to the west.
 ~
 ~
-0 -1 9676
+0 -1 2415
 D0
 A root-bridge arches north over deeper water.
 ~
 ~
-0 -1 9697
+0 -1 2436
 S
-#9678
+#2417
 @@aSeep-Pool Crossing@@N~
 The pools widen into a shallow fen where the @@amoisture@@N saturates
 everything. The @@Groot bridges@@N that cross the water are slick with algae
@@ -1954,14 +1954,14 @@ D1
 The fen extends east toward drier ground.
 ~
 ~
-0 -1 9679
+0 -1 2418
 D3
 The seep-pools continue west, crystal fragments thinning.
 ~
 ~
-0 -1 9677
+0 -1 2416
 S
-#9679
+#2418
 @@aSeep-Pool Crossing@@N~
 The eastern edge of the seep-pool crossing, where the water shallows and the
 ground rises toward drier forest. The transition from wet to dry is abrupt,
@@ -1977,14 +1977,14 @@ D0
 The terrain drops north into the channel system.
 ~
 ~
-0 -1 9699
+0 -1 2438
 D3
 The seep-pools extend west through shallow water.
 ~
 ~
-0 -1 9678
+0 -1 2417
 S
-#9680
+#2419
 @@aChannel Approach@@N~
 The terrain drops into shallow ravines where @@awater@@N flows over exposed
 @@Groot-bridges@@N that span the channels like organic arches. The @@pmist@@N
@@ -1999,14 +1999,14 @@ D1
 The channels deepen to the east.
 ~
 ~
-0 -1 9681
+0 -1 2420
 D2
 The ground rises south toward the switchmaze exits.
 ~
 ~
-0 -1 9660
+0 -1 2399
 S
-#9681
+#2420
 @@aChannel Approach@@N~
 The channel system narrows here, forcing passage along a single @@Groot-bridge@@N
 that arches over a stream of clear, cold water. The bridge is alive, its
@@ -2021,14 +2021,14 @@ D1
 The channels continue east, root-bridges spanning wider water.
 ~
 ~
-0 -1 9682
+0 -1 2421
 D3
 The ravines widen to the west.
 ~
 ~
-0 -1 9680
+0 -1 2419
 S
-#9682
+#2421
 @@aChannel Approach@@N~
 A wider section of the channel system where multiple streams converge before
 splitting again around massive root buttresses. The water here is knee-deep
@@ -2043,19 +2043,19 @@ D1
 The channels continue east past the convergence.
 ~
 ~
-0 -1 9683
+0 -1 2422
 D3
 The channel narrows to the west.
 ~
 ~
-0 -1 9681
+0 -1 2420
 D2
 A trail leads south through the post-maze thickets.
 ~
 ~
-0 -1 9662
+0 -1 2401
 S
-#9683
+#2422
 @@aChannel Approach@@N~
 The easternmost channel approach, where the ravines deepen and the @@awater@@N
 picks up speed over a bed of polished stones and @@aConclave crystal@@N
@@ -2070,19 +2070,19 @@ D1
 The channels widen to the east.
 ~
 ~
-0 -1 9684
+0 -1 2423
 D3
 The channel system continues west.
 ~
 ~
-0 -1 9682
+0 -1 2421
 D2
 A trail leads south through the thickets.
 ~
 ~
-0 -1 9663
+0 -1 2402
 S
-#9684
+#2423
 @@dNeogi Tunnel Mouth@@N~
 The entrance to the neogi warren system opens in the ravine wall, a dark passage
 descending into the earth between massive @@Groot systems@@N. The tunnel is
@@ -2097,19 +2097,19 @@ D0
 The tunnel descends north into darkness.
 ~
 ~
-0 -1 9685
+0 -1 2424
 D2
 The channel approaches lie to the south.
 ~
 ~
-0 -1 9672
+0 -1 2411
 D1
 The channels continue east on the surface.
 ~
 ~
-0 -1 9690
+0 -1 2429
 S
-#9685
+#2424
 @@dNeogi Slave Pen@@N~
 A low chamber carved from the earth between root systems serves as the neogi's
 slave pen. @@bIron rings@@N have been driven into the root walls, each one
@@ -2124,14 +2124,14 @@ D2
 The tunnel climbs south toward the entrance.
 ~
 ~
-0 -1 9684
+0 -1 2423
 D0
 A narrow passage leads north deeper into the warrens.
 ~
 ~
-0 -1 9686
+0 -1 2425
 S
-#9686
+#2425
 @@dNeogi Guard Post@@N~
 A wider section of tunnel serves as a guard post for the neogi warrens. The
 passage here has been deliberately widened by gnawing through root material,
@@ -2146,14 +2146,14 @@ D0
 The tunnel continues north toward the master's domain.
 ~
 ~
-0 -1 9687
+0 -1 2426
 D2
 The passage leads south to the slave pen.
 ~
 ~
-0 -1 9685
+0 -1 2424
 S
-#9687
+#2426
 @@dNeogi Master's Chamber@@N~
 A large underground chamber where a neogi master maintains its personal domain.
 The walls are lined with @@bweb-wrapped bundles@@N containing tribute from
@@ -2168,14 +2168,14 @@ D0
 A passage leads north, the tunnel widening.
 ~
 ~
-0 -1 9688
+0 -1 2427
 D2
 The tunnel leads south to the guard post.
 ~
 ~
-0 -1 9686
+0 -1 2425
 S
-#9688
+#2427
 @@dNeogi Ruler's Hall@@N~
 The deepest and largest chamber in the neogi warren system opens here, a vaulted
 space where massive @@Groot systems@@N form natural pillars supporting the earth
@@ -2190,19 +2190,19 @@ D0
 A heavy door blocks passage to the north.
 ~
 ^root door~
-1 -1 9689
+1 -1 2428
 D2
 The tunnel leads south to the master's chamber.
 ~
 ~
-0 -1 9687
+0 -1 2426
 D1
 A concealed passage leads east, barely visible.
 ~
 ~
-0 -1 9668
+0 -1 2407
 S
-#9689
+#2428
 @@dNeogi Escape Tunnel@@N~
 A narrow tunnel beyond the ruler's hall leads upward through the root systems,
 angling toward the surface. The passage is tighter than the main warren tunnels,
@@ -2217,14 +2217,14 @@ D0
 The tunnel climbs toward daylight to the north.
 ~
 ~
-0 -1 9694
+0 -1 2433
 D2
 The tunnel descends south to the ruler's hall.
 ~
 ~
-0 -1 9688
+0 -1 2427
 S
-#9690
+#2429
 @@aRoot-Bridge Crossing@@N~
 An elevated @@Groot platform@@N spans a deep channel where dark water flows
 with enough force to create a muted roar. The bridge is alive, its surface
@@ -2239,14 +2239,14 @@ D1
 Another root-bridge spans the channel to the east.
 ~
 ~
-0 -1 9691
+0 -1 2430
 D3
 The surface channels and tunnel entrance lie west.
 ~
 ~
-0 -1 9684
+0 -1 2423
 S
-#9691
+#2430
 @@aRoot-Bridge Crossing@@N~
 A second root-bridge arches over the channel system, this one higher and
 narrower than the last. The @@awater@@N below is deeper here, its surface
@@ -2261,14 +2261,14 @@ D1
 The crossings continue east over wider channels.
 ~
 ~
-0 -1 9692
+0 -1 2431
 D3
 A root-bridge leads west over the first channel.
 ~
 ~
-0 -1 9690
+0 -1 2429
 S
-#9692
+#2431
 @@aRoot-Bridge Crossing@@N~
 The root-bridge system reaches a nexus point where three bridges converge on
 a massive @@Groot platform@@N growing from the intersection of two channel
@@ -2283,19 +2283,19 @@ D1
 A bridge leads east toward the dense woodland.
 ~
 ~
-0 -1 9693
+0 -1 2432
 D3
 The root-bridge leads west over the deep channel.
 ~
 ~
-0 -1 9691
+0 -1 2430
 D0
 A bridge arches north over flowing water.
 ~
 ~
-0 -1 9700
+0 -1 2439
 S
-#9693
+#2432
 @@aRoot-Bridge Crossing@@N~
 The final root-bridge before the dense woodland rises steeply over the widest
 channel yet. The @@awater@@N below is deep enough to submerge the root systems
@@ -2309,14 +2309,14 @@ D1
 The bridge descends east toward solid ground.
 ~
 ~
-0 -1 9694
+0 -1 2433
 D3
 The bridge nexus platform lies to the west.
 ~
 ~
-0 -1 9692
+0 -1 2431
 S
-#9694
+#2433
 @@aRoot-Bridge Crossing@@N~
 Solid ground returns on the east side of the channel system, the root-bridge
 touching down on a rise of packed earth and stone. The transition from the
@@ -2330,19 +2330,19 @@ D1
 The dense woodland extends east through old-growth forest.
 ~
 ~
-0 -1 9695
+0 -1 2434
 D2
 A trail leads south through the neogi escape tunnel exit.
 ~
 ~
-0 -1 9689
+0 -1 2428
 D3
 The root-bridge rises west over the wide channel.
 ~
 ~
-0 -1 9693
+0 -1 2432
 S
-#9695
+#2434
 @@WDense Woodland Junction@@N~
 A critical intersection in the deep forest where trails converge from multiple
 directions. The @@Gcanopy@@N overhead is ancient, the trees so massive that
@@ -2359,22 +2359,22 @@ D1
 The forest grows taller and healthier to the east.
 ~
 ~
-0 -1 10000
+0 -1 2739
 D2
 The forest darkens to the south, bark blackening.
 ~
 ~
-0 -1 1000
+0 -1 291
 D3
 The root-bridge crossings lie to the west.
 ~
 ~
-0 -1 9694
+0 -1 2433
 D0
 A trail leads north through old-growth woodland.
 ~
 ~
-0 -1 9710
+0 -1 2449
 E
 marker survey~
 The survey marker is a hardwood post driven deep into the earth, its shaft
@@ -2385,7 +2385,7 @@ stripped to bare branches. Someone has understood this forest for a very long
 time.
 ~
 S
-#9696
+#2435
 @@aDeep Channel@@N~
 The channel system widens and deepens here, the @@awater@@N flowing with
 more force over a bed increasingly dense with @@aConclave crystal@@N fragments.
@@ -2400,19 +2400,19 @@ D1
 The channels deepen to the east.
 ~
 ~
-0 -1 9697
+0 -1 2436
 D3
 The channels narrow to the west.
 ~
 ~
-0 -1 9694
+0 -1 2433
 D0
 A root-bridge leads north, marked by deep claw-scores.
 ~
 ~
-0 -1 9717
+0 -1 2456
 S
-#9697
+#2436
 @@aDeep Channel@@N~
 The deepest section of the channel system, where the @@awater@@N has carved
 a genuine ravine through the forest floor. The channel walls drop several
@@ -2428,19 +2428,19 @@ D1
 The channels continue east, still deep.
 ~
 ~
-0 -1 9698
+0 -1 2437
 D3
 The channel system extends west.
 ~
 ~
-0 -1 9696
+0 -1 2435
 D0
 A root-bridge arches north over the deep channel.
 ~
 ~
-0 -1 9677
+0 -1 2416
 S
-#9698
+#2437
 @@aDeep Channel@@N~
 The channel system begins to shallow here as the terrain rises toward the
 eastern edge of the ravine network. The @@awater@@N spreads into broad, shallow
@@ -2455,14 +2455,14 @@ D1
 The water shallows to the east, territory markers intensifying.
 ~
 ~
-0 -1 9699
+0 -1 2438
 D3
 The deep channel extends to the west.
 ~
 ~
-0 -1 9697
+0 -1 2436
 S
-#9699
+#2438
 @@aDeep Channel@@N~
 The eastern edge of the channel system, where the water gives way to damp
 earth and the terrain rises toward drier forest. The transition zone is
@@ -2478,19 +2478,19 @@ D2
 The seep-pool crossing lies to the south.
 ~
 ~
-0 -1 9679
+0 -1 2418
 D3
 The deep channels extend west.
 ~
 ~
-0 -1 9698
+0 -1 2437
 D0
 A trail leads north past cockatrice territory.
 ~
 ~
-0 -1 9718
+0 -1 2457
 S
-#9700
+#2439
 @@aPrism-Fen Knot@@N~
 The channel system opens into a flooded expanse where @@awater@@N, @@Groots@@N,
 and @@pmist@@N create a wetland maze of deceptive openness. The terrain appears
@@ -2506,19 +2506,19 @@ D0
 A root-bridge leads north through rainbow refractions.
 ~
 ~
-0 -1 9704
+0 -1 2443
 D1
 Water stretches east, prismatic light dancing.
 ~
 ~
-0 -1 9701
+0 -1 2440
 D2
 The channel nexus lies to the south.
 ~
 ~
-0 -1 9692
+0 -1 2431
 S
-#9701
+#2440
 @@aPrism-Fen Knot@@N~
 The fen extends in shallow sheets of @@aclear water@@N over a lattice of
 submerged roots. The footing is treacherous: roots shift position as the
@@ -2533,19 +2533,19 @@ D0
 A root path leads north through shifting water.
 ~
 ~
-0 -1 9705
+0 -1 2444
 D1
 The fen extends east, water sounds on the left.
 ~
 ~
-0 -1 9702
+0 -1 2441
 D3
 The fen stretches west toward the entry.
 ~
 ~
-0 -1 9700
+0 -1 2439
 S
-#9702
+#2441
 @@aPrism-Fen Knot@@N~
 A section of the fen where the @@awater@@N deepens to knee height and the
 @@Groot-bridges@@N become the only viable passage. The bridges here are narrow
@@ -2560,19 +2560,19 @@ D0
 The water sounds grow stronger to the north.
 ~
 ~
-0 -1 9706
+0 -1 2445
 D1
 A bridge leads east over deep water.
 ~
 ~
-0 -1 9703
+0 -1 2442
 D3
 The fen extends west through colored shadows.
 ~
 ~
-0 -1 9701
+0 -1 2440
 S
-#9703
+#2442
 @@aPrism-Fen Knot@@N~
 The fen opens into a wider pool where the @@awater@@N is still and mirror-clear,
 reflecting the canopy with such precision that the boundary between water and
@@ -2587,19 +2587,19 @@ D3
 The fen extends west through deep water.
 ~
 ~
-0 -1 9702
+0 -1 2441
 D0
 A root bridge leads north over still water.
 ~
 ~
-0 -1 9708
+0 -1 2447
 D2
 The water shallows to the south.
 ~
 ~
-0 -1 9700
+0 -1 2439
 S
-#9704
+#2443
 @@aPrism-Fen Knot@@N~
 A narrow channel runs east-west through the fen, its current strong enough to
 tug at legs. The @@Groot-bridges@@N that cross it are old and massive, their
@@ -2613,19 +2613,19 @@ D1
 The channel continues east, current strong.
 ~
 ~
-0 -1 9705
+0 -1 2444
 D2
 The fen opens south into shallower water.
 ~
 ~
-0 -1 9700
+0 -1 2439
 D0
 A bridge arches north over the channel.
 ~
 ~
-0 -1 9709
+0 -1 2448
 S
-#9705
+#2444
 @@aPrism-Fen Knot@@N~
 The channel widens into a shallow ford where the @@awater@@N spreads over a
 broad root lattice, reducing its depth to ankle height. The ford provides
@@ -2640,19 +2640,19 @@ D1
 The ford continues east through shallow rainbow water.
 ~
 ~
-0 -1 9706
+0 -1 2445
 D3
 The channel deepens to the west.
 ~
 ~
-0 -1 9704
+0 -1 2443
 D0
 A root path climbs north out of the water.
 ~
 ~
-0 -1 9710
+0 -1 2449
 S
-#9706
+#2445
 @@GLarge Nesting Tree@@N~
 An ancient old-growth tree of staggering proportions dominates this section of
 the fen, its trunk wider than a house and its @@Gcanopy@@N extending above the
@@ -2668,17 +2668,17 @@ D4
 A precarious climbing route leads upward into the canopy.
 ~
 ~
-0 -1 9716
+0 -1 2455
 D2
 The ford and prismatic water lie to the south.
 ~
 ~
-0 -1 9705
+0 -1 2444
 D3
 The fen extends west through knee-deep water.
 ~
 ~
-0 -1 9702
+0 -1 2441
 E
 climbing route trunk~
 The climbing route follows a series of natural handholds formed by branch-stubs
@@ -2688,7 +2688,7 @@ hands. Hippogriff droppings and feather fragments litter the route, suggesting
 the birds tolerate climbers who do not approach the nests.
 ~
 S
-#9707
+#2446
 @@WCheckpoint Hut@@N~
 A small stone-and-timber hut stands on a raised platform of packed earth,
 somehow surviving in the middle of the fen maze. The structure is a Kiess
@@ -2705,12 +2705,12 @@ D2
 The door opens south into the fen.
 ~
 ~
-0 -1 9703
+0 -1 2442
 D0
 The window faces north over the fen expanse.
 ~
 ~
-0 -1 9712
+0 -1 2451
 E
 table dispatch case~
 The stone table holds a waterproof dispatch case containing blank slate
@@ -2721,7 +2721,7 @@ dated tablet entry is several seasons old and reads simply: "water left = east.
 water ahead = north. Trust nothing that glows."
 ~
 S
-#9708
+#2447
 @@aPrism-Fen Knot@@N~
 A secluded corner of the fen where the @@awater@@N is shallow and still, its
 surface coated with a thin film of @@apollen@@N from the canopy above. The
@@ -2735,14 +2735,14 @@ D2
 The mirror-still pool lies to the south.
 ~
 ~
-0 -1 9703
+0 -1 2442
 D3
 The fen extends west through golden pollen.
 ~
 ~
-0 -1 9712
+0 -1 2451
 S
-#9709
+#2448
 @@aPrism-Fen Knot@@N~
 The fen rises into a section where @@Groot@@N systems emerge above the water,
 creating a network of elevated walkways between partially submerged trees. The
@@ -2757,19 +2757,19 @@ D1
 The elevated walkways continue east.
 ~
 ~
-0 -1 9710
+0 -1 2449
 D2
 The walkways descend south into the channel.
 ~
 ~
-0 -1 9704
+0 -1 2443
 D3
 A root path leads west through the elevated section.
 ~
 ~
-0 -1 9713
+0 -1 2452
 S
-#9710
+#2449
 @@aPrism-Fen Knot@@N~
 A broader section of elevated ground where multiple @@Groot walkways@@N converge,
 creating a platform large enough to rest on. The @@pmist@@N is thinner here
@@ -2784,24 +2784,24 @@ D0
 The ground rises north toward the fen exit.
 ~
 ~
-0 -1 9717
+0 -1 2456
 D1
 Elevated walkways extend east.
 ~
 ~
-0 -1 9711
+0 -1 2450
 D2
 A trail descends south toward the woodland junction.
 ~
 ~
-0 -1 9695
+0 -1 2434
 D3
 The elevated walkways continue west.
 ~
 ~
-0 -1 9709
+0 -1 2448
 S
-#9711
+#2450
 @@aPrism-Fen Knot@@N~
 The eastern edge of the Prism-Fen Knot, where the elevated @@Groot walkways@@N
 descend back to water level and the fen begins to shallow. The transition
@@ -2816,19 +2816,19 @@ D3
 The elevated walkways extend west through the fen.
 ~
 ~
-0 -1 9710
+0 -1 2449
 D1
 The walkways descend east toward shallowing water.
 ~
 ~
-0 -1 9715
+0 -1 2454
 D0
 A root path leads north over drier ground.
 ~
 ~
-0 -1 9714
+0 -1 2453
 S
-#9712
+#2451
 @@aPrism-Fen Knot@@N~
 A deeper section of the fen where the @@awater@@N has carved channels between
 the @@Groot systems@@N, creating a network of narrow waterways that must be
@@ -2843,19 +2843,19 @@ D1
 The waterways extend east toward calmer water.
 ~
 ~
-0 -1 9708
+0 -1 2447
 D2
 The fen opens south toward the checkpoint hut.
 ~
 ~
-0 -1 9707
+0 -1 2446
 D0
 A root bridge spans the deepest channel to the north.
 ~
 ~
-0 -1 9713
+0 -1 2452
 S
-#9713
+#2452
 @@aPrism-Fen Knot@@N~
 A section where the fen's @@Groot network@@N has created a natural amphitheater:
 curved root walls surrounding a shallow pool whose surface is perfectly still.
@@ -2870,19 +2870,19 @@ D1
 A passage leads east through the root walls.
 ~
 ~
-0 -1 9709
+0 -1 2448
 D2
 The deep channels extend south.
 ~
 ~
-0 -1 9712
+0 -1 2451
 D3
 A root bridge leads west over the pool.
 ~
 ~
-0 -1 9714
+0 -1 2453
 S
-#9714
+#2453
 @@aPrism-Fen Knot@@N~
 The western edge of a drier section within the fen, where the ground rises
 above the water level and the @@Groot systems@@N form a solid platform. The air
@@ -2897,19 +2897,19 @@ D1
 The dry platform continues east.
 ~
 ~
-0 -1 9715
+0 -1 2454
 D2
 A root path descends south into the fen.
 ~
 ~
-0 -1 9711
+0 -1 2450
 D3
 A root bridge leads west to the amphitheater.
 ~
 ~
-0 -1 9713
+0 -1 2452
 S
-#9715
+#2454
 @@aPrism-Fen Knot@@N~
 The highest point in the fen, where a @@Groot platform@@N rises above the
 water and mist to provide a genuine vantage point. The view extends in all
@@ -2924,19 +2924,19 @@ D3
 The dry platform extends west.
 ~
 ~
-0 -1 9714
+0 -1 2453
 D0
 The ground rises north toward the fen exit.
 ~
 ~
-0 -1 9718
+0 -1 2457
 D2
 Root paths descend south and east into the fen.
 ~
 ~
-0 -1 9711
+0 -1 2450
 S
-#9716
+#2455
 @@GHippogriff Nest@@N~
 A high-canopy platform formed by the massive branches of the nesting tree,
 above the mist line where the air is clean and the confusion effects weaken.
@@ -2953,7 +2953,7 @@ D5
 The climbing route descends back to the forest floor.
 ~
 ~
-0 -1 9706
+0 -1 2445
 E
 feathers nest nests~
 The hippogriff nests are massive constructions, each one large enough to
@@ -2964,7 +2964,7 @@ beaks. The hippogriffs tolerate visitors on the lower platform but react
 aggressively to approaches toward the active nests.
 ~
 S
-#9717
+#2456
 @@aFen Exit@@N~
 The wetland gives way to drier ground as the terrain rises north from the
 Prism-Fen Knot. The @@awater@@N recedes, replaced by damp earth and then
@@ -2980,19 +2980,19 @@ D0
 The glade approach continues north through cockatrice territory.
 ~
 ~
-0 -1 9720
+0 -1 2459
 D2
 The elevated root walkways descend south into the fen.
 ~
 ~
-0 -1 9710
+0 -1 2449
 D3
 The deep channels lie to the west.
 ~
 ~
-0 -1 9696
+0 -1 2435
 S
-#9718
+#2457
 @@aGlade Approach@@N~
 Cockatrice @@anesting territory@@N extends through this section of forest,
 the stone-gaze predators having claimed the open ground between the fen exit
@@ -3007,19 +3007,19 @@ D0
 The approach continues north into deeper forest.
 ~
 ~
-0 -1 9721
+0 -1 2460
 D2
 The fen's high point lies to the south.
 ~
 ~
-0 -1 9715
+0 -1 2454
 D3
 The deep channels extend to the west.
 ~
 ~
-0 -1 9699
+0 -1 2438
 S
-#9719
+#2458
 @@aGlade Approach@@N~
 The eastern extent of the cockatrice nesting territory, where the stone-gaze
 creatures' influence gives way to the sounds and signs of larger forest
@@ -3034,14 +3034,14 @@ D0
 The forest deepens to the north.
 ~
 ~
-0 -1 9722
+0 -1 2461
 D3
 The nesting territory extends to the west.
 ~
 ~
-0 -1 9718
+0 -1 2457
 S
-#9720
+#2459
 @@GWemic Hunting Ground@@N~
 A deep clearing in the forest where the @@Gcanopy@@N opens enough to admit
 genuine sunlight. The air is clearer here, the growth healthier, and the
@@ -3057,14 +3057,14 @@ D1
 The clearing extends east into wemic territory.
 ~
 ~
-0 -1 9721
+0 -1 2460
 D2
 The fen exit and glade approach lie to the south.
 ~
 ~
-0 -1 9717
+0 -1 2456
 S
-#9721
+#2460
 @@GWemic Hunting Ground@@N~
 The wemic territory extends through this section of healthy forest where the
 @@Gcanopy@@N forms a high, open vault supported by massive trunks. A wemic
@@ -3079,19 +3079,19 @@ D1
 The territory continues east toward its boundary.
 ~
 ~
-0 -1 9722
+0 -1 2461
 D3
 The clearing extends west through sunlit ground.
 ~
 ~
-0 -1 9720
+0 -1 2459
 D2
 The glade approach lies to the south.
 ~
 ~
-0 -1 9718
+0 -1 2457
 S
-#9722
+#2461
 @@GWemic Hunting Ground@@N~
 The eastern boundary of the wemic territory, where the leonine markers give way
 to denser, darker forest. A trail leads north toward lands beyond the forest,
@@ -3106,14 +3106,14 @@ D1
 The forest darkens to the east as crystal scars appear.
 ~
 ~
-0 -1 9723
+0 -1 2462
 D3
 The wemic territory extends west through healthy forest.
 ~
 ~
-0 -1 9721
+0 -1 2460
 S
-#9723
+#2462
 @@dCrystal Scar Approach@@N~
 The first visible evidence of @@dConclave@@N crystal matrices appears here.
 Root systems exposed by erosion show faintly @@aluminous fragments@@N embedded
@@ -3129,12 +3129,12 @@ D1
 The crystal evidence intensifies to the east.
 ~
 ~
-0 -1 9724
+0 -1 2463
 D3
 The wemic boundary lies to the west.
 ~
 ~
-0 -1 9722
+0 -1 2461
 E
 trench remnants survey~
 The survey trenches are narrow cuts in the forest floor, barely wide enough
@@ -3145,7 +3145,7 @@ angles that speak of deliberate, systematic mapping. The Conclave's
 quartermasters were thorough, whatever else they were.
 ~
 S
-#9724
+#2463
 @@dCrystal Scar Approach@@N~
 The crystal fragments in the exposed roots are denser here, and the hum they
 produce has become a perceptible vibration in the ground. The @@dforest@@N's
@@ -3160,14 +3160,14 @@ D1
 The geometric growth patterns intensify to the east.
 ~
 ~
-0 -1 9725
+0 -1 2464
 D3
 The crystal evidence thins to the west.
 ~
 ~
-0 -1 9723
+0 -1 2462
 S
-#9725
+#2464
 @@dCrystal Scar Approach@@N~
 The strongest concentration of surface-visible crystal activity outside the
 maze regions. The ground vibrates with a low-frequency hum, and the @@aluminous
@@ -3182,19 +3182,19 @@ D4
 The terrain rises upward to a higher elevation.
 ~
 ~
-0 -1 166
+0 -1 1
 D1
 The geometric patterns extend east toward structures.
 ~
 ~
-0 -1 9726
+0 -1 2465
 D3
 The crystal evidence continues to the west.
 ~
 ~
-0 -1 9724
+0 -1 2463
 S
-#9726
+#2465
 @@dCabin Approach@@N~
 The path narrows between @@Gsentinel trees@@N whose trunks bear deep claw marks
 at a height that no forest creature could reach. These are not territorial
@@ -3210,19 +3210,19 @@ D1
 The fortified cabin is visible to the east.
 ~
 ~
-0 -1 9728
+0 -1 2467
 D3
 The crystal scar approaches lie to the west.
 ~
 ~
-0 -1 9725
+0 -1 2464
 D0
 A reinforced door blocks the way north.
 ~
 ^reinforced door~
-1 9619 9727
+1 2358 2466
 S
-#9727
+#2466
 @@dStrongroom@@N~
 A sealed chamber within the cabin complex, accessible only through a reinforced
 door that requires a specific key. The room is small and windowless, its walls
@@ -3238,7 +3238,7 @@ D2
 The reinforced door leads south to the cabin approach.
 ~
 ^reinforced door~
-1 9619 9726
+1 2358 2465
 E
 shelves scroll vials~
 The shelves hold the accumulated reference materials of a long-term magical
@@ -3249,7 +3249,7 @@ potent. The bound volumes appear to be research journals, their pages dense
 with notation and diagrams.
 ~
 S
-#9728
+#2467
 @@dCabin Main Room@@N~
 The interior of a human-made cabin that stands intact in the deep forest, an
 anomaly that defies the @@Gforest@@N's relentless reclamation of human
@@ -3265,19 +3265,19 @@ D1
 A doorway leads east to a workshop.
 ~
 ~
-0 -1 9729
+0 -1 2468
 D3
 The cabin approach lies to the west through the door.
 ~
 ~
-0 -1 9726
+0 -1 2465
 D4
 A staircase climbs upward to an upper room.
 ~
 ~
-0 -1 9730
+0 -1 2469
 S
-#9729
+#2468
 @@dCabin Workshop@@N~
 @@bShelves of reagents@@N line the walls of this workshop, each shelf labeled
 with precise notation in the same unfamiliar script. @@bStar charts@@N cover
@@ -3292,7 +3292,7 @@ D3
 The cabin's main room lies to the west.
 ~
 ~
-0 -1 9728
+0 -1 2467
 E
 star charts charts~
 The star charts are hand-drawn on treated hide, each one showing the night sky
@@ -3303,7 +3303,7 @@ The charts suggest someone has been correlating celestial and terrestrial
 patterns for a very long time.
 ~
 S
-#9730
+#2469
 @@dCabin Upper Room@@N~
 The upper room of the cabin serves as personal quarters for the cabin's
 occupant. A @@bnarrow bed@@N with clean linens, a writing desk with current
@@ -3318,14 +3318,14 @@ D0
 A passage leads north to a sanctum beyond.
 ~
 ~
-0 -1 9731
+0 -1 2470
 D5
 Stairs descend to the cabin's main room.
 ~
 ~
-0 -1 9728
+0 -1 2467
 S
-#9731
+#2470
 @@dYmmas's Lair@@N~
 The sanctum of the mage @@dYmmas@@N, a chamber that extends beyond the cabin's
 apparent physical dimensions through means that are not immediately visible. The
@@ -3341,14 +3341,14 @@ D1
 A heavy curtain blocks the passage east.
 ~
 ~
-0 -1 9732
+0 -1 2471
 D2
 The passage leads south to the upper room.
 ~
 ~
-0 -1 9730
+0 -1 2469
 S
-#9732
+#2471
 @@dThrone Room@@N~
 A formal audience chamber beyond the sanctum, furnished with a high-backed
 @@bstone chair@@N that serves as a throne. The room is larger than the cabin's
@@ -3363,7 +3363,7 @@ D3
 The passage leads west through the curtain to the sanctum.
 ~
 ~
-0 -1 9731
+0 -1 2470
 E
 chair throne stone~
 The stone chair is carved from a single block of dark granite, its surfaces
@@ -3373,7 +3373,7 @@ framework does not fully account for. The chair is positioned to face the room's
 entrance, ensuring that anyone entering must approach the seated occupant.
 ~
 S
-#9733
+#2472
 @@dDeep Undergrowth@@N~
 Dense, dark forest fills the space between Ymmas's domain to the west and the
 centaur territory to the east. The undergrowth is thick and tangled, the
@@ -3387,14 +3387,14 @@ D1
 The undergrowth continues east, the air freshening.
 ~
 ~
-0 -1 9734
+0 -1 2473
 D3
 The cabin complex is visible through the trees to the west.
 ~
 ~
-0 -1 9728
+0 -1 2467
 S
-#9734
+#2473
 @@dDeep Undergrowth@@N~
 The undergrowth remains dense, but the character of the forest shifts as the
 @@GVerdant@@N influence strengthens. The bark is healthier, the growth more
@@ -3409,14 +3409,14 @@ D1
 The forest transitions east toward centaur territory.
 ~
 ~
-0 -1 9735
+0 -1 2474
 D3
 The undergrowth darkens to the west.
 ~
 ~
-0 -1 9733
+0 -1 2472
 S
-#9735
+#2474
 @@dDeep Undergrowth@@N~
 The transitional zone between the corrupted cabin region and the centaur glade.
 @@bLiving-wood boundary markers@@N appear with increasing frequency, branches
@@ -3431,14 +3431,14 @@ D1
 The boundary markers lead east into centaur territory.
 ~
 ~
-0 -1 9736
+0 -1 2475
 D3
 The deep undergrowth extends west.
 ~
 ~
-0 -1 9734
+0 -1 2473
 S
-#9736
+#2475
 @@GCentaur Glade Approach@@N~
 @@bLiving-wood boundary markers@@N line the approach to centaur territory, their
 trained branches forming directional arrows that point along approved routes.
@@ -3453,14 +3453,14 @@ D1
 The approach continues east through boundary markers.
 ~
 ~
-0 -1 9737
+0 -1 2476
 D3
 The deep undergrowth lies to the west.
 ~
 ~
-0 -1 9735
+0 -1 2474
 S
-#9737
+#2476
 @@GCentaur Glade Approach@@N~
 The boundary markers converge here into a deliberate corridor of trained
 branches, creating a path that centaur patrols maintain for the passage of
@@ -3475,14 +3475,14 @@ D1
 The corridor continues east toward the glade entrance.
 ~
 ~
-0 -1 9738
+0 -1 2477
 D3
 The approach leads west through scattered markers.
 ~
 ~
-0 -1 9736
+0 -1 2475
 S
-#9738
+#2477
 @@GCentaur Glade Approach@@N~
 The woven corridor opens into a broader approach where the @@Gcanopy@@N lifts
 and sunlight falls on a forest floor carpeted with soft moss. The air is warm
@@ -3497,14 +3497,14 @@ D1
 The glade entrance is visible to the east.
 ~
 ~
-0 -1 9739
+0 -1 2478
 D3
 The woven corridor extends west.
 ~
 ~
-0 -1 9737
+0 -1 2476
 S
-#9739
+#2478
 @@GCentaur Glade Approach@@N~
 The final approach to the centaur glade, where the woven corridor walls give
 way to the open space of the settlement. The transition from enclosed path to
@@ -3519,14 +3519,14 @@ D0
 The glade opens to the north.
 ~
 ~
-0 -1 9740
+0 -1 2479
 D3
 The approach corridor extends west.
 ~
 ~
-0 -1 9738
+0 -1 2477
 S
-#9740
+#2479
 @@GGlade Entrance@@N~
 The centaur settlement's entrance, marked by a pair of massive @@bliving-wood
 pillars@@N trained into an archway. The archway frames a view of the secluded
@@ -3542,19 +3542,19 @@ D0
 The secluded glade opens to the north.
 ~
 ~
-0 -1 9741
+0 -1 2480
 D1
 A path leads east through the glade perimeter.
 ~
 ~
-0 -1 9743
+0 -1 2482
 D2
 The approach corridor lies to the south.
 ~
 ~
-0 -1 9739
+0 -1 2478
 S
-#9741
+#2480
 @@GSecluded Glade@@N~
 An open space between trained trees where centaur families move between
 @@Gliving-wood@@N structures with unhurried confidence. The glade floor is soft
@@ -3569,19 +3569,19 @@ D0
 The glade continues north past more structures.
 ~
 ~
-0 -1 9742
+0 -1 2481
 D1
 The glade extends east through sunlit ground.
 ~
 ~
-0 -1 9744
+0 -1 2483
 D2
 The glade entrance archway is visible to the south.
 ~
 ~
-0 -1 9740
+0 -1 2479
 S
-#9742
+#2481
 @@GSecluded Glade@@N~
 The northern reach of the centaur settlement, where the oldest @@Gliving-wood
 structures@@N have been trained over decades into multi-room complexes that
@@ -3596,19 +3596,19 @@ D1
 The glade extends east.
 ~
 ~
-0 -1 9743
+0 -1 2482
 D2
 The glade opens to the south.
 ~
 ~
-0 -1 9741
+0 -1 2480
 D0
 A path leads north toward the lattice boundary.
 ~
 ~
-0 -1 9748
+0 -1 2487
 S
-#9743
+#2482
 @@GSecluded Glade@@N~
 The eastern section of the centaur glade, where the settlement's living-wood
 structures transition into natural forest. A @@btraining ground@@N occupies a
@@ -3623,19 +3623,19 @@ D0
 Centaur huts are visible to the north.
 ~
 ~
-0 -1 9745
+0 -1 2484
 D3
 The glade opens to the west.
 ~
 ~
-0 -1 9742
+0 -1 2481
 D2
 The glade entrance lies to the south.
 ~
 ~
-0 -1 9740
+0 -1 2479
 S
-#9744
+#2483
 @@GLeader's Glade@@N~
 A formal clearing within the settlement where the centaur leader holds court.
 A @@bspeaking circle@@N of polished river stones marks the center, and
@@ -3651,12 +3651,12 @@ D2
 The secluded glade lies to the south.
 ~
 ~
-0 -1 9741
+0 -1 2480
 D1
 A path leads east toward the centaur huts.
 ~
 ~
-0 -1 9746
+0 -1 2485
 E
 speaking circle stones~
 The speaking circle is constructed from water-smoothed stones, each one
@@ -3667,7 +3667,7 @@ root network, a deliberate echo of the distributed intelligence that governs
 the woodland.
 ~
 S
-#9745
+#2484
 @@GCentaur Hut@@N~
 A @@Gliving-wood structure@@N grown from trained branches, its walls of woven
 bark and its roof a tight lattice of overlapping leaves that sheds rain
@@ -3682,9 +3682,9 @@ D2
 A woven branch door opens to the glade.
 ~
 ^branch door~
-1 -1 9743
+1 -1 2482
 S
-#9746
+#2485
 @@GCentaur Hut@@N~
 A larger @@Gliving-wood hut@@N with a distinctive red-barked exterior, the
 color produced by a species of tree that the centaurs cultivate specifically
@@ -3699,14 +3699,14 @@ D2
 The woven door opens south toward the leader's glade.
 ~
 ^branch door~
-1 -1 9744
+1 -1 2483
 D3
 A connecting passage leads west to another hut.
 ~
 ~
-0 -1 9745
+0 -1 2484
 S
-#9747
+#2486
 @@GCentaur Hut@@N~
 The smallest of the centaur huts, its @@Gliving-wood@@N walls newer and thinner
 than the older structures, suggesting recent construction. The interior is
@@ -3720,14 +3720,14 @@ D2
 The woven door opens south to the glade.
 ~
 ^branch door~
-1 -1 9742
+1 -1 2481
 D1
 A connecting passage leads east to a larger hut.
 ~
 ~
-0 -1 9746
+0 -1 2485
 S
-#9748
+#2487
 @@dAshen Lattice of Scars@@N~
 The forest changes abruptly as the centaur territory's healthy growth gives
 way to the @@dWithered@@N corruption's most deliberate expression. @@dBlight
@@ -3744,19 +3744,19 @@ D0
 The lattice corridors extend north between scarred trunks.
 ~
 ~
-0 -1 9753
+0 -1 2492
 D1
 A fungal corridor runs east through geometric growth.
 ~
 ~
-0 -1 9749
+0 -1 2488
 D2
 The centaur settlement lies to the south.
 ~
 ~
-0 -1 9742
+0 -1 2481
 S
-#9749
+#2488
 @@dAshen Lattice of Scars@@N~
 A corridor of @@dfungal growth@@N follows a Conclave scar line through the
 forest, its walls formed by mycelium structures that grow in precise hexagonal
@@ -3771,19 +3771,19 @@ D1
 The fungal corridor continues east, scars deepening.
 ~
 ~
-0 -1 9750
+0 -1 2489
 D3
 The lattice entrance lies to the west.
 ~
 ~
-0 -1 9748
+0 -1 2487
 D0
 A side passage branches north through lighter scarring.
 ~
 ~
-0 -1 9754
+0 -1 2493
 S
-#9750
+#2489
 @@dAshen Lattice of Scars@@N~
 The corridor widens into a space where three @@dfungal lattice@@N pathways
 intersect, their geometric growth patterns creating a hexagonal junction. The
@@ -3798,19 +3798,19 @@ D1
 The deep-scarred corridor continues east.
 ~
 ~
-0 -1 9751
+0 -1 2490
 D3
 The corridor leads west between hexagonal growths.
 ~
 ~
-0 -1 9749
+0 -1 2488
 D0
 A shallow-scarred path leads north.
 ~
 ~
-0 -1 9755
+0 -1 2494
 S
-#9751
+#2490
 @@dAshen Lattice of Scars@@N~
 The deepest fire scars mark this section as part of the original Conclave
 survey route, the crystal resonance that created these burns also preserving
@@ -3825,14 +3825,14 @@ D1
 The deep-scarred path continues east through the lattice.
 ~
 ~
-0 -1 9752
+0 -1 2491
 D3
 The hexagonal junction lies to the west.
 ~
 ~
-0 -1 9750
+0 -1 2489
 S
-#9752
+#2491
 @@dAshen Lattice of Scars@@N~
 The eastern reach of the deep-scarred traversal lane, where the Conclave's
 original survey route begins to curve northward. The @@dfungal growth@@N is
@@ -3847,19 +3847,19 @@ D0
 The deep scars curve north toward the lattice core.
 ~
 ~
-0 -1 9757
+0 -1 2496
 D3
 The traversal lane continues west.
 ~
 ~
-0 -1 9751
+0 -1 2490
 D1
 A narrow gap leads east through the lattice wall.
 ~
 ~
-0 -1 9758
+0 -1 2497
 S
-#9753
+#2492
 @@dAshen Lattice of Scars@@N~
 A bait pocket in the lattice maze where the @@dfungal corridors@@N widen into
 an apparently navigable space. The openness is deceptive: the corridors loop
@@ -3874,19 +3874,19 @@ D2
 The corridors lead south through irregular growth.
 ~
 ~
-0 -1 9748
+0 -1 2487
 D1
 A passage leads east through spore-thick air.
 ~
 ~
-0 -1 9754
+0 -1 2493
 D0
 The lattice continues north, growth patterns chaotic.
 ~
 ~
-0 -1 9758
+0 -1 2497
 S
-#9754
+#2493
 @@dAshen Lattice of Scars@@N~
 An ambush corner in the lattice where the @@dfungal corridors@@N narrow to
 single-file width between massive spore columns. The columns are head-height
@@ -3901,19 +3901,19 @@ D2
 The passage leads south toward the corridors.
 ~
 ~
-0 -1 9749
+0 -1 2488
 D3
 The passage opens west through the spore columns.
 ~
 ~
-0 -1 9753
+0 -1 2492
 D0
 A narrow passage leads north through the spore columns.
 ~
 ~
-0 -1 9759
+0 -1 2498
 S
-#9755
+#2494
 @@RLattice Core@@N~
 The densest concentration of @@dConclave crystal@@N resonance at the surface,
 where the buried matrices pulse with enough energy to vibrate the ground and
@@ -3930,14 +3930,14 @@ D2
 The lattice extends south from the core.
 ~
 ~
-0 -1 9750
+0 -1 2489
 D1
 A deeply scarred corridor leads east.
 ~
 ~
-0 -1 9756
+0 -1 2495
 S
-#9756
+#2495
 @@dAshen Lattice of Scars@@N~
 A section east of the lattice core where the crystal resonance begins to
 diminish and the @@dfungal growth@@N patterns lose their geometric perfection.
@@ -3952,14 +3952,14 @@ D1
 The lattice thins to the east, scars shallowing.
 ~
 ~
-0 -1 9757
+0 -1 2496
 D3
 The lattice core lies to the west, humming intensely.
 ~
 ~
-0 -1 9755
+0 -1 2494
 S
-#9757
+#2496
 @@dAshen Lattice of Scars@@N~
 The traversal lane curves through this section, the deep fire scars providing
 reliable navigation as the @@dfungal lattice@@N thins toward the maze's
@@ -3973,19 +3973,19 @@ D2
 The deep-scarred path curves south.
 ~
 ~
-0 -1 9752
+0 -1 2491
 D3
 A corridor leads west through thinning lattice.
 ~
 ~
-0 -1 9756
+0 -1 2495
 D0
 The lattice boundary lies to the north.
 ~
 ~
-0 -1 9760
+0 -1 2499
 S
-#9758
+#2497
 @@dAshen Lattice of Scars@@N~
 A secondary bait pocket near the lattice's eastern edge where the @@dfungal
 corridors@@N create the illusion of a clear passage east. The passage is a
@@ -4000,14 +4000,14 @@ D3
 The passage leads west back into the lattice.
 ~
 ~
-0 -1 9752
+0 -1 2491
 D2
 A gap in the lattice wall leads south.
 ~
 ~
-0 -1 9753
+0 -1 2492
 S
-#9759
+#2498
 @@dAshen Lattice of Scars@@N~
 The northern edge of the Ashen Lattice, where the @@dfungal growth@@N fades
 and ordinary forest returns. The transition is marked by a line of
@@ -4022,14 +4022,14 @@ D2
 The lattice corridors extend south.
 ~
 ~
-0 -1 9754
+0 -1 2493
 D0
 The deep woodland continues north.
 ~
 ~
-0 -1 9763
+0 -1 2502
 S
-#9760
+#2499
 @@dDeep Woodland Transition@@N~
 The forest reaches its maximum density here, the @@Gcanopy@@N an unbroken
 ceiling of interlocking branches that admits no direct light. Two distinct
@@ -4044,19 +4044,19 @@ D1
 The forest trends healthier to the east.
 ~
 ~
-0 -1 9761
+0 -1 2500
 D3
 The forest darkens to the west.
 ~
 ~
-0 -1 9762
+0 -1 2501
 D2
 The Ashen Lattice boundary lies to the south.
 ~
 ~
-0 -1 9757
+0 -1 2496
 S
-#9761
+#2500
 @@GDeep Woodland Transition@@N~
 The @@GVerdant@@N influence strengthens as the forest transitions toward its
 healthier eastern character. The trees grow taller and straighter, their bark
@@ -4071,14 +4071,14 @@ D1
 The forest grows stronger to the east.
 ~
 ~
-0 -1 9780
+0 -1 2519
 D3
 The woodland transition continues west.
 ~
 ~
-0 -1 9760
+0 -1 2499
 S
-#9762
+#2501
 @@dDeep Woodland Transition@@N~
 The @@dWithered@@N influence dominates the forest's western character in this
 transition zone. The bark blackens, the growth stunts, and the preservation
@@ -4093,19 +4093,19 @@ D1
 The woodland transition continues east.
 ~
 ~
-0 -1 9760
+0 -1 2499
 D3
 The forest darkens further to the west.
 ~
 ~
-0 -1 9785
+0 -1 2524
 D0
 A trail leads north into corrupted deep forest.
 ~
 ~
-0 -1 9790
+0 -1 2529
 S
-#9763
+#2502
 @@dManscorpian Cave Mouth@@N~
 A concealed entrance to an underground cave system opens in the forest floor,
 its mouth partly hidden by @@Groot curtains@@N and leaf litter. The cave
@@ -4120,19 +4120,19 @@ D5
 The cave descends into darkness below.
 ~
 ~
-0 -1 9764
+0 -1 2503
 D2
 The Ashen Lattice boundary lies to the south.
 ~
 ~
-0 -1 9759
+0 -1 2498
 D1
 The forest continues east on the surface.
 ~
 ~
-0 -1 9761
+0 -1 2500
 S
-#9764
+#2503
 @@dMaze of Caves@@N~
 A twisting passage carved through earth and root systems by manscorpian
 mandibles. The tunnel walls bear the distinctive scoring patterns of their
@@ -4147,19 +4147,19 @@ D2
 The passage twists south through scored rock.
 ~
 ~
-0 -1 9765
+0 -1 2504
 D1
 A side tunnel branches east.
 ~
 ~
-0 -1 9768
+0 -1 2507
 D4
 The cave mouth opens above.
 ~
 ~
-0 -1 9763
+0 -1 2502
 S
-#9765
+#2504
 @@dMaze of Caves@@N~
 The tunnel descends and narrows, forcing a hunched posture. The walls glisten
 with moisture, and the @@abioluminescent fungi@@N are more common here, their
@@ -4173,14 +4173,14 @@ D2
 The passage continues south, descending further.
 ~
 ~
-0 -1 9766
+0 -1 2505
 D3
 A branch leads west through the rock.
 ~
 ~
-0 -1 9769
+0 -1 2508
 S
-#9766
+#2505
 @@dMaze of Caves@@N~
 A wider section of tunnel where multiple passages converge, creating a junction
 that the manscorpians use as a rally point. The walls here have been smoothed
@@ -4193,14 +4193,14 @@ D2
 The passage leads south toward deeper tunnels.
 ~
 ~
-0 -1 9767
+0 -1 2506
 D1
 A tunnel branches east from the junction.
 ~
 ~
-0 -1 9770
+0 -1 2509
 S
-#9767
+#2506
 @@dMaze of Caves@@N~
 The tunnels reach their deepest point here, the air heavy and stale. The
 @@abioluminescent fungi@@N thin out, and the darkness is nearly complete. The
@@ -4214,14 +4214,14 @@ D2
 The passage narrows south toward the inner caves.
 ~
 ~
-0 -1 9771
+0 -1 2510
 D1
 A draft from the east suggests a larger space.
 ~
 ~
-0 -1 9766
+0 -1 2505
 S
-#9768
+#2507
 @@dMaze of Caves@@N~
 A side tunnel that branches away from the main passage, its walls rougher and
 less traveled. The @@abioluminescent fungi@@N here grow in denser patches,
@@ -4235,14 +4235,14 @@ D3
 The tunnel connects west to the main passage.
 ~
 ~
-0 -1 9764
+0 -1 2503
 D2
 The tunnel continues south through fungal light.
 ~
 ~
-0 -1 9769
+0 -1 2508
 S
-#9769
+#2508
 @@dMaze of Caves@@N~
 A connecting passage between the cave system's outer tunnels and its inner
 chambers. The walls transition from rough earth to smoother, worked stone
@@ -4256,19 +4256,19 @@ D1
 The passage leads east through worked stone.
 ~
 ~
-0 -1 9765
+0 -1 2504
 D0
 A tunnel branches north through cultivated fungi.
 ~
 ~
-0 -1 9768
+0 -1 2507
 D2
 A passage leads south toward a junction.
 ~
 ~
-0 -1 9770
+0 -1 2509
 S
-#9770
+#2509
 @@dDeep Cave Junction@@N~
 A large junction chamber where the manscorpian cave system intersects with
 older, natural cave formations. The chamber walls show layers of construction:
@@ -4283,19 +4283,19 @@ D2
 An ancient passage leads south through natural limestone.
 ~
 ~
-0 -1 10062
+0 -1 2801
 D0
 The manscorpian tunnels continue north.
 ~
 ~
-0 -1 9766
+0 -1 2505
 D3
 A passage leads west through scored stone.
 ~
 ~
-0 -1 9769
+0 -1 2508
 S
-#9771
+#2510
 @@dInner Caves@@N~
 The inner cave system is better constructed and more heavily defended than the
 outer tunnels. The walls are smooth, the passages wider, and the
@@ -4310,14 +4310,14 @@ D0
 The passage continues north toward the king's territory.
 ~
 ~
-0 -1 9767
+0 -1 2506
 D1
 A defended passage leads east.
 ~
 ~
-0 -1 9772
+0 -1 2511
 S
-#9772
+#2511
 @@dInner Caves@@N~
 A guard chamber in the king's inner domain, its walls lined with
 @@bchitin armor@@N racks and weapon stands holding the manscorpians' barbed
@@ -4331,14 +4331,14 @@ D3
 The passage leads west to the outer inner caves.
 ~
 ~
-0 -1 9771
+0 -1 2510
 D0
 A defended corridor leads north.
 ~
 ~
-0 -1 9773
+0 -1 2512
 S
-#9773
+#2512
 @@dInner Caves@@N~
 A wider passage leading toward the king's personal chambers, its walls
 decorated with @@bchitin trophies@@N from defeated rivals: mandible fragments,
@@ -4353,14 +4353,14 @@ D2
 The corridor leads south to the guard chamber.
 ~
 ~
-0 -1 9772
+0 -1 2511
 D1
 The passage continues east toward the throne area.
 ~
 ~
-0 -1 9774
+0 -1 2513
 S
-#9774
+#2513
 @@dInner Caves@@N~
 The anteroom to the king's chamber, a formal space where the manscorpian
 hierarchy's business is conducted. The walls bear @@bscent markings@@N from
@@ -4374,14 +4374,14 @@ D3
 The trophy corridor extends west.
 ~
 ~
-0 -1 9773
+0 -1 2512
 D1
 A guarded entrance leads east to the king's chamber.
 ~
 ~
-0 -1 9775
+0 -1 2514
 S
-#9775
+#2514
 @@dKing's Chamber@@N~
 The manscorpian king's personal chamber is the largest space in the cave system,
 its ceiling high enough to accommodate the king's full, aggressive posture. A
@@ -4397,9 +4397,9 @@ D3
 The anteroom lies to the west.
 ~
 ^chitin door~
-1 -1 9774
+1 -1 2513
 S
-#9776
+#2515
 @@dCave Exit Passage@@N~
 A passage leading from the inner caves back toward the surface, its route
 climbing through layers of manscorpian construction and natural cave
@@ -4413,14 +4413,14 @@ D4
 The passage climbs upward toward the surface.
 ~
 ~
-0 -1 9777
+0 -1 2516
 D2
 The inner caves lie below to the south.
 ~
 ~
-0 -1 9774
+0 -1 2513
 S
-#9777
+#2516
 @@dCave Exit Passage@@N~
 The passage nears the surface, daylight filtering down through root gaps in
 the ceiling. The cave walls here are more earth than stone, and the root
@@ -4434,14 +4434,14 @@ D4
 The surface opens above through root gaps.
 ~
 ~
-0 -1 9778
+0 -1 2517
 D5
 The passage descends back into the caves.
 ~
 ~
-0 -1 9776
+0 -1 2515
 S
-#9778
+#2517
 @@dCave Exit@@N~
 The manscorpian cave system's secondary surface exit opens in a depression
 between massive root buttresses, its mouth concealed by hanging root curtains
@@ -4455,19 +4455,19 @@ D5
 The cave entrance descends below.
 ~
 ~
-0 -1 9777
+0 -1 2516
 D1
 The deep woodland extends east.
 ~
 ~
-0 -1 9779
+0 -1 2518
 D2
 A trail leads south through the deep forest.
 ~
 ~
-0 -1 9761
+0 -1 2500
 S
-#9779
+#2518
 @@RThe Spider's Web@@N~
 A massive web complex spans multiple trees at the @@GVerdant@@N-@@dWithered@@N
 boundary, its silk cables as thick as rope and strong enough to support
@@ -4484,12 +4484,12 @@ D3
 The deep woodland lies to the west.
 ~
 ~
-0 -1 9778
+0 -1 2517
 D2
 A trail leads south through the cave exit area.
 ~
 ~
-0 -1 9761
+0 -1 2500
 E
 web silk~
 The web is constructed from silk of extraordinary quality, each strand thick
@@ -4500,7 +4500,7 @@ gaps between them. Prey remnants wrapped in silk bundles hang from the upper
 strands, their contents too wrapped to identify.
 ~
 S
-#9780
+#2519
 @@GVerdant Threshold@@N~
 The eastern approach to the forest's @@GVerdant@@N heart, where the trees grow
 taller, the @@pmist@@N thins, and the @@Groot network@@N's chemical signaling
@@ -4516,19 +4516,19 @@ D1
 The forest grows taller and healthier to the east.
 ~
 ~
-0 -1 9781
+0 -1 2520
 D3
 The deep woodland transition lies to the west.
 ~
 ~
-0 -1 9761
+0 -1 2500
 D0
 A trail leads north through Verdant-influenced growth.
 ~
 ~
-0 -1 9790
+0 -1 2529
 S
-#9781
+#2520
 @@GVerdant Threshold@@N~
 The @@GVerdant@@N influence intensifies along this stretch of the eastern
 approach. The trees are genuinely ancient here, their trunks wider than any
@@ -4543,14 +4543,14 @@ D1
 The ancient growth continues east.
 ~
 ~
-0 -1 9782
+0 -1 2521
 D3
 The threshold approach extends west.
 ~
 ~
-0 -1 9780
+0 -1 2519
 S
-#9782
+#2521
 @@GVerdant Threshold@@N~
 The threshold deepens into a section where the forest's @@GVerdant@@N character
 is unmistakable. Spiral root lattices form natural navigation aids on the
@@ -4565,14 +4565,14 @@ D1
 The illuminated corridors continue east.
 ~
 ~
-0 -1 9783
+0 -1 2522
 D3
 The ancient growth extends west.
 ~
 ~
-0 -1 9781
+0 -1 2520
 S
-#9783
+#2522
 @@GVerdant Threshold@@N~
 A clearing in the Verdant approach where the @@Gforest@@N's intelligence is
 almost palpable. The trees surrounding the clearing lean inward, their branches
@@ -4587,14 +4587,14 @@ D1
 The approach continues east toward deeper Verdant growth.
 ~
 ~
-0 -1 9784
+0 -1 2523
 D3
 The threshold corridor extends west.
 ~
 ~
-0 -1 9782
+0 -1 2521
 S
-#9784
+#2523
 @@GVerdant Threshold@@N~
 The easternmost position of the Verdant threshold, where the forest's approach
 corridor ends and the deep @@GVerdant@@N woodland begins. The trees here are
@@ -4609,14 +4609,14 @@ D3
 The Verdant threshold extends west.
 ~
 ~
-0 -1 9783
+0 -1 2522
 D0
 The deep contested band lies to the north.
 ~
 ~
-0 -1 9793
+0 -1 2532
 S
-#9785
+#2524
 @@dWithered Threshold@@N~
 The western approach to the forest's @@dWithered@@N heart, where the bark
 blackens, growth stunts, and the preservation magic's chemical signature
@@ -4632,19 +4632,19 @@ D1
 The deep woodland transition lies to the east.
 ~
 ~
-0 -1 9762
+0 -1 2501
 D3
 The corruption deepens to the west.
 ~
 ~
-0 -1 9786
+0 -1 2525
 D0
 A trail leads north through corrupted growth.
 ~
 ~
-0 -1 9791
+0 -1 2530
 S
-#9786
+#2525
 @@dWithered Threshold@@N~
 The @@dWithered@@N corruption is more advanced here, the trees showing signs
 of the preservation magic's paradoxical effect: they are alive but arrested,
@@ -4659,12 +4659,12 @@ D1
 The threshold extends east toward less corruption.
 ~
 ~
-0 -1 9785
+0 -1 2524
 D3
 The Withered threshold deepens to the west.
 ~
 ~
-0 -1 9787
+0 -1 2526
 E
 quarantine circles ward~
 The quarantine circles are stone rings set into the forest floor, each one
@@ -4676,7 +4676,7 @@ effect. The stones are worn smooth by centuries of exposure, their inscriptions
 barely legible.
 ~
 S
-#9787
+#2526
 @@dWithered Threshold@@N~
 The threshold reaches a point where the @@dWithered@@N corruption is the
 dominant feature of the landscape. Every tree is blackened, every surface
@@ -4692,14 +4692,14 @@ D1
 The threshold extends east through less corruption.
 ~
 ~
-0 -1 9786
+0 -1 2525
 D3
 The corruption deepens further to the west.
 ~
 ~
-0 -1 9788
+0 -1 2527
 S
-#9788
+#2527
 @@dWithered Threshold@@N~
 A deeply corrupted section where the forest has been transformed into something
 that barely resembles a woodland. The trees stand like @@dblackened pillars@@N,
@@ -4714,14 +4714,14 @@ D1
 The threshold extends east, corruption lessening.
 ~
 ~
-0 -1 9787
+0 -1 2526
 D3
 The corruption reaches its western extreme.
 ~
 ~
-0 -1 9789
+0 -1 2528
 S
-#9789
+#2528
 @@dWithered Threshold@@N~
 The westernmost position of the Withered threshold, where the corruption
 is absolute and the forest's original character has been entirely replaced.
@@ -4738,14 +4738,14 @@ D1
 The threshold extends east with decreasing corruption.
 ~
 ~
-0 -1 9788
+0 -1 2527
 D0
 The deep contested band lies to the north.
 ~
 ~
-0 -1 9794
+0 -1 2533
 S
-#9790
+#2529
 @@RDeep Contested Band@@N~
 The narrow strip where @@GVerdant@@N and @@dWithered@@N influences collide
 directly, producing an environment of violent contrast. Healthy trees stand
@@ -4760,24 +4760,24 @@ D1
 The contested band extends east.
 ~
 ~
-0 -1 9791
+0 -1 2530
 D2
 A trail leads south to the Verdant threshold.
 ~
 ~
-0 -1 9780
+0 -1 2519
 D3
 The contested band continues west.
 ~
 ~
-0 -1 9794
+0 -1 2533
 D0
 The northern ridge rises above the canopy to the north.
 ~
 ~
-0 -1 9795
+0 -1 2534
 S
-#9791
+#2530
 @@RDeep Contested Band@@N~
 The collision zone between the two forest influences is at its most intense
 here. @@GVerdant@@N root systems push upward through @@dcorrupted soil@@N,
@@ -4792,19 +4792,19 @@ D1
 The contested band extends east through violent contrast.
 ~
 ~
-0 -1 9792
+0 -1 2531
 D2
 A trail leads south to the Withered threshold.
 ~
 ~
-0 -1 9785
+0 -1 2524
 D3
 The contested band continues west.
 ~
 ~
-0 -1 9790
+0 -1 2529
 S
-#9792
+#2531
 @@RDeep Contested Band@@N~
 The eastern section of the contested band, where the @@GVerdant@@N influence is
 slightly stronger. Healthy trees outnumber blackened ones, and the clean mineral
@@ -4819,19 +4819,19 @@ D1
 The band continues east, Verdant influence strengthening.
 ~
 ~
-0 -1 9793
+0 -1 2532
 D3
 The contested band extends west.
 ~
 ~
-0 -1 9791
+0 -1 2530
 D0
 The northern ridge is visible above the canopy.
 ~
 ~
-0 -1 9796
+0 -1 2535
 S
-#9793
+#2532
 @@RDeep Contested Band@@N~
 The easternmost section of the contested band, where the @@GVerdant@@N influence
 has gained a clear advantage. The healthy trees are tall and strong, the
@@ -4846,19 +4846,19 @@ D2
 The Verdant threshold lies to the south.
 ~
 ~
-0 -1 9784
+0 -1 2523
 D3
 The contested band extends west.
 ~
 ~
-0 -1 9792
+0 -1 2531
 D0
 A trail climbs north toward the ridge.
 ~
 ~
-0 -1 9797
+0 -1 2536
 S
-#9794
+#2533
 @@RDeep Contested Band@@N~
 The westernmost section of the contested band, where the @@dWithered@@N
 influence has the advantage. The blackened trees dominate, their preserved decay
@@ -4873,19 +4873,19 @@ D1
 The contested band extends east.
 ~
 ~
-0 -1 9790
+0 -1 2529
 D2
 The Withered threshold lies to the south.
 ~
 ~
-0 -1 9789
+0 -1 2528
 D0
 The ridge is visible to the north through corrupted canopy.
 ~
 ~
-0 -1 9795
+0 -1 2534
 S
-#9795
+#2534
 @@WNorthern Ridge@@N~
 An elevated position where the @@Gforest canopy@@N breaks enough to see the
 terrain ahead. The view north splits dramatically: to the east, verdant ancient
@@ -4900,19 +4900,19 @@ D1
 The ridge continues east through healthier growth.
 ~
 ~
-0 -1 9796
+0 -1 2535
 D2
 The contested band lies below to the south.
 ~
 ~
-0 -1 9790
+0 -1 2529
 D3
 The ridge extends west through corrupted growth.
 ~
 ~
-0 -1 9799
+0 -1 2538
 S
-#9796
+#2535
 @@WNorthern Ridge@@N~
 A section of the ridge where the @@GVerdant@@N influence is dominant. The trees
 here are healthy and tall, their canopy providing shade without oppression. The
@@ -4927,19 +4927,19 @@ D1
 The ridge continues east toward the Verdant overlook.
 ~
 ~
-0 -1 9797
+0 -1 2536
 D2
 The contested band lies below.
 ~
 ~
-0 -1 9792
+0 -1 2531
 D3
 The ridge extends west toward the junction.
 ~
 ~
-0 -1 9795
+0 -1 2534
 S
-#9797
+#2536
 @@WNorthern Ridge@@N~
 The eastern extent of the northern ridge, where the elevation provides the
 best view of the Verdant approach. The @@GVerdant Depths@@N' ancient canopy
@@ -4954,19 +4954,19 @@ D1
 The ridge climbs east to its highest point.
 ~
 ~
-0 -1 9798
+0 -1 2537
 D2
 A trail descends south to the contested band.
 ~
 ~
-0 -1 9793
+0 -1 2532
 D3
 The ridge continues west through healthy growth.
 ~
 ~
-0 -1 9796
+0 -1 2535
 S
-#9798
+#2537
 @@GVerdant Overlook@@N~
 A high-canopy perch in a @@GVerdant@@N-influenced giant tree, the highest point
 in the Forest of Confusion. The air is clear. The @@pmist@@N is gone. The
@@ -4984,9 +4984,9 @@ D3
 The ridge extends west from the overlook.
 ~
 ~
-0 -1 9797
+0 -1 2536
 S
-#9799
+#2538
 @@dWithered Overlook@@N~
 A blighted ridge where the preservation magic's @@ppurple glow@@N is visible
 in the root systems below, pulsing through the earth like luminous veins. The
@@ -5005,11 +5005,11 @@ D1
 The ridge extends east toward the junction.
 ~
 ~
-0 -1 9795
+0 -1 2534
 S
 #0
 #MOBILES
-#9600
+#2339
 warden kiess patrol~
 a Kiess patrol warden~
 A Kiess patrol warden stands here, watching the forest edge with wary eyes.
@@ -5027,7 +5027,7 @@ have left permanent lines of tension around the mouth and eyes.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9601
+#2340
 rope-line team scout~
 a rope-line scout~
 A rope-line scout moves cautiously through the undergrowth.
@@ -5045,7 +5045,7 @@ of the rope-line maintenance teams that keep the patrol corridors navigable.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9602
+#2341
 medic kiess field~
 a Kiess field medic~
 A Kiess field medic tends to supplies at the camp station.
@@ -5064,7 +5064,7 @@ edge.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9603
+#2342
 signal keeper bell~
 a signal keeper~
 A signal keeper stands by the bell-post, listening.
@@ -5083,7 +5083,7 @@ distinguish true signals from the mist's acoustic distortions.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9604
+#2343
 catrat young~
 a young catrat~
 A young catrat snarls from the undergrowth.
@@ -5101,7 +5101,7 @@ The fur is patchy, still growing into the adult's full coat.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9605
+#2344
 catrat female~
 a female catrat~
 A female catrat crouches here, hissing.
@@ -5120,7 +5120,7 @@ a den.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9606
+#2345
 catrat male~
 a male catrat~
 A male catrat prowls here, its hackles raised.
@@ -5139,7 +5139,7 @@ dangerous for the unwary.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9607
+#2346
 mirror stag verdant~
 a mirror stag~
 A mirror stag stands among the mirrorbark trees, its antlers gleaming.
@@ -5158,7 +5158,7 @@ has shaped its evolution over centuries of selective pressure.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9608
+#2347
 rootcat verdant~
 a rootcat~
 A rootcat crouches on a root-bridge, its bark-patterned fur rippling.
@@ -5177,7 +5177,7 @@ on ambush from the elevated root-bridge network.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9609
+#2348
 canopy drake verdant~
 a canopy drake~
 A canopy drake perches in the high branches, watching the ground below.
@@ -5197,7 +5197,7 @@ territorial energy of a Verdant-influenced apex predator.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9610
+#2349
 whisper-owl verdant~
 a whisper-owl~
 A whisper-owl watches from a high branch, its feathers rippling with faint light.
@@ -5217,7 +5217,7 @@ forest's perpetual twilight.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9611
+#2350
 cockatrice male cock~
 a male cockatrice~
 A male cockatrice displays its crest in the clearing, daring approach.
@@ -5237,7 +5237,7 @@ gaze attack.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9612
+#2351
 cockatrice female cock~
 a female cockatrice~
 A female cockatrice stalks through the undergrowth, eyes averted.
@@ -5256,7 +5256,7 @@ stone-gaze is no less potent for its subtlety.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9613
+#2352
 hippogriff young hippo~
 a young hippogriff~
 A young hippogriff shuffles on the nest platform, wings not yet flight-ready.
@@ -5276,7 +5276,7 @@ curiosity.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9614
+#2353
 hippogriff hippo~
 a hippogriff~
 A hippogriff perches on a massive branch, its eagle-eyes scanning below.
@@ -5296,7 +5296,7 @@ serving the Verdant root network's immune response through predatory instinct.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9615
+#2354
 treant tree~
 a treant~
 A treant stands among the forest growth, almost indistinguishable from the trees.
@@ -5316,7 +5316,7 @@ bark carries both healthy growth and faint Withered scarring.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9616
+#2355
 treant elder tree~
 an elder treant~
 An elder treant stands sentinel, its massive form radiating ancient authority.
@@ -5337,7 +5337,7 @@ distributed intelligence.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9617
+#2356
 broken one~
 a broken one~
 A broken one shambles through the corrupted undergrowth.
@@ -5357,7 +5357,7 @@ The eyes are open but unfocused, the face slack.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9618
+#2357
 broken one~
 a broken one~
 A broken one lurches among the blackened trees, its movements jerky and wrong.
@@ -5377,7 +5377,7 @@ stripped away everything but base survival instincts.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9619
+#2358
 greater broken one~
 a greater broken one~
 A greater broken one towers among the corrupted trees, its bulk terrible.
@@ -5397,7 +5397,7 @@ mindless, responding to intrusion with overwhelming physical violence.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9620
+#2359
 spore husk withered~
 a spore husk~
 A spore husk drifts through the fungal lattice, trailing clouds of particles.
@@ -5417,7 +5417,7 @@ confusion amplification.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9621
+#2360
 mist-wolf withered~
 a mist-wolf~
 A mist-wolf stalks through the corruption, its form half-hidden in the haze.
@@ -5437,7 +5437,7 @@ prey into dead-end pockets where the pack can close.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9622
+#2361
 bark revenant withered~
 a bark revenant~
 A bark revenant drags itself through the contested band, bark-plated and relentless.
@@ -5457,7 +5457,7 @@ It is a Verdant creature weaponized by corruption.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9623
+#2362
 prism-leech swarm~
 a prism-leech swarm~
 A swarm of prism-leeches pulses with crystalline light.
@@ -5477,7 +5477,7 @@ effect that paralyzes and disorients, allowing the colony to feed.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9624
+#2363
 neogi slave~
 a Neogi slave~
 A Neogi slave cowers here, chains trailing from wrist restraints.
@@ -5496,7 +5496,7 @@ movement within the warren's slave pen.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9625
+#2364
 neogi slave~
 a Neogi slave~
 A Neogi slave guards the tunnel entrance with dull-eyed obedience.
@@ -5515,7 +5515,7 @@ and capable of combat, but its spirit has been broken.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9626
+#2365
 neogi~
 a Neogi~
 A Neogi scuttles through the warren, mandibles clicking.
@@ -5535,7 +5535,7 @@ parasites wherever they establish themselves.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9627
+#2366
 neogi master~
 a Neogi master~
 A Neogi master oversees its domain, whip coiled in one appendage.
@@ -5555,7 +5555,7 @@ its hierarchical position.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9628
+#2367
 neogi ruler~
 the Neogi ruler~
 The Neogi ruler reclines on its web-throne, radiating cold authority.
@@ -5575,7 +5575,7 @@ every creature that enters its presence as either useful or expendable.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9629
+#2368
 centaur male~
 a male centaur~
 A male centaur stands here, stone-tipped spear in hand.
@@ -5595,7 +5595,7 @@ and a stone shield hangs from a leather strap across his back.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9630
+#2369
 centaur female~
 a female centaur~
 A female centaur moves through the glade with quiet authority.
@@ -5614,7 +5614,7 @@ eyes track every movement in the glade with maternal vigilance.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9631
+#2370
 centaur baby~
 a baby centaur~
 A baby centaur wobbles on unsteady legs, watching curiously.
@@ -5633,7 +5633,7 @@ within range with the indiscriminate curiosity of youth.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9632
+#2371
 centaur leader~
 the centaur leader~
 The centaur leader stands in the speaking circle, commanding attention.
@@ -5653,7 +5653,7 @@ heavy centaur lance rests against his flank within easy reach.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9633
+#2372
 wemic male~
 a male wemic~
 A male wemic prowls the clearing, its leonine body tense with territorial aggression.
@@ -5672,7 +5672,7 @@ assessing whether to attack or to warn. Deep territorial scars mark his flanks.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9634
+#2373
 wemic female~
 a female wemic~
 A female wemic watches from the den entrance, alert and dangerous.
@@ -5691,7 +5691,7 @@ grip a crude weapon fashioned from stone and bone.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9635
+#2374
 wemic cub~
 a wemic cub~
 A wemic cub tumbles through the undergrowth, all paws and enthusiasm.
@@ -5710,7 +5710,7 @@ dangerous. The cub watches everything with wide, curious eyes.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9636
+#2375
 manscorpian man scorpian~
 a manscorpian~
 A manscorpian scuttles through the cave tunnel, mandibles clicking.
@@ -5729,7 +5729,7 @@ constantly as they read the chemical information encoded in the cave air.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9637
+#2376
 manscorpian man scorpian~
 a manscorpian~
 A large manscorpian guards the inner caves, tail poised to strike.
@@ -5749,7 +5749,7 @@ lethal violence.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9638
+#2377
 manscorpian king man scorpian~
 the manscorpian king~
 The manscorpian king dominates the chamber from its chitin throne.
@@ -5770,7 +5770,7 @@ in its own domain.
 + 0 0 0 0 0 0 0 0 0
 l 100 9638 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
-#9639
+#2378
 manscorpian aid~
 the king's aid~
 The king's aid lurks beside the chitin throne, muttering in a guttural tongue.
@@ -5790,7 +5790,7 @@ marked with bioluminescent patterns that may be ritual scarification.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9640
+#2379
 manscorpian man scorpian~
 a manscorpian~
 A manscorpian patrols the inner caves, its movements precise and alert.
@@ -5810,7 +5810,7 @@ are not purely combative.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9641
+#2380
 yugoloth guardian~
 a Guardian Yugoloth~
 A Guardian Yugoloth blocks the cabin approach, its extraplanar form shimmering.
@@ -5832,7 +5832,7 @@ exceeds anything the forest's other residents command.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9642
+#2381
 ymmas~
 the evil Ymmas~
 The evil Ymmas stands in the sanctum, radiating controlled menace.
@@ -5853,7 +5853,7 @@ spellcaster whose every gesture can invoke destruction.
 + 0 0 0 0 0 0 0 0 0
 l 100 9637 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
-#9643
+#2382
 spider~
 a giant spider~
 A giant spider crouches in the heart of its web, still and watchful.
@@ -5875,7 +5875,7 @@ come to it.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-#9644
+#2383
 mist cartographer~
 the Mist Cartographer~
 The Mist Cartographer studies the forest with intense concentration.
@@ -5899,7 +5899,7 @@ l 100 9639 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
-#9600
+#2339
 neogi whip barbed~
 a barbed Neogi whip~
 A barbed Neogi whip lies coiled on the ground.
@@ -5916,7 +5916,7 @@ designed for pain and control rather than elegance.
 ~
 L
 22
-#9601
+#2340
 jewelled dagger neogi~
 a jewelled Neogi dagger~
 A jewelled Neogi dagger gleams faintly in the dim light.
@@ -5933,7 +5933,7 @@ its status implications than its aesthetic qualities.
 ~
 L
 28
-#9602
+#2341
 fur coat catrat~
 a catrat-fur coat~
 A coat of catrat fur has been left here.
@@ -5949,7 +5949,7 @@ the kind of garment that forest-edge settlers produce from available materials.
 ~
 L
 12
-#9603
+#2342
 rootbound talisman verdant~
 a rootbound talisman~
 A talisman of twisted root and living bark hangs from a branch.
@@ -5966,7 +5966,7 @@ root network still active in the detached fragment.
 ~
 L
 30
-#9604
+#2343
 mirrorbark buckler~
 a mirrorbark buckler~
 A small shield of mirrorbark catches the light with unsettling reflections.
@@ -5983,7 +5983,7 @@ defense against predators.
 ~
 L
 25
-#9605
+#2344
 stone shield centaur~
 a centaur stone shield~
 A heavy shield of shaped stone rests against a tree.
@@ -6000,7 +6000,7 @@ notation is carved into the rim.
 ~
 L
 42
-#9606
+#2345
 stone hammer centaur~
 a centaur stone hammer~
 A heavy stone hammer lies on the ground.
@@ -6017,7 +6017,7 @@ surface.
 ~
 L
 42
-#9607
+#2346
 emerald sword~
 an emerald sword~
 An emerald-hilted sword lies here, its blade catching green light.
@@ -6034,7 +6034,7 @@ something more deliberate in its forging.
 ~
 L
 49
-#9608
+#2347
 emerald breastplate~
 an emerald breastplate~
 An emerald-studded breastplate gleams with forest-green light.
@@ -6044,7 +6044,7 @@ An emerald-studded breastplate gleams with forest-green light.
 14
 L
 49
-#9609
+#2348
 emerald helm~
 an emerald helm~
 An emerald-crested helm rests here.
@@ -6054,7 +6054,7 @@ An emerald-crested helm rests here.
 10
 L
 49
-#9610
+#2349
 emerald boots~
 a pair of emerald boots~
 A pair of emerald-buckled boots stand neatly together.
@@ -6064,7 +6064,7 @@ A pair of emerald-buckled boots stand neatly together.
 8
 L
 49
-#9611
+#2350
 emerald leggings~
 emerald leggings~
 A pair of emerald-studded leggings lie folded here.
@@ -6074,7 +6074,7 @@ A pair of emerald-studded leggings lie folded here.
 10
 L
 49
-#9612
+#2351
 oaken club centaur~
 an oaken club~
 An oaken club carved with centaur markings lies here.
@@ -6090,7 +6090,7 @@ that identify its owner's clan and rank within the settlement hierarchy.
 ~
 L
 35
-#9613
+#2352
 lance centaur~
 a centaur lance~
 A long centaur lance leans against a tree.
@@ -6107,7 +6107,7 @@ a charging horse-body to wield effectively.
 ~
 L
 45
-#9614
+#2353
 red battle axe manscorpian~
 a red battle axe~
 A red-bladed battle axe lies here, its edge crusted with venom.
@@ -6124,7 +6124,7 @@ hide scored with manscorpian scent-markings.
 ~
 L
 48
-#9615
+#2354
 red javelin manscorpian~
 a red javelin~
 A red-shafted javelin lies here, its point gleaming.
@@ -6134,7 +6134,7 @@ A red-shafted javelin lies here, its point gleaming.
 7
 L
 43
-#9616
+#2355
 red bracer manscorpian~
 a red bracer~
 A red chitin bracer lies here, its surface scored with patterns.
@@ -6144,7 +6144,7 @@ A red chitin bracer lies here, its surface scored with patterns.
 8
 L
 48
-#9617
+#2356
 leather belt scout~
 a scout's leather belt~
 A scout's leather belt with tool loops lies here.
@@ -6154,7 +6154,7 @@ A scout's leather belt with tool loops lies here.
 6
 L
 15
-#9618
+#2357
 anti-spore wrap kiess~
 an anti-spore wrap~
 An anti-spore face wrap lies here, its herb-infused fabric still fragrant.
@@ -6171,7 +6171,7 @@ sweetness.
 ~
 L
 18
-#9619
+#2358
 emerald key~
 an emerald key~
 A small key set with a single emerald lies here.
@@ -6187,7 +6187,7 @@ a specific lock with no room for improvisation.
 ~
 L
 49
-#9620
+#2359
 oak shield centaur~
 an oak shield~
 A broad oak shield with centaur markings rests here.
@@ -6197,7 +6197,7 @@ A broad oak shield with centaur markings rests here.
 12
 L
 40
-#9621
+#2360
 gnarled staff ymmas~
 a gnarled staff~
 A gnarled staff of ancient wood leans against the wall, humming faintly.
@@ -6214,7 +6214,7 @@ energy, the residual charge of decades of arcane use.
 ~
 L
 60
-#9622
+#2361
 bark claw cockatrice~
 a large yellow claw~
 A large yellow claw has been dropped here.
@@ -6224,7 +6224,7 @@ A large yellow claw has been dropped here.
 6
 L
 30
-#9623
+#2362
 primitive club broken~
 a primitive club~
 A crude club fashioned from a broken branch lies here.
@@ -6234,7 +6234,7 @@ A crude club fashioned from a broken branch lies here.
 8
 L
 27
-#9624
+#2363
 branch treant~
 a treant branch~
 A massive branch torn from a treant lies on the ground.
@@ -6244,7 +6244,7 @@ A massive branch torn from a treant lies on the ground.
 10
 L
 33
-#9625
+#2364
 wemic fang necklace~
 a wemic fang necklace~
 A necklace of polished fangs on a braided cord lies here.
@@ -6261,7 +6261,7 @@ of the wemic hunting tradition.
 ~
 L
 48
-#9626
+#2365
 food pack kiess~
 a Kiess food pack~
 A small pack of Kiess rations has been left here.
@@ -6271,7 +6271,7 @@ A small pack of Kiess rations has been left here.
 3
 L
 1
-#9627
+#2366
 furry pouch catrat~
 a small furry pouch~
 A small, furry pouch has been left here.
@@ -6287,7 +6287,7 @@ of material.
 ~
 L
 10
-#9628
+#2367
 yellow stone light~
 a yellow stone~
 A smooth yellow stone glows faintly on the ground.
@@ -6304,7 +6304,7 @@ but may be related to the crystal fragments found throughout the forest.
 ~
 L
 15
-#9629
+#2368
 gold pile~
 a pile of gold~
 A large pile of gold has been left here.
@@ -6314,7 +6314,7 @@ A large pile of gold has been left here.
 1
 L
 1
-#9630
+#2369
 blue scroll magic~
 a blue scroll~
 A blue scroll sealed with wax lies here.
@@ -6324,7 +6324,7 @@ A blue scroll sealed with wax lies here.
 1
 L
 25
-#9631
+#2370
 magic potion vial~
 a small vial of magic potion~
 A small glass vial containing a shimmering liquid sits here.
@@ -6334,7 +6334,7 @@ A small glass vial containing a shimmering liquid sits here.
 1
 L
 20
-#9632
+#2371
 dispatch tablet kiess~
 a Kiess dispatch tablet~
 A flat slate inscribed with Kiess route notation lies here.
@@ -6351,7 +6351,7 @@ expected to report this information to Wall Command upon return.
 ~
 L
 1
-#9633
+#2372
 conclave survey slate~
 a damaged Conclave survey slate~
 A cracked slate bearing geometric notation lies half-buried in leaf litter.
@@ -6368,7 +6368,7 @@ treated the forest as a laboratory for its Prism Thesis experiments.
 ~
 L
 1
-#9634
+#2373
 druid quarantine marker~
 a druid quarantine marker~
 A weathered ward-sign on river-washed stone sits in the undergrowth.
@@ -6386,7 +6386,7 @@ have not functioned since the last druids died.
 ~
 L
 1
-#9635
+#2374
 prism shard crystal~
 a prism shard~
 A faintly luminous crystal fragment lies among the roots.
@@ -6404,7 +6404,7 @@ part of.
 ~
 L
 30
-#9636
+#2375
 staff summoning~
 the Staff of Summoning~
 A weather-beaten staff radiating arcane power rests in an iron stand.
@@ -6422,7 +6422,7 @@ Conclave instrument, or Ymmas's own creation is unknown.
 ~
 L
 60
-#9637
+#2376
 ymmas grimoire~
 Ymmas's grimoire~
 A leather-bound grimoire radiating arcane energy lies here.
@@ -6440,7 +6440,7 @@ authorization would likely be unwise.
 ~
 L
 60
-#9638
+#2377
 manscorpian crown chitin~
 a chitin crown~
 A crown fashioned from interlocking chitin fragments lies here.
@@ -6458,7 +6458,7 @@ recognize and defer to.
 ~
 L
 52
-#9639
+#2378
 cartographer compass mist~
 the Mist Cartographer's compass~
 A compass of unusual design lies here, its needle steady despite the mist.
@@ -6479,160 +6479,160 @@ L
 55
 #0
 #RESETS
-M 0 9600 1 9606 Kiess patrol warden at bell-post clearing
-M 0 9600 2 9611 Kiess patrol warden at waystone junction
-M 0 9601 1 9628 Rope-line scout in corridor
-M 0 9601 2 9629 Rope-line scout in corridor
-M 0 9601 3 9630 Rope-line scout in corridor
-E 0 9617 0 13 Scout belt on waist
-M 0 9602 1 9620 Field medic at command post
-E 0 9618 0 3 Anti-spore wrap on face
-M 0 9603 1 9632 Signal keeper at bell perimeter
-M 0 9603 2 9635 Signal keeper at bell perimeter
-M 0 9604 1 9636 Young catrat at verge fringe
-M 0 9604 2 9637 Young catrat at verge fringe
-M 0 9604 3 9639 Young catrat at verge fringe
-M 0 9605 1 9664 Female catrat at warren approach
-M 0 9605 2 9665 Female catrat at warren approach
-M 0 9606 1 9666 Male catrat at warren heart
-E 0 9602 0 5 Catrat fur coat on body
-M 0 9606 2 9667 Male catrat at warren boundary
-M 0 9607 1 9644 Mirror stag in switchmaze
-M 0 9607 2 9648 Mirror stag in switchmaze
-M 0 9607 3 9652 Mirror stag in switchmaze
-M 0 9607 4 9656 Mirror stag in switchmaze
-M 0 9610 1 9640 Whisper-owl at maze approach
-M 0 9610 2 9641 Whisper-owl at maze approach
-M 0 9617 1 9668 Broken one in territory
-M 0 9617 2 9669 Broken one in territory
-E 0 9623 0 16 Primitive club wielded
-M 0 9617 3 9670 Broken one in territory
-E 0 9623 0 16 Primitive club wielded
-M 0 9624 1 9685 Neogi slave in slave pen
-M 0 9625 1 9684 Neogi slave at tunnel mouth
-M 0 9625 2 9689 Neogi slave at escape tunnel
-M 0 9626 1 9686 Neogi at guard post
-E 0 9600 0 16 Neogi whip wielded
-M 0 9627 1 9687 Neogi master in chamber
-E 0 9600 0 16 Neogi whip wielded
-E 0 9601 0 17 Jewelled dagger held
-M 0 9628 1 9688 Neogi ruler in hall
-E 0 9601 0 16 Jewelled dagger wielded
-G 0 9629 0 Gold pile in inventory
-M 0 9608 1 9690 Rootcat on root-bridge
-M 0 9608 2 9691 Rootcat on root-bridge
-M 0 9611 1 9717 Male cockatrice in nesting area
-E 0 9622 0 16 Cockatrice claw wielded
-M 0 9611 2 9718 Male cockatrice in glade approach
-M 0 9612 1 9696 Female cockatrice in deep channel
-M 0 9612 2 9698 Female cockatrice in deep channel
-M 0 9612 3 9699 Female cockatrice at channel edge
-M 0 9613 1 9716 Young hippogriff at nest
-M 0 9613 2 9716 Young hippogriff at nest
-M 0 9614 1 9706 Hippogriff at nesting tree
-M 0 9614 2 9716 Hippogriff at nest platform
-M 0 9644 1 9695 Mist Cartographer at junction
-M 0 9633 1 9720 Male wemic in hunting ground
-E 0 9625 0 2 Wemic fang necklace on neck
-M 0 9634 1 9721 Female wemic in hunting ground
-M 0 9635 1 9720 Wemic cub in clearing
-M 0 9635 2 9722 Wemic cub at boundary
-M 0 9623 1 9723 Prism-leech swarm at crystal scar
-M 0 9623 2 9724 Prism-leech swarm at crystal scar
-M 0 9623 3 9755 Prism-leech swarm at lattice core
-M 0 9641 1 9726 Guardian Yugoloth at cabin approach
-M 0 9642 1 9731 Ymmas in lair
-E 0 9621 0 16 Gnarled staff wielded
-E 0 9607 0 16 Emerald sword wielded
-E 0 9608 0 5 Emerald breastplate on body
-E 0 9609 0 1 Emerald helm on head
-E 0 9610 0 22 Emerald boots on feet
-E 0 9611 0 21 Emerald leggings on legs
-G 0 9619 0 Emerald key in inventory
-M 0 9629 1 9741 Male centaur in glade
-E 0 9605 0 17 Stone shield held
-E 0 9606 0 16 Stone hammer wielded
-M 0 9629 2 9743 Male centaur in glade
-E 0 9620 0 17 Oak shield held
-E 0 9612 0 16 Oaken club wielded
-M 0 9630 1 9741 Female centaur in glade
-E 0 9612 0 16 Oaken club wielded
-M 0 9630 2 9742 Female centaur in glade
-M 0 9631 1 9745 Baby centaur in hut
-M 0 9631 2 9747 Baby centaur in hut
-M 0 9632 1 9744 Centaur leader in leader glade
-E 0 9613 0 16 Centaur lance wielded
-E 0 9605 0 17 Stone shield held
-M 0 9620 1 9749 Spore husk in lattice
-M 0 9620 2 9751 Spore husk in lattice
-M 0 9620 3 9753 Spore husk in lattice
-M 0 9621 1 9750 Mist-wolf in lattice
-M 0 9621 2 9754 Mist-wolf in lattice
-M 0 9621 3 9785 Mist-wolf at Withered threshold
-M 0 9615 1 9780 Treant at Verdant threshold
-E 0 9624 0 16 Treant branch wielded
-M 0 9615 2 9782 Treant at Verdant threshold
-E 0 9624 0 16 Treant branch wielded
-M 0 9615 3 9790 Treant in contested band
-M 0 9615 4 9792 Treant in contested band
-M 0 9616 1 9798 Elder treant at Verdant overlook
-M 0 9618 1 9785 Broken one at Withered threshold
-M 0 9618 2 9786 Broken one at Withered threshold
-M 0 9619 1 9787 Greater broken one at Withered threshold
-E 0 9623 0 16 Primitive club wielded
-M 0 9619 2 9790 Greater broken one in contested band
-M 0 9622 1 9791 Bark revenant in contested band
-M 0 9622 2 9793 Bark revenant in contested band
-M 0 9636 1 9764 Manscorpian in cave maze
-E 0 9615 0 16 Red javelin wielded
-M 0 9636 2 9765 Manscorpian in cave maze
-E 0 9614 0 16 Red battle axe wielded
-M 0 9636 3 9766 Manscorpian in cave maze
-M 0 9636 4 9769 Manscorpian in cave maze
-M 0 9637 1 9771 Manscorpian inner guard
-E 0 9614 0 16 Red battle axe wielded
-E 0 9616 0 9 Red bracer on wrist
-M 0 9637 2 9772 Manscorpian inner guard
-E 0 9614 0 16 Red battle axe wielded
-E 0 9616 0 9 Red bracer on wrist
-M 0 9640 1 9773 Manscorpian hybrid in inner caves
-E 0 9614 0 16 Red battle axe wielded
-M 0 9640 2 9774 Manscorpian hybrid in anteroom
-M 0 9638 1 9775 Manscorpian king in chamber
-E 0 9614 0 16 Red battle axe wielded
-E 0 9616 0 9 Red bracer on wrist
-M 0 9639 1 9775 King's aid in chamber
-M 0 9643 1 9779 Giant spider in web
-M 0 9609 1 9716 Canopy drake at nest
-M 0 9609 2 9780 Canopy drake at Verdant threshold
-O 0 9626 1 9620 Food pack at command post
-O 0 9626 2 9621 Food pack at ranger camp
-O 0 9632 1 9611 Dispatch tablet at waystone junction
-O 0 9632 2 9621 Dispatch tablet at ranger camp
-O 0 9628 1 9644 Yellow stone in switchmaze
-O 0 9633 1 9723 Conclave survey slate at crystal scar
-O 0 9634 1 9786 Druid quarantine marker at threshold
-O 0 9635 1 9755 Prism shard at lattice core
-O 0 9636 1 9732 Staff of Summoning in throne room
-O 0 9630 1 9654 Blue scroll in maze pocket
-O 0 9631 1 9707 Magic potion at checkpoint hut
-D 0 9688 0 1 Neogi ruler hall door closed
-D 0 9726 0 2 Ymmas strongroom door locked
-D 0 9727 2 2 Ymmas strongroom door locked (reverse)
-D 0 9745 2 1 Centaur hut door closed
-D 0 9746 2 1 Centaur hut door closed
-D 0 9747 2 1 Centaur hut door closed
-D 0 9775 3 1 Manscorpian king chamber door closed
+M 0 2339 1 2345   Kiess patrol warden at bell-post clearing
+M 0 2339 2 2350   Kiess patrol warden at waystone junction
+M 0 2340 1 2367   Rope-line scout in corridor
+M 0 2340 2 2368   Rope-line scout in corridor
+M 0 2340 3 2369   Rope-line scout in corridor
+E 0 2356 0 13   Scout belt on waist
+M 0 2341 1 2359   Field medic at command post
+E 0 2357 0 3   Anti-spore wrap on face
+M 0 2342 1 2371   Signal keeper at bell perimeter
+M 0 2342 2 2374   Signal keeper at bell perimeter
+M 0 2343 1 2375   Young catrat at verge fringe
+M 0 2343 2 2376   Young catrat at verge fringe
+M 0 2343 3 2378   Young catrat at verge fringe
+M 0 2344 1 2403   Female catrat at warren approach
+M 0 2344 2 2404   Female catrat at warren approach
+M 0 2345 1 2405   Male catrat at warren heart
+E 0 2341 0 5   Catrat fur coat on body
+M 0 2345 2 2406   Male catrat at warren boundary
+M 0 2346 1 2383   Mirror stag in switchmaze
+M 0 2346 2 2387   Mirror stag in switchmaze
+M 0 2346 3 2391   Mirror stag in switchmaze
+M 0 2346 4 2395   Mirror stag in switchmaze
+M 0 2349 1 2379   Whisper-owl at maze approach
+M 0 2349 2 2380   Whisper-owl at maze approach
+M 0 2356 1 2407   Broken one in territory
+M 0 2356 2 2408   Broken one in territory
+E 0 2362 0 16   Primitive club wielded
+M 0 2356 3 2409   Broken one in territory
+E 0 2362 0 16   Primitive club wielded
+M 0 2363 1 2424   Neogi slave in slave pen
+M 0 2364 1 2423   Neogi slave at tunnel mouth
+M 0 2364 2 2428   Neogi slave at escape tunnel
+M 0 2365 1 2425   Neogi at guard post
+E 0 2339 0 16   Neogi whip wielded
+M 0 2366 1 2426   Neogi master in chamber
+E 0 2339 0 16   Neogi whip wielded
+E 0 2340 0 17   Jewelled dagger held
+M 0 2367 1 2427   Neogi ruler in hall
+E 0 2340 0 16   Jewelled dagger wielded
+G 0 2368 0   Gold pile in inventory
+M 0 2347 1 2429   Rootcat on root-bridge
+M 0 2347 2 2430   Rootcat on root-bridge
+M 0 2350 1 2456   Male cockatrice in nesting area
+E 0 2361 0 16   Cockatrice claw wielded
+M 0 2350 2 2457   Male cockatrice in glade approach
+M 0 2351 1 2435   Female cockatrice in deep channel
+M 0 2351 2 2437   Female cockatrice in deep channel
+M 0 2351 3 2438   Female cockatrice at channel edge
+M 0 2352 1 2455   Young hippogriff at nest
+M 0 2352 2 2455   Young hippogriff at nest
+M 0 2353 1 2445   Hippogriff at nesting tree
+M 0 2353 2 2455   Hippogriff at nest platform
+M 0 2383 1 2434   Mist Cartographer at junction
+M 0 2372 1 2459   Male wemic in hunting ground
+E 0 2364 0 2   Wemic fang necklace on neck
+M 0 2373 1 2460   Female wemic in hunting ground
+M 0 2374 1 2459   Wemic cub in clearing
+M 0 2374 2 2461   Wemic cub at boundary
+M 0 2362 1 2462   Prism-leech swarm at crystal scar
+M 0 2362 2 2463   Prism-leech swarm at crystal scar
+M 0 2362 3 2494   Prism-leech swarm at lattice core
+M 0 2380 1 2465   Guardian Yugoloth at cabin approach
+M 0 2381 1 2470   Ymmas in lair
+E 0 2360 0 16   Gnarled staff wielded
+E 0 2346 0 16   Emerald sword wielded
+E 0 2347 0 5   Emerald breastplate on body
+E 0 2348 0 1   Emerald helm on head
+E 0 2349 0 22   Emerald boots on feet
+E 0 2350 0 21   Emerald leggings on legs
+G 0 2358 0   Emerald key in inventory
+M 0 2368 1 2480   Male centaur in glade
+E 0 2344 0 17   Stone shield held
+E 0 2345 0 16   Stone hammer wielded
+M 0 2368 2 2482   Male centaur in glade
+E 0 2359 0 17   Oak shield held
+E 0 2351 0 16   Oaken club wielded
+M 0 2369 1 2480   Female centaur in glade
+E 0 2351 0 16   Oaken club wielded
+M 0 2369 2 2481   Female centaur in glade
+M 0 2370 1 2484   Baby centaur in hut
+M 0 2370 2 2486   Baby centaur in hut
+M 0 2371 1 2483   Centaur leader in leader glade
+E 0 2352 0 16   Centaur lance wielded
+E 0 2344 0 17   Stone shield held
+M 0 2359 1 2488   Spore husk in lattice
+M 0 2359 2 2490   Spore husk in lattice
+M 0 2359 3 2492   Spore husk in lattice
+M 0 2360 1 2489   Mist-wolf in lattice
+M 0 2360 2 2493   Mist-wolf in lattice
+M 0 2360 3 2524   Mist-wolf at Withered threshold
+M 0 2354 1 2519   Treant at Verdant threshold
+E 0 2363 0 16   Treant branch wielded
+M 0 2354 2 2521   Treant at Verdant threshold
+E 0 2363 0 16   Treant branch wielded
+M 0 2354 3 2529   Treant in contested band
+M 0 2354 4 2531   Treant in contested band
+M 0 2355 1 2537   Elder treant at Verdant overlook
+M 0 2357 1 2524   Broken one at Withered threshold
+M 0 2357 2 2525   Broken one at Withered threshold
+M 0 2358 1 2526   Greater broken one at Withered threshold
+E 0 2362 0 16   Primitive club wielded
+M 0 2358 2 2529   Greater broken one in contested band
+M 0 2361 1 2530   Bark revenant in contested band
+M 0 2361 2 2532   Bark revenant in contested band
+M 0 2375 1 2503   Manscorpian in cave maze
+E 0 2354 0 16   Red javelin wielded
+M 0 2375 2 2504   Manscorpian in cave maze
+E 0 2353 0 16   Red battle axe wielded
+M 0 2375 3 2505   Manscorpian in cave maze
+M 0 2375 4 2508   Manscorpian in cave maze
+M 0 2376 1 2510   Manscorpian inner guard
+E 0 2353 0 16   Red battle axe wielded
+E 0 2355 0 9   Red bracer on wrist
+M 0 2376 2 2511   Manscorpian inner guard
+E 0 2353 0 16   Red battle axe wielded
+E 0 2355 0 9   Red bracer on wrist
+M 0 2379 1 2512   Manscorpian hybrid in inner caves
+E 0 2353 0 16   Red battle axe wielded
+M 0 2379 2 2513   Manscorpian hybrid in anteroom
+M 0 2377 1 2514   Manscorpian king in chamber
+E 0 2353 0 16   Red battle axe wielded
+E 0 2355 0 9   Red bracer on wrist
+M 0 2378 1 2514   King's aid in chamber
+M 0 2382 1 2518   Giant spider in web
+M 0 2348 1 2455   Canopy drake at nest
+M 0 2348 2 2519   Canopy drake at Verdant threshold
+O 0 2365 1 2359   Food pack at command post
+O 0 2365 2 2360   Food pack at ranger camp
+O 0 2371 1 2350   Dispatch tablet at waystone junction
+O 0 2371 2 2360   Dispatch tablet at ranger camp
+O 0 2367 1 2383   Yellow stone in switchmaze
+O 0 2372 1 2462   Conclave survey slate at crystal scar
+O 0 2373 1 2525   Druid quarantine marker at threshold
+O 0 2374 1 2494   Prism shard at lattice core
+O 0 2375 1 2471   Staff of Summoning in throne room
+O 0 2369 1 2393   Blue scroll in maze pocket
+O 0 2370 1 2446   Magic potion at checkpoint hut
+D 0 2427 0 1   Neogi ruler hall door closed
+D 0 2465 0 2   Ymmas strongroom door locked
+D 0 2466 2 2   Ymmas strongroom door locked (reverse)
+D 0 2484 2 1   Centaur hut door closed
+D 0 2485 2 1   Centaur hut door closed
+D 0 2486 2 1   Centaur hut door closed
+D 0 2514 3 1   Manscorpian king chamber door closed
 S
 #SPECIALS
-M 9642 spec_cast_mage
-M 9632 spec_cast_cleric
-M 9640 spec_cast_mage
-M 9639 spec_cast_cleric
-M 9637 spec_poison
-M 9636 spec_poison
-M 9638 spec_poison
-M 9643 spec_poison
-M 9628 spec_cast_mage
+M 2381 spec_cast_mage
+M 2371 spec_cast_cleric
+M 2379 spec_cast_mage
+M 2378 spec_cast_cleric
+M 2376 spec_poison
+M 2375 spec_poison
+M 2377 spec_poison
+M 2382 spec_poison
+M 2367 spec_cast_mage
 S
 #$

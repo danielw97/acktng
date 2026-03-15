@@ -2,7 +2,7 @@
 
 ## Scope
 
-This lore supports a full redesign of `kelshadra.are` using its existing high-level envelope (`9400-9549`) while aligning with the broader Kel'Shadra institutional myth established in the Gloamvault materials. The Crypts are framed as the deep enforcement, containment, and consequence strata beneath the doctrine first encountered in lower-tier Kel'Shadra spaces.
+This lore supports a full redesign of `kelshadra.are` using its existing high-level envelope (`2232-9549`) while aligning with the broader Kel'Shadra institutional myth established in the Gloamvault materials. The Crypts are framed as the deep enforcement, containment, and consequence strata beneath the doctrine first encountered in lower-tier Kel'Shadra spaces.
 
 ---
 

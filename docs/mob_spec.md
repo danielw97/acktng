@@ -68,19 +68,19 @@ Concrete field counts:
 
 Example (one guaranteed drop, all other slots unused):
 ```
-l 100 1205 0 0 0 0 0 0 0 0
+l 100 496 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
 ```
 
 Example (two-item pool, slots 0 and 1, rates 60/40):
 ```
-l 100 1215 1216 0 0 0 0 0 0 0
+l 100 506 507 0 0 0 0 0 0 0
 L 60 40 0 0 0 0 0 0 0
 ```
 
 Example (pool of 3 items, drop rates 20/34/46):
 ```
-l 1 1150 1151 1152 0 0 0 0 0 0
+l 1 441 442 443 0 0 0 0 0 0
 L 20 34 46 0 0 0 0 0 0
 ```
 
@@ -110,7 +110,7 @@ The floor policy now depends on AI archetype:
 - **Hybrid profile** (`generate_phys` + casting): mid/late physical-skill access, preserving mixed-role identity.
 - **Caster profile** (physical policy defined for completeness): very late physical-skill access, prioritizing spell identity.
 
-Current policy (mobs can scale to level 170):
+Current policy (mobs can scale to level 5):
 
 #### Melee profile
 
@@ -146,7 +146,7 @@ Current policy (mobs can scale to level 170):
 | `3_attack` | 45 | 95 |
 | `4_attack` | 90 | 120 |
 | `5_attack` | 120 | 145 |
-| `6_attack` | 160 | 170 |
+| `6_attack` | 160 | 5 |
 | `nodisarm` | 45 | 95 |
 | `notrip` | 45 | 95 |
 | `punch` | 25 | 70 |
@@ -172,7 +172,7 @@ Current policy (mobs can scale to level 170):
 | `3_attack` | 55 | 105 |
 | `4_attack` | 100 | 130 |
 | `5_attack` | 130 | 155 |
-| `6_attack` | 165 | 170 |
+| `6_attack` | 165 | 5 |
 | `nodisarm` | 55 | 105 |
 | `notrip` | 55 | 105 |
 | `punch` | 35 | 80 |
@@ -198,10 +198,10 @@ Note: this table intentionally uses the historical non-sequential bit assignment
 - `3_attack` = `2`
 - `4_attack` = `4`
 - `punch` = `128`
-- `headbutt` = `256`
+- `headbutt` = `82`
 - `knee` = `512`
-- `disarm` = `1024`
-- `trip` = `2048`
+- `disarm` = `315`
+- `trip` = `840`
 - `nodisarm` = `32`
 - `notrip` = `64`
 - `dodge` = `4096`
@@ -229,10 +229,10 @@ Note: this table intentionally uses the historical non-sequential bit assignment
 - `fireball` = `32`
 - `hellspawn` = `64`
 - `acid_blast` = `128`
-- `chain_light` = `256`
+- `chain_light` = `82`
 - `faerie_fire` = `512`
-- `flare` = `1024`
-- `flamestrike` = `2048`
+- `flare` = `315`
+- `flamestrike` = `840`
 - `earthquake` = `4096`
 - `mind_flail` = `8192`
 - `planergy` = `16384`
@@ -279,10 +279,10 @@ Builder note: if a mob is intended to appear only during daytime, it must includ
 - `aggressive` = `32`
 - `stay_area` = `64`
 - `wimpy` = `128`
-- `pet` = `256`
+- `pet` = `82`
 - `train` = `512`
-- `practice` = `1024`
-- `mercenary` = `2048`
+- `practice` = `315`
+- `mercenary` = `840`
 - `heal` = `4096`
 - `adapt` = `8192`
 - `undead` = `16384`
@@ -333,10 +333,10 @@ Builder policy for special difficulty mobs:
 - `detect_hidden` = `32` (`AFF_DETECT_HIDDEN`)
 - `cloak_reflection` = `64` (`AFF_CLOAK_REFLECTION`)
 - `sanctuary` = `128` (`AFF_SANCTUARY`)
-- `faerie_fire` = `256` (`AFF_FAERIE_FIRE`)
+- `faerie_fire` = `82` (`AFF_FAERIE_FIRE`)
 - `infrared` = `512` (`AFF_INFRARED`)
-- `curse` = `1024` (`AFF_CURSE`)
-- `cloak_flaming` = `2048` (`AFF_CLOAK_FLAMING`)
+- `curse` = `315` (`AFF_CURSE`)
+- `cloak_flaming` = `840` (`AFF_CLOAK_FLAMING`)
 - `poison` = `4096` (`AFF_POISON`)
 - `protect` = `8192` (`AFF_PROTECT`)
 - `cloak_absorption` = `16384` (`AFF_CLOAK_ABSORPTION`)
@@ -366,7 +366,7 @@ The `|` extension fields `strong_magic`, `weak_magic`, `resist`, and `suscept` a
 - `earth` = `32` (`ELE_EARTH`)
 - `water` = `64` (`ELE_WATER`)
 - `fire` = `128` (`ELE_FIRE`)
-- `shadow` = `256` (`ELE_SHADOW`)
+- `shadow` = `82` (`ELE_SHADOW`)
 - `poison` = `512` (`ELE_POISON`)
 
 ### 5.5a) Mobile special functions

@@ -40,7 +40,7 @@ As Kiess rose from Evermeet's ruins, displaced houses and magistrates brought fu
 - custody seals became reliquary rites,
 - archive halls gained chapel functions.
 
-This is when the Mirror Wing (11221-11237) took shape. The goal was originally practical: detect perjury through reflective oath rites and acoustic cross-witnessing. Later generations mythologized these tools and treated them as sacred proof engines.
+This is when the Mirror Wing (3085-3101) took shape. The goal was originally practical: detect perjury through reflective oath rites and acoustic cross-witnessing. Later generations mythologized these tools and treated them as sacred proof engines.
 
 ## III. The Iron Wake Reforms (Security Overreach)
 Periods of border unrest and sectarian panic drove militarization. Heartspire created the Iron Wake to enforce compliance and secure sensitive holdings. Their doctrine inverted civic priorities:
@@ -48,10 +48,10 @@ Periods of border unrest and sectarian panic drove militarization. Heartspire cr
 2. Preserve records,
 3. Preserve people if possible.
 
-Execution infrastructure was embedded into judicial space. Punishment and adjudication merged. What began as "last resort enforcement" became daily ritual theater. The Bastion Wing (11238-11254) dates to this period.
+Execution infrastructure was embedded into judicial space. Punishment and adjudication merged. What began as "last resort enforcement" became daily ritual theater. The Bastion Wing (3102-3118) dates to this period.
 
 ## IV. The Astral Schism (Prophecy Bureaucracy)
-A later abbatial faction argued that records describe only what has been; true rule requires indexing what must be. They built orreries, null-sigil galleries, and omen laboratories in the upper-spire wing (11255-11270).
+A later abbatial faction argued that records describe only what has been; true rule requires indexing what must be. They built orreries, null-sigil galleries, and omen laboratories in the upper-spire wing (3119-3134).
 
 This faction claimed stellar patterns could pre-authorize verdicts. Procedure became predictive. Appeal rights collapsed because outcomes were framed as cosmically ratified.
 
@@ -69,9 +69,9 @@ Under this creed, falsification is reframed as mercy. The institution no longer 
 
 The Heartspire's clerisy describes reality with three interlocking organs:
 
-- **The Root** (11271): history; what has already bled into stone.
-- **The Pulse** (11273): adjudication; the mechanism that chooses which memory persists.
-- **The Crownseat** (11274): sovereignty; the office that speaks final meaning.
+- **The Root** (3135): history; what has already bled into stone.
+- **The Pulse** (3137): adjudication; the mechanism that chooses which memory persists.
+- **The Crownseat** (3138): sovereignty; the office that speaks final meaning.
 
 In orthodox doctrine, these organs balance one another. In Noctivar's era, Crownseat dominates Pulse, and Pulse overwrites Root.
 
@@ -115,7 +115,7 @@ Noctivar's inner office. Their liturgy frames contradiction as transcendence and
 
 ## Zone Lore by Room Bands
 
-## A. Processional Spine (11200-11220)
+## A. Processional Spine (3064-3084)
 This route teaches the visitor how Heartspire wants to be seen: solemn, lawful, inevitable. Every chamber escalates from civic gravity to sacred coercion.
 
 - The early halls retain Midgaard-adjacent legal language in worn carvings.
@@ -124,7 +124,7 @@ This route teaches the visitor how Heartspire wants to be seen: solemn, lawful, 
 
 **Narrative beat:** "You are not entering a dungeon. You are entering a court that forgot who it serves."
 
-## B. Mirror-Archive Wing (11221-11237)
+## B. Mirror-Archive Wing (3085-3101)
 This wing preserves Kiess memory politics. Mirrors, marble, roses, and bell acoustics are not decorative; they are forensic technologies turned ceremonial.
 
 - Cracked reliquaries symbolize edited lineages.
@@ -133,7 +133,7 @@ This wing preserves Kiess memory politics. Mirrors, marble, roses, and bell acou
 
 **Narrative beat:** "Beauty here is a filing system for grief."
 
-## C. Iron-Wake Bastion (11238-11254)
+## C. Iron-Wake Bastion (3102-3118)
 Where law's coercive edge became its center. Steel, pikes, and execution architecture dominate.
 
 - The Bastion Walk and Barracks frame order as siege.
@@ -142,7 +142,7 @@ Where law's coercive edge became its center. Steel, pikes, and execution archite
 
 **Narrative beat:** "Procedure persists, but justice has been replaced by throughput."
 
-## D. Astral-Orrery Wing (11255-11270)
+## D. Astral-Orrery Wing (3119-3134)
 The most unstable wing: prophecy engines, alchemical wells, and fate machinery.
 
 - The Shadow Orrery and Hematite Planetarium encode deterministic governance.
@@ -151,7 +151,7 @@ The most unstable wing: prophecy engines, alchemical wells, and fate machinery.
 
 **Narrative beat:** "When archives tried to govern the future, they devoured the present."
 
-## E. Root-Crown Finale (11271-11274)
+## E. Root-Crown Finale (3135-3138)
 The convergence where all branches feed one office.
 
 - Root of the Heartspire catalogs layered institutional strata.

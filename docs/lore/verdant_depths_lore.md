@@ -98,23 +98,23 @@ The hostility escalates with depth because the forest's defensive concentration 
 
 ### What the Ruins Were
 
-The overgrown ruins in Zone 2 (rooms 10042–10049) are the only evidence of permanent human habitation in the Verdant Depths. Their origin is debated among scholars, but the most likely explanation involves the **Everkeepers** — the druidic order that tended the ironpine groves of the Great Northern Forest's mid-section.
+The overgrown ruins in Zone 2 (rooms 2781–2788) are the only evidence of permanent human habitation in the Verdant Depths. Their origin is debated among scholars, but the most likely explanation involves the **Everkeepers** — the druidic order that tended the ironpine groves of the Great Northern Forest's mid-section.
 
-The ruins show a construction style consistent with pre-civilizational stone architecture: dry-stacked walls without mortar, column bases cut from local granite, and a courtyard layout oriented to the cardinal directions. The well at room 10047 taps into the same deep aquifer system that feeds the ancient root network, suggesting that the builders understood the forest's hydrology well enough to access its water table without disrupting root function.
+The ruins show a construction style consistent with pre-civilizational stone architecture: dry-stacked walls without mortar, column bases cut from local granite, and a courtyard layout oriented to the cardinal directions. The well at room 2786 taps into the same deep aquifer system that feeds the ancient root network, suggesting that the builders understood the forest's hydrology well enough to access its water table without disrupting root function.
 
 The most plausible interpretation: these ruins were a seasonal observatory or ritual center, occupied periodically but not continuously, where the Everkeepers (or their predecessors) conducted the monitoring rituals that would later be formalized as the druidic tradition's stone-circle practice. The ruins were abandoned not because of catastrophe but because the tradition that used them evolved — the later druids preferred stone circles in the buffer zone, where they could monitor the Verdant Depths' boundary without entering its core.
 
-The forest has almost completely reclaimed the ruins. Trees have grown through walls, roots have split foundations, and the courtyard has become a colonnade of oaks that grew in the spacing of the original columns (room 10049). This reclamation is not hostile — it is the growth aspect operating at its normal pace. The forest has incorporated the stone structures into its root network, using the masonry as mineral substrate. The ruins are simultaneously an archaeological site and a living part of the forest's biology.
+The forest has almost completely reclaimed the ruins. Trees have grown through walls, roots have split foundations, and the courtyard has become a colonnade of oaks that grew in the spacing of the original columns (room 2788). This reclamation is not hostile — it is the growth aspect operating at its normal pace. The forest has incorporated the stone structures into its root network, using the masonry as mineral substrate. The ruins are simultaneously an archaeological site and a living part of the forest's biology.
 
 ### Inscriptions and Artifacts
 
 Scattered among the ruins are fragments of worked stone bearing carved symbols that match motifs found elsewhere in the world:
 
-- **The lantern-and-scale motif** (see `great_northern_forest_lore.md`), found on a broken lintel in room 10043. This symbol — associated with the Lantern Road's establishment and the dual civic influence of Midgaard and Kowloon — should not appear in a pre-civilizational ruin. Its presence implies either that the symbol is far older than the Lantern Road (predating both cities) or that someone added it to the ruins after the cities were founded. Both possibilities are lore hooks.
+- **The lantern-and-scale motif** (see `great_northern_forest_lore.md`), found on a broken lintel in room 2782. This symbol — associated with the Lantern Road's establishment and the dual civic influence of Midgaard and Kowloon — should not appear in a pre-civilizational ruin. Its presence implies either that the symbol is far older than the Lantern Road (predating both cities) or that someone added it to the ruins after the cities were founded. Both possibilities are lore hooks.
 
 - **Seven-pace planting rings** around the ruins' perimeter, matching the Everkeeper tradition from the Great Northern Forest. These rings confirm a connection between the ruins' builders and the forest-tending tradition that later produced the Everkeepers.
 
-- **A single eye motif** carved on the well's capstone (room 10047), matching the "Watchers' Cairn" fragments found during Midgaard foundation repairs (see `midgaard_lore.md`, section 0a). The Watchers' Cairn myth holds that Midgaard's site was marked by cairn stones carved with open eyes before human settlement. Finding the same motif in the Verdant Depths suggests a connection between the pre-civilizational peoples who marked Midgaard's site and those who built the forest ruins — a shared symbolic vocabulary from a culture that predated all known civilizations.
+- **A single eye motif** carved on the well's capstone (room 2786), matching the "Watchers' Cairn" fragments found during Midgaard foundation repairs (see `midgaard_lore.md`, section 0a). The Watchers' Cairn myth holds that Midgaard's site was marked by cairn stones carved with open eyes before human settlement. Finding the same motif in the Verdant Depths suggests a connection between the pre-civilizational peoples who marked Midgaard's site and those who built the forest ruins — a shared symbolic vocabulary from a culture that predated all known civilizations.
 
 These inscriptions do not tell a complete story. They provide fragments that connect the Verdant Depths to the broader world's archaeological mystery: who were the people before the cities? What did they build? What did they know? The Verdant Depths' ruins are one node in a network of pre-civilizational sites that spans the continent — from Midgaard's Watchers' Cairn fragments to the Great Northern Forest's Cairn-Keeper megaliths to the Eastern Desert's Keepers of Measure survey system to the Solar Court's pyramid infrastructure. The connection between these sites is the deepest and oldest mystery in the world's lore, and the Verdant Depths' ruins are a data point that future content can elaborate.
 
@@ -140,17 +140,17 @@ The creatures of the Verdant Depths are not random wildlife. They are functional
 
 The three Heartwood Guardians are not merely powerful creatures. They are the three aspects of the forest's intelligence given individual form:
 
-**The Rootmother** (vnum 10061, room 10101): Growth incarnate. A massive living tree entity whose root system extends throughout Zone 4a and into the surrounding forest. She does not move — she grows. In combat, she generates new root tendrils, accelerates vine growth, and reshapes the terrain of her chamber. Defeating her does not kill the growth aspect — it merely destroys its most concentrated expression, forcing the forest to regrow the focal point over time.
+**The Rootmother** (vnum 2800, room 2840): Growth incarnate. A massive living tree entity whose root system extends throughout Zone 4a and into the surrounding forest. She does not move — she grows. In combat, she generates new root tendrils, accelerates vine growth, and reshapes the terrain of her chamber. Defeating her does not kill the growth aspect — it merely destroys its most concentrated expression, forcing the forest to regrow the focal point over time.
 
-**The Blightwood Ancient** (vnum 10062, room 10112): Decay incarnate. An enormous rotting mega-treant whose body is a biome: fungi, moss, insects, and decomposing organisms all coexist on and within its frame. It processes corrupted matter from the boundary with the Withered Depths, breaking it down and neutralizing the crystal resonance before feeding the cleaned nutrients back to the root network. Defeating it disrupts the forest's waste-processing system — a consequence that may have ecological repercussions visible in future content.
+**The Blightwood Ancient** (vnum 2801, room 2851): Decay incarnate. An enormous rotting mega-treant whose body is a biome: fungi, moss, insects, and decomposing organisms all coexist on and within its frame. It processes corrupted matter from the boundary with the Withered Depths, breaking it down and neutralizing the crystal resonance before feeding the cleaned nutrients back to the root network. Defeating it disrupts the forest's waste-processing system — a consequence that may have ecological repercussions visible in future content.
 
-**Thornfang Alpha** (vnum 10063, room 10124): Predation incarnate. The apex predator of the Verdant Depths, a beast so perfectly adapted to the forest environment that it is effectively invisible until it attacks. The Alpha does not patrol — it waits, connected to the root network's chemical signaling, and strikes only when the forest identifies a threat that the lesser predators cannot handle. It is the forest's last resort.
+**Thornfang Alpha** (vnum 2802, room 2863): Predation incarnate. The apex predator of the Verdant Depths, a beast so perfectly adapted to the forest environment that it is effectively invisible until it attacks. The Alpha does not patrol — it waits, connected to the root network's chemical signaling, and strikes only when the forest identifies a threat that the lesser predators cannot handle. It is the forest's last resort.
 
 ---
 
 ## VII. Cross-Area Lore Integration
 
-### Connection to the Withered Depths (vnums 1000–1149)
+### Connection to the Withered Depths (vnums 291–440)
 
 The Verdant Depths and the Withered Depths are the same forest under different conditions — health and disease, immune system and infection. Their relationship is the area's central narrative tension.
 
@@ -160,7 +160,7 @@ Specific connections:
 - The Verdant Sanctum (Zone 8 of the Withered Depths) is the point where the Verdant Depths' influence penetrates deepest into corrupted territory — an island of health surrounded by blight, defended by the Verdant Guardian.
 - The confusion mists that define the Forest of Confusion are produced by both areas' systems: the Verdant Depths' natural chemical defense and the Withered Depths' residual druidic quarantine wards.
 
-### Connection to the Great Northern Forest (vnums 15500–15999)
+### Connection to the Great Northern Forest (vnums 3739–4238)
 
 The Verdant Depths are the ancient core of the same forest system that extends northward through the Great Northern Forest to Kowloon's approaches. The Great Northern Forest's ecology — its ironpines, its Ancestor Deeps, its red moss blooms — is a younger, thinner expression of the same root-network intelligence that reaches its full density in the Verdant Depths.
 
@@ -170,7 +170,7 @@ Specific connections:
 - Red moss blooms in the Ancestor Deeps — the warning sign of corrupted groves — may indicate that the Withered Depths' blight is spreading along root channels that connect the deep forest to the northern crown. If so, the Verdant Depths' immune response is failing to contain the corruption, and the consequences will be felt along the entire Lantern Road trade corridor.
 - The white-stag omen (see `great_northern_forest_lore.md`) — which appears before major weather shifts or faction war — has been reported in the Verdant Depths' outer zones. Forest peoples interpret a white stag running away from the deep interior as a sign that the forest's balance is shifting toward crisis.
 
-### Connection to Midgaard (vnums 3001–3200)
+### Connection to Midgaard (vnums 917–1116)
 
 Midgaard's relationship with the Verdant Depths is indirect but consequential. The city's trade economy depends on forest resources that flow along the Lantern Road from the Great Northern Forest. The Verdant Depths' health — and the Withered Depths' corruption — directly affect the quality and availability of timber, herbs, and other forest products that Midgaard's markets process.
 
@@ -180,7 +180,7 @@ Specific connections:
 - Midgaard's road wardens report increased predator activity along the southern stretches of the Lantern Road during periods when the Verdant Depths' boundary with the Withered Depths is under pressure. The forest's predatory response to corruption incursions ripples outward through the food chain, pushing displaced creatures toward the road.
 - Herbalists in Midgaard's market district pay premium prices for "deep-forest preparations" — medicines derived from plants that grow only in the Verdant Depths' outer zones. The supply has been declining for years as the Withered Depths' blight encroaches on the harvesting zones.
 
-### Connection to Kowloon (vnums 14000–14099)
+### Connection to Kowloon (vnums 3439–3538)
 
 Kowloon's relationship with the Verdant Depths is primarily mediated through the Great Northern Forest's northern crown. The city's Wardens of Iron conduct periodic clearing patrols in the forest approaches, but their influence does not extend to the deep interior.
 
@@ -189,7 +189,7 @@ Specific connections:
 - The Ash Cult cells in Kowloon (see `kowloon_lore.md`) interpret the Verdant Depths as evidence of the world's original state before human interference — a paradise that humanity's hubris is slowly destroying. The Ember Speaker's theological argument that the Conclave's destruction was divine punishment gains potency when paired with the observation that the Conclave's experiments are visibly consuming the ancient forest.
 - Kowloon's Courier Lantern Office has catalogued reports from northern patrol captains describing "deep-forest chemical signatures" — unusual volatile compounds detected at the forest's northern edge that match no known natural source. These may be traces of the Verdant Depths' root-network signaling, carried northward through the interconnected forest system.
 
-### Connection to Kiess (vnums 13000–13099)
+### Connection to Kiess (vnums 3339–3438)
 
 Kiess is the primary staging base for expeditions into both the Verdant Depths and the Withered Depths. The city's proximity to the Forest of Confusion makes it the natural launch point for any serious investigation of the deep forest.
 
@@ -199,7 +199,7 @@ Specific connections:
 - Kiess's Wall Command posts warnings about "deep-forest zones" on its north-gate bulletin boards. These warnings are practical rather than lore-heavy: recommended party compositions, anti-toxin requirements, and extraction protocols for expeditions that lose contact.
 - Herbal reagents and rare timbers from the Verdant Depths' outer zones still flow through forest routes into Kiess's markets. These trade goods are the economic justification for continued deep-forest expeditions, despite the risks.
 
-### Connection to the Sunken Sanctum (vnums 9500–9599)
+### Connection to the Sunken Sanctum (vnums 2266–9599)
 
 The Verdant Depths' relationship with the Sunken Sanctum is one of contrast and consequence. The Sanctum represents institutional power applied to nature — the Conclave's attempt to bind, preserve, and control natural forces. The Verdant Depths represent nature's own power, operating without human mediation. The Withered Depths, caught between them, represent the damage that occurs when institutional power is applied carelessly and abandoned.
 
