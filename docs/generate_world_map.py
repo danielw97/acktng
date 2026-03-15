@@ -212,28 +212,64 @@ def hatch_region(ax, pts, color, dot_count=120, size=0.8, alpha=0.25, zorder=6):
 # ═══════════════════════════════════════════════════════════
 def mountain(ax, cx, cy, h=5.0, w=4.5, snow_frac=0.28, zorder=11,
              col=MTN_MID, shadow=MTN_DARK, snow=MTN_SNOW):
-    """Single hand-drawn-style mountain."""
-    peak = (cx, cy + h)
+    """Single hand-drawn mountain — faceted faces, shadow hatching, jagged snow."""
+    peak  = (cx,       cy + h)
     left  = (cx - w/2, cy)
     right = (cx + w/2, cy)
-    mid_r = (cx + w * 0.12, cy)  # slightly offset for realism
-    # Shadow face
-    ax.add_patch(plt.Polygon([peak, mid_r, right], color=shadow,
-                              alpha=0.88, zorder=zorder))
-    # Light face
-    ax.add_patch(plt.Polygon([peak, left, mid_r], color=col,
-                              alpha=0.92, zorder=zorder))
-    # Snow cap
-    snow_y = cy + h * (1 - snow_frac)
-    t = snow_frac
-    sl = (cx - w/2*t, snow_y)
-    sr = (cx + w/2*t*0.7, snow_y)
-    ax.add_patch(plt.Polygon([peak, sl, sr], color=snow,
-                              alpha=0.80, zorder=zorder+1))
-    # Outline
+    ridge = (cx + w * 0.10, cy)   # visible ridge slightly right of centre
+
+    # Ground shadow ellipse
+    ax.add_patch(mpatches.Ellipse((cx + w*0.12, cy), w*1.15, h*0.15,
+                                   color=MTN_DARK, alpha=0.13, zorder=zorder-1))
+
+    # Light face (left of ridge)
+    ax.add_patch(plt.Polygon([peak, left, ridge], color=col,
+                              alpha=0.93, zorder=zorder))
+    # Shadow face (right of ridge)
+    ax.add_patch(plt.Polygon([peak, ridge, right], color=shadow,
+                              alpha=0.93, zorder=zorder))
+
+    # Shadow-face hatching — parallel lines across the right triangle
+    n_hatch = 9
+    for i in range(n_hatch):
+        t = (i + 0.5) / n_hatch
+        ex = right[0] + (peak[0] - right[0]) * t
+        ey = right[1] + (peak[1] - right[1]) * t
+        rx = ridge[0] + (peak[0] - ridge[0]) * t
+        ry = ridge[1] + (peak[1] - ridge[1]) * t
+        ax.plot([rx, ex], [ry, ey], color=MTN_DARK,
+                linewidth=0.32, alpha=0.26, zorder=zorder+1)
+
+    # Light-face contour lines (faint horizontal striations)
+    for frac in [0.32, 0.52, 0.68, 0.80]:
+        py  = cy + h * frac
+        lx2 = left[0]  + (peak[0] - left[0])  * frac
+        rx2 = ridge[0] + (peak[0] - ridge[0]) * frac
+        ax.plot([lx2, rx2], [py, py], color=MTN_DARK,
+                linewidth=0.28, alpha=0.17, zorder=zorder+1)
+
+    # Snow cap — split into light and shadow portions
+    snow_y  = cy + h * (1 - snow_frac)
+    t_sn    = snow_frac * 0.88
+    sn_mid  = (cx + w*0.03, snow_y + h*0.01)
+    sl      = (cx - w/2 * t_sn,        snow_y)
+    sr      = (cx + w/2 * t_sn * 0.62, snow_y)
+    ax.add_patch(plt.Polygon([peak, sl, sn_mid],
+                              color=snow, alpha=0.90, zorder=zorder+2))
+    snow_shd = tuple(c * 0.84 for c in mcolors.to_rgb(snow))
+    ax.add_patch(plt.Polygon([peak, sn_mid, sr],
+                              color=snow_shd, alpha=0.84, zorder=zorder+2))
+    ax.add_patch(plt.Polygon([peak, sl, sr],
+                              fill=False, edgecolor=MTN_DARK,
+                              linewidth=0.38, alpha=0.38, zorder=zorder+3))
+
+    # Main ink outline
     ax.add_patch(plt.Polygon([peak, left, right],
                               fill=False, edgecolor=MTN_DARK,
-                              linewidth=0.8, alpha=0.7, zorder=zorder+2))
+                              linewidth=1.0, alpha=0.82, zorder=zorder+3))
+    # Ridge line
+    ax.plot([cx, ridge[0]], [cy + h, cy],
+            color=MTN_DARK, linewidth=0.55, alpha=0.52, zorder=zorder+2)
 
 def mountain_range(ax, peaks, base_h=5.0, base_w=4.5, scatter=True,
                    zorder=11, **kw):
@@ -243,20 +279,48 @@ def mountain_range(ax, peaks, base_h=5.0, base_w=4.5, scatter=True,
         mountain(ax, px, py, h=dh, w=dw, zorder=zorder, **kw)
 
 def tree(ax, cx, cy, h=2.5, col=FOREST_MID, zorder=9):
-    """Single conifer."""
-    trunk_h = h * 0.22
-    ax.plot([cx, cx], [cy, cy + trunk_h], color='#5A3820',
-            linewidth=0.9, zorder=zorder, solid_capstyle='round')
-    tiers = 3
+    """Single conifer — antique-map style with ink outline and light/shadow tiers."""
+    trunk_h = h * 0.20
+    trunk_w = h * 0.055
+    # Ground shadow
+    ax.add_patch(mpatches.Ellipse((cx, cy + 0.04), h*0.58, h*0.09,
+                                   color='#1A0E06', alpha=0.14, zorder=zorder-1))
+    # Tapered trunk
+    ax.add_patch(plt.Polygon([
+        [cx - trunk_w,       cy],
+        [cx + trunk_w,       cy],
+        [cx + trunk_w * 0.5, cy + trunk_h],
+        [cx - trunk_w * 0.5, cy + trunk_h]],
+        color='#4A2A10', alpha=0.90, zorder=zorder))
+
+    tiers  = 4
+    base_y = cy + trunk_h
+    rgb    = mcolors.to_rgb(col)
     for i in range(tiers):
-        frac   = 1.0 - i / tiers * 0.55
-        tw     = h * 0.55 * frac
-        tier_y = cy + trunk_h + i * h * 0.28
-        tri_h  = h * 0.48
-        shade  = tuple(max(0, c - i*12/255) for c in mcolors.to_rgb(col))
+        frac   = 1.0 - i * 0.20
+        tw     = h * 0.56 * frac
+        tier_y = base_y + i * h * 0.215
+        tip_y  = tier_y + h * 0.355 * frac
+
+        # Light left face
+        lt = tuple(min(1.0, c * 1.18) for c in rgb)
+        # Dark right face
+        dk = tuple(max(0.0, c * 0.66) for c in rgb)
+
         ax.add_patch(plt.Polygon(
-            [[cx - tw, tier_y], [cx + tw, tier_y], [cx, tier_y + tri_h]],
-            color=shade, alpha=0.90, zorder=zorder+i))
+            [[cx - tw, tier_y], [cx, tier_y], [cx, tip_y]],
+            color=lt, alpha=0.94, zorder=zorder + i))
+        ax.add_patch(plt.Polygon(
+            [[cx, tier_y], [cx + tw, tier_y], [cx, tip_y]],
+            color=dk, alpha=0.94, zorder=zorder + i))
+        # Ink outline
+        ax.add_patch(plt.Polygon(
+            [[cx - tw, tier_y], [cx + tw, tier_y], [cx, tip_y]],
+            fill=False, edgecolor=FOREST_INK,
+            linewidth=0.58, alpha=0.72, zorder=zorder + i + 1))
+        # Underline shadow at tier base
+        ax.plot([cx - tw*0.88, cx + tw*0.88], [tier_y, tier_y],
+                color=FOREST_INK, linewidth=0.28, alpha=0.24, zorder=zorder + i)
 
 def forest_cluster(ax, cx, cy, radius, count=45, h_range=(1.8,3.2), zorder=9):
     for _ in range(count):
@@ -270,25 +334,81 @@ def forest_cluster(ax, cx, cy, radius, count=45, h_range=(1.8,3.2), zorder=9):
         tree(ax, tx, ty, h=h, col=col, zorder=zorder)
 
 def dead_tree(ax, cx, cy, h=3.0, zorder=9):
-    """Bare/dead tree for Withered Depths."""
-    ax.plot([cx, cx], [cy, cy+h], color='#3C2C18', linewidth=1.1,
-            zorder=zorder, solid_capstyle='round')
-    for _ in range(4):
-        ang = RNG.uniform(0.2, math.pi - 0.2) * RNG.choice([-1,1])
-        bl  = RNG.uniform(0.6, 1.5)
-        by  = cy + RNG.uniform(h*0.4, h*0.85)
-        ax.plot([cx, cx + math.cos(ang)*bl], [by, by + math.sin(ang)*bl*0.5],
-                color='#3C2C18', linewidth=0.7, alpha=0.8, zorder=zorder)
+    """Bare/dead tree for Withered Depths — tapered trunk with secondary branching."""
+    lean = RNG.uniform(-0.25, 0.25)
+    # Tapered trunk in 4 segments
+    for seg in range(4):
+        sy = cy + seg * h / 4
+        ey = cy + (seg + 1) * h / 4
+        lw = max(0.3, 1.5 - seg * 0.32)
+        ox = lean * (seg + 1) * 0.12
+        ax.plot([cx + lean*seg*0.12, cx + ox], [sy, ey],
+                color='#3C2C18', linewidth=lw,
+                zorder=zorder, solid_capstyle='round')
+    # Primary branches
+    for _ in range(5):
+        ang = RNG.uniform(0.2, math.pi - 0.2) * RNG.choice([-1, 1])
+        bl  = RNG.uniform(0.8, 1.8)
+        by  = cy + RNG.uniform(h*0.40, h*0.90)
+        bx  = cx + lean * (by - cy) / h * 0.3
+        bex = bx + math.cos(ang) * bl
+        bey = by + math.sin(ang) * bl * 0.50
+        ax.plot([bx, bex], [by, bey],
+                color='#3C2C18', linewidth=0.75, alpha=0.82, zorder=zorder)
+        # Secondary branches
+        if bl > 1.0:
+            for _ in range(2):
+                sang = ang + RNG.uniform(-0.8, 0.8)
+                sbl  = bl * RNG.uniform(0.28, 0.52)
+                t2   = RNG.uniform(0.45, 0.75)
+                sbx  = bx + math.cos(ang)*bl*t2
+                sby  = by + math.sin(ang)*bl*t2*0.50
+                ax.plot([sbx, sbx + math.cos(sang)*sbl],
+                        [sby, sby + math.sin(sang)*sbl*0.45],
+                        color='#3C2C18', linewidth=0.38, alpha=0.65, zorder=zorder)
 
 def gnarled_tree(ax, cx, cy, h=3.0, zorder=9):
-    """Thornwood gnarled tree."""
-    # Twisted trunk
-    ax.plot([cx, cx + RNG.uniform(-0.4,0.4)], [cy, cy+h],
-            color='#1A0E08', linewidth=1.3, zorder=zorder, solid_capstyle='round')
-    ax.add_patch(plt.Circle((cx, cy+h*0.85), h*0.38,
-                             color='#1E2A0A', alpha=0.80, zorder=zorder+1))
-    ax.add_patch(plt.Circle((cx, cy+h*0.85), h*0.22,
-                             color='#0E1806', alpha=0.65, zorder=zorder+2))
+    """Thornwood gnarled tree — segmented twisted trunk with lobed dark crown."""
+    lean = RNG.uniform(-0.6, 0.6)
+    # Segmented trunk with accumulated lean and micro-jitter
+    pts = [(cx, cy)]
+    for seg in range(4):
+        t = (seg + 1) / 4
+        pts.append((
+            cx + lean*t*0.45 + RNG.uniform(-0.1, 0.1)*h*0.15,
+            cy + h * t))
+    for i in range(len(pts) - 1):
+        lw = max(0.4, 1.6 - i * 0.28)
+        ax.plot([pts[i][0], pts[i+1][0]], [pts[i][1], pts[i+1][1]],
+                color='#1A0E08', linewidth=lw, zorder=zorder,
+                solid_capstyle='round')
+    crown_cx = pts[-1][0]
+    crown_cy = pts[-1][1] - h * 0.08
+    # Crown — multiple overlapping dark lobes for organic silhouette
+    lobe_specs = [
+        (0.0,       0.0,    h*0.42, '#1E2A0A', 0.84),
+        (-h*0.22,   h*0.08, h*0.28, '#0E1806', 0.76),
+        ( h*0.20,   h*0.05, h*0.26, '#182208', 0.74),
+        ( h*0.05,  -h*0.12, h*0.22, '#1A2A0A', 0.66),
+        (-h*0.12,  -h*0.10, h*0.20, '#131A06', 0.62),
+    ]
+    for ox, oy, r, c, al in lobe_specs:
+        ax.add_patch(plt.Circle((crown_cx + ox, crown_cy + oy), r,
+                                 color=c, alpha=al, zorder=zorder+1))
+    # Thorn tips projecting from crown edge
+    for _ in range(6):
+        ang = RNG.uniform(0, 2*math.pi)
+        br  = h * RNG.uniform(0.38, 0.50)
+        bx  = crown_cx + br * math.cos(ang)
+        by  = crown_cy + br * 0.70 * math.sin(ang)
+        tip = h * RNG.uniform(0.11, 0.19)
+        ax.plot([bx, bx + tip*math.cos(ang)],
+                [by, by + tip*math.sin(ang)*0.55],
+                color='#1A0E08', linewidth=0.55, alpha=0.62, zorder=zorder+2)
+    # Faint crown outline to crisp the silhouette
+    ax.add_patch(plt.Circle((crown_cx, crown_cy), h*0.45,
+                             fill=False, edgecolor=FOREST_INK,
+                             linewidth=0.35, alpha=0.30, zorder=zorder+2))
 
 def oasis(ax, cx, cy, r=4.0, zorder=11):
     # Water
@@ -313,18 +433,70 @@ def oasis(ax, cx, cy, r=4.0, zorder=11):
                                  color=FOREST_MID, alpha=0.85, zorder=zorder+3))
 
 def pyramid_sym(ax, cx, cy, size=4.0, col='#B89828', zorder=13):
-    h = size * 1.5
+    h    = size * 1.58
+    apex = (cx, cy + h)
+    bl   = (cx - size, cy)
+    br   = (cx + size, cy)
+
+    # Ground shadow
+    ax.add_patch(mpatches.Ellipse((cx + size*0.35, cy), size*3.0, size*0.36,
+                                   color=MTN_DARK, alpha=0.18, zorder=zorder-1))
+    # Stone platform base
+    rgb = mcolors.to_rgb(col)
+    base_col = tuple(c * 0.75 for c in rgb)
+    ax.add_patch(mpatches.Rectangle(
+        (cx - size*1.08, cy - size*0.15), size*2.16, size*0.15,
+        color=base_col, alpha=0.88, zorder=zorder))
+
+    # Light face (left half)
+    light_col = tuple(min(1.0, c * 1.22) for c in rgb)
+    dark_col  = tuple(c * 0.46 for c in rgb)
+    ax.add_patch(plt.Polygon([apex, bl, (cx, cy)],
+                              color=light_col, alpha=0.93, zorder=zorder))
+    # Shadow face (right half)
+    ax.add_patch(plt.Polygon([apex, (cx, cy), br],
+                              color=dark_col, alpha=0.93, zorder=zorder))
+
+    # Stone course lines (converging toward apex)
+    n_courses = 8
+    for i in range(1, n_courses):
+        frac     = i / n_courses
+        course_y = cy + h * frac
+        course_w = size * (1 - frac)
+        al_lt    = 0.20 + frac * 0.10
+        al_dk    = 0.32 + frac * 0.18
+        ax.plot([cx - course_w, cx], [course_y, course_y],
+                color=MTN_DARK, linewidth=0.44, alpha=al_lt, zorder=zorder+1)
+        ax.plot([cx, cx + course_w], [course_y, course_y],
+                color=MTN_DARK, linewidth=0.44, alpha=al_dk, zorder=zorder+1)
+
+    # Outline
+    ax.add_patch(plt.Polygon([apex, bl, br],
+                              fill=False, edgecolor=MTN_DARK,
+                              linewidth=1.1, alpha=0.88, zorder=zorder+2))
+    # Ridge line
+    ax.plot([cx, cx], [cy, cy + h],
+            color=MTN_DARK, linewidth=0.44, alpha=0.38, zorder=zorder+2)
+
+    # Gilded capstone
+    cap = size * 0.14
     ax.add_patch(plt.Polygon(
-        [[cx-size, cy], [cx+size, cy], [cx, cy+h]],
-        color=col, alpha=0.90, zorder=zorder,
-        edgecolor=MTN_DARK, linewidth=0.8))
-    # Shadow
-    ax.add_patch(plt.Polygon(
-        [[cx, cy+h], [cx+size, cy], [cx+size*0.08, cy]],
-        color=MTN_DARK, alpha=0.38, zorder=zorder+1))
-    # Eye glow (Black Sun Shard)
-    ax.plot(cx, cy+h*0.55, 'o', color='#CC1100', markersize=3.5,
-            alpha=0.75, zorder=zorder+2)
+        [[cx - cap*0.9, cy + h - cap*2.2],
+         [cx + cap*0.9, cy + h - cap*2.2],
+         [cx, cy + h]],
+        color=GOLD_LT, alpha=0.82, zorder=zorder+3))
+
+    # Black Sun glyph
+    gy = cy + h * 0.46
+    ax.add_patch(plt.Circle((cx, gy), size*0.115,
+                             color='#CC1100', alpha=0.62, zorder=zorder+3))
+    ax.add_patch(plt.Circle((cx, gy), size*0.065,
+                             color='#FF3300', alpha=0.88, zorder=zorder+4))
+    for ray_i in range(8):
+        ang = ray_i * math.pi / 4
+        ax.plot([cx + size*0.13*math.cos(ang), cx + size*0.24*math.cos(ang)],
+                [gy + size*0.13*math.sin(ang), gy + size*0.24*math.sin(ang)],
+                color='#CC1100', linewidth=0.52, alpha=0.42, zorder=zorder+3)
 
 def city_symbol(ax, cx, cy, size=1.6, col=INK, crown=False, zorder=16):
     """Medieval town symbol: walled keep with gate-towers."""
@@ -1208,21 +1380,6 @@ ax.text(70, 38, 'Bell\nSynod', fontsize=4.0, color=INK_FADED,
 ax.text(128, 110, 'Spirebound\nConclave\n(Ruins)', fontsize=4.0,
         ha='center', style='italic', fontfamily='DejaVu Serif', alpha=0.55,
         zorder=11, color='#7050B0')
-
-# ═══════════════════════════════════════════════════════════
-#  LORE SCROLLS
-# ═══════════════════════════════════════════════════════════
-lore_scrolls = [
-    (152, 112, 30, 7, '"Here the mountain bleeds fire\nand the sky remembers ash."'),
-    (115, 160, 28, 6, '"One wall, one law.\nOne ledger, one ration code."'),
-    (175, 72,  28, 7, '"The Black Sun consumes names.\nWrite all things in stone."'),
-    (76,  30,  28, 6, '"The dead keep better records\nthan the living."'),
-    (24, 100,  28, 6, '"Old Evermeet sings\nbeneath these stones."'),
-    (143, 55,  28, 6, '"Measured thirst survives.\nUnmeasured thirst is war."'),
-    (128, 105, 30, 7, '"Flame, crystal, spirit — three bonds.\nAll three broke."'),
-]
-for lx, ly, lw, lh, lt in lore_scrolls:
-    lore_scroll(ax, lx, ly, lw, lh, lt, text_size=4.5)
 
 # ═══════════════════════════════════════════════════════════
 #  TITLE CARTOUCHE
