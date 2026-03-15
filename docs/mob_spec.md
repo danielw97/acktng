@@ -268,7 +268,6 @@ Builder note: if a mob is intended to appear only during daytime, it must includ
 - `postman` = `524288`
 - `rewield` = `1048576`
 - `reequip` = `2097152`
-- `vampire` = `8388608`
 - `no_hunt` = `16777216`
 - `solo` = `33554432`
 - `boss` = `67108864`
@@ -326,7 +325,6 @@ Builder policy for special difficulty mobs:
 - `blasted` = `4194304` (`AFF_BLASTED`)
 - `remort_curse` = `8388608` (`AFF_REMORT_CURSE`)
 - `confused` = `16777216` (`AFF_CONFUSED`)
-- `vamp_healing` = `33554432` (`AFF_VAMP_HEALING`) — **do not set in area files**
 - `hold` = `67108864` (`AFF_HOLD`)
 - `paralysis` = `134217728` (`AFF_PARALYSIS`)
 - `cloak_adept` = `268435456` (`AFF_CLOAK_ADEPT`)

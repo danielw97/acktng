@@ -16,9 +16,6 @@ bool spec_policeman(CHAR_DATA *ch)
    crime = "";
    for (victim = ch->in_room->first_person; victim != NULL; victim = victim->next_in_room)
    {
-      if (IS_VAMP(victim) && IS_AFFECTED(victim, AFF_VAMP_HEALING))
-         continue;
-
       if (!IS_NPC(victim) && IS_SET(victim->act, PLR_KILLER))
       {
          crime = "KILLER";

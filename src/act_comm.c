@@ -565,13 +565,6 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
       sprintf(buf, "$n %s: '$t'.\n\r", verb);
       break;
 
-   case CHANNEL_FAMILY:
-      sprintf(buf, "%s%s %s: '%s'.%s\n\r",
-              color_string(ch, "clan"), verb, ch->name, argument, color_string(ch, "normal"));
-      send_to_char(buf, ch);
-      sprintf(buf, "$n %s: '$t'.\n\r", verb);
-      break;
-
    case CHANNEL_RACE:
       sprintf(buf, "%s%s %s: '%s'.%s\n\r",
               color_string(ch, "race"), verb, ch->name, argument, color_string(ch, "normal"));
@@ -662,9 +655,7 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
                continue;
             if (channel == CHANNEL_CLAN && och->pcdata->clan != ch->pcdata->clan && (IS_SET(och->deaf, CHANNEL_ALLCLAN) || get_trust(och) != MAX_LEVEL))
                continue;
-            if ((channel == CHANNEL_FAMILY) && ((!IS_VAMP(och) || !IS_VAMP(ch)) || (och->pcdata->vamp_bloodline != ch->pcdata->vamp_bloodline)))
-               continue;
-            if (channel == CHANNEL_ADEPT && vch->adept_level < 1)
+if (channel == CHANNEL_ADEPT && vch->adept_level < 1)
                continue;
             position = vch->position;
             if (channel != CHANNEL_SHOUT && channel != CHANNEL_YELL)
@@ -801,27 +792,6 @@ void do_clan(CHAR_DATA *ch, char *argument)
    talk_channel(ch, argument, CHANNEL_CLAN, buf);
    return;
 }
-void do_familytalk(CHAR_DATA *ch, char *argument)
-{
-   char buf[MAX_STRING_LENGTH];
-
-   if (IS_NPC(ch))
-   {
-      send_to_char("NPCs cannot use this channel.\n\r", ch);
-      return;
-   }
-
-   if (!IS_VAMP(ch))
-   {
-      send_to_char("Huh?\n\r", ch);
-      return;
-   }
-
-   sprintf(buf, "[%s]", get_family_name(ch));
-   talk_channel(ch, argument, CHANNEL_FAMILY, buf);
-   return;
-}
-
 void do_newbie(CHAR_DATA *ch, char *argument)
 {
    talk_channel(ch, argument, CHANNEL_NEWBIE, "newbie");

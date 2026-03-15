@@ -905,10 +905,9 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 
    if (!IS_NPC(victim))
    {
-      sprintf(buf, "Race: %d (%s)%s.   Clan: %d (%s).  Balance: %d.\n\r",
+      sprintf(buf, "Race: %d (%s).   Clan: %d (%s).  Balance: %d.\n\r",
               victim->race,
               race_table[victim->race].race_name,
-              IS_VAMP(victim) ? "[VAMPIRE]" : "",
               victim->pcdata->clan, clan_table[victim->pcdata->clan].clan_abbr, victim->balance);
       strcat(buf1, buf);
    }
@@ -938,9 +937,6 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 
    if (!IS_NPC(victim))
    {
-      sprintf(buf, "@@RBLOODLUST@@g: %d\n\r", victim->pcdata->bloodlust);
-      strcat(buf1, buf);
-
       sprintf(buf,
               "Thirst: %d.  Full: %d.  Drunk: %d.  Saving throw: %d.\n\r",
               victim->pcdata->condition[COND_THIRST],
@@ -2845,23 +2841,6 @@ void do_mset(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "supermana"))
-   {
-      if (IS_NPC(victim))
-      {
-         send_to_char("Not on NPCs.\n\r", ch);
-         return;
-      }
-      if (IS_VAMP(victim))
-      {
-         send_to_char("@@eDone!!!@@N\n\r", ch);
-         victim->pcdata->bloodlust_max = value;
-      }
-      else
-         send_to_char("They are not a supernatural!!\n\r", ch);
-      return;
-   }
-
    if (!str_cmp(arg2, "thirst"))
    {
       if (IS_NPC(victim))
@@ -2943,12 +2922,6 @@ void do_mset(CHAR_DATA *ch, char *argument)
          send_to_char(buf, ch);
          return;
       }
-      if (value == PFLAG_VAMP)
-      {
-         send_to_char("@@eNO WAY!!!@@N\n\r", ch);
-         return;
-      }
-
       if (neg)
          REMOVE_BIT(victim->pcdata->pflags, value);
       else
@@ -4005,7 +3978,6 @@ void do_setclass(CHAR_DATA *ch, char *argument)
    bool cok, remort;
    int class = 0;
    int cnt;
-   bool vamp = FALSE;
 
    argument = one_argument(argument, arg1); /* Player */
    argument = one_argument(argument, arg2); /* class */
@@ -4050,11 +4022,6 @@ void do_setclass(CHAR_DATA *ch, char *argument)
       }
    }
 
-   if (!str_prefix(arg2, "VAMPYRE"))
-   {
-      send_to_char("@@eNO WAY!!!@@N", ch);
-      return;
-   }
    if (!str_prefix(arg2, "ADEPT"))
    {
       if (victim->adept_level > 0)
@@ -4094,8 +4061,7 @@ void do_setclass(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if ((value < -1 || value > MAX_LEVEL)
-       /*       || ( ( vamp ) && ( value < -1 || value > MAX_VAMP_LEVEL ) ) */)
+   if ((value < -1 || value > MAX_LEVEL))
    {
       sprintf(buf, "%d is not a valid value.\n\r", value);
       send_to_char(buf, ch);
@@ -4123,23 +4089,12 @@ void do_setclass(CHAR_DATA *ch, char *argument)
       send_to_char("That wouldn't accomplish much!\n\r", ch);
       return;
    }
-   if ((value < (remort ? victim->remort[class] : victim->lvl[class])) || ((vamp) && (value <= victim->pcdata->vamp_level)))
-
+   if (value < (remort ? victim->remort[class] : victim->lvl[class]))
    {
-
       send_to_char("Lowering a player's level!\n\r", ch);
       send_to_char("**** OOOOHHHHHHHHHH  NNNNOOOO ****\n\r", victim);
 
-      if (vamp)
-      {
-         if (value < 1)
-            victim->pcdata->vamp_level = value;
-         else
-            victim->pcdata->vamp_level = -1;
-         victim->pcdata->vamp_exp = 0;
-      }
-
-      else if (remort)
+      if (remort)
       {
          if (value != -1)
             victim->remort[class] = value;
@@ -4158,7 +4113,7 @@ void do_setclass(CHAR_DATA *ch, char *argument)
       send_to_char("**** OOOOHHHHHHHHHH  YYYYEEEESSS ****\n\r", victim);
    }
 
-   if (value != -1 && !remort && !vamp)
+   if (value != -1 && !remort)
    {
       sprintf(buf, "You are now level %d in your %s class.\n\r", value, class_table[class].class_name);
       send_to_char(buf, victim);
@@ -4170,17 +4125,6 @@ void do_setclass(CHAR_DATA *ch, char *argument)
       send_to_char(buf, victim);
       victim->remort[class] = value;
    }
-   if (vamp)
-   {
-      send_to_char("@@NYou are now a level %d @@eKindred@@N!!!\n\r", victim);
-      for (iClass = victim->pcdata->vamp_level; iClass < value; iClass++)
-      {
-         class = ADVANCE_VAMP;
-         victim->pcdata->vamp_level += 1;
-         advance_level_vamp(victim);
-      }
-   }
-
    victim->exp = 0;
    victim->trust = 0;
 
@@ -4953,14 +4897,6 @@ void do_fhunt(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   /*
-    * Can not force mobs to hunt non-vamp players
-    */
-   if ((!IS_VAMP(target)) && (!IS_NPC(target)))
-   {
-      send_to_char("Mobs cannot hunt non-vamp players\n\r", ch);
-      return;
-   }
 
    /*
     * By Now:

@@ -1401,8 +1401,6 @@ char *extra_bit_name(int extra_flags)
       safe_strcat(MAX_STRING_LENGTH, buf, " no_auction");
    if (extra_flags & ITEM_RARE)
       safe_strcat(MAX_STRING_LENGTH, buf, " rare");
-   if (extra_flags & ITEM_VAMP)
-      safe_strcat(MAX_STRING_LENGTH, buf, " vamp");
    if (extra_flags & ITEM_UNIQUE)
       safe_strcat(MAX_STRING_LENGTH, buf, " unique");
    if (extra_flags & ITEM_TRIG_DESTROY)
@@ -1465,21 +1463,4 @@ char *short_race_name(CHAR_DATA *ch)
    return (buf);
 }
 
-char *get_family_name(CHAR_DATA *ch)
-{
-
-   switch (ch->pcdata->vamp_bloodline)
-   {
-   default:
-      return "Renegade!";
-   case 1:
-      return "@@WNOT SET@@N";
-   case 2:
-      return "@@WNOT SET@@N";
-   case 3:
-      return "@@WNOT SET@@N";
-   case 4:
-      return "@@WNOT SET@@N";
-   }
-}
 

@@ -1,7 +1,0 @@
-level -3
-keywords family
----
-Syntax: family
-
-Displays vampyre family information and related status.
-Only vampyres (or appropriate admin trust) may use this command.

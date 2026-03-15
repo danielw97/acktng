@@ -113,8 +113,6 @@ int mana_cost(CHAR_DATA *ch, int sn)
    if (can_cast)
       cost = skill_table[sn].min_mana;
 
-   if (IS_VAMP(ch) && (skill_table[sn].flag2 == VAMP))
-      cost = skill_table[sn].min_mana;
    if (IS_NPC(ch))
       cost /= 2;
    if (!IS_NPC(ch) && (skill_table[sn].flag2 == NORM))
@@ -497,7 +495,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
    if (npc_remort_cast_blocked(ch, sn))
       return;
 
-   if (!can_use_skill(ch, sn) || ((skill_table[sn].flag2 == VAMP) && (!IS_VAMP(ch))))
+   if (!can_use_skill(ch, sn))
    {
       send_to_char("You can't do that.\n\r", ch);
       return;
@@ -508,9 +506,6 @@ void do_cast(CHAR_DATA *ch, char *argument)
       send_to_char("You can't concentrate enough.\n\r", ch);
       return;
    }
-   if (IS_NPC(ch) && skill_table[sn].flag2 == VAMP)
-      return;
-
    mana = mana_cost(ch, sn);
    raise_skill(ch, sn);
 
@@ -624,22 +619,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
       break;
    }
 
-   if (!IS_VAMP(ch) && (skill_table[sn].flag2 == VAMP))
-   {
-      send_to_char("Huh?\n\r", ch);
-      return;
-   }
-   if (IS_VAMP(ch) && (skill_table[sn].flag2 == VAMP))
-   {
-      if (!IS_NPC(ch) && ch->pcdata->bloodlust < mana)
-      {
-         send_to_char("@@NYou don't have enough @@eblood@@N to cast that spell!!!\n\r", ch);
-         return;
-      }
-      else
-         ;
-   }
-   else if (ch->mana < mana)
+   if (ch->mana < mana)
    {
       send_to_char("You don't have enough mana.\n\r", ch);
       return;
@@ -676,10 +656,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
       {
          send_to_char("You lost your concentration.\n\r", ch);
 
-         if (IS_VAMP(ch) && (skill_table[sn].flag2 == VAMP))
-            ch->pcdata->bloodlust -= mana / 2;
-         else
-            ch->mana -= mana / 2;
+         ch->mana -= mana / 2;
          return;
       }
    }
@@ -717,14 +694,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
       if (!IS_NPC(ch) && is_mental_power_spell(sn))
          ch->mental_power++;
 
-      if (skill_table[sn].flag2 == VAMP)
-      {
-         ch->pcdata->bloodlust -= mana;
-      }
-      else
-      {
-         ch->mana -= mana; /* Only use mana if spell was called correctly */
-      }
+      ch->mana -= mana; /* Only use mana if spell was called correctly */
    }
 
    if (multi_cast)
@@ -766,14 +736,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
             if (!IS_NPC(ch) && is_mental_power_spell(sn))
                ch->mental_power++;
 
-            if (skill_table[sn].flag2 == VAMP)
-            {
-               ch->pcdata->bloodlust -= mana;
-            }
-            else
-            {
-               ch->mana -= mana; /* Only use mana if spell was called correctly */
-            }
+            ch->mana -= mana; /* Only use mana if spell was called correctly */
          }
       }
    }
@@ -817,14 +780,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
             if (!IS_NPC(ch) && is_mental_power_spell(sn))
                ch->mental_power++;
 
-            if (skill_table[sn].flag2 == VAMP)
-            {
-               ch->pcdata->bloodlust -= mana;
-            }
-            else
-            {
-               ch->mana -= mana; /* Only use mana if spell was called correctly */
-            }
+            ch->mana -= mana; /* Only use mana if spell was called correctly */
          }
       }
    }
@@ -1202,12 +1158,6 @@ bool spell_charm_person(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
 
    if (IS_AFFECTED(victim, AFF_CHARM) || IS_AFFECTED(ch, AFF_CHARM) || level - 5 < victim->level || saves_spell(level, victim))
       return TRUE;
-
-   if (IS_VAMP(victim) && (IS_NPC(victim)))
-   {
-      send_to_char("Wow, it seems to be immune--imagine that!\n\r", ch);
-      return TRUE;
-   }
 
    if (victim->master)
       stop_follower(victim);
@@ -2042,12 +1992,6 @@ bool spell_energy_drain(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    int dam;
 
-   if (!IS_VAMP(ch))
-   {
-      send_to_char("This spell does not exist.\n\r", ch);
-      return FALSE;
-   }
-
    if (saves_spell(level, victim))
       return TRUE;
 
@@ -2183,7 +2127,7 @@ bool spell_fly(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
 bool spell_gate(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   char_to_room(create_mobile(get_mob_index(MOB_VNUM_VAMPIRE)), ch->in_room);
+   char_to_room(create_mobile(get_mob_index(MOB_VNUM_ZOMBIE)), ch->in_room);
    return TRUE;
 }
 

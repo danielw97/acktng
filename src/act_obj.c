@@ -1218,12 +1218,6 @@ void do_drink(CHAR_DATA *ch, char *argument)
 
       amount = number_range(1, 3);
 
-      if (liquid == LIQUID_BLOOD && IS_VAMP(ch) && !IS_NPC(ch))
-      {
-         send_to_char("Ahhhh! Blood!\n\r", ch);
-         gain_bloodlust(ch, amount + 2);
-      }
-
       gain_condition(ch, COND_DRUNK, amount * liq_table[liquid].liq_affect[COND_DRUNK]);
       gain_condition(ch, COND_FULL, amount * liq_table[liquid].liq_affect[COND_FULL]);
       gain_condition(ch, COND_THIRST, amount * liq_table[liquid].liq_affect[COND_THIRST]);
@@ -1272,12 +1266,6 @@ void do_drink(CHAR_DATA *ch, char *argument)
 
       amount = number_range(3, 10);
       amount = UMIN(amount, obj->value[1]);
-
-      if (liquid == LIQUID_BLOOD && IS_VAMP(ch) && !IS_NPC(ch))
-      {
-         send_to_char("@@eAhh, only if it was fresh, would taste much better!@@N\n\r", ch);
-         gain_bloodlust(ch, 2);
-      }
 
       gain_condition(ch, COND_DRUNK, amount * liq_table[liquid].liq_affect[COND_DRUNK]);
       gain_condition(ch, COND_FULL, amount * liq_table[liquid].liq_affect[COND_FULL]);
@@ -1606,23 +1594,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
       return;
    }
 
-   if ((get_psuedo_level(ch) < obj->level) && (IS_OBJ_STAT(obj, ITEM_VAMP)) && (IS_VAMP(ch)) && (!IS_NPC(ch)))
-   {
-      sprintf(buf, "You must be level %d to use this object.\n\r", obj->level);
-      send_to_char(buf, ch);
-      act("$n tries to use $p, but is too inexperienced.", ch, obj, NULL, TO_ROOM);
-      return;
-   }
-
-   if ((IS_OBJ_STAT(obj, ITEM_VAMP)) && (!IS_VAMP(ch)) && (!IS_NPC(ch)))
-   {
-      sprintf(buf, "You must be a vampire to use this object.");
-      send_to_char(buf, ch);
-      act("$n tries to use $p but is stopped by some unknown force.", ch, obj, NULL, TO_ROOM);
-      return;
-   }
-
-   if (obj->item_type == ITEM_TRIGGER && obj->value[0] == 6)
+if (obj->item_type == ITEM_TRIGGER && obj->value[0] == 6)
    {
       /*
        * NOTE: you can't actually GET or WEAR a trigger item that triggers on get/wear. ZEN
@@ -2985,11 +2957,6 @@ void do_buy(CHAR_DATA *ch, char *argument)
 
    if ((keeper = find_keeper(ch)) == NULL)
       return;
-   if (IS_VAMP(ch) && !IS_VAMP(keeper))
-   {
-      do_say(keeper, "I don't serve VAMPIRES!! Be gone evil one!");
-      return;
-   }
 
    if (IS_SET(ch->in_room->room_flags, ROOM_PET_SHOP))
    {
@@ -3140,11 +3107,6 @@ void do_list(CHAR_DATA *ch, char *argument)
    if ((keeper = find_keeper(ch)) == NULL)
       return;
    found = FALSE;
-   if (IS_VAMP(ch) && !IS_VAMP(keeper))
-   {
-      do_say(keeper, "I don't serve VAMPIRES!! Be gone evil one!");
-      return;
-   }
 
    if (IS_SET(ch->in_room->room_flags, ROOM_PET_SHOP))
    {
@@ -3249,11 +3211,6 @@ void do_value(CHAR_DATA *ch, char *argument)
 
    if ((keeper = find_keeper(ch)) == NULL)
       return;
-   if (IS_VAMP(ch) && !IS_VAMP(keeper))
-   {
-      do_say(keeper, "I don't serve VAMPIRES!! Be gone evil one!");
-      return;
-   }
 
    if ((obj = get_obj_carry(ch, arg)) == NULL)
    {

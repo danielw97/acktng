@@ -321,25 +321,6 @@ void advance_level_adept(CHAR_DATA *ch, int class, bool show)
    return;
 }
 
-void advance_level_vamp(CHAR_DATA *ch)
-{
-   char buf[MAX_STRING_LENGTH];
-   int add_prac;
-   int add_bloodlust, add_max_skills;
-
-   add_bloodlust = UMAX(((MAX_VAMP_LEVEL / 2) - (ch->pcdata->generation / 2)), 1);
-   add_prac = number_range(1, UMAX(2, ((MAX_VAMP_LEVEL / 2) - (ch->pcdata->generation))));
-   add_max_skills = number_range(1, UMAX(2, ((MAX_VAMP_LEVEL / 2) - (ch->pcdata->generation))));
-
-   ch->pcdata->bloodlust_max += add_bloodlust;
-   ch->pcdata->vamp_pracs += add_prac;
-   ch->pcdata->vamp_skill_max += add_max_skills;
-
-   sprintf(buf, "You gain: %d @@eBloodlust@@N, and %d Vampyre Practices. .\n\r", add_bloodlust, add_prac);
-
-   send_to_char(buf, ch);
-   return;
-}
 
 void gain_exp(CHAR_DATA *ch, long_int gain)
 {
@@ -512,16 +493,6 @@ int hit_gain(CHAR_DATA *ch)
       gain += get_curr_con(ch) / 4;
       break;
    }
-   if (!IS_NPC(ch))
-   {
-      if (IS_VAMP(ch) && ch->pcdata->bloodlust < 3)
-         gain = 0;
-      else if (IS_VAMP(ch) && ch->pcdata->bloodlust < 8)
-         gain /= 2;
-      if (IS_VAMP(ch) && ch->pcdata->bloodlust == -10)
-         gain = (5 + ch->level / 25);
-   }
-
    if (!is_fighting(ch))
       gain *= 5;
    else
@@ -598,16 +569,6 @@ int mana_gain(CHAR_DATA *ch)
       case POS_RESTING:
          gain += get_curr_int(ch) / 2;
          break;
-      }
-      if (!IS_NPC(ch))
-      {
-         if (IS_VAMP(ch) && ch->pcdata->bloodlust < 3)
-            gain = 0;
-         else if (IS_VAMP(ch) && ch->pcdata->bloodlust < 8)
-            gain /= 2;
-         if (IS_VAMP(ch) && ch->pcdata->bloodlust == -10)
-            gain = (5 + ch->level / 25);
-
       }
       if (!is_fighting(ch))
          gain *= 5;
@@ -705,12 +666,6 @@ int move_gain(CHAR_DATA *ch)
       if (IS_SET(ch->in_room->room_flags, ROOM_REGEN))
          gain *= 2;
 
-      if (IS_VAMP(ch) && ch->pcdata->bloodlust < 3)
-         gain = 0;
-      else if (IS_VAMP(ch) && ch->pcdata->bloodlust < 8)
-         gain /= 2;
-      if (IS_VAMP(ch) && ch->pcdata->bloodlust == -10)
-         gain = (5 + ch->level / 25);
    }
 
    if (IS_AFFECTED(ch, AFF_POISON))
@@ -732,39 +687,6 @@ int move_gain(CHAR_DATA *ch)
 
 #ifndef UNIT_TEST_UPDATE
 
-void gain_bloodlust(CHAR_DATA *ch, int value)
-{
-   /*
-    * Kinda like gain_condition, but handles vampires -S-
-    */
-   if (value == 0)
-      return;
-
-   /*
-    * in case vamp bites off more than he can chew ;)
-    * -Damane- 4/26/96
-    */
-
-   if ((ch->pcdata->bloodlust + value) > ch->pcdata->bloodlust_max)
-      ch->pcdata->bloodlust = ch->pcdata->bloodlust_max;
-   else
-      ch->pcdata->bloodlust += value;
-
-   if (ch->pcdata->bloodlust > ch->pcdata->bloodlust_max)
-      ch->pcdata->bloodlust = ch->pcdata->bloodlust_max;
-
-   if (ch->position == POS_BUILDING || ch->position == POS_WRITING)
-      return;
-   if ((ch->pcdata->bloodlust < 0) && (ch->pcdata->bloodlust != -10))
-      ch->pcdata->bloodlust = 0;
-   if (ch->pcdata->bloodlust < 2)
-      send_to_char("Your body burns with the need for blood!\n\r", ch);
-   else if (ch->pcdata->bloodlust < 7)
-      send_to_char("You start to feel weaker... more blood needed!\n\r", ch);
-   else if (ch->pcdata->bloodlust < 10)
-      send_to_char("You find yourself missing the taste of blood.\n\r", ch);
-   return;
-}
 
 void gain_condition(CHAR_DATA *ch, int iCond, int value)
 {
@@ -1421,7 +1343,7 @@ void gain_update(void)
    {
       if (ch->is_free != FALSE)
          continue;
-      if (ch->position >= POS_STUNNED && !IS_SET(ch->affected_by, AFF_VAMP_HEALING))
+      if (ch->position >= POS_STUNNED)
       {
          if ((ch->hit < get_max_hp(ch)) && (!IS_SET(ch->in_room->affected_by, ROOM_BV_NONE)))
             ch->hit = UMIN(get_max_hp(ch), ch->hit + hit_gain(ch));
@@ -1440,7 +1362,7 @@ void gain_update(void)
          }
       }
 
-      if (ch->position == POS_STUNNED || IS_SET(ch->affected_by, AFF_VAMP_HEALING))
+      if (ch->position == POS_STUNNED)
          update_pos(ch);
    }
    return;
@@ -1556,15 +1478,6 @@ void char_update(void)
          if (ch->timer > 30)
             ch_quit = ch;
 
-         /*
-          * Move this inside the if loop below to stop imms getting bloodlust
-          */
-         if ((IS_VAMP(ch)) && (!IS_NPC(ch)))
-         {
-            gain_bloodlust(ch, 0 - number_range(1, 2));
-            check_vamp(ch);
-            gain_condition(ch, COND_THIRST, 0 - number_range(1, 2));
-         }
       }
 
       update_buff_duration(ch, DURATION_HOUR);
@@ -1621,19 +1534,19 @@ void char_update(void)
          send_to_char("You shiver and suffer.\n\r", ch);
          damage(ch, ch, number_range(2, 8), gsn_poison);
       }
-      else if (ch->position == POS_INCAP && !IS_VAMP(ch))
+      else if (ch->position == POS_INCAP)
       {
          damage(ch, ch, number_range(1, 4), TYPE_UNDEFINED);
       }
-      else if (ch->position == POS_MORTAL && !IS_VAMP(ch))
+      else if (ch->position == POS_MORTAL)
       {
          damage(ch, ch, number_range(2, 3), TYPE_UNDEFINED);
       }
-      else if (ch->position == POS_DEAD && !IS_VAMP(ch))
+      else if (ch->position == POS_DEAD)
       {
          damage(ch, ch, number_range(5, 10), TYPE_UNDEFINED);
       }
-      else if (ch->hit < -10 && !IS_VAMP(ch))
+      else if (ch->hit < -10)
       {
          damage(ch, ch, number_range(5, 10), TYPE_UNDEFINED);
       }
@@ -1665,57 +1578,6 @@ void char_update(void)
    return;
 }
 
-void check_vamp(CHAR_DATA *ch)
-{
-   /*
-    * If vampire is outside, then (s)he suffers damage
-    */
-
-   if (is_affected(ch, skill_lookup("cloak:darkness")))
-      return;
-
-   if (IS_OUTSIDE(ch) && !IS_SET(ch->in_room->affected_by, ROOM_BV_SHADE) && time_info.hour > 5 && time_info.hour < 19)
-   {
-      /*
-       * Oh dear
-       */
-      int dam;
-
-      switch (weather_info.sky)
-      {
-      case SKY_CLOUDLESS:
-         dam = 4;
-         break;
-      case SKY_CLOUDY:
-         dam = 3;
-         break;
-      case SKY_RAINING:
-         dam = 3;
-         break;
-      default:
-         dam = 1;
-         break;
-      }
-      /*
-       * Take bloodlust into account when calculating dam!
-       */
-
-      dam *= 40 - ch->pcdata->vamp_level;
-
-      /*
-       * So dam ranges from 2 (lightning;no bloodlust)
-       * * to 200 (sunny;complete bloodlust)
-       * * And that's each tick!
-       */
-
-      act("$n's skin burns with it's contact with daylight!", ch, NULL, NULL, TO_ROOM);
-      send_to_char("Your skin burns with it's contact with daylight!", ch);
-      if (ch->pcdata->bloodlust <= -5)
-         return;
-      damage(ch, ch, dam, -1);
-   }
-   return;
-}
 
 /* Check for objfuns.... this is probably performance sensitive too. */
 void objfun_update(void)
@@ -1963,7 +1825,7 @@ void aggr_update(void)
          {
             vch_next = vch->next_in_room;
 
-            if (!IS_NPC(vch) && vch->level < LEVEL_IMMORTAL && (!IS_SET(ch->act, ACT_WIMPY) || !IS_AWAKE(vch)) && can_see(ch, vch) && (!(IS_UNDEAD(ch) && IS_VAMP(vch))))
+            if (!IS_NPC(vch) && vch->level < LEVEL_IMMORTAL && (!IS_SET(ch->act, ACT_WIMPY) || !IS_AWAKE(vch)) && can_see(ch, vch))
             {
                if (number_range(0, count) == 0)
                   victim = vch;

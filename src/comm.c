@@ -2179,20 +2179,6 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          sprintf(buf2, "%%");
          i = buf2;
          break;
-      case 'b':
-         if (!IS_NPC(ch) && IS_VAMP(ch))
-            sprintf(buf2, "@@e%d@@N", ch->pcdata->bloodlust);
-         else
-            sprintf(buf2, " ");
-         i = buf2;
-         break;
-      case 'B':
-         if (!IS_NPC(ch) && IS_VAMP(ch))
-            sprintf(buf2, "@@e%d@@N", ch->pcdata->bloodlust_max);
-         else
-            sprintf(buf2, " ");
-         i = buf2;
-         break;
       case 'c':
          if (!IS_NPC(ch))
             sprintf(buf2, "\n\r" );
@@ -3468,9 +3454,6 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
             }
          }
       }
-
-      if (IS_VAMP(ch) && !IS_NPC(ch) && (ch->pcdata->recall_vnum == 3001))
-         ch->pcdata->recall_vnum = 9001;
 
       if (ch->pcdata->hp_from_gain < 0)
          reset_gain_stats(ch);

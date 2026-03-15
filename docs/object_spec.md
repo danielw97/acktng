@@ -121,7 +121,6 @@ Area-authored object definitions must **not** set `ITEM_GENERATED`; that flag is
 - `ITEM_MYTHIC` = `262144`
 - `ITEM_LEGENDARY` = `524288`
 - `ITEM_RARE` = `1048576`
-- `ITEM_VAMP` = `2097152`
 - `ITEM_NOLOOT` = `4194304`
 - `ITEM_NOSAC` = `8388608`
 - `ITEM_UNIQUE` = `16777216`

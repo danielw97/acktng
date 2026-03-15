@@ -1070,9 +1070,6 @@ bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    ch->hit = get_max_hp(ch);
    ch->mana = ch->max_mana;
    ch->move = ch->max_move;
-   if (!IS_NPC(ch))
-      ch->pcdata->bloodlust = ch->pcdata->bloodlust_max;
-
    send_to_char("@@eTHe life force of tha captured soul restores you!\n\r", ch);
    sprintf(buf, " %s has used a restoration spell.\n\r", ch->name);
    monitor_chan(buf, MONITOR_BAD);

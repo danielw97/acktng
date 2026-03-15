@@ -58,7 +58,7 @@ Proposed header strings:
 2. **The Plague Mandate:** During emergency years, civic and military powers fused, turning quarantine into permanent governance.
 3. **The Oath-Fracture:** Competing authorities (crown, church, Compact, commanders) issued conflicting legal rites over life and death.
 4. **Blight Hydrology:** Alchemical disposal and mass burial systems poisoned canals, crypts, and agricultural fringe.
-5. **Living Ruin Politics:** Revenants, vampires, binders, deserters, and plague-adapted fauna all claim legitimacy from different historical layers.
+5. **Living Ruin Politics:** Revenants, aristocratic remnants, binders, deserters, and plague-adapted fauna all claim legitimacy from different historical layers.
 
 ---
 
@@ -84,7 +84,7 @@ Shadowmere is rebuilt into 10 districts of 10 rooms each.
 | II. Siege Courtworks | 1410-1419 | Keep gate and punitive infrastructure | Dense melee + trap pressure |
 | III. Chapel of Broken Oaths | 1420-1429 | Ritual-legal corruption nexus | Caster/control encounters |
 | IV. Catacomb Warline | 1430-1439 | Burial military logistics | Undead rank-and-file pressure |
-| V. Crimson Household | 1440-1449 | Vampiric court occupation | Social-predator elites |
+| V. Crimson Household | 1440-1449 | Aristocratic court occupation | Social-predator elites |
 | VI. Gallows and Toxins | 1450-1459 | Execution economy + poison industry | Attrition and debuff corridor |
 | VII. Necropolis Engine | 1460-1469 | Mass interment and binding works | Sustain fights and summoners |
 | VIII. Fen-Labyrinth Reach | 1470-1479 | Exterior blight ecology | Navigation and ambush gameplay |
@@ -134,7 +134,7 @@ Rebuild all 61 mob vnums as coherent faction ecology:
 - **1400-1412:** March sentries, plague levy soldiers, oath clerks, condemned labor.
 - **1413-1424:** gaol keepers, alchemical orderlies, tribunal adepts, compact wardens.
 - **1425-1436:** ossuary priests, annalist wraiths, catacomb pikemen, bone-smiths.
-- **1437-1448:** vampire household officers, enthralled retinue, duelists, blood stewards.
+- **1437-1448:** Crimson Household officers, enthralled retinue, duelists, blood stewards.
 - **1449-1458:** poisoners, execution crews, necropolis processional captains.
 - **1459-1460 (boss pair):**
  - 1459 **The Countess-Regent of Ashwine** (political apex of Crimson Household)
@@ -153,7 +153,7 @@ Rebuild all 201 object vnums into progression bands:
 
 - **1400-1439:** march gear, registry tablets, ward-badges, low-tier martial kit.
 - **1440-1479:** chapel/catacomb relics, anti-undead and anti-curse utility items.
-- **1480-1529:** vampire court equipment, lifesteal/risk-reward itemization.
+- **1480-1529:** Crimson Household court equipment, lifesteal/risk-reward itemization.
 - **1530-1569:** poison and execution line gear, resist/cleanse tradeoffs.
 - **1570-1594:** necropolis command relics, high-tier oath and control artifacts.
 - **1595-1600:** capstone named pieces from Countess/Marshal/Observatory finale loop.

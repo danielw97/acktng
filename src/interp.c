@@ -320,8 +320,6 @@ const struct cmd_type cmd_table[] = {
      C_TYPE_COMM, C_SHOW_ALWAYS},
     {"game", do_game, POS_RESTING, 0, LOG_NORMAL,
      C_TYPE_COMM, C_SHOW_ALWAYS},
-    {"vamp", do_familytalk, POS_RESTING, VAMP_ONLY, LOG_NORMAL,
-     C_TYPE_COMM, C_SHOW_ALWAYS},
     {"{", do_remorttalk, POS_RESTING, 0, LOG_NORMAL,
      C_TYPE_COMM, C_SHOW_ALWAYS},
     {"diplomat", do_diptalk, POS_RESTING, CLAN_ONLY, LOG_NORMAL,
@@ -357,8 +355,6 @@ const struct cmd_type cmd_table[] = {
      C_TYPE_ACTION, C_SHOW_SKILL},
     {"disarm", do_disarm, POS_FIGHTING, 0, LOG_NORMAL,
      C_TYPE_ACTION, C_SHOW_SKILL},
-    {"feed", do_feed, POS_FIGHTING, VAMP_ONLY, LOG_NORMAL,
-     C_TYPE_ACTION, C_SHOW_SKILL},
     {"flee", do_flee, POS_FIGHTING, 0, LOG_NORMAL,
      C_TYPE_ACTION, C_SHOW_SKILL},
     {"headbutt", do_headbutt, POS_FIGHTING, 0, LOG_NORMAL,
@@ -386,8 +382,6 @@ const struct cmd_type cmd_table[] = {
     {"punch", do_punch, POS_FIGHTING, 0, LOG_NORMAL,
      C_TYPE_ACTION, C_SHOW_SKILL},
     {"rescue", do_rescue, POS_FIGHTING, 0, LOG_NORMAL,
-     C_TYPE_ACTION, C_SHOW_SKILL},
-    {"stake", do_stake, POS_STANDING, 5, LOG_ALWAYS,
      C_TYPE_ACTION, C_SHOW_SKILL},
     {"stun", do_stun, POS_FIGHTING, 0, LOG_NORMAL,
      C_TYPE_ACTION, C_SHOW_SKILL},
@@ -566,14 +560,6 @@ const struct cmd_type cmd_table[] = {
     {"learned", do_learned, POS_SLEEPING, 0, LOG_NORMAL,
      C_TYPE_INFO, C_SHOW_ALWAYS},
 
-    /*
-     *    Vampyre and REMORT SKILLS Zen
-     */
-
-    {"family", do_family, POS_RESTING, VAMP_ONLY, LOG_NORMAL,
-     C_TYPE_INFO, C_SHOW_ALWAYS},
-    {"instruct", do_instruct, POS_STANDING, VAMP_ONLY, LOG_NORMAL,
-     C_TYPE_ACTION, C_SHOW_ALWAYS},
     {"scout", do_scout, POS_STANDING, 1, LOG_NORMAL,
      C_TYPE_ACTION, C_SHOW_SKILL},
 
@@ -950,17 +936,12 @@ void interpret(CHAR_DATA *ch, char *argument)
       /*
        * Stephen Mod:  if level == CLAN_ONLY then for clan member only.
        * == BOSS_ONLY have to be leader.
-       * == -3 vamp
-       * == -4 wolf
        */
 
       if (cmd_table[cmd].level == CLAN_ONLY && !IS_NPC(ch) && ch->pcdata->clan == 0)
          continue;
 
       if (cmd_table[cmd].level == BOSS_ONLY && !IS_NPC(ch) && !IS_SET(ch->pcdata->pflags, PFLAG_CLAN_BOSS))
-         continue;
-
-      if (cmd_table[cmd].level == VAMP_ONLY && !IS_NPC(ch) && !IS_VAMP(ch) && (ch->level != L_GOD))
          continue;
 
       if (command[0] == cmd_table[cmd].name[0] && !str_cmp(command, cmd_table[cmd].name) && (cmd_table[cmd].level <= trust || MP_Commands(ch)))
@@ -978,9 +959,6 @@ void interpret(CHAR_DATA *ch, char *argument)
             continue;
 
          if (cmd_table[cmd].level == BOSS_ONLY && !IS_NPC(ch) && !IS_SET(ch->pcdata->pflags, PFLAG_CLAN_BOSS))
-            continue;
-
-         if (cmd_table[cmd].level == VAMP_ONLY && !IS_NPC(ch) && !IS_VAMP(ch) && (ch->level != L_GOD))
             continue;
 
          if (command[0] == cmd_table[cmd].name[0] && !str_prefix(command, cmd_table[cmd].name) && (cmd_table[cmd].level <= trust || MP_Commands(ch)))

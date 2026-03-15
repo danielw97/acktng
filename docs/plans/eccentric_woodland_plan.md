@@ -50,7 +50,6 @@ This plan rebuilds the woodland as Midgaard's unstable southern corridor and Rak
 25. Within each sub-region, non-sentinel mobs must be confined by `sentinel` flag or `no_mob` room walls so they cannot wander out of their sub-region.
 26. No builder-set `invasion` flag (`536870912`); this is a runtime-only flag.
 27. Mobs intended to appear only during daytime must include `day_only` (`2147483648`) in `act`; mobs intended to appear only during nighttime must include `night_only` (`4294967296`). Do not set both simultaneously (runtime treats both-set as unrestricted). Time-gated mobs in Eccentric Woodland (e.g., nighttime ambush bands, daytime patrol wardens) must use these flags rather than relying on description text alone.
-28. Do not set `AFF_VAMP_HEALING` (`33554432`) in `affected_by` on any mob in area files.
 28. Every object must include `take` (`8388608`) in `wear_flags`.
 29. No object may include `clan_colors` (`16777216`) in `wear_flags`.
 30. Loot-table items must have `ITEM_LOOT` (`67108864`) in `extra_flags`; any item that can drop from a boss must also have `ITEM_BOSS` (`134217728`).
@@ -354,8 +353,6 @@ The Bell-Eater Stag (7385) is an apex boss without a dedicated standalone quest 
 - [ ] Strong non-boss elites include `solo`.
 - [ ] Sub-region mobs are sentinel-flagged or enclosed by `no_mob` walls.
 - [ ] Time-gated mobs use `day_only` or `night_only` act flags; neither flag sets both simultaneously.
-- [ ] No `AFF_VAMP_HEALING` set in any `affected_by` field.
-
 ### Objects
 - [ ] Every object includes `take` in `wear_flags`; no object includes `clan_colors`.
 - [ ] No object sets `ITEM_GENERATED` in `extra_flags`.

@@ -1,7 +1,0 @@
-level -3
-keywords instruct
----
-Syntax: instruct <target> <order>
-
-Vampyre family instruction/order command.
-Only vampyres (or appropriate admin trust) may use this command.
