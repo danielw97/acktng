@@ -39,6 +39,10 @@
  * Local functions.
  */
 void say_spell args((CHAR_DATA * ch, int sn));
+void aoe_damage(CHAR_DATA *ch, OBJ_DATA *obj, int sn, int level,
+                int min_dam, int max_dam, int element, int flags);
+#define AOE_SAVES      (1 << 0)
+#define AOE_SKIP_GROUP (1 << 1)
 
 
 
@@ -1076,22 +1080,17 @@ bool spell_call_lightning(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *
       act("$p summons lightning to strike $n's foes!", ch, obj, NULL, TO_ROOM);
       act("$p summons lightning to strike your foes!", ch, obj, NULL, TO_CHAR);
    }
+
+   aoe_damage(ch, obj, sn, level, dam, dam,
+              ELEMENT_AIR | NO_REFLECT | NO_ABSORB, AOE_SAVES);
+
+   /* Notify others in the same area who are outdoors. */
    CREF(vch_next, CHAR_NEXTROOM);
    for (vch = first_char; vch != NULL; vch = vch_next)
    {
       vch_next = vch->next;
-      if (vch->in_room == NULL)
+      if (vch->in_room == NULL || vch->in_room == ch->in_room)
          continue;
-      if (vch->in_room == ch->in_room)
-      {
-         if (vch != ch && (IS_NPC(ch) ? !IS_NPC(vch) : IS_NPC(vch)))
-         {
-            sp_damage(obj, ch, vch, (saves_spell(level, vch) ? dam / 2 : dam),
-                      ELEMENT_AIR | NO_REFLECT | NO_ABSORB, sn, TRUE);
-         }
-         continue;
-      }
-
       if (vch->in_room->area == ch->in_room->area && IS_OUTSIDE(vch) && IS_AWAKE(vch))
          send_to_char("Lightning flashes in the sky.\n\r", vch);
    }

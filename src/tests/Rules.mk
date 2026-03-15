@@ -149,6 +149,13 @@ unit-test-magic: $(OBJDIR)/tests/test_magic.o $(OBJDIR)/magic.unit-test.o $(OBJD
 	rm -f tests/unit-test-magic
 	$(CC) -Wl,--gc-sections -o tests/unit-test-magic $(OBJDIR)/tests/test_magic.o $(OBJDIR)/magic.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
+$(OBJDIR)/magic2.unit-test.o: magic2.c headers/ack.h
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/magic2.unit-test.o magic2.c
+
+unit-test-magic2: $(OBJDIR)/tests/test_magic2.o $(OBJDIR)/magic2.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
+	rm -f tests/unit-test-magic2
+	$(CC) -Wl,--gc-sections -o tests/unit-test-magic2 $(OBJDIR)/tests/test_magic2.o $(OBJDIR)/magic2.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+
 $(OBJDIR)/magic4.unit-test.o: magic4.c headers/ack.h
 	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/magic4.unit-test.o magic4.c
 
@@ -263,7 +270,7 @@ unit-test-death: $(OBJDIR)/tests/test_death.o $(OBJDIR)/death.unit-test.o $(OBJD
 	rm -f tests/unit-test-death
 	$(CC) -Wl,--gc-sections -o tests/unit-test-death $(OBJDIR)/tests/test_death.o $(OBJDIR)/death.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp
+unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-magic2 unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp
 	./tests/unit-test-act-flags
 	./tests/unit-test-area-format
 	./tests/unit-test-help-format
@@ -286,6 +293,7 @@ unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit
 	./tests/unit-test-reincarnate
 	./tests/unit-test-db
 	./tests/unit-test-magic
+	./tests/unit-test-magic2
 	./tests/unit-test-magic4
 	./tests/unit-test-mapper
 	./tests/unit-test-damage
