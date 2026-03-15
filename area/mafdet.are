@@ -2283,4 +2283,732 @@ D3
 ~
 0 -1 14332
 S
+#14350
+@@gTidewall Walk, Northern End@@N~
+@@gThe Tidewall's northern end is where the harbor district's southward curve meets the seaward defensive perimeter — the transition from commercial harbor to institutional wall defining Mafdet's seaward boundary.@@N The wall is the oldest continuously maintained structure in the city, its lower courses cut from the same dark basalt as the Strand Folk approach markers in the Tidemouth Dunes, predating the Compact's harbor expansion by generations of charter authority. @@gBarnacle encrustation covers the seaward face to nearly two body-lengths, the tideline of exceptional storms preserved in white calcium deposits at irregular intervals above the wash zone.@@N The wall-walk extends southward along the Tidewall's length — wide enough for two people abreast, the seaward face dropping steeply to the exterior shingle below and the inner face presenting the sealed backs of residential buildings to any observer on the walk. @@gSalt mist drifts in from the east when wind drives from open water, coating exposed stone and clothing with a thin crystalline deposit within minutes.@@N
+~
+0 1
+D0
+~
+~
+0 -1 14349
+D2
+~
+~
+0 -1 14351
+S
+#14351
+@@gTidewall Walk, Northern Section@@N~
+@@gThe northern section of the Tidewall walk develops the residential character of the district — buildings pressed against the wall's interior face show the shell-inlay decorative work of the Strand Folk architectural tradition, geometric patterns of cockle, barnacle cap, and periwinkle set into the surrounding stone.@@N @@gA notched gap in the seaward parapet provides access to the outer face of the wall to the east, where the sea-light has a different quality than the harbor-reflected light on the city side.@@N The walk continues southward toward the shell-inlay court at the Tidewall's residential center.
+~
+0 1
+D0
+~
+~
+0 -1 14350
+D1
+~
+~
+0 -1 14353
+D2
+~
+~
+0 -1 14352
+S
+#14352
+@@gTidewall Walk, Residential Quarter North@@N~
+@@gThe residential north section of the Tidewall walk is the most compressed district in Mafdet — buildings lean in from the interior face of the wall, their upper stories cantilevered outward to reclaim space that the wall's footprint denies at ground level.@@N A narrow doorway in the west face opens into a residential interior, the threshold worn smooth by generations of passage. @@gThe inner residential court is accessible from this point; the walk continues south toward the shell-inlay facade courts.@@N
+~
+0 1
+D0
+~
+~
+0 -1 14351
+D2
+~
+~
+0 -1 14354
+D3
+~
+~
+0 -1 14355
+S
+#14353
+@@gTidewall Seawall Face@@N~
+@@gThe notched gap in the outer parapet opens into a small platform where the seawall face is fully exposed — the exterior drop from here is substantial, the stone going down in a near-vertical face to the outer shingle below.@@N The sea is visible in both directions: the harbor mouth to the north and the open coast stretching southward along the exterior face. @@gThe outer stone is more heavily weathered here than on the interior walk, exposed to salt air and wave impact without the shelter of any overhanging structure.@@N
+~
+0 1
+D3
+~
+~
+0 -1 14351
+S
+#14354
+@@gTidewall Residences, Shell-Inlay Court@@N~
+@@gThe Shell-Inlay Court is the Tidewall's most visually distinctive residential precinct — the facade work here is more elaborate and better preserved than anywhere else on the wall-walk, the Strand Folk decorative tradition maintained by families whose shellwork skills pass from parent to child as a community obligation.@@N Beacon sconces of salt-glazed ceramic are mounted at regular intervals along the interior wall face, their reflector plates designed to cast light along the wall-walk and down into the residential court below. @@gThe patterns in the shell-inlay work use a consistent grammar: horizontal bands of cockle representing tidal height, vertical runs of periwinkle marking seasonal boundaries, and single rows of red oyster shell at the level of the highest remembered storm.@@N A lintel stone at the precinct's northern edge bears a Strand Folk inscription — the oldest readable notation in this section of the wall, identifying this as the court of those who remember what the water answered. @@gThe beacon sconces are still lit at dusk by whoever is first home to the court, a maintained custom predating the Strandline Compact's authority in the city.@@N
+~
+0 1
+D0
+~
+~
+0 -1 14352
+D2
+~
+~
+0 -1 14356
+S
+#14355
+@@gTidewall Residential Interior@@N~
+@@gA typical Tidewall dwelling: a ground-floor room with a sleeping shelf above, the ceiling too low for comfortable standing at the interior perimeter, the walls painted with salt-lime wash to counteract the permanent damp.@@N The household's possessions are stored in sealed clay containers stacked against the inner wall — each container stamped with the family's shellwork mark, a practical response to the moisture that works through the wall's stone at seasonal high-water. @@gA small oil lamp hangs from an iron hook in the ceiling, its ceramic shade blackened with use.@@N
+~
+0 11
+D1
+~
+~
+0 -1 14352
+S
+#14356
+@@gTidewall Walk, Central Section@@N~
+@@gThe central section of the Tidewall walk maintains the same character as the northern sections but with a more pronounced sense of age — the paving stones are larger and more irregular, repaired at intervals with smaller replacement stones that have settled at slightly different levels.@@N A commercial alcove built into the seaward face of the wall is accessible to the east, used by vendors who prefer the reduced foot traffic of the wall-walk over the busier market areas inland. @@gThe walk narrows slightly here, the inner buildings pressing closer to the wall's spine.@@N
+~
+0 1
+D0
+~
+~
+0 -1 14354
+D1
+~
+~
+0 -1 14357
+D2
+~
+~
+0 -1 14359
+S
+#14357
+@@gTidewall Commercial Niche@@N~
+@@gThe alcove in the seaward wall face has been used as commercial space for as long as current residents remember — the walls are marked with price notations in at least four different notational systems, the most recent layer in Harbor-Operational shorthand overlaid on older Legal-Commercial inscriptions and older still Strand Folk pictographic marks.@@N The space is barely large enough for a vendor's table and two standing adults, the ceiling formed by a repaired section of the original foundation stone. @@gA single narrow window in the outer wall admits sea-light and salt air in approximately equal measure throughout the day.@@N
+~
+0 1
+D3
+~
+~
+0 -1 14356
+S
+#14358
+@@gStrand Rememberer's Alcove@@N~
+@@gThe alcove is a dedicated space maintained by the Strand Rememberers — the oldest practitioner's hall on the Tidewall, its walls covered in navigation song tablets, flat stone slabs inscribed with the coastal approach sequences that Strand Folk pilots used before written charts replaced oral tradition.@@N The Strand Rememberer who keeps this alcove is among the most senior practitioners remaining, a guardian of oral cartography in a city that has largely transitioned to Littoral Branch written documentation. @@gThe navigation songs inscribed on the tablets are functional memory tools, each sequence encoding the tidal approach to a specific coastal landmark in a format that can be learned by ear and recalled under stress.@@N The guardian origin stories of the Strand Folk are also kept here, separate from the navigation tablets on a lower shelf of smoothed basalt — the earliest-layer accounts of the agreement between coastal communities and the city-building traditions that created Mafdet's jurisdictional framework. @@gThe alcove smells of salt, old stone, and the beeswax used to protect the tablet surfaces from moisture.@@N
+~
+1024 11
+D1
+~
+~
+0 -1 14359
+E
+navigation song tablets~
+@@gThe navigation songs on the wall tablets use a three-part structure: the approach sequence (tidal height and bearing markers from open water), the landmark sequence (visible features in order of appearance), and the caution sequence (seasonal hazards and their indicators). Each tablet covers one approach to one coastal landmark, and the alcove contains tablets for more than forty approach lines along the coast in both directions from Mafdet. The oldest tablets predate the Strandline Compact's chartering of the harbor; the newest are dated to within living memory, added when a new hazard was confirmed and documented.@@N
+~
+E
+guardian origin stories~
+@@gThe guardian origin stories kept on the lower shelf are not a single narrative but parallel accounts from different Strand Folk communities, all describing the same event: the appearance of a feline form at a coastline where no such animal should exist, followed by a period of protected fishing and safe passage that ended when a specific oath was broken. The accounts differ in detail but agree on the mechanism — the guardian appeared, made an agreement, and departed when the agreement was violated. The Strand Rememberers treat these as historical records, not theology.@@N
+~
+S
+#14359
+@@gTidewall Walk, Central South@@N~
+@@gThe south-central section of the Tidewall walk is quieter than the northern residential precinct — fewer buildings press against the inner face here, and the walk broadens slightly where an earlier structure has been removed and not replaced.@@N A Strand Rememberer's alcove is accessible to the west through a stone arch worn smooth at its keystone by generations of hands pressing through the narrow passage. @@gThe seawall's outer face is solid here, no viewpoint gaps in the parapet, the Tidewall at its most opaque and defensive.@@N
+~
+0 1
+D0
+~
+~
+0 -1 14356
+D2
+~
+~
+0 -1 14361
+D3
+~
+~
+0 -1 14358
+S
+#14360
+@@gTidewall Seawall Parapet@@N~
+@@gThe parapet section extends outward from the main wall-walk to a slightly elevated platform with low stone walls on three sides — a defensive emplacement in the original wall design, now repurposed as a viewpoint used by Tidewall residents for observing weather approaching from the open sea.@@N The sea is directly below, the drop to the shingle more substantial here than at the notched platform to the north; water can be seen moving against the wall's exterior face in a churning pattern where incoming and reflected waves interact. @@gA recessed iron socket in the parapet's south wall was once a mounting point for a staff or instrument — the socket has been empty for as long as any resident remembers.@@N
+~
+0 1
+D3
+~
+~
+0 -1 14361
+S
+#14361
+@@gTidewall Walk, Southern Section@@N~
+@@gThe southern section of the Tidewall walk shows its age more clearly than the northern sections — the foundation courses here are slightly more irregular, the repair work less systematic, suggesting this portion of the wall was built earlier and under different construction standards.@@N @@gA parapet emplacement to the east provides a vantage point over the sea below; carved notations on the inner face carry both Strand Folk pictographic marks and Strandline Compact surveying notation, indicating the same set of tidal measurements in their respective systems.@@N The inner buildings press more closely against the wall here than anywhere else on the walk, their construction directly utilizing the wall's outer face as a shared structural element.
+~
+0 1
+D0
+~
+~
+0 -1 14359
+D1
+~
+~
+0 -1 14360
+D2
+~
+~
+0 -1 14362
+S
+#14362
+@@gTidewall Walk, Southern End@@N~
+@@gThe walk reaches its southern terminus at a wider platform where the Tidewall's seaward face meets the wall's structural base, the foundation courses here thicker and more deeply embedded in the coastal bedrock than anywhere else on the accessible walk.@@N @@gThe oldest construction in the Tidewall is visible in this section — the lower stone courses are not shaped to modern dimensions but cut to the irregular shapes of the original quarried basalt, fitted with wedge stones and sealed with a bitumen compound that has hardened over generations to a substance nearly indistinguishable from the surrounding rock.@@N The walk narrows to a single-file path beyond this point, turning inward along the wall's foundation toward the lower approach.
+~
+0 1
+D0
+~
+~
+0 -1 14361
+D2
+~
+~
+0 -1 14363
+S
+#14363
+@@gTidewall Lower Approach@@N~
+@@gThe lower approach follows the wall's foundation inward, the overhead clearance decreasing as the surrounding structure presses in on both sides — the Tidewall's foundation mass is greatest here, the stone thick enough that the outer sea and the inner city are equally inaudible.@@N The path is damp at all hours, moisture seeping through the foundation stone from the tidal zone on the outer face, the floor retaining a permanent thin film of water in the low spots between uneven paving stones. @@gAt the path's southern end, a rusted iron fitting in the floor marks the location of the undercroft stair, though most residents have no key to open it.@@N
+~
+0 1
+D0
+~
+~
+0 -1 14362
+D2
+~
+~
+0 -1 14364
+S
+#14364
+@@gTidewall Undercroft Stair@@N~
+@@gThe undercroft stair is marked by an iron undercroft grate set flush with the floor, its bars corroded to a uniform orange-brown but structurally sound — the iron is old enough that it has likely been locked for longer than the current Strandline Compact has governed Mafdet.@@N The stair descends through the grate into the Tidewall's foundation zone, the air from below carrying the smell of tidal water and something older and colder that is not easily named. @@gThe iron undercroft grate bears a stamp on its center bar: a stylized wave over a sealed vessel, in the containment-notation style that the Quarantine Ledger uses for sealed passages.@@N
+~
+0 1
+D0
+~
+~
+0 -1 14363
+D5
+~
+^iron undercroft grate~
+1 14268 14365
+E
+iron undercroft grate~
+@@gThe grate's lock mechanism is a slot-style cylinder requiring a specific key — the mechanism is too coarse for finesse lockpick work but solid enough that forcing it would take equipment the wall-walk lacks. The stamp on the center bar (wave over sealed vessel) is a Quarantine Ledger notation for a passage containment-sealed by Compact authority, suggesting whatever lies below was at some point considered a regulatory matter rather than merely a structural one. The date stamp beside the containment mark is worn past legibility.@@N
+~
+S
+#14365
+@@gUndercroft Upper Landing@@N~
+@@gThe landing inside the iron grate is a single stone platform at the top of a flight of steep steps cut directly into the Tidewall's foundation bedrock — the construction is older than any notation system still in active use, the stair profiles worn smooth by passage that predates the city's current institutional identity.@@N The air here is immediately different from the wall-walk above: colder, damp in a way that touches the inside of the lungs rather than the skin, carrying the mineral smell of tidal stone. @@gThe stair descends into darkness below the landing; the southern passage continues at the landing level into the flooded foundation network that runs beneath the Tidewall's seaward base.@@N
+~
+0 11
+D4
+~
+^iron undercroft grate~
+1 14268 14364
+D2
+~
+~
+0 -1 14366
+S
+#14366
+@@gFlooded Foundation Passage@@N~
+@@gWater rises to mid-shin in this flooded passage — a permanent tidal incursion into the Tidewall's foundation zone, the water neither fresh nor cleanly saline but brackish and mineral-laden, its surface carrying a thin film of dissolved rock compounds.@@N The passage walls are original foundation stone, the mortar between courses entirely dissolved by tidal cycling, the stones held in place only by their weight and the compression of surrounding rock. @@gThe darkness here is complete without a carried light source; the sound of water moving through cracks in the foundation stone provides orientation when sight fails.@@N
+~
+1 6
+D0
+~
+~
+0 -1 14365
+D1
+~
+~
+0 -1 14367
+D2
+~
+~
+0 -1 14369
+S
+#14367
+@@gFlooded Foundation, Northern Arm@@N~
+@@gThe northern arm of the flooded foundation passages is marginally drier than the main channel — the water here reaches ankle height rather than mid-shin, the tidal incursion less complete this far from the seaward face.@@N @@gThe passage walls carry carved marks at regular intervals: square notations in Survey-Administrative style indicating structural load distribution points, still legible despite centuries of water exposure.@@N A secondary passage continues eastward, the water deepening as it moves toward the foundation's seaward side.
+~
+0 6
+D3
+~
+~
+0 -1 14366
+D1
+~
+~
+0 -1 14368
+S
+#14368
+@@gAncient Tidal Pool@@N~
+@@gThe foundation erosion here has created a wider chamber where the original stone courses have separated along a natural fracture line, allowing tidal water to pool in a basin-like depression in the floor.@@N @@gThe pool is still, unlike the moving water in the passages — sediment has settled to the bottom in fine layers, each layer representing a season's tidal cycle, the deepest layers compressed to a pale paste.@@N The chamber opens northward into another arm of the flooded passages and southward into the tidal chamber complex.
+~
+0 6
+D3
+~
+~
+0 -1 14367
+D2
+~
+~
+0 -1 14370
+S
+#14369
+@@gTidal Pool Alcove@@N~
+@@gThe alcove at the end of the northern tidal pool arm is a dead-end — the passage terminates at a sealed section where the original construction was built solid, no passage beyond.@@N @@gThe walls of the alcove are covered in tidal deposit organisms: tube worms, barnacle clusters, and a pale luminescent lichen that provides just enough light to make out the alcove's dimensions without any carried source.@@N The floor here is submerged under the same still water as the main pool, the sediment layers undisturbed by any recent movement.
+~
+0 6
+D0
+~
+~
+0 -1 14366
+S
+#14370
+@@gCollapsed Tidal Chamber@@N~
+@@gThe tidal chamber has partially collapsed — the ceiling has dropped in a section to the east, creating a rubble slope that extends into the standing water and reduces passage height to a level requiring a crouch to navigate.@@N @@gThe collapse appears old, the fallen stone already coated in the same mineral deposit as the surrounding walls, suggesting the event predates any current occupancy of the undercroft.@@N Two directions remain passable: east through the collapsed section and south toward a junction of flooded passages.
+~
+0 6
+D0
+~
+~
+0 -1 14368
+D1
+~
+~
+0 -1 14371
+D2
+~
+~
+0 -1 14373
+S
+#14371
+@@gCollapsed Tidal Chamber, Eastern Section@@N~
+@@gThe eastern section of the collapsed tidal chamber is a compressed dead-end — the rubble slope continues to the east wall, where the original passage is entirely blocked by fallen stone.@@N @@gThe material of the collapse is the same dark basalt as the surrounding wall, but fragments here show tool marks on their inner faces, suggesting the passage beyond the blockage was deliberately constructed rather than a natural void.@@N Whatever lay east of this blockage is now inaccessible without excavation equipment.
+~
+0 6
+D3
+~
+~
+0 -1 14370
+S
+#14372
+@@gSubmerged Rubble Passage@@N~
+@@gThe rubble passage is barely navigable — a crack between a collapsed section of the outer wall and the undercroft floor, wide enough for one person to move through sideways with equipment held above the water line.@@N @@gThe passage is completely dark, the low ceiling preventing any light from reflecting more than a step ahead, and the footing is unreliable: the rubble underfoot shifts in the water.@@N The passage dead-ends a short distance in, the crack narrowing to a gap too small for passage, with the sound of the sea audible directly through the outer wall.
+~
+1 6
+D1
+~
+~
+0 -1 14373
+S
+#14373
+@@gFlooded Undercroft Junction@@N~
+@@gThe flooded junction is a widening of the undercroft passage network where several corridors converge — the water here is deeper than in the approach passages, reaching to waist height at the lowest point, and the flow shows tidal flushing from multiple directions.@@N @@gThe ceiling has held in this section, the original vault construction intact above the water line, the arch profiles showing the same foundation-era masonry as the upper landing.@@N Passages continue north toward the collapsed chamber area, west into a sealed dead-end passage, and east toward a section where the water is shallower and the character of the undercroft changes.
+~
+0 6
+D0
+~
+~
+0 -1 14370
+D3
+~
+~
+0 -1 14372
+D1
+~
+~
+0 -1 14374
+S
+#14374
+@@gSmuggler's Cache@@N~
+@@gThe eastern end of the flooded passage network opens into a drier chamber where the floor has been raised above the tidal water line on a platform of salvaged stone — the work is recent enough that the mortar is still relatively sound, the stones level and deliberately placed.@@N @@gMislabeled relic crates are stacked against the chamber's northern wall, each bearing Quarantine Ledger containment classification marks in the correct format, but with handwritten corrections to the weight and origin entries that suggest the labeling has been altered after the fact.@@N A passage continues south toward another staging area and east toward the Synod's operational section.
+~
+0 11
+D3
+~
+~
+0 -1 14373
+D2
+~
+~
+0 -1 14375
+D1
+~
+~
+0 -1 14376
+E
+mislabeled relic crates~
+@@gThe relic crates bear the external format of Quarantine Ledger Class Two containment packaging: sealed wax impressions, weight-certified stamps, and origin notation in Legal-Commercial script. The handwritten corrections are in a different ink and a different hand than the primary labeling — the corrected entries replace what appear to have been accurate origin marks with generic transit notations, and the weight figures have been adjusted upward in a way consistent with adding material to an already-sealed container. The classification marks have not been altered, which suggests whoever made the corrections was relying on the marks being taken at face value by inspectors who would not open the crates.@@N
+~
+S
+#14375
+@@gSmuggler's Route Passage@@N~
+@@gThe southern staging passage extends further into the flooded undercroft before dead-ending at a sealed section where the original foundation wall has been deliberately reinforced — the addition is clearly newer than the surrounding stone, using a different mortar composition and slightly larger stone courses.@@N @@gThe passage floor is uneven, sections of loose rubble mixed with the permanent sediment layer, the footing unreliable for anything requiring stable ground.@@N The passage clearly served as a staging route at some point — the walls bear rope scoring at a consistent height, the marks left by lines pulled along the passage under load.
+~
+0 6
+D0
+~
+~
+0 -1 14374
+S
+#14376
+@@gSynod Transit Corridor@@N~
+@@gThe transit corridor is marked with Synod wayfinding symbols — angular characters in the Eclipsed Tongues notational system, painted in a phosphorescent compound that glows faintly in the absence of other light sources.@@N @@gThe water here is deeper than in the smuggler's section, the floor dropping as the passage approaches the Synod's operational zone, and the salt content is higher — this section of the undercroft has more direct connection to the tidal incursion.@@N The symbols guide movement through the dark: a sequence of marks indicating direction, hazard, and identity checkpoint for anyone who knows the Synod's internal system.
+~
+1 6
+D3
+~
+~
+0 -1 14374
+D2
+~
+~
+0 -1 14377
+S
+#14377
+@@gSynod Guard Post@@N~
+@@gThe guard post is a platform built above the waterline at the intersection of the transit corridor and the Synod's internal passages — three stone benches, a lamp socket on a post driven into the floor cracks, and a series of marks on the wall indicating shift rotations and challenge responses in Eclipsed Tongues notation.@@N @@gThe Synod guards this position at all hours, the post functioning as a checkpoint for movement between the flooded transit section and the operational interior.@@N Passages continue northward into the transit corridor and southward into the operations cell.
+~
+0 11
+D0
+~
+~
+0 -1 14376
+D2
+~
+~
+0 -1 14378
+S
+#14378
+@@gSynod Operations Cell@@N~
+@@gThe Synod's Mafdet operations cell is a converted foundation chamber, its original purpose long obscured by the Eclipsed Tongues' systematic repurposing of the undercroft's structure.@@N @@gThe chamber is large enough to function as a command post: a raised stone table, document storage in sealed containers adapted from the same format as the mislabeled relic crates in the smuggler's cache, and a signal mechanism on the western wall whose construction involves components salvaged from multiple different operational traditions.@@N @@gRitual materials are visible alongside the operational equipment: funerary components in sealed pouches, relic-handling tools in a format consistent with adapted funerary protocols for maritime transport, and written instructions mixing Legal-Commercial script with Eclipsed Tongues notation.@@N @@gThe cell's function is clearly import-export logistics for relic-class contraband: coordinating the movement of funerary materials from inland pyramid traditions through Mafdet's harbor without passing through the Quarantine Ledger's inspection procedures.@@N @@gThe Synod has operated here long enough that the cell has accumulated the detritus of sustained occupation: worn tools, patched equipment, and a roster on the north wall listing operational personnel by code name and last contact date.@@N
+~
+5 11
+D0
+~
+~
+0 -1 14377
+D1
+~
+~
+0 -1 14379
+D2
+~
+~
+0 -1 14381
+S
+#14379
+@@gSynod Cell Annexe@@N~
+@@gThe cell annexe serves the Synod operations cell as storage and ritual preparation space — the shelves along the north wall hold components that cannot be stored in the damp transit passages, the more fragile materials in sealed clay containers bearing Eclipsed Tongues classification marks.@@N @@gA preparation surface in the center of the annexe shows evidence of sustained use: scoring, staining, and embedded material consistent with the processing of relic-class objects for transit packaging.@@N The annexe connects southward to the ritual chamber where the Synod performs its preparation work before sealing finished packages for transport.
+~
+0 11
+D3
+~
+~
+0 -1 14378
+D2
+~
+~
+0 -1 14380
+S
+#14380
+@@gSynod Ritual Chamber@@N~
+@@gThe ritual chamber is the Synod cell's consecration space — the room where relic-class materials receive the Eclipsed Tongues' transit blessing before being sealed in their final packaging.@@N @@gThe walls are covered in ritual notation in the Eclipsed Tongues system, the symbols here more elaborate than the transit waymarks in the flooded passages, suggesting deliberate ceremonial intent rather than operational shorthand.@@N The chamber's floor bears a circular mark in chalked pigment — a consecration boundary that must be maintained in a specific state for the ritual's efficacy, according to the Synod's internal protocols.
+~
+1 11
+D0
+~
+~
+0 -1 14379
+S
+#14381
+@@gDeep Undercroft Passage@@N~
+@@gThe passage narrows to its most constricted point here, requiring near-total submersion to navigate — the ceiling drops to less than half a meter above the water line, the walls pressing in simultaneously.@@N @@gThe water is at its deepest in this section, the channel having cut into the foundation bedrock over cycles of tidal flushing, the stone below smooth enough to indicate sustained water flow over an extended period.@@N The passage ends at a fitted stone slab slightly offset from its frame, the offset large enough for a prepared swimmer to pass through.
+~
+1 6
+D0
+~
+~
+0 -1 14378
+D2
+~
+~
+0 -1 14382
+S
+#14382
+@@gFlooded Relic Vault@@N~
+@@gThe Flooded Relic Vault is the Tidewall's deepest sealed chamber — a Foundation-era construction designed for permanent containment of materials that could not be safely stored, transported, or destroyed under the Compact's original protocols.@@N @@gThe chamber is submerged to waist depth; the water here is colder than anywhere else in the undercroft, a temperature differential not explained by depth or isolation alone — the cold appears to radiate from a central point in the chamber rather than from the walls or water.@@N @@gA low humming is audible at certain hours — the sound has no identifiable mechanical source, and its timing corresponds to the approach of dawn in the world above, though no light reaches this depth.@@N @@gThe artifact at the chamber's center is sealed in a containment format consistent with Khar'Daan Third Dynasty funerary tradition, its outer shell intact but showing signs of attunement work — the shell surface bears Eclipsed Tongues ritual marks alongside the original funerary glyphs.@@N @@gThe Synod has been working to extract or adapt this artifact for sea transport, and has sent its most capable operative to oversee the final stage of that process.@@N
+~
+5 11
+D0
+~
+~
+0 -1 14381
+D3
+~
+~
+0 -1 14383
+S
+#14383
+@@gRelic Vault Antechamber@@N~
+@@gThe antechamber before the flooded vault is a narrow space, barely more than a widening of the deep passage, its function serving as a transition between the water-depth of the approach and the vault itself.@@N @@gThe floor here is higher than the passage to the north, a natural shelf of foundation stone that allows someone to stand before the vault entry and prepare for the full-depth submersion required to pass through the vault door.@@N A passage continues southward into a sealed side chamber, part of the original vault complex's secondary storage.
+~
+1 11
+D1
+~
+~
+0 -1 14382
+D2
+~
+~
+0 -1 14384
+S
+#14384
+@@gSealed Side Chamber@@N~
+@@gThe sealed side chamber is part of the vault complex's original design — a secondary storage room whose connection to the main vault has been permanently sealed, leaving it accessible only from the antechamber.@@N @@gThe chamber is dry compared to the rest of the vault complex: elevated on a natural stone shelf above the tidal incursion line, its walls showing none of the moisture damage of the flooded sections.@@N Whatever the chamber once held is gone — the floor is bare stone, the walls unmarked, the ceiling intact.
+~
+0 11
+D0
+~
+~
+0 -1 14383
+S
+#14385
+@@yTerrace Stair, Ledger Side@@N~
+@@yThe Ledger Side stair of the Shrine Terrace is a broad flight of basalt steps cut directly into the Assessment Courtyard's rock face, the steps wide enough for cargo-bearing ascent in the original design — the Shrine Terrace was a practical judicial space before it became a ceremonial one.@@N The stair faces west at this landing, looking back over the Ledger Quarter's dense archive rooflines toward the Carter's Way approach from the city gate. @@yThe carved step edges carry the same Saltweight calibration marks as the assessment yard below, indicating that the stair was originally considered part of the commercial district's measurement infrastructure.@@N
+~
+0 1
+D5
+~
+~
+0 -1 14277
+D1
+~
+~
+0 -1 14386
+S
+#14386
+@@yTerrace Western Approach@@N~
+@@yThe western approach to the Shrine Terrace follows the stone ramp between the Ledger Side stair landing and the main terrace platform, the gradient increasing as it rounds the basalt shoulder of the terrace's western face.@@N @@gThe ramp wall here carries carved claw marks — four parallel grooves pressed into the stone, the guardian's signature appearing as a physical warning that the terrace's jurisdiction begins at this point.@@N The main terrace platform is visible ahead: a broad open expanse of dark basalt with the claw-marked spire at its center.
+~
+0 1
+D3
+~
+~
+0 -1 14385
+D1
+~
+~
+0 -1 14389
+S
+#14387
+@@gTerrace Stair, Harbor Side@@N~
+@@gThe Harbor Side stair is a steeper ascent than the Ledger Side — the rock face here is more vertical, the steps cut at a sharper angle that requires more deliberate footing on descent.@@N @@gThe stair faces east at this landing, the harbor basin and the Signal Tower visible below and to the north, the harbor mouth and breakwater end visible in the distance.@@N The view from this landing encompasses the full arc of the harbor from pier to pier, the harbor chain's attachment point at the breakwater end visible as a small dark mass against the sea horizon.
+~
+0 1
+D5
+~
+~
+0 -1 14332
+D0
+~
+~
+0 -1 14388
+S
+#14388
+@@gTerrace Southern Approach@@N~
+@@gThe southern approach to the Shrine Terrace is the shorter of the two ramp approaches, the Harbor Side stair being closer to the main terrace platform than the Ledger Side by virtue of the rock formation.@@N @@yThe approach wall carries a carved inscription in Guardian-Judicial voice: THOSE WHO ASCEND WITH DEBT ON THEIR HANDS ARE COUNTED; THE CLAW KEEPS ACCOUNTS THE LEDGER HOUSES CANNOT AUDIT.@@N The inscription has been worn smooth by contact over many years — a sign that the warning has been read by many hands before it was learned by habit.
+~
+0 1
+D2
+~
+~
+0 -1 14387
+D0
+~
+~
+0 -1 14389
+S
+#14389
+@@yThe Shrine Terrace@@N~
+@@yThe Shrine Terrace is a broad basalt platform elevated above the city's roofline, offering unobstructed views in all directions: the harbor and breakwater to the east, the Ledger Quarter's archive rooflines to the west, the Tidewall's defensive profile to the south, and the Tidemouth Dunes at the edge of visibility to the northwest.@@N The claw-marked spire at the terrace's center is the tallest structure in Mafdet — a column of polished black basalt rising to a height visible from the outer harbor approach, its top carved with the four-groove claw mark in monumental scale. @@yThe claw iconography of the Shrine of the First Claw covers the terrace pavement in a continuous floor mosaic: four-groove claw marks oriented toward each cardinal direction, forming a pattern that reads as a jurisdictional claim over all of Mafdet's commercial and judicial space.@@N The verdict boards on the terrace's western face display the Swift Court's most recent judgments — decisions rendered in open session are transcribed to wax-sealed tablets and mounted here for a standard holding period. @@yThe terrace functions as Mafdet's highest-authority judicial space: any oath spoken here is binding under all three of the city's legal traditions — the Compact's commercial law, the Littoral Branch's maritime precedent, and the guardian cult's oath-enforcement tradition.@@N
+~
+0 1
+D3
+~
+~
+0 -1 14386
+D2
+~
+~
+0 -1 14388
+D0
+~
+~
+0 -1 14399
+D1
+~
+~
+0 -1 14391
+E
+claw iconography~
+@@yThe claw marks in the floor mosaic follow a precise format: four parallel grooves, each exactly the width of a large feline pad-bone, spaced as they would appear in the impression of a living paw. The grooves in the central spire are of the same proportions but enlarged to monumental scale. The mosaic uses a different stone for each groove — dark basalt for the outer grooves, pale limestone for the inner ones — creating a visual rhythm that is visible from the harbor below on clear days.@@N
+~
+E
+verdict boards~
+@@yThe verdict boards carry tablets spanning the last seasonal cycle of Swift Court decisions: commercial disputes between Ledger Houses, oath-breach findings against identified parties, and jurisdictional boundary rulings clarifying where Compact authority ends and maritime custom begins. Each tablet lists the parties, the finding, and the assigned consequence — consequences range from commercial penalties in Saltweight-certified amounts to the Guardian-Judicial sanction of public oath-requirement, in which a party must ascend to the terrace and speak a binding oath in full view of the harbor. Several current tablets bear the Quarantine Ledger's referral mark, indicating the Swift Court has been asked to rule on classification disputes that the Ledger cannot resolve through administrative means.@@N
+~
+S
+#14390
+@@yTerrace Northern Portico@@N~
+@@yThe northern portico of the Shrine Terrace is a covered section of the platform's edge, the roof formed by a stone canopy carved with a continuous run of claw marks at its cornice — the same four-groove motif repeated across the full length of the portico.@@N @@gThe portico faces north toward the open sea horizon, the harbor basin visible directly below and the Tidemouth Dunes visible as a pale band at the far western end of the coastal strip.@@N The portico is a place of consultation rather than verdicts — the Shrine's adjudicators meet petitioners here before formal Swift Court sessions, taking preliminary testimony in a space that is public but physically separated from the court itself.
+~
+0 1
+D3
+~
+~
+0 -1 14399
+S
+#14391
+@@RSwift Court of the First Claw@@N~
+@@RThe Swift Court of the First Claw is the Shrine Terrace's formal judicial space — an open court ringed by carved stone benches, with a raised judgment stone at the western end where the Shrine's adjudicator stands to deliver verdicts.@@N The court is named for the speed of guardian-tradition justice: no case continues beyond three sessions, and the verdict on any commercial dispute must be delivered before the involved parties' ships are delayed by the unresolved debt. @@RThe judgment stone is a block of unpolished basalt, deliberately left rough in contrast to the polished pavement of the terrace — the rough stone is said to prevent anyone standing on it from speaking anything but the truth, a practical belief maintained by the guardian cult's accumulated authority over oath-taking.@@N The observation gallery above the court's northern wall allows witnesses and interested parties to observe without participating in the floor's formal proceedings. @@RThe carved verdict tablets on the court's display boards represent decisions rendered here, each one a piece of the Shrine's ongoing documentary claim to judicial jurisdiction over commercial Mafdet.@@N
+~
+0 1
+D3
+~
+~
+0 -1 14389
+D0
+~
+~
+0 -1 14392
+D1
+~
+~
+0 -1 14397
+D2
+~
+~
+0 -1 14393
+S
+#14392
+@@RSwift Court Observation Gallery@@N~
+@@RThe observation gallery above the Swift Court provides a standing-room view over the proceedings below — the stone rail is worn smooth from generations of watchers leaning forward.@@N @@gSound carries well in both directions: observers above can hear the proceedings clearly, and the adjudicator below can often hear gallery commentary not intended for the record.@@N The gallery is used by Ledger House representatives, Harbor Warden observers, and occasionally by the Red Sand Accounts' representatives, all maintaining private records of the verdicts that affect their commercial interests.
+~
+0 1
+D2
+~
+~
+0 -1 14391
+S
+#14393
+@@RThe Oath Chamber@@N~
+@@RThe Oath Chamber is the interior space of the Shrine of the First Claw — a low-ceilinged hall cut from the basalt spire's base, lit by oil lamps whose flame behavior is considered an indicator of oath sincerity.@@N The First Claw sculpture at the chamber's center is not a representation of the guardian but a preserved record of a physical impression: a worn basalt block bearing four parallel claw marks pressed into its upper surface at a depth inconsistent with any tool in the Compact's documented inventory. @@RThe claw marks on the sculpture are the definitional reference for all guardian iconography in Mafdet — the four-groove motif in the floor mosaics, the wall carvings on the terrace approach, and the stamp on commercial oaths all derive their proportions from measurements taken from this block.@@N The oath-sealing ritual performed here requires the oath-taker to press one hand into the claw impression while speaking the oath aloud — a physical contact requirement that the Shrine adjudicators enforce strictly. @@RThe lamps in this chamber use a specific oil compound burning with a blue-orange flame that the Strand Rememberers identify as consistent with a coastal kelp-extract used in their oldest fire-making tradition.@@N
+~
+0 11
+D0
+~
+~
+0 -1 14391
+D1
+~
+~
+0 -1 14394
+E
+claw marks~
+@@RThe claw marks in the basalt block are examined by Shrine adjudicators before every formal oath ceremony. The marks show no signs of tool work: no chipping along the groove edges, no entry angle consistent with chisel or gouge, and a depth profile that increases toward the groove's center in a way that matches biological pressure rather than mechanical cutting. The groove surfaces are polished from centuries of contact with oath-takers' hands, the basalt worn to a different texture than the surrounding stone surface.@@N
+~
+E
+oath-sealing ritual~
+@@RThe ritual's requirements are: the oath-taker speaks the obligation aloud in the Compact's formal legal language; places one hand flat against the claw impression block; repeats the obligation in the guardian cult's older invocation formula taught by Shrine adjudicators immediately before the ceremony; and waits for the adjudicator's confirmation. The Shrine maintains that an oath spoken here is binding regardless of any party's belief in the guardian tradition — the binding derives from the public testimony element, not from supernatural enforcement, though the Shrine does not discourage belief in the latter.@@N
+~
+S
+#14394
+@@RShrine Vestibule@@N~
+@@RThe shrine vestibule is the transition space between the Oath Chamber's open ceremonies and the Sanctum's restricted interior — a narrow hall whose walls are covered floor-to-ceiling in the recorded text of oaths sworn in the chamber over the past three generations of adjudicators.@@N @@gThe oath texts are written in a continuous sequence without paragraph breaks, the hand changing when one adjudicator succeeded another, the ink color shifting between scribal generations.@@N The vestibule has no furniture; it is a passage space intended to be traversed in a specific state of mind, the accumulated weight of recorded oaths serving as preparation for the Sanctum's presence.
+~
+0 11
+D3
+~
+~
+0 -1 14393
+D1
+~
+~
+0 -1 14395
+S
+#14395
+@@RShrine Sanctum@@N~
+@@RThe Shrine Sanctum is the innermost chamber of the Shrine of the First Claw — a space that the Strand Rememberers' accounts describe as the point where the guardian's agreement with the coastal communities was first formalized, though there is no physical evidence that predates the current building's construction.@@N @@RThe Sanctum's air is markedly different from the vestibule: cooler by several degrees, with a quality of stillness that is not absence of sound but rather a presence of quiet that seems to absorb ambient noise from outside the chamber.@@N @@gThe walls are uncarved — unlike every other surface in the Shrine complex, which bears text, marks, or iconography, the Sanctum's stone is plain.@@N @@RThe First Claw's presence is felt in the Sanctum not as a vision or a sound but as a pressure of attention: the sensation of being accurately and comprehensively seen, which those who have spent significant time in the Sanctum report is not threatening but deeply uncomfortable if the observer's accounting is not clean.@@N @@RThe Shrine adjudicators use the Sanctum for deliberations that require certainty beyond what the public record can provide — bringing contested evidence here and waiting for the quality of attention to resolve ambiguities that testimony could not.@@N
+~
+4 11
+D3
+~
+~
+0 -1 14394
+S
+#14396
+@@gTerrace Garden, Eastern Side@@N~
+@@gThe eastern garden area of the Shrine Terrace is a maintained border of coastal plants set into raised stone beds along the terrace's eastern edge — species from the tidal zone, selected for their tolerance of the salt spray that reaches this height from the harbor below.@@N @@lThe garden was established by a Strand Rememberer practitioner who served the Shrine three generations ago, the planting serving as a living demonstration of coastal botanical knowledge alongside the Shrine's documentary traditions.@@N The beds are maintained by Shrine practitioners on a rotation, the work considered a form of contemplative practice rather than maintenance labor.
+~
+0 1
+D0
+~
+~
+0 -1 14397
+S
+#14397
+@@lTerrace Overlook, Harbor View@@N~
+@@lThe harbor view from the terrace's eastern lookout takes in the full sweep of the commercial port below: the two pier arms extending into the harbor basin, the Signal Tower rising from the harbor's central section, the breakwater causeway extending eastward, and the harbor chain in its raised position spanning the cove mouth.@@N @@gThe height here makes the harbor's geometry legible in a way impossible from harbor level — the crescent shape of the cove, the alignment of the pier arms with the prevailing current direction, and the signal tower's placement at the junction of the harbor's navigation axes are all visible as intentional design.@@N @@lAt dawn, when the harbor chain is lowered to allow the day's first ships to enter, the sound of the chain mechanism carries even to this height as a sequence of deep tonal impacts.@@N
+~
+0 1
+D3
+~
+~
+0 -1 14391
+D2
+~
+~
+0 -1 14396
+S
+#14398
+@@yTerrace Overlook, Western Extension@@N~
+@@yThe western extension of the terrace overlook area provides a supplementary vantage point over the Ledger Quarter below — the archive rooflines are visible as a compressed pattern of thick-walled structures, fire-resistant construction identifiable by the absence of upper-story windows and the presence of sealed roof hatches rather than open terraces.@@N @@gThe Carter's Way is visible as a pale dust-line running through the commercial district from the Landward Gate approach eastward toward the harbor district.@@N The Saltglass Reach is visible at the western horizon on clear days — a pale glint of mineral surface at the edge of the dunes, the territorial boundary between Reach and city marked by the transition from the Reach's salt-flat terrain to the Tidemouth Dunes' brackish scrub zone.
+~
+0 1
+D1
+~
+~
+0 -1 14399
+S
+#14399
+@@gTerrace Overlook, Reach View@@N~
+@@gThe Reach View overlook faces northwest from the Shrine Terrace's highest accessible point, the sightline running over the Tidemouth Dunes and into the Saltglass Reach — on exceptionally clear days, the Reach's surface glints with the mineral light that gives it its name.@@N @@bThe Tidemouth Dunes are visible as a tawny band between the city's western wall and the pale mineral expanse of the Reach beyond, the approach path threading through them invisible at this distance but knowable by the gaps between dune crests where the trail runs.@@N The Reach View overlook is a traditional first stop for arriving caravaneers who reach the Shrine Terrace — standing here and looking back over the route taken is a recognized completion ritual for Glasswalk Guides and Reach Wardens who have finished an escort.
+~
+0 1
+D2
+~
+~
+0 -1 14389
+D1
+~
+~
+0 -1 14390
+D3
+~
+~
+0 -1 14398
+S
 #0
