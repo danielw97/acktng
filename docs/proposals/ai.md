@@ -229,7 +229,10 @@ After broadcasting the player's message to the room, iterate NPCs:
 for (ppl = ch->in_room->first_person; ppl != NULL; ppl = ppl->next_in_room)
 {
     if (IS_NPC(ppl) && IS_SET(ppl->act, ACT_AI_DIALOGUE))
+    {
         npc_dialogue_dispatch(ppl, ch, argument);
+        break;
+    }
 }
 ```
 
