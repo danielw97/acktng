@@ -406,6 +406,9 @@ int item_generation_apply_item_level_modifiers(const OBJ_DATA *obj, int ilevel)
    if (IS_SET(obj->extra_flags, ITEM_TWO_HANDED) && obj->item_type == ITEM_WEAPON)
       ilevel *= 1.25;
 
+   if (IS_SET(obj->extra_flags, ITEM_QUEST_REWARD))
+      ilevel *= 1.2;
+
    if (IS_SET(obj->extra_flags, ITEM_LOOT))
       ilevel *= 1.2;
 

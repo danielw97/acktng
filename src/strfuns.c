@@ -1394,6 +1394,8 @@ char *extra_bit_name(int extra_flags)
       safe_strcat(MAX_STRING_LENGTH, buf, " noremove");
    if (extra_flags & ITEM_INVENTORY)
       safe_strcat(MAX_STRING_LENGTH, buf, " inventory");
+   if (extra_flags & ITEM_QUEST_REWARD)
+      safe_strcat(MAX_STRING_LENGTH, buf, " quest-reward");
    if (extra_flags & ITEM_NOLOOT)
       safe_strcat(MAX_STRING_LENGTH, buf, " noloot");
    if (extra_flags & ITEM_NOSAC)

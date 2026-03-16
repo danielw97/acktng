@@ -187,6 +187,20 @@ static void test_get_wear_name_handles_invasion_emblem(void)
    assert(strcmp(get_wear_name(&obj), "Emblem") == 0);
 }
 
+static void test_quest_reward_increases_allocated_item_points_by_20_percent(void)
+{
+   OBJ_DATA obj;
+   int baseline;
+
+   memset(&obj, 0, sizeof(obj));
+   obj.item_type = ITEM_ARMOR;
+
+   baseline = item_generation_apply_item_level_modifiers(&obj, 100);
+
+   SET_BIT(obj.extra_flags, ITEM_QUEST_REWARD);
+   assert(item_generation_apply_item_level_modifiers(&obj, 100) == baseline * 1.2);
+}
+
 static void test_weapon_names_match_attack_types(void)
 {
    OBJ_DATA obj;
@@ -236,6 +250,7 @@ int main(void)
    test_get_wear_name_handles_weapon_light_and_jewelry();
    test_invasion_emblem_doubles_allocated_item_points();
    test_get_wear_name_handles_invasion_emblem();
+   test_quest_reward_increases_allocated_item_points_by_20_percent();
    test_weapon_names_match_attack_types();
    return 0;
 }
