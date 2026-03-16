@@ -4489,16 +4489,13 @@ void do_gain(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   for (cnt = 0; cnt < MAX_CLASS; cnt++)
+   for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
    {
-      if (ch->class_level[cnt] == MAX_MORTAL)
+      if (IS_MORTAL_CLASS(cnt) && ch->class_level[cnt] == MAX_MORTAL)
          morts_at_max++;
-   }
-   for (cnt = CLASS_SOR; cnt < CLASS_SOR + MAX_REMORT; cnt++)
-   {
-      if (ch->class_level[cnt] > -1)
+      if (IS_REMORT_CLASS(cnt) && ch->class_level[cnt] > -1)
          num_remorts++;
-      if (ch->class_level[cnt] == MAX_MORTAL)
+      if (IS_REMORT_CLASS(cnt) && ch->class_level[cnt] == MAX_MORTAL)
          remorts_at_max++;
    }
 
