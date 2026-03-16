@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Swordsman tradition was born in the dueling courts of the old city-states, where legal disputes and matters of honor were settled at blade-point. Unlike the mass-formation doctrine of the Knight, Swordsmen trained for one-on-one excellence — footwork, measure, and the half-second timing window that separates a cut from a counter. The great masters wrote down their art in codified manuals called the **Cutting Books**, each school preserving its own blade theory jealously. Warriors who had mastered all mortal fundamentals and returned to study the sword as art rather than instrument became the first true Swordsmen — technicians for whom the blade was not a weapon but a language of precisely articulated force.
+The Swordsman tradition was born in the dueling courts of the old city-states, where legal disputes and matters of honor were settled at blade-point. Unlike the mass-formation doctrine of the Knight, Swordsmen trained for one-on-one excellence — footwork, measure, and the half-second timing window that separates a cut from a counter. The great masters wrote down their art in codified manuals called the **Cutting Books**, each school preserving its own blade theory jealously. Wardens who had mastered all mortal fundamentals and returned to study the sword as art rather than instrument became the first true Swordsmen — technicians for whom the blade was not a weapon but a language of precisely articulated force.
 
 ---
 
@@ -32,7 +32,7 @@ The result was a body of documentation that is simultaneously highly specific (g
 
 ## III. Individual Excellence vs. Formation Doctrine
 
-The Swordsman tradition's relationship with the **Knight tradition** is one of institutionalized competitive tension. Both traditions descend from the warrior lineage; both engage with the same basic domain of weapon-and-armor combat; both are incorporated into the modern civic military frameworks of the five cities. They have different answers to the fundamental question of how effective force is organized.
+The Swordsman tradition's relationship with the **Knight tradition** is one of institutionalized competitive tension. Both traditions descend from the warden lineage; both engage with the same basic domain of weapon-and-armor combat; both are incorporated into the modern civic military frameworks of the five cities. They have different answers to the fundamental question of how effective force is organized.
 
 The Knight tradition's answer is **formation superiority**: individual skill serves collective organization, and the properly organized formation reliably defeats collections of individually skilled fighters. The Swordsman tradition's answer is **individual excellence**: at the highest levels of blade skill, the individual practitioner possesses a decision-making speed and precision that formation doctrine cannot constrain, and the practitioner who has reached that level can defeat formation-organized opponents by operating in the windows between the formation's coordination requirements.
 
@@ -57,10 +57,10 @@ The **Crusader Corps** that formed in the reserve depots deliberately reclaimed 
 ## V. Cross-References
 
 - **Timeline**: Era IV (Salt Ledger Kingdoms; dueling courts as legal institution), Era XII (Cutting Books corpus; school competition), Era XV (Ash-and-Iron Decades; Crusader Corps formation)
-- **Warrior**: Parent tradition; martial foundation that Swordsman refines through blade theory
+- **Warden**: Parent tradition; martial foundation that Swordsman refines through blade theory
 - **Knight**: Parallel remort path; formation doctrine vs. individual excellence tension
 - **Crusader**: Adept synthesis; combines Knight body-strike chains with Swordsman momentum
 - **Kiess**: Dueling court legal tradition parallel; dispute resolution through documented combat
 - **Midgaard / Kowloon**: Civic military contexts where Knight-Swordsman competition plays out institutionally
 
-See also: `warrior_lore.md`, `knight_lore.md`, `crusader_lore.md`, `timeline.md`
+See also: `warden_lore.md`, `knight_lore.md`, `crusader_lore.md`, `timeline.md`

@@ -42,7 +42,7 @@ Where the traditions differ is in verifiability: the Axiomatic Schools' results 
 
 ## IV. The Nightblade Synthesis
 
-The **Nightblade** adept path represents the synthesis of the Assassin tradition and the **Warlock** tradition — the combination of positioning-and-patience methodology with the shadow-compact and entropy-hex practice that Warlock practitioners developed from the thief tradition.
+The **Nightblade** adept path represents the synthesis of the Assassin tradition and the **Warlock** tradition — the combination of positioning-and-patience methodology with the shadow-compact and entropy-hex practice that Warlock practitioners developed from the cipher tradition.
 
 The combination was pragmatic before it was principled. Assassin practitioners operating in environments where targets had spiritual protections — ward-networks, holy auras, the specific Priest-maintained consecrations that became common in the Violet Compact era — found their positioning methodology could be undermined by detection effects they couldn't suppress through purely physical concealment. Warlock practitioners had developed methods for suppressing exactly those detection effects as part of their shadow-compact work. The collaboration was the practical response to a specific operational problem.
 
@@ -63,10 +63,10 @@ This creates an interesting dynamic with the **Kiess anti-sealed-warrant charter
 ## VI. Cross-References
 
 - **Timeline**: Primordial Age (dissolved empire; handler-operative chain establishment), Era VII (empire's fall; practitioner scattering; tradition degradation and preservation split), Era XII (Violet Compact era; referral chain adaptation to registry governance)
-- **Thief**: Parallel tradition from post-collapse breakdown; overlapping operational environments
-- **Warlock**: Parallel remort path from Thief; shadow-compact tradition; Nightblade prerequisite
+- **Cipher**: Parallel tradition from post-collapse breakdown; overlapping operational environments
+- **Warlock**: Parallel remort path from Cipher; shadow-compact tradition; Nightblade prerequisite
 - **Nightblade**: Adept synthesis; positioning-plus-resistance-stripping doctrine
 - **Kiess**: Non-institutional operating context; anti-sealed-warrant protections
 - **Mafdet**: Swift-court jurisdiction mapping; oath-breaking framework that constrains certain referral chain operations
 
-See also: `thief_lore.md`, `warlock_lore.md`, `nightblade_lore.md`, `kiess_lore.md`, `timeline.md`
+See also: `cipher_lore.md`, `warlock_lore.md`, `nightblade_lore.md`, `kiess_lore.md`, `timeline.md`

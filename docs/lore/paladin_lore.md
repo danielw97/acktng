@@ -34,7 +34,7 @@ The **Solar Court's temple-guard auxiliaries** are the institutional precursor t
 
 The Paladin tradition's narrative of the Solar Court connection emphasizes the **oath-binding** function: the auxiliaries' commitment to the protection of sacred space, regardless of who threatened it or what tactical cost defense incurred. The Templar tradition's narrative emphasizes the **dual-function** character: the auxiliaries' capacity to perform both combat and healing functions without the specialization that the later Paladin-Priest split created. Both narratives are historically plausible and consistent with the fragmentary Solar Court records available.
 
-The **shield-warden** role at the great temples — holding every threshold against the dark — is the Paladin tradition's self-image. The term is used within the tradition to describe the fundamental orientation that distinguishes a Paladin from a warrior, knight, or soldier: the shield-warden doesn't fight to advance position or secure advantage; they fight to hold the ground that sacred practice requires. The advance-and-sanctify doctrine that characterizes modern Paladin operational style is, in the tradition's self-understanding, an extension of shield-warden logic to mobile contexts: you advance in order to extend the ground that sacred practice can safely occupy, and you sanctify as you advance so that the ground you hold is genuinely protected rather than merely defended.
+The **shield-warden** role at the great temples — holding every threshold against the dark — is the Paladin tradition's self-image. The term is used within the tradition to describe the fundamental orientation that distinguishes a Paladin from a warden, knight, or soldier: the shield-warden doesn't fight to advance position or secure advantage; they fight to hold the ground that sacred practice requires. The advance-and-sanctify doctrine that characterizes modern Paladin operational style is, in the tradition's self-understanding, an extension of shield-warden logic to mobile contexts: you advance in order to extend the ground that sacred practice can safely occupy, and you sanctify as you advance so that the ground you hold is genuinely protected rather than merely defended.
 
 ---
 
@@ -64,7 +64,7 @@ The Paladin tradition has not used this documentation offensively in modern poli
 - **Cleric**: Parent tradition; Solar Court inheritance; foundational theological framework
 - **Priest**: Operational partner tradition; Hour of Quiet Thunder schism creates complementary specialization
 - **Templar**: Adept synthesis; shared Solar Court temple-guard ancestry; dual-function synthesis
-- **Knight**: Parallel warrior tradition; oath-bound doctrine vs. formation doctrine; distinct institutional logic
+- **Knight**: Parallel warden tradition; oath-bound doctrine vs. formation doctrine; distinct institutional logic
 - **Great Pyramid**: Solar Court origin; template-guard auxiliary institutional ancestor
 - **Midgaard**: Continuity faction relationship with Paladin archive documentation
 

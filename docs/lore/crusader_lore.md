@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Crusader title appears in Solar Court records as a campaign-honor designation for warriors who served successive engagements without rotation, accruing field honors in place of relief. It predates both the Knight academies formalized under the Iron Reformation and the dueling courts where the Swordsman tradition was codified. The convergence of those two paths was forged during the **Ash-and-Iron Decades**, when Midgaard's militarization drove Knight and Swordsman training into the same reserve depots. The two traditions had long existed in competitive tension — formation discipline against individual momentum, controlled body-strikes against escalating blade pressure — but campaigns during the Ashfall aftermath proved repeatedly that the most effective fighters could do both. Informal cross-training units calling themselves **Crusader Corps** arose within the depots, deliberately reclaiming the old campaign title. Their doctrine: chain the Knight's body-strikes into the Swordsman's building momentum, and the accumulated force exceeds what either path sustains alone.
+The Crusader title appears in Solar Court records as a campaign-honor designation for wardens who served successive engagements without rotation, accruing field honors in place of relief. It predates both the Knight academies formalized under the Iron Reformation and the dueling courts where the Swordsman tradition was codified. The convergence of those two paths was forged during the **Ash-and-Iron Decades**, when Midgaard's militarization drove Knight and Swordsman training into the same reserve depots. The two traditions had long existed in competitive tension — formation discipline against individual momentum, controlled body-strikes against escalating blade pressure — but campaigns during the Ashfall aftermath proved repeatedly that the most effective fighters could do both. Informal cross-training units calling themselves **Crusader Corps** arose within the depots, deliberately reclaiming the old campaign title. Their doctrine: chain the Knight's body-strikes into the Swordsman's building momentum, and the accumulated force exceeds what either path sustains alone.
 
 ---
 
@@ -18,7 +18,7 @@ This continuous-service context is the origin of the title's association with th
 
 ## II. The Iron Reformation and Swordsman Courts: Divergence and Tension
 
-The **Iron Reformation** that produced the Knight tradition and the **dueling courts** that produced the Swordsman tradition developed in overlapping historical periods but distinct institutional contexts. The Iron Reformation was a response to the Ninth Meridian Catastrophe's military fragmentation — specifically, the discovery that warrior-tradition practitioners in the post-collapse eastern campaigns were individually skilled but collectively ineffective as organized military forces. The Compact of the Seven Chains established Knight doctrine as a solution to the collective action problem.
+The **Iron Reformation** that produced the Knight tradition and the **dueling courts** that produced the Swordsman tradition developed in overlapping historical periods but distinct institutional contexts. The Iron Reformation was a response to the Ninth Meridian Catastrophe's military fragmentation — specifically, the discovery that warden-tradition practitioners in the post-collapse eastern campaigns were individually skilled but collectively ineffective as organized military forces. The Compact of the Seven Chains established Knight doctrine as a solution to the collective action problem.
 
 The dueling courts of the old city-states had a different origin: they were not responses to military failure but evolutions of legal dispute resolution. The Swordsman tradition's formal theory — the Cutting Books — developed from the requirement to perform consistently in legal proceedings where reputation determined the quality of commission. The tradition's individual excellence doctrine was the product of a context in which individual performance determined legal outcomes.
 
@@ -55,9 +55,9 @@ The technique is taught at Crusader level 2 — early enough in the adept path t
 - **Timeline**: Era III (Solar Court campaign-honor designation origin), Era XI (Iron Reformation; Swordsman courts; divergent institutional development), Era XV (Ash-and-Iron Decades; reserve depot synthesis; Crusader Corps formation)
 - **Knight**: Component tradition; formation doctrine; body-strike chain methodology
 - **Swordsman**: Component tradition; individual excellence doctrine; escalating momentum theory
-- **Warrior**: Grandparent tradition; foundational mortal discipline
+- **Warden**: Grandparent tradition; foundational mortal discipline
 - **Paladin**: Parallel tradition using same Solar Court honor title context; oathbound vs. campaign-service framing
 - **Midgaard**: Reserve depot institutional context; Ash-and-Iron Decades militarization
 - **Cinderteeth Mountains**: Ashfall Monsoon crisis context; Anti Magic Shell development driver
 
-See also: `knight_lore.md`, `swordsman_lore.md`, `warrior_lore.md`, `midgaard_lore.md`, `timeline.md`
+See also: `knight_lore.md`, `swordsman_lore.md`, `warden_lore.md`, `midgaard_lore.md`, `timeline.md`

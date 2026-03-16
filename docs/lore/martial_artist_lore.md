@@ -64,7 +64,7 @@ This is why the Martial Artist tradition is categorically a second-apprenticeshi
 - **Monk**: Component tradition; Interior Forms; chi work; breath and structural timing
 - **Brawler**: Component tradition; pit-tested technique; physical impact methodology; pressure and attrition
 - **Kowloon**: Harbor district synthesis context; Monk-Brawler cross-training incubation environment
-- **Warrior**: Parallel physical discipline tradition; Interior Forms dispute with Monk
+- **Warden**: Parallel physical discipline tradition; Interior Forms dispute with Monk
 - **Crusader**: Parallel adept synthesis with analogous structure (Knight + Swordsman → Crusader)
 
 See also: `monk_lore.md`, `brawler_lore.md`, `kowloon_lore.md`, `timeline.md`
