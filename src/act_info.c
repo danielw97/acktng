@@ -2310,6 +2310,13 @@ void do_who(CHAR_DATA *ch, char *argument)
             case MAX_LEVEL - 3: sprintf(buf3, "@@c%s@@g", wn ? wn : "Angel"); break;
             default:            sprintf(buf3, "@@W%s@@g", wn ? wn : "Immortal"); break;
             }
+            /* Pad buf3 to 18 visible chars to match mortal/adept column width */
+            {
+               int vis = my_strlen(buf3);
+               int pad;
+               for (pad = vis; pad < 18; pad++)
+                  strcat(buf3, " ");
+            }
          }
          else if (IS_SET(wch->pcdata->pflags, PFLAG_AMBAS))
          {
