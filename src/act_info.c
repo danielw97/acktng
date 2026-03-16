@@ -3910,38 +3910,16 @@ void do_slist(CHAR_DATA *ch, char *argument)
    class = -1;
    remort_class = FALSE;
    adept_class = FALSE;
-   for (foo = 0; foo < MAX_CLASS; foo++)
+   for (foo = 0; foo < MAX_TOTAL_CLASS; foo++)
    {
       if (!str_cmp(gclass_table[foo].who_name, argument) || !str_cmp(gclass_table[foo].class_name, argument))
       {
          any = TRUE;
          class = foo;
-      }
-   }
-
-   if (!any)
-   {
-      for (foo = CLASS_SOR; foo < CLASS_SOR + MAX_REMORT; foo++)
-      {
-         if (!str_cmp(gclass_table[foo].who_name, argument) || !str_cmp(gclass_table[foo].class_name, argument))
-         {
-            any = TRUE;
-            class = foo;
+         if (IS_REMORT_CLASS(foo))
             remort_class = TRUE;
-         }
-      }
-   }
-
-   if (!any)
-   {
-      for (foo = CLASS_GMA; foo < CLASS_GMA + MAX_CLASS; foo++)
-      {
-         if (!str_cmp(gclass_table[foo].who_name, argument) || !str_cmp(gclass_table[foo].class_name, argument))
-         {
-            any = TRUE;
-            class = foo;
+         else if (IS_ADEPT_CLASS(foo))
             adept_class = TRUE;
-         }
       }
    }
 
@@ -4521,53 +4499,48 @@ void do_gain(CHAR_DATA *ch, char *argument)
    any = FALSE;
    c = -1;
 
-   for (cnt = 0; cnt < MAX_CLASS; cnt++)
+   for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
    {
       if (!str_cmp(gclass_table[cnt].who_name, argument) || !str_cmp(gclass_table[cnt].class_name, argument))
       {
-         any = TRUE;
-         c = cnt;
-         found = TRUE;
-      }
-   }
-
-   for (cnt = CLASS_SOR; cnt < CLASS_SOR + MAX_REMORT; cnt++)
-   {
-      if (!str_cmp(gclass_table[cnt].who_name, argument) || !str_cmp(gclass_table[cnt].class_name, argument))
-      {
-         if (ch->class_level[cnt] > 0 || allow_remort)
+         if (IS_MORTAL_CLASS(cnt))
          {
-            if (ch->class_level[gclass_table[cnt].prereq[0]] < MAX_MORTAL)
-            {
-               send_to_char("You require level 100 in the mortal class before you can remort in this class!\n\r", ch);
-               continue;
-            }
-
             any = TRUE;
-            remort = TRUE;
             c = cnt;
+            found = TRUE;
          }
-         found = TRUE;
-      }
-   }
-
-   for (cnt = CLASS_GMA; cnt < CLASS_GMA + MAX_CLASS; cnt++)
-   {
-      if ((!str_cmp(gclass_table[cnt].who_name, argument)) || !str_cmp(gclass_table[cnt].class_name, argument))
-      {
-         if (ch->class_level[cnt] > 0 || allow_adept)
+         else if (IS_REMORT_CLASS(cnt))
          {
-            if (ch->class_level[gclass_table[cnt].prereq[0]] < MAX_MORTAL || ch->class_level[gclass_table[cnt].prereq[1]] < MAX_MORTAL)
+            if (ch->class_level[cnt] > 0 || allow_remort)
             {
-               send_to_char("You need to be level 100 in both remortal classes before you can adept in this class!\n\r", ch);
-               return;
-            }
+               if (ch->class_level[gclass_table[cnt].prereq[0]] < MAX_MORTAL)
+               {
+                  send_to_char("You require level 100 in the mortal class before you can remort in this class!\n\r", ch);
+                  continue;
+               }
 
-            any = TRUE;
-            adept = TRUE;
-            c = cnt;
+               any = TRUE;
+               remort = TRUE;
+               c = cnt;
+            }
+            found = TRUE;
          }
-         found = TRUE;
+         else if (IS_ADEPT_CLASS(cnt))
+         {
+            if (ch->class_level[cnt] > 0 || allow_adept)
+            {
+               if (ch->class_level[gclass_table[cnt].prereq[0]] < MAX_MORTAL || ch->class_level[gclass_table[cnt].prereq[1]] < MAX_MORTAL)
+               {
+                  send_to_char("You need to be level 100 in both remortal classes before you can adept in this class!\n\r", ch);
+                  return;
+               }
+
+               any = TRUE;
+               adept = TRUE;
+               c = cnt;
+            }
+            found = TRUE;
+         }
       }
    }
 

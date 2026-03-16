@@ -4132,7 +4132,7 @@ void do_setclass(CHAR_DATA *ch, char *argument)
     * Make sure that ch->level holds vicitm's max level
     */
    victim->level = 0;
-   for (cnt = 0; cnt < MAX_CLASS; cnt++)
+   for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
       if (victim->class_level[cnt] > victim->level)
          victim->level = victim->class_level[cnt];
 

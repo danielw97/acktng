@@ -58,11 +58,11 @@ int skill_get_tier(int sn)
    int i;
    if (sn < 0 || sn >= MAX_SKILL)
       return 1;
-   for (i = MAX_CLASS + MAX_REMORT; i < MAX_TOTAL_CLASS; i++)
-      if (skill_table[sn].skill_level[i] >= 0)
+   for (i = 0; i < MAX_TOTAL_CLASS; i++)
+      if (IS_ADEPT_CLASS(i) && skill_table[sn].skill_level[i] >= 0)
          return 3;
-   for (i = MAX_CLASS; i < MAX_CLASS + MAX_REMORT; i++)
-      if (skill_table[sn].skill_level[i] >= 0)
+   for (i = 0; i < MAX_TOTAL_CLASS; i++)
+      if (IS_REMORT_CLASS(i) && skill_table[sn].skill_level[i] >= 0)
          return 2;
    return 1;
 }

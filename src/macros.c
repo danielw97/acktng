@@ -87,7 +87,7 @@ sh_int get_remort_level(CHAR_DATA *ch)
    if (!is_remort(ch))
       return 0;
 
-   for (index = CLASS_SOR; index < CLASS_SOR + MAX_CLASS; index++)
+   for (index = CLASS_SOR; index < CLASS_SOR + MAX_REMORT; index++)
       if (ch->class_level[index] > max_remort_level)
          max_remort_level = ch->class_level[index];
    return max_remort_level;

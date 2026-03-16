@@ -814,7 +814,7 @@ static void normalize_login_class(CHAR_DATA *ch)
    if (ch == NULL || IS_NPC(ch))
       return;
 
-   if (ch->class >= 0 && ch->class < MAX_CLASS)
+   if (ch->class >= 0 && IS_MORTAL_CLASS(ch->class))
       return;
 
    for (cnt = 0; cnt < MAX_CLASS; cnt++)
