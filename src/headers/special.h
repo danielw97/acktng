@@ -108,6 +108,9 @@ DECLARE_SPEC_FUN(spec_sanctum_keeper);
 DECLARE_SPEC_FUN(spec_ss_cinder_broker);
 DECLARE_SPEC_FUN(spec_ss_manifest_warden);
 DECLARE_SPEC_FUN(spec_ss_kiln_overseer);
+DECLARE_SPEC_FUN(spec_midgaard_gate_warden);
+DECLARE_SPEC_FUN(spec_midgaard_caravan_master);
+DECLARE_SPEC_FUN(spec_midgaard_pilgrim);
 
 SPEC_FUN *spec_lookup(const char *name);
 char *rev_spec_lookup(void *func);

@@ -3677,14 +3677,16 @@ def main():
     # #SPECIALS
     # Assignments chosen for thematic fit:
     #  917 city guard       → spec_policeman (hunts killers/thieves on patrol)
-    #  918 gate warden      → spec_rr_byways_midgaard_guard (Civic North gate
-    #                          dialogue, route protocols, quest recognition)
+    #  918 gate warden      → spec_midgaard_gate_warden (Northern Gate dialogue,
+    #                          arrivals/departures log, road conditions, portcullis)
     #  919 temple guardian  → spec_cast_cleric (divine combat, earthquake/flamestrike)
     #  920 street merchant  → spec_vendor (calls out goods, tariff/guild patter)
-    #  921 caravan master   → spec_rr_convoy_marshal (convoy ops, Trade Syndic refs)
+    #  921 caravan master   → spec_midgaard_caravan_master (Caravan Square staging,
+    #                          Trade Syndic compacts, route brands, Ledgerhouse refs)
     #  922 caravan guard    → spec_policeman (law enforcement)
     #  923 street vendor    → spec_vendor (street calls)
-    #  924 pilgrim          → spec_rr_pilgrim (road-worn traveller behaviour)
+    #  924 pilgrim          → spec_midgaard_pilgrim (arrived at the temple, First Stone
+    #                          Accord, ward sigils, altar observance)
     #  925 beggar           → spec_thief (pickpocket, thematically a street beggar)
     #  927 Gertrude         → spec_executioner (hunts killers/thieves/undead, summons guards)
     #  928 healer           → spec_cast_cleric (cleric combat proc; healing via ACT_HEALER)
@@ -3696,13 +3698,13 @@ def main():
     # -----------------------------------------------------------------------
     o('#SPECIALS')
     o('M 917 spec_policeman')
-    o('M 918 spec_rr_byways_midgaard_guard')
+    o('M 918 spec_midgaard_gate_warden')
     o('M 919 spec_cast_cleric')
     o('M 920 spec_vendor')
-    o('M 921 spec_rr_convoy_marshal')
+    o('M 921 spec_midgaard_caravan_master')
     o('M 922 spec_policeman')
     o('M 923 spec_vendor')
-    o('M 924 spec_rr_pilgrim')
+    o('M 924 spec_midgaard_pilgrim')
     o('M 925 spec_thief')
     o('M 927 spec_executioner')
     o('M 928 spec_cast_cleric')

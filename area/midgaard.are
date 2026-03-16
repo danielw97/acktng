@@ -6298,13 +6298,13 @@ S
 
 #SPECIALS
 M 917 spec_policeman
-M 918 spec_rr_byways_midgaard_guard
+M 918 spec_midgaard_gate_warden
 M 919 spec_cast_cleric
 M 920 spec_vendor
-M 921 spec_rr_convoy_marshal
+M 921 spec_midgaard_caravan_master
 M 922 spec_policeman
 M 923 spec_vendor
-M 924 spec_rr_pilgrim
+M 924 spec_midgaard_pilgrim
 M 925 spec_thief
 M 927 spec_executioner
 M 928 spec_cast_cleric

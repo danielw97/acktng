@@ -43,7 +43,9 @@ AI_SPEC_SRCS = \
 	  ai/spec_hermit_archon.o \
 	  ai/spec_sanctum_keeper.o \
 	  ai/spec_ss_cinder_broker.o ai/spec_ss_manifest_warden.o \
-	  ai/spec_ss_kiln_overseer.o
+	  ai/spec_ss_kiln_overseer.o \
+	  ai/spec_midgaard_gate_warden.o ai/spec_midgaard_caravan_master.o \
+	  ai/spec_midgaard_pilgrim.o
 
 AI_SUMMON_SRCS = ai/spec_summon_water.o ai/spec_summon_fire.o ai/spec_summon_earth.o \
 	  ai/spec_summon_undead.o ai/spec_summon_holy.o ai/spec_summon_shadow.o \
