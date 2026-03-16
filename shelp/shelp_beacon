@@ -12,7 +12,7 @@ keywords beacon
 Noun Damage: None
    Wear-Off: !Beacon!
 Acquisition:
-   - Mage: level 70
+   - Magi: level 70
    - Psionicist: level 70
 Description:
    Beacon Creates a magical beacon that can be used as a travel anchor or reference point for movement spells.

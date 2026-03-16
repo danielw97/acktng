@@ -12,7 +12,7 @@ keywords control weather
 Noun Damage: None
    Wear-Off: !Control Weather!
 Acquisition:
-   - Mage: level 58
+   - Magi: level 58
    - Cleric: level 79
 Description:
    Control Weather Shifts regional weather conditions, altering environmental effects for tactical advantage.

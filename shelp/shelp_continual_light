@@ -12,7 +12,7 @@ keywords continual light
 Noun Damage: None
    Wear-Off: !Continual Light!
 Acquisition:
-   - Mage: level 11
+   - Magi: level 11
    - Cleric: level 27
 Description:
    Continual Light Creates a long-lasting magical light source that illuminates rooms or objects.

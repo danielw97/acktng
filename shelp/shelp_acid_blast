@@ -12,7 +12,7 @@ keywords acid blast
 Noun Damage: acid blast
    Wear-Off: !Acid Blast!
 Acquisition:
-   - Mage: level 50
+   - Magi: level 50
 Description:
    Acid Blast is an offensive spell that deals air elemental damage to an enemy
    target.

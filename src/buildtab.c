@@ -50,7 +50,8 @@
 
 /* Table for a mob's class... we'll mirror the PC classes in order here */
 const struct lookup_type tab_mob_class[] = {
-    {"mage", 0, 0},
+    {"magi", 0, 0},
+    {"mage", 0, 0},   /* backward-compat alias */
     {"cleric", 1, 0},
     {"cipher", 2, 0},
     {"thief", 2, 0},   /* backward-compat alias */

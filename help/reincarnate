@@ -59,7 +59,7 @@ carry forward permanent bonuses earned from your previous lives.
   prime attribute by 1 point for every 2 reincarnations in that class
   (rounds up). The stat cap is normally @@W30@@W.
   - @@cWarden@@W reincarnations increase max Strength.
-  - @@pMage@@W and @@GPsionicist@@W reincarnations increase max Intelligence.
+  - @@pMagi@@W and @@GPsionicist@@W reincarnations increase max Intelligence.
   - @@aClerical@@W reincarnations increase max Wisdom.
   - @@dCipher@@W reincarnations increase max Dexterity.
   - @@gPugilist@@W reincarnations increase max Constitution.
@@ -70,7 +70,7 @@ carry forward permanent bonuses earned from your previous lives.
   - @@cWarden@@W    -> Enhanced Damage
   - @@dCipher@@W      -> Enhanced Critical
   - @@gPugilist@@W   -> Counter
-  - @@pMage@@W       -> Potency
+  - @@pMagi@@W       -> Potency
   - @@GPsionicist@@W -> Spell Critical
   - @@aCleric@@W     -> Spell Critical Damage
 

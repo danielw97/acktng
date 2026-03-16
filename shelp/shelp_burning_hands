@@ -12,7 +12,7 @@ keywords burning hands
 Noun Damage: burning hands
    Wear-Off: !Burning Hands!
 Acquisition:
-   - Mage: level 6
+   - Magi: level 6
 Description:
    Burning Hands is an offensive spell that inflicts fire damage on an enemy target.
 *******************************************************************************

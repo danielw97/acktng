@@ -12,7 +12,7 @@ keywords mass invis
 Noun Damage: None
    Wear-Off: !Mass Invis!
 Acquisition:
-   - Mage: level 60
+   - Magi: level 60
 Description:
    Mass Invis Makes the caster's group invisible, enabling coordinated stealth movement.
 *******************************************************************************

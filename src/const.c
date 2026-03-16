@@ -99,7 +99,7 @@ const struct ansi_type ansi_table[MAX_ANSI] = {
  */
 const struct class_type class_table[MAX_CLASS] = 
 {
-   { "Mag", "Mage", APPLY_INT, 2, 5 },
+   { "Mag", "Magi", APPLY_INT, 2, 5 },
 
    { "Cle", "Cleric", APPLY_WIS, 3, 4},
 
@@ -548,10 +548,10 @@ const struct exp_type exp_table[MAX_MOB_LEVEL] = {
    {1000000, {7800000, 7700000, 7750000, 7780000, 7850000}}, /* 170 */
 };
 
-#define CLASS_MAGE       0
+#define CLASS_MAGI       0
 #define CLASS_CLERIC     1
-#define CLASS_THIEF      2
-#define CLASS_WARRIOR    3
+#define CLASS_CIPHER      2
+#define CLASS_WARDEN    3
 #define CLASS_PSI        4
 #define CLASS_PUGILIST   5
 

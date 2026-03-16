@@ -12,7 +12,7 @@ keywords enchant weapon
 Noun Damage: None
    Wear-Off: !Enchant Weapon!
 Acquisition:
-   - Mage: level 39
+   - Magi: level 39
 Description:
    Enchant Weapon Temporarily enchants a weapon with magical power to improve its combat effectiveness.
 *******************************************************************************

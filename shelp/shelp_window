@@ -12,7 +12,7 @@ keywords window
 Noun Damage: None
    Wear-Off: !Window!
 Acquisition:
-   - Mage: level 70
+   - Magi: level 70
    - Psionicist: level 70
 Description:
    Window Opens a magical viewing window to observe a distant location.

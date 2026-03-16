@@ -2802,7 +2802,7 @@ void do_consider(CHAR_DATA *ch, char *argument)
       {
       case 0:
          diff += 0.3;
-         break; /* Mage       */
+         break; /* Magi       */
       case 1:
          diff += 0.4;
          break; /* Cleric     */

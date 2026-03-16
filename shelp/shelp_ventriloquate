@@ -12,7 +12,7 @@ keywords ventriloquate
 Noun Damage: None
    Wear-Off: !Ventriloquate!
 Acquisition:
-   - Mage: level 3
+   - Magi: level 3
 Description:
    Ventriloquate Projects your voice to a different source/location to misdirect other players.
 *******************************************************************************
