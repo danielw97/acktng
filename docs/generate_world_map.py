@@ -1419,7 +1419,7 @@ ax.text(mid_cart, cy_cart+ch_cart-3.5, 'THE KNOWN WORLD',
         fontsize=15.0, fontweight='bold', color=INK, ha='center',
         va='center', fontfamily='DejaVu Serif', zorder=43,
         path_effects=[pe.withStroke(linewidth=3.0, foreground=PARCH_LT)])
-ax.text(mid_cart, cy_cart+ch_cart-8.5, 'of the  ACK!MUD  Realm',
+ax.text(mid_cart, cy_cart+ch_cart-8.5, 'of the  ATNG  Realm',
         fontsize=9.5, color=INK_FADED, ha='center', va='center',
         fontfamily='DejaVu Serif', style='italic', zorder=43)
 ax.text(mid_cart, cy_cart+2.5,
