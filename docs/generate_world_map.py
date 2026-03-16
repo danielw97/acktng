@@ -844,13 +844,6 @@ draw_smooth_line(ax,
 fill_region(ax, [(15,0),(95,0),(100,22),(88,28),(72,24),(60,28),(45,22),(28,26),(15,18)],
             PARCH_DARK, alpha=0.38, edge_color=DESERT_BRN, edge_lw=0.5, zorder=4)
 
-# Gravelands / Necropolis corridor (south)
-grave_pts = [
-    (55,30),(72,26),(92,30),(98,44),(94,58),(82,66),(68,68),(54,60),(50,46)
-]
-fill_region(ax, grave_pts, CRYPT_COL, alpha=0.52, edge_color='#3A2830',
-            edge_lw=0.8, zorder=4)
-hatch_region(ax, grave_pts, '#604040', dot_count=160, size=0.6, alpha=0.18, zorder=5)
 
 # Great Desert Expanse
 desert_pts = [
@@ -1051,21 +1044,25 @@ for ang in np.linspace(0,2*math.pi,14)[:-1]:
 ruin_sym(ax, 160, 64, size=1.8, col='#8A7850', zorder=11)
 ruin_sym(ax, 163, 66.5, size=1.3, col='#7A6840', zorder=11)
 
-# ── Void Citadel / Necropolis complex ──────────────────────
-void_citadel_sym(ax, 76, 40, size=2.0, zorder=14)
+# ── Void Citadel of Kel'Shadra (underground at Roc Road Crossroads) ────────
+# Accessed by going DOWN from the Roc Road Crossroads hub (rocroad.are #1148),
+# northwest of Midgaard between Kiess and the city.
+void_citadel_sym(ax, 44, 95, size=2.0, zorder=14)
 
-# Kel'Shadra crypts skull mark
-ax.add_patch(plt.Circle((70,52), 2.5, color=CRYPT_COL, alpha=0.55, zorder=12))
-ax.text(70, 52, '☠', color='#6A3A4A', fontsize=11, ha='center', va='center',
+# Kel'Shadra crypts skull mark — within/just north of Midgaard
+# Per midgaard.are southern gate room: "To the north, the Crypts of Kel'Shadra
+# lie along the route past the market districts."
+ax.add_patch(plt.Circle((62,97), 2.5, color=CRYPT_COL, alpha=0.55, zorder=12))
+ax.text(62, 97, '☠', color='#6A3A4A', fontsize=11, ha='center', va='center',
         alpha=0.80, zorder=13)
 
 # Gloamvault is a subterranean vault inside Midgaard — no separate overworld symbol
 
-# Crypt connecting crack-lines
+# Void Citadel connecting crack-lines
 for ang in np.linspace(0,2*math.pi,9)[:-1]:
-    ex = 76 + 4.5*math.cos(ang)
-    ey = 40 + 4.5*math.sin(ang)
-    ax.plot([76, ex], [40, ey], color=VOID_LT,
+    ex = 44 + 4.5*math.cos(ang)
+    ey = 95 + 4.5*math.sin(ang)
+    ax.plot([44, ex], [95, ey], color=VOID_LT,
             linewidth=0.45, alpha=0.25, zorder=12)
 
 # ── SUNKEN SANCTUM (western spur of Cinderteeth) ───────────
@@ -1112,12 +1109,14 @@ for r_, al_ in [(4.2, 0.16), (2.8, 0.26)]:
                              edgecolor='#9040D0', linewidth=0.7,
                              alpha=al_, zorder=13))
 
-# ── Catacombs of Nightfall (undead labyrinth north of Kel'Shadra) ────────
-ax.add_patch(plt.Circle((72, 65), 2.2, color='#1C1018', alpha=0.55, zorder=12))
-ax.text(72, 65, '✝', color='#5A2840', fontsize=11, ha='center', va='center',
+# ── Catacombs of Nightfall (beneath the southern chapel quarter of Midgaard) ──
+# Accessed from Midgaard room 941 (Ossuary Transit Court); lore places it
+# directly below the city's southern civic district.
+ax.add_patch(plt.Circle((64, 90), 2.2, color='#1C1018', alpha=0.55, zorder=12))
+ax.text(64, 90, '✝', color='#5A2840', fontsize=11, ha='center', va='center',
         alpha=0.82, zorder=13)
 for r_, al_ in [(3.6, 0.14), (5.2, 0.07)]:
-    ax.add_patch(plt.Circle((72, 65), r_, fill=False,
+    ax.add_patch(plt.Circle((64, 90), r_, fill=False,
                              edgecolor='#3C1828', linewidth=0.5,
                              alpha=al_, linestyle=':', zorder=11))
 
@@ -1216,8 +1215,9 @@ ax.text(152,74, '☽', color=DESERT_TAN, fontsize=7, ha='center',
 draw_smooth_line(ax, [(175,62),(180,66),(184,70),(187,74)],
                  DESERT_BRN, lw=1.2, alpha=0.50, style='--', zorder=9)
 
-# Road from Midgaard to Catacombs
-draw_smooth_line(ax, [(62,91),(65,82),(68,73),(72,62),(74,52),(76,44)],
+# Short descent path: Midgaard southern gate → Catacombs of Nightfall entrance
+# (the Ossuary Transport Court is within the city; only a brief approach is shown)
+draw_smooth_line(ax, [(63,92),(64,91),(64,90)],
                  '#4A2818', lw=1.2, alpha=0.45, style=':', zorder=9)
 
 # Branch road: Roc Road → Cathedral of the Violet Eclipse
@@ -1309,12 +1309,8 @@ label(ax, 175,55,  'GREAT\nPYRAMID', size=7.0, col='#785008', weight='bold')
 label(ax, 165,82,  'NORTHERN\nPYRAMID', size=5.8, col='#785008', style='italic')
 label(ax, 170,36,  'SOUTHERN\nPYRAMID', size=5.8, col='#785008', style='italic')
 
-# ── Necropolis / South ──────────────────────────────────────
-label(ax, 76, 46,  'VOID CITADEL', size=6.0, col=VOID_LT, weight='bold',
-      outline_col='#0A0410')
-label(ax, 68, 56,  "KEL'SHADRA\nCRYPTS", size=5.8, col='#5A283A',
-      style='italic', weight='bold', outline_col='#0A0410')
-label(ax, 74, 26,  'SEPULCHUR\nPASTURE', size=5.8, col='#3A2818', style='italic')
+# ── Sepulchur Pasture (south of Midgaard, connected via Midgaard room 946) ──
+label(ax, 57, 88,  'SEPULCHUR\nPASTURE', size=5.8, col='#3A2818', style='italic')
 
 # ── Special Sites ───────────────────────────────────────────
 label(ax, 160, 62, 'KHEPRA-LESH\n(Ruined)', size=5.5, col='#7A6040', style='italic')
@@ -1341,8 +1337,16 @@ label(ax, 44,  96,  'CATHEDRAL OF\nTHE VIOLET ECLIPSE', size=4.8, col='#7030A0',
       style='italic', weight='bold', outline_col='#0A0418')
 
 # ── Catacombs of Nightfall ───────────────────────────────────────────────
-label(ax, 76,  61,  'CATACOMBS\nOF NIGHTFALL', size=5.2, col='#5A2030',
+label(ax, 67,  88,  'CATACOMBS\nOF NIGHTFALL', size=5.2, col='#5A2030',
       style='italic', weight='bold', outline_col='#080408')
+
+# ── Crypts of Kel'Shadra ─────────────────────────────────────────────────
+label(ax, 56,  98,  "CRYPTS OF\nKEL'SHADRA", size=5.0, col='#5A2840',
+      style='italic', weight='bold', outline_col='#080408')
+
+# ── Void Citadel of Kel'Shadra ───────────────────────────────────────────
+label(ax, 44,  99,  "VOID CITADEL\nOF KEL'SHADRA", size=5.0, col=VOID_LT,
+      style='italic', weight='bold', outline_col='#0A0418')
 
 # ── Umbra Heartspire ─────────────────────────────────────────────────────
 label(ax, 64,  76,  'UMBRA\nHEARTSPIRE', size=5.0, col=VOID_LT,
@@ -1415,7 +1419,7 @@ ax.text(mid_cart, cy_cart+ch_cart-3.5, 'THE KNOWN WORLD',
         fontsize=15.0, fontweight='bold', color=INK, ha='center',
         va='center', fontfamily='DejaVu Serif', zorder=43,
         path_effects=[pe.withStroke(linewidth=3.0, foreground=PARCH_LT)])
-ax.text(mid_cart, cy_cart+ch_cart-8.5, 'of the  ACK!MUD  Realm',
+ax.text(mid_cart, cy_cart+ch_cart-8.5, 'of the  ATNG  Realm',
         fontsize=9.5, color=INK_FADED, ha='center', va='center',
         fontfamily='DejaVu Serif', style='italic', zorder=43)
 ax.text(mid_cart, cy_cart+2.5,
