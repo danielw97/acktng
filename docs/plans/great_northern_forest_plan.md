@@ -167,6 +167,19 @@ Road adjacency verification (all consecutive pairs are cardinally adjacent on th
 - **Key:** `-1` (no key; closed but not locked).
 - **Lore:** The North Lantern Gate stands where the forest's last ironpines give way to Kowloon's cleared customs approach. A Kowloon-standard chalkboard lists current tariff rates and caravan inspection hours. The gate posts bear both the lantern-and-scale motif and Kowloon's Wardens of Iron insignia.
 
+### West Connections: Cinderteeth Mountains (3 border links — Planned)
+
+The GNF's northwestern high-altitude edge (x=0 column, y=22–24, Northern Crown region) directly borders the Cinderteeth Mountains' eastern high-altitude approaches (Zone 7, Ember Crown Approaches). These three connections form a high-altitude border traverse. All are undoored open-air ridgeline passages (no door flag). Both sides must be authored simultaneously when `cinderteeth_mountains.are` is built.
+
+| GNF Room | Coord | Dir | Cinderteeth Room | Character |
+|---|---|---|---|---|
+| **4179** (Northwestern Crown Ridgeline South) | x=0, y=22 | `west` | **6627** Northeastern Ridge Approach — Lower | Lower altitude ridgeline traverse |
+| **4199** (Northwestern Crown Ridgeline Mid) | x=0, y=23 | `west` | **6633** Northeastern Ridge Approach — Mid | Mid-altitude ridgeline traverse |
+| **4219** (Northwestern Crown — Westernmost Point) | x=0, y=24 | `west` | **6639** Northeastern Ridge Approach — Upper | Highest altitude; most exposed link |
+
+- **Exit format (each):** GNF room has `D3` (west) exit, `0 -1 <cinderteeth_vnum>`. Cinderteeth room has `D1` (east) exit, `0 -1 <gnf_vnum>`. No door bits, no key.
+- **Lore anchor:** These rooms sit above the treeline on the rocky northwestern Crown shoulder. The volcanic ash coating on the eastern face (visible from all three rooms) marks the Ashfall Monsoon's reach into the GNF ecosystem. Ranger-writ expedition markers driven into the western-face rocks by GNF patrol teams are discoverable in extra descriptions.
+
 ---
 
 ## Door Plan (explicit, spec-compliant)
@@ -1288,6 +1301,7 @@ The following five quests extend the forest board with boss-target contracts onl
 - [x] Mob containment strategy enforced (`sentinel` and/or `no_mob` boundaries; all mobs get `stay_area`)
 - [x] South connection identified: `3751` south to Midgaard `925` (Granite Arcade)
 - [x] North connection identified: `4233` north to Kowloon `3534` (Iron Gate)
+- [ ] West connections (Planned — requires `cinderteeth_mountains.are`): `4179` west → 6627; `4199` west → 6633; `4219` west → 6639. Add `D3` exits on all three rooms when Cinderteeth is built.
 - [x] Road adjacency verified: all consecutive road rooms are cardinally adjacent
 - [x] NPC spec compliance notes included (act flags, long_descr/description format, boss/solo policy)
 - [x] Room description requirements section included
