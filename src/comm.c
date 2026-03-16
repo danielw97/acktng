@@ -259,6 +259,7 @@ int port;
 int control;
 
 int max_players = 0;
+int hotreboot_countdown = 0; /* Pulses remaining until automatic hotreboot; 0 = inactive */
 
 static int count_playing_players(void)
 {

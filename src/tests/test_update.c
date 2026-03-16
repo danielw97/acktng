@@ -4,6 +4,8 @@
 #include "globals.h"
 
 bool should_abort_for_checkpoint_timeout(int usage_now, int checkpoint, int threshold, bool disable_abort);
+bool hotreboot_warning_30s_due(int countdown);
+bool hotreboot_execute_due(int countdown);
 int hit_gain(CHAR_DATA *ch);
 int mana_gain(CHAR_DATA *ch);
 int move_gain(CHAR_DATA *ch);
@@ -112,6 +114,23 @@ static void test_regen_is_zero_in_combat(void)
     assert(move_gain(&ch) == 75);
 }
 
+static void test_hotreboot_30s_warning_triggers_at_correct_countdown(void)
+{
+    assert(!hotreboot_warning_30s_due(481));
+    assert(!hotreboot_warning_30s_due(241));
+    assert( hotreboot_warning_30s_due(240));  /* 30 * PULSE_PER_SECOND = 240 */
+    assert(!hotreboot_warning_30s_due(239));
+    assert(!hotreboot_warning_30s_due(0));
+}
+
+static void test_hotreboot_execute_triggers_only_at_zero(void)
+{
+    assert(!hotreboot_execute_due(480));
+    assert(!hotreboot_execute_due(240));
+    assert(!hotreboot_execute_due(1));
+    assert( hotreboot_execute_due(0));
+}
+
 int main(void)
 {
     test_timeout_disabled_never_aborts();
@@ -121,6 +140,8 @@ int main(void)
     test_regen_returns_delta_out_of_combat();
     test_npc_regen_uses_standard_formula();
     test_regen_is_zero_in_combat();
+    test_hotreboot_30s_warning_triggers_at_correct_countdown();
+    test_hotreboot_execute_triggers_only_at_zero();
 
     puts("test_update: all tests passed");
     return 0;

@@ -25,3 +25,5 @@ jobs:
             cd src
             make ack
             echo "Build complete."
+            touch ../data/hotreboot.trigger
+            echo "Hotreboot trigger set. MUD will warn players and hotreboot in 60 seconds."
