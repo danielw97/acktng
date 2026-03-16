@@ -91,30 +91,36 @@ int RevDirs[] = {2, 3, 0, 1, 5, 4};
  */
 extern bool fLogAll;
 
-void build_join_command_and_argument(char *dest, size_t dest_size, const char *command, const char *argument)
+void build_join_command_and_argument(char *dest, size_t dest_size, const char *command,
+                                     const char *argument)
 {
    if (dest == NULL || dest_size == 0)
       return;
 
-   snprintf(dest, dest_size, "%s %s", command != NULL ? command : "", argument != NULL ? argument : "");
+   snprintf(dest, dest_size, "%s %s", command != NULL ? command : "",
+            argument != NULL ? argument : "");
 }
 
-void build_format_vnum_usage_summary(char *dest, size_t dest_size, const char *label, const char *used, const char *free_text)
+void build_format_vnum_usage_summary(char *dest, size_t dest_size, const char *label,
+                                     const char *used, const char *free_text)
 {
    if (dest == NULL || dest_size == 0)
       return;
 
    snprintf(dest, dest_size, "%s vnum usage summary:\n\r\n\r%s\n\r\n\r%s\n\r",
-            label != NULL ? label : "", used != NULL ? used : "", free_text != NULL ? free_text : "");
+            label != NULL ? label : "", used != NULL ? used : "",
+            free_text != NULL ? free_text : "");
 }
 
 #ifdef UNIT_TEST_BUILD
-void build_testable_join_command_and_argument(char *dest, size_t dest_size, const char *command, const char *argument)
+void build_testable_join_command_and_argument(char *dest, size_t dest_size, const char *command,
+                                              const char *argument)
 {
    build_join_command_and_argument(dest, dest_size, command, argument);
 }
 
-void build_testable_format_vnum_usage_summary(char *dest, size_t dest_size, const char *label, const char *used, const char *free_text)
+void build_testable_format_vnum_usage_summary(char *dest, size_t dest_size, const char *label,
+                                              const char *used, const char *free_text)
 {
    build_format_vnum_usage_summary(dest, dest_size, label, used, free_text);
 }
@@ -372,7 +378,9 @@ void build_interpret(CHAR_DATA *ch, char *argument)
    found = FALSE;
    for (cmd = 0; build_cmd_table[cmd].name[0] != '\0'; cmd++)
    {
-      if (command[0] == build_cmd_table[cmd].name[0] && !str_prefix(command, build_cmd_table[cmd].name) && get_trust(ch) >= build_cmd_table[cmd].level)
+      if (command[0] == build_cmd_table[cmd].name[0] &&
+          !str_prefix(command, build_cmd_table[cmd].name) &&
+          get_trust(ch) >= build_cmd_table[cmd].level)
       {
          found = TRUE;
          break;
@@ -385,7 +393,8 @@ void build_interpret(CHAR_DATA *ch, char *argument)
    if (build_cmd_table[cmd].log == LOG_NEVER)
       strcpy(logline, "XXXXXXXX XXXXXXXX XXXXXXXX");
 
-   if ((!IS_NPC(ch) && IS_SET(ch->act, PLR_LOG)) || fLogAll || build_cmd_table[cmd].log == LOG_ALWAYS)
+   if ((!IS_NPC(ch) && IS_SET(ch->act, PLR_LOG)) || fLogAll ||
+       build_cmd_table[cmd].log == LOG_ALWAYS)
    {
       sprintf(log_buf, "Log %s: %s", ch->name, logline);
       log_string(log_buf);
@@ -485,24 +494,30 @@ void build_showmob(CHAR_DATA *ch, char *argument)
 
    buf1[0] = '\0';
 
-   sprintf(buf, "@@WName: @@y%s.    @@WClass: @@y%s.\n\r", pMob->player_name, tab_mob_class[pMob->class].text);
+   sprintf(buf, "@@WName: @@y%s.    @@WClass: @@y%s.\n\r", pMob->player_name,
+           tab_mob_class[pMob->class].text);
    strcat(buf1, buf);
 
-   sprintf(buf, "@@WVnum: @@y%d.  @@WSex: @@y%s.  @@WRace:@@y %s ",
-           pMob->vnum,
-           pMob->sex == SEX_MALE ? "male" : pMob->sex == SEX_FEMALE ? "female"
-                                                                    : "neutral",
-           ((pMob->race > -1) && (pMob->race < MAX_RACE)) ? race_table[pMob->race].race_title : "Illegal Race");
+   sprintf(buf, "@@WVnum: @@y%d.  @@WSex: @@y%s.  @@WRace:@@y %s ", pMob->vnum,
+           pMob->sex == SEX_MALE     ? "male"
+           : pMob->sex == SEX_FEMALE ? "female"
+                                     : "neutral",
+           ((pMob->race > -1) && (pMob->race < MAX_RACE)) ? race_table[pMob->race].race_title
+                                                          : "Illegal Race");
    strcat(buf1, buf);
 
    sprintf(buf, " @@WLv: @@y%d.    @@WAlign: @@y%d.\n\r", pMob->level, pMob->alignment);
    strcat(buf1, buf);
 
-   snprintf(buf, sizeof(buf), "@@WModifiers: HP: @@y%ld.   @@WAC: @@y%d.  @@WHitroll: @@y%d.  @@WDamroll: @@y%d.\n\r",
+   snprintf(buf, sizeof(buf),
+            "@@WModifiers: HP: @@y%ld.   @@WAC: @@y%d.  @@WHitroll: @@y%d.  @@WDamroll: @@y%d.\n\r",
             pMob->hp_mod, pMob->ac_mod, pMob->hr_mod, pMob->dr_mod);
    strcat(buf1, buf);
-   sprintf(buf, "@@WSpellpower: @@y%d@@W   Crit: @@y%d@@W   Crit Mult: @@y%d  @@WSpell Crit: @@y%d @@W Spell Crit Mult: @@y%d\n\r",
-           pMob->spellpower_mod, pMob->crit_mod, pMob->crit_mult_mod, pMob->spell_crit_mod, pMob->spell_mult_mod );
+   sprintf(buf,
+           "@@WSpellpower: @@y%d@@W   Crit: @@y%d@@W   Crit Mult: @@y%d  @@WSpell Crit: @@y%d @@W "
+           "Spell Crit Mult: @@y%d\n\r",
+           pMob->spellpower_mod, pMob->crit_mod, pMob->crit_mult_mod, pMob->spell_crit_mod,
+           pMob->spell_mult_mod);
    strcat(buf1, buf);
 
    sprintf(buf, "@@WDodge: @@y%d   @@WParry: @@y%d   @@WBlock: @@y%d   @@WPiercing:@@y %d\n\r",
@@ -511,16 +526,16 @@ void build_showmob(CHAR_DATA *ch, char *argument)
 
    sprintf(buf, "LA: %d", pMob->loot_amount);
    strcat(buf1, buf);
-   for(int i = 0; i < MAX_LOOT; i++)
+   for (int i = 0; i < MAX_LOOT; i++)
    {
       sprintf(buf, " L%d: %d", i, pMob->loot[i]);
-      strcat(buf1,buf);
+      strcat(buf1, buf);
    }
    strcat(buf1, "\n\r");
-   for(int i = 0; i < MAX_LOOT; i++)
+   for (int i = 0; i < MAX_LOOT; i++)
    {
       sprintf(buf, "LC%d: %d ", i, pMob->loot_chance[i]);
-      strcat(buf1,buf);
+      strcat(buf1, buf);
    }
    strcat(buf1, "\n\r");
 
@@ -536,19 +551,23 @@ void build_showmob(CHAR_DATA *ch, char *argument)
    strcat(buf1, buf);
    sprintf(buf, "@@WDef Flags:@@y %s\n\r", bit_table_lookup(tab_mob_def, pMob->def));
    strcat(buf1, buf);
-   sprintf(buf, "@@WStrong Magic Realms:@@y %s\n\r", bit_table_lookup(tab_magic_realms, pMob->strong_magic));
+   sprintf(buf, "@@WStrong Magic Realms:@@y %s\n\r",
+           bit_table_lookup(tab_magic_realms, pMob->strong_magic));
    strcat(buf1, buf);
-   sprintf(buf, "@@WWeak Magic Realms:@@y %s\n\r", bit_table_lookup(tab_magic_realms, pMob->weak_magic));
+   sprintf(buf, "@@WWeak Magic Realms:@@y %s\n\r",
+           bit_table_lookup(tab_magic_realms, pMob->weak_magic));
    strcat(buf1, buf);
-   sprintf(buf, "@@WResist Magic Realms:@@y %s\n\r", bit_table_lookup(tab_magic_realms, pMob->resist));
+   sprintf(buf, "@@WResist Magic Realms:@@y %s\n\r",
+           bit_table_lookup(tab_magic_realms, pMob->resist));
    strcat(buf1, buf);
-   sprintf(buf, "@@WSuscept Magic Realms:@@y %s\n\r", bit_table_lookup(tab_magic_realms, pMob->suscept));
+   sprintf(buf, "@@WSuscept Magic Realms:@@y %s\n\r",
+           bit_table_lookup(tab_magic_realms, pMob->suscept));
    strcat(buf1, buf);
    sprintf(buf, "@@WRace Mods:@@y %s\n\r", bit_table_lookup(tab_mob_race_mods, pMob->race_mods));
    strcat(buf1, buf);
 
-   sprintf(buf, "@@WShort description: @@y%s.\n\r@@WLong  description: @@y%s",
-           pMob->short_descr, pMob->long_descr[0] != '\0' ? pMob->long_descr : "(none).\n\r");
+   sprintf(buf, "@@WShort description: @@y%s.\n\r@@WLong  description: @@y%s", pMob->short_descr,
+           pMob->long_descr[0] != '\0' ? pMob->long_descr : "(none).\n\r");
    strcat(buf1, buf);
 
    if (pMob->spec_fun != 0)
@@ -569,7 +588,9 @@ void build_showmob(CHAR_DATA *ch, char *argument)
          }
       }
       strcat(buf1, "\n\r");
-      sprintf(buf, "@@WOpens at @@y%i @@Whrs, shuts at @@y%i @@Whours, profbuy:@@y%i, @@Wprofsell:@@y%i.\n\r",
+      sprintf(buf,
+              "@@WOpens at @@y%i @@Whrs, shuts at @@y%i @@Whours, profbuy:@@y%i, "
+              "@@Wprofsell:@@y%i.\n\r",
               pShop->open_hour, pShop->close_hour, pShop->profit_buy, pShop->profit_sell);
       strcat(buf1, buf);
    }
@@ -617,10 +638,12 @@ void build_showobj(CHAR_DATA *ch, char *argument)
    sprintf(buf, "@@WName: @@y%s  @@WLevel: @@y%d.\n\r", obj->name, obj->level);
    strcat(buf1, buf);
 
-   sprintf(buf, "@@WVnum: @@y%d.  @@WType: @@y%s.\n\r", obj->vnum, tab_item_types[(obj->item_type) - 1].text);
+   sprintf(buf, "@@WVnum: @@y%d.  @@WType: @@y%s.\n\r", obj->vnum,
+           tab_item_types[(obj->item_type) - 1].text);
    strcat(buf1, buf);
 
-   sprintf(buf, "@@WShort description: @@y%s.\n\r@@WLong description: @@y%s\n\r", obj->short_descr, obj->description);
+   sprintf(buf, "@@WShort description: @@y%s.\n\r@@WLong description: @@y%s\n\r", obj->short_descr,
+           obj->description);
    strcat(buf1, buf);
 
    /*
@@ -647,8 +670,8 @@ void build_showobj(CHAR_DATA *ch, char *argument)
 
    for (cnt = 0; cnt < 10; cnt++)
    {
-      sprintf(buf, "@@W[Value%d : @@y%6d@@W] %s",
-              cnt, obj->value[cnt], rev_table_lookup(tab_value_meanings, (obj->item_type * 10) + cnt));
+      sprintf(buf, "@@W[Value%d : @@y%6d@@W] %s", cnt, obj->value[cnt],
+              rev_table_lookup(tab_value_meanings, (obj->item_type * 10) + cnt));
       strcat(buf1, buf);
       if (is_name("Spell", rev_table_lookup(tab_value_meanings, (obj->item_type * 10) + cnt)))
       {
@@ -702,7 +725,8 @@ void build_showobj(CHAR_DATA *ch, char *argument)
 
    for (paf = obj->first_apply; paf != NULL; paf = paf->next)
    {
-      sprintf(buf, "@@WAffects @@y%s @@Wby @@y%d@@g.\n\r", affect_loc_name(paf->location), paf->modifier);
+      sprintf(buf, "@@WAffects @@y%s @@Wby @@y%d@@g.\n\r", affect_loc_name(paf->location),
+              paf->modifier);
       strcat(buf1, buf);
    }
 
@@ -763,9 +787,8 @@ void build_showroom(CHAR_DATA *ch, char *argument)
    sprintf(buf, "@@WName: @@y%s.\n\r@@WArea: @@y%s.\n\r", location->name, location->area->name);
    strcat(buf1, buf);
 
-   sprintf(buf,
-           "@@WVnum: @@y%d.  @@WSector:\n\r @@y%s",
-           location->vnum, show_values(tab_sector_types, location->sector_type, FALSE));
+   sprintf(buf, "@@WVnum: @@y%d.  @@WSector:\n\r @@y%s", location->vnum,
+           show_values(tab_sector_types, location->sector_type, FALSE));
    strcat(buf1, buf);
 
    sprintf(buf, "@@WFlags:\n\r@@y%s", show_values(tab_room_flags, location->room_flags, TRUE));
@@ -814,14 +837,16 @@ void build_showroom(CHAR_DATA *ch, char *argument)
                strcat(buf1, buf);
                sprintf(buf, "             @@WKey: @@y%5i %s,  @@WExit Type:@@y %s\n\r",
                        pKeyObj != NULL ? pKeyObj->vnum : 0,
-                       pKeyObj != NULL ? pKeyObj->name : "None", bit_table_lookup(tab_door_types, pexit->exit_info));
+                       pKeyObj != NULL ? pKeyObj->name : "None",
+                       bit_table_lookup(tab_door_types, pexit->exit_info));
                strcat(buf1, buf);
                if (pexit->keyword != NULL && pexit->keyword[0] != '\0')
                {
                   sprintf(buf, "@@WKeyword(s): @@y%s.  ", pexit->keyword);
                   strcat(buf1, buf);
                }
-               sprintf(buf, "@@WDesc: @@y%s", pexit->description[0] != '\0' ? pexit->description : "(none).\n\r");
+               sprintf(buf, "@@WDesc: @@y%s",
+                       pexit->description[0] != '\0' ? pexit->description : "(none).\n\r");
                strcat(buf1, buf);
             }
             else
@@ -832,8 +857,7 @@ void build_showroom(CHAR_DATA *ch, char *argument)
                 * New way of showing doors... move to relevant place if it works
                 */
 
-               sprintf(buf, "%s: (%s)  @@WTo: @@y(%i) %s, %s\n\r", sDirs[door],
-                       pexit->keyword,
+               sprintf(buf, "%s: (%s)  @@WTo: @@y(%i) %s, %s\n\r", sDirs[door], pexit->keyword,
                        pexit->to_room != NULL ? pexit->to_room->vnum : 0,
                        pexit->to_room != NULL ? pexit->to_room->name : "Unknown",
                        bit_table_lookup(tab_door_types, pexit->exit_info));
@@ -902,7 +926,8 @@ char *reset_to_text(BUILD_DATA_LIST **pList, int *pcount)
    switch (pReset->command)
    {
    default:
-      sprintf(buf, "  stray '%c' reset: %d %d %d.\n\r", pReset->command, pReset->arg1, pReset->arg2, pReset->arg3);
+      sprintf(buf, "  stray '%c' reset: %d %d %d.\n\r", pReset->command, pReset->arg1, pReset->arg2,
+              pReset->arg3);
       strcat(buf1, buf);
       break;
    case 'G':
@@ -916,11 +941,11 @@ char *reset_to_text(BUILD_DATA_LIST **pList, int *pcount)
    case 'E':
       pObj = get_obj_index(pReset->arg1);
       if (pObj)
-         sprintf(buf, "  stray 'equip' reset: object [%d] %s, on %s.\n\r",
-                 pReset->arg1, pObj->name, tab_wear_loc[(pReset->arg3)].text);
+         sprintf(buf, "  stray 'equip' reset: object [%d] %s, on %s.\n\r", pReset->arg1, pObj->name,
+                 tab_wear_loc[(pReset->arg3)].text);
       else
-         sprintf(buf, "  stray 'equip' reset: object [%d] (unknown), on %s.\n\r",
-                 pReset->arg1, tab_wear_loc[(pReset->arg3)].text);
+         sprintf(buf, "  stray 'equip' reset: object [%d] (unknown), on %s.\n\r", pReset->arg1,
+                 tab_wear_loc[(pReset->arg3)].text);
       strcat(buf1, buf);
       break;
    case 'A': /* AutoMessage for room */
@@ -971,10 +996,11 @@ char *reset_to_text(BUILD_DATA_LIST **pList, int *pcount)
          {
             pObj = get_obj_index(pReset->arg1);
             if (pObj != NULL)
-               sprintf(buf, "  equiped with [%d] %s, on %s.\n\r", pObj->vnum,
-                       pObj->name, tab_wear_loc[(pReset->arg3)].text);
+               sprintf(buf, "  equiped with [%d] %s, on %s.\n\r", pObj->vnum, pObj->name,
+                       tab_wear_loc[(pReset->arg3)].text);
             else
-               sprintf(buf, "[%d] unknown object equipped on %s.\n\r", pReset->arg1, tab_wear_loc[pReset->arg3].text);
+               sprintf(buf, "[%d] unknown object equipped on %s.\n\r", pReset->arg1,
+                       tab_wear_loc[pReset->arg3].text);
             strcat(buf1, buf);
          }
       }
@@ -982,7 +1008,8 @@ char *reset_to_text(BUILD_DATA_LIST **pList, int *pcount)
    case 'O': /* Load object to room */
       pObj = get_obj_index(pReset->arg1);
       if (pObj != NULL)
-         sprintf(buf, " [%d] %s no more than %d in room.\n\r", pObj->vnum, pObj->name, pReset->arg2);
+         sprintf(buf, " [%d] %s no more than %d in room.\n\r", pObj->vnum, pObj->name,
+                 pReset->arg2);
       else
          sprintf(buf, " [%d] unknown object reset!\n\r", pReset->arg1);
       strcat(buf1, buf);
@@ -1012,9 +1039,11 @@ char *reset_to_text(BUILD_DATA_LIST **pList, int *pcount)
    case 'P': /* put object in container */
       pObj = get_obj_index(pReset->arg1);
       if (pObj != NULL)
-         sprintf(buf, " Put [%d] %s inside container [%d].\n\r", pObj->vnum, pObj->name, pReset->arg3);
+         sprintf(buf, " Put [%d] %s inside container [%d].\n\r", pObj->vnum, pObj->name,
+                 pReset->arg3);
       else
-         sprintf(buf, " Put unknown object [%d] inside container [%d].\n\r", pReset->arg1, pReset->arg3);
+         sprintf(buf, " Put unknown object [%d] inside container [%d].\n\r", pReset->arg1,
+                 pReset->arg3);
       strcat(buf1, buf);
       break;
    }
@@ -1734,7 +1763,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "lc8") || !str_cmp(arg2,"lootchance8"))
+   if (!str_cmp(arg2, "lc8") || !str_cmp(arg2, "lootchance8"))
    {
       if (value < 1 || value > 100)
       {
@@ -1746,7 +1775,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "lc7") || !str_cmp(arg2,"lootchance7"))
+   if (!str_cmp(arg2, "lc7") || !str_cmp(arg2, "lootchance7"))
    {
       if (value < 1 || value > 100)
       {
@@ -1758,7 +1787,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "lc6") || !str_cmp(arg2,"lootchance6"))
+   if (!str_cmp(arg2, "lc6") || !str_cmp(arg2, "lootchance6"))
    {
       if (value < 1 || value > 100)
       {
@@ -1770,7 +1799,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "lc5") || !str_cmp(arg2,"lootchance5"))
+   if (!str_cmp(arg2, "lc5") || !str_cmp(arg2, "lootchance5"))
    {
       if (value < 1 || value > 100)
       {
@@ -1782,7 +1811,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "lc4") || !str_cmp(arg2,"lootchance4"))
+   if (!str_cmp(arg2, "lc4") || !str_cmp(arg2, "lootchance4"))
    {
       if (value < 1 || value > 100)
       {
@@ -1794,7 +1823,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "lc3") || !str_cmp(arg2,"lootchance3"))
+   if (!str_cmp(arg2, "lc3") || !str_cmp(arg2, "lootchance3"))
    {
       if (value < 1 || value > 100)
       {
@@ -1806,7 +1835,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "lc2") || !str_cmp(arg2,"lootchance2"))
+   if (!str_cmp(arg2, "lc2") || !str_cmp(arg2, "lootchance2"))
    {
       if (value < 1 || value > 100)
       {
@@ -1818,7 +1847,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "lc1") || !str_cmp(arg2,"lootchance1"))
+   if (!str_cmp(arg2, "lc1") || !str_cmp(arg2, "lootchance1"))
    {
       if (value < 1 || value > 100)
       {
@@ -1830,7 +1859,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "lc0") || !str_cmp(arg2,"lootchance0"))
+   if (!str_cmp(arg2, "lc0") || !str_cmp(arg2, "lootchance0"))
    {
       if (value < 1 || value > 100)
       {
@@ -1842,7 +1871,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "l8") || !str_cmp(arg2,"loot8"))
+   if (!str_cmp(arg2, "l8") || !str_cmp(arg2, "loot8"))
    {
       if (value < 1 || value > MAX_VNUM)
       {
@@ -1854,7 +1883,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "l7") || !str_cmp(arg2,"loot7"))
+   if (!str_cmp(arg2, "l7") || !str_cmp(arg2, "loot7"))
    {
       if (value < 1 || value > MAX_VNUM)
       {
@@ -1866,7 +1895,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "l6") || !str_cmp(arg2,"loot6"))
+   if (!str_cmp(arg2, "l6") || !str_cmp(arg2, "loot6"))
    {
       if (value < 1 || value > MAX_VNUM)
       {
@@ -1878,7 +1907,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "l5") || !str_cmp(arg2,"loot5"))
+   if (!str_cmp(arg2, "l5") || !str_cmp(arg2, "loot5"))
    {
       if (value < 1 || value > MAX_VNUM)
       {
@@ -1890,7 +1919,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "l4") || !str_cmp(arg2,"loot4"))
+   if (!str_cmp(arg2, "l4") || !str_cmp(arg2, "loot4"))
    {
       if (value < 1 || value > MAX_VNUM)
       {
@@ -1902,7 +1931,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "l3") || !str_cmp(arg2,"loot3"))
+   if (!str_cmp(arg2, "l3") || !str_cmp(arg2, "loot3"))
    {
       if (value < 1 || value > MAX_VNUM)
       {
@@ -1914,7 +1943,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "l2") || !str_cmp(arg2,"loot2"))
+   if (!str_cmp(arg2, "l2") || !str_cmp(arg2, "loot2"))
    {
       if (value < 1 || value > MAX_VNUM)
       {
@@ -1926,7 +1955,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "l1") || !str_cmp(arg2,"loot1"))
+   if (!str_cmp(arg2, "l1") || !str_cmp(arg2, "loot1"))
    {
       if (value < 1 || value > MAX_VNUM)
       {
@@ -1938,7 +1967,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "l0") || !str_cmp(arg2,"loot0"))
+   if (!str_cmp(arg2, "l0") || !str_cmp(arg2, "loot0"))
    {
       if (value < 1 || value > MAX_VNUM)
       {
@@ -1950,7 +1979,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!str_cmp(arg2, "la") || !str_cmp(arg2,"loot_amount"))
+   if (!str_cmp(arg2, "la") || !str_cmp(arg2, "loot_amount"))
    {
       if (value < 1 || value > 1000)
       {
@@ -2434,7 +2463,8 @@ void build_setroom(CHAR_DATA *ch, char *argument)
       else
          SET_BIT(location->room_flags, value);
       sprintf(buf, "@@WRoom flag @@y%s@@W toggled to @@y%s@@W.@@g\n\r",
-              rev_table_lookup(tab_room_flags, value), IS_SET(location->room_flags, value) ? "ON" : "OFF");
+              rev_table_lookup(tab_room_flags, value),
+              IS_SET(location->room_flags, value) ? "ON" : "OFF");
       send_to_char(buf, ch);
       return;
    }
@@ -2446,7 +2476,8 @@ void build_setroom(CHAR_DATA *ch, char *argument)
        * Sector found
        */
       location->sector_type = value;
-      sprintf(buf, "@@WSector type set to @@y%s@@W.@@g\n\r", rev_table_lookup(tab_sector_types, value));
+      sprintf(buf, "@@WSector type set to @@y%s@@W.@@g\n\r",
+              rev_table_lookup(tab_sector_types, value));
       send_to_char(buf, ch);
       return;
    }
@@ -2616,9 +2647,11 @@ void build_setroom(CHAR_DATA *ch, char *argument)
                   area_modified(pDestRoom->area);
                }
                else
-                  send_to_char("Note: Door in exit room does not point to this door, so not deleted.", ch);
+                  send_to_char(
+                      "Note: Door in exit room does not point to this door, so not deleted.", ch);
             else
-               send_to_char("Note: There is no corresponding exit in the room pointed to by this exit.", ch);
+               send_to_char(
+                   "Note: There is no corresponding exit in the room pointed to by this exit.", ch);
          }
       }
 
@@ -2644,7 +2677,8 @@ void build_setroom(CHAR_DATA *ch, char *argument)
       pDestRoom = pExit->to_room; /* Setup pDestRoom to point to dest. room */
       if (pDestRoom != NULL)
       {
-         pDestExit = pDestRoom->exit[RevDirs[door]]; /* Setup pDestExit to exit from DestRoom to here. */
+         pDestExit =
+             pDestRoom->exit[RevDirs[door]]; /* Setup pDestExit to exit from DestRoom to here. */
          if (pDestExit != NULL && pDestExit->to_room != location)
             pDestExit = NULL;
       }
@@ -2697,7 +2731,8 @@ void build_setroom(CHAR_DATA *ch, char *argument)
                nuke_exit_resets(pDestRoom, RevDirs[door]);
             }
 
-            if (!(pDestExit = pRoom->exit[RevDirs[door]])) /* If exit hasn't been made on other side */
+            if (!(pDestExit =
+                      pRoom->exit[RevDirs[door]])) /* If exit hasn't been made on other side */
             {
                /*
                 * Create door coming other way.
@@ -2716,9 +2751,9 @@ void build_setroom(CHAR_DATA *ch, char *argument)
 
             if (pDestExit->to_room != location)
             {
-               sprintf(buf, "The door in room %i going %s points to room [%i] %s.\n\r",
-                       value,
-                       sDirs[RevDirs[door]], pDestExit->vnum, pDestExit->to_room != NULL ? pDestExit->to_room->name : "");
+               sprintf(buf, "The door in room %i going %s points to room [%i] %s.\n\r", value,
+                       sDirs[RevDirs[door]], pDestExit->vnum,
+                       pDestExit->to_room != NULL ? pDestExit->to_room->name : "");
                send_to_char(buf, ch);
             }
          }
@@ -3717,7 +3752,8 @@ void build_addreset(CHAR_DATA *ch, char *argument)
       num = number_argument(arg2, buf);
       if (num == 0)
       {
-         send_to_char("Count portion of vnum cannot be 0. Indicate which instance of the mob, or -1 for all instances.\n\r",
+         send_to_char("Count portion of vnum cannot be 0. Indicate which instance of the mob, or "
+                      "-1 for all instances.\n\r",
                       ch);
          return;
       }
@@ -3785,7 +3821,8 @@ void build_addreset(CHAR_DATA *ch, char *argument)
       num = number_argument(arg2, buf);
       if (num == 0)
       {
-         send_to_char("Count portion of vnum cannot be 0. Indicate which instance of the mob, or -1 for all instances.\n\r",
+         send_to_char("Count portion of vnum cannot be 0. Indicate which instance of the mob, or "
+                      "-1 for all instances.\n\r",
                       ch);
          return;
       }
@@ -4204,7 +4241,8 @@ void build_delroom(CHAR_DATA *ch, char *argument)
 
          for (door = 0; door <= 5; door++)
          {
-            if ((pExit = pSrchRoom->exit[door]) != NULL && (pExit->to_room == pRoomIndex || pSrchRoom == pRoomIndex))
+            if ((pExit = pSrchRoom->exit[door]) != NULL &&
+                (pExit->to_room == pRoomIndex || pSrchRoom == pRoomIndex))
             {
                /*
                 * Get rid of exit.
@@ -4565,7 +4603,8 @@ void build_delmob(CHAR_DATA *ch, char *argument)
 
       old_mob_vnum = vnum;
 
-      sprintf(buf, "Are you sure you want to delete mobile: [%d] %s?\n\r", vnum, pMobIndex->player_name);
+      sprintf(buf, "Are you sure you want to delete mobile: [%d] %s?\n\r", vnum,
+              pMobIndex->player_name);
       strcat(buf, "Type delmobile ok if you are sure.\n\r");
       send_to_char(buf, ch);
       return;
@@ -5121,7 +5160,8 @@ void build_list(CHAR_DATA *ch, char *argument)
 
    found = FALSE;
 
-   if (argument[0] == '\0' || (ch->act_build == ACT_BUILD_REDIT && is_name(argument, "brief doors resets desc all")))
+   if (argument[0] == '\0' ||
+       (ch->act_build == ACT_BUILD_REDIT && is_name(argument, "brief doors resets desc all")))
    {
       switch (ch->act_build)
       {
@@ -5369,7 +5409,8 @@ void build_listvalues(CHAR_DATA *ch, char *argument)
    value *= 10;
    for (foo = 0; foo < 4; foo++)
    {
-      sprintf(buf, "@@W[Value@@y%d@@W] : @@y%s@@g\n\r", foo, rev_table_lookup(tab_value_meanings, value + foo));
+      sprintf(buf, "@@W[Value@@y%d@@W] : @@y%s@@g\n\r", foo,
+              rev_table_lookup(tab_value_meanings, value + foo));
       send_to_char(buf, ch);
    }
    return;
@@ -5388,7 +5429,8 @@ void build_listweapons(CHAR_DATA *ch, char *argument)
     */
    for (foo = 0; tab_weapon_types[foo].text != NULL; foo++)
    {
-      sprintf(buf, "@@W%2llu - @@y%10s.   ", (unsigned long long)tab_weapon_types[foo].value, tab_weapon_types[foo].text);
+      sprintf(buf, "@@W%2llu - @@y%10s.   ", (unsigned long long)tab_weapon_types[foo].value,
+              tab_weapon_types[foo].text);
       send_to_char(buf, ch);
       if ((foo + 1) % 2 == 0)
          send_to_char("\n\r", ch);
@@ -5410,7 +5452,8 @@ void build_listliquids(CHAR_DATA *ch, char *argument)
     */
    for (foo = 0; tab_drink_types[foo].text != NULL; foo++)
    {
-      sprintf(buf, "%2llu - %12s.   ", (unsigned long long)tab_drink_types[foo].value, tab_drink_types[foo].text);
+      sprintf(buf, "%2llu - %12s.   ", (unsigned long long)tab_drink_types[foo].value,
+              tab_drink_types[foo].text);
       send_to_char(buf, ch);
       if ((foo + 1) % 2 == 0)
          send_to_char("\n\r", ch);

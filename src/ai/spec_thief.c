@@ -14,7 +14,8 @@ bool spec_thief(CHAR_DATA *ch)
 
    for (victim = ch->in_room->first_person; victim != NULL; victim = victim->next_in_room)
    {
-      if (IS_NPC(victim) || victim->level >= LEVEL_IMMORTAL || number_bits(2) != 0 || !can_see(ch, victim)) /* Thx Glop */
+      if (IS_NPC(victim) || victim->level >= LEVEL_IMMORTAL || number_bits(2) != 0 ||
+          !can_see(ch, victim)) /* Thx Glop */
          continue;
 
       if (IS_AWAKE(victim) && number_range(0, ch->level) == 0)

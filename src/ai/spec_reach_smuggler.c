@@ -7,19 +7,17 @@
 bool spec_reach_smuggler(CHAR_DATA *ch)
 {
    static const char *acts[] = {
-      "$n peers through a glass-shard screen and listens for patrol boots on stone.",
-      "$n wraps a small relic component in dark liturgical cloth.",
-      "$n traces an eclipsed glyph in the sand and scuffs it away with a heel.",
-      "$n checks a dead-drop niche behind broken masonry, then reseals it.",
-      "$n counts muffled footsteps before signaling a hidden passage with two taps."
-   };
+       "$n peers through a glass-shard screen and listens for patrol boots on stone.",
+       "$n wraps a small relic component in dark liturgical cloth.",
+       "$n traces an eclipsed glyph in the sand and scuffs it away with a heel.",
+       "$n checks a dead-drop niche behind broken masonry, then reseals it.",
+       "$n counts muffled footsteps before signaling a hidden passage with two taps."};
    static char *says[] = {
-      "The fire that made this glass was judgment, not accident. We keep what it sanctified.",
-      "Warden patrols watch the roads. We move beneath them.",
-      "Every sealed relic has a buyer, if you know which whisper to answer.",
-      "The Ninth Meridian failed for them. For us, it opened the way.",
-      "Quiet hands, quiet tongues, quick feet. That's how the Cell survives."
-   };
+       "The fire that made this glass was judgment, not accident. We keep what it sanctified.",
+       "Warden patrols watch the roads. We move beneath them.",
+       "Every sealed relic has a buyer, if you know which whisper to answer.",
+       "The Ninth Meridian failed for them. For us, it opened the way.",
+       "Quiet hands, quiet tongues, quick feet. That's how the Cell survives."};
 
    if (!IS_AWAKE(ch) || is_fighting(ch))
       return FALSE;

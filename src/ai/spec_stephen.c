@@ -41,7 +41,8 @@ bool spec_stephen(CHAR_DATA *ch)
    /*
     * Check this loop.. -- Alty
     */
-   for (room = get_room_index(number_range(0, 65535)); !room; room = get_room_index(number_range(0, 65535)))
+   for (room = get_room_index(number_range(0, 65535)); !room;
+        room = get_room_index(number_range(0, 65535)))
       ;
 
    act("$n climbs up the chimney.", ch, NULL, NULL, TO_ROOM);

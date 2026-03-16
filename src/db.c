@@ -181,12 +181,10 @@ extern bool auto_quest;
 
 extern COUNCIL_DATA super_councils[MAX_SUPER];
 
-const int convert_wearflags[] = {
-    BIT_24, BIT_14, BIT_8, BIT_19, BIT_4, BIT_21, BIT_22, BIT_13,
-    BIT_11, BIT_16, BIT_17, BIT_18, BIT_12, BIT_16, BIT_16, BIT_5,
-    BIT_7, BIT_16,
-    BIT_24, BIT_24, BIT_24, BIT_24, BIT_24, BIT_24, BIT_24,
-    BIT_24, BIT_24, BIT_24, BIT_24, BIT_24, BIT_24, BIT_24};
+const int convert_wearflags[] = {BIT_24, BIT_14, BIT_8,  BIT_19, BIT_4,  BIT_21, BIT_22, BIT_13,
+                                 BIT_11, BIT_16, BIT_17, BIT_18, BIT_12, BIT_16, BIT_16, BIT_5,
+                                 BIT_7,  BIT_16, BIT_24, BIT_24, BIT_24, BIT_24, BIT_24, BIT_24,
+                                 BIT_24, BIT_24, BIT_24, BIT_24, BIT_24, BIT_24, BIT_24, BIT_24};
 
 /*
  * Locals.
@@ -227,7 +225,6 @@ int top_shop;
 /*
  * program locals
  */
-
 
 /*
  * Memory management.
@@ -298,15 +295,16 @@ void check_resets args((void));
 
 void reset_area args((AREA_DATA * pArea));
 
-#define SHOW_AREA                                \
-   if (!previous_bug)                            \
-   {                                             \
-      bug("      In area file:", 0);            \
-      log_f("      In %s.", pArea->filename);    \
-      previous_bug = 1;                          \
+#define SHOW_AREA                                                                                  \
+   if (!previous_bug)                                                                              \
+   {                                                                                               \
+      bug("      In area file:", 0);                                                               \
+      log_f("      In %s.", pArea->filename);                                                      \
+      previous_bug = 1;                                                                            \
    }
 
-static void db_format_status(char *dest, size_t dest_size, const char *prefix, const char *file_name)
+static void db_format_status(char *dest, size_t dest_size, const char *prefix,
+                             const char *file_name)
 {
    snprintf(dest, dest_size, "%s %s", prefix, file_name);
 }
@@ -806,8 +804,6 @@ void load_area(FILE *fp)
    return;
 }
 
-
-
 static void load_help_file(const char *help_path, HELP_DATA **first, HELP_DATA **last)
 {
    FILE *fp;
@@ -875,8 +871,8 @@ static void load_help_file(const char *help_path, HELP_DATA **first, HELP_DATA *
 
 static int compare_help_file_names(const void *a, const void *b)
 {
-   const char * const *sa = (const char * const *)a;
-   const char * const *sb = (const char * const *)b;
+   const char *const *sa = (const char *const *)a;
+   const char *const *sb = (const char *const *)b;
    return str_cmp(*sa, *sb);
 }
 
@@ -1257,7 +1253,7 @@ void load_mobiles(FILE *fp)
       if (letter == 'l')
       {
          pMobIndex->loot_amount = fread_number(fp);
-         for(int i = 0; i < MAX_LOOT; i++)
+         for (int i = 0; i < MAX_LOOT; i++)
          {
             pMobIndex->loot[i] = fread_number(fp);
          }
@@ -1268,7 +1264,7 @@ void load_mobiles(FILE *fp)
       letter = fread_letter(fp);
       if (letter == 'L')
       {
-         for(int i = 0; i < MAX_LOOT; i++)
+         for (int i = 0; i < MAX_LOOT; i++)
          {
             pMobIndex->loot_chance[i] = fread_number(fp);
          }
@@ -1858,8 +1854,9 @@ void load_objfuns(FILE *fp)
             char buf[MSL];
             temp = fread_word(fp);
             snprintf(buf, sizeof(buf),
-                    "Error in Load Objfuns:  area %s has Objfun without corresponding object.  Save this area after booting complete to remove.",
-                    strArea);
+                     "Error in Load Objfuns:  area %s has Objfun without corresponding object.  "
+                     "Save this area after booting complete to remove.",
+                     strArea);
             log_f("%s", buf);
             free_string(temp);
          }
@@ -2112,8 +2109,8 @@ void check_resets(void)
                ValReset = INVAL_ROOM;
                break;
             }
-            if (pReset->arg2 < 0 || pReset->arg2 > 5 ||
-                !(pexit = pRoomIndex->exit[pReset->arg2]) || !IS_SET(pexit->exit_info, EX_ISDOOR))
+            if (pReset->arg2 < 0 || pReset->arg2 > 5 || !(pexit = pRoomIndex->exit[pReset->arg2]) ||
+                !IS_SET(pexit->exit_info, EX_ISDOOR))
             {
                SHOW_AREA;
                bug("Check_resets: 'D': exit %d not door.", pReset->arg2);
@@ -2162,8 +2159,8 @@ void check_resets(void)
                break;
             }
             SHOW_AREA;
-            sprintf(buf + strlen(buf), "%c %d %d %d %d.", pReset->command,
-                    pReset->ifflag, pReset->arg1, pReset->arg2, pReset->arg3);
+            sprintf(buf + strlen(buf), "%c %d %d %d %d.", pReset->command, pReset->ifflag,
+                    pReset->arg1, pReset->arg2, pReset->arg3);
             bug(buf, 0);
             {
                int room = 0;
@@ -2172,7 +2169,8 @@ void check_resets(void)
                BUILD_DATA_LIST *guilty_reset;
                room = pReset->arg1;
                reset_room = get_room_index(room);
-               for (guilty_reset = reset_room->first_room_reset; guilty_reset; guilty_reset = guilty_reset->next)
+               for (guilty_reset = reset_room->first_room_reset; guilty_reset;
+                    guilty_reset = guilty_reset->next)
                {
 
                   criminal = guilty_reset->data;
@@ -2190,7 +2188,8 @@ void check_resets(void)
                }
                else
                {
-                  UNLINK(guilty_reset, reset_room->first_room_reset, reset_room->last_room_reset, next, prev);
+                  UNLINK(guilty_reset, reset_room->first_room_reset, reset_room->last_room_reset,
+                         next, prev);
                   guilty_reset->data = NULL;
                   PUT_FREE(guilty_reset, build_free);
                }
@@ -2222,7 +2221,8 @@ void area_update(void)
       {
          for (pch = first_char; pch != NULL; pch = pch->next)
          {
-            if (!IS_NPC(pch) && IS_AWAKE(pch) && pch->in_room != NULL && pch->in_room->area == pArea)
+            if (!IS_NPC(pch) && IS_AWAKE(pch) && pch->in_room != NULL &&
+                pch->in_room->area == pArea)
             {
                char reset_buf[MSL];
                sprintf(reset_buf, "%s\n\r", pArea->reset_msg);
@@ -2316,9 +2316,9 @@ void reset_area(AREA_DATA *pArea)
             break;
          }
 
-         if (!((IS_SET(pMobIndex->act, ACT_DAYONLY) && IS_SET(pMobIndex->act, ACT_NIGHTONLY)))
-             && ((IS_SET(pMobIndex->act, ACT_DAYONLY) && !IS_DAYTIME())
-                 || (IS_SET(pMobIndex->act, ACT_NIGHTONLY) && IS_DAYTIME())))
+         if (!((IS_SET(pMobIndex->act, ACT_DAYONLY) && IS_SET(pMobIndex->act, ACT_NIGHTONLY))) &&
+             ((IS_SET(pMobIndex->act, ACT_DAYONLY) && !IS_DAYTIME()) ||
+              (IS_SET(pMobIndex->act, ACT_NIGHTONLY) && IS_DAYTIME())))
          {
             last = FALSE;
             break;
@@ -2366,13 +2366,18 @@ void reset_area(AREA_DATA *pArea)
             continue;
          }
          num_allowed = ((pReset->arg2 == 0) ? 2 : pReset->arg2 - 1);
-         if ((count_obj_room(pObjIndex, pRoomIndex->first_content) > num_allowed) || ((count_obj_room(pObjIndex, pRoomIndex->first_content) > 0) && ((pObjIndex->item_type == ITEM_BOARD) || (pObjIndex->item_type == ITEM_FOUNTAIN) || (pObjIndex->item_type == ITEM_FURNITURE) || (pObjIndex->item_type == ITEM_PORTAL) || (pObjIndex->item_type == ITEM_PIECE) || (pObjIndex->extra_flags == ITEM_RARE))))
+         if ((count_obj_room(pObjIndex, pRoomIndex->first_content) > num_allowed) ||
+             ((count_obj_room(pObjIndex, pRoomIndex->first_content) > 0) &&
+              ((pObjIndex->item_type == ITEM_BOARD) || (pObjIndex->item_type == ITEM_FOUNTAIN) ||
+               (pObjIndex->item_type == ITEM_FURNITURE) || (pObjIndex->item_type == ITEM_PORTAL) ||
+               (pObjIndex->item_type == ITEM_PIECE) || (pObjIndex->extra_flags == ITEM_RARE))))
          {
             last = FALSE;
             break;
          }
 
-         if ((IS_SET(pObjIndex->extra_flags, ITEM_RARE)) && !((number_percent() < 2) && (number_percent() < 8)))
+         if ((IS_SET(pObjIndex->extra_flags, ITEM_RARE)) &&
+             !((number_percent() < 2) && (number_percent() < 8)))
          {
             last = TRUE;
             break;
@@ -2408,8 +2413,7 @@ void reset_area(AREA_DATA *pArea)
             continue;
          }
 
-         if (!just_loaded_obj || last_obj == NULL ||
-             last_obj->pIndexData == NULL ||
+         if (!just_loaded_obj || last_obj == NULL || last_obj->pIndexData == NULL ||
              last_obj->pIndexData->vnum != pReset->arg3)
          {
             last = FALSE;
@@ -2660,7 +2664,7 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
    mob->pierce_mod = pMobIndex->pierce_mod;
    mob->loot_amount = pMobIndex->loot_amount;
 
-   for(int i = 0; i < MAX_LOOT; i++)
+   for (int i = 0; i < MAX_LOOT; i++)
    {
       mob->loot[i] = pMobIndex->loot[i];
       mob->loot_chance[i] = pMobIndex->loot_chance[i];
@@ -2668,7 +2672,8 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
 
    mob->armor = interpolate(mob->level / 2, 100, -100);
 
-   int hit = mob->hp_mod +  mob->level * 15 + number_range(mob->level * mob->level * 2, mob->level * mob->level * 4);
+   int hit = mob->hp_mod + mob->level * 15 +
+             number_range(mob->level * mob->level * 2, mob->level * mob->level * 4);
    mob->hp_mod = hit;
    mob->hit = get_max_hp(mob);
 
@@ -3054,7 +3059,8 @@ MOB_INDEX_DATA *get_mob_index(int vnum)
 {
    MOB_INDEX_DATA *pMobIndex;
 
-   for (pMobIndex = mob_index_hash[vnum % MAX_KEY_HASH]; pMobIndex != NULL; pMobIndex = pMobIndex->next)
+   for (pMobIndex = mob_index_hash[vnum % MAX_KEY_HASH]; pMobIndex != NULL;
+        pMobIndex = pMobIndex->next)
    {
       if (pMobIndex->vnum == vnum)
          return pMobIndex;
@@ -3077,7 +3083,8 @@ OBJ_INDEX_DATA *get_obj_index(int vnum)
 {
    OBJ_INDEX_DATA *pObjIndex;
 
-   for (pObjIndex = obj_index_hash[vnum % MAX_KEY_HASH]; pObjIndex != NULL; pObjIndex = pObjIndex->next)
+   for (pObjIndex = obj_index_hash[vnum % MAX_KEY_HASH]; pObjIndex != NULL;
+        pObjIndex = pObjIndex->next)
    {
       if (pObjIndex->vnum == vnum)
          return pObjIndex;
@@ -3100,7 +3107,8 @@ ROOM_INDEX_DATA *get_room_index(int vnum)
 {
    ROOM_INDEX_DATA *pRoomIndex;
 
-   for (pRoomIndex = room_index_hash[vnum % MAX_KEY_HASH]; pRoomIndex != NULL; pRoomIndex = pRoomIndex->next)
+   for (pRoomIndex = room_index_hash[vnum % MAX_KEY_HASH]; pRoomIndex != NULL;
+        pRoomIndex = pRoomIndex->next)
    {
       if (pRoomIndex->vnum == vnum)
          return pRoomIndex;
@@ -3231,7 +3239,6 @@ unsigned long long fread_number_ull(FILE *fp)
    return number;
 }
 
-
 /*
  * Read to end of line (for comments).
  */
@@ -3277,7 +3284,8 @@ char *fsave_to_eol(FILE *fp)
    {
       string[a++] = getc(fp);
 
-   } while (a < MAX_INPUT_LENGTH && string[a - 1] != '\n' && string[a - 1] != '\r' && string[a - 1] != EOF);
+   } while (a < MAX_INPUT_LENGTH && string[a - 1] != '\n' && string[a - 1] != '\r' &&
+            string[a - 1] != EOF);
 
    if (string[a - 1] == EOF)
    {
@@ -3487,7 +3495,6 @@ void free_string( char *pstr )
 
 #endif
 
-
 static int compare_area_levels(const void *left, const void *right)
 {
    const AREA_DATA *left_area;
@@ -3521,19 +3528,24 @@ void do_areas(CHAR_DATA *ch, char *argument)
    if (!str_cmp(arg1, "all"))
       fall = TRUE;
    sprintf(buf, "@@W" mudnamecolor " AREA LISTING\n\r");
-   safe_strcat(MAX_STRING_LENGTH, buf, "+---------+------------+------------------------------------------------+\n\r");
    safe_strcat(MAX_STRING_LENGTH, buf,
-               "|  @@yLevel@@W  |            |                                                |\n\r");
+               "+---------+------------+------------------------------------------------+\n\r");
+   safe_strcat(
+       MAX_STRING_LENGTH, buf,
+       "|  @@yLevel@@W  |            |                                                |\n\r");
    safe_strcat(MAX_STRING_LENGTH, buf,
-               "|  @@yrange@@W  |   @@yAuthor@@W   |      @@yName of Area@@W                              |\n\r");
-   safe_strcat(MAX_STRING_LENGTH, buf, "+---------+------------+------------------------------------------------+\n\r");
+               "|  @@yrange@@W  |   @@yAuthor@@W   |      @@yName of Area@@W                       "
+               "       |\n\r");
+   safe_strcat(MAX_STRING_LENGTH, buf,
+               "+---------+------------+------------------------------------------------+\n\r");
 
    area_count = 0;
    for (pArea = first_area; pArea != NULL; pArea = pArea->next)
    {
       if ((IS_SET(pArea->flags, AREA_NOSHOW)) || (IS_SET(pArea->flags, AREA_BUILDING)))
          continue; /* for non-finished areas - don't show */
-      if ((!fall) && ((pArea->min_level > (get_psuedo_level(ch))) || (pArea->max_level < (get_psuedo_level(ch)))))
+      if ((!fall) && ((pArea->min_level > (get_psuedo_level(ch))) ||
+                      (pArea->max_level < (get_psuedo_level(ch)))))
          continue;
       area_count++;
    }
@@ -3554,7 +3566,8 @@ void do_areas(CHAR_DATA *ch, char *argument)
    {
       if ((IS_SET(pArea->flags, AREA_NOSHOW)) || (IS_SET(pArea->flags, AREA_BUILDING)))
          continue; /* for non-finished areas - don't show */
-      if ((!fall) && ((pArea->min_level > (get_psuedo_level(ch))) || (pArea->max_level < (get_psuedo_level(ch)))))
+      if ((!fall) && ((pArea->min_level > (get_psuedo_level(ch))) ||
+                      (pArea->max_level < (get_psuedo_level(ch)))))
          continue;
       area_list[area_index++] = pArea;
    }
@@ -3566,14 +3579,18 @@ void do_areas(CHAR_DATA *ch, char *argument)
    {
       pArea = area_list[area_index];
       foo++;
-      sprintf(msg, "@@N{@@r%3d %3d@@N} %12s         %s\n\r", pArea->min_level, pArea->max_level, capitalize(pArea->owner), pArea->name);
+      sprintf(msg, "@@N{@@r%3d %3d@@N} %12s         %s\n\r", pArea->min_level, pArea->max_level,
+              capitalize(pArea->owner), pArea->name);
       safe_strcat(MAX_STRING_LENGTH, buf, msg);
    }
 
    if (area_list != NULL)
       free(area_list);
 
-   sprintf(msg, "@@R%d Areas listed.\n\r@@N Type areas all to list the entire " mudnamecolor " realm.\n\r@@N", foo);
+   sprintf(msg,
+           "@@R%d Areas listed.\n\r@@N Type areas all to list the entire " mudnamecolor
+           " realm.\n\r@@N",
+           foo);
    safe_strcat(MAX_STRING_LENGTH, buf, msg);
    send_to_char(buf, ch);
    return;
@@ -3663,9 +3680,11 @@ void do_memory(CHAR_DATA *ch, char *argument)
 
    sprintf(buf, "Shared String Info:\n\r");
    send_to_char(buf, ch);
-   sprintf(buf, "Strings           %5ld strings of %7ld bytes (max %ld).\n\r", nAllocString, sAllocString, MAX_STRING);
+   sprintf(buf, "Strings           %5ld strings of %7ld bytes (max %ld).\n\r", nAllocString,
+           sAllocString, MAX_STRING);
    send_to_char(buf, ch);
-   sprintf(buf, "Overflow Strings  %5ld strings of %7ld bytes.\n\r", nOverFlowString, sOverFlowString);
+   sprintf(buf, "Overflow Strings  %5ld strings of %7ld bytes.\n\r", nOverFlowString,
+           sOverFlowString);
    send_to_char(buf, ch);
    if (Full)
    {
@@ -4053,7 +4072,6 @@ void tail_chain(void)
 {
    return;
 }
-
 
 void message_update(void)
 {

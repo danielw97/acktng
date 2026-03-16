@@ -139,8 +139,8 @@
 /* Helper macros to determine which tier a class ID belongs to */
 #define IS_MORTAL_CLASS(c) (gclass_table[c].tier == MORTAL)
 #define IS_REMORT_CLASS(c) (gclass_table[c].tier == REMORT)
-#define IS_ADEPT_CLASS(c)  (gclass_table[c].tier == ADEPT)
-#define CLASS_TIER(c)      (gclass_table[c].tier)
+#define IS_ADEPT_CLASS(c) (gclass_table[c].tier == ADEPT)
+#define CLASS_TIER(c) (gclass_table[c].tier)
 
 #define MAX_NUM_IMMS 5
 
@@ -160,10 +160,10 @@
 
 #define MAX_SUPERBOSS 5
 #define SUPERBOSS_PYRAMID_BLACK_SUN_SHARD 0
-#define SUPERBOSS_KEEP_ELEMENTAL_CAPTAIN  1
-#define SUPERBOSS_KEEP_PHYSICAL_CAPTAIN   2
-#define SUPERBOSS_HERMIT_ARCHON           3
-#define SUPERBOSS_SANCTUM_KEEPER          4
+#define SUPERBOSS_KEEP_ELEMENTAL_CAPTAIN 1
+#define SUPERBOSS_KEEP_PHYSICAL_CAPTAIN 2
+#define SUPERBOSS_HERMIT_ARCHON 3
+#define SUPERBOSS_SANCTUM_KEEPER 4
 
 #define REINCARNATE_RACE BIT_1
 #define REINCARNATE_CLASS BIT_2
@@ -223,7 +223,7 @@
 /* Class tier constants (returned by CLASS_TIER / SKILL_TIER) */
 #define MORTAL 1
 #define REMORT 2
-#define ADEPT  3
+#define ADEPT 3
 
 /* Used as flags in skill_table */
 #define NORM 1
@@ -351,8 +351,8 @@
 #define ROOM_VNUM_MORIBUND 65324
 #define ROOM_VNUM_BUILDER 65315
 #define ROOM_VNUM_BODIES 65290
-#define ROOM_VNUM_HALLS 65312  /* The Halls of the Immortals */
-#define ROOM_VNUM_CLAN 65325   /* for leaders only */
+#define ROOM_VNUM_HALLS 65312 /* The Halls of the Immortals */
+#define ROOM_VNUM_CLAN 65325  /* for leaders only */
 #define ROOM_VNUM_DM_RECALL 917
 #define ROOM_VNUM_ETHEREAL_PLANE 3850
 #define ROOM_VNUM_INT_HEAL 3871
@@ -943,37 +943,37 @@
  * ACT bits for mobs.
  * Used in #MOBILES.
  */
-#define ACT_IS_NPC 1                                     /* Auto set for mobs    */
-#define ACT_SENTINEL 2                                   /* Stays in one room    */
-#define ACT_SCAVENGER 4                                  /* Picks up objects     */
-#define ACT_REMEMBER 8                                   /* remembers target     */
-#define ACT_NO_FLEE 16                                   /* can't flee from mob  */
-#define ACT_AGGRESSIVE 32                                /* Attacks PC's         */
-#define ACT_STAY_AREA 64                                 /* Won't leave area     */
-#define ACT_WIMPY 128                                    /* Flees when hurt      */
-#define ACT_PET 256                                      /* Auto set for pets    */
-#define ACT_TRAIN 512                                    /* Can train PC's       */
-#define ACT_PRACTICE 1024                                /* Can practice PC's    */
-#define ACT_MERCENARY 2048                               /* Is a mercenary       */
-#define ACT_HEAL 4096                                    /* Sells spells         */
-#define ACT_ADAPT 8192                                   /* Adapts weapons       */
-#define ACT_UNDEAD 16384                                 /* Mob is undead  */
-#define ACT_BANKER 32768                                 /* Is a *B*anker :P     */
-#define ACT_NO_BODY 65536                                /* no body for damage   */
-#define ACT_HUNTER 131072                                /* hunts attackers      */
-#define ACT_NOMIND 262144                                /* Psi attack no-no     */
-#define ACT_POSTMAN 524288                               /* Postmaster     */
-#define ACT_REWIELD 1048576                              /* Uses better weapons  */
-#define ACT_RE_EQUIP 2097152                             /* Uses better equipment */
-#define ACT_NO_HUNT 16777216                             /* Mob cannot be hunted */
-#define ACT_SOLO 33554432                                /* Mob is buffed for solo combat */
-#define ACT_BOSS BIT_27                                  /* Mob is buffed for boss combat */
-#define ACT_QUARTERMASTER BIT_28                         /* Sells invasion rewards */
+#define ACT_IS_NPC 1             /* Auto set for mobs    */
+#define ACT_SENTINEL 2           /* Stays in one room    */
+#define ACT_SCAVENGER 4          /* Picks up objects     */
+#define ACT_REMEMBER 8           /* remembers target     */
+#define ACT_NO_FLEE 16           /* can't flee from mob  */
+#define ACT_AGGRESSIVE 32        /* Attacks PC's         */
+#define ACT_STAY_AREA 64         /* Won't leave area     */
+#define ACT_WIMPY 128            /* Flees when hurt      */
+#define ACT_PET 256              /* Auto set for pets    */
+#define ACT_TRAIN 512            /* Can train PC's       */
+#define ACT_PRACTICE 1024        /* Can practice PC's    */
+#define ACT_MERCENARY 2048       /* Is a mercenary       */
+#define ACT_HEAL 4096            /* Sells spells         */
+#define ACT_ADAPT 8192           /* Adapts weapons       */
+#define ACT_UNDEAD 16384         /* Mob is undead  */
+#define ACT_BANKER 32768         /* Is a *B*anker :P     */
+#define ACT_NO_BODY 65536        /* no body for damage   */
+#define ACT_HUNTER 131072        /* hunts attackers      */
+#define ACT_NOMIND 262144        /* Psi attack no-no     */
+#define ACT_POSTMAN 524288       /* Postmaster     */
+#define ACT_REWIELD 1048576      /* Uses better weapons  */
+#define ACT_RE_EQUIP 2097152     /* Uses better equipment */
+#define ACT_NO_HUNT 16777216     /* Mob cannot be hunted */
+#define ACT_SOLO 33554432        /* Mob is buffed for solo combat */
+#define ACT_BOSS BIT_27          /* Mob is buffed for boss combat */
+#define ACT_QUARTERMASTER BIT_28 /* Sells invasion rewards */
 #define ACT_NOBLOOD BIT_29
 #define ACT_INVASION BIT_30
 #define ACT_NOASSIST BIT_31
-#define ACT_DAYONLY BIT_32                               /* Mob only active during day */
-#define ACT_NIGHTONLY BIT_33                             /* Mob only active during night */
+#define ACT_DAYONLY BIT_32   /* Mob only active during day */
+#define ACT_NIGHTONLY BIT_33 /* Mob only active during night */
 
 /* build bits for OLC -S- */
 #define ACT_BUILD_NOWT 0  /* not doing anything   */
@@ -1292,27 +1292,27 @@
  * Then we close it whenever we need to open a file (e.g. a save file).
  */
 #if defined(macintosh)
-#define PLAYER_DIR "" /* Player files                 */
+#define PLAYER_DIR ""         /* Player files                 */
 #define NULL_FILE "proto.are" /* To reserve one stream        */
 #define MOB_DIR ""            /* Script files                */
 #endif
 
 #if defined(MSDOS)
-#define PLAYER_DIR "" /* Player files                 */
+#define PLAYER_DIR ""   /* Player files                 */
 #define NULL_FILE "nul" /* To reserve one stream        */
 #define MOB_DIR ""      /* Script files                */
 #endif
 
 #if defined(unix)
 #define PLAYER_DIR "../player/" /* Player files                 */
-#define NULL_FILE "/dev/null" /* To reserve one stream        */
-#define MOB_DIR "Scripts/"   /* Script files                */
+#define NULL_FILE "/dev/null"   /* To reserve one stream        */
+#define MOB_DIR "Scripts/"      /* Script files                */
 #endif
 
 #if defined(linux)
 #define PLAYER_DIR "../player/" /* Player files                 */
-#define NULL_FILE "/dev/null" /* To reserve one stream        */
-#define MOB_DIR "Scripts/"   /* Script files                */
+#define NULL_FILE "/dev/null"   /* To reserve one stream        */
+#define MOB_DIR "Scripts/"      /* Script files                */
 #endif
 
 #define AREA_DIR "../area/"
@@ -1332,7 +1332,7 @@
 
 #define CLAN_FILE DATA_DIR "clandata.dat" /* stores clan diplomacy data   */
 #define CORPSE_FILE DATA_DIR "corpses.lst"
-#define CHEST_DIR   DATA_DIR "chest/"
+#define CHEST_DIR DATA_DIR "chest/"
 #define MARKS_FILE DATA_DIR "roommarks.lst"
 #define BANS_FILE DATA_DIR "bans.lst"
 #define RULERS_FILE DATA_DIR "rulers.lst"
@@ -1350,6 +1350,6 @@
 #define WHO_COUNT_FILE "../web/whocount.html"
 #endif
 /* Other Stuff - Flar */
-#define COPYOVER_FILE "COPYOVER.TXT"              /* Temp data file used for copyover */
-#define EXE_FILE "../src/ack"                     /* The one that runs the ACK! */
+#define COPYOVER_FILE "COPYOVER.TXT"               /* Temp data file used for copyover */
+#define EXE_FILE "../src/ack"                      /* The one that runs the ACK! */
 #define HOTREBOOT_FILE "../data/hotreboot.trigger" /* Touched by deploy to trigger hotreboot */

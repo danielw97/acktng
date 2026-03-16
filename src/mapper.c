@@ -52,13 +52,12 @@ int offsets[4][2] = {{-2, 0}, {0, 2}, {2, 0}, {0, -2}};
 #define SECT_BLOCKED (SECT_UNSEEN + 1)
 #define SECT_TOP (SECT_BLOCKED + 1)
 
-const struct map_info_type door_info[] = {
-    {DOOR_LOCKED, "@@R", "#@@N", "@@f", "Locked door"},
-    {DOOR_OPEN, "@@W", "#@@N", "@@f", "Open door"},
-    {DOOR_CLOSED, "@@R", "#@@N", "@@f", "Closed Door"},
-    {DOOR_NS, "@@W", "|@@N", "@@f", "N/S Exit"},
-    {DOOR_EW, "@@W", "-@@N", "@@f", "E/W Exit"},
-    {DOOR_NULL, "@@N", " ", "@@f", "Invalid"}};
+const struct map_info_type door_info[] = {{DOOR_LOCKED, "@@R", "#@@N", "@@f", "Locked door"},
+                                          {DOOR_OPEN, "@@W", "#@@N", "@@f", "Open door"},
+                                          {DOOR_CLOSED, "@@R", "#@@N", "@@f", "Closed Door"},
+                                          {DOOR_NS, "@@W", "|@@N", "@@f", "N/S Exit"},
+                                          {DOOR_EW, "@@W", "-@@N", "@@f", "E/W Exit"},
+                                          {DOOR_NULL, "@@N", " ", "@@f", "Invalid"}};
 
 const struct map_info_type map_info[] = {
     {SECT_BLOCKED, "@@m", "~@@N", "", "blocked"},
@@ -339,7 +338,8 @@ char *string_format(char *str, int *numlines, int width, int height, bool unjust
    return ret;
 }
 
-char *map_format(char *str, int start, char map[MAP_Y][MSL], int *numlines, int term_width, int height, bool unjust)
+char *map_format(char *str, int start, char map[MAP_Y][MSL], int *numlines, int term_width,
+                 int height, bool unjust)
 {
    static char ret[MSL];
    char buf[MSL];
@@ -467,7 +467,7 @@ char *exit_string(CHAR_DATA *ch, ROOM_INDEX_DATA *r)
             {
                continue;
             }
-            else if (can_use_skill(ch,gsn_find_doors))
+            else if (can_use_skill(ch, gsn_find_doors))
             {
                sprintf(buf + strlen(buf), " (%s)", compass_name[e]);
             }
@@ -510,16 +510,15 @@ void disp_map(char *border, char *map, CHAR_DATA *ch)
 #ifdef ACK_43
    if (!IS_NPC(ch) && IS_SET(ch->config, CONFIG_FULL_ANSI))
    {
-      sprintf(disp, "%s%s%i;%ir%s%i;%iH%s%s",
-              CRS_SAVE_ALL,
-              CRS_CMD,
-              ch->pcdata->term_rows - 11, ch->pcdata->term_rows - 1, CRS_CMD, ch->pcdata->term_rows - 11, 0, CRS_CMD, "J");
+      sprintf(disp, "%s%s%i;%ir%s%i;%iH%s%s", CRS_SAVE_ALL, CRS_CMD, ch->pcdata->term_rows - 11,
+              ch->pcdata->term_rows - 1, CRS_CMD, ch->pcdata->term_rows - 11, 0, CRS_CMD, "J");
       send_to_char(disp, ch);
    }
 #endif
    strcpy(disp, map_format(ch->in_room->name, 0, bufs, &y, cols, rows, TRUE));
    strcat(disp, map_format(exit_string(ch, ch->in_room), y, bufs, &y, cols, rows, TRUE));
-   strcat(disp, map_format(ch->in_room->description, y, bufs, &y, cols, rows, !IS_SET(ch->config, CONFIG_JUSTIFY)));
+   strcat(disp, map_format(ch->in_room->description, y, bufs, &y, cols, rows,
+                           !IS_SET(ch->config, CONFIG_JUSTIFY)));
    if (y < MAP_Y)
    {
       x = disp + strlen(disp);
@@ -530,14 +529,16 @@ void disp_map(char *border, char *map, CHAR_DATA *ch)
 #ifdef ACK_43
    if (!IS_NPC(ch) && IS_SET(ch->config, CONFIG_FULL_ANSI))
    {
-      sprintf(disp, "%s%i;%ir%s%i;%iH", CRS_CMD, 0, ch->pcdata->term_rows - 12, CRS_CMD, ch->pcdata->term_rows - 13, 0);
+      sprintf(disp, "%s%i;%ir%s%i;%iH", CRS_CMD, 0, ch->pcdata->term_rows - 12, CRS_CMD,
+              ch->pcdata->term_rows - 13, 0);
       send_to_char(disp, ch);
    }
 #endif
    return;
 }
 
-void MapArea(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int x, int y, int min, int max, int line_of_sight)
+void MapArea(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int x, int y, int min, int max,
+             int line_of_sight)
 {
    ROOM_INDEX_DATA *prospect_room;
    EXIT_DATA *pexit;
@@ -571,7 +572,8 @@ void MapArea(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int x, int y, int min, int ma
             return;
 
          prospect_room = pexit->to_room;
-         if ((prospect_room->exit[rev_dir[door]]) && (prospect_room->exit[rev_dir[door]]->to_room != room))
+         if ((prospect_room->exit[rev_dir[door]]) &&
+             (prospect_room->exit[rev_dir[door]]->to_room != room))
          {                            /* if not two way */
             map[x][y] = SECT_BLOCKED; /* one way into area OR maze */
             return;
@@ -597,13 +599,17 @@ void MapArea(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int x, int y, int min, int ma
          }
          else
             door_type = DOOR_OPEN;
-         if ((!IS_NPC(ch)) && (!str_cmp(pexit->keyword, "")) && ((door_type <= DOOR_OPEN) || (!IS_SET(pexit->exit_info, EX_ISDOOR)) || ((IS_SET(pexit->exit_info, EX_CLOSED)) && (!IS_SET(pexit->exit_info, EX_NODETECT)) && can_use_skill(ch, gsn_find_doors) && (!str_cmp(pexit->keyword, "")))))
+         if ((!IS_NPC(ch)) && (!str_cmp(pexit->keyword, "")) &&
+             ((door_type <= DOOR_OPEN) || (!IS_SET(pexit->exit_info, EX_ISDOOR)) ||
+              ((IS_SET(pexit->exit_info, EX_CLOSED)) && (!IS_SET(pexit->exit_info, EX_NODETECT)) &&
+               can_use_skill(ch, gsn_find_doors) && (!str_cmp(pexit->keyword, "")))))
          {
             map[x + door_marks[door][0]][y + door_marks[door][1]] = door_type;
-            if ((door_type < DOOR_CLOSED) && ((line_of_sight == LOS_INITIAL) || (door == line_of_sight)) && (map[x + offsets[door][0]][y + offsets[door][1]] == SECT_UNSEEN))
+            if ((door_type < DOOR_CLOSED) &&
+                ((line_of_sight == LOS_INITIAL) || (door == line_of_sight)) &&
+                (map[x + offsets[door][0]][y + offsets[door][1]] == SECT_UNSEEN))
             {
-               MapArea(pexit->to_room, ch,
-                       x + offsets[door][0], y + offsets[door][1], min, max,
+               MapArea(pexit->to_room, ch, x + offsets[door][0], y + offsets[door][1], min, max,
                        (line_of_sight == LOS_INITIAL) ? door : line_of_sight);
             }
          }
@@ -613,7 +619,8 @@ void MapArea(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int x, int y, int min, int ma
    return;
 }
 
-static void mapper_append_color_display(char *dest, int max_len, const char *color, const char *display)
+static void mapper_append_color_display(char *dest, int max_len, const char *color,
+                                        const char *display)
 {
    char joined[MSL];
 
@@ -624,7 +631,8 @@ static void mapper_append_color_display(char *dest, int max_len, const char *col
 }
 
 #ifdef UNIT_TEST_MAPPER
-void mapper_test_append_color_display(char *dest, int max_len, const char *color, const char *display)
+void mapper_test_append_color_display(char *dest, int max_len, const char *color,
+                                      const char *display)
 {
    mapper_append_color_display(dest, max_len, color, display);
 }
@@ -660,12 +668,16 @@ void ShowRoom(CHAR_DATA *ch, int min, int max, int size, int center)
                     ((map[x][y] <= 0) ? get_door_color(map[x][y]) : get_sector_color(map[x][y])),
                     ((contents[x][y].string[0] == '\0') ? "" : get_invert_color(map[x][y])));
             sprintf(displaybuf, "%s",
-                    ((map[x][y] <= 0) ? get_door_display(map[x][y]) : ((contents[x][y].string[0] == '\0') ? get_sector_display(map[x][y]) : contents[x][y].string)));
+                    ((map[x][y] <= 0)
+                         ? get_door_display(map[x][y])
+                         : ((contents[x][y].string[0] == '\0') ? get_sector_display(map[x][y])
+                                                               : contents[x][y].string)));
             mapper_append_color_display(outbuf, MSL, colorbuf, displaybuf);
          }
          else
          {
-            sprintf(catbuf, "%s", (map[x][y] <= 0) ? get_door_display(map[x][y]) : get_sector_display(map[x][y]));
+            sprintf(catbuf, "%s",
+                    (map[x][y] <= 0) ? get_door_display(map[x][y]) : get_sector_display(map[x][y]));
             safe_strcat(MSL, outbuf, catbuf);
          }
       }
@@ -710,12 +722,16 @@ void ShowMap(CHAR_DATA *ch, int min, int max, int size, int center)
                     ((map[x][y] <= 0) ? get_door_color(map[x][y]) : get_sector_color(map[x][y])),
                     ((contents[x][y].string[0] == '\0') ? "" : get_invert_color(map[x][y])));
             sprintf(displaybuf, "%s",
-                    ((map[x][y] <= 0) ? get_door_display(map[x][y]) : ((contents[x][y].string[0] == '\0') ? get_sector_display(map[x][y]) : contents[x][y].string)));
+                    ((map[x][y] <= 0)
+                         ? get_door_display(map[x][y])
+                         : ((contents[x][y].string[0] == '\0') ? get_sector_display(map[x][y])
+                                                               : contents[x][y].string)));
             mapper_append_color_display(outbuf, MSL, colorbuf, displaybuf);
          }
          else
          {
-            sprintf(catbuf, "%s", (map[x][y] <= 0) ? get_door_display(map[x][y]) : get_sector_display(map[x][y]));
+            sprintf(catbuf, "%s",
+                    (map[x][y] <= 0) ? get_door_display(map[x][y]) : get_sector_display(map[x][y]));
             safe_strcat(MSL, outbuf, catbuf);
          }
       }
@@ -752,14 +768,14 @@ void do_mapper(CHAR_DATA *ch, char *argument)
       sprintf(outbuf, "@@WMap Legend:@@N\n\r");
       for (looper = 0; looper < SECT_TOP - 1; looper++)
       {
-         sprintf(catbuf, "%s%s : @@N%s\n\r",
-                 map_info[looper].display_color, map_info[looper].display_code, map_info[looper].desc);
+         sprintf(catbuf, "%s%s : @@N%s\n\r", map_info[looper].display_color,
+                 map_info[looper].display_code, map_info[looper].desc);
          safe_strcat(MSL, outbuf, catbuf);
       }
       for (looper = 0; looper < 5; looper++)
       {
-         sprintf(catbuf, "%s%s : @@N%s\n\r",
-                 door_info[looper].display_color, door_info[looper].display_code, door_info[looper].desc);
+         sprintf(catbuf, "%s%s : @@N%s\n\r", door_info[looper].display_color,
+                 door_info[looper].display_code, door_info[looper].desc);
          safe_strcat(MSL, outbuf, catbuf);
       }
       send_to_char(outbuf, ch);
@@ -769,7 +785,9 @@ void do_mapper(CHAR_DATA *ch, char *argument)
 
    if (size != 7)
    {
-      size = IS_IMMORTAL(ch) ? size : get_curr_int(ch) / 2 + ((!IS_NPC(ch)) ? ch->pcdata->learned[gsn_scout] / 25 : 0);
+      size = IS_IMMORTAL(ch)
+                 ? size
+                 : get_curr_int(ch) / 2 + ((!IS_NPC(ch)) ? ch->pcdata->learned[gsn_scout] / 25 : 0);
       if (size % 2 == 0)
          size += 1;
       size = URANGE(9, size, MAX_MAP);

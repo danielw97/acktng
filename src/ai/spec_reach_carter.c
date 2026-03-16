@@ -7,19 +7,17 @@
 bool spec_reach_carter(CHAR_DATA *ch)
 {
    static const char *acts[] = {
-      "$n checks a sled runner for stress lines and tightens the lashings.",
-      "$n retarps a cargo stack against salt spray rolling in from the coast.",
-      "$n splits manifests into inland and maritime bundles, then ties each with twine.",
-      "$n tests rope tension with a hard pull and nods to approaching teamsters.",
-      "$n marks a convoy slate with departure order and weather notes."
-   };
+       "$n checks a sled runner for stress lines and tightens the lashings.",
+       "$n retarps a cargo stack against salt spray rolling in from the coast.",
+       "$n splits manifests into inland and maritime bundles, then ties each with twine.",
+       "$n tests rope tension with a hard pull and nods to approaching teamsters.",
+       "$n marks a convoy slate with departure order and weather notes."};
    static char *says[] = {
-      "Sled to dock, dock to hold. That's the Carter's road.",
-      "Without Guild transfer crews, manifests rot in crates and ships sail half-empty.",
-      "Three more convoys this season, then Scour winds close the Flats.",
-      "You want priority unload? Pay for priority load first.",
-      "Everyone claims the Reach. We move the cargo while they argue."
-   };
+       "Sled to dock, dock to hold. That's the Carter's road.",
+       "Without Guild transfer crews, manifests rot in crates and ships sail half-empty.",
+       "Three more convoys this season, then Scour winds close the Flats.",
+       "You want priority unload? Pay for priority load first.",
+       "Everyone claims the Reach. We move the cargo while they argue."};
 
    if (!IS_AWAKE(ch) || is_fighting(ch))
       return FALSE;

@@ -186,8 +186,8 @@ void add_vnum(int vnum)
       if ((range = get_hash_entry(start_vnum - 1)) != NULL)
       {
          if (range->offset > 0)
-            printf("ERROR in ranges vnum: %i range start: %i range end: %i",
-                   start_vnum, range->vnum, range->vnum + range->offset);
+            printf("ERROR in ranges vnum: %i range start: %i range end: %i", start_vnum,
+                   range->vnum, range->vnum + range->offset);
          else
          {
             start_vnum = range->vnum + range->offset;
@@ -201,8 +201,8 @@ void add_vnum(int vnum)
       if ((range = get_hash_entry(end_vnum + 1)) != NULL)
       {
          if (range->offset < 0)
-            printf("ERROR in ranges vnum: %i range start: %i range end: %i",
-                   end_vnum, range->vnum + range->offset, range->vnum);
+            printf("ERROR in ranges vnum: %i range start: %i range end: %i", end_vnum,
+                   range->vnum + range->offset, range->vnum);
          else
          {
             end_vnum = range->vnum + range->offset;
@@ -293,7 +293,8 @@ void collate_vnums(FILE *in_file, FILE *out_file, char *name, int offset)
             }
             else
             {
-               fprintf(out_file, "%5i - %5i    %s\n", entry->vnum, entry->vnum + entry->offset, name);
+               fprintf(out_file, "%5i - %5i    %s\n", entry->vnum, entry->vnum + entry->offset,
+                       name);
                printf("     %i-%i\n", entry->vnum, entry->vnum + entry->offset);
             }
          }
@@ -327,7 +328,8 @@ int main()
    objs_file = fopen("objs.txt", "w");
 
    for (getline(&sarea_buffer, &sarea_buffer_size, farea_lst);
-        sarea_buffer[0] != '$' && !feof(farea_lst); getline(&sarea_buffer, &sarea_buffer_size, farea_lst))
+        sarea_buffer[0] != '$' && !feof(farea_lst);
+        getline(&sarea_buffer, &sarea_buffer_size, farea_lst))
    {
       /*
        * sarea_buffer contains next filename

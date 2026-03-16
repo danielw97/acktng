@@ -7,19 +7,19 @@
 bool spec_reach_assessor(CHAR_DATA *ch)
 {
    static const char *acts[] = {
-      "$n weighs an imaginary cargo load in both hands, lips moving through conversion figures.",
-      "$n stamps an invisible seal in mid-air and nods as if the mark took cleanly.",
-      "$n flips through a cracked ledger and taps a line with a dry quill.",
-      "$n mutters old legal formulae while aligning phantom manifests in neat stacks.",
-      "$n dips a quill into an empty inkwell, frowns, and continues writing anyway."
-   };
+       "$n weighs an imaginary cargo load in both hands, lips moving through conversion figures.",
+       "$n stamps an invisible seal in mid-air and nods as if the mark took cleanly.",
+       "$n flips through a cracked ledger and taps a line with a dry quill.",
+       "$n mutters old legal formulae while aligning phantom manifests in neat stacks.",
+       "$n dips a quill into an empty inkwell, frowns, and continues writing anyway."};
    static char *says[] = {
-      "Water-debt: forty-seven measures, offset against charter series nine. Shore conversion pending at the Seal.",
-      "The Tables do not lie. What inland weighs in water, the sea weighs in risk.",
-      "Dual attestation requires both marks -- inland witness and maritime seal. One without the other is void.",
-      "Swift Line cargo clears first by statute. Heavy Road bulk follows at assessed delay.",
-      "Discharge before assumption, assumption before seal. The order is law, not suggestion."
-   };
+       "Water-debt: forty-seven measures, offset against charter series nine. Shore conversion "
+       "pending at the Seal.",
+       "The Tables do not lie. What inland weighs in water, the sea weighs in risk.",
+       "Dual attestation requires both marks -- inland witness and maritime seal. One without the "
+       "other is void.",
+       "Swift Line cargo clears first by statute. Heavy Road bulk follows at assessed delay.",
+       "Discharge before assumption, assumption before seal. The order is law, not suggestion."};
 
    if (!IS_AWAKE(ch) || is_fighting(ch))
       return FALSE;

@@ -36,8 +36,7 @@ static void test_no_duplicate_commands(void)
       {
          if (strcmp(cmd_table[i].name, cmd_table[j].name) == 0)
          {
-            fprintf(stderr,
-                    "FAIL: duplicate command \"%s\" at indices %d and %d\n",
+            fprintf(stderr, "FAIL: duplicate command \"%s\" at indices %d and %d\n",
                     cmd_table[i].name, i, j);
             assert(0);
          }

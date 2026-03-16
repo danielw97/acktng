@@ -9,26 +9,26 @@ bool spec_ss_cinder_broker(CHAR_DATA *ch)
    CHAR_DATA *victim;
    int gold;
    static const char *acts[] = {
-      "$n weighs two transit tokens on a thumb scale, then palms the heavier one with a practiced motion.",
-      "$n whispers a route update to a caravan hand and marks a private tally in $s ledger strip.",
-      "$n taps a crate seal and mutters, 'Uncertified additions cost extra at Cinder Gate.'",
-      "$n drapes a rope canopy tag over one shoulder and scans the queue for nervous faces.",
-      "$n flips a wax capsule in one hand, smiling as if every dispute has a price."
-   };
+       "$n weighs two transit tokens on a thumb scale, then palms the heavier one with a practiced "
+       "motion.",
+       "$n whispers a route update to a caravan hand and marks a private tally in $s ledger strip.",
+       "$n taps a crate seal and mutters, 'Uncertified additions cost extra at Cinder Gate.'",
+       "$n drapes a rope canopy tag over one shoulder and scans the queue for nervous faces.",
+       "$n flips a wax capsule in one hand, smiling as if every dispute has a price."};
    static char *says[] = {
-      "Cinder Gate is a chokepoint, friend. You can pay in coin, favor, or time.",
-      "Heat-cert marks matter more than declarations once the wardens start opening crates.",
-      "I sell certainty in uncertain weather. That's worth more than water on bad days.",
-      "No paper is perfect. I provide corrections before the next checkpoint sees the flaw.",
-      "The queue is law, but the queue can be persuaded."
-   };
+       "Cinder Gate is a chokepoint, friend. You can pay in coin, favor, or time.",
+       "Heat-cert marks matter more than declarations once the wardens start opening crates.",
+       "I sell certainty in uncertain weather. That's worth more than water on bad days.",
+       "No paper is perfect. I provide corrections before the next checkpoint sees the flaw.",
+       "The queue is law, but the queue can be persuaded."};
 
    if (!IS_AWAKE(ch) || is_fighting(ch))
       return FALSE;
 
    for (victim = ch->in_room->first_person; victim != NULL; victim = victim->next_in_room)
    {
-      if (IS_NPC(victim) || victim->level >= LEVEL_IMMORTAL || number_bits(3) != 0 || !can_see(ch, victim))
+      if (IS_NPC(victim) || victim->level >= LEVEL_IMMORTAL || number_bits(3) != 0 ||
+          !can_see(ch, victim))
          continue;
 
       if (IS_AWAKE(victim) && number_range(0, ch->level + 2) == 0)

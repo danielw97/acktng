@@ -79,7 +79,8 @@ void do_email(CHAR_DATA *ch, char *argument)
       }
       if (ch->pcdata->valid_email)
       {
-         sprintf(catbuf, "Your email address is currently set to %s.\n\r", ch->pcdata->email_address);
+         sprintf(catbuf, "Your email address is currently set to %s.\n\r",
+                 ch->pcdata->email_address);
          safe_strcat(MSL, outbuf, catbuf);
       }
       else
@@ -88,7 +89,9 @@ void do_email(CHAR_DATA *ch, char *argument)
             safe_strcat(MSL, outbuf, "Your email address has not been set.\n\r");
          else
          {
-            sprintf(catbuf, "Your email address has been set to %s, but has not been authorized by an Implementor.\n\r",
+            sprintf(catbuf,
+                    "Your email address has been set to %s, but has not been authorized by an "
+                    "Implementor.\n\r",
                     ch->pcdata->email_address);
             safe_strcat(MSL, outbuf, catbuf);
          }
@@ -113,7 +116,8 @@ void do_email(CHAR_DATA *ch, char *argument)
          ch->pcdata->valid_email = FALSE;
          do_save(ch, "");
          sprintf(outbuf,
-                 "Your email address has been set to %s. The Implementors have been notified, please be patient.\n\r",
+                 "Your email address has been set to %s. The Implementors have been notified, "
+                 "please be patient.\n\r",
                  ch->pcdata->email_address);
          send_to_char(outbuf, ch);
          {
@@ -125,7 +129,8 @@ void do_email(CHAR_DATA *ch, char *argument)
             for (brand_member = first_brand; brand_member; brand_member = brand_member->next)
             {
                brand = brand_member->this_one;
-               if ((!str_cmp(brand->branded, ch->name)) && (!str_cmp(brand->priority, "Email Validation")))
+               if ((!str_cmp(brand->branded, ch->name)) &&
+                   (!str_cmp(brand->priority, "Email Validation")))
                   break;
             }
             if (brand_member)
@@ -135,7 +140,8 @@ void do_email(CHAR_DATA *ch, char *argument)
                PUT_FREE(brand_member, dl_list_free);
             }
             sprintf(brandbuf,
-                    "Email address validation request for %s, address %s\n\rPlease type email validate %s to authorize.\n\r",
+                    "Email address validation request for %s, address %s\n\rPlease type email "
+                    "validate %s to authorize.\n\r",
                     ch->name, ch->pcdata->email_address, ch->name);
             GET_FREE(brand, brand_data_free);
             GET_FREE(brand_member, dl_list_free);
@@ -220,7 +226,8 @@ void do_email(CHAR_DATA *ch, char *argument)
          for (brand_list = first_brand; brand_list; brand_list = brand_list->next)
          {
             brand = brand_list->this_one;
-            if ((!str_cmp(brand->branded, victim->name)) && (!str_cmp(brand->priority, "Email Validation")))
+            if ((!str_cmp(brand->branded, victim->name)) &&
+                (!str_cmp(brand->priority, "Email Validation")))
                break;
          }
          if (brand_list != NULL)
@@ -346,7 +353,8 @@ void send_rep_out(CHAR_DATA *ch, char *outbuf, bool mailme, char *msub)
          else
          {
             send_to_char(outbuf, ch);
-            send_to_char("\n\r@@eUNABLE TO SEND SYSTEM MAIL. @@WCheck your sendmail settings.@@N\n\r", ch);
+            send_to_char(
+                "\n\r@@eUNABLE TO SEND SYSTEM MAIL. @@WCheck your sendmail settings.@@N\n\r", ch);
          }
       }
       else
@@ -359,6 +367,5 @@ void send_rep_out(CHAR_DATA *ch, char *outbuf, bool mailme, char *msub)
       send_to_char(outbuf, ch);
    }
 }
-
 
 #endif /* UNIT_TEST_EMAIL */

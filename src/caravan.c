@@ -35,84 +35,90 @@ struct caravan_route_data
 };
 
 static const char *midgaard_to_kiess_lines[] = {
-   "Keep your contracts dry; Kiess clerks can smell wet ink from a league away.",
-   "Mind the axle-song, friends. This wagon has crossed the Wild Gate more than most captains.",
-   "Kiess steel buys higher than Midgaard bronze this week, so smile like you're rich.",
-   "By sundown we'll trade cedar casks for forest resin and march back smelling like coin.",
-   "If you hear wolves, clap twice and let the outriders do the shouting.",
-   "I've hauled relic-crates to Kiess in blizzards; this weather is a gift.",
-   "Remember: in Kiess, haggle politely first and ferociously second.",
-   "The Prism Square tallymen wager on our arrival hour. Let's make them lose.",
-   "No one naps on this leg. The road loves sleeping fools and keeps their boots.",
-   "When we roll into Kiess, breathe deep. Pine and profit hit the lungs together."};
+    "Keep your contracts dry; Kiess clerks can smell wet ink from a league away.",
+    "Mind the axle-song, friends. This wagon has crossed the Wild Gate more than most captains.",
+    "Kiess steel buys higher than Midgaard bronze this week, so smile like you're rich.",
+    "By sundown we'll trade cedar casks for forest resin and march back smelling like coin.",
+    "If you hear wolves, clap twice and let the outriders do the shouting.",
+    "I've hauled relic-crates to Kiess in blizzards; this weather is a gift.",
+    "Remember: in Kiess, haggle politely first and ferociously second.",
+    "The Prism Square tallymen wager on our arrival hour. Let's make them lose.",
+    "No one naps on this leg. The road loves sleeping fools and keeps their boots.",
+    "When we roll into Kiess, breathe deep. Pine and profit hit the lungs together."};
 
 static const char *midgaard_to_kowloon_lines[] = {
-   "Lantern Gate tariffs changed again; keep your manifests neat and your temper neater.",
-   "The long road to Kowloon pays in spice, silk, and stories sharp enough to cut.",
-   "Count every crate at dawn and dusk. Somewhere between cities, numbers learn to lie.",
-   "When harbor fog kisses the walls of Kowloon, you'll know we've outrun our doubts.",
-   "We ride for jade scales, lacquered steel, and tea worth more than silver.",
-   "If bandits ask who's in charge, tell them debt is. Debt always travels armed.",
-   "Keep bells tied tight; the Tide Gate inspectors hear loose metal and charge extra.",
-   "Midgaard bread out, Kowloon pepper back. That's the rhythm that keeps us fed.",
-   "I've seen caravans vanish between milestones. We survive by counting each other loud.",
-   "By the time we see Kowloon lanterns, these wheels will be singing in three languages."};
+    "Lantern Gate tariffs changed again; keep your manifests neat and your temper neater.",
+    "The long road to Kowloon pays in spice, silk, and stories sharp enough to cut.",
+    "Count every crate at dawn and dusk. Somewhere between cities, numbers learn to lie.",
+    "When harbor fog kisses the walls of Kowloon, you'll know we've outrun our doubts.",
+    "We ride for jade scales, lacquered steel, and tea worth more than silver.",
+    "If bandits ask who's in charge, tell them debt is. Debt always travels armed.",
+    "Keep bells tied tight; the Tide Gate inspectors hear loose metal and charge extra.",
+    "Midgaard bread out, Kowloon pepper back. That's the rhythm that keeps us fed.",
+    "I've seen caravans vanish between milestones. We survive by counting each other loud.",
+    "By the time we see Kowloon lanterns, these wheels will be singing in three languages."};
 
 static const char *kiess_to_midgaard_lines[] = {
-   "Midgaard buyers pay faster when Kiess wax seals are still warm.",
-   "Keep the draft team steady; these roads punish pride harder than mud.",
-   "We've got forest glass, iron nails, and enough ledgers to start a priesthood.",
-   "Once we pass the wildlands, Midgaard's gate stewards will weigh us by the rumor.",
-   "No shortcuts today. Every shortcut on this run ends with a broken wheel.",
-   "I want smiling faces at Cedar Square; tired sells cheap.",
-   "The first one to spot Midgaard stone gets the last honeycake from my lockbox.",
-   "Kiess taught you discipline. Midgaard will test whether you kept any.",
-   "Guard the resin barrels. One cracked lid and the whole caravan smells like regret.",
-   "Midgaard nights are loud, but their coinpurses are louder."};
+    "Midgaard buyers pay faster when Kiess wax seals are still warm.",
+    "Keep the draft team steady; these roads punish pride harder than mud.",
+    "We've got forest glass, iron nails, and enough ledgers to start a priesthood.",
+    "Once we pass the wildlands, Midgaard's gate stewards will weigh us by the rumor.",
+    "No shortcuts today. Every shortcut on this run ends with a broken wheel.",
+    "I want smiling faces at Cedar Square; tired sells cheap.",
+    "The first one to spot Midgaard stone gets the last honeycake from my lockbox.",
+    "Kiess taught you discipline. Midgaard will test whether you kept any.",
+    "Guard the resin barrels. One cracked lid and the whole caravan smells like regret.",
+    "Midgaard nights are loud, but their coinpurses are louder."};
 
 static const char *kiess_to_kowloon_lines[] = {
-   "Kowloon buyers love Kiess steel because it doesn't flatter their mistakes.",
-   "Tie the cargo high. The low roads flood quick and steal whole inventories.",
-   "From pinewall to harborwall in one run; that's how legends earn bookkeeping entries.",
-   "Kowloon's chandlers pay in silver and gossip. Either one can sink a crew.",
-   "Check your knots, then check your partner's knots. Trust is a two-handed craft.",
-   "We'll trade timber bracing for lantern oil and laugh all the way back.",
-   "If the scouts signal red, we form ring and move like a fortress on wheels.",
-   "Don't stare at city lights when we arrive; stare at your cargo count.",
-   "Kiess discipline on the road, Kowloon swagger at market. Learn both.",
-   "By next moon, our route marks will be the safest path between empires."};
+    "Kowloon buyers love Kiess steel because it doesn't flatter their mistakes.",
+    "Tie the cargo high. The low roads flood quick and steal whole inventories.",
+    "From pinewall to harborwall in one run; that's how legends earn bookkeeping entries.",
+    "Kowloon's chandlers pay in silver and gossip. Either one can sink a crew.",
+    "Check your knots, then check your partner's knots. Trust is a two-handed craft.",
+    "We'll trade timber bracing for lantern oil and laugh all the way back.",
+    "If the scouts signal red, we form ring and move like a fortress on wheels.",
+    "Don't stare at city lights when we arrive; stare at your cargo count.",
+    "Kiess discipline on the road, Kowloon swagger at market. Learn both.",
+    "By next moon, our route marks will be the safest path between empires."};
 
 static const char *kowloon_to_midgaard_lines[] = {
-   "Midgaard collectors pay madness for Kowloon lacquer when the seal is unbroken.",
-   "Keep the tea chests upright. One spill and we'll smell rich while starving.",
-   "From Tide Gate dawn to Wild Gate dusk—may our wheels stay truer than promises.",
-   "These silks bought us escorts in Kowloon; they'll buy us favors in Midgaard.",
-   "Mind the road grit, it chews axles like a moneylender chews excuses.",
-   "When we reach Midgaard, no one mentions how many tolls we argued down.",
-   "Harbor fog behind us, stone avenues ahead. That's a good omen if I've ever seen one.",
-   "I want every crate signed before Cedar Square bells. No heroics, just precision.",
-   "Kowloon sends elegance, Midgaard sends iron, and we keep both honest.",
-   "If the night gets quiet, sing. Silence on trade roads invites bad mathematics."};
+    "Midgaard collectors pay madness for Kowloon lacquer when the seal is unbroken.",
+    "Keep the tea chests upright. One spill and we'll smell rich while starving.",
+    "From Tide Gate dawn to Wild Gate dusk—may our wheels stay truer than promises.",
+    "These silks bought us escorts in Kowloon; they'll buy us favors in Midgaard.",
+    "Mind the road grit, it chews axles like a moneylender chews excuses.",
+    "When we reach Midgaard, no one mentions how many tolls we argued down.",
+    "Harbor fog behind us, stone avenues ahead. That's a good omen if I've ever seen one.",
+    "I want every crate signed before Cedar Square bells. No heroics, just precision.",
+    "Kowloon sends elegance, Midgaard sends iron, and we keep both honest.",
+    "If the night gets quiet, sing. Silence on trade roads invites bad mathematics."};
 
 static const char *kowloon_to_kiess_lines[] = {
-   "Kiess quartermasters pay premium for Kowloon fittings that survive winter bite.",
-   "Count the spice bundles twice; cold air makes fingers and thieves equally quick.",
-   "From lantern markets to pine walls, this run writes itself in disciplined profit.",
-   "We'll swap harbor copper for Kiess hardwood and call it diplomacy.",
-   "Keep formation tight; mountain winds love to scatter the overconfident.",
-   "When Kiess gates rise, walk proud but keep your invoices humble.",
-   "Our outriders say the roads are clear. I say we trust them and verify anyway.",
-   "Kowloon taught us grace under noise; Kiess rewards calm under pressure.",
-   "No wasted motion, no wasted words, no wasted bolts. That's this journey.",
-   "The first scent of pine means we've survived the hard miles and earned the easy lies."};
+    "Kiess quartermasters pay premium for Kowloon fittings that survive winter bite.",
+    "Count the spice bundles twice; cold air makes fingers and thieves equally quick.",
+    "From lantern markets to pine walls, this run writes itself in disciplined profit.",
+    "We'll swap harbor copper for Kiess hardwood and call it diplomacy.",
+    "Keep formation tight; mountain winds love to scatter the overconfident.",
+    "When Kiess gates rise, walk proud but keep your invoices humble.",
+    "Our outriders say the roads are clear. I say we trust them and verify anyway.",
+    "Kowloon taught us grace under noise; Kiess rewards calm under pressure.",
+    "No wasted motion, no wasted words, no wasted bolts. That's this journey.",
+    "The first scent of pine means we've survived the hard miles and earned the easy lies."};
 
 static const CARAVAN_ROUTE_DATA caravan_routes[] = {
-   {"Midgaard", "Kiess", 968, 3350, midgaard_to_kiess_lines, sizeof(midgaard_to_kiess_lines) / sizeof(midgaard_to_kiess_lines[0])},
-   {"Midgaard", "Kowloon", 968, 3522, midgaard_to_kowloon_lines, sizeof(midgaard_to_kowloon_lines) / sizeof(midgaard_to_kowloon_lines[0])},
-   {"Kiess", "Midgaard", 3350, 968, kiess_to_midgaard_lines, sizeof(kiess_to_midgaard_lines) / sizeof(kiess_to_midgaard_lines[0])},
-   {"Kiess", "Kowloon", 3350, 3522, kiess_to_kowloon_lines, sizeof(kiess_to_kowloon_lines) / sizeof(kiess_to_kowloon_lines[0])},
-   {"Kowloon", "Midgaard", 3522, 968, kowloon_to_midgaard_lines, sizeof(kowloon_to_midgaard_lines) / sizeof(kowloon_to_midgaard_lines[0])},
-   {"Kowloon", "Kiess", 3522, 3350, kowloon_to_kiess_lines, sizeof(kowloon_to_kiess_lines) / sizeof(kowloon_to_kiess_lines[0])}};
+    {"Midgaard", "Kiess", 968, 3350, midgaard_to_kiess_lines,
+     sizeof(midgaard_to_kiess_lines) / sizeof(midgaard_to_kiess_lines[0])},
+    {"Midgaard", "Kowloon", 968, 3522, midgaard_to_kowloon_lines,
+     sizeof(midgaard_to_kowloon_lines) / sizeof(midgaard_to_kowloon_lines[0])},
+    {"Kiess", "Midgaard", 3350, 968, kiess_to_midgaard_lines,
+     sizeof(kiess_to_midgaard_lines) / sizeof(kiess_to_midgaard_lines[0])},
+    {"Kiess", "Kowloon", 3350, 3522, kiess_to_kowloon_lines,
+     sizeof(kiess_to_kowloon_lines) / sizeof(kiess_to_kowloon_lines[0])},
+    {"Kowloon", "Midgaard", 3522, 968, kowloon_to_midgaard_lines,
+     sizeof(kowloon_to_midgaard_lines) / sizeof(kowloon_to_midgaard_lines[0])},
+    {"Kowloon", "Kiess", 3522, 3350, kowloon_to_kiess_lines,
+     sizeof(kowloon_to_kiess_lines) / sizeof(kowloon_to_kiess_lines[0])}};
 
 static bool is_active_caravan(CHAR_DATA *ch)
 {
@@ -196,7 +202,8 @@ static void spawn_caravan(void)
    sprintf(buf, "a %s caravan master bound for %s", route->origin, route->destination);
    caravan->short_descr = str_dup(buf);
 
-   sprintf(buf, "A %s caravan master bound for %s checks manifests beside loaded wagons.\n\r", route->origin, route->destination);
+   sprintf(buf, "A %s caravan master bound for %s checks manifests beside loaded wagons.\n\r",
+           route->origin, route->destination);
    caravan->long_descr = str_dup(buf);
    caravan->long_descr_orig = str_dup(buf);
 
@@ -257,7 +264,9 @@ void caravan_update(void)
 
       if (ch->in_room == destination_room)
       {
-         act("$n raises a hand in triumph as the caravan reaches its destination and breaks formation.", ch, NULL, NULL, TO_ROOM);
+         act("$n raises a hand in triumph as the caravan reaches its destination and breaks "
+             "formation.",
+             ch, NULL, NULL, TO_ROOM);
          extract_char(ch, TRUE);
          continue;
       }
@@ -265,7 +274,8 @@ void caravan_update(void)
       dir = h_find_dir(ch->in_room, destination_room, HUNT_WORLD | HUNT_OPENDOOR);
       if (dir < 0)
       {
-         act("$n studies a map, curses softly, and orders the caravan to disperse.", ch, NULL, NULL, TO_ROOM);
+         act("$n studies a map, curses softly, and orders the caravan to disperse.", ch, NULL, NULL,
+             TO_ROOM);
          extract_char(ch, TRUE);
          continue;
       }
@@ -274,7 +284,9 @@ void caravan_update(void)
 
       if (ch->in_room == destination_room)
       {
-         act("$n raises a hand in triumph as the caravan reaches its destination and breaks formation.", ch, NULL, NULL, TO_ROOM);
+         act("$n raises a hand in triumph as the caravan reaches its destination and breaks "
+             "formation.",
+             ch, NULL, NULL, TO_ROOM);
          extract_char(ch, TRUE);
          continue;
       }

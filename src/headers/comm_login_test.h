@@ -10,13 +10,11 @@ typedef enum
    LOGIN_TRANSITION_ENTERED_GAME
 } LOGIN_TRANSITION_RESULT;
 
-LOGIN_TRANSITION_RESULT simulate_existing_player_login_transition(
-   int *connected_state,
-   const char *input,
-   int is_name_valid,
-   int is_existing_player,
-   int is_password_correct);
-
+LOGIN_TRANSITION_RESULT simulate_existing_player_login_transition(int *connected_state,
+                                                                  const char *input,
+                                                                  int is_name_valid,
+                                                                  int is_existing_player,
+                                                                  int is_password_correct);
 
 typedef struct char_data CHAR_DATA;
 

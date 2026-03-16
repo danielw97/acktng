@@ -10,7 +10,6 @@ char *get_prefix(OBJ_DATA *obj);
 int get_obj_stat_weight_index(const OBJ_DATA *obj);
 int item_generation_apply_item_level_modifiers(const OBJ_DATA *obj, int ilevel);
 
-
 OBJ_DATA *generate_item(int level)
 {
    char buf[MSL];
@@ -390,7 +389,6 @@ char *get_wear_name(OBJ_DATA *obj)
    return "null";
 }
 
-
 int item_generation_apply_item_level_modifiers(const OBJ_DATA *obj, int ilevel)
 {
    if (obj == NULL)
@@ -577,7 +575,8 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    if (spellpower_val > 0)
       set_aff_to_obj(obj, APPLY_SPELLPOWER, spellpower_val);
 
-   if (is_jewelry(obj) && (IS_SET(obj->extra_flags, ITEM_RARE) || IS_SET(obj->extra_flags, ITEM_MYTHIC)))
+   if (is_jewelry(obj) &&
+       (IS_SET(obj->extra_flags, ITEM_RARE) || IS_SET(obj->extra_flags, ITEM_MYTHIC)))
    {
       int rare_mod = 1;
 
@@ -696,7 +695,8 @@ bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
       int roll = number_percent();
       for (int i = 0; i < MAX_LOOT; i++)
       {
-         //       sprintf(buf, "Chloot %d Chlootchance %d chance %d", ch->loot[i], ch->loot_chance[i], chance);
+         //       sprintf(buf, "Chloot %d Chlootchance %d chance %d", ch->loot[i],
+         //       ch->loot_chance[i], chance);
          //         bug(buf,0);
          if (ch->loot[i] > 0 && ch->loot_chance[i] > 0 && roll <= ch->loot_chance[i] + chance)
          {
@@ -707,14 +707,16 @@ bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
 
             if (obj == NULL)
             {
-               sprintf(buf, "%s failed to create loot object vnum %d", ch->short_descr, ch->loot[i]);
+               sprintf(buf, "%s failed to create loot object vnum %d", ch->short_descr,
+                       ch->loot[i]);
                bug(buf, 0);
                return FALSE;
             }
 
             if (!IS_SET(obj->extra_flags, ITEM_LOOT))
             {
-               sprintf(buf, "%s loot object vnum %d missing ITEM_LOOT flag", ch->short_descr, obj->pIndexData->vnum);
+               sprintf(buf, "%s loot object vnum %d missing ITEM_LOOT flag", ch->short_descr,
+                       obj->pIndexData->vnum);
                bug(buf, 0);
                extract_obj(obj);
                return FALSE;
