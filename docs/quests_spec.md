@@ -90,8 +90,8 @@ These are bit flags built using the `BIT_N` macro where `BIT_0 = 0`, `BIT_1 = 1`
 | `ITEM_BOSS` | 134217728 | BIT_28 |
 
 Common combinations used in quest reward items:
-- `192` = ITEM_MAGIC + ITEM_LOOT (non-boss chain-end rewards)
-- `402653376` = ITEM_MAGIC + ITEM_LOOT + ITEM_BOSS (boss-kill rewards)
+- `1048768` = ITEM_MAGIC + ITEM_NODROP + ITEM_RARE (non-boss quest rewards)
+- `135266496` = ITEM_MAGIC + ITEM_NODROP + ITEM_RARE + ITEM_BOSS (boss-kill quest rewards)
 
 ## Currently loadable static quests (`1.prop`-`105.prop`)
 
