@@ -12,7 +12,7 @@ keywords know alignment
 Noun Damage: None
    Wear-Off: !Know Alignment!
 Acquisition:
-   - Mage: level 13
+   - Magi: level 13
    - Cleric: level 22
 Description:
    Know Alignment is a protective/support spell that strengthens, restores, or safeguards the target.

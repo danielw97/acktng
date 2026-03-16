@@ -12,7 +12,7 @@ keywords punch
 Noun Damage: punch
    Wear-Off: !Punch!
 Acquisition:
-   - Warrior: level 5
+   - Warden: level 5
 Description:
    Punch is a core warrior combo strike for steady melee damage and combo progression.
 *******************************************************************************

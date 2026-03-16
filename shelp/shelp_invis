@@ -12,7 +12,7 @@ keywords invis
 Noun Damage: None
    Wear-Off: You are no longer invisible.
 Acquisition:
-   - Mage: level 17
+   - Magi: level 17
 Description:
    Invis Makes the target invisible until the effect is broken, allowing safer scouting, escapes, or setup before combat.
 *******************************************************************************

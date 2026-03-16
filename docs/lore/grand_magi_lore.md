@@ -57,7 +57,7 @@ The Convergence Codices' theoretical documentation of multi-school interaction e
 - **Timeline**: Era III (Solar Court honorific origin), Era X (Chromatic Circle and Axiomatic Schools era; Confluent Theorists and Convergence Codices), Era XV (Ash-and-Iron Decades; Ashfall Monsoon; tradition reclamation)
 - **Sorcerer**: Component tradition; Chromatic Circle breadth-and-synthesis methodology
 - **Wizard**: Component tradition; Axiomatic Schools formal proof methodology
-- **Mage**: Grandparent tradition; Wizard's Keep institutional framework
+- **Magi**: Grandparent tradition; Wizard's Keep institutional framework
 - **Cinderteeth Mountains**: Ashfall Monsoon source; Grand Magi tradition reclamation context
 - **Great Pyramid / Solar Court**: Ancient honorific origin; cosmological elemental stability demonstration
 

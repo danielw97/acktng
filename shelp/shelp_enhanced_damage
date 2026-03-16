@@ -12,7 +12,7 @@ keywords enhanced damage
 Noun Damage: None
    Wear-Off: !Enhanced Damage!
 Acquisition:
-   - Warrior: level 20
+   - Warden: level 20
 Description:
    Enhanced Damage passively increases your physical damage, scaling with Strength.
 *******************************************************************************

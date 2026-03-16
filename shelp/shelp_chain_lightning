@@ -12,7 +12,7 @@ keywords chain lightning
 Noun Damage: lightening bolt
    Wear-Off: !chain-light!
 Acquisition:
-   - Mage: level 65
+   - Magi: level 65
 Description:
    Chain Lightning Launches lightning that arcs between multiple enemies, damaging each jump target.
 *******************************************************************************

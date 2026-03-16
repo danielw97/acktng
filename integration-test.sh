@@ -117,7 +117,7 @@ echo "integration-test: MUD is up, validating websocket login flow for '${TEST_P
 #   CON_MENU (show_menu_to) -> shows numbered options including "elect"
 #     1 -> sex menu     -> send M
 #     2 -> race menu    -> send Hmn  (Human, 3-letter race_name)
-#     3 -> class menu   -> send "War Mag Cle Thi"  (MAX_PC_CLASS = 4)
+#     3 -> class menu   -> send "War Mag Cle Cip"  (MAX_PC_CLASS = 4)
 #     4 -> CON_READ_MOTD
 #   CON_READ_MOTD         -> any input -> CON_PLAYING
 #   CON_PLAYING           -> server sends "Welcome to ACK!TNG" + room look
@@ -322,7 +322,7 @@ _ = ws.recv_until('elect', timeout=5.0)
 
 send('3')
 _ = ws.recv_until('lass', timeout=5.0)
-send('War Mag Cle Thi')
+send('War Mag Cle Cip')
 _ = ws.recv_until('elect', timeout=5.0)
 
 send('4')

@@ -12,7 +12,7 @@ keywords hunt
 Noun Damage: None
    Wear-Off: !Hunt!
 Acquisition:
-   - Thief: level 70
+   - Cipher: level 70
 Description:
    Hunt improves tracking, letting you follow trails across rooms and through doors more reliably.
 *******************************************************************************

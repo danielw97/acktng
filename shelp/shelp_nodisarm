@@ -12,8 +12,8 @@ keywords nodisarm
 Noun Damage: None
    Wear-Off: !nodisarm!
 Acquisition:
-   - Warrior: level 30
-   - Thief: level 40
+   - Warden: level 30
+   - Cipher: level 40
 Description:
    Nodisarm gives you resistance against disarm attempts.
 *******************************************************************************

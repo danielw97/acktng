@@ -13,11 +13,11 @@ Noun Damage: None
    Wear-Off: !MESMERISE!
 Acquisition:
    - Cleric: level 2
-   - Thief: level 2
-   - Warrior: level 2
+   - Cipher: level 2
+   - Warden: level 2
    - Psionicist: level 2
    - Pugilist: level 2
-   - Mage: level 5
+   - Magi: level 5
 Description:
    Mesmerise is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

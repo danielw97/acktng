@@ -460,8 +460,8 @@ int get_max_dex(CHAR_DATA *ch)
          max++;
    }
 
-   if (ch->pcdata->reincarnations[CLASS_THI] > 0)
-      max += (ch->pcdata->reincarnations[CLASS_THI]+1)/2;
+   if (ch->pcdata->reincarnations[CLASS_CIP] > 0)
+      max += (ch->pcdata->reincarnations[CLASS_CIP]+1)/2;
 
    return UMIN(max, STAT_MAX);
 }
@@ -1010,7 +1010,7 @@ bool can_use_skill(CHAR_DATA *ch, int gsn)
    if (gsn == gsn_enhanced_damage && ch->pcdata->reincarnations[CLASS_WAR] > 0)
       return TRUE;
 
-   if (gsn == gsn_enhanced_critical && ch->pcdata->reincarnations[CLASS_THI] > 0)
+   if (gsn == gsn_enhanced_critical && ch->pcdata->reincarnations[CLASS_CIP] > 0)
       return TRUE;
 
    if (gsn == gsn_counter && ch->pcdata->reincarnations[CLASS_PUG] > 0)

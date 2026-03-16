@@ -12,7 +12,7 @@ keywords detect undead
 Noun Damage: None
    Wear-Off: You no longer sense undead beings.
 Acquisition:
-   - Mage: level 8
+   - Magi: level 8
 Description:
    Detect Undead is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

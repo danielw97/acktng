@@ -13,7 +13,7 @@ Noun Damage: None
    Wear-Off: !Remove Curse!
 Acquisition:
    - Cleric: level 27
-   - Mage: level 36
+   - Magi: level 36
 Description:
    Remove Curse is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

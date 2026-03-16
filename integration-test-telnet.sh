@@ -123,7 +123,7 @@ echo "integration-test-telnet: MUD is up, validating telnet login flow for '${TE
 #   CON_MENU                 -> numbered menu with "elect"
 #     1 -> sex menu   -> M
 #     2 -> race menu  -> Hmn
-#     3 -> class menu -> "War Mag Cle Thi"
+#     3 -> class menu -> "War Mag Cle Cip"
 #     4 -> CON_READ_MOTD
 #   CON_READ_MOTD            -> any input -> CON_PLAYING
 #   CON_PLAYING              -> "Welcome"
@@ -279,7 +279,7 @@ _ = client.recv_until('elect', timeout=5.0)
 
 client.send('3')
 _ = client.recv_until('lass', timeout=5.0)
-client.send('War Mag Cle Thi')
+client.send('War Mag Cle Cip')
 _ = client.recv_until('elect', timeout=5.0)
 
 client.send('4')

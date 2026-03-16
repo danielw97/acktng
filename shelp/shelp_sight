@@ -12,7 +12,7 @@ keywords sight
 Noun Damage: None
    Wear-Off: !Sight!
 Acquisition:
-   - Mage: level 30
+   - Magi: level 30
 Description:
    Sight is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

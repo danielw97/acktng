@@ -12,8 +12,8 @@ keywords dirt
 Noun Damage: None
    Wear-Off: !dirt!
 Acquisition:
-   - Warrior: level 35
-   - Thief: level 36
+   - Warden: level 35
+   - Cipher: level 36
    - Pugilist: level 47
 Description:
    Dirt attempts to blind an opponent by kicking dirt into their eyes.

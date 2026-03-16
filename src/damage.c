@@ -502,7 +502,7 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
 
     if (dt == gsn_circle || dt == gsn_backstab)
     {
-        dam_mod += ch->lvl[CLASS_THI] / 100;
+        dam_mod += ch->lvl[CLASS_CIP] / 100;
         dam_mod += ch->remort[CLASS_ASS] / 100;       // 100% at 100
         dam_mod += ch->remort[CLASS_WLK] / 100 * .75; // 75% at 100
         dam_mod += ch->adept[CLASS_NIG] / 50;         // 40% at 20

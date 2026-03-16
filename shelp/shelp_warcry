@@ -12,7 +12,7 @@ keywords warcry
 Noun Damage: warcry
    Wear-Off: !Warcry!
 Acquisition:
-   - Warrior: level 10
+   - Warden: level 10
 Description:
    Warcry is a self-buff shout that increases hitroll and improves spell-saving resilience.
 *******************************************************************************

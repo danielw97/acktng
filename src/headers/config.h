@@ -108,7 +108,7 @@
 /* Mortal */
 #define CLASS_MAG 0
 #define CLASS_CLE 1
-#define CLASS_THI 2
+#define CLASS_CIP 2
 #define CLASS_WAR 3
 #define CLASS_PSI 4
 #define CLASS_PUG 5

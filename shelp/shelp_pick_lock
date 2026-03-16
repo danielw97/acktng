@@ -12,7 +12,7 @@ keywords pick lock
 Noun Damage: None
    Wear-Off: !Pick!
 Acquisition:
-   - Thief: level 25
+   - Cipher: level 25
 Description:
    Pick Lock allows you to unlock lockable doors and containers without keys.
 *******************************************************************************

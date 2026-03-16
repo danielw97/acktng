@@ -13,11 +13,11 @@ Noun Damage: None
    Wear-Off: The @@dcloak@@N around your body fades.
 Acquisition:
    - Cleric: level 13
-   - Thief: level 14
-   - Warrior: level 14
+   - Cipher: level 14
+   - Warden: level 14
    - Pugilist: level 15
    - Psionicist: level 16
-   - Mage: level 18
+   - Magi: level 18
 Description:
    Cloak:darkness is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

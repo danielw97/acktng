@@ -12,7 +12,7 @@ keywords teleport
 Noun Damage: None
    Wear-Off: !Teleport!
 Acquisition:
-   - Mage: level 40
+   - Magi: level 40
 Description:
    Teleport is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

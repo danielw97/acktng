@@ -12,7 +12,7 @@ keywords bash
 Noun Damage: bash
    Wear-Off: !bash!
 Acquisition:
-   - Warrior: level 28
+   - Warden: level 28
 Description:
    Bash is a straightforward heavy-body strike in the warrior combo chain, used to pressure targets and build toward combo-triggered follow-up attacks.
 *******************************************************************************

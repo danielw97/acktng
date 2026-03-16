@@ -2707,7 +2707,7 @@ void show_cmenu_to(DESCRIPTOR_DATA *d)
    strcat(menu, "There are six classes.  Please list, in order of best to\n\r");
    strcat(menu, "worst, the order your 4 classes will be.\n\r");
    strcat(menu, "(The 1st you pick will be your prime class, gaining a +1 bonus.\n\r");
-   strcat(menu, "For example, psi mag cle thi.\n\r");
+   strcat(menu, "For example, psi mag cle cip.\n\r");
    strcat(menu, "Abr    Prime Atr    Name\n\r");
    strcat(menu, "---    ---------    ----\n\r");
 
@@ -3118,7 +3118,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
          }
          for (foo = 0; foo < MAX_CLASS; foo++)
          {
-            if (!str_cmp(arg, class_table[foo].who_name) && ch->pcdata->index[foo] == -1)
+            if ((!str_cmp(arg, class_table[foo].who_name) || !str_cmp(arg, class_table[foo].class_name)) && ch->pcdata->index[foo] == -1)
             {
                numclasses++;
                ch->pcdata->order[cnt] = foo;
@@ -3132,7 +3132,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
       if (!ok || numclasses < MAX_PC_CLASS)
       {
          write_to_buffer(d,
-                         "Invalid Order... Please Try Again. You must list each class, by abbreviation, such as CLE WAR MAG THI.\n\r",
+                         "Invalid Order... Please Try Again. You must list each class by abbreviation or full name, such as CLE WAR MAG CIP or Cleric Warden Magi Cipher.\n\r",
                          0);
          show_cmenu_to(d);
          return;

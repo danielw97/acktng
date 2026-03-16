@@ -12,7 +12,7 @@ keywords fireball
 Noun Damage: fireball
    Wear-Off: !Fireball!
 Acquisition:
-   - Mage: level 28
+   - Magi: level 28
 Description:
    Fireball is an offensive spell that inflicts fire damage on an enemy target.
 *******************************************************************************

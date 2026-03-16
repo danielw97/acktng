@@ -12,7 +12,7 @@ keywords lightning bolt
 Noun Damage: lightning bolt
    Wear-Off: !Lightning Bolt!
 Acquisition:
-   - Mage: level 24
+   - Magi: level 24
 Description:
    Lightning Bolt is an offensive spell that inflicts lightning damage on an enemy target.
 *******************************************************************************

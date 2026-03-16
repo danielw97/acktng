@@ -12,7 +12,7 @@ keywords identify
 Noun Damage: None
    Wear-Off: !Identify!
 Acquisition:
-   - Mage: level 9
+   - Magi: level 9
 Description:
    Identify Reveals detailed magical properties of an item, including enchantments and requirements.
 *******************************************************************************

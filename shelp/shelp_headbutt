@@ -12,7 +12,7 @@ keywords headbutt
 Noun Damage: headbutt
    Wear-Off: !HeadButt!
 Acquisition:
-   - Warrior: level 6
+   - Warden: level 6
 Description:
    Headbutt is a reliable front-line strike in the warrior combo chain, used to pressure opponents and feed combo-trigger chances.
 *******************************************************************************

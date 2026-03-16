@@ -12,7 +12,7 @@ keywords smash
 Noun Damage: None
    Wear-Off: !smash!
 Acquisition:
-   - Warrior: level 30
+   - Warden: level 30
 Description:
    Smash is a utility breaching skill used to force open closed or locked doors, trading finesse for immediate entry.
 *******************************************************************************

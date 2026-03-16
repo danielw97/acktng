@@ -12,7 +12,7 @@ keywords locate object
 Noun Damage: None
    Wear-Off: !Locate Object!
 Acquisition:
-   - Mage: level 16
+   - Magi: level 16
    - Cleric: level 30
 Description:
    Locate Object Searches for a named object and reveals where it can be found if it is within the spell's reach.

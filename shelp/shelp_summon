@@ -12,7 +12,7 @@ keywords summon
 Noun Damage: None
    Wear-Off: !Summon!
 Acquisition:
-   - Mage: level 35
+   - Magi: level 35
 Description:
    Summon Pulls a distant player or creature to the caster's room if summon rules and protections allow it.
 *******************************************************************************

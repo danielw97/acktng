@@ -139,7 +139,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    else
       raise_skill(ch, gsn_circle);
 
-   if (!IS_NPC(ch) && ch->lvl[CLASS_THI] > 0 && number_percent() == 1)
+   if (!IS_NPC(ch) && ch->lvl[CLASS_CIP] > 0 && number_percent() == 1)
    {
       send_to_room("You hear a large CRACK!\n\r", ch->in_room);
       dam *= 2;

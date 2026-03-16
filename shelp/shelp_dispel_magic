@@ -12,7 +12,7 @@ keywords dispel magic
 Noun Damage: None
    Wear-Off: !Dispel Magic!
 Acquisition:
-   - Mage: level 68
+   - Magi: level 68
    - Cleric: level 89
 Description:
    Dispel Magic Attempts to strip magical effects from a target, removing beneficial buffs or harmful debuffs based on dispel strength.

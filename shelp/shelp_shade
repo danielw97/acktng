@@ -12,11 +12,11 @@ keywords shade
 Noun Damage: None
    Wear-Off: The room gets lighter.
 Acquisition:
-   - Thief: level 6
+   - Cipher: level 6
    - Cleric: level 7
    - Psionicist: level 7
-   - Warrior: level 8
-   - Mage: level 12
+   - Warden: level 8
+   - Magi: level 12
    - Pugilist: level 13
 Description:
    Shade Transforms the caster into a shadowy form focused on stealth and infiltration, making it easier to avoid attention while moving.

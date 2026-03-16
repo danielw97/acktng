@@ -12,8 +12,8 @@ keywords disarm
 Noun Damage: None
    Wear-Off: !Disarm!
 Acquisition:
-   - Warrior: level 12
-   - Thief: level 53
+   - Warden: level 12
+   - Cipher: level 53
 Description:
    Disarm attempts to knock an opponent's weapon out of their hands and briefly prevents immediate re-equipping.
 *******************************************************************************

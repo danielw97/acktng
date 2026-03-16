@@ -12,7 +12,7 @@ keywords detect magic
 Noun Damage: None
    Wear-Off: The detect magic wears off.
 Acquisition:
-   - Mage: level 7
+   - Magi: level 7
    - Cleric: level 7
 Description:
    Detect Magic is a protective/support spell that strengthens, restores, or safeguards the target.

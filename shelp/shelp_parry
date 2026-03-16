@@ -12,8 +12,8 @@ keywords parry
 Noun Damage: None
    Wear-Off: !Parry!
 Acquisition:
-   - Warrior: level 10
-   - Thief: level 52
+   - Warden: level 10
+   - Cipher: level 52
 Description:
    Parry gives you a chance to deflect melee attacks when wielding a weapon.
 *******************************************************************************

@@ -13,11 +13,11 @@ Noun Damage: None
    Wear-Off: None
 Acquisition:
    - Cleric: level 5
-   - Thief: level 5
-   - Warrior: level 5
+   - Cipher: level 5
+   - Warden: level 5
    - Psionicist: level 5
    - Pugilist: level 5
-   - Mage: level 10
+   - Magi: level 10
 Description:
    Mark Marks a target with a blood-linked sigil so blood magic users can track or interact with that victim more reliably later.
 *******************************************************************************

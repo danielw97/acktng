@@ -13,11 +13,11 @@ Noun Damage: None
    Wear-Off: None
 Acquisition:
    - Cleric: level 3
-   - Thief: level 3
-   - Warrior: level 3
+   - Cipher: level 3
+   - Warden: level 3
    - Psionicist: level 3
    - Pugilist: level 3
-   - Mage: level 10
+   - Magi: level 10
 Description:
    Bloodsense Lets the caster sense blood signatures, helping locate living targets and follow prey in the area.
 *******************************************************************************

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Wizard tradition is the older of the two major remort paths from the Mage — the heir of the **Axiomatic Schools**, which were founded on the premise that magic is not merely power but a discipline subject to formal proof. Axiomatic practitioners built towers, wrote theorems, and insisted every spell effect could be defined, bounded, and perfected. Their most rigorous successors became what the Schools called **Artificers of Sequence** — practitioners who had reduced combat casting to a precise language of timing, window, and controlled output. The common name that survived — Wizard — is not a grand title but a technical one: someone who has made the formless precise. Where Sorcerers command breadth and synthesis, Wizards command exactitude and sequence.
+The Wizard tradition is the older of the two major remort paths from the Magi — the heir of the **Axiomatic Schools**, which were founded on the premise that magic is not merely power but a discipline subject to formal proof. Axiomatic practitioners built towers, wrote theorems, and insisted every spell effect could be defined, bounded, and perfected. Their most rigorous successors became what the Schools called **Artificers of Sequence** — practitioners who had reduced combat casting to a precise language of timing, window, and controlled output. The common name that survived — Wizard — is not a grand title but a technical one: someone who has made the formless precise. Where Sorcerers command breadth and synthesis, Wizards command exactitude and sequence.
 
 ---
 
@@ -55,7 +55,7 @@ What the Keep did not inherit was the Axiomatic Schools' full independence from 
 ## V. Cross-References
 
 - **Timeline**: Era XII (Axiomatic Schools founding; post-Conclave arcane institution development), Era XIII (Convergence Codices and Confluent Theorist documentation), Era XV (Ash-and-Iron Decades; Grand Magi proto-tradition during storm-front work)
-- **Mage**: Parent tradition; Wizard's Keep institutional framework
+- **Magi**: Parent tradition; Wizard's Keep institutional framework
 - **Sorcerer**: Parallel remort path; Chromatic Circle tradition; competitive opposition that Grand Magi resolves
 - **Grand Magi**: Adept synthesis; Axiomatic + Chromatic Circle convergence; Confluent Theorist lineage
 - **Wizard's Keep**: Primary institutional home; Triple-Ledger Rule as Axiomatic methodology application

@@ -12,7 +12,7 @@ keywords peek
 Noun Damage: None
    Wear-Off: !Peek!
 Acquisition:
-   - Thief: level 20
+   - Cipher: level 20
 Description:
    Peek is a tactical skill focused on stealth, positioning, or information advantage.
 *******************************************************************************

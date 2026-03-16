@@ -439,7 +439,7 @@ Each city maintains specific institutional relationships with practitioner tradi
 **Midgaard** (registry, Guard Command, Continuity/Reckoning tension):
 - Warriors: `docs/lore/warrior_lore.md` — Guard Command officer corps; requisition office system
 - Clerics: `docs/lore/cleric_lore.md` — Violet Compact registry integration; inner/outer tradition politics
-- Mages: `docs/lore/mage_lore.md` — Wizard's Keep registry compliance; Conclave guilt chain documentation
+- Magi: `docs/lore/mage_lore.md` — Wizard's Keep registry compliance; Conclave guilt chain documentation
 - Knights: `docs/lore/knight_lore.md` — Guard Command institutional backbone; Compact of Seven Chains doctrine vs. civic obedience
 - Crusaders: `docs/lore/crusader_lore.md` — Reserve depot origin; Ash-and-Iron Decades cross-training
 - Templars: `docs/lore/templar_lore.md` — Violet Compact sanctioned Corps; garrison crisis origin

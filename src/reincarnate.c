@@ -157,12 +157,12 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
             argument = one_argument(argument, arg);
             if (arg[0] == '\0')
             {
-               send_to_char("Invalid class option. Ex: Cle thi war psi\n\r", ch);
+               send_to_char("Invalid class option. Ex: Cle Cip War Psi or Cleric Cipher Warden Psionicist\n\r", ch);
                return;
             }
             for (int foo = 0; foo < MAX_CLASS; foo++)
             {
-               if (!str_cmp(arg, class_table[foo].who_name))
+               if (!str_cmp(arg, class_table[foo].who_name) || !str_cmp(arg, class_table[foo].class_name))
                {
                   ch->pcdata->reincarnate_order[cnt] = foo;
                   found = TRUE;
@@ -172,7 +172,7 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
 
             if (!found)
             {
-               send_to_char("Invalid class option. Ex: Cle thi war psi\n\r", ch);
+               send_to_char("Invalid class option. Ex: Cle Cip War Psi or Cleric Cipher Warden Psionicist\n\r", ch);
                return;
             }
          }
