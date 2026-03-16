@@ -154,6 +154,7 @@ extern char *const rev_name[];
 
 extern int max_players;
 extern int happy_hour_ticks_remaining;
+extern int hotreboot_countdown;
 
 extern bool happy_hour;
 

@@ -1350,5 +1350,6 @@
 #define WHO_COUNT_FILE "../web/whocount.html"
 #endif
 /* Other Stuff - Flar */
-#define COPYOVER_FILE "COPYOVER.TXT" /* Temp data file used for copyover */
-#define EXE_FILE "../src/ack"        /* The one that runs the ACK! */
+#define COPYOVER_FILE "COPYOVER.TXT"              /* Temp data file used for copyover */
+#define EXE_FILE "../src/ack"                     /* The one that runs the ACK! */
+#define HOTREBOOT_FILE "../data/hotreboot.trigger" /* Touched by deploy to trigger hotreboot */

@@ -43,6 +43,16 @@ bool should_abort_for_checkpoint_timeout(int usage_now, int checkpoint, int thre
    return !disable_abort && (usage_now - checkpoint > threshold);
 }
 
+bool hotreboot_warning_30s_due(int countdown)
+{
+   return countdown == 30 * PULSE_PER_SECOND;
+}
+
+bool hotreboot_execute_due(int countdown)
+{
+   return countdown == 0;
+}
+
 #ifndef UNIT_TEST_UPDATE
 
 /*
@@ -1932,6 +1942,56 @@ extern void build_save_flush(void);
  * Called once per pulse from game loop.
  * Random times to defeat tick-timing clients and players.
  */
+static void hotreboot_update(void)
+{
+   static int pulse_trigger_check = PULSE_PER_SECOND;
+   CHAR_DATA *ch;
+   CHAR_DATA *ch_next;
+
+   /* Check for trigger file once per second */
+   if (--pulse_trigger_check <= 0)
+   {
+      pulse_trigger_check = PULSE_PER_SECOND;
+      if (hotreboot_countdown == 0)
+      {
+         FILE *fp = fopen(HOTREBOOT_FILE, "r");
+         if (fp != NULL)
+         {
+            fclose(fp);
+            unlink(HOTREBOOT_FILE);
+            hotreboot_countdown = 60 * PULSE_PER_SECOND;
+            for (ch = first_char; ch != NULL; ch = ch_next)
+            {
+               ch_next = ch->next;
+               if (!IS_NPC(ch))
+                  send_to_char("\n\r@@e** ACK! MUD will hotreboot in 60 seconds for a code update! **@@N\n\r", ch);
+            }
+            log_string("Deployment hotreboot: 60-second warning issued.");
+         }
+      }
+   }
+
+   if (hotreboot_countdown > 0)
+   {
+      hotreboot_countdown--;
+      if (hotreboot_warning_30s_due(hotreboot_countdown))
+      {
+         for (ch = first_char; ch != NULL; ch = ch_next)
+         {
+            ch_next = ch->next;
+            if (!IS_NPC(ch))
+               send_to_char("\n\r@@e** ACK! MUD will hotreboot in 30 seconds for a code update! **@@N\n\r", ch);
+         }
+         log_string("Deployment hotreboot: 30-second warning issued.");
+      }
+      else if (hotreboot_execute_due(hotreboot_countdown))
+      {
+         log_string("Deployment hotreboot: executing hotreboot now.");
+         do_hotreboot(NULL, "");
+      }
+   }
+}
+
 void update_handler(void)
 {
    static int pulse_message;
@@ -2027,6 +2087,7 @@ void update_handler(void)
    }
 
    aggr_update();
+   hotreboot_update();
    tail_chain();
    return;
 }
