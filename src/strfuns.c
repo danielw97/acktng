@@ -616,7 +616,7 @@ char *get_adept_name(CHAR_DATA *ch)
        "@@a Temple Novice   @@N", "@@a Votive Keeper   @@N", "@@a Oath Bearer     @@N", "@@a Faith Adept     @@N", "@@a Relic Guardian  @@N",
        "@@a Litany Master   @@N", "@@a Ward Canon      @@N", "@@a Sanctum Knight  @@N", "@@a Creed Arbiter   @@N", "@@a Dawn Inquisitor @@N",
        "@@a Sacred Marshal  @@N", "@@a Radiant Justicar@@N", "@@a Chapel Commander@@N", "@@a Anointed Judge  @@N", "@@a Seraphic Warden @@N",
-       "@@a Temple Champion @@N", "@@a Covenant Lord   @@N", "@@a Light Paragon   @@N", "@@a Throne Templar  @@N", "@@A High Hierotemplar@@N"
+       "@@a Temple Champion @@N", "@@a Covenant Lord   @@N", "@@a Light Paragon   @@N", "@@a Throne Templar  @@N", "@@A High Hierotemp  @@N"
       },
       {
        "@@d Shadow Footpad  @@N", "@@d Dusk Stalker    @@N", "@@d Gloom Knifework @@N", "@@d Veil Skirmisher @@N", "@@d Night Prowler   @@N",
@@ -634,7 +634,7 @@ char *get_adept_name(CHAR_DATA *ch)
        "@@m Pulse Student   @@N", "@@m Force Adept     @@N", "@@m Vector Caller   @@N", "@@m Motion Scribe   @@N", "@@m Flux Binder     @@N",
        "@@m Momentum Savant @@N", "@@m Kinesis Warden  @@N", "@@m Resonance Master@@N", "@@m Graviton Duelist@@N", "@@m Quantum Strider @@N",
        "@@m Singularity Seer@@N", "@@m Continuum Keeper@@N", "@@m Orbit Lawgiver  @@N", "@@m Tensor Arcanist @@N", "@@m Rift Physicist  @@N",
-       "@@m Hyperion Architect@@N", "@@m Eventide Director@@N", "@@m Cosmos Engineer @@N", "@@m Fate Deflector  @@N", "@@M Kinetimancer Apex@@N"
+       "@@m Hyperion Archit @@N", "@@m Eventide Directo@@N", "@@m Cosmos Engineer @@N", "@@m Fate Deflector  @@N", "@@M Kinetimancr Apex@@N"
       },
       {
        "@@r Iron Trainee    @@N", "@@r Form Adept      @@N", "@@r Stance Keeper   @@N", "@@r Palm Disciple   @@N", "@@r Bone Tempered   @@N",
@@ -656,10 +656,10 @@ char *get_adept_name(CHAR_DATA *ch)
    }
 
    if (dominant_class < 0 || dominant_level < 1)
-      return "@@W    Adept     @@N";
+      return "@@W    Adept        @@N";
 
    if (dominant_level >= MAX_ADEPT)
-      return "@@Y   Realm Lord  @@N";
+      return "@@Y   Realm Lord    @@N";
 
    return (char *)adept_titles[dominant_class][URANGE(1, dominant_level, MAX_ADEPT - 1) - 1];
 }

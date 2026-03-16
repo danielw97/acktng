@@ -270,7 +270,14 @@ unit-test-death: $(OBJDIR)/tests/test_death.o $(OBJDIR)/death.unit-test.o $(OBJD
 	rm -f tests/unit-test-death
 	$(CC) -Wl,--gc-sections -o tests/unit-test-death $(OBJDIR)/tests/test_death.o $(OBJDIR)/death.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-magic2 unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp
+$(OBJDIR)/strfuns.unit-test.o: strfuns.c headers/ack.h
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/strfuns.unit-test.o strfuns.c
+
+unit-test-strfuns: $(OBJDIR)/tests/test_strfuns.o $(OBJDIR)/strfuns.unit-test.o
+	rm -f tests/unit-test-strfuns
+	$(CC) -Wl,--gc-sections -o tests/unit-test-strfuns $(OBJDIR)/tests/test_strfuns.o $(OBJDIR)/strfuns.unit-test.o $(L_FLAGS)
+
+unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-magic2 unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns
 	./tests/unit-test-act-flags
 	./tests/unit-test-area-format
 	./tests/unit-test-help-format
@@ -309,5 +316,6 @@ unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit
 	./tests/unit-test-death
 	./tests/unit-test-item-generation
 	./tests/unit-test-interp
+	./tests/unit-test-strfuns
 	$(MAKE) integration-test
 	$(MAKE) integration-test-telnet
