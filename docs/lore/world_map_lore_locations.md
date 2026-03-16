@@ -108,10 +108,6 @@ Three connected sites organized hierarchically from public-facing to deep-coerci
 
 **Wizard's Keep** is a remote, high-elevation adept training site at the accessible world's edge, in a forest-and-mountain setting isolated from the main continental routes.
 
-**Academy of Adventure (Newschool)** and **Whispering Forest Preserve** are both starter areas near Midgaard — the Academy in a city-adjacent institutional setting, the Preserve a managed forest within Midgaard's influence zone.
-
-**Public Dungeons** are accessible from within Midgaard or its immediate surroundings, a low-to-mid-level complex requiring no outlying travel.
-
 ---
 
 ## VIII. ROUTE MAP
