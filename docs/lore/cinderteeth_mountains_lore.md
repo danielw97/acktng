@@ -578,6 +578,10 @@ The Conclave's genuine technical contributions — fault-resonance monitoring li
 
 The Bellspine crystal anchors are the most practically significant surviving Conclave infrastructure. Seventeen documented sites with potentially functional residual resonance monitoring — if they can be read, they may provide the most precise seismic precursor data available for current-era eruption prediction. The institutional and theological freight attached to Conclave artifacts makes any attempt to utilize this infrastructure politically explosive regardless of its practical value.
 
+### Ethical Collapse Pattern
+
+The same remoteness that enabled innovation removed witness pressure. Continuance doctrine shifted from preservation to coercive substitution: if people could not be saved, they were repurposed. The Western Fold's isolation — which solved governance problems for institutional patrons — meant that the Conclave's ethical deterioration had no external check until the catastrophe made it impossible to ignore. Accountability requires witnesses; the mountain's design purpose was to eliminate witnesses.
+
 ### Post-Collapse Legacy in the Mountain
 
 Conclave traces persist in the Cinderteeth as:
@@ -664,11 +668,11 @@ Seismological awareness in Midgaard takes an unusual form: the Temple of the Res
 
 Midgaard's "Unindexed Years" — the gap in year-ledgers between the late Containment Era and early Ash-and-Iron period — is the mountain's institutional ghost in the city's own archive. The gap coincides with peak Conclave transfer activity. Its existence is known to archive scholars; its cause is not officially acknowledged. The Reckoning faction treats the gap's existence and its probable cause as the central evidence of Midgaard's unresolved institutional debt.
 
-The Ash-and-Iron building boom produced Midgaard's most visible Cinderteeth connection: the gray-purple ash-mortar construction visible in older districts, recognizable by material composition and now used as architectural texture in room description vocabulary. "Old ash-mortar walls" in Midgaard are Cinderteeth geology made permanent.
+The Ash-and-Iron building boom produced Midgaard's most visible Cinderteeth connection: the gray-purple ash-mortar construction visible in older districts, recognizable by material composition and now used as architectural texture in room description vocabulary. "Old ash-mortar walls" in Midgaard are Cinderteeth geology made permanent. Temple and registry factions use mountain risk to justify competing legitimacy claims: the Temple of the Resounding Heart argues its seismic witness function gives it authority over disaster policy that the civil registry cannot claim; the Reckoning faction in the registries argues that documentary accountability — the "Unindexed Years" gap — gives civil archives moral authority the temple cannot match.
 
 ### Great Northern Forest
 
-The Ash Winters' three-year devastation of forest ecology — a third of large game dead, predators driven into desperate ranges, route infrastructure under siege — is the Cinderteeth's most consequential effect on the forest. The Passage Tithe system formalization and the waystation expansion to include ash and sulfur countermeasures are both direct responses.
+The Ash Winters' three-year devastation of forest ecology — a third of large game dead, predators driven into desperate ranges, route infrastructure under siege — is the Cinderteeth's most consequential effect on the forest. The Passage Tithe system formalization and the waystation expansion to include ash and sulfur countermeasures are both direct responses. Bent-route doctrine — the principle that lives outweigh linearity, making longer safe routes ethically preferable to shorter lethal ones — gained its strongest ethical force during the Ash Winter disruptions, when the cost of insisting on direct routing was measured in convoy deaths.
 
 The forest's thornwood exclusion zone has an indirect Cinderteeth connection through the Prism Thesis crystal substrate — the geological deposit that mediates the Thornwood's necrotic ecology is potentially connected to the same Conclave crystal-binding experiments that produced the Withered Depths blight. Whether the connection is real or coincidental remains unresolved, but the possibility adds another thread to the Cinderteeth's institutional legacy: the mountain's remotely placed experimental externalities may be producing ecological destabilization far beyond their original geographic boundaries.
 
