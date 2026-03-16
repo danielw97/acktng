@@ -125,9 +125,8 @@ typedef struct dialogue_turn_copy {
 } DIALOGUE_TURN_COPY;
 
 typedef struct npc_dialogue_request {
-    int                room_vnum;
-    long               npc_id;
-    long               player_id;
+    CHAR_DATA         *npc;
+    CHAR_DATA         *player;
     char               player_name[50];
     char               system_prompt[1024];
     int                history_count;
@@ -136,10 +135,9 @@ typedef struct npc_dialogue_request {
 } NPC_DLG_REQ;
 
 typedef struct npc_dialogue_response {
-    long  npc_id;
-    long  player_id;
-    int   room_vnum;
-    char  response_text[512];
+    CHAR_DATA *npc;
+    CHAR_DATA *player;
+    char       response_text[512];
     struct npc_dialogue_response *next;
 } NPC_DLG_RESP;
 ```
@@ -179,9 +177,8 @@ void *npc_dialogue_worker(void *unused)
         call_openclaw(req, response_text, sizeof(response_text));
 
         NPC_DLG_RESP *resp = malloc(sizeof(NPC_DLG_RESP));
-        resp->npc_id    = req->npc_id;
-        resp->player_id = req->player_id;
-        resp->room_vnum = req->room_vnum;
+        resp->npc    = req->npc;
+        resp->player = req->player;
         strncpy(resp->response_text, response_text, sizeof(resp->response_text) - 1);
         resp->response_text[sizeof(resp->response_text) - 1] = '\0';
 
@@ -254,8 +251,8 @@ void update_handler(void)
 `npc_dialogue_deliver()` locks the response queue, steals the list, unlocks,
 then for each response:
 
-1. Resolves `npc_id` and `player_id` to live `CHAR_DATA *` by scanning `char_list`
-2. Validates both exist and share a room — drops the response if not
+1. Checks `resp->npc` and `resp->player` are non-NULL — drops the response if either is NULL
+2. Validates both share a room — drops the response if not
 3. Appends the assistant turn to the NPC's conversation history
 4. Calls `do_say(npc, response_text)`
 
@@ -277,7 +274,7 @@ typedef struct dialogue_turn {
 
 /* One player's conversation with this NPC */
 typedef struct npc_conversation {
-    long             player_id;
+    CHAR_DATA       *player;
     time_t           last_activity;
     int              turn_count;
     DIALOGUE_TURN   *first_turn;
@@ -329,7 +326,8 @@ gives the NPC a fresh memory when a player returns after wandering away.
 
 History is freed:
 - When the NPC dies (in `death.c`)
-- When the player quits or disconnects (walk `all_char_list` checking `player_id`)
+- When the player quits or disconnects: free any `NPC_CONVERSATION` nodes on
+  NPCs in `char_list` whose `player` pointer matches the departing character
 
 ---
 
@@ -339,14 +337,16 @@ Because the worker thread operates asynchronously, by the time a response
 arrives the NPC may have been killed or the player may have quit or moved. Before
 delivering any response, `npc_dialogue_deliver()` validates:
 
-1. An NPC with `npc_id` still exists in `char_list`
-2. A character with `player_id` still exists in `char_list`
+1. `resp->npc` is non-NULL (NPC still exists)
+2. `resp->player` is non-NULL (player still exists)
 3. Both are in the same room
 
 Responses that fail any check are silently discarded.
 
-This requires a unique `long id` field on `CHAR_DATA`, assigned from a
-monotonically incrementing counter at spawn/login time.
+Pointers are nulled out at extraction time: when `extract_char(ch)` is called,
+scan the pending response queue and set `resp->npc = NULL` wherever
+`resp->npc == ch`, and `resp->player = NULL` wherever `resp->player == ch`.
+No unique ID field on `CHAR_DATA` is needed.
 
 ---
 
@@ -368,7 +368,7 @@ monotonically incrementing counter at spawn/login time.
 - [ ] Add `ACT_AI_DIALOGUE` flag to mob act flags in `typedefs.h`
 - [ ] Add `char *ai_prompt` field to `CHAR_DATA`
 - [ ] Add `NPC_CONVERSATION *conversations` field to `CHAR_DATA`
-- [ ] Add `long id` field to `CHAR_DATA`; assign at spawn/login
+- [ ] Null out response queue `npc`/`player` pointers in `extract_char()`
 - [ ] Parse `AiPrompt` block in `db.c` mob loader
 - [ ] Implement `src/npc_dialogue.c` (queues, worker thread, dispatch, deliver, history)
 - [ ] Add `npc_dialogue_init()` call to server startup in `comm.c`
