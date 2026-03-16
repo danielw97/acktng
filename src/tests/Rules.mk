@@ -149,19 +149,16 @@ unit-test-magic: $(OBJDIR)/tests/test_magic.o $(OBJDIR)/magic.unit-test.o $(OBJD
 	rm -f tests/unit-test-magic
 	$(CC) -Wl,--gc-sections -o tests/unit-test-magic $(OBJDIR)/tests/test_magic.o $(OBJDIR)/magic.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-$(OBJDIR)/magic2.unit-test.o: magic2.c headers/ack.h
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/magic2.unit-test.o magic2.c
+$(OBJDIR)/magic.magic2-test.o: magic.c headers/ack.h
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_MAGIC2 -ffunction-sections -fdata-sections -o $(OBJDIR)/magic.magic2-test.o magic.c
 
-unit-test-magic2: $(OBJDIR)/tests/test_magic2.o $(OBJDIR)/magic2.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
+unit-test-magic2: $(OBJDIR)/tests/test_magic2.o $(OBJDIR)/magic.magic2-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-magic2
-	$(CC) -Wl,--gc-sections -o tests/unit-test-magic2 $(OBJDIR)/tests/test_magic2.o $(OBJDIR)/magic2.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-magic2 $(OBJDIR)/tests/test_magic2.o $(OBJDIR)/magic.magic2-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-$(OBJDIR)/magic4.unit-test.o: magic4.c headers/ack.h
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/magic4.unit-test.o magic4.c
-
-unit-test-magic4: $(OBJDIR)/tests/test_magic4.o $(OBJDIR)/magic4.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
+unit-test-magic4: $(OBJDIR)/tests/test_magic4.o $(OBJDIR)/magic.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-magic4
-	$(CC) -Wl,--gc-sections -o tests/unit-test-magic4 $(OBJDIR)/tests/test_magic4.o $(OBJDIR)/magic4.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-magic4 $(OBJDIR)/tests/test_magic4.o $(OBJDIR)/magic.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 $(OBJDIR)/mapper.unit-test.o: mapper.c headers/ack.h
 	$(CC) -c $(C_FLAGS) -DUNIT_TEST_MAPPER -ffunction-sections -fdata-sections -o $(OBJDIR)/mapper.unit-test.o mapper.c

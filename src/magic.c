@@ -39,10 +39,7 @@
  * Local functions.
  */
 void say_spell args((CHAR_DATA * ch, int sn));
-void aoe_damage(CHAR_DATA *ch, OBJ_DATA *obj, int sn, int level, int min_dam, int max_dam,
-                int element, int flags);
-#define AOE_SAVES (1 << 0)
-#define AOE_SKIP_GROUP (1 << 1)
+void round_update_dot(CHAR_DATA *ch);
 
 static bool is_healing_spell(int sn)
 {
@@ -348,6 +345,7 @@ void say_spell(CHAR_DATA *ch, int sn)
  * Compute a saving throw.
  * Negative apply's make saving throw better.
  */
+#ifndef UNIT_TEST_MAGIC2
 bool saves_spell(int level, CHAR_DATA *victim)
 {
    int save;
@@ -375,6 +373,7 @@ bool saves_spell(int level, CHAR_DATA *victim)
 
    return (saved);
 }
+#endif /* UNIT_TEST_MAGIC2 */
 
 /*
  * The kludgy global is for spells who want more stuff from command line.
@@ -890,3 +889,347 @@ void do_spell_heal(CHAR_DATA *ch, CHAR_DATA *victim, int sn)
 /*
  * Spell for mega1.are from Glop/Erkenbrand.
  */
+
+/*
+ * NPC spells.
+ */
+
+void breath_damage(CHAR_DATA *ch, int sn, int element)
+{
+   if (ch == NULL)
+      return;
+
+   int min_dam = get_max_hp(ch) / 32;
+   int max_dam = get_max_hp(ch) / 16;
+
+   int dam_mod = ((ch->hit * 50) / get_max_hp(ch)) + 50;
+   min_dam = min_dam * dam_mod / 100;
+   max_dam = max_dam * dam_mod / 100;
+
+   aoe_damage(ch, NULL, sn, 0, min_dam, max_dam, element, AOE_SKIP_GROUP);
+}
+
+/*
+ * aoe_damage: deal area-of-effect damage to all valid targets in ch's room.
+ *
+ * Targets enemies only (NPC attacks PCs, PC attacks NPCs). The caster is
+ * never hit. Optional flags:
+ *   AOE_SAVES      -- targets that pass saves_spell() take half damage.
+ *   AOE_SKIP_GROUP -- characters in the same group as ch are skipped.
+ */
+void aoe_damage(CHAR_DATA *ch, OBJ_DATA *obj, int sn, int level, int min_dam, int max_dam,
+                int element, int flags)
+{
+   CHAR_DATA *vch;
+   CHAR_DATA *vch_next;
+   int dam;
+
+   if (ch == NULL || ch->in_room == NULL)
+      return;
+
+   CREF(vch_next, CHAR_NEXTROOM);
+   for (vch = ch->in_room->first_person; vch != NULL; vch = vch_next)
+   {
+      vch_next = vch->next_in_room;
+
+      if (vch == ch)
+         continue;
+
+      /* Only hit enemies: NPCs damage PCs and vice versa. */
+      if (IS_NPC(ch) == IS_NPC(vch))
+         continue;
+
+      if ((flags & AOE_SKIP_GROUP) && is_same_group(ch, vch))
+         continue;
+
+      dam = (min_dam == max_dam) ? min_dam : number_range(min_dam, max_dam);
+
+      if ((flags & AOE_SAVES) && saves_spell(level, vch))
+         dam /= 2;
+
+      sp_damage(obj, ch, vch, dam, element, sn, TRUE);
+   }
+   CUREF(vch_next);
+}
+
+static bool is_grand_magi_elemental_spell(int sn)
+{
+   return sn == skill_lookup("elemental inferno") || sn == skill_lookup("elemental shock") ||
+          sn == skill_lookup("elemental deluge") || sn == skill_lookup("elemental rupture");
+}
+
+int spell_regen_base_heal(int mage_level, int sorcerer_level, int wizard_level, int spellpower)
+{
+   int base_heal = 10 + (mage_level / 2);
+   int remort_level = UMAX(sorcerer_level, wizard_level);
+
+   if (remort_level > 0)
+      base_heal += 3 + remort_level;
+
+   base_heal += spellpower / 4;
+
+   return base_heal;
+}
+
+bool cast_wizard_elemental_dot_spell(int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim,
+                                     OBJ_DATA *obj, const char *cast_msg, const char *hit_msg,
+                                     int element)
+{
+   AFFECT_DATA af;
+   int base_damage;
+   int up_front_damage;
+   int dot_tick_damage;
+
+   if (is_affected(victim, sn))
+   {
+      send_to_char("They are already affected by that spell.\n\r", ch);
+      return FALSE;
+   }
+
+   if (obj == NULL)
+   {
+      int base = ch->class_level[CLASS_WIZ];
+
+      if (ch->class_level[CLASS_SOR] > base)
+         base = ch->class_level[CLASS_SOR];
+
+      base_damage = 150 + dice(base / 2, 20);
+      act(cast_msg, ch, NULL, NULL, TO_ROOM);
+      act(cast_msg, ch, NULL, NULL, TO_CHAR);
+   }
+   else
+   {
+      base_damage = dice(level / 4, 20);
+      act(cast_msg, ch, obj, NULL, TO_ROOM);
+      act(cast_msg, ch, obj, NULL, TO_CHAR);
+   }
+
+   if (is_grand_magi_elemental_spell(sn))
+   {
+      up_front_damage = base_damage * 90 / 100;
+      dot_tick_damage = (base_damage * 25 / 100) / 3;
+   }
+   else
+   {
+      up_front_damage = base_damage * 60 / 100;
+      dot_tick_damage = (base_damage * 50 / 100) / 3;
+   }
+
+   act(hit_msg, victim, NULL, NULL, TO_ROOM);
+   act(hit_msg, victim, NULL, NULL, TO_CHAR);
+   sp_damage(obj, ch, victim, up_front_damage, element, sn, TRUE);
+
+   af.type = sn;
+   af.duration = 3;
+   af.duration_type = DURATION_ROUND;
+   af.location = APPLY_DOT;
+   af.modifier = dot_tick_damage;
+   af.bitvector = 0;
+   af.caster = ch;
+   af.element = element;
+   affect_to_char(victim, &af);
+
+   return TRUE;
+}
+
+enum elemental_debuff_type
+{
+   ELEMENTAL_DEBUFF_NONE = 0,
+   ELEMENTAL_DEBUFF_ICE,
+   ELEMENTAL_DEBUFF_FIRE,
+   ELEMENTAL_DEBUFF_SHOCK,
+   ELEMENTAL_DEBUFF_EARTH
+};
+
+static int get_elemental_debuff_type(int sn)
+{
+   if (sn == skill_lookup("Ice Bolt") || sn == skill_lookup("Cone of cold") ||
+       sn == skill_lookup("tidal lash") || sn == skill_lookup("elemental deluge"))
+      return ELEMENTAL_DEBUFF_ICE;
+
+   if (sn == skill_lookup("Fire Blast") || sn == skill_lookup("phoenix flare") ||
+       sn == skill_lookup("elemental inferno"))
+      return ELEMENTAL_DEBUFF_FIRE;
+
+   if (sn == skill_lookup("Shock Storm") || sn == skill_lookup("arc lightning") ||
+       sn == skill_lookup("elemental shock"))
+      return ELEMENTAL_DEBUFF_SHOCK;
+
+   if (sn == skill_lookup("Earth Shatter") || sn == skill_lookup("terra rend") ||
+       sn == skill_lookup("elemental rupture"))
+      return ELEMENTAL_DEBUFF_EARTH;
+
+   return ELEMENTAL_DEBUFF_NONE;
+}
+
+static void apply_spell_debuff_dot(CHAR_DATA *ch, CHAR_DATA *victim, int sn, int element,
+                                   int duration, int dot_tick_damage, const char *debuff_msg)
+{
+   AFFECT_DATA af;
+
+   af.type = sn;
+   af.duration = duration;
+   af.duration_type = DURATION_ROUND;
+   af.location = APPLY_DOT;
+   af.modifier = dot_tick_damage;
+   af.bitvector = 0;
+   af.caster = ch;
+   af.element = element;
+   affect_join(victim, &af);
+
+   if (debuff_msg != NULL && debuff_msg[0] != '\0')
+      act((char *)debuff_msg, victim, NULL, NULL, TO_CHAR);
+}
+
+void apply_elemental_spell_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, const char *debuff_msg)
+{
+   switch (get_elemental_debuff_type(sn))
+   {
+   case ELEMENTAL_DEBUFF_ICE:
+      apply_spell_debuff_dot(ch, victim, sn, ELEMENT_WATER, 3, 20, debuff_msg);
+      return;
+
+   case ELEMENTAL_DEBUFF_FIRE:
+      apply_spell_debuff_dot(ch, victim, sn, ELEMENT_FIRE, 3, 24, debuff_msg);
+      return;
+
+   case ELEMENTAL_DEBUFF_SHOCK:
+      apply_spell_debuff_dot(ch, victim, sn, ELEMENT_AIR, 3, 22, debuff_msg);
+      return;
+
+   case ELEMENTAL_DEBUFF_EARTH:
+      apply_spell_debuff_dot(ch, victim, sn, ELE_EARTH, 3, 18, debuff_msg);
+
+   default:
+      return;
+   }
+}
+
+static bool is_necromancer_direct_damage_spell(int sn)
+{
+   return sn == skill_lookup("black hand") || sn == skill_lookup("wraith touch");
+}
+
+void apply_necromancer_damage_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, int direct_damage,
+                                     OBJ_DATA *obj)
+{
+   AFFECT_DATA af;
+   AFFECT_DATA *paf;
+   AFFECT_DATA *paf_next;
+   int marker_sn;
+   int debuff_count = 0;
+
+   (void)obj;
+
+   if (ch == NULL || victim == NULL || direct_damage <= 0)
+      return;
+
+   if (!is_necromancer_direct_damage_spell(sn))
+      return;
+
+   marker_sn = skill_lookup("wither shadow");
+   if (marker_sn <= 0)
+      return;
+
+   af.type = marker_sn;
+   af.duration = 6;
+   af.duration_type = DURATION_ROUND;
+   af.location = APPLY_NONE;
+   af.modifier = 0;
+   af.bitvector = 0;
+   af.caster = ch;
+   af.element = ELEMENT_SHADOW;
+   affect_to_char(victim, &af);
+
+   for (paf = victim->first_affect; paf != NULL; paf = paf->next)
+   {
+      if (paf->type == marker_sn && paf->location == APPLY_NONE)
+         debuff_count++;
+   }
+
+   if (debuff_count < 3)
+      return;
+
+   for (paf = victim->first_affect; paf != NULL; paf = paf_next)
+   {
+      paf_next = paf->next;
+      if (paf->type == marker_sn && paf->location == APPLY_NONE)
+         affect_remove(victim, paf);
+   }
+
+   act("@@dNecrotic marks @@Non $n rupture in a burst of shadow!", victim, NULL, NULL, TO_ROOM);
+   send_to_char("@@dNecrotic marks@@N on you rupture in a burst of shadow!\n\r", victim);
+   if (ch != victim)
+      send_to_char("@@dYour necrotic marks rupture violently!@@N\n\r", ch);
+
+   round_update_dot(victim);
+   round_update_dot(victim);
+}
+
+bool trigger_elemental_spell_combo(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj, int sn,
+                                   int level)
+{
+   AFFECT_DATA *paf;
+   AFFECT_DATA *paf_next;
+   bool has_ice_bolt = FALSE;
+   bool has_fire_blast = FALSE;
+   bool has_shock_storm = FALSE;
+   bool has_earth_debuff = FALSE;
+   int sn_type = get_elemental_debuff_type(sn);
+
+   for (paf = victim->first_affect; paf != NULL; paf = paf->next)
+   {
+      if (paf->type == sn)
+         continue;
+      if (get_elemental_debuff_type(paf->type) == ELEMENTAL_DEBUFF_ICE)
+         has_ice_bolt = TRUE;
+      else if (get_elemental_debuff_type(paf->type) == ELEMENTAL_DEBUFF_FIRE)
+         has_fire_blast = TRUE;
+      else if (get_elemental_debuff_type(paf->type) == ELEMENTAL_DEBUFF_SHOCK)
+         has_shock_storm = TRUE;
+      else if (get_elemental_debuff_type(paf->type) == ELEMENTAL_DEBUFF_EARTH)
+         has_earth_debuff = TRUE;
+   }
+
+   if (sn_type == ELEMENTAL_DEBUFF_FIRE && (has_ice_bolt || has_earth_debuff))
+   {
+      int combo_dam = dice(level / 4, 24) + 35;
+      act("@@eSteam erupts@@N as fire meets frost around $n!", victim, NULL, NULL, TO_ROOM);
+      send_to_char("@@eSteam erupts@@N around you as fire meets frost!\n\r", victim);
+      sp_damage(obj, ch, victim, combo_dam, ELEMENT_FIRE | ELEMENT_WATER, sn, TRUE);
+   }
+   else if (sn_type == ELEMENTAL_DEBUFF_ICE && (has_fire_blast || has_shock_storm))
+   {
+      int combo_dam = dice(level / 5, 20) + 25;
+      act("@@lRime crackles@@N over $n, locking in elemental energy!", victim, NULL, NULL, TO_ROOM);
+      send_to_char("@@lRime crackles@@N over you, locking in elemental energy!\n\r", victim);
+      sp_damage(obj, ch, victim, combo_dam, ELEMENT_WATER | ELEMENT_AIR, sn, TRUE);
+   }
+   else if (sn_type == ELEMENTAL_DEBUFF_SHOCK && (has_ice_bolt || has_earth_debuff))
+   {
+      int combo_dam = dice(level / 4, 22) + 30;
+      act("@@lLightning chains@@N through frost coating $n!", victim, NULL, NULL, TO_ROOM);
+      send_to_char("@@lLightning chains@@N through the frost coating you!\n\r", victim);
+      sp_damage(obj, ch, victim, combo_dam, ELEMENT_AIR | ELEMENT_WATER, sn, TRUE);
+   }
+   else if (sn_type == ELEMENTAL_DEBUFF_EARTH && (has_fire_blast || has_shock_storm))
+   {
+      int combo_dam = dice(level / 5, 24) + 28;
+      act("@@aFrozen shards@@N explode from the elemental backlash around $n!", victim, NULL, NULL,
+          TO_ROOM);
+      send_to_char("@@aFrozen shards@@N explode from the elemental backlash around you!\n\r",
+                   victim);
+      sp_damage(obj, ch, victim, combo_dam, ELE_EARTH, sn, TRUE);
+   }
+   else
+      return FALSE;
+
+   for (paf = victim->first_affect; paf != NULL; paf = paf_next)
+   {
+      paf_next = paf->next;
+      if (get_elemental_debuff_type(paf->type) != ELEMENTAL_DEBUFF_NONE)
+         affect_remove(victim, paf);
+   }
+
+   return TRUE;
+}

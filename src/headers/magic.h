@@ -54,14 +54,11 @@ bool is_arcane_spell(int sn);
 bool is_holy_power_spell(int sn);
 bool is_mental_power_spell(int sn);
 
-/* magic2.c */
 void breath_damage(CHAR_DATA *ch, int sn, int element);
 void aoe_damage(CHAR_DATA *ch, OBJ_DATA *obj, int sn, int level, int min_dam, int max_dam,
                 int element, int flags);
 #define AOE_SAVES (1 << 0)
 #define AOE_SKIP_GROUP (1 << 1)
-
-/* magic4.c */
 int spell_regen_base_heal(int mage_level, int sorcerer_level, int wizard_level, int spellpower);
 bool cast_wizard_elemental_dot_spell(int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim,
                                      OBJ_DATA *obj, const char *cast_msg, const char *hit_msg,
