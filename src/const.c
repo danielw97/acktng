@@ -147,7 +147,7 @@ const struct class_type remort_table[MAX_REMORT] =
 
 const struct class_type adept_table[MAX_CLASS] = 
 {
-   {"Gma", "Grand Magi", APPLY_INT, 8, 20,},
+   {"Gra", "Grand Magi", APPLY_INT, 8, 20,},
 
    {"Tem", "Templar", APPLY_WIS, 16, 12},
 

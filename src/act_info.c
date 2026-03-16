@@ -4575,7 +4575,7 @@ void do_gain(CHAR_DATA *ch, char *argument)
 
    for (cnt = 0; cnt < MAX_CLASS; cnt++)
    {
-      if (!str_cmp(class_table[cnt].who_name, argument))
+      if (!str_cmp(class_table[cnt].who_name, argument) || !str_cmp(class_table[cnt].class_name, argument))
       {
          any = TRUE;
          c = cnt;
@@ -4585,7 +4585,7 @@ void do_gain(CHAR_DATA *ch, char *argument)
 
    for (cnt = 0; cnt < MAX_REMORT; cnt++)
    {
-      if (!str_cmp(remort_table[cnt].who_name, argument))
+      if (!str_cmp(remort_table[cnt].who_name, argument) || !str_cmp(remort_table[cnt].class_name, argument))
       {
          if (ch->remort[cnt] > 0 || allow_remort)
          {
@@ -4605,7 +4605,7 @@ void do_gain(CHAR_DATA *ch, char *argument)
 
    for (cnt = 0; cnt < MAX_CLASS; cnt++)
    {
-      if ((!str_cmp(adept_table[cnt].who_name, argument)))
+      if ((!str_cmp(adept_table[cnt].who_name, argument)) || !str_cmp(adept_table[cnt].class_name, argument))
       {
          if (ch->adept[cnt] > 0 || allow_adept)
          {

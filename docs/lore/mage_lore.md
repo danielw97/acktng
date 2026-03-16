@@ -1,4 +1,4 @@
-# Lore: The Mage Tradition
+# Lore: The Magi Tradition
 
 ## Overview
 
@@ -76,7 +76,7 @@ It also creates a politically awkward situation: the Keep holds documentation of
 
 ---
 
-## VII. Mages Within the Five Cities
+## VII. Magi Within the Five Cities
 
 ### Midgaard
 
@@ -103,7 +103,7 @@ Kiess's anti-sealed-warrant charter makes it the most transparent jurisdiction f
 - **Wizards Keep**: The institutional home of the tradition; see `wizards_keep.lore`
 - **Midgaard**: Registry law framework; guild court predecessor institutions in Conclave chain
 - **Kiess**: Anti-sealed-warrant protections; obsidian disc evidence
-- **Wizard**: Direct successor remort path from Mage; Axiomatic Schools precision tradition
+- **Wizard**: Direct successor remort path from Magi; Axiomatic Schools precision tradition
 - **Sorcerer**: Alternative successor remort path; Chromatic Circle synthesis tradition
 - **Psionicist**: Pale Ledger faction parallel lineage; contested institutional genealogy
 - **Necromancer**: Entropy Scholars tradition; parallel to but distinct from Conclave lineage

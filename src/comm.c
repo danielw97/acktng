@@ -3118,7 +3118,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
          }
          for (foo = 0; foo < MAX_CLASS; foo++)
          {
-            if (!str_cmp(arg, class_table[foo].who_name) && ch->pcdata->index[foo] == -1)
+            if ((!str_cmp(arg, class_table[foo].who_name) || !str_cmp(arg, class_table[foo].class_name)) && ch->pcdata->index[foo] == -1)
             {
                numclasses++;
                ch->pcdata->order[cnt] = foo;
@@ -3132,7 +3132,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
       if (!ok || numclasses < MAX_PC_CLASS)
       {
          write_to_buffer(d,
-                         "Invalid Order... Please Try Again. You must list each class, by abbreviation, such as CLE WAR MAG THI.\n\r",
+                         "Invalid Order... Please Try Again. You must list each class by abbreviation or full name, such as CLE WAR MAG CIP or Cleric Warden Magi Cipher.\n\r",
                          0);
          show_cmenu_to(d);
          return;

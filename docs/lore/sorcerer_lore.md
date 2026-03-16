@@ -65,9 +65,9 @@ Stormbinder practitioners tend to operate at the larger scale of elemental engag
 ## VI. Cross-References
 
 - **Timeline**: Era X (Chromatic Circle pre-academic era; Confluence Texts documentation), Era XII (Academic consolidation; Circle absorption and apprentice chain survival), Era XV (Ash-and-Iron Decades; stormbinder intervention; Grand Magi title reclaimed)
-- **Wizard**: Parallel remort path from Mage; Axiomatic Schools tradition; competitive opposition resolved by Grand Magi
+- **Wizard**: Parallel remort path from Magi; Axiomatic Schools tradition; competitive opposition resolved by Grand Magi
 - **Grand Magi**: Adept synthesis; Confluent Theorist vindication; Convergence Codices
-- **Mage**: Parent tradition; Wizard's Keep institutional framework
+- **Magi**: Parent tradition; Wizard's Keep institutional framework
 - **Cinderteeth Mountains**: Ashfall Monsoon source; stormbinder intervention context
 
 See also: `wizard_lore.md`, `grand_magi_lore.md`, `mage_lore.md`, `cinderteeth_mountains_lore.md`, `timeline.md`

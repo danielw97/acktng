@@ -73,7 +73,7 @@ The result is that psionicist practitioners operate in a persistent legal gray a
 - **Egomancer**: Assertion Wing direct descendant; offensive cognitive technique tradition
 - **Necromancer**: Parallel remort path from Psionicist; Entropy Scholars tradition
 - **Kinetimancer**: Adept synthesis; Kinetic Formulists' documentation of the entropy/will convergence
-- **Mage**: Parallel institutionalized academic tradition; Triple-Ledger model psionicists declined
+- **Magi**: Parallel institutionalized academic tradition; Triple-Ledger model psionicists declined
 - **Great Pyramid / Seal College**: Cognitive discipline tradition under Black Sun Shard metaphysical pressure
 
 See also: `sunken_sanctum_lore.md`, `voidcitadel_lore.md`, `kelshadra_lore.md`, `egomancer_lore.md`, `timeline.md`
