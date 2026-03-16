@@ -60,7 +60,8 @@ struct map_info_type
    char *desc;
 };
 
-void MapArea(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int x, int y, int min, int max, int line_of_sight);
+void MapArea(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int x, int y, int min, int max,
+             int line_of_sight);
 
 void ShowMap(CHAR_DATA *ch, int min, int max, int size, int center);
 void ShowHalfMap(CHAR_DATA *ch, int min, int max);

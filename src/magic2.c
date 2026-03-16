@@ -39,11 +39,11 @@
 
 extern bool deathmatch;
 void breath_damage(CHAR_DATA *ch, int sn, int element);
-void aoe_damage(CHAR_DATA *ch, OBJ_DATA *obj, int sn, int level,
-                int min_dam, int max_dam, int element, int flags);
+void aoe_damage(CHAR_DATA *ch, OBJ_DATA *obj, int sn, int level, int min_dam, int max_dam,
+                int element, int flags);
 
 /* Flags for aoe_damage() */
-#define AOE_SAVES      (1 << 0) /* Half damage on successful saves_spell() */
+#define AOE_SAVES (1 << 0)      /* Half damage on successful saves_spell() */
 #define AOE_SKIP_GROUP (1 << 1) /* Skip characters in the same group as ch */
 
 bool spell_invis(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
@@ -129,13 +129,10 @@ bool spell_know_alignment(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *
 bool spell_lightning_bolt(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *victim = (CHAR_DATA *)vo;
-   static const sh_int dam_each[] = {
-       0,
-       0, 0, 0, 0, 0, 0, 0, 0, 25, 28,
-       31, 34, 37, 40, 40, 41, 42, 42, 43, 44,
-       44, 45, 46, 46, 47, 48, 48, 49, 50, 50,
-       51, 52, 52, 53, 54, 54, 55, 56, 56, 57,
-       58, 58, 59, 60, 60, 61, 62, 62, 63, 64};
+   static const sh_int dam_each[] = {0,  0,  0,  0,  0,  0,  0,  0,  0,  25, 28, 31, 34,
+                                     37, 40, 40, 41, 42, 42, 43, 44, 44, 45, 46, 46, 47,
+                                     48, 48, 49, 50, 50, 51, 52, 52, 53, 54, 54, 55, 56,
+                                     56, 57, 58, 58, 59, 60, 60, 61, 62, 62, 63, 64};
    int dam;
 
    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
@@ -162,7 +159,9 @@ bool spell_locate_object(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
          continue;
       if (!is_name(target_name, ob->name))
          continue;
-      if (IS_SET(ob->extra_flags, ITEM_RARE) || (ob->item_type == ITEM_PIECE) || IS_SET(ob->extra_flags, ITEM_MAGIC) || IS_SET(ob->extra_flags, ITEM_MYTHIC) || IS_SET(ob->extra_flags, ITEM_LEGENDARY) || IS_SET(ob->extra_flags, ITEM_UNIQUE))
+      if (IS_SET(ob->extra_flags, ITEM_RARE) || (ob->item_type == ITEM_PIECE) ||
+          IS_SET(ob->extra_flags, ITEM_MAGIC) || IS_SET(ob->extra_flags, ITEM_MYTHIC) ||
+          IS_SET(ob->extra_flags, ITEM_LEGENDARY) || IS_SET(ob->extra_flags, ITEM_UNIQUE))
          continue;
 
       for (in_obj = ob; in_obj->in_obj != NULL; in_obj = in_obj->in_obj)
@@ -173,13 +172,14 @@ bool spell_locate_object(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
       if (in_obj->carried_by != NULL)
       {
          found = TRUE;
-         sprintf(buf, "%s carried by %s.\n\r",
-                 ob->short_descr, can_see(ch, in_obj->carried_by) ? PERS(in_obj->carried_by, ch) : "someone");
+         sprintf(buf, "%s carried by %s.\n\r", ob->short_descr,
+                 can_see(ch, in_obj->carried_by) ? PERS(in_obj->carried_by, ch) : "someone");
       }
       else
       {
          found = TRUE;
-         sprintf(buf, "%s in %s.\n\r", ob->short_descr, in_obj->in_room == NULL ? "somewhere" : in_obj->in_room->name);
+         sprintf(buf, "%s in %s.\n\r", ob->short_descr,
+                 in_obj->in_room == NULL ? "somewhere" : in_obj->in_room->name);
       }
 
       buf[0] = UPPER(buf[0]);
@@ -197,13 +197,10 @@ bool spell_magic_missile(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    int cnt;
    int hits;
-   static const sh_int dam_each[] = {
-       0,
-       3, 3, 4, 4, 5, 6, 6, 6, 6, 6,
-       7, 7, 7, 7, 7, 8, 8, 8, 8, 8,
-       9, 9, 9, 9, 9, 10, 10, 10, 10, 10,
-       11, 11, 11, 11, 11, 12, 12, 12, 12, 12,
-       13, 13, 13, 13, 13, 14, 14, 14, 14, 14};
+   static const sh_int dam_each[] = {0,  3,  3,  4,  4,  5,  6,  6,  6,  6,  6,  7,  7,
+                                     7,  7,  7,  8,  8,  8,  8,  8,  9,  9,  9,  9,  9,
+                                     10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 12, 12, 12,
+                                     12, 12, 13, 13, 13, 13, 13, 14, 14, 14, 14, 14};
    int dam = 0;
 
    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
@@ -323,7 +320,7 @@ bool spell_refresh_mana(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
 {
    CHAR_DATA *victim = (CHAR_DATA *)vo;
 
-   int move = ch->class_level[CLASS_CLE]  + 50;
+   int move = ch->class_level[CLASS_CLE] + 50;
 
    victim->mana = UMIN(victim->mana + move, get_max_mana(victim));
    send_to_char("You feel refreshed.\n\r", victim);
@@ -430,13 +427,10 @@ bool spell_shield(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 bool spell_shocking_grasp(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *victim = (CHAR_DATA *)vo;
-   static const int dam_each[] = {
-       0,
-       0, 0, 0, 0, 0, 0, 20, 25, 29, 33,
-       36, 39, 39, 39, 40, 40, 41, 41, 42, 42,
-       43, 43, 44, 44, 45, 45, 46, 46, 47, 47,
-       48, 48, 49, 49, 50, 50, 51, 51, 52, 52,
-       53, 53, 54, 54, 55, 55, 56, 56, 57, 57};
+   static const int dam_each[] = {0,  0,  0,  0,  0,  0,  0,  20, 25, 29, 33, 36, 39,
+                                  39, 39, 40, 40, 41, 41, 42, 42, 43, 43, 44, 44, 45,
+                                  45, 46, 46, 47, 47, 48, 48, 49, 49, 50, 50, 51, 51,
+                                  52, 52, 53, 53, 54, 54, 55, 55, 56, 56, 57, 57};
    int dam;
 
    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
@@ -502,7 +496,12 @@ bool spell_summon(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    CHAR_DATA *victim;
    char buf[MAX_STRING_LENGTH];
 
-   if ((victim = get_char_world(ch, target_name)) == NULL || victim == ch || victim->in_room == NULL || IS_SET(victim->in_room->room_flags, ROOM_SAFE) || IS_SET(victim->in_room->room_flags, ROOM_NO_RECALL) || !(IS_SET(victim->in_room->area->flags, AREA_TELEPORT)) || victim->level >= level + 10 || victim->fighting != NULL || (IS_NPC(victim) && saves_spell(level, victim)) || room_is_private(ch->in_room) || (ch->in_room->area->max_level < (victim->level - 15)))
+   if ((victim = get_char_world(ch, target_name)) == NULL || victim == ch ||
+       victim->in_room == NULL || IS_SET(victim->in_room->room_flags, ROOM_SAFE) ||
+       IS_SET(victim->in_room->room_flags, ROOM_NO_RECALL) ||
+       !(IS_SET(victim->in_room->area->flags, AREA_TELEPORT)) || victim->level >= level + 10 ||
+       victim->fighting != NULL || (IS_NPC(victim) && saves_spell(level, victim)) ||
+       room_is_private(ch->in_room) || (ch->in_room->area->max_level < (victim->level - 15)))
    {
       send_to_char("You failed.\n\r", ch);
       return TRUE;
@@ -534,7 +533,9 @@ bool spell_teleport(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       send_to_char("Not during a @@eDeath Match@@N!!\n\r", ch);
       return FALSE;
    }
-   if (victim->in_room == NULL || IS_SET(victim->in_room->room_flags, ROOM_NO_RECALL) || (!IS_NPC(ch) && victim->fighting != NULL) || (victim != ch && (saves_spell(level, victim) || saves_spell(level, victim))))
+   if (victim->in_room == NULL || IS_SET(victim->in_room->room_flags, ROOM_NO_RECALL) ||
+       (!IS_NPC(ch) && victim->fighting != NULL) ||
+       (victim != ch && (saves_spell(level, victim) || saves_spell(level, victim))))
    {
       send_to_char("You failed.\n\r", ch);
       return TRUE;
@@ -545,7 +546,9 @@ bool spell_teleport(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       pRoomIndex = get_room_index(number_range(0, MAX_VNUM));
       if (pRoomIndex == NULL)
          continue;
-      if (!IS_SET(pRoomIndex->room_flags, ROOM_PRIVATE) && !IS_SET(pRoomIndex->room_flags, ROOM_SOLITARY) && IS_SET(pRoomIndex->area->flags, AREA_TELEPORT))
+      if (!IS_SET(pRoomIndex->room_flags, ROOM_PRIVATE) &&
+          !IS_SET(pRoomIndex->room_flags, ROOM_SOLITARY) &&
+          IS_SET(pRoomIndex->area->flags, AREA_TELEPORT))
          break;
    }
 
@@ -700,8 +703,8 @@ void breath_damage(CHAR_DATA *ch, int sn, int element)
  *   AOE_SAVES      -- targets that pass saves_spell() take half damage.
  *   AOE_SKIP_GROUP -- characters in the same group as ch are skipped.
  */
-void aoe_damage(CHAR_DATA *ch, OBJ_DATA *obj, int sn, int level,
-                int min_dam, int max_dam, int element, int flags)
+void aoe_damage(CHAR_DATA *ch, OBJ_DATA *obj, int sn, int level, int min_dam, int max_dam,
+                int element, int flags)
 {
    CHAR_DATA *vch;
    CHAR_DATA *vch_next;
@@ -840,7 +843,12 @@ bool spell_visit(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       send_to_char("Not during a @@eDeath Match@@N!!\n\r", ch);
       return FALSE;
    }
-   if ((victim = get_char_world(ch, target_name)) == NULL || victim == ch || IS_NPC(victim) || victim->in_room == NULL || IS_SET(victim->in_room->room_flags, ROOM_PRIVATE) || IS_SET(victim->in_room->room_flags, ROOM_SOLITARY) || IS_SET(victim->in_room->room_flags, ROOM_SAFE) || IS_SET(ch->in_room->room_flags, ROOM_NO_RECALL) || !IS_SET(victim->in_room->area->flags, AREA_TELEPORT))
+   if ((victim = get_char_world(ch, target_name)) == NULL || victim == ch || IS_NPC(victim) ||
+       victim->in_room == NULL || IS_SET(victim->in_room->room_flags, ROOM_PRIVATE) ||
+       IS_SET(victim->in_room->room_flags, ROOM_SOLITARY) ||
+       IS_SET(victim->in_room->room_flags, ROOM_SAFE) ||
+       IS_SET(ch->in_room->room_flags, ROOM_NO_RECALL) ||
+       !IS_SET(victim->in_room->area->flags, AREA_TELEPORT))
    {
       send_to_char("You failed.\n\r", ch);
       return TRUE;
@@ -1155,7 +1163,8 @@ bool spell_bloody_tears(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    send_to_char("Your eyes start bleeding!\n\r", victim);
    spell_blindness(skill_lookup("blindness"), level, ch, vo, obj);
 
-   sp_damage(obj, ch, victim, (level / 2), ELEMENT_MENTAL | NO_REFLECT | NO_ABSORB, sn, FALSE); /* -1 = no dam message */
+   sp_damage(obj, ch, victim, (level / 2), ELEMENT_MENTAL | NO_REFLECT | NO_ABSORB, sn,
+             FALSE); /* -1 = no dam message */
 
    return TRUE;
 }
@@ -1211,7 +1220,8 @@ bool spell_nerve_fire(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       {
          if (vch != ch && (IS_NPC(ch) ? !IS_NPC(vch) : IS_NPC(vch)))
          {
-            sp_damage(obj, ch, vch, (level) + dice(5, 20), ELEMENT_MENTAL | NO_REFLECT | NO_ABSORB, sn, TRUE);
+            sp_damage(obj, ch, vch, (level) + dice(5, 20), ELEMENT_MENTAL | NO_REFLECT | NO_ABSORB,
+                      sn, TRUE);
          }
          continue;
       }
@@ -1340,7 +1350,6 @@ bool spell_produce_food(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    return TRUE;
 }
 
-
 bool spell_animate(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    OBJ_DATA *ob;
@@ -1447,7 +1456,9 @@ bool spell_detection(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    for (ob = first_obj; ob != NULL; ob = ob->next)
    {
 
-      if (!can_see_obj(ch, ob) || !is_name(target_name, ob->name) || IS_SET(ob->extra_flags, ITEM_RARE) || (ob->item_type == ITEM_PIECE) || (IS_SET(ob->extra_flags, ITEM_UNIQUE)) || (!str_prefix(target_name, "unique")))
+      if (!can_see_obj(ch, ob) || !is_name(target_name, ob->name) ||
+          IS_SET(ob->extra_flags, ITEM_RARE) || (ob->item_type == ITEM_PIECE) ||
+          (IS_SET(ob->extra_flags, ITEM_UNIQUE)) || (!str_prefix(target_name, "unique")))
          continue;
 
       for (in_obj = ob; in_obj->in_obj != NULL; in_obj = in_obj->in_obj)
@@ -1458,13 +1469,14 @@ bool spell_detection(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       if (in_obj->carried_by != NULL)
       {
          found = TRUE;
-         sprintf(buf, "%s carried by %s.\n\r",
-                 ob->short_descr, can_see(ch, in_obj->carried_by) ? PERS(in_obj->carried_by, ch) : "someone");
+         sprintf(buf, "%s carried by %s.\n\r", ob->short_descr,
+                 can_see(ch, in_obj->carried_by) ? PERS(in_obj->carried_by, ch) : "someone");
       }
       else
       {
          found = TRUE;
-         sprintf(buf, "%s in %s.\n\r", ob->short_descr, in_obj->in_room == NULL ? "somewhere" : in_obj->in_room->name);
+         sprintf(buf, "%s in %s.\n\r", ob->short_descr,
+                 in_obj->in_room == NULL ? "somewhere" : in_obj->in_room->name);
       }
 
       buf[0] = UPPER(buf[0]);
@@ -1553,7 +1565,8 @@ bool spell_hypnosis(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       return FALSE;
    }
 
-   if (IS_AFFECTED(victim, AFF_CHARM) || IS_AFFECTED(ch, AFF_CHARM) || level - 5 < victim->level || saves_spell(level, victim))
+   if (IS_AFFECTED(victim, AFF_CHARM) || IS_AFFECTED(ch, AFF_CHARM) || level - 5 < victim->level ||
+       saves_spell(level, victim))
       return TRUE;
    if (victim->master)
       stop_follower(victim);
@@ -1600,9 +1613,8 @@ bool spell_know_item(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    char buf[MAX_STRING_LENGTH];
    AFFECT_DATA *paf;
 
-   sprintf(buf,
-           "Object '%s' is type %s, extra flags %s.\n\rWeight is %d.\n\r",
-           ob->name, item_type_name(ob), extra_bit_name(ob->extra_flags), ob->weight);
+   sprintf(buf, "Object '%s' is type %s, extra flags %s.\n\rWeight is %d.\n\r", ob->name,
+           item_type_name(ob), extra_bit_name(ob->extra_flags), ob->weight);
    send_to_char(buf, ch);
 
    switch (ob->item_type)
@@ -1704,7 +1716,8 @@ bool spell_physic_crush(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    if (IS_NPC(victim) && IS_SET(victim->act, ACT_NOMIND))
       return TRUE;
 
-   dam = get_psuedo_level(ch) / 2 + (30 * (level > 20) + (level >= 40) + (level >= 60) + (level >= 75));
+   dam = get_psuedo_level(ch) / 2 +
+         (30 * (level > 20) + (level >= 40) + (level >= 60) + (level >= 75));
 
    if (saves_spell(level, victim))
       dam /= 2;
@@ -1866,9 +1879,12 @@ bool spell_flare(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    af.duration_type = DURATION_ROUND;
    af.bitvector = AFF_BLIND;
    affect_to_char(victim, &af);
-   act("$n invokes the power of Ra to produce a solar flare which blinds $N!", ch, NULL, victim, TO_NOTVICT);
-   act("$N invokes the power of Ra to produce a solar flare.  You are BLINDED!", victim, NULL, ch, TO_CHAR);
-   act("You invoke the power of Ra to produce a solar flare, which blinds $N!", ch, NULL, victim, TO_CHAR);
+   act("$n invokes the power of Ra to produce a solar flare which blinds $N!", ch, NULL, victim,
+       TO_NOTVICT);
+   act("$N invokes the power of Ra to produce a solar flare.  You are BLINDED!", victim, NULL, ch,
+       TO_CHAR);
+   act("You invoke the power of Ra to produce a solar flare, which blinds $N!", ch, NULL, victim,
+       TO_CHAR);
 
    return TRUE;
 }
@@ -1990,7 +2006,8 @@ bool spell_portal(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    ob = create_object(get_obj_index(OBJ_VNUM_PORTAL), level);
    obj_to_room(ob, ch->in_room);
    ob->timer = 1 + (level / 30);
-   ob->value[0] = (beacon->carried_by == NULL ? beacon->in_room->vnum : beacon->carried_by->in_room->vnum);
+   ob->value[0] =
+       (beacon->carried_by == NULL ? beacon->in_room->vnum : beacon->carried_by->in_room->vnum);
    ob->value[1] = 1;
    ob->value[2] = 1;
 

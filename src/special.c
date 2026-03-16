@@ -656,9 +656,9 @@ void spec_death_handler(CHAR_DATA *victim, CHAR_DATA *killer)
       gch->pcdata->reincarnation_data[REINCARNATION_POINTS]++;
 
       sprintf(buf,
-         "@@a*** You have slain @@e%s@@a for the first time! ***\n\r"
-         "@@a*** You have been awarded @@W1 reincarnation point@@a! ***@@N\n\r",
-         victim->short_descr);
+              "@@a*** You have slain @@e%s@@a for the first time! ***\n\r"
+              "@@a*** You have been awarded @@W1 reincarnation point@@a! ***@@N\n\r",
+              victim->short_descr);
       send_to_char(buf, gch);
    }
 }
@@ -689,18 +689,15 @@ bool dragon(CHAR_DATA *ch, char *spell_name)
 
 bool is_player_summon_special(SPEC_FUN *spec_fun)
 {
-   return spec_fun == spec_summon_water
-      || spec_fun == spec_summon_fire
-      || spec_fun == spec_summon_earth
-      || spec_fun == spec_summon_undead
-      || spec_fun == spec_summon_holy
-      || spec_fun == spec_summon_shadow
-      || spec_fun == spec_summon_metal
-      || spec_fun == spec_summon_animate
-      || spec_fun == spec_summon_thought;
+   return spec_fun == spec_summon_water || spec_fun == spec_summon_fire ||
+          spec_fun == spec_summon_earth || spec_fun == spec_summon_undead ||
+          spec_fun == spec_summon_holy || spec_fun == spec_summon_shadow ||
+          spec_fun == spec_summon_metal || spec_fun == spec_summon_animate ||
+          spec_fun == spec_summon_thought;
 }
 
-bool spec_summon_cast_random(CHAR_DATA *ch, CHAR_DATA *target, const char *const *spells, int spell_count)
+bool spec_summon_cast_random(CHAR_DATA *ch, CHAR_DATA *target, const char *const *spells,
+                             int spell_count)
 {
    int i;
    int start;

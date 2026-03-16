@@ -6,9 +6,9 @@
 
 static void do_massivestrike(CHAR_DATA *ch)
 {
-     int dam = number_range(9000,11000);
+   int dam = number_range(9000, 11000);
 
-     calculate_damage(ch, ch->fighting, dam, gsn_holystrike, ELEMENT_PHYSICAL | ELEMENT_HOLY, TRUE);
+   calculate_damage(ch, ch->fighting, dam, gsn_holystrike, ELEMENT_PHYSICAL | ELEMENT_HOLY, TRUE);
 }
 
 bool spec_keep_physical_captain(CHAR_DATA *ch)
@@ -23,7 +23,7 @@ bool spec_keep_physical_captain(CHAR_DATA *ch)
 
    ch->spec_behavior++;
 
-   switch(ch->spec_behavior%10)
+   switch (ch->spec_behavior % 10)
    {
    case 1:
       if (number_percent() < 50)
@@ -33,9 +33,9 @@ bool spec_keep_physical_captain(CHAR_DATA *ch)
       break;
    case 4:
       if (number_percent() < 50)
-         do_warcry(ch,"");
+         do_warcry(ch, "");
       else
-         do_beserk(ch,"");
+         do_beserk(ch, "");
       break;
    case 5:
       sprintf(buf, "@@y$n brings his weapon over his head, preparing for a massive strike!@@N");

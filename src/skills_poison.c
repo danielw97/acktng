@@ -114,11 +114,14 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
     * Work out damage
     */
    dam = number_range(obj->value[1], obj->value[2]);
-   dam += number_range(get_curr_dex(ch) * get_psuedo_level(ch) / 5, get_curr_dex(ch) * get_psuedo_level(ch) / 2);
+   dam += number_range(get_curr_dex(ch) * get_psuedo_level(ch) / 5,
+                       get_curr_dex(ch) * get_psuedo_level(ch) / 2);
 
    check_killer(ch, victim);
 
-   if (backstab && IS_NPC(victim) && IS_AFFECTED(victim, AFF_SANCTUARY) && (ch->class_level[CLASS_ASS] > 0 || ch->class_level[CLASS_WLK] > 0) && (number_percent() > 50))
+   if (backstab && IS_NPC(victim) && IS_AFFECTED(victim, AFF_SANCTUARY) &&
+       (ch->class_level[CLASS_ASS] > 0 || ch->class_level[CLASS_WLK] > 0) &&
+       (number_percent() > 50))
    {
       send_to_char("Critical Success! Your advanced training has succeeded!\n\r", ch);
       act("The white aura around $n fades.", victim, NULL, NULL, TO_ROOM);
@@ -153,7 +156,8 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
          {
             if (IS_SET(stance_app[ch->stance].specials, STANCE_DUAL_BACKSTAB))
             {
-               calculate_damage(ch, victim, number_range(dam * 0.95, dam * 1.05), gsn_backstab, ELE_PHYSICAL, TRUE);
+               calculate_damage(ch, victim, number_range(dam * 0.95, dam * 1.05), gsn_backstab,
+                                ELE_PHYSICAL, TRUE);
             }
          }
       }
@@ -170,8 +174,6 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
       WAIT_STATE(ch, skill_table[gsn_backstab].beats);
    else
       WAIT_STATE(ch, skill_table[gsn_circle].beats);
-
-   
 
    if (is_affected(victim, skill_lookup("poison:quinine")))
    {
@@ -301,95 +303,95 @@ bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
 
 void do_cripple(CHAR_DATA *ch, char *argument)
 {
-    char actbuf[MSL];
-    char arg[MAX_INPUT_LENGTH];
-    AFFECT_DATA af;
-    CHAR_DATA *victim;
-    int cnt = 0;
+   char actbuf[MSL];
+   char arg[MAX_INPUT_LENGTH];
+   AFFECT_DATA af;
+   CHAR_DATA *victim;
+   int cnt = 0;
 
-    if (IS_NPC(ch))
-        return;
+   if (IS_NPC(ch))
+      return;
 
-    if (!is_fighting(ch))
-    {
-        send_to_char("You can only prepare to cripple when fighting!\n\r", ch);
-        return;
-    }
+   if (!is_fighting(ch))
+   {
+      send_to_char("You can only prepare to cripple when fighting!\n\r", ch);
+      return;
+   }
 
-    if (!can_use_skill(ch, gsn_cripple))
-    {
-        send_to_char("You don't know how to use this skill!\n\r", ch);
-        return;
-    }
+   if (!can_use_skill(ch, gsn_cripple))
+   {
+      send_to_char("You don't know how to use this skill!\n\r", ch);
+      return;
+   }
 
-    if (ch->cooldown[gsn_cripple] > 0)
-    {
-        send_to_char("Cripple is still on cooldown\n\r", ch);
-        return;
-    }
+   if (ch->cooldown[gsn_cripple] > 0)
+   {
+      send_to_char("Cripple is still on cooldown\n\r", ch);
+      return;
+   }
 
-    one_argument(argument, arg);
+   one_argument(argument, arg);
 
-    if (arg[0] == '\0')
-    {
-        send_to_char("Cripple whom?\n\r", ch);
-        return;
-    }
+   if (arg[0] == '\0')
+   {
+      send_to_char("Cripple whom?\n\r", ch);
+      return;
+   }
 
-    victim = get_char_room(ch, arg);
+   victim = get_char_room(ch, arg);
 
-    if (victim == NULL)
-    {
-        send_to_char("Cripple whom?\n\r", ch);
-        return;
-    }
+   if (victim == NULL)
+   {
+      send_to_char("Cripple whom?\n\r", ch);
+      return;
+   }
 
-    raise_skill(ch, gsn_cripple);
-    ch->cooldown[gsn_cripple] = 10;
+   raise_skill(ch, gsn_cripple);
+   ch->cooldown[gsn_cripple] = 10;
 
-    WAIT_STATE(ch, skill_table[gsn_cripple].beats);
+   WAIT_STATE(ch, skill_table[gsn_cripple].beats);
 
-    if (is_affected(victim, skill_lookup("poison:quinine")))
-    {
-        cnt++;
-        sprintf(actbuf, "$N screams as the quinine in $M veins is consumed!");
-        act(actbuf, ch, NULL, victim, TO_NOTVICT);
-        sprintf(actbuf, "$N screams as the quinine in $M veins is consumed!");
-        act(actbuf, ch, NULL, victim, TO_CHAR);
-        sprintf(actbuf, "You scream as the quinine in your veins is consumed!");
-        act(actbuf, ch, NULL, victim, TO_VICT);
-        affect_strip(victim, skill_lookup("poison:quinine"));
-    }
+   if (is_affected(victim, skill_lookup("poison:quinine")))
+   {
+      cnt++;
+      sprintf(actbuf, "$N screams as the quinine in $M veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_NOTVICT);
+      sprintf(actbuf, "$N screams as the quinine in $M veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_CHAR);
+      sprintf(actbuf, "You scream as the quinine in your veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_VICT);
+      affect_strip(victim, skill_lookup("poison:quinine"));
+   }
 
-    if (is_affected(victim, skill_lookup("poison:arsenic")))
-    {
-        cnt++;
-        sprintf(actbuf, "$N screams as the arsenic in $M veins is consumed!");
-        act(actbuf, ch, NULL, victim, TO_NOTVICT);
-        sprintf(actbuf, "$N screams as the arsenic in $M veins is consumed!");
-        act(actbuf, ch, NULL, victim, TO_CHAR);
-        sprintf(actbuf, "You scream as the arsenic in your veins is consumed!");
-        act(actbuf, ch, NULL, victim, TO_VICT);
-        affect_strip(victim, skill_lookup("poison:arsenic"));
-    }
+   if (is_affected(victim, skill_lookup("poison:arsenic")))
+   {
+      cnt++;
+      sprintf(actbuf, "$N screams as the arsenic in $M veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_NOTVICT);
+      sprintf(actbuf, "$N screams as the arsenic in $M veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_CHAR);
+      sprintf(actbuf, "You scream as the arsenic in your veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_VICT);
+      affect_strip(victim, skill_lookup("poison:arsenic"));
+   }
 
-    if (is_affected(victim, skill_lookup("poison:nightshade")))
-    {
-        cnt++;
-        sprintf(actbuf, "$N screams as the nightshade in $M veins is consumed!");
-        act(actbuf, ch, NULL, victim, TO_NOTVICT);
-        sprintf(actbuf, "$N screams as the nightshade in $M veins is consumed!");
-        act(actbuf, ch, NULL, victim, TO_CHAR);
-        sprintf(actbuf, "You scream as the nightshade in your veins is consumed!");
-        act(actbuf, ch, NULL, victim, TO_VICT);
-        affect_strip(victim, skill_lookup("poison:nightshade"));
-    }
+   if (is_affected(victim, skill_lookup("poison:nightshade")))
+   {
+      cnt++;
+      sprintf(actbuf, "$N screams as the nightshade in $M veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_NOTVICT);
+      sprintf(actbuf, "$N screams as the nightshade in $M veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_CHAR);
+      sprintf(actbuf, "You scream as the nightshade in your veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_VICT);
+      affect_strip(victim, skill_lookup("poison:nightshade"));
+   }
 
-    af.type = gsn_cripple;
-    af.duration = 1;
-    af.duration_type = DURATION_ROUND;
-    af.location = APPLY_SAVING_PARA;
-    af.modifier = 30 * cnt;
-    af.bitvector = 0;
-    affect_to_char(victim, &af);
+   af.type = gsn_cripple;
+   af.duration = 1;
+   af.duration_type = DURATION_ROUND;
+   af.location = APPLY_SAVING_PARA;
+   af.modifier = 30 * cnt;
+   af.bitvector = 0;
+   affect_to_char(victim, &af);
 }

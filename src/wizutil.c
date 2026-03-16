@@ -129,8 +129,8 @@ void room_pair(ROOM_INDEX_DATA *left, ROOM_INDEX_DATA *right, exit_status ex, ch
       break;
    }
 
-   sprintf(buffer, "%5d %-26.26s %s%5d %-26.26s(%-8.8s)\n\r",
-           left->vnum, left->name, sExit, right->vnum, right->name, area_name(right->area));
+   sprintf(buffer, "%5d %-26.26s %s%5d %-26.26s(%-8.8s)\n\r", left->vnum, left->name, sExit,
+           right->vnum, right->name, area_name(right->area));
 }
 
 /* for every exit in 'room' which leads to or from pArea but NOT both, print it */
@@ -168,7 +168,8 @@ void checkexits(ROOM_INDEX_DATA *room, AREA_DATA *pArea, char *buffer)
          else if ((room->area != pArea) && (exit->to_room->area == pArea))
          { /* an exit from another area to our area */
 
-            if (!(to_room->exit[opposite_dir[i]] && to_room->exit[opposite_dir[i]]->to_room == room))
+            if (!(to_room->exit[opposite_dir[i]] &&
+                  to_room->exit[opposite_dir[i]]->to_room == room))
             /*
              * two-way exits are handled in the other if
              */

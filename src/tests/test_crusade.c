@@ -5,13 +5,16 @@
 #define DEC_GLOBALS_H 1
 #include "ack.h"
 
-void quest_set_crusade_level_range_for_mob_level(int mob_level, int *minimum_level, int *maximum_level);
+void quest_set_crusade_level_range_for_mob_level(int mob_level, int *minimum_level,
+                                                 int *maximum_level);
 short int quest_resolve_crusade_personality(short int personality, int mob_level);
 short int quest_tier_from_level(int mob_level);
 void quest_set_crusade_level_range_for_tier(short int tier, int *minimum_level, int *maximum_level);
-void quest_set_effective_crusade_level_range(short int tier, int highest_level_in_range, int *minimum_level, int *maximum_level);
+void quest_set_effective_crusade_level_range(short int tier, int highest_level_in_range,
+                                             int *minimum_level, int *maximum_level);
 int crusade_level_cap_for_range(int range_minimum, int range_maximum, int highest_level_in_range);
-void quest_note_player_crusade_range(int pseudo_level, int *highest_mortal, int *highest_remortal, int *highest_adept);
+void quest_note_player_crusade_range(int pseudo_level, int *highest_mortal, int *highest_remortal,
+                                     int *highest_adept);
 int quest_is_valid_crusade_mobile(CHAR_DATA *target, int min_level, int max_level);
 
 static void test_range_for_normal_mob_level(void)
@@ -58,7 +61,6 @@ static void test_invalid_personality_resolves_from_mob_level(void)
    assert(quest_resolve_crusade_personality(0, 150) == 3);
 }
 
-
 static void test_crusade_level_cap_for_range(void)
 {
    assert(crusade_level_cap_for_range(1, 100, 40) == 60);
@@ -82,7 +84,6 @@ static void test_note_player_crusade_range(void)
    assert(highest_remortal == 120);
    assert(highest_adept == 155);
 }
-
 
 static void test_tier_mapping_helpers(void)
 {
@@ -126,7 +127,6 @@ static void test_valid_personality_is_preserved(void)
    assert(quest_resolve_crusade_personality(2, 10) == 2);
    assert(quest_resolve_crusade_personality(3, 75) == 3);
 }
-
 
 static void test_crusade_mobile_validation_excludes_invaders(void)
 {

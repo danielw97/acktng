@@ -48,9 +48,7 @@ struct clutch_type
 };
 
 const struct clutch_type clutch_table[SPELL_NUMBER] = {
-    {1, TRUE, clutch_portal},
-    {2, TRUE, clutch_gate},
-    {3, FALSE, clutch_portal}};
+    {1, TRUE, clutch_portal}, {2, TRUE, clutch_gate}, {3, FALSE, clutch_portal}};
 
 /* Other local functions... */
 bool valid_clutch_number(int number);
@@ -118,7 +116,8 @@ void do_clutch(CHAR_DATA *ch, char *argument)
    act("$n clutches $p tightly in $s hand!", ch, obj, NULL, TO_ROOM);
    act("You clutch $p tightly in your hand!", ch, obj, NULL, TO_CHAR);
    if (!IS_SET(ch->in_room->room_flags, ROOM_NO_PORTAL))
-      (*clutch_table[obj->value[0] - 1].func_name)(obj->value[1], obj->value[2], obj->value[3], ch, obj);
+      (*clutch_table[obj->value[0] - 1].func_name)(obj->value[1], obj->value[2], obj->value[3], ch,
+                                                   obj);
 
    else
 

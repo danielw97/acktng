@@ -58,7 +58,9 @@ bool spell_seal_room(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    }
    if (IS_SET(room->area->flags, AREA_NO_ROOM_AFF))
    {
-      send_to_char("A strange @@eDeamon@@N appears, waggles it's finger at you, and shakes its(?) head!\n\r", ch);
+      send_to_char(
+          "A strange @@eDeamon@@N appears, waggles it's finger at you, and shakes its(?) head!\n\r",
+          ch);
       return FALSE;
    }
    if (deathmatch)
@@ -115,8 +117,10 @@ bool spell_black_hand(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    int dam;
 
    act("You summon a hand of death, and it chokes $N!", ch, NULL, victim, TO_CHAR);
-   act("A Black Hand grows from the shadows, and begins to choke $N!", ch, NULL, victim, TO_NOTVICT);
-   act("$n summons a Black Hand from the shadows, which begins to choke you!", ch, NULL, victim, TO_VICT);
+   act("A Black Hand grows from the shadows, and begins to choke $N!", ch, NULL, victim,
+       TO_NOTVICT);
+   act("$n summons a Black Hand from the shadows, which begins to choke you!", ch, NULL, victim,
+       TO_VICT);
 
    if (!is_affected(victim, sn))
    {
@@ -190,7 +194,8 @@ bool spell_ice_bolt(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       dam /= 1.2;
    sp_damage(obj, ch, victim, dam, ELEMENT_WATER, sn, TRUE);
    if (!trigger_elemental_spell_combo(ch, victim, obj, sn, level))
-      apply_elemental_spell_debuff(ch, victim, sn, "@@aFrost clings to your body, slowing your recovery.@@N\n\r");
+      apply_elemental_spell_debuff(ch, victim, sn,
+                                   "@@aFrost clings to your body, slowing your recovery.@@N\n\r");
    return TRUE;
 }
 
@@ -204,7 +209,8 @@ bool spell_waterelem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    act("A waterfall appears, and an elemental steps from the pool!!", ch, obj, NULL, TO_ROOM);
    act("A waterfall appears, and an elemental steps from the pool!!", ch, obj, NULL, TO_CHAR);
 
-   act("$n floods from the pool, drawing all the water into it's body.", summoned, NULL, NULL, TO_ROOM);
+   act("$n floods from the pool, drawing all the water into it's body.", summoned, NULL, NULL,
+       TO_ROOM);
 
    return TRUE;
 }
@@ -216,8 +222,10 @@ bool spell_skeleton(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    act("$n calls upon the @@dNegative Plane@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the @@dNegative Plane@@N.", ch, obj, NULL, TO_CHAR);
 
-   act("The ground opens beneath you, and a skeleton crawls out of the graveyard filth!!", ch, obj, NULL, TO_ROOM);
-   act("The ground opens beneath you, and a skeleton crawls out of the graveyard filth!!", ch, obj, NULL, TO_CHAR);
+   act("The ground opens beneath you, and a skeleton crawls out of the graveyard filth!!", ch, obj,
+       NULL, TO_ROOM);
+   act("The ground opens beneath you, and a skeleton crawls out of the graveyard filth!!", ch, obj,
+       NULL, TO_CHAR);
 
    act("$n Stands erect, and bow's towards it's master.", summoned, NULL, NULL, TO_ROOM);
    return TRUE;
@@ -282,7 +290,8 @@ void do_disguise(CHAR_DATA *ch, char *argument)
 
    if (arg[0] == '\0')
    {
-      send_to_char(" Enter the disguise name, or reset to reset your description to normal.\n\r", ch);
+      send_to_char(" Enter the disguise name, or reset to reset your description to normal.\n\r",
+                   ch);
       return;
    }
 
@@ -344,9 +353,12 @@ bool spell_fireshield(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    if (char_login)
       shield->hits /= (number_range(2, 10));
 
-   shield->absorb_message_room = str_dup("@@N$n's @@eshield@@N flares and envelops $N in @@eflames@@N!!");
-   shield->absorb_message_victim = str_dup("@@N$N's @@eshield@@N flares, and envelops you with @@eflame@@N!!");
-   shield->absorb_message_self = str_dup("@@NYour @@eshield@@N flares, and envelops $N with @@eflame@@N!!!");
+   shield->absorb_message_room =
+       str_dup("@@N$n's @@eshield@@N flares and envelops $N in @@eflames@@N!!");
+   shield->absorb_message_victim =
+       str_dup("@@N$N's @@eshield@@N flares, and envelops you with @@eflame@@N!!");
+   shield->absorb_message_self =
+       str_dup("@@NYour @@eshield@@N flares, and envelops $N with @@eflame@@N!!!");
    shield->wearoff_room = str_dup("@@N$n's @@eshield@@N @@yFLAMES OUT@@N!!!!!");
    shield->wearoff_self = str_dup("@@NYour @@eshield@@N @@yFLAMES OUT@@N!!!!!");
 
@@ -503,9 +515,12 @@ bool spell_shadowshield(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    if (char_login)
       shield->hits /= (number_range(2, 10));
 
-   shield->absorb_message_room = str_dup("@@N$n's @@eshield@@N flares and envelops $N in @@eflames@@N!!");
-   shield->absorb_message_victim = str_dup("@@N$N's @@eshield@@N flares, and envelops you with @@eflame@@N!!");
-   shield->absorb_message_self = str_dup("@@NYour @@eshield@@N flares, and envelops $N with @@eflame@@N!!!");
+   shield->absorb_message_room =
+       str_dup("@@N$n's @@eshield@@N flares and envelops $N in @@eflames@@N!!");
+   shield->absorb_message_victim =
+       str_dup("@@N$N's @@eshield@@N flares, and envelops you with @@eflame@@N!!");
+   shield->absorb_message_self =
+       str_dup("@@NYour @@eshield@@N flares, and envelops $N with @@eflame@@N!!!");
    shield->wearoff_room = str_dup("@@N$n's @@dshield@@N @@dDISSAPATES@@N!!!!!");
    shield->wearoff_self = str_dup("@@NYour @@dshield@@N @@dDISSAPATES@@N!!!!!");
 
@@ -556,9 +571,12 @@ bool spell_thoughtshield(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
    if (char_login)
       shield->hits /= (number_range(2, 10));
 
-   shield->absorb_message_room = str_dup("@@N$n's @@eshield@@N flares and envelops $N in @@eflames@@N!!");
-   shield->absorb_message_victim = str_dup("@@N$N's @@eshield@@N flares, and envelops you with @@eflame@@N!!");
-   shield->absorb_message_self = str_dup("@@NYour @@eshield@@N flares, and envelops $N with @@eflame@@N!!!");
+   shield->absorb_message_room =
+       str_dup("@@N$n's @@eshield@@N flares and envelops $N in @@eflames@@N!!");
+   shield->absorb_message_victim =
+       str_dup("@@N$N's @@eshield@@N flares, and envelops you with @@eflame@@N!!");
+   shield->absorb_message_self =
+       str_dup("@@NYour @@eshield@@N flares, and envelops $N with @@eflame@@N!!!");
    shield->wearoff_room = str_dup("@@N$n's @@dshield@@N @@dDISSAPATES@@N!!!!!");
    shield->wearoff_self = str_dup("@@NYour @@dshield@@N @@dDISSAPATES@@N!!!!!");
 
@@ -577,10 +595,13 @@ bool spell_fireelem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    act("$n calls upon the elemental forces of @@efire@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the elemental forces of @@efire@@N.", ch, obj, NULL, TO_CHAR);
 
-   act("@@NA @@ebonfire@@N appears, and an elemental steps from the flames!!", ch, obj, NULL, TO_ROOM);
-   act("@@NA @@ebonfire@@N appears, and an elemental steps from the flames!!", ch, obj, NULL, TO_CHAR);
+   act("@@NA @@ebonfire@@N appears, and an elemental steps from the flames!!", ch, obj, NULL,
+       TO_ROOM);
+   act("@@NA @@ebonfire@@N appears, and an elemental steps from the flames!!", ch, obj, NULL,
+       TO_CHAR);
 
-   act("$n leaps from the bonfire, drawing all the @@eflames@@N into it's body.", summoned, NULL, NULL, TO_ROOM);
+   act("$n leaps from the bonfire, drawing all the @@eflames@@N into it's body.", summoned, NULL,
+       NULL, TO_ROOM);
 
    return TRUE;
 }
@@ -603,7 +624,9 @@ bool spell_rune_fire(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    if (IS_SET(room->area->flags, AREA_NO_ROOM_AFF))
    {
-      send_to_char("A strange @@eDeamon@@N appears, waggles it's finger at you, and shakes its(?) head!\n\r", ch);
+      send_to_char(
+          "A strange @@eDeamon@@N appears, waggles it's finger at you, and shakes its(?) head!\n\r",
+          ch);
       return FALSE;
    }
 
@@ -639,7 +662,9 @@ bool spell_rune_poison(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
 
    if (IS_SET(room->area->flags, AREA_NO_ROOM_AFF))
    {
-      send_to_char("A strange @@eDeamon@@N appears, waggles it's finger at you, and shakes its(?) head!\n\r", ch);
+      send_to_char(
+          "A strange @@eDeamon@@N appears, waggles it's finger at you, and shakes its(?) head!\n\r",
+          ch);
       return FALSE;
    }
 
@@ -674,7 +699,9 @@ bool spell_rune_shock(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    }
    if (IS_SET(room->area->flags, AREA_NO_ROOM_AFF))
    {
-      send_to_char("A strange @@eDeamon@@N appears, waggles it's finger at you, and shakes its(?) head!\n\r", ch);
+      send_to_char(
+          "A strange @@eDeamon@@N appears, waggles it's finger at you, and shakes its(?) head!\n\r",
+          ch);
       return FALSE;
    }
 
@@ -740,7 +767,9 @@ bool spell_wither_shadow(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
 
    if (IS_SET(room->area->flags, AREA_NO_ROOM_AFF))
    {
-      send_to_char("A strange @@eDeamon@@N appears, waggles it's finger at you, and shakes its(?) head!\n\r", ch);
+      send_to_char(
+          "A strange @@eDeamon@@N appears, waggles it's finger at you, and shakes its(?) head!\n\r",
+          ch);
       return FALSE;
    }
 
@@ -805,7 +834,9 @@ bool spell_mana_drain(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    }
    if (IS_SET(room->area->flags, AREA_NO_ROOM_AFF))
    {
-      send_to_char("A strange @@eDeamon@@N appears, waggles it's finger at you, and shakes its(?) head!\n\r", ch);
+      send_to_char(
+          "A strange @@eDeamon@@N appears, waggles it's finger at you, and shakes its(?) head!\n\r",
+          ch);
       return FALSE;
    }
 
@@ -984,8 +1015,8 @@ bool spell_throw_star(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    AFFECT_DATA af;
 
-   if (!sp_damage(obj, ch, (CHAR_DATA *)vo,
-                  dice(5, level / 2) + dice(5, level / 2) + level, ELEMENT_POISON, sn, TRUE))
+   if (!sp_damage(obj, ch, (CHAR_DATA *)vo, dice(5, level / 2) + dice(5, level / 2) + level,
+                  ELEMENT_POISON, sn, TRUE))
       return TRUE;
 
    if (!saves_spell(level, victim))
@@ -1055,8 +1086,10 @@ bool spell_condense_soul(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
    ob = create_object(get_obj_index(OBJ_VNUM_SOUL_POTION), level);
    obj_to_char(ob, ch);
 
-   act("@@N$n gestures diabolically, and his captured soul condenses into a@@dSoul Potion@@N.", ch, NULL, NULL, TO_ROOM);
-   send_to_char("@@NYou condense the soul and some of your life force into a @@dSoul potion@@N.\n\r", ch);
+   act("@@N$n gestures diabolically, and his captured soul condenses into a@@dSoul Potion@@N.", ch,
+       NULL, NULL, TO_ROOM);
+   send_to_char(
+       "@@NYou condense the soul and some of your life force into a @@dSoul potion@@N.\n\r", ch);
 
    return TRUE;
 }
@@ -1173,7 +1206,8 @@ bool spell_infuse(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    ob->obj_fun = obj_fun_lookup("objfun_infused_soul");
    extract_obj(obj_soul);
 
-   act("@@N$n gestures diabolically, and his captured @@esoul@@N is infused into his $P.", ch, NULL, ob, TO_ROOM);
+   act("@@N$n gestures diabolically, and his captured @@esoul@@N is infused into his $P.", ch, NULL,
+       ob, TO_ROOM);
    send_to_char("@@NYou condense the soul and some of your life force into your weapon.\n\r", ch);
    do_save(ch, "");
    return TRUE;
@@ -1241,10 +1275,13 @@ bool spell_earthelem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    act("$n calls upon the elemental forces of @@bearth@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the elemental forces of @@bearth@@N.", ch, obj, NULL, TO_CHAR);
 
-   act("@@NA huge mound of @@bearth@@N appears, and an elemental steps from the boulders!!", ch, obj, NULL, TO_ROOM);
-   act("@@NA huge mound of @@bearth@@N appears, and an elemental steps from the boulders!!", ch, obj, NULL, TO_CHAR);
+   act("@@NA huge mound of @@bearth@@N appears, and an elemental steps from the boulders!!", ch,
+       obj, NULL, TO_ROOM);
+   act("@@NA huge mound of @@bearth@@N appears, and an elemental steps from the boulders!!", ch,
+       obj, NULL, TO_CHAR);
 
-   act("@@N$n emerges from the mound, assuming the @@bearth@@N into it's body.", summoned, NULL, NULL, TO_ROOM);
+   act("@@N$n emerges from the mound, assuming the @@bearth@@N into it's body.", summoned, NULL,
+       NULL, TO_ROOM);
 
    return TRUE;
 }
@@ -1256,10 +1293,13 @@ bool spell_iron_golem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    act("@@N$n calls upon the @@aalchemical@@N forces of @@dmetal@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the @@aalchemical@@N forces of @@dmetal@@N.", ch, obj, NULL, TO_CHAR);
 
-   act("@@NA large slab of @@diron@@N appears, and a golem steps from the mass!!", ch, obj, NULL, TO_ROOM);
-   act("@@NA large slab of @@diron@@N appears, and a golem steps from the mass!!", ch, obj, NULL, TO_CHAR);
+   act("@@NA large slab of @@diron@@N appears, and a golem steps from the mass!!", ch, obj, NULL,
+       TO_ROOM);
+   act("@@NA large slab of @@diron@@N appears, and a golem steps from the mass!!", ch, obj, NULL,
+       TO_CHAR);
 
-   act("@@N$n mutates from the @@dslab of iron@@N, drawing all the metal into it's body.", summoned, NULL, NULL, TO_ROOM);
+   act("@@N$n mutates from the @@dslab of iron@@N, drawing all the metal into it's body.", summoned,
+       NULL, NULL, TO_ROOM);
 
    return TRUE;
 }
@@ -1271,10 +1311,12 @@ bool spell_soul_thief(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    act("$n calls upon the @@dNegative Plane@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the @@dNegative Plane@@N.", ch, obj, NULL, TO_CHAR);
 
-   act("@@NThe ground opens beneath you, and a @@lSoul @@eThief@@N crawls out of the graveyard filth!!", ch, obj, NULL,
-       TO_ROOM);
-   act("@@NThe ground opens beneath you, and a @@lSoul @@eThief@@N crawls out of the graveyard filth!!", ch, obj, NULL,
-       TO_CHAR);
+   act("@@NThe ground opens beneath you, and a @@lSoul @@eThief@@N crawls out of the graveyard "
+       "filth!!",
+       ch, obj, NULL, TO_ROOM);
+   act("@@NThe ground opens beneath you, and a @@lSoul @@eThief@@N crawls out of the graveyard "
+       "filth!!",
+       ch, obj, NULL, TO_CHAR);
 
    act("$n Stands erect, and bow's towards it's master.", summoned, NULL, NULL, TO_ROOM);
 
@@ -1288,10 +1330,13 @@ bool spell_holy_avenger(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    act("$n calls upon the holy forces of @@Wlight@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the holy forces of @@Wlight@@N.", ch, obj, NULL, TO_CHAR);
 
-   act("@@NA shimmering halo appears, and a @@yHoly @@WAvenger@@N steps from the light!!", ch, obj, NULL, TO_ROOM);
-   act("@@NA shimmering halo appears, and a @@yHoly @@WAvenger@@N steps from the light!!", ch, obj, NULL, TO_CHAR);
+   act("@@NA shimmering halo appears, and a @@yHoly @@WAvenger@@N steps from the light!!", ch, obj,
+       NULL, TO_ROOM);
+   act("@@NA shimmering halo appears, and a @@yHoly @@WAvenger@@N steps from the light!!", ch, obj,
+       NULL, TO_CHAR);
 
-   act("$n steps from the light, drawing all the power into it's body.", summoned, NULL, NULL, TO_ROOM);
+   act("$n steps from the light, drawing all the power into it's body.", summoned, NULL, NULL,
+       TO_ROOM);
 
    return TRUE;
 }
@@ -1306,7 +1351,8 @@ bool spell_diamond_golem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
    act("A huge gemstone appears, and a golem steps from the diamond!!", ch, obj, NULL, TO_ROOM);
    act("A huge gemstone appears, and a golem steps from the diamond!!", ch, obj, NULL, TO_CHAR);
 
-   act("$n floods from the pool, drawing all the water into it's body.", summoned, NULL, NULL, TO_ROOM);
+   act("$n floods from the pool, drawing all the water into it's body.", summoned, NULL, NULL,
+       TO_ROOM);
 
    return TRUE;
 }
@@ -1318,10 +1364,13 @@ bool spell_summon_thought_devourer(int sn, int level, CHAR_DATA *ch, void *vo, O
    act("@@N$n draws in the fractured echoes of @@rthought@@N!", ch, obj, NULL, TO_ROOM);
    act("@@NYou draw in the fractured echoes of @@rthought@@N.", ch, obj, NULL, TO_CHAR);
 
-   act("A jagged psionic rift opens, and a @@cThought @@bDevourer@@N emerges!!", ch, obj, NULL, TO_ROOM);
-   act("A jagged psionic rift opens, and a @@cThought @@bDevourer@@N emerges!!", ch, obj, NULL, TO_CHAR);
+   act("A jagged psionic rift opens, and a @@cThought @@bDevourer@@N emerges!!", ch, obj, NULL,
+       TO_ROOM);
+   act("A jagged psionic rift opens, and a @@cThought @@bDevourer@@N emerges!!", ch, obj, NULL,
+       TO_CHAR);
 
-   act("$n slithers free of the rift, devouring loose thoughts as it forms.", summoned, NULL, NULL, TO_ROOM);
+   act("$n slithers free of the rift, devouring loose thoughts as it forms.", summoned, NULL, NULL,
+       TO_ROOM);
 
    return TRUE;
 }
@@ -1333,12 +1382,15 @@ bool spell_summon_pegasus(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *
    act("$n calls upon the holy forces of @@Wlight@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the holy forces of @@Wlight@@N.", ch, obj, NULL, TO_CHAR);
 
-   act("@@NA shimmering pyramid appears, and a @@mMagestic @@WPegasus@@N steps from the light!!", ch, obj, NULL, TO_ROOM);
-   act("@@NA shimmering pyramid appears, and a @@mMagestic @@WPagsus@@N steps from the light!!", ch, obj, NULL, TO_CHAR);
+   act("@@NA shimmering pyramid appears, and a @@mMagestic @@WPegasus@@N steps from the light!!",
+       ch, obj, NULL, TO_ROOM);
+   act("@@NA shimmering pyramid appears, and a @@mMagestic @@WPagsus@@N steps from the light!!", ch,
+       obj, NULL, TO_CHAR);
 
    summoned = create_mobile(get_mob_index(MOB_VNUM_PEGASUS));
    char_to_room(summoned, ch->in_room);
-   act("$n steps from the light, drawing all the power into it's body.", summoned, NULL, NULL, TO_ROOM);
+   act("$n steps from the light, drawing all the power into it's body.", summoned, NULL, NULL,
+       TO_ROOM);
 
    /*
     * don't think we need these
@@ -1363,12 +1415,15 @@ bool spell_summon_nightmare(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA
    act("$n calls upon the unholy forces of @@eEvil@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the unholy forces of @@eEvil@@N.", ch, obj, NULL, TO_CHAR);
 
-   act("@@NA flaming pit appears, and a @@eDemonic @@dNightmare@@N steps from the heat!!", ch, obj, NULL, TO_ROOM);
-   act("@@NA flaming pit appears, and a @@eDemonic @@dNightmare@@N steps from the heat!!", ch, obj, NULL, TO_CHAR);
+   act("@@NA flaming pit appears, and a @@eDemonic @@dNightmare@@N steps from the heat!!", ch, obj,
+       NULL, TO_ROOM);
+   act("@@NA flaming pit appears, and a @@eDemonic @@dNightmare@@N steps from the heat!!", ch, obj,
+       NULL, TO_CHAR);
 
    summoned = create_mobile(get_mob_index(MOB_VNUM_NIGHTMARE));
    char_to_room(summoned, ch->in_room);
-   act("$n steps from the flames, drawing all the power into it's body.", summoned, NULL, NULL, TO_ROOM);
+   act("$n steps from the flames, drawing all the power into it's body.", summoned, NULL, NULL,
+       TO_ROOM);
 
    /*
     * don't think we need these
@@ -1393,12 +1448,15 @@ bool spell_summon_beast(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    act("$n calls upon the elemental forces of @@lAir@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the elemental forces of @@'Air@@N.", ch, obj, NULL, TO_CHAR);
 
-   act("@@NA whirlwind appears, and an @@lElemental @@aBeast@@N steps from the winds!!", ch, obj, NULL, TO_ROOM);
-   act("@@NA whirlwind appears, and an @@lElemental @@aBeast@@N steps from the winds!!", ch, obj, NULL, TO_CHAR);
+   act("@@NA whirlwind appears, and an @@lElemental @@aBeast@@N steps from the winds!!", ch, obj,
+       NULL, TO_ROOM);
+   act("@@NA whirlwind appears, and an @@lElemental @@aBeast@@N steps from the winds!!", ch, obj,
+       NULL, TO_CHAR);
 
    summoned = create_mobile(get_mob_index(MOB_VNUM_ELEM_BEAST));
    char_to_room(summoned, ch->in_room);
-   act("$n steps from the whirlwind, drawing all the power into it's body.", summoned, NULL, NULL, TO_ROOM);
+   act("$n steps from the whirlwind, drawing all the power into it's body.", summoned, NULL, NULL,
+       TO_ROOM);
 
    /*
     * don't think we need these
@@ -1423,12 +1481,15 @@ bool spell_summon_devourer(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA 
    act("$n calls upon the psychic forces of the @@rMind@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the psychic forces of the @@rMind@@N!", ch, obj, NULL, TO_CHAR);
 
-   act("@@NA vortex appears, and an @@rIntellect @@bDevourer@@N steps from the circle!!", ch, obj, NULL, TO_ROOM);
-   act("@@NA vortex appears, and an @@rIntellect @@bDevourer@@N steps from the circle!!", ch, obj, NULL, TO_CHAR);
+   act("@@NA vortex appears, and an @@rIntellect @@bDevourer@@N steps from the circle!!", ch, obj,
+       NULL, TO_ROOM);
+   act("@@NA vortex appears, and an @@rIntellect @@bDevourer@@N steps from the circle!!", ch, obj,
+       NULL, TO_CHAR);
 
    summoned = create_mobile(get_mob_index(MOB_VNUM_INT_DEVOURER));
    char_to_room(summoned, ch->in_room);
-   act("$n steps from the vortex, drawing all the power into it's body.", summoned, NULL, NULL, TO_ROOM);
+   act("$n steps from the vortex, drawing all the power into it's body.", summoned, NULL, NULL,
+       TO_ROOM);
 
    /*
     * don't think we need these
@@ -1453,12 +1514,15 @@ bool spell_summon_shadow(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
    act("$n calls upon the shadowy forces of @@dDarkness@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the shadowy forces of @@dDarkness@@N!", ch, obj, NULL, TO_CHAR);
 
-   act("@@NA tunnel of shadow appears, and a @@dShadow @@RHound@@N steps from the depths!!", ch, obj, NULL, TO_ROOM);
-   act("@@NA tunnel of shadow appears, and a @@dShadow @@RHound@@N steps from the depths!!", ch, obj, NULL, TO_CHAR);
+   act("@@NA tunnel of shadow appears, and a @@dShadow @@RHound@@N steps from the depths!!", ch,
+       obj, NULL, TO_ROOM);
+   act("@@NA tunnel of shadow appears, and a @@dShadow @@RHound@@N steps from the depths!!", ch,
+       obj, NULL, TO_CHAR);
 
    summoned = create_mobile(get_mob_index(MOB_VNUM_SHADOW_HOUND));
    char_to_room(summoned, ch->in_room);
-   act("$n steps from the tunnel, drawing all the power into it's body.", summoned, NULL, NULL, TO_ROOM);
+   act("$n steps from the tunnel, drawing all the power into it's body.", summoned, NULL, NULL,
+       TO_ROOM);
 
    /*
     * don't think we need these
@@ -1489,7 +1553,8 @@ bool spell_lava_burst(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       OBJ_DATA *heated_item = NULL;
       OBJ_DATA *prev_carried = NULL;
 
-      for (heated_item = victim->first_carry; heated_item != NULL; heated_item = heated_item->next_in_carry_list)
+      for (heated_item = victim->first_carry; heated_item != NULL;
+           heated_item = heated_item->next_in_carry_list)
       {
          if (heated_item->wear_loc == WEAR_NONE)
             continue;
@@ -1519,7 +1584,8 @@ bool spell_lava_burst(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    }
 
    sp_damage(obj, ch, (CHAR_DATA *)vo,
-             number_range(get_psuedo_level(ch) * 2, get_psuedo_level(ch) * 4) * save_mod, ELEMENT_FIRE, sn, TRUE);
+             number_range(get_psuedo_level(ch) * 2, get_psuedo_level(ch) * 4) * save_mod,
+             ELEMENT_FIRE, sn, TRUE);
 
    return TRUE;
 }
@@ -1534,7 +1600,8 @@ bool spell_heat_armor(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       OBJ_DATA *heated_item = NULL;
       OBJ_DATA *prev_carried = NULL;
 
-      for (heated_item = victim->first_carry; heated_item != NULL; heated_item = heated_item->next_in_carry_list)
+      for (heated_item = victim->first_carry; heated_item != NULL;
+           heated_item = heated_item->next_in_carry_list)
       {
          if (heated_item->wear_loc == WEAR_NONE)
             continue;
@@ -1606,13 +1673,17 @@ bool spell_retri_strike(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
          {
             OBJ_DATA *heated_item = NULL;
 
-            act("@@W$n @@Wis @@eimmolated@@N by the fury released from the $p@@W, and falls to the ground!", vch, staff_obj,
-                NULL, TO_ROOM);
-            act("@@WYou are @@eimmolated@@N by the fury released from the $p@@W, and fall to the ground!", vch, staff_obj,
-                NULL, TO_CHAR);
-            if (!sp_damage(obj, ch, vch, number_range(staff_obj->level * 6, staff_obj->level * 10), ELEMENT_HOLY, sn, FALSE))
+            act("@@W$n @@Wis @@eimmolated@@N by the fury released from the $p@@W, and falls to the "
+                "ground!",
+                vch, staff_obj, NULL, TO_ROOM);
+            act("@@WYou are @@eimmolated@@N by the fury released from the $p@@W, and fall to the "
+                "ground!",
+                vch, staff_obj, NULL, TO_CHAR);
+            if (!sp_damage(obj, ch, vch, number_range(staff_obj->level * 6, staff_obj->level * 10),
+                           ELEMENT_HOLY, sn, FALSE))
                continue;
-            for (heated_item = vch->first_carry; heated_item != NULL; heated_item = heated_item->next_in_carry_list)
+            for (heated_item = vch->first_carry; heated_item != NULL;
+                 heated_item = heated_item->next_in_carry_list)
             {
                if (heated_item->wear_loc == WEAR_NONE)
                   continue;
@@ -1630,7 +1701,8 @@ bool spell_retri_strike(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
          continue;
       }
       if (vch->in_room->area == ch->in_room->area)
-         send_to_char("@@WSuddenly, a @@ybright flash@@W sears your eyes, then is gone.@@N\n\r", vch);
+         send_to_char("@@WSuddenly, a @@ybright flash@@W sears your eyes, then is gone.@@N\n\r",
+                      vch);
    }
 
    CUREF(vch_next);
@@ -1727,8 +1799,10 @@ bool spell_corrupt_bond(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
       else
       {
          do_say(victim, "AARRGH!  I HATE being charmed! Now I shall have my revenge!");
-         victim->hunt_flags = HUNT_WORLD | HUNT_OPENDOOR | HUNT_PICKDOOR | HUNT_UNLOCKDOOR | HUNT_INFORM;
-         set_hunt(victim, NULL, master, NULL, HUNT_WORLD | HUNT_OPENDOOR | HUNT_PICKDOOR | HUNT_UNLOCKDOOR | HUNT_INFORM,
+         victim->hunt_flags =
+             HUNT_WORLD | HUNT_OPENDOOR | HUNT_PICKDOOR | HUNT_UNLOCKDOOR | HUNT_INFORM;
+         set_hunt(victim, NULL, master, NULL,
+                  HUNT_WORLD | HUNT_OPENDOOR | HUNT_PICKDOOR | HUNT_UNLOCKDOOR | HUNT_INFORM,
                   HUNT_MERC | HUNT_CR);
          return TRUE;
       }

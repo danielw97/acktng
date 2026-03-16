@@ -186,8 +186,8 @@ void add_vnum(int vnum)
       if ((range = get_hash_entry(start_vnum - 1)) != NULL)
       {
          if (range->offset > 0)
-            printf("ERROR in ranges vnum: %i range start: %i range end: %i",
-                   start_vnum, range->vnum, range->vnum + range->offset);
+            printf("ERROR in ranges vnum: %i range start: %i range end: %i", start_vnum,
+                   range->vnum, range->vnum + range->offset);
          else
          {
             start_vnum = range->vnum + range->offset;
@@ -201,8 +201,8 @@ void add_vnum(int vnum)
       if ((range = get_hash_entry(end_vnum + 1)) != NULL)
       {
          if (range->offset < 0)
-            printf("ERROR in ranges vnum: %i range start: %i range end: %i",
-                   end_vnum, range->vnum + range->offset, range->vnum);
+            printf("ERROR in ranges vnum: %i range start: %i range end: %i", end_vnum,
+                   range->vnum + range->offset, range->vnum);
          else
          {
             end_vnum = range->vnum + range->offset;
@@ -310,7 +310,8 @@ int main()
    farea_lst = fopen("area.lst", "r");
 
    for (getline(&sarea_buffer, &sarea_buffer_size, farea_lst);
-        sarea_buffer[0] != '$' && !feof(farea_lst); getline(&sarea_buffer, &sarea_buffer_size, farea_lst))
+        sarea_buffer[0] != '$' && !feof(farea_lst);
+        getline(&sarea_buffer, &sarea_buffer_size, farea_lst))
    {
       /*
        * sarea_buffer contains next filename

@@ -141,16 +141,20 @@ void objfun_soul_moan(OBJ_DATA *obj, CHAR_DATA *keeper)
     */
    if (number_percent() < 2)
    {
-      act("@@NThe @@eSoul@@N in $p@@N carried by @@a$n@@N moans in agony.", keeper, obj, NULL, TO_ROOM);
-      act("@@NThe @@eSoul@@N in $p @@Ncarried by you moans to be set free!", keeper, obj, NULL, TO_CHAR);
+      act("@@NThe @@eSoul@@N in $p@@N carried by @@a$n@@N moans in agony.", keeper, obj, NULL,
+          TO_ROOM);
+      act("@@NThe @@eSoul@@N in $p @@Ncarried by you moans to be set free!", keeper, obj, NULL,
+          TO_CHAR);
       return;
    }
 
    if (number_percent() < 2)
    {
-      act("@@NThe @@eSoul@@N in $p@@N carried by @@a$n@@N tries to break free of it's inprisonment!", keeper, obj, NULL,
-          TO_ROOM);
-      act("@@NThe @@eSoul@@N in $p @@Ncarried by you starts writhing--look out!!", keeper, obj, NULL, TO_CHAR);
+      act("@@NThe @@eSoul@@N in $p@@N carried by @@a$n@@N tries to break free of it's "
+          "inprisonment!",
+          keeper, obj, NULL, TO_ROOM);
+      act("@@NThe @@eSoul@@N in $p @@Ncarried by you starts writhing--look out!!", keeper, obj,
+          NULL, TO_CHAR);
       return;
    }
 
@@ -169,7 +173,8 @@ void objfun_infused_soul(OBJ_DATA *obj, CHAR_DATA *keeper)
    if ((keeper == NULL) || (obj->item_type != ITEM_WEAPON))
       return;
 
-   if ((get_eq_char(keeper, WEAR_HOLD_HAND_L) != obj) && (get_eq_char(keeper, WEAR_HOLD_HAND_R) != obj))
+   if ((get_eq_char(keeper, WEAR_HOLD_HAND_L) != obj) &&
+       (get_eq_char(keeper, WEAR_HOLD_HAND_R) != obj))
       return; /* Must be wielded to work */
 
    if (keeper->fighting != NULL)
@@ -185,16 +190,16 @@ void objfun_infused_soul(OBJ_DATA *obj, CHAR_DATA *keeper)
       switch (number_range(0, 3))
       {
       case 0:
-            spell = "throwing star";
+         spell = "throwing star";
          break;
       case 1:
-            spell = "acid blast";
+         spell = "acid blast";
          break;
       case 2:
-            spell = "dispel magic";
+         spell = "dispel magic";
          break;
       case 3:
-            spell = "flamestrike";
+         spell = "flamestrike";
          break;
       }
       if ((sn = skill_lookup(spell)) < 0)
@@ -211,16 +216,20 @@ void objfun_infused_soul(OBJ_DATA *obj, CHAR_DATA *keeper)
        */
       if (number_percent() < 2)
       {
-         act("@@NThe @@eSoul@@N in $p@@N carried by @@a$n@@N moans in agony.", keeper, obj, NULL, TO_ROOM);
-         act("@@NThe @@eSoul@@N in $p @@Ncarried by you moans to be set free!", keeper, obj, NULL, TO_CHAR);
+         act("@@NThe @@eSoul@@N in $p@@N carried by @@a$n@@N moans in agony.", keeper, obj, NULL,
+             TO_ROOM);
+         act("@@NThe @@eSoul@@N in $p @@Ncarried by you moans to be set free!", keeper, obj, NULL,
+             TO_CHAR);
          return;
       }
 
       if (number_percent() < 2)
       {
-         act("@@NThe @@eSoul@@N in $p@@N carried by @@a$n@@N tries to break free of it's inprisonment!", keeper, obj, NULL,
-             TO_ROOM);
-         act("@@NThe @@eSoul@@N in $p @@Ncarried by you starts writhing--look out!!", keeper, obj, NULL, TO_CHAR);
+         act("@@NThe @@eSoul@@N in $p@@N carried by @@a$n@@N tries to break free of it's "
+             "inprisonment!",
+             keeper, obj, NULL, TO_ROOM);
+         act("@@NThe @@eSoul@@N in $p @@Ncarried by you starts writhing--look out!!", keeper, obj,
+             NULL, TO_CHAR);
          return;
       }
    }
@@ -234,7 +243,8 @@ void objfun_cast_fight(OBJ_DATA *obj, CHAR_DATA *keeper)
    char *spell = "";
    if (keeper == NULL || (keeper->fighting == NULL) || (obj->item_type != ITEM_WEAPON))
       return;
-   if ((get_eq_char(keeper, WEAR_HOLD_HAND_L) != obj) && (get_eq_char(keeper, WEAR_HOLD_HAND_R) != obj))
+   if ((get_eq_char(keeper, WEAR_HOLD_HAND_L) != obj) &&
+       (get_eq_char(keeper, WEAR_HOLD_HAND_R) != obj))
       return; /* Must be wielded to work */
 
    for (victim = keeper->in_room->first_person; victim != NULL; victim = victim->next_in_room)
@@ -286,14 +296,16 @@ void objfun_sword_aggro(OBJ_DATA *obj, CHAR_DATA *keeper)
    if ((keeper == NULL) || (obj == NULL))
       return;
 
-   if ((get_eq_char(keeper, WEAR_HOLD_HAND_L) != obj) && (get_eq_char(keeper, WEAR_HOLD_HAND_R) != obj))
+   if ((get_eq_char(keeper, WEAR_HOLD_HAND_L) != obj) &&
+       (get_eq_char(keeper, WEAR_HOLD_HAND_R) != obj))
       return; /* Must be wielded to work */
    if (keeper == NULL || keeper->fighting == NULL)
       return;
 
    for (vch = keeper->in_room->first_person; vch != NULL; vch = vch->next_in_room)
    {
-      if (IS_NPC(vch) && (vch->level > keeper->level) && IS_SET(vch->act, ACT_AGGRESSIVE) && vch->fighting == NULL && number_bits(4) == 0)
+      if (IS_NPC(vch) && (vch->level > keeper->level) && IS_SET(vch->act, ACT_AGGRESSIVE) &&
+          vch->fighting == NULL && number_bits(4) == 0)
       {
          act("$p carried by $n glows in $s hands.", keeper, obj, NULL, TO_ROOM);
          act("$p carried by you glows in your hands.", keeper, obj, NULL, TO_CHAR);
@@ -340,7 +352,8 @@ void objfun_flaming(OBJ_DATA *obj, CHAR_DATA *keeper)
    if ((victim == NULL) || (victim->is_free != FALSE))
       return;
 
-   if ((get_eq_char(keeper, WEAR_HOLD_HAND_L) != obj) && (get_eq_char(keeper, WEAR_HOLD_HAND_R) != obj))
+   if ((get_eq_char(keeper, WEAR_HOLD_HAND_L) != obj) &&
+       (get_eq_char(keeper, WEAR_HOLD_HAND_R) != obj))
       return; /* Must be wielded to work */
 
    switch (number_range(0, 11))
@@ -392,8 +405,10 @@ void objfun_healing(OBJ_DATA *obj, CHAR_DATA *keeper)
    {
       if (number_percent() < 2)
       {
-         act("@@N$p@@N carried by @@a$n@@y glows@@N with a @@mHoly @@Wlight@@N!", keeper, obj, NULL, TO_ROOM);
-         act("@@N$p @@Ncarried by you@@y glows@@N with a @@mHoly @@Wlight@@N!", keeper, obj, NULL, TO_CHAR);
+         act("@@N$p@@N carried by @@a$n@@y glows@@N with a @@mHoly @@Wlight@@N!", keeper, obj, NULL,
+             TO_ROOM);
+         act("@@N$p @@Ncarried by you@@y glows@@N with a @@mHoly @@Wlight@@N!", keeper, obj, NULL,
+             TO_CHAR);
          return;
       }
 
@@ -405,7 +420,8 @@ void objfun_healing(OBJ_DATA *obj, CHAR_DATA *keeper)
       }
       return;
    }
-   if ((get_eq_char(keeper, WEAR_HOLD_HAND_L) != obj) && (get_eq_char(keeper, WEAR_HOLD_HAND_R) != obj))
+   if ((get_eq_char(keeper, WEAR_HOLD_HAND_L) != obj) &&
+       (get_eq_char(keeper, WEAR_HOLD_HAND_R) != obj))
       return; /* Must be wielded to work */
    switch (number_range(0, 11))
    {
@@ -465,7 +481,8 @@ void objfun_dispeller(OBJ_DATA *obj, CHAR_DATA *keeper)
 
       if (number_percent() < 2)
       {
-         act("@@N$p@@N carried by @@a$n@@a peers@@N at your inventory@@N.", keeper, obj, NULL, TO_ROOM);
+         act("@@N$p@@N carried by @@a$n@@a peers@@N at your inventory@@N.", keeper, obj, NULL,
+             TO_ROOM);
          act("@@N$p @@Ncarried by you@@a peers@@N around the room@@N.", keeper, obj, NULL, TO_CHAR);
          return;
       }
@@ -474,7 +491,8 @@ void objfun_dispeller(OBJ_DATA *obj, CHAR_DATA *keeper)
    if ((victim == NULL) || (victim->is_free != FALSE))
       return;
 
-   if ((get_eq_char(keeper, WEAR_HOLD_HAND_L) != obj) && (get_eq_char(keeper, WEAR_HOLD_HAND_R) != obj))
+   if ((get_eq_char(keeper, WEAR_HOLD_HAND_L) != obj) &&
+       (get_eq_char(keeper, WEAR_HOLD_HAND_R) != obj))
       return; /* Must be wielded to work */
 
    switch (number_range(0, 11))
@@ -513,7 +531,8 @@ void objfun_regen(OBJ_DATA *obj, CHAR_DATA *keeper)
 
    if (obj->wear_loc < 0)
       return;
-   keeper->hit = UMIN(get_max_hp(keeper), keeper->hit + (number_range(obj->level / 20, obj->level / 5)));
+   keeper->hit =
+       UMIN(get_max_hp(keeper), keeper->hit + (number_range(obj->level / 20, obj->level / 5)));
    return;
 }
 

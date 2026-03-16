@@ -10,12 +10,9 @@ char *center_text(char *text, int width);
 
 /* Minimal gclass_table: entries CLASS_GMA through CLASS_GMA+MAX_CLASS-1 are ADEPT */
 const struct class_type gclass_table[MAX_TOTAL_CLASS] = {
-   [CLASS_GMA + 0] = {.tier = ADEPT},
-   [CLASS_GMA + 1] = {.tier = ADEPT},
-   [CLASS_GMA + 2] = {.tier = ADEPT},
-   [CLASS_GMA + 3] = {.tier = ADEPT},
-   [CLASS_GMA + 4] = {.tier = ADEPT},
-   [CLASS_GMA + 5] = {.tier = ADEPT},
+    [CLASS_GMA + 0] = {.tier = ADEPT}, [CLASS_GMA + 1] = {.tier = ADEPT},
+    [CLASS_GMA + 2] = {.tier = ADEPT}, [CLASS_GMA + 3] = {.tier = ADEPT},
+    [CLASS_GMA + 4] = {.tier = ADEPT}, [CLASS_GMA + 5] = {.tier = ADEPT},
 };
 
 static void clear_character(CHAR_DATA *ch)
@@ -75,8 +72,8 @@ static void test_get_adept_name_all_titles_centered_are_18_visible(void)
          /* After centering it must be exactly 18 visible chars */
          int centered_visible = nocol_strlen(center_text(name, 18));
          if (centered_visible != 18)
-            printf("FAIL class=%d level=%d: '%s' centered visible=%d (expected 18)\n",
-                   cls, level, name, centered_visible);
+            printf("FAIL class=%d level=%d: '%s' centered visible=%d (expected 18)\n", cls, level,
+                   name, centered_visible);
          assert(centered_visible == 18);
       }
    }

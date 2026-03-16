@@ -43,17 +43,30 @@ int get_healing(CHAR_DATA *ch);
  */
 
 struct sp_dam_str_type sp_dam_str[] = {
-    /* NONE      */ {ELEMENT_NONE, "@@g", "@@g", "@@W", "", "%s%s%s",
-                     "blast", "BLAST", "blasts", "BLASTS"},
+    /* NONE      */ {ELEMENT_NONE, "@@g", "@@g", "@@W", "", "%s%s%s", "blast", "BLAST", "blasts",
+                     "BLASTS"},
 
-    /* Fire      */ {ELEMENT_FIRE, "@@R", "@@W", "@@y", "@@2", "%s<%s^%s>", "burn", "INCINERATE", "burns", "INCINERATES"},
-    /* gas       */ {ELEMENT_AIR, "@@W", "@@y", "@@c", "@@7", "%s(%sO%s)", "choke", "ENVELOP", "chokes", "ENVELOPS"},
-    /* poison    */ {ELEMENT_POISON, "@@e", "@@r", "@@e", "@@4", "%s{%s^%s}", "weaken", "POISON", "weakens", "POISONS"},
-    /* cold      */ {ELEMENT_WATER, "@@l", "@@W", "@@y", "@@1", "%s[%s~%s]", "chill", "FREEZE", "chills", "FREEZES"},
-    /* drain     */ {ELEMENT_SHADOW, "@@d", "@@R@@i", "@@2@@e", "@@R@@i", "%s>%s-%s<", "taint", "DRAIN", "taints", "DRAINS"},
-    /* impact    */ {ELEMENT_EARTH, "@@b", "@@W", "@@y", "@@4", "%s.%s^%s.", "strike", "SLAM", "strikes", "SLAMS"},
-    /* mind      */ {ELEMENT_MENTAL, "@@m", "@@W", "@@p", "@@5", "%s/%sV%s\\", "zap", "BLAST", "zaps", "BLASTS"},
-    /* holy      */ {ELEMENT_HOLY, "@@l", "@@W", "@@y", "@@1", "%s~%s\\/%s~", "holy", "HOLY", "holies", "HOLIES"}};
+    /* Fire      */
+    {ELEMENT_FIRE, "@@R", "@@W", "@@y", "@@2", "%s<%s^%s>", "burn", "INCINERATE", "burns",
+     "INCINERATES"},
+    /* gas       */
+    {ELEMENT_AIR, "@@W", "@@y", "@@c", "@@7", "%s(%sO%s)", "choke", "ENVELOP", "chokes",
+     "ENVELOPS"},
+    /* poison    */
+    {ELEMENT_POISON, "@@e", "@@r", "@@e", "@@4", "%s{%s^%s}", "weaken", "POISON", "weakens",
+     "POISONS"},
+    /* cold      */
+    {ELEMENT_WATER, "@@l", "@@W", "@@y", "@@1", "%s[%s~%s]", "chill", "FREEZE", "chills",
+     "FREEZES"},
+    /* drain     */
+    {ELEMENT_SHADOW, "@@d", "@@R@@i", "@@2@@e", "@@R@@i", "%s>%s-%s<", "taint", "DRAIN", "taints",
+     "DRAINS"},
+    /* impact    */
+    {ELEMENT_EARTH, "@@b", "@@W", "@@y", "@@4", "%s.%s^%s.", "strike", "SLAM", "strikes", "SLAMS"},
+    /* mind      */
+    {ELEMENT_MENTAL, "@@m", "@@W", "@@p", "@@5", "%s/%sV%s\\", "zap", "BLAST", "zaps", "BLASTS"},
+    /* holy      */
+    {ELEMENT_HOLY, "@@l", "@@W", "@@y", "@@1", "%s~%s\\/%s~", "holy", "HOLY", "holies", "HOLIES"}};
 
 /*
  * skill_table fields used by this module:
@@ -82,20 +95,20 @@ void spell_dam_damage_params(int flag1, int best_level, int *base, int *d1, int 
 
    switch (flag1)
    {
-      case MORTAL:
-         *d1 = best_level / 5;
-         *base = 10;
-         *d2 = 10;
+   case MORTAL:
+      *d1 = best_level / 5;
+      *base = 10;
+      *d2 = 10;
       break;
-      case REMORT:
-         *d1 = best_level / 2;
-         *base = 150;
-         *d2 = 20;
+   case REMORT:
+      *d1 = best_level / 2;
+      *base = 150;
+      *d2 = 20;
       break;
-      case ADEPT:
-         *base = 350;
-         *d1 = best_level * 3;
-         *d2 = 25;
+   case ADEPT:
+      *base = 350;
+      *d1 = best_level * 3;
+      *d2 = 25;
       break;
    }
 }
@@ -104,22 +117,22 @@ int spell_dam_base_penalty_for_summon(int summon)
 {
    switch (summon)
    {
-      case WATER_ELEMENTAL:
-      case FIRE_ELEMENTAL:
-      case HOLY_AVENGER:
-         return 40;
-      case EARTH_ELEMENTAL:
-      case SOUL_THIEF:
-         return 35;
-      case SKELETON:
-         return 50;
-      case IRON_GOLEM:
-         return 25;
-      case DIAMOND_GOLEM:
-      case THOUGHT_DEVOURER:
-         return 15;
-      default:
-         return 0;
+   case WATER_ELEMENTAL:
+   case FIRE_ELEMENTAL:
+   case HOLY_AVENGER:
+      return 40;
+   case EARTH_ELEMENTAL:
+   case SOUL_THIEF:
+      return 35;
+   case SKELETON:
+      return 50;
+   case IRON_GOLEM:
+      return 25;
+   case DIAMOND_GOLEM:
+   case THOUGHT_DEVOURER:
+      return 15;
+   default:
+      return 0;
    }
 }
 
@@ -127,28 +140,27 @@ const char *spell_dam_special_for_summon(int summon)
 {
    switch (summon)
    {
-      case WATER_ELEMENTAL:
-         return "spec_summon_water";
-      case FIRE_ELEMENTAL:
-         return "spec_summon_fire";
-      case EARTH_ELEMENTAL:
-         return "spec_summon_earth";
-      case SKELETON:
-         return "spec_summon_undead";
-      case HOLY_AVENGER:
-         return "spec_summon_holy";
-      case SOUL_THIEF:
-         return "spec_summon_shadow";
-      case IRON_GOLEM:
-      case DIAMOND_GOLEM:
-         return "spec_summon_metal";
-      case THOUGHT_DEVOURER:
-         return "spec_summon_thought";
-      default:
-         return NULL;
+   case WATER_ELEMENTAL:
+      return "spec_summon_water";
+   case FIRE_ELEMENTAL:
+      return "spec_summon_fire";
+   case EARTH_ELEMENTAL:
+      return "spec_summon_earth";
+   case SKELETON:
+      return "spec_summon_undead";
+   case HOLY_AVENGER:
+      return "spec_summon_holy";
+   case SOUL_THIEF:
+      return "spec_summon_shadow";
+   case IRON_GOLEM:
+   case DIAMOND_GOLEM:
+      return "spec_summon_metal";
+   case THOUGHT_DEVOURER:
+      return "spec_summon_thought";
+   default:
+      return NULL;
    }
 }
-
 
 int get_spell_damage(CHAR_DATA *ch, int gsn)
 {
@@ -158,7 +170,7 @@ int get_spell_damage(CHAR_DATA *ch, int gsn)
 
    spell_dam_damage_params(SKILL_TIER(gsn), get_best_level(ch, gsn), &base, &d1, &d2);
 
-   return dice(d1, d2)+base;
+   return dice(d1, d2) + base;
 }
 
 int get_best_level(CHAR_DATA *ch, int gsn)
@@ -167,7 +179,7 @@ int get_best_level(CHAR_DATA *ch, int gsn)
 
    if (SKILL_TIER(gsn) == MORTAL)
    {
-      for(int i = 0; i < MAX_CLASS; i++)
+      for (int i = 0; i < MAX_CLASS; i++)
       {
          int required_level = skill_table[gsn].skill_level[i];
 
@@ -180,7 +192,7 @@ int get_best_level(CHAR_DATA *ch, int gsn)
    }
    else if (SKILL_TIER(gsn) == REMORT)
    {
-      for(int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
+      for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
       {
          int required_level = skill_table[gsn].skill_level[i];
 
@@ -193,7 +205,7 @@ int get_best_level(CHAR_DATA *ch, int gsn)
    }
    else if (SKILL_TIER(gsn) == ADEPT)
    {
-      for(int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
+      for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
       {
          int required_level = skill_table[gsn].skill_level[i];
 
@@ -297,7 +309,8 @@ CHAR_DATA *player_summon(CHAR_DATA *ch, int level, int summon)
    return summoned;
 }
 
-int class_heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index, bool hot)
+int class_heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index,
+                         bool hot)
 {
    int heal = base_heal * 2;
 
@@ -339,7 +352,7 @@ int class_heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn
    heal += heal * ch->class_level[CLASS_TEM] / 25;
 
    if (!IS_NPC(ch))
-      heal += heal * ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + CLASS_TEM]/100;
+      heal += heal * ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + CLASS_TEM] / 100;
 
    if (stance_app[ch->stance].heal_mod != 0)
       heal += heal * stance_app[ch->stance].heal_mod / 10;
@@ -354,7 +367,7 @@ int class_heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn
    }
 
    if (hot)
-      heal += (get_spellpower(ch)+get_healing(ch)) / 4;
+      heal += (get_spellpower(ch) + get_healing(ch)) / 4;
    else
       heal += get_spellpower(ch) + get_healing(ch);
 
@@ -438,8 +451,10 @@ void sp_death_message(CHAR_DATA *ch, CHAR_DATA *victim, int realm)
             sprintf(buf3, "$n slowly fries your entrails; smoke covers your remains!");
             break;
          case 2:
-            sprintf(buf1, "$n leaves gigantic burns on $N's remains. Blood and pus spray out wildly!");
-            sprintf(buf2, "You leave gigantic burns on $N's remains. Blood and pus spray out wildly!");
+            sprintf(buf1,
+                    "$n leaves gigantic burns on $N's remains. Blood and pus spray out wildly!");
+            sprintf(buf2,
+                    "You leave gigantic burns on $N's remains. Blood and pus spray out wildly!");
             sprintf(buf3, "$n leaves gigantic burns on your body. Blood and pus spray out wildly!");
             break;
          case 3:
@@ -450,7 +465,9 @@ void sp_death_message(CHAR_DATA *ch, CHAR_DATA *victim, int realm)
          case 4:
             sprintf(buf1, "$n leaves $N burning in flames. Blood spills all over the floor!");
             sprintf(buf2, "You leave $N burning in flames. Blood spills all over the floor!");
-            sprintf(buf3, "$n leaves you burning in flames. Your skin breaks and blood spills on the floor!");
+            sprintf(
+                buf3,
+                "$n leaves you burning in flames. Your skin breaks and blood spills on the floor!");
             break;
          }
       }
@@ -476,9 +493,13 @@ void sp_death_message(CHAR_DATA *ch, CHAR_DATA *victim, int realm)
             break;
 
          case 1:
-            sprintf(buf1, "$n sends a poisonous cloud into $N ;$S mouth starts dripping with blood!");
-            sprintf(buf2, "You send a poisonous cloud into $N ;$S mouth starts dripping with blood!");
-            sprintf(buf3, "$n bursts your lungs with his poisonous cloud, blood begins flowing from inside.");
+            sprintf(buf1,
+                    "$n sends a poisonous cloud into $N ;$S mouth starts dripping with blood!");
+            sprintf(buf2,
+                    "You send a poisonous cloud into $N ;$S mouth starts dripping with blood!");
+            sprintf(
+                buf3,
+                "$n bursts your lungs with his poisonous cloud, blood begins flowing from inside.");
             break;
          }
       }
@@ -623,7 +644,8 @@ void sp_death_message(CHAR_DATA *ch, CHAR_DATA *victim, int realm)
  * will modify damage as it sees fit for weaknesses and strengths.
  *
  */
-void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, int realm, int dt, bool critical)
+void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, int realm, int dt,
+                    bool critical)
 {
 
    char buf1[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH], buf3[MAX_STRING_LENGTH];
@@ -681,18 +703,18 @@ void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, in
       dam_range -= 250;
    }
    punct = (!stress) ? '.' : '!';
-   snprintf(outercol, sizeof(outercol), "%s%s",
-           (dam > 250 ? sp_dam_str[rtype].backcol : ""),
-           (dam > 250 ? sp_dam_str[rtype].invertcol : sp_dam_str[rtype].basecol));
-   snprintf(innercol, sizeof(innercol), "%s%s",
-           (dam > 250 ? sp_dam_str[rtype].backcol : ""),
-           (dam > 500 ? sp_dam_str[rtype].stresscol : (dam > 250 ? sp_dam_str[rtype].invertcol : sp_dam_str[rtype].basecol)));
+   snprintf(outercol, sizeof(outercol), "%s%s", (dam > 250 ? sp_dam_str[rtype].backcol : ""),
+            (dam > 250 ? sp_dam_str[rtype].invertcol : sp_dam_str[rtype].basecol));
+   snprintf(innercol, sizeof(innercol), "%s%s", (dam > 250 ? sp_dam_str[rtype].backcol : ""),
+            (dam > 500 ? sp_dam_str[rtype].stresscol
+                       : (dam > 250 ? sp_dam_str[rtype].invertcol : sp_dam_str[rtype].basecol)));
 
    catsymbuf[0] = '\0';
    snprintf(symbuf, sizeof(symbuf), "%s", " ");
    for (; dam_range > 0; dam_range -= 50)
    {
-      snprintf(catsymbuf, sizeof(catsymbuf), sp_dam_str[rtype].formatter, outercol, innercol, outercol);
+      snprintf(catsymbuf, sizeof(catsymbuf), sp_dam_str[rtype].formatter, outercol, innercol,
+               outercol);
       safe_strcat(MSL, symbuf, catsymbuf);
    }
    safe_strcat(MSL, symbuf, " ");
@@ -708,32 +730,28 @@ void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, in
    if (obj == NULL)
    {
       snprintf(buf1, sizeof(buf1), "%s$n %.2000s%s%.2000s@@N $N %swith $s %.512s%c@@N%s",
-              sp_dam_str[rtype].basecol,
-              symbuf,
-              (stress ? sp_dam_str[rtype].vp_stress : sp_dam_str[rtype].vp),
-              symbuf, sp_dam_str[rtype].basecol, attack, punct, testerbuf);
+               sp_dam_str[rtype].basecol, symbuf,
+               (stress ? sp_dam_str[rtype].vp_stress : sp_dam_str[rtype].vp), symbuf,
+               sp_dam_str[rtype].basecol, attack, punct, testerbuf);
       snprintf(buf2, sizeof(buf2), "%sYou %.2000s%s%.2000s@@N $N %swith your %.512s%c@@N%s",
-              sp_dam_str[rtype].basecol,
-              symbuf,
-              (stress ? sp_dam_str[rtype].vs_stress : sp_dam_str[rtype].vs),
-              symbuf, sp_dam_str[rtype].basecol, attack, punct, testerbuf);
+               sp_dam_str[rtype].basecol, symbuf,
+               (stress ? sp_dam_str[rtype].vs_stress : sp_dam_str[rtype].vs), symbuf,
+               sp_dam_str[rtype].basecol, attack, punct, testerbuf);
       /*	   if ( *str == '\'' )
              sprintf( buf3, "%s$n %s%s your%s%s $s %s%c@@N",col,col, vp,col, str+2, attack, punct);
             else
       */
       snprintf(buf3, sizeof(buf3), "%s$n %.2000s%s%.2000s %syou with $s %.512s%c@@N%s",
-              sp_dam_str[rtype].basecol,
-              symbuf,
-              (stress ? sp_dam_str[rtype].vp_stress : sp_dam_str[rtype].vp),
-              symbuf, sp_dam_str[rtype].basecol, attack, punct, testerbuf);
+               sp_dam_str[rtype].basecol, symbuf,
+               (stress ? sp_dam_str[rtype].vp_stress : sp_dam_str[rtype].vp), symbuf,
+               sp_dam_str[rtype].basecol, attack, punct, testerbuf);
    }
    else if (obj != NULL)
    {
       snprintf(buf1, sizeof(buf1), "%s$p %.2000s%s%.2000s@@N $N %swith a %.512s%c@@N",
-              sp_dam_str[rtype].basecol,
-              symbuf,
-              (stress ? sp_dam_str[rtype].vp_stress : sp_dam_str[rtype].vp),
-              symbuf, sp_dam_str[rtype].basecol, attack, punct);
+               sp_dam_str[rtype].basecol, symbuf,
+               (stress ? sp_dam_str[rtype].vp_stress : sp_dam_str[rtype].vp), symbuf,
+               sp_dam_str[rtype].basecol, attack, punct);
 #if 0
       sprintf( buf2, "%sYou %.2000s%s%.2000s@@N $N %swith your %.512s%c@@N%s",
                sp_dam_str[rtype].basecol,
@@ -746,10 +764,9 @@ void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, in
             else
       */
       snprintf(buf3, sizeof(buf3), "%s$p %.2000s%s%.2000s %syou with $s %.512s%c@@N",
-              sp_dam_str[rtype].basecol,
-              symbuf,
-              (stress ? sp_dam_str[rtype].vp_stress : sp_dam_str[rtype].vp),
-              symbuf, sp_dam_str[rtype].basecol, attack, punct);
+               sp_dam_str[rtype].basecol, symbuf,
+               (stress ? sp_dam_str[rtype].vp_stress : sp_dam_str[rtype].vp), symbuf,
+               sp_dam_str[rtype].basecol, attack, punct);
    }
    else
    {
@@ -806,7 +823,8 @@ void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, in
    return;
 }
 
-bool sp_damage(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, int type, int sn, bool show_msg)
+bool sp_damage(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, int type, int sn,
+               bool show_msg)
 {
    return calculate_damage(ch, victim, dam, sn, type, TRUE);
 }

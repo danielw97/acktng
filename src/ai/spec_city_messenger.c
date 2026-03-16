@@ -11,29 +11,30 @@
 bool spec_city_messenger(CHAR_DATA *ch)
 {
    static const char *acts[] = {
-      "$n shifts $s leather dispatch satchel to the other shoulder, checking the clasp.",
-      "$n pulls a folded manifest from $s satchel, reads it quickly, and stuffs it back.",
-      "$n glances at the posted route board on the corner wall, tracing a chalk line with one finger.",
-      "$n counts a stack of sealed envelopes under $s arm, lips moving silently.",
-      "$n pauses to tie a loose knot on $s satchel strap before moving on."
-   };
+       "$n shifts $s leather dispatch satchel to the other shoulder, checking the clasp.",
+       "$n pulls a folded manifest from $s satchel, reads it quickly, and stuffs it back.",
+       "$n glances at the posted route board on the corner wall, tracing a chalk line with one "
+       "finger.",
+       "$n counts a stack of sealed envelopes under $s arm, lips moving silently.",
+       "$n pauses to tie a loose knot on $s satchel strap before moving on."};
    static const char *says[] = {
-      "Three circuits already today and I still haven't cleared the eastern manifests.",
-      "Dispatch backlog at the gate lodge is three days deep. Nobody wants that route since the catacomb trouble.",
-      "Postmaster says anyone who wants route clearance work should ask at the sorting counter.",
-      "Running dispatches under the registry clock means no slack time. Every bell counts.",
-      "The Ledgerhouse wants gate confirmations by Ash Watch. I'm already behind."
-   };
+       "Three circuits already today and I still haven't cleared the eastern manifests.",
+       "Dispatch backlog at the gate lodge is three days deep. Nobody wants that route since the "
+       "catacomb trouble.",
+       "Postmaster says anyone who wants route clearance work should ask at the sorting counter.",
+       "Running dispatches under the registry clock means no slack time. Every bell counts.",
+       "The Ledgerhouse wants gate confirmations by Ash Watch. I'm already behind."};
    static const char *quest_hints[] = {
-      "You look like someone who handles themselves in a fight. The catacomb approaches need clearing before my dispatches can move safely. Ask the Postmaster.",
-      "Gate dispatches are backing up because the approaches below are crawling with vermin. If you're looking for work, the Postmaster handles clearance contracts.",
-      "I'd pay my own copper if I could — the dispatch queue to the east gate is a mess until someone clears the catacombs. Postmaster has the paperwork."
-   };
+       "You look like someone who handles themselves in a fight. The catacomb approaches need "
+       "clearing before my dispatches can move safely. Ask the Postmaster.",
+       "Gate dispatches are backing up because the approaches below are crawling with vermin. If "
+       "you're looking for work, the Postmaster handles clearance contracts.",
+       "I'd pay my own copper if I could — the dispatch queue to the east gate is a mess until "
+       "someone clears the catacombs. Postmaster has the paperwork."};
    static const char *quest_active[] = {
-      "Still at it? The sooner those approaches are clear, the sooner my dispatches move.",
-      "Good hunting down there. Every report I hear brings the queue one step closer to normal.",
-      "The gate lodges are counting on you. I've got parcels sitting here three days already."
-   };
+       "Still at it? The sooner those approaches are clear, the sooner my dispatches move.",
+       "Good hunting down there. Every report I hear brings the queue one step closer to normal.",
+       "The gate lodges are counting on you. I've got parcels sitting here three days already."};
 
    CHAR_DATA *vch;
    bool hint_given = FALSE;

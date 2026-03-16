@@ -130,12 +130,14 @@ void do_sysdata(CHAR_DATA *ch, char *argument)
       safe_strcat(MSL, outbuf, catbuf);
       for (looper = 0; looper < MAX_NUM_IMMS; looper++)
       {
-         sprintf(catbuf, "Level %d Immortals: %s\n\r", 81 + looper, sysdata.imms[looper].this_string);
+         sprintf(catbuf, "Level %d Immortals: %s\n\r", 81 + looper,
+                 sysdata.imms[looper].this_string);
          safe_strcat(MSL, outbuf, catbuf);
       }
       sprintf(catbuf, "Wizlocked: %s\n\r", (wizlock ? "Yes" : "No"));
       safe_strcat(MSL, outbuf, catbuf);
-      sprintf(catbuf, "Show Players Damage numbers in combat: %s\n\r", (sysdata.shownumbers ? "Yes" : "No"));
+      sprintf(catbuf, "Show Players Damage numbers in combat: %s\n\r",
+              (sysdata.shownumbers ? "Yes" : "No"));
       safe_strcat(MSL, outbuf, catbuf);
       send_to_char(outbuf, ch);
       return;
@@ -188,7 +190,8 @@ void do_sysdata(CHAR_DATA *ch, char *argument)
                send_to_char("Illegal Immortal level selected.\n\r", ch);
                return;
             }
-            sysdata.imms[imm_level].this_string = str_mod(sysdata.imms[imm_level].this_string, arg2);
+            sysdata.imms[imm_level].this_string =
+                str_mod(sysdata.imms[imm_level].this_string, arg2);
          }
          else
          {

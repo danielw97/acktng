@@ -51,7 +51,8 @@ void spendqp_copy_text(char *dest, size_t dest_size, const char *src)
    snprintf(dest, dest_size, "%s", src);
 }
 
-void spendqp_build_move_message(char *dest, size_t dest_size, const char *title, const char *message)
+void spendqp_build_move_message(char *dest, size_t dest_size, const char *title,
+                                const char *message)
 {
    if (dest == NULL || dest_size == 0)
       return;
@@ -274,32 +275,31 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
       ch->pcdata->pedit_string[1] = str_dup(argument);
       return;
    }
-/*   if (!str_cmp(arg1, "assist"))
-   {
-      if (str_cmp(ch->pcdata->pedit_state, "assist"))
+   /*   if (!str_cmp(arg1, "assist"))
       {
+         if (str_cmp(ch->pcdata->pedit_state, "assist"))
+         {
+            free_string(ch->pcdata->pedit_string[0]);
+            ch->pcdata->pedit_string[0] = str_dup("none");
+            free_string(ch->pcdata->pedit_string[1]);
+            ch->pcdata->pedit_string[1] = str_dup("none");
+            free_string(ch->pcdata->pedit_state);
+            ch->pcdata->pedit_state = str_dup("assist");
+         }
          free_string(ch->pcdata->pedit_string[0]);
-         ch->pcdata->pedit_string[0] = str_dup("none");
-         free_string(ch->pcdata->pedit_string[1]);
-         ch->pcdata->pedit_string[1] = str_dup("none");
-         free_string(ch->pcdata->pedit_state);
-         ch->pcdata->pedit_state = str_dup("assist");
-      }
-      free_string(ch->pcdata->pedit_string[0]);
-      if (!is_name("*name*", argument))
-      {
-         send_to_char("You must include *name* by itself somewhere in your assist message!\n\r", ch);
-         ch->pcdata->pedit_string[0] = str_dup("none");
+         if (!is_name("*name*", argument))
+         {
+            send_to_char("You must include *name* by itself somewhere in your assist message!\n\r",
+      ch); ch->pcdata->pedit_string[0] = str_dup("none"); return;
+         }
+         if (str_cmp("assist", ch->pcdata->pedit_state))
+         {
+            free_string(ch->pcdata->pedit_state);
+            ch->pcdata->pedit_state = str_dup("assist");
+         }
+         ch->pcdata->pedit_string[0] = str_dup(argument);
          return;
-      }
-      if (str_cmp("assist", ch->pcdata->pedit_state))
-      {
-         free_string(ch->pcdata->pedit_state);
-         ch->pcdata->pedit_state = str_dup("assist");
-      }
-      ch->pcdata->pedit_string[0] = str_dup(argument);
-      return;
-   }*/
+      }*/
 
    if (!str_cmp(arg1, "show"))
    {
@@ -341,13 +341,13 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
          send_to_char(buf, ch);
          return;
       }
-/*      else if (!str_cmp(ch->pcdata->pedit_state, "assist"))
-      {
-         sprintf(buf, "Current message:\n\r  %s\n\r",
-                 (!str_cmp(ch->pcdata->pedit_string[0], "none") ? ch->pcdata->assist_msg : ch->pcdata->pedit_string[0]));
-         send_to_char(buf, ch);
-      }
-      return;*/
+      /*      else if (!str_cmp(ch->pcdata->pedit_state, "assist"))
+            {
+               sprintf(buf, "Current message:\n\r  %s\n\r",
+                       (!str_cmp(ch->pcdata->pedit_string[0], "none") ? ch->pcdata->assist_msg :
+         ch->pcdata->pedit_string[0])); send_to_char(buf, ch);
+            }
+            return;*/
    }
 
    if (!str_cmp(arg1, "buy"))
@@ -426,7 +426,9 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
                brand_member->this_one = brand;
                LINK(brand_member, first_brand, last_brand, next, prev);
                save_brands();
-               send_to_char("Your messages have been updated, and logged for inspection by an Immortal.\n\r", ch);
+               send_to_char(
+                   "Your messages have been updated, and logged for inspection by an Immortal.\n\r",
+                   ch);
             }
             return;
          }
@@ -469,8 +471,8 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
                safe_strcat(MSL, assistbuf, catbuf);
             }
          }
-/*         free_string(ch->pcdata->assist_msg);
-         ch->pcdata->assist_msg = str_dup(assistbuf);*/
+         /*         free_string(ch->pcdata->assist_msg);
+                  ch->pcdata->assist_msg = str_dup(assistbuf);*/
          for (i = 0; i < 5; i++)
          {
             if (str_cmp(ch->pcdata->pedit_string[i], "none"))
@@ -492,7 +494,8 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
             brand->branded = str_dup(ch->name);
             brand->branded_by = str_dup("@@rSystem@@N");
             brand->priority = str_dup("normal");
-//            sprintf(brandbuf, "Assist message changed to %s\n\r", ch->pcdata->assist_msg);
+            //            sprintf(brandbuf, "Assist message changed to %s\n\r",
+            //            ch->pcdata->assist_msg);
             brand->message = str_dup(brandbuf);
             strtime = ctime(&current_time);
             strtime[strlen(strtime) - 1] = '\0';
@@ -502,7 +505,9 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
             brand_member->this_one = brand;
             LINK(brand_member, first_brand, last_brand, next, prev);
             save_brands();
-            send_to_char("Your messages have been updated, and logged for inspection by an Immortal.\n\r", ch);
+            send_to_char(
+                "Your messages have been updated, and logged for inspection by an Immortal.\n\r",
+                ch);
          }
          return;
       }
@@ -526,8 +531,10 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
          ROOM_INDEX_DATA *location;
          if ((location = get_room_index(ch->pcdata->recall_vnum)) == NULL)
             location = get_room_index(3001);
-         act("@@mZenithar @@Wappears before you, and takes you to your Happy Place!", ch, NULL, NULL, TO_CHAR);
-         act("@@mZenithar @@Wappears before you, and takes $n to $s Happy Place!", ch, NULL, NULL, TO_ROOM);
+         act("@@mZenithar @@Wappears before you, and takes you to your Happy Place!", ch, NULL,
+             NULL, TO_CHAR);
+         act("@@mZenithar @@Wappears before you, and takes $n to $s Happy Place!", ch, NULL, NULL,
+             TO_ROOM);
          char_from_room(ch);
          char_to_room(ch, location);
          do_look(ch, "");
@@ -587,7 +594,9 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
 
          for (obj = first_obj; obj != NULL; obj = obj->next)
          {
-            if (((obj->pIndexData->vnum) == OBJ_VNUM_CORPSE_PC) && (!str_cmp(ch->name, obj->owner)) && (!(obj->in_room == ch->in_room))) /*don't work! */
+            if (((obj->pIndexData->vnum) == OBJ_VNUM_CORPSE_PC) &&
+                (!str_cmp(ch->name, obj->owner)) &&
+                (!(obj->in_room == ch->in_room))) /*don't work! */
             {
                found = TRUE;
                obj_from_room(obj);
@@ -662,8 +671,8 @@ void do_immbrand(CHAR_DATA *ch, char *argument)
       for (brand_list = first_brand; brand_list; brand_list = brand_list->next)
       {
          brand = brand_list->this_one;
-         sprintf(buf, "[%3d] @@r%s@@W: @@GBrander@@W: %s  @@a%s @@ePriority: %s@@N\n\r",
-                 vnum, brand->branded, brand->branded_by, brand->dt_stamp, brand->priority);
+         sprintf(buf, "[%3d] @@r%s@@W: @@GBrander@@W: %s  @@a%s @@ePriority: %s@@N\n\r", vnum,
+                 brand->branded, brand->branded_by, brand->dt_stamp, brand->priority);
          safe_strcat(MSL, buf1, buf);
          vnum++;
          if (vnum > 100)
@@ -704,8 +713,8 @@ void do_immbrand(CHAR_DATA *ch, char *argument)
          if (vnum++ == anum)
          {
             brand = brand_list->this_one;
-            sprintf(buf, "[%3d] @@r%s@@W: @@GBrander@@W: %s  @@a%s @@ePriority: %s@@N\n\r",
-                    anum, brand->branded, brand->branded_by, brand->dt_stamp, brand->priority);
+            sprintf(buf, "[%3d] @@r%s@@W: @@GBrander@@W: %s  @@a%s @@ePriority: %s@@N\n\r", anum,
+                    brand->branded, brand->branded_by, brand->dt_stamp, brand->priority);
             safe_strcat(MSL, buf1, buf);
             safe_strcat(MSL, buf1, brand->message);
             send_to_char(buf1, ch);
@@ -789,10 +798,9 @@ void do_immbrand(CHAR_DATA *ch, char *argument)
          return;
       }
       buf1[0] = '\0';
-      sprintf(buf, "[%3d] %s: Brander: %s  Date: %s Priority: %s\n\r",
-              vnum,
-              ch->current_brand->branded,
-              ch->current_brand->branded_by, ch->current_brand->dt_stamp, ch->current_brand->priority);
+      sprintf(buf, "[%3d] %s: Brander: %s  Date: %s Priority: %s\n\r", vnum,
+              ch->current_brand->branded, ch->current_brand->branded_by,
+              ch->current_brand->dt_stamp, ch->current_brand->priority);
       strcat(buf1, buf);
       strcat(buf1, ch->current_brand->message);
       send_to_char(buf1, ch);

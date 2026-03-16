@@ -40,7 +40,8 @@ bool spec_tax_man(CHAR_DATA *ch)
    /*
     * Check this loop.. -- Alty
     */
-   for (room = get_room_index(number_range(0, 65535)); !room; room = get_room_index(number_range(0, 65535)))
+   for (room = get_room_index(number_range(0, 65535)); !room;
+        room = get_room_index(number_range(0, 65535)))
       ;
 
    act("$n suddenly vanishes!", ch, NULL, NULL, TO_ROOM);
@@ -72,10 +73,12 @@ bool spec_tax_man(CHAR_DATA *ch)
    if ((victim->gold < 100000) && (victim->balance < 1000000))
       return FALSE;
 
-   act("$n says 'Excuse me, $N, but our records state you haven't payed your taxes recently.", ch, NULL, victim, TO_ROOM);
+   act("$n says 'Excuse me, $N, but our records state you haven't payed your taxes recently.", ch,
+       NULL, victim, TO_ROOM);
 
-   act("$n says, 'Since you refuse to pay what you owe, it has automatically been deducted from your funds'.", ch, NULL,
-       victim, TO_ROOM);
+   act("$n says, 'Since you refuse to pay what you owe, it has automatically been deducted from "
+       "your funds'.",
+       ch, NULL, victim, TO_ROOM);
    act("$n says, 'Have a nice day'.", ch, NULL, ch, TO_ROOM);
 
    sn = (victim->balance + victim->gold) / 100;
@@ -102,8 +105,8 @@ bool spec_tax_man(CHAR_DATA *ch)
    sprintf(mon_buf, "Tax Collector visited %s ", victim->name);
    sprintf(cat_buf, "Collected %i from bank, and %i from gold on hand.\n\r", bank_loss, char_loss);
    safe_strcat(MSL, mon_buf, cat_buf);
-   sprintf(cat_buf, "New totals are balance: %i/%i  on hand: %i/%i\n\r",
-           victim->balance, old_bank, victim->gold, old_char);
+   sprintf(cat_buf, "New totals are balance: %i/%i  on hand: %i/%i\n\r", victim->balance, old_bank,
+           victim->gold, old_char);
    safe_strcat(MSL, mon_buf, cat_buf);
    monitor_chan(mon_buf, MONITOR_MOB);
 

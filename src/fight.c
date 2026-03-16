@@ -50,16 +50,16 @@ void death_cry args((CHAR_DATA * ch));
 void group_gain args((CHAR_DATA * ch, CHAR_DATA *victim));
 void do_knee args((CHAR_DATA * ch, char *argument));
 bool do_lifesteal args((CHAR_DATA * ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual, int dam));
-bool shortfight_summary_recipient_matches args((CHAR_DATA * rch, CHAR_DATA *ch, CHAR_DATA *victim, bool expected_shortfight));
-bool shortfight_can_broadcast_room_summary args((CHAR_DATA *ch, CHAR_DATA *victim));
-void shortfight_emit_autoattack_summary args((CHAR_DATA *ch, CHAR_DATA *victim));
+bool shortfight_summary_recipient_matches args((CHAR_DATA * rch, CHAR_DATA *ch, CHAR_DATA *victim,
+                                                bool expected_shortfight));
+bool shortfight_can_broadcast_room_summary args((CHAR_DATA * ch, CHAR_DATA *victim));
+void shortfight_emit_autoattack_summary args((CHAR_DATA * ch, CHAR_DATA *victim));
 
 bool should_summon_assist_master_round args((int is_npc, int is_charmed, int has_master,
-                                      int master_fighting, int same_room,
-                                      int is_player_summon, int can_see_master_target));
-bool should_summon_cast_round args((int is_npc, int is_player_summon,
-                                    int is_fighting, int has_spec_fun,
-                                    int should_cast_now));
+                                             int master_fighting, int same_room,
+                                             int is_player_summon, int can_see_master_target));
+bool should_summon_cast_round args((int is_npc, int is_player_summon, int is_fighting,
+                                    int has_spec_fun, int should_cast_now));
 
 bool is_safe args((CHAR_DATA * ch, CHAR_DATA *victim));
 void make_corpse args((CHAR_DATA * ch, char *argument));
@@ -71,21 +71,21 @@ void trip args((CHAR_DATA * ch, CHAR_DATA *victim));
 void check_adrenaline args((CHAR_DATA * ch, sh_int damage));
 void obj_damage args((OBJ_DATA * obj, CHAR_DATA *victim, int dam));
 
-int do_damage args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt, int element, bool critical));
+int do_damage args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt, int element,
+                    bool critical));
 int damage args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt));
 int get_counter args((CHAR_DATA * ch));
 int get_evasion_piercing args((CHAR_DATA * ch));
 
 bool should_summon_assist_master_round(int is_npc, int is_charmed, int has_master,
-                                      int master_fighting, int same_room,
-                                      int is_player_summon, int can_see_master_target)
+                                       int master_fighting, int same_room, int is_player_summon,
+                                       int can_see_master_target)
 {
-   return is_npc && is_charmed && has_master && master_fighting && same_room
-       && is_player_summon && can_see_master_target;
+   return is_npc && is_charmed && has_master && master_fighting && same_room && is_player_summon &&
+          can_see_master_target;
 }
 
-bool should_summon_cast_round(int is_npc, int is_player_summon,
-                              int is_fighting, int has_spec_fun,
+bool should_summon_cast_round(int is_npc, int is_player_summon, int is_fighting, int has_spec_fun,
                               int should_cast_now)
 {
    return is_npc && is_player_summon && is_fighting && has_spec_fun && should_cast_now;
@@ -127,8 +127,8 @@ void violence_update(void)
 
       if (!IS_NPC(ch) && (stance_app[ch->stance].speed_mod > 1))
       {
-         ch->hit =
-             UMAX(10, ch->hit - number_range(get_psuedo_level(ch) * 5 / 1000, get_psuedo_level(ch) * 10 / 1000));
+         ch->hit = UMAX(10, ch->hit - number_range(get_psuedo_level(ch) * 5 / 1000,
+                                                   get_psuedo_level(ch) * 10 / 1000));
       }
 
       if (ch->stunTimer > 0)
@@ -144,7 +144,8 @@ void violence_update(void)
          ch->position = POS_DEAD;
          if (!is_fighting(ch))
             if (ch->in_room != NULL)
-               act("Suddenly, $n is enveloped in a @@mBeam of light@@N, and is gone!", ch, NULL, NULL, TO_ROOM);
+               act("Suddenly, $n is enveloped in a @@mBeam of light@@N, and is gone!", ch, NULL,
+                   NULL, TO_ROOM);
          extract_char(ch, TRUE);
          continue;
       }
@@ -164,14 +165,14 @@ void violence_update(void)
          continue;
       }
 
-      if ((IS_AWAKE(ch)) && (ch->is_free == FALSE) && (victim->is_free == FALSE) && (ch->in_room != NULL) && (victim->in_room != NULL) && (ch->in_room == victim->in_room))
+      if ((IS_AWAKE(ch)) && (ch->is_free == FALSE) && (victim->is_free == FALSE) &&
+          (ch->in_room != NULL) && (victim->in_room != NULL) && (ch->in_room == victim->in_room))
          multi_hit(ch, victim, TYPE_UNDEFINED);
       else
          stop_fighting(ch, FALSE);
 
       if ((victim = ch->fighting) == NULL)
          continue;
-
 
       /*
        * Assisting
@@ -183,12 +184,13 @@ void violence_update(void)
 
          if (IS_AWAKE(rch) && rch->fighting == NULL)
          {
-            if (should_summon_assist_master_round(IS_NPC(rch), IS_AFFECTED(rch, AFF_CHARM), rch->master != NULL,
-                                                 rch->master != NULL && rch->master->fighting != NULL,
-                                                 rch->master != NULL && rch->in_room == rch->master->in_room,
-                                                 is_player_summon_special(rch->spec_fun),
-                                                 rch->master != NULL && rch->master->fighting != NULL
-                                                    && can_see(rch, rch->master->fighting)))
+            if (should_summon_assist_master_round(
+                    IS_NPC(rch), IS_AFFECTED(rch, AFF_CHARM), rch->master != NULL,
+                    rch->master != NULL && rch->master->fighting != NULL,
+                    rch->master != NULL && rch->in_room == rch->master->in_room,
+                    is_player_summon_special(rch->spec_fun),
+                    rch->master != NULL && rch->master->fighting != NULL &&
+                        can_see(rch, rch->master->fighting)))
             {
                set_fighting(rch, rch->master->fighting, TRUE);
 
@@ -199,11 +201,13 @@ void violence_update(void)
 
             if (IS_AFFECTED(rch, AFF_CHARM))
                continue;
-            if (!IS_NPC(rch) && !IS_NPC(ch) && IS_SET(rch->config, CONFIG_AUTOASSIST) && is_same_group(rch, ch))
+            if (!IS_NPC(rch) && !IS_NPC(ch) && IS_SET(rch->config, CONFIG_AUTOASSIST) &&
+                is_same_group(rch, ch))
             {
                do_assist(rch, ch->name);
             }
-            else if (!IS_NPC(rch) && !IS_NPC(victim) && IS_SET(rch->config, CONFIG_AUTOASSIST) && is_same_group(rch, victim))
+            else if (!IS_NPC(rch) && !IS_NPC(victim) && IS_SET(rch->config, CONFIG_AUTOASSIST) &&
+                     is_same_group(rch, victim))
             {
                do_assist(rch, victim->name);
             }
@@ -211,40 +215,39 @@ void violence_update(void)
             else if (IS_NPC(rch) && !IS_SET(rch->act, ACT_NOASSIST))
             {
                if ((rch->pIndexData == victim->pIndexData) /* is it the same as a target here?  */
-                   || is_same_group(rch, victim) )
+                   || is_same_group(rch, victim))
                {
-                     if (IS_NPC(rch) && IS_NPC(victim) && can_see(rch, victim->fighting) &&
-                         (get_psuedo_level(ch) - get_psuedo_level(victim)) < 10 )
+                  if (IS_NPC(rch) && IS_NPC(victim) && can_see(rch, victim->fighting) &&
+                      (get_psuedo_level(ch) - get_psuedo_level(victim)) < 10)
+                  {
+                     if ((victim->fighting != NULL) && (rch->fighting == NULL))
                      {
-                        if ((victim->fighting != NULL) && (rch->fighting == NULL))
-                        {
-                           char actbuf[MSL];
-                           sprintf(actbuf, "$n screams, 'BANZAI!! $N must be assisted!!'");
-                           act(actbuf, rch, NULL, victim, TO_ROOM);
-                           sprintf(actbuf, "You scream, 'BANZAI!! $N must be assisted!!'");
-                           act(actbuf, rch, NULL, victim, TO_CHAR);
-                           set_fighting(rch, victim->fighting, TRUE);
-                        }
+                        char actbuf[MSL];
+                        sprintf(actbuf, "$n screams, 'BANZAI!! $N must be assisted!!'");
+                        act(actbuf, rch, NULL, victim, TO_ROOM);
+                        sprintf(actbuf, "You scream, 'BANZAI!! $N must be assisted!!'");
+                        act(actbuf, rch, NULL, victim, TO_CHAR);
+                        set_fighting(rch, victim->fighting, TRUE);
                      }
+                  }
                }
                if ((rch->pIndexData == ch->pIndexData) /* is it the same as a target here?  */
-                   || is_same_group(rch, ch) )
+                   || is_same_group(rch, ch))
                {
-                     if (IS_NPC(rch) && IS_NPC(ch) && can_see(rch, ch->fighting) && 
-                         (get_psuedo_level(ch) - get_psuedo_level(victim)) < 10 )
+                  if (IS_NPC(rch) && IS_NPC(ch) && can_see(rch, ch->fighting) &&
+                      (get_psuedo_level(ch) - get_psuedo_level(victim)) < 10)
+                  {
+                     if ((victim->fighting != NULL) && (rch->fighting == NULL))
                      {
-                        if ((victim->fighting != NULL) && (rch->fighting == NULL))
-                        {
-                           char actbuf[MSL];
-                           sprintf(actbuf, "$n screams, 'BANZAI!! $N must be assisted!!'");
-                           act(actbuf, rch, NULL, ch, TO_ROOM);
-                           sprintf(actbuf, "You scream, 'BANZAI!! $N must be assisted!!'");
-                           act(actbuf, rch, NULL, ch, TO_CHAR);
-                           set_fighting(rch, ch->fighting, TRUE);
-                        }
+                        char actbuf[MSL];
+                        sprintf(actbuf, "$n screams, 'BANZAI!! $N must be assisted!!'");
+                        act(actbuf, rch, NULL, ch, TO_ROOM);
+                        sprintf(actbuf, "You scream, 'BANZAI!! $N must be assisted!!'");
+                        act(actbuf, rch, NULL, ch, TO_CHAR);
+                        set_fighting(rch, ch->fighting, TRUE);
                      }
+                  }
                }
-
             }
          }
       }
@@ -267,11 +270,8 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
    if (IS_SET(stance_app[ch->stance].specials, STANCE_NO_HIT))
       return;
 
-   if (should_summon_cast_round(IS_NPC(ch),
-                                is_player_summon_special(ch->spec_fun),
-                                is_fighting(ch),
-                                ch->spec_fun != NULL,
-                                TRUE))
+   if (should_summon_cast_round(IS_NPC(ch), is_player_summon_special(ch->spec_fun), is_fighting(ch),
+                                ch->spec_fun != NULL, TRUE))
    {
       (*ch->spec_fun)(ch);
       return;
@@ -280,7 +280,10 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
    if (IS_NPC(ch) && is_player_summon_special(ch->spec_fun))
       return;
 
-   if ((((wield1 = get_eq_char(ch, WEAR_HOLD_HAND_L)) != NULL) && (wield1->item_type == ITEM_WEAPON)) && (((wield2 = get_eq_char(ch, WEAR_HOLD_HAND_R)) != NULL) && (wield2->item_type == ITEM_WEAPON)))
+   if ((((wield1 = get_eq_char(ch, WEAR_HOLD_HAND_L)) != NULL) &&
+        (wield1->item_type == ITEM_WEAPON)) &&
+       (((wield2 = get_eq_char(ch, WEAR_HOLD_HAND_R)) != NULL) &&
+        (wield2->item_type == ITEM_WEAPON)))
       dual_chance = 15;
 
    int hits = 0;
@@ -342,8 +345,7 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
       {
          if (!IS_MORTAL_CLASS(i))
             continue;
-         if (gclass_table[i].attr_prime == APPLY_INT ||
-             gclass_table[i].attr_prime == APPLY_WIS)
+         if (gclass_table[i].attr_prime == APPLY_INT || gclass_table[i].attr_prime == APPLY_WIS)
             continue;
          if (ch->class_level[i] > 10)
             hits++;
@@ -385,7 +387,8 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 
    shortfight_emit_autoattack_summary(ch, victim);
 
-   if (!IS_NPC(ch) && ch->stance > 0 && ((IS_SET(stance_app[victim->stance].specials, STANCE_NINJA))))
+   if (!IS_NPC(ch) && ch->stance > 0 &&
+       ((IS_SET(stance_app[victim->stance].specials, STANCE_NINJA))))
    {
       send_to_char("You step out of the shadows.\n\r", ch);
       ch->stance = 0;
@@ -440,7 +443,8 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
    if (dt == TYPE_UNDEFINED)
    {
       dt = TYPE_HIT;
-      if (wield != NULL && wield->item_type == ITEM_WEAPON && !IS_SET(wield->extra_flags, ITEM_FIST))
+      if (wield != NULL && wield->item_type == ITEM_WEAPON &&
+          !IS_SET(wield->extra_flags, ITEM_FIST))
          dt += wield->value[3];
    }
 
@@ -466,7 +470,8 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
    if (dt == gsn_backstab || dt == gsn_circle)
       victim_ac += 300;
 
-   diceroll = number_range((get_psuedo_level(ch) * 5), (get_psuedo_level(ch) * 21)) + get_hitroll(ch);
+   diceroll =
+       number_range((get_psuedo_level(ch) * 5), (get_psuedo_level(ch) * 21)) + get_hitroll(ch);
 
    if (!IS_NPC(ch))
       diceroll += number_range(get_psuedo_level(ch), (get_psuedo_level(ch) * 1));
@@ -606,10 +611,12 @@ bool is_safe(CHAR_DATA *ch, CHAR_DATA *victim)
       return FALSE;
    if (IS_SET(victim->act, PLR_THIEF))
       return FALSE;
-   if (!IS_NPC(ch) && !IS_NPC(victim) && IS_SET(victim->pcdata->pflags, PFLAG_PKOK) && IS_SET(ch->pcdata->pflags, PFLAG_PKOK))
+   if (!IS_NPC(ch) && !IS_NPC(victim) && IS_SET(victim->pcdata->pflags, PFLAG_PKOK) &&
+       IS_SET(ch->pcdata->pflags, PFLAG_PKOK))
       return FALSE;
 
-   if (((victim->level < 10) || (victim->level + 20 < ch->level)) && (!IS_NPC(victim)) && (!IS_NPC(ch)))
+   if (((victim->level < 10) || (victim->level + 20 < ch->level)) && (!IS_NPC(victim)) &&
+       (!IS_NPC(ch)))
    {
       send_to_char("The Gods prevent your foul deed.\n\r", ch);
       return TRUE;
@@ -626,14 +633,12 @@ struct hunt_mobs_tp
    char *name;
 }
 
-hunt_mobs[] =
-    {
-        {3062, 3001, 0, "Bug"},
-        {3561, 3001, 40, "Shadow Dragon"},
-        {18302, 3001, 80, "Bounty Hunter"},
-        {18301, 3001, 100, "The Avenger"},
-        {18306, 3001, 240, "Blayze"},
-        {-1, -1, -1, " "}};
+hunt_mobs[] = {{3062, 3001, 0, "Bug"},
+               {3561, 3001, 40, "Shadow Dragon"},
+               {18302, 3001, 80, "Bounty Hunter"},
+               {18301, 3001, 100, "The Avenger"},
+               {18306, 3001, 240, "Blayze"},
+               {-1, -1, -1, " "}};
 
 /*
  * See if an attack justifies a KILLER flag.
@@ -665,9 +670,10 @@ void check_killer(CHAR_DATA *ch, CHAR_DATA *victim)
     * NPC's are fair game.
     * So are killers and thieves.
     */
-   if (IS_NPC(victim) || IS_SET(victim->act, PLR_KILLER) || IS_SET(victim->in_room->room_flags, ROOM_PK) /* -S- Mod */
-       || IS_SET(victim->act, PLR_THIEF)                                                                  /*
-                                                                                                          * || ( ch->fighting == victim )  */
+   if (IS_NPC(victim) || IS_SET(victim->act, PLR_KILLER) ||
+       IS_SET(victim->in_room->room_flags, ROOM_PK) /* -S- Mod */
+       || IS_SET(victim->act, PLR_THIEF)            /*
+                                                     * || ( ch->fighting == victim )  */
        || (ch == victim))
       return;
 
@@ -686,7 +692,8 @@ void check_killer(CHAR_DATA *ch, CHAR_DATA *victim)
    if (!IS_NPC(ch) && !IS_NPC(victim))
    {
 
-      if ((ch->pcdata->clan != 0) && (victim->pcdata->clan != 0) && (politics_data.diplomacy[ch->pcdata->clan][victim->pcdata->clan] < -450))
+      if ((ch->pcdata->clan != 0) && (victim->pcdata->clan != 0) &&
+          (politics_data.diplomacy[ch->pcdata->clan][victim->pcdata->clan] < -450))
          return;
 
       if (IS_SET(ch->pcdata->pflags, PFLAG_PKOK) && IS_SET(victim->pcdata->pflags, PFLAG_PKOK))
@@ -774,14 +781,15 @@ void check_killer(CHAR_DATA *ch, CHAR_DATA *victim)
    /*
     * do_gossip( hunter, "Well, someone's gonna get it!" );
     */
-   set_hunt(hunter, NULL, ch, NULL, HUNT_WORLD | HUNT_OPENDOOR | HUNT_PICKDOOR | HUNT_UNLOCKDOOR | HUNT_INFORM,
+   set_hunt(hunter, NULL, ch, NULL,
+            HUNT_WORLD | HUNT_OPENDOOR | HUNT_PICKDOOR | HUNT_UNLOCKDOOR | HUNT_INFORM,
             HUNT_CR | HUNT_MERC);
 
    return;
 }
 
-
-bool shortfight_summary_recipient_matches(CHAR_DATA *rch, CHAR_DATA *ch, CHAR_DATA *victim, bool expected_shortfight)
+bool shortfight_summary_recipient_matches(CHAR_DATA *rch, CHAR_DATA *ch, CHAR_DATA *victim,
+                                          bool expected_shortfight)
 {
    bool rch_shortfight;
 
@@ -797,9 +805,8 @@ bool shortfight_summary_recipient_matches(CHAR_DATA *rch, CHAR_DATA *ch, CHAR_DA
 
 bool shortfight_can_broadcast_room_summary(CHAR_DATA *ch, CHAR_DATA *victim)
 {
-   return ch != NULL && victim != NULL
-       && ch->in_room != NULL && victim->in_room != NULL
-       && ch->in_room == victim->in_room;
+   return ch != NULL && victim != NULL && ch->in_room != NULL && victim->in_room != NULL &&
+          ch->in_room == victim->in_room;
 }
 
 void shortfight_emit_autoattack_summary(CHAR_DATA *ch, CHAR_DATA *victim)
@@ -816,13 +823,19 @@ void shortfight_emit_autoattack_summary(CHAR_DATA *ch, CHAR_DATA *victim)
 
       if (ch_shortfight == expected_shortfight)
       {
-         sprintf(buf, "@@cYou@@N autoattack summary vs @@c$N@@N: dealt @@e%d@@N, took @@r%d@@N reactive.", total_damage, reactive_damage);
+         sprintf(
+             buf,
+             "@@cYou@@N autoattack summary vs @@c$N@@N: dealt @@e%d@@N, took @@r%d@@N reactive.",
+             total_damage, reactive_damage);
          act(buf, ch, NULL, victim, TO_CHAR);
       }
 
       if (victim_shortfight == expected_shortfight)
       {
-         sprintf(buf, "@@c$n@@N autoattack summary vs @@cyou@@N: dealt @@e%d@@N, took @@r%d@@N reactive.", total_damage, reactive_damage);
+         sprintf(
+             buf,
+             "@@c$n@@N autoattack summary vs @@cyou@@N: dealt @@e%d@@N, took @@r%d@@N reactive.",
+             total_damage, reactive_damage);
          act(buf, ch, NULL, victim, TO_VICT);
       }
 
@@ -833,7 +846,10 @@ void shortfight_emit_autoattack_summary(CHAR_DATA *ch, CHAR_DATA *victim)
             if (!shortfight_summary_recipient_matches(rch, ch, victim, expected_shortfight))
                continue;
 
-            sprintf(buf, "@@c%s@@N autoattack summary vs @@c%s@@N: dealt @@e%d@@N, took @@r%d@@N reactive.\n\r", PERS(ch, rch), PERS(victim, rch), total_damage, reactive_damage);
+            sprintf(buf,
+                    "@@c%s@@N autoattack summary vs @@c%s@@N: dealt @@e%d@@N, took @@r%d@@N "
+                    "reactive.\n\r",
+                    PERS(ch, rch), PERS(victim, rch), total_damage, reactive_damage);
             send_to_char(buf, rch);
          }
       }
@@ -870,7 +886,7 @@ int get_level_scaled_avoidance_baseline(CHAR_DATA *ch, CHAR_DATA *victim, int ba
     * Baseline avoidance expectations:
     *  - PC vs PC and NPC vs NPC: equal levels anchor the baseline.
     *  - NPC victim vs PC attacker: victim being 20 levels higher anchors the baseline.
- *  - NPC attacker vs PC victim: attacker being 20 levels higher anchors the baseline.
+    *  - NPC attacker vs PC victim: attacker being 20 levels higher anchors the baseline.
     */
    if (!IS_NPC(ch) && IS_NPC(victim))
       level_diff -= 20;
@@ -903,7 +919,8 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    if (IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS))
       max_avoidance += 20;
 
-   int parry = get_level_scaled_avoidance_baseline(ch, victim, 10) + get_parry(victim) - get_evasion_piercing(ch);
+   int parry = get_level_scaled_avoidance_baseline(ch, victim, 10) + get_parry(victim) -
+               get_evasion_piercing(ch);
    if (!can_see(ch, victim) && parry > 0)
       parry += 20;
    if (!can_see(victim, ch) && parry > 0)
@@ -920,10 +937,12 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
 
    if (chance < parry)
    {
-      if (!(!IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT) && short_fight_round_active(ch, victim)))
+      if (!(!IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT) &&
+            short_fight_round_active(ch, victim)))
          act("You parry $n's attack.", ch, NULL, victim, TO_VICT);
 
-      if (!(!IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT) && short_fight_round_active(ch, victim)))
+      if (!(!IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT) &&
+            short_fight_round_active(ch, victim)))
          act("$N parries your attack.", ch, NULL, victim, TO_CHAR);
 
       act_avoidance_notvict(ch, victim, "parries");
@@ -934,7 +953,8 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       return TRUE;
    }
 
-   int block = get_level_scaled_avoidance_baseline(ch, victim, 30) + get_block(victim) - get_evasion_piercing(ch);
+   int block = get_level_scaled_avoidance_baseline(ch, victim, 30) + get_block(victim) -
+               get_evasion_piercing(ch);
    if (!can_see(ch, victim) && block > 0)
       block += 20;
    if (!can_see(victim, ch) && block > 0)
@@ -951,10 +971,12 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
 
    if (chance < parry + block)
    {
-      if (!(!IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT) && short_fight_round_active(ch, victim)))
+      if (!(!IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT) &&
+            short_fight_round_active(ch, victim)))
          act("You block $n's attack.", ch, NULL, victim, TO_VICT);
 
-      if (!(!IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT) && short_fight_round_active(ch, victim)))
+      if (!(!IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT) &&
+            short_fight_round_active(ch, victim)))
          act("$N blocks your attack.", ch, NULL, victim, TO_CHAR);
 
       act_avoidance_notvict(ch, victim, "blocks");
@@ -965,7 +987,8 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       return TRUE;
    }
 
-   int dodge = get_level_scaled_avoidance_baseline(ch, victim, 10) + get_dodge(victim) - get_evasion_piercing(ch);
+   int dodge = get_level_scaled_avoidance_baseline(ch, victim, 10) + get_dodge(victim) -
+               get_evasion_piercing(ch);
    if (!can_see(ch, victim) && dodge > 0)
       dodge += 20;
    if (!can_see(victim, ch) && dodge > 0)
@@ -982,10 +1005,12 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
 
    if (chance < parry + block + dodge)
    {
-      if (!(!IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT) && short_fight_round_active(ch, victim)))
+      if (!(!IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT) &&
+            short_fight_round_active(ch, victim)))
          act("You dodge $n's attack.", ch, NULL, victim, TO_VICT);
 
-      if (!(!IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT) && short_fight_round_active(ch, victim)))
+      if (!(!IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT) &&
+            short_fight_round_active(ch, victim)))
          act("$N dodges your attack.", ch, NULL, victim, TO_CHAR);
 
       act_avoidance_notvict(ch, victim, "dodges");
@@ -1175,10 +1200,12 @@ int get_counter(CHAR_DATA *ch)
 
    int fists = 0;
 
-   if (get_eq_char(ch, WEAR_HOLD_HAND_L) != NULL && IS_SET(get_eq_char(ch, WEAR_HOLD_HAND_L)->extra_flags, ITEM_FIST))
+   if (get_eq_char(ch, WEAR_HOLD_HAND_L) != NULL &&
+       IS_SET(get_eq_char(ch, WEAR_HOLD_HAND_L)->extra_flags, ITEM_FIST))
       fists++;
 
-   if (get_eq_char(ch, WEAR_HOLD_HAND_R) != NULL && IS_SET(get_eq_char(ch, WEAR_HOLD_HAND_R)->extra_flags, ITEM_FIST))
+   if (get_eq_char(ch, WEAR_HOLD_HAND_R) != NULL &&
+       IS_SET(get_eq_char(ch, WEAR_HOLD_HAND_R)->extra_flags, ITEM_FIST))
       fists++;
 
    if (ch->class_level[CLASS_MON] > 0 || ch->class_level[CLASS_BRA] > 0)
@@ -1416,7 +1443,8 @@ void do_murder(CHAR_DATA *ch, char *argument)
    sprintf(buf, "%s attacked by %s.\n\r", victim->name, ch->name);
    notify(buf, MAX_LEVEL - 2);
 
-   if (IS_NPC(ch) || IS_NPC(victim) || !IS_SET(ch->pcdata->pflags, PFLAG_PKOK) || !IS_SET(victim->pcdata->pflags, PFLAG_PKOK))
+   if (IS_NPC(ch) || IS_NPC(victim) || !IS_SET(ch->pcdata->pflags, PFLAG_PKOK) ||
+       !IS_SET(victim->pcdata->pflags, PFLAG_PKOK))
    {
       /*
        * If not pkok people, do yell.
@@ -1485,7 +1513,11 @@ void do_flee(CHAR_DATA *ch, char *argument)
       int door;
 
       door = number_door();
-      if ((pexit = was_in->exit[door]) == 0 || pexit->to_room == NULL || IS_SET(pexit->exit_info, EX_CLOSED) || (IS_NPC(ch) && (IS_SET(pexit->to_room->room_flags, ROOM_NO_MOB) || (IS_SET(ch->act, ACT_STAY_AREA) && pexit->to_room->area != ch->in_room->area))))
+      if ((pexit = was_in->exit[door]) == 0 || pexit->to_room == NULL ||
+          IS_SET(pexit->exit_info, EX_CLOSED) ||
+          (IS_NPC(ch) &&
+           (IS_SET(pexit->to_room->room_flags, ROOM_NO_MOB) ||
+            (IS_SET(ch->act, ACT_STAY_AREA) && pexit->to_room->area != ch->in_room->area))))
          continue;
 
       move_char(ch, door);
@@ -1525,7 +1557,8 @@ void do_flee(CHAR_DATA *ch, char *argument)
        * 75% chance that mobs will hunt fleeing people. -- Alty
        */
       if (IS_NPC(victim) && !IS_SET(victim->act, ACT_SENTINEL) && number_bits(2) > 0)
-         set_hunt(victim, NULL, ch, NULL, HUNT_WORLD | HUNT_INFORM | HUNT_OPENDOOR, HUNT_MERC | HUNT_CR);
+         set_hunt(victim, NULL, ch, NULL, HUNT_WORLD | HUNT_INFORM | HUNT_OPENDOOR,
+                  HUNT_MERC | HUNT_CR);
       return;
    }
 
@@ -1647,7 +1680,8 @@ void do_assist(CHAR_DATA *ch, char *argument)
    /*
     * Assisting leader is main priority
     */
-   if ((ch->leader != NULL) && (ch->leader->in_room == ch->in_room) && (ch->leader->fighting != NULL) && (!is_fighting(ch)) && (ch->leader != ch))
+   if ((ch->leader != NULL) && (ch->leader->in_room == ch->in_room) &&
+       (ch->leader->fighting != NULL) && (!is_fighting(ch)) && (ch->leader != ch))
    {
       sprintf(actbuf, "$n screams, '%s'", "BANZAI!! $N must be assisted!!");
       act(actbuf, ch, NULL, ch->leader, TO_ROOM);

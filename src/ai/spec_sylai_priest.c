@@ -57,7 +57,8 @@ bool spec_sylai_priest(CHAR_DATA *ch)
    char_from_room(victim);
 
    char_to_room(victim, location);
-   act("$n lands on the floor, having fallen from the outcrop above!", victim, NULL, NULL, TO_NOTVICT);
+   act("$n lands on the floor, having fallen from the outcrop above!", victim, NULL, NULL,
+       TO_NOTVICT);
    send_to_char("You crash to the floor below!\n\r", victim);
    do_look(victim, "");
    return TRUE;

@@ -37,11 +37,13 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
          send_to_char(buf, ch);
       }
       send_to_char("\n\r", ch);
-      sprintf(buf, "Reincarnate HP: %d Mana: %d Move: %d Statcap: %d, Damcap: %d\n\r", 
-         ch->pcdata->reincarnation_data[REINCARNATION_HP]/10, ch->pcdata->reincarnation_data[REINCARNATION_MANA]/10, 
-         ch->pcdata->reincarnation_data[REINCARNATION_MOVE]/10, ch->pcdata->reincarnation_data[REINCARNATION_STATCAP], 
-         ch->pcdata->reincarnation_data[REINCARNATION_DAMCAP]);
-      send_to_char(buf,ch);
+      sprintf(buf, "Reincarnate HP: %d Mana: %d Move: %d Statcap: %d, Damcap: %d\n\r",
+              ch->pcdata->reincarnation_data[REINCARNATION_HP] / 10,
+              ch->pcdata->reincarnation_data[REINCARNATION_MANA] / 10,
+              ch->pcdata->reincarnation_data[REINCARNATION_MOVE] / 10,
+              ch->pcdata->reincarnation_data[REINCARNATION_STATCAP],
+              ch->pcdata->reincarnation_data[REINCARNATION_DAMCAP]);
+      send_to_char(buf, ch);
    }
    else if (!str_prefix(arg, "buy"))
    {
@@ -58,37 +60,46 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
       if (!str_prefix(arg, "help"))
       {
          send_to_char("Buy:\n\r", ch);
-         sprintf(buf,"Damcap %d: %d\n\r", ch->pcdata->reincarnation_data[REINCARNATION_DAMCAP]+1, ch->pcdata->reincarnation_data[REINCARNATION_DAMCAP]*2+1);
-         send_to_char(buf,ch);
-         sprintf(buf,"Statcap %d: %d\n\r", ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]+1, ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]*ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]+1);
-         send_to_char(buf,ch);
+         sprintf(buf, "Damcap %d: %d\n\r", ch->pcdata->reincarnation_data[REINCARNATION_DAMCAP] + 1,
+                 ch->pcdata->reincarnation_data[REINCARNATION_DAMCAP] * 2 + 1);
+         send_to_char(buf, ch);
+         sprintf(buf, "Statcap %d: %d\n\r",
+                 ch->pcdata->reincarnation_data[REINCARNATION_STATCAP] + 1,
+                 ch->pcdata->reincarnation_data[REINCARNATION_STATCAP] *
+                         ch->pcdata->reincarnation_data[REINCARNATION_STATCAP] +
+                     1);
+         send_to_char(buf, ch);
 
          return;
       }
       if (!str_prefix(arg, "damcap"))
       {
-         int cost = ch->pcdata->reincarnation_data[REINCARNATION_DAMCAP]*2+1;
+         int cost = ch->pcdata->reincarnation_data[REINCARNATION_DAMCAP] * 2 + 1;
          if (ch->pcdata->reincarnation_data[REINCARNATION_POINTS] < cost)
          {
-            send_to_char("You do not have enough reincarnation points to increase your damcap.\n\r",ch);
+            send_to_char("You do not have enough reincarnation points to increase your damcap.\n\r",
+                         ch);
             return;
          }
          ch->pcdata->reincarnation_data[REINCARNATION_POINTS] -= cost;
          ch->pcdata->reincarnation_data[REINCARNATION_DAMCAP]++;
-         send_to_char("Reincarnation damcap permanently increased!\n\r",ch);
+         send_to_char("Reincarnation damcap permanently increased!\n\r", ch);
          return;
       }
       if (!str_prefix(arg, "statcap"))
       {
-         int cost = ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]*ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]+1;
+         int cost = ch->pcdata->reincarnation_data[REINCARNATION_STATCAP] *
+                        ch->pcdata->reincarnation_data[REINCARNATION_STATCAP] +
+                    1;
          if (ch->pcdata->reincarnation_data[REINCARNATION_POINTS] < cost)
          {
-            send_to_char("You do not have enough reincarnation points to increase your statcap.\n\r",ch);
+            send_to_char(
+                "You do not have enough reincarnation points to increase your statcap.\n\r", ch);
             return;
          }
          ch->pcdata->reincarnation_data[REINCARNATION_POINTS] -= cost;
          ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]++;
-         send_to_char("Reincarnation statcap permanently increased!\n\r",ch);
+         send_to_char("Reincarnation statcap permanently increased!\n\r", ch);
          return;
       }
    }
@@ -108,7 +119,8 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
          else
             sprintf(buf, "Race: (not set)\n\r");
          send_to_char(buf, ch);
-         if (IS_SET(ch->pcdata->reincarnate_confirm, REINCARNATE_CLASS) && ch->pcdata->reincarnate_class >= 0)
+         if (IS_SET(ch->pcdata->reincarnate_confirm, REINCARNATE_CLASS) &&
+             ch->pcdata->reincarnate_class >= 0)
             sprintf(buf, "Class: %s\n\r", gclass_table[ch->pcdata->reincarnate_class].class_name);
          else
             sprintf(buf, "Class: (not set)\n\r");
@@ -157,7 +169,8 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
          {
             if (!IS_MORTAL_CLASS(i))
                continue;
-            if (!str_cmp(arg, gclass_table[i].who_name) || !str_cmp(arg, gclass_table[i].class_name))
+            if (!str_cmp(arg, gclass_table[i].who_name) ||
+                !str_cmp(arg, gclass_table[i].class_name))
             {
                ch->pcdata->reincarnate_class = i;
                sprintf(buf, "%s selected as reincarnation class.\n\r", gclass_table[i].class_name);
@@ -168,7 +181,8 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
 
          if (ch->pcdata->reincarnate_class == -1)
          {
-            send_to_char("Invalid class selection. Use who_name or class_name, e.g. MAG or Magi.\n\r", ch);
+            send_to_char(
+                "Invalid class selection. Use who_name or class_name, e.g. MAG or Magi.\n\r", ch);
             return;
          }
 
@@ -256,17 +270,20 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
 
 int get_reincarnate_hp_level(CHAR_DATA *ch)
 {
-   return stat_calculated_value(ch->pcdata->reincarnation_data[REINCARNATION_HP], ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]);
+   return stat_calculated_value(ch->pcdata->reincarnation_data[REINCARNATION_HP],
+                                ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]);
 }
 
 int get_reincarnate_mana_level(CHAR_DATA *ch)
 {
-   return stat_calculated_value(ch->pcdata->reincarnation_data[REINCARNATION_MANA], ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]);
+   return stat_calculated_value(ch->pcdata->reincarnation_data[REINCARNATION_MANA],
+                                ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]);
 }
 
 int get_reincarnate_move_level(CHAR_DATA *ch)
 {
-   return stat_calculated_value(ch->pcdata->reincarnation_data[REINCARNATION_MOVE], ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]);
+   return stat_calculated_value(ch->pcdata->reincarnation_data[REINCARNATION_MOVE],
+                                ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]);
 }
 
 int stat_calculated_value(int val, int statcap_bonus)
