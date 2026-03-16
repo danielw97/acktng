@@ -222,15 +222,15 @@ long get_cost_to_level_remort(CHAR_DATA *ch, int class)
    int base, i;
    bool double_remort = FALSE;
 
-   if (class > MAX_REMORT)
+   if (class < CLASS_SOR || class > CLASS_BRA)
       return -69;
 
-   base = ch->class_level[MAX_CLASS + class] * ch->class_level[MAX_CLASS + class];
+   base = ch->class_level[class] * ch->class_level[class];
 
    // Gotta check if double remort
-   for (i = 0; i < MAX_REMORT; i++)
+   for (i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
    {
-      if (i != class && ch->class_level[MAX_CLASS + i] > 0)
+      if (i != class && ch->class_level[i] > 0)
       {
          double_remort = TRUE;
       }
@@ -340,15 +340,15 @@ int get_max_str(CHAR_DATA *ch)
    if (!IS_NPC(ch) && gclass_table[ch->pcdata->order[0]].attr_prime == APPLY_STR)
       max++;
 
-   for (int i = 0; i < MAX_REMORT; i++)
+   for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
    {
-      if (ch->class_level[MAX_CLASS + i] > 0 && gclass_table[MAX_CLASS + i].attr_prime == APPLY_STR)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_STR)
          max++;
    }
 
-   for (int i = 0; i < MAX_CLASS; i++)
+   for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
    {
-      if (ch->class_level[MAX_CLASS + MAX_REMORT + i] > 0 && gclass_table[MAX_CLASS + MAX_REMORT + i].attr_prime == APPLY_STR)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_STR)
          max++;
    }
 
@@ -381,15 +381,15 @@ int get_max_int(CHAR_DATA *ch)
    if (!IS_NPC(ch) && gclass_table[ch->pcdata->order[0]].attr_prime == APPLY_INT)
       max++;
 
-   for (int i = 0; i < MAX_REMORT; i++)
+   for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
    {
-      if (ch->class_level[MAX_CLASS + i] > 0 && gclass_table[MAX_CLASS + i].attr_prime == APPLY_INT)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_INT)
          max++;
    }
 
-   for (int i = 0; i < MAX_CLASS; i++)
+   for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
    {
-      if (ch->class_level[MAX_CLASS + MAX_REMORT + i] > 0 && gclass_table[MAX_CLASS + MAX_REMORT + i].attr_prime == APPLY_INT)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_INT)
          max++;
    }
 
@@ -425,15 +425,15 @@ int get_max_wis(CHAR_DATA *ch)
    if (!IS_NPC(ch) && gclass_table[ch->pcdata->order[0]].attr_prime == APPLY_WIS)
       max++;
 
-   for (int i = 0; i < MAX_REMORT; i++)
+   for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
    {
-      if (ch->class_level[MAX_CLASS + i] > 0 && gclass_table[MAX_CLASS + i].attr_prime == APPLY_WIS)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_WIS)
          max++;
    }
 
-   for (int i = 0; i < MAX_CLASS; i++)
+   for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
    {
-      if (ch->class_level[MAX_CLASS + MAX_REMORT + i] > 0 && gclass_table[MAX_CLASS + MAX_REMORT + i].attr_prime == APPLY_WIS)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_WIS)
          max++;
    }
 
@@ -467,15 +467,15 @@ int get_max_dex(CHAR_DATA *ch)
    if (!IS_NPC(ch) && gclass_table[ch->pcdata->order[0]].attr_prime == APPLY_DEX)
       max++;
 
-   for (int i = 0; i < MAX_REMORT; i++)
+   for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
    {
-      if (ch->class_level[MAX_CLASS + i] > 0 && gclass_table[MAX_CLASS + i].attr_prime == APPLY_DEX)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_DEX)
          max++;
    }
 
-   for (int i = 0; i < MAX_CLASS; i++)
+   for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
    {
-      if (ch->class_level[MAX_CLASS + MAX_REMORT + i] > 0 && gclass_table[MAX_CLASS + MAX_REMORT + i].attr_prime == APPLY_DEX)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_DEX)
          max++;
    }
 
@@ -508,15 +508,15 @@ int get_max_con(CHAR_DATA *ch)
    if (!IS_NPC(ch) && gclass_table[ch->pcdata->order[0]].attr_prime == APPLY_CON)
       max++;
 
-   for (int i = 0; i < MAX_REMORT; i++)
+   for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
    {
-      if (ch->class_level[MAX_CLASS + i] > 0 && gclass_table[MAX_CLASS + i].attr_prime == APPLY_CON)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_CON)
          max++;
    }
 
-   for (int i = 0; i < MAX_CLASS; i++)
+   for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
    {
-      if (ch->class_level[MAX_CLASS + MAX_REMORT + i] > 0 && gclass_table[MAX_CLASS + MAX_REMORT + i].attr_prime == APPLY_CON)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_CON)
          max++;
    }
 

@@ -4006,16 +4006,16 @@ void do_setclass(CHAR_DATA *ch, char *argument)
          cok = TRUE;
          break;
       }
-      if (!str_cmp(arg2, gclass_table[MAX_CLASS + iClass].who_name))
+      if (!str_cmp(arg2, gclass_table[CLASS_SOR + iClass].who_name))
       {
-         class = iClass;
+         class = CLASS_SOR + iClass;
          cok = TRUE;
          remort = TRUE;
          break;
       }
-      if (!str_cmp(arg2, gclass_table[MAX_CLASS + iClass + MAX_CLASS].who_name))
+      if (!str_cmp(arg2, gclass_table[CLASS_GMA + iClass].who_name))
       {
-         class = iClass + MAX_CLASS;
+         class = CLASS_GMA + iClass;
          cok = TRUE;
          remort = TRUE;
          break;
@@ -4084,12 +4084,12 @@ void do_setclass(CHAR_DATA *ch, char *argument)
     *   -- Swiftest
     */
 
-   if (value == (remort ? victim->class_level[MAX_CLASS + class] : victim->class_level[class]))
+   if (value == (remort ? victim->class_level[class] : victim->class_level[class]))
    {
       send_to_char("That wouldn't accomplish much!\n\r", ch);
       return;
    }
-   if (value < (remort ? victim->class_level[MAX_CLASS + class] : victim->class_level[class]))
+   if (value < (remort ? victim->class_level[class] : victim->class_level[class]))
    {
       send_to_char("Lowering a player's level!\n\r", ch);
       send_to_char("**** OOOOHHHHHHHHHH  NNNNOOOO ****\n\r", victim);
@@ -4097,9 +4097,9 @@ void do_setclass(CHAR_DATA *ch, char *argument)
       if (remort)
       {
          if (value != -1)
-            victim->class_level[MAX_CLASS + class] = value;
+            victim->class_level[class] = value;
          else
-            victim->class_level[MAX_CLASS + class] = -1;
+            victim->class_level[class] = -1;
       }
       else if (value < 1)
          victim->class_level[class] = -1;
@@ -4121,9 +4121,9 @@ void do_setclass(CHAR_DATA *ch, char *argument)
    }
    if (remort)
    {
-      sprintf(buf, "You are now level %d in your %s class.\n\r", value, gclass_table[MAX_CLASS + class].class_name);
+      sprintf(buf, "You are now level %d in your %s class.\n\r", value, gclass_table[class].class_name);
       send_to_char(buf, victim);
-      victim->class_level[MAX_CLASS + class] = value;
+      victim->class_level[class] = value;
    }
    victim->exp = 0;
    victim->trust = 0;

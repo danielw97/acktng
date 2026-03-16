@@ -180,28 +180,28 @@ int get_best_level(CHAR_DATA *ch, int gsn)
    }
    else if (SKILL_TIER(gsn) == REMORT)
    {
-      for(int i = 0; i < MAX_REMORT; i++)
+      for(int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
       {
          int required_level = skill_table[gsn].skill_level[i];
 
          if (required_level < 0)
             continue;
 
-         if (ch->class_level[MAX_CLASS + i] >= required_level && ch->class_level[MAX_CLASS + i] > best)
-            best = ch->class_level[MAX_CLASS + i];
+         if (ch->class_level[i] >= required_level && ch->class_level[i] > best)
+            best = ch->class_level[i];
       }
    }
    else if (SKILL_TIER(gsn) == ADEPT)
    {
-      for(int i = 0; i < MAX_CLASS; i++)
+      for(int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
       {
          int required_level = skill_table[gsn].skill_level[i];
 
          if (required_level < 0)
             continue;
 
-         if (ch->class_level[MAX_CLASS + MAX_REMORT + i] >= required_level && ch->class_level[MAX_CLASS + MAX_REMORT + i] > best)
-            best = ch->class_level[MAX_CLASS + MAX_REMORT + i];
+         if (ch->class_level[i] >= required_level && ch->class_level[i] > best)
+            best = ch->class_level[i];
       }
    }
 

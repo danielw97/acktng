@@ -236,18 +236,18 @@ void advance_level_remort(CHAR_DATA *ch, int class, bool show)
    int add_mana;
    int add_move;
 
-   if (ch->class_level[MAX_CLASS + class] < 0)
-      ch->class_level[MAX_CLASS + class] = 1;
-   else if (ch->class_level[MAX_CLASS + class] < MAX_LEVEL)
-      ch->class_level[MAX_CLASS + class] += 1;
+   if (ch->class_level[class] < 0)
+      ch->class_level[class] = 1;
+   else if (ch->class_level[class] < MAX_LEVEL)
+      ch->class_level[class] += 1;
    else
    {
       send_to_char("Trying to advance_level_remort past MAX_LEVEL, error!\n\r", ch);
       return;
    }
-   add_hp = gclass_table[MAX_CLASS + class].hp_gain;
+   add_hp = gclass_table[class].hp_gain;
    add_hp += get_curr_con(ch) / 4;
-   add_mana = gclass_table[MAX_CLASS + class].mana_gain;
+   add_mana = gclass_table[class].mana_gain;
    ;
    if (add_mana > 0)
       add_mana += (get_curr_int(ch) + get_curr_wis(ch)) / 4;
@@ -281,21 +281,21 @@ void advance_level_adept(CHAR_DATA *ch, int class, bool show)
    int add_mana;
    int add_move;
 
-   if (ch->class_level[MAX_CLASS + MAX_REMORT + class] < 1)
+   if (ch->class_level[class] < 1)
    {
       ch->exp /= 1000;
-      ch->class_level[MAX_CLASS + MAX_REMORT + class] = 1;
+      ch->class_level[class] = 1;
    }
-   else if (ch->class_level[MAX_CLASS + MAX_REMORT + class] < MAX_ADEPT)
-      ch->class_level[MAX_CLASS + MAX_REMORT + class] += 1;
+   else if (ch->class_level[class] < MAX_ADEPT)
+      ch->class_level[class] += 1;
    else
    {
       send_to_char("Trying to advance_level_adept past MAX_ADEPT, error!\n\r", ch);
       return;
    }
-   add_hp = gclass_table[MAX_CLASS + MAX_REMORT + class].hp_gain;
+   add_hp = gclass_table[class].hp_gain;
    add_hp += get_curr_con(ch) / 2;
-   add_mana = gclass_table[MAX_CLASS + MAX_REMORT + class].mana_gain;
+   add_mana = gclass_table[class].mana_gain;
    if (add_mana > 0)
       add_mana += (get_curr_int(ch) + get_curr_wis(ch)) / 2;
 

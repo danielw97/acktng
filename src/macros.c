@@ -51,20 +51,20 @@ void reset_gain_stats(CHAR_DATA *ch)
       }
    }
 
-   for (int i = 0; i < MAX_REMORT; i++)
+   for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
    {
-      curr = ch->class_level[MAX_CLASS + i];
-      ch->class_level[MAX_CLASS + i] = -1;
+      curr = ch->class_level[i];
+      ch->class_level[i] = -1;
       for (int j = 0; j < curr; j++)
       {
          advance_level_remort(ch, i, FALSE);
       }
    }
 
-   for (int i = 0; i < MAX_CLASS; i++)
+   for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
    {
-      curr = ch->class_level[MAX_CLASS + MAX_REMORT + i];
-      ch->class_level[MAX_CLASS + MAX_REMORT + i] = -1;
+      curr = ch->class_level[i];
+      ch->class_level[i] = -1;
       for (int j = 0; j < curr; j++)
       {
          advance_level_adept(ch, i, FALSE);
@@ -87,9 +87,9 @@ sh_int get_remort_level(CHAR_DATA *ch)
    if (!is_remort(ch))
       return 0;
 
-   for (index = 0; index < MAX_CLASS; index++)
-      if (ch->class_level[MAX_CLASS + index] > max_remort_level)
-         max_remort_level = ch->class_level[MAX_CLASS + index];
+   for (index = CLASS_SOR; index < CLASS_SOR + MAX_CLASS; index++)
+      if (ch->class_level[index] > max_remort_level)
+         max_remort_level = ch->class_level[index];
    return max_remort_level;
 }
 
@@ -104,11 +104,11 @@ sh_int get_psuedo_level(CHAR_DATA *ch)
    else
    {
 
-      for (index = 0; index < MAX_REMORT; index++)
+      for (index = CLASS_SOR; index < CLASS_SOR + MAX_REMORT; index++)
 
-         if (ch->class_level[MAX_CLASS + index] > 0)
+         if (ch->class_level[index] > 0)
 
-            total_remort_level += ch->class_level[MAX_CLASS + index];
+            total_remort_level += ch->class_level[index];
 
       psuedo_level = (ch->level + (total_remort_level / 4));
    }
@@ -166,10 +166,10 @@ long exp_to_level_adept(CHAR_DATA *ch)
    int i;
    int max = 0;
 
-   for (i = 0; i < MAX_CLASS; i++)
+   for (i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
    {
-      if (ch->class_level[MAX_CLASS + MAX_REMORT + i] > max)
-         max = ch->class_level[MAX_CLASS + MAX_REMORT + i];
+      if (ch->class_level[i] > max)
+         max = ch->class_level[i];
    }
 
    if (!max)
@@ -194,7 +194,7 @@ long exp_to_level_remort(CHAR_DATA *ch, int index)
    if (IS_NPC(ch))
       return 69;
 
-   if (ch->class_level[MAX_CLASS + index] <= 0)
+   if (ch->class_level[index] <= 0)
       return 0;
 
    cost = get_cost_to_level_remort(ch, index);
@@ -447,11 +447,11 @@ int skill_table_lookup(CHAR_DATA *ch, int sn, int return_type)
          }
          break;
       case REMORT:
-         for (cnt = 0; cnt < MAX_REMORT; cnt++)
+         for (cnt = CLASS_SOR; cnt < CLASS_SOR + MAX_REMORT; cnt++)
          {
-            if (ch->class_level[MAX_CLASS + cnt] >= skill_table[sn].skill_level[cnt] && ch->class_level[MAX_CLASS + cnt] > best_level)
+            if (ch->class_level[cnt] >= skill_table[sn].skill_level[cnt] && ch->class_level[cnt] > best_level)
             {
-               best_level = ch->class_level[MAX_CLASS + cnt];
+               best_level = ch->class_level[cnt];
                best_class = cnt;
             }
          }
@@ -479,9 +479,9 @@ bool is_remort(CHAR_DATA *ch)
    if (IS_NPC(ch))
       return FALSE;
 
-   for (int i = 0; i < MAX_REMORT; i++)
+   for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
    {
-      if (ch->class_level[MAX_CLASS + i] > 0)
+      if (ch->class_level[i] > 0)
          return TRUE;
    }
 
@@ -493,9 +493,9 @@ bool is_adept(CHAR_DATA *ch)
    if (IS_NPC(ch))
       return FALSE;
 
-   for (int i = 0; i < MAX_CLASS; i++)
+   for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
    {
-      if (ch->class_level[MAX_CLASS + MAX_REMORT + i] > 0)
+      if (ch->class_level[i] > 0)
          return TRUE;
    }
 
@@ -506,10 +506,10 @@ int get_adept_level(CHAR_DATA *ch)
 {
    int max = 0;
 
-   for(int i = 0; i < MAX_CLASS; i++)
+   for(int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
    {
-      if (ch->class_level[MAX_CLASS + MAX_REMORT + i] > max)
-         max = ch->class_level[MAX_CLASS + MAX_REMORT + i];
+      if (ch->class_level[i] > max)
+         max = ch->class_level[i];
    }
 
    return max;

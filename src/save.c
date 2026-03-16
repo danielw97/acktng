@@ -266,13 +266,13 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
    fprintf(fp, "\n");
 
    fprintf(fp, "Remort       ");
-   for (cnt = 0; cnt < MAX_REMORT; cnt++)
-      fprintf(fp, "%2d ", ch->class_level[MAX_CLASS + cnt]);
+   for (cnt = CLASS_SOR; cnt < CLASS_SOR + MAX_REMORT; cnt++)
+      fprintf(fp, "%2d ", ch->class_level[cnt]);
    fprintf(fp, "\n");
 
    fprintf(fp, "Adept       ");
-   for (cnt = 0; cnt < MAX_CLASS; cnt++)
-      fprintf(fp, "%2d ", ch->class_level[MAX_CLASS + MAX_REMORT + cnt]);
+   for (cnt = CLASS_GMA; cnt < CLASS_GMA + MAX_CLASS; cnt++)
+      fprintf(fp, "%2d ", ch->class_level[cnt]);
    fprintf(fp, "\n");
 
    fprintf(fp, "Reincarnations ");
@@ -738,10 +738,10 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
          ch->pcdata->completed_static_quests[foo] = FALSE;
       for (foo = 0; foo < MAX_SUPERBOSS; foo++)
          ch->pcdata->superboss_kills[foo] = FALSE;
-      for (foo = 0; foo < MAX_REMORT; foo++)
-         ch->class_level[MAX_CLASS + foo] = -1;
-      for (foo = 0; foo < MAX_CLASS; foo++)
-         ch->class_level[MAX_CLASS + MAX_REMORT + foo] = -1;
+      for (foo = CLASS_SOR; foo < CLASS_SOR + MAX_REMORT; foo++)
+         ch->class_level[foo] = -1;
+      for (foo = CLASS_GMA; foo < CLASS_GMA + MAX_CLASS; foo++)
+         ch->class_level[foo] = -1;
       for (int i = 0; i < MAX_CLASS; i++)
          ch->pcdata->reincarnate_order[i] = 0;
       ch->pcdata->reincarnate_confirm = FALSE;
@@ -975,8 +975,8 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          KEY("Act", ch->act, fread_number(fp));
          if (!str_cmp(word, "Adept"))
          {
-            for (cnt = 0; cnt < MAX_CLASS; cnt++)
-               ch->class_level[MAX_CLASS + MAX_REMORT + cnt] = fread_number(fp);
+            for (cnt = CLASS_GMA; cnt < CLASS_GMA + MAX_CLASS; cnt++)
+               ch->class_level[cnt] = fread_number(fp);
             fMatch = TRUE;
             break;
          }
@@ -1489,8 +1489,8 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
          if (!str_cmp(word, "Remort"))
          {
-            for (cnt = 0; cnt < MAX_REMORT; cnt++)
-               ch->class_level[MAX_CLASS + cnt] = fread_number(fp);
+            for (cnt = CLASS_SOR; cnt < CLASS_SOR + MAX_REMORT; cnt++)
+               ch->class_level[cnt] = fread_number(fp);
             fMatch = TRUE;
             break;
          }
