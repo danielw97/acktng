@@ -6,6 +6,7 @@
 
 char *get_adept_name(CHAR_DATA *ch);
 int nocol_strlen(const char *text);
+char *center_text(char *text, int width);
 
 /* Minimal gclass_table: entries CLASS_GMA through CLASS_GMA+MAX_CLASS-1 are ADEPT */
 const struct class_type gclass_table[MAX_TOTAL_CLASS] = {
@@ -30,32 +31,32 @@ static void test_nocol_strlen_strips_color_codes(void)
    assert(nocol_strlen("") == 0);
 }
 
-static void test_get_adept_name_fallback_is_17_visible(void)
+static void test_get_adept_name_fallback_centered_is_18_visible(void)
 {
    CHAR_DATA ch;
    clear_character(&ch);
-   /* No adept levels set: returns generic fallback */
+   /* No adept levels set: returns generic fallback; centered to 18 must be 18 visible */
    char *name = get_adept_name(&ch);
-   int visible = nocol_strlen(name);
-   if (visible != 17)
-      printf("FAIL fallback: '%s' visible=%d (expected 17)\n", name, visible);
-   assert(visible == 17);
+   int visible = nocol_strlen(center_text(name, 18));
+   if (visible != 18)
+      printf("FAIL fallback centered: '%s' visible=%d (expected 18)\n", name, visible);
+   assert(visible == 18);
 }
 
-static void test_get_adept_name_realm_lord_is_17_visible(void)
+static void test_get_adept_name_realm_lord_centered_is_18_visible(void)
 {
    CHAR_DATA ch;
    clear_character(&ch);
    /* Set a level beyond MAX_ADEPT to trigger "Realm Lord" return */
    ch.class_level[CLASS_GMA] = MAX_ADEPT + 1;
    char *name = get_adept_name(&ch);
-   int visible = nocol_strlen(name);
-   if (visible != 17)
-      printf("FAIL realm lord: '%s' visible=%d (expected 17)\n", name, visible);
-   assert(visible == 17);
+   int visible = nocol_strlen(center_text(name, 18));
+   if (visible != 18)
+      printf("FAIL realm lord centered: '%s' visible=%d (expected 18)\n", name, visible);
+   assert(visible == 18);
 }
 
-static void test_get_adept_name_all_titles_are_17_visible(void)
+static void test_get_adept_name_all_titles_centered_are_18_visible(void)
 {
    CHAR_DATA ch;
    for (int cls = 0; cls < MAX_CLASS; cls++)
@@ -65,10 +66,18 @@ static void test_get_adept_name_all_titles_are_17_visible(void)
          clear_character(&ch);
          ch.class_level[CLASS_GMA + cls] = level;
          char *name = get_adept_name(&ch);
-         int visible = nocol_strlen(name);
-         if (visible != 17)
-            printf("FAIL class=%d level=%d: '%s' visible=%d (expected 17)\n", cls, level, name, visible);
-         assert(visible == 17);
+         /* Raw title should be shorter than 18 so center_text can pad it */
+         int raw_visible = nocol_strlen(name);
+         if (raw_visible >= 18)
+            printf("FAIL class=%d level=%d: raw title '%s' visible=%d (must be < 18 to center)\n",
+                   cls, level, name, raw_visible);
+         assert(raw_visible < 18);
+         /* After centering it must be exactly 18 visible chars */
+         int centered_visible = nocol_strlen(center_text(name, 18));
+         if (centered_visible != 18)
+            printf("FAIL class=%d level=%d: '%s' centered visible=%d (expected 18)\n",
+                   cls, level, name, centered_visible);
+         assert(centered_visible == 18);
       }
    }
 }
@@ -76,9 +85,9 @@ static void test_get_adept_name_all_titles_are_17_visible(void)
 int main(void)
 {
    test_nocol_strlen_strips_color_codes();
-   test_get_adept_name_fallback_is_17_visible();
-   test_get_adept_name_realm_lord_is_17_visible();
-   test_get_adept_name_all_titles_are_17_visible();
+   test_get_adept_name_fallback_centered_is_18_visible();
+   test_get_adept_name_realm_lord_centered_is_18_visible();
+   test_get_adept_name_all_titles_centered_are_18_visible();
    puts("test_strfuns: all tests passed");
    return 0;
 }
