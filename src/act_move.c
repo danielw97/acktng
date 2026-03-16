@@ -1267,7 +1267,7 @@ void do_train(CHAR_DATA *ch, char *argument)
    /*
       if( !str_cmp( argument, "str" ) )
       {
-         if( class_table[ch->class].attr_prime == APPLY_STR )
+         if( gclass_table[ch->class].attr_prime == APPLY_STR )
             cost = 3;
          pAbility = &ch->pcdata->perm_str;
          pMax = ch->pcdata->max_str;
@@ -1276,7 +1276,7 @@ void do_train(CHAR_DATA *ch, char *argument)
 
       else if( !str_cmp( argument, "int" ) )
       {
-         if( class_table[ch->class].attr_prime == APPLY_INT )
+         if( gclass_table[ch->class].attr_prime == APPLY_INT )
             cost = 3;
          pAbility = &ch->pcdata->perm_int;
          pMax = ch->pcdata->max_int;
@@ -1285,7 +1285,7 @@ void do_train(CHAR_DATA *ch, char *argument)
 
       else if( !str_cmp( argument, "wis" ) )
       {
-         if( class_table[ch->class].attr_prime == APPLY_WIS )
+         if( gclass_table[ch->class].attr_prime == APPLY_WIS )
             cost = 3;
          pAbility = &ch->pcdata->perm_wis;
          pMax = ch->pcdata->max_wis;
@@ -1294,7 +1294,7 @@ void do_train(CHAR_DATA *ch, char *argument)
 
       else if( !str_cmp( argument, "dex" ) )
       {
-         if( class_table[ch->class].attr_prime == APPLY_DEX )
+         if( gclass_table[ch->class].attr_prime == APPLY_DEX )
             cost = 3;
          pAbility = &ch->pcdata->perm_dex;
          pMax = ch->pcdata->max_dex;
@@ -1303,7 +1303,7 @@ void do_train(CHAR_DATA *ch, char *argument)
 
       else if( !str_cmp( argument, "con" ) )
       {
-         if( class_table[ch->class].attr_prime == APPLY_CON )
+         if( gclass_table[ch->class].attr_prime == APPLY_CON )
             cost = 3;
          pAbility = &ch->pcdata->perm_con;
          pMax = ch->pcdata->max_con;

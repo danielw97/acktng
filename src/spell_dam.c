@@ -156,7 +156,7 @@ int get_spell_damage(CHAR_DATA *ch, int gsn)
    int d1;
    int d2;
 
-   spell_dam_damage_params(skill_table[gsn].flag1, get_best_level(ch, gsn), &base, &d1, &d2);
+   spell_dam_damage_params(SKILL_TIER(gsn), get_best_level(ch, gsn), &base, &d1, &d2);
 
    return dice(d1, d2)+base;
 }
@@ -165,7 +165,7 @@ int get_best_level(CHAR_DATA *ch, int gsn)
 {
    int best = -1;
 
-   if (skill_table[gsn].flag1 == MORTAL)
+   if (SKILL_TIER(gsn) == MORTAL)
    {
       for(int i = 0; i < MAX_CLASS; i++)
       {
@@ -174,11 +174,11 @@ int get_best_level(CHAR_DATA *ch, int gsn)
          if (required_level < 0)
             continue;
 
-         if (ch->lvl[i] >= required_level && ch->lvl[i] > best)
-            best = ch->lvl[i];
+         if (ch->class_level[i] >= required_level && ch->class_level[i] > best)
+            best = ch->class_level[i];
       }
    }
-   else if (skill_table[gsn].flag1 == REMORT)
+   else if (SKILL_TIER(gsn) == REMORT)
    {
       for(int i = 0; i < MAX_REMORT; i++)
       {
@@ -187,11 +187,11 @@ int get_best_level(CHAR_DATA *ch, int gsn)
          if (required_level < 0)
             continue;
 
-         if (ch->remort[i] >= required_level && ch->remort[i] > best)
-            best = ch->remort[i];
+         if (ch->class_level[MAX_CLASS + i] >= required_level && ch->class_level[MAX_CLASS + i] > best)
+            best = ch->class_level[MAX_CLASS + i];
       }
    }
-   else if (skill_table[gsn].flag1 == ADEPT)
+   else if (SKILL_TIER(gsn) == ADEPT)
    {
       for(int i = 0; i < MAX_CLASS; i++)
       {
@@ -200,8 +200,8 @@ int get_best_level(CHAR_DATA *ch, int gsn)
          if (required_level < 0)
             continue;
 
-         if (ch->adept[i] >= required_level && ch->adept[i] > best)
-            best = ch->adept[i];
+         if (ch->class_level[MAX_CLASS + MAX_REMORT + i] >= required_level && ch->class_level[MAX_CLASS + MAX_REMORT + i] > best)
+            best = ch->class_level[MAX_CLASS + MAX_REMORT + i];
       }
    }
 
@@ -301,7 +301,7 @@ int class_heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn
 {
    int heal = base_heal * 2;
 
-   if (class_table[class_index].attr_prime == APPLY_INT)
+   if (gclass_table[class_index].attr_prime == APPLY_INT)
    {
       int intel = (get_curr_int(ch) - 13) * 5;
 
@@ -309,37 +309,37 @@ int class_heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn
 
       if (sn != skill_lookup("psionic recovery"))
       {
-         heal += heal * ch->lvl[CLASS_MAG] / 50;
-         heal += heal * ch->remort[CLASS_SOR] / 50;
-         heal += heal * ch->remort[CLASS_WIZ] / 50;
+         heal += heal * ch->class_level[CLASS_MAG] / 50;
+         heal += heal * ch->class_level[MAX_CLASS + CLASS_SOR] / 50;
+         heal += heal * ch->class_level[MAX_CLASS + CLASS_WIZ] / 50;
       }
       else
       {
-         heal += heal * ch->lvl[CLASS_PSI] / 100;
-         heal += heal * ch->remort[CLASS_EGO] / 50;
+         heal += heal * ch->class_level[CLASS_PSI] / 100;
+         heal += heal * ch->class_level[MAX_CLASS + CLASS_EGO] / 50;
       }
    }
-   else if (class_table[class_index].attr_prime == APPLY_WIS)
+   else if (gclass_table[class_index].attr_prime == APPLY_WIS)
    {
       int wis = (get_curr_wis(ch) - 13) * 5;
 
       heal += heal * wis / 100;
-      heal += heal * ch->lvl[CLASS_CLE] / 50;
+      heal += heal * ch->class_level[CLASS_CLE] / 50;
    }
-   else if (class_table[class_index].attr_prime == APPLY_CON)
+   else if (gclass_table[class_index].attr_prime == APPLY_CON)
    {
       int wis = (get_curr_wis(ch) - 13) * 5;
 
       heal += heal * wis / 100;
-      heal += heal * ch->adept[CLASS_MAR] / 25;
+      heal += heal * ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_MAR] / 25;
    }
 
-   heal += heal * ch->remort[CLASS_PRI] / 50;
-   heal += heal * ch->remort[CLASS_PAL] / 50 * 0.75;
-   heal += heal * ch->adept[CLASS_TEM] / 25;
+   heal += heal * ch->class_level[MAX_CLASS + CLASS_PRI] / 50;
+   heal += heal * ch->class_level[MAX_CLASS + CLASS_PAL] / 50 * 0.75;
+   heal += heal * ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_TEM] / 25;
 
    if (!IS_NPC(ch))
-      heal += heal * ch->pcdata->adept_reincarnations[CLASS_TEM]/100;
+      heal += heal * ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + CLASS_TEM]/100;
 
    if (stance_app[ch->stance].heal_mod != 0)
       heal += heal * stance_app[ch->stance].heal_mod / 10;

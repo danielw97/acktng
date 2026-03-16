@@ -219,7 +219,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
     if (dt >= TYPE_HIT || dt < 0)
     {
-        if ((dt > TYPE_HIT || (ch->remort[CLASS_MON] < 1 && ch->remort[CLASS_BRA] < 1)) && dam > 400)
+        if ((dt > TYPE_HIT || (ch->class_level[MAX_CLASS + CLASS_MON] < 1 && ch->class_level[MAX_CLASS + CLASS_BRA] < 1)) && dam > 400)
         {
             dam -= 400;
             dam /= 3;
@@ -476,25 +476,25 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
     {
         if (IS_SET(element, ELEMENT_FIRE) || IS_SET(element, ELEMENT_AIR) || IS_SET(element, ELEMENT_WATER) ||
             IS_SET(element, ELEMENT_EARTH))
-            dam_mod += ch->pcdata->adept_reincarnations[CLASS_GMA] / 50;
+            dam_mod += ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + CLASS_GMA] / 50;
 
         if (IS_SET(element, ELEMENT_HOLY))
-            dam_mod += ch->pcdata->adept_reincarnations[CLASS_TEM] / 50;
+            dam_mod += ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + CLASS_TEM] / 50;
 
         if (IS_SET(element, ELEMENT_PHYSICAL))
-            dam_mod += ch->pcdata->adept_reincarnations[CLASS_TEM] / 100;
+            dam_mod += ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + CLASS_TEM] / 100;
 
         if (IS_SET(element, ELEMENT_SHADOW) || IS_SET(element, ELEMENT_POISON) || IS_SET(element, ELEMENT_MENTAL))
-            dam_mod += ch->pcdata->adept_reincarnations[CLASS_KIN] / 50;
+            dam_mod += ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + CLASS_KIN] / 50;
 
         if (dt >= TYPE_HIT || dt < 0)
-            dam_mod += ch->pcdata->adept_reincarnations[CLASS_MAR] / 50;
+            dam_mod += ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + CLASS_MAR] / 50;
 
         if (dt == gsn_circle || dt == gsn_backstab)
-            dam_mod += ch->pcdata->adept_reincarnations[CLASS_NIG] / 50;
+            dam_mod += ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + CLASS_NIG] / 50;
 
         if (dt == gsn_kick || dt == gsn_punch || dt == gsn_knee || dt == gsn_headbutt || dt == gsn_charge || dt == gsn_holystrike || dt == gsn_fleche)
-            dam_mod += ch->pcdata->adept_reincarnations[CLASS_CRU] / 50;
+            dam_mod += ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + CLASS_CRU] / 50;
     }
 
     if (get_eq_char(ch, WEAR_TWO_HANDED) != NULL)
@@ -502,34 +502,34 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
 
     if (dt == gsn_circle || dt == gsn_backstab)
     {
-        dam_mod += ch->lvl[CLASS_CIP] / 100;
-        dam_mod += ch->remort[CLASS_ASS] / 100;       // 100% at 100
-        dam_mod += ch->remort[CLASS_WLK] / 100 * .75; // 75% at 100
-        dam_mod += ch->adept[CLASS_NIG] / 50;         // 40% at 20
+        dam_mod += ch->class_level[CLASS_CIP] / 100;
+        dam_mod += ch->class_level[MAX_CLASS + CLASS_ASS] / 100;       // 100% at 100
+        dam_mod += ch->class_level[MAX_CLASS + CLASS_WLK] / 100 * .75; // 75% at 100
+        dam_mod += ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_NIG] / 50;         // 40% at 20
     }
 
     if (dt == gsn_kick || dt == gsn_punch || dt == gsn_knee || dt == gsn_headbutt || dt == gsn_charge || dt == gsn_holystrike || dt == gsn_fleche)
     {
-        dam_mod += ch->lvl[CLASS_WAR] / 100;
+        dam_mod += ch->class_level[CLASS_WAR] / 100;
 
-        if (skill_table[dt].flag1 == REMORT || skill_table[dt].flag1 == ADEPT)
+        if (SKILL_TIER(dt) == REMORT || SKILL_TIER(dt) == ADEPT)
         {
-            dam_mod += ch->remort[CLASS_KNI] / 50;
-            dam_mod += ch->remort[CLASS_SWO] / 50;
-            dam_mod += ch->remort[CLASS_BRA] / 50 * 0.75;
-            dam_mod += ch->adept[CLASS_CRU] / 20;
+            dam_mod += ch->class_level[MAX_CLASS + CLASS_KNI] / 50;
+            dam_mod += ch->class_level[MAX_CLASS + CLASS_SWO] / 50;
+            dam_mod += ch->class_level[MAX_CLASS + CLASS_BRA] / 50 * 0.75;
+            dam_mod += ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_CRU] / 20;
         }
     }
 
     if (dt == gsn_palmstrike || dt == gsn_pummel || dt == gsn_aurabolt)
     {
-        dam_mod += ch->lvl[CLASS_PUG] / 200;
+        dam_mod += ch->class_level[CLASS_PUG] / 200;
 
-        if (skill_table[dt].flag1 == REMORT || skill_table[dt].flag1 == ADEPT)
+        if (SKILL_TIER(dt) == REMORT || SKILL_TIER(dt) == ADEPT)
         {
-            dam_mod += ch->remort[CLASS_MON] / 200;
-            dam_mod += ch->remort[CLASS_BRA] / 200 * 0.75;
-            dam_mod += ch->adept[CLASS_MAR] / 40;
+            dam_mod += ch->class_level[MAX_CLASS + CLASS_MON] / 200;
+            dam_mod += ch->class_level[MAX_CLASS + CLASS_BRA] / 200 * 0.75;
+            dam_mod += ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_MAR] / 40;
         }
     }
 
@@ -543,14 +543,14 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
         if (!IS_AWAKE(victim))
             dam_mod += 0.5;
 
-        dam_mod += ch->remort[CLASS_PAL] / 100 * 0.4; // 100 * 0.4 = 40% at 100
-        dam_mod += ch->adept[CLASS_TEM] / 100;        // 20% max at 20
+        dam_mod += ch->class_level[MAX_CLASS + CLASS_PAL] / 100 * 0.4; // 100 * 0.4 = 40% at 100
+        dam_mod += ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_TEM] / 100;        // 20% max at 20
 
         if ((dt == TYPE_HIT || dt == TYPE_MARTIAL || dt == gsn_counter) && can_use_skill(ch, gsn_bare_hand))
         {
-            dam += dam * ch->remort[CLASS_BRA] / 100 * 0.75;
-            dam += dam * ch->remort[CLASS_MON] / 100;
-            dam += dam * ch->adept[CLASS_MAR] / 50;
+            dam += dam * ch->class_level[MAX_CLASS + CLASS_BRA] / 100 * 0.75;
+            dam += dam * ch->class_level[MAX_CLASS + CLASS_MON] / 100;
+            dam += dam * ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_MAR] / 50;
         }
 
         wield = get_eq_char(ch, WEAR_HOLD_HAND_L);
@@ -573,19 +573,19 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
 
     if (IS_SET(element, ELE_HOLY))
     {
-        dam_mod += ch->adept[CLASS_TEM] / 50;
-        dam_mod += ch->remort[CLASS_PRI] / 100;
+        dam_mod += ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_TEM] / 50;
+        dam_mod += ch->class_level[MAX_CLASS + CLASS_PRI] / 100;
     }
 
-    if (!IS_SET(element, ELE_PHYSICAL) && (skill_table[dt].flag1 == REMORT || skill_table[dt].flag1 == ADEPT))
+    if (!IS_SET(element, ELE_PHYSICAL) && (SKILL_TIER(dt) == REMORT || SKILL_TIER(dt) == ADEPT))
     {
-        dam_mod += ch->remort[CLASS_SOR] / 100 * 0.5;
-        dam_mod += ch->remort[CLASS_WIZ] / 100 * 0.5;
-        dam_mod += ch->remort[CLASS_NEC] / 100 * 0.5;
-        dam_mod += ch->remort[CLASS_EGO] / 100 * 0.5;
-        dam_mod += ch->remort[CLASS_WLK] / 100 * .75 * 0.5;
-        dam_mod += ch->adept[CLASS_GMA] / 50;
-        dam_mod += ch->adept[CLASS_KIN] / 50;
+        dam_mod += ch->class_level[MAX_CLASS + CLASS_SOR] / 100 * 0.5;
+        dam_mod += ch->class_level[MAX_CLASS + CLASS_WIZ] / 100 * 0.5;
+        dam_mod += ch->class_level[MAX_CLASS + CLASS_NEC] / 100 * 0.5;
+        dam_mod += ch->class_level[MAX_CLASS + CLASS_EGO] / 100 * 0.5;
+        dam_mod += ch->class_level[MAX_CLASS + CLASS_WLK] / 100 * .75 * 0.5;
+        dam_mod += ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_GMA] / 50;
+        dam_mod += ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_KIN] / 50;
     }
 
     if (can_use_skill(ch, gsn_potency) && !IS_SET(element, ELEMENT_PHYSICAL))
@@ -950,19 +950,19 @@ bool do_lifesteal(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual, 
     char buf[MAX_STRING_LENGTH];
     int chance = 10, potency = 20;
 
-    chance += ch->lvl[CLASS_MAG] / 20;
+    chance += ch->class_level[CLASS_MAG] / 20;
 
-    if (ch->remort[CLASS_SOR] > 0)
-        chance += ch->remort[CLASS_SOR] / 10;
-    else if (ch->remort[CLASS_WIZ] > 0)
-        chance += ch->remort[CLASS_WIZ] / 10;
+    if (ch->class_level[MAX_CLASS + CLASS_SOR] > 0)
+        chance += ch->class_level[MAX_CLASS + CLASS_SOR] / 10;
+    else if (ch->class_level[MAX_CLASS + CLASS_WIZ] > 0)
+        chance += ch->class_level[MAX_CLASS + CLASS_WIZ] / 10;
 
-    potency += ch->lvl[CLASS_PSI] / 10;
+    potency += ch->class_level[CLASS_PSI] / 10;
 
-    if (ch->remort[CLASS_NEC] > 0)
-        potency += ch->remort[CLASS_NEC] / 10;
-    else if (ch->remort[CLASS_EGO] > 0)
-        potency += ch->remort[CLASS_EGO] / 10;
+    if (ch->class_level[MAX_CLASS + CLASS_NEC] > 0)
+        potency += ch->class_level[MAX_CLASS + CLASS_NEC] / 10;
+    else if (ch->class_level[MAX_CLASS + CLASS_EGO] > 0)
+        potency += ch->class_level[MAX_CLASS + CLASS_EGO] / 10;
 
     if (dual)
         chance /= 2;

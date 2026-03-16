@@ -162,9 +162,7 @@ extern bool happy_hour;
  */
 extern const struct color_type color_table[MAX_COLOR];
 extern const struct ansi_type ansi_table[MAX_ANSI];
-extern const struct class_type class_table[MAX_CLASS];
-extern const struct class_type remort_table[MAX_REMORT];
-extern const struct class_type adept_table[MAX_CLASS];
+extern const struct class_type gclass_table[MAX_TOTAL_CLASS];
 extern const struct race_type race_table[MAX_RACE];
 extern const struct exp_type exp_table[MAX_MOB_LEVEL];
 extern const struct clan_type clan_table[MAX_CLAN];

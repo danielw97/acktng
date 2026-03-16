@@ -613,9 +613,7 @@ struct char_data
    sh_int clan; /* need to convert from pcdata to this */
    sh_int race;
    sh_int level;           /* For m/c this = max of levels */
-   int lvl[MAX_CLASS];     /* Holds details for m/c levels */
-   int remort[MAX_REMORT]; /* for remort (if any) */
-   int adept[MAX_CLASS];
+   int class_level[MAX_TOTAL_CLASS]; /* Unified class levels (mortal 0-5, remort 6-17, adept 18-23) */
    int adept_level;
    int combo[MAX_COMBO];
    int holy_power;
@@ -778,8 +776,8 @@ struct pc_data
    int mkilled;
    int pflags;
    char *lastlogin;
-   sh_int order[MAX_CLASS]; /* Class Order */
-   sh_int index[MAX_CLASS]; /* the order of each class! */
+   sh_int order[MAX_TOTAL_CLASS]; /* Class Order */
+   sh_int index[MAX_TOTAL_CLASS]; /* the order of each class! */
    int monitor;             /* monitor channel for imms */
    sh_int has_exp_fix;
    sh_int quest_points;
@@ -789,9 +787,7 @@ struct pc_data
    int keep_vnum;
    int keep_healer_bought;
    int keep_healer_vnum;
-   int reincarnations[MAX_CLASS];
-   int remort_reincarnations[MAX_REMORT];
-   int adept_reincarnations[MAX_CLASS];
+   int reincarnations[MAX_TOTAL_CLASS]; /* Unified reincarnations (mortal 0-5, remort 6-17, adept 18-23) */
    int reincarnation_data[MAX_REINCARNATE];
    int reincarnate_race;
    int reincarnate_order[MAX_CLASS];
@@ -1220,23 +1216,30 @@ struct lookup_extended_type
 /*
  * Skills include spells as a particular case.
  */
+/*
+ * Determine the tier of a skill (1=MORTAL, 2=REMORT, 3=ADEPT) from its
+ * skill_level array.  The tier is the range (0-5, 6-17, or 18-23) that
+ * has at least one non-NO_USE entry.  Returns 0 if no valid entry found.
+ */
+#define SKILL_TIER(sn) skill_get_tier(sn)
+int skill_get_tier(int sn);
+
 struct skill_type
 {
-   sh_int flag1;                   /* mort or remort?      */
-   sh_int flag2;                   /* normal and/or vamp?     */
-   char *name;                     /* Name of skill                */
-   sh_int skill_level[MAX_REMORT]; /* Level needed by class        */
-   SPELL_FUN *spell_fun;           /* Spell pointer (for spells)   */
-   sh_int target;                  /* Legal targets                */
-   sh_int minimum_position;        /* Position for caster / user   */
-   sh_int *pgsn;                   /* Pointer to associated gsn    */
-   sh_int slot;                    /* Slot for #OBJECT loading     */
-   sh_int min_mana;                /* Minimum mana used            */
-   sh_int beats;                   /* Waiting time after use       */
+   sh_int flag2;                          /* normal and/or vamp?         */
+   char *name;                            /* Name of skill               */
+   sh_int skill_level[MAX_TOTAL_CLASS];   /* Level needed by class       */
+   SPELL_FUN *spell_fun;                  /* Spell pointer (for spells)  */
+   sh_int target;                         /* Legal targets               */
+   sh_int minimum_position;              /* Position for caster / user   */
+   sh_int *pgsn;                          /* Pointer to associated gsn   */
+   sh_int slot;                           /* Slot for #OBJECT loading    */
+   sh_int min_mana;                       /* Minimum mana used           */
+   sh_int beats;                          /* Waiting time after use      */
    bool can_learn;
-   char *noun_damage;              /* Damage message               */
-   char *msg_off;                  /* Wear off message             */
-   char *room_off;                 /* Wear off msg TO_ROOM    */
+   char *noun_damage;                     /* Damage message              */
+   char *msg_off;                         /* Wear off message            */
+   char *room_off;                        /* Wear off msg TO_ROOM        */
 };
 
 /*

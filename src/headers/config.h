@@ -105,33 +105,42 @@
 #define LEVEL_MASTER 100000
 #define LEVEL_GM 200000
 
-/* Mortal */
+/* Mortal (0-5) */
 #define CLASS_MAG 0
 #define CLASS_CLE 1
 #define CLASS_CIP 2
 #define CLASS_WAR 3
 #define CLASS_PSI 4
 #define CLASS_PUG 5
-/* Remort */
-#define CLASS_SOR 0
-#define CLASS_PAL 1
-#define CLASS_ASS 2
-#define CLASS_KNI 3
-#define CLASS_NEC 4
-#define CLASS_MON 5
-#define CLASS_WIZ 6
-#define CLASS_PRI 7
-#define CLASS_WLK 8
-#define CLASS_SWO 9
-#define CLASS_EGO 10
-#define CLASS_BRA 11
-/* Adept */
-#define CLASS_GMA 0
-#define CLASS_TEM 1
-#define CLASS_NIG 2
-#define CLASS_CRU 3
-#define CLASS_KIN 4
-#define CLASS_MAR 5
+/* Remort (6-17) */
+#define CLASS_SOR 6
+#define CLASS_PAL 7
+#define CLASS_ASS 8
+#define CLASS_KNI 9
+#define CLASS_NEC 10
+#define CLASS_MON 11
+#define CLASS_WIZ 12
+#define CLASS_PRI 13
+#define CLASS_WLK 14
+#define CLASS_SWO 15
+#define CLASS_EGO 16
+#define CLASS_BRA 17
+/* Adept (18-23) */
+#define CLASS_GMA 18
+#define CLASS_TEM 19
+#define CLASS_NIG 20
+#define CLASS_CRU 21
+#define CLASS_KIN 22
+#define CLASS_MAR 23
+
+/* Total class count across all tiers */
+#define MAX_TOTAL_CLASS (MAX_CLASS + MAX_REMORT + MAX_CLASS)
+
+/* Helper macros to determine which tier a class ID belongs to */
+#define IS_MORTAL_CLASS(c) ((c) >= 0 && (c) < MAX_CLASS)
+#define IS_REMORT_CLASS(c) ((c) >= MAX_CLASS && (c) < MAX_CLASS + MAX_REMORT)
+#define IS_ADEPT_CLASS(c)  ((c) >= MAX_CLASS + MAX_REMORT && (c) < MAX_TOTAL_CLASS)
+#define CLASS_TIER(c)      (IS_ADEPT_CLASS(c) ? 3 : IS_REMORT_CLASS(c) ? 2 : 1)
 
 #define MAX_NUM_IMMS 5
 
@@ -211,12 +220,12 @@
 #define TAR_OBJ_INV 4
 #define TAR_CHAR_NOTSELF 5
 
-/* Used as flags in skill_table */
-
+/* Class tier constants (returned by CLASS_TIER / SKILL_TIER) */
 #define MORTAL 1
 #define REMORT 2
-#define ADEPT 3
+#define ADEPT  3
 
+/* Used as flags in skill_table */
 #define NORM 1
 
 /*

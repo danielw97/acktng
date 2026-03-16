@@ -578,10 +578,10 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
     int max_combo = 6;
 
-    if (ch->remort[CLASS_KNI] > 0 || ch->remort[CLASS_SWO] > 0)
+    if (ch->class_level[MAX_CLASS + CLASS_KNI] > 0 || ch->class_level[MAX_CLASS + CLASS_SWO] > 0)
         max_combo += 2;
 
-    if (ch->remort[CLASS_CRU] > 0)
+    if (ch->class_level[MAX_CLASS + CLASS_CRU] > 0)
         max_combo += 2;
 
     int combo_chance = 25;
@@ -740,20 +740,20 @@ int get_max_combo(CHAR_DATA *ch)
 {
     int max;
 
-    if (ch->lvl[CLASS_WAR] > 0)
+    if (ch->class_level[CLASS_WAR] > 0)
         max = 4;
 
     if (!IS_NPC(ch) && ch->pcdata->reincarnations[CLASS_WAR] >= 20)
         max = 4;
 
-    if (ch->adept[CLASS_CRU] > 0 && max > 0)
+    if (ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_CRU] > 0 && max > 0)
         max++;
-    else if (!IS_NPC(ch) && (ch->pcdata->adept_reincarnations[CLASS_CRU] >= 20 || ch->pcdata->adept_reincarnations[CLASS_MAR] >= 20) && max > 0)
+    else if (!IS_NPC(ch) && (ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + CLASS_CRU] >= 20 || ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + CLASS_MAR] >= 20) && max > 0)
         max++;
 
-    if ((ch->remort[CLASS_KNI] > 0 || ch->remort[CLASS_SWO] > 0) && max > 0)
+    if ((ch->class_level[MAX_CLASS + CLASS_KNI] > 0 || ch->class_level[MAX_CLASS + CLASS_SWO] > 0) && max > 0)
         max++;
-    else if (max > 0 && (!IS_NPC(ch) && (ch->pcdata->remort_reincarnations[CLASS_KNI] + ch->pcdata->remort_reincarnations[CLASS_SWO] >= 20) ) )
+    else if (max > 0 && (!IS_NPC(ch) && (ch->pcdata->reincarnations[MAX_CLASS + CLASS_KNI] + ch->pcdata->reincarnations[MAX_CLASS + CLASS_SWO] >= 20) ) )
         max++;
 
     return max;

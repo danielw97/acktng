@@ -81,7 +81,7 @@ static bool npc_remort_cast_blocked(const CHAR_DATA *ch, int sn)
    if (!IS_NPC(ch))
       return FALSE;
 
-   if (skill_table[sn].flag1 != REMORT && skill_table[sn].flag1 != ADEPT)
+   if (SKILL_TIER(sn) != REMORT && SKILL_TIER(sn) != ADEPT)
       return FALSE;
 
    return IS_SET(ch->act, ACT_PET) || IS_AFFECTED(ch, AFF_CHARM);
@@ -447,7 +447,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
       char_login = TRUE;
 
    /*
-    * Modified to reference ch's highest ch->lvl[] value which
+    * Modified to reference ch's highest ch->class_level[] value which
     * * apllies to the spell.  -S-
     */
 
@@ -2209,7 +2209,7 @@ bool spell_heal(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    do_spell_heal(ch, victim, sn);
 
-   if (ch->adept[CLASS_TEM] > 0)
+   if (ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_TEM] > 0)
    {
       spell_cure_blindness(sn, level, ch, vo, obj);
       spell_remove_curse(sn, level, ch, vo, obj);

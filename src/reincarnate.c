@@ -17,7 +17,7 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
       send_to_char("Mortal reincarnations: ", ch);
       for (int i = 0; i < MAX_CLASS; i++)
       {
-         sprintf(buf, "%s: %d ", class_table[i].who_name, ch->pcdata->reincarnations[i]);
+         sprintf(buf, "%s: %d ", gclass_table[i].who_name, ch->pcdata->reincarnations[i]);
          send_to_char(buf, ch);
       }
       send_to_char("\n\r", ch);
@@ -25,7 +25,7 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
       send_to_char("Remort reincarnations: ", ch);
       for (int i = 0; i < MAX_REMORT; i++)
       {
-         sprintf(buf, "%s: %d ", remort_table[i].who_name, ch->pcdata->remort_reincarnations[i]);
+         sprintf(buf, "%s: %d ", gclass_table[MAX_CLASS + i].who_name, ch->pcdata->reincarnations[MAX_CLASS + i]);
          send_to_char(buf, ch);
       }
       send_to_char("\n\r", ch);
@@ -33,7 +33,7 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
       send_to_char("Adept reincarnations: ", ch);
       for (int i = 0; i < MAX_CLASS; i++)
       {
-         sprintf(buf, "%s: %d ", adept_table[i].who_name, ch->pcdata->adept_reincarnations[i]);
+         sprintf(buf, "%s: %d ", gclass_table[MAX_CLASS + MAX_REMORT + i].who_name, ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + i]);
          send_to_char(buf, ch);
       }
       send_to_char("\n\r", ch);
@@ -105,9 +105,9 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
          send_to_char("Current reincarnation info:\n\r", ch);
          sprintf(buf, "Race: %s\n\r", race_table[ch->pcdata->reincarnate_race].race_name);
          send_to_char(buf, ch);
-         sprintf(buf, "Class Order: %s %s %s %s\n\r", class_table[ch->pcdata->reincarnate_order[0]].who_name,
-                 class_table[ch->pcdata->reincarnate_order[1]].who_name, class_table[ch->pcdata->reincarnate_order[2]].who_name,
-                 class_table[ch->pcdata->reincarnate_order[3]].who_name);
+         sprintf(buf, "Class Order: %s %s %s %s\n\r", gclass_table[ch->pcdata->reincarnate_order[0]].who_name,
+                 gclass_table[ch->pcdata->reincarnate_order[1]].who_name, gclass_table[ch->pcdata->reincarnate_order[2]].who_name,
+                 gclass_table[ch->pcdata->reincarnate_order[3]].who_name);
          send_to_char(buf, ch);
          if (IS_SET(ch->pcdata->reincarnate_confirm, REINCARNATE_CONFIRM))
             send_to_char("Reincarnation CONFIRMED, reincarnate set done to reincarnate.\n\r", ch);
@@ -162,7 +162,7 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
             }
             for (int foo = 0; foo < MAX_CLASS; foo++)
             {
-               if (!str_cmp(arg, class_table[foo].who_name) || !str_cmp(arg, class_table[foo].class_name))
+               if (!str_cmp(arg, gclass_table[foo].who_name) || !str_cmp(arg, gclass_table[foo].class_name))
                {
                   ch->pcdata->reincarnate_order[cnt] = foo;
                   found = TRUE;
@@ -229,26 +229,26 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
          send_to_char("Done\n\r", ch);
          for (int i = 0; i < MAX_CLASS; i++)
          {
-            if (ch->adept[i] > 0)
-               ch->pcdata->adept_reincarnations[i]++;
+            if (ch->class_level[MAX_CLASS + MAX_REMORT + i] > 0)
+               ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + i]++;
          }
          for (int i = 0; i < MAX_REMORT; i++)
          {
-            if (ch->remort[i] > 0)
-               ch->pcdata->remort_reincarnations[i]++;
+            if (ch->class_level[MAX_CLASS + i] > 0)
+               ch->pcdata->reincarnations[MAX_CLASS + i]++;
          }
          for (int i = 0; i < MAX_CLASS; i++)
          {
-            ch->lvl[i] = 0;
-            ch->adept[i] = 0;
-            ch->remort[i] = 0;
-            ch->remort[i + MAX_CLASS] = 0;
+            ch->class_level[i] = 0;
+            ch->class_level[MAX_CLASS + MAX_REMORT + i] = 0;
+            ch->class_level[MAX_CLASS + i] = 0;
+            ch->class_level[MAX_CLASS + i + MAX_CLASS] = 0;
             ch->pcdata->order[i] = ch->pcdata->reincarnate_order[i];
             ch->pcdata->index[ch->pcdata->reincarnate_order[i]] = i;
          }
          ch->class = ch->pcdata->order[0];
          ch->level = 1;
-         ch->lvl[ch->pcdata->order[0]] = 1;
+         ch->class_level[ch->pcdata->order[0]] = 1;
          reset_gain_stats(ch);
          advance_level(ch, ch->pcdata->order[0], TRUE);
          do_save(ch, "");

@@ -648,9 +648,9 @@ char *get_adept_name(CHAR_DATA *ch)
 
    for (int i = 0; i < MAX_CLASS; i++)
    {
-      if (ch->adept[i] > dominant_level)
+      if (ch->class_level[MAX_CLASS + MAX_REMORT + i] > dominant_level)
       {
-         dominant_level = ch->adept[i];
+         dominant_level = ch->class_level[MAX_CLASS + MAX_REMORT + i];
          dominant_class = i;
       }
    }

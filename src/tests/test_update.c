@@ -8,9 +8,7 @@ int hit_gain(CHAR_DATA *ch);
 int mana_gain(CHAR_DATA *ch);
 int move_gain(CHAR_DATA *ch);
 
-const struct class_type class_table[MAX_CLASS] = {0};
-const struct class_type remort_table[MAX_REMORT] = {0};
-const struct class_type adept_table[MAX_CLASS] = {0};
+const struct class_type gclass_table[MAX_TOTAL_CLASS] = {{0}};
 const struct race_type race_table[MAX_RACE] = {0};
 
 int get_curr_int(CHAR_DATA *ch) { (void)ch; return 10; }
