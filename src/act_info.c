@@ -2302,30 +2302,26 @@ void do_who(CHAR_DATA *ch, char *argument)
          {
             /* Immortal: display who_name colored by rank; fall back to rank title if unset */
             const char *wn = str_cmp(wch->pcdata->who_name, "off") ? wch->pcdata->who_name : NULL;
+            char tmp[MAX_STRING_LENGTH];
             switch (wch->level)
             {
-            case MAX_LEVEL - 0: sprintf(buf3, "@@l%s@@g", wn ? wn : "Creator"); break;
-            case MAX_LEVEL - 1: sprintf(buf3, "@@B%s@@g", wn ? wn : "Supreme"); break;
-            case MAX_LEVEL - 2: sprintf(buf3, "@@a%s@@g", wn ? wn : "Deity"); break;
-            case MAX_LEVEL - 3: sprintf(buf3, "@@c%s@@g", wn ? wn : "Angel"); break;
-            default:            sprintf(buf3, "@@W%s@@g", wn ? wn : "Immortal"); break;
+            case MAX_LEVEL - 0: sprintf(tmp, "@@l%s@@g", wn ? wn : "Creator"); break;
+            case MAX_LEVEL - 1: sprintf(tmp, "@@B%s@@g", wn ? wn : "Supreme"); break;
+            case MAX_LEVEL - 2: sprintf(tmp, "@@a%s@@g", wn ? wn : "Deity"); break;
+            case MAX_LEVEL - 3: sprintf(tmp, "@@c%s@@g", wn ? wn : "Angel"); break;
+            default:            sprintf(tmp, "@@W%s@@g", wn ? wn : "Immortal"); break;
             }
-            /* Pad buf3 to 18 visible chars to match mortal/adept column width */
-            {
-               int vis = my_strlen(buf3);
-               int pad;
-               for (pad = vis; pad < 18; pad++)
-                  strcat(buf3, " ");
-            }
+            /* Center within 18 visible chars to match mortal/adept column width */
+            sprintf(buf3, "%s", center_text(tmp, 18));
          }
          else if (IS_SET(wch->pcdata->pflags, PFLAG_AMBAS))
          {
-            sprintf(buf3, "   AMBASSADOR     ");
+            sprintf(buf3, "%s", center_text("AMBASSADOR", 18));
          }
          else if (is_adept(wch))
          {
-            /* Adept: display adept name (titles are pre-padded to 17 visible chars) */
-            sprintf(buf3, " %s", get_adept_name(wch));
+            /* Adept: center title within 18 visible chars */
+            sprintf(buf3, "%s", center_text(get_adept_name(wch), 18));
          }
          else if (is_remort(wch))
          {

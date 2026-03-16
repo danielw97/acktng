@@ -607,40 +607,40 @@ char *get_adept_name(CHAR_DATA *ch)
 {
    static const char *const adept_titles[MAX_CLASS][20] = {
       {
-       "@@b Arcane Initiate @@N", "@@b Cantrip Adept   @@N", "@@b Rune Scholar    @@N", "@@b Glyphbinder     @@N", "@@b Spellweaver     @@N",
-       "@@b Mana Savant     @@N", "@@b Ether Scribe    @@N", "@@b Star Channeler  @@N", "@@b Astral Arcanist @@N", "@@b Archmage Ascend @@N",
-       "@@b Leyline Warden  @@N", "@@b Storm Theorist  @@N", "@@b Rift Magister   @@N", "@@b Void Cartograph @@N", "@@b Prism Hierophant@@N",
-       "@@b Celestial Sage  @@N", "@@b Reality Etcher  @@N", "@@b Aether Regent   @@N", "@@b Worldspell Lord @@N", "@@B Grandmagi Exalt @@N"
+       "@@bArcane Initiate@@N", "@@bCantrip Adept@@N",   "@@bRune Scholar@@N",    "@@bGlyphbinder@@N",     "@@bSpellweaver@@N",
+       "@@bMana Savant@@N",     "@@bEther Scribe@@N",    "@@bStar Channeler@@N",  "@@bAstral Arcanist@@N", "@@bArchmage Ascend@@N",
+       "@@bLeyline Warden@@N",  "@@bStorm Theorist@@N",  "@@bRift Magister@@N",   "@@bVoid Cartograph@@N", "@@bPrism Hierophant@@N",
+       "@@bCelestial Sage@@N",  "@@bReality Etcher@@N",  "@@bAether Regent@@N",   "@@bWorldspell Lord@@N", "@@BGrandmagi Exalt@@N"
       },
       {
-       "@@a Temple Novice   @@N", "@@a Votive Keeper   @@N", "@@a Oath Bearer     @@N", "@@a Faith Adept     @@N", "@@a Relic Guardian  @@N",
-       "@@a Litany Master   @@N", "@@a Ward Canon      @@N", "@@a Sanctum Knight  @@N", "@@a Creed Arbiter   @@N", "@@a Dawn Inquisitor @@N",
-       "@@a Sacred Marshal  @@N", "@@a Radiant Justicar@@N", "@@a Chapel Commander@@N", "@@a Anointed Judge  @@N", "@@a Seraphic Warden @@N",
-       "@@a Temple Champion @@N", "@@a Covenant Lord   @@N", "@@a Light Paragon   @@N", "@@a Throne Templar  @@N", "@@A High Hierotemp  @@N"
+       "@@aTemple Novice@@N",   "@@aVotive Keeper@@N",   "@@aOath Bearer@@N",     "@@aFaith Adept@@N",     "@@aRelic Guardian@@N",
+       "@@aLitany Master@@N",   "@@aWard Canon@@N",      "@@aSanctum Knight@@N",  "@@aCreed Arbiter@@N",   "@@aDawn Inquisitor@@N",
+       "@@aSacred Marshal@@N",  "@@aRadiant Justicar@@N","@@aChapel Commander@@N","@@aAnointed Judge@@N",  "@@aSeraphic Warden@@N",
+       "@@aTemple Champion@@N", "@@aCovenant Lord@@N",   "@@aLight Paragon@@N",   "@@aThrone Templar@@N",  "@@AHigh Hierotemp@@N"
       },
       {
-       "@@d Shadow Footpad  @@N", "@@d Dusk Stalker    @@N", "@@d Gloom Knifework @@N", "@@d Veil Skirmisher @@N", "@@d Night Prowler   @@N",
-       "@@d Silent Ambusher @@N", "@@d Umbral Duelist  @@N", "@@d Moonlit Cutter  @@N", "@@d Shade Reaver    @@N", "@@d Midnight Hunter @@N",
-       "@@d Cloak Assassin  @@N", "@@d Tenebrous Fang  @@N", "@@d Ebon Shadowhand @@N", "@@d Nocturne Slayer @@N", "@@d Dread Nightblade@@N",
-       "@@d Eclipse Butcher @@N", "@@d Phantom Exegete @@N", "@@d Voidstep Master @@N", "@@d Crown of Cinders@@N", "@@D Nightblade Prime@@N"
+       "@@dShadow Footpad@@N",  "@@dDusk Stalker@@N",    "@@dGloom Knifework@@N", "@@dVeil Skirmisher@@N", "@@dNight Prowler@@N",
+       "@@dSilent Ambusher@@N", "@@dUmbral Duelist@@N",  "@@dMoonlit Cutter@@N",  "@@dShade Reaver@@N",    "@@dMidnight Hunter@@N",
+       "@@dCloak Assassin@@N",  "@@dTenebrous Fang@@N",  "@@dEbon Shadowhand@@N", "@@dNocturne Slayer@@N", "@@dDread Nightblade@@N",
+       "@@dEclipse Butcher@@N", "@@dPhantom Exegete@@N", "@@dVoidstep Master@@N", "@@dCrown of Cinders@@N","@@DNightblade Prime@@N"
       },
       {
-       "@@e Banner Squire   @@N", "@@e Shield Adept    @@N", "@@e Battle Votary   @@N", "@@e Iron Legionary  @@N", "@@e Oathbound Guard @@N",
-       "@@e Vanguard Captain@@N", "@@e War Chantblade  @@N", "@@e Siege Standard  @@N", "@@e Bastion Reaver  @@N", "@@e Crusade Herald  @@N",
-       "@@e Bulwark Marshal @@N", "@@e Host Commander  @@N", "@@e Warpath Arbiter @@N", "@@e Lionheart Tact  @@N", "@@e Storm Crusader  @@N",
-       "@@e Conquest Regent @@N", "@@e Dominion Spear  @@N", "@@e Bannerlord Asc  @@N", "@@e Thronebreaker   @@N", "@@E Eternal Crusarch@@N"
+       "@@eBanner Squire@@N",   "@@eShield Adept@@N",    "@@eBattle Votary@@N",   "@@eIron Legionary@@N",  "@@eOathbound Guard@@N",
+       "@@eVanguard Captain@@N","@@eWar Chantblade@@N",  "@@eSiege Standard@@N",  "@@eBastion Reaver@@N",  "@@eCrusade Herald@@N",
+       "@@eBulwark Marshal@@N", "@@eHost Commander@@N",  "@@eWarpath Arbiter@@N", "@@eLionheart Tact@@N",  "@@eStorm Crusader@@N",
+       "@@eConquest Regent@@N", "@@eDominion Spear@@N",  "@@eBannerlord Asc@@N",  "@@eThronebreaker@@N",   "@@EEternal Crusarch@@N"
       },
       {
-       "@@m Pulse Student   @@N", "@@m Force Adept     @@N", "@@m Vector Caller   @@N", "@@m Motion Scribe   @@N", "@@m Flux Binder     @@N",
-       "@@m Momentum Savant @@N", "@@m Kinesis Warden  @@N", "@@m Resonance Master@@N", "@@m Graviton Duelist@@N", "@@m Quantum Strider @@N",
-       "@@m Singularity Seer@@N", "@@m Continuum Keeper@@N", "@@m Orbit Lawgiver  @@N", "@@m Tensor Arcanist @@N", "@@m Rift Physicist  @@N",
-       "@@m Hyperion Archit @@N", "@@m Eventide Directo@@N", "@@m Cosmos Engineer @@N", "@@m Fate Deflector  @@N", "@@M Kinetimancr Apex@@N"
+       "@@mPulse Student@@N",   "@@mForce Adept@@N",     "@@mVector Caller@@N",   "@@mMotion Scribe@@N",   "@@mFlux Binder@@N",
+       "@@mMomentum Savant@@N", "@@mKinesis Warden@@N",  "@@mResonance Master@@N","@@mGraviton Duelist@@N","@@mQuantum Strider@@N",
+       "@@mSingularity Seer@@N","@@mContinuum Keeper@@N","@@mOrbit Lawgiver@@N",  "@@mTensor Arcanist@@N", "@@mRift Physicist@@N",
+       "@@mHyperion Archit@@N", "@@mEventide Directo@@N","@@mCosmos Engineer@@N", "@@mFate Deflector@@N",  "@@MKinetimancr Apex@@N"
       },
       {
-       "@@r Iron Trainee    @@N", "@@r Form Adept      @@N", "@@r Stance Keeper   @@N", "@@r Palm Disciple   @@N", "@@r Bone Tempered   @@N",
-       "@@r Flow Fighter    @@N", "@@r Ki Striker      @@N", "@@r Fist Virtuoso   @@N", "@@r Spirit Brawler  @@N", "@@r Tempest Monk    @@N",
-       "@@r Adamant Master  @@N", "@@r Dragon Fist     @@N", "@@r Hundred Form    @@N", "@@r Mountain Breaker@@N", "@@r Soul Pugilist   @@N",
-       "@@r Grand Combatant @@N", "@@r Heaven Knuckle  @@N", "@@r Wyrmhand Regent @@N", "@@r Legend of Blows @@N", "@@R Martial Paragon @@N"
+       "@@rIron Trainee@@N",    "@@rForm Adept@@N",      "@@rStance Keeper@@N",   "@@rPalm Disciple@@N",   "@@rBone Tempered@@N",
+       "@@rFlow Fighter@@N",    "@@rKi Striker@@N",      "@@rFist Virtuoso@@N",   "@@rSpirit Brawler@@N",  "@@rTempest Monk@@N",
+       "@@rAdamant Master@@N",  "@@rDragon Fist@@N",     "@@rHundred Form@@N",    "@@rMountain Breaker@@N","@@rSoul Pugilist@@N",
+       "@@rGrand Combatant@@N", "@@rHeaven Knuckle@@N",  "@@rWyrmhand Regent@@N", "@@rLegend of Blows@@N", "@@RMartial Paragon@@N"
       }
    };
    int dominant_class = -1;
@@ -656,10 +656,10 @@ char *get_adept_name(CHAR_DATA *ch)
    }
 
    if (dominant_class < 0 || dominant_level < 1)
-      return "@@W    Adept        @@N";
+      return "@@WAdept@@N";
 
    if (dominant_level >= MAX_ADEPT)
-      return "@@Y   Realm Lord    @@N";
+      return "@@YRealm Lord@@N";
 
    return (char *)adept_titles[dominant_class][URANGE(1, dominant_level, MAX_ADEPT - 1) - 1];
 }
