@@ -844,13 +844,6 @@ draw_smooth_line(ax,
 fill_region(ax, [(15,0),(95,0),(100,22),(88,28),(72,24),(60,28),(45,22),(28,26),(15,18)],
             PARCH_DARK, alpha=0.38, edge_color=DESERT_BRN, edge_lw=0.5, zorder=4)
 
-# Gravelands / Necropolis corridor (south)
-grave_pts = [
-    (55,30),(72,26),(92,30),(98,44),(94,58),(82,66),(68,68),(54,60),(50,46)
-]
-fill_region(ax, grave_pts, CRYPT_COL, alpha=0.52, edge_color='#3A2830',
-            edge_lw=0.8, zorder=4)
-hatch_region(ax, grave_pts, '#604040', dot_count=160, size=0.6, alpha=0.18, zorder=5)
 
 # Great Desert Expanse
 desert_pts = [
@@ -1316,12 +1309,8 @@ label(ax, 175,55,  'GREAT\nPYRAMID', size=7.0, col='#785008', weight='bold')
 label(ax, 165,82,  'NORTHERN\nPYRAMID', size=5.8, col='#785008', style='italic')
 label(ax, 170,36,  'SOUTHERN\nPYRAMID', size=5.8, col='#785008', style='italic')
 
-# ── Necropolis / South ──────────────────────────────────────
-label(ax, 76, 46,  'VOID CITADEL', size=6.0, col=VOID_LT, weight='bold',
-      outline_col='#0A0410')
-label(ax, 68, 56,  "KEL'SHADRA\nCRYPTS", size=5.8, col='#5A283A',
-      style='italic', weight='bold', outline_col='#0A0410')
-label(ax, 74, 26,  'SEPULCHUR\nPASTURE', size=5.8, col='#3A2818', style='italic')
+# ── Sepulchur Pasture (south of Midgaard, connected via Midgaard room 946) ──
+label(ax, 57, 88,  'SEPULCHUR\nPASTURE', size=5.8, col='#3A2818', style='italic')
 
 # ── Special Sites ───────────────────────────────────────────
 label(ax, 160, 62, 'KHEPRA-LESH\n(Ruined)', size=5.5, col='#7A6040', style='italic')
