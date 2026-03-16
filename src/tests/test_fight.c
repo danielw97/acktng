@@ -288,8 +288,8 @@ static void test_get_counter_applies_modifiers(void)
     ch.hitroll = 25;
     ch.wait = 2;
     ch.affected_by = AFF_CLOAK_ADEPT;
-    ch.class_level[MAX_CLASS + CLASS_MON] = 1;
-    ch.class_level[MAX_CLASS + MAX_REMORT + CLASS_MAR] = 1;
+    ch.class_level[CLASS_MON] = 1;
+    ch.class_level[CLASS_MAR] = 1;
 
     memset(&fist_left, 0, sizeof(fist_left));
     memset(&fist_right, 0, sizeof(fist_right));

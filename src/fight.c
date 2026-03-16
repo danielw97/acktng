@@ -317,24 +317,24 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
    else
    {
       // Remort hits
-      if (ch->class_level[MAX_CLASS + CLASS_PAL] > 0)
+      if (ch->class_level[CLASS_PAL] > 0)
          hits++;
-      if (ch->class_level[MAX_CLASS + CLASS_ASS] > 0)
+      if (ch->class_level[CLASS_ASS] > 0)
          hits++;
-      if (ch->class_level[MAX_CLASS + CLASS_WLK] > 0)
+      if (ch->class_level[CLASS_WLK] > 0)
          hits++;
-      if (ch->class_level[MAX_CLASS + CLASS_KNI] > 0)
+      if (ch->class_level[CLASS_KNI] > 0)
          hits++;
-      if (ch->class_level[MAX_CLASS + CLASS_SWO] > 0)
+      if (ch->class_level[CLASS_SWO] > 0)
          hits++;
 
-      if (ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_NIG] > 0)
+      if (ch->class_level[CLASS_NIG] > 0)
          hits++;
-      if (ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_TEM] > 0)
+      if (ch->class_level[CLASS_TEM] > 0)
          hits++;
-      if (ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_MAR] > 0)
+      if (ch->class_level[CLASS_MAR] > 0)
          hits++;
-      if (ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_CRU] > 0)
+      if (ch->class_level[CLASS_CRU] > 0)
          hits++;
 
       // Mort hits
@@ -556,9 +556,9 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
          {
             if (wield != NULL)
                dam_bonus += number_range(wield->value[1], wield->value[2]);
-            dam_bonus += dam_bonus * ch->class_level[MAX_CLASS + CLASS_MON] / 75;
-            dam_bonus += dam_bonus * ch->class_level[MAX_CLASS + CLASS_BRA] / 75 * 0.75;
-            dam_bonus += dam_bonus * ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_MAR] / 50;
+            dam_bonus += dam_bonus * ch->class_level[CLASS_MON] / 75;
+            dam_bonus += dam_bonus * ch->class_level[CLASS_BRA] / 75 * 0.75;
+            dam_bonus += dam_bonus * ch->class_level[CLASS_MAR] / 50;
 
             dam += number_range(get_psuedo_level(ch) / 3, get_psuedo_level(ch) / 2) + dam_bonus;
          }
@@ -1186,10 +1186,10 @@ int get_counter(CHAR_DATA *ch)
    if (get_eq_char(ch, WEAR_HOLD_HAND_R) != NULL && IS_SET(get_eq_char(ch, WEAR_HOLD_HAND_R)->extra_flags, ITEM_FIST))
       fists++;
 
-   if (ch->class_level[MAX_CLASS + CLASS_MON] > 0 || ch->class_level[MAX_CLASS + CLASS_BRA] > 0)
+   if (ch->class_level[CLASS_MON] > 0 || ch->class_level[CLASS_BRA] > 0)
       chance += fists * 3;
 
-   if (ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_MAR] > 0)
+   if (ch->class_level[CLASS_MAR] > 0)
       chance += fists * 3;
 
    chance += get_speed(ch) * 5;

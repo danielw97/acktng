@@ -33,13 +33,13 @@ int get_chi(CHAR_DATA *ch)
     if (max_chi == 0)
        return max_chi;
 
-    if (ch->class_level[MAX_CLASS + CLASS_MON] > 0 || ch->class_level[MAX_CLASS + CLASS_BRA] > 0)
+    if (ch->class_level[CLASS_MON] > 0 || ch->class_level[CLASS_BRA] > 0)
         max_chi = 20;
 
     if (!IS_NPC(ch) && (ch->pcdata->reincarnations[MAX_CLASS + CLASS_MON] + ch->pcdata->reincarnations[MAX_CLASS + CLASS_BRA] >= 20))
         max_chi = 20;
 
-    if (ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_MAR] > 0)
+    if (ch->class_level[CLASS_MAR] > 0)
         max_chi = 25;
 
     if (!IS_NPC(ch) && ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + CLASS_MAR] >= 20)
@@ -133,15 +133,15 @@ void do_chakra(CHAR_DATA *ch, char *argument)
 
     int base_heal = 5;
 
-    if (ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_MAR] > 0)
+    if (ch->class_level[CLASS_MAR] > 0)
         base_heal = 7;
 
-    int heal = class_heal_character(ch, ch, (ch->class_level[MAX_CLASS + CLASS_MON] + ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_MAR]) * base_heal, gsn_chakra, CLASS_MON, FALSE);
+    int heal = class_heal_character(ch, ch, (ch->class_level[CLASS_MON] + ch->class_level[CLASS_MAR]) * base_heal, gsn_chakra, CLASS_MON, FALSE);
 
     heal_character(ch, ch, heal, gsn_chakra, FALSE);
 
     int dur = 1;
-    if (ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_MAR] > 0)
+    if (ch->class_level[CLASS_MAR] > 0)
         dur = 2;
 
     AFFECT_DATA af;
@@ -150,7 +150,7 @@ void do_chakra(CHAR_DATA *ch, char *argument)
     af.duration = dur;
     af.duration_type = DURATION_ROUND;
     af.location = APPLY_DAMROLL;
-    af.modifier = ch->class_level[MAX_CLASS + CLASS_MON] * 5 + ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_MAR] * 5;
+    af.modifier = ch->class_level[CLASS_MON] * 5 + ch->class_level[CLASS_MAR] * 5;
     af.bitvector = 0;
     affect_to_char(ch, &af);
 }
@@ -344,9 +344,9 @@ void do_mindoverbody(CHAR_DATA *ch, char *argument)
 
     int base_heal = ch->class_level[CLASS_PUG];
 
-    base_heal += ch->class_level[MAX_CLASS + CLASS_MON] * 2;
-    base_heal += ch->class_level[MAX_CLASS + CLASS_BRA] * 2;
-    base_heal += ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_MAR] * 5;
+    base_heal += ch->class_level[CLASS_MON] * 2;
+    base_heal += ch->class_level[CLASS_BRA] * 2;
+    base_heal += ch->class_level[CLASS_MAR] * 5;
 
     if (chi_should_block_mindoverbody(is_affected(ch, gsn_mindoverbody), is_affected(ch, skill_lookup("mindoverbody"))))
         return;

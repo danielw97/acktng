@@ -633,9 +633,9 @@ int get_spell_crit(CHAR_DATA *ch)
 
    crit += get_stat(ch, APPLY_SPELL_CRIT);
 
-   crit += ch->class_level[MAX_CLASS + CLASS_SOR] / 10;
-   crit += ch->class_level[MAX_CLASS + CLASS_WIZ] / 10;
-   crit += ch->class_level[MAX_CLASS + CLASS_WLK] / 10 * .75;
+   crit += ch->class_level[CLASS_SOR] / 10;
+   crit += ch->class_level[CLASS_WIZ] / 10;
+   crit += ch->class_level[CLASS_WLK] / 10 * .75;
 
    crit += ch->spell_crit_mod;
 
@@ -658,7 +658,7 @@ int get_spell_crit_mult(CHAR_DATA *ch)
 
    crit += ch->class_level[CLASS_PAL] * .75 * get_curr_wis(ch) / 50;
 
-   crit += ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_TEM] * get_curr_wis(ch) / 25;
+   crit += ch->class_level[CLASS_TEM] * get_curr_wis(ch) / 25;
 
    crit += ch->spell_mult_mod;
 
@@ -683,14 +683,14 @@ int get_crit(CHAR_DATA *ch)
       crit += 1;
    }
 
-   crit += ch->class_level[MAX_CLASS + CLASS_ASS] / 20;
-   crit += ch->class_level[MAX_CLASS + CLASS_WLK] / 20 * .75;
+   crit += ch->class_level[CLASS_ASS] / 20;
+   crit += ch->class_level[CLASS_WLK] / 20 * .75;
 
-   crit += ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_NIG] / 4;
+   crit += ch->class_level[CLASS_NIG] / 4;
 
    if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword_critical))
    {
-      crit += ch->class_level[MAX_CLASS + CLASS_SWO] / 20;
+      crit += ch->class_level[CLASS_SWO] / 20;
    }
 
    crit += get_stat(ch, APPLY_CRIT);
@@ -716,14 +716,14 @@ int get_crit_mult(CHAR_DATA *ch)
       crit += get_curr_dex(ch) * 2;
    }
 
-   crit += ch->class_level[MAX_CLASS + CLASS_ASS] / 5;
-   crit += ch->class_level[MAX_CLASS + CLASS_WLK] / 5 * .75;
+   crit += ch->class_level[CLASS_ASS] / 5;
+   crit += ch->class_level[CLASS_WLK] / 5 * .75;
 
-   crit += ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_NIG] / 2;
+   crit += ch->class_level[CLASS_NIG] / 2;
 
    if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword_critical))
    {
-      crit += ch->class_level[MAX_CLASS + CLASS_SWO] / 5;
+      crit += ch->class_level[CLASS_SWO] / 5;
    }
 
    crit += get_stat(ch, APPLY_CRIT_MULT);

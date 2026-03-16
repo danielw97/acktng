@@ -310,13 +310,13 @@ int class_heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn
       if (sn != skill_lookup("psionic recovery"))
       {
          heal += heal * ch->class_level[CLASS_MAG] / 50;
-         heal += heal * ch->class_level[MAX_CLASS + CLASS_SOR] / 50;
-         heal += heal * ch->class_level[MAX_CLASS + CLASS_WIZ] / 50;
+         heal += heal * ch->class_level[CLASS_SOR] / 50;
+         heal += heal * ch->class_level[CLASS_WIZ] / 50;
       }
       else
       {
          heal += heal * ch->class_level[CLASS_PSI] / 100;
-         heal += heal * ch->class_level[MAX_CLASS + CLASS_EGO] / 50;
+         heal += heal * ch->class_level[CLASS_EGO] / 50;
       }
    }
    else if (gclass_table[class_index].attr_prime == APPLY_WIS)
@@ -331,12 +331,12 @@ int class_heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn
       int wis = (get_curr_wis(ch) - 13) * 5;
 
       heal += heal * wis / 100;
-      heal += heal * ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_MAR] / 25;
+      heal += heal * ch->class_level[CLASS_MAR] / 25;
    }
 
-   heal += heal * ch->class_level[MAX_CLASS + CLASS_PRI] / 50;
-   heal += heal * ch->class_level[MAX_CLASS + CLASS_PAL] / 50 * 0.75;
-   heal += heal * ch->class_level[MAX_CLASS + MAX_REMORT + CLASS_TEM] / 25;
+   heal += heal * ch->class_level[CLASS_PRI] / 50;
+   heal += heal * ch->class_level[CLASS_PAL] / 50 * 0.75;
+   heal += heal * ch->class_level[CLASS_TEM] / 25;
 
    if (!IS_NPC(ch))
       heal += heal * ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + CLASS_TEM]/100;
