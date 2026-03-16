@@ -12,10 +12,10 @@ keywords shade
 Noun Damage: None
    Wear-Off: The room gets lighter.
 Acquisition:
-   - Thief: level 6
+   - Cipher: level 6
    - Cleric: level 7
    - Psionicist: level 7
-   - Warrior: level 8
+   - Warden: level 8
    - Mage: level 12
    - Pugilist: level 13
 Description:

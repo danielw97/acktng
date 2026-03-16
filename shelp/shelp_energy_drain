@@ -13,9 +13,9 @@ Noun Damage: energy drain
    Wear-Off: !Energy Drain!
 Acquisition:
    - Cleric: level 7
-   - Thief: level 8
+   - Cipher: level 8
    - Psionicist: level 9
-   - Warrior: level 11
+   - Warden: level 11
    - Pugilist: level 13
    - Mage: level 15
 Description:

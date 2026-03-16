@@ -2707,7 +2707,7 @@ void show_cmenu_to(DESCRIPTOR_DATA *d)
    strcat(menu, "There are six classes.  Please list, in order of best to\n\r");
    strcat(menu, "worst, the order your 4 classes will be.\n\r");
    strcat(menu, "(The 1st you pick will be your prime class, gaining a +1 bonus.\n\r");
-   strcat(menu, "For example, psi mag cle thi.\n\r");
+   strcat(menu, "For example, psi mag cle cip.\n\r");
    strcat(menu, "Abr    Prime Atr    Name\n\r");
    strcat(menu, "---    ---------    ----\n\r");
 

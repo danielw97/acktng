@@ -2808,10 +2808,10 @@ void do_consider(CHAR_DATA *ch, char *argument)
          break; /* Cleric     */
       case 2:
          diff += 0.1;
-         break; /* Thief      */
+         break; /* Cipher     */
       case 3:
          diff += 0;
-         break; /* Warrior    */
+         break; /* Warden     */
       case 4:
          diff -= 0.4;
          break; /* Psionicist */

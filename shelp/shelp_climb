@@ -12,7 +12,7 @@ keywords climb
 Noun Damage: None
    Wear-Off: !Climb!
 Acquisition:
-   - Thief: level 25
+   - Cipher: level 25
 Description:
    Climb allows movement through exits marked as climb-only when you are not flying.
 *******************************************************************************

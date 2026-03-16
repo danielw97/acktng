@@ -12,7 +12,7 @@ keywords appraise
 Noun Damage: None
    Wear-Off: !Appraise!
 Acquisition:
-   - Thief: level 12
+   - Cipher: level 12
 Description:
    Appraise identifies an item and reveals its magical properties, similar to an Identify cast.
 *******************************************************************************

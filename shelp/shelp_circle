@@ -12,7 +12,7 @@ keywords circle
 Noun Damage: circle
    Wear-Off: !circle!
 Acquisition:
-   - Thief: level 19
+   - Cipher: level 19
 Description:
    Circle is the in-combat rogue follow-up to backstab: a piercing flank strike that can be used mid-fight and can consume active poisons for bonus damage.
 *******************************************************************************

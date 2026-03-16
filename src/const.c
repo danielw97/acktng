@@ -103,9 +103,9 @@ const struct class_type class_table[MAX_CLASS] =
 
    { "Cle", "Cleric", APPLY_WIS, 3, 4},
 
-   { "Thi", "Thief", APPLY_DEX, 6, 0},
+   { "Cip", "Cipher", APPLY_DEX, 6, 0},
 
-   { "War", "Warrior", APPLY_STR, 7, 0},
+   { "War", "Warden", APPLY_STR, 7, 0},
 
    { "Psi", "Psionicist", APPLY_INT, 3, 4},
 
@@ -172,7 +172,7 @@ const struct race_type race_table[MAX_RACE] = {
      TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
     MAX_CLASS, {3, 4, 5, 2, 0, 1},
-    "War, Thi, Pug, Psi, Mag, Cle",
+    "War, Cip, Pug, Psi, Mag, Cle",
     "",
     ELE_NONE,   /* strong magic realms for race */
     ELE_NONE,   /* weak */
@@ -192,7 +192,7 @@ const struct race_type race_table[MAX_RACE] = {
      TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE},
     MAX_CLASS, {2, 0, 3, 4, 1, 5},
-    "Cle, Psi, Mag, Thi, War, Pug",
+    "Cle, Psi, Mag, Cip, War, Pug",
     "sneak \'spell critical damage\' \'spell critical\'",
     ELE_SHADOW | ELE_HOLY,   /* strong magic realms */
     ELE_PHYSICAL | ELE_FIRE, /* weak */
@@ -211,7 +211,7 @@ const struct race_type race_table[MAX_RACE] = {
      TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
     MAX_CLASS, {4, 3, 2, 0, 5, 1},
-    "War, Pug, Thi, Cle, Mag, Psi",
+    "War, Pug, Cip, Cle, Mag, Psi",
     "\'enhanced damage\' counter",
     ELE_EARTH | ELE_POISON,  /* strong magic realms */
     ELE_AIR | ELE_MENTAL,    /* weak */
@@ -230,7 +230,7 @@ const struct race_type race_table[MAX_RACE] = {
      TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
     MAX_CLASS, {2, 3, 4, 0, 5, 1},
-    "War, Pug, Mag, Cle, Thi, Psi",
+    "War, Pug, Mag, Cle, Cip, Psi",
     "\'fire breath\' \'enhanced damage\' counter",
     ELE_FIRE | ELE_EARTH,    /* strong magic realms */
     ELE_WATER | ELE_MENTAL,  /* weak */
@@ -249,7 +249,7 @@ const struct race_type race_table[MAX_RACE] = {
      TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
     MAX_CLASS, {0, 3, 2, 4, 1, 5},
-    "Mag, Psi, Thi, Cle, War, Pug",
+    "Mag, Psi, Cip, Cle, War, Pug",
     "sneak \'mystical potency\' \'enhanced critical\'",
     ELE_SHADOW | ELE_MENTAL, /* strong magic realms */
     ELE_HOLY | ELE_PHYSICAL, /* weak */
@@ -268,7 +268,7 @@ const struct race_type race_table[MAX_RACE] = {
      TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
     MAX_CLASS, {0, 2, 3, 4, 1, 5},
-    "Mag, Psi, Cle, Thi, War, Pug",
+    "Mag, Psi, Cle, Cip, War, Pug",
     "\'mystical potency\' counter",
     ELE_EARTH | ELE_POISON,  /* strong magic realms */
     ELE_FIRE | ELE_AIR,      /* weak */
@@ -287,7 +287,7 @@ const struct race_type race_table[MAX_RACE] = {
      TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
     MAX_CLASS, {3, 0, 2, 4, 1, 5},
-    "Cle, Psi, Thi, Mag, War, Pug",
+    "Cle, Psi, Cip, Mag, War, Pug",
     "hunt \'spell critical damage\' \'spell critical\'",
     ELE_WATER | ELE_MENTAL,  /* strong magic realms */
     ELE_FIRE | ELE_EARTH,    /* weak */
@@ -306,7 +306,7 @@ const struct race_type race_table[MAX_RACE] = {
      TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE},
     MAX_CLASS, {3, 1, 4, 0, 5, 2},
-    "War, Cle, Pug, Mag, Thi, Psi",
+    "War, Cle, Pug, Mag, Cip, Psi",
     "\'stone skin\' \'enhanced damage\' \'spell critical damage\' \'spell critical\'",
     ELE_EARTH | ELE_HOLY,    /* strong magic realms */
     ELE_SHADOW | ELE_WATER,  /* weak */

@@ -12,7 +12,7 @@ keywords detox
 Noun Damage: detox
    Wear-Off: !Detox
 Acquisition:
-   - Thief: level 27
+   - Cipher: level 27
 Description:
    Detox removes standard poison from a target, making it a reliable recovery utility before or between engagements.
 *******************************************************************************

@@ -12,7 +12,7 @@ keywords enhanced critical
 Noun Damage: None
    Wear-Off: !Enhanced Crit!
 Acquisition:
-   - Thief: level 20
+   - Cipher: level 20
 Description:
    Enhanced Critical passively increases physical critical hit chance and critical damage.
 *******************************************************************************

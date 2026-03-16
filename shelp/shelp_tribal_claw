@@ -13,8 +13,8 @@ Noun Damage: None
    Wear-Off: None
 Acquisition:
    - Cleric: level 15
-   - Thief: level 15
-   - Warrior: level 15
+   - Cipher: level 15
+   - Warden: level 15
    - Psionicist: level 15
    - Pugilist: level 15
 Description:

@@ -13,7 +13,7 @@ Noun Damage: None
    Wear-Off: !Shield Block!
 Acquisition:
    - Pugilist: level 18
-   - Warrior: level 40
+   - Warden: level 40
 Description:
    Shield Block gives you a chance to block incoming attacks when using a shield or buckler.
 *******************************************************************************

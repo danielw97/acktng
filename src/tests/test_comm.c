@@ -147,7 +147,7 @@ static void test_comm_safe_formatters_truncate(void)
     comm_testable_format_builder_prompt(buf, sizeof(buf), "Mode: Redit", "A very very long description");
     assert(buf[15] == '\0');
 
-    comm_testable_format_class_menu_line(buf, sizeof(buf), "warrior", "strength", "verylongclassname");
+    comm_testable_format_class_menu_line(buf, sizeof(buf), "warden", "strength", "verylongclassname");
     assert(buf[15] == '\0');
 
     comm_testable_format_builder_prompt(buf, sizeof(buf), NULL, NULL);

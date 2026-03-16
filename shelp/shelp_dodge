@@ -12,7 +12,7 @@ keywords dodge
 Noun Damage: None
    Wear-Off: !Dodge!
 Acquisition:
-   - Thief: level 7
+   - Cipher: level 7
    - Pugilist: level 27
 Description:
    Dodge gives you a chance to evade incoming attacks entirely during combat.

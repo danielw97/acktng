@@ -12,7 +12,7 @@ keywords knee
 Noun Damage: knee
    Wear-Off: !Knee
 Acquisition:
-   - Warrior: level 8
+   - Warden: level 8
 Description:
    Knee is a close-quarters combo strike in the warrior sequence, used to maintain pressure and advance combo state.
 *******************************************************************************

@@ -12,7 +12,7 @@ keywords find doors
 Noun Damage: None
    Wear-Off: !Find Doors!
 Acquisition:
-   - Thief: level 16
+   - Cipher: level 16
 Description:
    Find Doors reveals hidden closed exits (without door keywords) when you look at room exits.
 *******************************************************************************

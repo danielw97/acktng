@@ -12,7 +12,7 @@ keywords backstab
 Noun Damage: backstab
    Wear-Off: !Backstab!
 Acquisition:
-   - Thief: level 10
+   - Cipher: level 10
 Description:
    Backstab is a precision dagger strike that opens from stealth or advantage, delivering high burst damage and consuming applied rogue poisons for extra effects.
 *******************************************************************************

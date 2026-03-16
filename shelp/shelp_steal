@@ -12,7 +12,7 @@ keywords steal
 Noun Damage: steal
    Wear-Off: !steal!
 Acquisition:
-   - Thief: level 20
+   - Cipher: level 20
 Description:
    Steal is a thieving utility skill for lifting coins or items from NPCs, with success based on dexterity, level difference, and situational risk.
 *******************************************************************************

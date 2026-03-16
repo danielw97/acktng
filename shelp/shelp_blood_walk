@@ -12,11 +12,11 @@ keywords blood walk
 Noun Damage: None
    Wear-Off: !blood walk!!
 Acquisition:
-   - Warrior: level 18
+   - Warden: level 18
    - Cleric: level 19
    - Psionicist: level 19
    - Mage: level 20
-   - Thief: level 20
+   - Cipher: level 20
    - Pugilist: level 20
 Description:
    Blood Walk Uses blood magic to move unnaturally fast through linked territory, enabling rapid repositioning.

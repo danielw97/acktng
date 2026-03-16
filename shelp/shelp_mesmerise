@@ -13,8 +13,8 @@ Noun Damage: None
    Wear-Off: !MESMERISE!
 Acquisition:
    - Cleric: level 2
-   - Thief: level 2
-   - Warrior: level 2
+   - Cipher: level 2
+   - Warden: level 2
    - Psionicist: level 2
    - Pugilist: level 2
    - Mage: level 5

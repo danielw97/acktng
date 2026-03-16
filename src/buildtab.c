@@ -52,8 +52,10 @@
 const struct lookup_type tab_mob_class[] = {
     {"mage", 0, 0},
     {"cleric", 1, 0},
-    {"thief", 2, 0},
-    {"warrior", 3, 0},
+    {"cipher", 2, 0},
+    {"thief", 2, 0},   /* backward-compat alias */
+    {"warden", 3, 0},
+    {"warrior", 3, 0}, /* backward-compat alias */
     {"psionicist", 4, 0},
     {"sorcerer", 5, 0},
     {"assassin", 6, 0},

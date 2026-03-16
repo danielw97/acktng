@@ -30,7 +30,7 @@ carry forward permanent bonuses earned from your previous lives.
 
   2. Choose your new class order: @@Wreincarnate set order <c1> <c2> <c3> <c4>@@W
      Specify all four mortal class slots. Example:
-       reincarnate set order War Cle Thi Psi
+       reincarnate set order War Cle Cip Psi
 
   3. Confirm your selections: @@Wreincarnate set confirm@@W
      Review first with @@Wreincarnate set show@@W.
@@ -58,17 +58,17 @@ carry forward permanent bonuses earned from your previous lives.
   Each mortal class reincarnation raises the stat cap for that class's
   prime attribute by 1 point for every 2 reincarnations in that class
   (rounds up). The stat cap is normally @@W30@@W.
-  - @@cWarrior@@W reincarnations increase max Strength.
+  - @@cWarden@@W reincarnations increase max Strength.
   - @@pMage@@W and @@GPsionicist@@W reincarnations increase max Intelligence.
   - @@aClerical@@W reincarnations increase max Wisdom.
-  - @@dThief@@W reincarnations increase max Dexterity.
+  - @@dCipher@@W reincarnations increase max Dexterity.
   - @@gPugilist@@W reincarnations increase max Constitution.
 
 @@yPersistent Bonuses — Skill Unlocks (Mortal):@@W
   Having at least 1 reincarnation in a mortal class permanently unlocks
   a skill regardless of your current class:
-  - @@cWarrior@@W    -> Enhanced Damage
-  - @@dThief@@W      -> Enhanced Critical
+  - @@cWarden@@W    -> Enhanced Damage
+  - @@dCipher@@W      -> Enhanced Critical
   - @@gPugilist@@W   -> Counter
   - @@pMage@@W       -> Potency
   - @@GPsionicist@@W -> Spell Critical
