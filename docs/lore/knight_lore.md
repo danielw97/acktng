@@ -2,13 +2,13 @@
 
 ## Overview
 
-Knights are the formalized inheritors of the warrior tradition — the point at which the road warden's accumulated fighting knowledge was systematized into a professional officer doctrine. The Iron Reformation that produced the first Knights was not merely a change in training methodology; it was a recognition that warrior strength alone could not hold a siege line, and that the difference between an effective heavy infantry unit and a collection of individually skilled fighters was **the capacity to act as a coherent system under sustained pressure**. Knights are, before anything else, system-thinkers applied to the problem of force: practitioners who understand that controlled aggression within a disciplined structure reliably defeats individual excellence without structure.
+Knights are the formalized inheritors of the warden tradition — the point at which the road warden's accumulated fighting knowledge was systematized into a professional officer doctrine. The Iron Reformation that produced the first Knights was not merely a change in training methodology; it was a recognition that warden strength alone could not hold a siege line, and that the difference between an effective heavy infantry unit and a collection of individually skilled fighters was **the capacity to act as a coherent system under sustained pressure**. Knights are, before anything else, system-thinkers applied to the problem of force: practitioners who understand that controlled aggression within a disciplined structure reliably defeats individual excellence without structure.
 
 ---
 
 ## I. The Iron Reformation
 
-The **Iron Reformation** is the institutional event that produced the Knight tradition, occurring in the period of eastern campaign consolidation after the Ninth Meridian Catastrophe's immediate chaos had subsided enough for organized military operations to resume. The warlords of the eastern campaigns had substantial warrior resources — Reaver Confederate veterans, civic militia graduates, mercenary companies of varying quality — and found that these forces, however skilled individually, repeatedly failed at siege operations that required sustained coordination over weeks or months.
+The **Iron Reformation** is the institutional event that produced the Knight tradition, occurring in the period of eastern campaign consolidation after the Ninth Meridian Catastrophe's immediate chaos had subsided enough for organized military operations to resume. The warlords of the eastern campaigns had substantial warden resources — Reaver Confederate veterans, civic militia graduates, mercenary companies of varying quality — and found that these forces, however skilled individually, repeatedly failed at siege operations that required sustained coordination over weeks or months.
 
 The **Compact of the Seven Chains** was an agreement between warring clans that established **mutual rules of engagement** — specifically including the creation of a new officer class that would be bound by the Compact's terms regardless of which clan employed them. This was a remarkable political innovation: creating an officer class whose primary institutional loyalty was to a shared doctrine rather than to any individual employer. The seven clans' mutual interest in having enemies who would adhere to predictable engagement rules (which made battle outcomes more predictable and post-battle political negotiations more reliable) outweighed their interest in having unrestricted armies.
 
@@ -32,7 +32,7 @@ The academies also introduced **written Knight doctrine** — the codification o
 
 ## III. The Seven Shade Arches Connection
 
-Knight doctrine acknowledges a debt to **Warden-Sergeant Caleph Dunmar's** engagement at the Seven Shade Arches that the warrior tradition does not always emphasize. Dunmar's forty-three-day siege defense was, in the Knight tradition's analysis, a demonstration of formation superiority against numerically superior but less coherent attackers: the Ashbound siege force had more personnel and more individual fighting capability than Dunmar's convoy guard, but they could not achieve coordinated pressure against a position maintained by practitioners who operated as a coherent defensive system.
+Knight doctrine acknowledges a debt to **Warden-Sergeant Caleph Dunmar's** engagement at the Seven Shade Arches that the warden tradition does not always emphasize. Dunmar's forty-three-day siege defense was, in the Knight tradition's analysis, a demonstration of formation superiority against numerically superior but less coherent attackers: the Ashbound siege force had more personnel and more individual fighting capability than Dunmar's convoy guard, but they could not achieve coordinated pressure against a position maintained by practitioners who operated as a coherent defensive system.
 
 The Knight tradition uses the Seven Shade Arches engagement in its academy curriculum as an example of how **formation discipline creates force multiplication** — how a small number of practitioners who maintain coherent system operation under pressure can effectively resist a much larger force that cannot. The analysis also acknowledges the engagement's costs: two arches destroyed, the convoy guard reduced to its minimum effective defensive complement, and Dunmar's subsequent career in the Ember Warden doctrine rather than any formal officer corps (because no formal officer corps existed at the time to provide the institutional context his skills deserved).
 
@@ -40,7 +40,7 @@ The Knight tradition uses the Seven Shade Arches engagement in its academy curri
 
 ## IV. The Crusader Lineage
 
-The **Crusader** adept path reclaims a title older than the Knight academies: the Solar Court's **campaign-honor designation** for warriors who served successive engagements without rotation. The Solar Court awarded this title to individuals; the Knight-and-Swordsman synthesis that produces the modern Crusader Corps reclaims it as a **combined doctrine designation** — reflecting the Ash-and-Iron Decades' discovery that Knight formation discipline and Swordsman momentum escalation, combined, produced an effect that exceeded either alone.
+The **Crusader** adept path reclaims a title older than the Knight academies: the Solar Court's **campaign-honor designation** for wardens who served successive engagements without rotation. The Solar Court awarded this title to individuals; the Knight-and-Swordsman synthesis that produces the modern Crusader Corps reclaims it as a **combined doctrine designation** — reflecting the Ash-and-Iron Decades' discovery that Knight formation discipline and Swordsman momentum escalation, combined, produced an effect that exceeded either alone.
 
 The Crusader Corps that arose from the Ash-and-Iron Decades reserve depots is the institutional bridge between the Knight academy tradition (which emphasized collective doctrine) and the Swordsman dueling court tradition (which emphasized individual excellence). The Corps' founding insight was that these two traditions' competitive tension had prevented both from reaching their potential: formation doctrine without escalating momentum is static; escalating momentum without formation discipline is chaotic. Combined, they produce what the Corps called **the pressure-finisher doctrine**: chain the Knight's body-strikes into the Swordsman's building momentum, and the accumulated force exceeds what either path sustains alone.
 
@@ -67,11 +67,11 @@ Kiess's road-warden intelligence sharing agreement with Midgaard employs substan
 ## VI. Cross-References
 
 - **Timeline**: Era VII (post-Ninth Meridian eastern campaigns), Era XI (Iron Reformation; Compact of the Seven Chains), Era XII (Ash-and-Iron Decades; academy formalization)
-- **Warrior**: Foundational tradition; road warden ancestor; Dunmar's engagement as shared origin
+- **Warden**: Foundational tradition; road warden ancestor; Dunmar's engagement as shared origin
 - **Swordsman**: Parallel remort path; competitive tension that Crusader synthesis resolves
 - **Crusader**: Adept synthesis of Knight and Swordsman; reclaims Solar Court campaign-honor title
 - **Midgaard**: Guard Command institutional home; Continuity/doctrine tension
 - **Kowloon**: Wardens of Iron; shared provisioning doctrine
 - **Kiess**: Roc Road escort function; road-warden intelligence sharing
 
-See also: `warrior_lore.md`, `swordsman_lore.md`, `crusader_lore.md`, `midgaard_lore.md`, `timeline.md`
+See also: `warden_lore.md`, `swordsman_lore.md`, `crusader_lore.md`, `midgaard_lore.md`, `timeline.md`

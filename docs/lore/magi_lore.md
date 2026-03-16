@@ -2,7 +2,7 @@
 
 ## Overview
 
-The mage tradition cannot be understood without its catastrophe. The **Spirebound Conclave** — a mountain academy chartered to preserve dangerous magical knowledge — turned containment doctrine into prisoner experimentation and collapsed in seismic ruin and internal sabotage. The **Wizard's Keep** was founded as its institutional correction: regulated under the Violet Compact's registry law, governed by the Triple-Ledger Rule, and militarized by frontier necessity. Every mage who trains through the Keep's curriculum carries the Conclave's catastrophe woven structurally into their practice. The tradition is defined as much by what it refuses to become as by what it aims to achieve.
+The magi tradition cannot be understood without its catastrophe. The **Spirebound Conclave** — a mountain academy chartered to preserve dangerous magical knowledge — turned containment doctrine into prisoner experimentation and collapsed in seismic ruin and internal sabotage. The **Wizard's Keep** was founded as its institutional correction: regulated under the Violet Compact's registry law, governed by the Triple-Ledger Rule, and militarized by frontier necessity. Every magi who trains through the Keep's curriculum carries the Conclave's catastrophe woven structurally into their practice. The tradition is defined as much by what it refuses to become as by what it aims to achieve.
 
 ---
 
@@ -48,9 +48,9 @@ These criticisms are not new. They appear in Keep internal documents from the se
 
 The Wizard's Keep exists in a frontier context. The Cinderteeth Mountains, from which the Conclave's catastrophe propagated, remain geographically adjacent to the Keep's primary campus. The Ashfall Monsoon events of the Ash-and-Iron Decades, the volcanic instability of the Ember Crown zone, and the ongoing subsurface resonance effects from the Prism Thesis faction's abandoned crystal implantation projects in the Withered Depths — all of these create an environment where magical practitioners face genuine physical threats that require practical responses.
 
-This frontier militarization distinguishes the Keep's mage tradition from what might be called "academic" magical practice. Keep training includes substantial practical combat application alongside theoretical development — not because the institution values combat over research, but because practitioners who cannot defend themselves in the field cannot do field research, and field research remains the most significant source of new knowledge about magical phenomena that don't manifest in controlled conditions.
+This frontier militarization distinguishes the Keep's magi tradition from what might be called "academic" magical practice. Keep training includes substantial practical combat application alongside theoretical development — not because the institution values combat over research, but because practitioners who cannot defend themselves in the field cannot do field research, and field research remains the most significant source of new knowledge about magical phenomena that don't manifest in controlled conditions.
 
-The practical consequence is that Keep-trained mages tend to be more immediately effective in dangerous conditions than practitioners from more sheltered academic traditions. They are also, by reputation, more willing to operate in environments that other traditions consider too risky — because their baseline definition of "risky" is calibrated against the Cinderteeth frontier rather than the controlled conditions of a crossroads city tower.
+The practical consequence is that Keep-trained magi tend to be more immediately effective in dangerous conditions than practitioners from more sheltered academic traditions. They are also, by reputation, more willing to operate in environments that other traditions consider too risky — because their baseline definition of "risky" is calibrated against the Cinderteeth frontier rather than the controlled conditions of a crossroads city tower.
 
 ---
 
@@ -62,7 +62,7 @@ The Keep's founders had to decide what to do with Ember Canon knowledge that had
 
 The compromise the founding generation reached was characteristically bureaucratic: lifesteal techniques would be studied and taught under modified ethical constraints. The practitioner would train lifesteal against opponents who could fight back — not experimental subjects. Documentation of lifesteal applications would be mandatory under the Triple-Ledger Rule. And the specific Ember Canon development methodologies — those that required non-consenting subjects — would be classified as prohibited practice and excluded from the formal curriculum while remaining documented in the restricted archive.
 
-Whether this compromise has held — whether the restricted archive remains restricted, and whether the training constraints have remained in place — is something that Keep administrators will affirm and Keep critics will question. The practical availability of lifesteal as a mage combat technique in the modern tradition suggests that whatever the institutional history, the knowledge has been successfully transmitted.
+Whether this compromise has held — whether the restricted archive remains restricted, and whether the training constraints have remained in place — is something that Keep administrators will affirm and Keep critics will question. The practical availability of lifesteal as a magi combat technique in the modern tradition suggests that whatever the institutional history, the knowledge has been successfully transmitted.
 
 ---
 
@@ -82,7 +82,7 @@ It also creates a politically awkward situation: the Keep holds documentation of
 
 Midgaard's **registry law** is the framework under which the Wizard's Keep originally established its multi-city presence. The city's guild courts are the institutional descendants of the predecessor institutions that countersigned Conclave transfer warrants — a history that Midgaard's Continuity faction prefers to classify as "wartime administrative triage" and that Midgaard's Reckoning faction cites as a model for ongoing accountability failures.
 
-Keep-trained mages operating in Midgaard must navigate the city's registry requirements, which are more complex than in other cities — Midgaard's registry office has the most extensive credential-verification infrastructure and the most detailed requirements for what constitutes authorized practice. Practitioners who find the Triple-Ledger Rule tedious will find Midgaard's additional requirements nearly unbearable.
+Keep-trained magi operating in Midgaard must navigate the city's registry requirements, which are more complex than in other cities — Midgaard's registry office has the most extensive credential-verification infrastructure and the most detailed requirements for what constitutes authorized practice. Practitioners who find the Triple-Ledger Rule tedious will find Midgaard's additional requirements nearly unbearable.
 
 ### Kowloon
 

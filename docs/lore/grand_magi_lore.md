@@ -61,4 +61,4 @@ The Convergence Codices' theoretical documentation of multi-school interaction e
 - **Cinderteeth Mountains**: Ashfall Monsoon source; Grand Magi tradition reclamation context
 - **Great Pyramid / Solar Court**: Ancient honorific origin; cosmological elemental stability demonstration
 
-See also: `sorcerer_lore.md`, `wizard_lore.md`, `mage_lore.md`, `cinderteeth_mountains_lore.md`, `timeline.md`
+See also: `sorcerer_lore.md`, `wizard_lore.md`, `magi_lore.md`, `cinderteeth_mountains_lore.md`, `timeline.md`

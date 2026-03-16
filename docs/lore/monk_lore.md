@@ -32,7 +32,7 @@ The Forms are organized into three levels:
 
 ## III. The First Combat-Capable Monks
 
-The first combat-capable Monks were, by the tradition's own account, not warriors. They were **scholars of the physical form who found, sometimes reluctantly, that their disciplines translated into devastating martial efficiency**. The Interior Forms were developed as meditation, not combat training. The discovery that a practitioner who had completed the Inner Forms was substantially more dangerous in a physical confrontation than an untrained fighter of comparable physical build was initially treated as an interesting side effect rather than the primary application.
+The first combat-capable Monks were, by the tradition's own account, not wardens. They were **scholars of the physical form who found, sometimes reluctantly, that their disciplines translated into devastating martial efficiency**. The Interior Forms were developed as meditation, not combat training. The discovery that a practitioner who had completed the Inner Forms was substantially more dangerous in a physical confrontation than an untrained fighter of comparable physical build was initially treated as an interesting side effect rather than the primary application.
 
 The first monasteries to formalize combat training did so in response to external pressure: bandit groups that had learned that isolated mountain communities sometimes accumulated resources worth stealing found that Monk communities were surprisingly dangerous targets. The monastery that codified its defensive practices in writing rather than transmitting them ad hoc through individual instruction became the origin of the tradition's combat documentation lineage.
 
@@ -94,7 +94,7 @@ The harbor districts of Kowloon are perhaps the most culturally distinctive Monk
 - **Cinderteeth Mountains**: Adjacent to original monastery territories; Ventspeaker community contacts
 - **Brawler**: Parallel tradition; pit-fighting origin; Monk's complementary tradition in Martial Artist synthesis
 - **Martial Artist**: Adept synthesis of Monk and Brawler; empirical discovery of complementary methods
-- **Warrior**: Interior Forms dispute; contested overlap in body-discipline theory
+- **Warden**: Interior Forms dispute; contested overlap in body-discipline theory
 - **Psionicist**: Parallel tradition in contemplative mental discipline; distinct methodology but shared domain
 
 See also: `cinderteeth_mountains_lore.md`, `brawler_lore.md`, `martial_artist_lore.md`, `timeline.md`

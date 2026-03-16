@@ -2,7 +2,7 @@
 
 ## Overview
 
-Sorcerers are the inheritors of the **Chromatic Circle** — a pre-academic order of arcanists who rejected the emerging universities and their narrow specializations. Where the Axiomatic Schools pressed practitioners toward single-school mastery and formal proof within bounded domains, the Circle's founders held that the deepest power lay in **synthesis**: fire and ice together, healing and destruction from the same hand. They documented every interaction between spell schools in vast libraries called the **Confluence Texts**. The academies eventually absorbed or outlawed most Circle branches, but the tradition survived in small apprentice chains. Mages who return through the mortal disciplines to study synthesis rather than analysis take up the old Circle inheritance and become Sorcerers in the truest sense.
+Sorcerers are the inheritors of the **Chromatic Circle** — a pre-academic order of arcanists who rejected the emerging universities and their narrow specializations. Where the Axiomatic Schools pressed practitioners toward single-school mastery and formal proof within bounded domains, the Circle's founders held that the deepest power lay in **synthesis**: fire and ice together, healing and destruction from the same hand. They documented every interaction between spell schools in vast libraries called the **Confluence Texts**. The academies eventually absorbed or outlawed most Circle branches, but the tradition survived in small apprentice chains. Magi who return through the mortal disciplines to study synthesis rather than analysis take up the old Circle inheritance and become Sorcerers in the truest sense.
 
 ---
 
@@ -70,4 +70,4 @@ Stormbinder practitioners tend to operate at the larger scale of elemental engag
 - **Magi**: Parent tradition; Wizard's Keep institutional framework
 - **Cinderteeth Mountains**: Ashfall Monsoon source; stormbinder intervention context
 
-See also: `wizard_lore.md`, `grand_magi_lore.md`, `mage_lore.md`, `cinderteeth_mountains_lore.md`, `timeline.md`
+See also: `wizard_lore.md`, `grand_magi_lore.md`, `magi_lore.md`, `cinderteeth_mountains_lore.md`, `timeline.md`

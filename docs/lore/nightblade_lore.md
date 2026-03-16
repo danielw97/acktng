@@ -8,7 +8,7 @@ The Nightblade tradition has no guild and no formal founding — traits inherite
 
 ## I. The Post-Empire Margins
 
-The conditions that produced the Nightblade synthesis were specific to the **post-empire margins** — the geographic and institutional spaces between the major city-states during the period when the dissolved empire's agents were dispersing and the Warlock tradition's precursors were developing their compact-based practice in the thief tradition's shadow economies.
+The conditions that produced the Nightblade synthesis were specific to the **post-empire margins** — the geographic and institutional spaces between the major city-states during the period when the dissolved empire's agents were dispersing and the Warlock tradition's precursors were developing their compact-based practice in the cipher tradition's shadow economies.
 
 Both traditions were operating in environments hostile to institutional identification. Assassin practitioners who had maintained the original philosophy (patience, positioning, studied execution) had no institutional home and maintained low profiles by design. Warlock precursors who had discovered the shadow-compact resonance were also operating outside institutional frameworks — the compacts themselves were private agreements with entities that civic governance had no framework for regulating.
 
@@ -63,8 +63,8 @@ The combination of shadow-hex stripping and poison stripping in a single engagem
 - **Timeline**: Post-empire period (Assassin-Warlock practitioner contact in post-empire margins), Era XII (Violet Compact; Nightblade tradition in informal registry status)
 - **Assassin**: Component tradition; patience-and-positioning methodology; pre-contact opening identification
 - **Warlock**: Component tradition; shadow-compact practice; hex and ward-dissolution techniques
-- **Thief**: Grandparent tradition; shared shadow-economy operating environment
+- **Cipher**: Grandparent tradition; shared shadow-economy operating environment
 - **Kiess**: Non-institutional operating context; anti-sealed-warrant protections favoring Nightblade practice
 - **Mafdet**: Swift-court jurisdiction; oath-breaking threshold that constrains referral chain engagement parameters
 
-See also: `assassin_lore.md`, `warlock_lore.md`, `thief_lore.md`, `kiess_lore.md`, `timeline.md`
+See also: `assassin_lore.md`, `warlock_lore.md`, `cipher_lore.md`, `kiess_lore.md`, `timeline.md`

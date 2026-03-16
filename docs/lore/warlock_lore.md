@@ -2,7 +2,7 @@
 
 ## Overview
 
-The first Warlocks were thieves and shadow-workers who had always sensed something more moving in the dark spaces between their strikes — a resonance in the moment before a lock clicked open or a pocket emptied. Some pursued this sense deliberately, pressing their skills past what pure physical discipline could explain. They found it in old compacts: pacts with entities that trafficked in shadow, entropy, and the fine art of undoing. The Warlock tradition was never written down formally because the compacts that form its foundation are, by their nature, particular agreements that cannot be generalized — each practitioner's compact is their own, shaped by what the practitioner brought to the agreement and what the compact's counterparty required. Thieves who return through the mortal disciplines carry that resonance fully awakened: curse-weavers who blur the line between shadowcraft and sorcery.
+The first Warlocks were ciphers and shadow-workers who had always sensed something more moving in the dark spaces between their strikes — a resonance in the moment before a lock clicked open or a pocket emptied. Some pursued this sense deliberately, pressing their skills past what pure physical discipline could explain. They found it in old compacts: pacts with entities that trafficked in shadow, entropy, and the fine art of undoing. The Warlock tradition was never written down formally because the compacts that form its foundation are, by their nature, particular agreements that cannot be generalized — each practitioner's compact is their own, shaped by what the practitioner brought to the agreement and what the compact's counterparty required. Ciphers who return through the mortal disciplines carry that resonance fully awakened: curse-weavers who blur the line between shadowcraft and sorcery.
 
 ---
 
@@ -18,9 +18,9 @@ The tradition's own position is that this analysis is both plausible and incompl
 
 ## II. The Resonance Discovery
 
-The transition from thief to warlock practitioner begins with what the tradition calls the **resonance discovery** — the moment at which a thief-tradition practitioner recognizes that their skills are producing effects that physical technique alone cannot explain. A pick-lock that opens not through mechanical manipulation but through a sense of the lock's internal state yielding. A pocket emptied not through precise finger positioning but through a moment in which the target's awareness is simply elsewhere. A shadow-route found not through reconnaissance but through the intuition that the gap exists before verification confirms it.
+The transition from cipher to warlock practitioner begins with what the tradition calls the **resonance discovery** — the moment at which a cipher-tradition practitioner recognizes that their skills are producing effects that physical technique alone cannot explain. A pick-lock that opens not through mechanical manipulation but through a sense of the lock's internal state yielding. A pocket emptied not through precise finger positioning but through a moment in which the target's awareness is simply elsewhere. A shadow-route found not through reconnaissance but through the intuition that the gap exists before verification confirms it.
 
-These experiences are not universal among thief-tradition practitioners — many work for decades without encountering them. The minority who do encounter them respond in one of three ways: they attribute the experience to exceptional luck and ignore it; they rationalize it as the subconscious integration of micro-observations that they couldn't consciously process; or they pursue the experience deliberately, pressing their practice into the space where the resonance appears.
+These experiences are not universal among cipher-tradition practitioners — many work for decades without encountering them. The minority who do encounter them respond in one of three ways: they attribute the experience to exceptional luck and ignore it; they rationalize it as the subconscious integration of micro-observations that they couldn't consciously process; or they pursue the experience deliberately, pressing their practice into the space where the resonance appears.
 
 Those who pursue it find the compacts. The compacts find them, more accurately — the entities that anchor shadow compacts have, in the tradition's documentation, a kind of active interest in practitioners who have developed the sensitivity to perceive their presence and the motivation to engage with it. The initial compact is frequently described as simultaneously sought and unexpected: the practitioner pursues a sense they can barely articulate, and when the compact makes itself available, the terms are already clear in a way that the practitioner had not consciously formulated.
 
@@ -30,7 +30,7 @@ Those who pursue it find the compacts. The compacts find them, more accurately �
 
 The **hex craft** that Warlocks develop through their compacts is organized around what the tradition calls the **art of undoing** — techniques that attack not directly but through the undermining of systems that the target depends on. A hex does not deal damage in the conventional sense; it creates conditions in which the target's own functioning degrades. Protection wards become unreliable; combat reflexes slow at specific moments; the environmental support that all practitioners depend on (stable footing, reliable sensory information, the capacity to concentrate under pressure) becomes subtly but persistently compromised.
 
-The art of undoing is philosophically adjacent to the thief tradition's insight that every system of control creates its own perimeter — that attacking a system's integrity is often more effective than attacking the system's defended front. A target who has invested heavily in physical defense is most vulnerable to something that doesn't engage with the physical defense at all. A hex that makes the target's armor unreliable at the worst moment achieves more than direct combat against fully operational armor.
+The art of undoing is philosophically adjacent to the cipher tradition's insight that every system of control creates its own perimeter — that attacking a system's integrity is often more effective than attacking the system's defended front. A target who has invested heavily in physical defense is most vulnerable to something that doesn't engage with the physical defense at all. A hex that makes the target's armor unreliable at the worst moment achieves more than direct combat against fully operational armor.
 
 The specific hex techniques available to Warlock practitioners depend substantially on the nature of their individual compact. Some compacts specialize in **entropy hexes** — accelerating the natural degradation of whatever the target depends on. Some specialize in **shadow hexes** — interfering with the target's perceptual and cognitive access to their environment. Some specialize in **binding hexes** — creating specific constraints on the target's available actions at specific moments. The tradition does not standardize these specializations because standardization would require a standardized compact structure, and the compacts are by nature particular.
 
@@ -50,11 +50,11 @@ The Nightblade synthesis creates a specific dimension of this management challen
 
 ## V. Cross-References
 
-- **Timeline**: Post-empire era (shadow compact practice emerging from thief-tradition resonance discovery), Era XII (Violet Compact era; warlock practice in ambiguous registry status)
-- **Thief**: Parent tradition; resonance discovery context; shadow-economy operating environment
-- **Assassin**: Parallel remort path from Thief; Nightblade synthesis prerequisite
+- **Timeline**: Post-empire era (shadow compact practice emerging from cipher-tradition resonance discovery), Era XII (Violet Compact era; warlock practice in ambiguous registry status)
+- **Cipher**: Parent tradition; resonance discovery context; shadow-economy operating environment
+- **Assassin**: Parallel remort path from Cipher; Nightblade synthesis prerequisite
 - **Nightblade**: Adept synthesis; shadow compact + positioning methodology
 - **Black Sun Shard / Great Pyramid**: Potential connection to compact counterparty nature; contested implication
 - **Necromancer**: Parallel tradition in entropy-focused practice; distinct mechanism (academic vs. compact)
 
-See also: `thief_lore.md`, `assassin_lore.md`, `nightblade_lore.md`, `great_pyramid_lore.md`, `timeline.md`
+See also: `cipher_lore.md`, `assassin_lore.md`, `nightblade_lore.md`, `great_pyramid_lore.md`, `timeline.md`

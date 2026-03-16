@@ -61,4 +61,4 @@ What the Keep did not inherit was the Axiomatic Schools' full independence from 
 - **Wizard's Keep**: Primary institutional home; Triple-Ledger Rule as Axiomatic methodology application
 - **Sunken Sanctum**: Spirebound Conclave catastrophe that created the institutional context for both Keep and Axiomatic Schools
 
-See also: `mage_lore.md`, `sorcerer_lore.md`, `grand_magi_lore.md`, `wizards_keep.lore`, `timeline.md`
+See also: `magi_lore.md`, `sorcerer_lore.md`, `grand_magi_lore.md`, `wizards_keep.lore`, `timeline.md`
