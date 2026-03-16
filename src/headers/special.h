@@ -111,6 +111,17 @@ DECLARE_SPEC_FUN(spec_ss_kiln_overseer);
 DECLARE_SPEC_FUN(spec_midgaard_gate_warden);
 DECLARE_SPEC_FUN(spec_midgaard_caravan_master);
 DECLARE_SPEC_FUN(spec_midgaard_pilgrim);
+DECLARE_SPEC_FUN(spec_midgaard_city_guard);
+DECLARE_SPEC_FUN(spec_midgaard_executioner);
+DECLARE_SPEC_FUN(spec_midgaard_temple_guardian);
+DECLARE_SPEC_FUN(spec_midgaard_healer);
+DECLARE_SPEC_FUN(spec_midgaard_beggar);
+DECLARE_SPEC_FUN(spec_midgaard_street_vendor);
+DECLARE_SPEC_FUN(spec_midgaard_temple_priest);
+DECLARE_SPEC_FUN(spec_midgaard_shopkeeper);
+DECLARE_SPEC_FUN(spec_midgaard_postmaster);
+DECLARE_SPEC_FUN(spec_midgaard_quartermaster);
+DECLARE_SPEC_FUN(spec_midgaard_invasion_warden);
 
 SPEC_FUN *spec_lookup(const char *name);
 char *rev_spec_lookup(void *func);

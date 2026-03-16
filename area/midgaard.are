@@ -6297,30 +6297,30 @@ G 0 1112 5
 S
 
 #SPECIALS
-M 917 spec_policeman
+M 917 spec_midgaard_city_guard
 M 918 spec_midgaard_gate_warden
-M 919 spec_cast_cleric
-M 920 spec_vendor
+M 919 spec_midgaard_temple_guardian
+M 920 spec_midgaard_street_vendor
 M 921 spec_midgaard_caravan_master
-M 922 spec_policeman
-M 923 spec_vendor
+M 922 spec_midgaard_city_guard
+M 923 spec_midgaard_street_vendor
 M 924 spec_midgaard_pilgrim
-M 925 spec_thief
-M 927 spec_executioner
-M 928 spec_cast_cleric
-M 929 spec_lay_sister
-M 930 spec_vendor
-M 931 spec_vendor
-M 932 spec_vendor
-M 933 spec_vendor
-M 934 spec_vendor
-M 935 spec_vendor
-M 936 spec_vendor
-M 937 spec_vendor
-M 938 spec_vendor
-M 939 spec_posting_clerk
-M 940 spec_records_keeper
-M 941 spec_warden
+M 925 spec_midgaard_beggar
+M 927 spec_midgaard_executioner
+M 928 spec_midgaard_healer
+M 929 spec_midgaard_temple_priest
+M 930 spec_midgaard_shopkeeper
+M 931 spec_midgaard_shopkeeper
+M 932 spec_midgaard_shopkeeper
+M 933 spec_midgaard_shopkeeper
+M 934 spec_midgaard_shopkeeper
+M 935 spec_midgaard_shopkeeper
+M 936 spec_midgaard_shopkeeper
+M 937 spec_midgaard_shopkeeper
+M 938 spec_midgaard_shopkeeper
+M 939 spec_midgaard_postmaster
+M 940 spec_midgaard_quartermaster
+M 941 spec_midgaard_invasion_warden
 S
 
 #$

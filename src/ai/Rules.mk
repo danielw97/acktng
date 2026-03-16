@@ -45,7 +45,12 @@ AI_SPEC_SRCS = \
 	  ai/spec_ss_cinder_broker.o ai/spec_ss_manifest_warden.o \
 	  ai/spec_ss_kiln_overseer.o \
 	  ai/spec_midgaard_gate_warden.o ai/spec_midgaard_caravan_master.o \
-	  ai/spec_midgaard_pilgrim.o
+	  ai/spec_midgaard_pilgrim.o ai/spec_midgaard_city_guard.o \
+	  ai/spec_midgaard_executioner.o ai/spec_midgaard_temple_guardian.o \
+	  ai/spec_midgaard_healer.o ai/spec_midgaard_beggar.o \
+	  ai/spec_midgaard_street_vendor.o ai/spec_midgaard_temple_priest.o \
+	  ai/spec_midgaard_shopkeeper.o ai/spec_midgaard_postmaster.o \
+	  ai/spec_midgaard_quartermaster.o ai/spec_midgaard_invasion_warden.o
 
 AI_SUMMON_SRCS = ai/spec_summon_water.o ai/spec_summon_fire.o ai/spec_summon_earth.o \
 	  ai/spec_summon_undead.o ai/spec_summon_holy.o ai/spec_summon_shadow.o \
