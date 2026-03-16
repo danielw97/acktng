@@ -2260,7 +2260,6 @@ void do_who(CHAR_DATA *ch, char *argument)
       for (d = first_desc; d != NULL; d = d->next)
       {
          CHAR_DATA *wch = (d->original != NULL) ? d->original : d->character;
-         char const *class;
 
          if (wch == NULL)
             continue;
@@ -2273,8 +2272,6 @@ void do_who(CHAR_DATA *ch, char *argument)
             continue;
          if (i == 3 && (is_remort(wch) || is_adept(wch) || wch->level > MAX_MORTAL))
             continue;
-         class = gclass_table[wch->class].who_name;
-
          player_cnt++;
 
          if (!print)
@@ -2286,12 +2283,10 @@ void do_who(CHAR_DATA *ch, char *argument)
                safe_strcat(MAX_STRING_LENGTH, buf,
                            "@@R|------------------------------------|----------@@lImmortals@@R------------------------|@@g\n\r");
                break;
-
             case 1:
                safe_strcat(MAX_STRING_LENGTH, buf,
                            "@@R|------------------------------------|------------@@WAdepts@@R-------------------------|@@g\n\r");
                break;
-
             case 2:
                safe_strcat(MAX_STRING_LENGTH, buf,
                            "@@R|------------------------------------|----------@@mRemortals@@R------------------------|@@g\n\r");
@@ -2299,33 +2294,21 @@ void do_who(CHAR_DATA *ch, char *argument)
             case 3:
                safe_strcat(MAX_STRING_LENGTH, buf,
                            "@@R|------------------------------------|-----------@@cMortals@@R-------------------------|@@g\n\r");
-
                break;
             }
          }
+
          if (wch->level > MAX_MORTAL)
          {
+            /* Immortal: display who_name colored by rank */
             switch (wch->level)
             {
-            default:
-               break;
-            case MAX_LEVEL - 0:
-               class = "@@l-* CREATOR *-@@g    ";
-               break;
-            case MAX_LEVEL - 1:
-               class = "@@B-= SUPREME =-@@g    ";
-               break;
-            case MAX_LEVEL - 2:
-               class = "@@a--  DEITY  --@@g    ";
-               break;
-            case MAX_LEVEL - 3:
-               class = "@@c - IMMORTAL- @@g    ";
-               break;
-            case MAX_LEVEL - 4:
-               class = "@@W    ADEPT  @@N      ";
-               break;
+            case MAX_LEVEL - 0: sprintf(buf3, "@@l%s@@g", wch->pcdata->who_name); break;
+            case MAX_LEVEL - 1: sprintf(buf3, "@@B%s@@g", wch->pcdata->who_name); break;
+            case MAX_LEVEL - 2: sprintf(buf3, "@@a%s@@g", wch->pcdata->who_name); break;
+            case MAX_LEVEL - 3: sprintf(buf3, "@@c%s@@g", wch->pcdata->who_name); break;
+            default:            sprintf(buf3, "@@W%s@@g", wch->pcdata->who_name); break;
             }
-            sprintf(buf3, " %s", class);
          }
          else if (IS_SET(wch->pcdata->pflags, PFLAG_AMBAS))
          {
@@ -2333,64 +2316,37 @@ void do_who(CHAR_DATA *ch, char *argument)
          }
          else if (is_adept(wch))
          {
-           class = get_adept_name(wch);
-           sprintf(buf3, "  %14s ", class);
+            /* Adept: display adept name */
+            sprintf(buf3, "  %14s ", get_adept_name(wch));
          }
+         else if (is_remort(wch))
          {
-            if (wch->level >= (MAX_LEVEL - 4) || str_cmp(wch->pcdata->who_name, "off"))
+            /* Remort: display remort class levels */
+            buf3[0] = '\0';
+            for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
             {
-               switch (wch->level)
-               {
-               case MAX_LEVEL - 0:
-                  sprintf(buf3, "@@l %s@@g", class);
-                  break;
-               case MAX_LEVEL - 1:
-                  sprintf(buf3, "@@B %s@@g", class);
-                  break;
-               case MAX_LEVEL - 2:
-                  sprintf(buf3, "@@a %s@@g", class);
-                  break;
-               case MAX_LEVEL - 3:
-                  sprintf(buf3, "@@c %s@@g", class);
-                  break;
-               default:
-                  sprintf(buf3, "@@W %s@@g", class);
-                  break;
-               }
+               if (!IS_REMORT_CLASS(cnt))
+                  continue;
+               if (wch->class_level[cnt] == MAX_MORTAL)
+                  sprintf(buf4, " @@m *@@N");
+               else
+                  sprintf(buf4, " @@m%2d@@N", wch->class_level[cnt] > 0 ? wch->class_level[cnt] : 0);
+               safe_strcat(MAX_STRING_LENGTH, buf3, buf4);
             }
-            else
+         }
+         else
+         {
+            /* Mortal: display mortal class levels */
+            buf3[0] = '\0';
+            for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
             {
-               buf4[0] = '\0';
-               buf3[0] = '\0';
-
-               for (cnt = 0; cnt < MAX_CLASS; cnt++)
-               {
-                  if (wch->class_level[MAX_CLASS + cnt + MAX_CLASS] > 0)
-                  {
-                     if (wch->class_level[MAX_CLASS + cnt + MAX_CLASS] == MAX_MORTAL)
-                        sprintf(buf4, " @@d *@@N");
-                     else
-                        sprintf(buf4, " @@d%2d@@N", wch->class_level[MAX_CLASS + cnt + MAX_CLASS]);
-                  }
-                  else if (wch->class_level[MAX_CLASS + cnt] > 0)
-                  {
-                     if (wch->class_level[MAX_CLASS + cnt] == MAX_MORTAL)
-                        sprintf(buf4, " @@m *@@N");
-                     else
-                        sprintf(buf4, " @@m%2d@@N", wch->class_level[MAX_CLASS + cnt]);
-                  }
-                  else
-                  {
-                     if (wch->class_level[cnt] == MAX_MORTAL)
-                        sprintf(buf4, " @@b *@@N");
-                     else if (wch->class_level[cnt] <= 0)
-                        sprintf(buf4, " @@g%2d@@N", 0);
-                     else
-                        sprintf(buf4, " @@b%2d@@N", wch->class_level[cnt]);
-                  }
-
-                  safe_strcat(MAX_STRING_LENGTH, buf3, buf4);
-               }
+               if (!IS_MORTAL_CLASS(cnt))
+                  continue;
+               if (wch->class_level[cnt] == MAX_MORTAL)
+                  sprintf(buf4, " @@b *@@N");
+               else
+                  sprintf(buf4, " @@b%2d@@N", wch->class_level[cnt] > 0 ? wch->class_level[cnt] : 0);
+               safe_strcat(MAX_STRING_LENGTH, buf3, buf4);
             }
          }
          /*
