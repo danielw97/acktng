@@ -2300,14 +2300,15 @@ void do_who(CHAR_DATA *ch, char *argument)
 
          if (wch->level > MAX_MORTAL)
          {
-            /* Immortal: display who_name colored by rank */
+            /* Immortal: display who_name colored by rank; fall back to rank title if unset */
+            const char *wn = str_cmp(wch->pcdata->who_name, "off") ? wch->pcdata->who_name : NULL;
             switch (wch->level)
             {
-            case MAX_LEVEL - 0: sprintf(buf3, "@@l%s@@g", wch->pcdata->who_name); break;
-            case MAX_LEVEL - 1: sprintf(buf3, "@@B%s@@g", wch->pcdata->who_name); break;
-            case MAX_LEVEL - 2: sprintf(buf3, "@@a%s@@g", wch->pcdata->who_name); break;
-            case MAX_LEVEL - 3: sprintf(buf3, "@@c%s@@g", wch->pcdata->who_name); break;
-            default:            sprintf(buf3, "@@W%s@@g", wch->pcdata->who_name); break;
+            case MAX_LEVEL - 0: sprintf(buf3, "@@l%s@@g", wn ? wn : "Creator"); break;
+            case MAX_LEVEL - 1: sprintf(buf3, "@@B%s@@g", wn ? wn : "Supreme"); break;
+            case MAX_LEVEL - 2: sprintf(buf3, "@@a%s@@g", wn ? wn : "Deity"); break;
+            case MAX_LEVEL - 3: sprintf(buf3, "@@c%s@@g", wn ? wn : "Angel"); break;
+            default:            sprintf(buf3, "@@W%s@@g", wn ? wn : "Immortal"); break;
             }
          }
          else if (IS_SET(wch->pcdata->pflags, PFLAG_AMBAS))
@@ -2316,8 +2317,8 @@ void do_who(CHAR_DATA *ch, char *argument)
          }
          else if (is_adept(wch))
          {
-            /* Adept: display adept name */
-            sprintf(buf3, "  %14s ", get_adept_name(wch));
+            /* Adept: display adept name (titles are pre-padded to 17 visible chars) */
+            sprintf(buf3, " %s", get_adept_name(wch));
          }
          else if (is_remort(wch))
          {
