@@ -597,7 +597,7 @@ Mob vnums are assigned sequentially from 6124. Each mob entry lists: vnum, name,
 | 6127 | ashfang sentry captain | 147 | `is_npc aggressive sentinel stay_area` | `0 -25 6 6` | — | Drops stronghold key; Sentry Tower |
 | 6128 | ashfang remnant saboteur | 146 | `is_npc aggressive stay_area no_hunt` | `0 0 5 5` | `spec_poison` | Poisoned blade melee; outer camp |
 | 6129 | ashfang remnant shaman | 146 | `is_npc aggressive stay_area no_hunt` | `0 0 5 5` | `spec_cast_cleric` | Caster support; outer camp |
-| 6130 | ashfang remnant warlord | 148 | `is_npc aggressive sentinel stay_area boss no_flee no_hunt` | `0 -100 10 10` | `spec_cast_judge` | **MINI-BOSS**; Command Chamber; boss/no_mob room |
+| 6130 | ashfang remnant warlord | 148 | `is_npc aggressive sentinel stay_area boss no_flee no_hunt` | `0 -100 10 10` | `spec_cinderteeth_warlord` | **MINI-BOSS**; Command Chamber; boss/no_mob room |
 | 6131 | cinderteeth ashrunner | 145 | `is_npc aggressive stay_area no_hunt` | `0 0 5 5` | — | Fast rodent; Warren Flats |
 | 6132 | cinderteeth mountain bear | 147 | `is_npc aggressive stay_area no_hunt` | `0 -25 6 6` | — | Large omnivore; Bear Territory |
 | 6133 | cinderteeth mountain bear elder | 148 | `is_npc aggressive stay_area no_hunt solo` | `0 -50 7 7` | — | Elite bear; mineral-lick zones |
@@ -625,7 +625,7 @@ Mob vnums are assigned sequentially from 6124. Each mob entry lists: vnum, name,
 | 6148 | chalk-ash elemental | 150 | `is_npc aggressive stay_area no_hunt` | `0 -25 6 6` | — | Chalk-ash given animate form; saddle depressions |
 | 6149 | chalkwind resonance wyrm | 150 | `is_npc aggressive stay_area no_hunt solo` | `0 -50 7 7` | `spec_breath_any` | Elite serpentine creature; Saddle Wind Corridor |
 | 6150 | ironpost route house revenant | 151 | `is_npc aggressive stay_area no_hunt undead` | `0 -50 7 7` | `spec_cast_cleric` | Old route house defender; Ironpost upper floor |
-| 6151 | ironpost warden-commander | 152 | `is_npc aggressive sentinel stay_area boss no_flee no_hunt undead` | `0 -100 10 10` | `spec_cast_bigtime` | **MINI-BOSS**; Archive Sealed Wing; drops archive key |
+| 6151 | ironpost warden-commander | 152 | `is_npc aggressive sentinel stay_area boss no_flee no_hunt undead` | `0 -100 10 10` | `spec_cinderteeth_warden_cmd` | **MINI-BOSS**; Archive Sealed Wing; drops archive key |
 | 6152 | saddle pass scavenger vulture | 148 | `is_npc stay_area no_hunt` | `0 0 5 5` | `spec_fido` | Non-aggressive cleanup; passive presence |
 | 6153 | chalkwind ice-shelf shade | 149 | `is_npc aggressive stay_area no_hunt undead` | `0 -25 6 6` | `spec_cast_undead` | Ghost of a winter-close casualty; Upper Hollow area |
 | 6154 | chalk-ash drift crawler | 149 | `is_npc aggressive stay_area no_hunt` | `0 -25 6 6` | — | Ash-deposit creature; Ash Dune zone |
@@ -653,7 +653,7 @@ Mob vnums are assigned sequentially from 6124. Each mob entry lists: vnum, name,
 | 6169 | glasswash acid-seep leech | 150 | `is_npc aggressive stay_area no_hunt` | `0 -25 6 6` | `spec_poison` | Sulfur-tolerant creature; Dead Pools approach |
 | 6170 | glasswash sulfur elemental | 152 | `is_npc aggressive stay_area no_hunt` | `0 -50 7 7` | `spec_breath_gas` | Sulfur-infused elemental; Sulfur Fan |
 | 6171 | glasswash crystal resonance sprite | 152 | `is_npc aggressive stay_area no_hunt no_body` | `0 -50 7 7` | `spec_cast_mage` | Crystal-attuned spirit; Yellow Garden |
-| 6172 | glasswash sulfur fan colossus | 156 | `is_npc aggressive sentinel stay_area boss no_flee no_hunt` | `0 -100 10 10` | `spec_breath_gas` | **MINI-BOSS**; Yellow Garden Colossus Chamber; sulfur-encrusted giant |
+| 6172 | glasswash sulfur fan colossus | 156 | `is_npc aggressive sentinel stay_area boss no_flee no_hunt` | `0 -100 10 10` | `spec_cinderteeth_sulfur_colossus` | **MINI-BOSS**; Yellow Garden Colossus Chamber; sulfur-encrusted giant |
 | 6173 | glasswash pumice drifter | 150 | `is_npc aggressive stay_area no_hunt` | `0 -25 6 6` | — | Pumice-aggregate creature; Pumice Edge Zone |
 | 6174 | glasswash extraction site haunt | 151 | `is_npc aggressive stay_area no_hunt undead` | `0 -50 7 7` | `spec_cast_undead` | Ghost of extraction worker; North Fan |
 | 6175 | glasswash mirror-shard swarm | 151 | `is_npc aggressive stay_area no_hunt no_body` | `0 -50 7 7` | — | Animated glass particle cloud; North Fan central expanse |
@@ -682,7 +682,7 @@ Mob vnums are assigned sequentially from 6124. Each mob entry lists: vnum, name,
 | 6191 | bellspine conduit warden | 156 | `is_npc aggressive stay_area no_hunt undead` | `0 -75 8 8` | `spec_cast_cleric` | Undead Conclave warden maintaining conduit; trench area |
 | 6192 | bellspine ledge-snap golem | 156 | `is_npc aggressive stay_area no_hunt` | `0 -75 8 8` | — | Rock-plate animate; tremor-snap ledge zone |
 | 6193 | bellspine mountain bear | 154 | `is_npc aggressive stay_area no_hunt` | `0 -50 7 7` | — | Bear penetrating into Bellspine from lower approach |
-| 6194 | bellspine resonance anchor construct | 160 | `is_npc aggressive sentinel stay_area boss no_flee no_hunt` | `0 -100 11 11` | `spec_cast_bigtime` | **BOSS**; Anchor Construct Sealed Vault; reanimated Conclave construct |
+| 6194 | bellspine resonance anchor construct | 160 | `is_npc aggressive sentinel stay_area boss no_flee no_hunt` | `0 -100 11 11` | `spec_cinderteeth_anchor` | **BOSS**; Anchor Construct Sealed Vault; reanimated Conclave construct |
 | 6195 | bellspine hollow pass guardian | 157 | `is_npc aggressive stay_area no_hunt solo` | `0 -75 8 8` | — | Elite guardian creature; Upper Hollow summit |
 | 6196 | bellspine tremor elemental | 157 | `is_npc aggressive stay_area no_hunt` | `0 -75 8 8` | `spec_breath_lightning` | Seismic elemental; fault-face areas |
 | 6197 | bellspine ice-season phantom | 155 | `is_npc aggressive stay_area no_hunt undead no_body` | `0 -75 8 8` | `spec_cast_undead` | Winter-close casualty ghost; Upper Hollow |
@@ -707,7 +707,7 @@ Mob vnums are assigned sequentially from 6124. Each mob entry lists: vnum, name,
 | 6209 | ash cult fire-keeper | 161 | `is_npc aggressive stay_area no_hunt` | `0 -100 9 9` | `spec_breath_fire` | Elite cultist tending the fire-pits |
 | 6210 | ash cult doctrinal enforcer | 162 | `is_npc aggressive stay_area no_hunt solo` | `0 -100 9 9` | `spec_cast_bigtime` | Elite senior cultist; inner territory approach |
 | 6211 | conclave survey instrument shade | 160 | `is_npc aggressive stay_area no_hunt undead no_body` | `0 -100 9 9` | `spec_cast_mage` | Ghost of a Conclave survey instrument consciousness |
-| 6212 | ghost of the last ventspeaker | 163 | `is_npc aggressive sentinel stay_area boss no_flee no_hunt undead no_body` | `0 -100 11 11` | `spec_cast_bigtime` | **BOSS**; Last Ventspeaker's Oracle Ground; Cairn-Mother Retha An's ghost |
+| 6212 | ghost of the last ventspeaker | 163 | `is_npc aggressive sentinel stay_area boss no_flee no_hunt undead no_body` | `0 -100 11 11` | `spec_cinderteeth_ventspeaker` | **BOSS**; Last Ventspeaker's Oracle Ground; Cairn-Mother Retha An's ghost |
 | 6213 | western fold approach basilisk | 162 | `is_npc aggressive stay_area no_hunt solo` | `0 -100 9 9` | `spec_breath_fire` | Elite creature inhabiting the approach road |
 
 ---
@@ -723,7 +723,7 @@ Mob vnums are assigned sequentially from 6124. Each mob entry lists: vnum, name,
 | 6218 | western fold iron-spring elemental | 163 | `is_npc aggressive stay_area no_hunt` | `0 -100 9 9` | — | Iron-mineral elemental; spring basin |
 | 6219 | ash cult tiered fire-pit ritualist | 165 | `is_npc aggressive stay_area no_hunt` | `0 -100 9 9` | `spec_cast_cleric` | Elite cultist; Fire-Pit Complex |
 | 6220 | ash cult speaking vent herald | 165 | `is_npc aggressive stay_area no_hunt solo` | `0 -100 9 9` | `spec_breath_gas` | Elite herald; Speaking Vent approach |
-| 6221 | grand vent-oracle of the ash cult | 166 | `is_npc aggressive sentinel stay_area boss no_flee no_hunt` | `0 -100 11 11` | `spec_cast_bigtime` | **BOSS**; Grand Vent-Oracle's Throne; genuine geological intuition corrupted by theology |
+| 6221 | grand vent-oracle of the ash cult | 166 | `is_npc aggressive sentinel stay_area boss no_flee no_hunt` | `0 -100 11 11` | `spec_cinderteeth_oracle` | **BOSS**; Grand Vent-Oracle's Throne; genuine geological intuition corrupted by theology |
 | 6222 | sanctum scar collapse elemental | 163 | `is_npc aggressive stay_area no_hunt` | `0 -100 9 9` | — | Scar-formed entity; Scar perimeter |
 | 6223 | western fold geothermal drake | 165 | `is_npc aggressive stay_area no_hunt solo` | `0 -100 9 9` | `spec_breath_fire` | Elite creature; Fold floor perimeter |
 
@@ -754,11 +754,11 @@ Mob vnums are assigned sequentially from 6124. Each mob entry lists: vnum, name,
 | 6235 | firsttooth scree-shelf titan | 169 | `is_npc aggressive stay_area no_hunt` | `0 -100 9 9` | — | Massive scree creature; mid-caldera |
 | 6236 | firsttooth vent elemental | 169 | `is_npc aggressive stay_area no_hunt no_body` | `0 -100 9 9` | `spec_breath_fire` | Vent-gas elemental; caldera rim |
 | 6237 | oracle vent pilgrim | 168 | `is_npc aggressive stay_area no_hunt` | `0 -100 9 9` | `spec_cast_cleric` | Ash Cult pilgrim at Oracle Vent; caldera south slope |
-| 6238 | secondtooth caldera watcher | 168 | `is_npc aggressive sentinel stay_area boss no_flee no_hunt` | `0 -100 11 11` | `spec_breath_any` | **BOSS**; Secondtooth Caldera Watcher's Ground; heat-adapted apex predator |
+| 6238 | secondtooth caldera watcher | 168 | `is_npc aggressive sentinel stay_area boss no_flee no_hunt` | `0 -100 11 11` | `spec_cinderteeth_caldera_watcher` | **BOSS**; Secondtooth Caldera Watcher's Ground; heat-adapted apex predator |
 | 6239 | caldera rim guardian | 169 | `is_npc aggressive stay_area no_hunt solo` | `0 -100 9 9` | `spec_breath_fire` | Elite guardian; caldera rim traversal |
 | 6240 | ember throne servant | 169 | `is_npc aggressive stay_area no_hunt undead` | `0 -100 9 9` | `spec_cast_undead` | Undead servant of the Patriarch; inner caldera approach |
 | 6241 | ember throne geological titan | 169 | `is_npc aggressive stay_area no_hunt solo` | `0 -100 9 9` | — | Elite geological construct; Antechamber |
-| 6242 | the ember throne patriarch | 170 | `is_npc aggressive sentinel stay_area boss no_flee no_hunt no_body` | `0 -100 12 12` | `spec_cast_bigtime` | **FINAL BOSS**; The Ember Throne room; geological intelligence entity |
+| 6242 | the ember throne patriarch | 170 | `is_npc aggressive sentinel stay_area boss no_flee no_hunt no_body` | `0 -100 12 12` | `spec_cinderteeth_patriarch` | **FINAL BOSS**; The Ember Throne room; geological intelligence entity |
 | 6243 | caldera rim lava spider | 168 | `is_npc aggressive stay_area no_hunt` | `0 -100 9 9` | `spec_poison` | Heat-adapted arthropod; caldera rim |
 
 ---
@@ -767,14 +767,14 @@ Mob vnums are assigned sequentially from 6124. Each mob entry lists: vnum, name,
 
 | Boss | Vnum | Room | Level | Type | Special |
 |---|---:|---|---:|---|---|
-| Ashfang Remnant Warlord | 6130 | 6150 | 148 | Mini-boss | `spec_cast_judge` |
-| Ironpost Warden-Commander | 6151 | 6189 | 152 | Mini-boss | `spec_cast_bigtime` |
-| Sulfur Fan Colossus | 6172 | 6292 | 156 | Mini-boss | `spec_breath_gas` |
-| Bellspine Resonance Anchor Construct | 6194 | 6373 | 160 | Boss (tier 2) | `spec_cast_bigtime` |
-| Ghost of the Last Ventspeaker | 6212 | 6477 | 163 | Boss (tier 2) | `spec_cast_bigtime` |
-| Grand Vent-Oracle of the Ash Cult | 6221 | 6548 | 166 | Boss (tier 2) | `spec_cast_bigtime` |
-| Secondtooth Caldera Watcher | 6238 | 6668 | 168 | Boss (tier 3) | `spec_breath_any` |
-| The Ember Throne Patriarch | 6242 | 6673 | 170 | Final Boss | `spec_cast_bigtime` |
+| Ashfang Remnant Warlord | 6130 | 6150 | 148 | Mini-boss | `spec_cinderteeth_warlord` |
+| Ironpost Warden-Commander | 6151 | 6189 | 152 | Mini-boss | `spec_cinderteeth_warden_cmd` |
+| Glasswash Sulfur Fan Colossus | 6172 | 6292 | 156 | Mini-boss | `spec_cinderteeth_sulfur_colossus` |
+| Bellspine Resonance Anchor Construct | 6194 | 6373 | 160 | Boss (tier 2) | `spec_cinderteeth_anchor` |
+| Ghost of the Last Ventspeaker | 6212 | 6477 | 163 | Boss (tier 2) | `spec_cinderteeth_ventspeaker` |
+| Grand Vent-Oracle of the Ash Cult | 6221 | 6548 | 166 | Boss (tier 2) | `spec_cinderteeth_oracle` |
+| Secondtooth Caldera Watcher | 6238 | 6668 | 168 | Boss (tier 3) | `spec_cinderteeth_caldera_watcher` |
+| The Ember Throne Patriarch | 6242 | 6673 | 170 | Final Boss | `spec_cinderteeth_patriarch` |
 
 ---
 
@@ -782,8 +782,14 @@ Mob vnums are assigned sequentially from 6124. Each mob entry lists: vnum, name,
 
 | Special | Assigned Mobs |
 |---|---|
-| `spec_cast_bigtime` | 6130 (mini-boss), 6151 (mini-boss), 6194 (boss), 6210, 6212 (boss), 6221 (boss), 6242 (final boss) |
-| `spec_cast_judge` | 6130 |
+| `spec_cinderteeth_warlord` | 6130 (mini-boss) |
+| `spec_cinderteeth_warden_cmd` | 6151 (mini-boss) |
+| `spec_cinderteeth_sulfur_colossus` | 6172 (mini-boss) |
+| `spec_cinderteeth_anchor` | 6194 (boss) |
+| `spec_cinderteeth_ventspeaker` | 6212 (boss) |
+| `spec_cinderteeth_oracle` | 6221 (boss) |
+| `spec_cinderteeth_caldera_watcher` | 6238 (boss) |
+| `spec_cinderteeth_patriarch` | 6242 (final boss) |
 | `spec_cast_cleric` | 6129, 6150, 6205, 6215, 6219, 6237 |
 | `spec_cast_mage` | 6171, 6187, 6201, 6211, 6232 |
 | `spec_cast_undead` | 6128, 6138, 6141, 6147, 6153, 6156, 6162, 6174, 6178, 6182, 6188, 6189, 6191, 6197, 6200, 6207, 6208, 6216, 6228, 6232, 6240 |

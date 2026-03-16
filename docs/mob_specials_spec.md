@@ -353,6 +353,203 @@ The `is_player_summon_special()` function in `src/special.c` returns TRUE for an
 
 ---
 
+## Cinderteeth Mountains boss specials
+
+Eight boss-specific specials written for the Cinderteeth Mountains zone (vnums 6124-6753). Each uses `ch->spec_behavior` as a round counter reset to 0 when the mob stops fighting, and several also use `ch->spec_behavior2` for persistent state (frenzy flags, element tracking).
+
+### `spec_cinderteeth_warlord` — Ashfang Remnant Warlord (6130, level 148)
+
+**File:** `src/ai/spec_cinderteeth_warlord.c`
+**Pattern:** Cycling `spec_behavior % 8`; no damage callback.
+
+| Round | Action |
+|---|---|
+| 1 | Warcry flavor (`do_warcry`) + blood-oath emote |
+| 3 | 3000–5000 PHYSICAL + `high explosive` spell on target |
+| 5 | Extra physical hit (`one_hit`) + `spell_poison` |
+| 7 | Two rapid physical hits |
+
+Mechanically a melee-plus-poison bandit boss. The warcry and occasional explosive give it tactical variety without relying on magic.
+
+**Sample output (round 3):**
+```
+The ashfang remnant warlord seals the blood-oath and detonates a war-charge
+directly at you — concussive force and explosive compound at once!
+```
+
+---
+
+### `spec_cinderteeth_warden_cmd` — Ironpost Warden-Commander (6151, level 152)
+
+**File:** `src/ai/spec_cinderteeth_warden_cmd.c`
+**Pattern:** Random 35% tick activation; HP-threshold emergency (once at <40% HP).
+**`spec_behavior2`:** 0 = normal, 1 = emergency triggered.
+
+| Trigger | Action |
+|---|---|
+| HP < 40% (once) | Emergency Compact emote + `high explosive` spell on target |
+| 35% chance per tick | Random from: `dispel magic`, `chain lightning`, `flamestrike`, or `harm` |
+
+An undead commander with an unpredictable caster pool. The emergency burst makes the last phase dangerous even if the first half was easy.
+
+**Sample output (emergency):**
+```
+The ironpost warden-commander invokes the Emergency Compact of the Ironpost —
+calling the full force of the archive's wards against you in concentrated fire!
+```
+
+---
+
+### `spec_cinderteeth_sulfur_colossus` — Glasswash Sulfur Fan Colossus (6172, level 156)
+
+**File:** `src/ai/spec_cinderteeth_sulfur_colossus.c`
+**Pattern:** Cycling `spec_behavior % 6`; no damage callback.
+
+| Round | Action |
+|---|---|
+| 1 | 5000–8000 EARTH + `earthquake` spell |
+| 3 | Room-wide `gas breath` (all players) |
+| 5 | 5500–8500 FIRE+POISON primary on target; 2000–3500 POISON AOE on all other players |
+
+Alternates between ground control (earth/quake), atmospheric denial (gas), and a split-target fire-and-poison combination. Punishes grouped players who cluster.
+
+**Sample output (round 5):**
+```
+The glasswash sulfur fan colossus drives both fists into the caldera floor and
+erupts — volcanic fire and concentrated sulfur blast outward!  The target takes
+the full column while a spray of toxic vapor catches everyone else in the room!
+```
+
+---
+
+### `spec_cinderteeth_anchor` — Bellspine Resonance Anchor Construct (6194, level 160)
+
+**File:** `src/ai/spec_cinderteeth_anchor.c`
+**Pattern:** Cycling `spec_behavior % 10`; **has damage callback** (`spec_cinderteeth_anchor_damage`).
+**`spec_behavior2`:** Bitmask of element flags received since round 1; cleared at round 1.
+
+| Round | Action |
+|---|---|
+| 1 | Clear `spec_behavior2`; resonance charge begins (flavor) |
+| 2 | Warn players: **strike with EARTH or PHYSICAL to ground the conduit** |
+| 3 | If `spec_behavior2` has `ELEMENT_EARTH` or `ELEMENT_PHYSICAL`: fizzle; else 4000–7000 MENTAL+AIR room AOE |
+| 5 | 7000–10000 MENTAL+AIR single-target resonance lance |
+| 7 | 8000–11000 EARTH single-target structural discharge |
+| 9 | 6000–9000 MENTAL room AOE (anchor overload) |
+
+The interrupt mechanic: the damage callback fires on every hit against the Anchor. During the charge window (rounds 1–2), any EARTH or PHYSICAL hit sets the corresponding flag in `spec_behavior2`. The round 3 check reads those flags.
+
+**Sample output (round 2 → 3 interrupted):**
+```
+The bellspine resonance anchor construct's resonance charge intensifies — the hum becomes painful!
+Strike with EARTH or PHYSICAL force to ground the conduit!
+...
+Your earthen/physical blow disrupts the construct's crystalline conduit!
+The resonance charge scatters harmlessly — the construct resets!
+```
+
+---
+
+### `spec_cinderteeth_ventspeaker` — Ghost of the Last Ventspeaker (6212, level 163)
+
+**File:** `src/ai/spec_cinderteeth_ventspeaker.c`
+**Pattern:** Cycling `spec_behavior % 9`; no damage callback.
+
+| Round | Action |
+|---|---|
+| 1 | `weaken` + `curse` spells on target |
+| 3 | 7000–10000 MENTAL+SHADOW single-target (name-stone binding) |
+| 5 | 3000–5500 PHYSICAL+AIR room AOE on all players (Ash Monsoon memory) |
+| 7 | `earthquake` spell + 6000–9000 FIRE single-target (volcanic sympathy) |
+| 8 | 7500–10500 MENTAL single-target (hollow prophecy) |
+
+A spiritual boss mixing debuffs, esoteric damage types, and a room-wide physical AOE. The consecutive rounds 7 and 8 create a brutal double-hit window.
+
+**Sample output (round 5):**
+```
+Cairn-Mother Retha An exhales the memory of the Ashfall Monsoon — three years
+of volcanic winter press down on EVERYONE in the chamber!
+```
+
+---
+
+### `spec_cinderteeth_oracle` — Grand Vent-Oracle of the Ash Cult (6221, level 166)
+
+**File:** `src/ai/spec_cinderteeth_oracle.c`
+**Pattern:** Cycling `spec_behavior % 10`; no damage callback.
+
+| Round | Action |
+|---|---|
+| 1 | `lava burst` spell on target (vent interpretation) |
+| 3 | Room-wide `gas breath` (Speaking Vent communion) |
+| 5 | 9000–12000 FIRE+EARTH single-target (theological verdict) |
+| 7 | `dispel magic` + `flamestrike` on target (doctrinal dispensation) |
+| 9 | 10000–13000 FIRE single-target (mountain's ruling) |
+
+A theological fire caster with the ability to strip buffs before landing a flamestrike. Culminates in a concentrated direct-damage fire column.
+
+**Sample output (round 7):**
+```
+The grand vent-oracle strips you of false protections before the speaking vent —
+then delivers doctrinal dispensation in fire!
+```
+
+---
+
+### `spec_cinderteeth_caldera_watcher` — Secondtooth Caldera Watcher (6238, level 168)
+
+**File:** `src/ai/spec_cinderteeth_caldera_watcher.c`
+**Pattern:** Cycling `spec_behavior % 8` + HP-threshold frenzy.
+**`spec_behavior2`:** 0 = normal, 1 = frenzy active.
+
+| Round | Normal | Frenzy |
+|---|---|---|
+| 0 | Territorial circuit (flavor) | 7000–10000 PHYSICAL bonus strike |
+| 2 | 10000–13000 PHYSICAL caldera charge | 11000–15000 PHYSICAL (boosted) |
+| 4 | 9000–12000 FIRE heat-blast | same |
+| 6 | 9000–12000 EARTH + `earthquake` | same |
+
+Frenzy triggers once when HP drops below 25%, announced to the room. The `case 0` slot converts from flavor to an attack; the charge (case 2) gains a damage bonus.
+
+**Sample output (frenzy trigger):**
+```
+The secondtooth caldera watcher's territorial fury erupts — the caldera watcher enters
+a predator's last frenzy, moving with terrifying speed!
+```
+
+---
+
+### `spec_cinderteeth_patriarch` — The Ember Throne Patriarch (6242, level 170)
+
+**File:** `src/ai/spec_cinderteeth_patriarch.c`
+**Pattern:** Cycling `spec_behavior % 12`; no damage callback. Most complex special in the zone.
+
+| Round | Action |
+|---|---|
+| 1 | `do_dispel_all`: `dispel magic` on every player in room |
+| 2 | Magma surge building (flavor) |
+| 3 | Magma surge building, targeting indicator (flavor) |
+| 4 | 12000–16000 FIRE+EARTH single-target magma eruption |
+| 5 | Tectonic pressure flavor + `earthquake` spell |
+| 6 | `do_tectonic_release`: 6000–9000 EARTH room AOE on all players |
+| 7 | Room-wide `gas breath` (volcanic gas venting) |
+| 8 | 10000–14000 MENTAL single-target (mountain's accumulated centuries of will) |
+| 9 | Geological verdict building (flavor) |
+| 10 | Geological verdict building, all-elements warning (flavor) |
+| 11 | Final verdict warning (flavor) |
+| 0 | `do_ember_verdict`: 8000–12000 FIRE+EARTH+AIR room AOE on all players |
+
+The Ember Verdict (round 0) is the culmination: a three-element AOE preceded by a three-round warning sequence. The dispel strip at round 1 ensures each cycle begins with players exposed.
+
+**Sample output (round 0 — EMBER VERDICT):**
+```
+The ember throne patriarch pronounces the EMBER VERDICT — fire, stone, and volcanic wind
+combine in a cataclysmic eruption that engulfs the entire chamber!
+The mountain has rendered its judgment on ALL present!
+```
+
+---
+
 ## Adding a new special function
 
 1. Create `src/ai/spec_yourname.c` with:
