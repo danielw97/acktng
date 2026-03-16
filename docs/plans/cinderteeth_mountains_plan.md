@@ -1048,28 +1048,177 @@ All equipment items receive `L` entries matching the zone difficulty of their dr
 
 Per `docs/area_file_spec.md` §13.2: every area must include at least one quest targeting a boss; at least one cartography quest; the final quest in any chain must reward equipment; any quest targeting a boss must reward equipment.
 
-### Quest Set: The Cinderteeth Mountains (3 quests)
+### Quest Set: The Cinderteeth Mountains (25 quests, files 81–105, IDs 80–104)
 
-**Quest 1 — Cartography: The Witness Freshness Survey**
-- Type: `2` (collect items)
-- Target: collect 5 × `ventspeaker name-stone rubbing` (obj 6234) — rubbings taken from name-stone arrays across the area
-- Level range: 140-150
-- Reward: experience + gold
-- Notes: Fulfills the cartography requirement. The name-stone rubbings from different zones serve as the "map-freshness" mechanic — they are the area's cartographic evidence.
+Quest givers: Kiess postmaster (3340), Kowloon postmaster (3440), Midgaard postmaster (3015), Mafdet postmaster (3539), Rakuen dispatch registrar (4339). All 8 bosses have dedicated kill quests with equipment rewards. One standalone cartography quest (type 4). Seven chains (2–3 quests each). Five standalone non-chain quests.
 
-**Quest 2 — Kill Chain: Silencing the Fold**
-- Type: `1` (kill variety)
-- Targets: Grand Vent-Oracle of the Ash Cult (mob 6221) + Ash Cult Archivist (mob 6216) + Ash Cult Doctrine-Speaker (mob 6215)
-- Level range: 140-150
-- Reward: equipment (Grand Vent-Oracle's volcanic glass mask, obj 6167)
-- Notes: Targets a boss. Rewards equipment. The "silencing the fold" framing matches the area's institutional narrative — ending the Ash Cult's claim to the Speaking Vent's authority.
+---
 
-**Quest 3 — Kill Boss: The Mountain's Final Verdict**
-- Type: `1` (kill variety)
-- Target: The Ember Throne Patriarch (mob 6242)
-- Level range: 140-150
-- Reward: equipment (ember throne patriarch obsidian sigil ring, obj 6218)
-- Notes: Final boss quest. Targets a boss. Rewards equipment. Chain final. The "final verdict" framing is the area's core thematic statement — the mountain delivers judgment.
+#### Chain B — Kiess Ashfang Removal (files 81–82, IDs 80–81)
+
+**ID 80 (file 81): "Cinderteeth foothills raid suppression"**
+- Prereq: none | Type: 1 (kill variety) | Offerer: 3340 (Kiess)
+- Targets: 6125 (ashfang remnant raider), 6126 (ashfang remnant enforcer), 6143 (ashfang remnant tracker)
+- Level: 120–155 | Gold: 7000 | QP: 6 | Exp: 3200000
+- Notes: Zone 1 chain start. Confirms tactical withdrawal is real or a Blood Oath hold-pattern.
+
+**ID 81 (file 82): "Warlord's blood oath, cancelled" [BOSS 6130, EQUIP]**
+- Prereq: 80 | Type: 1 | Offerer: 3340 (Kiess)
+- Targets: 6130 (ashfang remnant warlord)
+- Level: 120–155 | Gold: 9500 | QP: 8 | Exp: 4200000
+- Equip: iron-studded bracer stamped with an Ashfang blood-oath seal (WEAR_WRIST=2048)
+
+---
+
+#### Chain C — Kiess Chalkwind Archive (files 83–85, IDs 82–84)
+
+**ID 82 (file 83): "Chalkwind archive undead threat survey"**
+- Prereq: none | Type: 1 | Offerer: 3340 (Kiess)
+- Targets: 6147 (chalkwind saddle wraith), 6153 (chalkwind ice-shelf shade), 6162 (old tariff enforcer ghost)
+- Level: 125–160 | Gold: 7500 | QP: 6 | Exp: 3400000
+
+**ID 83 (file 84): "Ironpost archive corridor: revenant suppression"**
+- Prereq: 82 | Type: 1 | Offerer: 3340 (Kiess)
+- Targets: 6150 (ironpost route house revenant), 6156 (muster yard requisitions ghost), 6154 (chalk-ash drift crawler)
+- Level: 125–160 | Gold: 8000 | QP: 7 | Exp: 3700000
+
+**ID 84 (file 85): "Warden-commander interdiction: Ironpost Archive" [BOSS 6151, EQUIP]**
+- Prereq: 83 | Type: 1 | Offerer: 3340 (Kiess)
+- Targets: 6151 (ironpost warden-commander)
+- Level: 125–160 | Gold: 11000 | QP: 9 | Exp: 4800000
+- Equip: tarnished ironpost archive seal pendant (WEAR_NECK=128)
+
+---
+
+#### Chain D — Kowloon Glasswash Research (files 86–87, IDs 85–86)
+
+**ID 85 (file 86): "Glasswash hostile element assessment"**
+- Prereq: none | Type: 1 | Offerer: 3440 (Kowloon)
+- Targets: 6164 (glasswash fan crawler), 6166 (glasswash mirror-blind hunter), 6171 (glasswash crystal resonance sprite)
+- Level: 130–160 | Gold: 7500 | QP: 6 | Exp: 3500000
+
+**ID 86 (file 87): "Glasswash colossus elimination" [BOSS 6172, EQUIP]**
+- Prereq: 85 | Type: 1 | Offerer: 3440 (Kowloon)
+- Targets: 6172 (glasswash sulfur fan colossus)
+- Level: 130–160 | Gold: 11500 | QP: 9 | Exp: 5000000
+- Equip: Glasswash obsidian ring threaded with volcanic sulfur crystal (WEAR_FINGER=8192)
+
+---
+
+#### Chain E — Kowloon Bellspine Resonance (files 88–89, IDs 87–88)
+
+**ID 87 (file 88): "Bellspine resonance entity clearance"**
+- Prereq: none | Type: 1 | Offerer: 3440 (Kowloon)
+- Targets: 6184 (bellspine resonance serpent), 6187 (bellspine crystal anchor shard), 6188 (bellspine resonance wraith)
+- Level: 135–165 | Gold: 8000 | QP: 6 | Exp: 3800000
+
+**ID 88 (file 89): "Anchor construct decommission" [BOSS 6194, EQUIP]**
+- Prereq: 87 | Type: 1 | Offerer: 3440 (Kowloon)
+- Targets: 6194 (bellspine resonance anchor construct)
+- Level: 135–165 | Gold: 12000 | QP: 10 | Exp: 5200000
+- Equip: arc-etched Bellspine resonance crystal bracer (WEAR_WRIST=2048)
+
+---
+
+#### Chain A — Midgaard Ash Cult Campaign (files 90–91, IDs 89–90)
+
+**ID 89 (file 90): "Western Fold doctrine apparatus: institutional assessment"**
+- Prereq: none | Type: 1 | Offerer: 3015 (Midgaard)
+- Targets: 6214 (ash cult senior zealot), 6215 (ash cult doctrine-speaker), 6216 (ash cult archivist)
+- Level: 140–170 | Gold: 8500 | QP: 7 | Exp: 4200000
+
+**ID 90 (file 91): "Vent-Oracle silencing" [BOSS 6221, EQUIP]**
+- Prereq: 89 | Type: 1 | Offerer: 3015 (Midgaard)
+- Targets: 6221 (grand vent-oracle of the ash cult)
+- Level: 140–170 | Gold: 13000 | QP: 10 | Exp: 5500000
+- Equip: oracle's volcanic glass speaking mask (WEAR_FACE=16)
+
+---
+
+#### Chain F — Mafdet Caldera Watcher Campaign (files 92–94, IDs 91–93)
+
+**ID 91 (file 92): "Ember Crown approach: transit threat survey"**
+- Prereq: none | Type: 1 | Offerer: 3539 (Mafdet)
+- Targets: 6224 (ember crown scree titan), 6227 (ember crown glassfall elemental), 6228 (ember crown vent-gas wraith)
+- Level: 145–170 | Gold: 8000 | QP: 6 | Exp: 4000000
+
+**ID 92 (file 93): "Ember Crown lava serpent cull"**
+- Prereq: 91 | Type: 3 (kill count, 3 kills) | Offerer: 3539 (Mafdet)
+- Target: 6229 (ember crown lava serpent)
+- Level: 145–170 | Gold: 8500 | QP: 7 | Exp: 4200000
+
+**ID 93 (file 94): "Secondtooth caldera watcher: territorial claim broken" [BOSS 6238, EQUIP]**
+- Prereq: 92 | Type: 1 | Offerer: 3539 (Mafdet)
+- Targets: 6238 (secondtooth caldera watcher)
+- Level: 148–170 | Gold: 14000 | QP: 11 | Exp: 5800000
+- Equip: secondtooth caldera heat-scaled pelt mantle (WEAR_SHOULDERS=512)
+
+---
+
+#### Chain G — Rakuen Ventspeaker Return (files 95–96, IDs 94–95)
+
+**ID 94 (file 95): "Western Fold approach: bound spirit clearance"**
+- Prereq: none | Type: 1 | Offerer: 4339 (Rakuen)
+- Targets: 6207 (western fold approach warden ghost), 6208 (ventspeaker vent platform spirit), 6211 (conclave survey instrument shade)
+- Level: 135–165 | Gold: 7500 | QP: 6 | Exp: 3900000
+
+**ID 95 (file 96): "Oracle ground reckoning: Fold approach enforcement" [CHAIN END EQUIP]**
+- Prereq: 94 | Type: 1 | Offerer: 4339 (Rakuen)
+- Targets: 6209 (ash cult fire-keeper), 6210 (ash cult doctrinal enforcer), 6213 (western fold approach basilisk)
+- Level: 135–165 | Gold: 9000 | QP: 8 | Exp: 4500000
+- Equip: worn ventspeaker cairn-name token in Old Cindertongue (WEAR_FINGER=8192)
+
+---
+
+#### Standalone Quests (files 97–105, IDs 96–104)
+
+**ID 96 (file 97): "Cinderteeth Mountains cartography commission" [CARTOGRAPHY, Rakuen]**
+- Prereq: none | Type: 4 (cartography) | Offerer: 4339 (Rakuen)
+- Target: 6124 (first room — full area survey)
+- Level: 125–170 | Gold: 22000 | QP: 30 | Exp: 4500000
+- Notes: Cannot be part of a chain. Maps all 8 zones of the range for Ventspeaker refugee route planning.
+
+**ID 97 (file 98): "Ash Cult forward position: zealot reduction" [Midgaard]**
+- Prereq: none | Type: 3 (kill count, 6 kills) | Offerer: 3015 (Midgaard)
+- Target: 6204 (ash cult forward zealot)
+- Level: 140–170 | Gold: 8000 | QP: 6 | Exp: 4100000
+
+**ID 98 (file 99): "Ember Throne Patriarch: geological verdict appealed" [BOSS 6242, EQUIP, Midgaard]**
+- Prereq: none | Type: 1 | Offerer: 3015 (Midgaard)
+- Targets: 6242 (the ember throne patriarch)
+- Level: 150–170 | Gold: 16000 | QP: 12 | Exp: 6000000
+- Equip: ember throne patriarch obsidian sigil ring (WEAR_FINGER=8192)
+
+**ID 99 (file 100): "Foothills wildlife verification: Cinderteeth entry zone" [Kiess]**
+- Prereq: none | Type: 1 | Offerer: 3340 (Kiess)
+- Targets: 6131 (cinderteeth ashrunner), 6132 (cinderteeth mountain bear), 6140 (thermal spring basilisk)
+- Level: 120–155 | Gold: 6500 | QP: 5 | Exp: 3000000
+
+**ID 100 (file 101): "Glasswash extraction site: labor ghost suppression" [Kowloon]**
+- Prereq: none | Type: 3 (kill count, 5 kills) | Offerer: 3440 (Kowloon)
+- Target: 6174 (glasswash extraction site haunt)
+- Level: 130–160 | Gold: 7000 | QP: 6 | Exp: 3600000
+
+**ID 101 (file 102): "Mafdet mineral route: sulfur element threat reduction" [Mafdet]**
+- Prereq: none | Type: 1 | Offerer: 3539 (Mafdet)
+- Targets: 6169 (glasswash acid-seep leech), 6170 (glasswash sulfur elemental), 6173 (glasswash pumice drifter)
+- Level: 135–165 | Gold: 7500 | QP: 6 | Exp: 3800000
+
+**ID 102 (file 103): "Ghost of the last Ventspeaker: oracle ground cleared" [BOSS 6212, EQUIP, Mafdet]**
+- Prereq: none | Type: 1 | Offerer: 3539 (Mafdet)
+- Targets: 6212 (ghost of the last ventspeaker)
+- Level: 140–170 | Gold: 13000 | QP: 10 | Exp: 5500000
+- Equip: last ventspeaker's name-stone arm binding (WEAR_ARMS=1024)
+
+**ID 103 (file 104): "Bellspine resonance locust suppression" [Rakuen]**
+- Prereq: none | Type: 3 (kill count, 6 kills) | Offerer: 4339 (Rakuen)
+- Target: 6198 (bellspine resonance locust swarm)
+- Level: 135–165 | Gold: 7000 | QP: 6 | Exp: 3700000
+
+**ID 104 (file 105): "Cinderteeth entry zone: volcanic creature survey" [Rakuen]**
+- Prereq: none | Type: 1 | Offerer: 4339 (Rakuen)
+- Targets: 6134 (blackstep basalt sentinel), 6135 (blackstep vent-crab swarm), 6136 (cinderpine resin-hawk)
+- Level: 120–155 | Gold: 6500 | QP: 5 | Exp: 3000000
 
 ---
 
