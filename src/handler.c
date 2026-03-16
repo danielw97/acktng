@@ -313,9 +313,8 @@ bool can_wield(CHAR_DATA *ch, OBJ_DATA *obj, int loc)
    if (IS_WEAPON(obj) && IS_WEAPON(dual) && can_use_skill(ch, gsn_dualwield))
       return TRUE;
 
-   if (IS_WEAPON(obj) && IS_SET(obj->extra_flags, ITEM_FIST) &&
-       IS_WEAPON(dual) && IS_SET(dual->extra_flags, ITEM_FIST) &&
-       can_use_skill(ch, gsn_dual_fist))
+   if (IS_WEAPON(obj) && IS_SET(obj->extra_flags, ITEM_FIST) && IS_WEAPON(dual) &&
+       IS_SET(dual->extra_flags, ITEM_FIST) && can_use_skill(ch, gsn_dual_fist))
       return TRUE;
 
    return FALSE;
@@ -357,7 +356,7 @@ int get_max_str(CHAR_DATA *ch)
    }
 
    if (ch->pcdata->reincarnations[CLASS_WAR] > 0)
-      max += (ch->pcdata->reincarnations[CLASS_WAR]+1)/2;
+      max += (ch->pcdata->reincarnations[CLASS_WAR] + 1) / 2;
 
    return UMIN(max, STAT_MAX);
 }
@@ -398,10 +397,10 @@ int get_max_int(CHAR_DATA *ch)
    }
 
    if (ch->pcdata->reincarnations[CLASS_MAG] > 0)
-      max += (ch->pcdata->reincarnations[CLASS_MAG]+1)/2;
+      max += (ch->pcdata->reincarnations[CLASS_MAG] + 1) / 2;
 
    if (ch->pcdata->reincarnations[CLASS_PSI] > 0)
-      max += (ch->pcdata->reincarnations[CLASS_PSI]+1)/2;
+      max += (ch->pcdata->reincarnations[CLASS_PSI] + 1) / 2;
 
    return UMIN(max, STAT_MAX);
 }
@@ -442,7 +441,7 @@ int get_max_wis(CHAR_DATA *ch)
    }
 
    if (ch->pcdata->reincarnations[CLASS_CLE] > 0)
-      max += (ch->pcdata->reincarnations[CLASS_CLE]+1)/2;
+      max += (ch->pcdata->reincarnations[CLASS_CLE] + 1) / 2;
 
    return UMIN(max, STAT_MAX);
 }
@@ -484,7 +483,7 @@ int get_max_dex(CHAR_DATA *ch)
    }
 
    if (ch->pcdata->reincarnations[CLASS_CIP] > 0)
-      max += (ch->pcdata->reincarnations[CLASS_CIP]+1)/2;
+      max += (ch->pcdata->reincarnations[CLASS_CIP] + 1) / 2;
 
    return UMIN(max, STAT_MAX);
 }
@@ -525,7 +524,7 @@ int get_max_con(CHAR_DATA *ch)
    }
 
    if (ch->pcdata->reincarnations[CLASS_PUG] > 0)
-      max += (ch->pcdata->reincarnations[CLASS_PUG]+1)/2;
+      max += (ch->pcdata->reincarnations[CLASS_PUG] + 1) / 2;
 
    return UMIN(max, STAT_MAX);
 }
@@ -576,7 +575,7 @@ long get_max_mana(CHAR_DATA *ch)
    }
    else
    {
-      mana += (ch->level * 5) + (ch->level*ch->level*2);
+      mana += (ch->level * 5) + (ch->level * ch->level * 2);
    }
 
    return mana;
@@ -594,7 +593,7 @@ long get_max_move(CHAR_DATA *ch)
    }
    else
    {
-      move += (ch->level * 5) + (ch->level*ch->level*2);
+      move += (ch->level * 5) + (ch->level * ch->level * 2);
    }
 
    return move;
@@ -617,7 +616,7 @@ int get_total_reincarnations(CHAR_DATA *ch)
    if (IS_NPC(ch))
       return 0;
 
-   for(int i = 0; i < MAX_CLASS; i++)
+   for (int i = 0; i < MAX_CLASS; i++)
    {
       cnt += ch->pcdata->reincarnations[i];
    }
@@ -692,7 +691,8 @@ int get_crit(CHAR_DATA *ch)
 
    crit += ch->class_level[CLASS_NIG] / 4;
 
-   if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword_critical))
+   if (!IS_NPC(ch) && wield && wield->value[3] == 3 &&
+       can_use_skill(ch, gsn_enhanced_sword_critical))
    {
       crit += ch->class_level[CLASS_SWO] / 20;
    }
@@ -725,7 +725,8 @@ int get_crit_mult(CHAR_DATA *ch)
 
    crit += ch->class_level[CLASS_NIG] / 2;
 
-   if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword_critical))
+   if (!IS_NPC(ch) && wield && wield->value[3] == 3 &&
+       can_use_skill(ch, gsn_enhanced_sword_critical))
    {
       crit += ch->class_level[CLASS_SWO] / 5;
    }
@@ -782,7 +783,7 @@ int get_hitroll(CHAR_DATA *ch)
    if (IS_NPC(ch))
    {
       hit += ch->hr_mod;
-      hit += ch->level*2;
+      hit += ch->level * 2;
    }
 
    hit += get_psuedo_level(ch) / 3;
@@ -917,8 +918,10 @@ char *class_order(int race)
    static char buf[MSL];
 
    sprintf(buf, "%s %s %s %s %s %s", gclass_table[race_table[race].limit[0]].who_name,
-           gclass_table[race_table[race].limit[1]].who_name, gclass_table[race_table[race].limit[2]].who_name,
-           gclass_table[race_table[race].limit[3]].who_name, gclass_table[race_table[race].limit[4]].who_name,
+           gclass_table[race_table[race].limit[1]].who_name,
+           gclass_table[race_table[race].limit[2]].who_name,
+           gclass_table[race_table[race].limit[3]].who_name,
+           gclass_table[race_table[race].limit[4]].who_name,
            gclass_table[race_table[race].limit[5]].who_name);
 
    return buf;
@@ -947,7 +950,6 @@ char *get_item_class(OBJ_DATA *obj)
    return "bugged, contact staff.";
 }
 
-
 bool is_same_room(CHAR_DATA *ch, CHAR_DATA *victim)
 {
    if (ch == NULL)
@@ -974,7 +976,7 @@ bool can_use_skill_message(CHAR_DATA *ch, int gsn)
    if (ch->cooldown[gsn] > 0)
    {
       sprintf(buf, "That skill is still on cooldown for %d.\n\r", ch->cooldown[gsn]);
-      send_to_char(buf,ch);
+      send_to_char(buf, ch);
       return FALSE;
    }
 
@@ -992,8 +994,9 @@ bool can_use_skill_by_name_message(CHAR_DATA *ch, char *skill)
    char buf[MSL];
    if (ch->cooldown[skill_lookup(skill)] > 0)
    {
-      sprintf(buf, "That skill is still on cooldown for %d.\n\r", ch->cooldown[skill_lookup(skill)]);
-      send_to_char(buf,ch);
+      sprintf(buf, "That skill is still on cooldown for %d.\n\r",
+              ch->cooldown[skill_lookup(skill)]);
+      send_to_char(buf, ch);
       return FALSE;
    }
 
@@ -1012,7 +1015,6 @@ bool can_use_skill_by_name(CHAR_DATA *ch, char *skill)
 
    return can_use_skill(ch, gsn);
 }
-
 
 static bool skill_requirement_is_usable(int required_level)
 {
@@ -1048,34 +1050,44 @@ bool can_use_skill(CHAR_DATA *ch, int gsn)
    if (gsn == gsn_spell_critical_damage && ch->pcdata->reincarnations[CLASS_CLE] > 0)
       return TRUE;
 
-   if (gsn == gsn_dualwield && (ch->pcdata->reincarnations[CLASS_ASS] + ch->pcdata->reincarnations[CLASS_WLK] >= 20))
+   if (gsn == gsn_dualwield &&
+       (ch->pcdata->reincarnations[CLASS_ASS] + ch->pcdata->reincarnations[CLASS_WLK] >= 20))
       return TRUE;
 
-   if (gsn == gsn_two_handed && (ch->pcdata->reincarnations[CLASS_KNI] + ch->pcdata->reincarnations[CLASS_SWO] >= 20))
+   if (gsn == gsn_two_handed &&
+       (ch->pcdata->reincarnations[CLASS_KNI] + ch->pcdata->reincarnations[CLASS_SWO] >= 20))
       return TRUE;
 
-   if (gsn == gsn_two_handed && (ch->pcdata->reincarnations[CLASS_PAL] + ch->pcdata->reincarnations[CLASS_PRI]) >= 20)
+   if (gsn == gsn_two_handed &&
+       (ch->pcdata->reincarnations[CLASS_PAL] + ch->pcdata->reincarnations[CLASS_PRI]) >= 20)
       return TRUE;
 
-   if (gsn == gsn_equip_buckler && (ch->pcdata->reincarnations[CLASS_KNI] + ch->pcdata->reincarnations[CLASS_SWO] >= 20))
+   if (gsn == gsn_equip_buckler &&
+       (ch->pcdata->reincarnations[CLASS_KNI] + ch->pcdata->reincarnations[CLASS_SWO] >= 20))
       return TRUE;
 
-   if (gsn == gsn_equip_buckler && (ch->pcdata->reincarnations[CLASS_PAL] + ch->pcdata->reincarnations[CLASS_PRI]) >= 20)
+   if (gsn == gsn_equip_buckler &&
+       (ch->pcdata->reincarnations[CLASS_PAL] + ch->pcdata->reincarnations[CLASS_PRI]) >= 20)
       return TRUE;
 
-   if (gsn == gsn_equip_fist && (ch->pcdata->reincarnations[CLASS_BRA] + ch->pcdata->reincarnations[CLASS_MON] >= 20))
+   if (gsn == gsn_equip_fist &&
+       (ch->pcdata->reincarnations[CLASS_BRA] + ch->pcdata->reincarnations[CLASS_MON] >= 20))
       return TRUE;
 
-   if (gsn == gsn_dual_fist && (ch->pcdata->reincarnations[CLASS_BRA] + ch->pcdata->reincarnations[CLASS_MON] >= 20))
+   if (gsn == gsn_dual_fist &&
+       (ch->pcdata->reincarnations[CLASS_BRA] + ch->pcdata->reincarnations[CLASS_MON] >= 20))
       return TRUE;
 
-   if (gsn == gsn_equip_wand && (ch->pcdata->reincarnations[CLASS_WIZ] + ch->pcdata->reincarnations[CLASS_SOR] >= 20))
+   if (gsn == gsn_equip_wand &&
+       (ch->pcdata->reincarnations[CLASS_WIZ] + ch->pcdata->reincarnations[CLASS_SOR] >= 20))
       return TRUE;
 
-   if (gsn == gsn_equip_wand && (ch->pcdata->reincarnations[CLASS_NEC] + ch->pcdata->reincarnations[CLASS_EGO] >= 20))
+   if (gsn == gsn_equip_wand &&
+       (ch->pcdata->reincarnations[CLASS_NEC] + ch->pcdata->reincarnations[CLASS_EGO] >= 20))
       return TRUE;
 
-   if (gsn == gsn_equip_wand && (ch->pcdata->reincarnations[CLASS_PRI] + ch->pcdata->reincarnations[CLASS_PAL]) >= 20)
+   if (gsn == gsn_equip_wand &&
+       (ch->pcdata->reincarnations[CLASS_PRI] + ch->pcdata->reincarnations[CLASS_PAL]) >= 20)
       return TRUE;
 
    /* Check all 24 class slots - each slot has the required level if valid */
@@ -1135,7 +1147,8 @@ bool raise_skill(CHAR_DATA *ch, int gsn)
    }
    if (ch->pcdata->learned[gsn] == LEVEL_THREE)
    {
-      sprintf(buf, "Congratulations! You have raised %s to level three!\n\r", skill_table[gsn].name);
+      sprintf(buf, "Congratulations! You have raised %s to level three!\n\r",
+              skill_table[gsn].name);
       send_to_char(buf, ch);
    }
    if (ch->pcdata->learned[gsn] == LEVEL_FOUR)
@@ -1155,7 +1168,8 @@ bool raise_skill(CHAR_DATA *ch, int gsn)
    }
    if (ch->pcdata->learned[gsn] == LEVEL_GM)
    {
-      sprintf(buf, "Congratulations! You have became a grandmaster of %s!\n\r", skill_table[gsn].name);
+      sprintf(buf, "Congratulations! You have became a grandmaster of %s!\n\r",
+              skill_table[gsn].name);
       send_to_char(buf, ch);
    }
 
@@ -1199,20 +1213,18 @@ bool skill_success(CHAR_DATA *ch, CHAR_DATA *victim, int gsn, int bonus)
 
 char *get_dt_name(int sn)
 {
-    static char *const attack_table[] = {
-        "hit",
-        "slice", "stab", "slash", "whip", "claw",
-        "blast", "pound", "crush", "grip", "bite",
-        "pierce", "suction", "tail whip",
-        "head punch", "high kick", "vital kick", "head bash", "side kick", "spinning elbow",
-        "body punch", "low kick", "foot stomp", "knee smash", "kidney punch", "arm twist",
-        "uppercut", "rabbit punch", "foot sweep"};
+   static char *const attack_table[] = {
+       "hit",          "slice",          "stab",       "slash",        "whip",       "claw",
+       "blast",        "pound",          "crush",      "grip",         "bite",       "pierce",
+       "suction",      "tail whip",      "head punch", "high kick",    "vital kick", "head bash",
+       "side kick",    "spinning elbow", "body punch", "low kick",     "foot stomp", "knee smash",
+       "kidney punch", "arm twist",      "uppercut",   "rabbit punch", "foot sweep"};
    const size_t attack_count = sizeof(attack_table) / sizeof(attack_table[0]);
 
    if (sn < MAX_SKILL && sn > 0)
       return skill_table[sn].name;
 
-   if (sn >= TYPE_HIT && (size_t) (sn - TYPE_HIT) < attack_count)
+   if (sn >= TYPE_HIT && (size_t)(sn - TYPE_HIT) < attack_count)
    {
       return attack_table[sn - TYPE_HIT];
    }
@@ -1274,12 +1286,14 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
     * Check for weapon wielding.
     * Guard against recursion (for weapons with affects).
     */
-   if ((ch->is_quitting == FALSE) && (ch->desc != NULL) && (ch->desc->connected != CON_SETTING_STATS))
+   if ((ch->is_quitting == FALSE) && (ch->desc != NULL) &&
+       (ch->desc->connected != CON_SETTING_STATS))
    {
       sh_int i;
       for (i = 0; i < MAX_WEAR; i++)
       {
-         if (((wield = get_eq_char(ch, i)) != NULL) && (get_obj_weight(wield) > get_wear_weight(ch)*20))
+         if (((wield = get_eq_char(ch, i)) != NULL) &&
+             (get_obj_weight(wield) > get_wear_weight(ch) * 20))
          {
             static int depth;
 
@@ -1400,7 +1414,7 @@ void r_affect_remove(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *raf)
 {
    if (room->first_room_affect == NULL)
    {
-         sprintf(buf, "r_affect_remove: no affect to remove from room %d.", room->vnum);
+      sprintf(buf, "r_affect_remove: no affect to remove from room %d.", room->vnum);
       monitor_chan(buf, MONITOR_ROOM);
 
       bug("R_affect_remove: no affect for room: %d.", room->vnum);
@@ -1460,7 +1474,7 @@ void affect_remove(CHAR_DATA *ch, AFFECT_DATA *paf)
 
    if (ch->first_affect == NULL)
    {
-         sprintf(buf, "affect_remove: %s did not have aff %d to remove.",
+      sprintf(buf, "affect_remove: %s did not have aff %d to remove.",
               IS_NPC(ch) ? ch->short_descr : ch->name, paf->type);
       monitor_chan(buf, MONITOR_MOB);
 
@@ -1551,7 +1565,8 @@ void affect_join(CHAR_DATA *ch, AFFECT_DATA *paf)
 
    for (paf_old = ch->first_affect; paf_old != NULL; paf_old = paf_old->next)
    {
-      if ((paf_old->type == paf->type) && (paf_old->location == paf->location) && (paf_old->bitvector == paf->bitvector))
+      if ((paf_old->type == paf->type) && (paf_old->location == paf->location) &&
+          (paf_old->bitvector == paf->bitvector))
       {
          paf->duration += paf_old->duration;
          paf->modifier += paf_old->modifier;
@@ -1589,7 +1604,7 @@ void char_from_room(CHAR_DATA *ch)
 
    if (ch->in_room == NULL)
    {
-         sprintf(buf, "char_from_room: %s in NULL room.", IS_NPC(ch) ? ch->short_descr : ch->name);
+      sprintf(buf, "char_from_room: %s in NULL room.", IS_NPC(ch) ? ch->short_descr : ch->name);
       monitor_chan(buf, MONITOR_ROOM);
 
       bug("Char_from_room: NULL.", 0);
@@ -1628,7 +1643,7 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
    AFFECT_DATA af;
    if (pRoomIndex == NULL)
    {
-         sprintf(buf, "char_to_room: Attempted to move %s to a NULL room.", NAME(ch));
+      sprintf(buf, "char_to_room: Attempted to move %s to a NULL room.", NAME(ch));
       monitor_chan(buf, MONITOR_ROOM);
 
       bug("Char_to_room: NULL.", 0);
@@ -1655,7 +1670,8 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
 
    if (IS_SET(ch->in_room->affected_by, ROOM_BV_FIRE_RUNE))
    {
-      send_to_char("@@NAs you step into the room, you fleetingly see a mystical @@eFire@@N Rune suspended in front of you, which then @@eEXPLODES@@N!!!\n\r",
+      send_to_char("@@NAs you step into the room, you fleetingly see a mystical @@eFire@@N Rune "
+                   "suspended in front of you, which then @@eEXPLODES@@N!!!\n\r",
                    ch);
       act("@@NThe @@eFire@@N Rune explodes as $n enters the room!", ch, NULL, NULL, TO_ROOM);
 
@@ -1673,7 +1689,8 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
 
    if (IS_SET(ch->in_room->affected_by, ROOM_BV_SHOCK_RUNE) && (ch->is_free == FALSE))
    {
-      send_to_char("@@NAs you step into the room, you fleetingly see a mystical @@lShock@@N Rune suspended in front of you, which then @@lZAPS@@N You!!!\n\r",
+      send_to_char("@@NAs you step into the room, you fleetingly see a mystical @@lShock@@N Rune "
+                   "suspended in front of you, which then @@lZAPS@@N You!!!\n\r",
                    ch);
       act("@@NThe @@lShock@@N Rune flashes as $n enters the room!", ch, NULL, NULL, TO_ROOM);
 
@@ -1691,7 +1708,8 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
 
    if (IS_SET(ch->in_room->affected_by, ROOM_BV_POISON_RUNE) && (ch->is_free == FALSE))
    {
-      send_to_char("@@NAs you step into the room, you fleetingly see a mystical @@dPoison@@N Rune suspended in front of you, which then @@dEXPLODES@@N!!!\n\r",
+      send_to_char("@@NAs you step into the room, you fleetingly see a mystical @@dPoison@@N Rune "
+                   "suspended in front of you, which then @@dEXPLODES@@N!!!\n\r",
                    ch);
       act("@@NThe @@dPoison@@N Rune explodes as $n enters the room!", ch, NULL, NULL, TO_ROOM);
 
@@ -1761,8 +1779,9 @@ void obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch)
       if (valid_questor == FALSE)
       {
          act("$n fumbles, trying to hold $p, and it falls to the ground.", ch, obj, NULL, TO_ROOM);
-         act("You try to hold $p, but it seems to come alive, and slips from your grasp and falls to the ground.", ch, obj,
-             NULL, TO_CHAR);
+         act("You try to hold $p, but it seems to come alive, and slips from your grasp and falls "
+             "to the ground.",
+             ch, obj, NULL, TO_CHAR);
          obj_to_room(obj, ch->in_room);
          return;
       }
@@ -1779,7 +1798,6 @@ void obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch)
 
    if (!IS_NPC(ch))
       quest_obj_notify(ch, obj);
-
 }
 
 /*
@@ -1791,7 +1809,7 @@ void obj_from_char(OBJ_DATA *obj)
 
    if ((ch = obj->carried_by) == NULL)
    {
-         sprintf(buf, "obj_from_char: NULL ch to remove %s from.", obj->short_descr);
+      sprintf(buf, "obj_from_char: NULL ch to remove %s from.", obj->short_descr);
       monitor_chan(buf, MONITOR_OBJ);
 
       bug("Obj_from_char: null ch.", 0);
@@ -1887,9 +1905,11 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear)
    AFFECT_DATA *paf;
    char log[MAX_STRING_LENGTH];
 
-   if ((!IS_NPC(ch) && ch->desc->connected != CON_SETTING_STATS) && (get_eq_char(ch, iWear) != NULL))
+   if ((!IS_NPC(ch) && ch->desc->connected != CON_SETTING_STATS) &&
+       (get_eq_char(ch, iWear) != NULL))
    {
-      sprintf(log, "equip_char: %s (room %d) cannot be equiped with %s, as wear slot (%d) not empty.",
+      sprintf(log,
+              "equip_char: %s (room %d) cannot be equiped with %s, as wear slot (%d) not empty.",
               NAME(ch), ch->in_room->vnum, obj->short_descr, iWear);
       monitor_chan(log, MONITOR_OBJ);
 
@@ -1897,9 +1917,12 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear)
       return;
    }
 
-   if ((!IS_NPC(ch) && ch->desc->connected != CON_SETTING_STATS) && ((IS_OBJ_STAT(obj, ITEM_ANTI_EVIL) && IS_EVIL(ch)) || (IS_OBJ_STAT(obj, ITEM_ANTI_GOOD) && IS_GOOD(ch))))
+   if ((!IS_NPC(ch) && ch->desc->connected != CON_SETTING_STATS) &&
+       ((IS_OBJ_STAT(obj, ITEM_ANTI_EVIL) && IS_EVIL(ch)) ||
+        (IS_OBJ_STAT(obj, ITEM_ANTI_GOOD) && IS_GOOD(ch))))
    {
-      act("You feel $p slither out of your grasp, and back into your inventory!", ch, obj, NULL, TO_CHAR);
+      act("You feel $p slither out of your grasp, and back into your inventory!", ch, obj, NULL,
+          TO_CHAR);
       act("$p slithers out of $n's hands and back into $s inventory!", ch, obj, NULL, TO_ROOM);
       return;
    }
@@ -1920,7 +1943,8 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear)
    /*
     * spec: light bugfix
     */
-   if ((IS_NPC(ch) || !ch->desc || ch->desc->connected != CON_SETTING_STATS) && obj->item_type == ITEM_LIGHT && ch->in_room != NULL)
+   if ((IS_NPC(ch) || !ch->desc || ch->desc->connected != CON_SETTING_STATS) &&
+       obj->item_type == ITEM_LIGHT && ch->in_room != NULL)
       ++ch->in_room->light;
 
    /*
@@ -1960,7 +1984,10 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear)
    if (IS_SET(obj->item_apply, ITEM_APPLY_ENHANCED))
       send_to_char("You feel much meaner!\n\r", ch);
 
-   if (IS_SET(obj->item_apply, ITEM_APPLY_DET_MAG) || IS_SET(obj->item_apply, ITEM_APPLY_DET_HID) || IS_SET(obj->item_apply, ITEM_APPLY_DET_EVIL) || IS_SET(obj->item_apply, ITEM_APPLY_KNOW_ALIGN) || IS_SET(obj->item_apply, ITEM_APPLY_DET_POISON))
+   if (IS_SET(obj->item_apply, ITEM_APPLY_DET_MAG) || IS_SET(obj->item_apply, ITEM_APPLY_DET_HID) ||
+       IS_SET(obj->item_apply, ITEM_APPLY_DET_EVIL) ||
+       IS_SET(obj->item_apply, ITEM_APPLY_KNOW_ALIGN) ||
+       IS_SET(obj->item_apply, ITEM_APPLY_DET_POISON))
       send_to_char("Your eyes tingle slightly.\n\r", ch);
 
    if (IS_SET(obj->item_apply, ITEM_APPLY_PASS_DOOR))
@@ -1987,7 +2014,7 @@ void unequip_char(CHAR_DATA *ch, OBJ_DATA *obj)
 
    if (obj->wear_loc == WEAR_NONE)
    {
-         sprintf(buf, "unequip_char: %s is not wearing %s.", NAME(ch), obj->short_descr);
+      sprintf(buf, "unequip_char: %s is not wearing %s.", NAME(ch), obj->short_descr);
       monitor_chan(buf, MONITOR_OBJ);
 
       bug("Unequip_char: already unequipped.", 0);
@@ -2044,7 +2071,10 @@ void unequip_char(CHAR_DATA *ch, OBJ_DATA *obj)
    if (IS_SET(obj->item_apply, ITEM_APPLY_ENHANCED))
       send_to_char("You feel much wimpier!\n\r", ch);
 
-   if (IS_SET(obj->item_apply, ITEM_APPLY_DET_MAG) || IS_SET(obj->item_apply, ITEM_APPLY_DET_HID) || IS_SET(obj->item_apply, ITEM_APPLY_DET_EVIL) || IS_SET(obj->item_apply, ITEM_APPLY_KNOW_ALIGN) || IS_SET(obj->item_apply, ITEM_APPLY_DET_POISON))
+   if (IS_SET(obj->item_apply, ITEM_APPLY_DET_MAG) || IS_SET(obj->item_apply, ITEM_APPLY_DET_HID) ||
+       IS_SET(obj->item_apply, ITEM_APPLY_DET_EVIL) ||
+       IS_SET(obj->item_apply, ITEM_APPLY_KNOW_ALIGN) ||
+       IS_SET(obj->item_apply, ITEM_APPLY_DET_POISON))
       send_to_char("Your feel less well-informed.\n\r", ch);
 
    if (IS_SET(obj->item_apply, ITEM_APPLY_PASS_DOOR))
@@ -2132,7 +2162,7 @@ void obj_from_room(OBJ_DATA *obj)
 
    if ((in_room = obj->in_room) == NULL)
    {
-         sprintf(buf, "obj_from_room: %s in NULL room.", obj->short_descr);
+      sprintf(buf, "obj_from_room: %s in NULL room.", obj->short_descr);
       monitor_chan(buf, MONITOR_OBJ);
 
       bug("obj_from_room: NULL.", 0);
@@ -2145,7 +2175,8 @@ void obj_from_room(OBJ_DATA *obj)
       obj_to_room(obj, get_room_index(ROOM_VNUM_LIMBO));
       if ((in_room = obj->in_room) == NULL)
       {
-         sprintf(buf, "obj_from_room, %s really screwed up, failed attempts to move to Limbo.", obj->short_descr);
+         sprintf(buf, "obj_from_room, %s really screwed up, failed attempts to move to Limbo.",
+                 obj->short_descr);
          monitor_chan(buf, MONITOR_OBJ);
          return;
       }
@@ -2194,7 +2225,8 @@ void obj_to_obj(OBJ_DATA *obj, OBJ_DATA *obj_to)
    obj->next_in_carry_list = NULL;
    obj->prev_in_carry_list = NULL;
 
-   TOPLINK(obj, obj_to->first_in_carry_list, obj_to->last_in_carry_list, next_in_carry_list, prev_in_carry_list);
+   TOPLINK(obj, obj_to->first_in_carry_list, obj_to->last_in_carry_list, next_in_carry_list,
+           prev_in_carry_list);
    obj->in_obj = obj_to;
    obj->in_room = NULL;
    obj->carried_by = NULL;
@@ -2220,13 +2252,14 @@ void obj_from_obj(OBJ_DATA *obj)
 
    if ((obj_from = obj->in_obj) == NULL)
    {
-         sprintf(buf, "obj_from_obj: %s not in another object.", obj->short_descr);
+      sprintf(buf, "obj_from_obj: %s not in another object.", obj->short_descr);
       monitor_chan(buf, MONITOR_OBJ);
       bug("Obj_from_obj: null obj_from.", 0);
       return;
    }
 
-   UNLINK(obj, obj_from->first_in_carry_list, obj_from->last_in_carry_list, next_in_carry_list, prev_in_carry_list);
+   UNLINK(obj, obj_from->first_in_carry_list, obj_from->last_in_carry_list, next_in_carry_list,
+          prev_in_carry_list);
 
    obj->next_in_carry_list = NULL;
    obj->prev_in_carry_list = NULL;
@@ -2277,7 +2310,8 @@ void extract_obj(OBJ_DATA *obj)
 
    if ((obj == quest_object) && quest)
    {
-      if ((obj->in_obj != NULL) && ((obj->in_obj->item_type == ITEM_CORPSE_NPC) || (obj->in_obj->item_type == ITEM_CORPSE_PC)))
+      if ((obj->in_obj != NULL) && ((obj->in_obj->item_type == ITEM_CORPSE_NPC) ||
+                                    (obj->in_obj->item_type == ITEM_CORPSE_PC)))
       {
          drop_room = obj->in_obj->in_room;
          obj_from_obj(obj);
@@ -2386,7 +2420,7 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 
    if (ch->in_room == NULL)
    {
-         sprintf(buf, "extract_char: %s in NULL room., Moved to room 2", NAME(ch));
+      sprintf(buf, "extract_char: %s in NULL room., Moved to room 2", NAME(ch));
       monitor_chan(buf, MONITOR_MOB);
 
       bug("Extract_char: NULL.", 0);
@@ -2491,13 +2525,14 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 
       this_council = SUPER_NONE;
       if (this_council != SUPER_NONE && super_councils[this_council].council_time > 0)
-         for (imember = super_councils[this_council].first_member; imember != NULL; imember = imember_next)
+         for (imember = super_councils[this_council].first_member; imember != NULL;
+              imember = imember_next)
          {
             imember_next = imember->next;
             if (imember->this_member == ch)
             {
-               UNLINK(imember, super_councils[this_council].first_member, super_councils[this_council].last_member, next,
-                      prev);
+               UNLINK(imember, super_councils[this_council].first_member,
+                      super_councils[this_council].last_member, next, prev);
                imember->this_member = NULL;
                imember->next = NULL;
                imember->prev = NULL;
@@ -2519,11 +2554,13 @@ void extract_char(CHAR_DATA *ch, bool fPull)
          }
          else
          {
-            for (kill_member = kill_group->first_follower; kill_member; kill_member = kill_member->next)
+            for (kill_member = kill_group->first_follower; kill_member;
+                 kill_member = kill_member->next)
             {
                if ((CHAR_DATA *)kill_member->this_one == ch)
                {
-                  UNLINK(kill_member, kill_group->first_follower, kill_group->last_follower, next, prev);
+                  UNLINK(kill_member, kill_group->first_follower, kill_group->last_follower, next,
+                         prev);
                   PUT_FREE(kill_member, dl_list_free);
                }
             }
@@ -2834,7 +2871,7 @@ OBJ_DATA *create_money(int amount)
 
    if (amount <= 0)
    {
-         sprintf(buf, "create_money: %d provided as amount.", amount);
+      sprintf(buf, "create_money: %d provided as amount.", amount);
       monitor_chan(buf, MONITOR_OBJ);
 
       bug("Create_money: zero or negative money %d.", amount);
@@ -2924,7 +2961,8 @@ bool room_is_dark(ROOM_INDEX_DATA *pRoomIndex)
    if (pRoomIndex->sector_type == SECT_INSIDE || pRoomIndex->sector_type == SECT_CITY)
       return FALSE;
 
-   if (weather_info.moon_phase == MOON_FULL && (weather_info.moon_loc >= MOON_RISE && weather_info.moon_loc <= MOON_FALL))
+   if (weather_info.moon_phase == MOON_FULL &&
+       (weather_info.moon_loc >= MOON_RISE && weather_info.moon_loc <= MOON_FALL))
       return FALSE;
 
    if (weather_info.sunlight == SUN_SET || weather_info.sunlight == SUN_DARK)
@@ -2970,10 +3008,12 @@ bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
    if (victim->leader == ch)
       return TRUE;
 
-   if (!IS_NPC(ch) && !IS_NPC(victim) && !str_cmp(ch->name, "bash") && !str_cmp(victim->name, "vannevar"))
+   if (!IS_NPC(ch) && !IS_NPC(victim) && !str_cmp(ch->name, "bash") &&
+       !str_cmp(victim->name, "vannevar"))
       return FALSE;
 
-   if (!IS_NPC(ch) && !IS_NPC(victim) && !str_cmp(ch->name, "vannevar") && !str_cmp(victim->name, "bash"))
+   if (!IS_NPC(ch) && !IS_NPC(victim) && !str_cmp(ch->name, "vannevar") &&
+       !str_cmp(victim->name, "bash"))
       return FALSE;
 
    if (!IS_NPC(victim) && IS_SET(victim->act, PLR_WIZINVIS) && get_trust(ch) < victim->invis)
@@ -2986,25 +3026,34 @@ bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
 
    if (!IS_NPC(ch) && IS_SET(ch->act, PLR_HOLYLIGHT))
       return TRUE;
-   if ((room_is_dark(ch->in_room) && !IS_AFFECTED(ch, AFF_INFRARED)) && ch->in_room == victim->in_room)
+   if ((room_is_dark(ch->in_room) && !IS_AFFECTED(ch, AFF_INFRARED)) &&
+       ch->in_room == victim->in_room)
       return FALSE;
 
    if (!IS_NPC(victim) && IS_SET(stance_app[victim->stance].specials, STANCE_NINJA))
       return FALSE;
 
-   if ((IS_AFFECTED(victim, AFF_INVISIBLE) || item_has_apply(victim, ITEM_APPLY_INV)) && (!IS_AFFECTED(ch, AFF_DETECT_INVIS) && !item_has_apply(ch, ITEM_APPLY_DET_INV)) && !(IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS)))
+   if ((IS_AFFECTED(victim, AFF_INVISIBLE) || item_has_apply(victim, ITEM_APPLY_INV)) &&
+       (!IS_AFFECTED(ch, AFF_DETECT_INVIS) && !item_has_apply(ch, ITEM_APPLY_DET_INV)) &&
+       !(IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS)))
       return FALSE;
 
-   if (IS_AFFECTED(victim, AFF_INVISIBLE) && (IS_AFFECTED(ch, AFF_DETECT_INVIS) || item_has_apply(ch, ITEM_APPLY_DET_INV) || (IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS))) && get_psuedo_level(victim) - 10 > get_psuedo_level(ch))
+   if (IS_AFFECTED(victim, AFF_INVISIBLE) &&
+       (IS_AFFECTED(ch, AFF_DETECT_INVIS) || item_has_apply(ch, ITEM_APPLY_DET_INV) ||
+        (IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS))) &&
+       get_psuedo_level(victim) - 10 > get_psuedo_level(ch))
       return FALSE;
 
    /*
     * if ( ( IS_AFFECTED( victim, AFF_SNEAK ) || item_has_apply( victim, ITEM_APPLY_SNEAK ) )
-    * && ( number_percent() < 50 + ( 5 * ( get_psuedo_level( victim ) - get_psuedo_level( ch ) ) ) ) )
-    * return FALSE;
+    * && ( number_percent() < 50 + ( 5 * ( get_psuedo_level( victim ) - get_psuedo_level( ch ) ) ) )
+    * ) return FALSE;
     */
 
-   if ((IS_AFFECTED(victim, AFF_HIDE) || item_has_apply(victim, ITEM_APPLY_HIDE)) && (!IS_AFFECTED(ch, AFF_DETECT_HIDDEN) && !item_has_apply(ch, ITEM_APPLY_DET_HID) && !(IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS))) && victim->fighting == NULL && (IS_NPC(ch) ? !IS_NPC(victim) : IS_NPC(victim)))
+   if ((IS_AFFECTED(victim, AFF_HIDE) || item_has_apply(victim, ITEM_APPLY_HIDE)) &&
+       (!IS_AFFECTED(ch, AFF_DETECT_HIDDEN) && !item_has_apply(ch, ITEM_APPLY_DET_HID) &&
+        !(IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS))) &&
+       victim->fighting == NULL && (IS_NPC(ch) ? !IS_NPC(victim) : IS_NPC(victim)))
       return FALSE;
 
    return TRUE;
@@ -3028,10 +3077,12 @@ bool can_see_obj(CHAR_DATA *ch, OBJ_DATA *obj)
    if (obj->item_type == ITEM_LIGHT)
       return TRUE;
 
-   if (room_is_dark(ch->in_room) && (!IS_AFFECTED(ch, AFF_INFRARED)) && !item_has_apply(ch, ITEM_APPLY_INFRA))
+   if (room_is_dark(ch->in_room) && (!IS_AFFECTED(ch, AFF_INFRARED)) &&
+       !item_has_apply(ch, ITEM_APPLY_INFRA))
       return FALSE;
 
-   if (IS_SET(obj->extra_flags, ITEM_INVIS) && (!IS_AFFECTED(ch, AFF_DETECT_INVIS) && !item_has_apply(ch, ITEM_APPLY_DET_INV)))
+   if (IS_SET(obj->extra_flags, ITEM_INVIS) &&
+       (!IS_AFFECTED(ch, AFF_DETECT_INVIS) && !item_has_apply(ch, ITEM_APPLY_DET_INV)))
       return FALSE;
 
    return TRUE;
@@ -3085,7 +3136,8 @@ void notify(char *message, int lv)
 
    sprintf(buf, "[NOTE]: %s\n\r", message);
    for (d = first_desc; d; d = d->next)
-      if ((d->connected == CON_PLAYING) && (d->character->level >= lv) && !IS_NPC(d->character) && !IS_SET(d->character->deaf, CHANNEL_NOTIFY))
+      if ((d->connected == CON_PLAYING) && (d->character->level >= lv) && !IS_NPC(d->character) &&
+          !IS_SET(d->character->deaf, CHANNEL_NOTIFY))
          send_to_char(buf, d->character);
    return;
 }
@@ -3096,7 +3148,8 @@ void auction(char *message)
 
    sprintf(buf, "[AUCTION]: %s\n\r", message);
    for (d = first_desc; d; d = d->next)
-      if ((d->connected == CON_PLAYING) && !IS_NPC(d->character) && !IS_SET(d->character->deaf, CHANNEL_AUCTION))
+      if ((d->connected == CON_PLAYING) && !IS_NPC(d->character) &&
+          !IS_SET(d->character->deaf, CHANNEL_AUCTION))
          send_to_char(buf, d->character);
    return;
 }
@@ -3112,10 +3165,11 @@ void info(char *message, int lv)
    DESCRIPTOR_DATA *d;
 
    for (d = first_desc; d; d = d->next)
-      if ((d->connected == CON_PLAYING) && (d->character->level >= lv) && !IS_NPC(d->character) && !IS_SET(d->character->deaf, CHANNEL_INFO))
+      if ((d->connected == CON_PLAYING) && (d->character->level >= lv) && !IS_NPC(d->character) &&
+          !IS_SET(d->character->deaf, CHANNEL_INFO))
       {
-         sprintf(buf, "%s[INFO]: %s%s\n\r",
-                 color_string(d->character, "info"), message, color_string(d->character, "normal"));
+         sprintf(buf, "%s[INFO]: %s%s\n\r", color_string(d->character, "info"), message,
+                 color_string(d->character, "normal"));
          send_to_char(buf, d->character);
       }
    return;
@@ -3131,7 +3185,9 @@ void log_chan(const char *message, int lv)
 
    sprintf(buf, "[LOG]: %s\n\r", message);
    for (d = first_desc; d; d = d->next)
-      if ((d->connected == CON_PLAYING) && (get_trust(d->character) == MAX_LEVEL) && (!IS_NPC(d->character)) && (d->character->level >= lv) && (!IS_SET(d->character->deaf, CHANNEL_LOG)))
+      if ((d->connected == CON_PLAYING) && (get_trust(d->character) == MAX_LEVEL) &&
+          (!IS_NPC(d->character)) && (d->character->level >= lv) &&
+          (!IS_SET(d->character->deaf, CHANNEL_LOG)))
          send_to_char(buf, d->character);
    return;
 }
@@ -3153,7 +3209,8 @@ bool item_has_apply(CHAR_DATA *ch, int bit)
    return FALSE;
 }
 
-/* This is for immrotal authorized skills. Enables imms to set which skillks lower imms may use. handy for abuse control --Flar
+/* This is for immrotal authorized skills. Enables imms to set which skillks lower imms may use.
+ * handy for abuse control --Flar
  */
 bool authorized(CHAR_DATA *ch, char *skllnm)
 {
@@ -3326,7 +3383,8 @@ void remove_shield(CHAR_DATA *ch, MAGIC_SHIELD *shield)
 {
    if (ch->first_shield == NULL)
    {
-         sprintf(buf, "shield_remove: %s did not have a shield to remove.", IS_NPC(ch) ? ch->short_descr : ch->name);
+      sprintf(buf, "shield_remove: %s did not have a shield to remove.",
+              IS_NPC(ch) ? ch->short_descr : ch->name);
       monitor_chan(buf, MONITOR_MOB);
 
       bug("Remove_shield: no shield.", 0);

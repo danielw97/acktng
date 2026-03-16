@@ -356,7 +356,8 @@ void _free_string(char *str, const char *caller)
          return;
       else if (ptr->usage < 0)
       {
-         bugf("SSM: free_string: multiple free/invalid from %s: %20.20s", caller, (char *)&ptr->buf[0]);
+         bugf("SSM: free_string: multiple free/invalid from %s: %20.20s", caller,
+              (char *)&ptr->buf[0]);
          return;
       }
 

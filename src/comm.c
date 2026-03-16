@@ -107,12 +107,11 @@ bool is_parse_name_syntax_valid(const char *name)
 }
 
 #ifdef UNIT_TEST_COMM
-LOGIN_TRANSITION_RESULT simulate_existing_player_login_transition(
-    int *connected_state,
-    const char *input,
-    int is_name_valid,
-    int is_existing_player,
-    int is_password_correct)
+LOGIN_TRANSITION_RESULT simulate_existing_player_login_transition(int *connected_state,
+                                                                  const char *input,
+                                                                  int is_name_valid,
+                                                                  int is_existing_player,
+                                                                  int is_password_correct)
 {
    if (connected_state == NULL || input == NULL)
       return LOGIN_TRANSITION_NAME_REJECTED;
@@ -147,10 +146,8 @@ LOGIN_TRANSITION_RESULT simulate_existing_player_login_transition(
 
 static bool is_reserved_login_name(const char *name)
 {
-   static const char *const reserved_names[] = {
-      "all", "auto", "everymob", "localmobs", "immortal",
-      "zen", "self", "someone", "tank", "enemy"
-   };
+   static const char *const reserved_names[] = {"all", "auto", "everymob", "localmobs", "immortal",
+                                                "zen", "self", "someone",  "tank",      "enemy"};
    size_t i;
 
    if (name == NULL || name[0] == '\0')
@@ -214,27 +211,49 @@ void comm_format_builder_prompt(char *dest, size_t dest_size, const char *mode, 
    snprintf(dest, dest_size, "< %s %s >", mode != NULL ? mode : "", details != NULL ? details : "");
 }
 
-void comm_format_class_menu_line(char *dest, size_t dest_size, const char *who_name, const char *stat, const char *class_name)
+void comm_format_class_menu_line(char *dest, size_t dest_size, const char *who_name,
+                                 const char *stat, const char *class_name)
 {
    if (dest == NULL || dest_size == 0)
       return;
 
-   snprintf(dest, dest_size, "%3.3s    %3.3s    %-10.10s\n\r",
-            who_name != NULL ? who_name : "", stat != NULL ? stat : "", class_name != NULL ? class_name : "");
+   snprintf(dest, dest_size, "%3.3s    %3.3s    %-10.10s\n\r", who_name != NULL ? who_name : "",
+            stat != NULL ? stat : "", class_name != NULL ? class_name : "");
 }
 
-bool shortfight_should_suppress_watched_autoattack(int observer_is_npc, int observer_has_shortfight, int observer_is_fighting)
+bool shortfight_should_suppress_watched_autoattack(int observer_is_npc, int observer_has_shortfight,
+                                                   int observer_is_fighting)
 {
    return !observer_is_npc && observer_has_shortfight && !observer_is_fighting;
 }
 
 #ifdef UNIT_TEST_COMM
-bool should_show_default_prompt_hp(CHAR_DATA *ch) { return prompt_should_show_hp(ch); }
-bool should_show_default_prompt_mana(CHAR_DATA *ch) { return prompt_should_show_mana(ch); }
-bool should_show_default_prompt_move(CHAR_DATA *ch) { return prompt_should_show_move(ch); }
-long prompt_max_value_for_code(CHAR_DATA *ch, char code) { return prompt_max_value_for_code_internal(ch, code); }
-void comm_testable_format_builder_prompt(char *dest, size_t dest_size, const char *mode, const char *details) { comm_format_builder_prompt(dest, dest_size, mode, details); }
-void comm_testable_format_class_menu_line(char *dest, size_t dest_size, const char *who_name, const char *stat, const char *class_name) { comm_format_class_menu_line(dest, dest_size, who_name, stat, class_name); }
+bool should_show_default_prompt_hp(CHAR_DATA *ch)
+{
+   return prompt_should_show_hp(ch);
+}
+bool should_show_default_prompt_mana(CHAR_DATA *ch)
+{
+   return prompt_should_show_mana(ch);
+}
+bool should_show_default_prompt_move(CHAR_DATA *ch)
+{
+   return prompt_should_show_move(ch);
+}
+long prompt_max_value_for_code(CHAR_DATA *ch, char code)
+{
+   return prompt_max_value_for_code_internal(ch, code);
+}
+void comm_testable_format_builder_prompt(char *dest, size_t dest_size, const char *mode,
+                                         const char *details)
+{
+   comm_format_builder_prompt(dest, dest_size, mode, details);
+}
+void comm_testable_format_class_menu_line(char *dest, size_t dest_size, const char *who_name,
+                                          const char *stat, const char *class_name)
+{
+   comm_format_class_menu_line(dest, dest_size, who_name, stat, class_name);
+}
 
 #endif
 
@@ -259,6 +278,7 @@ int port;
 int control;
 
 int max_players = 0;
+int hotreboot_countdown = 0; /* Pulses remaining until automatic hotreboot; 0 = inactive */
 
 static int count_playing_players(void)
 {
@@ -353,7 +373,8 @@ void init_descriptor(DESCRIPTOR_DATA *dnew, int desc);
 void queue_login_greeting(DESCRIPTOR_DATA *d);
 bool handle_websocket_handshake(DESCRIPTOR_DATA *d);
 bool process_websocket_input(DESCRIPTOR_DATA *d);
-bool write_websocket_frame(DESCRIPTOR_DATA *d, unsigned char opcode, const unsigned char *payload, size_t payload_len);
+bool write_websocket_frame(DESCRIPTOR_DATA *d, unsigned char opcode, const unsigned char *payload,
+                           size_t payload_len);
 
 /*
  * Other local functions (OS-independent).
@@ -468,7 +489,6 @@ static void sha1_digest(const unsigned char *data, size_t len, unsigned char out
       out[i * 4 + 3] = (unsigned char)state[i];
    }
 }
-
 
 static const char *find_http_header_value(const char *headers, const char *header_name)
 {
@@ -701,7 +721,8 @@ static size_t sanitize_websocket_text_payload(const unsigned char *src, size_t s
    return j;
 }
 
-bool write_websocket_frame(DESCRIPTOR_DATA *d, unsigned char opcode, const unsigned char *payload, size_t payload_len)
+bool write_websocket_frame(DESCRIPTOR_DATA *d, unsigned char opcode, const unsigned char *payload,
+                           size_t payload_len)
 {
    unsigned char header[4];
    size_t hlen;
@@ -1212,10 +1233,10 @@ void game_loop(int control)
                fclose(out_file);
                out_file = NULL;
             }
-
          }
 
-         usecDelta = ((int)last_time.tv_usec) - ((int)now_time.tv_usec) + 1000000 / PULSE_PER_SECOND;
+         usecDelta =
+             ((int)last_time.tv_usec) - ((int)now_time.tv_usec) + 1000000 / PULSE_PER_SECOND;
          secDelta = ((int)last_time.tv_sec) - ((int)now_time.tv_sec);
          while (usecDelta < 0)
          {
@@ -1329,7 +1350,8 @@ void new_descriptor(int control)
       int addr;
 
       addr = ntohl(sock.sin_addr.s_addr);
-      sprintf(buf, "%d.%d.%d.%d", (addr >> 24) & 0xFF, (addr >> 16) & 0xFF, (addr >> 8) & 0xFF, (addr) & 0xFF);
+      sprintf(buf, "%d.%d.%d.%d", (addr >> 24) & 0xFF, (addr >> 16) & 0xFF, (addr >> 8) & 0xFF,
+              (addr) & 0xFF);
       sprintf(log_buf, "Sock.sinaddr:  %s (%d)", buf, ntohs(sock.sin_port));
       log_string(log_buf);
       sprintf(log_buf, "Connection formed from %s.", buf);
@@ -1500,7 +1522,8 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
    {
       sprintf(log_buf, "%s input overflow!", d->host);
       log_string(log_buf);
-      sprintf(log_buf, "input overflow by %s (%s)", (d->character == NULL) ? "[login]" : d->character->name, d->host);
+      sprintf(log_buf, "input overflow by %s (%s)",
+              (d->character == NULL) ? "[login]" : d->character->name, d->host);
       monitor_chan(log_buf, MONITOR_CONNECT);
       write_to_descriptor(d->descriptor, "\n\r SPAMMING IS RUDE, BYE BYE! \n\r", 0);
       return FALSE;
@@ -1670,7 +1693,8 @@ bool process_output(DESCRIPTOR_DATA *d, bool fPrompt)
    if (fPrompt && !merc_down && d->connected == CON_PLAYING)
    {
       if (d->showstr_point)
-         write_to_buffer(d, "[Please type (c)ontinue, (r)efresh, (b)ack, (h)elp, (q)uit, or RETURN]:  ", 0);
+         write_to_buffer(
+             d, "[Please type (c)ontinue, (r)efresh, (b)ack, (h)elp, (q)uit, or RETURN]:  ", 0);
       else
       {
          CHAR_DATA *ch;
@@ -1719,8 +1743,8 @@ bool process_output(DESCRIPTOR_DATA *d, bool fPrompt)
          return FALSE;
       }
 
-      payload_len = sanitize_websocket_text_payload((const unsigned char *)d->outbuf, (size_t)d->outtop,
-                                                    payload, (size_t)d->outtop + 1);
+      payload_len = sanitize_websocket_text_payload(
+          (const unsigned char *)d->outbuf, (size_t)d->outtop, payload, (size_t)d->outtop + 1);
       if (!write_websocket_frame(d, 0x1, payload, payload_len))
       {
          free(payload);
@@ -2152,8 +2176,7 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          if (ch->level < 5)
             sprintf(buf2, "%d", ch->alignment);
          else
-            sprintf(buf2, "%s", IS_GOOD(ch) ? "good" : IS_EVIL(ch) ? "evil"
-                                                                   : "good");
+            sprintf(buf2, "%s", IS_GOOD(ch) ? "good" : IS_EVIL(ch) ? "evil" : "good");
          i = buf2;
          break;
       case 'r':
@@ -2191,13 +2214,13 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          break;
       case 'c':
          if (!IS_NPC(ch))
-            sprintf(buf2, "\n\r" );
+            sprintf(buf2, "\n\r");
          else
             sprintf(buf2, " ");
          i = buf2;
          break;
       case 'C':
-         if (is_valid_finisher(ch) )
+         if (is_valid_finisher(ch))
             sprintf(buf2, " @@rR@@N");
          else
             sprintf(buf2, " %d/%d", get_combo_count(ch), get_max_combo(ch));
@@ -2210,7 +2233,8 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
             sprintf(buf2, "INVIS: %d", IS_SET(ch->act, PLR_WIZINVIS) ? ch->invis : 0);
          else
          {
-            if ((IS_AFFECTED(ch, AFF_INVISIBLE)) || (IS_AFFECTED(ch, AFF_HIDE)) || (item_has_apply(ch, ITEM_APPLY_INV)) || (item_has_apply(ch, ITEM_APPLY_HIDE)))
+            if ((IS_AFFECTED(ch, AFF_INVISIBLE)) || (IS_AFFECTED(ch, AFF_HIDE)) ||
+                (item_has_apply(ch, ITEM_APPLY_INV)) || (item_has_apply(ch, ITEM_APPLY_HIDE)))
             {
                sprintf(buf2, "%s", "INVIS");
             }
@@ -2594,9 +2618,10 @@ void show_menu_to(DESCRIPTOR_DATA *d)
    strcat(menu, "Options:\n\r");
 
    sprintf(buf, "        1. Set Gender.       Currently:%s\n\r",
-           !IS_SET(d->check, CHECK_SEX) ? "Not Set." : ch->sex == SEX_NEUTRAL ? "Neutral."
-                                                   : ch->sex == SEX_MALE      ? "Male."
-                                                                              : "Female.");
+           !IS_SET(d->check, CHECK_SEX) ? "Not Set."
+           : ch->sex == SEX_NEUTRAL     ? "Neutral."
+           : ch->sex == SEX_MALE        ? "Male."
+                                        : "Female.");
    strcat(menu, buf);
 
    sprintf(buf, "        2. Set Race.         Currently:%s\n\r",
@@ -2644,8 +2669,9 @@ void show_smenu_to(DESCRIPTOR_DATA *d)
 
    if (IS_SET(d->check, CHECK_SEX))
       sprintf(buf, "Current Choice: %s\n\r",
-              ch->sex == SEX_NEUTRAL ? "Neutral." : ch->sex == SEX_MALE ? "Male."
-                                                                        : "Female.");
+              ch->sex == SEX_NEUTRAL ? "Neutral."
+              : ch->sex == SEX_MALE  ? "Male."
+                                     : "Female.");
    else
       sprintf(buf, "No Current Selection.\n\r");
 
@@ -2673,15 +2699,12 @@ void show_rmenu_to(DESCRIPTOR_DATA *d)
    {
       if (race_table[iRace].player_allowed == FALSE)
          continue;
-      sprintf(buf, "%3s   %-10s    %s", race_table[iRace].race_name,
-              race_table[iRace].race_title, class_order(iRace));
+      sprintf(buf, "%3s   %-10s    %s", race_table[iRace].race_name, race_table[iRace].race_title,
+              class_order(iRace));
       strcat(menu, buf);
 
-      sprintf(buf, "  %-2d  %-2d  %-2d  %-2d  %-2d\n\r",
-              race_table[iRace].race_str,
-              race_table[iRace].race_int,
-              race_table[iRace].race_wis,
-              race_table[iRace].race_dex,
+      sprintf(buf, "  %-2d  %-2d  %-2d  %-2d  %-2d\n\r", race_table[iRace].race_str,
+              race_table[iRace].race_int, race_table[iRace].race_wis, race_table[iRace].race_dex,
               race_table[iRace].race_con);
       strcat(menu, buf);
    }
@@ -2696,10 +2719,14 @@ void show_ahelp_menu_to(DESCRIPTOR_DATA *d)
 
    char menu[MAX_STRING_LENGTH];
    sprintf(menu, "%s", "");
-   strcat(menu, "Str affects items you can wear and weight you can carry, and your hitroll and damroll.\n\r");
-   strcat(menu, "Int affects your mana gain, how many Npcs you can control effectively, and spell success.\n\r");
-   strcat(menu, "Wis affects how many practices you get, your mana, and your saving against spells.\n\r");
-   strcat(menu, "Dex affects your ac, how many items you can carry, and your ability to dodge.\n\r");
+   strcat(menu, "Str affects items you can wear and weight you can carry, and your hitroll and "
+                "damroll.\n\r");
+   strcat(menu, "Int affects your mana gain, how many Npcs you can control effectively, and spell "
+                "success.\n\r");
+   strcat(menu,
+          "Wis affects how many practices you get, your mana, and your saving against spells.\n\r");
+   strcat(menu,
+          "Dex affects your ac, how many items you can carry, and your ability to dodge.\n\r");
    strcat(menu, "Con affects how many hitpoints you gain per level.\n\r");
    strcat(menu, "\n\rPlease Select: (A)ccept, return to menu, (H)help stats, or (R)eroll: ");
 
@@ -2804,18 +2831,23 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
       {
          if (wizlock && !IS_HERO(ch) && !ch->wizbit && !is_name(argument, sysdata.playtesters))
          {
-            write_to_buffer(d, "\n\r             " mudnamenocolor " IS CURRENTLY WIZLOCKED.\n\r", 0);
-            write_to_buffer(d, "Please Try Connecting Again In A Little While, When Any Problems\n\r", 0);
+            write_to_buffer(d, "\n\r             " mudnamenocolor " IS CURRENTLY WIZLOCKED.\n\r",
+                            0);
+            write_to_buffer(
+                d, "Please Try Connecting Again In A Little While, When Any Problems\n\r", 0);
             write_to_buffer(d, "       We Are Working On Have Been Solved.  Thank You.\n\r", 0);
             close_socket(d);
             return;
          }
          if (deathmatch && !IS_HERO(ch) && !ch->wizbit)
          {
-            write_to_buffer(d, "\n\r             " mudnamenocolor " IS CURRENTLY WIZLOCKED.\n\r", 0);
-            write_to_buffer(d, "Sorry, The Players Connected At This Time Are Currently Participating\n\r", 0);
+            write_to_buffer(d, "\n\r             " mudnamenocolor " IS CURRENTLY WIZLOCKED.\n\r",
+                            0);
+            write_to_buffer(
+                d, "Sorry, The Players Connected At This Time Are Currently Participating\n\r", 0);
             write_to_buffer(d, "     In A DEATHMATCH Murder-Fest.  Please try later!\n\r", 0);
-            write_to_buffer(d, "  Deathmatches are usually held on Thursdays and Sundays.  They\n\r", 0);
+            write_to_buffer(
+                d, "  Deathmatches are usually held on Thursdays and Sundays.  They\n\r", 0);
             write_to_buffer(d, " normally last about 30 minutes.  Please be patient!\n\r", 0);
             close_socket(d);
             return;
@@ -2835,7 +2867,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
                char buf[MAX_STRING_LENGTH];
                sprintf(buf, "Denying access to banned site %s", d->host);
                monitor_chan(buf, MONITOR_CONNECT);
-               write_to_descriptor(d->descriptor, "Your site has been banned from this Mud.  BYE BYE!\n\r", 0);
+               write_to_descriptor(d->descriptor,
+                                   "Your site has been banned from this Mud.  BYE BYE!\n\r", 0);
                d->connected = CON_QUITTING;
                close_socket(d);
                return;
@@ -2870,7 +2903,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
                char buf[MAX_STRING_LENGTH];
                sprintf(buf, "Denying access to banned site %s", d->host);
                monitor_chan(buf, MONITOR_CONNECT);
-               write_to_descriptor(d->descriptor, "Your site has been banned from this Mud.  BYE BYE!\n\r", 0);
+               write_to_descriptor(d->descriptor,
+                                   "Your site has been banned from this Mud.  BYE BYE!\n\r", 0);
                d->connected = CON_QUITTING;
                close_socket(d);
                return;
@@ -2929,9 +2963,11 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
          for (brands = first_brand, numbrands = 0; brands; brands = brands->next, numbrands++)
             ;
          do_help(ch, "imotd");
-         sprintf(msgbuf, "There are currently %d outstanding brands.\n\r%s",
-                 numbrands,
-                 ((numbrands < 50) ? "" : "@@eWarning: Process these brands immediately using immbrand list, immbrand read, and immbrand remove to avoid disk overflow!!@@N\n\r"));
+         sprintf(msgbuf, "There are currently %d outstanding brands.\n\r%s", numbrands,
+                 ((numbrands < 50)
+                      ? ""
+                      : "@@eWarning: Process these brands immediately using immbrand list, "
+                        "immbrand read, and immbrand remove to avoid disk overflow!!@@N\n\r"));
          send_to_char(msgbuf, ch);
       }
       else
@@ -3044,7 +3080,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
          show_cmenu_to(d);
          break;
       case 4:
-         if (!IS_SET(d->check, CHECK_SEX) || !IS_SET(d->check, CHECK_CLASS) || !IS_SET(d->check, CHECK_RACE))
+         if (!IS_SET(d->check, CHECK_SEX) || !IS_SET(d->check, CHECK_CLASS) ||
+             !IS_SET(d->check, CHECK_RACE))
          {
             write_to_buffer(d, "ALL Options Must Be Selected First.\n\r", 0);
             show_menu_to(d);
@@ -3121,8 +3158,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
       {
          for (cnt = 0; cnt < MAX_CLASS; cnt++)
          {
-            if (IS_MORTAL_CLASS(cnt) &&
-                (!str_cmp(arg, gclass_table[cnt].who_name) || !str_cmp(arg, gclass_table[cnt].class_name)))
+            if (IS_MORTAL_CLASS(cnt) && (!str_cmp(arg, gclass_table[cnt].who_name) ||
+                                         !str_cmp(arg, gclass_table[cnt].class_name)))
             {
                foo = cnt;
                break;
@@ -3133,7 +3170,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
       if (foo == -1)
       {
          write_to_buffer(d,
-                         "Invalid class. Please try again. Enter a class by abbreviation or full name, such as CLE or Cleric.\n\r",
+                         "Invalid class. Please try again. Enter a class by abbreviation or full "
+                         "name, such as CLE or Cleric.\n\r",
                          0);
          show_cmenu_to(d);
          return;
@@ -3152,7 +3190,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
    {
       for (iClass = 0; iClass < MAX_RACE; iClass++)
       {
-         if ((!str_cmp(argument, race_table[iClass].race_name)) && (race_table[iClass].player_allowed == TRUE))
+         if ((!str_cmp(argument, race_table[iClass].race_name)) &&
+             (race_table[iClass].player_allowed == TRUE))
          {
             ch->race = iClass;
             break;
@@ -3195,8 +3234,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
       if (IS_SET(ch->config, CONFIG_FULL_ANSI))
       {
          char scrollbuf[MSL];
-         sprintf(scrollbuf, "%s%s%s%i;%ir%s%%i;%iH",
-                 CRS_RESET, CRS_CLS, CRS_CMD, 0, ch->pcdata->term_rows - 12, CRS_CMD, ch->pcdata->term_rows - 13);
+         sprintf(scrollbuf, "%s%s%s%i;%ir%s%%i;%iH", CRS_RESET, CRS_CLS, CRS_CMD, 0,
+                 ch->pcdata->term_rows - 12, CRS_CMD, ch->pcdata->term_rows - 13);
          send_to_char(scrollbuf, ch);
       }
       send_to_char("\n\rWelcome to " mudnamecolor ".  May your visit here be ... mutated.\n\r", ch);
@@ -3312,7 +3351,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
        */
       if (ch->pcdata->failures != 0 && ch->level != 1)
       {
-         sprintf(msg, "WARNING:  There have been %d failed login attempts.\n\r", ch->pcdata->failures);
+         sprintf(msg, "WARNING:  There have been %d failed login attempts.\n\r",
+                 ch->pcdata->failures);
          send_to_char(msg, ch);
          ch->pcdata->failures = 0;
       }
@@ -3323,7 +3363,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
          send_to_char(msg, ch);
          if (strcmp(d->host, ch->pcdata->host))
          {
-            sprintf(msg, "%s connected from %s ( last login was from %s ) !", ch->name, d->host, ch->pcdata->host);
+            sprintf(msg, "%s connected from %s ( last login was from %s ) !", ch->name, d->host,
+                    ch->pcdata->host);
             log_string(msg);
             monitor_chan(msg, MONITOR_CONNECT);
             if ((ch->level > 80))
@@ -3343,7 +3384,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
       notes = 0;
 
       for (pnote = first_note; pnote; pnote = pnote->next)
-         if (is_note_to(ch, pnote) && str_cmp(ch->name, pnote->sender) && pnote->date_stamp > ch->last_note)
+         if (is_note_to(ch, pnote) && str_cmp(ch->name, pnote->sender) &&
+             pnote->date_stamp > ch->last_note)
             notes++;
 
       if (notes == 1)
@@ -3371,7 +3413,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
          }
       }
 
-      if ((number_range(0, 99) < (ch->balance / 10000000)) && (ch->balance > (get_psuedo_level(ch) * 100000)))
+      if ((number_range(0, 99) < (ch->balance / 10000000)) &&
+          (ch->balance > (get_psuedo_level(ch) * 100000)))
       {
          int loss;
          int new_balance;
@@ -3478,7 +3521,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
             ch->sex = ch->login_sex;
          ch->affected_by = 0;
 
-         for (wear_object = ch->first_carry; wear_object != NULL; wear_object = wear_object->next_in_carry_list)
+         for (wear_object = ch->first_carry; wear_object != NULL;
+              wear_object = wear_object->next_in_carry_list)
          {
             if (wear_object->wear_loc > WEAR_NONE)
                equip_char(ch, wear_object, wear_object->wear_loc);
@@ -3579,7 +3623,8 @@ bool check_reconnect(DESCRIPTOR_DATA *d, char *name, bool fConn)
             /*
              * Contributed by Gene Choi
              */
-            if ((obj = get_eq_char(ch, WEAR_LIGHT)) != NULL && obj->item_type == ITEM_LIGHT && ch->in_room != NULL)
+            if ((obj = get_eq_char(ch, WEAR_LIGHT)) != NULL && obj->item_type == ITEM_LIGHT &&
+                ch->in_room != NULL)
                ++ch->in_room->light;
          }
          return TRUE;
@@ -3599,18 +3644,23 @@ bool check_playing(DESCRIPTOR_DATA *d, char *name)
 
    for (dold = first_desc; dold; dold = dold->next)
    {
-      if (dold != d && dold->character != NULL && dold->connected != CON_GET_NAME && dold->connected != CON_GET_OLD_PASSWORD && !str_cmp(name, dold->original ? dold->original->name : dold->character->name))
+      if (dold != d && dold->character != NULL && dold->connected != CON_GET_NAME &&
+          dold->connected != CON_GET_OLD_PASSWORD &&
+          !str_cmp(name, dold->original ? dold->original->name : dold->character->name))
       {
-         sprintf(buf, "Player from site %s tried to login as %s (already playing) !", d->host, name);
+         sprintf(buf, "Player from site %s tried to login as %s (already playing) !", d->host,
+                 name);
          monitor_chan(buf, MONITOR_CONNECT);
-         /* Not sure if we want to do this..players can cheat and try to log back in as themselves to end a fight Zen
-                dold->character->position = POS_STANDING;
-                   if ( dold->character->fighting != NULL )
-                     dold->character->fighting = NULL;
+         /* Not sure if we want to do this..players can cheat and try to log back in as themselves
+            to end a fight Zen dold->character->position = POS_STANDING; if (
+            dold->character->fighting != NULL ) dold->character->fighting = NULL;
          */
          d->connected = CON_RECONNECTING;
          do_quit(dold->character, "");
-         write_to_buffer(d, "Already playing. If you were not fighting or dead, you were disconnected\n\rName: ", 0);
+         write_to_buffer(
+             d,
+             "Already playing. If you were not fighting or dead, you were disconnected\n\rName: ",
+             0);
          d->connected = CON_GET_NAME;
          if (d->character != NULL)
          {
@@ -3626,7 +3676,8 @@ bool check_playing(DESCRIPTOR_DATA *d, char *name)
 
 void stop_idling(CHAR_DATA *ch)
 {
-   if (ch == NULL || ch->desc == NULL || ch->desc->connected != CON_PLAYING || ch->was_in_room == NULL || ch->in_room != get_room_index(ROOM_VNUM_LIMBO))
+   if (ch == NULL || ch->desc == NULL || ch->desc->connected != CON_PLAYING ||
+       ch->was_in_room == NULL || ch->in_room != get_room_index(ROOM_VNUM_LIMBO))
       return;
 
    ch->timer = 0;
@@ -3748,9 +3799,12 @@ void show_string(struct descriptor_data *d, char *input)
    for (scan = buffer;; scan++, d->showstr_point++)
    {
       space--;
-      if (((*scan = *d->showstr_point) == '\n' || *scan == '\r') && (toggle = -toggle) < 0 && space > 0)
+      if (((*scan = *d->showstr_point) == '\n' || *scan == '\r') && (toggle = -toggle) < 0 &&
+          space > 0)
          lines++;
-      else if (!*scan || (d->character && !IS_NPC(d->character) && lines >= d->character->pcdata->pagelen) || space <= 0)
+      else if (!*scan ||
+               (d->character && !IS_NPC(d->character) && lines >= d->character->pcdata->pagelen) ||
+               space <= 0)
       {
 
          *scan = '\0';
@@ -3828,7 +3882,8 @@ void act(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, 
 
    for (; to != NULL; to = to->next_in_room)
    {
-      if ((to->desc == NULL && (IS_NPC(to) && !(to->pIndexData->progtypes & ACT_PROG))) || !IS_AWAKE(to))
+      if ((to->desc == NULL && (IS_NPC(to) && !(to->pIndexData->progtypes & ACT_PROG))) ||
+          !IS_AWAKE(to))
          continue;
 
       if (type == TO_CHAR && to != ch)
@@ -3840,10 +3895,9 @@ void act(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, 
       if (type == TO_NOTVICT && (to == ch || to == vch))
          continue;
 
-      if (type == TO_NOTVICT
-          && vch != NULL
-          && (ch->fighting == vch || vch->fighting == ch)
-          && shortfight_should_suppress_watched_autoattack(IS_NPC(to), IS_SET(to->config, CONFIG_SHORT_FIGHT), to->fighting != NULL))
+      if (type == TO_NOTVICT && vch != NULL && (ch->fighting == vch || vch->fighting == ch) &&
+          shortfight_should_suppress_watched_autoattack(
+              IS_NPC(to), IS_SET(to->config, CONFIG_SHORT_FIGHT), to->fighting != NULL))
          continue;
 
       point = buf;
@@ -3900,7 +3954,8 @@ void act(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, 
                {
                   if (IS_SET(ch->act, PLR_WIZINVIS) && get_trust(to) < ch->invis)
                      can_see_message = FALSE;
-                  if ((IS_AFFECTED(ch, AFF_SNEAK) || item_has_apply(ch, ITEM_APPLY_SNEAK)) && ((get_psuedo_level(ch) - 20 + number_range(1, 30)) > get_psuedo_level(to)))
+                  if ((IS_AFFECTED(ch, AFF_SNEAK) || item_has_apply(ch, ITEM_APPLY_SNEAK)) &&
+                      ((get_psuedo_level(ch) - 20 + number_range(1, 30)) > get_psuedo_level(to)))
                      can_see_message = FALSE;
                }
                break;
@@ -4075,7 +4130,8 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
       do_auction(ch, "stop");
 
    sprintf(buf,
-           "\n\r**** HOTreboot by An Immortal - Please remain ONLINE ****\n\r*********** We will be back in 30 seconds!! *************%s\n\n\r",
+           "\n\r**** HOTreboot by An Immortal - Please remain ONLINE ****\n\r*********** We will "
+           "be back in 30 seconds!! *************%s\n\n\r",
            "");
 
    /*
@@ -4088,7 +4144,8 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
 
       if (!d->character || d->connected < 0) /* drop those logging on */
       {
-         write_to_descriptor(d->descriptor, "\n\r@Sorry, ACK! MUD rebooting. Come back in a few minutes.\n\r", 0);
+         write_to_descriptor(d->descriptor,
+                             "\n\r@Sorry, ACK! MUD rebooting. Come back in a few minutes.\n\r", 0);
          close_socket(d); /* throw'em out */
       }
       else
@@ -4098,7 +4155,8 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
          {
 
             write_to_descriptor(d->descriptor,
-                                "Since you are level one, and level one characters do not save....you have been advanced!\n\r",
+                                "Since you are level one, and level one characters do not "
+                                "save....you have been advanced!\n\r",
                                 0);
             och->level = 2;
             och->class_level[och->class] = 2;
@@ -4213,8 +4271,10 @@ void copyover_recover()
 
       if (!fOld) /* Player file not found?! */
       {
-         write_to_descriptor(desc, "\n\rSomehow, your character was lost in the HOTreboot. Sorry, you must relog in.\n\r",
-                             0);
+         write_to_descriptor(
+             desc,
+             "\n\rSomehow, your character was lost in the HOTreboot. Sorry, you must relog in.\n\r",
+             0);
          close_socket(d);
       }
       else /* ok! */
@@ -4267,7 +4327,8 @@ void copyover_recover()
                this_char->sex = this_char->login_sex;
             this_char->affected_by = 0;
 
-            for (wear_object = this_char->first_carry; wear_object != NULL; wear_object = wear_object->next_in_carry_list)
+            for (wear_object = this_char->first_carry; wear_object != NULL;
+                 wear_object = wear_object->next_in_carry_list)
             {
                if (wear_object->wear_loc > WEAR_NONE)
                   equip_char(this_char, wear_object, wear_object->wear_loc);

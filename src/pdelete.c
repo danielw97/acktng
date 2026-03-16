@@ -88,8 +88,8 @@ void do_sdelete(CHAR_DATA *ch, char *argument)
       send_to_char("Syntax: pdelete <password>.\n\r", ch);
       return;
    }
-   if (pdelete_has_password(ch->pcdata->pwd)
-       && (strcmp(crypt(arg1, ch->pcdata->pwd), ch->pcdata->pwd)))
+   if (pdelete_has_password(ch->pcdata->pwd) &&
+       (strcmp(crypt(arg1, ch->pcdata->pwd), ch->pcdata->pwd)))
    {
       WAIT_STATE(ch, 40);
       send_to_char("Wrong password.  Wait 10 seconds.\n\r", ch);

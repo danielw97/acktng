@@ -134,7 +134,8 @@ static long dump(void)
          if (!str_cmp(p->buf, "<%hhp %mm %vmv> ") || !str_cmp(p->buf, "$"))
             continue;
 
-         fprintf(dumpf, "usage %2d/%2d, caller %s, string %s\n", p->ref, p->usage, p->caller, p->buf);
+         fprintf(dumpf, "usage %2d/%2d, caller %s, string %s\n", p->ref, p->usage, p->caller,
+                 p->buf);
          count += abs(p->usage - p->ref);
       }
       dump_ptr[0] = dump_ptr[1];

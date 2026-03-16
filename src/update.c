@@ -38,9 +38,20 @@ extern OBJ_DATA *quest_object;
 
 extern COUNCIL_DATA super_councils[MAX_SUPER];
 
-bool should_abort_for_checkpoint_timeout(int usage_now, int checkpoint, int threshold, bool disable_abort)
+bool should_abort_for_checkpoint_timeout(int usage_now, int checkpoint, int threshold,
+                                         bool disable_abort)
 {
    return !disable_abort && (usage_now - checkpoint > threshold);
+}
+
+bool hotreboot_warning_30s_due(int countdown)
+{
+   return countdown == 30 * PULSE_PER_SECOND;
+}
+
+bool hotreboot_execute_due(int countdown)
+{
+   return countdown == 0;
 }
 
 #ifndef UNIT_TEST_UPDATE
@@ -128,7 +139,8 @@ void alarm_handler(int signo)
    /*
     * Has there gone abort_threshold CPU seconds without alarm_update?
     */
-   if (should_abort_for_checkpoint_timeout(usage_now, last_checkpoint, abort_threshold, disable_timer_abort))
+   if (should_abort_for_checkpoint_timeout(usage_now, last_checkpoint, abort_threshold,
+                                           disable_timer_abort))
    {
       /*
        * For the log file
@@ -221,7 +233,8 @@ void advance_level(CHAR_DATA *ch, int class, bool show)
    if (!IS_NPC(ch))
       REMOVE_BIT(ch->act, PLR_BOUGHT_PET);
 
-   sprintf(buf, "You gain: %d Hit Points, %d Mana, and %d Movement.\n\r", add_hp, add_mana, add_move);
+   sprintf(buf, "You gain: %d Hit Points, %d Mana, and %d Movement.\n\r", add_hp, add_mana,
+           add_move);
 
    if (show)
       send_to_char(buf, ch);
@@ -266,7 +279,8 @@ void advance_level_remort(CHAR_DATA *ch, int class, bool show)
    if (!IS_NPC(ch))
       REMOVE_BIT(ch->act, PLR_BOUGHT_PET);
 
-   sprintf(buf, "You gain: %d Hit Points, %d Mana, and %d Movement.\n\r", add_hp, add_mana, add_move);
+   sprintf(buf, "You gain: %d Hit Points, %d Mana, and %d Movement.\n\r", add_hp, add_mana,
+           add_move);
 
    if (show)
       send_to_char(buf, ch);
@@ -313,14 +327,14 @@ void advance_level_adept(CHAR_DATA *ch, int class, bool show)
    if (!IS_NPC(ch))
       REMOVE_BIT(ch->act, PLR_BOUGHT_PET);
 
-   sprintf(buf, "You gain: %d Hit Points, %d Mana, and %d Movement.\n\r", add_hp, add_mana, add_move);
+   sprintf(buf, "You gain: %d Hit Points, %d Mana, and %d Movement.\n\r", add_hp, add_mana,
+           add_move);
 
    if (show)
       send_to_char(buf, ch);
 
    return;
 }
-
 
 void gain_exp(CHAR_DATA *ch, long_int gain)
 {
@@ -342,7 +356,6 @@ void round_update()
 
       round_char_update(ch);
    }
-
 }
 
 void round_char_update(CHAR_DATA *ch)
@@ -358,7 +371,7 @@ void round_char_update(CHAR_DATA *ch)
 
    if (!is_fighting(ch) && ch->chi > 0)
    {
-      send_to_char("Your chi has dissipated as you are not fighting.\n\r",ch);
+      send_to_char("Your chi has dissipated as you are not fighting.\n\r", ch);
       ch->chi = 0;
    }
 
@@ -381,28 +394,31 @@ void update_cooldown(CHAR_DATA *ch)
          if (ch->cooldown[i] == 0)
          {
             sprintf(buf, "@@y%s's@@N cooldown has elapsed!\n\r", skill_table[i].name);
-            send_to_char(buf,ch);
+            send_to_char(buf, ch);
          }
       }
    }
-
 }
 
 void update_heat_armor(CHAR_DATA *ch)
 {
    /* Heated items */
-   if (ch->hit > 0 && ch->in_room != NULL && get_room_index(ch->in_room->vnum) != NULL && item_has_apply(ch, ITEM_APPLY_HEATED))
+   if (ch->hit > 0 && ch->in_room != NULL && get_room_index(ch->in_room->vnum) != NULL &&
+       item_has_apply(ch, ITEM_APPLY_HEATED))
    {
       OBJ_DATA *heated_item;
       int heat_damage = 0;
 
-      for (heated_item = ch->first_carry; heated_item != NULL; heated_item = heated_item->next_in_carry_list)
+      for (heated_item = ch->first_carry; heated_item != NULL;
+           heated_item = heated_item->next_in_carry_list)
       {
-         if (IS_SET(heated_item->item_apply, ITEM_APPLY_HEATED) && heated_item->wear_loc != WEAR_NONE)
+         if (IS_SET(heated_item->item_apply, ITEM_APPLY_HEATED) &&
+             heated_item->wear_loc != WEAR_NONE)
          {
             heat_damage = heated_item->level;
             obj_damage(heated_item, ch, heat_damage);
-            act("@@W   $p@@N you are wearing are @@eBURNING@@N you!!!", ch, heated_item, NULL, TO_CHAR);
+            act("@@W   $p@@N you are wearing are @@eBURNING@@N you!!!", ch, heated_item, NULL,
+                TO_CHAR);
             act("@@W   $p worn by $n is @@eBURNING@@N!!!", ch, heated_item, NULL, TO_ROOM);
             if (IS_NPC(ch))
                do_remove(ch, heated_item->name);
@@ -442,7 +458,6 @@ void update_buff_duration(CHAR_DATA *ch, int duration_type)
          }
       }
    }
-
 }
 
 void round_update_hot(CHAR_DATA *ch)
@@ -451,7 +466,8 @@ void round_update_hot(CHAR_DATA *ch)
 
    for (paf = ch->first_affect; paf != NULL; paf = paf->next)
    {
-      if (paf->location == APPLY_HOT && paf->caster != NULL && ch->hit < get_max_hp(ch) && is_same_room(ch, paf->caster))
+      if (paf->location == APPLY_HOT && paf->caster != NULL && ch->hit < get_max_hp(ch) &&
+          is_same_room(ch, paf->caster))
       {
          heal_character(paf->caster, ch, paf->modifier, paf->type, TRUE);
       }
@@ -464,7 +480,8 @@ void round_update_dot(CHAR_DATA *ch)
 
    for (paf = ch->first_affect; paf != NULL; paf = paf->next)
    {
-      if (paf->location == APPLY_DOT && paf->caster != NULL && ch->hit > 0 && is_same_room(ch, paf->caster))
+      if (paf->location == APPLY_DOT && paf->caster != NULL && ch->hit > 0 &&
+          is_same_room(ch, paf->caster))
       {
          do_damage(paf->caster, ch, paf->modifier, paf->type, paf->element, FALSE);
       }
@@ -536,14 +553,18 @@ int hit_gain(CHAR_DATA *ch)
       {
          if ((ch->in_room->sector_type == SECT_FIELD) || (ch->in_room->sector_type == SECT_FOREST))
             gain = gain * 1.3;
-         else if ((ch->in_room->sector_type == SECT_CITY) || (ch->in_room->sector_type == SECT_INSIDE))
+         else if ((ch->in_room->sector_type == SECT_CITY) ||
+                  (ch->in_room->sector_type == SECT_INSIDE))
             gain = gain * .8;
       }
-      else if ((IS_SET(race_table[ch->race].race_flags, RACE_MOD_DARKNESS)) && (ch->in_room != NULL))
+      else if ((IS_SET(race_table[ch->race].race_flags, RACE_MOD_DARKNESS)) &&
+               (ch->in_room != NULL))
       {
-         if ((ch->in_room->sector_type == SECT_FIELD) || (ch->in_room->sector_type == SECT_HILLS) || (ch->in_room->sector_type == SECT_AIR) || (ch->in_room->sector_type == SECT_DESERT))
+         if ((ch->in_room->sector_type == SECT_FIELD) || (ch->in_room->sector_type == SECT_HILLS) ||
+             (ch->in_room->sector_type == SECT_AIR) || (ch->in_room->sector_type == SECT_DESERT))
             gain = gain * .8;
-         else if ((ch->in_room->sector_type == SECT_CITY) || (ch->in_room->sector_type == SECT_INSIDE))
+         else if ((ch->in_room->sector_type == SECT_CITY) ||
+                  (ch->in_room->sector_type == SECT_INSIDE))
             gain = gain * 1.3;
       }
    }
@@ -562,40 +583,40 @@ int mana_gain(CHAR_DATA *ch)
    gain = (5 + (get_psuedo_level(ch) / 20));
 
    switch (ch->position)
-      {
-      case POS_SLEEPING:
-         gain += get_curr_int(ch);
-         break;
-      case POS_RESTING:
-         gain += get_curr_int(ch) / 2;
-         break;
-      }
-      if (!is_fighting(ch))
-         gain *= 5;
+   {
+   case POS_SLEEPING:
+      gain += get_curr_int(ch);
+      break;
+   case POS_RESTING:
+      gain += get_curr_int(ch) / 2;
+      break;
+   }
+   if (!is_fighting(ch))
+      gain *= 5;
+   else
+      gain /= 2;
+
+   if (IS_SET(ch->in_room->room_flags, ROOM_REGEN))
+      gain *= 2;
+
+   if (!IS_NPC(ch) && (gain > 0))
+   {
+      if (IS_SET(race_table[ch->race].race_flags, RACE_MOD_FAST_HEAL))
+         gain = gain * 2;
+      else if (IS_SET(race_table[ch->race].race_flags, RACE_MOD_SLOW_HEAL))
+         gain = gain * .75;
+   }
+
+   if (IS_SET(ch->in_room->affected_by, ROOM_BV_MANA_REGEN))
+   {
+      if (gain < 0)
+         gain *= -2;
       else
-         gain /= 2;
-
-      if (IS_SET(ch->in_room->room_flags, ROOM_REGEN))
          gain *= 2;
-
-      if (!IS_NPC(ch) && (gain > 0))
-      {
-         if (IS_SET(race_table[ch->race].race_flags, RACE_MOD_FAST_HEAL))
-            gain = gain * 2;
-         else if (IS_SET(race_table[ch->race].race_flags, RACE_MOD_SLOW_HEAL))
-            gain = gain * .75;
-      }
-
-      if (IS_SET(ch->in_room->affected_by, ROOM_BV_MANA_REGEN))
-      {
-         if (gain < 0)
-            gain *= -2;
-         else
-            gain *= 2;
-      }
-      if (IS_SET(ch->in_room->affected_by, ROOM_BV_MANA_STEAL))
-         if (gain > 0)
-            gain *= -1;
+   }
+   if (IS_SET(ch->in_room->affected_by, ROOM_BV_MANA_STEAL))
+      if (gain > 0)
+         gain *= -1;
 
    if (IS_AFFECTED(ch, AFF_POISON))
       gain /= 4;
@@ -615,14 +636,18 @@ int mana_gain(CHAR_DATA *ch)
       {
          if ((ch->in_room->sector_type == SECT_FIELD) || (ch->in_room->sector_type == SECT_FOREST))
             gain = gain * 1.3;
-         else if ((ch->in_room->sector_type == SECT_CITY) || (ch->in_room->sector_type == SECT_INSIDE))
+         else if ((ch->in_room->sector_type == SECT_CITY) ||
+                  (ch->in_room->sector_type == SECT_INSIDE))
             gain = gain * .8;
       }
-      else if ((IS_SET(race_table[ch->race].race_flags, RACE_MOD_DARKNESS)) && (ch->in_room != NULL))
+      else if ((IS_SET(race_table[ch->race].race_flags, RACE_MOD_DARKNESS)) &&
+               (ch->in_room != NULL))
       {
-         if ((ch->in_room->sector_type == SECT_FIELD) || (ch->in_room->sector_type == SECT_HILLS) || (ch->in_room->sector_type == SECT_AIR) || (ch->in_room->sector_type == SECT_DESERT))
+         if ((ch->in_room->sector_type == SECT_FIELD) || (ch->in_room->sector_type == SECT_HILLS) ||
+             (ch->in_room->sector_type == SECT_AIR) || (ch->in_room->sector_type == SECT_DESERT))
             gain = gain * .8;
-         else if ((ch->in_room->sector_type == SECT_CITY) || (ch->in_room->sector_type == SECT_INSIDE))
+         else if ((ch->in_room->sector_type == SECT_CITY) ||
+                  (ch->in_room->sector_type == SECT_INSIDE))
             gain = gain * 1.3;
       }
    }
@@ -665,7 +690,6 @@ int move_gain(CHAR_DATA *ch)
 
       if (IS_SET(ch->in_room->room_flags, ROOM_REGEN))
          gain *= 2;
-
    }
 
    if (IS_AFFECTED(ch, AFF_POISON))
@@ -686,7 +710,6 @@ int move_gain(CHAR_DATA *ch)
 }
 
 #ifndef UNIT_TEST_UPDATE
-
 
 void gain_condition(CHAR_DATA *ch, int iCond, int value)
 {
@@ -800,7 +823,8 @@ void mobile_update(void)
       if (ch->searching != NULL)
       {
          if ((quitter = get_char_world(ch, ch->searching)) != NULL)
-            set_hunt(ch, NULL, quitter, NULL, HUNT_WORLD | HUNT_OPENDOOR | HUNT_PICKDOOR | HUNT_UNLOCKDOOR | HUNT_INFORM,
+            set_hunt(ch, NULL, quitter, NULL,
+                     HUNT_WORLD | HUNT_OPENDOOR | HUNT_PICKDOOR | HUNT_UNLOCKDOOR | HUNT_INFORM,
                      HUNT_CR | HUNT_MERC);
       }
 
@@ -869,7 +893,8 @@ void mobile_update(void)
       /*
        * Scavenge
        */
-      if (IS_SET(ch->act, ACT_SCAVENGER) && ch->in_room->first_content != NULL && number_bits(2) == 0)
+      if (IS_SET(ch->act, ACT_SCAVENGER) && ch->in_room->first_content != NULL &&
+          number_bits(2) == 0)
       {
          OBJ_DATA *obj;
          OBJ_DATA *obj_best;
@@ -897,15 +922,11 @@ void mobile_update(void)
       /*
        * Wander
        */
-      if (!IS_SET(ch->act, ACT_INVASION)
-          && !IS_SET(ch->act, ACT_SENTINEL)
-          && ch->leader == NULL
-          && (door = number_bits(5)) <= 5
-          && (pexit = ch->in_room->exit[door]) != NULL
-          && pexit->to_room != NULL
-          && !IS_SET(pexit->exit_info, EX_CLOSED)
-          && !IS_SET(pexit->to_room->room_flags, ROOM_NO_MOB)
-          && (!IS_SET(ch->act, ACT_STAY_AREA) || pexit->to_room->area == ch->in_room->area))
+      if (!IS_SET(ch->act, ACT_INVASION) && !IS_SET(ch->act, ACT_SENTINEL) && ch->leader == NULL &&
+          (door = number_bits(5)) <= 5 && (pexit = ch->in_room->exit[door]) != NULL &&
+          pexit->to_room != NULL && !IS_SET(pexit->exit_info, EX_CLOSED) &&
+          !IS_SET(pexit->to_room->room_flags, ROOM_NO_MOB) &&
+          (!IS_SET(ch->act, ACT_STAY_AREA) || pexit->to_room->area == ch->in_room->area))
       {
          move_char(ch, door);
          /*
@@ -921,13 +942,10 @@ void mobile_update(void)
       /*
        * Flee
        */
-      if (!IS_SET(ch->act, ACT_INVASION)
-          && ch->hit < (get_max_hp(ch) / 2)
-          && (door = number_bits(3)) <= 5
-          && (pexit = ch->in_room->exit[door]) != NULL
-          && pexit->to_room != NULL
-          && !IS_SET(pexit->exit_info, EX_CLOSED)
-          && !IS_SET(pexit->to_room->room_flags, ROOM_NO_MOB))
+      if (!IS_SET(ch->act, ACT_INVASION) && ch->hit < (get_max_hp(ch) / 2) &&
+          (door = number_bits(3)) <= 5 && (pexit = ch->in_room->exit[door]) != NULL &&
+          pexit->to_room != NULL && !IS_SET(pexit->exit_info, EX_CLOSED) &&
+          !IS_SET(pexit->to_room->room_flags, ROOM_NO_MOB))
       {
          CHAR_DATA *rch;
          bool found;
@@ -961,7 +979,8 @@ void clean_donate_rooms(void)
     */
    if ((room = get_room_index(ROOM_VNUM_MISC_DONATE)) != NULL)
    {
-      for (room_count = 0, object = room->first_content; object; room_count++, object = object->next_in_room)
+      for (room_count = 0, object = room->first_content; object;
+           room_count++, object = object->next_in_room)
          ;
       if (room_count > 150)
       {
@@ -984,7 +1003,8 @@ void clean_donate_rooms(void)
    }
    if ((room = get_room_index(ROOM_VNUM_WEAPON_DONATE)) != NULL)
    {
-      for (room_count = 0, object = room->first_content; object; room_count++, object = object->next_in_room)
+      for (room_count = 0, object = room->first_content; object;
+           room_count++, object = object->next_in_room)
          ;
       if (room_count > 150)
       {
@@ -1006,7 +1026,8 @@ void clean_donate_rooms(void)
    }
    if ((room = get_room_index(ROOM_VNUM_ARMOR_DONATE)) != NULL)
    {
-      for (room_count = 0, object = room->first_content; object; room_count++, object = object->next_in_room)
+      for (room_count = 0, object = room->first_content; object;
+           room_count++, object = object->next_in_room)
          ;
       if (room_count > 150)
       {
@@ -1036,7 +1057,8 @@ void clean_donate_rooms(void)
          continue;
       if ((room = get_room_index(room_vnum)) != NULL)
       {
-         for (room_count = 0, object = room->first_content; object; room_count++, object = object->next_in_room)
+         for (room_count = 0, object = room->first_content; object;
+              room_count++, object = object->next_in_room)
             ;
          if (room_count > 150)
          {
@@ -1271,7 +1293,8 @@ void weather_update(void)
    {
       for (d = first_desc; d != NULL; d = d->next)
       {
-         if (d->connected == CON_PLAYING && IS_OUTSIDE(d->character) && (d->character->position != POS_WRITING) && IS_AWAKE(d->character))
+         if (d->connected == CON_PLAYING && IS_OUTSIDE(d->character) &&
+             (d->character->position != POS_WRITING) && IS_AWAKE(d->character))
             send_to_char(buf, d->character);
       }
    }
@@ -1306,12 +1329,13 @@ void gain_update(void)
             if (super_councils[council_index].council_time == 1)
             {
                MEMBER_DATA *imember_next;
-               for (imember = super_councils[council_index].first_member; imember != NULL; imember = imember_next)
+               for (imember = super_councils[council_index].first_member; imember != NULL;
+                    imember = imember_next)
                {
                   imember_next = imember->next;
                   send_to_char("The current council is disbanded.\n\r", imember->this_member);
-                  UNLINK(imember, super_councils[council_index].first_member, super_councils[council_index].last_member,
-                         next, prev);
+                  UNLINK(imember, super_councils[council_index].first_member,
+                         super_councils[council_index].last_member, next, prev);
                   imember->this_member = NULL;
                   imember->next = NULL;
                   imember->prev = NULL;
@@ -1324,7 +1348,8 @@ void gain_update(void)
          if (!super_councils[council_index].quorum)
          {
             super_councils[council_index].quorum = FALSE;
-            for (imember = super_councils[council_index].first_member; imember != NULL; imember = imember->next)
+            for (imember = super_councils[council_index].first_member; imember != NULL;
+                 imember = imember->next)
             {
                count++;
             }
@@ -1332,7 +1357,8 @@ void gain_update(void)
             {
                super_councils[council_index].quorum = TRUE;
                super_councils[council_index].council_time = 10;
-               for (imember = super_councils[council_index].first_member; imember != NULL; imember = imember->next)
+               for (imember = super_councils[council_index].first_member; imember != NULL;
+                    imember = imember->next)
                   send_to_char("The Council is in Session!\n\r", imember->this_member);
             }
          }
@@ -1391,11 +1417,11 @@ void char_update(void)
       if (ch->is_free != FALSE)
          continue;
 
-
       /*
        * Find dude with oldest save time.
        */
-      if (!IS_NPC(ch) && (ch->desc == NULL || ch->desc->connected == CON_PLAYING) && ch->level >= 2 && ch->save_time < save_time)
+      if (!IS_NPC(ch) && (ch->desc == NULL || ch->desc->connected == CON_PLAYING) &&
+          ch->level >= 2 && ch->save_time < save_time)
       {
          ch_save = ch;
          save_time = ch->save_time;
@@ -1403,10 +1429,14 @@ void char_update(void)
 
       if ((!IS_NPC(ch)) && (ch->pcdata->has_exp_fix == 0) && (ch->level > 1))
       {
-         send_to_char("@@eWE HAVE CHANGED THE EXP SYSTEM. YOUR EXP HAS BEEN RESET TO 0.@@N\n\r", ch);
-         send_to_char("@@ePLEASE CONACT AN IMMORTAL, AND YOU WILL BE ADVANCED ONE CLASS, UNLESS YOU ARE A NEW CHARACTER.@@N\n\r",
+         send_to_char("@@eWE HAVE CHANGED THE EXP SYSTEM. YOUR EXP HAS BEEN RESET TO 0.@@N\n\r",
                       ch);
-         send_to_char("@@mTHANK YOU!!!!@@N  NOTE: DO NOT ATTEMPT TO ABUSE THIS--WE ARE KEEPING TRACK!\n\r", ch);
+         send_to_char("@@ePLEASE CONACT AN IMMORTAL, AND YOU WILL BE ADVANCED ONE CLASS, UNLESS "
+                      "YOU ARE A NEW CHARACTER.@@N\n\r",
+                      ch);
+         send_to_char(
+             "@@mTHANK YOU!!!!@@N  NOTE: DO NOT ATTEMPT TO ABUSE THIS--WE ARE KEEPING TRACK!\n\r",
+             ch);
          ch->pcdata->has_exp_fix = 1;
          ch->exp = 0;
       }
@@ -1477,7 +1507,6 @@ void char_update(void)
 
          if (ch->timer > 30)
             ch_quit = ch;
-
       }
 
       update_buff_duration(ch, DURATION_HOUR);
@@ -1500,7 +1529,8 @@ void char_update(void)
          }
          else if (ch->extract_timer == 1)
          {
-            if ((ch->master == NULL) || (ch->master->in_room == NULL) || (ch->in_room != ch->master->in_room))
+            if ((ch->master == NULL) || (ch->master->in_room == NULL) ||
+                (ch->in_room != ch->master->in_room))
             {
                if (ch->in_room != NULL)
                {
@@ -1577,7 +1607,6 @@ void char_update(void)
 
    return;
 }
-
 
 /* Check for objfuns.... this is probably performance sensitive too. */
 void objfun_update(void)
@@ -1707,8 +1736,10 @@ void obj_update(void)
          if ((new_index = get_obj_index(obj->value[6])) == NULL)
          {
             sprintf(bug_buf,
-                    "ERROR in expiring item %s(%s %d): item has a replace vnum set (%d), but that is not a valid item.",
-                    obj->name, obj->pIndexData->area->keyword, obj->pIndexData->vnum, obj->value[6]);
+                    "ERROR in expiring item %s(%s %d): item has a replace vnum set (%d), but that "
+                    "is not a valid item.",
+                    obj->name, obj->pIndexData->area->keyword, obj->pIndexData->vnum,
+                    obj->value[6]);
             monitor_chan(bug_buf, MONITOR_OBJ);
             log_f("%s", bug_buf);
          }
@@ -1807,10 +1838,13 @@ void aggr_update(void)
 
          ch_next = ch->next_in_room;
 
-         if (!IS_NPC(ch) || !IS_SET(ch->act, ACT_AGGRESSIVE) || is_fighting(ch) || ch->hunting != NULL || IS_AFFECTED(ch, AFF_CHARM) || !IS_AWAKE(ch) || (IS_SET(ch->act, ACT_WIMPY) && IS_AWAKE(wch)) || !can_see(ch, wch))
+         if (!IS_NPC(ch) || !IS_SET(ch->act, ACT_AGGRESSIVE) || is_fighting(ch) ||
+             ch->hunting != NULL || IS_AFFECTED(ch, AFF_CHARM) || !IS_AWAKE(ch) ||
+             (IS_SET(ch->act, ACT_WIMPY) && IS_AWAKE(wch)) || !can_see(ch, wch))
             continue;
 
-         if ((IS_AFFECTED(wch, AFF_SNEAK) || item_has_apply(wch, ITEM_APPLY_SNEAK)) && (number_percent() < 50 + (2 * (get_psuedo_level(wch) - get_psuedo_level(ch)))))
+         if ((IS_AFFECTED(wch, AFF_SNEAK) || item_has_apply(wch, ITEM_APPLY_SNEAK)) &&
+             (number_percent() < 50 + (2 * (get_psuedo_level(wch) - get_psuedo_level(ch)))))
             continue;
          /*
           * Ok we have a 'wch' player character and a 'ch' npc aggressor.
@@ -1825,7 +1859,8 @@ void aggr_update(void)
          {
             vch_next = vch->next_in_room;
 
-            if (!IS_NPC(vch) && vch->level < LEVEL_IMMORTAL && (!IS_SET(ch->act, ACT_WIMPY) || !IS_AWAKE(vch)) && can_see(ch, vch))
+            if (!IS_NPC(vch) && vch->level < LEVEL_IMMORTAL &&
+                (!IS_SET(ch->act, ACT_WIMPY) || !IS_AWAKE(vch)) && can_see(ch, vch))
             {
                if (number_range(0, count) == 0)
                   victim = vch;
@@ -1848,7 +1883,8 @@ void aggr_update(void)
          act("You growl at $N.  Get $M!!", ch, NULL, victim, TO_CHAR);
 
          wield = get_eq_char(ch, WEAR_HOLD_HAND_L);
-         if (wield != NULL && wield->item_type == ITEM_WEAPON && wield->value[3] == 11 && victim->fighting == NULL)
+         if (wield != NULL && wield->item_type == ITEM_WEAPON && wield->value[3] == 11 &&
+             victim->fighting == NULL)
             do_backstab(ch, victim->name);
          else
             multi_hit(ch, victim, TYPE_UNDEFINED);
@@ -1932,6 +1968,60 @@ extern void build_save_flush(void);
  * Called once per pulse from game loop.
  * Random times to defeat tick-timing clients and players.
  */
+static void hotreboot_update(void)
+{
+   static int pulse_trigger_check = PULSE_PER_SECOND;
+   CHAR_DATA *ch;
+   CHAR_DATA *ch_next;
+
+   /* Check for trigger file once per second */
+   if (--pulse_trigger_check <= 0)
+   {
+      pulse_trigger_check = PULSE_PER_SECOND;
+      if (hotreboot_countdown == 0)
+      {
+         FILE *fp = fopen(HOTREBOOT_FILE, "r");
+         if (fp != NULL)
+         {
+            fclose(fp);
+            unlink(HOTREBOOT_FILE);
+            hotreboot_countdown = 60 * PULSE_PER_SECOND;
+            for (ch = first_char; ch != NULL; ch = ch_next)
+            {
+               ch_next = ch->next;
+               if (!IS_NPC(ch))
+                  send_to_char("\n\r@@e** ACK! MUD will hotreboot in 60 seconds for a code update! "
+                               "**@@N\n\r",
+                               ch);
+            }
+            log_string("Deployment hotreboot: 60-second warning issued.");
+         }
+      }
+   }
+
+   if (hotreboot_countdown > 0)
+   {
+      hotreboot_countdown--;
+      if (hotreboot_warning_30s_due(hotreboot_countdown))
+      {
+         for (ch = first_char; ch != NULL; ch = ch_next)
+         {
+            ch_next = ch->next;
+            if (!IS_NPC(ch))
+               send_to_char(
+                   "\n\r@@e** ACK! MUD will hotreboot in 30 seconds for a code update! **@@N\n\r",
+                   ch);
+         }
+         log_string("Deployment hotreboot: 30-second warning issued.");
+      }
+      else if (hotreboot_execute_due(hotreboot_countdown))
+      {
+         log_string("Deployment hotreboot: executing hotreboot now.");
+         do_hotreboot(NULL, "");
+      }
+   }
+}
+
 void update_handler(void)
 {
    static int pulse_message;
@@ -2027,6 +2117,7 @@ void update_handler(void)
    }
 
    aggr_update();
+   hotreboot_update();
    tail_chain();
    return;
 }
@@ -2152,7 +2243,8 @@ bool check_re_equip(CHAR_DATA *ch)
                 * * and obj2->value[0] is better, then choose it.
                 */
 
-               if (obj2->wear_loc != WEAR_NONE && obj2->item_type == ITEM_ARMOR && can_wear_at(ch, obj, obj2->wear_loc) && obj->value[0] > obj2->value[0])
+               if (obj2->wear_loc != WEAR_NONE && obj2->item_type == ITEM_ARMOR &&
+                   can_wear_at(ch, obj, obj2->wear_loc) && obj->value[0] > obj2->value[0])
                {
                   ident = TRUE; /* identical wear_loc */
                   armor = obj;
@@ -2196,7 +2288,8 @@ bool check_re_equip(CHAR_DATA *ch)
          ident = FALSE;
          for (obj2 = ch->first_carry; obj2 != NULL; obj2 = obj2->next_in_carry_list)
          {
-            if (obj2->wear_loc != WEAR_NONE && can_wear_at(ch, obj, obj2->wear_loc) && obj->value[0] > obj2->value[0])
+            if (obj2->wear_loc != WEAR_NONE && can_wear_at(ch, obj, obj2->wear_loc) &&
+                obj->value[0] > obj2->value[0])
             {
                ident = TRUE;
                armor = obj;
@@ -2314,21 +2407,22 @@ void auction_update(void)
       if (auction_bidder == NULL)
       {
          sprintf(buf,
-                 "@@N%s (level:%d, valued at %d) has been offered for auction.  A @@e10%% fee@@N will be charged, the higher of the reserve price or highest bid.",
+                 "@@N%s (level:%d, valued at %d) has been offered for auction.  A @@e10%% fee@@N "
+                 "will be charged, the higher of the reserve price or highest bid.",
                  auction_item->short_descr, auction_item->level, auction_item->cost);
       }
       else
       {
-         sprintf(buf, "%s has bid %d for %s.", auction_bidder->name,
-                 auction_bid, auction_item->short_descr);
+         sprintf(buf, "%s has bid %d for %s.", auction_bidder->name, auction_bid,
+                 auction_item->short_descr);
       }
       break;
    case 1:
       if (auction_bidder == NULL)
          sprintf(buf, "Last chance to bid for %s.", auction_item->short_descr);
       else
-         sprintf(buf, "Last bid for %s was %d.  Any more offers?",
-                 auction_item->short_descr, auction_bid);
+         sprintf(buf, "Last bid for %s was %d.  Any more offers?", auction_item->short_descr,
+                 auction_bid);
       break;
    case 2:
       if (auction_bidder == NULL)
@@ -2349,7 +2443,8 @@ void auction_update(void)
          }
          else
          {
-            auction("Oh, well..guess they didn't want it anymore, since they LEFT!!  Well, it's mine now! ");
+            auction("Oh, well..guess they didn't want it anymore, since they LEFT!!  Well, it's "
+                    "mine now! ");
             extract_obj(auction_item);
          }
          auction_item = NULL;
@@ -2399,7 +2494,8 @@ void auction_update(void)
          }
          else
          {
-            sprintf(buf, "%s - SOLD!, but the buyer has left us.  Oh Well!!!", auction_item->short_descr);
+            sprintf(buf, "%s - SOLD!, but the buyer has left us.  Oh Well!!!",
+                    auction_item->short_descr);
             extract_obj(auction_item);
          }
          // if( good_seller )

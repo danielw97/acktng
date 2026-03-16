@@ -309,7 +309,8 @@ void do_politics(CHAR_DATA *ch, char *argument)
       {
          if (politics_data.end_current_state[ch->pcdata->clan][x])
          {
-            sprintf(buf, "%s has requested an end to your current state of affairs", clan_table[x].clan_name);
+            sprintf(buf, "%s has requested an end to your current state of affairs",
+                    clan_table[x].clan_name);
             send_to_char(buf, ch);
          }
       }
@@ -345,13 +346,16 @@ void do_negotiate(CHAR_DATA *ch, char *argument)
    }
    if (target_clan == ch->pcdata->clan)
    {
-      send_to_char("Well, that will accomplish a lot..you must be of two minds about the whole thing!\n\r", ch);
+      send_to_char(
+          "Well, that will accomplish a lot..you must be of two minds about the whole thing!\n\r",
+          ch);
       return;
    }
 
    if (politics_data.daily_negotiate_table[ch->pcdata->clan][target_clan])
    {
-      sprintf(buf, "Your clan has already negotiated with %s today.\n\r", clan_table[target_clan].clan_name);
+      sprintf(buf, "Your clan has already negotiated with %s today.\n\r",
+              clan_table[target_clan].clan_name);
       send_to_char(buf, ch);
       return;
    }
@@ -365,8 +369,12 @@ void do_negotiate(CHAR_DATA *ch, char *argument)
          {
             politics_data.diplomacy[ch->pcdata->clan][target_clan] = -425;
             politics_data.diplomacy[target_clan][ch->pcdata->clan] = -425;
-            send_to_char("@@NYou have successfully negotiated an end to this dreaded @@eCLAN WAR@@N. Great Job!!\n\r", ch);
-            sprintf(buf, "@@eCLAN:@@N The war between %s and %s has ended. They may no longer PKILL each other!!\n\r",
+            send_to_char("@@NYou have successfully negotiated an end to this dreaded @@eCLAN "
+                         "WAR@@N. Great Job!!\n\r",
+                         ch);
+            sprintf(buf,
+                    "@@eCLAN:@@N The war between %s and %s has ended. They may no longer PKILL "
+                    "each other!!\n\r",
                     clan_table[ch->pcdata->clan].clan_name, clan_table[target_clan].clan_name);
             info(buf, 1);
 
@@ -378,7 +386,8 @@ void do_negotiate(CHAR_DATA *ch, char *argument)
          else
          {
             sprintf(buf,
-                    "@@NYou are currently at @@RWAR@@N with %s. Both clans must negotiate an end to the war first.\n\r",
+                    "@@NYou are currently at @@RWAR@@N with %s. Both clans must negotiate an end "
+                    "to the war first.\n\r",
                     clan_table[target_clan].clan_name);
             send_to_char(buf, ch);
             return;
@@ -389,7 +398,8 @@ void do_negotiate(CHAR_DATA *ch, char *argument)
          politics_data.diplomacy[ch->pcdata->clan][target_clan] += 25;
          politics_data.diplomacy[target_clan][ch->pcdata->clan] += 25;
 
-         sprintf(buf, "You are requesting a more peaceful state of affairs with %s.", clan_table[target_clan].clan_name);
+         sprintf(buf, "You are requesting a more peaceful state of affairs with %s.",
+                 clan_table[target_clan].clan_name);
          send_to_char(buf, ch);
       }
    }
@@ -399,11 +409,14 @@ void do_negotiate(CHAR_DATA *ch, char *argument)
       if ((politics_data.diplomacy[ch->pcdata->clan][target_clan] - 50) < -450)
 
       {
-         sprintf(buf, "@@NYou have started a @@eWAR@@N with %s! Watch out!.\n\r", clan_table[target_clan].clan_name);
+         sprintf(buf, "@@NYou have started a @@eWAR@@N with %s! Watch out!.\n\r",
+                 clan_table[target_clan].clan_name);
          send_to_char(buf, ch);
 
-         sprintf(buf, "@@eCLAN:@@N A war has started between %s and %s. They may now PKILL each other!!\n\r",
-                 clan_table[ch->pcdata->clan].clan_name, clan_table[target_clan].clan_name);
+         sprintf(
+             buf,
+             "@@eCLAN:@@N A war has started between %s and %s. They may now PKILL each other!!\n\r",
+             clan_table[ch->pcdata->clan].clan_name, clan_table[target_clan].clan_name);
          info(buf, 1);
 
          politics_data.diplomacy[ch->pcdata->clan][target_clan] = -460;
@@ -419,7 +432,8 @@ void do_negotiate(CHAR_DATA *ch, char *argument)
          politics_data.diplomacy[ch->pcdata->clan][target_clan] -= 50;
          politics_data.diplomacy[target_clan][ch->pcdata->clan] -= 50;
 
-         sprintf(buf, "You are requesting a more aggressive state of affairs with %s.", clan_table[target_clan].clan_name);
+         sprintf(buf, "You are requesting a more aggressive state of affairs with %s.",
+                 clan_table[target_clan].clan_name);
          send_to_char(buf, ch);
       }
    }
@@ -437,23 +451,29 @@ void do_negotiate(CHAR_DATA *ch, char *argument)
       {
          politics_data.end_current_state[ch->pcdata->clan][target_clan] = TRUE;
 
-         if (politics_data.end_current_state[ch->pcdata->clan][target_clan] && politics_data.end_current_state[target_clan][ch->pcdata->clan])
+         if (politics_data.end_current_state[ch->pcdata->clan][target_clan] &&
+             politics_data.end_current_state[target_clan][ch->pcdata->clan])
          {
-            send_to_char("Both clans have successfully negotiated and end to the war.  Negotiate peace to seal your treaty!\n\r",
+            send_to_char("Both clans have successfully negotiated and end to the war.  Negotiate "
+                         "peace to seal your treaty!\n\r",
                          ch);
             save_clan_table();
             return;
          }
          else
          {
-            send_to_char(" You have requested an end to this dreaded war, but the other clan has not yet agreed.\n\r", ch);
+            send_to_char(" You have requested an end to this dreaded war, but the other clan has "
+                         "not yet agreed.\n\r",
+                         ch);
             save_clan_table();
             return;
          }
       }
       else
       {
-         send_to_char("You must be either at war or in an alliance with a clan before you can END it.\n\r", ch);
+         send_to_char(
+             "You must be either at war or in an alliance with a clan before you can END it.\n\r",
+             ch);
          return;
       }
    }
@@ -543,7 +563,8 @@ void do_cset(CHAR_DATA *ch, char *argument)
    sprintf(buf, "%s now belongs to clan %s.\n\r", victim->name, clan_table[value].clan_name);
    send_to_char(buf, ch);
 
-   sprintf(buf, "%s has cset %s into clan %s.", ch->name, victim->name, clan_table[value].clan_name);
+   sprintf(buf, "%s has cset %s into clan %s.", ch->name, victim->name,
+           clan_table[value].clan_name);
    monitor_chan(buf, MONITOR_CLAN);
 
    return;
@@ -609,7 +630,8 @@ void do_accept(CHAR_DATA *ch, char *argument)
    act("$N accepts you into $S clan!", victim, NULL, ch, TO_VICT);
    act("You accept $N into your clan!", ch, NULL, victim, TO_VICT);
 
-   sprintf(buf, "%s has accepted %s into clan %s.", ch->name, victim->name, clan_table[ch->pcdata->clan].clan_name);
+   sprintf(buf, "%s has accepted %s into clan %s.", ch->name, victim->name,
+           clan_table[ch->pcdata->clan].clan_name);
    monitor_chan(buf, MONITOR_CLAN);
 
    return;
@@ -639,7 +661,9 @@ void do_cwhere(CHAR_DATA *ch, char *argument)
    found = FALSE;
    for (d = first_desc; d != NULL; d = d->next)
    {
-      if (d->connected == CON_PLAYING && (victim = d->character) != NULL && !IS_NPC(victim) && victim->in_room != NULL && (IS_SET(ch->pcdata->pflags, PFLAG_CLAN_BOSS) || can_see(ch, victim)))
+      if (d->connected == CON_PLAYING && (victim = d->character) != NULL && !IS_NPC(victim) &&
+          victim->in_room != NULL &&
+          (IS_SET(ch->pcdata->pflags, PFLAG_CLAN_BOSS) || can_see(ch, victim)))
       {
          if (victim->pcdata->clan != ch->pcdata->clan)
             continue;
@@ -780,10 +804,12 @@ void do_banish(CHAR_DATA *ch, char *argument)
    if (IS_SET(victim->pcdata->pflags, PFLAG_CLAN_BOSS))
       REMOVE_BIT(victim->pcdata->pflags, PFLAG_CLAN_BOSS);
 
-   sprintf(buf, "%s has banished %s from clan %s.", ch->name, victim->name, clan_table[ch->pcdata->clan].clan_name);
+   sprintf(buf, "%s has banished %s from clan %s.", ch->name, victim->name,
+           clan_table[ch->pcdata->clan].clan_name);
    monitor_chan(buf, MONITOR_CLAN);
 
-   sprintf(buf, "%s banishes you from clan %s!\n\r", ch->name, clan_table[ch->pcdata->clan].clan_name);
+   sprintf(buf, "%s banishes you from clan %s!\n\r", ch->name,
+           clan_table[ch->pcdata->clan].clan_name);
    send_to_char(buf, victim);
    act("$N has been banished.", ch, NULL, victim, TO_CHAR);
    return;
@@ -817,7 +843,8 @@ void do_make(CHAR_DATA *ch, char *argument)
 
       for (cnt = 0; cnt < MAX_CLAN_EQ; cnt++)
       {
-         if (clan_table[ch->pcdata->clan].eq[cnt] != -1 && ((pObj = get_obj_index(clan_table[ch->pcdata->clan].eq[cnt])) != NULL))
+         if (clan_table[ch->pcdata->clan].eq[cnt] != -1 &&
+             ((pObj = get_obj_index(clan_table[ch->pcdata->clan].eq[cnt])) != NULL))
          {
             sprintf(buf, "[%2d] : %s.\n\r", cnt, pObj->short_descr);
             send_to_char(buf, ch);
@@ -929,9 +956,11 @@ void do_council(CHAR_DATA *ch, char *argument)
    {
       sprintf(buf, "%s", "");
       sprintf(buf2, "%s", "");
-      sprintf(buf, "Members of the Council of %s\n\r\n\r", super_councils[this_council].council_name);
+      sprintf(buf, "Members of the Council of %s\n\r\n\r",
+              super_councils[this_council].council_name);
 
-      for (imember = super_councils[this_council].first_member; imember != NULL; imember = imember->next)
+      for (imember = super_councils[this_council].first_member; imember != NULL;
+           imember = imember->next)
       {
          sprintf(buf2, "%s\n\r", imember->this_member->name);
          safe_strcat(MAX_STRING_LENGTH, buf, buf2);
@@ -943,7 +972,8 @@ void do_council(CHAR_DATA *ch, char *argument)
 
    if (!str_prefix(arg1, "join"))
    {
-      for (imember = super_councils[this_council].first_member; imember != NULL; imember = imember->next)
+      for (imember = super_councils[this_council].first_member; imember != NULL;
+           imember = imember->next)
       {
          if (imember->this_member == ch)
          {
@@ -952,8 +982,10 @@ void do_council(CHAR_DATA *ch, char *argument)
          }
       }
 
-      LINK(member, super_councils[this_council].first_member, super_councils[this_council].last_member, next, prev);
-      sprintf(buf, "You have joined the Current Council of %s\n\r", super_councils[this_council].council_name);
+      LINK(member, super_councils[this_council].first_member,
+           super_councils[this_council].last_member, next, prev);
+      sprintf(buf, "You have joined the Current Council of %s\n\r",
+              super_councils[this_council].council_name);
       send_to_char(buf, ch);
       super_councils[this_council].council_time = 10;
       do_council(ch, "");
@@ -964,7 +996,8 @@ void do_council(CHAR_DATA *ch, char *argument)
    {
       bool in_council = FALSE;
 
-      for (imember = super_councils[this_council].first_member; imember != NULL; imember = imember->next)
+      for (imember = super_councils[this_council].first_member; imember != NULL;
+           imember = imember->next)
       {
          if (imember->this_member == ch)
          {
@@ -975,7 +1008,8 @@ void do_council(CHAR_DATA *ch, char *argument)
 
       if (in_council)
       {
-         UNLINK(imember, super_councils[this_council].first_member, super_councils[this_council].last_member, next, prev);
+         UNLINK(imember, super_councils[this_council].first_member,
+                super_councils[this_council].last_member, next, prev);
          imember->this_member = NULL;
          imember->next = NULL;
          imember->prev = NULL;
@@ -1009,7 +1043,8 @@ void do_council(CHAR_DATA *ch, char *argument)
                sprintf(buf, "%s is now a member of the Council of %s!\n\r", victim->name,
                        super_councils[this_council].council_name);
                send_to_char(buf, ch);
-               sprintf(buf, "You are now a member of the Council of %s!\n\r", super_councils[this_council].council_name);
+               sprintf(buf, "You are now a member of the Council of %s!\n\r",
+                       super_councils[this_council].council_name);
                SET_BIT(victim->pcdata->pflags, PFLAG_SUPER_COUNCIL);
             }
          }
@@ -1040,8 +1075,8 @@ void do_council(CHAR_DATA *ch, char *argument)
             }
             else
             {
-               sprintf(buf, "%s has been outcast by the %s.\n\r",
-                       victim->name, super_councils[this_council].council_name);
+               sprintf(buf, "%s has been outcast by the %s.\n\r", victim->name,
+                       super_councils[this_council].council_name);
                send_to_char(buf, ch);
                sprintf(buf, "You have been outcast by the %s.\n\r",
                        super_councils[this_council].council_name);

@@ -10,598 +10,603 @@ extern int top_reset;
 extern char str_empty[1];
 extern MOB_INDEX_DATA *mob_index_hash[MAX_KEY_HASH];
 
-
-
 int keep_chest_max_items(void)
 {
-    return 50;
+   return 50;
 }
 
 static int keep_storage_tier(int max_items)
 {
-    int base = keep_chest_max_items();
+   int base = keep_chest_max_items();
 
-    if (max_items <= base)
-        return 0;
+   if (max_items <= base)
+      return 0;
 
-    return (max_items - base + 4) / 5;
+   return (max_items - base + 4) / 5;
 }
 
 static int keep_storage_upgrade_cost(int current_max_items)
 {
-    return (keep_storage_tier(current_max_items) + 1) * 50;
+   return (keep_storage_tier(current_max_items) + 1) * 50;
 }
 
 static int keep_storage_next_max_items(int current_max_items)
 {
-    int base = keep_chest_max_items();
+   int base = keep_chest_max_items();
 
-    if (current_max_items < base)
-        return base + 5;
+   if (current_max_items < base)
+      return base + 5;
 
-    return current_max_items + 5;
+   return current_max_items + 5;
 }
-
 
 #ifdef UNIT_TEST_KEEP
 int keep_storage_tier_for_test(int max_items)
 {
-    return keep_storage_tier(max_items);
+   return keep_storage_tier(max_items);
 }
 
 int keep_storage_upgrade_cost_for_test(int current_max_items)
 {
-    return keep_storage_upgrade_cost(current_max_items);
+   return keep_storage_upgrade_cost(current_max_items);
 }
 
 int keep_storage_next_max_items_for_test(int current_max_items)
 {
-    return keep_storage_next_max_items(current_max_items);
+   return keep_storage_next_max_items(current_max_items);
 }
 #endif
 
 void keep_format_chest_short_descr(const char *owner_name, char *dest, size_t dest_size)
 {
-    const char *safe_owner = (owner_name != NULL && owner_name[0] != '\0') ? owner_name : "Unknown";
+   const char *safe_owner = (owner_name != NULL && owner_name[0] != '\0') ? owner_name : "Unknown";
 
-    if (dest == NULL || dest_size == 0)
-        return;
+   if (dest == NULL || dest_size == 0)
+      return;
 
-    snprintf(dest, dest_size, "%s's Keep Chest", safe_owner);
+   snprintf(dest, dest_size, "%s's Keep Chest", safe_owner);
 }
 
 void keep_format_room_name(const char *owner_name, char *dest, size_t dest_size)
 {
-    const char *safe_owner = (owner_name != NULL && owner_name[0] != '\0') ? owner_name : "Unknown";
+   const char *safe_owner = (owner_name != NULL && owner_name[0] != '\0') ? owner_name : "Unknown";
 
-    if (dest == NULL || dest_size == 0)
-        return;
+   if (dest == NULL || dest_size == 0)
+      return;
 
-    snprintf(dest, dest_size, "%s's Keep", safe_owner);
+   snprintf(dest, dest_size, "%s's Keep", safe_owner);
 }
 
 void keep_format_room_description(const char *owner_name, char *dest, size_t dest_size)
 {
-    const char *safe_owner = (owner_name != NULL && owner_name[0] != '\0') ? owner_name : "Unknown";
+   const char *safe_owner = (owner_name != NULL && owner_name[0] != '\0') ? owner_name : "Unknown";
 
-    if (dest == NULL || dest_size == 0)
-        return;
+   if (dest == NULL || dest_size == 0)
+      return;
 
-    snprintf(dest, dest_size, "Keep of %s", safe_owner);
+   snprintf(dest, dest_size, "Keep of %s", safe_owner);
 }
 
 int keep_is_customization_command(const char *arg)
 {
-    return (arg != NULL && (!str_cmp(arg, "title") || !str_cmp(arg, "desc")));
+   return (arg != NULL && (!str_cmp(arg, "title") || !str_cmp(arg, "desc")));
 }
 
 int keep_is_upgrade_command(const char *arg)
 {
-    return (arg != NULL && (!str_cmp(arg, "regen") || !str_cmp(arg, "inside") || !str_cmp(arg, "storage")));
+   return (arg != NULL &&
+           (!str_cmp(arg, "regen") || !str_cmp(arg, "inside") || !str_cmp(arg, "storage")));
 }
 
 static OBJ_DATA *keep_find_chest_in_room(const ROOM_INDEX_DATA *room)
 {
-    OBJ_DATA *obj;
+   OBJ_DATA *obj;
 
-    if (room == NULL)
-        return NULL;
+   if (room == NULL)
+      return NULL;
 
-    for (obj = room->first_content; obj != NULL; obj = obj->next_content)
-    {
-        if (obj->item_type == ITEM_CONTAINER && IS_SET(obj->value[1], CONT_KEEP_CHEST))
-            return obj;
-    }
+   for (obj = room->first_content; obj != NULL; obj = obj->next_content)
+   {
+      if (obj->item_type == ITEM_CONTAINER && IS_SET(obj->value[1], CONT_KEEP_CHEST))
+         return obj;
+   }
 
-    return NULL;
+   return NULL;
 }
 
 int keep_player_can_customize(const CHAR_DATA *ch)
 {
-    if (ch == NULL || ch->pcdata == NULL || ch->in_room == NULL)
-        return 0;
+   if (ch == NULL || ch->pcdata == NULL || ch->in_room == NULL)
+      return 0;
 
-    if (ch->pcdata->keep_vnum <= 0)
-        return 0;
+   if (ch->pcdata->keep_vnum <= 0)
+      return 0;
 
-    return (ch->in_room->vnum == ch->pcdata->keep_vnum);
+   return (ch->in_room->vnum == ch->pcdata->keep_vnum);
 }
-
 
 static void keep_format_healer_name(const char *owner_name, char *dest, size_t dest_size)
 {
-    const char *safe_owner = (owner_name != NULL && owner_name[0] != '\0') ? owner_name : "Unknown";
+   const char *safe_owner = (owner_name != NULL && owner_name[0] != '\0') ? owner_name : "Unknown";
 
-    if (dest == NULL || dest_size == 0)
-        return;
+   if (dest == NULL || dest_size == 0)
+      return;
 
-    snprintf(dest, dest_size, "%s's healer", safe_owner);
+   snprintf(dest, dest_size, "%s's healer", safe_owner);
 }
 
 static MOB_INDEX_DATA *create_keep_healer_index(AREA_DATA *pArea, int vnum, const char *owner_name)
 {
-    int iHash;
-    MOB_INDEX_DATA *pMobIndex;
-    BUILD_DATA_LIST *pList;
-    char name_buf[MAX_INPUT_LENGTH];
-    char short_buf[MAX_STRING_LENGTH];
-    char long_buf[MAX_STRING_LENGTH];
-    char themed_name[256];
+   int iHash;
+   MOB_INDEX_DATA *pMobIndex;
+   BUILD_DATA_LIST *pList;
+   char name_buf[MAX_INPUT_LENGTH];
+   char short_buf[MAX_STRING_LENGTH];
+   char long_buf[MAX_STRING_LENGTH];
+   char themed_name[256];
 
-    GET_FREE(pMobIndex, mid_free);
-    pMobIndex->vnum = vnum;
-    pMobIndex->area = pArea;
+   GET_FREE(pMobIndex, mid_free);
+   pMobIndex->vnum = vnum;
+   pMobIndex->area = pArea;
 
-    snprintf(name_buf, sizeof(name_buf), "%s keep healer", owner_name);
-    pMobIndex->player_name = str_dup(name_buf);
+   snprintf(name_buf, sizeof(name_buf), "%s keep healer", owner_name);
+   pMobIndex->player_name = str_dup(name_buf);
 
-    keep_format_healer_name(owner_name, themed_name, sizeof(themed_name));
-    snprintf(short_buf, sizeof(short_buf), "%s", themed_name);
-    pMobIndex->short_descr = str_dup(short_buf);
+   keep_format_healer_name(owner_name, themed_name, sizeof(themed_name));
+   snprintf(short_buf, sizeof(short_buf), "%s", themed_name);
+   pMobIndex->short_descr = str_dup(short_buf);
 
-    snprintf(long_buf, sizeof(long_buf), "%.200s is here, ready to heal and aid you.\n\r", themed_name);
-    pMobIndex->long_descr = str_dup(long_buf);
-    pMobIndex->description = str_dup(long_buf);
+   snprintf(long_buf, sizeof(long_buf), "%.200s is here, ready to heal and aid you.\n\r",
+            themed_name);
+   pMobIndex->long_descr = str_dup(long_buf);
+   pMobIndex->description = str_dup(long_buf);
 
-    pMobIndex->act = ACT_IS_NPC | ACT_SENTINEL;
-    pMobIndex->affected_by = 0;
-    pMobIndex->pShop = NULL;
-    pMobIndex->alignment = 1000;
-    pMobIndex->level = 1;
-    pMobIndex->sex = SEX_NEUTRAL;
-    pMobIndex->ac_mod = 0;
-    pMobIndex->hr_mod = 0;
-    pMobIndex->dr_mod = 0;
-    pMobIndex->spec_fun = spec_lookup("spec_cast_adept");
-    pMobIndex->count = 0;
-    pMobIndex->killed = 0;
-    pMobIndex->target = NULL;
-    pMobIndex->first_mprog = NULL;
-    pMobIndex->last_mprog = NULL;
-    pMobIndex->progtypes = 0;
+   pMobIndex->act = ACT_IS_NPC | ACT_SENTINEL;
+   pMobIndex->affected_by = 0;
+   pMobIndex->pShop = NULL;
+   pMobIndex->alignment = 1000;
+   pMobIndex->level = 1;
+   pMobIndex->sex = SEX_NEUTRAL;
+   pMobIndex->ac_mod = 0;
+   pMobIndex->hr_mod = 0;
+   pMobIndex->dr_mod = 0;
+   pMobIndex->spec_fun = spec_lookup("spec_cast_adept");
+   pMobIndex->count = 0;
+   pMobIndex->killed = 0;
+   pMobIndex->target = NULL;
+   pMobIndex->first_mprog = NULL;
+   pMobIndex->last_mprog = NULL;
+   pMobIndex->progtypes = 0;
 
-    iHash = vnum % MAX_KEY_HASH;
-    SING_TOPLINK(pMobIndex, mob_index_hash[iHash], next);
+   iHash = vnum % MAX_KEY_HASH;
+   SING_TOPLINK(pMobIndex, mob_index_hash[iHash], next);
 
-    GET_FREE(pList, build_free);
-    pList->data = pMobIndex;
-    LINK(pList, pArea->first_area_mobile, pArea->last_area_mobile, next, prev);
+   GET_FREE(pList, build_free);
+   pList->data = pMobIndex;
+   LINK(pList, pArea->first_area_mobile, pArea->last_area_mobile, next, prev);
 
-    top_mob_index++;
+   top_mob_index++;
 
-    return pMobIndex;
+   return pMobIndex;
 }
 
 static void add_keep_healer_reset(AREA_DATA *pArea, ROOM_INDEX_DATA *room, int healer_vnum)
 {
-    RESET_DATA *pReset;
-    BUILD_DATA_LIST *pList;
+   RESET_DATA *pReset;
+   BUILD_DATA_LIST *pList;
 
-    GET_FREE(pReset, reset_free);
-    pReset->command = 'M';
-    pReset->arg1 = healer_vnum;
-    pReset->arg2 = 1;
-    pReset->arg3 = room->vnum;
+   GET_FREE(pReset, reset_free);
+   pReset->command = 'M';
+   pReset->arg1 = healer_vnum;
+   pReset->arg2 = 1;
+   pReset->arg3 = room->vnum;
 
-    GET_FREE(pList, build_free);
-    pList->data = pReset;
+   GET_FREE(pList, build_free);
+   pList->data = pReset;
 
-    LINK(pReset, pArea->first_reset, pArea->last_reset, next, prev);
-    LINK(pList, room->first_room_reset, room->last_room_reset, next, prev);
+   LINK(pReset, pArea->first_reset, pArea->last_reset, next, prev);
+   LINK(pList, room->first_room_reset, room->last_room_reset, next, prev);
 
-    top_reset++;
+   top_reset++;
 }
 
 static void add_keep_chest_reset(AREA_DATA *pArea, ROOM_INDEX_DATA *room, int chest_vnum)
 {
-    RESET_DATA *pReset;
-    BUILD_DATA_LIST *pList;
+   RESET_DATA *pReset;
+   BUILD_DATA_LIST *pList;
 
-    GET_FREE(pReset, reset_free);
-    pReset->command = 'O';
-    pReset->arg1 = chest_vnum;
-    pReset->arg2 = 1;
-    pReset->arg3 = room->vnum;
+   GET_FREE(pReset, reset_free);
+   pReset->command = 'O';
+   pReset->arg1 = chest_vnum;
+   pReset->arg2 = 1;
+   pReset->arg3 = room->vnum;
 
-    GET_FREE(pList, build_free);
-    pList->data = pReset;
+   GET_FREE(pList, build_free);
+   pList->data = pReset;
 
-    LINK(pReset, pArea->first_reset, pArea->last_reset, next, prev);
-    LINK(pList, room->first_room_reset, room->last_room_reset, next, prev);
+   LINK(pReset, pArea->first_reset, pArea->last_reset, next, prev);
+   LINK(pList, room->first_room_reset, room->last_room_reset, next, prev);
 
-    top_reset++;
+   top_reset++;
 }
 
 static OBJ_INDEX_DATA *create_keep_chest_index(AREA_DATA *pArea, int vnum, const char *owner_name)
 {
-    int iHash;
-    int looper;
-    OBJ_INDEX_DATA *pObjIndex;
-    BUILD_DATA_LIST *pList;
-    char name_buf[MAX_INPUT_LENGTH];
-    char short_buf[MAX_STRING_LENGTH];
-    char desc_buf[MAX_STRING_LENGTH];
+   int iHash;
+   int looper;
+   OBJ_INDEX_DATA *pObjIndex;
+   BUILD_DATA_LIST *pList;
+   char name_buf[MAX_INPUT_LENGTH];
+   char short_buf[MAX_STRING_LENGTH];
+   char desc_buf[MAX_STRING_LENGTH];
 
-    GET_FREE(pObjIndex, oid_free);
-    pObjIndex->vnum = vnum;
-    pObjIndex->area = pArea;
+   GET_FREE(pObjIndex, oid_free);
+   pObjIndex->vnum = vnum;
+   pObjIndex->area = pArea;
 
-    snprintf(name_buf, sizeof(name_buf), "%s keep chest", owner_name);
-    pObjIndex->name = str_dup(name_buf);
+   snprintf(name_buf, sizeof(name_buf), "%s keep chest", owner_name);
+   pObjIndex->name = str_dup(name_buf);
 
-    keep_format_chest_short_descr(owner_name, short_buf, sizeof(short_buf));
-    pObjIndex->short_descr = str_dup(short_buf);
+   keep_format_chest_short_descr(owner_name, short_buf, sizeof(short_buf));
+   pObjIndex->short_descr = str_dup(short_buf);
 
-    snprintf(desc_buf, sizeof(desc_buf), "%s's Keep Chest rests here.", owner_name);
-    pObjIndex->description = str_dup(desc_buf);
+   snprintf(desc_buf, sizeof(desc_buf), "%s's Keep Chest rests here.", owner_name);
+   pObjIndex->description = str_dup(desc_buf);
 
-    pObjIndex->owner = str_dup(owner_name);
-    pObjIndex->level = 1;
-    pObjIndex->item_type = ITEM_CONTAINER;
-    pObjIndex->extra_flags = ITEM_NOSAC;
-    pObjIndex->wear_flags = 0;
-    pObjIndex->item_apply = 1;
+   pObjIndex->owner = str_dup(owner_name);
+   pObjIndex->level = 1;
+   pObjIndex->item_type = ITEM_CONTAINER;
+   pObjIndex->extra_flags = ITEM_NOSAC;
+   pObjIndex->wear_flags = 0;
+   pObjIndex->item_apply = 1;
 
-    for (looper = 0; looper < 10; looper++)
-        pObjIndex->value[looper] = 0;
+   for (looper = 0; looper < 10; looper++)
+      pObjIndex->value[looper] = 0;
 
-    pObjIndex->value[0] = 10000;
-    pObjIndex->value[1] = CONT_CLOSEABLE | CONT_CLOSED | CONT_KEEP_CHEST;
-    pObjIndex->value[2] = -1;
-    pObjIndex->value[3] = keep_chest_max_items();
+   pObjIndex->value[0] = 10000;
+   pObjIndex->value[1] = CONT_CLOSEABLE | CONT_CLOSED | CONT_KEEP_CHEST;
+   pObjIndex->value[2] = -1;
+   pObjIndex->value[3] = keep_chest_max_items();
 
-    pObjIndex->weight = 100;
-    pObjIndex->cost = 0;
+   pObjIndex->weight = 100;
+   pObjIndex->cost = 0;
 
-    pObjIndex->first_exdesc = NULL;
-    pObjIndex->last_exdesc = NULL;
-    pObjIndex->first_apply = NULL;
-    pObjIndex->last_apply = NULL;
+   pObjIndex->first_exdesc = NULL;
+   pObjIndex->last_exdesc = NULL;
+   pObjIndex->first_apply = NULL;
+   pObjIndex->last_apply = NULL;
 
-    iHash = vnum % MAX_KEY_HASH;
-    SING_TOPLINK(pObjIndex, obj_index_hash[iHash], next);
+   iHash = vnum % MAX_KEY_HASH;
+   SING_TOPLINK(pObjIndex, obj_index_hash[iHash], next);
 
-    GET_FREE(pList, build_free);
-    pList->data = pObjIndex;
-    LINK(pList, pArea->first_area_object, pArea->last_area_object, next, prev);
+   GET_FREE(pList, build_free);
+   pList->data = pObjIndex;
+   LINK(pList, pArea->first_area_object, pArea->last_area_object, next, prev);
 
-    top_obj_index++;
+   top_obj_index++;
 
-    return pObjIndex;
+   return pObjIndex;
 }
 
 void do_keep(CHAR_DATA *ch, char *argument)
 {
-    char arg1[MAX_INPUT_LENGTH];
-    int original_recall_vnum;
-    int vnum = 0;
-    int iHash;
-    ROOM_INDEX_DATA *topRoom = NULL;
-    ROOM_INDEX_DATA *RoomIndex;
-    ROOM_INDEX_DATA *templeRoom;
-    OBJ_INDEX_DATA *keepChestIndex;
-    OBJ_DATA *keepChest;
-    EXIT_DATA *pExit;
-    BUILD_DATA_LIST *pList;
-    AREA_DATA *pArea = NULL;
-    char room_name[MAX_STRING_LENGTH];
-    char room_description[MAX_STRING_LENGTH];
+   char arg1[MAX_INPUT_LENGTH];
+   int original_recall_vnum;
+   int vnum = 0;
+   int iHash;
+   ROOM_INDEX_DATA *topRoom = NULL;
+   ROOM_INDEX_DATA *RoomIndex;
+   ROOM_INDEX_DATA *templeRoom;
+   OBJ_INDEX_DATA *keepChestIndex;
+   OBJ_DATA *keepChest;
+   EXIT_DATA *pExit;
+   BUILD_DATA_LIST *pList;
+   AREA_DATA *pArea = NULL;
+   char room_name[MAX_STRING_LENGTH];
+   char room_description[MAX_STRING_LENGTH];
 
-    argument = one_argument(argument, arg1);
+   argument = one_argument(argument, arg1);
 
-    if (arg1[0] == '\0')
-    {
-        if (ch->pcdata->keep_vnum > 0)
-        {
-            if (get_room_index(ch->pcdata->keep_vnum) == NULL)
-            {
-                send_to_char("Your keep cannot be found. Contact an immortal.\n\r", ch);
-                return;
-            }
-
-            original_recall_vnum = ch->pcdata->recall_vnum;
-            ch->pcdata->recall_vnum = ch->pcdata->keep_vnum;
-            do_recall(ch, "");
-            ch->pcdata->recall_vnum = original_recall_vnum;
-            return;
-        }
-
-        send_to_char("Syntax: keep create | keep title <string> | keep desc <string> | keep regen | keep inside | keep storage | keep healer\n\r", ch);
-        return;
-    }
-
-    if (keep_is_upgrade_command(arg1))
-    {
-        int qp_cost;
-        int room_flag;
-        const char *flag_name;
-        OBJ_DATA *keep_chest;
-
-        if (ch->pcdata->keep_vnum <= 0)
-        {
-            send_to_char("You do not have a keep yet.\n\r", ch);
-            return;
-        }
-
-        if (!keep_player_can_customize(ch))
-        {
-            send_to_char("You must be in your keep to do that.\n\r", ch);
-            return;
-        }
-
-        if (!str_cmp(arg1, "regen"))
-        {
-            qp_cost = 100;
-            room_flag = ROOM_REGEN;
-            flag_name = "regen";
-        }
-        else if (!str_cmp(arg1, "storage"))
-        {
-            int current_max_items;
-            int new_max_items;
-            char buf[MAX_STRING_LENGTH];
-
-            keep_chest = keep_find_chest_in_room(ch->in_room);
-            if (keep_chest == NULL)
-            {
-                send_to_char("Your keep chest cannot be found. Contact an immortal.\n\r", ch);
-                return;
-            }
-
-            current_max_items = keep_chest->value[3];
-            if (current_max_items <= 0)
-                current_max_items = keep_chest_max_items();
-
-            qp_cost = keep_storage_upgrade_cost(current_max_items);
-            if (ch->quest_points < qp_cost)
-            {
-                send_to_char("You do not have enough quest points for that upgrade.\n\r", ch);
-                return;
-            }
-
-            new_max_items = keep_storage_next_max_items(current_max_items);
-            ch->quest_points -= qp_cost;
-            keep_chest->value[3] = new_max_items;
-            save_chest(keep_chest);
-
-            snprintf(buf, sizeof(buf), "Keep storage expanded to %d items for %d quest points.\n\r", new_max_items, qp_cost);
-            send_to_char(buf, ch);
-            act("$n expands keep chest storage.", ch, NULL, NULL, TO_ROOM);
-            return;
-        }
-        else
-        {
-            qp_cost = 50;
-            room_flag = ROOM_INDOORS;
-            flag_name = "inside";
-        }
-
-        if (IS_SET(ch->in_room->room_flags, room_flag))
-        {
-            send_to_char("That keep upgrade has already been applied.\n\r", ch);
-            return;
-        }
-
-        if (ch->quest_points < qp_cost)
-        {
-            send_to_char("You do not have enough quest points for that upgrade.\n\r", ch);
-            return;
-        }
-
-        ch->quest_points -= qp_cost;
-        SET_BIT(ch->in_room->room_flags, room_flag);
-        do_savearea(NULL, (char *)ch->in_room->area);
-
-        send_to_char("Keep upgraded.\n\r", ch);
-        act("$n upgrades the keep with the $T flag.", ch, NULL, (char *)flag_name, TO_ROOM);
-        return;
-    }
-
-    if (!str_cmp(arg1, "healer"))
-    {
-        ROOM_INDEX_DATA *keep_room;
-        int healer_vnum;
-        MOB_INDEX_DATA *keepHealerIndex;
-        CHAR_DATA *keepHealer;
-
-        if (ch->pcdata->keep_vnum <= 0)
-        {
-            send_to_char("You do not have a keep yet.\n\r", ch);
-            return;
-        }
-
-        keep_room = get_room_index(ch->pcdata->keep_vnum);
-        if (keep_room == NULL)
-        {
+   if (arg1[0] == '\0')
+   {
+      if (ch->pcdata->keep_vnum > 0)
+      {
+         if (get_room_index(ch->pcdata->keep_vnum) == NULL)
+         {
             send_to_char("Your keep cannot be found. Contact an immortal.\n\r", ch);
             return;
-        }
+         }
 
-        if (!keep_player_can_customize(ch))
-        {
-            send_to_char("You must be in your keep to do that.\n\r", ch);
+         original_recall_vnum = ch->pcdata->recall_vnum;
+         ch->pcdata->recall_vnum = ch->pcdata->keep_vnum;
+         do_recall(ch, "");
+         ch->pcdata->recall_vnum = original_recall_vnum;
+         return;
+      }
+
+      send_to_char("Syntax: keep create | keep title <string> | keep desc <string> | keep regen | "
+                   "keep inside | keep storage | keep healer\n\r",
+                   ch);
+      return;
+   }
+
+   if (keep_is_upgrade_command(arg1))
+   {
+      int qp_cost;
+      int room_flag;
+      const char *flag_name;
+      OBJ_DATA *keep_chest;
+
+      if (ch->pcdata->keep_vnum <= 0)
+      {
+         send_to_char("You do not have a keep yet.\n\r", ch);
+         return;
+      }
+
+      if (!keep_player_can_customize(ch))
+      {
+         send_to_char("You must be in your keep to do that.\n\r", ch);
+         return;
+      }
+
+      if (!str_cmp(arg1, "regen"))
+      {
+         qp_cost = 100;
+         room_flag = ROOM_REGEN;
+         flag_name = "regen";
+      }
+      else if (!str_cmp(arg1, "storage"))
+      {
+         int current_max_items;
+         int new_max_items;
+         char buf[MAX_STRING_LENGTH];
+
+         keep_chest = keep_find_chest_in_room(ch->in_room);
+         if (keep_chest == NULL)
+         {
+            send_to_char("Your keep chest cannot be found. Contact an immortal.\n\r", ch);
             return;
-        }
+         }
 
-        if (ch->pcdata->keep_healer_bought)
-        {
-            send_to_char("Your keep healer has already been purchased.\n\r", ch);
-            return;
-        }
+         current_max_items = keep_chest->value[3];
+         if (current_max_items <= 0)
+            current_max_items = keep_chest_max_items();
 
-        if (ch->quest_points < 250)
-        {
+         qp_cost = keep_storage_upgrade_cost(current_max_items);
+         if (ch->quest_points < qp_cost)
+         {
             send_to_char("You do not have enough quest points for that upgrade.\n\r", ch);
             return;
-        }
+         }
 
-        for (healer_vnum = keep_room->area->min_vnum; healer_vnum <= keep_room->area->max_vnum; healer_vnum++)
-        {
-            if (get_room_index(healer_vnum) == NULL && get_obj_index(healer_vnum) == NULL && get_mob_index(healer_vnum) == NULL)
-                break;
-        }
+         new_max_items = keep_storage_next_max_items(current_max_items);
+         ch->quest_points -= qp_cost;
+         keep_chest->value[3] = new_max_items;
+         save_chest(keep_chest);
 
-        if (healer_vnum > keep_room->area->max_vnum)
-        {
-            send_to_char("Couldn't find an open vnum to create your keep healer in!\n\r", ch);
-            return;
-        }
+         snprintf(buf, sizeof(buf), "Keep storage expanded to %d items for %d quest points.\n\r",
+                  new_max_items, qp_cost);
+         send_to_char(buf, ch);
+         act("$n expands keep chest storage.", ch, NULL, NULL, TO_ROOM);
+         return;
+      }
+      else
+      {
+         qp_cost = 50;
+         room_flag = ROOM_INDOORS;
+         flag_name = "inside";
+      }
 
-        ch->quest_points -= 250;
+      if (IS_SET(ch->in_room->room_flags, room_flag))
+      {
+         send_to_char("That keep upgrade has already been applied.\n\r", ch);
+         return;
+      }
 
-        keepHealerIndex = create_keep_healer_index(keep_room->area, healer_vnum, ch->name);
-        keepHealer = create_mobile(keepHealerIndex);
-        char_to_room(keepHealer, keep_room);
-        add_keep_healer_reset(keep_room->area, keep_room, healer_vnum);
+      if (ch->quest_points < qp_cost)
+      {
+         send_to_char("You do not have enough quest points for that upgrade.\n\r", ch);
+         return;
+      }
 
-        ch->pcdata->keep_healer_bought = 1;
-        ch->pcdata->keep_healer_vnum = healer_vnum;
+      ch->quest_points -= qp_cost;
+      SET_BIT(ch->in_room->room_flags, room_flag);
+      do_savearea(NULL, (char *)ch->in_room->area);
 
-        do_savearea(NULL, (char *)keep_room->area);
+      send_to_char("Keep upgraded.\n\r", ch);
+      act("$n upgrades the keep with the $T flag.", ch, NULL, (char *)flag_name, TO_ROOM);
+      return;
+   }
 
-        send_to_char("A personal healer now tends your keep.\n\r", ch);
-        act("$n purchases a personal keep healer.", ch, NULL, NULL, TO_ROOM);
-        return;
-    }
+   if (!str_cmp(arg1, "healer"))
+   {
+      ROOM_INDEX_DATA *keep_room;
+      int healer_vnum;
+      MOB_INDEX_DATA *keepHealerIndex;
+      CHAR_DATA *keepHealer;
 
-    if (keep_is_customization_command(arg1))
-    {
-        if (!keep_player_can_customize(ch))
-        {
-            send_to_char("You must be in your keep to do that.\n\r", ch);
-            return;
-        }
+      if (ch->pcdata->keep_vnum <= 0)
+      {
+         send_to_char("You do not have a keep yet.\n\r", ch);
+         return;
+      }
 
-        if (argument == NULL || argument[0] == '\0')
-        {
-            if (!str_cmp(arg1, "title"))
-                send_to_char("Syntax: keep title <string>\n\r", ch);
-            else
-                send_to_char("Syntax: keep desc <string>\n\r", ch);
-            return;
-        }
+      keep_room = get_room_index(ch->pcdata->keep_vnum);
+      if (keep_room == NULL)
+      {
+         send_to_char("Your keep cannot be found. Contact an immortal.\n\r", ch);
+         return;
+      }
 
-        if (!str_cmp(arg1, "title"))
-        {
-            free_string(ch->in_room->name);
-            ch->in_room->name = str_dup(argument);
-            send_to_char("Keep title updated.\n\r", ch);
-        }
-        else
-        {
-            free_string(ch->in_room->description);
-            ch->in_room->description = str_dup(argument);
-            send_to_char("Keep description updated.\n\r", ch);
-        }
+      if (!keep_player_can_customize(ch))
+      {
+         send_to_char("You must be in your keep to do that.\n\r", ch);
+         return;
+      }
 
-        do_savearea(NULL, (char *)ch->in_room->area);
-        return;
-    }
+      if (ch->pcdata->keep_healer_bought)
+      {
+         send_to_char("Your keep healer has already been purchased.\n\r", ch);
+         return;
+      }
 
-    if (str_cmp(arg1, "create"))
-    {
-        send_to_char("Syntax: keep create | keep title <string> | keep desc <string> | keep regen | keep inside | keep storage | keep healer\n\r", ch);
-        return;
-    }
+      if (ch->quest_points < 250)
+      {
+         send_to_char("You do not have enough quest points for that upgrade.\n\r", ch);
+         return;
+      }
 
-    if (get_adept_level(ch) < 20 || ch->pcdata->keep_vnum > 0)
-    {
-        send_to_char("You must be a level 20 adept without an existing keep to do that.\n\r", ch);
-        return;
-    }
-
-    for (pArea = first_area; pArea != NULL; pArea = pArea->next)
-    {
-        if (!str_cmp(pArea->filename, "playerhousing.are"))
+      for (healer_vnum = keep_room->area->min_vnum; healer_vnum <= keep_room->area->max_vnum;
+           healer_vnum++)
+      {
+         if (get_room_index(healer_vnum) == NULL && get_obj_index(healer_vnum) == NULL &&
+             get_mob_index(healer_vnum) == NULL)
             break;
-    }
+      }
 
-    if (pArea == NULL)
-    {
-        send_to_char("Could not find playerhousing.are to create your keep.\n\r", ch);
-        return;
-    }
+      if (healer_vnum > keep_room->area->max_vnum)
+      {
+         send_to_char("Couldn't find an open vnum to create your keep healer in!\n\r", ch);
+         return;
+      }
 
-    topRoom = get_room_index(PLAYER_HOUSING_START_VNUM);
-    if (topRoom != NULL)
-        pArea = topRoom->area;
+      ch->quest_points -= 250;
 
-    for (vnum = pArea->min_vnum; vnum <= pArea->max_vnum; vnum++)
-    {
-        if (get_room_index(vnum) == NULL && get_obj_index(vnum) == NULL)
-            break;
-    }
+      keepHealerIndex = create_keep_healer_index(keep_room->area, healer_vnum, ch->name);
+      keepHealer = create_mobile(keepHealerIndex);
+      char_to_room(keepHealer, keep_room);
+      add_keep_healer_reset(keep_room->area, keep_room, healer_vnum);
 
-    if (vnum > pArea->max_vnum)
-    {
-        send_to_char("Couldn't find an open vnum to create your keep in!\n\r", ch);
-        return;
-    }
+      ch->pcdata->keep_healer_bought = 1;
+      ch->pcdata->keep_healer_vnum = healer_vnum;
 
-    RoomIndex = new_room(pArea, vnum, SECT_INSIDE);
+      do_savearea(NULL, (char *)keep_room->area);
 
-    SET_BIT(RoomIndex->room_flags, ROOM_NO_TELEPORT);
-    SET_BIT(RoomIndex->room_flags, ROOM_NOBLOODWALK);
-    SET_BIT(RoomIndex->room_flags, ROOM_NO_PORTAL);
-    SET_BIT(RoomIndex->room_flags, ROOM_NO_MOB);
-    SET_BIT(RoomIndex->room_flags, ROOM_SAFE);
+      send_to_char("A personal healer now tends your keep.\n\r", ch);
+      act("$n purchases a personal keep healer.", ch, NULL, NULL, TO_ROOM);
+      return;
+   }
 
-    keep_format_room_name(ch->name, room_name, sizeof(room_name));
-    keep_format_room_description(ch->name, room_description, sizeof(room_description));
-    free_string(RoomIndex->name);
-    free_string(RoomIndex->description);
-    RoomIndex->name = str_dup(room_name);
-    RoomIndex->description = str_dup(room_description);
+   if (keep_is_customization_command(arg1))
+   {
+      if (!keep_player_can_customize(ch))
+      {
+         send_to_char("You must be in your keep to do that.\n\r", ch);
+         return;
+      }
 
-    iHash = vnum % MAX_KEY_HASH;
-    SING_TOPLINK(RoomIndex, room_index_hash[iHash], next);
+      if (argument == NULL || argument[0] == '\0')
+      {
+         if (!str_cmp(arg1, "title"))
+            send_to_char("Syntax: keep title <string>\n\r", ch);
+         else
+            send_to_char("Syntax: keep desc <string>\n\r", ch);
+         return;
+      }
 
-    GET_FREE(pList, build_free);
-    pList->data = RoomIndex;
-    LINK(pList, pArea->first_area_room, pArea->last_area_room, next, prev);
-    top_room++;
+      if (!str_cmp(arg1, "title"))
+      {
+         free_string(ch->in_room->name);
+         ch->in_room->name = str_dup(argument);
+         send_to_char("Keep title updated.\n\r", ch);
+      }
+      else
+      {
+         free_string(ch->in_room->description);
+         ch->in_room->description = str_dup(argument);
+         send_to_char("Keep description updated.\n\r", ch);
+      }
 
-    templeRoom = get_room_index(3001);
-    if (templeRoom != NULL)
-    {
-        GET_FREE(pExit, exit_free);
-        pExit->to_room = templeRoom;
-        pExit->vnum = templeRoom->vnum;
-        pExit->description = &str_empty[0];
-        pExit->keyword = &str_empty[0];
-        pExit->exit_info = 0;
-        pExit->key = -1;
-        RoomIndex->exit[DIR_DOWN] = pExit;
-        top_exit++;
-    }
+      do_savearea(NULL, (char *)ch->in_room->area);
+      return;
+   }
 
-    keepChestIndex = create_keep_chest_index(pArea, vnum, ch->name);
-    keepChest = create_object(keepChestIndex, ch->level);
-    obj_to_room(keepChest, RoomIndex);
-    add_keep_chest_reset(pArea, RoomIndex, vnum);
+   if (str_cmp(arg1, "create"))
+   {
+      send_to_char("Syntax: keep create | keep title <string> | keep desc <string> | keep regen | "
+                   "keep inside | keep storage | keep healer\n\r",
+                   ch);
+      return;
+   }
 
-    ch->pcdata->keep_vnum = vnum;
-    do_savearea(NULL, (char *)pArea);
+   if (get_adept_level(ch) < 20 || ch->pcdata->keep_vnum > 0)
+   {
+      send_to_char("You must be a level 20 adept without an existing keep to do that.\n\r", ch);
+      return;
+   }
 
-    send_to_char("Your keep has been created.\n\r", ch);
+   for (pArea = first_area; pArea != NULL; pArea = pArea->next)
+   {
+      if (!str_cmp(pArea->filename, "playerhousing.are"))
+         break;
+   }
+
+   if (pArea == NULL)
+   {
+      send_to_char("Could not find playerhousing.are to create your keep.\n\r", ch);
+      return;
+   }
+
+   topRoom = get_room_index(PLAYER_HOUSING_START_VNUM);
+   if (topRoom != NULL)
+      pArea = topRoom->area;
+
+   for (vnum = pArea->min_vnum; vnum <= pArea->max_vnum; vnum++)
+   {
+      if (get_room_index(vnum) == NULL && get_obj_index(vnum) == NULL)
+         break;
+   }
+
+   if (vnum > pArea->max_vnum)
+   {
+      send_to_char("Couldn't find an open vnum to create your keep in!\n\r", ch);
+      return;
+   }
+
+   RoomIndex = new_room(pArea, vnum, SECT_INSIDE);
+
+   SET_BIT(RoomIndex->room_flags, ROOM_NO_TELEPORT);
+   SET_BIT(RoomIndex->room_flags, ROOM_NOBLOODWALK);
+   SET_BIT(RoomIndex->room_flags, ROOM_NO_PORTAL);
+   SET_BIT(RoomIndex->room_flags, ROOM_NO_MOB);
+   SET_BIT(RoomIndex->room_flags, ROOM_SAFE);
+
+   keep_format_room_name(ch->name, room_name, sizeof(room_name));
+   keep_format_room_description(ch->name, room_description, sizeof(room_description));
+   free_string(RoomIndex->name);
+   free_string(RoomIndex->description);
+   RoomIndex->name = str_dup(room_name);
+   RoomIndex->description = str_dup(room_description);
+
+   iHash = vnum % MAX_KEY_HASH;
+   SING_TOPLINK(RoomIndex, room_index_hash[iHash], next);
+
+   GET_FREE(pList, build_free);
+   pList->data = RoomIndex;
+   LINK(pList, pArea->first_area_room, pArea->last_area_room, next, prev);
+   top_room++;
+
+   templeRoom = get_room_index(3001);
+   if (templeRoom != NULL)
+   {
+      GET_FREE(pExit, exit_free);
+      pExit->to_room = templeRoom;
+      pExit->vnum = templeRoom->vnum;
+      pExit->description = &str_empty[0];
+      pExit->keyword = &str_empty[0];
+      pExit->exit_info = 0;
+      pExit->key = -1;
+      RoomIndex->exit[DIR_DOWN] = pExit;
+      top_exit++;
+   }
+
+   keepChestIndex = create_keep_chest_index(pArea, vnum, ch->name);
+   keepChest = create_object(keepChestIndex, ch->level);
+   obj_to_room(keepChest, RoomIndex);
+   add_keep_chest_reset(pArea, RoomIndex, vnum);
+
+   ch->pcdata->keep_vnum = vnum;
+   do_savearea(NULL, (char *)pArea);
+
+   send_to_char("Your keep has been created.\n\r", ch);
 }

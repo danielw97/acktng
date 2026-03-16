@@ -11,29 +11,37 @@
 bool spec_records_keeper(CHAR_DATA *ch)
 {
    static const char *acts[] = {
-      "$n draws a careful line under a column of figures and checks the sum twice.",
-      "$n slides a document into an alphabetical pigeonhole, pausing to read the label aloud.",
-      "$n taps a ledger page with the blunt end of $s quill, thinking.",
-      "$n blows on fresh ink, then fans the page with a practiced wrist motion.",
-      "$n opens a new folio, creases the spine, and writes the date at the top in formal script."
-   };
+       "$n draws a careful line under a column of figures and checks the sum twice.",
+       "$n slides a document into an alphabetical pigeonhole, pausing to read the label aloud.",
+       "$n taps a ledger page with the blunt end of $s quill, thinking.",
+       "$n blows on fresh ink, then fans the page with a practiced wrist motion.",
+       "$n opens a new folio, creases the spine, and writes the date at the top in formal script."};
    static const char *says[] = {
-      "The district rolls are only as accurate as the last survey. This one is years overdue.",
-      "A ledger that reflects old reality is worse than no ledger — it sends people down wrong roads.",
-      "The Registry requires a full room count, not just the named locations. All corridors, all courts, all passages.",
-      "Cartography is civic service. Every door you open and log is a door some future traveler doesn't walk past blind.",
-      "The Ledgerhouse wants floor plans, not approximations. That requires someone willing to walk every room."
-   };
+       "The district rolls are only as accurate as the last survey. This one is years overdue.",
+       "A ledger that reflects old reality is worse than no ledger — it sends people down wrong "
+       "roads.",
+       "The Registry requires a full room count, not just the named locations. All corridors, all "
+       "courts, all passages.",
+       "Cartography is civic service. Every door you open and log is a door some future traveler "
+       "doesn't walk past blind.",
+       "The Ledgerhouse wants floor plans, not approximations. That requires someone willing to "
+       "walk every room."};
    static const char *quest_hints[] = {
-      "The Registry hasn't had a complete survey of the city districts since before the Lantern Reforms. If you're the exploring sort, I can issue you a commission through the Postmaster — walk every room you can find and report back.",
-      "I've been trying to update the district rolls for two years. What I need is someone who will actually walk the entire city and log what they find. The Postmaster can formalize it as a survey commission if you're interested.",
-      "Every ward, every alley, every civic passage — the Registry needs it all accounted for. If you have the patience to walk this city thoroughly, speak to the Postmaster about a cartography commission."
-   };
-   static const char *quest_active[] = {
-      "Good. Mark everything — named rooms and unnamed passages both. The Registry counts all of them.",
-      "The survey is progressing? Keep moving. The more complete the coverage, the better the commission pays.",
-      "Every room you enter and log is data the Registry hasn't had in years. Take your time and be thorough."
-   };
+       "The Registry hasn't had a complete survey of the city districts since before the Lantern "
+       "Reforms. If you're the exploring sort, I can issue you a commission through the Postmaster "
+       "— walk every room you can find and report back.",
+       "I've been trying to update the district rolls for two years. What I need is someone who "
+       "will actually walk the entire city and log what they find. The Postmaster can formalize it "
+       "as a survey commission if you're interested.",
+       "Every ward, every alley, every civic passage — the Registry needs it all accounted for. If "
+       "you have the patience to walk this city thoroughly, speak to the Postmaster about a "
+       "cartography commission."};
+   static const char *quest_active[] = {"Good. Mark everything — named rooms and unnamed passages "
+                                        "both. The Registry counts all of them.",
+                                        "The survey is progressing? Keep moving. The more complete "
+                                        "the coverage, the better the commission pays.",
+                                        "Every room you enter and log is data the Registry hasn't "
+                                        "had in years. Take your time and be thorough."};
 
    CHAR_DATA *vch;
    bool hint_given = FALSE;

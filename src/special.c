@@ -285,6 +285,22 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_ss_manifest_warden;
    if (!str_cmp(name, "spec_ss_kiln_overseer"))
       return spec_ss_kiln_overseer;
+   if (!str_cmp(name, "spec_cinderteeth_warlord"))
+      return spec_cinderteeth_warlord;
+   if (!str_cmp(name, "spec_cinderteeth_warden_cmd"))
+      return spec_cinderteeth_warden_cmd;
+   if (!str_cmp(name, "spec_cinderteeth_sulfur_colossus"))
+      return spec_cinderteeth_sulfur_colossus;
+   if (!str_cmp(name, "spec_cinderteeth_anchor"))
+      return spec_cinderteeth_anchor;
+   if (!str_cmp(name, "spec_cinderteeth_ventspeaker"))
+      return spec_cinderteeth_ventspeaker;
+   if (!str_cmp(name, "spec_cinderteeth_oracle"))
+      return spec_cinderteeth_oracle;
+   if (!str_cmp(name, "spec_cinderteeth_caldera_watcher"))
+      return spec_cinderteeth_caldera_watcher;
+   if (!str_cmp(name, "spec_cinderteeth_patriarch"))
+      return spec_cinderteeth_patriarch;
 
    return 0;
 }
@@ -535,6 +551,22 @@ char *rev_spec_lookup(void *func)
       return "spec_ss_manifest_warden";
    if (func == spec_ss_kiln_overseer)
       return "spec_ss_kiln_overseer";
+   if (func == spec_cinderteeth_warlord)
+      return "spec_cinderteeth_warlord";
+   if (func == spec_cinderteeth_warden_cmd)
+      return "spec_cinderteeth_warden_cmd";
+   if (func == spec_cinderteeth_sulfur_colossus)
+      return "spec_cinderteeth_sulfur_colossus";
+   if (func == spec_cinderteeth_anchor)
+      return "spec_cinderteeth_anchor";
+   if (func == spec_cinderteeth_ventspeaker)
+      return "spec_cinderteeth_ventspeaker";
+   if (func == spec_cinderteeth_oracle)
+      return "spec_cinderteeth_oracle";
+   if (func == spec_cinderteeth_caldera_watcher)
+      return "spec_cinderteeth_caldera_watcher";
+   if (func == spec_cinderteeth_patriarch)
+      return "spec_cinderteeth_patriarch";
 
    return 0;
 }
@@ -654,6 +686,14 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_ss_cinder_broker\n\r");
    strcat(buf, "       spec_ss_manifest_warden\n\r");
    strcat(buf, "       spec_ss_kiln_overseer\n\r");
+   strcat(buf, "       spec_cinderteeth_warlord\n\r");
+   strcat(buf, "       spec_cinderteeth_warden_cmd\n\r");
+   strcat(buf, "       spec_cinderteeth_sulfur_colossus\n\r");
+   strcat(buf, "       spec_cinderteeth_anchor\n\r");
+   strcat(buf, "       spec_cinderteeth_ventspeaker\n\r");
+   strcat(buf, "       spec_cinderteeth_oracle\n\r");
+   strcat(buf, "       spec_cinderteeth_caldera_watcher\n\r");
+   strcat(buf, "       spec_cinderteeth_patriarch\n\r");
 
    return;
 }
@@ -672,6 +712,8 @@ void spec_handle_damage(CHAR_DATA *victim, int element, int dam)
       spec_hermit_archon_damage(victim, element, dam);
    if (victim->spec_fun == spec_sanctum_keeper)
       spec_sanctum_keeper_damage(victim, element, dam);
+   if (victim->spec_fun == spec_cinderteeth_anchor)
+      spec_cinderteeth_anchor_damage(victim, element, dam);
 }
 
 /*
@@ -726,9 +768,9 @@ void spec_death_handler(CHAR_DATA *victim, CHAR_DATA *killer)
       gch->pcdata->reincarnation_data[REINCARNATION_POINTS]++;
 
       sprintf(buf,
-         "@@a*** You have slain @@e%s@@a for the first time! ***\n\r"
-         "@@a*** You have been awarded @@W1 reincarnation point@@a! ***@@N\n\r",
-         victim->short_descr);
+              "@@a*** You have slain @@e%s@@a for the first time! ***\n\r"
+              "@@a*** You have been awarded @@W1 reincarnation point@@a! ***@@N\n\r",
+              victim->short_descr);
       send_to_char(buf, gch);
    }
 }
@@ -759,18 +801,15 @@ bool dragon(CHAR_DATA *ch, char *spell_name)
 
 bool is_player_summon_special(SPEC_FUN *spec_fun)
 {
-   return spec_fun == spec_summon_water
-      || spec_fun == spec_summon_fire
-      || spec_fun == spec_summon_earth
-      || spec_fun == spec_summon_undead
-      || spec_fun == spec_summon_holy
-      || spec_fun == spec_summon_shadow
-      || spec_fun == spec_summon_metal
-      || spec_fun == spec_summon_animate
-      || spec_fun == spec_summon_thought;
+   return spec_fun == spec_summon_water || spec_fun == spec_summon_fire ||
+          spec_fun == spec_summon_earth || spec_fun == spec_summon_undead ||
+          spec_fun == spec_summon_holy || spec_fun == spec_summon_shadow ||
+          spec_fun == spec_summon_metal || spec_fun == spec_summon_animate ||
+          spec_fun == spec_summon_thought;
 }
 
-bool spec_summon_cast_random(CHAR_DATA *ch, CHAR_DATA *target, const char *const *spells, int spell_count)
+bool spec_summon_cast_random(CHAR_DATA *ch, CHAR_DATA *target, const char *const *spells,
+                             int spell_count)
 {
    int i;
    int start;

@@ -338,13 +338,13 @@ struct shop_data
  */
 struct class_type
 {
-   char who_name[4];    /* Three-letter name for 'who'               */
-   char *class_name;    /* Full name                                 */
-   sh_int attr_prime;   /* Prime attribute                           */
+   char who_name[4];  /* Three-letter name for 'who'               */
+   char *class_name;  /* Full name                                 */
+   sh_int attr_prime; /* Prime attribute                           */
    sh_int hp_gain;
-   sh_int mana_gain;    /* Class gains mana on level                 */
-   sh_int tier;         /* MORTAL / REMORT / ADEPT                   */
-   sh_int prereq[2];    /* Prerequisite class IDs; -1 = none         */
+   sh_int mana_gain; /* Class gains mana on level                 */
+   sh_int tier;      /* MORTAL / REMORT / ADEPT                   */
+   sh_int prereq[2]; /* Prerequisite class IDs; -1 = none         */
 };
 
 struct obj_stat_type
@@ -505,9 +505,9 @@ struct mob_index_data
    int aggro_list;
    sh_int alignment;
    long hp_mod;
-   int ac_mod;              /* ac modifier */
-   int hr_mod;              /* hitroll modifier */
-   int dr_mod;              /* damroll modifier */
+   int ac_mod; /* ac modifier */
+   int hr_mod; /* hitroll modifier */
+   int dr_mod; /* damroll modifier */
    int spellpower_mod;
    int healing_mod;
    int crit_mod;
@@ -614,18 +614,20 @@ struct char_data
    sh_int class;
    sh_int clan; /* need to convert from pcdata to this */
    sh_int race;
-   sh_int level;           /* For m/c this = max of levels */
-   int class_level[MAX_TOTAL_CLASS]; /* Unified class levels (mortal 0-5, remort 6-17, adept 18-23) */
+   sh_int level;                     /* For m/c this = max of levels */
+   int class_level[MAX_TOTAL_CLASS]; /* Unified class levels (mortal 0-5, remort 6-17, adept 18-23)
+                                      */
    int adept_level;
    int combo[MAX_COMBO];
    int holy_power;
    int arcane_power;
    int mental_power;
    int spec_behavior;
-   int spec_behavior2; /* secondary state for special functions (e.g., element interrupt tracking) */
-   int sentence; /* For new legal system */
-   sh_int invis; /* For wizinvis imms - lvl invis to */
-   sh_int incog; /* Same as above except for incognito --Flar */
+   int spec_behavior2; /* secondary state for special functions (e.g., element interrupt tracking)
+                        */
+   int sentence;       /* For new legal system */
+   sh_int invis;       /* For wizinvis imms - lvl invis to */
+   sh_int incog;       /* Same as above except for incognito --Flar */
    sh_int trust;
    bool wizbit;
    int played;
@@ -659,9 +661,9 @@ struct char_data
    int damroll;
    int armor;
    long hp_mod;
-   int ac_mod;   /* ac modifier */
-   int hr_mod;   /* hitroll modifier */
-   int dr_mod;   /* damroll modifier */
+   int ac_mod; /* ac modifier */
+   int hr_mod; /* hitroll modifier */
+   int dr_mod; /* damroll modifier */
    int spellpower_mod;
    int healing_mod;
    int crit_mod;
@@ -713,22 +715,22 @@ struct char_data
  */
 struct quest_data
 {
-   int quest_type;                             /* QUEST_TYPE_* constant; 0=none */
-   bool quest_completed;                       /* TRUE = ready to hand in      */
-   int quest_num_targets;                      /* slots in use (1-5)           */
-   int quest_target_vnum[QUEST_MAX_TARGETS];    /* mob or obj vnum per slot     */
-   bool quest_target_done[QUEST_MAX_TARGETS];   /* per-slot completion flag     */
-   int quest_kill_needed;                      /* type 3: kill goal            */
-   int quest_kill_count;                       /* type 3: kills so far         */
-   int quest_static_id;                        /* static quest id or -1  */
-   int quest_reward_gold;                      /* static gold reward override  */
-   int quest_reward_qp;                        /* static qp reward override    */
-   int quest_reward_item_vnum;                 /* static item reward vnum      */
-   int quest_reward_item_count;                /* static item reward quantity  */
-   int quest_static_offerer_vnum;              /* required static turn-in mob  */
-   int quest_cartography_area_num;             /* type 4: target area number   */
-   int quest_cartography_room_count;           /* type 4: rooms to explore     */
-   int quest_cartography_explored_count;       /* type 4: rooms explored       */
+   int quest_type;                            /* QUEST_TYPE_* constant; 0=none */
+   bool quest_completed;                      /* TRUE = ready to hand in      */
+   int quest_num_targets;                     /* slots in use (1-5)           */
+   int quest_target_vnum[QUEST_MAX_TARGETS];  /* mob or obj vnum per slot     */
+   bool quest_target_done[QUEST_MAX_TARGETS]; /* per-slot completion flag     */
+   int quest_kill_needed;                     /* type 3: kill goal            */
+   int quest_kill_count;                      /* type 3: kills so far         */
+   int quest_static_id;                       /* static quest id or -1  */
+   int quest_reward_gold;                     /* static gold reward override  */
+   int quest_reward_qp;                       /* static qp reward override    */
+   int quest_reward_item_vnum;                /* static item reward vnum      */
+   int quest_reward_item_count;               /* static item reward quantity  */
+   int quest_static_offerer_vnum;             /* required static turn-in mob  */
+   int quest_cartography_area_num;            /* type 4: target area number   */
+   int quest_cartography_room_count;          /* type 4: rooms to explore     */
+   int quest_cartography_explored_count;      /* type 4: rooms explored       */
    unsigned char quest_cartography_bits[QUEST_CARTOGRAPHY_BYTES]; /* type 4 explored room bitmap */
 };
 
@@ -745,10 +747,10 @@ struct pc_data
    char *bamfout;
    char *title;
    char *immskll;
-   char *host;                          /* Used to tell PC last login site */
-   sh_int failures;                     /* Failed logins */
-   sh_int clan;                         /* will be used to denote clan membership */
-   int generation; /* Used for vamps */
+   char *host;      /* Used to tell PC last login site */
+   sh_int failures; /* Failed logins */
+   sh_int clan;     /* will be used to denote clan membership */
+   int generation;  /* Used for vamps */
    sh_int perm_str;
    sh_int perm_int;
    sh_int perm_wis;
@@ -778,7 +780,7 @@ struct pc_data
    int mkilled;
    int pflags;
    char *lastlogin;
-   int monitor;             /* monitor channel for imms */
+   int monitor; /* monitor channel for imms */
    sh_int has_exp_fix;
    sh_int quest_points;
 
@@ -787,7 +789,8 @@ struct pc_data
    int keep_vnum;
    int keep_healer_bought;
    int keep_healer_vnum;
-   int reincarnations[MAX_TOTAL_CLASS]; /* Unified reincarnations (mortal 0-5, remort 6-17, adept 18-23) */
+   int reincarnations[MAX_TOTAL_CLASS]; /* Unified reincarnations (mortal 0-5, remort 6-17, adept
+                                           18-23) */
    int reincarnation_data[MAX_REINCARNATE];
    int reincarnate_race;
    int reincarnate_class;
@@ -808,13 +811,12 @@ struct pc_data
    int invasion_points;
    int invasion_rewards[3];
    int post_quest_points;
-   int quest_dynamic_cooldown_until;        /* earliest time for new dynamic prop */
+   int quest_dynamic_cooldown_until; /* earliest time for new dynamic prop */
    bool superboss_kills[MAX_SUPERBOSS];
    /* --- Quest quest system --- */
    QUEST_DATA quests[QUEST_MAX_QUESTS];
    bool completed_static_quests[QUEST_MAX_STATIC_QUESTS];
 };
-
 
 /*
  * program block
@@ -1196,7 +1198,6 @@ struct build_data_list /* Used for storing area file data. */
    void *data;
 };
 
-
 struct lookup_type
 {
    char *text;
@@ -1226,20 +1227,20 @@ int skill_get_tier(int sn);
 
 struct skill_type
 {
-   sh_int flag2;                          /* normal and/or vamp?         */
-   char *name;                            /* Name of skill               */
-   sh_int skill_level[MAX_TOTAL_CLASS];   /* Level needed by class       */
-   SPELL_FUN *spell_fun;                  /* Spell pointer (for spells)  */
-   sh_int target;                         /* Legal targets               */
-   sh_int minimum_position;              /* Position for caster / user   */
-   sh_int *pgsn;                          /* Pointer to associated gsn   */
-   sh_int slot;                           /* Slot for #OBJECT loading    */
-   sh_int min_mana;                       /* Minimum mana used           */
-   sh_int beats;                          /* Waiting time after use      */
+   sh_int flag2;                        /* normal and/or vamp?         */
+   char *name;                          /* Name of skill               */
+   sh_int skill_level[MAX_TOTAL_CLASS]; /* Level needed by class       */
+   SPELL_FUN *spell_fun;                /* Spell pointer (for spells)  */
+   sh_int target;                       /* Legal targets               */
+   sh_int minimum_position;             /* Position for caster / user   */
+   sh_int *pgsn;                        /* Pointer to associated gsn   */
+   sh_int slot;                         /* Slot for #OBJECT loading    */
+   sh_int min_mana;                     /* Minimum mana used           */
+   sh_int beats;                        /* Waiting time after use      */
    bool can_learn;
-   char *noun_damage;                     /* Damage message              */
-   char *msg_off;                         /* Wear off message            */
-   char *room_off;                        /* Wear off msg TO_ROOM        */
+   char *noun_damage; /* Damage message              */
+   char *msg_off;     /* Wear off message            */
+   char *room_off;    /* Wear off msg TO_ROOM        */
 };
 
 /*
@@ -1297,9 +1298,9 @@ void list_who_to_output args((void));
 /* act_info.c */
 void set_title args((CHAR_DATA * ch, char *title));
 char *color_string args((CHAR_DATA * CH, char *argument));
-void do_learned args( (CHAR_DATA *ch, char *argument) );
-void do_stancehelp args( (CHAR_DATA *ch, char *argument) );
-void do_rmodhelp args( (CHAR_DATA *ch, char *argument) );
+void do_learned args((CHAR_DATA * ch, char *argument));
+void do_stancehelp args((CHAR_DATA * ch, char *argument));
+void do_rmodhelp args((CHAR_DATA * ch, char *argument));
 
 /* act_mob.c */
 void int_combat_handler args((CHAR_DATA * ch, CHAR_DATA *victim));
@@ -1339,8 +1340,10 @@ void act args((const char *format, CHAR_DATA *ch, const void *arg1, const void *
 void hang args((const char *str));
 
 /* Damage.c */
-int calculate_damage args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt, int element, bool crit_possible));
-int do_damage args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt, int element, bool critical));
+int calculate_damage args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt, int element,
+                           bool crit_possible));
+int do_damage args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt, int element,
+                    bool critical));
 
 /*
  * db.c
@@ -1450,7 +1453,7 @@ int get_evasion_piercing args((CHAR_DATA * ch));
 void short_fight_round_begin args((CHAR_DATA * ch, CHAR_DATA *victim));
 int short_fight_round_end args((CHAR_DATA * ch, CHAR_DATA *victim, int *reactive_damage));
 bool short_fight_round_active args((CHAR_DATA * ch, CHAR_DATA *victim));
-void shortfight_emit_autoattack_summary args((CHAR_DATA *ch, CHAR_DATA *victim));
+void shortfight_emit_autoattack_summary args((CHAR_DATA * ch, CHAR_DATA *victim));
 
 int get_racial_penalty_to_level args((int base, int race, int class));
 int get_adept_level args((CHAR_DATA * ch));
@@ -1458,10 +1461,10 @@ bool is_adept args((CHAR_DATA * ch));
 int get_hitroll args((CHAR_DATA * ch));
 int get_damroll args((CHAR_DATA * ch));
 int get_stat args((CHAR_DATA * ch, int stat));
-bool raise_skill args( (CHAR_DATA *ch, int gsn) );
-bool skill_success args( (CHAR_DATA *ch, CHAR_DATA *victim, int gsn, int bonus) );
-char *get_dt_name args( (int sn) );
-int get_generation_chance args(( ));
+bool raise_skill args((CHAR_DATA * ch, int gsn));
+bool skill_success args((CHAR_DATA * ch, CHAR_DATA *victim, int gsn, int bonus));
+char *get_dt_name args((int sn));
+int get_generation_chance args(());
 char *stat_to_string args((int stat));
 char *class_order args((int race));
 bool is_same_room args((CHAR_DATA * ch, CHAR_DATA *victim));
@@ -1471,7 +1474,7 @@ bool can_use_skill_by_name args((CHAR_DATA * ch, char *skill));
 bool can_use_skill_by_name_message args((CHAR_DATA * ch, char *skill));
 void affect_to_room args((ROOM_INDEX_DATA * room, ROOM_AFFECT_DATA *raf));
 void r_affect_remove args((ROOM_INDEX_DATA * room, ROOM_AFFECT_DATA *raf));
-char *get_item_class args( (OBJ_DATA *obj) );
+char *get_item_class args((OBJ_DATA * obj));
 void affect_to_char args((CHAR_DATA * ch, AFFECT_DATA *paf));
 void affect_remove args((CHAR_DATA * ch, AFFECT_DATA *paf));
 void affect_strip args((CHAR_DATA * ch, int sn));
@@ -1642,7 +1645,7 @@ int get_dir(char);
 char *show_values(const struct lookup_type *table, unsigned long long int value, bool fBit);
 
 /* Tables.c */
-const char* lookup_race_bit_value(int bit);
+const char *lookup_race_bit_value(int bit);
 
 /* buildtab.c  */
 /*
@@ -1673,7 +1676,8 @@ char *find_path args((int, int, CHAR_DATA *, int, int, int));
 
 bool mob_hunt args((CHAR_DATA * mob));
 void char_hunt args((CHAR_DATA * ch));
-bool set_hunt args((CHAR_DATA * ch, CHAR_DATA *fch, CHAR_DATA *vch, OBJ_DATA *vobj, int set_flags, int rem_flags));
+bool set_hunt args((CHAR_DATA * ch, CHAR_DATA *fch, CHAR_DATA *vch, OBJ_DATA *vobj, int set_flags,
+                    int rem_flags));
 void end_hunt args((CHAR_DATA * ch));
 sh_int h_find_dir args((ROOM_INDEX_DATA * room, ROOM_INDEX_DATA *target, int h_flags));
 

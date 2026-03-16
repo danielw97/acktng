@@ -11,9 +11,8 @@ bool create_loot(CHAR_DATA *ch, OBJ_DATA *obj);
 
 bool are_clans_hostile(int victim_clan, int killer_clan, const POL_DATA *politics)
 {
-   return victim_clan > 0 && victim_clan < MAX_CLAN &&
-      killer_clan > 0 && killer_clan < MAX_CLAN &&
-      politics->diplomacy[victim_clan][killer_clan] < -450;
+   return victim_clan > 0 && victim_clan < MAX_CLAN && killer_clan > 0 && killer_clan < MAX_CLAN &&
+          politics->diplomacy[victim_clan][killer_clan] < -450;
 }
 
 /*
@@ -62,7 +61,9 @@ void make_corpse(CHAR_DATA *ch, char *argument)
             extract_obj(obj);
          }
          OUREF(obj_next);
-         act("@@eAs $n's soul attempts to fade from the room, the @@dSoul Net@@e quickly collapses, entombing the soul into a small figurine!!", ch, NULL, NULL, TO_ROOM);
+         act("@@eAs $n's soul attempts to fade from the room, the @@dSoul Net@@e quickly "
+             "collapses, entombing the soul into a small figurine!!",
+             ch, NULL, NULL, TO_ROOM);
          room = ch->in_room;
          for (raf = room->first_room_affect; raf != NULL; raf = raf_next)
          {
@@ -127,8 +128,8 @@ void make_corpse(CHAR_DATA *ch, char *argument)
          }
          if ((target != NULL) && !IS_NPC(target))
          {
-            bool clans_in_war = are_clans_hostile(ch->pcdata->clan, target->pcdata->clan, &politics_data);
-
+            bool clans_in_war =
+                are_clans_hostile(ch->pcdata->clan, target->pcdata->clan, &politics_data);
 
             if (IS_SET(ch->pcdata->pflags, PFLAG_PKOK))
                corpse->value[0] = 1;
@@ -144,7 +145,9 @@ void make_corpse(CHAR_DATA *ch, char *argument)
       }
    } /* end of player only */
 
-   if ((IS_SET(ch->act, PLR_KILLER) || IS_SET(ch->act, PLR_THIEF)) && ((target != NULL) && ((!IS_NPC(target)) || (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_executioner")))))
+   if ((IS_SET(ch->act, PLR_KILLER) || IS_SET(ch->act, PLR_THIEF)) &&
+       ((target != NULL) &&
+        ((!IS_NPC(target)) || (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_executioner")))))
 
    {
       corpse->value[0] = 1;
@@ -188,7 +191,9 @@ void make_corpse(CHAR_DATA *ch, char *argument)
 
    if (!IS_NPC(ch))
    {
-      if ((IS_SET(ch->pcdata->pflags, PFLAG_PKOK)) || has_hostile_clan_killer || ((ch->level > 30) && (IS_SET(ch->act, PLR_KILLER) || IS_SET(ch->act, PLR_THIEF))) || (leave_corpse))
+      if ((IS_SET(ch->pcdata->pflags, PFLAG_PKOK)) || has_hostile_clan_killer ||
+          ((ch->level > 30) && (IS_SET(ch->act, PLR_KILLER) || IS_SET(ch->act, PLR_THIEF))) ||
+          (leave_corpse))
          obj_to_room(corpse, ch->in_room);
       else
          obj_to_room(corpse, get_room_index(ROOM_VNUM_MORGUE));
@@ -238,7 +243,8 @@ void death_cry(CHAR_DATA *ch)
    {
       EXIT_DATA *pexit;
 
-      if ((pexit = was_in_room->exit[door]) != NULL && pexit->to_room != NULL && pexit->to_room != was_in_room)
+      if ((pexit = was_in_room->exit[door]) != NULL && pexit->to_room != NULL &&
+          pexit->to_room != was_in_room)
       {
          ch->in_room = pexit->to_room;
          act(msg, ch, NULL, NULL, TO_ROOM);
@@ -283,7 +289,6 @@ void raw_kill(CHAR_DATA *victim, char *argument)
       /*        unhunt(check);*/
    }
 
-
    if (should_extract_npc_on_death(victim))
    {
       extract_char(victim, TRUE);
@@ -301,7 +306,6 @@ void raw_kill(CHAR_DATA *victim, char *argument)
    victim->move = UMAX(1, victim->move);
    save_char_obj(victim);
 }
-
 
 void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
 {
@@ -324,8 +328,8 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
    members = 0;
    huggy = 0;
 
-    if (!IS_NPC(ch))
-        quest_kill_notify(ch, victim);
+   if (!IS_NPC(ch))
+      quest_kill_notify(ch, victim);
 
    invasion_on_death(victim, ch);
    spec_death_handler(victim, ch);
@@ -372,7 +376,6 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
     * As it is, the total exp is reduced. I'll leave it that way.
     *
     */
-
 
    for (gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room)
    {
@@ -421,12 +424,14 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
       if (happy_hour)
          funky *= 2;
 
-      if ((abs((get_psuedo_level(gch) - get_psuedo_level(victim))) > 21) || (get_psuedo_level(gch) > (get_psuedo_level(victim) + 15)))
+      if ((abs((get_psuedo_level(gch) - get_psuedo_level(victim))) > 21) ||
+          (get_psuedo_level(gch) > (get_psuedo_level(victim) + 15)))
       {
          funky = 0;
       }
 
-      if ((abs((get_psuedo_level(ch) - get_psuedo_level(victim))) > 21) || (get_psuedo_level(ch) > (get_psuedo_level(victim) + 15)))
+      if ((abs((get_psuedo_level(ch) - get_psuedo_level(victim))) > 21) ||
+          (get_psuedo_level(ch) > (get_psuedo_level(victim) + 15)))
       {
          funky = 0;
       }
@@ -440,7 +445,8 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
 
       if (!IS_NPC(gch) && !can_use_skill(gch, gsn_emotion_control))
       {
-         align = gch->alignment - (victim->alignment * (80 - gch->pcdata->learned[gsn_emotion_control]) / 100);
+         align = gch->alignment -
+                 (victim->alignment * (80 - gch->pcdata->learned[gsn_emotion_control]) / 100);
 
          if (align > 500)
             gch->alignment = UMIN(gch->alignment + (align - 500) / 4, 1000);
@@ -455,10 +461,13 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
          if (obj->wear_loc == WEAR_NONE)
             continue;
 
-         if ((IS_OBJ_STAT(obj, ITEM_ANTI_EVIL) && IS_EVIL(ch)) || (IS_OBJ_STAT(obj, ITEM_ANTI_GOOD) && IS_GOOD(ch)))
+         if ((IS_OBJ_STAT(obj, ITEM_ANTI_EVIL) && IS_EVIL(ch)) ||
+             (IS_OBJ_STAT(obj, ITEM_ANTI_GOOD) && IS_GOOD(ch)))
          {
-            act("You feel $p slither out of your grasp, and back into your inventory!", ch, obj, NULL, TO_CHAR);
-            act("$p slithers out of $n's hands and back into $s inventory!", ch, obj, NULL, TO_ROOM);
+            act("You feel $p slither out of your grasp, and back into your inventory!", ch, obj,
+                NULL, TO_CHAR);
+            act("$p slithers out of $n's hands and back into $s inventory!", ch, obj, NULL,
+                TO_ROOM);
             unequip_char(ch, obj);
             return;
          }

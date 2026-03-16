@@ -50,20 +50,11 @@
 
 /* Table for a mob's class... we'll mirror the PC classes in order here */
 const struct lookup_type tab_mob_class[] = {
-    {"magi", 0, 0},
-    {"mage", 0, 0},   /* backward-compat alias */
-    {"cleric", 1, 0},
-    {"cipher", 2, 0},
-    {"thief", 2, 0},   /* backward-compat alias */
-    {"warden", 3, 0},
-    {"warrior", 3, 0}, /* backward-compat alias */
-    {"psionicist", 4, 0},
-    {"sorcerer", 5, 0},
-    {"assassin", 6, 0},
-    {"knight", 7, 0},
-    {"necromancer", 8, 0},
-    {"monk", 9, 0},
-    {NULL, 0, 0}};
+    {"magi", 0, 0},        {"mage", 0, 0},                      /* backward-compat alias */
+    {"cleric", 1, 0},      {"cipher", 2, 0},   {"thief", 2, 0}, /* backward-compat alias */
+    {"warden", 3, 0},      {"warrior", 3, 0},                   /* backward-compat alias */
+    {"psionicist", 4, 0},  {"sorcerer", 5, 0}, {"assassin", 6, 0}, {"knight", 7, 0},
+    {"necromancer", 8, 0}, {"monk", 9, 0},     {NULL, 0, 0}};
 
 /* -S- mod: hold what value0-3 mean for each type */
 const struct lookup_type tab_value_meanings[] = {
@@ -421,66 +412,55 @@ const struct lookup_type tab_value_meanings[] = {
 
     {NULL, 0}};
 
-const struct lookup_type tab_drink_types[] = {
-    {"Water", 0, 10},
-    {"Beer", 1, 10},
-    {"Wine", 2, 10},
-    {"Ale", 3, 10},
-    {"Dark Ale", 4, 10},
-    {"Whisky", 5, 10},
-    {"Lemonade", 6, 10},
-    {"Firebreather", 7, 10},
-    {"Local Specialty", 8, 10},
-    {"Slime Mold Juice", 9, 20},
-    {"Milk", 10, 10},
-    {"Tea", 11, 10},
-    {"Coffee", 12, 10},
-    {"Blood", 13, 20},
-    {"Salt Water", 14, 10},
-    {"Chocolate Milk", 15, 10},
-    {NULL, 0, 0}};
+const struct lookup_type tab_drink_types[] = {{"Water", 0, 10},
+                                              {"Beer", 1, 10},
+                                              {"Wine", 2, 10},
+                                              {"Ale", 3, 10},
+                                              {"Dark Ale", 4, 10},
+                                              {"Whisky", 5, 10},
+                                              {"Lemonade", 6, 10},
+                                              {"Firebreather", 7, 10},
+                                              {"Local Specialty", 8, 10},
+                                              {"Slime Mold Juice", 9, 20},
+                                              {"Milk", 10, 10},
+                                              {"Tea", 11, 10},
+                                              {"Coffee", 12, 10},
+                                              {"Blood", 13, 20},
+                                              {"Salt Water", 14, 10},
+                                              {"Chocolate Milk", 15, 10},
+                                              {NULL, 0, 0}};
 
 const struct lookup_type tab_weapon_types[] = {
-    {"hit", 0, 10},
-    {"slice", 1, 10},
-    {"stab", 2, 30},
-    {"slash", 3, 30},
-    {"whip", 4, 10},
-    {"claw", 5, 10},
-    {"blast", 6, 10},
-    {"pound", 7, 10},
-    {"crush", 8, 10},
-    {"grep", 9, 10},
-    {"bite", 10, 10},
-    {"pierce", 11, 10},
-    {"suction", 12, 10}, /* kinky */
+    {"hit", 0, 10},   {"slice", 1, 10},   {"stab", 2, 30},     {"slash", 3, 30}, {"whip", 4, 10},
+    {"claw", 5, 10},  {"blast", 6, 10},   {"pound", 7, 10},    {"crush", 8, 10}, {"grep", 9, 10},
+    {"bite", 10, 10}, {"pierce", 11, 10}, {"suction", 12, 10}, /* kinky */
     {NULL, 0}};
 
 const struct lookup_type tab_mob_flags[] = {
     {"nada", 0, 0},
-    {"is_npc", ACT_IS_NPC, 0},               /* Auto set for mobs    */
-    {"sentinel", ACT_SENTINEL, 100},         /* stays in one room    */
-    {"scavenger", ACT_SCAVENGER, 300},       /* picks up objects     */
-    {"remember", ACT_REMEMBER, 100},         /* remembers target     */
-    {"no_flee", ACT_NO_FLEE, 50},            /* can't flee from mob  */
-    {"aggressive", ACT_AGGRESSIVE, 100},     /* attacks pc's         */
-    {"stay_area", ACT_STAY_AREA, 10},        /* won't leave area     */
-    {"wimpy", ACT_WIMPY, 100},               /* flees when hurt      */
-    {"pet", ACT_PET, 100},                   /* auto set for pets    */
-    {"train", ACT_TRAIN, 2000},              /* can train pc's       */
-    {"practice", ACT_PRACTICE, 2000},        /* can practice pc's    */
-    {"mercenary", ACT_MERCENARY, 100},       /* is a mercenary       */
-    {"heal", ACT_HEAL, 5000},                /* sells heals          */
-    {"adapt", ACT_ADAPT, 4000},              /* adapts weapons       */
-    {"undead", ACT_UNDEAD, 10000},           /* TBA                  */
-    {"bank", ACT_BANKER, 400},               /* is a bank            */
-    {"no_body", ACT_NO_BODY, 1000},          /* Doesn't have body locations */
-    {"hunter", ACT_HUNTER, 4000},            /* HUNTS */
-    {"no_mind", ACT_NOMIND, 100},            /* immune to some psi's  */
-    {"postman", ACT_POSTMAN, 1000},          /* handles letters */
-    {"rewield", ACT_REWIELD, 1000},          /* looks for better weapons */
-    {"reequip", ACT_RE_EQUIP, 1000},         /* looks for better armor */
-{"no_hunt", ACT_NO_HUNT, NO_USE},
+    {"is_npc", ACT_IS_NPC, 0},           /* Auto set for mobs    */
+    {"sentinel", ACT_SENTINEL, 100},     /* stays in one room    */
+    {"scavenger", ACT_SCAVENGER, 300},   /* picks up objects     */
+    {"remember", ACT_REMEMBER, 100},     /* remembers target     */
+    {"no_flee", ACT_NO_FLEE, 50},        /* can't flee from mob  */
+    {"aggressive", ACT_AGGRESSIVE, 100}, /* attacks pc's         */
+    {"stay_area", ACT_STAY_AREA, 10},    /* won't leave area     */
+    {"wimpy", ACT_WIMPY, 100},           /* flees when hurt      */
+    {"pet", ACT_PET, 100},               /* auto set for pets    */
+    {"train", ACT_TRAIN, 2000},          /* can train pc's       */
+    {"practice", ACT_PRACTICE, 2000},    /* can practice pc's    */
+    {"mercenary", ACT_MERCENARY, 100},   /* is a mercenary       */
+    {"heal", ACT_HEAL, 5000},            /* sells heals          */
+    {"adapt", ACT_ADAPT, 4000},          /* adapts weapons       */
+    {"undead", ACT_UNDEAD, 10000},       /* TBA                  */
+    {"bank", ACT_BANKER, 400},           /* is a bank            */
+    {"no_body", ACT_NO_BODY, 1000},      /* Doesn't have body locations */
+    {"hunter", ACT_HUNTER, 4000},        /* HUNTS */
+    {"no_mind", ACT_NOMIND, 100},        /* immune to some psi's  */
+    {"postman", ACT_POSTMAN, 1000},      /* handles letters */
+    {"rewield", ACT_REWIELD, 1000},      /* looks for better weapons */
+    {"reequip", ACT_RE_EQUIP, 1000},     /* looks for better armor */
+    {"no_hunt", ACT_NO_HUNT, NO_USE},
     {"solo", ACT_SOLO, 5000}, /*  mob is designed to fight solo */
     {"no_blood", ACT_NOBLOOD, 4000},
     {"boss", ACT_BOSS, NO_USE},
@@ -493,232 +473,208 @@ const struct lookup_type tab_mob_flags[] = {
 
 /* New bits to handle how mobs act */
 
-const struct lookup_type tab_mob_skill[] = {
-    {"2_attack", MOB_SECOND, 100},
-    {"3_attack", MOB_THIRD, 200},
-    {"4_attack", MOB_FOURTH, 400},
-    {"punch", MOB_PUNCH, 200},
-    {"headbutt", MOB_HEADBUTT, 200},
-    {"knee", MOB_KNEE, 200},
-    {"disarm", MOB_DISARM, 400},
-    {"trip", MOB_TRIP, 300},
-    {"nodisarm", MOB_NODISARM, 500},
-    {"notrip", MOB_NOTRIP, 500},
-    {"dodge", MOB_DODGE, 200},
-    {"parry", MOB_PARRY, 200},
-    {"martial", MOB_MARTIAL, 300},
-    {"enhanced", MOB_ENHANCED, 400},
-    {"dualwield", MOB_DUALWIELD, 350},
-    {"dirt", MOB_DIRT, 300},
-    {"5_attack", MOB_FIFTH, 500},
-    {"6_attack", MOB_SIXTH, 600},
-    {"charge", MOB_CHARGE, 700},
-    {"counter", MOB_COUNTER, 500},
-    {"kick", MOB_KICK, 0},
-    {NULL, 0, 0}};
-const struct lookup_type tab_mob_cast[] = {
-    {"nada", 0, 0},
-    {"placeholder", 1, 0},
-    {"mag_missile", 2, 100},
-    {"shock_grasp", 4, 110},
-    {"burn_hands", 8, 130},
-    {"col_spray", 16, 150},
-    {"fireball", 32, 250},
-    {"hellspawn", 64, 300},
-    {"acid_blast", 128, 350},
-    {"chain_light", 256, 400},
-    {"faerie_fire", 512, 300},
-    {"flare", 1024, 450}, /* 10 */
-    {"flamestrike", 2048, 500},
-    {"earthquake", 4096, 550},
-    {"mind_flail", 8192, 100},
-    {"planergy", 16384, 200},
-    {"phobia", 32768, 250},
-    {"mind_bolt", 65536, 300},
-    {"static", 131072, 350},
-    {"ego_whip", 262144, 375},
-    {"bloody_tears", 524288, 500},
-    {"mindflame", 1048576, 600}, /* 20 */
-    {"suffocate", 2097152, 650},
-    {"nerve_fire", 4194304, 700},
-    {"light_bolt", 8388608, 200},
-    {"heat_armor", 16777216, 400},
-    {"lava_burst", 33554432, 300},
-    {NULL, 0, 0}};
+const struct lookup_type tab_mob_skill[] = {{"2_attack", MOB_SECOND, 100},
+                                            {"3_attack", MOB_THIRD, 200},
+                                            {"4_attack", MOB_FOURTH, 400},
+                                            {"punch", MOB_PUNCH, 200},
+                                            {"headbutt", MOB_HEADBUTT, 200},
+                                            {"knee", MOB_KNEE, 200},
+                                            {"disarm", MOB_DISARM, 400},
+                                            {"trip", MOB_TRIP, 300},
+                                            {"nodisarm", MOB_NODISARM, 500},
+                                            {"notrip", MOB_NOTRIP, 500},
+                                            {"dodge", MOB_DODGE, 200},
+                                            {"parry", MOB_PARRY, 200},
+                                            {"martial", MOB_MARTIAL, 300},
+                                            {"enhanced", MOB_ENHANCED, 400},
+                                            {"dualwield", MOB_DUALWIELD, 350},
+                                            {"dirt", MOB_DIRT, 300},
+                                            {"5_attack", MOB_FIFTH, 500},
+                                            {"6_attack", MOB_SIXTH, 600},
+                                            {"charge", MOB_CHARGE, 700},
+                                            {"counter", MOB_COUNTER, 500},
+                                            {"kick", MOB_KICK, 0},
+                                            {NULL, 0, 0}};
+const struct lookup_type tab_mob_cast[] = {{"nada", 0, 0},
+                                           {"placeholder", 1, 0},
+                                           {"mag_missile", 2, 100},
+                                           {"shock_grasp", 4, 110},
+                                           {"burn_hands", 8, 130},
+                                           {"col_spray", 16, 150},
+                                           {"fireball", 32, 250},
+                                           {"hellspawn", 64, 300},
+                                           {"acid_blast", 128, 350},
+                                           {"chain_light", 256, 400},
+                                           {"faerie_fire", 512, 300},
+                                           {"flare", 1024, 450}, /* 10 */
+                                           {"flamestrike", 2048, 500},
+                                           {"earthquake", 4096, 550},
+                                           {"mind_flail", 8192, 100},
+                                           {"planergy", 16384, 200},
+                                           {"phobia", 32768, 250},
+                                           {"mind_bolt", 65536, 300},
+                                           {"static", 131072, 350},
+                                           {"ego_whip", 262144, 375},
+                                           {"bloody_tears", 524288, 500},
+                                           {"mindflame", 1048576, 600}, /* 20 */
+                                           {"suffocate", 2097152, 650},
+                                           {"nerve_fire", 4194304, 700},
+                                           {"light_bolt", 8388608, 200},
+                                           {"heat_armor", 16777216, 400},
+                                           {"lava_burst", 33554432, 300},
+                                           {NULL, 0, 0}};
 
-const struct lookup_type tab_cast_name[] = {
-    {"nada", 0, 0},
-    {"placeholder", 1, 0},
-    {"\'magic missile\'", 2, 100},
-    {"\'shocking grasp\'", 4, 110},
-    {"\'burning hands\'", 8, 130},
-    {"\'color spray\'", 16, 150},
-    {"fireball", 32, 250},
-    {"hellspawn", 64, 300},
-    {"\'acid blast\'", 128, 350},
-    {"\'chain lightning\'", 256, 400},
-    {"\'faerie fire\'", 512, 300},
-    {"flare", 1024, 450}, /* 10 */
-    {"flamestrike", 2048, 500},
-    {"earthquake", 4096, 550},
-    {"\'mind flail\'", 8192, 100},
-    {"planergy", 16384, 200},
-    {"phobia", 32768, 250},
-    {"\'mind bolt\'", 65536, 300},
-    {"static", 131072, 350},
-    {"\'ego whip\'", 262144, 375},
-    {"\'bloody tears\'", 524288, 500},
-    {"mindflame", 1048576, 600}, /* 20 */
-    {"suffocate", 2097152, 650},
-    {"\'nerve fire\'", 4194304, 700},
-    {"\'light bolt\'", 8388608, 200},
-    {"\'heat armor\'", 16777216, 400},
-    {"\'lava burst\'", 33554432, 300},
-    {NULL, 0, 0}};
+const struct lookup_type tab_cast_name[] = {{"nada", 0, 0},
+                                            {"placeholder", 1, 0},
+                                            {"\'magic missile\'", 2, 100},
+                                            {"\'shocking grasp\'", 4, 110},
+                                            {"\'burning hands\'", 8, 130},
+                                            {"\'color spray\'", 16, 150},
+                                            {"fireball", 32, 250},
+                                            {"hellspawn", 64, 300},
+                                            {"\'acid blast\'", 128, 350},
+                                            {"\'chain lightning\'", 256, 400},
+                                            {"\'faerie fire\'", 512, 300},
+                                            {"flare", 1024, 450}, /* 10 */
+                                            {"flamestrike", 2048, 500},
+                                            {"earthquake", 4096, 550},
+                                            {"\'mind flail\'", 8192, 100},
+                                            {"planergy", 16384, 200},
+                                            {"phobia", 32768, 250},
+                                            {"\'mind bolt\'", 65536, 300},
+                                            {"static", 131072, 350},
+                                            {"\'ego whip\'", 262144, 375},
+                                            {"\'bloody tears\'", 524288, 500},
+                                            {"mindflame", 1048576, 600}, /* 20 */
+                                            {"suffocate", 2097152, 650},
+                                            {"\'nerve fire\'", 4194304, 700},
+                                            {"\'light bolt\'", 8388608, 200},
+                                            {"\'heat armor\'", 16777216, 400},
+                                            {"\'lava burst\'", 33554432, 300},
+                                            {NULL, 0, 0}};
 
-const struct lookup_type tab_mob_def[] = {
-    {"nada", DEF_NONE, 0},
-    {"cure_light", DEF_CURE_LIGHT, 100},
-    {"cure_serious", DEF_CURE_SERIOUS, 200},
-    {"cure_critic", DEF_CURE_CRITIC, 400},
-    {"heal", DEF_HEAL, 800},
-    {"fireshield", DEF_FIRESHIELD, 1000},
-    {"iceshield", DEF_ICESHIELD, 1500},
-    {"shockshield", DEF_SHOCKSHIELD, 1200},
-    {NULL, 0, 0}};
+const struct lookup_type tab_mob_def[] = {{"nada", DEF_NONE, 0},
+                                          {"cure_light", DEF_CURE_LIGHT, 100},
+                                          {"cure_serious", DEF_CURE_SERIOUS, 200},
+                                          {"cure_critic", DEF_CURE_CRITIC, 400},
+                                          {"heal", DEF_HEAL, 800},
+                                          {"fireshield", DEF_FIRESHIELD, 1000},
+                                          {"iceshield", DEF_ICESHIELD, 1500},
+                                          {"shockshield", DEF_SHOCKSHIELD, 1200},
+                                          {NULL, 0, 0}};
 
 const struct lookup_type tab_affected_by[] =
     /*
      * Bits for 'affected_by'.
      * Used in #MOBILES.
      */
-    {
-        {"nada", 0, 0},
-        {"blind", 1, -100},
-        {"invisible", 2, 1000},
-        {"detect_evil", 4, 500},
-        {"detect_invis", 8, 1000},
-        {"detect_magic", 16, 500},
-        {"detect_hidden", 32, 2000},
-        {"cloak:reflection", 64, 2000},
-        {"sanctuary", 128, 5000},
-        {"faerie_fire", 256, 0},
-        {"infrared", 512, 1000},
-        {"curse", 1024, 0},
-        {"cloak:flaming", 2048, 2000},
-        {"poison", 4096, 0},
-        {"protect", 8192, 1000},
-        {"cloak:absorption", 16384, 2000}, /* unused       */
-        {"sneak", 32768, 1000},
-        {"hide", 65536, 1000},
-        {"sleep", 131072, 0},
-        {"charm", 262144, 2000},
-        {"flying", 524288, 5000},
-        {"pass_door", 1048576, 5000},
-        {NULL, 0}};
+    {{"nada", 0, 0},
+     {"blind", 1, -100},
+     {"invisible", 2, 1000},
+     {"detect_evil", 4, 500},
+     {"detect_invis", 8, 1000},
+     {"detect_magic", 16, 500},
+     {"detect_hidden", 32, 2000},
+     {"cloak:reflection", 64, 2000},
+     {"sanctuary", 128, 5000},
+     {"faerie_fire", 256, 0},
+     {"infrared", 512, 1000},
+     {"curse", 1024, 0},
+     {"cloak:flaming", 2048, 2000},
+     {"poison", 4096, 0},
+     {"protect", 8192, 1000},
+     {"cloak:absorption", 16384, 2000}, /* unused       */
+     {"sneak", 32768, 1000},
+     {"hide", 65536, 1000},
+     {"sleep", 131072, 0},
+     {"charm", 262144, 2000},
+     {"flying", 524288, 5000},
+     {"pass_door", 1048576, 5000},
+     {NULL, 0}};
 
 const struct lookup_type tab_item_types[] = {
     /* { "nada",			0, 0 },  */
     /* { "placeholder",		0, 0 },   */
-    {"light", 1, 20},
-    {"scroll", 2, 1000},
-    {"null", 3, NO_USE},
-    {"staff", 4, 5000},
-    {"weapon", 5, 500},
-    {"beacon", 6, 5000},
-    {"portal", 7, 0},
-    {"treasure", 8, 0},
-    {"armor", 9, 500},
-    {"potion", 10, 1000},
-    {"clutch", 11, 0},
-    {"furniture", 12, 20},
-    {"trash", 13, 0},
-    {"trigger", 14, 0},
-    {"container", 15, 50},
-    {"quest", 16, NO_USE},
-    {"drink_con", 17, 20},
-    {"key", 18, 100},
-    {"food", 19, 50},
-    {"money", 20, 0},
-    {"stake", 21, 0},
-    {"boat", 22, 1000},
-    {"corpse_npc", 23, 0},
-    {"corpse_pc", 24, 0},
-    {"fountain", 25, 500},
-    {"pill", 26, 50},
-    {"board", 27, 2000},
-    {"soul", 28, 3000},
-    {"piece", 29, 50},
-    {"matrix", 30, 50},
-    {"enchantment", 31, 50},
-    {"present", 32, 0},
-    {"stash",33, 0},
-    {NULL, 0}};
+    {"light", 1, 20},        {"scroll", 2, 1000},
+    {"null", 3, NO_USE},     {"staff", 4, 5000},
+    {"weapon", 5, 500},      {"beacon", 6, 5000},
+    {"portal", 7, 0},        {"treasure", 8, 0},
+    {"armor", 9, 500},       {"potion", 10, 1000},
+    {"clutch", 11, 0},       {"furniture", 12, 20},
+    {"trash", 13, 0},        {"trigger", 14, 0},
+    {"container", 15, 50},   {"quest", 16, NO_USE},
+    {"drink_con", 17, 20},   {"key", 18, 100},
+    {"food", 19, 50},        {"money", 20, 0},
+    {"stake", 21, 0},        {"boat", 22, 1000},
+    {"corpse_npc", 23, 0},   {"corpse_pc", 24, 0},
+    {"fountain", 25, 500},   {"pill", 26, 50},
+    {"board", 27, 2000},     {"soul", 28, 3000},
+    {"piece", 29, 50},       {"matrix", 30, 50},
+    {"enchantment", 31, 50}, {"present", 32, 0},
+    {"stash", 33, 0},        {NULL, 0}};
 
-const struct lookup_type tab_obj_flags[] = {
-    {"nada", 0, 0},
-    {"generated", 1, 10},
-    {"bind-on-equip", 2, 10},
-    {"nodisarm", 4, 20},
-    {"lock", 8, 20},
-    {"evil", 16, 50},
-    {"invis", 32, 200},
-    {"magic", 64, 100},
-    {"nodrop", 128, 20},
-    {"bless", 256, 200},
-    {"anti_good", 512, 20},
-    {"anti_evil", 1024, 20},
-    {"unused_anti_neutral", 2048, NO_USE},
-    {"noremove", 4096, 100},
-    {"inventory", 8192, 0},
-    {"nosave", 16384, 1000},
-    {"claneq", 32768, NO_USE},
-    {"trigger:destroy", 65536, 10},
-    {"no_auction", 131072, 0},
-    {"mythic", BIT_19, NO_USE},
-    {"legendary", BIT_20, NO_USE},
-    {"rare", BIT_21, 1000},
-    {"vamp", BIT_22, 9},
-    {"noloot", BIT_23, 20},
-    {"nosac", BIT_24, 100},
-    {"unique", BIT_25, 100},
-    {"lifestealer", BIT_26, 100},
-    {"loot", BIT_27, 100},
-    {"boss", BIT_28, NO_USE},
-    {"buckler", BIT_29, NO_USE},
-    {"wand", BIT_30, NO_USE},
-    {"fist", BIT_31, NO_USE},
-    {"two-handed", BIT_32, NO_USE},
-    {NULL, 0}};
+const struct lookup_type tab_obj_flags[] = {{"nada", 0, 0},
+                                            {"generated", 1, 10},
+                                            {"bind-on-equip", 2, 10},
+                                            {"nodisarm", 4, 20},
+                                            {"lock", 8, 20},
+                                            {"evil", 16, 50},
+                                            {"invis", 32, 200},
+                                            {"magic", 64, 100},
+                                            {"nodrop", 128, 20},
+                                            {"bless", 256, 200},
+                                            {"anti_good", 512, 20},
+                                            {"anti_evil", 1024, 20},
+                                            {"unused_anti_neutral", 2048, NO_USE},
+                                            {"noremove", 4096, 100},
+                                            {"inventory", 8192, 0},
+                                            {"nosave", 16384, 1000},
+                                            {"claneq", 32768, NO_USE},
+                                            {"trigger:destroy", 65536, 10},
+                                            {"no_auction", 131072, 0},
+                                            {"mythic", BIT_19, NO_USE},
+                                            {"legendary", BIT_20, NO_USE},
+                                            {"rare", BIT_21, 1000},
+                                            {"vamp", BIT_22, 9},
+                                            {"noloot", BIT_23, 20},
+                                            {"nosac", BIT_24, 100},
+                                            {"unique", BIT_25, 100},
+                                            {"lifestealer", BIT_26, 100},
+                                            {"loot", BIT_27, 100},
+                                            {"boss", BIT_28, NO_USE},
+                                            {"buckler", BIT_29, NO_USE},
+                                            {"wand", BIT_30, NO_USE},
+                                            {"fist", BIT_31, NO_USE},
+                                            {"two-handed", BIT_32, NO_USE},
+                                            {NULL, 0}};
 
-const struct lookup_type tab_wear_flags[] = {
-    {"halo", BIT_1, 50},
-    {"aura", BIT_2, 50},
-    {"horns", BIT_3, 20},
-    {"head", BIT_4, 40},
-    {"face", BIT_5, 50},
-    {"beak", BIT_6, 50},
-    {"ear", BIT_7, 40},
-    {"neck", BIT_8, 20},
-    {"wings", BIT_9, 30},
-    {"shoulders", BIT_10, 40},
-    {"arms", BIT_11, 100},
-    {"wrist", BIT_12, 20},
-    {"hands", BIT_13, 50},
-    {"finger", BIT_14, 40},
-    {"claws", BIT_15, 200},
-    {"hold", BIT_16, 100},
-    {"about", BIT_17, 30},
-    {"waist", BIT_18, 20},
-    {"body", BIT_19, 100},
-    {"tail", BIT_20, 900},
-    {"legs", BIT_21, 100},
-    {"feet", BIT_22, 900},
-    {"hooves", BIT_23, 100},
-    {"take", BIT_24, 900},
-    {"clan_colors", BIT_25, 900},
-    {"invasion_emblem", BIT_26, 900},
-    {NULL, 0}};
+const struct lookup_type tab_wear_flags[] = {{"halo", BIT_1, 50},
+                                             {"aura", BIT_2, 50},
+                                             {"horns", BIT_3, 20},
+                                             {"head", BIT_4, 40},
+                                             {"face", BIT_5, 50},
+                                             {"beak", BIT_6, 50},
+                                             {"ear", BIT_7, 40},
+                                             {"neck", BIT_8, 20},
+                                             {"wings", BIT_9, 30},
+                                             {"shoulders", BIT_10, 40},
+                                             {"arms", BIT_11, 100},
+                                             {"wrist", BIT_12, 20},
+                                             {"hands", BIT_13, 50},
+                                             {"finger", BIT_14, 40},
+                                             {"claws", BIT_15, 200},
+                                             {"hold", BIT_16, 100},
+                                             {"about", BIT_17, 30},
+                                             {"waist", BIT_18, 20},
+                                             {"body", BIT_19, 100},
+                                             {"tail", BIT_20, 900},
+                                             {"legs", BIT_21, 100},
+                                             {"feet", BIT_22, 900},
+                                             {"hooves", BIT_23, 100},
+                                             {"take", BIT_24, 900},
+                                             {"clan_colors", BIT_25, 900},
+                                             {"invasion_emblem", BIT_26, 900},
+                                             {NULL, 0}};
 
 /* This not used at present.  Thought i'd bung details in though :) */
 const struct lookup_type tab_item_apply[] = {
@@ -743,166 +699,123 @@ const struct lookup_type tab_item_apply[] = {
     {"heated", 131072, 0},
     {NULL, 0}};
 
-const struct lookup_type tab_wear_loc[] = {
-    {"halo", 1, 20},
-    {"aura", 2, 20},
-    {"horns", 3, 20},
-    {"head", 4, 20},
-    {"face", 5, 20},
-    {"beak", 6, 20},
-    {"ear_l", 7, 40},
-    {"ear_r", 8, 40},
-    {"neck_1", 9, 40},
-    {"neck_2", 10, 40},
-    {"wings", 11, 40},
-    {"shoulders", 12, 20},
-    {"arms", 13, 20},
-    {"wrist_l", 14, 50},
-    {"wrist_r", 15, 20},
-    {"hands", 16, 20},
-    {"finger_l", 17, 30},
-    {"finger_r", 18, 30},
-    {"claws", 19, 100},
-    {"hold_l", 20, 100},
-    {"hold_r", 21, 40},
-    {"cape", 24, 20},
-    {"waist", 25, 20},
-    {"body", 26, 40},
-    {"tail", 27, 80},
-    {"legs", 28, 20},
-    {"feet", 29, 40},
-    {"hooves", 30, 80},
-    {"clan_colors", 31, 80},
-    {"invasion_emblem", 32, 80},
-    {"max_wear", MAX_WEAR, 0},
-    {NULL, 0}};
+const struct lookup_type tab_wear_loc[] = {{"halo", 1, 20},           {"aura", 2, 20},
+                                           {"horns", 3, 20},          {"head", 4, 20},
+                                           {"face", 5, 20},           {"beak", 6, 20},
+                                           {"ear_l", 7, 40},          {"ear_r", 8, 40},
+                                           {"neck_1", 9, 40},         {"neck_2", 10, 40},
+                                           {"wings", 11, 40},         {"shoulders", 12, 20},
+                                           {"arms", 13, 20},          {"wrist_l", 14, 50},
+                                           {"wrist_r", 15, 20},       {"hands", 16, 20},
+                                           {"finger_l", 17, 30},      {"finger_r", 18, 30},
+                                           {"claws", 19, 100},        {"hold_l", 20, 100},
+                                           {"hold_r", 21, 40},        {"cape", 24, 20},
+                                           {"waist", 25, 20},         {"body", 26, 40},
+                                           {"tail", 27, 80},          {"legs", 28, 20},
+                                           {"feet", 29, 40},          {"hooves", 30, 80},
+                                           {"clan_colors", 31, 80},   {"invasion_emblem", 32, 80},
+                                           {"max_wear", MAX_WEAR, 0}, {NULL, 0}};
 
-const struct lookup_type tab_obj_aff[] = {
-    {"nada", 0, 0},
-    {"str", 1, 200},
-    {"dex", 2, 200},
-    {"int", 3, 200},
-    {"wis", 4, 200},
-    {"con", 5, 200},
-    {"sex", 6, 30},
-    {"class", 7, 500},
-    {"level", 8, 2000},
-    {"age", 9, 30},
-    {"height", 10, 30},
-    {"weight", 11, 30},
-    {"mana", 12, 400},
-    {"hit", 13, 500},
-    {"move", 14, 200},
-    {"gold", 15, 10},
-    {"exp", 16, 50},
-    {"ac", 17, 200},
-    {"hitroll", 18, 500},
-    {"damroll", 19, 500},
-    {"saving_para", 20, 400},
-    {"saving_rod", 21, 400},
-    {"saving_petri", 22, 400},
-    {"saving_breath", 23, 400},
-    {"saving_spell", 24, 400},
-    {"spellpower", 27, 400},
-    {NULL, 0}};
+const struct lookup_type tab_obj_aff[] = {{"nada", 0, 0},
+                                          {"str", 1, 200},
+                                          {"dex", 2, 200},
+                                          {"int", 3, 200},
+                                          {"wis", 4, 200},
+                                          {"con", 5, 200},
+                                          {"sex", 6, 30},
+                                          {"class", 7, 500},
+                                          {"level", 8, 2000},
+                                          {"age", 9, 30},
+                                          {"height", 10, 30},
+                                          {"weight", 11, 30},
+                                          {"mana", 12, 400},
+                                          {"hit", 13, 500},
+                                          {"move", 14, 200},
+                                          {"gold", 15, 10},
+                                          {"exp", 16, 50},
+                                          {"ac", 17, 200},
+                                          {"hitroll", 18, 500},
+                                          {"damroll", 19, 500},
+                                          {"saving_para", 20, 400},
+                                          {"saving_rod", 21, 400},
+                                          {"saving_petri", 22, 400},
+                                          {"saving_breath", 23, 400},
+                                          {"saving_spell", 24, 400},
+                                          {"spellpower", 27, 400},
+                                          {NULL, 0}};
 
-const struct lookup_type tab_room_flags[] = {
-    {"nada", 0, 0},
-    {"dark", 1, 1000},
-    {"regen", 2, 4000}, /* increased regen in this room */
-    {"no_mob", 4, 3000},
-    {"indoors", 8, 500},
-    {"no_magic", 16, 5000},
-    {"hot", 32, 1000},   /* players lose hp each tick   */
-    {"cold", 64, 1000},  /* players lose hp each tick   */
-    {"pk", 128, 200},    /* players may freely pk here  */
-    {"quiet", 256, 200}, /* room is quiet               */
-    {"private", 512, 1000},
-    {"safe", 1024, 4000},
-    {"solitary", 2048, 1000},
-    {"pet_shop", 4096, NO_USE},
-    {"no_recall", 8192, 1000},
-    {"no_teleport", 16384, 500},
-    {"hunt_hunt", 32768, NO_USE},
-    {"no_bloodwalk", 65536, 4000},
-    {"no_portal", 131072, 1000},
-    {"no_repop", BIT_19, 10},
-    {"maze", BIT_20, 10},
-    {NULL, 0}};
+const struct lookup_type tab_room_flags[] = {{"nada", 0, 0},
+                                             {"dark", 1, 1000},
+                                             {"regen", 2, 4000}, /* increased regen in this room */
+                                             {"no_mob", 4, 3000},
+                                             {"indoors", 8, 500},
+                                             {"no_magic", 16, 5000},
+                                             {"hot", 32, 1000},   /* players lose hp each tick   */
+                                             {"cold", 64, 1000},  /* players lose hp each tick   */
+                                             {"pk", 128, 200},    /* players may freely pk here  */
+                                             {"quiet", 256, 200}, /* room is quiet               */
+                                             {"private", 512, 1000},
+                                             {"safe", 1024, 4000},
+                                             {"solitary", 2048, 1000},
+                                             {"pet_shop", 4096, NO_USE},
+                                             {"no_recall", 8192, 1000},
+                                             {"no_teleport", 16384, 500},
+                                             {"hunt_hunt", 32768, NO_USE},
+                                             {"no_bloodwalk", 65536, 4000},
+                                             {"no_portal", 131072, 1000},
+                                             {"no_repop", BIT_19, 10},
+                                             {"maze", BIT_20, 10},
+                                             {NULL, 0}};
 
-const struct lookup_type tab_sector_types[] = {
-    {"nada", 0, 0},
-    {"city", 1, 50},
-    {"field", 2, 50},
-    {"forest", 3, 50},
-    {"hills", 4, 50},
-    {"mountain", 5, 50},
-    {"water_swim", 6, 50},
-    {"water_noswim", 7, 50},
-    {"recall_set", 8, 50},
-    {"air", 9, 50},
-    {"desert", 10, 50},
-    {"inside", 11, 50},
-    {"max", 12, 0},
-    {NULL, 0}};
+const struct lookup_type tab_sector_types[] = {{"nada", 0, 0},        {"city", 1, 50},
+                                               {"field", 2, 50},      {"forest", 3, 50},
+                                               {"hills", 4, 50},      {"mountain", 5, 50},
+                                               {"water_swim", 6, 50}, {"water_noswim", 7, 50},
+                                               {"recall_set", 8, 50}, {"air", 9, 50},
+                                               {"desert", 10, 50},    {"inside", 11, 50},
+                                               {"max", 12, 0},        {NULL, 0}};
 
 const struct lookup_type tab_door_types[] = {
     /*
      * { "nada",        0, NO_USE },
      */
-    {"door", 1, 50},
-    {"closed", 2, 0},
-    {"locked", 4, 0},
-    {"climb", 8, 0},
-    {"immortal", 16, NO_USE},
-    {"pickproof", 32, 500},
-    {"smashproof", 64, 500},
-    {"passproof", 128, 500},
-    {"nodetect", 256, 900},
-    {NULL, 0}};
+    {"door", 1, 50},          {"closed", 2, 0},
+    {"locked", 4, 0},         {"climb", 8, 0},
+    {"immortal", 16, NO_USE}, {"pickproof", 32, 500},
+    {"smashproof", 64, 500},  {"passproof", 128, 500},
+    {"nodetect", 256, 900},   {NULL, 0}};
 
 const struct lookup_type tab_door_states[] = {
-    {"open", 0, 0},
-    {"closed", 1, 0},
-    {"locked", 2, 0},
-    {NULL, 0}};
+    {"open", 0, 0}, {"closed", 1, 0}, {"locked", 2, 0}, {NULL, 0}};
 
-const struct lookup_type tab_player_flags[] = {
-    {"nada", 0, 0},
-    {"PKOK", 1, 0},
-    {"AFK", 2, 0},
-    {"AMBASSADOR", 4, 0},
-    {"VAMPIRE", 8, NO_USE},
-    {"C_DIPLOMAT", 16, NO_USE},
-    {"C_BOSS", 32, NO_USE},
-    {"C_TREASURER", 64, NO_USE},
-    {"C_ARMORER", 128, NO_USE},
-    {"C_LEADER", 256, NO_USE},
-    {"SUPER_COUNCIL", 512, NO_USE},
-    {"WEREWOLF", 1024, 0},
-    {"SHIFTED", 2048, 0},
-    {"RAGED", 4096, 0},
-    {"RULER", BIT_14, 0},
-    {"BLIND_PLAYER", BIT_15, 0},
-    {"TESTER", BIT_16, 0},
-    {NULL, 0}};
+const struct lookup_type tab_player_flags[] = {{"nada", 0, 0},
+                                               {"PKOK", 1, 0},
+                                               {"AFK", 2, 0},
+                                               {"AMBASSADOR", 4, 0},
+                                               {"VAMPIRE", 8, NO_USE},
+                                               {"C_DIPLOMAT", 16, NO_USE},
+                                               {"C_BOSS", 32, NO_USE},
+                                               {"C_TREASURER", 64, NO_USE},
+                                               {"C_ARMORER", 128, NO_USE},
+                                               {"C_LEADER", 256, NO_USE},
+                                               {"SUPER_COUNCIL", 512, NO_USE},
+                                               {"WEREWOLF", 1024, 0},
+                                               {"SHIFTED", 2048, 0},
+                                               {"RAGED", 4096, 0},
+                                               {"RULER", BIT_14, 0},
+                                               {"BLIND_PLAYER", BIT_15, 0},
+                                               {"TESTER", BIT_16, 0},
+                                               {NULL, 0}};
 
 const struct lookup_type tab_magic_realms[] = {
 
-    {"nada", BIT_0, 0},
-    {"fire", BIT_1, 0},
-    {"shock", BIT_2, 0},
-    {"light", BIT_3, 0},
-    {"gas", BIT_4, 0},
-    {"poison", BIT_5, 0},
-    {"cold", BIT_6, 0},
-    {"sound", BIT_7, 0},
-    {"acid", BIT_8, 0},
-    {"negation", BIT_9, 0},
-    {"impact", BIT_10, 0},
-    {"psionic", BIT_11, 0},
-    {"holy", BIT_12, 0},
-    {NULL, 0}};
+    {"nada", BIT_0, 0},    {"fire", BIT_1, 0},
+    {"shock", BIT_2, 0},   {"light", BIT_3, 0},
+    {"gas", BIT_4, 0},     {"poison", BIT_5, 0},
+    {"cold", BIT_6, 0},    {"sound", BIT_7, 0},
+    {"acid", BIT_8, 0},    {"negation", BIT_9, 0},
+    {"impact", BIT_10, 0}, {"psionic", BIT_11, 0},
+    {"holy", BIT_12, 0},   {NULL, 0}};
 
 const struct lookup_type tab_mob_race_mods[] = {
 
@@ -964,8 +877,8 @@ char *bit_table_lookup(const struct lookup_type *table, unsigned long long int n
 
    for (a = 0; number && table[a].text; a++)
    {
-      if ((number & table[a].value) == table[a].value &&
-          str_cmp(table[a].text, "nada") && str_cmp(table[a].text, "placeholder"))
+      if ((number & table[a].value) == table[a].value && str_cmp(table[a].text, "nada") &&
+          str_cmp(table[a].text, "placeholder"))
       {
          strcat(buf, table[a].text);
          strcat(buf, ", ");
@@ -993,7 +906,8 @@ void table_printout(const struct lookup_type *table, char *buf)
 
    for (a = 0; table[a].text != NULL; a++)
    {
-      if ((strcmp(table[a].text, "nada")) && (strcmp(table[a].text, "placeholder"))) /* If not an invalid choice */
+      if ((strcmp(table[a].text, "nada")) &&
+          (strcmp(table[a].text, "placeholder"))) /* If not an invalid choice */
       {
          strcat(buf, "          ");
          strcat(buf, table[a].text);
@@ -1053,7 +967,9 @@ char *show_values(const struct lookup_type *table, unsigned long long int value,
       {
          strcat(buf, "     ");
          sprintf(tmp, "%s%-13s",
-                 fBit ? (IS_SET(value, table[a].value) ? "@@y*" : "@@g ") : (value == table[a].value ? "@@y*" : "@@g "), table[a].text);
+                 fBit ? (IS_SET(value, table[a].value) ? "@@y*" : "@@g ")
+                      : (value == table[a].value ? "@@y*" : "@@g "),
+                 table[a].text);
          strcat(buf, tmp);
          if (++foo % 4 == 0)
             strcat(buf, "\n\r");

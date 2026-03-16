@@ -122,6 +122,14 @@ DECLARE_SPEC_FUN(spec_midgaard_shopkeeper);
 DECLARE_SPEC_FUN(spec_midgaard_postmaster);
 DECLARE_SPEC_FUN(spec_midgaard_quartermaster);
 DECLARE_SPEC_FUN(spec_midgaard_invasion_warden);
+DECLARE_SPEC_FUN(spec_cinderteeth_warlord);
+DECLARE_SPEC_FUN(spec_cinderteeth_warden_cmd);
+DECLARE_SPEC_FUN(spec_cinderteeth_sulfur_colossus);
+DECLARE_SPEC_FUN(spec_cinderteeth_anchor);
+DECLARE_SPEC_FUN(spec_cinderteeth_ventspeaker);
+DECLARE_SPEC_FUN(spec_cinderteeth_oracle);
+DECLARE_SPEC_FUN(spec_cinderteeth_caldera_watcher);
+DECLARE_SPEC_FUN(spec_cinderteeth_patriarch);
 
 SPEC_FUN *spec_lookup(const char *name);
 char *rev_spec_lookup(void *func);
@@ -144,5 +152,6 @@ int summon_master_heal_chance(int master_hit, int master_max_hp, int thematic_bo
 void spec_keep_elemental_captain_damage(CHAR_DATA *ch, int element, int dam);
 void spec_hermit_archon_damage(CHAR_DATA *ch, int element, int dam);
 void spec_sanctum_keeper_damage(CHAR_DATA *ch, int element, int dam);
+void spec_cinderteeth_anchor_damage(CHAR_DATA *ch, int element, int dam);
 
 #endif

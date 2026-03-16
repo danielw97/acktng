@@ -32,24 +32,38 @@
 #define DEC_MAGIC_H
 
 CHAR_DATA *player_summon(CHAR_DATA *ch, int level, int element);
-int class_heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index, bool hot);
+int class_heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index,
+                         bool hot);
 void heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, bool hot);
-bool sp_damage(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, int type, int sn, bool show_msg);
+bool sp_damage(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, int type, int sn,
+               bool show_msg);
 void group_gain args((CHAR_DATA * ch, CHAR_DATA *victim));
 bool is_safe args((CHAR_DATA * ch, CHAR_DATA *victim));
 void set_fighting args((CHAR_DATA * ch, CHAR_DATA *victim, bool check));
 void check_adrenaline args((CHAR_DATA * ch, sh_int damage));
 void do_spell_heal args((CHAR_DATA * ch, CHAR_DATA *victim, int sn));
+void gain_holy_power_from_healing_spell(CHAR_DATA *ch, int sn);
 void apply_elemental_spell_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, const char *debuff_msg);
-bool trigger_elemental_spell_combo(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj, int sn, int level);
-void apply_necromancer_damage_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, int direct_damage, OBJ_DATA *obj);
+bool trigger_elemental_spell_combo(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj, int sn,
+                                   int level);
+void apply_necromancer_damage_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, int direct_damage,
+                                     OBJ_DATA *obj);
 
 /* magic.c */
 int mana_cost(CHAR_DATA *ch, int sn);
-int spell_regen_base_heal(int mage_level, int sorcerer_level, int wizard_level, int spellpower);
 bool is_arcane_spell(int sn);
 bool is_holy_power_spell(int sn);
 bool is_mental_power_spell(int sn);
+
+void breath_damage(CHAR_DATA *ch, int sn, int element);
+void aoe_damage(CHAR_DATA *ch, OBJ_DATA *obj, int sn, int level, int min_dam, int max_dam,
+                int element, int flags);
+#define AOE_SAVES (1 << 0)
+#define AOE_SKIP_GROUP (1 << 1)
+int spell_regen_base_heal(int mage_level, int sorcerer_level, int wizard_level, int spellpower);
+bool cast_wizard_elemental_dot_spell(int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim,
+                                     OBJ_DATA *obj, const char *cast_msg, const char *hit_msg,
+                                     int element);
 
 #define ELE_NONE BIT_0
 #define ELE_PHYSICAL BIT_1
@@ -242,63 +256,63 @@ DECLARE_SPELL_FUN(spell_travel);
 DECLARE_SPELL_FUN(spell_flare);
 DECLARE_SPELL_FUN(spell_mystic_armor);
 DECLARE_SPELL_FUN(spell_seal_room);
-DECLARE_SPELL_FUN(spell_deflect_weapon);      /* slot 600 */
-DECLARE_SPELL_FUN(spell_black_hand);          /* slot 601 */
-DECLARE_SPELL_FUN(spell_throw_needle);        /* slot 602 */
-DECLARE_SPELL_FUN(spell_morale);              /* slot 603 */
-DECLARE_SPELL_FUN(spell_leadership);          /* slot 604 */
-DECLARE_SPELL_FUN(spell_ice_bolt);            /* slot 605 */
-DECLARE_SPELL_FUN(spell_waterelem);           /* slot 606 */
-DECLARE_SPELL_FUN(spell_skeleton);            /* slot 607 */
-DECLARE_SPELL_FUN(spell_poison_weapon);       /* slot 608 */
-DECLARE_SPELL_FUN(spell_fireelem);            /* slot 612 */
-DECLARE_SPELL_FUN(spell_rune_fire);           /* slot 613 */
-DECLARE_SPELL_FUN(spell_rune_shock);          /* slot 614 */
-DECLARE_SPELL_FUN(spell_rune_poison);         /* slot 615 */
-DECLARE_SPELL_FUN(spell_healing_light);       /* slot 616 */
-DECLARE_SPELL_FUN(spell_wither_shadow);       /* slot 617 */
-DECLARE_SPELL_FUN(spell_mana_flare);          /* slot 618 */
-DECLARE_SPELL_FUN(spell_mana_drain);          /* slot 619 */
-DECLARE_SPELL_FUN(spell_cage);                /* slot 620 */
-DECLARE_SPELL_FUN(spell_cloak_absorb);        /* slot 621 */
-DECLARE_SPELL_FUN(spell_cloak_reflect);       /* slot 622 */
-DECLARE_SPELL_FUN(spell_cloak_flaming);       /* slot 623 */
-DECLARE_SPELL_FUN(spell_cloak_elements);      /* slot 624 */
-DECLARE_SPELL_FUN(spell_room_dispel);         /* slot 625 */
-DECLARE_SPELL_FUN(spell_cloak_adept);         /* slot 626 */
-DECLARE_SPELL_FUN(spell_cloak_regen);         /* slot 627 */
-DECLARE_SPELL_FUN(spell_throw_star);          /* slot 628 */
-DECLARE_SPELL_FUN(spell_soul_net);            /* slot 629 */
-DECLARE_SPELL_FUN(spell_condense_soul);       /* slot 630 */
-DECLARE_SPELL_FUN(spell_restoration);         /* slot 632 */
-DECLARE_SPELL_FUN(spell_infuse);              /* slot 633 */
-DECLARE_SPELL_FUN(spell_holy_light);          /* slot 634 */
-DECLARE_SPELL_FUN(spell_divine_intervention); /* slot 635 */
-DECLARE_SPELL_FUN(spell_holy_armor);          /* slot 636 */
-DECLARE_SPELL_FUN(spell_earthelem);           /* slot 637 */
-DECLARE_SPELL_FUN(spell_iron_golem);          /* slot 638 */
-DECLARE_SPELL_FUN(spell_diamond_golem);       /* slot 639 */
-DECLARE_SPELL_FUN(spell_soul_thief);          /* slot 640 */
-DECLARE_SPELL_FUN(spell_holy_avenger);        /* slot 641 */
-DECLARE_SPELL_FUN(spell_heat_armor);          /* slot 642 */
-DECLARE_SPELL_FUN(spell_retri_strike);        /* slot 643 */
-DECLARE_SPELL_FUN(spell_lava_burst);          /* slot 644 */
-DECLARE_SPELL_FUN(spell_fireshield);          /* slot 645 */
-DECLARE_SPELL_FUN(spell_iceshield);           /* slot 646 */
-DECLARE_SPELL_FUN(spell_shockshield);         /* slot 647 */
-DECLARE_SPELL_FUN(spell_shadowshield);        /* slot 648 */
-DECLARE_SPELL_FUN(spell_thoughtshield);       /* slot 649 */
-DECLARE_SPELL_FUN(spell_tribe_claw);          /* slot 655 */
-DECLARE_SPELL_FUN(spell_wolf_mark);           /* slot 656 */
-DECLARE_SPELL_FUN(spell_summon_pegasus);      /* slot 659 */
-DECLARE_SPELL_FUN(spell_summon_nightmare);    /* slot 660 */
-DECLARE_SPELL_FUN(spell_summon_beast);        /* 661 */
-DECLARE_SPELL_FUN(spell_summon_devourer);     /* 662 */
-DECLARE_SPELL_FUN(spell_summon_shadow);       /* 663 */
+DECLARE_SPELL_FUN(spell_deflect_weapon);          /* slot 600 */
+DECLARE_SPELL_FUN(spell_black_hand);              /* slot 601 */
+DECLARE_SPELL_FUN(spell_throw_needle);            /* slot 602 */
+DECLARE_SPELL_FUN(spell_morale);                  /* slot 603 */
+DECLARE_SPELL_FUN(spell_leadership);              /* slot 604 */
+DECLARE_SPELL_FUN(spell_ice_bolt);                /* slot 605 */
+DECLARE_SPELL_FUN(spell_waterelem);               /* slot 606 */
+DECLARE_SPELL_FUN(spell_skeleton);                /* slot 607 */
+DECLARE_SPELL_FUN(spell_poison_weapon);           /* slot 608 */
+DECLARE_SPELL_FUN(spell_fireelem);                /* slot 612 */
+DECLARE_SPELL_FUN(spell_rune_fire);               /* slot 613 */
+DECLARE_SPELL_FUN(spell_rune_shock);              /* slot 614 */
+DECLARE_SPELL_FUN(spell_rune_poison);             /* slot 615 */
+DECLARE_SPELL_FUN(spell_healing_light);           /* slot 616 */
+DECLARE_SPELL_FUN(spell_wither_shadow);           /* slot 617 */
+DECLARE_SPELL_FUN(spell_mana_flare);              /* slot 618 */
+DECLARE_SPELL_FUN(spell_mana_drain);              /* slot 619 */
+DECLARE_SPELL_FUN(spell_cage);                    /* slot 620 */
+DECLARE_SPELL_FUN(spell_cloak_absorb);            /* slot 621 */
+DECLARE_SPELL_FUN(spell_cloak_reflect);           /* slot 622 */
+DECLARE_SPELL_FUN(spell_cloak_flaming);           /* slot 623 */
+DECLARE_SPELL_FUN(spell_cloak_elements);          /* slot 624 */
+DECLARE_SPELL_FUN(spell_room_dispel);             /* slot 625 */
+DECLARE_SPELL_FUN(spell_cloak_adept);             /* slot 626 */
+DECLARE_SPELL_FUN(spell_cloak_regen);             /* slot 627 */
+DECLARE_SPELL_FUN(spell_throw_star);              /* slot 628 */
+DECLARE_SPELL_FUN(spell_soul_net);                /* slot 629 */
+DECLARE_SPELL_FUN(spell_condense_soul);           /* slot 630 */
+DECLARE_SPELL_FUN(spell_restoration);             /* slot 632 */
+DECLARE_SPELL_FUN(spell_infuse);                  /* slot 633 */
+DECLARE_SPELL_FUN(spell_holy_light);              /* slot 634 */
+DECLARE_SPELL_FUN(spell_divine_intervention);     /* slot 635 */
+DECLARE_SPELL_FUN(spell_holy_armor);              /* slot 636 */
+DECLARE_SPELL_FUN(spell_earthelem);               /* slot 637 */
+DECLARE_SPELL_FUN(spell_iron_golem);              /* slot 638 */
+DECLARE_SPELL_FUN(spell_diamond_golem);           /* slot 639 */
+DECLARE_SPELL_FUN(spell_soul_thief);              /* slot 640 */
+DECLARE_SPELL_FUN(spell_holy_avenger);            /* slot 641 */
+DECLARE_SPELL_FUN(spell_heat_armor);              /* slot 642 */
+DECLARE_SPELL_FUN(spell_retri_strike);            /* slot 643 */
+DECLARE_SPELL_FUN(spell_lava_burst);              /* slot 644 */
+DECLARE_SPELL_FUN(spell_fireshield);              /* slot 645 */
+DECLARE_SPELL_FUN(spell_iceshield);               /* slot 646 */
+DECLARE_SPELL_FUN(spell_shockshield);             /* slot 647 */
+DECLARE_SPELL_FUN(spell_shadowshield);            /* slot 648 */
+DECLARE_SPELL_FUN(spell_thoughtshield);           /* slot 649 */
+DECLARE_SPELL_FUN(spell_tribe_claw);              /* slot 655 */
+DECLARE_SPELL_FUN(spell_wolf_mark);               /* slot 656 */
+DECLARE_SPELL_FUN(spell_summon_pegasus);          /* slot 659 */
+DECLARE_SPELL_FUN(spell_summon_nightmare);        /* slot 660 */
+DECLARE_SPELL_FUN(spell_summon_beast);            /* 661 */
+DECLARE_SPELL_FUN(spell_summon_devourer);         /* 662 */
+DECLARE_SPELL_FUN(spell_summon_shadow);           /* 663 */
 DECLARE_SPELL_FUN(spell_summon_thought_devourer); /* 754 */
-DECLARE_SPELL_FUN(spell_creature_bond);       /* 664 */
-DECLARE_SPELL_FUN(spell_corrupt_bond);        /* 665 */
-DECLARE_SPELL_FUN(spell_fireblast);           /* 666 */
+DECLARE_SPELL_FUN(spell_creature_bond);           /* 664 */
+DECLARE_SPELL_FUN(spell_corrupt_bond);            /* 665 */
+DECLARE_SPELL_FUN(spell_fireblast);               /* 666 */
 DECLARE_SPELL_FUN(spell_shockstorm);
 DECLARE_SPELL_FUN(spell_cone_cold);
 DECLARE_SPELL_FUN(spell_earth_shatter);

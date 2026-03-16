@@ -42,9 +42,6 @@ void set_obj_stat_auto(OBJ_DATA *obj);
 
 char *format_obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch, bool fShort);
 
-
-
-
 typedef struct quartermaster_emblem_option_type
 {
    const char *tier_name;
@@ -58,17 +55,16 @@ typedef struct quartermaster_emblem_option_type
 } QUARTERMASTER_EMBLEM_OPTION_TYPE;
 
 static const QUARTERMASTER_EMBLEM_OPTION_TYPE quartermaster_emblem_options[] = {
-   {"common", "caster", 3, 1, 5, 0, 0, 0},
-   {"common", "melee", 8, 1, 5, 0, 0, 0},
-   {"common", "tank", 13, 1, 5, 0, 0, 0},
-   {"magic", "caster", 3, 10, 50, 5, 0, ITEM_MAGIC},
-   {"magic", "melee", 8, 10, 50, 5, 0, ITEM_MAGIC},
-   {"magic", "tank", 13, 10, 50, 5, 0, ITEM_MAGIC},
-   {"rare", "caster", 3, 100, 500, 50, 5, ITEM_RARE},
-   {"rare", "melee", 8, 100, 500, 50, 5, ITEM_RARE},
-   {"rare", "tank", 13, 100, 500, 50, 5, ITEM_RARE},
-   {NULL, NULL, 0, 0, 0, 0, 0, 0}
-};
+    {"common", "caster", 3, 1, 5, 0, 0, 0},
+    {"common", "melee", 8, 1, 5, 0, 0, 0},
+    {"common", "tank", 13, 1, 5, 0, 0, 0},
+    {"magic", "caster", 3, 10, 50, 5, 0, ITEM_MAGIC},
+    {"magic", "melee", 8, 10, 50, 5, 0, ITEM_MAGIC},
+    {"magic", "tank", 13, 10, 50, 5, 0, ITEM_MAGIC},
+    {"rare", "caster", 3, 100, 500, 50, 5, ITEM_RARE},
+    {"rare", "melee", 8, 100, 500, 50, 5, ITEM_RARE},
+    {"rare", "tank", 13, 100, 500, 50, 5, ITEM_RARE},
+    {NULL, NULL, 0, 0, 0, 0, 0, 0}};
 
 static CHAR_DATA *find_quartermaster(CHAR_DATA *ch)
 {
@@ -79,14 +75,16 @@ static CHAR_DATA *find_quartermaster(CHAR_DATA *ch)
 
    for (keeper = ch->in_room->first_person; keeper != NULL; keeper = keeper->next_in_room)
    {
-      if (IS_NPC(keeper) && IS_SET(keeper->act, ACT_QUARTERMASTER) && !IS_AFFECTED(keeper, AFF_CHARM) && can_see(ch, keeper))
+      if (IS_NPC(keeper) && IS_SET(keeper->act, ACT_QUARTERMASTER) &&
+          !IS_AFFECTED(keeper, AFF_CHARM) && can_see(ch, keeper))
          return keeper;
    }
 
    return NULL;
 }
 
-static const QUARTERMASTER_EMBLEM_OPTION_TYPE *find_quartermaster_emblem_option(const char *tier_name, const char *style_name)
+static const QUARTERMASTER_EMBLEM_OPTION_TYPE *
+find_quartermaster_emblem_option(const char *tier_name, const char *style_name)
 {
    int i;
 
@@ -111,14 +109,16 @@ static int quartermaster_emblem_has_tokens(const QUARTERMASTER_EMBLEM_OPTION_TYP
    return (option->commendations > 0 || option->ribbons > 0 || option->medals > 0);
 }
 
-static void append_quartermaster_emblem_cost(char *dest, size_t dest_size, const QUARTERMASTER_EMBLEM_OPTION_TYPE *option)
+static void append_quartermaster_emblem_cost(char *dest, size_t dest_size,
+                                             const QUARTERMASTER_EMBLEM_OPTION_TYPE *option)
 {
    char token_buf[MSL];
 
    if (dest == NULL || option == NULL)
       return;
 
-   snprintf(dest, dest_size, "%d invasion point%s", option->invasion_points, option->invasion_points == 1 ? "" : "s");
+   snprintf(dest, dest_size, "%d invasion point%s", option->invasion_points,
+            option->invasion_points == 1 ? "" : "s");
 
    if (!quartermaster_emblem_has_tokens(option))
       return;
@@ -126,19 +126,25 @@ static void append_quartermaster_emblem_cost(char *dest, size_t dest_size, const
    snprintf(token_buf, sizeof(token_buf), " (");
 
    if (option->commendations > 0)
-      snprintf(token_buf + strlen(token_buf), sizeof(token_buf) - strlen(token_buf), "%d commendation%s", option->commendations, option->commendations == 1 ? "" : "s");
+      snprintf(token_buf + strlen(token_buf), sizeof(token_buf) - strlen(token_buf),
+               "%d commendation%s", option->commendations, option->commendations == 1 ? "" : "s");
 
    if (option->ribbons > 0)
-      snprintf(token_buf + strlen(token_buf), sizeof(token_buf) - strlen(token_buf), "%s%d ribbon%s", option->commendations > 0 ? ", " : "", option->ribbons, option->ribbons == 1 ? "" : "s");
+      snprintf(token_buf + strlen(token_buf), sizeof(token_buf) - strlen(token_buf),
+               "%s%d ribbon%s", option->commendations > 0 ? ", " : "", option->ribbons,
+               option->ribbons == 1 ? "" : "s");
 
    if (option->medals > 0)
-      snprintf(token_buf + strlen(token_buf), sizeof(token_buf) - strlen(token_buf), "%s%d medal%s", (option->commendations > 0 || option->ribbons > 0) ? ", " : "", option->medals, option->medals == 1 ? "" : "s");
+      snprintf(token_buf + strlen(token_buf), sizeof(token_buf) - strlen(token_buf), "%s%d medal%s",
+               (option->commendations > 0 || option->ribbons > 0) ? ", " : "", option->medals,
+               option->medals == 1 ? "" : "s");
 
    snprintf(token_buf + strlen(token_buf), sizeof(token_buf) - strlen(token_buf), ")");
    safe_strcat(dest_size, dest, token_buf);
 }
 
-static int quartermaster_can_afford_option(const CHAR_DATA *ch, const QUARTERMASTER_EMBLEM_OPTION_TYPE *option)
+static int quartermaster_can_afford_option(const CHAR_DATA *ch,
+                                           const QUARTERMASTER_EMBLEM_OPTION_TYPE *option)
 {
    if (ch == NULL || option == NULL || IS_NPC(ch) || ch->pcdata == NULL)
       return FALSE;
@@ -222,25 +228,25 @@ static void show_quartermaster_list(CHAR_DATA *ch)
 
    for (i = 0; quartermaster_emblem_options[i].tier_name != NULL; i++)
    {
-      append_quartermaster_emblem_cost(cost_summary, sizeof(cost_summary), &quartermaster_emblem_options[i]);
-      quartermaster_capitalize_word(quartermaster_emblem_options[i].tier_name, tier_display, sizeof(tier_display));
-      quartermaster_capitalize_word(quartermaster_emblem_options[i].style_name, style_display, sizeof(style_display));
+      append_quartermaster_emblem_cost(cost_summary, sizeof(cost_summary),
+                                       &quartermaster_emblem_options[i]);
+      quartermaster_capitalize_word(quartermaster_emblem_options[i].tier_name, tier_display,
+                                    sizeof(tier_display));
+      quartermaster_capitalize_word(quartermaster_emblem_options[i].style_name, style_display,
+                                    sizeof(style_display));
       tier_color = quartermaster_tier_color(quartermaster_emblem_options[i].tier_name);
       style_color = quartermaster_style_color(quartermaster_emblem_options[i].style_name);
       snprintf(buf, sizeof(buf), "@@g[@@a%s%-6s@@g] %s%-6s@@g  @@W%3d@@g      @@W%-.120s@@N\n\r",
-               tier_color,
-               tier_display,
-               style_color,
-               style_display,
-               quartermaster_emblem_options[i].weight,
-               cost_summary);
+               tier_color, tier_display, style_color, style_display,
+               quartermaster_emblem_options[i].weight, cost_summary);
       send_to_char(buf, ch);
    }
 
    send_to_char("\n\rBuy syntax: @@Wbuy <tier> <style>@@N (styles: caster/melee/tank).\n\r", ch);
 }
 
-static OBJ_DATA *create_quartermaster_emblem(CHAR_DATA *ch, const QUARTERMASTER_EMBLEM_OPTION_TYPE *option)
+static OBJ_DATA *create_quartermaster_emblem(CHAR_DATA *ch,
+                                             const QUARTERMASTER_EMBLEM_OPTION_TYPE *option)
 {
    char buf[MSL];
    char tier_display[32];
@@ -278,12 +284,14 @@ static OBJ_DATA *create_quartermaster_emblem(CHAR_DATA *ch, const QUARTERMASTER_
 
    quartermaster_capitalize_word(option->tier_name, tier_display, sizeof(tier_display));
    quartermaster_capitalize_word(option->style_name, style_display, sizeof(style_display));
-   snprintf(buf, sizeof(buf), "%s%s@@N %s%s@@N Invasion Emblem", quartermaster_tier_color(option->tier_name), tier_display,
+   snprintf(buf, sizeof(buf), "%s%s@@N %s%s@@N Invasion Emblem",
+            quartermaster_tier_color(option->tier_name), tier_display,
             quartermaster_style_color(option->style_name), style_display);
    free_string(obj->short_descr);
    obj->short_descr = str_dup(buf);
 
-   snprintf(buf, sizeof(buf), "A %s%s@@N %s%s@@N invasion emblem is here.", quartermaster_tier_color(option->tier_name), option->tier_name,
+   snprintf(buf, sizeof(buf), "A %s%s@@N %s%s@@N invasion emblem is here.",
+            quartermaster_tier_color(option->tier_name), option->tier_name,
             quartermaster_style_color(option->style_name), option->style_name);
    free_string(obj->description);
    obj->description = str_dup(buf);
@@ -298,12 +306,11 @@ bool should_enforce_equip_restrictions(const CHAR_DATA *ch)
    return (!IS_NPC(ch) || IS_AFFECTED(ch, AFF_CHARM));
 }
 
-
 static bool is_keep_chest(const OBJ_DATA *obj)
 {
-   return (obj != NULL && obj->item_type == ITEM_CONTAINER && IS_SET(obj->value[1], CONT_KEEP_CHEST));
+   return (obj != NULL && obj->item_type == ITEM_CONTAINER &&
+           IS_SET(obj->value[1], CONT_KEEP_CHEST));
 }
-
 
 static int container_item_count(const OBJ_DATA *container)
 {
@@ -334,7 +341,8 @@ int keep_chest_put_denial_reason(const OBJ_DATA *container_obj, const OBJ_DATA *
    if (container_item_count(container_obj) >= keep_chest_capacity)
       return KEEP_CHEST_PUT_ERR_FULL;
 
-   if (obj != NULL && (obj->item_type == ITEM_CORPSE_PC || obj->item_type == ITEM_CORPSE_NPC || obj->item_type == ITEM_CONTAINER))
+   if (obj != NULL && (obj->item_type == ITEM_CORPSE_PC || obj->item_type == ITEM_CORPSE_NPC ||
+                       obj->item_type == ITEM_CONTAINER))
       return KEEP_CHEST_PUT_ERR_INVALID_ITEM;
 
    return KEEP_CHEST_PUT_ALLOWED;
@@ -342,7 +350,6 @@ int keep_chest_put_denial_reason(const OBJ_DATA *container_obj, const OBJ_DATA *
 
 void get_obj(CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container)
 {
-
 
    if (!CAN_WEAR(obj, ITEM_TAKE) || obj->item_type == ITEM_CORPSE_PC)
    {
@@ -397,7 +404,6 @@ void get_obj(CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container)
 
    return;
 }
-
 
 void do_get(CHAR_DATA *ch, char *argument)
 {
@@ -468,7 +474,8 @@ void do_get(CHAR_DATA *ch, char *argument)
 
          if (!fGroup)
          {
-            if (victim == NULL || !IS_SET(victim->pcdata->pflags, PFLAG_PKOK) || !IS_SET(ch->pcdata->pflags, PFLAG_PKOK))
+            if (victim == NULL || !IS_SET(victim->pcdata->pflags, PFLAG_PKOK) ||
+                !IS_SET(ch->pcdata->pflags, PFLAG_PKOK))
                send_to_char("You can't do that.\n\r", ch);
             return;
          }
@@ -516,7 +523,8 @@ void do_get(CHAR_DATA *ch, char *argument)
       {
          char *parse;
          parse = object_list;
-         sprintf(bug_buf, "Get %s, object_list: %s, container %s", argument, object_list, container_name);
+         sprintf(bug_buf, "Get %s, object_list: %s, container %s", argument, object_list,
+                 container_name);
          monitor_chan(bug_buf, MONITOR_DEBUG);
 
          for (;;) /* 'get obj corpse' */
@@ -531,12 +539,14 @@ void do_get(CHAR_DATA *ch, char *argument)
                break;
             sprintf(bug_buf, "Looking for %s %s", object_number, one_object);
             monitor_chan(bug_buf, MONITOR_DEBUG);
-            for (looper = 0; looper < (is_number(object_number) ? atoi(object_number) : 0); looper++)
+            for (looper = 0; looper < (is_number(object_number) ? atoi(object_number) : 0);
+                 looper++)
             {
                obj = get_obj_list(ch, one_object, container->first_in_carry_list);
                if ((obj == NULL) || (!can_see_obj(ch, obj)))
                {
-                  snprintf(actbuf, sizeof(actbuf), "I see no more %.128s in the %.128s.", one_object, container_name);
+                  snprintf(actbuf, sizeof(actbuf), "I see no more %.128s in the %.128s.",
+                           one_object, container_name);
                   act(actbuf, ch, NULL, NULL, TO_CHAR);
                   break;
                }
@@ -605,7 +615,8 @@ void do_get(CHAR_DATA *ch, char *argument)
                {
                   if (found_one_obj)
                   {
-                     snprintf(actbuf, sizeof(actbuf), "There isn't another %.128s here.", one_object);
+                     snprintf(actbuf, sizeof(actbuf), "There isn't another %.128s here.",
+                              one_object);
                      act(actbuf, ch, NULL, NULL, TO_CHAR);
                      break;
                   }
@@ -638,7 +649,8 @@ void do_get(CHAR_DATA *ch, char *argument)
                }
             }
          }
-         if ((found == FALSE) && (found_one_obj == FALSE) && (found_money == FALSE) && (get_ok == FALSE))
+         if ((found == FALSE) && (found_one_obj == FALSE) && (found_money == FALSE) &&
+             (get_ok == FALSE))
          {
             send_to_char("I don't see what your looking for in this room.\n\r", ch);
             return;
@@ -692,7 +704,8 @@ void do_put(CHAR_DATA *ch, char *argument)
       act("I see no $T here.", ch, NULL, container_name, TO_CHAR);
       return;
    }
-   if ((container_obj->item_type != ITEM_CONTAINER) && (container_obj->item_type != ITEM_SPELL_MATRIX))
+   if ((container_obj->item_type != ITEM_CONTAINER) &&
+       (container_obj->item_type != ITEM_SPELL_MATRIX))
    {
       send_to_char("That's not a container.\n\r", ch);
       return;
@@ -773,11 +786,13 @@ void do_put(CHAR_DATA *ch, char *argument)
             }
             if (container_obj->item_type == ITEM_SPELL_MATRIX)
             {
-               if ((obj->item_type == ITEM_WEAPON) || (obj->item_type == ITEM_LIGHT) || (obj->item_type == ITEM_ARMOR))
+               if ((obj->item_type == ITEM_WEAPON) || (obj->item_type == ITEM_LIGHT) ||
+                   (obj->item_type == ITEM_ARMOR))
                {
                   OBJ_DATA *one_obj;
                   bool has_item = FALSE;
-                  for (one_obj = container_obj->first_in_carry_list; one_obj != NULL; one_obj = one_obj->next_in_carry_list)
+                  for (one_obj = container_obj->first_in_carry_list; one_obj != NULL;
+                       one_obj = one_obj->next_in_carry_list)
                   {
                      if (one_obj->item_type != ITEM_ENCHANTMENT)
                      {
@@ -787,22 +802,26 @@ void do_put(CHAR_DATA *ch, char *argument)
                   }
                   if (has_item)
                   {
-                     send_to_char("Spell Matrix containers may hold only 1 non-enchantment item.\n\r", ch);
+                     send_to_char(
+                         "Spell Matrix containers may hold only 1 non-enchantment item.\n\r", ch);
                      return;
                   }
                }
                else if (obj->item_type != ITEM_ENCHANTMENT)
                {
-                  send_to_char("Spell Matrix containers may hold only 1 non-enchantment item.\n\r", ch);
+                  send_to_char("Spell Matrix containers may hold only 1 non-enchantment item.\n\r",
+                               ch);
                   return;
                }
             }
 
             obj_from_char(obj);
             obj_to_obj(obj, container_obj);
-            sprintf(actbuf, "$n puts $p into $P%s.", ((container_obj->carried_by != NULL) ? "" : " ( in the room )"));
+            sprintf(actbuf, "$n puts $p into $P%s.",
+                    ((container_obj->carried_by != NULL) ? "" : " ( in the room )"));
             act(actbuf, ch, obj, container_obj, TO_ROOM);
-            sprintf(actbuf, "You put $p into $P%s.", ((container_obj->carried_by != NULL) ? "" : " ( in the room )"));
+            sprintf(actbuf, "You put $p into $P%s.",
+                    ((container_obj->carried_by != NULL) ? "" : " ( in the room )"));
 
             act(actbuf, ch, obj, container_obj, TO_CHAR);
             /*
@@ -1029,7 +1048,8 @@ void do_give(CHAR_DATA *ch, char *argument)
                sprintf(questbuf, "%s%s%d", ch->name, victim->pIndexData->guilds, 2);
                if ((get_quest(questbuf) != NULL) && (get_iquest(ch, questbuf) != NULL))
                {
-                  /* this code was suggested by Drylock@AR, to handle creating a hash key from a string + integer */
+                  /* this code was suggested by Drylock@AR, to handle creating a hash key from a
+                   * string + integer */
                   unsigned int iHash;
                   {
                      char *area_key;
@@ -1057,7 +1077,8 @@ void do_give(CHAR_DATA *ch, char *argument)
             }
 #endif
 
-            if ((quest || auto_quest) && IS_NPC(victim) && victim == quest_mob && obj == quest_object)
+            if ((quest || auto_quest) && IS_NPC(victim) && victim == quest_mob &&
+                obj == quest_object)
             {
                /*
                 * Then ch has recovered the quest object!!!!!
@@ -1101,7 +1122,6 @@ void do_fill(CHAR_DATA *ch, char *argument)
    OBJ_DATA *obj;
    OBJ_DATA *fountain;
    bool found;
-
 
    one_argument(argument, arg);
 
@@ -1561,20 +1581,21 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 {
    char buf[MSL];
 
-
    if (!IS_NPC(ch) && IS_SET(obj->extra_flags, ITEM_BUCKLER) && !can_use_skill(ch, gsn_two_handed))
    {
       send_to_char("You cannot wear two-handed weapons.\n\r", ch);
       return;
    }
 
-   if (!IS_NPC(ch) && IS_SET(obj->extra_flags, ITEM_BUCKLER) && !can_use_skill(ch, gsn_equip_buckler))
+   if (!IS_NPC(ch) && IS_SET(obj->extra_flags, ITEM_BUCKLER) &&
+       !can_use_skill(ch, gsn_equip_buckler))
    {
       send_to_char("You cannot wear bucklers.\n\r", ch);
       return;
    }
 
-   if (!IS_NPC(ch) && IS_SET(obj->extra_flags, ITEM_EXTRA_WAND) && !can_use_skill(ch, gsn_equip_wand))
+   if (!IS_NPC(ch) && IS_SET(obj->extra_flags, ITEM_EXTRA_WAND) &&
+       !can_use_skill(ch, gsn_equip_wand))
    {
       send_to_char("You cannot equip wands.\n\r", ch);
       return;
@@ -1594,7 +1615,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
       return;
    }
 
-if (obj->item_type == ITEM_TRIGGER && obj->value[0] == 6)
+   if (obj->item_type == ITEM_TRIGGER && obj->value[0] == 6)
    {
       /*
        * NOTE: you can't actually GET or WEAR a trigger item that triggers on get/wear. ZEN
@@ -1603,8 +1624,8 @@ if (obj->item_type == ITEM_TRIGGER && obj->value[0] == 6)
       return;
    }
 
-   int weight_class = (obj->weight+4)/5;
-   int max_weight = (get_curr_str(ch)/10)+1;
+   int weight_class = (obj->weight + 4) / 5;
+   int max_weight = (get_curr_str(ch) / 10) + 1;
 
    if (should_enforce_equip_restrictions(ch) && (weight_class > max_weight))
    {
@@ -1625,7 +1646,8 @@ if (obj->item_type == ITEM_TRIGGER && obj->value[0] == 6)
 
    if ((CAN_WEAR(obj, ITEM_WEAR_FINGER)) && (can_wear_at(ch, obj, WEAR_FINGER_L)))
    {
-      if (get_eq_char(ch, WEAR_FINGER_L) != NULL && get_eq_char(ch, WEAR_FINGER_R) != NULL && !remove_obj(ch, WEAR_FINGER_L, fReplace) && !remove_obj(ch, WEAR_FINGER_R, fReplace))
+      if (get_eq_char(ch, WEAR_FINGER_L) != NULL && get_eq_char(ch, WEAR_FINGER_R) != NULL &&
+          !remove_obj(ch, WEAR_FINGER_L, fReplace) && !remove_obj(ch, WEAR_FINGER_R, fReplace))
          return;
 
       if (get_eq_char(ch, WEAR_FINGER_L) == NULL)
@@ -1649,7 +1671,8 @@ if (obj->item_type == ITEM_TRIGGER && obj->value[0] == 6)
 
    if ((CAN_WEAR(obj, ITEM_WEAR_NECK)) && (can_wear_at(ch, obj, WEAR_NECK_1)))
    {
-      if (get_eq_char(ch, WEAR_NECK_1) != NULL && get_eq_char(ch, WEAR_NECK_2) != NULL && !remove_obj(ch, WEAR_NECK_1, fReplace) && !remove_obj(ch, WEAR_NECK_2, fReplace))
+      if (get_eq_char(ch, WEAR_NECK_1) != NULL && get_eq_char(ch, WEAR_NECK_2) != NULL &&
+          !remove_obj(ch, WEAR_NECK_1, fReplace) && !remove_obj(ch, WEAR_NECK_2, fReplace))
          return;
 
       if (get_eq_char(ch, WEAR_NECK_1) == NULL)
@@ -1755,7 +1778,8 @@ if (obj->item_type == ITEM_TRIGGER && obj->value[0] == 6)
 
    if ((CAN_WEAR(obj, ITEM_WEAR_WRIST)) && (can_wear_at(ch, obj, WEAR_WRIST_L)))
    {
-      if (get_eq_char(ch, WEAR_WRIST_L) != NULL && get_eq_char(ch, WEAR_WRIST_R) != NULL && !remove_obj(ch, WEAR_WRIST_L, fReplace) && !remove_obj(ch, WEAR_WRIST_R, fReplace))
+      if (get_eq_char(ch, WEAR_WRIST_L) != NULL && get_eq_char(ch, WEAR_WRIST_R) != NULL &&
+          !remove_obj(ch, WEAR_WRIST_L, fReplace) && !remove_obj(ch, WEAR_WRIST_R, fReplace))
          return;
 
       if (get_eq_char(ch, WEAR_WRIST_L) == NULL)
@@ -1792,7 +1816,8 @@ if (obj->item_type == ITEM_TRIGGER && obj->value[0] == 6)
 
    if ((CAN_WEAR(obj, ITEM_WEAR_EAR)) && (can_wear_at(ch, obj, WEAR_EAR_L)))
    {
-      if (get_eq_char(ch, WEAR_EAR_L) != NULL && get_eq_char(ch, WEAR_EAR_R) != NULL && !remove_obj(ch, WEAR_EAR_L, fReplace) && !remove_obj(ch, WEAR_EAR_R, fReplace))
+      if (get_eq_char(ch, WEAR_EAR_L) != NULL && get_eq_char(ch, WEAR_EAR_R) != NULL &&
+          !remove_obj(ch, WEAR_EAR_L, fReplace) && !remove_obj(ch, WEAR_EAR_R, fReplace))
          return;
       if (get_eq_char(ch, WEAR_EAR_L) == NULL)
       {
@@ -1958,8 +1983,10 @@ if (obj->item_type == ITEM_TRIGGER && obj->value[0] == 6)
             return;
          }
 
-         if ((get_eq_char(ch, WEAR_HOLD_HAND_L) != NULL && !remove_obj(ch, WEAR_HOLD_HAND_L, fReplace)) ||
-             (get_eq_char(ch, WEAR_HOLD_HAND_R) != NULL && !remove_obj(ch, WEAR_HOLD_HAND_R, fReplace)))
+         if ((get_eq_char(ch, WEAR_HOLD_HAND_L) != NULL &&
+              !remove_obj(ch, WEAR_HOLD_HAND_L, fReplace)) ||
+             (get_eq_char(ch, WEAR_HOLD_HAND_R) != NULL &&
+              !remove_obj(ch, WEAR_HOLD_HAND_R, fReplace)))
          {
             act("You cannot remove what is in your hands!", ch, obj, NULL, TO_CHAR);
             return;
@@ -1995,7 +2022,10 @@ if (obj->item_type == ITEM_TRIGGER && obj->value[0] == 6)
             return;
          }
 
-         if (get_eq_char(ch, WEAR_HOLD_HAND_L) != NULL && get_eq_char(ch, WEAR_HOLD_HAND_R) != NULL && !remove_obj(ch, WEAR_HOLD_HAND_L, fReplace) && !remove_obj(ch, WEAR_HOLD_HAND_R, fReplace))
+         if (get_eq_char(ch, WEAR_HOLD_HAND_L) != NULL &&
+             get_eq_char(ch, WEAR_HOLD_HAND_R) != NULL &&
+             !remove_obj(ch, WEAR_HOLD_HAND_L, fReplace) &&
+             !remove_obj(ch, WEAR_HOLD_HAND_R, fReplace))
             return;
 
          if (get_eq_char(ch, WEAR_HOLD_HAND_L) == NULL)
@@ -2070,7 +2100,8 @@ void do_wear(CHAR_DATA *ch, char *argument)
                continue;
             if (location == WEAR_BUCKLER && get_eq_char(ch, location) == NULL)
                continue;
-            if ((location == WEAR_HOLD_HAND_R || location == WEAR_HOLD_HAND_L) && get_eq_char(ch, WEAR_TWO_HANDED) != NULL)
+            if ((location == WEAR_HOLD_HAND_R || location == WEAR_HOLD_HAND_L) &&
+                get_eq_char(ch, WEAR_TWO_HANDED) != NULL)
                continue;
             else if ((worn = get_eq_char(ch, location)) != NULL)
             {
@@ -2082,7 +2113,8 @@ void do_wear(CHAR_DATA *ch, char *argument)
                sprintf(colbuf, "%s", "@@.");
                sprintf(eqbuf, "%s", "@@dNothing@@N");
             }
-            snprintf(catbuf, sizeof(catbuf), "%.8s%25.25s@@N %-*.*s\n\r", colbuf, where_name[location], ccode_len(eqbuf, 40), 200, eqbuf);
+            snprintf(catbuf, sizeof(catbuf), "%.8s%25.25s@@N %-*.*s\n\r", colbuf,
+                     where_name[location], ccode_len(eqbuf, 40), 200, eqbuf);
             strcat(outbuf, catbuf);
          }
       }
@@ -2184,7 +2216,8 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
    argument = one_argument(argument, arg2);
    if (arg[0] == '\0' || !str_cmp(arg, ch->name))
    {
-      act("@@N$n offers $mself to @@e" sacgodname "@@N, who graciously declines.", ch, NULL, NULL, TO_ROOM);
+      act("@@N$n offers $mself to @@e" sacgodname "@@N, who graciously declines.", ch, NULL, NULL,
+          TO_ROOM);
       send_to_char("@@e" sacgodname "@@N appreciates your offer and may accept it later.", ch);
       return;
    }
@@ -2263,7 +2296,8 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
          obj_value *= .4;
       else if (plevel > 80)
          obj_value *= .6;
-      if ((obj->item_type == ITEM_FOOD) || (obj->item_type == ITEM_BEACON) || (obj->item_type == ITEM_SOUL))
+      if ((obj->item_type == ITEM_FOOD) || (obj->item_type == ITEM_BEACON) ||
+          (obj->item_type == ITEM_SOUL))
          obj_value = 0;
       ch->sentence -= obj_value;
       if (ch->sentence > 0)
@@ -2280,7 +2314,8 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
          ch->sentence = 0;
          REMOVE_BIT(ch->act, PLR_KILLER);
          REMOVE_BIT(ch->act, PLR_THIEF);
-         send_to_char("Your debt to society has been paid!  Please more careful in the future.\n\r", ch);
+         send_to_char("Your debt to society has been paid!  Please more careful in the future.\n\r",
+                      ch);
          sprintf(monbuf, "%s has had a WANTED flag removed by the judge.\n\r", ch->name);
          monitor_chan(monbuf, MONITOR_GEN_MORT);
       }
@@ -2329,7 +2364,8 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
          send_to_char(buf, ch);
          act("@@N$n sacrifices $p to @@e" evilgodname "@@N.", ch, obj, NULL, TO_ROOM);
       }
-      if (obj->item_type == ITEM_BEACON || obj->item_type == ITEM_LIGHT || obj->item_type == ITEM_PORTAL || obj->item_type == ITEM_FOOD)
+      if (obj->item_type == ITEM_BEACON || obj->item_type == ITEM_LIGHT ||
+          obj->item_type == ITEM_PORTAL || obj->item_type == ITEM_FOOD)
          align_change /= 10;
       ch->alignment += align_direction * align_change;
       ch->alignment = URANGE(-1000, ch->alignment, 1000);
@@ -2490,9 +2526,7 @@ void do_brandish(CHAR_DATA *ch, char *argument)
                continue;
             break;
          case TAR_CHAR_OFFENSIVE:
-            if (IS_NPC(ch) ? IS_NPC(vch) : !IS_NPC(vch)      ? TRUE
-                                       : vch->master != NULL ? TRUE
-                                                             : FALSE)
+            if (IS_NPC(ch) ? IS_NPC(vch) : !IS_NPC(vch) ? TRUE : vch->master != NULL ? TRUE : FALSE)
                continue;
             break;
          case TAR_CHAR_DEFENSIVE:
@@ -2534,8 +2568,9 @@ void do_brandish(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if( ( ( wand = get_eq_char( ch, WEAR_HOLD_HAND_L ) ) == NULL ) || ( wand->item_type != ITEM_WAND ) )
-      if( ( ( wand = get_eq_char( ch, WEAR_HOLD_HAND_R ) ) == NULL ) || ( wand->item_type != ITEM_WAND ) )
+   if( ( ( wand = get_eq_char( ch, WEAR_HOLD_HAND_L ) ) == NULL ) || ( wand->item_type != ITEM_WAND
+) ) if( ( ( wand = get_eq_char( ch, WEAR_HOLD_HAND_R ) ) == NULL ) || ( wand->item_type != ITEM_WAND
+) )
       {
          send_to_char( "You are not holding a wand!\n\r", ch );
          return;
@@ -2558,7 +2593,8 @@ void do_brandish(CHAR_DATA *ch, char *argument)
    }
    else
    {
-      if( ( victim = get_char_room( ch, arg ) ) == NULL && ( obj = get_obj_here( ch, arg ) ) == NULL )
+      if( ( victim = get_char_room( ch, arg ) ) == NULL && ( obj = get_obj_here( ch, arg ) ) == NULL
+)
       {
          send_to_char( "You can't find it.\n\r", ch );
          return;
@@ -2613,7 +2649,6 @@ void do_steal(CHAR_DATA *ch, char *argument)
       return;
    }
 
-
    argument = one_argument(argument, arg1);
    argument = one_argument(argument, arg2);
    if (arg1[0] == '\0' || arg2[0] == '\0')
@@ -2641,8 +2676,7 @@ void do_steal(CHAR_DATA *ch, char *argument)
    }
 
    WAIT_STATE(ch, skill_table[gsn_steal].beats);
-   chance = IS_NPC(ch) ? (get_psuedo_level(ch) / 4)
-                       : ((get_curr_dex(ch) * 3));
+   chance = IS_NPC(ch) ? (get_psuedo_level(ch) / 4) : ((get_curr_dex(ch) * 3));
    chance = chance - ((get_psuedo_level(victim) - get_psuedo_level(ch)) / 2);
    if ((!IS_NPC(ch) && !IS_NPC(victim)) && (victim->adept_level > 0) && (ch->adept_level <= 0))
       chance = chance - 25;
@@ -2661,7 +2695,8 @@ void do_steal(CHAR_DATA *ch, char *argument)
       send_to_char("Oops.\n\r", ch);
       act("$n tried to steal from you.\n\r", ch, NULL, victim, TO_VICT);
       act("$n tried to steal from $N.\n\r", ch, NULL, victim, TO_NOTVICT);
-      if (!IS_NPC(ch) && !IS_NPC(victim) && IS_SET(ch->pcdata->pflags, PFLAG_PKOK) && IS_SET(victim->pcdata->pflags, PFLAG_PKOK))
+      if (!IS_NPC(ch) && !IS_NPC(victim) && IS_SET(ch->pcdata->pflags, PFLAG_PKOK) &&
+          IS_SET(victim->pcdata->pflags, PFLAG_PKOK))
          return;
       sprintf(buf, "%s is a bloody thief!", ch->name);
       do_yell(victim, buf);
@@ -2709,7 +2744,8 @@ void do_steal(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!can_drop_obj(ch, obj) || IS_SET(obj->extra_flags, ITEM_INVENTORY) || obj->level > ch->level + 10 || (obj->wear_loc > -1))
+   if (!can_drop_obj(ch, obj) || IS_SET(obj->extra_flags, ITEM_INVENTORY) ||
+       obj->level > ch->level + 10 || (obj->wear_loc > -1))
    {
       send_to_char("You can't pry it away.\n\r", ch);
       return;
@@ -2817,7 +2853,8 @@ void check_guards(CHAR_DATA *ch)
    CHAR_DATA *guard;
    char buf[MAX_STRING_LENGTH];
    for (guard = first_char; guard != NULL; guard = guard->next)
-      if (IS_NPC(guard) && (guard->in_room->area == ch->in_room->area) && guard->spec_fun != 0 && !str_cmp("spec_policeman", rev_spec_lookup(guard->spec_fun)) && guard->hunting == NULL)
+      if (IS_NPC(guard) && (guard->in_room->area == ch->in_room->area) && guard->spec_fun != 0 &&
+          !str_cmp("spec_policeman", rev_spec_lookup(guard->spec_fun)) && guard->hunting == NULL)
       {
          if (set_hunt(guard, NULL, ch, NULL, 0, HUNT_INFORM | HUNT_MERC | HUNT_CR))
          {
@@ -2907,13 +2944,15 @@ void do_buy(CHAR_DATA *ch, char *argument)
       option = find_quartermaster_emblem_option(arg, arg2);
       if (option == NULL)
       {
-         send_to_char("Quartermaster offers: common/magic/rare with caster/melee/tank styles.\n\r", ch);
+         send_to_char("Quartermaster offers: common/magic/rare with caster/melee/tank styles.\n\r",
+                      ch);
          return;
       }
 
       if (!quartermaster_can_afford_option(ch, option))
       {
-         send_to_char("You do not have enough invasion points or invasion rewards for that emblem.\n\r", ch);
+         send_to_char(
+             "You do not have enough invasion points or invasion rewards for that emblem.\n\r", ch);
          return;
       }
 
@@ -2926,7 +2965,9 @@ void do_buy(CHAR_DATA *ch, char *argument)
       obj = create_quartermaster_emblem(ch, option);
       if (obj == NULL)
       {
-         send_to_char("The quartermaster frowns and says: 'I cannot prepare that emblem right now.'\n\r", ch);
+         send_to_char(
+             "The quartermaster frowns and says: 'I cannot prepare that emblem right now.'\n\r",
+             ch);
          return;
       }
 
@@ -3130,13 +3171,14 @@ void do_list(CHAR_DATA *ch, char *argument)
             {
                found = TRUE;
                safe_strcat(MAX_STRING_LENGTH, buf1,
-                           "\n\r@@g[@@yLevel@@g]       @@yPet@@g                           @@yPrice  ( Approximate )@@N \n\r");
+                           "\n\r@@g[@@yLevel@@g]       @@yPet@@g                           "
+                           "@@yPrice  ( Approximate )@@N \n\r");
             }
             stopcounter++;
             rounded_cost = 10 * pet->level * pet->level;
             sprintf(costbuf, "%d", rounded_cost);
-            snprintf(buf, sizeof(buf), "[ @@W%3d@@g]  @@c%-*.*s@@g  @@W%.32s@@N \n\r", pet->level, ccode_len(pet->short_descr, 30),
-                     200, capitalize(pet->short_descr), costbuf);
+            snprintf(buf, sizeof(buf), "[ @@W%3d@@g]  @@c%-*.*s@@g  @@W%.32s@@N \n\r", pet->level,
+                     ccode_len(pet->short_descr, 30), 200, capitalize(pet->short_descr), costbuf);
             safe_strcat(MAX_STRING_LENGTH, buf1, buf);
             if (stopcounter > 45)
             {
@@ -3158,18 +3200,19 @@ void do_list(CHAR_DATA *ch, char *argument)
       one_argument(argument, arg);
       for (obj = keeper->first_carry; obj; obj = obj->next_in_carry_list)
       {
-         if (obj->wear_loc == WEAR_NONE && can_see_obj(ch, obj) && (cost = get_cost(keeper, obj)) > 0 && (arg[0] == '\0' || is_name(arg, obj->name)))
+         if (obj->wear_loc == WEAR_NONE && can_see_obj(ch, obj) &&
+             (cost = get_cost(keeper, obj)) > 0 && (arg[0] == '\0' || is_name(arg, obj->name)))
          {
             if (!found)
             {
                found = TRUE;
                safe_strcat(MAX_STRING_LENGTH, buf1,
-                           "\n\r@@g[@@yLvl@@g]       @@yItem@@g                           @@yPrice@@N \n\r");
+                           "\n\r@@g[@@yLvl@@g]       @@yItem@@g                           "
+                           "@@yPrice@@N \n\r");
             }
             stopcounter++;
-            sprintf(buf, "@@g[%s%3d@@g]  @@c%-*s@@g      @@W%d@@N\n\r", "@@a",
-                    obj->level, ccode_len(obj->short_descr, 30), capitalize(obj->short_descr),
-                    cost);
+            sprintf(buf, "@@g[%s%3d@@g]  @@c%-*s@@g      @@W%d@@N\n\r", "@@a", obj->level,
+                    ccode_len(obj->short_descr, 30), capitalize(obj->short_descr), cost);
             safe_strcat(MAX_STRING_LENGTH, buf1, buf);
             if (stopcounter > 45)
             {
@@ -3190,7 +3233,9 @@ void do_list(CHAR_DATA *ch, char *argument)
       }
 
       send_to_char(buf1, ch);
-      send_to_char("@@mMagenta@@N Level numbers indicate remort items.\n\rYou may also type list <keyword>.\n\r", ch);
+      send_to_char("@@mMagenta@@N Level numbers indicate remort items.\n\rYou may also type list "
+                   "<keyword>.\n\r",
+                   ch);
       return;
    }
 }
@@ -3688,42 +3733,19 @@ void do_appraise(CHAR_DATA *ch, char *argument)
             act( "$p doesn't appear to do anything at all, really.", ch, obj, NULL, TO_CHAR );
             break;
          case ITEM_DRINK_CON:
-            sprintf( buf, "$p looks like it has some %s in it.", liq_table[obj->value[2]].liq_name );
-            act( buf, ch, obj, NULL, TO_CHAR );
-            if( obj->value[3] != 0 )
-               send_to_char( "It looks poisoned!\n\r", ch );
-            break;
-         case ITEM_KEY:
-            act( "$p looks like it unlocks something.", ch, obj, NULL, TO_CHAR );
-            break;
-         case ITEM_FOOD:
-            foo = obj->value[0];
-            if( foo < 5 )
-               sprintf( buf, "$p couldn't feed an ant!" );
-            else if( foo < 10 )
-               sprintf( buf, "$p would fill a very small stomach." );
-            else if( foo < 20 )
-               sprintf( buf, "$p looks quite filling." );
-            else if( foo < 40 )
-               sprintf( buf, "$p could fulfill most hungers." );
-            else
-               sprintf( buf, "$p looks VERY filling!" );
-            act( buf, ch, obj, NULL, TO_CHAR );
-            if( obj->value[3] != 0 )
-               send_to_char( "It looks poisoned!\n\r", ch );
-            break;
-         case ITEM_MONEY:
-            act( "$p is MONEY!!!", ch, obj, NULL, TO_CHAR );
-            break;
-         case ITEM_BOAT:
-            act( "$p looks like a sturdy means of travelling across water.", ch, obj, NULL, TO_CHAR );
-            break;
-         case ITEM_CORPSE_PC:
-         case ITEM_CORPSE_NPC:
-            act( "$p is a corpse.  Anything worth stealing in it??", ch, obj, NULL, TO_CHAR );
-            break;
-         case ITEM_FOUNTAIN:
-            act( "$p looks like a thirst-quenching fountain.", ch, obj, NULL, TO_CHAR );
+            sprintf( buf, "$p looks like it has some %s in it.", liq_table[obj->value[2]].liq_name
+      ); act( buf, ch, obj, NULL, TO_CHAR ); if( obj->value[3] != 0 ) send_to_char( "It looks
+      poisoned!\n\r", ch ); break; case ITEM_KEY: act( "$p looks like it unlocks something.", ch,
+      obj, NULL, TO_CHAR ); break; case ITEM_FOOD: foo = obj->value[0]; if( foo < 5 ) sprintf( buf,
+      "$p couldn't feed an ant!" ); else if( foo < 10 ) sprintf( buf, "$p would fill a very small
+      stomach." ); else if( foo < 20 ) sprintf( buf, "$p looks quite filling." ); else if( foo < 40
+      ) sprintf( buf, "$p could fulfill most hungers." ); else sprintf( buf, "$p looks VERY
+      filling!" ); act( buf, ch, obj, NULL, TO_CHAR ); if( obj->value[3] != 0 ) send_to_char( "It
+      looks poisoned!\n\r", ch ); break; case ITEM_MONEY: act( "$p is MONEY!!!", ch, obj, NULL,
+      TO_CHAR ); break; case ITEM_BOAT: act( "$p looks like a sturdy means of travelling across
+      water.", ch, obj, NULL, TO_CHAR ); break; case ITEM_CORPSE_PC: case ITEM_CORPSE_NPC: act( "$p
+      is a corpse.  Anything worth stealing in it??", ch, obj, NULL, TO_CHAR ); break; case
+      ITEM_FOUNTAIN: act( "$p looks like a thirst-quenching fountain.", ch, obj, NULL, TO_CHAR );
             break;
          case ITEM_BOARD:
             act( "$p looks good for leaving messages on.", ch, obj, NULL, TO_CHAR );
@@ -3850,7 +3872,8 @@ void do_auction(CHAR_DATA *ch, char *argument)
                good_buyer = TRUE;
          }
 
-         sprintf(buf, "The auction of %s has been stopped by an @@mImmortal@@N.\n\r", auction_item->short_descr);
+         sprintf(buf, "The auction of %s has been stopped by an @@mImmortal@@N.\n\r",
+                 auction_item->short_descr);
          if (!str_cmp(arg, "take"))
          {
             char buf2[MSL];
@@ -3898,8 +3921,8 @@ void do_auction(CHAR_DATA *ch, char *argument)
       send_to_char(buf, ch);
       sprintf(buf, "Item was offered for sale by %s.\n\r", auction_owner->name);
       send_to_char(buf, ch);
-      sprintf(buf, "The estimated value is %d, and last bid was for %d.\n\r",
-              auction_item->cost, auction_bid);
+      sprintf(buf, "The estimated value is %d, and last bid was for %d.\n\r", auction_item->cost,
+              auction_bid);
       send_to_char(buf, ch);
       sprintf(buf, "The reserve price is @@W%d @@N.\n\r", auction_reserve);
       send_to_char(buf, ch);
@@ -3920,7 +3943,8 @@ void do_auction(CHAR_DATA *ch, char *argument)
       reserve = 0;
    if (reserve * .1 > ch->gold)
    {
-      send_to_char("You don't have enough gold to cover the auction fee at that reserve price!\n\r", ch);
+      send_to_char("You don't have enough gold to cover the auction fee at that reserve price!\n\r",
+                   ch);
       return;
    }
 
@@ -3967,7 +3991,8 @@ void do_auction(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   sprintf(buf, "You have placed %s up for auction.  %d @@Whas been charged for these services.\n\r",
+   sprintf(buf,
+           "You have placed %s up for auction.  %d @@Whas been charged for these services.\n\r",
            auction_item->name, (int)(reserve * 0.1));
    send_to_char(buf, ch);
    auction_owner = ch;
@@ -4023,7 +4048,8 @@ void do_connect(CHAR_DATA *ch, char *argument)
     * check to see if the pieces connect
     */
 
-   if ((first_ob->value[0] == second_ob->pIndexData->vnum) || (first_ob->value[1] == second_ob->pIndexData->vnum))
+   if ((first_ob->value[0] == second_ob->pIndexData->vnum) ||
+       (first_ob->value[1] == second_ob->pIndexData->vnum))
    /*
     * good connection
     */
@@ -4032,16 +4058,19 @@ void do_connect(CHAR_DATA *ch, char *argument)
       extract_obj(first_ob);
       extract_obj(second_ob);
       obj_to_char(new_ob, ch);
-      act("$n jiggles some pieces together, and suddenly they snap in place, creating $p! Perfect Fit!!", ch, new_ob,
-          NULL, TO_ROOM);
-      act("You jiggle the pieces together, and suddenly they snap into place, creating $p! Nice job!", ch, new_ob, NULL,
-          TO_CHAR);
+      act("$n jiggles some pieces together, and suddenly they snap in place, creating $p! Perfect "
+          "Fit!!",
+          ch, new_ob, NULL, TO_ROOM);
+      act("You jiggle the pieces together, and suddenly they snap into place, creating $p! Nice "
+          "job!",
+          ch, new_ob, NULL, TO_CHAR);
    }
    else
    {
-      act("$n jiggles some pieces together, but can't seem to make them connect.", ch, NULL, NULL, TO_ROOM);
-      act("You try to fit them together every which way, but they just don't want to fit together.", ch, NULL, NULL,
-          TO_CHAR);
+      act("$n jiggles some pieces together, but can't seem to make them connect.", ch, NULL, NULL,
+          TO_ROOM);
+      act("You try to fit them together every which way, but they just don't want to fit together.",
+          ch, NULL, NULL, TO_CHAR);
       return;
    }
 

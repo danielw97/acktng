@@ -161,3 +161,13 @@ The Forest of Confusion (2339–2538), Verdant Depths (2739–2938), Withered De
 | From | Dir | To | Notes |
 |------|-----|----|-------|
 | `thornwood` 441 | south | `graveyard` 11085 | Thornwood entry room → Graveyard. Exit was removed from `thornwood.are` because `graveyard.are` is not yet built. Requires a future graveyard area file with a reverse exit `11085 → 441`. |
+
+**Note:** All Cinderteeth links below are Planned status. The `cinderteeth_mountains.are` area (vnums 6124-6723) is not yet built. `confusn` 2519/2521/2524 do not yet exist in `confusn.are` and must be added. GNF rooms 4179/4199/4219 exist in the plan but need `west` exits added. `sunken_sanctum` 2266 exists and needs its TBD exit resolved to `up` → 6552.
+
+| `cinderteeth` 6124 | south | `confusn` 2519 | Cinderteeth Threshold Post Road ↔ Forest of Confusion Northwestern Treeline Approach (primary road). Both sides must be authored simultaneously. `confusn` 2519 does not yet exist in `confusn.are`. |
+| `cinderteeth` 6153 | south | `confusn` 2521 | Cinderteeth Old Caravan Ghost Road ↔ Forest of Confusion Northern Forest Caravan Track (historic route). Both sides must be authored simultaneously. `confusn` 2521 does not yet exist in `confusn.are`. |
+| `cinderteeth` 6168 | south | `confusn` 2524 | Cinderteeth Southern Foothills Descent ↔ Forest of Confusion Northern Scree Drainage Path (rough terrain third route). Both sides must be authored simultaneously. `confusn` 2524 does not yet exist in `confusn.are`. |
+| `cinderteeth` 6552 | down | `sunken_sanctum` 2266 | Cinderteeth Sanctum Scar — Collapse Edge ↔ Sunken Sanctum The Collapsed Entrance. `sunken_sanctum_plan.md` room 2266 designated TBD for this link; destination is now confirmed as 6552. Both sides must be authored simultaneously. |
+| `cinderteeth` 6627 | east | `great_northern_forest` 4179 | Cinderteeth Northeastern Ridge Approach — Lower ↔ GNF Northwestern Crown Ridgeline South (y=22, x=0). Both sides must be authored simultaneously. |
+| `cinderteeth` 6633 | east | `great_northern_forest` 4199 | Cinderteeth Northeastern Ridge Approach — Mid ↔ GNF Northwestern Crown Ridgeline Mid (y=23, x=0). Both sides must be authored simultaneously. |
+| `cinderteeth` 6639 | east | `great_northern_forest` 4219 | Cinderteeth Northeastern Ridge Approach — Upper ↔ GNF Northwestern Crown Westernmost Point (y=24, x=0). Both sides must be authored simultaneously. |

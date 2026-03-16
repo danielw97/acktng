@@ -36,15 +36,18 @@
 CHAR_DATA *get_quest_target args((int min_level, int max_level));
 CHAR_DATA *get_quest_giver args((int min_level, int max_level));
 OBJ_DATA *load_quest_object args((CHAR_DATA * target));
-int quest_is_valid_crusade_mobile args((CHAR_DATA *target, int min_level, int max_level));
+int quest_is_valid_crusade_mobile args((CHAR_DATA * target, int min_level, int max_level));
 void clear_crusade args((void));
 sh_int quest_tier_from_level args((int mob_level));
-void quest_set_crusade_level_range_for_tier args((sh_int tier, int *minimum_level, int *maximum_level));
-void quest_set_effective_crusade_level_range args((sh_int tier, int highest_level_in_range, int *minimum_level, int *maximum_level));
-int crusade_level_cap_for_range args((int range_minimum, int range_maximum, int highest_level_in_range));
+void quest_set_crusade_level_range_for_tier args((sh_int tier, int *minimum_level,
+                                                  int *maximum_level));
+void quest_set_effective_crusade_level_range args((sh_int tier, int highest_level_in_range,
+                                                   int *minimum_level, int *maximum_level));
+int crusade_level_cap_for_range args((int range_minimum, int range_maximum,
+                                      int highest_level_in_range));
 
-static void format_quest_message(char *dest, const char *message,
-                                 const char *value1, const char *value2)
+static void format_quest_message(char *dest, const char *message, const char *value1,
+                                 const char *value2)
 {
    const char *scan;
    char *out;
@@ -86,7 +89,8 @@ static void format_quest_message(char *dest, const char *message,
    *out = '\0';
 }
 
-void quest_set_crusade_level_range_for_mob_level(int mob_level, int *minimum_level, int *maximum_level)
+void quest_set_crusade_level_range_for_mob_level(int mob_level, int *minimum_level,
+                                                 int *maximum_level)
 {
    int resolved_level;
    sh_int tier;
@@ -133,10 +137,8 @@ void quest_set_crusade_level_range_for_tier(sh_int tier, int *minimum_level, int
    *maximum_level = 170;
 }
 
-void quest_set_effective_crusade_level_range(sh_int tier,
-                                             int highest_level_in_range,
-                                             int *minimum_level,
-                                             int *maximum_level)
+void quest_set_effective_crusade_level_range(sh_int tier, int highest_level_in_range,
+                                             int *minimum_level, int *maximum_level)
 {
    int capped_max;
 
@@ -162,9 +164,7 @@ int crusade_level_cap_for_range(int range_minimum, int range_maximum, int highes
    return cap_level;
 }
 
-void quest_note_player_crusade_range(int pseudo_level,
-                                     int *highest_mortal,
-                                     int *highest_remortal,
+void quest_note_player_crusade_range(int pseudo_level, int *highest_mortal, int *highest_remortal,
                                      int *highest_adept)
 {
    if ((highest_mortal == NULL) || (highest_remortal == NULL) || (highest_adept == NULL))
@@ -199,7 +199,6 @@ sh_int quest_resolve_crusade_personality(sh_int personality, int mob_level)
    return quest_tier_from_level(resolved_level);
 }
 
-
 /* 17 messages, organised by blocks for each personality
    indented messages are for when the target mob gets killed  */
 struct qmessage_type
@@ -209,27 +208,51 @@ struct qmessage_type
 };
 
 const struct qmessage_type qmessages[4][17] = {
-    {{"", ""}, {"", ""}, {"", ""}, {"", ""}, {"", ""}, {"", ""}, {"", ""}, {"", ""}, {"", ""}, {"", ""}, {"", ""}, {"", ""}, {"", ""}, {"", ""}, {"", ""}, {"", ""}, {"", ""}},
+    {{"", ""},
+     {"", ""},
+     {"", ""},
+     {"", ""},
+     {"", ""},
+     {"", ""},
+     {"", ""},
+     {"", ""},
+     {"", ""},
+     {"", ""},
+     {"", ""},
+     {"", ""},
+     {"", ""},
+     {"", ""},
+     {"", ""},
+     {"", ""},
+     {"", ""}},
     {{"@@aOh my! My %s @@ahas been stolen from me, and I am too young to find it!", ""},
-     {"@@aWould someone please search for my %s@@a? I'm sure that it will be much too hard for me to find.", ""},
+     {"@@aWould someone please search for my %s@@a? I'm sure that it will be much too hard for me "
+      "to find.",
+      ""},
      {"@@aWhat will I do without my %s@@a?", ""},
      {"@@aCan't anybody find my %s @@afor me?", ""},
      {"@@aHelp me! My %s @@ais still missing!", ""},
      {"@@aKeep searching for my %s@@a, and i'll ask my mom if she knows who stole it!", ""},
      {"@@aDoes anyone know who stole my %s@@a?", ""},
-     {"@@aMy mom says %s@@a stole my %s@@a. I know it is too hard for me to get back. Oh my, what will I do?",
+     {"@@aMy mom says %s@@a stole my %s@@a. I know it is too hard for me to get back. Oh my, what "
+      "will I do?",
       "@@aYeay!! It looks like whoever stole my %s @@ais now dead!! Thank you very much!"},
      {"@@aPlease, can you go kill %s@@a? I need my %s@@a!! I can't sleep without it!!",
       "@@aWell, thank you for killing the nasty thief, but can you please return my %s @@ato me?"},
-     {"@@aMy mom says %s@@a stole my %s@@a. I know it is too hard for me to get back. Oh my, what will I do?",
+     {"@@aMy mom says %s@@a stole my %s@@a. I know it is too hard for me to get back. Oh my, what "
+      "will I do?",
       "@@aYeay!! It looks like whoever stole my %s @@ais now dead!! Thank you very much!"},
-     {"@@aIt's time for my nap now, and %s still has my %s@@a!! Can anyone please get it back for me?",
+     {"@@aIt's time for my nap now, and %s still has my %s@@a!! Can anyone please get it back for "
+      "me?",
       "@@aPlease, time is running out! Return my %s @@ato me!"},
-     {"@@a%s@@a is a real meanie for stealing my %s@@a! Can you pretty pretty pretty please get it back for me?",
+     {"@@a%s@@a is a real meanie for stealing my %s@@a! Can you pretty pretty pretty please get it "
+      "back for me?",
       "@@aPlease, time is running out! Return my %s @@ato me!"},
-     {"@@aIt's time for my nap now, and %s still has my %s@@a!! Can anyone please get it back for me?",
+     {"@@aIt's time for my nap now, and %s still has my %s@@a!! Can anyone please get it back for "
+      "me?",
       "@@aPlease, time is running out! Return my %s @@ato me!"},
-     {"@@aOh my, I'll never get up to watch cartoons tomorrow now!  %s @@ais still holding my %s@@a ransom, and I need it for my nap!",
+     {"@@aOh my, I'll never get up to watch cartoons tomorrow now!  %s @@ais still holding my "
+      "%s@@a ransom, and I need it for my nap!",
       "@@aHow can I sleep without my %s@@a?"},
      {"@@aI give up! %s @@acan keep my %s @@afor all I care! I didn't want to take a nap, anyway!",
       "@@aI give up! I never want to see my %s @@aagain!"},
@@ -245,24 +268,35 @@ const struct qmessage_type qmessages[4][17] = {
      {"I guess I should try and find my %s@@l, but I really don't feel like it.", ""},
      {"If anyone has an extra %s@@l, I might be willing to reward them for it.", ""},
      {"Doesn't anyone out there know where to find a %s@@l?", ""},
-     {"Hmm, maybe %s@@l knew something I didn't, and thought it was a good idea to steal my %s@@l. Maybe he could use it, I know I can't.",
+     {"Hmm, maybe %s@@l knew something I didn't, and thought it was a good idea to steal my %s@@l. "
+      "Maybe he could use it, I know I can't.",
       "I guess my %s @@ldidn't help him much, since he is now dead!  I do miss it though."},
-     {"Hmm, maybe it IS worth something.  Could someone go kill %s@@l and get my %s@@l back for me?",
+     {"Hmm, maybe it IS worth something.  Could someone go kill %s@@l and get my %s@@l back for "
+      "me?",
       "I guess my %s @@ldidn't help him much, since he is now dead!  I do miss it though."},
-     {"I would pay a lot if someone would kill %s @@land get my %s@@l back. I don't really know where it went.",
-      "Even though it's not worth very much, my %s @@lis kind of important to me. Oh, well, guess I will never see it again."},
-     {"Hmm, maybe it IS worth something.  Could someone go kill %s@@l and get my %s@@l back for me?",
+     {"I would pay a lot if someone would kill %s @@land get my %s@@l back. I don't really know "
+      "where it went.",
+      "Even though it's not worth very much, my %s @@lis kind of important to me. Oh, well, guess "
+      "I will never see it again."},
+     {"Hmm, maybe it IS worth something.  Could someone go kill %s@@l and get my %s@@l back for "
+      "me?",
       "I guess my %s @@ldidn't help him much, since he is now dead!  I do miss it though."},
-     {"I would pay a lot if someone would kill %s @@land get my %s@@l back. I don't really know where it went.",
-      "Even though it's not worth very much, my %s @@lis kind of important to me. Oh, well, guess I will never see it again."},
+     {"I would pay a lot if someone would kill %s @@land get my %s@@l back. I don't really know "
+      "where it went.",
+      "Even though it's not worth very much, my %s @@lis kind of important to me. Oh, well, guess "
+      "I will never see it again."},
      {"Oh well, since no one will help me, I guess %s @@lcan keep my %s@@l.",
-      "It must be cursed, since everyone who has it is dead. I don't think I want my %s @@lafter all!"},
+      "It must be cursed, since everyone who has it is dead. I don't think I want my %s @@lafter "
+      "all!"},
      {"Oh well, since no one will help me, I guess %s @@lcan keep my %s@@l.",
-      "It must be cursed, since everyone who has it is dead. I don't think I want my %s @@lafter all!"},
+      "It must be cursed, since everyone who has it is dead. I don't think I want my %s @@lafter "
+      "all!"},
      {"I give up! %s @@lcan keep my %s @@lfor all I care!",
       "I give up! I never want to see my %s @@lagain!"},
      {"Well, I will stop asking now, but don't ever ask ME for any favors, ok?", ""},
-     {"Well, looks like %s @@lhas recovered my %s @@lfor me. Not sure I want it anymore, but thanks anyway.", ""}
+     {"Well, looks like %s @@lhas recovered my %s @@lfor me. Not sure I want it anymore, but "
+      "thanks anyway.",
+      ""}
 
     },
 
@@ -296,32 +330,50 @@ const struct qmessage_type qmessages[4][17] = {
 
         },  */
 
-    {
-        {"@@eMuuaahhhaaahaaaa! Some puny mortal has stolen my %s@@e!  I shall seek revenge!!", ""},
-        {"@@eI shall send many minions to seek my %s@@e! All that steal from me shall die!!", ""},
-        {"@@eSO, you have defeated my servants.  I shall still regain my %s@@e!!", ""},
-        {"@@eI am prepared to reward well anyone that aids the return of my %s@@e. Are any of you puny mortals willing to attempt my challenge?", ""},
-        {"@@eIf you are worthy, I will grant many favors upon anyone that returns my %s@@e.", ""},
-        {"@@mMethlok@@e, By the dark powers, I command you to seek my %s@@e! Now, if any of you worthless mortals wish to attempt to return it, I shall grant you many powers!", ""},
-        {"@@eI sense that @@mMethlok@@e is nearing the witless thief who stole my %s@@e. Now, my vengence shall be sweet!", ""},
-        {"@@eAhhh, my servant has returned, and informs me that %s @@estole my %s@@e. They shall be incinerated by the powers that I command!!!",
-         "@@mMethlok@@e has informed me that the weakling that stole my %s @@lhas met his maker!!"},
-        {"@@eAre none of you powerful enough to kill %s @@eand regain my %s@@e? Bah!! Mortals are useless, except as side dishes!!",
-         "@@eThough my taste for blood has been satiated, my %s @@estill evades my grasp!"},
-        {"@@eAre none of you powerful enough to kill %s @@e and regain my %s @@e? Bah!! Mortals are useless, except as side dishes!!",
-         "@@eThough my taste for blood has been satiated, my %s @@estill evades my grasp!"},
-        {"@@eAre none of you powerful enough to kill %s @@e and regain my %s @@e? Bah!! Mortals are useless, except as side dishes!!",
-         "@@eThough my taste for blood has been satiated, my %s @@estill evades my grasp!"},
-        {"@@eI should have known that a powerless, puny mortal could never be the servant of my vengence against %s@@e, or regain my %s@@e!!",
-         "@@eI shall rain death upon all of you for refusing to return my %s@@e!!!"},
-        {"@@eI should have known that a powerless, puny mortal could never be the servant of my vengence against %s@@e, or regain my %s@@e!!",
-         "@@eI shall rain death upon all of you for refusing to return my %s@@e!!!"},
-        {"@@eI shall slay your brothers and poison your fields for refusing to seek %s @@eand return my %s@@e!!!!",
-         "@@eThough my vengeance has been served, I shall drink your souls for your failure to return my %s@@e!!!"},
-        {"@@eI shall slay your brothers and poison your fields for refusing to seek %s @@eand return my %s@@e!!!!",
-         "@@eThough my vengeance has been served, I shall drink your souls for your failure to return my %s@@e!!!"},
-        {"@@eDeath and great suffering shall be your punishment for failing me!!!?", ""},
-        {"@@eWell done.  It seems that %s @@eat least has a modicum of strength, unlike you worthless idiots who failed to return my %s@@e! My curse shall lie upon you for the rest of your short days!", ""}
+    {{"@@eMuuaahhhaaahaaaa! Some puny mortal has stolen my %s@@e!  I shall seek revenge!!", ""},
+     {"@@eI shall send many minions to seek my %s@@e! All that steal from me shall die!!", ""},
+     {"@@eSO, you have defeated my servants.  I shall still regain my %s@@e!!", ""},
+     {"@@eI am prepared to reward well anyone that aids the return of my %s@@e. Are any of you "
+      "puny mortals willing to attempt my challenge?",
+      ""},
+     {"@@eIf you are worthy, I will grant many favors upon anyone that returns my %s@@e.", ""},
+     {"@@mMethlok@@e, By the dark powers, I command you to seek my %s@@e! Now, if any of you "
+      "worthless mortals wish to attempt to return it, I shall grant you many powers!",
+      ""},
+     {"@@eI sense that @@mMethlok@@e is nearing the witless thief who stole my %s@@e. Now, my "
+      "vengence shall be sweet!",
+      ""},
+     {"@@eAhhh, my servant has returned, and informs me that %s @@estole my %s@@e. They shall be "
+      "incinerated by the powers that I command!!!",
+      "@@mMethlok@@e has informed me that the weakling that stole my %s @@lhas met his maker!!"},
+     {"@@eAre none of you powerful enough to kill %s @@eand regain my %s@@e? Bah!! Mortals are "
+      "useless, except as side dishes!!",
+      "@@eThough my taste for blood has been satiated, my %s @@estill evades my grasp!"},
+     {"@@eAre none of you powerful enough to kill %s @@e and regain my %s @@e? Bah!! Mortals are "
+      "useless, except as side dishes!!",
+      "@@eThough my taste for blood has been satiated, my %s @@estill evades my grasp!"},
+     {"@@eAre none of you powerful enough to kill %s @@e and regain my %s @@e? Bah!! Mortals are "
+      "useless, except as side dishes!!",
+      "@@eThough my taste for blood has been satiated, my %s @@estill evades my grasp!"},
+     {"@@eI should have known that a powerless, puny mortal could never be the servant of my "
+      "vengence against %s@@e, or regain my %s@@e!!",
+      "@@eI shall rain death upon all of you for refusing to return my %s@@e!!!"},
+     {"@@eI should have known that a powerless, puny mortal could never be the servant of my "
+      "vengence against %s@@e, or regain my %s@@e!!",
+      "@@eI shall rain death upon all of you for refusing to return my %s@@e!!!"},
+     {"@@eI shall slay your brothers and poison your fields for refusing to seek %s @@eand return "
+      "my %s@@e!!!!",
+      "@@eThough my vengeance has been served, I shall drink your souls for your failure to return "
+      "my %s@@e!!!"},
+     {"@@eI shall slay your brothers and poison your fields for refusing to seek %s @@eand return "
+      "my %s@@e!!!!",
+      "@@eThough my vengeance has been served, I shall drink your souls for your failure to return "
+      "my %s@@e!!!"},
+     {"@@eDeath and great suffering shall be your punishment for failing me!!!?", ""},
+     {"@@eWell done.  It seems that %s @@eat least has a modicum of strength, unlike you worthless "
+      "idiots who failed to return my %s@@e! My curse shall lie upon you for the rest of your "
+      "short days!",
+      ""}
 
     }
 
@@ -367,7 +419,8 @@ void do_iquest(CHAR_DATA *ch, char *argument)
       if (quest_mob)
       {
 
-         sprintf(buf, "The questing mobile is: %s [In Room %d]\n\r", quest_mob->short_descr, quest_mob->in_room->vnum);
+         sprintf(buf, "The questing mobile is: %s [In Room %d]\n\r", quest_mob->short_descr,
+                 quest_mob->in_room->vnum);
          send_to_char(buf, ch);
       }
       else
@@ -376,7 +429,8 @@ void do_iquest(CHAR_DATA *ch, char *argument)
       }
       if (quest_target)
       {
-         sprintf(buf, "Target Mobile is: %s [In Room %d]\n\r", quest_target->short_descr, quest_target->in_room->vnum);
+         sprintf(buf, "Target Mobile is: %s [In Room %d]\n\r", quest_target->short_descr,
+                 quest_target->in_room->vnum);
          send_to_char(buf, ch);
       }
       else
@@ -385,8 +439,8 @@ void do_iquest(CHAR_DATA *ch, char *argument)
       sprintf(buf, "Target Object is: %s.\n\r", quest_object->short_descr);
       send_to_char(buf, ch);
 
-      sprintf(buf, "Quest Object is worth: %d QP, %d Prac, %d GP\n\r",
-              quest_object->value[0], quest_object->value[1], quest_object->value[2]);
+      sprintf(buf, "Quest Object is worth: %d QP, %d Prac, %d GP\n\r", quest_object->value[0],
+              quest_object->value[1], quest_object->value[2]);
       send_to_char(buf, ch);
 
       sprintf(buf, "The Quest has been running for %d/15 minutes.\n\r", quest_timer);
@@ -401,8 +455,8 @@ void do_iquest(CHAR_DATA *ch, char *argument)
    {
       if (quest)
       {
-         sprintf(buf,
-                 "@@NThe quest has been stopped by an @@mImmortal@@N. Please speak up if you have already gotten the item.\n\r");
+         sprintf(buf, "@@NThe quest has been stopped by an @@mImmortal@@N. Please speak up if you "
+                      "have already gotten the item.\n\r");
          do_echo(ch, buf);
          clear_crusade();
       }
@@ -446,9 +500,11 @@ void do_iquest(CHAR_DATA *ch, char *argument)
          total_levels += d->character->level;
 
          pseudo_level = get_psuedo_level(d->character);
-         quest_note_player_crusade_range(pseudo_level, &highest_mortal, &highest_remortal, &highest_adept);
+         quest_note_player_crusade_range(pseudo_level, &highest_mortal, &highest_remortal,
+                                         &highest_adept);
       }
-      average_level = (((total_levels == 0) ? 30 : total_levels) / ((player_count == 0) ? 1 : player_count));
+      average_level =
+          (((total_levels == 0) ? 30 : total_levels) / ((player_count == 0) ? 1 : player_count));
       a = average_level - 20;
       b = average_level + 20;
       quest_mob = get_quest_giver(a, b);
@@ -466,10 +522,7 @@ void do_iquest(CHAR_DATA *ch, char *argument)
       else
          highest_level_for_range = highest_adept;
 
-      quest_set_effective_crusade_level_range(quest_personality,
-                                              highest_level_for_range,
-                                              &a,
-                                              &b);
+      quest_set_effective_crusade_level_range(quest_personality, highest_level_for_range, &a, &b);
 
       quest_level_min = a;
       quest_level_max = b;
@@ -517,7 +570,8 @@ void do_iquest(CHAR_DATA *ch, char *argument)
       if (quest_mob->long_descr_orig != NULL)
          free_string(quest_mob->long_descr_orig);
       quest_mob->long_descr_orig = str_dup(quest_mob->long_descr);
-      sprintf(new_long_desc, "%s @@Nsays have you found my %s ?\n\r", quest_mob->short_descr, quest_object->short_descr);
+      sprintf(new_long_desc, "%s @@Nsays have you found my %s ?\n\r", quest_mob->short_descr,
+              quest_object->short_descr);
       if (quest_mob->long_descr != NULL)
          free_string(quest_mob->long_descr);
       quest_mob->long_descr = str_dup(new_long_desc);
@@ -530,7 +584,8 @@ void do_iquest(CHAR_DATA *ch, char *argument)
       if (quest_target->long_descr_orig != NULL)
          free_string(quest_target->long_descr_orig);
       quest_target->long_descr_orig = str_dup(quest_target->long_descr);
-      sprintf(new_long_desc, "%s @@Nsays I stole the %s !!!\n\r", quest_target->short_descr, quest_object->short_descr);
+      sprintf(new_long_desc, "%s @@Nsays I stole the %s !!!\n\r", quest_target->short_descr,
+              quest_object->short_descr);
       if (quest_target->long_descr != NULL)
          free_string(quest_target->long_descr);
       quest_target->long_descr = str_dup(new_long_desc);
@@ -542,17 +597,19 @@ void do_iquest(CHAR_DATA *ch, char *argument)
 
       send_to_char("QUEST STARTED!\n\r\n\r", ch);
 
-      sprintf(buf, "The questing mobile is: %s [In Room %d]\n\r", quest_mob->short_descr, quest_mob->in_room->vnum);
+      sprintf(buf, "The questing mobile is: %s [In Room %d]\n\r", quest_mob->short_descr,
+              quest_mob->in_room->vnum);
       send_to_char(buf, ch);
 
-      sprintf(buf, "Target Mobile is: %s [In Room %d]\n\r", quest_target->short_descr, quest_target->in_room->vnum);
+      sprintf(buf, "Target Mobile is: %s [In Room %d]\n\r", quest_target->short_descr,
+              quest_target->in_room->vnum);
       send_to_char(buf, ch);
 
       sprintf(buf, "Target Object is: %s.\n\r", quest_object->short_descr);
       send_to_char(buf, ch);
 
-      sprintf(buf, "Quest Object is worth: %d QP, %d Prac, %d GP\n\r",
-              quest_object->value[0], quest_object->value[1], quest_object->value[2]);
+      sprintf(buf, "Quest Object is worth: %d QP, %d Prac, %d GP\n\r", quest_object->value[0],
+              quest_object->value[1], quest_object->value[2]);
       send_to_char(buf, ch);
 
       sprintf(buf, "Quest level range is: %d to %d.\n\r", quest_level_min, quest_level_max);
@@ -570,17 +627,15 @@ void do_iquest(CHAR_DATA *ch, char *argument)
    return;
 }
 
-
 int quest_is_valid_crusade_mobile(CHAR_DATA *target, int min_level, int max_level)
 {
-   if (target == NULL || !IS_NPC(target) || target->in_room == NULL || target->in_room->area == NULL)
+   if (target == NULL || !IS_NPC(target) || target->in_room == NULL ||
+       target->in_room->area == NULL)
       return 0;
 
-   if ((target->level < min_level) || (target->level > max_level)
-       || (IS_SET(target->in_room->area->flags, AREA_NOSHOW))
-       || (IS_SET(target->act, ACT_SENTINEL))
-       || (IS_SET(target->act, ACT_PET))
-       || (IS_SET(target->act, ACT_INVASION)))
+   if ((target->level < min_level) || (target->level > max_level) ||
+       (IS_SET(target->in_room->area->flags, AREA_NOSHOW)) || (IS_SET(target->act, ACT_SENTINEL)) ||
+       (IS_SET(target->act, ACT_PET)) || (IS_SET(target->act, ACT_INVASION)))
       return 0;
 
    return 1;
@@ -623,8 +678,8 @@ CHAR_DATA *get_quest_target(int min_level, int max_level)
       if (!quest_is_valid_crusade_mobile(target, min_level, max_level))
          continue;
 
-      if ((!str_cmp(rev_spec_lookup(target->spec_fun), "spec_stephen"))
-          || (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_tax_man")))
+      if ((!str_cmp(rev_spec_lookup(target->spec_fun), "spec_stephen")) ||
+          (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_tax_man")))
          continue;
 
       /*
@@ -688,7 +743,12 @@ CHAR_DATA *get_quest_giver(int min_level, int max_level)
        * as train/prac mobs, healers, etc
        */
 
-      if ((target->level < min_level) || (target->level > max_level) || (IS_SET(target->in_room->area->flags, AREA_NOSHOW)) || (IS_SET(target->act, ACT_SENTINEL)) || (IS_SET(target->act, ACT_PET)) || (IS_SET(target->act, ACT_INVASION)) || (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_stephen")) || (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_tax_man")))
+      if ((target->level < min_level) || (target->level > max_level) ||
+          (IS_SET(target->in_room->area->flags, AREA_NOSHOW)) ||
+          (IS_SET(target->act, ACT_SENTINEL)) || (IS_SET(target->act, ACT_PET)) ||
+          (IS_SET(target->act, ACT_INVASION)) ||
+          (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_stephen")) ||
+          (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_tax_man")))
 
          continue;
       {
@@ -717,8 +777,8 @@ void crusade_inform(void)
    extern const struct qmessage_type qmessages[4][17];
    sh_int active_personality;
 
-   active_personality = quest_resolve_crusade_personality(quest_personality,
-                                                           quest_mob ? quest_mob->level : 1);
+   active_personality =
+       quest_resolve_crusade_personality(quest_personality, quest_mob ? quest_mob->level : 1);
    quest_personality = active_personality;
 
    /*
@@ -729,23 +789,17 @@ void crusade_inform(void)
     */
    if (quest_timer < 7)
    {
-      format_quest_message(buf,
-                           qmessages[active_personality][quest_timer].message1,
-                           quest_object->short_descr,
-                           NULL);
+      format_quest_message(buf, qmessages[active_personality][quest_timer].message1,
+                           quest_object->short_descr, NULL);
    }
    else
    {
       if (quest_target)
-         format_quest_message(buf,
-                              qmessages[active_personality][quest_timer].message1,
-                              quest_target->short_descr,
-                              quest_object->short_descr);
+         format_quest_message(buf, qmessages[active_personality][quest_timer].message1,
+                              quest_target->short_descr, quest_object->short_descr);
       else
-         format_quest_message(buf,
-                              qmessages[active_personality][quest_timer].message2,
-                              quest_object->short_descr,
-                              NULL);
+         format_quest_message(buf, qmessages[active_personality][quest_timer].message2,
+                              quest_object->short_descr, NULL);
    }
 
    quest_timer++;
@@ -773,13 +827,11 @@ void crusade_complete(CHAR_DATA *ch)
 
    char buf[MAX_STRING_LENGTH];
 
-   active_personality = quest_resolve_crusade_personality(quest_personality,
-                                                           quest_mob ? quest_mob->level : 1);
+   active_personality =
+       quest_resolve_crusade_personality(quest_personality, quest_mob ? quest_mob->level : 1);
    quest_personality = active_personality;
 
-   format_quest_message(buf,
-                        qmessages[active_personality][16].message1,
-                        NAME(ch),
+   format_quest_message(buf, qmessages[active_personality][16].message1, NAME(ch),
                         quest_object->short_descr);
    do_iquest(quest_mob, buf);
    clear_crusade();
@@ -905,7 +957,8 @@ void generate_auto_crusade()
       player_count += 1;
       pseudo_level = get_psuedo_level(d->character);
 
-      quest_note_player_crusade_range(pseudo_level, &highest_mortal, &highest_remortal, &highest_adept);
+      quest_note_player_crusade_range(pseudo_level, &highest_mortal, &highest_remortal,
+                                      &highest_adept);
 
       if (pseudo_level <= 100)
          has_mortal = TRUE;
@@ -953,16 +1006,14 @@ void generate_auto_crusade()
    }
 
    quest_personality = selected_range;
-   quest_set_effective_crusade_level_range(selected_range,
-                                           highest_level_for_range,
-                                           &a,
-                                           &b);
+   quest_set_effective_crusade_level_range(selected_range, highest_level_for_range, &a, &b);
 
    while ((quest_mob == NULL) && (loop_counter < 500))
    {
       loop_counter++;
       quest_mob = get_quest_giver(a, b);
-      if ((quest_mob == NULL) || ((h_find_dir(get_room_index(ROOM_VNUM_TEMPLE), quest_mob->in_room, hunt_flags) < 0)))
+      if ((quest_mob == NULL) ||
+          ((h_find_dir(get_room_index(ROOM_VNUM_TEMPLE), quest_mob->in_room, hunt_flags) < 0)))
          quest_mob = NULL;
    }
 
@@ -973,10 +1024,7 @@ void generate_auto_crusade()
       return;
    }
 
-   quest_set_effective_crusade_level_range(selected_range,
-                                           highest_level_for_range,
-                                           &a,
-                                           &b);
+   quest_set_effective_crusade_level_range(selected_range, highest_level_for_range, &a, &b);
 
    quest_level_min = a;
    quest_level_max = b;
@@ -993,7 +1041,9 @@ void generate_auto_crusade()
    {
       loop_counter++;
       quest_target = get_quest_target(a, b);
-      if ((quest_target == NULL) || ((h_find_dir(get_room_index(ROOM_VNUM_TEMPLE), quest_target->in_room, hunt_flags) < 0)) || (quest_target == quest_mob))
+      if ((quest_target == NULL) ||
+          ((h_find_dir(get_room_index(ROOM_VNUM_TEMPLE), quest_target->in_room, hunt_flags) < 0)) ||
+          (quest_target == quest_mob))
          quest_target = NULL;
    }
 
@@ -1031,7 +1081,8 @@ void generate_auto_crusade()
    if (quest_mob->long_descr_orig != NULL)
       free_string(quest_mob->long_descr_orig);
    quest_mob->long_descr_orig = str_dup(quest_mob->long_descr);
-   sprintf(new_long_desc, "%s @@Nsays have you found my %s ?\n\r", quest_mob->short_descr, quest_object->short_descr);
+   sprintf(new_long_desc, "%s @@Nsays have you found my %s ?\n\r", quest_mob->short_descr,
+           quest_object->short_descr);
    if (quest_mob->long_descr != NULL)
       free_string(quest_mob->long_descr);
    quest_mob->long_descr = str_dup(new_long_desc);
@@ -1044,7 +1095,8 @@ void generate_auto_crusade()
    if (quest_target->long_descr_orig != NULL)
       free_string(quest_target->long_descr_orig);
    quest_target->long_descr_orig = str_dup(quest_target->long_descr);
-   sprintf(new_long_desc, "%s @@Nsays I stole the %s !!!\n\r", quest_target->short_descr, quest_object->short_descr);
+   sprintf(new_long_desc, "%s @@Nsays I stole the %s !!!\n\r", quest_target->short_descr,
+           quest_object->short_descr);
    if (quest_target->long_descr != NULL)
       free_string(quest_target->long_descr);
    quest_target->long_descr = str_dup(new_long_desc);
@@ -1056,4 +1108,3 @@ void generate_auto_crusade()
 
    return;
 }
-

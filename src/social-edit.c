@@ -111,13 +111,11 @@ void save_social(const struct social_type *s, FILE *fp)
    /*
     * get rid of (null)
     */
-   fprintf(fp, "%s~\n%s~\n%s~\n%s~\n%s~\n%s~\n%s~\n%s~\n\n",
-           s->name ? s->name : "",
-           s->char_no_arg ? s->char_no_arg : "",
-           s->others_no_arg ? s->others_no_arg : "",
-           s->char_found ? s->char_found : "",
-           s->others_found ? s->others_found : "",
-           s->vict_found ? s->vict_found : "", s->char_auto ? s->char_auto : "", s->others_auto ? s->others_auto : "");
+   fprintf(fp, "%s~\n%s~\n%s~\n%s~\n%s~\n%s~\n%s~\n%s~\n\n", s->name ? s->name : "",
+           s->char_no_arg ? s->char_no_arg : "", s->others_no_arg ? s->others_no_arg : "",
+           s->char_found ? s->char_found : "", s->others_found ? s->others_found : "",
+           s->vict_found ? s->vict_found : "", s->char_auto ? s->char_auto : "",
+           s->others_auto ? s->others_auto : "");
 }
 
 void save_social_table()
@@ -270,27 +268,26 @@ void do_sedit(CHAR_DATA *ch, char *argument)
 
    else if (!str_cmp(cmd, "show")) /* Show a certain social */
    {
-      sprintf(buf, "Social: %s\n\r"
-                   "(cnoarg) No argument given, character sees:\n\r"
-                   "%s\n\r\n\r"
-                   "(onoarg) No argument given, others see:\n\r"
-                   "%s\n\r\n\r"
-                   "(cfound) Target found, character sees:\n\r"
-                   "%s\n\r\n\r"
-                   "(ofound) Target found, others see:\n\r"
-                   "%s\n\r\n\r"
-                   "(vfound) Target found, victim sees:\n\r"
-                   "%s\n\r\n\r"
-                   "(cself) Target is character himself:\n\r"
-                   "%s\n\r\n\r"
-                   "(oself) Target is character himself, others see:\n\r"
-                   "%s\n\r",
-              social_table[iSocial].name,
-              social_table[iSocial].char_no_arg,
-              social_table[iSocial].others_no_arg,
-              social_table[iSocial].char_found,
-              social_table[iSocial].others_found,
-              social_table[iSocial].vict_found, social_table[iSocial].char_auto, social_table[iSocial].others_auto);
+      sprintf(buf,
+              "Social: %s\n\r"
+              "(cnoarg) No argument given, character sees:\n\r"
+              "%s\n\r\n\r"
+              "(onoarg) No argument given, others see:\n\r"
+              "%s\n\r\n\r"
+              "(cfound) Target found, character sees:\n\r"
+              "%s\n\r\n\r"
+              "(ofound) Target found, others see:\n\r"
+              "%s\n\r\n\r"
+              "(vfound) Target found, victim sees:\n\r"
+              "%s\n\r\n\r"
+              "(cself) Target is character himself:\n\r"
+              "%s\n\r\n\r"
+              "(oself) Target is character himself, others see:\n\r"
+              "%s\n\r",
+              social_table[iSocial].name, social_table[iSocial].char_no_arg,
+              social_table[iSocial].others_no_arg, social_table[iSocial].char_found,
+              social_table[iSocial].others_found, social_table[iSocial].vict_found,
+              social_table[iSocial].char_auto, social_table[iSocial].others_auto);
 
       send_to_char(buf, ch);
       return; /* return right away, do not save the table */
@@ -302,7 +299,8 @@ void do_sedit(CHAR_DATA *ch, char *argument)
       social_table[iSocial].char_no_arg = str_dup(argument);
 
       if (!argument[0])
-         send_to_char("Character will now see nothing when this social is used without arguments.\n\r", ch);
+         send_to_char(
+             "Character will now see nothing when this social is used without arguments.\n\r", ch);
       else
          act("New message is now:\n\r$T\n\r", ch, NULL, argument, TO_CHAR);
    }
@@ -313,7 +311,8 @@ void do_sedit(CHAR_DATA *ch, char *argument)
       social_table[iSocial].others_no_arg = str_dup(argument);
 
       if (!argument[0])
-         send_to_char("Others will now see nothing when this social is used without arguments.\n\r", ch);
+         send_to_char("Others will now see nothing when this social is used without arguments.\n\r",
+                      ch);
       else
          act("New message is now:\n\r$T\n\r", ch, NULL, argument, TO_CHAR);
    }

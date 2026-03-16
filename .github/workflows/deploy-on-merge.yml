@@ -1,0 +1,29 @@
+name: Deploy on Merge to Main
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull latest code and rebuild on server
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          script: |
+            set -e
+            cd ${{ secrets.DEPLOY_PATH }}
+            git pull origin main
+            cd src
+            make ack
+            echo "Build complete."
+            touch ../data/hotreboot.trigger
+            echo "Hotreboot trigger set. MUD will warn players and hotreboot in 60 seconds."
