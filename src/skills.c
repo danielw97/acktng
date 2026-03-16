@@ -19,7 +19,7 @@ void do_rescue(CHAR_DATA *ch, char *argument)
    if (!IS_NPC(ch))
    {
       for (cnt = 0; cnt < MAX_CLASS; cnt++)
-         if (ch->lvl[cnt] >= skill_table[gsn_rescue].skill_level[cnt] && ch->lvl[cnt] >= best)
+         if (ch->class_level[cnt] >= skill_table[gsn_rescue].skill_level[cnt] && ch->class_level[cnt] >= best)
             best = cnt;
    }
    else
@@ -98,8 +98,8 @@ void do_trip(CHAR_DATA *ch, char *argument)
    {
       /*
        * for ( cnt = 0; cnt < MAX_CLASS; cnt++ )
-       * if ( ch->lvl[cnt] >= skill_table[gsn_trip].skill_level[cnt]
-       * && ch->lvl[cnt] >= best )
+       * if ( ch->class_level[cnt] >= skill_table[gsn_trip].skill_level[cnt]
+       * && ch->class_level[cnt] >= best )
        * best = cnt;
        */
       if (ch->pcdata->learned[gsn_trip] > 75)
@@ -203,20 +203,20 @@ void do_beserk(CHAR_DATA *ch, char *argument)
    af.type = gsn_beserk;
    af.duration = -1;
    af.location = APPLY_AC;
-   af.modifier = ch->lvl[CLASS_WAR] / 2;
+   af.modifier = ch->class_level[CLASS_WAR] / 2;
    af.bitvector = 0;
    affect_to_char(ch, &af);
 
    af.location = APPLY_HITROLL;
-   af.modifier = ch->lvl[CLASS_WAR] / 5;
+   af.modifier = ch->class_level[CLASS_WAR] / 5;
    affect_to_char(ch, &af);
 
    af.location = APPLY_DAMROLL;
-   af.modifier = ch->lvl[CLASS_WAR] / 5;
+   af.modifier = ch->class_level[CLASS_WAR] / 5;
    affect_to_char(ch, &af);
 
    af.location = APPLY_SAVING_SPELL;
-   af.modifier = ch->lvl[CLASS_WAR] / -10;
+   af.modifier = ch->class_level[CLASS_WAR] / -10;
    affect_to_char(ch, &af);
 
    act("$n calls on the Dark Powers, who answer!!!", ch, NULL, NULL, TO_ROOM);
@@ -235,7 +235,7 @@ void do_warcry(CHAR_DATA *ch, char *argument)
    if (IS_NPC(ch))
       return;
 
-   level = ch->lvl[CLASS_WAR];
+   level = ch->class_level[CLASS_WAR];
 
    if (!is_fighting(ch))
    {
@@ -309,10 +309,10 @@ void do_morale(CHAR_DATA *ch, char *argument)
    AFFECT_DATA af;
    CHAR_DATA *gch;
 
-   int stat = ch->remort[CLASS_KNI];
+   int stat = ch->class_level[CLASS_KNI];
 
-   if (ch->remort[CLASS_PAL] > stat)
-      stat = ch->remort[CLASS_PAL];
+   if (ch->class_level[CLASS_PAL] > stat)
+      stat = ch->class_level[CLASS_PAL];
 
    if (!can_use_skill_message(ch, gsn_morale))
       return;
@@ -348,10 +348,10 @@ void do_leadership(CHAR_DATA *ch, char *argument)
    AFFECT_DATA af;
    CHAR_DATA *gch;
 
-   int stat = ch->remort[CLASS_KNI];
+   int stat = ch->class_level[CLASS_KNI];
 
-   if (ch->remort[CLASS_PAL] > stat)
-      stat = ch->remort[CLASS_PAL];
+   if (ch->class_level[CLASS_PAL] > stat)
+      stat = ch->class_level[CLASS_PAL];
 
    if (!can_use_skill_message(ch, gsn_leadership))
       return;

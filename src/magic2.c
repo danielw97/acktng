@@ -323,7 +323,7 @@ bool spell_refresh_mana(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
 {
    CHAR_DATA *victim = (CHAR_DATA *)vo;
 
-   int move = ch->lvl[CLASS_CLE]  + 50;
+   int move = ch->class_level[CLASS_CLE]  + 50;
 
    victim->mana = UMIN(victim->mana + move, get_max_mana(victim));
    send_to_char("You feel refreshed.\n\r", victim);
@@ -340,7 +340,7 @@ bool spell_refresh(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       return FALSE;
    }
 
-   int move = ch->lvl[CLASS_CLE] + 50;
+   int move = ch->class_level[CLASS_CLE] + 50;
 
    if (obj == NULL && victim->fighting != NULL)
       move = -1;
@@ -1173,7 +1173,7 @@ bool spell_mind_bolt(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       if (number_percent() < 30)
          continue;
 
-      dam += number_range(12, 30) + (ch->lvl[CLASS_PSI] * 5 / 4);
+      dam += number_range(12, 30) + (ch->class_level[CLASS_PSI] * 5 / 4);
    }
 
    if (dam <= 0)

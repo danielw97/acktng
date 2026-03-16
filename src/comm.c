@@ -814,21 +814,31 @@ static void normalize_login_class(CHAR_DATA *ch)
    if (ch == NULL || IS_NPC(ch))
       return;
 
-   if (ch->class >= 0 && ch->class < MAX_CLASS)
+   if (ch->class >= 0 && IS_MORTAL_CLASS(ch->class))
       return;
 
-   for (cnt = 0; cnt < MAX_CLASS; cnt++)
+   /* Find the mortal class with the highest level — that is the primary class */
    {
-      if (ch->lvl[cnt] >= 0)
+      int best_level = -1;
+      int best_class = -1;
+      for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
       {
-         ch->class = cnt;
+         if (IS_MORTAL_CLASS(cnt) && ch->class_level[cnt] > best_level)
+         {
+            best_level = ch->class_level[cnt];
+            best_class = cnt;
+         }
+      }
+      if (best_class >= 0)
+      {
+         ch->class = best_class;
          return;
       }
    }
 
    ch->class = 0;
    for (cnt = 0; cnt < MAX_CLASS; cnt++)
-      ch->lvl[cnt] = (cnt == 0) ? UMAX(ch->level, 1) : 0;
+      ch->class_level[cnt] = (cnt == 0) ? UMAX(ch->level, 1) : 0;
 }
 
 int main(int argc, char **argv)
@@ -2593,15 +2603,19 @@ void show_menu_to(DESCRIPTOR_DATA *d)
            !IS_SET(d->check, CHECK_RACE) ? "Not Set." : race_table[ch->race].race_title);
    strcat(menu, buf);
 
-   strcat(menu, "        3. Set Class Order.  Currently:");
+   strcat(menu, "        3. Set Class.        Currently:");
    if (IS_SET(d->check, CHECK_CLASS))
    {
       int fubar;
       sprintf(buf, "\n\r        ");
-      for (fubar = 0; fubar < MAX_PC_CLASS; fubar++)
+      strcat(menu, buf);
+      for (fubar = 0; fubar < MAX_CLASS; fubar++)
       {
-         strcat(menu, class_table[ch->pcdata->order[fubar]].who_name);
-         strcat(menu, ". ");
+         if (IS_MORTAL_CLASS(fubar) && ch->class_level[fubar] >= 0)
+         {
+            strcat(menu, gclass_table[fubar].who_name);
+            strcat(menu, ". ");
+         }
       }
       strcat(menu, "\n\r");
    }
@@ -2714,9 +2728,9 @@ void show_cmenu_to(DESCRIPTOR_DATA *d)
    for (iClass = 0; iClass < MAX_CLASS; iClass++)
    {
       char stat[MSL];
-      strcpy(stat, stat_to_string(class_table[iClass].attr_prime));
-      comm_format_class_menu_line(buf, sizeof(buf), class_table[iClass].who_name, stat,
-                                  class_table[iClass].class_name);
+      strcpy(stat, stat_to_string(gclass_table[iClass].attr_prime));
+      comm_format_class_menu_line(buf, sizeof(buf), gclass_table[iClass].who_name, stat,
+                                  gclass_table[iClass].class_name);
       strcat(menu, buf);
    }
    strcat(menu, "\n\rOrder: ");
@@ -2904,8 +2918,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 
       normalize_login_class(ch);
 
-      if (ch->lvl[ch->class] == -1)
-         ch->lvl[ch->class] = ch->level;
+      if (ch->class_level[ch->class] == -1)
+         ch->class_level[ch->class] = ch->level;
 
       if (IS_HERO(ch))
       {
@@ -3093,52 +3107,40 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
    if (d->connected == CON_GET_NEW_CLASS)
    {
       char arg[MAX_STRING_LENGTH];
-      int numclasses = 0;
       int cnt;
-      int foo;
-      bool ok = TRUE;
+      int foo = -1;
 
       /*
        * Resetting class list
        */
       for (cnt = 0; cnt < MAX_CLASS; cnt++)
-      {
-         ch->lvl[cnt] = -1;
-         ch->pcdata->order[cnt] = -1;
-         ch->pcdata->index[cnt] = -1;
-      }
+         ch->class_level[cnt] = -1;
 
-      for (cnt = 0; cnt < MAX_PC_CLASS; cnt++)
+      one_argument(argument, arg);
+      if (arg[0] != '\0')
       {
-         argument = one_argument(argument, arg);
-         if (arg[0] == '\0')
+         for (cnt = 0; cnt < MAX_CLASS; cnt++)
          {
-            ok = FALSE;
-            break;
-         }
-         for (foo = 0; foo < MAX_CLASS; foo++)
-         {
-            if ((!str_cmp(arg, class_table[foo].who_name) || !str_cmp(arg, class_table[foo].class_name)) && ch->pcdata->index[foo] == -1)
+            if (IS_MORTAL_CLASS(cnt) &&
+                (!str_cmp(arg, gclass_table[cnt].who_name) || !str_cmp(arg, gclass_table[cnt].class_name)))
             {
-               numclasses++;
-               ch->pcdata->order[cnt] = foo;
-               ch->pcdata->index[foo] = cnt;
-               ch->lvl[cnt] = 0;
+               foo = cnt;
                break;
             }
          }
       }
 
-      if (!ok || numclasses < MAX_PC_CLASS)
+      if (foo == -1)
       {
          write_to_buffer(d,
-                         "Invalid Order... Please Try Again. You must list each class by abbreviation or full name, such as CLE WAR MAG CIP or Cleric Warden Magi Cipher.\n\r",
+                         "Invalid class. Please try again. Enter a class by abbreviation or full name, such as CLE or Cleric.\n\r",
                          0);
          show_cmenu_to(d);
          return;
       }
 
-      ch->lvl[ch->pcdata->order[0]] = 1;
+      ch->class = foo;
+      ch->class_level[foo] = 1;
       d->connected = CON_MENU;
       if (!IS_SET(d->check, CHECK_CLASS))
          SET_BIT(d->check, CHECK_CLASS);
@@ -3183,8 +3185,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
        */
       if (ch->level == 0)
       {
-         ch->class = ch->pcdata->order[0];
-         ch->lvl[ch->class] = 1;
+         ch->class_level[ch->class] = 1;
       }
 
       LINK(ch, first_char, last_char, next, prev);
@@ -3206,7 +3207,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
           * OBJ_DATA *obj; unused
           */
 
-         switch (class_table[ch->class].attr_prime)
+         switch (gclass_table[ch->class].attr_prime)
          {
          case APPLY_STR:
             ch->pcdata->max_str++;
@@ -3234,10 +3235,10 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
           * All Races get 5 classes now..
           */
 
-         ch->lvl[ch->class] = 1;
+         ch->class_level[ch->class] = 1;
          for (cnt = 0; cnt < MAX_CLASS; cnt++)
             if (cnt != ch->class)
-               ch->lvl[cnt] = 0;
+               ch->class_level[cnt] = 0;
 
          ch->exp = 0;
          ch->hit = ch->max_hit;
@@ -3287,7 +3288,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
           * obj_to_char( obj, ch );
           * equip_char( ch, obj, WEAR_SHIELD );
           *
-          * obj = create_object( get_obj_index(class_table[ch->class].weapon),
+          * obj = create_object( get_obj_index(gclass_table[ch->class].weapon),
           * 0 );
           * obj_to_char( obj, ch );
           * equip_char( ch, obj, WEAR_WIELD );
@@ -4100,7 +4101,7 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
                                 "Since you are level one, and level one characters do not save....you have been advanced!\n\r",
                                 0);
             och->level = 2;
-            och->lvl[och->class] = 2;
+            och->class_level[och->class] = 2;
          }
          save_char_obj(och);
          write_to_descriptor(d->descriptor, buf, 0);

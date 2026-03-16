@@ -137,60 +137,60 @@ bool is_legal_stance(CHAR_DATA *ch, int stance)
     if (stance_app[stance].tier == ADEPT)
     {
         {
-            if (stance_app[stance].class_index > -1 && ch->adept[stance_app[stance].class_index] < stance_app[stance].class_level)
+            if (stance_app[stance].class_index > -1 && ch->class_level[stance_app[stance].class_index] < stance_app[stance].class_level)
                 legal_stance = FALSE;
 
-            if (stance_app[stance].class_index2 > -1 && ch->adept[stance_app[stance].class_index2] < stance_app[stance].class_level2)
+            if (stance_app[stance].class_index2 > -1 && ch->class_level[stance_app[stance].class_index2] < stance_app[stance].class_level2)
                 legal_stance = FALSE;
 
             if(IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS) && stance_app[stance].class_index2 > -1 &&
-               ch->adept[stance_app[stance].class_index] >= stance_app[stance].class_level)
+               ch->class_level[stance_app[stance].class_index] >= stance_app[stance].class_level)
                 legal_stance = TRUE;
 
             if(IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS) && stance_app[stance].class_index2 > -1 &&
-               ch->adept[stance_app[stance].class_index2] >= stance_app[stance].class_level2)
+               ch->class_level[stance_app[stance].class_index2] >= stance_app[stance].class_level2)
                 legal_stance = TRUE;
         }
     }
     else if (stance_app[stance].tier == REMORT)
     {
         {
-            if (stance_app[stance].class_index > -1 && ch->remort[stance_app[stance].class_index] < stance_app[stance].class_level)
+            if (stance_app[stance].class_index > -1 && ch->class_level[stance_app[stance].class_index] < stance_app[stance].class_level)
                 legal_stance = FALSE;
 
-            if (stance_app[stance].class_index2 > -1 && ch->remort[stance_app[stance].class_index2] < stance_app[stance].class_level2)
+            if (stance_app[stance].class_index2 > -1 && ch->class_level[stance_app[stance].class_index2] < stance_app[stance].class_level2)
                 legal_stance = FALSE;
 
             if(IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS) && stance_app[stance].class_index2 > -1 &&
-               ch->remort[stance_app[stance].class_index] >= stance_app[stance].class_level)
+               ch->class_level[stance_app[stance].class_index] >= stance_app[stance].class_level)
                 legal_stance = TRUE;
 
             if(IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS) && stance_app[stance].class_index2 > -1 &&
-               ch->remort[stance_app[stance].class_index2] >= stance_app[stance].class_level2)
+               ch->class_level[stance_app[stance].class_index2] >= stance_app[stance].class_level2)
                 legal_stance = TRUE;
         }
     }
     else if (stance_app[stance].tier == MORTAL)
     {
         {
-            if (stance_app[stance].class_index > -1 && ch->lvl[stance_app[stance].class_index] < stance_app[stance].class_level)
+            if (stance_app[stance].class_index > -1 && ch->class_level[stance_app[stance].class_index] < stance_app[stance].class_level)
                 legal_stance = FALSE;
 
-            if (stance_app[stance].class_index2 > -1 && ch->lvl[stance_app[stance].class_index2] < stance_app[stance].class_level2)
+            if (stance_app[stance].class_index2 > -1 && ch->class_level[stance_app[stance].class_index2] < stance_app[stance].class_level2)
                 legal_stance = FALSE;
 
             if(IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS) && stance_app[stance].class_index2 > -1 &&
-               ch->lvl[stance_app[stance].class_index] >= stance_app[stance].class_level)
+               ch->class_level[stance_app[stance].class_index] >= stance_app[stance].class_level)
                 legal_stance = TRUE;
 
             if(IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS) && stance_app[stance].class_index2 > -1 && 
-               ch->lvl[stance_app[stance].class_index2] >= stance_app[stance].class_level2)
+               ch->class_level[stance_app[stance].class_index2] >= stance_app[stance].class_level2)
                 legal_stance = TRUE;
         }
 
         if (stance_app[stance].class_override > -1)
         {
-            if (stance_app[stance].class_override == ch->pcdata->order[0])
+            if (stance_app[stance].class_override == ch->class)
                 legal_stance = TRUE;
         }
     }

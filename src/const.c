@@ -95,69 +95,39 @@ const struct ansi_type ansi_table[MAX_ANSI] = {
 
 
 /*
- * Class table.
+ * Unified class table (mortal 0-5, remort 6-17, adept 18-23).
  */
-const struct class_type class_table[MAX_CLASS] = 
+const struct class_type gclass_table[MAX_TOTAL_CLASS] =
 {
-   { "Mag", "Magi", APPLY_INT, 2, 5 },
+   /* Mortal (0-5): tier=MORTAL, no prerequisites */
+   { "Mag", "Magi",       APPLY_INT, 2, 5,  MORTAL, {-1, -1} },
+   { "Cle", "Cleric",     APPLY_WIS, 3, 4,  MORTAL, {-1, -1} },
+   { "Cip", "Cipher",     APPLY_DEX, 6, 0,  MORTAL, {-1, -1} },
+   { "War", "Warden",     APPLY_STR, 7, 0,  MORTAL, {-1, -1} },
+   { "Psi", "Psionicist", APPLY_INT, 3, 4,  MORTAL, {-1, -1} },
+   { "Pug", "Pugilist",   APPLY_CON, 7, 0,  MORTAL, {-1, -1} },
 
-   { "Cle", "Cleric", APPLY_WIS, 3, 4},
+   /* Remort (6-17): tier=REMORT, one mortal prerequisite */
+   {"Sor", "Sorcerer",    APPLY_INT,  4, 10, REMORT, {CLASS_MAG, -1} },
+   {"Pal", "Paladin",     APPLY_WIS,  8,  6, REMORT, {CLASS_CLE, -1} },
+   {"Ass", "Assassin",    APPLY_DEX, 12,  0, REMORT, {CLASS_CIP, -1} },
+   {"Kni", "Knight",      APPLY_STR, 14,  0, REMORT, {CLASS_WAR, -1} },
+   {"Nec", "Necromancer", APPLY_INT,  6,  8, REMORT, {CLASS_PSI, -1} },
+   {"Mon", "Monk",        APPLY_CON, 14,  0, REMORT, {CLASS_PUG, -1} },
+   {"Wiz", "Wizard",      APPLY_INT,  4, 10, REMORT, {CLASS_MAG, -1} },
+   {"Pri", "Priest",      APPLY_WIS,  6,  8, REMORT, {CLASS_CLE, -1} },
+   {"Wlk", "Warlock",     APPLY_DEX,  8,  6, REMORT, {CLASS_CIP, -1} },
+   {"Swo", "Swordsman",   APPLY_STR, 14,  0, REMORT, {CLASS_WAR, -1} },
+   {"Ego", "Egomancer",   APPLY_INT,  6,  8, REMORT, {CLASS_PSI, -1} },
+   {"Bra", "Brawler",     APPLY_CON, 14,  0, REMORT, {CLASS_PUG, -1} },
 
-   { "Cip", "Cipher", APPLY_DEX, 6, 0},
-
-   { "War", "Warden", APPLY_STR, 7, 0},
-
-   { "Psi", "Psionicist", APPLY_INT, 3, 4},
-
-   { "Pug", "Pugilist", APPLY_CON, 7, 0}
-};
-
-
-
-
-/* Table for remort classes.... same format as class_table 
- * Note that alot of stuff is not needed... 
- */
-const struct class_type remort_table[MAX_REMORT] = 
-{
-   {"Sor", "Sorcerer", APPLY_INT, 4, 10},
-
-   {"Pal", "Paladin", APPLY_WIS, 8, 6},
-
-   {"Ass", "Assassin", APPLY_DEX, 12, 0},
-
-   {"Kni", "Knight", APPLY_STR, 14, 0},
-
-   {"Nec", "Necromancer", APPLY_INT, 6, 8},
-
-   {"Mon", "Monk", APPLY_CON, 14, 0},
-
-   {"Wiz", "Wizard", APPLY_INT, 4, 10},
-
-   {"Pri", "Priest", APPLY_WIS, 6, 8},
-
-   {"Wlk", "Warlock", APPLY_DEX, 8, 6},
-
-   {"Swo", "Swordsman", APPLY_STR, 14, 0},
-
-   {"Ego", "Egomancer", APPLY_INT, 6, 8},
-
-   {"Bra", "Brawler", APPLY_CON, 14, 0}
-};
-
-const struct class_type adept_table[MAX_CLASS] = 
-{
-   {"Gra", "Grand Magi", APPLY_INT, 8, 20,},
-
-   {"Tem", "Templar", APPLY_WIS, 16, 12},
-
-   {"Nig", "Nightblade", APPLY_DEX, 20, 8},
-
-   {"Cru", "Crusader", APPLY_STR, 28, 0},
-
-   {"Kin", "Kinetimancer", APPLY_INT, 12, 16},
-
-   {"Mar", "Martial Artist", APPLY_CON, 28, 0}
+   /* Adept (18-23): tier=ADEPT, two remort prerequisites */
+   {"Gra", "Grand Magi",     APPLY_INT,  8, 20, ADEPT, {CLASS_SOR, CLASS_WIZ} },
+   {"Tem", "Templar",        APPLY_WIS, 16, 12, ADEPT, {CLASS_PAL, CLASS_PRI} },
+   {"Nig", "Nightblade",     APPLY_DEX, 20,  8, ADEPT, {CLASS_ASS, CLASS_WLK} },
+   {"Cru", "Crusader",       APPLY_STR, 28,  0, ADEPT, {CLASS_KNI, CLASS_SWO} },
+   {"Kin", "Kinetimancer",   APPLY_INT, 12, 16, ADEPT, {CLASS_NEC, CLASS_EGO} },
+   {"Mar", "Martial Artist", APPLY_CON, 28,  0, ADEPT, {CLASS_MON, CLASS_BRA} },
 };
 
 const struct race_type race_table[MAX_RACE] = {
@@ -720,536 +690,467 @@ const struct skill_type skill_table[MAX_SKILL] = {
  * Magic spells.
  */
 
-   {
-    MORTAL, NORM,
-    "reserved", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "reserved", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     0, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 0 ), 0, 0, FALSE,
     "", "",
     ""},
 
-   {
-    MORTAL, NORM,
-    "acid blast", {50, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "acid blast", {50, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_acid_blast, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 70 ), 20, 12, TRUE,
     "acid blast", "!Acid Blast!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "armor", {3, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "armor", {3, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_armor, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 1 ), 5, 12, FALSE,
     "", "You feel less protected.",
     ""},
 
-   {
-    REMORT, NORM,
-    "animate", {NO_USE, NO_USE, NO_USE, NO_USE, 70, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 70, NO_USE},
+   {NORM,
+    "animate", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 70, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 70, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_animate, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 525 ), 50, 24, FALSE,
     "", "!Animate!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "bad breath", {4, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "bad breath", {4, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_badbreath, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 502 ), 10, 12, TRUE,
     "bad breath", "!Bad Breath!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "bark skin", {NO_USE, 20, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "bark skin", {NO_USE, 20, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_bark_skin, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 514 ), 20, 24, FALSE,
     "", "Your skin feels softer.",
     "$n's skin looks less wooden."},
 
-   {
-    MORTAL, NORM,
-    "bless", {NO_USE, 8, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "bless", {NO_USE, 8, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_bless, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 3 ), 5, 12, FALSE,
     "", "You feel less righteous.",
     "$n looks less Holy."},
 
-   {
-    MORTAL, NORM,
-    "blindness", {16, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "blindness", {16, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_blindness, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_blindness, SLOT( 4 ), 5, 12, TRUE,
     "", "You can see again.",
     "$n's vision returns."},
 
-   {
-    MORTAL, NORM,
-    "bloody tears", {NO_USE, NO_USE, NO_USE, NO_USE, 26, NO_USE},
+   {NORM,
+    "bloody tears", {NO_USE, NO_USE, NO_USE, NO_USE, 26, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_bloody_tears, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 518 ), 12, 12, TRUE,
     "Bloody Tears", "!Bloody Tears!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "burning hands", {6, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "burning hands", {6, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_burning_hands, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 5 ), 15, 12, TRUE,
     "burning hands", "!Burning Hands!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "call lightning", {NO_USE, 36, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "call lightning", {NO_USE, 36, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_call_lightning, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 6 ), 15, 12, TRUE,
     "lightning bolt", "!Call Lightning!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "calm", {NO_USE, NO_USE, NO_USE, NO_USE, 52, NO_USE},
+   {NORM,
+    "calm", {NO_USE, NO_USE, NO_USE, NO_USE, 52, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_calm, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 531 ), 30, 24, FALSE,
     "", "!Calm!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "cause critical", {NO_USE, 58, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cause critical", {NO_USE, 58, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cause_critical, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 63 ), 20, 12, TRUE,
     "spell", "!Cause Critical!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "cause light", {NO_USE, 4, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cause light", {NO_USE, 4, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cause_light, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 62 ), 15, 12, TRUE,
     "spell", "!Cause Light!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "cause serious", {NO_USE, 40, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cause serious", {NO_USE, 40, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cause_serious, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 64 ), 17, 12, TRUE,
     "spell", "!Cause Serious!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "change sex", {66, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "change sex", {66, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_change_sex, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 82 ), 15, 12, FALSE,
     "", "Your body feels familiar again.",
     "$n looks $mself again."},
 
-   {
-    MORTAL, NORM,
-    "charm person", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "charm person", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_charm_person, TAR_CHAR_OFFENSIVE, POS_STANDING,
     &gsn_charm_person, SLOT( 7 ), 5, 12, FALSE,
     "", "You feel more self-confident.",
     "The glazed look in $n's eyes fades."},
 
-   {
-    MORTAL, NORM,
-    "chill touch", {8, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "chill touch", {8, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_chill_touch, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 8 ), 15, 12, TRUE,
     "chilling touch", "You feel less cold.",
     ""},
 
-   {
-    MORTAL, NORM,
-    "color spray", {7, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "color spray", {7, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_color_spray, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 10 ), 15, 12, TRUE,
     "color spray", "!color Spray!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "continual light", {11, 27, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "continual light", {11, 27, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_continual_light, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 57 ), 7, 12, FALSE,
     "", "!Continual Light!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "control weather", {58, 79, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "control weather", {58, 79, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_control_weather, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 11 ), 25, 12, FALSE,
     "", "!Control Weather!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "create food", {NO_USE, 26, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "create food", {NO_USE, 26, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_create_food, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 12 ), 5, 12, FALSE,
     "", "!Create Food!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "create spring", {NO_USE, 65, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "create spring", {NO_USE, 65, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_create_spring, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 80 ), 20, 12, FALSE,
     "", "!Create Spring!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "create water", {NO_USE, 9, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "create water", {NO_USE, 9, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_create_water, TAR_OBJ_INV, POS_STANDING,
     NULL, SLOT( 13 ), 5, 12, FALSE,
     "", "!Create Water!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "cure blindness", {NO_USE, 28, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cure blindness", {NO_USE, 28, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cure_blindness, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 14 ), 5, 12, FALSE,
     "", "!Cure Blindness!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "cure critical", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cure critical", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cure_critical, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 15 ), 20, 12, FALSE,
     "", "!Cure Critical!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "cure light", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cure light", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cure_light, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 16 ), 10, 12, FALSE,
     "", "!Cure Light!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "cure poison", {NO_USE, 32, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cure poison", {NO_USE, 32, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cure_poison, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 43 ), 5, 12, FALSE,
     "", "!Cure Poison!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "purify", {NO_USE, NO_USE, NO_USE, NO_USE, 19, NO_USE},
+   {NORM,
+    "purify", {NO_USE, NO_USE, NO_USE, NO_USE, 19, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_purify, TAR_CHAR_SELF, POS_FIGHTING,
     NULL, SLOT( 231 ), 5, 12, FALSE,
     "Purify", "!Purify!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "cure serious", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cure serious", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cure_serious, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 61 ), 15, 12, TRUE,
     "", "!Cure Serious!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "curse", {35, 26, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "curse", {35, 26, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_curse, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_curse, SLOT( 17 ), 20, 12, FALSE,
     "curse", "The curse wears off.",
     "$n starts to look more Holy."},
 
-   {
-    MORTAL, NORM,
-    "detect evil", {12, 8, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "detect evil", {12, 8, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_detect_evil, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 18 ), 5, 12, FALSE,
     "", "The red in your vision disappears.",
     ""},
 
-   {
-    MORTAL, NORM,
-    "detect hidden", {17, 16, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "detect hidden", {17, 16, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_detect_hidden, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 44 ), 5, 12, FALSE,
     "", "You feel less aware of your suroundings.",
     ""},
 
-   {
-    MORTAL, NORM,
-    "detect invis", {19, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "detect invis", {19, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_detect_invis, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 19 ), 5, 12, FALSE,
     "", "You no longer see invisible objects.",
     ""},
 
-   {
-    MORTAL, NORM,
-    "detect magic", {7, 7, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "detect magic", {7, 7, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_detect_magic, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 20 ), 5, 12, FALSE,
     "", "The detect magic wears off.",
     ""},
 
-   {
-    MORTAL, NORM,
-    "detect poison", {NO_USE, 10, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "detect poison", {NO_USE, 10, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_detect_poison, TAR_OBJ_INV, POS_STANDING,
     NULL, SLOT( 21 ), 5, 12, FALSE,
     "", "!Detect Poison!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "detect undead", {8, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "detect undead", {8, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_detect_undead, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 513 ), 8, 12, FALSE,
     "", "You no longer sense undead beings.",
     ""},
 
-   {
-    MORTAL, NORM,
-    "detection", {NO_USE, NO_USE, NO_USE, NO_USE, 22, NO_USE},
+   {NORM,
+    "detection", {NO_USE, NO_USE, NO_USE, NO_USE, 22, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_detection, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 527 ), 12, 24, FALSE,
     "", "!Detection!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "dimension blade", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "dimension blade", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_dimension_blade, TAR_OBJ_INV, POS_STANDING,
     NULL, SLOT( 523 ), 100, 41, FALSE,
     "", "!Dimension Blade!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "dispel evil", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},  /* was 82, 63, ... */
+   {NORM,
+    "dispel evil", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},  /* was 82, 63, ... */
     spell_dispel_evil, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 22 ), 15, 12, FALSE,
     "dispel evil", "!Dispel Evil!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "dispel object", {60, 70, NO_USE, NO_USE, 80, NO_USE},
+   {NORM,
+    "dispel object", {60, 70, NO_USE, NO_USE, 80, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_dispel_object, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 0 ), 15, 12, FALSE,
     "", "!Dispel Object!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "dispel magic", {68, 89, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "dispel magic", {68, 89, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_dispel_magic, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 59 ), 15, 12, TRUE,
     "", "!Dispel Magic!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "purge", {NO_USE, NO_USE, NO_USE, NO_USE, 50, NO_USE},
+   {NORM,
+    "purge", {NO_USE, NO_USE, NO_USE, NO_USE, 50, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_dispel_magic, TAR_CHAR_NOTSELF, POS_FIGHTING,
     NULL, SLOT( 0 ), 15, 12, TRUE,
     "", "!Purge!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "earthquake", {NO_USE, 78, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "earthquake", {NO_USE, 78, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_earthquake, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 23 ), 15, 12, TRUE,
     "earthquake", "!Earthquake!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "ego whip", {NO_USE, NO_USE, NO_USE, NO_USE, 25, NO_USE},
+   {NORM,
+    "ego whip", {NO_USE, NO_USE, NO_USE, NO_USE, 25, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_ego_whip, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 535 ), 35, 24, TRUE,
     "ego whip", "!Ego Whip!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "enchant weapon", {39, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "enchant weapon", {39, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_enchant_weapon, TAR_OBJ_INV, POS_STANDING,
     NULL, SLOT( 24 ), 100, 24, FALSE,
     "", "!Enchant Weapon!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "energy drain", {15, 7, 8, 11, 9, 13},
+   {NORM,
+    "energy drain", {15, 7, 8, 11, 9, 13, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_energy_drain, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 25 ), 12, 12, TRUE,
     "energy drain", "!Energy Drain!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "enhance weapon", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "enhance weapon", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_enhance_weapon, TAR_OBJ_INV, POS_STANDING,
     NULL, SLOT( 517 ), 50, 24, FALSE,
     "", "!Enhance Weapon!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "faerie fire", {3, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "faerie fire", {3, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_faerie_fire, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 72 ), 5, 12, TRUE,
     "faerie fire", "The pink aura around you fades away.",
     "The pink aura around $n fades away."},
 
-   {
-    MORTAL, NORM,
-    "faerie fog", {NO_USE, 14, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "faerie fog", {NO_USE, 14, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_faerie_fog, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 73 ), 12, 12, FALSE,
     "faerie fog", "!Faerie Fog!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "fighting trance", {NO_USE, NO_USE, NO_USE, NO_USE, 60, NO_USE},
+   {NORM,
+    "fighting trance", {NO_USE, NO_USE, NO_USE, NO_USE, 60, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_fighting_trance, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 521 ), 60, 24, FALSE,
     "", "Your fighting trance fades.",
     "$n's fighting trance fades."},
 
-   {
-    MORTAL, NORM,
-    "fireball", {28, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "fireball", {28, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_fireball, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 26 ), 15, 12, TRUE,
     "fireball", "!Fireball!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "flamestrike", {NO_USE, 54, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "flamestrike", {NO_USE, 54, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_flamestrike, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 65 ), 20, 12, TRUE,
     "flamestrike", "!Flamestrike!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "flare", {NO_USE, 20, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "flare", {NO_USE, 20, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_flare, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 591 ), 18, 12, TRUE,
     "flare", "Your vision returns.",
     "$n blinks, and starts to see again."},
 
 
-   {
-    MORTAL, NORM,
-    "fly", {24, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "fly", {24, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_fly, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 56 ), 10, 18, FALSE,
     "", "You slowly float to the ground.",
     "$n slowly floats to the ground."},
 
-   {
-    MORTAL, NORM,
-    "gate", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "gate", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_gate, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 83 ), 50, 12, FALSE,
     "", "!Gate!",
     ""},
 
-   {
-    REMORT, NORM,
-    "giant strength", {18, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                18, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "giant strength", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 18, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 18, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_giant_strength, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 39 ), 20, 12, FALSE,
     "", "You feel weaker.",
     "$n looks weaker."},
 
-   {
-    MORTAL, NORM,
-    "harm", {NO_USE, 74, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "harm", {NO_USE, 74, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_harm, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 27 ), 35, 12, TRUE,
     "harm spell", "!Harm!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "heal", {NO_USE, 5, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "heal", {NO_USE, 5, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_heal, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 28 ), 50, 12, TRUE,
     "", "!Heal!",
     ""},
 
-   {
-    REMORT, NORM,
-    "group heal", {NO_USE, 5, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, 25, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "group heal", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 5, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 25, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_group_heal, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 169 ), 50, 12, TRUE,
     "", "!Group Heal!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "hypnosis", {NO_USE, NO_USE, NO_USE, NO_USE, 14, NO_USE},
+   {NORM,
+    "hypnosis", {NO_USE, NO_USE, NO_USE, NO_USE, 14, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_hypnosis, TAR_CHAR_OFFENSIVE, POS_STANDING,
     NULL, SLOT( 532 ), 30, 24, FALSE,
     "", "!Hypnosis!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "identify", {9, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "identify", {9, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_identify, TAR_OBJ_INV, POS_STANDING,
     NULL, SLOT( 53 ), 12, 24, FALSE,
     "", "!Identify!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "infravision", {20, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "infravision", {20, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_infravision, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 77 ), 5, 18, FALSE,
     "", "You no longer see in the dark.",
     ""},
 
-   {
-    MORTAL, NORM,
-    "influx", {NO_USE, 65, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "influx", {NO_USE, 65, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_influx, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 503 ), 75, 24, TRUE,
     "", "!Influx!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "invis", {17, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "invis", {17, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_invis, TAR_IGNORE, POS_STANDING,
     &gsn_invis, SLOT( 29 ), 5, 12, FALSE,
     "", "You are no longer invisible.",
     "$n's invisibilty fades."},
 
-   {
-    MORTAL, NORM,
-    "know alignment", {13, 22, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "know alignment", {13, 22, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_know_alignment, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 58 ), 9, 12, FALSE,
     "", "!Know Alignment!",
@@ -1257,120 +1158,106 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
 
 
-   {
-    MORTAL, NORM,
-    "know weakness", {NO_USE, NO_USE, NO_USE, NO_USE, 18, NO_USE},
+   {NORM,
+    "know weakness", {NO_USE, NO_USE, NO_USE, NO_USE, 18, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_know_weakness, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 530 ), 15, 12, FALSE,
     "", "You are less aware of your enemy's weaknesses.",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "know critical", {NO_USE, NO_USE, NO_USE, NO_USE, 28, NO_USE},
+   {NORM,
+    "know critical", {NO_USE, NO_USE, NO_USE, NO_USE, 28, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_know_weakness, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 530 ), 15, 12, FALSE,
     "", "You are less aware of critical damage points.",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "know item", {NO_USE, NO_USE, NO_USE, NO_USE, 9, NO_USE},
+   {NORM,
+    "know item", {NO_USE, NO_USE, NO_USE, NO_USE, 9, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_identify, TAR_OBJ_INV, POS_STANDING,
     NULL, SLOT( 533 ), 20, 24, FALSE,
     "", "!Know Item!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "laser bolt", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "laser bolt", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_laserbolt, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 511 ), 35, 12, FALSE,
     "laserbolt", "!laserbolt!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "lightning bolt", {24, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "lightning bolt", {24, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_lightning_bolt, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 30 ), 15, 12, TRUE,
     "lightning bolt", "!Lightning Bolt!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "locate object", {16, 30, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "locate object", {16, 30, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_locate_object, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 31 ), 20, 18, FALSE,
     "", "!Locate Object!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "magic missile", {3, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "magic missile", {3, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_magic_missile, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 32 ), 15, 12, TRUE,
     "magic missile", "!Magic Missile!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "mass invis", {60, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "mass invis", {60, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_mass_invis, TAR_IGNORE, POS_STANDING,
     &gsn_mass_invis, SLOT( 69 ), 20, 24, FALSE,
     "", "!Mass Invis!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "mind flail", {NO_USE, NO_USE, NO_USE, NO_USE, 4, NO_USE},
+   {NORM,
+    "mind flail", {NO_USE, NO_USE, NO_USE, NO_USE, 4, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_mind_flail, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 536 ), 12, 24, TRUE,
     "mind flail", "!Mind Flail!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "mystic armour", {10, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "mystic armour", {10, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_mystic_armor, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 590 ), 18, 24, FALSE,
     "" "Your Mystic Armour fades away",
     "The Mystic Armour around someone in the room fades away."},
 
 
-   {
-    MORTAL, NORM,
-    "nerve fire", {NO_USE, NO_USE, NO_USE, NO_USE, 60, NO_USE},
+   {NORM,
+    "nerve fire", {NO_USE, NO_USE, NO_USE, NO_USE, 60, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_nerve_fire, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 520 ), 50, 24, TRUE,
     "nerve fire", "!Nerve Fire!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "night vision", {NO_USE, NO_USE, NO_USE, NO_USE, 19, NO_USE},
+   {NORM,
+    "night vision", {NO_USE, NO_USE, NO_USE, NO_USE, 19, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_night_vision, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 538 ), 17, 24, FALSE,
     "", "Your eyes feel weaker.",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "pass door", {46, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "pass door", {46, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_pass_door, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 74 ), 20, 12, FALSE,
     "", "You feel solid again.",
     "$n's body becomes more solid."},
 
-   {
-    MORTAL, NORM,
-    "phase", {NO_USE, NO_USE, NO_USE, NO_USE, 45, NO_USE},
+   {NORM,
+    "phase", {NO_USE, NO_USE, NO_USE, NO_USE, 45, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_phase, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 522 ), 20, 12, FALSE,
     "", "You feel solid again.",
@@ -1378,373 +1265,322 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
 
 
-   {
-    MORTAL, NORM,
-    "psychic crush", {NO_USE, NO_USE, NO_USE, NO_USE, 19, NO_USE},
+   {NORM,
+    "psychic crush", {NO_USE, NO_USE, NO_USE, NO_USE, 19, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_physic_thrust, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 537 ), 33, 24, TRUE,
     "psychic crush", "!Psychic Crush!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "psychic thrust", {NO_USE, NO_USE, NO_USE, NO_USE, 7, NO_USE},
+   {NORM,
+    "psychic thrust", {NO_USE, NO_USE, NO_USE, NO_USE, 7, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_physic_thrust, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 537 ), 22, 24, TRUE,
     "psychic thrust", "!Physic Thrust!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "poison", {NO_USE, 31, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "poison", {NO_USE, 31, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_poison, TAR_CHAR_OFFENSIVE, POS_STANDING,
     &gsn_poison, SLOT( 33 ), 10, 12, FALSE,
     "poison", "You feel less sick.",
     "$n looks less sick."},
 
-   {
-    MORTAL, NORM,
-    "produce food", {NO_USE, NO_USE, NO_USE, NO_USE, 24, NO_USE},
+   {NORM,
+    "produce food", {NO_USE, NO_USE, NO_USE, NO_USE, 24, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_produce_food, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 524 ), 16, 24, FALSE,
     "", "!Produce Food!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "protection", {9, 12, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "protection", {9, 12, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_protection, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 34 ), 5, 12, FALSE,
     "", "You feel less protected.",
     ""},
 
-   {
-    MORTAL, NORM,
-    "psionic recovery", {NO_USE, NO_USE, NO_USE, NO_USE, 5, NO_USE},
+   {NORM,
+    "psionic recovery", {NO_USE, NO_USE, NO_USE, NO_USE, 5, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_psionic_recovery, TAR_CHAR_SELF, POS_FIGHTING,
     NULL, SLOT( 78 ), 5, 12, TRUE,
     "", "You feel less protected.",
     ""},
 
-   {
-    MORTAL, NORM,
-    "refresh", {NO_USE, 11, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "refresh", {NO_USE, 11, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_refresh, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 81 ), 12, 18, FALSE,
     "refresh", "!Refresh!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "refresh mana", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "refresh mana", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_refresh_mana, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 81 ), 12, 18, FALSE,
     "refresh mana", "!Refresh mana!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "regen", {5, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "regen", {5, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_regen, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 271 ), 12, 18, TRUE,
     "", "You are no longer regenerating quickly.",
     "$n is no longer regenerating quickly."},
 
-   {
-    REMORT, NORM,
-    "haste", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                84, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "haste", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 84, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_haste, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 271 ), 12, 18, TRUE,
     "", "You are no longer moving quickly.",
     "$n is no longer moving quickly."},
 
-   {
-    REMORT, NORM,
-    "overdrive", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 57, NO_USE},
+   {NORM,
+    "overdrive", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 57, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_overdrive, TAR_CHAR_SELF, POS_FIGHTING,
     NULL, SLOT( 271 ), 12, 18, TRUE,
     "", "You are no longer acting quickly.",
     "$n is no longer acting quickly."},   
 
-   {
-    REMORT, NORM,
-    "magical supremacy", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                42, NO_USE, NO_USE, NO_USE, 13, NO_USE},
+   {NORM,
+    "magical supremacy", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 42, NO_USE, NO_USE, NO_USE, 13, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_magical_supremacy, TAR_CHAR_SELF, POS_FIGHTING,
     NULL, SLOT( 271 ), 12, 18, TRUE,
     "", "You no longer have magical supremacy.",
     "$n no longer has magical supremacy."},
 
-   {
-    REMORT, NORM,
-    "slow", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                92, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "slow", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 92, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_slow, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 271 ), 12, 18, TRUE,
     "", "You are no longer acting slowly.",
     "$n is no longer acting slowly."},
 
-   {
-    REMORT, NORM,
-    "feeble mind", {NO_USE, NO_USE, NO_USE, NO_USE, 45, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "feeble mind", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 45, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_feeble_mind, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 271 ), 12, 18, TRUE,
     "", "You are now thinking quickly.",
     "$n is now thinking quickly."},
 
 
-   {
-    REMORT, NORM,
-    "feeble body", {NO_USE, NO_USE, NO_USE, NO_USE, 45, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "feeble body", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 45, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_feeble_body, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 271 ), 12, 18, TRUE,
     "", "You are now moving quickly.",
     "$n is now moving quickly."},
 
 
-   {
-    MORTAL, NORM,
-    "remove curse", {36, 27, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "remove curse", {36, 27, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_remove_curse, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 35 ), 5, 12, FALSE,
     "", "!Remove Curse!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "sanctuary", {NO_USE, 70, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "sanctuary", {NO_USE, 70, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_sanctuary, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 36 ), 75, 12, FALSE,
     "", "The white aura around your body fades.",
     "The white aura around $n's body fades."},
 
-   {
-    REMORT, NORM,
-    "refuge", {NO_USE, 32, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, 32, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "refuge", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 32, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 32, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_refuge, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 0 ), 75, 12, TRUE,
     "", "The rainbow aura around your body fades.",
     "The rainbow aura around $n's body fades."},
 
 
-   {
-    MORTAL, NORM,
-    "seal room", {70, 50, NO_USE, NO_USE, 50, NO_USE},
+   {NORM,
+    "seal room", {70, 50, NO_USE, NO_USE, 50, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_seal_room, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 541 ), 75, 12, FALSE,
     "", "The Energy web around this room fades.",
     ""},
 
-   {
-    MORTAL, NORM,
-    "see magic", {NO_USE, NO_USE, NO_USE, NO_USE, 7, NO_USE},
+   {NORM,
+    "see magic", {NO_USE, NO_USE, NO_USE, NO_USE, 7, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_see_magic, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 526 ), 8, 12, FALSE,
     "", "You no longer see magical auras.",
     ""},
 
-   {
-    MORTAL, NORM,
-    "sense evil", {NO_USE, NO_USE, NO_USE, NO_USE, 10, NO_USE},
+   {NORM,
+    "sense evil", {NO_USE, NO_USE, NO_USE, NO_USE, 10, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_sense_evil, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 515 ), 12, 12, FALSE,
     "", "You no longer sense evil.",
     ""},
 
-   {
-    MORTAL, NORM,
-    "shield", {9, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "shield", {9, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_shield, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 67 ), 12, 18, FALSE,
     "", "Your force shield shimmers, then fades away.",
     "$n's force field shimmers, then fades away."},
 
-   {
-    MORTAL, NORM,
-    "shocking grasp", {5, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "shocking grasp", {5, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_shocking_grasp, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 82 ), 15, 12, TRUE,
     "shocking grasp", "!Shocking Grasp!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "sight", {30, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "sight", {30, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cure_blindness, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 592 ), 20, 24, FALSE,
     "", "!Sight!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "sleep", {9, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "sleep", {9, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_sleep, TAR_CHAR_OFFENSIVE, POS_STANDING,
     &gsn_sleep, SLOT( 38 ), 15, 12, FALSE,
     "", "You feel less tired.",
     "$n starts looking much more awake."},
 
 
-   {
-    MORTAL, NORM,
-    "stalker", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "stalker", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_stalker, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 401 ), 100, 24, FALSE,
     "", "!Stalker!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "stone skin", {36, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "stone skin", {36, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_stone_skin, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 66 ), 12, 18, TRUE,
     "", "Your skin feels soft again.",
     "$n's skin loses it's stone-like look."},
 
-   {
-    MORTAL, NORM,
-    "suffocate", {NO_USE, NO_USE, NO_USE, NO_USE, 46, NO_USE},
+   {NORM,
+    "suffocate", {NO_USE, NO_USE, NO_USE, NO_USE, 46, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_suffocate, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 516 ), 30, 24, TRUE,
     "a choking hand", "!Suffocate!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "summon", {35, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "summon", {35, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_summon, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 40 ), 50, 12, FALSE,
     "", "!Summon!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "teleport", {40, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "teleport", {40, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_teleport, TAR_CHAR_SELF, POS_FIGHTING,
     NULL, SLOT( 2 ), 35, 12, FALSE,
     "", "!Teleport!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "travel", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "travel", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_travel, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 599 ), 50, 24, FALSE,
     "", "!Travel!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "ventriloquate", {3, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "ventriloquate", {3, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_ventriloquate, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 41 ), 5, 12, FALSE,
     "", "!Ventriloquate!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "weaken", {NO_USE, 20, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "weaken", {NO_USE, 20, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_weaken, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 68 ), 20, 12, FALSE,
     "spell", "You feel stronger.",
     "$n looks stronger."},
 
-   {
-    MORTAL, NORM,
-    "beacon", {70, NO_USE, NO_USE, NO_USE, 70, NO_USE},
+   {NORM,
+    "beacon", {70, NO_USE, NO_USE, NO_USE, 70, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_beacon, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 399 ), 25, 12, FALSE,
     "", "!Beacon!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "portal", {80, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "portal", {80, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_portal, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 334 ), 100, 12, FALSE,
     "", "!Portal!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "window", {70, NO_USE, NO_USE, NO_USE, 70, NO_USE},
+   {NORM,
+    "window", {70, NO_USE, NO_USE, NO_USE, 70, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_window, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 333 ), 100, 12, FALSE,
     "", "!Window!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "word of recall", {NO_USE, 66, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "word of recall", {NO_USE, 66, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_word_of_recall, TAR_CHAR_SELF, POS_RESTING,
     NULL, SLOT( 42 ), 5, 12, FALSE,
     "", "!Word of Recall!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "hellspawn", {43, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "hellspawn", {43, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_hellspawn, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 512 ), 50, 12, TRUE,
     "HellSpawn", "!Hellspawn!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "planergy", {NO_USE, NO_USE, NO_USE, NO_USE, 5, NO_USE},
+   {NORM,
+    "planergy", {NO_USE, NO_USE, NO_USE, NO_USE, 5, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_planergy, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 504 ), 25, 24, TRUE,
     "energy", "!planergy!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "visit", {NO_USE, NO_USE, NO_USE, NO_USE, 32, NO_USE},
+   {NORM,
+    "visit", {NO_USE, NO_USE, NO_USE, NO_USE, 32, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_visit, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 505 ), 50, 48, FALSE,
     "", "!visit!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "barrier", {NO_USE, NO_USE, NO_USE, NO_USE, 8, NO_USE},
+   {NORM,
+    "barrier", {NO_USE, NO_USE, NO_USE, NO_USE, 8, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_barrier, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 506 ), 30, 24, FALSE,
     "", "Your barrier slowly fades.",
     "The barrier around $n fades."},
 
-   {
-    MORTAL, NORM,
-    "phobia", {NO_USE, NO_USE, NO_USE, NO_USE, 10, NO_USE},
+   {NORM,
+    "phobia", {NO_USE, NO_USE, NO_USE, NO_USE, 10, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_phobia, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 507 ), 32, 24, FALSE,
     "phobia attack", "!phobia!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "mind bolt", {NO_USE, NO_USE, NO_USE, NO_USE, 12, NO_USE},
+   {NORM,
+    "mind bolt", {NO_USE, NO_USE, NO_USE, NO_USE, 12, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_mind_bolt, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 519 ), 40, 12, TRUE,
     "Mind Bolt", "!MindBolt!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "mindflame", {NO_USE, NO_USE, NO_USE, NO_USE, 35, NO_USE},
+   {NORM,
+    "mindflame", {NO_USE, NO_USE, NO_USE, NO_USE, 35, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_mindflame, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 508 ), 40, 24, TRUE,
     "Mind Flame", "!mindflame!",
@@ -1752,17 +1588,15 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
 
 
-   {
-    MORTAL, NORM,
-    "chain lightning", {65, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "chain lightning", {65, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_chain_lightning, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 509 ), 25, 24, TRUE,
     "lightening bolt", "!chain-light!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "static", {NO_USE, NO_USE, NO_USE, NO_USE, 20, NO_USE},
+   {NORM,
+    "static", {NO_USE, NO_USE, NO_USE, NO_USE, 20, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_static, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 510 ), 40, 24, TRUE,
     "discharge", "!static!",
@@ -1770,10 +1604,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
 
 
-   {
-    REMORT, NORM,
-    "cloak:absorption", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cloak:absorption", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cloak_absorb, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 221 ), 500, 12, FALSE,
     "", "@@NThe @@lcloak@@N around your body fades.",
@@ -1781,10 +1613,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
 
 
-   {
-    REMORT, NORM,
-    "cloak:reflection", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cloak:reflection", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cloak_reflect, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 222 ), 500, 12, FALSE,
     "", "@@NThe @@lc@@el@@ro@@ya@@ak@@N around your body fades.",
@@ -1792,10 +1622,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
 
 
-   {
-    REMORT, NORM,
-    "cloak:flaming", {48, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cloak:flaming", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 48, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cloak_flaming, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 223 ), 750, 12, FALSE,
     "", "@@NThe @@ecloak@@N around your body fades.",
@@ -1803,10 +1631,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
 
 
-   {
-    REMORT, NORM,
-    "cloak:elements", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                48, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cloak:elements", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 48, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cloak_elements, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 225 ), 750, 12, FALSE,
     "", "@@NThe @@lcloak@@N around your body fades.",
@@ -1819,49 +1645,43 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
 
 
-   {
-    ADEPT, NORM,
-    "cloak:adept", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cloak:adept", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cloak_adept, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 226 ), 500, 12, FALSE,
     "", "@@NThe @@Wcloak@@N around your body fades.",
     "@@NThe @@Wcloak@@N around $n's body fades."},
 
-   {
-    MORTAL, NORM,
-    "acid breath", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "acid breath", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_acid_breath, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 200 ), 0, 4, FALSE,
     "blast of acid", "!Acid Breath!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "fire breath", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "fire breath", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_fire_breath, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 201 ), 0, 4, FALSE,
     "blast of flame", "!Fire Breath!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "frost breath", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "frost breath", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_frost_breath, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 202 ), 0, 4, FALSE,
     "blast of frost", "!Frost Breath!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "gas breath", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "gas breath", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_gas_breath, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 203 ), 0, 4, FALSE,
     "blast of gas", "!Gas Breath!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "lightning breath", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "lightning breath", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_lightning_breath, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 204 ), 0, 4, FALSE,
     "blast of lightning", "!Lightning Breath!",
@@ -1874,386 +1694,331 @@ const struct skill_type skill_table[MAX_SKILL] = {
  */
 
 
-   {
-    MORTAL, NORM,
-    "appraise", {NO_USE, NO_USE, 12, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "appraise", {NO_USE, NO_USE, 12, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_appraise, SLOT( 0 ), 0, 24, FALSE,
     "", "!Appraise!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "bash", {NO_USE, NO_USE, NO_USE, 28, NO_USE, NO_USE},
+   {NORM,
+    "bash", {NO_USE, NO_USE, NO_USE, 28, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_bash, SLOT( 0 ), 0, 24, TRUE,
     "bash", "!bash!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "berserk", {NO_USE, NO_USE, NO_USE, 34, NO_USE, NO_USE},
+   {NORM,
+    "berserk", {NO_USE, NO_USE, NO_USE, 34, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_beserk, SLOT( 0 ), 0, 24, TRUE,
     "berserk", "You calm down!",
     "$n looks calmer!"},
 
 
-   {
-    MORTAL, NORM,
-    "climb", {NO_USE, NO_USE, 25, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "climb", {NO_USE, NO_USE, 25, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_climb, SLOT( 0 ), 0, 24, FALSE,
     "", "!Climb!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "dirt", {NO_USE, NO_USE, 36, 35, NO_USE, 47},
+   {NORM,
+    "dirt", {NO_USE, NO_USE, 36, 35, NO_USE, 47, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_dirt, SLOT( 0 ), 1, 24, TRUE,
     "", "!dirt!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "nodisarm", {NO_USE, NO_USE, 40, 30, NO_USE, NO_USE},
+   {NORM,
+    "nodisarm", {NO_USE, NO_USE, 40, 30, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_nodisarm, SLOT( 0 ), 0, 0, FALSE,
     "", "!nodisarm!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "smash", {NO_USE, NO_USE, NO_USE, 30, NO_USE, NO_USE},
+   {NORM,
+    "smash", {NO_USE, NO_USE, NO_USE, 30, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_smash, SLOT( 0 ), 0, 0, FALSE,
     "", "!smash!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "steal", {NO_USE, NO_USE, 20, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "steal", {NO_USE, NO_USE, 20, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_steal, SLOT( 0 ), 1, 18, TRUE,
     "steal", "!steal!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "circle", {NO_USE, NO_USE, 19, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "circle", {NO_USE, NO_USE, 19, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_circle, SLOT( 0 ), 1, 18, TRUE,
     "circle", "!circle!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "backstab", {NO_USE, NO_USE, 10, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "backstab", {NO_USE, NO_USE, 10, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_backstab, SLOT( 0 ), 1, 18, TRUE,
     "backstab", "!Backstab!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "disarm", {NO_USE, NO_USE, 53, 12, NO_USE, NO_USE},
+   {NORM,
+    "disarm", {NO_USE, NO_USE, 53, 12, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_disarm, SLOT( 0 ), 1, 18, TRUE,
     "", "!Disarm!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "dodge", {NO_USE, NO_USE, 7, NO_USE, NO_USE, 27},
+   {NORM,
+    "dodge", {NO_USE, NO_USE, 7, NO_USE, NO_USE, 27, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_dodge, SLOT( 0 ), 0, 0, FALSE,
     "", "!Dodge!",
     ""},
 
-   {
-    REMORT, NORM,
-    "dualwield", {NO_USE, NO_USE, 5, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, 5, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "dualwield", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 5, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 5, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_dualwield, SLOT( 0 ), 0, 0, FALSE,
     "", "!DualWield!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "enhanced damage", {NO_USE, NO_USE, NO_USE, 20, NO_USE, NO_USE},
+   {NORM,
+    "enhanced damage", {NO_USE, NO_USE, NO_USE, 20, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_enhanced_damage, SLOT( 0 ), 0, 0, FALSE,
     "", "!Enhanced Damage!",
     ""},
 
-   {
-    REMORT, NORM,
-    "equip buckler", {NO_USE, 1, NO_USE, 1, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, 1, NO_USE, NO_USE},
+   {NORM,
+    "equip buckler", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 1, NO_USE, 1, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 1, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_equip_buckler, SLOT( 0 ), 0, 0, FALSE,
     "", "!Equip Buckler!",
     ""},
 
-   {
-    REMORT, NORM,
-    "equip fist", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 1,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 1},
+   {NORM,
+    "equip fist", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 1, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 1, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_equip_fist, SLOT( 0 ), 0, 0, FALSE,
     "", "!Equip Fist!",
     ""},
 
-   {
-    REMORT, NORM,
-    "dual fist", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 35,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 35},
+   {NORM,
+    "dual fist", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 35, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 35, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_dual_fist, SLOT( 0 ), 0, 0, FALSE,
     "", "!Dual Fist!",
     ""},
 
-   {
-    REMORT, NORM,
-    "equip wand", {1, NO_USE, NO_USE, NO_USE, 1, NO_USE,
-                1, 1, NO_USE, NO_USE, 1, NO_USE},
+   {NORM,
+    "equip wand", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 1, NO_USE, NO_USE, NO_USE, 1, NO_USE, 1, 1, NO_USE, NO_USE, 1, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_equip_wand, SLOT( 0 ), 0, 0, FALSE,
     "", "!Equip Wand!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "flee timer", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "flee timer", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_flee_timer, SLOT( 0 ), 0, 24, FALSE,
     "", "Your anti-flee timer has expired!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "find doors", {NO_USE, NO_USE, 16, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "find doors", {NO_USE, NO_USE, 16, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_find_doors, SLOT( 0 ), 0, 0, FALSE,
     "", "!Find Doors!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "counter", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 20},
+   {NORM,
+    "counter", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 20, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_counter, SLOT( 0 ), 0, 0, FALSE,
     "counter", "!Counter!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "enhanced critical", {NO_USE, NO_USE, 20, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "enhanced critical", {NO_USE, NO_USE, 20, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_enhanced_critical, SLOT( 0 ), 0, 0, FALSE,
     "", "!Enhanced Crit!",
     ""},
 
-   {
-    ADEPT, NORM,
-    "enhanced heal", {NO_USE, 1, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "enhanced heal", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 1, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_enhanced_heal, SLOT( 0 ), 0, 0, FALSE,
     "", "!Enhanced Heal!",
     ""},
 
-   {
-    REMORT, NORM,
-    "enhanced purify", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 44, NO_USE},
+   {NORM,
+    "enhanced purify", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 44, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_enhanced_purify, SLOT( 0 ), 0, 0, FALSE,
     "", "!Enhanced Purify!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "spell critical", {NO_USE, NO_USE, NO_USE, NO_USE, 20, NO_USE},
+   {NORM,
+    "spell critical", {NO_USE, NO_USE, NO_USE, NO_USE, 20, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_spell_critical, SLOT( 0 ), 0, 0, FALSE,
     "", "!Spell Crit!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "spell critical damage", {NO_USE, 20, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "spell critical damage", {NO_USE, 20, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_spell_critical_damage, SLOT( 0 ), 0, 0, FALSE,
     "", "!Spell Critical Damage!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "headbutt", {NO_USE, NO_USE, NO_USE, 6, NO_USE, NO_USE},
+   {NORM,
+    "headbutt", {NO_USE, NO_USE, NO_USE, 6, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_headbutt, SLOT( 0 ), 1, 18, TRUE,
     "headbutt", "!HeadButt!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "hide", {NO_USE, NO_USE, 12, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "hide", {NO_USE, NO_USE, 12, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_RESTING,
     &gsn_hide, SLOT( 0 ), 0, 12, FALSE,
     "", "!Hide!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "hunt", {NO_USE, NO_USE, 70, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "hunt", {NO_USE, NO_USE, 70, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_RESTING,
     &gsn_hunt, SLOT( 0 ), 0, 12, FALSE,
     "", "!Hunt!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "kick", {NO_USE, NO_USE, NO_USE, 14, NO_USE, NO_USE},
+   {NORM,
+    "kick", {NO_USE, NO_USE, NO_USE, 14, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_kick, SLOT( 0 ), 1, 18, TRUE,
     "kick", "!Kick!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "knee", {NO_USE, NO_USE, NO_USE, 8, NO_USE, NO_USE},
+   {NORM,
+    "knee", {NO_USE, NO_USE, NO_USE, 8, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_knee, SLOT( 0 ), 1, 18, TRUE,
     "knee", "!Knee",
     ""},
 
-   {
-    MORTAL, NORM,
-    "detox", {NO_USE, NO_USE, 27, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "detox", {NO_USE, NO_USE, 27, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_detox, SLOT( 0 ), 0, 24, FALSE,
     "detox", "!Detox",
     ""},
 
-   {
-    MORTAL, NORM,
-    "martial arts", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 10},
+   {NORM,
+    "martial arts", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 10, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_martial_arts, SLOT( 0 ), 0, 0, FALSE,
     "", "!Martial Arts!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "parry", {NO_USE, NO_USE, 52, 10, NO_USE, NO_USE},
+   {NORM,
+    "parry", {NO_USE, NO_USE, 52, 10, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_parry, SLOT( 0 ), 0, 0, FALSE,
     "", "!Parry!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "peek", {NO_USE, NO_USE, 20, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "peek", {NO_USE, NO_USE, 20, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_peek, SLOT( 0 ), 0, 0, FALSE,
     "", "!Peek!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "pick lock", {NO_USE, NO_USE, 25, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "pick lock", {NO_USE, NO_USE, 25, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_pick_lock, SLOT( 0 ), 0, 12, FALSE,
     "", "!Pick!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "punch", {NO_USE, NO_USE, NO_USE, 5, NO_USE, NO_USE},
+   {NORM,
+    "punch", {NO_USE, NO_USE, NO_USE, 5, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_punch, SLOT( 0 ), 1, 18, TRUE,
     "punch", "!Punch!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "rescue", {NO_USE, NO_USE, NO_USE, 15, NO_USE, NO_USE},
+   {NORM,
+    "rescue", {NO_USE, NO_USE, NO_USE, 15, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_rescue, SLOT( 0 ), 0, 12, FALSE,
     "", "!Rescue!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "shadowform", {NO_USE, NO_USE, NO_USE, NO_USE, 9, NO_USE},
+   {NORM,
+    "shadowform", {NO_USE, NO_USE, NO_USE, NO_USE, 9, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_shadow, SLOT( 0 ), 0, 0, FALSE,
     "", NULL,
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "shield block", {NO_USE, NO_USE, NO_USE, 40, NO_USE, 18},
+   {NORM,
+    "shield block", {NO_USE, NO_USE, NO_USE, 40, NO_USE, 18, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_shield_block, SLOT( 0 ), 0, 12, FALSE,
     "", "!Shield Block!",
     ""},
 
 
-   {
-    MORTAL, NORM,
-    "sneak", {NO_USE, NO_USE, 5, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "sneak", {NO_USE, NO_USE, 5, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_sneak, SLOT( 0 ), 0, 12, FALSE,
     "", NULL,
     ""},
 
-   {
-    REMORT, NORM,
-    "stun", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "stun", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_stun, SLOT( 0 ), 0, 24, FALSE,
     "", "",
     ""},
 
-   {
-    REMORT, NORM,
-    "disguise", {NO_USE, NO_USE, 25, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, 25, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "disguise", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 25, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 25, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_disguise, SLOT( 0 ), 0, 0, FALSE,
     "", "!Disguise!",
     ""},
 
-   {
-    REMORT, NORM,
-    "frenzy", {NO_USE, NO_USE, NO_USE, 27, NO_USE, NO_USE,
-                NO_USE, 41, NO_USE, 28, NO_USE, NO_USE},
+   {NORM,
+    "frenzy", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 27, NO_USE, NO_USE, NO_USE, 41, NO_USE, 28, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_frenzy, SLOT( 0 ), 0, 24, FALSE,
     "frenzy", "!FRENZY!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "warcry", {NO_USE, NO_USE, NO_USE, 10, NO_USE, NO_USE},
+   {NORM,
+    "warcry", {NO_USE, NO_USE, NO_USE, 10, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_warcry, SLOT( 0 ), 0, 24, TRUE,
     "warcry", "!Warcry!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "emotion control", {NO_USE, NO_USE, NO_USE, NO_USE, 75, NO_USE},
+   {NORM,
+    "emotion control", {NO_USE, NO_USE, NO_USE, NO_USE, 75, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_emotion_control, SLOT( 0 ), 0, 24, FALSE,
     "emotion control", "!EMOTION CONTROL!",
@@ -2264,142 +2029,112 @@ const struct skill_type skill_table[MAX_SKILL] = {
 /*
  *  Spells for mega1.are from Glop/Erkenbrand.
 */
-   {
-    MORTAL, NORM,
-    "general purpose", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "general purpose", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_general_purpose, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 205 ), 0, 12, FALSE,
     "general purpose ammo", "!General Purpose Ammo!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "high explosive", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "high explosive", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_high_explosive, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 206 ), 0, 12, FALSE,
     "high explosive ammo", "!High Explosive Ammo!",
     ""},
 
-   {
-    REMORT, NORM,
-    "deflect weapon", {NO_USE, NO_USE, NO_USE, NO_USE, 22, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 22, NO_USE},
+   {NORM,
+    "deflect weapon", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 22, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 22, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_deflect_weapon, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 600 ), 25, 12, TRUE,
     "", "Your mind shield melts away.",
     ""},
 
-   {
-    REMORT, NORM,
-    "black hand", {NO_USE, NO_USE, NO_USE, NO_USE, 7, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 7, NO_USE},
+   {NORM,
+    "black hand", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 7, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 7, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_black_hand, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 601 ), 50, 12, TRUE,
     "Black Hand", "The hand dissolves from around your throat into nothingness.",
     ""},
-   {
-    REMORT, NORM,
-    "throwing needle", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, 7, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "throwing needle", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 7, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_throw_needle, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 602 ), 40, 12, TRUE,
     "Throwing Needle", "!Throwing Needle!",
     ""},
 
 
-   {
-    REMORT, NORM,
-    "morale", {NO_USE, 21, NO_USE, 10, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "morale", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 21, NO_USE, 10, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_morale, SLOT( 0 ), 75, 24, TRUE,
     "Morale", "!Morale!",
     ""},
 
-   {
-    REMORT, NORM,
-    "leadership", {NO_USE, 24, NO_USE, 12, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "leadership", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 24, NO_USE, 12, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_leadership, SLOT( 0 ), 75, 24, TRUE,
     "Leadership", "!Leadership!",
     ""},
 
-   {
-    REMORT, NORM,
-    "two handed", {NO_USE, 8, NO_USE, 6, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, 6, NO_USE, NO_USE},
+   {NORM,
+    "two handed", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 8, NO_USE, 6, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 6, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_two_handed, SLOT( 0 ), 0, 0, FALSE,
     "", "!Two Handed!",
     ""},
 
-   {
-    REMORT, NORM,
-    "palmstrike", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 19},
+   {NORM,
+    "palmstrike", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 19, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_palmstrike, SLOT( 0 ), 0, 0, TRUE,
     "Palmstrike", "!Palm Strike!",
     ""},
 
 
-   {
-    REMORT, NORM,
-    "bare hand", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 6,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 6},
+   {NORM,
+    "bare hand", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 6, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 6, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_bare_hand, SLOT( 0 ), 0, 0, FALSE,
     "", "!Enhanced Sword!",
     ""},
 
-   {
-    REMORT, NORM,
-    "enhanced sword damage", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, 20, NO_USE, NO_USE},
+   {NORM,
+    "enhanced sword damage", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 20, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_enhanced_sword, SLOT( 0 ), 0, 0, FALSE,
     "", "!Enhanced Sword!",
     ""},
 
-   {
-    REMORT, NORM,
-    "enhanced sword critical", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, 40, NO_USE, NO_USE},
+   {NORM,
+    "enhanced sword critical", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 40, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_enhanced_sword_critical, SLOT( 0 ), 0, 0, FALSE,
     "", "!Enhanced Sword Critical!",
     ""},
 
 
-   {
-    REMORT, NORM,
-    "Ice Bolt", {3, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "Ice Bolt", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 3, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_ice_bolt, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 605 ), 20, 12, TRUE,
     "Ice Bolt", "!Ice Bolt!",
     ""},
-   {
-    REMORT, NORM,
-    "water elemental", {6, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                6, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "water elemental", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 6, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 6, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_waterelem, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 606 ), 80, 24, FALSE,
     "", "!Stalker!",
     ""},
-   {
-    REMORT, NORM,
-    "skeleton", {NO_USE, NO_USE, NO_USE, NO_USE, 9, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 9, NO_USE},
+   {NORM,
+    "skeleton", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 9, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 9, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_skeleton, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 607 ), 80, 24, FALSE,
     "", "!Stalker!",
     ""},
-   {
-    REMORT, NORM,
-    "poison weapon", {NO_USE, NO_USE, 25, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, 5, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "poison weapon", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 25, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 5, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_poison_weapon, TAR_OBJ_INV, POS_STANDING,
     NULL, SLOT( 608 ), 100, 24, FALSE,
     "", "!Enchant Weapon!",
@@ -2416,20 +2151,16 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
 
 
-   {
-    REMORT, NORM,
-    "adrenaline", {NO_USE, 42, NO_USE, 21, NO_USE, 28,
-                NO_USE, 42, NO_USE, 21, NO_USE, 28},
+   {NORM,
+    "adrenaline", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 42, NO_USE, 21, NO_USE, 28, NO_USE, 42, NO_USE, 21, NO_USE, 28, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_adrenaline, SLOT( 0 ), 0, 0, FALSE,
     "", "!ADRENALINE!",
     ""},
 
 
-   {
-    REMORT, NORM,
-    "throwing star", {NO_USE, NO_USE, 43, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, 12, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "throwing star", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 43, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 12, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_throw_needle, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 628 ), 85, 12, TRUE,
     "Throwing Star", "!Throwing Star!",
@@ -2439,44 +2170,35 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
 /* THIS IS A SPELL AFFECT HOLDER FOR THE SKILL ADRENALINE..DO NOT CAST! */
 
-   {
-    REMORT, NORM,
-    "adrenaline bonus", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "adrenaline bonus", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 612 ), 0, 0, FALSE,
     "", "!ADRENALINE BONUS!",
     ""},
 
-   {
-    REMORT, NORM,
-    "fire elemental", {11, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                11, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "fire elemental", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 11, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 11, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_fireelem, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 612 ), 120, 24, FALSE,
     "", "!FIRE ELEMENTAL!",
     ""},
-   {
-    REMORT, NORM,
-    "rune:fire", {40, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                40, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "rune:fire", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 40, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 40, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_rune_fire, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 613 ), 150, 12, FALSE,
     "", "The rune dissipates.",
     ""},
 
-   {
-    REMORT, NORM,
-    "rune:shock", {56, NO_USE, NO_USE, NO_USE, 15, NO_USE,
-                56, NO_USE, NO_USE, NO_USE, 15, NO_USE},
+   {NORM,
+    "rune:shock", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 56, NO_USE, NO_USE, NO_USE, 15, NO_USE, 56, NO_USE, NO_USE, NO_USE, 15, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_rune_shock, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 614 ), 150, 12, FALSE,
     "", "The rune dissipates.",
     ""},
 
-   {
-    REMORT, NORM,
-    "rune:poison", {NO_USE, NO_USE, 38, NO_USE, 40, NO_USE,
-                NO_USE, NO_USE, 8, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "rune:poison", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 38, NO_USE, 40, NO_USE, NO_USE, NO_USE, 8, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_rune_poison, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 615 ), 80, 12, FALSE,
     "", "The rune dissipates.",
@@ -2484,56 +2206,44 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
 
 
-   {
-    REMORT, NORM,
-    "healing light", {NO_USE, 42, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, 11, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "healing light", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 42, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 11, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_healing_light, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 616 ), 150, 12, FALSE,
     "", "@@NThe @@mHealing Light@@N dissipates.",
     ""},
 
-   {
-    REMORT, NORM,
-    "withering shadow", {NO_USE, NO_USE, NO_USE, 17, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, 17, NO_USE, NO_USE},
+   {NORM,
+    "withering shadow", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 17, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 17, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_wither_shadow, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 617 ), 150, 12, FALSE,
     "", "@@NThe @@dWithering Shadow@@N dissipates.",
     ""},
 
-   {
-    REMORT, NORM,
-    "mana flare", {18, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                18, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "mana flare", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 18, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 18, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_mana_flare, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 618 ), 80, 12, FALSE,
     "", "@@NThe @@eMana Flare@@N dissipates.",
     ""},
 
-   {
-    REMORT, NORM,
-    "mana drain", {11, NO_USE, NO_USE, NO_USE, 15, NO_USE,
-                11, NO_USE, NO_USE, NO_USE, 15, NO_USE},
+   {NORM,
+    "mana drain", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 11, NO_USE, NO_USE, NO_USE, 15, NO_USE, 11, NO_USE, NO_USE, NO_USE, 15, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_mana_drain, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 619 ), 150, 12, FALSE,
     "", "@@NThe @@dMana Drain@@N dissipates.",
     ""},
 
-   {
-    REMORT, NORM,
-    "cage", {18, 31, 40, 19, 13, NO_USE,
-                18, 31, 40, 19, 13, NO_USE},
+   {NORM,
+    "cage", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 18, 31, 40, 19, 13, NO_USE, 18, 31, 40, 19, 13, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cage, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 620 ), 150, 12, FALSE,
     "", "@@NThe @@rCage@@N dissipates.",
     ""},
 
 
-   {
-    REMORT, NORM,
-    "room dispel", {22, NO_USE, NO_USE, NO_USE, 34, NO_USE,
-                22, NO_USE, NO_USE, NO_USE, 34, NO_USE},
+   {NORM,
+    "room dispel", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 22, NO_USE, NO_USE, NO_USE, 34, NO_USE, 22, NO_USE, NO_USE, NO_USE, 34, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_room_dispel, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 625 ), 120, 12, FALSE,
     "", "",
@@ -2541,682 +2251,537 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
 
 
-   {
-    REMORT, NORM,
-    "soul net", {NO_USE, NO_USE, NO_USE, NO_USE, 58, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 58, NO_USE},
+   {NORM,
+    "soul net", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 58, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 58, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_soul_net, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 629 ), 350, 12, FALSE,
     "", "@@NThe @@dSoul Net@@N dissipates.",
     ""},
 
-   {
-    REMORT, NORM,
-    "condense soul", {NO_USE, NO_USE, NO_USE, NO_USE, 78, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 78, NO_USE},
+   {NORM,
+    "condense soul", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 78, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 78, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_condense_soul, TAR_OBJ_INV, POS_STANDING,
     NULL, SLOT( 630 ), 800, 24, FALSE,
     "", "!Soul Potion!",
     ""},
 
-   {
-    REMORT, NORM,
-    "restoration", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "restoration", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_restoration, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 632 ), 50, 12, FALSE,
     "", "!restoration!",
     ""},
 
-   {
-    REMORT, NORM,
-    "infuse", {NO_USE, NO_USE, NO_USE, NO_USE, 71, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 71, NO_USE},
+   {NORM,
+    "infuse", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 71, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 71, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_infuse, TAR_OBJ_INV, POS_STANDING,
     NULL, SLOT( 633 ), 1000, 24, FALSE,
     "", "!Infuse Soul!",
     ""},
 
-   {
-    REMORT, NORM,
-    "holy light", {NO_USE, 43, NO_USE, NO_USE, NO_USE, NO_USE,
-                82, 14, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "holy light", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 43, NO_USE, NO_USE, NO_USE, NO_USE, 82, 14, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_holy_light, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 634 ), 75, 24, FALSE,
     "Holy Light", "!Holy Light!",
     ""},
 
-   {
-    REMORT, NORM,
-    "target", {NO_USE, 32, NO_USE, 20, NO_USE, 18,
-                NO_USE, 32, NO_USE, 20, NO_USE, 18},
+   {NORM,
+    "target", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 32, NO_USE, 20, NO_USE, 18, NO_USE, 32, NO_USE, 20, NO_USE, 18, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_target, SLOT( 0 ), 0, 24, FALSE,
     "target", "!target",
     ""},
 
-   {
-    REMORT, NORM,
-    "charge", {NO_USE, 89, NO_USE, 30, NO_USE, NO_USE,
-                NO_USE, 89, NO_USE, 30, NO_USE, NO_USE},
+   {NORM,
+    "charge", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 89, NO_USE, 30, NO_USE, NO_USE, NO_USE, 89, NO_USE, 30, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_charge, SLOT( 0 ), 1, 24, TRUE,
     "Charge", "!Charge",
     ""},
 
-   {
-    REMORT, NORM,
-    "scout", {NO_USE, 45, 26, 30, NO_USE, 43,
-                NO_USE, 45, 26, 30, NO_USE, 43},
+   {NORM,
+    "scout", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 45, 26, 30, NO_USE, 43, NO_USE, 45, 26, 30, NO_USE, 43, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_scout, SLOT( 0 ), 0, 0, FALSE,
     "", "",
     ""},
-   {
-    REMORT, NORM,
-    "divine intervention", {NO_USE, 67, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, 12, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "divine intervention", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 67, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 12, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_divine_intervention, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 635 ), 150, 12, TRUE,
     "", "!Intervention!",
     ""},
 
-   {
-    REMORT, NORM,
-    "holy armor", {NO_USE, 30, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, 19, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "holy armor", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 30, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 19, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_holy_armor, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 636 ), 100, 12, FALSE,
     "", "Your armor is no longer blessed.",
     ""},
 
-   {
-    REMORT, NORM,
-    "unit tactics", {NO_USE, NO_USE, NO_USE, 16, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, 16, NO_USE, NO_USE},
+   {NORM,
+    "unit tactics", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 16, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 16, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_unit_tactics, SLOT( 0 ), 0, 24, FALSE,
     "Unit Tactics", "!Unit Tactics!",
     ""},
 
-   {
-    REMORT, NORM,
-    "earth elemental", {52, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                52, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "earth elemental", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 52, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 52, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_earthelem, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 637 ), 500, 24, FALSE,
     "", "!EARTH ELEMENTAL!",
     ""},
 
-   {
-    REMORT, NORM,
-    "iron golem", {63, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                63, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "iron golem", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 63, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 63, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_iron_golem, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 638 ), 800, 24, FALSE,
     "", "!IRON GOLEM!",
     ""},
 
-   {
-    REMORT, NORM,
-    "diamond golem", {77, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                77, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "diamond golem", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 77, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 77, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_diamond_golem, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 639 ), 1100, 24, FALSE,
     "", "!DIAMOND GOLEM!",
     ""},
-   {
-
-    REMORT, NORM,
-    "soul thief", {NO_USE, NO_USE, NO_USE, NO_USE, 67, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 67, NO_USE},
+   {NORM,
+    "soul thief", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 67, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 67, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_soul_thief, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 640 ), 900, 24, FALSE,
     "", "!SOUL THIEF!",
     ""},
-   {
-
-    REMORT, NORM,
-    "holy avenger", {NO_USE, 76, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, 76, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "holy avenger", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 76, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 76, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_holy_avenger, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 641 ), 1200, 24, FALSE,
     "", "!HOLY AVENGER!",
     ""},
-   {
-    REMORT, NORM,
-    "heat armor", {57, NO_USE, NO_USE, NO_USE, 78, NO_USE,
-                57, NO_USE, NO_USE, NO_USE, 78, NO_USE},
+   {NORM,
+    "heat armor", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 57, NO_USE, NO_USE, NO_USE, 78, NO_USE, 57, NO_USE, NO_USE, NO_USE, 78, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_heat_armor, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 642 ), 350, 12, TRUE,
     "Heat Armor", "!Heat Armor!",
     ""},
 
-   {
-    REMORT, NORM,
-    "Retributive Strike", {72, NO_USE, NO_USE, NO_USE, 78, NO_USE,
-                72, NO_USE, NO_USE, NO_USE, 78, NO_USE},
+   {NORM,
+    "Retributive Strike", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 72, NO_USE, NO_USE, NO_USE, 78, NO_USE, 72, NO_USE, NO_USE, NO_USE, 78, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_retri_strike, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 643 ), 800, 12, TRUE,
     "Retributive strike", "!Retributive Strike!",
     ""},
 
-   {
-    REMORT, NORM,
-    "Lava Burst", {40, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                40, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "Lava Burst", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 40, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 40, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_lava_burst, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 644 ), 350, 12, TRUE,
     "Lava Burst", "!Lava Burst!",
     ""},
 
-   {
-    REMORT, NORM,
-    "fireshield", {80, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                80, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "fireshield", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 80, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 80, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_fireshield, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 645 ), 400, 12, FALSE,
     "", "",
     ""},
 
-   {
-    REMORT, NORM,
-    "iceshield", {65, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                65, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "iceshield", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 65, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 65, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_iceshield, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 646 ), 350, 12, FALSE,
     "", "",
     ""},
 
-   {
-    REMORT, NORM,
-    "shockshield", {55, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                55, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "shockshield", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 55, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 55, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_shockshield, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 647 ), 400, 12, FALSE,
     "", "",
     ""},
 
-   {
-    REMORT, NORM,
-    "shadowshield", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "shadowshield", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_shadowshield, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 648 ), 400, 12, FALSE,
     "", "@@NThe @@rshield@@N shatters!!",
     "@@NThe @@rshield@@N protecting $n shatters!!"},
-   {
-    REMORT, NORM,
-    "thoughtshield", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "thoughtshield", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_thoughtshield, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 649 ), 400, 12, FALSE,
     "", "@@NThe @@rshield@@N shatters!!",
     "@@NThe @@rshield@@N protecting $n shatters!!"},
 
-   {
-    REMORT, NORM,
-    "summon pegasus", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "summon pegasus", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_summon_pegasus, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 659 ), 1200, 24, FALSE,
     "", "",
     ""},
 
-   {
-    REMORT, NORM,
-    "summon nightmare", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "summon nightmare", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_summon_nightmare, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 660 ), 1200, 24, FALSE,
     "", "",
     ""},
 
-   {
-    REMORT, NORM,
-    "summon beast", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "summon beast", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_summon_beast, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 661 ), 1200, 24, FALSE,
     "", "",
     ""},
 
-   {
-    REMORT, NORM,
-    "summon devourer", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "summon devourer", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_summon_devourer, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 662 ), 1200, 24, FALSE,
     "", "",
     ""},
 
-   {
-    REMORT, NORM,
-    "summon shadow", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "summon shadow", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_summon_shadow, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 663 ), 1200, 24, FALSE,
     "", "",
     ""},
 
-   {
-    REMORT, NORM,
-    "thought devourer", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 65, NO_USE},
+   {NORM,
+    "thought devourer", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 65, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_summon_thought_devourer, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 754 ), 1200, 24, FALSE,
     "", "",
     ""},
 
-   {
-    REMORT, NORM,
-    "creature bond", {77, NO_USE, NO_USE, NO_USE, 55, NO_USE,
-                60, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "creature bond", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 77, NO_USE, NO_USE, NO_USE, 55, NO_USE, 60, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_creature_bond, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 664 ), 100, 12, FALSE,
     "", "",
     ""},
 
-   {
-    REMORT, NORM,
-    "corrupt bond", {NO_USE, NO_USE, NO_USE, NO_USE, 33, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 50, NO_USE},
+   {NORM,
+    "corrupt bond", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 33, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 50, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_corrupt_bond, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 665 ), 100, 12, FALSE,
     "", "",
     ""},
 
-   {
-    REMORT, NORM,
-    "Fire Blast", {34, NO_USE, NO_USE, NO_USE, 55, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "Fire Blast", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 34, NO_USE, NO_USE, NO_USE, 55, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_fireblast, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 666 ), 80, 12, TRUE,
     "Fire Blast", "!Fire Blast!",
     ""},
 
-   {
-    REMORT, NORM,
-    "Shock Storm", {42, NO_USE, NO_USE, NO_USE, 68, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 68, NO_USE},
+   {NORM,
+    "Shock Storm", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 42, NO_USE, NO_USE, NO_USE, 68, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 68, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_shockstorm, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 667 ), 100, 12, TRUE,
     "Shock Storm", "!Shock Storm!",
     ""},
 
-   {
-    REMORT, NORM,
-    "Cone of cold", {56, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "Cone of cold", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 56, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cone_cold, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 668 ), 100, 12, TRUE,
     "Cone of Cold", "!Cone of Cold!",
     ""},
 
-   {
-    REMORT, NORM,
-    "Earth Shatter", {60, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "Earth Shatter", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 60, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_earth_shatter, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 690 ), 100, 12, TRUE,
     "Earth Shatter", "!Earth Shatter!",
     ""},
 
-   {
-    REMORT, NORM,
-    "arc lightning", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                30, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "arc lightning", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 30, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_arc_lightning, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 682 ), 120, 12, TRUE,
     "arc lightning", "!arc lightning!",
     ""},
 
-   {
-    REMORT, NORM,
-    "terra rend", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                40, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "terra rend", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 40, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_terra_rend, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 683 ), 120, 12, TRUE,
     "terra rend", "!terra rend!",
     ""},
 
-   {
-    REMORT, NORM,
-    "tidal lash", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                50, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "tidal lash", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 50, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_tidal_lash, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 684 ), 120, 12, TRUE,
     "tidal lash", "!tidal lash!",
     ""},
 
-   {
-    REMORT, NORM,
-    "phoenix flare", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                60, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "phoenix flare", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 60, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_phoenix_flare, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 685 ), 120, 12, TRUE,
     "phoenix flare", "!phoenix flare!",
     ""},
 
-   {
-    ADEPT, NORM,
-    "elemental inferno", {1, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "elemental inferno", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 1, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_elemental_inferno, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 686 ), 120, 12, TRUE,
     "elemental inferno", "!elemental inferno!",
     ""},
 
-   {
-    ADEPT, NORM,
-    "elemental shock", {5, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "elemental shock", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 5, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_elemental_shock, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 687 ), 120, 12, TRUE,
     "elemental shock", "!elemental shock!",
     ""},
 
-   {
-    ADEPT, NORM,
-    "elemental deluge", {10, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "elemental deluge", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 10, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_elemental_deluge, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 688 ), 120, 12, TRUE,
     "elemental deluge", "!elemental deluge!",
     ""},
 
-   {
-    ADEPT, NORM,
-    "elemental rupture", {15, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "elemental rupture", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 15, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_elemental_rupture, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 689 ), 120, 12, TRUE,
     "elemental rupture", "!elemental rupture!",
     ""},
 
-   {
-    REMORT, NORM,
-    "Holy Wrath", {NO_USE, 80, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, 40, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "Holy Wrath", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 80, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 40, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_holy_wrath, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 669 ), 140, 12, TRUE,
     "Holy Wrath", "!Holy Wrath!",
     ""},
 
-   {
-    REMORT, NORM,
-    "Wraith Touch", {NO_USE, NO_USE, NO_USE, NO_USE, 46, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "Wraith Touch", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 46, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_wraith_touch, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 670 ), 120, 12, TRUE,
     "Wraith Touch", "!Wraith Touch!",
     ""},
 
-   {
-    REMORT, NORM,
-    "Thought Vise", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 70, NO_USE},
+   {NORM,
+    "Thought Vise", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 70, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_thought_vise, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 670 ), 200, 12, TRUE,
     "Thought Vise", "!Thought Vise!",
     ""},
 
-   {
-    REMORT, NORM,
-    "black curse", {NO_USE, NO_USE, NO_USE, NO_USE, 65, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 65, NO_USE},
+   {NORM,
+    "black curse", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 65, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 65, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_black_curse, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 0 ), 120, 12, TRUE,
     "Black Curse", "!Black Curse!",
     ""},
 
-   {
-    REMORT, NORM,
-    "spirit curse", {NO_USE, NO_USE, NO_USE, NO_USE, 77, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 77, NO_USE},
+   {NORM,
+    "spirit curse", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 77, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 77, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_spirit_curse, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 0 ), 120, 12, TRUE,
     "Spirit Curse", "!Spirit Curse!",
     ""},
 
-   {
-    REMORT, NORM,
-    "rictus curse", {NO_USE, NO_USE, NO_USE, NO_USE, 100, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 100, NO_USE},
+   {NORM,
+    "rictus curse", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 100, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 100, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_rictus_curse, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 0 ), 120, 12, TRUE,
     "Rictus Curse", "!Rictus Curse!",
     ""},
 
-   {
-    ADEPT, NORM,
-    "Kinetic Reversion", {NO_USE, NO_USE, NO_USE, NO_USE, 2, NO_USE},
+   {NORM,
+    "Kinetic Reversion", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 2, NO_USE},
     spell_kinetic_reversion, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 0 ), 120, 12, TRUE,
     "Kinetic Reversion", "!Kinetic Reversion!",
     ""},
 
-   {
-    REMORT, NORM,
-    "cloak:misery", {NO_USE, NO_USE, 80, NO_USE, 73, NO_USE,
-                NO_USE, NO_USE, 80, NO_USE, 73, NO_USE},
+   {NORM,
+    "cloak:misery", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 80, NO_USE, 73, NO_USE, NO_USE, NO_USE, 80, NO_USE, 73, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cloak_misery, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 672 ), 550, 12, FALSE,
     "", "@@NThe @@Rcloak@@N around your body fades.",
     "@@NThe @@Rcloak@@N around $n's body fades."},
 
-   {
-    REMORT, NORM,
-    "cloak:drain", {NO_USE, NO_USE, NO_USE, NO_USE, 48, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cloak:drain", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 48, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cloak_drain, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 677 ), 550, 12, FALSE,
     "", "@@NThe @@rcloak@@N around your body fades.",
     "@@NThe @@rcloak@@N around $n's body fades."},
 
-   {
-    REMORT, NORM,
-    "cloak:iron", {NO_USE, NO_USE, NO_USE, 48, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cloak:iron", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 48, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cloak_iron, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 678 ), 550, 12, FALSE,
     "", "@@NThe @@Wcloak@@N around your body fades.",
     "@@NThe @@Wcloak@@N around $n's body fades."},
 
-   {
-    REMORT, NORM,
-    "cloak:mental", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 48,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cloak:mental", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 48, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cloak_mental, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 679 ), 550, 12, FALSE,
     "", "@@NThe @@mcloak@@N around your body fades.",
     "@@NThe @@mcloak@@N around $n's body fades."},
 
-   {
-    REMORT, NORM,
-    "cloak:oathbreaker", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, 48, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cloak:oathbreaker", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 48, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cloak_oathbreaker, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 680 ), 550, 12, FALSE,
     "", "@@NThe @@dcloak@@N around your body fades.",
     "@@NThe @@dcloak@@N around $n's body fades."},
 
-   {
-    REMORT, NORM,
-    "cloak:transcendence", {NO_USE, NO_USE, 48, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cloak:transcendence", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 48, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_cloak_transcendence, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 681 ), 550, 12, FALSE,
     "", "@@NThe @@Ccloak@@N around your body fades.",
     "@@NThe @@Ccloak@@N around $n's body fades."},
 
-   {
-    REMORT, NORM,
-    "poison:quinine", {NO_USE, NO_USE, 56, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, 21, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "poison:quinine", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 56, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 21, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_poison_quinine, SLOT( 673 ), 80, 12, TRUE,
     "Poison Quinine", "@@N$n feels much better!",
     ""},
 
-   {
-    REMORT, NORM,
-    "poison:arsenic", {NO_USE, NO_USE, 66, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, 28, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "poison:arsenic", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 66, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 28, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_poison_arsenic, SLOT( 674 ), 80, 12, TRUE,
     "Poison Arsenic", "@@N$nFeels much better!",
     ""},
 
-   {
-    ADEPT, NORM,
-    "poison:nightshade", {NO_USE, NO_USE, 2, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "poison:nightshade", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 2, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_poison_nightshade, SLOT( 0 ), 80, 12, TRUE,
     "Poison Nightshade", "@@N$nFeels much better!",
     ""},
 
-   {
-    REMORT, NORM,
-    "riposte",        {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, 30, NO_USE, NO_USE},
+   {NORM,
+    "riposte",        {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 30, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_riposte, SLOT( 0 ), 80, 12, TRUE,
     "Riposte", "You are no longer in a position to riposte!",
     "$n is no longer in a position to riposte."},
 
-   {
-    REMORT, NORM,
-    "cripple",        {NO_USE, NO_USE, 89, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, 92, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "cripple",        {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 89, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 92, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_cripple, SLOT( 0 ), 80, 12, TRUE,
     "Cripple", "You are no longer crippled!",
     "$n is no longer crippled."},
 
 
-   {
-    MORTAL, NORM,
-    "pummel",        {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 66},
+   {NORM,
+    "pummel",        {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 66, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_pummel, SLOT( 0 ), 80, 12, TRUE,
     "Pummel", "!!Pummel!!",
     "!!$n Pummel!!"},
 
-   {
-    REMORT, NORM,
-    "aurabolt",        {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 34,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 41},
+   {NORM,
+    "aurabolt",        {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 34, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 41, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_aurabolt, SLOT( 0 ), 80, 12, TRUE,
     "Aurabolt", "!!Aurabolt!!",
     "!!$n Aurabolt!!"},
 
-   {
-    REMORT, NORM,
-    "chiblock",        {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 86,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 84},
+   {NORM,
+    "chiblock",        {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 86, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 84, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_chiblock, SLOT( 0 ), 80, 12, TRUE,
     "Chiblock", "You are no longer able to block with your chi!",
     "$n is no longer able to block with their chi."},
 
-   {
-    REMORT, NORM,
-    "spinfist",        {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 66},
+   {NORM,
+    "spinfist",        {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 66, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_spinfist, SLOT( 0 ), 80, 12, TRUE,
     "Spinfist", "!!SPINFIST!!",
     "!!$n SPINFIST!!"},
 
-   {
-    REMORT, NORM,
-    "phantomfist",     {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 51,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 34},
+   {NORM,
+    "phantomfist",     {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 51, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 34, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     &gsn_phantomfist, SLOT( 0 ), 80, 12, TRUE,
     "Phantomfist (bugged)", "You no longer move like a phantom",
     "$n no longer moves like a phantom."},
 
-   {
-    MORTAL, NORM,
-    "Mind Over Body",  {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 21},
+   {NORM,
+    "Mind Over Body",  {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 21, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_mindoverbody, SLOT( 0 ), 80, 24, TRUE,
     "Mind Over Body", "You lose your focus on your mind over your body",
     "$n loses focus on mind over body."},
 
-   {
-    MORTAL, NORM,
-    "Flurry",  {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 45},
+   {NORM,
+    "Flurry",  {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 45, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_flurry, SLOT( 0 ), 80, 24, TRUE,
     "Flurry", "",
     ""},
 
-   {
-    REMORT, NORM,
-    "chakra",          {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 55,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "chakra",          {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 55, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_chakra, SLOT( 0 ), 80, 24, TRUE,
     "Chakra", "",
     ""},
 
-   {
-    REMORT, NORM,
-    "shieldblock",        {NO_USE, 83, NO_USE, 57, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "shieldblock",        {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 83, NO_USE, 57, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_riposte, SLOT( 0 ), 80, 12, TRUE,
     "Shieldblock", "You are no longer ready to shield block!",
     "$n is no longer ready to shield block."},
 
-   {
-    REMORT, NORM,
-    "fleche",        {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, 45, NO_USE, NO_USE},
+   {NORM,
+    "fleche",        {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 45, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_fleche, SLOT( 0 ), 80, 12, TRUE,
     "Fleche", "!Fleche!",
     ""},
 
-   {
-    REMORT, NORM,
-    "holystrike",        {NO_USE, 44, NO_USE, 29, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "holystrike",        {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 44, NO_USE, 29, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_holystrike, SLOT( 0 ), 80, 12, TRUE,
     "Holystrike", "!Holystrike!",
     ""},
 
-   {
-    ADEPT, NORM,
-    "anti magic shell",{NO_USE, NO_USE, NO_USE, 2, NO_USE, NO_USE},
+   {NORM,
+    "anti magic shell",{NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 2, NO_USE, NO_USE},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_anti_magic_shell, SLOT( 0 ), 80, 12, TRUE,
     "Anti Magic Shell", "You are no longer surrounded by an anti-magic shell!",
     "$n is no longer surrounded by an anti-magic shell."},
 
 
-   {
-    REMORT, NORM,
-    "sonic blast", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE,
-                NO_USE, NO_USE, NO_USE, NO_USE, 67, NO_USE},
+   {NORM,
+    "sonic blast", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 67, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_sonic_blast, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 675 ), 140, 12, TRUE,
     "Sonic Blast", "@@N$nFeels much better!",
     ""},
 
-   {
-    MORTAL, NORM,
-    "mystical potency", {20, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
+   {NORM,
+    "mystical potency", {20, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_potency, SLOT( 0 ), 0, 0, FALSE,
     "", "!Enhanced Damage!",
     ""},
 
-   {
-    REMORT, NORM,
-    "mystical focus", {55, NO_USE, NO_USE, NO_USE, 48, NO_USE,
-                45, NO_USE, NO_USE, NO_USE, 47, NO_USE},
+   {NORM,
+    "mystical focus", {NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, 55, NO_USE, NO_USE, NO_USE, 48, NO_USE, 45, NO_USE, NO_USE, NO_USE, 47, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE, NO_USE},
     spell_mystical_focus, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 676 ), 200, 10, TRUE,
     "", "Your lose your mystical focus.",

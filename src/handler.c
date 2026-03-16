@@ -49,6 +49,25 @@ extern COUNCIL_DATA super_councils[MAX_SUPER];
 void affect_modify args((CHAR_DATA * ch, AFFECT_DATA *paf, bool fAdd));
 
 /*
+ * Determine the tier (1=MORTAL, 2=REMORT, 3=ADEPT) of a skill from its
+ * skill_level array.  Checks which range (0-5, 6-17, 18-23) has a
+ * non-NO_USE entry and returns the corresponding tier.
+ */
+int skill_get_tier(int sn)
+{
+   int i;
+   if (sn < 0 || sn >= MAX_SKILL)
+      return 1;
+   for (i = 0; i < MAX_TOTAL_CLASS; i++)
+      if (IS_ADEPT_CLASS(i) && skill_table[sn].skill_level[i] >= 0)
+         return 3;
+   for (i = 0; i < MAX_TOTAL_CLASS; i++)
+      if (IS_REMORT_CLASS(i) && skill_table[sn].skill_level[i] >= 0)
+         return 2;
+   return 1;
+}
+
+/*
  * Updated pointer referencing, curtesy of Spectrum, from Beyond the Veil
  *
  */
@@ -203,15 +222,15 @@ long get_cost_to_level_remort(CHAR_DATA *ch, int class)
    int base, i;
    bool double_remort = FALSE;
 
-   if (class > MAX_REMORT)
+   if (class < CLASS_SOR || class > CLASS_BRA)
       return -69;
 
-   base = ch->remort[class] * ch->remort[class];
+   base = ch->class_level[class] * ch->class_level[class];
 
    // Gotta check if double remort
-   for (i = 0; i < MAX_REMORT; i++)
+   for (i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
    {
-      if (i != class && ch->remort[i] > 0)
+      if (i != class && ch->class_level[i] > 0)
       {
          double_remort = TRUE;
       }
@@ -236,7 +255,7 @@ long get_cost_to_level(CHAR_DATA *ch, int class)
    if (class > MAX_CLASS)
       return -69;
 
-   base = ch->lvl[class] * ch->lvl[class];
+   base = ch->class_level[class] * ch->class_level[class];
 
    base *= 600;
 
@@ -244,6 +263,10 @@ long get_cost_to_level(CHAR_DATA *ch, int class)
    base += 350;
 
    base = get_racial_penalty_to_level(base, ch->race, class);
+
+   /* Primary class (ch->class) gets a 20% discount */
+   if (!IS_NPC(ch) && class == ch->class)
+      base = base * 80 / 100;
 
    return base;
 }
@@ -318,18 +341,18 @@ int get_max_str(CHAR_DATA *ch)
 {
    int max = race_table[ch->race].race_str;
 
-   if (!IS_NPC(ch) && class_table[ch->pcdata->order[0]].attr_prime == APPLY_STR)
+   if (!IS_NPC(ch) && gclass_table[ch->class].attr_prime == APPLY_STR)
       max++;
 
-   for (int i = 0; i < MAX_REMORT; i++)
+   for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
    {
-      if (ch->remort[i] > 0 && remort_table[i].attr_prime == APPLY_STR)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_STR)
          max++;
    }
 
-   for (int i = 0; i < MAX_CLASS; i++)
+   for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
    {
-      if (ch->adept[i] > 0 && adept_table[i].attr_prime == APPLY_STR)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_STR)
          max++;
    }
 
@@ -359,18 +382,18 @@ int get_max_int(CHAR_DATA *ch)
 {
    int max = race_table[ch->race].race_int;
 
-   if (!IS_NPC(ch) && class_table[ch->pcdata->order[0]].attr_prime == APPLY_INT)
+   if (!IS_NPC(ch) && gclass_table[ch->class].attr_prime == APPLY_INT)
       max++;
 
-   for (int i = 0; i < MAX_REMORT; i++)
+   for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
    {
-      if (ch->remort[i] > 0 && remort_table[i].attr_prime == APPLY_INT)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_INT)
          max++;
    }
 
-   for (int i = 0; i < MAX_CLASS; i++)
+   for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
    {
-      if (ch->adept[i] > 0 && adept_table[i].attr_prime == APPLY_INT)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_INT)
          max++;
    }
 
@@ -403,18 +426,18 @@ int get_max_wis(CHAR_DATA *ch)
 {
    int max = race_table[ch->race].race_wis;
 
-   if (!IS_NPC(ch) && class_table[ch->pcdata->order[0]].attr_prime == APPLY_WIS)
+   if (!IS_NPC(ch) && gclass_table[ch->class].attr_prime == APPLY_WIS)
       max++;
 
-   for (int i = 0; i < MAX_REMORT; i++)
+   for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
    {
-      if (ch->remort[i] > 0 && remort_table[i].attr_prime == APPLY_WIS)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_WIS)
          max++;
    }
 
-   for (int i = 0; i < MAX_CLASS; i++)
+   for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
    {
-      if (ch->adept[i] > 0 && adept_table[i].attr_prime == APPLY_WIS)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_WIS)
          max++;
    }
 
@@ -445,18 +468,18 @@ int get_max_dex(CHAR_DATA *ch)
 {
    int max = race_table[ch->race].race_dex;
 
-   if (!IS_NPC(ch) && class_table[ch->pcdata->order[0]].attr_prime == APPLY_DEX)
+   if (!IS_NPC(ch) && gclass_table[ch->class].attr_prime == APPLY_DEX)
       max++;
 
-   for (int i = 0; i < MAX_REMORT; i++)
+   for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
    {
-      if (ch->remort[i] > 0 && remort_table[i].attr_prime == APPLY_DEX)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_DEX)
          max++;
    }
 
-   for (int i = 0; i < MAX_CLASS; i++)
+   for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
    {
-      if (ch->adept[i] > 0 && adept_table[i].attr_prime == APPLY_DEX)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_DEX)
          max++;
    }
 
@@ -486,18 +509,18 @@ int get_max_con(CHAR_DATA *ch)
 {
    int max = race_table[ch->race].race_con;
 
-   if (!IS_NPC(ch) && class_table[ch->pcdata->order[0]].attr_prime == APPLY_CON)
+   if (!IS_NPC(ch) && gclass_table[ch->class].attr_prime == APPLY_CON)
       max++;
 
-   for (int i = 0; i < MAX_REMORT; i++)
+   for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
    {
-      if (ch->remort[i] > 0 && remort_table[i].attr_prime == APPLY_CON)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_CON)
          max++;
    }
 
-   for (int i = 0; i < MAX_CLASS; i++)
+   for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
    {
-      if (ch->adept[i] > 0 && adept_table[i].attr_prime == APPLY_CON)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_CON)
          max++;
    }
 
@@ -614,9 +637,9 @@ int get_spell_crit(CHAR_DATA *ch)
 
    crit += get_stat(ch, APPLY_SPELL_CRIT);
 
-   crit += ch->remort[CLASS_SOR] / 10;
-   crit += ch->remort[CLASS_WIZ] / 10;
-   crit += ch->remort[CLASS_WLK] / 10 * .75;
+   crit += ch->class_level[CLASS_SOR] / 10;
+   crit += ch->class_level[CLASS_WIZ] / 10;
+   crit += ch->class_level[CLASS_WLK] / 10 * .75;
 
    crit += ch->spell_crit_mod;
 
@@ -635,11 +658,11 @@ int get_spell_crit_mult(CHAR_DATA *ch)
       crit += get_curr_wis(ch) * 2;
    }
 
-   crit += ch->lvl[CLASS_PRI] * get_curr_wis(ch) / 50;
+   crit += ch->class_level[CLASS_PRI] * get_curr_wis(ch) / 50;
 
-   crit += ch->lvl[CLASS_PAL] * .75 * get_curr_wis(ch) / 50;
+   crit += ch->class_level[CLASS_PAL] * .75 * get_curr_wis(ch) / 50;
 
-   crit += ch->adept[CLASS_TEM] * get_curr_wis(ch) / 25;
+   crit += ch->class_level[CLASS_TEM] * get_curr_wis(ch) / 25;
 
    crit += ch->spell_mult_mod;
 
@@ -664,14 +687,14 @@ int get_crit(CHAR_DATA *ch)
       crit += 1;
    }
 
-   crit += ch->remort[CLASS_ASS] / 20;
-   crit += ch->remort[CLASS_WLK] / 20 * .75;
+   crit += ch->class_level[CLASS_ASS] / 20;
+   crit += ch->class_level[CLASS_WLK] / 20 * .75;
 
-   crit += ch->adept[CLASS_NIG] / 4;
+   crit += ch->class_level[CLASS_NIG] / 4;
 
    if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword_critical))
    {
-      crit += ch->remort[CLASS_SWO] / 20;
+      crit += ch->class_level[CLASS_SWO] / 20;
    }
 
    crit += get_stat(ch, APPLY_CRIT);
@@ -697,14 +720,14 @@ int get_crit_mult(CHAR_DATA *ch)
       crit += get_curr_dex(ch) * 2;
    }
 
-   crit += ch->remort[CLASS_ASS] / 5;
-   crit += ch->remort[CLASS_WLK] / 5 * .75;
+   crit += ch->class_level[CLASS_ASS] / 5;
+   crit += ch->class_level[CLASS_WLK] / 5 * .75;
 
-   crit += ch->adept[CLASS_NIG] / 2;
+   crit += ch->class_level[CLASS_NIG] / 2;
 
    if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword_critical))
    {
-      crit += ch->remort[CLASS_SWO] / 5;
+      crit += ch->class_level[CLASS_SWO] / 5;
    }
 
    crit += get_stat(ch, APPLY_CRIT_MULT);
@@ -893,10 +916,10 @@ char *class_order(int race)
 {
    static char buf[MSL];
 
-   sprintf(buf, "%s %s %s %s %s %s", class_table[race_table[race].limit[0]].who_name,
-           class_table[race_table[race].limit[1]].who_name, class_table[race_table[race].limit[2]].who_name,
-           class_table[race_table[race].limit[3]].who_name, class_table[race_table[race].limit[4]].who_name,
-           class_table[race_table[race].limit[5]].who_name);
+   sprintf(buf, "%s %s %s %s %s %s", gclass_table[race_table[race].limit[0]].who_name,
+           gclass_table[race_table[race].limit[1]].who_name, gclass_table[race_table[race].limit[2]].who_name,
+           gclass_table[race_table[race].limit[3]].who_name, gclass_table[race_table[race].limit[4]].who_name,
+           gclass_table[race_table[race].limit[5]].who_name);
 
    return buf;
 }
@@ -1025,76 +1048,48 @@ bool can_use_skill(CHAR_DATA *ch, int gsn)
    if (gsn == gsn_spell_critical_damage && ch->pcdata->reincarnations[CLASS_CLE] > 0)
       return TRUE;
 
-   if (gsn == gsn_dualwield && (ch->pcdata->remort_reincarnations[CLASS_ASS] + ch->pcdata->remort_reincarnations[CLASS_WLK] >= 20))
+   if (gsn == gsn_dualwield && (ch->pcdata->reincarnations[CLASS_ASS] + ch->pcdata->reincarnations[CLASS_WLK] >= 20))
       return TRUE;
 
-   if (gsn == gsn_two_handed && (ch->pcdata->remort_reincarnations[CLASS_KNI] + ch->pcdata->remort_reincarnations[CLASS_SWO] >= 20))
+   if (gsn == gsn_two_handed && (ch->pcdata->reincarnations[CLASS_KNI] + ch->pcdata->reincarnations[CLASS_SWO] >= 20))
       return TRUE;
 
-   if (gsn == gsn_two_handed && (ch->pcdata->remort_reincarnations[CLASS_PAL] + ch->pcdata->remort_reincarnations[CLASS_PRI]) >= 20)
+   if (gsn == gsn_two_handed && (ch->pcdata->reincarnations[CLASS_PAL] + ch->pcdata->reincarnations[CLASS_PRI]) >= 20)
       return TRUE;
 
-   if (gsn == gsn_equip_buckler && (ch->pcdata->remort_reincarnations[CLASS_KNI] + ch->pcdata->remort_reincarnations[CLASS_SWO] >= 20))
+   if (gsn == gsn_equip_buckler && (ch->pcdata->reincarnations[CLASS_KNI] + ch->pcdata->reincarnations[CLASS_SWO] >= 20))
       return TRUE;
 
-   if (gsn == gsn_equip_buckler && (ch->pcdata->remort_reincarnations[CLASS_PAL] + ch->pcdata->remort_reincarnations[CLASS_PRI]) >= 20)
+   if (gsn == gsn_equip_buckler && (ch->pcdata->reincarnations[CLASS_PAL] + ch->pcdata->reincarnations[CLASS_PRI]) >= 20)
       return TRUE;
 
-   if (gsn == gsn_equip_fist && (ch->pcdata->remort_reincarnations[CLASS_BRA] + ch->pcdata->remort_reincarnations[CLASS_MON] >= 20))
+   if (gsn == gsn_equip_fist && (ch->pcdata->reincarnations[CLASS_BRA] + ch->pcdata->reincarnations[CLASS_MON] >= 20))
       return TRUE;
 
-   if (gsn == gsn_dual_fist && (ch->pcdata->remort_reincarnations[CLASS_BRA] + ch->pcdata->remort_reincarnations[CLASS_MON] >= 20))
+   if (gsn == gsn_dual_fist && (ch->pcdata->reincarnations[CLASS_BRA] + ch->pcdata->reincarnations[CLASS_MON] >= 20))
       return TRUE;
 
-   if (gsn == gsn_equip_wand && (ch->pcdata->remort_reincarnations[CLASS_WIZ] + ch->pcdata->remort_reincarnations[CLASS_SOR] >= 20))
+   if (gsn == gsn_equip_wand && (ch->pcdata->reincarnations[CLASS_WIZ] + ch->pcdata->reincarnations[CLASS_SOR] >= 20))
       return TRUE;
 
-   if (gsn == gsn_equip_wand && (ch->pcdata->remort_reincarnations[CLASS_NEC] + ch->pcdata->remort_reincarnations[CLASS_EGO] >= 20))
+   if (gsn == gsn_equip_wand && (ch->pcdata->reincarnations[CLASS_NEC] + ch->pcdata->reincarnations[CLASS_EGO] >= 20))
       return TRUE;
 
-   if (gsn == gsn_equip_wand && (ch->pcdata->remort_reincarnations[CLASS_PRI] + ch->pcdata->remort_reincarnations[CLASS_PAL]) >= 20)
+   if (gsn == gsn_equip_wand && (ch->pcdata->reincarnations[CLASS_PRI] + ch->pcdata->reincarnations[CLASS_PAL]) >= 20)
       return TRUE;
 
-   if (skill_table[gsn].flag1 == MORTAL)
+   /* Check all 24 class slots - each slot has the required level if valid */
+   for (int i = 0; i < MAX_TOTAL_CLASS; i++)
    {
-      for (int i = 0; i < MAX_CLASS; i++)
-      {
-         int required_level = skill_table[gsn].skill_level[i];
+      int required_level = skill_table[gsn].skill_level[i];
 
-         if (!skill_requirement_is_usable(required_level))
-            continue;
+      if (!skill_requirement_is_usable(required_level))
+         continue;
 
-         if (ch->lvl[i] >= required_level)
-            return TRUE;
-         if (!IS_NPC(ch) && ch->pcdata->reincarnations[i] >= 20)
-	    return TRUE;
-      }
-   }
-   else if (skill_table[gsn].flag1 == REMORT)
-   {
-      for (int i = 0; i < MAX_REMORT; i++)
-      {
-         int required_level = skill_table[gsn].skill_level[i];
-
-         if (!skill_requirement_is_usable(required_level))
-            continue;
-
-         if (ch->remort[i] >= required_level)
-            return TRUE;
-      }
-   }
-   else if (skill_table[gsn].flag1 == ADEPT)
-   {
-      for (int i = 0; i < MAX_CLASS; i++)
-      {
-         int required_level = skill_table[gsn].skill_level[i];
-
-         if (!skill_requirement_is_usable(required_level))
-            continue;
-
-         if (ch->adept[i] >= required_level)
-            return TRUE;
-      }
+      if (ch->class_level[i] >= required_level)
+         return TRUE;
+      if (!IS_NPC(ch) && IS_MORTAL_CLASS(i) && ch->pcdata->reincarnations[i] >= 20)
+         return TRUE;
    }
 
    char race_skill[MSL];
@@ -3208,7 +3203,7 @@ CHAR_DATA *switch_char(CHAR_DATA *victim, int mvnum, int poly_level)
       mob->gold = victim->gold;
       mob->exp = victim->exp;
       for (foo = 0; foo < MAX_CLASS; foo++)
-         mob->lvl[foo] = victim->lvl[foo];
+         mob->class_level[foo] = victim->class_level[foo];
       mob->practice = victim->practice;
 
    case 2: /* Level 2 */
@@ -3282,7 +3277,7 @@ CHAR_DATA *unswitch_char(CHAR_DATA *victim)
       original->exp = victim->exp;
       original->gold = victim->gold;
       for (foo = 0; foo < MAX_CLASS; foo++)
-         original->lvl[foo] = victim->lvl[foo];
+         original->class_level[foo] = victim->class_level[foo];
 
    case 2:
       while ((eq = victim->first_carry) != NULL)

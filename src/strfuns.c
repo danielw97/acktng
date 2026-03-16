@@ -646,21 +646,22 @@ char *get_adept_name(CHAR_DATA *ch)
    int dominant_class = -1;
    int dominant_level = 0;
 
-   for (int i = 0; i < MAX_CLASS; i++)
+   for (int cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
    {
-      if (ch->adept[i] > dominant_level)
+      if (IS_ADEPT_CLASS(cnt) && ch->class_level[cnt] > dominant_level)
       {
-         dominant_level = ch->adept[i];
-         dominant_class = i;
+         dominant_level = ch->class_level[cnt];
+         dominant_class = cnt - CLASS_GMA;  /* 0-5 index into adept_titles */
       }
    }
 
    if (dominant_class < 0 || dominant_level < 1)
       return "@@W    Adept     @@N";
 
-   dominant_level = URANGE(1, dominant_level, 20);
+   if (dominant_level >= MAX_ADEPT)
+      return "@@Y   Realm Lord  @@N";
 
-   return (char *)adept_titles[dominant_class][dominant_level - 1];
+   return (char *)adept_titles[dominant_class][URANGE(1, dominant_level, MAX_ADEPT - 1) - 1];
 }
 
 int nocol_strlen(const char *text)

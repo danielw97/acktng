@@ -434,17 +434,17 @@ void do_stancehelp(CHAR_DATA *ch, char *argument)
       send_to_char(buf, ch);
       if (stance_app[i].class_override != -1)
       {
-         sprintf(buf, "There is a class override on %s for the first/primary class of %s. It gets the stance at any level if it's your primary class.\n\r", stance_app[i].name, class_table[stance_app[i].class_override].class_name);
+         sprintf(buf, "There is a class override on %s for the first/primary class of %s. It gets the stance at any level if it's your primary class.\n\r", stance_app[i].name, gclass_table[stance_app[i].class_override].class_name);
          send_to_char(buf, ch);
       }
       if (stance_app[i].class_level > 0)
       {
-         sprintf(buf,"There is a class requirement on %s of %s at %d\n\r", stance_app[i].name, class_table[stance_app[i].class_index].class_name, stance_app[i].class_level);
+         sprintf(buf,"There is a class requirement on %s of %s at %d\n\r", stance_app[i].name, gclass_table[stance_app[i].class_index].class_name, stance_app[i].class_level);
          send_to_char(buf,ch);
       }
       if (stance_app[i].class_level2 > 0)
       {
-         sprintf(buf,"There is an additional class requirement on %s of %s at %d\n\r", stance_app[i].name, class_table[stance_app[i].class_index2].class_name, stance_app[i].class_level2);
+         sprintf(buf,"There is an additional class requirement on %s of %s at %d\n\r", stance_app[i].name, gclass_table[stance_app[i].class_index2].class_name, stance_app[i].class_level2);
          send_to_char(buf,ch);
       }
    }
@@ -454,12 +454,12 @@ void do_stancehelp(CHAR_DATA *ch, char *argument)
       send_to_char(buf,ch);
       if (stance_app[i].class_level > 0)
       {
-         sprintf(buf,"There is a class requirement on %s of %s at %d\n\r", stance_app[i].name, remort_table[stance_app[i].class_index].class_name, stance_app[i].class_level);
+         sprintf(buf,"There is a class requirement on %s of %s at %d\n\r", stance_app[i].name, gclass_table[stance_app[i].class_index].class_name, stance_app[i].class_level);
          send_to_char(buf,ch);
       }
       if (stance_app[i].class_level2 > 0)
       {
-         sprintf(buf,"There is an additional class requirement on %s of %s at %d\n\r", stance_app[i].name, remort_table[stance_app[i].class_index2].class_name, stance_app[i].class_level2);
+         sprintf(buf,"There is an additional class requirement on %s of %s at %d\n\r", stance_app[i].name, gclass_table[stance_app[i].class_index2].class_name, stance_app[i].class_level2);
          send_to_char(buf,ch);
       }
    }
@@ -469,12 +469,12 @@ void do_stancehelp(CHAR_DATA *ch, char *argument)
       send_to_char(buf,ch);
       if (stance_app[i].class_level > 0)
       {
-         sprintf(buf,"There is a class requirement on %s of %s at %d\n\r", stance_app[i].name, adept_table[stance_app[i].class_index].class_name, stance_app[i].class_level);
+         sprintf(buf,"There is a class requirement on %s of %s at %d\n\r", stance_app[i].name, gclass_table[stance_app[i].class_index].class_name, stance_app[i].class_level);
          send_to_char(buf,ch);
       }
       if (stance_app[i].class_level2 > 0)
       {
-         sprintf(buf,"There is an additional class requirement on %s of %s at %d\n\r", stance_app[i].name, adept_table[stance_app[i].class_index2].class_name, stance_app[i].class_level2);
+         sprintf(buf,"There is an additional class requirement on %s of %s at %d\n\r", stance_app[i].name, gclass_table[stance_app[i].class_index2].class_name, stance_app[i].class_level2);
          send_to_char(buf,ch);
       }
    }
@@ -1722,16 +1722,12 @@ void do_score(CHAR_DATA *ch, char *argument)
 
    if (!IS_NPC(ch))
    {
-
       buf2[0] = '\0';
-
-      for (cnt = 0; cnt < MAX_CLASS; cnt++)
+      for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
       {
-         if (ch->lvl[cnt] > 0)
+         if (IS_MORTAL_CLASS(cnt) && ch->class_level[cnt] > 0)
          {
-            sprintf(buf, "@@c%s", class_table[cnt].who_name);
-            safe_strcat(MAX_STRING_LENGTH, buf2, buf);
-            sprintf(buf, ":@@W%2d ", ch->lvl[cnt]);
+            sprintf(buf, "@@c%s:@@W%2d ", gclass_table[cnt].who_name, ch->class_level[cnt]);
             safe_strcat(MAX_STRING_LENGTH, buf2, buf);
          }
       }
@@ -1741,15 +1737,15 @@ void do_score(CHAR_DATA *ch, char *argument)
 
    sprintf(buf, "@@c|%s@@c|\n\r", center_text(buf2, score_inner_width));
    send_to_char(buf, ch);
-   buf2[0] = '\0';
 
    if (is_remort(ch))
    {
-      for (cnt = 0; cnt < MAX_REMORT; cnt++)
+      buf2[0] = '\0';
+      for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
       {
-         if (ch->remort[cnt] != -1)
+         if (IS_REMORT_CLASS(cnt) && ch->class_level[cnt] != -1)
          {
-            sprintf(buf, "@@m%s:@@W%2d ", remort_table[cnt].who_name, ch->remort[cnt]);
+            sprintf(buf, "@@m%s:@@W%2d ", gclass_table[cnt].who_name, ch->class_level[cnt]);
             safe_strcat(MAX_STRING_LENGTH, buf2, buf);
          }
       }
@@ -1757,15 +1753,14 @@ void do_score(CHAR_DATA *ch, char *argument)
       send_to_char(buf, ch);
    }
 
-   buf2[0] = '\0';
-
    if (is_adept(ch))
    {
-      for (cnt = 0; cnt < MAX_CLASS; cnt++)
+      buf2[0] = '\0';
+      for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
       {
-         if (ch->adept[cnt] > 0)
+         if (IS_ADEPT_CLASS(cnt) && ch->class_level[cnt] > 0)
          {
-            sprintf(buf, "@@d%s:@@W%2d ", adept_table[cnt].who_name, ch->adept[cnt]);
+            sprintf(buf, "@@d%s:@@W%2d ", gclass_table[cnt].who_name, ch->class_level[cnt]);
             safe_strcat(MAX_STRING_LENGTH, buf2, buf);
          }
       }
@@ -2265,7 +2260,6 @@ void do_who(CHAR_DATA *ch, char *argument)
       for (d = first_desc; d != NULL; d = d->next)
       {
          CHAR_DATA *wch = (d->original != NULL) ? d->original : d->character;
-         char const *class;
 
          if (wch == NULL)
             continue;
@@ -2278,8 +2272,6 @@ void do_who(CHAR_DATA *ch, char *argument)
             continue;
          if (i == 3 && (is_remort(wch) || is_adept(wch) || wch->level > MAX_MORTAL))
             continue;
-         class = class_table[wch->class].who_name;
-
          player_cnt++;
 
          if (!print)
@@ -2291,12 +2283,10 @@ void do_who(CHAR_DATA *ch, char *argument)
                safe_strcat(MAX_STRING_LENGTH, buf,
                            "@@R|------------------------------------|----------@@lImmortals@@R------------------------|@@g\n\r");
                break;
-
             case 1:
                safe_strcat(MAX_STRING_LENGTH, buf,
                            "@@R|------------------------------------|------------@@WAdepts@@R-------------------------|@@g\n\r");
                break;
-
             case 2:
                safe_strcat(MAX_STRING_LENGTH, buf,
                            "@@R|------------------------------------|----------@@mRemortals@@R------------------------|@@g\n\r");
@@ -2304,33 +2294,21 @@ void do_who(CHAR_DATA *ch, char *argument)
             case 3:
                safe_strcat(MAX_STRING_LENGTH, buf,
                            "@@R|------------------------------------|-----------@@cMortals@@R-------------------------|@@g\n\r");
-
                break;
             }
          }
+
          if (wch->level > MAX_MORTAL)
          {
+            /* Immortal: display who_name colored by rank */
             switch (wch->level)
             {
-            default:
-               break;
-            case MAX_LEVEL - 0:
-               class = "@@l-* CREATOR *-@@g    ";
-               break;
-            case MAX_LEVEL - 1:
-               class = "@@B-= SUPREME =-@@g    ";
-               break;
-            case MAX_LEVEL - 2:
-               class = "@@a--  DEITY  --@@g    ";
-               break;
-            case MAX_LEVEL - 3:
-               class = "@@c - IMMORTAL- @@g    ";
-               break;
-            case MAX_LEVEL - 4:
-               class = "@@W    ADEPT  @@N      ";
-               break;
+            case MAX_LEVEL - 0: sprintf(buf3, "@@l%s@@g", wch->pcdata->who_name); break;
+            case MAX_LEVEL - 1: sprintf(buf3, "@@B%s@@g", wch->pcdata->who_name); break;
+            case MAX_LEVEL - 2: sprintf(buf3, "@@a%s@@g", wch->pcdata->who_name); break;
+            case MAX_LEVEL - 3: sprintf(buf3, "@@c%s@@g", wch->pcdata->who_name); break;
+            default:            sprintf(buf3, "@@W%s@@g", wch->pcdata->who_name); break;
             }
-            sprintf(buf3, " %s", class);
          }
          else if (IS_SET(wch->pcdata->pflags, PFLAG_AMBAS))
          {
@@ -2338,64 +2316,37 @@ void do_who(CHAR_DATA *ch, char *argument)
          }
          else if (is_adept(wch))
          {
-           class = get_adept_name(wch);
-           sprintf(buf3, "  %14s ", class);
+            /* Adept: display adept name */
+            sprintf(buf3, "  %14s ", get_adept_name(wch));
          }
+         else if (is_remort(wch))
          {
-            if (wch->level >= (MAX_LEVEL - 4) || str_cmp(wch->pcdata->who_name, "off"))
+            /* Remort: display remort class levels */
+            buf3[0] = '\0';
+            for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
             {
-               switch (wch->level)
-               {
-               case MAX_LEVEL - 0:
-                  sprintf(buf3, "@@l %s@@g", class);
-                  break;
-               case MAX_LEVEL - 1:
-                  sprintf(buf3, "@@B %s@@g", class);
-                  break;
-               case MAX_LEVEL - 2:
-                  sprintf(buf3, "@@a %s@@g", class);
-                  break;
-               case MAX_LEVEL - 3:
-                  sprintf(buf3, "@@c %s@@g", class);
-                  break;
-               default:
-                  sprintf(buf3, "@@W %s@@g", class);
-                  break;
-               }
+               if (!IS_REMORT_CLASS(cnt))
+                  continue;
+               if (wch->class_level[cnt] == MAX_MORTAL)
+                  sprintf(buf4, " @@m *@@N");
+               else
+                  sprintf(buf4, " @@m%2d@@N", wch->class_level[cnt] > 0 ? wch->class_level[cnt] : 0);
+               safe_strcat(MAX_STRING_LENGTH, buf3, buf4);
             }
-            else
+         }
+         else
+         {
+            /* Mortal: display mortal class levels */
+            buf3[0] = '\0';
+            for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
             {
-               buf4[0] = '\0';
-               buf3[0] = '\0';
-
-               for (cnt = 0; cnt < MAX_CLASS; cnt++)
-               {
-                  if (wch->remort[cnt + MAX_CLASS] > 0)
-                  {
-                     if (wch->remort[cnt + MAX_CLASS] == MAX_MORTAL)
-                        sprintf(buf4, " @@d *@@N");
-                     else
-                        sprintf(buf4, " @@d%2d@@N", wch->remort[cnt + MAX_CLASS]);
-                  }
-                  else if (wch->remort[cnt] > 0)
-                  {
-                     if (wch->remort[cnt] == MAX_MORTAL)
-                        sprintf(buf4, " @@m *@@N");
-                     else
-                        sprintf(buf4, " @@m%2d@@N", wch->remort[cnt]);
-                  }
-                  else
-                  {
-                     if (wch->lvl[cnt] == MAX_MORTAL)
-                        sprintf(buf4, " @@b *@@N");
-                     else if (wch->lvl[cnt] <= 0)
-                        sprintf(buf4, " @@g%2d@@N", 0);
-                     else
-                        sprintf(buf4, " @@b%2d@@N", wch->lvl[cnt]);
-                  }
-
-                  safe_strcat(MAX_STRING_LENGTH, buf3, buf4);
-               }
+               if (!IS_MORTAL_CLASS(cnt))
+                  continue;
+               if (wch->class_level[cnt] == MAX_MORTAL)
+                  sprintf(buf4, " @@b *@@N");
+               else
+                  sprintf(buf4, " @@b%2d@@N", wch->class_level[cnt] > 0 ? wch->class_level[cnt] : 0);
+               safe_strcat(MAX_STRING_LENGTH, buf3, buf4);
             }
          }
          /*
@@ -3894,7 +3845,7 @@ void do_spells(CHAR_DATA *ch, char *argument)
 
    /*
     * if ( ( !IS_NPC( ch ) &&
-    * !class_table[ch->class].fMana )
+    * !gclass_table[ch->class].fMana )
     * ||  IS_NPC ( ch ) )
     */
    if (IS_NPC(ch))
@@ -3959,38 +3910,16 @@ void do_slist(CHAR_DATA *ch, char *argument)
    class = -1;
    remort_class = FALSE;
    adept_class = FALSE;
-   for (foo = 0; foo < MAX_CLASS; foo++)
+   for (foo = 0; foo < MAX_TOTAL_CLASS; foo++)
    {
-      if (!str_cmp(class_table[foo].who_name, argument) || !str_cmp(class_table[foo].class_name, argument))
+      if (!str_cmp(gclass_table[foo].who_name, argument) || !str_cmp(gclass_table[foo].class_name, argument))
       {
          any = TRUE;
          class = foo;
-      }
-   }
-
-   if (!any)
-   {
-      for (foo = 0; foo < MAX_REMORT; foo++)
-      {
-         if (!str_cmp(remort_table[foo].who_name, argument) || !str_cmp(remort_table[foo].class_name, argument))
-         {
-            any = TRUE;
-            class = foo;
+         if (IS_REMORT_CLASS(foo))
             remort_class = TRUE;
-         }
-      }
-   }
-
-   if (!any)
-   {
-      for (foo = 0; foo < MAX_CLASS; foo++)
-      {
-         if (!str_cmp(adept_table[foo].who_name, argument) || !str_cmp(adept_table[foo].class_name, argument))
-         {
-            any = TRUE;
-            class = foo;
+         else if (IS_ADEPT_CLASS(foo))
             adept_class = TRUE;
-         }
       }
    }
 
@@ -4006,20 +3935,20 @@ void do_slist(CHAR_DATA *ch, char *argument)
    if (adept_class)
    {
       safe_strcat(MAX_STRING_LENGTH, buf1, "@@W");
-      safe_strcat(MAX_STRING_LENGTH, buf1, adept_table[class].class_name);
+      safe_strcat(MAX_STRING_LENGTH, buf1, gclass_table[class].class_name);
       safe_strcat(MAX_STRING_LENGTH, buf1, "@@N\n\r\n\r");
    }
    else if (remort_class)
    {
       safe_strcat(MAX_STRING_LENGTH, buf1, "@@m");
-      safe_strcat(MAX_STRING_LENGTH, buf1, remort_table[class].class_name);
+      safe_strcat(MAX_STRING_LENGTH, buf1, gclass_table[class].class_name);
       safe_strcat(MAX_STRING_LENGTH, buf1, "@@N\n\r\n\r");
    }
    else
 
    {
       safe_strcat(MAX_STRING_LENGTH, buf1, "@@b");
-      safe_strcat(MAX_STRING_LENGTH, buf1, class_table[class].class_name);
+      safe_strcat(MAX_STRING_LENGTH, buf1, gclass_table[class].class_name);
       safe_strcat(MAX_STRING_LENGTH, buf1, "@@N\n\r\n\r");
    }
 
@@ -4037,7 +3966,7 @@ void do_slist(CHAR_DATA *ch, char *argument)
             break;
          if (skill_table[sn].skill_level[class] != level)
             continue;
-         if ((adept_class) && (skill_table[sn].flag1 == ADEPT))
+         if ((adept_class) && (SKILL_TIER(sn) == ADEPT))
          {
 
             if (skill_table[sn].skill_level[class] > MAX_ADEPT)
@@ -4059,7 +3988,7 @@ void do_slist(CHAR_DATA *ch, char *argument)
                sprintf(buf, "@@m%18s@@N", skill_table[sn].name);
                safe_strcat(MAX_STRING_LENGTH, buf1, buf);
             }
-            else if (skill_table[sn].skill_level[class] > ch->adept[class])
+            else if (skill_table[sn].skill_level[class] > ch->class_level[class])
             {
                sprintf(buf, "@@d%18s@@N", skill_table[sn].name);
                safe_strcat(MAX_STRING_LENGTH, buf1, buf);
@@ -4072,7 +4001,7 @@ void do_slist(CHAR_DATA *ch, char *argument)
             if (col % 4 == 0)
                safe_strcat(MAX_STRING_LENGTH, buf1, "\n\r");
          }
-         else if ((remort_class) && (skill_table[sn].flag1 == REMORT))
+         else if ((remort_class) && (SKILL_TIER(sn) == REMORT))
          {
 
             if (pSpell)
@@ -4091,7 +4020,7 @@ void do_slist(CHAR_DATA *ch, char *argument)
                sprintf(buf, "@@x@@m%18s@@N", skill_table[sn].name);
                safe_strcat(MAX_STRING_LENGTH, buf1, buf);
             }
-            else if (skill_table[sn].skill_level[class] > ch->remort[class])
+            else if (skill_table[sn].skill_level[class] > ch->class_level[class])
             {
                sprintf(buf, "@@d%18s@@N", skill_table[sn].name);
                safe_strcat(MAX_STRING_LENGTH, buf1, buf);
@@ -4104,7 +4033,7 @@ void do_slist(CHAR_DATA *ch, char *argument)
             if (col % 4 == 0)
                safe_strcat(MAX_STRING_LENGTH, buf1, "\n\r");
          }
-         else if ((!remort_class) && (!adept_class) && (skill_table[sn].flag1 == MORTAL))
+         else if ((!remort_class) && (!adept_class) && (SKILL_TIER(sn) == MORTAL))
          {
             if (pSpell)
             {
@@ -4122,8 +4051,8 @@ void do_slist(CHAR_DATA *ch, char *argument)
                safe_strcat(MAX_STRING_LENGTH, buf1, buf);
             }
             else if (skill_table[sn].skill_level[class] >
-                     (adept_class ? ch->adept_level : remort_class ? ch->remort[class]
-                                                                   : ch->lvl[class]))
+                     (adept_class ? ch->adept_level : remort_class ? ch->class_level[class]
+                                                                   : ch->class_level[class]))
             {
                sprintf(buf, "@@d%18s@@N", skill_table[sn].name);
                safe_strcat(MAX_STRING_LENGTH, buf1, buf);
@@ -4538,16 +4467,13 @@ void do_gain(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   for (cnt = 0; cnt < MAX_CLASS; cnt++)
+   for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
    {
-      if (ch->lvl[cnt] == MAX_MORTAL)
+      if (IS_MORTAL_CLASS(cnt) && ch->class_level[cnt] == MAX_MORTAL)
          morts_at_max++;
-   }
-   for (cnt = 0; cnt < MAX_REMORT; cnt++)
-   {
-      if (ch->remort[cnt] > -1)
+      if (IS_REMORT_CLASS(cnt) && ch->class_level[cnt] > -1)
          num_remorts++;
-      if (ch->remort[cnt] == MAX_MORTAL)
+      if (IS_REMORT_CLASS(cnt) && ch->class_level[cnt] == MAX_MORTAL)
          remorts_at_max++;
    }
 
@@ -4573,53 +4499,48 @@ void do_gain(CHAR_DATA *ch, char *argument)
    any = FALSE;
    c = -1;
 
-   for (cnt = 0; cnt < MAX_CLASS; cnt++)
+   for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
    {
-      if (!str_cmp(class_table[cnt].who_name, argument) || !str_cmp(class_table[cnt].class_name, argument))
+      if (!str_cmp(gclass_table[cnt].who_name, argument) || !str_cmp(gclass_table[cnt].class_name, argument))
       {
-         any = TRUE;
-         c = cnt;
-         found = TRUE;
-      }
-   }
-
-   for (cnt = 0; cnt < MAX_REMORT; cnt++)
-   {
-      if (!str_cmp(remort_table[cnt].who_name, argument) || !str_cmp(remort_table[cnt].class_name, argument))
-      {
-         if (ch->remort[cnt] > 0 || allow_remort)
+         if (IS_MORTAL_CLASS(cnt))
          {
-            if (ch->lvl[cnt % MAX_CLASS] < MAX_MORTAL)
-            {
-               send_to_char("You require level 100 in the mortal class before you can remort in this class!\n\r", ch);
-               continue;
-            }
-
             any = TRUE;
-            remort = TRUE;
             c = cnt;
+            found = TRUE;
          }
-         found = TRUE;
-      }
-   }
-
-   for (cnt = 0; cnt < MAX_CLASS; cnt++)
-   {
-      if ((!str_cmp(adept_table[cnt].who_name, argument)) || !str_cmp(adept_table[cnt].class_name, argument))
-      {
-         if (ch->adept[cnt] > 0 || allow_adept)
+         else if (IS_REMORT_CLASS(cnt))
          {
-            if (ch->remort[cnt] < MAX_MORTAL && ch->remort[cnt + MAX_CLASS] < MAX_MORTAL)
+            if (ch->class_level[cnt] > 0 || allow_remort)
             {
-               send_to_char("You need to be level 100 in the remortal class before you can adept in this class!\n\r", ch);
-               return;
-            }
+               if (ch->class_level[gclass_table[cnt].prereq[0]] < MAX_MORTAL)
+               {
+                  send_to_char("You require level 100 in the mortal class before you can remort in this class!\n\r", ch);
+                  continue;
+               }
 
-            any = TRUE;
-            adept = TRUE;
-            c = cnt;
+               any = TRUE;
+               remort = TRUE;
+               c = cnt;
+            }
+            found = TRUE;
          }
-         found = TRUE;
+         else if (IS_ADEPT_CLASS(cnt))
+         {
+            if (ch->class_level[cnt] > 0 || allow_adept)
+            {
+               if (ch->class_level[gclass_table[cnt].prereq[0]] < MAX_MORTAL || ch->class_level[gclass_table[cnt].prereq[1]] < MAX_MORTAL)
+               {
+                  send_to_char("You need to be level 100 in both remortal classes before you can adept in this class!\n\r", ch);
+                  return;
+               }
+
+               any = TRUE;
+               adept = TRUE;
+               c = cnt;
+            }
+            found = TRUE;
+         }
       }
    }
 
@@ -4640,26 +4561,19 @@ void do_gain(CHAR_DATA *ch, char *argument)
     */
    if (remort)
    {
-      if (ch->lvl[c % MAX_CLASS] < MAX_MORTAL)
+      if (ch->class_level[gclass_table[c].prereq[0]] < MAX_MORTAL)
       {
          send_to_char("You are not ready to remort in this class yet, it requires level 100 in the mortal.\n\r", ch);
          return;
       }
 
-      if (c >= MAX_CLASS)
+      /* Can't take two remort classes that share the same mortal prerequisite */
+      for (cnt = CLASS_SOR; cnt < CLASS_SOR + MAX_REMORT; cnt++)
       {
-         if (ch->remort[c - MAX_CLASS] > 0)
+         if (cnt != c && gclass_table[cnt].prereq[0] == gclass_table[c].prereq[0] && ch->class_level[cnt] > 0)
          {
-            sprintf(buf, "You cannot remort in %s, you already have levels in %s.\n\r", remort_table[c].who_name, remort_table[c - MAX_CLASS].who_name);
-            send_to_char(buf, ch);
-            return;
-         }
-      }
-      else
-      {
-         if (ch->remort[c + MAX_CLASS] > 0)
-         {
-            sprintf(buf, "You cannot remort in %s, you already have levels in %s.\n\r", remort_table[c].who_name, remort_table[c + MAX_CLASS].who_name);
+            sprintf(buf, "You cannot remort in %s, you already have levels in %s.\n\r",
+                    gclass_table[c].who_name, gclass_table[cnt].who_name);
             send_to_char(buf, ch);
             return;
          }
@@ -4668,18 +4582,13 @@ void do_gain(CHAR_DATA *ch, char *argument)
    }
    else if (adept)
    {
-      if (ch->adept[c] < 1)
+      if (ch->class_level[c] < 1)
          cost = 0;
       else
          cost = exp_to_level_adept(ch);
    }
    else
    {
-      if (!IS_NPC(ch) && ch->pcdata->order[0] != c && ch->pcdata->order[1] != c && ch->pcdata->order[2] != c && ch->pcdata->order[3] != c)
-      {
-         send_to_char("You cannot level in this class\n\r", ch);
-         return;
-      }
       cost = exp_to_level(ch, c);
    }
 
@@ -4690,11 +4599,11 @@ void do_gain(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if ((adept) && (ch->adept[c] < MAX_ADEPT))
+   if ((adept) && (ch->class_level[c] < MAX_ADEPT))
    {
       send_to_char("@@WYou have reached another step on the stairway to Wisdom!!!@@N\n\r", ch);
       ch->exp -= cost;
-      sprintf(buf, "%s @@W advances in the way of the Adept, %s!!\n\r", ch->name, adept_table[c].class_name);
+      sprintf(buf, "%s @@W advances in the way of the Adept, %s!!\n\r", ch->name, gclass_table[c].class_name);
       info(buf, 1);
       free_string(ch->pcdata->who_name);
       ch->pcdata->who_name = str_dup(get_adept_name(ch));
@@ -4708,8 +4617,8 @@ void do_gain(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if ((!adept && remort && ch->remort[c] + 1 >= LEVEL_HERO) ||
-       (!adept && !remort && ch->lvl[c] + 1 >= LEVEL_HERO))
+   if ((!adept && remort && ch->class_level[c] + 1 >= LEVEL_HERO) ||
+       (!adept && !remort && ch->class_level[c] + 1 >= LEVEL_HERO))
    {
       send_to_char("If you wish to advance this class, please ask an Immortal.\n\r", ch);
       return;
@@ -4718,9 +4627,9 @@ void do_gain(CHAR_DATA *ch, char *argument)
     * Check to see if able to reach new level
     */
    if (remort)
-      sprintf(buf, "You gain a %s level!\n\r", remort_table[c].class_name);
+      sprintf(buf, "You gain a %s level!\n\r", gclass_table[c].class_name);
    else if (!adept)
-      sprintf(buf, "You gain a %s level!\n\r", class_table[c].class_name);
+      sprintf(buf, "You gain a %s level!\n\r", gclass_table[c].class_name);
    send_to_char(buf, ch);
 
    /*
@@ -4728,9 +4637,9 @@ void do_gain(CHAR_DATA *ch, char *argument)
     */
 
    if (remort)
-      sprintf(buf, "%s advances in the way of the %s.", ch->name, remort_table[c].class_name);
+      sprintf(buf, "%s advances in the way of the %s.", ch->name, gclass_table[c].class_name);
    else if (!adept)
-      sprintf(buf, "%s advances in the way of the %s.", ch->name, class_table[c].class_name);
+      sprintf(buf, "%s advances in the way of the %s.", ch->name, gclass_table[c].class_name);
    info(buf, 1);
 
    if (remort)
@@ -4745,8 +4654,8 @@ void do_gain(CHAR_DATA *ch, char *argument)
     */
    for (subpop = 0; subpop < MAX_CLASS; subpop++)
    {
-      if (ch->lvl[subpop] > ch->level)
-         ch->level = ch->lvl[subpop];
+      if (ch->class_level[subpop] > ch->level)
+         ch->level = ch->class_level[subpop];
    }
    do_save(ch, "");
    return;
@@ -5126,36 +5035,26 @@ void do_worth(CHAR_DATA *ch, char *argument)
    send_to_char("Cost is shown first, followed by how much more exp you need.\n\r\n\r", ch);
    send_to_char("CLASS NAME:        COST:    DIFFERENCE:\n\r\n\r", ch);
 
-   for (cnt = 0; cnt < MAX_CLASS; cnt++)
+   for (cnt = CLASS_GMA; cnt < CLASS_GMA + MAX_CLASS; cnt++)
    {
-      if (ch->adept[cnt] > 0 && ch->adept[cnt] < MAX_ADEPT)
+      if (ch->class_level[cnt] > 0 && ch->class_level[cnt] < MAX_ADEPT)
       {
          cost = exp_to_level_adept(ch);
          any = TRUE;
 
-         sprintf(buf, "%-14s  %9ld %9ld.\n\r", adept_table[cnt].who_name, (long)cost, (long)UMAX(0, cost - ch->exp));
+         sprintf(buf, "%-14s  %9ld %9ld.\n\r", gclass_table[cnt].who_name, (long)cost, (long)UMAX(0, cost - ch->exp));
          send_to_char(buf, ch);
       }
    }
 
    for (cnt = 0; cnt < MAX_CLASS; cnt++)
    {
-      bool show = FALSE;
-
-      for (int i = 0; i < MAX_PC_CLASS; i++)
-      {
-         if (ch->pcdata->order[i] == cnt)
-         {
-            show = TRUE;
-            break;
-         }
-      }
-      if (show && ch->lvl[cnt] < MAX_MORTAL)
+      if (IS_MORTAL_CLASS(cnt) && ch->class_level[cnt] < MAX_MORTAL)
       {
          any = TRUE;
          cost = exp_to_level(ch, cnt);
 
-         sprintf(buf, "%-14s  %9ld %9ld.\n\r", class_table[cnt].who_name, (long)cost, (long)UMAX(0, cost - ch->exp));
+         sprintf(buf, "%-14s  %9ld %9ld.\n\r", gclass_table[cnt].who_name, (long)cost, (long)UMAX(0, cost - ch->exp));
          send_to_char(buf, ch);
       }
    }
@@ -5163,13 +5062,13 @@ void do_worth(CHAR_DATA *ch, char *argument)
    /*
     * Check for remort classes
     */
-   for (cnt = 0; cnt < MAX_REMORT; cnt++)
+   for (cnt = CLASS_SOR; cnt < CLASS_SOR + MAX_REMORT; cnt++)
    {
-      if (ch->remort[cnt] != -1 && ch->remort[cnt] < MAX_MORTAL)
+      if (ch->class_level[cnt] != -1 && ch->class_level[cnt] < MAX_MORTAL)
       {
          any = TRUE;
          cost = exp_to_level_remort(ch, cnt);
-         sprintf(buf, "%-14s  %9ld %9ld.\n\r", remort_table[cnt].who_name, (long)cost, (long)UMAX(0, cost - ch->exp));
+         sprintf(buf, "%-14s  %9ld %9ld.\n\r", gclass_table[cnt].who_name, (long)cost, (long)UMAX(0, cost - ch->exp));
          send_to_char(buf, ch);
       }
    }
@@ -5224,29 +5123,29 @@ void do_whois(CHAR_DATA *ch, char *argument)
    else
    {
       sprintf(buf + strlen(buf), "Levels: [ Mag:%2d  Cle:%2d  Thi:%2d  War:%2d  Psi:%2d Pug:%2d ]\n\r",
-              victim->lvl[0] > 0 ? victim->lvl[0] : 0,
-              victim->lvl[1] > 0 ? victim->lvl[1] : 0,
-              victim->lvl[2] > 0 ? victim->lvl[2] : 0,
-              victim->lvl[3] > 0 ? victim->lvl[3] : 0,
-              victim->lvl[4] > 0 ? victim->lvl[4] : 0,
-              victim->lvl[5] > 0 ? victim->lvl[5] : 0);
+              victim->class_level[0] > 0 ? victim->class_level[0] : 0,
+              victim->class_level[1] > 0 ? victim->class_level[1] : 0,
+              victim->class_level[2] > 0 ? victim->class_level[2] : 0,
+              victim->class_level[3] > 0 ? victim->class_level[3] : 0,
+              victim->class_level[4] > 0 ? victim->class_level[4] : 0,
+              victim->class_level[5] > 0 ? victim->class_level[5] : 0);
 
       if (is_remort(victim))
       {
          sprintf(buf + strlen(buf), "Levels: [ Sor:%2d  Pal:%2d  Ass:%2d  Kni:%2d  Nec:%2d  Mon:%2d ]\n\r",
-                 victim->remort[0] > 0 ? victim->remort[0] : 0,
-                 victim->remort[1] > 0 ? victim->remort[1] : 0,
-                 victim->remort[2] > 0 ? victim->remort[2] : 0,
-                 victim->remort[3] > 0 ? victim->remort[3] : 0,
-                 victim->remort[4] > 0 ? victim->remort[4] : 0,
-                 victim->remort[5] > 0 ? victim->remort[5] : 0);
+                 victim->class_level[CLASS_SOR] > 0 ? victim->class_level[CLASS_SOR] : 0,
+                 victim->class_level[CLASS_PAL] > 0 ? victim->class_level[CLASS_PAL] : 0,
+                 victim->class_level[CLASS_ASS] > 0 ? victim->class_level[CLASS_ASS] : 0,
+                 victim->class_level[CLASS_KNI] > 0 ? victim->class_level[CLASS_KNI] : 0,
+                 victim->class_level[CLASS_NEC] > 0 ? victim->class_level[CLASS_NEC] : 0,
+                 victim->class_level[CLASS_MON] > 0 ? victim->class_level[CLASS_MON] : 0);
          sprintf(buf + strlen(buf), "Levels: [ Wiz:%2d  Pri:%2d  Wlk:%2d  Swo:%2d  Ego:%2d  Bra:%2d ]\n\r",
-                 victim->remort[6] > 0 ? victim->remort[6] : 0,
-                 victim->remort[7] > 0 ? victim->remort[7] : 0,
-                 victim->remort[8] > 0 ? victim->remort[8] : 0,
-                 victim->remort[9] > 0 ? victim->remort[9] : 0,
-                 victim->remort[10] > 0 ? victim->remort[10] : 0,
-                 victim->remort[11] > 0 ? victim->remort[11] : 0);
+                 victim->class_level[CLASS_WIZ] > 0 ? victim->class_level[CLASS_WIZ] : 0,
+                 victim->class_level[CLASS_PRI] > 0 ? victim->class_level[CLASS_PRI] : 0,
+                 victim->class_level[CLASS_WLK] > 0 ? victim->class_level[CLASS_WLK] : 0,
+                 victim->class_level[CLASS_SWO] > 0 ? victim->class_level[CLASS_SWO] : 0,
+                 victim->class_level[CLASS_EGO] > 0 ? victim->class_level[CLASS_EGO] : 0,
+                 victim->class_level[CLASS_BRA] > 0 ? victim->class_level[CLASS_BRA] : 0);
       }
    }
    sprintf(buf + strlen(buf), "Sex: %s.  Race: %s.  Clan: %s.\n\r",

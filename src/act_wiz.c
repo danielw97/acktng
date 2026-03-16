@@ -877,7 +877,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
    {
       sprintf(buf,
               "Mag: %d Cle: %d Thi:%d War:%d Psi:%d\n\r",
-              victim->lvl[0], victim->lvl[1], victim->lvl[2], victim->lvl[3], victim->lvl[4]);
+              victim->class_level[0], victim->class_level[1], victim->class_level[2], victim->class_level[3], victim->class_level[4]);
       strcat(buf1, buf);
 
       sprintf(buf, "Age: ");
@@ -886,12 +886,20 @@ void do_mstat(CHAR_DATA *ch, char *argument)
       sprintf(buf, "   (%d Hours RL play).\n\r", my_get_hours(victim));
       strcat(buf1, buf);
 
-      sprintf(buf, "Class Order: %s %s %s %s %s\n\r",
-              class_table[victim->pcdata->order[0]].who_name,
-              class_table[victim->pcdata->order[1]].who_name,
-              class_table[victim->pcdata->order[2]].who_name,
-              class_table[victim->pcdata->order[3]].who_name, class_table[victim->pcdata->order[4]].who_name);
-      strcat(buf1, buf);
+      {
+         char class_buf[MAX_STRING_LENGTH];
+         class_buf[0] = '\0';
+         for (int ci = 0; ci < MAX_CLASS; ci++)
+         {
+            if (IS_MORTAL_CLASS(ci) && victim->class_level[ci] >= 0)
+            {
+               strcat(class_buf, gclass_table[ci].who_name);
+               strcat(class_buf, " ");
+            }
+         }
+         sprintf(buf, "Mortal Classes: %s\n\r", class_buf);
+         strcat(buf1, buf);
+      }
    }
 
    sprintf(buf, "Hp: %ld/%ld.  Mana: %ld/%ld.  Move: %ld/%ld.  Practices: %d.\n\r",
@@ -2468,73 +2476,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg2, "order"))
    {
-
-      int cnt;
-      int class[MAX_CLASS];
-      int parity[MAX_CLASS];
-      int index[MAX_CLASS];
-      int foo;
-      bool ok = TRUE;
-      char arg[MAX_STRING_LENGTH];
-
-      if (IS_NPC(victim))
-      {
-         send_to_char("Not on NPCs!\n\r", ch);
-         return;
-      }
-
-      if (get_trust(ch) < 84)
-      {
-         send_to_char("Only a Supreme or above may use this option.\n\r", ch);
-         return;
-      }
-      for (cnt = 0; cnt < MAX_CLASS; cnt++)
-         parity[cnt] = -1;
-
-      for (cnt = 0; cnt < MAX_CLASS; cnt++)
-      {
-         argument = one_argument(argument, arg);
-         if (arg[0] == '\0')
-         {
-            ok = FALSE;
-            break;
-         }
-         for (foo = 0; foo < MAX_CLASS; foo++)
-            if (!str_cmp(arg, class_table[foo].who_name))
-            {
-               class[cnt] = foo;
-               index[foo] = (cnt);
-               parity[foo] = 1;
-               break;
-            }
-         if (foo == MAX_CLASS)
-         {
-            ok = FALSE;
-            break;
-         }
-      }
-
-      for (cnt = 0; cnt < MAX_CLASS; cnt++)
-         if (parity[cnt] == -1)
-            ok = FALSE;
-
-      if (!ok)
-      {
-         send_to_char("Must be 5 3-letter abbrev for different classes.\n\r", ch);
-         return;
-      }
-
-      /*
-       * Copy classes to pcdata
-       */
-      for (cnt = 0; cnt < MAX_CLASS; cnt++)
-      {
-         victim->pcdata->order[cnt] = class[cnt];
-         victim->pcdata->index[cnt] = index[cnt];
-      }
-
-      send_to_char("Your classes have been re-ordered.\n\r", victim);
-      send_to_char("Done.\n\r", ch);
+      send_to_char("Class order is no longer used. Use 'setclass <player> class <classname>' instead.\n\r", ch);
       return;
    }
 
@@ -2657,11 +2599,11 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg2, "class"))
    {
-      if (value < 0 || value >= MAX_CLASS)
+      if (value < 0 || value >= MAX_TOTAL_CLASS || !IS_MORTAL_CLASS(value))
       {
          char buf[MAX_STRING_LENGTH];
 
-         sprintf(buf, "Class range is 0 to %d.\n", MAX_CLASS - 1);
+         sprintf(buf, "Class must be a mortal class ID (0-%d).\n", MAX_CLASS - 1);
          send_to_char(buf, ch);
          return;
       }
@@ -4000,22 +3942,22 @@ void do_setclass(CHAR_DATA *ch, char *argument)
 
    for (iClass = 0; iClass < MAX_CLASS; iClass++)
    {
-      if (!str_cmp(arg2, class_table[iClass].who_name))
+      if (!str_cmp(arg2, gclass_table[iClass].who_name))
       {
          class = iClass;
          cok = TRUE;
          break;
       }
-      if (!str_cmp(arg2, remort_table[iClass].who_name))
+      if (!str_cmp(arg2, gclass_table[CLASS_SOR + iClass].who_name))
       {
-         class = iClass;
+         class = CLASS_SOR + iClass;
          cok = TRUE;
          remort = TRUE;
          break;
       }
-      if (!str_cmp(arg2, remort_table[iClass + MAX_CLASS].who_name))
+      if (!str_cmp(arg2, gclass_table[CLASS_GMA + iClass].who_name))
       {
-         class = iClass + MAX_CLASS;
+         class = CLASS_GMA + iClass;
          cok = TRUE;
          remort = TRUE;
          break;
@@ -4084,12 +4026,12 @@ void do_setclass(CHAR_DATA *ch, char *argument)
     *   -- Swiftest
     */
 
-   if (value == (remort ? victim->remort[class] : victim->lvl[class]))
+   if (value == (remort ? victim->class_level[class] : victim->class_level[class]))
    {
       send_to_char("That wouldn't accomplish much!\n\r", ch);
       return;
    }
-   if (value < (remort ? victim->remort[class] : victim->lvl[class]))
+   if (value < (remort ? victim->class_level[class] : victim->class_level[class]))
    {
       send_to_char("Lowering a player's level!\n\r", ch);
       send_to_char("**** OOOOHHHHHHHHHH  NNNNOOOO ****\n\r", victim);
@@ -4097,14 +4039,14 @@ void do_setclass(CHAR_DATA *ch, char *argument)
       if (remort)
       {
          if (value != -1)
-            victim->remort[class] = value;
+            victim->class_level[class] = value;
          else
-            victim->remort[class] = -1;
+            victim->class_level[class] = -1;
       }
       else if (value < 1)
-         victim->lvl[class] = -1;
+         victim->class_level[class] = -1;
       else
-         victim->lvl[class] = value;
+         victim->class_level[class] = value;
       victim->exp = 0;
    }
    else
@@ -4115,15 +4057,15 @@ void do_setclass(CHAR_DATA *ch, char *argument)
 
    if (value != -1 && !remort)
    {
-      sprintf(buf, "You are now level %d in your %s class.\n\r", value, class_table[class].class_name);
+      sprintf(buf, "You are now level %d in your %s class.\n\r", value, gclass_table[class].class_name);
       send_to_char(buf, victim);
-      victim->lvl[class] = value;
+      victim->class_level[class] = value;
    }
    if (remort)
    {
-      sprintf(buf, "You are now level %d in your %s class.\n\r", value, remort_table[class].class_name);
+      sprintf(buf, "You are now level %d in your %s class.\n\r", value, gclass_table[class].class_name);
       send_to_char(buf, victim);
-      victim->remort[class] = value;
+      victim->class_level[class] = value;
    }
    victim->exp = 0;
    victim->trust = 0;
@@ -4132,9 +4074,9 @@ void do_setclass(CHAR_DATA *ch, char *argument)
     * Make sure that ch->level holds vicitm's max level
     */
    victim->level = 0;
-   for (cnt = 0; cnt < MAX_CLASS; cnt++)
-      if (victim->lvl[cnt] > victim->level)
-         victim->level = victim->lvl[cnt];
+   for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
+      if (victim->class_level[cnt] > victim->level)
+         victim->level = victim->class_level[cnt];
 
    reset_gain_stats(victim);
 

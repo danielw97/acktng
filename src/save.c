@@ -227,7 +227,7 @@ void save_char_obj(CHAR_DATA *ch)
 void fwrite_char(CHAR_DATA *ch, FILE *fp)
 {
    /*
-    * UUURRRGGGGHHHHHH!  When writing out ch->lvl[x] no loop used,
+    * UUURRRGGGGHHHHHH!  When writing out ch->class_level[x] no loop used,
     * * instead, the values are just done 0,1,2,etc.. yuck.  -S-
     */
 
@@ -240,8 +240,8 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
     * Really cool fix for m/c prob.. *laugh*
     */
    for (cnt = 0; cnt < MAX_CLASS; cnt++)
-      if (ch->lvl[cnt] < 0 || ch->lvl[cnt] == 0)
-         ch->lvl[cnt] = -1;
+      if (ch->class_level[cnt] < 0 || ch->class_level[cnt] == 0)
+         ch->class_level[cnt] = -1;
 
    fprintf(fp, "#%s\n", IS_NPC(ch) ? "MOB" : "PLAYER");
 
@@ -262,17 +262,17 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 
    fprintf(fp, "m/c          ");
    for (cnt = 0; cnt < MAX_CLASS; cnt++)
-      fprintf(fp, "%2d ", ch->lvl[cnt]);
+      fprintf(fp, "%2d ", ch->class_level[cnt]);
    fprintf(fp, "\n");
 
    fprintf(fp, "Remort       ");
-   for (cnt = 0; cnt < MAX_REMORT; cnt++)
-      fprintf(fp, "%2d ", ch->remort[cnt]);
+   for (cnt = CLASS_SOR; cnt < CLASS_SOR + MAX_REMORT; cnt++)
+      fprintf(fp, "%2d ", ch->class_level[cnt]);
    fprintf(fp, "\n");
 
    fprintf(fp, "Adept       ");
-   for (cnt = 0; cnt < MAX_CLASS; cnt++)
-      fprintf(fp, "%2d ", ch->adept[cnt]);
+   for (cnt = CLASS_GMA; cnt < CLASS_GMA + MAX_CLASS; cnt++)
+      fprintf(fp, "%2d ", ch->class_level[cnt]);
    fprintf(fp, "\n");
 
    fprintf(fp, "Reincarnations ");
@@ -282,12 +282,12 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 
    fprintf(fp, "Remortreincarnations ");
    for (cnt = 0; cnt < MAX_REMORT; cnt++)
-      fprintf(fp, "%2d ", ch->pcdata->remort_reincarnations[cnt]);
+      fprintf(fp, "%2d ", ch->pcdata->reincarnations[MAX_CLASS + cnt]);
    fprintf(fp, "\n");
 
    fprintf(fp, "Adeptreincarnations ");
    for (cnt = 0; cnt < MAX_CLASS; cnt++)
-      fprintf(fp, "%2d ", ch->pcdata->adept_reincarnations[cnt]);
+      fprintf(fp, "%2d ", ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + cnt]);
    fprintf(fp, "\n");
 
    fprintf(fp, "Reinc_data ");
@@ -334,14 +334,6 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
    {
       fprintf(fp, "Generation   %d\n", ch->pcdata->generation);
       fprintf(fp, "Clan         %d\n", ch->pcdata->clan);
-      fprintf(fp, "Order        %d %d %d %d %d %d\n",
-              ch->pcdata->order[0], ch->pcdata->order[1], ch->pcdata->order[2],
-              ch->pcdata->order[3], ch->pcdata->order[4], ch->pcdata->order[5]);
-
-      fprintf(fp, "Index	   %d %d %d %d %d %d\n",
-              ch->pcdata->index[0], ch->pcdata->index[1], ch->pcdata->index[2],
-              ch->pcdata->index[3], ch->pcdata->index[4], ch->pcdata->index[5]);
-
       fprintf(fp, "Mkills	   %d\n", ch->pcdata->mkills);
       fprintf(fp, "Mkilled	   %d\n", ch->pcdata->mkilled);
       fprintf(fp, "Pkills	   %d\n", ch->pcdata->pkills);
@@ -669,6 +661,8 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
    {
       GET_FREE(ch->pcdata, pcd_free);
       *ch->pcdata = pcdata_zero;
+      ch->pcdata->reincarnate_race = -1;
+      ch->pcdata->reincarnate_class = -1;
 
       d->character = ch;
 
@@ -693,9 +687,9 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       for(int i = 0; i < MAX_CLASS; i++)
          ch->pcdata->reincarnations[i] = 0;
       for(int i = 0; i < MAX_REMORT; i++)
-         ch->pcdata->remort_reincarnations[i] = 0;
+         ch->pcdata->reincarnations[MAX_CLASS + i] = 0;
       for(int i = 0; i < MAX_CLASS; i++)
-         ch->pcdata->adept_reincarnations[i] = 0;
+         ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + i] = 0;
       for(int i = 0; i < MAX_REINCARNATE; i++)
          ch->pcdata->reincarnation_data[i] = 0;
       ch->pcdata->condition[COND_THIRST] = 48;
@@ -738,12 +732,12 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
          ch->pcdata->completed_static_quests[foo] = FALSE;
       for (foo = 0; foo < MAX_SUPERBOSS; foo++)
          ch->pcdata->superboss_kills[foo] = FALSE;
-      for (foo = 0; foo < MAX_REMORT; foo++)
-         ch->remort[foo] = -1;
-      for (foo = 0; foo < MAX_CLASS; foo++)
-         ch->adept[foo] = -1;
-      for (int i = 0; i < MAX_CLASS; i++)
-         ch->pcdata->reincarnate_order[i] = 0;
+      for (foo = CLASS_SOR; foo < CLASS_SOR + MAX_REMORT; foo++)
+         ch->class_level[foo] = -1;
+      for (foo = CLASS_GMA; foo < CLASS_GMA + MAX_CLASS; foo++)
+         ch->class_level[foo] = -1;
+      ch->pcdata->reincarnate_race = -1;
+      ch->pcdata->reincarnate_class = -1;
       ch->pcdata->reincarnate_confirm = FALSE;
       ch->adept_level = -1;
       for (cnt = 0; cnt < MAX_ALIASES; cnt++)
@@ -957,7 +951,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
     */
 
    for (cnt = 0; cnt < MAX_CLASS; cnt++)
-      ch->lvl[cnt] = -1; /* -1 means no-use of that class */
+      ch->class_level[cnt] = -1; /* -1 means no-use of that class */
 
    for (;;)
    {
@@ -975,8 +969,8 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          KEY("Act", ch->act, fread_number(fp));
          if (!str_cmp(word, "Adept"))
          {
-            for (cnt = 0; cnt < MAX_CLASS; cnt++)
-               ch->adept[cnt] = fread_number(fp);
+            for (cnt = CLASS_GMA; cnt < CLASS_GMA + MAX_CLASS; cnt++)
+               ch->class_level[cnt] = fread_number(fp);
             fMatch = TRUE;
             break;
          }
@@ -1014,7 +1008,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          if (!str_cmp(word, "Adeptreincarnations"))
          {
             for (cnt = 0; cnt < MAX_CLASS; cnt++)
-               ch->pcdata->adept_reincarnations[cnt] = fread_number(fp);
+               ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + cnt] = fread_number(fp);
             fMatch = TRUE;
             break;
          }
@@ -1210,7 +1204,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             {
                int i;
                for (i = 0; i < MAX_CLASS; i++)
-                  ch->pcdata->index[i] = fread_number(fp);
+                  fread_number(fp); /* index[] removed; discard legacy data */
                fMatch = TRUE;
                break;
             }
@@ -1246,7 +1240,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             {
             default:
                for (cnt = 0; cnt < MAX_CLASS; cnt++)
-                  ch->lvl[cnt] = fread_number(fp);
+                  ch->class_level[cnt] = fread_number(fp);
                break;
             }
             fMatch = TRUE;
@@ -1271,7 +1265,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          {
             int i;
             for (i = 0; i < MAX_CLASS; i++)
-               ch->pcdata->order[i] = fread_number(fp);
+               fread_number(fp); /* order[] removed; discard legacy data */
             fMatch = TRUE;
             break;
          }
@@ -1489,8 +1483,8 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
          if (!str_cmp(word, "Remort"))
          {
-            for (cnt = 0; cnt < MAX_REMORT; cnt++)
-               ch->remort[cnt] = fread_number(fp);
+            for (cnt = CLASS_SOR; cnt < CLASS_SOR + MAX_REMORT; cnt++)
+               ch->class_level[cnt] = fread_number(fp);
             fMatch = TRUE;
             break;
          }
@@ -1514,7 +1508,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          if (!str_cmp(word, "Remortreincarnations"))
          {
             for (cnt = 0; cnt < MAX_REMORT; cnt++)
-               ch->pcdata->remort_reincarnations[cnt] = fread_number(fp);
+               ch->pcdata->reincarnations[MAX_CLASS + cnt] = fread_number(fp);
             fMatch = TRUE;
             break;
          }

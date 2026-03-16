@@ -75,10 +75,10 @@ static bool cast_wizard_elemental_dot_spell(int sn, int level, CHAR_DATA *ch, CH
 
    if (obj == NULL)
    {
-      int base = ch->remort[CLASS_WIZ];
+      int base = ch->class_level[CLASS_WIZ];
 
-      if (ch->remort[CLASS_SOR] > base)
-         base = ch->remort[CLASS_SOR];
+      if (ch->class_level[CLASS_SOR] > base)
+         base = ch->class_level[CLASS_SOR];
 
       base_damage = 150 + dice(base / 2, 20);
       act(cast_msg, ch, NULL, NULL, TO_ROOM);
@@ -330,11 +330,11 @@ bool spell_fireblast(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    if (obj == NULL)
    {
-      int base = ch->remort[CLASS_SOR];
-      if (ch->remort[CLASS_WIZ] > base)
-         base = ch->remort[CLASS_WIZ];
-      if (ch->remort[CLASS_NEC] > base)
-         base = ch->remort[CLASS_NEC];
+      int base = ch->class_level[CLASS_SOR];
+      if (ch->class_level[CLASS_WIZ] > base)
+         base = ch->class_level[CLASS_WIZ];
+      if (ch->class_level[CLASS_NEC] > base)
+         base = ch->class_level[CLASS_NEC];
       dam = 150 + dice(base/2, 20);
       act("@@gA blast of @@efire@@g flies from $n's hands!@@N", ch, NULL, NULL, TO_ROOM);
       send_to_char("@@gA blast of @@efire@@g flies from your hands!@@N\n\r", ch);
@@ -360,15 +360,15 @@ bool spell_shockstorm(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    if (obj == NULL)
    {
-      int base = ch->remort[CLASS_SOR];
-      if (ch->remort[CLASS_WIZ] > base)
-         base = ch->remort[CLASS_WIZ];
-      if (ch->remort[CLASS_SOR] > base)
-         base = ch->remort[CLASS_SOR];
-      if (ch->remort[CLASS_EGO] > base)
-         base = ch->remort[CLASS_EGO];
-      if (ch->remort[CLASS_NEC] > base)
-         base = ch->remort[CLASS_NEC];
+      int base = ch->class_level[CLASS_SOR];
+      if (ch->class_level[CLASS_WIZ] > base)
+         base = ch->class_level[CLASS_WIZ];
+      if (ch->class_level[CLASS_SOR] > base)
+         base = ch->class_level[CLASS_SOR];
+      if (ch->class_level[CLASS_EGO] > base)
+         base = ch->class_level[CLASS_EGO];
+      if (ch->class_level[CLASS_NEC] > base)
+         base = ch->class_level[CLASS_NEC];
 
       dam = 150 + dice(base/2, 20);
       act("@@gA storm of @@lsparks@@g flies from $n's hands!@@N", ch, NULL, NULL, TO_ROOM);
@@ -395,9 +395,9 @@ bool spell_cone_cold(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    if (obj == NULL)
    {
-      int base = ch->remort[CLASS_SOR];
-      if (ch->remort[CLASS_WIZ] > base)
-         base = ch->remort[CLASS_WIZ];
+      int base = ch->class_level[CLASS_SOR];
+      if (ch->class_level[CLASS_WIZ] > base)
+         base = ch->class_level[CLASS_WIZ];
 
       dam = 150 + dice(base/2, 20);
       act("@@gA cone of @@acold@@g bursts forth from $n's hands!@@N", ch, NULL, NULL, TO_ROOM);
@@ -424,11 +424,11 @@ bool spell_earth_shatter(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
 
    if (obj == NULL)
    {
-      int base = ch->remort[CLASS_SOR];
-      if (ch->remort[CLASS_WIZ] > base)
-         base = ch->remort[CLASS_WIZ];
-      if (ch->remort[CLASS_NEC] > base)
-         base = ch->remort[CLASS_NEC];
+      int base = ch->class_level[CLASS_SOR];
+      if (ch->class_level[CLASS_WIZ] > base)
+         base = ch->class_level[CLASS_WIZ];
+      if (ch->class_level[CLASS_NEC] > base)
+         base = ch->class_level[CLASS_NEC];
 
       dam = 150 + dice(base / 2, 20);
       act("@@gShattering @@bearth@@g erupts from $n's hands!@@N", ch, NULL, NULL, TO_ROOM);
@@ -455,9 +455,9 @@ bool spell_holy_wrath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    if (obj == NULL)
    {
-      int base = ch->remort[CLASS_PRI];
-      if (ch->remort[CLASS_PAL] > base)
-         base = ch->remort[CLASS_PAL];
+      int base = ch->class_level[CLASS_PRI];
+      if (ch->class_level[CLASS_PAL] > base)
+         base = ch->class_level[CLASS_PAL];
 
       dam = 150 + dice(base/2, 20);
       act("@@gA coruscating sphere of @@ylight@@g bursts forth from $n's hands!@@N", ch, NULL, NULL, TO_ROOM);
@@ -627,19 +627,19 @@ bool spell_wraith_touch(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
 
    if (obj == NULL)
    {
-      dam = 150 + dice(ch->remort[CLASS_NEC]/2, 20);
+      dam = 150 + dice(ch->class_level[CLASS_NEC]/2, 20);
       act("@@RA @@dwraithlike hand @@Rleaps forth from $n!@@N", ch, NULL, NULL, TO_ROOM);
       send_to_char("@@RA @@dwraithlike hand @@Rleaps forth from your hands!@@N\n\r", ch);
    }
    else
    {
-      dam = 150 + dice(ch->remort[CLASS_NEC]/2, 20);
+      dam = 150 + dice(ch->class_level[CLASS_NEC]/2, 20);
       act("@@RA @@dwraithlike hand @@Rleaps forth from $p!@@N", ch, obj, NULL, TO_ROOM);
       act("@@RA @@dwraithlike hand @@Rleaps forth from $p!@@N", ch, obj, NULL, TO_CHAR);
    }
    act("@@R$n is struck by the @@dwraithlike hand @@R!!@@N", victim, NULL, NULL, TO_ROOM);
    send_to_char("@@RYou are struck by a @@dwraithlike hand @@R!!@@N\n\r", victim);
-   drain_mod = ch->remort[CLASS_NEC] * dam / 130;
+   drain_mod = ch->class_level[CLASS_NEC] * dam / 130;
    if (sp_damage(obj, ch, victim, dam, ELEMENT_SHADOW | NO_REFLECT | NO_ABSORB, sn, TRUE))
    {
       ch->hit = UMIN(get_max_hp(ch), (ch->hit + drain_mod));
@@ -655,7 +655,7 @@ bool spell_thought_vise(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
 
    if (obj == NULL)
    {
-      int base = ch->remort[CLASS_EGO];
+      int base = ch->class_level[CLASS_EGO];
       dam = 250 + dice(base/2, 20);
       act("@@rA crushing weight brushes your mind, then is gone.@@N", ch, NULL, NULL, TO_ROOM);
       send_to_char("@@rYou clench your mind, crushing the thoughts of your foe.\n\r@@N", ch);
@@ -951,7 +951,7 @@ bool spell_sonic_blast(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    AFFECT_DATA af;
    int dam;
-   dam = 150 + dice(ch->remort[CLASS_EGO]/2, 20);
+   dam = 150 + dice(ch->class_level[CLASS_EGO]/2, 20);
    if (sp_damage(obj, ch, victim, dam, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, sn, TRUE))
    {
       if (is_affected(ch, sn))
@@ -1014,12 +1014,12 @@ bool spell_regen(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    AFFECT_DATA af;
 
-   int base_heal = spell_regen_base_heal(ch->lvl[CLASS_MAG], ch->remort[CLASS_SOR], ch->remort[CLASS_WIZ], get_spellpower(ch));
+   int base_heal = spell_regen_base_heal(ch->class_level[CLASS_MAG], ch->class_level[CLASS_SOR], ch->class_level[CLASS_WIZ], get_spellpower(ch));
 
    if (is_affected(ch, sn) || is_affected(ch, skill_lookup("regen")))
       return FALSE;
    af.type = sn;
-   af.duration = 15 + ch->lvl[CLASS_MAG] / 4;
+   af.duration = 15 + ch->class_level[CLASS_MAG] / 4;
    af.location = APPLY_HOT;
    af.duration_type = DURATION_ROUND;
    af.modifier = class_heal_character(ch, victim, base_heal, sn, INDEX_MAG, TRUE);
@@ -1141,10 +1141,10 @@ bool spell_magical_supremacy(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DAT
    if (is_affected(ch, skill_lookup("magical supremacy")))
       return FALSE;
 
-   if (ch->remort[CLASS_EGO] > 0)
-      buff = ch->remort[CLASS_EGO] * 1.5;
-   else if (ch->remort[CLASS_WIZ] > 0)
-      buff = ch->remort[CLASS_WIZ] * 1.5;
+   if (ch->class_level[CLASS_EGO] > 0)
+      buff = ch->class_level[CLASS_EGO] * 1.5;
+   else if (ch->class_level[CLASS_WIZ] > 0)
+      buff = ch->class_level[CLASS_WIZ] * 1.5;
    else
       buff = 20;
 
@@ -1173,7 +1173,7 @@ bool spell_refuge(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    af.location = APPLY_SPEED;
    af.duration_type = DURATION_ROUND;
    af.modifier = 1;
-   if (ch->adept[CLASS_TEM] > 0)
+   if (ch->class_level[CLASS_TEM] > 0)
       af.modifier = 2;
    af.bitvector = 0;
    af.caster = ch;

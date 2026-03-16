@@ -118,7 +118,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
 
    check_killer(ch, victim);
 
-   if (backstab && IS_NPC(victim) && IS_AFFECTED(victim, AFF_SANCTUARY) && (ch->remort[CLASS_ASS] > 0 || ch->remort[CLASS_WLK] > 0) && (number_percent() > 50))
+   if (backstab && IS_NPC(victim) && IS_AFFECTED(victim, AFF_SANCTUARY) && (ch->class_level[CLASS_ASS] > 0 || ch->class_level[CLASS_WLK] > 0) && (number_percent() > 50))
    {
       send_to_char("Critical Success! Your advanced training has succeeded!\n\r", ch);
       act("The white aura around $n fades.", victim, NULL, NULL, TO_ROOM);
@@ -139,7 +139,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    else
       raise_skill(ch, gsn_circle);
 
-   if (!IS_NPC(ch) && ch->lvl[CLASS_CIP] > 0 && number_percent() == 1)
+   if (!IS_NPC(ch) && ch->class_level[CLASS_CIP] > 0 && number_percent() == 1)
    {
       send_to_room("You hear a large CRACK!\n\r", ch->in_room);
       dam *= 2;
