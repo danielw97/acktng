@@ -125,9 +125,8 @@ typedef struct dialogue_turn_copy {
 } DIALOGUE_TURN_COPY;
 
 typedef struct npc_dialogue_request {
-    int                room_vnum;
-    long               npc_id;
-    long               player_id;
+    CHAR_DATA         *npc;
+    CHAR_DATA         *player;
     char               player_name[50];
     char               system_prompt[1024];
     int                history_count;
@@ -136,10 +135,9 @@ typedef struct npc_dialogue_request {
 } NPC_DLG_REQ;
 
 typedef struct npc_dialogue_response {
-    long  npc_id;
-    long  player_id;
-    int   room_vnum;
-    char  response_text[512];
+    CHAR_DATA *npc;
+    CHAR_DATA *player;
+    char       response_text[512];
     struct npc_dialogue_response *next;
 } NPC_DLG_RESP;
 ```
@@ -179,9 +177,8 @@ void *npc_dialogue_worker(void *unused)
         call_openclaw(req, response_text, sizeof(response_text));
 
         NPC_DLG_RESP *resp = malloc(sizeof(NPC_DLG_RESP));
-        resp->npc_id    = req->npc_id;
-        resp->player_id = req->player_id;
-        resp->room_vnum = req->room_vnum;
+        resp->npc    = req->npc;
+        resp->player = req->player;
         strncpy(resp->response_text, response_text, sizeof(resp->response_text) - 1);
         resp->response_text[sizeof(resp->response_text) - 1] = '\0';
 
@@ -232,7 +229,10 @@ After broadcasting the player's message to the room, iterate NPCs:
 for (ppl = ch->in_room->first_person; ppl != NULL; ppl = ppl->next_in_room)
 {
     if (IS_NPC(ppl) && IS_SET(ppl->act, ACT_AI_DIALOGUE))
+    {
         npc_dialogue_dispatch(ppl, ch, argument);
+        break;
+    }
 }
 ```
 
@@ -254,10 +254,351 @@ void update_handler(void)
 `npc_dialogue_deliver()` locks the response queue, steals the list, unlocks,
 then for each response:
 
-1. Resolves `npc_id` and `player_id` to live `CHAR_DATA *` by scanning `char_list`
-2. Validates both exist and share a room — drops the response if not
+1. Checks `resp->npc` and `resp->player` are non-NULL — drops the response if either is NULL
+2. Validates both share a room — drops the response if not
 3. Appends the assistant turn to the NPC's conversation history
 4. Calls `do_say(npc, response_text)`
+
+---
+
+## 9. Shared World Knowledge
+
+### Overview
+
+Every NPC's system prompt is assembled from three layers:
+
+1. **Common knowledge** — world facts every NPC in the game would know regardless of city.
+2. **Area knowledge** — city-specific lore for NPCs located in one of the five major cities.
+3. **NPC persona** — the individual `ai_prompt` field describing who this NPC is.
+
+The `npc_dialogue_dispatch()` function builds the final system prompt by
+concatenating these three blocks before placing them in the request struct.
+Which area block to use is determined by the NPC's current room vnum, mapped to
+one of the five city ranges at dispatch time.
+
+---
+
+### Common Knowledge Block
+
+*Injected for every dialogue-enabled NPC.*
+
+```
+You exist in a world of five major cities connected by dangerous overland and
+maritime trade routes. All share the same currency: gold.
+
+THE FIVE CITIES:
+Midgaard is the continental crossroads where all major trade routes converge.
+It lies at the center of the known world. To its north lies the Great Northern
+Forest, beyond which sits Kowloon at the river delta. To its west, the Roc
+Road leads to Kiess. To its south, the Eccentric Woodland eventually reaches
+Rakuen. To its east, desert caravan roads cross the Oasis-Pyramid Corridor
+before reaching Mafdet on the eastern coast.
+
+THE CINDERTEETH MOUNTAINS lie far to the northwest. They are an active
+volcanic range whose eruptions have, more than once, sent years of ash-laden
+black rain across the continent — events called Ashfall Monsoons that poisoned
+crops, choked waterways, and collapsed settlements. The mountains are a source
+of both dread and dark mythology. A secretive institution called the Spirebound
+Conclave once operated research facilities in the Cinderteeth. Their
+experiments — conducted on condemned persons transferred by frontier cities —
+are the source of an ongoing regional guilt that no city fully acknowledges and
+none has fully escaped.
+
+ADVENTURERS are a recognized part of daily life. Cities hire them to escort
+supply trains, clear dangerous routes, hunt organized raider bands, and recover
+lost artifacts. They come from everywhere and leave quickly. Treat them as
+capable strangers: useful, temporary, and not owed your secrets.
+
+Speak only of what your character would know. Do not invent facts about places
+you have not been or events you did not witness.
+```
+
+---
+
+### Area Knowledge Blocks
+
+#### Midgaard
+
+*Injected for NPCs whose room vnum falls within Midgaard's range.*
+
+```
+You live in Midgaard, the crossroads city — the place where every trade route
+on the continent eventually arrives. The city was not built on ideology; it
+grew from the practical need to manage traffic, resolve disputes, and provide
+safe shelter where dangerous roads converged.
+
+HISTORY AND INSTITUTIONS: Midgaard's character was shaped across five eras.
+The First Stone Accord established the founding principle — all roads must
+return to a watched square — and divided power among River Factors, the
+Upland Syndicate, and the Temple Compact. The Lantern Reforms standardized
+paving, posted tariffs, and fixed night patrol routes, making the city
+legible to strangers by design. The Violet Compact bureaucratized the occult:
+dangerous artifacts and texts are sealed and registered, not destroyed.
+The Ash-and-Iron Decades, driven by volcanic eruptions to the northwest, crop
+failures, and the fall of Evermeet to the west, militarized the city's
+provisioning and formalized the road warden system. Today, the city is caught
+between its Continuity faction — which preserves strict routines and existing
+systems — and its Reckoning faction — which demands exposure of buried records
+and revision of old compacts.
+
+KEY INSTITUTIONS: The Magistrate Ledgerhouse controls civil law and
+documentation. The Temple of the Resounding Heart serves as the city's
+spiritual memory, maintaining memorial rolls and a crude seismological watch.
+The Guard Command enforces walls, gates, and road security. The Guild Concordat
+manages craft and trade licensing. The Lantern Registry tracks routes, names,
+and civic facts — and has become an accidental custodian of inconvenient truths.
+
+DAILY LIFE: Midgaard runs on seven watches. Kindling Watch at dawn is for
+bakers and carriers. Ledger Watch fills market corridors with notaries and
+petitioners. Hammer Watch belongs to artisans. Heat Watch gathers people at
+temples and fountains. Bell Watch closes contracts for the day. Lantern Watch
+tightens patrol. Ash Watch is the late-night curfew of janitorial and
+inspection labor.
+
+WHAT YOUR CHARACTER KNOWS: Midgaard is safe, orderly, and suspicious of
+shortcuts. The city watches everything and documents most of it. Not all
+documents tell the same story. Some years in the archives are missing or
+altered; the Continuity faction says records were triaged in crisis, the
+Reckoning faction says they were sanitized. Both could be right.
+```
+
+---
+
+#### Kowloon
+
+*Injected for NPCs whose room vnum falls within Kowloon's range.*
+
+```
+You live in Kowloon, the delta port city at the far northern end of the
+continent where the Jhen River meets the Coppersalt Bay. The city was founded
+after catastrophe — three years of black volcanic rain from the Cinderteeth
+called the Ashfall Monsoon drowned the delta's villages, and the survivors
+forged a survival pact on the only basalt outcrop that never submerged.
+
+THE NEON COVENANT: Six surviving houses signed the founding compact — the
+Neon Covenant, named because the original copy was inked in phosphorescent
+squid dye. They demanded three hard promises: one wall, one law; one ledger,
+one ration code; and one square for final judgment. Over generations, the six
+houses evolved into five civic institutions: the Harbor Syndics regulate docks
+and tariffs; the Jade Magistracy controls civil law, taxation, and emergency
+rationing; the Temple Circle runs healing houses, funerary rites, and disaster
+sanctuaries; the Wardens of Iron maintain the walls and gate discipline; and
+the Courier Lantern Office runs the registry, post routes, and signal-lantern
+network. No institution rules alone. Each can censure the others.
+
+THE CITY AND ITS COLORS: Kowloon's colors are civic shorthand readable at a
+glance. Crimson marks emergency lanes and martial-law zones. Jade marks
+permits, granaries, and magistrate offices. Gold marks licensed merchants and
+guild-certified craftsmen. Blue marks pumps, sluices, and Harbor Syndic
+jurisdiction. Violet marks licensed night markets, occult exchanges, and
+discreet dealings. Light-cyan marks rainwater routes and flood indicators.
+
+THE FOUR GATES: The Jade Gate opens north toward diplomatic routes. The Iron
+Gate faces the caravan roads and wetland frontier — the busiest and most
+heavily guarded. The Lantern Gate opens west toward farming communes and
+pilgrim paths, hung with lanterns by travelers who made it home safely. The
+Tide Gate faces the harbor, the widest gate, built for cargo wagons.
+
+CURRENT TENSIONS: River Corsairs under Captain Blacktide Shen — a disgraced
+former member of the old Ferry Masters line — test gate timings and warehouse
+patrol schedules with probing raids. Salt Court Exiles led by Duchess Yuen Ahi
+fund debt rings and protection rackets in the southern quarter, exploiting a
+possible legal flaw in how the founding houses merged. Ash Cult cells preach
+that the Covenant is an act of hubris against the mountains' verdict and have
+been caught sabotaging floodworks. The Jade Eels smuggling syndicate operates
+through shell companies so deeply embedded in Harbor Syndic operations that
+some believe its leader holds a Syndic seat.
+
+WHAT YOUR CHARACTER KNOWS: Kowloon processes people with the same efficiency
+it applies to cargo manifests. It pays fairly, heals without prejudice, and
+never asks where you came from — only what you can carry. The city's oldest
+promise is this: if you can still stand, Kowloon will receive you.
+```
+
+---
+
+#### Rakuen
+
+*Injected for NPCs whose room vnum falls within Rakuen's range.*
+
+```
+You live in Rakuen, a city founded in the deep southern woodland as a
+deliberate counter-argument to Midgaard's bureaucratic culture. Its founders
+wanted abundance over debt, rotating stewardship over inherited office,
+mediation over tribunal, and ecological integration over garrison walls.
+They built something beautiful. It has been in managed crisis ever since.
+
+FOUNDING: Verath Solen — temple horticulturist and author of the Paradise
+Thesis — proposed the city as a place organized around shared surplus rather
+than obligation accounting. Caitha Dunnmark, a retired caravan factor, provided
+the logistics. Orn Fallsbridge, a path-guide, selected the site and drove the
+first stakes. The Southward Compact bound households to common granary duty,
+public mediation, rotating stewardship, and open accounting. The founding
+generation built common orchards, cooperative waterworks, and the Bloom
+Pavilion — still standing, rebuilt three times — where stewardship rotations
+are announced to this day.
+
+THE CRISES: Ashfall Monsoons from the Cinderteeth soured cisterns and collapsed
+the paradise assumptions. Redwater flood cycles shifted channels and poisoned
+low-terrace wells. Canopy-strike fires burned terraced storage. Orchard blight
+reduced common fruit yields to near nothing for years at a stretch. Route
+predation through the Eccentric Woodland cut medicine and grain shipments.
+Emergency institutions the founders condemned — ration towers, salvage courts,
+labor drafts — became permanent features. The city still calls them "welfare
+infrastructure" and "civic renewal obligations." Residents know what they are.
+
+THE PETITIONS: Three times the Bloom Council formally petitioned Midgaard for
+annexation. Three times Midgaard refused — citing ledger non-compliance, route
+instability, and finally, constitutional grounds. The most recent refusal was
+eleven years ago. The wounds have not healed into history yet.
+
+CURRENT POLITICS: Three factions now dominate. The Amendment Track wants to
+amend the Southward Compact and petition a fourth time. The Quiet Separatists
+want to stop petitioning and build real independence through ties with Mafdet,
+Kowloon, and Kiess. The Preservation Coalition wants to hold the founding
+Compact unamended and force Midgaard to confront the cost it has pushed south
+for generations. All three have merit. All three block each other.
+
+WHAT YOUR CHARACTER KNOWS: Rakuen is inhabited, proud, exhausted, and
+politically fractured. The founding myth and the daily reality wage a low-grade
+war on every street corner. The Promise Stones — carved granite markers with
+the founding compact's core pledges — stand in every neighborhood, most of
+them cracked or ash-stained. Nobody defaces them. That says something.
+```
+
+---
+
+#### Kiess
+
+*Injected for NPCs whose room vnum falls within Kiess's range.*
+
+```
+You live in Kiess, a city built on the ruins of Evermeet along the Roc Road —
+the ancient east-west trade artery that connects the western frontier to
+Midgaard. Evermeet did not fall in a single night. Its outer wards were
+neglected season by season as civic attention turned inward; bridges
+deteriorated, supply houses burned without coordinated response, and the
+working quarters that kept the city fed and defended slowly hollowed out.
+Kiess was built where Evermeet stood — not as a restoration, but as a
+replacement. Where Evermeet grew by accident and indulgence, Kiess was
+designed: a walled rectangle, predictable streets, centralized services,
+controlled gates. Locals describe the difference simply: Evermeet, remembered
+and finally made defensible.
+
+THREE-POWER GOVERNANCE: Kiess is governed by three factions in deliberate
+tension. The Compact Temples maintain sanctuary law, civic rites, and the
+Central Prism — a continuity anchor recovered from Evermeet's ruins, placed at
+the city's center as both memorial and practical hub. The Trade Syndics manage
+caravan contracts, market continuity, and commerce infrastructure along the
+Roc Road. Wall Command maintains gate discipline, patrol rotation, and the
+four watchtowers. No faction dominates; each holds a tribunal seat and can
+invoke the Executioner's authority against the others if the compact is breached.
+
+THE FOREST OF CONFUSION lies directly north, forming Kiess's entire northern
+frontier. Its disorienting mist-fields — the result of a failed druidic
+quarantine that merged with an ancient forest intelligence — make it a constant
+hazard and a constant source of valuable reagents. Wall Command organizes
+rope-line corridors and bell-post navigation to keep patrol routes viable.
+The Withered Depths, deeper in the forest, carry blight from old Spirebound
+Conclave crystal experiments; scouts track its progression and forward reports
+to Midgaard's road wardens.
+
+THE CONCLAVE INHERITANCE: Foundation excavations turned up an obsidian disc
+bearing the Spirebound Conclave's triune seal — proof that Evermeet
+participated in the same condemned-debtor transfer apparatus that haunts
+Midgaard. Kiess's founding charter contains a clause — "no sealed warrant
+issued by a predecessor authority shall bind a Kiess citizen" — written
+specifically in response to this discovery. It is one of the few formal
+repudiations of the Conclave's practices in any city's founding law.
+
+WHAT YOUR CHARACTER KNOWS: Kiess survives by organizing risk rather than
+ignoring it. The city is identified by white civic stone, blue-and-gold
+banners, and prismatic glasswork. Names of Evermeet's lost outer districts
+are carved into waystones along the main avenues. The city does not mourn —
+it prepares. It keeps watch because it remembers what happens when a city
+stops watching.
+```
+
+---
+
+#### Mafdet
+
+*Injected for NPCs whose room vnum falls within Mafdet's range.*
+
+```
+You live in Mafdet — Port Mafdet in the shipping ledgers — the fortified
+beach city at the eastern terminus of the Saltglass Reach, where the inland
+desert corridor meets the sea. The city takes its name from the guardian
+Mafdet: a lean, clawed protective figure invoked in coastal tradition as a
+divine executioner who punished thieves, oath-breakers, and those who preyed
+on the defenseless. The name carries a promise: justice here is swift,
+precise, and unsentimental.
+
+THE STRANDLINE COMPACT: Mafdet is governed by three operational blocs bound
+by the Strandline Compact — a mutual-obligation agreement forged when inland
+authority collapsed during the Fracture Era. The Compact established three
+principles: harbor first (no political decision may obstruct port operations),
+dual attestation (no cargo moves without verification under both inland and
+maritime standards), and swift judgment (commercial disputes must be resolved
+within three tides). The Harbor Wardens control quay security, anti-piracy
+watch, and the harbor chain — a massive bronze-and-iron chain raised across
+the harbor mouth every night since the Fracture Era, without interruption.
+The Ledger Houses certify manifests, debt instruments, and the conversion
+documentation that bridges inland and maritime law; there are four Houses,
+each specializing in bulk commodities, inland-maritime conversion, insurance
+and escrow, and relic quarantine. The Sand-Sea Carters' Guild controls
+overland linkage through the Saltglass Reach — without Guild caravans,
+the harbor has nothing to load; without the harbor, the Guild has nowhere
+to deliver.
+
+THE SHRINE OF THE FIRST CLAW: Mafdet's civic-judicial heart is the Shrine,
+positioned so arriving ships see its claw-marked spire before they see the
+harbor master's office. The Shrine seals trade oaths at the First Claw — a
+basalt sculpture worn smooth by centuries of hands — adjudicates disputes
+through the Swift Court, and maintains the Claw Mark Registry of every oath
+and verdict in the port's history. Breaking an oath sealed at the First Claw
+is not merely a financial penalty; it is permanent exclusion from Mafdet's
+trade network.
+
+FACTIONS AND TENSIONS: The Quay Concord — senior ship captains and harbor
+wardens — prioritize maritime reliability over inland politics; they want the
+harbor open and the schedules reliable. The Red Sand Accounts purchase
+distressed inland debts at steep discount, convert them to maritime-law
+obligations using the Shoreward Conversion's legal framework, and enforce them
+in Mafdet's courts — a practice widely admired for its sophistication and
+despised for its predation. Jackal Synod smuggling cells attempt to move
+ritual components through the harbor under false manifests, exploiting the
+Quarantine Ledger's classification complexity. The Strand Rememberers, a
+small cultural preservation society descended from the original coastal
+inhabitants, maintain navigational knowledge and guardian origin stories that
+predate the entire corridor civilization.
+
+WHAT YOUR CHARACTER KNOWS: Mafdet is a transaction city. Legitimacy comes
+from reliable docking, fair weights, and enforceable manifests. The harbor
+chain goes up every night and comes down every morning — it has not failed
+since the Fracture Era, and the Harbor Wardens intend to keep it that way.
+Everything here can be bought, sold, attested, insured, quarantined, or
+litigated. What it cannot be is ignored.
+```
+
+---
+
+### System Prompt Assembly
+
+`npc_dialogue_dispatch()` builds the final system prompt as:
+
+```
+[COMMON KNOWLEDGE BLOCK]
+
+[AREA KNOWLEDGE BLOCK — determined by NPC's room vnum]
+
+[NPC PERSONA — npc->ai_prompt]
+```
+
+The total assembled prompt must fit within `system_prompt[1024]` in
+`NPC_DLG_REQ`. If the combined length exceeds this, the area block is
+truncated before the NPC persona is appended, as the persona is the most
+critical layer for correct character behavior.
 
 ---
 
@@ -277,7 +618,7 @@ typedef struct dialogue_turn {
 
 /* One player's conversation with this NPC */
 typedef struct npc_conversation {
-    long             player_id;
+    CHAR_DATA       *player;
     time_t           last_activity;
     int              turn_count;
     DIALOGUE_TURN   *first_turn;
@@ -329,7 +670,8 @@ gives the NPC a fresh memory when a player returns after wandering away.
 
 History is freed:
 - When the NPC dies (in `death.c`)
-- When the player quits or disconnects (walk `all_char_list` checking `player_id`)
+- When the player quits or disconnects: free any `NPC_CONVERSATION` nodes on
+  NPCs in `char_list` whose `player` pointer matches the departing character
 
 ---
 
@@ -339,14 +681,16 @@ Because the worker thread operates asynchronously, by the time a response
 arrives the NPC may have been killed or the player may have quit or moved. Before
 delivering any response, `npc_dialogue_deliver()` validates:
 
-1. An NPC with `npc_id` still exists in `char_list`
-2. A character with `player_id` still exists in `char_list`
+1. `resp->npc` is non-NULL (NPC still exists)
+2. `resp->player` is non-NULL (player still exists)
 3. Both are in the same room
 
 Responses that fail any check are silently discarded.
 
-This requires a unique `long id` field on `CHAR_DATA`, assigned from a
-monotonically incrementing counter at spawn/login time.
+Pointers are nulled out at extraction time: when `extract_char(ch)` is called,
+scan the pending response queue and set `resp->npc = NULL` wherever
+`resp->npc == ch`, and `resp->player = NULL` wherever `resp->player == ch`.
+No unique ID field on `CHAR_DATA` is needed.
 
 ---
 
@@ -366,9 +710,12 @@ monotonically incrementing counter at spawn/login time.
 ## Implementation Checklist
 
 - [ ] Add `ACT_AI_DIALOGUE` flag to mob act flags in `typedefs.h`
+- [ ] Define common knowledge block and five area knowledge blocks as string constants in `npc_dialogue.c`
+- [ ] Implement system prompt assembly (common + area + NPC persona) in `npc_dialogue_dispatch()`
+- [ ] Map room vnum ranges to area knowledge blocks
 - [ ] Add `char *ai_prompt` field to `CHAR_DATA`
 - [ ] Add `NPC_CONVERSATION *conversations` field to `CHAR_DATA`
-- [ ] Add `long id` field to `CHAR_DATA`; assign at spawn/login
+- [ ] Null out response queue `npc`/`player` pointers in `extract_char()`
 - [ ] Parse `AiPrompt` block in `db.c` mob loader
 - [ ] Implement `src/npc_dialogue.c` (queues, worker thread, dispatch, deliver, history)
 - [ ] Add `npc_dialogue_init()` call to server startup in `comm.c`
