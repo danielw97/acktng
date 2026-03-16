@@ -227,6 +227,34 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_rr_byways_kiess_clerk;
    if (!str_cmp(name, "spec_rr_byways_midgaard_guard"))
       return spec_rr_byways_midgaard_guard;
+   if (!str_cmp(name, "spec_midgaard_gate_warden"))
+      return spec_midgaard_gate_warden;
+   if (!str_cmp(name, "spec_midgaard_caravan_master"))
+      return spec_midgaard_caravan_master;
+   if (!str_cmp(name, "spec_midgaard_pilgrim"))
+      return spec_midgaard_pilgrim;
+   if (!str_cmp(name, "spec_midgaard_city_guard"))
+      return spec_midgaard_city_guard;
+   if (!str_cmp(name, "spec_midgaard_executioner"))
+      return spec_midgaard_executioner;
+   if (!str_cmp(name, "spec_midgaard_temple_guardian"))
+      return spec_midgaard_temple_guardian;
+   if (!str_cmp(name, "spec_midgaard_healer"))
+      return spec_midgaard_healer;
+   if (!str_cmp(name, "spec_midgaard_beggar"))
+      return spec_midgaard_beggar;
+   if (!str_cmp(name, "spec_midgaard_street_vendor"))
+      return spec_midgaard_street_vendor;
+   if (!str_cmp(name, "spec_midgaard_temple_priest"))
+      return spec_midgaard_temple_priest;
+   if (!str_cmp(name, "spec_midgaard_shopkeeper"))
+      return spec_midgaard_shopkeeper;
+   if (!str_cmp(name, "spec_midgaard_postmaster"))
+      return spec_midgaard_postmaster;
+   if (!str_cmp(name, "spec_midgaard_quartermaster"))
+      return spec_midgaard_quartermaster;
+   if (!str_cmp(name, "spec_midgaard_invasion_warden"))
+      return spec_midgaard_invasion_warden;
    if (!str_cmp(name, "spec_reach_warden"))
       return spec_reach_warden;
    if (!str_cmp(name, "spec_reach_guide"))
@@ -465,6 +493,34 @@ char *rev_spec_lookup(void *func)
       return "spec_rr_byways_kiess_clerk";
    if (func == spec_rr_byways_midgaard_guard)
       return "spec_rr_byways_midgaard_guard";
+   if (func == spec_midgaard_gate_warden)
+      return "spec_midgaard_gate_warden";
+   if (func == spec_midgaard_caravan_master)
+      return "spec_midgaard_caravan_master";
+   if (func == spec_midgaard_pilgrim)
+      return "spec_midgaard_pilgrim";
+   if (func == spec_midgaard_city_guard)
+      return "spec_midgaard_city_guard";
+   if (func == spec_midgaard_executioner)
+      return "spec_midgaard_executioner";
+   if (func == spec_midgaard_temple_guardian)
+      return "spec_midgaard_temple_guardian";
+   if (func == spec_midgaard_healer)
+      return "spec_midgaard_healer";
+   if (func == spec_midgaard_beggar)
+      return "spec_midgaard_beggar";
+   if (func == spec_midgaard_street_vendor)
+      return "spec_midgaard_street_vendor";
+   if (func == spec_midgaard_temple_priest)
+      return "spec_midgaard_temple_priest";
+   if (func == spec_midgaard_shopkeeper)
+      return "spec_midgaard_shopkeeper";
+   if (func == spec_midgaard_postmaster)
+      return "spec_midgaard_postmaster";
+   if (func == spec_midgaard_quartermaster)
+      return "spec_midgaard_quartermaster";
+   if (func == spec_midgaard_invasion_warden)
+      return "spec_midgaard_invasion_warden";
    if (func == spec_reach_warden)
       return "spec_reach_warden";
    if (func == spec_reach_guide)
@@ -601,6 +657,20 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_rr_byways_market   \n\r");
    strcat(buf, "       spec_rr_byways_kiess_clerk\n\r");
    strcat(buf, "       spec_rr_byways_midgaard_guard\n\r");
+   strcat(buf, "       spec_midgaard_gate_warden    \n\r");
+   strcat(buf, "       spec_midgaard_caravan_master \n\r");
+   strcat(buf, "       spec_midgaard_pilgrim        \n\r");
+   strcat(buf, "       spec_midgaard_city_guard     \n\r");
+   strcat(buf, "       spec_midgaard_executioner    \n\r");
+   strcat(buf, "       spec_midgaard_temple_guardian\n\r");
+   strcat(buf, "       spec_midgaard_healer         \n\r");
+   strcat(buf, "       spec_midgaard_beggar         \n\r");
+   strcat(buf, "       spec_midgaard_street_vendor  \n\r");
+   strcat(buf, "       spec_midgaard_temple_priest  \n\r");
+   strcat(buf, "       spec_midgaard_shopkeeper     \n\r");
+   strcat(buf, "       spec_midgaard_postmaster     \n\r");
+   strcat(buf, "       spec_midgaard_quartermaster  \n\r");
+   strcat(buf, "       spec_midgaard_invasion_warden\n\r");
    strcat(buf, "       spec_reach_warden      \n\r");
    strcat(buf, "       spec_reach_guide       \n\r");
    strcat(buf, "       spec_reach_assessor    \n\r");
