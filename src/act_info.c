@@ -1722,16 +1722,12 @@ void do_score(CHAR_DATA *ch, char *argument)
 
    if (!IS_NPC(ch))
    {
-
       buf2[0] = '\0';
-
-      for (cnt = 0; cnt < MAX_CLASS; cnt++)
+      for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
       {
-         if (ch->class_level[cnt] > 0)
+         if (IS_MORTAL_CLASS(cnt) && ch->class_level[cnt] > 0)
          {
-            sprintf(buf, "@@c%s", gclass_table[cnt].who_name);
-            safe_strcat(MAX_STRING_LENGTH, buf2, buf);
-            sprintf(buf, ":@@W%2d ", ch->class_level[cnt]);
+            sprintf(buf, "@@c%s:@@W%2d ", gclass_table[cnt].who_name, ch->class_level[cnt]);
             safe_strcat(MAX_STRING_LENGTH, buf2, buf);
          }
       }
@@ -1741,15 +1737,15 @@ void do_score(CHAR_DATA *ch, char *argument)
 
    sprintf(buf, "@@c|%s@@c|\n\r", center_text(buf2, score_inner_width));
    send_to_char(buf, ch);
-   buf2[0] = '\0';
 
    if (is_remort(ch))
    {
-      for (cnt = 0; cnt < MAX_REMORT; cnt++)
+      buf2[0] = '\0';
+      for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
       {
-         if (ch->class_level[MAX_CLASS + cnt] != -1)
+         if (IS_REMORT_CLASS(cnt) && ch->class_level[cnt] != -1)
          {
-            sprintf(buf, "@@m%s:@@W%2d ", gclass_table[MAX_CLASS + cnt].who_name, ch->class_level[MAX_CLASS + cnt]);
+            sprintf(buf, "@@m%s:@@W%2d ", gclass_table[cnt].who_name, ch->class_level[cnt]);
             safe_strcat(MAX_STRING_LENGTH, buf2, buf);
          }
       }
@@ -1757,15 +1753,14 @@ void do_score(CHAR_DATA *ch, char *argument)
       send_to_char(buf, ch);
    }
 
-   buf2[0] = '\0';
-
    if (is_adept(ch))
    {
-      for (cnt = 0; cnt < MAX_CLASS; cnt++)
+      buf2[0] = '\0';
+      for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
       {
-         if (ch->class_level[MAX_CLASS + MAX_REMORT + cnt] > 0)
+         if (IS_ADEPT_CLASS(cnt) && ch->class_level[cnt] > 0)
          {
-            sprintf(buf, "@@d%s:@@W%2d ", gclass_table[MAX_CLASS + MAX_REMORT + cnt].who_name, ch->class_level[MAX_CLASS + MAX_REMORT + cnt]);
+            sprintf(buf, "@@d%s:@@W%2d ", gclass_table[cnt].who_name, ch->class_level[cnt]);
             safe_strcat(MAX_STRING_LENGTH, buf2, buf);
          }
       }
