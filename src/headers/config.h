@@ -137,10 +137,10 @@
 #define MAX_TOTAL_CLASS (MAX_CLASS + MAX_REMORT + MAX_CLASS)
 
 /* Helper macros to determine which tier a class ID belongs to */
-#define IS_MORTAL_CLASS(c) ((c) >= 0 && (c) < MAX_CLASS)
-#define IS_REMORT_CLASS(c) ((c) >= MAX_CLASS && (c) < MAX_CLASS + MAX_REMORT)
-#define IS_ADEPT_CLASS(c)  ((c) >= MAX_CLASS + MAX_REMORT && (c) < MAX_TOTAL_CLASS)
-#define CLASS_TIER(c)      (IS_ADEPT_CLASS(c) ? 3 : IS_REMORT_CLASS(c) ? 2 : 1)
+#define IS_MORTAL_CLASS(c) (gclass_table[c].tier == MORTAL)
+#define IS_REMORT_CLASS(c) (gclass_table[c].tier == REMORT)
+#define IS_ADEPT_CLASS(c)  (gclass_table[c].tier == ADEPT)
+#define CLASS_TIER(c)      (gclass_table[c].tier)
 
 #define MAX_NUM_IMMS 5
 

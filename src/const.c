@@ -99,56 +99,35 @@ const struct ansi_type ansi_table[MAX_ANSI] = {
  */
 const struct class_type gclass_table[MAX_TOTAL_CLASS] =
 {
-   /* Mortal (0-5) */
-   { "Mag", "Magi", APPLY_INT, 2, 5 },
+   /* Mortal (0-5): tier=MORTAL, no prerequisites */
+   { "Mag", "Magi",       APPLY_INT, 2, 5,  MORTAL, {-1, -1} },
+   { "Cle", "Cleric",     APPLY_WIS, 3, 4,  MORTAL, {-1, -1} },
+   { "Cip", "Cipher",     APPLY_DEX, 6, 0,  MORTAL, {-1, -1} },
+   { "War", "Warden",     APPLY_STR, 7, 0,  MORTAL, {-1, -1} },
+   { "Psi", "Psionicist", APPLY_INT, 3, 4,  MORTAL, {-1, -1} },
+   { "Pug", "Pugilist",   APPLY_CON, 7, 0,  MORTAL, {-1, -1} },
 
-   { "Cle", "Cleric", APPLY_WIS, 3, 4},
+   /* Remort (6-17): tier=REMORT, one mortal prerequisite */
+   {"Sor", "Sorcerer",    APPLY_INT,  4, 10, REMORT, {CLASS_MAG, -1} },
+   {"Pal", "Paladin",     APPLY_WIS,  8,  6, REMORT, {CLASS_CLE, -1} },
+   {"Ass", "Assassin",    APPLY_DEX, 12,  0, REMORT, {CLASS_CIP, -1} },
+   {"Kni", "Knight",      APPLY_STR, 14,  0, REMORT, {CLASS_WAR, -1} },
+   {"Nec", "Necromancer", APPLY_INT,  6,  8, REMORT, {CLASS_PSI, -1} },
+   {"Mon", "Monk",        APPLY_CON, 14,  0, REMORT, {CLASS_PUG, -1} },
+   {"Wiz", "Wizard",      APPLY_INT,  4, 10, REMORT, {CLASS_MAG, -1} },
+   {"Pri", "Priest",      APPLY_WIS,  6,  8, REMORT, {CLASS_CLE, -1} },
+   {"Wlk", "Warlock",     APPLY_DEX,  8,  6, REMORT, {CLASS_CIP, -1} },
+   {"Swo", "Swordsman",   APPLY_STR, 14,  0, REMORT, {CLASS_WAR, -1} },
+   {"Ego", "Egomancer",   APPLY_INT,  6,  8, REMORT, {CLASS_PSI, -1} },
+   {"Bra", "Brawler",     APPLY_CON, 14,  0, REMORT, {CLASS_PUG, -1} },
 
-   { "Cip", "Cipher", APPLY_DEX, 6, 0},
-
-   { "War", "Warden", APPLY_STR, 7, 0},
-
-   { "Psi", "Psionicist", APPLY_INT, 3, 4},
-
-   { "Pug", "Pugilist", APPLY_CON, 7, 0},
-
-   /* Remort (6-17) */
-   {"Sor", "Sorcerer", APPLY_INT, 4, 10},
-
-   {"Pal", "Paladin", APPLY_WIS, 8, 6},
-
-   {"Ass", "Assassin", APPLY_DEX, 12, 0},
-
-   {"Kni", "Knight", APPLY_STR, 14, 0},
-
-   {"Nec", "Necromancer", APPLY_INT, 6, 8},
-
-   {"Mon", "Monk", APPLY_CON, 14, 0},
-
-   {"Wiz", "Wizard", APPLY_INT, 4, 10},
-
-   {"Pri", "Priest", APPLY_WIS, 6, 8},
-
-   {"Wlk", "Warlock", APPLY_DEX, 8, 6},
-
-   {"Swo", "Swordsman", APPLY_STR, 14, 0},
-
-   {"Ego", "Egomancer", APPLY_INT, 6, 8},
-
-   {"Bra", "Brawler", APPLY_CON, 14, 0},
-
-   /* Adept (18-23) */
-   {"Gra", "Grand Magi", APPLY_INT, 8, 20},
-
-   {"Tem", "Templar", APPLY_WIS, 16, 12},
-
-   {"Nig", "Nightblade", APPLY_DEX, 20, 8},
-
-   {"Cru", "Crusader", APPLY_STR, 28, 0},
-
-   {"Kin", "Kinetimancer", APPLY_INT, 12, 16},
-
-   {"Mar", "Martial Artist", APPLY_CON, 28, 0}
+   /* Adept (18-23): tier=ADEPT, two remort prerequisites */
+   {"Gra", "Grand Magi",     APPLY_INT,  8, 20, ADEPT, {CLASS_SOR, CLASS_WIZ} },
+   {"Tem", "Templar",        APPLY_WIS, 16, 12, ADEPT, {CLASS_PAL, CLASS_PRI} },
+   {"Nig", "Nightblade",     APPLY_DEX, 20,  8, ADEPT, {CLASS_ASS, CLASS_WLK} },
+   {"Cru", "Crusader",       APPLY_STR, 28,  0, ADEPT, {CLASS_KNI, CLASS_SWO} },
+   {"Kin", "Kinetimancer",   APPLY_INT, 12, 16, ADEPT, {CLASS_NEC, CLASS_EGO} },
+   {"Mar", "Martial Artist", APPLY_CON, 28,  0, ADEPT, {CLASS_MON, CLASS_BRA} },
 };
 
 const struct race_type race_table[MAX_RACE] = {

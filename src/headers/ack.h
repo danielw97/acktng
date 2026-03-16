@@ -338,11 +338,13 @@ struct shop_data
  */
 struct class_type
 {
-   char who_name[4];  /* Three-letter name for 'who'  */
-   char *class_name;  /* Full name                    */
-   sh_int attr_prime; /* Prime attribute              */
+   char who_name[4];    /* Three-letter name for 'who'               */
+   char *class_name;    /* Full name                                 */
+   sh_int attr_prime;   /* Prime attribute                           */
    sh_int hp_gain;
-   sh_int mana_gain; /* Class gains mana on level    */
+   sh_int mana_gain;    /* Class gains mana on level                 */
+   sh_int tier;         /* MORTAL / REMORT / ADEPT                   */
+   sh_int prereq[2];    /* Prerequisite class IDs; -1 = none         */
 };
 
 struct obj_stat_type
