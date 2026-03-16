@@ -257,7 +257,37 @@ then for each response:
 1. Checks `resp->npc` and `resp->player` are non-NULL — drops the response if either is NULL
 2. Validates both share a room — drops the response if not
 3. Appends the assistant turn to the NPC's conversation history
-4. Calls `do_say(npc, response_text)`
+4. Clears `npc->dlg_pending`
+5. Calls `do_say(npc, response_text)`
+
+**NPC Movement Blocking — `mobile_update()` in `update.c`:**
+
+An NPC with a pending dialogue request must not wander away before the response
+is delivered. If the NPC moves, the room-sharing validation in
+`npc_dialogue_deliver()` will discard the response, leaving the player with
+no reply.
+
+A boolean flag `dlg_pending` is added to `CHAR_DATA`:
+
+```c
+bool dlg_pending;   /* TRUE while an NPC_DLG_REQ is outstanding */
+```
+
+`npc_dialogue_dispatch()` sets `npc->dlg_pending = TRUE` before enqueuing the
+request. `npc_dialogue_deliver()` clears `npc->dlg_pending = FALSE` after
+delivering (or discarding) each response.
+
+In `mobile_update()`, the random-wander block gains one additional guard:
+
+```c
+/* Don't wander while waiting to deliver a dialogue response */
+if (IS_SET(ch->act, ACT_AI_DIALOGUE) && ch->dlg_pending)
+    continue;
+```
+
+This is placed before the random-direction roll so the check is cheap. The
+`ACT_AI_DIALOGUE` guard is included to keep the branch free of any overhead for
+the overwhelming majority of NPCs that never use the dialogue system.
 
 ---
 
@@ -807,12 +837,14 @@ No unique ID field on `CHAR_DATA` is needed.
 - [ ] Map room vnum ranges to area knowledge blocks
 - [ ] Add `char *ai_prompt` field to `CHAR_DATA`
 - [ ] Add `NPC_CONVERSATION *conversations` field to `CHAR_DATA`
+- [ ] Add `bool dlg_pending` field to `CHAR_DATA`
 - [ ] Null out response queue `npc`/`player` pointers in `extract_char()`
 - [ ] Parse `AiPrompt` block in `db.c` mob loader
 - [ ] Implement `src/npc_dialogue.c` (queues, worker thread, dispatch, deliver, history)
 - [ ] Add `npc_dialogue_init()` call to server startup in `comm.c`
 - [ ] Hook `npc_dialogue_dispatch()` into `do_say()` in `act_comm.c`
 - [ ] Hook `npc_dialogue_deliver()` into `update_handler()` in `update.c`
+- [ ] Guard NPC random-wander in `mobile_update()`: skip movement when `ACT_AI_DIALOGUE && dlg_pending`
 - [ ] Free history in NPC death path (`death.c`)
 - [ ] Free history for player on disconnect/quit
 - [ ] Link against `-lpthread` and `-lcurl` in `Makefile`
