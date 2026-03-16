@@ -42,6 +42,7 @@ bool is_safe args((CHAR_DATA * ch, CHAR_DATA *victim));
 void set_fighting args((CHAR_DATA * ch, CHAR_DATA *victim, bool check));
 void check_adrenaline args((CHAR_DATA * ch, sh_int damage));
 void do_spell_heal args((CHAR_DATA * ch, CHAR_DATA *victim, int sn));
+void gain_holy_power_from_healing_spell(CHAR_DATA *ch, int sn);
 void apply_elemental_spell_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, const char *debuff_msg);
 bool trigger_elemental_spell_combo(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj, int sn,
                                    int level);
@@ -50,10 +51,19 @@ void apply_necromancer_damage_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, i
 
 /* magic.c */
 int mana_cost(CHAR_DATA *ch, int sn);
-int spell_regen_base_heal(int mage_level, int sorcerer_level, int wizard_level, int spellpower);
 bool is_arcane_spell(int sn);
 bool is_holy_power_spell(int sn);
 bool is_mental_power_spell(int sn);
+
+void breath_damage(CHAR_DATA *ch, int sn, int element);
+void aoe_damage(CHAR_DATA *ch, OBJ_DATA *obj, int sn, int level, int min_dam, int max_dam,
+                int element, int flags);
+#define AOE_SAVES (1 << 0)
+#define AOE_SKIP_GROUP (1 << 1)
+int spell_regen_base_heal(int mage_level, int sorcerer_level, int wizard_level, int spellpower);
+bool cast_wizard_elemental_dot_spell(int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim,
+                                     OBJ_DATA *obj, const char *cast_msg, const char *hit_msg,
+                                     int element);
 
 #define ELE_NONE BIT_0
 #define ELE_PHYSICAL BIT_1
