@@ -817,11 +817,21 @@ static void normalize_login_class(CHAR_DATA *ch)
    if (ch->class >= 0 && IS_MORTAL_CLASS(ch->class))
       return;
 
-   for (cnt = 0; cnt < MAX_CLASS; cnt++)
+   /* Find the mortal class with the highest level — that is the primary class */
    {
-      if (ch->class_level[cnt] >= 0)
+      int best_level = -1;
+      int best_class = -1;
+      for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
       {
-         ch->class = cnt;
+         if (IS_MORTAL_CLASS(cnt) && ch->class_level[cnt] > best_level)
+         {
+            best_level = ch->class_level[cnt];
+            best_class = cnt;
+         }
+      }
+      if (best_class >= 0)
+      {
+         ch->class = best_class;
          return;
       }
    }
