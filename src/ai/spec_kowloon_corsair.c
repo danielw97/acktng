@@ -7,19 +7,22 @@
 bool spec_kowloon_corsair(CHAR_DATA *ch)
 {
    static const char *acts[] = {
-      "$n watches the harbor approaches with calculating eyes, noting the patrol timing.",
-      "$n marks a rough sketch of dock timing in charcoal on the back of a tariff card.",
-      "$n exchanges a brief, quiet gesture with a passing figure and continues without stopping.",
-      "$n scans a Harbor Syndic notice board, memorizing the updated patrol rotation.",
-      "$n moves to a shadowed position near the dock approach, tracking a Warden guard's circuit timing."
-   };
-   static char *says[] = {
-      "Shen knows these channels better than the Syndic charts do. Every gate timing, every patrol gap. Patience is strategy.",
-      "This isn't a raid — this is a probe. We learn their timing tonight. We act when we know what they know.",
-      "The Iron Gate convoy runs at third bell. Twice a week, same route. Someone in the Syndic is selling information.",
-      "Blacktide Shen has been watching this city for three years. Every gate, every shift change, every weakness.",
-      "The Harbor Syndics posted a bounty. They can post all the gold they want — Shen doesn't come out of the channels for that."
-   };
+       "$n watches the harbor approaches with calculating eyes, noting the patrol timing.",
+       "$n marks a rough sketch of dock timing in charcoal on the back of a tariff card.",
+       "$n exchanges a brief, quiet gesture with a passing figure and continues without stopping.",
+       "$n scans a Harbor Syndic notice board, memorizing the updated patrol rotation.",
+       "$n moves to a shadowed position near the dock approach, tracking a Warden guard's circuit "
+       "timing."};
+   static char *says[] = {"Shen knows these channels better than the Syndic charts do. Every gate "
+                          "timing, every patrol gap. Patience is strategy.",
+                          "This isn't a raid — this is a probe. We learn their timing tonight. We "
+                          "act when we know what they know.",
+                          "The Iron Gate convoy runs at third bell. Twice a week, same route. "
+                          "Someone in the Syndic is selling information.",
+                          "Blacktide Shen has been watching this city for three years. Every gate, "
+                          "every shift change, every weakness.",
+                          "The Harbor Syndics posted a bounty. They can post all the gold they "
+                          "want — Shen doesn't come out of the channels for that."};
 
    if (!IS_AWAKE(ch) || is_fighting(ch))
       return FALSE;

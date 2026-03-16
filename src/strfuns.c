@@ -179,7 +179,8 @@ void safe_strcat(int max_len, char *dest, char *source)
    a = dest - orig_dest;
    if (a > max_len)
    {
-      fprintf(stderr, "WARNING: dest string already too long:\nsource: %s\ndest: %s\n", source, orig_dest);
+      fprintf(stderr, "WARNING: dest string already too long:\nsource: %s\ndest: %s\n", source,
+              orig_dest);
       return;
    }
 
@@ -606,43 +607,48 @@ char *learnt_name(int sn, int learnt)
 char *get_adept_name(CHAR_DATA *ch)
 {
    static const char *const adept_titles[MAX_CLASS][20] = {
-      {
-       "@@bArcane Initiate@@N", "@@bCantrip Adept@@N",   "@@bRune Scholar@@N",    "@@bGlyphbinder@@N",     "@@bSpellweaver@@N",
-       "@@bMana Savant@@N",     "@@bEther Scribe@@N",    "@@bStar Channeler@@N",  "@@bAstral Arcanist@@N", "@@bArchmage Ascend@@N",
-       "@@bLeyline Warden@@N",  "@@bStorm Theorist@@N",  "@@bRift Magister@@N",   "@@bVoid Cartograph@@N", "@@bPrism Hierophant@@N",
-       "@@bCelestial Sage@@N",  "@@bReality Etcher@@N",  "@@bAether Regent@@N",   "@@bWorldspell Lord@@N", "@@BGrandmagi Exalt@@N"
-      },
-      {
-       "@@aTemple Novice@@N",   "@@aVotive Keeper@@N",   "@@aOath Bearer@@N",     "@@aFaith Adept@@N",     "@@aRelic Guardian@@N",
-       "@@aLitany Master@@N",   "@@aWard Canon@@N",      "@@aSanctum Knight@@N",  "@@aCreed Arbiter@@N",   "@@aDawn Inquisitor@@N",
-       "@@aSacred Marshal@@N",  "@@aRadiant Justicar@@N","@@aChapel Commander@@N","@@aAnointed Judge@@N",  "@@aSeraphic Warden@@N",
-       "@@aTemple Champion@@N", "@@aCovenant Lord@@N",   "@@aLight Paragon@@N",   "@@aThrone Templar@@N",  "@@AHigh Hierotemp@@N"
-      },
-      {
-       "@@dShadow Footpad@@N",  "@@dDusk Stalker@@N",    "@@dGloom Knifework@@N", "@@dVeil Skirmisher@@N", "@@dNight Prowler@@N",
-       "@@dSilent Ambusher@@N", "@@dUmbral Duelist@@N",  "@@dMoonlit Cutter@@N",  "@@dShade Reaver@@N",    "@@dMidnight Hunter@@N",
-       "@@dCloak Assassin@@N",  "@@dTenebrous Fang@@N",  "@@dEbon Shadowhand@@N", "@@dNocturne Slayer@@N", "@@dDread Nightblade@@N",
-       "@@dEclipse Butcher@@N", "@@dPhantom Exegete@@N", "@@dVoidstep Master@@N", "@@dCrown of Cinders@@N","@@DNightblade Prime@@N"
-      },
-      {
-       "@@eBanner Squire@@N",   "@@eShield Adept@@N",    "@@eBattle Votary@@N",   "@@eIron Legionary@@N",  "@@eOathbound Guard@@N",
-       "@@eVanguard Captain@@N","@@eWar Chantblade@@N",  "@@eSiege Standard@@N",  "@@eBastion Reaver@@N",  "@@eCrusade Herald@@N",
-       "@@eBulwark Marshal@@N", "@@eHost Commander@@N",  "@@eWarpath Arbiter@@N", "@@eLionheart Tact@@N",  "@@eStorm Crusader@@N",
-       "@@eConquest Regent@@N", "@@eDominion Spear@@N",  "@@eBannerlord Asc@@N",  "@@eThronebreaker@@N",   "@@EEternal Crusarch@@N"
-      },
-      {
-       "@@mPulse Student@@N",   "@@mForce Adept@@N",     "@@mVector Caller@@N",   "@@mMotion Scribe@@N",   "@@mFlux Binder@@N",
-       "@@mMomentum Savant@@N", "@@mKinesis Warden@@N",  "@@mResonance Master@@N","@@mGraviton Duelist@@N","@@mQuantum Strider@@N",
-       "@@mSingularity Seer@@N","@@mContinuum Keeper@@N","@@mOrbit Lawgiver@@N",  "@@mTensor Arcanist@@N", "@@mRift Physicist@@N",
-       "@@mHyperion Archit@@N", "@@mEventide Directo@@N","@@mCosmos Engineer@@N", "@@mFate Deflector@@N",  "@@MKinetimancr Apex@@N"
-      },
-      {
-       "@@rIron Trainee@@N",    "@@rForm Adept@@N",      "@@rStance Keeper@@N",   "@@rPalm Disciple@@N",   "@@rBone Tempered@@N",
-       "@@rFlow Fighter@@N",    "@@rKi Striker@@N",      "@@rFist Virtuoso@@N",   "@@rSpirit Brawler@@N",  "@@rTempest Monk@@N",
-       "@@rAdamant Master@@N",  "@@rDragon Fist@@N",     "@@rHundred Form@@N",    "@@rMountain Breaker@@N","@@rSoul Pugilist@@N",
-       "@@rGrand Combatant@@N", "@@rHeaven Knuckle@@N",  "@@rWyrmhand Regent@@N", "@@rLegend of Blows@@N", "@@RMartial Paragon@@N"
-      }
-   };
+       {"@@bArcane Initiate@@N", "@@bCantrip Adept@@N",   "@@bRune Scholar@@N",
+        "@@bGlyphbinder@@N",     "@@bSpellweaver@@N",     "@@bMana Savant@@N",
+        "@@bEther Scribe@@N",    "@@bStar Channeler@@N",  "@@bAstral Arcanist@@N",
+        "@@bArchmage Ascend@@N", "@@bLeyline Warden@@N",  "@@bStorm Theorist@@N",
+        "@@bRift Magister@@N",   "@@bVoid Cartograph@@N", "@@bPrism Hierophant@@N",
+        "@@bCelestial Sage@@N",  "@@bReality Etcher@@N",  "@@bAether Regent@@N",
+        "@@bWorldspell Lord@@N", "@@BGrandmagi Exalt@@N"},
+       {"@@aTemple Novice@@N",    "@@aVotive Keeper@@N",  "@@aOath Bearer@@N",
+        "@@aFaith Adept@@N",      "@@aRelic Guardian@@N", "@@aLitany Master@@N",
+        "@@aWard Canon@@N",       "@@aSanctum Knight@@N", "@@aCreed Arbiter@@N",
+        "@@aDawn Inquisitor@@N",  "@@aSacred Marshal@@N", "@@aRadiant Justicar@@N",
+        "@@aChapel Commander@@N", "@@aAnointed Judge@@N", "@@aSeraphic Warden@@N",
+        "@@aTemple Champion@@N",  "@@aCovenant Lord@@N",  "@@aLight Paragon@@N",
+        "@@aThrone Templar@@N",   "@@AHigh Hierotemp@@N"},
+       {"@@dShadow Footpad@@N",   "@@dDusk Stalker@@N",    "@@dGloom Knifework@@N",
+        "@@dVeil Skirmisher@@N",  "@@dNight Prowler@@N",   "@@dSilent Ambusher@@N",
+        "@@dUmbral Duelist@@N",   "@@dMoonlit Cutter@@N",  "@@dShade Reaver@@N",
+        "@@dMidnight Hunter@@N",  "@@dCloak Assassin@@N",  "@@dTenebrous Fang@@N",
+        "@@dEbon Shadowhand@@N",  "@@dNocturne Slayer@@N", "@@dDread Nightblade@@N",
+        "@@dEclipse Butcher@@N",  "@@dPhantom Exegete@@N", "@@dVoidstep Master@@N",
+        "@@dCrown of Cinders@@N", "@@DNightblade Prime@@N"},
+       {"@@eBanner Squire@@N",   "@@eShield Adept@@N",    "@@eBattle Votary@@N",
+        "@@eIron Legionary@@N",  "@@eOathbound Guard@@N", "@@eVanguard Captain@@N",
+        "@@eWar Chantblade@@N",  "@@eSiege Standard@@N",  "@@eBastion Reaver@@N",
+        "@@eCrusade Herald@@N",  "@@eBulwark Marshal@@N", "@@eHost Commander@@N",
+        "@@eWarpath Arbiter@@N", "@@eLionheart Tact@@N",  "@@eStorm Crusader@@N",
+        "@@eConquest Regent@@N", "@@eDominion Spear@@N",  "@@eBannerlord Asc@@N",
+        "@@eThronebreaker@@N",   "@@EEternal Crusarch@@N"},
+       {"@@mPulse Student@@N",   "@@mForce Adept@@N",      "@@mVector Caller@@N",
+        "@@mMotion Scribe@@N",   "@@mFlux Binder@@N",      "@@mMomentum Savant@@N",
+        "@@mKinesis Warden@@N",  "@@mResonance Master@@N", "@@mGraviton Duelist@@N",
+        "@@mQuantum Strider@@N", "@@mSingularity Seer@@N", "@@mContinuum Keeper@@N",
+        "@@mOrbit Lawgiver@@N",  "@@mTensor Arcanist@@N",  "@@mRift Physicist@@N",
+        "@@mHyperion Archit@@N", "@@mEventide Directo@@N", "@@mCosmos Engineer@@N",
+        "@@mFate Deflector@@N",  "@@MKinetimancr Apex@@N"},
+       {"@@rIron Trainee@@N",    "@@rForm Adept@@N",       "@@rStance Keeper@@N",
+        "@@rPalm Disciple@@N",   "@@rBone Tempered@@N",    "@@rFlow Fighter@@N",
+        "@@rKi Striker@@N",      "@@rFist Virtuoso@@N",    "@@rSpirit Brawler@@N",
+        "@@rTempest Monk@@N",    "@@rAdamant Master@@N",   "@@rDragon Fist@@N",
+        "@@rHundred Form@@N",    "@@rMountain Breaker@@N", "@@rSoul Pugilist@@N",
+        "@@rGrand Combatant@@N", "@@rHeaven Knuckle@@N",   "@@rWyrmhand Regent@@N",
+        "@@rLegend of Blows@@N", "@@RMartial Paragon@@N"}};
    int dominant_class = -1;
    int dominant_level = 0;
 
@@ -651,7 +657,7 @@ char *get_adept_name(CHAR_DATA *ch)
       if (IS_ADEPT_CLASS(cnt) && ch->class_level[cnt] > dominant_level)
       {
          dominant_level = ch->class_level[cnt];
-         dominant_class = cnt - CLASS_GMA;  /* 0-5 index into adept_titles */
+         dominant_class = cnt - CLASS_GMA; /* 0-5 index into adept_titles */
       }
    }
 
@@ -840,7 +846,8 @@ char *str_mod(char *mod_string, char *argument)
             {
                while (buf2 != word)
                   buf[i++] = *(buf2++);
-               while ((!isspace(*(buf2++))) || ((multiple) && ((buf2[0] != '\'') && (buf2[0] != '\0'))))
+               while ((!isspace(*(buf2++))) ||
+                      ((multiple) && ((buf2[0] != '\'') && (buf2[0] != '\0'))))
                   ;
                buf[i] = '\0';
                strcat(buf, buf2);
@@ -1151,7 +1158,8 @@ char *item_type_name(OBJ_DATA *obj)
       return "portal";
    }
 
-   sprintf(log, "Item_type_name: Object: %d.  Unknown Type: %d", obj->pIndexData->vnum, obj->item_type);
+   sprintf(log, "Item_type_name: Object: %d.  Unknown Type: %d", obj->pIndexData->vnum,
+           obj->item_type);
    monitor_chan(log, MONITOR_OBJ);
    bug(log, 0);
    return "(unknown)";
@@ -1463,5 +1471,3 @@ char *short_race_name(CHAR_DATA *ch)
 
    return (buf);
 }
-
-

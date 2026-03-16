@@ -303,9 +303,12 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
    fprintf(fp, "Played       %d\n", ch->played + (int)(current_time - ch->logon));
    fprintf(fp, "Note         %ld\n", ch->last_note);
    fprintf(fp, "Room         %d\n",
-           (ch->in_room == get_room_index(ROOM_VNUM_LIMBO) && ch->was_in_room != NULL) ? ch->was_in_room->vnum : ch->in_room->vnum);
+           (ch->in_room == get_room_index(ROOM_VNUM_LIMBO) && ch->was_in_room != NULL)
+               ? ch->was_in_room->vnum
+               : ch->in_room->vnum);
 
-   fprintf(fp, "HpManaMove   %ld %ld %ld %ld %ld %ld\n", ch->hit, ch->hit, ch->mana, ch->max_mana, ch->move, ch->max_move);
+   fprintf(fp, "HpManaMove   %ld %ld %ld %ld %ld %ld\n", ch->hit, ch->hit, ch->mana, ch->max_mana,
+           ch->move, ch->max_move);
 
    fprintf(fp, "Exp          %ld\n", ch->exp);
    fprintf(fp, "Act          %llu\n", ch->act);
@@ -373,22 +376,19 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
       for (foo = 0; foo < MAX_COLOR; foo++)
          fprintf(fp, "%d\n", ch->pcdata->color[foo]);
 
-      fprintf(fp, "AttrPerm     %d %d %d %d %d\n",
-              ch->pcdata->perm_str,
-              ch->pcdata->perm_int, ch->pcdata->perm_wis, ch->pcdata->perm_dex, ch->pcdata->perm_con);
+      fprintf(fp, "AttrPerm     %d %d %d %d %d\n", ch->pcdata->perm_str, ch->pcdata->perm_int,
+              ch->pcdata->perm_wis, ch->pcdata->perm_dex, ch->pcdata->perm_con);
 
       fprintf(fp, "AttrMod      %d %d %d %d %d\n", 0, 0, 0, 0, 0);
 
-      fprintf(fp, "AttrMax      %d %d %d %d %d\n",
-              ch->pcdata->max_str, ch->pcdata->max_int, ch->pcdata->max_wis, ch->pcdata->max_dex, ch->pcdata->max_con);
+      fprintf(fp, "AttrMax      %d %d %d %d %d\n", ch->pcdata->max_str, ch->pcdata->max_int,
+              ch->pcdata->max_wis, ch->pcdata->max_dex, ch->pcdata->max_con);
 
       fprintf(fp, "Hasexpfix     %d\n", ch->pcdata->has_exp_fix);
       fprintf(fp, "Questpoints   %d\n", ch->quest_points);
       fprintf(fp, "InvasionPoints %d\n", ch->pcdata->invasion_points);
-      fprintf(fp, "InvasionRewards %d %d %d\n",
-              ch->pcdata->invasion_rewards[0],
-              ch->pcdata->invasion_rewards[1],
-              ch->pcdata->invasion_rewards[2]);
+      fprintf(fp, "InvasionRewards %d %d %d\n", ch->pcdata->invasion_rewards[0],
+              ch->pcdata->invasion_rewards[1], ch->pcdata->invasion_rewards[2]);
       fprintf(fp, "QuestPoints %d\n", ch->pcdata->post_quest_points);
       {
          int sb;
@@ -407,16 +407,14 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
             fprintf(fp, "PropDone%d    %d\n", i, prop->quest_completed ? 1 : 0);
             fprintf(fp, "PropTargets%d %d\n", i, prop->quest_num_targets);
             for (k = 0; k < prop->quest_num_targets; k++)
-               fprintf(fp, "PropT%d       %d %d\n", i,
-                       prop->quest_target_vnum[k],
+               fprintf(fp, "PropT%d       %d %d\n", i, prop->quest_target_vnum[k],
                        prop->quest_target_done[k] ? 1 : 0);
             fprintf(fp, "PropKillNeed%d %d\n", i, prop->quest_kill_needed);
             fprintf(fp, "PropKillGot%d  %d\n", i, prop->quest_kill_count);
             fprintf(fp, "PropStaticId%d %d\n", i, prop->quest_static_id);
             fprintf(fp, "PropRewardGold%d %d\n", i, prop->quest_reward_gold);
             fprintf(fp, "PropRewardQp%d %d\n", i, prop->quest_reward_qp);
-            fprintf(fp, "PropRewardItem%d %d %d\n", i,
-                    prop->quest_reward_item_vnum,
+            fprintf(fp, "PropRewardItem%d %d %d\n", i, prop->quest_reward_item_vnum,
                     prop->quest_reward_item_count);
             fprintf(fp, "PropStaticOfferer%d %d\n", i, prop->quest_static_offerer_vnum);
             fprintf(fp, "PropCartArea%d %d\n", i, prop->quest_cartography_area_num);
@@ -441,7 +439,8 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
       fprintf(fp, "GainMove      %d\n", ch->pcdata->move_from_gain);
       fprintf(fp, "RulerRank    %d\n", ch->pcdata->ruler_rank);
 
-      fprintf(fp, "Condition    %d %d %d\n", ch->pcdata->condition[0], ch->pcdata->condition[1], ch->pcdata->condition[2]);
+      fprintf(fp, "Condition    %d %d %d\n", ch->pcdata->condition[0], ch->pcdata->condition[1],
+              ch->pcdata->condition[2]);
 
       fprintf(fp, "Pagelen      %d\n", ch->pcdata->pagelen);
       fprintf(fp, "Pflags       %d\n", ch->pcdata->pflags);
@@ -457,7 +456,8 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 
    for (paf = ch->first_affect; paf != NULL; paf = paf->next)
    {
-      fprintf(fp, "Affect %3d %3d %3d %3d %3d %10d\n", paf->type, paf->duration, paf->duration_type, paf->modifier, paf->location, paf->bitvector);
+      fprintf(fp, "Affect %3d %3d %3d %3d %3d %10d\n", paf->type, paf->duration, paf->duration_type,
+              paf->modifier, paf->location, paf->bitvector);
    }
    fprintf(fp, "End\n\n");
    return;
@@ -491,11 +491,12 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
     */
 
    bool can_save = FALSE;
-   if (get_psuedo_level(ch)+5 >= obj->level)
+   if (get_psuedo_level(ch) + 5 >= obj->level)
       can_save = TRUE;
    if (get_total_reincarnations(ch) > 0)
       can_save = TRUE;
-   if (obj->item_type == ITEM_KEY || obj->item_type == ITEM_BEACON || IS_SET(obj->extra_flags, ITEM_NOSAVE))
+   if (obj->item_type == ITEM_KEY || obj->item_type == ITEM_BEACON ||
+       IS_SET(obj->extra_flags, ITEM_NOSAVE))
       can_save = FALSE;
 
    if (!can_save)
@@ -522,9 +523,9 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
    fprintf(fp, "Level        %d\n", obj->level);
    fprintf(fp, "Timer        %d\n", obj->timer);
    fprintf(fp, "Cost         %d\n", obj->cost);
-   fprintf(fp, "Values       %d %d %d %d %d %d %d %d %d %d\n",
-           obj->value[0], obj->value[1], obj->value[2], obj->value[3],
-           obj->value[4], obj->value[5], obj->value[6], obj->value[7], obj->value[8], obj->value[9]);
+   fprintf(fp, "Values       %d %d %d %d %d %d %d %d %d %d\n", obj->value[0], obj->value[1],
+           obj->value[2], obj->value[3], obj->value[4], obj->value[5], obj->value[6], obj->value[7],
+           obj->value[8], obj->value[9]);
 
    switch (obj->item_type)
    {
@@ -559,7 +560,8 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
 
    for (paf = obj->first_apply; paf != NULL; paf = paf->next)
    {
-      fprintf(fp, "Affect       %d %d %d %d %d\n", paf->type, paf->duration, paf->modifier, paf->location, paf->bitvector);
+      fprintf(fp, "Affect       %d %d %d %d %d\n", paf->type, paf->duration, paf->modifier,
+              paf->location, paf->bitvector);
    }
 
    for (ed = obj->first_exdesc; ed != NULL; ed = ed->next)
@@ -617,7 +619,10 @@ static void init_changed_vnum_hash(void)
 
    while (!feof(fp))
    {
-      if (str_cmp(fread_word(fp), "Obj:") || fread_letter(fp) != '[' || (oldvnum = fread_number(fp)) == 0 || fread_letter(fp) != ']' || str_cmp(fread_word(fp), "->") || fread_letter(fp) != '[' || (newvnum = fread_number(fp)) == 0 || fread_letter(fp) != ']')
+      if (str_cmp(fread_word(fp), "Obj:") || fread_letter(fp) != '[' ||
+          (oldvnum = fread_number(fp)) == 0 || fread_letter(fp) != ']' ||
+          str_cmp(fread_word(fp), "->") || fread_letter(fp) != '[' ||
+          (newvnum = fread_number(fp)) == 0 || fread_letter(fp) != ']')
          fread_to_eol(fp);
       else
       {
@@ -684,13 +689,13 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       ch->pcdata->keep_vnum = 0;
       ch->pcdata->keep_healer_bought = 0;
       ch->pcdata->keep_healer_vnum = 0;
-      for(int i = 0; i < MAX_CLASS; i++)
+      for (int i = 0; i < MAX_CLASS; i++)
          ch->pcdata->reincarnations[i] = 0;
-      for(int i = 0; i < MAX_REMORT; i++)
+      for (int i = 0; i < MAX_REMORT; i++)
          ch->pcdata->reincarnations[MAX_CLASS + i] = 0;
-      for(int i = 0; i < MAX_CLASS; i++)
+      for (int i = 0; i < MAX_CLASS; i++)
          ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + i] = 0;
-      for(int i = 0; i < MAX_REINCARNATE; i++)
+      for (int i = 0; i < MAX_REINCARNATE; i++)
          ch->pcdata->reincarnation_data[i] = 0;
       ch->pcdata->condition[COND_THIRST] = 48;
       ch->pcdata->pagelen = 20;
@@ -867,9 +872,8 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
    if (found && (ch->race < 0 || ch->race >= MAX_RACE))
    {
       char buf[MAX_STRING_LENGTH];
-      snprintf(buf, sizeof(buf),
-         "load_char_obj: %s had invalid race %d, resetting to Human.",
-         ch->name ? ch->name : "(unknown)", ch->race);
+      snprintf(buf, sizeof(buf), "load_char_obj: %s had invalid race %d, resetting to Human.",
+               ch->name ? ch->name : "(unknown)", ch->race);
       monitor_chan(buf, MONITOR_BAD);
       ch->race = 0;
    }
@@ -885,21 +889,21 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
 #undef KEY
 #endif
 
-#define KEY(literal, field, value) \
-   if (!str_cmp(word, literal))    \
-   {                               \
-      field = value;               \
-      fMatch = TRUE;               \
-      break;                       \
+#define KEY(literal, field, value)                                                                 \
+   if (!str_cmp(word, literal))                                                                    \
+   {                                                                                               \
+      field = value;                                                                               \
+      fMatch = TRUE;                                                                               \
+      break;                                                                                       \
    }
-#define SKEY(literal, field, value) \
-   if (!str_cmp(word, literal))     \
-   {                                \
-      if (field != NULL)            \
-         free_string(field);        \
-      field = value;                \
-      fMatch = TRUE;                \
-      break;                        \
+#define SKEY(literal, field, value)                                                                \
+   if (!str_cmp(word, literal))                                                                    \
+   {                                                                                               \
+      if (field != NULL)                                                                           \
+         free_string(field);                                                                       \
+      field = value;                                                                               \
+      fMatch = TRUE;                                                                               \
+      break;                                                                                       \
    }
 
 static void apply_prop_static_done_cap(PC_DATA *pcdata, int saved_cap)
@@ -1289,25 +1293,29 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          if (!IS_NPC(ch))
          {
             int quest_i;
-            if (sscanf(word, "PropType%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            if (sscanf(word, "PropType%d", &quest_i) == 1 && quest_i >= 0 &&
+                quest_i < QUEST_MAX_QUESTS)
             {
                ch->pcdata->quests[quest_i].quest_type = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropDone%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            if (sscanf(word, "PropDone%d", &quest_i) == 1 && quest_i >= 0 &&
+                quest_i < QUEST_MAX_QUESTS)
             {
                ch->pcdata->quests[quest_i].quest_completed = (fread_number(fp) != 0);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropTargets%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            if (sscanf(word, "PropTargets%d", &quest_i) == 1 && quest_i >= 0 &&
+                quest_i < QUEST_MAX_QUESTS)
             {
                ch->pcdata->quests[quest_i].quest_num_targets = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropT%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            if (sscanf(word, "PropT%d", &quest_i) == 1 && quest_i >= 0 &&
+                quest_i < QUEST_MAX_QUESTS)
             {
                int _k, _slot = -1;
                for (_k = 0; _k < QUEST_MAX_TARGETS; _k++)
@@ -1329,72 +1337,84 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropKillNeed%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            if (sscanf(word, "PropKillNeed%d", &quest_i) == 1 && quest_i >= 0 &&
+                quest_i < QUEST_MAX_QUESTS)
             {
                ch->pcdata->quests[quest_i].quest_kill_needed = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropKillGot%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            if (sscanf(word, "PropKillGot%d", &quest_i) == 1 && quest_i >= 0 &&
+                quest_i < QUEST_MAX_QUESTS)
             {
                ch->pcdata->quests[quest_i].quest_kill_count = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropStaticId%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            if (sscanf(word, "PropStaticId%d", &quest_i) == 1 && quest_i >= 0 &&
+                quest_i < QUEST_MAX_QUESTS)
             {
                ch->pcdata->quests[quest_i].quest_static_id = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropRewardGold%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            if (sscanf(word, "PropRewardGold%d", &quest_i) == 1 && quest_i >= 0 &&
+                quest_i < QUEST_MAX_QUESTS)
             {
                ch->pcdata->quests[quest_i].quest_reward_gold = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropRewardQp%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            if (sscanf(word, "PropRewardQp%d", &quest_i) == 1 && quest_i >= 0 &&
+                quest_i < QUEST_MAX_QUESTS)
             {
                ch->pcdata->quests[quest_i].quest_reward_qp = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropRewardItem%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            if (sscanf(word, "PropRewardItem%d", &quest_i) == 1 && quest_i >= 0 &&
+                quest_i < QUEST_MAX_QUESTS)
             {
                ch->pcdata->quests[quest_i].quest_reward_item_vnum = fread_number(fp);
                ch->pcdata->quests[quest_i].quest_reward_item_count = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropStaticOfferer%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            if (sscanf(word, "PropStaticOfferer%d", &quest_i) == 1 && quest_i >= 0 &&
+                quest_i < QUEST_MAX_QUESTS)
             {
                ch->pcdata->quests[quest_i].quest_static_offerer_vnum = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropCartArea%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            if (sscanf(word, "PropCartArea%d", &quest_i) == 1 && quest_i >= 0 &&
+                quest_i < QUEST_MAX_QUESTS)
             {
                ch->pcdata->quests[quest_i].quest_cartography_area_num = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropCartRooms%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            if (sscanf(word, "PropCartRooms%d", &quest_i) == 1 && quest_i >= 0 &&
+                quest_i < QUEST_MAX_QUESTS)
             {
                ch->pcdata->quests[quest_i].quest_cartography_room_count = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropCartSeen%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            if (sscanf(word, "PropCartSeen%d", &quest_i) == 1 && quest_i >= 0 &&
+                quest_i < QUEST_MAX_QUESTS)
             {
                ch->pcdata->quests[quest_i].quest_cartography_explored_count = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropCartBits%d", &quest_i) == 1 && quest_i >= 0 && quest_i < QUEST_MAX_QUESTS)
+            if (sscanf(word, "PropCartBits%d", &quest_i) == 1 && quest_i >= 0 &&
+                quest_i < QUEST_MAX_QUESTS)
             {
                int b;
                for (b = 0; b < QUEST_CARTOGRAPHY_BYTES; b++)
-                  ch->pcdata->quests[quest_i].quest_cartography_bits[b] = (unsigned char)fread_number(fp);
+                  ch->pcdata->quests[quest_i].quest_cartography_bits[b] =
+                      (unsigned char)fread_number(fp);
                fMatch = TRUE;
                break;
             }
@@ -1768,7 +1788,8 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
                      /*
                       * Check on move table
                       */
-                     if ((newvnum = vnum_from_hash_ref(get_hash_entry(hash_changed_vnums, OldVnum))) != 0)
+                     if ((newvnum =
+                              vnum_from_hash_ref(get_hash_entry(hash_changed_vnums, OldVnum))) != 0)
                      {
                         obj->pIndexData = get_obj_index(newvnum);
                         if (obj->pIndexData == NULL)
@@ -2132,7 +2153,8 @@ void fread_corpse(FILE *fp)
                      /*
                       * Check on move table
                       */
-                     if ((newvnum = vnum_from_hash_ref(get_hash_entry(hash_changed_vnums, OldVnum))) != 0)
+                     if ((newvnum =
+                              vnum_from_hash_ref(get_hash_entry(hash_changed_vnums, OldVnum))) != 0)
                      {
                         obj->pIndexData = get_obj_index(newvnum);
                         if (obj->pIndexData == NULL)
@@ -2174,7 +2196,8 @@ void fread_corpse(FILE *fp)
 
                   if (target_room == NULL)
                   {
-                     monitor_chan("Fread_corpse: limbo room missing for persistent container.", MONITOR_BAD);
+                     monitor_chan("Fread_corpse: limbo room missing for persistent container.",
+                                  MONITOR_BAD);
                      obj->pIndexData->count--;
                      UNLINK(obj, first_obj, last_obj, next, prev);
                      PUT_FREE(obj, obj_free);
@@ -2325,8 +2348,8 @@ void fwrite_corpse(OBJ_DATA *obj, FILE *fp, int iNest)
    if (obj->next_in_carry_list != NULL)
       fwrite_corpse(obj->next_in_carry_list, fp, iNest);
 
-   where_vnum = persistent_container_where_vnum_for_save(obj->in_room != NULL ? obj->in_room->vnum : 0,
-                                                         obj->in_obj != NULL);
+   where_vnum = persistent_container_where_vnum_for_save(
+       obj->in_room != NULL ? obj->in_room->vnum : 0, obj->in_obj != NULL);
 
    if (obj->in_room == NULL && obj->in_obj == NULL)
       obj->in_room = get_room_index(ROOM_VNUM_LIMBO);
@@ -2354,7 +2377,8 @@ void fwrite_corpse(OBJ_DATA *obj, FILE *fp, int iNest)
    fprintf(fp, "Level        %d\n", obj->level);
    fprintf(fp, "Timer        %d\n", obj->timer);
    fprintf(fp, "Cost         %d\n", obj->cost);
-   fprintf(fp, "Values       %d %d %d %d\n", obj->value[0], obj->value[1], obj->value[2], obj->value[3]);
+   fprintf(fp, "Values       %d %d %d %d\n", obj->value[0], obj->value[1], obj->value[2],
+           obj->value[3]);
 
    switch (obj->item_type)
    {
@@ -2389,7 +2413,8 @@ void fwrite_corpse(OBJ_DATA *obj, FILE *fp, int iNest)
 
    for (paf = obj->first_apply; paf != NULL; paf = paf->next)
    {
-      fprintf(fp, "Affect       %d %d %d %d %d\n", paf->type, paf->duration, paf->modifier, paf->location, paf->bitvector);
+      fprintf(fp, "Affect       %d %d %d %d %d\n", paf->type, paf->duration, paf->modifier,
+              paf->location, paf->bitvector);
    }
 
    for (ed = obj->first_exdesc; ed != NULL; ed = ed->next)
@@ -2429,8 +2454,8 @@ void save_corpses()
       for (this_corpse = first_corpse; this_corpse != NULL; this_corpse = this_corpse->next)
       {
          /* Keep chests are saved to their own per-vnum files in CHEST_DIR. */
-         if (this_corpse->this_corpse->item_type == ITEM_CONTAINER
-             && IS_SET(this_corpse->this_corpse->value[1], CONT_KEEP_CHEST))
+         if (this_corpse->this_corpse->item_type == ITEM_CONTAINER &&
+             IS_SET(this_corpse->this_corpse->value[1], CONT_KEEP_CHEST))
             continue;
          fwrite_corpse(this_corpse->this_corpse, fp, 0);
       }
@@ -2495,7 +2520,8 @@ static void fwrite_chest(OBJ_DATA *obj, FILE *fp, int iNest)
    fprintf(fp, "Level        %d\n", obj->level);
    fprintf(fp, "Timer        %d\n", obj->timer);
    fprintf(fp, "Cost         %d\n", obj->cost);
-   fprintf(fp, "Values       %d %d %d %d\n", obj->value[0], obj->value[1], obj->value[2], obj->value[3]);
+   fprintf(fp, "Values       %d %d %d %d\n", obj->value[0], obj->value[1], obj->value[2],
+           obj->value[3]);
 
    switch (obj->item_type)
    {
@@ -2516,7 +2542,8 @@ static void fwrite_chest(OBJ_DATA *obj, FILE *fp, int iNest)
    }
 
    for (paf = obj->first_apply; paf != NULL; paf = paf->next)
-      fprintf(fp, "Affect       %d %d %d %d %d\n", paf->type, paf->duration, paf->modifier, paf->location, paf->bitvector);
+      fprintf(fp, "Affect       %d %d %d %d %d\n", paf->type, paf->duration, paf->modifier,
+              paf->location, paf->bitvector);
 
    for (ed = obj->first_exdesc; ed != NULL; ed = ed->next)
       fprintf(fp, "ExtraDescr   %s~ %s~\n", ed->keyword, ed->description);
@@ -2670,7 +2697,8 @@ static void fread_chest_item(FILE *fp)
 
                   if (OldVnum != TEMP_VNUM)
                   {
-                     if ((newvnum = vnum_from_hash_ref(get_hash_entry(hash_changed_vnums, OldVnum))) != 0)
+                     if ((newvnum =
+                              vnum_from_hash_ref(get_hash_entry(hash_changed_vnums, OldVnum))) != 0)
                      {
                         obj->pIndexData = get_obj_index(newvnum);
                         if (obj->pIndexData == NULL)
@@ -2948,9 +2976,8 @@ void load_chest(int vnum)
    /* Locate the already-created chest object in the global object list. */
    for (obj = first_obj; obj != NULL; obj = obj->next)
    {
-      if (obj->pIndexData != NULL && obj->pIndexData->vnum == vnum
-          && obj->item_type == ITEM_CONTAINER
-          && IS_SET(obj->value[1], CONT_KEEP_CHEST))
+      if (obj->pIndexData != NULL && obj->pIndexData->vnum == vnum &&
+          obj->item_type == ITEM_CONTAINER && IS_SET(obj->value[1], CONT_KEEP_CHEST))
          break;
    }
 
@@ -2986,7 +3013,6 @@ void load_chest(int vnum)
 
    fclose(fp);
 }
-
 
 void save_marks()
 {

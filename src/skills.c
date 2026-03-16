@@ -19,7 +19,8 @@ void do_rescue(CHAR_DATA *ch, char *argument)
    if (!IS_NPC(ch))
    {
       for (cnt = 0; cnt < MAX_CLASS; cnt++)
-         if (ch->class_level[cnt] >= skill_table[gsn_rescue].skill_level[cnt] && ch->class_level[cnt] >= best)
+         if (ch->class_level[cnt] >= skill_table[gsn_rescue].skill_level[cnt] &&
+             ch->class_level[cnt] >= best)
             best = cnt;
    }
    else
@@ -319,7 +320,7 @@ void do_morale(CHAR_DATA *ch, char *argument)
 
    if (!is_fighting(ch))
    {
-      send_to_char("You must be fighting to do this!\n\r",ch);
+      send_to_char("You must be fighting to do this!\n\r", ch);
       return;
    }
 
@@ -336,7 +337,7 @@ void do_morale(CHAR_DATA *ch, char *argument)
       af.duration_type = DURATION_ROUND;
       af.duration = 50;
       af.location = APPLY_DAMROLL;
-      af.modifier = stat/2;
+      af.modifier = stat / 2;
       af.bitvector = 0;
       affect_to_char(gch, &af);
    }
@@ -358,7 +359,7 @@ void do_leadership(CHAR_DATA *ch, char *argument)
 
    if (!is_fighting(ch))
    {
-      send_to_char("You must be fighting to do this!\n\r",ch);
+      send_to_char("You must be fighting to do this!\n\r", ch);
       return;
    }
 
@@ -375,7 +376,7 @@ void do_leadership(CHAR_DATA *ch, char *argument)
       af.duration_type = DURATION_ROUND;
       af.duration = 50;
       af.location = APPLY_HITROLL;
-      af.modifier = stat/2;
+      af.modifier = stat / 2;
       af.bitvector = 0;
       affect_to_char(gch, &af);
    }
@@ -388,7 +389,8 @@ void trip(CHAR_DATA *ch, CHAR_DATA *victim)
    {
       int chance;
 
-      chance = IS_NPC(victim) ? IS_SET(victim->skills, MOB_NOTRIP) ? 75 : 0 : victim->pcdata->learned[gsn_notrip];
+      chance = IS_NPC(victim) ? IS_SET(victim->skills, MOB_NOTRIP) ? 75 : 0
+                              : victim->pcdata->learned[gsn_notrip];
 
       /*
        * Check for no-trip

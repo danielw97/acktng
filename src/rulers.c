@@ -41,7 +41,8 @@
 #include "tables.h"
 #endif
 
-size_t rulers_format_status_message(char *dest, size_t dest_size, const char *status, const char *filename)
+size_t rulers_format_status_message(char *dest, size_t dest_size, const char *status,
+                                    const char *filename)
 {
    const char *safe_status = (status != NULL) ? status : "";
    const char *safe_filename = (filename != NULL) ? filename : "";
@@ -60,20 +61,25 @@ char *get_ruler_title(int ruler_rank, int sex)
    case 0:
       return "";
    case 1:
-      return ((sex == SEX_NEUTRAL) ? "@@WMonitor@@N " : (sex == SEX_MALE) ? "@@WLord@@N "
-                                                                          : "@@WLady@@N ");
+      return ((sex == SEX_NEUTRAL) ? "@@WMonitor@@N "
+              : (sex == SEX_MALE)  ? "@@WLord@@N "
+                                   : "@@WLady@@N ");
    case 2:
-      return ((sex == SEX_NEUTRAL) ? "@@eOverseer@@N " : (sex == SEX_MALE) ? "@@eBaron@@N "
-                                                                           : "@@eBaroness@@N ");
+      return ((sex == SEX_NEUTRAL) ? "@@eOverseer@@N "
+              : (sex == SEX_MALE)  ? "@@eBaron@@N "
+                                   : "@@eBaroness@@N ");
    case 3:
-      return ((sex == SEX_NEUTRAL) ? "@@mController@@N " : (sex == SEX_MALE) ? "@@mDuke@@N "
-                                                                             : "@@mDuchess@@N ");
+      return ((sex == SEX_NEUTRAL) ? "@@mController@@N "
+              : (sex == SEX_MALE)  ? "@@mDuke@@N "
+                                   : "@@mDuchess@@N ");
    case 4:
-      return ((sex == SEX_NEUTRAL) ? "@@lDirector@@N " : (sex == SEX_MALE) ? "@@lPrince@@N "
-                                                                           : "@@lPrincess@@N ");
+      return ((sex == SEX_NEUTRAL) ? "@@lDirector@@N "
+              : (sex == SEX_MALE)  ? "@@lPrince@@N "
+                                   : "@@lPrincess@@N ");
    case 5:
-      return ((sex == SEX_NEUTRAL) ? "@@aDominator@@N " : (sex == SEX_MALE) ? "@@aKing@@N "
-                                                                            : "@@aQueen@@N ");
+      return ((sex == SEX_NEUTRAL) ? "@@aDominator@@N "
+              : (sex == SEX_MALE)  ? "@@aKing@@N "
+                                   : "@@aQueen@@N ");
    }
    return "Lord";
 }
@@ -136,8 +142,9 @@ void save_rulers()
 }
 
 /*
-#define RKEY( literal, field, value )  if ( !str_cmp( word, literal ) ) { field  = value; fMatch = TRUE;  break;}
-#define RSKEY( literal, field, value )  if ( !str_cmp( word, literal ) ) { if (field!=NULL) free_string(field);field  = value; fMatch = TRUE;  break;}
+#define RKEY( literal, field, value )  if ( !str_cmp( word, literal ) ) { field  = value; fMatch =
+TRUE;  break;} #define RSKEY( literal, field, value )  if ( !str_cmp( word, literal ) ) { if
+(field!=NULL) free_string(field);field  = value; fMatch = TRUE;  break;}
 */
 
 void load_rulers(void)
@@ -245,10 +252,10 @@ void do_rulers(CHAR_DATA *ch, char *argument)
          sex = (IS_SET(ruler->this_one->flags, RULER_NEUTRAL) ? SEX_NEUTRAL
                 : IS_SET(ruler->this_one->flags, RULER_MALE)  ? SEX_MALE
                                                               : SEX_FEMALE);
-         sprintf(catbuf, " %s %s : %s \n\r",
-                 get_ruler_title(ruler->this_one->ruler_rank, sex),
+         sprintf(catbuf, " %s %s : %s \n\r", get_ruler_title(ruler->this_one->ruler_rank, sex),
                  capitalize(ruler->this_one->name),
-                 (IS_SET(ruler->this_one->flags, RULER_GROUP) ? ruler->this_one->affiliation_name : "Not Affiliated"));
+                 (IS_SET(ruler->this_one->flags, RULER_GROUP) ? ruler->this_one->affiliation_name
+                                                              : "Not Affiliated"));
          safe_strcat(MSL, outbuf, catbuf);
          if (ruler->this_one->first_control != NULL)
          {
@@ -387,7 +394,8 @@ void do_rulers(CHAR_DATA *ch, char *argument)
          for (control = ruler->this_one->first_control; control; control = control_next)
          {
             control_next = control->next;
-            UNLINK(control, ruler->this_one->first_control, ruler->this_one->last_control, next, prev);
+            UNLINK(control, ruler->this_one->first_control, ruler->this_one->last_control, next,
+                   prev);
             control->this_one = NULL;
             PUT_FREE(control, control_list_free);
          }

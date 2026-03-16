@@ -39,12 +39,10 @@
  * Local functions.
  */
 void say_spell args((CHAR_DATA * ch, int sn));
-void aoe_damage(CHAR_DATA *ch, OBJ_DATA *obj, int sn, int level,
-                int min_dam, int max_dam, int element, int flags);
-#define AOE_SAVES      (1 << 0)
+void aoe_damage(CHAR_DATA *ch, OBJ_DATA *obj, int sn, int level, int min_dam, int max_dam,
+                int element, int flags);
+#define AOE_SAVES (1 << 0)
 #define AOE_SKIP_GROUP (1 << 1)
-
-
 
 static bool is_healing_spell(int sn)
 {
@@ -54,15 +52,13 @@ static bool is_healing_spell(int sn)
    if (skill_table[sn].name == NULL || skill_table[sn].spell_fun == NULL)
       return FALSE;
 
-   return !str_cmp(skill_table[sn].name, "cure light")
-       || !str_cmp(skill_table[sn].name, "cure serious")
-       || !str_cmp(skill_table[sn].name, "cure critical")
-       || !str_cmp(skill_table[sn].name, "heal")
-       || !str_cmp(skill_table[sn].name, "group heal")
-       || !str_cmp(skill_table[sn].name, "psionic recovery")
-       || !str_cmp(skill_table[sn].name, "regen")
-       || !str_cmp(skill_table[sn].name, "influx")
-       || !str_cmp(skill_table[sn].name, "healing light");
+   return !str_cmp(skill_table[sn].name, "cure light") ||
+          !str_cmp(skill_table[sn].name, "cure serious") ||
+          !str_cmp(skill_table[sn].name, "cure critical") ||
+          !str_cmp(skill_table[sn].name, "heal") || !str_cmp(skill_table[sn].name, "group heal") ||
+          !str_cmp(skill_table[sn].name, "psionic recovery") ||
+          !str_cmp(skill_table[sn].name, "regen") || !str_cmp(skill_table[sn].name, "influx") ||
+          !str_cmp(skill_table[sn].name, "healing light");
 }
 
 static void gain_holy_power_from_healing_spell(CHAR_DATA *ch, int sn)
@@ -97,7 +93,6 @@ bool magic_test_npc_remort_cast_blocked_flags(int flag1, int act_bits, int affec
 }
 #endif
 
-
 /* Calculate mana cost */
 int mana_cost(CHAR_DATA *ch, int sn)
 {
@@ -109,7 +104,8 @@ int mana_cost(CHAR_DATA *ch, int sn)
 
    if ((!can_cast) && (IS_NPC(ch)))
       return 1000;
-   else if ((!can_cast) && ((!IS_NPC(ch)) && (!is_name(skill_table[sn].name, race_table[ch->race].skill))))
+   else if ((!can_cast) &&
+            ((!IS_NPC(ch)) && (!is_name(skill_table[sn].name, race_table[ch->race].skill))))
       return 1000;
 
    cost = 1000;
@@ -178,8 +174,6 @@ int skill_lookup(const char *name)
    return -1;
 }
 
-
-
 bool is_arcane_spell(int sn)
 {
    if (sn < 0 || sn >= MAX_SKILL)
@@ -188,10 +182,10 @@ bool is_arcane_spell(int sn)
    if (skill_table[sn].name == NULL || skill_table[sn].spell_fun == NULL)
       return FALSE;
 
-   return skill_table[sn].skill_level[CLASS_MAG] >= 0
-       || skill_table[sn].skill_level[CLASS_SOR] >= 0
-       || skill_table[sn].skill_level[CLASS_WIZ] >= 0
-       || skill_table[sn].skill_level[CLASS_GMA] >= 0;
+   return skill_table[sn].skill_level[CLASS_MAG] >= 0 ||
+          skill_table[sn].skill_level[CLASS_SOR] >= 0 ||
+          skill_table[sn].skill_level[CLASS_WIZ] >= 0 ||
+          skill_table[sn].skill_level[CLASS_GMA] >= 0;
 }
 
 bool is_holy_power_spell(int sn)
@@ -202,10 +196,10 @@ bool is_holy_power_spell(int sn)
    if (skill_table[sn].name == NULL || skill_table[sn].spell_fun == NULL)
       return FALSE;
 
-   return skill_table[sn].skill_level[CLASS_CLE] >= 0
-       || skill_table[sn].skill_level[CLASS_PRI] >= 0
-       || skill_table[sn].skill_level[CLASS_PAL] >= 0
-       || skill_table[sn].skill_level[CLASS_TEM] >= 0;
+   return skill_table[sn].skill_level[CLASS_CLE] >= 0 ||
+          skill_table[sn].skill_level[CLASS_PRI] >= 0 ||
+          skill_table[sn].skill_level[CLASS_PAL] >= 0 ||
+          skill_table[sn].skill_level[CLASS_TEM] >= 0;
 }
 bool is_mental_power_spell(int sn)
 {
@@ -217,8 +211,8 @@ bool is_mental_power_spell(int sn)
 
    /* CLASS_PSI=4 (mortal), CLASS_NEC=4 (remort), CLASS_KIN=4 (adept) share index 4.
     * CLASS_EGO=10 (remort) has a unique index. */
-   return skill_table[sn].skill_level[CLASS_PSI] >= 0
-       || skill_table[sn].skill_level[CLASS_EGO] >= 0;
+   return skill_table[sn].skill_level[CLASS_PSI] >= 0 ||
+          skill_table[sn].skill_level[CLASS_EGO] >= 0;
 }
 
 /*
@@ -280,55 +274,16 @@ void say_spell(CHAR_DATA *ch, int sn)
    };
 
    static const struct syl_type syl_table[] = {
-       {" ", " "},
-       {"ar", "abra"},
-       {"au", "kada"},
-       {"bless", "fido"},
-       {"blind", "nose"},
-       {"bur", "mosa"},
-       {"cu", "judi"},
-       {"de", "oculo"},
-       {"en", "unso"},
-       {"light", "dies"},
-       {"lo", "hi"},
-       {"mor", "zak"},
-       {"move", "sido"},
-       {"ness", "lacri"},
-       {"ning", "illa"},
-       {"per", "duda"},
-       {"ra", "gru"},
-       {"re", "candus"},
-       {"son", "sabru"},
-       {"tect", "infra"},
-       {"tri", "cula"},
-       {"ven", "nofo"},
-       {"a", "a"},
-       {"b", "b"},
-       {"c", "q"},
-       {"d", "e"},
-       {"e", "z"},
-       {"f", "y"},
-       {"g", "o"},
-       {"h", "p"},
-       {"i", "u"},
-       {"j", "y"},
-       {"k", "t"},
-       {"l", "r"},
-       {"m", "w"},
-       {"n", "i"},
-       {"o", "a"},
-       {"p", "s"},
-       {"q", "d"},
-       {"r", "f"},
-       {"s", "g"},
-       {"t", "h"},
-       {"u", "j"},
-       {"v", "z"},
-       {"w", "x"},
-       {"x", "n"},
-       {"y", "l"},
-       {"z", "k"},
-       {"", ""}};
+       {" ", " "},      {"ar", "abra"},  {"au", "kada"},   {"bless", "fido"}, {"blind", "nose"},
+       {"bur", "mosa"}, {"cu", "judi"},  {"de", "oculo"},  {"en", "unso"},    {"light", "dies"},
+       {"lo", "hi"},    {"mor", "zak"},  {"move", "sido"}, {"ness", "lacri"}, {"ning", "illa"},
+       {"per", "duda"}, {"ra", "gru"},   {"re", "candus"}, {"son", "sabru"},  {"tect", "infra"},
+       {"tri", "cula"}, {"ven", "nofo"}, {"a", "a"},       {"b", "b"},        {"c", "q"},
+       {"d", "e"},      {"e", "z"},      {"f", "y"},       {"g", "o"},        {"h", "p"},
+       {"i", "u"},      {"j", "y"},      {"k", "t"},       {"l", "r"},        {"m", "w"},
+       {"n", "i"},      {"o", "a"},      {"p", "s"},       {"q", "d"},        {"r", "f"},
+       {"s", "g"},      {"t", "h"},      {"u", "j"},       {"v", "z"},        {"w", "x"},
+       {"x", "n"},      {"y", "l"},      {"z", "k"},       {"", ""}};
 
    buf[0] = '\0';
    for (pName = skill_table[sn].name; *pName != '\0'; pName += length)
@@ -397,8 +352,9 @@ bool saves_spell(int level, CHAR_DATA *victim)
 {
    int save;
    bool saved = FALSE;
-   save = 40 +
-          ((get_psuedo_level(victim) > 60 ? get_psuedo_level(victim) * 2 / 3 : get_psuedo_level(victim)) - level - URANGE(-40, victim->saving_throw, 40));
+   save = 40 + ((get_psuedo_level(victim) > 60 ? get_psuedo_level(victim) * 2 / 3
+                                               : get_psuedo_level(victim)) -
+                level - URANGE(-40, victim->saving_throw, 40));
    if ((IS_NPC(victim)) && (IS_SET(victim->act, ACT_SOLO)))
       save += 20;
    if ((IS_NPC(victim)) && (IS_SET(victim->act, ACT_BOSS)))
@@ -665,7 +621,9 @@ void do_cast(CHAR_DATA *ch, char *argument)
       }
    }
 
-   if (IS_SET(stance_app[ch->stance].specials, STANCE_MULTI_CAST) && (skill_table[sn].target == TAR_CHAR_OFFENSIVE) && (number_percent() < get_psuedo_level(ch)/2))
+   if (IS_SET(stance_app[ch->stance].specials, STANCE_MULTI_CAST) &&
+       (skill_table[sn].target == TAR_CHAR_OFFENSIVE) &&
+       (number_percent() < get_psuedo_level(ch) / 2))
    {
       mana = mana * 2 / 3;
       multi_cast = TRUE;
@@ -676,18 +634,22 @@ void do_cast(CHAR_DATA *ch, char *argument)
    {
       if (number_percent() < ch->mental_power)
       {
-         send_to_char("@@mYour mental focus overloads and shatters! Your mental power collapses to nothing.@@N\n\r", ch);
+         send_to_char("@@mYour mental focus overloads and shatters! Your mental power collapses to "
+                      "nothing.@@N\n\r",
+                      ch);
          ch->mental_power = 0;
          return;
       }
    }
 
-   if ((sn != skill_lookup("cure light")) && (sn != skill_lookup("cure serious")) && (sn != skill_lookup("cure critical")) && (sn != skill_lookup("heal")))
+   if ((sn != skill_lookup("cure light")) && (sn != skill_lookup("cure serious")) &&
+       (sn != skill_lookup("cure critical")) && (sn != skill_lookup("heal")))
    {
-      sprintf(log_buf, "%s typed %s, Spell %s, room %s(%d), target %s",
-              ch->name, typed, skill_table[sn].name,
-              ch->in_room->name, ch->in_room->vnum, (victim != NULL ? victim->name : obj != NULL ? obj->name
-                                                                                                 : "NONE"));
+      sprintf(log_buf, "%s typed %s, Spell %s, room %s(%d), target %s", ch->name, typed,
+              skill_table[sn].name, ch->in_room->name, ch->in_room->vnum,
+              (victim != NULL ? victim->name
+               : obj != NULL  ? obj->name
+                              : "NONE"));
       monitor_chan(log_buf, MONITOR_MAGIC);
    }
    if ((*skill_table[sn].spell_fun)(sn, best, ch, vo, NULL))
@@ -707,7 +669,8 @@ void do_cast(CHAR_DATA *ch, char *argument)
 
       if (arg2[0] == '\0')
       {
-         if (((victim = ch->fighting) == NULL) || (victim->in_room == NULL) || (victim->is_free == TRUE))
+         if (((victim = ch->fighting) == NULL) || (victim->in_room == NULL) ||
+             (victim->is_free == TRUE))
          {
             ch->fighting = NULL;
             still_here = FALSE;
@@ -723,13 +686,14 @@ void do_cast(CHAR_DATA *ch, char *argument)
       if (still_here)
       {
          vo = (void *)victim;
-         if ((sn != skill_lookup("cure light")) && (sn != skill_lookup("cure serious")) && (sn != skill_lookup("cure critical")) && (sn != skill_lookup("heal")))
+         if ((sn != skill_lookup("cure light")) && (sn != skill_lookup("cure serious")) &&
+             (sn != skill_lookup("cure critical")) && (sn != skill_lookup("heal")))
          {
-            sprintf(log_buf, "%s typed %s, Spell %s, room %s(%d), target %s",
-                    ch->name, typed, skill_table[sn].name,
-                    ch->in_room->name, ch->in_room->vnum,
-                    (victim != NULL ? victim->name : obj != NULL ? obj->name
-                                                                 : "NONE"));
+            sprintf(log_buf, "%s typed %s, Spell %s, room %s(%d), target %s", ch->name, typed,
+                    skill_table[sn].name, ch->in_room->name, ch->in_room->vnum,
+                    (victim != NULL ? victim->name
+                     : obj != NULL  ? obj->name
+                                    : "NONE"));
             monitor_chan(log_buf, MONITOR_MAGIC);
          }
          if ((*skill_table[sn].spell_fun)(sn, best, ch, vo, NULL))
@@ -744,14 +708,17 @@ void do_cast(CHAR_DATA *ch, char *argument)
          }
       }
    }
-   if (IS_SET(stance_app[ch->stance].specials, STANCE_DUAL_CAST) && (skill_table[sn].target == TAR_CHAR_OFFENSIVE) && (number_range(0, 99) < get_psuedo_level(ch) - 80))
+   if (IS_SET(stance_app[ch->stance].specials, STANCE_DUAL_CAST) &&
+       (skill_table[sn].target == TAR_CHAR_OFFENSIVE) &&
+       (number_range(0, 99) < get_psuedo_level(ch) - 80))
    {
       bool still_here = TRUE;
       mana = mana * 1 / 2;
 
       if (arg2[0] == '\0')
       {
-         if (((victim = ch->fighting) == NULL) || (victim->in_room == NULL) || (victim->is_free == TRUE))
+         if (((victim = ch->fighting) == NULL) || (victim->in_room == NULL) ||
+             (victim->is_free == TRUE))
          {
             ch->fighting = NULL;
             still_here = FALSE;
@@ -767,13 +734,14 @@ void do_cast(CHAR_DATA *ch, char *argument)
       if (still_here)
       {
          vo = (void *)victim;
-         if ((sn != skill_lookup("cure light")) && (sn != skill_lookup("cure serious")) && (sn != skill_lookup("cure critical")) && (sn != skill_lookup("heal")))
+         if ((sn != skill_lookup("cure light")) && (sn != skill_lookup("cure serious")) &&
+             (sn != skill_lookup("cure critical")) && (sn != skill_lookup("heal")))
          {
-            sprintf(log_buf, "%s typed %s, Spell %s, room %s(%d), target %s",
-                    ch->name, typed, skill_table[sn].name,
-                    ch->in_room->name, ch->in_room->vnum,
-                    (victim != NULL ? victim->name : obj != NULL ? obj->name
-                                                                 : "NONE"));
+            sprintf(log_buf, "%s typed %s, Spell %s, room %s(%d), target %s", ch->name, typed,
+                    skill_table[sn].name, ch->in_room->name, ch->in_room->vnum,
+                    (victim != NULL ? victim->name
+                     : obj != NULL  ? obj->name
+                                    : "NONE"));
             monitor_chan(log_buf, MONITOR_MAGIC);
          }
          if ((*skill_table[sn].spell_fun)(sn, best, ch, vo, NULL))
@@ -789,7 +757,8 @@ void do_cast(CHAR_DATA *ch, char *argument)
       }
    }
 
-   if ((skill_table[sn].target == TAR_CHAR_OFFENSIVE) && (ch != NULL) && (victim != NULL) && (ch != victim) && (ch->is_free == FALSE) && (victim->is_free == FALSE))
+   if ((skill_table[sn].target == TAR_CHAR_OFFENSIVE) && (ch != NULL) && (victim != NULL) &&
+       (ch != victim) && (ch->is_free == FALSE) && (victim->is_free == FALSE))
    {
       CHAR_DATA *vch;
       CHAR_DATA *vch_next;
@@ -940,13 +909,10 @@ bool spell_badbreath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 /* --Stephen */
 {
    CHAR_DATA *victim = (CHAR_DATA *)vo;
-   static const sh_int dam_each[] = {
-       0,
-       3, 3, 4, 4, 5, 6, 6, 6, 6, 6,
-       7, 7, 7, 7, 7, 8, 8, 8, 8, 8,
-       9, 9, 9, 9, 9, 10, 10, 10, 10, 10,
-       11, 11, 11, 11, 11, 12, 12, 12, 12, 12,
-       13, 13, 13, 13, 13, 14, 14, 14, 14, 14};
+   static const sh_int dam_each[] = {0,  3,  3,  4,  4,  5,  6,  6,  6,  6,  6,  7,  7,
+                                     7,  7,  7,  8,  8,  8,  8,  8,  9,  9,  9,  9,  9,
+                                     10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 12, 12, 12,
+                                     12, 12, 13, 13, 13, 13, 13, 14, 14, 14, 14, 14};
    int dam;
 
    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
@@ -1009,8 +975,8 @@ bool spell_blindness(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    AFFECT_DATA af;
 
-//   if (!sp_damage(obj, ch, victim, 0, REALM_HOLY, sn, FALSE))
-  //    return TRUE;
+   //   if (!sp_damage(obj, ch, victim, 0, REALM_HOLY, sn, FALSE))
+   //    return TRUE;
 
    if (IS_AFFECTED(victim, AFF_BLIND) || saves_spell(level, victim))
       return TRUE;
@@ -1031,13 +997,10 @@ bool spell_blindness(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 bool spell_burning_hands(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *victim = (CHAR_DATA *)vo;
-   static const sh_int dam_each[] = {
-       0,
-       0, 0, 0, 0, 14, 17, 20, 23, 26, 29,
-       29, 29, 30, 30, 31, 31, 32, 32, 33, 33,
-       34, 34, 35, 35, 36, 36, 37, 37, 38, 38,
-       39, 39, 40, 40, 41, 41, 42, 42, 43, 43,
-       44, 44, 45, 45, 46, 46, 47, 47, 48, 48};
+   static const sh_int dam_each[] = {0,  0,  0,  0,  0,  14, 17, 20, 23, 26, 29, 29, 29,
+                                     30, 30, 31, 31, 32, 32, 33, 33, 34, 34, 35, 35, 36,
+                                     36, 37, 37, 38, 38, 39, 39, 40, 40, 41, 41, 42, 42,
+                                     43, 43, 44, 44, 45, 45, 46, 46, 47, 47, 48, 48};
    int dam;
 
    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
@@ -1081,8 +1044,7 @@ bool spell_call_lightning(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *
       act("$p summons lightning to strike your foes!", ch, obj, NULL, TO_CHAR);
    }
 
-   aoe_damage(ch, obj, sn, level, dam, dam,
-              ELEMENT_AIR | NO_REFLECT | NO_ABSORB, AOE_SAVES);
+   aoe_damage(ch, obj, sn, level, dam, dam, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, AOE_SAVES);
 
    /* Notify others in the same area who are outdoors. */
    CREF(vch_next, CHAR_NEXTROOM);
@@ -1155,7 +1117,8 @@ bool spell_charm_person(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
       return FALSE;
    }
 
-   if (IS_AFFECTED(victim, AFF_CHARM) || IS_AFFECTED(ch, AFF_CHARM) || level - 5 < victim->level || saves_spell(level, victim))
+   if (IS_AFFECTED(victim, AFF_CHARM) || IS_AFFECTED(ch, AFF_CHARM) || level - 5 < victim->level ||
+       saves_spell(level, victim))
       return TRUE;
 
    if (victim->master)
@@ -1177,13 +1140,10 @@ bool spell_charm_person(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
 bool spell_chill_touch(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *victim = (CHAR_DATA *)vo;
-   static const sh_int dam_each[] = {
-       0,
-       0, 0, 6, 7, 8, 9, 12, 13, 13, 13,
-       14, 14, 14, 15, 15, 15, 16, 16, 16, 17,
-       17, 17, 18, 18, 18, 19, 19, 19, 20, 20,
-       20, 21, 21, 21, 22, 22, 22, 23, 23, 23,
-       24, 24, 24, 25, 25, 25, 26, 26, 26, 27};
+   static const sh_int dam_each[] = {0,  0,  0,  6,  7,  8,  9,  12, 13, 13, 13, 14, 14,
+                                     14, 15, 15, 15, 16, 16, 16, 17, 17, 17, 18, 18, 18,
+                                     19, 19, 19, 20, 20, 20, 21, 21, 21, 22, 22, 22, 23,
+                                     23, 23, 24, 24, 24, 25, 25, 25, 26, 26, 26, 27};
    AFFECT_DATA af;
    int dam;
 
@@ -1213,13 +1173,10 @@ bool spell_chill_touch(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
 bool spell_color_spray(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *victim = (CHAR_DATA *)vo;
-   static const sh_int dam_each[] = {
-       0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       30, 35, 40, 45, 50, 55, 55, 55, 56, 57,
-       58, 58, 59, 60, 61, 61, 62, 63, 64, 64,
-       65, 66, 67, 67, 68, 69, 70, 70, 71, 72,
-       73, 73, 74, 75, 76, 76, 77, 78, 79, 79};
+   static const sh_int dam_each[] = {0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  30, 35,
+                                     40, 45, 50, 55, 55, 55, 56, 57, 58, 58, 59, 60, 61,
+                                     61, 62, 63, 64, 64, 65, 66, 67, 67, 68, 69, 70, 70,
+                                     71, 72, 73, 73, 74, 75, 76, 76, 77, 78, 79, 79};
    int dam;
 
    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
@@ -1512,7 +1469,8 @@ bool spell_detect_undead(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    AFFECT_DATA af;
 
-   if (is_affected(victim, skill_lookup("detect undead")) || item_has_apply(victim, ITEM_APPLY_DET_UNDEAD))
+   if (is_affected(victim, skill_lookup("detect undead")) ||
+       item_has_apply(victim, ITEM_APPLY_DET_UNDEAD))
       return FALSE;
 
    af.type = sn;
@@ -1617,10 +1575,12 @@ bool spell_dispel_magic(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
       if (IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS))
          cloak_chance += 25;
 
-      if ((IS_AFFECTED(victim, AFF_CLOAK_REFLECTION)) && (ch != victim) && (number_percent() < cloak_chance))
+      if ((IS_AFFECTED(victim, AFF_CLOAK_REFLECTION)) && (ch != victim) &&
+          (number_percent() < cloak_chance))
       {
 
-         act("@@N$n's @@lc@@el@@ro@@ya@@ak@@N glows brightly as $N's spell hits it@@N!!", victim, NULL, ch, TO_ROOM);
+         act("@@N$n's @@lc@@el@@ro@@ya@@ak@@N glows brightly as $N's spell hits it@@N!!", victim,
+             NULL, ch, TO_ROOM);
          act("@@N$N's @@lc@@el@@ro@@ya@@ak@@N glows brightly@@N!!", ch, NULL, victim, TO_CHAR);
          act("@@NYour @@lc@@el@@ro@@ya@@ak@@N glows brightly@@N!!!", victim, NULL, ch, TO_CHAR);
          CREF(vch_next, CHAR_NEXTROOM);
@@ -1638,12 +1598,16 @@ bool spell_dispel_magic(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
          return TRUE;
       }
 
-      if ((IS_AFFECTED(victim, AFF_CLOAK_ABSORPTION)) && (ch != victim) && (number_percent() < cloak_chance))
+      if ((IS_AFFECTED(victim, AFF_CLOAK_ABSORPTION)) && (ch != victim) &&
+          (number_percent() < cloak_chance))
       {
 
-         act("@@N$n's @@lcloak@@N glows brightly as $N's spell hits it, then fades@@N!!", victim, NULL, ch, TO_ROOM);
-         act("@@N$N's @@lcloak@@N glows brightly, and absorbs your spell@@N!!", ch, NULL, victim, TO_CHAR);
-         act("@@NYour @@lcloak@@N glows brightly, and absorbs $N's spell@@N!!!", victim, NULL, ch, TO_CHAR);
+         act("@@N$n's @@lcloak@@N glows brightly as $N's spell hits it, then fades@@N!!", victim,
+             NULL, ch, TO_ROOM);
+         act("@@N$N's @@lcloak@@N glows brightly, and absorbs your spell@@N!!", ch, NULL, victim,
+             TO_CHAR);
+         act("@@NYour @@lcloak@@N glows brightly, and absorbs $N's spell@@N!!!", victim, NULL, ch,
+             TO_CHAR);
          CREF(vch_next, CHAR_NEXTROOM);
 
          for (vch = ch->in_room->first_person; vch; vch = vch_next)
@@ -1704,7 +1668,8 @@ bool spell_dispel_magic(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
          if (IS_AFFECTED(victim, AFF_CLOAK_REFLECTION) && (number_percent() < chance))
          {
             chance = (chance) / 3;
-            act("@@NThe @@lc@@el@@ro@@ya@@ak@@N around $n is ripped to shreds!", victim, NULL, NULL, TO_ROOM);
+            act("@@NThe @@lc@@el@@ro@@ya@@ak@@N around $n is ripped to shreds!", victim, NULL, NULL,
+                TO_ROOM);
             send_to_char("@@NYour @@lc@@el@@ro@@ya@@ak@@N is ripped from your body!\n\r", victim);
             REMOVE_BIT(victim->affected_by, AFF_CLOAK_REFLECTION);
          }
@@ -1838,7 +1803,6 @@ bool spell_dispel_evil(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
       act("God protects $N.", ch, NULL, victim, TO_ROOM);
       return TRUE;
    }
-
 
    dam = dice(level, 4);
    if (saves_spell(level, victim))
@@ -2017,12 +1981,9 @@ bool spell_fireball(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    static const sh_int dam_each[] = {
-       0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 30, 35, 40, 45, 50, 55,
-       60, 65, 70, 75, 80, 82, 84, 86, 88, 90,
-       92, 94, 96, 98, 100, 102, 104, 106, 108, 110,
-       112, 114, 116, 118, 120, 122, 124, 126, 128, 130};
+       0,  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   30,  35,
+       40, 45,  50,  55,  60,  65,  70,  75,  80,  82,  84,  86,  88,  90,  92,  94,  96,
+       98, 100, 102, 104, 106, 108, 110, 112, 114, 116, 118, 120, 122, 124, 126, 128, 130};
    int dam;
 
    level = UMIN(level, sizeof(dam_each) / sizeof(dam_each[0]) - 1);
@@ -2321,15 +2282,11 @@ bool spell_identify(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    AFFECT_DATA *paf;
 
    sprintf(buf,
-           "@@NObject '%s' is @@etype@@N %s, @@aextra flags@@N %s.\n\r@@mWorn@@N: %s, @@cItem Class@@N: %s, @@cItem Weight@@N: %d @@yvalue@@N: %d @@N, @@rlevel@@N: %d.\n\r",
-           ob->short_descr,
-           item_type_name(ob),
-           extra_bit_name(ob->extra_flags),
-           bit_table_lookup(tab_wear_flags, ob->wear_flags),
-           get_item_class(ob),
-           ob->weight,
-           ob->cost,
-           ob->level);
+           "@@NObject '%s' is @@etype@@N %s, @@aextra flags@@N %s.\n\r@@mWorn@@N: %s, @@cItem "
+           "Class@@N: %s, @@cItem Weight@@N: %d @@yvalue@@N: %d @@N, @@rlevel@@N: %d.\n\r",
+           ob->short_descr, item_type_name(ob), extra_bit_name(ob->extra_flags),
+           bit_table_lookup(tab_wear_flags, ob->wear_flags), get_item_class(ob), ob->weight,
+           ob->cost, ob->level);
    send_to_char(buf, ch);
 
    switch (ob->item_type)
@@ -2378,8 +2335,8 @@ bool spell_identify(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       break;
 
    case ITEM_WEAPON:
-      sprintf(buf, "Damage is %d to %d (average %d).\n\r",
-              ob->value[1], ob->value[2], (ob->value[1] + ob->value[2]) / 2);
+      sprintf(buf, "Damage is %d to %d (average %d).\n\r", ob->value[1], ob->value[2],
+              (ob->value[1] + ob->value[2]) / 2);
       send_to_char(buf, ch);
       break;
 

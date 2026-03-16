@@ -49,7 +49,6 @@ static int hash_value_to_vnum(void *value)
    return (int)(intptr_t)value;
 }
 
-
 void swap_global_hash(char Tp, void *Ptr, int old_vnum, int new_vnum)
 {
    ROOM_INDEX_DATA *pRoomIndex, *prevRoomIndex;
@@ -255,7 +254,8 @@ void do_check_areas(CHAR_DATA *ch, char *argument)
             }
             else
             {
-               fprintf(out_file, "Obj: [%5i] -> [%5i] %s\n", old_vnum, new_vnum, pObjIndex->short_descr);
+               fprintf(out_file, "Obj: [%5i] -> [%5i] %s\n", old_vnum, new_vnum,
+                       pObjIndex->short_descr);
                /*
                 * Delete from obj hashing table, and put new vnum in.
                 */
@@ -290,7 +290,8 @@ void do_check_areas(CHAR_DATA *ch, char *argument)
             }
             else
             {
-               fprintf(out_file, "Mob: [%5i] -> [%5i] %s\n", old_vnum, new_vnum, pMobIndex->short_descr);
+               fprintf(out_file, "Mob: [%5i] -> [%5i] %s\n", old_vnum, new_vnum,
+                       pMobIndex->short_descr);
                /*
                 * Delete from mob hashing table, and put new vnum in.
                 */
@@ -335,12 +336,14 @@ void do_check_areas(CHAR_DATA *ch, char *argument)
          {
             if (pRoomIndex->exit[a] != NULL)
             {
-               if (pRoomIndex->exit[a]->key != 0 && (new_vnum = hash_value_to_vnum(get_hash_entry(obj_hash, pRoomIndex->exit[a]->key))) != 0)
+               if (pRoomIndex->exit[a]->key != 0 && (new_vnum = hash_value_to_vnum(get_hash_entry(
+                                                         obj_hash, pRoomIndex->exit[a]->key))) != 0)
                {
                   pRoomIndex->exit[a]->key = new_vnum;
                   area_modified(CurArea);
                }
-               if ((new_vnum = hash_value_to_vnum(get_hash_entry(room_hash, pRoomIndex->exit[a]->vnum))) != 0)
+               if ((new_vnum = hash_value_to_vnum(
+                        get_hash_entry(room_hash, pRoomIndex->exit[a]->vnum))) != 0)
                {
                   pRoomIndex->exit[a]->vnum = new_vnum;
                   area_modified(CurArea);

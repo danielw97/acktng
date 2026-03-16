@@ -290,39 +290,33 @@ void build_save_mobs()
    fprintf(SaveFile, "%s~\n", pMobIndex->short_descr);
    fprintf(SaveFile, "%s~\n", pMobIndex->long_descr);
    fprintf(SaveFile, "%s~\n", pMobIndex->description);
-   fprintf(SaveFile, "%llu %i %i S\n", pMobIndex->act, pMobIndex->affected_by, pMobIndex->alignment);
+   fprintf(SaveFile, "%llu %i %i S\n", pMobIndex->act, pMobIndex->affected_by,
+           pMobIndex->alignment);
    fprintf(SaveFile, "%i %i\n", pMobIndex->level, pMobIndex->sex);
-   fprintf(SaveFile, "%li %i %i %i\n", pMobIndex->hp_mod, pMobIndex->ac_mod, pMobIndex->hr_mod, pMobIndex->dr_mod);
+   fprintf(SaveFile, "%li %i %i %i\n", pMobIndex->hp_mod, pMobIndex->ac_mod, pMobIndex->hr_mod,
+           pMobIndex->dr_mod);
 
    /*
     * Write out new details - clan, class, race and skills
     * * The '!' signifies new section to load_mobiles() in db.c
     */
 
-   fprintf(SaveFile, "! %i %i %i %i %i %i %i\n",
-           pMobIndex->class,
-           pMobIndex->clan, pMobIndex->race, pMobIndex->position, pMobIndex->skills, pMobIndex->cast, pMobIndex->def);
-   fprintf(SaveFile, "| %i %i %i %i %i %i %i\n",
-           pMobIndex->strong_magic,
-           pMobIndex->weak_magic,
-           pMobIndex->race_mods, pMobIndex->power_skills, pMobIndex->power_cast, pMobIndex->resist, pMobIndex->suscept);
-   fprintf(SaveFile, "+ %i %i %i %i %i %i %i %i %i\n",
-           pMobIndex->spellpower_mod,
-           pMobIndex->crit_mod,
-           pMobIndex->crit_mult_mod,
-           pMobIndex->spell_crit_mod,
-           pMobIndex->spell_mult_mod,
-           pMobIndex->parry_mod,
-           pMobIndex->dodge_mod,
-           pMobIndex->block_mod,
-           pMobIndex->pierce_mod);
+   fprintf(SaveFile, "! %i %i %i %i %i %i %i\n", pMobIndex->class, pMobIndex->clan, pMobIndex->race,
+           pMobIndex->position, pMobIndex->skills, pMobIndex->cast, pMobIndex->def);
+   fprintf(SaveFile, "| %i %i %i %i %i %i %i\n", pMobIndex->strong_magic, pMobIndex->weak_magic,
+           pMobIndex->race_mods, pMobIndex->power_skills, pMobIndex->power_cast, pMobIndex->resist,
+           pMobIndex->suscept);
+   fprintf(SaveFile, "+ %i %i %i %i %i %i %i %i %i\n", pMobIndex->spellpower_mod,
+           pMobIndex->crit_mod, pMobIndex->crit_mult_mod, pMobIndex->spell_crit_mod,
+           pMobIndex->spell_mult_mod, pMobIndex->parry_mod, pMobIndex->dodge_mod,
+           pMobIndex->block_mod, pMobIndex->pierce_mod);
    fprintf(SaveFile, "l %i ", pMobIndex->loot_amount);
-   for(int i = 0; i < MAX_LOOT; i++)
+   for (int i = 0; i < MAX_LOOT; i++)
       fprintf(SaveFile, "%i ", pMobIndex->loot[i]);
    fprintf(SaveFile, "\nL ");
-   for(int i = 0; i < MAX_LOOT; i++)
+   for (int i = 0; i < MAX_LOOT; i++)
       fprintf(SaveFile, "%i ", pMobIndex->loot_chance[i]);
-   fprintf(SaveFile, "\n" );
+   fprintf(SaveFile, "\n");
 
    Pointer = Pointer->next;
    if (Pointer == NULL) /* End */
@@ -358,7 +352,8 @@ void build_save_objects()
    fprintf(SaveFile, "%s~\n", pObject->name);
    fprintf(SaveFile, "%s~\n", pObject->short_descr);
    fprintf(SaveFile, "%s~\n", pObject->description);
-   fprintf(SaveFile, "%i %i %i %i\n", pObject->item_type, pObject->extra_flags, pObject->wear_flags, pObject->item_apply);
+   fprintf(SaveFile, "%i %i %i %i\n", pObject->item_type, pObject->extra_flags, pObject->wear_flags,
+           pObject->item_apply);
 
    /*
     * Check for pills, potions, scrolls, staffs and wands.
@@ -381,9 +376,9 @@ void build_save_objects()
       val3 = val3 < 0 ? -1 : skill_table[val3].slot;
       break;
    }
-   fprintf(SaveFile, "%i %i %i %i %i %i %i %i %i %i\n", val0, val1, val2, val3,
-           pObject->value[4], pObject->value[5], pObject->value[6], pObject->value[7],
-           pObject->value[8], pObject->value[9]);
+   fprintf(SaveFile, "%i %i %i %i %i %i %i %i %i %i\n", val0, val1, val2, val3, pObject->value[4],
+           pObject->value[5], pObject->value[6], pObject->value[7], pObject->value[8],
+           pObject->value[9]);
    fprintf(SaveFile, "%i\n", pObject->weight);
 
    pAf = pObject->first_apply;
@@ -541,7 +536,8 @@ void build_save_shops()
    fprintf(SaveFile, "%i ", pShop->keeper);
    for (iTrade = 0; iTrade < MAX_TRADE; iTrade++)
       fprintf(SaveFile, "%i ", pShop->buy_type[iTrade]);
-   fprintf(SaveFile, "%i %i %i %i\n", pShop->profit_buy, pShop->profit_sell, pShop->open_hour, pShop->close_hour);
+   fprintf(SaveFile, "%i %i %i %i\n", pShop->profit_buy, pShop->profit_sell, pShop->open_hour,
+           pShop->close_hour);
 
    Pointer = Pointer->next;
    if (Pointer == NULL) /* End */
@@ -626,7 +622,8 @@ void build_save_resets()
       ResetPointer = CurSaveArea->first_reset;
    }
 
-   fprintf(SaveFile, "%c %i %i %i ", ResetPointer->command, ResetPointer->ifflag, ResetPointer->arg1, ResetPointer->arg2);
+   fprintf(SaveFile, "%c %i %i %i ", ResetPointer->command, ResetPointer->ifflag,
+           ResetPointer->arg1, ResetPointer->arg2);
    if (ResetPointer->command == 'G' || ResetPointer->command == 'R')
       fprintf(SaveFile, "%s\n", ResetPointer->notes);
    else

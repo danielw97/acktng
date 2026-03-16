@@ -6,324 +6,321 @@ int find_door(CHAR_DATA *ch, char *arg);
 
 int disarm_select_weapon_slot(int left_type, int right_type, int two_handed_type)
 {
-    if (left_type == ITEM_WEAPON)
-        return WEAR_HOLD_HAND_L;
+   if (left_type == ITEM_WEAPON)
+      return WEAR_HOLD_HAND_L;
 
-    if (right_type == ITEM_WEAPON)
-        return WEAR_HOLD_HAND_R;
+   if (right_type == ITEM_WEAPON)
+      return WEAR_HOLD_HAND_R;
 
-    if (two_handed_type == ITEM_WEAPON)
-        return WEAR_TWO_HANDED;
+   if (two_handed_type == ITEM_WEAPON)
+      return WEAR_TWO_HANDED;
 
-    return -1;
+   return -1;
 }
 
 OBJ_DATA *disarm_find_weapon(OBJ_DATA *left, OBJ_DATA *right, OBJ_DATA *two_handed)
 {
-    int slot = disarm_select_weapon_slot(
-        left == NULL ? -1 : left->item_type,
-        right == NULL ? -1 : right->item_type,
-        two_handed == NULL ? -1 : two_handed->item_type);
+   int slot = disarm_select_weapon_slot(left == NULL ? -1 : left->item_type,
+                                        right == NULL ? -1 : right->item_type,
+                                        two_handed == NULL ? -1 : two_handed->item_type);
 
-    if (slot == WEAR_HOLD_HAND_L)
-        return left;
+   if (slot == WEAR_HOLD_HAND_L)
+      return left;
 
-    if (slot == WEAR_HOLD_HAND_R)
-        return right;
+   if (slot == WEAR_HOLD_HAND_R)
+      return right;
 
-    if (slot == WEAR_TWO_HANDED)
-        return two_handed;
+   if (slot == WEAR_TWO_HANDED)
+      return two_handed;
 
-    return NULL;
+   return NULL;
 }
 
 void do_pick(CHAR_DATA *ch, char *argument)
 {
-    const sh_int rev_dir[] = {
-        2, 3, 0, 1, 5, 4};
-    char arg[MAX_INPUT_LENGTH];
-    CHAR_DATA *gch;
-    OBJ_DATA *obj;
-    int door;
+   const sh_int rev_dir[] = {2, 3, 0, 1, 5, 4};
+   char arg[MAX_INPUT_LENGTH];
+   CHAR_DATA *gch;
+   OBJ_DATA *obj;
+   int door;
 
-    one_argument(argument, arg);
+   one_argument(argument, arg);
 
-    if (arg[0] == '\0')
-    {
-        send_to_char("Pick what?\n\r", ch);
-        return;
-    }
+   if (arg[0] == '\0')
+   {
+      send_to_char("Pick what?\n\r", ch);
+      return;
+   }
 
-    WAIT_STATE(ch, skill_table[gsn_pick_lock].beats);
+   WAIT_STATE(ch, skill_table[gsn_pick_lock].beats);
 
-    /*
-     * look for guards
-     */
-    for (gch = ch->in_room->first_person; gch; gch = gch->next_in_room)
-    {
-        if (IS_NPC(gch) && IS_AWAKE(gch) && ch->level + 5 < gch->level)
-        {
-            act("$N is standing too close to the lock.", ch, NULL, gch, TO_CHAR);
-            return;
-        }
-    }
+   /*
+    * look for guards
+    */
+   for (gch = ch->in_room->first_person; gch; gch = gch->next_in_room)
+   {
+      if (IS_NPC(gch) && IS_AWAKE(gch) && ch->level + 5 < gch->level)
+      {
+         act("$N is standing too close to the lock.", ch, NULL, gch, TO_CHAR);
+         return;
+      }
+   }
 
-    if (!can_use_skill(ch, gsn_pick_lock))
-    {
-        send_to_char("You failed.\n\r", ch);
-        return;
-    }
+   if (!can_use_skill(ch, gsn_pick_lock))
+   {
+      send_to_char("You failed.\n\r", ch);
+      return;
+   }
 
-    if ((obj = get_obj_here(ch, arg)) != NULL)
-    {
-        /*
-         * 'pick object'
-         */
-        if (obj->item_type != ITEM_CONTAINER)
-        {
-            send_to_char("That's not a container.\n\r", ch);
-            return;
-        }
-        if (!IS_SET(obj->value[1], CONT_CLOSED))
-        {
-            send_to_char("It's not closed.\n\r", ch);
-            return;
-        }
-        if (obj->value[2] < 0)
-        {
-            send_to_char("It can't be unlocked.\n\r", ch);
-            return;
-        }
-        if (!IS_SET(obj->value[1], CONT_LOCKED))
-        {
-            send_to_char("It's already unlocked.\n\r", ch);
-            return;
-        }
-        if (IS_SET(obj->value[1], CONT_PICKPROOF))
-        {
-            send_to_char("You failed.\n\r", ch);
-            return;
-        }
+   if ((obj = get_obj_here(ch, arg)) != NULL)
+   {
+      /*
+       * 'pick object'
+       */
+      if (obj->item_type != ITEM_CONTAINER)
+      {
+         send_to_char("That's not a container.\n\r", ch);
+         return;
+      }
+      if (!IS_SET(obj->value[1], CONT_CLOSED))
+      {
+         send_to_char("It's not closed.\n\r", ch);
+         return;
+      }
+      if (obj->value[2] < 0)
+      {
+         send_to_char("It can't be unlocked.\n\r", ch);
+         return;
+      }
+      if (!IS_SET(obj->value[1], CONT_LOCKED))
+      {
+         send_to_char("It's already unlocked.\n\r", ch);
+         return;
+      }
+      if (IS_SET(obj->value[1], CONT_PICKPROOF))
+      {
+         send_to_char("You failed.\n\r", ch);
+         return;
+      }
 
-        REMOVE_BIT(obj->value[1], CONT_LOCKED);
-        send_to_char("*Click*\n\r", ch);
-        act("$n picks $p.", ch, obj, NULL, TO_ROOM);
-        return;
-    }
+      REMOVE_BIT(obj->value[1], CONT_LOCKED);
+      send_to_char("*Click*\n\r", ch);
+      act("$n picks $p.", ch, obj, NULL, TO_ROOM);
+      return;
+   }
 
-    if ((door = find_door(ch, arg)) >= 0)
-    {
-        /*
-         * 'pick door'
-         */
-        ROOM_INDEX_DATA *to_room;
-        EXIT_DATA *pexit;
-        EXIT_DATA *pexit_rev;
+   if ((door = find_door(ch, arg)) >= 0)
+   {
+      /*
+       * 'pick door'
+       */
+      ROOM_INDEX_DATA *to_room;
+      EXIT_DATA *pexit;
+      EXIT_DATA *pexit_rev;
 
-        pexit = ch->in_room->exit[door];
-        if (!IS_SET(pexit->exit_info, EX_CLOSED))
-        {
-            send_to_char("It's not closed.\n\r", ch);
-            return;
-        }
-        if (pexit->key < 0)
-        {
-            send_to_char("It can't be picked.\n\r", ch);
-            return;
-        }
-        if (!IS_SET(pexit->exit_info, EX_LOCKED))
-        {
-            send_to_char("It's already unlocked.\n\r", ch);
-            return;
-        }
-        if (IS_SET(pexit->exit_info, EX_PICKPROOF))
-        {
-            send_to_char("You failed.\n\r", ch);
-            return;
-        }
+      pexit = ch->in_room->exit[door];
+      if (!IS_SET(pexit->exit_info, EX_CLOSED))
+      {
+         send_to_char("It's not closed.\n\r", ch);
+         return;
+      }
+      if (pexit->key < 0)
+      {
+         send_to_char("It can't be picked.\n\r", ch);
+         return;
+      }
+      if (!IS_SET(pexit->exit_info, EX_LOCKED))
+      {
+         send_to_char("It's already unlocked.\n\r", ch);
+         return;
+      }
+      if (IS_SET(pexit->exit_info, EX_PICKPROOF))
+      {
+         send_to_char("You failed.\n\r", ch);
+         return;
+      }
 
-        REMOVE_BIT(pexit->exit_info, EX_LOCKED);
-        send_to_char("*Click*\n\r", ch);
-        act("$n picks the $d.", ch, NULL, pexit->keyword, TO_ROOM);
+      REMOVE_BIT(pexit->exit_info, EX_LOCKED);
+      send_to_char("*Click*\n\r", ch);
+      act("$n picks the $d.", ch, NULL, pexit->keyword, TO_ROOM);
 
-        /*
-         * pick the other side
-         */
-        if ((to_room = pexit->to_room) != NULL && (pexit_rev = to_room->exit[rev_dir[door]]) != NULL && pexit_rev->to_room == ch->in_room)
-        {
-            REMOVE_BIT(pexit_rev->exit_info, EX_LOCKED);
-        }
-    }
+      /*
+       * pick the other side
+       */
+      if ((to_room = pexit->to_room) != NULL &&
+          (pexit_rev = to_room->exit[rev_dir[door]]) != NULL && pexit_rev->to_room == ch->in_room)
+      {
+         REMOVE_BIT(pexit_rev->exit_info, EX_LOCKED);
+      }
+   }
 
-    return;
+   return;
 }
 
 void do_smash(CHAR_DATA *ch, char *argument)
 {
-    const sh_int rev_dir[] = {
-        2, 3, 0, 1, 5, 4};
-    char arg[MAX_INPUT_LENGTH];
-    int door;
-    bool joke; /* Was it unlocked to start with? */
+   const sh_int rev_dir[] = {2, 3, 0, 1, 5, 4};
+   char arg[MAX_INPUT_LENGTH];
+   int door;
+   bool joke; /* Was it unlocked to start with? */
 
-    joke = FALSE;
-    one_argument(argument, arg);
+   joke = FALSE;
+   one_argument(argument, arg);
 
-    if (!can_use_skill(ch, gsn_smash))
-    {
-        send_to_char("You don't know of such a skill.\n\r", ch);
-        return;
-    }
+   if (!can_use_skill(ch, gsn_smash))
+   {
+      send_to_char("You don't know of such a skill.\n\r", ch);
+      return;
+   }
 
-    if (arg[0] == '\0')
-    {
-        send_to_char("Smash what?\n\r", ch);
-        return;
-    }
+   if (arg[0] == '\0')
+   {
+      send_to_char("Smash what?\n\r", ch);
+      return;
+   }
 
-    if ((door = find_door(ch, arg)) >= 0)
-    {
-        /*
-         * 'open door'
-         */
-        ROOM_INDEX_DATA *to_room;
-        EXIT_DATA *pexit;
-        EXIT_DATA *pexit_rev;
+   if ((door = find_door(ch, arg)) >= 0)
+   {
+      /*
+       * 'open door'
+       */
+      ROOM_INDEX_DATA *to_room;
+      EXIT_DATA *pexit;
+      EXIT_DATA *pexit_rev;
 
-        pexit = ch->in_room->exit[door];
-        if (!IS_SET(pexit->exit_info, EX_CLOSED))
-        {
-            send_to_char("It's already open.\n\r", ch);
-            return;
-        }
+      pexit = ch->in_room->exit[door];
+      if (!IS_SET(pexit->exit_info, EX_CLOSED))
+      {
+         send_to_char("It's already open.\n\r", ch);
+         return;
+      }
 
-        if (IS_SET(pexit->exit_info, EX_LOCKED))
-            REMOVE_BIT(pexit->exit_info, EX_LOCKED);
-        else
-            joke = TRUE;
+      if (IS_SET(pexit->exit_info, EX_LOCKED))
+         REMOVE_BIT(pexit->exit_info, EX_LOCKED);
+      else
+         joke = TRUE;
 
-        REMOVE_BIT(pexit->exit_info, EX_CLOSED);
-        act("$n smashes opens the $d.", ch, NULL, pexit->keyword, TO_ROOM);
-        act("You smash open the $d.", ch, NULL, pexit->keyword, TO_CHAR);
+      REMOVE_BIT(pexit->exit_info, EX_CLOSED);
+      act("$n smashes opens the $d.", ch, NULL, pexit->keyword, TO_ROOM);
+      act("You smash open the $d.", ch, NULL, pexit->keyword, TO_CHAR);
 
-        if (joke)
-        {
-            act("The $d was already unlocked!!!", ch, NULL, pexit->keyword, TO_ROOM);
-            act("The $d was already unlocked!!!", ch, NULL, pexit->keyword, TO_CHAR);
-            act("$n tumbles through $d!!!", ch, NULL, pexit->keyword, TO_ROOM);
-            act("You tumble through $d!!!", ch, NULL, pexit->keyword, TO_CHAR);
-        }
+      if (joke)
+      {
+         act("The $d was already unlocked!!!", ch, NULL, pexit->keyword, TO_ROOM);
+         act("The $d was already unlocked!!!", ch, NULL, pexit->keyword, TO_CHAR);
+         act("$n tumbles through $d!!!", ch, NULL, pexit->keyword, TO_ROOM);
+         act("You tumble through $d!!!", ch, NULL, pexit->keyword, TO_CHAR);
+      }
 
-        /*
-         * open the other side
-         */
-        if ((to_room = pexit->to_room) != NULL && (pexit_rev = to_room->exit[rev_dir[door]]) != NULL && pexit_rev->to_room == ch->in_room)
-        {
-            CHAR_DATA *rch;
+      /*
+       * open the other side
+       */
+      if ((to_room = pexit->to_room) != NULL &&
+          (pexit_rev = to_room->exit[rev_dir[door]]) != NULL && pexit_rev->to_room == ch->in_room)
+      {
+         CHAR_DATA *rch;
 
-            if (IS_SET(pexit_rev->exit_info, EX_LOCKED))
-                REMOVE_BIT(pexit_rev->exit_info, EX_LOCKED);
+         if (IS_SET(pexit_rev->exit_info, EX_LOCKED))
+            REMOVE_BIT(pexit_rev->exit_info, EX_LOCKED);
 
-            REMOVE_BIT(pexit_rev->exit_info, EX_CLOSED);
-            for (rch = to_room->first_person; rch != NULL; rch = rch->next_in_room)
-                act("The $d is smashed open.", rch, NULL, pexit_rev->keyword, TO_CHAR);
+         REMOVE_BIT(pexit_rev->exit_info, EX_CLOSED);
+         for (rch = to_room->first_person; rch != NULL; rch = rch->next_in_room)
+            act("The $d is smashed open.", rch, NULL, pexit_rev->keyword, TO_CHAR);
 
-            if (joke)
-            {
-                char_from_room(ch);
-                char_to_room(ch, to_room);
-                act("$n tumbles into the room, head over heels!", ch, NULL, NULL, TO_ROOM);
-                do_look(ch, "");
-            }
-        }
-    }
+         if (joke)
+         {
+            char_from_room(ch);
+            char_to_room(ch, to_room);
+            act("$n tumbles into the room, head over heels!", ch, NULL, NULL, TO_ROOM);
+            do_look(ch, "");
+         }
+      }
+   }
 
-    return;
+   return;
 }
 
 void do_disarm(CHAR_DATA *ch, char *argument)
 {
-    char arg[MAX_INPUT_LENGTH];
-    CHAR_DATA *victim;
+   char arg[MAX_INPUT_LENGTH];
+   CHAR_DATA *victim;
 
-    one_argument(argument, arg);
+   one_argument(argument, arg);
 
-    if (arg[0] == '\0')
-        victim = ch->fighting;
-    else
-        victim = get_char_room(ch, arg);
+   if (arg[0] == '\0')
+      victim = ch->fighting;
+   else
+      victim = get_char_room(ch, arg);
 
-    if (victim == NULL)
-    {
-        send_to_char("No such target to disarm!\n\r", ch);
-        return;
-    }
+   if (victim == NULL)
+   {
+      send_to_char("No such target to disarm!\n\r", ch);
+      return;
+   }
 
-    disarm(ch, victim);
+   disarm(ch, victim);
 }
 
 void disarm(CHAR_DATA *ch, CHAR_DATA *victim)
 {
-    OBJ_DATA *obj = NULL;
-    AFFECT_DATA af;
-    int chance;
+   OBJ_DATA *obj = NULL;
+   AFFECT_DATA af;
+   int chance;
 
-    if (!can_use_skill_message(ch, gsn_disarm))
-        return;
+   if (!can_use_skill_message(ch, gsn_disarm))
+      return;
 
-    if (IS_SET(victim->skills, MOB_DISARM))
-    {
-        act("$N cannot be disarmed!", ch, NULL, victim, TO_CHAR);
-        return;
-    }
+   if (IS_SET(victim->skills, MOB_DISARM))
+   {
+      act("$N cannot be disarmed!", ch, NULL, victim, TO_CHAR);
+      return;
+   }
 
-    set_fighting(ch, victim, TRUE);
+   set_fighting(ch, victim, TRUE);
 
-    obj = disarm_find_weapon(
-        get_eq_char(victim, WEAR_HOLD_HAND_L),
-        get_eq_char(victim, WEAR_HOLD_HAND_R),
-        get_eq_char(victim, WEAR_TWO_HANDED));
+   obj = disarm_find_weapon(get_eq_char(victim, WEAR_HOLD_HAND_L),
+                            get_eq_char(victim, WEAR_HOLD_HAND_R),
+                            get_eq_char(victim, WEAR_TWO_HANDED));
 
-    if (obj == NULL || IS_SET(obj->extra_flags, ITEM_FIST))
-    {
-        send_to_char("Your opponent is not wielding a weapon.\n\r", ch);
-        return;
-    }
+   if (obj == NULL || IS_SET(obj->extra_flags, ITEM_FIST))
+   {
+      send_to_char("Your opponent is not wielding a weapon.\n\r", ch);
+      return;
+   }
 
+   WAIT_STATE(ch, 18);
 
-    WAIT_STATE(ch, 18);
+   chance = 0;
 
-    chance = 0;
+   if (IS_SET(obj->extra_flags, ITEM_NODISARM))
+      chance -= 80;
 
-    if (IS_SET(obj->extra_flags, ITEM_NODISARM))
-        chance -= 80;
+   if (can_use_skill(victim, gsn_nodisarm))
+      chance -= 50;
 
-    if (can_use_skill(victim, gsn_nodisarm))
-        chance -= 50;
+   chance += (get_psuedo_level(ch) - get_psuedo_level(victim)) / 2;
 
-    chance += (get_psuedo_level(ch) - get_psuedo_level(victim)) / 2;
+   raise_skill(ch, gsn_disarm);
 
-    raise_skill(ch, gsn_disarm);
+   if (!skill_success(ch, victim, gsn_disarm, chance))
+   {
+      act("You dodge $n's disarm attempt!", ch, NULL, victim, TO_VICT);
+      act("You fail to disarm $N!", ch, NULL, victim, TO_CHAR);
+      act("$N dodges $n's disarm attempt!", ch, NULL, victim, TO_NOTVICT);
+      return;
+   }
 
-    if (!skill_success(ch, victim, gsn_disarm, chance))
-    {
-        act("You dodge $n's disarm attempt!", ch, NULL, victim, TO_VICT);
-        act("You fail to disarm $N!", ch, NULL, victim, TO_CHAR);
-        act("$N dodges $n's disarm attempt!", ch, NULL, victim, TO_NOTVICT);
-        return;
-    }
+   act("$n DISARMS you!", ch, NULL, victim, TO_VICT);
+   act("You disarm $N!", ch, NULL, victim, TO_CHAR);
+   act("$n DISARMS $N!", ch, NULL, victim, TO_NOTVICT);
 
-    act("$n DISARMS you!", ch, NULL, victim, TO_VICT);
-    act("You disarm $N!", ch, NULL, victim, TO_CHAR);
-    act("$n DISARMS $N!", ch, NULL, victim, TO_NOTVICT);
+   unequip_char(ch, obj);
 
-    unequip_char(ch, obj);
-
-    af.type = skill_lookup("disarm");
-    af.location = APPLY_NONE;
-    af.modifier = 0;
-    af.duration_type = DURATION_ROUND;
-    af.duration = 2;
-    af.bitvector = 0;
-    affect_to_char(victim, &af);
+   af.type = skill_lookup("disarm");
+   af.location = APPLY_NONE;
+   af.modifier = 0;
+   af.duration_type = DURATION_ROUND;
+   af.duration = 2;
+   af.bitvector = 0;
+   affect_to_char(victim, &af);
 }

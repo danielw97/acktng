@@ -39,10 +39,8 @@ void round_update_dot(CHAR_DATA *ch);
 
 static bool is_grand_magi_elemental_spell(int sn)
 {
-   return sn == skill_lookup("elemental inferno") ||
-          sn == skill_lookup("elemental shock") ||
-          sn == skill_lookup("elemental deluge") ||
-          sn == skill_lookup("elemental rupture");
+   return sn == skill_lookup("elemental inferno") || sn == skill_lookup("elemental shock") ||
+          sn == skill_lookup("elemental deluge") || sn == skill_lookup("elemental rupture");
 }
 
 int spell_regen_base_heal(int mage_level, int sorcerer_level, int wizard_level, int spellpower)
@@ -59,8 +57,8 @@ int spell_regen_base_heal(int mage_level, int sorcerer_level, int wizard_level, 
 }
 
 static bool cast_wizard_elemental_dot_spell(int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim,
-                                            OBJ_DATA *obj, const char *cast_msg, const char *hit_msg,
-                                            int element)
+                                            OBJ_DATA *obj, const char *cast_msg,
+                                            const char *hit_msg, int element)
 {
    AFFECT_DATA af;
    int base_damage;
@@ -134,21 +132,23 @@ static int get_elemental_debuff_type(int sn)
        sn == skill_lookup("tidal lash") || sn == skill_lookup("elemental deluge"))
       return ELEMENTAL_DEBUFF_ICE;
 
-   if (sn == skill_lookup("Fire Blast") || sn == skill_lookup("phoenix flare") || sn == skill_lookup("elemental inferno"))
+   if (sn == skill_lookup("Fire Blast") || sn == skill_lookup("phoenix flare") ||
+       sn == skill_lookup("elemental inferno"))
       return ELEMENTAL_DEBUFF_FIRE;
 
-   if (sn == skill_lookup("Shock Storm") || sn == skill_lookup("arc lightning") || sn == skill_lookup("elemental shock"))
+   if (sn == skill_lookup("Shock Storm") || sn == skill_lookup("arc lightning") ||
+       sn == skill_lookup("elemental shock"))
       return ELEMENTAL_DEBUFF_SHOCK;
 
-   if (sn == skill_lookup("Earth Shatter") || sn == skill_lookup("terra rend") || sn == skill_lookup("elemental rupture"))
+   if (sn == skill_lookup("Earth Shatter") || sn == skill_lookup("terra rend") ||
+       sn == skill_lookup("elemental rupture"))
       return ELEMENTAL_DEBUFF_EARTH;
 
    return ELEMENTAL_DEBUFF_NONE;
 }
 
-
-static void apply_spell_debuff_dot(CHAR_DATA *ch, CHAR_DATA *victim, int sn, int element, int duration, int dot_tick_damage,
-                                  const char *debuff_msg)
+static void apply_spell_debuff_dot(CHAR_DATA *ch, CHAR_DATA *victim, int sn, int element,
+                                   int duration, int dot_tick_damage, const char *debuff_msg)
 {
    AFFECT_DATA af;
 
@@ -190,13 +190,13 @@ void apply_elemental_spell_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, cons
    }
 }
 
-
 static bool is_necromancer_direct_damage_spell(int sn)
 {
    return sn == skill_lookup("black hand") || sn == skill_lookup("wraith touch");
 }
 
-void apply_necromancer_damage_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, int direct_damage, OBJ_DATA *obj)
+void apply_necromancer_damage_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, int direct_damage,
+                                     OBJ_DATA *obj)
 {
    AFFECT_DATA af;
    AFFECT_DATA *paf;
@@ -251,7 +251,8 @@ void apply_necromancer_damage_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, i
    round_update_dot(victim);
 }
 
-bool trigger_elemental_spell_combo(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj, int sn, int level)
+bool trigger_elemental_spell_combo(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj, int sn,
+                                   int level)
 {
    AFFECT_DATA *paf;
    AFFECT_DATA *paf_next;
@@ -299,8 +300,10 @@ bool trigger_elemental_spell_combo(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *o
    else if (sn_type == ELEMENTAL_DEBUFF_EARTH && (has_fire_blast || has_shock_storm))
    {
       int combo_dam = dice(level / 5, 24) + 28;
-      act("@@aFrozen shards@@N explode from the elemental backlash around $n!", victim, NULL, NULL, TO_ROOM);
-      send_to_char("@@aFrozen shards@@N explode from the elemental backlash around you!\n\r", victim);
+      act("@@aFrozen shards@@N explode from the elemental backlash around $n!", victim, NULL, NULL,
+          TO_ROOM);
+      send_to_char("@@aFrozen shards@@N explode from the elemental backlash around you!\n\r",
+                   victim);
       sp_damage(obj, ch, victim, combo_dam, ELE_EARTH, sn, TRUE);
    }
    else
@@ -315,7 +318,6 @@ bool trigger_elemental_spell_combo(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *o
 
    return TRUE;
 }
-
 
 /*
  * This file should contain:
@@ -335,7 +337,7 @@ bool spell_fireblast(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
          base = ch->class_level[CLASS_WIZ];
       if (ch->class_level[CLASS_NEC] > base)
          base = ch->class_level[CLASS_NEC];
-      dam = 150 + dice(base/2, 20);
+      dam = 150 + dice(base / 2, 20);
       act("@@gA blast of @@efire@@g flies from $n's hands!@@N", ch, NULL, NULL, TO_ROOM);
       send_to_char("@@gA blast of @@efire@@g flies from your hands!@@N\n\r", ch);
    }
@@ -349,7 +351,8 @@ bool spell_fireblast(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    send_to_char("@@gYou are struck by the @@efire @@gblast!!@@N\n\r", victim);
    sp_damage(obj, ch, victim, dam, ELE_FIRE, sn, TRUE);
    if (!trigger_elemental_spell_combo(ch, victim, obj, sn, level))
-      apply_elemental_spell_debuff(ch, victim, sn, "@@rLingering flames@@N continue to scorch you.\n\r");
+      apply_elemental_spell_debuff(ch, victim, sn,
+                                   "@@rLingering flames@@N continue to scorch you.\n\r");
    return TRUE;
 }
 
@@ -370,7 +373,7 @@ bool spell_shockstorm(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       if (ch->class_level[CLASS_NEC] > base)
          base = ch->class_level[CLASS_NEC];
 
-      dam = 150 + dice(base/2, 20);
+      dam = 150 + dice(base / 2, 20);
       act("@@gA storm of @@lsparks@@g flies from $n's hands!@@N", ch, NULL, NULL, TO_ROOM);
       send_to_char("@@gA storm of @@lsparks@@g flies from your hands!@@N\n\r", ch);
    }
@@ -384,7 +387,8 @@ bool spell_shockstorm(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    send_to_char("@@gYou are struck by the storm of @@lsparks@@g!!@@N\n\r", victim);
    sp_damage(obj, ch, victim, dam, ELEMENT_AIR, sn, TRUE);
    if (!trigger_elemental_spell_combo(ch, victim, obj, sn, level))
-      apply_elemental_spell_debuff(ch, victim, sn, "@@lStatic arcs@@N keep dancing across your skin.\n\r");
+      apply_elemental_spell_debuff(ch, victim, sn,
+                                   "@@lStatic arcs@@N keep dancing across your skin.\n\r");
    return TRUE;
 }
 
@@ -399,7 +403,7 @@ bool spell_cone_cold(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       if (ch->class_level[CLASS_WIZ] > base)
          base = ch->class_level[CLASS_WIZ];
 
-      dam = 150 + dice(base/2, 20);
+      dam = 150 + dice(base / 2, 20);
       act("@@gA cone of @@acold@@g bursts forth from $n's hands!@@N", ch, NULL, NULL, TO_ROOM);
       send_to_char("@@gA cone of @@acold@@g bursts forth from your hands!@@N\n\r", ch);
    }
@@ -459,17 +463,22 @@ bool spell_holy_wrath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       if (ch->class_level[CLASS_PAL] > base)
          base = ch->class_level[CLASS_PAL];
 
-      dam = 150 + dice(base/2, 20);
-      act("@@gA coruscating sphere of @@ylight@@g bursts forth from $n's hands!@@N", ch, NULL, NULL, TO_ROOM);
-      send_to_char("@@gA coruscating sphere of @@ylight@@g bursts forth from your hands!@@N\n\r", ch);
+      dam = 150 + dice(base / 2, 20);
+      act("@@gA coruscating sphere of @@ylight@@g bursts forth from $n's hands!@@N", ch, NULL, NULL,
+          TO_ROOM);
+      send_to_char("@@gA coruscating sphere of @@ylight@@g bursts forth from your hands!@@N\n\r",
+                   ch);
    }
    else
    {
       dam = dice(level / 5, 20);
-      act("@@gA coruscating sphere of @@ylight@@g bursts forth from $p!@@N", ch, obj, NULL, TO_ROOM);
-      act("@@gA coruscating sphere of @@ylight@@g bursts forth from $p!@@N", ch, obj, NULL, TO_CHAR);
+      act("@@gA coruscating sphere of @@ylight@@g bursts forth from $p!@@N", ch, obj, NULL,
+          TO_ROOM);
+      act("@@gA coruscating sphere of @@ylight@@g bursts forth from $p!@@N", ch, obj, NULL,
+          TO_CHAR);
    }
-   act("@@g$n is struck by the coruscating sphere of @@ylight@@g!!@@N", victim, NULL, NULL, TO_ROOM);
+   act("@@g$n is struck by the coruscating sphere of @@ylight@@g!!@@N", victim, NULL, NULL,
+       TO_ROOM);
    send_to_char("@@gYou are struck by the coruscating sphere of @@ylight@@g!!@@N\n\r", victim);
    sp_damage(obj, ch, victim, dam, ELE_HOLY, sn, TRUE);
    return TRUE;
@@ -480,15 +489,16 @@ bool spell_arc_lightning(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    bool combo_triggered;
 
-   if (!cast_wizard_elemental_dot_spell(sn, level, ch, victim, obj,
-                                        "@@gA crackling surge of @@ls h o c k@@g bursts from $n's hands!@@N",
-                                        "@@g$n is scorched by crackling @@ls h o c k@@g!@@N",
-                                        ELEMENT_AIR))
+   if (!cast_wizard_elemental_dot_spell(
+           sn, level, ch, victim, obj,
+           "@@gA crackling surge of @@ls h o c k@@g bursts from $n's hands!@@N",
+           "@@g$n is scorched by crackling @@ls h o c k@@g!@@N", ELEMENT_AIR))
       return FALSE;
 
    combo_triggered = trigger_elemental_spell_combo(ch, victim, obj, sn, level);
    if (!combo_triggered)
-      apply_elemental_spell_debuff(ch, victim, sn, "@@lStatic arcs@@N keep dancing across your skin.\n\r");
+      apply_elemental_spell_debuff(ch, victim, sn,
+                                   "@@lStatic arcs@@N keep dancing across your skin.\n\r");
 
    return TRUE;
 }
@@ -498,10 +508,9 @@ bool spell_terra_rend(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    bool combo_triggered;
 
-   if (!cast_wizard_elemental_dot_spell(sn, level, ch, victim, obj,
-                                        "@@gJagged @@bearth@@g erupts from $n's grasp!@@N",
-                                        "@@g$n is ripped by jagged @@bearth@@g shards!@@N",
-                                        ELE_EARTH))
+   if (!cast_wizard_elemental_dot_spell(
+           sn, level, ch, victim, obj, "@@gJagged @@bearth@@g erupts from $n's grasp!@@N",
+           "@@g$n is ripped by jagged @@bearth@@g shards!@@N", ELE_EARTH))
       return FALSE;
 
    combo_triggered = trigger_elemental_spell_combo(ch, victim, obj, sn, level);
@@ -516,15 +525,16 @@ bool spell_tidal_lash(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    bool combo_triggered;
 
-   if (!cast_wizard_elemental_dot_spell(sn, level, ch, victim, obj,
-                                        "@@gA crushing wave of @@lwater@@g pours from $n's hands!@@N",
-                                        "@@g$n is battered by a crushing wave of @@lwater@@g!@@N",
-                                        ELEMENT_WATER))
+   if (!cast_wizard_elemental_dot_spell(
+           sn, level, ch, victim, obj,
+           "@@gA crushing wave of @@lwater@@g pours from $n's hands!@@N",
+           "@@g$n is battered by a crushing wave of @@lwater@@g!@@N", ELEMENT_WATER))
       return FALSE;
 
    combo_triggered = trigger_elemental_spell_combo(ch, victim, obj, sn, level);
    if (!combo_triggered)
-      apply_elemental_spell_debuff(ch, victim, sn, "@@aFrost clings to your body, slowing your recovery.@@N\n\r");
+      apply_elemental_spell_debuff(ch, victim, sn,
+                                   "@@aFrost clings to your body, slowing your recovery.@@N\n\r");
 
    return TRUE;
 }
@@ -534,15 +544,15 @@ bool spell_phoenix_flare(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    bool combo_triggered;
 
-   if (!cast_wizard_elemental_dot_spell(sn, level, ch, victim, obj,
-                                        "@@gA searing burst of @@efire@@g roars from $n's hands!@@N",
-                                        "@@g$n is engulfed by searing @@efire@@g!@@N",
-                                        ELE_FIRE))
+   if (!cast_wizard_elemental_dot_spell(
+           sn, level, ch, victim, obj, "@@gA searing burst of @@efire@@g roars from $n's hands!@@N",
+           "@@g$n is engulfed by searing @@efire@@g!@@N", ELE_FIRE))
       return FALSE;
 
    combo_triggered = trigger_elemental_spell_combo(ch, victim, obj, sn, level);
    if (!combo_triggered)
-      apply_elemental_spell_debuff(ch, victim, sn, "@@rLingering flames@@N continue to scorch you.\n\r");
+      apply_elemental_spell_debuff(ch, victim, sn,
+                                   "@@rLingering flames@@N continue to scorch you.\n\r");
 
    return TRUE;
 }
@@ -552,15 +562,16 @@ bool spell_elemental_inferno(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DAT
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    bool combo_triggered;
 
-   if (!cast_wizard_elemental_dot_spell(sn, level, ch, victim, obj,
-                                        "@@gA grand inferno of @@efire@@g erupts from $n's hands!@@N",
-                                        "@@g$n is consumed by the grand @@efire@@g inferno!@@N",
-                                        ELE_FIRE))
+   if (!cast_wizard_elemental_dot_spell(
+           sn, level, ch, victim, obj,
+           "@@gA grand inferno of @@efire@@g erupts from $n's hands!@@N",
+           "@@g$n is consumed by the grand @@efire@@g inferno!@@N", ELE_FIRE))
       return FALSE;
 
    combo_triggered = trigger_elemental_spell_combo(ch, victim, obj, sn, level);
    if (!combo_triggered)
-      apply_elemental_spell_debuff(ch, victim, sn, "@@rLingering flames@@N continue to scorch you.\n\r");
+      apply_elemental_spell_debuff(ch, victim, sn,
+                                   "@@rLingering flames@@N continue to scorch you.\n\r");
 
    return TRUE;
 }
@@ -570,15 +581,16 @@ bool spell_elemental_shock(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA 
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    bool combo_triggered;
 
-   if (!cast_wizard_elemental_dot_spell(sn, level, ch, victim, obj,
-                                        "@@gA grand surge of @@ls h o c k@@g lashes from $n's hands!@@N",
-                                        "@@g$n is blasted by grand @@ls h o c k@@g!@@N",
-                                        ELEMENT_AIR))
+   if (!cast_wizard_elemental_dot_spell(
+           sn, level, ch, victim, obj,
+           "@@gA grand surge of @@ls h o c k@@g lashes from $n's hands!@@N",
+           "@@g$n is blasted by grand @@ls h o c k@@g!@@N", ELEMENT_AIR))
       return FALSE;
 
    combo_triggered = trigger_elemental_spell_combo(ch, victim, obj, sn, level);
    if (!combo_triggered)
-      apply_elemental_spell_debuff(ch, victim, sn, "@@lStatic arcs@@N keep dancing across your skin.\n\r");
+      apply_elemental_spell_debuff(ch, victim, sn,
+                                   "@@lStatic arcs@@N keep dancing across your skin.\n\r");
 
    return TRUE;
 }
@@ -588,15 +600,15 @@ bool spell_elemental_deluge(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    bool combo_triggered;
 
-   if (!cast_wizard_elemental_dot_spell(sn, level, ch, victim, obj,
-                                        "@@gA grand @@lwater@@g deluge crashes from $n's hands!@@N",
-                                        "@@g$n is overwhelmed by a grand @@lwater@@g deluge!@@N",
-                                        ELEMENT_WATER))
+   if (!cast_wizard_elemental_dot_spell(
+           sn, level, ch, victim, obj, "@@gA grand @@lwater@@g deluge crashes from $n's hands!@@N",
+           "@@g$n is overwhelmed by a grand @@lwater@@g deluge!@@N", ELEMENT_WATER))
       return FALSE;
 
    combo_triggered = trigger_elemental_spell_combo(ch, victim, obj, sn, level);
    if (!combo_triggered)
-      apply_elemental_spell_debuff(ch, victim, sn, "@@aFrost clings to your body, slowing your recovery.@@N\n\r");
+      apply_elemental_spell_debuff(ch, victim, sn,
+                                   "@@aFrost clings to your body, slowing your recovery.@@N\n\r");
 
    return TRUE;
 }
@@ -606,10 +618,10 @@ bool spell_elemental_rupture(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DAT
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    bool combo_triggered;
 
-   if (!cast_wizard_elemental_dot_spell(sn, level, ch, victim, obj,
-                                        "@@gA grand @@bearth@@g rupture tears outward from $n's hands!@@N",
-                                        "@@g$n is torn by a grand @@bearth@@g rupture!@@N",
-                                        ELE_EARTH))
+   if (!cast_wizard_elemental_dot_spell(
+           sn, level, ch, victim, obj,
+           "@@gA grand @@bearth@@g rupture tears outward from $n's hands!@@N",
+           "@@g$n is torn by a grand @@bearth@@g rupture!@@N", ELE_EARTH))
       return FALSE;
 
    combo_triggered = trigger_elemental_spell_combo(ch, victim, obj, sn, level);
@@ -627,13 +639,13 @@ bool spell_wraith_touch(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
 
    if (obj == NULL)
    {
-      dam = 150 + dice(ch->class_level[CLASS_NEC]/2, 20);
+      dam = 150 + dice(ch->class_level[CLASS_NEC] / 2, 20);
       act("@@RA @@dwraithlike hand @@Rleaps forth from $n!@@N", ch, NULL, NULL, TO_ROOM);
       send_to_char("@@RA @@dwraithlike hand @@Rleaps forth from your hands!@@N\n\r", ch);
    }
    else
    {
-      dam = 150 + dice(ch->class_level[CLASS_NEC]/2, 20);
+      dam = 150 + dice(ch->class_level[CLASS_NEC] / 2, 20);
       act("@@RA @@dwraithlike hand @@Rleaps forth from $p!@@N", ch, obj, NULL, TO_ROOM);
       act("@@RA @@dwraithlike hand @@Rleaps forth from $p!@@N", ch, obj, NULL, TO_CHAR);
    }
@@ -656,7 +668,7 @@ bool spell_thought_vise(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    if (obj == NULL)
    {
       int base = ch->class_level[CLASS_EGO];
-      dam = 250 + dice(base/2, 20);
+      dam = 250 + dice(base / 2, 20);
       act("@@rA crushing weight brushes your mind, then is gone.@@N", ch, NULL, NULL, TO_ROOM);
       send_to_char("@@rYou clench your mind, crushing the thoughts of your foe.\n\r@@N", ch);
    }
@@ -951,7 +963,7 @@ bool spell_sonic_blast(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    AFFECT_DATA af;
    int dam;
-   dam = 150 + dice(ch->class_level[CLASS_EGO]/2, 20);
+   dam = 150 + dice(ch->class_level[CLASS_EGO] / 2, 20);
    if (sp_damage(obj, ch, victim, dam, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, sn, TRUE))
    {
       if (is_affected(ch, sn))
@@ -1001,7 +1013,7 @@ bool spell_purify(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    }
    else
       send_to_char("You aren't poisoned.\r\n", ch);
-   if (can_use_skill(ch, gsn_enhanced_purify) )
+   if (can_use_skill(ch, gsn_enhanced_purify))
    {
       spell_cure_blindness(sn, level, ch, vo, obj);
       spell_remove_curse(sn, level, ch, vo, obj);
@@ -1014,7 +1026,8 @@ bool spell_regen(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    AFFECT_DATA af;
 
-   int base_heal = spell_regen_base_heal(ch->class_level[CLASS_MAG], ch->class_level[CLASS_SOR], ch->class_level[CLASS_WIZ], get_spellpower(ch));
+   int base_heal = spell_regen_base_heal(ch->class_level[CLASS_MAG], ch->class_level[CLASS_SOR],
+                                         ch->class_level[CLASS_WIZ], get_spellpower(ch));
 
    if (is_affected(ch, sn) || is_affected(ch, skill_lookup("regen")))
       return FALSE;
@@ -1107,7 +1120,7 @@ bool spell_overdrive(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    if (ch != victim)
    {
-      send_to_char("You can't target someone else with overdrive!\n\r",ch);
+      send_to_char("You can't target someone else with overdrive!\n\r", ch);
       return FALSE;
    }
 
@@ -1134,7 +1147,7 @@ bool spell_magical_supremacy(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DAT
 
    if (ch != victim)
    {
-      send_to_char("You can't target someone else for supremacy!\n\r",ch);
+      send_to_char("You can't target someone else for supremacy!\n\r", ch);
       return FALSE;
    }
 
@@ -1189,15 +1202,17 @@ bool spell_feeble_mind(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    AFFECT_DATA af;
 
-   if (ch->cooldown[skill_lookup("feeble mind")] > 0 || ch->cooldown[skill_lookup("feeble body")] > 0)
+   if (ch->cooldown[skill_lookup("feeble mind")] > 0 ||
+       ch->cooldown[skill_lookup("feeble body")] > 0)
    {
-      send_to_char("Your feeble spells are currently on cooldown\n\r",ch);
+      send_to_char("Your feeble spells are currently on cooldown\n\r", ch);
       return FALSE;
    }
 
-   if (is_affected(ch, sn) || is_affected(ch, skill_lookup("feeble mind")) || is_affected(ch, skill_lookup("feeble body")))
+   if (is_affected(ch, sn) || is_affected(ch, skill_lookup("feeble mind")) ||
+       is_affected(ch, skill_lookup("feeble body")))
    {
-      send_to_char("Your target already is feebly afflicted!\n\r",ch);
+      send_to_char("Your target already is feebly afflicted!\n\r", ch);
       return FALSE;
    }
 
@@ -1222,18 +1237,19 @@ bool spell_feeble_body(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    AFFECT_DATA af;
 
-   if (ch->cooldown[skill_lookup("feeble mind")] > 0 || ch->cooldown[skill_lookup("feeble body")] > 0)
+   if (ch->cooldown[skill_lookup("feeble mind")] > 0 ||
+       ch->cooldown[skill_lookup("feeble body")] > 0)
    {
-      send_to_char("Your feeble spells are currently on cooldown\n\r",ch);
+      send_to_char("Your feeble spells are currently on cooldown\n\r", ch);
       return FALSE;
    }
 
-   if (is_affected(ch, sn) || is_affected(ch, skill_lookup("feeble mind")) || is_affected(ch, skill_lookup("feeble body")))
+   if (is_affected(ch, sn) || is_affected(ch, skill_lookup("feeble mind")) ||
+       is_affected(ch, skill_lookup("feeble body")))
    {
-      send_to_char("Your target already is feebly afflicted!\n\r",ch);
+      send_to_char("Your target already is feebly afflicted!\n\r", ch);
       return FALSE;
    }
-
 
    ch->cooldown[skill_lookup("feeble mind")] = 10;
    ch->cooldown[skill_lookup("feeble body")] = 10;

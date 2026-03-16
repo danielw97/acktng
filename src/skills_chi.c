@@ -9,389 +9,398 @@ void pug_attack(CHAR_DATA *ch, char *argument, int gsn);
 
 int chi_skill_cost(int base_cost, int cooldown)
 {
-    if (cooldown > 0)
-        return base_cost * 2;
+   if (cooldown > 0)
+      return base_cost * 2;
 
-    return base_cost;
+   return base_cost;
 }
 
 bool chi_should_block_mindoverbody(bool has_mindoverbody, bool has_named_mindoverbody)
 {
-    return has_mindoverbody || has_named_mindoverbody;
+   return has_mindoverbody || has_named_mindoverbody;
 }
 
 int get_chi(CHAR_DATA *ch)
 {
-    int max_chi = 0;
+   int max_chi = 0;
 
-    if (ch->class_level[CLASS_PUG] > 0)
-        max_chi = 15;
+   if (ch->class_level[CLASS_PUG] > 0)
+      max_chi = 15;
 
-    if (!IS_NPC(ch) && ch->pcdata->reincarnations[CLASS_PUG] >= 20)
-        max_chi = 15;
+   if (!IS_NPC(ch) && ch->pcdata->reincarnations[CLASS_PUG] >= 20)
+      max_chi = 15;
 
-    if (max_chi == 0)
-       return max_chi;
+   if (max_chi == 0)
+      return max_chi;
 
-    if (ch->class_level[CLASS_MON] > 0 || ch->class_level[CLASS_BRA] > 0)
-        max_chi = 20;
+   if (ch->class_level[CLASS_MON] > 0 || ch->class_level[CLASS_BRA] > 0)
+      max_chi = 20;
 
-    if (!IS_NPC(ch) && (ch->pcdata->reincarnations[MAX_CLASS + CLASS_MON] + ch->pcdata->reincarnations[MAX_CLASS + CLASS_BRA] >= 20))
-        max_chi = 20;
+   if (!IS_NPC(ch) && (ch->pcdata->reincarnations[MAX_CLASS + CLASS_MON] +
+                           ch->pcdata->reincarnations[MAX_CLASS + CLASS_BRA] >=
+                       20))
+      max_chi = 20;
 
-    if (ch->class_level[CLASS_MAR] > 0)
-        max_chi = 25;
+   if (ch->class_level[CLASS_MAR] > 0)
+      max_chi = 25;
 
-    if (!IS_NPC(ch) && ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + CLASS_MAR] >= 20)
-        max_chi = 25;
+   if (!IS_NPC(ch) && ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + CLASS_MAR] >= 20)
+      max_chi = 25;
 
-    if (ch->chi > max_chi)
-        ch->chi = max_chi;
+   if (ch->chi > max_chi)
+      ch->chi = max_chi;
 
-    return ch->chi;
+   return ch->chi;
 }
 
 void do_chiblock(CHAR_DATA *ch, char *argument)
 {
-    AFFECT_DATA af;
+   AFFECT_DATA af;
 
-    if (IS_NPC(ch))
-        return;
+   if (IS_NPC(ch))
+      return;
 
-    if (!is_fighting(ch))
-    {
-        send_to_char("You can only prepare for a chi block when fightingg!\n\r", ch);
-        return;
-    }
+   if (!is_fighting(ch))
+   {
+      send_to_char("You can only prepare for a chi block when fightingg!\n\r", ch);
+      return;
+   }
 
-    if (is_affected(ch, gsn_chiblock))
-    {
-        send_to_char("You already are prepared to perform a chi block!!\n\r", ch);
-        return;
-    }
+   if (is_affected(ch, gsn_chiblock))
+   {
+      send_to_char("You already are prepared to perform a chi block!!\n\r", ch);
+      return;
+   }
 
-    if (!can_use_skill_message(ch, gsn_chiblock))
-        return;
+   if (!can_use_skill_message(ch, gsn_chiblock))
+      return;
 
-    int cost = chi_skill_cost(5, ch->cooldown[gsn_chiblock]);
+   int cost = chi_skill_cost(5, ch->cooldown[gsn_chiblock]);
 
-    if (get_chi(ch) < cost)
-    {
-        send_to_char("You do not have sufficient chi to use chiblock.\n\r", ch);
-        return;
-    }
+   if (get_chi(ch) < cost)
+   {
+      send_to_char("You do not have sufficient chi to use chiblock.\n\r", ch);
+      return;
+   }
 
-    ch->chi -= cost;
+   ch->chi -= cost;
 
-    raise_skill(ch, gsn_chiblock);
+   raise_skill(ch, gsn_chiblock);
 
-    WAIT_STATE(ch, skill_table[gsn_chiblock].beats);
+   WAIT_STATE(ch, skill_table[gsn_chiblock].beats);
 
-    ch->cooldown[gsn_chiblock] = 10;
+   ch->cooldown[gsn_chiblock] = 10;
 
-    af.type = gsn_chiblock;
-    af.duration = get_max_combo(ch) - 3;
-    af.duration_type = DURATION_ROUND;
-    af.location = APPLY_AC;
-    af.modifier = -1;
-    af.bitvector = 0;
-    affect_to_char(ch, &af);
+   af.type = gsn_chiblock;
+   af.duration = get_max_combo(ch) - 3;
+   af.duration_type = DURATION_ROUND;
+   af.location = APPLY_AC;
+   af.modifier = -1;
+   af.bitvector = 0;
+   affect_to_char(ch, &af);
 
-    send_to_char("You prepare to block with your chi!\n\r", ch);
-    act("$n prepares to block with their chi!", ch, NULL, NULL, TO_ROOM);
+   send_to_char("You prepare to block with your chi!\n\r", ch);
+   act("$n prepares to block with their chi!", ch, NULL, NULL, TO_ROOM);
 }
 
 void do_chakra(CHAR_DATA *ch, char *argument)
 {
-    if (!is_fighting(ch))
-    {
-        send_to_char("You can only prepare for a chakra when fighting!\n\r", ch);
-        return;
-    }
+   if (!is_fighting(ch))
+   {
+      send_to_char("You can only prepare for a chakra when fighting!\n\r", ch);
+      return;
+   }
 
-    if (!can_use_skill_message(ch, gsn_chakra))
-        return;
+   if (!can_use_skill_message(ch, gsn_chakra))
+      return;
 
-    int cost = chi_skill_cost(5, ch->cooldown[gsn_chiblock]);
+   int cost = chi_skill_cost(5, ch->cooldown[gsn_chiblock]);
 
-    if (get_chi(ch) < cost)
-    {
-        send_to_char("You do not have sufficient chi to use chakra.\n\r", ch);
-        return;
-    }
+   if (get_chi(ch) < cost)
+   {
+      send_to_char("You do not have sufficient chi to use chakra.\n\r", ch);
+      return;
+   }
 
-    ch->chi -= cost;
+   ch->chi -= cost;
 
-    raise_skill(ch, gsn_chakra);
+   raise_skill(ch, gsn_chakra);
 
-    WAIT_STATE(ch, skill_table[gsn_chakra].beats);
+   WAIT_STATE(ch, skill_table[gsn_chakra].beats);
 
-    act("$n focuses their chakra, and $n looks better.", ch, NULL, NULL, TO_ROOM);
-    act("You focus your chakra, and you feel noticably better.", ch, NULL, NULL, TO_CHAR);
+   act("$n focuses their chakra, and $n looks better.", ch, NULL, NULL, TO_ROOM);
+   act("You focus your chakra, and you feel noticably better.", ch, NULL, NULL, TO_CHAR);
 
-    ch->cooldown[gsn_chakra] = 10;
+   ch->cooldown[gsn_chakra] = 10;
 
-    int base_heal = 5;
+   int base_heal = 5;
 
-    if (ch->class_level[CLASS_MAR] > 0)
-        base_heal = 7;
+   if (ch->class_level[CLASS_MAR] > 0)
+      base_heal = 7;
 
-    int heal = class_heal_character(ch, ch, (ch->class_level[CLASS_MON] + ch->class_level[CLASS_MAR]) * base_heal, gsn_chakra, CLASS_MON, FALSE);
+   int heal = class_heal_character(
+       ch, ch, (ch->class_level[CLASS_MON] + ch->class_level[CLASS_MAR]) * base_heal, gsn_chakra,
+       CLASS_MON, FALSE);
 
-    heal_character(ch, ch, heal, gsn_chakra, FALSE);
+   heal_character(ch, ch, heal, gsn_chakra, FALSE);
 
-    int dur = 1;
-    if (ch->class_level[CLASS_MAR] > 0)
-        dur = 2;
+   int dur = 1;
+   if (ch->class_level[CLASS_MAR] > 0)
+      dur = 2;
 
-    AFFECT_DATA af;
+   AFFECT_DATA af;
 
-    af.type = gsn_chakra;
-    af.duration = dur;
-    af.duration_type = DURATION_ROUND;
-    af.location = APPLY_DAMROLL;
-    af.modifier = ch->class_level[CLASS_MON] * 5 + ch->class_level[CLASS_MAR] * 5;
-    af.bitvector = 0;
-    affect_to_char(ch, &af);
+   af.type = gsn_chakra;
+   af.duration = dur;
+   af.duration_type = DURATION_ROUND;
+   af.location = APPLY_DAMROLL;
+   af.modifier = ch->class_level[CLASS_MON] * 5 + ch->class_level[CLASS_MAR] * 5;
+   af.bitvector = 0;
+   affect_to_char(ch, &af);
 }
 
 void do_phantomfist(CHAR_DATA *ch, char *argument)
 {
-    if (!is_fighting(ch))
-    {
-        send_to_char("You can only prepare for a phantomfist when fighting!\n\r", ch);
-        return;
-    }
+   if (!is_fighting(ch))
+   {
+      send_to_char("You can only prepare for a phantomfist when fighting!\n\r", ch);
+      return;
+   }
 
-    if (!can_use_skill_message(ch, gsn_phantomfist))
-        return;
+   if (!can_use_skill_message(ch, gsn_phantomfist))
+      return;
 
-    ch->chi += 2;
+   ch->chi += 2;
 
-    raise_skill(ch, gsn_phantomfist);
+   raise_skill(ch, gsn_phantomfist);
 
-    WAIT_STATE(ch, skill_table[gsn_phantomfist].beats);
+   WAIT_STATE(ch, skill_table[gsn_phantomfist].beats);
 
-    act("$n focuses their chi, and begins to move like a phantom.", ch, NULL, NULL, TO_ROOM);
-    act("You focus your chi, and begin to move like a phantom.", ch, NULL, NULL, TO_CHAR);
+   act("$n focuses their chi, and begins to move like a phantom.", ch, NULL, NULL, TO_ROOM);
+   act("You focus your chi, and begin to move like a phantom.", ch, NULL, NULL, TO_CHAR);
 
-    ch->cooldown[gsn_phantomfist] = 10;
+   ch->cooldown[gsn_phantomfist] = 10;
 
-    AFFECT_DATA af;
+   AFFECT_DATA af;
 
-    af.type = gsn_phantomfist;
-    af.duration = 2;
-    af.duration_type = DURATION_ROUND;
-    af.location = APPLY_SPEED;
-    af.modifier = 3;
-    af.bitvector = 0;
-    affect_to_char(ch, &af);
+   af.type = gsn_phantomfist;
+   af.duration = 2;
+   af.duration_type = DURATION_ROUND;
+   af.location = APPLY_SPEED;
+   af.modifier = 3;
+   af.bitvector = 0;
+   affect_to_char(ch, &af);
 }
 
 void do_spinfist(CHAR_DATA *ch, char *argument)
 {
-    CHAR_DATA *vch;
-    CHAR_DATA *vch_next;
+   CHAR_DATA *vch;
+   CHAR_DATA *vch_next;
 
-    if (!can_use_skill_message(ch, gsn_spinfist))
-        return;
+   if (!can_use_skill_message(ch, gsn_spinfist))
+      return;
 
-    int cost = chi_skill_cost(5, ch->cooldown[gsn_spinfist]);
+   int cost = chi_skill_cost(5, ch->cooldown[gsn_spinfist]);
 
-    if (get_chi(ch) < cost)
-    {
-        send_to_char("You do not have sufficient chi to use spinfist.\n\r", ch);
-        return;
-    }
+   if (get_chi(ch) < cost)
+   {
+      send_to_char("You do not have sufficient chi to use spinfist.\n\r", ch);
+      return;
+   }
 
-    act("You perform a spinfist!", ch, NULL, NULL, TO_CHAR);
-    act("$n performs a spinfist!", ch, NULL, NULL, TO_ROOM);
-    for (vch = ch->in_room->first_person; vch != NULL; vch = vch_next)
-    {
-        vch_next = vch->next_in_room;
-        if (vch->in_room == NULL)
-            continue;
+   act("You perform a spinfist!", ch, NULL, NULL, TO_CHAR);
+   act("$n performs a spinfist!", ch, NULL, NULL, TO_ROOM);
+   for (vch = ch->in_room->first_person; vch != NULL; vch = vch_next)
+   {
+      vch_next = vch->next_in_room;
+      if (vch->in_room == NULL)
+         continue;
 
-        if (vch->in_room == ch->in_room)
-        {
-            if (vch != ch && (vch->in_room == ch->in_room) && (IS_NPC(ch) ? !IS_NPC(vch) : IS_NPC(vch)) && (vch->master != ch) && (!is_same_group(ch, vch)))
-            {
-                if (can_hit_skill(ch, vch, gsn_spinfist))
-                    war_attack(ch, vch->name, gsn_spinfist);
-            }
-        }
-    }
+      if (vch->in_room == ch->in_room)
+      {
+         if (vch != ch && (vch->in_room == ch->in_room) &&
+             (IS_NPC(ch) ? !IS_NPC(vch) : IS_NPC(vch)) && (vch->master != ch) &&
+             (!is_same_group(ch, vch)))
+         {
+            if (can_hit_skill(ch, vch, gsn_spinfist))
+               war_attack(ch, vch->name, gsn_spinfist);
+         }
+      }
+   }
 
-    ch->cooldown[gsn_spinfist] = 10;
+   ch->cooldown[gsn_spinfist] = 10;
 
-    return;
+   return;
 }
 
 void do_pummel(CHAR_DATA *ch, char *argument)
 {
-    pug_attack(ch, argument, gsn_pummel);
+   pug_attack(ch, argument, gsn_pummel);
 }
 
 void do_aurabolt(CHAR_DATA *ch, char *argument)
 {
-    pug_attack(ch, argument, gsn_aurabolt);
+   pug_attack(ch, argument, gsn_aurabolt);
 }
 
 void do_palmstrike(CHAR_DATA *ch, char *argument)
 {
-    pug_attack(ch, argument, gsn_palmstrike);
+   pug_attack(ch, argument, gsn_palmstrike);
 }
 
 void pug_attack(CHAR_DATA *ch, char *argument, int gsn)
 {
-    CHAR_DATA *victim;
-    char arg[MAX_INPUT_LENGTH];
-    char actbuf[MAX_STRING_LENGTH];
-    int dam;
+   CHAR_DATA *victim;
+   char arg[MAX_INPUT_LENGTH];
+   char actbuf[MAX_STRING_LENGTH];
+   int dam;
 
-    one_argument(argument, arg);
+   one_argument(argument, arg);
 
-    if (arg[0] == '\0')
-    {
-        strcpy(arg, "enemy");
-    }
+   if (arg[0] == '\0')
+   {
+      strcpy(arg, "enemy");
+   }
 
-    if (!can_use_skill_message(ch, gsn))
-        return;
+   if (!can_use_skill_message(ch, gsn))
+      return;
 
-    if (((victim = get_char_room(ch, argument)) == NULL) && !is_fighting(ch))
-    {
-        send_to_char("No such victim!\n\r", ch);
-        return;
-    }
+   if (((victim = get_char_room(ch, argument)) == NULL) && !is_fighting(ch))
+   {
+      send_to_char("No such victim!\n\r", ch);
+      return;
+   }
 
-    if (victim == NULL)
-        victim = ch->fighting;
+   if (victim == NULL)
+      victim = ch->fighting;
 
-    if (!subtract_energy_cost(ch, gsn))
-        return;
+   if (!subtract_energy_cost(ch, gsn))
+      return;
 
-    dam = number_range(get_psuedo_level(ch) * get_curr_str(ch) / 30, get_psuedo_level(ch) * get_curr_str(ch) / 20);
+   dam = number_range(get_psuedo_level(ch) * get_curr_str(ch) / 30,
+                      get_psuedo_level(ch) * get_curr_str(ch) / 20);
 
-    if (dam < 1)
-        dam = 1;
+   if (dam < 1)
+      dam = 1;
 
-    if (gsn != gsn_spinfist)
-        ch->chi++;
+   if (gsn != gsn_spinfist)
+      ch->chi++;
 
-    if (gsn == gsn_palmstrike)
-    {
-        dam *= 4;
-        ch->cooldown[gsn_palmstrike] = 5;
-    }
+   if (gsn == gsn_palmstrike)
+   {
+      dam *= 4;
+      ch->cooldown[gsn_palmstrike] = 5;
+   }
 
-    WAIT_STATE(ch, skill_table[gsn].beats);
+   WAIT_STATE(ch, skill_table[gsn].beats);
 
-    raise_skill(ch, gsn);
+   raise_skill(ch, gsn);
 
-    int element = ELE_PHYSICAL;
+   int element = ELE_PHYSICAL;
 
-    if (gsn == gsn_aurabolt)
-        element = ELE_PHYSICAL | ELE_HOLY;
+   if (gsn == gsn_aurabolt)
+      element = ELE_PHYSICAL | ELE_HOLY;
 
-    if (IS_NPC(ch))
-        dam /= 2;
+   if (IS_NPC(ch))
+      dam /= 2;
 
-    check_killer(ch, victim);
-    if (can_hit_skill(ch, victim, gsn))
-    {
-        char actbuf[MSL];
-        sprintf(actbuf, "$n %ss $N!!", skill_table[gsn].name);
-        act(actbuf, ch, NULL, victim, TO_NOTVICT);
-        sprintf(actbuf, "$n %ss you really hard!!", skill_table[gsn].name);
-        act(actbuf, ch, NULL, victim, TO_VICT);
-        sprintf(actbuf, "You %s $N!!", skill_table[gsn].name);
-        act(actbuf, ch, NULL, victim, TO_CHAR);
+   check_killer(ch, victim);
+   if (can_hit_skill(ch, victim, gsn))
+   {
+      char actbuf[MSL];
+      sprintf(actbuf, "$n %ss $N!!", skill_table[gsn].name);
+      act(actbuf, ch, NULL, victim, TO_NOTVICT);
+      sprintf(actbuf, "$n %ss you really hard!!", skill_table[gsn].name);
+      act(actbuf, ch, NULL, victim, TO_VICT);
+      sprintf(actbuf, "You %s $N!!", skill_table[gsn].name);
+      act(actbuf, ch, NULL, victim, TO_CHAR);
 
-        calculate_damage(ch, victim, dam, gsn, element, TRUE);
-    }
-    else
-    {
-        sprintf(actbuf, "$n tries to %s $N, but misses!", skill_table[gsn].name);
-        act(actbuf, ch, NULL, victim, TO_NOTVICT);
-        sprintf(actbuf, "$N tries to %s you, but misses!", skill_table[gsn].name);
-        act(actbuf, ch, NULL, victim, TO_VICT);
-        sprintf(actbuf, "You try to %s $N, but miss!", skill_table[gsn].name);
-        act(actbuf, ch, NULL, victim, TO_CHAR);
-        set_fighting(victim, ch, TRUE);
-    }
+      calculate_damage(ch, victim, dam, gsn, element, TRUE);
+   }
+   else
+   {
+      sprintf(actbuf, "$n tries to %s $N, but misses!", skill_table[gsn].name);
+      act(actbuf, ch, NULL, victim, TO_NOTVICT);
+      sprintf(actbuf, "$N tries to %s you, but misses!", skill_table[gsn].name);
+      act(actbuf, ch, NULL, victim, TO_VICT);
+      sprintf(actbuf, "You try to %s $N, but miss!", skill_table[gsn].name);
+      act(actbuf, ch, NULL, victim, TO_CHAR);
+      set_fighting(victim, ch, TRUE);
+   }
 }
 
 void do_mindoverbody(CHAR_DATA *ch, char *argument)
 {
-    AFFECT_DATA af;
+   AFFECT_DATA af;
 
-    if (!is_fighting(ch))
-    {
-        send_to_char("You can only perform mindoverbody when fighting!\n\r", ch);
-        return;
-    }
+   if (!is_fighting(ch))
+   {
+      send_to_char("You can only perform mindoverbody when fighting!\n\r", ch);
+      return;
+   }
 
-    if (!can_use_skill_message(ch, gsn_mindoverbody))
-        return;
+   if (!can_use_skill_message(ch, gsn_mindoverbody))
+      return;
 
-    if (!subtract_energy_cost(ch, gsn_mindoverbody))
-        return;
+   if (!subtract_energy_cost(ch, gsn_mindoverbody))
+      return;
 
-    ch->chi++;
+   ch->chi++;
 
-    ch->cooldown[gsn_mindoverbody] = 15;
+   ch->cooldown[gsn_mindoverbody] = 15;
 
-    int base_heal = ch->class_level[CLASS_PUG];
+   int base_heal = ch->class_level[CLASS_PUG];
 
-    base_heal += ch->class_level[CLASS_MON] * 2;
-    base_heal += ch->class_level[CLASS_BRA] * 2;
-    base_heal += ch->class_level[CLASS_MAR] * 5;
+   base_heal += ch->class_level[CLASS_MON] * 2;
+   base_heal += ch->class_level[CLASS_BRA] * 2;
+   base_heal += ch->class_level[CLASS_MAR] * 5;
 
-    if (chi_should_block_mindoverbody(is_affected(ch, gsn_mindoverbody), is_affected(ch, skill_lookup("mindoverbody"))))
-        return;
-    af.type = gsn_mindoverbody;
-    af.duration = 3;
-    af.location = APPLY_HOT;
-    af.duration_type = DURATION_ROUND;
-    af.modifier = base_heal;
-    af.bitvector = 0;
-    af.caster = ch;
-    affect_to_char(ch, &af);
-    act("$n begins to focus on mind over body.", ch, NULL, NULL, TO_ROOM);
-    send_to_char("You begin to focus on mind over body.\n\r", ch);
+   if (chi_should_block_mindoverbody(is_affected(ch, gsn_mindoverbody),
+                                     is_affected(ch, skill_lookup("mindoverbody"))))
+      return;
+   af.type = gsn_mindoverbody;
+   af.duration = 3;
+   af.location = APPLY_HOT;
+   af.duration_type = DURATION_ROUND;
+   af.modifier = base_heal;
+   af.bitvector = 0;
+   af.caster = ch;
+   affect_to_char(ch, &af);
+   act("$n begins to focus on mind over body.", ch, NULL, NULL, TO_ROOM);
+   send_to_char("You begin to focus on mind over body.\n\r", ch);
 }
 
 void do_flurry(CHAR_DATA *ch, char *argument)
 {
-    char buf[MSL];
-    if (!is_fighting(ch))
-    {
-        send_to_char("You can only perform a flurry when fighting!\n\r", ch);
-        return;
-    }
+   char buf[MSL];
+   if (!is_fighting(ch))
+   {
+      send_to_char("You can only perform a flurry when fighting!\n\r", ch);
+      return;
+   }
 
-    if (!can_use_skill_message(ch, gsn_flurry))
-        return;
+   if (!can_use_skill_message(ch, gsn_flurry))
+      return;
 
-    if (get_chi(ch) < 5)
-    {
-        sprintf(buf, "You must have at least 5 chi to initiate a flurry, you only have %d!\n\r", ch->chi);
-        send_to_char(buf, ch);
-        return;
-    }
+   if (get_chi(ch) < 5)
+   {
+      sprintf(buf, "You must have at least 5 chi to initiate a flurry, you only have %d!\n\r",
+              ch->chi);
+      send_to_char(buf, ch);
+      return;
+   }
 
-    raise_skill(ch, gsn_flurry);
+   raise_skill(ch, gsn_flurry);
 
-    WAIT_STATE(ch, skill_table[gsn_flurry].beats);
+   WAIT_STATE(ch, skill_table[gsn_flurry].beats);
 
-    act("$n focuses their chi, and prepares for a flurry!", ch, NULL, NULL, TO_ROOM);
-    act("You focus your chi, and prepare for a flurry!", ch, NULL, NULL, TO_CHAR);
+   act("$n focuses their chi, and prepares for a flurry!", ch, NULL, NULL, TO_ROOM);
+   act("You focus your chi, and prepare for a flurry!", ch, NULL, NULL, TO_CHAR);
 
-    ch->cooldown[gsn_flurry] = 30;
+   ch->cooldown[gsn_flurry] = 30;
 
-    for (; get_chi(ch) > 0; ch->chi--)
-    {
-        one_hit(ch, ch->fighting, TYPE_HIT);
-    }
+   for (; get_chi(ch) > 0; ch->chi--)
+   {
+      one_hit(ch, ch->fighting, TYPE_HIT);
+   }
 }

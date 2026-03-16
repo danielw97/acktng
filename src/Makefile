@@ -41,10 +41,15 @@ O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o a
 	  stance.o strfuns.o sysdata.o tables.o trigger.o update.o wizutil.o \
 	  write.o $(AI_SPEC_SRCS)
 
-.PHONY: all clean purge unit-tests integration-test integration-test-telnet web
+# Source files for linting (all .c and .h excluding third-party sha256 and build artifacts)
+LINT_SOURCES = $(shell find . -name '*.c' -o -name '*.h' | grep -v sha256 | grep -v './build/' | sort)
+
+.PHONY: all clean purge unit-tests integration-test integration-test-telnet web lint format
 
 all:
 	$(MAKE) clean
+	$(MAKE) format
+	$(MAKE) lint
 	$(MAKE) web
 	$(MAKE) ack
 	$(MAKE) unit-tests
@@ -89,3 +94,11 @@ $(OBJDIR)/%.o: %.c headers/ack.h
 scan: $(OBJDIR)/scan.o
 	rm -f scan
 	$(CC) $(L_FLAGS) -o scan $(OBJDIR)/scan.o
+
+# Check that all source files match the .clang-format style (fails if any differ)
+lint:
+	clang-format --dry-run --Werror $(LINT_SOURCES)
+
+# Auto-apply the .clang-format style to all source files
+format:
+	clang-format -i $(LINT_SOURCES)

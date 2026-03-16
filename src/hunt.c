@@ -212,17 +212,17 @@ sh_int h_find_dir(ROOM_INDEX_DATA *room, ROOM_INDEX_DATA *target, int h_flags)
    return -1;
 }
 
-bool set_hunt(CHAR_DATA *ch, CHAR_DATA *fch, CHAR_DATA *vch, OBJ_DATA *vobj, int set_flags, int rem_flags)
+bool set_hunt(CHAR_DATA *ch, CHAR_DATA *fch, CHAR_DATA *vch, OBJ_DATA *vobj, int set_flags,
+              int rem_flags)
 {
    int nflags;
    ROOM_INDEX_DATA *troom;
    char buf[MAX_STRING_LENGTH];
 
-   troom = (vch ? vch->in_room : vobj ? vobj->in_room
-                                      : NULL);
+   troom = (vch ? vch->in_room : vobj ? vobj->in_room : NULL);
    nflags = ((ch ? ch->hunt_flags : 0) | set_flags) & ~rem_flags;
-   if (!ch || !troom || (vch != NULL && IS_SET(vch->act, ACT_NO_HUNT))
-       || h_find_dir(ch->in_room, troom, nflags) < 0)
+   if (!ch || !troom || (vch != NULL && IS_SET(vch->act, ACT_NO_HUNT)) ||
+       h_find_dir(ch->in_room, troom, nflags) < 0)
       return FALSE;
    ch->hunting = vch;
    ch->hunt_obj = vobj;
@@ -237,9 +237,9 @@ bool set_hunt(CHAR_DATA *ch, CHAR_DATA *fch, CHAR_DATA *vch, OBJ_DATA *vobj, int
       ch->searching = NULL;
    }
    ch->hunt_flags = nflags;
-   sprintf(buf, "%s has started hunting (%s) %s",
-           NAME(ch),
-           (vch ? IS_NPC(vch) ? "mobile" : "player" : "object"), (vch ? NAME(vch) : vobj->short_descr));
+   sprintf(buf, "%s has started hunting (%s) %s", NAME(ch),
+           (vch ? IS_NPC(vch) ? "mobile" : "player" : "object"),
+           (vch ? NAME(vch) : vobj->short_descr));
    if (fch)
       sprintf(buf + strlen(buf), " for %s", NAME(fch));
    monitor_chan(buf, MONITOR_HUNTING);
@@ -302,7 +302,8 @@ bool mob_hunt(CHAR_DATA *mob)
       {
          if (mob->hunt_obj->in_room == NULL)
          {
-            if (IS_SET(mob->hunt_flags, HUNT_CR) && mob->hunt_for && mob->hunt_obj->item_type == ITEM_CORPSE_PC)
+            if (IS_SET(mob->hunt_flags, HUNT_CR) && mob->hunt_for &&
+                mob->hunt_obj->item_type == ITEM_CORPSE_PC)
                act("$N tells you 'Someone else seems to have gotten to your "
                    "corpse before me.'",
                    mob->hunt_for, NULL, mob, TO_CHAR);
@@ -311,7 +312,8 @@ bool mob_hunt(CHAR_DATA *mob)
          }
          if (can_see_obj(mob, mob->hunt_obj) && mob->in_room == mob->hunt_obj->in_room)
          {
-            if (IS_SET(mob->hunt_flags, HUNT_CR) && mob->hunt_for && mob->hunt_obj->item_type == ITEM_CORPSE_PC)
+            if (IS_SET(mob->hunt_flags, HUNT_CR) && mob->hunt_for &&
+                mob->hunt_obj->item_type == ITEM_CORPSE_PC)
                act("$N tell you 'I have found your corpse.  I shall return it "
                    "to you now.",
                    mob->hunt_for, NULL, mob, TO_CHAR);
@@ -324,8 +326,10 @@ bool mob_hunt(CHAR_DATA *mob)
          if (!can_see_obj(mob, mob->hunt_obj) ||
              (dir = h_find_dir(mob->in_room, mob->hunt_obj->in_room, mob->hunt_flags)) < 0)
          {
-            if (IS_SET(mob->hunt_flags, HUNT_CR) && mob->hunt_for && mob->hunt_obj->item_type == ITEM_CORPSE_PC)
-               act("$N tells you 'I seem to have lost the way to your corpse.'", mob->hunt_for, NULL, mob, TO_CHAR);
+            if (IS_SET(mob->hunt_flags, HUNT_CR) && mob->hunt_for &&
+                mob->hunt_obj->item_type == ITEM_CORPSE_PC)
+               act("$N tells you 'I seem to have lost the way to your corpse.'", mob->hunt_for,
+                   NULL, mob, TO_CHAR);
             end_hunt(mob);
             return TRUE;
          }
@@ -346,7 +350,8 @@ bool mob_hunt(CHAR_DATA *mob)
       else if (mob->hunt_home)
       {
          dir = -1;
-         if (mob->in_room == mob->hunt_home || (dir = h_find_dir(mob->in_room, mob->hunt_home, mob->hunt_flags)) < 0)
+         if (mob->in_room == mob->hunt_home ||
+             (dir = h_find_dir(mob->in_room, mob->hunt_home, mob->hunt_flags)) < 0)
          {
             mob->hunt_home = NULL;
             mob->hunt_flags = mob->pIndexData->hunt_flags;
@@ -377,11 +382,13 @@ bool mob_hunt(CHAR_DATA *mob)
          case 1:
          case 2:
          case 3:
-            sprintf(buf, "$N tells you '%s seems to have disappeared!  I shall "
-                         "find %s though!'",
+            sprintf(buf,
+                    "$N tells you '%s seems to have disappeared!  I shall "
+                    "find %s though!'",
                     NAME(mob->hunting),
-                    (mob->hunting->sex == SEX_MALE ? "him" : mob->hunting->sex == SEX_FEMALE ? "her"
-                                                                                             : "it"));
+                    (mob->hunting->sex == SEX_MALE     ? "him"
+                     : mob->hunting->sex == SEX_FEMALE ? "her"
+                                                       : "it"));
             act(buf, mob->hunt_for, NULL, mob, TO_CHAR);
             return TRUE;
          }
@@ -412,7 +419,8 @@ bool mob_hunt(CHAR_DATA *mob)
    }
    if (mob->in_room == mob->hunting->in_room)
    {
-      if (IS_SET(mob->hunt_flags, HUNT_CR) && mob->hunt_obj && mob->hunt_obj->item_type == ITEM_CORPSE_PC)
+      if (IS_SET(mob->hunt_flags, HUNT_CR) && mob->hunt_obj &&
+          mob->hunt_obj->item_type == ITEM_CORPSE_PC)
       {
          act("$N tells you 'I have returned with your corpse!'", mob->hunting, NULL, mob, TO_CHAR);
          /*
@@ -431,10 +439,10 @@ bool mob_hunt(CHAR_DATA *mob)
       }
       if (IS_SET(mob->hunt_flags, HUNT_MERC) && mob->hunt_for)
       {
-         sprintf(buf, "$N tells you 'I have found %s!  Now %s shall die!'",
-                 NAME(mob->hunting),
-                 (mob->hunting->sex == SEX_FEMALE ? "she" : mob->hunting->sex == SEX_MALE ? "he"
-                                                                                          : "it"));
+         sprintf(buf, "$N tells you 'I have found %s!  Now %s shall die!'", NAME(mob->hunting),
+                 (mob->hunting->sex == SEX_FEMALE ? "she"
+                  : mob->hunting->sex == SEX_MALE ? "he"
+                                                  : "it"));
          act(buf, mob->hunt_for, NULL, mob, TO_CHAR);
       }
       switch (number_bits(2))
@@ -478,8 +486,9 @@ bool mob_hunt(CHAR_DATA *mob)
          case 1:
          case 2:
          case 3:
-            sprintf(buf, "$N tells you 'I seem to have lost %s's trail.  I shall "
-                         "find it again, though!'",
+            sprintf(buf,
+                    "$N tells you 'I seem to have lost %s's trail.  I shall "
+                    "find it again, though!'",
                     NAME(mob->hunting));
             act(buf, mob->hunt_for, NULL, mob, TO_CHAR);
             return TRUE;
@@ -530,7 +539,8 @@ void char_hunt(CHAR_DATA *ch)
       {
          if (!can_see_obj(ch, ch->hunt_obj) || !ch->hunt_obj->in_room)
          {
-            sprintf(buf, "@@RYou seem to have lost the trail to %s.@@N\n\r", ch->hunt_obj->short_descr);
+            sprintf(buf, "@@RYou seem to have lost the trail to %s.@@N\n\r",
+                    ch->hunt_obj->short_descr);
             send_to_char(buf, ch);
             end_hunt(ch);
          }
@@ -542,13 +552,15 @@ void char_hunt(CHAR_DATA *ch)
          }
          else if ((dir = h_find_dir(ch->in_room, ch->hunt_obj->in_room, ch->hunt_flags)) < 0)
          {
-            sprintf(buf, "@@RYou seem to have lost the trail to %s.@@N\n\r", ch->hunt_obj->short_descr);
+            sprintf(buf, "@@RYou seem to have lost the trail to %s.@@N\n\r",
+                    ch->hunt_obj->short_descr);
             send_to_char(buf, ch);
             end_hunt(ch);
          }
          else
          {
-            sprintf(buf, "@@RYou sense that %s is %s of here.@@N\n\r", ch->hunt_obj->short_descr, dir_name[dir]);
+            sprintf(buf, "@@RYou sense that %s is %s of here.@@N\n\r", ch->hunt_obj->short_descr,
+                    dir_name[dir]);
             send_to_char(buf, ch);
          }
       }
@@ -634,7 +646,6 @@ void do_hunt(CHAR_DATA *ch, char *argument)
    if (can_use_skill(ch, gsn_hunt))
       chance += 75;
 
-
    if (chance < number_percent())
    {
       CHAR_DATA *vch;
@@ -643,13 +654,13 @@ void do_hunt(CHAR_DATA *ch, char *argument)
       victim = NULL;
       for (vch = first_char; vch; vch = vch->next)
       {
-         if (IS_NPC(vch) && vch->in_room &&
-             vch->in_room->area == ch->in_room->area && vch->in_room != ch->in_room && number_range(0, vcnt) == 0)
+         if (IS_NPC(vch) && vch->in_room && vch->in_room->area == ch->in_room->area &&
+             vch->in_room != ch->in_room && number_range(0, vcnt) == 0)
             victim = vch;
          vcnt++;
       }
    }
-   
+
    /*
     * Max_level people can hunt through the world, and anyone who has
     * practiced over 70% can hunt through doors.. -- Alty
@@ -661,10 +672,11 @@ void do_hunt(CHAR_DATA *ch, char *argument)
       if (get_trust(ch) > MAX_MORTAL)
          SET_BIT(ch->hunt_flags, HUNT_WORLD);
 
-      if (can_use_skill(ch, gsn_hunt) )
+      if (can_use_skill(ch, gsn_hunt))
          SET_BIT(ch->hunt_flags, HUNT_OPENDOOR | HUNT_UNLOCKDOOR | HUNT_PICKDOOR);
    }
-   if (!victim || IS_SET(victim->act, ACT_NO_HUNT) || !set_hunt(ch, NULL, victim, NULL, 0, HUNT_CR | HUNT_MERC))
+   if (!victim || IS_SET(victim->act, ACT_NO_HUNT) ||
+       !set_hunt(ch, NULL, victim, NULL, 0, HUNT_CR | HUNT_MERC))
    {
       send_to_char("You couldn't find a trail.\n\r", ch);
       return;

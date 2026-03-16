@@ -47,16 +47,15 @@ DEC_TRIGGER(trig_restore);
 DEC_TRIGGER(trig_slay);
 DEC_TRIGGER(trig_transform);
 
-const struct trigger_type trigger_table[] = {
-    {"Transfer", FALSE, trig_transfer},
-    {"Restore", TRUE, trig_restore},
-    {"Slay", FALSE, trig_slay},
-    {"Transform", TRUE, trig_transform},
-    {
-        NULL,
-        FALSE,
-        NULL,
-    }};
+const struct trigger_type trigger_table[] = {{"Transfer", FALSE, trig_transfer},
+                                             {"Restore", TRUE, trig_restore},
+                                             {"Slay", FALSE, trig_slay},
+                                             {"Transform", TRUE, trig_transform},
+                                             {
+                                                 NULL,
+                                                 FALSE,
+                                                 NULL,
+                                             }};
 
 void trigger_show(CHAR_DATA *ch)
 {
@@ -151,7 +150,8 @@ void trig_transform(CHAR_DATA *ch, OBJ_DATA *obj)
 
    if ((mob = get_mob_index(obj->value[2])) == NULL)
    {
-      bugf("Trig_transform: invalid value[2] (%d) for object vnum %d", obj->value[2], obj->pIndexData->vnum);
+      bugf("Trig_transform: invalid value[2] (%d) for object vnum %d", obj->value[2],
+           obj->pIndexData->vnum);
       return;
    }
 

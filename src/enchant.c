@@ -53,8 +53,10 @@ void do_enchant(CHAR_DATA *ch, char *argument)
    AFFECT_DATA *this_aff;
    int cur_str = 0, cur_int = 0, cur_dex = 0, cur_wis = 0, cur_con = 0;
    int mod_str = 0, mod_int = 0, mod_dex = 0, mod_wis = 0, mod_con = 0;
-   int cur_mana = 0, cur_hitroll = 0, cur_move = 0, cur_armor = 0, cur_save = 0, cur_hit = 0, cur_damroll = 0;
-   int mod_mana = 0, mod_hitroll = 0, mod_move = 0, mod_armor = 0, mod_save = 0, mod_hit = 0, mod_damroll = 0;
+   int cur_mana = 0, cur_hitroll = 0, cur_move = 0, cur_armor = 0, cur_save = 0, cur_hit = 0,
+       cur_damroll = 0;
+   int mod_mana = 0, mod_hitroll = 0, mod_move = 0, mod_armor = 0, mod_save = 0, mod_hit = 0,
+       mod_damroll = 0;
    sh_int mod_item_weight = 0;
    bool legal_enchant = TRUE;
    sh_int qp_cost = 20;
@@ -74,11 +76,19 @@ void do_enchant(CHAR_DATA *ch, char *argument)
    if (arg1[0] == '\0' || (!is_name(arg1, "show buy")))
    {
       send_to_char("Syntax for enchanting objects:\n\r", ch);
-      send_to_char("  First, you must place at least one wearable item, and 1 or more enchantments\n\r", ch);
-      send_to_char("  into a spell matrix container, which you must hold.  Then, you must type \n\r", ch);
-      send_to_char("  enchant show to see the results of applying those enchantments to the item.  \n\r", ch);
-      send_to_char("  You may not enchant an item so that it's power would be greater than you can \n\r", ch);
-      send_to_char("  control at your current level.  Finally, once you are satisfied with the new \n\r", ch);
+      send_to_char(
+          "  First, you must place at least one wearable item, and 1 or more enchantments\n\r", ch);
+      send_to_char(
+          "  into a spell matrix container, which you must hold.  Then, you must type \n\r", ch);
+      send_to_char(
+          "  enchant show to see the results of applying those enchantments to the item.  \n\r",
+          ch);
+      send_to_char(
+          "  You may not enchant an item so that it's power would be greater than you can \n\r",
+          ch);
+      send_to_char(
+          "  control at your current level.  Finally, once you are satisfied with the new \n\r",
+          ch);
       send_to_char("  item's powers, type enchant buy.\n\r", ch);
       return;
    }
@@ -102,9 +112,11 @@ void do_enchant(CHAR_DATA *ch, char *argument)
 
    /* now, we tear apart the enchantments, and put them in add_mod vars */
 
-   for (this_obj = matrix->first_in_carry_list; this_obj != NULL; this_obj = this_obj->next_in_carry_list)
+   for (this_obj = matrix->first_in_carry_list; this_obj != NULL;
+        this_obj = this_obj->next_in_carry_list)
    {
-      if ((this_obj->item_type == ITEM_WEAPON) || (this_obj->item_type == ITEM_ARMOR) || (this_obj->item_type == ITEM_LIGHT))
+      if ((this_obj->item_type == ITEM_WEAPON) || (this_obj->item_type == ITEM_ARMOR) ||
+          (this_obj->item_type == ITEM_LIGHT))
       {
          unique = this_obj;
          continue;
@@ -230,7 +242,9 @@ void do_enchant(CHAR_DATA *ch, char *argument)
    }
    if (get_psuedo_level(ch) < unique->level)
    {
-      send_to_char("You can't use this item in the first place..enchanting it is NOT going to help!\n\r", ch);
+      send_to_char(
+          "You can't use this item in the first place..enchanting it is NOT going to help!\n\r",
+          ch);
       return;
    }
    if (IS_OBJ_STAT(unique, ITEM_UNIQUE))
@@ -548,7 +562,8 @@ void do_enchant(CHAR_DATA *ch, char *argument)
       }
       if (IS_SET(unique->extra_flags, ITEM_CLAN_EQ))
       {
-         sprintf(cat_buf, "%s is clan equipment, and may not be enchanted.\n\r", unique->short_descr);
+         sprintf(cat_buf, "%s is clan equipment, and may not be enchanted.\n\r",
+                 unique->short_descr);
          safe_strcat(MSL, msg_buf, cat_buf);
          legal_enchant = FALSE;
       }
@@ -559,7 +574,8 @@ void do_enchant(CHAR_DATA *ch, char *argument)
       }
       else
       {
-         sprintf(cat_buf, "%s", "This is not a legal enchantment.  Remove some enchantments, and try again.\n\r");
+         sprintf(cat_buf, "%s",
+                 "This is not a legal enchantment.  Remove some enchantments, and try again.\n\r");
       }
       safe_strcat(MSL, msg_buf, cat_buf);
       if (legal_enchant)
@@ -577,7 +593,8 @@ void do_enchant(CHAR_DATA *ch, char *argument)
          if ((min_level > unique->level) && (min_level > get_psuedo_level(ch)))
          {
             sprintf(cat_buf,
-                    "@@eWARNING: @@WEnchanting %s with these affects will make the item level %d, which is higher than your current ability to use.\n\r",
+                    "@@eWARNING: @@WEnchanting %s with these affects will make the item level %d, "
+                    "which is higher than your current ability to use.\n\r",
                     unique->short_descr, min_level);
             safe_strcat(MSL, msg_buf, cat_buf);
          }
@@ -600,7 +617,9 @@ void do_enchant(CHAR_DATA *ch, char *argument)
       }
       if (qp_cost == 0)
       {
-         send_to_char("Now that would be worthwhile. Let's reconsider, and try adding some enchantments!\n\r", ch);
+         send_to_char("Now that would be worthwhile. Let's reconsider, and try adding some "
+                      "enchantments!\n\r",
+                      ch);
          return;
       }
       if ((mod_str != 0) && (mod_str + cur_stats > 1))
@@ -833,7 +852,8 @@ void do_enchant(CHAR_DATA *ch, char *argument)
       if (unique->level < min_level)
          unique->level = UMIN(120, min_level);
 
-      act("$n dances about wildly, chanting wierd mantras, and gestures crazily over $p.", ch, matrix, NULL, TO_ROOM);
+      act("$n dances about wildly, chanting wierd mantras, and gestures crazily over $p.", ch,
+          matrix, NULL, TO_ROOM);
       act("You enchant $p with additional powers!", ch, unique, NULL, TO_CHAR);
       do_save(ch, "");
       {
@@ -844,13 +864,15 @@ void do_enchant(CHAR_DATA *ch, char *argument)
          AFFECT_DATA *one_aff;
          char *strtime;
 
-         sprintf(brandbuf, "UNIQUE ITEM: keyword: %s, Name: %s, flags: %s \n\r level: %d, affects:\n\r",
-                 unique->name, unique->short_descr, extra_bit_name(unique->extra_flags), unique->level);
+         sprintf(
+             brandbuf, "UNIQUE ITEM: keyword: %s, Name: %s, flags: %s \n\r level: %d, affects:\n\r",
+             unique->name, unique->short_descr, extra_bit_name(unique->extra_flags), unique->level);
          for (one_aff = unique->first_apply; one_aff != NULL; one_aff = one_aff->next)
          {
             if (one_aff->location != APPLY_NONE && one_aff->modifier != 0)
             {
-               sprintf(cat2_buf, "Affects %s by %d.\n\r", affect_loc_name(one_aff->location), one_aff->modifier);
+               sprintf(cat2_buf, "Affects %s by %d.\n\r", affect_loc_name(one_aff->location),
+                       one_aff->modifier);
                safe_strcat(MSL, brandbuf, cat2_buf);
             }
          }
@@ -871,7 +893,8 @@ void do_enchant(CHAR_DATA *ch, char *argument)
          brand_member->this_one = brand;
          LINK(brand_member, first_brand, last_brand, next, prev);
          save_brands();
-         send_to_char("Your messages have been updated, and logged for inspection by an Immortal.\n\r", ch);
+         send_to_char(
+             "Your messages have been updated, and logged for inspection by an Immortal.\n\r", ch);
       }
       return;
    }

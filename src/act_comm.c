@@ -186,9 +186,10 @@ void do_note(CHAR_DATA *ch, char *argument)
       {
          if (is_note_to(ch, pnote))
          {
-            sprintf(buf, "[%3d%s] %s: %s\n\r",
-                    vnum,
-                    (pnote->date_stamp > ch->last_note && str_cmp(pnote->sender, ch->name)) ? "N" : " ", pnote->sender, pnote->subject);
+            sprintf(buf, "[%3d%s] %s: %s\n\r", vnum,
+                    (pnote->date_stamp > ch->last_note && str_cmp(pnote->sender, ch->name)) ? "N"
+                                                                                            : " ",
+                    pnote->sender, pnote->subject);
             strcat(buf1, buf);
             vnum++;
          }
@@ -223,7 +224,8 @@ void do_note(CHAR_DATA *ch, char *argument)
          buf1[0] = '\0';
          for (pnote = first_note; pnote; pnote = pnote->next)
          {
-            if (is_note_to(ch, pnote) && str_cmp(ch->name, pnote->sender) && ch->last_note < pnote->date_stamp)
+            if (is_note_to(ch, pnote) && str_cmp(ch->name, pnote->sender) &&
+                ch->last_note < pnote->date_stamp)
             {
                sprintf(buf, "The letter is postmarked %d:%s\n\r", vnum, pnote->date);
                strcat(buf1, buf);
@@ -361,7 +363,8 @@ void do_note(CHAR_DATA *ch, char *argument)
          return;
       }
 
-      sprintf(buf, "%s: %s\n\rTo: %s\n\r", ch->pnote->sender, ch->pnote->subject, ch->pnote->to_list);
+      sprintf(buf, "%s: %s\n\rTo: %s\n\r", ch->pnote->sender, ch->pnote->subject,
+              ch->pnote->to_list);
       send_to_char(buf, ch);
       send_to_char(ch->pnote->text, ch);
       return;
@@ -510,7 +513,8 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
       break;
 
    case CHANNEL_GOSSIP:
-      sprintf(buf, "%sYou %s '%s'.%s\n\r", color_string(ch, "gossip"), verb, argument, color_string(ch, "normal"));
+      sprintf(buf, "%sYou %s '%s'.%s\n\r", color_string(ch, "gossip"), verb, argument,
+              color_string(ch, "normal"));
       send_to_char(buf, ch);
       sprintf(buf, "$n %ss '$t'.", verb);
       break;
@@ -522,52 +526,57 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
       break;
 
    case CHANNEL_AUCTION:
-      sprintf(buf, "%sYou %s '%s'.%s\n\r", color_string(ch, "auction"), verb, argument, color_string(ch, "normal"));
+      sprintf(buf, "%sYou %s '%s'.%s\n\r", color_string(ch, "auction"), verb, argument,
+              color_string(ch, "normal"));
       send_to_char(buf, ch);
       sprintf(buf, "$n %ss '$t'.", verb);
       break;
 
    case CHANNEL_MUSIC:
-      sprintf(buf, "%sYou %s '%s'.%s\n\r", color_string(ch, "music"), verb, argument, color_string(ch, "normal"));
+      sprintf(buf, "%sYou %s '%s'.%s\n\r", color_string(ch, "music"), verb, argument,
+              color_string(ch, "normal"));
       send_to_char(buf, ch);
       sprintf(buf, "$n %ss '$t'.", verb);
       break;
 
    case CHANNEL_YELL:
-      sprintf(buf, "%sYou %s '%s'.%s\n\r", color_string(ch, "yell"), verb, argument, color_string(ch, "normal"));
+      sprintf(buf, "%sYou %s '%s'.%s\n\r", color_string(ch, "yell"), verb, argument,
+              color_string(ch, "normal"));
       send_to_char(buf, ch);
       sprintf(buf, "$n %ss '$t'.", verb);
       break;
 
    case CHANNEL_ADEPT:
-      sprintf(buf, "%s%s %s: '%s'.%s\n\r",
-              color_string(ch, "clan"), verb, ch->name, argument, color_string(ch, "normal"));
+      sprintf(buf, "%s%s %s: '%s'.%s\n\r", color_string(ch, "clan"), verb, ch->name, argument,
+              color_string(ch, "normal"));
       send_to_char(buf, ch);
       sprintf(buf, "$n %s: '$t'.", verb);
       break;
 
    case CHANNEL_FLAME:
-      sprintf(buf, "%sYou %s '%s'.%s\n\r", color_string(ch, "flame"), verb, argument, color_string(ch, "normal"));
+      sprintf(buf, "%sYou %s '%s'.%s\n\r", color_string(ch, "flame"), verb, argument,
+              color_string(ch, "normal"));
       send_to_char(buf, ch);
       sprintf(buf, "$n %ss '$t'.", verb);
       break;
 
    case CHANNEL_SHOUT:
-      sprintf(buf, "%sYou %s '%s'.%s\n\r", color_string(ch, "shout"), verb, argument, color_string(ch, "normal"));
+      sprintf(buf, "%sYou %s '%s'.%s\n\r", color_string(ch, "shout"), verb, argument,
+              color_string(ch, "normal"));
       send_to_char(buf, ch);
       sprintf(buf, "$n %ss '$t'.\n\r", verb);
       break;
 
    case CHANNEL_CLAN:
-      sprintf(buf, "%s%s %s: '%s'.%s\n\r",
-              color_string(ch, "clan"), verb, ch->name, argument, color_string(ch, "normal"));
+      sprintf(buf, "%s%s %s: '%s'.%s\n\r", color_string(ch, "clan"), verb, ch->name, argument,
+              color_string(ch, "normal"));
       send_to_char(buf, ch);
       sprintf(buf, "$n %s: '$t'.\n\r", verb);
       break;
 
    case CHANNEL_RACE:
-      sprintf(buf, "%s%s %s: '%s'.%s\n\r",
-              color_string(ch, "race"), verb, ch->name, argument, color_string(ch, "normal"));
+      sprintf(buf, "%s%s %s: '%s'.%s\n\r", color_string(ch, "race"), verb, ch->name, argument,
+              color_string(ch, "normal"));
       send_to_char(buf, ch);
       sprintf(buf, "$n %s: '$t'.\n\r", verb);
       break;
@@ -612,8 +621,8 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
       ch->position = position;
       break;
    case CHANNEL_OOC:
-      sprintf(buf, "%s%s %s: '%s'.%s\n\r",
-              color_string(ch, "OOC"), verb, ch->name, argument, color_string(ch, "normal"));
+      sprintf(buf, "%s%s %s: '%s'.%s\n\r", color_string(ch, "OOC"), verb, ch->name, argument,
+              color_string(ch, "normal"));
       send_to_char(buf, ch);
       sprintf(buf, "%s $n: '$t'.\n\r", verb);
       break;
@@ -634,7 +643,8 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
          och = (d->original) ? (d->original) : (d->character);
          vch = d->character;
 
-         if (d->connected == CON_PLAYING && vch != ch && !IS_SET(och->deaf, channel) && !IS_SET(och->deaf, CHANNEL_HERMIT))
+         if (d->connected == CON_PLAYING && vch != ch && !IS_SET(och->deaf, channel) &&
+             !IS_SET(och->deaf, CHANNEL_HERMIT))
          {
 
             if (IS_SET(vch->in_room->room_flags, ROOM_QUIET) && !IS_IMMORTAL(ch))
@@ -651,11 +661,13 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
                continue;
             if (channel == CHANNEL_ZZZ && vch->position != POS_SLEEPING && och->level != 85)
                continue;
-            if (channel == CHANNEL_RACE && vch->race != ch->race && (och->level != 85 || IS_SET(och->deaf, CHANNEL_ALLRACE)))
+            if (channel == CHANNEL_RACE && vch->race != ch->race &&
+                (och->level != 85 || IS_SET(och->deaf, CHANNEL_ALLRACE)))
                continue;
-            if (channel == CHANNEL_CLAN && och->pcdata->clan != ch->pcdata->clan && (IS_SET(och->deaf, CHANNEL_ALLCLAN) || get_trust(och) != MAX_LEVEL))
+            if (channel == CHANNEL_CLAN && och->pcdata->clan != ch->pcdata->clan &&
+                (IS_SET(och->deaf, CHANNEL_ALLCLAN) || get_trust(och) != MAX_LEVEL))
                continue;
-if (channel == CHANNEL_ADEPT && vch->adept_level < 1)
+            if (channel == CHANNEL_ADEPT && vch->adept_level < 1)
                continue;
             position = vch->position;
             if (channel != CHANNEL_SHOUT && channel != CHANNEL_YELL)
@@ -667,32 +679,37 @@ if (channel == CHANNEL_ADEPT && vch->adept_level < 1)
                sprintf(ansi, "%s", buf);
                break;
             case CHANNEL_SHOUT:
-               sprintf(ansi, "%s%s%s", color_string(vch, "shout"), buf, color_string(vch, "normal"));
+               sprintf(ansi, "%s%s%s", color_string(vch, "shout"), buf,
+                       color_string(vch, "normal"));
                break;
             case CHANNEL_RACE:
                sprintf(ansi, "%s%s%s", color_string(vch, "race"), buf, color_string(vch, "normal"));
                break;
             case CHANNEL_MUSIC:
-               sprintf(ansi, "%s%s%s", color_string(vch, "music"), buf, color_string(vch, "normal"));
+               sprintf(ansi, "%s%s%s", color_string(vch, "music"), buf,
+                       color_string(vch, "normal"));
                break;
             case CHANNEL_CLAN:
                sprintf(ansi, "%s%s%s", color_string(vch, "clan"), buf, color_string(vch, "normal"));
                break;
             case CHANNEL_FLAME:
-               sprintf(ansi, "%s%s%s", color_string(vch, "flame"), buf, color_string(vch, "normal"));
+               sprintf(ansi, "%s%s%s", color_string(vch, "flame"), buf,
+                       color_string(vch, "normal"));
                break;
             case CHANNEL_YELL:
                sprintf(ansi, "%s%s%s", color_string(vch, "yell"), buf, color_string(vch, "normal"));
                break;
             case CHANNEL_GOSSIP:
-               sprintf(ansi, "%s%s%s", color_string(vch, "gossip"), buf, color_string(vch, "normal"));
+               sprintf(ansi, "%s%s%s", color_string(vch, "gossip"), buf,
+                       color_string(vch, "normal"));
                break;
             case CHANNEL_OOC:
                sprintf(ansi, "%s%s%s", color_string(vch, "OOC"), buf, color_string(vch, "normal"));
                break;
 
             case CHANNEL_CRUSADE:
-               sprintf(ansi, "%s%s%s", color_string(vch, "gossip"), buf, color_string(vch, "normal"));
+               sprintf(ansi, "%s%s%s", color_string(vch, "gossip"), buf,
+                       color_string(vch, "normal"));
                break;
             }
             act(ansi, ch, argument, vch, TO_VICT);
@@ -734,7 +751,10 @@ void do_crusade(CHAR_DATA *ch, char *argument)
    else
       talk_channel(ch, argument, CHANNEL_CRUSADE, "@@lcrusade");
 
-   if ((!str_cmp(argument, "what mob?")) || (!str_cmp(argument, "who was the thief?")) || (!str_cmp(argument, "who is the thief?")) || (!str_cmp(argument, "what item?")) || (!str_cmp(argument, "where are you?")) || (!str_cmp(argument, "who stole the item?")) || (!str_cmp(argument, "where is the thief?")))
+   if ((!str_cmp(argument, "what mob?")) || (!str_cmp(argument, "who was the thief?")) ||
+       (!str_cmp(argument, "who is the thief?")) || (!str_cmp(argument, "what item?")) ||
+       (!str_cmp(argument, "where are you?")) || (!str_cmp(argument, "who stole the item?")) ||
+       (!str_cmp(argument, "where is the thief?")))
       ask_quest_question(ch, argument);
 
    return;
@@ -1044,7 +1064,8 @@ void do_ignore(CHAR_DATA *ch, char *argument)
       arg[i] = str_dup(ch->pcdata->ignore_list[i]);
    }
 
-   if (!str_cmp(victim->name, arg[0]) || !str_cmp(victim->name, arg[1]) || !str_cmp(victim->name, arg[2]))
+   if (!str_cmp(victim->name, arg[0]) || !str_cmp(victim->name, arg[1]) ||
+       !str_cmp(victim->name, arg[2]))
    { /* if already on the list, remove them */
       i = 0;
       while (str_cmp(victim->name, arg[i]))
@@ -1155,7 +1176,8 @@ void do_tell(CHAR_DATA *ch, char *argument)
    }
 
    if ((!IS_NPC(victim)) && (!str_cmp(victim->pcdata->ignore_list[0], ch->name) ||
-                             !str_cmp(victim->pcdata->ignore_list[1], ch->name) || !str_cmp(victim->pcdata->ignore_list[2], ch->name)))
+                             !str_cmp(victim->pcdata->ignore_list[1], ch->name) ||
+                             !str_cmp(victim->pcdata->ignore_list[2], ch->name)))
    {
       sprintf(buf, "%s @@Ris ignoring you!!@@g\n\r", victim->name);
       send_to_char(buf, ch);
@@ -1191,7 +1213,8 @@ void do_tell(CHAR_DATA *ch, char *argument)
 
    position = victim->position;
    victim->position = POS_STANDING;
-   sprintf(buf, "$n tells you '%s$t%s'.", color_string(victim, "tell"), color_string(victim, "normal"));
+   sprintf(buf, "$n tells you '%s$t%s'.", color_string(victim, "tell"),
+           color_string(victim, "normal"));
 
    act(buf, ch, argument, victim, TO_VICT);
    victim->position = position;
@@ -1293,158 +1316,102 @@ struct pose_table_type
 };
 
 const struct pose_table_type pose_table[] = {
-    {{"You sizzle with energy.",
-      "$n sizzles with energy.",
-      "You feel very holy.",
-      "$n looks very holy.",
-      "You perform a small card trick.",
-      "$n performs a small card trick.",
-      "You show your bulging muscles.",
-      "$n shows $s bulging muscles."}},
+    {{"You sizzle with energy.", "$n sizzles with energy.", "You feel very holy.",
+      "$n looks very holy.", "You perform a small card trick.", "$n performs a small card trick.",
+      "You show your bulging muscles.", "$n shows $s bulging muscles."}},
 
     {{"You turn into a butterfly, then return to your normal shape.",
       "$n turns into a butterfly, then returns to $s normal shape.",
-      "You nonchalantly turn wine into water.",
-      "$n nonchalantly turns wine into water.",
-      "You wiggle your ears alternately.",
-      "$n wiggles $s ears alternately.",
-      "You crack nuts between your fingers.",
-      "$n cracks nuts between $s fingers."}},
+      "You nonchalantly turn wine into water.", "$n nonchalantly turns wine into water.",
+      "You wiggle your ears alternately.", "$n wiggles $s ears alternately.",
+      "You crack nuts between your fingers.", "$n cracks nuts between $s fingers."}},
 
-    {{"Blue sparks fly from your fingers.",
-      "Blue sparks fly from $n's fingers.",
-      "A halo appears over your head.",
-      "A halo appears over $n's head.",
-      "You nimbly tie yourself into a knot.",
-      "$n nimbly ties $mself into a knot.",
-      "You grizzle your teeth and look mean.",
-      "$n grizzles $s teeth and looks mean."}},
+    {{"Blue sparks fly from your fingers.", "Blue sparks fly from $n's fingers.",
+      "A halo appears over your head.", "A halo appears over $n's head.",
+      "You nimbly tie yourself into a knot.", "$n nimbly ties $mself into a knot.",
+      "You grizzle your teeth and look mean.", "$n grizzles $s teeth and looks mean."}},
 
-    {{"Little red lights dance in your eyes.",
-      "Little red lights dance in $n's eyes.",
-      "You recite words of wisdom.",
-      "$n recites words of wisdom.",
+    {{"Little red lights dance in your eyes.", "Little red lights dance in $n's eyes.",
+      "You recite words of wisdom.", "$n recites words of wisdom.",
       "You juggle with daggers, apples, and eyeballs.",
-      "$n juggles with daggers, apples, and eyeballs.",
-      "You hit your head, and your eyes roll.",
+      "$n juggles with daggers, apples, and eyeballs.", "You hit your head, and your eyes roll.",
       "$n hits $s head, and $s eyes roll."}},
 
     {{"A slimy green monster appears before you and bows.",
-      "A slimy green monster appears before $n and bows.",
-      "Deep in prayer, you levitate.",
-      "Deep in prayer, $n levitates.",
-      "You steal the underwear off every person in the room.",
-      "Your underwear is gone!  $n stole it!",
-      "Crunch, crunch -- you munch a bottle.",
+      "A slimy green monster appears before $n and bows.", "Deep in prayer, you levitate.",
+      "Deep in prayer, $n levitates.", "You steal the underwear off every person in the room.",
+      "Your underwear is gone!  $n stole it!", "Crunch, crunch -- you munch a bottle.",
       "Crunch, crunch -- $n munches a bottle."}},
 
     {{"You turn everybody into a little pink elephant.",
-      "You are turned into a little pink elephant by $n.",
-      "An angel consults you.",
-      "An angel consults $n.",
-      "The dice roll ... and you win again.",
-      "The dice roll ... and $n wins again.",
-      "... 98, 99, 100 ... you do pushups.",
+      "You are turned into a little pink elephant by $n.", "An angel consults you.",
+      "An angel consults $n.", "The dice roll ... and you win again.",
+      "The dice roll ... and $n wins again.", "... 98, 99, 100 ... you do pushups.",
       "... 98, 99, 100 ... $n does pushups."}},
 
     {{"A small ball of light dances on your fingertips.",
       "A small ball of light dances on $n's fingertips.",
-      "Your body glows with an unearthly light.",
-      "$n's body glows with an unearthly light.",
-      "You count the money in everyone's pockets.",
-      "Check your money, $n is counting it.",
+      "Your body glows with an unearthly light.", "$n's body glows with an unearthly light.",
+      "You count the money in everyone's pockets.", "Check your money, $n is counting it.",
       "Arnold Schwarzenegger admires your physique.",
       "Arnold Schwarzenegger admires $n's physique."}},
 
-    {{"Smoke and fumes leak from your nostrils.",
-      "Smoke and fumes leak from $n's nostrils.",
-      "A spot light hits you.",
-      "A spot light hits $n.",
-      "You balance a pocket knife on your tongue.",
-      "$n balances a pocket knife on your tongue.",
+    {{"Smoke and fumes leak from your nostrils.", "Smoke and fumes leak from $n's nostrils.",
+      "A spot light hits you.", "A spot light hits $n.",
+      "You balance a pocket knife on your tongue.", "$n balances a pocket knife on your tongue.",
       "Watch your feet, you are juggling granite boulders.",
       "Watch your feet, $n is juggling granite boulders."}},
 
     {{"The light flickers as you rap in magical languages.",
-      "The light flickers as $n raps in magical languages.",
-      "Everyone levitates as you pray.",
-      "You levitate as $n prays.",
-      "You produce a coin from everyone's ear.",
-      "$n produces a coin from your ear.",
-      "Oomph!  You squeeze water out of a granite boulder.",
+      "The light flickers as $n raps in magical languages.", "Everyone levitates as you pray.",
+      "You levitate as $n prays.", "You produce a coin from everyone's ear.",
+      "$n produces a coin from your ear.", "Oomph!  You squeeze water out of a granite boulder.",
       "Oomph!  $n squeezes water out of a granite boulder."}},
 
-    {{"Your head disappears.",
-      "$n's head disappears.",
-      "A cool breeze refreshes you.",
-      "A cool breeze refreshes $n.",
-      "You step behind your shadow.",
-      "$n steps behind $s shadow.",
-      "You pick your teeth with a spear.",
-      "$n picks $s teeth with a spear."}},
+    {{"Your head disappears.", "$n's head disappears.", "A cool breeze refreshes you.",
+      "A cool breeze refreshes $n.", "You step behind your shadow.", "$n steps behind $s shadow.",
+      "You pick your teeth with a spear.", "$n picks $s teeth with a spear."}},
 
-    {{"A fire elemental singes your hair.",
-      "A fire elemental singes $n's hair.",
+    {{"A fire elemental singes your hair.", "A fire elemental singes $n's hair.",
       "The sun pierces through the clouds to illuminate you.",
-      "The sun pierces through the clouds to illuminate $n.",
-      "Your eyes dance with greed.",
-      "$n's eyes dance with greed.",
-      "Everyone is swept off their foot by your hug.",
+      "The sun pierces through the clouds to illuminate $n.", "Your eyes dance with greed.",
+      "$n's eyes dance with greed.", "Everyone is swept off their foot by your hug.",
       "You are swept off your feet by $n's hug."}},
 
-    {{"The sky changes color to match your eyes.",
-      "The sky changes color to match $n's eyes.",
-      "The ocean parts before you.",
-      "The ocean parts before $n.",
-      "You deftly steal everyone's weapon.",
-      "$n deftly steals your weapon.",
-      "Your karate chop splits a tree.",
-      "$n's karate chop splits a tree."}},
+    {{"The sky changes color to match your eyes.", "The sky changes color to match $n's eyes.",
+      "The ocean parts before you.", "The ocean parts before $n.",
+      "You deftly steal everyone's weapon.", "$n deftly steals your weapon.",
+      "Your karate chop splits a tree.", "$n's karate chop splits a tree."}},
 
-    {{"The stones dance to your command.",
-      "The stones dance to $n's command.",
-      "A thunder cloud kneels to you.",
-      "A thunder cloud kneels to $n.",
-      "The Grey Mouser buys you a beer.",
-      "The Grey Mouser buys $n a beer.",
+    {{"The stones dance to your command.", "The stones dance to $n's command.",
+      "A thunder cloud kneels to you.", "A thunder cloud kneels to $n.",
+      "The Grey Mouser buys you a beer.", "The Grey Mouser buys $n a beer.",
       "A strap of your armor breaks over your mighty thews.",
       "A strap of $n's armor breaks over $s mighty thews."}},
 
     {{"The heavens and grass change color as you smile.",
-      "The heavens and grass change color as $n smiles.",
-      "The Burning Man speaks to you.",
-      "The Burning Man speaks to $n.",
-      "Everyone's pocket explodes with your fireworks.",
-      "Your pocket explodes with $n's fireworks.",
-      "A boulder cracks at your frown.",
+      "The heavens and grass change color as $n smiles.", "The Burning Man speaks to you.",
+      "The Burning Man speaks to $n.", "Everyone's pocket explodes with your fireworks.",
+      "Your pocket explodes with $n's fireworks.", "A boulder cracks at your frown.",
       "A boulder cracks at $n's frown."}},
 
     {{"Everyone's clothes are transparent, and you are laughing.",
-      "Your clothes are transparent, and $n is laughing.",
-      "An eye in a pyramid winks at you.",
+      "Your clothes are transparent, and $n is laughing.", "An eye in a pyramid winks at you.",
       "An eye in a pyramid winks at $n.",
       "Everyone discovers your dagger a centimeter from their eye.",
       "You discover $n's dagger a centimeter from your eye.",
-      "Mercenaries arrive to do your bidding.",
-      "Mercenaries arrive to do $n's bidding."}},
+      "Mercenaries arrive to do your bidding.", "Mercenaries arrive to do $n's bidding."}},
 
-    {{"A black hole swallows you.",
-      "A black hole swallows $n.",
+    {{"A black hole swallows you.", "A black hole swallows $n.",
       "Valentine Michael Smith offers you a glass of water.",
-      "Valentine Michael Smith offers $n a glass of water.",
-      "Where did you go?",
-      "Where did $n go?",
-      "Four matched Percherons bring in your chariot.",
+      "Valentine Michael Smith offers $n a glass of water.", "Where did you go?",
+      "Where did $n go?", "Four matched Percherons bring in your chariot.",
       "Four matched Percherons bring in $n's chariot."}},
 
     {{"The world shimmers in time with your whistling.",
-      "The world shimmers in time with $n's whistling.",
-      "The great god Mota dances on your soul.",
-      "The great god Mota dances on $n's soul.",
-      "Click.",
-      "Click.",
-      "Atlas asks you to relieve him.",
-      "Atlas asks $n to relieve him."}}};
+      "The world shimmers in time with $n's whistling.", "The great god Mota dances on your soul.",
+      "The great god Mota dances on $n's soul.", "Click.", "Click.",
+      "Atlas asks you to relieve him.", "Atlas asks $n to relieve him."}}};
 
 void do_pose(CHAR_DATA *ch, char *argument)
 {
@@ -1550,12 +1517,15 @@ void do_quit(CHAR_DATA *ch, char *argument)
    {
       other_logins_next = other_logins->next;
 
-      if ((other_logins != d) && (other_logins->character != NULL) && (other_logins->connected != CON_RECONNECTING) && (!str_cmp(other_logins->character->name, ch->name)))
+      if ((other_logins != d) && (other_logins->character != NULL) &&
+          (other_logins->connected != CON_RECONNECTING) &&
+          (!str_cmp(other_logins->character->name, ch->name)))
       {
          if (other_logins->connected == CON_GET_OLD_PASSWORD)
          {
             char logbuf[MSL];
-            sprintf(logbuf, "CHEATER!!! Possible attempt to utilize eq dup bug, %s", other_logins->character->name);
+            sprintf(logbuf, "CHEATER!!! Possible attempt to utilize eq dup bug, %s",
+                    other_logins->character->name);
 
             log_string(logbuf);
          }
@@ -1732,7 +1702,8 @@ void group_all(CHAR_DATA *ch)
    CHAR_DATA *gch;
    int new_members = 0;
 
-   bool ch_adept = FALSE, victim_adept = FALSE, ch_dremort = FALSE, victim_dremort = FALSE, ch_sremort = FALSE, victim_sremort = FALSE;
+   bool ch_adept = FALSE, victim_adept = FALSE, ch_dremort = FALSE, victim_dremort = FALSE,
+        ch_sremort = FALSE, victim_sremort = FALSE;
    bool legal_group = FALSE;
 
    for (gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room)
@@ -1754,9 +1725,11 @@ void group_all(CHAR_DATA *ch)
             ch_sremort = TRUE;
          if (get_psuedo_level(gch) > 80)
             victim_sremort = TRUE;
-         /*    sprintf( buf, "%s level %i Adept: %s DREMORT: %s SREMORT: %s\n\r %s level %i ADEPT: %s DREMORT: %s SREMORT: %s \n\r",
-              ch->name, get_psuedo_level( ch ), ( ch_adept == TRUE ) ? "YES" : "NO", ( ch_dremort == TRUE) : "YES" : "NO", ( ch_sremort == TRUE ) ? "YES" : "NO",
-              victim->name, get_psuedo_level( victim ), ( victim_adept == TRUE ) ? "YES" : "NO", ( victim_dremort == TRUE ) ? "YES" : "NO", ( victim_sremort == TRUE ) ? "YES" : "NO" );
+         /*    sprintf( buf, "%s level %i Adept: %s DREMORT: %s SREMORT: %s\n\r %s level %i ADEPT:
+            %s DREMORT: %s SREMORT: %s \n\r", ch->name, get_psuedo_level( ch ), ( ch_adept == TRUE )
+            ? "YES" : "NO", ( ch_dremort == TRUE) : "YES" : "NO", ( ch_sremort == TRUE ) ? "YES" :
+            "NO", victim->name, get_psuedo_level( victim ), ( victim_adept == TRUE ) ? "YES" : "NO",
+            ( victim_dremort == TRUE ) ? "YES" : "NO", ( victim_sremort == TRUE ) ? "YES" : "NO" );
          */
 
          if (ch_adept && victim_adept)
@@ -1837,19 +1810,16 @@ void do_group(CHAR_DATA *ch, char *argument)
          {
             if (!IS_NPC(ch) && IS_SET(ch->pcdata->pflags, PFLAG_BLIND_PLAYER))
             {
-               sprintf(buf,
-                       "%-16s %4ld of %4ld hp %4ld of %4ld mana %4ld of %4ld move %5ld xp\n\r",
-                       capitalize(PERS(gch, ch)),
-                       gch->hit, get_max_hp(gch), gch->mana, get_max_mana(gch), gch->move, get_max_move(gch), gch->exp);
+               sprintf(buf, "%-16s %4ld of %4ld hp %4ld of %4ld mana %4ld of %4ld move %5ld xp\n\r",
+                       capitalize(PERS(gch, ch)), gch->hit, get_max_hp(gch), gch->mana,
+                       get_max_mana(gch), gch->move, get_max_move(gch), gch->exp);
             }
             else
             {
-               sprintf(buf,
-                       "[%2d %s] %-16s %4ld/%4ld hp %4ld/%4ld mana %4ld/%4ld mv %5ld xp\n\r",
-                       gch->level,
-                       IS_NPC(gch) ? "Mob" : gclass_table[gch->class].who_name,
-                       capitalize(PERS(gch, ch)),
-                       gch->hit, get_max_hp(gch), gch->mana, get_max_mana(gch), gch->move, get_max_move(gch), gch->exp);
+               sprintf(buf, "[%2d %s] %-16s %4ld/%4ld hp %4ld/%4ld mana %4ld/%4ld mv %5ld xp\n\r",
+                       gch->level, IS_NPC(gch) ? "Mob" : gclass_table[gch->class].who_name,
+                       capitalize(PERS(gch, ch)), gch->hit, get_max_hp(gch), gch->mana,
+                       get_max_mana(gch), gch->move, get_max_move(gch), gch->exp);
             }
 
             send_to_char(buf, ch);
@@ -2118,70 +2088,21 @@ void do_tongue(CHAR_DATA *ch, char *argument)
    };
 
    static const struct syl_type syl_table[] = {
-       {" ", " "},
-       {"fuck", "love"},
-       {"go", "swim"},
-       {"the", "woi"},
-       {"hi", "yibba"},
-       {"hello", "smeg"},
-       {"me", "ug"},
-       {"follow", "grep"},
-       {"kill", "banzai"},
-       {"ing", "pft"},
-       {"er", "sf"},
-       {"you", "lpt"},
-       {"ast", "pal"},
-       {"nd", "ja"},
-       {"re", "qa"},
-       {"tell", "argh"},
-       {"who", "wib"},
-       {"which", "fvl"},
-       {"ts", "glup"},
-       {"st", "plop"},
-       {"ck", "fim"},
-       {"ord", "xio"},
-       {"sw", "cow"},
-       {"ic", "er"},
-       {"ea", "ox"},
+       {" ", " "},        {"fuck", "love"}, {"go", "swim"},     {"the", "woi"},     {"hi", "yibba"},
+       {"hello", "smeg"}, {"me", "ug"},     {"follow", "grep"}, {"kill", "banzai"}, {"ing", "pft"},
+       {"er", "sf"},      {"you", "lpt"},   {"ast", "pal"},     {"nd", "ja"},       {"re", "qa"},
+       {"tell", "argh"},  {"who", "wib"},   {"which", "fvl"},   {"ts", "glup"},     {"st", "plop"},
+       {"ck", "fim"},     {"ord", "xio"},   {"sw", "cow"},      {"ic", "er"},       {"ea", "ox"},
 
-       {"?", "?"},
-       {"!", "!"},
-       {":", ":"},
-       {")", ")"},
-       {"(", "("},
-       {";", ";"},
-       {"*", "*"},
-       {"-", "-"},
-       {".", ","},
-       {",", ","},
+       {"?", "?"},        {"!", "!"},       {":", ":"},         {")", ")"},         {"(", "("},
+       {";", ";"},        {"*", "*"},       {"-", "-"},         {".", ","},         {",", ","},
 
-       {"a", "y"},
-       {"b", "d"},
-       {"c", "g"},
-       {"d", "b"},
-       {"e", "q"},
-       {"f", "i"},
-       {"g", "u"},
-       {"h", "r"},
-       {"i", "t"},
-       {"j", "m"},
-       {"k", "j"},
-       {"l", "v"},
-       {"m", "o"},
-       {"n", "t"},
-       {"o", "s"},
-       {"p", "f"},
-       {"q", "k"},
-       {"r", "x"},
-       {"s", "z"},
-       {"t", "e"},
-       {"u", "p"},
-       {"v", "c"},
-       {"w", "n"},
-       {"x", "h"},
-       {"y", "a"},
-       {"z", "l"},
-       {"", ""}};
+       {"a", "y"},        {"b", "d"},       {"c", "g"},         {"d", "b"},         {"e", "q"},
+       {"f", "i"},        {"g", "u"},       {"h", "r"},         {"i", "t"},         {"j", "m"},
+       {"k", "j"},        {"l", "v"},       {"m", "o"},         {"n", "t"},         {"o", "s"},
+       {"p", "f"},        {"q", "k"},       {"r", "x"},         {"s", "z"},         {"t", "e"},
+       {"u", "p"},        {"v", "c"},       {"w", "n"},         {"x", "h"},         {"y", "a"},
+       {"z", "l"},        {"", ""}};
 
    buf[0] = '\0';
    buf2[0] = '\0';
@@ -2223,7 +2144,8 @@ void do_tongue(CHAR_DATA *ch, char *argument)
       }
 
       if (rch != ch)
-         act((ch->race == rch->race || rch->level > LEVEL_IMMORTAL) ? buf2 : buf3, ch, NULL, rch, TO_VICT);
+         act((ch->race == rch->race || rch->level > LEVEL_IMMORTAL) ? buf2 : buf3, ch, NULL, rch,
+             TO_VICT);
    }
 
    buf2[0] = '\0';
@@ -2258,48 +2180,15 @@ char *slur_text(char *argument)
    };
 
    static const struct syl_type syl_table[] = {
-       {" ", " "},
-       {"th", "f"},
-       {"ck", "k"},
+       {" ", " "}, {"th", "f"}, {"ck", "k"},
 
-       {"?", "?"},
-       {"!", "!"},
-       {":", ":"},
-       {")", ")"},
-       {"(", "("},
-       {";", ";"},
-       {"*", "*"},
-       {"-", "-"},
-       {".", ","},
-       {",", ","},
+       {"?", "?"}, {"!", "!"},  {":", ":"},   {")", ")"}, {"(", "("},  {";", ";"},  {"*", "*"},
+       {"-", "-"}, {".", ","},  {",", ","},
 
-       {"a", "a"},
-       {"b", "b"},
-       {"c", "see"},
-       {"d", "d"},
-       {"e", "e"},
-       {"f", "f"},
-       {"g", "g"},
-       {"h", "h"},
-       {"i", "i"},
-       {"j", "j"},
-       {"k", "g"},
-       {"l", "l"},
-       {"m", "m"},
-       {"n", "n"},
-       {"o", "o"},
-       {"p", "p"},
-       {"q", "q"},
-       {"r", "r"},
-       {"s", "ss"},
-       {"t", "t"},
-       {"u", "u"},
-       {"v", "s"},
-       {"w", "w"},
-       {"x", "x"},
-       {"y", "y"},
-       {"z", "s"},
-       {NULL, NULL}};
+       {"a", "a"}, {"b", "b"},  {"c", "see"}, {"d", "d"}, {"e", "e"},  {"f", "f"},  {"g", "g"},
+       {"h", "h"}, {"i", "i"},  {"j", "j"},   {"k", "g"}, {"l", "l"},  {"m", "m"},  {"n", "n"},
+       {"o", "o"}, {"p", "p"},  {"q", "q"},   {"r", "r"}, {"s", "ss"}, {"t", "t"},  {"u", "u"},
+       {"v", "s"}, {"w", "w"},  {"x", "x"},   {"y", "y"}, {"z", "s"},  {NULL, NULL}};
 
    /*
     * might be fixed now! return argument;
@@ -2504,7 +2393,8 @@ void ask_quest_question(CHAR_DATA *ch, char *argument)
    if (!quest || IS_NPC(ch))
       return;
 
-   if ((!str_cmp(argument, "who is the thief?")) || (!str_cmp(argument, "who was the thief?")) || (!str_cmp(argument, "what mob?")) || (!str_cmp(argument, "who stole the item?")))
+   if ((!str_cmp(argument, "who is the thief?")) || (!str_cmp(argument, "who was the thief?")) ||
+       (!str_cmp(argument, "what mob?")) || (!str_cmp(argument, "who stole the item?")))
    {
       if (quest_mob)
       {
@@ -2514,7 +2404,8 @@ void ask_quest_question(CHAR_DATA *ch, char *argument)
          }
          else if (quest_object && quest_target)
          {
-            sprintf(buf, "@@NIt was %s @@N who stole my %s@@N.", quest_target->short_descr, quest_object->short_descr);
+            sprintf(buf, "@@NIt was %s @@N who stole my %s@@N.", quest_target->short_descr,
+                    quest_object->short_descr);
          }
       }
       else if (quest_object)
@@ -2540,7 +2431,8 @@ void ask_quest_question(CHAR_DATA *ch, char *argument)
    if (!str_cmp(argument, "where are you?"))
       if (quest_mob)
       {
-         sprintf(buf, "@@NYou can find me in %s@@N, please hurry!!", quest_mob->in_room->area->name);
+         sprintf(buf, "@@NYou can find me in %s@@N, please hurry!!",
+                 quest_mob->in_room->area->name);
          do_crusade(quest_mob, buf);
          return;
       }
@@ -2553,7 +2445,8 @@ void ask_quest_question(CHAR_DATA *ch, char *argument)
          {
             if (quest_timer < 10)
             {
-               sprintf(buf, "@@NI don't really know where %s@@N is, let me try and find out.", quest_target->short_descr);
+               sprintf(buf, "@@NI don't really know where %s@@N is, let me try and find out.",
+                       quest_target->short_descr);
             }
             else if (quest_target)
             {
@@ -2567,7 +2460,9 @@ void ask_quest_question(CHAR_DATA *ch, char *argument)
          }
          else
          {
-            sprintf(buf, "@@NDon't worry about where the thief who stole my %s@@N is, he has recieved his just reward",
+            sprintf(buf,
+                    "@@NDon't worry about where the thief who stole my %s@@N is, he has recieved "
+                    "his just reward",
                     quest_object->short_descr);
          }
          do_crusade(quest_mob, buf);

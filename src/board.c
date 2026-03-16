@@ -452,7 +452,8 @@ void do_delete(CHAR_DATA *ch, char *argument)
    /*
     * See if person is writer or is recipient
     */
-   if (str_cmp(ch->name, msg->author) && !is_name(ch->name, msg->title) && get_trust(ch) < MAX_LEVEL && str_cmp(ch->name, clan_table[board->clan].leader))
+   if (str_cmp(ch->name, msg->author) && !is_name(ch->name, msg->title) &&
+       get_trust(ch) < MAX_LEVEL && str_cmp(ch->name, clan_table[board->clan].leader))
    {
       send_to_char("Not your message.\n\r", ch);
       return;
@@ -528,12 +529,14 @@ void do_show_message(CHAR_DATA *ch, int mess_num, OBJ_DATA *obj)
 
          to_person = one_argument(msg->title, to_check);
          to_person = one_argument(to_person, private_name);
-         if (!str_cmp(to_check, "to:") && str_prefix(private_name, ch->name) && str_cmp(msg->author, ch->name))
+         if (!str_cmp(to_check, "to:") && str_prefix(private_name, ch->name) &&
+             str_cmp(msg->author, ch->name))
          {
             send_to_char("This is a private message.\n\r", ch);
             break;
          }
-         sprintf(buf, "** [%d] %12s : %s ** \n\r\n\r%s\n\r", cnt, msg->author, msg->title, msg->message);
+         sprintf(buf, "** [%d] %12s : %s ** \n\r\n\r%s\n\r", cnt, msg->author, msg->title,
+                 msg->message);
          send_to_char(buf, ch);
          break;
       }

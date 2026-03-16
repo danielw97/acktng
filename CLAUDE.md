@@ -14,7 +14,9 @@ make ack          # Build the server binary
 make clean        # Remove object files and binary
 make unit-tests   # Build and run all unit tests, then integration test
 make integration-test  # Build server + run integration test (boot, login, crash check)
-make all          # clean → build → unit-tests (includes integration test)
+make all          # clean → format → lint → build → unit-tests (includes integration test)
+make lint         # Check all source files match the .clang-format style (fails if any differ)
+make format       # Auto-apply .clang-format style to all source files
 ```
 
 - Compiler: GCC with `-O -g2 -Wall -DACK_43`

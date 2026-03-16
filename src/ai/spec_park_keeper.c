@@ -11,29 +11,36 @@
 bool spec_park_keeper(CHAR_DATA *ch)
 {
    static const char *acts[] = {
-      "$n crouches beside a planting bed, pressing loose soil back around the base of a shrub.",
-      "$n examines a gnawed flower stalk and frowns, tapping the damage mark with one finger.",
-      "$n sweeps fallen leaves from the fountain basin with a short-handled broom.",
-      "$n checks the irrigation channel running along the park wall, clearing a small blockage with a stick.",
-      "$n marks something on a clipboard, shaking $s head slowly at what $e sees."
-   };
+       "$n crouches beside a planting bed, pressing loose soil back around the base of a shrub.",
+       "$n examines a gnawed flower stalk and frowns, tapping the damage mark with one finger.",
+       "$n sweeps fallen leaves from the fountain basin with a short-handled broom.",
+       "$n checks the irrigation channel running along the park wall, clearing a small blockage "
+       "with a stick.",
+       "$n marks something on a clipboard, shaking $s head slowly at what $e sees."};
    static const char *says[] = {
-      "The lavender bed is half-dug out from below again. Third time this season.",
-      "I've submitted three reports to the Registry about the burrowing problem. They sent me another clipboard.",
-      "Groundskeeping used to mean planting and pruning. Now it's half excavation work.",
-      "You want to do something useful in this city? Start in the catacombs beneath us.",
-      "The fountain stone is in good shape. It's everything six inches underground that worries me."
-   };
+       "The lavender bed is half-dug out from below again. Third time this season.",
+       "I've submitted three reports to the Registry about the burrowing problem. They sent me "
+       "another clipboard.",
+       "Groundskeeping used to mean planting and pruning. Now it's half excavation work.",
+       "You want to do something useful in this city? Start in the catacombs beneath us.",
+       "The fountain stone is in good shape. It's everything six inches underground that worries "
+       "me."};
    static const char *quest_hints[] = {
-      "The rat population beneath the park has gotten completely out of hand. They're tunneling up through the roots. I need someone to go down there and thin them out — speak to the Postmaster if you want to make it official.",
-      "Every time I plant something new, the ash tunnel rats from the catacombs dig it up within a week. If you're willing to go down there and clear some of them out, the Postmaster can arrange a proper clearance contract.",
-      "My planting schedule is four days behind because I keep having to repair rat damage. The catacombs beneath this park are the source. If you're a fighter looking for work, the Postmaster has a culling contract."
-   };
+       "The rat population beneath the park has gotten completely out of hand. They're tunneling "
+       "up through the roots. I need someone to go down there and thin them out — speak to the "
+       "Postmaster if you want to make it official.",
+       "Every time I plant something new, the ash tunnel rats from the catacombs dig it up within "
+       "a week. If you're willing to go down there and clear some of them out, the Postmaster can "
+       "arrange a proper clearance contract.",
+       "My planting schedule is four days behind because I keep having to repair rat damage. The "
+       "catacombs beneath this park are the source. If you're a fighter looking for work, the "
+       "Postmaster has a culling contract."};
    static const char *quest_active[] = {
-      "You're the one working the culling contract? Good. The deeper you push them back, the longer my beds hold.",
-      "I checked the tunnel entry this morning. Fewer tracks than yesterday. Keep at it.",
-      "The park groundwork holds for now. I'd like to keep it that way — thank you for what you're doing down there."
-   };
+       "You're the one working the culling contract? Good. The deeper you push them back, the "
+       "longer my beds hold.",
+       "I checked the tunnel entry this morning. Fewer tracks than yesterday. Keep at it.",
+       "The park groundwork holds for now. I'd like to keep it that way — thank you for what "
+       "you're doing down there."};
 
    CHAR_DATA *vch;
    bool hint_given = FALSE;

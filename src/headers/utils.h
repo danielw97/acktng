@@ -105,10 +105,10 @@ void _free_string args((char *pstr, const char *caller));
 
 struct obj_ref_type
 {
-  bool inuse;
-  struct obj_ref_type *next;
-  OBJ_DATA **var;
-  int type; /* OBJ_xxxx */
+   bool inuse;
+   struct obj_ref_type *next;
+   OBJ_DATA **var;
+   int type; /* OBJ_xxxx */
 };
 
 #define CHAR_NEXT 1
@@ -117,28 +117,28 @@ struct obj_ref_type
 
 struct char_ref_type
 {
-  bool inuse;
-  struct char_ref_type *next;
-  CHAR_DATA **var;
-  int type;
+   bool inuse;
+   struct char_ref_type *next;
+   CHAR_DATA **var;
+   int type;
 };
 
-#define OREF(v, type)                                         \
-  do                                                          \
-  {                                                           \
-    static struct obj_ref_type s = {FALSE, NULL, NULL, type}; \
-    s.var = &v;                                               \
-    obj_reference(&s);                                        \
-  } while (0)
+#define OREF(v, type)                                                                              \
+   do                                                                                              \
+   {                                                                                               \
+      static struct obj_ref_type s = {FALSE, NULL, NULL, type};                                    \
+      s.var = &v;                                                                                  \
+      obj_reference(&s);                                                                           \
+   } while (0)
 #define OUREF(var) obj_unreference(&var);
 
-#define CREF(v, type)                                          \
-  do                                                           \
-  {                                                            \
-    static struct char_ref_type s = {FALSE, NULL, NULL, type}; \
-    s.var = &v;                                                \
-    char_reference(&s);                                        \
-  } while (0)
+#define CREF(v, type)                                                                              \
+   do                                                                                              \
+   {                                                                                               \
+      static struct char_ref_type s = {FALSE, NULL, NULL, type};                                   \
+      s.var = &v;                                                                                  \
+      char_reference(&s);                                                                          \
+   } while (0)
 #define CUREF(var) char_unreference(&var);
 
 /*
@@ -173,7 +173,6 @@ struct char_ref_type
 
 #define MANA_COST(ch, sn) (IS_NPC(ch) ? 0 : UMAX(50, skill_table[sn].min_mana))
 
-
 #define ADEPT_LEVEL(ch) (IS_NPC(ch) ? (ch)->level / 7 : (ch)->adept_level)
 
 #define PLAYTESTER(ch) (!IS_NPC(ch) && IS_SET((ch)->pcdata->pflags, PFLAG_TESTER))
@@ -193,9 +192,10 @@ struct char_ref_type
 /*
  * Description macros.
  */
-#define PERS(ch, looker) (can_see(looker, (ch)) ? (IS_NPC(ch) ? (ch)->short_descr : (ch)->name) \
-                          : IS_IMMORTAL(ch)     ? "A Mystical Being"                             \
-                                                : "Someone")
+#define PERS(ch, looker)                                                                           \
+   (can_see(looker, (ch)) ? (IS_NPC(ch) ? (ch)->short_descr : (ch)->name)                          \
+    : IS_IMMORTAL(ch)     ? "A Mystical Being"                                                     \
+                          : "Someone")
 #define NAME(ch) (IS_NPC(ch) ? (ch)->short_descr : (ch)->name)
 
 /* Added stuff - Flar */
@@ -205,215 +205,215 @@ struct char_ref_type
  * Linked list macros, -- Altrag
  */
 /* Regular linking of double-linked list */
-#define LINK(link, first, last, next, prev) \
-  do                                        \
-  {                                         \
-    if ((link)->is_free == TRUE)            \
-      hang("LINK: link is FREE!");          \
-    if ((link)->is_free != FALSE)           \
-      hang("LINK: link is corrupted!");     \
-    if ((link)->prev || (link)->next)       \
-      hang("LINK: link already in list?");  \
-    if ((last) && (last)->next)             \
-      hang("LINK: last->next NON-NULL!");   \
-    if (!(first))                           \
-      (first) = (link);                     \
-    else                                    \
-      (last)->next = (link);                \
-    (link)->next = NULL;                    \
-    (link)->prev = (last);                  \
-    (last) = (link);                        \
-  } while (0)
+#define LINK(link, first, last, next, prev)                                                        \
+   do                                                                                              \
+   {                                                                                               \
+      if ((link)->is_free == TRUE)                                                                 \
+         hang("LINK: link is FREE!");                                                              \
+      if ((link)->is_free != FALSE)                                                                \
+         hang("LINK: link is corrupted!");                                                         \
+      if ((link)->prev || (link)->next)                                                            \
+         hang("LINK: link already in list?");                                                      \
+      if ((last) && (last)->next)                                                                  \
+         hang("LINK: last->next NON-NULL!");                                                       \
+      if (!(first))                                                                                \
+         (first) = (link);                                                                         \
+      else                                                                                         \
+         (last)->next = (link);                                                                    \
+      (link)->next = NULL;                                                                         \
+      (link)->prev = (last);                                                                       \
+      (last) = (link);                                                                             \
+   } while (0)
 
 /* Link at the head of the list rather than the tail.  Double linked */
-#define TOPLINK(link, first, last, next, prev) \
-  do                                           \
-  {                                            \
-    if ((link)->is_free == TRUE)               \
-      hang("TOPLINK: link is FREE!");          \
-    if ((link)->is_free != FALSE)              \
-      hang("TOPLINK: link is corrupted!");     \
-    if ((link)->prev || (link)->next)          \
-      hang("TOPLINK: link already in list?");  \
-    if ((first) && (first)->prev)              \
-      hang("TOPLINK: first->prev NON-NULL!");  \
-    if (!(last))                               \
-      (last) = (link);                         \
-    else                                       \
-      (first)->prev = (link);                  \
-    (link)->prev = NULL;                       \
-    (link)->next = (first);                    \
-    (first) = (link);                          \
-  } while (0)
+#define TOPLINK(link, first, last, next, prev)                                                     \
+   do                                                                                              \
+   {                                                                                               \
+      if ((link)->is_free == TRUE)                                                                 \
+         hang("TOPLINK: link is FREE!");                                                           \
+      if ((link)->is_free != FALSE)                                                                \
+         hang("TOPLINK: link is corrupted!");                                                      \
+      if ((link)->prev || (link)->next)                                                            \
+         hang("TOPLINK: link already in list?");                                                   \
+      if ((first) && (first)->prev)                                                                \
+         hang("TOPLINK: first->prev NON-NULL!");                                                   \
+      if (!(last))                                                                                 \
+         (last) = (link);                                                                          \
+      else                                                                                         \
+         (first)->prev = (link);                                                                   \
+      (link)->prev = NULL;                                                                         \
+      (link)->next = (first);                                                                      \
+      (first) = (link);                                                                            \
+   } while (0)
 
 /* Insert link before ref link */
-#define LINK_BEFORE(link, ref, first, last, next, prev) \
-  do                                                    \
-  {                                                     \
-    if ((link)->is_free == TRUE)                        \
-      hang("LINK_BEFORE: link is FREE!");               \
-    if ((link)->is_free != FALSE)                       \
-      hang("LINK_BEFORE: link is corrupted!");          \
-    if ((link)->prev || (link)->next)                   \
-      hang("LINK_BEFORE: link already in list?");       \
-    if (!(ref))                                         \
-      hang("LINK_BEFORE: ref is NULL!");                \
-    if ((ref)->is_free == TRUE)                         \
-      hang("LINK_BEFORE: ref is FREE!");                \
-    if ((ref)->is_free != FALSE)                        \
-      hang("LINK_BEFORE: ref is corrupted!");           \
-    (link)->next = (ref);                               \
-    (link)->prev = (ref)->prev;                         \
-    if (!(ref)->prev)                                   \
-      (first) = (link);                                 \
-    else                                                \
-      ((ref)->prev)->next = (link);                     \
-    (ref)->prev = (link);                               \
-  } while (0)
+#define LINK_BEFORE(link, ref, first, last, next, prev)                                            \
+   do                                                                                              \
+   {                                                                                               \
+      if ((link)->is_free == TRUE)                                                                 \
+         hang("LINK_BEFORE: link is FREE!");                                                       \
+      if ((link)->is_free != FALSE)                                                                \
+         hang("LINK_BEFORE: link is corrupted!");                                                  \
+      if ((link)->prev || (link)->next)                                                            \
+         hang("LINK_BEFORE: link already in list?");                                               \
+      if (!(ref))                                                                                  \
+         hang("LINK_BEFORE: ref is NULL!");                                                        \
+      if ((ref)->is_free == TRUE)                                                                  \
+         hang("LINK_BEFORE: ref is FREE!");                                                        \
+      if ((ref)->is_free != FALSE)                                                                 \
+         hang("LINK_BEFORE: ref is corrupted!");                                                   \
+      (link)->next = (ref);                                                                        \
+      (link)->prev = (ref)->prev;                                                                  \
+      if (!(ref)->prev)                                                                            \
+         (first) = (link);                                                                         \
+      else                                                                                         \
+         ((ref)->prev)->next = (link);                                                             \
+      (ref)->prev = (link);                                                                        \
+   } while (0)
 
 /* Insert link after ref link */
-#define LINK_AFTER(link, ref, first, last, next, prev) \
-  do                                                   \
-  {                                                    \
-    if ((link)->is_free == TRUE)                       \
-      hang("LINK_AFTER: link is FREE!");               \
-    if ((link)->is_free != FALSE)                      \
-      hang("LINK_AFTER: link is corrupted!");          \
-    if ((link)->prev || (link)->next)                  \
-      hang("LINK_AFTER: link already in list?");       \
-    if (!(ref))                                        \
-      hang("LINK_AFTER: ref is NULL!");                \
-    if ((ref)->is_free == TRUE)                        \
-      hang("LINK_AFTER: ref is FREE!");                \
-    if ((ref)->is_free != FALSE)                       \
-      hang("LINK_AFTER: ref is corrupted!");           \
-    (link)->prev = (ref);                              \
-    (link)->next = (ref)->next;                        \
-    if (!(ref)->next)                                  \
-      (last) = (link);                                 \
-    else                                               \
-      ((ref)->next)->prev = (link);                    \
-    (ref)->next = (link);                              \
-  } while (0)
+#define LINK_AFTER(link, ref, first, last, next, prev)                                             \
+   do                                                                                              \
+   {                                                                                               \
+      if ((link)->is_free == TRUE)                                                                 \
+         hang("LINK_AFTER: link is FREE!");                                                        \
+      if ((link)->is_free != FALSE)                                                                \
+         hang("LINK_AFTER: link is corrupted!");                                                   \
+      if ((link)->prev || (link)->next)                                                            \
+         hang("LINK_AFTER: link already in list?");                                                \
+      if (!(ref))                                                                                  \
+         hang("LINK_AFTER: ref is NULL!");                                                         \
+      if ((ref)->is_free == TRUE)                                                                  \
+         hang("LINK_AFTER: ref is FREE!");                                                         \
+      if ((ref)->is_free != FALSE)                                                                 \
+         hang("LINK_AFTER: ref is corrupted!");                                                    \
+      (link)->prev = (ref);                                                                        \
+      (link)->next = (ref)->next;                                                                  \
+      if (!(ref)->next)                                                                            \
+         (last) = (link);                                                                          \
+      else                                                                                         \
+         ((ref)->next)->prev = (link);                                                             \
+      (ref)->next = (link);                                                                        \
+   } while (0)
 
 /* Unlink a double linked list */
-#define UNLINK(link, first, last, next, prev)             \
-  do                                                      \
-  {                                                       \
-    if ((link)->is_free == TRUE)                          \
-      hang("UNLINK: link is FREE!");                      \
-    if ((link)->is_free != FALSE)                         \
-      hang("UNLINK: link is corrupted!");                 \
-    if ((link)->prev && (((link)->prev)->next != (link))) \
-      hang("UNLINK: link->prev->next corrupted!");        \
-    if ((link)->next && (((link)->next)->prev != (link))) \
-      hang("UNLINK: link->next->prev corrupted!");        \
-    if (!(link)->next)                                    \
-      (last) = (link)->prev;                              \
-    else                                                  \
-      (link)->next->prev = (link)->prev;                  \
-    if (!(link)->prev)                                    \
-      (first) = (link)->next;                             \
-    else                                                  \
-      (link)->prev->next = (link)->next;                  \
-    (link)->prev = NULL;                                  \
-    (link)->next = NULL;                                  \
-  } while (0)
+#define UNLINK(link, first, last, next, prev)                                                      \
+   do                                                                                              \
+   {                                                                                               \
+      if ((link)->is_free == TRUE)                                                                 \
+         hang("UNLINK: link is FREE!");                                                            \
+      if ((link)->is_free != FALSE)                                                                \
+         hang("UNLINK: link is corrupted!");                                                       \
+      if ((link)->prev && (((link)->prev)->next != (link)))                                        \
+         hang("UNLINK: link->prev->next corrupted!");                                              \
+      if ((link)->next && (((link)->next)->prev != (link)))                                        \
+         hang("UNLINK: link->next->prev corrupted!");                                              \
+      if (!(link)->next)                                                                           \
+         (last) = (link)->prev;                                                                    \
+      else                                                                                         \
+         (link)->next->prev = (link)->prev;                                                        \
+      if (!(link)->prev)                                                                           \
+         (first) = (link)->next;                                                                   \
+      else                                                                                         \
+         (link)->prev->next = (link)->next;                                                        \
+      (link)->prev = NULL;                                                                         \
+      (link)->next = NULL;                                                                         \
+   } while (0)
 
 /* Link to the end of a single-linked list */
-#define SING_LINK(link, first, next, DATA_TYPE)           \
-  do                                                      \
-  {                                                       \
-    if (!(first))                                         \
-      (first) = (link);                                   \
-    else                                                  \
-    {                                                     \
-      DATA_TYPE *last;                                    \
-      for (last = (first); last->next; last = last->next) \
-        ;                                                 \
-      last->next = (link);                                \
-    }                                                     \
-    (link)->next = NULL;                                  \
-  } while (0)
+#define SING_LINK(link, first, next, DATA_TYPE)                                                    \
+   do                                                                                              \
+   {                                                                                               \
+      if (!(first))                                                                                \
+         (first) = (link);                                                                         \
+      else                                                                                         \
+      {                                                                                            \
+         DATA_TYPE *last;                                                                          \
+         for (last = (first); last->next; last = last->next)                                       \
+            ;                                                                                      \
+         last->next = (link);                                                                      \
+      }                                                                                            \
+      (link)->next = NULL;                                                                         \
+   } while (0)
 
 /* Link to head of a single-linked list (normal linking) */
-#define SING_TOPLINK(link, first, next) \
-  do                                    \
-  {                                     \
-    (link)->next = (first);             \
-    (first) = (link);                   \
-  } while (0)
+#define SING_TOPLINK(link, first, next)                                                            \
+   do                                                                                              \
+   {                                                                                               \
+      (link)->next = (first);                                                                      \
+      (first) = (link);                                                                            \
+   } while (0)
 
 /* Unlink a single linked list */
-#define SING_UNLINK(link, first, next, DATA_TYPE)   \
-  do                                                \
-  {                                                 \
-    if ((link) == (first))                          \
-      (first) = (link)->next;                       \
-    else                                            \
-    {                                               \
-      DATA_TYPE *prev;                              \
-      for (prev = (first); prev; prev = prev->next) \
-        if (prev->next == (link))                   \
-          break;                                    \
-      if (prev != NULL)                             \
-        prev->next = (link)->next;                  \
-      else                                          \
-        bug("Sing_unlink: link not in list.", 0);   \
-    }                                               \
-  } while (0)
+#define SING_UNLINK(link, first, next, DATA_TYPE)                                                  \
+   do                                                                                              \
+   {                                                                                               \
+      if ((link) == (first))                                                                       \
+         (first) = (link)->next;                                                                   \
+      else                                                                                         \
+      {                                                                                            \
+         DATA_TYPE *prev;                                                                          \
+         for (prev = (first); prev; prev = prev->next)                                             \
+            if (prev->next == (link))                                                              \
+               break;                                                                              \
+         if (prev != NULL)                                                                         \
+            prev->next = (link)->next;                                                             \
+         else                                                                                      \
+            bug("Sing_unlink: link not in list.", 0);                                              \
+      }                                                                                            \
+   } while (0)
 
 /* Link to end of a half-linked list */
 /* Half linked lists have a LAST pointer, but not a PREV pointer, making
    them approximately halfway between a single linked list and a double
    linked list. -- Altrag */
-#define HALF_LINK(link, first, last, next) \
-  do                                       \
-  {                                        \
-    if (!(last))                           \
-      (first) = (link);                    \
-    else                                   \
-      (last)->next = (link);               \
-    (link)->next = NULL;                   \
-    (last) = (link);                       \
-  } while (0)
+#define HALF_LINK(link, first, last, next)                                                         \
+   do                                                                                              \
+   {                                                                                               \
+      if (!(last))                                                                                 \
+         (first) = (link);                                                                         \
+      else                                                                                         \
+         (last)->next = (link);                                                                    \
+      (link)->next = NULL;                                                                         \
+      (last) = (link);                                                                             \
+   } while (0)
 
 /* Link to head of a half-linked list. */
-#define HALF_TOPLINK(link, first, last, next) \
-  do                                          \
-  {                                           \
-    if ((last) == (first))                    \
-      (last) = (link);                        \
-    (link)->next = (first);                   \
-    (first) = (link);                         \
-  } while (0)
+#define HALF_TOPLINK(link, first, last, next)                                                      \
+   do                                                                                              \
+   {                                                                                               \
+      if ((last) == (first))                                                                       \
+         (last) = (link);                                                                          \
+      (link)->next = (first);                                                                      \
+      (first) = (link);                                                                            \
+   } while (0)
 
 /* Unlink a half-linked list. */
-#define HALF_UNLINK(link, first, last, next, DATA_TYPE) \
-  do                                                    \
-  {                                                     \
-    if ((link) == (first))                              \
-    {                                                   \
-      (first) = (link)->next;                           \
-      if ((link) == (last))                             \
-        (last) = NULL;                                  \
-    }                                                   \
-    else                                                \
-    {                                                   \
-      DATA_TYPE *prev;                                  \
-      for (prev = (first); prev; prev = prev->next)     \
-        if (prev->next == (link))                       \
-          break;                                        \
-      if (prev != NULL)                                 \
-      {                                                 \
-        prev->next = (link)->next;                      \
-        if ((link) == (last))                           \
-          (last) = prev;                                \
-      }                                                 \
-      else                                              \
-        bug("Half_unlink: link not in list.", 0);       \
-    }                                                   \
-  } while (0)
+#define HALF_UNLINK(link, first, last, next, DATA_TYPE)                                            \
+   do                                                                                              \
+   {                                                                                               \
+      if ((link) == (first))                                                                       \
+      {                                                                                            \
+         (first) = (link)->next;                                                                   \
+         if ((link) == (last))                                                                     \
+            (last) = NULL;                                                                         \
+      }                                                                                            \
+      else                                                                                         \
+      {                                                                                            \
+         DATA_TYPE *prev;                                                                          \
+         for (prev = (first); prev; prev = prev->next)                                             \
+            if (prev->next == (link))                                                              \
+               break;                                                                              \
+         if (prev != NULL)                                                                         \
+         {                                                                                         \
+            prev->next = (link)->next;                                                             \
+            if ((link) == (last))                                                                  \
+               (last) = prev;                                                                      \
+         }                                                                                         \
+         else                                                                                      \
+            bug("Half_unlink: link not in list.", 0);                                              \
+      }                                                                                            \
+   } while (0)
 
 /*
  * Miscellaneous macros.
@@ -426,19 +426,19 @@ struct char_ref_type
 /* This one goes as a #define in merc.h.. dont worry.. itll work.. :) */
 /* spec: log all dispose's if mem_log==TRUE - also nuke trailing ; */
 /* spec: add dispose override, too */
-#define _dispose(mem, size, log)                                  \
-  do                                                              \
-  {                                                               \
-    if (!(mem))                                                   \
-    {                                                             \
-      bug("Disposing NULL memory", 0);                            \
-      return;                                                     \
-    }                                                             \
-    if (log && mem_log)                                           \
-      log_f("dispose(%p) from %s:%d", (mem), __FILE__, __LINE__); \
-    free((mem));                                                  \
-    (mem) = NULL;                                                 \
-  } while (0)
+#define _dispose(mem, size, log)                                                                   \
+   do                                                                                              \
+   {                                                                                               \
+      if (!(mem))                                                                                  \
+      {                                                                                            \
+         bug("Disposing NULL memory", 0);                                                          \
+         return;                                                                                   \
+      }                                                                                            \
+      if (log && mem_log)                                                                          \
+         log_f("dispose(%p) from %s:%d", (mem), __FILE__, __LINE__);                               \
+      free((mem));                                                                                 \
+      (mem) = NULL;                                                                                \
+   } while (0)
 
 #define dispose(mem, size) _dispose(mem, size, 1)
 #define qdispose(mem, size) _dispose(mem, size, 0)

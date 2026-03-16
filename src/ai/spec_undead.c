@@ -82,7 +82,8 @@ bool spec_undead(CHAR_DATA *ch)
       sum_lev = ch->level * 2 / 3;
       for (ach = first_char; ach != NULL; ach = ach->next)
       {
-         if (!IS_SET(ach->act, ACT_UNDEAD) || ach->level > sum_lev || !IS_NPC(ach) /* Kavir got summoned!  :P */
+         if (!IS_SET(ach->act, ACT_UNDEAD) || ach->level > sum_lev ||
+             !IS_NPC(ach) /* Kavir got summoned!  :P */
              || ach->in_room == ch->in_room || !can_see(ch, ach) || number_bits(2) != 0)
             continue;
 

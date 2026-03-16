@@ -81,7 +81,8 @@ int find_spell(CHAR_DATA *ch, int type)
 
       level = -1;
       for (bar = 0; bar < MAX_CLASS; bar++)
-         if (skill_table[sn].skill_level[bar] > level && ch->level >= skill_table[sn].skill_level[bar])
+         if (skill_table[sn].skill_level[bar] > level &&
+             ch->level >= skill_table[sn].skill_level[bar])
             level = skill_table[sn].skill_level[bar];
 
       if (level == -1) /* not high enough to use */
@@ -287,7 +288,8 @@ bool ready_heal_room(CHAR_DATA *ch)
 {
    bool ready = TRUE;
 
-   if ((!IS_SET(ch->in_room->affected_by, ROOM_BV_HEAL_REGEN)) && (ch->hit < get_max_hp(ch) * 75 / 100))
+   if ((!IS_SET(ch->in_room->affected_by, ROOM_BV_HEAL_REGEN)) &&
+       (ch->hit < get_max_hp(ch) * 75 / 100))
    {
       if (ch->mana >= mana_cost(ch, skill_lookup("healing light")))
       {
@@ -297,7 +299,8 @@ bool ready_heal_room(CHAR_DATA *ch)
       }
    }
 
-   if ((!IS_SET(ch->in_room->affected_by, ROOM_BV_MANA_REGEN)) && (ch->mana < get_max_mana(ch) * 75 / 100))
+   if ((!IS_SET(ch->in_room->affected_by, ROOM_BV_MANA_REGEN)) &&
+       (ch->mana < get_max_mana(ch) * 75 / 100))
    {
       if (ch->mana >= mana_cost(ch, skill_lookup("mana flare")))
       {
@@ -351,7 +354,10 @@ void need_to_stand(CHAR_DATA *ch)
    /*
     * if your leader is up and ready to move, get up
     */
-   if ((ch->leader != NULL) && (ch->in_room == ch->leader->in_room) && (ch->leader->position == POS_STANDING) && (ch->leader->hit >= get_max_hp(ch->leader) * 85 / 100) && (ch->leader->mana >= get_max_mana(ch->leader) * 85 / 100))
+   if ((ch->leader != NULL) && (ch->in_room == ch->leader->in_room) &&
+       (ch->leader->position == POS_STANDING) &&
+       (ch->leader->hit >= get_max_hp(ch->leader) * 85 / 100) &&
+       (ch->leader->mana >= get_max_mana(ch->leader) * 85 / 100))
    {
       get_up(ch, current_state);
       return;
@@ -362,7 +368,9 @@ void need_to_stand(CHAR_DATA *ch)
     */
    if (ch->hit < get_max_hp(ch) * 85 / 100)
    {
-      if ((ch->mana >= mana_cost(ch, skill_lookup("heal"))) || (ch->mana >= mana_cost(ch, skill_lookup("cure critical"))) || (ch->mana >= mana_cost(ch, skill_lookup("cure serious"))))
+      if ((ch->mana >= mana_cost(ch, skill_lookup("heal"))) ||
+          (ch->mana >= mana_cost(ch, skill_lookup("cure critical"))) ||
+          (ch->mana >= mana_cost(ch, skill_lookup("cure serious"))))
       {
          get_up(ch, current_state);
          return;
@@ -377,7 +385,9 @@ void need_to_stand(CHAR_DATA *ch)
    {
       for (vch = ch->in_room->first_person; vch != NULL; vch = vch->next_in_room)
       {
-         if ((AI_MOB(vch)) && (vch->leader == NULL) && (!is_same_group(vch, ch)) && (vch != ch) && ((get_psuedo_level(vch) - get_psuedo_level(ch) <= 20) && (get_psuedo_level(vch) - get_psuedo_level(ch) >= -20)))
+         if ((AI_MOB(vch)) && (vch->leader == NULL) && (!is_same_group(vch, ch)) && (vch != ch) &&
+             ((get_psuedo_level(vch) - get_psuedo_level(ch) <= 20) &&
+              (get_psuedo_level(vch) - get_psuedo_level(ch) >= -20)))
          {
             get_up(ch, current_state);
             return;
@@ -501,7 +511,8 @@ void power_up_mob(CHAR_DATA *ch)
    /*
     * you can only have one cloak spell
     */
-   if (!IS_AFFECTED(ch, AFF_CLOAK_ABSORPTION) && !IS_AFFECTED(ch, AFF_CLOAK_REFLECTION) && !IS_AFFECTED(ch, AFF_CLOAK_FLAMING))
+   if (!IS_AFFECTED(ch, AFF_CLOAK_ABSORPTION) && !IS_AFFECTED(ch, AFF_CLOAK_REFLECTION) &&
+       !IS_AFFECTED(ch, AFF_CLOAK_FLAMING))
    {
       num_percent = number_percent();
 
@@ -613,7 +624,13 @@ void mob_is_standing(CHAR_DATA *ch)
             if (vch->leader != NULL)
                continue;
 
-            if ((vch != ch) && (IS_NPC(vch)) && (!is_same_group(ch, vch)) && (vch->position == POS_STANDING) && ((get_psuedo_level(vch) - get_psuedo_level(ch) <= 20 && get_psuedo_level(vch) - get_psuedo_level(ch) >= -20) || (get_psuedo_level(ch) - get_psuedo_level(vch) <= 20 && get_psuedo_level(ch) - get_psuedo_level(vch) >= -20)) && (can_see(vch, ch)) && (can_see(ch, vch)))
+            if ((vch != ch) && (IS_NPC(vch)) && (!is_same_group(ch, vch)) &&
+                (vch->position == POS_STANDING) &&
+                ((get_psuedo_level(vch) - get_psuedo_level(ch) <= 20 &&
+                  get_psuedo_level(vch) - get_psuedo_level(ch) >= -20) ||
+                 (get_psuedo_level(ch) - get_psuedo_level(vch) <= 20 &&
+                  get_psuedo_level(ch) - get_psuedo_level(vch) >= -20)) &&
+                (can_see(vch, ch)) && (can_see(ch, vch)))
 
             {
                if (vch->leader == NULL)
@@ -642,14 +659,19 @@ void mob_is_standing(CHAR_DATA *ch)
     */
    if (ch->hit < get_max_hp(ch) * 85 / 100)
    {
-      if ((ch->mana >= mana_cost(ch, skill_lookup("heal"))) || (ch->mana >= mana_cost(ch, skill_lookup("cure critical"))) || (ch->mana >= mana_cost(ch, skill_lookup("cure serious"))))
+      if ((ch->mana >= mana_cost(ch, skill_lookup("heal"))) ||
+          (ch->mana >= mana_cost(ch, skill_lookup("cure critical"))) ||
+          (ch->mana >= mana_cost(ch, skill_lookup("cure serious"))))
 
          mob_regen_check(ch, NULL, FALSE);
 
       /*
        * if leader is ready to move, just keep standing
        */
-      if ((ch->leader != NULL) && (ch->leader->in_room == ch->in_room) && (ch->leader->position == POS_STANDING) && (ch->leader->mana >= get_max_mana(ch->leader) * 85 / 100) && (ch->leader->hit >= get_max_hp(ch->leader) * 85 / 100))
+      if ((ch->leader != NULL) && (ch->leader->in_room == ch->in_room) &&
+          (ch->leader->position == POS_STANDING) &&
+          (ch->leader->mana >= get_max_mana(ch->leader) * 85 / 100) &&
+          (ch->leader->hit >= get_max_hp(ch->leader) * 85 / 100))
          return;
       else
       {
@@ -718,9 +740,11 @@ void mob_is_standing(CHAR_DATA *ch)
     */
    for (vch = ch->in_room->first_person; vch != NULL; vch = vch->next_in_room)
    {
-      if ((is_same_group(vch, ch)) && (vch->in_room == ch->in_room) && (vch->leader == ch) && (able_to_level(vch)))
+      if ((is_same_group(vch, ch)) && (vch->in_room == ch->in_room) && (vch->leader == ch) &&
+          (able_to_level(vch)))
       {
-         dir = h_find_dir(get_room_index(ch->in_room->vnum), get_room_index(ROOM_VNUM_INT_HEAL), ch->hunt_flags);
+         dir = h_find_dir(get_room_index(ch->in_room->vnum), get_room_index(ROOM_VNUM_INT_HEAL),
+                          ch->hunt_flags);
          hunt_move(ch, dir);
          return;
       }
@@ -828,17 +852,20 @@ bool valid_target(CHAR_DATA *ch, CHAR_DATA *victim, int l)
    /*
     * Only kill victims of similar level
     */
-   if (((get_psuedo_level(victim) - get_psuedo_level(ch)) > -7) || ((get_psuedo_level(ch) - get_psuedo_level(victim)) > 12))
+   if (((get_psuedo_level(victim) - get_psuedo_level(ch)) > -7) ||
+       ((get_psuedo_level(ch) - get_psuedo_level(victim)) > 12))
       return FALSE;
 
    //   if ( ( IS_GOOD( ch )    && IS_GOOD( victim    ) )
    //   || (   IS_EVIL( ch )    && IS_EVIL( victim    ) )
    //      return FALSE;
 
-   if ((ch->spec_fun == spec_lookup("spec_vamp_hunter")) && (IS_NPC(victim)) && (number_percent() < 20))
+   if ((ch->spec_fun == spec_lookup("spec_vamp_hunter")) && (IS_NPC(victim)) &&
+       (number_percent() < 20))
       return FALSE;
 
-   if ((IS_SET(victim->in_room->room_flags, ROOM_SAFE)) || (IS_SET(victim->act, ACT_SOLO)) || (IS_SET(victim->act, ACT_BOSS))
+   if ((IS_SET(victim->in_room->room_flags, ROOM_SAFE)) || (IS_SET(victim->act, ACT_SOLO)) ||
+       (IS_SET(victim->act, ACT_BOSS))
        /*
         * || ( IS_SET( victim->in_room->room_flags, ROOM_JAIL_CELL ) )
         */
@@ -935,18 +962,9 @@ void select_target(CHAR_DATA *ch)
 }
 
 static const char *group_state_table[] = {
-    "@@eFleeing@@N",
-    "@@rFighting@@N",
-    "@@eCritical Healing@@N",
-    "@@aReforming@@N",
-    "@@eCritical Mana@@N",
-    "@@lHunting@@N",
-    "@@cNormal Healing@@N",
-    "@@cNormal Mana@@N",
-    "@@WLevelling@@N",
-    "@@yGetting EQ@@N",
-    "@@pIdling@@N",
-    "@@eLost@@N"};
+    "@@eFleeing@@N",       "@@rFighting@@N",   "@@eCritical Healing@@N", "@@aReforming@@N",
+    "@@eCritical Mana@@N", "@@lHunting@@N",    "@@cNormal Healing@@N",   "@@cNormal Mana@@N",
+    "@@WLevelling@@N",     "@@yGetting EQ@@N", "@@pIdling@@N",           "@@eLost@@N"};
 
 /* i have condensed this function to just three states: MOB_FIGHTING,
  * MOB_RESTING/ MOB_SLEEPING, and MOB_STANDING. each of these three states
@@ -998,7 +1016,8 @@ void int_group_handler(NPC_GROUP_DATA *ngroup)
    {
       leader_wants = GRP_STATE_LEVELING;
    }
-   sprintf(monbuf, "NPC Group Handler, Leader is %s, state is %s", ngroup->leader->name, group_state_table[ngroup->state]);
+   sprintf(monbuf, "NPC Group Handler, Leader is %s, state is %s", ngroup->leader->name,
+           group_state_table[ngroup->state]);
    monitor_chan(monbuf, MONITOR_MOB);
 
    switch (ngroup->state)
@@ -1012,10 +1031,12 @@ void int_group_handler(NPC_GROUP_DATA *ngroup)
       bool everyone_ready = TRUE;
       bool room_ready = FALSE;
       //      ready_heal_room( leader );
-      if ((leader->mana < get_max_mana(leader) * 85 / 100) || (leader->hit < get_max_hp(leader) * 85 / 100))
+      if ((leader->mana < get_max_mana(leader) * 85 / 100) ||
+          (leader->hit < get_max_hp(leader) * 85 / 100))
       {
          everyone_ready = FALSE;
-         if (((room_ready = ready_heal_room(leader)) == TRUE) || (leader->mana < get_max_mana(leader) * 20 / 100))
+         if (((room_ready = ready_heal_room(leader)) == TRUE) ||
+             (leader->mana < get_max_mana(leader) * 20 / 100))
          {
             do_sleep(leader, "");
          }
@@ -1027,7 +1048,8 @@ void int_group_handler(NPC_GROUP_DATA *ngroup)
       for (follower_ptr = ngroup->first_follower; follower_ptr; follower_ptr = follower_ptr->next)
       {
          follower = follower_ptr->this_one;
-         if ((follower->mana < get_max_mana(follower) * 75 / 100) || (follower->hit < get_max_hp(follower) * 75 / 100))
+         if ((follower->mana < get_max_mana(follower) * 75 / 100) ||
+             (follower->hit < get_max_hp(follower) * 75 / 100))
          {
             everyone_ready = FALSE;
             do_sleep(follower, "");
@@ -1050,7 +1072,8 @@ void int_group_handler(NPC_GROUP_DATA *ngroup)
          bool someone_still_fighting = FALSE;
 
          ngroup->state = GRP_STATE_FLEE;
-         for (follower_ptr = ngroup->first_follower; follower_ptr; follower_ptr = follower_ptr->next)
+         for (follower_ptr = ngroup->first_follower; follower_ptr;
+              follower_ptr = follower_ptr->next)
          {
             follower = follower_ptr->this_one;
             if (follower->fighting != NULL)

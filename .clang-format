@@ -1,0 +1,35 @@
+---
+# Style for ACK!TNG MUD server (C codebase)
+# Matches existing 3-space Allman conventions used throughout the project.
+BasedOnStyle: LLVM
+
+# Indentation
+IndentWidth: 3
+TabWidth: 3
+UseTab: Never
+ContinuationIndentWidth: 4
+
+# Brace style: always on their own line (Allman)
+BreakBeforeBraces: Allman
+
+# No collapsing short constructs onto single lines
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+
+# Line length
+ColumnLimit: 100
+
+# Pointer style: int *p  (asterisk by variable)
+PointerAlignment: Right
+ReferenceAlignment: Right
+
+# Spaces
+SpaceAfterCStyleCast: false
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+
+# Include sorting: off (project uses hand-ordered includes)
+SortIncludes: Never

@@ -32,22 +32,18 @@
 #include "globals.h"
 #define NOWHERE -1
 
-char *const compass_name[] = {
-    "north", "east", "south", "west", "up", "down"};
+char *const compass_name[] = {"north", "east", "south", "west", "up", "down"};
 
-char *const dir_name[] = {
-    "to the North", "to the East", "to the South", "to the West", "Up", "Down"};
+char *const dir_name[] = {"to the North", "to the East", "to the South",
+                          "to the West",  "Up",          "Down"};
 
 /* rev_name used to indicate where ch has come from when entering -S- */
 
-char *const rev_name[] = {
-    "the South", "the West", "the North", "the East", "Below", "Above"};
+char *const rev_name[] = {"the South", "the West", "the North", "the East", "Below", "Above"};
 
-const sh_int rev_dir[] = {
-    2, 3, 0, 1, 5, 4};
+const sh_int rev_dir[] = {2, 3, 0, 1, 5, 4};
 
-const sh_int movement_loss[SECT_MAX] = {
-    1, 2, 2, 3, 4, 6, 4, 1, 6, 10, 6, 1};
+const sh_int movement_loss[SECT_MAX] = {1, 2, 2, 3, 4, 6, 4, 1, 6, 10, 6, 1};
 
 /*
  * Local functions.
@@ -99,7 +95,8 @@ void move_char(CHAR_DATA *ch, int door)
    if (IS_NPC(ch))
       ch->using_named_door = TRUE;
    in_room = ch->in_room;
-   if ((pexit = in_room->exit[door]) == NULL || (to_room = pexit->to_room) == NULL || ((str_cmp(pexit->keyword, "")) && (ch->using_named_door == FALSE)))
+   if ((pexit = in_room->exit[door]) == NULL || (to_room = pexit->to_room) == NULL ||
+       ((str_cmp(pexit->keyword, "")) && (ch->using_named_door == FALSE)))
    {
       send_to_char("Alas, you cannot go that way.\n\r", ch);
       ch->using_named_door = FALSE;
@@ -132,7 +129,8 @@ void move_char(CHAR_DATA *ch, int door)
    }
    if (IS_SET(in_room->affected_by, ROOM_BV_HOLD))
    {
-      send_to_char("A fleeting vision of bars appears before the exit, and stops your movement!\n\r", ch);
+      send_to_char(
+          "A fleeting vision of bars appears before the exit, and stops your movement!\n\r", ch);
       ch->using_named_door = FALSE;
       return;
    }
@@ -196,7 +194,8 @@ void move_char(CHAR_DATA *ch, int door)
       }
    }
 
-   if (!IS_NPC(ch) && ch->pcdata->learned[gsn_climb] == 0 && IS_SET(pexit->exit_info, EX_CLIMB) && !IS_AFFECTED(ch, AFF_FLYING) && !item_has_apply(ch, ITEM_APPLY_FLY))
+   if (!IS_NPC(ch) && ch->pcdata->learned[gsn_climb] == 0 && IS_SET(pexit->exit_info, EX_CLIMB) &&
+       !IS_AFFECTED(ch, AFF_FLYING) && !item_has_apply(ch, ITEM_APPLY_FLY))
    {
       send_to_char("You'd need to be able to fly or climb to go that way!\n\r", ch);
       ch->using_named_door = FALSE;
@@ -227,7 +226,8 @@ void move_char(CHAR_DATA *ch, int door)
          return;
       }
 
-      if (to_room->vnum == ROOM_VNUM_CLAN && (IS_NPC(ch) || ((!IS_IMMORTAL(ch)) && (!IS_SET(ch->pcdata->pflags, PFLAG_CLAN_BOSS)))))
+      if (to_room->vnum == ROOM_VNUM_CLAN &&
+          (IS_NPC(ch) || ((!IS_IMMORTAL(ch)) && (!IS_SET(ch->pcdata->pflags, PFLAG_CLAN_BOSS)))))
       {
          send_to_char("Only Clan Bosses may enter this room.\n\r", ch);
          ch->using_named_door = FALSE;
@@ -290,7 +290,8 @@ void move_char(CHAR_DATA *ch, int door)
          }
       }
 
-      move = movement_loss[UMIN(SECT_MAX - 1, in_room->sector_type)] + movement_loss[UMIN(SECT_MAX - 1, to_room->sector_type)];
+      move = movement_loss[UMIN(SECT_MAX - 1, in_room->sector_type)] +
+             movement_loss[UMIN(SECT_MAX - 1, to_room->sector_type)];
 
       if (IS_AFFECTED(ch, AFF_FLYING) || item_has_apply(ch, ITEM_APPLY_FLY))
          move = 1;
@@ -322,7 +323,7 @@ void move_char(CHAR_DATA *ch, int door)
          else
          {
             snprintf(move_buf, sizeof(move_buf), "$L%s$n %s $T.",
-                    get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex), ch->pcdata->room_exit);
+                     get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex), ch->pcdata->room_exit);
          }
          act(move_buf, ch, NULL, door_name_leave, TO_ROOM);
       }
@@ -338,8 +339,8 @@ void move_char(CHAR_DATA *ch, int door)
          sprintf(move_buf, "$L$n %s $T.", "wanders in from");
       else
       {
-         sprintf(move_buf, "$L%s$n %s $T.",
-                 get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex), ch->pcdata->room_enter);
+         sprintf(move_buf, "$L%s$n %s $T.", get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex),
+                 ch->pcdata->room_enter);
       }
       act(move_buf, ch, NULL, door_name_enter, TO_ROOM);
    }
@@ -362,7 +363,7 @@ void move_char(CHAR_DATA *ch, int door)
    if (!IS_NPC(ch))
       quest_room_notify(ch, ch->in_room);
 
-ch->using_named_door = FALSE;
+   ch->using_named_door = FALSE;
    return;
 }
 
@@ -423,14 +424,16 @@ int find_door(CHAR_DATA *ch, char *arg)
    {
       for (door = 0; door <= 5; door++)
       {
-         if ((pexit = ch->in_room->exit[door]) != NULL && IS_SET(pexit->exit_info, EX_ISDOOR) && pexit->keyword != NULL && is_name(arg, pexit->keyword))
+         if ((pexit = ch->in_room->exit[door]) != NULL && IS_SET(pexit->exit_info, EX_ISDOOR) &&
+             pexit->keyword != NULL && is_name(arg, pexit->keyword))
             return door;
       }
       act("I see no $T here.", ch, NULL, arg, TO_CHAR);
       return -1;
    }
 
-   if (((pexit = ch->in_room->exit[door]) == NULL) || (str_cmp(pexit->keyword, "") && !is_name(arg, pexit->keyword)))
+   if (((pexit = ch->in_room->exit[door]) == NULL) ||
+       (str_cmp(pexit->keyword, "") && !is_name(arg, pexit->keyword)))
    {
       act("I see no door $T here.", ch, NULL, arg, TO_CHAR);
       return -1;
@@ -519,7 +522,8 @@ void do_open(CHAR_DATA *ch, char *argument)
       /*
        * open the other side
        */
-      if ((to_room = pexit->to_room) != NULL && (pexit_rev = to_room->exit[rev_dir[door]]) != NULL && pexit_rev->to_room == ch->in_room)
+      if ((to_room = pexit->to_room) != NULL &&
+          (pexit_rev = to_room->exit[rev_dir[door]]) != NULL && pexit_rev->to_room == ch->in_room)
       {
          CHAR_DATA *rch;
 
@@ -596,7 +600,8 @@ void do_close(CHAR_DATA *ch, char *argument)
       /*
        * close the other side
        */
-      if ((to_room = pexit->to_room) != NULL && (pexit_rev = to_room->exit[rev_dir[door]]) != 0 && pexit_rev->to_room == ch->in_room)
+      if ((to_room = pexit->to_room) != NULL && (pexit_rev = to_room->exit[rev_dir[door]]) != 0 &&
+          pexit_rev->to_room == ch->in_room)
       {
          CHAR_DATA *rch;
 
@@ -713,7 +718,8 @@ void do_lock(CHAR_DATA *ch, char *argument)
       /*
        * lock the other side
        */
-      if ((to_room = pexit->to_room) != NULL && (pexit_rev = to_room->exit[rev_dir[door]]) != 0 && pexit_rev->to_room == ch->in_room)
+      if ((to_room = pexit->to_room) != NULL && (pexit_rev = to_room->exit[rev_dir[door]]) != 0 &&
+          pexit_rev->to_room == ch->in_room)
       {
          SET_BIT(pexit_rev->exit_info, EX_LOCKED);
       }
@@ -773,12 +779,12 @@ void do_unlock(CHAR_DATA *ch, char *argument)
       REMOVE_BIT(obj->value[1], CONT_LOCKED);
       send_to_char("*Click*\n\r", ch);
       act("$n unlocks $p.", ch, obj, NULL, TO_ROOM);
-         if (IS_SET(key->extra_flags, ITEM_TRIG_DESTROY))
-         {
-            act("$p was consumed on use.", ch, key, NULL, TO_ROOM);
-            act("You consumed $p on use.", ch, key, NULL, TO_CHAR);
-            extract_obj(key);
-         }
+      if (IS_SET(key->extra_flags, ITEM_TRIG_DESTROY))
+      {
+         act("$p was consumed on use.", ch, key, NULL, TO_ROOM);
+         act("You consumed $p on use.", ch, key, NULL, TO_CHAR);
+         extract_obj(key);
+      }
       return;
    }
 
@@ -817,17 +823,18 @@ void do_unlock(CHAR_DATA *ch, char *argument)
       REMOVE_BIT(pexit->exit_info, EX_LOCKED);
       send_to_char("*Click*\n\r", ch);
       act("$n unlocks the $d.", ch, NULL, pexit->keyword, TO_ROOM);
-         if (IS_SET(key->extra_flags, ITEM_TRIG_DESTROY))
-         {
-            act("$p was consumed on use.", ch, key, NULL, TO_ROOM);
-            act("You consumed $p on use.", ch, key, NULL, TO_CHAR);
-            extract_obj(key);
-         }
+      if (IS_SET(key->extra_flags, ITEM_TRIG_DESTROY))
+      {
+         act("$p was consumed on use.", ch, key, NULL, TO_ROOM);
+         act("You consumed $p on use.", ch, key, NULL, TO_CHAR);
+         extract_obj(key);
+      }
 
       /*
        * unlock the other side
        */
-      if ((to_room = pexit->to_room) != NULL && (pexit_rev = to_room->exit[rev_dir[door]]) != NULL && pexit_rev->to_room == ch->in_room)
+      if ((to_room = pexit->to_room) != NULL &&
+          (pexit_rev = to_room->exit[rev_dir[door]]) != NULL && pexit_rev->to_room == ch->in_room)
       {
          REMOVE_BIT(pexit_rev->exit_info, EX_LOCKED);
       }
@@ -1155,12 +1162,14 @@ void do_recall(CHAR_DATA *ch, char *argument)
 
       if (ch->hit > 250)
       {
-         send_to_char("@@lYou wince in pain as you feel your molecules disperse, then reform.@@N\n\r", ch);
+         send_to_char(
+             "@@lYou wince in pain as you feel your molecules disperse, then reform.@@N\n\r", ch);
          ch->hit -= 200;
       }
       else
       {
-         send_to_char("Your molecules begin to disperse, then reform quickly, leaving you here.\n\r", ch);
+         send_to_char(
+             "Your molecules begin to disperse, then reform quickly, leaving you here.\n\r", ch);
          return;
       }
    }
@@ -1472,7 +1481,6 @@ void do_halls(CHAR_DATA *ch, char *argument)
    return;
 }
 
-
 void do_scan(CHAR_DATA *ch, char *argument)
 /* Informs ch if there are any (N)PCs in the 6 adjacent rooms.
  * I'm sure this could be written better.... ;)
@@ -1496,7 +1504,9 @@ void do_scan(CHAR_DATA *ch, char *argument)
    {
       EXIT_DATA *pexit;
 
-      if ((pexit = location->exit[door]) == 0 || pexit->to_room == NULL || IS_SET(pexit->exit_info, EX_CLOSED) || (str_cmp(pexit->keyword, "")) || (pexit->to_room->vnum == ch->in_room->vnum))
+      if ((pexit = location->exit[door]) == 0 || pexit->to_room == NULL ||
+          IS_SET(pexit->exit_info, EX_CLOSED) || (str_cmp(pexit->keyword, "")) ||
+          (pexit->to_room->vnum == ch->in_room->vnum))
       {
          /*
           * Then this direction is "invalid"
@@ -1531,7 +1541,9 @@ void do_scan(CHAR_DATA *ch, char *argument)
                send_to_char(buf, ch);
             }
          }
-         if ((pexit->to_room->affected_by != 0) && ((is_affected(ch, skill_lookup("detect magic"))) || (item_has_apply(ch, ITEM_APPLY_DET_MAG))))
+         if ((pexit->to_room->affected_by != 0) &&
+             ((is_affected(ch, skill_lookup("detect magic"))) ||
+              (item_has_apply(ch, ITEM_APPLY_DET_MAG))))
          {
             sprintf(buf, "The room %s has a @@rMagical@@N Affect!!!\n\r", dir_name[door]);
             send_to_char(buf, ch);
@@ -1587,7 +1599,9 @@ void do_enter(CHAR_DATA *ch, char *argument)
       send_to_char("Nothing happens.\n\r", ch);
       return;
    }
-   if ((IS_SET(ch->in_room->room_flags, ROOM_NO_PORTAL) || IS_SET(to_room->room_flags, ROOM_NO_PORTAL)) && number_range(0, 100) < 75)
+   if ((IS_SET(ch->in_room->room_flags, ROOM_NO_PORTAL) ||
+        IS_SET(to_room->room_flags, ROOM_NO_PORTAL)) &&
+       number_range(0, 100) < 75)
    {
       act("The anti-magic zone causes the portal to @@eIMPLODE@@N!!!", ch, NULL, NULL, TO_ROOM);
       send_to_char("The anti-magic zone causes the portal to @@eIMPLODE@@N!!!", ch);
@@ -1666,7 +1680,9 @@ void do_scout(CHAR_DATA *ch, char *argument)
           */
          for (counter = 0; counter < depth; counter++)
          {
-            if (tmploc->exit[door] == 0 || tmploc->exit[door]->to_room == NULL || IS_SET(tmploc->exit[door]->exit_info, EX_CLOSED) || (str_cmp(tmploc->exit[door]->keyword, "")))
+            if (tmploc->exit[door] == 0 || tmploc->exit[door]->to_room == NULL ||
+                IS_SET(tmploc->exit[door]->exit_info, EX_CLOSED) ||
+                (str_cmp(tmploc->exit[door]->keyword, "")))
                break;
 
             tmploc = tmploc->exit[door]->to_room;

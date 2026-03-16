@@ -179,10 +179,10 @@ long exp_to_level_adept(CHAR_DATA *ch)
 
    exp += exp * max / 2;
 
-   exp -= exp/4;
+   exp -= exp / 4;
 
-   for(int i = 0; i < get_total_reincarnations(ch); i++)
-      exp += exp/10;
+   for (int i = 0; i < get_total_reincarnations(ch); i++)
+      exp += exp / 10;
 
    return exp * 3;
 }
@@ -199,10 +199,10 @@ long exp_to_level_remort(CHAR_DATA *ch, int index)
 
    cost = get_cost_to_level_remort(ch, index);
 
-   cost -= cost/4;
+   cost -= cost / 4;
 
-   for(int i = 0; i < get_total_reincarnations(ch); i++)
-      cost += cost/10;
+   for (int i = 0; i < get_total_reincarnations(ch); i++)
+      cost += cost / 10;
 
    return (cost);
 }
@@ -234,10 +234,10 @@ long exp_to_level(CHAR_DATA *ch, int index)
    if (diff > 30)
       cost += cost * diff / 10;
 
-   cost -= cost/4;
+   cost -= cost / 4;
 
-   for(int i = 0; i < get_total_reincarnations(ch); i++)
-      cost += cost/10;
+   for (int i = 0; i < get_total_reincarnations(ch); i++)
+      cost += cost / 10;
 
    return (cost);
 }
@@ -293,7 +293,8 @@ int exp_for_mobile(int level, CHAR_DATA *mob)
    }
    else if (level >= MAX_MOB_LEVEL)
    {
-      sprintf(log_buf, "exp_for_mobile: %s level %d exceeds table max %d.", mob->name, level, MAX_MOB_LEVEL - 1);
+      sprintf(log_buf, "exp_for_mobile: %s level %d exceeds table max %d.", mob->name, level,
+              MAX_MOB_LEVEL - 1);
       bug(log_buf, 0);
       level = MAX_MOB_LEVEL - 1;
    }
@@ -362,7 +363,8 @@ int exp_for_mobile(int level, CHAR_DATA *mob)
    if (IS_AFFECTED(mob, AFF_CLOAK_REFLECTION))
       value += .350 * base_value;
 
-   if ((IS_AFFECTED(mob, AFF_CLOAK_REFLECTION)) && (IS_AFFECTED(mob, AFF_CLOAK_ABSORPTION)) && (IS_AFFECTED(mob, AFF_CLOAK_FLAMING)))
+   if ((IS_AFFECTED(mob, AFF_CLOAK_REFLECTION)) && (IS_AFFECTED(mob, AFF_CLOAK_ABSORPTION)) &&
+       (IS_AFFECTED(mob, AFF_CLOAK_FLAMING)))
       value += .200 * base_value;
 
    if (IS_SET(mob->def, DEF_CURE_LIGHT))
@@ -425,7 +427,8 @@ int skill_table_lookup(CHAR_DATA *ch, int sn, int return_type)
       case MORTAL:
          for (cnt = 0; cnt < MAX_CLASS; cnt++)
          {
-            if (ch->class_level[cnt] >= skill_table[sn].skill_level[cnt] && ch->class_level[cnt] > best_level)
+            if (ch->class_level[cnt] >= skill_table[sn].skill_level[cnt] &&
+                ch->class_level[cnt] > best_level)
             {
                best_level = ch->class_level[cnt];
                best_class = cnt;
@@ -435,7 +438,8 @@ int skill_table_lookup(CHAR_DATA *ch, int sn, int return_type)
       case REMORT:
          for (cnt = CLASS_SOR; cnt < CLASS_SOR + MAX_REMORT; cnt++)
          {
-            if (ch->class_level[cnt] >= skill_table[sn].skill_level[cnt] && ch->class_level[cnt] > best_level)
+            if (ch->class_level[cnt] >= skill_table[sn].skill_level[cnt] &&
+                ch->class_level[cnt] > best_level)
             {
                best_level = ch->class_level[cnt];
                best_class = cnt;
@@ -492,7 +496,7 @@ int get_adept_level(CHAR_DATA *ch)
 {
    int max = 0;
 
-   for(int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
+   for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
    {
       if (ch->class_level[i] > max)
          max = ch->class_level[i];
@@ -606,7 +610,8 @@ int get_item_value(OBJ_DATA *obj)
       }
    }
 
-   cost = obj->level * 1 + ac_mod * -8 + dr_mod * 5 + hr_mod * 5 + save_mod * 2 + hp_mod * 4 + mana_mod * 3;
+   cost = obj->level * 1 + ac_mod * -8 + dr_mod * 5 + hr_mod * 5 + save_mod * 2 + hp_mod * 4 +
+          mana_mod * 3;
 
    if (IS_SET(obj->item_apply, ITEM_APPLY_ENHANCED))
       cost = cost * 1.3;
