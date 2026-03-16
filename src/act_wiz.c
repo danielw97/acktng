@@ -886,12 +886,20 @@ void do_mstat(CHAR_DATA *ch, char *argument)
       sprintf(buf, "   (%d Hours RL play).\n\r", my_get_hours(victim));
       strcat(buf1, buf);
 
-      sprintf(buf, "Class Order: %s %s %s %s %s\n\r",
-              gclass_table[victim->pcdata->order[0]].who_name,
-              gclass_table[victim->pcdata->order[1]].who_name,
-              gclass_table[victim->pcdata->order[2]].who_name,
-              gclass_table[victim->pcdata->order[3]].who_name, gclass_table[victim->pcdata->order[4]].who_name);
-      strcat(buf1, buf);
+      {
+         char class_buf[MAX_STRING_LENGTH];
+         class_buf[0] = '\0';
+         for (int ci = 0; ci < MAX_CLASS; ci++)
+         {
+            if (IS_MORTAL_CLASS(ci) && victim->class_level[ci] >= 0)
+            {
+               strcat(class_buf, gclass_table[ci].who_name);
+               strcat(class_buf, " ");
+            }
+         }
+         sprintf(buf, "Mortal Classes: %s\n\r", class_buf);
+         strcat(buf1, buf);
+      }
    }
 
    sprintf(buf, "Hp: %ld/%ld.  Mana: %ld/%ld.  Move: %ld/%ld.  Practices: %d.\n\r",
@@ -2468,73 +2476,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg2, "order"))
    {
-
-      int cnt;
-      int class[MAX_CLASS];
-      int parity[MAX_CLASS];
-      int index[MAX_CLASS];
-      int foo;
-      bool ok = TRUE;
-      char arg[MAX_STRING_LENGTH];
-
-      if (IS_NPC(victim))
-      {
-         send_to_char("Not on NPCs!\n\r", ch);
-         return;
-      }
-
-      if (get_trust(ch) < 84)
-      {
-         send_to_char("Only a Supreme or above may use this option.\n\r", ch);
-         return;
-      }
-      for (cnt = 0; cnt < MAX_CLASS; cnt++)
-         parity[cnt] = -1;
-
-      for (cnt = 0; cnt < MAX_CLASS; cnt++)
-      {
-         argument = one_argument(argument, arg);
-         if (arg[0] == '\0')
-         {
-            ok = FALSE;
-            break;
-         }
-         for (foo = 0; foo < MAX_CLASS; foo++)
-            if (!str_cmp(arg, gclass_table[foo].who_name))
-            {
-               class[cnt] = foo;
-               index[foo] = (cnt);
-               parity[foo] = 1;
-               break;
-            }
-         if (foo == MAX_CLASS)
-         {
-            ok = FALSE;
-            break;
-         }
-      }
-
-      for (cnt = 0; cnt < MAX_CLASS; cnt++)
-         if (parity[cnt] == -1)
-            ok = FALSE;
-
-      if (!ok)
-      {
-         send_to_char("Must be 5 3-letter abbrev for different classes.\n\r", ch);
-         return;
-      }
-
-      /*
-       * Copy classes to pcdata
-       */
-      for (cnt = 0; cnt < MAX_CLASS; cnt++)
-      {
-         victim->pcdata->order[cnt] = class[cnt];
-         victim->pcdata->index[cnt] = index[cnt];
-      }
-
-      send_to_char("Your classes have been re-ordered.\n\r", victim);
-      send_to_char("Done.\n\r", ch);
+      send_to_char("Class order is no longer used. Use 'setclass <player> class <classname>' instead.\n\r", ch);
       return;
    }
 

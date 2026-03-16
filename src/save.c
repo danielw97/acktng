@@ -334,14 +334,6 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
    {
       fprintf(fp, "Generation   %d\n", ch->pcdata->generation);
       fprintf(fp, "Clan         %d\n", ch->pcdata->clan);
-      fprintf(fp, "Order        %d %d %d %d %d %d\n",
-              ch->pcdata->order[0], ch->pcdata->order[1], ch->pcdata->order[2],
-              ch->pcdata->order[3], ch->pcdata->order[4], ch->pcdata->order[5]);
-
-      fprintf(fp, "Index	   %d %d %d %d %d %d\n",
-              ch->pcdata->index[0], ch->pcdata->index[1], ch->pcdata->index[2],
-              ch->pcdata->index[3], ch->pcdata->index[4], ch->pcdata->index[5]);
-
       fprintf(fp, "Mkills	   %d\n", ch->pcdata->mkills);
       fprintf(fp, "Mkilled	   %d\n", ch->pcdata->mkilled);
       fprintf(fp, "Pkills	   %d\n", ch->pcdata->pkills);
@@ -742,8 +734,6 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
          ch->class_level[foo] = -1;
       for (foo = CLASS_GMA; foo < CLASS_GMA + MAX_CLASS; foo++)
          ch->class_level[foo] = -1;
-      for (int i = 0; i < MAX_CLASS; i++)
-         ch->pcdata->reincarnate_order[i] = 0;
       ch->pcdata->reincarnate_confirm = FALSE;
       ch->adept_level = -1;
       for (cnt = 0; cnt < MAX_ALIASES; cnt++)
@@ -1210,7 +1200,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             {
                int i;
                for (i = 0; i < MAX_CLASS; i++)
-                  ch->pcdata->index[i] = fread_number(fp);
+                  fread_number(fp); /* index[] removed; discard legacy data */
                fMatch = TRUE;
                break;
             }
@@ -1271,7 +1261,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          {
             int i;
             for (i = 0; i < MAX_CLASS; i++)
-               ch->pcdata->order[i] = fread_number(fp);
+               fread_number(fp); /* order[] removed; discard legacy data */
             fMatch = TRUE;
             break;
          }

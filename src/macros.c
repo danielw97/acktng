@@ -209,23 +209,11 @@ long exp_to_level_remort(CHAR_DATA *ch, int index)
 
 long exp_to_level(CHAR_DATA *ch, int index)
 {
-   int mult = 0;
    int diff = 0;
    long cost;
 
    if (IS_NPC(ch))
       return 69;
-
-   if (index == ch->pcdata->order[0])
-      mult = 3;
-   else if (index == ch->pcdata->order[1])
-      mult = 4;
-   else if (index == ch->pcdata->order[2])
-      mult = 5;
-   else if (index == ch->pcdata->order[3])
-      mult = 6;
-   else
-      mult = 69;
 
    cost = get_cost_to_level(ch, index);
 
@@ -245,8 +233,6 @@ long exp_to_level(CHAR_DATA *ch, int index)
 
    if (diff > 30)
       cost += cost * diff / 10;
-
-   cost = cost * mult / 4.3;
 
    cost -= cost/4;
 

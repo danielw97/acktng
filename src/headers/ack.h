@@ -778,8 +778,6 @@ struct pc_data
    int mkilled;
    int pflags;
    char *lastlogin;
-   sh_int order[MAX_TOTAL_CLASS]; /* Class Order */
-   sh_int index[MAX_TOTAL_CLASS]; /* the order of each class! */
    int monitor;             /* monitor channel for imms */
    sh_int has_exp_fix;
    sh_int quest_points;
@@ -792,7 +790,6 @@ struct pc_data
    int reincarnations[MAX_TOTAL_CLASS]; /* Unified reincarnations (mortal 0-5, remort 6-17, adept 18-23) */
    int reincarnation_data[MAX_REINCARNATE];
    int reincarnate_race;
-   int reincarnate_order[MAX_CLASS];
    int reincarnate_confirm;
    int mana_from_gain; /* saves non-item oriented mana total */
    int hp_from_gain;   /* same for hitpoints */

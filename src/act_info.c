@@ -4589,11 +4589,6 @@ void do_gain(CHAR_DATA *ch, char *argument)
    }
    else
    {
-      if (!IS_NPC(ch) && ch->pcdata->order[0] != c && ch->pcdata->order[1] != c && ch->pcdata->order[2] != c && ch->pcdata->order[3] != c)
-      {
-         send_to_char("You cannot level in this class\n\r", ch);
-         return;
-      }
       cost = exp_to_level(ch, c);
    }
 
@@ -5054,17 +5049,7 @@ void do_worth(CHAR_DATA *ch, char *argument)
 
    for (cnt = 0; cnt < MAX_CLASS; cnt++)
    {
-      bool show = FALSE;
-
-      for (int i = 0; i < MAX_PC_CLASS; i++)
-      {
-         if (ch->pcdata->order[i] == cnt)
-         {
-            show = TRUE;
-            break;
-         }
-      }
-      if (show && ch->class_level[cnt] < MAX_MORTAL)
+      if (IS_MORTAL_CLASS(cnt) && ch->class_level[cnt] < MAX_MORTAL)
       {
          any = TRUE;
          cost = exp_to_level(ch, cnt);

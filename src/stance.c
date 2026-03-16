@@ -190,7 +190,7 @@ bool is_legal_stance(CHAR_DATA *ch, int stance)
 
         if (stance_app[stance].class_override > -1)
         {
-            if (stance_app[stance].class_override == ch->pcdata->order[0])
+            if (stance_app[stance].class_override == ch->class)
                 legal_stance = TRUE;
         }
     }

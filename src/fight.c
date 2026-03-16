@@ -340,17 +340,12 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
       // Mort hits
       for (int i = 0; i < MAX_CLASS; i++)
       {
-         if (gclass_table[ch->pcdata->order[i]].attr_prime == APPLY_INT ||
-             gclass_table[ch->pcdata->order[i]].attr_prime == APPLY_WIS)
+         if (!IS_MORTAL_CLASS(i))
             continue;
-
-         if (i == 0 && ch->class_level[ch->pcdata->order[i]] > 10)
-            hits++;
-         if (i == 1 && ch->class_level[ch->pcdata->order[i]] > 20)
-            hits++;
-         if (i == 2 && ch->class_level[ch->pcdata->order[i]] > 40)
-            hits++;
-         if (i == 3 && ch->class_level[ch->pcdata->order[i]] > 80)
+         if (gclass_table[i].attr_prime == APPLY_INT ||
+             gclass_table[i].attr_prime == APPLY_WIS)
+            continue;
+         if (ch->class_level[i] > 10)
             hits++;
       }
    }

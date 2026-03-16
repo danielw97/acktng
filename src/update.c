@@ -207,7 +207,7 @@ void advance_level(CHAR_DATA *ch, int class, bool show)
 
    add_move = (get_curr_con(ch) + get_curr_dex(ch)) / 5;
 
-   if (class == ch->pcdata->order[0] && ch->pcdata->reincarnation_data[REINCARNATION_HP] > 0)
+   if (class == ch->class && ch->pcdata->reincarnation_data[REINCARNATION_HP] > 0)
    {
       add_hp += get_reincarnate_hp_level(ch);
       add_mana += get_reincarnate_mana_level(ch);

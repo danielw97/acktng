@@ -105,10 +105,6 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
          send_to_char("Current reincarnation info:\n\r", ch);
          sprintf(buf, "Race: %s\n\r", race_table[ch->pcdata->reincarnate_race].race_name);
          send_to_char(buf, ch);
-         sprintf(buf, "Class Order: %s %s %s %s\n\r", gclass_table[ch->pcdata->reincarnate_order[0]].who_name,
-                 gclass_table[ch->pcdata->reincarnate_order[1]].who_name, gclass_table[ch->pcdata->reincarnate_order[2]].who_name,
-                 gclass_table[ch->pcdata->reincarnate_order[3]].who_name);
-         send_to_char(buf, ch);
          if (IS_SET(ch->pcdata->reincarnate_confirm, REINCARNATE_CONFIRM))
             send_to_char("Reincarnation CONFIRMED, reincarnate set done to reincarnate.\n\r", ch);
       }
@@ -142,55 +138,8 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
 
          SET_BIT(ch->pcdata->reincarnate_confirm, REINCARNATE_RACE);
       }
-      else if (!str_prefix(arg, "order"))
-      {
-         ch->pcdata->reincarnate_order[0] = -1;
-         ch->pcdata->reincarnate_order[1] = -1;
-         ch->pcdata->reincarnate_order[2] = -1;
-         ch->pcdata->reincarnate_order[3] = -1;
-         REMOVE_BIT(ch->pcdata->reincarnate_confirm, REINCARNATE_ORDER);
-         REMOVE_BIT(ch->pcdata->reincarnate_confirm, REINCARNATE_CONFIRM);
-
-         for (int cnt = 0; cnt < MAX_PC_CLASS; cnt++)
-         {
-            bool found = FALSE;
-            argument = one_argument(argument, arg);
-            if (arg[0] == '\0')
-            {
-               send_to_char("Invalid class option. Ex: Cle Cip War Psi or Cleric Cipher Warden Psionicist\n\r", ch);
-               return;
-            }
-            for (int foo = 0; foo < MAX_CLASS; foo++)
-            {
-               if (!str_cmp(arg, gclass_table[foo].who_name) || !str_cmp(arg, gclass_table[foo].class_name))
-               {
-                  ch->pcdata->reincarnate_order[cnt] = foo;
-                  found = TRUE;
-                  break;
-               }
-            }
-
-            if (!found)
-            {
-               send_to_char("Invalid class option. Ex: Cle Cip War Psi or Cleric Cipher Warden Psionicist\n\r", ch);
-               return;
-            }
-         }
-
-         SET_BIT(ch->pcdata->reincarnate_confirm, REINCARNATE_ORDER);
-      }
       else if (!str_prefix(arg, "confirm"))
       {
-         for (int i = 0; i < MAX_PC_CLASS; i++)
-         {
-            if (ch->pcdata->reincarnate_order[i] == -1)
-            {
-               send_to_char("Incorrect class order.\n\r", ch);
-               REMOVE_BIT(ch->pcdata->reincarnate_confirm, REINCARNATE_ORDER);
-               REMOVE_BIT(ch->pcdata->reincarnate_confirm, REINCARNATE_CONFIRM);
-               return;
-            }
-         }
          if (ch->pcdata->reincarnate_race == -1)
          {
             send_to_char("Incorrect race.\n\r", ch);
@@ -203,8 +152,7 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
       }
       else if (!str_prefix(arg, "done"))
       {
-         if (!IS_SET(ch->pcdata->reincarnate_confirm, REINCARNATE_ORDER) ||
-             !IS_SET(ch->pcdata->reincarnate_confirm, REINCARNATE_RACE) ||
+         if (!IS_SET(ch->pcdata->reincarnate_confirm, REINCARNATE_RACE) ||
              !IS_SET(ch->pcdata->reincarnate_confirm, REINCARNATE_CONFIRM))
          {
             send_to_char("You haven't confirmed your reincarnation yet!\n\r", ch);
@@ -223,7 +171,7 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
          ch->pcdata->reincarnation_data[REINCARNATION_MOVE] += ch->pcdata->move_from_gain;
          ch->pcdata->reincarnation_data[REINCARNATION_POINTS]++;
          ch->pcdata->move_from_gain = 0;
-         ch->pcdata->reincarnations[ch->pcdata->order[0]]++;
+         ch->pcdata->reincarnations[ch->class]++;
          ch->race = ch->pcdata->reincarnate_race;
          ch->level = 1;
          send_to_char("Done\n\r", ch);
@@ -243,21 +191,18 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
             ch->class_level[CLASS_GMA + i] = 0;
             ch->class_level[CLASS_SOR + i] = 0;
             ch->class_level[CLASS_SOR + MAX_CLASS + i] = 0;
-            ch->pcdata->order[i] = ch->pcdata->reincarnate_order[i];
-            ch->pcdata->index[ch->pcdata->reincarnate_order[i]] = i;
          }
-         ch->class = ch->pcdata->order[0];
          ch->level = 1;
-         ch->class_level[ch->pcdata->order[0]] = 1;
+         ch->class_level[ch->class] = 1;
          reset_gain_stats(ch);
-         advance_level(ch, ch->pcdata->order[0], TRUE);
+         advance_level(ch, ch->class, TRUE);
          do_save(ch, "");
       }
       else
       {
          snprintf(buf, sizeof(buf), "Invalid input %.128s\n\r", arg);
          send_to_char(buf, ch);
-         send_to_char("Valid set args: show, race, order, confirm, done", ch);
+         send_to_char("Valid set args: show, race, confirm, done", ch);
       }
    }
    else

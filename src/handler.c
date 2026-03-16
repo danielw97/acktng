@@ -337,7 +337,7 @@ int get_max_str(CHAR_DATA *ch)
 {
    int max = race_table[ch->race].race_str;
 
-   if (!IS_NPC(ch) && gclass_table[ch->pcdata->order[0]].attr_prime == APPLY_STR)
+   if (!IS_NPC(ch) && gclass_table[ch->class].attr_prime == APPLY_STR)
       max++;
 
    for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
@@ -378,7 +378,7 @@ int get_max_int(CHAR_DATA *ch)
 {
    int max = race_table[ch->race].race_int;
 
-   if (!IS_NPC(ch) && gclass_table[ch->pcdata->order[0]].attr_prime == APPLY_INT)
+   if (!IS_NPC(ch) && gclass_table[ch->class].attr_prime == APPLY_INT)
       max++;
 
    for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
@@ -422,7 +422,7 @@ int get_max_wis(CHAR_DATA *ch)
 {
    int max = race_table[ch->race].race_wis;
 
-   if (!IS_NPC(ch) && gclass_table[ch->pcdata->order[0]].attr_prime == APPLY_WIS)
+   if (!IS_NPC(ch) && gclass_table[ch->class].attr_prime == APPLY_WIS)
       max++;
 
    for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
@@ -464,7 +464,7 @@ int get_max_dex(CHAR_DATA *ch)
 {
    int max = race_table[ch->race].race_dex;
 
-   if (!IS_NPC(ch) && gclass_table[ch->pcdata->order[0]].attr_prime == APPLY_DEX)
+   if (!IS_NPC(ch) && gclass_table[ch->class].attr_prime == APPLY_DEX)
       max++;
 
    for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
@@ -505,7 +505,7 @@ int get_max_con(CHAR_DATA *ch)
 {
    int max = race_table[ch->race].race_con;
 
-   if (!IS_NPC(ch) && gclass_table[ch->pcdata->order[0]].attr_prime == APPLY_CON)
+   if (!IS_NPC(ch) && gclass_table[ch->class].attr_prime == APPLY_CON)
       max++;
 
    for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
