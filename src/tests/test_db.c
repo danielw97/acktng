@@ -11,7 +11,9 @@
 #include "ack.h"
 
 void db_test_format_status(char *dest, size_t dest_size, const char *prefix, const char *file_name);
+void db_test_shuffle_maze_room_exits(ROOM_INDEX_DATA *pRoomIndex);
 
+void init_mm(void);
 
 time_t current_time;
 FILE *fpReserve = NULL;
@@ -1029,6 +1031,81 @@ static void test_count_file_line_single_line_no_newline(void)
     fclose(fp);
 }
 
+static void test_maze_room_exits_are_valid_permutation_after_shuffle(void)
+{
+    ROOM_INDEX_DATA room;
+    EXIT_DATA exits[6];
+    EXIT_DATA *orig[6];
+    int i, j;
+
+    memset(&room, 0, sizeof(room));
+    memset(exits, 0, sizeof(exits));
+    room.room_flags = ROOM_MAZE;
+
+    for (i = 0; i < 6; i++)
+    {
+        room.exit[i] = &exits[i];
+        orig[i] = &exits[i];
+    }
+
+    current_time = 1;
+    init_mm();
+    db_test_shuffle_maze_room_exits(&room);
+
+    /* Each original exit pointer must appear exactly once after shuffle */
+    for (i = 0; i < 6; i++)
+    {
+        int count = 0;
+        for (j = 0; j < 6; j++)
+        {
+            if (room.exit[j] == orig[i])
+                count++;
+        }
+        assert(count == 1);
+    }
+}
+
+static void test_maze_room_exits_change_across_resets(void)
+{
+    ROOM_INDEX_DATA room;
+    EXIT_DATA exits[6];
+    EXIT_DATA *orig[6];
+    int i, iter, changed;
+
+    memset(&room, 0, sizeof(room));
+    memset(exits, 0, sizeof(exits));
+    room.room_flags = ROOM_MAZE;
+
+    for (i = 0; i < 6; i++)
+    {
+        room.exit[i] = &exits[i];
+        orig[i] = &exits[i];
+    }
+
+    current_time = 42;
+    init_mm();
+
+    changed = 0;
+    for (iter = 0; iter < 100 && !changed; iter++)
+    {
+        /* Reset to original order before each trial */
+        for (i = 0; i < 6; i++)
+            room.exit[i] = orig[i];
+
+        db_test_shuffle_maze_room_exits(&room);
+
+        for (i = 0; i < 6; i++)
+        {
+            if (room.exit[i] != orig[i])
+            {
+                changed = 1;
+                break;
+            }
+        }
+    }
+    assert(changed);
+}
+
 int main(void)
 {
     test_object_spawn_level_uses_requested_level_when_present();
@@ -1045,6 +1122,8 @@ int main(void)
     test_fread_number_ull_supports_or_syntax();
     test_count_file_line_no_trailing_newline();
     test_count_file_line_single_line_no_newline();
+    test_maze_room_exits_are_valid_permutation_after_shuffle();
+    test_maze_room_exits_change_across_resets();
 
     puts("test_db: all tests passed");
     return 0;

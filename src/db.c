@@ -2245,6 +2245,8 @@ void area_update(void)
    return;
 }
 
+static void shuffle_maze_room_exits(ROOM_INDEX_DATA *pRoomIndex);
+
 /*
  * Reset one area.
  */
@@ -2562,9 +2564,43 @@ void reset_area(AREA_DATA *pArea)
          break;
       }
    }
+
+   /* Randomize exits for all ROOM_MAZE rooms in this area */
+   {
+      BUILD_DATA_LIST *pList;
+      for (pList = pArea->first_area_room; pList != NULL; pList = pList->next)
+      {
+         ROOM_INDEX_DATA *pRoomIndex = (ROOM_INDEX_DATA *)pList->data;
+         if (IS_SET(pRoomIndex->room_flags, ROOM_MAZE))
+            shuffle_maze_room_exits(pRoomIndex);
+      }
+   }
+
    area_resetting_global = FALSE;
    return;
 }
+
+static void shuffle_maze_room_exits(ROOM_INDEX_DATA *pRoomIndex)
+{
+   int d0;
+   int d1;
+   EXIT_DATA *pexit;
+
+   for (d0 = 0; d0 < 5; d0++)
+   {
+      d1 = number_range(d0, 5);
+      pexit = pRoomIndex->exit[d0];
+      pRoomIndex->exit[d0] = pRoomIndex->exit[d1];
+      pRoomIndex->exit[d1] = pexit;
+   }
+}
+
+#ifdef UNIT_TEST_DB
+void db_test_shuffle_maze_room_exits(ROOM_INDEX_DATA *pRoomIndex)
+{
+   shuffle_maze_room_exits(pRoomIndex);
+}
+#endif
 
 /*
  * Create an instance of a mobile.
