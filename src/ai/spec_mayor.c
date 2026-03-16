@@ -6,9 +6,9 @@
 
 bool spec_mayor(CHAR_DATA *ch)
 {
-   static const char open_path[] = "W3a3003b33000c111d0d111Oe333333Oe22c222112212111a1S.";
+   static const char open_path[] = "W3a3003b33000c111d0d111Oe333333O22c222112212111a1S.";
 
-   static const char close_path[] = "W3a3003b33000c111d0d111CE333333CE22c222112212111a1S.";
+   static const char close_path[] = "W3a3003b33000c111d0d111CE333333C22c222112212111a1S.";
 
    static const char *path;
    static int pos;
