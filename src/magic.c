@@ -41,34 +41,6 @@
 void say_spell args((CHAR_DATA * ch, int sn));
 void round_update_dot(CHAR_DATA *ch);
 
-static bool is_healing_spell(int sn)
-{
-   if (sn < 0 || sn >= MAX_SKILL)
-      return FALSE;
-
-   if (skill_table[sn].name == NULL || skill_table[sn].spell_fun == NULL)
-      return FALSE;
-
-   return !str_cmp(skill_table[sn].name, "cure light") ||
-          !str_cmp(skill_table[sn].name, "cure serious") ||
-          !str_cmp(skill_table[sn].name, "cure critical") ||
-          !str_cmp(skill_table[sn].name, "heal") || !str_cmp(skill_table[sn].name, "group heal") ||
-          !str_cmp(skill_table[sn].name, "psionic recovery") ||
-          !str_cmp(skill_table[sn].name, "regen") || !str_cmp(skill_table[sn].name, "influx") ||
-          !str_cmp(skill_table[sn].name, "healing light");
-}
-
-static void gain_holy_power_from_healing_spell(CHAR_DATA *ch, int sn)
-{
-   if (ch == NULL || IS_NPC(ch))
-      return;
-
-   if (!is_healing_spell(sn))
-      return;
-
-   ch->holy_power = UMIN(ch->holy_power + 1, 100 / 5);
-}
-
 static bool npc_remort_cast_blocked(const CHAR_DATA *ch, int sn)
 {
    if (!IS_NPC(ch))
@@ -868,28 +840,6 @@ void obj_cast_spell(int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DAT
    return;
 }
 
-/* Spell functions. */
-
-/*
- * Drain XP, MANA, HP.
- * Caster gains HP.
- */
-
-/*
- * Spell for mega1.are from Glop/Erkenbrand.
- */
-
-void do_spell_heal(CHAR_DATA *ch, CHAR_DATA *victim, int sn)
-{
-   int heal = class_heal_character(ch, victim, 50, sn, INDEX_CLE, FALSE);
-
-   heal_character(ch, victim, heal, sn, FALSE);
-}
-
-/*
- * Spell for mega1.are from Glop/Erkenbrand.
- */
-
 /*
  * NPC spells.
  */
@@ -956,19 +906,6 @@ static bool is_grand_magi_elemental_spell(int sn)
 {
    return sn == skill_lookup("elemental inferno") || sn == skill_lookup("elemental shock") ||
           sn == skill_lookup("elemental deluge") || sn == skill_lookup("elemental rupture");
-}
-
-int spell_regen_base_heal(int mage_level, int sorcerer_level, int wizard_level, int spellpower)
-{
-   int base_heal = 10 + (mage_level / 2);
-   int remort_level = UMAX(sorcerer_level, wizard_level);
-
-   if (remort_level > 0)
-      base_heal += 3 + remort_level;
-
-   base_heal += spellpower / 4;
-
-   return base_heal;
 }
 
 bool cast_wizard_elemental_dot_spell(int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim,

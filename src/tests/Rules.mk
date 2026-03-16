@@ -143,22 +143,14 @@ unit-test-db: $(OBJDIR)/tests/test_db.o $(OBJDIR)/db.unit-test.o $(OBJDIR)/tests
 	$(CC) -Wl,--gc-sections -o tests/unit-test-db $(OBJDIR)/tests/test_db.o $(OBJDIR)/db.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 $(OBJDIR)/magic.unit-test.o: magic.c headers/ack.h
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_MAGIC -ffunction-sections -fdata-sections -o $(OBJDIR)/magic.unit-test.o magic.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_MAGIC -DUNIT_TEST_MAGIC2 -ffunction-sections -fdata-sections -o $(OBJDIR)/magic.unit-test.o magic.c
 
-unit-test-magic: $(OBJDIR)/tests/test_magic.o $(OBJDIR)/magic.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
+$(OBJDIR)/heal.unit-test.o: heal.c headers/ack.h
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/heal.unit-test.o heal.c
+
+unit-test-magic: $(OBJDIR)/tests/test_magic.o $(OBJDIR)/magic.unit-test.o $(OBJDIR)/heal.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-magic
-	$(CC) -Wl,--gc-sections -o tests/unit-test-magic $(OBJDIR)/tests/test_magic.o $(OBJDIR)/magic.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
-
-$(OBJDIR)/magic.magic2-test.o: magic.c headers/ack.h
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_MAGIC2 -ffunction-sections -fdata-sections -o $(OBJDIR)/magic.magic2-test.o magic.c
-
-unit-test-magic2: $(OBJDIR)/tests/test_magic2.o $(OBJDIR)/magic.magic2-test.o $(OBJDIR)/tests/test_is_fighting.o
-	rm -f tests/unit-test-magic2
-	$(CC) -Wl,--gc-sections -o tests/unit-test-magic2 $(OBJDIR)/tests/test_magic2.o $(OBJDIR)/magic.magic2-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
-
-unit-test-magic4: $(OBJDIR)/tests/test_magic4.o $(OBJDIR)/magic.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
-	rm -f tests/unit-test-magic4
-	$(CC) -Wl,--gc-sections -o tests/unit-test-magic4 $(OBJDIR)/tests/test_magic4.o $(OBJDIR)/magic.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-magic $(OBJDIR)/tests/test_magic.o $(OBJDIR)/magic.unit-test.o $(OBJDIR)/heal.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 $(OBJDIR)/mapper.unit-test.o: mapper.c headers/ack.h
 	$(CC) -c $(C_FLAGS) -DUNIT_TEST_MAPPER -ffunction-sections -fdata-sections -o $(OBJDIR)/mapper.unit-test.o mapper.c
@@ -274,7 +266,7 @@ unit-test-strfuns: $(OBJDIR)/tests/test_strfuns.o $(OBJDIR)/strfuns.unit-test.o
 	rm -f tests/unit-test-strfuns
 	$(CC) -Wl,--gc-sections -o tests/unit-test-strfuns $(OBJDIR)/tests/test_strfuns.o $(OBJDIR)/strfuns.unit-test.o $(L_FLAGS)
 
-unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-magic2 unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns
+unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns
 	./tests/unit-test-act-flags
 	./tests/unit-test-area-format
 	./tests/unit-test-help-format
@@ -297,8 +289,6 @@ unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit
 	./tests/unit-test-reincarnate
 	./tests/unit-test-db
 	./tests/unit-test-magic
-	./tests/unit-test-magic2
-	./tests/unit-test-magic4
 	./tests/unit-test-mapper
 	./tests/unit-test-damage
 	./tests/unit-test-buildare

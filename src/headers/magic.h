@@ -42,6 +42,7 @@ bool is_safe args((CHAR_DATA * ch, CHAR_DATA *victim));
 void set_fighting args((CHAR_DATA * ch, CHAR_DATA *victim, bool check));
 void check_adrenaline args((CHAR_DATA * ch, sh_int damage));
 void do_spell_heal args((CHAR_DATA * ch, CHAR_DATA *victim, int sn));
+void gain_holy_power_from_healing_spell(CHAR_DATA *ch, int sn);
 void apply_elemental_spell_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, const char *debuff_msg);
 bool trigger_elemental_spell_combo(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj, int sn,
                                    int level);
