@@ -4540,7 +4540,7 @@ void do_gain(CHAR_DATA *ch, char *argument)
       {
          if (ch->class_level[cnt] > 0 || allow_remort)
          {
-            if (ch->class_level[(cnt - CLASS_SOR) % MAX_CLASS] < MAX_MORTAL)
+            if (ch->class_level[gclass_table[cnt].prereq[0]] < MAX_MORTAL)
             {
                send_to_char("You require level 100 in the mortal class before you can remort in this class!\n\r", ch);
                continue;
@@ -4560,9 +4560,9 @@ void do_gain(CHAR_DATA *ch, char *argument)
       {
          if (ch->class_level[cnt] > 0 || allow_adept)
          {
-            if (ch->class_level[CLASS_SOR + (cnt - CLASS_GMA)] < MAX_MORTAL && ch->class_level[CLASS_SOR + MAX_CLASS + (cnt - CLASS_GMA)] < MAX_MORTAL)
+            if (ch->class_level[gclass_table[cnt].prereq[0]] < MAX_MORTAL || ch->class_level[gclass_table[cnt].prereq[1]] < MAX_MORTAL)
             {
-               send_to_char("You need to be level 100 in the remortal class before you can adept in this class!\n\r", ch);
+               send_to_char("You need to be level 100 in both remortal classes before you can adept in this class!\n\r", ch);
                return;
             }
 
@@ -4591,26 +4591,19 @@ void do_gain(CHAR_DATA *ch, char *argument)
     */
    if (remort)
    {
-      if (ch->class_level[(c - CLASS_SOR) % MAX_CLASS] < MAX_MORTAL)
+      if (ch->class_level[gclass_table[c].prereq[0]] < MAX_MORTAL)
       {
          send_to_char("You are not ready to remort in this class yet, it requires level 100 in the mortal.\n\r", ch);
          return;
       }
 
-      if (c >= CLASS_SOR + MAX_CLASS)
+      /* Can't take two remort classes that share the same mortal prerequisite */
+      for (cnt = CLASS_SOR; cnt < CLASS_SOR + MAX_REMORT; cnt++)
       {
-         if (ch->class_level[c - MAX_CLASS] > 0)
+         if (cnt != c && gclass_table[cnt].prereq[0] == gclass_table[c].prereq[0] && ch->class_level[cnt] > 0)
          {
-            sprintf(buf, "You cannot remort in %s, you already have levels in %s.\n\r", gclass_table[c].who_name, gclass_table[c - MAX_CLASS].who_name);
-            send_to_char(buf, ch);
-            return;
-         }
-      }
-      else
-      {
-         if (ch->class_level[c + MAX_CLASS] > 0)
-         {
-            sprintf(buf, "You cannot remort in %s, you already have levels in %s.\n\r", gclass_table[c].who_name, gclass_table[c + MAX_CLASS].who_name);
+            sprintf(buf, "You cannot remort in %s, you already have levels in %s.\n\r",
+                    gclass_table[c].who_name, gclass_table[cnt].who_name);
             send_to_char(buf, ch);
             return;
          }
