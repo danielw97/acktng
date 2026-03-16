@@ -661,6 +661,8 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
    {
       GET_FREE(ch->pcdata, pcd_free);
       *ch->pcdata = pcdata_zero;
+      ch->pcdata->reincarnate_race = -1;
+      ch->pcdata->reincarnate_class = -1;
 
       d->character = ch;
 
@@ -734,6 +736,8 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
          ch->class_level[foo] = -1;
       for (foo = CLASS_GMA; foo < CLASS_GMA + MAX_CLASS; foo++)
          ch->class_level[foo] = -1;
+      ch->pcdata->reincarnate_race = -1;
+      ch->pcdata->reincarnate_class = -1;
       ch->pcdata->reincarnate_confirm = FALSE;
       ch->adept_level = -1;
       for (cnt = 0; cnt < MAX_ALIASES; cnt++)

@@ -790,6 +790,7 @@ struct pc_data
    int reincarnations[MAX_TOTAL_CLASS]; /* Unified reincarnations (mortal 0-5, remort 6-17, adept 18-23) */
    int reincarnation_data[MAX_REINCARNATE];
    int reincarnate_race;
+   int reincarnate_class;
    int reincarnate_confirm;
    int mana_from_gain; /* saves non-item oriented mana total */
    int hp_from_gain;   /* same for hitpoints */

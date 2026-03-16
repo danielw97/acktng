@@ -264,6 +264,10 @@ long get_cost_to_level(CHAR_DATA *ch, int class)
 
    base = get_racial_penalty_to_level(base, ch->race, class);
 
+   /* Primary class (ch->class) gets a 20% discount */
+   if (!IS_NPC(ch) && class == ch->class)
+      base = base * 80 / 100;
+
    return base;
 }
 

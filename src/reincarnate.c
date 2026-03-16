@@ -103,7 +103,15 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
       if (!str_prefix(arg, "show"))
       {
          send_to_char("Current reincarnation info:\n\r", ch);
-         sprintf(buf, "Race: %s\n\r", race_table[ch->pcdata->reincarnate_race].race_name);
+         if (ch->pcdata->reincarnate_race >= 0)
+            sprintf(buf, "Race: %s\n\r", race_table[ch->pcdata->reincarnate_race].race_name);
+         else
+            sprintf(buf, "Race: (not set)\n\r");
+         send_to_char(buf, ch);
+         if (IS_SET(ch->pcdata->reincarnate_confirm, REINCARNATE_CLASS) && ch->pcdata->reincarnate_class >= 0)
+            sprintf(buf, "Class: %s\n\r", gclass_table[ch->pcdata->reincarnate_class].class_name);
+         else
+            sprintf(buf, "Class: (not set)\n\r");
          send_to_char(buf, ch);
          if (IS_SET(ch->pcdata->reincarnate_confirm, REINCARNATE_CONFIRM))
             send_to_char("Reincarnation CONFIRMED, reincarnate set done to reincarnate.\n\r", ch);
@@ -138,12 +146,47 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
 
          SET_BIT(ch->pcdata->reincarnate_confirm, REINCARNATE_RACE);
       }
+      else if (!str_prefix(arg, "class"))
+      {
+         argument = one_argument(argument, arg);
+         ch->pcdata->reincarnate_class = -1;
+         REMOVE_BIT(ch->pcdata->reincarnate_confirm, REINCARNATE_CLASS);
+         REMOVE_BIT(ch->pcdata->reincarnate_confirm, REINCARNATE_CONFIRM);
+
+         for (int i = 0; i < MAX_TOTAL_CLASS; i++)
+         {
+            if (!IS_MORTAL_CLASS(i))
+               continue;
+            if (!str_cmp(arg, gclass_table[i].who_name) || !str_cmp(arg, gclass_table[i].class_name))
+            {
+               ch->pcdata->reincarnate_class = i;
+               sprintf(buf, "%s selected as reincarnation class.\n\r", gclass_table[i].class_name);
+               send_to_char(buf, ch);
+               break;
+            }
+         }
+
+         if (ch->pcdata->reincarnate_class == -1)
+         {
+            send_to_char("Invalid class selection. Use who_name or class_name, e.g. MAG or Magi.\n\r", ch);
+            return;
+         }
+
+         SET_BIT(ch->pcdata->reincarnate_confirm, REINCARNATE_CLASS);
+      }
       else if (!str_prefix(arg, "confirm"))
       {
          if (ch->pcdata->reincarnate_race == -1)
          {
-            send_to_char("Incorrect race.\n\r", ch);
+            send_to_char("Race not set. Use reincarnate set race <race>.\n\r", ch);
             REMOVE_BIT(ch->pcdata->reincarnate_confirm, REINCARNATE_RACE);
+            REMOVE_BIT(ch->pcdata->reincarnate_confirm, REINCARNATE_CONFIRM);
+            return;
+         }
+         if (ch->pcdata->reincarnate_class == -1)
+         {
+            send_to_char("Class not set. Use reincarnate set class <class>.\n\r", ch);
+            REMOVE_BIT(ch->pcdata->reincarnate_confirm, REINCARNATE_CLASS);
             REMOVE_BIT(ch->pcdata->reincarnate_confirm, REINCARNATE_CONFIRM);
             return;
          }
@@ -153,6 +196,7 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
       else if (!str_prefix(arg, "done"))
       {
          if (!IS_SET(ch->pcdata->reincarnate_confirm, REINCARNATE_RACE) ||
+             !IS_SET(ch->pcdata->reincarnate_confirm, REINCARNATE_CLASS) ||
              !IS_SET(ch->pcdata->reincarnate_confirm, REINCARNATE_CONFIRM))
          {
             send_to_char("You haven't confirmed your reincarnation yet!\n\r", ch);
@@ -173,6 +217,7 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
          ch->pcdata->move_from_gain = 0;
          ch->pcdata->reincarnations[ch->class]++;
          ch->race = ch->pcdata->reincarnate_race;
+         ch->class = ch->pcdata->reincarnate_class;
          ch->level = 1;
          send_to_char("Done\n\r", ch);
          for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
@@ -202,7 +247,7 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
       {
          snprintf(buf, sizeof(buf), "Invalid input %.128s\n\r", arg);
          send_to_char(buf, ch);
-         send_to_char("Valid set args: show, race, confirm, done", ch);
+         send_to_char("Valid set args: show, race, class, confirm, done", ch);
       }
    }
    else

@@ -2599,11 +2599,11 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg2, "class"))
    {
-      if (value < 0 || value >= MAX_CLASS)
+      if (value < 0 || value >= MAX_TOTAL_CLASS || !IS_MORTAL_CLASS(value))
       {
          char buf[MAX_STRING_LENGTH];
 
-         sprintf(buf, "Class range is 0 to %d.\n", MAX_CLASS - 1);
+         sprintf(buf, "Class must be a mortal class ID (0-%d).\n", MAX_CLASS - 1);
          send_to_char(buf, ch);
          return;
       }
