@@ -128,7 +128,7 @@ typedef struct npc_dialogue_request {
     CHAR_DATA         *npc;
     CHAR_DATA         *player;
     char               player_name[50];
-    char               system_prompt[2048];
+    char               system_prompt[8192];
     int                history_count;
     DIALOGUE_TURN_COPY history[MAX_REQUEST_TURNS];  /* serialized snapshot */
     struct npc_dialogue_request *next;
@@ -595,7 +595,7 @@ litigated. What it cannot be is ignored.
 [NPC PERSONA — npc->ai_prompt]
 ```
 
-The total assembled prompt must fit within `system_prompt[2048]` in
+The total assembled prompt must fit within `system_prompt[8192]` in
 `NPC_DLG_REQ`. If the combined length exceeds this, the area block is
 truncated before the NPC persona is appended, as the persona is the most
 critical layer for correct character behavior.
