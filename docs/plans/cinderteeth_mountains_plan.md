@@ -12,9 +12,9 @@
 **Primary Design Goal:** Build a massive volcanic arc spanning six distinct subregions — from the contested Blackstep Footholds through the resonance-fractured Bellspine, the obsidian Glasswash Fans, the sacred Western Fold, and up to the lethal Ember Crown caldera zone. The layout is deliberately non-linear and asymmetric, reflecting the mountain's actual geology: a discontinuous volcanic belt with saddle passes, deep structural folds, resonance caves, and open scree fields that resist any grid interpretation. Mob difficulty escalates sharply with altitude and depth. The mountain selects survivors.
 
 **Connections (Planned — do not author until target areas exist):**
-- Forest of Confusion (primary southern exit from Blackstep Footholds, Planned — the geographic gateway to Kiess and the wider world)
-- Sunken Sanctum (Western Fold deep descent, Planned — see world_links.md)
-- Great Northern Forest (northeastern approaches, Future/Long-term — requires intermediate area)
+- **Forest of Confusion** (3 southern exits from Blackstep Footholds border): 6124 `south` → confusn 2519; 6153 `south` → confusn 2521; 6168 `south` → confusn 2524. All bidirectional.
+- **Sunken Sanctum** (Western Fold deep descent): 6552 `down` → sunken_sanctum 2266; bidirectional (2266 `up` → 6552).
+- **Great Northern Forest** (3 eastern exits from Ember Crown Approaches border): 6627 `east` → gnf 4179; 6633 `east` → gnf 4199; 6639 `east` → gnf 4219. All bidirectional.
 
 ---
 
@@ -59,15 +59,31 @@ The Cinderteeth Mountains occupy the **far northwest corner** of the accessible 
 
 ### Sunken Sanctum (Western Fold Deep Link — Planned)
 
-- The Sunken Sanctum lies beneath the Western Fold. The Cinderteeth lore explicitly places the Sanctum as a "deep fold in the western spur of the Cinderteeth Mountains." The Sanctum Scar surface collapse zone (Zone 6, room 6552) is the surface expression of the Sanctum's upper structural failure. A sealed downward passage is planned at 6552 and must not be authored until the Sunken Sanctum's vnum layout is confirmed.
+- The Sunken Sanctum lies beneath the Western Fold. The Cinderteeth lore explicitly places the Sanctum as a "deep fold in the western spur of the Cinderteeth Mountains." The Sanctum Scar surface collapse zone (Zone 6, room 6552) is the surface expression of the Sanctum's upper structural failure.
 - Ash Cult cells in the Western Fold maintain doctrinal correspondence with factional remnants in the Sanctum's accessible peripheral chambers.
+- **Planned connection** (bidirectional, one link):
 
-### Forest of Confusion (Primary Planned Connection — Southern Blackstep)
+| Cinderteeth | Direction | Sunken Sanctum | Notes |
+|---|---|---|---|
+| **6552** Sanctum Scar — Collapse Edge | `down` | **2266** The Collapsed Entrance | Surface descent to Sanctum upper approach |
+| **2266** The Collapsed Entrance | `up` | **6552** Sanctum Scar — Collapse Edge | Reverse: ascent back to surface |
+
+`sunken_sanctum_plan.md` room 2266 is already designated for this connection ("External room: TBD — connection to a Cinderteeth Mountains approach room"); the concrete destination is now **6552**. That plan must be updated to replace the TBD with `up` → 6552 before either exit is authored.
+
+### Forest of Confusion (Primary Planned Connection — Southern Blackstep, 3 border links)
 
 - The world map schematic places the Forest of Confusion directly south of the Cinderteeth, as the geographic intermediary between the mountain range and Kiess. This is the **primary connection to the outside world**: the only realistic path from the Cinderteeth to lowland civilization runs south through the Forest of Confusion's northern boundary.
 - The Cinderteeth lore references "forests south of the Cinderteeth" as the location of the Prism Thesis faction's crystal-resonance field trials — those forests are the Forest of Confusion / Verdant Depths zone. The Forest of Confusion's northern boundary is already contested by the same institutional residue (Conclave crystal experiments) that defines the Western Fold.
 - The Ashfang Remnant operates at this transition point precisely because Forest of Confusion northern territory is poorly governed by any lowland authority, providing cover for bandit operations.
-- **Planned connection**: Blackstep Threshold southern approach (room 6125 or 6160) connects south toward the Forest of Confusion northern boundary room (a new room to be authored in `confusn.are` or as an extension). Both sides must be built before the exit can be authored in either file.
+- **Three planned border connections** (all bidirectional; both sides must be authored before exits can be live):
+
+| Cinderteeth (south) | confusn (north) | Character |
+|---|---|---|
+| **6124** Threshold Post Road | **2519** (y=9, x=0) Northwestern Treeline Approach | Main road — primary player entry/exit |
+| **6153** Old Caravan Ghost Road | **2521** (y=9, x=2) Northern Forest Caravan Track | Historic caravan route, predates route houses |
+| **6168** Southern Foothills Descent | **2524** (y=9, x=5) Northern Scree Drainage Path | Rough terrain third path |
+
+`confusn` rooms 2519, 2521, and 2524 are in the northern boundary row (y=9) of `confusn.are`. All three must be authored in `confusn.are` with `north` exits pointing back to the Cinderteeth rooms above. These rooms do not yet exist in `confusn.are`.
 
 ### Withered Depths (Lore Connection — via Forest of Confusion)
 
@@ -78,10 +94,19 @@ The Cinderteeth Mountains occupy the **far northwest corner** of the accessible 
 
 - The Verdant Depths occupy the deep N/NW interior of the Forest of Confusion — the ancient living woodland whose distributed ecological intelligence predates all human cities. The Cinderteeth's volcanic chemistry has influenced the Verdant Depths through ash and sulfur deposition into northern forest water systems over geological time. No direct room connection is planned, but Verdant Depths scholars reference the Cinderteeth in NPC lore text.
 
-### Great Northern Forest (Lore Connection — via Ashfall)
+### Great Northern Forest (Planned Connection — Northeastern High-Altitude Border, 3 links)
 
-- The Great Northern Forest's streams were poisoned by volcanic particulates during the Ashfall Monsoon — the Cinderteeth's three-year sustained venting period that loaded northern atmospheric systems with volcanic ash. The GNF is northeast of the Cinderteeth, separated by a significant distance, but the atmospheric connection is documented. A potential northeastern foothill connection from upper Cinderteeth approaches toward the southern GNF approaches is geographically plausible but not planned in this area file — it would require a new intermediate area or an extremely long traversal.
-- Lore connection (no direct room exit): GNF ranger-writ expeditions appear as NPC reference in Zone 5 Western Fold Approach text.
+- The Great Northern Forest is northeast of the Cinderteeth; its northwestern high-latitude region (Northern Crown, GNF rooms 4179-4219 at x=0) directly borders the Cinderteeth's eastern high-altitude approaches (Zone 7, Ember Crown Approaches). The GNF's streams were poisoned by volcanic particulates during the Ashfall Monsoon — the Cinderteeth's influence on the GNF is primarily atmospheric and hydrological. The border zone is traversable at high altitude: exposed ridgeline traversals from the Ember Crown Approaches descend eastward into the GNF's Northwestern Crown.
+- GNF ranger-writ expeditions from this border appear as NPC lore text throughout Zone 7.
+- **Three planned border connections** (all bidirectional; both sides must be authored before exits can be live). GNF western-edge rooms use the `confusn`-style coordinate formula: vnum = 3739 + (y × 20) + x; x=0 is the westernmost column:
+
+| Cinderteeth (east) | GNF (west) | Altitude |
+|---|---|---|
+| **6627** Northeastern Ridge Approach — Lower | **4179** (y=22, x=0) Northwestern Crown Ridgeline South | Lower altitude ridgeline |
+| **6633** Northeastern Ridge Approach — Mid | **4199** (y=23, x=0) Northwestern Crown Ridgeline Mid | Mid-altitude ridgeline |
+| **6639** Northeastern Ridge Approach — Upper | **4219** (y=24, x=0) Northwestern Crown — Westernmost Point | Highest altitude, northernmost link |
+
+GNF rooms 4179, 4199, and 4219 exist in `great_northern_forest_plan.md`'s Northern Crown region (4219-4238). All three must be updated in `great_northern_forest_plan.md` to add `west` exits pointing back to the Cinderteeth rooms above.
 
 ### Kiess (Institutional Lore — via Roc Road and Forest of Confusion)
 
@@ -195,7 +220,7 @@ The area is divided into **8 zones** arranged in a roughly ascending path from t
 **Mob difficulty:** 145-148. Mini-boss: Ashfang Remnant Warlord (148).
 
 Key rooms:
-- 6124 **Threshold Post Road** — entry from lowlands; 5+ sentences; the first named junction in the mountain approaches; connects south toward the forest approaches and Kiess (planned Forest of Confusion link).
+- 6124 **Threshold Post Road** — entry from lowlands; 5+ sentences; the first named junction in the mountain approaches; **planned `south` exit to `confusn` 2519** (Northwestern Treeline Approach, primary connection point).
 - 6125 **Threshold Post Ruins** — central hub, collapsed administrative building, 5+ sentences, 5+ exits radiating out; warden commission debris; `no_mob` boundary room.
 - 6126 **Salvage Assessment House Forecourt** — ruined exterior of the Kiess-funded Assessment House; contested authority notices still nailed to a crumbling post.
 - 6127 **Salvage Assessment House Interior** — inside sector; archive shelves with decomposed ledgers; extra descriptions for Compact certification documents.
@@ -224,7 +249,7 @@ Key rooms:
 - 6150 **Ashfang Warlord's Command Chamber** — inside sector; `no_mob`; **MINI-BOSS ROOM** for Ashfang Remnant Warlord; carved territorial maps cover the walls.
 - 6151 **Bandit Clearance Post Beta** — second ruined clearance post, this one partially Ashfang-occupied; evidence of dual use.
 - 6152 **Post Beta Passage** — inside sector; connecting corridor.
-- 6153 **Old Caravan Ghost Road** — ancient path worn into the basalt; faint wheel rut shadows; historically pre-dates the Keeper survey era.
+- 6153 **Old Caravan Ghost Road** — ancient path worn into the basalt; faint wheel rut shadows; historically pre-dates the Keeper survey era; **planned `south` exit to `confusn` 2521** (Northern Forest Caravan Track, secondary connection).
 - 6154 **Lower Obsidian Deposit** — natural obsidian outcrop, partially quarried; tool-quality and aggregate-quality fragments scattered.
 - 6155 **Mountain Bear Scrublands** — `no_mob` boundary marker room; scraggly shrubs at volcanic soil edge; bear territory begins.
 - 6156 **Bear Patrol Territory** — open slope, mountain bear encounters; no_mob boundary prevents mob bleed.
@@ -235,7 +260,8 @@ Key rooms:
 - 6161 **East Foothill Slope** — sloping terrain toward Glasswash fan approach; obsidian fragment fields.
 - 6162 **Central Ascent Path** — steep direct climb path toward Bellspine; used by those who know the mountain well.
 - 6163 **Sulfurous Vent Pocket** — small vent gas seep zone; colorless gas, faint sweet-sulfur odor; extra description warning.
-- 6164-6183: Connecting passages, foothill traversal rooms, slope approaches, ashrunner territory, thermal spring runoff channels, abandoned caravan debris fields, cinderpine groves, and basalt stair segments filling out the zone. These rooms connect the five main clusters (Threshold hub, Assessment House, Ashfang branch, northern trunk, eastern trunk) into a coherent traversal network with no dead-end rooms that lack narrative purpose.
+- 6168 **Southern Foothills Descent** — a rougher southwest-facing slope path; drainage channel cuts through exposed basalt; cinderpine scrub on the lower faces; **planned `south` exit to `confusn` 2524** (Northern Scree Drainage Path, third connection).
+- 6164-6183 (remaining): Connecting passages, foothill traversal rooms, slope approaches, ashrunner territory, thermal spring runoff channels, abandoned caravan debris fields, cinderpine groves, and basalt stair segments filling out the zone. These rooms connect the five main clusters (Threshold hub, Assessment House, Ashfang branch, northern trunk, eastern trunk) into a coherent traversal network with no dead-end rooms that lack narrative purpose.
 
 ---
 
@@ -496,7 +522,10 @@ Key rooms:
 - 6611 **Crown Scree — Lightning Hazard Zone** — large ash column visible above; static discharge grounding to nearby metal described; extra description on lightning-grounded ash columns.
 - 6612 **Crown Scree — Glassfall Zone** — glassfall debris litters the ground; old hail of fused volcanic glass particles; extra description on glassfall characteristics and danger.
 - 6613 **Upper Crown Junction** — where Firsttooth and Secondtooth approach paths converge before the final approach to Zone 8; last stable rest point.
-- 6614-6653: Connecting passages, upper scree traversal rooms, vent-gas pocket approach corridors, glow-hawk territory, glasswalk harvest zone side branches, extraction shelter ruins, summit approach paths, and ridge-line traversal rooms completing the Crown approach network.
+- 6627 **Northeastern Ridge Approach — Lower** — eastward-facing basalt ridge; forested lowland canopy visible far below and to the northeast; the GNF's Northwestern Crown treeline is distantly visible on clear days; **planned `east` exit to GNF 4179** (Northwestern Crown Ridgeline South).
+- 6633 **Northeastern Ridge Approach — Mid** — exposed mid-altitude ridgeline; wind-stripped rock; ash deposits from the Ashfall Monsoon still coat the eastern face; **planned `east` exit to GNF 4199** (Northwestern Crown Ridgeline Mid).
+- 6639 **Northeastern Ridge Approach — Upper** — highest stable traverse point on the northeastern face; the GNF crown is a vast dark-green expanse to the northeast; ranger-writ expedition markers are driven into the rock here; `no_mob`; **planned `east` exit to GNF 4219** (Northwestern Crown — Westernmost Point); 5+ sentences.
+- 6614-6653 (remaining): Connecting passages, upper scree traversal rooms, vent-gas pocket approach corridors, glow-hawk territory, glasswalk harvest zone side branches, extraction shelter ruins, summit approach paths, and ridge-line traversal rooms completing the Crown approach network.
 
 ---
 
@@ -1104,7 +1133,7 @@ The following doors require both-sides `D` resets:
 - [ ] Maze-flagged rooms: Upper Hollow Echo Corridors (6347-6349), Long Saddle Subsidence Zone Alpha (6207), Bellspine False Echo Chamber (6378)
 - [ ] Sub-regions enclosed by `no_mob` boundary rooms or `sentinel` mobs
 - [ ] Boss rooms all flagged `no_mob`
-- [ ] Planned cross-area exits (to Forest of Confusion, Sunken Sanctum) omitted until target areas exist; described as directions or sealed passages in room text
+- [ ] Planned cross-area exits omitted until target areas exist; described as directions or sealed passages in room text (see connections section for exact room pairs)
 
 ### Mobile Quality
 - [ ] All 120 mobs include `is_npc` and `stay_area`
@@ -1151,8 +1180,13 @@ The following doors require both-sides `D` resets:
 - [ ] All boss-targeting quests reward equipment ✓ (Quest 2, Quest 3)
 
 ### World Links
-- [ ] `docs/world_links.md` updated with planned Forest of Confusion connection (status: Planned)
-- [ ] `docs/world_links.md` updated with planned Sunken Sanctum descent connection (status: Planned)
+- [ ] `docs/world_links.md` updated with all 7 planned connections (status: Planned):
+  - 3× Forest of Confusion (6124↔confusn 2519, 6153↔confusn 2521, 6168↔confusn 2524)
+  - 1× Sunken Sanctum (6552↔sunken_sanctum 2266)
+  - 3× Great Northern Forest (6627↔gnf 4179, 6633↔gnf 4199, 6639↔gnf 4219)
+- [ ] `sunken_sanctum_plan.md` room 2266 updated: replace TBD with `up` → 6552
+- [ ] `great_northern_forest_plan.md` rooms 4179, 4199, 4219 updated: add `west` → respective Cinderteeth rooms
+- [ ] `confusn.are` / `confusn` plan: rooms 2519, 2521, 2524 must be authored with `north` exits to 6124, 6153, 6168 respectively
 - [ ] `docs/area_index.md` updated with new area entry (6124-6723, I 140 150)
 - [ ] `area/area.lst` updated with `cinderteeth_mountains.are` inserted after `saltglass_reach.are` (vnum ordering: 5724 < 6124, correct position at end of active list before `ceiling.are`)
 

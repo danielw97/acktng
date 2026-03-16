@@ -493,10 +493,11 @@ All mobile definitions must follow these spec requirements:
 
 ### Entry Connection
 - **Sanctum room:** `2266` (The Collapsed Entrance, sector `mountain`)
-- **External room:** TBD — connection to a Cinderteeth Mountains approach room or a mountain pass in an adjacent area.
-- **Exit:** `2266` has an exit (direction TBD) to the external approach. Reverse exit on the external room points back to `2266`.
-- **Door:** No door on the entry exit (open approach through collapsed rubble).
-- **Lore:** The collapsed entrance opens onto a wind-scoured mountain ledge in the western Cinderteeth spur. Rubble from the deliberate upper-approach collapse is still visible, now overgrown with hardy mountain scrub and streaked with mineral deposits from centuries of glacial runoff.
+- **External room:** `cinderteeth_mountains` **6552** (Sanctum Scar — Collapse Edge, Zone 6 Western Fold).
+- **Exit:** `2266` has an `up` exit to **6552**. Reverse exit: `6552` has a `down` exit to **2266**.
+- **Door:** No door on either side of this exit (open shaft through collapsed rubble).
+- **Lore:** The collapsed entrance opens onto the deepest accessible surface point of the Sanctum Scar — a circular depression in the Western Fold of the Cinderteeth Mountains whose ground subsided when the Sanctum's upper structure failed. Rubble from the deliberate upper-approach collapse is still visible, now streaked with mineral deposits from centuries of volcanic runoff.
+- **Status:** Planned. Both exits must be authored simultaneously when `cinderteeth_mountains.are` is built. Room 6552 description should reference the shaft descending into darkness below.
 
 ### Completion Loopback
 - **Room `9599`** (The Mountain's Breath) has an `up` exit to `2266` (The Collapsed Entrance).
