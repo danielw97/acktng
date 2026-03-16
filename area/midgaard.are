@@ -6297,9 +6297,30 @@ G 0 1112 5
 S
 
 #SPECIALS
-M 917 spec_guard_dog
-M 918 spec_guard_dog
-M 919 spec_guard_dog
+M 917 spec_policeman
+M 918 spec_rr_byways_midgaard_guard
+M 919 spec_cast_cleric
+M 920 spec_vendor
+M 921 spec_rr_convoy_marshal
+M 922 spec_policeman
+M 923 spec_vendor
+M 924 spec_rr_pilgrim
+M 925 spec_thief
+M 927 spec_executioner
+M 928 spec_cast_cleric
+M 929 spec_lay_sister
+M 930 spec_vendor
+M 931 spec_vendor
+M 932 spec_vendor
+M 933 spec_vendor
+M 934 spec_vendor
+M 935 spec_vendor
+M 936 spec_vendor
+M 937 spec_vendor
+M 938 spec_vendor
+M 939 spec_posting_clerk
+M 940 spec_records_keeper
+M 941 spec_warden
 S
 
 #$
