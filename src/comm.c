@@ -4173,6 +4173,16 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
       fp = NULL;
    }
 
+   /* Save linkdead players (in game but no active connection) */
+   {
+      CHAR_DATA *c;
+      for (c = first_char; c; c = c->next)
+      {
+         if (!IS_NPC(c) && c->desc == NULL)
+            save_char_obj(c);
+      }
+   }
+
    /*
     * Close reserve and other always-open files and release other resources
     */
