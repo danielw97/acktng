@@ -720,6 +720,200 @@ critical layer for correct character behavior.
 
 ---
 
+## 10. Model Training Strategy
+
+### Hybrid Approach: LoRA for Behavior, RAG for Facts
+
+The NPC dialogue system uses two complementary mechanisms to ensure quality
+responses:
+
+- **LoRA fine-tuning (offline)** — shapes *how* NPCs talk: medieval register,
+  persona adherence, short MUD-appropriate responses, never breaking character.
+  Trained once, rarely changes.
+- **System prompt injection (runtime)** — shapes *what* NPCs know: the world
+  knowledge blocks in section 9 supply current lore at request time,
+  automatically reflecting area file changes.
+
+This separation is intentional. Behavioral training requires few examples and
+the trained adapter is stable across lore updates. Factual lore changes
+constantly as areas are modified; runtime injection handles it without
+retraining.
+
+A RAG layer (vector-indexed area files and help text, retrieved at dispatch
+time) is the natural evolution of section 9's static area blocks. It is
+documented here as a future enhancement; the initial implementation uses the
+static blocks as defined.
+
+### What LoRA Trains
+
+Behavioral goals for the fine-tuned adapter — these are the failure modes that
+system prompting alone cannot reliably prevent in a base model:
+
+- Speak in a medieval fantasy register; avoid modern idiom and filler phrases
+  ("absolutely!", "sounds great!", "no problem!")
+- Never respond with "I'm an AI", "I don't have information about that", or
+  equivalent out-of-character deflections
+- Keep responses to 1–3 sentences — appropriate for MUD pacing
+- Stay in persona when players ask meta or immersion-breaking questions
+- Improvise plausibly in-character rather than admitting ignorance
+- Vary response style by NPC archetype (gruff blacksmith, suspicious guard,
+  learned mage, harried innkeeper)
+
+### Dataset Construction
+
+Training data consists of instruction-response pairs in ChatML format:
+
+```json
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Korgath, a dwarven blacksmith in Midgaard. You are gruff and value coin and craft above all else."
+    },
+    {
+      "role": "user",
+      "content": "Arathorn: Are you some kind of computer program?"
+    },
+    {
+      "role": "assistant",
+      "content": "Computer? Bah. I'm flesh and soot and forty years at the forge. Now buy something or get out of my shop."
+    }
+  ]
+}
+```
+
+**Target size:** 500–1,500 examples covers sufficient behavioral diversity.
+Focus diversity on:
+
+- NPC archetypes: guard, merchant, wizard, innkeeper, villain, temple priest
+- Tricky situations: immersion-breaking questions, unknown topics, player
+  hostility, roleplay attempts
+- Conversation turns, not just single exchanges
+
+**Synthetic generation:** A capable LLM can generate bulk training data from
+prompts describing each NPC archetype and the behavioral goals listed above.
+Review and filter output for quality before training. Produce a `.jsonl` file
+(one JSON object per line).
+
+**Iteration source:** As the server runs, bad NPC responses collected from play
+logs become the most valuable training signal. Write corrected versions of those
+responses and add them to the training set before each re-run.
+
+### Training with Unsloth (QLoRA)
+
+[Unsloth](https://github.com/unslothai/unsloth) is the recommended training
+tool — it runs on consumer hardware and trains significantly faster than stock
+transformers.
+
+**Hardware:**
+
+| Model size | Min VRAM | Example hardware |
+|---|---|---|
+| 7B/8B | 16 GB | RTX 3080/4080, or rented cloud |
+| 13B | 24 GB | RTX 3090/4090 |
+
+A 7B or 8B model (Llama 3.1 8B, Mistral 7B, Qwen 2.5 7B) is the appropriate
+target: fast at inference, small enough to run on the game server, well within
+quality requirements for NPC dialogue.
+
+**Cloud option:** RunPod or Vast.ai provide RTX 4090 instances at ~$0.35–0.50/hr.
+A behavioral fine-tune on ~1,000 examples takes 30–90 minutes. Total cost per
+training run: under $1.
+
+**Training script outline:**
+
+```python
+from unsloth import FastLanguageModel
+from trl import SFTTrainer
+from transformers import TrainingArguments
+from datasets import load_dataset
+
+model, tokenizer = FastLanguageModel.from_pretrained(
+    model_name = "unsloth/Meta-Llama-3.1-8B-Instruct",
+    max_seq_length = 2048,
+    load_in_4bit = True,
+)
+
+model = FastLanguageModel.get_peft_model(
+    model,
+    r = 16,            # LoRA rank; 8-32 for behavioral tuning
+    target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
+                      "gate_proj", "up_proj", "down_proj"],
+    lora_alpha = 16,
+    lora_dropout = 0,
+    bias = "none",
+)
+
+dataset = load_dataset("json", data_files="npc_training.jsonl", split="train")
+
+trainer = SFTTrainer(
+    model = model,
+    tokenizer = tokenizer,
+    train_dataset = dataset,
+    dataset_text_field = "text",
+    max_seq_length = 2048,
+    args = TrainingArguments(
+        per_device_train_batch_size = 2,
+        gradient_accumulation_steps = 4,
+        num_train_epochs = 3,
+        learning_rate = 2e-4,
+        output_dir = "outputs",
+        optim = "adamw_8bit",
+    ),
+)
+trainer.train()
+
+# Export merged model as GGUF for llama.cpp / Ollama
+model.save_pretrained_gguf("npc-model", tokenizer, quantization_method="q4_k_m")
+```
+
+Output is a `.gguf` file with the adapter merged into the base model weights,
+ready to serve via llama.cpp or Ollama. The base model is never modified; only
+the adapter changes between training runs.
+
+### Serving with Ollama
+
+```
+FROM ./npc-model.Q4_K_M.gguf
+PARAMETER num_ctx 8192
+PARAMETER temperature 0.7
+```
+
+```sh
+ollama create ack-npc -f Modelfile
+ollama serve   # exposes localhost:11434 — same endpoint the game server calls
+```
+
+No changes to `call_openclaw()` or any other game server code are required. The
+fine-tuned model is a drop-in replacement at the same OpenAI-compatible
+endpoint.
+
+### Full System Architecture
+
+```
+OFFLINE (periodic):
+  play logs + synthetic Q&A pairs
+    → npc_training.jsonl
+    → Unsloth QLoRA fine-tune (rented GPU, ~$1/run)
+    → npc-model.Q4_K_M.gguf → Ollama (localhost:11434)
+
+BOOT TIME (future RAG enhancement):
+  area/*.are + help/* files
+    → text chunker → embedding model → vector index (FAISS/ChromaDB)
+
+PER NPC REQUEST (runtime):
+  player message
+    → assemble: common knowledge + area block + NPC persona  (section 9)
+    [future: + top-K chunks retrieved from vector index]
+    → POST to Ollama (fine-tuned model)
+    → NPC response delivered via do_say()
+```
+
+The fine-tuned model handles *how* the NPC talks. The runtime system prompt
+handles *what* it knows. Each layer can be updated independently.
+
+---
+
 ## Conversation History
 
 ### Storage
@@ -942,3 +1136,14 @@ No unique ID field on `CHAR_DATA` is needed.
 - [ ] Append persona lock instruction after `npc->ai_prompt` in system prompt assembly
 - [ ] Add baseline anti-injection instruction to the common knowledge block constant
 - [ ] Write unit tests for `npc_dialogue_sanitize_input()` and keyword short-circuit
+
+### Model Training (offline, separate from server build)
+
+- [ ] Assemble initial training dataset: synthetic Q&A pairs generated from NPC
+  archetypes and behavioral goals (500–1,500 examples in ChatML `.jsonl` format)
+- [ ] Fine-tune a 7B/8B base model using Unsloth QLoRA (rented GPU, ~$1/run)
+- [ ] Export merged model as GGUF (`q4_k_m` quantization)
+- [ ] Create Ollama `Modelfile` and register model as `ack-npc`
+- [ ] Validate model behavior against behavioral goals before deploying to server
+- [ ] Establish iteration workflow: collect bad responses from play logs →
+  write corrections → add to training set → re-fine-tune → redeploy
