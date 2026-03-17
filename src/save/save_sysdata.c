@@ -32,6 +32,8 @@
 #include <math.h>
 #include <stdlib.h>
 
+SYS_DATA_TYPE sysdata;
+
 void load_sysdata(void)
 {
    FILE *sysfp;

@@ -71,8 +71,6 @@ char testerbuf[MSL];
 KILL_DATA kill_table[MAX_LEVEL];
 TIME_INFO_DATA time_info;
 WEATHER_DATA weather_info;
-SYS_DATA_TYPE sysdata;
-
 bool booting_up;
 bool happy_hour;
 int happy_hour_ticks_remaining;
