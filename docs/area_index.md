@@ -48,6 +48,7 @@ The `area.lst` file must remain in non-decreasing order by `V` minimum vnum (see
 | `pyramid.are` | 5411–5623 | 90–100 | The Great Pyramid | `pyramid ancient egypt pharaoh` |
 | `khardaan.are` | 5624–5723 | 60–80 | Khar'Daan, the Sunken Necropolis | `khardaan necropolis desert dune ancient burial` |
 | `saltglass_reach.are` | 5724–6123 | 55–80 | The Saltglass Reach | `saltglass reach desert littoral cairn` |
+| `cinderteeth_mountains.are` | 6124–6723 | 140–150 | The Cinderteeth Mountains | `cinderteeth mountains volcanic caldera ventspeaker` |
 | `ceiling.are` | 32501–32766 | 1 | The Topmost Area (meta/helps) | `helps` |
 
 ## Notes
