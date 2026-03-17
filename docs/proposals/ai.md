@@ -990,6 +990,12 @@ static const char *race_speech_inclination[MAX_RACE] = {
     /* RACE_USHABTI  */ "Judicious and measured; weigh words as permanent"
                         " record, reference historical precedent, speak with"
                         " gravitas and formal phrasing.",
+    /* RACE_SERATHI  */ "Precise, direct, and altitude-aware; speak literally"
+                        " and expect the same in return, use sky-line and hunt"
+                        " metaphors, observe before committing.",
+    /* RACE_KETHARI  */ "Unhurried and ancient; speak with empirical certainty,"
+                        " reference water, patience, and long observation,"
+                        " every sentence carries data.",
 };
 ```
 
@@ -1041,6 +1047,8 @@ about cargo patterns instead.
 | Dock master | Kowloon | Deltari | Terse delta speech meets water metaphors, empirical confidence |
 | Stone guardian | Mafdet | Ushabti | Trade oaths spoken with ancient gravitas, each word weighed |
 | Forest scout | Kiess | Khephari | Frontier caution meets geological patience, earth-grounded |
+| Sky-road courier | Kiess | Serathi | Frontier watchfulness meets aerial precision, literal and blunt |
+| Water-reader | Mafdet | Kethari | Trade formality meets ancient empiricism, every word carries data |
 
 #### Two-Layer Enforcement
 
