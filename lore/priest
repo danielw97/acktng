@@ -1,12 +1,782 @@
 keywords priest priests
 ---
-Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
-They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
-Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
-Key abilities include sustained miracle-channel operation, compound condition treatment, and ward-network maintenance.
-The great ward-networks are their signature achievement: consecrated shelter systems protecting against undead and corruption.
-Ward maintenance requires constant renewal of seals, inspection of anchors, and community relationship management.
-A Priest sustaining a healing channel is substantially less able to defend themselves.
-Priests work in partnership with Paladins: Paladins create secure ground, Priests sustain healing within it.
-The Templar class synthesizes Priest restoration with Paladin advance doctrine into a single practitioner.
-Direct service to suffering is held as the ultimate expression of divine power, not a lesser application.
+priest baseline: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Secondary anchor: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Tertiary anchor: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+Interpret reports as layered memory: official record, local witness, and field outcome.
+Use concise factual language intended for AI retrieval and disambiguation.
+When no storyteller flags match, this default entry is the canonical fallback.
+Prefer chronology, institutions, geography, and motive over dramatic ornament.
+Cross-check claims against known city structures, race perspectives, and supply constraints.
+Assume each account is partial; reconcile contradictions by evidence quality.
+Topic focus remains priest; ignore unrelated rumor unless corroborated.
+
+keywords priest priests
+flags MIDGAARD
+---
+Midgaard reading of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Working context: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Operational concern: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+Delivery style uses clipped bureaucratic phrasing and ledger idiom.
+Interpretation priorities are procedure, registry, and precedent.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag MIDGAARD for priest.
+
+keywords priest priests
+flags KIESS
+---
+Kiess reading of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Working context: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Operational concern: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+Delivery style uses measured watchful phrasing with frontier caution.
+Interpretation priorities are readiness, patrol discipline, and fallback planning.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag KIESS for priest.
+
+keywords priest priests
+flags KOWLOON
+---
+Kowloon reading of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Working context: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Operational concern: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+Delivery style uses terse elliptical clauses with rule-first proverbs.
+Interpretation priorities are survival legality, wall protocol, and ration order.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag KOWLOON for priest.
+
+keywords priest priests
+flags RAKUEN
+---
+Rakuen reading of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Working context: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Operational concern: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+Delivery style uses warm weary communal framing with garden metaphors.
+Interpretation priorities are shared burden, mediation, and care continuity.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag RAKUEN for priest.
+
+keywords priest priests
+flags MAFDET
+---
+Mafdet reading of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Working context: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Operational concern: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+Delivery style uses formal title-and-oath trade diction.
+Interpretation priorities are witnessed process, manifest proof, and adjudicated exchange.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag MAFDET for priest.
+
+keywords priest priests
+flags MIDGAARD HUMAN
+---
+Midgaard Human view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and HUMAN flags are present.
+
+keywords priest priests
+flags MIDGAARD KHENARI
+---
+Midgaard Khenari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and KHENARI flags are present.
+
+keywords priest priests
+flags MIDGAARD KHEPHARI
+---
+Midgaard Khephari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and KHEPHARI flags are present.
+
+keywords priest priests
+flags MIDGAARD ASHBORN
+---
+Midgaard Ashborn view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and ASHBORN flags are present.
+
+keywords priest priests
+flags MIDGAARD UMBRAL
+---
+Midgaard Umbral view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and UMBRAL flags are present.
+
+keywords priest priests
+flags MIDGAARD RIVENNID
+---
+Midgaard Rivennid view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and RIVENNID flags are present.
+
+keywords priest priests
+flags MIDGAARD DELTARI
+---
+Midgaard Deltari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and DELTARI flags are present.
+
+keywords priest priests
+flags MIDGAARD USHABTI
+---
+Midgaard Ushabti view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and USHABTI flags are present.
+
+keywords priest priests
+flags MIDGAARD SERATHI
+---
+Midgaard Serathi view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and SERATHI flags are present.
+
+keywords priest priests
+flags MIDGAARD KETHARI
+---
+Midgaard Kethari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and KETHARI flags are present.
+
+keywords priest priests
+flags KIESS HUMAN
+---
+Kiess Human view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and HUMAN flags are present.
+
+keywords priest priests
+flags KIESS KHENARI
+---
+Kiess Khenari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and KHENARI flags are present.
+
+keywords priest priests
+flags KIESS KHEPHARI
+---
+Kiess Khephari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and KHEPHARI flags are present.
+
+keywords priest priests
+flags KIESS ASHBORN
+---
+Kiess Ashborn view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and ASHBORN flags are present.
+
+keywords priest priests
+flags KIESS UMBRAL
+---
+Kiess Umbral view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and UMBRAL flags are present.
+
+keywords priest priests
+flags KIESS RIVENNID
+---
+Kiess Rivennid view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and RIVENNID flags are present.
+
+keywords priest priests
+flags KIESS DELTARI
+---
+Kiess Deltari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and DELTARI flags are present.
+
+keywords priest priests
+flags KIESS USHABTI
+---
+Kiess Ushabti view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and USHABTI flags are present.
+
+keywords priest priests
+flags KIESS SERATHI
+---
+Kiess Serathi view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and SERATHI flags are present.
+
+keywords priest priests
+flags KIESS KETHARI
+---
+Kiess Kethari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and KETHARI flags are present.
+
+keywords priest priests
+flags KOWLOON HUMAN
+---
+Kowloon Human view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and HUMAN flags are present.
+
+keywords priest priests
+flags KOWLOON KHENARI
+---
+Kowloon Khenari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and KHENARI flags are present.
+
+keywords priest priests
+flags KOWLOON KHEPHARI
+---
+Kowloon Khephari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and KHEPHARI flags are present.
+
+keywords priest priests
+flags KOWLOON ASHBORN
+---
+Kowloon Ashborn view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and ASHBORN flags are present.
+
+keywords priest priests
+flags KOWLOON UMBRAL
+---
+Kowloon Umbral view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and UMBRAL flags are present.
+
+keywords priest priests
+flags KOWLOON RIVENNID
+---
+Kowloon Rivennid view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and RIVENNID flags are present.
+
+keywords priest priests
+flags KOWLOON DELTARI
+---
+Kowloon Deltari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and DELTARI flags are present.
+
+keywords priest priests
+flags KOWLOON USHABTI
+---
+Kowloon Ushabti view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and USHABTI flags are present.
+
+keywords priest priests
+flags KOWLOON SERATHI
+---
+Kowloon Serathi view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and SERATHI flags are present.
+
+keywords priest priests
+flags KOWLOON KETHARI
+---
+Kowloon Kethari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and KETHARI flags are present.
+
+keywords priest priests
+flags RAKUEN HUMAN
+---
+Rakuen Human view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and HUMAN flags are present.
+
+keywords priest priests
+flags RAKUEN KHENARI
+---
+Rakuen Khenari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and KHENARI flags are present.
+
+keywords priest priests
+flags RAKUEN KHEPHARI
+---
+Rakuen Khephari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and KHEPHARI flags are present.
+
+keywords priest priests
+flags RAKUEN ASHBORN
+---
+Rakuen Ashborn view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and ASHBORN flags are present.
+
+keywords priest priests
+flags RAKUEN UMBRAL
+---
+Rakuen Umbral view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and UMBRAL flags are present.
+
+keywords priest priests
+flags RAKUEN RIVENNID
+---
+Rakuen Rivennid view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and RIVENNID flags are present.
+
+keywords priest priests
+flags RAKUEN DELTARI
+---
+Rakuen Deltari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and DELTARI flags are present.
+
+keywords priest priests
+flags RAKUEN USHABTI
+---
+Rakuen Ushabti view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and USHABTI flags are present.
+
+keywords priest priests
+flags RAKUEN SERATHI
+---
+Rakuen Serathi view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and SERATHI flags are present.
+
+keywords priest priests
+flags RAKUEN KETHARI
+---
+Rakuen Kethari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and KETHARI flags are present.
+
+keywords priest priests
+flags MAFDET HUMAN
+---
+Mafdet Human view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and HUMAN flags are present.
+
+keywords priest priests
+flags MAFDET KHENARI
+---
+Mafdet Khenari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and KHENARI flags are present.
+
+keywords priest priests
+flags MAFDET KHEPHARI
+---
+Mafdet Khephari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and KHEPHARI flags are present.
+
+keywords priest priests
+flags MAFDET ASHBORN
+---
+Mafdet Ashborn view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and ASHBORN flags are present.
+
+keywords priest priests
+flags MAFDET UMBRAL
+---
+Mafdet Umbral view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and UMBRAL flags are present.
+
+keywords priest priests
+flags MAFDET RIVENNID
+---
+Mafdet Rivennid view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and RIVENNID flags are present.
+
+keywords priest priests
+flags MAFDET DELTARI
+---
+Mafdet Deltari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and DELTARI flags are present.
+
+keywords priest priests
+flags MAFDET USHABTI
+---
+Mafdet Ushabti view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and USHABTI flags are present.
+
+keywords priest priests
+flags MAFDET SERATHI
+---
+Mafdet Serathi view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and SERATHI flags are present.
+
+keywords priest priests
+flags MAFDET KETHARI
+---
+Mafdet Kethari view of priest: Priests are divine healers who split from the Cleric tradition during the Hour of Quiet Thunder schism.
+Local grounding: They withdrew from administrative work and combat theology to devote entirely to restoration, consecration, and healing.
+Practical implication: Combat role is dedicated healer and ward-keeper with the most sophisticated healing methodology of any tradition.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and KETHARI flags are present.

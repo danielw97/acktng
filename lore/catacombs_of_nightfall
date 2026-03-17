@@ -1,15 +1,782 @@
 keywords catacombs nightfall undead
 ---
-The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
-They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+catacombs of nightfall baseline: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Secondary anchor: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Tertiary anchor: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+Interpret reports as layered memory: official record, local witness, and field outcome.
+Use concise factual language intended for AI retrieval and disambiguation.
+When no storyteller flags match, this default entry is the canonical fallback.
+Prefer chronology, institutions, geography, and motive over dramatic ornament.
+Cross-check claims against known city structures, race perspectives, and supply constraints.
+Assume each account is partial; reconcile contradictions by evidence quality.
+Topic focus remains catacombs of nightfall; ignore unrelated rumor unless corroborated.
 
-During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
-Sealed warrants authorized reclassification of unclaimed bodies as "civic remainder."
+keywords catacombs nightfall undead
+flags MIDGAARD
+---
+Midgaard reading of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Working context: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Operational concern: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+Delivery style uses clipped bureaucratic phrasing and ledger idiom.
+Interpretation priorities are procedure, registry, and precedent.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag MIDGAARD for catacombs of nightfall.
 
-As Kel'Shadra's influence deepened, burial halls became doctrinal territory.
-Administrative processing of the dead became institutional control of memory.
-The chapel quarter's bells fell silent during the same suppression cycle as the Gloamvault's Night of Unsounded Bells.
+keywords catacombs nightfall undead
+flags KIESS
+---
+Kiess reading of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Working context: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Operational concern: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+Delivery style uses measured watchful phrasing with frontier caution.
+Interpretation priorities are readiness, patrol discipline, and fallback planning.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag KIESS for catacombs of nightfall.
 
-The catacombs connect to the broader Kel'Shadra apparatus through hidden passages.
-Undead carry out governance functions. The architecture still sorts the living as though intake processing never ended.
-This is procedural horror, not random haunting.
+keywords catacombs nightfall undead
+flags KOWLOON
+---
+Kowloon reading of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Working context: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Operational concern: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+Delivery style uses terse elliptical clauses with rule-first proverbs.
+Interpretation priorities are survival legality, wall protocol, and ration order.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag KOWLOON for catacombs of nightfall.
+
+keywords catacombs nightfall undead
+flags RAKUEN
+---
+Rakuen reading of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Working context: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Operational concern: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+Delivery style uses warm weary communal framing with garden metaphors.
+Interpretation priorities are shared burden, mediation, and care continuity.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag RAKUEN for catacombs of nightfall.
+
+keywords catacombs nightfall undead
+flags MAFDET
+---
+Mafdet reading of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Working context: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Operational concern: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+Delivery style uses formal title-and-oath trade diction.
+Interpretation priorities are witnessed process, manifest proof, and adjudicated exchange.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag MAFDET for catacombs of nightfall.
+
+keywords catacombs nightfall undead
+flags MIDGAARD HUMAN
+---
+Midgaard Human view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and HUMAN flags are present.
+
+keywords catacombs nightfall undead
+flags MIDGAARD KHENARI
+---
+Midgaard Khenari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and KHENARI flags are present.
+
+keywords catacombs nightfall undead
+flags MIDGAARD KHEPHARI
+---
+Midgaard Khephari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and KHEPHARI flags are present.
+
+keywords catacombs nightfall undead
+flags MIDGAARD ASHBORN
+---
+Midgaard Ashborn view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and ASHBORN flags are present.
+
+keywords catacombs nightfall undead
+flags MIDGAARD UMBRAL
+---
+Midgaard Umbral view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and UMBRAL flags are present.
+
+keywords catacombs nightfall undead
+flags MIDGAARD RIVENNID
+---
+Midgaard Rivennid view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and RIVENNID flags are present.
+
+keywords catacombs nightfall undead
+flags MIDGAARD DELTARI
+---
+Midgaard Deltari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and DELTARI flags are present.
+
+keywords catacombs nightfall undead
+flags MIDGAARD USHABTI
+---
+Midgaard Ushabti view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and USHABTI flags are present.
+
+keywords catacombs nightfall undead
+flags MIDGAARD SERATHI
+---
+Midgaard Serathi view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and SERATHI flags are present.
+
+keywords catacombs nightfall undead
+flags MIDGAARD KETHARI
+---
+Midgaard Kethari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and KETHARI flags are present.
+
+keywords catacombs nightfall undead
+flags KIESS HUMAN
+---
+Kiess Human view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and HUMAN flags are present.
+
+keywords catacombs nightfall undead
+flags KIESS KHENARI
+---
+Kiess Khenari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and KHENARI flags are present.
+
+keywords catacombs nightfall undead
+flags KIESS KHEPHARI
+---
+Kiess Khephari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and KHEPHARI flags are present.
+
+keywords catacombs nightfall undead
+flags KIESS ASHBORN
+---
+Kiess Ashborn view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and ASHBORN flags are present.
+
+keywords catacombs nightfall undead
+flags KIESS UMBRAL
+---
+Kiess Umbral view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and UMBRAL flags are present.
+
+keywords catacombs nightfall undead
+flags KIESS RIVENNID
+---
+Kiess Rivennid view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and RIVENNID flags are present.
+
+keywords catacombs nightfall undead
+flags KIESS DELTARI
+---
+Kiess Deltari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and DELTARI flags are present.
+
+keywords catacombs nightfall undead
+flags KIESS USHABTI
+---
+Kiess Ushabti view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and USHABTI flags are present.
+
+keywords catacombs nightfall undead
+flags KIESS SERATHI
+---
+Kiess Serathi view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and SERATHI flags are present.
+
+keywords catacombs nightfall undead
+flags KIESS KETHARI
+---
+Kiess Kethari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and KETHARI flags are present.
+
+keywords catacombs nightfall undead
+flags KOWLOON HUMAN
+---
+Kowloon Human view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and HUMAN flags are present.
+
+keywords catacombs nightfall undead
+flags KOWLOON KHENARI
+---
+Kowloon Khenari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and KHENARI flags are present.
+
+keywords catacombs nightfall undead
+flags KOWLOON KHEPHARI
+---
+Kowloon Khephari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and KHEPHARI flags are present.
+
+keywords catacombs nightfall undead
+flags KOWLOON ASHBORN
+---
+Kowloon Ashborn view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and ASHBORN flags are present.
+
+keywords catacombs nightfall undead
+flags KOWLOON UMBRAL
+---
+Kowloon Umbral view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and UMBRAL flags are present.
+
+keywords catacombs nightfall undead
+flags KOWLOON RIVENNID
+---
+Kowloon Rivennid view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and RIVENNID flags are present.
+
+keywords catacombs nightfall undead
+flags KOWLOON DELTARI
+---
+Kowloon Deltari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and DELTARI flags are present.
+
+keywords catacombs nightfall undead
+flags KOWLOON USHABTI
+---
+Kowloon Ushabti view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and USHABTI flags are present.
+
+keywords catacombs nightfall undead
+flags KOWLOON SERATHI
+---
+Kowloon Serathi view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and SERATHI flags are present.
+
+keywords catacombs nightfall undead
+flags KOWLOON KETHARI
+---
+Kowloon Kethari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and KETHARI flags are present.
+
+keywords catacombs nightfall undead
+flags RAKUEN HUMAN
+---
+Rakuen Human view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and HUMAN flags are present.
+
+keywords catacombs nightfall undead
+flags RAKUEN KHENARI
+---
+Rakuen Khenari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and KHENARI flags are present.
+
+keywords catacombs nightfall undead
+flags RAKUEN KHEPHARI
+---
+Rakuen Khephari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and KHEPHARI flags are present.
+
+keywords catacombs nightfall undead
+flags RAKUEN ASHBORN
+---
+Rakuen Ashborn view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and ASHBORN flags are present.
+
+keywords catacombs nightfall undead
+flags RAKUEN UMBRAL
+---
+Rakuen Umbral view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and UMBRAL flags are present.
+
+keywords catacombs nightfall undead
+flags RAKUEN RIVENNID
+---
+Rakuen Rivennid view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and RIVENNID flags are present.
+
+keywords catacombs nightfall undead
+flags RAKUEN DELTARI
+---
+Rakuen Deltari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and DELTARI flags are present.
+
+keywords catacombs nightfall undead
+flags RAKUEN USHABTI
+---
+Rakuen Ushabti view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and USHABTI flags are present.
+
+keywords catacombs nightfall undead
+flags RAKUEN SERATHI
+---
+Rakuen Serathi view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and SERATHI flags are present.
+
+keywords catacombs nightfall undead
+flags RAKUEN KETHARI
+---
+Rakuen Kethari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and KETHARI flags are present.
+
+keywords catacombs nightfall undead
+flags MAFDET HUMAN
+---
+Mafdet Human view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and HUMAN flags are present.
+
+keywords catacombs nightfall undead
+flags MAFDET KHENARI
+---
+Mafdet Khenari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and KHENARI flags are present.
+
+keywords catacombs nightfall undead
+flags MAFDET KHEPHARI
+---
+Mafdet Khephari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and KHEPHARI flags are present.
+
+keywords catacombs nightfall undead
+flags MAFDET ASHBORN
+---
+Mafdet Ashborn view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and ASHBORN flags are present.
+
+keywords catacombs nightfall undead
+flags MAFDET UMBRAL
+---
+Mafdet Umbral view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and UMBRAL flags are present.
+
+keywords catacombs nightfall undead
+flags MAFDET RIVENNID
+---
+Mafdet Rivennid view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and RIVENNID flags are present.
+
+keywords catacombs nightfall undead
+flags MAFDET DELTARI
+---
+Mafdet Deltari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and DELTARI flags are present.
+
+keywords catacombs nightfall undead
+flags MAFDET USHABTI
+---
+Mafdet Ushabti view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and USHABTI flags are present.
+
+keywords catacombs nightfall undead
+flags MAFDET SERATHI
+---
+Mafdet Serathi view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and SERATHI flags are present.
+
+keywords catacombs nightfall undead
+flags MAFDET KETHARI
+---
+Mafdet Kethari view of catacombs of nightfall: The Catacombs of Nightfall lie beneath Midgaard's southern chapel quarter.
+Local grounding: They began as a sanctioned burial-adjudication institution during the Lantern era: processing the dead, settling debts, archiving oaths.
+Practical implication: During the Violet Compact era, the same registry that documented arcane materials entering the Gloamvault catalogued remains here.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and KETHARI flags are present.

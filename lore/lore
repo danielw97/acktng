@@ -1,34 +1,782 @@
-keywords lore
+keywords lore realm world
 ---
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+lore baseline: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Secondary anchor: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Tertiary anchor: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+Interpret reports as layered memory: official record, local witness, and field outcome.
+Use concise factual language intended for AI retrieval and disambiguation.
+When no storyteller flags match, this default entry is the canonical fallback.
+Prefer chronology, institutions, geography, and motive over dramatic ornament.
+Cross-check claims against known city structures, race perspectives, and supply constraints.
+Assume each account is partial; reconcile contradictions by evidence quality.
+Topic focus remains lore; ignore unrelated rumor unless corroborated.
 
-Lore of the Realm
+keywords lore realm world
+flags MIDGAARD
+---
+Midgaard reading of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Working context: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Operational concern: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+Delivery style uses clipped bureaucratic phrasing and ledger idiom.
+Interpretation priorities are procedure, registry, and precedent.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag MIDGAARD for lore.
 
-Use lore <topic> to read about a subject.
+keywords lore realm world
+flags KIESS
+---
+Kiess reading of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Working context: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Operational concern: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+Delivery style uses measured watchful phrasing with frontier caution.
+Interpretation priorities are readiness, patrol discipline, and fallback planning.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag KIESS for lore.
 
-Races:       human, khenari, khephari, deltari, umbral, ushabti, ashborn,
-              rivennid
+keywords lore realm world
+flags KOWLOON
+---
+Kowloon reading of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Working context: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Operational concern: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+Delivery style uses terse elliptical clauses with rule-first proverbs.
+Interpretation priorities are survival legality, wall protocol, and ration order.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag KOWLOON for lore.
 
-Classes:     assassin, brawler, cipher, cleric, crusader, egomancer,
-              grand_magi, kinetimancer, knight, magi, martial_artist, monk,
-              necromancer, nightblade, paladin, priest, psionicist, sorcerer,
-              swordsman, templar, warden, warlock, wizard
+keywords lore realm world
+flags RAKUEN
+---
+Rakuen reading of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Working context: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Operational concern: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+Delivery style uses warm weary communal framing with garden metaphors.
+Interpretation priorities are shared burden, mediation, and care continuity.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag RAKUEN for lore.
 
-Cities:      midgaard, kowloon, kiess, mafdet, rakuen, akhenet, khardaan
+keywords lore realm world
+flags MAFDET
+---
+Mafdet reading of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Working context: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Operational concern: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+Delivery style uses formal title-and-oath trade diction.
+Interpretation priorities are witnessed process, manifest proof, and adjudicated exchange.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag MAFDET for lore.
 
-Regions:     great_northern_forest, cinderteeth, eastern_desert,
-              scorched_wastes, scorching_sands, saltglass_reach, roc_road,
-              thornwood, eccentric_woodland, forest_of_confusion,
-              sepulchur_pasture, shadowmere, arroyo
+keywords lore realm world
+flags MIDGAARD HUMAN
+---
+Midgaard Human view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and HUMAN flags are present.
 
-Dungeons:    great_pyramid, northern_pyramid, southern_pyramid,
-              great_oasis, northern_oasis, southern_oasis, lost_city,
-              sultans_palace, catacombs_of_nightfall, gloamvault, kelshadra,
-              sunken_sanctum, verdant_depths, withered_depths,
-              violet_eclipse_cathedral, voidcitadel, umbra_heartspire,
-              wizards_keep
+keywords lore realm world
+flags MIDGAARD KHENARI
+---
+Midgaard Khenari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and KHENARI flags are present.
 
-History:     black_sun_shard, keepers_of_measure, spirebound_conclave,
-              sealed_warrants, five_cities, ashfall, oasis_corridor
+keywords lore realm world
+flags MIDGAARD KHEPHARI
+---
+Midgaard Khephari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and KHEPHARI flags are present.
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+keywords lore realm world
+flags MIDGAARD ASHBORN
+---
+Midgaard Ashborn view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and ASHBORN flags are present.
+
+keywords lore realm world
+flags MIDGAARD UMBRAL
+---
+Midgaard Umbral view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and UMBRAL flags are present.
+
+keywords lore realm world
+flags MIDGAARD RIVENNID
+---
+Midgaard Rivennid view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and RIVENNID flags are present.
+
+keywords lore realm world
+flags MIDGAARD DELTARI
+---
+Midgaard Deltari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and DELTARI flags are present.
+
+keywords lore realm world
+flags MIDGAARD USHABTI
+---
+Midgaard Ushabti view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and USHABTI flags are present.
+
+keywords lore realm world
+flags MIDGAARD SERATHI
+---
+Midgaard Serathi view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and SERATHI flags are present.
+
+keywords lore realm world
+flags MIDGAARD KETHARI
+---
+Midgaard Kethari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and KETHARI flags are present.
+
+keywords lore realm world
+flags KIESS HUMAN
+---
+Kiess Human view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and HUMAN flags are present.
+
+keywords lore realm world
+flags KIESS KHENARI
+---
+Kiess Khenari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and KHENARI flags are present.
+
+keywords lore realm world
+flags KIESS KHEPHARI
+---
+Kiess Khephari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and KHEPHARI flags are present.
+
+keywords lore realm world
+flags KIESS ASHBORN
+---
+Kiess Ashborn view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and ASHBORN flags are present.
+
+keywords lore realm world
+flags KIESS UMBRAL
+---
+Kiess Umbral view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and UMBRAL flags are present.
+
+keywords lore realm world
+flags KIESS RIVENNID
+---
+Kiess Rivennid view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and RIVENNID flags are present.
+
+keywords lore realm world
+flags KIESS DELTARI
+---
+Kiess Deltari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and DELTARI flags are present.
+
+keywords lore realm world
+flags KIESS USHABTI
+---
+Kiess Ushabti view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and USHABTI flags are present.
+
+keywords lore realm world
+flags KIESS SERATHI
+---
+Kiess Serathi view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and SERATHI flags are present.
+
+keywords lore realm world
+flags KIESS KETHARI
+---
+Kiess Kethari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and KETHARI flags are present.
+
+keywords lore realm world
+flags KOWLOON HUMAN
+---
+Kowloon Human view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and HUMAN flags are present.
+
+keywords lore realm world
+flags KOWLOON KHENARI
+---
+Kowloon Khenari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and KHENARI flags are present.
+
+keywords lore realm world
+flags KOWLOON KHEPHARI
+---
+Kowloon Khephari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and KHEPHARI flags are present.
+
+keywords lore realm world
+flags KOWLOON ASHBORN
+---
+Kowloon Ashborn view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and ASHBORN flags are present.
+
+keywords lore realm world
+flags KOWLOON UMBRAL
+---
+Kowloon Umbral view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and UMBRAL flags are present.
+
+keywords lore realm world
+flags KOWLOON RIVENNID
+---
+Kowloon Rivennid view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and RIVENNID flags are present.
+
+keywords lore realm world
+flags KOWLOON DELTARI
+---
+Kowloon Deltari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and DELTARI flags are present.
+
+keywords lore realm world
+flags KOWLOON USHABTI
+---
+Kowloon Ushabti view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and USHABTI flags are present.
+
+keywords lore realm world
+flags KOWLOON SERATHI
+---
+Kowloon Serathi view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and SERATHI flags are present.
+
+keywords lore realm world
+flags KOWLOON KETHARI
+---
+Kowloon Kethari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and KETHARI flags are present.
+
+keywords lore realm world
+flags RAKUEN HUMAN
+---
+Rakuen Human view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and HUMAN flags are present.
+
+keywords lore realm world
+flags RAKUEN KHENARI
+---
+Rakuen Khenari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and KHENARI flags are present.
+
+keywords lore realm world
+flags RAKUEN KHEPHARI
+---
+Rakuen Khephari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and KHEPHARI flags are present.
+
+keywords lore realm world
+flags RAKUEN ASHBORN
+---
+Rakuen Ashborn view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and ASHBORN flags are present.
+
+keywords lore realm world
+flags RAKUEN UMBRAL
+---
+Rakuen Umbral view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and UMBRAL flags are present.
+
+keywords lore realm world
+flags RAKUEN RIVENNID
+---
+Rakuen Rivennid view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and RIVENNID flags are present.
+
+keywords lore realm world
+flags RAKUEN DELTARI
+---
+Rakuen Deltari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and DELTARI flags are present.
+
+keywords lore realm world
+flags RAKUEN USHABTI
+---
+Rakuen Ushabti view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and USHABTI flags are present.
+
+keywords lore realm world
+flags RAKUEN SERATHI
+---
+Rakuen Serathi view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and SERATHI flags are present.
+
+keywords lore realm world
+flags RAKUEN KETHARI
+---
+Rakuen Kethari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and KETHARI flags are present.
+
+keywords lore realm world
+flags MAFDET HUMAN
+---
+Mafdet Human view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and HUMAN flags are present.
+
+keywords lore realm world
+flags MAFDET KHENARI
+---
+Mafdet Khenari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and KHENARI flags are present.
+
+keywords lore realm world
+flags MAFDET KHEPHARI
+---
+Mafdet Khephari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and KHEPHARI flags are present.
+
+keywords lore realm world
+flags MAFDET ASHBORN
+---
+Mafdet Ashborn view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and ASHBORN flags are present.
+
+keywords lore realm world
+flags MAFDET UMBRAL
+---
+Mafdet Umbral view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and UMBRAL flags are present.
+
+keywords lore realm world
+flags MAFDET RIVENNID
+---
+Mafdet Rivennid view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and RIVENNID flags are present.
+
+keywords lore realm world
+flags MAFDET DELTARI
+---
+Mafdet Deltari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and DELTARI flags are present.
+
+keywords lore realm world
+flags MAFDET USHABTI
+---
+Mafdet Ushabti view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and USHABTI flags are present.
+
+keywords lore realm world
+flags MAFDET SERATHI
+---
+Mafdet Serathi view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and SERATHI flags are present.
+
+keywords lore realm world
+flags MAFDET KETHARI
+---
+Mafdet Kethari view of lore: Realm baseline: five cities share trade, diplomacy, and unresolved historical debt.
+Local grounding: Midgaard anchors law and registration; Kiess secures northern frontier logistics.
+Practical implication: Kowloon stabilizes crisis corridors with hard protocol and ration governance.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and KETHARI flags are present.
