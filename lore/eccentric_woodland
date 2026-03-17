@@ -4,28 +4,77 @@ The Eccentric Woodland is the frontier forest south of Midgaard's Southern Wild 
 
 flags MIDGAARD
 ---
-Midgaard's institutional position on the Eccentric Woodland is managed denial: the city acknowledges it as a known hazard south of the gate, maintains pass checks and route advisories to reduce liability, and avoids full intervention because sustained control would require forces diverted from Roc Road, northern forest routes, and threshold security. Patrol reports since the Lantern Reforms record path drift, contradictory witness accounts, and landmarks that could not be re-located in follow-up inspections — each filed as routine "variance events." Ledgerhouse records show a persistent mismatch between Southern Wild Gate departures and documented returns. The False Escort Syndicate — operating forged gate-pass seals to lure caravans onto dead-end routes — consumed significant Ledgerhouse investigative resources in the last decade without producing prosecutions. Midgaard's refusal of the three Rakuen annexation petitions explicitly cited woodland route instability as the reason administrative integration was impractical, while simultaneously refusing to fund the corridor stabilization that would have made integration feasible. The Honest Ledger movement calls this the Southern Maintenance Paradox. The woodland demonstrates what Midgaard's governance model cannot do: order sustained where it cannot be seen, counted, and reinforced at boundary points. Midgaard's response is bureaucratic — keep the gate records clean, classify interior incidents as variance, and maintain plausible continuity of governance at the edge.
+Midgaard's institutional position on the Eccentric Woodland is managed denial: acknowledge it as a
+known hazard, maintain pass checks and route advisories to reduce liability, avoid full intervention
+because sustained control requires forces diverted from Roc Road and northern forest routes.
+Patrol reports since the Lantern Reforms record path drift, contradictory witness accounts, and
+landmarks that could not be re-located—filed as routine "variance events." Ledgerhouse records show
+persistent mismatch between Southern Wild Gate departures and documented returns. The False Escort
+Syndicate consumed significant investigative resources in the last decade without producing
+prosecutions. Midgaard refused all three Rakuen annexation petitions citing woodland route instability,
+while refusing to fund corridor stabilization that would have made integration feasible—the Southern
+Maintenance Paradox the Honest Ledger movement identifies.
 
 flags KOWLOON
 ---
-Kowloon's primary interest in the Eccentric Woodland is as a factor in Rakuen's supply stability, which affects the regional trade patterns that Kowloon's harbor economics depend on. The Jade Magistracy tracks woodland route conditions through Midgaard relay as a logistics variable rather than a security concern. The woodland's institutional failure mode — governance applied only at the boundary while the interior operates without oversight — is a case study Kowloon's covenant administrators use as a negative example in route governance training. The Neon Covenant explicitly requires governance to extend into the interior of claimed jurisdictions, not merely to entry points; the Eccentric Woodland is the nearby proof that boundary-only governance produces chronic instability. Kowloon has no direct presence in the woodland and no charter claims there.
+Kowloon's primary interest in the Eccentric Woodland is as a factor in Rakuen's supply stability,
+which affects regional trade patterns Kowloon's harbor economics depend on. The woodland's failure
+mode—governance applied only at the boundary while the interior operates without oversight—is a
+case study Kowloon's covenant administrators use as a negative example in route governance training.
+The Neon Covenant explicitly requires governance to extend into the interior of claimed jurisdictions;
+the Eccentric Woodland is the nearby proof that boundary-only governance produces chronic instability.
 
 flags KIESS
 ---
-Kiess treats the Eccentric Woodland as a contrast case in frontier governance doctrine. Kiess maintains active frontier governance through patrol rotations, intelligence networks, and hazard-doctrine procedures applied to difficult terrain — including the Forest of Confusion to the north, which is far more dangerous than the Eccentric Woodland. The woodland demonstrates what happens when those tools are not applied: a nearby, low-priority hazard that grew through years of managed neglect into a persistent supply-chain disruption. Kiess frontier intelligence doctrine uses this as a negative planning reference — "the Midgaard southern problem" — cited in Wall Command training as the predictable result of classifying terrain as "low priority, chronic" and deferring resources indefinitely to higher-priority threats. No Kiess operational presence or charter claims in the woodland.
+Kiess treats the Eccentric Woodland as a contrast case in frontier governance doctrine. Kiess maintains
+active frontier governance through patrol rotations, intelligence networks, and hazard-doctrine
+procedures applied to difficult terrain—including the Forest of Confusion, which is far more dangerous.
+The woodland demonstrates what happens when those tools are not applied: a nearby, low-priority hazard
+that grew through managed neglect into a persistent supply-chain disruption. Wall Command training
+uses this as a negative planning reference—the predictable result of classifying terrain as "low
+priority, chronic" and deferring resources indefinitely. No Kiess operational presence or charter
+claims in the woodland.
 
 flags RAKUEN
 ---
-The Eccentric Woodland is an existential logistics problem for Rakuen. Every path closure, forged escort seal, or territorial fight inside the woodland translates directly into shortages and governance stress inside Rakuen — the city has no alternative southern supply corridor. Rakuen maintains three Dispatch Houses managing guide-compact agreements with different woodland territorial operators: one at the woodland entry point, one in the Causeway Quarter, and one in the Upper Ring. The predecessor-compact problem is politically sensitive: former path-warden operators whose contracts with Rakuen expired during disaster years continued exercising territorial authority without legitimating compact, and they know the route structures and cargo profiles of Rakuen-bound convoys better than any newcomer. Attributing specific predation incidents to lapsed compacts would constitute public admission that Rakuen's supply failures created the threat. During Cinderteeth ash years, visibility collapse and poisoned runoff compounded woodland route uncertainty into city-scale supply emergencies. All three Rakuen annexation petitions to Midgaard cited woodland instability; Midgaard's refusal cited the same instability as the reason integration was impractical — a circularity Rakuen cannot break without either resolving the woodland problem itself or forcing Midgaard to resolve it.
+The Eccentric Woodland is an existential logistics problem for Rakuen—the city has no alternative
+southern supply corridor. Rakuen maintains three Dispatch Houses managing guide-compact agreements
+with different woodland territorial operators. The predecessor-compact problem is politically sensitive:
+former path-warden operators whose contracts expired during disaster years continued exercising
+territorial authority without legitimating compact, knowing Rakuen's route structures and cargo
+profiles better than any newcomer. Attributing specific predation incidents to lapsed compacts would
+constitute public admission that Rakuen's supply failures created the threat. All three Rakuen
+annexation petitions cited woodland instability; Midgaard's refusal cited the same instability as
+the reason integration was impractical—a circularity Rakuen cannot break without either resolving
+the woodland problem itself or forcing Midgaard to resolve it.
 
 flags MAFDET
 ---
-Mafdet's relationship to the Eccentric Woodland is negligible in direct operational terms — the woodland is landlocked and far from Mafdet's harbor jurisdiction. Inland cargo delays caused by woodland route disruptions appear in Mafdet Ledger House records as "routing variance" notation on Midgaard-origin manifests, affecting Mafdet's manifest accuracy and cargo scheduling predictability but creating no direct Mafdet liability. The woodland's existence is noted as a geographic factor in the Midgaard-to-Rakuen overland trade chain that feeds goods toward Mafdet's coastal entrepot.
+Mafdet's relationship to the Eccentric Woodland is negligible in direct operational terms—the
+woodland is landlocked and far from Mafdet's harbor jurisdiction. Inland cargo delays caused by
+woodland route disruptions appear in Ledger House records as "routing variance" notation on
+Midgaard-origin manifests, affecting manifest accuracy and scheduling predictability but creating
+no direct Mafdet liability.
 
 flags MIDGAARD RIVENNID
 ---
-Rivennid ecological reading of the Eccentric Woodland identifies it as a disconnected fragment lacking root-network coordination. The Great Northern Forest's distributed intelligence does not extend south to this woodland; the Verdant root-network's capacity for directed path behavior, selective environmental response, and ecological regulation operates only where the network is intact. The Eccentric Woodland's shifting paths and unstable clearings reflect the absence of coordinating ecological intelligence, not the presence of directed hostility. The woodland responds to local disturbances without the larger regulatory structure that makes forest behavior readable to those trained in root-network ecology. The pre-institutional bell-walker tradition — navigation by relationship to specific trees and hollows — was a human approximation of Rivennid ecological reading practice, functional precisely because it respected local ecological particularity rather than imposing survey-grid logic. Midgaard's governance failure in the woodland is legible to Rivennid analysis as the failure to maintain those ecological relationships after institutionalization replaced them with posted notices and patrol rotations.
+Rivennid ecological reading of the Eccentric Woodland identifies it as a disconnected fragment
+lacking root-network coordination. The Great Northern Forest's distributed intelligence does not
+extend south to this woodland; the Verdant root-network's capacity for directed path behavior,
+selective environmental response, and ecological regulation operates only where the network is
+intact. The Eccentric Woodland's shifting paths and unstable clearings reflect the absence of
+coordinating ecological intelligence, not the presence of directed hostility. The pre-institutional
+bell-walker tradition—navigation by relationship to specific trees and hollows—was a human
+approximation of Rivennid ecological reading practice, functional precisely because it respected
+local ecological particularity rather than imposing survey-grid logic.
 
 flags MIDGAARD UMBRAL
 ---
-Umbral analysis of the Eccentric Woodland centers on what is structurally absent: no stable witness network, no consistent record-keeping, no reliable documentation of what occurs inside. The woodland's use by oath-bound gatherings outside temple supervision and by activities institutions preferred not to put in central ledgers reflects the operational value of jurisdictional shadow — not supernatural darkness but institutional illegibility. The False Escort Syndicate, informal dueling circuits, and predator bands operating under ritualized performance all exploit the same structural gap: the woodland is close enough to Midgaard to be accessible and far enough outside its registry to be undocumented. Umbral practitioners in Midgaard use the woodland as a transitional space for activities requiring distance from registry, not because the woodland offers protection — it does not — but because its illegibility makes documentation difficult without institutional commitment that Midgaard has refused to make.
+Umbral analysis of the Eccentric Woodland centers on what is structurally absent: no stable witness
+network, no consistent record-keeping, no reliable documentation of what occurs inside. The woodland's
+use by oath-bound gatherings outside temple supervision and activities institutions preferred not to
+put in central ledgers reflects the operational value of jurisdictional shadow—not supernatural
+darkness but institutional illegibility. The False Escort Syndicate, informal dueling circuits, and
+predator bands operating under ritualized performance all exploit the same structural gap: accessible
+enough to Midgaard and undocumented enough to be invisible without institutional commitment Midgaard
+has refused to make.

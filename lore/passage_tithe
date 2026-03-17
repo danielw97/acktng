@@ -14,72 +14,46 @@ Mafdet's Shoreward Conversion protocol includes a Tithe-derived clause permittin
 
 flags MIDGAARD
 ---
-Midgaard's registry includes the Passage Tithe under its historical taxation framework as a recognized crisis-period legal instrument.
-The Charter Review Board has classified the Tithe as pre-charter origin but valid: its operation predates Midgaard's formal charter system and was grandfathered into recognition as historically valid.
-The Tithe's transit certification documents, where they survive, are accepted by Midgaard's registry as evidence of route use continuity for property rights purposes.
+Midgaard's registry includes the Passage Tithe as a pre-charter legal instrument classified as pre-charter origin but valid; its transit certification documents are accepted as evidence of route use continuity for property rights purposes.
 A route documented by Tithe certifications has stronger continuity-of-use evidence than a route without documentation, even if the Tithe certification predates the charter system.
-This has produced several legal disputes where surviving Tithe documentation supports property claims that post-charter documentation does not.
 The Continuity faction treats Tithe documentation as the strongest available historical evidence for pre-charter route rights.
 The Reckoning faction notes that Tithe documentation was issued by a fragmented system where certification authority was contested; not all Tithe documents reflect legitimate collection.
-Both factions agree that distinguishing legitimate from contested Tithe documentation requires case-by-case analysis. Neither faction agrees on who should conduct that analysis.
-Midgaard's position: the Tithe was a valid legal regime for its period. Its documents have evidentiary value. Their weight requires individual assessment.
+Both factions agree distinguishing legitimate from contested Tithe documentation requires case-by-case analysis. Neither agrees on who should conduct that analysis.
 
 flags KOWLOON
 ---
 Kowloon's Black Ledger includes the Passage Tithe as the historical precursor to its current cargo-assessment levy system.
-The Neon Covenant's levy structure was developed partly by analyzing what the Tithe got right and what it got wrong.
-What it got right: payment-in-kind maintains trade flow when coin fails; transit certification creates a cross-network pass that reduces redundant assessment; a fraction-of-cargo standard scales automatically with cargo value.
-What it got wrong: the collection network's coherence was more fragile than the coin system it replaced; without a single authority backing the transit certifications, fragmentation was inevitable.
-Kowloon's response: the Neon Covenant's levy system requires that all collection points honor transit certifications issued at any other Kowloon-recognized point.
-This mutual recognition requirement is explicitly cited in Covenant documentation as the lesson drawn from the Tithe's fragmentation failure.
-The requirement is enforced through the Black Ledger's audit function: collection points that refuse valid certifications are documented and their own certifications are downgraded.
-Kowloon's assessment of the Tithe: it was a correct response to an impossible situation. It failed because cross-network trust is harder to maintain than the goods it was meant to move.
-Building the trust structure before the crisis is the lesson. The Tithe built it during the crisis, which was too late.
+What the Tithe got right: payment-in-kind maintains trade flow when coin fails; transit certification creates a cross-network pass that reduces redundant assessment; fraction-of-cargo scales automatically with cargo value.
+What the Tithe got wrong: collection network coherence was more fragile than the coin system it replaced; without a single authority backing transit certifications, fragmentation was inevitable.
+Kowloon's response: the Neon Covenant's levy system requires all collection points to honor transit certifications issued at any other Kowloon-recognized point — explicitly cited in Covenant documentation as the lesson drawn from the Tithe's fragmentation failure.
+Kowloon's assessment: it was a correct response to an impossible situation. It failed because cross-network trust is harder to maintain than the goods it was meant to move. Building the trust structure before the crisis is the lesson.
 
 flags KIESS
 ---
-Kiess's route law includes a Tithe-derived clause governing emergency payment arrangements for caravan operators who cannot provide coin at frontier collection points.
-The clause is called the survival tariff: a certified caravan in documented distress may pay a fraction of cargo rather than coin at any Kiess-licensed collection point.
-The survival tariff is not charity: the caravan still pays, the collection point still receives value, and the transit certification is issued normally.
-It is crisis accommodation: the payment form changes to preserve route function when the standard form is unavailable.
-Kiess's anti-secrecy doctrine required full disclosure of the survival tariff's terms: what distress qualifies, what fractions apply by cargo type, and what documentation the caravan must provide.
-The transparency is functional: if caravan operators do not know the survival tariff exists, they will not use it; if they do not know its terms, they will not qualify correctly.
-The Evermeet lesson applied to the Tithe: the Tithe's fragmentation was partly caused by operators not knowing which certifications were valid at which collection points.
-Public disclosure of all certification terms and mutual recognition lists prevents exactly this confusion.
-Kiess publishes its active mutual recognition agreements quarterly. Collection points that have been delisted from recognition are also disclosed with the reason for delisting.
+Kiess's route law includes a Tithe-derived survival tariff: a certified caravan in documented distress may pay a fraction of cargo rather than coin at any Kiess-licensed collection point.
+The survival tariff is not charity: the caravan still pays, the collection point still receives value, and transit certification is issued normally. It is crisis accommodation that preserves route function when the standard payment form is unavailable.
+Kiess's anti-secrecy doctrine required full public disclosure of the survival tariff's terms: what distress qualifies, what fractions apply by cargo type, and what documentation the caravan must provide.
+Kiess publishes its active mutual recognition agreements quarterly; collection points delisted from recognition are also disclosed with the reason for delisting. This prevents the fragmentation confusion that destroyed the original Tithe network.
 
 flags RAKUEN
 ---
 Rakuen's disaster-recovery framework treats the Passage Tithe as the historical model for crisis-period resource allocation when monetary systems fail.
-The Garden Ledger's analysis of the Tithe's operation identifies it as a distributed resource-levying system that successfully maintained trade flow during three distinct monetary crises.
-Rakuen's modern resource allocation protocols during crisis periods include a payment-in-kind option derived from the Tithe's fraction-of-cargo model.
-The key modification: Rakuen's payment-in-kind option is administered through a central clearing function rather than distributed collection points.
-Caravans pay at any point and receive a Rakuen-issued transit certification. Rakuen then redistributes the collected cargo to maintenance operations and crisis recovery stores.
+Rakuen's modern payment-in-kind option during crisis periods is administered through a central clearing function rather than distributed collection points.
+Caravans pay at any point and receive a Rakuen-issued transit certification; Rakuen then redistributes collected cargo to maintenance operations and crisis recovery stores.
 This centralization was Rakuen's specific response to the Tithe's fragmentation failure: if certification is issued and backed by a single institution, mutual recognition is automatic.
-The tradeoff is that Rakuen bears all the redistribution logistics cost. As usual, Rakuen absorbs the coordination cost that the distributed system avoids by not doing it.
-The Garden Ledger notes: the Tithe worked for the caravans. It failed for the route system. Rakuen's version works for the route system. It costs more.
-The cost is justified because route system failure is more expensive than the clearing operation. Rakuen has done this calculation three times. The answer has not changed.
+The tradeoff is that Rakuen bears all redistribution logistics costs. The Garden Ledger notes: the Tithe worked for the caravans. It failed for the route system. Rakuen's version works for the route system. It costs more. The cost is justified because route system failure is more expensive than the clearing operation.
 
 flags MAFDET
 ---
 Mafdet's Shoreward Conversion protocol includes a Tithe-derived clause permitting cargo payment for Shoreward assessment services during documented monetary shortage periods.
-The clause is used rarely but is considered essential: maritime trade cannot stop because inland coin has failed. Cargo payment keeps the conversion process moving.
-The Tide Ledger Hall's Saltweight standard was partly developed in response to the Tithe period's valuation inconsistencies: different collection points assessed cargo value differently, creating conversion disputes at coastal handoff.
-A universal measurement standard eliminates this dispute by establishing a single reference value that all parties accept regardless of where the cargo was assessed inland.
-The Saltweight standard therefore addresses both the Tithe's legacy problem and Mafdet's ongoing maritime-inland conversion challenge with a single institutional mechanism.
+The Tide Ledger Hall's Saltweight standard was partly developed in response to the Tithe period's valuation inconsistencies: different collection points assessed cargo value differently, creating conversion disputes at coastal handoff. A universal measurement standard eliminates this dispute.
 Mafdet's Claw Mark Registry includes a historical Tithe certification sub-archive: surviving Tithe documents from cargo that eventually reached Mafdet's harbor, allowing provenance chains to be traced back through the Tithe period.
-This archive is primarily used for antiquities provenance research rather than current commercial purposes.
-The Shrine of the First Claw notes that the Tithe's fraction-of-cargo model is an ancient form of oath-sealed contribution: you swear to the fraction, you pay it, and you receive transit clearance.
-The oath is not sealed at the First Claw because the Tithe predates the Shrine's current procedures. The Shrine recognizes the Tithe model as a valid ancestor of current commercial oath forms.
+The Shrine of the First Claw notes that the Tithe's fraction-of-cargo model is an ancient form of oath-sealed contribution: you swear to the fraction, you pay it, and you receive transit clearance. The Shrine recognizes the Tithe model as a valid ancestor of current commercial oath forms.
 
 flags KOWLOON DELTARI
 ---
-Deltari in Kowloon maintain oral records of the Passage Tithe's operation in the delta region that predate Kowloon's administrative records of the same period.
-The Deltari records provide the most detailed surviving account of how the Tithe functioned at the lower end of the cargo scale: small-boat operators, reed traders, and seasonal fish-cargo routes.
-These operators were affected by the Tithe differently than overland caravans: their cargo was perishable, their route distances were shorter, and their payment-in-kind options were fewer.
-A caravan can pay a fraction of grain. A reed boat cannot pay a fraction of fish: the fish will be dead before redistribution is complete.
-Deltari records document the local adaptations that emerged: Tithe collection points near the delta accepted preservation work rather than cargo fraction — salting, drying, and storage services in lieu of cargo.
-This service-payment variant was not part of the Tithe's formal design. It was improvised by Deltari collection officers and later acknowledged by Kowloon's administrative records as locally valid.
-Deltari in Kowloon cite this case in Reed Law advocacy: the Tithe's formal design was inadequate for aquatic trade realities; the practical solution was developed by the people who actually worked the water.
-Kowloon's current levy system includes a service-payment option for perishable cargo routes that traces its form directly to the Deltari delta adaptation.
+Deltari in Kowloon maintain oral records of the Passage Tithe's operation in the delta region that predate Kowloon's administrative records, documenting how the Tithe functioned for small-boat operators, reed traders, and seasonal fish-cargo routes.
+These operators faced different challenges than overland caravans: their cargo was perishable, route distances were shorter, and payment-in-kind options were fewer. A caravan can pay a fraction of grain; a reed boat cannot pay a fraction of fish.
+Deltari records document the local adaptation that emerged: Tithe collection points near the delta accepted preservation work rather than cargo fraction — salting, drying, and storage services in lieu of cargo.
+This service-payment variant was improvised by Deltari collection officers and later acknowledged by Kowloon's administrative records as locally valid; Kowloon's current levy system includes a service-payment option for perishable cargo routes tracing its form directly to this Deltari delta adaptation.
 The adaptation is acknowledged in Kowloon's documentation. The Deltari origin of the adaptation is not. Deltari in Kowloon's administrative system are working to add the attribution.

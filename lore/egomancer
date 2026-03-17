@@ -4,28 +4,84 @@ Egomancers are offensive psionic practitioners who emerged from the Assertion Wi
 
 flags MIDGAARD
 ---
-Midgaard's registry office has attempted to classify Egomancer practice under the general Psionicist registry category, which is technically accurate as a lineage designation but fails to capture the independent school structure that Egomancer practitioners operate through. The Violet Compact's enhanced monitoring designation — applied when the Kinetic Formulists' manuscripts first described the Egomancer lineage's convergence potential — remains on file as an unfulfilled administrative intention. The Sealed Names Apparatus has interest in Egomancer capability for specific applications (coerced information extraction, testimony verification) that cannot be acknowledged through official channels; the informal operational relationship is managed through intermediaries and is not reflected in registry documentation. The Continuity faction's use of impression management and narrative control around contested history creates an obvious professional intersection with practitioners who specialize in cognitive state imposition, though neither party documents this relationship. Registry-compliant Egomancer practitioners in Midgaard file minimal credentials that acknowledge Psionicist lineage without specifying Assertion Wing specialization.
+Midgaard's registry office has attempted to classify Egomancer practice under the general Psionicist
+registry category—technically accurate as lineage designation but failing to capture the independent
+school structure. The Violet Compact's enhanced monitoring designation applied when Kinetic Formulists'
+manuscripts first described the Egomancer lineage's convergence potential remains on file as an
+unfulfilled administrative intention. The Sealed Names Apparatus has interest in Egomancer capability
+for coerced information extraction and testimony verification applications that cannot be acknowledged
+through official channels; the informal operational relationship is managed through intermediaries.
+Registry-compliant Egomancer practitioners file minimal credentials acknowledging Psionicist lineage
+without specifying Assertion Wing specialization.
 
 flags KOWLOON
 ---
-Kowloon's Jade Magistracy has jurisdiction over practices that cause demonstrable harm to cognitive function — a category that Egomancer weaponized cognition clearly falls within when deployed against citizens. The practical difficulty of demonstrating that a specific cognitive outcome was caused by practitioner imposition rather than other causes means that Jade Magistracy proceedings against Egomancer practitioners are extremely rare. The color jurisdiction system creates additional complexity: which district color handles a cognitive harm claim depends on where the harm occurred and who the victim is, not on any analysis of how the harm was produced. Egomancer practitioners operating in Kowloon exploit this complexity deliberately. The Harbor Syndic's negotiations function employs practitioners with Assertion Wing training in commercial dispute contexts that stop short of coercion under Magistracy definitions — a gray-area application that has never been formally adjudicated.
+Kowloon's Jade Magistracy has jurisdiction over practices causing demonstrable harm to cognitive
+function—a category Egomancer weaponized cognition clearly falls within when deployed against citizens.
+The practical difficulty of demonstrating that a specific cognitive outcome was caused by practitioner
+imposition rather than other causes means Magistracy proceedings against Egomancer practitioners are
+extremely rare. The color jurisdiction system creates additional complexity: which district color
+handles a cognitive harm claim depends on where harm occurred and who the victim is, not on analysis
+of how harm was produced. Egomancer practitioners exploit this complexity deliberately. The Harbor
+Syndic's negotiations function employs practitioners with Assertion Wing training in commercial
+dispute contexts stopping short of coercion under Magistracy definitions.
 
 flags KIESS
 ---
-Kiess's anti-sealed-warrant charter provides specific protections for Egomancer practitioners that its drafters did not anticipate. The charter's prohibition on sealed testimony compulsion prevents the primary investigative technique — compelling testimony about whether a practitioner performed a specific cognitive imposition — that would otherwise be available to Kiess investigators. Kinetimancer manuscript copies are accessible in the Kiess archive under the anti-sealed-warrant framework, which has made Kiess a center for theoretical Egomancer research as well as operational practice. Wall Command has identified Egomancer capability as potentially useful in frontier intelligence interrogation contexts but has not developed formal protocols, partly because the capability falls outside Wall Command's institutional competency to assess and partly because establishing formal protocols would require registry acknowledgment that neither Wall Command nor Egomancer practitioners want.
+Kiess's anti-sealed-warrant charter provides specific protections for Egomancer practitioners that
+its drafters did not anticipate. The charter's prohibition on sealed testimony compulsion prevents the
+primary investigative technique—compelling testimony about whether a practitioner performed a specific
+cognitive imposition—that would otherwise be available to Kiess investigators. Kinetimancer manuscript
+copies are accessible in the Kiess archive under the anti-sealed-warrant framework, making Kiess a
+center for theoretical Egomancer research and operational practice. Wall Command has identified
+Egomancer capability as potentially useful in frontier intelligence interrogation but has not developed
+formal protocols—the capability falls outside Wall Command's institutional competency to assess, and
+formal protocols would require registry acknowledgment neither party wants.
 
 flags RAKUEN
 ---
-Rakuen's Canopy Compact collective accountability model creates significant structural tension with Egomancer practice. Imposition of cognitive states on community members without collective sanction violates the Compact's foundational governance principles in ways that are difficult to detect and address precisely because the imposition's effects are cognitively invisible. Rakuen's community governance depends on genuine informed collective decision-making; practitioners who can systematically undermine the quality of that decision-making represent a threat to the governance model itself. The city's tolerance for cipher tradition activity does not extend to Egomancer practice, and practitioners who disclose their specialization are typically asked to operate elsewhere. Egomancers who operate in Rakuen without disclosing their specialization find that Garden Ledger Clerks who notice anomalous community decision patterns begin documenting them carefully.
+Rakuen's Canopy Compact collective accountability model creates significant structural tension with
+Egomancer practice. Imposition of cognitive states on community members without collective sanction
+violates the Compact's foundational governance principles in ways that are difficult to detect precisely
+because the imposition's effects are cognitively invisible. Rakuen's community governance depends on
+genuine informed collective decision-making; practitioners who can systematically undermine decision
+quality represent a threat to the governance model itself. The city's tolerance for cipher tradition
+activity does not extend to Egomancer practice. Egomancers who operate in Rakuen without disclosing
+their specialization find that Garden Ledger Clerks who notice anomalous community decision patterns
+begin documenting them carefully.
 
 flags MAFDET
 ---
-Mafdet's swift-court governance creates an interesting legal question about Egomancer practice: if cognitive imposition influences a commercial agreement or oath-taking ceremony, does the agreement constitute genuine oath-binding? The Shrine of the First Claw's adjudication of oath-breaking requires determining whether the oath was given freely; an oath given under Egomancer imposition may not satisfy this standard, making the agreement void and potentially making the imposing practitioner liable for the disrupted commercial relationship. Harbor Wardens' Ledger Houses have developed detection protocols for anomalous commercial agreements that show characteristics consistent with coerced consent, though they cannot identify Egomancer imposition specifically. The swift-court's speed and finality mean that Egomancer practitioners who are identified face very rapid adverse proceedings.
+Mafdet's swift-court governance creates a key legal question: if cognitive imposition influences a
+commercial agreement or oath-taking ceremony, does the agreement constitute genuine oath-binding?
+The Shrine of the First Claw's adjudication of oath-breaking requires determining whether the oath
+was given freely; an oath given under Egomancer imposition may not satisfy this standard, making the
+agreement void and potentially making the imposing practitioner liable for the disrupted commercial
+relationship. Harbor Wardens' Ledger Houses have developed detection protocols for anomalous commercial
+agreements showing characteristics consistent with coerced consent. The swift-court's speed and
+finality mean that identified Egomancer practitioners face very rapid adverse proceedings.
 
 flags MIDGAARD UMBRAL
 ---
-Umbral absence-and-shadow doctrine treats cognitive imposition as the mental analogue of physical shadow: the imposing practitioner shapes what the target perceives by controlling what is absent from their awareness as much as what is present. Umbral Egomancers develop this framing into a specific technical approach — rather than adding cognitive content to override existing perception, they work by creating absences: removing the cognitive elements that would produce correct threat assessment, accurate memory, or coherent decision-making. The absence-approach is harder to detect than presence-approach imposition because victims experience it as failure of their own cognition rather than external interference. Umbral practitioners in Midgaard who develop Egomancer specialization tend to align with the private intelligence dealer tradition's Reform position — they frame the demonstration of cognitive control system inadequacy as social information rather than attack.
+Umbral absence-and-shadow doctrine treats cognitive imposition as the mental analogue of physical
+shadow: the imposing practitioner shapes what the target perceives by controlling what is absent from
+their awareness as much as what is present. Umbral Egomancers develop this into a specific technical
+approach—rather than adding cognitive content to override existing perception, they work by creating
+absences: removing cognitive elements that would produce correct threat assessment, accurate memory,
+or coherent decision-making. The absence-approach is harder to detect because victims experience it
+as failure of their own cognition rather than external interference. Umbral practitioners in Midgaard
+who develop Egomancer specialization tend to align with the private intelligence dealer tradition's
+Reform position—demonstrating cognitive control system inadequacy as social information rather than
+attack.
 
 flags KOWLOON RIVENNID
 ---
-Rivennid network-analysis doctrine applied to Egomancer practice produces the observation that cognitive imposition works most effectively against practitioners who are unaware of the connection network they inhabit — who do not know which of their apparent choices are being shaped by external influence. Rivennid practitioners entering the Egomancer tradition bring an existing analytical framework for mapping influence networks that translates directly into sophisticated sustained-pressure technique: understanding which cognitive connections to redirect requires understanding how the target's cognitive network is structured. Rivennid Egomancers in Kowloon's complex multi-institution governance environment have developed unusually sophisticated multi-target sustained pressure capability, maintaining simultaneous cognitive engagements with practitioners from different institutional contexts.
+Rivennid network-analysis doctrine applied to Egomancer practice produces the observation that
+cognitive imposition works most effectively against practitioners unaware of the connection network
+they inhabit. Rivennid practitioners entering the Egomancer tradition bring an existing analytical
+framework for mapping influence networks that translates directly into sophisticated sustained-pressure
+technique: understanding which cognitive connections to redirect requires understanding how the
+target's cognitive network is structured. Rivennid Egomancers in Kowloon's complex multi-institution
+governance environment have developed unusually sophisticated multi-target sustained pressure
+capability, maintaining simultaneous cognitive engagements with practitioners from different
+institutional contexts.
