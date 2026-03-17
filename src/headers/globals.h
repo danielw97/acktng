@@ -193,7 +193,27 @@ extern DESCRIPTOR_DATA *descriptor_list;
 extern CHAR_DATA *char_list;
 extern ROOM_INDEX_DATA *room_index_hash[MAX_KEY_HASH];
 extern OBJ_INDEX_DATA *obj_index_hash[MAX_KEY_HASH];
+extern MOB_INDEX_DATA *mob_index_hash[MAX_KEY_HASH];
 extern SYS_DATA_TYPE sysdata;
+
+/* db.c globals exposed for the save module and other subsystems. */
+extern char str_empty[];
+extern bool fBootDb;
+extern FILE *fpArea;
+extern char strArea[];
+extern int area_revision;
+extern AREA_DATA *area_load;
+extern AREA_DATA *area_used[];
+extern int top_affect;
+extern int top_area;
+extern int top_ed;
+extern int top_exit;
+extern int top_help;
+extern int top_mob_index;
+extern int top_obj_index;
+extern int top_reset;
+extern int top_room;
+extern int top_shop;
 
 /* Common combat/stat helpers shared across modules. */
 long get_max_hp args((CHAR_DATA * ch));

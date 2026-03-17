@@ -508,3 +508,67 @@ void save_corpses()
    }
    return;
 }
+
+void load_corpses(void)
+{
+
+   FILE *corpsefp;
+   char corpse_file_name[MAX_STRING_LENGTH];
+   char buf[MAX_STRING_LENGTH];
+
+   snprintf(corpse_file_name, sizeof(corpse_file_name), "%s", CORPSE_FILE);
+
+   db_format_status(buf, sizeof(buf), "Loading", corpse_file_name);
+   log_f("%s", buf);
+
+   if ((corpsefp = fopen(corpse_file_name, "r")) == NULL)
+   {
+      log_f("Load corpse Table: fopen");
+      perror("failed open of corpse_table.dat in load_corpse_table");
+   }
+
+   else
+   {
+      fpArea = corpsefp;
+      db_set_area_name(corpse_file_name);
+
+      for (;;)
+
+      {
+         char letter;
+         char *word;
+
+         letter = fread_letter(corpsefp);
+         if (letter == '*')
+         {
+            fread_to_eol(corpsefp);
+            continue;
+         }
+
+         if (letter != '#')
+         {
+            log_f("Load_char_obj: # not found.");
+            break;
+         }
+
+         word = fread_word(corpsefp);
+         if (!str_cmp(word, "OBJECT"))
+            fread_corpse(corpsefp);
+         else if (!str_cmp(word, "END"))
+            break;
+         else
+         {
+            log_f("Load_char_obj: bad section.");
+            break;
+         }
+      }
+   }
+   if (corpsefp != NULL)
+   {
+      fclose(corpsefp);
+      corpsefp = NULL;
+   }
+   fpArea = NULL;
+   db_format_status(buf, sizeof(buf), "Done Loading", corpse_file_name);
+   monitor_chan(buf, MONITOR_CLAN);
+}
