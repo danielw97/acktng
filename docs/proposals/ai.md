@@ -906,6 +906,88 @@ system prompting alone cannot reliably prevent in a base model:
 - Improvise plausibly in-character rather than admitting ignorance
 - Vary response style by NPC archetype (gruff blacksmith, suspicious guard,
   learned mage, harried innkeeper)
+- Apply a regional accent or dialect consistent with the NPC's accent tag (see
+  below)
+
+### Regional Accents (Per-NPC)
+
+Each NPC can be assigned a regional accent that shapes how the model renders its
+speech. This is a per-mob property — not per-area — so a dwarven merchant in an
+elven city keeps their dwarven dialect, and two NPCs in the same room can speak
+differently.
+
+**Storage:** A new field on `MOB_INDEX_DATA`:
+
+```c
+sh_int accent;   /* ACCENT_NONE, ACCENT_DWARVEN, ACCENT_ELVISH, etc. */
+```
+
+Accent constants are defined in `typedefs.h`:
+
+```c
+#define ACCENT_NONE       0
+#define ACCENT_DWARVEN    1   /* "ye", "me", rolling r's, hard consonants    */
+#define ACCENT_ELVISH     2   /* elongated vowels, soft sounds, formal       */
+#define ACCENT_FEN        3   /* dropped g's, "th" → "d", swamp vernacular   */
+#define ACCENT_DESERT     4   /* clipped phrasing, honorifics, formal titles */
+#define ACCENT_KOWLOON    5   /* terse, elliptic, proverb-laden              */
+#define MAX_ACCENT        6
+```
+
+The area file format gains a new optional field for mobs:
+
+```
+#MOBILES
+...
+Name       Korgath the smith~
+...
+AiPrompt
+You are Korgath, a dwarven blacksmith. ...
+~
+AiKnowledge weapons trade
+AiAccent dwarven
+End
+```
+
+`AiAccent` is parsed in `db.c` alongside `AiPrompt` and `AiKnowledge`.
+
+**Two-layer approach:** Accents are applied at two levels that reinforce each
+other:
+
+1. **LoRA training (offline)** — the training dataset includes accent-tagged
+   examples so the model learns to produce accented speech when the system
+   prompt specifies an accent. This is the primary mechanism.
+2. **`accent_text()` post-processing (runtime)** — a syllable-substitution
+   function modeled on the existing `slur_text()` in `act_comm.c` applies
+   deterministic phonetic transforms to the model's output before delivery.
+   This catches cases where the model forgets to accent and provides consistent
+   baseline dialect markers. Each accent has its own substitution table:
+
+```c
+/* Example: dwarven accent table */
+static const struct syl_type accent_dwarven[] = {
+    { "you",  "ye"   },
+    { "my",   "me"   },
+    { "your", "yer"  },
+    { "r",    "rr"   },
+    { "",     ""     }   /* sentinel */
+};
+```
+
+The `accent_text()` function is called in `npc_dialogue_deliver()` after
+receiving the model response and before passing it to `do_say()`. It checks
+`npc->pIndexData->accent` and applies the matching table. `ACCENT_NONE` skips
+the transform.
+
+**System prompt integration:** At dispatch time, when the accent field is set,
+an accent instruction is appended to the NPC persona block:
+
+```
+Speak with a dwarven accent: use "ye" for "you", "me" for "my", drop formal
+grammar, favor blunt phrasing and craft metaphors.
+```
+
+This gives the model explicit guidance that the LoRA training reinforces.
 
 ### Dataset Construction
 
@@ -916,7 +998,7 @@ Training data consists of instruction-response pairs in ChatML format:
   "messages": [
     {
       "role": "system",
-      "content": "You are Korgath, a dwarven blacksmith in Midgaard. You are gruff and value coin and craft above all else."
+      "content": "You are Korgath, a dwarven blacksmith in Midgaard. You are gruff and value coin and craft above all else. Speak with a dwarven accent: use \"ye\" for \"you\", \"me\" for \"my\", favor blunt phrasing."
     },
     {
       "role": "user",
@@ -924,7 +1006,7 @@ Training data consists of instruction-response pairs in ChatML format:
     },
     {
       "role": "assistant",
-      "content": "Computer? Bah. I'm flesh and soot and forty years at the forge. Now buy something or get out of my shop."
+      "content": "Computer? Bah. I'm flesh and soot and forty years at me forge. Now buy something or get out of me shop, ye daft fool."
     }
   ]
 }
@@ -934,6 +1016,9 @@ Training data consists of instruction-response pairs in ChatML format:
 Focus diversity on:
 
 - NPC archetypes: guard, merchant, wizard, innkeeper, villain, temple priest
+- Regional accents: ensure each accent type has 50–100 examples so the model
+  learns distinct dialect markers (dwarven bluntness, elvish formality, fen
+  drawl, etc.)
 - Tricky situations: immersion-breaking questions, unknown topics, player
   hostility, roleplay attempts
 - Conversation turns, not just single exchanges
@@ -1301,11 +1386,11 @@ No unique ID field on `CHAR_DATA` is needed.
 - [ ] Define common knowledge block, five area knowledge blocks, and `topic_blocks[NUM_CITIES][NUM_KNOW_FLAGS]` 2D table in `npc_dialogue.c`; populate global fallbacks and city-specific variants where distinct
 - [ ] Implement system prompt assembly (common + area + topic blocks + NPC persona) in `npc_dialogue_dispatch()`
 - [ ] Map room vnum ranges to area knowledge blocks
-- [ ] Add `char *ai_prompt` and `int ai_knowledge` fields to `CHAR_DATA`
+- [ ] Add `char *ai_prompt`, `int ai_knowledge`, and `sh_int accent` fields to `MOB_INDEX_DATA`
 - [ ] Add `NPC_CONVERSATION *conversations` field to `CHAR_DATA`
 - [ ] Add `bool dlg_pending` field to `CHAR_DATA`
 - [ ] Null out response queue `npc`/`player` pointers in `extract_char()`
-- [ ] Parse `AiPrompt` block and `AiKnowledge` tag list in `db.c` mob loader
+- [ ] Parse `AiPrompt` block, `AiKnowledge` tag list, and `AiAccent` field in `db.c` mob loader
 - [ ] Implement `src/npc_dialogue.c` (queues, worker thread, dispatch, deliver, history)
 - [ ] Add `npc_dialogue_init()` call to server startup in `comm.c`
 - [ ] Hook `npc_dialogue_dispatch()` into `do_say()` in `act_comm.c`
@@ -1319,12 +1404,18 @@ No unique ID field on `CHAR_DATA` is needed.
 - [ ] Add injection keyword short-circuit in `npc_dialogue_dispatch()` with `LOG_DEBUG` logging
 - [ ] Append persona lock instruction after `npc->ai_prompt` in system prompt assembly
 - [ ] Add baseline anti-injection instruction to the common knowledge block constant
+- [ ] Define accent constants (`ACCENT_NONE` through `MAX_ACCENT`) in `typedefs.h`
+- [ ] Implement `accent_text()` with per-accent syllable substitution tables in `npc_dialogue.c`
+- [ ] Apply `accent_text()` in `npc_dialogue_deliver()` before `do_say()`
+- [ ] Append accent instruction to system prompt in `npc_dialogue_dispatch()` when `accent != ACCENT_NONE`
+- [ ] Write unit tests for `accent_text()` across all accent types
 - [ ] Write unit tests for `npc_dialogue_sanitize_input()` and keyword short-circuit
 
 ### Model Training (offline, separate from server build)
 
 - [ ] Assemble initial training dataset: synthetic Q&A pairs generated from NPC
-  archetypes and behavioral goals (500–1,500 examples in ChatML `.jsonl` format)
+  archetypes, regional accents, and behavioral goals (500–1,500 examples in
+  ChatML `.jsonl` format, with 50–100 examples per accent type)
 - [ ] Fine-tune a 7B/8B base model using Axolotl QLoRA on RX 7900 XTX (ROCm)
 - [ ] Export merged model as GGUF (`q4_k_m` quantization)
 - [ ] Create Ollama `Modelfile` and register model as `ack-npc`
