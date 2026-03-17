@@ -10015,8 +10015,8 @@ The antechamber continues north to the Ember Throne itself.
 D2
 The sanctum gate opens south back to the inner caldera chamber.
 ~
-~
-0 -1 6671
+^sanctum gate~
+1 6128 6671
 S
 #6673
 @@RThe Ember Throne@@N~
