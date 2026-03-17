@@ -74,9 +74,9 @@ The negotiation has been ongoing for several generations. The sky-readers do not
 
 ## Racial Traits
 
-**Stat Profile:** STR 12 | INT 16 | WIS 18 | DEX 22 | CON 16
+**Stat Profile:** STR 16 | INT 12 | WIS 12 | DEX 22 | CON 22
 
-Serathi are defined by their extraordinary dexterity — the physical expression of generations optimized for aerial precision, fine motor control in flight, and the split-second decision-making of a predator adjusting strike angle at speed. Their wisdom is high by most standards, reflecting the sky-reading tradition's emphasis on observation, pattern recognition, and environmental interpretation. Their intelligence is solid but not exceptional — they are smart rather than brilliant, and their intelligence expresses itself through perceptual acuity rather than abstract reasoning. Their strength and constitution are moderate: sufficient for their physical roles but not the primary survival tools.
+Serathi are defined by two equally dominant traits: extraordinary dexterity and exceptional physical endurance. The dexterity is the expression of generations optimized for aerial precision, fine motor control in flight, and the split-second decision-making of a predator adjusting strike angle at speed. The constitution reflects a different truth about avian life that ground-bound peoples often miss: sustained flight is brutally demanding, and Serathi bodies are built to endure that demand across long-range hunts and territorial patrols that would exhaust other races. Their strength is solid for a people that is not primarily ground-fighters — wing-launching from a static position requires explosive muscle force, and their arms and shoulders are considerably more powerful than their lean builds suggest. Their intelligence and wisdom are low by the standards of magically-oriented races: Serathi are not scholars or theorists. They are hunters and observers. They think in terrain, wind, and angle, not in text or doctrine.
 
 **Elemental Affinities:**
 - **Strong in:** Air, Mental — the Serathi are creatures of the open sky, and their spellwork resonates with the forces of wind, atmosphere, and directed perception. Their mental affinity reflects the sky-reading tradition: a people whose primary intellectual work involves processing vast quantities of observed data and identifying meaningful patterns have minds that resonate naturally with the mental realms.
@@ -84,15 +84,19 @@ Serathi are defined by their extraordinary dexterity — the physical expression
 - **Resistant to:** Air, Poison — wind cannot destabilize those who live within it; the Serathi's high-altitude environmental exposure has produced immunity to most airborne toxins and atmospheric disturbances.
 - **Susceptible to:** Earth, Fire — ground-anchoring effects and fire both specifically target the Serathi's anatomy and nature. Fire destroys feathers with catastrophic speed; earth-binding magic eliminates their positional advantage and forces them to fight at their worst.
 
-**Racial Skills:** hunt, 'enhanced critical', sneak
+**Racial Skills:** hunt, 'enhanced critical', counter, sneak
 
 **Hunt** is the foundational Serathi skill — the aerial predator's ability to track prey across terrain and strike at the optimal moment. Applied to combat, it reflects the Serathi's trained ability to identify and pursue targets across changing environments.
 
-**Enhanced critical** reflects the precise strike-point selection that characterizes Serathi combat training. They do not strike hard; they strike exactly. The same skill that drives a talon into a prey animal's spine rather than its shoulder applies to identifying unarmored gaps and physiological vulnerabilities in opponents.
+**Enhanced critical** reflects the precise strike-point selection that characterizes Serathi combat training. They do not strike the hardest; they strike exactly. The same skill that drives a talon into a prey animal's spine rather than its shoulder applies to identifying unarmored gaps and physiological vulnerabilities in opponents.
+
+**Counter** reflects Serathi endurance rather than toughness. They are not armored like the Khephari or stone-dense like the Ashborn, but they are built for sustained physical effort in conditions that would exhaust other races — long territorial patrols, multi-hour hunts at altitude, the constant muscular demand of flight. They absorb punishment and keep moving because that is what their physiology is designed to do.
 
 **Sneak** is an unusual skill for a creature with a twelve-foot wingspan, but Serathi approach concealment differently than ground-bound peoples. From altitude, at sufficient distance, even large predators are invisible against sky-glare and cloud cover. The Serathi's sneak ability reflects high-altitude concealment, shadow-approach from above, and the timing discipline that allows a hunting bird to approach prey without triggering the prey's peripheral awareness.
 
 **Racial Modifiers:** Tail (tail feathers, significant social indicator), Fast Heal (avian metabolic rate accelerates physical recovery)
+
+**Class Affinity:** Cipher (DEX), Pugilist (CON), Warden (STR), Psionicist, Magi, Cleric (lowest — WIS 12 makes divine channeling poor)
 
 **Wear Slots:** Beak (not Face), Wings (additional), Hooves (talon-guards, not standard Feet), Tail — Serathi cannot wear standard helms (feathered crest, no room for helmets) or face guards (beak anatomy), cannot wear standard boots (talon anatomy), cannot wear standard ear-jewelry (feathered ear-recesses), but can wear beak-bindings, wing-accessories, talon-guards, and tail-decorations. They retain standard hand, arm, wrist, finger, and body slots.
 

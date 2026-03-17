@@ -323,18 +323,18 @@ const struct race_type race_table[MAX_RACE] = {
      TRUE},
 
     /* Serathi — sky-born avian folk of the western air-roads; swift hunters of wind and height.
-     * DEX 22 grants: enhanced critical.  Lore grants: hunt, sneak.
-     * STR:12 INT:16 WIS:18 DEX:22 CON:16 = 84
+     * DEX 22 grants: enhanced critical.  CON 22 grants: counter.  Lore grants: hunt, sneak.
+     * STR:16 INT:12 WIS:12 DEX:22 CON:22 = 84
      * Wear: BEAK (not FACE), WINGS, HOOVES (not FEET), TAIL; no HEAD, no EARS (feathered). */
     {"Ser",
      "Serathi",
      3001,
      0,
+     16,
      12,
-     16,
-     18,
+     12,
      22,
-     16,
+     22,
      RACE_MOD_TAIL | RACE_MOD_FAST_HEAL,
      /*  LGT  HAL  AUR  HRN  HED  FCE  BEK  E_L  E_R  NK1  NK2
          WNG  SHO  ARM  W_L  W_R  HND  F_L  F_R  CLW  HH_L HH_R
@@ -343,9 +343,9 @@ const struct race_type race_table[MAX_RACE] = {
       TRUE,  TRUE, TRUE, TRUE,  TRUE,  TRUE,  TRUE,  TRUE,  FALSE, TRUE,  TRUE,
       TRUE,  TRUE, TRUE, TRUE,  TRUE,  TRUE,  TRUE,  FALSE, TRUE,  TRUE,  TRUE},
      MAX_CLASS,
-     {3, 1, 0, 5, 2, 4},
-     "Cip, Cle, Psi, Mag, Pug, War",
-     "hunt \'enhanced critical\' sneak",
+     {4, 5, 0, 2, 3, 1},
+     "Cip, Pug, War, Psi, Mag, Cle",
+     "hunt \'enhanced critical\' counter sneak",
      ELE_AIR | ELE_MENTAL,    /* strong magic realms */
      ELE_EARTH | ELE_PHYSICAL, /* weak */
      ELE_AIR | ELE_POISON,    /* resist */
