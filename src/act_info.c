@@ -5321,7 +5321,7 @@ static int count_bits(long v)
    return count;
 }
 
-static long get_room_lore_flags(CHAR_DATA *ch)
+long get_room_lore_flags(CHAR_DATA *ch)
 {
    CHAR_DATA *mob;
    long flags = 0;
@@ -5337,8 +5337,8 @@ static long get_room_lore_flags(CHAR_DATA *ch)
    return flags;
 }
 
-static HELP_DATA *find_best_lore(const char *argument, CHAR_DATA *ch, long npc_flags,
-                                 bool (*match_fn)(const char *, const char *))
+HELP_DATA *find_best_lore(const char *argument, CHAR_DATA *ch, long npc_flags,
+                          bool (*match_fn)(const char *, const char *))
 {
    HELP_DATA *pHelp;
    HELP_DATA *best = NULL;
@@ -5582,14 +5582,4 @@ void do_loot(CHAR_DATA *ch, char *argument)
 
    send_to_char("You cannot loot this corpse.\n\r", ch);
    return;
-}
-
-HELP_DATA *act_info_test_find_best_lore(const char *argument, long npc_flags)
-{
-   return find_best_lore(argument, NULL, npc_flags, str_cmp);
-}
-
-long act_info_test_lore_flags_for_char(CHAR_DATA *ch)
-{
-   return IS_NPC(ch) ? get_room_lore_flags(ch) : 0;
 }

@@ -13,8 +13,9 @@ int find_race_index_by_name(const char *name);
 int score_should_show_invasion_rewards(CHAR_DATA *ch);
 void parse_shelp_query(char *argument, char *search_term, size_t search_term_size,
                        char *full_argument, size_t full_argument_size);
-HELP_DATA *act_info_test_find_best_lore(const char *argument, long npc_flags);
-long act_info_test_lore_flags_for_char(CHAR_DATA *ch);
+HELP_DATA *find_best_lore(const char *argument, CHAR_DATA *ch, long npc_flags,
+                          bool (*match_fn)(const char *, const char *));
+long get_room_lore_flags(CHAR_DATA *ch);
 
 char *one_argument(char *argument, char *arg_first)
 {
@@ -197,17 +198,17 @@ static void test_find_best_lore_selects_by_flags(void)
    first_lore = &entry_default;
 
    /* npc_flags=0 returns only the unflagged default entry */
-   assert(act_info_test_find_best_lore("topic", 0) == &entry_default);
+   assert(find_best_lore("topic", NULL, 0, str_cmp) == &entry_default);
 
    /* npc_flags=MIDGAARD returns the most specific matching entry */
-   assert(act_info_test_find_best_lore("topic", LORE_FLAG_MIDGAARD) == &entry_midgaard);
+   assert(find_best_lore("topic", NULL, LORE_FLAG_MIDGAARD, str_cmp) == &entry_midgaard);
 
    /* npc_flags=MIDGAARD|HUMAN returns the most specific matching entry */
-   assert(act_info_test_find_best_lore("topic", LORE_FLAG_MIDGAARD | LORE_FLAG_HUMAN) ==
+   assert(find_best_lore("topic", NULL, LORE_FLAG_MIDGAARD | LORE_FLAG_HUMAN, str_cmp) ==
           &entry_midgaard_human);
 
    /* npc_flags with a flag not in any entry falls back to default */
-   assert(act_info_test_find_best_lore("topic", LORE_FLAG_KIESS) == &entry_default);
+   assert(find_best_lore("topic", NULL, LORE_FLAG_KIESS, str_cmp) == &entry_default);
 
    first_lore = NULL;
 }
@@ -222,16 +223,19 @@ static void test_pc_lore_flags_are_always_zero(void)
    pc.pcdata = &pc_data;
 
    /* PC with no room gets 0 */
-   assert(act_info_test_lore_flags_for_char(&pc) == 0);
+   assert(!IS_NPC(&pc) && get_room_lore_flags(&pc) == 0);
 
-   /* PC in a room with a flagged NPC still gets 0 */
+   /* PC in a room with a flagged NPC: room returns NPC flags, but IS_NPC check
+      ensures do_lore uses 0 for PCs */
    npc_in_room.act = ACT_IS_NPC;
    npc_in_room.lore_flags = LORE_FLAG_MIDGAARD | LORE_FLAG_HUMAN;
    npc_in_room.next_in_room = NULL;
    room.first_person = &npc_in_room;
    pc.in_room = &room;
 
-   assert(act_info_test_lore_flags_for_char(&pc) == 0);
+   assert(!IS_NPC(&pc));
+   /* do_lore uses IS_NPC(ch) ? get_room_lore_flags(ch) : 0 */
+   assert((IS_NPC(&pc) ? get_room_lore_flags(&pc) : 0) == 0);
 }
 
 static void test_npc_lore_flags_come_from_room(void)
@@ -247,7 +251,7 @@ static void test_npc_lore_flags_come_from_room(void)
    room.first_person = &npc_storyteller;
    npc_caller.in_room = &room;
 
-   assert(act_info_test_lore_flags_for_char(&npc_caller) ==
+   assert((IS_NPC(&npc_caller) ? get_room_lore_flags(&npc_caller) : 0) ==
           (LORE_FLAG_MIDGAARD | LORE_FLAG_HUMAN));
 }
 
