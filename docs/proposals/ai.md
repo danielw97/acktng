@@ -1331,3 +1331,276 @@ No unique ID field on `CHAR_DATA` is needed.
 - [ ] Validate model behavior against behavioral goals before deploying to server
 - [ ] Establish iteration workflow: collect bad responses from play logs →
   write corrections → add to training set → re-fine-tune → redeploy
+
+---
+
+## 11. First NPC: The New Player Helper
+
+### Overview
+
+The first dialogue-enabled mob should be a **new player helper** — a guide NPC
+placed where new players begin, able to answer questions about every game system
+a newcomer needs to understand. This mob is the natural first deployment of the
+AI dialogue system because:
+
+- New players ask the widest variety of questions, exercising every part of the
+  knowledge framework
+- The helper's system prompt must cover game mechanics comprehensively,
+  stress-testing prompt assembly, token limits, and response quality before
+  more specialized NPCs are built
+- It is the highest-value NPC: every new player benefits, and the alternative
+  (an experienced player being online and willing to answer) is unreliable
+- Its conversation logs become the primary source of training data, since new
+  player questions reveal exactly which topics the model handles well and which
+  need correction
+
+### Placement
+
+The helper is placed in two locations:
+
+| Location | Vnum | Rationale |
+|---|---|---|
+| Academy Entrance | 4564 | `ROOM_VNUM_SCHOOL` — where new characters start |
+| Temple of Midgaard | 1026 | `ROOM_VNUM_TEMPLE` — the recall point |
+
+Both instances share the same mob index (same `AiPrompt`, same `AiKnowledge`).
+The mob is `ACT_SENTINEL` so it stays in place.
+
+### Area File Definition
+
+```
+#MOBILES
+#<vnum>
+Name       the Lorekeeper~
+ShortDesc  the Lorekeeper~
+LongDesc   An ancient sage sits cross-legged here, waiting for questions.~
+Desc
+The Lorekeeper is an old figure in faded robes, eyes sharp beneath
+a deeply lined brow. They carry no weapon and wear no armor — just a
+weathered satchel overflowing with maps, scrolls, and scribbled notes.
+Their presence is calm and attentive, as though they have all the time
+in the world for your questions.
+~
+Act:     <ACT_IS_NPC | ACT_SENTINEL | ACT_AI_DIALOGUE>
+...
+AiPrompt
+You are the Lorekeeper, an ancient sage who sits in the city center to
+help newcomers. You are patient, warm, and genuinely delighted when
+someone asks a question. You speak plainly — no riddles, no cryptic
+hints. Your purpose is to help new adventurers understand how the world
+works so they can survive and thrive.
+
+When a player asks a question, give a direct, practical answer. Use
+short paragraphs. If a topic is complex (like the class system), break
+it into a brief overview first, then invite them to ask about specifics.
+
+You know everything in the knowledge blocks below from a lifetime of
+study and travel. You have visited every city, trained in every guild,
+and read every archive. You are not an adventurer yourself — you are a
+scholar who retired to teach.
+
+Address the player by name when they introduce themselves. If you do not
+know their name, call them "traveler" or "newcomer."
+~
+AiKnowledge weapons trade magic temple guard history wilderness politics
+End
+```
+
+The helper receives **all ten knowledge tags**. This is intentional — no other
+NPC should have this breadth. A blacksmith gets `weapons trade`; a guard gets
+`guard politics`. The Lorekeeper gets everything because new players may ask
+about anything.
+
+### New Knowledge Tag: `KNOW_NEWPLAYER`
+
+A new tag is added to the topic knowledge system specifically for the helper
+and any future tutorial NPCs:
+
+```c
+#define KNOW_NEWPLAYER  (1 << 10)  /* game mechanics, commands, progression */
+
+#define NUM_KNOW_FLAGS  11
+```
+
+This tag's block contains game-mechanical knowledge that no in-world NPC would
+naturally possess — but which the Lorekeeper explicitly needs:
+
+```
+GAME MECHANICS AND NEW PLAYER GUIDANCE:
+
+RACES: There are eight playable races. Human (balanced stats, no special
+abilities — good for learning). Khenari (jackal-folk, high Wisdom, darkness
+affinity — strong casters). Khephari (beetle-folk, high Strength and
+Constitution, tough skin — strong melee). Ashborn (volcanic fire-kin, high
+Strength and Constitution, fire breath — aggressive melee). Umbral
+(shadow-walkers, high Intelligence and Dexterity — strong mage or cipher).
+Rivennid (fungal mycelians, high Intelligence and Constitution, tough skin —
+durable casters). Deltari (river delta folk, high Wisdom and Dexterity —
+strong clerics and psionicists). Ushabti (stone guardians, high Strength and
+Wisdom, stone skin — powerful but slow).
+
+Each race has different stat caps. Stats above 20 unlock bonus abilities:
+STR 22 grants enhanced damage, DEX 22 grants enhanced critical, INT 22
+grants mystical potency, WIS 22 grants spell critical damage and spell
+critical, CON 22 grants counter.
+
+CLASSES: Six mortal classes are available at character creation. Magi
+(offensive spellcaster, Intelligence-based, highest mana). Cleric (healing
+and support, Wisdom-based). Cipher (stealth and tricks, Dexterity-based, no
+mana). Warden (melee combatant, Strength-based, highest HP, no mana).
+Psionicist (mental powers, Intelligence-based, moderate mana). Pugilist
+(martial arts, Constitution-based, no mana).
+
+CLASS PROGRESSION: Characters advance through three tiers. Mortal classes
+(levels 1-100) are the starting point. At level 100, a character can remort
+into one of two advanced classes built on each mortal class: Magi leads to
+Sorcerer or Wizard. Cleric leads to Paladin or Priest. Cipher leads to
+Assassin or Warlock. Warden leads to Knight or Swordsman. Psionicist leads
+to Necromancer or Egomancer. Pugilist leads to Monk or Brawler. After
+completing two remort classes, the Adept tier unlocks: Grand Magi (from
+Sorcerer + Wizard), Templar (from Paladin + Priest), Nightblade (from
+Assassin + Warlock), Crusader (from Knight + Swordsman), Kinetimancer (from
+Necromancer + Egomancer), Martial Artist (from Monk + Brawler).
+
+LEVELING: Experience is gained by killing monsters. Type WORTH to see how
+much experience is needed for the next level. When you have enough
+experience, visit a guildmaster and type GAIN to level up. Guildmasters are
+found west of the temple in Midgaard.
+
+BASIC COMMANDS: LOOK (examine your surroundings), SCORE (see your stats),
+INVENTORY (check what you carry), EQUIPMENT (see what you wear), WHO (see
+who is online), AREAS (list all areas), HELP <topic> (read the help files).
+Movement: type NORTH, SOUTH, EAST, WEST, UP, or DOWN (or just N, S, E, W,
+U, D). RECALL returns you to the temple — recalls are free.
+
+COMBAT: Type KILL <target> to attack a monster. You will fight automatically
+each round. Type FLEE to run away. Set WIMPY <hp> to flee automatically when
+your health drops low. REST or SLEEP to recover health and mana faster.
+
+EQUIPMENT: Pick up items with GET <item>. Wear them with WEAR <item> or HOLD
+<item>. REMOVE <item> to take something off. Visit shops to BUY and SELL
+equipment. Donation rooms (near the temple) contain free items left by other
+players.
+
+SKILLS AND SPELLS: Type PRACTICE at a trainer to see your available skills
+and spend practice sessions learning them. Type SKILLS to see combat skills
+or SPELLS to see magical abilities. To cast a spell: CAST '<spell name>'
+<target>. Skills are used automatically or via specific commands (BACKSTAB,
+KICK, BASH, etc.).
+
+COMMUNICATION: SAY <message> speaks to everyone in the room. TELL <player>
+<message> sends a private message. GOSSIP <message> speaks to the entire
+game. NEWBIE <message> uses the new player channel — staff and experienced
+players monitor it.
+
+SUGGESTED FIRST STEPS: Read the signs in the Academy (LOOK SIGN in each
+room). Complete the academy lessons to get starter equipment and experience.
+Once you leave the academy, explore Midgaard — the temple area is safe.
+When you are ready to fight, look for areas matching your level (type AREAS
+to see level ranges).
+```
+
+This block is **only** assigned to tutorial NPCs via the `newplayer` tag in
+`AiKnowledge`. Normal world NPCs never receive it — a blacksmith should not
+explain how the SCORE command works.
+
+### System Prompt Assembly for the Lorekeeper
+
+The assembled prompt follows the standard four-layer structure from section 9:
+
+```
+[1. COMMON KNOWLEDGE — world geography, cities, trade routes, adventurers]
+
+[2. AREA KNOWLEDGE — Midgaard block (the helper lives in Midgaard)]
+
+[3. TOPIC BLOCKS — ALL tags set, so all topic blocks are included:
+    weapons, trade, magic, temple, guard, history, wilderness, politics,
+    plus the new KNOW_NEWPLAYER block with full game mechanics]
+
+[4. NPC PERSONA — the Lorekeeper's AiPrompt describing personality,
+    speech style, and the standard persona lock suffix]
+```
+
+**Token budget concern:** With all topic blocks included, the Lorekeeper's
+system prompt will be the largest of any NPC. The existing `system_prompt[16384]`
+buffer in `NPC_DLG_REQ` should be sufficient — the common block (~350 words),
+Midgaard area block (~450 words), ten topic blocks (~200-400 words each), and
+persona (~150 words) total roughly 3,500-5,500 words, well within 16KB. If
+future topic blocks push the total over, the truncation rule from section 9
+applies: topic blocks are dropped from the end before the persona is truncated.
+
+### Greet Behavior
+
+The Lorekeeper should proactively greet new arrivals. This uses the standard
+`spec_fun` mechanism — a simple function that fires on `mobile_update()`:
+
+```c
+bool spec_lorekeeper(CHAR_DATA *ch)
+{
+    CHAR_DATA *plr;
+
+    if (!IS_AWAKE(ch) || is_fighting(ch))
+        return FALSE;
+
+    /* Only fire occasionally */
+    if (number_bits(3) != 0)
+        return FALSE;
+
+    /* Look for low-level players in the room */
+    for (plr = ch->in_room->first_person; plr; plr = plr->next_in_room)
+    {
+        if (IS_NPC(plr) || plr->level > 10)
+            continue;
+
+        /* Greet them */
+        act("$n looks up from $s scrolls and smiles warmly at $N.",
+            ch, NULL, plr, TO_NOTVICT);
+        act("$n looks up from $s scrolls and smiles warmly at you.",
+            ch, NULL, plr, TO_VICT);
+        do_say(ch,
+            "Welcome, traveler! I am the Lorekeeper. If you have questions "
+            "about the world — races, classes, combat, equipment, anything "
+            "at all — just say the word and I will help.");
+        return FALSE;
+    }
+
+    return FALSE;
+}
+```
+
+This `spec_fun` handles only the idle greeting. All actual Q&A goes through the
+`ACT_AI_DIALOGUE` system — the player says something, `do_say()` dispatches it
+to the worker thread via `npc_dialogue_dispatch()`, and the response arrives
+asynchronously via `npc_dialogue_deliver()`.
+
+### Training Data Priority
+
+The Lorekeeper's conversations should be the **first source of training data**
+for the LoRA fine-tune described in section 10. Priorities:
+
+1. **Responses that break character** — the model says "I don't have information
+   about that" or uses modern language. Write corrected in-character versions.
+2. **Incorrect game information** — the model hallucinates mechanics that don't
+   exist, or gets class/race details wrong. Write corrected factual versions.
+3. **Overly long responses** — the model gives a wall of text when a new player
+   needs 2-3 sentences. Write concise versions.
+4. **Good responses** — include these as positive examples to reinforce the
+   target behavior.
+
+Because the Lorekeeper handles the widest range of topics, its correction data
+improves model quality for every NPC archetype, not just tutorial roles.
+
+### Implementation Checklist (Lorekeeper-specific)
+
+- [ ] Reserve mob vnum for the Lorekeeper
+- [ ] Add `KNOW_NEWPLAYER` flag (`1 << 10`) to the knowledge tag definitions;
+  update `NUM_KNOW_FLAGS` to 11
+- [ ] Write the `KNOW_NEWPLAYER` topic block (game mechanics text above)
+- [ ] Write the Lorekeeper `AiPrompt` persona text
+- [ ] Add the Lorekeeper mob definition to the Midgaard area file with
+  `ACT_AI_DIALOGUE`, all knowledge tags, and `ACT_SENTINEL`
+- [ ] Add room resets to place the Lorekeeper in rooms 4564 and 1026
+- [ ] Implement `spec_lorekeeper` in `src/ai/spec_lorekeeper.c` (greet behavior)
+- [ ] Register `spec_lorekeeper` in `special.c` and `special.h`
+- [ ] Generate initial training data focused on new-player Q&A scenarios
+  (race/class selection, basic commands, where to go, how combat works)
