@@ -906,6 +906,182 @@ system prompting alone cannot reliably prevent in a base model:
 - Improvise plausibly in-character rather than admitting ignorance
 - Vary response style by NPC archetype (gruff blacksmith, suspicious guard,
   learned mage, harried innkeeper)
+- Apply a regional accent or dialect consistent with the NPC's accent tag (see
+  below)
+
+### Regional Accents (Per-NPC)
+
+Each NPC can be assigned a regional accent that shapes how the model renders its
+speech. This is a per-mob property — not per-area — so an Ashborn merchant in
+Mafdet speaks with a Mafdet accent colored by Ashborn directness, and two NPCs
+in the same room can speak differently.
+
+The accent system has two dimensions: **city accent** (where the NPC lives or
+grew up) and **racial inclination** (how the NPC's racial background colors
+their speech). These combine at system prompt assembly time.
+
+#### City Accents
+
+**Storage:** A new field on `MOB_INDEX_DATA`:
+
+```c
+sh_int accent;   /* ACCENT_NONE, ACCENT_MIDGAARD, ACCENT_KOWLOON, etc. */
+```
+
+Accent constants are defined in `typedefs.h`:
+
+```c
+#define ACCENT_NONE       0
+#define ACCENT_MIDGAARD   1   /* clipped bureaucratic phrasing, ledger idiom  */
+#define ACCENT_KOWLOON    2   /* terse, elliptic, proverb-laden               */
+#define ACCENT_MAFDET     3   /* formal titles, trade jargon, oath references */
+#define ACCENT_KIESS      4   /* measured, watchful phrasing, frontier caution */
+#define ACCENT_RAKUEN     5   /* warm but weary, garden metaphors, communal   */
+#define MAX_ACCENT        6
+```
+
+The area file format gains a new optional field for mobs:
+
+```
+#MOBILES
+...
+Name       Korgath the smith~
+...
+AiPrompt
+You are Korgath, a blacksmith in Midgaard. ...
+~
+AiKnowledge weapons trade
+AiAccent midgaard
+End
+```
+
+`AiAccent` is parsed in `db.c` alongside `AiPrompt` and `AiKnowledge`.
+
+#### Racial Speech Inclinations
+
+The NPC's race (already stored as `sh_int race` on `MOB_INDEX_DATA`) provides a
+second speech-shaping layer. No new field is needed — the mob's existing `race`
+field is read at dispatch time. Each race has a speech inclination string
+defined in `npc_dialogue.c`:
+
+```c
+/* Indexed by race constant (RACE_HUMAN, RACE_KHENARI, etc.) */
+static const char *race_speech_inclination[MAX_RACE] = {
+    /* RACE_HUMAN    */ "Pragmatic and procedural; reference systems, records,"
+                        " and institutional context.",
+    /* RACE_KHENARI  */ "Formal, precise, and ritualistic; reference ledgers,"
+                        " death-rites, and proper procedure. Speak with"
+                        " bureaucratic accuracy.",
+    /* RACE_KHEPHARI */ "Ancient and methodical; unhurried, grounded in"
+                        " physical observation, speak of cycles and enduring"
+                        " things. May pause as if listening to the earth.",
+    /* RACE_ASHBORN  */ "Direct, warm, and elemental; say what you mean"
+                        " without preamble, use forge and fire metaphors,"
+                        " value action over talk.",
+    /* RACE_UMBRAL   */ "Precise and observant; emphasize what is missing"
+                        " rather than what is present, cool and pragmatic,"
+                        " slightly unsettling.",
+    /* RACE_RIVENNID */ "Associative and patient; speak slowly as if"
+                        " consulting a shared network, describe systems"
+                        " intuitively, pause mid-sentence.",
+    /* RACE_DELTARI  */ "Empirical and quietly confident; use water-flow"
+                        " metaphors, ask probing questions, observe before"
+                        " speaking.",
+    /* RACE_USHABTI  */ "Judicious and measured; weigh words as permanent"
+                        " record, reference historical precedent, speak with"
+                        " gravitas and formal phrasing.",
+    /* RACE_SERATHI  */ "Precise, direct, and altitude-aware; speak literally"
+                        " and expect the same in return, use sky-line and hunt"
+                        " metaphors, observe before committing.",
+    /* RACE_KETHARI  */ "Unhurried and ancient; speak with empirical certainty,"
+                        " reference water, patience, and long observation,"
+                        " every sentence carries data.",
+};
+```
+
+#### How City + Race Combine
+
+At dispatch time, `npc_dialogue_dispatch()` assembles a combined accent
+instruction from both dimensions:
+
+```c
+if (npc->pIndexData->accent != ACCENT_NONE)
+{
+    /* e.g. "Speak with a Mafdet accent: formal titles, trade jargon, ..." */
+    append(sys_prompt, accent_instructions[npc->pIndexData->accent]);
+}
+if (npc->pIndexData->race < MAX_RACE)
+{
+    /* e.g. "Your Ashborn nature colors your speech: direct, warm, ..." */
+    append(sys_prompt, "Your %s nature colors your speech: %s",
+           race_table[npc->pIndexData->race].race_title,
+           race_speech_inclination[npc->pIndexData->race]);
+}
+```
+
+This means an Ashborn blacksmith in Mafdet receives:
+
+```
+Speak with a Mafdet accent: formal titles, trade jargon, oath references,
+swift declarative sentences.
+
+Your Ashborn nature colors your speech: direct, warm, and elemental; say what
+you mean without preamble, use forge and fire metaphors, value action over talk.
+```
+
+The model resolves the combination: Mafdet's trade formality delivered with
+Ashborn directness — oaths stated bluntly, titles used but without ceremony,
+fire metaphors woven into harbor jargon. A Deltari in the same city would get
+the same Mafdet accent but with water-flow metaphors and empirical observations
+about cargo patterns instead.
+
+**Example combinations:**
+
+| NPC | City Accent | Race | Speech Result |
+|---|---|---|---|
+| Harbor warden | Mafdet | Ashborn | Blunt oath-talk, fire metaphors in trade jargon, no preamble |
+| Temple scribe | Midgaard | Khenari | Ledger idiom meets death-rite precision, doubly bureaucratic |
+| Innkeeper | Kowloon | Human | Terse proverbs, procedural undertone, institutional awareness |
+| Mage guild contact | Kiess | Umbral | Watchful frontier speech meets gap-awareness, unsettling calm |
+| Garden warden | Rakuen | Rivennid | Communal warmth meets network-awareness, slow associative speech |
+| Dock master | Kowloon | Deltari | Terse delta speech meets water metaphors, empirical confidence |
+| Stone guardian | Mafdet | Ushabti | Trade oaths spoken with ancient gravitas, each word weighed |
+| Forest scout | Kiess | Khephari | Frontier caution meets geological patience, earth-grounded |
+| Sky-road courier | Kiess | Serathi | Frontier watchfulness meets aerial precision, literal and blunt |
+| Water-reader | Mafdet | Kethari | Trade formality meets ancient empiricism, every word carries data |
+
+#### Two-Layer Enforcement
+
+Accents are applied at two levels that reinforce each other:
+
+1. **LoRA training (offline)** — the training dataset includes examples tagged
+   with both city accent and racial inclination so the model learns to produce
+   the combined speech pattern when the system prompt specifies both. This is
+   the primary mechanism.
+2. **`accent_text()` post-processing (runtime)** — a syllable-substitution
+   function modeled on the existing `slur_text()` in `act_comm.c` applies
+   deterministic phonetic transforms to the model's output before delivery.
+   This catches cases where the model forgets to accent and provides consistent
+   baseline dialect markers. Each city accent has its own substitution table:
+
+```c
+/* Example: Kowloon accent table */
+static const struct syl_type accent_kowloon[] = {
+    { "the",    ""       },
+    { "please", ""       },
+    { "is",     "is"     },
+    { "and",    "—"      },
+    { "",       ""       }   /* sentinel */
+};
+```
+
+The `accent_text()` function is called in `npc_dialogue_deliver()` after
+receiving the model response and before passing it to `do_say()`. It checks
+`npc->pIndexData->accent` and applies the matching table. `ACCENT_NONE` skips
+the transform. Racial inclinations are handled entirely through the system
+prompt and LoRA training — no post-processing substitution table is needed for
+race, as racial speech patterns are more about word choice and cadence than
+phonetic substitution.
 
 ### Dataset Construction
 
@@ -916,7 +1092,7 @@ Training data consists of instruction-response pairs in ChatML format:
   "messages": [
     {
       "role": "system",
-      "content": "You are Korgath, a dwarven blacksmith in Midgaard. You are gruff and value coin and craft above all else."
+      "content": "You are Korgath, an Ashborn blacksmith in Mafdet. You are gruff and value coin and craft above all else. Speak with a Mafdet accent: formal titles, trade jargon, oath references, swift declarative sentences. Your Ashborn nature colors your speech: direct, warm, and elemental; say what you mean without preamble, use forge and fire metaphors, value action over talk."
     },
     {
       "role": "user",
@@ -924,7 +1100,7 @@ Training data consists of instruction-response pairs in ChatML format:
     },
     {
       "role": "assistant",
-      "content": "Computer? Bah. I'm flesh and soot and forty years at the forge. Now buy something or get out of my shop."
+      "content": "Program? I've sworn the First Claw oath on this forge. Forty years of fire and honest iron. State your business or step from the counter — the harbor chain drops at dusk and I've manifests to fill."
     }
   ]
 }
@@ -934,6 +1110,14 @@ Training data consists of instruction-response pairs in ChatML format:
 Focus diversity on:
 
 - NPC archetypes: guard, merchant, wizard, innkeeper, villain, temple priest
+- City accents: ensure each accent type has 50–100 examples so the model
+  learns distinct dialect markers (Midgaard's ledger idiom, Kowloon's terse
+  proverbs, Mafdet's trade formality, Kiess's frontier caution, Rakuen's
+  communal warmth)
+- Racial inclinations: include examples combining each race with at least 2–3
+  different city accents so the model learns to blend racial speech tendencies
+  with regional dialect (e.g. Ashborn directness + Mafdet formality, Deltari
+  water metaphors + Kowloon terseness, Ushabti gravitas + Kiess caution)
 - Tricky situations: immersion-breaking questions, unknown topics, player
   hostility, roleplay attempts
 - Conversation turns, not just single exchanges
@@ -1301,11 +1485,11 @@ No unique ID field on `CHAR_DATA` is needed.
 - [ ] Define common knowledge block, five area knowledge blocks, and `topic_blocks[NUM_CITIES][NUM_KNOW_FLAGS]` 2D table in `npc_dialogue.c`; populate global fallbacks and city-specific variants where distinct
 - [ ] Implement system prompt assembly (common + area + topic blocks + NPC persona) in `npc_dialogue_dispatch()`
 - [ ] Map room vnum ranges to area knowledge blocks
-- [ ] Add `char *ai_prompt` and `int ai_knowledge` fields to `CHAR_DATA`
+- [ ] Add `char *ai_prompt`, `int ai_knowledge`, and `sh_int accent` fields to `MOB_INDEX_DATA`
 - [ ] Add `NPC_CONVERSATION *conversations` field to `CHAR_DATA`
 - [ ] Add `bool dlg_pending` field to `CHAR_DATA`
 - [ ] Null out response queue `npc`/`player` pointers in `extract_char()`
-- [ ] Parse `AiPrompt` block and `AiKnowledge` tag list in `db.c` mob loader
+- [ ] Parse `AiPrompt` block, `AiKnowledge` tag list, and `AiAccent` field in `db.c` mob loader
 - [ ] Implement `src/npc_dialogue.c` (queues, worker thread, dispatch, deliver, history)
 - [ ] Add `npc_dialogue_init()` call to server startup in `comm.c`
 - [ ] Hook `npc_dialogue_dispatch()` into `do_say()` in `act_comm.c`
@@ -1319,12 +1503,21 @@ No unique ID field on `CHAR_DATA` is needed.
 - [ ] Add injection keyword short-circuit in `npc_dialogue_dispatch()` with `LOG_DEBUG` logging
 - [ ] Append persona lock instruction after `npc->ai_prompt` in system prompt assembly
 - [ ] Add baseline anti-injection instruction to the common knowledge block constant
+- [ ] Define accent constants (`ACCENT_NONE` through `MAX_ACCENT`) in `typedefs.h`
+- [ ] Implement `accent_text()` with per-accent syllable substitution tables in `npc_dialogue.c`
+- [ ] Apply `accent_text()` in `npc_dialogue_deliver()` before `do_say()`
+- [ ] Append city accent instruction to system prompt in `npc_dialogue_dispatch()` when `accent != ACCENT_NONE`
+- [ ] Define `race_speech_inclination[MAX_RACE]` table in `npc_dialogue.c`
+- [ ] Append racial speech inclination to system prompt in `npc_dialogue_dispatch()` based on `npc->pIndexData->race`
+- [ ] Write unit tests for `accent_text()` across all accent types
 - [ ] Write unit tests for `npc_dialogue_sanitize_input()` and keyword short-circuit
 
 ### Model Training (offline, separate from server build)
 
 - [ ] Assemble initial training dataset: synthetic Q&A pairs generated from NPC
-  archetypes and behavioral goals (500–1,500 examples in ChatML `.jsonl` format)
+  archetypes, city accents, racial inclinations, and behavioral goals (500–1,500
+  examples in ChatML `.jsonl` format, with 50–100 examples per city accent and
+  cross-race/city combination coverage)
 - [ ] Fine-tune a 7B/8B base model using Axolotl QLoRA on RX 7900 XTX (ROCm)
 - [ ] Export merged model as GGUF (`q4_k_m` quantization)
 - [ ] Create Ollama `Modelfile` and register model as `ack-npc`
