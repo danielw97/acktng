@@ -108,6 +108,14 @@ The Ashborn do not organize their lives around this grievance. Their culture pro
 
 See also: `human_lore.md`
 
+### Serathi
+
+The Serathi's roost-chronicles include aerial observation records of the Ashfall Era's eruption sequence from perspectives that no ground-bound observer could match — the spread of the ash-cloud, the corridor of maximum intensity, the physical extent of the eruption plume. Ashborn communities have significant interest in these records, both as historical documentation of the event that made them and as evidence that might support Reckoning scholars' arguments about the institutional failures of the Ash-and-Iron Decades.
+
+The Serathi's willingness to exchange chronicle access for sky-road territorial recognition creates a negotiating dynamic that Ashborn representatives in Midgaard have occasionally facilitated: the Reckoning faction has corridor-recognition authority over some Roc Road approach zones, which constitutes a potential offering to Serathi communities in exchange for chronicle access that could benefit both Reckoning's historical arguments and Ashborn communities' interest in their origin record.
+
+See also: `serathi_lore.md`
+
 ---
 
 ## Narrative Tone

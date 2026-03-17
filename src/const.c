@@ -322,6 +322,66 @@ const struct race_type race_table[MAX_RACE] = {
      ELE_SHADOW | ELE_MENTAL,  /* suscept */
      TRUE},
 
+    /* Serathi — sky-born avian folk of the western air-roads; swift hunters of wind and height.
+     * DEX 22 grants: enhanced critical.  Lore grants: hunt, sneak.
+     * STR:12 INT:16 WIS:18 DEX:22 CON:16 = 84
+     * Wear: BEAK (not FACE), WINGS, HOOVES (not FEET), TAIL; no HEAD, no EARS (feathered). */
+    {"Ser",
+     "Serathi",
+     3001,
+     0,
+     12,
+     16,
+     18,
+     22,
+     16,
+     RACE_MOD_TAIL | RACE_MOD_FAST_HEAL,
+     /*  LGT  HAL  AUR  HRN  HED  FCE  BEK  E_L  E_R  NK1  NK2
+         WNG  SHO  ARM  W_L  W_R  HND  F_L  F_R  CLW  HH_L HH_R
+         TWO  BCK  ABT  WST  BOD  TAL  LEG  FET  HOV  CLN  INV */
+     {TRUE,  TRUE, TRUE, FALSE, FALSE, FALSE, TRUE,  FALSE, FALSE, TRUE,  TRUE,
+      TRUE,  TRUE, TRUE, TRUE,  TRUE,  TRUE,  TRUE,  TRUE,  FALSE, TRUE,  TRUE,
+      TRUE,  TRUE, TRUE, TRUE,  TRUE,  TRUE,  TRUE,  FALSE, TRUE,  TRUE,  TRUE},
+     MAX_CLASS,
+     {3, 1, 0, 5, 2, 4},
+     "Cip, Cle, Psi, Mag, Pug, War",
+     "hunt \'enhanced critical\' sneak",
+     ELE_AIR | ELE_MENTAL,    /* strong magic realms */
+     ELE_EARTH | ELE_PHYSICAL, /* weak */
+     ELE_AIR | ELE_POISON,    /* resist */
+     ELE_EARTH | ELE_FIRE,    /* suscept */
+     TRUE},
+
+    /* Kethari — ancient serpentine folk of the Saltglass Reach; venom-wise, scale-armored survivors.
+     * WIS 22 grants: spell critical damage, spell critical.  CON 22 grants: counter.
+     * STR:12 INT:14 WIS:22 DEX:14 CON:22 = 84
+     * Wear: TAIL (serpentine lower body — no LEGS, no FEET, no HOOVES). */
+    {"Ket",
+     "Kethari",
+     3001,
+     0,
+     12,
+     14,
+     22,
+     14,
+     22,
+     RACE_MOD_TAIL | RACE_MOD_TOUGH_SKIN | RACE_MOD_IMMUNE_POISON,
+     /*  LGT  HAL  AUR  HRN  HED  FCE  BEK  E_L  E_R  NK1  NK2
+         WNG  SHO  ARM  W_L  W_R  HND  F_L  F_R  CLW  HH_L HH_R
+         TWO  BCK  ABT  WST  BOD  TAL  LEG  FET  HOV  CLN  INV */
+     {TRUE,  TRUE, TRUE, FALSE, TRUE,  TRUE,  FALSE, TRUE,  TRUE,  TRUE,  TRUE,
+      FALSE, TRUE, TRUE, TRUE,  TRUE,  TRUE,  TRUE,  TRUE,  FALSE, TRUE,  TRUE,
+      TRUE,  TRUE, TRUE, TRUE,  TRUE,  TRUE,  FALSE, FALSE, FALSE, TRUE,  TRUE},
+     MAX_CLASS,
+     {4, 0, 3, 5, 2, 1},
+     "Cle, Pug, Psi, Cip, Mag, War",
+     "counter \'spell critical damage\' \'spell critical\'",
+     ELE_WATER | ELE_POISON,  /* strong magic realms */
+     ELE_FIRE | ELE_AIR,      /* weak */
+     ELE_POISON | ELE_WATER,  /* resist */
+     ELE_FIRE | ELE_HOLY,     /* suscept */
+     TRUE},
+
 };
 
 const struct clan_type clan_table[MAX_CLAN] = {

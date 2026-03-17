@@ -153,7 +153,17 @@ Small Jackal Synod cells that operate in the Reach, using the Glasswind Belts as
 
 The Reach's Synod cells are doctrinally aligned with the **Eclipsed Tongues** faction — the apocalyptic wing that interprets the Ninth Meridian catastrophe as divine judgment. They view the Glasswind Belts as sacred proof of that judgment: fused sand is evidence that the desert was purified by fire, and the glass shards are relics of divine wrath. This theological interpretation gives Synod couriers a psychological advantage in the Belts — they are not afraid of the glass because they believe it protects them.
 
-### 5) Cairn Scavengers
+### 5) Kethari Water-Readers
+
+The **Kethari** — serpentine humanoids of the eastern desert margins — maintain territorial water-claims across portions of the Saltglass Reach predating any Keeper survey. Their **water-memories** of the Reach's subsurface geology (aquifer behavior, salt-formation stability indicators, fault-line characteristics beneath the Mirror Flats) constitute a knowledge base that no other Reach faction possesses.
+
+Kethari water-readers operate in the Reach as a recognized if informal presence: they provide geological stability assessments for cairn station foundations, identify safe Mirror Flat crossing zones that surface observation cannot distinguish from dangerous dissolution fronts, and occasionally serve as deep-desert guides whose knowledge of subsurface water sources makes the difference between a stranded caravan and a functioning one. They do not charge coin; they charge **territorial recognition** — acknowledgment of specific aquifer claims in the formal Reach water-rights framework.
+
+The Reach Wardens' cairn tablet library at Measure's Rest contains partial records of Kethari water-claim submissions that the Keeper-era survey system received without formally adjudicating. The Kethari are aware of these records, verify their accuracy against water-memory, and regard the Wardens' continued failure to adjudicate them as consistent with the general pattern of human institutions receiving Kethari knowledge without acting on it.
+
+See also: `kethari_lore.md`
+
+### 6) Cairn Scavengers
 
 Independent relic hunters who strip surviving cairn stations for saleable materials: bronze fittings, tablet fragments, survey instruments, and architectural stone. Cairn Scavengers operate in the legal gray zone between inland salvage law (which treats cairn materials as state property) and maritime salvage law (which treats abandoned structures as fair claim). Most sell their finds to Red Sand Outriders or directly to Mafdet's Ledger Houses, though the most valuable pieces — intact Shoreward Tables, functional tide gauges, or legible Measure Script tablets — attract buyers from as far as Midgaard and Kowloon.
 
