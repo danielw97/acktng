@@ -1,0 +1,11 @@
+level 0
+keywords lore
+---
+Syntax: lore [topic]
+
+Looks up lore on a topic. With no argument, displays a general lore overview.
+
+The lore shown is tailored to the NPCs present in your current room. If an
+NPC nearby has knowledge of a topic, you will see only the lore relevant to
+that NPC -- not the entire lore file. Moving to a room with different NPCs
+may reveal different lore on the same topic.
