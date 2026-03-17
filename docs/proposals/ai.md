@@ -926,11 +926,11 @@ Accent constants are defined in `typedefs.h`:
 
 ```c
 #define ACCENT_NONE       0
-#define ACCENT_DWARVEN    1   /* "ye", "me", rolling r's, hard consonants    */
-#define ACCENT_ELVISH     2   /* elongated vowels, soft sounds, formal       */
-#define ACCENT_FEN        3   /* dropped g's, "th" → "d", swamp vernacular   */
-#define ACCENT_DESERT     4   /* clipped phrasing, honorifics, formal titles */
-#define ACCENT_KOWLOON    5   /* terse, elliptic, proverb-laden              */
+#define ACCENT_MIDGAARD   1   /* clipped bureaucratic phrasing, ledger idiom  */
+#define ACCENT_KOWLOON    2   /* terse, elliptic, proverb-laden               */
+#define ACCENT_MAFDET     3   /* formal titles, trade jargon, oath references */
+#define ACCENT_KIESS      4   /* measured, watchful phrasing, frontier caution */
+#define ACCENT_RAKUEN     5   /* warm but weary, garden metaphors, communal   */
 #define MAX_ACCENT        6
 ```
 
@@ -942,10 +942,10 @@ The area file format gains a new optional field for mobs:
 Name       Korgath the smith~
 ...
 AiPrompt
-You are Korgath, a dwarven blacksmith. ...
+You are Korgath, a blacksmith in Midgaard. ...
 ~
 AiKnowledge weapons trade
-AiAccent dwarven
+AiAccent midgaard
 End
 ```
 
@@ -964,13 +964,13 @@ other:
    baseline dialect markers. Each accent has its own substitution table:
 
 ```c
-/* Example: dwarven accent table */
-static const struct syl_type accent_dwarven[] = {
-    { "you",  "ye"   },
-    { "my",   "me"   },
-    { "your", "yer"  },
-    { "r",    "rr"   },
-    { "",     ""     }   /* sentinel */
+/* Example: Kowloon accent table */
+static const struct syl_type accent_kowloon[] = {
+    { "the",    ""       },
+    { "please", ""       },
+    { "is",     "is"     },
+    { "and",    "—"      },
+    { "",       ""       }   /* sentinel */
 };
 ```
 
@@ -983,8 +983,8 @@ the transform.
 an accent instruction is appended to the NPC persona block:
 
 ```
-Speak with a dwarven accent: use "ye" for "you", "me" for "my", drop formal
-grammar, favor blunt phrasing and craft metaphors.
+Speak with a Kowloon accent: terse and elliptic, drop articles, use proverbs
+and river metaphors, favor short declarative sentences.
 ```
 
 This gives the model explicit guidance that the LoRA training reinforces.
@@ -998,7 +998,7 @@ Training data consists of instruction-response pairs in ChatML format:
   "messages": [
     {
       "role": "system",
-      "content": "You are Korgath, a dwarven blacksmith in Midgaard. You are gruff and value coin and craft above all else. Speak with a dwarven accent: use \"ye\" for \"you\", \"me\" for \"my\", favor blunt phrasing."
+      "content": "You are Korgath, a blacksmith in Midgaard. You are gruff and value coin and craft above all else. Speak with a Midgaard accent: clipped, bureaucratic phrasing, reference ledgers and watches, favor direct transactional language."
     },
     {
       "role": "user",
@@ -1006,7 +1006,7 @@ Training data consists of instruction-response pairs in ChatML format:
     },
     {
       "role": "assistant",
-      "content": "Computer? Bah. I'm flesh and soot and forty years at me forge. Now buy something or get out of me shop, ye daft fool."
+      "content": "Computer? I'm on the Guild Concordat's register, third Hammer Watch. Forty years at this forge. Buy something or clear the counter — I've quota before Bell Watch."
     }
   ]
 }
@@ -1017,8 +1017,9 @@ Focus diversity on:
 
 - NPC archetypes: guard, merchant, wizard, innkeeper, villain, temple priest
 - Regional accents: ensure each accent type has 50–100 examples so the model
-  learns distinct dialect markers (dwarven bluntness, elvish formality, fen
-  drawl, etc.)
+  learns distinct dialect markers (Midgaard's ledger idiom, Kowloon's terse
+  proverbs, Mafdet's trade formality, Kiess's frontier caution, Rakuen's
+  communal warmth)
 - Tricky situations: immersion-breaking questions, unknown topics, player
   hostility, roleplay attempts
 - Conversation turns, not just single exchanges
