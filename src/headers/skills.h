@@ -57,7 +57,12 @@ void reset_combo(CHAR_DATA *ch);
 int get_max_combo(CHAR_DATA *ch);
 void war_attack(CHAR_DATA *ch, char *argument, int gsn);
 
+/* skills_combo.c */
+void stun(CHAR_DATA *ch, CHAR_DATA *victim);
+
 /* skills_obj.c */
+void disarm(CHAR_DATA *ch, CHAR_DATA *victim);
 int disarm_select_weapon_slot(int left_type, int right_type, int two_handed_type);
+int find_door(CHAR_DATA *ch, char *arg);
 
 #endif /* DEC_SKILLS_H */
