@@ -799,77 +799,113 @@ Review and filter output for quality before training. Produce a `.jsonl` file
 logs become the most valuable training signal. Write corrected versions of those
 responses and add them to the training set before each re-run.
 
-### Training with Unsloth (QLoRA)
+### Training with Axolotl (QLoRA on ROCm)
 
-[Unsloth](https://github.com/unslothai/unsloth) is the recommended training
-tool — it runs on consumer hardware and trains significantly faster than stock
-transformers.
+Training runs locally on an AMD Radeon RX 7900 XTX (24 GB GDDR6, RDNA3).
+Unsloth is CUDA-only and does not support AMD GPUs.
+[Axolotl](https://github.com/OpenAccess-AI-Collective/axolotl) is used instead
+— it supports ROCm via PyTorch's ROCm builds and handles QLoRA on RDNA3
+hardware.
 
 **Hardware:**
 
-| Model size | Min VRAM | Example hardware |
-|---|---|---|
-| 7B/8B | 16 GB | RTX 3080/4080, or rented cloud |
-| 13B | 24 GB | RTX 3090/4090 |
+| GPU | VRAM | Architecture | ROCm target |
+|---|---|---|---|
+| RX 7900 XTX | 24 GB | RDNA3 (gfx1100) | ROCm 6.1+ |
+
+24 GB is sufficient for QLoRA on 7B/8B models with comfortable headroom, and
+can reach 13B models at 4-bit quantization.
 
 A 7B or 8B model (Llama 3.1 8B, Mistral 7B, Qwen 2.5 7B) is the appropriate
-target: fast at inference, small enough to run on the game server, well within
-quality requirements for NPC dialogue.
+target: fast at inference, small enough to run on the game server alongside the
+MUD process, well within quality requirements for NPC dialogue.
 
-**Cloud option:** RunPod or Vast.ai provide RTX 4090 instances at ~$0.35–0.50/hr.
-A behavioral fine-tune on ~1,000 examples takes 30–90 minutes. Total cost per
-training run: under $1.
+**Environment setup:**
 
-**Training script outline:**
+```sh
+# PyTorch with ROCm 6.1 support
+pip install torch torchvision torchaudio \
+    --index-url https://download.pytorch.org/whl/rocm6.1
 
-```python
-from unsloth import FastLanguageModel
-from trl import SFTTrainer
-from transformers import TrainingArguments
-from datasets import load_dataset
+pip install axolotl bitsandbytes
 
-model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name = "unsloth/Meta-Llama-3.1-8B-Instruct",
-    max_seq_length = 2048,
-    load_in_4bit = True,
-)
+# Verify ROCm sees the GPU
+python -c "import torch; print(torch.cuda.get_device_name(0))"
+```
 
-model = FastLanguageModel.get_peft_model(
-    model,
-    r = 16,            # LoRA rank; 8-32 for behavioral tuning
-    target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
-                      "gate_proj", "up_proj", "down_proj"],
-    lora_alpha = 16,
-    lora_dropout = 0,
-    bias = "none",
-)
+The 7900 XTX (gfx1100) is a first-class ROCm target from ROCm 6.0 onward and
+does not require the `HSA_OVERRIDE_GFX_VERSION` workaround needed by some
+earlier RDNA3 cards.
 
-dataset = load_dataset("json", data_files="npc_training.jsonl", split="train")
+**Axolotl config (`npc_config.yml`):**
 
-trainer = SFTTrainer(
-    model = model,
-    tokenizer = tokenizer,
-    train_dataset = dataset,
-    dataset_text_field = "text",
-    max_seq_length = 2048,
-    args = TrainingArguments(
-        per_device_train_batch_size = 2,
-        gradient_accumulation_steps = 4,
-        num_train_epochs = 3,
-        learning_rate = 2e-4,
-        output_dir = "outputs",
-        optim = "adamw_8bit",
-    ),
-)
-trainer.train()
+```yaml
+base_model: meta-llama/Meta-Llama-3.1-8B-Instruct
+model_type: LlamaForCausalLM
+tokenizer_type: AutoTokenizer
 
-# Export merged model as GGUF for llama.cpp / Ollama
-model.save_pretrained_gguf("npc-model", tokenizer, quantization_method="q4_k_m")
+load_in_4bit: true
+
+datasets:
+  - path: npc_training.jsonl
+    type: chat_template
+chat_template: chatml
+
+dataset_prepared_path: last_run_prepared
+val_set_size: 0.05
+output_dir: ./outputs/npc-model
+
+adapter: qlora
+lora_r: 16
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+sequence_len: 2048
+sample_packing: true
+
+gradient_accumulation_steps: 4
+micro_batch_size: 2
+num_epochs: 3
+optimizer: adamw_bnb_8bit
+lr_scheduler: cosine
+learning_rate: 0.0002
+
+bf16: auto
+gradient_checkpointing: true
+warmup_steps: 10
+evals_per_epoch: 4
+saves_per_epoch: 1
+```
+
+**Running training:**
+
+```sh
+accelerate launch -m axolotl.cli.train npc_config.yml
+```
+
+A behavioral fine-tune on ~1,000 examples takes 30–90 minutes on the 7900 XTX.
+
+**Exporting to GGUF** (requires a local clone of llama.cpp):
+
+```sh
+# Merge adapter into base weights, then convert
+python axolotl/scripts/merge_lora.py npc_config.yml
+python llama.cpp/convert_hf_to_gguf.py outputs/npc-model \
+    --outfile npc-model.Q4_K_M.gguf \
+    --outtype q4_k_m
 ```
 
 Output is a `.gguf` file with the adapter merged into the base model weights,
-ready to serve via llama.cpp or Ollama. The base model is never modified; only
-the adapter changes between training runs.
+ready to serve via Ollama. The base model is never modified; only the adapter
+changes between training runs.
 
 ### Serving with Ollama
 
@@ -894,7 +930,7 @@ endpoint.
 OFFLINE (periodic):
   play logs + synthetic Q&A pairs
     → npc_training.jsonl
-    → Unsloth QLoRA fine-tune (rented GPU, ~$1/run)
+    → Axolotl QLoRA fine-tune (RX 7900 XTX, ROCm, 30-90 min/run)
     → npc-model.Q4_K_M.gguf → Ollama (localhost:11434)
 
 BOOT TIME (future RAG enhancement):
@@ -1141,7 +1177,7 @@ No unique ID field on `CHAR_DATA` is needed.
 
 - [ ] Assemble initial training dataset: synthetic Q&A pairs generated from NPC
   archetypes and behavioral goals (500–1,500 examples in ChatML `.jsonl` format)
-- [ ] Fine-tune a 7B/8B base model using Unsloth QLoRA (rented GPU, ~$1/run)
+- [ ] Fine-tune a 7B/8B base model using Axolotl QLoRA on RX 7900 XTX (ROCm)
 - [ ] Export merged model as GGUF (`q4_k_m` quantization)
 - [ ] Create Ollama `Modelfile` and register model as `ack-npc`
 - [ ] Validate model behavior against behavioral goals before deploying to server
