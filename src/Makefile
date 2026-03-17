@@ -127,7 +127,7 @@ O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o a
 	  const.o damage.o cloak.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
 	  heal.o interp.o invasion.o item_generation.o item_generation_tables.o keep.o lists.o macros.o magic.o mapper.o \
 	  obj_fun.o pdelete.o quest.o crusade.o reincarnate.o rulers.o \
-	  save.o scheck.o skills.o skills_chi.o skills_combo.o skills_obj.o skills_poison.o social-edit.o special.o spell_dam.o spendqp.o ssm.o \
+	  save/save.o save/save_players.o save/save_objects.o save/save_mobs.o save/save_areas.o scheck.o skills.o skills_chi.o skills_combo.o skills_obj.o skills_poison.o social-edit.o special.o spell_dam.o spendqp.o ssm.o \
 	  stance.o strfuns.o sysdata.o tables.o trigger.o update.o wizutil.o \
 	  write.o $(AI_SPEC_SRCS) $(SPELL_OBJS) $(SKILL_OBJS)
 
