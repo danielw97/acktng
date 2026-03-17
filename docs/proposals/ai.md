@@ -1587,22 +1587,41 @@ entries directly into its system prompt — giving the model access to the
 same reference material a player would get from `help <topic>`, but without
 requiring the player to know the right keyword.
 
+**Sources:** Both help linked lists are searched:
+
+- `first_help` — 343 player help entries (commands, game concepts, general
+  info). Median 32 words.
+- `first_shelp` — 296 skill/spell help entries (structured: name, kind, target,
+  mana cost, class acquisition levels, description). Median 52 words.
+
+The shelp entries are particularly valuable for new player questions. When a
+player asks "what does backstab do?" or "tell me about the armor spell", the
+corresponding shelp entry contains the exact class, level, mana cost, and
+description — structured data the model can relay accurately instead of
+hallucinating.
+
 **Lookup:** `npc_dialogue_dispatch()` extracts words from the player's message
-and runs each through the same matching logic `do_help()` uses: exact match on
-`pHelp->keyword` first, then prefix match via `str_prefix()`. Only entries
-with `pHelp->level <= 0` are eligible (player-visible helps only — staff helps
-are excluded).
+and searches both lists using the same matching logic the existing `do_help()`
+and `do_shelp()` functions use: exact match on `pHelp->keyword` first, then
+prefix match via `str_prefix()`. Only entries with `pHelp->level <= 0` are
+eligible (player-visible helps only — immortal-restricted entries are excluded).
 
-**Selection:** At most **two** help entries are injected per request. If more
-than two match, prefer exact matches over prefix matches, and shorter entries
-over longer ones (a 30-word command reference is more useful than a 600-word
-class essay when both match).
+When the same word matches in both lists (e.g. "backstab" exists in both
+`help` and `shelp`), both entries are candidates. The shelp entry is preferred
+for skill/spell names because it contains structured mechanical data; the help
+entry is preferred for general topics.
 
-**Truncation:** Each injected help entry is capped at **400 bytes** (~75
-words). Most help files are well under this — the median is 32 words. The few
-large entries (class descriptions at 250-450 words) are truncated with a
-trailing `"[...]"` to signal incompleteness. The model can still direct the
-player to `help <topic>` for the full text.
+**Selection:** At most **two** entries are injected per request across both
+lists combined. If more than two match, prefer exact matches over prefix
+matches, and shorter entries over longer ones (a 30-word command reference is
+more useful than a 600-word class essay when both match).
+
+**Truncation:** Each injected entry is capped at **400 bytes** (~75 words).
+Most entries are well under this — help median is 32 words, shelp median is
+52 words. The few large entries (class descriptions at 250-450 words) are
+truncated with a trailing `"[...]"` to signal incompleteness. The model can
+still direct the player to `help <topic>` or `shelp <topic>` for the full
+text.
 
 **Format in the system prompt:**
 
@@ -1613,14 +1632,24 @@ RELEVANT HELP ENTRIES:
 Recall teleports you back to your race's home temple. Type RECALL to use it.
 Recalls are free. You cannot recall while fighting.
 
-[HELP: MAGI]
-Magi are arcanists who study the raw architecture of power. Where others pray,
-bargain, or brawl, a Magi bends elemental law through discipline, theory, and
-precision. [...]
+[SHELP: BACKSTAB]
+       Name: Backstab
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 1
+ Wait Beats: 18
+Acquisition:
+   - Cipher: level 10
+Description:
+   Backstab is a precision dagger strike that opens from stealth or
+   advantage, delivering high burst damage. [...]
 ```
 
 The block is placed after the dynamic topic blocks and before the NPC persona,
-so the model sees it as supplementary reference material.
+so the model sees it as supplementary reference material. The `[HELP:]` vs
+`[SHELP:]` prefix tells the model which command to suggest if the player wants
+the full entry.
 
 **Why not inject helps for every NPC?** Only NPCs with `ACT_AI_TOPIC_ROUTE`
 perform help lookup. A blacksmith NPC should not suddenly start explaining the
@@ -1640,8 +1669,8 @@ every document in the archive.
 [4. DYNAMIC TOPIC BLOCK(S) — 0-2 blocks selected by keyword match,
     ~200-530 tokens total]
 
-[5. HELP FILE SNIPPET(S) — 0-2 entries matched from player's message,
-    ~0-200 tokens total, capped at 400 bytes each]
+[5. HELP/SHELP SNIPPET(S) — 0-2 entries matched from player's message
+    across both help and shelp lists, ~0-200 tokens total, 400 byte cap each]
 
 [6. NPC PERSONA + persona lock suffix, ~240 tokens, always]
 ```
@@ -1719,9 +1748,10 @@ improves model quality for every NPC archetype, not just tutorial roles.
 - [ ] Add `ACT_AI_TOPIC_ROUTE` flag to mob act flags in `typedefs.h`
 - [ ] Implement keyword → topic tag routing table and scanner in
   `npc_dialogue_dispatch()`, gated on `ACT_AI_TOPIC_ROUTE`, limited to 2 tags
-- [ ] Implement help file lookup in `npc_dialogue_dispatch()` for
-  `ACT_AI_TOPIC_ROUTE` NPCs: search `HELP_DATA` linked list, select up to 2
-  entries, truncate at 400 bytes each, format as `[HELP: <keyword>]` blocks
+- [ ] Implement help/shelp lookup in `npc_dialogue_dispatch()` for
+  `ACT_AI_TOPIC_ROUTE` NPCs: search both `first_help` and `first_shelp`
+  linked lists, select up to 2 entries total, truncate at 400 bytes each,
+  format as `[HELP: <keyword>]` or `[SHELP: <keyword>]` blocks
 - [ ] Write the `KNOW_NEWPLAYER` topic block (game mechanics text above)
 - [ ] Write the Lorekeeper `AiPrompt` persona text
 - [ ] Add the Lorekeeper mob definition to the Midgaard area file with
