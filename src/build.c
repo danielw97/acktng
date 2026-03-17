@@ -1348,7 +1348,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       send_to_char("  sex level align  aff act\n\r", ch);
       send_to_char("  class clan position race\n\r", ch);
       send_to_char("  skill cast def pskill pcast rmod\n\r", ch);
-      send_to_char("  hp_mod hr_mod dr_mod ac_mod\n\r", ch);
+      send_to_char("  hp_mod hr_mod dr_mod ac_mod lore\n\r", ch);
       send_to_char("String being one of:\n\r", ch);
       send_to_char("  name short long desc spec\n\r", ch);
       send_to_char("Use [set] spec - to clear spec_fun\n\r", ch);
@@ -1759,6 +1759,39 @@ void build_setmob(CHAR_DATA *ch, char *argument)
          return;
       }
       pMob->dr_mod = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "lore"))
+   {
+      /* Toggle named lore flags: set <vnum> lore MIDGAARD */
+      long flag = 0;
+      if (!str_cmp(arg3, "MIDGAARD"))
+         flag = LORE_FLAG_MIDGAARD;
+      else if (!str_cmp(arg3, "KIESS"))
+         flag = LORE_FLAG_KIESS;
+      else if (!str_cmp(arg3, "KOWLOON"))
+         flag = LORE_FLAG_KOWLOON;
+      else if (!str_cmp(arg3, "RAKUEN"))
+         flag = LORE_FLAG_RAKUEN;
+      else if (!str_cmp(arg3, "MAFDET"))
+         flag = LORE_FLAG_MAFDET;
+      else if (!str_cmp(arg3, "clear"))
+      {
+         pMob->lore_flags = 0;
+         send_to_char("Lore flags cleared.\n\r", ch);
+         area_modified(pArea);
+         return;
+      }
+      else
+      {
+         send_to_char("Lore flag must be: MIDGAARD KIESS KOWLOON RAKUEN MAFDET or clear\n\r", ch);
+         return;
+      }
+      pMob->lore_flags ^= flag; /* Toggle */
+      sprintf(buf, "Lore flags now: %ld\n\r", pMob->lore_flags);
+      send_to_char(buf, ch);
       area_modified(pArea);
       return;
    }

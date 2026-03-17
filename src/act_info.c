@@ -5310,53 +5310,107 @@ void do_shelp(CHAR_DATA *ch, char *argument)
    return;
 }
 
+static int count_bits(long v)
+{
+   int count = 0;
+   while (v)
+   {
+      count += v & 1;
+      v >>= 1;
+   }
+   return count;
+}
+
+static long get_room_lore_flags(CHAR_DATA *ch)
+{
+   CHAR_DATA *mob;
+   long flags = 0;
+
+   if (ch->in_room == NULL)
+      return 0;
+
+   for (mob = ch->in_room->first_person; mob != NULL; mob = mob->next_in_room)
+   {
+      if (IS_NPC(mob) && mob->lore_flags != 0)
+         flags |= mob->lore_flags;
+   }
+   return flags;
+}
+
+static HELP_DATA *find_best_lore(const char *argument, CHAR_DATA *ch, long npc_flags,
+                                 bool (*match_fn)(const char *, const char *))
+{
+   HELP_DATA *pHelp;
+   HELP_DATA *best = NULL;
+   int best_score = -1;
+
+   for (pHelp = first_lore; pHelp != NULL; pHelp = pHelp->next)
+   {
+      if (pHelp->level > get_trust(ch))
+         continue;
+
+      /* str_cmp and str_prefix return FALSE (0) on match */
+      if (match_fn(argument, pHelp->keyword))
+         continue;
+
+      /* Entry flags must be a subset of the NPC's flags */
+      if (pHelp->flags != 0 && (pHelp->flags & npc_flags) != pHelp->flags)
+         continue;
+
+      int score = count_bits(pHelp->flags & npc_flags);
+      if (pHelp->flags == 0 && best == NULL)
+      {
+         /* Default (unflagged) entry -- lowest priority */
+         best = pHelp;
+         best_score = 0;
+      }
+      else if (score > best_score)
+      {
+         best = pHelp;
+         best_score = score;
+      }
+   }
+   return best;
+}
+
+static void show_lore_entry(HELP_DATA *pHelp, CHAR_DATA *ch)
+{
+   if (pHelp->level >= 0)
+   {
+      send_to_char(pHelp->keyword, ch);
+      send_to_char("\n\r", ch);
+   }
+
+   if (pHelp->text[0] == '.')
+      send_to_char(pHelp->text + 1, ch);
+   else
+      send_to_char(pHelp->text, ch);
+}
+
 void do_lore(CHAR_DATA *ch, char *argument)
 {
    HELP_DATA *pHelp;
+   long npc_flags;
 
    if (argument[0] == '\0')
       argument = "lore";
 
-   for (pHelp = first_lore; pHelp != NULL; pHelp = pHelp->next)
+   npc_flags = get_room_lore_flags(ch);
+
+   /* Exact match pass */
+   pHelp = find_best_lore(argument, ch, npc_flags, str_cmp);
+   if (pHelp != NULL)
    {
-      if (pHelp->level > get_trust(ch))
-         continue;
-
-      if (!str_cmp(argument, pHelp->keyword))
-      {
-         if (pHelp->level >= 0)
-         {
-            send_to_char(pHelp->keyword, ch);
-            send_to_char("\n\r", ch);
-         }
-
-         if (pHelp->text[0] == '.')
-            send_to_char(pHelp->text + 1, ch);
-         else
-            send_to_char(pHelp->text, ch);
-         return;
-      }
+      show_lore_entry(pHelp, ch);
+      return;
    }
 
-   for (pHelp = first_lore; pHelp != NULL; pHelp = pHelp->next)
+   /* Prefix match pass */
+   pHelp = find_best_lore(argument, ch, npc_flags, str_prefix);
+   if (pHelp != NULL)
    {
-      if (pHelp->level > get_trust(ch))
-         continue;
-
-      if (!str_prefix(argument, pHelp->keyword))
-      {
-         if (pHelp->level >= 0)
-         {
-            send_to_char(pHelp->keyword, ch);
-            send_to_char("\n\r", ch);
-         }
-
-         if (pHelp->text[0] == '.')
-            send_to_char(pHelp->text + 1, ch);
-         else
-            send_to_char(pHelp->text, ch);
-         return;
-      }
+      show_lore_entry(pHelp, ch);
+      return;
    }
 
    send_to_char("No lore on that subject.\n\r", ch);

@@ -317,6 +317,8 @@ void build_save_mobs()
    for (int i = 0; i < MAX_LOOT; i++)
       fprintf(SaveFile, "%i ", pMobIndex->loot_chance[i]);
    fprintf(SaveFile, "\n");
+   if (pMobIndex->lore_flags != 0)
+      fprintf(SaveFile, "^ %ld\n", pMobIndex->lore_flags);
 
    Pointer = Pointer->next;
    if (Pointer == NULL) /* End */

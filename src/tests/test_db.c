@@ -12,6 +12,7 @@
 
 void db_test_format_status(char *dest, size_t dest_size, const char *prefix, const char *file_name);
 void db_test_shuffle_maze_room_exits(ROOM_INDEX_DATA *pRoomIndex);
+long db_test_parse_lore_flags(const char *s);
 
 void init_mm(void);
 
@@ -1128,6 +1129,36 @@ static void test_maze_room_exits_change_across_resets(void)
    assert(changed);
 }
 
+static void test_parse_lore_flags_single(void)
+{
+   assert(db_test_parse_lore_flags("MIDGAARD") == LORE_FLAG_MIDGAARD);
+   assert(db_test_parse_lore_flags("KIESS") == LORE_FLAG_KIESS);
+   assert(db_test_parse_lore_flags("KOWLOON") == LORE_FLAG_KOWLOON);
+   assert(db_test_parse_lore_flags("RAKUEN") == LORE_FLAG_RAKUEN);
+   assert(db_test_parse_lore_flags("MAFDET") == LORE_FLAG_MAFDET);
+}
+
+static void test_parse_lore_flags_multiple(void)
+{
+   long flags = db_test_parse_lore_flags("MIDGAARD KIESS");
+   assert(flags == (LORE_FLAG_MIDGAARD | LORE_FLAG_KIESS));
+
+   flags = db_test_parse_lore_flags("KOWLOON RAKUEN MAFDET");
+   assert(flags == (LORE_FLAG_KOWLOON | LORE_FLAG_RAKUEN | LORE_FLAG_MAFDET));
+}
+
+static void test_parse_lore_flags_case_insensitive(void)
+{
+   assert(db_test_parse_lore_flags("midgaard") == LORE_FLAG_MIDGAARD);
+   assert(db_test_parse_lore_flags("Kiess") == LORE_FLAG_KIESS);
+}
+
+static void test_parse_lore_flags_empty(void)
+{
+   assert(db_test_parse_lore_flags("") == 0);
+   assert(db_test_parse_lore_flags("\n") == 0);
+}
+
 int main(void)
 {
    test_object_spawn_level_uses_requested_level_when_present();
@@ -1146,6 +1177,10 @@ int main(void)
    test_count_file_line_single_line_no_newline();
    test_maze_room_exits_are_valid_permutation_after_shuffle();
    test_maze_room_exits_change_across_resets();
+   test_parse_lore_flags_single();
+   test_parse_lore_flags_multiple();
+   test_parse_lore_flags_case_insensitive();
+   test_parse_lore_flags_empty();
 
    puts("test_db: all tests passed");
    return 0;

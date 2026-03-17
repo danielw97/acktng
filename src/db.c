@@ -804,6 +804,64 @@ void load_area(FILE *fp)
    return;
 }
 
+static long parse_lore_flags(const char *flag_str)
+{
+   long flags = 0;
+   char buf[MAX_STRING_LENGTH];
+   const char *p = flag_str;
+
+   while (*p)
+   {
+      while (*p == ' ' || *p == '\t')
+         p++;
+      if (*p == '\0' || *p == '\r' || *p == '\n')
+         break;
+
+      size_t i = 0;
+      while (*p && *p != ' ' && *p != '\t' && *p != '\r' && *p != '\n' && i < sizeof(buf) - 1)
+         buf[i++] = *p++;
+      buf[i] = '\0';
+
+      if (!str_cmp(buf, "MIDGAARD"))
+         flags |= LORE_FLAG_MIDGAARD;
+      else if (!str_cmp(buf, "KIESS"))
+         flags |= LORE_FLAG_KIESS;
+      else if (!str_cmp(buf, "KOWLOON"))
+         flags |= LORE_FLAG_KOWLOON;
+      else if (!str_cmp(buf, "RAKUEN"))
+         flags |= LORE_FLAG_RAKUEN;
+      else if (!str_cmp(buf, "MAFDET"))
+         flags |= LORE_FLAG_MAFDET;
+      else
+      {
+         long numeric = atol(buf);
+         if (numeric != 0)
+            flags |= numeric;
+      }
+   }
+   return flags;
+}
+
+static void link_help_entry(long level, long flags, const char *keywords, const char *text,
+                            HELP_DATA **first, HELP_DATA **last)
+{
+   HELP_DATA *pHelp;
+   GET_FREE(pHelp, help_free);
+   pHelp->level = level;
+   pHelp->flags = flags;
+   pHelp->keyword = str_dup(keywords);
+   pHelp->text = str_dup(text);
+   LINK(pHelp, *first, *last, next, prev);
+   top_help++;
+}
+
+#ifdef UNIT_TEST_DB
+long db_test_parse_lore_flags(const char *s)
+{
+   return parse_lore_flags(s);
+}
+#endif
+
 static void load_help_file(const char *help_path, HELP_DATA **first, HELP_DATA **last)
 {
    FILE *fp;
@@ -813,7 +871,6 @@ static void load_help_file(const char *help_path, HELP_DATA **first, HELP_DATA *
    char keywords[MAX_STRING_LENGTH];
    char text[MAX_STRING_LENGTH * 8];
    size_t text_len = 0;
-   HELP_DATA *pHelp;
 
    fp = fopen(help_path, "r");
    if (fp == NULL)
@@ -847,7 +904,7 @@ static void load_help_file(const char *help_path, HELP_DATA **first, HELP_DATA *
 
    if (strncmp(line, "flags ", 6) == 0)
    {
-      flags = atol(line + 6);
+      flags = parse_lore_flags(line + 6);
       if (fgets(line, sizeof(line), fp) == NULL)
       {
          bug("load_help_file: unexpected end of file after flags", 0);
@@ -864,8 +921,61 @@ static void load_help_file(const char *help_path, HELP_DATA **first, HELP_DATA *
    }
 
    text[0] = '\0';
+   text_len = 0;
+
    while (fgets(line, sizeof(line), fp) != NULL)
    {
+      /* Check if this line is exactly "level <number>\n" (new entry header) */
+      long next_level;
+      char extra;
+      if (strncmp(line, "level ", 6) == 0 && sscanf(line, "level %ld %c", &next_level, &extra) == 1)
+      {
+         /* Save current entry */
+         link_help_entry(level, flags, keywords, text, first, last);
+
+         level = next_level;
+
+         flags = 0;
+
+         if (fgets(line, sizeof(line), fp) == NULL || strncmp(line, "keywords ", 9) != 0)
+         {
+            bug("load_help_file: missing keywords in multi-entry", 0);
+            fclose(fp);
+            return;
+         }
+         snprintf(keywords, sizeof(keywords), "%s", line + 9);
+         keywords[strcspn(keywords, "\r\n")] = '\0';
+
+         if (fgets(line, sizeof(line), fp) == NULL)
+         {
+            bug("load_help_file: unexpected end of file in multi-entry", 0);
+            fclose(fp);
+            return;
+         }
+
+         if (strncmp(line, "flags ", 6) == 0)
+         {
+            flags = parse_lore_flags(line + 6);
+            if (fgets(line, sizeof(line), fp) == NULL)
+            {
+               bug("load_help_file: unexpected end after flags in multi-entry", 0);
+               fclose(fp);
+               return;
+            }
+         }
+
+         if (strncmp(line, "---", 3) != 0)
+         {
+            bug("load_help_file: missing separator in multi-entry", 0);
+            fclose(fp);
+            return;
+         }
+
+         text[0] = '\0';
+         text_len = 0;
+         continue;
+      }
+
       size_t line_len = strlen(line);
       if (text_len + line_len + 1 >= sizeof(text))
       {
@@ -878,13 +988,8 @@ static void load_help_file(const char *help_path, HELP_DATA **first, HELP_DATA *
       text[text_len] = '\0';
    }
 
-   GET_FREE(pHelp, help_free);
-   pHelp->level = level;
-   pHelp->flags = flags;
-   pHelp->keyword = str_dup(keywords);
-   pHelp->text = str_dup(text);
-   LINK(pHelp, *first, *last, next, prev);
-   top_help++;
+   /* Save final entry */
+   link_help_entry(level, flags, keywords, text, first, last);
 
    fclose(fp);
 }
@@ -1289,6 +1394,14 @@ void load_mobiles(FILE *fp)
          {
             pMobIndex->loot_chance[i] = fread_number(fp);
          }
+      }
+      else
+         ungetc(letter, fp);
+
+      letter = fread_letter(fp);
+      if (letter == '^')
+      {
+         pMobIndex->lore_flags = fread_number(fp);
       }
       else
          ungetc(letter, fp);
@@ -2720,6 +2833,7 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
    mob->power_skills = pMobIndex->power_skills;
    mob->power_cast = pMobIndex->power_cast;
    mob->race = pMobIndex->race;
+   mob->lore_flags = pMobIndex->lore_flags;
    mob->position = POS_STANDING;
    mob->is_quitting = FALSE;
    mob->extract_timer = -1;

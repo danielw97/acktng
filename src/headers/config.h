@@ -1322,6 +1322,17 @@
 #define SHELP_DIR "../shelp/"
 #define LORE_DIR "../lore/"
 
+/*
+ * Lore perspective flags -- used on both lore entries and NPCs.
+ * When a player uses "lore <topic>" near an NPC with lore_flags,
+ * the system picks the entry whose required flags best match the NPC's flags.
+ */
+#define LORE_FLAG_MIDGAARD (1 << 0)
+#define LORE_FLAG_KIESS (1 << 1)
+#define LORE_FLAG_KOWLOON (1 << 2)
+#define LORE_FLAG_RAKUEN (1 << 3)
+#define LORE_FLAG_MAFDET (1 << 4)
+
 #define MAIL_DIR "../mail/"
 #define DATA_DIR "../data/"
 #define BUG_DIR "../reports/"
