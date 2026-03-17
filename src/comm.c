@@ -4161,6 +4161,9 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
             och->level = 2;
             och->class_level[och->class] = 2;
          }
+         och->hit = och->max_hit;
+         och->mana = och->max_mana;
+         och->move = och->max_move;
          save_char_obj(och);
          write_to_descriptor(d->descriptor, buf, 0);
       }
@@ -4179,7 +4182,12 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
       for (c = first_char; c; c = c->next)
       {
          if (!IS_NPC(c) && c->desc == NULL)
+         {
+            c->hit = c->max_hit;
+            c->mana = c->max_mana;
+            c->move = c->max_move;
             save_char_obj(c);
+         }
       }
    }
 
