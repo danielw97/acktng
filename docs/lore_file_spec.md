@@ -42,14 +42,23 @@ after the first begins with a `flags` line (no repeated keywords).
 
 Every lore file must contain these entries in order:
 
-1. **Default entry** (no flags) — baseline lore shown when no flags match.
-2. **City-only entries** (5) — one per city flag: MIDGAARD, KIESS, KOWLOON,
-   RAKUEN, MAFDET. Shown when an NPC has only the matching city flag.
-3. **City + Race entries** (50) — one for each city-race combination.
-   Shown when an NPC has both the city flag and the race flag set.
+1. **Default entry** (no flags) — general-purpose baseline lore shown when no
+   flags match. Should describe only what is directly relevant to this topic;
+   information about other topics belongs in those topics' files.
+2. **City-only entries** (5, required) — one per city flag: MIDGAARD, KIESS,
+   KOWLOON, RAKUEN, MAFDET. Describes the topic from that city's institutional
+   perspective, vocabulary, and founding-trauma lens. See `docs/perspective.md`
+   for authoritative city voice and framing guidance.
+3. **City + Race entries** (up to 50, only when needed) — one for each
+   city-race combination where the race's cognitive posture produces a
+   meaningfully different perspective than the city entry alone. If the
+   city+race perspective would be essentially the same as the city-only entry,
+   omit it. See `docs/perspective.md` for race cognitive profiles.
    Order: for each city, all 10 races in order.
 
-Total: **56 entries per file**.
+**Maximum 56 entries per file** (1 default + 5 city + up to 50 city+race).
+Omit city+race entries when the race perspective does not add distinct
+information beyond the city perspective for this specific topic.
 
 Example structure:
 
@@ -62,14 +71,35 @@ flags MIDGAARD
 ---
 Midgaard perspective on the Cinderteeth...
 
-flags MIDGAARD HUMAN
+flags MIDGAARD KHEPHARI
 ---
-What a human in Midgaard knows about the Cinderteeth...
+What a Khephari in Midgaard knows about the Cinderteeth...
+(Only included because Khephari have specific seismic expertise relevant here.)
 
-flags MIDGAARD KHENARI
+flags KIESS
 ---
-What a Khenari in Midgaard knows about the Cinderteeth...
+Kiess perspective on the Cinderteeth...
+(No KIESS HUMAN entry needed if the human perspective matches the city entry.)
 ```
+
+### Perspective guide
+
+`docs/perspective.md` is authoritative for city and race voice. Each city has
+a founding-trauma lens, institutional vocabulary, and rhetorical shape. Each
+race has a cognitive posture, observational mode, and characteristic tell.
+
+- **City layer** governs surface delivery: words chosen, metaphors, institutional
+  reflex. Midgaard frames in procedure; Kowloon in covenant and color; Mafdet in
+  oath and attestation; Kiess in transparency and disclosure; Rakuen in communal
+  stewardship.
+- **Race layer** governs deep patterning: how a speaker processes information.
+  Khenari need procedural closure on records; Khephari start from physical
+  terrain; Umbral note what is absent before what is present; Kethari operate on
+  geological timescale; Ushabti distinguish claim/evidence/verdict; Deltari cite
+  measured patterns; etc.
+
+Include a city+race entry only when the race's cognitive posture produces
+observations or framings that the city perspective alone would not generate.
 
 ### Rules
 
@@ -80,6 +110,8 @@ What a Khenari in Midgaard knows about the Cinderteeth...
 - **No color codes.** Lore text must not contain `@@` codes. Tests enforce this.
 - **No repeated keywords.** Do not repeat the `keywords` line for each entry.
 - **10-15 lines per entry.** Dense, factual, AI-optimized. No prose essays.
+- **Topic-specific content only.** Each entry covers only what is relevant to
+  this lore topic. Cross-topic relationships belong in those topics' own entries.
 
 ## Flags
 
@@ -145,11 +177,26 @@ Lore flags are saved in area files using the `^` marker.
 
 ## Adding new lore
 
-1. Create a file in `lore/` named after the topic.
+New lore topics should be added for historically notable figures, major events,
+significant locations, institutions, or other subjects that players or NPCs
+would plausibly ask about. When in doubt about whether a topic warrants its own
+entry, check `docs/lore/timeline.md` for significance and whether existing lore
+files already cover the topic adequately.
+
+1. Create a file in `lore/` named after the topic (lowercase, underscores for
+   spaces; e.g., `lore/caleph_dunmar`, `lore/charter_wars`).
 2. Start with a single `keywords` line listing all search keywords.
-3. Write all 56 entries: 1 default + 5 city + 50 city-race.
-   - The first (default) entry follows immediately after the keywords line.
-   - Each subsequent entry starts with a `flags` line (no repeated keywords).
-4. Keep each entry to 10-15 lines of dense, factual content.
-5. Do not include `@@` color codes anywhere.
-6. Run `make unit-tests` from `src/` to validate format.
+3. Write the default entry (required) — general-purpose overview of the topic.
+4. Write all 5 city entries (required, in order: MIDGAARD, KIESS, KOWLOON,
+   RAKUEN, MAFDET). Apply city voice from `docs/perspective.md`.
+5. Write city+race entries only where the race's cognitive posture produces a
+   meaningfully distinct perspective. Apply race profiles from
+   `docs/perspective.md`. Omit entries that would merely restate the city entry.
+6. Keep each entry to 10-15 lines of dense, factual content.
+7. Do not include `@@` color codes anywhere.
+8. Run `make unit-tests` from `src/` to validate format.
+
+**Source material:** `docs/lore/` contains expanded worldbuilding documentation.
+`docs/lore/timeline.md` is the master chronology. These are authoritative
+references for lore content. `/lore/` files are generated from this source
+material; they should accurately reflect it.
