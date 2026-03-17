@@ -1,83 +1,782 @@
 keywords roc road rocroad trade
 ---
-The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
-Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
-The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
-
-Eastern half: Midgaard-controlled. Gray-purple ash-mortar paving from the Lantern Reforms. Patrol relays, checkpoint oath recitations, boundary sigils maintained per the Oath of Stone. Wardens recite the Three Civic Oaths at each shift change.
-Western half: Kiess-controlled. Managed by convoy marshals using convoy compacts (shared liability pools). Marshals can delay departures, reroute through the Greenveil Spur, or pay wayfolk for emergency guide services.
-Central Crossroads: disputed zone where charter boundaries overlap. Independent actors operate here. Violence increases under unilateral control attempts. Shared governance reduces bloodshed but breeds corruption.
-
-The Violet Eclipse Cathedral stands along the route. It predates both cities. Its procurement ledgers and binding archives are significant and controversial.
-Kiess founding clause: no sealed warrant from a predecessor authority binds a Kiess citizen. This directly repudiates abuses committed under the road's eastern administration.
-Core tension: Midgaard asks "Who has lawful right to command?" Kiess asks "What keeps goods and people alive tomorrow?" The road's identity rests on this unresolved conflict.
+roc road baseline: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Secondary anchor: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Tertiary anchor: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+Interpret reports as layered memory: official record, local witness, and field outcome.
+Use concise factual language intended for AI retrieval and disambiguation.
+When no storyteller flags match, this default entry is the canonical fallback.
+Prefer chronology, institutions, geography, and motive over dramatic ornament.
+Cross-check claims against known city structures, race perspectives, and supply constraints.
+Assume each account is partial; reconcile contradictions by evidence quality.
+Topic focus remains roc road; ignore unrelated rumor unless corroborated.
 
 keywords roc road rocroad trade
 flags MIDGAARD
 ---
-The Roc Road is Midgaard's western artery connecting to Kiess. Midgaard controls the eastern half; Kiess controls the western half.
-Eastern half maintenance: ash-mortar paving resurfaced on a seven-year cycle (paving ledger, western drawer, volumes 1-46). Wardens recite the Three Civic Oaths at every shift change. Boundary sigils repainted even when manpower is short, per the Oath of Stone. Legibility of jurisdiction is doctrine.
-
-Western half (Kiess): convoy marshals run shared liability pools distributing losses across participants. Marshals can delay, reroute via Greenveil Spur, or pay wayfolk. The Bureau acknowledges its effectiveness but considers it ideologically concerning.
-Central Crossroads: governance challenge. Charter boundaries blur. Violence spikes under unilateral control. The Joint Oversight Committee has failed quorum four consecutive sessions. Shared governance reduces bloodshed but increases disputed-jurisdiction filings.
-
-The road has four historical strata: migration track, stone route, military corridor, mercantile spine. Midgaard maintains all four layers.
-The Violet Eclipse Cathedral's ledgers are classified restricted review, requiring tribunal authorization.
-Kiess founding clause repudiates sealed warrants from predecessor authorities. Midgaard's Continuity faction calls this civilizational negligence. The Reckoning faction notes Midgaard issued some of those warrants.
-Internal debate: Midgaard's institutional continuity vs. Kiess's adaptive commerce. Two incompatible philosophies sharing one corridor.
+Midgaard reading of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Working context: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Operational concern: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+Delivery style uses clipped bureaucratic phrasing and ledger idiom.
+Interpretation priorities are procedure, registry, and precedent.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag MIDGAARD for roc road.
 
 keywords roc road rocroad trade
 flags KIESS
 ---
-The Roc Road is Kiess's lifeline east to Midgaard. Kiess controls the western half; Midgaard controls the eastern half.
-Kiess was built on Evermeet's ruins at the road's western end. Founding clause: no sealed warrant from a predecessor authority binds a Kiess citizen. Evermeet's remnants visible at the fourth western milestone (crumbling foundations, obsidian shards surfacing after rain).
-
-Western half operations: convoy marshals manage flow via convoy compacts (shared liability pools). Marshals can delay departures during threat spikes, reroute through Greenveil Spur, authorize emergency payments to wayfolk. Priority is functional logistics: keeping goods and people alive.
-Eastern half (Midgaard): ash-mortar paving, patrol relays, checkpoint oath recitations, Three Civic Oaths at shift changes. Boundary sigils repainted even without manpower for full repairs. Kiess view: Midgaard's system works for Midgaard, but sigils don't fill potholes and oaths don't feed stranded convoys.
-
-Central Crossroads: both systems overlap. Violence spikes under unilateral control attempts. Kiess marshals carry Syndic warrants for the Crossroads. These warrants expire and must be renewed. That is the difference between a Kiess warrant and a sealed one.
-The Violet Eclipse Cathedral predates both cities. Marshals may trade there if necessary. Standing instruction: observe always, trust nothing unverifiable at the Prism.
-The road has four historical strata. Each power repaired what it needed and ignored the rest. Kiess does the same but acknowledges it openly.
+Kiess reading of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Working context: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Operational concern: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+Delivery style uses measured watchful phrasing with frontier caution.
+Interpretation priorities are readiness, patrol discipline, and fallback planning.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag KIESS for roc road.
 
 keywords roc road rocroad trade
 flags KOWLOON
 ---
-The Roc Road connects Midgaard to Kiess. It does not connect to Kowloon. Kowloon's relationship to it is entirely observational and economic.
-Kowloon survives by sea, not by overland roads. The Harbor Syndics monitor the Roc Road because its disruptions affect continental goods prices.
-
-Eastern half (Midgaard): stone paving, patrol relays, Three Civic Oaths at shift changes, boundary sigils repainted regardless of repair capacity. Kowloon's Wardens of Iron assess: painted sigils do not stop ash, flood, or famine.
-Western half (Kiess): convoy marshals use shared liability pools. Harbor Syndics recognize this as harbor-style risk distribution applied to land.
-Central Crossroads: politically unstable. Crossroads disruption affects continent-wide goods prices. When Midgaard and Kiess fight over the center, luxury goods reroute through Kowloon's Tide Gate by sea. Kowloon does not wish for war but prices its interruptions carefully.
-
-The Violet Eclipse Cathedral troubles the Temple Circle. Its procurement ledgers suggest souls treated as administrative material. Temple Circle doctrine: the dead are named, honored, released, not bound into archives.
-Kiess founding clause (no sealed warrants from predecessors) parallels Kowloon's Neon Covenant. Difference: Kowloon enforces refusal with phosphorescent ink (material anti-forgery guarantee), not rhetoric.
-Kowloon's position: Midgaard asks who commands, Kiess asks what keeps people alive, Kowloon asks who keeps the lanterns lit. Infrastructure maintenance is the true measure of authority.
-Filed under: external disruption risk. Relevant to pricing, irrelevant to survival.
+Kowloon reading of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Working context: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Operational concern: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+Delivery style uses terse elliptical clauses with rule-first proverbs.
+Interpretation priorities are survival legality, wall protocol, and ration order.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag KOWLOON for roc road.
 
 keywords roc road rocroad trade
 flags RAKUEN
 ---
-The Roc Road runs between Midgaard (east) and Kiess (west). One governs by stone law, the other by adaptive commerce. Both assume control of passage is necessary. Rakuen questions that assumption.
-Eastern half (Midgaard): patrol relays, checkpoint oath recitations, Three Civic Oaths at shift changes. Boundary sigils repainted even without repair capacity, per the Oath of Stone. Governance by visible assertion.
-Western half (Kiess): convoy marshals manage flow through shared liability pools. More practical than Midgaard's approach, but equally controlling. The marshal decides who moves and when.
-
-Central Crossroads: disputed center where charter boundaries blur. Violence spikes under unilateral control attempts.
-Kiess was built on Evermeet's ruins. Founding clause: no sealed warrant from a predecessor binds a citizen. The Bloom Pavilion respects this as the closest any city has come to Rakuen's rejection of inherited obligation. But Kiess replaced warrants with contracts, and contracts are warrants with better marketing.
-
-Rakuen's contrast: the Garden Walk has rotating stewards, no sentries, no tolls, no stamps. The walk belongs to everyone. During the containment era, Midgaard's resettlement convoys brought displaced families south along roads governed by oaths and liability pools. They arrived exhausted, taxed at every mile. Rakuen offered the Garden Walk with no requirements. Just a path and someone with water at the end.
-Rakuen's position: Midgaard asks who commands, Kiess asks what keeps goods alive. Rakuen asks whether anyone needs to command at all. Neither city believes a road can exist without a ledger.
-The Garden Ledger Clerks and Ember Warden Border Watch study the Roc Road the way healers study illness.
+Rakuen reading of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Working context: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Operational concern: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+Delivery style uses warm weary communal framing with garden metaphors.
+Interpretation priorities are shared burden, mediation, and care continuity.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag RAKUEN for roc road.
 
 keywords roc road rocroad trade
 flags MAFDET
 ---
-The Roc Road is the Midgaard-Kiess overland trade corridor. Mafdet is not on it, but goods from it reach Mafdet's docks after crossing oasis corridors and the desert to the Saltglass Reach. Prices at Mafdet reflect Roc Road conditions months earlier.
-The Ledger Houses track it for long-distance price analysis. The Sand-Sea Carters' Guild monitors precisely: Crossroads violence in spring means expensive iron at Mafdet's docks by autumn.
+Mafdet reading of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Working context: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Operational concern: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+Delivery style uses formal title-and-oath trade diction.
+Interpretation priorities are witnessed process, manifest proof, and adjudicated exchange.
+Preferred reasoning path: classify risk, assign office, verify witness chain.
+Rumor is provisional until backed by logs, patrol notes, or sworn testimony.
+Policy language favors continuity first, then controlled correction.
+Use this city-only view when matching city flag exists without race refinement.
+This entry applies only to storyteller flag MAFDET for roc road.
 
-Eastern half (Midgaard): patrol relays, checkpoint oaths, boundary sigils repainted even without enforcement capacity. Governance by visible assertion. Mafdet's Harbor Wardens understand the impulse but note: assertion without enforcement is theater, and theater does not keep convoys safe.
-Western half (Kiess): convoy marshals use shared liability pools distributing losses across participants. Mafdet's Ledger Houses recognize this as maritime risk doctrine applied to land (comparable to Mafdet's Shoreward Conversion). Kiess speaks a language Mafdet understands.
-Central Crossroads: destabilizes whenever one side attempts unilateral control. Commodity price spikes follow within two seasons.
+keywords roc road rocroad trade
+flags MIDGAARD HUMAN
+---
+Midgaard Human view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and HUMAN flags are present.
 
-The Violet Eclipse Cathedral concerns the Quarantine Ledger. Its procurement ledgers suggest artifact handling without proper attestation. Cathedral-origin goods receive automatic amber-seal classification at Mafdet's docks.
-Kiess was built on Evermeet's ruins. Founding clause: no sealed warrant from a predecessor binds a citizen. The Shrine of the First Claw respects this. Dead institutions cannot hold debts.
-Mafdet's position: Midgaard asks who commands, Kiess asks what keeps people alive. Mafdet asks: can you attest to what you are carrying? The road's unresolved argument arrives as cargo. Mafdet classifies the cargo and lets the manifest speak.
+keywords roc road rocroad trade
+flags MIDGAARD KHENARI
+---
+Midgaard Khenari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and KHENARI flags are present.
+
+keywords roc road rocroad trade
+flags MIDGAARD KHEPHARI
+---
+Midgaard Khephari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and KHEPHARI flags are present.
+
+keywords roc road rocroad trade
+flags MIDGAARD ASHBORN
+---
+Midgaard Ashborn view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and ASHBORN flags are present.
+
+keywords roc road rocroad trade
+flags MIDGAARD UMBRAL
+---
+Midgaard Umbral view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and UMBRAL flags are present.
+
+keywords roc road rocroad trade
+flags MIDGAARD RIVENNID
+---
+Midgaard Rivennid view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and RIVENNID flags are present.
+
+keywords roc road rocroad trade
+flags MIDGAARD DELTARI
+---
+Midgaard Deltari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and DELTARI flags are present.
+
+keywords roc road rocroad trade
+flags MIDGAARD USHABTI
+---
+Midgaard Ushabti view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and USHABTI flags are present.
+
+keywords roc road rocroad trade
+flags MIDGAARD SERATHI
+---
+Midgaard Serathi view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and SERATHI flags are present.
+
+keywords roc road rocroad trade
+flags MIDGAARD KETHARI
+---
+Midgaard Kethari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays clipped bureaucratic phrasing and ledger idiom.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines procedure, registry, and precedent with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MIDGAARD and KETHARI flags are present.
+
+keywords roc road rocroad trade
+flags KIESS HUMAN
+---
+Kiess Human view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and HUMAN flags are present.
+
+keywords roc road rocroad trade
+flags KIESS KHENARI
+---
+Kiess Khenari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and KHENARI flags are present.
+
+keywords roc road rocroad trade
+flags KIESS KHEPHARI
+---
+Kiess Khephari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and KHEPHARI flags are present.
+
+keywords roc road rocroad trade
+flags KIESS ASHBORN
+---
+Kiess Ashborn view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and ASHBORN flags are present.
+
+keywords roc road rocroad trade
+flags KIESS UMBRAL
+---
+Kiess Umbral view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and UMBRAL flags are present.
+
+keywords roc road rocroad trade
+flags KIESS RIVENNID
+---
+Kiess Rivennid view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and RIVENNID flags are present.
+
+keywords roc road rocroad trade
+flags KIESS DELTARI
+---
+Kiess Deltari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and DELTARI flags are present.
+
+keywords roc road rocroad trade
+flags KIESS USHABTI
+---
+Kiess Ushabti view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and USHABTI flags are present.
+
+keywords roc road rocroad trade
+flags KIESS SERATHI
+---
+Kiess Serathi view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and SERATHI flags are present.
+
+keywords roc road rocroad trade
+flags KIESS KETHARI
+---
+Kiess Kethari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays measured watchful phrasing with frontier caution.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines readiness, patrol discipline, and fallback planning with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KIESS and KETHARI flags are present.
+
+keywords roc road rocroad trade
+flags KOWLOON HUMAN
+---
+Kowloon Human view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and HUMAN flags are present.
+
+keywords roc road rocroad trade
+flags KOWLOON KHENARI
+---
+Kowloon Khenari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and KHENARI flags are present.
+
+keywords roc road rocroad trade
+flags KOWLOON KHEPHARI
+---
+Kowloon Khephari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and KHEPHARI flags are present.
+
+keywords roc road rocroad trade
+flags KOWLOON ASHBORN
+---
+Kowloon Ashborn view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and ASHBORN flags are present.
+
+keywords roc road rocroad trade
+flags KOWLOON UMBRAL
+---
+Kowloon Umbral view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and UMBRAL flags are present.
+
+keywords roc road rocroad trade
+flags KOWLOON RIVENNID
+---
+Kowloon Rivennid view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and RIVENNID flags are present.
+
+keywords roc road rocroad trade
+flags KOWLOON DELTARI
+---
+Kowloon Deltari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and DELTARI flags are present.
+
+keywords roc road rocroad trade
+flags KOWLOON USHABTI
+---
+Kowloon Ushabti view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and USHABTI flags are present.
+
+keywords roc road rocroad trade
+flags KOWLOON SERATHI
+---
+Kowloon Serathi view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and SERATHI flags are present.
+
+keywords roc road rocroad trade
+flags KOWLOON KETHARI
+---
+Kowloon Kethari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays terse elliptical clauses with rule-first proverbs.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines survival legality, wall protocol, and ration order with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both KOWLOON and KETHARI flags are present.
+
+keywords roc road rocroad trade
+flags RAKUEN HUMAN
+---
+Rakuen Human view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and HUMAN flags are present.
+
+keywords roc road rocroad trade
+flags RAKUEN KHENARI
+---
+Rakuen Khenari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and KHENARI flags are present.
+
+keywords roc road rocroad trade
+flags RAKUEN KHEPHARI
+---
+Rakuen Khephari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and KHEPHARI flags are present.
+
+keywords roc road rocroad trade
+flags RAKUEN ASHBORN
+---
+Rakuen Ashborn view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and ASHBORN flags are present.
+
+keywords roc road rocroad trade
+flags RAKUEN UMBRAL
+---
+Rakuen Umbral view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and UMBRAL flags are present.
+
+keywords roc road rocroad trade
+flags RAKUEN RIVENNID
+---
+Rakuen Rivennid view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and RIVENNID flags are present.
+
+keywords roc road rocroad trade
+flags RAKUEN DELTARI
+---
+Rakuen Deltari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and DELTARI flags are present.
+
+keywords roc road rocroad trade
+flags RAKUEN USHABTI
+---
+Rakuen Ushabti view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and USHABTI flags are present.
+
+keywords roc road rocroad trade
+flags RAKUEN SERATHI
+---
+Rakuen Serathi view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and SERATHI flags are present.
+
+keywords roc road rocroad trade
+flags RAKUEN KETHARI
+---
+Rakuen Kethari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays warm weary communal framing with garden metaphors.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines shared burden, mediation, and care continuity with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both RAKUEN and KETHARI flags are present.
+
+keywords roc road rocroad trade
+flags MAFDET HUMAN
+---
+Mafdet Human view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is pragmatic institutional triage and works inside imperfect systems.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and HUMAN flags are present.
+
+keywords roc road rocroad trade
+flags MAFDET KHENARI
+---
+Mafdet Khenari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is ritual-documentary exactness and treats missing records as risk.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and KHENARI flags are present.
+
+keywords roc road rocroad trade
+flags MAFDET KHEPHARI
+---
+Mafdet Khephari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is cycle-aware material realism and starts from terrain and durability.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and KHEPHARI flags are present.
+
+keywords roc road rocroad trade
+flags MAFDET ASHBORN
+---
+Mafdet Ashborn view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is direct action-first cadence and respects proven competence.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and ASHBORN flags are present.
+
+keywords roc road rocroad trade
+flags MAFDET UMBRAL
+---
+Mafdet Umbral view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is cool omission-focused precision and tests claims by absences.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and UMBRAL flags are present.
+
+keywords roc road rocroad trade
+flags MAFDET RIVENNID
+---
+Mafdet Rivennid view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is patient network-oriented association and links systems into continuity.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and RIVENNID flags are present.
+
+keywords roc road rocroad trade
+flags MAFDET DELTARI
+---
+Mafdet Deltari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is empirical pattern tracking and prefers measured change.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and DELTARI flags are present.
+
+keywords roc road rocroad trade
+flags MAFDET USHABTI
+---
+Mafdet Ushabti view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is judicial weighted restraint and separates claim evidence verdict.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and USHABTI flags are present.
+
+keywords roc road rocroad trade
+flags MAFDET SERATHI
+---
+Mafdet Serathi view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is literal positional directness and expects exact wording and geometry.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and SERATHI flags are present.
+
+keywords roc road rocroad trade
+flags MAFDET KETHARI
+---
+Mafdet Kethari view of roc road: The Roc Road is the primary overland trade corridor connecting Midgaard (east) to Kiess (west).
+Local grounding: Kiess was built on the ruins of Evermeet, which formerly anchored the western end.
+Practical implication: The road has four historical layers: pre-city migration track, formalized stone route with mile markers, war-era military supply corridor, post-war mercantile spine.
+City grammar stays formal title-and-oath trade diction.
+Race cadence is ancient efficient high-context framing and calibrates by long memory.
+Decision lens combines witnessed process, manifest proof, and adjudicated exchange with race-specific judgment discipline.
+Evidence order: direct observation, witnessed record, then inherited narrative.
+Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
+Intercity claims are accepted only when motive and logistics are coherent.
+Select only when both MAFDET and KETHARI flags are present.
