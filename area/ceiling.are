@@ -227,16 +227,16 @@ Several gold coins lie here.~
 0 0 0 0 0 0 0 0 0 0
 1
 #65410
-corpse~
-the corpse of someone~
-The corpse of someone lies here.~
+corpse %s~
+the corpse of %s~
+The corpse of %s lies here.~
 23 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 10
 #65411
-corpse~
-the corpse of someone~
-The corpse of someone lies here.~
+corpse %s~
+the corpse of %s~
+The corpse of %s lies here.~
 24 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 10

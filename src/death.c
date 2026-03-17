@@ -153,6 +153,10 @@ void make_corpse(CHAR_DATA *ch, char *argument)
       corpse->value[0] = 1;
       corpse->value[3] = number_range(3, 6);
    }
+   sprintf(buf, corpse->name, name);
+   free_string(corpse->name);
+   corpse->name = str_dup(buf);
+
    sprintf(buf, corpse->short_descr, name);
    free_string(corpse->short_descr);
    corpse->short_descr = str_dup(buf);
