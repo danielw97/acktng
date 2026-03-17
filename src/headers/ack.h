@@ -1354,6 +1354,8 @@ int do_damage args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt, int elem
 void perm_update args((void));
 void boot_db args((void));
 void area_update args((void));
+void db_format_status args((char *dest, size_t dest_size, const char *prefix, const char *file_name));
+void db_set_area_name args((const char *file_name));
 void message_update args((void));
 CD *create_mobile args((MOB_INDEX_DATA * pMobIndex));
 OD *create_object args((OBJ_INDEX_DATA * pObjIndex, int level));
@@ -1589,12 +1591,25 @@ void generate_auto_crusade args((void));
 void save_char_obj args((CHAR_DATA * ch));
 bool load_char_obj args((DESCRIPTOR_DATA * d, char *name, bool system_call));
 void save_corpses args((void));
+void load_corpses args((void));
 void save_chest args((OBJ_DATA * chest));
 void delete_chest_file args((int vnum));
 void load_chest args((int vnum));
 void fread_corpse args((FILE * fp));
 void save_marks args((void));
+void load_marks args((void));
 void save_bans args((void));
+void load_bans args((void));
+void load_notes args((void));
+void load_gold args((void));
+void load_area args((FILE * fp));
+void load_mobiles args((FILE * fp));
+void load_objects args((FILE * fp));
+void load_resets args((FILE * fp));
+void load_rooms args((FILE * fp));
+void load_shops args((FILE * fp));
+void load_specials args((FILE * fp));
+void load_objfuns args((FILE * fp));
 char *initial args((const char *str));
 
 /*---------*\

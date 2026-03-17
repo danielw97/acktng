@@ -63,7 +63,7 @@ extern int nAllocString;
 extern int sAllocString;
 extern int nAllocPerm;
 extern int sAllocPerm;
-extern int fBootDb;
+extern bool fBootDb;
 
 /* Some build.c functions : */
 void build_strdup(char **dest, char *src, bool freesrc, CHAR_DATA *ch);

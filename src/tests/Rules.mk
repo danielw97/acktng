@@ -91,20 +91,38 @@ unit-test-email: $(OBJDIR)/tests/test_email.o $(OBJDIR)/email.unit-test.o $(OBJD
 	rm -f tests/unit-test-email
 	$(CC) -o tests/unit-test-email $(OBJDIR)/tests/test_email.o $(OBJDIR)/email.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-$(OBJDIR)/rulers.unit-test.o: rulers.c headers/ack.h
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_RULERS -o $(OBJDIR)/rulers.unit-test.o rulers.c
+$(OBJDIR)/save/save_rulers.unit-test.o: save/save_rulers.c headers/ack.h
+	@mkdir -p $(dir $@)
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_RULERS -o $(OBJDIR)/save/save_rulers.unit-test.o save/save_rulers.c
 
-unit-test-rulers: $(OBJDIR)/tests/test_rulers.o $(OBJDIR)/rulers.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
+unit-test-rulers: $(OBJDIR)/tests/test_rulers.o $(OBJDIR)/save/save_rulers.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-rulers
-	$(CC) -o tests/unit-test-rulers $(OBJDIR)/tests/test_rulers.o $(OBJDIR)/rulers.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -o tests/unit-test-rulers $(OBJDIR)/tests/test_rulers.o $(OBJDIR)/save/save_rulers.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 
-$(OBJDIR)/save.unit-test.o: save.c headers/ack.h
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SAVE -ffunction-sections -fdata-sections -o $(OBJDIR)/save.unit-test.o save.c
+$(OBJDIR)/save/save.unit-test.o: save/save.c headers/ack.h
+	@mkdir -p $(dir $@)
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SAVE -ffunction-sections -fdata-sections -o $@ $<
 
-unit-test-save: $(OBJDIR)/tests/test_save.o $(OBJDIR)/save.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
+$(OBJDIR)/save/save_players.unit-test.o: save/save_players.c headers/ack.h
+	@mkdir -p $(dir $@)
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SAVE -ffunction-sections -fdata-sections -o $@ $<
+
+$(OBJDIR)/save/save_objects.unit-test.o: save/save_objects.c headers/ack.h
+	@mkdir -p $(dir $@)
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SAVE -ffunction-sections -fdata-sections -o $@ $<
+
+$(OBJDIR)/save/save_mobs.unit-test.o: save/save_mobs.c headers/ack.h
+	@mkdir -p $(dir $@)
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SAVE -ffunction-sections -fdata-sections -o $@ $<
+
+$(OBJDIR)/save/save_areas.unit-test.o: save/save_areas.c headers/ack.h
+	@mkdir -p $(dir $@)
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SAVE -ffunction-sections -fdata-sections -o $@ $<
+
+unit-test-save: $(OBJDIR)/tests/test_save.o $(OBJDIR)/save/save.unit-test.o $(OBJDIR)/save/save_players.unit-test.o $(OBJDIR)/save/save_objects.unit-test.o $(OBJDIR)/save/save_mobs.unit-test.o $(OBJDIR)/save/save_areas.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-save
-	$(CC) -Wl,--gc-sections -o tests/unit-test-save $(OBJDIR)/tests/test_save.o $(OBJDIR)/save.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-save $(OBJDIR)/tests/test_save.o $(OBJDIR)/save/save.unit-test.o $(OBJDIR)/save/save_players.unit-test.o $(OBJDIR)/save/save_objects.unit-test.o $(OBJDIR)/save/save_mobs.unit-test.o $(OBJDIR)/save/save_areas.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 $(OBJDIR)/skills_obj.unit-test.o: skills_obj.c headers/ack.h
 	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/skills_obj.unit-test.o skills_obj.c
