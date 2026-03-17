@@ -773,13 +773,87 @@ regardless.
 
 [TOPIC BLOCKS — one per set bit in npc->ai_knowledge, in flag order]
 
+[LORE ENTRIES — lore entries matching npc->lore_flags, if non-zero]
+
 [NPC PERSONA — npc->ai_prompt]
 ```
 
 The total assembled prompt must fit within `system_prompt[16384]` in
 `NPC_DLG_REQ`. If the combined length exceeds this, topic blocks are dropped
-from the end of the tag list before the NPC persona is appended, as the persona
-is the most critical layer. The common and area blocks are never truncated.
+from the end of the tag list, then lore entries are dropped, before the NPC
+persona is appended — the persona is the most critical layer. The common and
+area blocks are never truncated.
+
+---
+
+### Lore Injection
+
+NPC-specific lore entries (loaded from the `lore/` directory at boot into the
+`first_lore` linked list) are injected for any `ACT_AI_DIALOGUE` NPC with a
+non-zero `lore_flags` field.
+
+The `lore/` directory holds structured lore files — each entry has a `keyword`,
+an optional `flags` bitmask, and text content. The flags use the same
+`LORE_FLAG_*` constants (`LORE_FLAG_MIDGAARD`, `LORE_FLAG_HUMAN`, etc.) stored
+on each NPC's `lore_flags` field in `CHAR_DATA`. An entry's flags indicate
+which type of NPC holds that specific knowledge — a Midgaard city guard knows
+Midgaard guard lore; a Khenari priest knows Khenari lore.
+
+**Lookup:** At dispatch time, `npc_dialogue_dispatch()` walks `first_lore` and
+selects entries where:
+
+```c
+entry->flags != 0 &&
+(entry->flags & npc->lore_flags) == entry->flags
+```
+
+This selects entries whose flags are a strict subset of the NPC's `lore_flags`
+— meaning the NPC "owns" that knowledge. Entries with `flags == 0` are general
+public lore available to players via the `lore` command but are not
+NPC-specific knowledge and are excluded from injection.
+
+**Selection:** At most **three** entries are injected. If more than three
+match, prefer entries with more flag bits in common with the NPC (the same
+scoring used by `find_best_lore()`) — these are the most specifically relevant.
+Each injected entry is capped at **400 bytes**; entries exceeding this are
+truncated with `"[...]"`.
+
+**Format in the system prompt:**
+
+```
+LORE:
+
+[LORE: midgaard-guard]
+The Lantern Registry maintains sealed records in the Breach Tower — its
+contents are a source of tension between the Continuity and Reckoning
+factions. City guards are instructed to defer inquiries about the tower
+to the Ledgerhouse. [...]
+
+[LORE: midgaard-watch]
+The Seven Watches govern city activity from Kindling at dawn through Ash
+at curfew. Guard patrols intensify at Lantern Watch; the Ash Watch is
+when ward inspectors and janitorial labor operate — not a safe time for
+strangers without a lodging chit.
+```
+
+Lore entries are placed after the topic blocks and before the NPC persona,
+so the model sees them as additional factual context specific to this NPC's
+role and location.
+
+**Contrast with static area blocks:** The area knowledge block provides
+broad city-wide context to every NPC in that city. Lore entries provide
+NPC-specific deep knowledge — the city guard knows things about the watch
+that the innkeeper does not, and neither knows lore tagged for Kowloon
+harbor masters.
+
+**Integration with the `lore` command:** The in-game `lore` command presents
+this same lore data to players, selecting the best-matching entry for the
+player's context using `find_best_lore()`. The AI system draws from the same
+`first_lore` pool but restricts injection to entries that match the specific
+NPC's `lore_flags` — so the NPC's AI responses reflect only the knowledge its
+lore flags claim it possesses, not all available lore. The `lore` and `shelp`
+and `help` player commands thus serve as both the player-facing reference and
+the data source for the NPC's grounded factual knowledge.
 
 ---
 
@@ -1398,7 +1472,7 @@ No unique ID field on `CHAR_DATA` is needed.
 
 - [ ] Add `ACT_AI_DIALOGUE` flag to mob act flags in `typedefs.h`
 - [ ] Define common knowledge block, five area knowledge blocks, and `topic_blocks[NUM_CITIES][NUM_KNOW_FLAGS]` 2D table in `npc_dialogue.c`; populate global fallbacks and city-specific variants where distinct
-- [ ] Implement system prompt assembly (common + area + topic blocks + NPC persona) in `npc_dialogue_dispatch()`
+- [ ] Implement system prompt assembly (common + area + topic blocks + lore entries + NPC persona) in `npc_dialogue_dispatch()`
 - [ ] Map room vnum ranges to area knowledge blocks
 - [ ] Add `char *ai_prompt`, `int ai_knowledge`, and `sh_int accent` fields to `MOB_INDEX_DATA`
 - [ ] Add `NPC_CONVERSATION *conversations` field to `CHAR_DATA`
@@ -1426,6 +1500,7 @@ No unique ID field on `CHAR_DATA` is needed.
 - [ ] Append racial speech inclination to system prompt in `npc_dialogue_dispatch()` based on `npc->pIndexData->race`
 - [ ] Write unit tests for `accent_text()` across all accent types
 - [ ] Write unit tests for `npc_dialogue_sanitize_input()` and keyword short-circuit
+- [ ] Implement lore injection in `npc_dialogue_dispatch()`: walk `first_lore`, select entries where `entry->flags != 0 && (entry->flags & npc->lore_flags) == entry->flags`, inject up to 3 entries (scored by `count_bits()` overlap), truncate at 400 bytes each, format as `[LORE: <keyword>]` blocks
 
 ### Model Training (offline, separate from server build)
 
