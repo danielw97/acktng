@@ -714,9 +714,15 @@ quarantined, or litigated. What it cannot be is ignored.
 ### Topic Knowledge Blocks
 
 Topic blocks provide domain-specific knowledge injected between the area block
-and the NPC persona. Each tag maps to a fixed prose block defined as a string
-constant in `npc_dialogue.c`. NPCs with no `AiKnowledge` tags receive no topic
-blocks (only common + area + persona).
+and the NPC persona. Each tag maps to a prose block defined as a string constant
+in `npc_dialogue.c`. NPCs with no `AiKnowledge` tags receive no topic blocks.
+
+Topic blocks are **city-scoped with a global fallback**. The lookup table is a
+2D array indexed by city and tag. At dispatch, the city-specific variant is used
+if one exists; otherwise the global variant is used. This means a Kowloon harbor
+master gets Kowloon-specific harbor knowledge while a Mafdet harbor master gets
+Mafdet-specific harbor knowledge — but a tag like `KNOW_HISTORY`, which is
+largely city-agnostic, only needs one global block.
 
 **Tag definitions (`int ai_knowledge` bitmask):**
 
@@ -731,93 +737,89 @@ blocks (only common + area + persona).
 #define KNOW_HISTORY    (1 << 7)  /* deep history beyond common knowledge */
 #define KNOW_WILDERNESS (1 << 8)  /* terrain hazards, routes, creatures */
 #define KNOW_POLITICS   (1 << 9)  /* faction detail, city power structures */
+
+#define NUM_KNOW_FLAGS  10
 ```
 
-**Topic block content:**
+**Lookup table structure:**
 
-*KNOW_WEAPONS:*
-```
-WEAPONS AND ARMS: Steel quality varies by ore source and quench method —
-river-cooled blades are more brittle than oil-quenched. Campaign steel is
-functional and repairable; guild-certified arms carry documented provenance and
-carry a price premium. Armor fit matters more than weight; a loose plate hampers
-more than a heavier fitted one. You assess weapons by feel and sound. You know
-which blades hold an edge on the march and which merely look impressive in a
-shop. Adventurers frequently bring you things salvaged from places they decline
-to describe clearly.
-```
+```c
+/* City indices — must match city_for_room() return values */
+#define CITY_GLOBAL    0   /* fallback; used when no city-specific block exists */
+#define CITY_MIDGAARD  1
+#define CITY_KOWLOON   2
+#define CITY_KIESS     3
+#define CITY_RAKUEN    4
+#define CITY_MAFDET    5
+#define NUM_CITIES     6
 
-*KNOW_TRADE:*
-```
-TRADE AND COMMERCE: Caravans on the Roc Road pay warden levies at each waypost;
-side payments to wardens are not posted but are standard practice. Midgaard-
-struck coin is accepted at full value in all five cities; frontier-minted coin
-is discounted 5-10%. Letters of credit are honored only between guild houses
-with correspondent relationships. You know which routes are currently contested
-and what that does to supply prices. The difference between a posted rate and a
-transaction price is a matter of relationship, timing, and who is watching.
+/* topic_blocks[city][tag_index] — NULL means "use CITY_GLOBAL fallback" */
+static const char *topic_blocks[NUM_CITIES][NUM_KNOW_FLAGS];
 ```
 
-*KNOW_MAGIC:*
-```
-ARCANE ITEMS: Registered arcane items bear a Violet Compact seal and are legally
-documented; unregistered items are either antique or deliberately concealed.
-Spell components have specific sourcing: sulfur and saltpeter from the Cinderteeth
-corridor, certain reagents only from the Eccentric Woodland, crystalline materials
-from the Oasis-Pyramid formations. Artifacts recovered from ruins require
-assessment — most are stable, some are not, and the consequences of error are
-disproportionate. A mage without a component pouch is either very skilled or
-very reckless.
+At dispatch, topic blocks are resolved:
+
+```c
+int city = city_for_room(npc->in_room->vnum);
+for (int i = 0; i < NUM_KNOW_FLAGS; i++)
+{
+    if (!(npc->ai_knowledge & (1 << i)))
+        continue;
+    const char *block = topic_blocks[city][i];
+    if (block == NULL)
+        block = topic_blocks[CITY_GLOBAL][i];
+    if (block != NULL)
+        /* append block to system_prompt */;
+}
 ```
 
-*KNOW_TEMPLE:*
+**Authoring guidance:** Only write city-specific variants where the local detail
+meaningfully differs. Topics that are genuinely cross-city (`KNOW_HISTORY`,
+`KNOW_MAGIC`, `KNOW_WILDERNESS`) are fine as a single global block. Topics
+tightly coupled to local institutions (`KNOW_HARBOR`, `KNOW_GUARD`,
+`KNOW_POLITICS`, `KNOW_TRADE`) benefit most from city-specific variants.
+
+**Example — KNOW_HARBOR (city-specific variants needed):**
+
+*Global fallback (used for cities with no specific variant):*
 ```
-TEMPLE AND FAITH: The Temple of the Resounding Heart in Midgaard maintains
-memorial records as institutional penance. Kowloon's Temple Circle operates
-healing houses without demanding payment or allegiance — their neutrality is
-constitutionally protected under the Neon Covenant. Sanctuary law is recognized
-in all five cities but interpreted differently: in Mafdet it extends to the
-shrine threshold; in Kiess the compact temples extend it to the entire Prism
-district. Temple hierarchies across cities maintain correspondence and share
-archival records, making them the most consistent information network on the
-continent.
+HARBOR AND MARITIME: Maritime law differs from inland law primarily in contract
+enforcement: at sea there is no magistrate, so agreements bind under the law of
+the last port of registry. Experienced captains read local weather signals —
+not the sky alone. Harbor fees and berthing schedules vary by port; cargo
+manifests must match what is actually loaded or the discrepancy becomes a legal
+liability at the destination.
 ```
 
-*KNOW_UNDERWORLD:*
+*CITY_KOWLOON variant:*
 ```
-CRIMINAL NETWORKS: Fences accept salvage without asking provenance but price
-it at half and consider themselves generous. Smuggling operations in Kowloon
-are embedded deeply enough in Harbor Syndic operations that the distinction
-is administrative. In Mafdet, the Jackal Synod moves ritual components under
-false quarantine manifests. Information about criminal actors is worth more
-than the goods they move — the right buyer will pay well to know who, where,
-and when. You do not discuss this where it can be overheard.
-```
-
-*KNOW_HARBOR:*
-```
-HARBOR AND MARITIME: The harbor chain at Mafdet raises every night without
-exception since the Fracture Era — ships arriving after dark anchor outside
-and wait. Maritime law differs from inland law primarily in contract enforcement:
-at sea there is no magistrate, so agreements bind under the law of the last
-port of registry. Kowloon's Tide Gate is widest because grain barges need the
-clearance; the Jade Gate handles diplomatic traffic. Weather at Coppersalt Bay
-changes fast; experienced captains read mountain thermals, not the sky.
+KOWLOON HARBOR: The delta runs four gates: Jade Gate (north, diplomatic), Iron
+Gate (caravan and wetland frontier, heaviest traffic), Lantern Gate (west,
+hung with oil lanterns left by travelers who made it home), Tide Gate (harbor-
+facing, widest, built for grain barges). Harbor Syndics regulate docks and
+tariffs; their operations are so intertwined with smuggling networks that
+enforcement is selective by design. River Corsairs under Captain Blacktide Shen
+probe gate timings regularly — reports of their movements are worth coin to the
+Warden of Iron. Coppersalt Bay weather changes fast; experienced pilots read the
+mountain thermals, not the sky.
 ```
 
-*KNOW_GUARD:*
+*CITY_MAFDET variant:*
 ```
-CITY LAW AND PATROL: Midgaard enforces documentation and levy compliance
-rigorously, but assault among foreigners in the market district is treated as
-a civil matter unless it disrupts commerce. Kowloon's Wardens rotate gate posts
-seasonally so no officer builds a corrupt relationship with any gate. Kiess's
-Wall Command treats compact breach as a serious matter — the Executioner at the
-Prism is not ceremonial. You know the difference between a wanted person and a
-person the guard is paid to ignore. Most of what you know about active
-investigations you do not repeat.
+MAFDET HARBOR: The harbor chain raises every night — ships arriving after dark
+anchor outside and wait. It has not failed since the Fracture Era. The Harbor
+Wardens control quay security and maintain the Warden-Commander's Harbor
+Register: every vessel, cargo, crew, and weather event on record for over a
+century. Dual attestation is required on all cargo: both inland and maritime
+legal standards, reconciled at the shore. The Quarantine Ledger handles relic
+and hazardous goods from the pyramid corridor — smallest of the Ledger Houses
+but politically the most sensitive. Trade oaths sealed at the First Claw are
+binding; breaking one means permanent exclusion from Mafdet's trade network.
 ```
 
-*KNOW_HISTORY:*
+**Example — KNOW_HISTORY (global block sufficient):**
+
+*All cities share one block — local historical detail is already in the area block:*
 ```
 DEEP HISTORY: The Spirebound Conclave ran condemned-debtor labor chains through
 every major city under sealed administrative warrants. Every city participated;
@@ -828,31 +830,6 @@ charter's repudiation clause was written specifically in response to it. The
 Black Ledger — Kowloon's unredacted founding census — either exists sealed in
 an undercity cistern or was destroyed; multiple factions are searching
 regardless.
-```
-
-*KNOW_WILDERNESS:*
-```
-SURROUNDING TERRAIN: The Forest of Confusion north of Kiess disorients by
-design — its mist-fields are the remnant of a failed druidic quarantine merged
-with an old forest intelligence. Rope-line corridors are the only reliable
-transit through the southern verge. The Saltglass Reach east of Mafdet is
-passable but requires knowledge of dry-season water sources and the difference
-between stable glasssand and sinkable softcrust. The Eccentric Woodland route
-south to Rakuen has reliable raider activity between the third and fourth
-waypost. Overland travel without a guide costs more than it saves.
-```
-
-*KNOW_POLITICS:*
-```
-FACTION POLITICS: In Midgaard the Continuity faction preserves existing systems;
-the Reckoning faction demands exposure of buried records. In Kowloon, River
-Corsairs under Blacktide Shen probe gate timing with raids, and the Jade Eels
-syndicate may hold a Harbor Syndic seat. In Rakuen, three factions block each
-other from acting: Amendment Track, Quiet Separatists, Preservation Coalition.
-Kiess's three-power governance requires two blocs to move against one — politics
-there is about which two are currently aligned. Mafdet's Quay Concord and Red
-Sand Accounts have opposed interests but need each other operationally. Faction
-affiliation is readable from small signals: colors, seals, how someone pays.
 ```
 
 **Example NPC profiles:**
@@ -886,8 +863,8 @@ affiliation is readable from small signals: colors, seals, how someone pays.
 
 The total assembled prompt must fit within `system_prompt[16384]` in
 `NPC_DLG_REQ`. If the combined length exceeds this, topic blocks are dropped
-from the end of the list before the NPC persona is appended, as the persona is
-the most critical layer. The common and area blocks are never truncated.
+from the end of the tag list before the NPC persona is appended, as the persona
+is the most critical layer. The common and area blocks are never truncated.
 
 ---
 
@@ -1321,7 +1298,7 @@ No unique ID field on `CHAR_DATA` is needed.
 ## Implementation Checklist
 
 - [ ] Add `ACT_AI_DIALOGUE` flag to mob act flags in `typedefs.h`
-- [ ] Define common knowledge block, five area knowledge blocks, and ten topic blocks as string constants in `npc_dialogue.c`
+- [ ] Define common knowledge block, five area knowledge blocks, and `topic_blocks[NUM_CITIES][NUM_KNOW_FLAGS]` 2D table in `npc_dialogue.c`; populate global fallbacks and city-specific variants where distinct
 - [ ] Implement system prompt assembly (common + area + topic blocks + NPC persona) in `npc_dialogue_dispatch()`
 - [ ] Map room vnum ranges to area knowledge blocks
 - [ ] Add `char *ai_prompt` and `int ai_knowledge` fields to `CHAR_DATA`
