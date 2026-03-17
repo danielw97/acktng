@@ -4217,33 +4217,6 @@ void do_learned(CHAR_DATA *ch, char *argument)
    send_to_char(buf1, ch);
 }
 
-/* Do_prompt from Morgenes from Aldara Mud */
-void do_prompt(CHAR_DATA *ch, char *argument)
-{
-   char buf[MAX_STRING_LENGTH];
-   buf[0] = '\0';
-
-   if (argument[0] == '\0')
-   {
-      (IS_SET(ch->config, CONFIG_PROMPT) ? do_config(ch, "-prompt") : do_config(ch, "+prompt"));
-      return;
-   }
-
-   if (!strcmp(argument, "all"))
-      strcpy(buf, "<%hhp %mm %vmv> ");
-   else
-   {
-      if (strlen(argument) > 200)
-         argument[200] = '\0';
-      strcpy(buf, argument);
-      smash_tilde(buf);
-   }
-
-   free_string(ch->prompt);
-   ch->prompt = str_dup(buf);
-   send_to_char("Ok.\n\r", ch);
-   return;
-}
 
 void do_auto(CHAR_DATA *ch, char *argument)
 {

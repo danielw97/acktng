@@ -284,7 +284,14 @@ unit-test-strfuns: $(OBJDIR)/tests/test_strfuns.o $(OBJDIR)/strfuns.unit-test.o
 	rm -f tests/unit-test-strfuns
 	$(CC) -Wl,--gc-sections -o tests/unit-test-strfuns $(OBJDIR)/tests/test_strfuns.o $(OBJDIR)/strfuns.unit-test.o $(L_FLAGS)
 
-unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns
+$(OBJDIR)/prompt.unit-test.o: prompt.c headers/ack.h
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/prompt.unit-test.o prompt.c
+
+unit-test-prompt: $(OBJDIR)/tests/test_prompt.o $(OBJDIR)/prompt.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
+	rm -f tests/unit-test-prompt
+	$(CC) -Wl,--gc-sections -o tests/unit-test-prompt $(OBJDIR)/tests/test_prompt.o $(OBJDIR)/prompt.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+
+unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns unit-test-prompt
 	./tests/unit-test-act-flags
 	./tests/unit-test-area-format
 	./tests/unit-test-help-format
@@ -322,5 +329,6 @@ unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit
 	./tests/unit-test-item-generation
 	./tests/unit-test-interp
 	./tests/unit-test-strfuns
+	./tests/unit-test-prompt
 	$(MAKE) integration-test
 	$(MAKE) integration-test-telnet
