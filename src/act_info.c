@@ -5346,9 +5346,6 @@ static HELP_DATA *find_best_lore(const char *argument, CHAR_DATA *ch, long npc_f
 
    for (pHelp = first_lore; pHelp != NULL; pHelp = pHelp->next)
    {
-      if (pHelp->level > get_trust(ch))
-         continue;
-
       /* str_cmp and str_prefix return FALSE (0) on match */
       if (match_fn(argument, pHelp->keyword))
          continue;
@@ -5375,12 +5372,6 @@ static HELP_DATA *find_best_lore(const char *argument, CHAR_DATA *ch, long npc_f
 
 static void show_lore_entry(HELP_DATA *pHelp, CHAR_DATA *ch)
 {
-   if (pHelp->level >= 0)
-   {
-      send_to_char(pHelp->keyword, ch);
-      send_to_char("\n\r", ch);
-   }
-
    if (pHelp->text[0] == '.')
       send_to_char(pHelp->text + 1, ch);
    else

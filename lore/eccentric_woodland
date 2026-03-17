@@ -1,9 +1,8 @@
-level -1
 keywords eccentric woodland forest
 ---
-@@eThe Eccentric Woodland@@N
+The Eccentric Woodland
 
-The Eccentric Woodland is @@yMidgaard's@@N southern pressure-valve
+The Eccentric Woodland is Midgaard's southern pressure-valve
 frontier: a nearby forest that never fully accepted city law, yet
 never fully escaped city influence. It orbits Midgaard without
 belonging to it.
@@ -11,13 +10,13 @@ belonging to it.
 Travelers leaving the Southern Wild Gate expect a conventional
 transition: city wall, patrol road, outer farms, then wild canopy.
 Instead, the Woodland presents inconsistency. Clearings feel pastoral
-for an hour and @@rpredatory by dusk@@N. Old game paths move or close
+for an hour and predatory by dusk. Old game paths move or close
 between visits. Isolated halls and burrows are maintained by groups
 with their own ritual authority.
 
 Before Midgaard's southern districts were paved, the land beyond the
-ninth milestone was a fog-prone verge navigated by @@dshepherd-priests
-and bell walkers@@N who guided the lost through hollows. When the
+ninth milestone was a fog-prone verge navigated by shepherd-priests
+and bell walkers who guided the lost through hollows. When the
 Lantern Reforms attempted to standardize southern routes, survey
 clerks entered the label "Eccentric Woodland" into civic usage -- a
 registry convenience admitting the area's irregular behavior while
@@ -30,16 +29,16 @@ been bureaucratic rather than military: keep the gate records clean,
 classify interior incidents as variance events, and maintain plausible
 governance at the edge.
 
-Four social forces contest the interior. @@gPath Wardens@@N sell
-navigation and protection along claimed routes. @@dRitual Houses@@N --
+Four social forces contest the interior. Path Wardens sell
+navigation and protection along claimed routes. Ritual Houses --
 enclosed groups using oath language and symbolic spaces -- legitimate
-rank through dueling rooms, binding circles, and ceremony. @@rPredator
-Bands@@N mimic ritual forms to induce fear and compliance. @@ySurvivor
-Clusters@@N inhabit burrows and clearings as temporary barter points.
+rank through dueling rooms, binding circles, and ceremony. Predator
+Bands mimic ritual forms to induce fear and compliance. Survivor
+Clusters inhabit burrows and clearings as temporary barter points.
 
 None fully controls the Woodland. Power is local, contingent, and
 often theatrical. The forest demonstrates what happens when Midgaard's
-core doctrine -- @@yorder as infrastructure@@N -- is applied only at
+core doctrine -- order as infrastructure -- is applied only at
 boundaries. Roads no longer reliably return to watched squares.
 Posted notices cannot stabilize terrain that resists repeatable
 pathing. Registry systems lose force where witnesses are scarce.
@@ -47,252 +46,247 @@ pathing. Registry systems lose force where witnesses are scarce.
 The Woodland persists as an institutional blind spot everyone can
 point to and no office can absorb.
 
-level -1
 keywords eccentric woodland forest
 flags MIDGAARD
 ---
-@@eThe Eccentric Woodland: Southern Frontier Variance Report@@N
+The Eccentric Woodland: Southern Frontier Variance Report
 
-@@yBureau of Southern Perimeter, Patrol Irregularity Division@@N
-@@dFiled under: Institutional Blind Spot, Variance Classification@@N
+Bureau of Southern Perimeter, Patrol Irregularity Division
+Filed under: Institutional Blind Spot, Variance Classification
 
 The Eccentric Woodland is Midgaard's southern embarrassment. Not a
-threat, precisely. Not a failure, exactly. An @@yinstitutional blind
-spot@@N that every bureau can point to and no office can absorb.
+threat, precisely. Not a failure, exactly. An institutional blind
+spot that every bureau can point to and no office can absorb.
 
-The label itself was a registry convenience. When @@dLantern Reform@@N
+The label itself was a registry convenience. When Lantern Reform
 survey clerks tried to standardize southern routes beyond the ninth
 milestone, the land refused to cooperate. Game paths moved between
 visits. Landmarks vanished on follow-up inspection. The clerks entered
 "Eccentric Woodland" into civic usage -- admitting irregular behavior
-while assigning it a @@yledger category@@N.
+while assigning it a ledger category.
 
 Patrol reports from every era repeat the same variance codes.
-@@dCode 7: path drift confirmed. Code 12: contradictory witness
+Code 7: path drift confirmed. Code 12: contradictory witness
 accounts. Code 19: landmark absent on follow-up, surveyor credibility
-unimpeached.@@N Our Patrol Irregularity Division maintains a dedicated
+unimpeached. Our Patrol Irregularity Division maintains a dedicated
 cabinet for these reports. It is the only cabinet in the Bureau that
 requires annual expansion.
 
-Midgaard's response has always been @@ybureaucratic rather than
-military@@N. Keep the Southern Wild Gate records clean. Classify
-interior incidents as variance events. The @@WOath of Light@@N requires
+Midgaard's response has always been bureaucratic rather than
+military. Keep the Southern Wild Gate records clean. Classify
+interior incidents as variance events. The Oath of Light requires
 no ward go unlit -- but the Woodland was never designated a ward. The
-@@WOath of the Counted Step@@N requires no traveler go uncounted -- but
+Oath of the Counted Step requires no traveler go uncounted -- but
 travelers who enter frequently emerge at different gates than expected.
 
-Before the paving, @@dshepherd-priests and bell walkers@@N guided the
+Before the paving, shepherd-priests and bell walkers guided the
 lost through hollows. Their descendants still serve as wardens -- the
 only personnel who volunteer for southern rotation without complaint.
 
-Four forces contest the interior. @@gPath Wardens@@N sell navigation.
-@@dRitual Houses@@N legitimate rank through binding circles. @@rPredator
-Bands@@N mimic ritual forms. @@ySurvivor Clusters@@N inhabit burrows our
+Four forces contest the interior. Path Wardens sell navigation.
+Ritual Houses legitimate rank through binding circles. Predator
+Bands mimic ritual forms. Survivor Clusters inhabit burrows our
 tariff clerks cannot reach to tax.
 
-The Woodland demonstrates what happens when @@yorder as
-infrastructure@@N is applied only at boundaries. Roads no longer return
+The Woodland demonstrates what happens when order as
+infrastructure is applied only at boundaries. Roads no longer return
 to watched squares. Registry systems lose force where witnesses are
 scarce.
 
 The Continuity faction maintains adequate perimeter management. The
-Reckoning faction asks what we are @@rnot counting@@N between our gates
+Reckoning faction asks what we are not counting between our gates
 and the tree line. The Patrol Irregularity Division files its reports,
-expands its cabinet, and @@ddoes not answer@@N.
-level -1
+expands its cabinet, and does not answer.
 keywords eccentric woodland forest
 flags KIESS
 ---
-@@eThe Eccentric Woodland -- Trade Syndic Stability Assessment@@N
+The Eccentric Woodland -- Trade Syndic Stability Assessment
 
 The Eccentric Woodland is Midgaard's problem, not ours. It lies
 south of their gates, within their claimed jurisdiction, resisting
-governance for as long as records exist. The @@yTrade Syndics@@N maintain
+governance for as long as records exist. The Trade Syndics maintain
 a file anyway, because Midgaard's inability to govern its own
-backyard has @@rdirect implications@@N for Roc Road trade stability.
+backyard has direct implications for Roc Road trade stability.
 
 The Woodland never accepted city law yet never fully escaped city
 influence. Patrol reports from every era note the same failures:
 path drift, contradictory witness accounts, landmarks that vanish
-on follow-up. Midgaard's response has been @@ybureaucratic rather
-than practical@@N -- gate records kept clean, interior incidents
+on follow-up. Midgaard's response has been bureaucratic rather
+than practical -- gate records kept clean, interior incidents
 classified as variance events, plausible governance at the edge.
 
-The Syndics recognize this as @@rperformative jurisdiction@@N: the
+The Syndics recognize this as performative jurisdiction: the
 appearance of control substituting for actual control. Sigils
 repainted, reports filed, while inside four forces contest ground
-no city office will absorb. @@gPath Wardens@@N selling navigation.
-@@dRitual Houses@@N legitimating rank through ceremony. @@rPredator
-Bands@@N mimicking ritual forms. @@ySurvivor Clusters@@N bartering
+no city office will absorb. Path Wardens selling navigation.
+Ritual Houses legitimating rank through ceremony. Predator
+Bands mimicking ritual forms. Survivor Clusters bartering
 in burrows.
 
-@@dWall Command@@N asks the practical question: if Midgaard cannot
-stabilize a forest @@ythis close@@N to its own southern gate, what
+Wall Command asks the practical question: if Midgaard cannot
+stabilize a forest this close to its own southern gate, what
 happens when their Roc Road commitments demand the same patrols?
 The Northern Covenant, the Lantern Road, the Forest patrols -- all
 depend on Midgaard fielding wardens. Every warden watching the
 Woodland is a warden not watching the road.
 
 Kiess convoy marshals report Midgaard's eastern road discipline has
-been @@yslowly degrading@@N for three seasons. The Syndics cannot prove
+been slowly degrading for three seasons. The Syndics cannot prove
 causation, but the correlation between southern distraction and
 eastern neglect is noted in every quarterly assessment.
 
 The deeper lesson is institutional. Midgaard's core doctrine is
-@@yorder as infrastructure@@N. The Eccentric Woodland proves that
+order as infrastructure. The Eccentric Woodland proves that
 doctrine has limits. When terrain resists standardization, Midgaard
 reclassifies the anomaly rather than adapting the method. Kiess was
-founded on the opposite principle: @@yadapt the method to the terrain,
-or the terrain will adapt you@@N.
+founded on the opposite principle: adapt the method to the terrain,
+or the terrain will adapt you.
 
-The Woodland persists as everyone's blind spot. The @@ePrism Archive@@N
+The Woodland persists as everyone's blind spot. The Prism Archive
 records it as what happens when governance reaches its boundary
 and refuses to acknowledge the edge.
-level -1
 keywords eccentric woodland forest
 flags KOWLOON
 ---
-@@eThe Eccentric Woodland -- As Kowloon Sees It@@N
+The Eccentric Woodland -- As Kowloon Sees It
 
-@@gJade Magistracy, Midgaard Frontier Analysis@@N
+Jade Magistracy, Midgaard Frontier Analysis
 
 The Eccentric Woodland lies south of Midgaard's gates -- the opposite
 direction from Kowloon, on the far side of a city we reach only
 through four hundred miles of forest. By any measure, it is
-@@dirrelevant to our trade, defense, and daily operations@@N.
+irrelevant to our trade, defense, and daily operations.
 
 The Jade Magistracy files it anyway. Midgaard's failures instruct.
 
 Travelers leaving the Southern Wild Gate expect conventional frontier.
-Instead, the Woodland offers @@rinconsistency@@N: clearings pastoral by
+Instead, the Woodland offers inconsistency: clearings pastoral by
 day and predatory by dusk, paths that move between visits, isolated
 halls under their own ritual authority. The Courier Lantern Office
-reads these reports and concludes: @@ythis is what unmaintained
-jurisdiction looks like@@N.
+reads these reports and concludes: this is what unmaintained
+jurisdiction looks like.
 
 When the Lantern Reforms tried to standardize southern routes, clerks
-entered "Eccentric Woodland" as a registry label -- @@ya ledger
-category admitting they could not govern the territory it named@@N.
+entered "Eccentric Woodland" as a registry label -- a ledger
+category admitting they could not govern the territory it named.
 Kowloon does not name territory it cannot administer. We mark it
-@@rcrimson@@N and post warnings at the relevant gate.
+crimson and post warnings at the relevant gate.
 
-Four forces contest the interior: @@gPath Wardens@@N selling navigation,
-@@dRitual Houses@@N legitimating rank through ceremony, @@rPredator Bands@@N
-mimicking ritual to extract compliance, and @@ySurvivor Clusters@@N
+Four forces contest the interior: Path Wardens selling navigation,
+Ritual Houses legitimating rank through ceremony, Predator Bands
+mimicking ritual to extract compliance, and Survivor Clusters
 bartering in clearings. None controls the whole. The Wardens of Iron
 recognize this from Coppersalt Bay's outer island chains -- contested
 space where power is local and theatrical. The difference: Kowloon
-@@ydoes not pretend to govern its ungovernable edges@@N. Midgaard does.
+does not pretend to govern its ungovernable edges. Midgaard does.
 
-The Woodland shows what happens when @@yorder as infrastructure@@N is
+The Woodland shows what happens when order as infrastructure is
 applied only at boundaries. Roads no longer return to watched squares.
 Registry systems lose force where witnesses are scarce. The Courier
-Lantern Office translates this: @@ea lantern you cannot maintain is
-a promise you should not make@@N.
+Lantern Office translates this: a lantern you cannot maintain is
+a promise you should not make.
 
 Midgaard's response is bureaucratic: clean gate records, classify
 incidents as variance, maintain plausible governance at the edge. Our
-own @@dIron Gate@@N faces similar frontier pressure. The difference is
+own Iron Gate faces similar frontier pressure. The difference is
 doctrine. We do not classify the ungovernable as variance. We call it
-@@rthreat@@N, assign it a color, and maintain the gate.
+threat, assign it a color, and maintain the gate.
 
 The Eccentric Woodland is Midgaard's problem. It reminds Kowloon:
-@@ya city whose lights reach only to the wall is honest@@N. A city
+a city whose lights reach only to the wall is honest. A city
 claiming light beyond the wall had better keep those lanterns lit.
-level -1
 keywords eccentric woodland forest
 flags RAKUEN
 ---
-@@eThe Eccentric Woodland: Our Neighbor Who Also Refuses@@N
+The Eccentric Woodland: Our Neighbor Who Also Refuses
 
-@@yFrom the Garden Ledger, Southern Boundary Notes@@N
-@@dAnnotated with fondness by the Bloom Pavilion@@N
+From the Garden Ledger, Southern Boundary Notes
+Annotated with fondness by the Bloom Pavilion
 
-Between Rakuen and Midgaard lies the @@eEccentric Woodland@@N, and
+Between Rakuen and Midgaard lies the Eccentric Woodland, and
 the Garden Ledger Clerks record it with something rare in our
-archives: @@gaffection@@N.
+archives: affection.
 
 Midgaard calls it an institutional blind spot. Patrol reports note
 path drift, contradictory witness accounts, landmarks that vanish
 between inspections. The city's response: keep gate records clean,
-classify incidents as @@yvariance events@@N, maintain plausible
+classify incidents as variance events, maintain plausible
 governance at the edge.
 
 The Woodland does not accept this. Clearings feel pastoral for an
-hour and @@rpredatory by dusk@@N. Game paths move between visits.
-The forest presents @@yinconsistency@@N as its character, and
+hour and predatory by dusk. Game paths move between visits.
+The forest presents inconsistency as its character, and
 Midgaard's registry systems lose force where witnesses are scarce.
 
-We @@yknow@@N this feeling.
+We know this feeling.
 
 Rakuen has refused every attempt by the five-city institutions to
-define it. We are called a @@rfailed paradise@@N by those who measure
-success in ledger balances. The Woodland is called a @@yvariance
-event@@N by those who measure reality in patrol reports. Both of
-us exist where Midgaard's categories @@rbreak@@N.
+define it. We are called a failed paradise by those who measure
+success in ledger balances. The Woodland is called a variance
+event by those who measure reality in patrol reports. Both of
+us exist where Midgaard's categories break.
 
 Before the southern districts were paved, the land beyond the ninth
-milestone was navigated by @@dshepherd-priests and bell walkers@@N
-who guided the lost through hollows -- working on @@gtrust@@N rather
-than @@ycontract@@N, leading because the lost needed leading.
+milestone was navigated by shepherd-priests and bell walkers
+who guided the lost through hollows -- working on trust rather
+than contract, leading because the lost needed leading.
 
-The interior is contested by @@gPath Wardens@@N who sell navigation,
-@@dRitual Houses@@N that legitimate rank through ceremony, @@rPredator
-Bands@@N that mimic ritual for coercion, and @@ySurvivor Clusters@@N
+The interior is contested by Path Wardens who sell navigation,
+Ritual Houses that legitimate rank through ceremony, Predator
+Bands that mimic ritual for coercion, and Survivor Clusters
 in temporary burrows. None fully controls. Power is local,
 contingent, theatrical.
 
-The Bloom Pavilion philosopher @@gMerren Daye@@N wrote: @@d"The Woodland
+The Bloom Pavilion philosopher Merren Daye wrote: "The Woodland
 is what Midgaard refuses to understand -- a place real without
 being categorizable, alive without being governable. Rakuen
-understands this because we are the same."@@N
+understands this because we are the same."
 
 When Midgaard used Rakuen as a resettlement valve, many displaced
 families passed through the Woodland. Some stayed rather than
 continue to either city. The Garden Ledger Clerks do not judge.
-A place that refuses governance is @@gnot the worst refuge@@N from it.
+A place that refuses governance is not the worst refuge from it.
 
 The Ember Wardens report that the Woodland's path drift sometimes
 opens trails toward Rakuen that were not there before. We do not
-map them. We do not report them. We @@gwalk them@@N when they appear,
-and leave @@gwater@@N at the treeline for whoever comes the other way.
+map them. We do not report them. We walk them when they appear,
+and leave water at the treeline for whoever comes the other way.
 
 The Woodland persists as what Midgaard cannot absorb. Rakuen
 persists as what Midgaard will not embrace. We are, in our
-different ways, @@ythe same refusal@@N.
-level -1
+different ways, the same refusal.
 keywords eccentric woodland forest
 flags MAFDET
 ---
-@@eThe Eccentric Woodland -- Ledger House Marginal Assessment@@N
+The Eccentric Woodland -- Ledger House Marginal Assessment
 
-The @@yLedger Houses@@N file the Eccentric Woodland under @@dNon-
-Contributing Territory, No Attestation Required@@N. It produces
+The Ledger Houses file the Eccentric Woodland under Non-
+Contributing Territory, No Attestation Required. It produces
 nothing that reaches our docks in identifiable volume. It controls
 no route we depend on. By every metric the Sand-Sea Carters' Guild
-uses to prioritize intelligence, it is @@yirrelevant@@N.
+uses to prioritize intelligence, it is irrelevant.
 
 And yet the Ledger Clerks keep the file, because what the Woodland
 demonstrates is instructive.
 
-@@yMidgaard@@N -- the continent's self-proclaimed center of stone law
--- cannot govern a forest @@rimmediately south of its own gates@@N.
+Midgaard -- the continent's self-proclaimed center of stone law
+-- cannot govern a forest immediately south of its own gates.
 Patrol reports from every era note the same failures: path drift,
 contradictory witness accounts, landmarks that vanish on follow-up.
 The city's response is always bureaucratic: keep the gate records
 clean, classify incidents as variance events, maintain plausible
 governance at the edge.
 
-Our Harbor Wardens have a term for this: @@rpaper jurisdiction@@N.
+Our Harbor Wardens have a term for this: paper jurisdiction.
 The map says Midgaard governs. The ground says otherwise. In Mafdet,
 the Dual-Attestation Protocol exists because a document claiming
 authority is worthless unless someone physically verifies the claim.
-@@dA manifest without inspection is decoration.@@N
+A manifest without inspection is decoration.
 
-The Woodland's four competing forces -- @@gPath Wardens@@N selling
-navigation, @@dRitual Houses@@N legitimating rank through ceremony,
-@@rPredator Bands@@N mimicking ritual for extraction, @@ySurvivor
-Clusters@@N bartering in clearings -- describe a zone where attestation
+The Woodland's four competing forces -- Path Wardens selling
+navigation, Ritual Houses legitimating rank through ceremony,
+Predator Bands mimicking ritual for extraction, Survivor
+Clusters bartering in clearings -- describe a zone where attestation
 has collapsed. No one verifies anyone else's claims. Authority is
 local, theatrical, and temporary. This is the condition the
 Strandline Compact prevents in our own harbor.
@@ -302,13 +296,13 @@ docks with no chain of custody, no recognized seals, and no
 attestation authority behind the manifest. The Quarantine Ledger
 would flag every item.
 
-The lesson for Mafdet: @@ygovernance that stops at the wall is not
-governance@@N. Our Harbor Wardens patrol beyond the harbor chain. Our
+The lesson for Mafdet: governance that stops at the wall is not
+governance. Our Harbor Wardens patrol beyond the harbor chain. Our
 Reach Wardens walk the cairn lines. Our Carters carry Guild seals
-into the deep desert. @@gJurisdiction must reach as far as the goods
-travel@@N, or it means nothing.
+into the deep desert. Jurisdiction must reach as far as the goods
+travel, or it means nothing.
 
-The Eccentric Woodland does not threaten us. It @@rteaches@@N us -- by
+The Eccentric Woodland does not threaten us. It teaches us -- by
 example of what we must never become: a port that controls its quays
 but not its approaches.
 
