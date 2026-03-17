@@ -72,15 +72,14 @@ flags MIDGAARD UMBRAL
 ---
 The five-city network's most significant absent elements: Midgaard's Unindexed Years (ledger gaps
 coinciding with peak Conclave transfer activity), Kowloon's Black Ledger (unconfirmed sealed cistern,
-original unredacted founding census), Rakuen's Garden Ledger access (blocked by circular cross-
-reference dependency Continuity factions maintain by controlling both sealed archives), Kiess's
-"Received Southern Documents, Violet Era" (neither confirmed nor denied to contain the unedited
-Paradise Thesis), and the Kel'Shadra witnessing office records (somewhere in crypt apparatus,
-inaccessible through standard descent pathways). The three-point triangular evidence structure—
-Midgaard's trade ledger, Kowloon's Black Ledger, Rakuen's Garden Ledger—is the most complete
-potential documentary case for institutional accountability in the network's history. All three are
-currently inaccessible through different mechanisms. Seal sovereignty disputes are also disputes about
-whose institutional seal determines which absences are legally significant.
+unredacted founding census), Rakuen's Garden Ledger access (blocked by circular cross-reference
+dependency Continuity factions maintain by controlling both sealed archives), Kiess's "Received
+Southern Documents, Violet Era" (neither confirmed nor denied to contain the unedited Paradise Thesis),
+and the Kel'Shadra witnessing office records (inaccessible through standard descent pathways). The
+three-point triangular evidence structure—Midgaard's trade ledger, Kowloon's Black Ledger, Rakuen's
+Garden Ledger—is the most complete potential documentary case for institutional accountability in
+the network's history. All three currently inaccessible through different mechanisms. Seal sovereignty
+disputes are disputes about whose institutional seal determines which absences are legally significant.
 
 flags KIESS USHABTI
 ---
@@ -98,20 +97,16 @@ authority claims.
 
 flags KOWLOON RIVENNID
 ---
-The five-city network's functional interdependencies are measurable through cascade analysis.
-Remove Midgaard: lose inland registry legitimacy; Kiess loses its intelligence pipeline and
-provisioning partner; Rakuen loses its primary subsidy pipeline.
-Remove Kowloon: lose northern throughput, Southern Grain Compact activation, and the primary
-northern maritime conversion link.
-Remove Kiess: lose western frontier intelligence, anti-sealed-warrant legal constraint on Midgaard's
-governance, and the certification mechanism that could validate a fourth Rakuen petition.
-Remove Rakuen: lose southern route resilience and the most complete archive connecting the Conclave
-transfer chain's three evidence points.
-Remove Mafdet: lose maritime export conversion, Quarantine Ledger hazard containment, and the
-mercy-freight mechanism serving as Rakuen's emergency release valve.
-The network's co-dependency is not symmetric: Midgaard can absorb loss of any one city more easily
-than any other city can absorb loss of Midgaard; Rakuen is most vulnerable to any combination of
-two or more partner failures occurring simultaneously.
+Five-city cascade analysis: remove Midgaard and lose inland registry legitimacy; Kiess loses its
+intelligence pipeline; Rakuen loses its primary subsidy pipeline. Remove Kowloon and lose northern
+throughput, Southern Grain Compact activation, and the northern maritime conversion link. Remove
+Kiess and lose western frontier intelligence, anti-sealed-warrant legal constraint on Midgaard's
+governance, and the certification mechanism that could validate a fourth Rakuen petition. Remove
+Rakuen and lose southern route resilience and the most complete archive connecting the Conclave
+transfer chain's three evidence points. Remove Mafdet and lose maritime export conversion, Quarantine
+Ledger hazard containment, and the mercy-freight mechanism serving as Rakuen's emergency release
+valve. Co-dependency is not symmetric: Midgaard can absorb loss of any one city more easily than
+any other city can; Rakuen is most vulnerable to any combination of two or more partner failures.
 
 flags RAKUEN DELTARI
 ---
