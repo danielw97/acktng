@@ -4,11 +4,17 @@
 #include <string.h>
 
 #include "globals.h"
+#include "config.h"
+
+HELP_DATA *first_lore = NULL;
+HELP_DATA *last_lore = NULL;
 
 int find_race_index_by_name(const char *name);
 int score_should_show_invasion_rewards(CHAR_DATA *ch);
 void parse_shelp_query(char *argument, char *search_term, size_t search_term_size,
                        char *full_argument, size_t full_argument_size);
+HELP_DATA *act_info_test_find_best_lore(const char *argument, long npc_flags);
+long act_info_test_lore_flags_for_char(CHAR_DATA *ch);
 
 char *one_argument(char *argument, char *arg_first)
 {
@@ -167,6 +173,84 @@ static void test_score_invasion_rewards_visibility(void)
    assert(score_should_show_invasion_rewards(&player) == 1);
 }
 
+static void test_find_best_lore_selects_by_flags(void)
+{
+   HELP_DATA entry_default = {0};
+   HELP_DATA entry_midgaard = {0};
+   HELP_DATA entry_midgaard_human = {0};
+
+   entry_default.keyword = "topic";
+   entry_default.text = "default text";
+   entry_default.flags = 0;
+   entry_default.next = &entry_midgaard;
+
+   entry_midgaard.keyword = "topic";
+   entry_midgaard.text = "midgaard text";
+   entry_midgaard.flags = LORE_FLAG_MIDGAARD;
+   entry_midgaard.next = &entry_midgaard_human;
+
+   entry_midgaard_human.keyword = "topic";
+   entry_midgaard_human.text = "midgaard human text";
+   entry_midgaard_human.flags = LORE_FLAG_MIDGAARD | LORE_FLAG_HUMAN;
+   entry_midgaard_human.next = NULL;
+
+   first_lore = &entry_default;
+
+   /* npc_flags=0 returns only the unflagged default entry */
+   assert(act_info_test_find_best_lore("topic", 0) == &entry_default);
+
+   /* npc_flags=MIDGAARD returns the most specific matching entry */
+   assert(act_info_test_find_best_lore("topic", LORE_FLAG_MIDGAARD) == &entry_midgaard);
+
+   /* npc_flags=MIDGAARD|HUMAN returns the most specific matching entry */
+   assert(act_info_test_find_best_lore("topic", LORE_FLAG_MIDGAARD | LORE_FLAG_HUMAN) ==
+          &entry_midgaard_human);
+
+   /* npc_flags with a flag not in any entry falls back to default */
+   assert(act_info_test_find_best_lore("topic", LORE_FLAG_KIESS) == &entry_default);
+
+   first_lore = NULL;
+}
+
+static void test_pc_lore_flags_are_always_zero(void)
+{
+   CHAR_DATA pc = {0};
+   PC_DATA pc_data = {0};
+   CHAR_DATA npc_in_room = {0};
+   ROOM_INDEX_DATA room = {0};
+
+   pc.pcdata = &pc_data;
+
+   /* PC with no room gets 0 */
+   assert(act_info_test_lore_flags_for_char(&pc) == 0);
+
+   /* PC in a room with a flagged NPC still gets 0 */
+   npc_in_room.act = ACT_IS_NPC;
+   npc_in_room.lore_flags = LORE_FLAG_MIDGAARD | LORE_FLAG_HUMAN;
+   npc_in_room.next_in_room = NULL;
+   room.first_person = &npc_in_room;
+   pc.in_room = &room;
+
+   assert(act_info_test_lore_flags_for_char(&pc) == 0);
+}
+
+static void test_npc_lore_flags_come_from_room(void)
+{
+   CHAR_DATA npc_caller = {0};
+   CHAR_DATA npc_storyteller = {0};
+   ROOM_INDEX_DATA room = {0};
+
+   npc_caller.act = ACT_IS_NPC;
+   npc_storyteller.act = ACT_IS_NPC;
+   npc_storyteller.lore_flags = LORE_FLAG_MIDGAARD | LORE_FLAG_HUMAN;
+   npc_storyteller.next_in_room = NULL;
+   room.first_person = &npc_storyteller;
+   npc_caller.in_room = &room;
+
+   assert(act_info_test_lore_flags_for_char(&npc_caller) ==
+          (LORE_FLAG_MIDGAARD | LORE_FLAG_HUMAN));
+}
+
 int main(void)
 {
    test_find_race_index_matches_exact_name_or_title();
@@ -176,6 +260,9 @@ int main(void)
    test_parse_shelp_query_handles_multi_word_arguments();
    test_parse_shelp_query_unwraps_quoted_multi_word_arguments();
    test_score_invasion_rewards_visibility();
+   test_find_best_lore_selects_by_flags();
+   test_pc_lore_flags_are_always_zero();
+   test_npc_lore_flags_come_from_room();
 
    puts("test_act_info: all tests passed");
    return 0;

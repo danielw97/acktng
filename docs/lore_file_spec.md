@@ -114,18 +114,22 @@ Flag names are case-insensitive during parsing.
 
 - On boot, the server loads all files from `lore/` (sorted by filename).
 - The `lore` command searches entries by keyword (exact match, then prefix match).
-- When multiple entries share keywords, the best match is selected by flag specificity:
-  1. Collect `lore_flags` from all NPCs in the player's room (OR'd together).
-  2. Entry flags must be a **subset** of the NPC flags.
+- **PCs always receive the default (unflagged) entry**, regardless of which NPCs
+  are in the room. Room NPC flags are ignored for player characters.
+- When an NPC uses `lore`, the best match is selected by flag specificity:
+  1. Collect `lore_flags` from all NPCs in the caller's room (OR'd together).
+  2. Entry flags must be a **subset** of the collected NPC flags.
   3. The entry with the **most matching flag bits** wins (most specific).
   4. An unflagged entry is the lowest-priority fallback.
-- If no flagged NPC is present, only the default (unflagged) entry matches.
+- If no flagged NPC is present (or the caller is a PC), only the default
+  (unflagged) entry matches.
 
 ### Match examples
 
-- NPC has `MIDGAARD HUMAN` → best match is `flags MIDGAARD HUMAN` (2 bits),
-  then `flags MIDGAARD` (1 bit), then unflagged (0 bits).
-- NPC has `KIESS` → matches `flags KIESS` but not `flags KIESS HUMAN`
+- PC in any room → always gets the unflagged default entry.
+- NPC with `MIDGAARD HUMAN` in room → best match is `flags MIDGAARD HUMAN`
+  (2 bits), then `flags MIDGAARD` (1 bit), then unflagged (0 bits).
+- NPC with `KIESS` in room → matches `flags KIESS` but not `flags KIESS HUMAN`
   (HUMAN is not in NPC flags).
 
 ## NPC lore flags

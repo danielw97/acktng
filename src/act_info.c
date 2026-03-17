@@ -5386,7 +5386,8 @@ void do_lore(CHAR_DATA *ch, char *argument)
    if (argument[0] == '\0')
       argument = "lore";
 
-   npc_flags = get_room_lore_flags(ch);
+   /* PCs always see only the default (unflagged) lore entry */
+   npc_flags = IS_NPC(ch) ? get_room_lore_flags(ch) : 0;
 
    /* Exact match pass */
    pHelp = find_best_lore(argument, ch, npc_flags, str_cmp);
@@ -5581,4 +5582,14 @@ void do_loot(CHAR_DATA *ch, char *argument)
 
    send_to_char("You cannot loot this corpse.\n\r", ch);
    return;
+}
+
+HELP_DATA *act_info_test_find_best_lore(const char *argument, long npc_flags)
+{
+   return find_best_lore(argument, NULL, npc_flags, str_cmp);
+}
+
+long act_info_test_lore_flags_for_char(CHAR_DATA *ch)
+{
+   return IS_NPC(ch) ? get_room_lore_flags(ch) : 0;
 }
