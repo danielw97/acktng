@@ -83,7 +83,6 @@ Decision lens combines procedure, registry, and precedent with race-specific jud
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MIDGAARD and HUMAN flags are present.
 
 keywords brawler brawlers pugilist
 flags MIDGAARD KHENARI
@@ -97,7 +96,6 @@ Decision lens combines procedure, registry, and precedent with race-specific jud
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MIDGAARD and KHENARI flags are present.
 
 keywords brawler brawlers pugilist
 flags MIDGAARD KHEPHARI
@@ -111,7 +109,6 @@ Decision lens combines procedure, registry, and precedent with race-specific jud
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MIDGAARD and KHEPHARI flags are present.
 
 keywords brawler brawlers pugilist
 flags MIDGAARD ASHBORN
@@ -125,7 +122,6 @@ Decision lens combines procedure, registry, and precedent with race-specific jud
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MIDGAARD and ASHBORN flags are present.
 
 keywords brawler brawlers pugilist
 flags MIDGAARD UMBRAL
@@ -139,7 +135,6 @@ Decision lens combines procedure, registry, and precedent with race-specific jud
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MIDGAARD and UMBRAL flags are present.
 
 keywords brawler brawlers pugilist
 flags MIDGAARD RIVENNID
@@ -153,7 +148,6 @@ Decision lens combines procedure, registry, and precedent with race-specific jud
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MIDGAARD and RIVENNID flags are present.
 
 keywords brawler brawlers pugilist
 flags MIDGAARD DELTARI
@@ -167,7 +161,6 @@ Decision lens combines procedure, registry, and precedent with race-specific jud
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MIDGAARD and DELTARI flags are present.
 
 keywords brawler brawlers pugilist
 flags MIDGAARD USHABTI
@@ -181,7 +174,6 @@ Decision lens combines procedure, registry, and precedent with race-specific jud
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MIDGAARD and USHABTI flags are present.
 
 keywords brawler brawlers pugilist
 flags MIDGAARD SERATHI
@@ -195,7 +187,6 @@ Decision lens combines procedure, registry, and precedent with race-specific jud
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MIDGAARD and SERATHI flags are present.
 
 keywords brawler brawlers pugilist
 flags MIDGAARD KETHARI
@@ -209,7 +200,6 @@ Decision lens combines procedure, registry, and precedent with race-specific jud
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MIDGAARD and KETHARI flags are present.
 
 keywords brawler brawlers pugilist
 flags KIESS HUMAN
@@ -223,7 +213,6 @@ Decision lens combines readiness, patrol discipline, and fallback planning with 
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KIESS and HUMAN flags are present.
 
 keywords brawler brawlers pugilist
 flags KIESS KHENARI
@@ -237,7 +226,6 @@ Decision lens combines readiness, patrol discipline, and fallback planning with 
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KIESS and KHENARI flags are present.
 
 keywords brawler brawlers pugilist
 flags KIESS KHEPHARI
@@ -251,7 +239,6 @@ Decision lens combines readiness, patrol discipline, and fallback planning with 
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KIESS and KHEPHARI flags are present.
 
 keywords brawler brawlers pugilist
 flags KIESS ASHBORN
@@ -265,7 +252,6 @@ Decision lens combines readiness, patrol discipline, and fallback planning with 
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KIESS and ASHBORN flags are present.
 
 keywords brawler brawlers pugilist
 flags KIESS UMBRAL
@@ -279,7 +265,6 @@ Decision lens combines readiness, patrol discipline, and fallback planning with 
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KIESS and UMBRAL flags are present.
 
 keywords brawler brawlers pugilist
 flags KIESS RIVENNID
@@ -293,7 +278,6 @@ Decision lens combines readiness, patrol discipline, and fallback planning with 
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KIESS and RIVENNID flags are present.
 
 keywords brawler brawlers pugilist
 flags KIESS DELTARI
@@ -307,7 +291,6 @@ Decision lens combines readiness, patrol discipline, and fallback planning with 
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KIESS and DELTARI flags are present.
 
 keywords brawler brawlers pugilist
 flags KIESS USHABTI
@@ -321,7 +304,6 @@ Decision lens combines readiness, patrol discipline, and fallback planning with 
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KIESS and USHABTI flags are present.
 
 keywords brawler brawlers pugilist
 flags KIESS SERATHI
@@ -335,7 +317,6 @@ Decision lens combines readiness, patrol discipline, and fallback planning with 
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KIESS and SERATHI flags are present.
 
 keywords brawler brawlers pugilist
 flags KIESS KETHARI
@@ -349,7 +330,6 @@ Decision lens combines readiness, patrol discipline, and fallback planning with 
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KIESS and KETHARI flags are present.
 
 keywords brawler brawlers pugilist
 flags KOWLOON HUMAN
@@ -363,7 +343,6 @@ Decision lens combines survival legality, wall protocol, and ration order with r
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KOWLOON and HUMAN flags are present.
 
 keywords brawler brawlers pugilist
 flags KOWLOON KHENARI
@@ -377,7 +356,6 @@ Decision lens combines survival legality, wall protocol, and ration order with r
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KOWLOON and KHENARI flags are present.
 
 keywords brawler brawlers pugilist
 flags KOWLOON KHEPHARI
@@ -391,7 +369,6 @@ Decision lens combines survival legality, wall protocol, and ration order with r
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KOWLOON and KHEPHARI flags are present.
 
 keywords brawler brawlers pugilist
 flags KOWLOON ASHBORN
@@ -405,7 +382,6 @@ Decision lens combines survival legality, wall protocol, and ration order with r
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KOWLOON and ASHBORN flags are present.
 
 keywords brawler brawlers pugilist
 flags KOWLOON UMBRAL
@@ -419,7 +395,6 @@ Decision lens combines survival legality, wall protocol, and ration order with r
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KOWLOON and UMBRAL flags are present.
 
 keywords brawler brawlers pugilist
 flags KOWLOON RIVENNID
@@ -433,7 +408,6 @@ Decision lens combines survival legality, wall protocol, and ration order with r
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KOWLOON and RIVENNID flags are present.
 
 keywords brawler brawlers pugilist
 flags KOWLOON DELTARI
@@ -447,7 +421,6 @@ Decision lens combines survival legality, wall protocol, and ration order with r
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KOWLOON and DELTARI flags are present.
 
 keywords brawler brawlers pugilist
 flags KOWLOON USHABTI
@@ -461,7 +434,6 @@ Decision lens combines survival legality, wall protocol, and ration order with r
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KOWLOON and USHABTI flags are present.
 
 keywords brawler brawlers pugilist
 flags KOWLOON SERATHI
@@ -475,7 +447,6 @@ Decision lens combines survival legality, wall protocol, and ration order with r
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KOWLOON and SERATHI flags are present.
 
 keywords brawler brawlers pugilist
 flags KOWLOON KETHARI
@@ -489,7 +460,6 @@ Decision lens combines survival legality, wall protocol, and ration order with r
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both KOWLOON and KETHARI flags are present.
 
 keywords brawler brawlers pugilist
 flags RAKUEN HUMAN
@@ -503,7 +473,6 @@ Decision lens combines shared burden, mediation, and care continuity with race-s
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both RAKUEN and HUMAN flags are present.
 
 keywords brawler brawlers pugilist
 flags RAKUEN KHENARI
@@ -517,7 +486,6 @@ Decision lens combines shared burden, mediation, and care continuity with race-s
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both RAKUEN and KHENARI flags are present.
 
 keywords brawler brawlers pugilist
 flags RAKUEN KHEPHARI
@@ -531,7 +499,6 @@ Decision lens combines shared burden, mediation, and care continuity with race-s
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both RAKUEN and KHEPHARI flags are present.
 
 keywords brawler brawlers pugilist
 flags RAKUEN ASHBORN
@@ -545,7 +512,6 @@ Decision lens combines shared burden, mediation, and care continuity with race-s
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both RAKUEN and ASHBORN flags are present.
 
 keywords brawler brawlers pugilist
 flags RAKUEN UMBRAL
@@ -559,7 +525,6 @@ Decision lens combines shared burden, mediation, and care continuity with race-s
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both RAKUEN and UMBRAL flags are present.
 
 keywords brawler brawlers pugilist
 flags RAKUEN RIVENNID
@@ -573,7 +538,6 @@ Decision lens combines shared burden, mediation, and care continuity with race-s
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both RAKUEN and RIVENNID flags are present.
 
 keywords brawler brawlers pugilist
 flags RAKUEN DELTARI
@@ -587,7 +551,6 @@ Decision lens combines shared burden, mediation, and care continuity with race-s
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both RAKUEN and DELTARI flags are present.
 
 keywords brawler brawlers pugilist
 flags RAKUEN USHABTI
@@ -601,7 +564,6 @@ Decision lens combines shared burden, mediation, and care continuity with race-s
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both RAKUEN and USHABTI flags are present.
 
 keywords brawler brawlers pugilist
 flags RAKUEN SERATHI
@@ -615,7 +577,6 @@ Decision lens combines shared burden, mediation, and care continuity with race-s
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both RAKUEN and SERATHI flags are present.
 
 keywords brawler brawlers pugilist
 flags RAKUEN KETHARI
@@ -629,7 +590,6 @@ Decision lens combines shared burden, mediation, and care continuity with race-s
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both RAKUEN and KETHARI flags are present.
 
 keywords brawler brawlers pugilist
 flags MAFDET HUMAN
@@ -643,7 +603,6 @@ Decision lens combines witnessed process, manifest proof, and adjudicated exchan
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MAFDET and HUMAN flags are present.
 
 keywords brawler brawlers pugilist
 flags MAFDET KHENARI
@@ -657,7 +616,6 @@ Decision lens combines witnessed process, manifest proof, and adjudicated exchan
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MAFDET and KHENARI flags are present.
 
 keywords brawler brawlers pugilist
 flags MAFDET KHEPHARI
@@ -671,7 +629,6 @@ Decision lens combines witnessed process, manifest proof, and adjudicated exchan
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MAFDET and KHEPHARI flags are present.
 
 keywords brawler brawlers pugilist
 flags MAFDET ASHBORN
@@ -685,7 +642,6 @@ Decision lens combines witnessed process, manifest proof, and adjudicated exchan
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MAFDET and ASHBORN flags are present.
 
 keywords brawler brawlers pugilist
 flags MAFDET UMBRAL
@@ -699,7 +655,6 @@ Decision lens combines witnessed process, manifest proof, and adjudicated exchan
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MAFDET and UMBRAL flags are present.
 
 keywords brawler brawlers pugilist
 flags MAFDET RIVENNID
@@ -713,7 +668,6 @@ Decision lens combines witnessed process, manifest proof, and adjudicated exchan
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MAFDET and RIVENNID flags are present.
 
 keywords brawler brawlers pugilist
 flags MAFDET DELTARI
@@ -727,7 +681,6 @@ Decision lens combines witnessed process, manifest proof, and adjudicated exchan
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MAFDET and DELTARI flags are present.
 
 keywords brawler brawlers pugilist
 flags MAFDET USHABTI
@@ -741,7 +694,6 @@ Decision lens combines witnessed process, manifest proof, and adjudicated exchan
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MAFDET and USHABTI flags are present.
 
 keywords brawler brawlers pugilist
 flags MAFDET SERATHI
@@ -755,7 +707,6 @@ Decision lens combines witnessed process, manifest proof, and adjudicated exchan
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MAFDET and SERATHI flags are present.
 
 keywords brawler brawlers pugilist
 flags MAFDET KETHARI
@@ -769,4 +720,3 @@ Decision lens combines witnessed process, manifest proof, and adjudicated exchan
 Evidence order: direct observation, witnessed record, then inherited narrative.
 Response pattern: reduce uncertainty, preserve function, and set accountable follow-up.
 Intercity claims are accepted only when motive and logistics are coherent.
-Select only when both MAFDET and KETHARI flags are present.
