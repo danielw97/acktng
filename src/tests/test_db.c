@@ -1136,6 +1136,16 @@ static void test_parse_lore_flags_single(void)
    assert(db_test_parse_lore_flags("KOWLOON") == LORE_FLAG_KOWLOON);
    assert(db_test_parse_lore_flags("RAKUEN") == LORE_FLAG_RAKUEN);
    assert(db_test_parse_lore_flags("MAFDET") == LORE_FLAG_MAFDET);
+   assert(db_test_parse_lore_flags("HUMAN") == LORE_FLAG_HUMAN);
+   assert(db_test_parse_lore_flags("KHENARI") == LORE_FLAG_KHENARI);
+   assert(db_test_parse_lore_flags("KHEPHARI") == LORE_FLAG_KHEPHARI);
+   assert(db_test_parse_lore_flags("ASHBORN") == LORE_FLAG_ASHBORN);
+   assert(db_test_parse_lore_flags("UMBRAL") == LORE_FLAG_UMBRAL);
+   assert(db_test_parse_lore_flags("RIVENNID") == LORE_FLAG_RIVENNID);
+   assert(db_test_parse_lore_flags("DELTARI") == LORE_FLAG_DELTARI);
+   assert(db_test_parse_lore_flags("USHABTI") == LORE_FLAG_USHABTI);
+   assert(db_test_parse_lore_flags("SERATHI") == LORE_FLAG_SERATHI);
+   assert(db_test_parse_lore_flags("KETHARI") == LORE_FLAG_KETHARI);
 }
 
 static void test_parse_lore_flags_multiple(void)
@@ -1145,12 +1155,20 @@ static void test_parse_lore_flags_multiple(void)
 
    flags = db_test_parse_lore_flags("KOWLOON RAKUEN MAFDET");
    assert(flags == (LORE_FLAG_KOWLOON | LORE_FLAG_RAKUEN | LORE_FLAG_MAFDET));
+
+   flags = db_test_parse_lore_flags("MIDGAARD HUMAN");
+   assert(flags == (LORE_FLAG_MIDGAARD | LORE_FLAG_HUMAN));
+
+   flags = db_test_parse_lore_flags("KIESS SERATHI KETHARI");
+   assert(flags == (LORE_FLAG_KIESS | LORE_FLAG_SERATHI | LORE_FLAG_KETHARI));
 }
 
 static void test_parse_lore_flags_case_insensitive(void)
 {
    assert(db_test_parse_lore_flags("midgaard") == LORE_FLAG_MIDGAARD);
    assert(db_test_parse_lore_flags("Kiess") == LORE_FLAG_KIESS);
+   assert(db_test_parse_lore_flags("human") == LORE_FLAG_HUMAN);
+   assert(db_test_parse_lore_flags("Serathi") == LORE_FLAG_SERATHI);
 }
 
 static void test_parse_lore_flags_empty(void)

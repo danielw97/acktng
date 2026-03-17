@@ -1327,11 +1327,23 @@
  * When a player uses "lore <topic>" near an NPC with lore_flags,
  * the system picks the entry whose required flags best match the NPC's flags.
  */
+/* City flags */
 #define LORE_FLAG_MIDGAARD (1 << 0)
 #define LORE_FLAG_KIESS (1 << 1)
 #define LORE_FLAG_KOWLOON (1 << 2)
 #define LORE_FLAG_RAKUEN (1 << 3)
 #define LORE_FLAG_MAFDET (1 << 4)
+/* Race flags */
+#define LORE_FLAG_HUMAN (1 << 5)
+#define LORE_FLAG_KHENARI (1 << 6)
+#define LORE_FLAG_KHEPHARI (1 << 7)
+#define LORE_FLAG_ASHBORN (1 << 8)
+#define LORE_FLAG_UMBRAL (1 << 9)
+#define LORE_FLAG_RIVENNID (1 << 10)
+#define LORE_FLAG_DELTARI (1 << 11)
+#define LORE_FLAG_USHABTI (1 << 12)
+#define LORE_FLAG_SERATHI (1 << 13)
+#define LORE_FLAG_KETHARI (1 << 14)
 
 #define MAIL_DIR "../mail/"
 #define DATA_DIR "../data/"

@@ -1777,6 +1777,26 @@ void build_setmob(CHAR_DATA *ch, char *argument)
          flag = LORE_FLAG_RAKUEN;
       else if (!str_cmp(arg3, "MAFDET"))
          flag = LORE_FLAG_MAFDET;
+      else if (!str_cmp(arg3, "HUMAN"))
+         flag = LORE_FLAG_HUMAN;
+      else if (!str_cmp(arg3, "KHENARI"))
+         flag = LORE_FLAG_KHENARI;
+      else if (!str_cmp(arg3, "KHEPHARI"))
+         flag = LORE_FLAG_KHEPHARI;
+      else if (!str_cmp(arg3, "ASHBORN"))
+         flag = LORE_FLAG_ASHBORN;
+      else if (!str_cmp(arg3, "UMBRAL"))
+         flag = LORE_FLAG_UMBRAL;
+      else if (!str_cmp(arg3, "RIVENNID"))
+         flag = LORE_FLAG_RIVENNID;
+      else if (!str_cmp(arg3, "DELTARI"))
+         flag = LORE_FLAG_DELTARI;
+      else if (!str_cmp(arg3, "USHABTI"))
+         flag = LORE_FLAG_USHABTI;
+      else if (!str_cmp(arg3, "SERATHI"))
+         flag = LORE_FLAG_SERATHI;
+      else if (!str_cmp(arg3, "KETHARI"))
+         flag = LORE_FLAG_KETHARI;
       else if (!str_cmp(arg3, "clear"))
       {
          pMob->lore_flags = 0;
@@ -1786,7 +1806,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
       }
       else
       {
-         send_to_char("Lore flag must be: MIDGAARD KIESS KOWLOON RAKUEN MAFDET or clear\n\r", ch);
+         send_to_char("Lore flag must be a city, race, or clear\n\r", ch);
          return;
       }
       pMob->lore_flags ^= flag; /* Toggle */

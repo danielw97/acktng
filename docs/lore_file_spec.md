@@ -1,14 +1,20 @@
 # Lore File Specification
 
-Lore entries are stored as files in `/lore`. They provide in-game world knowledge
-that players access via the `lore` command. Each file may contain multiple entries,
-selected at runtime based on NPC storyteller flags.
+Lore entries are stored as files in `/lore`. They provide world knowledge for
+AI context injection, accessed via the `lore` command. Each file contains
+multiple entries selected at runtime based on NPC storyteller flags.
+
+## Purpose
+
+Lore text is designed for **AI consumption**, not human reading. Entries should
+be dense, structured reference material — short declarative sentences packing
+maximum information into minimum lines. Target **10-15 lines per entry**.
 
 ## File location and naming
 
 - Directory: `lore/`
 - One or more entries per file.
-- Filename should be the primary lore topic (for example, `lore/cinderteeth`, `lore/midgaard`).
+- Filename should be the primary lore topic (e.g., `lore/cinderteeth`).
 - Allowed filename characters: `a-z`, `A-Z`, `0-9`, `.`, `_`, `-`.
 - Files ending in `~` are ignored.
 
@@ -23,66 +29,103 @@ keywords <keyword list>
 <lore text>
 ```
 
-Multiple entries are concatenated in the same file with no separator between them --
-the start of a new `keywords` line marks the beginning of the next entry:
+Multiple entries are concatenated — a new `keywords` line marks the next entry.
+
+### Required entries per file
+
+Every lore file must contain these entries in order:
+
+1. **Default entry** (no flags) — baseline lore shown when no flags match.
+2. **City-only entries** (5) — one per city flag: MIDGAARD, KIESS, KOWLOON,
+   RAKUEN, MAFDET. Shown when an NPC has only the matching city flag.
+3. **City + Race entries** (50) — one for each city-race combination.
+   Shown when an NPC has both the city flag and the race flag set.
+   Order: for each city, all 10 races in order.
+
+Total: **56 entries per file**.
+
+Example structure:
 
 ```text
 keywords cinderteeth mountains volcanic
 ---
-Default lore text about the Cinderteeth...
+Default lore about the Cinderteeth...
 
 keywords cinderteeth mountains volcanic
 flags MIDGAARD
 ---
-Midgaard-perspective lore about the Cinderteeth...
+Midgaard perspective on the Cinderteeth...
 
 keywords cinderteeth mountains volcanic
-flags KIESS
+flags MIDGAARD HUMAN
 ---
-Kiess-perspective lore about the Cinderteeth...
+What a human in Midgaard knows about the Cinderteeth...
+
+keywords cinderteeth mountains volcanic
+flags MIDGAARD KHENARI
+---
+What a Khenari in Midgaard knows about the Cinderteeth...
 ```
 
 ### Rules
 
-- **No level line.** Unlike help/shelp files, lore entries do not have a `level` field.
-  All lore is accessible to all players.
-- `keywords` must be non-empty and is the keyword list used by `lore` matching.
-- `flags` is optional. When present, it contains space-separated flag names.
-- `---` is a required separator between the header and the text body.
-- All content after `---` until the next `keywords` line (or EOF) is lore text.
-- **No color codes.** Lore text must not contain `@@` color codes (e.g., `@@r`, `@@N`).
-  The test suite enforces this restriction.
+- **No level line.** Unlike help/shelp files, lore entries have no `level` field.
+- `keywords` must be non-empty.
+- `flags` is optional. When present, contains space-separated flag names.
+- `---` is a required separator between header and text body.
+- **No color codes.** Lore text must not contain `@@` codes. Tests enforce this.
+- **10-15 lines per entry.** Dense, factual, AI-optimized. No prose essays.
 
 ## Flags
 
-Available flags (defined in `config.h`):
+### City flags
 
-| Flag       | Constant             |
-|------------|----------------------|
-| MIDGAARD   | `LORE_FLAG_MIDGAARD` |
-| KIESS      | `LORE_FLAG_KIESS`    |
-| KOWLOON    | `LORE_FLAG_KOWLOON`  |
-| RAKUEN     | `LORE_FLAG_RAKUEN`   |
-| MAFDET     | `LORE_FLAG_MAFDET`   |
+| Flag       | Constant             | Bit  |
+|------------|----------------------|------|
+| MIDGAARD   | `LORE_FLAG_MIDGAARD` | 1<<0 |
+| KIESS      | `LORE_FLAG_KIESS`    | 1<<1 |
+| KOWLOON    | `LORE_FLAG_KOWLOON`  | 1<<2 |
+| RAKUEN     | `LORE_FLAG_RAKUEN`   | 1<<3 |
+| MAFDET     | `LORE_FLAG_MAFDET`   | 1<<4 |
+
+### Race flags
+
+| Flag       | Constant              | Bit   |
+|------------|-----------------------|-------|
+| HUMAN      | `LORE_FLAG_HUMAN`     | 1<<5  |
+| KHENARI    | `LORE_FLAG_KHENARI`   | 1<<6  |
+| KHEPHARI   | `LORE_FLAG_KHEPHARI`  | 1<<7  |
+| ASHBORN    | `LORE_FLAG_ASHBORN`   | 1<<8  |
+| UMBRAL     | `LORE_FLAG_UMBRAL`    | 1<<9  |
+| RIVENNID   | `LORE_FLAG_RIVENNID`  | 1<<10 |
+| DELTARI    | `LORE_FLAG_DELTARI`   | 1<<11 |
+| USHABTI    | `LORE_FLAG_USHABTI`   | 1<<12 |
+| SERATHI    | `LORE_FLAG_SERATHI`   | 1<<13 |
+| KETHARI    | `LORE_FLAG_KETHARI`   | 1<<14 |
 
 Flag names are case-insensitive during parsing.
 
 ## Runtime behavior
 
 - On boot, the server loads all files from `lore/` (sorted by filename).
-- The `lore` command searches the loaded entries by keyword (exact match, then prefix match).
-- When multiple entries share the same keywords, the system selects the best match
-  based on NPC storyteller flags:
+- The `lore` command searches entries by keyword (exact match, then prefix match).
+- When multiple entries share keywords, the best match is selected by flag specificity:
   1. Collect `lore_flags` from all NPCs in the player's room (OR'd together).
-  2. For each matching entry, its flags must be a **subset** of the NPC flags.
-  3. The entry with the **most matching flag bits** wins (most specific match).
-  4. An entry with no flags (the default) is the lowest-priority fallback.
-- If no NPC with `lore_flags` is in the room, only unflagged (default) entries match.
+  2. Entry flags must be a **subset** of the NPC flags.
+  3. The entry with the **most matching flag bits** wins (most specific).
+  4. An unflagged entry is the lowest-priority fallback.
+- If no flagged NPC is present, only the default (unflagged) entry matches.
+
+### Match examples
+
+- NPC has `MIDGAARD HUMAN` → best match is `flags MIDGAARD HUMAN` (2 bits),
+  then `flags MIDGAARD` (1 bit), then unflagged (0 bits).
+- NPC has `KIESS` → matches `flags KIESS` but not `flags KIESS HUMAN`
+  (HUMAN is not in NPC flags).
 
 ## NPC lore flags
 
-NPCs carry `lore_flags` on their mob template (`MOB_INDEX_DATA`) and instance
-(`CHAR_DATA`). These are set via the builder command:
+NPCs carry `lore_flags` on their mob template and instance. Set via builder:
 
 ```
 set mob <vnum> lore <FLAG>    -- toggle a flag
@@ -94,7 +137,7 @@ Lore flags are saved in area files using the `^` marker.
 ## Adding new lore
 
 1. Create a file in `lore/` named after the topic.
-2. Write the default (unflagged) entry first.
-3. Add city-perspective entries with appropriate `flags` lines.
-4. Do not include `@@` color codes anywhere in the file.
-5. Run `make unit-tests` from `src/` to validate the file format.
+2. Write all 56 entries: 1 default + 5 city + 50 city-race.
+3. Keep each entry to 10-15 lines of dense, factual content.
+4. Do not include `@@` color codes anywhere.
+5. Run `make unit-tests` from `src/` to validate format.

@@ -832,6 +832,26 @@ static long parse_lore_flags(const char *flag_str)
          flags |= LORE_FLAG_RAKUEN;
       else if (!str_cmp(buf, "MAFDET"))
          flags |= LORE_FLAG_MAFDET;
+      else if (!str_cmp(buf, "HUMAN"))
+         flags |= LORE_FLAG_HUMAN;
+      else if (!str_cmp(buf, "KHENARI"))
+         flags |= LORE_FLAG_KHENARI;
+      else if (!str_cmp(buf, "KHEPHARI"))
+         flags |= LORE_FLAG_KHEPHARI;
+      else if (!str_cmp(buf, "ASHBORN"))
+         flags |= LORE_FLAG_ASHBORN;
+      else if (!str_cmp(buf, "UMBRAL"))
+         flags |= LORE_FLAG_UMBRAL;
+      else if (!str_cmp(buf, "RIVENNID"))
+         flags |= LORE_FLAG_RIVENNID;
+      else if (!str_cmp(buf, "DELTARI"))
+         flags |= LORE_FLAG_DELTARI;
+      else if (!str_cmp(buf, "USHABTI"))
+         flags |= LORE_FLAG_USHABTI;
+      else if (!str_cmp(buf, "SERATHI"))
+         flags |= LORE_FLAG_SERATHI;
+      else if (!str_cmp(buf, "KETHARI"))
+         flags |= LORE_FLAG_KETHARI;
       else
       {
          long numeric = atol(buf);
