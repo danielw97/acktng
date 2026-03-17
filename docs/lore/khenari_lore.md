@@ -111,6 +111,22 @@ The most significant human failure in Khenari eyes is the treatment of Akh'enet'
 
 See also: `human_lore.md`
 
+### Serathi
+
+Khenari notaries and Serathi couriers operate in overlapping professional spaces — both are valued for reliability and incorruptibility, and caravan operators frequently employ one of each for major transit operations. The professional relationship is respectful and practically oriented: both peoples bring complementary capabilities and neither has institutional incentive to undermine the other.
+
+The Khenari find the Serathi's sky-reading tradition interesting from a documentation perspective — the roost-chronicles represent a record-keeping system with different strengths and limitations than the death-ledger tradition, and Khenari scholars have studied Serathi chronicle methodology with the attention they bring to any coherent archival system. The Serathi find the Khenari's precise documentation of transition states (life to death, obligation to closure) resonant with their own precise documentation of spatial states (ground to sky, territory to corridor).
+
+See also: `serathi_lore.md`
+
+### Kethari
+
+The Khenari and the Kethari share adjacent territory in the Akh'enet corridor and parallel experiences of human institutional engagement. Both peoples provide expertise to human institutions; both are systematically under-credited for that expertise; both maintain independent records that are more accurate than the human institutional records that reference them.
+
+The most substantive difference is in their relationship to death and time. The Khenari process death administratively — it is a transaction requiring nine stages of documentation. The Kethari process death geologically — it is a material transition in which organic matter desiccates, compresses, and becomes part of the desert's physical record. Both approaches are serious; neither finds the other incomprehensible; both occasionally find the other's framework insufficient for specific problems.
+
+See also: `kethari_lore.md`
+
 ---
 
 ## Narrative Tone

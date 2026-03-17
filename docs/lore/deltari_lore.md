@@ -121,6 +121,22 @@ Deltari parallel record-keeping — flow records, community ledgers, oral geneal
 
 See also: `human_lore.md`
 
+### Serathi
+
+The Deltari read water; the Serathi read sky. Both are sophisticated observational traditions organized around complementary environmental substrates, and the two peoples have maintained an exchange relationship in the Kowloon area where Serathi eastern-range corridors cross above the Jhen River delta. Sky-readers and flow-record keepers contribute observations the other cannot make: the Serathi track the delta's surface behavior from altitude (channel migration patterns visible only from above, seasonal flooding extent, the movement of sea weather systems toward the coast); the Deltari track the same territory's hydraulic behavior at surface and subsurface level.
+
+The relationship is professional and respectful — both peoples recognize in the other the epistemological rigor they respect most: careful observation, systematic record, and honest acknowledgment of what cannot yet be known.
+
+See also: `serathi_lore.md`
+
+### Kethari
+
+The Deltari and the Kethari have parallel institutional positions in their respective corridors: both built the infrastructure that makes major human cities viable, both are formally excluded from governance of those cities, both maintain parallel records that are more accurate than the official records that occasionally reference them. The Deltari's flow records of Kowloon are the water equivalent of the Kethari's water-memory of the eastern aquifer.
+
+In the oasis network, both peoples provide hydraulic expertise that the human administrators who formally govern the Deepwell Confluence depend on. Deltari assessment capability and Kethari water-memory knowledge are complementary — Deltari methods are more systematic and transferable; Kethari knowledge is deeper and longer. Formal cooperation between the two peoples in the oasis network would constitute the most comprehensive water-management knowledge base in the corridor. That cooperation is informal and occasional rather than institutionalized, for the same reasons that each people's formal institutional access is limited: the relevant human institutions prefer advisors who do not have independent territorial claims.
+
+See also: `kethari_lore.md`, `great_oasis_lore.md`
+
 ---
 
 ## Narrative Tone
