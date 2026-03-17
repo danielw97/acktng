@@ -14,29 +14,22 @@ Kowloon's Black Ledger contains parallel documentation from the delta settlement
 
 flags MIDGAARD
 ---
-Midgaard's sealed warrant archive from the Ash-and-Iron period is held in the Violet Compact's deep registry — the same administrative system that processed the warrants retains custody of them.
+Midgaard's sealed warrant archive from the Ash-and-Iron period is held in the Violet Compact's deep registry — the same system that processed the warrants retains custody of them.
 The archive contains three types of records: original warrant issuances (subject, issuing magistrate, stated grounds), Violet Compact reclassification documents (converting civic identity to "arcane material" designation), and transfer manifests (subjects moved to Conclave custody along with payment received).
 The transfer manifests are the most politically significant: they document payment received, making the transaction financially traceable rather than merely administratively recorded.
-The Continuity faction's legal argument for keeping the warrants sealed is procedural: unsealing requires a tribunal with authority over documents from a governance period whose institutions no longer exist.
-The Reckoning faction's counter: the procedural requirement for unsealing is itself a product of the same governance period that issued the warrants — citing the procedure to protect the warrant contents is circular.
-The Temple of the Resounding Heart holds memorial rolls from the Ash-and-Iron period that cross-reference names with dates of disappearance; some correspond to warrant subjects, providing an unofficial parallel record.
-
+The Continuity faction's legal argument for keeping the warrants sealed: unsealing requires a tribunal with authority over documents from a governance period whose institutions no longer exist.
 flags KOWLOON
 ---
 Kowloon's sealed records from the Ash-and-Iron period parallel Midgaard's sealed warrants from the delta settlements' end of the same apparatus.
-The Black Ledger's population lists correspond to the same transfer chain: where Midgaard's warrants name subjects being transferred out, Kowloon's Black Ledger names subjects whose registry entries were stripped before transfer.
-The institutional guilt is mutual and parallel: opening either city's records creates pressure to open the other's, and no city's Continuity faction wants to be first.
-Kowloon's Neon Covenant was partly designed to prevent sealed warrants from being possible: the jade seal's two-magistrate requirement applies specifically to any proclamation that removes a person from the civic registry.
-The Courier Lantern Office's color-coded registry system was designed so that all registered persons are visible in the civic record regardless of their status — there is no "arcane material" reclassification mechanism in Kowloon's system because the Neon Covenant's founding design specifically excluded it.
-
+The Black Ledger's population lists correspond to the same transfer chain: Midgaard's warrants name subjects being transferred out; Kowloon's Black Ledger names subjects whose registry entries were stripped before transfer.
+The institutional guilt is mutual: opening either city's records creates pressure to open the other's, and no city's Continuity faction wants to be first.
+Kowloon's Neon Covenant was partly designed to prevent sealed warrants from being possible: the jade seal's two-magistrate requirement applies specifically to any proclamation removing a person from the civic registry.
 flags KIESS
 ---
 Kiess's founding charter clause prohibiting sealed warrants is the most specific piece of anti-warrant law in the five-city network.
 The clause states: "No sealed warrant issued by a predecessor authority shall bind a Kiess citizen; no warrant issued within Kiess jurisdiction shall be sealed against the named party's knowledge; and no warrant shall convert a named party from civic to material classification."
-The three-part structure was written to close each of the Ash-and-Iron warrant mechanism's three components: retroactive sealing, denial of knowledge to warrant subjects, and reclassification from civic person to arcane material.
+The three-part structure closes each of the Ash-and-Iron warrant mechanism's three components: retroactive sealing, denial of knowledge to warrant subjects, and reclassification from civic person to arcane material.
 The obsidian disc bearing the Spirebound Conclave's triune seal is Kiess's physical proof that the warrant apparatus and the Conclave were connected: the disc was recovered from Evermeet's ruins at a documented transfer point.
-Kiess's formal repudiation creates an asymmetry with Midgaard: Kiess has admitted institutional guilt and repudiated the practice, while Midgaard has done neither, creating implicit pressure in any five-city commission convened to address sealed warrant history.
-
 flags RAKUEN
 ---
 Rakuen's founding population included people who arrived carrying sealed-warrant classifications from Midgaard's intake system.
@@ -51,39 +44,30 @@ Mafdet's maritime legal tradition has no internal mechanism equivalent to sealed
 An oath witnessed by a party who does not know they are being attested is void under maritime law; the sealed warrant's fundamental structure is therefore legally impossible under Mafdet's legal tradition.
 The Strandline Compact's founding document includes a clause rejecting any warrant that "removes a party from the register of their own knowledge."
 Mafdet's formal distance from the sealed warrant tradition is the basis for the Swift Court's role as a neutral forum in cargo disputes where one party is from a sealed-warrant governance tradition.
-The mercy-freight classification Mafdet extended to Rakuen during the Ash-and-Iron years was partly a practical response to the sealed warrant mechanism: Mafdet could provide supply access that did not require Rakuen's population to interface with Midgaard's warrant-bearing intake system.
-
 flags MIDGAARD ASHBORN
 ---
 Ashborn are the population most directly harmed by Midgaard's sealed warrants from the Ash-and-Iron period.
 The misclassification of Ashborn as a human subtype made them subject to human-debtor warrants — the same warrants authorizing condemned-debtor transfers to the Spirebound Conclave.
 Ashborn oral tradition preserves accounts of individuals who arrived at Midgaard's intake yards, were registered under emergency warrants, and did not return.
-The Conclave's Ember Canon program — which theorized that fire was the most fundamental transformative force — was motivated in part by observing early Ashborn and attempting to replicate volcanic transformation through fire ritual. It obtained experimental subjects partly through Midgaard's warrant system.
+The Conclave's Ember Canon program — theorizing fire as the most fundamental transformative force — was motivated in part by observing early Ashborn and attempting to replicate volcanic transformation through fire ritual; it obtained experimental subjects partly through Midgaard's warrant system.
 Ashborn communities' demand for the sealed warrants to be opened is simultaneously a demand for historical acknowledgment and a demand for the experimental record of what was done to their ancestors.
-No Continuity faction official has publicly acknowledged the Ember Canon's use of Ashborn subjects; the connection is documented in Ash Scriptorium cyclic chains but not in any officially recognized archive.
-
 flags MIDGAARD UMBRAL
 ---
 Umbral archivists in the Gloamvault observed the condemned-debtor transfer process as it moved through the underground passages beneath Midgaard.
 Umbral notation of the transfer period is the most complete external record of the warrant mechanism's physical operation: dates, passage sequences, subject counts, and subsequent passage sealing.
-The passage sealing — Midgaard's physical closure of the transfer routes after the Conclave's collapse — is documented in Gloamvault records with the annotation "route sealed from above" and the date, recording the moment when Midgaard attempted to physically erase the transfer infrastructure.
+The passage sealing — Midgaard's physical closure of the transfer routes after the Conclave's collapse — is documented in Gloamvault records with the annotation "route sealed from above" and the date.
 Umbral archivists note absences with precision: the sealed passages are documented not only by the sealing event but by the gap in subsequent passage-use records, creating a negative space that is itself a form of documentation.
-Umbral communities' relationship to the sealed-warrant question is characteristic: they document what exists and note what is absent, leaving the question of institutional action to others.
+Umbral communities' relationship to the sealed-warrant question is characteristic: they document what exists and note what is absent, leaving institutional action to others.
 
 flags MIDGAARD USHABTI
 ---
 Ushabti judicial doctrine distinguishes sharply between claim, evidence, and verdict — three phases that must be sequential and cannot be collapsed.
 The sealed warrant mechanism collapsed all three: the warrant was simultaneously the claim, the evidence, and the verdict, issued by the same authority with no separation between functions.
-From Ushabti judicial perspective, the sealed warrant is not a legal instrument but a pre-legal assertion dressed in legal vocabulary: it has the physical format of a warrant without the deliberative process that makes warrants legitimate.
-The Ushabti variance-record tradition — inscribing every judgment deviation and its reasoning — is the institutional antithesis of sealed warrants: every deviation from standard procedure is documented, while sealed warrants were specifically designed to make their own procedure invisible.
-The Conclave's Pale Ledger program appropriated Ushabti-adjacent ritual forms, using the aesthetic vocabulary of genuine Ushabti judicial practice to create the appearance of accountability while eliminating it. This appropriation is deeply offensive to Ushabti communities.
-Ushabti observers support the Reckoning faction's archive-opening demand specifically on judicial grounds: no verdict is legitimate that cannot be examined.
-
+From Ushabti judicial perspective, the sealed warrant is not a legal instrument but a pre-legal assertion dressed in legal vocabulary — it has the physical format of a warrant without the deliberative process that makes warrants legitimate.
+The Ushabti variance-record tradition — inscribing every judgment deviation and its reasoning — is the institutional antithesis of sealed warrants: every deviation is documented, while sealed warrants were specifically designed to make their own procedure invisible.
 flags KOWLOON RIVENNID
 ---
 Rivennid custodial networks in the delta settlements during the Ash-and-Iron period maintained parallel records of population movements that the official sealed warrant system specifically obscured.
 The Rivennid practice of tracking who passed through their custodial nodes meant that some transfer-period movement was recorded in Rivennid network logs even when warrant sealing removed the same movement from official registries.
-The operational records document people as supply needs (food quantities, shelter requirements, medical status) — a different data format than legal records but useful for cross-referencing warrant-period population movements.
+The operational records document people as supply needs (food quantities, shelter requirements, medical status) — a different data format but useful for cross-referencing warrant-period population movements.
 Kowloon's Reckoning faction has proposed cross-referencing Rivennid custodial logs against Black Ledger period records to reconstruct transfer sequences; Rivennid network elders have not declined but have not confirmed willingness to provide access.
-Rivennid elders' caution reflects their experience with the Keeper-era survey documentation: having been documented without institutional standing is a repeating historical pattern, and current information requests may repeat the pattern.
-The Courier Lantern Office's relationship with Rivennid networks provides the most likely access pathway; the Reckoning faction's Courier Lantern allies have raised the cross-reference proposal with Rivennid contacts in the relay network.

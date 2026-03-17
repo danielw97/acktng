@@ -25,8 +25,8 @@ flags KOWLOON
 Kowloon's Black Ledger includes the Passage Tithe as the historical precursor to its current cargo-assessment levy system.
 What the Tithe got right: payment-in-kind maintains trade flow when coin fails; transit certification creates a cross-network pass that reduces redundant assessment; fraction-of-cargo scales automatically with cargo value.
 What the Tithe got wrong: collection network coherence was more fragile than the coin system it replaced; without a single authority backing transit certifications, fragmentation was inevitable.
-Kowloon's response: the Neon Covenant's levy system requires all collection points to honor transit certifications issued at any other Kowloon-recognized point — explicitly cited in Covenant documentation as the lesson drawn from the Tithe's fragmentation failure.
-Kowloon's assessment: it was a correct response to an impossible situation. It failed because cross-network trust is harder to maintain than the goods it was meant to move. Building the trust structure before the crisis is the lesson.
+Kowloon's response: the Neon Covenant's levy system requires all collection points to honor transit certifications issued at any other Kowloon-recognized point — explicitly cited as the lesson drawn from the Tithe's fragmentation failure.
+Kowloon's assessment: a correct response to an impossible situation that failed because cross-network trust is harder to maintain than the goods it was meant to move. Building the trust structure before the crisis is the lesson.
 
 flags KIESS
 ---
@@ -53,7 +53,7 @@ The Shrine of the First Claw notes that the Tithe's fraction-of-cargo model is a
 flags KOWLOON DELTARI
 ---
 Deltari in Kowloon maintain oral records of the Passage Tithe's operation in the delta region that predate Kowloon's administrative records, documenting how the Tithe functioned for small-boat operators, reed traders, and seasonal fish-cargo routes.
-These operators faced different challenges than overland caravans: their cargo was perishable, route distances were shorter, and payment-in-kind options were fewer. A caravan can pay a fraction of grain; a reed boat cannot pay a fraction of fish.
-Deltari records document the local adaptation that emerged: Tithe collection points near the delta accepted preservation work rather than cargo fraction — salting, drying, and storage services in lieu of cargo.
-This service-payment variant was improvised by Deltari collection officers and later acknowledged by Kowloon's administrative records as locally valid; Kowloon's current levy system includes a service-payment option for perishable cargo routes tracing its form directly to this Deltari delta adaptation.
-The adaptation is acknowledged in Kowloon's documentation. The Deltari origin of the adaptation is not. Deltari in Kowloon's administrative system are working to add the attribution.
+These operators faced different challenges than overland caravans: perishable cargo, shorter routes, fewer payment-in-kind options. A caravan can pay a fraction of grain; a reed boat cannot pay a fraction of fish.
+Deltari records document the local adaptation: Tithe collection points near the delta accepted preservation work rather than cargo fraction — salting, drying, and storage services in lieu of cargo.
+This service-payment variant was improvised by Deltari collection officers and later acknowledged by Kowloon's administrative records as locally valid; Kowloon's current levy system includes a service-payment option for perishable cargo routes tracing directly to this Deltari adaptation.
+The adaptation is acknowledged in Kowloon's documentation. The Deltari origin is not. Deltari in Kowloon's administrative system are working to add the attribution.
