@@ -1076,33 +1076,19 @@ static void load_lore_file(const char *lore_path, HELP_DATA **first, HELP_DATA *
 
    while (fgets(line, sizeof(line), fp) != NULL)
    {
-      /* Check if this line starts a new entry (keywords line) */
-      if (strncmp(line, "keywords ", 9) == 0)
+      /* Check if this line starts a new entry (flags line) */
+      if (strncmp(line, "flags ", 6) == 0)
       {
          /* Save current entry */
          link_lore_entry(flags, keywords, text, first, last);
 
-         flags = 0;
-
-         snprintf(keywords, sizeof(keywords), "%s", line + 9);
-         keywords[strcspn(keywords, "\r\n")] = '\0';
+         flags = parse_lore_flags(line + 6);
 
          if (fgets(line, sizeof(line), fp) == NULL)
          {
-            bug("load_lore_file: unexpected end of file in multi-entry", 0);
+            bug("load_lore_file: unexpected end after flags in multi-entry", 0);
             fclose(fp);
             return;
-         }
-
-         if (strncmp(line, "flags ", 6) == 0)
-         {
-            flags = parse_lore_flags(line + 6);
-            if (fgets(line, sizeof(line), fp) == NULL)
-            {
-               bug("load_lore_file: unexpected end after flags in multi-entry", 0);
-               fclose(fp);
-               return;
-            }
          }
 
          if (strncmp(line, "---", 3) != 0)

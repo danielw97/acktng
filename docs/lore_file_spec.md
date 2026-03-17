@@ -20,16 +20,23 @@ maximum information into minimum lines. Target **10-15 lines per entry**.
 
 ## File format
 
-Each entry uses this structure:
+Each file begins with a single `keywords` line, followed by one or more entries.
+The first entry is the default (no flags). Subsequent entries each start with a
+`flags` line. All entries in the file share the same keywords.
 
 ```text
 keywords <keyword list>
 [flags <FLAG1> [FLAG2 ...]]
 ---
 <lore text>
+[flags <FLAG1> [FLAG2 ...]]
+---
+<lore text>
+...
 ```
 
-Multiple entries are concatenated — a new `keywords` line marks the next entry.
+The `keywords` line appears **only once**, at the top of the file. Each entry
+after the first begins with a `flags` line (no repeated keywords).
 
 ### Required entries per file
 
@@ -51,17 +58,14 @@ keywords cinderteeth mountains volcanic
 ---
 Default lore about the Cinderteeth...
 
-keywords cinderteeth mountains volcanic
 flags MIDGAARD
 ---
 Midgaard perspective on the Cinderteeth...
 
-keywords cinderteeth mountains volcanic
 flags MIDGAARD HUMAN
 ---
 What a human in Midgaard knows about the Cinderteeth...
 
-keywords cinderteeth mountains volcanic
 flags MIDGAARD KHENARI
 ---
 What a Khenari in Midgaard knows about the Cinderteeth...
@@ -70,10 +74,11 @@ What a Khenari in Midgaard knows about the Cinderteeth...
 ### Rules
 
 - **No level line.** Unlike help/shelp files, lore entries have no `level` field.
-- `keywords` must be non-empty.
-- `flags` is optional. When present, contains space-separated flag names.
+- `keywords` appears exactly once, at the top of the file. Must be non-empty.
+- `flags` is required for every entry after the first. Contains space-separated flag names.
 - `---` is a required separator between header and text body.
 - **No color codes.** Lore text must not contain `@@` codes. Tests enforce this.
+- **No repeated keywords.** Do not repeat the `keywords` line for each entry.
 - **10-15 lines per entry.** Dense, factual, AI-optimized. No prose essays.
 
 ## Flags
@@ -137,7 +142,10 @@ Lore flags are saved in area files using the `^` marker.
 ## Adding new lore
 
 1. Create a file in `lore/` named after the topic.
-2. Write all 56 entries: 1 default + 5 city + 50 city-race.
-3. Keep each entry to 10-15 lines of dense, factual content.
-4. Do not include `@@` color codes anywhere.
-5. Run `make unit-tests` from `src/` to validate format.
+2. Start with a single `keywords` line listing all search keywords.
+3. Write all 56 entries: 1 default + 5 city + 50 city-race.
+   - The first (default) entry follows immediately after the keywords line.
+   - Each subsequent entry starts with a `flags` line (no repeated keywords).
+4. Keep each entry to 10-15 lines of dense, factual content.
+5. Do not include `@@` color codes anywhere.
+6. Run `make unit-tests` from `src/` to validate format.
