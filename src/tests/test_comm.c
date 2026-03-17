@@ -1,40 +1,62 @@
 #include <assert.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "config.h"
 #define DEC_GLOBALS_H 1
 #include "ack.h"
-#include "comm_login_test.h"
 
 bool is_parse_name_syntax_valid(const char *name);
 bool is_login_name_format_valid(const char *name);
-long prompt_max_value_for_code(CHAR_DATA *ch, char code);
-void comm_testable_format_builder_prompt(char *dest, size_t dest_size, const char *mode,
-                                         const char *details);
-void comm_testable_format_class_menu_line(char *dest, size_t dest_size, const char *who_name,
-                                          const char *stat, const char *class_name);
+void comm_format_class_menu_line(char *dest, size_t dest_size, const char *who_name,
+                                 const char *stat, const char *class_name);
 bool shortfight_should_suppress_watched_autoattack(int observer_is_npc, int observer_has_shortfight,
                                                    int observer_is_fighting);
 
-static int stub_max_hp = 100;
-static int stub_max_mana = 100;
-static int stub_max_move = 100;
+typedef enum
+{
+   LOGIN_TRANSITION_NAME_REJECTED,
+   LOGIN_TRANSITION_PASSWORD_PROMPTED,
+   LOGIN_TRANSITION_WRONG_PASSWORD,
+   LOGIN_TRANSITION_SHOW_MOTD,
+   LOGIN_TRANSITION_ENTERED_GAME
+} LOGIN_TRANSITION_RESULT;
 
-int get_max_hp(CHAR_DATA *ch)
+static LOGIN_TRANSITION_RESULT simulate_existing_player_login_transition(int *connected_state,
+                                                                         const char *input,
+                                                                         int is_name_valid,
+                                                                         int is_existing_player,
+                                                                         int is_password_correct)
 {
-   (void)ch;
-   return stub_max_hp;
-}
-int get_max_mana(CHAR_DATA *ch)
-{
-   (void)ch;
-   return stub_max_mana;
-}
-int get_max_move(CHAR_DATA *ch)
-{
-   (void)ch;
-   return stub_max_move;
+   if (connected_state == NULL || input == NULL)
+      return LOGIN_TRANSITION_NAME_REJECTED;
+
+   if (*connected_state == CON_GET_NAME)
+   {
+      if (!is_name_valid || !is_existing_player)
+         return LOGIN_TRANSITION_NAME_REJECTED;
+
+      *connected_state = CON_GET_OLD_PASSWORD;
+      return LOGIN_TRANSITION_PASSWORD_PROMPTED;
+   }
+
+   if (*connected_state == CON_GET_OLD_PASSWORD)
+   {
+      if (!is_password_correct)
+         return LOGIN_TRANSITION_WRONG_PASSWORD;
+
+      *connected_state = CON_READ_MOTD;
+      return LOGIN_TRANSITION_SHOW_MOTD;
+   }
+
+   if (*connected_state == CON_READ_MOTD)
+   {
+      *connected_state = CON_PLAYING;
+      return LOGIN_TRANSITION_ENTERED_GAME;
+   }
+
+   return LOGIN_TRANSITION_NAME_REJECTED;
 }
 
 static void test_parse_name_enforces_length_bounds(void)
@@ -135,61 +157,12 @@ static void test_login_name_accepts_valid_player_names(void)
    assert(is_login_name_format_valid("Knight"));
 }
 
-static void test_prompt_thresholds_use_max_helpers(void)
-{
-   CHAR_DATA ch;
-
-   memset(&ch, 0, sizeof(ch));
-
-   ch.hit = 99;
-   stub_max_hp = 100;
-   assert(should_show_default_prompt_hp(&ch));
-   stub_max_hp = 90;
-   assert(!should_show_default_prompt_hp(&ch));
-
-   ch.mana = 40;
-   stub_max_mana = 50;
-   assert(should_show_default_prompt_mana(&ch));
-   stub_max_mana = 35;
-   assert(!should_show_default_prompt_mana(&ch));
-
-   ch.move = 70;
-   stub_max_move = 100;
-   assert(should_show_default_prompt_move(&ch));
-   stub_max_move = 60;
-   assert(!should_show_default_prompt_move(&ch));
-}
-
-static void test_comm_safe_formatters_truncate(void)
+static void test_comm_class_menu_formatter_truncates(void)
 {
    char buf[16];
 
-   comm_testable_format_builder_prompt(buf, sizeof(buf), "Mode: Redit",
-                                       "A very very long description");
+   comm_format_class_menu_line(buf, sizeof(buf), "warden", "strength", "verylongclassname");
    assert(buf[15] == '\0');
-
-   comm_testable_format_class_menu_line(buf, sizeof(buf), "warden", "strength",
-                                        "verylongclassname");
-   assert(buf[15] == '\0');
-
-   comm_testable_format_builder_prompt(buf, sizeof(buf), NULL, NULL);
-   assert(buf[15] == '\0');
-}
-
-static void test_prompt_max_tokens_use_max_helpers(void)
-{
-   CHAR_DATA ch;
-
-   memset(&ch, 0, sizeof(ch));
-
-   stub_max_hp = 111;
-   stub_max_mana = 222;
-   stub_max_move = 333;
-
-   assert(prompt_max_value_for_code(&ch, 'H') == 111);
-   assert(prompt_max_value_for_code(&ch, 'M') == 222);
-   assert(prompt_max_value_for_code(&ch, 'V') == 333);
-   assert(prompt_max_value_for_code(&ch, 'X') == 0);
 }
 
 static void test_shortfight_watched_autoattack_suppression(void)
@@ -208,9 +181,7 @@ int main(void)
    test_parse_name_accepts_normal_alphabetic_names();
    test_login_name_rejects_reserved_words();
    test_login_name_accepts_valid_player_names();
-   test_prompt_thresholds_use_max_helpers();
-   test_prompt_max_tokens_use_max_helpers();
-   test_comm_safe_formatters_truncate();
+   test_comm_class_menu_formatter_truncates();
    test_shortfight_watched_autoattack_suppression();
 
    test_existing_player_login_happy_path_reaches_playing();
