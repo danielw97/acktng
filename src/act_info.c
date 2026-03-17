@@ -2260,6 +2260,15 @@ void do_help(CHAR_DATA *ch, char *argument)
 #define SHOW_MORTAL 3
 #define SHOW_FINISH 4
 
+/* Returns the character to show in the who list, or NULL if this descriptor
+ * should be skipped (not yet in CON_PLAYING state, or has no character). */
+CHAR_DATA *who_get_char(DESCRIPTOR_DATA *d)
+{
+   if (d->connected != CON_PLAYING)
+      return NULL;
+   return (d->original != NULL) ? d->original : d->character;
+}
+
 void do_who(CHAR_DATA *ch, char *argument)
 {
    DESCRIPTOR_DATA *d;
@@ -2306,7 +2315,7 @@ void do_who(CHAR_DATA *ch, char *argument)
 
       for (d = first_desc; d != NULL; d = d->next)
       {
-         CHAR_DATA *wch = (d->original != NULL) ? d->original : d->character;
+         CHAR_DATA *wch = who_get_char(d);
 
          if (wch == NULL)
             continue;
@@ -2558,9 +2567,6 @@ void do_who(CHAR_DATA *ch, char *argument)
             safe_strcat(MAX_STRING_LENGTH, buf, buf2);
          }
       }
-
-      if (d->connected != CON_PLAYING)
-         continue;
    }
 
    safe_strcat(

@@ -16,6 +16,7 @@ void parse_shelp_query(char *argument, char *search_term, size_t search_term_siz
 HELP_DATA *find_best_lore(const char *argument, CHAR_DATA *ch, long npc_flags,
                           bool (*match_fn)(const char *, const char *));
 long get_room_lore_flags(CHAR_DATA *ch);
+CHAR_DATA *who_get_char(DESCRIPTOR_DATA *d);
 
 char *one_argument(char *argument, char *arg_first)
 {
@@ -255,6 +256,47 @@ static void test_npc_lore_flags_come_from_room(void)
           (LORE_FLAG_MIDGAARD | LORE_FLAG_HUMAN));
 }
 
+static void test_who_get_char_filters_non_playing(void)
+{
+   CHAR_DATA ch = {0};
+   DESCRIPTOR_DATA d = {0};
+   d.character = &ch;
+
+   /* CON_PLAYING (0) should return the character */
+   d.connected = CON_PLAYING;
+   assert(who_get_char(&d) == &ch);
+
+   /* Non-playing states should return NULL */
+   d.connected = CON_GET_NAME;
+   assert(who_get_char(&d) == NULL);
+
+   d.connected = CON_GET_OLD_PASSWORD;
+   assert(who_get_char(&d) == NULL);
+}
+
+static void test_who_get_char_returns_original_when_switched(void)
+{
+   CHAR_DATA original = {0};
+   CHAR_DATA current = {0};
+   DESCRIPTOR_DATA d = {0};
+
+   d.connected = CON_PLAYING;
+   d.character = &current;
+   d.original = &original;
+
+   /* When original is set (switched/possessed NPC), return the player character */
+   assert(who_get_char(&d) == &original);
+}
+
+static void test_who_get_char_returns_null_for_no_character(void)
+{
+   DESCRIPTOR_DATA d = {0};
+
+   /* CON_PLAYING but no character attached */
+   d.connected = CON_PLAYING;
+   assert(who_get_char(&d) == NULL);
+}
+
 int main(void)
 {
    test_find_race_index_matches_exact_name_or_title();
@@ -267,6 +309,9 @@ int main(void)
    test_find_best_lore_selects_by_flags();
    test_pc_lore_flags_are_always_zero();
    test_npc_lore_flags_come_from_room();
+   test_who_get_char_filters_non_playing();
+   test_who_get_char_returns_original_when_switched();
+   test_who_get_char_returns_null_for_no_character();
 
    puts("test_act_info: all tests passed");
    return 0;
