@@ -5,16 +5,31 @@ keywords lore
 
 @@eLore of the Realm@@N
 
-Welcome to the lore archives of @@eAck!MUD TNG@@N.
+Welcome to the lore archives. Use @@ylore <topic>@@N to read about a subject.
 
-Here you will find tales of the world, its history, and the forces that
-shape it. Use @@ylore <topic>@@N to read about a specific subject.
+@@yRaces:@@N       human, khenari, khephari, deltari, umbral, ushabti, ashborn,
+              rivennid
 
-Available lore topics:
+@@yClasses:@@N     assassin, brawler, cipher, cleric, crusader, egomancer,
+              grand_magi, kinetimancer, knight, magi, martial_artist, monk,
+              necromancer, nightblade, paladin, priest, psionicist, sorcerer,
+              swordsman, templar, warden, warlock, wizard
 
-  @@yworld@@N    - The world and its origins
-  @@yraces@@N    - The peoples of the realm
+@@yCities:@@N      midgaard, kowloon, kiess, mafdet, rakuen, akhenet, khardaan
 
-Type @@ylore <topic>@@N to learn more.
+@@yRegions:@@N     great_northern_forest, cinderteeth, eastern_desert,
+              scorched_wastes, scorching_sands, saltglass_reach, roc_road,
+              thornwood, eccentric_woodland, forest_of_confusion,
+              sepulchur_pasture, shadowmere, arroyo
+
+@@yDungeons:@@N    great_pyramid, northern_pyramid, southern_pyramid,
+              great_oasis, northern_oasis, southern_oasis, lost_city,
+              sultans_palace, catacombs_of_nightfall, gloamvault, kelshadra,
+              sunken_sanctum, verdant_depths, withered_depths,
+              violet_eclipse_cathedral, voidcitadel, umbra_heartspire,
+              wizards_keep
+
+@@yHistory:@@N     black_sun_shard, keepers_of_measure, spirebound_conclave,
+              sealed_warrants, five_cities, ashfall, oasis_corridor
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
