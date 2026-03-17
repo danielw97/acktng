@@ -1521,14 +1521,15 @@ coherence when the system prompt dominates the context window. The budget:
 | Area block (Midgaard) | ~450 | ~600 | Fixed for this NPC |
 | `KNOW_NEWPLAYER` block | ~600 | ~800 | Always included |
 | Dynamic topic block(s) | ~400 | ~530 | 0–2 per request |
+| Help file snippet(s) | ~150 | ~200 | 0–2 per request, capped |
 | NPC persona + lock | ~180 | ~240 | Fixed |
-| **System prompt total** | **~1,980** | **~2,640** | |
+| **System prompt total** | **~2,130** | **~2,840** | |
 | Conversation history | ~600 | ~800 | 8 turns max |
 | Generation headroom | — | ~200 | |
-| **Total per request** | | **~3,640** | **44% of 8K context** |
+| **Total per request** | | **~3,840** | **47% of 8K context** |
 
-This leaves comfortable headroom. Even if two topic blocks are injected, the
-system prompt stays under 50% of the context window.
+This leaves comfortable headroom. Even with two topic blocks and two help
+snippets injected, the system prompt stays under 50% of the context window.
 
 ### Dynamic Topic Selection
 
@@ -1576,6 +1577,57 @@ This means a player asking "what spells can a magi cast?" gets the
 gets `KNOW_WILDERNESS`. The model sees only the relevant context, keeping the
 prompt small and focused.
 
+### Help File Injection
+
+The server loads 343 help files into a `HELP_DATA` linked list at boot (see
+`load_help_files()` in `db.c`). Each entry has a `keyword` field (space-
+separated topic keywords) and a `text` field (the help content). The
+Lorekeeper can search this list at dispatch time to inject relevant help
+entries directly into its system prompt — giving the model access to the
+same reference material a player would get from `help <topic>`, but without
+requiring the player to know the right keyword.
+
+**Lookup:** `npc_dialogue_dispatch()` extracts words from the player's message
+and runs each through the same matching logic `do_help()` uses: exact match on
+`pHelp->keyword` first, then prefix match via `str_prefix()`. Only entries
+with `pHelp->level <= 0` are eligible (player-visible helps only — staff helps
+are excluded).
+
+**Selection:** At most **two** help entries are injected per request. If more
+than two match, prefer exact matches over prefix matches, and shorter entries
+over longer ones (a 30-word command reference is more useful than a 600-word
+class essay when both match).
+
+**Truncation:** Each injected help entry is capped at **400 bytes** (~75
+words). Most help files are well under this — the median is 32 words. The few
+large entries (class descriptions at 250-450 words) are truncated with a
+trailing `"[...]"` to signal incompleteness. The model can still direct the
+player to `help <topic>` for the full text.
+
+**Format in the system prompt:**
+
+```
+RELEVANT HELP ENTRIES:
+
+[HELP: RECALL]
+Recall teleports you back to your race's home temple. Type RECALL to use it.
+Recalls are free. You cannot recall while fighting.
+
+[HELP: MAGI]
+Magi are arcanists who study the raw architecture of power. Where others pray,
+bargain, or brawl, a Magi bends elemental law through discipline, theory, and
+precision. [...]
+```
+
+The block is placed after the dynamic topic blocks and before the NPC persona,
+so the model sees it as supplementary reference material.
+
+**Why not inject helps for every NPC?** Only NPCs with `ACT_AI_TOPIC_ROUTE`
+perform help lookup. A blacksmith NPC should not suddenly start explaining the
+RECALL command because the player mentioned "recall" in passing. The help
+injection is a Lorekeeper-specific feature — it is a scholar who has read
+every document in the archive.
+
 **Assembly order for the Lorekeeper:**
 
 ```
@@ -1588,7 +1640,10 @@ prompt small and focused.
 [4. DYNAMIC TOPIC BLOCK(S) — 0-2 blocks selected by keyword match,
     ~200-530 tokens total]
 
-[5. NPC PERSONA + persona lock suffix, ~240 tokens, always]
+[5. HELP FILE SNIPPET(S) — 0-2 entries matched from player's message,
+    ~0-200 tokens total, capped at 400 bytes each]
+
+[6. NPC PERSONA + persona lock suffix, ~240 tokens, always]
 ```
 
 For normal (non-topic-routed) NPCs, the standard assembly from section 9
@@ -1664,6 +1719,9 @@ improves model quality for every NPC archetype, not just tutorial roles.
 - [ ] Add `ACT_AI_TOPIC_ROUTE` flag to mob act flags in `typedefs.h`
 - [ ] Implement keyword → topic tag routing table and scanner in
   `npc_dialogue_dispatch()`, gated on `ACT_AI_TOPIC_ROUTE`, limited to 2 tags
+- [ ] Implement help file lookup in `npc_dialogue_dispatch()` for
+  `ACT_AI_TOPIC_ROUTE` NPCs: search `HELP_DATA` linked list, select up to 2
+  entries, truncate at 400 bytes each, format as `[HELP: <keyword>]` blocks
 - [ ] Write the `KNOW_NEWPLAYER` topic block (game mechanics text above)
 - [ ] Write the Lorekeeper `AiPrompt` persona text
 - [ ] Add the Lorekeeper mob definition to the Midgaard area file with
