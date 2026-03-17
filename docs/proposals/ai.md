@@ -71,11 +71,14 @@ passed to the LLM as the `system` role message and should cover:
 
 - Who the NPC is (name, role, location)
 - Personality and speech style
-- What the NPC knows and does not know
-- Any quest-relevant information they can share
+- Anything specific to this NPC not covered by the topic blocks
 
-**Storage:** A new field `char *ai_prompt` on `CHAR_DATA`, populated from the
-area file. The area file format gains a new optional section for AI-enabled mobs:
+**Storage:** New fields on `CHAR_DATA`, both populated from the area file:
+
+- `char *ai_prompt` — persona description text
+- `int ai_knowledge` — bitmask of topic knowledge tags (see section 9)
+
+The area file format gains two new optional fields for AI-enabled mobs:
 
 ```
 #MOBILES
@@ -83,15 +86,19 @@ area file. The area file format gains a new optional section for AI-enabled mobs
 Name       Goran the blacksmith~
 ...
 AiPrompt
-You are Goran, the blacksmith of Midgaard. You are gruff and practical, speaking
-in short sentences. You know about weapons, armor, and local rumors. You do not
-know about events outside the city. Never break character.
+You are Goran, the blacksmith of Midgaard. You are gruff and practical,
+speaking in short sentences. You have worked the same forge for thirty years
+and have no patience for time-wasters.
 ~
+AiKnowledge weapons trade history
 End
 ```
 
-The `ai_prompt` string is copied into the request at dispatch time so the worker
-thread never holds a pointer into live game memory.
+`AiKnowledge` takes a space-separated list of tag names (see section 9 for the
+full tag library). Tags are parsed into the `ai_knowledge` bitmask at load time.
+
+Both strings are copied into the request struct at dispatch time so the worker
+thread never holds pointers into live game memory.
 
 ### 3. Threading Model
 
@@ -128,7 +135,7 @@ typedef struct npc_dialogue_request {
     CHAR_DATA         *npc;
     CHAR_DATA         *player;
     char               player_name[50];
-    char               system_prompt[8192];
+    char               system_prompt[16384];
     int                history_count;
     DIALOGUE_TURN_COPY history[MAX_REQUEST_TURNS];  /* serialized snapshot */
     struct npc_dialogue_request *next;
@@ -295,16 +302,19 @@ the overwhelming majority of NPCs that never use the dialogue system.
 
 ### Overview
 
-Every NPC's system prompt is assembled from three layers:
+Every NPC's system prompt is assembled from four layers:
 
-1. **Common knowledge** — world facts every NPC in the game would know regardless of city.
-2. **Area knowledge** — city-specific lore for NPCs located in one of the five major cities.
-3. **NPC persona** — the individual `ai_prompt` field describing who this NPC is.
+1. **Common knowledge** — world facts every NPC would know regardless of city.
+2. **Area knowledge** — city-specific lore, selected by the NPC's room vnum.
+3. **Topic blocks** — domain knowledge selected per NPC via `AiKnowledge` tags.
+   A blacksmith gets weapon and trade knowledge; a temple priest gets temple and
+   history knowledge; a criminal fence gets underworld and trade knowledge.
+4. **NPC persona** — the individual `ai_prompt` field describing who this NPC is.
 
 The `npc_dialogue_dispatch()` function builds the final system prompt by
-concatenating these three blocks before placing them in the request struct.
-Which area block to use is determined by the NPC's current room vnum, mapped to
-one of the five city ranges at dispatch time.
+concatenating these four blocks in order. Which area block to use is determined
+by the NPC's current room vnum mapped to one of the five city ranges. Which topic
+blocks to include is determined by the NPC's `ai_knowledge` bitmask.
 
 ---
 
@@ -701,6 +711,165 @@ quarantined, or litigated. What it cannot be is ignored.
 
 ---
 
+### Topic Knowledge Blocks
+
+Topic blocks provide domain-specific knowledge injected between the area block
+and the NPC persona. Each tag maps to a fixed prose block defined as a string
+constant in `npc_dialogue.c`. NPCs with no `AiKnowledge` tags receive no topic
+blocks (only common + area + persona).
+
+**Tag definitions (`int ai_knowledge` bitmask):**
+
+```c
+#define KNOW_WEAPONS    (1 << 0)  /* smithing, arms, armor quality */
+#define KNOW_TRADE      (1 << 1)  /* tariffs, guild pricing, routes */
+#define KNOW_MAGIC      (1 << 2)  /* arcane items, spell components */
+#define KNOW_TEMPLE     (1 << 3)  /* religious history, healing, sanctuary law */
+#define KNOW_UNDERWORLD (1 << 4)  /* fences, smugglers, criminal networks */
+#define KNOW_HARBOR     (1 << 5)  /* shipping, tides, maritime law */
+#define KNOW_GUARD      (1 << 6)  /* city law, patrol routes, wanted persons */
+#define KNOW_HISTORY    (1 << 7)  /* deep history beyond common knowledge */
+#define KNOW_WILDERNESS (1 << 8)  /* terrain hazards, routes, creatures */
+#define KNOW_POLITICS   (1 << 9)  /* faction detail, city power structures */
+```
+
+**Topic block content:**
+
+*KNOW_WEAPONS:*
+```
+WEAPONS AND ARMS: Steel quality varies by ore source and quench method —
+river-cooled blades are more brittle than oil-quenched. Campaign steel is
+functional and repairable; guild-certified arms carry documented provenance and
+carry a price premium. Armor fit matters more than weight; a loose plate hampers
+more than a heavier fitted one. You assess weapons by feel and sound. You know
+which blades hold an edge on the march and which merely look impressive in a
+shop. Adventurers frequently bring you things salvaged from places they decline
+to describe clearly.
+```
+
+*KNOW_TRADE:*
+```
+TRADE AND COMMERCE: Caravans on the Roc Road pay warden levies at each waypost;
+side payments to wardens are not posted but are standard practice. Midgaard-
+struck coin is accepted at full value in all five cities; frontier-minted coin
+is discounted 5-10%. Letters of credit are honored only between guild houses
+with correspondent relationships. You know which routes are currently contested
+and what that does to supply prices. The difference between a posted rate and a
+transaction price is a matter of relationship, timing, and who is watching.
+```
+
+*KNOW_MAGIC:*
+```
+ARCANE ITEMS: Registered arcane items bear a Violet Compact seal and are legally
+documented; unregistered items are either antique or deliberately concealed.
+Spell components have specific sourcing: sulfur and saltpeter from the Cinderteeth
+corridor, certain reagents only from the Eccentric Woodland, crystalline materials
+from the Oasis-Pyramid formations. Artifacts recovered from ruins require
+assessment — most are stable, some are not, and the consequences of error are
+disproportionate. A mage without a component pouch is either very skilled or
+very reckless.
+```
+
+*KNOW_TEMPLE:*
+```
+TEMPLE AND FAITH: The Temple of the Resounding Heart in Midgaard maintains
+memorial records as institutional penance. Kowloon's Temple Circle operates
+healing houses without demanding payment or allegiance — their neutrality is
+constitutionally protected under the Neon Covenant. Sanctuary law is recognized
+in all five cities but interpreted differently: in Mafdet it extends to the
+shrine threshold; in Kiess the compact temples extend it to the entire Prism
+district. Temple hierarchies across cities maintain correspondence and share
+archival records, making them the most consistent information network on the
+continent.
+```
+
+*KNOW_UNDERWORLD:*
+```
+CRIMINAL NETWORKS: Fences accept salvage without asking provenance but price
+it at half and consider themselves generous. Smuggling operations in Kowloon
+are embedded deeply enough in Harbor Syndic operations that the distinction
+is administrative. In Mafdet, the Jackal Synod moves ritual components under
+false quarantine manifests. Information about criminal actors is worth more
+than the goods they move — the right buyer will pay well to know who, where,
+and when. You do not discuss this where it can be overheard.
+```
+
+*KNOW_HARBOR:*
+```
+HARBOR AND MARITIME: The harbor chain at Mafdet raises every night without
+exception since the Fracture Era — ships arriving after dark anchor outside
+and wait. Maritime law differs from inland law primarily in contract enforcement:
+at sea there is no magistrate, so agreements bind under the law of the last
+port of registry. Kowloon's Tide Gate is widest because grain barges need the
+clearance; the Jade Gate handles diplomatic traffic. Weather at Coppersalt Bay
+changes fast; experienced captains read mountain thermals, not the sky.
+```
+
+*KNOW_GUARD:*
+```
+CITY LAW AND PATROL: Midgaard enforces documentation and levy compliance
+rigorously, but assault among foreigners in the market district is treated as
+a civil matter unless it disrupts commerce. Kowloon's Wardens rotate gate posts
+seasonally so no officer builds a corrupt relationship with any gate. Kiess's
+Wall Command treats compact breach as a serious matter — the Executioner at the
+Prism is not ceremonial. You know the difference between a wanted person and a
+person the guard is paid to ignore. Most of what you know about active
+investigations you do not repeat.
+```
+
+*KNOW_HISTORY:*
+```
+DEEP HISTORY: The Spirebound Conclave ran condemned-debtor labor chains through
+every major city under sealed administrative warrants. Every city participated;
+none has formally acknowledged it. The Unindexed Years in Midgaard's ledger
+archive are not accidental fire damage. The obsidian disc bearing the Conclave's
+triune seal found in Kiess's foundation excavations is real; the founding
+charter's repudiation clause was written specifically in response to it. The
+Black Ledger — Kowloon's unredacted founding census — either exists sealed in
+an undercity cistern or was destroyed; multiple factions are searching
+regardless.
+```
+
+*KNOW_WILDERNESS:*
+```
+SURROUNDING TERRAIN: The Forest of Confusion north of Kiess disorients by
+design — its mist-fields are the remnant of a failed druidic quarantine merged
+with an old forest intelligence. Rope-line corridors are the only reliable
+transit through the southern verge. The Saltglass Reach east of Mafdet is
+passable but requires knowledge of dry-season water sources and the difference
+between stable glasssand and sinkable softcrust. The Eccentric Woodland route
+south to Rakuen has reliable raider activity between the third and fourth
+waypost. Overland travel without a guide costs more than it saves.
+```
+
+*KNOW_POLITICS:*
+```
+FACTION POLITICS: In Midgaard the Continuity faction preserves existing systems;
+the Reckoning faction demands exposure of buried records. In Kowloon, River
+Corsairs under Blacktide Shen probe gate timing with raids, and the Jade Eels
+syndicate may hold a Harbor Syndic seat. In Rakuen, three factions block each
+other from acting: Amendment Track, Quiet Separatists, Preservation Coalition.
+Kiess's three-power governance requires two blocs to move against one — politics
+there is about which two are currently aligned. Mafdet's Quay Concord and Red
+Sand Accounts have opposed interests but need each other operationally. Faction
+affiliation is readable from small signals: colors, seals, how someone pays.
+```
+
+**Example NPC profiles:**
+
+| NPC | Tags |
+|---|---|
+| Blacksmith | `weapons trade` |
+| Temple priest | `temple history` |
+| City guard | `guard politics` |
+| Criminal fence | `underworld trade` |
+| Harbor master | `harbor trade` |
+| Mage guild contact | `magic history` |
+| Wilderness guide | `wilderness trade` |
+| City clerk | `history politics guard` |
+
+---
+
 ### System Prompt Assembly
 
 `npc_dialogue_dispatch()` builds the final system prompt as:
@@ -710,13 +879,15 @@ quarantined, or litigated. What it cannot be is ignored.
 
 [AREA KNOWLEDGE BLOCK — determined by NPC's room vnum]
 
+[TOPIC BLOCKS — one per set bit in npc->ai_knowledge, in flag order]
+
 [NPC PERSONA — npc->ai_prompt]
 ```
 
-The total assembled prompt must fit within `system_prompt[8192]` in
-`NPC_DLG_REQ`. If the combined length exceeds this, the area block is
-truncated before the NPC persona is appended, as the persona is the most
-critical layer for correct character behavior.
+The total assembled prompt must fit within `system_prompt[16384]` in
+`NPC_DLG_REQ`. If the combined length exceeds this, topic blocks are dropped
+from the end of the list before the NPC persona is appended, as the persona is
+the most critical layer. The common and area blocks are never truncated.
 
 ---
 
@@ -1150,14 +1321,14 @@ No unique ID field on `CHAR_DATA` is needed.
 ## Implementation Checklist
 
 - [ ] Add `ACT_AI_DIALOGUE` flag to mob act flags in `typedefs.h`
-- [ ] Define common knowledge block and five area knowledge blocks as string constants in `npc_dialogue.c`
-- [ ] Implement system prompt assembly (common + area + NPC persona) in `npc_dialogue_dispatch()`
+- [ ] Define common knowledge block, five area knowledge blocks, and ten topic blocks as string constants in `npc_dialogue.c`
+- [ ] Implement system prompt assembly (common + area + topic blocks + NPC persona) in `npc_dialogue_dispatch()`
 - [ ] Map room vnum ranges to area knowledge blocks
-- [ ] Add `char *ai_prompt` field to `CHAR_DATA`
+- [ ] Add `char *ai_prompt` and `int ai_knowledge` fields to `CHAR_DATA`
 - [ ] Add `NPC_CONVERSATION *conversations` field to `CHAR_DATA`
 - [ ] Add `bool dlg_pending` field to `CHAR_DATA`
 - [ ] Null out response queue `npc`/`player` pointers in `extract_char()`
-- [ ] Parse `AiPrompt` block in `db.c` mob loader
+- [ ] Parse `AiPrompt` block and `AiKnowledge` tag list in `db.c` mob loader
 - [ ] Implement `src/npc_dialogue.c` (queues, worker thread, dispatch, deliver, history)
 - [ ] Add `npc_dialogue_init()` call to server startup in `comm.c`
 - [ ] Hook `npc_dialogue_dispatch()` into `do_say()` in `act_comm.c`
