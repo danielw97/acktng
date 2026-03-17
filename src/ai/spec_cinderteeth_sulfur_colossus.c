@@ -21,63 +21,68 @@
 
 bool spec_cinderteeth_sulfur_colossus(CHAR_DATA *ch)
 {
-   CHAR_DATA *victim;
-   CHAR_DATA *vch;
-   CHAR_DATA *vch_next;
-   char buf[MSL];
-   int sn;
+    CHAR_DATA *victim;
+    CHAR_DATA *vch;
+    CHAR_DATA *vch_next;
+    char buf[MSL];
+    int sn;
 
-   if (!is_fighting(ch))
-   {
-      ch->spec_behavior = 0;
-      return FALSE;
-   }
+    if (!is_fighting(ch))
+    {
+        ch->spec_behavior = 0;
+        return FALSE;
+    }
 
-   if ((victim = ch->fighting) == NULL)
-      return FALSE;
+    if ((victim = ch->fighting) == NULL)
+        return FALSE;
 
-   ch->spec_behavior++;
+    ch->spec_behavior++;
 
-   switch (ch->spec_behavior % 6)
-   {
-   case 1:
-   {
-      int dam = number_range(5000, 8000);
-      sprintf(buf, "@@G$n raises a crystalline limb and drives it into the floor —\r\n"
-                   "the impact shatters sulfur shards into $N in a grinding tremor!@@N");
-      act(buf, ch, NULL, victim, TO_ROOM);
-      calculate_damage(ch, victim, dam, gsn_holystrike, ELEMENT_EARTH, TRUE);
-      if ((sn = skill_lookup("earthquake")) >= 0)
-         (*skill_table[sn].spell_fun)(sn, ch->level, ch, NULL, NULL);
-   }
-   break;
+    switch (ch->spec_behavior % 6)
+    {
+    case 1:
+        {
+            int dam = number_range(5000, 8000);
+            sprintf(buf,
+                "@@G$n raises a crystalline limb and drives it into the floor —\r\n"
+                "the impact shatters sulfur shards into $N in a grinding tremor!@@N");
+            act(buf, ch, NULL, victim, TO_ROOM);
+            calculate_damage(ch, victim, dam, gsn_holystrike, ELEMENT_EARTH, TRUE);
+            if ((sn = skill_lookup("earthquake")) >= 0)
+                (*skill_table[sn].spell_fun)(sn, ch->level, ch, NULL, NULL);
+        }
+        break;
 
-   case 3:
-      sprintf(buf, "@@G$n's crystalline carapace cracks along a dozen fault lines —\r\n"
-                   "choking volcanic gas pours from the fissures and floods the chamber!@@N");
-      act(buf, ch, NULL, NULL, TO_ROOM);
-      if ((sn = skill_lookup("gas breath")) >= 0)
-         (*skill_table[sn].spell_fun)(sn, ch->level, ch, NULL, NULL);
-      break;
+    case 3:
+        sprintf(buf,
+            "@@G$n's crystalline carapace cracks along a dozen fault lines —\r\n"
+            "choking volcanic gas pours from the fissures and floods the chamber!@@N");
+        act(buf, ch, NULL, NULL, TO_ROOM);
+        if ((sn = skill_lookup("gas breath")) >= 0)
+            (*skill_table[sn].spell_fun)(sn, ch->level, ch, NULL, NULL);
+        break;
 
-   case 5:
-   {
-      int dam = number_range(5500, 8500);
-      sprintf(buf, "@@G$n's body-gas ignites from the geothermal heat below —\r\n"
-                   "a searing burst of sulfur-fire engulfs $N in toxic flame!@@N");
-      act(buf, ch, NULL, victim, TO_ROOM);
-      calculate_damage(ch, victim, dam, gsn_holystrike, ELEMENT_FIRE | ELEMENT_POISON, TRUE);
-      /* Secondary: toxic fallout on everyone else in room */
-      for (vch = ch->in_room->first_person; vch != NULL; vch = vch_next)
-      {
-         vch_next = vch->next_in_room;
-         if (IS_NPC(vch) || vch == victim)
-            continue;
-         calculate_damage(ch, vch, number_range(2000, 3500), gsn_holystrike, ELEMENT_POISON, TRUE);
-      }
-   }
-   break;
-   }
+    case 5:
+        {
+            int dam = number_range(5500, 8500);
+            sprintf(buf,
+                "@@G$n's body-gas ignites from the geothermal heat below —\r\n"
+                "a searing burst of sulfur-fire engulfs $N in toxic flame!@@N");
+            act(buf, ch, NULL, victim, TO_ROOM);
+            calculate_damage(ch, victim, dam, gsn_holystrike,
+                             ELEMENT_FIRE | ELEMENT_POISON, TRUE);
+            /* Secondary: toxic fallout on everyone else in room */
+            for (vch = ch->in_room->first_person; vch != NULL; vch = vch_next)
+            {
+                vch_next = vch->next_in_room;
+                if (IS_NPC(vch) || vch == victim)
+                    continue;
+                calculate_damage(ch, vch, number_range(2000, 3500),
+                                 gsn_holystrike, ELEMENT_POISON, TRUE);
+            }
+        }
+        break;
+    }
 
-   return TRUE;
+    return TRUE;
 }
