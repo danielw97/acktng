@@ -7,8 +7,36 @@ on:
 
 permissions:
   contents: read
+  pull-requests: read
 
 jobs:
+  notify-discord:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get merged PR title
+        id: pr
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const commits = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              commit_sha: context.sha,
+            });
+            const merged = commits.data.find(pr => pr.merged_at !== null);
+            const title = merged ? merged.title : `Direct push: ${context.sha.substring(0, 7)}`;
+            const url = merged ? merged.html_url : `https://github.com/${context.repo.owner}/${context.repo.repo}/commit/${context.sha}`;
+            core.setOutput('title', title);
+            core.setOutput('url', url);
+
+      - name: Send Discord notification
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          curl -s -X POST "$DISCORD_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d "{\"embeds\":[{\"title\":\"Merged to main\",\"description\":\"${{ steps.pr.outputs.title }}\",\"url\":\"${{ steps.pr.outputs.url }}\",\"color\":5763719}]}"
+
   deploy:
     runs-on: ubuntu-latest
     steps:

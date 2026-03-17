@@ -195,6 +195,22 @@ The Ushabti do not push this argument explicitly. They do not need to. They exis
 
 See also: `ushabti_lore.md`
 
+### Serathi
+
+Serathi couriers and intelligence-brokers are a persistent presence in human city networks that most human civic curricula do not formally acknowledge. The five cities' trade infrastructure depends on overland routes; the Serathi maintain aerial records of those routes that are, in several documented cases, more accurate than the Keeper survey documents that human road-law is based on.
+
+Human institutions have a consistent pattern with the Serathi: they value the aerial intelligence and courier services, negotiate for specific deliverables, and decline to formally recognize the sky-road territorial claims that the Serathi request in exchange for broader access to their records. The result is a persistent transactional relationship with a ceiling: enough cooperation to serve immediate institutional needs, not enough to establish the mutual recognition the Serathi seek. Midgaard's Reckoning faction has argued for more substantive engagement, noting that Serathi roost-chronicles from the Ash-and-Iron Decades may contain aerial observation records of the Conclave's Cinderteeth operations that would corroborate the sealed warrant evidence. The Continuity faction considers this an argument for carefully limiting Serathi archive access rather than expanding it.
+
+See also: `serathi_lore.md`
+
+### Kethari
+
+The Kethari are the human corridor's most under-acknowledged knowledge resource. Their water-memories of the Deepwell Confluence predate the Keeper survey records that form the legal basis of all current water-rights in the eastern corridor; their geological knowledge of the Saltglass Reach exceeds anything human survey technology can currently produce. They are also, by a substantial margin, the least formally recognized of any people in the corridor.
+
+The pattern of human relationship with the Kethari is almost structurally identical to the pattern with the Khephari: specialized knowledge provided to human institutions, formal documentation that omits the source, institutional memory that attributes the knowledge to human surveyors rather than the peoples who actually held it. The Kethari are more patient about this than most — their philosophy specifically accommodates institutional impermanence — but patient is not the same as indifferent, and their water-memories contain the full record of which human institutions received which knowledge and failed to credit it.
+
+See also: `kethari_lore.md`
+
 ---
 
 ## The Sealed Secrets

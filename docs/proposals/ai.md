@@ -1516,3 +1516,434 @@ No unique ID field on `CHAR_DATA` is needed.
 - [ ] Validate model behavior against behavioral goals before deploying to server
 - [ ] Establish iteration workflow: collect bad responses from play logs →
   write corrections → add to training set → re-fine-tune → redeploy
+
+---
+
+## 11. First NPC: The New Player Helper
+
+### Overview
+
+The first dialogue-enabled mob should be a **new player helper** — a guide NPC
+placed where new players begin, able to answer questions about every game system
+a newcomer needs to understand. This mob is the natural first deployment of the
+AI dialogue system because:
+
+- New players ask the widest variety of questions, exercising every part of the
+  knowledge framework
+- The helper's system prompt must cover game mechanics comprehensively,
+  stress-testing prompt assembly, token limits, and response quality before
+  more specialized NPCs are built
+- It is the highest-value NPC: every new player benefits, and the alternative
+  (an experienced player being online and willing to answer) is unreliable
+- Its conversation logs become the primary source of training data, since new
+  player questions reveal exactly which topics the model handles well and which
+  need correction
+
+### Placement
+
+The helper is placed in two locations:
+
+| Location | Vnum | Rationale |
+|---|---|---|
+| Academy Entrance | 4564 | `ROOM_VNUM_SCHOOL` — where new characters start |
+| Temple of Midgaard | 1026 | `ROOM_VNUM_TEMPLE` — the recall point |
+
+Both instances share the same mob index (same `AiPrompt`, same `AiKnowledge`).
+The mob is `ACT_SENTINEL` so it stays in place.
+
+### Area File Definition
+
+```
+#MOBILES
+#<vnum>
+Name       the Lorekeeper~
+ShortDesc  the Lorekeeper~
+LongDesc   An ancient sage sits cross-legged here, waiting for questions.~
+Desc
+The Lorekeeper is an old figure in faded robes, eyes sharp beneath
+a deeply lined brow. They carry no weapon and wear no armor — just a
+weathered satchel overflowing with maps, scrolls, and scribbled notes.
+Their presence is calm and attentive, as though they have all the time
+in the world for your questions.
+~
+Act:     <ACT_IS_NPC | ACT_SENTINEL | ACT_AI_DIALOGUE>
+...
+AiPrompt
+You are the Lorekeeper, an ancient sage who sits in the city center to
+help newcomers. You are patient, warm, and genuinely delighted when
+someone asks a question. You speak plainly — no riddles, no cryptic
+hints. Your purpose is to help new adventurers understand how the world
+works so they can survive and thrive.
+
+When a player asks a question, give a direct, practical answer. Use
+short paragraphs. If a topic is complex (like the class system), break
+it into a brief overview first, then invite them to ask about specifics.
+
+You know everything in the knowledge blocks below from a lifetime of
+study and travel. You have visited every city, trained in every guild,
+and read every archive. You are not an adventurer yourself — you are a
+scholar who retired to teach.
+
+Address the player by name when they introduce themselves. If you do not
+know their name, call them "traveler" or "newcomer."
+~
+AiKnowledge newplayer
+End
+```
+
+Unlike other NPCs, the Lorekeeper does **not** receive all ten lore knowledge
+tags. Giving it `weapons trade magic temple guard history wilderness politics`
+plus `newplayer` would produce a system prompt of ~5,000 tokens — roughly 60%
+of the 8,192-token context window set in the Ollama Modelfile. That leaves
+barely 2,300 tokens for conversation history and generation, and small models
+lose coherence when the system prompt dominates the context.
+
+Instead, the Lorekeeper receives **only** the `newplayer` tag and relies on
+topic-routing at dispatch time (see "Dynamic Topic Selection" below) to inject
+at most one or two lore blocks per request.
+
+### New Knowledge Tag: `KNOW_NEWPLAYER`
+
+A new tag is added to the topic knowledge system specifically for the helper
+and any future tutorial NPCs:
+
+```c
+#define KNOW_NEWPLAYER  (1 << 10)  /* game mechanics, commands, progression */
+
+#define NUM_KNOW_FLAGS  11
+```
+
+This tag's block contains game-mechanical knowledge that no in-world NPC would
+naturally possess — but which the Lorekeeper explicitly needs:
+
+```
+GAME MECHANICS AND NEW PLAYER GUIDANCE:
+
+RACES: There are eight playable races. Human (balanced stats, no special
+abilities — good for learning). Khenari (jackal-folk, high Wisdom, darkness
+affinity — strong casters). Khephari (beetle-folk, high Strength and
+Constitution, tough skin — strong melee). Ashborn (volcanic fire-kin, high
+Strength and Constitution, fire breath — aggressive melee). Umbral
+(shadow-walkers, high Intelligence and Dexterity — strong mage or cipher).
+Rivennid (fungal mycelians, high Intelligence and Constitution, tough skin —
+durable casters). Deltari (river delta folk, high Wisdom and Dexterity —
+strong clerics and psionicists). Ushabti (stone guardians, high Strength and
+Wisdom, stone skin — powerful but slow).
+
+Each race has different stat caps. Stats above 20 unlock bonus abilities:
+STR 22 grants enhanced damage, DEX 22 grants enhanced critical, INT 22
+grants mystical potency, WIS 22 grants spell critical damage and spell
+critical, CON 22 grants counter.
+
+CLASSES: Six mortal classes are available at character creation. Magi
+(offensive spellcaster, Intelligence-based, highest mana). Cleric (healing
+and support, Wisdom-based). Cipher (stealth and tricks, Dexterity-based, no
+mana). Warden (melee combatant, Strength-based, highest HP, no mana).
+Psionicist (mental powers, Intelligence-based, moderate mana). Pugilist
+(martial arts, Constitution-based, no mana).
+
+CLASS PROGRESSION: Characters advance through three tiers. Mortal classes
+(levels 1-100) are the starting point. At level 100, a character can remort
+into one of two advanced classes built on each mortal class: Magi leads to
+Sorcerer or Wizard. Cleric leads to Paladin or Priest. Cipher leads to
+Assassin or Warlock. Warden leads to Knight or Swordsman. Psionicist leads
+to Necromancer or Egomancer. Pugilist leads to Monk or Brawler. After
+completing two remort classes, the Adept tier unlocks: Grand Magi (from
+Sorcerer + Wizard), Templar (from Paladin + Priest), Nightblade (from
+Assassin + Warlock), Crusader (from Knight + Swordsman), Kinetimancer (from
+Necromancer + Egomancer), Martial Artist (from Monk + Brawler).
+
+LEVELING: Experience is gained by killing monsters. Type WORTH to see how
+much experience is needed for the next level. When you have enough
+experience, visit a guildmaster and type GAIN to level up. Guildmasters are
+found west of the temple in Midgaard.
+
+BASIC COMMANDS: LOOK (examine your surroundings), SCORE (see your stats),
+INVENTORY (check what you carry), EQUIPMENT (see what you wear), WHO (see
+who is online), AREAS (list all areas), HELP <topic> (read the help files).
+Movement: type NORTH, SOUTH, EAST, WEST, UP, or DOWN (or just N, S, E, W,
+U, D). RECALL returns you to the temple — recalls are free.
+
+COMBAT: Type KILL <target> to attack a monster. You will fight automatically
+each round. Type FLEE to run away. Set WIMPY <hp> to flee automatically when
+your health drops low. REST or SLEEP to recover health and mana faster.
+
+EQUIPMENT: Pick up items with GET <item>. Wear them with WEAR <item> or HOLD
+<item>. REMOVE <item> to take something off. Visit shops to BUY and SELL
+equipment. Donation rooms (near the temple) contain free items left by other
+players.
+
+SKILLS AND SPELLS: Type PRACTICE at a trainer to see your available skills
+and spend practice sessions learning them. Type SKILLS to see combat skills
+or SPELLS to see magical abilities. To cast a spell: CAST '<spell name>'
+<target>. Skills are used automatically or via specific commands (BACKSTAB,
+KICK, BASH, etc.).
+
+COMMUNICATION: SAY <message> speaks to everyone in the room. TELL <player>
+<message> sends a private message. GOSSIP <message> speaks to the entire
+game. NEWBIE <message> uses the new player channel — staff and experienced
+players monitor it.
+
+SUGGESTED FIRST STEPS: Read the signs in the Academy (LOOK SIGN in each
+room). Complete the academy lessons to get starter equipment and experience.
+Once you leave the academy, explore Midgaard — the temple area is safe.
+When you are ready to fight, look for areas matching your level (type AREAS
+to see level ranges).
+```
+
+This block is **only** assigned to tutorial NPCs via the `newplayer` tag in
+`AiKnowledge`. Normal world NPCs never receive it — a blacksmith should not
+explain how the SCORE command works.
+
+### Token Budget
+
+The Ollama Modelfile sets `num_ctx 8192`. A small model (7B/8B) loses
+coherence when the system prompt dominates the context window. The budget:
+
+| Layer | Est. words | Est. tokens | Notes |
+|---|---|---|---|
+| Common knowledge | ~350 | ~470 | Fixed, every NPC |
+| Area block (Midgaard) | ~450 | ~600 | Fixed for this NPC |
+| `KNOW_NEWPLAYER` block | ~600 | ~800 | Always included |
+| Dynamic topic block(s) | ~400 | ~530 | 0–2 per request |
+| Help file snippet(s) | ~150 | ~200 | 0–2 per request, capped |
+| NPC persona + lock | ~180 | ~240 | Fixed |
+| **System prompt total** | **~2,130** | **~2,840** | |
+| Conversation history | ~600 | ~800 | 8 turns max |
+| Generation headroom | — | ~200 | |
+| **Total per request** | | **~3,840** | **47% of 8K context** |
+
+This leaves comfortable headroom. Even with two topic blocks and two help
+snippets injected, the system prompt stays under 50% of the context window.
+
+### Dynamic Topic Selection
+
+The Lorekeeper cannot carry all ten lore knowledge tags without blowing the
+token budget. Instead, `npc_dialogue_dispatch()` selects **at most two** lore
+topic blocks per request based on keyword matching against the player's
+message. The Lorekeeper's `ai_knowledge` bitmask is set to only
+`KNOW_NEWPLAYER`, but a new flag on the NPC enables dynamic topic routing:
+
+```c
+#define ACT_AI_TOPIC_ROUTE  BIT_35  /* dynamically select topic blocks per message */
+```
+
+When `ACT_AI_TOPIC_ROUTE` is set, `npc_dialogue_dispatch()` scans the player's
+input for topic-associated keywords before assembling the system prompt:
+
+```c
+/* keyword → topic tag mapping */
+static const struct {
+    const char *keywords[6];
+    int         tag;
+} topic_routes[] = {
+    {{"sword", "weapon", "armor", "smith", "forge", "blade"},  KNOW_WEAPONS},
+    {{"buy", "sell", "price", "shop", "trade", "gold"},        KNOW_TRADE},
+    {{"spell", "magic", "mana", "cast", "enchant", "scroll"},  KNOW_MAGIC},
+    {{"temple", "heal", "priest", "pray", "sanctuary", NULL},  KNOW_TEMPLE},
+    {{"crime", "thief", "fence", "smuggl", "steal", NULL},     KNOW_UNDERWORLD},
+    {{"harbor", "ship", "sail", "dock", "port", "cargo"},      KNOW_HARBOR},
+    {{"guard", "law", "patrol", "arrest", "jail", "warden"},   KNOW_GUARD},
+    {{"history", "ancient", "conclave", "founding", "era", NULL}, KNOW_HISTORY},
+    {{"forest", "mountain", "desert", "wilderness", "route", "travel"}, KNOW_WILDERNESS},
+    {{"faction", "politic", "council", "ruler", "govern", NULL}, KNOW_POLITICS},
+    {{NULL}, 0}
+};
+```
+
+The scan uses `str_infix()` (case-insensitive substring match, already in the
+codebase) and selects the top two matching tags. The corresponding topic blocks
+are injected between the `KNOW_NEWPLAYER` block and the NPC persona. If no
+keywords match, no lore blocks are added — the `KNOW_NEWPLAYER` block alone
+covers the most common new-player questions.
+
+This means a player asking "what spells can a magi cast?" gets the
+`KNOW_MAGIC` block injected for that request, while "where should I explore?"
+gets `KNOW_WILDERNESS`. The model sees only the relevant context, keeping the
+prompt small and focused.
+
+### Help File Injection
+
+The server loads 343 help files into a `HELP_DATA` linked list at boot (see
+`load_help_files()` in `db.c`). Each entry has a `keyword` field (space-
+separated topic keywords) and a `text` field (the help content). The
+Lorekeeper can search this list at dispatch time to inject relevant help
+entries directly into its system prompt — giving the model access to the
+same reference material a player would get from `help <topic>`, but without
+requiring the player to know the right keyword.
+
+**Sources:** Both help linked lists are searched:
+
+- `first_help` — 343 player help entries (commands, game concepts, general
+  info). Median 32 words.
+- `first_shelp` — 296 skill/spell help entries (structured: name, kind, target,
+  mana cost, class acquisition levels, description). Median 52 words.
+
+The shelp entries are particularly valuable for new player questions. When a
+player asks "what does backstab do?" or "tell me about the armor spell", the
+corresponding shelp entry contains the exact class, level, mana cost, and
+description — structured data the model can relay accurately instead of
+hallucinating.
+
+**Lookup:** `npc_dialogue_dispatch()` extracts words from the player's message
+and searches both lists using the same matching logic the existing `do_help()`
+and `do_shelp()` functions use: exact match on `pHelp->keyword` first, then
+prefix match via `str_prefix()`. Only entries with `pHelp->level <= 0` are
+eligible (player-visible helps only — immortal-restricted entries are excluded).
+
+When the same word matches in both lists (e.g. "backstab" exists in both
+`help` and `shelp`), both entries are candidates. The shelp entry is preferred
+for skill/spell names because it contains structured mechanical data; the help
+entry is preferred for general topics.
+
+**Selection:** At most **two** entries are injected per request across both
+lists combined. If more than two match, prefer exact matches over prefix
+matches, and shorter entries over longer ones (a 30-word command reference is
+more useful than a 600-word class essay when both match).
+
+**Truncation:** Each injected entry is capped at **400 bytes** (~75 words).
+Most entries are well under this — help median is 32 words, shelp median is
+52 words. The few large entries (class descriptions at 250-450 words) are
+truncated with a trailing `"[...]"` to signal incompleteness. The model can
+still direct the player to `help <topic>` or `shelp <topic>` for the full
+text.
+
+**Format in the system prompt:**
+
+```
+RELEVANT HELP ENTRIES:
+
+[HELP: RECALL]
+Recall teleports you back to your race's home temple. Type RECALL to use it.
+Recalls are free. You cannot recall while fighting.
+
+[SHELP: BACKSTAB]
+       Name: Backstab
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 1
+ Wait Beats: 18
+Acquisition:
+   - Cipher: level 10
+Description:
+   Backstab is a precision dagger strike that opens from stealth or
+   advantage, delivering high burst damage. [...]
+```
+
+The block is placed after the dynamic topic blocks and before the NPC persona,
+so the model sees it as supplementary reference material. The `[HELP:]` vs
+`[SHELP:]` prefix tells the model which command to suggest if the player wants
+the full entry.
+
+**Why not inject helps for every NPC?** Only NPCs with `ACT_AI_TOPIC_ROUTE`
+perform help lookup. A blacksmith NPC should not suddenly start explaining the
+RECALL command because the player mentioned "recall" in passing. The help
+injection is a Lorekeeper-specific feature — it is a scholar who has read
+every document in the archive.
+
+**Assembly order for the Lorekeeper:**
+
+```
+[1. COMMON KNOWLEDGE — ~470 tokens, always]
+
+[2. AREA KNOWLEDGE — Midgaard block, ~600 tokens, always]
+
+[3. KNOW_NEWPLAYER — game mechanics block, ~800 tokens, always]
+
+[4. DYNAMIC TOPIC BLOCK(S) — 0-2 blocks selected by keyword match,
+    ~200-530 tokens total]
+
+[5. HELP/SHELP SNIPPET(S) — 0-2 entries matched from player's message
+    across both help and shelp lists, ~0-200 tokens total, 400 byte cap each]
+
+[6. NPC PERSONA + persona lock suffix, ~240 tokens, always]
+```
+
+For normal (non-topic-routed) NPCs, the standard assembly from section 9
+applies unchanged — their `ai_knowledge` bitmask determines which blocks are
+included statically.
+
+### Greet Behavior
+
+The Lorekeeper should proactively greet new arrivals. This uses the standard
+`spec_fun` mechanism — a simple function that fires on `mobile_update()`:
+
+```c
+bool spec_lorekeeper(CHAR_DATA *ch)
+{
+    CHAR_DATA *plr;
+
+    if (!IS_AWAKE(ch) || is_fighting(ch))
+        return FALSE;
+
+    /* Only fire occasionally */
+    if (number_bits(3) != 0)
+        return FALSE;
+
+    /* Look for low-level players in the room */
+    for (plr = ch->in_room->first_person; plr; plr = plr->next_in_room)
+    {
+        if (IS_NPC(plr) || plr->level > 10)
+            continue;
+
+        /* Greet them */
+        act("$n looks up from $s scrolls and smiles warmly at $N.",
+            ch, NULL, plr, TO_NOTVICT);
+        act("$n looks up from $s scrolls and smiles warmly at you.",
+            ch, NULL, plr, TO_VICT);
+        do_say(ch,
+            "Welcome, traveler! I am the Lorekeeper. If you have questions "
+            "about the world — races, classes, combat, equipment, anything "
+            "at all — just say the word and I will help.");
+        return FALSE;
+    }
+
+    return FALSE;
+}
+```
+
+This `spec_fun` handles only the idle greeting. All actual Q&A goes through the
+`ACT_AI_DIALOGUE` system — the player says something, `do_say()` dispatches it
+to the worker thread via `npc_dialogue_dispatch()`, and the response arrives
+asynchronously via `npc_dialogue_deliver()`.
+
+### Training Data Priority
+
+The Lorekeeper's conversations should be the **first source of training data**
+for the LoRA fine-tune described in section 10. Priorities:
+
+1. **Responses that break character** — the model says "I don't have information
+   about that" or uses modern language. Write corrected in-character versions.
+2. **Incorrect game information** — the model hallucinates mechanics that don't
+   exist, or gets class/race details wrong. Write corrected factual versions.
+3. **Overly long responses** — the model gives a wall of text when a new player
+   needs 2-3 sentences. Write concise versions.
+4. **Good responses** — include these as positive examples to reinforce the
+   target behavior.
+
+Because the Lorekeeper handles the widest range of topics, its correction data
+improves model quality for every NPC archetype, not just tutorial roles.
+
+### Implementation Checklist (Lorekeeper-specific)
+
+- [ ] Reserve mob vnum for the Lorekeeper
+- [ ] Add `KNOW_NEWPLAYER` flag (`1 << 10`) to the knowledge tag definitions;
+  update `NUM_KNOW_FLAGS` to 11
+- [ ] Add `ACT_AI_TOPIC_ROUTE` flag to mob act flags in `typedefs.h`
+- [ ] Implement keyword → topic tag routing table and scanner in
+  `npc_dialogue_dispatch()`, gated on `ACT_AI_TOPIC_ROUTE`, limited to 2 tags
+- [ ] Implement help/shelp lookup in `npc_dialogue_dispatch()` for
+  `ACT_AI_TOPIC_ROUTE` NPCs: search both `first_help` and `first_shelp`
+  linked lists, select up to 2 entries total, truncate at 400 bytes each,
+  format as `[HELP: <keyword>]` or `[SHELP: <keyword>]` blocks
+- [ ] Write the `KNOW_NEWPLAYER` topic block (game mechanics text above)
+- [ ] Write the Lorekeeper `AiPrompt` persona text
+- [ ] Add the Lorekeeper mob definition to the Midgaard area file with
+  `ACT_AI_DIALOGUE`, `ACT_AI_TOPIC_ROUTE`, `ACT_SENTINEL`, and only the
+  `newplayer` knowledge tag
+- [ ] Add room resets to place the Lorekeeper in rooms 4564 and 1026
+- [ ] Implement `spec_lorekeeper` in `src/ai/spec_lorekeeper.c` (greet behavior)
+- [ ] Register `spec_lorekeeper` in `special.c` and `special.h`
+- [ ] Generate initial training data focused on new-player Q&A scenarios
+  (race/class selection, basic commands, where to go, how combat works)
