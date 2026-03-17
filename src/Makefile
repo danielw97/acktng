@@ -123,7 +123,7 @@ SKILL_OBJS = \
 	skills/do_target.o skills/do_trip.o skills/do_warcry.o
 
 O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_wiz.o \
-	  areachk.o areasave.o board.o build.o buildare.o buildtab.o caravan.o clutch.o comm.o socket.o \
+	  areachk.o areasave.o board.o build.o buildare.o buildtab.o caravan.o clutch.o comm.o socket.o prompt.o \
 	  const.o damage.o cloak.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
 	  heal.o interp.o invasion.o item_generation.o item_generation_tables.o keep.o lists.o macros.o magic.o mapper.o \
 	  obj_fun.o pdelete.o quest.o crusade.o reincarnate.o rulers.o \

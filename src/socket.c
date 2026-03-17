@@ -74,12 +74,12 @@ const char echo_on_str[]  = {IAC, WONT, TELOPT_ECHO, '\0'};
 const char go_ahead_str[] = {IAC, GA, '\0'};
 
 #include "socket.h"
+#include "prompt.h"
 
 /*
  * Forward declarations for functions defined in comm.c but called from socket.c
  */
 extern bool merc_down;
-void bust_a_prompt(DESCRIPTOR_DATA *d);
 void nanny(DESCRIPTOR_DATA *d, char *argument);
 void stop_idling(CHAR_DATA *ch);
 

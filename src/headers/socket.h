@@ -12,6 +12,7 @@ extern const char go_ahead_str[];
 
 int init_socket(int port);
 void game_loop(int control);
+void init_descriptor(DESCRIPTOR_DATA *dnew, int desc);
 bool write_to_descriptor(int desc, char *txt, int length);
 void write_to_buffer(DESCRIPTOR_DATA *d, const char *txt, int length);
 bool process_output(DESCRIPTOR_DATA *d, bool fPrompt);
