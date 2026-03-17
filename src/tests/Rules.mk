@@ -138,9 +138,9 @@ unit-test-ssm: $(OBJDIR)/tests/test_ssm.o $(OBJDIR)/ssm.unit-test.o $(OBJDIR)/te
 $(OBJDIR)/db.unit-test.o: db.c headers/ack.h
 	$(CC) -c $(C_FLAGS) -DUNIT_TEST_DB -ffunction-sections -fdata-sections -o $(OBJDIR)/db.unit-test.o db.c
 
-unit-test-db: $(OBJDIR)/tests/test_db.o $(OBJDIR)/db.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
+unit-test-db: $(OBJDIR)/tests/test_db.o $(OBJDIR)/db.unit-test.o $(OBJDIR)/strfuns.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-db
-	$(CC) -Wl,--gc-sections -o tests/unit-test-db $(OBJDIR)/tests/test_db.o $(OBJDIR)/db.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-db $(OBJDIR)/tests/test_db.o $(OBJDIR)/db.unit-test.o $(OBJDIR)/strfuns.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 $(OBJDIR)/magic.unit-test.o: magic.c headers/ack.h
 	$(CC) -c $(C_FLAGS) -DUNIT_TEST_MAGIC -DUNIT_TEST_MAGIC2 -ffunction-sections -fdata-sections -o $(OBJDIR)/magic.unit-test.o magic.c

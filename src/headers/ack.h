@@ -313,6 +313,7 @@ struct help_data
    HELP_DATA *next;
    HELP_DATA *prev;
    sh_int level;
+   long flags;
    char *keyword;
    char *text;
 };
@@ -549,6 +550,7 @@ struct mob_index_data
    sh_int race;
    sh_int position;
    int hunt_flags;
+   long lore_flags;
 };
 
 /*
@@ -708,6 +710,7 @@ struct char_data
    int stance;
    bool using_named_door;
    NPC_GROUP_DATA *ngroup;
+   long lore_flags;
 };
 
 /*

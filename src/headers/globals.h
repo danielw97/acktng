@@ -449,6 +449,7 @@ DECLARE_DO_FUN(do_lock);
 DECLARE_DO_FUN(do_log);
 DECLARE_DO_FUN(do_look);
 DECLARE_DO_FUN(do_loot);
+DECLARE_DO_FUN(do_lore);
 DECLARE_DO_FUN(do_memory);
 DECLARE_DO_FUN(do_mfind);
 DECLARE_DO_FUN(do_mload);
