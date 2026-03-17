@@ -102,6 +102,22 @@ The Ashfall catastrophe sits in that gap as its most catastrophic example. Kheph
 
 See also: `human_lore.md`
 
+### Kethari
+
+The Khephari and the Kethari are both ancient desert peoples with comprehensive physical knowledge of the eastern corridor that human institutions have consistently undervalued. The Khephari's earth-sense reads ground vibration and geological structure; the Kethari's water-memory reads the same ground's hydraulic behavior. Together, their knowledge constitutes a survey of the eastern desert more complete than anything human instrumentation has achieved.
+
+Their relationship is characterized by the particular respect that similar epistemologies generate: both evaluate knowledge by physical verification rather than institutional authorization; both have deep, patient relationships with the desert's timescale; both have the experience of watching human institutions receive important information and file it without action. The Ashfall catastrophe sits in Khephari memory as the most catastrophic example; the Kethari have their own accumulated instances across the water-rights history of the Deepwell Confluence. They compare notes occasionally, without particular rancor.
+
+See also: `kethari_lore.md`
+
+### Serathi
+
+The Khephari's ground-sense and the Serathi's aerial observation are complementary instruments that have occasionally been brought to bear on the same problem. Serathi roost-chronicles from above the Cinderteeth include surface observations that, combined with the Khephari's subsurface seismic records, constitute a more complete picture of the mountain's pre-Ashfall behavior than human institutions have assembled.
+
+Khephari communities near the Cinderteeth and Serathi sky-road communities that fly above the western ranges have the kind of relationship that develops between peoples who observe the same phenomena from different orientations: mutual usefulness without particular social intimacy.
+
+See also: `serathi_lore.md`
+
 ---
 
 ## Narrative Tone

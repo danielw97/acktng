@@ -118,6 +118,22 @@ What the Ushabti find humans unable to answer cleanly is the implication of thei
 
 See also: `human_lore.md`
 
+### Kethari
+
+The Ushabti's cosmic law authority and the Kethari's water-memory represent two competing claims to ancient legitimacy in the eastern corridor. The Ushabti serve an institution — the Great Pyramid's judicial function — that was deliberately constituted to manage the corridor's cosmic order. The Kethari maintain knowledge that predates that institution and exists independent of any formal constitution.
+
+The Ushabti's relationship to the Kethari is one of considered mutual acknowledgment: both are ancient presences in the corridor; both maintain claims to authority that surviving human institutions do not fully recognize; both have the experience of operating without the principal that originally authorized them (the Ushabti without the Solar Court; the Kethari without the Aquifer Covenant's formal recognition in current water law). The Kethari's interest in Khar'Daan — the sunken necropolis in the mineral fault — is a point of substantive connection: the Ushabti have professional interest in any site where cosmic law may apply, and the Kethari have water-memory records of Khar'Daan's physical history that inform understanding of what the site actually contains.
+
+See also: `kethari_lore.md`, `great_pyramid_lore.md`
+
+### Serathi
+
+The Ushabti are ground-bound in a way that makes their relationship to the Serathi somewhat asymmetric: the Serathi observe the Pyramid from altitude; the Ushabti serve it from within. The Serathi's roost-chronicles include aerial observation records of the Pyramid and its approach roads that the Ushabti find both useful (additional records of the Pyramid's physical state across generations) and thought-provoking (the aerial view reveals things about the Pyramid's construction that the ground-level perspective, however ancient, does not show).
+
+Ushabti who encounter Serathi in the corridor typically treat the exchange of observations as a professional courtesy between peoples with long institutional memories. The Serathi's sky-reading tradition and the Ushabti's variance-record tradition are different systems for the same underlying purpose: maintaining honest records of what actually happened, as opposed to what institutional accounts claim happened.
+
+See also: `serathi_lore.md`
+
 ---
 
 ## Narrative Tone

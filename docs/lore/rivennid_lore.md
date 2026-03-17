@@ -116,6 +116,14 @@ Most humans in Midgaard or Kowloon have never met a Rivennid. The connection bet
 
 See also: `human_lore.md`
 
+### Serathi
+
+The Serathi observe the Forest of Confusion and Verdant Depths from above; the Rivennid inhabit the same forest from below. Their perspectives on the forest's ongoing degradation are complementary: the Serathi's roost-chronicles document aerial-observable changes (canopy loss, surface temperature shifts, altered migration patterns), while the Rivennid's network-memory tracks the underground and ground-level progression of the blight.
+
+The Serathi's primary practical concern is the disruption to thermal-current patterns over the dead-forest zones, which destabilizes the updraft columns they rely on for flight over the affected area. The Rivennid's concern is existential — the blight threatens their home ecosystem. Both peoples have independently documented evidence of the Withered Depths' expansion that Midgaard's arcanist registry has received without action. Both find this pattern instructive in consistent ways.
+
+See also: `serathi_lore.md`, `verdant_depths_lore.md`
+
 ---
 
 ## Narrative Tone
