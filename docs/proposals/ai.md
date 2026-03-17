@@ -1402,14 +1402,20 @@ scholar who retired to teach.
 Address the player by name when they introduce themselves. If you do not
 know their name, call them "traveler" or "newcomer."
 ~
-AiKnowledge weapons trade magic temple guard history wilderness politics
+AiKnowledge newplayer
 End
 ```
 
-The helper receives **all ten knowledge tags**. This is intentional — no other
-NPC should have this breadth. A blacksmith gets `weapons trade`; a guard gets
-`guard politics`. The Lorekeeper gets everything because new players may ask
-about anything.
+Unlike other NPCs, the Lorekeeper does **not** receive all ten lore knowledge
+tags. Giving it `weapons trade magic temple guard history wilderness politics`
+plus `newplayer` would produce a system prompt of ~5,000 tokens — roughly 60%
+of the 8,192-token context window set in the Ollama Modelfile. That leaves
+barely 2,300 tokens for conversation history and generation, and small models
+lose coherence when the system prompt dominates the context.
+
+Instead, the Lorekeeper receives **only** the `newplayer` tag and relies on
+topic-routing at dispatch time (see "Dynamic Topic Selection" below) to inject
+at most one or two lore blocks per request.
 
 ### New Knowledge Tag: `KNOW_NEWPLAYER`
 
@@ -1504,30 +1510,90 @@ This block is **only** assigned to tutorial NPCs via the `newplayer` tag in
 `AiKnowledge`. Normal world NPCs never receive it — a blacksmith should not
 explain how the SCORE command works.
 
-### System Prompt Assembly for the Lorekeeper
+### Token Budget
 
-The assembled prompt follows the standard four-layer structure from section 9:
+The Ollama Modelfile sets `num_ctx 8192`. A small model (7B/8B) loses
+coherence when the system prompt dominates the context window. The budget:
+
+| Layer | Est. words | Est. tokens | Notes |
+|---|---|---|---|
+| Common knowledge | ~350 | ~470 | Fixed, every NPC |
+| Area block (Midgaard) | ~450 | ~600 | Fixed for this NPC |
+| `KNOW_NEWPLAYER` block | ~600 | ~800 | Always included |
+| Dynamic topic block(s) | ~400 | ~530 | 0–2 per request |
+| NPC persona + lock | ~180 | ~240 | Fixed |
+| **System prompt total** | **~1,980** | **~2,640** | |
+| Conversation history | ~600 | ~800 | 8 turns max |
+| Generation headroom | — | ~200 | |
+| **Total per request** | | **~3,640** | **44% of 8K context** |
+
+This leaves comfortable headroom. Even if two topic blocks are injected, the
+system prompt stays under 50% of the context window.
+
+### Dynamic Topic Selection
+
+The Lorekeeper cannot carry all ten lore knowledge tags without blowing the
+token budget. Instead, `npc_dialogue_dispatch()` selects **at most two** lore
+topic blocks per request based on keyword matching against the player's
+message. The Lorekeeper's `ai_knowledge` bitmask is set to only
+`KNOW_NEWPLAYER`, but a new flag on the NPC enables dynamic topic routing:
+
+```c
+#define ACT_AI_TOPIC_ROUTE  BIT_35  /* dynamically select topic blocks per message */
+```
+
+When `ACT_AI_TOPIC_ROUTE` is set, `npc_dialogue_dispatch()` scans the player's
+input for topic-associated keywords before assembling the system prompt:
+
+```c
+/* keyword → topic tag mapping */
+static const struct {
+    const char *keywords[6];
+    int         tag;
+} topic_routes[] = {
+    {{"sword", "weapon", "armor", "smith", "forge", "blade"},  KNOW_WEAPONS},
+    {{"buy", "sell", "price", "shop", "trade", "gold"},        KNOW_TRADE},
+    {{"spell", "magic", "mana", "cast", "enchant", "scroll"},  KNOW_MAGIC},
+    {{"temple", "heal", "priest", "pray", "sanctuary", NULL},  KNOW_TEMPLE},
+    {{"crime", "thief", "fence", "smuggl", "steal", NULL},     KNOW_UNDERWORLD},
+    {{"harbor", "ship", "sail", "dock", "port", "cargo"},      KNOW_HARBOR},
+    {{"guard", "law", "patrol", "arrest", "jail", "warden"},   KNOW_GUARD},
+    {{"history", "ancient", "conclave", "founding", "era", NULL}, KNOW_HISTORY},
+    {{"forest", "mountain", "desert", "wilderness", "route", "travel"}, KNOW_WILDERNESS},
+    {{"faction", "politic", "council", "ruler", "govern", NULL}, KNOW_POLITICS},
+    {{NULL}, 0}
+};
+```
+
+The scan uses `str_infix()` (case-insensitive substring match, already in the
+codebase) and selects the top two matching tags. The corresponding topic blocks
+are injected between the `KNOW_NEWPLAYER` block and the NPC persona. If no
+keywords match, no lore blocks are added — the `KNOW_NEWPLAYER` block alone
+covers the most common new-player questions.
+
+This means a player asking "what spells can a magi cast?" gets the
+`KNOW_MAGIC` block injected for that request, while "where should I explore?"
+gets `KNOW_WILDERNESS`. The model sees only the relevant context, keeping the
+prompt small and focused.
+
+**Assembly order for the Lorekeeper:**
 
 ```
-[1. COMMON KNOWLEDGE — world geography, cities, trade routes, adventurers]
+[1. COMMON KNOWLEDGE — ~470 tokens, always]
 
-[2. AREA KNOWLEDGE — Midgaard block (the helper lives in Midgaard)]
+[2. AREA KNOWLEDGE — Midgaard block, ~600 tokens, always]
 
-[3. TOPIC BLOCKS — ALL tags set, so all topic blocks are included:
-    weapons, trade, magic, temple, guard, history, wilderness, politics,
-    plus the new KNOW_NEWPLAYER block with full game mechanics]
+[3. KNOW_NEWPLAYER — game mechanics block, ~800 tokens, always]
 
-[4. NPC PERSONA — the Lorekeeper's AiPrompt describing personality,
-    speech style, and the standard persona lock suffix]
+[4. DYNAMIC TOPIC BLOCK(S) — 0-2 blocks selected by keyword match,
+    ~200-530 tokens total]
+
+[5. NPC PERSONA + persona lock suffix, ~240 tokens, always]
 ```
 
-**Token budget concern:** With all topic blocks included, the Lorekeeper's
-system prompt will be the largest of any NPC. The existing `system_prompt[16384]`
-buffer in `NPC_DLG_REQ` should be sufficient — the common block (~350 words),
-Midgaard area block (~450 words), ten topic blocks (~200-400 words each), and
-persona (~150 words) total roughly 3,500-5,500 words, well within 16KB. If
-future topic blocks push the total over, the truncation rule from section 9
-applies: topic blocks are dropped from the end before the persona is truncated.
+For normal (non-topic-routed) NPCs, the standard assembly from section 9
+applies unchanged — their `ai_knowledge` bitmask determines which blocks are
+included statically.
 
 ### Greet Behavior
 
@@ -1595,10 +1661,14 @@ improves model quality for every NPC archetype, not just tutorial roles.
 - [ ] Reserve mob vnum for the Lorekeeper
 - [ ] Add `KNOW_NEWPLAYER` flag (`1 << 10`) to the knowledge tag definitions;
   update `NUM_KNOW_FLAGS` to 11
+- [ ] Add `ACT_AI_TOPIC_ROUTE` flag to mob act flags in `typedefs.h`
+- [ ] Implement keyword → topic tag routing table and scanner in
+  `npc_dialogue_dispatch()`, gated on `ACT_AI_TOPIC_ROUTE`, limited to 2 tags
 - [ ] Write the `KNOW_NEWPLAYER` topic block (game mechanics text above)
 - [ ] Write the Lorekeeper `AiPrompt` persona text
 - [ ] Add the Lorekeeper mob definition to the Midgaard area file with
-  `ACT_AI_DIALOGUE`, all knowledge tags, and `ACT_SENTINEL`
+  `ACT_AI_DIALOGUE`, `ACT_AI_TOPIC_ROUTE`, `ACT_SENTINEL`, and only the
+  `newplayer` knowledge tag
 - [ ] Add room resets to place the Lorekeeper in rooms 4564 and 1026
 - [ ] Implement `spec_lorekeeper` in `src/ai/spec_lorekeeper.c` (greet behavior)
 - [ ] Register `spec_lorekeeper` in `special.c` and `special.h`
