@@ -1,0 +1,20 @@
+level -1
+keywords lore
+---
+@@N-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+@@eLore of the Realm@@N
+
+Welcome to the lore archives of @@eAck!MUD TNG@@N.
+
+Here you will find tales of the world, its history, and the forces that
+shape it. Use @@ylore <topic>@@N to read about a specific subject.
+
+Available lore topics:
+
+  @@yworld@@N    - The world and its origins
+  @@yraces@@N    - The peoples of the realm
+
+Type @@ylore <topic>@@N to learn more.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

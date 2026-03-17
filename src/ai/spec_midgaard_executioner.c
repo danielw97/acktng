@@ -43,7 +43,8 @@ bool spec_midgaard_executioner(CHAR_DATA *ch)
    if (undead)
       sprintf(buf, "Undead in the temple ward! The Watch responds — clear the precinct!");
    else
-      sprintf(buf, "%s stands condemned as a %s! The sentence is mine to carry out!", victim->name, crime);
+      sprintf(buf, "%s stands condemned as a %s! The sentence is mine to carry out!", victim->name,
+              crime);
 
    do_yell(ch, buf);
    multi_hit(ch, victim, TYPE_UNDEFINED);

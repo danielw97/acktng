@@ -49,6 +49,12 @@ static void validate_help_file(const char *path)
    }
 
    assert(fgets(line, sizeof(line), fp) != NULL);
+   if (strncmp(line, "flags ", 6) == 0)
+   {
+      long flags;
+      assert(sscanf(line, "flags %ld %c", &flags, &extra) == 1);
+      assert(fgets(line, sizeof(line), fp) != NULL);
+   }
    assert(strcmp(line, "---\n") == 0 || strcmp(line, "---\r\n") == 0 || strcmp(line, "---") == 0);
 
    while (fgets(line, sizeof(line), fp) != NULL)
@@ -97,9 +103,11 @@ int main(void)
 {
    int help_files = validate_help_directory(HELP_DIR);
    int shelp_files = validate_help_directory(SHELP_DIR);
+   int lore_files = validate_help_directory(LORE_DIR);
 
    assert(help_files > 0);
    assert(shelp_files > 0);
+   assert(lore_files > 0);
 
    return 0;
 }

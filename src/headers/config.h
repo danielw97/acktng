@@ -1320,6 +1320,7 @@
 #define AREA_LIST AREA_DIR "area.lst" /* List of areas                */
 #define HELP_DIR "../help/"
 #define SHELP_DIR "../shelp/"
+#define LORE_DIR "../lore/"
 
 #define MAIL_DIR "../mail/"
 #define DATA_DIR "../data/"

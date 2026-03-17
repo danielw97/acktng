@@ -313,6 +313,7 @@ struct help_data
    HELP_DATA *next;
    HELP_DATA *prev;
    sh_int level;
+   long flags;
    char *keyword;
    char *text;
 };

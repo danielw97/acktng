@@ -116,6 +116,7 @@ const struct cmd_type cmd_table[] = {
     {"sthelp", do_stancehelp, POS_DEAD, 0, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS},
     {"rmlist", do_rmodhelp, POS_DEAD, 0, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS},
     {"shelp", do_shelp, POS_DEAD, 0, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS},
+    {"lore", do_lore, POS_DEAD, 0, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS},
     {"heal", do_heal, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS},
     {"idea", do_idea, POS_DEAD, 0, LOG_NORMAL, C_TYPE_MISC, C_SHOW_ALWAYS},
 

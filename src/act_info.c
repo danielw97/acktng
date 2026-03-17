@@ -5309,6 +5309,60 @@ void do_shelp(CHAR_DATA *ch, char *argument)
    send_to_char("No help on that word.\n\r", ch);
    return;
 }
+
+void do_lore(CHAR_DATA *ch, char *argument)
+{
+   HELP_DATA *pHelp;
+
+   if (argument[0] == '\0')
+      argument = "lore";
+
+   for (pHelp = first_lore; pHelp != NULL; pHelp = pHelp->next)
+   {
+      if (pHelp->level > get_trust(ch))
+         continue;
+
+      if (!str_cmp(argument, pHelp->keyword))
+      {
+         if (pHelp->level >= 0)
+         {
+            send_to_char(pHelp->keyword, ch);
+            send_to_char("\n\r", ch);
+         }
+
+         if (pHelp->text[0] == '.')
+            send_to_char(pHelp->text + 1, ch);
+         else
+            send_to_char(pHelp->text, ch);
+         return;
+      }
+   }
+
+   for (pHelp = first_lore; pHelp != NULL; pHelp = pHelp->next)
+   {
+      if (pHelp->level > get_trust(ch))
+         continue;
+
+      if (!str_prefix(argument, pHelp->keyword))
+      {
+         if (pHelp->level >= 0)
+         {
+            send_to_char(pHelp->keyword, ch);
+            send_to_char("\n\r", ch);
+         }
+
+         if (pHelp->text[0] == '.')
+            send_to_char(pHelp->text + 1, ch);
+         else
+            send_to_char(pHelp->text, ch);
+         return;
+      }
+   }
+
+   send_to_char("No lore on that subject.\n\r", ch);
+   return;
+}
+
 void do_afk(CHAR_DATA *ch, char *argument)
 {
    int value;

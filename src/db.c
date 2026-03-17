@@ -809,6 +809,7 @@ static void load_help_file(const char *help_path, HELP_DATA **first, HELP_DATA *
    FILE *fp;
    char line[MAX_STRING_LENGTH];
    long level;
+   long flags = 0;
    char keywords[MAX_STRING_LENGTH];
    char text[MAX_STRING_LENGTH * 8];
    size_t text_len = 0;
@@ -837,7 +838,25 @@ static void load_help_file(const char *help_path, HELP_DATA **first, HELP_DATA *
    snprintf(keywords, sizeof(keywords), "%s", line + 9);
    keywords[strcspn(keywords, "\r\n")] = '\0';
 
-   if (fgets(line, sizeof(line), fp) == NULL || strncmp(line, "---", 3) != 0)
+   if (fgets(line, sizeof(line), fp) == NULL)
+   {
+      bug("load_help_file: unexpected end of file", 0);
+      fclose(fp);
+      return;
+   }
+
+   if (strncmp(line, "flags ", 6) == 0)
+   {
+      flags = atol(line + 6);
+      if (fgets(line, sizeof(line), fp) == NULL)
+      {
+         bug("load_help_file: unexpected end of file after flags", 0);
+         fclose(fp);
+         return;
+      }
+   }
+
+   if (strncmp(line, "---", 3) != 0)
    {
       bug("load_help_file: missing separator", 0);
       fclose(fp);
@@ -861,6 +880,7 @@ static void load_help_file(const char *help_path, HELP_DATA **first, HELP_DATA *
 
    GET_FREE(pHelp, help_free);
    pHelp->level = level;
+   pHelp->flags = flags;
    pHelp->keyword = str_dup(keywords);
    pHelp->text = str_dup(text);
    LINK(pHelp, *first, *last, next, prev);
@@ -929,6 +949,7 @@ void load_help_files(void)
 {
    load_help_directory(HELP_DIR, &first_help, &last_help);
    load_help_directory(SHELP_DIR, &first_shelp, &last_shelp);
+   load_help_directory(LORE_DIR, &first_lore, &last_lore);
 }
 
 void load_corpses(void)
