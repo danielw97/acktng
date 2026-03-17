@@ -804,7 +804,7 @@ void crusade_inform(void)
 
    quest_timer++;
    if (quest_mob && quest_timer < 16)
-      do_iquest(quest_mob, buf);
+      do_crusade(quest_mob, buf);
    if (quest_timer == 1)
    {
       sprintf(buf, " %s is crusading for %s ", NAME(quest_mob), quest_object->short_descr);
@@ -833,7 +833,7 @@ void crusade_complete(CHAR_DATA *ch)
 
    format_quest_message(buf, qmessages[active_personality][16].message1, NAME(ch),
                         quest_object->short_descr);
-   do_iquest(quest_mob, buf);
+   do_crusade(quest_mob, buf);
    clear_crusade();
    return;
 }
@@ -843,7 +843,7 @@ void crusade_cancel()
    extern CHAR_DATA *quest_mob;
 
    if (quest_mob)
-      do_iquest(quest_mob, "Shoot! Just forget about recovering ANYTHING for me, ok?");
+      do_crusade(quest_mob, "Shoot! Just forget about recovering ANYTHING for me, ok?");
 
    clear_crusade();
    return;
