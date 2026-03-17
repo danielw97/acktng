@@ -5321,7 +5321,7 @@ static int count_bits(long v)
    return count;
 }
 
-static long get_room_lore_flags(CHAR_DATA *ch)
+long get_room_lore_flags(CHAR_DATA *ch)
 {
    CHAR_DATA *mob;
    long flags = 0;
@@ -5337,8 +5337,8 @@ static long get_room_lore_flags(CHAR_DATA *ch)
    return flags;
 }
 
-static HELP_DATA *find_best_lore(const char *argument, CHAR_DATA *ch, long npc_flags,
-                                 bool (*match_fn)(const char *, const char *))
+HELP_DATA *find_best_lore(const char *argument, CHAR_DATA *ch, long npc_flags,
+                          bool (*match_fn)(const char *, const char *))
 {
    HELP_DATA *pHelp;
    HELP_DATA *best = NULL;
@@ -5386,7 +5386,8 @@ void do_lore(CHAR_DATA *ch, char *argument)
    if (argument[0] == '\0')
       argument = "lore";
 
-   npc_flags = get_room_lore_flags(ch);
+   /* PCs always see only the default (unflagged) lore entry */
+   npc_flags = IS_NPC(ch) ? get_room_lore_flags(ch) : 0;
 
    /* Exact match pass */
    pHelp = find_best_lore(argument, ch, npc_flags, str_cmp);

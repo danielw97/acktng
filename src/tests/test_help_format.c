@@ -98,18 +98,32 @@ static void validate_lore_file(const char *path)
 
    assert(fp != NULL);
 
-   /* First line must be keywords */
+   /* First line must be keywords (appears only once, at top of file) */
    assert(fgets(line, sizeof(line), fp) != NULL);
-   validate_lore_entry_header(fp, line, sizeof(line));
+   assert(strncmp(line, "keywords ", 9) == 0);
+   validate_keywords(line + 9);
 
-   /* Read text lines, watching for new entries starting with "keywords " */
+   /* Optional flags line, then required separator */
+   assert(fgets(line, sizeof(line), fp) != NULL);
+   if (strncmp(line, "flags ", 6) == 0)
+   {
+      assert(strlen(line) > 6);
+      assert(fgets(line, sizeof(line), fp) != NULL);
+   }
+   assert(strcmp(line, "---\n") == 0 || strcmp(line, "---\r\n") == 0 || strcmp(line, "---") == 0);
+
+   /* Read text lines, watching for new entries starting with "flags " */
    while (fgets(line, sizeof(line), fp) != NULL)
    {
-      if (strncmp(line, "keywords ", 9) == 0)
+      if (strncmp(line, "flags ", 6) == 0)
       {
-         validate_lore_entry_header(fp, line, sizeof(line));
+         assert(strlen(line) > 6);
+         assert(fgets(line, sizeof(line), fp) != NULL);
+         assert(strcmp(line, "---\n") == 0 || strcmp(line, "---\r\n") == 0 || strcmp(line, "---") == 0);
          continue;
       }
+      /* keywords must not repeat after the first line */
+      assert(strncmp(line, "keywords ", 9) != 0);
       /* No color codes allowed in lore files */
       assert(strstr(line, "@@") == NULL);
       i = strlen(line);
