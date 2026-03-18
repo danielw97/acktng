@@ -336,7 +336,14 @@ unit-test-caravan-travel: $(OBJDIR)/tests/test_caravan_travel.o $(OBJDIR)/act_mo
 	rm -f tests/unit-test-caravan-travel
 	$(CC) -Wl,--gc-sections -o tests/unit-test-caravan-travel $(OBJDIR)/tests/test_caravan_travel.o $(OBJDIR)/act_move.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-unit-tests: unit-test-handler unit-test-skills unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-login unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns unit-test-prompt unit-test-revenant unit-test-adept-skills unit-test-caravan-travel
+$(OBJDIR)/weapon_bond.unit-test.o: weapon_bond.c headers/ack.h
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/weapon_bond.unit-test.o weapon_bond.c
+
+unit-test-weapon-bond: $(OBJDIR)/tests/test_weapon_bond.o $(OBJDIR)/weapon_bond.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
+	rm -f tests/unit-test-weapon-bond
+	$(CC) -Wl,--gc-sections -o tests/unit-test-weapon-bond $(OBJDIR)/tests/test_weapon_bond.o $(OBJDIR)/weapon_bond.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+
+unit-tests: unit-test-weapon-bond unit-test-handler unit-test-skills unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-login unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns unit-test-prompt unit-test-revenant unit-test-adept-skills unit-test-caravan-travel
 	./tests/unit-test-handler
 	./tests/unit-test-skills
 	./tests/unit-test-act-flags
@@ -381,5 +388,6 @@ unit-tests: unit-test-handler unit-test-skills unit-test-act-flags unit-test-are
 	./tests/unit-test-revenant
 	./tests/unit-test-adept-skills
 	./tests/unit-test-caravan-travel
+	./tests/unit-test-weapon-bond
 	$(MAKE) integration-test
 	$(MAKE) integration-test-telnet

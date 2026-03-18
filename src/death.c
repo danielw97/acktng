@@ -1,5 +1,6 @@
 #include "globals.h"
 #include "special.h"
+#include "weapon_bond.h"
 
 /* Autogen */
 OBJ_DATA *generate_item(int level);
@@ -162,6 +163,11 @@ void make_corpse(CHAR_DATA *ch, char *argument)
    for (obj = ch->first_carry; obj != NULL; obj = obj_next)
    {
       obj_next = obj->next_in_carry_list;
+
+      /* Bonded weapons stay equipped on the swordsman through death */
+      if (IS_OBJ_BONDED(obj))
+         continue;
+
       obj_from_char(obj);
       if ((obj == quest_object) && (ch == quest_target))
       {

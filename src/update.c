@@ -31,6 +31,7 @@
 #include <string.h>
 #include <time.h>
 #include "globals.h"
+#include "weapon_bond.h"
 #include <signal.h>
 
 bool should_abort_for_checkpoint_timeout(int usage_now, int checkpoint, int threshold,
@@ -234,6 +235,7 @@ void advance_level(CHAR_DATA *ch, int class, bool show)
    if (show)
       send_to_char(buf, ch);
 
+   bond_recalculate(ch);
    return;
 }
 
@@ -280,6 +282,7 @@ void advance_level_remort(CHAR_DATA *ch, int class, bool show)
    if (show)
       send_to_char(buf, ch);
 
+   bond_recalculate(ch);
    return;
 }
 
@@ -328,6 +331,7 @@ void advance_level_adept(CHAR_DATA *ch, int class, bool show)
    if (show)
       send_to_char(buf, ch);
 
+   bond_recalculate(ch);
    return;
 }
 
@@ -912,10 +916,10 @@ void mobile_update(void)
       /*
        * Flee
        */
-      if (!IS_SET(ch->act, ACT_INVASION) && IS_SET(ch->act, ACT_WIMPY) && ch->hit < (get_max_hp(ch) / 2) &&
-          (door = number_bits(3)) <= 5 && (pexit = ch->in_room->exit[door]) != NULL &&
-          pexit->to_room != NULL && !IS_SET(pexit->exit_info, EX_CLOSED) &&
-          !IS_SET(pexit->to_room->room_flags, ROOM_NO_MOB))
+      if (!IS_SET(ch->act, ACT_INVASION) && IS_SET(ch->act, ACT_WIMPY) &&
+          ch->hit < (get_max_hp(ch) / 2) && (door = number_bits(3)) <= 5 &&
+          (pexit = ch->in_room->exit[door]) != NULL && pexit->to_room != NULL &&
+          !IS_SET(pexit->exit_info, EX_CLOSED) && !IS_SET(pexit->to_room->room_flags, ROOM_NO_MOB))
       {
          CHAR_DATA *rch;
          bool found;

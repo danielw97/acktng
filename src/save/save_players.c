@@ -34,6 +34,7 @@
  */
 
 #include "save.h"
+#include "weapon_bond.h"
 
 char *cap_nocol(const char *str)
 {
@@ -391,6 +392,20 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 
       fprintf(fp, "Pagelen      %d\n", ch->pcdata->pagelen);
       fprintf(fp, "Pflags       %d\n", ch->pcdata->pflags);
+
+      /* Weapon bond data */
+      if (ch->pcdata->bond != NULL)
+      {
+         BOND_DATA *bond = ch->pcdata->bond;
+         fprintf(fp, "BondVnum     %d\n", bond->base_obj_vnum);
+         fprintf(fp, "BondLevel    %d\n", bond->base_level);
+         fprintf(fp, "BondPoints   %d\n", bond->bond_points);
+         fprintf(fp, "BondTrack    %d\n", bond->track);
+         fprintf(fp, "BondRank     %d\n", bond->rank);
+         fprintf(fp, "BondMastery  %d\n", bond->mastery ? 1 : 0);
+         fprintf(fp, "BondName     %s~\n", bond->weapon_name ? bond->weapon_name : "");
+         fprintf(fp, "BondShort    %s~\n", bond->weapon_short ? bond->weapon_short : "");
+      }
 
       for (sn = 0; sn < MAX_SKILL; sn++)
       {
@@ -831,6 +846,75 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          {
             SKEY("Bamfin", ch->pcdata->bamfin, fread_string(fp));
             SKEY("Bamfout", ch->pcdata->bamfout, fread_string(fp));
+
+            if (!str_cmp(word, "BondVnum"))
+            {
+               if (ch->pcdata->bond == NULL)
+                  ch->pcdata->bond = (BOND_DATA *)calloc(1, sizeof(BOND_DATA));
+               ch->pcdata->bond->base_obj_vnum = fread_number(fp);
+               fMatch = TRUE;
+               break;
+            }
+            if (!str_cmp(word, "BondLevel"))
+            {
+               if (ch->pcdata->bond == NULL)
+                  ch->pcdata->bond = (BOND_DATA *)calloc(1, sizeof(BOND_DATA));
+               ch->pcdata->bond->base_level = fread_number(fp);
+               fMatch = TRUE;
+               break;
+            }
+            if (!str_cmp(word, "BondPoints"))
+            {
+               if (ch->pcdata->bond == NULL)
+                  ch->pcdata->bond = (BOND_DATA *)calloc(1, sizeof(BOND_DATA));
+               ch->pcdata->bond->bond_points = fread_number(fp);
+               fMatch = TRUE;
+               break;
+            }
+            if (!str_cmp(word, "BondTrack"))
+            {
+               if (ch->pcdata->bond == NULL)
+                  ch->pcdata->bond = (BOND_DATA *)calloc(1, sizeof(BOND_DATA));
+               ch->pcdata->bond->track = fread_number(fp);
+               fMatch = TRUE;
+               break;
+            }
+            if (!str_cmp(word, "BondRank"))
+            {
+               if (ch->pcdata->bond == NULL)
+                  ch->pcdata->bond = (BOND_DATA *)calloc(1, sizeof(BOND_DATA));
+               ch->pcdata->bond->rank = fread_number(fp);
+               fMatch = TRUE;
+               break;
+            }
+            if (!str_cmp(word, "BondMastery"))
+            {
+               if (ch->pcdata->bond == NULL)
+                  ch->pcdata->bond = (BOND_DATA *)calloc(1, sizeof(BOND_DATA));
+               ch->pcdata->bond->mastery = (fread_number(fp) != 0);
+               fMatch = TRUE;
+               break;
+            }
+            if (!str_cmp(word, "BondName"))
+            {
+               if (ch->pcdata->bond == NULL)
+                  ch->pcdata->bond = (BOND_DATA *)calloc(1, sizeof(BOND_DATA));
+               if (ch->pcdata->bond->weapon_name != NULL)
+                  free_string(ch->pcdata->bond->weapon_name);
+               ch->pcdata->bond->weapon_name = fread_string(fp);
+               fMatch = TRUE;
+               break;
+            }
+            if (!str_cmp(word, "BondShort"))
+            {
+               if (ch->pcdata->bond == NULL)
+                  ch->pcdata->bond = (BOND_DATA *)calloc(1, sizeof(BOND_DATA));
+               if (ch->pcdata->bond->weapon_short != NULL)
+                  free_string(ch->pcdata->bond->weapon_short);
+               ch->pcdata->bond->weapon_short = fread_string(fp);
+               fMatch = TRUE;
+               break;
+            }
          }
          break;
 

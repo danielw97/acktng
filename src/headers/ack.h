@@ -819,6 +819,8 @@ struct pc_data
    /* --- Quest system --- */
    QUEST_DATA quests[QUEST_MAX_QUESTS];
    bool completed_quests[QUEST_MAX_TEMPLATES];
+   /* --- Weapon bond system --- */
+   BOND_DATA *bond;
 };
 
 /*
