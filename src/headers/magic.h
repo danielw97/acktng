@@ -211,7 +211,6 @@ DECLARE_SPELL_FUN(spell_night_vision);
 DECLARE_SPELL_FUN(spell_pass_door);
 DECLARE_SPELL_FUN(spell_phase);
 DECLARE_SPELL_FUN(spell_poison);
-DECLARE_SPELL_FUN(spell_produce_food);
 DECLARE_SPELL_FUN(spell_protection);
 DECLARE_SPELL_FUN(spell_psionic_recovery);
 DECLARE_SPELL_FUN(spell_refresh);

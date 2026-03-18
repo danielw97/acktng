@@ -34,36 +34,10 @@
 
 bool spell_create_water(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   OBJ_DATA *ob = (OBJ_DATA *)vo;
-   int water;
-
-   if (ob->item_type != ITEM_DRINK_CON)
-   {
-      send_to_char("It is unable to hold water.\n\r", ch);
-      return FALSE;
-   }
-
-   if (ob->value[2] != LIQ_WATER && ob->value[1] != 0)
-   {
-      send_to_char("It contains some other liquid.\n\r", ch);
-      return FALSE;
-   }
-
-   water = UMIN(level * (weather_info.sky >= SKY_RAINING ? 4 : 2), ob->value[0] - ob->value[1]);
-
-   if (water > 0)
-   {
-      ob->value[2] = LIQ_WATER;
-      ob->value[1] += water;
-      if (!is_name("water", ob->name))
-      {
-         char buf[MAX_STRING_LENGTH];
-         sprintf(buf, "%s water", ob->name);
-         free_string(ob->name);
-         ob->name = str_dup(buf);
-      }
-      act("$p is filled.", ch, ob, NULL, TO_CHAR);
-   }
-
+   (void)sn;
+   (void)level;
+   (void)ch;
+   (void)vo;
+   (void)obj;
    return TRUE;
 }

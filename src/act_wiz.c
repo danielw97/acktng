@@ -940,9 +940,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 
    if (!IS_NPC(victim))
    {
-      sprintf(buf, "Thirst: %d.  Full: %d.  Drunk: %d.  Saving throw: %d.\n\r",
-              victim->pcdata->condition[COND_THIRST], victim->pcdata->condition[COND_FULL],
-              victim->pcdata->condition[COND_DRUNK], victim->saving_throw);
+      sprintf(buf, "Saving throw: %d.\n\r", victim->saving_throw);
       strcat(buf1, buf);
    }
 
@@ -2783,60 +2781,6 @@ void do_mset(CHAR_DATA *ch, char *argument)
          return;
       }
       victim->alignment = value;
-      return;
-   }
-
-   if (!str_cmp(arg2, "thirst"))
-   {
-      if (IS_NPC(victim))
-      {
-         send_to_char("Not on NPCs.\n\r", ch);
-         return;
-      }
-
-      if (value < 0 || value > 100)
-      {
-         send_to_char("Thirst range is 0 to 100.\n\r", ch);
-         return;
-      }
-
-      victim->pcdata->condition[COND_THIRST] = value;
-      return;
-   }
-
-   if (!str_cmp(arg2, "drunk"))
-   {
-      if (IS_NPC(victim))
-      {
-         send_to_char("Not on NPC's.\n\r", ch);
-         return;
-      }
-
-      if (value < 0 || value > 100)
-      {
-         send_to_char("Drunk range is 0 to 100.\n\r", ch);
-         return;
-      }
-
-      victim->pcdata->condition[COND_DRUNK] = value;
-      return;
-   }
-
-   if (!str_cmp(arg2, "full"))
-   {
-      if (IS_NPC(victim))
-      {
-         send_to_char("Not on NPC's.\n\r", ch);
-         return;
-      }
-
-      if (value < 0 || value > 100)
-      {
-         send_to_char("Full range is 0 to 100.\n\r", ch);
-         return;
-      }
-
-      victim->pcdata->condition[COND_FULL] = value;
       return;
    }
 

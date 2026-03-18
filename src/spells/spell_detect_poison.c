@@ -34,19 +34,8 @@
 
 bool spell_detect_poison(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   OBJ_DATA *ob = (OBJ_DATA *)vo;
-
-   if (ob->item_type == ITEM_DRINK_CON || ob->item_type == ITEM_FOOD)
-   {
-      if (ob->value[3] != 0)
-         send_to_char("You smell poisonous fumes.\n\r", ch);
-      else
-         send_to_char("It looks very delicious.\n\r", ch);
-   }
-   else
-   {
-      send_to_char("It doesn't look poisoned.\n\r", ch);
-   }
+   (void)vo;
+   send_to_char("It doesn't look poisoned.\n\r", ch);
 
    return TRUE;
 }

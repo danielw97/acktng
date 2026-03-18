@@ -1447,9 +1447,9 @@ void reset_area(AREA_DATA *pArea)
          num_allowed = ((pReset->arg2 == 0) ? 2 : pReset->arg2 - 1);
          if ((count_obj_room(pObjIndex, pRoomIndex->first_content) > num_allowed) ||
              ((count_obj_room(pObjIndex, pRoomIndex->first_content) > 0) &&
-              ((pObjIndex->item_type == ITEM_BOARD) || (pObjIndex->item_type == ITEM_FOUNTAIN) ||
-               (pObjIndex->item_type == ITEM_FURNITURE) || (pObjIndex->item_type == ITEM_PORTAL) ||
-               (pObjIndex->item_type == ITEM_PIECE) || (pObjIndex->extra_flags == ITEM_RARE))))
+              ((pObjIndex->item_type == ITEM_BOARD) || (pObjIndex->item_type == ITEM_FURNITURE) ||
+               (pObjIndex->item_type == ITEM_PORTAL) || (pObjIndex->item_type == ITEM_PIECE) ||
+               (pObjIndex->extra_flags == ITEM_RARE))))
          {
             last = FALSE;
             break;
@@ -1893,8 +1893,6 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
       new_cost *= 10;
    obj->cost = new_cost;
 
-   if (obj->item_type == ITEM_FOOD)
-      obj->cost /= 200;
    obj->cost = UMAX(10, obj->cost);
 
    obj->condition = 100; /* New, so in tip-top condition */
@@ -1918,14 +1916,11 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
       break;
    case ITEM_CONTAINER:
       obj->wear_flags = ITEM_TAKE;
-   case ITEM_DRINK_CON:
    case ITEM_BOARD:
    case ITEM_KEY:
-   case ITEM_FOOD:
    case ITEM_BOAT:
    case ITEM_CORPSE_NPC:
    case ITEM_CORPSE_PC:
-   case ITEM_FOUNTAIN:
    case ITEM_PORTAL:
    case ITEM_PIECE:
    case ITEM_SOUL:

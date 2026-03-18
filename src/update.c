@@ -711,31 +711,6 @@ int move_gain(CHAR_DATA *ch)
 
 #ifndef UNIT_TEST_UPDATE
 
-void gain_condition(CHAR_DATA *ch, int iCond, int value)
-{
-   if (value == 0 || IS_NPC(ch) || ch->level >= LEVEL_HERO)
-      return;
-
-   if (ch->position == POS_BUILDING || ch->position == POS_WRITING)
-      return;
-
-   if (ch->pcdata->condition[iCond] == 0)
-   {
-      switch (iCond)
-      {
-      case COND_FULL:
-         send_to_char("You are hungry.\n\r", ch);
-         break;
-
-      case COND_THIRST:
-         send_to_char("You are thirsty.\n\r", ch);
-         break;
-      }
-   }
-
-   return;
-}
-
 /*
  * Mob autonomous action.
  * This function takes 25% to 35% of ALL Merc cpu time.
@@ -1697,9 +1672,6 @@ void obj_update(void)
       default:
          message = "$p vanishes.";
          break;
-      case ITEM_FOUNTAIN:
-         message = "$p dries up.";
-         break;
       case ITEM_CORPSE_NPC:
          message = "$p decays into dust.";
          break;
@@ -1708,9 +1680,6 @@ void obj_update(void)
          break;
       case ITEM_PORTAL:
          message = "$p implodes suddenly.";
-         break;
-      case ITEM_FOOD:
-         message = "$p decomposes.";
          break;
       }
 

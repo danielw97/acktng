@@ -85,7 +85,7 @@ SPELL_OBJS = \
 	spells/spell_phobia.o spells/spell_phoenix_flare.o spells/spell_physic_crush.o \
 	spells/spell_physic_thrust.o spells/spell_planergy.o spells/spell_poison.o \
 	spells/spell_poison_arsenic.o spells/spell_poison_quinine.o \
-	spells/spell_poison_weapon.o spells/spell_portal.o spells/spell_produce_food.o \
+	spells/spell_poison_weapon.o spells/spell_portal.o \
 	spells/spell_protection.o spells/spell_psionic_recovery.o spells/spell_purify.o \
 	spells/spell_refresh.o spells/spell_refresh_mana.o spells/spell_refuge.o \
 	spells/spell_regen.o spells/spell_remove_curse.o spells/spell_restoration.o \

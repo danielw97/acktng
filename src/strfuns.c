@@ -1120,12 +1120,8 @@ char *item_type_name(OBJ_DATA *obj)
       return "container";
    case ITEM_QUEST:
       return "quest";
-   case ITEM_DRINK_CON:
-      return "drink container";
    case ITEM_KEY:
       return "key";
-   case ITEM_FOOD:
-      return "food";
    case ITEM_MONEY:
       return "money";
    case ITEM_BOAT:
@@ -1134,8 +1130,6 @@ char *item_type_name(OBJ_DATA *obj)
       return "npc corpse";
    case ITEM_CORPSE_PC:
       return "pc corpse";
-   case ITEM_FOUNTAIN:
-      return "fountain";
    case ITEM_PILL:
       return "pill";
    case ITEM_BOARD:

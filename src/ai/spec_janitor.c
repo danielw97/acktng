@@ -15,7 +15,7 @@ bool spec_janitor(CHAR_DATA *ch)
    {
       if (!IS_SET(trash->wear_flags, ITEM_TAKE))
          continue;
-      if (trash->item_type == ITEM_DRINK_CON || trash->item_type == ITEM_TRASH || trash->cost < 10)
+      if (trash->item_type == ITEM_TRASH || trash->cost < 10)
       {
          act("$n picks up some trash.", ch, NULL, NULL, TO_ROOM);
          obj_from_room(trash);

@@ -399,8 +399,7 @@ struct clan_type
 
 struct exp_type
 {
-   long_int mob_base;            /* Base exp for mob of level x  */
-   long_int exp_base[MAX_CLASS]; /* Cost for each class of level */
+   long_int mob_base; /* Base exp for mob of level x */
 };
 
 /*
@@ -847,7 +846,6 @@ struct mob_prog_data
    char *filename;
 };
 
-
 /*
  * Extra description data for a room or object.
  */
@@ -1288,7 +1286,6 @@ void stop_follower args((CHAR_DATA * ch));
 void die_follower args((CHAR_DATA * ch));
 bool is_same_group args((CHAR_DATA * ach, CHAR_DATA *bch));
 bool is_group_leader args((CHAR_DATA * ch));
-char *slur_text args((char *argument));
 void send_to_room args((char *message, ROOM_INDEX_DATA *room));
 void list_who_to_output args((void));
 

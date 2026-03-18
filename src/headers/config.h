@@ -189,7 +189,6 @@
 #define STANCE_NO_HIT BIT_5
 #define STANCE_DUAL_BACKSTAB BIT_6
 
-
 #define AREA_PAYAREA 1
 #define AREA_TELEPORT 2
 #define AREA_BUILDING 4
@@ -639,7 +638,6 @@
  *                   (End of this section ... stop here)                   *
  *                                                                         *
  ***************************************************************************/
-
 
 /*
  * Positions.

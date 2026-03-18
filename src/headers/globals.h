@@ -435,6 +435,7 @@ DECLARE_DO_FUN(do_disconnect);
 DECLARE_DO_FUN(do_down);
 DECLARE_DO_FUN(do_drop);
 DECLARE_DO_FUN(do_east);
+DECLARE_DO_FUN(do_eat);
 DECLARE_DO_FUN(do_echo);
 DECLARE_DO_FUN(do_emote);
 DECLARE_DO_FUN(do_equipment);
