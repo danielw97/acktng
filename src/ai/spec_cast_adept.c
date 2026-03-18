@@ -17,9 +17,9 @@ bool spec_cast_adept(CHAR_DATA *ch)
 
    if (ch->in_room != NULL)
    {
-      if (!IS_SET(ch->in_room->affected_by, ROOM_BV_HEAL_REGEN))
+      if (!IS_SET(ch->in_room->affected_by, ROOM_BV_HEAL_REGEN) && number_bits(2) == 0)
          spell_healing_light(skill_lookup("healing light"), 79, ch, NULL, NULL);
-      if (!IS_SET(ch->in_room->affected_by, ROOM_BV_MANA_REGEN))
+      if (!IS_SET(ch->in_room->affected_by, ROOM_BV_MANA_REGEN) && number_bits(2) == 0)
          spell_mana_flare(skill_lookup("mana flare"), 79, ch, NULL, NULL);
    }
 
