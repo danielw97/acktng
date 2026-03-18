@@ -14,36 +14,36 @@ void quest_kill_notify(CHAR_DATA *ch, CHAR_DATA *victim);
 void quest_room_notify(CHAR_DATA *ch, ROOM_INDEX_DATA *room);
 void clear_quest(CHAR_DATA *ch);
 void quest_cancel(CHAR_DATA *ch, int slot);
-void quest_load_static_templates(void);
+void quest_load_templates(void);
 
 /* Accessor helpers implemented here using the internals exposed by
- * quest_unit.h / QUEST_INTERNAL in quest.c. */
-int quest_unit_static_count(void)
+ * quest_unit.h / quest_internal.h. */
+int quest_unit_template_count(void)
 {
-   return static_quest_count;
+   return quest_template_count;
 }
 
-const char *quest_unit_static_title(int static_id)
+const char *quest_unit_template_title(int template_id)
 {
-   const STATIC_PROP_TEMPLATE *tpl = find_static_quest_template(static_id);
+   const QUEST_TEMPLATE *tpl = find_quest_template(template_id);
    return tpl != NULL ? tpl->title : NULL;
 }
 
-const char *quest_unit_static_accept_message(int static_id)
+const char *quest_unit_template_accept_message(int template_id)
 {
-   const STATIC_PROP_TEMPLATE *tpl = find_static_quest_template(static_id);
+   const QUEST_TEMPLATE *tpl = find_quest_template(template_id);
    return tpl != NULL ? tpl->accept_message : NULL;
 }
 
-const char *quest_unit_static_completion_message(int static_id)
+const char *quest_unit_template_completion_message(int template_id)
 {
-   const STATIC_PROP_TEMPLATE *tpl = find_static_quest_template(static_id);
+   const QUEST_TEMPLATE *tpl = find_quest_template(template_id);
    return tpl != NULL ? tpl->completion_message : NULL;
 }
 
-int quest_unit_static_max_level(int static_id)
+int quest_unit_template_max_level(int template_id)
 {
-   const STATIC_PROP_TEMPLATE *tpl = find_static_quest_template(static_id);
+   const QUEST_TEMPLATE *tpl = find_quest_template(template_id);
    return tpl != NULL ? tpl->max_level : -1;
 }
 
@@ -52,10 +52,9 @@ int quest_unit_canonical_postmaster_vnum(int vnum)
    return canonical_postmaster_vnum(vnum);
 }
 
-int quest_unit_calc_static_exp(int max_level, int is_boss, int is_cartography)
+int quest_unit_calc_exp(int max_level, int is_boss, int is_cartography)
 {
-   return calc_static_quest_exp(max_level, is_boss ? TRUE : FALSE,
-                                is_cartography ? TRUE : FALSE);
+   return calc_quest_exp(max_level, is_boss ? TRUE : FALSE, is_cartography ? TRUE : FALSE);
 }
 
 char *_str_dup(const char *str, const char *func)
@@ -284,7 +283,7 @@ static void test_clear_quest_resets_all_slots(void)
    CHAR_DATA ch = make_char(&pc);
 
    ch.pcdata->quests[0].quest_type = QUEST_TYPE_KILL_COUNT;
-   ch.pcdata->quests[0].quest_static_id = 4;
+   ch.pcdata->quests[0].quest_template_id = 4;
    ch.pcdata->quests[0].quest_reward_item_vnum = 123;
    ch.pcdata->quests[1].quest_type = QUEST_TYPE_COLLECT_ITEMS;
    ch.pcdata->quests[1].quest_num_targets = 2;
@@ -299,7 +298,7 @@ static void test_clear_quest_resets_all_slots(void)
       assert(ch.pcdata->quests[i].quest_type == QUEST_TYPE_NONE);
       assert(ch.pcdata->quests[i].quest_num_targets == 0);
       assert(ch.pcdata->quests[i].quest_completed == FALSE);
-      assert(ch.pcdata->quests[i].quest_static_id == -1);
+      assert(ch.pcdata->quests[i].quest_template_id == -1);
       assert(ch.pcdata->quests[i].quest_reward_item_vnum == 0);
       assert(ch.pcdata->quests[i].quest_cartography_area_num == -1);
       assert(ch.pcdata->quests[i].quest_cartography_room_count == 0);
@@ -360,7 +359,7 @@ static void test_cancel_dynamic_sets_cooldown_and_clears_slot(void)
 
    current_time = 1000;
    ch.pcdata->quests[0].quest_type = QUEST_TYPE_KILL_COUNT;
-   ch.pcdata->quests[0].quest_static_id = -1;
+   ch.pcdata->quests[0].quest_template_id = -1;
 
    reset_counters();
    quest_cancel(&ch, 0);
@@ -370,14 +369,14 @@ static void test_cancel_dynamic_sets_cooldown_and_clears_slot(void)
    assert(save_calls == 1);
 }
 
-static void test_cancel_static_does_not_set_cooldown(void)
+static void test_cancel_template_does_not_set_cooldown(void)
 {
    PC_DATA pc;
    CHAR_DATA ch = make_char(&pc);
 
    current_time = 2000;
    ch.pcdata->quests[1].quest_type = QUEST_TYPE_COLLECT_ITEMS;
-   ch.pcdata->quests[1].quest_static_id = 2;
+   ch.pcdata->quests[1].quest_template_id = 2;
 
    reset_counters();
    quest_cancel(&ch, 1);
@@ -387,21 +386,21 @@ static void test_cancel_static_does_not_set_cooldown(void)
    assert(save_calls == 1);
 }
 
-static void test_loads_static_quests_with_messages_from_files(void)
+static void test_loads_quest_templates_with_messages_from_files(void)
 {
    const char *title;
    const char *accept_message;
    const char *completion_message;
    int max_level;
 
-   quest_load_static_templates();
+   quest_load_templates();
 
-   assert(quest_unit_static_count() >= 5);
+   assert(quest_unit_template_count() >= 5);
 
-   title = quest_unit_static_title(0);
-   accept_message = quest_unit_static_accept_message(0);
-   completion_message = quest_unit_static_completion_message(0);
-   max_level = quest_unit_static_max_level(0);
+   title = quest_unit_template_title(0);
+   accept_message = quest_unit_template_accept_message(0);
+   completion_message = quest_unit_template_completion_message(0);
+   max_level = quest_unit_template_max_level(0);
 
    assert(title != NULL);
    assert(strcmp(title, "Route reconnaissance: Forest of Confusion") == 0);
@@ -414,24 +413,24 @@ static void test_loads_static_quests_with_messages_from_files(void)
    assert(max_level == 39);
 }
 
-static void test_loads_umbra_heartspire_static_chain(void)
+static void test_loads_umbra_heartspire_quest_chain(void)
 {
-   quest_load_static_templates();
+   quest_load_templates();
 
-   assert(strcmp(quest_unit_static_title(40), "Violet archive stabilization sweep") == 0);
-   assert(strstr(quest_unit_static_accept_message(40), "Violet Compact clerks") != NULL);
+   assert(strcmp(quest_unit_template_title(40), "Violet archive stabilization sweep") == 0);
+   assert(strstr(quest_unit_template_accept_message(40), "Violet Compact clerks") != NULL);
 
-   assert(strcmp(quest_unit_static_title(41), "Evermeet reliquary quieting") == 0);
-   assert(strstr(quest_unit_static_completion_message(41), "Kiess heralds") != NULL);
+   assert(strcmp(quest_unit_template_title(41), "Evermeet reliquary quieting") == 0);
+   assert(strstr(quest_unit_template_completion_message(41), "Kiess heralds") != NULL);
 
-   assert(strcmp(quest_unit_static_title(42), "Lantern syndic penumbra audit") == 0);
-   assert(strstr(quest_unit_static_accept_message(42), "Kowloon courier syndics") != NULL);
+   assert(strcmp(quest_unit_template_title(42), "Lantern syndic penumbra audit") == 0);
+   assert(strstr(quest_unit_template_accept_message(42), "Kowloon courier syndics") != NULL);
 
-   assert(strcmp(quest_unit_static_title(43), "Mirror-Queen injunction service") == 0);
-   assert(strstr(quest_unit_static_completion_message(43), "injunction targets") != NULL);
+   assert(strcmp(quest_unit_template_title(43), "Mirror-Queen injunction service") == 0);
+   assert(strstr(quest_unit_template_completion_message(43), "injunction targets") != NULL);
 
-   assert(strcmp(quest_unit_static_title(44), "Noctivar deposition writ") == 0);
-   assert(strstr(quest_unit_static_accept_message(44), "Abbot Noctivar") != NULL);
+   assert(strcmp(quest_unit_template_title(44), "Noctivar deposition writ") == 0);
+   assert(strstr(quest_unit_template_accept_message(44), "Abbot Noctivar") != NULL);
 }
 
 static void test_postmaster_aliases_map_to_active_city_vnums(void)
@@ -446,45 +445,43 @@ static void test_postmaster_aliases_map_to_active_city_vnums(void)
 
 static void test_loads_saltglass_and_scorching_sands_quests(void)
 {
-   quest_load_static_templates();
+   quest_load_templates();
 
-   assert(quest_unit_static_count() >= 127);
+   assert(quest_unit_template_count() >= 127);
 
-   assert(strcmp(quest_unit_static_title(105), "Saltglass Reach cartography survey: Mirror Flats") == 0);
-   assert(strstr(quest_unit_static_accept_message(105), "Mirror Flats") != NULL);
-   assert(strstr(quest_unit_static_completion_message(105), "cartographic record") != NULL);
+   assert(strcmp(quest_unit_template_title(105), "Saltglass Reach cartography survey: Mirror Flats") == 0);
+   assert(strstr(quest_unit_template_accept_message(105), "Mirror Flats") != NULL);
+   assert(strstr(quest_unit_template_completion_message(105), "cartographic record") != NULL);
 
-   assert(strcmp(quest_unit_static_title(106), "Saltglass Reach cartography survey: Glasswind to Tidemouth") == 0);
-   assert(strstr(quest_unit_static_accept_message(106), "Glasswind Belt") != NULL);
+   assert(strcmp(quest_unit_template_title(106), "Saltglass Reach cartography survey: Glasswind to Tidemouth") == 0);
+   assert(strstr(quest_unit_template_accept_message(106), "Glasswind Belt") != NULL);
 
-   assert(strcmp(quest_unit_static_title(119), "Tidemouth jurisdiction enforcement sweep") == 0);
-   assert(strstr(quest_unit_static_completion_message(119), "Tidemouth Dunes") != NULL);
+   assert(strcmp(quest_unit_template_title(119), "Tidemouth jurisdiction enforcement sweep") == 0);
+   assert(strstr(quest_unit_template_completion_message(119), "Tidemouth Dunes") != NULL);
 
-   assert(strcmp(quest_unit_static_title(120), "Scorching Sands cartography survey: Three Spines to Cinder Gate") == 0);
-   assert(strstr(quest_unit_static_accept_message(120), "Three Spines") != NULL);
+   assert(strcmp(quest_unit_template_title(120), "Scorching Sands cartography survey: Three Spines to Cinder Gate") == 0);
+   assert(strstr(quest_unit_template_accept_message(120), "Three Spines") != NULL);
 
-   assert(strcmp(quest_unit_static_title(126), "Witness-stick cohort verification") == 0);
-   assert(strstr(quest_unit_static_completion_message(126), "witness elder") != NULL);
+   assert(strcmp(quest_unit_template_title(126), "Witness-stick cohort verification") == 0);
+   assert(strstr(quest_unit_template_completion_message(126), "witness elder") != NULL);
 }
 
-static void test_static_quest_exp_calculation(void)
+static void test_quest_exp_calculation(void)
 {
    /* exp_table[20].mob_base == 5800 (from const.c) */
    int base = 3 * 5800; /* 17400 */
-   assert(quest_unit_calc_static_exp(20, 0, 0) == base);
-   assert(quest_unit_calc_static_exp(20, 1, 0) == base * 2); /* boss: double */
-   assert(quest_unit_calc_static_exp(20, 0, 1) == base * 10); /* cartography: 10x */
+   assert(quest_unit_calc_exp(20, 0, 0) == base);
+   assert(quest_unit_calc_exp(20, 1, 0) == base * 2); /* boss: double */
+   assert(quest_unit_calc_exp(20, 0, 1) == base * 10); /* cartography: 10x */
 }
 
 static void test_dynamic_quest_exp_uses_3x_mob_base(void)
 {
-   /* Dynamic quest exp = 3 * exp_table[pseudo_level].mob_base.
-    * Verify that quest templates loaded from files without an explicit
-    * reward_exp will use the same 3x multiplier as static quests. */
+   /* Dynamic quest exp = 3 * exp_table[pseudo_level].mob_base. */
    /* exp_table[20].mob_base == 5800; 3x = 17400 */
-   assert(quest_unit_calc_static_exp(20, 0, 0) == 3 * 5800);
+   assert(quest_unit_calc_exp(20, 0, 0) == 3 * 5800);
    /* exp_table[30].mob_base == 13000; 3x = 39000 */
-   assert(quest_unit_calc_static_exp(30, 0, 0) == 3 * 13000);
+   assert(quest_unit_calc_exp(30, 0, 0) == 3 * 13000);
 }
 
 int main(void)
@@ -498,12 +495,12 @@ int main(void)
    test_clear_quest_resets_all_slots();
    test_cartography_marks_room_once_and_completes();
    test_cancel_dynamic_sets_cooldown_and_clears_slot();
-   test_cancel_static_does_not_set_cooldown();
-   test_loads_static_quests_with_messages_from_files();
-   test_loads_umbra_heartspire_static_chain();
+   test_cancel_template_does_not_set_cooldown();
+   test_loads_quest_templates_with_messages_from_files();
+   test_loads_umbra_heartspire_quest_chain();
    test_postmaster_aliases_map_to_active_city_vnums();
    test_loads_saltglass_and_scorching_sands_quests();
-   test_static_quest_exp_calculation();
+   test_quest_exp_calculation();
    test_dynamic_quest_exp_uses_3x_mob_base();
 
    puts("test_quest: all tests passed");

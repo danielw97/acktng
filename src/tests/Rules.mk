@@ -206,12 +206,21 @@ unit-test-act-obj: $(OBJDIR)/tests/test_act_obj.o $(OBJDIR)/act_obj.unit-test.o 
 	rm -f tests/unit-test-act-obj
 	$(CC) -Wl,--gc-sections -o tests/unit-test-act-obj $(OBJDIR)/tests/test_act_obj.o $(OBJDIR)/act_obj.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-$(OBJDIR)/quest.unit-test.o: quest.c headers/ack.h
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_QUEST -ffunction-sections -fdata-sections -o $(OBJDIR)/quest.unit-test.o quest.c
+$(OBJDIR)/quests/%.unit-test.o: quests/%.c headers/ack.h
+	@mkdir -p $(dir $@)
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_QUEST -ffunction-sections -fdata-sections -o $@ $<
 
-unit-test-quest: $(OBJDIR)/tests/test_quest.o $(OBJDIR)/quest.unit-test.o $(OBJDIR)/const.o $(OBJDIR)/tests/test_is_fighting.o
+QUEST_UNIT_TEST_OBJS = \
+	$(OBJDIR)/quests/template.unit-test.o \
+	$(OBJDIR)/quests/state.unit-test.o \
+	$(OBJDIR)/quests/cartography.unit-test.o \
+	$(OBJDIR)/quests/notify.unit-test.o \
+	$(OBJDIR)/quests/commands.unit-test.o \
+	$(OBJDIR)/quests/crusade.unit-test.o
+
+unit-test-quest: $(OBJDIR)/tests/test_quest.o $(QUEST_UNIT_TEST_OBJS) $(OBJDIR)/const.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-quest
-	$(CC) -Wl,--gc-sections -o tests/unit-test-quest $(OBJDIR)/tests/test_quest.o $(OBJDIR)/quest.unit-test.o $(OBJDIR)/const.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-quest $(OBJDIR)/tests/test_quest.o $(QUEST_UNIT_TEST_OBJS) $(OBJDIR)/const.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 $(OBJDIR)/build.unit-test.o: build.c headers/ack.h
 	$(CC) -c $(C_FLAGS) -DUNIT_TEST_BUILD -ffunction-sections -fdata-sections -o $(OBJDIR)/build.unit-test.o build.c
@@ -263,12 +272,9 @@ unit-test-interp: $(OBJDIR)/tests/test_interp.o $(OBJDIR)/interp.unit-test.o
 	rm -f tests/unit-test-interp
 	$(CC) -Wl,--gc-sections -Wl,--unresolved-symbols=ignore-all -o tests/unit-test-interp $(OBJDIR)/tests/test_interp.o $(OBJDIR)/interp.unit-test.o $(L_FLAGS)
 
-$(OBJDIR)/crusade.unit-test.o: crusade.c headers/ack.h
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/crusade.unit-test.o crusade.c
-
-unit-test-crusade: $(OBJDIR)/tests/test_crusade.o $(OBJDIR)/crusade.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
+unit-test-crusade: $(OBJDIR)/tests/test_crusade.o $(OBJDIR)/quests/crusade.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-crusade
-	$(CC) -Wl,--gc-sections -o tests/unit-test-crusade $(OBJDIR)/tests/test_crusade.o $(OBJDIR)/crusade.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-crusade $(OBJDIR)/tests/test_crusade.o $(OBJDIR)/quests/crusade.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 $(OBJDIR)/death.unit-test.o: death.c headers/ack.h
 	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/death.unit-test.o death.c

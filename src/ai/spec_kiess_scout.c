@@ -54,22 +54,22 @@ bool spec_kiess_scout(CHAR_DATA *ch)
       {
          if (IS_NPC(plr) || plr->pcdata == NULL)
             continue;
-         if (plr->pcdata->completed_static_quests[0])
+         if (plr->pcdata->completed_quests[0])
          {
             qplr[nq] = plr;
             qid[nq++] = 0;
          }
-         if (plr->pcdata->completed_static_quests[9])
+         if (plr->pcdata->completed_quests[9])
          {
             qplr[nq] = plr;
             qid[nq++] = 9;
          }
-         if (plr->pcdata->completed_static_quests[25])
+         if (plr->pcdata->completed_quests[25])
          {
             qplr[nq] = plr;
             qid[nq++] = 25;
          }
-         if (plr->pcdata->completed_static_quests[26])
+         if (plr->pcdata->completed_quests[26])
          {
             qplr[nq] = plr;
             qid[nq++] = 26;

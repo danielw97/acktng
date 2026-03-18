@@ -46,7 +46,7 @@ bool spec_rr_byways_scholar(CHAR_DATA *ch)
       {
          if (IS_NPC(plr) || plr->pcdata == NULL)
             continue;
-         if (plr->pcdata->completed_static_quests[77])
+         if (plr->pcdata->completed_quests[77])
          {
             act("$n looks up from $s notebook with a sharper attention than usual.", ch, NULL, plr,
                 TO_NOTVICT);

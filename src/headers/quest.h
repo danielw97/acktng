@@ -24,7 +24,7 @@
 
 /* Maximum simultaneous quests on a player */
 #define QUEST_MAX_QUESTS 5
-#define QUEST_MAX_STATIC_QUESTS 200
+#define QUEST_MAX_TEMPLATES 200
 #define QUEST_CARTOGRAPHY_MAX_ROOMS 2048
 #define QUEST_CARTOGRAPHY_BYTES (QUEST_CARTOGRAPHY_MAX_ROOMS / 8)
 
@@ -37,6 +37,7 @@ void quest_obj_notify args((CHAR_DATA * ch, OBJ_DATA *obj));
 void quest_room_notify args((CHAR_DATA * ch, ROOM_INDEX_DATA *room));
 void quest_cancel args((CHAR_DATA * ch, int slot));
 void clear_quest args((CHAR_DATA * ch));
-void quest_load_static_templates args((void));
+void quest_load_templates args((void));
+void quest_accept args((CHAR_DATA * ch, int list_number));
 
 #endif /* QUEST_H */

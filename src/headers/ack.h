@@ -725,12 +725,12 @@ struct quest_data
    bool quest_target_done[QUEST_MAX_TARGETS]; /* per-slot completion flag     */
    int quest_kill_needed;                     /* type 3: kill goal            */
    int quest_kill_count;                      /* type 3: kills so far         */
-   int quest_static_id;                       /* static quest id or -1  */
-   int quest_reward_gold;                     /* static gold reward override  */
-   int quest_reward_qp;                       /* static qp reward override    */
-   int quest_reward_item_vnum;                /* static item reward vnum      */
-   int quest_reward_item_count;               /* static item reward quantity  */
-   int quest_static_offerer_vnum;             /* required static turn-in mob  */
+   int quest_template_id;                     /* quest template id or -1       */
+   int quest_reward_gold;                     /* template gold reward override */
+   int quest_reward_qp;                       /* template qp reward override   */
+   int quest_reward_item_vnum;                /* template item reward vnum     */
+   int quest_reward_item_count;               /* template item reward quantity */
+   int quest_offerer_vnum;                    /* required turn-in mob vnum     */
    int quest_cartography_area_num;            /* type 4: target area number   */
    int quest_cartography_room_count;          /* type 4: rooms to explore     */
    int quest_cartography_explored_count;      /* type 4: rooms explored       */
@@ -816,9 +816,9 @@ struct pc_data
    int post_quest_points;
    int quest_dynamic_cooldown_until; /* earliest time for new dynamic prop */
    bool superboss_kills[MAX_SUPERBOSS];
-   /* --- Quest quest system --- */
+   /* --- Quest system --- */
    QUEST_DATA quests[QUEST_MAX_QUESTS];
-   bool completed_static_quests[QUEST_MAX_STATIC_QUESTS];
+   bool completed_quests[QUEST_MAX_TEMPLATES];
 };
 
 /*
@@ -1576,9 +1576,9 @@ bool saves_spell args((int level, CHAR_DATA *victim));
 void obj_cast_spell args((int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj));
 bool spell_identify(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj);
 
-/*-------*\
-) quest.c (
-\*-------*/
+/*--------------*\
+) quests/crusade (
+\*--------------*/
 
 void crusade_inform args((void));
 void crusade_complete args((CHAR_DATA * ch));

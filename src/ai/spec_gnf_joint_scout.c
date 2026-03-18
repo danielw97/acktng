@@ -61,17 +61,17 @@ bool spec_gnf_joint_scout(CHAR_DATA *ch)
          {
             if (IS_NPC(plr) || plr->pcdata == NULL)
                continue;
-            if (plr->pcdata->completed_static_quests[18])
+            if (plr->pcdata->completed_quests[18])
             {
                qplr[nq] = plr;
                qid[nq++] = 18;
             }
-            if (plr->pcdata->completed_static_quests[19])
+            if (plr->pcdata->completed_quests[19])
             {
                qplr[nq] = plr;
                qid[nq++] = 19;
             }
-            if (plr->pcdata->completed_static_quests[26])
+            if (plr->pcdata->completed_quests[26])
             {
                qplr[nq] = plr;
                qid[nq++] = 26;

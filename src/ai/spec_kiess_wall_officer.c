@@ -54,17 +54,17 @@ bool spec_kiess_wall_officer(CHAR_DATA *ch)
       {
          if (IS_NPC(plr) || plr->pcdata == NULL)
             continue;
-         if (plr->pcdata->completed_static_quests[9])
+         if (plr->pcdata->completed_quests[9])
          {
             qplr[nq] = plr;
             qid[nq++] = 9;
          }
-         if (plr->pcdata->completed_static_quests[10])
+         if (plr->pcdata->completed_quests[10])
          {
             qplr[nq] = plr;
             qid[nq++] = 10;
          }
-         if (plr->pcdata->completed_static_quests[0])
+         if (plr->pcdata->completed_quests[0])
          {
             qplr[nq] = plr;
             qid[nq++] = 0;
