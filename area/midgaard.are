@@ -2425,7 +2425,7 @@ S
 The great hall of @@WMidgaard's@@N central temple rises in columns of @@W white stone@@N to a vaulted ceiling painted with the city's founding myths in @@y gold@@N and @@p violet@@N. At the hall's center stands the altar of the First Stone Accord, its surface worn smooth by the hands of supplicants across generations. @@R Braziers@@N burn at each corner of the altar platform, their smoke drawn upward by shafts cut through the vault. The temple serves as a sanctuary, a registry of oaths, and the city's primary consecrated space — the place from which all civic ceremony is measured. @@c Ward-sigils@@N in the floor glow with a steady, calming light, and the silence here is profound despite the traffic of pilgrims and officials moving through the outer halls.
 
 ~
-59 11
+26 11
 D0
 ~
 ~
@@ -5869,7 +5869,7 @@ A scroll that raises a ward against good-aligned threats.
 
 ~
 2 64 8421376 0
-40 80 -1 -1 0 0 0 0 0 0
+40 -1 -1 -1 0 0 0 0 0 0
 1
 L
 40
@@ -6919,6 +6919,7 @@ G 0 1280 5
 G 0 1295 5 
 
 M 0 1102 1 1209 (null)
+
 S
 #SPECIALS
 M 1100 spec_midgaard_city_guard
@@ -6931,8 +6932,7 @@ M 1106 spec_midgaard_street_vendor
 M 1107 spec_midgaard_pilgrim
 M 1108 spec_midgaard_beggar
 M 1110 spec_midgaard_executioner
-M 1111 (null)
-M 1112 spec_midgaard_temple_priest
+M 1112 spec_cast_adept
 M 1113 spec_midgaard_shopkeeper
 M 1114 spec_midgaard_shopkeeper
 M 1115 spec_midgaard_shopkeeper
