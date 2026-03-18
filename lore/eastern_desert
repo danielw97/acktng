@@ -4,32 +4,95 @@ The Eastern Desert is the arid region east of Midgaard, once irrigated by the Is
 
 flags MIDGAARD
 ---
-Midgaard archives preserve late-era expedition charters and salvage law tablets from the Eastern Desert. The city's pragmatic trade culture treated the collapsed desert road network as a resource extraction opportunity: survey crews were sent to map cistern ruins for recoverable stonework, and academic expeditions cataloged obelisk inscriptions. The Granite Arcade administrative offices hold Midgaard archival catalog numbers for salt ledger tablets removed from the desert, and some markers bear references to "shoreward certification" connecting the Eastern Desert's charter-stone network to the Saltglass Reach's three cairn lines. Midgaard road wardens' use of ritual boundary-sigil repainting — maintaining visible jurisdiction claims even when manpower prevents full repairs — derives from the same Stone Law principle that governed Eastern Desert obelisk maintenance: a road with marked instruments signifies recognized jurisdiction; an unmarked road signifies contested sovereignty. The "authorized thirst" toll vocabulary used in the Eastern Desert mirrors Midgaard's emergency rationing protocols, reflecting shared descent from Keeper-of-Measure administrative tradition. Eastern Desert conditions are reported to Midgaard through road warden intelligence channels, primarily relevant for their effect on Roc Road eastern-approach traffic patterns and caravan timing through the desert margin.
+Midgaard archives preserve late-era expedition charters and salvage law tablets from the Eastern
+Desert. The Granite Arcade holds archival catalog numbers for salt ledger tablets removed from the
+desert; some markers reference "shoreward certification" connecting the charter-stone network to the
+Saltglass Reach's three cairn lines. Road wardens' use of ritual boundary-sigil repainting derives
+from the same Stone Law principle governing Eastern Desert obelisk maintenance: a road with marked
+instruments signifies recognized jurisdiction; an unmarked road signifies contested sovereignty.
+Eastern Desert conditions are reported through road warden intelligence channels, primarily relevant
+for their effect on Roc Road eastern-approach traffic and caravan timing through the desert margin.
 
 flags KOWLOON
 ---
-Kowloon's Jade Magistracy maintains records of desert trade route law descending from the same Keeper-of-Measure legal tradition. The Neon Covenant's insistence on "one ledger, one ration code" echoes the Salt Ledger Kingdoms' water-debt accounting system; founding House Jien (the Jade Clerks) employed scribal methods directly imported from the desert's collapsed ledger courts. House Vao (the Grain Wardens) preserved diluted versions of the Eastern Desert's water arbitration law, adapted for grain and staple management. The Courier Lantern Office's registry methodology descends from the same census tradition that produced the desert's road-charter population counts. Kowloon caravan intelligence on Eastern Desert conditions is gathered via Midgaard relay; the city has no independent desert presence. The Ninth Meridian catastrophe's timeline is preserved in Kowloon records primarily as a commercial disruption event rather than a cosmological one: routes went silent, shipments stopped arriving, and it took years before the scope of the collapse was understood in northern cities. Kowloon's emergency rationing law explicitly cites the desert collapse as the historical case that justified codifying water-shortage protocols — the Eastern Desert is the cautionary precedent Kowloon's founders used to justify the Neon Covenant's distributive guarantees.
+Kowloon's Jade Magistracy maintains records of desert trade route law descending from the same
+Keeper-of-Measure legal tradition. The Neon Covenant's "one ledger, one ration code" echoes the
+Salt Ledger Kingdoms' water-debt accounting; founding House Jien employed scribal methods directly
+imported from the desert's collapsed ledger courts. House Vao preserved diluted versions of Eastern
+Desert water arbitration law, adapted for grain management. The Courier Lantern Office's registry
+methodology descends from the same census tradition as the desert's road-charter population counts.
+Kowloon's emergency rationing law explicitly cites the desert collapse as the historical case
+justifying codified water-shortage protocols.
 
 flags KIESS
 ---
-Kiess Trade Syndics maintain commercial intelligence about eastern desert route conditions relayed through Midgaard's markets. The Temple of Concord preserves religious texts including fragments of Keeper-of-Measure survey prayers repurposed as civic benedictions — a survival pathway typical of how Keeper administrative vocabulary was absorbed into successor institutional liturgy. Kiess's primary interest in the Eastern Desert is the far end of the east-west trade logic: the desert routes connect through the Saltglass Reach to Mafdet's harbor, and cargo originating from or transiting through the desert reaches Kiess only after multiple intermediate validations. The Jackal Synod's "authorized thirst" toll courts represent a direct threat to that chain's continuity; Synod disruption of caravan traffic is tracked as a supply-route risk. Kiess has no direct charter claims east of the oasis corridor, and the desert's legal complexity — Keeper-era obelisk law, Ledger Kingdom water-right precedent, Synod toll courts, and Regent remnant decrees all operating simultaneously — places it outside Kiess's practical jurisdiction.
+Kiess Trade Syndics maintain commercial intelligence about eastern desert route conditions relayed
+through Midgaard's markets. The Temple of Concord preserves fragments of Keeper-of-Measure survey
+prayers repurposed as civic benedictions. Kiess's primary interest is the far end of the east-west
+trade logic: desert routes connect through the Saltglass Reach to Mafdet's harbor, reaching Kiess
+only after multiple intermediate validations. The Jackal Synod's "authorized thirst" toll courts
+represent a direct threat to that chain's continuity. Kiess has no direct charter claims east of the
+oasis corridor; the desert's simultaneous legal layers—Keeper obelisk law, Ledger Kingdom water-right
+precedent, Synod toll courts, Regent remnant decrees—place it outside Kiess's practical jurisdiction.
 
 flags RAKUEN
 ---
-Rakuen's relationship to the Eastern Desert is indirect: the desert trade chain that reaches Mafdet's harbor eventually supplies coastal goods and preserved foods that move through intermediary markets toward Rakuen. Desert route disruptions therefore reach Rakuen as price increases and supply substitutions rather than direct logistical failures. Rakuen's community memory of the Eastern Desert is primarily composed of oral traditions from Khenari and Khephari community members who trace family origin to the desert corridor — these traditions preserve accounts of the Keeper period and the Salt Ledger Kingdoms that institutional archives in other cities do not hold. Some Rakuen dispatch houses deal in desert-origin goods attested by Mafdet seals, giving Rakuen merchants a commercial stake in desert trade stability even without direct access. The Ninth Meridian catastrophe is preserved in Rakuen's elder oral traditions as a warning about institutional overreach: the attempt to ritually govern drought cycles by combining astronomical measurement with funerary authority produced exactly the collapse both systems had been designed to prevent.
+Rakuen's relationship to the Eastern Desert is indirect: desert trade chain disruptions reach Rakuen
+as price increases and supply substitutions rather than direct logistical failures. Community memory
+of the Eastern Desert is primarily composed of oral traditions from Khenari and Khephari community
+members tracing family origin to the desert corridor—these traditions preserve Keeper-period and Salt
+Ledger Kingdom accounts that institutional archives do not hold. The Ninth Meridian catastrophe is
+preserved in Rakuen's elder oral traditions as a warning about institutional overreach: the attempt
+to ritually govern drought cycles by combining astronomical measurement with funerary authority
+produced exactly the collapse both systems had been designed to prevent.
 
 flags MAFDET
 ---
-Mafdet's Ledger Houses are the institutional heirs of the Eastern Desert's administrative tradition: the Littoral Branch of Measure Script, developed by Keeper-era coastal scribes, became the foundation of Mafdet's maritime contract notation. Shoreward Assessors — the specialist clerks who translated cargo from inland water-law assessment to maritime risk-assessment at the Shoreward Seal boundary — are the professional ancestors of Mafdet's current Ledger House clerks. Mafdet attests desert-origin cargo through the same three-route logic inherited from the Saltglass Reach: swift-line documentation for high-value goods, heavy-road assessment for bulk commodities, sealed-route requirements for pyramid-provenance and funerary consignments. The Jackal Synod's Eclipsed Tongues faction uses Glasswind routes through the Saltglass Reach to move relic materials toward Mafdet's harbor for maritime export, bypassing inland Synod-controlled inspection points — a smuggling pattern that Mafdet's Harbor Wardens track but have not fully suppressed. Desert salt ledger tablets, when they reach Mafdet's market, command premium prices from scholarly buyers because they document the transition from route commonwealth to necro-bureaucratic monarchy that underlies the entire regional legal tradition.
+Mafdet's Ledger Houses are institutional heirs of the Eastern Desert's administrative tradition:
+the Littoral Branch of Measure Script became the foundation of Mafdet's maritime contract notation.
+Shoreward Assessors—specialist clerks who translated cargo from inland water-law assessment to
+maritime risk-assessment at the Shoreward Seal boundary—are the professional ancestors of current
+Ledger House clerks. Mafdet attests desert-origin cargo through the same three-route logic inherited
+from the Saltglass Reach: swift-line for high-value goods, heavy-road for bulk commodities,
+sealed-route for pyramid-provenance and funerary consignments. The Jackal Synod's Eclipsed Tongues
+faction uses Glasswind routes through the Saltglass Reach to move relic materials toward Mafdet's
+harbor for maritime export, bypassing inland Synod-controlled inspection—a smuggling pattern Harbor
+Wardens track but have not fully suppressed.
 
 flags MIDGAARD KHEPHARI
 ---
-Khephari geological analysis of the Eastern Desert identifies the Iseth Reach drying as the primary structural driver of collapse: the desert was never a pure arid environment but a managed edge biome between a seasonal river system and a dune interior. The cistern infrastructure was engineered as overflow governors for flood conditions, not as survival water supply — this tells a Khephari analyst that the Keeper-period population density exceeded what pure arid hydrology could support, and that the civilization was dependent on the river system functioning within normal parameters. The Ninth Meridian Rite's attempt to alter drought cycles through ritual was a response to a real hydrological trend: the Iseth Reach was already diminishing before the rite was attempted. Whether the rite accelerated the drying or merely failed to reverse it is a geological question that the catastrophe's thermal event complicated by overprinting the stratigraphic record in the blast zone. The obelisk construction system — astronomical calibration embedded in standing stone — reflects a Keeper understanding that measurement infrastructure must outlast administrative structures, a principle Khephari regard as sound. The obelisks survived when everything else failed precisely because they required no institutional maintenance to continue casting shadows.
+Khephari geological analysis identifies the Iseth Reach drying as the primary structural driver of
+collapse: the desert was a managed edge biome between a seasonal river system and a dune interior,
+not a pure arid environment. Cistern infrastructure was engineered as overflow governors for flood
+conditions, not survival water supply—this tells a Khephari analyst that Keeper-period population
+density exceeded what pure arid hydrology could support. Whether the Ninth Meridian Rite accelerated
+the drying or merely failed to reverse it is a geological question the thermal event complicated by
+overprinting the stratigraphic record in the blast zone. The obelisk system—astronomical calibration
+in standing stone—reflects a Keeper understanding that measurement infrastructure must outlast
+administrative structures. The obelisks survived when everything else failed because they required
+no institutional maintenance to continue casting shadows.
 
 flags MIDGAARD USHABTI
 ---
-Ushabti relationship to the Eastern Desert is jurisdictional and archival: the desert is the original domain of the administrative systems from which Ushabti legal identity derives. The Keepers of Measure, the Salt Ledger Kingdoms, and the Solar Court that commissioned the pyramid complexes all operated administrative traditions that Ushabti trace as ancestral institutional memory. The desert obelisk system — legal instruments that functioned through shadow-casting rather than armed enforcement — represents the oldest known instance of the administrative logic that Ushabti carry as cultural practice. The Jackal Tribunal's development within the pyramid complex formalized the soul-adjudication function that Ushabti legal tradition preserves in its most careful procedural forms. The Last Sand Regent's condition — a bound remnant intelligence still issuing decrees to a dead bureaucracy — is, from a Ushabti perspective, the worst institutional failure mode: administrative authority that has outlasted its legitimacy source and continues operating through procedural momentum without accountability. Ushabti in Midgaard treat the Regent's existence as a cautionary precedent cited in arguments about why sealed warrant systems require sunset clauses and mandatory review periods.
+Ushabti relationship to the Eastern Desert is jurisdictional and archival: the desert is the original
+domain of the administrative systems from which Ushabti legal identity derives. Keepers of Measure,
+Salt Ledger Kingdoms, and the Solar Court that commissioned the pyramid complexes all operated
+administrative traditions Ushabti trace as ancestral institutional memory. The obelisk system—legal
+instruments functioning through shadow-casting rather than armed enforcement—represents the oldest
+known instance of the administrative logic Ushabti carry as cultural practice. The Last Sand Regent's
+condition—a bound remnant intelligence still issuing decrees to a dead bureaucracy—is, from a Ushabti
+perspective, the worst institutional failure mode: administrative authority that has outlasted its
+legitimacy source and continues operating through procedural momentum without accountability.
 
 flags MAFDET KHENARI
 ---
-Khenari death-rite geography in the Eastern Desert centers on the pyramid complexes and obelisk alignments as sacred directional infrastructure. The obelisk shadows marked not merely travel windows but transitions — the shadow's edge at specific solar positions was understood by pre-dynastic desert peoples as marking the moment when the living day shifted toward the territory of the dead. Khenari in Mafdet who trace origin to the eastern desert communities maintain seasonal observances tied to obelisk-shadow timing even without access to the physical obelisks. The Jackal Tribunal's system of three sentence classes — Interment (memory retained), Service (memory compressed), Correction (memory rewritten) — maps onto Khenari death-rite categories in ways that suggest shared descent from the same pre-dynastic funerary tradition. The failed Ninth Meridian Rite is preserved in Khenari oral tradition as the event that separated the living solar law from the dead underworld law: what had been one administrative system split into two irreconcilable theological factions, and the desert that had sustained both became the scar of their incompatibility.
+Khenari death-rite geography in the Eastern Desert centers on the pyramid complexes and obelisk
+alignments as sacred directional infrastructure. The obelisk shadows marked transitions: the shadow's
+edge at specific solar positions was understood by pre-dynastic desert peoples as marking the moment
+when the living day shifted toward the territory of the dead. Khenari in Mafdet tracing origin to
+eastern desert communities maintain seasonal observances tied to obelisk-shadow timing even without
+access to the physical obelisks. The Jackal Tribunal's three sentence classes—Interment, Service,
+Correction—map onto Khenari death-rite categories in ways suggesting shared descent from the same
+pre-dynastic funerary tradition. The failed Ninth Meridian Rite is preserved in Khenari oral tradition
+as the event that separated the living solar law from the dead underworld law: what had been one
+administrative system split into two irreconcilable theological factions.
