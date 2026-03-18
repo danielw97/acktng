@@ -178,7 +178,6 @@ void do_deny(CHAR_DATA *ch, char *argument)
 {
    char arg[MAX_INPUT_LENGTH];
    CHAR_DATA *victim;
-   //    DESCRIPTOR_DATA d;
    one_argument(argument, arg);
    if (arg[0] == '\0')
    {
@@ -188,23 +187,10 @@ void do_deny(CHAR_DATA *ch, char *argument)
 
    if ((victim = get_char_world(ch, arg)) == NULL)
    {
-      //      bool found = FALSE;
-      //      found = load_char_obj( &d, arg, TRUE );
-
-      //      if (!found)
-      {
-         char buf[MSL];
-         sprintf(buf, "%s is not online.\n\r", capitalize(arg));
-         //        sprintf( buf, "No pFile found for '%s'.\n\r", capitalize( arg ) );
-         send_to_char(buf, ch);
-         //        free_char( d.character );
-         return;
-      }
-
-      //      victim = d.character;
-      //      d.character = NULL;
-      //      victim->desc = NULL;
-      //      LINK( victim, first_char, last_char, next, prev );
+      char buf[MSL];
+      sprintf(buf, "%s is not online.\n\r", capitalize(arg));
+      send_to_char(buf, ch);
+      return;
    }
 
    if (IS_NPC(victim))
@@ -216,8 +202,6 @@ void do_deny(CHAR_DATA *ch, char *argument)
    if (get_trust(victim) >= get_trust(ch))
    {
       send_to_char("You failed.\n\r", ch);
-      //        if ( victim->desc == NULL )
-      //          do_quit( victim, "" );
       return;
    }
    if (IS_SET(victim->act, PLR_DENY))
@@ -396,8 +380,6 @@ void do_transfer(CHAR_DATA *ch, char *argument)
    ROOM_INDEX_DATA *location;
    DESCRIPTOR_DATA *d;
    CHAR_DATA *victim;
-   //    DESCRIPTOR_DATA df;
-   //    bool found = FALSE;
    argument = one_argument(argument, arg1);
    argument = one_argument(argument, arg2);
 
@@ -446,23 +428,10 @@ void do_transfer(CHAR_DATA *ch, char *argument)
 
    if ((victim = get_char_world(ch, arg1)) == NULL)
    {
-
-      //      found = load_char_obj( &df, arg1, TRUE );
-
-      //      if (!found)
-      {
-         char buf[MSL];
-         //        sprintf( buf, "No pFile found for '%s'.\n\r", capitalize( arg1 ) );
-         sprintf(buf, "%s is not online.\n\r", capitalize(arg1));
-         send_to_char(buf, ch);
-         //        free_char( df.character );
-         return;
-      }
-
-      //      victim = df.character;
-      //      df.character = NULL;
-      //      victim->desc = NULL;
-      //      LINK( victim, first_char, last_char, next, prev );
+      char buf[MSL];
+      sprintf(buf, "%s is not online.\n\r", capitalize(arg1));
+      send_to_char(buf, ch);
+      return;
    }
    if (victim->in_room == NULL)
    {
@@ -475,11 +444,6 @@ void do_transfer(CHAR_DATA *ch, char *argument)
    act("$n is snatched by the Gods!", victim, NULL, NULL, TO_ROOM);
    char_from_room(victim);
    char_to_room(victim, location);
-   //    if ( found )
-   //    {
-   //      do_quit( victim, "" );
-   //      return;
-   //    }
    act("$n arrives from a puff of smoke.", victim, NULL, NULL, TO_ROOM);
    if (ch != victim)
       act("$n has transferred you.", ch, NULL, victim, TO_VICT);
@@ -882,7 +846,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
       strcat(buf1, buf);
 
       {
-         char class_buf[MAX_STRING_LENGTH];
+         char class_buf[256];
          class_buf[0] = '\0';
          for (int ci = 0; ci < MAX_CLASS; ci++)
          {
@@ -892,7 +856,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
                strcat(class_buf, " ");
             }
          }
-         sprintf(buf, "Mortal Classes: %s\n\r", class_buf);
+         snprintf(buf, sizeof(buf), "Mortal Classes: %s\n\r", class_buf);
          strcat(buf1, buf);
       }
    }
@@ -1868,12 +1832,6 @@ void do_log(CHAR_DATA *ch, char *argument)
    char arg[MAX_INPUT_LENGTH];
    CHAR_DATA *victim;
 
-   // If anyone has a way to do this with the character not logged in,
-   // please let zenithar@mindspring.com know :)
-
-   //    DESCRIPTOR_DATA d;
-   //    bool found = FALSE;
-
    one_argument(argument, arg);
 
    if (arg[0] == '\0')
@@ -1899,22 +1857,10 @@ void do_log(CHAR_DATA *ch, char *argument)
 
    if ((victim = get_char_world(ch, arg)) == NULL)
    {
-      //      found = load_char_obj( &d, arg, TRUE );
-
-      //      if (!found)
-      {
-         char buf[MSL];
-         //        sprintf( buf, "No pFile found for '%s'.\n\r", capitalize( arg ) );
-         sprintf(buf, "%s is not online.\n\r", capitalize(arg));
-         send_to_char(buf, ch);
-         //        free_char( d.character );
-         return;
-      }
-
-      //      victim = d.character;
-      //      d.character = NULL;
-      //      victim->desc = NULL;
-      //      LINK( victim, first_char, last_char, next, prev );
+      char buf[MSL];
+      sprintf(buf, "%s is not online.\n\r", capitalize(arg));
+      send_to_char(buf, ch);
+      return;
    }
 
    if (IS_NPC(victim))
@@ -1936,10 +1882,6 @@ void do_log(CHAR_DATA *ch, char *argument)
       SET_BIT(victim->act, PLR_LOG);
       send_to_char("LOG set.\n\r", ch);
    }
-   //    if ( found )
-   //    {
-   //      do_quit( victim, "" );
-   //    }
    return;
 }
 

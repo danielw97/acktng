@@ -305,7 +305,6 @@ char *string_format(char *str, int *numlines, int width, int height, bool unjust
          {
             if (unjust && pbuf[last] == '.')
                *pbuf++ = ' ', ++blen;
-            //        if (!iseol(pbuf[last]))
             *pbuf++ = ' ', ++blen;
          }
       }
@@ -413,7 +412,6 @@ char *map_format(char *str, int start, char map[MAP_Y][MSL], int *numlines, int 
          {
             if (unjust && pbuf[last] == '.')
                *pbuf++ = ' ', ++blen;
-            //        if (!iseol(pbuf[last]))
             *pbuf++ = ' ', ++blen;
          }
       }

@@ -635,7 +635,6 @@ void boot_db(void)
       log_f("Checking Resets...");
       check_resets();
       log_f("Done.");
-      /*	load_gold(); */
       log_f("Updating Areas....");
       area_update();
       log_f("Loading notes");

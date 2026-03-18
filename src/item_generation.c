@@ -685,8 +685,6 @@ bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
          total++;
    }
 
-   //   sprintf(buf, "create_loot loot total is %d", total);
-   // bug(buf,0);
    if (total == 0)
       return FALSE;
 
@@ -698,9 +696,6 @@ bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
       int roll = number_percent();
       for (int i = 0; i < MAX_LOOT; i++)
       {
-         //       sprintf(buf, "Chloot %d Chlootchance %d chance %d", ch->loot[i],
-         //       ch->loot_chance[i], chance);
-         //         bug(buf,0);
          if (ch->loot[i] > 0 && ch->loot_chance[i] > 0 && roll <= ch->loot_chance[i] + chance)
          {
             OBJ_DATA *obj;
