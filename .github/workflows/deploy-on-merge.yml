@@ -49,6 +49,7 @@ jobs:
           script: |
             set -e
             cd ${{ secrets.DEPLOY_PATH }}
+            git stash
             git pull origin main
             cd src
             make ack
