@@ -137,6 +137,7 @@ DECLARE_SPELL_FUN(spell_mind_flail);
 
 DECLARE_SPELL_FUN(spell_acid_blast);
 DECLARE_SPELL_FUN(spell_animate);
+DECLARE_SPELL_FUN(spell_revenant);
 DECLARE_SPELL_FUN(spell_armor);
 DECLARE_SPELL_FUN(spell_badbreath);
 DECLARE_SPELL_FUN(spell_bark_skin);

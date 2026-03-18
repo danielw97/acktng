@@ -41,6 +41,7 @@ DECLARE_SPEC_FUN(spec_summon_shadow);
 DECLARE_SPEC_FUN(spec_summon_metal);
 DECLARE_SPEC_FUN(spec_summon_animate);
 DECLARE_SPEC_FUN(spec_summon_thought);
+DECLARE_SPEC_FUN(spec_summon_revenant);
 DECLARE_SPEC_FUN(spec_lamplighter);
 DECLARE_SPEC_FUN(spec_warden);
 DECLARE_SPEC_FUN(spec_vendor);

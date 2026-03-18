@@ -351,7 +351,7 @@ int get_obj_number(OBJ_DATA *obj)
                          number = number - 1;
                       }
                    }
-
+            
                */
                /* containers should count as one item!
                    if ( obj->item_type == ITEM_CONTAINER )
