@@ -248,8 +248,6 @@ bool generate_ai_spawn(CHAR_DATA *ch)
    int min_chance = 1;
    int max_chance = 10;
 
-   //   ch->spellpower_mod = 0;
-
    if (get_psuedo_level(ch) > 30)
       min_chance++;
 

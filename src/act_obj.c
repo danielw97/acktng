@@ -3885,7 +3885,6 @@ void do_auction(CHAR_DATA *ch, char *argument)
          if (good_buyer)
          {
             send_to_char("Your bid has been returned.\n\r", auction_bidder);
-            //            join_money( round_money( auction_bid, TRUE ), auction_bidder->money );
          }
 
          auction_stage = 0;

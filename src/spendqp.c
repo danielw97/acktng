@@ -494,8 +494,6 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
             brand->branded = str_dup(ch->name);
             brand->branded_by = str_dup("@@rSystem@@N");
             brand->priority = str_dup("normal");
-            //            sprintf(brandbuf, "Assist message changed to %s\n\r",
-            //            ch->pcdata->assist_msg);
             brand->message = str_dup(brandbuf);
             strtime = ctime(&current_time);
             strtime[strlen(strtime) - 1] = '\0';

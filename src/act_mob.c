@@ -122,8 +122,6 @@ void mob_group_follow(CHAR_DATA *ch, CHAR_DATA *target)
 
          num = number_percent();
 
-         //  WAIT_STATE( vch, 12 );
-
          if (num > 85)
             do_say(vch, "Ok boss.  Whatever you say.");
          else if (num > 70)
@@ -194,8 +192,6 @@ void get_mob_group(CHAR_DATA *ch, CHAR_DATA *target)
    }
 
    do_say(ch, "Hello there.  What are you up to?");
-
-   //   WAIT_STATE( target, 24 );
 
    if (target->hunting != NULL)
    {
@@ -313,20 +309,6 @@ bool ready_heal_room(CHAR_DATA *ch)
    /*
     * don't cast seal room in midgaard
     */
-
-   // ZEN FIX this to check for bad room spells allowed in area
-
-   //   if (  ( ch->in_room->vnum > ROOM_VNUM_MID_TOP
-   //      ||   ch->in_room->vnum < ROOM_VNUM_MID_BOTTOM )
-   //      && ( !IS_SET( ch->in_room->affected_by, ROOM_BV_ENCAPS ) )  )
-   //   {
-   //      if ( ch->mana >= mana_cost( ch, skill_lookup ( "seal room" ) )  )
-   //      {
-   //        ready = FALSE;
-   //        do_cast ( ch, "'seal room'" );
-   //        return ready;
-   //      }
-   //   }
 
    return ready;
 }
@@ -697,8 +679,6 @@ void mob_is_standing(CHAR_DATA *ch)
     * * trainer
     */
 
-   // ZEN FIX Have them recall then hunt the room
-
    if (able_to_level(ch))
    {
       char_from_room(ch);
@@ -856,10 +836,6 @@ bool valid_target(CHAR_DATA *ch, CHAR_DATA *victim, int l)
        ((get_psuedo_level(ch) - get_psuedo_level(victim)) > 12))
       return FALSE;
 
-   //   if ( ( IS_GOOD( ch )    && IS_GOOD( victim    ) )
-   //   || (   IS_EVIL( ch )    && IS_EVIL( victim    ) )
-   //      return FALSE;
-
    if ((ch->spec_fun == spec_lookup("spec_vamp_hunter")) && (IS_NPC(victim)) &&
        (number_percent() < 20))
       return FALSE;
@@ -881,7 +857,6 @@ void select_target(CHAR_DATA *ch)
     * Find a new target for the group to go after
     */
    int average_level;
-   //   int        tmp   = 0;
    CHAR_DATA *vch;
    CHAR_DATA *victim = NULL;
    char buf[MAX_STRING_LENGTH];
@@ -895,7 +870,6 @@ void select_target(CHAR_DATA *ch)
    attempts = 0;
    while ((victim == NULL) && (attempts < 15))
    {
-      // ZEN FIX set average level based on level of ngroup
       attempts++;
       average_level = get_psuedo_level(ch);
 
@@ -974,7 +948,6 @@ void int_group_handler(NPC_GROUP_DATA *ngroup)
    CHAR_DATA *follower = NULL;
    CHAR_DATA *leader = ngroup->leader;
    DL_LIST *follower_ptr;
-   //  sh_int followers_want = GRP_STATE_NO_CHANGE;
    sh_int leader_wants = GRP_STATE_NO_CHANGE;
    sh_int group_count = 1; // start with leader
    char monbuf[MSL];
@@ -1030,7 +1003,6 @@ void int_group_handler(NPC_GROUP_DATA *ngroup)
    {
       bool everyone_ready = TRUE;
       bool room_ready = FALSE;
-      //      ready_heal_room( leader );
       if ((leader->mana < get_max_mana(leader) * 85 / 100) ||
           (leader->hit < get_max_hp(leader) * 85 / 100))
       {
@@ -1121,8 +1093,6 @@ void int_group_handler(NPC_GROUP_DATA *ngroup)
    }
    case GRP_STATE_IDLE:
    {
-      //      check_re_equip( leader );
-      //      check_rewield( leader );
       if (leader_wants < GRP_STATE_NO_CHANGE)
       {
          ngroup->state = leader_wants;
@@ -1146,9 +1116,6 @@ void int_group_handler(NPC_GROUP_DATA *ngroup)
       }
       if (leader->hunting == NULL)
       {
-         //        sprintf( monbuf, "Leader %s not hunting anything in GRP_STATE_HUNTING",
-         //              leader->name );
-         //        monitor_chan( monbuf, MONITOR_MOB );
          select_target(ngroup->leader);
          break;
       }

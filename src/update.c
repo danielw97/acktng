@@ -2460,7 +2460,6 @@ void auction_update(void)
          }
          else
             extract_obj(auction_item);
-         // if( good_buyer )
       }
       else
       {
@@ -2485,7 +2484,6 @@ void auction_update(void)
                     auction_item->short_descr);
             extract_obj(auction_item);
          }
-         // if( good_seller )
       }
 
       auction_stage = 0;
