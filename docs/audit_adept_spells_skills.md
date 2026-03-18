@@ -147,9 +147,9 @@ Each adept class currently has **very few** dedicated spells/skills (1-4 each), 
 
 | Proposed Ability | Level | Type | Thematic Justification |
 |-----------------|-------|------|------------------------|
-| **Momentum Chain** | 5 | Skill (offensive, combo) | The lore describes the Crusader doctrine as "chain the Knight's body-strikes into the Swordsman's building momentum, and the accumulated force exceeds what either path sustains alone." A skill that grants bonus damage on the next attack after successfully landing a combo skill (holystrike, fleche, charge, kick, headbutt) would mechanically represent the escalating momentum doctrine — each successful strike feeding into the next. |
-| **Iron Resolve** | 10 | Skill (defensive, self) | The Solar Court Crusader designation honored practitioners who served "successive engagements without rotation." A self-buff that provides temporary damage resistance or prevents the Crusader from being knocked out of fighting position (resisting bash, trip effects) represents the continuous-field-service identity and the formation discipline that anchors Crusader combat. |
-| **Overwhelming Assault** | 15 | Skill (offensive) | The after-action reports describe "formation-coordinated pressure that simultaneously escalated in a way that the formation's opponents couldn't stabilize against." A powerful finishing attack that deals bonus damage proportional to the number of combo points/strikes landed in the current fight would be the mechanical capstone of the momentum-and-finisher doctrine. |
+| **Momentum Chain** | 5 | Skill (combo system) | **Combo integration:** When a Crusader lands a `war_attack()` skill that successfully adds to the combo sequence, Momentum Chain grants a stacking damage bonus (+X% per combo slot filled) to the *next* war_attack skill used. The bonus resets when the combo triggers or resets. **Implementation:** Check `get_combo_count(ch)` in `war_attack()` when `CLASS_CRU > 0`; apply a damage multiplier proportional to current combo count. This directly extends the existing combo accumulation loop — the more unique skills chained, the harder each subsequent hit lands, representing the lore's "accumulated force exceeds what either path sustains alone." Unlike the combo finisher burst (which fires at max), this rewards the *process* of building the combo. |
+| **Iron Resolve** | 10 | Skill (defensive, combo-adjacent) | **Combo integration:** A self-buff activated via `war_attack()` pattern (so it occupies a combo slot like other war skills). While active, the Crusader resists position-changing effects (bash knockdown, trip) — keeping them in fighting position to maintain their combo chain. A broken combo chain is the Crusader's biggest loss; Iron Resolve protects the investment. **Implementation:** Add `gsn_iron_resolve` to the combo skill recognition in `combo()`, and add a check in bash/trip handlers: if `is_affected(ch, gsn_iron_resolve)`, resist displacement. Duration: short (2-3 rounds). This differentiates from `fortify` (passive DR) by being anti-displacement specifically to protect combo building. |
+| **Overwhelming Assault** | 15 | Skill (combo finisher) | **Combo integration:** A new finisher type that replaces the normal combo trigger burst. When `is_valid_finisher(ch)` is TRUE and the Crusader uses Overwhelming Assault as the final combo slot, instead of the random-attack burst, it delivers a single massive strike with damage proportional to `get_max_combo(ch)` and a multiplier based on Crusader adept level. **Implementation:** In `combo()`, check if the final gsn is `gsn_overwhelming_assault`; if so, skip the normal burst loop and deliver one calculated hit with `combo_damage_multiplier_for_max_combo(max) * crusader_level` scaling. This gives Crusaders a deliberate choice: normal combo burst (many random hits + stun chance) vs. Overwhelming Assault (one enormous hit). The lore's "decisive finishing blows" doctrine made mechanical. |
 
 ---
 
@@ -221,9 +221,9 @@ Each adept class currently has **very few** dedicated spells/skills (1-4 each), 
 
 | Proposed Ability | Level | Type | Thematic Justification |
 |-----------------|-------|------|------------------------|
-| **Chi Surge** | 5 | Skill (offensive, chi) | The lore describes how "applying chi circulation patterns to Brawler impact mechanics produced impacts with qualities that neither approach alone achieved." A chi-spending attack that channels accumulated chi into a devastating burst strike (damage scaling with current chi, consuming chi) would be the first active expression of the Martial Artist synthesis — Monk internal energy directed through Brawler impact methodology. |
-| **Iron Breath** | 10 | Skill (defensive, self) | The lore emphasizes that "breath control and structural timing allowed them to maintain output efficiently while the Brawler's intensity degraded." A self-buff that temporarily increases damage resistance and regeneration (representing sustained breath-controlled combat endurance) mechanically represents the Monk's contribution to the synthesis — making Brawler ferocity sustainable. |
-| **Fist of the Interior Form** | 15 | Skill (offensive) | The "Interior Forms" are described as "the discipline of breath, posture, and applied understanding" that at depth produced "access to the Inner Forms — the breath and internal energy work." A powerful unarmed finisher that deals massive damage but requires specific chi and stance conditions (rewarding disciplined play) would represent the full synthesis — the two-apprenticeship depth producing "something they couldn't have found in either alone." |
+| **Chi Surge** | 5 | Skill (offensive, chi-spending) | **Chi integration:** Costs ALL current chi (minimum 10 to activate). Deals a single massive strike with damage = `base_damage * chi_spent`. Uses `pug_attack()` pattern but with the chi-scaled multiplier. Unlike `flurry` (which spends all chi for many weak hits via `one_hit()`), Chi Surge converts all chi into ONE devastating blow — the lore's "applying chi circulation patterns to Brawler impact mechanics produced impacts with qualities that neither approach alone achieved." **Implementation:** `do_chisurge()` checks `get_chi(ch) >= 10`, stores `spent = ch->chi`, sets `ch->chi = 0`, calculates `dam = pug_base_dam * spent / 5`, calls `calculate_damage()`. Has a cooldown (15 rounds) like other chi-spenders. The high minimum (10 chi) means the Martial Artist must build chi through palmstrike/aurabolt/phantomfist/mindoverbody before unleashing, creating a build-then-burst rhythm distinct from flurry's spend-everything-for-volume approach. |
+| **Breath of Endurance** | 10 | Skill (defensive, chi-spending) | **Chi integration:** Costs 8 chi. Applies a self-buff (APPLY_HOT + damage reduction) for a duration scaling with `CLASS_MAR` level. **Implementation:** Similar structure to `do_chakra()` — check `get_chi(ch) >= cost`, subtract chi, apply `AFFECT_DATA` with `APPLY_HOT` (heal-over-time like Mind Over Body) plus a second affect reducing incoming damage. Uses `chi_skill_cost()` for the doubled-on-cooldown mechanic. The lore emphasizes "breath control and structural timing allowed them to maintain output efficiently while the Brawler's intensity degraded." This is the chi-powered answer to that — spending accumulated combat energy to sustain yourself through extended exchanges. Distinct from `iron skin` (which is a passive Pugilist skill with no chi cost) and from `chakra` (which is a burst heal + damroll buff). Breath of Endurance is sustained recovery + damage mitigation. |
+| **Fist of the Interior Form** | 15 | Skill (offensive, chi-conditional) | **Chi integration:** Requires EXACTLY 20+ chi to activate (near-full pool). Consumes 20 chi. Delivers a single strike at extreme damage with both PHYSICAL and HOLY element (representing the chi integration's "mechanism that neither tradition's theoretical framework fully explains"). **Implementation:** `do_fist_interior()` checks `get_chi(ch) >= 20`, subtracts 20, calculates `dam = pug_base_dam * 20 * (1 + CLASS_MAR / 10)`, uses `ELE_PHYSICAL | ELE_HOLY` like aurabolt but massively amplified. Long cooldown (30 rounds). The 20-chi requirement means the Martial Artist must deliberately build to near-max without spending chi on chakra/chiblock/spinfist/flurry first — disciplined resource management rewarded with the tradition's ultimate expression. This creates a meaningful choice each fight: spend chi incrementally on utility (chakra heals, chiblock defense, spinfist AoE) or save for the Interior Form's devastating finisher. The lore's "two-apprenticeship depth producing something they couldn't have found in either alone." |
 
 ---
 
@@ -278,16 +278,16 @@ After thorough review of all adept-exclusive abilities against the detailed lore
 | Nightblade | Shadow Reading | 5 | Skill (info/passive) | High |
 | Nightblade | Hex Ward | 10 | Skill (buff strip) | High |
 | Nightblade | Reflex Disruption | 15 | Skill (debuff) | High |
-| Crusader | Momentum Chain | 5 | Skill (combo bonus) | Medium |
-| Crusader | Iron Resolve | 10 | Skill (self-buff) | Medium |
-| Crusader | Overwhelming Assault | 15 | Skill (finisher) | Medium |
+| Crusader | Momentum Chain | 5 | Skill (combo: stacking dmg bonus) | Medium |
+| Crusader | Iron Resolve | 10 | Skill (combo: anti-displacement) | Medium |
+| Crusader | Overwhelming Assault | 15 | Skill (combo: alt finisher) | Medium |
 | Kinetimancer | Momentum Drain | 5 | Spell (drain) | High |
 | Kinetimancer | Entropic Shield | 8 | Spell (defensive) | High |
 | Kinetimancer | Cognitive Disruption | 12 | Spell (silence-like) | High |
 | Kinetimancer | Predictive Collapse | 15 | Spell (debuff + damage) | High |
-| Martial Artist | Chi Surge | 5 | Skill (chi burst) | Highest |
-| Martial Artist | Iron Breath | 10 | Skill (self-buff) | Highest |
-| Martial Artist | Fist of the Interior Form | 15 | Skill (finisher) | Highest |
+| Martial Artist | Chi Surge | 5 | Skill (chi: spend-all burst) | Highest |
+| Martial Artist | Breath of Endurance | 10 | Skill (chi: sustain buff) | Highest |
+| Martial Artist | Fist of the Interior Form | 15 | Skill (chi: 20-chi finisher) | Highest |
 
 ---
 
@@ -304,12 +304,12 @@ Validated all 19 proposed abilities against the full roster of 109 existing spel
 - **Problem:** The proposed "Consecrate Ground" would provide room healing-over-time and damage reduction. The name collides with the existing `consecrate` spell (MUD `str_prefix()` matching means typing "consecrate" would match the existing spell first). Additionally, both operate on the room/group with a holy-ground theme.
 - **Resolution:** **Rename to "Sacred Ward"** — preserves the Templar threshold-guardian lore (warding sacred spaces) while avoiding the name and thematic collision with the Cleric's consecrate. Alternatively: "Hallowed Ground", "Divine Bastion", or "Sanctum".
 
-**2. "Iron Breath" (Martial Artist, proposed level 10) vs. "iron skin" (Pugilist, level 22)**
+**2. "Breath of Endurance" (Martial Artist, proposed level 10) vs. "iron skin" (Pugilist, level 22)**
 
-- **Conflict type:** Name domain overlap (minor)
-- **Existing ability:** `iron skin` is a Pugilist mortal skill that provides a self-buff defensive bonus.
-- **Problem:** Both use "iron" naming and both are self-buffs for damage resistance on the same class lineage (Pugilist -> Monk/Brawler -> Martial Artist). A Martial Artist already has access to `iron skin` from Pugilist training. Having both "iron skin" and "iron breath" could confuse players.
-- **Resolution:** **Rename to "Breath of Endurance"** — emphasizes the Monk breath-control lore rather than the Pugilist iron-body theme. Alternatively: "Sustained Breath", "Inner Resilience", or "Breath Mastery".
+- **Conflict type:** Functional overlap (name conflict RESOLVED by rename)
+- **Existing ability:** `iron skin` is a Pugilist mortal skill (passive defensive buff, no chi cost). Martial Artists already have access to it.
+- **Original problem:** Was originally named "Iron Breath" — colliding with `iron skin` naming.
+- **Resolution:** **RESOLVED.** Renamed to "Breath of Endurance" which emphasizes Monk breath-control lore. Mechanically differentiated: Breath of Endurance costs 8 chi (tying into chi system), provides HOT + damage reduction for a duration, and scales with MAR level. Iron skin is a passive with no chi cost. No remaining conflict.
 
 ### MECHANICAL CONFLICTS
 
@@ -364,7 +364,7 @@ Validated all 19 proposed abilities against the full roster of 109 existing spel
 | Proposed Ability | Issue | Resolution |
 |-----------------|-------|------------|
 | Consecrate Ground | Name/mechanic collision with `consecrate` | **Rename to "Sacred Ward"** |
-| Iron Breath | Name confusion with `iron skin` in same lineage | **Rename to "Breath of Endurance"** |
+| Breath of Endurance | Was "Iron Breath" — `iron skin` name collision | **RESOLVED: renamed to "Breath of Endurance"** |
 | Momentum Drain | Functional overlap with `mana drain` (same lineage) | **Refocus to combat-stat drain, not mana drain** |
 | Convergence Shield | Functional overlap with `elemental ward` (same lineage) | **Make reactive/absorb instead of passive mitigation** |
 | Hex Ward | Partial overlap with `dispel magic` | **Make gradual degradation, not instant removal** |
