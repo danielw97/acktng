@@ -34,15 +34,47 @@
 
 bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   char buf[MAX_STRING_LENGTH];
-   if (IS_NPC(ch))
-      return FALSE;
+   CHAR_DATA *victim = (CHAR_DATA *)vo;
 
-   ch->hit = get_max_hp(ch);
-   ch->mana = ch->max_mana;
-   ch->move = ch->max_move;
-   send_to_char("@@eTHe life force of tha captured soul restores you!\n\r", ch);
-   sprintf(buf, " %s has used a restoration spell.\n\r", ch->name);
-   monitor_chan(buf, MONITOR_BAD);
+   /* Strip negative affects */
+   if (is_affected(victim, gsn_blindness))
+   {
+      affect_strip(victim, gsn_blindness);
+      REMOVE_BIT(victim->affected_by, AFF_BLIND);
+   }
+
+   if (is_affected(victim, gsn_curse))
+   {
+      affect_strip(victim, gsn_curse);
+      REMOVE_BIT(victim->affected_by, AFF_CURSE);
+   }
+
+   if (is_affected(victim, gsn_poison))
+   {
+      affect_strip(victim, gsn_poison);
+      REMOVE_BIT(victim->affected_by, AFF_POISON);
+   }
+
+   if (is_affected(victim, gsn_sleep))
+   {
+      affect_strip(victim, gsn_sleep);
+      REMOVE_BIT(victim->affected_by, AFF_SLEEP);
+   }
+
+   /* Restore some hit points */
+   victim->hit = UMIN(victim->hit + level, get_max_hp(victim));
+
+   if (ch == victim)
+   {
+      send_to_char("Divine light washes over you, restoring your body and spirit!\n\r", victim);
+   }
+   else
+   {
+      act("Divine light washes over $n, restoring $m completely!", victim, NULL, NULL, TO_ROOM);
+      act("Divine light washes over you, restoring your body and spirit!", victim, NULL, NULL,
+          TO_CHAR);
+      send_to_char("Ok.\n\r", ch);
+   }
+
    return TRUE;
 }

@@ -31,6 +31,7 @@
 #include "globals.h"
 #include "tables.h"
 #include "magic.h"
+#include "skills.h"
 
 bool spell_wither_shadow(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
@@ -56,11 +57,20 @@ bool spell_wither_shadow(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
       return FALSE;
    }
 
+   int combo_count = get_combo_count(ch);
+   int combo_bonus = combo_count > 0 ? combo_count : 0;
+
+   if (combo_count > 0)
+      reset_combo(ch);
+
    act("@@NA deadly @@dWithering Shadow@@N fills the room.", ch, NULL, NULL, TO_ROOM);
    send_to_char("@@NYou fill the room with a deadly @@dWithering Shadow@@N.\n\r", ch);
 
+   if (combo_bonus > 0)
+      send_to_char("@@yYour combo intensifies the shadow!@@N\n\r", ch);
+
    raf.type = sn;
-   raf.duration = (level / 8) + number_range(2, 10);
+   raf.duration = (level / 8) + number_range(2, 10) + combo_bonus;
    raf.level = level;
    raf.bitvector = ROOM_BV_HEAL_STEAL;
    raf.caster = ch;

@@ -44,6 +44,8 @@ void do_spinfist(CHAR_DATA *ch, char *argument)
       return;
    }
 
+   ch->chi -= cost;
+
    act("You perform a spinfist!", ch, NULL, NULL, TO_CHAR);
    act("$n performs a spinfist!", ch, NULL, NULL, TO_ROOM);
    for (vch = ch->in_room->first_person; vch != NULL; vch = vch_next)
@@ -59,7 +61,7 @@ void do_spinfist(CHAR_DATA *ch, char *argument)
              (!is_same_group(ch, vch)))
          {
             if (can_hit_skill(ch, vch, gsn_spinfist))
-               war_attack(ch, vch->name, gsn_spinfist);
+               pug_attack(ch, vch->name, gsn_spinfist);
          }
       }
    }
