@@ -25,17 +25,17 @@
 
 /* Caravan room vnums — the designated caravan gathering point in each city */
 #define CARAVAN_ROOM_MIDGAARD 1151 /* Caravan Square, Midgaard             */
-#define CARAVAN_ROOM_KIESS    3661 /* Caravan Rest Yard, Kiess             */
-#define CARAVAN_ROOM_KOWLOON  3833 /* Caravan Staging Yard, Kowloon        */
-#define CARAVAN_ROOM_MAFDET   3878 /* Gate Customs Yard, Mafdet            */
-#define CARAVAN_ROOM_RAKUEN   4556 /* Lower Dispatch House, Rakuen         */
+#define CARAVAN_ROOM_KIESS 3661    /* Caravan Rest Yard, Kiess             */
+#define CARAVAN_ROOM_KOWLOON 3833  /* Caravan Staging Yard, Kowloon        */
+#define CARAVAN_ROOM_MAFDET 3878   /* Gate Customs Yard, Mafdet            */
+#define CARAVAN_ROOM_RAKUEN 4556   /* Lower Dispatch House, Rakuen         */
 
 typedef struct caravan_route_data CARAVAN_ROUTE_DATA;
 struct caravan_route_data
 {
    const char *origin;
    const char *destination;
-   const char *cargo_label;        /* thematic cargo name, e.g. "mercy-grain" */
+   const char *cargo_label; /* thematic cargo name, e.g. "mercy-grain" */
    int spawn_room_vnum;
    int destination_room_vnum;
    const char **journey_lines;
@@ -77,7 +77,8 @@ static const char *midgaard_to_mafdet_lines[] = {
     "The Carters' Quarter in Mafdet smells of salt and dust. You'll miss it when you're gone.",
     "Keep your water skins full. The road to the Gate Customs Yard has no shade worth trusting.",
     "These winter-stores will feed a thousand people who'd otherwise go without.",
-    "When the gate towers of Mafdet rise in the heat haze, slow the draft team. They've earned rest.",
+    "When the gate towers of Mafdet rise in the heat haze, slow the draft team. They've earned "
+    "rest.",
     "Desert trade is honest trade. Mafdet folk know exactly what a full grain barrel is worth."};
 
 static const char *midgaard_to_rakuen_lines[] = {
@@ -88,7 +89,8 @@ static const char *midgaard_to_rakuen_lines[] = {
     "The Registration Floor in Rakuen keeps its own time. Don't argue, just sign the manifest.",
     "Grain for the Compact means goodwill at the eastern border for another season.",
     "I've made this run in rain and shine. The canopy never looks the same twice.",
-    "By the time Rakuen's dispatch house comes into view, the draft animals know the smell of rest."};
+    "By the time Rakuen's dispatch house comes into view, the draft animals know the smell of "
+    "rest."};
 
 /* -----------------------------------------------------------------------
  * Kiess departures
@@ -134,9 +136,11 @@ static const char *kiess_to_rakuen_lines[] = {
     "These pinewood beams will frame a building in Rakuen that stands for two hundred years.",
     "Canopy city or no, Rakuen needs what grows at the forest floor. We bring it.",
     "Keep the joints dry and the manifest current. Rakuen registrars count every board-foot.",
-    "When the canopy overhead thickens, we're close. The Registration Floor is at the base of the dispatch spire.",
+    "When the canopy overhead thickens, we're close. The Registration Floor is at the base of the "
+    "dispatch spire.",
     "Kiess craft and Rakuen patience make the finest structures in the east. This load proves it.",
-    "The smell of pine at the end of an eastern run is a promise that the next one will happen too."};
+    "The smell of pine at the end of an eastern run is a promise that the next one will happen "
+    "too."};
 
 /* -----------------------------------------------------------------------
  * Kowloon departures
@@ -177,11 +181,14 @@ static const char *kowloon_to_mafdet_lines[] = {
     "Spice pays for the trip both ways. What we earn here funds the next Kiess run."};
 
 static const char *kowloon_to_rakuen_lines[] = {
-    "Rakuen's weavers pay well for Kowloon silk because it takes canopy dye better than their own cloth.",
+    "Rakuen's weavers pay well for Kowloon silk because it takes canopy dye better than their own "
+    "cloth.",
     "The eastern road after the delta is long and dry. Our silk cargo is worth the discomfort.",
-    "Keep the silk bales off the wagon floor. Mud stains reduce the price before you open your mouth.",
+    "Keep the silk bales off the wagon floor. Mud stains reduce the price before you open your "
+    "mouth.",
     "Rakuen's dispatch house runs a strict manifest system. Every bolt of silk gets its own line.",
-    "Southern silk is soft enough to trade on reputation alone. We don't need to speak; the cloth does.",
+    "Southern silk is soft enough to trade on reputation alone. We don't need to speak; the cloth "
+    "does.",
     "The last hour before Rakuen is uphill. The wagons feel it and so will you.",
     "Eastern buyers know value. Kowloon silk at the Registration Floor sells before we unhitch.",
     "What starts as sea-trade in Kowloon becomes land-legend by the time it reaches the canopy."};
@@ -197,12 +204,15 @@ static const char *mafdet_to_midgaard_lines[] = {
     "Midgaard's Caravan Square will be crowded at arrival. Don't lose a crate in the shuffle.",
     "We leave dry stone and reach green road, then finally stone avenue. All worth it.",
     "Salt is the oldest trade good in the world. We're just keeping the tradition honest.",
-    "When Midgaard stone walls rise, the hard part is over. Negotiating with buyers is entertainment.",
-    "Desert salt in Midgaard kitchens — I find that poetic. It keeps the trade going another season."};
+    "When Midgaard stone walls rise, the hard part is over. Negotiating with buyers is "
+    "entertainment.",
+    "Desert salt in Midgaard kitchens — I find that poetic. It keeps the trade going another "
+    "season."};
 
 static const char *mafdet_to_kiess_lines[] = {
     "Kiess smiths don't have desert alloys. That's our advantage and their premium.",
-    "Desert-bronze doesn't rust in forest damp the way regular bronze does. The Kiess smiths know it.",
+    "Desert-bronze doesn't rust in forest damp the way regular bronze does. The Kiess smiths know "
+    "it.",
     "Keep the ingot crates level. Uneven loads twist axles on these northern roads.",
     "The temperature drop between Mafdet and Kiess is dramatic. Dress in layers, load accordingly.",
     "Bronze from the desert foundries is denser. Kiess craftsmen pay for the difference.",
@@ -213,21 +223,28 @@ static const char *mafdet_to_kiess_lines[] = {
 static const char *mafdet_to_kowloon_lines[] = {
     "Kowloon's harbor merchants pay harbor prices for desert spice. We benefit from both.",
     "The coastal road after the salt flats is the best road on this run. Enjoy it.",
-    "Sand-spice from the eastern desert dunes sells differently in Kowloon than anything from the south.",
-    "Keep the cargo manifests current. Lantern Gate tariffs are based on declared weight, not guessed weight.",
-    "Kowloon fog is thick at dawn. We aim for the Caravan Staging Yard and trust the drovers' instinct.",
+    "Sand-spice from the eastern desert dunes sells differently in Kowloon than anything from the "
+    "south.",
+    "Keep the cargo manifests current. Lantern Gate tariffs are based on declared weight, not "
+    "guessed weight.",
+    "Kowloon fog is thick at dawn. We aim for the Caravan Staging Yard and trust the drovers' "
+    "instinct.",
     "Mafdet sends the desert east and Kowloon sends the sea north. Between them we make a living.",
     "The Tide Gate inspectors know their spice. Don't try to pass cumin as pepper.",
-    "By the time Kowloon lanterns come into view, this cargo has already earned its manifest fees."};
+    "By the time Kowloon lanterns come into view, this cargo has already earned its manifest "
+    "fees."};
 
 static const char *mafdet_to_rakuen_lines[] = {
     "Rakuen does not produce enough salt for its lower city. We're the solution to that problem.",
     "Desert salt in an eastern canopy city — the trade route is strange; the profit is not.",
     "Keep the salt barrels tight. Canopy humidity is as bad as sea air for loose seals.",
-    "Rakuen's dispatch house was built assuming trade from the east, not the south. That's why we get the better rate.",
-    "The long road from Mafdet to Rakuen crosses three different kinds of weather. Pack for all of them.",
+    "Rakuen's dispatch house was built assuming trade from the east, not the south. That's why we "
+    "get the better rate.",
+    "The long road from Mafdet to Rakuen crosses three different kinds of weather. Pack for all of "
+    "them.",
     "Salt preserves food. Dune-salt from Mafdet preserves a relationship with the Compact.",
-    "When the canopy first appears overhead, we're in the final approach. Slow and steady to the dispatch floor.",
+    "When the canopy first appears overhead, we're in the final approach. Slow and steady to the "
+    "dispatch floor.",
     "Desert salt in a forest dispatch house — somewhere a geographer is making notes."};
 
 /* -----------------------------------------------------------------------
@@ -235,43 +252,59 @@ static const char *mafdet_to_rakuen_lines[] = {
  * ----------------------------------------------------------------------- */
 
 static const char *rakuen_to_midgaard_lines[] = {
-    "Midgaard's apothecaries have been waiting on this bark-oil for two seasons. We'll be welcomed.",
-    "Bark-oil doesn't spoil, but it shifts. Keep the casks upright or we'll smell like a forest fire.",
-    "The road from the canopy to the central city crosses every landscape the world bothers making.",
+    "Midgaard's apothecaries have been waiting on this bark-oil for two seasons. We'll be "
+    "welcomed.",
+    "Bark-oil doesn't spoil, but it shifts. Keep the casks upright or we'll smell like a forest "
+    "fire.",
+    "The road from the canopy to the central city crosses every landscape the world bothers "
+    "making.",
     "Midgaard buyers don't know what bark-oil is, but they know what it does. That's enough.",
-    "We leave the Registration Floor and won't see it again for a month. That's the rhythm of this trade.",
+    "We leave the Registration Floor and won't see it again for a month. That's the rhythm of this "
+    "trade.",
     "Rakuen bark-oil in Midgaard means healers can work another season. That's worth the road.",
-    "When the wild gate comes into view, we're close. Caravan Square by nightfall if the roads are kind.",
+    "When the wild gate comes into view, we're close. Caravan Square by nightfall if the roads are "
+    "kind.",
     "The Compact sends oil and asks for grain in return. Everyone profits from a fair exchange."};
 
 static const char *rakuen_to_kiess_lines[] = {
     "Kiess has good forest wood. Rakuen has better. The Kiess smiths know the difference.",
     "Canopy timber is dense, straight, and seasons faster than anything grown at ground level.",
-    "We leave the dispatch floor and head into roads that get colder with every league. Watch the cargo.",
-    "Kiess craftsmen use Rakuen timber for their finest work. We carry the finest work's raw material.",
+    "We leave the dispatch floor and head into roads that get colder with every league. Watch the "
+    "cargo.",
+    "Kiess craftsmen use Rakuen timber for their finest work. We carry the finest work's raw "
+    "material.",
     "The run west is long and the canopy smell fades within an hour. After that, pine takes over.",
-    "Keep the timber loads roped on both sides. Road vibration unships long cargo faster than bandits.",
-    "When the Caravan Rest Yard at Kiess comes into view, the smell of sawdust means we're welcome.",
+    "Keep the timber loads roped on both sides. Road vibration unships long cargo faster than "
+    "bandits.",
+    "When the Caravan Rest Yard at Kiess comes into view, the smell of sawdust means we're "
+    "welcome.",
     "Wood from the canopy, built into things in the pine city — trade at its most practical."};
 
 static const char *rakuen_to_kowloon_lines[] = {
     "Kowloon's herbalists buy Rakuen medicinal herbs at premium and sell them at miracle prices.",
     "Eastern herbs don't travel well in heat. We ride at night when the route allows.",
-    "Keep the herb bundles separated by type. Mixed herbs cut the value before you reach the market.",
+    "Keep the herb bundles separated by type. Mixed herbs cut the value before you reach the "
+    "market.",
     "The southern run from Rakuen to Kowloon is the most diverse road in the trade network.",
     "Kowloon fog is kind to herb cargo. The humidity keeps them fresher than dry road air.",
     "When the Caravan Staging Yard comes into view, the Kowloon herbalists are already waiting.",
-    "Rakuen herbs in a harbor city — every ship that leaves Kowloon carries some of what we brought.",
+    "Rakuen herbs in a harbor city — every ship that leaves Kowloon carries some of what we "
+    "brought.",
     "Eastern medicine in the harbor market means our next run is already half-sold."};
 
 static const char *rakuen_to_mafdet_lines[] = {
-    "Mafdet's traders know canopy-weave because it doesn't fade in desert sun. That's the selling point.",
+    "Mafdet's traders know canopy-weave because it doesn't fade in desert sun. That's the selling "
+    "point.",
     "The run south from Rakuen means trading canopy cool for desert heat. Dress for both.",
-    "Keep the cloth bales wrapped in sailcloth for the desert crossing. Sand in woven-canopy ruins the pattern.",
-    "Mafdet's merchants are precise. They know the thread count before we open the bale. Impress them anyway.",
-    "Canopy weave is lighter than desert linen and stronger than harbor cotton. Mafdet knows a good deal.",
+    "Keep the cloth bales wrapped in sailcloth for the desert crossing. Sand in woven-canopy ruins "
+    "the pattern.",
+    "Mafdet's merchants are precise. They know the thread count before we open the bale. Impress "
+    "them anyway.",
+    "Canopy weave is lighter than desert linen and stronger than harbor cotton. Mafdet knows a "
+    "good deal.",
     "The Gate Customs Yard in Mafdet is organized chaos. Stand your ground at the manifest desk.",
-    "When the gate towers of Mafdet rise in the heat shimmer, the canopy cloth is already sold in buyers' minds.",
+    "When the gate towers of Mafdet rise in the heat shimmer, the canopy cloth is already sold in "
+    "buyers' minds.",
     "Eastern weave to a desert city — some roads make sense only when you look at the accounts."};
 
 /* -----------------------------------------------------------------------
@@ -280,90 +313,56 @@ static const char *rakuen_to_mafdet_lines[] = {
 
 static const CARAVAN_ROUTE_DATA caravan_routes[] = {
     /* Midgaard departures */
-    {"Midgaard", "Kiess", "iron-provisions",
-     CARAVAN_ROOM_MIDGAARD, CARAVAN_ROOM_KIESS,
-     midgaard_to_kiess_lines,
-     sizeof(midgaard_to_kiess_lines) / sizeof(midgaard_to_kiess_lines[0])},
-    {"Midgaard", "Kowloon", "grain-and-wool",
-     CARAVAN_ROOM_MIDGAARD, CARAVAN_ROOM_KOWLOON,
+    {"Midgaard", "Kiess", "iron-provisions", CARAVAN_ROOM_MIDGAARD, CARAVAN_ROOM_KIESS,
+     midgaard_to_kiess_lines, sizeof(midgaard_to_kiess_lines) / sizeof(midgaard_to_kiess_lines[0])},
+    {"Midgaard", "Kowloon", "grain-and-wool", CARAVAN_ROOM_MIDGAARD, CARAVAN_ROOM_KOWLOON,
      midgaard_to_kowloon_lines,
      sizeof(midgaard_to_kowloon_lines) / sizeof(midgaard_to_kowloon_lines[0])},
-    {"Midgaard", "Mafdet", "winter-stores",
-     CARAVAN_ROOM_MIDGAARD, CARAVAN_ROOM_MAFDET,
+    {"Midgaard", "Mafdet", "winter-stores", CARAVAN_ROOM_MIDGAARD, CARAVAN_ROOM_MAFDET,
      midgaard_to_mafdet_lines,
      sizeof(midgaard_to_mafdet_lines) / sizeof(midgaard_to_mafdet_lines[0])},
-    {"Midgaard", "Rakuen", "mercy-grain",
-     CARAVAN_ROOM_MIDGAARD, CARAVAN_ROOM_RAKUEN,
+    {"Midgaard", "Rakuen", "mercy-grain", CARAVAN_ROOM_MIDGAARD, CARAVAN_ROOM_RAKUEN,
      midgaard_to_rakuen_lines,
      sizeof(midgaard_to_rakuen_lines) / sizeof(midgaard_to_rakuen_lines[0])},
     /* Kiess departures */
-    {"Kiess", "Midgaard", "cold-cedar",
-     CARAVAN_ROOM_KIESS, CARAVAN_ROOM_MIDGAARD,
-     kiess_to_midgaard_lines,
-     sizeof(kiess_to_midgaard_lines) / sizeof(kiess_to_midgaard_lines[0])},
-    {"Kiess", "Kowloon", "timber-bracing",
-     CARAVAN_ROOM_KIESS, CARAVAN_ROOM_KOWLOON,
-     kiess_to_kowloon_lines,
-     sizeof(kiess_to_kowloon_lines) / sizeof(kiess_to_kowloon_lines[0])},
-    {"Kiess", "Mafdet", "forest-resin",
-     CARAVAN_ROOM_KIESS, CARAVAN_ROOM_MAFDET,
-     kiess_to_mafdet_lines,
-     sizeof(kiess_to_mafdet_lines) / sizeof(kiess_to_mafdet_lines[0])},
-    {"Kiess", "Rakuen", "pinewood-craft",
-     CARAVAN_ROOM_KIESS, CARAVAN_ROOM_RAKUEN,
-     kiess_to_rakuen_lines,
-     sizeof(kiess_to_rakuen_lines) / sizeof(kiess_to_rakuen_lines[0])},
+    {"Kiess", "Midgaard", "cold-cedar", CARAVAN_ROOM_KIESS, CARAVAN_ROOM_MIDGAARD,
+     kiess_to_midgaard_lines, sizeof(kiess_to_midgaard_lines) / sizeof(kiess_to_midgaard_lines[0])},
+    {"Kiess", "Kowloon", "timber-bracing", CARAVAN_ROOM_KIESS, CARAVAN_ROOM_KOWLOON,
+     kiess_to_kowloon_lines, sizeof(kiess_to_kowloon_lines) / sizeof(kiess_to_kowloon_lines[0])},
+    {"Kiess", "Mafdet", "forest-resin", CARAVAN_ROOM_KIESS, CARAVAN_ROOM_MAFDET,
+     kiess_to_mafdet_lines, sizeof(kiess_to_mafdet_lines) / sizeof(kiess_to_mafdet_lines[0])},
+    {"Kiess", "Rakuen", "pinewood-craft", CARAVAN_ROOM_KIESS, CARAVAN_ROOM_RAKUEN,
+     kiess_to_rakuen_lines, sizeof(kiess_to_rakuen_lines) / sizeof(kiess_to_rakuen_lines[0])},
     /* Kowloon departures */
-    {"Kowloon", "Midgaard", "lacquer-and-silk",
-     CARAVAN_ROOM_KOWLOON, CARAVAN_ROOM_MIDGAARD,
+    {"Kowloon", "Midgaard", "lacquer-and-silk", CARAVAN_ROOM_KOWLOON, CARAVAN_ROOM_MIDGAARD,
      kowloon_to_midgaard_lines,
      sizeof(kowloon_to_midgaard_lines) / sizeof(kowloon_to_midgaard_lines[0])},
-    {"Kowloon", "Kiess", "harbor-fittings",
-     CARAVAN_ROOM_KOWLOON, CARAVAN_ROOM_KIESS,
-     kowloon_to_kiess_lines,
-     sizeof(kowloon_to_kiess_lines) / sizeof(kowloon_to_kiess_lines[0])},
-    {"Kowloon", "Mafdet", "spice-and-pepper",
-     CARAVAN_ROOM_KOWLOON, CARAVAN_ROOM_MAFDET,
-     kowloon_to_mafdet_lines,
-     sizeof(kowloon_to_mafdet_lines) / sizeof(kowloon_to_mafdet_lines[0])},
-    {"Kowloon", "Rakuen", "southern-silk",
-     CARAVAN_ROOM_KOWLOON, CARAVAN_ROOM_RAKUEN,
-     kowloon_to_rakuen_lines,
-     sizeof(kowloon_to_rakuen_lines) / sizeof(kowloon_to_rakuen_lines[0])},
+    {"Kowloon", "Kiess", "harbor-fittings", CARAVAN_ROOM_KOWLOON, CARAVAN_ROOM_KIESS,
+     kowloon_to_kiess_lines, sizeof(kowloon_to_kiess_lines) / sizeof(kowloon_to_kiess_lines[0])},
+    {"Kowloon", "Mafdet", "spice-and-pepper", CARAVAN_ROOM_KOWLOON, CARAVAN_ROOM_MAFDET,
+     kowloon_to_mafdet_lines, sizeof(kowloon_to_mafdet_lines) / sizeof(kowloon_to_mafdet_lines[0])},
+    {"Kowloon", "Rakuen", "southern-silk", CARAVAN_ROOM_KOWLOON, CARAVAN_ROOM_RAKUEN,
+     kowloon_to_rakuen_lines, sizeof(kowloon_to_rakuen_lines) / sizeof(kowloon_to_rakuen_lines[0])},
     /* Mafdet departures */
-    {"Mafdet", "Midgaard", "salt-and-glass",
-     CARAVAN_ROOM_MAFDET, CARAVAN_ROOM_MIDGAARD,
+    {"Mafdet", "Midgaard", "salt-and-glass", CARAVAN_ROOM_MAFDET, CARAVAN_ROOM_MIDGAARD,
      mafdet_to_midgaard_lines,
      sizeof(mafdet_to_midgaard_lines) / sizeof(mafdet_to_midgaard_lines[0])},
-    {"Mafdet", "Kiess", "desert-bronze",
-     CARAVAN_ROOM_MAFDET, CARAVAN_ROOM_KIESS,
-     mafdet_to_kiess_lines,
-     sizeof(mafdet_to_kiess_lines) / sizeof(mafdet_to_kiess_lines[0])},
-    {"Mafdet", "Kowloon", "sand-spice",
-     CARAVAN_ROOM_MAFDET, CARAVAN_ROOM_KOWLOON,
-     mafdet_to_kowloon_lines,
-     sizeof(mafdet_to_kowloon_lines) / sizeof(mafdet_to_kowloon_lines[0])},
-    {"Mafdet", "Rakuen", "dune-salt",
-     CARAVAN_ROOM_MAFDET, CARAVAN_ROOM_RAKUEN,
-     mafdet_to_rakuen_lines,
-     sizeof(mafdet_to_rakuen_lines) / sizeof(mafdet_to_rakuen_lines[0])},
+    {"Mafdet", "Kiess", "desert-bronze", CARAVAN_ROOM_MAFDET, CARAVAN_ROOM_KIESS,
+     mafdet_to_kiess_lines, sizeof(mafdet_to_kiess_lines) / sizeof(mafdet_to_kiess_lines[0])},
+    {"Mafdet", "Kowloon", "sand-spice", CARAVAN_ROOM_MAFDET, CARAVAN_ROOM_KOWLOON,
+     mafdet_to_kowloon_lines, sizeof(mafdet_to_kowloon_lines) / sizeof(mafdet_to_kowloon_lines[0])},
+    {"Mafdet", "Rakuen", "dune-salt", CARAVAN_ROOM_MAFDET, CARAVAN_ROOM_RAKUEN,
+     mafdet_to_rakuen_lines, sizeof(mafdet_to_rakuen_lines) / sizeof(mafdet_to_rakuen_lines[0])},
     /* Rakuen departures */
-    {"Rakuen", "Midgaard", "bark-oil",
-     CARAVAN_ROOM_RAKUEN, CARAVAN_ROOM_MIDGAARD,
+    {"Rakuen", "Midgaard", "bark-oil", CARAVAN_ROOM_RAKUEN, CARAVAN_ROOM_MIDGAARD,
      rakuen_to_midgaard_lines,
      sizeof(rakuen_to_midgaard_lines) / sizeof(rakuen_to_midgaard_lines[0])},
-    {"Rakuen", "Kiess", "canopy-timber",
-     CARAVAN_ROOM_RAKUEN, CARAVAN_ROOM_KIESS,
-     rakuen_to_kiess_lines,
-     sizeof(rakuen_to_kiess_lines) / sizeof(rakuen_to_kiess_lines[0])},
-    {"Rakuen", "Kowloon", "eastern-herbs",
-     CARAVAN_ROOM_RAKUEN, CARAVAN_ROOM_KOWLOON,
-     rakuen_to_kowloon_lines,
-     sizeof(rakuen_to_kowloon_lines) / sizeof(rakuen_to_kowloon_lines[0])},
-    {"Rakuen", "Mafdet", "woven-canopy",
-     CARAVAN_ROOM_RAKUEN, CARAVAN_ROOM_MAFDET,
-     rakuen_to_mafdet_lines,
-     sizeof(rakuen_to_mafdet_lines) / sizeof(rakuen_to_mafdet_lines[0])}};
+    {"Rakuen", "Kiess", "canopy-timber", CARAVAN_ROOM_RAKUEN, CARAVAN_ROOM_KIESS,
+     rakuen_to_kiess_lines, sizeof(rakuen_to_kiess_lines) / sizeof(rakuen_to_kiess_lines[0])},
+    {"Rakuen", "Kowloon", "eastern-herbs", CARAVAN_ROOM_RAKUEN, CARAVAN_ROOM_KOWLOON,
+     rakuen_to_kowloon_lines, sizeof(rakuen_to_kowloon_lines) / sizeof(rakuen_to_kowloon_lines[0])},
+    {"Rakuen", "Mafdet", "woven-canopy", CARAVAN_ROOM_RAKUEN, CARAVAN_ROOM_MAFDET,
+     rakuen_to_mafdet_lines, sizeof(rakuen_to_mafdet_lines) / sizeof(rakuen_to_mafdet_lines[0])}};
 
 #define NUM_CARAVAN_ROUTES (int)(sizeof(caravan_routes) / sizeof(caravan_routes[0]))
 
@@ -443,8 +442,8 @@ static void spawn_caravan(void)
    if (caravan->long_descr_orig != NULL)
       free_string(caravan->long_descr_orig);
 
-   sprintf(buf, "caravan drover teamster trader convoy %s %s %s",
-           route->origin, route->destination, route->cargo_label);
+   sprintf(buf, "caravan drover teamster trader convoy %s %s %s", route->origin, route->destination,
+           route->cargo_label);
    caravan->name = str_dup(buf);
 
    sprintf(buf, "the %s caravan to %s", route->cargo_label, route->destination);
