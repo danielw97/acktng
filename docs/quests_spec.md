@@ -102,15 +102,15 @@ Common combinations used in quest reward items:
 | `3.prop` | 2 | Eastern trade road interdiction | 1 | 1 | `4960 4965 4988` | 0 | 55-69 | 931 | 1366 gold, 4 qp |
 | `4.prop` | 3 | Sealed-warrant courier disruption | 2 | 1 | `1832 2898 3174` | 0 | 70-84 | 931 | 5000 gold, 5 qp |
 | `5.prop` | 4 | Blightfront quarantine sweep | 3 | 1 | `2751 321 341` | 0 | 85+ | 931 | 7000 gold, 6 qp |
-| `6.prop` | 5 | Road predator cull: Banner Hills to Dustward | -1 | 1 | `1130 1131 1133` | 0 | 15+ | 931 | 278 gold, 2 qp |
-| `7.prop` | 6 | Tollbreak crew interdiction: River Crossing | -1 | 3 | `1141` | 6 | 30+ | 931 | 792 gold, 3 qp |
-| `8.prop` | 7 | Shadow trade disruption: Crossroads to Greenveil | 7 | 1 | `1142 1143 1144` | 0 | 40+ | 931 | 1266 gold, 4 qp |
-| `9.prop` | 8 | Convoy route security: Dustward predator sweep | -1 | 3 | `1133` | 8 | 20+ | 3340 | 291 gold, 2 qp |
-| `10.prop` | 9 | Greenveil Spur reconnaissance: spirit clearance | -1 | 1 | `1140 1142` | 0 | 35+ | 3340 | 1800 gold, 3 qp |
-| `11.prop` | 10 | Inlet smuggler crackdown: cave network purge | 10 | 3 | `1144` | 10 | 50+ | 3340 | 4000 gold, 5 qp |
-| `12.prop` | 11 | Ruin custodian suppression: Weathered Causeway | -1 | 1 | `1136 1137 1138 1139` | 0 | 50+ | 931 | 4500 gold, 5 qp |
-| `13.prop` | 12 | Coastal hazard survey: Western Shore predators | -1 | 1 | `1134 1135 1132` | 0 | 40+ | 0 | 2500 gold, 3 qp |
-| `14.prop` | 13 | Transcontinental corridor assessment: full-road interdiction | 13 | 1 | `1130 1141 1136 1144 1135` | 0 | 60+ | 0 | 6000 gold, 6 qp |
+| `6.prop` | 5 | Road predator cull: Banner Hills to Dustward | -1 | 1 | `1313 1314 1316` | 0 | 15-35 | 1122 | 800 gold, 2 qp |
+| `7.prop` | 6 | Tollbreak crew interdiction: River Crossing | -1 | 3 | `1324` | 6 | 30-44 | 1123 | 2000 gold, 3 qp |
+| `8.prop` | 7 | Shadow trade disruption: Crossroads to Greenveil | 7 | 1 | `1325 1326 1327` | 0 | 40-54 | 1123 | 3500 gold, 4 qp |
+| `9.prop` | 8 | Convoy route security: Dustward predator sweep | -1 | 3 | `1316` | 8 | 20-34 | 1123 | 1000 gold, 2 qp |
+| `10.prop` | 9 | Greenveil Spur reconnaissance: spirit clearance | -1 | 1 | `1323 1325` | 0 | 35-49 | 3677 | 1800 gold, 3 qp |
+| `11.prop` | 10 | Inlet smuggler crackdown: cave network purge | 10 | 3 | `1327` | 10 | 50-64 | 3677 | 4000 gold, 5 qp |
+| `12.prop` | 11 | Ruin custodian suppression: Weathered Causeway | -1 | 1 | `1319 1320 1321 1322` | 0 | 50-64 | 1123 | 4500 gold, 5 qp |
+| `13.prop` | 12 | Coastal hazard survey: Western Shore predators | -1 | 1 | `1317 1318 1315` | 0 | 40-54 | 3751 | 2500 gold, 3 qp |
+| `14.prop` | 13 | Transcontinental corridor assessment: full-road interdiction | 13 | 1 | `1313 1324 1319 1327 1318` | 0 | 60-74 | 3751 | 6000 gold, 6 qp |
 | `15.prop` | 14 | *(see file)* | — | — | — | — | — | — | — |
 | `16.prop` | 15 | Lantern Road wolf cull | -1 | 3 | `3744` | 10 | 20-39 | 931 | 591 gold, 2 qp |
 | `17.prop` | 16 | Mosswater smuggler interdiction | -1 | 1 | `3769 3770 3776` | 0 | 30-54 | 3340 | 792 gold, 3 qp |

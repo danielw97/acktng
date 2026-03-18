@@ -413,6 +413,22 @@ static void test_loads_quest_templates_with_messages_from_files(void)
    assert(max_level == 39);
 }
 
+static void test_rocroad_quest_max_levels(void)
+{
+   quest_load_templates();
+
+   /* Quests 6-14 (static IDs 5-13) previously had max_level=0; verify correct values */
+   assert(quest_unit_template_max_level(5) == 35);  /* 6.prop: ridge wolf/cat/scavenger, max mob lv35 */
+   assert(quest_unit_template_max_level(6) == 44);  /* 7.prop: tollbreak enforcer lv40, min+14=44 */
+   assert(quest_unit_template_max_level(7) == 54);  /* 8.prop: shadow traders, min=40+14=54 */
+   assert(quest_unit_template_max_level(8) == 34);  /* 9.prop: scavenger bird lv30, min+14=34 */
+   assert(quest_unit_template_max_level(9) == 49);  /* 10.prop: forest spirit lv40, min+14=49 */
+   assert(quest_unit_template_max_level(10) == 64); /* 11.prop: cave squatter, min=50+14=64 */
+   assert(quest_unit_template_max_level(11) == 64); /* 12.prop: ruin custodians, max mob lv60, 64 */
+   assert(quest_unit_template_max_level(12) == 54); /* 13.prop: coastal predators lv40, min+14=54 */
+   assert(quest_unit_template_max_level(13) == 74); /* 14.prop: full-road, min=60+14=74 */
+}
+
 static void test_loads_umbra_heartspire_quest_chain(void)
 {
    quest_load_templates();
@@ -500,6 +516,7 @@ int main(void)
    test_cancel_dynamic_sets_cooldown_and_clears_slot();
    test_cancel_template_does_not_set_cooldown();
    test_loads_quest_templates_with_messages_from_files();
+   test_rocroad_quest_max_levels();
    test_loads_umbra_heartspire_quest_chain();
    test_postmaster_aliases_map_to_active_city_vnums();
    test_loads_saltglass_and_scorching_sands_quests();
