@@ -361,12 +361,12 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
                        prop->quest_target_done[k] ? 1 : 0);
             fprintf(fp, "PropKillNeed%d %d\n", i, prop->quest_kill_needed);
             fprintf(fp, "PropKillGot%d  %d\n", i, prop->quest_kill_count);
-            fprintf(fp, "PropStaticId%d %d\n", i, prop->quest_static_id);
+            fprintf(fp, "PropStaticId%d %d\n", i, prop->quest_template_id);
             fprintf(fp, "PropRewardGold%d %d\n", i, prop->quest_reward_gold);
             fprintf(fp, "PropRewardQp%d %d\n", i, prop->quest_reward_qp);
             fprintf(fp, "PropRewardItem%d %d %d\n", i, prop->quest_reward_item_vnum,
                     prop->quest_reward_item_count);
-            fprintf(fp, "PropStaticOfferer%d %d\n", i, prop->quest_static_offerer_vnum);
+            fprintf(fp, "PropStaticOfferer%d %d\n", i, prop->quest_offerer_vnum);
             fprintf(fp, "PropCartArea%d %d\n", i, prop->quest_cartography_area_num);
             fprintf(fp, "PropCartRooms%d %d\n", i, prop->quest_cartography_room_count);
             fprintf(fp, "PropCartSeen%d %d\n", i, prop->quest_cartography_explored_count);
@@ -378,9 +378,9 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
                fprintf(fp, "\n");
             }
          }
-         fprintf(fp, "PropStaticDoneCap %d\n", QUEST_MAX_STATIC_QUESTS);
-         for (i = 0; i < QUEST_MAX_STATIC_QUESTS; i++)
-            if (ch->pcdata->completed_static_quests[i])
+         fprintf(fp, "PropStaticDoneCap %d\n", QUEST_MAX_TEMPLATES);
+         for (i = 0; i < QUEST_MAX_TEMPLATES; i++)
+            if (ch->pcdata->completed_quests[i])
                fprintf(fp, "PropStaticDone %d\n", i);
       }
       fprintf(fp, "RecallVnum    %d\n", ch->pcdata->recall_vnum);
@@ -507,11 +507,11 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       for (foo = 0; foo < QUEST_MAX_QUESTS; foo++)
       {
          memset(&ch->pcdata->quests[foo], 0, sizeof(QUEST_DATA));
-         ch->pcdata->quests[foo].quest_static_id = -1;
-         ch->pcdata->quests[foo].quest_static_offerer_vnum = 0;
+         ch->pcdata->quests[foo].quest_template_id = -1;
+         ch->pcdata->quests[foo].quest_offerer_vnum = 0;
       }
-      for (foo = 0; foo < QUEST_MAX_STATIC_QUESTS; foo++)
-         ch->pcdata->completed_static_quests[foo] = FALSE;
+      for (foo = 0; foo < QUEST_MAX_TEMPLATES; foo++)
+         ch->pcdata->completed_quests[foo] = FALSE;
       for (foo = 0; foo < MAX_SUPERBOSS; foo++)
          ch->pcdata->superboss_kills[foo] = FALSE;
       for (foo = CLASS_SOR; foo < CLASS_SOR + MAX_REMORT; foo++)
@@ -665,10 +665,10 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
 static void apply_prop_static_done_cap(PC_DATA *pcdata, int saved_cap)
 {
    int i;
-   int start = URANGE(0, saved_cap, QUEST_MAX_STATIC_QUESTS);
+   int start = URANGE(0, saved_cap, QUEST_MAX_TEMPLATES);
 
-   for (i = start; i < QUEST_MAX_STATIC_QUESTS; i++)
-      pcdata->completed_static_quests[i] = FALSE;
+   for (i = start; i < QUEST_MAX_TEMPLATES; i++)
+      pcdata->completed_quests[i] = FALSE;
 }
 
 #ifdef UNIT_TEST_SAVE
@@ -679,13 +679,13 @@ int quest_static_done_cap_true_count_for_test(int saved_cap)
    int count = 0;
 
    memset(&pc, 0, sizeof(pc));
-   for (i = 0; i < QUEST_MAX_STATIC_QUESTS; i++)
-      pc.completed_static_quests[i] = TRUE;
+   for (i = 0; i < QUEST_MAX_TEMPLATES; i++)
+      pc.completed_quests[i] = TRUE;
 
    apply_prop_static_done_cap(&pc, saved_cap);
 
-   for (i = 0; i < QUEST_MAX_STATIC_QUESTS; i++)
-      if (pc.completed_static_quests[i])
+   for (i = 0; i < QUEST_MAX_TEMPLATES; i++)
+      if (pc.completed_quests[i])
          count++;
 
    return count;
@@ -1110,7 +1110,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             if (sscanf(word, "PropStaticId%d", &quest_i) == 1 && quest_i >= 0 &&
                 quest_i < QUEST_MAX_QUESTS)
             {
-               ch->pcdata->quests[quest_i].quest_static_id = fread_number(fp);
+               ch->pcdata->quests[quest_i].quest_template_id = fread_number(fp);
                fMatch = TRUE;
                break;
             }
@@ -1139,7 +1139,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             if (sscanf(word, "PropStaticOfferer%d", &quest_i) == 1 && quest_i >= 0 &&
                 quest_i < QUEST_MAX_QUESTS)
             {
-               ch->pcdata->quests[quest_i].quest_static_offerer_vnum = fread_number(fp);
+               ch->pcdata->quests[quest_i].quest_offerer_vnum = fread_number(fp);
                fMatch = TRUE;
                break;
             }
@@ -1183,8 +1183,8 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             if (!str_cmp(word, "PropStaticDone"))
             {
                int done_id = fread_number(fp);
-               if (done_id >= 0 && done_id < QUEST_MAX_STATIC_QUESTS)
-                  ch->pcdata->completed_static_quests[done_id] = TRUE;
+               if (done_id >= 0 && done_id < QUEST_MAX_TEMPLATES)
+                  ch->pcdata->completed_quests[done_id] = TRUE;
                fMatch = TRUE;
                break;
             }

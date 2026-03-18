@@ -50,17 +50,17 @@ bool spec_rr_byways_innkeeper(CHAR_DATA *ch)
       {
          if (IS_NPC(plr) || plr->pcdata == NULL)
             continue;
-         if (plr->pcdata->completed_static_quests[75])
+         if (plr->pcdata->completed_quests[75])
          {
             qplr[nq] = plr;
             qid[nq++] = 75;
          }
-         if (plr->pcdata->completed_static_quests[76])
+         if (plr->pcdata->completed_quests[76])
          {
             qplr[nq] = plr;
             qid[nq++] = 76;
          }
-         if (plr->pcdata->completed_static_quests[79])
+         if (plr->pcdata->completed_quests[79])
          {
             qplr[nq] = plr;
             qid[nq++] = 79;

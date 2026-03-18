@@ -62,11 +62,11 @@ bool spec_posting_clerk(CHAR_DATA *ch)
       if (IS_NPC(vch) || vch->pcdata == NULL)
          continue;
 
-      quest_done = vch->pcdata->completed_static_quests[POSTING_CLERK_QUEST_ID];
+      quest_done = vch->pcdata->completed_quests[POSTING_CLERK_QUEST_ID];
 
       for (slot = 0; slot < QUEST_MAX_QUESTS; slot++)
       {
-         if (vch->pcdata->quests[slot].quest_static_id == POSTING_CLERK_QUEST_ID &&
+         if (vch->pcdata->quests[slot].quest_template_id == POSTING_CLERK_QUEST_ID &&
              vch->pcdata->quests[slot].quest_type != QUEST_TYPE_NONE)
          {
             is_quest_active = TRUE;

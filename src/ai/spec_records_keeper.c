@@ -61,11 +61,11 @@ bool spec_records_keeper(CHAR_DATA *ch)
       if (IS_NPC(vch) || vch->pcdata == NULL)
          continue;
 
-      quest_done = vch->pcdata->completed_static_quests[RECORDS_KEEPER_QUEST_ID];
+      quest_done = vch->pcdata->completed_quests[RECORDS_KEEPER_QUEST_ID];
 
       for (slot = 0; slot < QUEST_MAX_QUESTS; slot++)
       {
-         if (vch->pcdata->quests[slot].quest_static_id == RECORDS_KEEPER_QUEST_ID &&
+         if (vch->pcdata->quests[slot].quest_template_id == RECORDS_KEEPER_QUEST_ID &&
              vch->pcdata->quests[slot].quest_type != QUEST_TYPE_NONE)
          {
             is_quest_active = TRUE;

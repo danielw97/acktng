@@ -48,12 +48,12 @@ bool spec_rr_byways_kiess_clerk(CHAR_DATA *ch)
       {
          if (IS_NPC(plr) || plr->pcdata == NULL)
             continue;
-         if (plr->pcdata->completed_static_quests[75])
+         if (plr->pcdata->completed_quests[75])
          {
             qplr[nq] = plr;
             qid[nq++] = 75;
          }
-         if (plr->pcdata->completed_static_quests[77])
+         if (plr->pcdata->completed_quests[77])
          {
             qplr[nq] = plr;
             qid[nq++] = 77;

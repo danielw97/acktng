@@ -43,7 +43,7 @@ bool spec_rr_byways_market(CHAR_DATA *ch)
       {
          if (IS_NPC(plr) || plr->pcdata == NULL)
             continue;
-         if (plr->pcdata->completed_static_quests[75])
+         if (plr->pcdata->completed_quests[75])
          {
             act("$n catches $N's eye and gives a brief, collegial nod.", ch, NULL, plr, TO_NOTVICT);
             act("$n catches your eye and gives a brief, collegial nod.", ch, NULL, plr, TO_VICT);

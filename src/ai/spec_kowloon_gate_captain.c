@@ -56,12 +56,12 @@ bool spec_kowloon_gate_captain(CHAR_DATA *ch)
       {
          if (IS_NPC(plr) || plr->pcdata == NULL)
             continue;
-         if (plr->pcdata->completed_static_quests[16])
+         if (plr->pcdata->completed_quests[16])
          {
             qplr[nq] = plr;
             qid[nq++] = 16;
          }
-         if (plr->pcdata->completed_static_quests[17])
+         if (plr->pcdata->completed_quests[17])
          {
             qplr[nq] = plr;
             qid[nq++] = 17;

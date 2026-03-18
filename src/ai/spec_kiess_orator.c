@@ -58,9 +58,9 @@ bool spec_kiess_orator(CHAR_DATA *ch)
       {
          if (IS_NPC(plr) || plr->pcdata == NULL)
             continue;
-         if (plr->pcdata->completed_static_quests[0])
+         if (plr->pcdata->completed_quests[0])
             qid[nq++] = 0;
-         if (plr->pcdata->completed_static_quests[9])
+         if (plr->pcdata->completed_quests[9])
             qid[nq++] = 9;
       }
 

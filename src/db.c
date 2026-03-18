@@ -595,8 +595,8 @@ void boot_db(void)
    }
 
    load_help_files();
-   log_f("Loading static quests.");
-   quest_load_static_templates();
+   log_f("Loading quest templates.");
+   quest_load_templates();
 
    /*
     * Fix up exits.

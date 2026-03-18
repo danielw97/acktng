@@ -61,17 +61,17 @@ bool spec_gnf_road_warden(CHAR_DATA *ch)
          {
             if (IS_NPC(plr) || plr->pcdata == NULL)
                continue;
-            if (plr->pcdata->completed_static_quests[15])
+            if (plr->pcdata->completed_quests[15])
             {
                qplr[nq] = plr;
                qid[nq++] = 15;
             }
-            if (plr->pcdata->completed_static_quests[26])
+            if (plr->pcdata->completed_quests[26])
             {
                qplr[nq] = plr;
                qid[nq++] = 26;
             }
-            if (plr->pcdata->completed_static_quests[0])
+            if (plr->pcdata->completed_quests[0])
             {
                qplr[nq] = plr;
                qid[nq++] = 0;

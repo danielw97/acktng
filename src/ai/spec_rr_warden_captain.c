@@ -65,17 +65,17 @@ bool spec_rr_warden_captain(CHAR_DATA *ch)
          {
             if (IS_NPC(plr) || plr->pcdata == NULL)
                continue;
-            if (plr->pcdata->completed_static_quests[8])
+            if (plr->pcdata->completed_quests[8])
             {
                qplr[nq] = plr;
                qid[nq++] = 8;
             }
-            if (plr->pcdata->completed_static_quests[14])
+            if (plr->pcdata->completed_quests[14])
             {
                qplr[nq] = plr;
                qid[nq++] = 14;
             }
-            if (plr->pcdata->completed_static_quests[15])
+            if (plr->pcdata->completed_quests[15])
             {
                qplr[nq] = plr;
                qid[nq++] = 15;

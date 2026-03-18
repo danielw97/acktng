@@ -22,7 +22,7 @@ PROF    =
 #SOLARIS_FLAG = -Dsun -DSYSV -Wno-char-subscripts
 #SOLARIS_LINK = -lnsl -lsocket -lresolv
 
-C_FLAGS = -O -g2 -Wall -DACK_43 $(PROF) $(SOLARIS_FLAG) -Iheaders -Iai/headers -Itests/headers
+C_FLAGS = -O -g2 -Wall -DACK_43 $(PROF) $(SOLARIS_FLAG) -Iheaders -Iai/headers -Itests/headers -Iquests
 L_FLAGS = -O -g2 -lcrypt $(PROF) $(SOLARIS_LINK)
 
 OBJDIR = build/obj
@@ -122,11 +122,13 @@ SKILL_OBJS = \
 	skills/do_shieldblock.o skills/do_smash.o skills/do_spinfist.o skills/do_stun.o \
 	skills/do_target.o skills/do_trip.o skills/do_warcry.o
 
+QUEST_OBJS = quests/template.o quests/state.o quests/cartography.o quests/notify.o quests/commands.o quests/crusade.o
+
 O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_wiz.o \
 	  areachk.o board.o build.o buildare.o buildtab.o caravan.o clutch.o comm.o socket.o prompt.o \
 	  const.o damage.o cloak.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
 	  heal.o interp.o invasion.o item_generation.o item_generation_tables.o keep.o lists.o macros.o magic.o mapper.o \
-	  obj_fun.o pdelete.o quest.o crusade.o reincarnate.o \
+	  obj_fun.o pdelete.o $(QUEST_OBJS) reincarnate.o \
 	  save/save.o save/save_players.o save/save_objects.o save/save_mobs.o save/save_areas.o \
 	  save/save_area_files.o save/save_rulers.o save/save_socials.o save/save_sysdata.o save/save_notes.o \
 	  scheck.o skills.o skills_chi.o skills_combo.o skills_obj.o skills_poison.o special.o spell_dam.o spendqp.o ssm.o \

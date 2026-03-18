@@ -43,7 +43,7 @@ bool spec_rr_byways_hermit(CHAR_DATA *ch)
       {
          if (IS_NPC(plr) || plr->pcdata == NULL)
             continue;
-         if (plr->pcdata->completed_static_quests[76])
+         if (plr->pcdata->completed_quests[76])
          {
             act("$n regards $N with the quiet attention of someone revising an assessment.", ch,
                 NULL, plr, TO_NOTVICT);
