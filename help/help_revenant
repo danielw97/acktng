@@ -137,13 +137,16 @@ Soul points are spent to advance track ranks.
   @@Wrevenant infuse <corpse>@@N
 
 @@WSOUL POINTS GAINED@@N
-  Each corpse grants soul points equal to half the corpse's level.
-  Higher-level corpses are worth more soul points.
+  Formula: @@W(corpse level - revenant level) / 10@@N
 
-  Examples:
-    Level 20 corpse  = 10 soul points
-    Level 100 corpse = 50 soul points
-    Level 150 corpse = 75 soul points
+  Corpses weaker than your revenant yield @@Rnothing@@N.
+  You must feed corpses at or above your revenant's level.
+
+  Examples (revenant level 100):
+    Level  90 corpse = 0 soul points (too weak)
+    Level 100 corpse = 0 soul points (no difference)
+    Level 110 corpse = 1 soul point
+    Level 150 corpse = 5 soul points
 
 @@WSOUL POINT COSTS@@N
   @@WPrimary Track Ranks:@@N

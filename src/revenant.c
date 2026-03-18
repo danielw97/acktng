@@ -382,8 +382,20 @@ void revenant_infuse(CHAR_DATA *master, CHAR_DATA *rev, OBJ_DATA *corpse)
       return;
    }
 
-   /* Soul points gained = corpse level (better corpses = more souls) */
-   souls_gained = UMAX(1, corpse->level / 2);
+   /* Soul points gained = (corpse level - revenant level) / 10
+    * Feeding weak corpses to a strong revenant yields nothing.
+    * You need corpses at or above your revenant's level to gain. */
+   souls_gained = (corpse->level - rev->level) / 10;
+   if (souls_gained <= 0)
+   {
+      send_to_char("@@dYour revenant consumes the corpse, but it was too weak to yield any soul "
+                   "points.@@N\n\r",
+                   master);
+      act("@@d$N shudders as dark energy flows from $p into its form!@@N", master, corpse, rev,
+          TO_ROOM);
+      extract_obj(corpse);
+      return;
+   }
    rd->soul_points += souls_gained;
 
    sprintf(buf,
