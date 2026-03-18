@@ -615,7 +615,6 @@ void walk_boards(void)
 void walk_councils(void)
 {
    sh_int index;
-   extern COUNCIL_DATA super_councils[MAX_SUPER];
 
    for (index = 0; index < MAX_SUPER; index++)
       touch(super_councils[index].council_name);

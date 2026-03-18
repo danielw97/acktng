@@ -4217,7 +4217,6 @@ void do_learned(CHAR_DATA *ch, char *argument)
    send_to_char(buf1, ch);
 }
 
-
 void do_auto(CHAR_DATA *ch, char *argument)
 {
 
@@ -5560,5 +5559,52 @@ void do_loot(CHAR_DATA *ch, char *argument)
    }
 
    send_to_char("You cannot loot this corpse.\n\r", ch);
+   return;
+}
+
+void do_finger(CHAR_DATA *ch, char *argument)
+{
+   CHAR_DATA *victim;
+   char name[MAX_STRING_LENGTH];
+   char buf[MAX_STRING_LENGTH];
+   bool found = FALSE;
+   DESCRIPTOR_DATA d;
+   DESCRIPTOR_DATA *this_d;
+
+   argument = one_argument(argument, name);
+
+   for (this_d = first_desc; this_d != NULL; this_d = this_d->next)
+   {
+      if ((this_d->connected > 0) && !str_cmp(this_d->character->name, name))
+      {
+         do_whois(ch, name);
+         return;
+      }
+   }
+
+   found = load_char_obj(&d, name, TRUE);
+
+   if (!found)
+   {
+      sprintf(buf, "No pFile found for '%s'.\n\r", capitalize(name));
+      send_to_char(buf, ch);
+      return;
+   }
+
+   victim = d.character;
+   d.character = NULL;
+   victim->desc = NULL;
+
+   sprintf(buf, "Name: %s.\n\r", capitalize(victim->name));
+   send_to_char(buf, ch);
+
+   sprintf(buf, "Last Login was from: %s.\n\r", victim->pcdata->host);
+   send_to_char(buf, ch);
+
+   sprintf(buf, "pFile was last saved at: %s.", victim->pcdata->lastlogin);
+   send_to_char(buf, ch);
+
+   free_char(victim);
+
    return;
 }
