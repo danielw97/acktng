@@ -10,7 +10,7 @@ How invasions start
 - After an invasion ends (win/loss/cleanup), a cooldown is applied before another can start.
 
 Core objective
-- Defend Gertrude in room vnum 3110.
+- Defend Gertrude in room vnum 1209 (The Temple of Midgaard).
 - Kill the invasion boss before Gertrude takes too many invasion hits.
 - If the boss dies: defenders win.
 - If Gertrude dies (or reaches the explosion failure threshold): defenders lose.

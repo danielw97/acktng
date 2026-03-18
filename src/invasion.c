@@ -7,8 +7,8 @@
  *    Boss has scaled hp_mod (100 to 250,000) based on level.              *
  *    Boss has unique elemental strengths, weaknesses, spells & skills.    *
  *  - Every PULSE_TICK spawns ordinary wave mobs scaled by player count.   *
- *  - Every PULSE_ROOMS the spawned mobs march toward room 3110.           *
- *  - On reaching 3110 the mobs sacrifice themselves to wound Gertrude.      *
+ *  - Every PULSE_ROOMS the spawned mobs march toward room 1209.           *
+ *  - On reaching 1209 the mobs sacrifice themselves to wound Gertrude.      *
  *  - If Gertrude dies  -> failure announcement.                           *
  *  - If the Boss dies  -> success + 25 QP + despawn ALL invasion mobs.    *
  *  - Spawned mobs are NOT aggressive, are SENTINEL, and have ACT_NOASSIST. *
@@ -555,18 +555,21 @@ static const char *invasion_boss_trash_talk_for_profile(int prof_idx)
         "Fear me now, or fear me later from beneath the rubble.", "I am the pit staring back.",
         "Every wound you deal is just a new mouth for me to grin through.",
         "When I am done, even your ruins will beg for silence."},
-       {"Inferno does not bargain. It consumes.", "Your armor glows red because my legion is near.",
-        "I march from Hell with drums made of broken vows.",
-        "Each spark in this sky carries a contract for your soul.",
-        "You smell brimstone because destiny just opened.",
-        "My hounds have your scent, and they are very patient.",
-        "I have burned saints and sinners; both screamed the same.",
-        "Mercy was left at the gate of Dis.", "Raise shields if you wish; flame climbs over pride.",
-        "The pit sings tonight, and your names are in the chorus.",
-        "I was forged in punishment. You are merely practice.",
-        "The damned cheer each time one of you falls.",
-        "I will brand this battlefield with your failures.", "Your water hisses; my fire laughs.",
-        "When dawn comes, it will rise over cinders and regret."},
+       {"Six mouths, twelve hungers—I am never satisfied.",
+        "Odysseus passed by me and still lost six men. You have fewer.",
+        "I am not a beast. I am a cliff that bites back.",
+        "Each head has its own hunger. All six have chosen you.",
+        "The Strait remembers the screaming of every mariner I tasted.",
+        "I do not chase ships; I let the current drive them to me.",
+        "Your armor is just seasoning between me and the meal.",
+        "Charybdis swallows fleets. I prefer the personal touch.",
+        "I once had a form that was almost beautiful. Then I grew a better one.",
+        "Six necks, six strikes, one outcome for each of you.",
+        "Sailors learn to fear the rocks. You should have learned sooner.",
+        "I do not snap at one of you when six of you are within reach.",
+        "My heads counsel patience. My stomachs counsel hurry. The stomachs win.",
+        "You navigate poorly. That, at least, will make you easy to catch.",
+        "I am Scylla. Nothing that passes between these rocks leaves whole."},
        {"I am Surtr's edge at the end of ages.",
         "The horizon reddens because I have begun to smile.",
         "You cannot quench what was born to end the world.",
@@ -653,37 +656,51 @@ static const char *invasion_boss_trash_talk_for_profile(int prof_idx)
         "Your cleverness fails against inevitability and mass.",
         "I do not tire, hesitate, or forgive.", "The bronze giant has no fear to exploit.",
         "You are dents waiting to happen.", "When I fall, I rise heated and angrier."},
-       {"Sleep no more. Your nightmares have a face now.", "I drink screams and exhale prophecy.",
-        "The moon dimmed so you could see me better.", "I was stitched from fear and fed on omens.",
-        "Your minds are open doors in a storm.", "Do not blink; horrors breed in that instant.",
-        "I crawl between thoughts where prayers cannot follow.",
-        "Each shadow behind you belongs to me.", "I break heroes by showing them tomorrow.",
-        "Courage cracks fastest in the dark.", "Your pulse keeps time for my feast.",
-        "I am the reason children fear sleeping alone.",
-        "Call me nightmare, call me doom—the result is unchanged.",
-        "Even your victories taste like dread when I am near.",
-        "Tonight, terror graduates from rumor to memory."},
-       {"I am Fenrir's hunger and the dark between stars.",
-        "Your moon is only a lantern for my feast.", "I bite through fate, not just flesh.",
-        "The pack has no pity for trembling prey.",
-        "I hunted gods in dreams before I hunted you awake.",
-        "Hear the drums? That is extinction finding rhythm.",
-        "Your bravest howl still sounds like fear to me.", "Run—predators enjoy a chase.",
-        "I wear midnight like fur and wrath like teeth.", "Blood on snow is a poem I write often.",
-        "I am the first shadow at dusk and the last at dawn.",
-        "Your silver shakes. Good. So should you.", "The feast begins with your champions.",
-        "I do not stalk. I arrive.", "When I am done, even the ravens will whisper your names."},
-       {"I am no dragon, no god—only the void that survives both.",
-        "Stars die quietly. You will not.", "Fate is thread; I am the hand that unravels it.",
-        "Your reality frays each time I breathe.",
-        "The cosmos forgot me on purpose. I returned anyway.",
-        "I speak in silences between screams.", "You clutch meaning. I deal in endings.",
-        "Even time slows to watch me erase you.", "Your names are sparks in a windless dark.",
-        "I watched civilizations bloom and vanish like frost.",
-        "Steel, magic, prayer—noise before oblivion.",
-        "There is no sanctuary at the edge of existence.",
-        "I do not conquer worlds. I outlast them.", "Be grateful: oblivion is impartial.",
-        "Witness the void's rhythm, and count your remaining heartbeats."}};
+       {"I have watched a thousand travelers freeze with my name on their lips.",
+        "My breath is winter's final word, and I speak it now.",
+        "Come closer. The cold is gentler than the fear of the cold.",
+        "Every blizzard that buries a village has my fingerprints on it.",
+        "I was beautiful once. I am still beautiful. The cold does not change that.",
+        "Your warmth is just something I will take from you slowly.",
+        "The mountain passes remember every soul I claimed.",
+        "I do not kill with hatred. I kill with indifference—which is worse.",
+        "Snow silences all. Your battle cries will quiet soon enough.",
+        "I dissolved into the last storm. I can dissolve into this one.",
+        "Your hearths cannot reach you here.",
+        "A frozen death is painless, they say. Do not trust what the dead say.",
+        "The cold I carry has no bottom. Can you say the same of your courage?",
+        "I have kissed kings on their deathbeds and left them smiling.",
+        "Winter is not a season. It is a truth I carry with me."},
+       {"I keep my eye closed. You should be praying I keep it closed.",
+        "My grandson killed me once. He is not here tonight.",
+        "The Fomorians rose from the sea before your gods drew their first breath.",
+        "I have only to lift this lid, and you become history.",
+        "Lugh's spear found me once. Your arsenal is not Lugh's spear.",
+        "Darkness and blight are not my weapons. They are my legacy.",
+        "The Tuatha De Danann fled before this eye. You have no such dignity.",
+        "My people were called demons because your ancestors could not kill us.",
+        "One glance withered armies at Mag Tuired. Look into it.",
+        "I am patient. The eye opens in its own time.",
+        "Every shadow you call darkness is a memory of the first Fomorians.",
+        "Your bravest warrior is less than the least who fell before my gaze.",
+        "The lid rises. The world that looks back will not like what it sees.",
+        "I ruled the dark seas when Eriu was young and the land was still deciding.",
+        "Open. The eye opens. That is how this has always ended."},
+       {"Tyr gave a hand to see me bound. He got poor value for it.",
+        "Gleipnir held me through all the long ages. You will not.",
+        "I was made to swallow Odin. You are an easier meal.",
+        "My jaws reach from earth to sky. Where exactly do you plan to run?",
+        "They bound me with silence, cat-steps, and promises. I learned silence.",
+        "Ragnarok was postponed. Not cancelled. This is the rescheduling.",
+        "The Allfather feared me enough to build a plan against me. He was right to.",
+        "I have known nothing but chains and hunger. Both have made me stronger.",
+        "Vidar has not come for me yet. Until he does, I run free.",
+        "I swallowed the sun at Ragnarok. This city is a smaller bite.",
+        "They used the impossible to bind me. You have only the ordinary.",
+        "Every wolf that bays at your walls does so in my name.",
+        "I was prophecy before I was wolf. You cannot kill a prophecy.",
+        "My father is Loki. My mother is chaos. What did you expect?",
+        "The chains are broken. The wolf is free. Begin."}};
    int line_idx;
 
    if (prof_idx < 0 || prof_idx >= NUM_BOSSES)
@@ -991,7 +1008,7 @@ static bool invasion_boss_cast(CHAR_DATA *mob)
  * [boss_level - INVASION_BOSS_AREA_SLACK, boss_level + INVASION_BOSS_AREA_SLACK].
  *
  * Additional constraint: the chosen room must be able to path to Gertrude's
- * room (INVASION_SPAWN_VNUM / room 3110) via h_find_dir.  Rooms that have
+ * room (INVASION_SPAWN_VNUM / room 1209) via h_find_dir.  Rooms that have
  * no valid path to that room are skipped.
  *
  * Algorithm (reservoir sampling, single pass):
@@ -1012,7 +1029,7 @@ static ROOM_INDEX_DATA *pick_boss_room(int boss_level)
    int hi = boss_level + INVASION_BOSS_AREA_SLACK;
 
    /* Grab Gertrude's room once up front. */
-   target_room = get_room_index(INVASION_SPAWN_VNUM); /* vnum 3110 */
+   target_room = get_room_index(INVASION_SPAWN_VNUM); /* vnum 1209 */
    if (target_room == NULL)
    {
       bug("pick_boss_room: target room vnum %d not found.", INVASION_SPAWN_VNUM);
@@ -1038,7 +1055,7 @@ static ROOM_INDEX_DATA *pick_boss_room(int boss_level)
 
          /*
           * Reachability check: verify there is at least one valid exit
-          * direction from this room toward the target (room 3110).
+          * direction from this room toward the target (room 1209).
           * h_find_dir returns >= 0 when a path exists, -1 when it does not.
           */
          if (!room_is_valid_boss_spawn(room, target_room))
