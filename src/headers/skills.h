@@ -56,6 +56,7 @@ bool is_ready_finisher(CHAR_DATA *ch);
 void reset_combo(CHAR_DATA *ch);
 int get_max_combo(CHAR_DATA *ch);
 int get_combo_count(CHAR_DATA *ch);
+int combo_damage_multiplier_for_max_combo(int max);
 void war_attack(CHAR_DATA *ch, char *argument, int gsn);
 
 /* skills_combo.c */
