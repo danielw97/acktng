@@ -305,7 +305,7 @@
 
     {NORM,
      "control weather",
-     {LEVELS_INIT, L(CLASS_MAG, 58), L(CLASS_CLE, 79)},
+     {LEVELS_INIT, L(CLASS_CLE, 79)},
      spell_control_weather,
      TAR_IGNORE,
      POS_STANDING,
@@ -650,7 +650,7 @@
 
     {NORM,
      "energy drain",
-     {LEVELS_INIT, L(CLASS_MAG, 15), L(CLASS_CLE, 7), L(CLASS_CIP, 8), L(CLASS_WAR, 11), L(CLASS_PSI, 9), L(CLASS_PUG, 13)},
+     {LEVELS_INIT},
      spell_energy_drain,
      TAR_CHAR_OFFENSIVE,
      POS_FIGHTING,
