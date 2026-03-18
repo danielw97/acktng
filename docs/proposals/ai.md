@@ -320,7 +320,7 @@ blocks to include is determined by the NPC's `ai_knowledge` bitmask.
 
 ### Common Knowledge Block
 
-*Injected for every dialogue-enabled NPC.*
+*Injected for every dialogue-enabled NPC. Limited to 2048 characters.*
 
 ```
 You exist in a world of five major cities connected by contested overland and
@@ -357,6 +357,8 @@ character would know from their own life.
 ---
 
 ### Area Knowledge Blocks
+
+*Each area knowledge block is limited to 2048 characters.*
 
 #### Midgaard
 
@@ -631,6 +633,7 @@ Fracture Era.
 Topic blocks provide domain-specific knowledge injected between the area block
 and the NPC persona. Each tag maps to a prose block defined as a string constant
 in `npc_dialogue.c`. NPCs with no `AiKnowledge` tags receive no topic blocks.
+Each topic block is limited to 1024 characters.
 
 Topic blocks are **city-scoped with a global fallback**. The lookup table is a
 2D array indexed by city and tag. At dispatch, the city-specific variant is used
