@@ -1055,7 +1055,7 @@
 
     {NORM,
      "withering shadow",
-     {LEVELS_INIT, L(CLASS_KNI, 17), L(CLASS_SWO, 17)},
+     {LEVELS_INIT},
      spell_wither_shadow,
      TAR_IGNORE,
      POS_STANDING,
