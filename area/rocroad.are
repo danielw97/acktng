@@ -2,9 +2,9 @@
 @@bRoc Road@@W, @@bByways@@W, and the @@GForest Path@@N~
 Q 16
 K rocroad rocroad_byways~
-L @@W(@@a10 120@@W)@@N~
+L @@W(@@a10 60@@W)@@N~
 N 16
-I 10 120
+I 10 60
 V 1300 1599
 X 0
 F 10
@@ -5186,7 +5186,7 @@ register of wanted notices.
 
 ~
 67 40 750 S
-30 0
+15 0
 0 0 0 0
 ! 3 0 0 7 4225 0 0
 | 0 0 0 0 0 0 0
@@ -5209,7 +5209,7 @@ vital â road funding depends on documented traffic counts.
 
 ~
 65 0 750 S
-20 0
+10 0
 0 0 0 0
 ! 3 0 0 7 128 0 0
 | 0 0 0 0 0 0 0
@@ -5234,7 +5234,7 @@ authority to requisition civilian labor for emergency road repairs.
 
 ~
 33554499 40 750 S
-50 0
+20 0
 0 0 0 0
 ! 3 0 0 7 37025 0 0
 | 0 0 0 0 0 0 0
@@ -5259,7 +5259,7 @@ legible inscription on the road is this keeper's responsibility.
 
 ~
 67 0 750 S
-25 0
+12 0
 0 0 0 0
 ! 3 0 0 7 128 0 0
 | 0 0 0 0 0 0 0
@@ -5284,7 +5284,7 @@ Crossroads â a practical power that Midgaard charter law does not formally 
 
 ~
 65 0 500 S
-35 0
+15 0
 0 0 0 0
 ! 3 0 0 7 4353 0 0
 | 0 0 0 0 0 0 0
@@ -5309,7 +5309,7 @@ hangs from the satchel strap for quick calculations.
 
 ~
 65 0 500 S
-25 0
+12 0
 0 0 0 0
 ! 3 0 0 7 128 0 0
 | 0 0 0 0 0 0 0
@@ -5334,7 +5334,7 @@ fingers never stop moving.
 
 ~
 67 0 500 S
-20 0
+10 0
 0 0 0 0
 ! 3 0 0 7 128 0 0
 | 0 0 0 0 0 0 0
@@ -5359,7 +5359,7 @@ every movement near the wagons.
 
 ~
 65 0 500 S
-40 0
+18 0
 0 0 0 0
 ! 3 0 0 7 4353 0 0
 | 0 0 0 0 0 0 0
@@ -5382,7 +5382,7 @@ along in single file, their packs loaded with goods destined for one market or a
 
 ~
 65 0 500 S
-15 0
+10 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -5407,7 +5407,7 @@ within earshot.
 
 ~
 65 0 500 S
-18 0
+10 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -5432,7 +5432,7 @@ political faction, serving the road itself rather than either city.
 
 ~
 67 0 750 S
-22 0
+12 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -5457,7 +5457,7 @@ prices in both Midgaard coin and Kiess trade credit.
 
 ~
 67 0 500 S
-20 0
+12 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -5482,7 +5482,7 @@ alike stop here for a hot meal when their own supplies run short.
 
 ~
 65 0 500 S
-15 0
+10 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -5505,7 +5505,7 @@ ground.  The yellow eyes track your movements with predatory calculation.
 
 ~
 97 0 -500 S
-25 0
+23 0
 0 0 0 0
 ! 3 0 0 7 4481 0 0
 | 0 0 2 0 0 0 0
@@ -5528,7 +5528,7 @@ chest, audible more as a feeling than a sound.
 
 ~
 97 0 -500 S
-35 0
+30 0
 0 0 0 0
 ! 3 0 0 7 4609 0 0
 | 0 0 2 0 0 0 0
@@ -5576,7 +5576,7 @@ designed for tearing flesh.
 
 ~
 97 524288 -500 S
-30 0
+25 0
 0 0 0 0
 ! 3 0 0 7 4481 0 0
 | 0 0 0 0 0 0 0
@@ -5601,7 +5601,7 @@ travelers too weak to defend themselves.
 
 ~
 97 524288 -500 S
-35 0
+32 0
 0 0 0 0
 ! 3 0 0 7 4609 0 0
 | 0 0 0 0 0 64 128
@@ -5626,7 +5626,7 @@ patience and ambush, closing the final distance in a single explosive charge.
 
 ~
 97 0 -500 S
-40 0
+42 0
 0 0 0 0
 ! 3 0 0 7 5121 0 0
 | 0 0 2 0 0 0 0
@@ -5651,7 +5651,7 @@ ambushing travelers who stray too close to the old walls.
 
 ~
 97 0 -750 S
-50 0
+45 0
 0 0 0 0
 ! 3 0 0 7 37025 0 0
 | 256 0 0 0 0 2 0
@@ -5678,7 +5678,7 @@ into nothing but hunger and mechanical repetition.
 
 ~
 16481 0 -1000 S
-60 0
+55 0
 0 0 0 0
 ! 3 0 0 7 37025 0 0
 | 256 0 0 0 0 2 0
@@ -5703,7 +5703,7 @@ against a sovereignty that exists only in the zealot's fractured theology.
 
 ~
 97 0 -750 S
-45 0
+42 0
 0 0 0 0
 ! 3 0 0 7 37025 0 0
 | 256 0 0 0 0 0 0
@@ -5730,7 +5730,7 @@ authoritative gestures that turn violent when its demands are not understood.
 
 ~
 16481 0 -1000 S
-55 0
+52 0
 0 0 0 0
 ! 3 0 0 7 37025 0 0
 | 256 0 0 0 0 2 0
@@ -5757,7 +5757,7 @@ and carries a faint electrical charge.
 
 ~
 97 0 -500 S
-40 0
+35 0
 0 0 0 0
 ! 3 0 0 7 4609 0 0
 | 32 0 0 0 0 0 128
@@ -5784,7 +5784,7 @@ gaps between warden and convoy authority.
 
 ~
 97 0 -750 S
-40 0
+28 0
 0 0 0 0
 ! 3 0 0 7 5121 0 0
 | 0 0 0 0 0 0 0
@@ -5809,7 +5809,7 @@ runner's eyes constantly check for patrols.
 
 ~
 97 0 -500 S
-30 0
+22 0
 0 0 0 0
 ! 3 0 0 7 4481 0 0
 | 0 0 0 0 0 0 0
@@ -5834,7 +5834,7 @@ wrist, and the expression is one of controlled urgency.
 
 ~
 97 0 -500 S
-25 0
+18 0
 0 0 0 0
 ! 3 0 0 7 128 0 0
 | 0 0 0 0 0 0 0
@@ -5861,7 +5861,7 @@ with an iron fitting â dangles from one hand.
 
 ~
 97 0 -750 S
-35 0
+32 0
 0 0 0 0
 ! 3 0 0 7 4609 0 0
 | 0 0 0 0 0 0 0
@@ -5890,7 +5890,7 @@ betrayal â this officer was abandoned by the charter system it served.
 
 ~
 67108593 0 -1000 S
-90 0
+58 0
 0 0 0 0
 ! 3 0 0 7 1572769 0 16
 | 256 0 0 0 0 2 0
@@ -5919,7 +5919,7 @@ to this sentinel, and it has guarded the spur ever since without rest or mercy.
 
 ~
 67108593 0 -500 S
-85 0
+57 0
 0 0 0 0
 ! 3 0 0 7 1572769 0 0
 | 32 0 0 0 0 0 128
@@ -5948,7 +5948,7 @@ the caves.  The eyes are hard and pragmatic, the violence professional.
 
 ~
 67108593 0 -750 S
-80 0
+55 0
 0 0 0 0
 ! 3 0 0 7 1572769 0 0
 | 0 0 0 0 0 0 0
@@ -5977,7 +5977,7 @@ fragments litter the rocks around its lair.
 
 ~
 67108593 0 -1000 S
-95 0
+60 0
 0 0 0 0
 ! 3 0 0 7 1572769 0 0
 | 64 0 2 0 0 0 128
@@ -6027,7 +6027,7 @@ obedience of animals that know the routine by heart.
 
 ~
 65 0 500 S
-12 0
+10 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -6081,7 +6081,7 @@ careful, more archaeology than theft.
 
 ~
 65 0 250 S
-20 0
+15 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -6096,7 +6096,7 @@ A road warden sergeant stands watch, eyes scanning the compound with practiced a
 A road warden sergeant patrols the barracks with steady purpose.  The oak-colored uniform and rank insignia of the Roc Road warden corps mark them as senior staff.  A practiced hand rests near the weapon at their side.
 ~
 67108866 0 0 S
-50 0
+35 0
 0 0 0 0
 ! 2 0 1 0 0 0 7
 | 0 0 0 0 0 2 0
@@ -6108,7 +6108,7 @@ A road warden recruit moves through drills with careful attention to form.
 A road warden recruit is in the early stages of training, their uniform still unworn and their movements precise from recent instruction.  They carry themselves with the wariness of someone who knows they are still learning.
 ~
 67108866 0 0 S
-25 0
+15 0
 0 0 0 0
 ! 1 0 1 0 0 0 3
 | 0 0 0 0 0 2 0
@@ -6120,7 +6120,7 @@ The barracks weaponsmith works steadily at the forge, each blow measured and pur
 The barracks weaponsmith is a compact and capable person with the burns and calluses of long forge work.  They service the warden corps' equipment and occasionally take outside commissions from road convoy guards.
 ~
 3 0 500 S
-35 0
+20 0
 0 0 0 0
 #1402
 barracks chaplain~
@@ -6130,7 +6130,7 @@ The barracks chaplain stands quietly in the chaplain's cell, prayer beads moving
 The barracks chaplain serves the warden corps' spiritual needs, conducting simple rites before patrol rotations and tending to the injured in the infirmary.  They wear a plain robe with the warden emblem at the shoulder.
 ~
 3 512 500 S
-30 0
+18 0
 0 0 0 0
 #1403
 ridge hermit~
@@ -6140,7 +6140,7 @@ A ridge hermit regards you with bright, unafraid eyes from the shelter of their 
 The ridge hermit has lived alone in the Banner Hills for years, by their own account since before the last major road expansion.  They are gaunt but clearly healthy, and move through the rough terrain with complete confidence.  Weather has deeply weathered their face.
 ~
 3 0 500 S
-40 0
+32 0
 0 0 0 0
 #1404
 hill wolf~
@@ -6150,7 +6150,7 @@ A hill wolf pads through the cave, nose working the air.
 The hill wolf is a large specimen of the upland wolf pack that inhabits the Banner Hills.  Its coat is thick and pale at the belly, grading to grey-brown across the back.  It moves with the unhurried confidence of an animal near the top of the local food chain.
 ~
 67108897 0 0 S
-30 0
+25 0
 0 0 0 0
 ! 0 0 1 0 0 0 0
 | 0 0 0 0 0 2 0
@@ -6162,7 +6162,7 @@ A wolf pack leader stands alert at the center of the wolf den, ears forward and 
 The pack leader is larger and older than the other wolves, its muzzle lightly silvered.  The pack defers to it visibly, keeping a respectful distance and reading its posture for cues.  It is wary of intrusion but does not flee.
 ~
 67108897 0 0 S
-45 0
+38 0
 0 0 0 0
 ! 1 0 1 0 0 0 0
 | 0 0 0 0 0 2 0
@@ -6174,7 +6174,7 @@ The village ferryman waits at the landing, rope ready, scanning the far bank.
 The village ferryman is a weathered person who has managed the river crossing for many years, reading the water with the ease of long familiarity.  They are quiet, practical, and occasionally voluble on the subject of river conditions and crossing rates.
 ~
 3 0 500 S
-30 0
+15 0
 0 0 0 0
 #1407
 river ford innkeeper~
@@ -6184,7 +6184,7 @@ The innkeeper moves through the common room, refreshing cups and greeting newcom
 The river ford innkeeper runs the Ledger Inn with cheerful efficiency, maintaining the accounts and the atmosphere in equal measure.  They know the road well from the travelers who pass through and are a reliable source of current road intelligence.
 ~
 3 0 500 S
-30 0
+15 0
 0 0 0 0
 #1408
 village council member~
@@ -6194,7 +6194,7 @@ A village council member reviews a document at the council table, brow furrowed 
 The village council member is one of the elected administrators who manage the Ford Village's small but complex affairs.  They carry themselves with the moderate authority of someone who works with consensus rather than command.
 ~
 3 0 500 S
-35 0
+20 0
 0 0 0 0
 #1409
 village healer~
@@ -6204,7 +6204,7 @@ The village healer measures out dried herbs with careful attention, lips moving 
 The village healer has served generations of families on this stretch of the road.  They are known for both competence and a practical lack of drama â the condition is assessed, the treatment applied, the patient sent home.  They accept payment in coin or kind.
 ~
 3 512 500 S
-35 0
+20 0
 0 0 0 0
 #1410
 dustward waystation keeper~
@@ -6214,7 +6214,7 @@ The waystation keeper moves through the main yard with a proprietorial eye, asse
 The waystation keeper has managed the Dustward Waystation for eleven years on appointment from the @@yKiess road authority@@N.  They are organized, direct, and surprisingly knowledgeable about conditions along the full length of the road.
 ~
 3 0 500 S
-40 0
+25 0
 0 0 0 0
 #1411
 dustward stablehand~
@@ -6224,7 +6224,7 @@ The waystation stablehand moves efficiently between stalls, checking water level
 The waystation stablehand is a young worker who knows horses and draft animals in particular, capable of assessing soundness, fitting harness, and administering basic care.  They work long hours during convoy season without apparent complaint.
 ~
 3 0 500 S
-20 0
+12 0
 0 0 0 0
 #1412
 dustward road merchant~
@@ -6234,7 +6234,7 @@ A road merchant examines goods at the trading house counter with the practiced e
 The road merchant is one of the independent traders who uses the Dustward Waystation as a regular stopping point.  They deal in the lightweight high-value goods that solo traders favor â spice, medicine, message documents, and occasionally specialized tools.
 ~
 3 0 500 S
-35 0
+20 0
 0 0 0 0
 #1413
 market guild notary~
@@ -6244,7 +6244,7 @@ The guild notary works at the counter with quiet focus, their seal and ledger al
 The guild notary represents the @@yKiess merchant guild@@N at the crossroads market, witnessing contracts and maintaining the records that give road commerce its legal standing.  They are formal, precise, and entirely reliable.
 ~
 3 0 500 S
-40 0
+25 0
 0 0 0 0
 #1414
 crossroads market warden~
@@ -6254,7 +6254,7 @@ The market warden patrols the stall rows at a measured pace, watching for disput
 The market warden is the crossroads market's security presence â a neutral authority employed by the market supervisor to handle the disputes and minor infractions that are a routine part of busy market days.
 ~
 67108866 0 0 S
-35 0
+20 0
 0 0 0 0
 ! 0 0 1 0 4096 0 3
 | 0 0 0 0 0 2 0
@@ -6266,7 +6266,7 @@ A market trader arranges goods at their pitch with practiced efficiency, calling
 The market trader occupies one of the regular pitches at the crossroads market, dealing in a variety of provisions and goods suited to road convoy resupply.  They know their customer base and price accordingly.
 ~
 3 0 500 S
-25 0
+15 0
 0 0 0 0
 #1416
 kiess customs clerk~
@@ -6276,7 +6276,7 @@ A Kiess customs clerk works through a stack of manifests at the counter, noting 
 The customs clerk is one of several processing convoy arrivals at the outer gate.  They are competent, fast, and largely immune to attempts to hurry or charm them out of their process.  The Kiess customs system runs on thoroughness.
 ~
 3 0 500 S
-35 0
+20 0
 0 0 0 0
 #1417
 kiess gate warden~
@@ -6286,7 +6286,7 @@ A Kiess gate warden stands at their post beside the outer gate arch, document ch
 The gate warden controls passage through the outer gate of Kiess.  They are senior to the road wardens further out and operate under the city's civic authority rather than the road commission.  Their manner is formal and their expectations are precisely defined.
 ~
 67108866 0 0 S
-45 0
+30 0
 0 0 0 0
 ! 0 0 1 0 4096 0 7
 | 0 0 0 0 0 2 0
@@ -6298,7 +6298,7 @@ A Midgaard civic guard stands at parade rest at the south gate, eyes forward and
 The civic guard is part of the south gate garrison of @@BMidgaard@@N.  Their uniform is the city's civic blue, precisely maintained.  They enforce entry requirements with the polite but inflexible manner of a city that takes its rules seriously.
 ~
 67108866 0 0 S
-50 0
+32 0
 0 0 0 0
 ! 0 0 1 0 4096 0 7
 | 0 0 0 0 0 2 0
@@ -6310,7 +6310,7 @@ A Midgaard registry clerk reviews documents at the counter of the civic registry
 The registry clerk manages the documentation for one of the busiest commercial registers in the region.  Their handwriting is fast and exact, and they can locate a record by approximate date and type in the time it takes most people to describe what they are looking for.
 ~
 3 0 500 S
-35 0
+20 0
 0 0 0 0
 #1420
 midgaard warehouse master~
@@ -6320,7 +6320,7 @@ The warehouse master surveys the provision sorting floor from a raised platform,
 The warehouse master oversees the supply district warehouses for Midgaard's civic authority.  The scope of the operation they manage is substantial â a city this size consumes accordingly.  They are focused, capable, and impatient with inefficiency.
 ~
 3 0 500 S
-40 0
+25 0
 0 0 0 0
 #1421
 cave bat colony~
@@ -6340,7 +6340,7 @@ A cave wolf spider moves across the rock surface with disconcerting speed.
 The cave wolf spider is a large specimen of the species that has established itself in the upper cave passages.  It is not venomous to a degree that poses serious danger, but it is large enough to be alarming at close range and fast enough to avoid easy avoidance.
 ~
 67108897 0 0 S
-15 0
+18 0
 0 0 0 0
 ! 0 0 1 0 0 0 0
 | 0 0 0 0 0 0 512
@@ -6352,7 +6352,7 @@ A cave explorer crouches near the wall, examining a formation with a small lamp 
 The cave explorer is an independent researcher mapping the Inlet cave system for the benefit of the @@yKiess Antiquarian Society@@N.  They are knowledgeable about cave geology and carry good equipment, including a rope and a set of survey instruments.
 ~
 3 0 500 S
-30 0
+20 0
 0 0 0 0
 #1424
 evermeet shade~
@@ -6362,7 +6362,7 @@ A translucent figure drifts through the underfoundation passages, its form shift
 The Evermeet shade is what remains of a former inhabitant of the buried city, neither fully present nor fully absent.  It does not appear to have hostile intent, but its presence is unsettling.  The shade moves along the walls of the buried street as if following old paths of habit from a life long ended.
 ~
 67141697 16384 -500 S
-55 0
+45 0
 0 0 0 0
 ! 0 0 1 0 0 0 0
 | 0 0 0 0 0 8 256
@@ -6374,7 +6374,7 @@ An Evermeet remnant guardian stands motionless in the vault, its outline slightl
 The remnant guardian is a more cohesive manifestation than the wandering shade â a persistent entity associated with the vault east chamber, perhaps linked to whatever was once stored in the alcoves there.  It is clearly aware of intrusion and does not welcome it.
 ~
 67141729 16384 -500 S
-70 0
+55 0
 0 0 0 0
 ! 1 0 1 0 0 0 0
 | 0 0 0 0 0 8 256
@@ -6386,7 +6386,7 @@ A forest guardian stands in the glade's shadows, half-visible, watching without 
 The forest guardian of Greenveil is not easily categorized.  It appears as a figure of woven branch and leaf, animate and aware, but it does not communicate in any language that road travelers know.  It is present in the glade and will enforce the sanctum's peace when it judges an intrusion too disruptive.
 ~
 67141729 524288 0 S
-60 0
+45 0
 0 0 0 0
 ! 1 0 1 0 0 0 0
 | 0 0 0 256 0 0 128
@@ -6398,7 +6398,7 @@ A wild boar roots in the glade floor, powerful shoulders working.
 The wild boar is a large male that has made the Greenveil hollow its territory.  It is not immediately aggressive but will not be displaced without protest.  Its tusks are well-worn and its temperament is that of an animal accustomed to being the most significant thing in the glade.
 ~
 67108897 0 0 S
-30 0
+28 0
 0 0 0 0
 ! 1 0 1 0 0 0 0
 | 0 0 0 0 0 2 0
@@ -6420,7 +6420,7 @@ The waystation gate warden stands at the entrance, checking each entrant with a 
 The gate warden manages entry to the waystation, collecting trader levies and directing convoys to appropriate areas.  They are efficient, not unfriendly, and clear about the waystation's rules.
 ~
 67108866 0 0 S
-30 0
+18 0
 0 0 0 0
 ! 0 0 1 0 4096 0 3
 | 0 0 0 0 0 2 0
@@ -6432,7 +6432,7 @@ The cartwright apprentice works a spoke blank with a drawknife, attention fixed 
 The cartwright apprentice is learning the trade under a senior craftsman, handling the rougher shaping work that builds skill and strength.  They take their work seriously and are not easily distracted.
 ~
 3 0 500 S
-18 0
+12 0
 0 0 0 0
 #1431
 market food vendor~
@@ -6442,7 +6442,7 @@ A food vendor calls the day's offerings over the hiss and smoke of the griddle.
 The food vendor runs one of the more popular food stalls in the market, their pitch well-positioned and their prices fair.  The food is plain road food â substantial, not refined â and sells steadily through market hours.
 ~
 3 0 500 S
-22 0
+15 0
 0 0 0 0
 #1432
 kiess antiquarian scholar~
@@ -6452,7 +6452,7 @@ The antiquarian scholar examines the wall inscription with careful attention, ma
 The antiquarian scholar is a member of the @@yKiess Antiquarian Society@@N, currently conducting research in the underfoundation.  They are genuinely excited about what they are finding and will discourse at length about Evermeet's history to anyone who will listen.
 ~
 3 0 500 S
-40 0
+25 0
 0 0 0 0
 #1433
 kiess charter herald~
@@ -6462,7 +6462,7 @@ The charter herald stands beside the charter stone, ready to answer questions fr
 The charter herald is posted by the city of Kiess beside the charter stone as a civic initiative to educate visitors about the city's founding history.  They recite the founding account with professional precision and genuine pride.
 ~
 3 0 500 S
-30 0
+18 0
 0 0 0 0
 #1434
 midgaard courier~
@@ -6472,7 +6472,7 @@ A Midgaard city courier moves through the civic district at a purposeful quick-s
 The city courier is one of the official messengers of the @@BMidgaard@@N civic administration, carrying documents between the various administrative offices.  They navigate the streets with the confidence of someone who knows exactly where they are going and exactly how long it should take.
 ~
 67108866 0 0 S
-25 0
+15 0
 0 0 0 0
 #1435
 ridge camp hunter~
@@ -6482,7 +6482,7 @@ A ridge camp hunter checks the traps along the north ridge track, working quickl
 The ridge camp hunter is one of the seasonal hunters who camp on the Banner Hills north ridge during hunting season.  They know the terrain thoroughly and move through it with minimum disturbance.  Their relationship with the ridge hermit is cordial â they occasionally trade game for useful information.
 ~
 3 0 500 S
-30 0
+22 0
 0 0 0 0
 #1436
 cave formation researcher~
@@ -6492,7 +6492,7 @@ A cave formation researcher measures the rate of calcite deposition on a stalact
 The cave researcher visits the Inlet cave system regularly to take measurements on a long-running study of formation growth rates.  They have been doing this for seven years and have accumulated a significant dataset.  They are careful about where they step and will remind others to be the same.
 ~
 3 0 500 S
-35 0
+22 0
 0 0 0 0
 #1437
 ridge sentry wolf~
@@ -6502,7 +6502,7 @@ A sentry wolf stands at the edge of the wolf den, ears forward, assessing the in
 The sentry wolf is the pack's designated perimeter animal, stationed at the den approach.  It is not immediately aggressive but it is clearly communicating a boundary.  Behind it, the sounds of the rest of the pack are audible.
 ~
 67108897 0 0 S
-38 0
+30 0
 0 0 0 0
 ! 1 0 1 0 0 0 0
 | 0 0 0 0 0 2 0
@@ -6514,7 +6514,7 @@ A village militia member patrols the village perimeter, hand on the haft of a ro
 The village militia member is one of the few organized defenders of the river ford village, locally recruited and locally equipped.  They take their responsibility seriously and are not aggressive to legitimate travelers, but they are alert and watchful in a way that suggests they have dealt with threats before.
 ~
 67108866 0 0 S
-30 0
+18 0
 0 0 0 0
 ! 0 0 1 0 4096 0 3
 | 0 0 0 0 0 2 0
