@@ -66,38 +66,43 @@ static const BOSS_PROFILE boss_profiles[] = {
      "bash"},
 
     /* ==================================================================
-     * 2 — THE PALE DESTROYER
-     *     Ancient undead horror born of shadow and psychic malice.
-     *     Strengths : Shadow, Mental
-     *     Weaknesses: Holy (divine light scatters undead)
-     *                 Air  (dispels clinging darkness)
+     * 2 — THE MORRIGAN, PHANTOM QUEEN
+     *     Irish triple goddess of fate, war, and death.  She is the
+     *     crow on the battlefield, the washer at the ford, the voice
+     *     that speaks your doom before the first blow lands.
+     *     Strengths : Shadow (death and darkness), Mental (prophecy/fear)
+     *     Weaknesses: Holy (divine grace breaks her curse)
+     *                 Air  (disperses the shadow she rides)
      * ================================================================== */
-    {"The Pale Destroyer",
+    {"The Morrigan, Phantom Queen",
      "@@d",
-     "Darkness coils into form as @@dThe Pale Destroyer@@N materialises! "
-     "Shadow and thought-attacks slide off $s form like water off obsidian!",
+     "Ravens blacken the sky as @@dThe Morrigan, Phantom Queen@@N descends! "
+     "Fate and shadow obey her hand — she has already chosen who leaves this field alive!",
      ELE_SHADOW | ELE_MENTAL,
      ELE_HOLY | ELE_AIR,
      {"hellspawn", "blindness", "curse", "harm", "energy drain", "weaken", NULL},
-     "$n extends $s hand and reality itself seems to crack and wither at the touch!",
-     "$n tears at $s foe's very sanity with claws made of pure thought!",
+     "$n spreads $s arms and a murder of ravens erupts from the darkness, each bird a barb of fate!",
+     "$n shifts form in an instant and tears into $s foe with the battle-crow's talons!",
      "headbutt"},
 
     /* ==================================================================
-     * 3 — THE ABYSSAL TITAN
-     *     A demon-giant that rose from the Abyss itself.
-     *     Strengths : Earth (stonework armour), Shadow (demon nature)
-     *     Weaknesses: Air (disperses shadow), Holy (divine radiance)
+     * 3 — SET, LORD OF CHAOS
+     *     Egyptian god of chaos, storms, the desert, and violence.
+     *     Murderer of Osiris, eternal rival of Horus, once the guardian
+     *     of Ra's sun-barque against Apep — now unbound and unleashed.
+     *     Strengths : Earth (desert dominion), Shadow (chaos and darkness)
+     *     Weaknesses: Air (Horus's sky reclaims what Set usurped)
+     *                 Holy (Ra's divine order, which Set opposes)
      * ================================================================== */
-    {"The Abyssal Titan",
+    {"Set, Lord of Chaos",
      "@@R",
-     "The Abyss yawns wide and @@RThe Abyssal Titan@@N claws free! "
-     "Stone and shadow seem to heal him — his laughter shakes the foundations of the earth!",
+     "The desert wind screams as @@RSet, Lord of Chaos@@N tears through the veil! "
+     "He slew a god and scattered the pieces — your city is a lesser challenge by far!",
      ELE_EARTH | ELE_SHADOW,
      ELE_AIR | ELE_HOLY,
-     {"earthquake", "hellspawn", "harm", "curse", "blindness", NULL},
-     "$n tears a rift in the earth and hurls boulders of pure shadow at $s foes!",
-     "$n raises $s iron fist and shatters the very ground beneath your feet!",
+     {"earthquake", "blindness", "poison", "curse", "harm", NULL},
+     "$n calls a wall of scouring desert sand that strips flesh from bone with merciless fury!",
+     "$n drives $s was-scepter into the earth with the force of a desert tempest!",
      "bash"},
 
     /* ==================================================================
