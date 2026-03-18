@@ -359,3 +359,10 @@ DECLARE_SPELL_FUN(spell_pain);              /* slot 714 */
 DECLARE_SPELL_FUN(spell_thoughtsteal);      /* slot 715 */
 DECLARE_SPELL_FUN(spell_precognition);      /* slot 716 */
 DECLARE_SPELL_FUN(spell_mindwall);          /* slot 717 */
+DECLARE_SPELL_FUN(spell_elemental_confluence); /* slot 760 */
+DECLARE_SPELL_FUN(spell_convergence_shield);   /* slot 761 */
+DECLARE_SPELL_FUN(spell_sacred_ward);          /* slot 762 */
+DECLARE_SPELL_FUN(spell_momentum_drain);       /* slot 763 */
+DECLARE_SPELL_FUN(spell_entropic_shield);      /* slot 764 */
+DECLARE_SPELL_FUN(spell_cognitive_disruption); /* slot 765 */
+DECLARE_SPELL_FUN(spell_predictive_collapse);  /* slot 766 */

@@ -116,7 +116,11 @@ SPELL_OBJS = \
 	spells/spell_visit.o spells/spell_wall_of_fire.o spells/spell_waterelem.o \
 	spells/spell_weaken.o \
 	spells/spell_window.o spells/spell_wither_shadow.o spells/spell_word_of_recall.o \
-	spells/spell_wraith_touch.o
+	spells/spell_wraith_touch.o \
+	spells/spell_elemental_confluence.o spells/spell_convergence_shield.o \
+	spells/spell_sacred_ward.o \
+	spells/spell_momentum_drain.o spells/spell_entropic_shield.o \
+	spells/spell_cognitive_disruption.o spells/spell_predictive_collapse.o
 
 SKILL_OBJS = \
 	skills/do_anti_magic_shell.o skills/do_aurabolt.o skills/do_backstab.o \
@@ -139,7 +143,9 @@ SKILL_OBJS = \
 	skills/do_iron_skin.o skills/do_roll_with_blow.o skills/do_pressure_point.o \
 	skills/do_feint.o skills/do_conditioning.o \
 	skills/do_chi_surge.o skills/do_breath_of_endurance.o skills/do_fist_of_the_interior_form.o \
-	skills/do_momentum_chain.o skills/do_iron_resolve.o skills/do_overwhelming_assault.o
+	skills/do_momentum_chain.o skills/do_iron_resolve.o skills/do_overwhelming_assault.o \
+	skills/do_oathshield.o skills/do_sanctified_strike.o \
+	skills/do_shadow_reading.o skills/do_hex_ward.o skills/do_reflex_disruption.o
 
 QUEST_OBJS = quests/template.o quests/state.o quests/cartography.o quests/notify.o quests/commands.o quests/crusade.o
 
