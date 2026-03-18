@@ -1,59 +1,59 @@
 GLOBAL
-- Currency: gold only; no barter standard between cities; exchange rates
-  for foreign goods priced in gold at point of sale
-- Guild pricing: licensed guilds post tariffs; unlicensed sellers may be
-  cheaper but have no recourse mechanism if goods are faulty
-- Caravan routes: posted departure times at major gates; adventurer escorts
-  hired at guardhouses; raider activity reported on route-boards
-- Route intelligence is a commodity; fresh reports of road conditions and
-  bandit activity are sold at inn common rooms and post offices
+Currency: gold only; no barter standard between cities; exchange rates
+for foreign goods priced in gold at point of sale
+Guild pricing: licensed guilds post tariffs; unlicensed sellers may be
+cheaper but have no recourse mechanism if goods are faulty
+Caravan routes: posted departure times at major gates; adventurer escorts
+hired at guardhouses; raider activity reported on route-boards
+Route intelligence is a commodity; fresh reports of road conditions and
+bandit activity are sold at inn common rooms and post offices
 ~
 MIDGAARD
-- Guild Concordat sets minimum prices and quality standards; disputes go to
-  the Ledgerhouse for arbitration
-- Three founding trade blocs: River Factors (barge trade), Upland Syndicate
-  (ore/timber), Temple Compact (pilgrim arbitration); all still influence
-  pricing in their sectors
-- Lantern Registry posts official tariffs; discrepancies from posted rates
-  are a recoverable civil offense
-- Barge grain arrives from northern routes; upland ore from western corridors;
-  pilgrim goods from all directions; Midgaard's margin comes from the junction
+Guild Concordat sets minimum prices and quality standards; disputes go to
+the Ledgerhouse for arbitration
+Three founding trade blocs: River Factors (barge trade), Upland Syndicate
+(ore/timber), Temple Compact (pilgrim arbitration); all still influence
+pricing in their sectors
+Lantern Registry posts official tariffs; discrepancies from posted rates
+are a recoverable civil offense
+Barge grain arrives from northern routes; upland ore from western corridors;
+pilgrim goods from all directions; Midgaard's margin comes from the junction
 ~
 KOWLOON
-- Harbor Syndics license all dock trade; their inspectors in blue sashes audit
-  every cargo manifest before it crosses the threshold
-- Jade Magistracy handles emergency rationing and can override market pricing
-  during flood or famine declarations — invoke carefully
-- Night markets (violet-marked) operate outside standard guild oversight;
-  prices are negotiable but provenance documentation is sparse
-- River Corsairs under Blacktide Shen disrupt northern supply runs; reports
-  of their movements worth coin at the Warden of Iron's office
+Harbor Syndics license all dock trade; their inspectors in blue sashes audit
+every cargo manifest before it crosses the threshold
+Jade Magistracy handles emergency rationing and can override market pricing
+during flood or famine declarations — invoke carefully
+Night markets (violet-marked) operate outside standard guild oversight;
+prices are negotiable but provenance documentation is sparse
+River Corsairs under Blacktide Shen disrupt northern supply runs; reports
+of their movements worth coin at the Warden of Iron's office
 ~
 KIESS
-- Trade Syndics coordinate caravan contracts along Roc Road; their annex
-  manages all commercial flow between Midgaard and the western frontier
-- Tariff-sharing negotiations with Kowloon ongoing via Midgaard relay corridor;
-  rates may shift; check the Syndics' current posted schedule
-- Evermeet's collapse disrupted established trade credit chains; Kiess rebuilt
-  from cash-basis; most transactions here are pay-now, no credit extended
+Trade Syndics coordinate caravan contracts along Roc Road; their annex
+manages all commercial flow between Midgaard and the western frontier
+Tariff-sharing negotiations with Kowloon ongoing via Midgaard relay corridor;
+rates may shift; check the Syndics' current posted schedule
+Evermeet's collapse disrupted established trade credit chains; Kiess rebuilt
+from cash-basis; most transactions here are pay-now, no credit extended
 ~
 RAKUEN
-- Garden Ledger tracks all surplus allocation; ask a Ledger Clerk before
-  purchasing bulk goods — some commodities are rationed
-- Kowloon sends grain; Kiess sends clerks; Midgaard sends subsidies but not
-  recognition; this shapes what's available and at what price
-- Common orchards and waterworks are maintained communally; attempting to
-  purchase exclusive access is a serious social offense
-- Bloom Council rotating stewardship means trade partners change; establish
-  relationships with the Ledger Clerks, who are the institutional continuity
+Garden Ledger tracks all surplus allocation; ask a Ledger Clerk before
+purchasing bulk goods — some commodities are rationed
+Kowloon sends grain; Kiess sends clerks; Midgaard sends subsidies but not
+recognition; this shapes what's available and at what price
+Common orchards and waterworks are maintained communally; attempting to
+purchase exclusive access is a serious social offense
+Bloom Council rotating stewardship means trade partners change; establish
+relationships with the Ledger Clerks, who are the institutional continuity
 ~
 MAFDET
-- Dual attestation required on all cargo: both inland and maritime legal
-  standards verified; adds cost but prevents legal liability at destination
-- Shoreward House provides bilingual clerks for oasis/maritime contract
-  notation differences; essential for first-time inland traders
-- Sand-Sea Carters' Guild controls overland Saltglass Reach transit; Guild
-  contracts are non-negotiable on route and timing
-- First Claw oaths bind permanently; breaking one means exclusion from the
-  entire Mafdet trade network, not just the immediate counterparty
+Dual attestation required on all cargo: both inland and maritime legal
+standards verified; adds cost but prevents legal liability at destination
+Shoreward House provides bilingual clerks for oasis/maritime contract
+notation differences; essential for first-time inland traders
+Sand-Sea Carters' Guild controls overland Saltglass Reach transit; Guild
+contracts are non-negotiable on route and timing
+First Claw oaths bind permanently; breaking one means exclusion from the
+entire Mafdet trade network, not just the immediate counterparty
 ~
