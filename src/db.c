@@ -1068,7 +1068,6 @@ void load_help_files(void)
    load_lore_directory(LORE_DIR, &first_lore, &last_lore);
 }
 
-
 /*
  * Translate all room exits from virtual to real.
  * Has to be done after all rooms are read in.

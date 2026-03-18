@@ -4217,7 +4217,6 @@ void do_learned(CHAR_DATA *ch, char *argument)
    send_to_char(buf1, ch);
 }
 
-
 void do_auto(CHAR_DATA *ch, char *argument)
 {
 

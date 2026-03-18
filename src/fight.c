@@ -954,8 +954,8 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    }
 
    int raw_block = get_block(victim);
-   int block = (raw_block > 0 ? get_level_scaled_avoidance_baseline(ch, victim, 30) : 0) + raw_block -
-               get_evasion_piercing(ch);
+   int block = (raw_block > 0 ? get_level_scaled_avoidance_baseline(ch, victim, 30) : 0) +
+               raw_block - get_evasion_piercing(ch);
    if (!can_see(ch, victim) && block > 0)
       block += 20;
    if (!can_see(victim, ch) && block > 0)

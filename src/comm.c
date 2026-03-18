@@ -93,7 +93,6 @@ bool is_parse_name_syntax_valid(const char *name)
    return !fIll;
 }
 
-
 static bool is_reserved_login_name(const char *name)
 {
    static const char *const reserved_names[] = {"all", "auto", "everymob", "localmobs", "immortal",
@@ -120,7 +119,6 @@ bool is_login_name_format_valid(const char *name)
    return is_parse_name_syntax_valid(name);
 }
 
-
 void comm_format_class_menu_line(char *dest, size_t dest_size, const char *who_name,
                                  const char *stat, const char *class_name)
 {
@@ -137,7 +135,6 @@ bool shortfight_should_suppress_watched_autoattack(int observer_is_npc, int obse
    return !observer_is_npc && observer_has_shortfight && !observer_is_fighting;
 }
 
-
 #ifndef UNIT_TEST_COMM
 
 void copyover_recover args((void));
@@ -145,11 +142,11 @@ void copyover_recover args((void));
 /*
  * Global variables.
  */
-FILE *fpReserve;         /* Reserved file handle         */
-bool god;                /* All new chars are gods!      */
-bool merc_down;          /* Shutdown                     */
-bool wizlock;            /* Game is wizlocked            */
-bool deathmatch;         /* Deathmatch happening?        */
+FILE *fpReserve; /* Reserved file handle         */
+bool god;        /* All new chars are gods!      */
+bool merc_down;  /* Shutdown                     */
+bool wizlock;    /* Game is wizlocked            */
+bool deathmatch; /* Deathmatch happening?        */
 char str_boot_time[MAX_INPUT_LENGTH];
 time_t current_time; /* Time of this pulse           */
 

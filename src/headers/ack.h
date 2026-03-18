@@ -1354,7 +1354,8 @@ int do_damage args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt, int elem
 void perm_update args((void));
 void boot_db args((void));
 void area_update args((void));
-void db_format_status args((char *dest, size_t dest_size, const char *prefix, const char *file_name));
+void db_format_status args((char *dest, size_t dest_size, const char *prefix,
+                            const char *file_name));
 void db_set_area_name args((const char *file_name));
 void message_update args((void));
 CD *create_mobile args((MOB_INDEX_DATA * pMobIndex));

@@ -101,13 +101,13 @@ static bool load_quest_template_file(const char *path, int id)
    }
 
    tpl.max_level = 170;
-   if (sscanf(line, "%d %d %d %d %d %d %d %d %d %d %*d", &tpl.prerequisite_template_id,
-              &tpl.type, &tpl.num_targets, &tpl.kill_needed, &tpl.min_level, &tpl.max_level,
-              &tpl.offerer_vnum, &tpl.reward_gold, &tpl.reward_qp, &tpl.reward_exp) != 10)
+   if (sscanf(line, "%d %d %d %d %d %d %d %d %d %d %*d", &tpl.prerequisite_template_id, &tpl.type,
+              &tpl.num_targets, &tpl.kill_needed, &tpl.min_level, &tpl.max_level, &tpl.offerer_vnum,
+              &tpl.reward_gold, &tpl.reward_qp, &tpl.reward_exp) != 10)
    {
       tpl.reward_exp = 0;
-      if (sscanf(line, "%d %d %d %d %d %d %d %d %d %*d", &tpl.prerequisite_template_id,
-                 &tpl.type, &tpl.num_targets, &tpl.kill_needed, &tpl.min_level, &tpl.offerer_vnum,
+      if (sscanf(line, "%d %d %d %d %d %d %d %d %d %*d", &tpl.prerequisite_template_id, &tpl.type,
+                 &tpl.num_targets, &tpl.kill_needed, &tpl.min_level, &tpl.offerer_vnum,
                  &tpl.reward_gold, &tpl.reward_qp, &tpl.reward_exp) != 9)
       {
          bugf("load_quest_template_file: bad numeric line in %s", path);

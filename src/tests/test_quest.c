@@ -449,17 +449,20 @@ static void test_loads_saltglass_and_scorching_sands_quests(void)
 
    assert(quest_unit_template_count() >= 127);
 
-   assert(strcmp(quest_unit_template_title(105), "Saltglass Reach cartography survey: Mirror Flats") == 0);
+   assert(strcmp(quest_unit_template_title(105),
+                 "Saltglass Reach cartography survey: Mirror Flats") == 0);
    assert(strstr(quest_unit_template_accept_message(105), "Mirror Flats") != NULL);
    assert(strstr(quest_unit_template_completion_message(105), "cartographic record") != NULL);
 
-   assert(strcmp(quest_unit_template_title(106), "Saltglass Reach cartography survey: Glasswind to Tidemouth") == 0);
+   assert(strcmp(quest_unit_template_title(106),
+                 "Saltglass Reach cartography survey: Glasswind to Tidemouth") == 0);
    assert(strstr(quest_unit_template_accept_message(106), "Glasswind Belt") != NULL);
 
    assert(strcmp(quest_unit_template_title(119), "Tidemouth jurisdiction enforcement sweep") == 0);
    assert(strstr(quest_unit_template_completion_message(119), "Tidemouth Dunes") != NULL);
 
-   assert(strcmp(quest_unit_template_title(120), "Scorching Sands cartography survey: Three Spines to Cinder Gate") == 0);
+   assert(strcmp(quest_unit_template_title(120),
+                 "Scorching Sands cartography survey: Three Spines to Cinder Gate") == 0);
    assert(strstr(quest_unit_template_accept_message(120), "Three Spines") != NULL);
 
    assert(strcmp(quest_unit_template_title(126), "Witness-stick cohort verification") == 0);
@@ -471,7 +474,7 @@ static void test_quest_exp_calculation(void)
    /* exp_table[20].mob_base == 5800 (from const.c) */
    int base = 3 * 5800; /* 17400 */
    assert(quest_unit_calc_exp(20, 0, 0) == base);
-   assert(quest_unit_calc_exp(20, 1, 0) == base * 2); /* boss: double */
+   assert(quest_unit_calc_exp(20, 1, 0) == base * 2);  /* boss: double */
    assert(quest_unit_calc_exp(20, 0, 1) == base * 10); /* cartography: 10x */
 }
 
