@@ -255,9 +255,9 @@ Based on current gaps and lore richness:
 5. **Templar** (MEDIUM) — One active ability but many passives; consecration mechanics untapped
 6. **Grand Magi** (LOW) — Already has four spells; best-served of all adept classes
 
-### 3. Stance Anomaly
+### 3. Stance Anomaly (FIXED)
 
-The "Swordsman" stance entry in `stance.c` line 36 uses `CLASS_GMA` and `CLASS_KIN` as its class requirements instead of `CLASS_SWO`. This appears to be a **bug** — the Swordsman remort stance should likely require Swordsman class level, not Grand Magi/Kinetimancer. This should be investigated separately.
+The "Swordsman" stance entry in `stance.c` line 36 had `CLASS_GMA` and `CLASS_KIN` as its class requirements instead of `CLASS_SWO`. **Fixed** — changed to `CLASS_SWO, 1, -1, -1, -1`.
 
 ### 4. No Thematic Violations Found
 
@@ -288,3 +288,84 @@ After thorough review of all adept-exclusive abilities against the detailed lore
 | Martial Artist | Chi Surge | 5 | Skill (chi burst) | Highest |
 | Martial Artist | Iron Breath | 10 | Skill (self-buff) | Highest |
 | Martial Artist | Fist of the Interior Form | 15 | Skill (finisher) | Highest |
+
+---
+
+## Conflict Analysis: Proposed Abilities vs. Existing Mortal/Remort Spells & Skills
+
+Validated all 19 proposed abilities against the full roster of 109 existing spells and 154 existing skills.
+
+### NAMING CONFLICTS
+
+**1. "Consecrate Ground" (Templar, proposed level 5) vs. "consecrate" (Cleric, level 35)**
+
+- **Conflict type:** Name prefix collision + mechanical overlap
+- **Existing ability:** `consecrate` is a Cleric mortal spell (`spell_table_data.c:2064`) that consecrates the ground, buffs grouped allies with HITROLL and AC bonuses, and damages evil NPCs in the room.
+- **Problem:** The proposed "Consecrate Ground" would provide room healing-over-time and damage reduction. The name collides with the existing `consecrate` spell (MUD `str_prefix()` matching means typing "consecrate" would match the existing spell first). Additionally, both operate on the room/group with a holy-ground theme.
+- **Resolution:** **Rename to "Sacred Ward"** — preserves the Templar threshold-guardian lore (warding sacred spaces) while avoiding the name and thematic collision with the Cleric's consecrate. Alternatively: "Hallowed Ground", "Divine Bastion", or "Sanctum".
+
+**2. "Iron Breath" (Martial Artist, proposed level 10) vs. "iron skin" (Pugilist, level 22)**
+
+- **Conflict type:** Name domain overlap (minor)
+- **Existing ability:** `iron skin` is a Pugilist mortal skill that provides a self-buff defensive bonus.
+- **Problem:** Both use "iron" naming and both are self-buffs for damage resistance on the same class lineage (Pugilist -> Monk/Brawler -> Martial Artist). A Martial Artist already has access to `iron skin` from Pugilist training. Having both "iron skin" and "iron breath" could confuse players.
+- **Resolution:** **Rename to "Breath of Endurance"** — emphasizes the Monk breath-control lore rather than the Pugilist iron-body theme. Alternatively: "Sustained Breath", "Inner Resilience", or "Breath Mastery".
+
+### MECHANICAL CONFLICTS
+
+**3. "Momentum Drain" (Kinetimancer, proposed level 5) vs. "mana drain" (Sorcerer 11 / Necromancer 15 / Wizard 11 / Egomancer 15)**
+
+- **Conflict type:** Functional overlap
+- **Existing ability:** `mana drain` is a room-effect spell that creates a persistent mana-sapping field (ROOM_BV_MANA_STEAL).
+- **Problem:** Both involve draining mana/energy from opponents. A Kinetimancer already has access to `mana drain` via Necromancer and Egomancer prerequisite training.
+- **Resolution:** **Differentiate mechanically** — "Momentum Drain" should NOT be a mana-draining spell. Instead, refocus it on the lore's momentum-redirection concept: a spell that steals the target's *combat momentum* (reducing their HR/DR temporarily) and converts it to a short self-buff. This avoids overlap with `mana drain` while better reflecting the Kinetic Formulists' force-transmission mathematics.
+
+**4. "Convergence Shield" (Grand Magi, proposed level 8) vs. "elemental ward" (Magi, level 55)**
+
+- **Conflict type:** Functional overlap
+- **Existing ability:** `elemental ward` is a Magi mortal spell that applies SAVING_SPELL reduction (elemental damage mitigation). Grand Magi already inherit access to this.
+- **Problem:** Both are self-cast defensive spells that reduce incoming elemental damage.
+- **Resolution:** **Differentiate mechanically** — "Convergence Shield" should be a *reactive* elemental barrier (absorbing a fixed amount of damage before shattering, or reflecting a portion of elemental damage back) rather than a passive save bonus. This makes it a distinct tactical cooldown rather than a duplicate of `elemental ward`'s passive mitigation.
+
+**5. "Hex Ward" (Nightblade, proposed level 10) vs. "dispel magic" (Magi 68 / Cleric 89)**
+
+- **Conflict type:** Partial functional overlap
+- **Existing ability:** `dispel magic` removes magical effects from a target.
+- **Problem:** Both strip defensive buffs from enemies. However, `dispel magic` is broadly available at very high mortal levels and Nightblades wouldn't normally have access to it (wrong class lineage). The overlap is thematic rather than access-based.
+- **Resolution:** **Acceptable as-is with differentiation** — "Hex Ward" should be a *gradual degradation* effect (reducing buff effectiveness over rounds rather than instant removal) and should be themed as shadow-hex erosion, not arcane dispelling. This makes it tactically distinct: dispel magic is an instant all-or-nothing removal; Hex Ward is a progressive weakening that synergizes with the Nightblade's sustained-pressure doctrine.
+
+**6. "Iron Resolve" (Crusader, proposed level 10) vs. "fortify" (Warden, level 22)**
+
+- **Conflict type:** Functional overlap
+- **Existing ability:** `fortify` is a Warden mortal skill that provides a defensive stance buff. Crusaders inherit Warden abilities through the Knight/Swordsman lineage.
+- **Problem:** Both are self-buffs that increase damage resistance for melee characters.
+- **Resolution:** **Differentiate by focus** — "Iron Resolve" should specifically provide *anti-displacement* (resistance to bash, trip, and position-changing effects) rather than generic damage reduction. This carves out a unique niche: `fortify` is general defense, while Iron Resolve is about maintaining fighting position — reflecting the Crusader's "successive engagements without rotation" identity.
+
+### NO CONFLICTS (13 abilities confirmed safe)
+
+| Proposed Ability | Closest Existing | Why No Conflict |
+|-----------------|------------------|-----------------|
+| Elemental Confluence (GMA 18) | chain lightning | Different: AoE all-element vs single-element chain |
+| Elemental Attunement (GMA 3) | — | No sequential casting bonus system exists |
+| Oathshield (TEM 10) | — | No ally damage-absorption mechanic exists |
+| Sanctified Strike (TEM 15) | holystrike (PAL/KNI) | Different: holy+heal vs pure holy damage; different class lineage |
+| Shadow Reading (NIG 5) | detect hidden/invis | Different: reveals defensive stats vs reveals hidden chars |
+| Reflex Disruption (NIG 15) | — | No dodge/parry reduction debuff exists |
+| Momentum Chain (CRU 5) | — | No combo-follow-up bonus system exists |
+| Overwhelming Assault (CRU 15) | — | No combo-count-based finisher exists |
+| Entropic Shield (KIN 8) | shield / stone skin | Different: INT-scaling entropy field vs flat AC bonus |
+| Cognitive Disruption (KIN 12) | — | No psionic silence/interrupt exists |
+| Predictive Collapse (KIN 15) | black curse (NEC/EGO) | Different: combined debuff+damage vs curse-only |
+| Chi Surge (MAR 5) | — | No chi-spending burst attack exists |
+| Fist of the Interior Form (MAR 15) | — | No unarmed conditional finisher exists |
+
+### Summary of Required Changes
+
+| Proposed Ability | Issue | Resolution |
+|-----------------|-------|------------|
+| Consecrate Ground | Name/mechanic collision with `consecrate` | **Rename to "Sacred Ward"** |
+| Iron Breath | Name confusion with `iron skin` in same lineage | **Rename to "Breath of Endurance"** |
+| Momentum Drain | Functional overlap with `mana drain` (same lineage) | **Refocus to combat-stat drain, not mana drain** |
+| Convergence Shield | Functional overlap with `elemental ward` (same lineage) | **Make reactive/absorb instead of passive mitigation** |
+| Hex Ward | Partial overlap with `dispel magic` | **Make gradual degradation, not instant removal** |
+| Iron Resolve | Functional overlap with `fortify` (same lineage) | **Focus on anti-displacement, not damage reduction** |
