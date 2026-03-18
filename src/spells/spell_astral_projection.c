@@ -47,8 +47,7 @@ bool spell_astral_projection(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DAT
    af.bitvector = AFF_PASS_DOOR;
    affect_to_char(ch, &af);
 
-   send_to_char(
-       "Your consciousness detaches from your body, perceiving all around you.\n\r", ch);
+   send_to_char("Your consciousness detaches from your body, perceiving all around you.\n\r", ch);
    act("$n's body becomes translucent as $s consciousness projects outward.", ch, NULL, NULL,
        TO_ROOM);
    return TRUE;
