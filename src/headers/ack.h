@@ -399,8 +399,7 @@ struct clan_type
 
 struct exp_type
 {
-   long_int mob_base;            /* Base exp for mob of level x  */
-   long_int exp_base[MAX_CLASS]; /* Cost for each class of level */
+   long_int mob_base; /* Base exp for mob of level x */
 };
 
 /*
@@ -769,7 +768,7 @@ struct pc_data
    sh_int mod_wis;
    sh_int mod_dex;
    sh_int mod_con;
-   sh_int condition[3];
+
    sh_int pagelen;
    unsigned int learned[MAX_SKILL];
    char *header;  /* header used for message */
@@ -845,13 +844,6 @@ struct mob_prog_data
    char *arglist;
    char *comlist;
    char *filename;
-};
-
-struct liq_type
-{
-   char *liq_name;
-   char *liq_color;
-   sh_int liq_affect[3];
 };
 
 /*
@@ -1295,7 +1287,6 @@ void stop_follower args((CHAR_DATA * ch));
 void die_follower args((CHAR_DATA * ch));
 bool is_same_group args((CHAR_DATA * ach, CHAR_DATA *bch));
 bool is_group_leader args((CHAR_DATA * ch));
-char *slur_text args((char *argument));
 void send_to_room args((char *message, ROOM_INDEX_DATA *room));
 void list_who_to_output args((void));
 
@@ -1651,7 +1642,7 @@ void advance_level args((CHAR_DATA * ch, int class, bool show));
 void advance_level_remort args((CHAR_DATA * ch, int class, bool show));
 void advance_level_adept args((CHAR_DATA * ch, int class, bool show));
 void gain_exp args((CHAR_DATA * ch, int gain));
-void gain_condition args((CHAR_DATA * ch, int iCond, int value));
+
 void update_handler args((void));
 void caravan_update args((void));
 bool check_rewield args((CHAR_DATA * ch));

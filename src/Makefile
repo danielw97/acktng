@@ -47,8 +47,7 @@ SPELL_OBJS = \
 	spells/spell_cloak_oathbreaker.o spells/spell_cloak_reflect.o \
 	spells/spell_cloak_transcendence.o spells/spell_color_spray.o \
 	spells/spell_condense_soul.o spells/spell_cone_cold.o spells/spell_continual_light.o \
-	spells/spell_control_weather.o spells/spell_corrupt_bond.o spells/spell_create_food.o \
-	spells/spell_create_spring.o spells/spell_create_water.o spells/spell_creature_bond.o \
+	spells/spell_control_weather.o spells/spell_corrupt_bond.o spells/spell_creature_bond.o \
 	spells/spell_cure_blindness.o spells/spell_cure_critical.o spells/spell_cure_light.o \
 	spells/spell_cure_poison.o spells/spell_cure_serious.o spells/spell_curse.o \
 	spells/spell_deflect_weapon.o spells/spell_detect_evil.o spells/spell_detect_hidden.o \
@@ -86,7 +85,7 @@ SPELL_OBJS = \
 	spells/spell_phobia.o spells/spell_phoenix_flare.o spells/spell_physic_crush.o \
 	spells/spell_physic_thrust.o spells/spell_planergy.o spells/spell_poison.o \
 	spells/spell_poison_arsenic.o spells/spell_poison_quinine.o \
-	spells/spell_poison_weapon.o spells/spell_portal.o spells/spell_produce_food.o \
+	spells/spell_poison_weapon.o spells/spell_portal.o \
 	spells/spell_protection.o spells/spell_psionic_recovery.o spells/spell_purify.o \
 	spells/spell_refresh.o spells/spell_refresh_mana.o spells/spell_refuge.o \
 	spells/spell_regen.o spells/spell_remove_curse.o spells/spell_restoration.o \
@@ -126,7 +125,8 @@ QUEST_OBJS = quests/template.o quests/state.o quests/cartography.o quests/notify
 
 O_FILES = affect.o ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_wiz.o \
 	  areachk.o board.o build.o buildare.o buildtab.o caravan.o clutch.o comm.o hotreboot.o login.o socket.o prompt.o \
-	  const.o damage.o cloak.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
+	  const.o const_color.o const_class.o const_race.o const_clan.o const_exp.o const_liq.o \
+	  damage.o cloak.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
 	  heal.o interp.o invasion.o item_generation.o item_generation_tables.o keep.o lists.o lookup.o macros.o magic.o mapper.o \
 	  obj_fun.o pdelete.o $(QUEST_OBJS) reincarnate.o \
 	  save/save.o save/save_players.o save/save_objects.o save/save_mobs.o save/save_areas.o \

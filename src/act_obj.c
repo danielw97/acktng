@@ -1112,219 +1112,6 @@ void do_give(CHAR_DATA *ch, char *argument)
    return;
 }
 
-void do_fill(CHAR_DATA *ch, char *argument)
-{
-   char arg[MAX_INPUT_LENGTH];
-   OBJ_DATA *obj;
-   OBJ_DATA *fountain;
-   bool found;
-
-   one_argument(argument, arg);
-
-   if (arg[0] == '\0')
-   {
-      send_to_char("Fill what?\n\r", ch);
-      return;
-   }
-
-   if ((obj = get_obj_carry(ch, arg)) == NULL)
-   {
-      send_to_char("You do not have that item.\n\r", ch);
-      return;
-   }
-
-   found = FALSE;
-   for (fountain = ch->in_room->first_content; fountain != NULL; fountain = fountain->next_in_room)
-   {
-      if (fountain->item_type == ITEM_FOUNTAIN)
-      {
-         found = TRUE;
-         break;
-      }
-   }
-
-   if (!found)
-   {
-      send_to_char("There is no fountain here!\n\r", ch);
-      return;
-   }
-
-   if (obj->item_type != ITEM_DRINK_CON)
-   {
-      send_to_char("You can't fill that.\n\r", ch);
-      return;
-   }
-
-   if (obj->value[1] != 0 && obj->value[2] != 0)
-   {
-      send_to_char("There is already another liquid in it.\n\r", ch);
-      return;
-   }
-
-   if (obj->value[1] >= obj->value[0])
-   {
-      send_to_char("Your container is full.\n\r", ch);
-      return;
-   }
-
-   act("You fill $p.", ch, obj, NULL, TO_CHAR);
-   obj->value[2] = fountain->value[0];
-   obj->value[1] = obj->value[0];
-   return;
-}
-
-void do_drink(CHAR_DATA *ch, char *argument)
-{
-   char arg[MAX_INPUT_LENGTH];
-   OBJ_DATA *obj;
-   int amount = 0;
-   int liquid;
-
-   one_argument(argument, arg);
-
-   if (arg[0] == '\0')
-   {
-      for (obj = ch->in_room->first_content; obj; obj = obj->next_in_room)
-      {
-         if (obj->item_type == ITEM_FOUNTAIN)
-            break;
-      }
-
-      if (obj == NULL)
-      {
-         send_to_char("Drink what?\n\r", ch);
-         return;
-      }
-   }
-   else
-   {
-      if ((obj = get_obj_here(ch, arg)) == NULL)
-      {
-         send_to_char("You can't find it.\n\r", ch);
-         return;
-      }
-   }
-   if (!IS_NPC(ch) && ch->pcdata->condition[COND_THIRST] > 40)
-   {
-      send_to_char("You do not feel thirsty.\n\r", ch);
-      return;
-   }
-
-   if (!IS_NPC(ch) && ch->pcdata->condition[COND_DRUNK] > 10)
-   {
-      send_to_char("You fail to reach your mouth.  *Hic*\n\r", ch);
-      return;
-   }
-
-   switch (obj->item_type)
-   {
-   default:
-      send_to_char("You can't drink from that.\n\r", ch);
-      break;
-
-   case ITEM_FOUNTAIN:
-      if ((liquid = obj->value[0]) >= LIQ_MAX)
-      {
-         bug("Do_drink: bad liquid number %d.", liquid);
-         liquid = obj->value[0] = 0;
-      }
-
-      act("$n drinks $T from $p.", ch, obj, liq_table[liquid].liq_name, TO_ROOM);
-      act("You drink $T from $p.", ch, obj, liq_table[liquid].liq_name, TO_CHAR);
-
-      amount = number_range(1, 3);
-
-      gain_condition(ch, COND_DRUNK, amount * liq_table[liquid].liq_affect[COND_DRUNK]);
-      gain_condition(ch, COND_FULL, amount * liq_table[liquid].liq_affect[COND_FULL]);
-      gain_condition(ch, COND_THIRST, amount * liq_table[liquid].liq_affect[COND_THIRST]);
-
-      if (!IS_NPC(ch) && ch->pcdata->condition[COND_DRUNK] > 10)
-         send_to_char("You feel drunk.\n\r", ch);
-      if (!IS_NPC(ch) && ch->pcdata->condition[COND_FULL] > 40)
-         send_to_char("You are full.\n\r", ch);
-      if (!IS_NPC(ch) && ch->pcdata->condition[COND_THIRST] > 40)
-         send_to_char("You do not feel thirsty.\n\r", ch);
-
-      if (obj->value[1] != 0)
-      {
-         /*
-          * The shit was poisoned!
-          */
-         AFFECT_DATA af;
-
-         act("$n chokes and gags.", ch, 0, 0, TO_ROOM);
-         send_to_char("You choke and gag.\n\r", ch);
-
-         af.type = gsn_poison;
-         af.duration = 2;
-         af.location = APPLY_NONE;
-         af.modifier = 0;
-         af.bitvector = AFF_POISON;
-         affect_join(ch, &af);
-      }
-      break;
-
-   case ITEM_DRINK_CON:
-      if (obj->value[1] <= 0)
-      {
-         send_to_char("It is already empty.\n\r", ch);
-         return;
-      }
-
-      if ((liquid = obj->value[2]) >= LIQ_MAX)
-      {
-         bug("Do_drink: bad liquid number %d.", liquid);
-         liquid = obj->value[2] = 0;
-      }
-
-      act("$n drinks $T from $p.", ch, obj, liq_table[liquid].liq_name, TO_ROOM);
-      act("You drink $T from $p.", ch, obj, liq_table[liquid].liq_name, TO_CHAR);
-
-      amount = number_range(3, 10);
-      amount = UMIN(amount, obj->value[1]);
-
-      gain_condition(ch, COND_DRUNK, amount * liq_table[liquid].liq_affect[COND_DRUNK]);
-      gain_condition(ch, COND_FULL, amount * liq_table[liquid].liq_affect[COND_FULL]);
-      gain_condition(ch, COND_THIRST, amount * liq_table[liquid].liq_affect[COND_THIRST]);
-
-      if (!IS_NPC(ch) && ch->pcdata->condition[COND_DRUNK] > 10)
-         send_to_char("You feel drunk.\n\r", ch);
-      if (!IS_NPC(ch) && ch->pcdata->condition[COND_FULL] > 40)
-         send_to_char("You are full.\n\r", ch);
-      if (!IS_NPC(ch) && ch->pcdata->condition[COND_THIRST] > 40)
-         send_to_char("You do not feel thirsty.\n\r", ch);
-
-      if (obj->value[3] != 0)
-      {
-         /*
-          * The shit was poisoned !
-          */
-         AFFECT_DATA af;
-
-         act("$n chokes and gags.", ch, NULL, NULL, TO_ROOM);
-         send_to_char("You choke and gag.\n\r", ch);
-         af.type = gsn_poison;
-         af.duration = 3 * amount;
-         af.location = APPLY_NONE;
-         af.modifier = 0;
-         af.bitvector = AFF_POISON;
-         affect_join(ch, &af);
-      }
-
-      obj->value[1] -= amount;
-      if (obj->value[1] <= 0)
-      {
-         obj->value[1] = 0;
-         /*
-                send_to_char( "The empty container vanishes.\n\r", ch );
-                extract_obj( obj );  */
-      }
-      break;
-   }
-
-   return;
-}
-
 void do_eat(CHAR_DATA *ch, char *argument)
 {
    char arg[MAX_INPUT_LENGTH];
@@ -1345,15 +1132,9 @@ void do_eat(CHAR_DATA *ch, char *argument)
 
    if (!IS_IMMORTAL(ch))
    {
-      if (obj->item_type != ITEM_FOOD && obj->item_type != ITEM_PILL)
+      if (obj->item_type != ITEM_PILL)
       {
          send_to_char("That's not edible.\n\r", ch);
-         return;
-      }
-
-      if (!IS_NPC(ch) && ch->pcdata->condition[COND_FULL] > 40)
-      {
-         send_to_char("You are too full to eat more.\n\r", ch);
          return;
       }
    }
@@ -1363,39 +1144,6 @@ void do_eat(CHAR_DATA *ch, char *argument)
 
    switch (obj->item_type)
    {
-
-   case ITEM_FOOD:
-      if (!IS_NPC(ch))
-      {
-         int condition;
-
-         condition = ch->pcdata->condition[COND_FULL];
-         gain_condition(ch, COND_FULL, obj->value[0]);
-         if (condition == 0 && ch->pcdata->condition[COND_FULL] > 0)
-            send_to_char("You are no longer hungry.\n\r", ch);
-         else if (ch->pcdata->condition[COND_FULL] > 40)
-            send_to_char("You are full.\n\r", ch);
-      }
-
-      if (obj->value[3] != 0)
-      {
-         /*
-          * The shit was poisoned!
-          */
-         AFFECT_DATA af;
-
-         act("$n chokes and gags.", ch, 0, 0, TO_ROOM);
-         send_to_char("You choke and gag.\n\r", ch);
-
-         af.type = gsn_poison;
-         af.duration = 2 * obj->value[0];
-         af.location = APPLY_NONE;
-         af.modifier = 0;
-         af.bitvector = AFF_POISON;
-         affect_join(ch, &af);
-      }
-      break;
-
    case ITEM_PILL:
       obj_cast_spell(obj->value[1], obj->value[0], ch, ch, NULL);
       obj_cast_spell(obj->value[2], obj->value[0], ch, ch, NULL);
@@ -2291,8 +2039,7 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
          obj_value *= .4;
       else if (plevel > 80)
          obj_value *= .6;
-      if ((obj->item_type == ITEM_FOOD) || (obj->item_type == ITEM_BEACON) ||
-          (obj->item_type == ITEM_SOUL))
+      if ((obj->item_type == ITEM_BEACON) || (obj->item_type == ITEM_SOUL))
          obj_value = 0;
       ch->sentence -= obj_value;
       if (ch->sentence > 0)
@@ -2360,7 +2107,7 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
          act("@@N$n sacrifices $p to @@e" evilgodname "@@N.", ch, obj, NULL, TO_ROOM);
       }
       if (obj->item_type == ITEM_BEACON || obj->item_type == ITEM_LIGHT ||
-          obj->item_type == ITEM_PORTAL || obj->item_type == ITEM_FOOD)
+          obj->item_type == ITEM_PORTAL)
          align_change /= 10;
       ch->alignment += align_direction * align_change;
       ch->alignment = URANGE(-1000, ch->alignment, 1000);
@@ -3646,131 +3393,6 @@ void do_appraise(CHAR_DATA *ch, char *argument)
 
    vo = (void *)obj;
    spell_identify(0, LEVEL_HERO - 1, ch, vo, obj);
-   /*
-      switch ( obj->item_type )
-      {
-         case ITEM_WEAPON:
-            *
-             * Try and make output a little interesting
-             *
-
-            av = ( obj->value[1] + obj->value[2] ) / 2;
-            if( av < 5 )
-               sprintf( buf, "$p couldn't cut a blade of grass." );
-            else if( av < 10 )
-               sprintf( buf, "$p might hurt a small animal." );
-            else if( av < 15 )
-               sprintf( buf, "$p is ok, but it's not worth stealing!" );
-            else if( av < 20 )
-               sprintf( buf, "$p looks good, maybe you should get one?" );
-            else if( av < 30 )
-               sprintf( buf, "$p appears to be pretty powerful!" );
-            else if( av < 50 )
-               sprintf( buf, "$p could fell trees in one swoop!" );
-            else
-               sprintf( buf, "$p could kill the very Gods!" );
-            act( buf, ch, obj, NULL, TO_CHAR );
-            break;
-         case ITEM_ARMOR:
-
-            ac = obj->value[0];
-            if( ac < 0 )
-               sprintf( buf, "$p couldn't protect a paper bag!" );
-            else if( ac < 3 )
-               sprintf( buf, "$p looks quite strong!" );
-            else if( ac < 5 )
-               sprintf( buf, "$p could help protect you well." );
-            else if( ac < 10 )
-               sprintf( buf, "$p would guard well against attack." );
-            else if( ac < 50 )
-               sprintf( buf, "$p could protect a God!" );
-            else
-               sprintf( buf, "$p looks like divine armor!" );
-            act( buf, ch, obj, NULL, TO_CHAR );
-            break;
-         case ITEM_SCROLL:
-         case ITEM_WAND:
-         case ITEM_STAFF:
-         case ITEM_PILL:
-            lv = obj->value[0];
-            if( lv < 10 )
-               sprintf( buf, "$p doesn't look at all powerful." );
-            else if( lv < 20 )
-               sprintf( buf, "$p looks like it has a little power." );
-            else if( lv < 40 )
-               sprintf( buf, "$p appears to be quite powerful." );
-            else if( lv < 60 )
-               sprintf( buf, "$p almost bristles with power." );
-            else if( lv < 80 )
-               sprintf( buf, "$p crackles with pure energy!" );
-            else
-               sprintf( buf, "$p looks like it was divinely created!!" );
-            act( buf, ch, obj, NULL, TO_CHAR );
-            break;
-         case ITEM_CONTAINER:
-            hold = obj->value[0];
-            if( hold < 10 )
-               sprintf( buf, "$p couldn't hold an apple!" );
-            else if( hold < 30 )
-               sprintf( buf, "$p could hold a few items." );
-            else if( hold < 50 )
-               sprintf( buf, "$p could hold quite a few objects." );
-            else if( hold < 100 )
-               sprintf( buf, "$p looks like it could hold a LOT of stuff!" );
-            else
-               sprintf( buf, "$p looks like the creation of the Gods!" );
-            act( buf, ch, obj, NULL, TO_CHAR );
-            break;
-         case ITEM_FURNITURE:
-            act( "$p looks like furniture.", ch, obj, NULL, TO_CHAR );
-            break;
-         case ITEM_TRASH:
-            act( "$p doesn't appear to do anything at all, really.", ch, obj, NULL, TO_CHAR );
-            break;
-         case ITEM_DRINK_CON:
-            sprintf( buf, "$p looks like it has some %s in it.", liq_table[obj->value[2]].liq_name
-      ); act( buf, ch, obj, NULL, TO_CHAR ); if( obj->value[3] != 0 ) send_to_char( "It looks
-      poisoned!\n\r", ch ); break; case ITEM_KEY: act( "$p looks like it unlocks something.", ch,
-      obj, NULL, TO_CHAR ); break; case ITEM_FOOD: foo = obj->value[0]; if( foo < 5 ) sprintf( buf,
-      "$p couldn't feed an ant!" ); else if( foo < 10 ) sprintf( buf, "$p would fill a very small
-      stomach." ); else if( foo < 20 ) sprintf( buf, "$p looks quite filling." ); else if( foo < 40
-      ) sprintf( buf, "$p could fulfill most hungers." ); else sprintf( buf, "$p looks VERY
-      filling!" ); act( buf, ch, obj, NULL, TO_CHAR ); if( obj->value[3] != 0 ) send_to_char( "It
-      looks poisoned!\n\r", ch ); break; case ITEM_MONEY: act( "$p is MONEY!!!", ch, obj, NULL,
-      TO_CHAR ); break; case ITEM_BOAT: act( "$p looks like a sturdy means of travelling across
-      water.", ch, obj, NULL, TO_CHAR ); break; case ITEM_CORPSE_PC: case ITEM_CORPSE_NPC: act( "$p
-      is a corpse.  Anything worth stealing in it??", ch, obj, NULL, TO_CHAR ); break; case
-      ITEM_FOUNTAIN: act( "$p looks like a thirst-quenching fountain.", ch, obj, NULL, TO_CHAR );
-            break;
-         case ITEM_BOARD:
-            act( "$p looks good for leaving messages on.", ch, obj, NULL, TO_CHAR );
-            break;
-         default:
-            act( "You don't see anything special about $p.", ch, obj, NULL, TO_CHAR );
-            break;
-      }
-
-
-      *
-       * Now show rough idea of the cost, etc
-       *
-
-      if( obj->first_apply != NULL )
-         act( "You are able to sense a strange power in $p.", ch, obj, NULL, TO_CHAR );
-      gold = ( obj->cost );
-      if( gold < 1000 )
-         sprintf( buf, "$p doesn't look at all valuable." );
-      else if( gold < 10000 )
-         sprintf( buf, "$p looks like it has some value to it." );
-      else if( gold < 50000 )
-         sprintf( buf, "$p might fetch an average price." );
-      else if( gold < 100000 )
-         sprintf( buf, "$p would do well at auction." );
-      else if( gold < 500000 )
-         sprintf( buf, "$p looks VERY valuable." );
-      else
-         sprintf( buf, "$p looks priceless!!" );
-      act( buf, ch, obj, NULL, TO_CHAR );*/
    return;
 }
 
@@ -3953,12 +3575,6 @@ void do_auction(CHAR_DATA *ch, char *argument)
       break;
    case ITEM_TRASH:
       send_to_char("Looks like trash.  Forget it!\n\r", ch);
-      auction_item = NULL;
-      return;
-      break;
-   case ITEM_DRINK_CON:
-   case ITEM_FOOD:
-      send_to_char("Food or Drink can't be auctioned.\n\r", ch);
       auction_item = NULL;
       return;
       break;

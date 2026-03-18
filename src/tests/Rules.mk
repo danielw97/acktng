@@ -225,9 +225,9 @@ QUEST_UNIT_TEST_OBJS = \
 	$(OBJDIR)/quests/commands.unit-test.o \
 	$(OBJDIR)/quests/crusade.unit-test.o
 
-unit-test-quest: $(OBJDIR)/tests/test_quest.o $(QUEST_UNIT_TEST_OBJS) $(OBJDIR)/const.o $(OBJDIR)/tests/test_is_fighting.o
+unit-test-quest: $(OBJDIR)/tests/test_quest.o $(QUEST_UNIT_TEST_OBJS) $(OBJDIR)/const.o $(OBJDIR)/const_exp.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-quest
-	$(CC) -Wl,--gc-sections -o tests/unit-test-quest $(OBJDIR)/tests/test_quest.o $(QUEST_UNIT_TEST_OBJS) $(OBJDIR)/const.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-quest $(OBJDIR)/tests/test_quest.o $(QUEST_UNIT_TEST_OBJS) $(OBJDIR)/const.o $(OBJDIR)/const_exp.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 $(OBJDIR)/build.unit-test.o: build.c headers/ack.h
 	$(CC) -c $(C_FLAGS) -DUNIT_TEST_BUILD -ffunction-sections -fdata-sections -o $(OBJDIR)/build.unit-test.o build.c

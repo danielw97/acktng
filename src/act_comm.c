@@ -501,9 +501,6 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
    if (IS_SET(ch->deaf, CHANNEL_HERMIT))
       send_to_char("You are hermit right now, and will not hear the response.\n\r ", ch);
 
-   if (!IS_NPC(ch) && ch->pcdata->condition[COND_DRUNK] > 10)
-      argument = slur_text(argument);
-
    switch (channel)
    {
    default:
@@ -957,9 +954,6 @@ void do_say(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!IS_NPC(ch) && ch->pcdata->condition[COND_DRUNK] > 10)
-      argument = slur_text(argument);
-
    sprintf(buf, "You say '%s$T%s'.", color_string(ch, "say"), color_string(ch, "normal"));
    act(buf, ch, NULL, argument, TO_CHAR);
    for (ppl = ch->in_room->first_person; ppl != NULL; ppl = ppl->next_in_room)
@@ -1205,9 +1199,6 @@ void do_tell(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!IS_NPC(ch) && ch->pcdata->condition[COND_DRUNK] > 10)
-      argument = slur_text(argument);
-
    sprintf(buf, "You tell $N '%s$t%s'.", color_string(ch, "tell"), color_string(ch, "normal"));
    act(buf, ch, argument, victim, TO_CHAR);
 
@@ -1250,9 +1241,6 @@ void do_reply(CHAR_DATA *ch, char *argument)
       act("$E can't hear you.", ch, 0, victim, TO_CHAR);
       return;
    }
-
-   if (!IS_NPC(ch) && ch->pcdata->condition[COND_DRUNK] > 10)
-      argument = slur_text(argument);
 
    act("You tell $N '$t'.", ch, argument, victim, TO_CHAR);
    position = victim->position;
@@ -1955,9 +1943,6 @@ void do_gtell(CHAR_DATA *ch, char *argument)
     * Note use of send_to_char, so gtell works on sleepers.
     */
 
-   if (!IS_NPC(ch) && ch->pcdata->condition[COND_DRUNK] > 10)
-      argument = slur_text(argument);
-
    sprintf(buf, "%s tells the group '%s'.\n\r", ch->name, argument);
    for (gch = first_char; gch != NULL; gch = gch->next)
    {
@@ -2108,9 +2093,6 @@ void do_tongue(CHAR_DATA *ch, char *argument)
    buf2[0] = '\0';
    buf3[0] = '\0';
 
-   if (!IS_NPC(ch) && ch->pcdata->condition[COND_DRUNK] > 10)
-      argument = slur_text(argument);
-
    for (pName = argument; *pName != '\0'; pName += length)
    {
       for (iSyl = 0; (length = strlen(syl_table[iSyl].old)) != 0; iSyl++)
@@ -2162,64 +2144,6 @@ void do_tongue(CHAR_DATA *ch, char *argument)
    return;
 }
 
-char *slur_text(char *argument)
-{
-   /*
-    * Used to slur text, if a player is DRUNK.
-    */
-
-   static char buf[MAX_STRING_LENGTH];
-   char *pName;
-   int iSyl;
-   int length;
-
-   struct syl_type
-   {
-      char *old;
-      char *new;
-   };
-
-   static const struct syl_type syl_table[] = {
-       {" ", " "}, {"th", "f"}, {"ck", "k"},
-
-       {"?", "?"}, {"!", "!"},  {":", ":"},   {")", ")"}, {"(", "("},  {";", ";"},  {"*", "*"},
-       {"-", "-"}, {".", ","},  {",", ","},
-
-       {"a", "a"}, {"b", "b"},  {"c", "see"}, {"d", "d"}, {"e", "e"},  {"f", "f"},  {"g", "g"},
-       {"h", "h"}, {"i", "i"},  {"j", "j"},   {"k", "g"}, {"l", "l"},  {"m", "m"},  {"n", "n"},
-       {"o", "o"}, {"p", "p"},  {"q", "q"},   {"r", "r"}, {"s", "ss"}, {"t", "t"},  {"u", "u"},
-       {"v", "s"}, {"w", "w"},  {"x", "x"},   {"y", "y"}, {"z", "s"},  {NULL, NULL}};
-
-   /*
-    * might be fixed now! return argument;
-    */
-
-   buf[0] = '\0';
-   for (pName = argument; *pName != '\0'; pName += length)
-   {
-      length = 1;
-
-      if (*pName == '$') /* do not modify args to act. */
-      {
-         if (*pName != '\0')
-            length++;
-         continue;
-      }
-
-      for (iSyl = 0; syl_table[iSyl].old != NULL; iSyl++)
-      {
-         if (!str_prefix(syl_table[iSyl].old, pName))
-         {
-            strcat(buf, syl_table[iSyl].new);
-            length = strlen(syl_table[iSyl].old);
-            break;
-         }
-      }
-   }
-
-   return (buf);
-}
-
 void do_whisper(CHAR_DATA *ch, char *argument)
 {
    char arg[MAX_INPUT_LENGTH];
@@ -2256,9 +2180,6 @@ void do_whisper(CHAR_DATA *ch, char *argument)
       act("$E can't hear you.", ch, 0, victim, TO_CHAR);
       return;
    }
-
-   if (!IS_NPC(ch) && ch->pcdata->condition[COND_DRUNK] > 10)
-      argument = slur_text(argument);
 
    act("You whisper to $N '$t'.", ch, argument, victim, TO_CHAR);
    position = victim->position;
@@ -2306,9 +2227,6 @@ void do_ask(CHAR_DATA *ch, char *argument)
       act("$E can't hear you.", ch, 0, victim, TO_CHAR);
       return;
    }
-
-   if (!IS_NPC(ch) && ch->pcdata->condition[COND_DRUNK] > 10)
-      argument = slur_text(argument);
 
    act("You ask $N '$t'.", ch, argument, victim, TO_CHAR);
    position = victim->position;

@@ -24,18 +24,42 @@
  *  benefitting.  We hope that you share your changes too.  What goes      *
  *  around, comes around.                                                  *
  ***************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
+
 #include "globals.h"
-#include "tables.h"
-#include "magic.h"
 
-bool spell_detect_poison(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
-{
-   (void)vo;
-   send_to_char("It doesn't look poisoned.\n\r", ch);
+const struct clan_type clan_table[MAX_CLAN] = {
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
 
-   return TRUE;
-}
+    },
+
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+
+    },
+
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+
+    },
+
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+
+    },
+
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+
+    },
+
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+
+    },
+
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+
+    },
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+
+    },
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+
+    },
+
+};

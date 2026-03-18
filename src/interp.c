@@ -56,10 +56,14 @@ bool fLogAll = FALSE;
  * CMD       - normal command (flags = 0)
  * CMD_NINJA - command that does not break ninja stance (flags = CMD_FLAG_NINJA_OK)
  */
-#define CMD(name, fun, pos, lvl, log, type, show) \
-   {name, fun, pos, lvl, log, type, show, 0}
-#define CMD_NINJA(name, fun, pos, lvl, log, type, show) \
-   {name, fun, pos, lvl, log, type, show, CMD_FLAG_NINJA_OK}
+#define CMD(name, fun, pos, lvl, log, type, show)                                                  \
+   {                                                                                               \
+      name, fun, pos, lvl, log, type, show, 0                                                      \
+   }
+#define CMD_NINJA(name, fun, pos, lvl, log, type, show)                                            \
+   {                                                                                               \
+      name, fun, pos, lvl, log, type, show, CMD_FLAG_NINJA_OK                                      \
+   }
 
 /*
  * Command table.
@@ -242,8 +246,10 @@ const struct cmd_type cmd_table[] = {
     CMD("murde", do_murde, POS_FIGHTING, 5, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_NEVER),
     CMD_NINJA("murder", do_murder, POS_FIGHTING, 5, LOG_ALWAYS, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("palmstrike", do_palmstrike, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("poison:arsenic", do_poison_arsenic, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("poison:quinine", do_poison_quinine, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("poison:arsenic", do_poison_arsenic, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+        C_SHOW_SKILL),
+    CMD("poison:quinine", do_poison_quinine, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+        C_SHOW_SKILL),
     CMD("poison:nightshade", do_poison_nightshade, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
         C_SHOW_SKILL),
     CMD("punch", do_punch, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
@@ -280,16 +286,14 @@ const struct cmd_type cmd_table[] = {
     CMD("close", do_close, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("clutch", do_clutch, POS_STANDING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("donate", do_donate, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
-    CMD("drink", do_drink, POS_RESTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("drop", do_drop, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("eat", do_eat, POS_RESTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("enter", do_enter, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
-    CMD("fill", do_fill, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("give", do_give, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("hold", do_wear, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("list", do_list, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("lock", do_lock, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
-    CMD("open", do_open, POS_STANDING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
+    CMD("open", do_open, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
 
     CMD("make", do_make, POS_DEAD, CLAN_ONLY, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("pick", do_pick, POS_RESTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
@@ -349,7 +353,8 @@ const struct cmd_type cmd_table[] = {
      */
 
     CMD("ctoggle", do_ctoggle, POS_RESTING, BOSS_ONLY, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
-    CMD("negotiate", do_negotiate, POS_RESTING, CLAN_ONLY, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
+    CMD("negotiate", do_negotiate, POS_RESTING, CLAN_ONLY, LOG_NORMAL, C_TYPE_ACTION,
+        C_SHOW_ALWAYS),
     CMD("council", do_council, POS_RESTING, 0, LOG_NORMAL, C_TYPE_MISC, C_SHOW_NEVER),
     CMD("qpspend", do_qpspend, POS_STANDING, 1, LOG_NORMAL, C_TYPE_MISC, C_SHOW_ALWAYS),
 

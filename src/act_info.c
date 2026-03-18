@@ -1387,21 +1387,6 @@ void do_look(CHAR_DATA *ch, char *argument)
 
          break;
 
-      case ITEM_DRINK_CON:
-         if (obj->value[1] <= 0)
-         {
-            send_to_char("It is empty.\n\r", ch);
-            break;
-         }
-
-         sprintf(buf, "It's %s full of a %s liquid.\n\r",
-                 obj->value[1] < obj->value[0] / 4       ? "less than"
-                 : obj->value[1] < 3 * obj->value[0] / 4 ? "about"
-                                                         : "more than",
-                 liq_table[obj->value[2]].liq_color);
-
-         send_to_char(buf, ch);
-         break;
       case ITEM_SPELL_MATRIX:
       case ITEM_CONTAINER:
       case ITEM_CORPSE_NPC:
@@ -1584,7 +1569,6 @@ void do_examine(CHAR_DATA *ch, char *argument)
       default:
          break;
 
-      case ITEM_DRINK_CON:
       case ITEM_CONTAINER:
       case ITEM_CORPSE_NPC:
       case ITEM_CORPSE_PC:
@@ -1862,13 +1846,6 @@ void do_score(CHAR_DATA *ch, char *argument)
 
       sprintf(buf, " @@WWimpy Set to @@y%d @@WHitPoints.  Page Length is @@y%d @@Wlines.",
               ch->wimpy, ch->pcdata->pagelen);
-      sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
-      send_to_char(buf2, ch);
-
-      sprintf(buf, " @@WDrunk: @@y%3s   @@WThirsty: @@y%3s   @@WHungry: @@y%3s",
-              (ch->pcdata->condition[COND_DRUNK] > 10) ? "Yes" : "No",
-              (ch->pcdata->condition[COND_THIRST] == 0) ? "Yes" : "No",
-              (ch->pcdata->condition[COND_FULL] == 0) ? "Yes" : "No");
       sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
       send_to_char(buf2, ch);
    }

@@ -69,15 +69,9 @@ bool spec_sage(CHAR_DATA *ch)
       act("$n leans forward, and rakes the fire.", ch, NULL, NULL, TO_ROOM);
       break;
    case 'C':
-      do_say(ch, "You must be hungry.  Share some food with me.");
-      spell_produce_food(skill_lookup("produce food"), 1, ch, NULL, NULL);
-      spell_produce_food(skill_lookup("produce food"), 1, ch, NULL, NULL);
-      break;
    case 'U':
-      do_get(ch, "bundle");
-      break;
    case 'V':
-      do_eat(ch, "bundle");
+      /* food-related actions removed */
       break;
    case 'X':
       act("$n smiles sadly, remembering better days.", ch, NULL, NULL, TO_ROOM);

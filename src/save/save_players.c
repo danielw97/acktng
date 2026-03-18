@@ -389,9 +389,6 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
       fprintf(fp, "GainMove      %d\n", ch->pcdata->move_from_gain);
       fprintf(fp, "RulerRank    %d\n", ch->pcdata->ruler_rank);
 
-      fprintf(fp, "Condition    %d %d %d\n", ch->pcdata->condition[0], ch->pcdata->condition[1],
-              ch->pcdata->condition[2]);
-
       fprintf(fp, "Pagelen      %d\n", ch->pcdata->pagelen);
       fprintf(fp, "Pflags       %d\n", ch->pcdata->pflags);
 
@@ -474,9 +471,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
          ch->pcdata->reincarnations[MAX_CLASS + MAX_REMORT + i] = 0;
       for (int i = 0; i < MAX_REINCARNATE; i++)
          ch->pcdata->reincarnation_data[i] = 0;
-      ch->pcdata->condition[COND_THIRST] = 48;
       ch->pcdata->pagelen = 20;
-      ch->pcdata->condition[COND_FULL] = 48;
       ch->pcdata->pkills = 0;
       ch->pcdata->pkilled = 0;
       ch->pcdata->mkills = 0;
@@ -855,14 +850,6 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             break;
          }
 
-         if (!str_cmp(word, "Condition") && !IS_NPC(ch))
-         {
-            ch->pcdata->condition[0] = fread_number(fp);
-            ch->pcdata->condition[1] = fread_number(fp);
-            ch->pcdata->condition[2] = fread_number(fp);
-            fMatch = TRUE;
-            break;
-         }
          break;
 
       case 'D':
