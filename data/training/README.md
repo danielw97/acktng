@@ -32,6 +32,33 @@ python3 generate_npc_training_data.py --model claude-haiku-4-5-20251001
 python3 generate_npc_training_data.py --seed 42
 ```
 
+## Behavioral Goals
+
+These are the failure modes that system prompting alone cannot reliably prevent
+in a base model. Every training example should reinforce these behaviors:
+
+- Speak in a medieval fantasy register; avoid modern idiom and filler phrases
+  ("absolutely!", "sounds great!", "no problem!")
+- Never respond with "I'm an AI", "I don't have information about that", or
+  equivalent out-of-character deflections
+- Keep responses to 1–3 sentences — appropriate for MUD pacing
+- Stay in persona when players ask meta or immersion-breaking questions
+- Improvise plausibly in-character rather than admitting ignorance
+- Vary response style by NPC archetype (gruff blacksmith, suspicious guard,
+  learned mage, harried innkeeper)
+- Apply a regional accent or dialect consistent with the NPC's accent tag
+
+## Iteration Workflow
+
+As the server runs, bad NPC responses from play logs are the most valuable
+training signal. Per iteration cycle:
+
+1. Collect bad NPC responses from play logs
+2. Write corrected versions (in-character, concise, correct register)
+3. Append corrections to `npc_training.jsonl`
+4. Re-run `accelerate launch -m axolotl.cli.train npc_config.yml`
+5. Re-export to GGUF and redeploy via Ollama
+
 ## Dataset Spec
 
 - **Target size:** 1500 examples
