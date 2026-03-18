@@ -891,7 +891,7 @@
      ""},
     {NORM,
      "water elemental",
-     {LEVELS_INIT, L(CLASS_SOR, 6), L(CLASS_WIZ, 6)},
+     {LEVELS_INIT, L(CLASS_SOR, 6)},
      spell_waterelem,
      TAR_IGNORE,
      POS_STANDING,
@@ -981,7 +981,7 @@
 
     {NORM,
      "fire elemental",
-     {LEVELS_INIT, L(CLASS_SOR, 11), L(CLASS_WIZ, 11)},
+     {LEVELS_INIT, L(CLASS_SOR, 11)},
      spell_fireelem,
      TAR_IGNORE,
      POS_STANDING,
@@ -1294,7 +1294,7 @@
 
     {NORM,
      "earth elemental",
-     {LEVELS_INIT, L(CLASS_SOR, 52), L(CLASS_WIZ, 52)},
+     {LEVELS_INIT, L(CLASS_SOR, 52)},
      spell_earthelem,
      TAR_IGNORE,
      POS_STANDING,
@@ -1309,7 +1309,7 @@
 
     {NORM,
      "iron golem",
-     {LEVELS_INIT, L(CLASS_SOR, 63), L(CLASS_WIZ, 63)},
+     {LEVELS_INIT, L(CLASS_WIZ, 63)},
      spell_iron_golem,
      TAR_IGNORE,
      POS_STANDING,
@@ -1324,7 +1324,7 @@
 
     {NORM,
      "diamond golem",
-     {LEVELS_INIT, L(CLASS_SOR, 77), L(CLASS_WIZ, 77)},
+     {LEVELS_INIT, L(CLASS_WIZ, 77)},
      spell_diamond_golem,
      TAR_IGNORE,
      POS_STANDING,
