@@ -1430,6 +1430,7 @@ long get_cost_to_level_remort args((CHAR_DATA * ch, int class));
 bool can_wield args((CHAR_DATA * ch, OBJ_DATA *obj, int loc));
 int get_curr_str args((CHAR_DATA * ch));
 int get_max_str args((CHAR_DATA * ch));
+int get_max_stat args((CHAR_DATA * ch, int apply_type));
 int get_curr_int args((CHAR_DATA * ch));
 int get_max_int args((CHAR_DATA * ch));
 int get_curr_wis args((CHAR_DATA * ch));
