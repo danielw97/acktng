@@ -40,10 +40,18 @@ struct static_quest_template_data
    char *completion_message;
 };
 
+/* In unit-test builds, expose internal symbols so the test file can implement
+ * accessor helpers directly; otherwise keep everything file-scoped static. */
+#ifdef UNIT_TEST_QUEST
+#define QUEST_INTERNAL
+#else
+#define QUEST_INTERNAL static
+#endif
+
 #define QUEST_STATIC_DIR "../quests"
 
-static STATIC_PROP_TEMPLATE *static_quest_table = NULL;
-static int static_quest_count = 0;
+QUEST_INTERNAL STATIC_PROP_TEMPLATE *static_quest_table = NULL;
+QUEST_INTERNAL int static_quest_count = 0;
 
 static int quest_cartography_area_room_count(const AREA_DATA *area)
 {
@@ -317,7 +325,7 @@ void quest_load_static_templates(void)
    log_string(buf);
 }
 
-static const STATIC_PROP_TEMPLATE *find_static_quest_template(int static_id)
+QUEST_INTERNAL const STATIC_PROP_TEMPLATE *find_static_quest_template(int static_id)
 {
    int i;
 
@@ -328,7 +336,7 @@ static const STATIC_PROP_TEMPLATE *find_static_quest_template(int static_id)
    return NULL;
 }
 
-static int canonical_postmaster_vnum(int vnum)
+QUEST_INTERNAL int canonical_postmaster_vnum(int vnum)
 {
    switch (vnum)
    {
@@ -380,48 +388,6 @@ static CHAR_DATA *find_npc_by_canonical_vnum(CHAR_DATA *ch, int vnum)
    return NULL;
 }
 
-static int calc_static_quest_exp(int max_level, bool is_boss, bool is_cartography);
-
-#ifdef UNIT_TEST_QUEST
-int quest_unit_static_count(void)
-{
-   return static_quest_count;
-}
-
-const char *quest_unit_static_title(int static_id)
-{
-   const STATIC_PROP_TEMPLATE *tpl = find_static_quest_template(static_id);
-   return tpl != NULL ? tpl->title : NULL;
-}
-
-const char *quest_unit_static_accept_message(int static_id)
-{
-   const STATIC_PROP_TEMPLATE *tpl = find_static_quest_template(static_id);
-   return tpl != NULL ? tpl->accept_message : NULL;
-}
-
-const char *quest_unit_static_completion_message(int static_id)
-{
-   const STATIC_PROP_TEMPLATE *tpl = find_static_quest_template(static_id);
-   return tpl != NULL ? tpl->completion_message : NULL;
-}
-
-int quest_unit_static_max_level(int static_id)
-{
-   const STATIC_PROP_TEMPLATE *tpl = find_static_quest_template(static_id);
-   return tpl != NULL ? tpl->max_level : -1;
-}
-
-int quest_unit_canonical_postmaster_vnum(int vnum)
-{
-   return canonical_postmaster_vnum(vnum);
-}
-
-int quest_unit_calc_static_exp(int max_level, int is_boss, int is_cartography)
-{
-   return calc_static_quest_exp(max_level, is_boss ? TRUE : FALSE, is_cartography ? TRUE : FALSE);
-}
-#endif
 
 static bool static_quest_prerequisite_met(CHAR_DATA *ch, const STATIC_PROP_TEMPLATE *tpl);
 static bool static_reward_item_is_valid(const STATIC_PROP_TEMPLATE *tpl);
@@ -481,14 +447,9 @@ static int quest_exp(CHAR_DATA *ch)
    if (ch == NULL)
       return 0;
 
-   /*
-    * Match crusade kill EXP behavior more closely:
-    * - use mob_base for the effective pseudo-level
-    * - apply the 150-250% band at its midpoint (200%) for deterministic rewards
-    * - apply adept reduction and happy hour bonus
-    */
+   /* Reward 3x the exp for killing one mob at the player's effective level. */
    lvl = UMAX(1, UMIN(MAX_MOB_LEVEL - 1, get_psuedo_level(ch)));
-   exp = (int)((exp_table[lvl].mob_base * 200L) / 100L);
+   exp = (int)(exp_table[lvl].mob_base * 3L);
 
    if (is_adept(ch))
       exp /= 1000;
@@ -506,7 +467,7 @@ static int quest_exp(CHAR_DATA *ch)
  * Boss quests (any target has ACT_BOSS) get double; cartography quests get 10x.
  * Character modifiers (adept, happy hour) are applied by the caller.
  */
-static int calc_static_quest_exp(int max_level, bool is_boss, bool is_cartography)
+QUEST_INTERNAL int calc_static_quest_exp(int max_level, bool is_boss, bool is_cartography)
 {
    int lvl = UMAX(0, UMIN(MAX_MOB_LEVEL - 1, max_level));
    int exp = (int)(exp_table[lvl].mob_base * 3L);

@@ -5,6 +5,7 @@
 #include <stdarg.h>
 #include <string.h>
 #include "globals.h"
+#include "quest_unit.h"
 
 time_t current_time;
 
@@ -14,13 +15,48 @@ void quest_room_notify(CHAR_DATA *ch, ROOM_INDEX_DATA *room);
 void clear_quest(CHAR_DATA *ch);
 void quest_cancel(CHAR_DATA *ch, int slot);
 void quest_load_static_templates(void);
-int quest_unit_static_count(void);
-const char *quest_unit_static_title(int static_id);
-const char *quest_unit_static_accept_message(int static_id);
-const char *quest_unit_static_completion_message(int static_id);
-int quest_unit_static_max_level(int static_id);
-int quest_unit_canonical_postmaster_vnum(int vnum);
-int quest_unit_calc_static_exp(int max_level, int is_boss, int is_cartography);
+
+/* Accessor helpers implemented here using the internals exposed by
+ * quest_unit.h / QUEST_INTERNAL in quest.c. */
+int quest_unit_static_count(void)
+{
+   return static_quest_count;
+}
+
+const char *quest_unit_static_title(int static_id)
+{
+   const STATIC_PROP_TEMPLATE *tpl = find_static_quest_template(static_id);
+   return tpl != NULL ? tpl->title : NULL;
+}
+
+const char *quest_unit_static_accept_message(int static_id)
+{
+   const STATIC_PROP_TEMPLATE *tpl = find_static_quest_template(static_id);
+   return tpl != NULL ? tpl->accept_message : NULL;
+}
+
+const char *quest_unit_static_completion_message(int static_id)
+{
+   const STATIC_PROP_TEMPLATE *tpl = find_static_quest_template(static_id);
+   return tpl != NULL ? tpl->completion_message : NULL;
+}
+
+int quest_unit_static_max_level(int static_id)
+{
+   const STATIC_PROP_TEMPLATE *tpl = find_static_quest_template(static_id);
+   return tpl != NULL ? tpl->max_level : -1;
+}
+
+int quest_unit_canonical_postmaster_vnum(int vnum)
+{
+   return canonical_postmaster_vnum(vnum);
+}
+
+int quest_unit_calc_static_exp(int max_level, int is_boss, int is_cartography)
+{
+   return calc_static_quest_exp(max_level, is_boss ? TRUE : FALSE,
+                                is_cartography ? TRUE : FALSE);
+}
 
 char *_str_dup(const char *str, const char *func)
 {
@@ -440,6 +476,17 @@ static void test_static_quest_exp_calculation(void)
    assert(quest_unit_calc_static_exp(20, 0, 1) == base * 10); /* cartography: 10x */
 }
 
+static void test_dynamic_quest_exp_uses_3x_mob_base(void)
+{
+   /* Dynamic quest exp = 3 * exp_table[pseudo_level].mob_base.
+    * Verify that quest templates loaded from files without an explicit
+    * reward_exp will use the same 3x multiplier as static quests. */
+   /* exp_table[20].mob_base == 5800; 3x = 17400 */
+   assert(quest_unit_calc_static_exp(20, 0, 0) == 3 * 5800);
+   /* exp_table[30].mob_base == 13000; 3x = 39000 */
+   assert(quest_unit_calc_static_exp(30, 0, 0) == 3 * 13000);
+}
+
 int main(void)
 {
    test_extracts_and_saves_when_target_matches();
@@ -457,6 +504,7 @@ int main(void)
    test_postmaster_aliases_map_to_active_city_vnums();
    test_loads_saltglass_and_scorching_sands_quests();
    test_static_quest_exp_calculation();
+   test_dynamic_quest_exp_uses_3x_mob_base();
 
    puts("test_quest: all tests passed");
    return 0;
