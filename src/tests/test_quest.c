@@ -407,6 +407,29 @@ static void test_postmaster_aliases_map_to_active_city_vnums(void)
    assert(quest_unit_canonical_postmaster_vnum(931) == 931);
 }
 
+static void test_loads_saltglass_and_scorching_sands_quests(void)
+{
+   quest_load_static_templates();
+
+   assert(quest_unit_static_count() >= 127);
+
+   assert(strcmp(quest_unit_static_title(105), "Saltglass Reach cartography survey: Mirror Flats") == 0);
+   assert(strstr(quest_unit_static_accept_message(105), "Mirror Flats") != NULL);
+   assert(strstr(quest_unit_static_completion_message(105), "cartographic record") != NULL);
+
+   assert(strcmp(quest_unit_static_title(106), "Saltglass Reach cartography survey: Glasswind to Tidemouth") == 0);
+   assert(strstr(quest_unit_static_accept_message(106), "Glasswind Belt") != NULL);
+
+   assert(strcmp(quest_unit_static_title(119), "Tidemouth jurisdiction enforcement sweep") == 0);
+   assert(strstr(quest_unit_static_completion_message(119), "Tidemouth Dunes") != NULL);
+
+   assert(strcmp(quest_unit_static_title(120), "Scorching Sands cartography survey: Three Spines to Cinder Gate") == 0);
+   assert(strstr(quest_unit_static_accept_message(120), "Three Spines") != NULL);
+
+   assert(strcmp(quest_unit_static_title(126), "Witness-stick cohort verification") == 0);
+   assert(strstr(quest_unit_static_completion_message(126), "witness elder") != NULL);
+}
+
 int main(void)
 {
    test_extracts_and_saves_when_target_matches();
@@ -422,6 +445,7 @@ int main(void)
    test_loads_static_quests_with_messages_from_files();
    test_loads_umbra_heartspire_static_chain();
    test_postmaster_aliases_map_to_active_city_vnums();
+   test_loads_saltglass_and_scorching_sands_quests();
 
    puts("test_quest: all tests passed");
    return 0;
