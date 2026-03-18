@@ -1,0 +1,24 @@
+level -1
+keywords conceal
+---
+*******************************************************************************
+       Name: Conceal
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 0
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage:
+   Wear-Off: !Conceal!
+Acquisition:
+   - Cipher: level 8
+Description:
+   Conceal hides a carried object so it cannot be seen by other players
+   examining the Cipher's inventory. The concealed item is marked with an
+   affect that lasts 24 beats. Other players using the look or inventory
+   command on the Cipher will not see the concealed item. The object must
+   be in the Cipher's inventory. This is a passive skill learned at low
+   level and cannot be trained higher.
+   Syntax: conceal <object>
+*******************************************************************************

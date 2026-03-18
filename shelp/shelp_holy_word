@@ -1,0 +1,24 @@
+level -1
+keywords holy word
+---
+*******************************************************************************
+       Name: Holy Word
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 50
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: holy word
+   Wear-Off: !Holy Word!
+Acquisition:
+   - Cleric: level 60
+Description:
+   Holy Word invokes a sacred utterance of divine power that radiates
+   holy energy throughout the room. Deals holy elemental damage
+   (4d(level/4)) to all enemies present. Saving throws apply for reduced
+   damage. Grouped allies are unharmed. The Cleric's premier area-of-
+   effect offensive spell, most devastating when used against rooms filled
+   with evil-aligned NPCs. Reserved for high-level Clerics who have mastered
+   divine combat.
+*******************************************************************************
