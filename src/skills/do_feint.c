@@ -24,57 +24,50 @@
  *  benefitting.  We hope that you share your changes too.  What goes      *
  *  around, comes around.                                                  *
  ***************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "globals.h"
-#include "tables.h"
 #include "magic.h"
+#include "skills.h"
 
-bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+void do_feint(CHAR_DATA *ch, char *argument)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   CHAR_DATA *victim;
+   AFFECT_DATA af;
+   int level;
 
-   /* Strip negative affects */
-   if (is_affected(victim, gsn_blindness))
+   if (IS_NPC(ch))
+      return;
+
+   if (!can_use_skill(ch, gsn_feint))
    {
-      affect_strip(victim, gsn_blindness);
-      REMOVE_BIT(victim->affected_by, AFF_BLIND);
+      send_to_char("You don't know how to use this skill!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_curse))
+   if (!is_fighting(ch) || (victim = ch->fighting) == NULL)
    {
-      affect_strip(victim, gsn_curse);
-      REMOVE_BIT(victim->affected_by, AFF_CURSE);
+      send_to_char("You must be fighting someone!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_poison))
-   {
-      affect_strip(victim, gsn_poison);
-      REMOVE_BIT(victim->affected_by, AFF_POISON);
-   }
+   level = ch->class_level[CLASS_PUG];
 
-   if (is_affected(victim, gsn_sleep))
-   {
-      affect_strip(victim, gsn_sleep);
-      REMOVE_BIT(victim->affected_by, AFF_SLEEP);
-   }
+   /* Sacrifice this attack round */
+   WAIT_STATE(ch, PULSE_VIOLENCE);
 
-   /* Restore some hit points */
-   victim->hit = UMIN(victim->hit + level, get_max_hp(victim));
+   raise_skill(ch, gsn_feint);
 
-   if (ch == victim)
-   {
-      send_to_char("Divine light washes over you, restoring your body and spirit!\n\r", victim);
-   }
-   else
-   {
-      act("Divine light washes over $n, restoring $m completely!", victim, NULL, NULL, TO_ROOM);
-      act("Divine light washes over you, restoring your body and spirit!", victim, NULL, NULL,
-          TO_CHAR);
-      send_to_char("Ok.\n\r", ch);
-   }
+   /* Apply next-round combat bonuses to caster */
+   af.type = gsn_feint;
+   af.duration = 2;
+   af.location = APPLY_HITROLL;
+   af.modifier = level / 4 + 3;
+   af.bitvector = 0;
+   affect_to_char(ch, &af);
 
-   return TRUE;
+   af.location = APPLY_AC;
+   af.modifier = -(level / 5);
+   affect_to_char(ch, &af);
+
+   act("You feint, drawing $N's guard!", ch, NULL, victim, TO_CHAR);
+   act("$n feints, creating an opening!", ch, NULL, NULL, TO_ROOM);
 }

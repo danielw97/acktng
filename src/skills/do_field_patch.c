@@ -24,57 +24,59 @@
  *  benefitting.  We hope that you share your changes too.  What goes      *
  *  around, comes around.                                                  *
  ***************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "globals.h"
-#include "tables.h"
 #include "magic.h"
+#include "skills.h"
 
-bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+void do_field_patch(CHAR_DATA *ch, char *argument)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   char arg[MSL];
+   CHAR_DATA *victim;
+   int heal_amount;
 
-   /* Strip negative affects */
-   if (is_affected(victim, gsn_blindness))
+   if (IS_NPC(ch))
+      return;
+
+   if (!can_use_skill(ch, gsn_field_patch))
    {
-      affect_strip(victim, gsn_blindness);
-      REMOVE_BIT(victim->affected_by, AFF_BLIND);
+      send_to_char("You don't know how to use this skill!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_curse))
+   if (is_fighting(ch))
    {
-      affect_strip(victim, gsn_curse);
-      REMOVE_BIT(victim->affected_by, AFF_CURSE);
+      send_to_char("You cannot apply field patches while fighting!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_poison))
-   {
-      affect_strip(victim, gsn_poison);
-      REMOVE_BIT(victim->affected_by, AFF_POISON);
-   }
+   one_argument(argument, arg);
 
-   if (is_affected(victim, gsn_sleep))
+   if (arg[0] == '\0')
    {
-      affect_strip(victim, gsn_sleep);
-      REMOVE_BIT(victim->affected_by, AFF_SLEEP);
-   }
-
-   /* Restore some hit points */
-   victim->hit = UMIN(victim->hit + level, get_max_hp(victim));
-
-   if (ch == victim)
-   {
-      send_to_char("Divine light washes over you, restoring your body and spirit!\n\r", victim);
+      victim = ch;
    }
    else
    {
-      act("Divine light washes over $n, restoring $m completely!", victim, NULL, NULL, TO_ROOM);
-      act("Divine light washes over you, restoring your body and spirit!", victim, NULL, NULL,
-          TO_CHAR);
-      send_to_char("Ok.\n\r", ch);
+      if ((victim = get_char_room(ch, arg)) == NULL)
+      {
+         send_to_char("They aren't here.\n\r", ch);
+         return;
+      }
    }
 
-   return TRUE;
+   WAIT_STATE(ch, 60);
+   raise_skill(ch, gsn_field_patch);
+
+   heal_amount = dice(3, ch->class_level[CLASS_WAR]) + 10;
+   victim->hit = UMIN(victim->hit + heal_amount, victim->max_hit);
+
+   if (victim == ch)
+   {
+      send_to_char("You quickly patch your own wounds.\n\r", ch);
+   }
+   else
+   {
+      act("You quickly patch $N's wounds.", ch, NULL, victim, TO_CHAR);
+      act("$n patches your wounds.", ch, NULL, victim, TO_VICT);
+   }
 }

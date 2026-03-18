@@ -32,49 +32,21 @@
 #include "tables.h"
 #include "magic.h"
 
-bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+bool spell_exorcism(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *victim = (CHAR_DATA *)vo;
+   int dam;
 
-   /* Strip negative affects */
-   if (is_affected(victim, gsn_blindness))
-   {
-      affect_strip(victim, gsn_blindness);
-      REMOVE_BIT(victim->affected_by, AFF_BLIND);
-   }
+   dam = dice(3, level / 3);
 
-   if (is_affected(victim, gsn_curse))
-   {
-      affect_strip(victim, gsn_curse);
-      REMOVE_BIT(victim->affected_by, AFF_CURSE);
-   }
+   /* Triple damage against evil targets */
+   if (victim->alignment < -200)
+      dam *= 3;
 
-   if (is_affected(victim, gsn_poison))
-   {
-      affect_strip(victim, gsn_poison);
-      REMOVE_BIT(victim->affected_by, AFF_POISON);
-   }
+   act("You call upon divine power to exorcise $N!", ch, NULL, victim, TO_CHAR);
+   act("$n calls upon divine power to exorcise $N!", ch, NULL, victim, TO_NOTVICT);
+   act("$n calls upon divine power to exorcise you!", ch, NULL, victim, TO_VICT);
 
-   if (is_affected(victim, gsn_sleep))
-   {
-      affect_strip(victim, gsn_sleep);
-      REMOVE_BIT(victim->affected_by, AFF_SLEEP);
-   }
-
-   /* Restore some hit points */
-   victim->hit = UMIN(victim->hit + level, get_max_hp(victim));
-
-   if (ch == victim)
-   {
-      send_to_char("Divine light washes over you, restoring your body and spirit!\n\r", victim);
-   }
-   else
-   {
-      act("Divine light washes over $n, restoring $m completely!", victim, NULL, NULL, TO_ROOM);
-      act("Divine light washes over you, restoring your body and spirit!", victim, NULL, NULL,
-          TO_CHAR);
-      send_to_char("Ok.\n\r", ch);
-   }
-
+   sp_damage(obj, ch, victim, dam, ELEMENT_HOLY, sn, TRUE);
    return TRUE;
 }

@@ -24,57 +24,48 @@
  *  benefitting.  We hope that you share your changes too.  What goes      *
  *  around, comes around.                                                  *
  ***************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "globals.h"
-#include "tables.h"
 #include "magic.h"
+#include "skills.h"
 
-bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+void do_leg_sweep(CHAR_DATA *ch, char *argument)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   CHAR_DATA *victim;
+   AFFECT_DATA af;
 
-   /* Strip negative affects */
-   if (is_affected(victim, gsn_blindness))
+   if (IS_NPC(ch))
+      return;
+
+   if (!can_use_skill(ch, gsn_leg_sweep))
    {
-      affect_strip(victim, gsn_blindness);
-      REMOVE_BIT(victim->affected_by, AFF_BLIND);
+      send_to_char("You don't know how to use this skill!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_curse))
+   if (!is_fighting(ch) || (victim = ch->fighting) == NULL)
    {
-      affect_strip(victim, gsn_curse);
-      REMOVE_BIT(victim->affected_by, AFF_CURSE);
+      send_to_char("You must be fighting someone!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_poison))
-   {
-      affect_strip(victim, gsn_poison);
-      REMOVE_BIT(victim->affected_by, AFF_POISON);
-   }
+   WAIT_STATE(ch, skill_table[gsn_leg_sweep].beats);
+   raise_skill(ch, gsn_leg_sweep);
 
-   if (is_affected(victim, gsn_sleep))
-   {
-      affect_strip(victim, gsn_sleep);
-      REMOVE_BIT(victim->affected_by, AFF_SLEEP);
-   }
+   /* Apply AC debuff (positive = worse AC, "prone") to victim */
+   af.type = gsn_leg_sweep;
+   af.duration = 2;
+   af.location = APPLY_AC;
+   af.modifier = ch->level / 4;
+   af.bitvector = 0;
+   affect_to_char(victim, &af);
 
-   /* Restore some hit points */
-   victim->hit = UMIN(victim->hit + level, get_max_hp(victim));
+   /* Victim cannot attack for 1 round */
+   WAIT_STATE(victim, PULSE_VIOLENCE);
 
-   if (ch == victim)
-   {
-      send_to_char("Divine light washes over you, restoring your body and spirit!\n\r", victim);
-   }
-   else
-   {
-      act("Divine light washes over $n, restoring $m completely!", victim, NULL, NULL, TO_ROOM);
-      act("Divine light washes over you, restoring your body and spirit!", victim, NULL, NULL,
-          TO_CHAR);
-      send_to_char("Ok.\n\r", ch);
-   }
+   /* Deal physical damage */
+   damage(ch, victim, dice(2, ch->level / 4 + 1), gsn_leg_sweep);
 
-   return TRUE;
+   act("You sweep $N's legs out from under them!", ch, NULL, victim, TO_CHAR);
+   act("$n sweeps $N's legs out from under them!", ch, NULL, victim, TO_NOTVICT);
+   act("$n sweeps your legs out from under you!", ch, NULL, victim, TO_VICT);
 }

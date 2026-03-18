@@ -24,57 +24,76 @@
  *  benefitting.  We hope that you share your changes too.  What goes      *
  *  around, comes around.                                                  *
  ***************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "globals.h"
-#include "tables.h"
 #include "magic.h"
+#include "skills.h"
 
-bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+void do_garrote(CHAR_DATA *ch, char *argument)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   char arg[MSL];
+   CHAR_DATA *victim;
+   AFFECT_DATA af;
 
-   /* Strip negative affects */
-   if (is_affected(victim, gsn_blindness))
+   if (IS_NPC(ch))
+      return;
+
+   if (!can_use_skill(ch, gsn_garrote))
    {
-      affect_strip(victim, gsn_blindness);
-      REMOVE_BIT(victim->affected_by, AFF_BLIND);
+      send_to_char("You don't know how to use this skill!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_curse))
+   if (!IS_AFFECTED(ch, AFF_HIDE) && !IS_AFFECTED(ch, AFF_SNEAK))
    {
-      affect_strip(victim, gsn_curse);
-      REMOVE_BIT(victim->affected_by, AFF_CURSE);
+      send_to_char("You must be hiding to garrote someone!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_poison))
+   one_argument(argument, arg);
+
+   if (arg[0] == '\0')
    {
-      affect_strip(victim, gsn_poison);
-      REMOVE_BIT(victim->affected_by, AFF_POISON);
+      send_to_char("Garrote whom?\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_sleep))
+   if ((victim = get_char_room(ch, arg)) == NULL)
    {
-      affect_strip(victim, gsn_sleep);
-      REMOVE_BIT(victim->affected_by, AFF_SLEEP);
+      send_to_char("They aren't here.\n\r", ch);
+      return;
    }
 
-   /* Restore some hit points */
-   victim->hit = UMIN(victim->hit + level, get_max_hp(victim));
-
-   if (ch == victim)
+   if (victim == ch)
    {
-      send_to_char("Divine light washes over you, restoring your body and spirit!\n\r", victim);
-   }
-   else
-   {
-      act("Divine light washes over $n, restoring $m completely!", victim, NULL, NULL, TO_ROOM);
-      act("Divine light washes over you, restoring your body and spirit!", victim, NULL, NULL,
-          TO_CHAR);
-      send_to_char("Ok.\n\r", ch);
+      send_to_char("You cannot garrote yourself!\n\r", ch);
+      return;
    }
 
-   return TRUE;
+   if (is_safe(ch, victim))
+      return;
+
+   /* Break hide */
+   REMOVE_BIT(ch->affected_by, AFF_HIDE);
+
+   WAIT_STATE(ch, skill_table[gsn_garrote].beats);
+   raise_skill(ch, gsn_garrote);
+
+   check_killer(ch, victim);
+
+   /* Apply a hold affect to the victim */
+   af.type = gsn_garrote;
+   af.duration = 2;
+   af.location = APPLY_NONE;
+   af.modifier = 0;
+   af.bitvector = AFF_HOLD;
+   affect_to_char(victim, &af);
+
+   /* Deal damage */
+   damage(ch, victim, dice(2, ch->class_level[CLASS_CIP] / 3 + 1), gsn_garrote);
+
+   act("You slip a garrote around $N's throat!", ch, NULL, victim, TO_CHAR);
+   act("$n slips a garrote around $N's throat!", ch, NULL, victim, TO_NOTVICT);
+   act("$n slips a garrote around your throat!", ch, NULL, victim, TO_VICT);
+
+   set_fighting(ch, victim, TRUE);
 }

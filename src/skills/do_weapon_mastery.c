@@ -24,57 +24,45 @@
  *  benefitting.  We hope that you share your changes too.  What goes      *
  *  around, comes around.                                                  *
  ***************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "globals.h"
-#include "tables.h"
 #include "magic.h"
+#include "skills.h"
 
-bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+void do_weapon_mastery(CHAR_DATA *ch, char *argument)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   AFFECT_DATA af;
+   int level;
 
-   /* Strip negative affects */
-   if (is_affected(victim, gsn_blindness))
+   if (IS_NPC(ch))
+      return;
+
+   if (!can_use_skill(ch, gsn_weapon_mastery))
    {
-      affect_strip(victim, gsn_blindness);
-      REMOVE_BIT(victim->affected_by, AFF_BLIND);
+      send_to_char("You don't know how to use this skill!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_curse))
+   if (is_affected(ch, gsn_weapon_mastery))
    {
-      affect_strip(victim, gsn_curse);
-      REMOVE_BIT(victim->affected_by, AFF_CURSE);
+      send_to_char("Your weapon mastery is already honed.\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_poison))
-   {
-      affect_strip(victim, gsn_poison);
-      REMOVE_BIT(victim->affected_by, AFF_POISON);
-   }
+   level = ch->class_level[CLASS_WAR];
 
-   if (is_affected(victim, gsn_sleep))
-   {
-      affect_strip(victim, gsn_sleep);
-      REMOVE_BIT(victim->affected_by, AFF_SLEEP);
-   }
+   WAIT_STATE(ch, skill_table[gsn_weapon_mastery].beats);
+   raise_skill(ch, gsn_weapon_mastery);
 
-   /* Restore some hit points */
-   victim->hit = UMIN(victim->hit + level, get_max_hp(victim));
+   af.type = gsn_weapon_mastery;
+   af.duration = -1;
+   af.location = APPLY_HITROLL;
+   af.modifier = level / 8 + 2;
+   af.bitvector = 0;
+   affect_to_char(ch, &af);
 
-   if (ch == victim)
-   {
-      send_to_char("Divine light washes over you, restoring your body and spirit!\n\r", victim);
-   }
-   else
-   {
-      act("Divine light washes over $n, restoring $m completely!", victim, NULL, NULL, TO_ROOM);
-      act("Divine light washes over you, restoring your body and spirit!", victim, NULL, NULL,
-          TO_CHAR);
-      send_to_char("Ok.\n\r", ch);
-   }
+   af.location = APPLY_DAMROLL;
+   af.modifier = level / 12 + 1;
+   affect_to_char(ch, &af);
 
-   return TRUE;
+   send_to_char("Your weapon mastery sharpens your combat instincts.\n\r", ch);
 }

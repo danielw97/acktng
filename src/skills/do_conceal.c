@@ -24,57 +24,52 @@
  *  benefitting.  We hope that you share your changes too.  What goes      *
  *  around, comes around.                                                  *
  ***************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "globals.h"
-#include "tables.h"
 #include "magic.h"
+#include "skills.h"
 
-bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+void do_conceal(CHAR_DATA *ch, char *argument)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   char arg[MSL];
+   OBJ_DATA *obj;
+   AFFECT_DATA af;
 
-   /* Strip negative affects */
-   if (is_affected(victim, gsn_blindness))
+   if (IS_NPC(ch))
+      return;
+
+   if (!can_use_skill(ch, gsn_conceal))
    {
-      affect_strip(victim, gsn_blindness);
-      REMOVE_BIT(victim->affected_by, AFF_BLIND);
+      send_to_char("You don't know how to use this skill!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_curse))
+   one_argument(argument, arg);
+
+   if (arg[0] == '\0')
    {
-      affect_strip(victim, gsn_curse);
-      REMOVE_BIT(victim->affected_by, AFF_CURSE);
+      send_to_char("Conceal what object?\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_poison))
+   if ((obj = get_obj_carry(ch, arg)) == NULL)
    {
-      affect_strip(victim, gsn_poison);
-      REMOVE_BIT(victim->affected_by, AFF_POISON);
+      send_to_char("You don't have that item.\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_sleep))
+   WAIT_STATE(ch, skill_table[gsn_conceal].beats);
+   raise_skill(ch, gsn_conceal);
+
+   /* Apply a concealment marker to the player */
+   if (!is_affected(ch, gsn_conceal))
    {
-      affect_strip(victim, gsn_sleep);
-      REMOVE_BIT(victim->affected_by, AFF_SLEEP);
+      af.type = gsn_conceal;
+      af.duration = 24;
+      af.location = APPLY_NONE;
+      af.modifier = 0;
+      af.bitvector = 0;
+      affect_to_char(ch, &af);
    }
 
-   /* Restore some hit points */
-   victim->hit = UMIN(victim->hit + level, get_max_hp(victim));
-
-   if (ch == victim)
-   {
-      send_to_char("Divine light washes over you, restoring your body and spirit!\n\r", victim);
-   }
-   else
-   {
-      act("Divine light washes over $n, restoring $m completely!", victim, NULL, NULL, TO_ROOM);
-      act("Divine light washes over you, restoring your body and spirit!", victim, NULL, NULL,
-          TO_CHAR);
-      send_to_char("Ok.\n\r", ch);
-   }
-
-   return TRUE;
+   act("You carefully conceal $p on your person.", ch, obj, NULL, TO_CHAR);
 }

@@ -24,57 +24,45 @@
  *  benefitting.  We hope that you share your changes too.  What goes      *
  *  around, comes around.                                                  *
  ***************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "globals.h"
-#include "tables.h"
 #include "magic.h"
+#include "skills.h"
 
-bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+void do_choke_hold(CHAR_DATA *ch, char *argument)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   CHAR_DATA *victim;
+   AFFECT_DATA af;
 
-   /* Strip negative affects */
-   if (is_affected(victim, gsn_blindness))
+   if (IS_NPC(ch))
+      return;
+
+   if (!can_use_skill(ch, gsn_choke_hold))
    {
-      affect_strip(victim, gsn_blindness);
-      REMOVE_BIT(victim->affected_by, AFF_BLIND);
+      send_to_char("You don't know how to use this skill!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_curse))
+   if (!is_fighting(ch) || (victim = ch->fighting) == NULL)
    {
-      affect_strip(victim, gsn_curse);
-      REMOVE_BIT(victim->affected_by, AFF_CURSE);
+      send_to_char("You must be fighting someone!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_poison))
-   {
-      affect_strip(victim, gsn_poison);
-      REMOVE_BIT(victim->affected_by, AFF_POISON);
-   }
+   WAIT_STATE(ch, skill_table[gsn_choke_hold].beats);
+   raise_skill(ch, gsn_choke_hold);
 
-   if (is_affected(victim, gsn_sleep))
-   {
-      affect_strip(victim, gsn_sleep);
-      REMOVE_BIT(victim->affected_by, AFF_SLEEP);
-   }
+   /* Apply a brief incapacitating affect to the victim */
+   af.type = gsn_choke_hold;
+   af.duration = 2;
+   af.location = APPLY_NONE;
+   af.modifier = 0;
+   af.bitvector = AFF_SLEEP;
+   affect_to_char(victim, &af);
 
-   /* Restore some hit points */
-   victim->hit = UMIN(victim->hit + level, get_max_hp(victim));
+   /* Deal small damage */
+   damage(ch, victim, dice(1, ch->class_level[CLASS_PUG] / 4 + 1), gsn_choke_hold);
 
-   if (ch == victim)
-   {
-      send_to_char("Divine light washes over you, restoring your body and spirit!\n\r", victim);
-   }
-   else
-   {
-      act("Divine light washes over $n, restoring $m completely!", victim, NULL, NULL, TO_ROOM);
-      act("Divine light washes over you, restoring your body and spirit!", victim, NULL, NULL,
-          TO_CHAR);
-      send_to_char("Ok.\n\r", ch);
-   }
-
-   return TRUE;
+   act("You seize $N's throat in an iron grip!", ch, NULL, victim, TO_CHAR);
+   act("$n seizes $N's throat in an iron grip!", ch, NULL, victim, TO_NOTVICT);
+   act("$n seizes your throat in an iron grip!", ch, NULL, victim, TO_VICT);
 }

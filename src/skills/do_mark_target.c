@@ -24,57 +24,67 @@
  *  benefitting.  We hope that you share your changes too.  What goes      *
  *  around, comes around.                                                  *
  ***************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "globals.h"
-#include "tables.h"
 #include "magic.h"
+#include "skills.h"
 
-bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+void do_mark_target(CHAR_DATA *ch, char *argument)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   char arg[MSL];
+   CHAR_DATA *victim;
+   AFFECT_DATA af;
 
-   /* Strip negative affects */
-   if (is_affected(victim, gsn_blindness))
+   if (IS_NPC(ch))
+      return;
+
+   if (!can_use_skill(ch, gsn_mark_target))
    {
-      affect_strip(victim, gsn_blindness);
-      REMOVE_BIT(victim->affected_by, AFF_BLIND);
+      send_to_char("You don't know how to use this skill!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_curse))
+   one_argument(argument, arg);
+
+   if (arg[0] == '\0')
    {
-      affect_strip(victim, gsn_curse);
-      REMOVE_BIT(victim->affected_by, AFF_CURSE);
+      send_to_char("Mark whom as your target?\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_poison))
+   if ((victim = get_char_room(ch, arg)) == NULL)
    {
-      affect_strip(victim, gsn_poison);
-      REMOVE_BIT(victim->affected_by, AFF_POISON);
+      send_to_char("They aren't here.\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_sleep))
+   if (victim == ch)
    {
-      affect_strip(victim, gsn_sleep);
-      REMOVE_BIT(victim->affected_by, AFF_SLEEP);
+      send_to_char("You cannot mark yourself as a target.\n\r", ch);
+      return;
    }
 
-   /* Restore some hit points */
-   victim->hit = UMIN(victim->hit + level, get_max_hp(victim));
+   /* Strip old mark if present */
+   if (is_affected(ch, gsn_mark_target))
+      affect_strip(ch, gsn_mark_target);
 
-   if (ch == victim)
-   {
-      send_to_char("Divine light washes over you, restoring your body and spirit!\n\r", victim);
-   }
-   else
-   {
-      act("Divine light washes over $n, restoring $m completely!", victim, NULL, NULL, TO_ROOM);
-      act("Divine light washes over you, restoring your body and spirit!", victim, NULL, NULL,
-          TO_CHAR);
-      send_to_char("Ok.\n\r", ch);
-   }
+   WAIT_STATE(ch, skill_table[gsn_mark_target].beats);
+   raise_skill(ch, gsn_mark_target);
 
-   return TRUE;
+   /* Apply hitroll bonus to caster */
+   af.type = gsn_mark_target;
+   af.duration = 10;
+   af.location = APPLY_HITROLL;
+   af.modifier = ch->class_level[CLASS_CIP] / 5;
+   af.bitvector = 0;
+   affect_to_char(ch, &af);
+
+   /* Apply a marker affect to the target */
+   af.type = gsn_mark_target;
+   af.duration = 10;
+   af.location = APPLY_NONE;
+   af.modifier = 0;
+   af.bitvector = 0;
+   affect_to_char(victim, &af);
+
+   act("You mark $N as your target.", ch, NULL, victim, TO_CHAR);
 }

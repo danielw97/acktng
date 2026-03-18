@@ -24,57 +24,67 @@
  *  benefitting.  We hope that you share your changes too.  What goes      *
  *  around, comes around.                                                  *
  ***************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "globals.h"
-#include "tables.h"
 #include "magic.h"
+#include "skills.h"
 
-bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+void do_grapple(CHAR_DATA *ch, char *argument)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   char arg[MSL];
+   CHAR_DATA *victim;
+   AFFECT_DATA af;
 
-   /* Strip negative affects */
-   if (is_affected(victim, gsn_blindness))
+   if (IS_NPC(ch))
+      return;
+
+   if (!can_use_skill(ch, gsn_grapple))
    {
-      affect_strip(victim, gsn_blindness);
-      REMOVE_BIT(victim->affected_by, AFF_BLIND);
+      send_to_char("You don't know how to use this skill!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_curse))
+   if (!is_fighting(ch))
    {
-      affect_strip(victim, gsn_curse);
-      REMOVE_BIT(victim->affected_by, AFF_CURSE);
+      send_to_char("You must be fighting to grapple!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_poison))
-   {
-      affect_strip(victim, gsn_poison);
-      REMOVE_BIT(victim->affected_by, AFF_POISON);
-   }
+   one_argument(argument, arg);
 
-   if (is_affected(victim, gsn_sleep))
-   {
-      affect_strip(victim, gsn_sleep);
-      REMOVE_BIT(victim->affected_by, AFF_SLEEP);
-   }
-
-   /* Restore some hit points */
-   victim->hit = UMIN(victim->hit + level, get_max_hp(victim));
-
-   if (ch == victim)
-   {
-      send_to_char("Divine light washes over you, restoring your body and spirit!\n\r", victim);
-   }
+   if (arg[0] != '\0')
+      victim = get_char_room(ch, arg);
    else
+      victim = ch->fighting;
+
+   if (victim == NULL)
    {
-      act("Divine light washes over $n, restoring $m completely!", victim, NULL, NULL, TO_ROOM);
-      act("Divine light washes over you, restoring your body and spirit!", victim, NULL, NULL,
-          TO_CHAR);
-      send_to_char("Ok.\n\r", ch);
+      send_to_char("Grapple whom?\n\r", ch);
+      return;
    }
 
-   return TRUE;
+   if (is_safe(ch, victim))
+      return;
+
+   WAIT_STATE(ch, skill_table[gsn_grapple].beats);
+   raise_skill(ch, gsn_grapple);
+
+   /* Apply AC debuff to victim as "engaged/clinch" effect */
+   af.type = gsn_grapple;
+   af.duration = 2;
+   af.location = APPLY_AC;
+   af.modifier = -(ch->level / 5);
+   af.bitvector = AFF_HOLD;
+   affect_to_char(victim, &af);
+
+   /* Caster is also grappling */
+   af.type = gsn_grapple;
+   af.duration = 2;
+   af.location = APPLY_AC;
+   af.modifier = -(ch->level / 5);
+   af.bitvector = 0;
+   affect_to_char(ch, &af);
+
+   act("You grab $N and pull them into a clinch!", ch, NULL, victim, TO_CHAR);
+   act("$n grabs $N and pulls them into a clinch!", ch, NULL, victim, TO_NOTVICT);
+   act("$n grabs you and pulls you into a clinch!", ch, NULL, victim, TO_VICT);
 }

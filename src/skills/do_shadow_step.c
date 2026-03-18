@@ -24,57 +24,69 @@
  *  benefitting.  We hope that you share your changes too.  What goes      *
  *  around, comes around.                                                  *
  ***************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "globals.h"
-#include "tables.h"
 #include "magic.h"
+#include "skills.h"
 
-bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+void do_shadow_step(CHAR_DATA *ch, char *argument)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   char arg[MSL];
+   int door;
+   EXIT_DATA *pExit;
 
-   /* Strip negative affects */
-   if (is_affected(victim, gsn_blindness))
+   if (IS_NPC(ch))
+      return;
+
+   if (!can_use_skill(ch, gsn_shadow_step))
    {
-      affect_strip(victim, gsn_blindness);
-      REMOVE_BIT(victim->affected_by, AFF_BLIND);
+      send_to_char("You don't know how to use this skill!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_curse))
+   if (is_fighting(ch))
    {
-      affect_strip(victim, gsn_curse);
-      REMOVE_BIT(victim->affected_by, AFF_CURSE);
+      send_to_char("You cannot shadow step while fighting!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_poison))
+   one_argument(argument, arg);
+
+   if (arg[0] == '\0')
    {
-      affect_strip(victim, gsn_poison);
-      REMOVE_BIT(victim->affected_by, AFF_POISON);
+      send_to_char("Shadow step in which direction?\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_sleep))
-   {
-      affect_strip(victim, gsn_sleep);
-      REMOVE_BIT(victim->affected_by, AFF_SLEEP);
-   }
-
-   /* Restore some hit points */
-   victim->hit = UMIN(victim->hit + level, get_max_hp(victim));
-
-   if (ch == victim)
-   {
-      send_to_char("Divine light washes over you, restoring your body and spirit!\n\r", victim);
-   }
+   /* Map direction argument to door number */
+   if (!str_prefix(arg, "north"))
+      door = 0;
+   else if (!str_prefix(arg, "east"))
+      door = 1;
+   else if (!str_prefix(arg, "south"))
+      door = 2;
+   else if (!str_prefix(arg, "west"))
+      door = 3;
+   else if (!str_prefix(arg, "up"))
+      door = 4;
+   else if (!str_prefix(arg, "down"))
+      door = 5;
    else
    {
-      act("Divine light washes over $n, restoring $m completely!", victim, NULL, NULL, TO_ROOM);
-      act("Divine light washes over you, restoring your body and spirit!", victim, NULL, NULL,
-          TO_CHAR);
-      send_to_char("Ok.\n\r", ch);
+      send_to_char("That is not a valid direction.\n\r", ch);
+      return;
    }
 
-   return TRUE;
+   if ((pExit = ch->in_room->exit[door]) == NULL || pExit->to_room == NULL)
+   {
+      send_to_char("There is no exit in that direction.\n\r", ch);
+      return;
+   }
+
+   WAIT_STATE(ch, skill_table[gsn_shadow_step].beats);
+   raise_skill(ch, gsn_shadow_step);
+
+   send_to_char("You step through the shadows.\n\r", ch);
+
+   char_from_room(ch);
+   char_to_room(ch, pExit->to_room);
 }

@@ -24,57 +24,69 @@
  *  benefitting.  We hope that you share your changes too.  What goes      *
  *  around, comes around.                                                  *
  ***************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "globals.h"
-#include "tables.h"
 #include "magic.h"
+#include "skills.h"
 
-bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+void do_pressure_point(CHAR_DATA *ch, char *argument)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   CHAR_DATA *victim;
+   AFFECT_DATA af;
+   int choice;
 
-   /* Strip negative affects */
-   if (is_affected(victim, gsn_blindness))
+   if (IS_NPC(ch))
+      return;
+
+   if (!can_use_skill(ch, gsn_pressure_point))
    {
-      affect_strip(victim, gsn_blindness);
-      REMOVE_BIT(victim->affected_by, AFF_BLIND);
+      send_to_char("You don't know how to use this skill!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_curse))
+   if (!is_fighting(ch) || (victim = ch->fighting) == NULL)
    {
-      affect_strip(victim, gsn_curse);
-      REMOVE_BIT(victim->affected_by, AFF_CURSE);
+      send_to_char("You must be fighting someone!\n\r", ch);
+      return;
    }
 
-   if (is_affected(victim, gsn_poison))
+   WAIT_STATE(ch, skill_table[gsn_pressure_point].beats);
+   raise_skill(ch, gsn_pressure_point);
+
+   choice = number_range(0, 2);
+
+   af.type = gsn_pressure_point;
+   af.duration = 3;
+   af.bitvector = 0;
+
+   if (choice == 0)
    {
-      affect_strip(victim, gsn_poison);
-      REMOVE_BIT(victim->affected_by, AFF_POISON);
+      af.location = APPLY_STR;
+      af.modifier = -(ch->level / 6);
+      affect_to_char(victim, &af);
+      act("You strike a nerve cluster in $N's arm!", ch, NULL, victim, TO_CHAR);
+      act("$n strikes a nerve cluster in $N's arm!", ch, NULL, victim, TO_NOTVICT);
+      act("$n strikes a nerve cluster in your arm!", ch, NULL, victim, TO_VICT);
    }
-
-   if (is_affected(victim, gsn_sleep))
+   else if (choice == 1)
    {
-      affect_strip(victim, gsn_sleep);
-      REMOVE_BIT(victim->affected_by, AFF_SLEEP);
-   }
-
-   /* Restore some hit points */
-   victim->hit = UMIN(victim->hit + level, get_max_hp(victim));
-
-   if (ch == victim)
-   {
-      send_to_char("Divine light washes over you, restoring your body and spirit!\n\r", victim);
+      af.location = APPLY_DEX;
+      af.modifier = -(ch->level / 6);
+      affect_to_char(victim, &af);
+      act("You strike a nerve cluster in $N's leg!", ch, NULL, victim, TO_CHAR);
+      act("$n strikes a nerve cluster in $N's leg!", ch, NULL, victim, TO_NOTVICT);
+      act("$n strikes a nerve cluster in your leg!", ch, NULL, victim, TO_VICT);
    }
    else
    {
-      act("Divine light washes over $n, restoring $m completely!", victim, NULL, NULL, TO_ROOM);
-      act("Divine light washes over you, restoring your body and spirit!", victim, NULL, NULL,
-          TO_CHAR);
-      send_to_char("Ok.\n\r", ch);
+      af.location = APPLY_DAMROLL;
+      af.modifier = -(ch->level / 5);
+      affect_to_char(victim, &af);
+      act("You strike the nerve cluster controlling $N's strike force!", ch, NULL, victim, TO_CHAR);
+      act("$n strikes the nerve cluster controlling $N's strike force!", ch, NULL, victim,
+          TO_NOTVICT);
+      act("$n strikes the nerve cluster controlling your strike force!", ch, NULL, victim, TO_VICT);
    }
 
-   return TRUE;
+   /* Deal small damage */
+   damage(ch, victim, dice(1, ch->level / 4 + 1), gsn_pressure_point);
 }

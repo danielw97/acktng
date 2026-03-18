@@ -32,48 +32,35 @@
 #include "tables.h"
 #include "magic.h"
 
-bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+bool spell_prayer(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   CHAR_DATA *vch;
+   CHAR_DATA *vch_next;
+   AFFECT_DATA af;
 
-   /* Strip negative affects */
-   if (is_affected(victim, gsn_blindness))
-   {
-      affect_strip(victim, gsn_blindness);
-      REMOVE_BIT(victim->affected_by, AFF_BLIND);
-   }
+   send_to_char("You lead a fervent prayer, inspiring your companions.\n\r", ch);
+   act("$n leads a fervent prayer, filling you with divine inspiration!", ch, NULL, NULL, TO_ROOM);
 
-   if (is_affected(victim, gsn_curse))
+   for (vch = ch->in_room->first_person; vch != NULL; vch = vch_next)
    {
-      affect_strip(victim, gsn_curse);
-      REMOVE_BIT(victim->affected_by, AFF_CURSE);
-   }
+      vch_next = vch->next_in_room;
 
-   if (is_affected(victim, gsn_poison))
-   {
-      affect_strip(victim, gsn_poison);
-      REMOVE_BIT(victim->affected_by, AFF_POISON);
-   }
+      if (!is_same_group(ch, vch) || is_affected(vch, sn))
+         continue;
 
-   if (is_affected(victim, gsn_sleep))
-   {
-      affect_strip(victim, gsn_sleep);
-      REMOVE_BIT(victim->affected_by, AFF_SLEEP);
-   }
+      af.type = sn;
+      af.duration = 6 + level / 6;
+      af.duration_type = DURATION_HOUR;
+      af.location = APPLY_HITROLL;
+      af.modifier = level / 10;
+      af.bitvector = 0;
+      affect_to_char(vch, &af);
 
-   /* Restore some hit points */
-   victim->hit = UMIN(victim->hit + level, get_max_hp(victim));
+      af.location = APPLY_AC;
+      af.modifier = -(level / 10);
+      affect_to_char(vch, &af);
 
-   if (ch == victim)
-   {
-      send_to_char("Divine light washes over you, restoring your body and spirit!\n\r", victim);
-   }
-   else
-   {
-      act("Divine light washes over $n, restoring $m completely!", victim, NULL, NULL, TO_ROOM);
-      act("Divine light washes over you, restoring your body and spirit!", victim, NULL, NULL,
-          TO_CHAR);
-      send_to_char("Ok.\n\r", ch);
+      send_to_char("You feel inspired by the prayer!\n\r", vch);
    }
 
    return TRUE;

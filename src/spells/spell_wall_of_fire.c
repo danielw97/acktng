@@ -32,49 +32,23 @@
 #include "tables.h"
 #include "magic.h"
 
-bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+bool spell_wall_of_fire(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   int dam;
 
-   /* Strip negative affects */
-   if (is_affected(victim, gsn_blindness))
+   if (obj == NULL)
    {
-      affect_strip(victim, gsn_blindness);
-      REMOVE_BIT(victim->affected_by, AFF_BLIND);
-   }
-
-   if (is_affected(victim, gsn_curse))
-   {
-      affect_strip(victim, gsn_curse);
-      REMOVE_BIT(victim->affected_by, AFF_CURSE);
-   }
-
-   if (is_affected(victim, gsn_poison))
-   {
-      affect_strip(victim, gsn_poison);
-      REMOVE_BIT(victim->affected_by, AFF_POISON);
-   }
-
-   if (is_affected(victim, gsn_sleep))
-   {
-      affect_strip(victim, gsn_sleep);
-      REMOVE_BIT(victim->affected_by, AFF_SLEEP);
-   }
-
-   /* Restore some hit points */
-   victim->hit = UMIN(victim->hit + level, get_max_hp(victim));
-
-   if (ch == victim)
-   {
-      send_to_char("Divine light washes over you, restoring your body and spirit!\n\r", victim);
+      act("$n raises $s hands and walls of roaring flame erupt around the room!", ch, NULL, NULL,
+          TO_ROOM);
+      send_to_char("You raise your hands and walls of roaring flame erupt around the room!\n\r", ch);
    }
    else
    {
-      act("Divine light washes over $n, restoring $m completely!", victim, NULL, NULL, TO_ROOM);
-      act("Divine light washes over you, restoring your body and spirit!", victim, NULL, NULL,
-          TO_CHAR);
-      send_to_char("Ok.\n\r", ch);
+      act("$p erupts into walls of roaring flame that fill the room!", ch, obj, NULL, TO_ROOM);
+      act("$p erupts into walls of roaring flame that fill the room!", ch, obj, NULL, TO_CHAR);
    }
 
+   dam = dice(3, level / 4 + 2);
+   aoe_damage(ch, obj, sn, level, dam, dam, ELEMENT_FIRE, AOE_SAVES | AOE_SKIP_GROUP);
    return TRUE;
 }

@@ -198,6 +198,33 @@ sh_int gsn_potency;
 sh_int gsn_thaumatergy;
 sh_int gsn_warcry;
 
+/* Cipher skills */
+sh_int gsn_garrote;
+sh_int gsn_feign_death;
+sh_int gsn_shadow_step;
+sh_int gsn_mark_target;
+sh_int gsn_conceal;
+sh_int gsn_set_trap;
+sh_int gsn_read_intent;
+
+/* Warden skills */
+sh_int gsn_cleave;
+sh_int gsn_fortify;
+sh_int gsn_taunt;
+sh_int gsn_rend;
+sh_int gsn_field_patch;
+sh_int gsn_weapon_mastery;
+
+/* Pugilist skills */
+sh_int gsn_grapple;
+sh_int gsn_choke_hold;
+sh_int gsn_leg_sweep;
+sh_int gsn_iron_skin;
+sh_int gsn_roll_with_blow;
+sh_int gsn_pressure_point;
+sh_int gsn_feint;
+sh_int gsn_conditioning;
+
 #ifdef TFS
 sh_int gsn_mana_sense;
 #endif
