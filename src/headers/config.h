@@ -250,6 +250,9 @@
 #define C_SHOW_ALWAYS 0
 #define C_SHOW_SKILL 1
 
+/* Command flags (cmd_type.flags) */
+#define CMD_FLAG_NINJA_OK BIT_1 /* command does not break ninja stance */
+
 /*
  * Well known mob virtual numbers.
  * Defined in #MOBILES.
