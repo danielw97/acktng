@@ -1,0 +1,9 @@
+level 0
+keywords charge
+---
+Syntax: charge <target>
+
+Performs a charging attack against a target, dealing damage and potentially
+knocking them back. A warrior-style combat skill.
+
+See also: shelp charge

@@ -1,0 +1,8 @@
+level 0
+keywords spells
+---
+Syntax: spells
+
+Lists all spells currently available to you based on your class and level.
+
+See also: slist learned cast

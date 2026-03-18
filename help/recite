@@ -1,0 +1,9 @@
+level 0
+keywords recite
+---
+Syntax: recite <scroll> [target]
+
+Reads a scroll to cast the spell inscribed upon it. Scrolls are single-use
+magical items; they are consumed when recited.
+
+See also: quaff brandish

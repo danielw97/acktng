@@ -1,0 +1,9 @@
+level 0
+keywords pick
+---
+Syntax: pick <lock>
+
+Attempts to pick the lock on a door or container using lockpicking skill.
+Requires the pick lock skill to be learned.
+
+See also: shelp pick lock

@@ -1,0 +1,9 @@
+level 0
+keywords rulers
+---
+Syntax: rulers
+
+Displays the current rulers and leaders of the various clans and factions
+in the game.
+
+See also: politics clan clist

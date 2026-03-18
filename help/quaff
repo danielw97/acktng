@@ -1,0 +1,9 @@
+level 0
+keywords quaff
+---
+Syntax: quaff <potion>
+
+Drinks a potion from your inventory, triggering its magical effects. The
+potion is consumed in the process.
+
+See also: recite brandish

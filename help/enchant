@@ -1,0 +1,10 @@
+level 0
+keywords enchant
+---
+Syntax: enchant show
+        enchant buy <enchantment>
+
+Allows players to permanently enchant wearable items using a spell matrix and
+enchantment objects. Place a wearable item and one or more enchantment items
+in your inventory, then use 'enchant show' to see available options or
+'enchant buy <enchantment>' to apply an enchantment for quest points.

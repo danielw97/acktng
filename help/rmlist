@@ -1,0 +1,11 @@
+level 0
+keywords rmlist
+---
+Syntax: rmlist list
+        rmlist <modifier>
+
+Displays information about racial modifiers available for purchase with
+reincarnation points. Use 'rmlist list' to see all modifiers, or
+'rmlist <modifier>' for details on a specific modifier.
+
+See also: reincarnate rlist

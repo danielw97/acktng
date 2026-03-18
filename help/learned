@@ -1,0 +1,9 @@
+level 0
+keywords learned
+---
+Syntax: learned
+
+Displays a list of all skills and spells you have currently learned, along
+with your proficiency level in each.
+
+See also: slist spells

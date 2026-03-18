@@ -1,0 +1,9 @@
+level 0
+keywords stun
+---
+Syntax: stun <target>
+
+Attempts to stun an opponent in combat, temporarily incapacitating them and
+preventing them from acting for a short duration.
+
+See also: shelp stun

@@ -1,0 +1,23 @@
+level -1
+keywords dispel object
+---
+*******************************************************************************
+       Name: Dispel Object
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 15
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Dispel Object!
+Acquisition:
+   - Magi: level 60
+   - Cleric: level 70
+   - Psionicist: level 80
+Description:
+   Dispel Object strips magical enhancements and flags from a carried item,
+   removing evil, nodrop, invisibility, magic, and blessed flags, as well as
+   all applied enchantments. Note that dispelling an object also removes any
+   enchantments applied via the enchant command, so use with caution.
+*******************************************************************************

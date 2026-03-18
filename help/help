@@ -1,0 +1,14 @@
+level 0
+keywords help
+---
+Syntax: help [topic]
+
+Displays help information on a given topic. Without arguments, shows the
+summary help page. Topics include command names, skills, races, classes,
+and game concepts.
+
+Related commands:
+  shelp  - Help on skills and spells (detailed staff reference)
+  rhelp  - Help on races
+  sthelp - Help on stances
+  rmlist - List racial modifiers

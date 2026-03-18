@@ -1,0 +1,9 @@
+level 0
+keywords detox
+---
+Syntax: detox
+
+Attempts to purge poison from your system using the Detox skill. Requires the
+skill to be learned. More effective at higher skill levels.
+
+See also: shelp detox

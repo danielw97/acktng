@@ -1,0 +1,9 @@
+level 0
+keywords trip
+---
+Syntax: trip <target>
+
+Attempts to trip an opponent during combat, knocking them down and leaving
+them vulnerable to follow-up attacks.
+
+See also: shelp trip bash dirt

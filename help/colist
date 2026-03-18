@@ -1,0 +1,9 @@
+level 0
+keywords colist
+---
+Syntax: colist
+
+Displays a list of all available color codes that can be used in strings such
+as titles and descriptions. Color codes are entered as @@<letter>.
+
+See also: color

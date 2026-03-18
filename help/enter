@@ -1,0 +1,9 @@
+level 0
+keywords enter
+---
+Syntax: enter <portal>
+        enter <exit>
+
+Enters a portal object or a named exit. Portals transport you to another
+location. Named exits allow you to pass through specially marked doors
+or passages.

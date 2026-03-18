@@ -1,0 +1,10 @@
+level 0
+keywords take
+---
+Syntax: take <item>
+        take <item> <container>
+
+Picks up an item from the room or from a container. 'Take' is an alias
+for the GET command.
+
+See also: get drop put

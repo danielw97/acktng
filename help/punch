@@ -1,0 +1,9 @@
+level 0
+keywords punch
+---
+Syntax: punch <target>
+
+Delivers a solid punch to an opponent during combat. Available to characters
+with martial arts or brawling skills.
+
+See also: shelp punch

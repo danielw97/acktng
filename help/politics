@@ -1,0 +1,9 @@
+level 0
+keywords politics
+---
+Syntax: politics
+
+Displays the current political relationships between all clans, showing the
+diplomatic status between each pair of clans.
+
+See also: rulers clan negotiate

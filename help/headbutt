@@ -1,0 +1,9 @@
+level 0
+keywords headbutt
+---
+Syntax: headbutt <target>
+
+Delivers a headbutt attack against a target during combat, dealing damage
+and potentially stunning them briefly.
+
+See also: shelp headbutt

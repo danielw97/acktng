@@ -1,0 +1,9 @@
+level 0
+keywords junk
+---
+Syntax: junk <item>
+
+Destroys an item in your inventory, removing it from the game permanently.
+Unlike sacrifice, this does not grant any reward. Use with care.
+
+See also: sacrifice drop

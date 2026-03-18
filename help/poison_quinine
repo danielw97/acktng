@@ -1,0 +1,9 @@
+level 0
+keywords poison:quinine
+---
+Syntax: poison:quinine
+
+Applies quinine poison to your weapon. Quinine poison has unique effects
+distinct from arsenic and nightshade. A rogue combat skill.
+
+See also: shelp poison:quinine poison:arsenic poison:nightshade

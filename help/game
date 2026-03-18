@@ -1,0 +1,7 @@
+level 0
+keywords game
+---
+Syntax: game <message>
+
+Sends a message on the game channel, visible to all players currently
+engaged in game-related discussion.

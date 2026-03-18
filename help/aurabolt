@@ -1,0 +1,9 @@
+level 0
+keywords aurabolt
+---
+Syntax: aurabolt <target>
+
+Fires a bolt of concentrated aura energy at a target. This is a chi-based
+combat skill available to certain martial arts classes.
+
+See also: shelp aurabolt

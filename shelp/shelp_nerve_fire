@@ -1,0 +1,21 @@
+level -1
+keywords nerve fire
+---
+*******************************************************************************
+       Name: Nerve Fire
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 50
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: nerve fire
+   Wear-Off: !Nerve Fire!
+Acquisition:
+   - Psionicist: level 60
+Description:
+   Nerve Fire is an area-effect psionic attack that deals mental damage to all
+   enemies in the caster's room. Characters in the same area but outside the
+   room feel a slight burning sensation. The damage is of the mental element
+   type and cannot be reflected or absorbed.
+*******************************************************************************

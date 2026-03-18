@@ -1,0 +1,9 @@
+level 0
+keywords target
+---
+Syntax: target <victim>
+
+Marks a specific target for focused attacks. Some combat skills deal bonus
+damage or trigger special effects against your marked target.
+
+See also: shelp target

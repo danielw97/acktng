@@ -1,0 +1,9 @@
+level 0
+keywords fleche
+---
+Syntax: fleche <target>
+
+Performs a fleche attack, a rapid lunging strike that deals high damage.
+A fencing/swordsmanship skill available to certain classes.
+
+See also: shelp fleche

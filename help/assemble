@@ -1,0 +1,7 @@
+level 0
+keywords assemble
+---
+Syntax: assemble <piece1> <piece2>
+
+Assembles two compatible item pieces into a single complete object. Both items
+must be pieces of the same object in order to connect successfully.

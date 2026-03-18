@@ -1,0 +1,7 @@
+level 0
+keywords afk
+---
+Syntax: afk
+
+Toggles your AFK (Away From Keyboard) flag. When AFK is active, other players
+can see that you are temporarily unavailable.

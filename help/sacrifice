@@ -1,0 +1,9 @@
+level 0
+keywords sacrifice
+---
+Syntax: sacrifice <item>
+
+Sacrifices an item to your deity in exchange for gold. The amount of gold
+received depends on the value of the item sacrificed.
+
+See also: junk drop

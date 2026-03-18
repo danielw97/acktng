@@ -1,0 +1,9 @@
+level 0
+keywords council
+---
+Syntax: council
+        council join
+        council leave
+
+Manages membership in the Super Council. Only players with the council flag
+may use this command. Without arguments, lists current council members.
