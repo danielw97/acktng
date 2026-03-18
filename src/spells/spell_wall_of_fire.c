@@ -40,7 +40,8 @@ bool spell_wall_of_fire(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    {
       act("$n raises $s hands and walls of roaring flame erupt around the room!", ch, NULL, NULL,
           TO_ROOM);
-      send_to_char("You raise your hands and walls of roaring flame erupt around the room!\n\r", ch);
+      send_to_char("You raise your hands and walls of roaring flame erupt around the room!\n\r",
+                   ch);
    }
    else
    {

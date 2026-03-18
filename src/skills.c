@@ -310,8 +310,8 @@ bool skill_success(CHAR_DATA *ch, CHAR_DATA *victim, int gsn, int bonus)
       int threshold;
       int bonus;
    } skill_bonuses[] = {
-       {LEVEL_ONE, 5},    {LEVEL_TWO, 5},    {LEVEL_THREE, 5}, {LEVEL_FOUR, 5},
-       {LEVEL_FIVE, 5},   {LEVEL_MASTER, 1}, {LEVEL_GM, 1},
+       {LEVEL_ONE, 5},  {LEVEL_TWO, 5},    {LEVEL_THREE, 5}, {LEVEL_FOUR, 5},
+       {LEVEL_FIVE, 5}, {LEVEL_MASTER, 1}, {LEVEL_GM, 1},
    };
    int chance = 70;
    int i;

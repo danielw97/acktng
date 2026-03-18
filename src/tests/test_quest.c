@@ -418,7 +418,8 @@ static void test_rocroad_quest_max_levels(void)
    quest_load_templates();
 
    /* Quests 6-14 (static IDs 5-13) previously had max_level=0; verify correct values */
-   assert(quest_unit_template_max_level(5) == 30);  /* 6.prop: ridge wolf/cat/scavenger, max mob lv30 */
+   assert(quest_unit_template_max_level(5) ==
+          30); /* 6.prop: ridge wolf/cat/scavenger, max mob lv30 */
    assert(quest_unit_template_max_level(6) == 44);  /* 7.prop: tollbreak enforcer lv40, min+14=44 */
    assert(quest_unit_template_max_level(7) == 54);  /* 8.prop: shadow traders, min=40+14=54 */
    assert(quest_unit_template_max_level(8) == 34);  /* 9.prop: scavenger bird lv30, min+14=34 */
