@@ -5,7 +5,7 @@ K midgaard_shops~
 L @@W{@@r ALL @@W}@@N~
 N 24
 I 0 0
-V 1416 1431
+V 1600 1649
 X 0
 F 15
 U @@WThe watch bell sounds from Guard Headquarters â @@yMidgaard@@N@@W's lamp-routes reset and the patrol lines turn.@@N~
@@ -14,7 +14,7 @@ R all~
 W all~
 S Title not shown on area list.
 #ROOMS
-#1431
+#1615
 @@gStorage Annex@@N~
 A narrow back room off the main shop corridor, used for overflow stock and supplier correspondence. Crates are stacked against one wall and a writing desk occupies the opposite corner, covered in invoices and packing manifests. The single door to the north is kept locked outside business hours.
 ~
@@ -22,7 +22,7 @@ A narrow back room off the main shop corridor, used for overflow stock and suppl
 S
 #0
 #OBJECTS
-#1416
+#1600
 voidbound amulet~
 a voidbound amulet~
 A voidbound amulet hangs from a display chain above the desk.
@@ -32,7 +32,7 @@ A voidbound amulet hangs from a display chain above the desk.
 2
 L
 140
-#1417
+#1601
 starweave shoulders~
 starweave shoulders~
 Starweave shoulders rest on a padded shoulder-fitting stand.
@@ -42,7 +42,7 @@ Starweave shoulders rest on a padded shoulder-fitting stand.
 2
 L
 135
-#1418
+#1602
 runemeld gloves~
 runemeld gloves~
 Runemeld gloves are pinned flat on a velvet display tray.
@@ -52,7 +52,7 @@ Runemeld gloves are pinned flat on a velvet display tray.
 2
 L
 110
-#1419
+#1603
 arcane step slippers~
 arcane step slippers~
 Arcane step slippers are displayed on a cedar stand.
@@ -62,7 +62,7 @@ Arcane step slippers are displayed on a cedar stand.
 2
 L
 120
-#1420
+#1604
 resonance mask~
 a resonance mask~
 A resonance mask hovers within a warding circle at eye level.
@@ -72,7 +72,7 @@ A resonance mask hovers within a warding circle at eye level.
 3
 L
 145
-#1421
+#1605
 veteran gorget~
 a veteran gorget~
 A veteran gorget sits on a steel neck-stand, ring-reinforced and worn to a sheen.
@@ -82,7 +82,7 @@ A veteran gorget sits on a steel neck-stand, ring-reinforced and worn to a sheen
 7
 L
 140
-#1422
+#1606
 martial wristguards~
 martial wristguards~
 Martial wristguards are strapped to a bracket in matching pairs.
@@ -92,7 +92,7 @@ Martial wristguards are strapped to a bracket in matching pairs.
 7
 L
 135
-#1423
+#1607
 combat gauntlets~
 combat gauntlets~
 Combat gauntlets are bolted to a flat display board.
@@ -102,7 +102,7 @@ Combat gauntlets are bolted to a flat display board.
 7
 L
 115
-#1424
+#1608
 ironshod boots~
 ironshod boots~
 Ironshod boots stand in a row beside a sizing chart.
@@ -112,7 +112,7 @@ Ironshod boots stand in a row beside a sizing chart.
 7
 L
 120
-#1425
+#1609
 reaver cloak~
 a reaver cloak~
 A reaver cloak hangs from a broad iron coat-hook.
@@ -122,7 +122,7 @@ A reaver cloak hangs from a broad iron coat-hook.
 8
 L
 145
-#1426
+#1610
 stoneguard gorget~
 a stoneguard gorget~
 A stoneguard gorget rests on a reinforced neck-stand.
@@ -132,7 +132,7 @@ A stoneguard gorget rests on a reinforced neck-stand.
 13
 L
 140
-#1427
+#1611
 fortress pauldrons~
 fortress pauldrons~
 Fortress pauldrons are bolted to a wide shoulder gantry.
@@ -142,7 +142,7 @@ Fortress pauldrons are bolted to a wide shoulder gantry.
 14
 L
 135
-#1428
+#1612
 shieldbearer gauntlets~
 shieldbearer gauntlets~
 Shieldbearer gauntlets are mounted on a hand-form beside the shield rack.
@@ -152,7 +152,7 @@ Shieldbearer gauntlets are mounted on a hand-form beside the shield rack.
 13
 L
 115
-#1429
+#1613
 ironwall sabatons~
 ironwall sabatons~
 Ironwall sabatons stand in matched pairs on a reinforced shelf.
@@ -162,7 +162,7 @@ Ironwall sabatons stand in matched pairs on a reinforced shelf.
 12
 L
 125
-#1430
+#1614
 siege cloak~
 a siege cloak~
 A siege cloak hangs from a weight-rated iron rod, its buckles tested.

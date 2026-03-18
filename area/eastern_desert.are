@@ -5,7 +5,7 @@ K eastern_desert~
 L @@y{ @@bA@@yL@@bL@@y }@@N~
 N 100
 I 30 100
-V 1832 1931
+V 2050 2149
 X 0
 F 10
 U @@yA dry @@bdesert wind @@ywhispers across the eastern dunes.@@N~
@@ -15,7 +15,7 @@ W builder~
 T You can teleport into here
 M No bad room spells allowed.
 #ROOMS
-#1832
+#2050
 @@yThe Sunward Caravan Way@@N~
 @@yA broad ribbon of packed sand runs perfectly east and west, bordered by low cairns painted with faded @@ygold@@y that still catch the sun.
 @@bHigh above, a clean blue vault throws sharp light across wagon ruts, and each gust carries the dry rasp of distant dunes sliding against stone.
@@ -27,14 +27,14 @@ D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1833
+0 -1 2051
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1036
+0 -1 1219
 S
-#1833
+#2051
 @@bBluewind Trade Road@@N~
 @@yThe caravan way here is hard-packed and disciplined, a deliberate line cut through restless desert that refuses to stay still for long.
 @@bBlue-shadowed drifts gather at the margins while sun-burnished marker stones stand like patient sentries counting miles to the east.
@@ -46,14 +46,14 @@ D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1834
+0 -1 2052
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1832
+0 -1 2050
 S
-#1834
+#2052
 @@yThe Sandwright Causeway@@N~
 @@yThis leg of the eastern road is scored with old wheel tracks, deep enough to show how heavily it has been trusted over the years.
 @@bA sharp desert breeze sweeps along the straightaway and whistles through broken trade-post timbers half-buried beside the route.
@@ -65,19 +65,19 @@ D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1835
+0 -1 2053
 D2
 A slanted track drops into a scorpion wash.
 ~
 ~
-0 -1 1912
+0 -1 2130
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1833
+0 -1 2051
 S
-#1835
+#2053
 @@bDuneglass Transit@@N~
 @@yA long, unwavering causeway divides dunes on both sides, the surface compressed by generations of merchants, scouts, and soldiers.
 @@bSunlight bounces off grains the color of hammered brass, then fades into cool cobalt shade where the drifts shoulder up against stone.
@@ -88,19 +88,19 @@ S
 D0
 ~
 ~
-0 -1 4439
+0 -1 4750
 D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1836
+0 -1 2054
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1834
+0 -1 2052
 S
-#1836
+#2054
 @@yThe Gilded Eastbound Track@@N~
 @@yA broad ribbon of packed sand runs perfectly east and west, bordered by low cairns painted with faded @@ygold@@y that still catch the sun.
 @@bHigh above, a clean blue vault throws sharp light across wagon ruts, and each gust carries the dry rasp of distant dunes sliding against stone.
@@ -112,18 +112,18 @@ D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1837
+0 -1 2055
 D2
 ~
 ~
-0 -1 5256
+0 -1 5750
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1835
+0 -1 2053
 S
-#1837
+#2055
 @@bCobalt Mile of Dust@@N~
 @@yThe caravan way here is hard-packed and disciplined, a deliberate line cut through restless desert that refuses to stay still for long.
 @@bBlue-shadowed drifts gather at the margins while sun-burnished marker stones stand like patient sentries counting miles to the east.
@@ -135,14 +135,14 @@ D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1838
+0 -1 2056
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1836
+0 -1 2054
 S
-#1838
+#2056
 @@yThe Pilgrim's Desert Road@@N~
 @@yThis leg of the eastern road is scored with old wheel tracks, deep enough to show how heavily it has been trusted over the years.
 @@bA sharp desert breeze sweeps along the straightaway and whistles through broken trade-post timbers half-buried beside the route.
@@ -154,19 +154,19 @@ D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1839
+0 -1 2057
 D2
 A trampled descent leads toward forgotten cisterns.
 ~
 ~
-0 -1 1872
+0 -1 2090
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1837
+0 -1 2055
 S
-#1839
+#2057
 @@bAzure-Washed Wagon Route@@N~
 @@yA long, unwavering causeway divides dunes on both sides, the surface compressed by generations of merchants, scouts, and soldiers.
 @@bSunlight bounces off grains the color of hammered brass, then fades into cool cobalt shade where the drifts shoulder up against stone.
@@ -178,18 +178,18 @@ D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1840
+0 -1 2058
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1838
+0 -1 2056
 D4
 ~
 ~
-0 -1 4881
+0 -1 5250
 S
-#1840
+#2058
 @@yThe Lantern Merchant Road@@N~
 @@yA broad ribbon of packed sand runs perfectly east and west, bordered by low cairns painted with faded @@ygold@@y that still catch the sun.
 @@bHigh above, a clean blue vault throws sharp light across wagon ruts, and each gust carries the dry rasp of distant dunes sliding against stone.
@@ -201,18 +201,18 @@ D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1841
+0 -1 2059
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1839
+0 -1 2057
 D4
 ~
 ~
-0 -1 792
+0 -1 950
 S
-#1841
+#2059
 @@bWhisperdune Highway@@N~
 @@yThe caravan way here is hard-packed and disciplined, a deliberate line cut through restless desert that refuses to stay still for long.
 @@bBlue-shadowed drifts gather at the margins while sun-burnished marker stones stand like patient sentries counting miles to the east.
@@ -224,14 +224,14 @@ D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1842
+0 -1 2060
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1840
+0 -1 2058
 S
-#1842
+#2060
 @@yThe Brass Compass Track@@N~
 @@yThis leg of the eastern road is scored with old wheel tracks, deep enough to show how heavily it has been trusted over the years.
 @@bA sharp desert breeze sweeps along the straightaway and whistles through broken trade-post timbers half-buried beside the route.
@@ -243,19 +243,19 @@ D0
 A narrow rise climbs toward wind-carved obelisks.
 ~
 ~
-0 -1 1852
+0 -1 2070
 D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1843
+0 -1 2061
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1841
+0 -1 2059
 S
-#1843
+#2061
 @@bSkyfire Sand Road@@N~
 @@yA long, unwavering causeway divides dunes on both sides, the surface compressed by generations of merchants, scouts, and soldiers.
 @@bSunlight bounces off grains the color of hammered brass, then fades into cool cobalt shade where the drifts shoulder up against stone.
@@ -267,14 +267,14 @@ D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1844
+0 -1 2062
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1842
+0 -1 2060
 S
-#1844
+#2062
 @@yThe Dry Horizon Corridor@@N~
 @@yA broad ribbon of packed sand runs perfectly east and west, bordered by low cairns painted with faded @@ygold@@y that still catch the sun.
 @@bHigh above, a clean blue vault throws sharp light across wagon ruts, and each gust carries the dry rasp of distant dunes sliding against stone.
@@ -286,14 +286,14 @@ D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1845
+0 -1 2063
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1843
+0 -1 2061
 S
-#1845
+#2063
 @@bBlue Banner Caravan Line@@N~
 @@yThe caravan way here is hard-packed and disciplined, a deliberate line cut through restless desert that refuses to stay still for long.
 @@bBlue-shadowed drifts gather at the margins while sun-burnished marker stones stand like patient sentries counting miles to the east.
@@ -305,14 +305,14 @@ D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1846
+0 -1 2064
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1844
+0 -1 2062
 S
-#1846
+#2064
 @@yThe Goldwake Trade Strip@@N~
 @@yThis leg of the eastern road is scored with old wheel tracks, deep enough to show how heavily it has been trusted over the years.
 @@bA sharp desert breeze sweeps along the straightaway and whistles through broken trade-post timbers half-buried beside the route.
@@ -324,19 +324,19 @@ D0
 A pale trail threads toward shattered sun shrines.
 ~
 ~
-0 -1 1892
+0 -1 2110
 D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1847
+0 -1 2065
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1845
+0 -1 2063
 S
-#1847
+#2065
 @@bSirocco Wagon Run@@N~
 @@yA long, unwavering causeway divides dunes on both sides, the surface compressed by generations of merchants, scouts, and soldiers.
 @@bSunlight bounces off grains the color of hammered brass, then fades into cool cobalt shade where the drifts shoulder up against stone.
@@ -348,14 +348,14 @@ D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1848
+0 -1 2066
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1846
+0 -1 2064
 S
-#1848
+#2066
 @@yThe East Gate Desert Road@@N~
 @@yA broad ribbon of packed sand runs perfectly east and west, bordered by low cairns painted with faded @@ygold@@y that still catch the sun.
 @@bHigh above, a clean blue vault throws sharp light across wagon ruts, and each gust carries the dry rasp of distant dunes sliding against stone.
@@ -367,14 +367,14 @@ D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1849
+0 -1 2067
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1847
+0 -1 2065
 S
-#1849
+#2067
 @@bThe Sunbleached Thoroughfare@@N~
 @@yThe caravan way here is hard-packed and disciplined, a deliberate line cut through restless desert that refuses to stay still for long.
 @@bBlue-shadowed drifts gather at the margins while sun-burnished marker stones stand like patient sentries counting miles to the east.
@@ -386,14 +386,14 @@ D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1850
+0 -1 2068
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1848
+0 -1 2066
 S
-#1850
+#2068
 @@yThe Long Dune Cartway@@N~
 @@yThis leg of the eastern road is scored with old wheel tracks, deep enough to show how heavily it has been trusted over the years.
 @@bA sharp desert breeze sweeps along the straightaway and whistles through broken trade-post timbers half-buried beside the route.
@@ -405,14 +405,14 @@ D1
 Further east along the caravan road.
 ~
 ~
-0 -1 1851
+0 -1 2069
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1849
+0 -1 2067
 S
-#1851
+#2069
 @@bThe Far-Eastern Approach@@N~
 @@yA long, unwavering causeway divides dunes on both sides, the surface compressed by generations of merchants, scouts, and soldiers.
 @@bSunlight bounces off grains the color of hammered brass, then fades into cool cobalt shade where the drifts shoulder up against stone.
@@ -423,19 +423,19 @@ S
 D1
 ~
 ~
-0 -1 1932
+0 -1 2150
 D2
 Ember dunes and heat shimmer rise to the south, where the scorching sands begin in earnest.
 ~
 ~
-0 -1 4956
+0 -1 5350
 D3
 Back along the caravan road.
 ~
 ~
-0 -1 1850
+0 -1 2068
 S
-#1852
+#2070
 @@bAntechamber of Leaning Obelisks@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -447,14 +447,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1853
+0 -1 2071
 D2
 The main caravan road lies back toward Midgaard.
 ~
 ~
-0 -1 1842
+0 -1 2060
 S
-#1853
+#2071
 @@yShadowed Obelisk Court@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -466,14 +466,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1854
+0 -1 2072
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1852
+0 -1 2070
 S
-#1854
+#2072
 @@bWind-Scored Pillar Path@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -485,14 +485,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1855
+0 -1 2073
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1853
+0 -1 2071
 S
-#1855
+#2073
 @@yThe Cerulean Menhir Walk@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -504,18 +504,18 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1856
+0 -1 2074
 D1
 ~
 ~
-0 -1 5331
+0 -1 5850
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1854
+0 -1 2072
 S
-#1856
+#2074
 @@bObelisk Driftway@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -527,14 +527,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1857
+0 -1 2075
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1855
+0 -1 2073
 S
-#1857
+#2075
 @@yThe Half-Buried Stone Lane@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -546,14 +546,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1858
+0 -1 2076
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1856
+0 -1 2074
 S
-#1858
+#2076
 @@bWhistling Pillar Corridor@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -565,14 +565,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1859
+0 -1 2077
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1857
+0 -1 2075
 S
-#1859
+#2077
 @@yThe Rattle-Sand Colonnade@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -584,14 +584,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1860
+0 -1 2078
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1858
+0 -1 2076
 S
-#1860
+#2078
 @@bLapis Monolith Traverse@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -603,14 +603,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1861
+0 -1 2079
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1859
+0 -1 2077
 S
-#1861
+#2079
 @@yCarved-Stone Defile@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -622,14 +622,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1862
+0 -1 2080
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1860
+0 -1 2078
 S
-#1862
+#2080
 @@bThe Echoing Menhir Track@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -641,14 +641,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1863
+0 -1 2081
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1861
+0 -1 2079
 S
-#1863
+#2081
 @@ySun-Faded Obelisk Alley@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -660,14 +660,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1864
+0 -1 2082
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1862
+0 -1 2080
 S
-#1864
+#2082
 @@bBlue-Shadowed Boundary Grounds@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -679,14 +679,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1865
+0 -1 2083
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1863
+0 -1 2081
 S
-#1865
+#2083
 @@yThe Crooked Stone Chute@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -698,14 +698,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1866
+0 -1 2084
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1864
+0 -1 2082
 S
-#1866
+#2084
 @@bDustcloak Obelisk Reach@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -717,14 +717,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1867
+0 -1 2085
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1865
+0 -1 2083
 S
-#1867
+#2085
 @@yThe Ancient Boundary Path@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -736,14 +736,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1868
+0 -1 2086
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1866
+0 -1 2084
 S
-#1868
+#2086
 @@bThe Idolbreak Cause@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -755,14 +755,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1869
+0 -1 2087
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1867
+0 -1 2085
 S
-#1869
+#2087
 @@yThe Last Pilgrim Spur@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -774,14 +774,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1870
+0 -1 2088
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1868
+0 -1 2086
 S
-#1870
+#2088
 @@bThe Vizier's Outer Hall@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -793,14 +793,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1871
+0 -1 2089
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1869
+0 -1 2087
 S
-#1871
+#2089
 @@yThe Jackal Vizier's Dais@@N~
 @@yLeaning obelisks rise from the sand like broken teeth, each face etched with weather-softened glyphs in traces of @@bblue@@y pigment.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -812,14 +812,14 @@ D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1870
+0 -1 2088
 D5
 A dark shaft descends into the sands below, carved steps leading down into ancient shadow.
 ~
 ~
-0 -1 5624
+0 -1 6200
 S
-#1872
+#2090
 @@yMouth of the Forgotten Cisterns@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -831,14 +831,14 @@ D0
 The main caravan road lies back toward Midgaard.
 ~
 ~
-0 -1 1838
+0 -1 2056
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1873
+0 -1 2091
 S
-#1873
+#2091
 @@bThe Broken Aquifer Descent@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -850,14 +850,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1872
+0 -1 2090
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1874
+0 -1 2092
 S
-#1874
+#2092
 @@yCracked Basin Gallery@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -869,14 +869,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1873
+0 -1 2091
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1875
+0 -1 2093
 S
-#1875
+#2093
 @@bThe Hollow Reservoir Walk@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -888,14 +888,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1874
+0 -1 2092
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1876
+0 -1 2094
 S
-#1876
+#2094
 @@ySilted Waterworks Lane@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -907,14 +907,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1875
+0 -1 2093
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1877
+0 -1 2095
 S
-#1877
+#2095
 @@bThe Dry Well Arcade@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -926,14 +926,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1876
+0 -1 2094
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1878
+0 -1 2096
 S
-#1878
+#2096
 @@yStairs of Sunken Stone@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -945,14 +945,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1877
+0 -1 2095
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1879
+0 -1 2097
 S
-#1879
+#2097
 @@bThe Cistern Keeper's Run@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -964,14 +964,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1878
+0 -1 2096
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1880
+0 -1 2098
 S
-#1880
+#2098
 @@yThe Dust-Sealed Conduit@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -983,14 +983,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1879
+0 -1 2097
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1881
+0 -1 2099
 S
-#1881
+#2099
 @@bCollapsed Channel Causeway@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -1002,14 +1002,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1880
+0 -1 2098
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1882
+0 -1 2100
 S
-#1882
+#2100
 @@yThe Brackish Memory Walk@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -1021,14 +1021,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1881
+0 -1 2099
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1883
+0 -1 2101
 S
-#1883
+#2101
 @@bThe Rusted Pulley Court@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -1040,14 +1040,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1882
+0 -1 2100
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1884
+0 -1 2102
 S
-#1884
+#2102
 @@yThe Hollow Jar Vestibule@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -1059,14 +1059,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1883
+0 -1 2101
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1885
+0 -1 2103
 S
-#1885
+#2103
 @@bEchoes Beneath the Basins@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -1078,14 +1078,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1884
+0 -1 2102
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1886
+0 -1 2104
 S
-#1886
+#2104
 @@yThe Lower Spillway@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -1097,14 +1097,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1885
+0 -1 2103
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1887
+0 -1 2105
 S
-#1887
+#2105
 @@bThe Reaver's Gathering Way@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -1116,14 +1116,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1886
+0 -1 2104
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1888
+0 -1 2106
 S
-#1888
+#2106
 @@yThe Gilded Quarry Floor@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -1135,14 +1135,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1887
+0 -1 2105
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1889
+0 -1 2107
 S
-#1889
+#2107
 @@bThe Sand-Cut Pump Hall@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -1154,14 +1154,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1888
+0 -1 2106
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1890
+0 -1 2108
 S
-#1890
+#2108
 @@yThe Inner Cistern Vault@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -1173,14 +1173,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1889
+0 -1 2107
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1891
+0 -1 2109
 S
-#1891
+#2109
 @@bThrone of the Sand Reaver@@N~
 @@yCollapsed cistern mouths gape beneath drifts, their old channels veined with mineral stains that glow faint @@ygold@@y in direct sun.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -1192,9 +1192,9 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1890
+0 -1 2108
 S
-#1892
+#2110
 @@bThe Broken Sun Altar Path@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -1206,14 +1206,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1893
+0 -1 2111
 D2
 The main caravan road lies back toward Midgaard.
 ~
 ~
-0 -1 1846
+0 -1 2064
 S
-#1893
+#2111
 @@yThe Shrinefall Approach@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -1225,14 +1225,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1894
+0 -1 2112
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1892
+0 -1 2110
 S
-#1894
+#2112
 @@bThe Mosaic Dust Court@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -1244,14 +1244,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1895
+0 -1 2113
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1893
+0 -1 2111
 S
-#1895
+#2113
 @@yThe Shattered Lintel Walk@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -1263,14 +1263,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1896
+0 -1 2114
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1894
+0 -1 2112
 S
-#1896
+#2114
 @@bThe Pale Relic Traverse@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -1282,14 +1282,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1897
+0 -1 2115
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1895
+0 -1 2113
 S
-#1897
+#2115
 @@yIncense-Cracked Sanctuary Lane@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -1301,14 +1301,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1898
+0 -1 2116
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1896
+0 -1 2114
 S
-#1898
+#2116
 @@bThe Devotional Ruin@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -1320,14 +1320,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1899
+0 -1 2117
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1897
+0 -1 2115
 S
-#1899
+#2117
 @@yThe Bleached Offering Floor@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -1339,14 +1339,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1900
+0 -1 2118
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1898
+0 -1 2116
 S
-#1900
+#2118
 @@bThe Sapphire Prayer Route@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -1358,14 +1358,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1901
+0 -1 2119
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1899
+0 -1 2117
 S
-#1901
+#2119
 @@yThe Hollow Choir Steps@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -1377,14 +1377,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1902
+0 -1 2120
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1900
+0 -1 2118
 S
-#1902
+#2120
 @@bThe Lens of Dawn Arcade@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -1396,14 +1396,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1903
+0 -1 2121
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1901
+0 -1 2119
 S
-#1903
+#2121
 @@yThe Sand-Choked Reliquary@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -1415,14 +1415,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1904
+0 -1 2122
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1902
+0 -1 2120
 S
-#1904
+#2122
 @@bThe Fractured Halo Walk@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -1434,14 +1434,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1905
+0 -1 2123
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1903
+0 -1 2121
 S
-#1905
+#2123
 @@yThe Oracle's Outer Ring@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -1453,14 +1453,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1906
+0 -1 2124
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1904
+0 -1 2122
 S
-#1906
+#2124
 @@bThe Glasslight Pilgrim Way@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -1472,14 +1472,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1907
+0 -1 2125
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1905
+0 -1 2123
 S
-#1907
+#2125
 @@yThe Crumbled Solar Narthex@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -1491,14 +1491,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1908
+0 -1 2126
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1906
+0 -1 2124
 S
-#1908
+#2126
 @@bThe Last Acolyte Corridor@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -1510,14 +1510,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1909
+0 -1 2127
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1907
+0 -1 2125
 S
-#1909
+#2127
 @@yThe Dawnmirror Threshold@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -1529,14 +1529,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1910
+0 -1 2128
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1908
+0 -1 2126
 S
-#1910
+#2128
 @@bThe Inner Sunward Sanctum@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -1548,14 +1548,14 @@ D0
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1911
+0 -1 2129
 D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1909
+0 -1 2127
 S
-#1911
+#2129
 @@ySeat of the Sapphire Oracle@@N~
 @@yBroken shrine walls frame the path in fragments of tile and carved iconography, all dusted by wind-borne powder.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -1567,9 +1567,9 @@ D2
 Back toward the wing entrance.
 ~
 ~
-0 -1 1910
+0 -1 2128
 S
-#1912
+#2130
 @@yThe Scorpion Wash Mouth@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -1581,14 +1581,14 @@ D0
 The main caravan road lies back toward Midgaard.
 ~
 ~
-0 -1 1834
+0 -1 2052
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1913
+0 -1 2131
 S
-#1913
+#2131
 @@bThe Chipped Wadi Descent@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -1600,14 +1600,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1912
+0 -1 2130
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1914
+0 -1 2132
 S
-#1914
+#2132
 @@yThe Stingwind Channel@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -1619,14 +1619,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1913
+0 -1 2131
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1915
+0 -1 2133
 S
-#1915
+#2133
 @@bThe Dry Torrent Trough@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -1638,14 +1638,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1914
+0 -1 2132
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1916
+0 -1 2134
 S
-#1916
+#2134
 @@yThe Razor Gravel Run@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -1657,14 +1657,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1915
+0 -1 2133
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1917
+0 -1 2135
 S
-#1917
+#2135
 @@bThe Chitin-Littered Bend@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -1676,14 +1676,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1916
+0 -1 2134
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1918
+0 -1 2136
 S
-#1918
+#2136
 @@yThe Venom Dust Funnel@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -1695,14 +1695,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1917
+0 -1 2135
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1919
+0 -1 2137
 S
-#1919
+#2137
 @@bThe Sun-Peeled Ravine@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -1714,14 +1714,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1918
+0 -1 2136
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1920
+0 -1 2138
 S
-#1920
+#2138
 @@yThe Iron Stinger Way@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -1733,14 +1733,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1919
+0 -1 2137
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1921
+0 -1 2139
 S
-#1921
+#2139
 @@bThe Heatshiver Gully@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -1752,14 +1752,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1920
+0 -1 2138
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1922
+0 -1 2140
 S
-#1922
+#2140
 @@yThe Thorned Sand Slot@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -1771,14 +1771,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1921
+0 -1 2139
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1923
+0 -1 2141
 S
-#1923
+#2141
 @@bThe Bitter Salt Hollow@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -1790,14 +1790,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1922
+0 -1 2140
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1924
+0 -1 2142
 S
-#1924
+#2142
 @@yThe Tyrant's Patrol Cut@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -1809,14 +1809,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1923
+0 -1 2141
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1925
+0 -1 2143
 S
-#1925
+#2143
 @@bThe Black Chitin Reach@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -1828,14 +1828,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1924
+0 -1 2142
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1926
+0 -1 2144
 S
-#1926
+#2144
 @@yThe Dunefang Crossing@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -1847,14 +1847,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1925
+0 -1 2143
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1927
+0 -1 2145
 S
-#1927
+#2145
 @@bThe Wadi of Broken Standards@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -1866,14 +1866,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1926
+0 -1 2144
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1928
+0 -1 2146
 S
-#1928
+#2146
 @@yThe Carrion Kite Shelf@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bFine dust coils in blue-shadowed eddies around your boots, then spills away down the channel like smoke with no fire.
@@ -1885,14 +1885,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1927
+0 -1 2145
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1929
+0 -1 2147
 S
-#1929
+#2147
 @@bThe Crownless March@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bEvery step wakes a dry echo that slides ahead of you, then returns from hidden angles as if the desert is listening back.
@@ -1904,14 +1904,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1928
+0 -1 2146
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1930
+0 -1 2148
 S
-#1930
+#2148
 @@yThe Tyrant's Final Approach@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bThe air tastes of old minerals and long-evaporated water, while loose grit skates over rock with a constant, nervous hiss.
@@ -1923,14 +1923,14 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1929
+0 -1 2147
 D2
 Deeper into the wing's shifting corridors.
 ~
 ~
-0 -1 1931
+0 -1 2149
 S
-#1931
+#2149
 @@bCourt of the Endless Dunes@@N~
 @@yA cracked wadi funnels hot air through jagged stone, and the floor is littered with chitin shards and splintered spear hafts.
 @@bHeat ripples bend the view into wavering planes, blurring distance until nearby pillars and far ridges seem to trade places.
@@ -1942,11 +1942,11 @@ D0
 Back toward the wing entrance.
 ~
 ~
-0 -1 1930
+0 -1 2148
 S
 #0
 #MOBILES
-#1832
+#2050
 jackal cultist obelisk~
 @@bJackal Cultist of the Obelisks@@N~
 @@bJackal Cultist of the Obelisks@@N stalks the sands here.@@N
@@ -1963,7 +1963,7 @@ jackal cultist obelisk~
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#1833
+#2051
 dune reaver cistern~
 @@yDune Reaver of the Hollow Cisterns@@N~
 @@yDune Reaver of the Hollow Cisterns@@N stalks the sands here.@@N
@@ -1980,7 +1980,7 @@ dune reaver cistern~
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#1834
+#2052
 solar acolyte shrine~
 @@bSolar Acolyte of Broken Shrines@@N~
 @@bSolar Acolyte of Broken Shrines@@N stalks the sands here.@@N
@@ -1997,7 +1997,7 @@ solar acolyte shrine~
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#1835
+#2053
 scorpion marauder wash~
 @@yScorpion Marauder of the Wash@@N~
 @@yScorpion Marauder of the Wash@@N stalks the sands here.@@N
@@ -2014,7 +2014,7 @@ scorpion marauder wash~
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#1842
+#2060
 azure vizier boss jackal~
 @@bThe Azure Jackal Vizier@@N~
 @@bThe Azure Jackal Vizier@@N stands motionless at the end of the wing, guarding ancient dominion.@@N
@@ -2031,7 +2031,7 @@ azure vizier boss jackal~
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#1843
+#2061
 gilded reaver boss sand~
 @@yThe Gilded Sand Reaver@@N~
 @@yThe Gilded Sand Reaver@@N stands motionless at the end of the wing, guarding ancient dominion.@@N
@@ -2048,7 +2048,7 @@ gilded reaver boss sand~
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#1844
+#2062
 sapphire oracle boss sun~
 @@bThe Sapphire Sun Oracle@@N~
 @@bThe Sapphire Sun Oracle@@N stands motionless at the end of the wing, guarding ancient dominion.@@N
@@ -2065,7 +2065,7 @@ sapphire oracle boss sun~
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#1845
+#2063
 tyrant endless dunes boss~
 @@yThe Tyrant of Endless Dunes@@N~
 @@yThe Tyrant of Endless Dunes@@N stands motionless at the end of the wing, guarding ancient dominion.@@N
@@ -2084,7 +2084,7 @@ l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0 
 #0
 #OBJECTS
-#1852
+#2070
 sunveil hood~
 @@ySunveil Hood@@N~
 @@yA hood of golden cloth lies folded in the sand.@@N~
@@ -2093,7 +2093,7 @@ sunveil hood~
 12
 L
 35
-#1853
+#2071
 sirocco wraps~
 @@bSirocco Wrist Wraps@@N~
 @@bBlue wraps embroidered with dune-maps rest here.@@N~
@@ -2102,7 +2102,7 @@ sirocco wraps~
 11
 L
 35
-#1854
+#2072
 caravan blade~
 @@yCaravan Crescent Blade@@N~
 @@yA curved caravan blade glints beside a stone marker.@@N~
@@ -2111,7 +2111,7 @@ caravan blade~
 8
 L
 35
-#1855
+#2073
 vizier mask~
 @@bMask of the Azure Vizier@@N~
 @@bA lapis-and-gold ritual mask hums with hidden force.@@N~
@@ -2120,7 +2120,7 @@ vizier mask~
 3
 L
 45
-#1856
+#2074
 vizier mantle~
 @@yMantle of Obelisk Winds@@N~
 @@yA mantle threaded with sun-metal tassels is draped here.@@N~
@@ -2129,7 +2129,7 @@ vizier mantle~
 12
 L
 45
-#1857
+#2075
 vizier sceptre~
 @@bSceptre of Twin Horizons@@N~
 @@bA blue-crystal sceptre stands planted in the dune.@@N~
@@ -2138,7 +2138,7 @@ vizier sceptre~
 3
 L
 45
-#1858
+#2076
 reaver helm~
 @@yGilded Reaver Helm@@N~
 @@yA heavy helm with sand-scarred plating rests here.@@N~
@@ -2147,7 +2147,7 @@ reaver helm~
 13
 L
 50
-#1859
+#2077
 reaver gauntlets~
 @@yReaver Gauntlets@@N~
 @@yA pair of spiked gauntlets is half-buried in dust.@@N~
@@ -2156,7 +2156,7 @@ reaver gauntlets~
 12
 L
 50
-#1860
+#2078
 reaver cleaver~
 @@yCistern War Cleaver@@N~
 @@yA thick cleaver leans against a broken cistern wall.@@N~
@@ -2165,7 +2165,7 @@ reaver cleaver~
 9
 L
 50
-#1861
+#2079
 gilded gorget~
 @@yGorget of the Sand Reaver@@N~
 @@yA gold-plated gorget radiates controlled ferocity.@@N~
@@ -2174,7 +2174,7 @@ gilded gorget~
 13
 L
 60
-#1862
+#2080
 gilded girdle~
 @@yGirdle of Dry Thunder@@N~
 @@yA broad girdle marked by storm glyphs lies here.@@N~
@@ -2183,7 +2183,7 @@ gilded girdle~
 13
 L
 60
-#1863
+#2081
 gilded axe~
 @@yReaver Kingsplitter@@N~
 @@yA two-handed axe of gilded steel waits in silence.@@N~
@@ -2192,7 +2192,7 @@ gilded axe~
 8
 L
 60
-#1864
+#2082
 oracle circlet~
 @@bSapphire Oracle Circlet@@N~
 @@bA slim circlet set with sapphire lenses sparkles here.@@N~
@@ -2201,7 +2201,7 @@ oracle circlet~
 4
 L
 70
-#1865
+#2083
 oracle robes~
 @@bRobes of Solar Echoes@@N~
 @@bBlue-and-gold robes ripple as if in unseen wind.@@N~
@@ -2210,7 +2210,7 @@ oracle robes~
 4
 L
 70
-#1866
+#2084
 oracle wand~
 @@bWand of Refracted Dawn@@N~
 @@bA slender wand sheds faint azure sparks on the sand.@@N~
@@ -2219,7 +2219,7 @@ oracle wand~
 2
 L
 70
-#1867
+#2085
 sapphire aura~
 @@bAura of the Sun Oracle@@N~
 @@bA floating ring of sapphire light hovers here.@@N~
@@ -2228,7 +2228,7 @@ sapphire aura~
 3
 L
 80
-#1868
+#2086
 sapphire shoulders~
 @@bShoulders of Starfire Glass@@N~
 @@bPolished shoulder guards of blue glass rest here.@@N~
@@ -2237,7 +2237,7 @@ sapphire shoulders~
 11
 L
 80
-#1869
+#2087
 sapphire focus~
 @@bOracle Focus Rod@@N~
 @@bA focused casting rod hums with stored sunlight.@@N~
@@ -2246,7 +2246,7 @@ sapphire focus~
 3
 L
 80
-#1870
+#2088
 tyrant greaves~
 @@yGreaves of Endless Dunes@@N~
 @@yMassive greaves carved with dune-crests stand upright here.@@N~
@@ -2255,7 +2255,7 @@ tyrant greaves~
 14
 L
 100
-#1871
+#2089
 tyrant boots~
 @@yTreads of the Last Caravan@@N~
 @@yTitanic desert treads sink deep into the powdery floor.@@N~
@@ -2264,7 +2264,7 @@ tyrant boots~
 14
 L
 100
-#1872
+#2090
 tyrant greatblade~
 @@yGreatblade of Horizon Ruin@@N~
 @@yAn enormous greatblade hums with buried thunder.@@N~
@@ -2275,97 +2275,97 @@ L
 100
 #0
 #RESETS
-M 0 1832 2 1854   (null)
+M 0 2050 2 2072   (null)
 
-M 0 1832 2 1857   (null)
+M 0 2050 2 2075   (null)
 
-M 0 1832 2 1860   (null)
+M 0 2050 2 2078   (null)
 
-M 0 1832 2 1863   (null)
+M 0 2050 2 2081   (null)
 
-M 0 1832 2 1866   (null)
+M 0 2050 2 2084   (null)
 
-M 0 1832 2 1869   (null)
+M 0 2050 2 2087   (null)
 
-M 0 1833 2 1874   (null)
+M 0 2051 2 2092   (null)
 
-M 0 1833 2 1878   (null)
+M 0 2051 2 2096   (null)
 
-M 0 1833 2 1882   (null)
+M 0 2051 2 2100   (null)
 
-M 0 1833 2 1886   (null)
+M 0 2051 2 2104   (null)
 
-M 0 1833 2 1890   (null)
+M 0 2051 2 2108   (null)
 
-M 0 1834 2 1895   (null)
+M 0 2052 2 2113   (null)
 
-M 0 1834 2 1899   (null)
+M 0 2052 2 2117   (null)
 
-M 0 1834 2 1903   (null)
+M 0 2052 2 2121   (null)
 
-M 0 1834 2 1907   (null)
+M 0 2052 2 2125   (null)
 
-M 0 1834 2 1910   (null)
+M 0 2052 2 2128   (null)
 
-M 0 1835 2 1916   (null)
+M 0 2053 2 2134   (null)
 
-M 0 1835 2 1920   (null)
+M 0 2053 2 2138   (null)
 
-M 0 1835 2 1924   (null)
+M 0 2053 2 2142   (null)
 
-M 0 1835 2 1928   (null)
+M 0 2053 2 2146   (null)
 
-M 0 1835 2 1930   (null)
+M 0 2053 2 2148   (null)
 
-M 0 1842 1 1871   (null)
+M 0 2060 1 2089   (null)
 
-G 0 1855 0   (null)
+G 0 2073 0   (null)
 
-G 0 1856 0   (null)
+G 0 2074 0   (null)
 
-G 0 1857 0   (null)
+G 0 2075 0   (null)
 
-M 0 1843 1 1891   (null)
+M 0 2061 1 2109   (null)
 
-G 0 1861 0   (null)
+G 0 2079 0   (null)
 
-G 0 1862 0   (null)
+G 0 2080 0   (null)
 
-G 0 1863 0   (null)
+G 0 2081 0   (null)
 
-M 0 1844 1 1911   (null)
+M 0 2062 1 2129   (null)
 
-G 0 1867 0   (null)
+G 0 2085 0   (null)
 
-G 0 1868 0   (null)
+G 0 2086 0   (null)
 
-G 0 1869 0   (null)
+G 0 2087 0   (null)
 
-M 0 1845 1 1931   (null)
+M 0 2063 1 2149   (null)
 
-G 0 1870 0   (null)
+G 0 2088 0   (null)
 
-G 0 1871 0   (null)
+G 0 2089 0   (null)
 
-G 0 1872 0   (null)
+G 0 2090 0   (null)
 
-O 0 1852 1 1856   (null)
+O 0 2070 1 2074   (null)
 
-O 0 1853 1 1859   (null)
+O 0 2071 1 2077   (null)
 
-O 0 1854 1 1862   (null)
+O 0 2072 1 2080   (null)
 
-O 0 1858 1 1880   (null)
+O 0 2076 1 2098   (null)
 
-O 0 1859 1 1885   (null)
+O 0 2077 1 2103   (null)
 
-O 0 1860 1 1888   (null)
+O 0 2078 1 2106   (null)
 
-O 0 1864 1 1900   (null)
+O 0 2082 1 2118   (null)
 
-O 0 1865 1 1904   (null)
+O 0 2083 1 2122   (null)
 
-O 0 1866 1 1908   (null)
+O 0 2084 1 2126   (null)
 
 S
 #$

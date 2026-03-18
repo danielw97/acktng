@@ -5,7 +5,7 @@ K violet eclipse cathedral gothic dark~
 L @@W(@@a20 35@@W)@@N~
 N 8
 I 20 35
-V 5181 5255
+V 5650 5749
 X 0
 F 20
 U @@mAmethyst@@N and @@dobsidian@@N hues dominate this terror-soaked gothic cathedral.~
@@ -13,7 +13,7 @@ O Virant~
 R all~
 W all~
 #ROOMS
-#5181
+#5650
 @@mShattered Rose Gate@@N~
 The outer threshold of the Cathedral of the Violet Eclipse stands beneath needle-arched vaulting where shards of rose-tinted glass still hang from iron tracery like bloodied teeth. Broken @@mcivic checkpoint stones@@N, once bearing the @@alantern-registry markings@@N of Midgaard's western ward, lie toppled on both sides of the entryway, their seals defaced with obsidian wax. The road behind you leads east toward the Roc Road and eventually toward Midgaard; ahead, a great corridor of @@mviolet-stained stone@@N pulls the eye inward, past the wreckage of whatever pretense of oversight once stood here.
 ~
@@ -21,17 +21,17 @@ The outer threshold of the Cathedral of the Violet Eclipse stands beneath needle
 D0
 The road curves east toward Midgaard's outer wards.~
 ~
-0 -1 1118
+0 -1 1301
 D2
 The vestibule opens ahead through a curtain of hanging censer smoke.~
 ~
-0 -1 5182
+0 -1 5651
 E
 checkpoint stones~
 The broken stones are carved with the compass-rose mark of the Lantern Registry and a now-illegible numerical suffix. Beneath the defacement in obsidian wax, faded ink reads: "Western Ward Threshold â Compact Clearance Required." Whoever sealed this checkpoint was not hiding from outsiders. They were hiding from the city that authorized it.
 ~
 S
-#5182
+#5651
 @@mCenser-Fog Vestibule@@N~
 Pale @@mcenser smoke@@N hangs in suspended veils between the ribbed stone columns of this intake vestibule, and the smell of compressed juniper and bitter myrrh makes the air sharp and slightly dizzying. Shackled @@mswinging censers@@N trace their slow arcs overhead, suspended from thorn-iron brackets, their chains never stilling. The floor is patterned with @@alantern-registry intake symbols@@N stamped in cyan over pale stone, the same administrative vocabulary used by Midgaard's clerks, here elevated into liturgical territory. A visitor processed here was being sorted, classified, and marked before they had spoken a word.
 ~
@@ -39,17 +39,17 @@ Pale @@mcenser smoke@@N hangs in suspended veils between the ribbed stone column
 D0
 The shattered gate lies to the north.~
 ~
-0 -1 5181
+0 -1 5650
 D2
 The nave corridor extends southward, its columns flanking a worn processional path.~
 ~
-0 -1 5183
+0 -1 5652
 E
 censer smoke~
 The smoke is not merely atmospheric. Intake records found in abandoned staff chambers suggest the censer mixture included compounds that dulled skepticism and encouraged compliance during the initial witness-sorting procedure. The Compact authorized use of atmospheric augmentation for institutional visitor management. The cathedral elevated the practice into doctrine.
 ~
 S
-#5183
+#5652
 @@mPilgrim's Lament Walk@@N~
 Indigo @@mwitchlight@@N bleeds across gothic tracery above, casting the long processional lane in the hues of a bruised sky. Worn grooves in the pale flagstones mark where ten thousand knees pressed in enforced penitence, the channels running deep enough that a finger laid inside them traces a full prayer-circuit before reaching the end of the lane. Murmured @@echoir-notes@@N seem to pulse faintly from somewhere deeper in the cathedral, rhythmic and low. A brass plaque on the west wall reads: @@W"Witness what authority permits."@@N This is the first tenet of the Fivefold Occlusion, here presented without irony.
 ~
@@ -57,17 +57,17 @@ Indigo @@mwitchlight@@N bleeds across gothic tracery above, casting the long pro
 D0
 The vestibule lies to the north.~
 ~
-0 -1 5182
+0 -1 5651
 D2
 The nave continues south toward a gargoyle landing.~
 ~
-0 -1 5184
+0 -1 5653
 E
 brass plaque~
 The plaque is cast in institutional bronze, its lettering standardized to match Midgaard's Lantern Reform signage codes, but the content is alien to those codes. Midgaard's civic oaths read "No judgment hidden, no sentence unrecorded." This plaque rephrases authority as a precondition of witnessing. The modification is surgical. Someone understood Midgaard's language well enough to hollow it out.
 ~
 S
-#5184
+#5653
 @@mGargoyle Choir Landing@@N~
 The corridor expands at this landing, where @@mcarved gargoyle brackets@@N lean outward from the ribbed vaulting as though straining to hear something far below. Each gargoyle is positioned slightly differently, some cupping their stone ears, some turning their heads at angles that suggest lateral listening, some with their hollow mouths frozen in the moment before speech. The stonework is meticulous, clearly the work of someone who understood surveillance as an art form. Below on the flagstones, @@ddark grey wax drips@@N have hardened into star patterns around each column base.
 ~
@@ -75,17 +75,17 @@ The corridor expands at this landing, where @@mcarved gargoyle brackets@@N lean 
 D0
 The pilgrim's lane leads north.~
 ~
-0 -1 5183
+0 -1 5652
 D2
 The nave descends slightly toward a vaulted hub ahead.~
 ~
-0 -1 5185
+0 -1 5654
 E
 gargoyle brackets~
 Close inspection of the gargoyles reveals that several have hollow channels drilled through their bodies from ear-cavities to small openings in the floor below. The channels are clean and smooth-bored, not decorative but functional. Sound gathered at the landing level would travel downward through these channels to listening stations in rooms below. Surveillance infrastructure hidden in plain sight as devotional art.
 ~
 S
-#5185
+#5654
 @@mNarthex of Stilled Wings@@N~
 This vaulted junction chamber serves as the first major branching point of the cathedral's interior, a crossroads where the great processional nave divides into its doctrinal tributaries. Obsidian @@mwitchlight@@N plays across the ribbed buttresses, catching the carved-wing motifs that give this narthex its name, each set of wings depicted with feathers bent downward in the posture of forced submission rather than flight. The broken remains of a massive @@dpipe-organ@@N dominate the eastern wall, its pipes collapsed and its bellows long since rotted; its final sustained chord seems to linger as an architectural ghost in the stone's resonance. The @@mprocessional corridor@@N continues south along the spine, while a passage branches @@eeast@@N toward the sound of distant choir-music. The junction holds a palpable sense of institutional pressure, of a space designed to process people by directing them correctly.
 ~
@@ -93,21 +93,21 @@ This vaulted junction chamber serves as the first major branching point of the c
 D0
 The gargoyle landing lies to the north.~
 ~
-0 -1 5184
+0 -1 5653
 D1
 A vaulted passage leads east toward the sound of choir-music.~
 ~
-0 -1 5196
+0 -1 5665
 D2
 The nave continues south through the spine of the cathedral.~
 ~
-0 -1 5186
+0 -1 5655
 E
 pipe-organ~
 The organ's collapse was not accidental. The pipes have been cut at the base with edged tools, not corroded through. The bellows have been punctured with something sharp and narrow. Someone dismantled this instrument deliberately, on the theory that uncontrolled music is uncontrolled confession. Only the Sanguine Choir may authorize acoustics. The silence that replaced this organ's voice is itself a form of doctrine.
 ~
 S
-#5186
+#5655
 @@mSepulchral Procession@@N~
 A long hall of funerary grandeur, this procession corridor carries @@Wsilver funerary candle-brackets@@N mounted at precise intervals along both walls, their candles replaced with compressed @@dobsidian null-wax@@N cylinders that burn with a cold, near-invisible flame. The floor tiles bear the formal stamp-marks of Compact-era funeral processing, originally a civic infrastructure marker now treated as sacred doctrine. To the @@eeast@@N, the @@lViolet Reliquary@@N wing opens, its entrance framed by violet-lacquered columns. The spine continues south, and the air grows heavier with the weight of institutional history.
 ~
@@ -115,21 +115,21 @@ A long hall of funerary grandeur, this procession corridor carries @@Wsilver fun
 D0
 The narthex junction lies to the north.~
 ~
-0 -1 5185
+0 -1 5654
 D1
 The Violet Reliquary entrance opens to the east.~
 ~
-0 -1 5208
+0 -1 5677
 D2
 The procession continues south toward the Chalice Echo Hall.~
 ~
-0 -1 5187
+0 -1 5656
 E
 obsidian null-wax~
 The null-wax cylinders burn at a temperature that produces almost no visible light, creating a state of functional darkness that nonetheless fails all dark-room classifications because the flame technically exists. This is a canonical bureaucratic workaround. The rooms lit by null-wax are, by institutional decree, illuminated. Any testimony recorded in them is legally valid. The darkness is not in the room; it is in the legal record.
 ~
 S
-#5187
+#5656
 @@mChalice Echo Hall@@N~
 Massive stone chalice-reliefs are carved into the nave walls here, their bowls upturned and their contents shown mid-cascade, the carved substance rendered with hatched lines suggesting layered record-scrolls rather than wine or water, the iconography of testimony converted into communion. To the @@dwest@@N, the @@dObsidian Cloister@@N passage enters this junction, its threshold stone marked with null-sigil wax drips. The corridor continues south. The air smells of dried ink and something sharper beneath, a chemical residue that has saturated the stone over generations of administrative use.
 ~
@@ -137,21 +137,21 @@ Massive stone chalice-reliefs are carved into the nave walls here, their bowls u
 D0
 The Sepulchral Procession extends to the north.~
 ~
-0 -1 5186
+0 -1 5655
 D2
 The nave continues south into the Veil of Black Incense.~
 ~
-0 -1 5188
+0 -1 5657
 D3
 The Obsidian Cloister passage opens to the west.~
 ~
-0 -1 5220
+0 -1 5689
 E
 chalice reliefs~
 Each chalice relief is different, some showing the cascade arriving at a sealed vessel, others at a flame, others at an open palm. Scholars of institutional iconography would recognize the schema as a procedural flowchart: testimony arrives, testimony is contained or destroyed or granted, depending on the receiving organ. The entire wall is a liturgical version of a decision tree. Every path leads to the same endpoint: institutional custody.
 ~
 S
-#5188
+#5657
 @@mVeil of Black Incense@@N~
 Black incense smoke moves in deliberate currents through this corridor, fed by hidden pipes in the floor and ceiling, its density calibrated to obscure distances without fully blocking movement. The smell is @@dcoal tar and anise@@N, a combination the cathedral uses specifically for jurisdictional transition zones, passages where one doctrinal authority ends and another begins. The @@eThorned Scriptorium@@N lies to the @@eeast@@N, its entrance marked by a briar-iron gateway. The spine descends south into the deeper cathedral chambers, and the incense thickens as if resisting forward movement.
 ~
@@ -159,21 +159,21 @@ Black incense smoke moves in deliberate currents through this corridor, fed by h
 D0
 The Chalice Echo Hall lies to the north.~
 ~
-0 -1 5187
+0 -1 5656
 D1
 The Thorned Scriptorium gateway opens to the east.~
 ~
-0 -1 5232
+0 -1 5701
 D2
 The nave continues south through thickening incense.~
 ~
-0 -1 5189
+0 -1 5658
 E
 black incense~
 The cathedral's color-doctrine assigns jurisdictional meaning to incense varieties: violet for canonical zones, crimson for confession corridors, silver for funerary routes, and black for boundary passages. Black incense is neither an invitation nor a warning. It is a bureaucratic marker. You are between authorities here. If something happened to you in this corridor, neither wing would claim responsibility. The incense is a liability clause in scent form.
 ~
 S
-#5189
+#5658
 @@mMauve Lantern Arcade@@N~
 A row of @@mmauve lanterns@@N, their glass tinted the same ambiguous tone that sits between violet authority and silver finality, hangs at intervals from the vaulted ceiling here, casting the corridor in a shifting, uncertain light. Beneath one lantern bracket, a @@Wdescent staircase@@N drops away into the @@WMoonbone Ossuary@@N below. The arcade continues south toward the deeper spine chambers. A half-legible inscription on the west pillar reads: @@W"The sentenced are not lost; they are filed."@@N The mauve light gives no warmth, only classification.
 ~
@@ -181,21 +181,21 @@ A row of @@mmauve lanterns@@N, their glass tinted the same ambiguous tone that s
 D0
 The Veil of Black Incense extends to the north.~
 ~
-0 -1 5188
+0 -1 5657
 D2
 The arcade continues south through the mauve lantern light.~
 ~
-0 -1 5190
+0 -1 5659
 D5
 The descent staircase drops into the Moonbone Ossuary below.~
 ~
-0 -1 5244
+0 -1 5713
 E
 descent staircase~
 The staircase is carved from a single span of pale basalt, its handrails worn smooth by generations of hands. The air rising from below carries the cool mineral scent of prepared bone and the sweet chemical undertone of embalming compounds. These stairs were originally a service route, the funerary intake path used by Moonbone Ossuary staff to receive sentenced dead from the upper cathedral levels. They became the main access route after the front processional gate was sealed.
 ~
 S
-#5190
+#5659
 @@mCathedral Midspine@@N~
 The central processional corridor reaches its midpoint here, where the architectural grandeur of the entry wings gives way to more functional stonework, broader joints, less ornament, more weight. A convergent interior @@mcheckpoint@@N is implied by the arrangement of stone platforms set into the walls at irregular heights, each large enough to station a sentinel with a line of sight down both approaches. Several of the platforms still bear the impression of long occupation: worn stone, old oil stains, the ghost-outline of a post that once supported a canopy. The atmosphere is businesslike in a way the decorated entry corridor is not, a reminder that under the liturgical veneer this is an institution of enforcement.
 ~
@@ -203,13 +203,13 @@ The central processional corridor reaches its midpoint here, where the architect
 D0
 The Mauve Lantern Arcade extends to the north.~
 ~
-0 -1 5189
+0 -1 5658
 D2
 The spine continues south through heavier stonework.~
 ~
-0 -1 5191
+0 -1 5660
 S
-#5191
+#5660
 @@mLitany Crossing@@N~
 The corridor walls here are dense with mnemonic inscriptions, the full text of the Fivefold Occlusion repeated forty-seven times in different hands, each iteration in a slightly different ink color, as if successive generations of scribes were required to copy it until their grip gave out. Interspersed among the repetitions are shorter fragments in an older notation system, fragments that appear to be Lantern Registry filing protocols, now stripped of their civic context and embedded in liturgical text. The effect is of a record that has been overwritten without erasing its substrate. You can read both layers if you know what to look for.
 ~
@@ -217,17 +217,17 @@ The corridor walls here are dense with mnemonic inscriptions, the full text of t
 D0
 The Cathedral Midspine lies to the north.~
 ~
-0 -1 5190
+0 -1 5659
 D2
 The nave continues south toward the Roseglass Transept.~
 ~
-0 -1 5192
+0 -1 5661
 E
 mnemonic inscriptions~
 Reading the earlier ink layers through the liturgical overlay is possible but laborious. What emerges is a partial filing protocol for class-D penitent intake, including instructions for handling subjects who present documentary contradiction. The protocol specifies: "All contradictory materials to be sealed under obsidian authority. No secondary filing without express warrant." The liturgical text copied over these instructions does not obscure their content. It sacralizes it.
 ~
 S
-#5192
+#5661
 @@mRoseglass Transept@@N~
 A large transept chamber opens here, its ceiling a vaulted canopy hung with surviving fragments of @@erose-tinted glass@@N that scatter crimson light across the floor in irregular pools. The glass is original, pre-cathedral, dating to the Violet Arch Chapel-House era before the institution shed its last civic pretense. Each pane bears the imprint of a different registry symbol in leaded outline: intake arrows, custody scales, the half-moon of provisional review. They were installed as administrative iconography. The doctrine that followed transformed them into sacred relics of a founding era. Inscribed beneath the largest pane: @@e"Color reveals rank."@@N
 ~
@@ -235,17 +235,17 @@ A large transept chamber opens here, its ceiling a vaulted canopy hung with surv
 D0
 The Litany Crossing extends to the north.~
 ~
-0 -1 5191
+0 -1 5660
 D2
 The nave continues south toward the bell gallery.~
 ~
-0 -1 5193
+0 -1 5662
 E
 rose-tinted glass~
 The glass has survived because the Sanguine Choir declared it a founding relic, a protected artifact of the Cathedral's pre-eclipse identity. Destroying it would be doctrinal self-erasure. The irony is that the glass records an administrative function, not a religious one: these symbols are filing codes. The first tenet's inscription below, "Color reveals rank," is a recontextualization that turns a sorting system into a metaphysics. The glass itself does not know it has been sanctified.
 ~
 S
-#5193
+#5662
 @@mFuneral Bell Gallery@@N~
 A vaulted gallery spans the width of the nave here, hung with a dozen @@Wsilver funeral bells@@N on iron chains, each bell etched with the ossuary's intake classification system, size, weight, and position of inscription encoding the deceased's doctrinal status at time of death. Most bells no longer ring; their clappers have been removed and replaced with @@dobsidian null-pins@@N that produce only a muffled click when struck, as if even sound has been redacted here. One bell at the far end of the gallery retains its full clapper and ring, its tone clear and cold in the still air.
 ~
@@ -253,17 +253,17 @@ A vaulted gallery spans the width of the nave here, hung with a dozen @@Wsilver 
 D0
 The Roseglass Transept extends to the north.~
 ~
-0 -1 5192
+0 -1 5661
 D2
 The nave proceeds south toward the Reliquary Axis.~
 ~
-0 -1 5194
+0 -1 5663
 E
 silver funeral bells~
 The classification system encoded in the bell inscriptions is traceable to Midgaard's funerary administration records from the Containment Era. Bells of this type were originally commissioned by the city's Nightfall Processing Guild as a sortation aid, different bell-tones communicating intake class during processions in low-visibility conditions. The cathedral inherited the bells, stripped their functionality by removing the clappers, and left the classification system intact. The information is preserved but made inert. This is the null-seal principle applied to acoustics.
 ~
 S
-#5194
+#5663
 @@mReliquary Axis@@N~
 The corridor narrows here, compressing the processional path between walls engraved with the insignia of all five institutional houses, arranged not in parallel but in a hierarchical column: violet over crimson over indigo over obsidian over silver, with gold reserved for the crown of the composition. This is the final warning corridor before the Eclipse High Nave, a visual statement of the complete doctrinal order presented as if the visitor were walking through hierarchy as a physical space. The stone underfoot is darker here, and slightly warm, as if heat from something below is rising through the rock.
 ~
@@ -271,17 +271,17 @@ The corridor narrows here, compressing the processional path between walls engra
 D0
 The Bell Gallery extends to the north.~
 ~
-0 -1 5193
+0 -1 5662
 D2
 The Eclipse High Nave opens ahead.~
 ~
-0 -1 5195
+0 -1 5664
 E
 hierarchical column~
 The five-house insignia column is carved in relief with extraordinary precision. At the top, a half-eclipsed sun in violet lacquer. Below it, the blood-cup of the Sanguine Choir in deep red pigment that has not faded. Then the open eye of the Violet Reliquary in indigo. Below that, the sealed mouth of the Obsidian Scriptoria in flat black wax. At the base, the bone-halo of the Moonbone Ossuary in white. The arrangement states institutional hierarchy as a fact of architecture.
 ~
 S
-#5195
+#5664
 @@mEclipse High Nave@@N~
 The spine of the cathedral culminates in this vast chamber, its ceiling lost in shadows far above where the vaulting fans outward in a canopy of stone ribs converging on a single suspended @@meclipse medallion@@N, a circle of violet-lacquered iron with a sickle of obsidian cutting across it. Natural light is entirely absent; the nave is lit by @@mviolet witchfire@@N in iron cressets that burn without heat, their light falling on the elaborate floor mosaic of the Fivefold Occlusion rendered in tile. The gold-edged outermost ring of the mosaic labels the Hierophant's exclusive jurisdictional claim, a single word in archaic script: @@yFINAL@@N. To the north lies the return to the processional axis. An @@meclipse gate@@N stands to the east, its arch sealed with violet iron; only those bearing the passage-key may proceed into the Moonbone descent beyond. The architecture here is not decorative: it is a statement of terminal authority.
 ~
@@ -289,11 +289,11 @@ The spine of the cathedral culminates in this vast chamber, its ceiling lost in 
 D0
 The Reliquary Axis corridor extends to the north.~
 ~
-0 -1 5194
+0 -1 5663
 D1
 The eclipse gate stands sealed in violet iron. A passage-key is required.~
 ^eclipse gate~
-1 5181 5244
+1 5650 5713
 E
 eclipse medallion~
 The medallion hangs from a single chain of obsidian links. Its proportions match the astronomical model used in Compact-era eclipse prediction tables: the eclipse rendered here is not symbolic but calendrical, pinpointing a specific alignment date. Scholars of the Lantern Registry's Night Route records would recognize the date as falling within the Unindexed Years, the period during which the cathedral withdrew into isolation. The medallion marks the moment the institution chose eclipse over accountability.
@@ -303,7 +303,7 @@ eclipse gate~
 The gate is wrought from violet iron, a proprietary alloy used only in eclipse-doctrine threshold seals. The lock mechanism is a Compact-era dual-cylinder design, requiring the specific @@meclipse gate key@@N to align both tumblers simultaneously. The gate's lintel bears the inscription: "Passage certified under eclipse warrant only." Without the proper key, the gate does not yield.
 ~
 S
-#5196
+#5665
 @@eBlood Psalm Entry@@N~
 The passage from the main spine opens here into the first chamber of the Sanguine Choir, where the architectural vocabulary shifts abruptly from the violet-and-obsidian palette of the spine to a deep crimson. @@eBlood-tithe channels@@N run in shallow grooves along the base of both walls, converging at a collection plinth in the center of the room; the channels are clean but deeply stained. A massive carved chalice-relief above the south doorway depicts a figure pouring from a vessel held overhead, with streams of crimson detail descending into an open book below. The inscription beneath reads: @@e"Rank determines witness."@@N The theology of coercion begins here.
 ~
@@ -311,17 +311,17 @@ The passage from the main spine opens here into the first chamber of the Sanguin
 D2
 The passage descends south into the choir's deeper chambers.~
 ~
-0 -1 5197
+0 -1 5666
 D3
 The main spine corridor lies to the west.~
 ~
-0 -1 5185
+0 -1 5654
 E
 blood-tithe channels~
 The channels were installed during Crimson Matron Ilyra's second tenure, replacing the simpler confession rails that predated her reforms. The engineering is surprisingly precise: the gradient ensures drainage without pooling, and small iron gates at intervals allow channel-section isolation during liturgical events. The channels are not decorative. They were designed to function. They have functioned.
 ~
 S
-#5197
+#5666
 @@eVelvet Wound Cloister@@N~
 A cloister arcade of low arches surrounds a central courtyard space here, each arch draped with heavy @@evelvet hangings@@N in deep crimson and black that dampen sound without eliminating it. The acoustic effect is deliberate: voices carry but at reduced volume, ensuring confessions spoken anywhere in the cloister are audible to positioned listeners without carrying beyond the arcade. The floor is laid with straw over stone, absorbent material that makes footfalls inaudible and liquid management easy. Several velvet hangings are darker at their lower hems than at their tops, a stain that no amount of routine maintenance has managed to address.
 ~
@@ -329,17 +329,17 @@ A cloister arcade of low arches surrounds a central courtyard space here, each a
 D0
 The Blood Psalm Entry lies to the north.~
 ~
-0 -1 5196
+0 -1 5665
 D2
 The arcade descends south into the Hemorrhage Chapel.~
 ~
-0 -1 5198
+0 -1 5667
 E
 velvet hangings~
 The hangings are woven from a material described in the cathedral's own records as tithe-dyed velvet, cloth saturated in blood during the dyeing process to achieve the particular depth of crimson that standard dyes cannot reproduce. The process is documented in the Choir's operational logs as a standard fabric preparation method. The velvet does not merely represent crimson; it is crimson in a material sense. The Choir considers this a form of distributed sanctification.
 ~
 S
-#5198
+#5667
 @@eHemorrhage Chapel@@N~
 The chapel's name is carved into the arch above the entrance without apology or euphemism. Inside, the primary feature is a raised @@estained stone altar@@N at the north end, its surface carved with a thorn-and-vine pattern that channels liquid from a central basin through spiraling grooves toward the edges. Iron arm-rests extend from the altar's sides at the height for a kneeling figure, their positioning calibrated to the standard proportions of a Compact-era documentary penitent. Faded musical notation is painted directly onto the walls in crimson, the score of a blood-psalm, its verses marking liturgical steps in a procedure that combines musical performance with physical extraction.
 ~
@@ -347,17 +347,17 @@ The chapel's name is carved into the arch above the entrance without apology or 
 D0
 The Velvet Wound Cloister extends to the north.~
 ~
-0 -1 5197
+0 -1 5666
 D2
 The aisle continues south through the choir chambers.~
 ~
-0 -1 5199
+0 -1 5668
 E
 stained stone altar~
 The stains on the altar are organized in a pattern that implies use over extended periods under consistent protocols, not chaotic evidence of violence but the methodical residue of a procedure performed the same way, repeatedly, in the same space. The musical notation on the walls shows three distinct compositional layers in different ink ages, suggesting the blood-psalm evolved through at least three revision cycles. The current version is the third. It is considered the most efficient.
 ~
 S
-#5199
+#5668
 @@eDirge-Stained Aisle@@N~
 A long aisle between doubled rows of @@elow pews@@N runs the length of this chamber, the pew wood so deeply stained that the grain has been obliterated. The pews face a lectern at the south end where a dirge cantor would stand to lead the congregation through the psalm cycle; behind the lectern, a massive @@ecarved bone-pipe organ@@N occupies most of the south wall, its pipes cast from osseous material rather than metal, their tone lower and wetter than standard pipe-work. Several pipes are cracked, and the sound that occasionally emanates from them is not music but the groan of pressured air escaping through fractures in the bone.
 ~
@@ -365,17 +365,17 @@ A long aisle between doubled rows of @@elow pews@@N runs the length of this cham
 D0
 The Hemorrhage Chapel lies to the north.~
 ~
-0 -1 5198
+0 -1 5667
 D2
 The aisle leads south toward the Scarlet Organ Loft.~
 ~
-0 -1 5200
+0 -1 5669
 E
 bone-pipe organ~
 The osseous pipes were commissioned specifically because bone resonates differently from metal. The resulting tone is described in the Choir's construction records as sonically penetrative without volumetric excess, meaning it can be felt inside the body before it is consciously perceived by the ears. This property is not accidental. The Choir's psalm protocols include timing cues marked resonate before verse, preparation of the listener's physiological state before the confession verse begins.
 ~
 S
-#5200
+#5669
 @@eScarlet Organ Loft@@N~
 The organ loft occupies an elevated alcove above the main aisle, reached by a narrow stair behind the carved archway. From above, the full arrangement of the choir chambers below is visible, providing the organist and any additional listeners stationed here a complete acoustic and visual command of the confession space. The @@escalin-rail@@N along the loft's forward edge is carved with small figures in postures of supplication, each figure's expression rendered with unsettling individual detail. Crimson light bleeds through a narrow window-slit to the west, tinting everything the color of dried blood.
 ~
@@ -383,17 +383,17 @@ The organ loft occupies an elevated alcove above the main aisle, reached by a na
 D0
 The Dirge-Stained Aisle extends to the north.~
 ~
-0 -1 5199
+0 -1 5668
 D2
 The loft passage descends south into the Sable Choir Stalls.~
 ~
-0 -1 5201
+0 -1 5670
 E
 scalin-rail~
 Each supplication figure on the rail is distinct: different postures, different expressions, different details of dress suggesting different social origins. Close examination reveals a pattern: each figure's clothing carries a small mark corresponding to one of the five doctrinal colors, categorizing their submission by institutional house. The figures are not generalized penitents. They are specific institutional types, rendered in permanent stone, permanently supplicating. The rail is a catalog of the Choir's expected clientele.
 ~
 S
-#5201
+#5670
 @@eSable Choir Stalls@@N~
 The formal choir stalls occupy this long chamber, their carved wooden seats arranged in two facing rows of twelve, each seat worn smooth and darkened by long use. Above each seat, a small iron name-plaque bears a title rather than a personal name: First Blood Cantor, Wound Dresser Tertius, Psalm Marshall, and so on, the full liturgical roster of the Choir preserved in institutional terminology after the individuals who held those roles are gone. The @@estall carvings@@N at each seat's end-panel depict scenes from the Choir's founding narrative, the moment blood oath enforcement was merged with musical confession, each panel rendering a different step of the combined procedure.
 ~
@@ -401,17 +401,17 @@ The formal choir stalls occupy this long chamber, their carved wooden seats arra
 D0
 The Scarlet Organ Loft extends to the north.~
 ~
-0 -1 5200
+0 -1 5669
 D2
 The passage continues south toward the Crypt-Glass Passage.~
 ~
-0 -1 5202
+0 -1 5671
 E
 stall carvings~
 The founding narrative carved into the end-panels is sequential: panel one shows two robed figures performing separate rituals, panel two shows them at a single altar combining their implements, panel three shows a kneeling figure between them, and panel four shows the combined procedure concluded. The final panel is ambiguous: the kneeling figure has been removed from its position, but whether liberated or consumed is left deliberately unclear.
 ~
 S
-#5202
+#5671
 @@eCrypt-Glass Passage@@N~
 The corridor walls here are inset with panels of thick @@ecrypt glass@@N, a dark translucent material that transmits light at a deep amber-crimson frequency, filtering out all other wavelengths. The effect is of looking through dried blood at whatever lies beyond. Objects and figures visible through the glass appear uniformly dark and indistinct, stripped of identifiable color, reduced to silhouettes. This was an intentional design: the glass panels line rooms used for witness identification sessions, where the witness could see the subject without being seen, and where the subject's coloring, which carries doctrinal classification meaning under the Fivefold Occlusion, would be stripped away and made irrelevant.
 ~
@@ -419,17 +419,17 @@ The corridor walls here are inset with panels of thick @@ecrypt glass@@N, a dark
 D0
 The Sable Choir Stalls extend to the north.~
 ~
-0 -1 5201
+0 -1 5670
 D1
 A side passage turns east toward the Vesper Thorn Niche.~
 ~
-0 -1 5203
+0 -1 5672
 E
 crypt glass~
 The glass was manufactured using a process described in the Choir's construction contracts as "spectrally selective filtration." The relevant property is not opacity but selectivity: crypt glass transmits everything in the amber-to-crimson range while absorbing other wavelengths, making the Choir's liturgical color regime the only perceptual framework available to anyone looking through it. Viewing through crypt glass, you cannot know whether someone is wearing violet or obsidian. The glass enforces the Choir's jurisdictional primacy on everything seen through it.
 ~
 S
-#5203
+#5672
 @@eVesper Thorn Niche@@N~
 A deep stone niche carved into the east wall of this passage houses a vesper altar in permanent readiness: thorn-iron candlesticks, a basin of dried pigment in Choir crimson, and a small @@ebone codex@@N chained to the altar surface with links of barbed wire rather than standard chain. The codex is open to a page showing a compacted version of the blood-psalm confession protocol, its text rendered in a shorthand notation that assumes the reader already knows the long form. The niche smells of old wax and the slightly metallic undertone that permeates the Choir wing.
 ~
@@ -437,17 +437,17 @@ A deep stone niche carved into the east wall of this passage houses a vesper alt
 D0
 The Crypt-Glass Passage turns north.~
 ~
-0 -1 5204
+0 -1 5673
 D3
 The Crypt-Glass Passage continues west.~
 ~
-0 -1 5202
+0 -1 5671
 E
 bone codex~
 The codex is chained open because it is a working document, not a display object. The page visible shows the shorthand for a procedure that in long form requires four pages: the condensed version has been revised repeatedly, each revision removing further preamble until only the procedural core remains. The current version has no preamble at all. It begins with an instruction.
 ~
 S
-#5204
+#5673
 @@eMourner's Spiral@@N~
 The passage here curves in a deliberate spiral around a central pillar, forcing anyone moving through it to orbit the column three times before reaching the exit. The column itself is carved with the names of those condemned to blood-tithe service, arranged in ascending spirals that mirror the passage's shape, the earliest names at the base, the most recent near the top. The column is nearly full. The spiral forces everyone passing through to walk alongside the names, to be briefly proximate to the record, before proceeding deeper into the wing.
 ~
@@ -455,17 +455,17 @@ The passage here curves in a deliberate spiral around a central pillar, forcing 
 D0
 The spiral descends north toward the Black Mass Rotunda.~
 ~
-0 -1 5205
+0 -1 5674
 D2
 The spiral ascends south toward the Vesper Thorn Niche.~
 ~
-0 -1 5203
+0 -1 5672
 E
 column names~
 The names on the column are carved in different hands and ink-styles, some in fine calligraphic notation, others in rough block lettering, others in abbreviated shorthand. All are organized under one of four categories: Voluntary Tithe, Covenant Tithe, Adjudicated Tithe, and Requisitioned Tithe. The distinctions between categories apparently mattered enough to preserve in the record. The practical outcomes were not recorded alongside the names.
 ~
 S
-#5205
+#5674
 @@eBlack Mass Rotunda@@N~
 A circular chamber dominated by a massive black-marble floor inlaid with the Choir's liturgical calendar, each date marked with a different doctrinal symbol indicating the type of ceremony authorized on that day. The calendar is exhaustive, covering every day of a standard year with some form of prescribed Choir activity. @@eBlood-psalm stations@@N are set at the four cardinal points of the rotunda, each station equipped with its own tithe collection basin, kneeling rail, and musical notation board. The air here is thick and sweet, a combination of incense and other compounds that the Choir permits only in its highest-authority ceremony spaces.
 ~
@@ -473,17 +473,17 @@ A circular chamber dominated by a massive black-marble floor inlaid with the Cho
 D0
 The Mourner's Spiral leads north.~
 ~
-0 -1 5206
+0 -1 5675
 D2
 The Mourner's Spiral descends south.~
 ~
-0 -1 5204
+0 -1 5673
 E
 blood-psalm stations~
 The four stations are not identical: each is calibrated to a different confession category, and the musical notation at each station contains the specific psalm variant appropriate for that category. The north station is for voluntary confession; the east, for documentary penitence; the south, for covenant renewal; the west, for what the notation labels as "final adjudication." The west station's basin is larger than the others, and its kneeling rail has been reinforced with additional iron supports.
 ~
 S
-#5206
+#5675
 @@eCandled Casket Hall@@N~
 A long hall lined with stone casket-niches, each niche sealed with a rectangular slab of rose-tinted glass behind which a single candle burns at a different height, the varying heights encoding the casket occupant's institutional status. The caskets are not burial chambers but record-containers: @@elead-sealed registry boxes@@N storing the blood-oath documentation for each person processed through the Choir. The candle heights are a live index, burning down toward the floor as the years pass. When a candle reaches the floor, the corresponding registry box is removed and archived in the deeper crypts. The hall is an active filing system that burns in real time.
 ~
@@ -491,17 +491,17 @@ A long hall lined with stone casket-niches, each niche sealed with a rectangular
 D0
 The Throne of the Crimson Matron lies ahead to the north.~
 ~
-0 -1 5207
+0 -1 5676
 D2
 The Black Mass Rotunda opens to the south.~
 ~
-0 -1 5205
+0 -1 5674
 E
 lead-sealed registry boxes~
 Each box is labeled with a date, an intake classification, and a wax seal in Choir crimson. Some boxes have a second seal in obsidian wax alongside the crimson, indicating that the record has been cross-referenced with the Obsidian Scriptoria's null-archive. These dual-sealed boxes cannot be accessed under any standard Choir procedure. Their contents, whatever they contain, have been jointly locked by two institutional offices in a mutual non-disclosure arrangement.
 ~
 S
-#5207
+#5676
 @@eThrone of the Crimson Matron@@N~
 The culminating chamber of the Sanguine Choir wing opens in a high-ceilinged apse dominated by a @@eblood-psalm lectern@@N of carved bone and crimson-lacquered iron at the room's center, its angled surface still bearing the handwritten annotations of Crimson Matron Ilyra's final revision of the canonical blood-psalm. Behind the lectern, a @@ecrimson candelabra@@N of monstrous proportion rises on seven iron arms, each arm supporting a tiered arrangement of candles burning in the deep crimson of tithe-wax. The throne itself is recessed into the north wall: a high-backed chair of black iron and rose glass, positioned so that whoever sits in it is simultaneously above the lectern and behind it, able to observe every confession conducted here without participating in it. The @@eboodstained door@@N through which you entered stands to the south; in this room, departure is never simple.
 ~
@@ -509,7 +509,7 @@ The culminating chamber of the Sanguine Choir wing opens in a high-ceilinged aps
 D2
 The bloodstained door leads south back through the casket hall.~
 ^bloodstained door~
-1 -1 5206
+1 -1 5675
 E
 blood-psalm lectern~
 Ilyra's final annotations to the blood-psalm are written in two colors: standard black ink for the doctrinal text, and a rust-brown substance for her personal marginal notes. The marginal notes are largely procedural refinements, but three entries near the psalm's conclusion are circled: "simultaneous extraction improves compliance rate," "confession cadence must not outpace blood-flow," and "the moment of combined completion is the only admissible testimony." The last note is underlined three times.
@@ -519,7 +519,7 @@ crimson candelabra~
 The candelabra was cast from a single pour of crimson-tinted iron, its arms shaped to resemble the branching structure of the Choir's five-tier confession procedure. The topmost arm, representing final adjudication, burns brightest; the lowest arm, representing voluntary intake, has never been lit. The hierarchy of illumination is intentional.
 ~
 S
-#5208
+#5677
 @@lReliquary Mouth@@N~
 The passage from the Sepulchral Procession opens here into the Violet Reliquary wing, where the architectural language shifts from the spine's severe grey to a palette of @@ldeep indigo@@N and @@mviolet@@N, the walls clad in polished amethyst-veined stone that catches and refracts the lantern light in slow-moving prismatic patterns. @@lStar-survey records@@N of the type used by the Compact's Night Route archivists are engraved in the wall panels, their sky-chart notation repurposed as decorative framing for the relic cabinets that occupy every alcove. The reliquary's function is legible in the first room: this is where legitimacy is stored, curated, and brokered.
 ~
@@ -527,17 +527,17 @@ The passage from the Sepulchral Procession opens here into the Violet Reliquary 
 D1
 The reliquary passages extend east.~
 ~
-0 -1 5209
+0 -1 5678
 D3
 The Sepulchral Procession lies to the west.~
 ~
-0 -1 5186
+0 -1 5655
 E
 star-survey records~
 The night-sky charts engraved in the wall panels are genuine Lantern Registry Night Route records, not reproductions. They were removed from Midgaard's civic archives and reinstalled here as decorative framing during the cathedral's transformation from chapel-house to eclipse institution. Their original function was to record astronomical observation data used for scheduling nocturnal witness rites. Their current function is to assert that the Reliquary possesses even the city's sky-reading records.
 ~
 S
-#5209
+#5678
 @@lCrown of Violet Icons@@N~
 The walls here are lined with @@licon cabinets@@N of polished amethyst-wood, each cabinet displaying a saint's relic or ceremonial object behind locked glass, the key for each cabinet hanging visibly on a hook beside it, just out of reach. The display logic is deliberate: the objects are visible, the keys are visible, but the combination of visibility and inaccessibility is a statement about the Reliquary's curation doctrine. What you can see but not touch is within their jurisdiction, not yours. A catalogue ledger on a reading stand lists each icon by saint, date of acquisition, and current custody classification.
 ~
@@ -545,17 +545,17 @@ The walls here are lined with @@licon cabinets@@N of polished amethyst-wood, eac
 D1
 The reliquary wing extends east.~
 ~
-0 -1 5210
+0 -1 5679
 D3
 The Reliquary Mouth lies to the west.~
 ~
-0 -1 5208
+0 -1 5677
 E
 icon cabinets~
 Several cabinets have been recently opened and re-sealed: the hinges show fresh wear and the glass has been re-polished. Inside the reopened cabinets, the displayed relics have been subtly repositioned, suggesting that what is on display is not necessarily what was there before. The catalogue ledger's most recent entries are written in a different hand from the earlier entries, and two entries from last season have been neatly struck through with a single line in violet ink. The cabinet contents have been revised.
 ~
 S
-#5210
+#5679
 @@lLantern of Closed Eyes@@N~
 A large ceremonial lantern, its housing fashioned from @@lblue-tinted glass@@N and hanging on a single chain of violet iron, dominates the center of this chamber. The lantern burns with an indigo flame that casts the room in steady blue light with minimal shadow, a lighting condition described in the Compact's witness-rite protocols as "archival neutral" â the illumination standard used when visual identification testimony is being recorded. Arranged around the lantern's base on a circular shelf are small @@Wwax faces@@N, white sealed impressions of eyes-shut expressions, the Reliquary's record of witnesses who gave testimony under this lantern and were subsequently sealed.
 ~
@@ -563,17 +563,17 @@ A large ceremonial lantern, its housing fashioned from @@lblue-tinted glass@@N a
 D1
 The reliquary corridors extend east.~
 ~
-0 -1 5211
+0 -1 5680
 D3
 The Crown of Violet Icons lies to the west.~
 ~
-0 -1 5209
+0 -1 5678
 E
 wax faces~
 Each wax face is identical in expression, eyes closed, lips slightly parted, which could be read as either peaceful rest or enforced silence. Each face bears a date stamped into the wax on its reverse and a one-word classification in the Reliquary's filing shorthand. The classifications include words like "retained," "archived," "transferred," and in a few cases, "resolved." The meaning of resolved is not explained in any visible documentation. There are more resolved faces than any other category.
 ~
 S
-#5211
+#5680
 @@lCat's-Eye Apse@@N~
 The apse opens in an irregular oval shape, its ceiling arching upward to a point where a single @@lcat's-eye lens@@N is set into the stone, a convex piece of pale amethyst-glass that distorts whatever is viewed through it from below into a compressed, panoramic fish-eye image. From the perspective of a figure at the center of the apse floor, the lens above provides a complete overhead view of the room's perimeter to anyone observing from above. The apse was used for petition hearings: petitioners stood at the center, visible from above, while Reliquary adjudicators observed from a concealed gallery through the lens.
 ~
@@ -581,17 +581,17 @@ The apse opens in an irregular oval shape, its ceiling arching upward to a point
 D1
 The reliquary passages continue east.~
 ~
-0 -1 5212
+0 -1 5681
 D3
 The Lantern of Closed Eyes lies to the west.~
 ~
-0 -1 5210
+0 -1 5679
 E
 cat's-eye lens~
 The lens is mounted on a pivot that allows its viewing angle to be adjusted from the gallery above. It has been adjusted recently: the mounting dust is disturbed in a fresh arc. The gallery above is not directly accessible from this apse floor. There is no obvious route up, which is the design: the observers above remain invisible to the observed below. The apse is a panopticon with one-way sight-lines.
 ~
 S
-#5212
+#5681
 @@lIncantor's Crosshall@@N~
 Two processional corridors intersect at this crosshall, their junction marked by a circular floor inlay of @@lviolet and indigo tiles@@N that forms a compass rose with a third direction added, a diagonal pointing toward an alcove in the northeast wall where a sealed @@lincantation cabinet@@N holds scrolled working documents. The crosshall shows signs of recent heavy use: the floor inlay is worn bright at the center where people have stood, and the northeast alcove's floor carries the impressions of many careful footsteps approaching and retreating from the cabinet.
 ~
@@ -599,17 +599,17 @@ Two processional corridors intersect at this crosshall, their junction marked by
 D0
 The north passage leads to the Amethyst Sacristy.~
 ~
-0 -1 5213
+0 -1 5682
 D3
 The Cat's-Eye Apse lies to the west.~
 ~
-0 -1 5211
+0 -1 5680
 E
 incantation cabinet~
 The cabinet is locked with a mechanism that requires two keys simultaneously, indicating that its contents cannot be accessed by any single officer. The scrolls visible through the cabinet's mesh screen are rolled tightly, their labels facing inward so titles are not legible. One scroll has unrolled slightly at its end, and a single line of text is visible: "Classification: Level Null. Access: Joint authority only." Level Null is the Reliquary's designation for material that has been officially removed from existence.
 ~
 S
-#5213
+#5682
 @@lAmethyst Sacristy@@N~
 The sacristy smells of violet resin and polished stone, a combination that achieves an effect close to sanctity without invoking any specific ritual source. Tall @@lamethyst-wood vestment presses@@N line the walls, each press sealed with the icon warden's personal lock, their doors etched with small emblems indicating the liturgical season each garment set is designated for. A central preparation table holds an open registry case, its contents half-sorted: some documents face-up, showing intake dates, others face-down, showing nothing. The sacristy is a backstage space where the Reliquary's public-facing authority is dressed and composed.
 ~
@@ -617,17 +617,17 @@ The sacristy smells of violet resin and polished stone, a combination that achie
 D0
 The Votive Bone Gallery lies to the north.~
 ~
-0 -1 5214
+0 -1 5683
 D2
 The Incantor's Crosshall lies to the south.~
 ~
-0 -1 5212
+0 -1 5681
 E
 vestment presses~
 The presses contain garments calibrated to different ceremonial functions: the lightest, most elaborately decorated vestments are for petition hearings (when the Reliquary presents itself to supplicants); heavier, darker vestments are for relic inspections (a private function); and the heaviest, most armored-looking garments are for what the labels call "contested custody proceedings." The last category's press has reinforced hinges.
 ~
 S
-#5214
+#5683
 @@lVotive Bone Gallery@@N~
 Alcoves carved into both walls of this long gallery house @@lannounced skeletal displays@@N, each arrangement accompanied by a small placard identifying the subject: not by name but by doctrinal classification, processing date, and final institutional status. The bones are clean and carefully arranged, their positions suggesting the Reliquary's curators have strong opinions about how remains should be presented to communicate specific messages. Some displays have additional objects placed with them: a document scroll, a broken seal, a folded cloth that may have been clothing. These additions identify the displayed person not just by what they were but by what they carried.
 ~
@@ -635,17 +635,17 @@ Alcoves carved into both walls of this long gallery house @@lannounced skeletal 
 D0
 The Whisper Reliquary lies to the north.~
 ~
-0 -1 5215
+0 -1 5684
 D2
 The Amethyst Sacristy lies to the south.~
 ~
-0 -1 5213
+0 -1 5682
 E
 announced skeletal displays~
 Reading the placards in sequence reveals a pattern: the earliest displays are classified as "Compact Custodians," the middle-period displays as "Eclipse Witnesses," and the most recent as "Reliquary Assets." The evolution of terminology documents the institution's changing relationship with the people it processes. The earliest classification implies stewardship. The latest implies ownership. The bones themselves have not changed. Only the vocabulary has.
 ~
 S
-#5215
+#5684
 @@lWhisper Reliquary@@N~
 The room designated as the core of the Reliquary wing has remarkably plain walls for its importance, its stone uncarved and unlacquered, its floor laid with standard processional tile. The plainness is pointed: the objects that confer legitimacy here are the @@lsealed custody vessels@@N arranged on central shelving, their amethyst-glass bodies containing items that are not visible because the glass has been tinted to opacity at the time of sealing. What the Reliquary holds is held absolutely, beyond examination. The only information available about each vessel is what the attached label says, and the labels are written in the Reliquary's internal shorthand.
 ~
@@ -653,17 +653,17 @@ The room designated as the core of the Reliquary wing has remarkably plain walls
 D0
 The Starless Relic Court extends to the north.~
 ~
-0 -1 5216
+0 -1 5685
 D2
 The Votive Bone Gallery lies to the south.~
 ~
-0 -1 5214
+0 -1 5683
 E
 sealed custody vessels~
 The labels, read with knowledge of the Reliquary's internal classification system, describe a collection that includes several items whose civic custody history should have routed them to Midgaard's Magistrate Ledgerhouse rather than this wing. Two vessel labels correspond to items described in the city's own missing-evidence registers as "unrecovered." The Reliquary did not steal them. It received them through normal transfer protocols. The transfer documentation simply did not specify a return date.
 ~
 S
-#5216
+#5685
 @@lStarless Relic Court@@N~
 The court's ceiling has been painted a deep, unrelieved black, and the walls have been hung with @@lveils of deep indigo cloth@@N that absorb both light and sound, creating a pocket of near-silence where ordinary ambient cathedral noise does not penetrate. The effect is disorienting: the room feels larger than it is because there are no acoustic reflections to calibrate distance by. In this silence, three @@lrelic plinths@@N stand in a triangle, each plinth currently empty, their velvet surfaces bearing the impressions of objects that were recently present and have been removed.
 ~
@@ -671,17 +671,17 @@ The court's ceiling has been painted a deep, unrelieved black, and the walls hav
 D0
 The Chained Saint Corridor extends to the north.~
 ~
-0 -1 5217
+0 -1 5686
 D2
 The Whisper Reliquary lies to the south.~
 ~
-0 -1 5215
+0 -1 5684
 E
 relic plinths~
 The three plinths are calibrated for specific objects: the impressions in the velvet are distinct enough to suggest shape and approximate weight. The largest impression could be a chalice or bowl. The middle impression is flat and rectangular, possibly a book or sealed tablet. The smallest impression is ring-shaped. All three plinths have been cleared deliberately, their velvet surfaces smoothed except for the impressions. Whatever was here has been moved to a more secure location, probably recently.
 ~
 S
-#5217
+#5686
 @@lChained Saint Corridor@@N~
 The corridor takes its name from the @@lfull-length chained icons@@N mounted on both walls, each depicting a saint-figure in the Reliquary's official iconographic style: standing upright, arms extended, with heavy ceremonial chains binding the wrists and ankles. The chains in the icons are rendered in gold leaf, which transforms what would otherwise be an image of restraint into one of adornment. The Reliquary's interpretive gloss on these icons, posted on a small placard at the corridor's entrance, describes the chains as "the bonds of authorized custody, borne willingly in service to the institutional record."
 ~
@@ -689,17 +689,17 @@ The corridor takes its name from the @@lfull-length chained icons@@N mounted on 
 D0
 The Miter of Night lies to the north.~
 ~
-0 -1 5218
+0 -1 5687
 D2
 The Starless Relic Court extends to the south.~
 ~
-0 -1 5216
+0 -1 5685
 E
 chained icons~
 The icons show saints from at least four different doctrinal traditions, including two figures whose iconographic details identify them as originally belonging to the Kel'Shadra witness tradition, where the chained posture represents oath-binding rather than custody. In the Reliquary's framing, the distinction has been erased. The Kel'Shadra figures stand in the same posture as the Reliquary-tradition saints, and the gold-leaf chains on all of them carry the same interpretation: willing submission to institutional authority. The doctrine has been retroactively applied to traditions that predate it.
 ~
 S
-#5218
+#5687
 @@lMiter of Night@@N~
 A ceremonial antechamber directly preceding Lady Noctyra's seat, this room is designed to prepare visitors for an audience with the Reliquary's regent through a series of protocols embedded in the room's architecture. The floor slopes gently downward toward the north door, so that anyone approaching the regent's chamber is physically descending. The ceiling height increases gradually in the same direction. A @@lceremony instruction placard@@N on the west wall specifies exactly how a petitioner should be positioned when the north door opens, what posture to hold, what form of address to use, and what materials to present first.
 ~
@@ -707,17 +707,17 @@ A ceremonial antechamber directly preceding Lady Noctyra's seat, this room is de
 D0
 The Seat of Lady Noctyra lies ahead to the north.~
 ~
-0 -1 5219
+0 -1 5688
 D2
 The Chained Saint Corridor extends to the south.~
 ~
-0 -1 5217
+0 -1 5686
 E
 ceremony instruction placard~
 The ceremony instructions are precise to an unusual degree: "Stand at the marked position with both hands visible. Do not speak until the regent acknowledges. Present materials with the left hand below the right. Address the regent as Your Certified Authority. Do not ask questions. State the nature of your petition, then be silent." The instructions conclude: "Failure to observe ceremony protocol may result in the petition being classified as unsolicited testimony. Unsolicited testimony is processed under null-seal authority." The visitor has been warned.
 ~
 S
-#5219
+#5688
 @@lSeat of Lady Noctyra@@N~
 The Seat of Lady Noctyra fills this wide apse with an overwhelming density of @@lmirrored surfaces@@N, the walls, ceiling, and floor all clad in polished amethyst-glass that reflects and refracts every image into a cascade of partial reflections. The regent's actual chair is a low, simple structure at the room's north wall, its position making it initially invisible among the reflected versions of itself that multiply across the mirrored surfaces. A @@lmirrored censer stand@@N of elaborate construction stands to the chair's left, its twin censers swinging in lazy opposing arcs, their smoke dispersing into the reflections and making the room's already-complex geometry harder to read. To observe Lady Noctyra clearly, you would need to know which reflection is original, a puzzle the architecture is designed to prevent.
 ~
@@ -725,7 +725,7 @@ The Seat of Lady Noctyra fills this wide apse with an overwhelming density of @@
 D2
 The Miter of Night antechamber lies to the south.~
 ~
-0 -1 5218
+0 -1 5687
 E
 mirrored surfaces~
 The mirror-cladding is not purely decorative. In the Reliquary's petition records, testimonies given in this room are described as "mirror-verified," a classification that means the testimony was observed from multiple angles simultaneously, providing the regent with complete visual information about the petitioner's behavior during the session. The mirrors are the room's documentation system. Everything done in this chair-room is recorded by reflection from every angle, and the regent sees all of it at once.
@@ -735,7 +735,7 @@ mirrored censer stand~
 The stand holds two censers on opposing arms, calibrated to swing in perfect counter-rotation. Their contents are different: one burns the standard Reliquary incense, a mild indigo smoke used in all wing chambers; the other burns a sharper compound whose name appears in Choir records as a "compliance augment." Lady Noctyra controls both censers from a mechanism built into the chair's armrest. The room's atmosphere is always at least partly composed by her choice.
 ~
 S
-#5220
+#5689
 @@dBasalt Threshold@@N~
 The entrance to the Obsidian Cloister wing is marked by a wide threshold stone of polished black basalt, its surface inscribed with the null-seal protocol headers in a formal shorthand that condenses legal nullification procedures into a single stone's width. The stone sits at the junction where the Chalice Echo Hall's east-west passage meets the Obsidian wing's northward extension. @@dNull-sigil wax@@N has dripped and pooled at the threshold's edges in irregular formations, some of the formations suggesting faces if viewed at the correct angle. The wing ahead is colder than the spine, and darker, and the air has the chemical quality of rooms where documents are prepared under sealed atmospheric conditions.
 ~
@@ -743,17 +743,17 @@ The entrance to the Obsidian Cloister wing is marked by a wide threshold stone o
 D1
 The Chalice Echo Hall lies to the east.~
 ~
-0 -1 5187
+0 -1 5656
 D3
 The Ink-Well Cloister extends to the west.~
 ~
-0 -1 5221
+0 -1 5690
 E
 null-sigil wax~
 The null-seal protocol headers on the threshold stone are written in a notation that the Obsidian Scriptoria developed specifically for threshold inscriptions: condensed legalese that can be read as decoration by those without the training, and as binding procedural statement by those with it. Anyone crossing this threshold who can read the inscription is, by the inscription's own logic, acknowledging the Scriptoria's jurisdictional authority over whatever they carry and whatever testimony they contain.
 ~
 S
-#5221
+#5690
 @@dInk-Well Cloister@@N~
 The cloister's name derives from the @@dink-well fountains@@N set at regular intervals along the wall, stone basins filled with a dark fluid that appears to be ink but is slightly too viscous, slightly too warm. Records from the Scriptoria's maintenance logs suggest the fluid is a specialized document-preservation compound used to treat vellum before null-sealing; immersing documents briefly conditions them to accept the obsidian wax without degradation. The basins are currently unused, their fluid undisturbed, but they have clearly been in heavy use at some point: the stone lips of the basins are stained deep black.
 ~
@@ -761,17 +761,17 @@ The cloister's name derives from the @@dink-well fountains@@N set at regular int
 D1
 The Basalt Threshold lies to the east.~
 ~
-0 -1 5220
+0 -1 5689
 D3
 The Abjurer's Cross extends to the west.~
 ~
-0 -1 5222
+0 -1 5691
 E
 ink-well fountains~
 The fluid in the ink-well basins is not neutral. Submitting a hand briefly produces a faint tingling followed by a temporary numbness. The Scriptoria's own compound notes describe the sensation as "temporal desensitization," a side effect of the preservation chemistry. Whether this desensitization was an acceptable side effect or a deliberate feature of the compound's application context is not addressed in the notes.
 ~
 S
-#5222
+#5691
 @@dAbjurer's Cross@@N~
 The corridor opens at a crosshall where four passages meet, the intersection floor bearing a large @@dabjuration seal@@N in obsidian-inked tile. The seal is a null-protocol glyph, its design derived from the Compact-era void-seal used to invalidate corrupted registry documents. Here it has been scaled to room-width, functioning less as a working seal and more as a statement: this is where the Scriptoria asserts its authority over what exists and does not exist. The four passages branch in the cardinal directions; the west and north branches are currently accessible while the south passage is sealed with a wall of hardened null-wax.
 ~
@@ -779,17 +779,17 @@ The corridor opens at a crosshall where four passages meet, the intersection flo
 D1
 The Ink-Well Cloister lies to the east.~
 ~
-0 -1 5221
+0 -1 5690
 D3
 The Obsidian Lectern Hall extends to the west.~
 ~
-0 -1 5223
+0 -1 5692
 E
 abjuration seal~
 The null-protocol glyph at the intersection's center has been re-inked relatively recently: the outer ring's lines are sharp and clean while the inner ring has accumulated dust, suggesting the outer maintenance is ongoing while the inner glyph is original. This means the Scriptoria has been maintaining this seal actively. A seal maintained is a seal with continuing legal force. Something in this wing is still being nullified.
 ~
 S
-#5223
+#5692
 @@dObsidian Lectern Hall@@N~
 A hall of reading stands occupied by @@dobsidian-framed lecterns@@N, each lectern displaying an open folio of null-sealed documents: official records whose contents have been struck through with the obsidian null protocol, rendering them officially nonexistent while leaving the physical text legible. Every page on display shows the same procedure: text, then a thick line of obsidian wax drawn over the critical passages, then a null-seal stamp at the bottom. The physical text still exists. The legal text has been erased. The display is a demonstration of institutional power and nothing else.
 ~
@@ -797,17 +797,17 @@ A hall of reading stands occupied by @@dobsidian-framed lecterns@@N, each lecter
 D1
 The Abjurer's Cross extends to the east.~
 ~
-0 -1 5222
+0 -1 5691
 D3
 The Sealed Homily Lane lies to the west.~
 ~
-0 -1 5224
+0 -1 5693
 E
 obsidian-framed lecterns~
 Reading the unredacted portions of the displayed documents reveals that the null-sealed passages consistently concern the same category of content: witness testimony that contradicts official institutional records. The documents are from different periods, different proceedings, and different offices, but the pattern is consistent. The Scriptoria has been selectively nullifying all testimony that contradicts. The lecterns are displaying the methodology as a statement of doctrine: this is what we do, openly, because we can.
 ~
 S
-#5224
+#5693
 @@dSealed Homily Lane@@N~
 A narrow lane between high shelving units that hold @@dsealed homily cases@@N, each case containing a completed null-procedure file: the original document, the nullification record, the seal impression, and a brief notation of the authorizing officer. The cases are filed in chronological order; the earliest cases at the shelving's north end are from the Containment Era, their vellum visibly aged, while the most recent cases near the south transition are current-era work. The lane documents the Scriptoria's full operational history from founding to present. Nothing has been lost. All of it has been nullified.
 ~
@@ -815,17 +815,17 @@ A narrow lane between high shelving units that hold @@dsealed homily cases@@N, e
 D1
 The Obsidian Lectern Hall extends to the east.~
 ~
-0 -1 5223
+0 -1 5692
 D2
 The Nocturne Scriptor continues to the south.~
 ~
-0 -1 5225
+0 -1 5694
 E
 sealed homily cases~
 Three of the oldest cases, near the far north end of the shelving, have been opened and resealed with different seal-wax than their original closures. The replacement wax is a shade darker than the originals. Someone has accessed these earliest records and reclosed them under current-era sealing authority. The dates on the replaced seals correspond to a period roughly eighteen months after the Silenced Vespers, the event that transformed the chapel-house into the Cathedral. What was reviewed and then re-nullified has not been disclosed.
 ~
 S
-#5225
+#5694
 @@dNocturne Scriptor@@N~
 The scriptorium's working chamber is populated with @@dwriting stations@@N each equipped with its own null-seal press, a supply of obsidian-tinted wax, and a stack of blank authorization forms. The forms are pre-printed with the procedural language of nullification up to the point where the specific document's details must be filled in; all that is required is the document, the authorizing officer's mark, and the application of the seal. The procedure has been made efficient enough that a single scribe can process thirty null-sealed documents per work period. The throughput is not incidental. It is a design goal.
 ~
@@ -833,17 +833,17 @@ The scriptorium's working chamber is populated with @@dwriting stations@@N each 
 D0
 The Sealed Homily Lane extends to the north.~
 ~
-0 -1 5224
+0 -1 5693
 D2
 The Blind Archivum extends to the south.~
 ~
-0 -1 5226
+0 -1 5695
 E
 writing stations~
 The blank authorization forms are pre-printed on heavy archival vellum by a process that leaves the printed text immune to the standard null-seal wax. This means that the procedural language around the nullified passages cannot itself be nullified: only the content fields filled in by hand can be struck. The institutional framework of the procedure survives every application of itself. The procedure can null everything except the authority that authorizes nullification.
 ~
 S
-#5226
+#5695
 @@dBlind Archivum@@N~
 The archivum's most notable feature is the absence of labels. The shelving here holds hundreds of @@dunlabeled archive bundles@@N, their contents sealed and their filing locations indicated only by a numerical index that is stored elsewhere, in a location the Scriptoria has not published. Anyone entering this room without the index would be unable to identify any of the materials stored here. The shelving is full. The index, wherever it is, contains references to all of it. Without the index, the archivum is a collection of sealed materials whose contents, for all practical purposes, do not exist.
 ~
@@ -851,17 +851,17 @@ The archivum's most notable feature is the absence of labels. The shelving here 
 D0
 The Nocturne Scriptor extends to the north.~
 ~
-0 -1 5225
+0 -1 5694
 D2
 The Wax-Etched Court lies to the south.~
 ~
-0 -1 5227
+0 -1 5696
 E
 unlabeled archive bundles~
 A single bundle near the south end of the shelving has been mis-sorted and placed with its seal-tab visible. The seal-tab reads "Provisional â Index Pending." This suggests the filing index is not complete: this bundle has not yet been indexed, which means it exists in a state outside both the labeled system and the null system. It is simply present, unprocessed, in a wing dedicated to the processing of everything. Whatever it contains has not yet been decided.
 ~
 S
-#5227
+#5696
 @@dWax-Etched Court@@N~
 The court's floor and lower walls are covered in a dense accretion of @@dobsidian wax impressions@@N, null-seal stamps applied directly to the stone surface rather than to documents, leaving the court itself permanently marked with the residue of nullification acts that had no other surface to receive them. The accumulation spans years: the deepest layers are nearly flush with the stone, while the surface layer is recent, sharp-edged, and dark. In the center of the court, a @@dnull-seal press@@N of unusual size has been permanently installed, its mechanism clearly designed for large-format applications rather than standard document work.
 ~
@@ -869,17 +869,17 @@ The court's floor and lower walls are covered in a dense accretion of @@dobsidia
 D0
 The Blind Archivum extends to the north.~
 ~
-0 -1 5226
+0 -1 5695
 D2
 The Ash Quire Stacks continue to the south.~
 ~
-0 -1 5228
+0 -1 5697
 E
 null-seal press~
 The large-format press is calibrated for objects up to the size of a person's torso. Its null-seal die is custom-cut rather than standard, its pattern derived from the highest-authority nullification protocol in the Scriptoria's operational records: the "person-nullification procedure," used in cases where not a document but a witness needs to be officially erased. The press has been used. The stone platform beneath it bears the same kind of accumulated residue as the surrounding floor, but distributed in the pattern of a recurring application rather than a one-time procedure.
 ~
 S
-#5228
+#5697
 @@dAsh Quire Stacks@@N~
 The stacks hold @@dash-damaged folios@@N, their vellum scorched at the edges and their ink partially volatilized, creating pages where text is present but unstable, visible from one angle and gone from another. The folios were apparently salvaged from a fire at some point during the Scriptoria's history and preserved in their damaged state rather than restored or destroyed. The damage has been classified: a small tag on each folio's cover notes "partial record, unrestorable, retained under ash-classification." Ash-classification is not a standard Scriptoria category; it appears to have been invented for these specific folios.
 ~
@@ -887,17 +887,17 @@ The stacks hold @@dash-damaged folios@@N, their vellum scorched at the edges and
 D0
 The Wax-Etched Court extends to the north.~
 ~
-0 -1 5227
+0 -1 5696
 D2
 The Penitent's Margin extends to the south.~
 ~
-0 -1 5229
+0 -1 5698
 E
 ash-damaged folios~
 Reading the still-legible sections of the ash-damaged folios reveals that they predate the Scriptoria's null-seal protocols entirely. The text is in Lantern Registry style, and the content concerns internal reviews conducted during the Silenced Vespers period. These are the contradictory ledgers that the reform clerks attempted to publish before the Vespers suppression. The Scriptoria did not destroy them. It damaged them sufficiently to achieve deniability, then preserved them under a classification that acknowledges their existence while asserting their incompleteness. The ledgers are here. They cannot be read completely. This is the null-seal principle applied to fire.
 ~
 S
-#5229
+#5698
 @@dPenitent's Margin@@N~
 A transitional chamber between the Scriptoria's operational sections and its punitive archive, this room contains @@dmargin pens@@N, small individual enclosures barely large enough to stand in, separated from the main chamber by iron grilles. The pens were used for supervised document review: individuals deemed unreliable witnesses were confined here while authorizing scribes read their testimony aloud, allowing them to confirm or deny specific passages without access to the full document. A notation board above the pen entrance lists the categories of persons subject to margin-review. The list is long.
 ~
@@ -905,17 +905,17 @@ A transitional chamber between the Scriptoria's operational sections and its pun
 D0
 The Ash Quire Stacks extend to the north.~
 ~
-0 -1 5228
+0 -1 5697
 D2
 The Vellum Catacomb extends to the south.~
 ~
-0 -1 5230
+0 -1 5699
 E
 margin pens~
 The iron grilles on the margin pens are designed to keep the occupant inside while allowing the authorizing scribe full visual access. Each pen has a small ledge at the correct height for resting documents on the grille surface during read-aloud procedures. The ledge shows heavy use. The floor inside each pen shows the marks of long occupancy, deep heel-prints worn into the stone at positions consistent with standing in place for extended periods. The margin procedure was not brief.
 ~
 S
-#5230
+#5699
 @@dVellum Catacomb@@N~
 The final chamber before the Abbot's reliquary is lined floor to ceiling with @@dvellum rolls@@N packed into iron-banded shelving, the rolls sealed and labeled with the Scriptoria's null-archive classification system. This is the Scriptoria's deepest active storage: the records that have been nullified but not destroyed, held here as physical evidence of the institution's completeness. If every null-sealed record is here, this chamber contains the unmediated truth of everything the Scriptoria has erased. The records exist. They cannot be cited. They cannot be used. They are present as a monument to institutional authority exercised absolutely.
 ~
@@ -923,17 +923,17 @@ The final chamber before the Abbot's reliquary is lined floor to ceiling with @@
 D0
 The Penitent's Margin extends to the north.~
 ~
-0 -1 5229
+0 -1 5698
 D2
 The Abbot's Reliquary lies to the south.~
 ~
-0 -1 5231
+0 -1 5700
 E
 vellum rolls~
 Several rolls have been partially withdrawn from their casings and incompletely reseated, their edges protruding slightly. Someone has been reviewing the null-archive recently. The withdrawn sections correspond to specific date ranges, clustered around two periods: the Silenced Vespers and a more recent event within the last year. Whatever was reviewed from those periods has been resealed. The reviewing was unauthorized: the Abbot's access log visible near the entrance does not record visits matching the withdrawal dates.
 ~
 S
-#5231
+#5700
 @@dAbbot Vharos's Reliquary@@N~
 The reliquary of Abbot Vharos occupies a wide vaulted space whose @@dobsidian ledger rack@@N and @@dnull-seal writing desk@@N define the room's function absolutely: this is not a ceremonial space but an operational one, the place where decisions about what continues to exist in the institutional record are made and executed. The walls are lined with null-halo sconces, their light cast in a faintly blue-black frequency that makes written text appear to float an inch above the surface it is written on, a visual effect that the Abbot uses to read multiple document layers simultaneously. Abbot Vharos himself is present, the keeper of the null-archive's deepest reach, seated and watching, his null-sigil authority radiating through the chamber like a cold draft.
 ~
@@ -941,7 +941,7 @@ The reliquary of Abbot Vharos occupies a wide vaulted space whose @@dobsidian le
 D0
 The Vellum Catacomb extends to the north.~
 ~
-0 -1 5230
+0 -1 5699
 E
 null-seal writing desk~
 The desk's surface is marked with hundreds of small null-seal impressions, applied directly to the wood rather than to documents, a practice the Abbot uses to maintain his sealing authority even when no documents are present. The impressions overlap and layer: the desk is a palimpsest of nullification acts, each applied over the previous. The desk itself has been progressively erased and reinscribed so many times that its original wood grain is no longer visible under the accumulated wax.
@@ -951,7 +951,7 @@ obsidian ledger rack~
 The rack holds the Abbot's personal working files, their spines labeled not with titles but with null-classification codes. Several files have secondary labels in a different hand, smaller and lower on the spine, that appear to be original document titles. The Abbot has filed his nullification records alongside, and gradually beneath, the original titles. The process of replacement is visible in the physical arrangement of the files.
 ~
 S
-#5232
+#5701
 @@eBriar Stair@@N~
 The entrance to the Thorned Scriptorium wing is marked by a @@ebriar-iron staircase@@N descending slightly below the corridor level, the iron railings of the stair formed from actual thorned metal, their surface irregular with the protruding points that give the wing its name. The descent is not steep but it is unignorable: the thornwork railings make passage a careful act, requiring attention to where one places one's hands. The intention is explicit in the wing's founding record: "Every entry to the Scriptorium is a reminder that writing is not comfortable." The wing ahead smells of bitter ink and pressed thornwood.
 ~
@@ -959,17 +959,17 @@ The entrance to the Thorned Scriptorium wing is marked by a @@ebriar-iron stairc
 D1
 The Scriptorium passages extend to the east.~
 ~
-0 -1 5233
+0 -1 5702
 D3
 The Veil of Black Incense lies to the west.~
 ~
-0 -1 5188
+0 -1 5657
 E
 briar-iron staircase~
 The thorns on the staircase's iron railings have been sharpened rather than left in their natural state. This was done deliberately: the original installation used blunted thorn forms that were decorative rather than functional. At some point during Thorn Cardinal Seredh's tenure, the blunted thorns were replaced with filed points that draw blood from careless hands. The practical effect is that everyone who uses this staircase regularly bears small scars from it. The Cardinal considers this appropriate documentation.
 ~
 S
-#5233
+#5702
 @@eGothic Script Gate@@N~
 A massive gate of @@eforged thornwork iron@@N spans the corridor here, its bars shaped into the letters of the Gothic Script canon, the formal notation system used by the Thorned Scriptorium for all official documents. The letters in the gate are not words but isolated glyphs arranged for visual impact rather than syntactic coherence. The message, if there is one, is the medium itself: this wing's authority is the act of writing, and the gate announces that passage here is into the domain of the written word as a weapon. The gate is currently open but its hinges show the marks of frequent use.
 ~
@@ -977,17 +977,17 @@ A massive gate of @@eforged thornwork iron@@N spans the corridor here, its bars 
 D1
 The Scriptorium continues to the east.~
 ~
-0 -1 5234
+0 -1 5703
 D3
 The Briar Stair extends to the west.~
 ~
-0 -1 5232
+0 -1 5701
 E
 forged thornwork iron~
 The Gothic Script glyphs in the gate's ironwork are individually recognizable to anyone trained in the Scriptorium's notation system. Reading them in sequence produces a procedural statement rather than a narrative sentence: a compressed form of the confession-extraction protocol, its steps rendered in isolated notation elements that together constitute the complete procedure. The gate is not a slogan. It is a how-to guide, displayed in a medium that most visitors cannot read.
 ~
 S
-#5234
+#5703
 @@eSplintered Margin@@N~
 The margin here is the physical document margin, enlarged to architectural scale: the room's walls are covered with @@esplintered annotation fragments@@N, pieces of original documents that have been excerpted, amplified, and installed as architectural elements. The excerpts are all margin annotations from larger works, written in the hands of various scholars and clerics who originally worked with the source documents. Their marginal notes, separated from context, become statements of institutional authority: "This passage admits no alternative reading." "Witness contradicts established record." "To be struck." The annotations speak for themselves, absent the texts they were annotating.
 ~
@@ -995,17 +995,17 @@ The margin here is the physical document margin, enlarged to architectural scale
 D1
 The Gothic Script Gate extends to the east.~
 ~
-0 -1 5235
+0 -1 5704
 D3
 The Gothic Script Gate lies to the west.~
 ~
-0 -1 5233
+0 -1 5702
 E
 splintered annotation fragments~
 Reassembling the annotations with their source contexts is impossible without the original documents. But some annotation dates are visible, and they cluster in a specific period: the Unindexed Years. The marginal notes from that period are not about content but about containment: "Do not copy." "Restricted." "File under null." These notes were written by the original document's custodians, not by the Scriptorium. The Scriptorium removed them from their source documents and put them on the wall. The institutional censors have been censored and displayed as decoration.
 ~
 S
-#5235
+#5704
 @@eThorn-Pierced Hall@@N~
 The hall takes its name from the @@ethorn-iron pillars@@N that line its center, each pillar wrapped in functional thornwork that serves no structural purpose but creates unavoidable contact points for anyone moving through the hall. The pillars are positioned such that the path between them requires passing within reach of the thorns; navigating the hall without contact requires conscious effort. Documents hung from hooks on each pillar display the Scriptorium's confession procedure in step-by-step illustration, each step accompanied by a notation in Gothic Script. The hall is both a passage and a curriculum.
 ~
@@ -1013,17 +1013,17 @@ The hall takes its name from the @@ethorn-iron pillars@@N that line its center, 
 D1
 The Cardinal's Footway extends to the east.~
 ~
-0 -1 5236
+0 -1 5705
 D3
 The Splintered Margin extends to the west.~
 ~
-0 -1 5234
+0 -1 5703
 E
 thorn-iron pillars~
 The thorn-iron is a specialized alloy developed by the Scriptorium's materials office, harder than standard iron and capable of holding a sharper point. The thorns on the pillars are replaced seasonally: old thorns that have dulled are removed and new points are installed. The replacement schedule is documented in the wing's maintenance records alongside candle schedules, ink restocking orders, and cleaning protocols. The maintenance of sharp thorns is treated as a standard operational requirement, equivalent to maintaining a working writing surface.
 ~
 S
-#5236
+#5705
 @@eCardinal's Footway@@N~
 The footway serves as the Thorn Cardinal's personal transit corridor through the wing, its floor marked with a @@ecentral path stripe@@N in crimson tile that tracks the prescribed route from the entry to the sanctum without deviation or pause. The walls flanking the path are hung with @@econfession writs@@N, the formal documents produced by the Scriptorium's military confession procedure, their text displayed openly because the subjects whose confessions they record are no longer in a position to object. Each writ ends with the same formula: "Testimony extracted under authorized procedure, sealed by Cardinal's mark."
 ~
@@ -1031,17 +1031,17 @@ The footway serves as the Thorn Cardinal's personal transit corridor through the
 D0
 The Ivory Quill Court extends to the north.~
 ~
-0 -1 5237
+0 -1 5706
 D3
 The Thorn-Pierced Hall extends to the west.~
 ~
-0 -1 5235
+0 -1 5704
 E
 confession writs~
 Several writs display internal dates that predate the Thorn Cardinal's own tenure, indicating the confession militarism they document was practiced before Seredh systematized it. The difference is in the seal: pre-Seredh writs use the standard confession protocol seal, a circle with four lines. Post-Seredh writs use the military-protocol seal, the circle with four lines inside a thornwork border, indicating that the procedure was classified as a security operation rather than a pastoral one. The reclassification changed the authorization requirements and expanded the range of persons who could be subjected to the procedure.
 ~
 S
-#5237
+#5706
 @@eIvory Quill Court@@N~
 The court is dominated by a long @@ewriting table@@N of ivory-pale stone, its surface smooth and clean, clearly kept in immaculate condition despite the evidence of heavy regular use around it: the chairs at the table are worn, the floor beneath the chairs is scuffed, the lamp brackets above the table show decades of oil residue. Whatever work happens at this table happens with care. The walls of the court display the Scriptorium's compositional standards: the correct letterform for each Gothic Script character, the proper construction of a confession writ, and the authorized abbreviations for each step of the extraction procedure.
 ~
@@ -1049,17 +1049,17 @@ The court is dominated by a long @@ewriting table@@N of ivory-pale stone, its su
 D0
 The Sanguine Annotation continues to the north.~
 ~
-0 -1 5238
+0 -1 5707
 D2
 The Cardinal's Footway extends to the south.~
 ~
-0 -1 5236
+0 -1 5705
 E
 writing table~
 The table has been polished recently, but the polish has not fully obscured the marks beneath it: faint discolorations in the pale stone that correspond to positions where liquid has been repeatedly placed and removed. The pattern matches the layout of a confession procedure, with marks corresponding to the basin position, the document position, and the witness position. The table is a working surface for the combined procedure that the Choir and Scriptorium share. The ivory color is not decorative. It makes the marks more visible.
 ~
 S
-#5238
+#5707
 @@eSanguine Annotation@@N~
 The corridor walls here carry @@eblood-ink annotations@@N applied directly to the stone, a practice the Scriptorium uses in high-authority zones to mark doctrinal decisions that supersede all prior written records. Blood-ink is produced through the combined blood-tithe and ink-mixing procedure shared between the Sanguine Choir and the Scriptorium; its color is a deep brownish-red that does not fade. The annotations here concern the Fivefold Occlusion's fourth tenet â "Memory determines sentence" â and their content amplifies the tenet into procedural guidance for the extraction and conversion of witness testimony into binding sentence.
 ~
@@ -1067,17 +1067,17 @@ The corridor walls here carry @@eblood-ink annotations@@N applied directly to th
 D0
 The Binder's Ossuary continues to the north.~
 ~
-0 -1 5239
+0 -1 5708
 D2
 The Ivory Quill Court lies to the south.~
 ~
-0 -1 5237
+0 -1 5706
 E
 blood-ink annotations~
 The annotations have been made in at least four different hands over what appears to be multiple decades, each hand adding further procedural detail to the previous layer. The earliest layer, the faintest, establishes the basic procedure. Each subsequent layer refines a different element: timing, authorization hierarchy, evidence classification, and finally, in the most recent layer, what the annotation calls "terminative options" â the procedural paths available when a witness's testimony cannot be converted into a usable sentence. The terminative options are listed in clinical notation. There are three. None are good.
 ~
 S
-#5239
+#5708
 @@eBinder's Ossuary@@N~
 The ossuary chamber serves as a repository for the physical materials used in the Scriptorium's binding procedures: the @@ehardwood covers@@N for finished confession codices, the @@ewire-and-bone binding tools@@N, the pressed and dried thornwood used in the covers of high-authority documents, and the blank codex blocks waiting to receive completed proceedings. The room smells of dried wood, wire, and the faint undertone of the bone components used in the binding adhesive. Everything in the Binder's Ossuary is a tool for making something permanent. The impression left by the room is of an institution that considers its records more important than the events they record.
 ~
@@ -1085,17 +1085,17 @@ The ossuary chamber serves as a repository for the physical materials used in th
 D0
 The Inkblight Rotunda continues to the north.~
 ~
-0 -1 5240
+0 -1 5709
 D2
 The Sanguine Annotation lies to the south.~
 ~
-0 -1 5238
+0 -1 5707
 E
 hardwood covers~
 The covers are made from a specific thornwood subspecies that the Scriptorium sources from the great northern forests, chosen for its density and resistance to ambient moisture. Each cover is cut to a precise standard size, planed smooth on the inner face and left rough on the outer face so that stamped seals adhere correctly. The specification for cover material occupies six pages in the Scriptorium's procurement documents. The commitment to permanence is architectural, material, and bureaucratic.
 ~
 S
-#5240
+#5709
 @@eInkblight Rotunda@@N~
 The rotunda's dome is covered with @@einkblight lichen@@N, a dark organism that grows in moist ink-saturated environments and spreads in patterns that mirror the chemical composition of the substrate it feeds on. Here, decades of ink vapor from the Scriptorium's work below have created a growth pattern on the dome that, when viewed from the center of the rotunda, forms a crude approximation of the Gothic Script glyph for "sentence." The lichen is not intentional. The Scriptorium has classified it as a natural endorsement and stopped removing it.
 ~
@@ -1103,17 +1103,17 @@ The rotunda's dome is covered with @@einkblight lichen@@N, a dark organism that 
 D0
 The Razorleaf Balcony extends to the north.~
 ~
-0 -1 5241
+0 -1 5710
 D2
 The Binder's Ossuary extends to the south.~
 ~
-0 -1 5239
+0 -1 5708
 E
 inkblight lichen~
 The lichen has been growing long enough that its growth history is visible in its layering: lighter, earlier growth beneath, darker recent growth above. The glyph-pattern was probably not legible until the colony reached a certain density, at which point the Scriptorium staff noticed it, classified it as significant, and documented it. The documentation is thorough: the Scriptorium's records contain twelve pages on the natural endorsement, including three competing theories about what the glyph means in context and one dissenting opinion arguing it means nothing at all.
 ~
 S
-#5241
+#5710
 @@eRazorleaf Balcony@@N~
 The balcony extends outward from the main Scriptorium passage, its iron railing inset with @@erazorleaf panels@@N, thin iron sheets stamped with a leaf pattern whose edges have been sharpened into cutting surfaces. The balcony overlooks a deep shaft that descends below the cathedral's current operational levels, its bottom not visible from the balcony's railing height. The shaft is of significant diameter and its walls show the marks of having been used for some kind of vertical transport, either mechanical or otherwise. The shaft now appears inactive, its floor likely sealed at some lower level.
 ~
@@ -1121,17 +1121,17 @@ The balcony extends outward from the main Scriptorium passage, its iron railing 
 D0
 The Needled Crossing extends to the north.~
 ~
-0 -1 5242
+0 -1 5711
 D2
 The Inkblight Rotunda lies to the south.~
 ~
-0 -1 5240
+0 -1 5709
 E
 razorleaf panels~
 The razorleaf panels are a security measure, installed after at least one incident involving someone using the balcony railing as a climbing surface to descend the shaft. The sharpened leaf edges prevent such use. The shaft below was, according to structural notes in the Scriptorium's maintenance files, originally a document delivery shaft connecting the wing to a lower processing level. The lower level is listed as "sealed under null-authority" â a closure that requires joint authorization to undo. Whatever is at the shaft's bottom was locked there jointly.
 ~
 S
-#5242
+#5711
 @@eNeedled Crossing@@N~
 The final corridor before the Thorn Cardinal's sanctum is narrow enough to require single-file movement, its walls set with @@eneedle brackets@@N at shoulder height, iron fixtures that project several inches into the passage and are capped with fine-gauge needles of the type used in the Scriptorium's document-authentication process. The needles have been positioned such that someone moving through without care will receive small punctures at regular intervals. The Cardinal's doctrine holds that entry to the sanctum should not be painless, a principle his staff has implemented with characteristic precision. A @@ethorn-banded door@@N at the passage's far end provides access to the sanctum.
 ~
@@ -1139,17 +1139,17 @@ The final corridor before the Thorn Cardinal's sanctum is narrow enough to requi
 D0
 The Sanctum of the Thorn Cardinal lies ahead.~
 ~
-0 -1 5243
+0 -1 5712
 D2
 The Razorleaf Balcony lies to the south.~
 ~
-0 -1 5241
+0 -1 5710
 E
 thorn-banded door~
 The door is banded with the Scriptorium's thornwork iron, its construction identical to the Briar Stair's railings. The door closes automatically after entry, sealing the passage. A small notation above the door handle reads: "Entry to the Cardinal's sanctum acknowledges the jurisdiction of the Thorned Scriptorium over all documentary materials carried by the visitor." The notice is legally formatted in Gothic Script. Entering is a legal act.
 ~
 S
-#5243
+#5712
 @@eSanctum of the Thorn Cardinal@@N~
 The sanctum of Thorn Cardinal Seredh is a deliberately severe chamber, its walls bare stone with no decoration except a single carved text panel bearing the complete Gothic Script canon in its original order â a statement that the alphabet itself is the Cardinal's authority. At the room's center stands a @@ethorn-pierced confession rail@@N of heavy iron, its horizontal rail set with upward-pointing thorns at the correct height for a kneeling figure's hands, and a @@dink-stained vellum stack@@N rests on a side table, the accumulated product of the Scriptorium's confession militarism. Thorn Cardinal Seredh occupies this space as its absolute authority, his presence as much a part of the room's doctrine as its architecture. The @@ethorned iron gate@@N behind you closes on entry.
 ~
@@ -1157,7 +1157,7 @@ The sanctum of Thorn Cardinal Seredh is a deliberately severe chamber, its walls
 D2
 The thorned iron gate leads south back through the crossing.~
 ^thorned iron gate~
-1 -1 5242
+1 -1 5711
 E
 thorn-pierced confession rail~
 The rail's construction is derived from the Sanguine Choir's standard kneeling rail design, modified by the Scriptorium to include the characteristic thorn-points. The thorns are not merely symbolic: they ensure that a penitent who shifts position or attempts to rise during the confession procedure is reminded, physically, to remain. The Scriptorium's modification is described in its design notes as "maintaining procedure integrity through positional reinforcement." The design assumes that the procedure will be completed whether or not the penitent wishes to continue.
@@ -1167,7 +1167,7 @@ ink-stained vellum stack~
 The vellum stack is the Scriptorium's current active confession record, each page a completed writ from the most recent operating period. The writs are not sealed, merely stacked, indicating they are working documents rather than finalized archive materials. Their current unsealed state means they are still eligible for revision. The content of what can be seen on the top writ is legible: it names a Midgaard civic agent and classifies their testimony as "documentary contradiction â null-seal pending."
 ~
 S
-#5244
+#5713
 @@WMoonbone Entry@@N~
 The Moonbone Ossuary wing opens at the base of the service staircase from the arcade above, where the architecture transitions from the cathedral's upper institutional registers to a lower register of pure funerary administration. The walls here are faced with @@Wpale bone-tile@@N, a material the Ossuary uses for all its primary surfaces: thin slab-sections of processed bone, polished to a smooth white finish and mortared in place with the Ossuary's proprietary embalming compound, which hardens to a durability exceeding standard stone. The air is cooler here, and carries the sweet chemical scent of preservation materials that never fully dissipates. An @@meclipse gate@@N opens to the west â the locked passage that connects to the Eclipse High Nave above.
 ~
@@ -1175,21 +1175,21 @@ The Moonbone Ossuary wing opens at the base of the service staircase from the ar
 D1
 The Moonbone passages continue to the east.~
 ~
-0 -1 5245
+0 -1 5714
 D3
 The eclipse gate passage leads west to the Eclipse High Nave.~
 ^eclipse gate~
-1 5181 5195
+1 5650 5664
 D4
 The service staircase rises north to the Mauve Lantern Arcade above.~
 ~
-0 -1 5189
+0 -1 5658
 E
 bone-tile~
 The bone-tile installation in the Moonbone wing represents the Ossuary's claim that the dead are not merely stored here but materially present as structural components. This is not metaphorical. The tiles are manufactured from materials delivered through the Ossuary's funerary intake process, processed, and installed. The wing is built from its own subjects. The Ossuary's founding doctrine holds that this constitutes the highest form of institutional integration: the administered dead become the institution that administered them.
 ~
 S
-#5245
+#5714
 @@WSilver Shroud Court@@N~
 The court's walls and ceiling are hung with @@Wlong silver-grey shrouds@@N on iron rings, the fabric dense enough to muffle sound significantly and thin enough to allow passage of light in a diffuse, directionless glow. Moving through the shroud court requires parting the fabric with both hands, a physical engagement the Ossuary considers a form of ritual preparation for the deeper chambers. The shrouds are maintained in specific configurations that prevent direct line-of-sight across the room, creating an experience of isolation even in a space of significant width.
 ~
@@ -1197,17 +1197,17 @@ The court's walls and ceiling are hung with @@Wlong silver-grey shrouds@@N on ir
 D1
 The court continues east toward the Pale Sarcophagus Line.~
 ~
-0 -1 5246
+0 -1 5715
 D3
 The Moonbone Entry lies to the west.~
 ~
-0 -1 5244
+0 -1 5713
 E
 silver-grey shrouds~
 The shrouds are woven from the same thread-weight as standard funerary wraps, suggesting they were manufactured by the same process. Some of them carry small embroidered marks at their lower hems: intake classification symbols from the Ossuary's administrative system. The shrouds hanging in this court were functional burial wraps before they were installed as architectural elements. What they wrapped is now part of the wing's construction.
 ~
 S
-#5246
+#5715
 @@WPale Sarcophagus Line@@N~
 A long corridor flanked by @@Wstone sarcophagi@@N set into wall recesses at floor level, each sarcophagus sealed with a fitted lid and inscribed with the Ossuary's three-tier classification: doctrinal status at death, posthumous jurisdiction assignment, and current administrative utility. Most sarcophagi are labeled "archive" under current utility, meaning their occupants serve as components of the Ossuary's record infrastructure â their remains used in the wing's construction or its documentation materials. Several are labeled "pending reassignment," indicating their utility classification is still being determined.
 ~
@@ -1215,17 +1215,17 @@ A long corridor flanked by @@Wstone sarcophagi@@N set into wall recesses at floo
 D1
 The sarcophagus line continues east.~
 ~
-0 -1 5247
+0 -1 5716
 D3
 The Silver Shroud Court lies to the west.~
 ~
-0 -1 5245
+0 -1 5714
 E
 stone sarcophagi~
 The sarcophagus inscriptions show a vocabulary shift between early and late periods: older inscriptions describe the occupants as "received" and "committed," while newer inscriptions describe them as "assets" and "allocated." The Ossuary's language has moved from custody to ownership over time. The most recent inscriptions use a notation system that no longer includes any personal identifier: the occupants have been fully converted into institutional categories. Their names, if they had them, are not here.
 ~
 S
-#5247
+#5716
 @@WNoctilucent Pillars@@N~
 The passage here is defined by tall @@Wnoctilucent pillars@@N, stone columns that have been treated with a compound that causes them to emit a faint cold light without external illumination source. The pillars have been emitting since their treatment, their glow gradually fading over decades from the original bright white to the current pale silver. The Ossuary's maintenance records indicate that the compound cannot be reapplied: the pillars will continue fading until their glow is gone entirely. At the current rate of diminishment, they have perhaps twenty years of light remaining.
 ~
@@ -1233,17 +1233,17 @@ The passage here is defined by tall @@Wnoctilucent pillars@@N, stone columns tha
 D1
 The passage continues east toward the Widow's Reliquary.~
 ~
-0 -1 5248
+0 -1 5717
 D3
 The Pale Sarcophagus Line extends to the west.~
 ~
-0 -1 5246
+0 -1 5715
 E
 noctilucent pillars~
 The gradual fading of the pillars' light has been documented annually in the Ossuary's records since they were installed. The documentation is methodical and unemotional: each year, a notation of current luminosity relative to the previous year. No commentary, no concern about the eventual extinction of the light. The Ossuary's relationship with gradual decay is institutional. Everything here is on a timeline toward its end. The records simply track the progress.
 ~
 S
-#5248
+#5717
 @@WWidow's Reliquary@@N~
 The reliquary holds the @@Wwidow's collection@@N, the Ossuary's term for objects surrendered by families at the time of funerary intake: personal items, correspondence, documentary materials, and in some cases, living custody of debt obligations. The collection is stored in open-faced shelf units without individual identification, the objects arranged by material type rather than by provenance. A family surrendering items here would not be able to locate their specific materials afterward: they have entered the institutional collection and are indistinguishable from everything else it contains.
 ~
@@ -1251,17 +1251,17 @@ The reliquary holds the @@Wwidow's collection@@N, the Ossuary's term for objects
 D1
 The Echoing Ossicle Hall lies to the east.~
 ~
-0 -1 5249
+0 -1 5718
 D3
 The Noctilucent Pillars extend to the west.~
 ~
-0 -1 5247
+0 -1 5716
 E
 widow's collection~
 The collection's most recent additions are documented in an intake log near the shelf entrance. The log records materials from over a dozen families within the last year. Several entries note that the surrendered materials included "documentary contradiction" items, the Ossuary's classification for objects that contain information inconsistent with the cathedral's official record of events. These items have been given a separate location marker in the log. Their physical location in the shelf collection is not marked on the shelves themselves.
 ~
 S
-#5249
+#5718
 @@WEchoing Ossicle Hall@@N~
 The hall's acoustic properties are extraordinary: small @@Wbone ossicles@@N â the tiny bones of the inner ear, extracted during Ossuary processing and installed in the wall surfaces in hundreds of positions â create a resonance profile that makes every sound in this room multiply into a long, complex echo. The effect is that a single word spoken here trails behind its speaker for several seconds in diminishing repetition. The Ossuary uses this hall for oath-confirmation procedures, where the echoing of a spoken oath is classified as the oath's self-witness: the room hears you swear, and then hears you swear again and again until the oath has been witnessed sufficiently.
 ~
@@ -1269,17 +1269,17 @@ The hall's acoustic properties are extraordinary: small @@Wbone ossicles@@N â
 D2
 The Sable Mortuary Walk extends to the south.~
 ~
-0 -1 5250
+0 -1 5719
 D3
 The Widow's Reliquary extends to the west.~
 ~
-0 -1 5248
+0 -1 5717
 E
 bone ossicles~
 The installation of the ossicles in the walls required the processing of a substantial number of individuals, as the relevant bones are small, specific, and yield only a pair per subject. The Ossuary's construction records account for the installation in a list of building materials that includes stone, mortar, compound, and bone stock. The bone stock entries are quantified in units that suggest the number of subjects involved. The hall's extraordinary resonance is built from hearing itself, taken from those who can no longer use it.
 ~
 S
-#5250
+#5719
 @@WSable Mortuary Walk@@N~
 The mortuary walk is lined with @@Wsable-painted processing alcoves@@N, each alcove containing the tools of funerary preparation in their standard operational arrangement: embalming instruments, classification stamps, processing compounds, and the standard Ossuary intake forms in their prescribed order. The alcoves are set up as if in permanent readiness, their tools clean and their forms restocked. The walk is not currently active â no subjects are being processed here â but the institutional machinery is maintained in a state of readiness that assumes reactivation at any time.
 ~
@@ -1287,17 +1287,17 @@ The mortuary walk is lined with @@Wsable-painted processing alcoves@@N, each alc
 D0
 The Echoing Ossicle Hall extends to the north.~
 ~
-0 -1 5249
+0 -1 5718
 D2
 The Corpse-Lily Atrium continues to the south.~
 ~
-0 -1 5251
+0 -1 5720
 E
 sable-painted processing alcoves~
 The intake forms in the alcoves are current-era documents, recently restocked. They have been updated since the Ossuary's last active processing period, suggesting that the administrative procedures have been revised in anticipation of renewed activity. Several form fields that were previously optional are now marked as mandatory. One new field, absent from older forms visible in the deeper archival sections, asks for the subject's "doctrinal color classification at time of intake." The forms are ready for use.
 ~
 S
-#5251
+#5720
 @@WCorpse-Lily Atrium@@N~
 The atrium's central feature is a wide shallow basin filled with @@Wcorpse-lily blooms@@N, a pale funeral flower that the Ossuary cultivates specifically because it grows in and processes the embalming compounds that leach from the floors of active funerary spaces. The flowers are beautiful and deeply unsettling: their pale white petals are tinged with the amber of the compounds they absorb, their blooms fat and heavy on thin stems. They are thriving. The atrium floor below the basin shows heavy embalming compound saturation, its stone stained with the accumulated residue of active funerary work extending across most of the room's surface area.
 ~
@@ -1305,17 +1305,17 @@ The atrium's central feature is a wide shallow basin filled with @@Wcorpse-lily 
 D0
 The Sable Mortuary Walk extends to the north.~
 ~
-0 -1 5250
+0 -1 5719
 D2
 The Maw of Quiet Bells continues to the south.~
 ~
-0 -1 5252
+0 -1 5721
 E
 corpse-lily blooms~
 The corpse-lily is not native to this region. The Ossuary imported its cultivation methodology from the Nightfall Catacombs' funerary flora management records, adapting the documented techniques to the cathedral's specific compound varieties. The flowers represent a documented knowledge transfer between institutions. The Ossuary has been learning from the Nightfall tradition, incorporating its methods at the level of botanical detail. The blooms are evidence of institutional apprenticeship.
 ~
 S
-#5252
+#5721
 @@WMaw of Quiet Bells@@N~
 The passage widens here around a cluster of @@Wquieted funeral bells@@N mounted in an iron framework suspended from the ceiling, their clappers removed in the same procedure used on the upper nave bells but their housings preserved in perfect condition. The bells are named, each bearing a small plaque with a title: First Bell of Intake, Second Bell of Adjudication, Third Bell of Lament, Fourth Bell of Reclamation. The Fourth Bell's housing shows damage consistent with having been forcibly removed and reinstalled. The Ossuary's records contain no explanation for the damage.
 ~
@@ -1323,17 +1323,17 @@ The passage widens here around a cluster of @@Wquieted funeral bells@@N mounted 
 D0
 The Corpse-Lily Atrium extends to the north.~
 ~
-0 -1 5251
+0 -1 5720
 D2
 The Nightglass Corridor continues to the south.~
 ~
-0 -1 5253
+0 -1 5722
 E
 quieted funeral bells~
 The bell-naming convention matches the schema used in the Nightfall Catacombs' chapel bells, the same four categories in the same order with the same color attributions: silver for intake, bronze for adjudication, crimson for lament, and black for reclamation. The Nightfall bell tradition is ancient; the Ossuary has adopted it in its entirety while removing all functional capability from the bells. The tradition is preserved as display, stripped of its acoustic authority. The cathedral preserves the form while eliminating the function; this is the null-seal principle applied to memorial music.
 ~
 S
-#5253
+#5722
 @@WNightglass Corridor@@N~
 The walls of this corridor are lined with @@Wnightglass panels@@N, a material processed from bone ash and silica that produces a translucent glass with a faint luminescence visible only in very low light. The panels have been installed here as a final visual preparation before the closing chambers: their faint glow creates a boundary between the procedural sections of the wing and the terminal zone ahead. A series of small @@Wfunerary attestation markers@@N are embedded in the nightglass, each marker indicating a specific doctrinal category and its relationship to the final rite.
 ~
@@ -1341,17 +1341,17 @@ The walls of this corridor are lined with @@Wnightglass panels@@N, a material pr
 D0
 The Maw of Quiet Bells lies to the north.~
 ~
-0 -1 5252
+0 -1 5721
 D2
 The Penumbral Last Rite chamber lies to the south.~
 ~
-0 -1 5254
+0 -1 5723
 E
 funerary attestation markers~
 The attestation markers follow the Compact-era civic format for funerary documentation, adapted to the Ossuary's eclipse doctrine. Each marker's doctrinal category corresponds to a different outcome for the subject: some lead to archive, some to reassignment, and one, the category marked with the null symbol, leads to what the marker calls "doctrinal resolution." The same word used on the Reliquary's wax faces. The outcome behind that word is not documented on the marker itself.
 ~
 S
-#5254
+#5723
 @@WPenumbral Last Rite@@N~
 The penultimate chamber of the Moonbone wing serves as the formal threshold for the final rite, its walls carved with the complete Moonbone Ossuary protocol for terminal proceedings. The protocol is dense and specific, describing every step of the process by which a subject's doctrinal status is finalized, their posthumous jurisdiction assigned, and their administrative utility determined. At the north end of the chamber, a @@Wviolet threshold@@N stands sealed, a gate of combined violet-iron and bone-glass whose lock requires the @@Wviolet threshold key@@N to open. Somewhere below the formal protocol inscriptions, an older text is visible, letters worn nearly smooth: the Kel'Shadra funeral oath, "What is witnessed must be named," scraped over with the Ossuary's own protocol but not fully erased.
 ~
@@ -1359,11 +1359,11 @@ The penultimate chamber of the Moonbone wing serves as the formal threshold for 
 D0
 The Nightglass Corridor extends to the north.~
 ~
-0 -1 5253
+0 -1 5722
 D1
 The violet threshold stands sealed. A key is required.~
 ^violet threshold~
-1 5182 5255
+1 5651 5724
 E
 violet threshold~
 The gate's construction uses both violet-iron and bone-glass, the two primary materials of the cathedral's doctrinal authority made into a single threshold object. The lock is a three-cylinder mechanism requiring the specific @@Wviolet threshold key@@N. The gate's lintel inscription, in the Ossuary's formal notation, reads: "Final rite proceeds only under full eclipse authority. No partial sentence admitted." The threshold is the last institutional gate. What it admits to is, by institutional definition, irreversible.
@@ -1373,7 +1373,7 @@ Kel'Shadra funeral oath~
 The older inscription below the protocol text is partially legible despite the scraping: "What is witnessed must be named; what is named must be offered; what is offered must be bound." This is the Kel'Shadra triune formula in its original unaltered form. Someone inscribed it here, in the terminal chamber, before the Ossuary's protocols overwrote the walls. The inscription was scraped but not fully removed; perhaps whoever scraped it stopped before finishing, or perhaps they left just enough to remain. The original is still present, beneath the doctrine that replaced it.
 ~
 S
-#5255
+#5724
 @@yThrone of the Violet Hierophant@@N~
 The final chamber of the Cathedral of the Violet Eclipse is a vast vaulted space where the five doctrinal colors converge on a single point: the @@yeclipse throne pedestal@@N at the room's north wall, a raised dais of violet-iron and obsidian where the @@yHierophant's verdict scroll rack@@N stands in permanent readiness, its slots filled with gold-edged scrolls bearing eclipse judgments already written but not yet assigned. The Violet Hierophant occupies the throne as the sole authority whose judgments cannot be appealed, reviewed, or reversed. The floor beneath the throne is a mosaic that recapitulates the entire Fivefold Occlusion, all five tenets rendered in their five colors converging on a central gold ring â the ring of terminal authority â with a single word at its center: @@yFINAL@@N. The architecture, the doctrine, and the person occupying the throne state the same thing in three registers simultaneously.
 ~
@@ -1381,7 +1381,7 @@ The final chamber of the Cathedral of the Violet Eclipse is a vast vaulted space
 D3
 The violet threshold passage leads west back through the final rite chamber.~
 ~
-0 -1 5254
+0 -1 5723
 E
 eclipse throne pedestal~
 The pedestal is a working structure, not a decorative one: it has mechanisms built into its base for adjusting the throne's height and angle, allowing the Hierophant to position themselves differently for different types of proceedings. There are three preset positions, labeled on the mechanism's adjustment dial: "Reception," for petition audiences; "Adjudication," for formal sentence proceedings; and "Eclipse," for irreversible final judgments. The Eclipse position tilts the throne slightly forward, toward the supplicant. The adjustment is subtle. Its effect on the power dynamic it represents is not.
@@ -1393,7 +1393,7 @@ The gold-edged scrolls in the rack are pre-written with the formal language of e
 S
 #0
 #MOBILES
-#5181
+#5650
 intake verger~
 an intake verger~
 An intake verger stands here, censer in hand, sorting arrivals with bureaucratic routine.
@@ -1408,7 +1408,7 @@ This robed official of the cathedral's intake court wears the violet-trimmed gre
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5182
+#5651
 censer bailiff~
 a censer bailiff~
 A censer bailiff swings a heavy bronze censer, its smoke curling toward each visitor in turn.
@@ -1423,7 +1423,7 @@ Equipped with the cathedral's compliance-grade censer mixture and a short iron b
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5183
+#5652
 processional sentry~
 a processional sentry~
 A processional sentry stands at rigid attention, ceremonial halberd held in the upright guard position.
@@ -1438,7 +1438,7 @@ The processional sentries of the Violet Eclipse's Processional Court are selecte
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5184
+#5653
 litany marshal~
 a litany marshal~
 A litany marshal paces slowly, chanting the Fivefold Occlusion in a low rhythmic drone.
@@ -1453,7 +1453,7 @@ The litany marshals of the Processional Court are not soldiers but administrator
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5185
+#5654
 doctrine herald~
 a doctrine herald~
 A doctrine herald stands at the junction, directing visitors with gestures that leave no room for question.
@@ -1468,7 +1468,7 @@ Doctrine heralds are the Processional Court's routing officials, responsible for
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5186
+#5655
 veiled scribe~
 a veiled scribe~
 A veiled scribe moves quietly through the corridor, recording observations in a small notation book.
@@ -1483,7 +1483,7 @@ The veiled scribes of the Processional Court are its intelligence arm, moving th
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5187
+#5656
 choir cantor~
 a choir cantor~
 A choir cantor stands with perfect posture, their voice carrying fragments of blood-psalm in a controlled undertone.
@@ -1498,7 +1498,7 @@ The choir cantors who patrol the spine's deeper sections are Sanguine Choir pers
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5188
+#5657
 crypt warden~
 a crypt warden~
 A crypt warden blocks the passage, their expression suggesting that passage is not automatic.
@@ -1513,7 +1513,7 @@ The crypt wardens of the cathedral's deeper spine are the transition guards betw
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5189
+#5658
 obsidian notary~
 an obsidian notary~
 An obsidian notary moves through the corridor with careful deliberation, seal-kit in hand.
@@ -1528,7 +1528,7 @@ The obsidian notaries are the Scriptoria's field agents in the spine, authorized
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5190
+#5659
 blood steward~
 a blood steward~
 A blood steward passes through the corridor, collecting tithe-receipts from stationed personnel.
@@ -1543,7 +1543,7 @@ The blood stewards of the Sanguine Choir function as administrative couriers bet
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5191
+#5660
 choir inquisitor~
 a choir inquisitor~
 A choir inquisitor moves through the space with the purposeful authority of someone conducting an assessment.
@@ -1558,7 +1558,7 @@ The choir inquisitors are the Sanguine Choir's active investigation arm, deploye
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5192
+#5661
 blood cantor~
 a blood cantor~
 A blood cantor leads a psalm from memory, their hands moving through the extract-and-record gestures.
@@ -1573,7 +1573,7 @@ Blood cantors are the Sanguine Choir's liturgical executives, responsible for co
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5193
+#5662
 velvet wound attendant~
 a velvet wound attendant~
 A velvet wound attendant carries a treatment case, their expression professionally neutral.
@@ -1588,7 +1588,7 @@ The velvet wound attendants of the Sanguine Choir combine medical care with cont
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5194
+#5663
 dirge organist~
 a dirge organist~
 A dirge organist moves through the space, adjusting acoustic installations with practiced precision.
@@ -1603,7 +1603,7 @@ The dirge organists are the Choir's acoustic engineers as much as its musicians,
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5195
+#5664
 blood-psalm enforcer~
 a blood-psalm enforcer~
 A blood-psalm enforcer stands in the corridor, scanning for undocumented persons with a practiced eye.
@@ -1618,7 +1618,7 @@ Blood-psalm enforcers are the Sanguine Choir's security tier, responsible for en
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5196
+#5665
 sanguine sentinel~
 a sanguine sentinel~
 A sanguine sentinel stands at the passage junction, their presence alone establishing that this approach is controlled.
@@ -1633,7 +1633,7 @@ The sanguine sentinels are the Choir's elite checkpoint officers, assigned to ju
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5197
+#5666
 sanguine inquisitor~
 a sanguine inquisitor~
 A sanguine inquisitor paces the chamber, their formal robe marking their inquisitorial authority clearly.
@@ -1648,7 +1648,7 @@ Senior to the choir inquisitors, the sanguine inquisitors hold the formal author
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5198
+#5667
 crimson penitent warden~
 a crimson penitent warden~
 A crimson penitent warden watches the doorways, their keys jangling softly against their hip.
@@ -1663,7 +1663,7 @@ The penitent wardens manage the physical custody of those currently undergoing C
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5199
+#5668
 wound confessor~
 a wound confessor~
 A wound confessor tends to a ritual station, their hands moving through preparation gestures with religious precision.
@@ -1678,7 +1678,7 @@ The wound confessors are the Choir's hybrid liturgists, trained in both the musi
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5200
+#5669
 blood-lash cantor~
 a blood-lash cantor~
 A blood-lash cantor stands at the passage's midpoint, their position and bearing making clear that passage is contingent on their assessment.
@@ -1693,7 +1693,7 @@ The blood-lash cantors are the Choir wing's most advanced operational tier below
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5201
+#5670
 reliquary icon warden~
 a reliquary icon warden~
 A reliquary icon warden stands at the passage threshold, authentication quoins jangling at their belt.
@@ -1708,7 +1708,7 @@ The icon wardens are the Amethyst Reliquary wing's entry-level enforcers, tasked
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5202
+#5671
 violet censer regent~
 a violet censer regent~
 A violet censer regent adjusts the hanging censer above the threshold with practiced, unhurried precision.
@@ -1723,7 +1723,7 @@ The censer regents manage the Reliquary wing's atmospheric processing systems â
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5203
+#5672
 relic adjudicator~
 a relic adjudicator~
 A relic adjudicator examines a tagged object closely, their expression conveying nothing as they evaluate it.
@@ -1738,7 +1738,7 @@ The relic adjudicators hold formal authority to classify contested items arrivin
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5204
+#5673
 amethyst verification clerk~
 an amethyst verification clerk~
 An amethyst verification clerk cross-references a manifest against their authentication rolls with methodical patience.
@@ -1753,7 +1753,7 @@ The verification clerks manage the documentary side of reliquary processing, com
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5205
+#5674
 votive bone curator~
 a votive bone curator~
 A votive bone curator moves through the gallery with the careful deliberateness of someone responsible for irreplaceable material.
@@ -1768,7 +1768,7 @@ The votive bone curators maintain the reliquary wing's collection of institution
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5206
+#5675
 legitimacy broker~
 a legitimacy broker~
 A legitimacy broker stands apart from the processing flow, their posture conveying availability without overt solicitation.
@@ -1783,7 +1783,7 @@ The legitimacy brokers occupy an ambiguous position in the Reliquary wing's hier
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5207
+#5676
 mirrored witness warden~
 a mirrored witness warden~
 A mirrored witness warden holds a curved obsidian mirror at an angle that reflects the room's approaches without revealing themselves.
@@ -1798,7 +1798,7 @@ Named for the curved mirrors they carry â identical to the mirrored censers
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5208
+#5677
 censer archivist~
 a censer archivist~
 A censer archivist tends a recording station adjacent to one of the hanging censers, stylus moving steadily.
@@ -1813,7 +1813,7 @@ The censer archivists maintain the Reliquary's records of atmospheric evidence �
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5209
+#5678
 reliquary penitent keeper~
 a reliquary penitent keeper~
 A reliquary penitent keeper watches the corridor junctions with the flat attention of someone used to long custody shifts.
@@ -1828,7 +1828,7 @@ The penitent keepers are the Amethyst Reliquary wing's physical enforcement tier
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5210
+#5679
 amethyst crown inquisitor~
 an amethyst crown inquisitor~
 An amethyst crown inquisitor stands at the inner threshold, their authority marker unmistakable to anyone familiar with Reliquary rank.
@@ -1843,7 +1843,7 @@ The crown inquisitors are the Amethyst Reliquary wing's senior enforcement autho
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5211
+#5680
 null-seal scribe~
 a null-seal scribe~
 A null-seal scribe works steadily at a stone lectern, pressing an obsidian stamp into each document as it clears their desk.
@@ -1858,7 +1858,7 @@ The null-seal scribes are the Obsidian Cloister's baseline operational staff â�
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5212
+#5681
 archive suppressor~
 an archive suppressor~
 An archive suppressor stands at the Cloister passage, their stance communicating that the space behind them is actively protected.
@@ -1873,7 +1873,7 @@ The archive suppressors handle the physical security of the Cloister's suppressi
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5213
+#5682
 obsidian seal notary~
 an obsidian seal notary~
 An obsidian seal notary reviews completed documents with methodical attention before applying their certification mark.
@@ -1888,7 +1888,7 @@ The seal notaries certify completed null-seal applications, applying the obsidia
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5214
+#5683
 redaction warden~
 a redaction warden~
 A redaction warden escorts a sealed bundle through the corridor, their route clearly not negotiable.
@@ -1903,7 +1903,7 @@ The redaction wardens provide physical security for ongoing suppression sessions
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5215
+#5684
 testimony suppressor~
 a testimony suppressor~
 A testimony suppressor patrols the Cloister corridor with deliberate, sweeping attention.
@@ -1918,7 +1918,7 @@ The testimony suppressors are the Cloister's hybrid operational staff, combining
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5216
+#5685
 blank-seal archivist~
 a blank-seal archivist~
 A blank-seal archivist works from an annotated distribution chart, methodically tracking the life history of documents that no longer exist.
@@ -1933,7 +1933,7 @@ The blank-seal archivists specialize in the most extensive form of null-sealing:
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5217
+#5686
 ink-seal enforcer~
 an ink-seal enforcer~
 An ink-seal enforcer stands at the vault threshold, the mass of their frame making the narrow doorway appear narrower.
@@ -1948,7 +1948,7 @@ The ink-seal enforcers are the Cloister's most physically capable security tier,
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5218
+#5687
 obsidian canon custodian~
 an obsidian canon custodian~
 An obsidian canon custodian tends to the Cloister's sealed precedent registry with the focused attention of someone managing living institutional memory.
@@ -1963,7 +1963,7 @@ The canon custodians oversee the Cloister's most sensitive suppression work: the
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5219
+#5688
 null-halo prelate~
 a null-halo prelate~
 A null-halo prelate moves through the Cloister with the unhurried authority of someone whose decisions require no co-signature.
@@ -1978,7 +1978,7 @@ The null-halo prelates are senior Cloister authorities whose rank symbol â 
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5220
+#5689
 obsidian void archivist~
 an obsidian void archivist~
 An obsidian void archivist stands at the final approach passage, their stillness absolute and their position deliberate.
@@ -1993,7 +1993,7 @@ The void archivists are the Cloister's most advanced operational tier below Abbo
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5221
+#5690
 thorn canonicalist~
 a thorn canonicalist~
 A thorn canonicalist moves through the corridor in a deliberate stooped posture that the space itself seems designed to impose.
@@ -2008,7 +2008,7 @@ The thorn canonicalists are the Thorned Scriptorium wing's legal scholars â
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5222
+#5691
 penitence marshal~
 a penitence marshal~
 A penitence marshal patrols the corridor with a bearing shaped by long practice in the wing's architecturally enforced submission geometry.
@@ -2023,7 +2023,7 @@ The penitence marshals enforce the Thorned Scriptorium wing's architectural comp
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5223
+#5692
 confession indexer~
 a confession indexer~
 A confession indexer works at a low standing lectern, transferring entries from bound documents into category files with practiced, unhurried strokes.
@@ -2038,7 +2038,7 @@ The confession indexers maintain the Thorned Scriptorium's defining filing syste
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5224
+#5693
 thorn inscription guard~
 a thorn inscription guard~
 A thorn inscription guard stands at the annotation hall entrance, their compact frame well-suited to the corridor's demanding geometry.
@@ -2053,7 +2053,7 @@ The inscription guards protect the Thorned Scriptorium's annotation halls â
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5225
+#5694
 briar hall enforcer~
 a briar hall enforcer~
 A briar hall enforcer occupies the final approach to the Sanctum threshold, their positioning leaving no ambiguity about the passage's status.
@@ -2068,7 +2068,7 @@ The briar hall enforcers are the Thorned Scriptorium's most advanced operational
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5226
+#5695
 moonbone mortifier~
 a moonbone mortifier~
 A moonbone mortifier moves through the ossuary corridor with the careful deliberateness of someone handling irreplaceable institutional material.
@@ -2083,7 +2083,7 @@ The moonbone mortifiers process the Moonbone Ossuary wing's intake: deceased per
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5227
+#5696
 funerary attestation clerk~
 a funerary attestation clerk~
 A funerary attestation clerk reviews a disposition manifest with the neutral attention of someone making final determinations.
@@ -2098,7 +2098,7 @@ The funerary attestation clerks determine posthumous disposition categories for 
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5228
+#5697
 silver-shroud curator~
 a silver-shroud curator~
 A silver-shroud curator arranges memorial displays in the ossuary corridor with the practiced care of someone managing the wing's most public-facing function.
@@ -2113,7 +2113,7 @@ The silver-shroud curators maintain the Moonbone Ossuary's "Remembered" memorial
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5229
+#5698
 corpse-lily attendant~
 a corpse-lily attendant~
 A corpse-lily attendant tends to the pale flowers growing from the bone-meal soil of the ossuary's inner passage.
@@ -2128,7 +2128,7 @@ The corpse-lily attendants cultivate the pale flowers that mark the Moonbone Oss
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5230
+#5699
 penumbral ossuary warden~
 a penumbral ossuary warden~
 A penumbral ossuary warden stands at the final approach to the Hierophant's threshold, their authority absolute in this space.
@@ -2143,7 +2143,7 @@ The penumbral ossuary wardens are the Moonbone Ossuary wing's senior enforcement
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#5231
+#5700
 the Crimson Matron Ilyra~
 @@ethe Crimson Matron Ilyra@@N~
 @@eThe Crimson Matron Ilyra@@N stands at the center of the Throne Chamber, her blood-psalms already forming on her lips.
@@ -2158,7 +2158,7 @@ The Crimson Matron Ilyra is a monument to sincere conviction doing monstrous thi
 + 0 0 0 0 0 0 0 0 0
 l 200 30290 30291 0 0 0 0 0 0 0 
 L 60 40 0 0 0 0 0 0 0 
-#5232
+#5701
 Lady Noctyra, Mirrored Censer Regent~
 @@mLady Noctyra, Mirrored Censer Regent@@N~
 @@mLady Noctyra@@N stands at the center of her Reliquary, a curved obsidian mirror raised before her like a second face.
@@ -2173,7 +2173,7 @@ Lady Noctyra of the Mirrored Censer transformed reliquary etiquette into statecr
 + 0 0 0 0 0 0 0 0 0
 l 250 30292 30293 0 0 0 0 0 0 0 
 L 60 40 0 0 0 0 0 0 0 
-#5233
+#5702
 Abbot Vharos, Null-Halo Archivist~
 @@dAbbot Vharos, Null-Halo Archivist@@N~
 @@dAbbot Vharos@@N stands surrounded by rotating rings of obsidian-lacquered metal, each one a null-seal in continuous motion.
@@ -2188,7 +2188,7 @@ Abbot Vharos is the cathedral's most intellectually dangerous inhabitant. He arr
 + 0 0 0 0 0 0 0 0 0
 l 300 30294 30295 0 0 0 0 0 0 0 
 L 60 40 0 0 0 0 0 0 0 
-#5234
+#5703
 the Thorn Cardinal Seredh~
 @@Wthe Thorn Cardinal Seredh@@N~
 @@WThorn Cardinal Seredh@@N stands precisely at the Sanctum's center, his posture demanding compliance from the architecture itself.
@@ -2203,7 +2203,7 @@ Thorn Cardinal Seredh brought military discipline and architectural intelligence
 + 0 0 0 0 0 0 0 0 0
 l 350 30296 30297 0 0 0 0 0 0 0 
 L 60 40 0 0 0 0 0 0 0 
-#5235
+#5704
 the Violet Hierophant~
 @@mthe Violet Hierophant@@N~
 @@mThe Violet Hierophant@@N sits upon the Moonbone Throne, their identity wholly subsumed into the office they have become.
@@ -2220,7 +2220,7 @@ l 500 30298 30299 30300 30301 30302 30303 30304 0 0
 L 60 60 50 50 50 50 100 0 0 
 #0
 #OBJECTS
-#5181
+#5650
 eclipse gate key~
 @@ya eclipse gate key@@N~
 An eclipse gate key rests here, its ward-seal markings faintly visible beneath a coat of obsidian lacquer.
@@ -2234,7 +2234,7 @@ The key is wrought from black iron, its bow stamped with the eclipse symbol â
 ~
 L
 24
-#5182
+#5651
 violet threshold key~
 @@ma violet threshold key@@N~
 A violet threshold key lies here, its stem engraved with the Fivefold Occlusion's color-rank progression.
@@ -2248,7 +2248,7 @@ The key's stem is engraved with five color bands running from crimson at the bla
 ~
 L
 32
-#5183
+#5652
 censer-iron pauldrons~
 @@da pair of censer-iron pauldrons@@N~
 A heavy pair of censer-iron pauldrons rests here, bearing the intake-registry stamps of the Violet Compact.
@@ -2258,7 +2258,7 @@ A heavy pair of censer-iron pauldrons rests here, bearing the intake-registry st
 13
 L
 20
-#5184
+#5653
 intake verger's gloves~
 @@da pair of intake verger's gloves@@N~
 A pair of intake verger's gloves lies here, reinforced at the knuckles with engraved intake-channel stamps.
@@ -2268,7 +2268,7 @@ A pair of intake verger's gloves lies here, reinforced at the knuckles with engr
 8
 L
 20
-#5185
+#5654
 lantern registry seal~
 @@aa lantern registry seal@@N~
 A lantern registry seal rests here, its cyan lacquer worn but its certification marks still legible.
@@ -2282,7 +2282,7 @@ The seal carries the Lantern Registry's three-ring certification mark â the
 ~
 L
 21
-#5186
+#5655
 processional sentry's mace~
 @@da processional sentry's mace@@N~
 A processional sentry's mace rests here, its head engraved with intake-rite blessing seals.
@@ -2296,7 +2296,7 @@ The mace's iron head bears blessing seals that were originally civic authenticat
 ~
 L
 21
-#5187
+#5656
 rite-warden cowl~
 @@da rite-warden cowl@@N~
 A rite-warden cowl hangs here, its hood stitched with a repeating pattern of stilled-wing motifs.
@@ -2306,7 +2306,7 @@ A rite-warden cowl hangs here, its hood stitched with a repeating pattern of sti
 13
 L
 21
-#5188
+#5657
 intake-channel mantle~
 @@da intake-channel mantle@@N~
 An intake-channel mantle lies folded here, its cut matching the standard Compact-era processional vestment pattern.
@@ -2316,7 +2316,7 @@ An intake-channel mantle lies folded here, its cut matching the standard Compact
 14
 L
 22
-#5189
+#5658
 choir hymnal wraps~
 @@ma pair of choir hymnal wraps@@N~
 A pair of choir hymnal wraps rests here, their violet silk embroidered with silent notation.
@@ -2326,7 +2326,7 @@ A pair of choir hymnal wraps rests here, their violet silk embroidered with sile
 3
 L
 22
-#5190
+#5659
 sepulchral iron sabatons~
 @@da pair of sepulchral iron sabatons@@N~
 A pair of sepulchral iron sabatons stands here, their toe-guards formed into mourning-bell shapes.
@@ -2336,7 +2336,7 @@ A pair of sepulchral iron sabatons stands here, their toe-guards formed into mou
 13
 L
 23
-#5191
+#5660
 litany crossing vambrace~
 @@da litany crossing vambrace@@N~
 A litany crossing vambrace rests here, its inner surface inscribed with mnemonic rite notations.
@@ -2346,7 +2346,7 @@ A litany crossing vambrace rests here, its inner surface inscribed with mnemonic
 9
 L
 24
-#5192
+#5661
 blood-scripture ring~
 @@ea blood-scripture ring@@N~
 A blood-scripture ring lies here, its band engraved with choir notation rendered in crimson enamel.
@@ -2356,7 +2356,7 @@ A blood-scripture ring lies here, its band engraved with choir notation rendered
 3
 L
 24
-#5193
+#5662
 bell gallery pendant~
 @@da bell gallery pendant@@N~
 A bell gallery pendant hangs from an iron hook here, its disk stamped with an auditory index seal.
@@ -2366,7 +2366,7 @@ A bell gallery pendant hangs from an iron hook here, its disk stamped with an au
 4
 L
 25
-#5194
+#5663
 funeral bell sceptre~
 @@da funeral bell sceptre@@N~
 A funeral bell sceptre rests here, its head shaped as a sealed bell whose clapper has been removed.
@@ -2380,7 +2380,7 @@ The bell that forms this sceptre's head is not decorative â it is a deliber
 ~
 L
 25
-#5195
+#5664
 roseglass vestment~
 @@ma roseglass vestment@@N~
 A roseglass vestment hangs here, its fabric woven from threads that carry the faint violet sheen of treated glass-silk.
@@ -2390,7 +2390,7 @@ A roseglass vestment hangs here, its fabric woven from threads that carry the fa
 4
 L
 26
-#5196
+#5665
 eclipse-eye circlet~
 @@ma eclipse-eye circlet@@N~
 An eclipse-eye circlet rests here, its band set with a single obsidian-lacquered disc at the brow.
@@ -2400,7 +2400,7 @@ An eclipse-eye circlet rests here, its band set with a single obsidian-lacquered
 3
 L
 26
-#5197
+#5666
 sanguine choir cord~
 @@ea sanguine choir cord@@N~
 A sanguine choir cord coils here, its crimson silk braided with authentication lace that marks the wearer as Choir-authorized.
@@ -2410,7 +2410,7 @@ A sanguine choir cord coils here, its crimson silk braided with authentication l
 8
 L
 27
-#5198
+#5667
 crimson wound tabi~
 @@ea pair of crimson wound tabi@@N~
 A pair of crimson wound tabi rests here, their soles reinforced with iron treads shaped like closed wounds.
@@ -2420,7 +2420,7 @@ A pair of crimson wound tabi rests here, their soles reinforced with iron treads
 8
 L
 27
-#5199
+#5668
 velvet wound buckler~
 @@ea velvet wound buckler@@N~
 A velvet wound buckler rests here, its crimson facing reinforced with curved iron strips over a dark core.
@@ -2430,7 +2430,7 @@ A velvet wound buckler rests here, its crimson facing reinforced with curved iro
 13
 L
 28
-#5200
+#5669
 blood cantor's stabbing blade~
 @@ea blood cantor's stabbing blade@@N~
 A blood cantor's stabbing blade rests here, its narrow tip designed for precise liturgical work rather than open combat.
@@ -2444,7 +2444,7 @@ The blade is narrow enough to be called clinical â its edge geometry is tha
 ~
 L
 28
-#5201
+#5670
 choir-iron vambrace~
 @@ea choir-iron vambrace@@N~
 A choir-iron vambrace rests here, its crimson-treated metal engraved with Sanguine Choir verse notation.
@@ -2454,7 +2454,7 @@ A choir-iron vambrace rests here, its crimson-treated metal engraved with Sangui
 9
 L
 26
-#5202
+#5671
 blood psalm sigil ring~
 @@ea blood psalm sigil ring@@N~
 A blood psalm sigil ring lies here, its band stamped with the Choir's confession-cycle authentication mark.
@@ -2464,7 +2464,7 @@ A blood psalm sigil ring lies here, its band stamped with the Choir's confession
 7
 L
 26
-#5203
+#5672
 sanguine choir hauberk~
 @@ea sanguine choir hauberk@@N~
 A sanguine choir hauberk rests here, its chainwork dyed crimson with tithe-extracted pigment.
@@ -2474,7 +2474,7 @@ A sanguine choir hauberk rests here, its chainwork dyed crimson with tithe-extra
 10
 L
 27
-#5204
+#5673
 wound-rite gauntlets~
 @@ea pair of wound-rite gauntlets@@N~
 A pair of wound-rite gauntlets rests here, their palms reinforced with iron sheets etched with tithe-collection notation.
@@ -2484,7 +2484,7 @@ A pair of wound-rite gauntlets rests here, their palms reinforced with iron shee
 9
 L
 27
-#5205
+#5674
 blood-sealed greaves~
 @@ea pair of blood-sealed greaves@@N~
 A pair of blood-sealed greaves stands here, their surface treated with heat-set crimson lacquer over black iron.
@@ -2494,7 +2494,7 @@ A pair of blood-sealed greaves stands here, their surface treated with heat-set 
 10
 L
 28
-#5206
+#5675
 tithe collector's longsword~
 @@ea tithe collector's longsword@@N~
 A tithe collector's longsword rests here, its blade engraved with the Choir's official debt-recovery authorization seal.
@@ -2504,7 +2504,7 @@ A tithe collector's longsword rests here, its blade engraved with the Choir's of
 9
 L
 28
-#5207
+#5676
 ilyra's confession dirge score~
 @@ea confession dirge score@@N~
 A confession dirge score lies here, its notation dense with multi-part choir arrangements and marginal timing marks.
@@ -2518,7 +2518,7 @@ The polyphonic score is Matron Ilyra's original composition â the multi-par
 ~
 L
 29
-#5208
+#5677
 amethyst verification collar~
 @@ma amethyst verification collar@@N~
 An amethyst verification collar rests here, its violet-and-silver banding marking the wearer as Reliquary-processed.
@@ -2528,7 +2528,7 @@ An amethyst verification collar rests here, its violet-and-silver banding markin
 4
 L
 26
-#5209
+#5678
 icon warden's surcoat~
 @@ma icon warden's surcoat@@N~
 An icon warden's surcoat hangs here, its amethyst-bordered facing marked with authentication quoin impressions.
@@ -2538,7 +2538,7 @@ An icon warden's surcoat hangs here, its amethyst-bordered facing marked with au
 5
 L
 27
-#5210
+#5679
 relic adjudicator's seal ring~
 @@ma relic adjudicator's seal ring@@N~
 A relic adjudicator's seal ring lies here, its face cut with the Reliquary's classification authority mark.
@@ -2548,7 +2548,7 @@ A relic adjudicator's seal ring lies here, its face cut with the Reliquary's cla
 3
 L
 27
-#5211
+#5680
 mirrored censer arm-guards~
 @@ma pair of mirrored censer arm-guards@@N~
 A pair of mirrored censer arm-guards rests here, their outer surfaces polished to partial reflectivity.
@@ -2558,7 +2558,7 @@ A pair of mirrored censer arm-guards rests here, their outer surfaces polished t
 4
 L
 28
-#5212
+#5681
 crown inquisitor's vestment~
 @@ma crown inquisitor's vestment@@N~
 A crown inquisitor's vestment lies here, its amethyst collar band bearing the autonomous-authorization mark.
@@ -2568,7 +2568,7 @@ A crown inquisitor's vestment lies here, its amethyst collar band bearing the au
 5
 L
 28
-#5213
+#5682
 null-seal scribe's cowl~
 @@da null-seal scribe's cowl@@N~
 A null-seal scribe's cowl hangs here, its hood dyed obsidian-black with the absorption pigment used in seal preparation.
@@ -2578,7 +2578,7 @@ A null-seal scribe's cowl hangs here, its hood dyed obsidian-black with the abso
 3
 L
 27
-#5214
+#5683
 archive suppressor's iron bands~
 @@da pair of archive suppressor's iron bands@@N~
 A pair of archive suppressor's iron bands rests here, their surface stamped with the Cloister's suppression authorization seal.
@@ -2588,7 +2588,7 @@ A pair of archive suppressor's iron bands rests here, their surface stamped with
 8
 L
 28
-#5215
+#5684
 redaction warden's bracers~
 @@da pair of redaction warden's bracers@@N~
 A pair of redaction warden's bracers rests here, their inner surface etched with chain-of-custody notation.
@@ -2598,7 +2598,7 @@ A pair of redaction warden's bracers rests here, their inner surface etched with
 7
 L
 29
-#5216
+#5685
 blank-seal archivist's mantle~
 @@da blank-seal archivist's mantle@@N~
 A blank-seal archivist's mantle lies here, its dark fabric woven with obsidian threads that absorb reflected light.
@@ -2608,7 +2608,7 @@ A blank-seal archivist's mantle lies here, its dark fabric woven with obsidian t
 3
 L
 29
-#5217
+#5686
 null-halo prelate's rod~
 @@da null-halo prelate's rod@@N~
 A null-halo prelate's rod rests here, its shaft circled by a ring of obsidian-lacquered metal that still spins slowly on its bearing.
@@ -2622,7 +2622,7 @@ The spinning ring is the prelate's rank instrument â an obsidian halo in co
 ~
 L
 30
-#5218
+#5687
 void archivist's obsidian cowl~
 @@da void archivist's obsidian cowl@@N~
 A void archivist's obsidian cowl rests here, its surface treated with a light-absorbing preparation that makes it appear to recede from view.
@@ -2632,7 +2632,7 @@ A void archivist's obsidian cowl rests here, its surface treated with a light-ab
 3
 L
 31
-#5219
+#5688
 testament suppressor's waist chain~
 @@da testament suppressor's waist chain@@N~
 A testament suppressor's waist chain coils here, its obsidian-lacquered links each stamped with a suppression-certification mark.
@@ -2642,7 +2642,7 @@ A testament suppressor's waist chain coils here, its obsidian-lacquered links ea
 4
 L
 30
-#5220
+#5689
 cloister canon boots~
 @@da pair of cloister canon boots@@N~
 A pair of cloister canon boots stands here, their soles reinforced with null-seal iron treads.
@@ -2652,7 +2652,7 @@ A pair of cloister canon boots stands here, their soles reinforced with null-sea
 8
 L
 31
-#5221
+#5690
 Crimson Matron's psalm-visor~
 @@ethe Crimson Matron's psalm-visor@@N~
 The Crimson Matron's psalm-visor rests here, its interior marked with confession-cycle notation at eye level.
@@ -2666,7 +2666,7 @@ The visor's interior face is inscribed with Ilyra's polyphonic notation at the s
 ~
 L
 30
-#5222
+#5691
 blood-psalm extraction blade~
 @@ethe blood-psalm extraction blade@@N~
 A blood-psalm extraction blade rests here, its edge geometry unmistakably clinical.
@@ -2680,7 +2680,7 @@ This is Ilyra's instrument for the merged blood-tithe and confession procedure �
 ~
 L
 31
-#5223
+#5692
 Noctyra's mirrored censer~
 @@mNoctyra's mirrored censer@@N~
 Noctyra's mirrored censer hangs here, its curved obsidian surface reflecting at angles that obscure its holder.
@@ -2694,7 +2694,7 @@ The censer is a weapon, a surveillance instrument, and a philosophical statement
 ~
 L
 32
-#5224
+#5693
 abbess's amethyst mantle~
 @@mthe abbess's amethyst mantle@@N~
 The abbess's amethyst mantle rests here, its fabric carrying a faint warmth that suggests it was recently worn.
@@ -2708,7 +2708,7 @@ Noctyra wore this mantle through every significant institutional proceeding of h
 ~
 L
 32
-#5225
+#5694
 Vharos's null-halo circlet~
 @@dVharos's null-halo circlet@@N~
 Vharos's null-halo circlet rests here, its orbiting obsidian ring still turning in slow, continuous revolution.
@@ -2722,7 +2722,7 @@ The circlet's orbiting ring is the physical implementation of the null-seal prin
 ~
 L
 33
-#5226
+#5695
 void-seal archivum~
 @@dthe void-seal archivum@@N~
 A void-seal archivum rests here, its obsidian cover stamped with Vharos's personal null-seal authority mark.
@@ -2736,7 +2736,7 @@ The archivum is not a record of sealed documents. It is a record of suppression 
 ~
 L
 33
-#5227
+#5696
 Thorn Cardinal's iron mandate~
 @@Wthe Thorn Cardinal's iron mandate@@N~
 The Thorn Cardinal's iron mandate rests here, its inscribed surface bearing a floor-plan in annotated miniature.
@@ -2750,7 +2750,7 @@ The sword's flat is engraved with a scale floor plan of the Thorned Scriptorium 
 ~
 L
 34
-#5228
+#5697
 thorn-rail enforcement gauntlets~
 @@Wa pair of thorn-rail enforcement gauntlets@@N~
 A pair of thorn-rail enforcement gauntlets rests here, their inner surface studded with inward-facing iron points.
@@ -2764,7 +2764,7 @@ Wearing these gauntlets involves sustained mild puncture at the palms â the
 ~
 L
 35
-#5229
+#5698
 penumbral ossuary pauldrons~
 @@mpenumbral ossuary pauldrons@@N~
 A pair of penumbral ossuary pauldrons rests here, their surfaces inlaid with processed bone slivers in a color-rank pattern.
@@ -2774,7 +2774,7 @@ A pair of penumbral ossuary pauldrons rests here, their surfaces inlaid with pro
 14
 L
 32
-#5230
+#5699
 moonbone ossuary helm~
 @@ma moonbone ossuary helm@@N~
 A moonbone ossuary helm rests here, its bowl reinforced with structural bone material from the Ossuary's Requisitioned collection.
@@ -2784,7 +2784,7 @@ A moonbone ossuary helm rests here, its bowl reinforced with structural bone mat
 14
 L
 33
-#5231
+#5700
 eclipse judgment sceptre~
 @@mthe eclipse judgment sceptre@@N~
 The eclipse judgment sceptre rests here, its head shaped as an eclipsed sun: a disc with a crescent overlaid.
@@ -2798,7 +2798,7 @@ The sceptre is the Hierophant's formal instrument for issuing eclipse judgments 
 ~
 L
 33
-#5232
+#5701
 moonbone throne shard~
 @@ma moonbone throne shard@@N~
 A moonbone throne shard rests here, its surface etched with the names of previous Hierophants whose remains compose the seat.
@@ -2812,7 +2812,7 @@ The fragment carries portions of seven names, each followed by a date and a disp
 ~
 L
 34
-#5233
+#5702
 violet hierophant's crown~
 @@mthe violet hierophant's crown@@N~
 The violet hierophant's crown rests here, its five-pointed circlet set with stones from each institutional wing.
@@ -2826,7 +2826,7 @@ The crown's five points bear stones representing each wing's institutional color
 ~
 L
 35
-#5234
+#5703
 eclipse doctrine codex~
 @@mthe eclipse doctrine codex@@N~
 The eclipse doctrine codex rests here, its violet cover stamped with the Hierophant's personal authority seal.
@@ -2840,7 +2840,7 @@ The codex is the canonical text of the cathedral's operational theology â t
 ~
 L
 35
-#5235
+#5704
 fivefold occlusion vestment~
 @@mthe fivefold occlusion vestment@@N~
 The fivefold occlusion vestment rests here, its layered fabric encoding the five color doctrines in sequential strata.
@@ -2854,7 +2854,7 @@ The vestment's five layers are sewn in the order of the Fivefold Occlusion's col
 ~
 L
 35
-#5236
+#5705
 advocate's charter sash~
 @@aa charter advocate's sash@@N~
 A charter advocate's sash lies here, its white silk stamped with the Compact's original three-oath certification marks.
@@ -2868,7 +2868,7 @@ The Violet Compact's Midgaard allies issue this sash to those who disrupt active
 ~
 L
 28
-#5237
+#5706
 recovered relic manifest~
 @@aa recovered relic manifest@@N~
 A recovered relic manifest rests here, its cyan registry notation still legible beneath violet overpainting.
@@ -2882,7 +2882,7 @@ The manifest documents reliquary holdings that were removed from Compact custody
 ~
 L
 30
-#5238
+#5707
 unsealed testimony binding~
 @@aa unsealed testimony binding@@N~
 An unsealed testimony binding rests here, its pages released from null-seal suppression by the removal of the obsidian wax seal.
@@ -2896,7 +2896,7 @@ When a null-seal archivist's seal is physically removed from a suppressed record
 ~
 L
 31
-#5239
+#5708
 thorn reformist's mantle~
 @@Wa thorn reformist's mantle@@N~
 A thorn reformist's mantle lies here, its white-and-grey fabric worn as a refusal of the Scriptorium wing's crimson-only vestment doctrine.
@@ -2910,7 +2910,7 @@ This mantle was worn by clergymen within the Thorned Scriptorium who attempted i
 ~
 L
 33
-#5240
+#5709
 Vos Thane's registration ledger page~
 @@aa Vos Thane's registration ledger page@@N~
 A torn registration ledger page rests here, its handwriting cramped with urgency and its margins dense with cross-references.
@@ -2924,7 +2924,7 @@ This is one of the pages Registrar Vos Thane attempted to forward to the Magistr
 ~
 L
 28
-#5241
+#5710
 Sister Caelen's ash-margin codex~
 @@dSister Caelen's ash-margin codex@@N~
 Sister Caelen's ash-margin codex rests here, its liturgical text interrupted throughout by ash-notation marginalia.
@@ -2938,7 +2938,7 @@ The surface text is liturgical boilerplate. The marginalia â written in ash
 ~
 L
 28
-#5242
+#5711
 Bell-Warden Oris's silenced clapper~
 @@dBell-Warden Oris's silenced clapper@@N~
 A bell clapper rests here, removed from its bell and blackened with obsidian lacquer to mark its suppression.
@@ -2952,7 +2952,7 @@ This is the clapper Bell-Warden Oris removed when he ordered the bell-lines sile
 ~
 L
 29
-#5243
+#5712
 defaced ward-threshold stone~
 @@aa defaced ward-threshold stone@@N~
 A defaced ward-threshold stone rests here, its registry marks buried under coarse obsidian-wax overpainting.
@@ -2966,7 +2966,7 @@ Beneath the obsidian overpainting, the stone's original registry marks are still
 ~
 L
 29
-#5244
+#5713
 transit ledger for sealed warrants~
 @@da transit ledger for sealed warrants@@N~
 A transit ledger for sealed warrants rests here, its entries documenting persons reclassified as arcane material for transfer.
@@ -2980,7 +2980,7 @@ The ledger documents the chapel-house's role in processing sealed warrants â�
 ~
 L
 30
-#5245
+#5714
 eclipse withdrawal charter~
 @@mthe eclipse withdrawal charter@@N~
 The eclipse withdrawal charter rests here, its violet seal intact and its text declaring the institution's withdrawal from civic accountability.
@@ -2994,7 +2994,7 @@ The document that ended Midgaard's civic oversight of the chapel-house. Its lang
 ~
 L
 30
-#5246
+#5715
 original Compact threshold charter~
 @@athe original Compact threshold charter@@N~
 The original Compact threshold charter rests here, its cyan lantern-registry headers intact, its operational clauses annotated in three subsequent hands.
@@ -3008,7 +3008,7 @@ The founding document of the Violet Arch Chapel-House, granting it authority to 
 ~
 L
 31
-#5247
+#5716
 choir polyphony scroll~
 @@ea choir polyphony scroll@@N~
 A choir polyphony scroll rests here, its notation encoding the full Sanguine Choir confession-cycle procedure.
@@ -3022,7 +3022,7 @@ The scroll presents Ilyra's polyphonic confession system as a musical document �
 ~
 L
 31
-#5248
+#5717
 obsidian tri-sign witness lock~
 @@dan obsidian tri-sign witness lock@@N~
 An obsidian tri-sign witness lock rests here, its crescent-bell-veil mechanism still cycling through its authentication sequence.
@@ -3036,7 +3036,7 @@ The lock cycles through three simultaneous requirements â a geometric patte
 ~
 L
 32
-#5249
+#5718
 moonbone mortification record~
 @@da moonbone mortification record@@N~
 A moonbone mortification record rests here, its entries documenting posthumous disposition determinations in the Ossuary's clinical shorthand.
@@ -3050,7 +3050,7 @@ The record lists hundreds of entries. Each entry: a name, a date of death, a dis
 ~
 L
 32
-#5250
+#5719
 eclipse high nave keystone~
 @@mthe eclipse high nave keystone@@N~
 The eclipse high nave keystone rests here, its central eclipse symbol carved at a scale that could only be read from directly below.
@@ -3066,272 +3066,272 @@ L
 33
 #0
 #RESETS
-M 0 5181 4 5181   intake vergers at gate
+M 0 5650 4 5650   intake vergers at gate
 
-M 0 5181 4 5181   intake vergers at gate
+M 0 5650 4 5650   intake vergers at gate
 
-M 0 5182 4 5182   censer bailiffs in vestibule
+M 0 5651 4 5651   censer bailiffs in vestibule
 
-M 0 5182 4 5182   censer bailiffs in vestibule
+M 0 5651 4 5651   censer bailiffs in vestibule
 
-M 0 5183 4 5183   processional sentries on walk
+M 0 5652 4 5652   processional sentries on walk
 
-M 0 5183 4 5183   processional sentries on walk
+M 0 5652 4 5652   processional sentries on walk
 
-M 0 5184 2 5184   litany marshal at landing
+M 0 5653 2 5653   litany marshal at landing
 
-M 0 5185 4 5185   doctrine heralds at narthex
+M 0 5654 4 5654   doctrine heralds at narthex
 
-M 0 5185 4 5185   doctrine heralds at narthex
+M 0 5654 4 5654   doctrine heralds at narthex
 
-M 0 5186 2 5186   veiled scribe in procession
+M 0 5655 2 5655   veiled scribe in procession
 
-M 0 5187 2 5186   choir cantor in procession
+M 0 5656 2 5655   choir cantor in procession
 
-M 0 5188 4 5187   crypt wardens at echo hall
+M 0 5657 4 5656   crypt wardens at echo hall
 
-M 0 5188 4 5187   crypt wardens at echo hall
+M 0 5657 4 5656   crypt wardens at echo hall
 
-M 0 5189 2 5188   obsidian notary at incense veil
+M 0 5658 2 5657   obsidian notary at incense veil
 
-M 0 5190 4 5189   blood stewards at arcade
+M 0 5659 4 5658   blood stewards at arcade
 
-M 0 5190 4 5189   blood stewards at arcade
+M 0 5659 4 5658   blood stewards at arcade
 
-M 0 5184 2 5190   litany marshal at midspine
+M 0 5653 2 5659   litany marshal at midspine
 
-M 0 5191 4 5191   choir inquisitors at crossing
+M 0 5660 4 5660   choir inquisitors at crossing
 
-M 0 5191 4 5191   choir inquisitors at crossing
+M 0 5660 4 5660   choir inquisitors at crossing
 
-M 0 5192 4 5192   blood cantors at transept
+M 0 5661 4 5661   blood cantors at transept
 
-M 0 5192 4 5192   blood cantors at transept
+M 0 5661 4 5661   blood cantors at transept
 
-M 0 5194 2 5193   dirge organist at bell gallery
+M 0 5663 2 5662   dirge organist at bell gallery
 
-M 0 5195 4 5194   enforcers at reliquary axis
+M 0 5664 4 5663   enforcers at reliquary axis
 
-M 0 5195 4 5194   enforcers at reliquary axis
+M 0 5664 4 5663   enforcers at reliquary axis
 
-M 0 5196 1 5195   sanguine sentinel at eclipse gate
+M 0 5665 1 5664   sanguine sentinel at eclipse gate
 
-G 0 5181 1   eclipse gate key on sentinel
+G 0 5650 1   eclipse gate key on sentinel
 
-M 0 5191 4 5196   choir inquisitors at choir entry
+M 0 5660 4 5665   choir inquisitors at choir entry
 
-M 0 5191 4 5196   choir inquisitors at choir entry
+M 0 5660 4 5665   choir inquisitors at choir entry
 
-M 0 5193 4 5197   wound attendants at velvet cloister
+M 0 5662 4 5666   wound attendants at velvet cloister
 
-M 0 5193 4 5197   wound attendants at velvet cloister
+M 0 5662 4 5666   wound attendants at velvet cloister
 
-M 0 5194 2 5198   dirge organist at hemorrhage chapel
+M 0 5663 2 5667   dirge organist at hemorrhage chapel
 
-M 0 5195 4 5199   enforcers at dirge aisle
+M 0 5664 4 5668   enforcers at dirge aisle
 
-M 0 5195 4 5199   enforcers at dirge aisle
+M 0 5664 4 5668   enforcers at dirge aisle
 
-M 0 5197 4 5200   sanguine inquisitors at organ loft
+M 0 5666 4 5669   sanguine inquisitors at organ loft
 
-M 0 5197 4 5200   sanguine inquisitors at organ loft
+M 0 5666 4 5669   sanguine inquisitors at organ loft
 
-M 0 5198 4 5201   penitent wardens at choir stalls
+M 0 5667 4 5670   penitent wardens at choir stalls
 
-M 0 5198 4 5201   penitent wardens at choir stalls
+M 0 5667 4 5670   penitent wardens at choir stalls
 
-M 0 5199 2 5202   wound confessor at crypt passage
+M 0 5668 2 5671   wound confessor at crypt passage
 
-M 0 5198 4 5203   penitent wardens at thorn niche
+M 0 5667 4 5672   penitent wardens at thorn niche
 
-M 0 5198 4 5203   penitent wardens at thorn niche
+M 0 5667 4 5672   penitent wardens at thorn niche
 
-M 0 5197 4 5204   sanguine inquisitors at mourner spiral
+M 0 5666 4 5673   sanguine inquisitors at mourner spiral
 
-M 0 5197 4 5204   sanguine inquisitors at mourner spiral
+M 0 5666 4 5673   sanguine inquisitors at mourner spiral
 
-M 0 5195 4 5205   enforcers at black mass rotunda
+M 0 5664 4 5674   enforcers at black mass rotunda
 
-M 0 5195 4 5205   enforcers at black mass rotunda
+M 0 5664 4 5674   enforcers at black mass rotunda
 
-M 0 5200 1 5206   blood-lash cantor at casket hall
+M 0 5669 1 5675   blood-lash cantor at casket hall
 
-M 0 5231 1 5207   Crimson Matron Ilyra on throne
+M 0 5700 1 5676   Crimson Matron Ilyra on throne
 
-M 0 5201 4 5208   icon wardens at reliquary mouth
+M 0 5670 4 5677   icon wardens at reliquary mouth
 
-M 0 5201 4 5208   icon wardens at reliquary mouth
+M 0 5670 4 5677   icon wardens at reliquary mouth
 
-M 0 5202 4 5209   censer regents at icon crown
+M 0 5671 4 5678   censer regents at icon crown
 
-M 0 5202 4 5209   censer regents at icon crown
+M 0 5671 4 5678   censer regents at icon crown
 
-M 0 5203 4 5210   relic adjudicators at lantern room
+M 0 5672 4 5679   relic adjudicators at lantern room
 
-M 0 5203 4 5210   relic adjudicators at lantern room
+M 0 5672 4 5679   relic adjudicators at lantern room
 
-M 0 5204 2 5211   verification clerk at cat eye apse
+M 0 5673 2 5680   verification clerk at cat eye apse
 
-M 0 5205 4 5212   bone curators at incantor crosshall
+M 0 5674 4 5681   bone curators at incantor crosshall
 
-M 0 5205 4 5212   bone curators at incantor crosshall
+M 0 5674 4 5681   bone curators at incantor crosshall
 
-M 0 5206 2 5213   legitimacy broker at sacristy
+M 0 5675 2 5682   legitimacy broker at sacristy
 
-M 0 5207 4 5214   witness wardens at bone gallery
+M 0 5676 4 5683   witness wardens at bone gallery
 
-M 0 5207 4 5214   witness wardens at bone gallery
+M 0 5676 4 5683   witness wardens at bone gallery
 
-M 0 5208 4 5215   censer archivists at whisper reliquary
+M 0 5677 4 5684   censer archivists at whisper reliquary
 
-M 0 5208 4 5215   censer archivists at whisper reliquary
+M 0 5677 4 5684   censer archivists at whisper reliquary
 
-M 0 5209 4 5216   penitent keepers at relic court
+M 0 5678 4 5685   penitent keepers at relic court
 
-M 0 5209 4 5216   penitent keepers at relic court
+M 0 5678 4 5685   penitent keepers at relic court
 
-M 0 5203 4 5217   relic adjudicators at chained corridor
+M 0 5672 4 5686   relic adjudicators at chained corridor
 
-M 0 5203 4 5217   relic adjudicators at chained corridor
+M 0 5672 4 5686   relic adjudicators at chained corridor
 
-M 0 5210 1 5218   crown inquisitor at miter of night
+M 0 5679 1 5687   crown inquisitor at miter of night
 
-M 0 5232 1 5219   Lady Noctyra at her seat
+M 0 5701 1 5688   Lady Noctyra at her seat
 
-M 0 5211 4 5220   null-seal scribes at basalt threshold
+M 0 5680 4 5689   null-seal scribes at basalt threshold
 
-M 0 5211 4 5220   null-seal scribes at basalt threshold
+M 0 5680 4 5689   null-seal scribes at basalt threshold
 
-M 0 5212 4 5221   archive suppressors at ink-well
+M 0 5681 4 5690   archive suppressors at ink-well
 
-M 0 5212 4 5221   archive suppressors at ink-well
+M 0 5681 4 5690   archive suppressors at ink-well
 
-M 0 5213 2 5222   seal notary at abjurer cross
+M 0 5682 2 5691   seal notary at abjurer cross
 
-M 0 5214 4 5223   redaction wardens at lectern hall
+M 0 5683 4 5692   redaction wardens at lectern hall
 
-M 0 5214 4 5223   redaction wardens at lectern hall
+M 0 5683 4 5692   redaction wardens at lectern hall
 
-M 0 5215 4 5224   testimony suppressors at homily lane
+M 0 5684 4 5693   testimony suppressors at homily lane
 
-M 0 5215 4 5224   testimony suppressors at homily lane
+M 0 5684 4 5693   testimony suppressors at homily lane
 
-M 0 5216 4 5225   blank-seal archivists at nocturne scriptor
+M 0 5685 4 5694   blank-seal archivists at nocturne scriptor
 
-M 0 5216 4 5225   blank-seal archivists at nocturne scriptor
+M 0 5685 4 5694   blank-seal archivists at nocturne scriptor
 
-M 0 5217 4 5226   ink-seal enforcers at blind archivum
+M 0 5686 4 5695   ink-seal enforcers at blind archivum
 
-M 0 5217 4 5226   ink-seal enforcers at blind archivum
+M 0 5686 4 5695   ink-seal enforcers at blind archivum
 
-M 0 5218 4 5227   canon custodians at wax-etched court
+M 0 5687 4 5696   canon custodians at wax-etched court
 
-M 0 5218 4 5227   canon custodians at wax-etched court
+M 0 5687 4 5696   canon custodians at wax-etched court
 
-M 0 5219 4 5228   null-halo prelates at ash quire stacks
+M 0 5688 4 5697   null-halo prelates at ash quire stacks
 
-M 0 5219 4 5228   null-halo prelates at ash quire stacks
+M 0 5688 4 5697   null-halo prelates at ash quire stacks
 
-M 0 5212 4 5229   archive suppressors at penitent margin
+M 0 5681 4 5698   archive suppressors at penitent margin
 
-M 0 5212 4 5229   archive suppressors at penitent margin
+M 0 5681 4 5698   archive suppressors at penitent margin
 
-M 0 5220 1 5230   void archivist at vellum catacomb
+M 0 5689 1 5699   void archivist at vellum catacomb
 
-M 0 5233 1 5231   Abbot Vharos at his reliquary
+M 0 5702 1 5700   Abbot Vharos at his reliquary
 
-M 0 5221 4 5232   thorn canonicalists at briar stair
+M 0 5690 4 5701   thorn canonicalists at briar stair
 
-M 0 5221 4 5232   thorn canonicalists at briar stair
+M 0 5690 4 5701   thorn canonicalists at briar stair
 
-M 0 5222 4 5233   penitence marshals at gothic gate
+M 0 5691 4 5702   penitence marshals at gothic gate
 
-M 0 5222 4 5233   penitence marshals at gothic gate
+M 0 5691 4 5702   penitence marshals at gothic gate
 
-M 0 5223 4 5234   confession indexers at splintered margin
+M 0 5692 4 5703   confession indexers at splintered margin
 
-M 0 5223 4 5234   confession indexers at splintered margin
+M 0 5692 4 5703   confession indexers at splintered margin
 
-M 0 5224 4 5235   inscription guards at thorn hall
+M 0 5693 4 5704   inscription guards at thorn hall
 
-M 0 5224 4 5235   inscription guards at thorn hall
+M 0 5693 4 5704   inscription guards at thorn hall
 
-M 0 5221 4 5236   thorn canonicalists at cardinal footway
+M 0 5690 4 5705   thorn canonicalists at cardinal footway
 
-M 0 5221 4 5236   thorn canonicalists at cardinal footway
+M 0 5690 4 5705   thorn canonicalists at cardinal footway
 
-M 0 5222 4 5237   penitence marshals at ivory quill court
+M 0 5691 4 5706   penitence marshals at ivory quill court
 
-M 0 5223 4 5238   indexers at sanguine annotation
+M 0 5692 4 5707   indexers at sanguine annotation
 
-M 0 5223 4 5238   indexers at sanguine annotation
+M 0 5692 4 5707   indexers at sanguine annotation
 
-M 0 5224 4 5239   guards at binder ossuary
+M 0 5693 4 5708   guards at binder ossuary
 
-M 0 5222 4 5240   marshals at inkblight rotunda
+M 0 5691 4 5709   marshals at inkblight rotunda
 
-M 0 5223 4 5241   indexers at razorleaf balcony
+M 0 5692 4 5710   indexers at razorleaf balcony
 
-M 0 5224 4 5241   guards at razorleaf balcony
+M 0 5693 4 5710   guards at razorleaf balcony
 
-M 0 5225 1 5242   briar hall enforcer at needled crossing
+M 0 5694 1 5711   briar hall enforcer at needled crossing
 
-M 0 5234 1 5243   Thorn Cardinal Seredh in sanctum
+M 0 5703 1 5712   Thorn Cardinal Seredh in sanctum
 
-M 0 5226 4 5244   mortifiers at moonbone entry
+M 0 5695 4 5713   mortifiers at moonbone entry
 
-M 0 5226 4 5244   mortifiers at moonbone entry
+M 0 5695 4 5713   mortifiers at moonbone entry
 
-M 0 5227 2 5245   attestation clerk at silver shroud court
+M 0 5696 2 5714   attestation clerk at silver shroud court
 
-M 0 5226 4 5246   mortifiers at sarcophagus line
+M 0 5695 4 5715   mortifiers at sarcophagus line
 
-M 0 5226 4 5246   mortifiers at sarcophagus line
+M 0 5695 4 5715   mortifiers at sarcophagus line
 
-M 0 5228 4 5247   shroud curators at pillars
+M 0 5697 4 5716   shroud curators at pillars
 
-M 0 5228 4 5247   shroud curators at pillars
+M 0 5697 4 5716   shroud curators at pillars
 
-M 0 5229 4 5248   lily attendants at widow reliquary
+M 0 5698 4 5717   lily attendants at widow reliquary
 
-M 0 5229 4 5248   lily attendants at widow reliquary
+M 0 5698 4 5717   lily attendants at widow reliquary
 
-M 0 5228 4 5249   shroud curators at ossicle hall
+M 0 5697 4 5718   shroud curators at ossicle hall
 
-M 0 5228 4 5249   shroud curators at ossicle hall
+M 0 5697 4 5718   shroud curators at ossicle hall
 
-M 0 5226 4 5250   mortifiers at sable mortuary
+M 0 5695 4 5719   mortifiers at sable mortuary
 
-M 0 5229 4 5251   lily attendants at corpse-lily atrium
+M 0 5698 4 5720   lily attendants at corpse-lily atrium
 
-M 0 5229 4 5251   lily attendants at corpse-lily atrium
+M 0 5698 4 5720   lily attendants at corpse-lily atrium
 
-M 0 5227 2 5252   attestation clerk at quiet bells
+M 0 5696 2 5721   attestation clerk at quiet bells
 
-M 0 5229 4 5253   lily attendants at nightglass corridor
+M 0 5698 4 5722   lily attendants at nightglass corridor
 
-M 0 5230 1 5254   penumbral warden at penumbral rite
+M 0 5699 1 5723   penumbral warden at penumbral rite
 
-G 0 5182 1   violet threshold key on warden
+G 0 5651 1   violet threshold key on warden
 
-M 0 5235 1 5255   Violet Hierophant on throne
+M 0 5704 1 5724   Violet Hierophant on throne
 
-D 0 5195 1 2   eclipse gate locked
+D 0 5664 1 2   eclipse gate locked
 
-D 0 5244 3 2   eclipse gate reverse locked
+D 0 5713 3 2   eclipse gate reverse locked
 
-D 0 5207 2 1   bloodstained door closed
+D 0 5676 2 1   bloodstained door closed
 
-D 0 5243 2 1   thorned iron gate closed
+D 0 5712 2 1   thorned iron gate closed
 
-D 0 5254 1 2   violet threshold locked
+D 0 5723 1 2   violet threshold locked
 
 S
 #SPECIALS
-M 5231 spec_cast_cleric
-M 5232 spec_cast_cleric
-M 5233 spec_cast_undead
-M 5234 spec_cast_cleric
-M 5235 spec_cast_judge
+M 5700 spec_cast_cleric
+M 5701 spec_cast_cleric
+M 5702 spec_cast_undead
+M 5703 spec_cast_cleric
+M 5704 spec_cast_judge
 S
 #$
