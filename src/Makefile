@@ -129,7 +129,15 @@ SKILL_OBJS = \
 	skills/do_poison_arsenic.o skills/do_poison_nightshade.o skills/do_poison_quinine.o \
 	skills/do_pummel.o skills/do_punch.o skills/do_rescue.o skills/do_riposte.o \
 	skills/do_shieldblock.o skills/do_smash.o skills/do_spinfist.o skills/do_stun.o \
-	skills/do_target.o skills/do_trip.o skills/do_warcry.o
+	skills/do_target.o skills/do_trip.o skills/do_warcry.o \
+	skills/do_garrote.o skills/do_feign_death.o skills/do_shadow_step.o \
+	skills/do_mark_target.o skills/do_conceal.o skills/do_set_trap.o \
+	skills/do_read_intent.o \
+	skills/do_cleave.o skills/do_fortify.o skills/do_taunt.o \
+	skills/do_rend.o skills/do_field_patch.o skills/do_weapon_mastery.o \
+	skills/do_grapple.o skills/do_choke_hold.o skills/do_leg_sweep.o \
+	skills/do_iron_skin.o skills/do_roll_with_blow.o skills/do_pressure_point.o \
+	skills/do_feint.o skills/do_conditioning.o
 
 QUEST_OBJS = quests/template.o quests/state.o quests/cartography.o quests/notify.o quests/commands.o quests/crusade.o
 

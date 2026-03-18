@@ -142,6 +142,33 @@ extern sh_int gsn_potency;
 extern sh_int gsn_thaumatergy;
 extern sh_int gsn_warcry;
 
+/* Cipher skills */
+extern sh_int gsn_garrote;
+extern sh_int gsn_feign_death;
+extern sh_int gsn_shadow_step;
+extern sh_int gsn_mark_target;
+extern sh_int gsn_conceal;
+extern sh_int gsn_set_trap;
+extern sh_int gsn_read_intent;
+
+/* Warden skills */
+extern sh_int gsn_cleave;
+extern sh_int gsn_fortify;
+extern sh_int gsn_taunt;
+extern sh_int gsn_rend;
+extern sh_int gsn_field_patch;
+extern sh_int gsn_weapon_mastery;
+
+/* Pugilist skills */
+extern sh_int gsn_grapple;
+extern sh_int gsn_choke_hold;
+extern sh_int gsn_leg_sweep;
+extern sh_int gsn_iron_skin;
+extern sh_int gsn_roll_with_blow;
+extern sh_int gsn_pressure_point;
+extern sh_int gsn_feint;
+extern sh_int gsn_conditioning;
+
 #ifdef TFS
 extern sh_int gsn_mana_sense;
 #endif
@@ -613,6 +640,33 @@ DECLARE_DO_FUN(do_adrenaline);
 DECLARE_DO_FUN(do_target);
 DECLARE_DO_FUN(do_charge);
 DECLARE_DO_FUN(do_connect);
+
+/* Cipher skills */
+DECLARE_DO_FUN(do_garrote);
+DECLARE_DO_FUN(do_feign_death);
+DECLARE_DO_FUN(do_shadow_step);
+DECLARE_DO_FUN(do_mark_target);
+DECLARE_DO_FUN(do_conceal);
+DECLARE_DO_FUN(do_set_trap);
+DECLARE_DO_FUN(do_read_intent);
+
+/* Warden skills */
+DECLARE_DO_FUN(do_cleave);
+DECLARE_DO_FUN(do_fortify);
+DECLARE_DO_FUN(do_taunt);
+DECLARE_DO_FUN(do_rend);
+DECLARE_DO_FUN(do_field_patch);
+DECLARE_DO_FUN(do_weapon_mastery);
+
+/* Pugilist skills */
+DECLARE_DO_FUN(do_grapple);
+DECLARE_DO_FUN(do_choke_hold);
+DECLARE_DO_FUN(do_leg_sweep);
+DECLARE_DO_FUN(do_iron_skin);
+DECLARE_DO_FUN(do_roll_with_blow);
+DECLARE_DO_FUN(do_pressure_point);
+DECLARE_DO_FUN(do_feint);
+DECLARE_DO_FUN(do_conditioning);
 DECLARE_DO_FUN(do_stance);
 DECLARE_DO_FUN(do_enchant);
 
