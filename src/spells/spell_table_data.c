@@ -53,7 +53,7 @@
 
     {NORM,
      "revenant",
-     {LEVELS_INIT, L(CLASS_NEC, 70), L(CLASS_EGO, 70)},
+     {LEVELS_INIT, L(CLASS_NEC, 70)},
      spell_revenant,
      TAR_IGNORE,
      POS_STANDING,
