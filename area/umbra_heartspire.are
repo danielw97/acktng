@@ -2000,6 +2000,141 @@ Ceremonial armor and rune-laced regalia radiate violet-black menace from every s
 + 0 0 0 0 0 0 0 0 0
 l 100 11264 11269 0 0 0 0 0 0 0 
 L 45 45 0 0 0 0 0 0 0 
+#11206
+inner sanctum acolyte umbra~
+an inner sanctum acolyte~
+An inner sanctum acolyte tends a ritual circle in the inner passage.
+~
+Selected from the most capable of the Heartspire's outer servants, inner sanctum acolytes have survived the first trials of the inner rites. They move with the careful precision of those who know exactly what the wrong gesture can summon.
+~
+97 0 -500 S
+26 0
+600 -30 8 10
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11209
+heartspire inner guard~
+a heartspire inner guard~
+A heartspire inner guard stands at the inner sanctum approach, spear crossed.
+~
+The inner guards are chosen for their ability to maintain discipline in proximity to the Heartspire's deeper chambers. They see things on duty that they do not speak of afterward.
+~
+97 0 -600 S
+28 0
+600 -30 8 10
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11223
+umbra revenant heartspire~
+an umbra revenant~
+An umbra revenant drifts through the inner corridor, trailing shadow substance.
+~
+A revenant formed from a Heartspire devotee who was consumed by the inner rites before completion. What remains is the ritual purpose without the person.
+~
+97 0 -700 S
+32 0
+600 -30 8 10
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11241
+void-touched monk umbra~
+a void-touched monk~
+A void-touched monk moves through the inner passage with ritual deliberateness.
+~
+A monk of the inner order who has survived direct contact with the Heartspire's void conduit. The contact changed them in ways that are increasingly visible. They do not speak of it but the silence itself speaks.
+~
+97 0 -600 S
+30 0
+600 -30 8 10
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11244
+shadow sentinel heartspire~
+a shadow sentinel~
+A shadow sentinel stands at the corridor junction, partially merged with the wall.
+~
+The shadow sentinels are guardians who have been trained to partially dissolve into shadow, making them nearly invisible in the Heartspire's dim interior. The technique has side effects they have learned to live with.
+~
+97 0 -700 S
+33 0
+600 -30 8 10
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11248
+obsidian vanguard umbra~
+an obsidian vanguard~
+An obsidian vanguard stands in the inner passage, armor glinting with void-light.
+~
+The elite of the Heartspire's inner order, obsidian vanguards wear plate treated with void-essence that has slowly absorbed it over years of service. The armor is a record of everything they have survived.
+~
+97 0 -700 S
+36 0
+1000 -45 12 14
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11251
+inner vault champion umbra heartspire~
+an inner vault champion~
+An inner vault champion stands before the vault approach, weapons drawn.
+~
+Champions assigned to the Heartspire's inner vault are drawn from the most capable of the vanguard and given access to the vault's conditioning rites. They are demonstrably stronger than they were and remember the process with unusual clarity.
+~
+97 0 -700 S
+36 0
+1000 -45 12 14
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11252
+sanctum executioner umbra~
+a sanctum executioner~
+A sanctum executioner waits in the inner passage, patient as stone.
+~
+The executioners of the inner sanctum carry out the Heartspire's internal discipline. They are chosen specifically for their ability to act without hesitation and their willingness to not ask questions about the assignments they are given.
+~
+97 0 -800 S
+38 0
+1000 -45 12 14
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11485
+umbra high marshal~
+the umbra high marshal~
+The umbra high marshal commands the inner sanctum from the central chamber.
+~
+The High Marshal of the Umbra Heartspire commands the entire inner military structure. Decades of service in the inner sanctum have left marks on the High Marshal that rank cannot explain. The void-conditioning that changed the vanguard changed the High Marshal first, and most thoroughly.
+~
+97 0 -800 S
+78 0
+2200 -65 20 26
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
 #3350
@@ -2774,5 +2909,14 @@ G 0 3406 0
 
 G 0 3406 0
 
+M 0 11206 3 3360   inner sanctum acolyte in inner passage
+M 0 11209 2 3365   heartspire inner guard at approach
+M 0 11223 3 3370   umbra revenant in inner corridor
+M 0 11241 2 3375   void-touched monk in inner passage
+M 0 11244 2 3380   shadow sentinel at junction
+M 0 11248 2 3385   obsidian vanguard in inner passage
+M 0 11251 2 3390   inner vault champion at vault approach
+M 0 11252 2 3395   sanctum executioner in inner passage
+M 0 11485 1 3400   umbra high marshal in central chamber
 S
 #$

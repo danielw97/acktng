@@ -7,10 +7,10 @@
 **Keyword:** `shadowmere blight crownlands plague oathbound ruin` 
 **Area Number:** `N 591` 
 **Level Range:** `I 30 60` 
-**Vnum Range (fixed):** **591-791** (`V 591 791`) 
+**Vnum Range (fixed):** **700-949** (`V 700 949`) 
 **Room Envelope Used:** **591-690 (100/100 rooms used)** 
 **Mobile Envelope Used:** **591-651 (61/61 mobs used)** 
-**Object Envelope Used:** **591-791 (36/36 objects used)**
+**Object Envelope Used:** **700-949 (36/36 objects used)**
 
 **Primary Design Goal:** Rebuild Shadowmere into a coherent former Midgaard-aligned frontier march that collapsed during plague militarization, then transformed into a blight-soaked necro-political warzone where every room, mob, and object vnum is repurposed to support one connected narrative arc.
 
@@ -38,7 +38,7 @@ Apply `docs/area_file_spec.md` exactly:
 
 - `Q 16` required.
 - `O Virant~` required (capitalization policy).
-- Keep `V 591 791` unchanged.
+- Keep `V 700 949` unchanged.
 - All strings `~` terminated.
 - No blank-line doubles inside area strings.
 - No vnums in in-world text.
@@ -147,7 +147,7 @@ Design rules:
 
 ---
 
-## Object Redesign Plan (591-791)
+## Object Redesign Plan (700-949)
 
 Rebuild all 36 object vnums into progression bands:
 
@@ -182,10 +182,10 @@ Itemization principles:
 
 ## Build Checklist (Strict)
 
-- [ ] Keep `V 591 791` unchanged.
+- [ ] Keep `V 700 949` unchanged.
 - [ ] Use all room vnums `591-690`.
 - [ ] Use all mobile vnums `591-651`.
-- [ ] Use all object vnums `591-791`.
+- [ ] Use all object vnums `700-949`.
 - [ ] Keep level band 30-60.
 - [ ] Apply defined multi-color theme with `@@N` resets.
 - [ ] No thematic `@@k` usage.

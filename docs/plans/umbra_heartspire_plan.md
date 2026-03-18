@@ -5,7 +5,7 @@
 - **File Name:** `umbra_heartspire.are`
 - **Keyword:** `umbra_heartspire`
 - **Intended Levels:** 25-40
-- **Vnum Range:** `3064-3138`
+- **Vnum Range:** `3350-3449`
 - **Vnum Count:** 75 (all room vnums used)
 - **Reset Rate:** 10
 - **Design Intent:** Full structural and thematic rebuild (rooms, mobiles, objects, resets) while retaining the existing vnum envelope.
@@ -37,7 +37,7 @@ Policy notes:
 - `L @@W(@@a25 40@@W)@@N~`
 - `N 5` (retain existing area number)
 - `I 25 40`
-- `V 3064 3138`
+- `V 3350 3449`
 - `X 0`
 - `F 10`
 - `U @@dThe stones weep @@mviolet@@d shadows around you.@@N~`
@@ -334,7 +334,7 @@ Postmaster vnums:
 | 44 | `45.prop` | Kill Count | End (requires 43) | Midgaard | 931 | `3118` | Yes |
 
 ## Build Checklist (Strict)
-- [ ] Keep all room vnums `3064-3138` present and used.
+- [ ] Keep all room vnums `3350-3449` present and used.
 - [ ] Keep all mob vnums `3064-3118` present and reassigned.
 - [ ] Keep all object vnums `3064-3123` present and reassigned.
 - [ ] Maintain level band 25-40.

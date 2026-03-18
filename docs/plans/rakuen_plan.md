@@ -4,7 +4,7 @@
 
 - **Area Name:** `@@G@@WRakuen, @@gCity of the Last Promise@@N`
 - **Area File:** `area/rakuen.are` (new area)
-- **Vnum Envelope (35 total):** `V 4239 4438`
+- **Vnum Envelope (35 total):** `V 4550 4749`
 - **Allocation Model:** 100 rooms (`4239-4338`), 50 mobiles (`4339-4388`), 50 objects (`4389-4438`)
 - **Target Level Band:** 45-95 (urban/woodland political hazard band)
 - **Reset Rate:** 20
@@ -21,7 +21,7 @@ Rakuen is built as a vertically layered, politically fractured city that still p
 ### Area Header
 
 1. Use `Q 16` and `O Virant~` in `#AREA`.
-2. Keep all authored rooms/mobs/objects within `4239-4438`.
+2. Keep all authored rooms/mobs/objects within `4550-4749`.
 3. Keep prose free of explicit vnum mentions.
 
 ### String Formatting
@@ -514,7 +514,7 @@ Factions are represented via dialogue, patrol overlaps, and object text rather t
 
 ## Implementation Sequence
 
-1. Write `#AREA` header with strict compliance fields (`Q 16`, `V 4239 4438`, `O Virant~`, keyword, `I 45 95`, `F 20`, reset message).
+1. Write `#AREA` header with strict compliance fields (`Q 16`, `V 4550 4749`, `O Virant~`, keyword, `I 45 95`, `F 20`, reset message).
 2. Build 100-room organic graph across six zones with vertical connectors; wire north entry (`4239`) to EW room `1830` south.
 3. Author 50-mobile roster (`4339–4388`) by institution and district function; assign `stay_area` to all; `sentinel` to civic/guard mobs; boss flags to the two named bosses.
 4. Author 50-object roster (`4389–4438`) with correct `item_type`, wear flags (all include `take`), and extra flags (`ITEM_LOOT`, `ITEM_BOSS` as required).
@@ -528,7 +528,7 @@ Factions are represented via dialogue, patrol overlaps, and object text rather t
 
 ## Acceptance Checklist
 
-- [ ] Vnum envelope `V 4239 4438` (35 vnums total).
+- [ ] Vnum envelope `V 4550 4749` (35 vnums total).
 - [ ] `Q 16` and `O Virant~` present in `#AREA` header.
 - [ ] Room count exactly 100 with zone split `13/20/30/20/12/5`.
 - [ ] All rooms within `4239–4338`; all mobs within `4339–4388`; all objects within `4389–4438`.

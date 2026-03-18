@@ -5,7 +5,7 @@
 - **Area Name:** `@@dThe @@pCatacombs @@mof @@dNightfall@@N`
 - **Area File (existing):** `area/nightfall_catacombs.are`
 - **Keyword:** `nightfall catacombs reliquary ossuary blackchoir`
-- **Assigned Vnum Range (must remain unchanged):** **4681-4880**
+- **Assigned Vnum Range (must remain unchanged):** **5050-5249**
 - **Target Level Band:** **10-25** (preserved from header intent)
 - **Reset Rate:** 15 (keep)
 - **Owner:** `Virant` (implementation must normalize casing from current `virant`)
@@ -19,7 +19,7 @@ This plan fully replaces the current repetitive topology and template-populated 
 ### Area Header
 1. `Q 16` directive is mandatory.
 2. Owner line must be `O Virant~` (area header owner policy).
-3. `V 4681 4880` defines the vnum envelope; all authored rooms, mobiles, and objects must stay inside this range.
+3. `V 5050 5249` defines the vnum envelope; all authored rooms, mobiles, and objects must stay inside this range.
 
 ### Vnum Allocation
 4. Vnums for rooms, mobiles, and objects must be assigned in ascending sequential order with no gaps.
@@ -133,7 +133,7 @@ This ties the area directly to:
 Per spec section 13.1, rooms, mobiles, and objects each have independent vnum namespaces. Cross-type overlap is allowed. Each type must be assigned in ascending sequential order starting from the lowest available vnum.
 
 ### Rooms (up to 35 rooms)
-- `4681-4880`: full room network redesign. Fill every available slot where practical per spec requirement. Target 35 rooms across 20 subzones of 10 rooms each.
+- `5050-5249`: full room network redesign. Fill every available slot where practical per spec requirement. Target 35 rooms across 20 subzones of 10 rooms each.
 
 ### Mobiles (up to 35 independent namespace)
 - `4681-4735`: complete roster redesign (55 mobs: trash, elites, lore NPCs, bosses, echoes). Mobiles use their own independent vnum namespace starting at `4681`.
@@ -832,7 +832,7 @@ A tarnished clasp torn from the Sepulcher Lich's master ledger lies here, its re
 
 ## Implementation Checklist (Builder-Facing)
 
-1. Replace all room titles/descriptions in `4681-4880` with subzone-specific writing (20 zones, 10 rooms each).
+1. Replace all room titles/descriptions in `5050-5249` with subzone-specific writing (20 zones, 10 rooms each).
 2. Verify every room description has minimum 3 sentences (5 for important rooms: entry, boss arenas, subzone anchors).
 3. Verify every room description is unique.
 4. Rebuild exits/doors/loops per 20-zone structure. Verify all exits are bi-directional.

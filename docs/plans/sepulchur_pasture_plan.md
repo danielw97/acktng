@@ -5,7 +5,7 @@
 - **Area Name:** `@@WThe @@dSepulchur @@pPasture@@N`
 - **Area File (existing):** `area/sepulcher_pasture.are`
 - **Keyword:** `sepulchur sepulcher pasture gravebell funerary tithe`
-- **Assigned Vnum Range (must remain unchanged):** **5106-5180**
+- **Assigned Vnum Range (must remain unchanged):** **5550-5649**
 - **Target Level Band:** **15-30** (preserved)
 - **Reset Rate:** 10 (preserved)
 - **Owner:** `Virant` (normalize header ownership casing)
@@ -19,7 +19,7 @@ This plan fully replaces the current repetitive lane-grid presentation with a co
 ### Area Header
 1. `Q 16` directive is mandatory.
 2. Owner line must be `O Virant~` (area header owner policy — note the existing file uses lowercase `virant`; must normalize to `Virant`).
-3. `V 5106 5180` defines the vnum envelope; all authored rooms, mobiles, and objects must stay inside this range.
+3. `V 5550 5649` defines the vnum envelope; all authored rooms, mobiles, and objects must stay inside this range.
 
 ### Vnum Allocation
 4. Vnums for rooms, mobiles, and objects must be assigned in ascending sequential order with no gaps.
@@ -133,7 +133,7 @@ This link is already implemented in both areas and must be preserved exactly.
 
 Cross-type overlap is allowed per spec §13: a room, mobile, and object may share the same numeric vnum as long as each remains unique within its own index type. Per §13.1, rooms should attempt to fill every available vnum slot.
 
-- **Rooms:** `5106-5180` (75 rooms — fills the entire envelope)
+- **Rooms:** `5550-5649` (75 rooms — fills the entire envelope)
 - **Mobiles:** `5106-5127` (22 mobs — overlaps room vnums, which is valid)
 - **Objects:** `5128-5145` (18 objects — overlaps room vnums, which is valid)
 
@@ -489,11 +489,11 @@ No object functions are planned for this area.
 - [ ] Verify all reset vnums reference valid targets.
 
 ### Phase 5: Validation
-- [ ] Verify vnum containment (`5106-5180` only).
+- [ ] Verify vnum containment (`5550-5649` only).
 - [ ] Verify all text fields terminated with `~`, no `\n\n`, no vnum mentions.
 - [ ] Verify color-code policy compliance (no `@@k`, no background/flashing codes).
 - [ ] Verify `EX_ISDOOR` set on all exits reset to closed/locked via `D`.
 - [ ] Verify key object exists for every locked door.
-- [ ] Verify area header: `Q 16`, `O Virant~`, `V 5106 5180`.
+- [ ] Verify area header: `Q 16`, `O Virant~`, `V 5550 5649`.
 - [ ] Verify canonical section order.
 - [ ] Run `make unit-tests` from `src/`.

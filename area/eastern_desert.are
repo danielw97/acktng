@@ -2082,6 +2082,51 @@ tyrant endless dunes boss~
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+#8500
+desert nomad mercenary eastern~
+a desert nomad mercenary~
+A desert nomad mercenary surveys the eastern trade route with calculating eyes.
+~
+One of the many mercenary groups that operate in the eastern desert margins, the nomad mercenary is hired by various caravans for security and by others for precisely the opposite purpose. They do not advertise which contract they are currently fulfilling.
+~
+97 0 -300 S
+55 0
+1500 -55 16 20
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10012
+blightfront scout eastern~
+a blightfront scout~
+A blightfront scout moves through the eastern desert with disciplined efficiency.
+~
+A scout of the Blightfront, the loose association of brigands and territorial enforcers that controls access to the eastern desert approaches. The scouts operate ahead of the main force, mapping, observing, and eliminating anything they cannot report.
+~
+97 0 -500 S
+85 0
+3500 -80 25 32
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10159
+eastern trade enforcer~
+an eastern trade enforcer~
+An eastern trade enforcer checks passage rights with practiced authority.
+~
+The trade enforcers control access to the eastern routes on behalf of the trade guild that nominally regulates the desert passages. In practice, the guild regulation is a tax collection mechanism and the enforcers are the collection mechanism's teeth.
+~
+97 0 -400 S
+75 0
+2200 -65 20 26
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
 #2070
@@ -2367,5 +2412,8 @@ O 0 2083 1 2122   (null)
 
 O 0 2084 1 2126   (null)
 
+M 0 8500 3 2070   desert nomad mercenary on trade route
+M 0 10012 2 2100   blightfront scout in desert
+M 0 10159 2 2080   eastern trade enforcer on passage
 S
 #$

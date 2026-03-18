@@ -6,7 +6,7 @@
 - **Keyword:** `greatnorthernforest`
 - **Intended Levels:** 1-5 (all player levels)
 - **Recommended Active Combat Band:** 20-100 in this area (higher-level progression continues into Kowloon and surrounding high-tier zones)
-- **Vnum Range:** `3739-4238`
+- **Vnum Range:** `4050-4549`
 - **Vnum Count:** 500 rooms (all room vnums used)
 - **Shape:** Irregular, meandering wilderness with loops, side pockets, and escalating danger bands away from the road
 - **South Connection:** Room `3751` south exit connects to Midgaard room `925` (Granite Arcade, northern wall spine)
@@ -38,7 +38,7 @@ Theme concept: a cold northern old-growth forest where civilization thins into a
 - `L @@W(@@r1 5@@W)@@N~`
 - `N <allocate at implementation time>`
 - `I 1 5`
-- `V 3739 4238`
+- `V 4050 4549`
 - `F 15`
 - `U @@gmist settles between the old pines as the Great Northern Forest stirs@@N~`
 - `O Virant~`
@@ -49,7 +49,7 @@ Theme concept: a cold northern old-growth forest where civilization thins into a
 ## Macro Layout (Irregular by Design)
 The 500 rooms are arranged as an **irregular 20x25 coordinate envelope** (x=0..19, y=0..24), but connectivity is non-grid: loops, deadwood pockets, branching tributaries, and offset subregions.
 
-- **All vnums `3739-4238` are rooms in this area plan**.
+- **All vnums `4050-4549` are rooms in this area plan**.
 - Coordinates are planning coordinates only; final exits intentionally avoid full cardinal mesh.
 - The Lantern Road weaves across the map, never remaining straight for more than 3-4 rooms.
 
@@ -1290,7 +1290,7 @@ The following five quests extend the forest board with boss-target contracts onl
 ## Compliance Checklist
 - [x] Plan only (no area file generation)
 - [x] Uses `docs/area_file_spec.md` constraints in planning
-- [x] 500-room plan with all vnums used (`3739-4238`)
+- [x] 500-room plan with all vnums used (`4050-4549`)
 - [x] Irregular overall layout with explicit meandering road
 - [x] Multi-color theme defined (no `@@k`, no background codes, no flashing)
 - [x] Extensive lore connecting Midgaard (south) and Kowloon (north)

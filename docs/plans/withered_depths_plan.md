@@ -4,7 +4,7 @@
 
 **Area Name:** `@@pThe Withered @@GDepths@@N`
 **Keyword:** `withereddepths`
-**Vnum Range:** 291–440 (150 vnums)
+**Vnum Range:** 400–549 (`V 400 549`)
 **Target Level:** 80–100 (bosses at 110)
 **Connection:** Bidirectional link with Forest of Confusion room **2434** (Dense Woodland)
 **Sector Type:** `forest` (3) for most rooms; `water_swim` (6) for bog rooms; `inside` (11) for underground fungal caves

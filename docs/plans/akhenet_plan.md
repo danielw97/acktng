@@ -4,7 +4,7 @@
 
 - **Area Name:** `@@yThe Sands of Akh'enet@@N`
 - **File:** `akhenet.are`
-- **Assigned Vnum Range (fixed):** `792-2149`
+- **Assigned Vnum Range (fixed):** `950-1099`
 - **Level Range:** `70-90`
 - **Room Utilization Target:** **150/150 rooms used** (all room vnums from 792 through 2149)
 - **Goal:** Fully replace current sparse/linear desert-ruin layout with a complete, lore-consistent oasis-pyramid frontier necropolis tied to the Oasis-Pyramid Corridor.
@@ -46,7 +46,7 @@ The area should feel like a border institution under collapse, not a generic des
 - `K sands akhenet desert ruins~`
 - `L @@W(@@y70@@W-@@R90@@W)@@N~`
 - `I 70 90`
-- `V 792 2149`
+- `V 950 1099`
 - `F 15`
 - `U @@yblistering winds rake Akh'enet as buried bells ring beneath the dunes@@N~`
 - `O Virant~` (owner must be exact-cased per spec)
@@ -219,7 +219,7 @@ This rebuild explicitly replaces prior sparse desert repetition with:
 
 ## Implementation Checklist
 
-1. Rewrite `#ROOMS` to cover all vnums 792-2149 (unique descriptions, 3+ sentences; major rooms 5+).
+1. Rewrite `#ROOMS` to cover all vnums 950-1099 (unique descriptions, 3+ sentences; major rooms 5+).
 2. Rebuild `#MOBILES` sequentially 792-841 with full extension-line compliance.
 3. Rebuild `#OBJECTS` sequentially 842-2149 with loot/flags/key integrity.
 4. Re-author `#RESETS` for district populations, doors, shops, and boss gating.

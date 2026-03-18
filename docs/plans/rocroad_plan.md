@@ -5,7 +5,7 @@
 - **File Name:** `rocroad.are`
 - **Keyword:** `rocroad`
 - **Intended Levels:** 10-120 (high-traffic overland corridor with scalable threats)
-- **Vnum Range:** `1117-1215`
+- **Vnum Range:** `1300-1599`
 - **Vnum Count:** 99
 - **Current Room Utilization:** 99/99 (all vnums in-range already assigned to rooms)
 - **Reset Rate:** 10
@@ -30,7 +30,7 @@ See `rocroad_lore.md` for the full narrative canon extraction and expansion.
 - `L @@W(@@a10 120@@W)@@N~`
 - `N 16` (retain existing area index unless reassigned globally)
 - `I 10 120`
-- `V 1117 1215`
+- `V 1300 1599`
 - `X 0`
 - `F 10`
 - `U @@Wwagon wheels rattle and @@ytrade bells@@W ring along Roc Road@@N~`
@@ -44,13 +44,13 @@ See `rocroad_lore.md` for the full narrative canon extraction and expansion.
 ### Area Header
 1. `Q 16` directive is mandatory.
 2. Owner line must be `O Virant~` (area header owner policy). The existing file uses `O stephen~`; this must be updated.
-3. `V 1117 1215` defines the vnum envelope; all authored rooms, mobiles, and objects must stay inside this range.
+3. `V 1300 1599` defines the vnum envelope; all authored rooms, mobiles, and objects must stay inside this range.
 4. Remove `R stephen~` and `W stephen~` ACL directives from the legacy header; set ACLs at implementation time if needed.
 
 ### Vnum Allocation
 5. Vnums for rooms, mobiles, and objects must be assigned in ascending sequential order with no gaps.
 6. Fill existing gaps in the vnum range before assigning new higher vnums.
-7. For rooms, attempt to use all room vnums in the assigned range (fill every available slot where practical). The existing file uses all 99 vnums but in non-sequential order; the rebuild must assign vnums `1117-1215` in ascending order.
+7. For rooms, attempt to use all room vnums in the assigned range (fill every available slot where practical). The existing file uses all 99 vnums but in non-sequential order; the rebuild must assign vnums `1300-1599` in ascending order.
 
 ### String and Description Rules
 8. All text fields terminated by `~`. Strings must not contain back-to-back newlines (`\n\n`).
@@ -150,7 +150,7 @@ The existing area already uses all room vnums and serves as a long transit chain
 5. **Maintain reliable traversal** for players who just need to travel, while adding optional side encounters, lore pockets, and mini-threat spikes.
 
 ## Spatial Model (99-room corridor with thematic bands)
-Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus connector micro-zones. All rooms use ascending sequential vnums `1117-1215` with no gaps.
+Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus connector micro-zones. All rooms use ascending sequential vnums `1300-1599` with no gaps.
 
 ### Band A — Midgaard Gate March (1117-1127, 11 rooms)
 - **Sector types:** `city` (1) for the first 2 rooms nearest Midgaard gate; `field` (2) for the remaining road through settled farmland.
@@ -243,7 +243,7 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 
 ## Mobile Redesign (new full roster)
 ### Vnum strategy
-- Use `1117-1215` as the mobile envelope (parallel namespace), with ~36 active mob templates and variant reset mixes.
+- Use `1300-1599` as the mobile envelope (parallel namespace), with ~36 active mob templates and variant reset mixes.
 - Vnums assigned in ascending sequential order with no gaps, starting at `1117`.
 
 ### Mob Spec Compliance and Placement Principles
@@ -367,7 +367,7 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 
 ## Object Redesign (new full roster)
 ### Vnum strategy
-- Use `1117-1215` as the object envelope, target ~42 objects with progression tiers.
+- Use `1300-1599` as the object envelope, target ~42 objects with progression tiers.
 - Vnums assigned in ascending sequential order with no gaps, starting at `1117`.
 
 ### Object Spec Compliance
@@ -912,7 +912,7 @@ Roc Road quests are static quests offered by the postmasters of the three connec
 ---
 
 ## Deliverables for Build Phase
-1. Rewrite `#ROOMS` entries for all vnums `1117-1215` in ascending sequential order.
+1. Rewrite `#ROOMS` entries for all vnums `1300-1599` in ascending sequential order.
 2. Add complete `#MOBILES` roster with faction tagging and level bands (vnums `1117-1152`).
 3. Add complete `#OBJECTS` roster aligned to encounter ecology (vnums `1117-1150`+).
 4. Replace `#RESETS` with full population, equipment, loot, and door cadence.
@@ -922,7 +922,7 @@ Roc Road quests are static quests offered by the postmasters of the three connec
 8. Terminate with `#$`.
 9. Follow canonical section order: `#AREA`, `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#RESETS`, `#SPECIALS`, `#$`.
 10. Validate parse and policy compliance from `docs/area_file_spec.md`.
-11. Verify all vnums within `1117-1215` range.
+11. Verify all vnums within `1300-1599` range.
 12. Verify all external links preserved (see External Link Inventory).
 13. Verify no vnum mentions in any description text.
 14. Create static quest files `6.prop` through `14.prop` in `quests/` directory per the Quests Plan.

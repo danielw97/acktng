@@ -6,7 +6,7 @@
 - **Area name (retained):** `@@yThe Great Pyramid@@N`
 - **Keyword direction:** move from broad `pyramid ancient egypt pharaoh` to a focused, searchable set keyed to the new identity (`greatpyramid solarcourt blacksun covenant`) while preserving legacy `pyramid` discoverability.
 - **Level range (retained):** `I 90 100`
-- **Vnum envelope (strictly retained):** `V 5411 5615`
+- **Vnum envelope (strictly retained):** `V 5950 6199`
 - **Envelope size:** 40 vnums
 - **Current envelope usage:** 40 rooms, 91 mobs, 86 objects
 - **Rebuild intent:** Redesign **all rooms, all mobiles, and all objects** to align with a unified narrative of royal ascension, funerary judgment, and an imprisoned anti-solar force.
@@ -28,7 +28,7 @@ All directives per `area_file_spec.md` section 3:
 - `L @@W(@@y90 100@@W)@@N~` — white parens, yellow level numbers, white close paren, reset, `~`-terminated
 - `N <allocate at implementation time>` — area number; must be confirmed unused across all loaded area files
 - `I 90 100` — min/max level; controls mob-level gating and area matching
-- `V 5411 5615` — full 40-vnum envelope; all rooms, mobs, and objects must stay within this range
+- `V 5950 6199` — full 40-vnum envelope; all rooms, mobs, and objects must stay within this range
 - `F 15` — reset frequency in minutes
 - `U @@yancient stone groans as desert wind funnels through the Great Pyramid’s sealed passages@@N~` — reset message; no double-newlines, `~`-terminated
 - `O Virant~` — area owner must always be Virant (owner policy)
@@ -104,9 +104,9 @@ Players enter through the public façade, descend into the true death-economy, c
 
 ## Vnum Allocation (Strict Envelope Use)
 
-All content remains within `5411-5615`.
+All content remains within `5950-6199`.
 
-### Rooms (`5411-5615`, 40 total)
+### Rooms (`5950-6199`, 40 total)
 
 Use all room vnums sequentially with a floor-based macro layout:
 
@@ -169,7 +169,7 @@ Per `area_file_spec.md` sections 8.1 and 8.2:
 Per `area_file_spec.md` section 13.1:
 
 - Room vnums must be assigned in ascending sequential order with no gaps.
-- All 40 room vnums (5411-5615) must be used; fill every available room-vnum slot.
+- All 40 room vnums (5950-6199) must be used; fill every available room-vnum slot.
 - Mobile vnums must be assigned in ascending sequential order with no gaps, starting from 5411.
 - Object vnums must be assigned in ascending sequential order with no gaps, starting from 5411.
 
@@ -368,7 +368,7 @@ Per `area_file_spec.md` section 8:
 Per `area_file_spec.md` section 13.1:
 
 - Mob vnums must be assigned in ascending sequential order with no gaps, starting from 5411.
-- Fully rewrite all 91 mob templates through contiguous sequential slots **5411-5501** (staying within the 5411-5615 vnum envelope).
+- Fully rewrite all 91 mob templates through contiguous sequential slots **5411-5501** (staying within the 5950-6199 vnum envelope).
 
 ### Mobile Spec Compliance (all mobs)
 
@@ -460,7 +460,7 @@ Per `area_file_spec.md` section 13.1:
 
 - Object vnums must be assigned in ascending sequential order with no gaps, starting from 5411.
 - Fully replace current object concepts beginning at **5411**.
-- Expand through contiguous sequential slots (through **5496**) while staying within the 5411-5615 vnum envelope.
+- Expand through contiguous sequential slots (through **5496**) while staying within the 5950-6199 vnum envelope.
 - Within the area, object `<name>~` values must be unique (no duplicate item names in the same area file).
 
 ### Object Spec Compliance (all objects)
@@ -694,7 +694,7 @@ To harmonize with adjacent pyramid/desert plans:
 ## Implementation Checklist
 
 ### Rooms
-- [ ] Populate all 40 room vnums (5411-5615) in ascending sequential order with no gaps.
+- [ ] Populate all 40 room vnums (5950-6199) in ascending sequential order with no gaps.
 - [ ] Write unique `<description>~` for every room (minimum 3 sentences; 5+ for important rooms).
 - [ ] Assign correct `sector_type` (`desert` for outdoor Zone A rooms, `inside` for all interior rooms) and `room_flags` per zone requirements.
 - [ ] Set `no_mob` on all boss rooms.
@@ -755,7 +755,7 @@ To harmonize with adjacent pyramid/desert plans:
 
 ### Final Validation
 - [ ] Validate complete area file format against `docs/area_file_spec.md`.
-- [ ] Verify all vnums within `V 5411 5615` envelope.
+- [ ] Verify all vnums within `V 5950 6199` envelope.
 - [ ] Verify `#ROOMS` and `#MOBILES` and `#OBJECTS` each terminate with `#0`.
 - [ ] Verify `#RESETS`, `#SPECIALS` each terminate with `S`.
 - [ ] Verify canonical section order.

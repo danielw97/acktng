@@ -7981,6 +7981,51 @@ This shoreward seal guardian waits in the open like part of the landscape itself
 33554531 0 -350 S
 72 0
 0 0 0 0
+#29904
+caravan raider saltglass eastern road~
+a caravan raider~
+A caravan raider watches the eastern road from a rocky outcrop.
+~
+One of the raiders who prey on caravan traffic through the saltglass reaches, the caravan raider operates in groups that are just large enough to be effective and just mobile enough to avoid the trade guild's response teams. They have been doing this for long enough to be very good at it.
+~
+97 0 -400 S
+55 0
+1500 -55 16 20
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#29909
+road bandit captain saltglass~
+a road bandit captain~
+A road bandit captain directs their crew from the road's high point.
+~
+The captain of a road bandit crew, the road bandit captain has survived long enough in the eastern saltglass reaches to have built an organization rather than just a gang. They plan ambushes rather than improvise them, which makes them significantly more effective and considerably more dangerous.
+~
+97 0 -500 S
+60 0
+1500 -55 16 20
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#29932
+eastern road marauder saltglass~
+an eastern road marauder~
+An eastern road marauder moves along the saltglass road with predatory purpose.
+~
+A marauder of the eastern road, operating with the confidence of someone who has controlled this stretch of road long enough to consider it home territory. They know every approach, every ambush point, and every place to retreat to. They do not retreat often.
+~
+97 0 -500 S
+65 0
+1500 -55 16 20
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
 #6300
@@ -9213,6 +9258,9 @@ M 0 6396 1 6680   1
 M 0 6397 1 6683   1
 M 0 6398 1 6686   1
 M 0 6399 2 6689   1
+M 0 29904 3 6350   caravan raider on eastern road
+M 0 29909 2 6380   road bandit captain at high point
+M 0 29932 2 6420   eastern road marauder on saltglass road
 S
 #SPECIALS
 M 6300 spec_reach_warden

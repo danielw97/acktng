@@ -5,7 +5,7 @@
 - **File Name:** `kiess.are`
 - **Keyword:** `kiess`
 - **Intended Levels:** 1-5 (all-player-level city hub)
-- **Vnum Range:** `3339-3438`
+- **Vnum Range:** `3650-3749`
 - **Vnum Count:** 100 (all vnums used)
 - **Shape:** 10x10 rectangle (full grid used)
 - **Recall Room:** `3394` (city center)
@@ -31,7 +31,7 @@ See `kiess_lore.md` for extracted lore.
 - `L @@W(@@a1 5@@W)@@N~` — white parens, light cyan level numbers, white close paren, reset
 - `N 77` — confirmed unused across all loaded area files
 - `I 1 5` — all-level city hub; controls mob-level gating and area matching logic
-- `V 3339 3438` — full 100-vnum envelope; all rooms, mobs, and objects must stay within this range
+- `V 3650 3749` — full 100-vnum envelope; all rooms, mobs, and objects must stay within this range
 - `X 0` — map offset; no offset needed for this area
 - `F 15` — reset frequency in minutes
 - `U @@Wthe bells of @@BKiess@@W ring across the avenues@@N~` — reset message; white text with blue city name, reset; no double-newlines, terminated with `~`
@@ -664,7 +664,7 @@ Only the east gate has an active external connection (Roc Road to Midgaard). The
 ## Implementation Checklist
 
 1. [ ] Create `area/kiess.are` with `#AREA` header and `#$`
-2. [ ] Write `#ROOMS` section (100 rooms, vnums 3339-3438, all used)
+2. [ ] Write `#ROOMS` section (100 rooms, vnums 3650-3749, all used)
 3. [ ] Write `#MOBILES` section (13 service NPCs + 13 ambient mobs = 26 mobs, vnums 3339-3364)
 4. [ ] Write `#OBJECTS` section (67 shop items, vnums 3340-3406; plus Executioner equipment from reserved range)
 5. [ ] Write `#SHOPS` section (5 shops: general, weapon, armor, magic, scribe)
@@ -673,5 +673,5 @@ Only the east gate has an active external connection (Roc Road to Midgaard). The
 8. [ ] Add `kiess.are` to `area/area.lst`
 9. [ ] Add north exit from vnum `1159` back to `3434` in `area/rocroad.are` (which owns vnum 1159, "Roc Road")
 10. [ ] Run `cd src && make unit-tests` to validate
-11. [ ] Verify all vnums within 3339-3438 range
+11. [ ] Verify all vnums within 3650-3749 range
 12. [ ] Verify no vnum conflicts with existing areas (confirmed: minokeep uses 1300-1399, no overlap)

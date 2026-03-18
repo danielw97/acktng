@@ -7,7 +7,7 @@
 **Keyword:** `khardaan necropolis desert dune ancient burial` 
 **Area Number:** `N 115` 
 **Level Range:** `I 60 80` 
-**Vnum Range (fixed):** **5624-5723** (`V 5624 5723`) 
+**Vnum Range (fixed):** **6200-6299** (`V 6200 6299`) 
 **Room Count Target:** **100/100 rooms used** 
 **Primary Design Goal:** Rebuild the area as a coherent drowned-funerary megasite tied directly to oasis water politics and pyramid dynasty theology, while preserving the exact vnum envelope and fully repurposing every room.
 
@@ -38,7 +38,7 @@ Use `docs/area_file_spec.md` strictly:
 
 - `Q 16` mandatory.
 - `O Virant~` must use exact owner policy casing.
-- `V 5624 5723` unchanged.
+- `V 6200 6299` unchanged.
 - All strings `~`-terminated.
 - No blank-line double newlines inside area strings.
 - No vnums in in-world text.
@@ -99,7 +99,7 @@ The area is rebuilt into 10 themed districts of 10 rooms each.
 
 ---
 
-## Room-by-Room Allocation (5624-5723)
+## Room-by-Room Allocation (6200-6299)
 
 ### I. Sunken Approach (5624-5633)
 
@@ -273,7 +273,7 @@ Object flavor should visibly mix gold/lapis/salt/water motifs and reference oasi
 
 ## Implementation Guardrails
 
-1. Preserve all area-owned content strictly inside `5624-5723`.
+1. Preserve all area-owned content strictly inside `6200-6299`.
 2. Use all 100 room vnums with distinct purpose.
 3. Keep room graph readable: one main spine, multiple loops, optional challenge branches.
 4. Encode lore in room text, mob descriptions, object extra descriptions, and reset composition.

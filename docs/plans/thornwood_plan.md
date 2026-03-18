@@ -26,7 +26,7 @@ The area replaces the current square-grid layout with a **radial-branching topol
 ### Area Header
 1. `Q 16` directive is mandatory.
 2. Owner line must be `O Virant~` — the existing file uses lowercase `virant` and must be normalized.
-3. `V 441 590` defines the vnum envelope; all authored rooms, mobiles, and objects must stay within this range.
+3. `V 550 699` defines the vnum envelope; all authored rooms, mobiles, and objects must stay within this range.
 4. Level label string must be authored as themed color-coded text, not a bare numeric range.
 5. Reset message (`U`) must be authored as in-world thematic text with color-code compliance.
 
@@ -1906,7 +1906,7 @@ No object functions are planned for this area. The object fun mechanics (soul_mo
 - [ ] Update area name string to `@@dThornwood, @@ythe Harren Estate@@N~`.
 - [ ] Update level label to `@@y{@@d50@@y-@@d80@@y}@@N~`.
 - [ ] Update reset message to `@@dDeep in @@GThornwood@@d, the roots shift and the @@yHarren gate@@d rattles in windless dark.@@N~`.
-- [ ] Confirm `V 441 590` unchanged.
+- [ ] Confirm `V 550 699` unchanged.
 - [ ] Confirm `I 50 80` preserved.
 - [ ] Confirm `F 15` preserved.
 

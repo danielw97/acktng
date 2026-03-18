@@ -7,7 +7,7 @@
 **Keyword:** `northernpyramid`
 **Level Range:** 100–120 (I directive: `I 100 120`)
 **Level Label:** `@@W(@@y100 120@@W)@@N`
-**Vnum Range:** 2864–3063 (V directive: `V 2864 3063`)
+**Vnum Range:** 3150–3349 (V directive: `V 3150 3349`)
 **Vnum Count:** 35
 **Area Number:** `N 75`
 **Reset Rate:** `F 20`
@@ -36,7 +36,7 @@ See `northern_pyramid_lore.md` for extracted lore.
 - `L @@W(@@y100 120@@W)@@N~` — white parens, yellow level numbers, white close paren, reset
 - `N 75` — confirmed unused across all loaded area files
 - `I 100 120` — area-gating and mob-level policy
-- `V 2864 3063` — full 35-vnum envelope; all rooms, mobs, and objects stay within this range
+- `V 3150 3349` — full 35-vnum envelope; all rooms, mobs, and objects stay within this range
 - `F 20` — 20-minute reset frequency
 - `U` — reset message as above; no double-newlines, terminated with `~`
 - `O Virant~` — area owner must always be Virant
@@ -59,7 +59,7 @@ Seven levels with the trap room as a special single room:
 | Floor 4 | The Drake's Ascent | 3030–3049 | 20 | 3049 |
 | Floor 5 / Apex | The Summit Sanctum | 3050–3063 | 14 | 3063 |
 
-**Total rooms: 35** (all vnums 2864–3063 used)
+**Total rooms: 35** (all vnums 3150–3349 used)
 
 ---
 
@@ -952,15 +952,15 @@ S
 2. [ ] Create `area/northern_pyramid.are` with `#AREA` header and `#$`
 3. [ ] Write `#MOBILES` section — 7 bosses (2864–2870) + 8 strong mobs (2871–2875, 2924–2926) + 48 trash (2876–2923)
 4. [ ] Write `#OBJECTS` section — 13 piece chain (2864–2876) + 2 keys (2877–2878) + 22 boss gear (2879–2900) + 56 trash gear (2901–2956)
-5. [ ] Write `#ROOMS` section — 35 rooms (2864–3063), all vnums used, all descriptions unique with 3+ sentences (5+ for important rooms), named exits mentioned in room text
+5. [ ] Write `#ROOMS` section — 35 rooms (3150–3349), all vnums used, all descriptions unique with 3+ sentences (5+ for important rooms), named exits mentioned in room text
 6. [ ] Write `#RESETS` section — boss M resets, loot table structure, strong/trash M resets, E equipment resets, O object reset (key in 2887), D door resets
 7. [ ] Write `#SPECIALS` section
 8. [ ] Write `#OBJFUNS` section if any item special functions are desired
 9. [ ] Add `northern_pyramid.are` to `area/area.lst`
 10. [ ] Edit `the_northern_oasis.are` room 2211 — add D1 (east) exit to 2895 and update room description to mention the pyramid on the eastern horizon
 11. [ ] Edit `the_northern_oasis.are` room 2211 — add `D 2211 1 1` to `#RESETS` to set the east door to closed state
-12. [ ] Verify all vnums are within V 2864 3063 range
-13. [ ] Verify no vnum conflicts with existing areas (2864–3063 is confirmed free)
+12. [ ] Verify all vnums are within V 3150 3349 range
+13. [ ] Verify no vnum conflicts with existing areas (3150–3349 is confirmed free)
 14. [ ] Verify all boss rooms have `no_mob` flag
 15. [ ] Verify trap room (2864) has `no_mob`, `no_recall`, `no_teleport`
 16. [ ] Verify all trap source rooms (2917, 2959, 2989, 3016) have one-way exits to 2864 with no reciprocal exit

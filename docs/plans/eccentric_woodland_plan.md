@@ -5,9 +5,9 @@
 - **File Name:** `wood.are`
 - **Keyword:** `eccentricwoodland`
 - **Intended Levels:** 18-92
-- **Vnum Range (expanded):** `1432-1831`
+- **Vnum Range (expanded):** `1650-2049`
 - **Vnum Envelope Size:** 400
-- **Room Utilization Goal:** 400/400 rooms used (`1432-1831`)
+- **Room Utilization Goal:** 400/400 rooms used (`1650-2049`)
 - **Lore Anchors:** `docs/lore/eccentric_woodland_lore.md`, `docs/lore/midgaard_lore.md`, `docs/lore/rakuen_lore.md`, `docs/lore/sepulchur_pasture_lore.md`
 
 This plan rebuilds the woodland as Midgaard's unstable southern corridor and Rakuen's survival artery: a region of moving path logic, ritualized violence, and bureaucratic denial at the boundary.
@@ -19,7 +19,7 @@ This plan rebuilds the woodland as Midgaard's unstable southern corridor and Rak
 ### Area/Header Requirements
 1. `Q 16` is mandatory (`#AREA`).
 2. Owner must be `O Virant~`.
-3. Envelope must be `V 1432 1831`; all rooms/mobs/objects remain inside.
+3. Envelope must be `V 1650 2049`; all rooms/mobs/objects remain inside.
 4. Keep canonical section order: `#AREA`, `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
 5. Area files must not contain comments; comment syntax is not part of the accepted on-disk format (exception: `*` comment lines are allowed in `#MOBILES`, `#SPECIALS`, and `#OBJFUNS` sections only).
 
@@ -33,7 +33,7 @@ This plan rebuilds the woodland as Midgaard's unstable southern corridor and Rak
 12. Object extra-description text ends with exactly one trailing newline before `~`.
 
 ### Room/Topology Requirements
-13. Every room in `1432-1831` exists and has unique description text.
+13. Every room in `1650-2049` exists and has unique description text.
 14. Room descriptions must not be identical across rooms.
 15. Each room's main `<description>~` must contain at least 3 sentences of text; important/landmark rooms must contain at least 5 sentences.
 16. Room names and descriptions must not use placeholder or procedural naming patterns (e.g., `Corridor 12`, `Room 7`); names must be authored as in-world thematic content.
@@ -313,7 +313,7 @@ The Bell-Eater Stag (1517) is an apex boss without a dedicated standalone quest 
 ---
 
 ## Implementation Sequence
-1. Update `#AREA` header (`Q 16`, `O Virant~`, `V 1432 1831`, keyword/levels/reset msg).
+1. Update `#AREA` header (`Q 16`, `O Virant~`, `V 1650 2049`, keyword/levels/reset msg).
 2. Author 400-room braided topology, then validate reverse-exit integrity (except maze exceptions).
 3. Verify room descriptions: each at least 3 sentences; landmark/boss-approach rooms at least 5 sentences; all descriptions unique; no placeholder names.
 4. Add maze flags and clue-language consistency; confirm all maze vnum sets are fully flagged `ROOM_MAZE`.
@@ -329,12 +329,12 @@ The Bell-Eater Stag (1517) is an apex boss without a dedicated standalone quest 
 ## Acceptance Checklist
 
 ### Header and Structure
-- [ ] `wood.are` header complies (`Q 16`, `O Virant~`, `V 1432 1831`).
+- [ ] `wood.are` header complies (`Q 16`, `O Virant~`, `V 1650 2049`).
 - [ ] Section order: `#AREA`, `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
 - [ ] No comment lines outside the permitted sections (`#MOBILES`, `#SPECIALS`, `#OBJFUNS`).
 
 ### Rooms and Topology
-- [ ] All 400 room vnums `1432-1831` are implemented; no gaps in vnum sequence.
+- [ ] All 400 room vnums `1650-2049` are implemented; no gaps in vnum sequence.
 - [ ] Layout is braided/looped (not square-grid only).
 - [ ] All maze room sets fully flagged `ROOM_MAZE`; only those rooms use looping/non-linear exits.
 - [ ] Every room description is unique, contains at least 3 sentences, and contains no vnum references.

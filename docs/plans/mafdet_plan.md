@@ -6,7 +6,7 @@
 - **File Name:** `mafdet.are`
 - **Keyword:** `mafdet`
 - **Level Range:** `55-80` (`I 55 80`)
-- **Vnum Range:** `3539-3738` (`V 3539 3738`)
+- **Vnum Range:** `3850-4049` (`V 3850 4049`)
 - **Total Room Envelope:** **35 rooms** (all room vnums in-range must be used)
 - **Design Goal:** Build a lore-dense maritime port city at the eastern terminus of the Saltglass Reach, where inland desert law and maritime contract law collide. The area combines a dangerous coastal approach through the Tidemouth Dunes, a factional trade city driven by the Strandline Compact's tripartite governance, and a smuggler-haunted tidewall undercroft beneath the seaward perimeter. The city is not a safe hub — it is a contested jurisdictional frontier where every corridor carries the tension between oasis charter formulas and the pragmatism of the open sea.
 
@@ -71,7 +71,7 @@ The build must explicitly align with established corridor lore:
 - `L @@W(@@l55 80@@W)@@N~`
 - `N` assigned during implementation (must not conflict with existing area numbers).
 - `I 55 80`
-- `V 3539 3738`
+- `V 3850 4049`
 - `F 15`
 - `O Virant~`
 - `U @@lthe harbor chain of @@yPort Mafdet@@l descends with the dawn@@N~`
@@ -452,7 +452,7 @@ All shops open 24 hours. Profit buy/sell values: 120/80 standard rates; magic sh
 
 ### Mob Vnum Plan
 
-- Use mob vnums sequentially within `3539-3738`.
+- Use mob vnums sequentially within `3850-4049`.
 - **Mob vnums 3539-3547** are reserved for the nine service NPCs defined in the Shop + Service Requirements section above.
 - Remaining mob templates begin at vnum **3548** and continue sequentially.
 - Target **55-62 mob templates total** (including 9 service NPCs) with strict role separation:
@@ -493,7 +493,7 @@ All shops open 24 hours. Profit buy/sell values: 120/80 standard rates; magic sh
 
 ### Object Vnum Plan
 
-- Use object vnums sequentially in-range (`3539-3738`).
+- Use object vnums sequentially in-range (`3850-4049`).
 - Target **120-130 objects** (including 66 shop inventory items across 4 shops), including:
 
 **Approach-zone items (vnums 3539-3553):**
@@ -668,7 +668,7 @@ Locked doors only where lore supports institutional barriers. All locked doors r
 
 ## Implementation Checklist
 
-1. Populate all 35 rooms with unique names, descriptions, exits, and extra descriptions within vnum range `3539-3738`.
+1. Populate all 35 rooms with unique names, descriptions, exits, and extra descriptions within vnum range `3850-4049`.
 2. Build topology following the organic coastal layout — verify bi-directional exits, no illegal loops, no ROOM_MAZE unless intentional maze.
 3. Verify all 9 service rooms (postmaster, quartermaster, inn, weapon shop, armor shop, general shop, bank, magic shop, healer) are inside-sector, safe-flagged dead-ends with exactly one bi-directional exit each.
 4. Create all mob templates (55-62) with proper act flags, level assignments, and faction alignment.
