@@ -815,7 +815,7 @@ NPC-specific knowledge and are excluded from injection.
 **Selection:** At most **three** entries are injected. If more than three
 match, prefer entries with more flag bits in common with the NPC (the same
 scoring used by `find_best_lore()`) — these are the most specifically relevant.
-Each injected entry is capped at **400 bytes**; entries exceeding this are
+Each injected entry is capped at **1024 bytes**; entries exceeding this are
 truncated with `"[...]"`.
 
 **Format in the system prompt:**
@@ -1528,7 +1528,7 @@ No unique ID field on `CHAR_DATA` is needed.
 - [ ] Append racial speech inclination to system prompt in `npc_dialogue_dispatch()` based on `npc->pIndexData->race`
 - [ ] Write unit tests for `accent_text()` across all accent types
 - [ ] Write unit tests for `npc_dialogue_sanitize_input()` and keyword short-circuit
-- [ ] Implement lore injection in `npc_dialogue_dispatch()`: walk `first_lore`, select entries where `entry->flags != 0 && (entry->flags & npc->lore_flags) == entry->flags`, inject up to 3 entries (scored by `count_bits()` overlap), truncate at 400 bytes each, format as `[LORE: <keyword>]` blocks
+- [ ] Implement lore injection in `npc_dialogue_dispatch()`: walk `first_lore`, select entries where `entry->flags != 0 && (entry->flags & npc->lore_flags) == entry->flags`, inject up to 3 entries (scored by `count_bits()` overlap), truncate at 1024 bytes each, format as `[LORE: <keyword>]` blocks
 
 ### Model Training (offline, separate from server build)
 
