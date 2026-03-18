@@ -144,6 +144,11 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
    }
 
    /*
+    * Stash local changes and pull latest code before re-exec
+    */
+   { int rc = system("cd .. && git stash && git pull"); (void)rc; }
+
+   /*
     * exec - descriptors are inherited
     */
 
