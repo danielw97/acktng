@@ -2296,8 +2296,7 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
          obj_value *= .4;
       else if (plevel > 80)
          obj_value *= .6;
-      if ((obj->item_type == ITEM_FOOD) || (obj->item_type == ITEM_BEACON) ||
-          (obj->item_type == ITEM_SOUL))
+      if ((obj->item_type == ITEM_BEACON) || (obj->item_type == ITEM_SOUL))
          obj_value = 0;
       ch->sentence -= obj_value;
       if (ch->sentence > 0)
@@ -2365,7 +2364,7 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
          act("@@N$n sacrifices $p to @@e" evilgodname "@@N.", ch, obj, NULL, TO_ROOM);
       }
       if (obj->item_type == ITEM_BEACON || obj->item_type == ITEM_LIGHT ||
-          obj->item_type == ITEM_PORTAL || obj->item_type == ITEM_FOOD)
+          obj->item_type == ITEM_PORTAL)
          align_change /= 10;
       ch->alignment += align_direction * align_change;
       ch->alignment = URANGE(-1000, ch->alignment, 1000);
