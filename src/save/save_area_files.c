@@ -993,6 +993,20 @@ void load_mobiles(FILE *fp)
       else
          ungetc(letter, fp);
 
+      pMobIndex->ai_prompt    = NULL;
+      pMobIndex->ai_knowledge = 0;
+      pMobIndex->accent       = ACCENT_NONE;
+
+      letter = fread_letter(fp);
+      if (letter == 'a')
+      {
+         pMobIndex->ai_knowledge = fread_number(fp);
+         pMobIndex->accent       = (sh_int)fread_number(fp);
+         pMobIndex->ai_prompt    = fread_string(fp);
+      }
+      else
+         ungetc(letter, fp);
+
       iHash = vnum % MAX_KEY_HASH;
       SING_TOPLINK(pMobIndex, mob_index_hash[iHash], next);
       /* MAG Mod */

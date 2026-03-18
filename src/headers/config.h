@@ -1361,6 +1361,7 @@
 #define HELP_DIR "../help/"
 #define SHELP_DIR "../shelp/"
 #define LORE_DIR "../lore/"
+#define KNOWLEDGE_DIR "../data/knowledge/"
 
 /*
  * Lore perspective flags -- used on both lore entries and NPCs.

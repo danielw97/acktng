@@ -1,7 +1,9 @@
 #ifndef NPC_DIALOGUE_H
 #define NPC_DIALOGUE_H
 
+#ifndef DEC_ACK_H
 #include "ack.h"
+#endif
 
 /*
  * Initialize the NPC dialogue system.

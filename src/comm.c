@@ -63,6 +63,7 @@
 #include "cursor.h"
 #include "socket.h"
 #include "prompt.h"
+#include "npc_dialogue.h"
 
 void trigger_happy_hour(void);
 void copyover_recover args((void));
@@ -181,6 +182,7 @@ int main(int argc, char **argv)
    if (fCopyOver)
       abort_threshold = BOOT_DB_ABORT_THRESHOLD;
    boot_db();
+   npc_dialogue_init();
 #ifndef WIN32
    init_alarm_handler();
 #endif
