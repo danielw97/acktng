@@ -36,12 +36,7 @@
 #include "act_mob.h"
 #endif
 
-extern OBJ_DATA *quest_object;
 static char buf[MAX_STRING_LENGTH];
-extern bool quest;
-extern CHAR_DATA *quest_mob;
-extern CHAR_DATA *quest_target;
-extern COUNCIL_DATA super_councils[MAX_SUPER];
 
 /*
  * Local functions.
@@ -1120,7 +1115,6 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
  */
 void obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch)
 {
-   extern OBJ_DATA *quest_object;
    obj->next_in_carry_list = NULL;
    obj->prev_in_carry_list = NULL;
 
@@ -1774,8 +1768,6 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 {
    CHAR_DATA *wch;
    OBJ_DATA *this_object;
-   extern CHAR_DATA *quest_mob;
-   extern CHAR_DATA *quest_target;
    struct char_ref_type *ref;
 
    /*

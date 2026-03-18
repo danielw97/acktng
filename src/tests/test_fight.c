@@ -566,6 +566,25 @@ static void test_boss_avoidance_bonuses(void)
    assert(get_evasion_piercing(&ch) == 15);
 }
 
+/* Moved from comm.c — now lives in fight.c */
+bool shortfight_should_suppress_watched_autoattack(int observer_is_npc, int observer_has_shortfight,
+                                                   int observer_is_fighting);
+
+static void test_shortfight_watched_autoattack_suppression(void)
+{
+   /* Non-NPC observer with shortfight ON and NOT currently fighting: suppress */
+   assert(shortfight_should_suppress_watched_autoattack(false, true, false));
+
+   /* Observer is currently fighting: do NOT suppress */
+   assert(!shortfight_should_suppress_watched_autoattack(false, true, true));
+
+   /* Observer doesn't have shortfight config: do NOT suppress */
+   assert(!shortfight_should_suppress_watched_autoattack(false, false, false));
+
+   /* Observer is NPC: do NOT suppress */
+   assert(!shortfight_should_suppress_watched_autoattack(true, true, false));
+}
+
 int main(void)
 {
    test_get_parry_guard_clauses();
@@ -591,6 +610,7 @@ int main(void)
    test_level_scaled_avoidance_baseline_baselines();
    test_level_scaled_avoidance_baseline_level_gap_scaling();
    test_boss_avoidance_bonuses();
+   test_shortfight_watched_autoattack_suppression();
 
    puts("test_fight: all tests passed");
    return 0;

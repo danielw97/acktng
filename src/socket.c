@@ -70,7 +70,7 @@
 #include <arpa/telnet.h>
 
 const char echo_off_str[] = {IAC, WILL, TELOPT_ECHO, '\0'};
-const char echo_on_str[]  = {IAC, WONT, TELOPT_ECHO, '\0'};
+const char echo_on_str[] = {IAC, WONT, TELOPT_ECHO, '\0'};
 const char go_ahead_str[] = {IAC, GA, '\0'};
 
 #include "socket.h"

@@ -8,7 +8,7 @@
 #include "ack.h"
 #include "prompt_test.h"
 
-static int stub_max_hp   = 100;
+static int stub_max_hp = 100;
 static int stub_max_mana = 100;
 static int stub_max_move = 100;
 
@@ -37,7 +37,7 @@ static void test_show_hp_when_below_max(void)
    CHAR_DATA ch;
    memset(&ch, 0, sizeof(ch));
 
-   ch.hit    = 99;
+   ch.hit = 99;
    stub_max_hp = 100;
    assert(prompt_should_show_hp(&ch));
 
@@ -45,7 +45,7 @@ static void test_show_hp_when_below_max(void)
    assert(!prompt_should_show_hp(&ch));
 
    /* Exactly at max: no display */
-   ch.hit    = 100;
+   ch.hit = 100;
    stub_max_hp = 100;
    assert(!prompt_should_show_hp(&ch));
 }
@@ -55,7 +55,7 @@ static void test_show_mana_when_below_max(void)
    CHAR_DATA ch;
    memset(&ch, 0, sizeof(ch));
 
-   ch.mana     = 40;
+   ch.mana = 40;
    stub_max_mana = 50;
    assert(prompt_should_show_mana(&ch));
 
@@ -63,7 +63,7 @@ static void test_show_mana_when_below_max(void)
    assert(!prompt_should_show_mana(&ch));
 
    /* Exactly at max: no display */
-   ch.mana     = 50;
+   ch.mana = 50;
    stub_max_mana = 50;
    assert(!prompt_should_show_mana(&ch));
 }
@@ -73,7 +73,7 @@ static void test_show_move_when_below_max(void)
    CHAR_DATA ch;
    memset(&ch, 0, sizeof(ch));
 
-   ch.move     = 70;
+   ch.move = 70;
    stub_max_move = 100;
    assert(prompt_should_show_move(&ch));
 
@@ -81,7 +81,7 @@ static void test_show_move_when_below_max(void)
    assert(!prompt_should_show_move(&ch));
 
    /* Exactly at max: no display */
-   ch.move     = 100;
+   ch.move = 100;
    stub_max_move = 100;
    assert(!prompt_should_show_move(&ch));
 }
@@ -102,7 +102,7 @@ static void test_max_value_codes_use_max_helpers(void)
    CHAR_DATA ch;
    memset(&ch, 0, sizeof(ch));
 
-   stub_max_hp   = 111;
+   stub_max_hp = 111;
    stub_max_mana = 222;
    stub_max_move = 333;
 

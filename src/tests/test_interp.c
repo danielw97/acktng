@@ -18,9 +18,22 @@ struct cmd_type
    short log;
    short type;
    short show;
+   short flags; /* CMD_FLAG_* bitmask */
 };
 
+/* Must match config.h CMD_FLAG_NINJA_OK (BIT_1 = 1) */
+#define CMD_FLAG_NINJA_OK 1
+
 extern const struct cmd_type cmd_table[];
+
+static int find_cmd(const char *name)
+{
+   int i;
+   for (i = 0; cmd_table[i].name[0] != '\0'; i++)
+      if (strcmp(cmd_table[i].name, name) == 0)
+         return i;
+   return -1;
+}
 
 static void test_no_duplicate_commands(void)
 {
@@ -44,9 +57,92 @@ static void test_no_duplicate_commands(void)
    }
 }
 
+/*
+ * These commands must keep ninja stance active (CMD_FLAG_NINJA_OK set).
+ */
+static void test_ninja_flag_set_on_combat_commands(void)
+{
+   const char *ninja_cmds[] = {"kill", "murder", "backstab", "bs", "whisper", "steal", NULL};
+   int i;
+
+   for (i = 0; ninja_cmds[i] != NULL; i++)
+   {
+      int idx = find_cmd(ninja_cmds[i]);
+      if (idx < 0)
+      {
+         fprintf(stderr, "FAIL: ninja command \"%s\" not found in cmd_table\n", ninja_cmds[i]);
+         assert(0);
+      }
+      if (!(cmd_table[idx].flags & CMD_FLAG_NINJA_OK))
+      {
+         fprintf(stderr, "FAIL: command \"%s\" missing CMD_FLAG_NINJA_OK\n", ninja_cmds[i]);
+         assert(0);
+      }
+   }
+}
+
+/*
+ * Ordinary commands must NOT have CMD_FLAG_NINJA_OK set.
+ */
+static void test_ninja_flag_absent_from_ordinary_commands(void)
+{
+   const char *plain_cmds[] = {"look", "score", "cast", "rest", "get", "north", NULL};
+   int i;
+
+   for (i = 0; plain_cmds[i] != NULL; i++)
+   {
+      int idx = find_cmd(plain_cmds[i]);
+      if (idx < 0)
+      {
+         fprintf(stderr, "FAIL: command \"%s\" not found in cmd_table\n", plain_cmds[i]);
+         assert(0);
+      }
+      if (cmd_table[idx].flags & CMD_FLAG_NINJA_OK)
+      {
+         fprintf(stderr, "FAIL: command \"%s\" unexpectedly has CMD_FLAG_NINJA_OK\n",
+                 plain_cmds[i]);
+         assert(0);
+      }
+   }
+}
+
+/*
+ * Verify the table is terminated by the sentinel entry (empty name).
+ */
+static void test_sentinel_terminates_table(void)
+{
+   int i;
+   for (i = 0; cmd_table[i].name[0] != '\0'; i++)
+      ;
+   /* The loop stopped at the sentinel; verify it really is the sentinel. */
+   assert(cmd_table[i].name[0] == '\0');
+   assert(cmd_table[i].do_fun == NULL);
+}
+
+/*
+ * Every non-sentinel entry must have a non-NULL handler function.
+ */
+static void test_all_commands_have_handler(void)
+{
+   int i;
+   for (i = 0; cmd_table[i].name[0] != '\0'; i++)
+   {
+      if (cmd_table[i].do_fun == NULL)
+      {
+         fprintf(stderr, "FAIL: command \"%s\" at index %d has NULL do_fun\n", cmd_table[i].name,
+                 i);
+         assert(0);
+      }
+   }
+}
+
 int main(void)
 {
    test_no_duplicate_commands();
+   test_ninja_flag_set_on_combat_commands();
+   test_ninja_flag_absent_from_ordinary_commands();
+   test_sentinel_terminates_table();
+   test_all_commands_have_handler();
    puts("test_interp: all tests passed");
    return 0;
 }

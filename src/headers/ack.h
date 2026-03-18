@@ -1256,8 +1256,9 @@ struct cmd_type
    sh_int position;
    sh_int level;
    sh_int log;
-   sh_int type; /*added by Aeria for do_commands */
-   sh_int show; /*added by Aeria for do_commands */
+   sh_int type;  /* added by Aeria for do_commands */
+   sh_int show;  /* added by Aeria for do_commands */
+   sh_int flags; /* CMD_FLAG_* bitmask */
 };
 
 /*
@@ -1297,6 +1298,11 @@ bool is_group_leader args((CHAR_DATA * ch));
 char *slur_text args((char *argument));
 void send_to_room args((char *message, ROOM_INDEX_DATA *room));
 void list_who_to_output args((void));
+
+/* fight.c */
+bool shortfight_should_suppress_watched_autoattack args((int observer_is_npc,
+                                                         int observer_has_shortfight,
+                                                         int observer_is_fighting));
 
 /* act_info.c */
 void set_title args((CHAR_DATA * ch, char *title));
@@ -1354,7 +1360,8 @@ int do_damage args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt, int elem
 void perm_update args((void));
 void boot_db args((void));
 void area_update args((void));
-void db_format_status args((char *dest, size_t dest_size, const char *prefix, const char *file_name));
+void db_format_status args((char *dest, size_t dest_size, const char *prefix,
+                            const char *file_name));
 void db_set_area_name args((const char *file_name));
 void message_update args((void));
 CD *create_mobile args((MOB_INDEX_DATA * pMobIndex));

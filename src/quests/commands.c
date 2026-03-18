@@ -634,8 +634,7 @@ static void quest_list_available(CHAR_DATA *ch)
    for (i = 0; i < quest_template_count; i++)
    {
       const QUEST_TEMPLATE *tpl = &quest_template_table[i];
-      if (tpl->id >= 0 && tpl->id < QUEST_MAX_TEMPLATES &&
-          ch->pcdata->completed_quests[tpl->id])
+      if (tpl->id >= 0 && tpl->id < QUEST_MAX_TEMPLATES && ch->pcdata->completed_quests[tpl->id])
          continue;
       if (find_visible_npc_by_canonical_vnum(ch, tpl->offerer_vnum) == NULL)
          continue;
@@ -677,8 +676,7 @@ void quest_accept(CHAR_DATA *ch, int list_number)
       return;
    }
 
-   if (tpl->id >= 0 && tpl->id < QUEST_MAX_TEMPLATES &&
-       ch->pcdata->completed_quests[tpl->id])
+   if (tpl->id >= 0 && tpl->id < QUEST_MAX_TEMPLATES && ch->pcdata->completed_quests[tpl->id])
    {
       send_to_char("You have already completed that quest.\n\r", ch);
       return;
