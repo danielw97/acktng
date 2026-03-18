@@ -48,19 +48,9 @@ void affect_modify args((CHAR_DATA * ch, AFFECT_DATA *paf, bool fAdd));
  * skill_level array.  Checks which range (0-5, 6-17, 18-23) has a
  * non-NO_USE entry and returns the corresponding tier.
  */
-int skill_get_tier(int sn)
-{
-   int i;
-   if (sn < 0 || sn >= MAX_SKILL)
-      return 1;
-   for (i = 0; i < MAX_TOTAL_CLASS; i++)
-      if (IS_ADEPT_CLASS(i) && skill_table[sn].skill_level[i] >= 0)
-         return 3;
-   for (i = 0; i < MAX_TOTAL_CLASS; i++)
-      if (IS_REMORT_CLASS(i) && skill_table[sn].skill_level[i] >= 0)
-         return 2;
-   return 1;
-}
+/* skill_get_tier, can_use_skill, raise_skill, skill_success, get_dt_name
+ * and related functions have been moved to skills.c.
+ */
 
 /*
  * Updated pointer referencing, curtesy of Spectrum, from Beyond the Veil
@@ -316,44 +306,118 @@ bool can_wield(CHAR_DATA *ch, OBJ_DATA *obj, int loc)
 }
 
 /*
- * Retrieve character's current strength.
+ * Return the race's base maximum for a primary stat (APPLY_STR/INT/WIS/DEX/CON).
  */
-int get_curr_str(CHAR_DATA *ch)
+static int get_race_base_stat(const struct race_type *race, int apply_type)
 {
-   if (IS_NPC(ch))
+   switch (apply_type)
    {
-      return (13 + (ch->level / 16));
+   case APPLY_STR:
+      return race->race_str;
+   case APPLY_INT:
+      return race->race_int;
+   case APPLY_WIS:
+      return race->race_wis;
+   case APPLY_DEX:
+      return race->race_dex;
+   case APPLY_CON:
+      return race->race_con;
+   default:
+      return 13;
    }
-
-   int cur = get_max_str(ch);
-   cur += get_stat(ch, APPLY_STR);
-
-   return URANGE(3, cur, get_max_str(ch) + 3);
 }
 
-int get_max_str(CHAR_DATA *ch)
+/*
+ * Return the reincarnation bonus to a stat maximum for a PC.
+ * Each primary stat has a specific class (or pair) that provides a bonus.
+ */
+static int get_stat_reinc_bonus(CHAR_DATA *ch, int apply_type)
 {
-   int max = race_table[ch->race].race_str;
+   if (IS_NPC(ch))
+      return 0;
 
-   if (!IS_NPC(ch) && gclass_table[ch->class].attr_prime == APPLY_STR)
+   switch (apply_type)
+   {
+   case APPLY_STR:
+      if (ch->pcdata->reincarnations[CLASS_WAR] > 0)
+         return (ch->pcdata->reincarnations[CLASS_WAR] + 1) / 2;
+      return 0;
+   case APPLY_INT: {
+      int bonus = 0;
+      if (ch->pcdata->reincarnations[CLASS_MAG] > 0)
+         bonus += (ch->pcdata->reincarnations[CLASS_MAG] + 1) / 2;
+      if (ch->pcdata->reincarnations[CLASS_PSI] > 0)
+         bonus += (ch->pcdata->reincarnations[CLASS_PSI] + 1) / 2;
+      return bonus;
+   }
+   case APPLY_WIS:
+      if (ch->pcdata->reincarnations[CLASS_CLE] > 0)
+         return (ch->pcdata->reincarnations[CLASS_CLE] + 1) / 2;
+      return 0;
+   case APPLY_DEX:
+      if (ch->pcdata->reincarnations[CLASS_CIP] > 0)
+         return (ch->pcdata->reincarnations[CLASS_CIP] + 1) / 2;
+      return 0;
+   case APPLY_CON:
+      if (ch->pcdata->reincarnations[CLASS_PUG] > 0)
+         return (ch->pcdata->reincarnations[CLASS_PUG] + 1) / 2;
+      return 0;
+   default:
+      return 0;
+   }
+}
+
+/*
+ * Compute the maximum for any primary stat (APPLY_STR/INT/WIS/DEX/CON).
+ * Accounts for race base, class attribute prime bonuses, and reincarnations.
+ */
+int get_max_stat(CHAR_DATA *ch, int apply_type)
+{
+   int max = get_race_base_stat(&race_table[ch->race], apply_type);
+
+   if (!IS_NPC(ch) && gclass_table[ch->class].attr_prime == apply_type)
       max++;
 
    for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
    {
-      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_STR)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == apply_type)
          max++;
    }
 
    for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
    {
-      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_STR)
+      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == apply_type)
          max++;
    }
 
-   if (ch->pcdata->reincarnations[CLASS_WAR] > 0)
-      max += (ch->pcdata->reincarnations[CLASS_WAR] + 1) / 2;
-
+   max += get_stat_reinc_bonus(ch, apply_type);
    return UMIN(max, STAT_MAX);
+}
+
+/*
+ * Retrieve a character's current value for a primary stat.
+ * NPCs get a fixed level-scaled value; PCs get race max + affects, bounded.
+ */
+static int get_curr_primary_stat(CHAR_DATA *ch, int apply_type)
+{
+   if (IS_NPC(ch))
+      return (13 + (ch->level / 16));
+
+   int max = get_max_stat(ch, apply_type);
+   return URANGE(3, max + get_stat(ch, apply_type), max + 3);
+}
+
+/*
+ * Retrieve character's current strength.
+ */
+int get_curr_str(CHAR_DATA *ch)
+{
+   return get_curr_primary_stat(ch, APPLY_STR);
+}
+
+int get_max_str(CHAR_DATA *ch)
+{
+   return get_max_stat(ch, APPLY_STR);
 }
 
 /*
@@ -361,43 +425,12 @@ int get_max_str(CHAR_DATA *ch)
  */
 int get_curr_int(CHAR_DATA *ch)
 {
-   if (IS_NPC(ch))
-   {
-      return (13 + (ch->level / 16));
-   }
-
-   int cur = get_max_int(ch);
-   cur += get_stat(ch, APPLY_INT);
-
-   return URANGE(3, cur, get_max_int(ch) + 3);
+   return get_curr_primary_stat(ch, APPLY_INT);
 }
 
 int get_max_int(CHAR_DATA *ch)
 {
-   int max = race_table[ch->race].race_int;
-
-   if (!IS_NPC(ch) && gclass_table[ch->class].attr_prime == APPLY_INT)
-      max++;
-
-   for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
-   {
-      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_INT)
-         max++;
-   }
-
-   for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
-   {
-      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_INT)
-         max++;
-   }
-
-   if (ch->pcdata->reincarnations[CLASS_MAG] > 0)
-      max += (ch->pcdata->reincarnations[CLASS_MAG] + 1) / 2;
-
-   if (ch->pcdata->reincarnations[CLASS_PSI] > 0)
-      max += (ch->pcdata->reincarnations[CLASS_PSI] + 1) / 2;
-
-   return UMIN(max, STAT_MAX);
+   return get_max_stat(ch, APPLY_INT);
 }
 
 /*
@@ -405,40 +438,12 @@ int get_max_int(CHAR_DATA *ch)
  */
 int get_curr_wis(CHAR_DATA *ch)
 {
-   if (IS_NPC(ch))
-   {
-      return (13 + (ch->level / 16));
-   }
-
-   int cur = get_max_wis(ch);
-   cur += get_stat(ch, APPLY_WIS);
-
-   return URANGE(3, cur, get_max_wis(ch) + 3);
+   return get_curr_primary_stat(ch, APPLY_WIS);
 }
 
 int get_max_wis(CHAR_DATA *ch)
 {
-   int max = race_table[ch->race].race_wis;
-
-   if (!IS_NPC(ch) && gclass_table[ch->class].attr_prime == APPLY_WIS)
-      max++;
-
-   for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
-   {
-      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_WIS)
-         max++;
-   }
-
-   for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
-   {
-      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_WIS)
-         max++;
-   }
-
-   if (ch->pcdata->reincarnations[CLASS_CLE] > 0)
-      max += (ch->pcdata->reincarnations[CLASS_CLE] + 1) / 2;
-
-   return UMIN(max, STAT_MAX);
+   return get_max_stat(ch, APPLY_WIS);
 }
 
 /*
@@ -446,41 +451,12 @@ int get_max_wis(CHAR_DATA *ch)
  */
 int get_curr_dex(CHAR_DATA *ch)
 {
-
-   if (IS_NPC(ch))
-   {
-      return (13 + (ch->level / 16));
-   }
-
-   int cur = get_max_dex(ch);
-   cur += get_stat(ch, APPLY_DEX);
-
-   return URANGE(3, cur, get_max_dex(ch) + 3);
+   return get_curr_primary_stat(ch, APPLY_DEX);
 }
 
 int get_max_dex(CHAR_DATA *ch)
 {
-   int max = race_table[ch->race].race_dex;
-
-   if (!IS_NPC(ch) && gclass_table[ch->class].attr_prime == APPLY_DEX)
-      max++;
-
-   for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
-   {
-      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_DEX)
-         max++;
-   }
-
-   for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
-   {
-      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_DEX)
-         max++;
-   }
-
-   if (ch->pcdata->reincarnations[CLASS_CIP] > 0)
-      max += (ch->pcdata->reincarnations[CLASS_CIP] + 1) / 2;
-
-   return UMIN(max, STAT_MAX);
+   return get_max_stat(ch, APPLY_DEX);
 }
 
 /*
@@ -488,40 +464,12 @@ int get_max_dex(CHAR_DATA *ch)
  */
 int get_curr_con(CHAR_DATA *ch)
 {
-   if (IS_NPC(ch))
-   {
-      return (13 + (ch->level / 16));
-   }
-
-   int cur = get_max_con(ch);
-   cur += get_stat(ch, APPLY_CON);
-
-   return URANGE(3, cur, get_max_con(ch) + 3);
+   return get_curr_primary_stat(ch, APPLY_CON);
 }
 
 int get_max_con(CHAR_DATA *ch)
 {
-   int max = race_table[ch->race].race_con;
-
-   if (!IS_NPC(ch) && gclass_table[ch->class].attr_prime == APPLY_CON)
-      max++;
-
-   for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
-   {
-      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_CON)
-         max++;
-   }
-
-   for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
-   {
-      if (ch->class_level[i] > 0 && gclass_table[i].attr_prime == APPLY_CON)
-         max++;
-   }
-
-   if (ch->pcdata->reincarnations[CLASS_PUG] > 0)
-      max += (ch->pcdata->reincarnations[CLASS_PUG] + 1) / 2;
-
-   return UMIN(max, STAT_MAX);
+   return get_max_stat(ch, APPLY_CON);
 }
 
 int get_speed(CHAR_DATA *ch)
@@ -965,268 +913,6 @@ bool is_same_room(CHAR_DATA *ch, CHAR_DATA *victim)
    return FALSE;
 }
 
-bool can_use_skill_message(CHAR_DATA *ch, int gsn)
-{
-   char buf[MSL];
-   if (ch->cooldown[gsn] > 0)
-   {
-      sprintf(buf, "That skill is still on cooldown for %d.\n\r", ch->cooldown[gsn]);
-      send_to_char(buf, ch);
-      return FALSE;
-   }
-
-   if (!can_use_skill(ch, gsn))
-   {
-      send_to_char("You don't know how to do that\n\r", ch);
-      return FALSE;
-   }
-
-   return TRUE;
-}
-
-bool can_use_skill_by_name_message(CHAR_DATA *ch, char *skill)
-{
-   char buf[MSL];
-   if (ch->cooldown[skill_lookup(skill)] > 0)
-   {
-      sprintf(buf, "That skill is still on cooldown for %d.\n\r",
-              ch->cooldown[skill_lookup(skill)]);
-      send_to_char(buf, ch);
-      return FALSE;
-   }
-
-   if (!can_use_skill_by_name(ch, skill))
-   {
-      send_to_char("You don't know how to do that\n\r", ch);
-      return FALSE;
-   }
-
-   return TRUE;
-}
-
-bool can_use_skill_by_name(CHAR_DATA *ch, char *skill)
-{
-   int gsn = skill_lookup(skill);
-
-   return can_use_skill(ch, gsn);
-}
-
-static bool skill_requirement_is_usable(int required_level)
-{
-   return required_level >= 0;
-}
-
-bool can_use_skill(CHAR_DATA *ch, int gsn)
-{
-   if (gsn == -1 || gsn >= MAX_SKILL)
-      return FALSE;
-
-   if (ch->cooldown[gsn] > 0)
-      return FALSE;
-
-   if (IS_NPC(ch))
-      return TRUE;
-
-   if (gsn == gsn_enhanced_damage && ch->pcdata->reincarnations[CLASS_WAR] > 0)
-      return TRUE;
-
-   if (gsn == gsn_enhanced_critical && ch->pcdata->reincarnations[CLASS_CIP] > 0)
-      return TRUE;
-
-   if (gsn == gsn_counter && ch->pcdata->reincarnations[CLASS_PUG] > 0)
-      return TRUE;
-
-   if (gsn == gsn_potency && ch->pcdata->reincarnations[CLASS_MAG] > 0)
-      return TRUE;
-
-   if (gsn == gsn_spell_critical && ch->pcdata->reincarnations[CLASS_PSI] > 0)
-      return TRUE;
-
-   if (gsn == gsn_spell_critical_damage && ch->pcdata->reincarnations[CLASS_CLE] > 0)
-      return TRUE;
-
-   if (gsn == gsn_dualwield &&
-       (ch->pcdata->reincarnations[CLASS_ASS] + ch->pcdata->reincarnations[CLASS_WLK] >= 20))
-      return TRUE;
-
-   if (gsn == gsn_two_handed &&
-       (ch->pcdata->reincarnations[CLASS_KNI] + ch->pcdata->reincarnations[CLASS_SWO] >= 20))
-      return TRUE;
-
-   if (gsn == gsn_two_handed &&
-       (ch->pcdata->reincarnations[CLASS_PAL] + ch->pcdata->reincarnations[CLASS_PRI]) >= 20)
-      return TRUE;
-
-   if (gsn == gsn_equip_buckler &&
-       (ch->pcdata->reincarnations[CLASS_KNI] + ch->pcdata->reincarnations[CLASS_SWO] >= 20))
-      return TRUE;
-
-   if (gsn == gsn_equip_buckler &&
-       (ch->pcdata->reincarnations[CLASS_PAL] + ch->pcdata->reincarnations[CLASS_PRI]) >= 20)
-      return TRUE;
-
-   if (gsn == gsn_equip_fist &&
-       (ch->pcdata->reincarnations[CLASS_BRA] + ch->pcdata->reincarnations[CLASS_MON] >= 20))
-      return TRUE;
-
-   if (gsn == gsn_dual_fist &&
-       (ch->pcdata->reincarnations[CLASS_BRA] + ch->pcdata->reincarnations[CLASS_MON] >= 20))
-      return TRUE;
-
-   if (gsn == gsn_equip_wand &&
-       (ch->pcdata->reincarnations[CLASS_WIZ] + ch->pcdata->reincarnations[CLASS_SOR] >= 20))
-      return TRUE;
-
-   if (gsn == gsn_equip_wand &&
-       (ch->pcdata->reincarnations[CLASS_NEC] + ch->pcdata->reincarnations[CLASS_EGO] >= 20))
-      return TRUE;
-
-   if (gsn == gsn_equip_wand &&
-       (ch->pcdata->reincarnations[CLASS_PRI] + ch->pcdata->reincarnations[CLASS_PAL]) >= 20)
-      return TRUE;
-
-   /* Check all 24 class slots - each slot has the required level if valid */
-   for (int i = 0; i < MAX_TOTAL_CLASS; i++)
-   {
-      int required_level = skill_table[gsn].skill_level[i];
-
-      if (!skill_requirement_is_usable(required_level))
-         continue;
-
-      if (ch->class_level[i] >= required_level)
-         return TRUE;
-      if (!IS_NPC(ch) && IS_MORTAL_CLASS(i) && ch->pcdata->reincarnations[i] >= 20)
-         return TRUE;
-   }
-
-   char race_skill[MSL];
-   char *race_skill_list;
-   race_skill_list = race_table[ch->race].skill;
-   for (;;)
-   {
-      race_skill_list = one_argument(race_skill_list, race_skill);
-
-      if (skill_lookup(race_skill) == gsn)
-         return TRUE;
-
-      if (strlen(race_skill) < 1)
-         break;
-   }
-
-   return FALSE;
-}
-
-bool raise_skill(CHAR_DATA *ch, int gsn)
-{
-   char buf[MSL];
-   if (gsn == -1 || gsn >= MAX_SKILL)
-      return FALSE;
-
-   if (IS_NPC(ch))
-      return TRUE;
-
-   if (!can_use_skill(ch, gsn))
-      return FALSE;
-
-   ch->pcdata->learned[gsn]++;
-
-   if (ch->pcdata->learned[gsn] == LEVEL_ONE)
-   {
-      sprintf(buf, "Congratulations! You have raised %s to level one!\n\r", skill_table[gsn].name);
-      send_to_char(buf, ch);
-   }
-   if (ch->pcdata->learned[gsn] == LEVEL_TWO)
-   {
-      sprintf(buf, "Congratulations! You have raised %s to level two!\n\r", skill_table[gsn].name);
-      send_to_char(buf, ch);
-   }
-   if (ch->pcdata->learned[gsn] == LEVEL_THREE)
-   {
-      sprintf(buf, "Congratulations! You have raised %s to level three!\n\r",
-              skill_table[gsn].name);
-      send_to_char(buf, ch);
-   }
-   if (ch->pcdata->learned[gsn] == LEVEL_FOUR)
-   {
-      sprintf(buf, "Congratulations! You have raised %s to level four!\n\r", skill_table[gsn].name);
-      send_to_char(buf, ch);
-   }
-   if (ch->pcdata->learned[gsn] == LEVEL_FIVE)
-   {
-      sprintf(buf, "Congratulations! You have raised %s to level five!\n\r", skill_table[gsn].name);
-      send_to_char(buf, ch);
-   }
-   if (ch->pcdata->learned[gsn] == LEVEL_MASTER)
-   {
-      sprintf(buf, "Congratulations! You have mastered %s!\n\r", skill_table[gsn].name);
-      send_to_char(buf, ch);
-   }
-   if (ch->pcdata->learned[gsn] == LEVEL_GM)
-   {
-      sprintf(buf, "Congratulations! You have became a grandmaster of %s!\n\r",
-              skill_table[gsn].name);
-      send_to_char(buf, ch);
-   }
-
-   return TRUE;
-}
-
-bool skill_success(CHAR_DATA *ch, CHAR_DATA *victim, int gsn, int bonus)
-{
-   int chance = 70;
-
-   if (!IS_NPC(ch))
-   {
-      if (ch->pcdata->learned[gsn] > LEVEL_ONE)
-         chance += 5;
-      if (ch->pcdata->learned[gsn] > LEVEL_TWO)
-         chance += 5;
-      if (ch->pcdata->learned[gsn] > LEVEL_THREE)
-         chance += 5;
-      if (ch->pcdata->learned[gsn] > LEVEL_FOUR)
-         chance += 5;
-      if (ch->pcdata->learned[gsn] > LEVEL_FIVE)
-         chance += 5;
-      if (ch->pcdata->learned[gsn] > LEVEL_MASTER)
-         chance += 1;
-      if (ch->pcdata->learned[gsn] > LEVEL_GM)
-         chance += 1;
-   }
-
-   if (victim != NULL)
-   {
-      chance += (get_psuedo_level(ch) - get_psuedo_level(victim)) / 2;
-   }
-
-   chance += bonus;
-
-   if (number_percent() < chance)
-      return TRUE;
-
-   return FALSE;
-}
-
-char *get_dt_name(int sn)
-{
-   static char *const attack_table[] = {
-       "hit",          "slice",          "stab",       "slash",        "whip",       "claw",
-       "blast",        "pound",          "crush",      "grip",         "bite",       "pierce",
-       "suction",      "tail whip",      "head punch", "high kick",    "vital kick", "head bash",
-       "side kick",    "spinning elbow", "body punch", "low kick",     "foot stomp", "knee smash",
-       "kidney punch", "arm twist",      "uppercut",   "rabbit punch", "foot sweep"};
-   const size_t attack_count = sizeof(attack_table) / sizeof(attack_table[0]);
-
-   if (sn < MAX_SKILL && sn > 0)
-      return skill_table[sn].name;
-
-   if (sn >= TYPE_HIT && (size_t)(sn - TYPE_HIT) < attack_count)
-   {
-      return attack_table[sn - TYPE_HIT];
-   }
-
-   return "bugged damage type";
-}
-
 /*
  * Retrieve a character's carry capacity.
  */
@@ -1257,322 +943,10 @@ int can_carry_w(CHAR_DATA *ch)
    return get_max_carry_weight(ch);
 }
 
-/*
- * Apply or remove an affect to a character.
+/* affect_modify, mark_to_room, mark_from_room, affect_to_room, r_affect_remove,
+ * affect_to_char, affect_remove, affect_strip, is_affected, affect_join
+ * have been moved to affect.c.
  */
-void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
-{
-   OBJ_DATA *wield;
-   int mod;
-
-   mod = paf->modifier;
-
-   if (fAdd)
-   {
-      SET_BIT(ch->affected_by, paf->bitvector);
-   }
-   else
-   {
-      REMOVE_BIT(ch->affected_by, paf->bitvector);
-      mod = 0 - mod;
-   }
-
-   /*
-    * Check for weapon wielding.
-    * Guard against recursion (for weapons with affects).
-    */
-   if ((ch->is_quitting == FALSE) && (ch->desc != NULL) &&
-       (ch->desc->connected != CON_SETTING_STATS))
-   {
-      sh_int i;
-      for (i = 0; i < MAX_WEAR; i++)
-      {
-         if (((wield = get_eq_char(ch, i)) != NULL) &&
-             (get_obj_weight(wield) > get_wear_weight(ch) * 20))
-         {
-            static int depth;
-
-            if (depth == 0)
-            {
-               depth++;
-               act("You stop using $p since it is too heavy.", ch, wield, NULL, TO_CHAR);
-               act("$n stops using $p. since it is too heavy", ch, wield, NULL, TO_ROOM);
-               unequip_char(ch, wield);
-               /*	    obj_to_room( wield, ch->in_room );  */
-               depth--;
-            }
-         }
-      }
-   }
-   return;
-}
-
-void mark_to_room(int this_room_vnum, MARK_DATA *mark)
-{
-   /*
-    * this assumes that the mark_data is good, and has
-    * * been constructed properly. It will link it to the room
-    * * and the main list. Caller must get the struct memory.
-    * *
-    */
-   MARK_LIST_MEMBER *mlist;
-   MARK_LIST_MEMBER *rlist;
-   ROOM_INDEX_DATA *this_room;
-
-   if ((this_room = get_room_index(this_room_vnum)) == NULL)
-   {
-      PUT_FREE(mark, mark_free);
-      return;
-   }
-
-   GET_FREE(mlist, mark_list_free);
-   GET_FREE(rlist, mark_list_free);
-
-   mlist->mark = mark;
-   rlist->mark = mark;
-
-   LINK(mlist, first_mark_list, last_mark_list, next, prev);
-   LINK(rlist, this_room->first_mark_list, this_room->last_mark_list, next, prev);
-   if (!booting_up)
-      save_marks();
-
-   return;
-}
-
-void mark_from_room(int this_room_vnum, MARK_DATA *mark)
-{
-
-   MARK_LIST_MEMBER *mlist;
-   MARK_LIST_MEMBER *rlist;
-   ROOM_INDEX_DATA *this_room;
-
-   this_room = get_room_index(this_room_vnum);
-
-   for (rlist = this_room->first_mark_list; rlist != NULL; rlist = rlist->next)
-   {
-      if (rlist->mark == mark)
-      {
-         UNLINK(rlist, this_room->first_mark_list, this_room->last_mark_list, next, prev);
-         break;
-      }
-   }
-   for (mlist = first_mark_list; mlist != NULL; mlist = mlist->next)
-   {
-      if (mlist->mark == mark)
-      {
-         UNLINK(mlist, first_mark_list, last_mark_list, next, prev);
-         break;
-      }
-   }
-
-   PUT_FREE(mark, mark_free);
-   PUT_FREE(rlist, mark_list_free);
-   PUT_FREE(mlist, mark_list_free);
-   if (!booting_up)
-      save_marks();
-
-   return;
-}
-
-/* Give an affect to a room */
-void affect_to_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *raf)
-{
-   ROOM_AFFECT_DATA *raf_new;
-
-   GET_FREE(raf_new, raffect_free);
-   /* Ramias... Don't copy uninitialized fields: next, prev, is_free */
-   /*
-    *raf_new = *raf;
-    */
-   raf_new->duration = raf->duration;
-   raf_new->level = raf->level;
-   raf_new->type = raf->type;
-   raf_new->bitvector = raf->bitvector;
-   raf_new->applies_spell = raf->applies_spell;
-   raf_new->modifier = raf->modifier;
-   raf_new->location = raf->location;
-   raf_new->caster = raf->caster;
-
-   LINK(raf_new, room->first_room_affect, room->last_room_affect, next, prev);
-
-   SET_BIT(room->affected_by, raf->bitvector);
-
-   sprintf(buf, "@@e%s@@N has cast @@d%s@@N in @@Narea: @@r%s@@N, @@Nroom: @@r%d@@N.",
-           raf->caster->name, raffect_bit_name(raf->bitvector), room->area->name, room->vnum);
-   monitor_chan(buf, MONITOR_GEN_MORT);
-
-   return;
-}
-
-/* Remove an affect from a room */
-void r_affect_remove(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *raf)
-{
-   if (room->first_room_affect == NULL)
-   {
-      sprintf(buf, "r_affect_remove: no affect to remove from room %d.", room->vnum);
-      monitor_chan(buf, MONITOR_ROOM);
-
-      bug("R_affect_remove: no affect for room: %d.", room->vnum);
-      return;
-   }
-
-   REMOVE_BIT(room->affected_by, raf->bitvector);
-
-   UNLINK(raf, room->first_room_affect, room->last_room_affect, next, prev);
-   PUT_FREE(raf, raffect_free);
-   return;
-}
-
-/*
- * Give an affect to a char.
- */
-void affect_to_char(CHAR_DATA *ch, AFFECT_DATA *paf)
-{
-   AFFECT_DATA *paf_new;
-
-   /* Boss mobs are immune to blindness */
-   if (IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS) && (paf->bitvector & AFF_BLIND))
-      return;
-
-   GET_FREE(paf_new, affect_free);
-   /* Ramias... Don't copy uninitialized fields: next, prev, is_free */
-   /*
-    *paf_new = *paf;
-    */
-   paf_new->type = paf->type;
-   paf_new->duration_type = paf->duration_type;
-   if (paf_new->duration_type != DURATION_HOUR && paf_new->duration_type != DURATION_ROUND)
-      paf_new->duration_type = DURATION_HOUR;
-   paf_new->element = paf->element;
-   paf_new->duration = paf->duration;
-   paf_new->location = paf->location;
-   paf_new->modifier = paf->modifier;
-   paf_new->bitvector = paf->bitvector;
-   if (paf->caster == NULL)
-      paf_new->caster = ch;
-   else
-      paf_new->caster = paf->caster;
-   paf_new->level = paf->level;
-   LINK(paf_new, ch->first_affect, ch->last_affect, next, prev);
-
-   affect_modify(ch, paf_new, TRUE);
-
-   return;
-}
-
-/*
- * Remove an affect from a char.
- */
-void affect_remove(CHAR_DATA *ch, AFFECT_DATA *paf)
-{
-   sh_int shield_type;
-
-   if (ch->first_affect == NULL)
-   {
-      sprintf(buf, "affect_remove: %s did not have aff %d to remove.",
-              IS_NPC(ch) ? ch->short_descr : ch->name, paf->type);
-      monitor_chan(buf, MONITOR_MOB);
-
-      bug("Affect_remove: no affect.", 0);
-      return;
-   }
-
-   affect_modify(ch, paf, FALSE);
-   shield_type = SHIELD_NONE;
-
-   if (paf->type == skill_lookup("fireshield"))
-      shield_type = FLAME_SHIELD;
-   else if (paf->type == skill_lookup("iceshield"))
-      shield_type = ICE_SHIELD;
-   else if (paf->type == skill_lookup("shockshield"))
-      shield_type = SHOCK_SHIELD;
-   else if (paf->type == skill_lookup("shadowshield"))
-      shield_type = SHADOW_SHIELD;
-   else if (paf->type == skill_lookup("thoughtshield"))
-      shield_type = PSI_SHIELD;
-   if (shield_type > SHIELD_NONE)
-   {
-      MAGIC_SHIELD *this_shield;
-
-      for (this_shield = ch->first_shield; this_shield != NULL; this_shield = this_shield->next)
-         if (this_shield->type == shield_type)
-            break;
-      if (this_shield != NULL)
-      {
-         char buf1[MSL];
-         char buf2[MSL];
-
-         snprintf(buf1, sizeof(buf1), "%s", this_shield->wearoff_room);
-         snprintf(buf2, sizeof(buf2), "%s", this_shield->wearoff_self);
-         act(buf1, ch, NULL, NULL, TO_ROOM);
-         act(buf2, ch, NULL, NULL, TO_CHAR);
-
-         UNLINK(this_shield, ch->first_shield, ch->last_shield, next, prev);
-         PUT_FREE(this_shield, shield_free);
-      }
-   }
-
-   UNLINK(paf, ch->first_affect, ch->last_affect, next, prev);
-   PUT_FREE(paf, affect_free);
-   return;
-}
-
-/*
- * Strip all affects of a given sn.
- */
-void affect_strip(CHAR_DATA *ch, int sn)
-{
-   AFFECT_DATA *paf;
-   AFFECT_DATA *paf_next;
-
-   for (paf = ch->first_affect; paf != NULL; paf = paf_next)
-   {
-      paf_next = paf->next;
-      if (paf->type == sn)
-         affect_remove(ch, paf);
-   }
-
-   return;
-}
-
-/*
- * Return true if a char is affected by a spell.
- */
-bool is_affected(CHAR_DATA *ch, int sn)
-{
-   AFFECT_DATA *paf;
-
-   for (paf = ch->first_affect; paf != NULL; paf = paf->next)
-   {
-      if (paf->type == sn)
-         return TRUE;
-   }
-
-   return FALSE;
-}
-
-/*
- * Add or enhance an affect.
- */
-void affect_join(CHAR_DATA *ch, AFFECT_DATA *paf)
-{
-   AFFECT_DATA *paf_old;
-
-   for (paf_old = ch->first_affect; paf_old != NULL; paf_old = paf_old->next)
-   {
-      if ((paf_old->type == paf->type) && (paf_old->location == paf->location) &&
-          (paf_old->bitvector == paf->bitvector))
-      {
-         paf->duration += paf_old->duration;
-         paf->modifier += paf_old->modifier;
-         affect_remove(ch, paf_old);
-         break;
-      }
-   }
-
-   affect_to_char(ch, paf);
-   return;
-}
 
 /*
  * Find a piece of eq on a character.
@@ -1618,12 +992,6 @@ void char_from_room(CHAR_DATA *ch)
    ch->next_in_room = NULL;
    ch->prev_in_room = NULL;
 
-   if (is_fighting(ch))
-      if (ch->fighting->in_room != ch->in_room)
-      {
-         ch->fighting = NULL;
-         ch->position = POS_STANDING;
-      }
    return;
 }
 
@@ -2386,10 +1754,7 @@ void extract_obj(OBJ_DATA *obj)
          UNLINK(this_corpse, first_corpse, last_corpse, next, prev);
          PUT_FREE(this_corpse, corpse_free);
       }
-      if (obj->item_type == ITEM_CORPSE_PC)
-         save_corpses();
-      else
-         delete_chest_file(obj->pIndexData->vnum);
+      save_corpses();
    }
    --obj->pIndexData->count;
    PUT_FREE(obj, obj_free);
@@ -2566,640 +1931,17 @@ void extract_char(CHAR_DATA *ch, bool fPull)
    return;
 }
 
-/*
- * Find a char in the room.
- */
-CHAR_DATA *get_char_room(CHAR_DATA *ch, char *argument)
-{
-   char arg[MAX_INPUT_LENGTH];
-   CHAR_DATA *rch;
-   int number;
-   int count;
-
-   number = number_argument(argument, arg);
-   count = 0;
-   if (arg[0] == '\0')
-      return NULL;
-
-   if (!str_cmp(arg, "self"))
-      return ch;
-   if (!str_cmp(arg, "tank"))
-   {
-      if (!is_fighting(ch))
-      {
-         send_to_char("You aren't fighting anyone!\n\r", ch);
-         return NULL;
-      }
-      else if (ch->fighting->fighting == NULL)
-      {
-         send_to_char("Hmm, that's weird..where did he go?\n\r", ch);
-         return NULL;
-      }
-      else
-      {
-         return ch->fighting->fighting;
-      }
-   }
-
-   if (!str_cmp(arg, "enemy"))
-   {
-      if (!is_fighting(ch))
-      {
-         send_to_char("You aren't fighting anyone!\n\r", ch);
-         return NULL;
-      }
-      else if (ch->fighting->fighting == NULL)
-      {
-         send_to_char("Hmm, that's weird..where did he go?\n\r", ch);
-         return NULL;
-      }
-      if (ch->fighting->fighting->fighting == NULL)
-      {
-         send_to_char("Hmm, that's weird..where did he go?\n\r", ch);
-         return NULL;
-      }
-
-      else
-      {
-         return ch->fighting->fighting->fighting;
-      }
-   }
-
-   for (rch = ch->in_room->first_person; rch != NULL; rch = rch->next_in_room)
-   {
-      if (!can_see(ch, rch) || !is_name_relaxed(arg, rch->name))
-         continue;
-      if (++count == number)
-         return rch;
-   }
-
-   return NULL;
-}
-
-/*
- * Find a char in the world.
- */
-CHAR_DATA *get_char_world(CHAR_DATA *ch, char *argument)
-{
-   char arg[MAX_INPUT_LENGTH];
-   CHAR_DATA *wch;
-   int number;
-   int count;
-
-   if ((wch = get_char_room(ch, argument)) != NULL)
-      return wch;
-
-   number = number_argument(argument, arg);
-   count = 0;
-   for (wch = first_char; wch != NULL; wch = wch->next)
-   {
-      if (!can_see(ch, wch) || !is_name(arg, wch->name))
-         continue;
-      if (++count == number)
-         return wch;
-   }
-
-   return NULL;
-}
-
-CHAR_DATA *get_char_area(CHAR_DATA *ch, char *argument)
-{
-   char arg[MAX_INPUT_LENGTH];
-   CHAR_DATA *ach;
-   int number;
-   int count;
-
-   if ((ach = get_char_room(ch, argument)) != NULL)
-      return ach;
-
-   number = number_argument(argument, arg);
-   count = 0;
-   for (ach = first_char; ach != NULL; ach = ach->next)
-   {
-      if (ach->in_room->area != ch->in_room->area || !can_see(ch, ach) || !is_name(arg, ach->name))
-         continue;
-      if (++count == number)
-         return ach;
-   }
-
-   return NULL;
-}
-
-/* Used mainly for Imtlset ---Flar */
-CHAR_DATA *get_char(CHAR_DATA *ch)
-{
-   if (!ch->pcdata)
-      return ch->desc->original;
-   else
-      return ch;
-}
-
-/*
- * Find some object with a given index data.
- * Used by area-reset 'P' command.
- */
-OBJ_DATA *get_obj_type(OBJ_INDEX_DATA *pObjIndex)
-{
-   OBJ_DATA *obj;
-
-   for (obj = first_obj; obj != NULL; obj = obj->next)
-   {
-      if (obj->pIndexData == pObjIndex)
-         return obj;
-   }
-
-   return NULL;
-}
-
-/*
- * Find an obj in a room.
- */
-OBJ_DATA *get_obj_room(CHAR_DATA *ch, char *argument, OBJ_DATA *list)
-{
-   char arg[MAX_INPUT_LENGTH];
-   OBJ_DATA *obj;
-   int number;
-   int count;
-
-   number = number_argument(argument, arg);
-   count = 0;
-   for (obj = list; obj != NULL; obj = obj->next_in_room)
-   {
-      if (can_see_obj(ch, obj) && is_name_relaxed(arg, obj->name))
-      {
-         if (++count == number)
-            return obj;
-      }
-   }
-
-   return NULL;
-}
-
-/*
- * Find an obj in a room.
- */
-OBJ_DATA *get_obj_list(CHAR_DATA *ch, char *argument, OBJ_DATA *list)
-{
-   char arg[MAX_INPUT_LENGTH];
-   OBJ_DATA *obj;
-   int number;
-   int count;
-
-   number = number_argument(argument, arg);
-   count = 0;
-   for (obj = list; obj != NULL; obj = obj->next_in_carry_list)
-   {
-      if (can_see_obj(ch, obj) && is_name(arg, obj->name))
-      {
-         if (++count == number)
-            return obj;
-      }
-   }
-
-   return NULL;
-}
-
-/*
- * Find an obj in player's inventory.
- */
-OBJ_DATA *get_obj_carry(CHAR_DATA *ch, char *argument)
-{
-   char arg[MAX_INPUT_LENGTH];
-   OBJ_DATA *obj;
-   int number;
-   int count;
-
-   number = number_argument(argument, arg);
-   count = 0;
-   for (obj = ch->first_carry; obj != NULL; obj = obj->next_in_carry_list)
-   {
-      if (obj->wear_loc == WEAR_NONE && can_see_obj(ch, obj) && is_name(arg, obj->name))
-      {
-         if (++count == number)
-            return obj;
-      }
-   }
-
-   return NULL;
-}
-
-/*
- * Find an obj in player's equipment.
- */
-OBJ_DATA *get_obj_wear(CHAR_DATA *ch, char *argument)
-{
-   char arg[MAX_INPUT_LENGTH];
-   OBJ_DATA *obj;
-   int number;
-   int count;
-
-   number = number_argument(argument, arg);
-   count = 0;
-   for (obj = ch->first_carry; obj != NULL; obj = obj->next_in_carry_list)
-   {
-      if (obj->wear_loc != WEAR_NONE && can_see_obj(ch, obj) && is_name(arg, obj->name))
-      {
-         if (++count == number)
-            return obj;
-      }
-   }
-
-   return NULL;
-}
-
-/*
- * Find an obj in the room or in inventory.
- */
-OBJ_DATA *get_obj_here(CHAR_DATA *ch, char *argument)
-{
-   OBJ_DATA *obj;
-
-   obj = get_obj_room(ch, argument, ch->in_room->first_content);
-   if (obj != NULL)
-      return obj;
-
-   if ((obj = get_obj_carry(ch, argument)) != NULL)
-      return obj;
-
-   if ((obj = get_obj_wear(ch, argument)) != NULL)
-      return obj;
-
-   return NULL;
-}
-
-/*
- * Find an obj in the world.
- */
-OBJ_DATA *get_obj_world(CHAR_DATA *ch, char *argument)
-{
-   char arg[MAX_INPUT_LENGTH];
-   OBJ_DATA *obj;
-   int number;
-   int count;
-
-   if ((obj = get_obj_here(ch, argument)) != NULL)
-      return obj;
-
-   number = number_argument(argument, arg);
-   count = 0;
-   for (obj = first_obj; obj != NULL; obj = obj->next)
-   {
-      if (can_see_obj(ch, obj) && is_name(arg, obj->name))
-      {
-         if (++count == number)
-            return obj;
-      }
-   }
-
-   return NULL;
-}
-
-/*
- * Create a 'money' obj.
- */
-OBJ_DATA *create_money(int amount)
-{
-   OBJ_DATA *obj;
-
-   if (amount <= 0)
-   {
-      sprintf(buf, "create_money: %d provided as amount.", amount);
-      monitor_chan(buf, MONITOR_OBJ);
-
-      bug("Create_money: zero or negative money %d.", amount);
-      amount = 1;
-   }
-
-   if (amount == 1)
-   {
-      obj = create_object(get_obj_index(OBJ_VNUM_MONEY_ONE), 0);
-   }
-   else
-   {
-      obj = create_object(get_obj_index(OBJ_VNUM_MONEY_SOME), 0);
-      sprintf(buf, obj->short_descr, amount);
-      free_string(obj->short_descr);
-      obj->short_descr = str_dup(buf);
-      obj->value[0] = amount;
-   }
-
-   return obj;
-}
-
-/*
- * Return # of objects which an object counts as.
- * Thanks to Tony Chamberlain for the correct recursive code here.
- */
-int get_obj_number(OBJ_DATA *obj)
-{
-   int number;
-   /*
-    * OBJ_DATA *vobj;
-    */
-
-   number = 1; /*set to one since bag will count as 1 item */
-               /*    if ( obj->item_type == ITEM_CONTAINER )
-                   {
-                      for ( vobj = obj->first_in_carry_list; vobj != NULL; vobj = vobj->next_in_carry_list )
-                      {
-                         number = number - 1;
-                      }
-                   }
-            
-               */
-               /* containers should count as one item!
-                   if ( obj->item_type == ITEM_CONTAINER )
-                     for ( obj = obj->contains; obj != NULL; obj = obj->next_content )
-                  number += get_obj_number( obj );
-                   else
-                  number = 1;
-               Zen */
-   return number;
-}
-
-/*
- * Return weight of an object, including weight of contents.
- */
-int get_obj_weight(OBJ_DATA *obj)
-{
-   int weight;
-
-   if (obj->item_type == ITEM_MONEY)
-   {
-      weight = obj->value[0] / 100000;
-      return weight;
-   }
-   weight = obj->weight;
-   for (obj = obj->first_in_carry_list; obj != NULL; obj = obj->next_in_carry_list)
-      weight += get_obj_weight(obj);
-
-   return weight;
-}
-
-/*
- * True if room is dark.
- */
-bool room_is_dark(ROOM_INDEX_DATA *pRoomIndex)
-{
-   if (pRoomIndex->light > 0)
-      return FALSE;
-
-   if (IS_SET(pRoomIndex->room_flags, ROOM_DARK))
-      return TRUE;
-
-   if (IS_SET(pRoomIndex->affected_by, ROOM_BV_SHADE))
-      return TRUE;
-
-   if (pRoomIndex->sector_type == SECT_INSIDE || pRoomIndex->sector_type == SECT_CITY)
-      return FALSE;
-
-   if (weather_info.moon_phase == MOON_FULL &&
-       (weather_info.moon_loc >= MOON_RISE && weather_info.moon_loc <= MOON_FALL))
-      return FALSE;
-
-   if (weather_info.sunlight == SUN_SET || weather_info.sunlight == SUN_DARK)
-      return TRUE;
-
-   return FALSE;
-}
-
-/*
- * True if room is private.
- */
-bool room_is_private(ROOM_INDEX_DATA *pRoomIndex)
-{
-   CHAR_DATA *rch;
-   int count;
-
-   count = 0;
-   for (rch = pRoomIndex->first_person; rch != NULL; rch = rch->next_in_room)
-      count++;
-
-   if (IS_SET(pRoomIndex->room_flags, ROOM_PRIVATE) && count >= 2)
-      return TRUE;
-
-   if (IS_SET(pRoomIndex->room_flags, ROOM_SOLITARY) && count >= 1)
-      return TRUE;
-
-   return FALSE;
-}
-
-/*
- * True if char can see victim.
- */
-bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
-{
-
-   if (IS_AFFECTED(ch, AFF_BLIND) && !(IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS)))
-      return FALSE;
-
-   if (ch == victim)
-      return TRUE;
-   if (is_same_group(ch, victim))
-      return TRUE;
-   if (victim->leader == ch)
-      return TRUE;
-
-   if (!IS_NPC(ch) && !IS_NPC(victim) && !str_cmp(ch->name, "bash") &&
-       !str_cmp(victim->name, "vannevar"))
-      return FALSE;
-
-   if (!IS_NPC(ch) && !IS_NPC(victim) && !str_cmp(ch->name, "vannevar") &&
-       !str_cmp(victim->name, "bash"))
-      return FALSE;
-
-   if (!IS_NPC(victim) && IS_SET(victim->act, PLR_WIZINVIS) && get_trust(ch) < victim->invis)
-
-      /*
-       * &&   get_trust( ch ) < get_trust( victim ) )
-       */
-
-      return FALSE;
-
-   if (!IS_NPC(ch) && IS_SET(ch->act, PLR_HOLYLIGHT))
-      return TRUE;
-   if ((room_is_dark(ch->in_room) && !IS_AFFECTED(ch, AFF_INFRARED)) &&
-       ch->in_room == victim->in_room)
-      return FALSE;
-
-   if (!IS_NPC(victim) && IS_SET(stance_app[victim->stance].specials, STANCE_NINJA))
-      return FALSE;
-
-   if ((IS_AFFECTED(victim, AFF_INVISIBLE) || item_has_apply(victim, ITEM_APPLY_INV)) &&
-       (!IS_AFFECTED(ch, AFF_DETECT_INVIS) && !item_has_apply(ch, ITEM_APPLY_DET_INV)) &&
-       !(IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS)))
-      return FALSE;
-
-   if (IS_AFFECTED(victim, AFF_INVISIBLE) &&
-       (IS_AFFECTED(ch, AFF_DETECT_INVIS) || item_has_apply(ch, ITEM_APPLY_DET_INV) ||
-        (IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS))) &&
-       get_psuedo_level(victim) - 10 > get_psuedo_level(ch))
-      return FALSE;
-
-   /*
-    * if ( ( IS_AFFECTED( victim, AFF_SNEAK ) || item_has_apply( victim, ITEM_APPLY_SNEAK ) )
-    * && ( number_percent() < 50 + ( 5 * ( get_psuedo_level( victim ) - get_psuedo_level( ch ) ) ) )
-    * ) return FALSE;
-    */
-
-   if ((IS_AFFECTED(victim, AFF_HIDE) || item_has_apply(victim, ITEM_APPLY_HIDE)) &&
-       (!IS_AFFECTED(ch, AFF_DETECT_HIDDEN) && !item_has_apply(ch, ITEM_APPLY_DET_HID) &&
-        !(IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS))) &&
-       victim->fighting == NULL && (IS_NPC(ch) ? !IS_NPC(victim) : IS_NPC(victim)))
-      return FALSE;
-
-   return TRUE;
-}
-
-/*
- * True if char can see obj.
- */
-bool can_see_obj(CHAR_DATA *ch, OBJ_DATA *obj)
-{
-   if (!IS_NPC(ch) && IS_SET(ch->act, PLR_HOLYLIGHT))
-      return TRUE;
-   /*    if ( obj->item_type == ITEM_TRIGGER )
-         return TRUE;  */
-   if (obj->item_type == ITEM_POTION)
-      return TRUE;
-
-   if (IS_AFFECTED(ch, AFF_BLIND))
-      return FALSE;
-
-   if (obj->item_type == ITEM_LIGHT)
-      return TRUE;
-
-   if (room_is_dark(ch->in_room) && (!IS_AFFECTED(ch, AFF_INFRARED)) &&
-       !item_has_apply(ch, ITEM_APPLY_INFRA))
-      return FALSE;
-
-   if (IS_SET(obj->extra_flags, ITEM_INVIS) &&
-       (!IS_AFFECTED(ch, AFF_DETECT_INVIS) && !item_has_apply(ch, ITEM_APPLY_DET_INV)))
-      return FALSE;
-
-   return TRUE;
-}
-
-/*
- * True if char can drop obj.
- */
-bool can_drop_obj(CHAR_DATA *ch, OBJ_DATA *obj)
-{
-   if (!IS_SET(obj->extra_flags, ITEM_NODROP))
-      return TRUE;
-
-   if (!IS_NPC(ch) && ch->level >= LEVEL_IMMORTAL)
-      return TRUE;
-
-   return FALSE;
-}
-
-bool can_sac_obj(CHAR_DATA *ch, OBJ_DATA *obj)
-{
-   if (IS_SET(obj->extra_flags, ITEM_NOSAC))
-      return FALSE;
-   return TRUE;
-}
-
-bool can_use(CHAR_DATA *ch, OBJ_DATA *obj)
-{
-   return (TRUE);
-}
-
-/*
- * Return names of classes which can use an object
- * -- Stephen
+/* get_char_room, get_char_world, get_char_area, get_char,
+ * get_obj_type, get_obj_room, get_obj_list, get_obj_carry,
+ * get_obj_wear, get_obj_here, get_obj_world, create_money,
+ * get_obj_number, get_obj_weight have been moved to lookup.c.
  */
 
-char *who_can_use(OBJ_DATA *obj)
-{
-   return (" all classes.");
-}
+/* room_is_dark, room_is_private, can_see, can_see_obj, can_drop_obj,
+ * can_sac_obj, can_use, who_can_use have been moved to visibility.c.
+ */
 
-void notify(char *message, int lv)
-{
-   /*
-    * This function sends <message>
-    * * to all players of level (lv) and above
-    * * -- Stephen
-    */
-
-   DESCRIPTOR_DATA *d;
-
-   sprintf(buf, "[NOTE]: %s\n\r", message);
-   for (d = first_desc; d; d = d->next)
-      if ((d->connected == CON_PLAYING) && (d->character->level >= lv) && !IS_NPC(d->character) &&
-          !IS_SET(d->character->deaf, CHANNEL_NOTIFY))
-         send_to_char(buf, d->character);
-   return;
-}
-
-void auction(char *message)
-{
-   DESCRIPTOR_DATA *d;
-
-   sprintf(buf, "[AUCTION]: %s\n\r", message);
-   for (d = first_desc; d; d = d->next)
-      if ((d->connected == CON_PLAYING) && !IS_NPC(d->character) &&
-          !IS_SET(d->character->deaf, CHANNEL_AUCTION))
-         send_to_char(buf, d->character);
-   return;
-}
-
-void info(char *message, int lv)
-{
-   /*
-    * This function sends <message>
-    * * to all players of level (lv) and above
-    * * Used mainly to send level gain, death info, etc to mortals.
-    * * - Stephen
-    */
-   DESCRIPTOR_DATA *d;
-
-   for (d = first_desc; d; d = d->next)
-      if ((d->connected == CON_PLAYING) && (d->character->level >= lv) && !IS_NPC(d->character) &&
-          !IS_SET(d->character->deaf, CHANNEL_INFO))
-      {
-         sprintf(buf, "%s[INFO]: %s%s\n\r", color_string(d->character, "info"), message,
-                 color_string(d->character, "normal"));
-         send_to_char(buf, d->character);
-      }
-   return;
-}
-
-void log_chan(const char *message, int lv)
-{
-   /*
-    * Used to send messages to Immortals.
-    * * Level is used to determine WHO gets the message...
-    */
-   DESCRIPTOR_DATA *d;
-
-   sprintf(buf, "[LOG]: %s\n\r", message);
-   for (d = first_desc; d; d = d->next)
-      if ((d->connected == CON_PLAYING) && (get_trust(d->character) == MAX_LEVEL) &&
-          (!IS_NPC(d->character)) && (d->character->level >= lv) &&
-          (!IS_SET(d->character->deaf, CHANNEL_LOG)))
-         send_to_char(buf, d->character);
-   return;
-}
-
-bool item_has_apply(CHAR_DATA *ch, int bit)
-{
-   /*
-    * Used to see if ch is HOLDING any object(s) with the specified
-    * * ITEM_APPLY bit set.
-    * * -S-
-    */
-
-   OBJ_DATA *obj;
-
-   for (obj = ch->first_carry; obj != NULL; obj = obj->next_in_carry_list)
-      if (IS_SET(obj->item_apply, bit) && obj->wear_loc != WEAR_NONE)
-         return TRUE;
-
-   return FALSE;
-}
+/* notify, auction, info, log_chan, item_has_apply have been moved to comm.c. */
 
 /* This is for immrotal authorized skills. Enables imms to set which skillks lower imms may use.
  * handy for abuse control --Flar

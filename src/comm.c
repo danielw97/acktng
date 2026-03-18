@@ -596,4 +596,91 @@ void hang(const char *str)
    kill(getpid(), SIGQUIT);
 }
 
+void notify(char *message, int lv)
+{
+   /*
+    * This function sends <message>
+    * * to all players of level (lv) and above
+    * * -- Stephen
+    */
+   char buf[MAX_STRING_LENGTH];
+   DESCRIPTOR_DATA *d;
+
+   sprintf(buf, "[NOTE]: %s\n\r", message);
+   for (d = first_desc; d; d = d->next)
+      if ((d->connected == CON_PLAYING) && (d->character->level >= lv) && !IS_NPC(d->character) &&
+          !IS_SET(d->character->deaf, CHANNEL_NOTIFY))
+         send_to_char(buf, d->character);
+   return;
+}
+
+void auction(char *message)
+{
+   char buf[MAX_STRING_LENGTH];
+   DESCRIPTOR_DATA *d;
+
+   sprintf(buf, "[AUCTION]: %s\n\r", message);
+   for (d = first_desc; d; d = d->next)
+      if ((d->connected == CON_PLAYING) && !IS_NPC(d->character) &&
+          !IS_SET(d->character->deaf, CHANNEL_AUCTION))
+         send_to_char(buf, d->character);
+   return;
+}
+
+void info(char *message, int lv)
+{
+   /*
+    * This function sends <message>
+    * * to all players of level (lv) and above
+    * * Used mainly to send level gain, death info, etc to mortals.
+    * * - Stephen
+    */
+   char buf[MAX_STRING_LENGTH];
+   DESCRIPTOR_DATA *d;
+
+   for (d = first_desc; d; d = d->next)
+      if ((d->connected == CON_PLAYING) && (d->character->level >= lv) && !IS_NPC(d->character) &&
+          !IS_SET(d->character->deaf, CHANNEL_INFO))
+      {
+         sprintf(buf, "%s[INFO]: %s%s\n\r", color_string(d->character, "info"), message,
+                 color_string(d->character, "normal"));
+         send_to_char(buf, d->character);
+      }
+   return;
+}
+
+void log_chan(const char *message, int lv)
+{
+   /*
+    * Used to send messages to Immortals.
+    * * Level is used to determine WHO gets the message...
+    */
+   char buf[MAX_STRING_LENGTH];
+   DESCRIPTOR_DATA *d;
+
+   sprintf(buf, "[LOG]: %s\n\r", message);
+   for (d = first_desc; d; d = d->next)
+      if ((d->connected == CON_PLAYING) && (get_trust(d->character) == MAX_LEVEL) &&
+          (!IS_NPC(d->character)) && (d->character->level >= lv) &&
+          (!IS_SET(d->character->deaf, CHANNEL_LOG)))
+         send_to_char(buf, d->character);
+   return;
+}
+
+bool item_has_apply(CHAR_DATA *ch, int bit)
+{
+   /*
+    * Used to see if ch is HOLDING any object(s) with the specified
+    * * ITEM_APPLY bit set.
+    * * -S-
+    */
+   OBJ_DATA *obj;
+
+   for (obj = ch->first_carry; obj != NULL; obj = obj->next_in_carry_list)
+      if (IS_SET(obj->item_apply, bit) && obj->wear_loc != WEAR_NONE)
+         return TRUE;
+
+   return FALSE;
+}
+
 #endif /* !UNIT_TEST_COMM */
