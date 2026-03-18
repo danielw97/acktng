@@ -980,6 +980,19 @@
                      */
 
 /*
+ * Macros for sparse skill/spell level definitions in skill_table_data.c and
+ * spell_table_data.c.  Instead of listing all MAX_TOTAL_CLASS entries, only
+ * specify the classes that actually receive the skill:
+ *
+ *   {LEVELS_INIT, L(CLASS_MAG, 5), L(CLASS_WIZ, 3)}
+ *
+ * LEVELS_INIT uses a GCC range designator to fill all entries with NO_USE.
+ * Each L(cls, lvl) then overrides the specific class entry.
+ */
+#define LEVELS_INIT [0 ... MAX_TOTAL_CLASS - 1] = NO_USE
+#define L(cls, lvl) [cls] = (lvl)
+
+/*
  * New bits to determine what skills a mob can do in combat -S-
  */
 

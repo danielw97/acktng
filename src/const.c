@@ -41,8 +41,13 @@
 #define SLOT(n) n
 
 // clang-format off
+/* LEVELS_INIT sets all entries to NO_USE, then L(cls,lvl) overrides specific
+ * ones — GCC legitimately warns about the override, so suppress it here. */
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Woverride-init"
 const struct skill_type skill_table[MAX_SKILL] = {
 #include "spells/spell_table_data.c"
 #include "skills/skill_table_data.c"
 };
+#pragma GCC diagnostic pop
 // clang-format on
