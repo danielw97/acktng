@@ -5,7 +5,7 @@ K umbra_heartspire~
 L {25 40}~
 N 5
 I 25 40
-V 3064 3138
+V 3350 3449
 X 0
 F 10
 U The stones weep violet shadows around you.~
@@ -13,7 +13,7 @@ O virant~
 R all~
 W all~
 #ROOMS
-#3064
+#3350
 @@mThe Sable Causeway@@n~
 The Sable Causeway lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
@@ -25,13 +25,13 @@ The air tastes of cold iron and old incense.
 D0
 ~
 ~
-0 -1 3065
+0 -1 3351
 D2
 ~
 ~
-0 0 1148
+0 0 1331
 S
-#3065
+#3351
 @@mGate of Mourning Iron@@n~
 Gate of Mourning Iron lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
@@ -43,9 +43,9 @@ A violet draft crawls over your skin like wet silk.
 D0
 ~
 ~
-0 -1 3066
+0 -1 3352
 S
-#3066
+#3352
 @@mAtrium of Bleeding Glass@@n~
 Atrium of Bleeding Glass lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
@@ -57,25 +57,25 @@ Every breath fogs black before vanishing into the stone.
 D0
 ~
 ~
-0 -1 3067
+0 -1 3353
 D1
 ~
 ~
-0 -1 3085
+0 -1 3371
 D2
 ~
 ~
-0 -1 3136
+0 -1 3422
 D3
 ~
 ~
-0 -1 3102
+0 -1 3388
 D4
 ~
 ~
-0 -1 3119
+0 -1 3405
 S
-#3067
+#3353
 @@mNave of Hollow Psalms@@n~
 Nave of Hollow Psalms lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
@@ -87,9 +87,9 @@ Somewhere nearby, chains tap a slow funeral rhythm.
 D0
 ~
 ~
-0 -1 3068
+0 -1 3354
 S
-#3068
+#3354
 @@mChancel of Ash Veils@@n~
 Chancel of Ash Veils lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
@@ -101,9 +101,9 @@ Your shadow stretches wrong, lagging half a heartbeat behind you.
 D0
 ~
 ~
-0 -1 3069
+0 -1 3355
 S
-#3069
+#3355
 @@mReliquary of Cindered Saints@@n~
 Reliquary of Cindered Saints lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
@@ -115,9 +115,9 @@ The air tastes of cold iron and old incense.
 D0
 ~
 ~
-0 -1 3070
+0 -1 3356
 S
-#3070
+#3356
 @@mCrypt-Warden Gallery@@n~
 Crypt-Warden Gallery lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
@@ -129,9 +129,9 @@ A violet draft crawls over your skin like wet silk.
 D0
 ~
 ~
-0 -1 3071
+0 -1 3357
 S
-#3071
+#3357
 @@mHall of Stitched Banners@@n~
 Hall of Stitched Banners lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
@@ -143,9 +143,9 @@ Every breath fogs black before vanishing into the stone.
 D0
 ~
 ~
-0 -1 3072
+0 -1 3358
 S
-#3072
+#3358
 @@mChoir Stairs of Dread@@n~
 Choir Stairs of Dread lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
@@ -157,9 +157,9 @@ Somewhere nearby, chains tap a slow funeral rhythm.
 D0
 ~
 ~
-0 -1 3073
+0 -1 3359
 S
-#3073
+#3359
 @@mLantern Cloister@@n~
 Lantern Cloister lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
@@ -171,9 +171,9 @@ Your shadow stretches wrong, lagging half a heartbeat behind you.
 D0
 ~
 ~
-0 -1 3074
+0 -1 3360
 S
-#3074
+#3360
 @@mTransept of Black Snow@@n~
 Transept of Black Snow lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
@@ -185,9 +185,9 @@ The air tastes of cold iron and old incense.
 D0
 ~
 ~
-0 -1 3075
+0 -1 3361
 S
-#3075
+#3361
 @@mReliquary of Hollow Kings@@n~
 Reliquary of Hollow Kings lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
@@ -199,9 +199,9 @@ A violet draft crawls over your skin like wet silk.
 D0
 ~
 ~
-0 -1 3076
+0 -1 3362
 S
-#3076
+#3362
 @@mBalcony of Veiled Moons@@n~
 Balcony of Veiled Moons lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
@@ -213,9 +213,9 @@ Every breath fogs black before vanishing into the stone.
 D0
 ~
 ~
-0 -1 3077
+0 -1 3363
 S
-#3077
+#3363
 @@mAntechamber of Bone Incense@@n~
 Antechamber of Bone Incense lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
@@ -227,9 +227,9 @@ Somewhere nearby, chains tap a slow funeral rhythm.
 D0
 ~
 ~
-0 -1 3078
+0 -1 3364
 S
-#3078
+#3364
 @@mShrine of the Last Bell@@n~
 Shrine of the Last Bell lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
@@ -241,9 +241,9 @@ Your shadow stretches wrong, lagging half a heartbeat behind you.
 D0
 ~
 ~
-0 -1 3079
+0 -1 3365
 S
-#3079
+#3365
 @@mMausoleum Crossing@@n~
 Mausoleum Crossing lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
@@ -255,9 +255,9 @@ The air tastes of cold iron and old incense.
 D0
 ~
 ~
-0 -1 3080
+0 -1 3366
 S
-#3080
+#3366
 @@mVault of Red Candlewax@@n~
 Vault of Red Candlewax lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
@@ -269,9 +269,9 @@ A violet draft crawls over your skin like wet silk.
 D0
 ~
 ~
-0 -1 3081
+0 -1 3367
 S
-#3081
+#3367
 @@mThe Oathbound Rotunda@@n~
 The Oathbound Rotunda lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
@@ -283,9 +283,9 @@ Every breath fogs black before vanishing into the stone.
 D0
 ~
 ~
-0 -1 3082
+0 -1 3368
 S
-#3082
+#3368
 @@mProcessional of Splintered Crowns@@n~
 Processional of Splintered Crowns lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
@@ -297,9 +297,9 @@ Somewhere nearby, chains tap a slow funeral rhythm.
 D0
 ~
 ~
-0 -1 3083
+0 -1 3369
 S
-#3083
+#3369
 @@mSepulchral Verge@@n~
 Sepulchral Verge lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
@@ -311,9 +311,9 @@ Your shadow stretches wrong, lagging half a heartbeat behind you.
 D0
 ~
 ~
-0 -1 3084
+0 -1 3370
 S
-#3084
+#3370
 @@mThe Thorned Throne@@n~
 The Thorned Throne lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
@@ -323,7 +323,7 @@ The air tastes of cold iron and old incense.
 ~
 4 3
 S
-#3085
+#3371
 @@mMirror Arcade@@n~
 Mirror Arcade lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
@@ -335,9 +335,9 @@ A violet draft crawls over your skin like wet silk.
 D0
 ~
 ~
-0 -1 3086
+0 -1 3372
 S
-#3086
+#3372
 @@mGallery of Rain-Black Marble@@n~
 Gallery of Rain-Black Marble lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
@@ -349,9 +349,9 @@ Every breath fogs black before vanishing into the stone.
 D0
 ~
 ~
-0 -1 3087
+0 -1 3373
 S
-#3087
+#3373
 @@mScriptorium of Torn Litanies@@n~
 Scriptorium of Torn Litanies lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
@@ -363,9 +363,9 @@ Somewhere nearby, chains tap a slow funeral rhythm.
 D0
 ~
 ~
-0 -1 3088
+0 -1 3374
 S
-#3088
+#3374
 @@mThe Ink-Drowned Corridor@@n~
 The Ink-Drowned Corridor lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
@@ -377,9 +377,9 @@ Your shadow stretches wrong, lagging half a heartbeat behind you.
 D0
 ~
 ~
-0 -1 3089
+0 -1 3375
 S
-#3089
+#3375
 @@mHall of Distant Organ Notes@@n~
 Hall of Distant Organ Notes lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
@@ -391,9 +391,9 @@ The air tastes of cold iron and old incense.
 D0
 ~
 ~
-0 -1 3090
+0 -1 3376
 S
-#3090
+#3376
 @@mArchive of Unquiet Tomes@@n~
 Archive of Unquiet Tomes lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
@@ -405,9 +405,9 @@ A violet draft crawls over your skin like wet silk.
 D0
 ~
 ~
-0 -1 3091
+0 -1 3377
 S
-#3091
+#3377
 @@mPassage of Raven-Wing Drapes@@n~
 Passage of Raven-Wing Drapes lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
@@ -419,9 +419,9 @@ Every breath fogs black before vanishing into the stone.
 D0
 ~
 ~
-0 -1 3092
+0 -1 3378
 S
-#3092
+#3378
 @@mDust Chapel@@n~
 Dust Chapel lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
@@ -433,9 +433,9 @@ Somewhere nearby, chains tap a slow funeral rhythm.
 D0
 ~
 ~
-0 -1 3093
+0 -1 3379
 S
-#3093
+#3379
 @@mRookery Stair@@n~
 Rookery Stair lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
@@ -447,9 +447,9 @@ Your shadow stretches wrong, lagging half a heartbeat behind you.
 D0
 ~
 ~
-0 -1 3094
+0 -1 3380
 S
-#3094
+#3380
 @@mThe Weeping Belfry@@n~
 The Weeping Belfry lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
@@ -461,9 +461,9 @@ The air tastes of cold iron and old incense.
 D0
 ~
 ~
-0 -1 3095
+0 -1 3381
 S
-#3095
+#3381
 @@mGallery of Cracked Reliquaries@@n~
 Gallery of Cracked Reliquaries lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
@@ -475,9 +475,9 @@ A violet draft crawls over your skin like wet silk.
 D0
 ~
 ~
-0 -1 3096
+0 -1 3382
 S
-#3096
+#3382
 @@mShaft of Blue Night@@n~
 Shaft of Blue Night lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
@@ -489,9 +489,9 @@ Every breath fogs black before vanishing into the stone.
 D0
 ~
 ~
-0 -1 3097
+0 -1 3383
 S
-#3097
+#3383
 @@mBone-Latched Vestibule@@n~
 Bone-Latched Vestibule lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
@@ -503,9 +503,9 @@ Somewhere nearby, chains tap a slow funeral rhythm.
 D0
 ~
 ~
-0 -1 3098
+0 -1 3384
 S
-#3098
+#3384
 @@mConservatory of Dead Roses@@n~
 Conservatory of Dead Roses lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
@@ -517,9 +517,9 @@ Your shadow stretches wrong, lagging half a heartbeat behind you.
 D0
 ~
 ~
-0 -1 3099
+0 -1 3385
 S
-#3099
+#3385
 @@mObsidian Service Hall@@n~
 Obsidian Service Hall lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
@@ -531,9 +531,9 @@ The air tastes of cold iron and old incense.
 D0
 ~
 ~
-0 -1 3100
+0 -1 3386
 S
-#3100
+#3386
 @@mThe Casket Promenade@@n~
 The Casket Promenade lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
@@ -545,9 +545,9 @@ A violet draft crawls over your skin like wet silk.
 D0
 ~
 ~
-0 -1 3101
+0 -1 3387
 S
-#3101
+#3387
 @@mThe Harrowed Duchess's Chamber@@n~
 The Harrowed Duchess's Chamber lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
@@ -557,7 +557,7 @@ Every breath fogs black before vanishing into the stone.
 ~
 4 3
 S
-#3102
+#3388
 @@mSoot-Fresco Passage@@n~
 Soot-Fresco Passage lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
@@ -569,9 +569,9 @@ Somewhere nearby, chains tap a slow funeral rhythm.
 D0
 ~
 ~
-0 -1 3103
+0 -1 3389
 S
-#3103
+#3389
 @@mAnvil Cloister@@n~
 Anvil Cloister lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
@@ -583,9 +583,9 @@ Your shadow stretches wrong, lagging half a heartbeat behind you.
 D0
 ~
 ~
-0 -1 3104
+0 -1 3390
 S
-#3104
+#3390
 @@mBastion Walk of Rusted Pikes@@n~
 Bastion Walk of Rusted Pikes lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
@@ -597,9 +597,9 @@ The air tastes of cold iron and old incense.
 D0
 ~
 ~
-0 -1 3105
+0 -1 3391
 S
-#3105
+#3391
 @@mBarracks of Silent Plate@@n~
 Barracks of Silent Plate lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
@@ -611,9 +611,9 @@ A violet draft crawls over your skin like wet silk.
 D0
 ~
 ~
-0 -1 3106
+0 -1 3392
 S
-#3106
+#3392
 @@mChamber of Severed Heraldry@@n~
 Chamber of Severed Heraldry lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
@@ -625,9 +625,9 @@ Every breath fogs black before vanishing into the stone.
 D0
 ~
 ~
-0 -1 3107
+0 -1 3393
 S
-#3107
+#3393
 @@mThe Gallowglass Hall@@n~
 The Gallowglass Hall lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
@@ -639,9 +639,9 @@ Somewhere nearby, chains tap a slow funeral rhythm.
 D0
 ~
 ~
-0 -1 3108
+0 -1 3394
 S
-#3108
+#3394
 @@mTithe Vault of Iron Teeth@@n~
 Tithe Vault of Iron Teeth lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
@@ -653,9 +653,9 @@ Your shadow stretches wrong, lagging half a heartbeat behind you.
 D0
 ~
 ~
-0 -1 3109
+0 -1 3395
 S
-#3109
+#3395
 @@mForge of Funeral Steel@@n~
 Forge of Funeral Steel lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
@@ -667,9 +667,9 @@ The air tastes of cold iron and old incense.
 D0
 ~
 ~
-0 -1 3110
+0 -1 3396
 S
-#3110
+#3396
 @@mSmelter Steps@@n~
 Smelter Steps lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
@@ -681,9 +681,9 @@ A violet draft crawls over your skin like wet silk.
 D0
 ~
 ~
-0 -1 3111
+0 -1 3397
 S
-#3111
+#3397
 @@mDripstone Armory@@n~
 Dripstone Armory lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
@@ -695,9 +695,9 @@ Every breath fogs black before vanishing into the stone.
 D0
 ~
 ~
-0 -1 3112
+0 -1 3398
 S
-#3112
+#3398
 @@mArsenal of Veinfire@@n~
 Arsenal of Veinfire lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
@@ -709,9 +709,9 @@ Somewhere nearby, chains tap a slow funeral rhythm.
 D0
 ~
 ~
-0 -1 3113
+0 -1 3399
 S
-#3113
+#3399
 @@mWarden's Dais@@n~
 Warden's Dais lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
@@ -723,9 +723,9 @@ Your shadow stretches wrong, lagging half a heartbeat behind you.
 D0
 ~
 ~
-0 -1 3114
+0 -1 3400
 S
-#3114
+#3400
 @@mBridge of Charred Pennants@@n~
 Bridge of Charred Pennants lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
@@ -737,9 +737,9 @@ The air tastes of cold iron and old incense.
 D0
 ~
 ~
-0 -1 3115
+0 -1 3401
 S
-#3115
+#3401
 @@mMercyless Guardpost@@n~
 Mercyless Guardpost lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
@@ -751,9 +751,9 @@ A violet draft crawls over your skin like wet silk.
 D0
 ~
 ~
-0 -1 3116
+0 -1 3402
 S
-#3116
+#3402
 @@mThe Last Portcullis@@n~
 The Last Portcullis lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
@@ -765,9 +765,9 @@ Every breath fogs black before vanishing into the stone.
 D0
 ~
 ~
-0 -1 3117
+0 -1 3403
 S
-#3117
+#3403
 @@mWar-crypt Antechamber@@n~
 War-crypt Antechamber lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
@@ -779,9 +779,9 @@ Somewhere nearby, chains tap a slow funeral rhythm.
 D0
 ~
 ~
-0 -1 3118
+0 -1 3404
 S
-#3118
+#3404
 @@mExecution Chapel@@n~
 Execution Chapel lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
@@ -791,7 +791,7 @@ Your shadow stretches wrong, lagging half a heartbeat behind you.
 ~
 4 3
 S
-#3119
+#3405
 @@mSpiral of Mourning Stars@@n~
 Spiral of Mourning Stars lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
@@ -803,9 +803,9 @@ The air tastes of cold iron and old incense.
 D0
 ~
 ~
-0 -1 3120
+0 -1 3406
 S
-#3120
+#3406
 @@mObservatory of Drowned Constellations@@n~
 Observatory of Drowned Constellations lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
@@ -817,9 +817,9 @@ A violet draft crawls over your skin like wet silk.
 D0
 ~
 ~
-0 -1 3121
+0 -1 3407
 S
-#3121
+#3407
 @@mArcane Choir Loft@@n~
 Arcane Choir Loft lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
@@ -831,9 +831,9 @@ Every breath fogs black before vanishing into the stone.
 D0
 ~
 ~
-0 -1 3122
+0 -1 3408
 S
-#3122
+#3408
 @@mThe Gloom Compass Hall@@n~
 The Gloom Compass Hall lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
@@ -845,9 +845,9 @@ Somewhere nearby, chains tap a slow funeral rhythm.
 D0
 ~
 ~
-0 -1 3123
+0 -1 3409
 S
-#3123
+#3409
 @@mAstral Ossuary@@n~
 Astral Ossuary lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
@@ -859,9 +859,9 @@ Your shadow stretches wrong, lagging half a heartbeat behind you.
 D0
 ~
 ~
-0 -1 3124
+0 -1 3410
 S
-#3124
+#3410
 @@mMoonwell of Black Milk@@n~
 Moonwell of Black Milk lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
@@ -873,9 +873,9 @@ The air tastes of cold iron and old incense.
 D0
 ~
 ~
-0 -1 3125
+0 -1 3411
 S
-#3125
+#3411
 @@mPhial Laboratory@@n~
 Phial Laboratory lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
@@ -887,9 +887,9 @@ A violet draft crawls over your skin like wet silk.
 D0
 ~
 ~
-0 -1 3126
+0 -1 3412
 S
-#3126
+#3412
 @@mRune-Braided Passage@@n~
 Rune-Braided Passage lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
@@ -901,9 +901,9 @@ Every breath fogs black before vanishing into the stone.
 D0
 ~
 ~
-0 -1 3127
+0 -1 3413
 S
-#3127
+#3413
 @@mShadow Orrery@@n~
 Shadow Orrery lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
@@ -915,9 +915,9 @@ Somewhere nearby, chains tap a slow funeral rhythm.
 D0
 ~
 ~
-0 -1 3128
+0 -1 3414
 S
-#3128
+#3414
 @@mHematite Planetarium@@n~
 Hematite Planetarium lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
@@ -929,9 +929,9 @@ Your shadow stretches wrong, lagging half a heartbeat behind you.
 D0
 ~
 ~
-0 -1 3129
+0 -1 3415
 S
-#3129
+#3415
 @@mAetheric Causeway@@n~
 Aetheric Causeway lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
@@ -943,9 +943,9 @@ The air tastes of cold iron and old incense.
 D0
 ~
 ~
-0 -1 3130
+0 -1 3416
 S
-#3130
+#3416
 @@mVault of Crystalline Screams@@n~
 Vault of Crystalline Screams lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
@@ -957,9 +957,9 @@ A violet draft crawls over your skin like wet silk.
 D0
 ~
 ~
-0 -1 3131
+0 -1 3417
 S
-#3131
+#3417
 @@mThe Null-Sigil Gallery@@n~
 The Null-Sigil Gallery lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
@@ -971,9 +971,9 @@ Every breath fogs black before vanishing into the stone.
 D0
 ~
 ~
-0 -1 3132
+0 -1 3418
 S
-#3132
+#3418
 @@mNight Prism Landing@@n~
 Night Prism Landing lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
@@ -985,9 +985,9 @@ Somewhere nearby, chains tap a slow funeral rhythm.
 D0
 ~
 ~
-0 -1 3133
+0 -1 3419
 S
-#3133
+#3419
 @@mApse of Broken Prophecies@@n~
 Apse of Broken Prophecies lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
@@ -999,9 +999,9 @@ Your shadow stretches wrong, lagging half a heartbeat behind you.
 D0
 ~
 ~
-0 -1 3134
+0 -1 3420
 S
-#3134
+#3420
 @@mThe Starved Abbot's Pinnacle@@n~
 The Starved Abbot's Pinnacle lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
@@ -1013,9 +1013,9 @@ The air tastes of cold iron and old incense.
 D0
 ~
 ~
-0 -1 3135
+0 -1 3421
 S
-#3135
+#3421
 @@mRoot of the Heartspire@@n~
 Root of the Heartspire lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
@@ -1025,7 +1025,7 @@ A violet draft crawls over your skin like wet silk.
 ~
 4 3
 S
-#3136
+#3422
 @@mCauseway of Converging Wings@@n~
 Causeway of Converging Wings lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
@@ -1037,9 +1037,9 @@ Every breath fogs black before vanishing into the stone.
 D0
 ~
 ~
-0 -1 3137
+0 -1 3423
 S
-#3137
+#3423
 @@mSanctum of the Ebon Pulse@@n~
 Sanctum of the Ebon Pulse lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
@@ -1051,9 +1051,9 @@ Somewhere nearby, chains tap a slow funeral rhythm.
 D0
 ~
 ~
-0 -1 3138
+0 -1 3424
 S
-#3138
+#3424
 @@mThe Umbral Crownseat@@n~
 The Umbral Crownseat lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
@@ -1065,7 +1065,7 @@ Your shadow stretches wrong, lagging half a heartbeat behind you.
 S
 #0
 #MOBILES
-#3064
+#3350
 crypt acolyte~
 @@RA Crypt Acolyte@@n~
 A crypt acolyte stalks this hall with predatory devotion.
@@ -1082,7 +1082,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11200 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3065
+#3351
 grave cantor~
 @@RA Grave Cantor@@n~
 A grave cantor stalks this hall with predatory devotion.
@@ -1099,7 +1099,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11201 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3066
+#3352
 black-velvet duelist~
 @@RA Black-Velvet Duelist@@n~
 A black-velvet duelist stalks this hall with predatory devotion.
@@ -1116,7 +1116,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11202 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3067
+#3353
 ossuary pikeman~
 @@RA Ossuary Pikeman@@n~
 A ossuary pikeman stalks this hall with predatory devotion.
@@ -1133,7 +1133,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11203 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3068
+#3354
 candle-fed hexer~
 @@RA Candle-Fed Hexer@@n~
 A candle-fed hexer stalks this hall with predatory devotion.
@@ -1150,7 +1150,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11204 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3069
+#3355
 mourning hound~
 @@RA Mourning Hound@@n~
 A mourning hound stalks this hall with predatory devotion.
@@ -1167,7 +1167,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11205 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3070
+#3356
 veilbound archer~
 @@RA Veilbound Archer@@n~
 A veilbound archer stalks this hall with predatory devotion.
@@ -1184,7 +1184,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11206 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3071
+#3357
 gargoyle servitor~
 @@RA Gargoyle Servitor@@n~
 A gargoyle servitor stalks this hall with predatory devotion.
@@ -1201,7 +1201,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11207 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3072
+#3358
 ink-priest~
 @@RA Ink-Priest@@n~
 A ink-priest stalks this hall with predatory devotion.
@@ -1218,7 +1218,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11208 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3073
+#3359
 ravenous ghoul~
 @@RA Ravenous Ghoul@@n~
 A ravenous ghoul stalks this hall with predatory devotion.
@@ -1235,7 +1235,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11209 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3074
+#3360
 cathedral butcher~
 @@RA Cathedral Butcher@@n~
 A cathedral butcher stalks this hall with predatory devotion.
@@ -1252,7 +1252,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11210 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3075
+#3361
 thorn reliquarist~
 @@RA Thorn Reliquarist@@n~
 A thorn reliquarist stalks this hall with predatory devotion.
@@ -1269,7 +1269,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11211 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3076
+#3362
 night watch penitent~
 @@RA Night Watch Penitent@@n~
 A night watch penitent stalks this hall with predatory devotion.
@@ -1286,7 +1286,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11212 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3077
+#3363
 funeral alchemist~
 @@RA Funeral Alchemist@@n~
 A funeral alchemist stalks this hall with predatory devotion.
@@ -1303,7 +1303,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11213 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3078
+#3364
 bone choir adept~
 @@RA Bone Choir Adept@@n~
 A bone choir adept stalks this hall with predatory devotion.
@@ -1320,7 +1320,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11214 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3079
+#3365
 vitrified templar~
 @@RA Vitrified Templar@@n~
 A vitrified templar stalks this hall with predatory devotion.
@@ -1337,7 +1337,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11215 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3080
+#3366
 starved confessor~
 @@RA Starved Confessor@@n~
 A starved confessor stalks this hall with predatory devotion.
@@ -1354,7 +1354,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11216 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3081
+#3367
 sepulcher huntress~
 @@RA Sepulcher Huntress@@n~
 A sepulcher huntress stalks this hall with predatory devotion.
@@ -1371,7 +1371,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11217 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3082
+#3368
 dread chorister~
 @@RA Dread Chorister@@n~
 A dread chorister stalks this hall with predatory devotion.
@@ -1388,7 +1388,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11218 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3083
+#3369
 bloodwax curate~
 @@RA Bloodwax Curate@@n~
 A bloodwax curate stalks this hall with predatory devotion.
@@ -1405,7 +1405,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11219 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3084
+#3370
 casket dragger~
 @@RA Casket Dragger@@n~
 A casket dragger stalks this hall with predatory devotion.
@@ -1422,7 +1422,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11220 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3085
+#3371
 chain-lashed beadle~
 @@RA Chain-Lashed Beadle@@n~
 A chain-lashed beadle stalks this hall with predatory devotion.
@@ -1439,7 +1439,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11221 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3086
+#3372
 iron psalmist~
 @@RA Iron Psalmist@@n~
 A iron psalmist stalks this hall with predatory devotion.
@@ -1456,7 +1456,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11222 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3087
+#3373
 graveglass seer~
 @@RA Graveglass Seer@@n~
 A graveglass seer stalks this hall with predatory devotion.
@@ -1473,7 +1473,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11223 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3088
+#3374
 vellum excoriator~
 @@RA Vellum Excoriator@@n~
 A vellum excoriator stalks this hall with predatory devotion.
@@ -1490,7 +1490,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11224 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3089
+#3375
 midnight flagellant~
 @@RA Midnight Flagellant@@n~
 A midnight flagellant stalks this hall with predatory devotion.
@@ -1507,7 +1507,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11225 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3090
+#3376
 crypt mastiff~
 @@RA Crypt Mastiff@@n~
 A crypt mastiff stalks this hall with predatory devotion.
@@ -1524,7 +1524,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11226 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3091
+#3377
 cinder sacristan~
 @@RA Cinder Sacristan@@n~
 A cinder sacristan stalks this hall with predatory devotion.
@@ -1541,7 +1541,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11227 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3092
+#3378
 ashen margrave~
 @@RA Ashen Margrave@@n~
 A ashen margrave stalks this hall with predatory devotion.
@@ -1558,7 +1558,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11228 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3093
+#3379
 veil-stitched assassin~
 @@RA Veil-Stitched Assassin@@n~
 A veil-stitched assassin stalks this hall with predatory devotion.
@@ -1575,7 +1575,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11229 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3094
+#3380
 hollow cantor~
 @@RA Hollow Cantor@@n~
 A hollow cantor stalks this hall with predatory devotion.
@@ -1592,7 +1592,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11230 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3095
+#3381
 umbra novice~
 @@RA Umbra Novice@@n~
 A umbra novice stalks this hall with predatory devotion.
@@ -1609,7 +1609,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11231 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3096
+#3382
 sable outrider~
 @@RA Sable Outrider@@n~
 A sable outrider stalks this hall with predatory devotion.
@@ -1626,7 +1626,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11232 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3097
+#3383
 rosecrypt fencer~
 @@RA Rosecrypt Fencer@@n~
 A rosecrypt fencer stalks this hall with predatory devotion.
@@ -1643,7 +1643,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11233 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3098
+#3384
 lantern exciseman~
 @@RA Lantern Exciseman@@n~
 A lantern exciseman stalks this hall with predatory devotion.
@@ -1660,7 +1660,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11234 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3099
+#3385
 obituary monk~
 @@RA Obituary Monk@@n~
 A obituary monk stalks this hall with predatory devotion.
@@ -1677,7 +1677,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11235 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3100
+#3386
 rime gargoyle~
 @@RA Rime Gargoyle@@n~
 A rime gargoyle stalks this hall with predatory devotion.
@@ -1694,7 +1694,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11236 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3101
+#3387
 oath-forged pikeman~
 @@RA Oath-Forged Pikeman@@n~
 A oath-forged pikeman stalks this hall with predatory devotion.
@@ -1711,7 +1711,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11237 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3102
+#3388
 dusk chamberlain~
 @@RA Dusk Chamberlain@@n~
 A dusk chamberlain stalks this hall with predatory devotion.
@@ -1728,7 +1728,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11238 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3103
+#3389
 gloom archivist~
 @@RA Gloom Archivist@@n~
 A gloom archivist stalks this hall with predatory devotion.
@@ -1745,7 +1745,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11239 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3104
+#3390
 starless confessor~
 @@RA Starless Confessor@@n~
 A starless confessor stalks this hall with predatory devotion.
@@ -1762,7 +1762,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11240 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3105
+#3391
 raven choir page~
 @@RA Raven Choir Page@@n~
 A raven choir page stalks this hall with predatory devotion.
@@ -1779,7 +1779,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11241 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3106
+#3392
 iron reliquary warden~
 @@RA Iron Reliquary Warden@@n~
 A iron reliquary warden stalks this hall with predatory devotion.
@@ -1796,7 +1796,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11242 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3107
+#3393
 black chapel zealot~
 @@RA Black Chapel Zealot@@n~
 A black chapel zealot stalks this hall with predatory devotion.
@@ -1813,7 +1813,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11243 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3108
+#3394
 veil-torn huntmaster~
 @@RA Veil-Torn Huntmaster@@n~
 A veil-torn huntmaster stalks this hall with predatory devotion.
@@ -1830,7 +1830,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11244 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3109
+#3395
 cathedral outrider~
 @@RA Cathedral Outrider@@n~
 A cathedral outrider stalks this hall with predatory devotion.
@@ -1847,7 +1847,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11245 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3110
+#3396
 smoke-eyed oracle~
 @@RA Smoke-Eyed Oracle@@n~
 A smoke-eyed oracle stalks this hall with predatory devotion.
@@ -1864,7 +1864,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11246 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3111
+#3397
 shroud duelist~
 @@RA Shroud Duelist@@n~
 A shroud duelist stalks this hall with predatory devotion.
@@ -1881,7 +1881,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11247 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3112
+#3398
 ink-blood chanter~
 @@RA Ink-Blood Chanter@@n~
 A ink-blood chanter stalks this hall with predatory devotion.
@@ -1898,7 +1898,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11248 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3113
+#3399
 ash veiled torturer~
 @@RA Ash Veiled Torturer@@n~
 A ash veiled torturer stalks this hall with predatory devotion.
@@ -1915,7 +1915,7 @@ Robes, mail, and ritual scars mark this servant of the Heartspire as both soldie
 + 0 0 0 0 0 0 0 0 0
 l 100 11249 0 0 0 0 0 0 0 0 
 L 30 40 0 0 0 0 0 0 0 
-#3114
+#3400
 thorn-crowned castellan boss~
 @@DA Thorn-Crowned Castellan@@n~
 Thorn-Crowned Castellan waits in absolute stillness, as if listening to a choir beneath the stone.
@@ -1932,7 +1932,7 @@ Ceremonial armor and rune-laced regalia radiate violet-black menace from every s
 + 0 0 0 0 0 0 0 0 0
 l 100 11260 11265 0 0 0 0 0 0 0 
 L 45 45 0 0 0 0 0 0 0 
-#3115
+#3401
 lady vespera the mirror-queen boss~
 @@DA Lady Vespera the Mirror-Queen@@n~
 Lady Vespera the Mirror-Queen waits in absolute stillness, as if listening to a choir beneath the stone.
@@ -1949,7 +1949,7 @@ Ceremonial armor and rune-laced regalia radiate violet-black menace from every s
 + 0 0 0 0 0 0 0 0 0
 l 100 11261 11266 0 0 0 0 0 0 0 
 L 45 45 0 0 0 0 0 0 0 
-#3116
+#3402
 marshal of the iron wake boss~
 @@DA Marshal of the Iron Wake@@n~
 Marshal of the Iron Wake waits in absolute stillness, as if listening to a choir beneath the stone.
@@ -1966,7 +1966,7 @@ Ceremonial armor and rune-laced regalia radiate violet-black menace from every s
 + 0 0 0 0 0 0 0 0 0
 l 100 11262 11267 0 0 0 0 0 0 0 
 L 45 45 0 0 0 0 0 0 0 
-#3117
+#3403
 the astral mortifier boss~
 @@DA The Astral Mortifier@@n~
 The Astral Mortifier waits in absolute stillness, as if listening to a choir beneath the stone.
@@ -1983,7 +1983,7 @@ Ceremonial armor and rune-laced regalia radiate violet-black menace from every s
 + 0 0 0 0 0 0 0 0 0
 l 100 11263 11268 0 0 0 0 0 0 0 
 L 45 45 0 0 0 0 0 0 0 
-#3118
+#3404
 abbot noctivar, ebon hierophant boss~
 @@DA Abbot Noctivar, Ebon Hierophant@@n~
 Abbot Noctivar, Ebon Hierophant waits in absolute stillness, as if listening to a choir beneath the stone.
@@ -2002,7 +2002,7 @@ l 100 11264 11269 0 0 0 0 0 0 0
 L 45 45 0 0 0 0 0 0 0 
 #0
 #OBJECTS
-#3064
+#3350
 sable greathelm~
 @@mSable Greathelm@@n~
 Sable Greathelm lies here beneath drifting cinders.~
@@ -2011,7 +2011,7 @@ Sable Greathelm lies here beneath drifting cinders.~
 12
 L
 25
-#3065
+#3351
 violet ear-spike~
 @@mViolet Ear-Spike@@n~
 Violet Ear-Spike lies here beneath drifting cinders.~
@@ -2020,7 +2020,7 @@ Violet Ear-Spike lies here beneath drifting cinders.~
 3
 L
 26
-#3066
+#3352
 nocturne amulet~
 @@mNocturne Amulet@@n~
 Nocturne Amulet lies here beneath drifting cinders.~
@@ -2029,7 +2029,7 @@ Nocturne Amulet lies here beneath drifting cinders.~
 3
 L
 27
-#3067
+#3353
 mourner signet~
 @@mMourner Signet@@n~
 Mourner Signet lies here beneath drifting cinders.~
@@ -2038,7 +2038,7 @@ Mourner Signet lies here beneath drifting cinders.~
 3
 L
 28
-#3068
+#3354
 iron-laced bracers~
 @@mIron-Laced Bracers@@n~
 Iron-Laced Bracers lies here beneath drifting cinders.~
@@ -2047,7 +2047,7 @@ Iron-Laced Bracers lies here beneath drifting cinders.~
 12
 L
 29
-#3069
+#3355
 gravebound gauntlets~
 @@mGravebound Gauntlets@@n~
 Gravebound Gauntlets lies here beneath drifting cinders.~
@@ -2056,7 +2056,7 @@ Gravebound Gauntlets lies here beneath drifting cinders.~
 12
 L
 30
-#3070
+#3356
 shroudcloak of dusk~
 @@mShroudcloak Of Dusk@@n~
 Shroudcloak Of Dusk lies here beneath drifting cinders.~
@@ -2065,7 +2065,7 @@ Shroudcloak Of Dusk lies here beneath drifting cinders.~
 3
 L
 31
-#3071
+#3357
 bloodwax warbelt~
 @@mBloodwax Warbelt@@n~
 Bloodwax Warbelt lies here beneath drifting cinders.~
@@ -2074,7 +2074,7 @@ Bloodwax Warbelt lies here beneath drifting cinders.~
 8
 L
 32
-#3072
+#3358
 sepulcher greaves~
 @@mSepulcher Greaves@@n~
 Sepulcher Greaves lies here beneath drifting cinders.~
@@ -2083,7 +2083,7 @@ Sepulcher Greaves lies here beneath drifting cinders.~
 12
 L
 33
-#3073
+#3359
 cathedral sabatons~
 @@mCathedral Sabatons@@n~
 Cathedral Sabatons lies here beneath drifting cinders.~
@@ -2092,7 +2092,7 @@ Cathedral Sabatons lies here beneath drifting cinders.~
 12
 L
 34
-#3074
+#3360
 mourning cuirass~
 @@mMourning Cuirass@@n~
 Mourning Cuirass lies here beneath drifting cinders.~
@@ -2101,7 +2101,7 @@ Mourning Cuirass lies here beneath drifting cinders.~
 12
 L
 35
-#3075
+#3361
 obsidian longsword~
 @@mObsidian Longsword@@n~
 Obsidian Longsword rests here, edged in violet soot.~
@@ -2110,7 +2110,7 @@ Obsidian Longsword rests here, edged in violet soot.~
 8
 L
 25
-#3076
+#3362
 funeral mace~
 @@mFuneral Mace@@n~
 Funeral Mace lies here beneath drifting cinders.~
@@ -2119,7 +2119,7 @@ Funeral Mace lies here beneath drifting cinders.~
 12
 L
 26
-#3077
+#3363
 ravenfang dagger~
 @@mRavenfang Dagger@@n~
 Ravenfang Dagger lies here beneath drifting cinders.~
@@ -2128,7 +2128,7 @@ Ravenfang Dagger lies here beneath drifting cinders.~
 3
 L
 27
-#3078
+#3364
 witchglass wand~
 @@mWitchglass Wand@@n~
 Witchglass Wand lies here beneath drifting cinders.~
@@ -2137,7 +2137,7 @@ Witchglass Wand lies here beneath drifting cinders.~
 3
 L
 28
-#3079
+#3365
 litany staff~
 @@mLitany Staff@@n~
 Litany Staff lies here beneath drifting cinders.~
@@ -2146,7 +2146,7 @@ Litany Staff lies here beneath drifting cinders.~
 3
 L
 29
-#3080
+#3366
 gloom veil~
 @@mGloom Veil@@n~
 Gloom Veil lies here beneath drifting cinders.~
@@ -2155,7 +2155,7 @@ Gloom Veil lies here beneath drifting cinders.~
 12
 L
 30
-#3081
+#3367
 penitent sash~
 @@mPenitent Sash@@n~
 Penitent Sash lies here beneath drifting cinders.~
@@ -2164,7 +2164,7 @@ Penitent Sash lies here beneath drifting cinders.~
 12
 L
 31
-#3082
+#3368
 ember-stitched leggings~
 @@mEmber-Stitched Leggings@@n~
 Ember-Stitched Leggings lies here beneath drifting cinders.~
@@ -2173,7 +2173,7 @@ Ember-Stitched Leggings lies here beneath drifting cinders.~
 3
 L
 32
-#3083
+#3369
 gravesoot boots~
 @@mGravesoot Boots@@n~
 Gravesoot Boots lies here beneath drifting cinders.~
@@ -2182,7 +2182,7 @@ Gravesoot Boots lies here beneath drifting cinders.~
 8
 L
 33
-#3084
+#3370
 choir captain helm~
 @@mChoir Captain Helm@@n~
 Choir Captain Helm lies here beneath drifting cinders.~
@@ -2191,7 +2191,7 @@ Choir Captain Helm lies here beneath drifting cinders.~
 12
 L
 34
-#3085
+#3371
 reliquary ear-chain~
 @@mReliquary Ear-Chain@@n~
 Reliquary Ear-Chain lies here beneath drifting cinders.~
@@ -2200,7 +2200,7 @@ Reliquary Ear-Chain lies here beneath drifting cinders.~
 12
 L
 35
-#3086
+#3372
 censerchain amulet~
 @@mCenserchain Amulet@@n~
 Censerchain Amulet lies here beneath drifting cinders.~
@@ -2209,7 +2209,7 @@ Censerchain Amulet lies here beneath drifting cinders.~
 12
 L
 25
-#3087
+#3373
 ink-prayer band~
 @@mInk-Prayer Band@@n~
 Ink-Prayer Band rests here, edged in violet soot.~
@@ -2218,7 +2218,7 @@ Ink-Prayer Band rests here, edged in violet soot.~
 8
 L
 26
-#3088
+#3374
 mortarstone wristguard~
 @@mMortarstone Wristguard@@n~
 Mortarstone Wristguard lies here beneath drifting cinders.~
@@ -2227,7 +2227,7 @@ Mortarstone Wristguard lies here beneath drifting cinders.~
 12
 L
 27
-#3089
+#3375
 pikehand gauntlets~
 @@mPikehand Gauntlets@@n~
 Pikehand Gauntlets lies here beneath drifting cinders.~
@@ -2236,7 +2236,7 @@ Pikehand Gauntlets lies here beneath drifting cinders.~
 3
 L
 28
-#3090
+#3376
 vesper cloak~
 @@mVesper Cloak@@n~
 Vesper Cloak lies here beneath drifting cinders.~
@@ -2245,7 +2245,7 @@ Vesper Cloak lies here beneath drifting cinders.~
 3
 L
 29
-#3091
+#3377
 flagellant ropebelt~
 @@mFlagellant Ropebelt@@n~
 Flagellant Ropebelt lies here beneath drifting cinders.~
@@ -2254,7 +2254,7 @@ Flagellant Ropebelt lies here beneath drifting cinders.~
 3
 L
 30
-#3092
+#3378
 boneplate tassets~
 @@mBoneplate Tassets@@n~
 Boneplate Tassets lies here beneath drifting cinders.~
@@ -2263,7 +2263,7 @@ Boneplate Tassets lies here beneath drifting cinders.~
 12
 L
 31
-#3093
+#3379
 ashen jackboots~
 @@mAshen Jackboots@@n~
 Ashen Jackboots lies here beneath drifting cinders.~
@@ -2272,7 +2272,7 @@ Ashen Jackboots lies here beneath drifting cinders.~
 12
 L
 32
-#3094
+#3380
 tithebound breastplate~
 @@mTithebound Breastplate@@n~
 Tithebound Breastplate lies here beneath drifting cinders.~
@@ -2281,7 +2281,7 @@ Tithebound Breastplate lies here beneath drifting cinders.~
 3
 L
 33
-#3095
+#3381
 cryptsteel falchion~
 @@mCryptsteel Falchion@@n~
 Cryptsteel Falchion lies here beneath drifting cinders.~
@@ -2290,7 +2290,7 @@ Cryptsteel Falchion lies here beneath drifting cinders.~
 8
 L
 34
-#3096
+#3382
 dirgehammer~
 @@mDirgehammer@@n~
 Dirgehammer lies here beneath drifting cinders.~
@@ -2299,7 +2299,7 @@ Dirgehammer lies here beneath drifting cinders.~
 12
 L
 35
-#3097
+#3383
 gutterglass knife~
 @@mGutterglass Knife@@n~
 Gutterglass Knife lies here beneath drifting cinders.~
@@ -2308,7 +2308,7 @@ Gutterglass Knife lies here beneath drifting cinders.~
 12
 L
 25
-#3098
+#3384
 sacristan rod~
 @@mSacristan Rod@@n~
 Sacristan Rod lies here beneath drifting cinders.~
@@ -2317,7 +2317,7 @@ Sacristan Rod lies here beneath drifting cinders.~
 12
 L
 26
-#3099
+#3385
 rookery staff~
 @@mRookery Staff@@n~
 Rookery Staff rests here, edged in violet soot.~
@@ -2326,7 +2326,7 @@ Rookery Staff rests here, edged in violet soot.~
 8
 L
 27
-#3100
+#3386
 ravenmantle~
 @@mRavenmantle@@n~
 Ravenmantle lies here beneath drifting cinders.~
@@ -2335,7 +2335,7 @@ Ravenmantle lies here beneath drifting cinders.~
 12
 L
 28
-#3101
+#3387
 hexer cord~
 @@mHexer Cord@@n~
 Hexer Cord lies here beneath drifting cinders.~
@@ -2344,7 +2344,7 @@ Hexer Cord lies here beneath drifting cinders.~
 3
 L
 29
-#3102
+#3388
 dreadmarch greaves~
 @@mDreadmarch Greaves@@n~
 Dreadmarch Greaves lies here beneath drifting cinders.~
@@ -2353,7 +2353,7 @@ Dreadmarch Greaves lies here beneath drifting cinders.~
 3
 L
 30
-#3103
+#3389
 lanternstrider boots~
 @@mLanternstrider Boots@@n~
 Lanternstrider Boots lies here beneath drifting cinders.~
@@ -2362,7 +2362,7 @@ Lanternstrider Boots lies here beneath drifting cinders.~
 3
 L
 31
-#3104
+#3390
 nightwatch hauberk~
 @@mNightwatch Hauberk@@n~
 Nightwatch Hauberk lies here beneath drifting cinders.~
@@ -2371,7 +2371,7 @@ Nightwatch Hauberk lies here beneath drifting cinders.~
 12
 L
 32
-#3105
+#3391
 rosecrypt circlet~
 @@mRosecrypt Circlet@@n~
 Rosecrypt Circlet lies here beneath drifting cinders.~
@@ -2380,7 +2380,7 @@ Rosecrypt Circlet lies here beneath drifting cinders.~
 12
 L
 33
-#3106
+#3392
 velvet mourning stud~
 @@mVelvet Mourning Stud@@n~
 Velvet Mourning Stud lies here beneath drifting cinders.~
@@ -2389,7 +2389,7 @@ Velvet Mourning Stud lies here beneath drifting cinders.~
 3
 L
 34
-#3107
+#3393
 thorn psalm pendant~
 @@mThorn Psalm Pendant@@n~
 Thorn Psalm Pendant lies here beneath drifting cinders.~
@@ -2398,7 +2398,7 @@ Thorn Psalm Pendant lies here beneath drifting cinders.~
 8
 L
 35
-#3108
+#3394
 sealed vow ring~
 @@mSealed Vow Ring@@n~
 Sealed Vow Ring lies here beneath drifting cinders.~
@@ -2407,7 +2407,7 @@ Sealed Vow Ring lies here beneath drifting cinders.~
 12
 L
 25
-#3109
+#3395
 gravemark bracer~
 @@mGravemark Bracer@@n~
 Gravemark Bracer lies here beneath drifting cinders.~
@@ -2416,7 +2416,7 @@ Gravemark Bracer lies here beneath drifting cinders.~
 12
 L
 26
-#3110
+#3396
 candlewarden gloves~
 @@mCandlewarden Gloves@@n~
 Candlewarden Gloves lies here beneath drifting cinders.~
@@ -2425,7 +2425,7 @@ Candlewarden Gloves lies here beneath drifting cinders.~
 12
 L
 27
-#3111
+#3397
 briarwound cloak~
 @@mBriarwound Cloak@@n~
 Briarwound Cloak rests here, edged in violet soot.~
@@ -2434,7 +2434,7 @@ Briarwound Cloak rests here, edged in violet soot.~
 8
 L
 28
-#3112
+#3398
 belfry chainbelt~
 @@mBelfry Chainbelt@@n~
 Belfry Chainbelt lies here beneath drifting cinders.~
@@ -2443,7 +2443,7 @@ Belfry Chainbelt lies here beneath drifting cinders.~
 12
 L
 29
-#3113
+#3399
 pallid processional greaves~
 @@mPallid Processional Greaves@@n~
 Pallid Processional Greaves lies here beneath drifting cinders.~
@@ -2452,7 +2452,7 @@ Pallid Processional Greaves lies here beneath drifting cinders.~
 3
 L
 30
-#3114
+#3400
 catacomb march boots~
 @@mCatacomb March Boots@@n~
 Catacomb March Boots lies here beneath drifting cinders.~
@@ -2461,7 +2461,7 @@ Catacomb March Boots lies here beneath drifting cinders.~
 3
 L
 31
-#3115
+#3401
 blackglass aegis~
 @@mBlackglass Aegis@@n~
 Blackglass Aegis lies here beneath drifting cinders.~
@@ -2470,7 +2470,7 @@ Blackglass Aegis lies here beneath drifting cinders.~
 3
 L
 32
-#3116
+#3402
 castellan's crown~
 @@DCastellan's Crown@@n~
 Castellan's Crown glimmers here with malignant violet light.~
@@ -2479,7 +2479,7 @@ Castellan's Crown glimmers here with malignant violet light.~
 3
 L
 40
-#3117
+#3403
 vespera's mirrored ring~
 @@DVespera's Mirrored Ring@@n~
 Vespera's Mirrored Ring glimmers here with malignant violet light.~
@@ -2488,7 +2488,7 @@ Vespera's Mirrored Ring glimmers here with malignant violet light.~
 3
 L
 40
-#3118
+#3404
 iron wake gauntlets~
 @@DIron Wake Gauntlets@@n~
 Iron Wake Gauntlets glimmers here with malignant violet light.~
@@ -2497,7 +2497,7 @@ Iron Wake Gauntlets glimmers here with malignant violet light.~
 12
 L
 40
-#3119
+#3405
 mortifier's starless amulet~
 @@DMortifier's Starless Amulet@@n~
 Mortifier's Starless Amulet glimmers here with malignant violet light.~
@@ -2506,7 +2506,7 @@ Mortifier's Starless Amulet glimmers here with malignant violet light.~
 12
 L
 40
-#3120
+#3406
 abbot's eclipse cloak~
 @@DAbbot's Eclipse Cloak@@n~
 Abbot's Eclipse Cloak glimmers here with malignant violet light.~
@@ -2515,7 +2515,7 @@ Abbot's Eclipse Cloak glimmers here with malignant violet light.~
 3
 L
 40
-#3121
+#3407
 umbral greatblade~
 @@DUmbral Greatblade@@n~
 Umbral Greatblade glimmers here with malignant violet light.~
@@ -2524,7 +2524,7 @@ Umbral Greatblade glimmers here with malignant violet light.~
 8
 L
 40
-#3122
+#3408
 heartspire warplate~
 @@DHeartspire Warplate@@n~
 Heartspire Warplate glimmers here with malignant violet light.~
@@ -2533,7 +2533,7 @@ Heartspire Warplate glimmers here with malignant violet light.~
 12
 L
 40
-#3123
+#3409
 noctivar's oathbelt~
 @@DNoctivar's Oathbelt@@n~
 Noctivar's Oathbelt glimmers here with malignant violet light.~
@@ -2544,235 +2544,235 @@ L
 40
 #0
 #RESETS
-M 0 3064 1 3067   (null)
+M 0 3350 1 3353   (null)
 
-G 0 3064 0
+G 0 3350 0
 
-M 0 3065 1 3068   (null)
+M 0 3351 1 3354   (null)
 
-G 0 3065 0
+G 0 3351 0
 
-M 0 3066 1 3069   (null)
+M 0 3352 1 3355   (null)
 
-G 0 3066 0
+G 0 3352 0
 
-M 0 3067 1 3070   (null)
+M 0 3353 1 3356   (null)
 
-G 0 3067 0
+G 0 3353 0
 
-M 0 3068 1 3071   (null)
+M 0 3354 1 3357   (null)
 
-G 0 3068 0
+G 0 3354 0
 
-M 0 3069 1 3072   (null)
+M 0 3355 1 3358   (null)
 
-G 0 3069 0
+G 0 3355 0
 
-M 0 3070 1 3073   (null)
+M 0 3356 1 3359   (null)
 
-G 0 3070 0
+G 0 3356 0
 
-M 0 3071 1 3074   (null)
+M 0 3357 1 3360   (null)
 
-G 0 3071 0
+G 0 3357 0
 
-M 0 3072 1 3075   (null)
+M 0 3358 1 3361   (null)
 
-G 0 3072 0
+G 0 3358 0
 
-M 0 3073 1 3076   (null)
+M 0 3359 1 3362   (null)
 
-G 0 3073 0
+G 0 3359 0
 
-M 0 3074 1 3077   (null)
+M 0 3360 1 3363   (null)
 
-G 0 3074 0
+G 0 3360 0
 
-M 0 3075 1 3078   (null)
+M 0 3361 1 3364   (null)
 
-G 0 3075 0
+G 0 3361 0
 
-M 0 3076 1 3079   (null)
+M 0 3362 1 3365   (null)
 
-G 0 3076 0
+G 0 3362 0
 
-M 0 3077 1 3080   (null)
+M 0 3363 1 3366   (null)
 
-G 0 3077 0
+G 0 3363 0
 
-M 0 3078 1 3081   (null)
+M 0 3364 1 3367   (null)
 
-G 0 3078 0
+G 0 3364 0
 
-M 0 3079 1 3082   (null)
+M 0 3365 1 3368   (null)
 
-G 0 3079 0
+G 0 3365 0
 
-M 0 3080 1 3083   (null)
+M 0 3366 1 3369   (null)
 
-G 0 3080 0
+G 0 3366 0
 
-M 0 3081 1 3085   (null)
+M 0 3367 1 3371   (null)
 
-G 0 3081 0
+G 0 3367 0
 
-M 0 3082 1 3086   (null)
+M 0 3368 1 3372   (null)
 
-G 0 3082 0
+G 0 3368 0
 
-M 0 3083 1 3087   (null)
+M 0 3369 1 3373   (null)
 
-G 0 3083 0
+G 0 3369 0
 
-M 0 3084 1 3088   (null)
+M 0 3370 1 3374   (null)
 
-G 0 3084 0
+G 0 3370 0
 
-M 0 3085 1 3089   (null)
+M 0 3371 1 3375   (null)
 
-G 0 3085 0
+G 0 3371 0
 
-M 0 3086 1 3090   (null)
+M 0 3372 1 3376   (null)
 
-G 0 3086 0
+G 0 3372 0
 
-M 0 3087 1 3091   (null)
+M 0 3373 1 3377   (null)
 
-G 0 3087 0
+G 0 3373 0
 
-M 0 3088 1 3092   (null)
+M 0 3374 1 3378   (null)
 
-G 0 3088 0
+G 0 3374 0
 
-M 0 3089 1 3093   (null)
+M 0 3375 1 3379   (null)
 
-G 0 3089 0
+G 0 3375 0
 
-M 0 3090 1 3094   (null)
+M 0 3376 1 3380   (null)
 
-G 0 3090 0
+G 0 3376 0
 
-M 0 3091 1 3095   (null)
+M 0 3377 1 3381   (null)
 
-G 0 3091 0
+G 0 3377 0
 
-M 0 3092 1 3096   (null)
+M 0 3378 1 3382   (null)
 
-G 0 3092 0
+G 0 3378 0
 
-M 0 3093 1 3097   (null)
+M 0 3379 1 3383   (null)
 
-G 0 3093 0
+G 0 3379 0
 
-M 0 3094 1 3098   (null)
+M 0 3380 1 3384   (null)
 
-G 0 3094 0
+G 0 3380 0
 
-M 0 3095 1 3099   (null)
+M 0 3381 1 3385   (null)
 
-G 0 3095 0
+G 0 3381 0
 
-M 0 3096 1 3100   (null)
+M 0 3382 1 3386   (null)
 
-G 0 3096 0
+G 0 3382 0
 
-M 0 3097 1 3102   (null)
+M 0 3383 1 3388   (null)
 
-G 0 3097 0
+G 0 3383 0
 
-M 0 3098 1 3103   (null)
+M 0 3384 1 3389   (null)
 
-G 0 3098 0
+G 0 3384 0
 
-M 0 3099 1 3104   (null)
+M 0 3385 1 3390   (null)
 
-G 0 3099 0
+G 0 3385 0
 
-M 0 3100 1 3105   (null)
+M 0 3386 1 3391   (null)
 
-G 0 3100 0
+G 0 3386 0
 
-M 0 3101 1 3106   (null)
+M 0 3387 1 3392   (null)
 
-G 0 3101 0
+G 0 3387 0
 
-M 0 3102 1 3107   (null)
+M 0 3388 1 3393   (null)
 
-G 0 3102 0
+G 0 3388 0
 
-M 0 3103 1 3108   (null)
+M 0 3389 1 3394   (null)
 
-G 0 3103 0
+G 0 3389 0
 
-M 0 3104 1 3109   (null)
+M 0 3390 1 3395   (null)
 
-G 0 3104 0
+G 0 3390 0
 
-M 0 3105 1 3110   (null)
+M 0 3391 1 3396   (null)
 
-G 0 3105 0
+G 0 3391 0
 
-M 0 3106 1 3111   (null)
+M 0 3392 1 3397   (null)
 
-G 0 3106 0
+G 0 3392 0
 
-M 0 3107 1 3112   (null)
+M 0 3393 1 3398   (null)
 
-G 0 3107 0
+G 0 3393 0
 
-M 0 3108 1 3113   (null)
+M 0 3394 1 3399   (null)
 
-G 0 3108 0
+G 0 3394 0
 
-M 0 3109 1 3114   (null)
+M 0 3395 1 3400   (null)
 
-G 0 3109 0
+G 0 3395 0
 
-M 0 3110 1 3115   (null)
+M 0 3396 1 3401   (null)
 
-G 0 3110 0
+G 0 3396 0
 
-M 0 3111 1 3116   (null)
+M 0 3397 1 3402   (null)
 
-G 0 3111 0
+G 0 3397 0
 
-M 0 3112 1 3117   (null)
+M 0 3398 1 3403   (null)
 
-G 0 3112 0
+G 0 3398 0
 
-M 0 3113 1 3119   (null)
+M 0 3399 1 3405   (null)
 
-G 0 3113 0
+G 0 3399 0
 
-M 0 3114 1 3084   (null)
+M 0 3400 1 3370   (null)
 
-G 0 3116 0
+G 0 3402 0
 
-G 0 3120 0
+G 0 3406 0
 
-M 0 3115 1 3101   (null)
+M 0 3401 1 3387   (null)
 
-G 0 3117 0
+G 0 3403 0
 
-G 0 3121 0
+G 0 3407 0
 
-M 0 3116 1 3118   (null)
+M 0 3402 1 3404   (null)
 
-G 0 3118 0
+G 0 3404 0
 
-G 0 3122 0
+G 0 3408 0
 
-M 0 3117 1 3135   (null)
+M 0 3403 1 3421   (null)
 
-G 0 3119 0
+G 0 3405 0
 
-G 0 3123 0
+G 0 3409 0
 
-M 0 3118 1 3138   (null)
+M 0 3404 1 3424   (null)
 
-G 0 3120 0
+G 0 3406 0
 
-G 0 3120 0
+G 0 3406 0
 
 S
 #$

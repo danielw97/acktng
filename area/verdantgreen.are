@@ -5,7 +5,7 @@ K verdantdepths~
 L @@W(@@r75 95@@W)@@N~
 N 74
 I 75 95
-V 2739 2863
+V 3000 3149
 X 0
 F 15
 U @@gthe ancient trees creak and groan as the forest shifts around you@@N~
@@ -14,7 +14,7 @@ R all~
 W all~
 T You can teleport into here
 #ROOMS
-#2739
+#3000
 Entrance to the Verdant Depths~
 The path west from the Forest of Confusion opens into a vast shadowed expanse where trees of impossible girth tower overhead, their @@Gbark black with age@@N and slicked with emerald moss.
 The air grows thick and cloying, heavy with the scent of ancient loam and something older beneath it -- wet stone, deep root, the exhalation of centuries of patient growth.
@@ -27,17 +27,17 @@ D2
 The trail descends south into deepening shadow and the smell of old earth.
 ~
 ~
-0 -1 2740
+0 -1 3001
 D3
 ~
 ~
-0 -1 2434
+0 -1 2695
 E
 oak pillars~
 Two enormous oaks flank the trail like sentinels, their exposed roots interlocked across the path as though shaking hands; the bark is coal-black and moist, inscribed with patterns of lichen that might be mistaken for runes.
 ~
 S
-#2740
+#3001
 A Darkening Trail~
 The path narrows here, hemmed in by undergrowth that leans inward from both sides and blots out what little light filters through the vast canopy above.
 Every footstep releases a damp, earthy perfume from the mulch beneath, and the @@gshadows between the trunks@@N shift and breathe in ways that have nothing to do with the wind.
@@ -48,19 +48,19 @@ D0
 The trail climbs north toward a faint pale light.
 ~
 ~
-0 -1 2739
+0 -1 3000
 D1
 A small clearing opens to the east, carpeted in pale green moss.
 ~
 ~
-0 -1 2742
+0 -1 3003
 D2
 The trail sinks further southward into the press of great oaks.
 ~
 ~
-0 -1 2741
+0 -1 3002
 S
-#2741
+#3002
 Beneath Towering Oaks~
 Three ancient oaks of unfathomable girth dominate this stretch of forest, their trunks wider than a house, their bark furrowed deep as canyons and crusted with @@rpale green lichens@@N.
 Roots as thick as fallen logs buckle the earth in every direction, and their canopy forms an unbroken ceiling of dark leaves through which only rare shafts of spectral light penetrate.
@@ -71,24 +71,24 @@ D0
 The trail narrows northward into deepening shadow.
 ~
 ~
-0 -1 2740
+0 -1 3001
 D1
 The roots grow particularly dense and tortured to the east.
 ~
 ~
-0 -1 2743
+0 -1 3004
 D2
 The enormous trunks thin slightly to the south, where a log bridge spans a ravine.
 ~
 ~
-0 -1 2746
+0 -1 3007
 D3
 The sound of dripping water and a rich fungal scent drift from the west.
 ~
 ~
-0 -1 2744
+0 -1 3005
 S
-#2742
+#3003
 A Moss-Covered Clearing~
 A small open patch interrupts the forest here, ringed by slender saplings that have grown in the shadow of greater trees for centuries.
 Every surface is thickly padded with living moss in shades of vivid @@Ggreen@@N and blue-gray, soft underfoot as a mattress, and peculiarly warm to the touch despite the chill in the air.
@@ -99,18 +99,18 @@ D1
 The gloomy trail continues eastward through the darkening wood.
 ~
 ~
-0 -1 2740
+0 -1 3001
 D2
 The moss grows thicker southward, and a cloud of spores drifts on the still air.
 ~
 ~
-0 -1 2745
+0 -1 3006
 E
 moss~
 The moss here is uncannily vivid, almost luminous in the dim light; it grows in concentric rings outward from some central point, as though planted rather than grown naturally.
 ~
 S
-#2743
+#3004
 Among Gnarled Roots~
 The roots of the ancient oaks have buckled the earth entirely here, creating a tortured landscape of arches and crevasses through which one must scramble and stoop.
 The @@glight barely reaches@@N down between the enormous root-walls, leaving this place in a deep, musty twilight that smells strongly of wet wood and the dark, intimate decay of centuries.
@@ -121,14 +121,14 @@ D2
 The root-maze continues southward and downward, if one dares crouch through it.
 ~
 ~
-0 -1 2747
+0 -1 3008
 D3
 The great oak trunks open westward where the roots thin slightly.
 ~
 ~
-0 -1 2741
+0 -1 3002
 S
-#2744
+#3005
 A Fungal Hollow~
 In the shadow of a great tree's upturned root-ball, a bowl-shaped hollow has collected centuries of leaf litter and moisture.
 Dozens of fungi bloom here in rings and clusters, their caps ranging from porcelain white to vivid orange, some pulsing with a faint @@rbioluminescent glow@@N that casts soft rippling patterns on the surrounding bark.
@@ -139,13 +139,13 @@ D1
 The hollow opens eastward where the root-ball ends and the oaks resume.
 ~
 ~
-0 -1 2741
+0 -1 3002
 E
 fungi mushrooms glow~
 Some of the larger caps are nearly a foot across, their undersides gill-streaked in iridescent @@rblue-green@@N; touching them leaves a faint luminous residue on the fingers that takes hours to fade.
 ~
 S
-#2745
+#3006
 The Spore Thicket~
 The undergrowth here has gone strange and dense, with enormous fungal stalks rising shoulder-high and exhaling slow plumes of @@rpale spores@@N that drift through the air like lazy smoke.
 The spores carry a faintly sweet, soporific scent that catches in the back of the throat and makes the edges of thought seem slightly further away than usual.
@@ -156,9 +156,9 @@ D0
 The spore clouds thin to the north where the moss clearing lies.
 ~
 ~
-0 -1 2742
+0 -1 3003
 S
-#2746
+#3007
 A Rotting Log Bridge~
 A colossal fallen trunk spans a narrow ravine here, its bark long since sloughed away, the heartwood exposed and @@ggray@@N but still solid enough to bear weight.
 The ravine below is a dark cleft filled with ferns and the sound of trickling water, and the far side rises into deeper shadow where the great oaks crowd together more thickly than ever.
@@ -169,22 +169,22 @@ D0
 The path climbs north toward the great oak trunks.
 ~
 ~
-0 -1 2741
+0 -1 3002
 D1
 A drift of fern fronds marks a passage eastward through the undergrowth.
 ~
 ~
-0 -1 2749
+0 -1 3010
 D2
 The ground drops southward toward a dark pool shimmering with algae.
 ~
 ~
-0 -1 2751
+0 -1 3012
 D3
 A curtain of woven vines hangs across the path to the west, rustling faintly.
 ~
 ^curtain of vines~
-1 -1 2748
+1 -1 3009
 E
 ravine bridge~
 The log is ancient and wide; moss and shelf fungi have colonized every inch of its surface, and in the cleft below, @@Gferns@@N grow tall in the perpetual damp, swaying despite the absence of any wind.
@@ -194,7 +194,7 @@ curtain vines~
 The curtain is woven from living vines still attached to the trees on either side, their tendrils braided into a dense screen that moves slowly as each component vine grows and shifts; it can be pushed aside but immediately reasserts itself, the living weave never truly open for long.
 ~
 S
-#2747
+#3008
 Beneath a Canopy of Vines~
 An aggressive network of climbing vines has consumed the forest canopy here, strangling the native trees and forming a dense living roof that hangs in great @@Glooping curtains@@N of dark green.
 The light that filters through takes on a watery, green-tinged quality, suffusing the space below in a dim, aqueous glow that makes the vegetation look like seaweed and the air feel like shallow water.
@@ -205,9 +205,9 @@ D0
 The vine canopy thins northward, and the gnarled roots become visible again.
 ~
 ~
-0 -1 2743
+0 -1 3004
 S
-#2748
+#3009
 A Sunken Trail~
 The path descends into a hollow where the water table stands close enough to the surface that the trail becomes a series of stepping-stones set across black, mirror-still water.
 The trees here have adapted to the wet, their roots forming stilt-structures above the flood line, and the @@gshadows@@N are almost total, broken only by the @@rbioluminescent gleam@@N of submerged fungi breathing slow light up through the murk.
@@ -218,13 +218,13 @@ D1
 The vine curtain rustles eastward, and dim light filters through its weave.
 ~
 ^curtain of vines~
-1 -1 2746
+1 -1 3007
 E
 curtain vines~
 The curtain of vines here is permanently wet, each tendril beaded with condensation from the hollow's moisture; pushing through it leaves a cold, green-smelling dampness on the hands that lingers for some time.
 ~
 S
-#2749
+#3010
 The Whispering Ferns~
 A broad stretch of forest floor is carpeted from one side to the other in enormous ferns, their @@Gfronds arching@@N overhead at head height, creating a living tunnel of soft green through which the trail passes.
 The air movement here produces a constant soft rustling that sounds, just barely, like muffled voices just beyond comprehension -- the same syllables, never quite resolved, never quite stopping.
@@ -235,14 +235,14 @@ D1
 The ferns grow taller eastward, crowding still closer over the path.
 ~
 ~
-0 -1 2750
+0 -1 3011
 D3
 The fern corridor opens westward onto the log bridge and the ravine.
 ~
 ~
-0 -1 2746
+0 -1 3007
 S
-#2750
+#3011
 A Thicket of Thorns~
 The undergrowth here has grown into a nearly impassable wall of thorn-studded briar, the canes thick as wrists and studded with hooked spines that can tear through leather.
 Only a narrow, scratching passage threads through the mass, and whatever has used it has left its mark in tufts of fur and dried blood on the thorns at every level.
@@ -253,9 +253,9 @@ D3
 The thorn wall opens grudgingly westward into the whispering ferns.
 ~
 ~
-0 -1 2749
+0 -1 3010
 S
-#2751
+#3012
 Beside a Stagnant Pool~
 A wide pool of still, dark water occupies the center of this depression in the forest floor, its surface coated with a film of bright @@Ggreen algae@@N and the bones of fallen leaves.
 The trees that ring the pool lean inward over the water as if straining to drink, their lower trunks stained dark with old waterline marks that record decades of seasonal flooding.
@@ -266,23 +266,23 @@ D0
 The path climbs northward out of the depression toward the log bridge.
 ~
 ~
-0 -1 2746
+0 -1 3007
 D2
 The trail winds southward through thinning brush toward a narrower game trail.
 ~
 ~
-0 -1 2754
+0 -1 3015
 D3
 The briars thicken to the west, forming a tangle that looks almost deliberate.
 ~
 ~
-0 -1 2752
+0 -1 3013
 E
 pool water algae~
 The water is perfectly still and opaque with algae, giving no indication of depth; something large has clearly drunk here recently, the mud at the bank churned and pressed with heavy tracks now softening in the wet.
 ~
 S
-#2752
+#3013
 A Tangle of Briars~
 Dense briars have overrun this section of trail, climbing over fallen logs, twining up the lower branches of trees, forming an ankle-to-shoulder-height labyrinth of interlocking thorny canes.
 The passage through is marked by countless rents in the undergrowth where larger creatures have forced their way, and the torn vegetation leaves a sharp, @@ggreen-iron@@N smell in the air.
@@ -293,14 +293,14 @@ D0
 The briars thin eastward where the stagnant pool reflects a faint gray light.
 ~
 ~
-0 -1 2751
+0 -1 3012
 D2
 A narrow break in the briar wall leads southward to an ancient boundary.
 ~
 ~
-0 -1 2753
+0 -1 3014
 S
-#2753
+#3014
 The Old Growth Border~
 An invisible but palpable line runs through this place, the point at which the forest stops being merely old and becomes something else entirely.
 The trees on the south side are categorically different, their bark @@gpale and smooth as bone@@N, their silence deeper, their stillness charged with a sense of deliberate patience that the northern forest merely approximates.
@@ -311,9 +311,9 @@ D0
 The briar tangle retreats northward, and the familiar dark forest resumes.
 ~
 ~
-0 -1 2752
+0 -1 3013
 S
-#2754
+#3015
 A Narrow Game Trail~
 Generations of large animals have kept this narrow corridor through the undergrowth open with their passing, though it is clear the traffic has dwindled.
 The trail is narrowing at the edges where @@Ggreedy brush@@N reclaims the margins, and the packed earth is marked with old hoofprints and claw-impressions from creatures that no longer pass in numbers, or pass by night in silence.
@@ -324,14 +324,14 @@ D0
 The game trail climbs north toward the dark pool.
 ~
 ~
-0 -1 2751
+0 -1 3012
 D2
 The game trail continues southward, descending slightly through fallen trunks.
 ~
 ~
-0 -1 2755
+0 -1 3016
 S
-#2755
+#3016
 Among Fallen Trunks~
 Several enormous tree trunks have collapsed across one another here, their slow decomposition creating a waist-high obstacle course of soft, crumbling wood.
 Each trunk is a micro-ecosystem of shelf fungi, beetles, and @@rluminous slime molds@@N, and the hollows between them offer hiding places large enough for substantial predators.
@@ -342,19 +342,19 @@ D0
 The fallen trunks give way northward to a narrowing game trail.
 ~
 ~
-0 -1 2754
+0 -1 3015
 D1
 The ground drops eastward into a cold, wet hollow that drains darkness.
 ~
 ~
-0 -1 2756
+0 -1 3017
 D2
 The way south leads beneath dripping boughs toward the threshold of something vast.
 ~
 ~
-0 -1 2757
+0 -1 3018
 S
-#2756
+#3017
 A Damp Hollow~
 The ground here has subsided into a wide, bowl-shaped depression that collects both water and @@gdarkness@@N with equal efficiency.
 The air is cold and heavy with moisture, and droplets fall from the overhead canopy with metronomic regularity onto a floor of wet moss that squelches underfoot and clings to any surface it contacts.
@@ -365,9 +365,9 @@ D3
 The hollow's western slope leads back up to the fallen trunks and the trail.
 ~
 ~
-0 -1 2755
+0 -1 3016
 S
-#2757
+#3018
 Beneath Dripping Boughs~
 The canopy here is lower and denser than elsewhere, trapping moisture in a permanent fine drizzle that falls from saturated leaves even when the sky above is clear.
 The sound of water pattering on @@Gferns and broad leaves@@N creates a constant meditative rhythm, and everything here is coated in a gleaming, water-beaded skin of perpetual @@ggreen@@N.
@@ -378,18 +378,18 @@ D0
 The dripping eases northward where fallen trunks mark the way up.
 ~
 ~
-0 -1 2755
+0 -1 3016
 D2
 An ancient archway of intertwined roots marks the boundary of the Old Growth ahead.
 ~
 ^mossy archway~
-1 -1 2758
+1 -1 3019
 E
 archway mossy roots~
 The mossy archway is formed by two enormous root-buttresses that have grown together overhead; the moss covering them is deep and green and has been growing here so long it has developed its own smaller ecosystem of ferns and tiny flowering plants in its upper layers.
 ~
 S
-#2758
+#3019
 The Edge of the Old Growth~
 The forest changes character here with sudden finality, the familiar underbrush giving way to bare earth packed hard and smooth, the trees growing enormous and widely spaced in a pattern that feels less natural than architectural.
 This is a threshold, and the forest beyond knows it -- a deep resonant silence emanates from the darkness ahead, vast and expectant, as though the wood is holding its breath for something it has anticipated for a very long time.
@@ -400,18 +400,18 @@ D0
 The path returns northward under dripping boughs and familiar shadow.
 ~
 ^mossy archway~
-1 -1 2757
+1 -1 3018
 D2
 The columns of ancient trees recede southward into a vast, cathedral-like darkness.
 ~
 ~
-0 -1 2759
+0 -1 3020
 E
 archway roots threshold~
 The archway is formed by the interlocked root-buttresses of two titanic oaks, their trunks leaning slightly inward overhead; the roots have grown over and through one another until no seam remains, forming a seamless organic gate that was never built and will never be torn down.
 ~
 S
-#2759
+#3020
 The Old Growth~
 The heart of the ancient forest opens in a space so vast and cathedral-like that the eye struggles to reckon the scale; trees of immeasurable age rise into darkness above, their trunks forming columns of a natural temple.
 The forest floor stretches away in every direction with an invitation that feels both genuine and predatory, the paths leading deeper into something that has been watchful and patient since long before the coming of civilization.
@@ -424,28 +424,28 @@ D0
 The archway of intertwined roots frames the path north toward the threshold.
 ~
 ^mossy archway~
-1 -1 2758
+1 -1 3019
 D1
 A corridor of paired ancient trunks stretches eastward in near-perfect rows.
 ~
 ~
-0 -1 2760
+0 -1 3021
 D2
 The forest floor descends slightly southward, the roots weaving into a raised causeway.
 ~
 ~
-0 -1 2762
+0 -1 3023
 D3
 The ancient trunks grow closer together westward, their canopy merging overhead.
 ~
 ~
-0 -1 2761
+0 -1 3022
 E
 archway mossy~
 The mossy archway to the north is the only visible seam in this vast space -- a gate of living roots that marks the line between the outer forest and the Old Growth proper, its moss so deep that small ferns have taken root in it, growing toward the dim light above.
 ~
 S
-#2760
+#3021
 A Cathedral of Trees~
 The ancient trunks here are arranged in nearly perfect parallel rows that converge toward a distant vanishing point, creating an overwhelming sense of architectural intention in what is surely natural growth.
 The silence is immense and structural, pressing inward from every side, and the @@Ggreen light@@N filtered through the joined canopy overhead does nothing to dispel the feeling of standing inside something enormous and alive.
@@ -456,14 +456,14 @@ D1
 The rows of ancient trunks continue eastward toward a sentinel grove.
 ~
 ~
-0 -1 2764
+0 -1 3025
 D3
 The tree-corridor opens westward into the vast clearing of the Old Growth.
 ~
 ~
-0 -1 2759
+0 -1 3020
 S
-#2761
+#3022
 Among Ancient Trunks~
 These trees are beyond old in any meaningful sense, their trunks so large that the eye processes them as landscape features rather than organisms.
 The bark has been colonized entirely by layered ecosystems of @@Gmoss, lichen@@N, and climbing plants, each species growing atop the previous in a vertical archaeology of centuries.
@@ -474,14 +474,14 @@ D1
 The ancient trunks thin slightly eastward, opening onto the hub of the Old Growth.
 ~
 ~
-0 -1 2759
+0 -1 3020
 D3
 Between the massive trunks to the west, a sheltered, leaf-filled depression is barely visible.
 ~
 ~
-0 -1 2770
+0 -1 3031
 S
-#2762
+#3023
 A Root-Woven Path~
 The surface roots of the ancient trees have woven themselves into a raised, interlocking network that serves as a natural causeway above the forest floor, which here is a shallow bog of @@gdark water@@N and deep mud.
 Walking the root-path requires balance and attention, the wood shifting slightly under each step with the slow flex of something that has borne weight for a long time and formed expectations about it.
@@ -492,14 +492,14 @@ D0
 The root-causeway climbs northward back toward the cathedral clearing of the Old Growth.
 ~
 ~
-0 -1 2759
+0 -1 3020
 D2
 The root-path descends southward into a narrowing corridor of interlaced trunks.
 ~
 ~
-0 -1 2763
+0 -1 3024
 S
-#2763
+#3024
 The Verdant Corridor~
 Two parallel rows of trees have grown so close together that their intertwining branches have merged overhead into a solid living tunnel of @@Gdeep green@@N.
 The corridor is narrow enough that outstretched arms would brush bark on both sides, and the feeling within it is distinctly that of being inside a living organism rather than walking through a forest.
@@ -510,14 +510,14 @@ D0
 The root-woven causeway leads northward out of the corridor toward the Old Growth.
 ~
 ~
-0 -1 2762
+0 -1 3023
 D2
 The living corridor continues southward, the canopy thickening as it descends toward creeping ivy.
 ~
 ~
-0 -1 2776
+0 -1 3037
 S
-#2764
+#3025
 A Grove of Sentinel Oaks~
 Five enormous oaks stand here in a near-perfect ring, their girth suggesting an age measured in millennia rather than centuries.
 Their exposed roots form a low wall around the interior of the grove, and the space between them is hushed and protected, the air noticeably stiller than the forest beyond.
@@ -528,23 +528,23 @@ D1
 The sentinel oaks thin eastward, and the hollow interior of a vast dead tree is visible.
 ~
 ~
-0 -1 2765
+0 -1 3026
 D2
 A carpet of dead leaves covers the ground southward, thick and rustling underfoot.
 ~
 ~
-0 -1 2766
+0 -1 3027
 D3
 The parallel rows of ancient trunks resume westward, fading into the cathedral dark.
 ~
 ~
-0 -1 2760
+0 -1 3021
 E
 oaks sentinel ring~
 The five oaks are spaced so evenly that the arrangement cannot be accidental; their lowest branches interlock overhead to form a natural vault, and the bark of each is carved with the same repeating groove-pattern by forces unknown.
 ~
 S
-#2765
+#3026
 Beneath a Hollow Giant~
 The dead giant is the largest tree visible in the Old Growth, its interior completely hollow and wide enough to hold a small building.
 The wood of its interior has petrified over the centuries, smooth and @@gstone-gray@@N, and the fungal colonies that cover every surface fill the darkness with a soft @@rbioluminescent pulse@@N.
@@ -555,13 +555,13 @@ D3
 The hollow giant's opening faces west toward the sentinel oak grove.
 ~
 ~
-0 -1 2764
+0 -1 3025
 E
 hollow interior rot decay~
 The inside of the hollow trunk rises thirty feet to an opening overhead; the walls are covered in shelf fungi that glow @@rblue-green@@N, and the floor is a deep mattress of crumbling wood-dust centuries old that releases a sweet, dry scent when disturbed.
 ~
 S
-#2766
+#3027
 A Carpet of Dead Leaves~
 The forest floor here is buried under a deep, unbroken carpet of dead leaves, the accumulated fall of centuries compressed into a springy, rustling substrate that swallows footsteps almost silently.
 The leaves are mostly brown and @@gblack with age@@N, but here and there a more recent layer shows brief flashes of orange and gold, like embers banked deep under ash.
@@ -572,14 +572,14 @@ D0
 The dead-leaf carpet thins northward as the sentinel oaks take shape through the trees.
 ~
 ~
-0 -1 2764
+0 -1 3025
 D2
 The leaves deepen southward where the ground slopes gently toward the emerald glade.
 ~
 ~
-0 -1 2767
+0 -1 3028
 S
-#2767
+#3028
 The Emerald Glade~
 An open clearing interrupts the canopy here, admitting a column of diffuse gray light that falls on a floor of vivid @@Gemerald moss@@N growing in long, soft ropes between the tree-roots.
 The moss is healthy and aggressive, climbing the lower trunks and creeping outward with a vitality conspicuously absent from the surrounding forest floor.
@@ -590,18 +590,18 @@ D0
 Dead leaves and fading light mark the way northward back toward the sentinel oaks.
 ~
 ~
-0 -1 2766
+0 -1 3027
 D2
 The light fades southward as the vine-choked passage begins.
 ~
 ~
-0 -1 2768
+0 -1 3029
 E
 moss clearing light~
 A single shaft of pale sky is visible directly overhead through the break in the canopy, wavering slightly as the uppermost branches sway in some wind too high to feel; the @@Gemerald moss@@N below it is brightest here, as if it has grown toward that distant light for centuries.
 ~
 S
-#2768
+#3029
 A Vine-Choked Passage~
 Climbing vines have colonized every surface of the trees along this section of path, their @@Gtendrils looping@@N from trunk to trunk at head height and drooping in dense curtains that must be pushed aside with every step.
 The passage smells of green sap and something animal, and the vines are disturbed in places as though something large and heavy has pushed through recently and without much care.
@@ -612,14 +612,14 @@ D0
 The vine curtains thin northward toward the emerald glade's open light.
 ~
 ~
-0 -1 2767
+0 -1 3028
 D2
 The vines grow thicker and the light fails entirely southward; something beneath glows faintly.
 ~
 ~
-0 -1 2769
+0 -1 3030
 S
-#2769
+#3030
 Among Luminous Fungi~
 The @@rdim glow@@N emanating from the vast colonies of bioluminescent fungi here is enough to see by, painting everything in shifting patterns of teal and amber light.
 The fungi themselves stand thigh-high, their caps broad and smooth, and the air is thick with their exhalations -- a spore-laden sweetness that catches in the throat.
@@ -630,9 +630,9 @@ D0
 The fungal glow dims northward as the vine-choked passage begins.
 ~
 ~
-0 -1 2768
+0 -1 3029
 S
-#2770
+#3031
 A Sheltered Dell~
 This natural hollow between the roots of three enormous trees is sheltered from the perpetual movement of the forest on all sides, creating a pocket of unusual stillness.
 The floor is deep with dry leaves and the skeletal remains of small animals arranged with a peculiar tidiness that wind alone could not produce.
@@ -643,14 +643,14 @@ D1
 The ancient trunks open eastward toward the great cluster of immovable boles.
 ~
 ~
-0 -1 2761
+0 -1 3022
 D2
 A worn path heads south through the undergrowth where something has passed many times.
 ~
 ~
-0 -1 2771
+0 -1 3032
 S
-#2771
+#3032
 The Heartwood Trail~
 A clear, well-worn trail cuts through the old growth here, its surface packed harder than the surrounding earth and marked by the mingled tracks of many different creatures.
 The trail is flanked by @@Gdense fern-walls@@N on both sides that make it a natural corridor, and the trees overhanging it are gnarled in ways that suggest deliberate shaping rather than natural growth.
@@ -661,19 +661,19 @@ D0
 The heartwood trail climbs northward toward the sheltered dell.
 ~
 ~
-0 -1 2770
+0 -1 3031
 D1
 The sound of trickling water drifts from the east where the ferns grow wetter.
 ~
 ~
-0 -1 2772
+0 -1 3033
 D2
 The trail descends southward into a fern-covered slope.
 ~
 ~
-0 -1 2773
+0 -1 3034
 S
-#2772
+#3033
 Beside a Trickling Stream~
 A thin stream issues from beneath the root-mass of an ancient tree and trickles eastward through a shallow bed of smooth, dark stones.
 The water is cold and perfectly clear, faintly @@rtinged green@@N by the minerals of the deep forest, and the bank on either side is thick with watercress and broad-leafed plants.
@@ -684,13 +684,13 @@ D3
 The stream's source disappears to the west beneath the ancient roots; the trail resumes.
 ~
 ~
-0 -1 2771
+0 -1 3032
 E
 stream water stones~
 The water runs over stones the color of old iron, tumbling in miniature cascades between them with a sound like distant whispered conversation; something has made a small dam of sticks further downstream, though whatever built it is long gone.
 ~
 S
-#2773
+#3034
 A Fern-Covered Slope~
 The trail descends here down a gentle slope entirely carpeted in ferns, their fronds reaching knee-height and making the path difficult to follow except by the slight depression where generations of feet have pressed them flat.
 The soil under the fern cover is loose and dark, smelling of rain and deep root-work, and the slope is studded with half-buried stones worn smooth.
@@ -701,14 +701,14 @@ D0
 The fern slope rises northward back toward the heartwood trail.
 ~
 ~
-0 -1 2771
+0 -1 3032
 D2
 The ferns thin at the bottom of the slope where a natural tree arch spans the trail.
 ~
 ~
-0 -1 2774
+0 -1 3035
 S
-#2774
+#3035
 The Twisted Arch~
 Two ancient oaks fell toward each other centuries ago and fused where they met, their trunks intergrowing over decades into a single continuous arch of living wood that spans the trail.
 The arch is covered in a thick pelt of @@rmoss and small ferns@@N, and passing beneath it carries the distinct physical sensation of crossing a threshold.
@@ -719,18 +719,18 @@ D0
 The slope rises northward back up through the ferns to the heartwood trail.
 ~
 ~
-0 -1 2773
+0 -1 3034
 D2
 A clearing of old stumps opens southward beneath the arch.
 ~
 ~
-0 -1 2775
+0 -1 3036
 E
 arch oaks fused wood~
 Where the two trunks merged, the wood has swirled into complex grain patterns that spiral around each other in a helix; in certain light, the patterns look almost like faces peering out from the bark, though never when looked at directly.
 ~
 S
-#2775
+#3036
 A Clearing of Stumps~
 The stumps here are the remains of trees cut down so long ago that they have been reclaimed entirely by the forest -- moss-covered, spongy, and colonized by ferns from within.
 Whatever cleared this space is long forgotten, and the @@Gyoung trees@@N growing between the old stumps are already substantial, the clearing already losing its openness to the patient expansion of the wood.
@@ -741,9 +741,9 @@ D0
 The stumps give way northward to the living arch and the fern slope beyond.
 ~
 ~
-0 -1 2774
+0 -1 3035
 S
-#2776
+#3037
 Among Creeping Ivy~
 Dense ivy has conquered this section of forest entirely, blanketing the ground, climbing the trunks, hanging from the lower branches in drapes.
 Walking through it requires lifting each foot high and placing it carefully, as the ivy conceals obstacles -- roots, fallen branches, and once, the depression of something like a large pit that one wrong step would find.
@@ -754,14 +754,14 @@ D0
 The ivy thins northward and the two-columned living corridor comes back into view.
 ~
 ~
-0 -1 2763
+0 -1 3024
 D2
 The ivy continues southward, growing denser and darker at the wood's edge where the briar labyrinth begins.
 ~
 ~
-0 -1 2777
+0 -1 3038
 S
-#2777
+#3038
 The Briar Labyrinth Edge~
 The forest undergrowth has developed here into a wall of mixed briar and thorn that stretches to the left and right as far as can be seen, presenting an apparently solid obstacle.
 A single narrow gap in the wall provides access southward, and the scratching, scraping passage through it has been used -- the torn canes and pressed earth tell of many forced passages.
@@ -772,14 +772,14 @@ D0
 The briar wall is behind you to the north; the ivy-covered forest continues.
 ~
 ~
-0 -1 2776
+0 -1 3037
 D2
 The narrow gap through the briar wall opens into a gloomy thicket beyond.
 ~
 ~
-0 -1 2778
+0 -1 3039
 S
-#2778
+#3039
 A Gloomy Thicket~
 The canopy here is so dense and layered that it might as well be a cave roof; whatever light reaches this place is a @@gdim, sourceless gray@@N that reveals the crowded trunks and clutching undergrowth without illuminating any of them.
 The edges of vision are left in perpetual, uncertain dark, and the eye, trained to resolve ambiguity, fills that dark with shapes that may or may not correspond to anything real.
@@ -790,14 +790,14 @@ D0
 The gloomy thicket opens northward where the briar wall marks the boundary.
 ~
 ~
-0 -1 2777
+0 -1 3038
 D2
 The thicket deepens southward where a great willow's trailing fronds are barely visible.
 ~
 ~
-0 -1 2779
+0 -1 3040
 S
-#2779
+#3040
 Beneath the Great Willow~
 A willow of monstrous size dominates this place, its canopy spreading outward a hundred feet in every direction, its trailing fronds reaching the ground and enclosing the area in a living curtain of @@Gpale green@@N.
 The light within is tinted and peaceful, deeply at odds with the sense that the fronds close behind anyone who enters, sealing them inside as thoroughly as a door.
@@ -808,18 +808,18 @@ D0
 The willow's fronds part northward to the gloomy thicket beyond.
 ~
 ~
-0 -1 2778
+0 -1 3039
 D2
 Stepping stones of flat gray rock lead southward across boggy ground toward the ruined structures ahead.
 ~
 ~
-0 -1 2780
+0 -1 3041
 E
 willow fronds curtain~
 Pushing through the trailing fronds releases a wave of the willow's distinctive bitter-green scent; the fronds themselves are noticeably warm to the touch, and there is a low, barely perceptible vibration in the wood that might be mistaken for the sound of something very large breathing slowly nearby.
 ~
 S
-#2780
+#3041
 A Path of Stepping Stones~
 Flat stones of gray granite have been laid across what is otherwise a shallow, treacherous bog, forming an intentional causeway leading southward toward the half-buried structures visible through the mist.
 The stones are old enough that @@gmoss has grown over their edges@@N, softening their outlines into the surrounding muck, and between them the bog water is dark and gives no indication of depth.
@@ -830,14 +830,14 @@ D0
 The stepping stones end northward where firmer ground resumes beneath the great willow.
 ~
 ~
-0 -1 2779
+0 -1 3040
 D2
 The causeway ends at the edge of the overgrown ruins ahead.
 ~
 ~
-0 -1 2781
+0 -1 3042
 S
-#2781
+#3042
 The Overgrown Ruins~
 Stone walls of considerable age emerge from the earth here, their dressed-stone surfaces cracked and separated by tree roots that have inserted themselves into every joint over the centuries.
 The ruins are extensive, spreading in multiple directions, and the @@gancient stonework@@N is visible in fragments -- a carved lintel here, a column base there -- beneath thick layers of @@Gmoss and vine@@N.
@@ -850,24 +850,24 @@ D0
 The stepping stones lead northward across the bog toward the forest proper.
 ~
 ~
-0 -1 2780
+0 -1 3041
 D1
 A gap in the eastern wall opens onto more ruined structures.
 ~
 ~
-0 -1 2782
+0 -1 3043
 D2
 The southern wing of the ruins opens onto what was once a large courtyard.
 ~
 ~
-0 -1 2787
+0 -1 3048
 D3
 A root-split arch in the western wall leads to an older section of the ruins.
 ~
 ~
-0 -1 2785
+0 -1 3046
 S
-#2782
+#3043
 Among Crumbling Walls~
 The walls here still stand to head height in places, forming a maze of interconnected chambers where trees have grown through floors and ceilings alike.
 Their trunks serve now as the primary structural support for masonry that has lost its integrity entirely, the living wood performing the function the cut stone once did.
@@ -878,17 +878,17 @@ D1
 The eastern portion of the ruins extends further, though the walls grow lower.
 ~
 ~
-0 -1 2784
+0 -1 3045
 D2
 An iron gate, corroded but still solid, bars the way into the inner courtyard to the south.
 ~
 ^iron gate~
-1 2820 2783
+1 3081 3044
 D3
 The gap in the western wall leads back to the central ruins.
 ~
 ~
-0 -1 2781
+0 -1 3042
 E
 inscriptions carvings writing~
 The inscriptions are regular and deeply cut, suggesting they were meant to last; they run in horizontal bands around the walls at eye level, and whatever they record, the frequency of a particular repeating glyph suggests a name -- or a warning -- used many times in the same text.
@@ -898,7 +898,7 @@ iron gate~
 The iron gate is old enough that the metal has taken on a complex patina of rust, verdigris, and mineral stain, yet the core of each bar remains sound; the lock mechanism is large and of an unusual design, its keyhole shaped for a key of specific and unusual proportions.
 ~
 S
-#2783
+#3044
 A Ruined Courtyard~
 This was once an open-air space of considerable size and apparent formality -- the remains of a paved floor are still visible beneath encroaching tree-roots, and the stumps of ornamental pillars line the sides.
 Now the forest has filled it entirely, the @@Gcanopy overhead thick and dark@@N, and the stone underfoot is buckled and cracked and hot with the pressure of the roots forcing it upward from below.
@@ -909,28 +909,28 @@ D0
 The iron gate bars the way northward back into the crumbling chambers.
 ~
 ^iron gate~
-1 2820 2782
+1 3081 3043
 D1
 A moss-covered well stands at the eastern edge of the ruined courtyard.
 ~
 ~
-0 -1 2786
+0 -1 3047
 D2
 The southern edge of the courtyard drops away into a sunken garden below.
 ~
 ~
-0 -1 2788
+0 -1 3049
 D3
 The western end of the courtyard returns through a broken arch to the central ruins.
 ~
 ~
-0 -1 2781
+0 -1 3042
 E
 iron gate~
 The iron gate is set in a stone frame that has outlasted the walls on either side of it; the hinges are massive and still functional, and the lock faces toward the courtyard, suggesting the gate was designed to be opened from inside -- to admit entry from the courtyard, not from the chamber.
 ~
 S
-#2784
+#3045
 The Broken Tower Base~
 Only the lowest two meters of the tower remain standing, the upper portions collapsed inward in a rubble heap that has been entirely consumed by @@Gcreeping plants@@N.
 The rubble forms an irregular mound at the center of the tower base, and the remaining stone walls form a low protective ring that once sheltered whatever rose here.
@@ -941,13 +941,13 @@ D3
 The broken walls open westward back into the crumbling inner chambers.
 ~
 ~
-0 -1 2782
+0 -1 3043
 E
 tower rubble collapsed~
 Among the rubble, fragments of what might have been elaborate stonework -- a carved face, a section of decorative border, a hinge for a door far taller than any human -- lie half-buried and reclaimed by roots; the fallen tower makes the forest seem deliberately patient by comparison.
 ~
 S
-#2785
+#3046
 A Root-Split Foundation~
 The foundation stones here have been lifted and separated by the root system of an enormous tree that grew directly through the structure's base, each stone now angled outward from its original position.
 They are covered in @@grust-colored lichen@@N that has been growing here since before anyone now alive was born, and the original floor plan is partially visible in the arrangement of the displaced stones.
@@ -958,9 +958,9 @@ D1
 The root-split foundation connects eastward back through the arch to the central ruins.
 ~
 ~
-0 -1 2781
+0 -1 3042
 S
-#2786
+#3047
 Beside a Moss-Covered Well~
 The well is choked with debris and partially collapsed, its original depth impossible to determine from the surface.
 The stones of its rim are covered entirely in @@Gthick moss@@N so that the circular opening looks more like a natural formation than something built.
@@ -971,13 +971,13 @@ D3
 The courtyard floor continues westward under its covering of roots and fractured stone.
 ~
 ~
-0 -1 2783
+0 -1 3044
 E
 well stones opening depth~
 Dropping a stone into the well produces a delayed, resonant splash; the depth implied by the timing is considerable, and the sound that follows is not quite the expected silence but a faint, low moan of displaced air escaping from somewhere even deeper still.
 ~
 S
-#2787
+#3048
 The Sunken Garden~
 The ground here has subsided below the level of the surrounding ruins, creating a natural bowl in which centuries of leaf litter and soil have accumulated to form an unlikely garden.
 @@Gplants thrive@@N here with unusual vigor, their colors more saturated than the surrounding forest, their growth denser and more purposeful.
@@ -988,18 +988,18 @@ D0
 The sunken garden rises northward to the level of the overgrown ruins above.
 ~
 ~
-0 -1 2781
+0 -1 3042
 D2
 The southern slope of the sunken garden leads downward into dense, tangled underbrush.
 ~
 ~
-0 -1 2789
+0 -1 3050
 E
 garden soil plants growth~
 The most vigorous plants in the sunken garden grow in a rough circle at its center, as if drawing on something concentrated there; they are of species not seen elsewhere in the forest, with broader leaves of a particularly dark @@Ggreen@@N and flowers that are nearly black at their centers.
 ~
 S
-#2788
+#3049
 A Colonnade of Oaks~
 Oaks have grown here where columns once stood, each tree planted or seeded in the precise socket of an original column base.
 The result is a natural colonnade that mirrors the architectural intention of the original, the trees' rounded trunks substituting for the carved stone they replaced.
@@ -1010,13 +1010,13 @@ D0
 The colonnade opens northward back to the ruined courtyard and the well.
 ~
 ~
-0 -1 2783
+0 -1 3044
 E
 colonnade oaks columns bases~
 The column bases are still intact -- square, heavily carved, slightly elevated above the ground -- and each oak grows directly from or alongside one; roots have embraced the carved stone completely, the tree and the ruin now so intertwined that neither could be removed without destroying the other.
 ~
 S
-#2789
+#3050
 The Dense Underbrush~
 The forest reasserts itself here with a vengeance after the ruins, the undergrowth building into a nearly impenetrable wall of @@Gtangled green@@N that must be physically forced aside with every step.
 The branches of a dozen competing species form an interlocking mass at shoulder height, and the going is slow, loud, and leaves dozens of small scratches on any exposed skin.
@@ -1027,14 +1027,14 @@ D0
 The underbrush thins northward where the ground rises toward the sunken garden.
 ~
 ~
-0 -1 2787
+0 -1 3048
 D2
 The underbrush gives way slightly southward, where ancient stone beneath the leaf litter makes the footing firmer.
 ~
 ~
-0 -1 2790
+0 -1 3051
 S
-#2790
+#3051
 A Lichen-Stained Path~
 Beneath the leaf litter and forest debris, the worn surface of an ancient stone road is still partially intact, its @@glichen-mottled paving@@N visible in places where tree roots have not yet buckled it entirely.
 The road speaks of a civilization that predates the current forest, and the trees that have grown through it treat the stonework as merely another substrate, indifferent to what it once meant.
@@ -1045,14 +1045,14 @@ D0
 The old road leads northward into the underbrush, its stones disappearing under vegetation.
 ~
 ~
-0 -1 2789
+0 -1 3050
 D2
 The lichen-stained stones continue southward, the road's original direction still legible.
 ~
 ~
-0 -1 2791
+0 -1 3052
 S
-#2791
+#3052
 Among Toppled Stones~
 Enormous cut-stone blocks lie scattered here in the attitudes of violent overthrow, some standing on end, some half-buried, all tilted away from a central area as though pushed outward by something expanding from below.
 @@gtrees grow through and between them@@N, their roots embracing the stonework with the patient grip of centuries, and the original structure is unguessable from the remains.
@@ -1063,14 +1063,14 @@ D0
 The toppled stones thin northward toward the ancient road surface.
 ~
 ~
-0 -1 2790
+0 -1 3051
 D2
 A narrow passage through the standing stones leads southward to an ancient boundary.
 ~
 ~
-0 -1 2792
+0 -1 3053
 S
-#2792
+#3053
 The Ancient Boundary~
 A line is visible here -- a raised stone curb, still largely intact despite the roots and centuries, running east and west as far as it can be followed through the undergrowth.
 On the north side, the forest is familiar in its hostility, but on the south side, the trees are categorically larger, the silence deeper.
@@ -1081,14 +1081,14 @@ D0
 The boundary curb recedes northward among the toppled stones and old road.
 ~
 ~
-0 -1 2791
+0 -1 3052
 D2
 The passage south crosses the ancient boundary and enters a wholly different forest.
 ~
 ~
-0 -1 2793
+0 -1 3054
 S
-#2793
+#3054
 A Passage Through the Canopy Wall~
 The canopy of the old growth forest here forms something nearly indistinguishable from a solid wall, the interlocking branches of a dozen titanic trees meeting overhead in a continuous mass of @@Gdark green@@N that extends from ground height to a vanishing point far above.
 A single gap through this wall, just wide enough to pass through, opens onto the deeper forest beyond.
@@ -1099,14 +1099,14 @@ D0
 The passage north leads back through the canopy wall to the ancient boundary.
 ~
 ~
-0 -1 2792
+0 -1 3053
 D2
 The gap in the canopy wall opens southward onto the vast and alien Deepwood.
 ~
 ~
-0 -1 2794
+0 -1 3055
 S
-#2794
+#3055
 The Deepwood~
 The forest changes here with a totality that precludes gradual adjustment; the trees are not merely large but architecturally alien, their trunks forming shapes that defy natural growth, their bark smooth and dark and warm to the touch.
 The space between them has a quality of deliberate arrangement, as though the forest has been designed by an intelligence that considers human movement to be something to be guided rather than permitted.
@@ -1119,19 +1119,19 @@ D0
 The gap in the canopy wall leads northward back to the old growth forest.
 ~
 ~
-0 -1 2793
+0 -1 3054
 D1
 A corridor of closely-paired trunks leads eastward into what appears to be a passage.
 ~
 ~
-0 -1 2795
+0 -1 3056
 D2
 The forest floor descends southward between trees whose roots move.
 ~
 ~
-0 -1 2798
+0 -1 3059
 S
-#2795
+#3056
 A Living Corridor~
 The trees here have grown so close together and in such perfect alignment that the result is indistinguishable from a constructed corridor -- the trunks forming walls, the interlocked branches forming a ceiling, the packed-earth floor worn smooth.
 The corridor is noticeably @@gwarm@@N, and the walls, on close inspection, expand and contract in a slow, rhythmic pulse that suggests respiration.
@@ -1142,14 +1142,14 @@ D1
 The living corridor continues eastward, its walls pressing slightly closer.
 ~
 ~
-0 -1 2796
+0 -1 3057
 D3
 The living corridor opens westward back to the deepwood's vast entrance chamber.
 ~
 ~
-0 -1 2794
+0 -1 3055
 S
-#2796
+#3057
 The Breathing Grove~
 There is no wind here, but the trees sway; the branches overhead describe slow, complex arcs, and the trunk of the largest tree rocks perceptibly from side to side in a rhythm that becomes, once noticed, impossible to ignore.
 The @@Gmovement is continuous@@N and unhurried, as though the grove is breathing, and the sound of wood flexing and creaking provides a low, organic counterpoint to the otherwise perfect silence.
@@ -1160,19 +1160,19 @@ D1
 A path eastward leads beneath a ceiling of interlocked branches.
 ~
 ~
-0 -1 2800
+0 -1 3061
 D2
 The breathing grove deepens southward into a passage of watchful boughs.
 ~
 ~
-0 -1 2797
+0 -1 3058
 D3
 The living corridor leads westward back toward the deepwood entrance.
 ~
 ~
-0 -1 2795
+0 -1 3056
 S
-#2797
+#3058
 Among Watchful Boughs~
 The boughs here are thick and low, hanging just above head height, and every one of them is turned toward the space below in a way that suggests observation rather than growth.
 @@gmovement among them ceases when one looks directly@@N, but peripheral vision registers a constant slow adjustment, a repositioning, a leaning inward that stops just short of the provable.
@@ -1183,14 +1183,14 @@ D0
 The breathing grove is northward, where at least the movement is visible.
 ~
 ~
-0 -1 2796
+0 -1 3057
 D2
 The boughs crowd lower southward, and the light fails entirely ahead.
 ~
 ~
-0 -1 2804
+0 -1 3065
 S
-#2798
+#3059
 A Floor of Writhing Roots~
 The surface roots of the Deepwood trees have become fully animate here, shifting and repositioning with the slow inevitability of geological time but at a perceptible rate.
 Placing a foot means lifting it again within moments as the root beneath it moves, and the @@Gconstant subtle displacement@@N of the ground underfoot makes standing still an active task rather than a passive one.
@@ -1201,19 +1201,19 @@ D0
 The writhing roots thin slightly northward toward the deepwood entrance.
 ~
 ~
-0 -1 2794
+0 -1 3055
 D2
 The roots grow denser southward where the ground descends toward amber sap pools.
 ~
 ~
-0 -1 2799
+0 -1 3060
 D3
 A narrow depression in the root-mass opens westward into a low tunnel.
 ~
 ~
-0 -1 2801
+0 -1 3062
 S
-#2799
+#3060
 The Amber Sap Pools~
 Several large depressions in the forest floor have filled over centuries with accumulated tree sap that has thickened to the consistency of honey and @@rglows a dim amber@@N from within.
 The pools are perfectly still and reflect the dark canopy above, and their surfaces have preserved dozens of creatures -- insects, small animals, a fragment of something with too many joints -- in perfect, suspended amber.
@@ -1224,18 +1224,18 @@ D0
 The sap pools end northward where the writhing roots resume.
 ~
 ~
-0 -1 2798
+0 -1 3059
 D2
 The pools give way southward where the forest floor rises toward a ring of petrified trees.
 ~
 ~
-0 -1 2802
+0 -1 3063
 E
 pools sap amber preserved~
 One of the larger pools contains something near its center that is clearly too large and too complex to be any simple creature; it is deep in the sap and difficult to see clearly, but the preserved shape has too many limbs, and they are arranged in ways that suggest neither struggle nor peace.
 ~
 S
-#2800
+#3061
 Beneath Intertwined Canopy~
 The branches overhead have meshed so completely that they form a secondary floor above this one, a living ceiling of @@Ginterlocked wood@@N visible through occasional gaps as an impenetrable green mass.
 The result is a double layer of forest, one above and one below, and the light that reaches the ground has been filtered twice, arriving as a dim, sourceless, gray-green glow with no shadows.
@@ -1246,14 +1246,14 @@ D2
 The path descends southward beneath the intertwined canopy toward a weeping hollow.
 ~
 ~
-0 -1 2805
+0 -1 3066
 D3
 The intertwined branches thin westward where the breathing grove continues.
 ~
 ~
-0 -1 2796
+0 -1 3057
 S
-#2801
+#3062
 A Narrow Root Tunnel~
 The roots of an ancient tree have arched completely over a natural depression, forming a narrow tunnel barely wide enough to move through in a crouch.
 The tunnel floor is bare stone, cold and damp, and the northward direction descends deeper still into a cave system that predates the forest above.
@@ -1264,14 +1264,14 @@ D0
 The root tunnel descends northward into the cave system below the forest.
 ~
 ~
-0 -1 2509
+0 -1 2770
 D1
 The tunnel opens eastward back into the writhing root-floor of the Deepwood.
 ~
 ~
-0 -1 2798
+0 -1 3059
 S
-#2802
+#3063
 The Petrified Ring~
 Eight trees in a perfect ring have been fully petrified, turned from living wood to @@gdark gray stone@@N without any visible external cause.
 They stand as they grew, bark-textures and branch-forms preserved in mineral perfection, and the forest around them grows right up to but never inside the ring.
@@ -1282,19 +1282,19 @@ D0
 The petrified ring is behind you northward, where the sap pools gleam amber.
 ~
 ~
-0 -1 2799
+0 -1 3060
 D1
 A path eastward passes between two of the petrified trunks toward thorned growth.
 ~
 ~
-0 -1 2803
+0 -1 3064
 D2
 The petrified ring gives way southward where the forest begins to rot.
 ~
 ~
-0 -1 2807
+0 -1 3068
 S
-#2803
+#3064
 Among Thorned Sentinels~
 The trees here have armored themselves with thorns that project outward from the bark in dense, overlapping arrays -- not bramble-thorns but woody spines several inches long growing directly from the cambium, covering every branch and the upper portions of every trunk.
 The @@Rspines catch the dim light@@N like a forest of tiny blades, and the passage between them requires care that slows movement to a cautious walk.
@@ -1305,14 +1305,14 @@ D2
 The thorned sentinels thin southward where a high bridge is barely visible above.
 ~
 ~
-0 -1 2806
+0 -1 3067
 D3
 The thorned trees give way westward to the open circle of petrified trunks.
 ~
 ~
-0 -1 2802
+0 -1 3063
 S
-#2804
+#3065
 A Bioluminescent Grotto~
 The ground has collapsed here into a grotto lit entirely by the @@rbioluminescent organisms@@N that coat every surface -- fungi, algae, and creatures that cannot be named growing in layered mats that pulse in overlapping rhythms.
 The light they produce is sufficient to see by, cool and blue-green and otherworldly, and the grotto extends downward into chambers that descend beyond the reach of even this cold radiance.
@@ -1323,13 +1323,13 @@ D0
 The grotto's light fades northward where the watchful boughs begin.
 ~
 ~
-0 -1 2797
+0 -1 3058
 E
 glow light organisms fungi~
 Standing still in the grotto, the rhythmic pulsing of the bioluminescent organisms becomes synchronized across the entire visible surface, as if they respond to each other in waves; the effect is meditative and deeply wrong, suggesting a coordinated awareness in organisms that should have none.
 ~
 S
-#2805
+#3066
 The Weeping Hollow~
 Sap seeps from every wound and pore of the trees bordering this hollow, @@grunning in slow rivulets@@N down the bark and collecting in channels between the roots before draining into the dark earth.
 The trees are not dying -- the flow is too controlled, too purposeful -- and the sap has no smell beyond the faintest sweetness.
@@ -1340,19 +1340,19 @@ D0
 The hollow opens northward into the intertwined canopy above.
 ~
 ~
-0 -1 2800
+0 -1 3061
 D1
 A narrow path eastward leads toward a pale stand of unnervingly white-barked trees.
 ~
 ~
-0 -1 2813
+0 -1 3074
 D2
 The sap flows southward in ever-thicker rivulets, following the slope toward what sounds like running liquid.
 ~
 ~
-0 -1 2818
+0 -1 3079
 S
-#2806
+#3067
 A Canopy Bridge~
 Two ancient trunks have grown horizontal at great height, their crowns meeting and fusing above the forest floor, creating a natural bridge thirty feet above the ground.
 The bridge itself is narrow and lacks handholds, but the wood is solid, and the view from above reveals the full extent of the Deepwood's @@galien geometry@@N -- the trees arranged in patterns no natural process would produce.
@@ -1363,18 +1363,18 @@ D0
 The bridge descends northward back down to the thorned sentinel passage below.
 ~
 ~
-0 -1 2803
+0 -1 3064
 D2
 The bridge slopes steeply southward and downward into a towering grove of enormous fungi.
 ~
 ~
-0 -1 2814
+0 -1 3075
 E
 bridge view above height~
 From the highest point of the bridge, the full canopy is visible as a continuous surface with no breaks except where the trees have arranged themselves in their impossible patterns; what looked from below like random forest is revealed from here as something deeply ordered, the paths between the trunks forming shapes that the eye cannot quite resolve into meaning.
 ~
 S
-#2807
+#3068
 The Rotwood Stretch~
 The decay here is conspicuous and spreading, the trees in various stages of a rot that is clearly contagious -- standing trunks with their interiors hollowed by soft, @@gbrown rot@@N, fallen logs that dissolve when stepped on.
 Branches descend from above in a slow rain of wet splinters, and the forest is sick in this stretch in a directional way, the rot advancing from south to north in a front that moves noticeably season to season.
@@ -1385,19 +1385,19 @@ D0
 The rotwood thins northward toward the petrified ring and firmer ground.
 ~
 ~
-0 -1 2802
+0 -1 3063
 D2
 The rot continues southward, deepening where something dark coats the ground.
 ~
 ~
-0 -1 2809
+0 -1 3070
 D3
 The rotwood opens westward to a dense cluster of enormous toadstools.
 ~
 ~
-0 -1 2808
+0 -1 3069
 S
-#2808
+#3069
 Among Bloated Toadstools~
 The toadstools here are architectural in scale, their caps broad and heavy enough to form a secondary canopy that blocks most of the light.
 Some are twelve feet across, their surfaces @@Gheavy and moist@@N, their stalks thick as old trees, and between their bases the forest floor is carpeted in the smaller generations of the same species.
@@ -1408,9 +1408,9 @@ D1
 The toadstool forest opens eastward back toward the rotting trees.
 ~
 ~
-0 -1 2807
+0 -1 3068
 S
-#2809
+#3070
 A Clearing of Black Moss~
 The forest floor here is covered entirely in a deep, uniform layer of black moss that absorbs light rather than reflecting it, giving the clearing the appearance of a hole in the world rather than ground.
 @@gFootprints left in the moss fill in@@N behind you in minutes, the moss closing over any disturbance with a patient thoroughness that feels less like growth and more like a deliberate erasure.
@@ -1421,14 +1421,14 @@ D0
 The black moss clearing opens northward into the rotwood and firmer ground.
 ~
 ~
-0 -1 2807
+0 -1 3068
 D2
 The black moss continues southward into the strangler fig passage.
 ~
 ~
-0 -1 2810
+0 -1 3071
 S
-#2810
+#3071
 The Strangler Fig Passage~
 Strangler figs have consumed the support trees here completely, their latticed wooden frames standing as ghost-trees from which the original trunks have long since rotted away.
 The result is a passage of hollow wooden cages, their @@Gintricate latticework@@N dappling what passes for light here.
@@ -1439,14 +1439,14 @@ D0
 The strangler fig passage opens northward back to the black moss clearing.
 ~
 ~
-0 -1 2809
+0 -1 3070
 D2
 The fig-trees thin southward where the roots form a dense overhead web.
 ~
 ~
-0 -1 2811
+0 -1 3072
 S
-#2811
+#3072
 Beneath a Web of Roots~
 The root systems of the trees here have grown so dense and intermingled overhead that they form a near-solid ceiling just above head height, pressing downward and forcing movement into a crouch.
 The @@groots are wet and cold@@N to the touch, and the spaces between them are occupied by hanging masses of dark soil and white fungal threads that brush the face and hands in the dark.
@@ -1457,14 +1457,14 @@ D0
 The root web opens northward back into the strangler fig passage.
 ~
 ~
-0 -1 2810
+0 -1 3071
 D2
 The root web thins southward toward a vast, dark opening in the forest.
 ~
 ~
-0 -1 2812
+0 -1 3073
 S
-#2812
+#3073
 The Verdant Maw~
 The forest opens here around an enormous depression in the earth, its edges marked by tree-roots that arch inward like the teeth of a jaw.
 The depression is too regular to be natural, too large to have been made by any creature, and its walls are @@Gliving wood@@N, smooth and warm and slightly damp.
@@ -1475,18 +1475,18 @@ D0
 The maw's entrance is behind you northward; the root-web passage continues.
 ~
 ~
-0 -1 2811
+0 -1 3072
 D2
 The depression deepens southward into the Rootmother's domain; the walls close in warmly.
 ~
 ~
-0 -1 2829
+0 -1 3090
 E
 depression maw earth opening~
 Looking down into the depression, the walls converge toward a central point obscured by darkness and distance; the air rising from it is warm and organic, and carries a subsonic vibration that is felt in the chest rather than heard -- the same vibration, amplified many times, as the one first noticed at the edge of the old growth.
 ~
 S
-#2813
+#3074
 A Path of Bone-White Bark~
 The trees lining this narrow path are exceptional even by the Deepwood's alien standards -- their bark entirely devoid of color, @@gbone-white@@N and smooth as polished stone, their leafless branches reaching upward in gestures of arrested motion.
 Nothing grows on or near them, and the path between them is eerily clean, the forest floor bare of even the persistent black moss.
@@ -1497,13 +1497,13 @@ D3
 The bone-white trees give way westward toward the weeping hollow.
 ~
 ~
-0 -1 2805
+0 -1 3066
 E
 bark white pale bone trees~
 The white bark is genuinely bone-like on close inspection, smooth and slightly yielding under pressure, slightly warm; there are no growth rings visible at the cut of any fallen branch, as though these trees do not grow in annual increments but in some other rhythm entirely.
 ~
 S
-#2814
+#3075
 The Fungal Cathedral~
 Enormous fungi of a single species stand here in columns forty feet tall, their caps flat and broad and interlocked overhead in a vaulted ceiling of @@rpale bioluminescent tissue@@N.
 The light they produce is dim and blue and directionless, filling the space without shadows, and the silence within the fungal cathedral is absolute -- even footsteps make no sound on the thick mycelium floor.
@@ -1514,18 +1514,18 @@ D0
 The fungal columns thin northward where the canopy bridge rises above.
 ~
 ~
-0 -1 2806
+0 -1 3067
 D2
 The fungal cathedral descends southward into a passage of pulsing vines.
 ~
 ~
-0 -1 2815
+0 -1 3076
 E
 fungi cathedral caps ceiling~
 The caps overhead have grown into one another over years or centuries, their edges fusing to create a continuous membrane of luminous tissue; looking up through them is like looking through a series of translucent floors, each glowing faintly @@rblue@@N, each occupied by the silhouettes of things that move slowly just beyond resolution.
 ~
 S
-#2815
+#3076
 Among Pulsing Vines~
 The vines here are not dead organic matter but @@Ractively living conduits@@N, their sap flowing in visible pulses that travel up the length of each vine in rhythmic waves, like the slow beating of a distributed heart.
 The vines cross and recross every surface -- floor, tree-trunk, the underside of every branch -- in a weave too dense to navigate without contact, and they are warm to the touch with the warmth of living circulation.
@@ -1536,14 +1536,14 @@ D0
 The pulsing vines thin northward where the fungal cathedral begins.
 ~
 ~
-0 -1 2814
+0 -1 3075
 D2
 The vines grow denser southward where they surround a grove of dead saplings.
 ~
 ~
-0 -1 2816
+0 -1 3077
 S
-#2816
+#3077
 A Grove of Dead Saplings~
 Every sapling in this grove died at the same moment -- the identical stage of growth, the identical posture of arrested motion, the identical @@gblackening of the bark@@N -- a synchrony that no natural cause can account for.
 The grove stands now as a monument to that simultaneous death, the dead stems still upright after whatever killed them left them untouched by rot, their arrested postures creating a forest of small permanent gestures frozen into wood.
@@ -1554,14 +1554,14 @@ D0
 The dead saplings give way northward to the pulsing vines.
 ~
 ~
-0 -1 2815
+0 -1 3076
 D2
 A passage southward through the dead saplings leads toward a place of deepening rot and @@Rputrid corruption@@N.
 ~
 ~
-0 -1 2817
+0 -1 3078
 S
-#2817
+#3078
 The Decaying Threshold~
 The forest here is dying in a specific, directional way, the decay propagating northward from some source to the south; trees at the threshold are half-consumed by a @@gbrown-black rot@@N that moves visibly across their surfaces.
 The air is thick with the moist, complex smell of decomposition accelerated far beyond any natural rate -- not the clean smell of forest decay but something chemical, engineered, the output of a process that is working at this speed because something wants it to.
@@ -1572,14 +1572,14 @@ D0
 The threshold gives way northward to the dead saplings and the forest beyond.
 ~
 ~
-0 -1 2816
+0 -1 3077
 D2
 The rot deepens southward into the heart of the Blightwood Ancient's domain.
 ~
 ~
-0 -1 2841
+0 -1 3102
 S
-#2818
+#3079
 Beside a River of Sap~
 A genuine river of thick, @@rglowing amber sap@@N flows southward through this section of forest, its channel carved smooth by centuries of slow flow that has worn the stone beneath to a perfect curve.
 The sap moves too slowly to splash but too visibly to be mistaken for anything solid, its surface a deep amber lit from within, its flow marked by none of the agitation of water but all of its persistence.
@@ -1590,18 +1590,18 @@ D0
 The sap river narrows northward where the weeping hollow's runoff joins it.
 ~
 ~
-0 -1 2805
+0 -1 3066
 D2
 The sap river continues southward toward a garden of carnivorous plants fed by its flow.
 ~
 ~
-0 -1 2819
+0 -1 3080
 E
 river sap flow amber~
 The surface of the sap preserves every fallen thing with perfect fidelity; floating past at the river's pace is a sequence of these accidental relics -- a moth with wings still spread, a frog mid-leap, something that might have been a small primate clutching a branch that is also preserved, its expression not readable but its posture suggesting it did not have time to be afraid.
 ~
 S
-#2819
+#3080
 A Carnivorous Garden~
 The plants here have been cultivated -- if that word applies to anything so alien -- by the sap river's chemistry, their growth shaped by nutrients that no ordinary soil could provide.
 They are broad-leafed and brightly @@Gcolored@@N and equipped with trigger mechanisms of various designs, some snap-closing around anything that brushes them, others secreting sticky compounds, others producing low vibrations that disorient insects and small vertebrates alike.
@@ -1612,14 +1612,14 @@ D0
 The carnivorous plants thin northward beside the sap river.
 ~
 ~
-0 -1 2818
+0 -1 3079
 D2
 The garden gives way southward to a trail worn by something very large passing repeatedly.
 ~
 ~
-0 -1 2820
+0 -1 3081
 S
-#2820
+#3081
 The Predator's Trail~
 This trail exists because something has used it repeatedly enough to wear the forest floor smooth and push the vegetation back on both sides to a clearance that would accommodate something very large.
 The scale of the passage suggests something large enough that the trees on either side bear compression marks at shoulder height, the bark worn smooth where a body has repeatedly brushed past.
@@ -1630,19 +1630,19 @@ D0
 The predator's trail curves northward toward the carnivorous garden.
 ~
 ~
-0 -1 2819
+0 -1 3080
 D1
 The trail forks eastward into a stretch of @@gamong skeletal branches@@N.
 ~
 ~
-0 -1 2821
+0 -1 3082
 D2
 The trail continues southward toward a place where multiple trails converge.
 ~
 ~
-0 -1 2824
+0 -1 3085
 S
-#2821
+#3082
 Among Skeletal Branches~
 The trees here have been stripped entirely of their foliage by some past event, their @@gbare branches reaching upward@@N in gestures that are, in this context, impossible not to read as anguish.
 The wood is still sound, the trunks alive in some minimal sense, but nothing grows on them and nothing moves near them; even the ubiquitous Deepwood insects have left this section of forest, and the absence of their sound is louder than their presence would have been.
@@ -1653,9 +1653,9 @@ D3
 The skeletal branches give way westward back to the predator's trail.
 ~
 ~
-0 -1 2820
+0 -1 3081
 S
-#2822
+#3083
 The Hunter's Blind~
 Something has constructed this -- or the forest has, which amounts to the same thing -- a dense enclosure of living branches woven into walls and a partial roof, its construction too precise to be accidental.
 The interior smells @@Rstrongly of predator@@N, the musk of many large animals accumulating in the enclosed space over decades of repeated use, and the ground inside is pressed flat by the weight of something that waits here with great patience.
@@ -1666,18 +1666,18 @@ D1
 The hunter's blind opens eastward to the twisted crossroads beyond.
 ~
 ~
-0 -1 2824
+0 -1 3085
 D2
 A concealed passage southward through the blind's floor leads into the Predator's Den below.
 ~
 ~
-0 -1 2852
+0 -1 3113
 E
 blind walls enclosure interior~
 The walls of the blind are woven too precisely to be accidental; the slits are oriented to provide overlapping fields of view, and the floor inside has been scraped clear of debris. This is not the lair of an animal following instinct but the workstation of something that plans its hunting in advance and returns to improve its tools.
 ~
 S
-#2823
+#3084
 A Hollow of Whispering Leaves~
 The dead leaves accumulated in this hollow number in the millions, and they whisper; there is no air movement to account for the sound, no mechanism visible that could drive the continuous, shifting rustle.
 The leaves move of their own accord in rhythms that rise and fall in pitch and regularity, occasionally producing sequences that sound almost like words -- almost like the same word, repeated at intervals too irregular to be music and too regular to be random.
@@ -1688,9 +1688,9 @@ D3
 The whispering hollow gives way westward back to the groaning path.
 ~
 ~
-0 -1 2827
+0 -1 3088
 S
-#2824
+#3085
 The Twisted Crossroads~
 Several trails converge here at a crossroads dominated by a tree that has grown into a shape impossible by any natural process -- its trunk bifurcating and rebifurcating until the upper portions form a lattice of interlocked wood whose pattern repeats at every scale.
 The lattice is not random; the branching ratio is constant throughout the entire structure, the angle of each bifurcation identical to every other, producing a fractal geometry in living wood that should require either centuries of deliberate cultivation or something stranger.
@@ -1701,28 +1701,28 @@ D0
 The crossroads opens northward along the predator's trail toward the carnivorous garden.
 ~
 ~
-0 -1 2820
+0 -1 3081
 D1
 The eastern trail leads away from the crossroads toward a reaching canopy.
 ~
 ~
-0 -1 2825
+0 -1 3086
 D2
 The southern trail drops into a depression filled with deep, soft mulch.
 ~
 ~
-0 -1 2826
+0 -1 3087
 D3
 The western trail leads toward the hunter's blind hidden in the undergrowth.
 ~
 ~
-0 -1 2822
+0 -1 3083
 E
 crossroads tree twisted lattice~
 The twisted tree's trunk is warm to the touch, and the lattice pattern of its upper portions is not random -- it repeats exactly at different scales, a fractal of living wood that took decades at minimum to grow; whatever shaped it began shaping it long before the current generation of anything alive could have initiated the process.
 ~
 S
-#2825
+#3086
 Beneath the Reaching Canopy~
 The canopy here has developed downward extensions, lower branches growing toward the ground in slow descent over generations, each year's growth adding another increment toward eventual contact with the forest floor.
 The longest of these already brush the top of the undergrowth, and in another century they will reach the floor, gradually reducing the open space below to nothing as the canopy converts the volume of air beneath it into more of itself.
@@ -1733,14 +1733,14 @@ D2
 The reaching canopy continues southward where the path groans underfoot.
 ~
 ~
-0 -1 2827
+0 -1 3088
 D3
 The reaching canopy gives way westward back to the twisted crossroads.
 ~
 ~
-0 -1 2824
+0 -1 3085
 S
-#2826
+#3087
 A Sinkhole of Mulch~
 The ground here has given way into a broad, gradual sinkhole filled entirely with decomposing organic matter -- leaf litter, wood pulp, animal remains -- compressed and fermenting into a warm, yielding substrate.
 The surface accepts footsteps to the ankle before offering resistance, the mulch below that first layer still in motion, still compressing under weight in ways that suggest the sinkhole is deeper than it appears.
@@ -1751,14 +1751,14 @@ D0
 The sinkhole gives way northward where the crossroads and firmer ground resume.
 ~
 ~
-0 -1 2824
+0 -1 3085
 D2
 The sinkhole continues southward where a wall of living wood rises from its far edge.
 ~
 ~
-0 -1 2828
+0 -1 3089
 S
-#2827
+#3088
 The Groaning Path~
 Every step on this path produces a sound from the wood beneath -- not the creak of settling timber but a sustained, resonant groan from something deep in the root-mass below, propagating outward in both directions along the path before dying away.
 Each footfall is felt and answered by something @@gvast and underground@@N, as though the root-network serves as a nervous system transmitting the fact of intrusion to a central node that has opinions about it.
@@ -1769,14 +1769,14 @@ D0
 The groaning path leads northward under the reaching canopy.
 ~
 ~
-0 -1 2825
+0 -1 3086
 D1
 The path forks eastward into a hollow filled with whispering leaves.
 ~
 ~
-0 -1 2823
+0 -1 3084
 S
-#2828
+#3089
 A Wall of Living Wood~
 A solid wall of living wood fills the southern approach completely, the trunks packed too close together to pass between and the root-mass at ground level forming an unbroken barrier that continues underground.
 The wall is @@Galive and growing@@N, and close inspection reveals that the gap between any two trunks is several inches smaller than it would have been a year ago, the trunks growing laterally toward one another in defiance of the usual outward growth of trees.
@@ -1787,9 +1787,9 @@ D0
 The wall of living wood is behind you; the mulch sinkhole leads northward.
 ~
 ~
-0 -1 2826
+0 -1 3087
 S
-#2829
+#3090
 The Rootmother's Approach~
 The ground underfoot has changed texture, becoming softer and more yielding as the mineral soil recedes and gives way to a dense mat of fine root-threads, a continuous @@Gliving carpet@@N that covers every inch of the forest floor.
 The root-threads are alive and active, their fine tips exploring the contact surface of each footfall with the delicate sensitivity of young root-tips, noting the weight and warmth and texture of each step.
@@ -1802,14 +1802,14 @@ D0
 The approach leads northward back to the vast opening of the Verdant Maw.
 ~
 ~
-0 -1 2812
+0 -1 3073
 D2
 The root-carpet deepens southward where the first prehensile roots emerge from the earth.
 ~
 ~
-0 -1 2830
+0 -1 3091
 S
-#2830
+#3091
 Among Prehensile Roots~
 The roots here are not static; they move with the slow but unmistakable deliberateness of something exploring its environment, extending and retracting in rhythms that seem synchronized with the larger pulse of the root-network.
 They adjust their grip on the soil constantly, and occasionally reach upward to a height of knee or waist before lowering again -- a gesture that, in context, is impossible to distinguish from curiosity.
@@ -1820,19 +1820,19 @@ D0
 The prehensile roots thin northward toward the rootmother's approach.
 ~
 ~
-0 -1 2829
+0 -1 3090
 D1
 A low opening in the root-mass to the east leads into a narrow tunnel of living wood.
 ~
 ~
-0 -1 2831
+0 -1 3092
 D2
 The prehensile roots grow denser southward where they converge on a central mass.
 ~
 ~
-0 -1 2832
+0 -1 3093
 S
-#2831
+#3092
 A Tunnel of Living Wood~
 The tunnel is formed from a single root system that has arched over a natural hollow and grown closed, its walls seamless and smooth where the living wood has knit together into a continuous surface.
 The passage is @@gdark and close@@N and smells intensely of fresh green wood, the smell of active growth concentrated by the enclosed space into something almost sweet; the walls are slightly warm with the heat of photosynthesis occurring somewhere above.
@@ -1843,9 +1843,9 @@ D3
 The tunnel opens westward back to the prehensile roots.
 ~
 ~
-0 -1 2830
+0 -1 3091
 S
-#2832
+#3093
 The Root Nexus~
 The central root-mass of the Rootmother's domain is visible here as a convergence point, hundreds of individual root-lines leading in from every direction and merging into a central structure of extraordinary complexity, layer upon layer of interwoven fibers compressed into a mass as dense and hard as stone.
 The @@Rnexus pulses@@N with a rhythm that is not a heartbeat but functions like one -- a wave of bioelectrical activity that travels outward from this point along every root-line simultaneously, coordinating the movement of the prehensile roots above and, presumably, much else that is not visible.
@@ -1858,19 +1858,19 @@ D0
 The root nexus gives way northward through the prehensile roots.
 ~
 ~
-0 -1 2830
+0 -1 3091
 D1
 A passage eastward through the root-mass leads to a coiled chamber.
 ~
 ~
-0 -1 2834
+0 -1 3095
 D2
 The nexus deepens southward beneath the vast shadow of the mother tree above.
 ~
 ~
-0 -1 2833
+0 -1 3094
 S
-#2833
+#3094
 Beneath the Mother Tree~
 The mother tree is impossible by any rational accounting of tree biology; its trunk is wide enough to enclose a small building, its bark a continuous wall of pale gold-grey wood that extends upward until it is lost in the absolute darkness of a canopy that admits no light from above.
 The root-buttresses extend outward forty feet from the base, arching up from the soil in @@Gvast, organic cathedral@@N ribs of living wood, each buttress larger than an ordinary mature tree, their surfaces covered in the same fine root-threads that make up the approach's living carpet.
@@ -1883,14 +1883,14 @@ D0
 The mother tree's root-buttresses give way northward to the root nexus.
 ~
 ~
-0 -1 2832
+0 -1 3093
 D2
 The roots narrow southward into tendril-sized threads that cover every surface.
 ~
 ~
-0 -1 2836
+0 -1 3097
 S
-#2834
+#3095
 A Chamber of Coiled Roots~
 Enormous roots have coiled here into loops and spirals that reach the ceiling, creating a chamber like the interior of a massive mechanical device stopped mid-operation, the coils occupying every plane at every height.
 The coils are @@Gstill but taut@@N, their surface wood compressing slightly under pressure and springing back, the living fibers held in a state of tension that has been building for long enough that it has become structural.
@@ -1901,14 +1901,14 @@ D2
 The coiled roots thin southward into a space of arresting, alien beauty.
 ~
 ~
-0 -1 2835
+0 -1 3096
 D3
 The chamber opens westward back to the root nexus.
 ~
 ~
-0 -1 2832
+0 -1 3093
 S
-#2835
+#3096
 The Flowering Heart~
 At the center of the Rootmother's domain, a space of extraordinary beauty has been created -- or permitted to exist -- around a cluster of flowers that bloom @@Rin colors not found elsewhere@@N in this forest, their presence here neither accident nor decoration.
 Their petals are an iridescent blue-violet that shifts toward purple at the edges and toward a deep, pure blue at the center, each petal catching the ambient bioluminescence and refracting it into something warmer than the light that entered it.
@@ -1921,14 +1921,14 @@ D0
 The flowering heart gives way northward through the coiled root chamber.
 ~
 ~
-0 -1 2834
+0 -1 3095
 D1
 A passage eastward through the flowering space leads to a bower of ancient growth.
 ~
 ~
-0 -1 2838
+0 -1 3099
 S
-#2836
+#3097
 Among Creeping Tendrils~
 The tendrils here are the finest extensions of the Rootmother's root-network, no thicker than a finger and covered in the short, sensitive hairs of a young root-tip, still growing and still exploring.
 They cover every surface -- floor, walls, the trunks of the support trees -- in a continuous, slightly @@Gmoving carpet@@N that shifts with the slow collective motion of organisms responding to stimuli too subtle for human senses to register.
@@ -1939,14 +1939,14 @@ D0
 The tendrils thin northward below the mother tree.
 ~
 ~
-0 -1 2833
+0 -1 3094
 D1
 A low alcove to the east is entirely dark and filled with something that breathes.
 ~
 ~
-0 -1 2837
+0 -1 3098
 S
-#2837
+#3098
 The Nourishing Dark~
 The alcove is completely without light, and the darkness is not merely the absence of illumination but something with presence and weight, a quality of the space that suggests the dark is here because the Rootmother prefers it.
 The @@gtendril-network here is denser@@N than anywhere above, the finest root-threads woven into a fabric so tight that running a hand through the air encounters resistance, each thread occupied with drawing nutrients from the deep soil below.
@@ -1957,9 +1957,9 @@ D3
 The nourishing dark gives way westward back to the creeping tendrils.
 ~
 ~
-0 -1 2836
+0 -1 3097
 S
-#2838
+#3099
 A Bower of Ancient Growth~
 An ancient bower has been formed here by centuries of deliberate root and branch arrangement, each element curved and interlocked with the others to create a space that is neither room nor forest but something in between.
 The growth is dense overhead and open underfoot, the enclosing canopy of @@Gliving green@@N filtering the ambient light into something warmer and more diffuse, the shadow it produces the shadow of a space that intends to shelter rather than to threaten.
@@ -1970,14 +1970,14 @@ D2
 The bower deepens southward into the most sheltered and ancient space in the Rootmother's domain.
 ~
 ~
-0 -1 2839
+0 -1 3100
 D3
 The bower opens westward back to the flowering heart.
 ~
 ~
-0 -1 2835
+0 -1 3096
 S
-#2839
+#3100
 The Rootmother's Cradle~
 The innermost accessible space of the Rootmother's domain is shaped like the interior of a seed, the walls curving inward overhead to form a seamless enclosure of living @@Gwood and root@@N, their surface smooth and slightly warm, the whole structure a single continuous piece of living architecture.
 The space is warm and moist and rich with oxygen, the air closer in composition to the interior of a living organism than to open forest, each breath tasting faintly of green wood and the deep sweetness of accelerated photosynthesis.
@@ -1990,14 +1990,14 @@ D0
 The cradle opens northward back into the bower of ancient growth.
 ~
 ~
-0 -1 2838
+0 -1 3099
 D2
 The cradle's innermost wall has opened to admit passage into the sanctum beyond.
 ~
 ~
-0 -1 2840
+0 -1 3101
 S
-#2840
+#3101
 The Rootmother's Sanctum~
 The sanctum is a space that should not exist underground -- a chamber large enough to hold a forest of its own, its ceiling lost in a darkness that suggests dimensions beyond what the structure of the earth should permit, its walls formed from the exposed root-systems of every tree above.
 The roots descend from the ceiling in thousands of simultaneous lines, each one distinct until it merges with its neighbors at the floor level into a continuous mass, the architecture of the space inseparable from the anatomy of the entity that occupies it.
@@ -2010,13 +2010,13 @@ D0
 The sanctum admits passage northward through its living walls toward the cradle.
 ~
 ~
-0 -1 2839
+0 -1 3100
 E
 rootmother form wood presence~
 The Rootmother does not move in any direction that would be recognized as movement; she is the room, and the room regards you, and the distinction between the massive root-system overhead and the entity occupying the space below has ceased to be meaningful or real.
 ~
 S
-#2841
+#3102
 The Blightwood Approach~
 The rot that has been visible for some distance intensifies here into something approaching its source; the trees in the approach are not merely dying but actively dissolving, their @@gwood soft and oozing@@N at every point of contact.
 Their bark hangs in loose sheets where it has not yet fallen, and the material beneath the bark is no longer wood but something between wood and liquid, the cellular structure broken down far enough to flow under pressure.
@@ -2027,14 +2027,14 @@ D0
 The approach leads northward back to the decaying threshold and the outer forest.
 ~
 ~
-0 -1 2817
+0 -1 3078
 D2
 The decay deepens southward through a stand of rotting trunks.
 ~
 ~
-0 -1 2842
+0 -1 3103
 S
-#2842
+#3103
 Among Rotting Trunks~
 The trunks here are in the final stages of structural collapse, still standing only because their neighbors support them in mutual dissolution, each one leaning into the next in a chain that will fall together when the last strong member gives way.
 @@gFungal networks@@N have replaced the wood's internal structure entirely, providing a temporary scaffolding of soft tissue that keeps the form upright while the substance continues to dissolve into the network that replaced it.
@@ -2045,19 +2045,19 @@ D0
 The rotting trunks give way northward toward the blightwood approach.
 ~
 ~
-0 -1 2841
+0 -1 3102
 D1
 The forest to the east is darker still, the floor entirely lost beneath fungal growth.
 ~
 ~
-0 -1 2843
+0 -1 3104
 D2
 A path southward through the dissolving wood leads to what was once a glade.
 ~
 ~
-0 -1 2844
+0 -1 3105
 S
-#2843
+#3104
 A Carpet of Fungal Growth~
 The @@gfloor has vanished beneath an unbroken carpet of fungal tissue@@N several feet deep, its surface pale and slightly translucent, with the dimly luminescent quality of living things that have never needed to attract or repel anything.
 The carpet yields underfoot to a depth that is difficult to gauge without sinking further than is comfortable, the upper surface firm enough to walk on but the layers below increasingly liquid.
@@ -2068,9 +2068,9 @@ D3
 The fungal carpet thins westward where the rotting trunks still provide some orientation.
 ~
 ~
-0 -1 2842
+0 -1 3103
 S
-#2844
+#3105
 The Decomposing Glade~
 What was once a clearing is now a bowl of uniform, @@gadvanced decomposition@@N -- every surface, living and dead, reduced to the same state of active dissolution by the Blightwood Ancient's domain.
 The trees ringing the glade are alive only in the technical sense that they have not yet completely returned to their component elements; their living tissue is present but compromised, colonized, in the process of being converted from tree to substrate.
@@ -2081,19 +2081,19 @@ D0
 The decomposing glade gives way northward to the rotting trunks.
 ~
 ~
-0 -1 2842
+0 -1 3103
 D1
 A cloud of @@gspores so dense it is nearly opaque@@N fills the passage to the east.
 ~
 ~
-0 -1 2846
+0 -1 3107
 D2
 The glade descends southward where the bark of the remaining trees is crumbling away.
 ~
 ~
-0 -1 2845
+0 -1 3106
 S
-#2845
+#3106
 Beneath Crumbling Bark~
 The trees here have lost their bark entirely on the lower portions, their exposed heartwood vulnerable and already colonized by the @@gfungal network@@N that has spread upward from the forest floor to meet the descending rot.
 The fallen bark covers the ground in pale, curling plates, each one still alive with the spore-producing organisms that reduced it from protection to substrate, the bark still being consumed even after it has fallen.
@@ -2104,14 +2104,14 @@ D0
 The crumbling bark gives way northward to the decomposing glade above.
 ~
 ~
-0 -1 2844
+0 -1 3105
 D2
 The bark thins further southward where a pool of festering liquid marks the lowest point.
 ~
 ~
-0 -1 2847
+0 -1 3108
 S
-#2846
+#3107
 A Miasma of Spores~
 The spore concentration here has reached a density that physically impedes vision and breathing both, the cloud reducing visibility to a few feet and coating every inhaled breath with material that immediately begins its reproductive chemistry.
 The @@gcloud is @@rpalely luminescent@@N@@g@@N in the dim light, its glow the byproduct of the chemical reactions occurring within each spore as it seeks a surface to colonize, the luminescence brightening momentarily when something warm moves through the cloud.
@@ -2122,9 +2122,9 @@ D3
 The miasma thins westward back toward the decomposing glade.
 ~
 ~
-0 -1 2844
+0 -1 3105
 S
-#2847
+#3108
 The Festering Pool~
 A pool of liquid too thick to be water and too mobile to be solid occupies the lowest point of the blightwood hollow, the endpoint of every dissolved thing in the domain draining toward this nadir by gravity and by the design of the Blightwood Ancient's root-network.
 Its surface is @@gactive, bubbling slowly@@N with the gases of decomposition, its color a deep, varied brown-green-black that shifts in the faint light as new chemical products rise from the depths and encounter the air above.
@@ -2135,19 +2135,19 @@ D0
 The festering pool gives way northward to the crumbling bark and the glade above.
 ~
 ~
-0 -1 2845
+0 -1 3106
 D2
 A raised path of compressed fungal mat leads southward through the overhang of collapsing canopy.
 ~
 ~
-0 -1 2848
+0 -1 3109
 D3
 A ring of enormous sporecrown fungi stands to the west, their caps nearly touching overhead.
 ~
 ~
-0 -1 2849
+0 -1 3110
 S
-#2848
+#3109
 Among Collapsing Canopy~
 The canopy here is falling -- not quickly, but in the continuous slow collapse of something that has lost its structural integrity over decades, the branches descending not in catastrophic failure but in endless attrition.
 Branches fall at irregular intervals with soft, wet crashes, their wood too far gone to crack or shatter, the impact muffled by the fungal carpet that receives them.
@@ -2158,9 +2158,9 @@ D0
 The collapsing canopy gives way northward to the festering pool below.
 ~
 ~
-0 -1 2847
+0 -1 3108
 S
-#2849
+#3110
 The Sporecrown Ring~
 Eight enormous sporecrown fungi stand in a near-perfect ring, their caps so broad they overlap overhead to create a tent of @@rpale fungal tissue@@N enclosing the interior, a geometry too precise to be accidental.
 Within the ring, the spore concentration is lower than outside it, the overlapping caps intercepting the ambient spore-fall and redirecting it outward, and the interior is dry and strangely still.
@@ -2171,14 +2171,14 @@ D1
 The sporecrown ring opens eastward back toward the festering pool.
 ~
 ~
-0 -1 2847
+0 -1 3108
 D2
 The ring narrows southward toward a hollow completely consumed by black mold.
 ~
 ~
-0 -1 2850
+0 -1 3111
 S
-#2850
+#3111
 A Hollow of Black Mold~
 The @@gblack mold here covers every surface@@N without exception, floor to ceiling, every texture and irregularity smoothed into a uniform matte black that absorbs light so completely the space appears to have no depth, no edges, no far wall.
 Moving through the hollow coats every surface it contacts with a thin layer of mold that immediately begins extending -- fingernails, clothing, equipment, all of it equally welcome as a substrate for colonization.
@@ -2189,14 +2189,14 @@ D0
 The black mold thins northward toward the sporecrown ring.
 ~
 ~
-0 -1 2849
+0 -1 3110
 D2
 The hollow deepens southward to the throne of the Blightwood Ancient.
 ~
 ~
-0 -1 2851
+0 -1 3112
 S
-#2851
+#3112
 The Blightwood Throne~
 The @@RBlightwood Ancient@@N has been here so long that the distinction between the entity and the environment has ceased to exist; what was once a mega-treant is now an ecology unto itself, its original form visible only as an archaeology beneath the layers of what it has become.
 Its wood has been hollowed and re-colonized by the same organisms it cultivates in its domain, its bark replaced by meters of living fungal tissue that extends and contracts with the Blightwood Ancient's own respiration, the boundary between bark and atmosphere negotiated by organisms operating on chemical rather than physical terms.
@@ -2209,13 +2209,13 @@ D0
 The blightwood throne gives way northward through the mold and rot toward the outer forest.
 ~
 ~
-0 -1 2850
+0 -1 3111
 E
 ancient blightwood throne entity~
 The Blightwood Ancient's original form is still visible inside the layers of decay that constitute its current body -- the curve of a trunk, the spread of ancient branches -- like an archaeological layer in the geology of rot that has accumulated around it, evidence of something that chose to become this rather than simply having it happen.
 ~
 S
-#2852
+#3113
 The Predator's Approach~
 The change in the forest's character here is immediate and olfactory -- the smell of @@Rblood and active predator@@N replaces the neutral organic smell of the Deepwood, a transition so abrupt it functions as a warning, the difference between one breath and the next.
 The silence changes quality simultaneously, from the absence of noise to the presence of calculated stillness -- not the empty quiet of unpopulated forest but the occupied quiet of a space in which every bird and insect and small animal has assessed the situation and decided not to be present.
@@ -2228,14 +2228,14 @@ D0
 The approach leads northward back through the hunter's blind to the outer forest.
 ~
 ~
-0 -1 2822
+0 -1 3083
 D2
 The approach continues southward between bones arranged with evident deliberateness.
 ~
 ~
-0 -1 2853
+0 -1 3114
 S
-#2853
+#3114
 Among Trophy Bones~
 The bones here are @@Rarranged@@N -- not scattered by scavengers but placed with evident deliberateness along the edges of the trail, stacked and positioned in ways that serve no purpose a scavenger would recognize but that serve a purpose nonetheless.
 They represent dozens of different species over what must be decades of accumulation, and the largest of them belong to creatures that should themselves have been apex predators: things with claws and size and their own territorial territories, all of them subordinate to whatever placed these bones here.
@@ -2246,19 +2246,19 @@ D0
 The trophy bones thin northward toward the approach.
 ~
 ~
-0 -1 2852
+0 -1 3113
 D1
 A side trail eastward shows the lateral extent of the stalking grounds.
 ~
 ~
-0 -1 2855
+0 -1 3116
 D2
 The trail continues southward, the claw marks in the trees growing deeper.
 ~
 ~
-0 -1 2854
+0 -1 3115
 S
-#2854
+#3115
 A Trail of Claw Marks~
 Every tree along this section of trail bears deep claw marks at a consistent height -- @@Rfour parallel gouges@@N cut into wood as though it were soft earth, their edges clean and their depth suggesting force that no organic mechanism should produce in material this dense.
 The marks are at two different heights, suggesting the same creature marking different levels in different moods, or at different times, or according to a logic that has more dimensions than the simple territorial marking the marks most resemble.
@@ -2269,14 +2269,14 @@ D0
 The claw-marked trail climbs northward toward the trophy bones.
 ~
 ~
-0 -1 2853
+0 -1 3114
 D2
 The trail descends southward into a passage obscured by hanging webs.
 ~
 ~
-0 -1 2856
+0 -1 3117
 S
-#2855
+#3116
 The Stalking Grounds~
 The forest opens here into a broader space, its undergrowth deliberately cleared to provide @@Runobstructed lines of movement@@N from the center to every point on the perimeter, the clearance maintained at a width consistent with something much larger than anything that lives here as prey.
 The ground is compressed and smooth where something has repeatedly crossed it from multiple angles, the traffic patterns visible as worn channels that converge at the center from different compass points, each one representing an approach-line that has been used enough to leave a permanent record.
@@ -2287,14 +2287,14 @@ D2
 The stalking grounds narrow southward into a den where shed scales litter the floor.
 ~
 ~
-0 -1 2857
+0 -1 3118
 D3
 The stalking grounds connect westward back to the trophy bone trail.
 ~
 ~
-0 -1 2853
+0 -1 3114
 S
-#2856
+#3117
 Beneath a Canopy of Webs~
 The canopy here has been entirely replaced by @@Rgiant web-sheets@@N spanning the gaps between every tree, their silk thick enough to obscure the sky above and reduce the light to a dim, filtered gray that makes the space beneath feel enclosed and permanent.
 The webs are fresh in places, older in others, the newer sections bright and elastic where they span open gaps and the older sections yellowed and dense where successive layers have been added, each repair building on the previous one.
@@ -2305,14 +2305,14 @@ D0
 The web-canopy thins northward where the claw-marked trail resumes.
 ~
 ~
-0 -1 2854
+0 -1 3115
 D2
 The webs grow denser southward where something feeds beneath them.
 ~
 ~
-0 -1 2858
+0 -1 3119
 S
-#2857
+#3118
 A Den of Shed Scales~
 The ground here is deeply covered in @@Rshed scales@@N of a size and thickness that implies an armored creature of enormous dimensions, each individual scale large enough to serve as a shield for something man-sized.
 The scales are gold-brown and iridescent, their undersides still faintly warm as though recently discarded, the iridescence shifting between colors as the viewing angle changes in the same way that the scales of living armored creatures shift.
@@ -2323,14 +2323,14 @@ D0
 The shed scales thin northward back to the stalking grounds.
 ~
 ~
-0 -1 2855
+0 -1 3116
 D2
 The scales deepen southward where the gnawed remnants of prey accumulate.
 ~
 ~
-0 -1 2859
+0 -1 3120
 S
-#2858
+#3119
 The Feeding Ground~
 The remains of a meal are here -- recent enough that @@Rthe blood has not fully dried@@N, the bones still connected by remnant tissue, the impression of the feeding creature still warm in the compressed earth around the site.
 The scale of what was consumed is significant, and how it was consumed is more significant still: methodically, systematically, in a specific order that reflects preferences developed over a long acquaintance with the interior architecture of living things.
@@ -2341,14 +2341,14 @@ D0
 The feeding ground gives way northward through the web-canopy.
 ~
 ~
-0 -1 2856
+0 -1 3117
 D2
 The feeding ground continues southward into a passage that narrows and darkens.
 ~
 ~
-0 -1 2860
+0 -1 3121
 S
-#2859
+#3120
 Among Gnawed Remains~
 A deep accumulation of @@Rgnawed bones@@N lines the eastern branch of the den -- not the remains of a single meal or a single year but a lifetime of hunting compressed into one space, the bones of decades stacked to a depth of several feet.
 Among them are complete skeletons of creatures that were swallowed whole and the equally complete remnants of things that were taken apart methodically, the two treatment-types interleaved without apparent distinction in the predator's record-keeping.
@@ -2359,9 +2359,9 @@ D0
 The gnawed remains give way northward back to the den of shed scales.
 ~
 ~
-0 -1 2857
+0 -1 3118
 S
-#2860
+#3121
 The Broodmother's Passage~
 Something else lives here alongside the apex predator -- a secondary presence, @@Rsmaller but considerable@@N, its sign visible in the narrower trail that forks here and the characteristic marks of a creature guarding rather than hunting.
 The broodmother's passage leads to its own deep hollow, its trail showing the particular wear pattern of something that moves the same short route repeatedly, back and forth, the repetition of a guardian rather than a wanderer.
@@ -2372,19 +2372,19 @@ D0
 The broodmother's passage opens northward to the feeding ground.
 ~
 ~
-0 -1 2858
+0 -1 3119
 D1
 A side passage eastward leads into the matted, dark warmth of a nest hollow.
 ~
 ~
-0 -1 2861
+0 -1 3122
 D2
 The passage continues southward toward the kill floor where it all converges.
 ~
 ~
-0 -1 2862
+0 -1 3123
 S
-#2861
+#3122
 A Nest of Matted Fur~
 The nest is built from materials the broodmother has collected over years -- @@Rmatted fur from a dozen prey species@@N, broken branches, compressed leaves, and bones arranged not as trophies but as structural elements providing rigidity to a construction that would otherwise collapse under its own weight.
 The hollow is warm and dark and smells of animal life concentrated beyond the threshold of comfortable proximity, the smell of a den that has been occupied continuously long enough that the occupation is now the primary fact about the space.
@@ -2395,9 +2395,9 @@ D3
 The nest hollow opens westward back to the broodmother's passage.
 ~
 ~
-0 -1 2860
+0 -1 3121
 S
-#2862
+#3123
 The Kill Floor~
 The ground here has been pressed and stained by so many kills over so many years that it has taken on a different character entirely, @@Rthe soil dark@@N and compacted to the density of fired clay, its surface as hard as any manufactured material and as smooth.
 It no longer supports plant growth of any kind, its chemistry too altered by accumulated blood and organic process to sustain anything that does not live by consuming rather than being consumed -- even the ubiquitous Deepwood fungus does not grow here, which implies a chemistry hostile even to decomposition.
@@ -2408,14 +2408,14 @@ D0
 The kill floor gives way northward through the broodmother's passage.
 ~
 ~
-0 -1 2860
+0 -1 3121
 D2
 The kill floor opens southward into the Thornfang Alpha's innermost lair.
 ~
 ~
-0 -1 2863
+0 -1 3124
 S
-#2863
+#3124
 The Apex Predator's Lair~
 The @@RThornfang Alpha@@N's lair is not a burrow or a nest but a throne room, the central space of a domain that extends through every part of the predator's den, its geography organized to funnel everything that moves in the outer den toward this point eventually.
 The floor is bone and compressed earth, the bones not scattered but arranged, not randomly distributed but ordered by a logic that takes size and species into account, the lair's floor a record of what the Alpha has killed and a statement about what it intends to continue killing.
@@ -2428,7 +2428,7 @@ D0
 The lair admits passage northward through the kill floor and back toward the outer den.
 ~
 ~
-0 -1 2862
+0 -1 3123
 E
 alpha lair throne presence weight~
 The Alpha has been here long enough that the space has organized itself around its preferences; the sight-lines from the lair's center cover every approach, the terrain has been modified to channel prey in predictable directions, and the bones of the Alpha's kills are arranged not randomly but in a record of something that might, in an entity with a different nature, be called pride.
@@ -2436,7 +2436,7 @@ The Alpha has been here long enough that the space has organized itself around i
 S
 #0
 #MOBILES
-#2739
+#3000
 verdant stalker~
 a verdant stalker~
 A verdant stalker crouches motionless here, its body indistinguishable from the undergrowth until it moves.
@@ -2451,7 +2451,7 @@ This predator has evolved camouflage so perfect that its outline dissolves into 
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2740
+#3001
 thornback briar beast~
 a thornback briar beast~
 A thornback briar beast moves through the undergrowth, its body a dense mass of animated wood and iron-hard thorns.
@@ -2466,7 +2466,7 @@ Whatever this creature was before the forest's will took it, it is now armored i
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2741
+#3002
 canopy lurker~
 a canopy lurker~
 A canopy lurker hangs motionless among the branches above, its long body folded into a shape that reads as shadow.
@@ -2481,7 +2481,7 @@ The canopy lurker does not move until something passes beneath it, at which poin
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2742
+#3003
 ancient treant~
 an ancient treant~
 An ancient treant stands here, its trunk wide enough to shelter a company and its limbs moving with the terrible slowness of things that have never needed to hurry.
@@ -2496,7 +2496,7 @@ This is one of the original inhabitants of the Verdant Depths; its bark has fuse
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2743
+#3004
 sporecap shambler~
 a sporecap shambler~
 A sporecap shambler lurches through the undergrowth, its body a humanoid framework overgrown with broad shelf fungus and trailing spore-curtains.
@@ -2511,7 +2511,7 @@ Whatever this creature was before the fungal infection completed its work, it is
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2744
+#3005
 deepwood wolf~
 a deepwood wolf~
 A deepwood wolf paces here, its bulk twice that of any surface wolf and its coat a dark green-grey that vanishes entirely in the forest's shadows.
@@ -2526,7 +2526,7 @@ The deepwood wolf has lived in this place long enough that the forest's particul
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2745
+#3006
 vine strangler~
 a vine strangler~
 A vine strangler moves through the undergrowth as a mass of coiled, purposeful vine that has adopted a humanoid posture for the convenience of locomotion.
@@ -2541,7 +2541,7 @@ There is no brain in the vine strangler that a conventional anatomist would reco
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2746
+#3007
 moss-covered golem~
 a moss-covered golem~
 A moss-covered golem stands here, its stone body so thoroughly colonized by living moss that the original material is visible only as a darker texture beneath the green.
@@ -2556,7 +2556,7 @@ This construct was built by hands now centuries gone to serve a purpose that has
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2747
+#3008
 blighted dryad~
 a blighted dryad~
 A blighted dryad stands here, beautiful from a distance and deeply wrong at any closer approach, her skin the color of diseased bark and her eyes replaced by solid black.
@@ -2571,7 +2571,7 @@ She was once a guardian of the forest's living heart; the corruption that took h
 + 20 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2748
+#3009
 thornfang stalker~
 a thornfang stalker~
 A thornfang stalker moves through the shadows with the mechanical precision of a creature whose entire existence has been dedicated to the elimination of a single category of problem.
@@ -2586,7 +2586,7 @@ The thornfang stalker is a pack hunter operating alone only because the pack has
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2749
+#3010
 rootweaver spider~
 a rootweaver spider~
 A rootweaver spider occupies the intersection of several root-lines, its body a mottled brown-green and its web woven not from silk but from repurposed root-fiber.
@@ -2601,7 +2601,7 @@ The rootweaver spider has evolved alongside the forest's root network to the poi
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2750
+#3011
 petrified sentinel~
 a petrified sentinel~
 A petrified sentinel stands here in absolute stillness, indistinguishable from a stone formation until it moves, at which point the illusion shatters completely.
@@ -2616,7 +2616,7 @@ This construct was once a treant; the petrification process preserved the struct
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2751
+#3012
 fungal abomination~
 a fungal abomination~
 A fungal abomination fills the available space with its bulk, a mass of fused fungal tissue that has grown far beyond what any individual organism should achieve.
@@ -2631,7 +2631,7 @@ Multiple fungal species have merged here into a single colony that has achieved 
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2752
+#3013
 heartwood guardian~
 a heartwood guardian~
 A heartwood guardian stands at the boundary of the inner forest, its body constructed from the densest heartwood of the oldest trees and animated by a will that is not its own.
@@ -2646,7 +2646,7 @@ The heartwood guardians were not made in any conventional sense -- they grew, ov
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2753
+#3014
 rotwood shambler~
 a rotwood shambler~
 A rotwood shambler lurches through the blightwood's outer zones, its body a column of advanced rot that has achieved ambulatory capability through mechanisms that do not bear close examination.
@@ -2661,7 +2661,7 @@ The rotwood shambler is what results when the Blightwood Ancient's decay network
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2754
+#3015
 sporecrown drone~
 a sporecrown drone~
 A sporecrown drone moves through the blightwood's outer zones on a patrol route that has been chemically encoded into its fungal nervous system.
@@ -2676,7 +2676,7 @@ The sporecrown drone is a purpose-built extension of the Blightwood Ancient's se
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2755
+#3016
 thornfang packmate~
 a thornfang packmate~
 A thornfang packmate moves with the specific efficiency of a creature that knows exactly where every other member of its pack is at any given moment.
@@ -2691,7 +2691,7 @@ The packmate operates in a distributed hunting pattern coordinated through subso
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2756
+#3017
 root tendril mass~
 a root tendril mass~
 A root tendril mass moves through the Rootmother's domain, its thousands of individual rootlets coordinated into a unified organism by the intelligence that governs the root-network.
@@ -2706,7 +2706,7 @@ Each tendril in this mass is a separate organism that has surrendered individual
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2757
+#3018
 canopy weaver~
 a canopy weaver~
 A canopy weaver moves through the web-infrastructure of the predator den's upper level, its eight legs navigating the silk-and-root network with the confidence of something that built the entire system.
@@ -2721,7 +2721,7 @@ The canopy weaver's web spans the entire zone's canopy and serves simultaneously
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2758
+#3019
 verdant wraith~
 a verdant wraith~
 A verdant wraith drifts between the trees, its form composed of condensed forest-memory given a shape that approximates the living thing it no longer is.
@@ -2736,7 +2736,7 @@ The verdant wraith is what remains of a consciousness that was once part of the 
 + 30 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2759
+#3020
 creeping shadow fox~
 a creeping shadow fox~
 A creeping shadow fox moves through the undergrowth, its dark-furred body following the shadows with a precision that suggests it perceives light differently than most creatures.
@@ -2751,7 +2751,7 @@ The creeping shadow fox's fur absorbs light in a way that ordinary biology canno
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2760
+#3021
 tanglewood serpent~
 a tanglewood serpent~
 A tanglewood serpent lies coiled among the ground-vines, its scale pattern so precisely matching the color and texture of its surroundings that its outline registers only in peripheral vision.
@@ -2766,7 +2766,7 @@ The tanglewood serpent's camouflage is not a fixed pattern but an active process
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2761
+#3022
 fungal tick swarm~
 a fungal tick swarm~
 A fungal tick swarm moves through the forest floor as a living carpet of parasitic organisms, each individual barely visible but the collective presence detectable by the faint rustling of mass movement.
@@ -2781,7 +2781,7 @@ The fungal tick swarm has no individual intelligence but the swarm as a whole de
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2762
+#3023
 grasping bramble~
 a grasping bramble~
 A grasping bramble has positioned itself across a gap in the undergrowth, its thorned limbs arranged to maximize contact with anything that passes through.
@@ -2796,7 +2796,7 @@ The grasping bramble was a hedge or thicket before the forest's will animated it
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2763
+#3024
 hollow tree lurker~
 a hollow tree lurker~
 A hollow tree lurker occupies the interior of a dead trunk nearby, visible only as a pair of pale eyes in the darkness of the hollow before it moves.
@@ -2811,7 +2811,7 @@ The hollow tree lurker has modified the trunk it occupies over years of habitati
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2764
+#3025
 mosswort beetle~
 a mosswort beetle~
 A mosswort beetle moves through the leaf-litter, its shell-armor covered in a thick layer of living moss that has grown into the shell's surface over the creature's long life.
@@ -2826,7 +2826,7 @@ The mosswort beetle's shell is genuinely impenetrable to most conventional weapo
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2765
+#3026
 deepwood bear~
 a deepwood bear~
 A deepwood bear stands here, its mass substantially greater than any surface bear and its fur marked with patterns that echo the forest's own color-logic of deep green and shadow-grey.
@@ -2841,7 +2841,7 @@ The deepwood bear has been in the Verdant Depths long enough that the forest's i
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2766
+#3027
 sap-blooded horror~
 a sap-blooded horror~
 A sap-blooded horror moves through the undergrowth, its body the consistency of heavy syrup in humanoid form, constantly shedding amber droplets that hiss where they contact the forest floor.
@@ -2856,7 +2856,7 @@ What animates this body of semi-solidified tree sap is debatable; what is certai
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2767
+#3028
 whispering shade~
 a whispering shade~
 A whispering shade drifts between the trees, its form too consistent to be shadow and too diffuse to be solid, producing a low sound at the edge of audibility.
@@ -2871,7 +2871,7 @@ The whispering shade is a creature of the spaces between things -- between light
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2768
+#3029
 bark-skinned ogre~
 a bark-skinned ogre~
 A bark-skinned ogre moves through the undergrowth, its massive body covered in a hide that has hardened to the texture and consistency of aged oak bark over its decades in the Verdant Depths.
@@ -2886,7 +2886,7 @@ The bark-skin is not armor in the conventional sense -- it is the ogre's actual 
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2769
+#3030
 thorn-crowned stag~
 a thorn-crowned stag~
 A thorn-crowned stag stands here, its antlers overgrown with thorned secondary growth that has fused with the original bone into a weapon system no design process would have arrived at deliberately.
@@ -2901,7 +2901,7 @@ The thorn-crown stag was once part of the forest's natural ecology; the corrupti
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2770
+#3031
 mycelium crawler~
 a mycelium crawler~
 A mycelium crawler moves just beneath the surface of the forest floor, visible as a long ripple of displaced leaf-litter before it erupts upward at close range.
@@ -2916,7 +2916,7 @@ The mycelium crawler is a primarily subterranean organism that uses the forest's
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2771
+#3032
 spore-maddened boar~
 a spore-maddened boar~
 A spore-maddened boar charges through the undergrowth, its eyes filmed with fungal growth and its behavior stripped of any function beyond aggressive forward motion.
@@ -2931,7 +2931,7 @@ The fungal infection that controls this boar has removed everything that might m
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2772
+#3033
 elder vine serpent~
 an elder vine serpent~
 An elder vine serpent moves through the undergrowth, its body so large that it displaces the surrounding vegetation simply by existing in a space, the ground-vines parting before it without touching it.
@@ -2946,7 +2946,7 @@ The elder vine serpent has been in the Verdant Depths long enough that the fores
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2773
+#3034
 living deadfall~
 a living deadfall~
 A living deadfall occupies what appears at first to be a pile of fallen logs, the distinction between pile and creature becoming apparent only when the mass begins to move toward something.
@@ -2961,7 +2961,7 @@ The living deadfall is animated timber -- logs and branches that have been given
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2774
+#3035
 deepwood shaman~
 a deepwood shaman~
 A deepwood shaman stands here, humanoid in shape but with bark-textured skin and eyes that emit a faint, cold bioluminescence, performing gestures of invocation toward the trees.
@@ -2976,7 +2976,7 @@ The deepwood shaman was once a druid, a cleric, or something similar; the forest
 + 35 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2775
+#3036
 rootwoven horror~
 a rootwoven horror~
 A rootwoven horror occupies the path ahead, its body a massive tangle of living roots that has achieved a degree of coherence sufficient to give it definite form and directed movement.
@@ -2991,7 +2991,7 @@ The rootwoven horror is one of the forest's larger-scale defensive constructs, a
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2776
+#3037
 blightspore walker~
 a blightspore walker~
 A blightspore walker moves through the blightwood's interior zones trailing a persistent cloud of dark spores that settles on every surface it passes.
@@ -3006,7 +3006,7 @@ The blightspore walker is a fungal organism that has achieved locomotion by anim
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2777
+#3038
 thornfang whelp~
 a thornfang whelp~
 A thornfang whelp moves through the undergrowth of the predator's den, its size smaller than the adults but its behavior identical in every relevant way.
@@ -3021,7 +3021,7 @@ The thornfang whelp has not yet reached the full size of the pack's adults but h
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2778
+#3039
 rootbound guardian~
 a rootbound guardian~
 A rootbound guardian stands at the inner boundary of the Rootmother's domain, its body a dense framework of living roots shaped into a form that serves the function of a guardian without having been designed as one.
@@ -3036,7 +3036,7 @@ The rootbound guardian grew from the Rootmother's root-network in response to in
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2779
+#3040
 canopy strangler~
 a canopy strangler~
 A canopy strangler descends from the canopy above, its vine-mass body uncoiling from a resting position in the branches to drop toward the forest floor.
@@ -3051,7 +3051,7 @@ The canopy strangler waits in the upper canopy for extended periods, its body pe
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2780
+#3041
 withered dryad~
 a withered dryad~
 A withered dryad stands here, her form ancient and desiccated and radiating a cold hostility that is not the hostility of the newly corrupted but of something that has had centuries to refine its grievances.
@@ -3066,7 +3066,7 @@ She was old when the corruption found her, and the corruption found in her a con
 + 30 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2781
+#3042
 mosswort queen~
 a mosswort queen~
 A mosswort queen moves through the undergrowth, substantially larger than the standard mosswort beetles and carrying the additional weight of a reproductive apparatus that takes up most of her posterior section.
@@ -3081,7 +3081,7 @@ The mosswort queen does not need to fight well because everything in her immedia
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2782
+#3043
 verdant hulk~
 a verdant hulk~
 A verdant hulk moves through the forest, its bulk so substantial that it does not navigate the undergrowth so much as relocate it, pushing through obstacles that would stop a smaller creature without registering the resistance.
@@ -3096,7 +3096,7 @@ The verdant hulk is a plant-beast amalgamation that the Verdant Depths has been 
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2783
+#3044
 rotting stag~
 a rotting stag~
 A rotting stag moves through the undergrowth, its dead flesh held together by the fungal network that has colonized its body and the antlers still intact and functional despite everything else about it that is not.
@@ -3111,7 +3111,7 @@ The fungal infection that animated this stag did so long after the animal's deat
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2784
+#3045
 thorn wasp swarm~
 a thorn wasp swarm~
 A thorn wasp swarm moves through the air as a shifting cloud of individually tiny but collectively dangerous organisms, their thorned limbs making the swarm's surface appear to bristle constantly.
@@ -3126,7 +3126,7 @@ The thorn wasp swarm has no individual intelligence but demonstrates collective 
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2785
+#3046
 barkskin wolf~
 a barkskin wolf~
 A barkskin wolf moves through the undergrowth, its hide so thoroughly hardened by the forest's particular biology that it produces a faint sound like wood shifting when it moves quickly.
@@ -3141,7 +3141,7 @@ The barkskin wolf is a deepwood wolf variant whose hide has undergone a secondar
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2786
+#3047
 deepwood centipede~
 a deepwood centipede~
 A deepwood centipede moves through the undergrowth with the fluid, segmented efficiency of something whose locomotive system has been optimized over millions of years for exactly this terrain.
@@ -3156,7 +3156,7 @@ The deepwood centipede is venomous in all developmental stages, but the adult's 
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2787
+#3048
 bog troll~
 a bog troll~
 A bog troll stands here, its body covered in a thick layer of living moss and algae that makes it appear to be a mobile section of the forest floor that has acquired an opinion about intruders.
@@ -3171,7 +3171,7 @@ The bog troll's relationship with the forest is reciprocal; the moss that covers
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2788
+#3049
 fungal broodmother~
 a fungal broodmother~
 A fungal broodmother occupies a substantial section of the blightwood's interior, her body the largest single fungal organism in this zone and her presence the source of most of the spore-density in the immediate vicinity.
@@ -3186,7 +3186,7 @@ The fungal broodmother is the Blightwood Ancient's primary reproductive instrume
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2789
+#3050
 ancient moss elemental~
 an ancient moss elemental~
 An ancient moss elemental occupies the space before you, its form composed of living moss compressed and animated into something between a creature and a force of nature.
@@ -3201,7 +3201,7 @@ The ancient moss elemental is an elemental not in the sense of having been summo
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2790
+#3051
 twisted ent~
 a twisted ent~
 A twisted ent moves through the forest, its form the corrupted version of the treant species -- the same fundamental architecture but distorted by a process that has replaced deliberate growth with something more urgent and less stable.
@@ -3216,7 +3216,7 @@ The twisted ent has been corrupted not by external agency but by an internal pro
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2791
+#3052
 thornveil assassin~
 a thornveil assassin~
 A thornveil assassin moves through the deep forest in a pattern that makes it genuinely difficult to determine its position even when it is visible, the movement itself serving as a form of concealment.
@@ -3231,7 +3231,7 @@ The thornveil assassin is the forest's most evolved predatory plant-form -- mobi
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2792
+#3053
 gloomwing moth~
 a gloomwing moth~
 A gloomwing moth moves through the shadows near the canopy, its wing-surface releasing a continuous fall of fine particles that catch what little light reaches this deep.
@@ -3246,7 +3246,7 @@ The gloomwing moth's wing-dust is its primary survival mechanism: a chemical com
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2793
+#3054
 sap ooze~
 a sap ooze~
 A sap ooze moves across the forest floor as a slow-spreading mass of semi-solid amber tree sap, its surface dimly luminescent and its motion the patient spread of something that is in no hurry.
@@ -3261,7 +3261,7 @@ The sap ooze is the forest's most basic animated construct -- tree sap given the
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2794
+#3055
 feral grove keeper~
 a feral grove keeper~
 A feral grove keeper stands here, its form retaining the outline of the nature guardian it once was while every detail of that form has been taken over by something with different priorities.
@@ -3276,7 +3276,7 @@ The grove keeper was created to protect a specific grove and given the intellige
 + 30 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2795
+#3056
 corpseflower lurker~
 a corpseflower lurker~
 A corpseflower lurker has positioned itself in a gap in the undergrowth, its broad petals spread wide and its scent -- which approximates the smell of a fresh carcass -- carrying through the immediate area.
@@ -3291,7 +3291,7 @@ The corpseflower lurker lures prey with a scent system that mimics the specific 
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2796
+#3057
 brambleback tortoise~
 a brambleback tortoise~
 A brambleback tortoise moves through the undergrowth with the unhurried confidence of something whose defensive systems make speed irrelevant as a survival strategy.
@@ -3306,7 +3306,7 @@ The brambleback tortoise's shell has been colonized by thorn-producing plants to
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2797
+#3058
 sporeveil phantom~
 a sporeveil phantom~
 A sporeveil phantom drifts through the spore-clouds of the Deepwood, its form visible as a vaguely consistent disturbance in the spore density rather than as a solid shape.
@@ -3321,7 +3321,7 @@ The sporeveil phantom is a consciousness that has distributed itself through a s
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2798
+#3059
 thornroot drake~
 a thornroot drake~
 A thornroot drake occupies a clearing, its body the rough outline of a large reptile assembled from compressed root-and-thorn material over a framework of living wood, its eyes amber sap in sealed amber casings.
@@ -3336,7 +3336,7 @@ The thornroot drake is the forest's response to the question of what form the ap
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2799
+#3060
 deepwood prowler~
 a deepwood prowler~
 A deepwood prowler moves through the undergrowth, its large feline body held low and its gait producing no sound despite its size.
@@ -3351,7 +3351,7 @@ The deepwood prowler is the forest's most conventional predator in form and the 
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2800
+#3061
 Rootmother~
 the Rootmother~
 The Rootmother is here, her form filling the sanctum -- root and branch and heartwood and flowering tendril, all of it alive, all of it her, all of it watching you with an attention that predates everything else in this forest.
@@ -3367,7 +3367,7 @@ Her roots extend in every direction into the living rock, drawing nourishment fr
 + 50 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2801
+#3062
 Blightwood Ancient~
 the Blightwood Ancient~
 The Blightwood Ancient is here, its form occupying the decay-throne at the center of the hollow -- ancient rotting mega-treant and ecology in one, the distinction between it and the decomposing environment it inhabits having ceased to be meaningful.
@@ -3383,7 +3383,7 @@ The spores that fall constantly from its mass carry the chemistry of centuries o
 + 50 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2802
+#3063
 Thornfang Alpha~
 Thornfang Alpha~
 Thornfang Alpha is here, occupying the center of its lair with the absolute stillness of something that has no need to signal dominance because the lair itself does that already.
@@ -3401,7 +3401,7 @@ l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0 
 #0
 #OBJECTS
-#2739
+#3000
 thornback claw~
 @@Ga thornback claw@@N~
 @@GA curved thornback claw lies here, barbed and wickedly sharp.@@N
@@ -3411,7 +3411,7 @@ thornback claw~
 6
 L
 80
-#2740
+#3001
 canopy lurker fang~
 @@Ga canopy lurker's fang@@N~
 @@GA long piercing fang lies here, yellowed at the root but needle-sharp at the tip.@@N
@@ -3421,7 +3421,7 @@ canopy lurker fang~
 6
 L
 82
-#2741
+#3002
 treant bark shield~
 @@Ga treant bark shield@@N~
 @@GA thick slab of treant bark, shaped into a crude shield, rests here.@@N
@@ -3431,7 +3431,7 @@ treant bark shield~
 11
 L
 83
-#2742
+#3003
 sporecap cowl~
 @@Ga sporecap cowl@@N~
 @@GA cowl woven from dried sporecap fungi lies here, still faintly luminous.@@N
@@ -3441,7 +3441,7 @@ sporecap cowl~
 1
 L
 80
-#2743
+#3004
 wolf hide mantle~
 @@Ga wolf-hide mantle@@N~
 @@GA mantle of deep grey wolf hide lies here, still carrying the scent of the forest.@@N
@@ -3451,7 +3451,7 @@ wolf hide mantle~
 6
 L
 81
-#2744
+#3005
 vine woven tunic~
 @@Ga vine-woven tunic@@N~
 @@GA tunic of tightly woven living vines lies here, dense and tough.@@N
@@ -3461,7 +3461,7 @@ vine woven tunic~
 11
 L
 84
-#2745
+#3006
 moss golem fist~
 @@Ga moss golem's fist@@N~
 @@GA dense mass of packed earth and moss, shaped into a fist, rests here.@@N
@@ -3471,7 +3471,7 @@ moss golem fist~
 6
 L
 85
-#2746
+#3007
 blighted branch wand~
 @@Ga blighted branch wand@@N~
 @@gA wand carved from a blighted branch lies here, dark veins tracing its length.@@N
@@ -3481,7 +3481,7 @@ blighted branch wand~
 1
 L
 82
-#2747
+#3008
 thornfang pelt~
 @@Ga thornfang pelt@@N~
 @@GA mottled thornfang pelt lies here, bristling with short grey fur.@@N
@@ -3491,7 +3491,7 @@ thornfang pelt~
 6
 L
 83
-#2748
+#3009
 web silk sash~
 @@Ga web-silk sash@@N~
 @@GA sash of dense web-silk lies here, surprisingly strong for its delicate appearance.@@N
@@ -3501,7 +3501,7 @@ web silk sash~
 1
 L
 80
-#2749
+#3010
 petrified bark bracer~
 @@Ga petrified bark bracer@@N~
 @@GA bracer of stone-hard petrified bark lies here, heavy and unyielding.@@N
@@ -3511,7 +3511,7 @@ petrified bark bracer~
 11
 L
 85
-#2750
+#3011
 fungal tendril whip~
 @@Ga fungal tendril whip@@N~
 @@gA long lashing tendril torn from a fungal abomination lies here, still twitching faintly.@@N
@@ -3521,7 +3521,7 @@ fungal tendril whip~
 1
 L
 84
-#2751
+#3012
 heartwood splint~
 @@Ga heartwood splint@@N~
 @@GA pair of greave-like splints carved from dense heartwood lies here.@@N
@@ -3531,7 +3531,7 @@ heartwood splint~
 11
 L
 85
-#2752
+#3013
 rotwood club~
 @@Ga rotwood club@@N~
 @@gA heavy club of waterlogged rotwood lies here, dense with absorbed moisture.@@N
@@ -3541,7 +3541,7 @@ rotwood club~
 6
 L
 81
-#2753
+#3014
 sporecrown circlet~
 @@Ga sporecrown circlet@@N~
 @@GA circlet of interlocked sporecrown stalks lies here, faintly glowing.@@N
@@ -3551,7 +3551,7 @@ sporecrown circlet~
 1
 L
 82
-#2754
+#3015
 thornfang tooth necklace~
 @@Ga thornfang tooth necklace@@N~
 @@GA necklace strung with long thornfang teeth lies here, clicking softly.@@N
@@ -3561,7 +3561,7 @@ thornfang tooth necklace~
 6
 L
 83
-#2755
+#3016
 root tendril armband~
 @@Ga root tendril armband@@N~
 @@GA thick armband twisted from hardened root tendrils lies here.@@N
@@ -3571,7 +3571,7 @@ root tendril armband~
 11
 L
 80
-#2756
+#3017
 canopy weaver silk gloves~
 @@Ga canopy weaver's silk gloves@@N~
 @@GA pair of fine gloves woven from canopy spider-silk lies here.@@N
@@ -3581,7 +3581,7 @@ canopy weaver silk gloves~
 1
 L
 84
-#2757
+#3018
 verdant wraith shroud~
 @@Ga verdant wraith's shroud@@N~
 @@gA shroud of mist-like verdant fabric lies here, barely substantial.@@N
@@ -3591,7 +3591,7 @@ verdant wraith shroud~
 1
 L
 85
-#2758
+#3019
 deepwood wolf ear~
 @@Ga deepwood wolf's ear@@N~
 @@GA severed deepwood wolf ear lies here, still warm.@@N
@@ -3601,7 +3601,7 @@ deepwood wolf ear~
 6
 L
 80
-#2759
+#3020
 shadow fox pelt cloak~
 @@Ga shadow fox pelt cloak@@N~
 @@gA cloak stitched from shadow fox pelts lies here, the fur still carrying a faint darkwood scent.@@N
@@ -3611,7 +3611,7 @@ shadow fox pelt cloak~
 6
 L
 81
-#2760
+#3021
 tanglewood fang blade~
 @@Ga tanglewood fang blade@@N~
 @@GA long curved fang, still socketed in a root-wrapped hilt, rests here.@@N
@@ -3621,7 +3621,7 @@ tanglewood fang blade~
 6
 L
 83
-#2761
+#3022
 tick chitin armguard~
 @@Ga tick-chitin armguard@@N~
 @@GA bracer fashioned from plates of dense tick chitin lies here.@@N
@@ -3631,7 +3631,7 @@ tick chitin armguard~
 11
 L
 80
-#2762
+#3023
 verdant hulk knuckle~
 @@Ga verdant hulk's knuckle@@N~
 @@GA massive knuckle-piece torn from a verdant hulk rests here, crusted with bark.@@N
@@ -3641,7 +3641,7 @@ verdant hulk knuckle~
 11
 L
 85
-#2763
+#3024
 rotting stag antler~
 @@Ga rotting stag antler@@N~
 @@gA curved antler tine from a rotting stag lies here, tipped with decay.@@N
@@ -3651,7 +3651,7 @@ rotting stag antler~
 6
 L
 82
-#2764
+#3025
 thorn wasp wing mantle~
 @@Ga thorn wasp wing mantle@@N~
 @@GA mantle of iridescent thorn wasp wings lies here, arranged with care.@@N
@@ -3661,7 +3661,7 @@ thorn wasp wing mantle~
 1
 L
 81
-#2765
+#3026
 barkskin wolf pelt~
 @@Ga barkskin wolf pelt@@N~
 @@GA pelt of bark-hardened wolf fur lies here, unusually rigid.@@N
@@ -3671,7 +3671,7 @@ barkskin wolf pelt~
 6
 L
 84
-#2766
+#3027
 centipede fang earring~
 @@Ga centipede fang earring@@N~
 @@GA curved centipede fang, fashioned into an earring, lies here.@@N
@@ -3681,7 +3681,7 @@ centipede fang earring~
 1
 L
 82
-#2767
+#3028
 bog troll hide belt~
 @@Ga bog troll's hide belt@@N~
 @@GA wide belt cured from bog troll's hide lies here, smelling faintly of peat.@@N
@@ -3691,7 +3691,7 @@ bog troll hide belt~
 11
 L
 85
-#2768
+#3029
 broodmother spore sac~
 @@Ga broodmother's spore sac@@N~
 @@gA pulsing spore sac torn from a fungal broodmother lies here.@@N
@@ -3701,7 +3701,7 @@ broodmother spore sac~
 1
 L
 85
-#2769
+#3030
 moss elemental core~
 @@Ga moss elemental's core@@N~
 @@GA dense core of petrified moss from an ancient moss elemental lies here.@@N
@@ -3711,7 +3711,7 @@ moss elemental core~
 11
 L
 84
-#2770
+#3031
 twisted ent branch~
 @@Ga twisted ent branch@@N~
 @@GA heavy branch torn from a twisted ent lies here, thick with rings of age.@@N
@@ -3721,7 +3721,7 @@ twisted ent branch~
 6
 L
 84
-#2771
+#3032
 thornveil assassin cowl~
 @@Ga thornveil assassin's cowl@@N~
 @@gA close-fitting cowl of mottled thornveil hide lies here.@@N
@@ -3731,7 +3731,7 @@ thornveil assassin cowl~
 1
 L
 85
-#2772
+#3033
 gloomwing dust pouch~
 @@Ga gloomwing dust pouch@@N~
 @@gA small pouch full of shimmering gloomwing dust lies here.@@N
@@ -3741,7 +3741,7 @@ gloomwing dust pouch~
 1
 L
 80
-#2773
+#3034
 brambleback shell plate~
 @@Ga brambleback shell plate@@N~
 @@GA broad plate of brambleback tortoise shell lies here.@@N
@@ -3751,7 +3751,7 @@ brambleback shell plate~
 11
 L
 85
-#2774
+#3035
 bramble thorn dagger~
 @@Ga bramble-thorn dagger@@N~
 @@GA dagger carved from a massive bramble thorn lies here, still razor-edged.@@N
@@ -3761,7 +3761,7 @@ bramble thorn dagger~
 6
 L
 81
-#2775
+#3036
 beetle shell pauldron~
 @@Ga beetle-shell pauldron@@N~
 @@GA pauldron fashioned from mosswort beetle shell lies here, smooth and hard.@@N
@@ -3771,7 +3771,7 @@ beetle shell pauldron~
 11
 L
 80
-#2776
+#3037
 deepwood bear paw~
 @@Ga deepwood bear paw@@N~
 @@GA huge paw from a deepwood bear lies here, claws still intact.@@N
@@ -3781,7 +3781,7 @@ deepwood bear paw~
 6
 L
 83
-#2777
+#3038
 shade touched ring~
 @@Ga shade-touched ring@@N~
 @@gA ring of dark wood, faintly cold to the touch, lies here.@@N
@@ -3791,7 +3791,7 @@ shade touched ring~
 1
 L
 82
-#2778
+#3039
 bark skinned armguard~
 @@Ga bark-skinned armguard@@N~
 @@GA broad armguard of bark-hardened skin lies here.@@N
@@ -3801,7 +3801,7 @@ bark skinned armguard~
 11
 L
 84
-#2779
+#3040
 crown twisted antlers~
 @@Ga crown of twisted antlers@@N~
 @@GA crown fashioned from twisted stag antlers lies here, still sharp.@@N
@@ -3811,7 +3811,7 @@ crown twisted antlers~
 6
 L
 83
-#2780
+#3041
 mycelium threaded robe~
 @@Ga mycelium-threaded robe@@N~
 @@GA robe interwoven with fine mycelium threads lies here, softly luminous.@@N
@@ -3821,7 +3821,7 @@ mycelium threaded robe~
 1
 L
 82
-#2781
+#3042
 boar tusk earring~
 @@Ga boar-tusk earring@@N~
 @@GA carved boar tusk, threaded as an earring, lies here.@@N
@@ -3831,7 +3831,7 @@ boar tusk earring~
 6
 L
 80
-#2782
+#3043
 elder vine lash~
 @@Ga elder vine lash@@N~
 @@GA length of elder vine, corded and lashing, lies here.@@N
@@ -3841,7 +3841,7 @@ elder vine lash~
 1
 L
 85
-#2783
+#3044
 deadfall bark vest~
 @@Ga deadfall bark vest@@N~
 @@GA vest of layered deadfall bark lies here, heavy and dense.@@N
@@ -3851,7 +3851,7 @@ deadfall bark vest~
 11
 L
 84
-#2784
+#3045
 shaman gnarled staff~
 @@Ga shaman's gnarled staff@@N~
 @@gA gnarled two-handed staff, carved with forest runes, lies here.@@N
@@ -3861,7 +3861,7 @@ shaman gnarled staff~
 1
 L
 85
-#2785
+#3046
 rootwoven greaves~
 @@Grootwoven greaves@@N~
 @@GA pair of greaves woven from living roots lies here, still slightly warm.@@N
@@ -3871,7 +3871,7 @@ rootwoven greaves~
 6
 L
 85
-#2786
+#3047
 blightspore mask~
 @@Ga blightspore mask@@N~
 @@gA mask crusted with dried blightspores lies here.@@N
@@ -3881,7 +3881,7 @@ blightspore mask~
 1
 L
 81
-#2787
+#3048
 thornfang whelp collar~
 @@Ga thornfang whelp's collar@@N~
 @@GA leather collar taken from a thornfang whelp lies here, studded with teeth.@@N
@@ -3891,7 +3891,7 @@ thornfang whelp collar~
 6
 L
 80
-#2788
+#3049
 rootbound gauntlet~
 @@Ga rootbound gauntlet@@N~
 @@GA gauntlet of root-bound bark plates lies here.@@N
@@ -3901,7 +3901,7 @@ rootbound gauntlet~
 11
 L
 84
-#2789
+#3050
 sap crusted hauberk~
 @@Ga sap-crusted hauberk@@N~
 @@GA hauberk coated in hardened golden sap lies here, heavy and rigid.@@N
@@ -3911,7 +3911,7 @@ sap crusted hauberk~
 11
 L
 85
-#2790
+#3051
 strangler vine belt~
 @@Ga strangler vine belt@@N~
 @@GA belt woven from strangler vine lies here, knotted and tight.@@N
@@ -3921,7 +3921,7 @@ strangler vine belt~
 6
 L
 82
-#2791
+#3052
 withered dryad circlet~
 @@Ga withered dryad's circlet@@N~
 @@gA circlet of withered wood and dried flower lies here.@@N
@@ -3931,7 +3931,7 @@ withered dryad circlet~
 1
 L
 84
-#2792
+#3053
 mosswort queen mandible~
 @@Ga mosswort queen's mandible@@N~
 @@GA serrated mandible from a mosswort queen lies here, still sharp.@@N
@@ -3941,7 +3941,7 @@ mosswort queen mandible~
 6
 L
 83
-#2793
+#3054
 hollow lurker hide boots~
 @@Ga hollow lurker's hide boots@@N~
 @@GA pair of boots cured from hollow lurker hide lies here.@@N
@@ -3951,7 +3951,7 @@ hollow lurker hide boots~
 6
 L
 81
-#2794
+#3055
 stalker vine garrote~
 @@Ga stalker's vine garrote@@N~
 @@gA loop of tough vine, fashioned into a garrote, lies here.@@N
@@ -3961,7 +3961,7 @@ stalker vine garrote~
 1
 L
 80
-#2795
+#3056
 beetle shell buckler~
 @@Ga beetle-shell buckler@@N~
 @@GA small buckler of polished mosswort beetle shell lies here.@@N
@@ -3971,7 +3971,7 @@ beetle shell buckler~
 11
 L
 83
-#2796
+#3057
 ogre hewn great club~
 @@Gan ogre-hewn great club@@N~
 @@GA massive club hewn from a single trunk by a bark-skinned ogre lies here.@@N
@@ -3981,7 +3981,7 @@ ogre hewn great club~
 6
 L
 85
-#2797
+#3058
 sap hardened ring~
 @@Ga sap-hardened ring@@N~
 @@GA ring of wood coated in layers of hardened sap lies here.@@N
@@ -3991,7 +3991,7 @@ sap hardened ring~
 11
 L
 84
-#2798
+#3059
 bear claw amulet~
 @@Ga bear-claw amulet@@N~
 @@GA cord strung with deepwood bear claws lies here.@@N
@@ -4001,7 +4001,7 @@ bear claw amulet~
 6
 L
 82
-#2799
+#3060
 Rootmother living staff~
 @@Gthe Rootmother's living staff@@N~
 @@GThe Rootmother's living staff rests here, still breathing, roots curling from its base.@@N
@@ -4011,7 +4011,7 @@ Rootmother living staff~
 1
 L
 90
-#2800
+#3061
 crown living thorns~
 @@Ga crown of living thorns@@N~
 @@GA crown of living thorns rests here, its vines still slowly growing.@@N
@@ -4021,7 +4021,7 @@ crown living thorns~
 1
 L
 90
-#2801
+#3062
 Rootmother heartwood buckler~
 @@Gthe Rootmother's heartwood buckler@@N~
 @@GThe Rootmother's heartwood buckler lies here, carved from the forest's living core.@@N
@@ -4031,7 +4031,7 @@ Rootmother heartwood buckler~
 11
 L
 90
-#2802
+#3063
 greaves ancient bark~
 @@Ggreaves of ancient bark@@N~
 @@GA pair of ancient bark greaves rests here, etched with growth-rings.@@N
@@ -4041,7 +4041,7 @@ greaves ancient bark~
 11
 L
 90
-#2803
+#3064
 rootweave tunic~
 @@Ga rootweave tunic@@N~
 @@GA tunic woven from living rootweave lies here, still drawing moisture from the ground.@@N
@@ -4051,7 +4051,7 @@ rootweave tunic~
 6
 L
 90
-#2804
+#3065
 Rootmother seed~
 @@Gthe Rootmother's seed@@N~
 @@GThe Rootmother's seed lies here -- warm, heavy, and faintly pulsing.@@N
@@ -4061,7 +4061,7 @@ Rootmother seed~
 1
 L
 90
-#2805
+#3066
 living bark vambraces~
 @@Gliving bark vambraces@@N~
 @@GA pair of vambraces of living bark lies here, flexing slightly.@@N
@@ -4071,7 +4071,7 @@ living bark vambraces~
 11
 L
 90
-#2806
+#3067
 blade blighted wood~
 @@Ga blade of blighted wood@@N~
 @@gA blade of blighted wood lies here, its edge blackened and unnaturally keen.@@N
@@ -4081,7 +4081,7 @@ blade blighted wood~
 6
 L
 90
-#2807
+#3068
 sporecrown helm~
 @@Ga sporecrown helm@@N~
 @@gA helm crowned with sporecrown fungal stalks lies here, still faintly glowing.@@N
@@ -4091,7 +4091,7 @@ sporecrown helm~
 11
 L
 90
-#2808
+#3069
 cloak rotting leaves~
 @@Ga cloak of rotting leaves@@N~
 @@gA cloak of layered rotting leaves lies here, surprisingly intact.@@N
@@ -4101,7 +4101,7 @@ cloak rotting leaves~
 1
 L
 90
-#2809
+#3070
 blightwood gauntlets~
 @@Gblightwood gauntlets@@N~
 @@gA pair of blightwood gauntlets lies here, fingers still flexed.@@N
@@ -4111,7 +4111,7 @@ blightwood gauntlets~
 6
 L
 90
-#2810
+#3071
 Blightwood Ancient fungal shield~
 @@Gthe Blightwood Ancient's fungal shield@@N~
 @@gThe Blightwood Ancient's fungal shield lies here, a great disc of compressed fungal mass.@@N
@@ -4121,7 +4121,7 @@ Blightwood Ancient fungal shield~
 11
 L
 90
-#2811
+#3072
 blightwood ring decay~
 @@Ga blightwood ring of decay@@N~
 @@gA ring of blighted wood, shot through with dark veins, lies here.@@N
@@ -4131,7 +4131,7 @@ blightwood ring decay~
 1
 L
 90
-#2812
+#3073
 sporewoven sash~
 @@Ga sporewoven sash@@N~
 @@gA sash densely woven from sporewoven fibers lies here.@@N
@@ -4141,7 +4141,7 @@ sporewoven sash~
 6
 L
 90
-#2813
+#3074
 Thornfang Alpha great claw~
 @@GThornfang Alpha's great claw@@N~
 @@GThe Thornfang Alpha's great claw lies here, each edge a natural blade.@@N
@@ -4151,7 +4151,7 @@ Thornfang Alpha great claw~
 6
 L
 90
-#2814
+#3075
 collar alpha fangs~
 @@Ga collar of alpha fangs@@N~
 @@GA heavy collar strung with the Thornfang Alpha's own shed fangs lies here.@@N
@@ -4161,7 +4161,7 @@ collar alpha fangs~
 6
 L
 90
-#2815
+#3076
 pelt apex predator~
 @@Ga pelt of the apex predator@@N~
 @@GA magnificent pelt of the apex predator lies here, thick and undamaged.@@N
@@ -4171,7 +4171,7 @@ pelt apex predator~
 11
 L
 90
-#2816
+#3077
 predator eye pendant~
 @@Gthe predator's eye pendant@@N~
 @@GThe predator's eye pendant lies here -- a glassy, amber orb on a sinew cord.@@N
@@ -4181,7 +4181,7 @@ predator eye pendant~
 1
 L
 90
-#2817
+#3078
 thornfang hide boots~
 @@Gthornfang hide boots@@N~
 @@GA pair of boots cured from thornfang alpha hide lies here.@@N
@@ -4191,7 +4191,7 @@ thornfang hide boots~
 6
 L
 90
-#2818
+#3079
 predator maw wand~
 @@Gthe predator's maw wand@@N~
 @@GThe predator's maw wand rests here, carved from a thornfang jawbone.@@N
@@ -4201,7 +4201,7 @@ predator maw wand~
 1
 L
 90
-#2819
+#3080
 thornfang alpha shoulder hide~
 @@Gthornfang alpha's shoulder hide@@N~
 @@GA mantle of thornfang alpha shoulder hide lies here, massive and thick.@@N
@@ -4211,7 +4211,7 @@ thornfang alpha shoulder hide~
 11
 L
 90
-#2820
+#3081
 iron gate key~
 a corroded iron key~
 A corroded iron key lies here, green with age.~
@@ -4226,180 +4226,180 @@ L
 1
 #0
 #RESETS
-M 0 2739 3 2740
-E 0 2794 3 21
-M 0 2740 3 2749
-E 0 2739 3 21
-M 0 2764 3 2742
-E 0 2775 3 12
-E 0 2795 3 23
-M 0 2761 1 2744
-M 0 2792 2 2745
-E 0 2772 2 20
-M 0 2763 2 2747
-E 0 2793 2 29
-M 0 2762 3 2750
-E 0 2774 3 21
-M 0 2784 1 2752
-M 0 2759 2 2754
-E 0 2759 2 24
-M 0 2760 2 2757
-E 0 2760 2 21
-M 0 2739 2 2756
-E 0 2794 2 21
-M 0 2741 3 2760
-E 0 2740 3 21
-M 0 2742 2 2764
-E 0 2741 2 20
-M 0 2743 3 2761
-E 0 2742 3 4
-M 0 2744 3 2763
-E 0 2743 3 12
-G 0 2758 3
-M 0 2765 2 2767
-E 0 2776 2 21
-G 0 2798 2
-M 0 2769 2 2766
-E 0 2779 2 3
-M 0 2768 2 2771
-E 0 2778 2 13
-E 0 2796 2 22
-M 0 2767 2 2770
-E 0 2777 2 17
-M 0 2781 2 2765
-E 0 2792 2 21
-M 0 2771 2 2772
-E 0 2781 2 8
-M 0 2779 2 2773
-E 0 2790 2 25
-M 0 2783 2 2762
-E 0 2763 2 21
-M 0 2785 2 2769
-E 0 2765 2 24
-M 0 2786 2 2766
-E 0 2766 2 7
-M 0 2787 2 2774
-E 0 2767 2 25
-M 0 2790 2 2775
-E 0 2770 2 21
-M 0 2770 2 2768
-E 0 2780 2 26
-M 0 2796 2 2778
-E 0 2773 2 26
-M 0 2793 1 2777
-M 0 2799 2 2776
-M 0 2748 2 2794
-E 0 2747 2 24
-M 0 2749 2 2799
-E 0 2748 2 25
-M 0 2750 1 2804
-E 0 2749 1 14
-M 0 2751 2 2809
-E 0 2750 2 21
-M 0 2746 2 2797
-E 0 2745 2 21
-M 0 2747 2 2795
-E 0 2746 2 21
-M 0 2766 2 2802
-E 0 2789 2 26
-E 0 2797 2 18
-M 0 2772 1 2807
-E 0 2782 1 21
-M 0 2773 2 2812
-E 0 2783 2 26
-M 0 2774 1 2814
-E 0 2784 1 22
-M 0 2775 1 2817
-E 0 2785 1 28
-M 0 2758 1 2821
-E 0 2757 1 24
-M 0 2791 1 2819
-E 0 2771 1 4
-M 0 2782 1 2805
-E 0 2762 1 21
-M 0 2789 2 2808
-G 0 2769 2
-M 0 2794 1 2816
-M 0 2797 2 2800
-M 0 2745 2 2798
-E 0 2744 2 26
-M 0 2798 1 2824
-M 0 2756 3 2829
-E 0 2755 3 13
-M 0 2756 2 2833
-E 0 2755 2 13
-M 0 2778 2 2832
-E 0 2788 2 16
-M 0 2778 2 2836
-E 0 2788 2 16
-M 0 2752 2 2834
-E 0 2751 2 28
-M 0 2752 2 2838
-E 0 2751 2 28
-M 0 2800 1 2840
-E 0 2799 1 22
-E 0 2800 1 4
-E 0 2801 1 23
-E 0 2802 1 28
-G 0 2803 1
-G 0 2804 1
-G 0 2805 1
-M 0 2753 3 2841
-E 0 2752 3 21
-M 0 2753 2 2845
-E 0 2752 2 21
-M 0 2754 3 2844
-E 0 2753 3 4
-M 0 2776 2 2846
-E 0 2786 2 5
-M 0 2780 1 2848
-E 0 2791 1 4
-M 0 2788 1 2849
-E 0 2768 1 20
-M 0 2795 2 2843
-M 0 2801 1 2851
-E 0 2806 1 21
-E 0 2807 1 4
-E 0 2808 1 24
-E 0 2810 1 23
-G 0 2809 1
-G 0 2811 1
-G 0 2812 1
-M 0 2755 3 2852
-E 0 2754 3 9
-M 0 2755 2 2857
-E 0 2754 2 9
-M 0 2777 3 2856
-E 0 2787 3 9
-M 0 2777 2 2860
-E 0 2787 2 9
-M 0 2757 1 2859
-E 0 2756 1 16
-M 0 2802 1 2863
-E 0 2813 1 22
-E 0 2814 1 9
-E 0 2815 1 26
-E 0 2817 1 29
-G 0 2816 1
-G 0 2818 1
-G 0 2819 1
-D 0 2782 2 2
-D 0 2783 0 2
+M 0 3000 3 3001
+E 0 3055 3 21
+M 0 3001 3 3010
+E 0 3000 3 21
+M 0 3025 3 3003
+E 0 3036 3 12
+E 0 3056 3 23
+M 0 3022 1 3005
+M 0 3053 2 3006
+E 0 3033 2 20
+M 0 3024 2 3008
+E 0 3054 2 29
+M 0 3023 3 3011
+E 0 3035 3 21
+M 0 3045 1 3013
+M 0 3020 2 3015
+E 0 3020 2 24
+M 0 3021 2 3018
+E 0 3021 2 21
+M 0 3000 2 3017
+E 0 3055 2 21
+M 0 3002 3 3021
+E 0 3001 3 21
+M 0 3003 2 3025
+E 0 3002 2 20
+M 0 3004 3 3022
+E 0 3003 3 4
+M 0 3005 3 3024
+E 0 3004 3 12
+G 0 3019 3
+M 0 3026 2 3028
+E 0 3037 2 21
+G 0 3059 2
+M 0 3030 2 3027
+E 0 3040 2 3
+M 0 3029 2 3032
+E 0 3039 2 13
+E 0 3057 2 22
+M 0 3028 2 3031
+E 0 3038 2 17
+M 0 3042 2 3026
+E 0 3053 2 21
+M 0 3032 2 3033
+E 0 3042 2 8
+M 0 3040 2 3034
+E 0 3051 2 25
+M 0 3044 2 3023
+E 0 3024 2 21
+M 0 3046 2 3030
+E 0 3026 2 24
+M 0 3047 2 3027
+E 0 3027 2 7
+M 0 3048 2 3035
+E 0 3028 2 25
+M 0 3051 2 3036
+E 0 3031 2 21
+M 0 3031 2 3029
+E 0 3041 2 26
+M 0 3057 2 3039
+E 0 3034 2 26
+M 0 3054 1 3038
+M 0 3060 2 3037
+M 0 3009 2 3055
+E 0 3008 2 24
+M 0 3010 2 3060
+E 0 3009 2 25
+M 0 3011 1 3065
+E 0 3010 1 14
+M 0 3012 2 3070
+E 0 3011 2 21
+M 0 3007 2 3058
+E 0 3006 2 21
+M 0 3008 2 3056
+E 0 3007 2 21
+M 0 3027 2 3063
+E 0 3050 2 26
+E 0 3058 2 18
+M 0 3033 1 3068
+E 0 3043 1 21
+M 0 3034 2 3073
+E 0 3044 2 26
+M 0 3035 1 3075
+E 0 3045 1 22
+M 0 3036 1 3078
+E 0 3046 1 28
+M 0 3019 1 3082
+E 0 3018 1 24
+M 0 3052 1 3080
+E 0 3032 1 4
+M 0 3043 1 3066
+E 0 3023 1 21
+M 0 3050 2 3069
+G 0 3030 2
+M 0 3055 1 3077
+M 0 3058 2 3061
+M 0 3006 2 3059
+E 0 3005 2 26
+M 0 3059 1 3085
+M 0 3017 3 3090
+E 0 3016 3 13
+M 0 3017 2 3094
+E 0 3016 2 13
+M 0 3039 2 3093
+E 0 3049 2 16
+M 0 3039 2 3097
+E 0 3049 2 16
+M 0 3013 2 3095
+E 0 3012 2 28
+M 0 3013 2 3099
+E 0 3012 2 28
+M 0 3061 1 3101
+E 0 3060 1 22
+E 0 3061 1 4
+E 0 3062 1 23
+E 0 3063 1 28
+G 0 3064 1
+G 0 3065 1
+G 0 3066 1
+M 0 3014 3 3102
+E 0 3013 3 21
+M 0 3014 2 3106
+E 0 3013 2 21
+M 0 3015 3 3105
+E 0 3014 3 4
+M 0 3037 2 3107
+E 0 3047 2 5
+M 0 3041 1 3109
+E 0 3052 1 4
+M 0 3049 1 3110
+E 0 3029 1 20
+M 0 3056 2 3104
+M 0 3062 1 3112
+E 0 3067 1 21
+E 0 3068 1 4
+E 0 3069 1 24
+E 0 3071 1 23
+G 0 3070 1
+G 0 3072 1
+G 0 3073 1
+M 0 3016 3 3113
+E 0 3015 3 9
+M 0 3016 2 3118
+E 0 3015 2 9
+M 0 3038 3 3117
+E 0 3048 3 9
+M 0 3038 2 3121
+E 0 3048 2 9
+M 0 3018 1 3120
+E 0 3017 1 16
+M 0 3063 1 3124
+E 0 3074 1 22
+E 0 3075 1 9
+E 0 3076 1 26
+E 0 3078 1 29
+G 0 3077 1
+G 0 3079 1
+G 0 3080 1
+D 0 3043 2 2
+D 0 3044 0 2
 S
 #SPECIALS
-M 2747 spec_cast_mage
-M 2758 spec_cast_mage
-M 2774 spec_cast_mage
-M 2780 spec_cast_mage
-M 2794 spec_cast_mage
-M 2800 spec_cast_bigtime
-M 2801 spec_cast_bigtime
-M 2749 spec_poison
-M 2751 spec_poison
-M 2770 spec_poison
-M 2776 spec_poison
-M 2786 spec_poison
-M 2792 spec_poison
-M 2795 spec_poison
+M 3008 spec_cast_mage
+M 3019 spec_cast_mage
+M 3035 spec_cast_mage
+M 3041 spec_cast_mage
+M 3055 spec_cast_mage
+M 3061 spec_cast_bigtime
+M 3062 spec_cast_bigtime
+M 3010 spec_poison
+M 3012 spec_poison
+M 3031 spec_poison
+M 3037 spec_poison
+M 3047 spec_poison
+M 3053 spec_poison
+M 3056 spec_poison
 S
 #$

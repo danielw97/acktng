@@ -5,7 +5,7 @@ K sepulcher pasture~
 L { 15-30 }~
 N 140
 I 15 30
-V 5106 5180
+V 5550 5649
 X 0
 F 10
 U A funeral bell tolls somewhere in the Sepulcher Pasture.~
@@ -13,1092 +13,1092 @@ O virant~
 R all~
 W all~
 #ROOMS
-#5106
+#5550
 The Withered Gate~
 A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At The Withered Gate, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
 13 2
 D0
 ~
 ~
-0 -1 5107
+0 -1 5551
 D1
 ~
 ~
-0 -1 5111
+0 -1 5555
 D4
 ~
 ~
-0 0 946
+0 0 1129
 S
-#5107
+#5551
 Mourners' Cart Track~
 Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in Mourners' Cart Track, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
 9 11
 D0
 ~
 ~
-0 -1 5108
+0 -1 5552
 D2
 ~
 ~
-0 -1 5106
+0 -1 5550
 S
-#5108
+#5552
 Fog-Soaked Furrow~
 Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Fog-Soaked Furrow still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
 9 11
 D0
 ~
 ~
-0 -1 5109
+0 -1 5553
 D2
 ~
 ~
-0 -1 5107
+0 -1 5551
 S
-#5109
+#5553
 Thorn-Black Hedgerow~
 Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Thorn-Black Hedgerow, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
 9 11
 D0
 ~
 ~
-0 -1 5110
+0 -1 5554
 D2
 ~
 ~
-0 -1 5108
+0 -1 5552
 S
-#5110
+#5554
 Rook Lantern Post~
 Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Rook Lantern Post, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
 9 11
 D0
 ~
 ~
-0 -1 5111
+0 -1 5555
 D2
 ~
 ~
-0 -1 5109
+0 -1 5553
 S
-#5111
+#5555
 Gravebell Milestone~
 A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Gravebell Milestone, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
 9 11
 D0
 ~
 ~
-0 -1 5112
+0 -1 5556
 D1
 ~
 ~
-0 -1 5116
+0 -1 5560
 D2
 ~
 ~
-0 -1 5110
+0 -1 5554
 D3
 ~
 ~
-0 -1 5106
+0 -1 5550
 S
-#5112
+#5556
 Crowspine Crossing~
 Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in Crowspine Crossing, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
 9 11
 D0
 ~
 ~
-0 -1 5113
+0 -1 5557
 D2
 ~
 ~
-0 -1 5111
+0 -1 5555
 S
-#5113
+#5557
 Mire of Bent Scythes~
 Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Mire of Bent Scythes still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
 9 11
 D0
 ~
 ~
-0 -1 5114
+0 -1 5558
 D2
 ~
 ~
-0 -1 5112
+0 -1 5556
 S
-#5114
+#5558
 Sepulcher Windbreak~
 Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Sepulcher Windbreak, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
 9 11
 D0
 ~
 ~
-0 -1 5115
+0 -1 5559
 D2
 ~
 ~
-0 -1 5113
+0 -1 5557
 S
-#5115
+#5559
 Ashen Tithe Path~
 Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Ashen Tithe Path, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
 9 11
 D0
 ~
 ~
-0 -1 5116
+0 -1 5560
 D2
 ~
 ~
-0 -1 5114
+0 -1 5558
 S
-#5116
+#5560
 Pilgrim's Hollow~
 A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Pilgrim's Hollow, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
 9 11
 D0
 ~
 ~
-0 -1 5117
+0 -1 5561
 D1
 ~
 ~
-0 -1 5121
+0 -1 5565
 D2
 ~
 ~
-0 -1 5115
+0 -1 5559
 D3
 ~
 ~
-0 -1 5111
+0 -1 5555
 S
-#5117
+#5561
 Stag-Bone Marker~
 Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in Stag-Bone Marker, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
 9 11
 D0
 ~
 ~
-0 -1 5118
+0 -1 5562
 D2
 ~
 ~
-0 -1 5116
+0 -1 5560
 S
-#5118
+#5562
 Veilfern Verge~
 Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Veilfern Verge still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
 9 11
 D0
 ~
 ~
-0 -1 5119
+0 -1 5563
 D2
 ~
 ~
-0 -1 5117
+0 -1 5561
 S
-#5119
+#5563
 Widow's Furrows~
 Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Widow's Furrows, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
 9 11
 D0
 ~
 ~
-0 -1 5120
+0 -1 5564
 D2
 ~
 ~
-0 -1 5118
+0 -1 5562
 S
-#5120
+#5564
 Riven Barrowmouth~
 Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Riven Barrowmouth, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
 9 11
 D0
 ~
 ~
-0 -1 5121
+0 -1 5565
 D2
 ~
 ~
-0 -1 5119
+0 -1 5563
 S
-#5121
+#5565
 Nightsoil Channel~
 A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Nightsoil Channel, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
 9 11
 D0
 ~
 ~
-0 -1 5122
+0 -1 5566
 D1
 ~
 ~
-0 -1 5126
+0 -1 5570
 D2
 ~
 ~
-0 -1 5120
+0 -1 5564
 D3
 ~
 ~
-0 -1 5116
+0 -1 5560
 S
-#5122
+#5566
 The Bleak Orchard~
 Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in The Bleak Orchard, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
 9 11
 D0
 ~
 ~
-0 -1 5123
+0 -1 5567
 D2
 ~
 ~
-0 -1 5121
+0 -1 5565
 S
-#5123
+#5567
 Corpse-Lily Bend~
 Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Corpse-Lily Bend still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
 9 11
 D0
 ~
 ~
-0 -1 5124
+0 -1 5568
 D2
 ~
 ~
-0 -1 5122
+0 -1 5566
 S
-#5124
+#5568
 Sable Fieldstone Way~
 Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Sable Fieldstone Way, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
 9 11
 D0
 ~
 ~
-0 -1 5125
+0 -1 5569
 D2
 ~
 ~
-0 -1 5123
+0 -1 5567
 S
-#5125
+#5569
 Prayerwheel Turn~
 Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Prayerwheel Turn, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
 9 11
 D0
 ~
 ~
-0 -1 5126
+0 -1 5570
 D2
 ~
 ~
-0 -1 5124
+0 -1 5568
 S
-#5126
+#5570
 Abbot's Sluice~
 A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Abbot's Sluice, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
 9 11
 D0
 ~
 ~
-0 -1 5127
+0 -1 5571
 D1
 ~
 ~
-0 -1 5131
+0 -1 5575
 D2
 ~
 ~
-0 -1 5125
+0 -1 5569
 D3
 ~
 ~
-0 -1 5121
+0 -1 5565
 S
-#5127
+#5571
 Harrower's Rest~
 Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in Harrower's Rest, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
 9 11
 D0
 ~
 ~
-0 -1 5128
+0 -1 5572
 D2
 ~
 ~
-0 -1 5126
+0 -1 5570
 S
-#5128
+#5572
 Funeral Wheat Stand~
 Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Funeral Wheat Stand still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
 9 11
 D0
 ~
 ~
-0 -1 5129
+0 -1 5573
 D2
 ~
 ~
-0 -1 5127
+0 -1 5571
 S
-#5129
+#5573
 The Crooked Boundary~
 Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across The Crooked Boundary, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
 9 11
 D0
 ~
 ~
-0 -1 5130
+0 -1 5574
 D2
 ~
 ~
-0 -1 5128
+0 -1 5572
 S
-#5130
+#5574
 Saint's Dry Well~
 Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Saint's Dry Well, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
 9 11
 D0
 ~
 ~
-0 -1 5131
+0 -1 5575
 D2
 ~
 ~
-0 -1 5129
+0 -1 5573
 S
-#5131
+#5575
 Rimebound Acre~
 A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Rimebound Acre, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
 9 11
 D0
 ~
 ~
-0 -1 5132
+0 -1 5576
 D1
 ~
 ~
-0 -1 5136
+0 -1 5580
 D2
 ~
 ~
-0 -1 5130
+0 -1 5574
 D3
 ~
 ~
-0 -1 5126
+0 -1 5570
 S
-#5132
+#5576
 Tombstone Trellis~
 Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in Tombstone Trellis, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
 9 11
 D0
 ~
 ~
-0 -1 5133
+0 -1 5577
 D2
 ~
 ~
-0 -1 5131
+0 -1 5575
 S
-#5133
+#5577
 Duskseed Row~
 Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Duskseed Row still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
 9 11
 D0
 ~
 ~
-0 -1 5134
+0 -1 5578
 D2
 ~
 ~
-0 -1 5132
+0 -1 5576
 S
-#5134
+#5578
 Mossed Reliquary Post~
 Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Mossed Reliquary Post, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
 9 11
 D0
 ~
 ~
-0 -1 5135
+0 -1 5579
 D2
 ~
 ~
-0 -1 5133
+0 -1 5577
 S
-#5135
+#5579
 The Dirge Causeway~
 Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In The Dirge Causeway, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
 9 11
 D0
 ~
 ~
-0 -1 5136
+0 -1 5580
 D2
 ~
 ~
-0 -1 5134
+0 -1 5578
 S
-#5136
+#5580
 Charnel Briar Ring~
 A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Charnel Briar Ring, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
 9 11
 D0
 ~
 ~
-0 -1 5137
+0 -1 5581
 D1
 ~
 ~
-0 -1 5141
+0 -1 5585
 D2
 ~
 ~
-0 -1 5135
+0 -1 5579
 D3
 ~
 ~
-0 -1 5131
+0 -1 5575
 S
-#5137
+#5581
 Rookwatch Knoll~
 Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in Rookwatch Knoll, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
 9 11
 D0
 ~
 ~
-0 -1 5138
+0 -1 5582
 D2
 ~
 ~
-0 -1 5136
+0 -1 5580
 S
-#5138
+#5582
 Moonless Paddock~
 Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Moonless Paddock still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
 9 11
 D0
 ~
 ~
-0 -1 5139
+0 -1 5583
 D2
 ~
 ~
-0 -1 5137
+0 -1 5581
 S
-#5139
+#5583
 The Salted Trench~
 Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across The Salted Trench, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
 9 11
 D0
 ~
 ~
-0 -1 5140
+0 -1 5584
 D2
 ~
 ~
-0 -1 5138
+0 -1 5582
 S
-#5140
+#5584
 Lichenshade Verge~
 Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Lichenshade Verge, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
 9 11
 D0
 ~
 ~
-0 -1 5141
+0 -1 5585
 D2
 ~
 ~
-0 -1 5139
+0 -1 5583
 S
-#5141
+#5585
 Pale Banner Rise~
 A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Pale Banner Rise, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
 9 11
 D0
 ~
 ~
-0 -1 5142
+0 -1 5586
 D1
 ~
 ~
-0 -1 5146
+0 -1 5590
 D2
 ~
 ~
-0 -1 5140
+0 -1 5584
 D3
 ~
 ~
-0 -1 5136
+0 -1 5580
 S
-#5142
+#5586
 The Candle Ditch~
 Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in The Candle Ditch, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
 9 11
 D0
 ~
 ~
-0 -1 5143
+0 -1 5587
 D2
 ~
 ~
-0 -1 5141
+0 -1 5585
 S
-#5143
+#5587
 Mercyless Furrow~
 Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Mercyless Furrow still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
 9 11
 D0
 ~
 ~
-0 -1 5144
+0 -1 5588
 D2
 ~
 ~
-0 -1 5142
+0 -1 5586
 S
-#5144
+#5588
 Penance Cairn~
 Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Penance Cairn, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
 9 11
 D0
 ~
 ~
-0 -1 5145
+0 -1 5589
 D2
 ~
 ~
-0 -1 5143
+0 -1 5587
 S
-#5145
+#5589
 Blackwater Cistern~
 Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Blackwater Cistern, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
 9 11
 D0
 ~
 ~
-0 -1 5146
+0 -1 5590
 D2
 ~
 ~
-0 -1 5144
+0 -1 5588
 S
-#5146
+#5590
 Sepulcher Green~
 A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Sepulcher Green, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
 9 11
 D0
 ~
 ~
-0 -1 5147
+0 -1 5591
 D1
 ~
 ~
-0 -1 5151
+0 -1 5595
 D2
 ~
 ~
-0 -1 5145
+0 -1 5589
 D3
 ~
 ~
-0 -1 5141
+0 -1 5585
 S
-#5147
+#5591
 The Vesper Gallows~
 Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in The Vesper Gallows, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
 9 11
 D0
 ~
 ~
-0 -1 5148
+0 -1 5592
 D2
 ~
 ~
-0 -1 5146
+0 -1 5590
 S
-#5148
+#5592
 Thistle Ossuary~
 Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Thistle Ossuary still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
 9 11
 D0
 ~
 ~
-0 -1 5149
+0 -1 5593
 D2
 ~
 ~
-0 -1 5147
+0 -1 5591
 S
-#5149
+#5593
 Nave of Brambles~
 Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Nave of Brambles, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
 9 11
 D0
 ~
 ~
-0 -1 5150
+0 -1 5594
 D2
 ~
 ~
-0 -1 5148
+0 -1 5592
 S
-#5150
+#5594
 Lament Reaping Lane~
 Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Lament Reaping Lane, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
 9 11
 D0
 ~
 ~
-0 -1 5151
+0 -1 5595
 D2
 ~
 ~
-0 -1 5149
+0 -1 5593
 S
-#5151
+#5595
 Rotglass Fence~
 A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Rotglass Fence, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
 9 11
 D0
 ~
 ~
-0 -1 5152
+0 -1 5596
 D1
 ~
 ~
-0 -1 5156
+0 -1 5600
 D2
 ~
 ~
-0 -1 5150
+0 -1 5594
 D3
 ~
 ~
-0 -1 5146
+0 -1 5590
 S
-#5152
+#5596
 The Hollow Shepherd's Stand~
 Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in The Hollow Shepherd's Stand, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
 9 11
 D0
 ~
 ~
-0 -1 5153
+0 -1 5597
 D2
 ~
 ~
-0 -1 5151
+0 -1 5595
 S
-#5153
+#5597
 Anointing Rut~
 Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Anointing Rut still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
 9 11
 D0
 ~
 ~
-0 -1 5154
+0 -1 5598
 D2
 ~
 ~
-0 -1 5152
+0 -1 5596
 S
-#5154
+#5598
 Vigilant Scarefield~
 Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Vigilant Scarefield, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
 13 11
 D0
 ~
 ~
-0 -1 5155
+0 -1 5599
 D2
 ~
 ~
-0 -1 5153
+0 -1 5597
 S
-#5155
+#5599
 The Tallow Bridge~
 Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In The Tallow Bridge, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
 9 11
 D0
 ~
 ~
-0 -1 5156
+0 -1 5600
 D2
 ~
 ~
-0 -1 5154
+0 -1 5598
 S
-#5156
+#5600
 Morndrift Spur~
 A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Morndrift Spur, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
 9 11
 D0
 ~
 ~
-0 -1 5157
+0 -1 5601
 D1
 ~
 ~
-0 -1 5161
+0 -1 5605
 D2
 ~
 ~
-0 -1 5155
+0 -1 5599
 D3
 ~
 ~
-0 -1 5151
+0 -1 5595
 S
-#5157
+#5601
 The Chapel Runnel~
 Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in The Chapel Runnel, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
 9 11
 D0
 ~
 ~
-0 -1 5158
+0 -1 5602
 D2
 ~
 ~
-0 -1 5156
+0 -1 5600
 S
-#5158
+#5602
 Sorrowharvest Plot~
 Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Sorrowharvest Plot still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
 9 11
 D0
 ~
 ~
-0 -1 5159
+0 -1 5603
 D2
 ~
 ~
-0 -1 5157
+0 -1 5601
 S
-#5159
+#5603
 Gloamwound Track~
 Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Gloamwound Track, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
 9 11
 D0
 ~
 ~
-0 -1 5160
+0 -1 5604
 D2
 ~
 ~
-0 -1 5158
+0 -1 5602
 S
-#5160
+#5604
 The Bonewind Gap~
 Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In The Bonewind Gap, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
 9 11
 D0
 ~
 ~
-0 -1 5161
+0 -1 5605
 D2
 ~
 ~
-0 -1 5159
+0 -1 5603
 S
-#5161
+#5605
 Knellroot Verge~
 A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Knellroot Verge, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
 9 11
 D0
 ~
 ~
-0 -1 5162
+0 -1 5606
 D1
 ~
 ~
-0 -1 5166
+0 -1 5610
 D2
 ~
 ~
-0 -1 5160
+0 -1 5604
 D3
 ~
 ~
-0 -1 5156
+0 -1 5600
 S
-#5162
+#5606
 The Cracked Granary Yard~
 Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in The Cracked Granary Yard, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
 9 11
 D0
 ~
 ~
-0 -1 5163
+0 -1 5607
 D2
 ~
 ~
-0 -1 5161
+0 -1 5605
 S
-#5163
+#5607
 Altar of Last Seed~
 Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Altar of Last Seed still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
 9 11
 D0
 ~
 ~
-0 -1 5164
+0 -1 5608
 D2
 ~
 ~
-0 -1 5162
+0 -1 5606
 S
-#5164
+#5608
 Midden of Rosaries~
 Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Midden of Rosaries, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
 9 11
 D0
 ~
 ~
-0 -1 5165
+0 -1 5609
 D2
 ~
 ~
-0 -1 5163
+0 -1 5607
 S
-#5165
+#5609
 The Moon-Scoured Pen~
 Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In The Moon-Scoured Pen, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
 9 11
 D0
 ~
 ~
-0 -1 5166
+0 -1 5610
 D2
 ~
 ~
-0 -1 5164
+0 -1 5608
 S
-#5166
+#5610
 Reaper's Shepherd Walk~
 A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Reaper's Shepherd Walk, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
 9 11
 D0
 ~
 ~
-0 -1 5167
+0 -1 5611
 D1
 ~
 ~
-0 -1 5171
+0 -1 5615
 D2
 ~
 ~
-0 -1 5165
+0 -1 5609
 D3
 ~
 ~
-0 -1 5161
+0 -1 5605
 S
-#5167
+#5611
 Pillar of Cinders~
 Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in Pillar of Cinders, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
 9 11
 D0
 ~
 ~
-0 -1 5168
+0 -1 5612
 D2
 ~
 ~
-0 -1 5166
+0 -1 5610
 S
-#5168
+#5612
 The Pewter Fen Dike~
 Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. The Pewter Fen Dike still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
 9 11
 D0
 ~
 ~
-0 -1 5169
+0 -1 5613
 D2
 ~
 ~
-0 -1 5167
+0 -1 5611
 S
-#5169
+#5613
 Mildewed Cart Hollow~
 Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Mildewed Cart Hollow, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
 9 11
 D0
 ~
 ~
-0 -1 5170
+0 -1 5614
 D2
 ~
 ~
-0 -1 5168
+0 -1 5612
 S
-#5170
+#5614
 Ruinwheat Terrace~
 Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Ruinwheat Terrace, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
 9 11
 D0
 ~
 ~
-0 -1 5171
+0 -1 5615
 D2
 ~
 ~
-0 -1 5169
+0 -1 5613
 S
-#5171
+#5615
 The Last Bell Furrow~
 A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At The Last Bell Furrow, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
 9 11
 D0
 ~
 ~
-0 -1 5172
+0 -1 5616
 D1
 ~
 ~
-0 -1 5176
+0 -1 5620
 D2
 ~
 ~
-0 -1 5170
+0 -1 5614
 D3
 ~
 ~
-0 -1 5166
+0 -1 5610
 S
-#5172
+#5616
 Wolfshade Meadow~
 Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in Wolfshade Meadow, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
 9 11
 D0
 ~
 ~
-0 -1 5173
+0 -1 5617
 D2
 ~
 ~
-0 -1 5171
+0 -1 5615
 S
-#5173
+#5617
 The Parish Stakes~
 Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. The Parish Stakes still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
 9 11
 D0
 ~
 ~
-0 -1 5174
+0 -1 5618
 D2
 ~
 ~
-0 -1 5172
+0 -1 5616
 S
-#5174
+#5618
 Cryptmoss Thoroughfare~
 Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Cryptmoss Thoroughfare, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
 9 11
 D0
 ~
 ~
-0 -1 5175
+0 -1 5619
 D2
 ~
 ~
-0 -1 5173
+0 -1 5617
 S
-#5175
+#5619
 The Bleeding Rain Basin~
 Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In The Bleeding Rain Basin, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
 9 11
 D0
 ~
 ~
-0 -1 5176
+0 -1 5620
 D2
 ~
 ~
-0 -1 5174
+0 -1 5618
 S
-#5176
+#5620
 Narthex Windline~
 A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Narthex Windline, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
 9 11
 D0
 ~
 ~
-0 -1 5177
+0 -1 5621
 D2
 ~
 ~
-0 -1 5175
+0 -1 5619
 D3
 ~
 ~
-0 -1 5171
+0 -1 5615
 S
-#5177
+#5621
 The Heretic's Fallow~
 Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in The Heretic's Fallow, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
 9 11
 D0
 ~
 ~
-0 -1 5178
+0 -1 5622
 D2
 ~
 ~
-0 -1 5176
+0 -1 5620
 S
-#5178
+#5622
 Sepulcher Crown Rise~
 Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Sepulcher Crown Rise still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
 9 11
 D0
 ~
 ~
-0 -1 5179
+0 -1 5623
 D2
 ~
 ~
-0 -1 5177
+0 -1 5621
 S
-#5179
+#5623
 The Ossified Pasture~
 Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across The Ossified Pasture, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
 9 11
 D0
 ~
 ~
-0 -1 5180
+0 -1 5624
 D2
 ~
 ~
-0 -1 5178
+0 -1 5622
 S
-#5180
+#5624
 Throne of the Black Shepherd~
 Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Throne of the Black Shepherd, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
 13 11
 D2
 ~
 ~
-0 -1 5179
+0 -1 5623
 S
 #0
 #MOBILES
-#5106
+#5550
 grave shepherd~
 a grave shepherd~
 A grave shepherd counts graves between the dead rows here.
@@ -1113,7 +1113,7 @@ This gaunt herdsman carries a hooked crook and mutters numbers that never reset.
 + 0 0 0 0 0 0 0 0 0
 l 100 15 17 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5107
+#5551
 barrow reaper~
 a barrow reaper~
 A barrow reaper hones a rust-pitted blade in silence.
@@ -1128,7 +1128,7 @@ Funeral linen hangs from the reaper's armor, soaked with mist and old blood.
 + 0 0 0 0 0 0 0 0 0
 l 100 16 18 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5108
+#5552
 thorn vicar~
 a thorn vicar~
 A thorn vicar recites a bitter litany to the hedges.
@@ -1143,7 +1143,7 @@ Black rosaries coil around their wrists while thorn-vines twitch in answer.
 + 0 0 0 0 0 0 0 0 0
 l 100 17 19 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5109
+#5553
 sepulcher outrider~
 a sepulcher outrider~
 A sepulcher outrider patrols with measured, relentless strides.
@@ -1158,7 +1158,7 @@ A rider's saddle is strapped to their back though no horse remains alive to carr
 + 0 0 0 0 0 0 0 0 0
 l 100 18 20 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5110
+#5554
 mire cantor~
 a mire cantor~
 A mire cantor intones a low dirge over the standing water.
@@ -1173,7 +1173,7 @@ Mud cakes their vestments, but silver sigils still gleam through the filth.
 + 0 0 0 0 0 0 0 0 0
 l 100 19 21 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5111
+#5555
 gravebound pikeman~
 a gravebound pikeman~
 A gravebound pikeman bars this lane with a corroded polearm.
@@ -1188,7 +1188,7 @@ His pike hums softly, hungry for trespass and confession alike.
 + 0 0 0 0 0 0 0 0 0
 l 100 20 22 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5112
+#5556
 ossuary falconer~
 an ossuary falconer~
 An ossuary falconer waits beneath a hood with a bone hawk.
@@ -1203,7 +1203,7 @@ The hawk's eye sockets burn violet whenever strangers draw near.
 + 0 0 0 0 0 0 0 0 0
 l 100 21 23 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5113
+#5557
 charnel lay sister~
 a charnel lay sister~
 A charnel lay sister harvests corpse-lilies with careful hands.
@@ -1218,7 +1218,7 @@ She clips pale petals into a satchel packed with wax and prayer bones.
 + 0 0 0 0 0 0 0 0 0
 l 100 22 24 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5114
+#5558
 blacksoil warden~
 a blacksoil warden~
 A blacksoil warden drags a shield through the mire.
@@ -1233,7 +1233,7 @@ Every step leaves a trench filled with oily water and drifting ash.
 + 0 0 0 0 0 0 0 0 0
 l 100 23 25 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5115
+#5559
 dirge-thorn knight~
 a dirge-thorn knight~
 A dirge-thorn knight kneels in painful vigil.
@@ -1248,7 +1248,7 @@ Thorned plate bites into their flesh, feeding on old vows and newer sins.
 + 0 0 0 0 0 0 0 0 0
 l 100 24 26 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5116
+#5560
 dread tithe collector~
 a dread tithe collector~
 A dread tithe collector rattles chained ledgers as you approach.
@@ -1263,7 +1263,7 @@ Wax-sealed tablets hang from their belt, each marked with a debtor's last prayer
 + 0 0 0 0 0 0 0 0 0
 l 100 25 27 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5117
+#5561
 gallows shepherd~
 a gallows shepherd~
 A gallows shepherd guides unseen livestock through dead wheat.
@@ -1278,7 +1278,7 @@ Invisible shapes jostle around him, leaving fresh hoofprints in stale mud.
 + 0 0 0 0 0 0 0 0 0
 l 100 26 28 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5118
+#5562
 ravenmask harrier~
 a ravenmask harrier~
 A ravenmask harrier circles with predatory patience.
@@ -1293,7 +1293,7 @@ Its lacquered beak-mask hides a grin that never seems to close.
 + 0 0 0 0 0 0 0 0 0
 l 100 27 29 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5119
+#5563
 sepulcher dragoon~
 a sepulcher dragoon~
 A sepulcher dragoon stands rigid beside a weathered marker.
@@ -1308,7 +1308,7 @@ Rain slides from their cuirass in lines like black tears.
 + 0 0 0 0 0 0 0 0 0
 l 100 28 30 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5120
+#5564
 hallowfield executor~
 a hallowfield executor~
 A hallowfield executor tests the edge of a broad axe.
@@ -1323,7 +1323,7 @@ Pale script on the blade lists names erased from parish memory.
 + 0 0 0 0 0 0 0 0 0
 l 100 29 31 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5121
+#5565
 grave-lantern novice~
 a grave-lantern novice~
 A grave-lantern novice trims a wavering violet flame.
@@ -1338,7 +1338,7 @@ The lantern glass is fused from skull shards and weeps warm light.
 + 0 0 0 0 0 0 0 0 0
 l 100 30 32 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5122
+#5566
 fallow inquisitor~
 a fallow inquisitor~
 A fallow inquisitor watches you from beneath a stitched hood.
@@ -1353,7 +1353,7 @@ Needles and prayer nails clink softly against their chain shirt.
 + 0 0 0 0 0 0 0 0 0
 l 100 15 17 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5123
+#5567
 boneflail penitents~
 a boneflail penitent~
 A boneflail penitent lashes the air in ritual rhythm.
@@ -1368,7 +1368,7 @@ Every stroke of the flail throws off dust that smells faintly of myrrh.
 + 0 0 0 0 0 0 0 0 0
 l 100 16 18 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5124
+#5568
 crypt houndmaster~
 a crypt houndmaster~
 A crypt houndmaster whistles for beasts that never appear.
@@ -1383,7 +1383,7 @@ His gauntlet is scarred by teeth marks too large for any living hound.
 + 0 0 0 0 0 0 0 0 0
 l 100 17 19 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5125
+#5569
 veilbound archer~
 a veilbound archer~
 A veilbound archer keeps an arrow nocked in silence.
@@ -1398,7 +1398,7 @@ Black fletching drinks the lanternlight before your eyes can follow it.
 + 0 0 0 0 0 0 0 0 0
 l 100 18 20 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5126
+#5570
 mourning templar~
 a mourning templar~
 A mourning templar plants a tower shield in the mud.
@@ -1413,7 +1413,7 @@ Saintly skulls embossed on the shield seem to grin when bells toll.
 + 0 0 0 0 0 0 0 0 0
 l 100 19 21 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5127
+#5571
 rosary breaker~
 a rosary breaker~
 A rosary breaker fingers cracked beads with bloody thumbs.
@@ -1428,7 +1428,7 @@ He murmurs one absolution for every threat and none for himself.
 + 0 0 0 0 0 0 0 0 0
 l 100 20 22 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5128
+#5572
 sepulcher standard-bearer~
 a sepulcher standard-bearer~
 A sepulcher standard-bearer braces a tattered black banner.
@@ -1443,7 +1443,7 @@ The banner cloth is woven with horsehair and grave-soaked wool.
 + 0 0 0 0 0 0 0 0 0
 l 100 21 23 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5129
+#5573
 wheatshade stalker~
 a wheatshade stalker~
 A wheatshade stalker slips between rows of dead grain.
@@ -1458,7 +1458,7 @@ Only the glint of a narrow knife gives away their position.
 + 0 0 0 0 0 0 0 0 0
 l 100 22 24 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5130
+#5574
 barrow chanter~
 a barrow chanter~
 A barrow chanter recites litanies in a cracked voice.
@@ -1473,7 +1473,7 @@ Each syllable stirs the mist into shapes that bow and fade.
 + 0 0 0 0 0 0 0 0 0
 l 100 23 25 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5131
+#5575
 censer marshal~
 a censer marshal~
 A censer marshal swings a smoking iron censer.
@@ -1488,7 +1488,7 @@ The incense reeks of pitch, bitter herbs, and old burial cloth.
 + 0 0 0 0 0 0 0 0 0
 l 100 24 26 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5132
+#5576
 grave oathbreaker~
 a grave oathbreaker~
 A grave oathbreaker hefts a dented mace in both hands.
@@ -1503,7 +1503,7 @@ Vow-cords still bind his wrists, though most have been chewed through.
 + 0 0 0 0 0 0 0 0 0
 l 100 25 27 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5133
+#5577
 mire rosarist~
 a mire rosarist~
 A mire rosarist kneels in water black as ink.
@@ -1518,7 +1518,7 @@ She strings fresh beads from knucklebones and whisper-thin wire.
 + 0 0 0 0 0 0 0 0 0
 l 100 26 28 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5134
+#5578
 thornfield bailiff~
 a thornfield bailiff~
 A thornfield bailiff patrols with legal writs nailed to a spear.
@@ -1533,7 +1533,7 @@ Each writ is signed in dark wax by abbots long interred nearby.
 + 0 0 0 0 0 0 0 0 0
 l 100 27 29 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5135
+#5579
 ashcrop skirmisher~
 an ashcrop skirmisher~
 An ashcrop skirmisher stalks around broken threshing stones.
@@ -1548,7 +1548,7 @@ Their boots are wrapped in gravecloth to muffle every step.
 + 0 0 0 0 0 0 0 0 0
 l 100 28 30 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5136
+#5580
 nightseed herald~
 a nightseed herald~
 A nightseed herald calls warnings no one heeds.
@@ -1563,7 +1563,7 @@ Her brass trumpet is dented and stuffed with black thistle stems.
 + 0 0 0 0 0 0 0 0 0
 l 100 29 31 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5137
+#5581
 blackwater confessor~
 a blackwater confessor~
 A blackwater confessor offers absolution with a serrated smile.
@@ -1578,7 +1578,7 @@ Ink from his confession book runs like blood across his gloves.
 + 0 0 0 0 0 0 0 0 0
 l 100 30 32 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5138
+#5582
 cairnbound lancer~
 a cairnbound lancer~
 A cairnbound lancer lowers a long spear and squares up.
@@ -1593,7 +1593,7 @@ Cairn dust cakes their armor, and each breath rattles like stone.
 + 0 0 0 0 0 0 0 0 0
 l 100 15 17 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5139
+#5583
 ossified warden~
 an ossified warden~
 An ossified warden keeps this stretch of pasture under harsh watch.
@@ -1608,7 +1608,7 @@ Riveted plates of bone and iron creak with each deliberate movement.
 + 0 0 0 0 0 0 0 0 0
 l 100 16 18 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5140
+#5584
 black shepherd morcant~
 Morcant, the Black Shepherd~
 Morcant, the Black Shepherd stands among the bent standards of the pasture.
@@ -1623,7 +1623,7 @@ Morcant wears a crown of antlers and iron bells; each breath sounds like a crypt
 + 0 0 0 0 0 0 0 0 0
 l 100 33 35 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
-#5141
+#5585
 abbess of the last furrow elysse~
 Abbess Elysse of the Last Furrow~
 Abbess Elysse of the Last Furrow presides with absolute stillness.
@@ -1640,7 +1640,7 @@ l 100 33 35 0 0 0 0 0 0 0
 L 40 40 20 0 0 0 0 0 0 
 #0
 #OBJECTS
-#5142
+#5586
 mourning halo~
 @@dMourning Halo@@N~
 @@dMourning Halo@@N rests here.~
@@ -1649,7 +1649,7 @@ mourning halo~
 3
 L
 15
-#5143
+#5587
 penumbral aura clasp~
 @@dPenumbral Aura Clasp@@N~
 @@dPenumbral Aura Clasp@@N rests here.~
@@ -1658,7 +1658,7 @@ penumbral aura clasp~
 3
 L
 16
-#5144
+#5588
 thorn diadem~
 @@dThorn Diadem@@N~
 @@dThorn Diadem@@N rests here.~
@@ -1667,7 +1667,7 @@ thorn diadem~
 8
 L
 17
-#5145
+#5589
 graveglass visor~
 @@dGraveglass Visor@@N~
 @@dGraveglass Visor@@N rests here.~
@@ -1676,7 +1676,7 @@ graveglass visor~
 12
 L
 18
-#5146
+#5590
 ravenbone earring~
 @@dRavenbone Earring@@N~
 @@dRavenbone Earring@@N rests here.~
@@ -1685,7 +1685,7 @@ ravenbone earring~
 3
 L
 19
-#5147
+#5591
 sepulcher prayer chain~
 @@dSepulcher Prayer Chain@@N~
 @@dSepulcher Prayer Chain@@N rests here.~
@@ -1694,7 +1694,7 @@ sepulcher prayer chain~
 12
 L
 20
-#5148
+#5592
 dirge-feather wings~
 @@dDirge-Feather Wings@@N~
 @@dDirge-Feather Wings@@N rests here.~
@@ -1703,7 +1703,7 @@ dirge-feather wings~
 3
 L
 21
-#5149
+#5593
 reliquary pauldrons~
 @@dReliquary Pauldrons@@N~
 @@dReliquary Pauldrons@@N rests here.~
@@ -1712,7 +1712,7 @@ reliquary pauldrons~
 12
 L
 22
-#5150
+#5594
 reaper vambraces~
 @@dReaper Vambraces@@N~
 @@dReaper Vambraces@@N rests here.~
@@ -1721,7 +1721,7 @@ reaper vambraces~
 8
 L
 23
-#5151
+#5595
 writ-iron wristguard~
 @@dWrit-Iron Wristguard@@N~
 @@dWrit-Iron Wristguard@@N rests here.~
@@ -1730,7 +1730,7 @@ writ-iron wristguard~
 12
 L
 24
-#5152
+#5596
 gravewool gloves~
 @@dGravewool Gloves@@N~
 @@dGravewool Gloves@@N rests here.~
@@ -1739,7 +1739,7 @@ gravewool gloves~
 3
 L
 25
-#5153
+#5597
 ledger signet~
 @@dLedger Signet@@N~
 @@dLedger Signet@@N rests here.~
@@ -1748,7 +1748,7 @@ ledger signet~
 3
 L
 15
-#5154
+#5598
 blackthorn talons~
 @@dBlackthorn Talons@@N~
 @@dBlackthorn Talons@@N rests here.~
@@ -1757,7 +1757,7 @@ blackthorn talons~
 8
 L
 25
-#5155
+#5599
 lantern of violet wake~
 @@dLantern of Violet Wake@@N~
 @@dLantern of Violet Wake@@N rests here.~
@@ -1766,7 +1766,7 @@ lantern of violet wake~
 3
 L
 22
-#5156
+#5600
 mourner cloak~
 @@dMourner Cloak@@N~
 @@dMourner Cloak@@N rests here.~
@@ -1775,7 +1775,7 @@ mourner cloak~
 3
 L
 20
-#5157
+#5601
 tithe girdle~
 @@dTithe Girdle@@N~
 @@dTithe Girdle@@N rests here.~
@@ -1784,7 +1784,7 @@ tithe girdle~
 12
 L
 21
-#5158
+#5602
 sepulcher cuirass~
 @@dSepulcher Cuirass@@N~
 @@dSepulcher Cuirass@@N rests here.~
@@ -1793,7 +1793,7 @@ sepulcher cuirass~
 12
 L
 24
-#5159
+#5603
 barrowtail sash~
 @@dBarrowtail Sash@@N~
 @@dBarrowtail Sash@@N rests here.~
@@ -1802,7 +1802,7 @@ barrowtail sash~
 12
 L
 19
-#5160
+#5604
 gloam tassets~
 @@dGloam Tassets@@N~
 @@dGloam Tassets@@N rests here.~
@@ -1811,7 +1811,7 @@ gloam tassets~
 12
 L
 23
-#5161
+#5605
 mire sabatons~
 @@dMire Sabatons@@N~
 @@dMire Sabatons@@N rests here.~
@@ -1820,7 +1820,7 @@ mire sabatons~
 12
 L
 22
-#5162
+#5606
 grim hoofguards~
 @@dGrim Hoofguards@@N~
 @@dGrim Hoofguards@@N rests here.~
@@ -1829,7 +1829,7 @@ grim hoofguards~
 12
 L
 18
-#5163
+#5607
 violet chapel lantern~
 @@dViolet Chapel Lantern@@N~
 @@dViolet Chapel Lantern@@N rests here.~
@@ -1838,7 +1838,7 @@ violet chapel lantern~
 3
 L
 17
-#5164
+#5608
 fallow field buckler~
 @@dFallow Field Buckler@@N~
 @@dFallow Field Buckler@@N rests here.~
@@ -1847,7 +1847,7 @@ fallow field buckler~
 12
 L
 20
-#5165
+#5609
 blackgrain faceguard~
 @@dBlackgrain Faceguard@@N~
 @@dBlackgrain Faceguard@@N rests here.~
@@ -1856,7 +1856,7 @@ blackgrain faceguard~
 12
 L
 21
-#5166
+#5610
 abbess veil of last seed~
 @@dAbbess Veil of Last Seed@@N~
 @@dAbbess Veil of Last Seed@@N rests here.~
@@ -1865,7 +1865,7 @@ abbess veil of last seed~
 3
 L
 30
-#5167
+#5611
 shepherd crook of black bells~
 @@dShepherd Crook of Black Bells@@N~
 @@dShepherd Crook of Black Bells@@N rests here.~
@@ -1874,7 +1874,7 @@ shepherd crook of black bells~
 8
 L
 30
-#5168
+#5612
 crown of the unharvested~
 @@dCrown of the Unharvested@@N~
 @@dCrown of the Unharvested@@N rests here.~
@@ -1883,7 +1883,7 @@ crown of the unharvested~
 12
 L
 30
-#5169
+#5613
 pasture-bound oathmail~
 @@dPasture-Bound Oathmail@@N~
 @@dPasture-Bound Oathmail@@N rests here.~
@@ -1892,7 +1892,7 @@ pasture-bound oathmail~
 12
 L
 30
-#5170
+#5614
 vesper wristlet~
 @@dVesper Wristlet@@N~
 @@dVesper Wristlet@@N rests here.~
@@ -1901,7 +1901,7 @@ vesper wristlet~
 3
 L
 25
-#5171
+#5615
 nightsoil warpick~
 @@dNightsoil Warpick@@N~
 @@dNightsoil Warpick@@N rests here.~
@@ -1912,429 +1912,429 @@ L
 24
 #0
 #RESETS
-M 0 5106 1 5107   (null)
+M 0 5550 1 5551   (null)
 
-E 0 5142 0 1   (null)
+E 0 5586 0 1   (null)
 
-E 0 5149 0 13   (null)
+E 0 5593 0 13   (null)
 
-M 0 5106 1 5109   (null)
+M 0 5550 1 5553   (null)
 
-E 0 5143 0 2   (null)
+E 0 5587 0 2   (null)
 
-E 0 5150 0 14   (null)
+E 0 5594 0 14   (null)
 
-M 0 5107 1 5111   (null)
+M 0 5551 1 5555   (null)
 
-E 0 5143 0 2   (null)
+E 0 5587 0 2   (null)
 
-E 0 5150 0 14   (null)
+E 0 5594 0 14   (null)
 
-M 0 5107 1 5113   (null)
+M 0 5551 1 5557   (null)
 
-E 0 5144 0 4   (null)
+E 0 5588 0 4   (null)
 
-E 0 5151 0 16   (null)
+E 0 5595 0 16   (null)
 
-M 0 5108 1 5115   (null)
+M 0 5552 1 5559   (null)
 
-E 0 5144 0 4   (null)
+E 0 5588 0 4   (null)
 
-E 0 5151 0 16   (null)
+E 0 5595 0 16   (null)
 
-M 0 5108 1 5117   (null)
+M 0 5552 1 5561   (null)
 
-E 0 5145 0 5   (null)
+E 0 5589 0 5   (null)
 
-E 0 5152 0 17   (null)
+E 0 5596 0 17   (null)
 
-M 0 5109 1 5119   (null)
+M 0 5553 1 5563   (null)
 
-E 0 5145 0 5   (null)
+E 0 5589 0 5   (null)
 
-E 0 5152 0 17   (null)
+E 0 5596 0 17   (null)
 
-M 0 5109 1 5121   (null)
+M 0 5553 1 5565   (null)
 
-E 0 5146 0 7   (null)
+E 0 5590 0 7   (null)
 
-E 0 5153 0 20   (null)
+E 0 5597 0 20   (null)
 
-M 0 5110 1 5123   (null)
+M 0 5554 1 5567   (null)
 
-E 0 5146 0 7   (null)
+E 0 5590 0 7   (null)
 
-E 0 5153 0 20   (null)
+E 0 5597 0 20   (null)
 
-M 0 5110 1 5125   (null)
+M 0 5554 1 5569   (null)
 
-E 0 5147 0 9   (null)
+E 0 5591 0 9   (null)
 
-E 0 5154 0 24   (null)
+E 0 5598 0 24   (null)
 
-M 0 5111 1 5127   (null)
+M 0 5555 1 5571   (null)
 
-E 0 5147 0 9   (null)
+E 0 5591 0 9   (null)
 
-E 0 5154 0 24   (null)
+E 0 5598 0 24   (null)
 
-M 0 5111 1 5129   (null)
+M 0 5555 1 5573   (null)
 
-E 0 5148 0 12   (null)
+E 0 5592 0 12   (null)
 
-E 0 5155 0 25   (null)
+E 0 5599 0 25   (null)
 
-M 0 5112 1 5131   (null)
+M 0 5556 1 5575   (null)
 
-E 0 5148 0 12   (null)
+E 0 5592 0 12   (null)
 
-E 0 5155 0 25   (null)
+E 0 5599 0 25   (null)
 
-M 0 5112 1 5133   (null)
+M 0 5556 1 5577   (null)
 
-E 0 5149 0 13   (null)
+E 0 5593 0 13   (null)
 
-E 0 5156 0 26   (null)
+E 0 5600 0 26   (null)
 
-M 0 5113 1 5135   (null)
+M 0 5557 1 5579   (null)
 
-E 0 5149 0 13   (null)
+E 0 5593 0 13   (null)
 
-E 0 5156 0 26   (null)
+E 0 5600 0 26   (null)
 
-M 0 5113 1 5137   (null)
+M 0 5557 1 5581   (null)
 
-E 0 5150 0 14   (null)
+E 0 5594 0 14   (null)
 
-E 0 5157 0 28   (null)
+E 0 5601 0 28   (null)
 
-M 0 5114 1 5139   (null)
+M 0 5558 1 5583   (null)
 
-E 0 5150 0 14   (null)
+E 0 5594 0 14   (null)
 
-E 0 5157 0 28   (null)
+E 0 5601 0 28   (null)
 
-M 0 5114 1 5142   (null)
+M 0 5558 1 5586   (null)
 
-E 0 5151 0 16   (null)
+E 0 5595 0 16   (null)
 
-E 0 5158 0 29   (null)
+E 0 5602 0 29   (null)
 
-M 0 5115 1 5144   (null)
+M 0 5559 1 5588   (null)
 
-E 0 5151 0 16   (null)
+E 0 5595 0 16   (null)
 
-E 0 5158 0 29   (null)
+E 0 5602 0 29   (null)
 
-M 0 5115 1 5146   (null)
+M 0 5559 1 5590   (null)
 
-E 0 5152 0 17   (null)
+E 0 5596 0 17   (null)
 
-E 0 5159 0 30   (null)
+E 0 5603 0 30   (null)
 
-M 0 5116 1 5148   (null)
+M 0 5560 1 5592   (null)
 
-E 0 5152 0 17   (null)
+E 0 5596 0 17   (null)
 
-E 0 5159 0 30   (null)
+E 0 5603 0 30   (null)
 
-M 0 5116 1 5150   (null)
+M 0 5560 1 5594   (null)
 
-E 0 5153 0 20   (null)
+E 0 5597 0 20   (null)
 
-E 0 5160 0 1   (null)
+E 0 5604 0 1   (null)
 
-M 0 5117 1 5152   (null)
+M 0 5561 1 5596   (null)
 
-E 0 5153 0 20   (null)
+E 0 5597 0 20   (null)
 
-E 0 5160 0 1   (null)
+E 0 5604 0 1   (null)
 
-M 0 5117 1 5155   (null)
+M 0 5561 1 5599   (null)
 
-E 0 5154 0 24   (null)
+E 0 5598 0 24   (null)
 
-E 0 5161 0 2   (null)
+E 0 5605 0 2   (null)
 
-M 0 5118 1 5157   (null)
+M 0 5562 1 5601   (null)
 
-E 0 5154 0 24   (null)
+E 0 5598 0 24   (null)
 
-E 0 5161 0 2   (null)
+E 0 5605 0 2   (null)
 
-M 0 5118 1 5159   (null)
+M 0 5562 1 5603   (null)
 
-E 0 5155 0 25   (null)
+E 0 5599 0 25   (null)
 
-E 0 5162 0 4   (null)
+E 0 5606 0 4   (null)
 
-M 0 5119 1 5161   (null)
+M 0 5563 1 5605   (null)
 
-E 0 5155 0 25   (null)
+E 0 5599 0 25   (null)
 
-E 0 5162 0 4   (null)
+E 0 5606 0 4   (null)
 
-M 0 5119 1 5163   (null)
+M 0 5563 1 5607   (null)
 
-E 0 5156 0 26   (null)
+E 0 5600 0 26   (null)
 
-E 0 5163 0 5   (null)
+E 0 5607 0 5   (null)
 
-M 0 5120 1 5165   (null)
+M 0 5564 1 5609   (null)
 
-E 0 5156 0 26   (null)
+E 0 5600 0 26   (null)
 
-E 0 5163 0 5   (null)
+E 0 5607 0 5   (null)
 
-M 0 5120 1 5167   (null)
+M 0 5564 1 5611   (null)
 
-E 0 5157 0 28   (null)
+E 0 5601 0 28   (null)
 
-E 0 5164 0 7   (null)
+E 0 5608 0 7   (null)
 
-M 0 5121 1 5169   (null)
+M 0 5565 1 5613   (null)
 
-E 0 5157 0 28   (null)
+E 0 5601 0 28   (null)
 
-E 0 5164 0 7   (null)
+E 0 5608 0 7   (null)
 
-M 0 5121 1 5171   (null)
+M 0 5565 1 5615   (null)
 
-E 0 5158 0 29   (null)
+E 0 5602 0 29   (null)
 
-E 0 5165 0 9   (null)
+E 0 5609 0 9   (null)
 
-M 0 5122 1 5173   (null)
+M 0 5566 1 5617   (null)
 
-E 0 5158 0 29   (null)
+E 0 5602 0 29   (null)
 
-E 0 5165 0 9   (null)
+E 0 5609 0 9   (null)
 
-M 0 5122 1 5175   (null)
+M 0 5566 1 5619   (null)
 
-E 0 5159 0 30   (null)
+E 0 5603 0 30   (null)
 
-E 0 5142 0 12   (null)
+E 0 5586 0 12   (null)
 
-M 0 5123 1 5177   (null)
+M 0 5567 1 5621   (null)
 
-E 0 5159 0 30   (null)
+E 0 5603 0 30   (null)
 
-E 0 5142 0 12   (null)
+E 0 5586 0 12   (null)
 
-M 0 5123 1 5179   (null)
+M 0 5567 1 5623   (null)
 
-E 0 5160 0 1   (null)
+E 0 5604 0 1   (null)
 
-E 0 5143 0 13   (null)
+E 0 5587 0 13   (null)
 
-M 0 5124 1 5107   (null)
+M 0 5568 1 5551   (null)
 
-E 0 5160 0 1   (null)
+E 0 5604 0 1   (null)
 
-E 0 5143 0 13   (null)
+E 0 5587 0 13   (null)
 
-M 0 5124 1 5109   (null)
+M 0 5568 1 5553   (null)
 
-E 0 5161 0 2   (null)
+E 0 5605 0 2   (null)
 
-E 0 5144 0 14   (null)
+E 0 5588 0 14   (null)
 
-M 0 5125 1 5111   (null)
+M 0 5569 1 5555   (null)
 
-E 0 5161 0 2   (null)
+E 0 5605 0 2   (null)
 
-E 0 5144 0 14   (null)
+E 0 5588 0 14   (null)
 
-M 0 5125 1 5113   (null)
+M 0 5569 1 5557   (null)
 
-E 0 5162 0 4   (null)
+E 0 5606 0 4   (null)
 
-E 0 5145 0 16   (null)
+E 0 5589 0 16   (null)
 
-M 0 5126 1 5115   (null)
+M 0 5570 1 5559   (null)
 
-E 0 5162 0 4   (null)
+E 0 5606 0 4   (null)
 
-E 0 5145 0 16   (null)
+E 0 5589 0 16   (null)
 
-M 0 5126 1 5117   (null)
+M 0 5570 1 5561   (null)
 
-E 0 5163 0 5   (null)
+E 0 5607 0 5   (null)
 
-E 0 5146 0 17   (null)
+E 0 5590 0 17   (null)
 
-M 0 5127 1 5119   (null)
+M 0 5571 1 5563   (null)
 
-E 0 5163 0 5   (null)
+E 0 5607 0 5   (null)
 
-E 0 5146 0 17   (null)
+E 0 5590 0 17   (null)
 
-M 0 5127 1 5121   (null)
+M 0 5571 1 5565   (null)
 
-E 0 5164 0 7   (null)
+E 0 5608 0 7   (null)
 
-E 0 5147 0 20   (null)
+E 0 5591 0 20   (null)
 
-M 0 5128 1 5123   (null)
+M 0 5572 1 5567   (null)
 
-E 0 5164 0 7   (null)
+E 0 5608 0 7   (null)
 
-E 0 5147 0 20   (null)
+E 0 5591 0 20   (null)
 
-M 0 5128 1 5125   (null)
+M 0 5572 1 5569   (null)
 
-E 0 5165 0 9   (null)
+E 0 5609 0 9   (null)
 
-E 0 5148 0 24   (null)
+E 0 5592 0 24   (null)
 
-M 0 5129 1 5127   (null)
+M 0 5573 1 5571   (null)
 
-E 0 5165 0 9   (null)
+E 0 5609 0 9   (null)
 
-E 0 5148 0 24   (null)
+E 0 5592 0 24   (null)
 
-M 0 5129 1 5129   (null)
+M 0 5573 1 5573   (null)
 
-E 0 5142 0 12   (null)
+E 0 5586 0 12   (null)
 
-E 0 5149 0 25   (null)
+E 0 5593 0 25   (null)
 
-M 0 5130 1 5131   (null)
+M 0 5574 1 5575   (null)
 
-E 0 5142 0 12   (null)
+E 0 5586 0 12   (null)
 
-E 0 5149 0 25   (null)
+E 0 5593 0 25   (null)
 
-M 0 5130 1 5133   (null)
+M 0 5574 1 5577   (null)
 
-E 0 5143 0 13   (null)
+E 0 5587 0 13   (null)
 
-E 0 5150 0 26   (null)
+E 0 5594 0 26   (null)
 
-M 0 5131 1 5135   (null)
+M 0 5575 1 5579   (null)
 
-E 0 5143 0 13   (null)
+E 0 5587 0 13   (null)
 
-E 0 5150 0 26   (null)
+E 0 5594 0 26   (null)
 
-M 0 5131 1 5137   (null)
+M 0 5575 1 5581   (null)
 
-E 0 5144 0 14   (null)
+E 0 5588 0 14   (null)
 
-E 0 5151 0 28   (null)
+E 0 5595 0 28   (null)
 
-M 0 5132 1 5139   (null)
+M 0 5576 1 5583   (null)
 
-E 0 5144 0 14   (null)
+E 0 5588 0 14   (null)
 
-E 0 5151 0 28   (null)
+E 0 5595 0 28   (null)
 
-M 0 5132 1 5142   (null)
+M 0 5576 1 5586   (null)
 
-E 0 5145 0 16   (null)
+E 0 5589 0 16   (null)
 
-E 0 5152 0 29   (null)
+E 0 5596 0 29   (null)
 
-M 0 5133 1 5144   (null)
+M 0 5577 1 5588   (null)
 
-E 0 5145 0 16   (null)
+E 0 5589 0 16   (null)
 
-E 0 5152 0 29   (null)
+E 0 5596 0 29   (null)
 
-M 0 5133 1 5146   (null)
+M 0 5577 1 5590   (null)
 
-E 0 5146 0 17   (null)
+E 0 5590 0 17   (null)
 
-E 0 5153 0 30   (null)
+E 0 5597 0 30   (null)
 
-M 0 5134 1 5148   (null)
+M 0 5578 1 5592   (null)
 
-E 0 5146 0 17   (null)
+E 0 5590 0 17   (null)
 
-E 0 5153 0 30   (null)
+E 0 5597 0 30   (null)
 
-M 0 5134 1 5150   (null)
+M 0 5578 1 5594   (null)
 
-E 0 5147 0 20   (null)
+E 0 5591 0 20   (null)
 
-E 0 5154 0 1   (null)
+E 0 5598 0 1   (null)
 
-M 0 5135 1 5152   (null)
+M 0 5579 1 5596   (null)
 
-E 0 5147 0 20   (null)
+E 0 5591 0 20   (null)
 
-E 0 5154 0 1   (null)
+E 0 5598 0 1   (null)
 
-M 0 5135 1 5155   (null)
+M 0 5579 1 5599   (null)
 
-E 0 5148 0 24   (null)
+E 0 5592 0 24   (null)
 
-E 0 5155 0 2   (null)
+E 0 5599 0 2   (null)
 
-M 0 5136 1 5157   (null)
+M 0 5580 1 5601   (null)
 
-E 0 5148 0 24   (null)
+E 0 5592 0 24   (null)
 
-E 0 5155 0 2   (null)
+E 0 5599 0 2   (null)
 
-M 0 5136 1 5159   (null)
+M 0 5580 1 5603   (null)
 
-E 0 5149 0 25   (null)
+E 0 5593 0 25   (null)
 
-E 0 5156 0 4   (null)
+E 0 5600 0 4   (null)
 
-M 0 5137 1 5161   (null)
+M 0 5581 1 5605   (null)
 
-E 0 5149 0 25   (null)
+E 0 5593 0 25   (null)
 
-E 0 5156 0 4   (null)
+E 0 5600 0 4   (null)
 
-M 0 5137 1 5163   (null)
+M 0 5581 1 5607   (null)
 
-E 0 5150 0 26   (null)
+E 0 5594 0 26   (null)
 
-E 0 5157 0 5   (null)
+E 0 5601 0 5   (null)
 
-M 0 5138 1 5165   (null)
+M 0 5582 1 5609   (null)
 
-E 0 5150 0 26   (null)
+E 0 5594 0 26   (null)
 
-E 0 5157 0 5   (null)
+E 0 5601 0 5   (null)
 
-M 0 5138 1 5167   (null)
+M 0 5582 1 5611   (null)
 
-E 0 5151 0 28   (null)
+E 0 5595 0 28   (null)
 
-E 0 5158 0 7   (null)
+E 0 5602 0 7   (null)
 
-M 0 5139 1 5169   (null)
+M 0 5583 1 5613   (null)
 
-E 0 5151 0 28   (null)
+E 0 5595 0 28   (null)
 
-E 0 5158 0 7   (null)
+E 0 5602 0 7   (null)
 
-M 0 5139 1 5171   (null)
+M 0 5583 1 5615   (null)
 
-E 0 5152 0 29   (null)
+E 0 5596 0 29   (null)
 
-E 0 5159 0 9   (null)
+E 0 5603 0 9   (null)
 
-M 0 5140 1 5154   (null)
+M 0 5584 1 5598   (null)
 
-E 0 5167 0 20   (null)
+E 0 5611 0 20   (null)
 
-E 0 5168 0 4   (null)
+E 0 5612 0 4   (null)
 
-E 0 5169 0 26   (null)
+E 0 5613 0 26   (null)
 
-M 0 5141 1 5180   (null)
+M 0 5585 1 5624   (null)
 
-E 0 5166 0 5   (null)
+E 0 5610 0 5   (null)
 
-E 0 5169 0 26   (null)
+E 0 5613 0 26   (null)
 
-E 0 5170 0 14   (null)
+E 0 5614 0 14   (null)
 
 S
 #$

@@ -5,7 +5,7 @@ K publicdungeons~
 L {@@G10 20@@N}~
 N 28
 I 5 35
-V 2293 2338
+V 2550 2599
 X 35950
 F 15
 U You hear the screams of the Dead within your head.~
@@ -15,7 +15,7 @@ W stephen~
 T You can teleport into here
 M No bad room spells allowed.
 #ROOMS
-#2294
+#2551
 The Entrance to the Public Dungeon.~
 You are standing within the Public Dungeons of Midgaard.
 
@@ -32,17 +32,17 @@ Square, and to the south, further within the dungeon.
 D2
 ~
 ~
-1 -1 2295
+1 -1 2552
 D4
 ~
 ~
-1 -1 930
+1 -1 1113
 D5
 ~
 ~
-0 -1 2311
+0 -1 2568
 S
-#2295
+#2552
 Within the Public Dungeon of Midgaard.~
 You are standing within the Public Dungeon, sounds of the inmates deafen you.
 
@@ -51,17 +51,17 @@ You are standing within the Public Dungeon, sounds of the inmates deafen you.
 D0
 ~
 ~
-1 -1 2294
+1 -1 2551
 D1
 ~
 ~
-0 -1 2310
+0 -1 2567
 D2
 ~
 ~
-0 -1 2296
+0 -1 2553
 S
-#2296
+#2553
 Within the Public Dungeon of Midgaard.~
 You are standing within the Public Dungeon, sounds of the inmates deafen you.
 
@@ -70,17 +70,17 @@ You are standing within the Public Dungeon, sounds of the inmates deafen you.
 D0
 ~
 ~
-0 -1 2295
+0 -1 2552
 D2
 ~
 ~
-0 -1 2297
+0 -1 2554
 D3
 ~
 ~
-0 -1 2309
+0 -1 2566
 S
-#2297
+#2554
 Within the Public Dungeon of Midgaard.~
 You are standing within the Public Dungeon, sounds of the inmates deafen you.
 
@@ -89,17 +89,17 @@ You are standing within the Public Dungeon, sounds of the inmates deafen you.
 D0
 ~
 ~
-0 -1 2296
+0 -1 2553
 D1
 ~
 ~
-0 -1 2308
+0 -1 2565
 D2
 ~
 ~
-0 -1 2298
+0 -1 2555
 S
-#2298
+#2555
 Within the Public Dungeon of Midgaard.~
 You are standing within the Public Dungeon, sounds of the inmates deafen you.
 
@@ -108,13 +108,13 @@ You are standing within the Public Dungeon, sounds of the inmates deafen you.
 D0
 ~
 ~
-0 -1 2297
+0 -1 2554
 D2
 ~
 ~
-0 -1 2299
+0 -1 2556
 S
-#2299
+#2556
 Within the Public Dungeon of Midgaard.~
 You are standing within the Public Dungeon, sounds of the inmates deafen you.
 
@@ -123,17 +123,17 @@ You are standing within the Public Dungeon, sounds of the inmates deafen you.
 D0
 ~
 ~
-0 -1 2298
+0 -1 2555
 D1
 ~
 ~
-0 -1 2302
+0 -1 2559
 D3
 ~
 ~
-0 -1 2300
+0 -1 2557
 S
-#2300
+#2557
 Within the Public Dungeon of Midgaard.~
 You are standing within the Public Dungeon, sounds of the inmates deafen you.
 
@@ -142,13 +142,13 @@ You are standing within the Public Dungeon, sounds of the inmates deafen you.
 D1
 ~
 ~
-0 -1 2299
+0 -1 2556
 D2
 ~
 ~
-0 -1 2301
+0 -1 2558
 S
-#2301
+#2558
 Within the Public Dungeon of Midgaard.~
 You are standing within the Public Dungeon, sounds of the inmates deafen you.
 
@@ -157,13 +157,13 @@ You are standing within the Public Dungeon, sounds of the inmates deafen you.
 D0
 ~
 ~
-0 -1 2300
+0 -1 2557
 D1
 ~
 ~
-0 -1 2306
+0 -1 2563
 S
-#2302
+#2559
 Within the Public Dungeon of Midgaard.~
 You are standing within the Public Dungeon, sounds of the inmates deafen you.
 
@@ -172,17 +172,17 @@ You are standing within the Public Dungeon, sounds of the inmates deafen you.
 D1
 ~
 ~
-0 -1 2307
+0 -1 2564
 D2
 ~
 ~
-0 -1 2303
+0 -1 2560
 D3
 ~
 ~
-0 -1 2299
+0 -1 2556
 S
-#2303
+#2560
 Within the Public Dungeon of Midgaard.~
 You are standing within the Public Dungeon, sounds of the inmates deafen you.
 
@@ -191,13 +191,13 @@ You are standing within the Public Dungeon, sounds of the inmates deafen you.
 D0
 ~
 ~
-0 -1 2302
+0 -1 2559
 D2
 ~
 ~
-0 -1 2304
+0 -1 2561
 S
-#2304
+#2561
 Within the Public Dungeon of Midgaard.~
 You are standing within the Public Dungeon, sounds of the inmates deafen you.
 
@@ -208,18 +208,18 @@ To the south is a large poster.
 D0
 ~
 ~
-0 -1 2303
+0 -1 2560
 D3
 ~
 ~
-0 -1 2305
+0 -1 2562
 E
 poster~
 You see a large poster, showing the inmates of the dungeon.  Nothing special.
 
 ~
 S
-#2305
+#2562
 A Cell within the Public Dungeon of Midgaard.~
 This is a standard cell of the Dungeon, which provides access to those who
 
@@ -230,9 +230,9 @@ are stupid enough to want to look closely.
 D1
 ~
 ~
-0 -1 2304
+0 -1 2561
 S
-#2306
+#2563
 A Cell within the Public Dungeon of Midgaard.~
 This is a standard cell of the Dungeon, which provides access to those who
 
@@ -243,9 +243,9 @@ are stupid enough to want to look closely.
 D3
 ~
 ~
-0 -1 2301
+0 -1 2558
 S
-#2307
+#2564
 A Cell within the Public Dungeon of Midgaard.~
 This is a standard cell of the Dungeon, which provides access to those who
 
@@ -256,9 +256,9 @@ are stupid enough to want to look closely.
 D3
 ~
 ~
-0 -1 2302
+0 -1 2559
 S
-#2308
+#2565
 A Cell within the Public Dungeon of Midgaard.~
 This is a standard cell of the Dungeon, which provides access to those who
 
@@ -269,9 +269,9 @@ are stupid enough to want to look closely.
 D3
 ~
 ~
-0 -1 2297
+0 -1 2554
 S
-#2309
+#2566
 A Cell within the Public Dungeon of Midgaard.~
 This is a standard cell of the Dungeon, which provides access to those who
 
@@ -282,9 +282,9 @@ are stupid enough to want to look closely.
 D1
 ~
 ~
-0 -1 2296
+0 -1 2553
 S
-#2310
+#2567
 A Cell within the Public Dungeon of Midgaard.~
 This is a standard cell of the Dungeon, which provides access to those who
 
@@ -295,9 +295,9 @@ are stupid enough to want to look closely.
 D3
 ~
 ~
-0 -1 2295
+0 -1 2552
 S
-#2311
+#2568
 Cells, Second Level~
 You can hear echoes all around you of the public dungeon. The public dungeon
 
@@ -310,17 +310,17 @@ little light, thankfully hiding what may be on the ground.
 D2
 ~
 ~
-0 -1 2314
+0 -1 2571
 D4
 ~
 ~
-0 -1 2294
+0 -1 2551
 D5
 ~
 ~
-0 -1 2312
+0 -1 2569
 S
-#2312
+#2569
 Cells, Third Level~
 You can hear echoes all around you of the public dungeon. The public dungeon
 
@@ -333,17 +333,17 @@ little light, thankfully hiding what may be on the ground.
 D2
 ~
 ~
-0 -1 2320
+0 -1 2577
 D4
 ~
 ~
-0 -1 2311
+0 -1 2568
 D5
 ~
 ~
-0 -1 2313
+0 -1 2570
 S
-#2313
+#2570
 Cells, Final Level~
 You can hear echoes all around you of the public dungeon. The public dungeon
 
@@ -358,21 +358,21 @@ bright light to the South, highlighting some vague figures.
 D1
 ~
 ~
-0 -1 2328
+0 -1 2585
 D2
 ~
 ~
-0 -1 2326
+0 -1 2583
 D3
 ~
 ~
-0 -1 2329
+0 -1 2586
 D4
 ~
 ~
-0 -1 2312
+0 -1 2569
 S
-#2314
+#2571
 Second Level Halls~
 You can hear echoes all around you of the public dungeon. The public dungeon
 
@@ -385,21 +385,21 @@ little light, thankfully hiding what may be on the ground.
 D0
 ~
 ~
-0 -1 2311
+0 -1 2568
 D1
 ~
 ~
-0 -1 2316
+0 -1 2573
 D2
 ~
 ~
-0 -1 2315
+0 -1 2572
 D3
 ~
 ~
-0 -1 2317
+0 -1 2574
 S
-#2315
+#2572
 Second Level Halls~
 You can hear echoes all around you of the public dungeon. The public dungeon
 
@@ -412,47 +412,17 @@ little light, thankfully hiding what may be on the ground.
 D0
 ~
 ~
-0 -1 2314
+0 -1 2571
 D1
 ~
 ~
-0 -1 2318
+0 -1 2575
 D3
 ~
 ~
-0 -1 2319
+0 -1 2576
 S
-#2316
-The Second Level Cells~
-Within the cells of the public dungeon, very little can be seen. The cracks on
-
-the walls seem endless, and the omnipresent smell seems even more vivid within
-
-the cells themselves. The loudness of the prison seems inescapable.
-
-~
-0 11
-D3
-~
-~
-0 -1 2314
-S
-#2317
-The Second Level Cells~
-Within the cells of the public dungeon, very little can be seen. The cracks on
-
-the walls seem endless, and the omnipresent smell seems even more vivid within
-
-the cells themselves. The loudness of the prison seems inescapable.
-
-~
-0 11
-D1
-~
-~
-0 -1 2314
-S
-#2318
+#2573
 The Second Level Cells~
 Within the cells of the public dungeon, very little can be seen. The cracks on
 
@@ -465,9 +435,9 @@ the cells themselves. The loudness of the prison seems inescapable.
 D3
 ~
 ~
-0 -1 2315
+0 -1 2571
 S
-#2319
+#2574
 The Second Level Cells~
 Within the cells of the public dungeon, very little can be seen. The cracks on
 
@@ -480,9 +450,39 @@ the cells themselves. The loudness of the prison seems inescapable.
 D1
 ~
 ~
-0 -1 2315
+0 -1 2571
 S
-#2320
+#2575
+The Second Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
+~
+0 11
+D3
+~
+~
+0 -1 2572
+S
+#2576
+The Second Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
+~
+0 11
+D1
+~
+~
+0 -1 2572
+S
+#2577
 Third Level Halls~
 You can hear echoes all around you of the public dungeon.  The public dungeon
 
@@ -496,21 +496,21 @@ is little light, thankfully hiding what may be on the ground.
 D0
 ~
 ~
-0 -1 2312
+0 -1 2569
 D1
 ~
 ~
-0 -1 2324
+0 -1 2581
 D2
 ~
 ~
-0 -1 2321
+0 -1 2578
 D3
 ~
 ~
-0 -1 2325
+0 -1 2582
 S
-#2321
+#2578
 Third Level Halls~
 You can hear echoes all around you of the public dungeon. The public dungeon
 
@@ -523,62 +523,17 @@ little light, thankfully hiding what may be on the ground.
 D0
 ~
 ~
-0 -1 2320
+0 -1 2577
 D1
 ~
 ~
-0 -1 2323
+0 -1 2580
 D3
 ~
 ~
-0 -1 2322
+0 -1 2579
 S
-#2322
-The Third Level Cells~
-Within the cells of the public dungeon, very little can be seen. The cracks on
-
-the walls seem endless, and the omnipresent smell seems even more vivid within
-
-the cells themselves. The loudness of the prison seems inescapable.
-
-~
-0 11
-D1
-~
-~
-0 -1 2321
-S
-#2323
-The Third Level Cells~
-Within the cells of the public dungeon, very little can be seen. The cracks on
-
-the walls seem endless, and the omnipresent smell seems even more vivid within
-
-the cells themselves. The loudness of the prison seems inescapable.
-
-~
-0 11
-D3
-~
-~
-0 -1 2321
-S
-#2324
-The Third Level Cells~
-Within the cells of the public dungeon, very little can be seen. The cracks on
-
-the walls seem endless, and the omnipresent smell seems even more vivid within
-
-the cells themselves. The loudness of the prison seems inescapable.
-
-~
-0 11
-D3
-~
-~
-0 -1 2320
-S
-#2325
+#2579
 The Third Level Cells~
 Within the cells of the public dungeon, very little can be seen. The cracks on
 
@@ -591,9 +546,54 @@ the cells themselves. The loudness of the prison seems inescapable.
 D1
 ~
 ~
-0 -1 2320
+0 -1 2578
 S
-#2326
+#2580
+The Third Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
+~
+0 11
+D3
+~
+~
+0 -1 2578
+S
+#2581
+The Third Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
+~
+0 11
+D3
+~
+~
+0 -1 2577
+S
+#2582
+The Third Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
+~
+0 11
+D1
+~
+~
+0 -1 2577
+S
+#2583
 Final Level Halls~
 You can hear echoes all around you of the public dungeon. The public dungeon
 
@@ -608,21 +608,21 @@ bright light to the South, highlighting some vague figures.
 D0
 ~
 ~
-0 -1 2313
+0 -1 2570
 D1
 ~
 ~
-0 -1 2330
+0 -1 2587
 D2
 ~
 ~
-0 -1 2327
+0 -1 2584
 D3
 ~
 ~
-0 -1 2331
+0 -1 2588
 S
-#2327
+#2584
 Final Level Halls~
 You can hear echoes all around you of the public dungeon. The public dungeon
 
@@ -637,21 +637,21 @@ bright light to the South, highlighting some vague figures.
 D0
 ~
 ~
-0 -1 2326
+0 -1 2583
 D1
 ~
 ~
-0 -1 2332
+0 -1 2589
 D2
 ~
 ~
-0 -1 2334
+0 -1 2591
 D3
 ~
 ~
-0 -1 2333
+0 -1 2590
 S
-#2328
+#2585
 The Final Level Cells~
 Within the cells of the public dungeon, very little can be seen. The cracks on
 
@@ -664,9 +664,9 @@ the cells themselves. The loudness of the prison seems inescapable.
 D3
 ~
 ~
-0 -1 2313
+0 -1 2570
 S
-#2329
+#2586
 The Final Level Cells~
 Within the cells of the public dungeon, very little can be seen. The cracks on
 
@@ -679,9 +679,9 @@ the cells themselves. The loudness of the prison seems inescapable.
 D1
 ~
 ~
-0 -1 2313
+0 -1 2570
 S
-#2330
+#2587
 The Final Level Cells~
 Within the cells of the public dungeon, very little can be seen. The cracks on
 
@@ -694,9 +694,9 @@ the cells themselves. The loudness of the prison seems inescapable.
 D3
 ~
 ~
-0 -1 2326
+0 -1 2583
 S
-#2331
+#2588
 The Final Level Cells~
 Within the cells of the public dungeon, very little can be seen. The cracks on
 
@@ -709,9 +709,9 @@ the cells themselves. The loudness of the prison seems inescapable.
 D1
 ~
 ~
-0 -1 2326
+0 -1 2583
 S
-#2332
+#2589
 The Final Level Cells~
 Within the cells of the public dungeon, very little can be seen. The cracks on
 
@@ -724,9 +724,9 @@ the cells themselves. The loudness of the prison seems inescapable.
 D3
 ~
 ~
-0 -1 2327
+0 -1 2584
 S
-#2333
+#2590
 The Final Level Cells~
 Within the cells of the public dungeon, very little can be seen. The cracks on
 
@@ -739,61 +739,61 @@ the cells themselves. The loudness of the prison seems inescapable.
 D1
 ~
 ~
-0 0 2327
+0 0 2584
 D3
 ~
 ^crack ^cracks~
-353 2300 2338
+353 2557 2595
 S
-#2334
+#2591
 A Guardroom~
 ~
 4 11
 D0
 ~
 ~
-0 -1 2327
+0 -1 2584
 D2
 ~
 ~
-97 2303 2335
+97 2560 2592
 S
-#2335
+#2592
 Vice Warden's Office~
 ~
 4 11
 D0
 ~
 ~
-97 2303 2334
+97 2560 2591
 D2
 ~
 ~
-97 2304 2336
+97 2561 2593
 S
-#2336
+#2593
 Desk of the Warden~
 ~
 4 11
 D0
 ~
 ~
-97 2304 2335
+97 2561 2592
 D2
 ~
 ~
-97 2305 2337
+97 2562 2594
 S
-#2337
+#2594
 The Warden's Office~
 ~
 4 11
 D0
 ~
 ~
-97 2305 2336
+97 2562 2593
 S
-#2338
+#2595
 Fallen down the Crack~
 Unfortunately, you have fallen down the crack and are not able to get up. Only
 
@@ -805,7 +805,7 @@ the barest flicker of light can be seen from above, and little can be made out
 S
 #0
 #MOBILES
-#2294
+#2551
 alice chains~
 Alice in Chains~
 Alice in Chains stands before you, reaching for your throat.
@@ -826,7 +826,7 @@ killing machine at that!  She stares cross-eyed at you, whilst saying,
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2295
+#2552
 pantera~
 Pantera~
 Pantera squats in the corner, looking mean.
@@ -847,7 +847,7 @@ he smiles, you know why.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2296
+#2553
 buffalo tom~
 Buffalo Tom~
 Buffalo Tom stands here, sniffing the air.
@@ -868,7 +868,7 @@ boo to a spider.  My! How looks can be misleading.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2297
+#2554
 blur~
 Blur~
 Blur stands before you, moving so fast that you can't focus on it properly.
@@ -889,7 +889,7 @@ dizzy.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2298
+#2555
 dinosaur jr~
 Dinosaur Jr~
 Dinosaur Jr crouches here, waiting to pounce on his next victim.
@@ -910,7 +910,7 @@ hardly have done much to improve his temper.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2299
+#2556
 elastica~
 Elastica~
 Elastica is here, switching shape at will.
@@ -931,7 +931,7 @@ question mark as you look at her.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2300
+#2557
 A Second Level Prisoner~
 A Second Level Prisoner~
 A Second level prisoner stands here, clearly bored
@@ -946,7 +946,7 @@ A Second level prisoner stands here, clearly bored
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2301
+#2558
 A Second Level Prisoner~
 A Second Level Prisoner~
 A second level prisoner stands here, clearly bored
@@ -961,7 +961,7 @@ A second level prisoner stands here, clearly bored
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2302
+#2559
 A Second Level Prisoner~
 A Second Level Prisoner~
 A second level prisoner stands here, clearly bored
@@ -976,7 +976,7 @@ A second level prisoner stands here, clearly bored
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2303
+#2560
 A Second Level Prisoner~
 A Second Level Prisoner~
 A second level prisoner stands here, clearly bored.
@@ -991,7 +991,7 @@ A second level prisoner stands here, clearly bored.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2304
+#2561
 A Third Level Prisoner~
 A Third Level Prisoner~
 A third level prisoner stands here, looking for trouble.
@@ -1006,7 +1006,7 @@ A third level prisoner stands here, looking for trouble.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2305
+#2562
 A Third Level Prisoner~
 A Third Level Prisoner~
 A third level prisoner stands here, looking for trouble.
@@ -1021,7 +1021,7 @@ A third level prisoner stands here, looking for trouble.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2306
+#2563
 A Third Level Prisoner~
 A Third Level Prisoner~
 A third level prisoner stands here, looking for trouble.
@@ -1036,7 +1036,7 @@ A third level prisoner stands here, looking for trouble.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2307
+#2564
 A Third Level Prisoner~
 A Third Level Prisoner~
 A third level prisoner stands here, looking for trouble.
@@ -1051,7 +1051,7 @@ A third level prisoner stands here, looking for trouble.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#2308
+#2565
 A Final Level Prisoner~
 A Final Level Prisoner~
 A Final Level Prisoner stands here, scowling angrily.
@@ -1066,7 +1066,7 @@ A Final Level Prisoner stands here, scowling angrily.
 + 0 0 0 0 0 0 0 0 0
 l 2 0 0 0 0 0 0 0 0 0 
 L 100 0 0 0 0 0 0 0 0 
-#2309
+#2566
 A Final Level Prisoner~
 A Final Level Prisoner~
 A Final Level Prisoner stands here, scowling angrily
@@ -1081,7 +1081,7 @@ A Final Level Prisoner stands here, scowling angrily
 + 0 0 0 0 0 0 0 0 0
 l 2 9568 0 0 0 0 0 0 0 0 
 L 100 0 0 0 0 0 0 0 0 
-#2310
+#2567
 A Final Level Prisoner~
 A Final Level Prisoner~
 A Final Level Prisoner stands here, scowling angrily
@@ -1096,7 +1096,7 @@ A Final Level Prisoner stands here, scowling angrily
 + 0 0 0 0 0 0 0 0 0
 l 2 9568 0 0 0 0 0 0 0 0 
 L 100 0 0 0 0 0 0 0 0 
-#2311
+#2568
 A Final Level Prisoner~
 A Final Level Prisoner~
 A Final Level Prisoner stands here, scowling angrily
@@ -1111,7 +1111,7 @@ A Final Level Prisoner stands here, scowling angrily
 + 0 0 0 0 0 0 0 0 0
 l 0 9568 0 0 0 0 0 0 0 0 
 L 100 0 0 0 0 0 0 0 0 
-#2312
+#2569
 A Final Level Prisoner~
 A Final Level Prisoner~
 A Final Level Prisoner stands here, scowling angrily
@@ -1126,7 +1126,7 @@ A Final Level Prisoner stands here, scowling angrily
 + 0 0 0 0 0 0 0 0 0
 l 2 9568 0 0 0 0 0 0 0 0 
 L 100 0 0 0 0 0 0 0 0 
-#2313
+#2570
 A Final Level Prisoner~
 A Final Level Prisoner~
 A Final Level Prisoner stands here, scowling angrily.
@@ -1141,7 +1141,7 @@ A Final Level Prisoner stands here, scowling angrily.
 + 0 0 0 0 0 0 0 0 0
 l 2 9568 0 0 0 0 0 0 0 0 
 L 100 0 0 0 0 0 0 0 0 
-#2314
+#2571
 A Warden's Guard~
 A Warden's Guard~
 A Warden's Guard stands here, at attention
@@ -1156,7 +1156,7 @@ A Warden's Guard stands here, at attention
 + 0 0 0 0 0 0 0 0 0
 l 10 9566 9567 0 0 0 0 0 0 0 
 L 50 50 0 0 0 0 0 0 0 
-#2315
+#2572
 A Vice Warden~
 A Vice Warden~
 A Vice Warden stands here, looking at documents
@@ -1171,7 +1171,7 @@ A Vice Warden stands here, looking at documents
 + 0 0 0 0 0 0 0 0 0
 l 10 9565 0 0 0 0 0 0 0 0 
 L 100 0 0 0 0 0 0 0 0 
-#2316
+#2573
 A Warden's Secretary~
 A Warden's Secretary~
 ~
@@ -1184,7 +1184,7 @@ A Warden's Secretary~
 + 0 0 0 0 0 0 0 0 0
 l 50 9564 0 0 0 0 0 0 0 0 
 L 100 0 0 0 0 0 0 0 0 
-#2317
+#2574
 The Prison Warden~
 The Prison Warden~
 The Prison Warden stands here, observing
@@ -1199,7 +1199,7 @@ The Prison Warden stands here, observing
 + 0 0 0 0 0 0 0 0 0
 l 100 9557 9563 9559 0 0 0 0 0 0 
 L 90 8 2 0 0 0 0 0 0 
-#2318
+#2575
 A Skeleton~
 A Skeleton~
 A skeleton stands here, grinning with a rictus grin.
@@ -1216,7 +1216,7 @@ l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0 
 #0
 #OBJECTS
-#2294
+#2551
 ring vibrating~
 the vibrating ring~
 The vibrating ring spins whirls about on the floor in front of you.~
@@ -1237,7 +1237,7 @@ A
 19 3
 L
 20
-#2295
+#2552
 buffalo bracer~
 a Buffalo bracer~
 A Buffalo bracer has been left here.~
@@ -1258,7 +1258,7 @@ A
 14 25
 L
 20
-#2296
+#2553
 pantera fang~
 pantera's fang~
 Pantera's fang has been left here.~
@@ -1275,7 +1275,7 @@ A
 13 10
 L
 20
-#2293
+#2550
 Elastic Aura~
 an Elastic Aura~
 An aura of some elasticity lies here~
@@ -1284,7 +1284,7 @@ An aura of some elasticity lies here~
 4
 L
 10
-#2297
+#2554
 a chained soul~
 a chained soul~
 A chained soul lies here~
@@ -1293,7 +1293,7 @@ A chained soul lies here~
 4
 L
 10
-#2298
+#2555
 dinosaur Shoulders~
 dinosaur Shoulders~
 Shoulders of a dinosaur lay here~
@@ -1302,7 +1302,7 @@ Shoulders of a dinosaur lay here~
 4
 L
 10
-#2299
+#2556
 ^painting~
 a Secret Painting~
 ~
@@ -1311,7 +1311,7 @@ a Secret Painting~
 4
 L
 1
-#2300
+#2557
 the Secret Key~
 the Secret Key~
 A key with some kind of secret lies here~
@@ -1320,7 +1320,7 @@ A key with some kind of secret lies here~
 4
 L
 1
-#2301
+#2558
 A Skeleton's Skull Skeleton~
 @@dA cute little @@WSkeleton's@@d skull@@N~
 Cute little skeleton skull~
@@ -1347,7 +1347,7 @@ A
 27 10
 L
 30
-#2302
+#2559
 An Obsidian Stiletto~
 an @@dObsidian @@NStiletto~
 A stiletto lies here, lost.~
@@ -1356,7 +1356,7 @@ A stiletto lies here, lost.~
 8
 L
 30
-#2303
+#2560
 a Guard's Key~
 a Guard's Key~
 A key lies here, discarded~
@@ -1365,7 +1365,7 @@ A key lies here, discarded~
 4
 L
 1
-#2304
+#2561
 a Vice Warden's Key~
 a Vice Warden's Key~
 A key lies here, discarded~
@@ -1374,7 +1374,7 @@ A key lies here, discarded~
 4
 L
 30
-#2305
+#2562
 a Secretary's Key~
 a Secretary's Key~
 A key lies here, discarded~
@@ -1383,7 +1383,7 @@ A key lies here, discarded~
 4
 L
 30
-#2306
+#2563
 The Warden's Epaulets~
 The Warden's Epaulets~
 The Warden's Epaulets~
@@ -1392,7 +1392,7 @@ The Warden's Epaulets~
 4
 L
 35
-#2307
+#2564
 pen of the Secretary~
 pen of the Secretary~
 A pen lies here, abandoned~
@@ -1401,7 +1401,7 @@ A pen lies here, abandoned~
 4
 L
 30
-#2308
+#2565
 insignia of the Vice Warden~
 insignia of the Vice Warden~
 An insignia lies here, abandoned~
@@ -1410,7 +1410,7 @@ An insignia lies here, abandoned~
 8
 L
 30
-#2309
+#2566
 a Guard's Breastplate~
 a Guard's Breastplate~
 A breastplate lies here, abandoned~
@@ -1419,7 +1419,7 @@ A breastplate lies here, abandoned~
 8
 L
 30
-#2310
+#2567
 a Guard's Legplates~
 a Guard's Legplates~
 A pair of legplates lie here, abandoned~
@@ -1428,7 +1428,7 @@ A pair of legplates lie here, abandoned~
 8
 L
 30
-#2311
+#2568
 A Prisoner's Shackles~
 @@WA @@dP@@Wr@@di@@Ws@@do@@Wn@@de@@Wr@@d'@@Ws Shackles~
 A pair of shackles lie here, discarded~
@@ -1439,137 +1439,137 @@ L
 30
 #0
 #RESETS
-M 0 2294 1 2309   load mob
-E 0 2297 0 0   (null)
+M 0 2551 1 2566   load mob
+E 0 2554 0 0   (null)
 
-M 0 2295 1 2307   load mob
-E 0 2296 0 16   load obj
-M 0 2296 1 2306
-E 0 2295 0 15
-M 0 2297 1 2305
-E 0 2294 0 1
-M 0 2298 1 2310
-E 0 2298 0 0   (null)
+M 0 2552 1 2564   load mob
+E 0 2553 0 16   load obj
+M 0 2553 1 2563
+E 0 2552 0 15
+M 0 2554 1 2562
+E 0 2551 0 1
+M 0 2555 1 2567
+E 0 2555 0 0   (null)
 
-M 0 2299 1 2308
-E 0 2293 0 0   (null)
+M 0 2556 1 2565
+E 0 2550 0 0   (null)
 
-M 0 2300 3 2317   (null)
+M 0 2557 3 2574   (null)
 
-M 0 2300 3 2317   (null)
+M 0 2557 3 2574   (null)
 
-M 0 2300 3 2317   (null)
+M 0 2557 3 2574   (null)
 
-M 0 2301 3 2316   (null)
+M 0 2558 3 2573   (null)
 
-M 0 2301 3 2316   (null)
+M 0 2558 3 2573   (null)
 
-M 0 2301 3 2316   (null)
+M 0 2558 3 2573   (null)
 
-M 0 2302 3 2319   (null)
+M 0 2559 3 2576   (null)
 
-M 0 2302 3 2319   (null)
+M 0 2559 3 2576   (null)
 
-M 0 2302 3 2319   (null)
+M 0 2559 3 2576   (null)
 
-M 0 2303 3 2318   (null)
+M 0 2560 3 2575   (null)
 
-M 0 2303 3 2318   (null)
+M 0 2560 3 2575   (null)
 
-M 0 2303 3 2318   (null)
+M 0 2560 3 2575   (null)
 
-M 0 2304 3 2325   (null)
+M 0 2561 3 2582   (null)
 
-M 0 2304 3 2325   (null)
+M 0 2561 3 2582   (null)
 
-M 0 2304 3 2325   (null)
+M 0 2561 3 2582   (null)
 
-M 0 2305 3 2324   (null)
+M 0 2562 3 2581   (null)
 
-M 0 2305 3 2324   (null)
+M 0 2562 3 2581   (null)
 
-M 0 2305 3 2324   (null)
+M 0 2562 3 2581   (null)
 
-M 0 2306 3 2322   (null)
+M 0 2563 3 2579   (null)
 
-M 0 2306 3 2322   (null)
+M 0 2563 3 2579   (null)
 
-M 0 2306 3 2322   (null)
+M 0 2563 3 2579   (null)
 
-M 0 2307 3 2323   (null)
+M 0 2564 3 2580   (null)
 
-M 0 2307 3 2323   (null)
+M 0 2564 3 2580   (null)
 
-M 0 2307 3 2323   (null)
+M 0 2564 3 2580   (null)
 
-M 0 2308 3 2329   (null)
+M 0 2565 3 2586   (null)
 
-M 0 2308 3 2329   (null)
+M 0 2565 3 2586   (null)
 
-M 0 2308 3 2329   (null)
+M 0 2565 3 2586   (null)
 
-M 0 2309 3 2328   (null)
+M 0 2566 3 2585   (null)
 
-M 0 2309 3 2328   (null)
+M 0 2566 3 2585   (null)
 
-M 0 2309 3 2328   (null)
+M 0 2566 3 2585   (null)
 
-M 0 2310 3 2331   (null)
+M 0 2567 3 2588   (null)
 
-M 0 2310 3 2331   (null)
+M 0 2567 3 2588   (null)
 
-M 0 2310 3 2331   (null)
+M 0 2567 3 2588   (null)
 
-M 0 2311 3 2330   (null)
+M 0 2568 3 2587   (null)
 
-M 0 2311 3 2330   (null)
+M 0 2568 3 2587   (null)
 
-M 0 2311 3 2330   (null)
+M 0 2568 3 2587   (null)
 
-M 0 2312 3 2333   (null)
+M 0 2569 3 2590   (null)
 
-M 0 2312 3 2333   (null)
+M 0 2569 3 2590   (null)
 
-M 0 2312 3 2333   (null)
+M 0 2569 3 2590   (null)
 
-M 0 2313 3 2332   (null)
+M 0 2570 3 2589   (null)
 
-M 0 2313 3 2332   (null)
+M 0 2570 3 2589   (null)
 
-M 0 2313 3 2332   (null)
+M 0 2570 3 2589   (null)
 
-M 0 2314 4 2334   (null)
+M 0 2571 4 2591   (null)
 
-G 0 2303 0   (null)
+G 0 2560 0   (null)
 
-M 0 2314 4 2334   (null)
+M 0 2571 4 2591   (null)
 
-M 0 2315 1 2335   (null)
+M 0 2572 1 2592   (null)
 
-G 0 2304 0   (null)
+G 0 2561 0   (null)
 
-M 0 2316 1 2336   (null)
+M 0 2573 1 2593   (null)
 
-G 0 2305 0   (null)
+G 0 2562 0   (null)
 
-M 0 2317 1 2337   (null)
+M 0 2574 1 2594   (null)
 
-O 0 2299 1 2337   (null)
+O 0 2556 1 2594   (null)
 
-D 0 2333 3 2   (null)
+D 0 2590 3 2   (null)
 
-M 0 2318 1 2338   (null)
+M 0 2575 1 2595   (null)
 
-E 0 2301 0 0   (null)
+E 0 2558 0 0   (null)
 
-D 0 2334 2 2   (null)
+D 0 2591 2 2   (null)
 
-D 0 2335 2 2   (null)
+D 0 2592 2 2   (null)
 
-D 0 2336 2 2   (null)
+D 0 2593 2 2   (null)
 
 S
 #OBJFUNS
-O 2302 objfun_cast_fight
+O 2559 objfun_cast_fight
 S
 #$
