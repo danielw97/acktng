@@ -25,24 +25,41 @@
  *  around, comes around.                                                  *
  ***************************************************************************/
 
-#include <stdio.h>
-#include <time.h>
 #include "globals.h"
-#ifndef DEC_MAGIC_H
-#include "magic.h"
-#endif
 
-/*
- * The skill and spell table.
- * Slot numbers must never be changed as they appear in #OBJECTS sections.
- * Spells are in spells/spell_table_data.c
- * Skills are in skills/skill_table_data.c
- */
-#define SLOT(n) n
+const struct clan_type clan_table[MAX_CLAN] = {
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
 
-// clang-format off
-const struct skill_type skill_table[MAX_SKILL] = {
-#include "spells/spell_table_data.c"
-#include "skills/skill_table_data.c"
+    },
+
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+
+    },
+
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+
+    },
+
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+
+    },
+
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+
+    },
+
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+
+    },
+
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+
+    },
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+
+    },
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+
+    },
+
 };
-// clang-format on
