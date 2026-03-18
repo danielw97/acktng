@@ -33,11 +33,6 @@
 #include "globals.h"
 #include <signal.h>
 
-extern POL_DATA politics_data;
-extern OBJ_DATA *quest_object;
-
-extern COUNCIL_DATA super_councils[MAX_SUPER];
-
 bool should_abort_for_checkpoint_timeout(int usage_now, int checkpoint, int threshold,
                                          bool disable_abort)
 {
@@ -1649,7 +1644,6 @@ void obj_update(void)
 
    OBJ_DATA *marker;
    OBJ_DATA *obj;
-   extern OBJ_DATA *auction_item;
 
    /*
     * Create dummy object and add to end of list.  This object is
@@ -2033,7 +2027,6 @@ void update_handler(void)
    static int pulse_point;
    static int pulse_auction;
    extern int saving_area;
-   extern bool auction_flop;
 
    if (saving_area)
       build_save(); /* For incremental area saving */
@@ -2379,12 +2372,6 @@ bool check_re_equip(CHAR_DATA *ch)
 
 void auction_update(void)
 {
-   extern OBJ_DATA *auction_item;
-   extern CHAR_DATA *auction_owner;
-   extern CHAR_DATA *auction_bidder;
-   extern int auction_bid;
-   extern int auction_reserve;
-   extern int auction_stage;
    char buf[MAX_STRING_LENGTH];
 
    CHAR_DATA *ach;
@@ -2585,12 +2572,6 @@ void remember_attack(CHAR_DATA *ch, CHAR_DATA *victim)
 
 void quest_update()
 {
-   extern bool auto_quest;
-   extern bool quest;
-   extern CHAR_DATA *quest_mob;
-   extern OBJ_DATA *quest_object;
-   extern int quest_timer;
-   extern int quest_wait;
 
    if (!quest && !auto_quest)
       return;

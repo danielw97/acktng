@@ -119,7 +119,8 @@ static void validate_lore_file(const char *path)
       {
          assert(strlen(line) > 6);
          assert(fgets(line, sizeof(line), fp) != NULL);
-         assert(strcmp(line, "---\n") == 0 || strcmp(line, "---\r\n") == 0 || strcmp(line, "---") == 0);
+         assert(strcmp(line, "---\n") == 0 || strcmp(line, "---\r\n") == 0 ||
+                strcmp(line, "---") == 0);
          continue;
       }
       /* keywords must not repeat after the first line */

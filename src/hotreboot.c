@@ -1,0 +1,329 @@
+/***************************************************************************
+ *  Original Diku Mud copyright (C) 1990, 1991 by Sebastian Hammer,        *
+ *  Michael Seifert, Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.   *
+ *                                                                         *
+ *  Merc Diku Mud improvments copyright (C) 1992, 1993 by Michael          *
+ *  Chastain, Michael Quan, and Mitchell Tse.                              *
+ *                                                                         *
+ *  Ack 2.2 improvements copyright (C) 1994 by Stephen Dooley              *
+ *                                                                         *
+ *  In order to use any part of this Merc Diku Mud, you must comply with   *
+ *  both the original Diku license in 'license.doc' as well the Merc       *
+ *  license in 'license.txt'.  In particular, you may not remove either of *
+ *  these copyright notices.                                               *
+ *                                                                         *
+ *       _/          _/_/_/     _/    _/     _/    ACK! MUD is modified    *
+ *      _/_/        _/          _/  _/       _/    Merc2.0/2.1/2.2 code    *
+ *     _/  _/      _/           _/_/         _/    (c)Stephen Zepp 1998    *
+ *    _/_/_/_/      _/          _/  _/             Version #: 4.3.1        *
+ *   _/      _/      _/_/_/     _/    _/     _/                            *
+ *                                                                         *
+ *                        http://ackmud.nuc.net/                           *
+ *                        zenithar@ackmud.nuc.net                          *
+ *  Much time and thought has gone into this software and you are          *
+ *  benefitting.  We hope that you share your changes too.  What goes      *
+ *  around, comes around.                                                  *
+ ***************************************************************************/
+/*
+ * Hotreboot (copyover) implementation.
+ *
+ * do_hotreboo()     - typo-trap command
+ * do_hotreboot()    - saves all players and exec()s a new binary
+ * copyover_recover() - restores player connections after exec()
+ */
+
+#include <signal.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include "globals.h"
+#include "socket.h"
+
+extern int port, control;
+extern FILE *fpReserve;
+
+/* Here it is boys and girls the HOT reboot function and all its nifty
+ * little parts!! - Flar
+ */
+void do_hotreboo(CHAR_DATA *ch, char *argument)
+{
+   send_to_char("If you want to do a @@R@@fHOT@@Breboot@@N....spell it out.\n\r", ch);
+   return;
+}
+
+void do_hotreboot(CHAR_DATA *ch, char *argument)
+{
+   FILE *fp;
+   DESCRIPTOR_DATA *d, *d_next;
+   char buf[MSL], buf2[MSL], buf3[MSL];
+
+   fp = fopen(COPYOVER_FILE, "w");
+
+   if (!fp)
+   {
+      send_to_char("Copyover file not writeable, aborted.\n\r", ch);
+      log_f("Could not write to copyover file: %s", COPYOVER_FILE);
+      perror("do_copyover:fopen");
+      return;
+   }
+
+   if (auction_item != NULL)
+      do_auction(ch, "stop");
+
+   sprintf(buf,
+           "\n\r**** HOTreboot by An Immortal - Please remain ONLINE ****\n\r*********** We will "
+           "be back in 30 seconds!! *************%s\n\n\r",
+           "");
+
+   /*
+    * For each PLAYING descriptor( non-negative ), save its state
+    */
+   for (d = first_desc; d; d = d_next)
+   {
+      CHAR_DATA *och = CH(d);
+      d_next = d->next; /* We delete from the list , so need to save this */
+
+      if (!d->character || d->connected < 0) /* drop those logging on */
+      {
+         write_to_descriptor(d->descriptor,
+                             "\n\r@Sorry, ACK! MUD rebooting. Come back in a few minutes.\n\r", 0);
+         close_socket(d); /* throw'em out */
+      }
+      else
+      {
+         fprintf(fp, "%d %s %s\n", d->descriptor, och->name, d->host);
+         if (och->level == 1)
+         {
+
+            write_to_descriptor(d->descriptor,
+                                "Since you are level one, and level one characters do not "
+                                "save....you have been advanced!\n\r",
+                                0);
+            och->level = 2;
+            och->class_level[och->class] = 2;
+         }
+         och->hit = och->max_hit;
+         och->mana = och->max_mana;
+         och->move = och->max_move;
+         save_char_obj(och);
+         write_to_descriptor(d->descriptor, buf, 0);
+      }
+   }
+
+   fprintf(fp, "-1\n");
+   if (fp != NULL)
+   {
+      fclose(fp);
+      fp = NULL;
+   }
+
+   /* Save linkdead players (in game but no active connection) */
+   {
+      CHAR_DATA *c;
+      for (c = first_char; c; c = c->next)
+      {
+         if (!IS_NPC(c) && c->desc == NULL)
+         {
+            c->hit = c->max_hit;
+            c->mana = c->max_mana;
+            c->move = c->max_move;
+            save_char_obj(c);
+         }
+      }
+   }
+
+   /*
+    * Close reserve and other always-open files and release other resources
+    */
+
+   if (fpReserve != NULL)
+   {
+      fclose(fpReserve);
+      fpReserve = NULL;
+   }
+
+   /*
+    * exec - descriptors are inherited
+    */
+
+   sprintf(buf, "%d", port);
+   sprintf(buf2, "%d", control);
+   strncpy(buf3, "-1", 100);
+
+   /*
+    * spec: handle profiling cleanly here
+    */
+#ifdef PROF
+   if (!fork()) /* dump profile info */
+      exit(0);
+   signal(SIGPROF, SIG_IGN);
+#endif
+
+   execl(EXE_FILE, "ACK! MUD", buf, "HOTreboot", buf2, buf3, (char *)NULL);
+
+   /*
+    * Failed - sucessful exec will not return
+    */
+
+   perror("do_copyover: execl");
+   send_to_char("HOTreboot FAILED! Something is wrong in the shell!\n\r", ch);
+}
+
+/* Recover from a copyover - load players */
+void copyover_recover()
+{
+   DESCRIPTOR_DATA *d;
+   FILE *fp;
+   char name[100];
+   char host[MSL];
+   int desc;
+   bool fOld;
+   extern bool disable_timer_abort;
+   log_f("Copyover recovery initiated");
+   disable_timer_abort = TRUE;
+   fp = fopen(COPYOVER_FILE, "r");
+
+   if (!fp) /* there are some descriptors open which will hang forever then ? */
+   {
+      perror("copyover_recover:fopen");
+      log_f("Copyover file not found. Exitting.\n\r");
+      exit(1);
+   }
+
+   unlink(COPYOVER_FILE); /* In case something crashes - doesn't prevent reading   */
+
+   for (;;)
+   {
+      if (fscanf(fp, "%d %99s %8191s\n", &desc, name, host) != 3)
+         break;
+      if (desc == -1)
+         break;
+
+      /*
+       * Write something, and check if it goes error-free
+       */
+      if (!write_to_descriptor(desc, "\n\rRestoring from HOTreboot...\n\r", 0))
+      {
+         close(desc); /* nope */
+         continue;
+      }
+
+      GET_FREE(d, desc_free);
+      init_descriptor(d, desc); /* set up various stuff */
+
+      /* This is a recovered connection, not a new one - skip handshake and greeting */
+      d->websocket_handshake_complete = TRUE;
+      d->greeting_sent = TRUE;
+
+      d->host = str_dup(host);
+      d->next = NULL;
+      d->prev = NULL;
+
+      d->connected = CON_COPYOVER_RECOVER; /* -15, so close_socket frees the char */
+      LINK(d, first_desc, last_desc, next, prev);
+
+      /*
+       * Now, find the pfile
+       */
+
+      fOld = load_char_obj(d, name, FALSE);
+
+      if (!fOld) /* Player file not found?! */
+      {
+         write_to_descriptor(
+             desc,
+             "\n\rSomehow, your character was lost in the HOTreboot. Sorry, you must relog in.\n\r",
+             0);
+         close_socket(d);
+      }
+      else /* ok! */
+      {
+         CHAR_DATA *this_char;
+
+         write_to_descriptor(desc, "\n\rCopyover recovery complete.\n\r", 0);
+
+         /*
+          * Just In Case
+          */
+         if (!d->character->in_room)
+            d->character->in_room = get_room_index(ROOM_VNUM_LIMBO);
+
+         /*
+          * Insert in the char_list
+          */
+         d->character->next = NULL;
+         d->character->prev = NULL;
+         this_char = d->character;
+
+         LINK(this_char, first_char, last_char, next, prev);
+
+         char_to_room(d->character, d->character->in_room);
+         do_look(d->character, "");
+         act("$n's atoms materialize and reform.", d->character, NULL, NULL, TO_ROOM);
+         /*
+          * d->connected = CON_PLAYING;
+          */
+
+         if (this_char->pcdata->hp_from_gain < 0)
+            reset_gain_stats(this_char);
+         /*       this_char->affected_by = 0;   */
+
+         this_char->is_quitting = FALSE;
+         d->connected = CON_SETTING_STATS;
+         {
+            OBJ_DATA *wear_object;
+            AFFECT_DATA *this_aff;
+            AFFECT_DATA *this_aff_next;
+
+            this_char->max_mana = this_char->pcdata->mana_from_gain;
+            this_char->max_hit = this_char->pcdata->hp_from_gain;
+            this_char->max_move = this_char->pcdata->move_from_gain;
+            this_char->saving_throw = get_psuedo_level(this_char) / 10;
+            this_char->hitroll = 0;
+            this_char->damroll = 0;
+            this_char->armor = 100;
+            if (this_char->login_sex != -1)
+               this_char->sex = this_char->login_sex;
+            this_char->affected_by = 0;
+
+            for (wear_object = this_char->first_carry; wear_object != NULL;
+                 wear_object = wear_object->next_in_carry_list)
+            {
+               if (wear_object->wear_loc > WEAR_NONE)
+                  equip_char(this_char, wear_object, wear_object->wear_loc);
+            }
+            /* add spells saved to stats  */
+
+            for (this_aff = this_char->first_saved_aff; this_aff != NULL; this_aff = this_aff_next)
+            {
+               this_aff_next = this_aff->next;
+               UNLINK(this_aff, this_char->first_saved_aff, this_char->last_saved_aff, next, prev);
+
+               if (this_aff->type == skill_lookup("fireshield"))
+                  do_cast(this_char, "fireshield");
+               else if (this_aff->type == skill_lookup("iceshield"))
+                  do_cast(this_char, "iceshield");
+               else if (this_aff->type == skill_lookup("shockshield"))
+                  do_cast(this_char, "shockshield");
+               else if (this_aff->type == skill_lookup("shadowshield"))
+                  do_cast(this_char, "shadowshield");
+               else if (this_aff->type == skill_lookup("thoughtshield"))
+                  do_cast(this_char, "thoughtshield");
+               else
+                  affect_to_char(this_char, this_aff);
+               PUT_FREE(this_aff, affect_free);
+            }
+         }
+         d->connected = CON_PLAYING;
+         list_who_to_output();
+      }
+   }
+
+   if (fp != NULL)
+   {
+      fclose(fp);
+      fp = NULL;
+   }
+   disable_timer_abort = FALSE;
+}

@@ -952,10 +952,6 @@ void do_give(CHAR_DATA *ch, char *argument)
    char buf[MAX_STRING_LENGTH];
    CHAR_DATA *victim;
    OBJ_DATA *obj;
-   extern bool quest;
-   extern bool auto_quest;
-   extern CHAR_DATA *quest_mob;
-   extern OBJ_DATA *quest_object;
 
    container_name[0] = '\0';
    pre_parse(argument, victim_name, container_name, object_list);
@@ -2206,7 +2202,6 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
    char monbuf[MSL];
    int gp;
    OBJ_DATA *obj;
-   extern OBJ_DATA *quest_object;
    sh_int align_change = 0;
    sh_int align_direction = 0;
    bool change_align = FALSE;
@@ -3781,12 +3776,6 @@ void do_appraise(CHAR_DATA *ch, char *argument)
 
 void do_bid(CHAR_DATA *ch, char *argument)
 {
-   extern OBJ_DATA *auction_item;
-   extern CHAR_DATA *auction_owner;
-   extern CHAR_DATA *auction_bidder;
-   extern int auction_bid;
-   extern int auction_stage;
-   extern bool auction_flop;
    int amount = 0;
 
    if (IS_NPC(ch))
@@ -3843,13 +3832,6 @@ void do_bid(CHAR_DATA *ch, char *argument)
 
 void do_auction(CHAR_DATA *ch, char *argument)
 {
-   extern OBJ_DATA *auction_item;
-   extern CHAR_DATA *auction_owner;
-   extern CHAR_DATA *auction_bidder;
-   extern int auction_bid;
-   extern int auction_reserve;
-   extern int auction_stage;
-   extern bool auction_flop;
    char buf[MAX_STRING_LENGTH];
    char arg[MAX_STRING_LENGTH];
    int reserve;

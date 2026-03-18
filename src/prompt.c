@@ -778,4 +778,3 @@ void do_prompt(CHAR_DATA *ch, char *argument)
    send_to_char("Ok.\n\r", ch);
    return;
 }
-

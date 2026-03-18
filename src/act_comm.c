@@ -2385,7 +2385,7 @@ void ask_quest_question(CHAR_DATA *ch, char *argument)
    extern CHAR_DATA *quest_mob;
    extern CHAR_DATA *quest_target;
    extern OBJ_DATA *quest_object;
-   extern sh_int quest_timer;
+   extern int quest_timer;
    extern bool quest;
    char buf[MAX_STRING_LENGTH];
    buf[0] = '\0';

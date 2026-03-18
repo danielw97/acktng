@@ -1648,4 +1648,3 @@ void load_gold(void)
       fpArea = NULL;
    }
 }
-

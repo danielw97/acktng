@@ -12,10 +12,6 @@
 #include "tables.h"
 #include <math.h>
 
-extern POL_DATA politics_data;
-extern CHAR_DATA *quest_target;
-extern CHAR_DATA *quest_mob;
-
 static bool short_fight_enabled = FALSE;
 static CHAR_DATA *short_fight_attacker = NULL;
 static CHAR_DATA *short_fight_victim = NULL;

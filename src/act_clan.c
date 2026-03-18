@@ -33,8 +33,6 @@
 #include "globals.h"
 
 /* These set of clan functions by Zen */
-extern POL_DATA politics_data;
-extern COUNCIL_DATA super_councils[MAX_SUPER];
 
 void save_clan_table()
 {
