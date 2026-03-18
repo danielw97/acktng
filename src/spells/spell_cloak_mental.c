@@ -31,6 +31,7 @@
 #include "globals.h"
 #include "tables.h"
 #include "magic.h"
+#include "skills.h"
 
 bool spell_cloak_mental(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
@@ -40,8 +41,18 @@ bool spell_cloak_mental(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    if (is_affected(ch, sn))
       return FALSE;
 
+   int chi_bonus = 0;
+   int chi = get_chi(ch);
+
+   if (chi > 0)
+   {
+      chi_bonus = chi / 2;
+      ch->chi = 0;
+      send_to_char("@@yYour chi empowers the mental cloak!@@N\n\r", ch);
+   }
+
    af.type = sn;
-   af.duration = get_psuedo_level(ch) / 8;
+   af.duration = get_psuedo_level(ch) / 8 + chi_bonus;
    af.location = 0;
    af.modifier = 0;
    af.bitvector = 0;
