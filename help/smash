@@ -1,9 +1,23 @@
 level 0
 keywords smash
 ---
-Syntax: smash <target>
+Syntax: smash <door>
 
-Delivers a powerful smashing blow to an opponent, dealing high damage. A
-warrior/strength-based combat skill.
+Smashes open a door by force, bypassing its lock entirely. Both the closed
+and locked flags are removed from the door, and the reverse side is also
+unlocked if it exists. No key is required.
 
-See also: shelp smash
+If the door was already unlocked, your character tumbles through
+comically rather than smashing it open.
+
+Unlike pick (which requires lockpicking skill and care), smash is a brute-
+force approach. It is available to strong warrior-type characters.
+
+Example:
+  smash north      -- Smashes open the door to the north.
+  smash iron gate  -- Smashes open the iron gate.
+
+Note: smash the *door* -- it does not attack a target in combat. For combat
+use, see bash or charge.
+
+See also: bash open close lock unlock pick

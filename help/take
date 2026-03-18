@@ -3,8 +3,18 @@ keywords take
 ---
 Syntax: take <item>
         take <item> <container>
+        take all
+        take all.<keyword>
 
-Picks up an item from the room or from a container. 'Take' is an alias
-for the GET command.
+Take is an alias for the GET command. It picks up an item from the room
+floor or from an open container.
 
-See also: get drop put
+  take sword          -- Picks up a sword from the room.
+  take all            -- Picks up everything in the room.
+  take sword chest    -- Takes a sword from a chest.
+  take all.iron       -- Takes all items whose name contains "iron".
+
+Items taken from a room go directly into your inventory. If you do not
+have enough carrying capacity the item cannot be picked up.
+
+See also: get drop put inventory

@@ -3,7 +3,14 @@ keywords rent
 ---
 Syntax: rent
 
-There is no rent system on this MUD. Simply use SAVE to save your character
-and QUIT to exit the game safely.
+This MUD does not use a rent system. There are no inn costs or storage fees
+for logging out with items.
+
+To leave the game safely, simply use:
+  save    -- Saves your character to disk immediately.
+  quit    -- Saves and disconnects you from the game.
+
+Your equipment, gold, and character state are automatically saved when you
+quit. There is no need to find an inn or pay rent.
 
 See also: save quit

@@ -3,5 +3,23 @@ keywords brandish
 ---
 Syntax: brandish
 
-Brandishes a held staff, triggering its magical effects. The staff must be
-held in your hand and have charges remaining.
+Brandishes a magical staff held in your hand, releasing one charge of its
+stored spell. The staff must be equipped in a hold slot (left or right hand)
+and must have charges remaining.
+
+When brandished, the staff's stored spell is cast, targeting appropriate
+characters in the room based on the spell type:
+  - Offensive spells target enemies in the room.
+  - Defensive spells target allies and the caster.
+  - Self-only spells affect only the caster.
+
+The staff loses one charge per use. When all charges are exhausted the staff
+becomes empty and can no longer be brandished.
+
+Brandish imposes a 2-pulse wait state regardless of success.
+
+Restrictions:
+  - Must be holding a STAFF-type item.
+  - Staff must have at least one charge remaining (value[2] > 0).
+
+See also: recite quaff

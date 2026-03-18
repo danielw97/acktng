@@ -3,7 +3,14 @@ keywords knee
 ---
 Syntax: knee <target>
 
-Delivers a knee strike to an opponent during combat. A martial combat skill
-that can disrupt an enemy's fighting stance.
+Delivers a knee strike to an opponent, targeting the midsection or legs.
+Knee is a Warrior-line combat skill handled by the Warrior attack system.
+It is available to Warden-class characters and their remort descendants
+(Knight, Swordsman, Crusader).
 
-See also: shelp knee
+Requirements:
+  - Must be in combat or initiates combat on the target.
+  - Target must be present in the room.
+  - Must have the skill learned.
+
+See also: shelp knee kick bash headbutt

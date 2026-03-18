@@ -3,7 +3,20 @@ keywords politics
 ---
 Syntax: politics
 
-Displays the current political relationships between all clans, showing the
-diplomatic status between each pair of clans.
+Displays the current political relationships (diplomacy) between all active
+clans in the game. The output is a matrix showing every clan's standing
+toward every other clan.
 
-See also: rulers clan negotiate
+Diplomacy levels from most hostile to most friendly:
+  WAR      -- Open warfare declared between the clans.
+  HATRED   -- Deep enmity; hostility just short of formal war.
+  DISLIKE  -- Unfriendly relations; distrust and friction.
+  NEUTRAL  -- No formal relationship; indifference.
+  RESPECT  -- Positive regard; cooperative but not allied.
+  TRUST    -- Strong positive relations; reliable partnership.
+  ALLY     -- Full alliance; clans act in each other's interests.
+
+Players with the Diplomat flag will also see pending diplomacy change
+requests from other clans.
+
+See also: rulers clan negotiate cwhere clist

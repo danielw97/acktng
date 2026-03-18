@@ -1,9 +1,18 @@
 level 0
 keywords stun
 ---
-Syntax: stun <target>
+Syntax: stun
 
-Attempts to stun an opponent in combat, temporarily incapacitating them and
-preventing them from acting for a short duration.
+Attempts to stun your current combat opponent, temporarily incapacitating
+them and interrupting their actions. Stun targets whoever you are currently
+fighting -- no argument is needed.
 
-See also: shelp stun
+A successful stun leaves the target unable to act for a short duration,
+giving you a window of uncontested attacks.
+
+Restrictions:
+  - Must be in active combat (fighting someone).
+  - Only players (not NPCs) can use the stun command.
+  - Must have the skill learned.
+
+See also: shelp stun bash trip dirt

@@ -3,7 +3,24 @@ keywords shieldblock
 ---
 Syntax: shieldblock
 
-Activates the Shield Block skill, improving your ability to block attacks
-with a shield during combat.
+Prepares an active shield block, improving your armor class for a period
+of combat rounds. Shieldblock is a Warrior-line finisher skill: it can only
+be activated when your combo counter has reached the required threshold
+during active combat.
 
-See also: shelp shieldblock
+Effects when activated:
+  - Grants a -1 AC (armor class) bonus for (combo_count - 3) combat rounds.
+    Lower AC makes you harder to hit.
+  - The combo counter is reset after activation.
+  - Skill proficiency improves on successful use.
+
+You must be using a shield to get full benefit from this skill. Shieldblock
+is available to Warden, Knight, Paladin, Crusader, and other classes that
+train defensive techniques.
+
+Requirements:
+  - Must be in combat.
+  - Requires a valid finisher combo count (combo threshold met).
+  - Must have the skill learned.
+
+See also: shelp shieldblock chiblock riposte parry dodge

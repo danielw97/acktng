@@ -3,7 +3,17 @@ keywords aurabolt
 ---
 Syntax: aurabolt <target>
 
-Fires a bolt of concentrated aura energy at a target. This is a chi-based
-combat skill available to certain martial arts classes.
+Fires a concentrated bolt of chi/aura energy at an opponent. Aurabolt is a
+Pugilist-line unarmed attack skill that channels internal energy into a
+single powerful strike. It is handled by the Pugilist attack system (alongside
+palmstrike and other unarmed techniques).
 
-See also: shelp aurabolt
+Aurabolt is available to Pugilist-class characters and their remort
+descendants (Monk, Brawler, and the Martial Artist adept class).
+
+Requirements:
+  - Must be in combat or initiates combat on the target.
+  - Target must be present in the room.
+  - Must have the skill learned.
+
+See also: shelp aurabolt palmstrike punch pummel

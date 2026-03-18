@@ -3,7 +3,15 @@ keywords junk
 ---
 Syntax: junk <item>
 
-Destroys an item in your inventory, removing it from the game permanently.
-Unlike sacrifice, this does not grant any reward. Use with care.
+Permanently destroys an item in your inventory, removing it from the game.
+Unlike sacrifice, junk gives you nothing in return -- use it only for
+items of no value that you simply want to be rid of.
 
-See also: sacrifice drop
+Example:
+  junk worn rag     -- Destroys the "worn rag" in your inventory.
+
+The item must be carried (in your inventory), not worn or wielded.
+
+WARNING: Junked items cannot be recovered. Use this command carefully.
+
+See also: sacrifice donate drop

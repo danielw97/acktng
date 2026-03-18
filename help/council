@@ -3,7 +3,19 @@ keywords council
 ---
 Syntax: council
         council join
-        council leave
+        council <member name>
 
-Manages membership in the Super Council. Only players with the council flag
-may use this command. Without arguments, lists current council members.
+Manages membership in the Super Council, an in-game governing body available
+to players who have been granted the Council flag by an immortal.
+
+  council         -- Lists the current members of the Council.
+  council join    -- Adds you to the current Council session. You cannot
+                     join if you are already a member.
+
+Access to this command requires the PFLAG_SUPER_COUNCIL player flag. Players
+without this flag will receive a "You are not a council member!" message.
+
+Council membership is a role granted by immortals to players involved in
+server governance or special events.
+
+See also: politics rulers clan

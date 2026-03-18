@@ -3,7 +3,18 @@ keywords fleche
 ---
 Syntax: fleche <target>
 
-Performs a fleche attack, a rapid lunging strike that deals high damage.
-A fencing/swordsmanship skill available to certain classes.
+Executes a fleche, a running thrust attack drawn from classical fencing
+technique. The attacker launches forward in a straight line, delivering a
+powerful lunge that is difficult to parry. Fleche is a Warrior-line finisher
+skill: it requires a valid finisher combo count before it can be used.
 
-See also: shelp fleche
+Fleche is available to Warden-class characters and their remort descendants
+(Knight, Swordsman, Crusader).
+
+Requirements:
+  - Must be in combat.
+  - Requires a valid finisher combo count (combo threshold met).
+  - Target must be present in the room.
+  - Must have the skill learned.
+
+See also: shelp fleche charge riposte holystrike
