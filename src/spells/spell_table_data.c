@@ -1415,7 +1415,7 @@
 
     {NORM,
      "seal room",
-     {LEVELS_INIT, L(CLASS_MAG, 70), L(CLASS_CLE, 50), L(CLASS_PSI, 50)},
+     {LEVELS_INIT, L(CLASS_MAG, 70), L(CLASS_CLE, 50)},
      spell_seal_room,
      TAR_IGNORE,
      POS_STANDING,
@@ -1640,7 +1640,7 @@
 
     {NORM,
      "beacon",
-     {LEVELS_INIT, L(CLASS_MAG, 70), L(CLASS_PSI, 70)},
+     {LEVELS_INIT, L(CLASS_MAG, 70)},
      spell_beacon,
      TAR_IGNORE,
      POS_STANDING,
@@ -1670,7 +1670,7 @@
 
     {NORM,
      "window",
-     {LEVELS_INIT, L(CLASS_MAG, 70), L(CLASS_PSI, 70)},
+     {LEVELS_INIT, L(CLASS_MAG, 70)},
      spell_window,
      TAR_IGNORE,
      POS_STANDING,
@@ -1820,7 +1820,7 @@
 
     {NORM,
      "static",
-     {LEVELS_INIT, L(CLASS_PSI, 20)},
+     {LEVELS_INIT},
      spell_static,
      TAR_CHAR_OFFENSIVE,
      POS_FIGHTING,
