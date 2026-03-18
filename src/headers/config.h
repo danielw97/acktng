@@ -189,11 +189,6 @@
 #define STANCE_NO_HIT BIT_5
 #define STANCE_DUAL_BACKSTAB BIT_6
 
-/*
- * Liquids.
- */
-#define LIQ_WATER 0
-#define LIQ_MAX 17
 
 #define AREA_PAYAREA 1
 #define AREA_TELEPORT 2
@@ -645,12 +640,6 @@
  *                                                                         *
  ***************************************************************************/
 
-/*
- * Conditions.
- */
-#define COND_DRUNK 0
-#define COND_FULL 1
-#define COND_THIRST 2
 
 /*
  * Positions.
@@ -1121,15 +1110,12 @@
 #define ITEM_TRIGGER 14
 #define ITEM_CONTAINER 15
 #define ITEM_QUEST 16
-#define ITEM_DRINK_CON 17
 #define ITEM_KEY 18
-#define ITEM_FOOD 19
 #define ITEM_MONEY 20
 #define ITEM_STAKE 21
 #define ITEM_BOAT 22
 #define ITEM_CORPSE_NPC 23
 #define ITEM_CORPSE_PC 24
-#define ITEM_FOUNTAIN 25
 #define ITEM_PILL 26
 #define ITEM_BOARD 27
 #define ITEM_SOUL 28

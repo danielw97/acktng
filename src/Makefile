@@ -47,8 +47,7 @@ SPELL_OBJS = \
 	spells/spell_cloak_oathbreaker.o spells/spell_cloak_reflect.o \
 	spells/spell_cloak_transcendence.o spells/spell_color_spray.o \
 	spells/spell_condense_soul.o spells/spell_cone_cold.o spells/spell_continual_light.o \
-	spells/spell_control_weather.o spells/spell_corrupt_bond.o spells/spell_create_food.o \
-	spells/spell_create_spring.o spells/spell_create_water.o spells/spell_creature_bond.o \
+	spells/spell_control_weather.o spells/spell_corrupt_bond.o spells/spell_creature_bond.o \
 	spells/spell_cure_blindness.o spells/spell_cure_critical.o spells/spell_cure_light.o \
 	spells/spell_cure_poison.o spells/spell_cure_serious.o spells/spell_curse.o \
 	spells/spell_deflect_weapon.o spells/spell_detect_evil.o spells/spell_detect_hidden.o \

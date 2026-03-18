@@ -27,30 +27,6 @@
 
 #include "globals.h"
 
-/*
- * Liquid properties.
- * Used in world.obj.
- */
-const struct liq_type liq_table[LIQ_MAX] = {{"water", "clear", {0, 1, 10}}, /*  0 */
-                                            {"beer", "amber", {3, 2, 5}},
-                                            {"wine", "rose", {5, 2, 5}},
-                                            {"ale", "brown", {2, 2, 5}},
-                                            {"dark ale", "dark", {1, 2, 5}},
-
-                                            {"whisky", "golden", {6, 1, 4}}, /*  5 */
-                                            {"lemonade", "pink", {0, 1, 8}},
-                                            {"firebreather", "boiling", {10, 0, 0}},
-                                            {"local specialty", "everclear", {3, 3, 3}},
-                                            {"slime mold juice", "green", {0, 4, -8}},
-
-                                            {"milk", "white", {0, 3, 6}}, /* 10 */
-                                            {"tea", "tan", {0, 1, 6}},
-                                            {"coffee", "black", {0, 1, 6}},
-                                            {"blood", "red", {0, 2, -1}},
-                                            {"salt water", "clear", {0, 1, -2}},
-
-                                            {"@@bchocolate milk@@N", "creamy", {0, 3, 6}}, /* 15 */
-                                            {"mountain dew", "bubbly", {0, 1, 5}}};
 
 const float hr_damTable[121] = {
     0.311, 0.325, 0.341, 0.358, 0.378, 0.399, 0.423, 0.449, 0.478, 0.509, 0.543, 0.579, 0.618,

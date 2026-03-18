@@ -769,7 +769,7 @@ struct pc_data
    sh_int mod_wis;
    sh_int mod_dex;
    sh_int mod_con;
-   sh_int condition[3];
+
    sh_int pagelen;
    unsigned int learned[MAX_SKILL];
    char *header;  /* header used for message */
@@ -847,12 +847,6 @@ struct mob_prog_data
    char *filename;
 };
 
-struct liq_type
-{
-   char *liq_name;
-   char *liq_color;
-   sh_int liq_affect[3];
-};
 
 /*
  * Extra description data for a room or object.
@@ -1644,7 +1638,7 @@ void advance_level args((CHAR_DATA * ch, int class, bool show));
 void advance_level_remort args((CHAR_DATA * ch, int class, bool show));
 void advance_level_adept args((CHAR_DATA * ch, int class, bool show));
 void gain_exp args((CHAR_DATA * ch, int gain));
-void gain_condition args((CHAR_DATA * ch, int iCond, int value));
+
 void update_handler args((void));
 void caravan_update args((void));
 bool check_rewield args((CHAR_DATA * ch));
