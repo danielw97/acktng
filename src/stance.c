@@ -33,7 +33,7 @@ const struct stance_app_type stance_app[MAX_STANCE] = {
     {"Wizard", 2, -3, -3, 0, -2, 5, STANCE_DUAL_CAST | STANCE_NO_HIT, REMORT, CLASS_WIZ, 1, -1, -1,
      -1},
     {"Knight", -3, 2, 2, 1, 0, 0, 0, REMORT, CLASS_KNI, 1, -1, -1, -1},
-    {"Swordsman", -3, 2, 2, 1, 0, 0, 0, REMORT, CLASS_GMA, 1, CLASS_KIN, 1, -1},
+    {"Swordsman", -3, 2, 2, 1, 0, 0, 0, REMORT, CLASS_SWO, 1, -1, -1, -1},
     {"Necromancer", 2, -3, -3, 0, 0, 5, STANCE_DUAL_CAST | STANCE_NO_HIT, REMORT, CLASS_NEC, 1, -1,
      -1, -1},
     {"Egomancer", 2, -3, -3, 0, 0, 5, STANCE_DUAL_CAST | STANCE_NO_HIT, REMORT, CLASS_EGO, 1, -1,
