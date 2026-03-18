@@ -95,7 +95,7 @@
 
     {NORM,
      "smash",
-     {LEVELS_INIT, L(CLASS_WAR, 30)},
+     {LEVELS_INIT},
      spell_null,
      TAR_IGNORE,
      POS_STANDING,

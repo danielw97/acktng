@@ -32,49 +32,26 @@
 #include "tables.h"
 #include "magic.h"
 
-bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+bool spell_precognition(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   AFFECT_DATA af;
 
-   /* Strip negative affects */
-   if (is_affected(victim, gsn_blindness))
-   {
-      affect_strip(victim, gsn_blindness);
-      REMOVE_BIT(victim->affected_by, AFF_BLIND);
-   }
+   if (is_affected(ch, sn))
+      return FALSE;
 
-   if (is_affected(victim, gsn_curse))
-   {
-      affect_strip(victim, gsn_curse);
-      REMOVE_BIT(victim->affected_by, AFF_CURSE);
-   }
+   af.type = sn;
+   af.duration = level / 5;
+   af.duration_type = DURATION_ROUND;
+   af.location = APPLY_DODGE;
+   af.modifier = level / 5;
+   af.bitvector = 0;
+   affect_to_char(ch, &af);
 
-   if (is_affected(victim, gsn_poison))
-   {
-      affect_strip(victim, gsn_poison);
-      REMOVE_BIT(victim->affected_by, AFF_POISON);
-   }
+   af.location = APPLY_AC;
+   af.modifier = -(level / 6);
+   affect_to_char(ch, &af);
 
-   if (is_affected(victim, gsn_sleep))
-   {
-      affect_strip(victim, gsn_sleep);
-      REMOVE_BIT(victim->affected_by, AFF_SLEEP);
-   }
-
-   /* Restore some hit points */
-   victim->hit = UMIN(victim->hit + level, get_max_hp(victim));
-
-   if (ch == victim)
-   {
-      send_to_char("Divine light washes over you, restoring your body and spirit!\n\r", victim);
-   }
-   else
-   {
-      act("Divine light washes over $n, restoring $m completely!", victim, NULL, NULL, TO_ROOM);
-      act("Divine light washes over you, restoring your body and spirit!", victim, NULL, NULL,
-          TO_CHAR);
-      send_to_char("Ok.\n\r", ch);
-   }
-
+   send_to_char("Time seems to slow as your mind races ahead of events.\n\r", ch);
+   act("$n's eyes glaze as $s mind reaches into the future.", ch, NULL, NULL, TO_ROOM);
    return TRUE;
 }

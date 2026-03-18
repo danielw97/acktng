@@ -32,49 +32,27 @@
 #include "tables.h"
 #include "magic.h"
 
-bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+bool spell_arcane_lock(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   AFFECT_DATA af;
 
-   /* Strip negative affects */
-   if (is_affected(victim, gsn_blindness))
+   if (is_affected(ch, sn))
    {
-      affect_strip(victim, gsn_blindness);
-      REMOVE_BIT(victim->affected_by, AFF_BLIND);
+      send_to_char("This room is already warded with arcane sigils.\n\r", ch);
+      return FALSE;
    }
 
-   if (is_affected(victim, gsn_curse))
-   {
-      affect_strip(victim, gsn_curse);
-      REMOVE_BIT(victim->affected_by, AFF_CURSE);
-   }
+   send_to_char("You weave arcane sigils across all exits of the room.\n\r", ch);
+   act("$n traces glowing arcane sigils in the air, warding the exits of the room.", ch, NULL, NULL,
+       TO_ROOM);
 
-   if (is_affected(victim, gsn_poison))
-   {
-      affect_strip(victim, gsn_poison);
-      REMOVE_BIT(victim->affected_by, AFF_POISON);
-   }
-
-   if (is_affected(victim, gsn_sleep))
-   {
-      affect_strip(victim, gsn_sleep);
-      REMOVE_BIT(victim->affected_by, AFF_SLEEP);
-   }
-
-   /* Restore some hit points */
-   victim->hit = UMIN(victim->hit + level, get_max_hp(victim));
-
-   if (ch == victim)
-   {
-      send_to_char("Divine light washes over you, restoring your body and spirit!\n\r", victim);
-   }
-   else
-   {
-      act("Divine light washes over $n, restoring $m completely!", victim, NULL, NULL, TO_ROOM);
-      act("Divine light washes over you, restoring your body and spirit!", victim, NULL, NULL,
-          TO_CHAR);
-      send_to_char("Ok.\n\r", ch);
-   }
+   af.type = sn;
+   af.duration = 6;
+   af.duration_type = DURATION_HOUR;
+   af.location = APPLY_NONE;
+   af.modifier = 0;
+   af.bitvector = 0;
+   affect_to_char(ch, &af);
 
    return TRUE;
 }
