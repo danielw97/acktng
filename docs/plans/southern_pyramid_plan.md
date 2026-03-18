@@ -7,7 +7,7 @@
 **Keyword:** `southernpyramid`
 **Level Range:** 120–140 (I directive: `I 120 140`)
 **Level Label:** `@@W(@@y120 140@@W)@@N`
-**Vnum Range:** 3139–3338 (V directive: `V 3139 3338`)
+**Vnum Range:** 3139–3338 (V directive: `V 3450 3649`)
 **Vnum Count:** 35
 **Area Number:** `N 76`
 **Reset Rate:** `F 20`
@@ -36,7 +36,7 @@ See `southern_pyramid_lore.md` for extracted lore.
 - `L @@W(@@y120 140@@W)@@N~` — white parens, yellow level numbers, white close paren, reset
 - `N 76` — confirmed unused across all loaded area files
 - `I 120 140` — area-gating and mob-level policy
-- `V 3139 3338` — full 35-vnum envelope; all rooms, mobs, and objects stay within this range
+- `V 3450 3649` — full 35-vnum envelope; all rooms, mobs, and objects stay within this range
 - `F 20` — 20-minute reset frequency
 - `U` — reset message as above; no double-newlines, terminated with `~`
 - `O Virant~` — area owner must always be Virant

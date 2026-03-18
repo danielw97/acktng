@@ -5,7 +5,7 @@
 - **File Name:** `violet_eclipse_cathedral.are`
 - **Keyword:** `violet eclipse cathedral gothic dark`
 - **Intended Levels:** 20-35
-- **Vnum Range:** `5181-5255`
+- **Vnum Range:** `5650-5749`
 - **Vnum Count:** 75 (all room vnums used)
 - **Reset Rate:** 20
 - **Design Intent:** Full rebuild of rooms, mobiles, objects, and resets while retaining current area envelope and using every room.
@@ -43,7 +43,7 @@ K violet eclipse cathedral gothic dark~
 L @@W(@@a20 35@@W)@@N~
 N 8
 I 20 35
-V 5181 5255
+V 5650 5749
 X 0
 F 20
 U @@mAmethyst@@N and @@dobsidian@@N hues dominate this terror-soaked gothic cathedral.~
@@ -56,7 +56,7 @@ Directive compliance notes:
 - `L`: level label string with color codes; uses only approved `colist` codes (`@@W`, `@@a`, `@@N`).
 - `N 8`: area number (integer).
 - `I 20 35`: min/max level.
-- `V 5181 5255`: vnum envelope. All `#ROOMS`, `#MOBILES`, and `#OBJECTS` entry vnums must stay within this range per structural constraint (section 13).
+- `V 5650 5749`: vnum envelope. All `#ROOMS`, `#MOBILES`, and `#OBJECTS` entry vnums must stay within this range per structural constraint (section 13).
 - `X 0`: map offset.
 - `F 20`: reset rate (ticks between area resets).
 - `U`: reset message, tilde-terminated, uses approved color codes only.
@@ -427,7 +427,7 @@ S
 ## Proposition / Quest Plan for Violet Eclipse Cathedral
 
 ### Existing Proposition Status
-No existing `.prop` templates currently target `5181-5255`; therefore new cathedral-specific propositions are required.
+No existing `.prop` templates currently target `5650-5749`; therefore new cathedral-specific propositions are required.
 
 ### Static Quest ID Allocation
 Use IDs **61-65** (`62.prop` through `66.prop`) for this area's first proposition set.
@@ -688,8 +688,8 @@ This area does not currently plan a `#SHOPS` section (no merchant mobs). . `#OBJ
 ## Implementation Checklist
 
 ### Structure and Format
-1. Write `#AREA` header with all mandatory directives (`Q 16`, `O Virant~`, `V 5181 5255`).
-2. Ensure all 75 room vnums (5181-5255) are present in `#ROOMS`, terminated by `#0`.
+1. Write `#AREA` header with all mandatory directives (`Q 16`, `O Virant~`, `V 5650 5749`).
+2. Ensure all 75 room vnums (5650-5749) are present in `#ROOMS`, terminated by `#0`.
 3. Ensure all room descriptions contain 3+ sentences (5+ for hubs and boss rooms), are unique, and end with one trailing newline before `~`.
 4. All exits are bi-directional (no maze rooms). Named exit keywords are discoverable in descriptions.
 5. All rooms use `sector_type = 11` (inside) and `room_flags` include `indoors` (8).
@@ -732,5 +732,5 @@ This area does not currently plan a `#SHOPS` section (no merchant mobs). . `#OBJ
 ### Color and Policy
 31. Validate color policy: `@@k` absent, no background codes (`@@0`-`@@7`), no flashing code (`@@f`).
 32. All color sequences close with `@@N`.
-33. Confirm all vnums stay within `V 5181 5255` envelope.
+33. Confirm all vnums stay within `V 5650 5749` envelope.
 34. File ends with `#$` marker.

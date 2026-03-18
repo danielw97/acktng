@@ -209,9 +209,9 @@ unit-test-act-obj: $(OBJDIR)/tests/test_act_obj.o $(OBJDIR)/act_obj.unit-test.o 
 $(OBJDIR)/quest.unit-test.o: quest.c headers/ack.h
 	$(CC) -c $(C_FLAGS) -DUNIT_TEST_QUEST -ffunction-sections -fdata-sections -o $(OBJDIR)/quest.unit-test.o quest.c
 
-unit-test-quest: $(OBJDIR)/tests/test_quest.o $(OBJDIR)/quest.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
+unit-test-quest: $(OBJDIR)/tests/test_quest.o $(OBJDIR)/quest.unit-test.o $(OBJDIR)/const.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-quest
-	$(CC) -Wl,--gc-sections -o tests/unit-test-quest $(OBJDIR)/tests/test_quest.o $(OBJDIR)/quest.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-quest $(OBJDIR)/tests/test_quest.o $(OBJDIR)/quest.unit-test.o $(OBJDIR)/const.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 $(OBJDIR)/build.unit-test.o: build.c headers/ack.h
 	$(CC) -c $(C_FLAGS) -DUNIT_TEST_BUILD -ffunction-sections -fdata-sections -o $(OBJDIR)/build.unit-test.o build.c

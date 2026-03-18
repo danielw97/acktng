@@ -4,9 +4,9 @@
 - **Area Name (current):** `@@WThe City of @@yMidgaard@@N`
 - **File Name:** `midgaard.are`
 - **Keyword:** `midgaard`
-- **Current Vnum Range:** `917-1116`
+- **Current Vnum Range:** `1100-1299`
 - **Vnum Envelope Size:** 35
-- **Current Room Utilization:** 35/35 rooms used (`917-1116`)
+- **Current Room Utilization:** 35/35 rooms used (`1100-1299`)
 - **Current Mobile Utilization:** 56 mobiles in-range (up to `1077`)
 - **Current Object Utilization:** 18 objects in-range (up to `1114`)
 - **Layout Basis:** Preserve the existing implemented city footprint and connectivity, then expand by deepening district identity, quest/lore hooks, NPC roles, and room narrative differentiation (not by changing the core map geometry).
@@ -22,7 +22,7 @@ See `midgaard_lore.md` for extracted lore.
 ### Area Header
 1. `Q 16` directive is mandatory.
 2. Owner line must be `O Virant~` (area header owner policy).
-3. `V 917 1116` defines the vnum envelope; all authored rooms, mobiles, and objects must stay inside this range.
+3. `V 1100 1299` defines the vnum envelope; all authored rooms, mobiles, and objects must stay inside this range.
 
 ### Vnum Allocation
 4. Vnums for rooms, mobiles, and objects must be assigned in ascending sequential order with no gaps.
@@ -335,7 +335,7 @@ This preserves existing mechanics while making traversal feel like meaningful ur
 - Update resets to populate new ambient civic life without overcrowding.
 
 ### Phase 5: Cohesion and Spec Validation
-- Verify vnum containment (`917-1116` only).
+- Verify vnum containment (`1100-1299` only).
 - Verify color policy compliance and readability.
 - Verify external links unchanged and clearly signposted.
 - Verify room/mob/object text avoids vnum mentions.

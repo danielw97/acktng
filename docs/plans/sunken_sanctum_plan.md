@@ -18,7 +18,7 @@ See `sunken_sanctum_lore.md` for extracted lore.
 - `L @@W(@@B150 5@@W)@@N~` — white parens, blue level numbers, white close paren, reset
 - `N <allocate at implementation time>` — area number, confirmed unused across loaded area files
 - `I 150 5` — endgame dungeon; controls mob-level gating and area matching logic
-- `V 2266 9599` — full 100-vnum envelope; all rooms, mobs, and objects must stay within this range
+- `V 2500 2549` — full 100-vnum envelope; all rooms, mobs, and objects must stay within this range
 - `F 20` — reset frequency in minutes (longer reset for endgame dungeon pacing)
 - `U @@Ba cold wind stirs through the sunken halls and ancient dust drifts from cracked stone@@N~` — reset message; blue text, reset; no double-newlines, terminated with `~`
 - `O Virant~` — area owner must always be Virant

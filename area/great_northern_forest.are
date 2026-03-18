@@ -9448,6 +9448,306 @@ This precise official wears the sky-blue sash of the Kowloon Jade Magistracy and
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+#15530
+ashfang wolf northern~
+an ashfang wolf~
+An ashfang wolf paces the forest trail, ash-grey fur bristling.
+~
+A variant wolf of the northern forest, the ashfang has adapted to the ash-soil reaches of the older growth. Its coat is the color of catacomb ash and its teeth have a grey patina from years of hunting in mineral-heavy terrain.
+~
+97 0 -300 S
+30 0
+600 -30 8 10
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15531
+rootbound treant ancient~
+a rootbound treant~
+A rootbound treant stands at the forest edge, roots sunk deep, branches spread wide.
+~
+A treant that has stood in place so long that the roots and the creature have become indistinguishable. It does not move for anything small enough to be ignored, and it is a poor judge of what qualifies.
+~
+97 0 -200 S
+35 0
+600 -30 8 10
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15537
+great forest predator~
+a great forest predator~
+A great forest predator moves through the undergrowth with terrible efficiency.
+~
+One of the apex hunters of the deep northern forest, this predator has no fear of the forest floor and little interest in anything that cannot run. It is large enough that the undergrowth parts before it without catching.
+~
+97 0 -400 S
+45 0
+1000 -45 12 14
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15545
+shadowmere lynx northern~
+a shadowmere lynx~
+A shadowmere lynx watches from a high branch, tail moving with slow deliberation.
+~
+A lynx adapted to the shadowmere reaches of the northern forest, where the canopy is dense enough that full dark persists at midday. Its eyes are wider than a standard lynx and its coat has absorbed the permanent shadow of its territory.
+~
+97 0 -300 S
+45 0
+1000 -45 12 14
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15546
+forest stalker northern~
+a forest stalker~
+A forest stalker moves parallel to the trail at the edge of visibility.
+~
+One of the northern forest's mid-tier hunters, the forest stalker has learned to use the trail network as a hunting aid, paralleling travelers until an opportunity presents itself. They work alone, which makes them harder to track.
+~
+97 0 -400 S
+50 0
+1000 -45 12 14
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15552
+mire lurker northern forest~
+a mire lurker~
+A mire lurker waits at the wetland boundary, half-submerged in dark water.
+~
+A predator adapted to the wetland margins of the northern forest, the mire lurker uses the boundary between water and land as a hunting ground, striking from the water and retreating with equal ease. The mud that coats it helps considerably.
+~
+97 0 -400 S
+55 0
+1500 -55 16 20
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15562
+elder forest spirit northern~
+an elder forest spirit~
+An elder forest spirit moves through the old growth, light bending around it.
+~
+A forest spirit that has accumulated enough presence over centuries to have an opinion about the forest and the will to enforce it. It does not distinguish between intruders who mean harm and those who do not; it distinguishes between those who belong and those who do not.
+~
+97 0 0 S
+55 0
+1500 -55 16 20
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15563
+ancient grove guardian northern~
+an ancient grove guardian~
+An ancient grove guardian stands in the oldest part of the forest, watching.
+~
+A guardian of the forest's oldest groves, the ancient grove guardian has been standing watch here since before the forest was named. It is patient in proportion to its age, which is considerable. It is not patient with those who test it.
+~
+97 0 -200 S
+65 0
+1500 -55 16 20
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15567
+heartwood sentinel northern forest~
+a heartwood sentinel~
+A heartwood sentinel stands at the forest heartwood, immovable.
+~
+A sentinel of the northern forest's heartwood, the oldest and densest section of growth. The heartwood sentinels are the forest's final guardians, chosen from those who have survived long enough service to be trusted with the deepest approaches.
+~
+97 0 -400 S
+75 0
+2200 -65 20 26
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15568
+verdant elder northern~
+a verdant elder~
+A verdant elder moves through the deep forest with ancient authority.
+~
+An elder of the verdant order, the forest's most ancient tradition. The verdant elders have maintained the northern forest since before the current settlements existed and will maintain it after. They are not hostile by nature but they are thorough.
+~
+97 0 -200 S
+70 0
+2200 -65 20 26
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15573
+forest primarch northern~
+a forest primarch~
+A forest primarch commands the deep forest approaches with absolute authority.
+~
+The primarchs of the northern forest are its most powerful natural defenders, beings that have grown from the forest itself over centuries of close proximity to the heartwood. They do not negotiate and they do not retreat.
+~
+97 0 -300 S
+85 0
+3500 -80 25 32
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15580
+ancient woodland terror~
+an ancient woodland terror~
+An ancient woodland terror moves through the trees, too large for the space it occupies.
+~
+A terror that has been in the northern forest long enough to have shaped it slightly, wearing trails into the ground with centuries of patrol. It is not malicious; it is simply enormous and entirely disinterested in the survival of the merely small.
+~
+97 0 -500 S
+50 0
+1000 -45 12 14
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15583
+deep forest wraith northern~
+a deep forest wraith~
+A deep forest wraith drifts through the old growth, visible only in peripheral vision.
+~
+A wraith formed from the accumulated sorrow of the northern forest's dead, the deep forest wraith inhabits the oldest growth where the density of old death is highest. It is almost entirely incorporeal and attacks with cold rather than force.
+~
+97 0 -700 S
+55 0
+1500 -55 16 20
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15584
+elder rootbound horror northern~
+an elder rootbound horror~
+An elder rootbound horror fills the forest clearing, root-limbs spread wide.
+~
+A horror that has merged with the root network of the northern forest so completely that it can feel movement across a significant portion of the forest floor. It does not need to see intruders to know they are there.
+~
+97 0 -500 S
+90 0
+3500 -80 25 32
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15585
+The Ashfang Prime~
+the Ashfang Prime~
+The Ashfang Prime dominates the deep forest clearing, all other predators absent.
+~
+The apex predator of the northern forest, the Ashfang Prime has been hunting here since before the current generation of wolves was born. Its ash-grey coat has taken on a silver sheen with age and its territory covers more of the northern forest than any other single creature. Other predators do not share its range. They have tried.
+~
+67108961 0 -800 S
+150 0
+8000 -110 38 50
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15587
+ancient fen stalker northern~
+an ancient fen stalker~
+An ancient fen stalker moves through the fen margins with predatory patience.
+~
+A stalker of the northern fen reaches that has survived long enough to become something other than merely dangerous. It knows the fen network completely and uses it as a maze, routing prey toward its preferred killing ground.
+~
+97 0 -500 S
+90 0
+3500 -80 25 32
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15588
+forest terror warden northern~
+a forest terror warden~
+A forest terror warden patrols the deep forest paths with ancient purpose.
+~
+A warden of the forest terrors, responsible for maintaining the balance between the terror population and the forest's carrying capacity. This involves significant amounts of violence, which the warden has no objection to.
+~
+97 0 -400 S
+60 0
+1500 -55 16 20
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15589
+primeval forest spirit northern~
+a primeval forest spirit~
+A primeval forest spirit drifts through the heartwood with the confidence of something very old.
+~
+A forest spirit of such age that it predates the current forest, having survived the succession of growth that replaced what came before. Its priorities are entirely its own and it has had centuries to refine them.
+~
+97 0 -300 S
+100 0
+3500 -80 25 32
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15595
+elder mire guardian northern~
+an elder mire guardian~
+An elder mire guardian stands at the mire boundary, watching from beneath the surface.
+~
+The guardian of the northern mire, the elder mire guardian has sunk deep enough into the mire ecology that it is partially the mire rather than merely in it. It is patient in proportion to the mire's depth, which is significant.
+~
+97 0 -400 S
+100 0
+3500 -80 25 32
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15596
+verdant grove warden northern~
+a verdant grove warden~
+A verdant grove warden tends the ancient grove, working in methodical silence.
+~
+A warden of the verdant groves, assigned to maintain the oldest growth sections of the northern forest. The verdant wardens work in silence, communicate with the forest rather than with each other, and respond to intrusion with the calm certainty of something that has never lost a fight in its home territory.
+~
+97 0 -300 S
+75 0
+2200 -65 20 26
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
 #4050
@@ -10924,6 +11224,26 @@ D 0 4443 1 1   Ancestor Ring Ward Gate east door closed
 
 D 0 4502 1 1   Northern Customs Post east door closed
 
+M 0 15530 3 4100   ashfang wolf on forest trail
+M 0 15531 2 4110   rootbound treant at forest edge
+M 0 15537 2 4120   great forest predator in undergrowth
+M 0 15545 2 4130   shadowmere lynx on high branch
+M 0 15546 2 4140   forest stalker by the trail
+M 0 15552 2 4150   mire lurker at wetland boundary
+M 0 15562 2 4160   elder forest spirit in old growth
+M 0 15563 2 4180   ancient grove guardian in oldest grove
+M 0 15567 2 4200   heartwood sentinel at heartwood
+M 0 15568 2 4210   verdant elder in deep forest
+M 0 15573 1 4230   forest primarch at deep approaches
+M 0 15580 2 4155   ancient woodland terror in trees
+M 0 15583 2 4165   deep forest wraith in old growth
+M 0 15584 1 4250   elder rootbound horror in clearing
+M 0 15585 1 4300   The Ashfang Prime in deep forest
+M 0 15587 1 4260   ancient fen stalker at fen margin
+M 0 15588 2 4170   forest terror warden on forest paths
+M 0 15589 1 4280   primeval forest spirit at heartwood
+M 0 15595 1 4270   elder mire guardian at mire boundary
+M 0 15596 2 4220   verdant grove warden in ancient grove
 S
 #SPECIALS
 M 4135 spec_cast_undead

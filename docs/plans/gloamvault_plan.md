@@ -5,7 +5,7 @@
 - **Area Name:** `@@dThe @@pGloamvault @@mof @@dKel'Shadra@@N`
 - **Area File:** `area/gloamvault.are` (existing area to be fully rebuilt)
 - **Keyword:** `kelshadra gloamvault gothic dungeon`
-- **Assigned Vnum Range (unchanged):** **5031-5105** (75 rooms total)
+- **Assigned Vnum Range (unchanged):** **5450-5549** (75 rooms total)
 - **Target Level Band:** 5-20 (retain onboarding role into Kel'Shadra narrative arc)
 - **Reset Rate:** 20
 - **Reset Message (proposed update):** `@@pViolet bells toll below the stone while ash-lanterns rekindle in the dark.@@N`
@@ -20,8 +20,8 @@ This plan replaces the current repetitive room topology and naming with a narrat
 ### Area Header (`#AREA`)
 1. **`Q 16` directive is mandatory** — required area revision/version; no other value is valid.
 2. **Owner line must be `O Virant~`** — per area header owner policy.
-3. **`V 5031 5105` defines the vnum envelope** — all authored rooms, mobiles, and objects must stay inside this range.
-4. **Keep vnum envelope exactly as assigned:** all rooms, mobs, and objects remain in `5031-5105`, with no out-of-range expansion.
+3. **`V 5450 5549` defines the vnum envelope** — all authored rooms, mobiles, and objects must stay inside this range.
+4. **Keep vnum envelope exactly as assigned:** all rooms, mobs, and objects remain in `5450-5549`, with no out-of-range expansion.
 
 ### String and Color Rules
 5. **All text fields must be `~`-terminated.** Missing `~` causes parse failure.
@@ -398,7 +398,7 @@ Current object pool has 23 objects (`5031-5053`). Keep count/vnums but reauthor 
 
 **Vnum validity:**
 - Resets must reference valid vnums for the target type required by the command (room/mobile/object as applicable).
-- All referenced vnums must fall within the `5031-5105` envelope.
+- All referenced vnums must fall within the `5450-5549` envelope.
 
 **Reset logic goals:**
 - Avoid spawn stacking in narrow hallways.

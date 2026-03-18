@@ -17,7 +17,7 @@ This plan replaces the current linear/partial layout with a full-capacity, lore-
 
 ## Area Spec Compliance (Strict)
 
-1. Preserve header envelope exactly: `V 2232 9549`.
+1. Preserve header envelope exactly: `V 2450 2499`.
 2. Keep all authored rooms/mobs/objects in-range.
 3. Keep `Q 16` and `O Virant~`.
 4. Use intentional ACK color codes only; no `@@k`, no background codes, no flashing.

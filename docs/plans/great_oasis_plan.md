@@ -6,7 +6,7 @@
 **File Name:** `the_great_oasis.are`
 **Keyword:** `the great oasis`
 **Level Range:** 40-60 (`I 40 60`)
-**Vnum Range (fixed):** **1932-2031** (`V 1932 2031`)
+**Vnum Range (fixed):** **2150-2249** (`V 2150 2249`)
 **Room Count Target:** 100/100 vnums used
 **Design Goal:** Replace the current corridor-heavy spiral desert with a coherent oasis destination area: contested approaches through reaver-held dunes, a living oasis basin with neutral Spring Warden community, ruined Toll Pavilion occupied by Wellmouth Creed cultists, an underground cistern complex preserving deep history, and a flooded aquifer boss lair that poses a moral dilemma.
 
@@ -39,7 +39,7 @@ All directives per `area_file_spec.md` section 3:
 - `L @@a{@@y40 60@@a}@@N~` — cyan braces, yellow level numbers, cyan close brace, reset, `~`-terminated
 - `N 101` — area number (preserved from current file)
 - `I 40 60` — min/max level; controls mob-level gating and area matching
-- `V 1932 2031` — full 100-vnum envelope; all rooms, mobs, and objects must stay within this range
+- `V 2150 2249` — full 100-vnum envelope; all rooms, mobs, and objects must stay within this range
 - `F 12` — reset frequency in minutes (preserved from current file)
 - `U @@aA cool rumor of water rides the @@ybright-gold@@a desert wind toward the Great Oasis.@@N~` — reset message; no double-newlines, `~`-terminated
 - `O Virant~` — area owner must always be Virant (owner policy)
@@ -168,7 +168,7 @@ Per `area_file_spec.md` sections 8.1 and 8.2:
 Per `area_file_spec.md` section 13.1:
 
 - Room vnums must be assigned in ascending sequential order with no gaps.
-- All 100 room vnums (1932-2031) must be used; fill every available room-vnum slot.
+- All 100 room vnums (2150-2249) must be used; fill every available room-vnum slot.
 
 ### Zone A: Approach Dunes and Reaver Territory (1932-1951, 20 rooms)
 - Western and southern approach routes through reaver-controlled desert.
@@ -289,7 +289,7 @@ Per `area_file_spec.md` section 13.1:
 
 - Mob vnums must be assigned in ascending sequential order with no gaps, starting from 1932.
 - Fully rewrite existing vnums **1932-1943**.
-- Expand roster through contiguous sequential slots **1944-1963** (staying within the 1932-2031 vnum envelope).
+- Expand roster through contiguous sequential slots **1944-1963** (staying within the 2150-2249 vnum envelope).
 - Target composition: ~32 mob templates (vnums 1932-1963).
 
 ### Mobile Spec Compliance (all mobs)
@@ -410,7 +410,7 @@ Per `area_file_spec.md` section 13.1:
 
 - Object vnums must be assigned in ascending sequential order with no gaps, starting from 1932.
 - Fully replace current object concepts beginning at **1932**.
-- Expand through contiguous sequential slots (suggested through **1981**) while staying within the 1932-2031 vnum envelope.
+- Expand through contiguous sequential slots (suggested through **1981**) while staying within the 2150-2249 vnum envelope.
 - Target composition: ~50 object templates (vnums 1932-1981).
 - Within the area, object `<name>~` values must be unique (no duplicate item names in the same area file).
 
@@ -605,7 +605,7 @@ Per `area_file_spec.md` section 14, the final `.are` file should emit sections i
 ## Implementation Checklist
 
 ### Rooms
-- [ ] Populate all 100 room vnums (1932-2031) in ascending sequential order with no gaps.
+- [ ] Populate all 100 room vnums (2150-2249) in ascending sequential order with no gaps.
 - [ ] Write unique `<description>~` for every room (minimum 3 sentences; 5+ for important rooms).
 - [ ] Assign correct `sector_type` (`desert` for approach, `forest` for palm ring, `water_swim` for basin/flooded, `inside` for interiors) and `room_flags` per zone requirements.
 - [ ] Set `no_mob` on all boss rooms (1991, 2011, 2031).
@@ -662,7 +662,7 @@ Per `area_file_spec.md` section 14, the final `.are` file should emit sections i
 
 ### Final Validation
 - [ ] Validate complete area file format against `docs/area_file_spec.md`.
-- [ ] Verify all vnums within `V 1932 2031` envelope.
+- [ ] Verify all vnums within `V 2150 2249` envelope.
 - [ ] Verify `#ROOMS` and `#MOBILES` and `#OBJECTS` each terminate with `#0`.
 - [ ] Verify `#RESETS`, `#SPECIALS` each terminate with `S`.
 - [ ] Verify canonical section order.

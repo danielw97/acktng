@@ -5,7 +5,7 @@
 - **File Name:** `kowloon.are`
 - **Keyword:** `kowloon`
 - **Intended Levels:** 1-5 (all player levels)
-- **Vnum Range:** `3439-3538`
+- **Vnum Range:** `3750-3849`
 - **Vnum Count:** 100 (all room vnums used)
 - **Shape:** 10x10 rectangle (full grid)
 - **Recall Room:** `3494` (`recall_set` sector), central city plaza
@@ -31,7 +31,7 @@ See `kowloon_lore.md` for extracted lore.
 - `K kowloon~`
 - `L @@W(@@a1 5@@W)@@N~`
 - `I 1 5`
-- `V 3439 3538`
+- `V 3750 3849`
 - `F 15`
 - `U @@Rneon rain falls across @@GKowloon@@N~`
 - `O Virant~`

@@ -238,6 +238,51 @@ Coated in mud-hardened bark plates, this sentinel guards the wetland approaches.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
+#20814
+preserve warden ancient~
+a preserve warden~
+A preserve warden patrols the protected grove with absolute authority.
+~
+The preserve wardens are the oldest continuous guardians of the forest preserve, having served through the succession of authorities that have claimed nominal ownership of the preserve while the wardens simply continued their work. They do not acknowledge claims they did not recognize when the claimants were born.
+~
+97 0 -300 S
+90 0
+3500 -80 25 32
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#20815
+elder preserve guardian ancient~
+an elder preserve guardian~
+An elder preserve guardian stands in the deepest grove, watching.
+~
+An elder of the preserve's guardian order, the elder preserve guardian has maintained vigil in the deepest groves for so long that the groves have grown around them rather than the reverse. They are less visitor than feature of the preserve.
+~
+97 0 -300 S
+100 0
+3500 -80 25 32
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#20819
+Ancient Grove Sovereign preserve~
+the Ancient Grove Sovereign~
+The Ancient Grove Sovereign commands the preserve's heart grove from an ancient throne of roots.
+~
+The Sovereign of the ancient grove predates the preserve designation and may predate the grove itself, though this is disputed by those who have not tried to leave. It rules the preserve's heart through a combination of absolute authority and the fact that the grove's root network responds to its will. Nothing that has disrespected the Sovereign has remained in a condition to discuss the experience.
+~
+97 0 -500 S
+120 0
+5500 -95 30 40
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
 #5020
@@ -1636,5 +1681,8 @@ M 0 5004 2 5044   (null)
 E 0 5046 0 21   (null)
 E 0 5030 0 10   (null)
 E 0 5037 0 24   (null)
+M 0 20814 3 5010   preserve warden in protected grove
+M 0 20815 2 5020   elder preserve guardian in deep grove
+M 0 20819 3 5030   Ancient Grove Sovereign in heart grove
 S
 #$

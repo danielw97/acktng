@@ -6,7 +6,7 @@
 **File Name:** `the_northern_oasis.are`
 **Keyword:** `the northern oasis`
 **Level Range:** 45-65 (`I 45 65`)
-**Vnum Range (fixed):** **2032-2231** (`V 2032 2231`)
+**Vnum Range (fixed):** **2250-2449** (`V 2250 2449`)
 **Room Count Target:** 35/35 vnums used
 **Design Goal:** Replace repetitive lane/patrol generation with a coherent story area: a functioning but politically strained oasis quarter where water adjudication, caravan protection, and relic trafficking intersect. The Northern Oasis is the measured frontier of the Great Oasis system — the place where water becomes policy.
 
@@ -64,7 +64,7 @@ All directives per `area_file_spec.md` section 3:
 - `L @@W(@@l45 65@@W)@@N~` — white parens, blue level numbers, white close paren, reset, `~`-terminated
 - `N <allocate at implementation time>` — area number; must be confirmed unused across all loaded area files
 - `I 45 65` — min/max level; controls mob-level gating and area matching
-- `V 2032 2231` — full 35-vnum envelope; all rooms, mobs, and objects must stay within this range
+- `V 2250 2449` — full 35-vnum envelope; all rooms, mobs, and objects must stay within this range
 - `F 15` — reset frequency in minutes
 - `U @@awater trickles through the intake sluices as the Northern Oasis measures another day@@N~` — reset message; no double-newlines, `~`-terminated
 - `O Virant~` — area owner must always be Virant (owner policy)
@@ -87,7 +87,7 @@ Per `area_file_spec.md` section 2:
 
 ## Area Structure (Room Topology)
 
-Target ~35 rooms in five connected bands, using all vnums 2032-2231:
+Target ~35 rooms in five connected bands, using all vnums 2250-2449:
 
 ### Room Description Requirements (spec compliance)
 
@@ -118,7 +118,7 @@ Per `area_file_spec.md` sections 8.1 and 8.2:
 Per `area_file_spec.md` section 13.1:
 
 - Room vnums must be assigned in ascending sequential order with no gaps.
-- All 35 room vnums (2032-2231) must be used; fill every available room-vnum slot.
+- All 35 room vnums (2250-2449) must be used; fill every available room-vnum slot.
 
 ### Band 1: North Approach Dunes (2032-2071, 40 rooms)
 
@@ -279,7 +279,7 @@ All boss mobs: `act` includes `is_npc` + `stay_area` + `sentinel` + `boss` + `ag
 Per `area_file_spec.md` section 13.1:
 
 - Object vnums must be assigned in ascending sequential order with no gaps, starting from 2032.
-- Expand through contiguous sequential slots (suggested through **2096**) while staying within the 2032-2231 vnum envelope.
+- Expand through contiguous sequential slots (suggested through **2096**) while staying within the 2250-2449 vnum envelope.
 - Target composition: ~65 object templates (vnums 2032-2096).
 - Within the area, object `<name>~` values must be unique (no duplicate item names in the same area file).
 
@@ -483,7 +483,7 @@ Implementation should prioritize:
 ## Implementation Checklist
 
 ### Rooms
-- [ ] Populate all 35 room vnums (2032-2231) in ascending sequential order with no gaps.
+- [ ] Populate all 35 room vnums (2250-2449) in ascending sequential order with no gaps.
 - [ ] Write unique `<description>~` for every room (minimum 3 sentences; 5+ for important rooms).
 - [ ] Assign correct `sector_type` (`desert` for approach, `city` for settlement, `inside` for interiors) and `room_flags` per band requirements.
 - [ ] Set `no_mob` on all boss rooms (2184, 2222).
@@ -535,7 +535,7 @@ Implementation should prioritize:
 
 ### Final Validation
 - [ ] Validate complete area file format against `docs/area_file_spec.md`.
-- [ ] Verify all vnums within `V 2032 2231` envelope.
+- [ ] Verify all vnums within `V 2250 2449` envelope.
 - [ ] Verify `#ROOMS` and `#MOBILES` and `#OBJECTS` each terminate with `#0`.
 - [ ] Verify `#RESETS`, `#SPECIALS` each terminate with `S`.
 - [ ] Verify canonical section order.

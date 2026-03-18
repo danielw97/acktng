@@ -6,7 +6,7 @@
 **File Name:** `lost_city.are` 
 **Keyword:** `lost city desert ruins` 
 **Level Range:** 35-55 (`I 35 55`) 
-**Vnum Range (fixed):** **5331-5410** (`V 5331 5410`) 
+**Vnum Range (fixed):** **5850-5949** (`V 5850 5949`) 
 **Room Count Target:** **80/80 rooms used** 
 **Mob Count Target:** **80/80 mobs rewritten** 
 **Object Count Target:** **80/80 objects rewritten**
@@ -59,7 +59,7 @@ The area is framed as a former **corridor hinge-city** between oasis water admin
 - `L @@W(@@b35 55@@W)@@N~`
 - `N 8` (retain unless global area numbering pass requires migration)
 - `I 35 55`
-- `V 5331 5410`
+- `V 5850 5949`
 - `X 0`
 - `F 20`
 - `U @@bCobalt@@N dusk and @@ymarket-gold@@N dust sweep through the drowned courts of a law-broken desert capital.~`
@@ -69,7 +69,7 @@ The area is framed as a former **corridor hinge-city** between oasis water admin
 
 ---
 
-## Structural Rebuild (Rooms 5331-5410, all used)
+## Structural Rebuild (Rooms 5850-5949, all used)
 
 ### District A: Gate of Broken Measures (5331-5340)
 Entry zone with caravan-facing ruins and legal markers.
@@ -148,7 +148,7 @@ Boss endcap + extraction route reconnecting to desert graph.
 
 ---
 
-## Mobile Rebuild Plan (`#MOBILES` 5331-5410)
+## Mobile Rebuild Plan (`#MOBILES` 5850-5949)
 
 All 80 mobile templates are rewritten. Sequential, no gaps.
 
@@ -178,7 +178,7 @@ All 80 mobile templates are rewritten. Sequential, no gaps.
 
 ---
 
-## Object Rebuild Plan (`#OBJECTS` 5331-5410)
+## Object Rebuild Plan (`#OBJECTS` 5850-5949)
 
 All 80 object templates are rewritten. Sequential, no gaps.
 
@@ -220,7 +220,7 @@ All 80 object templates are rewritten. Sequential, no gaps.
 
 ## Deliverables from this Plan
 
-1. Full rewrite of `lost_city.are` within **5331-5410**.
+1. Full rewrite of `lost_city.are` within **5850-5949**.
 2. 80 unique rooms, 80 rewritten mobs, 80 rewritten objects.
 3. Lore-consistent crosslinks to oasis and pyramid narratives.
 4. Spec-clean strings, formats, exits, locks, and reset behavior.

@@ -4,7 +4,7 @@
 
 - **Area Name:** `@@dThe @@bVoid @@pCitadel @@dof @@pKel'Shadra@@N`
 - **Area File:** `area/voidcitadel.are` (existing area, complete redesign)
-- **Assigned Vnum Range (preserved):** **88-999**
+- **Assigned Vnum Range (preserved):** **150-399**
 - **Total Room Capacity in Range:** **390 rooms**
 - **Target Level Band:** 150-5
 - **Reset Rate:** 15
@@ -15,8 +15,8 @@
 
 ## Strict Area-Spec Compliance Requirements
 
-1. Preserve area envelope exactly: `V 88 999`.
-2. Keep all authored rooms, objects, and mobiles inside `88-999`.
+1. Preserve area envelope exactly: `V 150 399`.
+2. Keep all authored rooms, objects, and mobiles inside `150-399`.
 3. Use `Q 16` and normalize owner header to `O Virant~`.
 4. No vnums in in-world prose.
 5. No blank lines inside `~`-terminated string bodies.
@@ -61,7 +61,7 @@ Players move through a functioning dead bureaucracy where ritual machinery still
 
 ---
 
-## Full Layout Rebuild (Use All Rooms: 88-999)
+## Full Layout Rebuild (Use All Rooms: 150-399)
 
 ### Zone A — Blighted Gate Precinct (88-117, 30 rooms)
 - Rebuild current gate/courtyard/hall cluster into a full arrival district.
@@ -119,7 +119,7 @@ Players move through a functioning dead bureaucracy where ritual machinery still
 
 ---
 
-## Reauthored Mob Ecosystem Plan (88-999)
+## Reauthored Mob Ecosystem Plan (150-399)
 
 All existing mobs are rewritten around institutional castes and expanded in-range.
 
@@ -165,7 +165,7 @@ All existing mobs are rewritten around institutional castes and expanded in-rang
 
 ---
 
-## Object Reauthor Plan (88-999)
+## Object Reauthor Plan (150-399)
 
 ### Object Families
 
@@ -219,7 +219,7 @@ Embed the following continuity points throughout room text, mob dialogue, and ob
 
 ## Content Quality Checklist
 
-- [ ] Every room vnum in `88-999` is authored and reachable.
+- [ ] Every room vnum in `150-399` is authored and reachable.
 - [ ] No in-world text mentions vnums.
 - [ ] Color usage follows theme policy and forbidden-code constraints.
 - [ ] Mobile descriptor formats are fully spec-valid.

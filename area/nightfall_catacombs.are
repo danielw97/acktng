@@ -4186,6 +4186,231 @@ The most heavily armored and tightly bound of the Matriarch's personal guard, th
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
+#21000
+ossuary wraith~
+an ossuary wraith~
+An ossuary wraith drifts through the vault passages, trailing ash and cold.
+~
+A translucent figure formed of compressed catacomb ash, the ossuary wraith moves with the slow certainty of something that has forgotten what it was but not what it wants.
+~
+97 0 -700 S
+8 0
+0 0 0 0
+! 0 0 0 8 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#21001
+vaulted shade~
+a vaulted shade~
+A vaulted shade clings to the arched ceiling, watching the corridor below.
+~
+A shade that has adapted to catacomb vaulting, draping itself across stone arches and dropping on the unwary. Its form is suggestion more than substance.
+~
+97 0 -600 S
+12 0
+0 0 0 0
+! 0 0 0 8 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#21002
+crypt remnant~
+a crypt remnant~
+A crypt remnant shambles through the register hall, clutching a faded vellum tag.
+~
+A bundle of animated burial cloth and dry bone, still wearing the intake tag from its original interment. The tag's ink has long since faded to nothing.
+~
+97 0 -500 S
+14 0
+0 0 0 0
+! 0 0 0 8 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#21003
+sepulchral revenant~
+a sepulchral revenant~
+A sepulchral revenant stands at the passage junction, blocking the way forward.
+~
+A revenant formed from the unresolved grief of those buried here without proper ceremony. It wears burial robes that never fit correctly and carries a sealed transit document no one will ever read.
+~
+97 0 -500 S
+16 0
+200 -15 4 6
+! 0 0 0 8 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#21004
+lantern hollow~
+a lantern hollow~
+A lantern hollow flickers at the edge of the torchlight, dimming the corridor.
+~
+A hollow formed where a lantern's light once burned long enough to leave an impression in the stone. It absorbs nearby light and heat, leaving cold spots that smell of old oil.
+~
+97 0 -500 S
+18 0
+200 -15 4 6
+! 0 0 0 8 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#21005
+choir echo~
+a choir echo~
+A choir echo resonates through the passage walls, its voice preceding its form.
+~
+The residual echo of the subchoir's last performance, given enough mass by accumulated memory to act in the world. It repeats syllables of the final processional in a voice that arrives before the creature does.
+~
+97 0 -600 S
+20 0
+200 -15 4 6
+! 0 0 0 8 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#21006
+archive phantom~
+an archive phantom~
+An archive phantom sorts through collapsed record shelves, filing nothing.
+~
+A phantom locked in bureaucratic habit, endlessly cataloging records that no longer exist. It attacks anything that disrupts what it perceives as proper administrative order.
+~
+97 0 -500 S
+21 0
+200 -15 4 6
+! 0 0 0 8 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#21010
+vault enforcer~
+a vault enforcer~
+A vault enforcer stands before the subchoir approach, arms crossed.
+~
+A revenant assigned in life to guard the subchoir's vault. Death did not relieve it of this duty. It still checks passes that do not exist and turns away anyone without the correct sigils.
+~
+97 0 -500 S
+20 0
+200 -15 4 6
+! 0 0 0 8 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#21011
+processional shade~
+a processional shade~
+A processional shade marches through a long-collapsed route, bearing nothing.
+~
+A shade locked in the memory of a processional that ended decades ago. It walks a route that no longer exists, stepping through walls where doorways used to be.
+~
+97 0 -600 S
+21 0
+200 -15 4 6
+! 0 0 0 8 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#21014
+catacombs keeper~
+a catacombs keeper~
+A catacombs keeper patrols this sub-level with the gravity of a municipal official.
+~
+Once a civic employee responsible for maintaining the catacomb registers, this keeper died in the performance of its duties and refuses to stop performing them. It carries a ring of keys that open nothing.
+~
+97 0 -500 S
+22 0
+200 -15 4 6
+! 0 0 0 8 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#21015
+burial husk~
+a burial husk~
+A burial husk drags itself along the passage wall, trailing burial wrap.
+~
+What remains when a burial fails at every level: wrong shroud, wrong posture, wrong prayers, wrong level of the catacombs. The burial husk is a reproach made ambulatory.
+~
+97 0 -500 S
+22 0
+200 -15 4 6
+! 0 0 0 8 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#21017
+bellkeeper wight~
+a bellkeeper wight~
+A bellkeeper wight stands at the bell bracket post, pull-chain still in hand.
+~
+A wight that formed around the last bellkeeper who died at his post, still grasping the pull-chain that once announced funerary processions. The bell is gone but it still pulls.
+~
+97 0 -600 S
+23 0
+200 -15 4 6
+! 0 0 0 8 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#21026
+Warden of the Subchoir~
+the Warden of the Subchoir~
+The Warden of the Subchoir bars the passage, ancient authority radiating from every sinew.
+~
+A revenant of exceptional coherence, the Warden was the highest-ranking official in the subchoir's administrative hierarchy. It has refused the dissolution that took its subordinates, held together by the sheer force of institutional grievance.
+~
+67108961 0 -900 S
+23 0
+200 -15 4 6
+! 0 0 0 8 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#21029
+Vault Sealer~
+the Vault Sealer~
+The Vault Sealer stands before the sealed chamber, arms spread wide.
+~
+The last official to seal the deep vault before the catacombs' abandonment, the Vault Sealer died with the sealing ceremony half-complete. It has spent decades completing the ritual, and will not permit the vault to be unsealed.
+~
+67108961 0 -900 S
+24 0
+200 -15 4 6
+! 0 0 0 8 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#21030
+Dirge Keeper~
+the Dirge Keeper~
+The Dirge Keeper presides over the processional hall, conducting a silent requiem.
+~
+The chief choir master of the subchoir, the Dirge Keeper maintains the final processional even in death. It conducts from memory, and the stone resonates with harmonics that should not be possible in empty air.
+~
+67108961 0 -900 S
+24 0
+200 -15 4 6
+! 0 0 0 8 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
 #5050
@@ -4853,6 +5078,21 @@ D 0 5131 2 2   violet gate locked
 D 0 5132 0 2   violet gate locked reverse
 D 0 5201 2 2   threshold gate locked
 D 0 5202 0 2   threshold gate locked reverse
+M 0 21000 3 5055   ossuary wraith in approach passages
+M 0 21001 3 5062   vaulted shade in approach passages
+M 0 21002 3 5068   crypt remnant in approach passages
+M 0 21003 3 5071   sepulchral revenant in approach passages
+M 0 21004 2 5079   lantern hollow in approach passages
+M 0 21005 2 5083   choir echo in approach passages
+M 0 21006 2 5088   archive phantom in approach passages
+M 0 21010 2 5093   vault enforcer in approach passages
+M 0 21011 2 5096   processional shade in approach passages
+M 0 21014 3 5100   catacombs keeper in approach passages
+M 0 21015 2 5104   burial husk in approach passages
+M 0 21017 2 5086   bellkeeper wight in approach passages
+M 0 21026 1 5082   Warden of the Subchoir in deeper passages
+M 0 21029 1 5090   Vault Sealer in deeper passages
+M 0 21030 1 5094   Dirge Keeper in deeper passages
 S
 #SPECIALS
 M 5076 spec_cast_undead

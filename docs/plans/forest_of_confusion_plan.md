@@ -5,7 +5,7 @@
 - **File Name:** `confusn.are`
 - **Keyword:** `forestconfusion`
 - **Intended Levels:** 10-60 (bridge zone between Kiess frontier traffic and deeper forest content)
-- **Vnum Range:** `2339-2538`
+- **Vnum Range:** `2600-2799`
 - **Vnum Count:** 35 (all vnums assigned to rooms/objects/mobs; no unused room vnums)
 - **Primary Geography:** transitional forest north of Kiess, far west of Midgaard
 - **Reset Rate:** 15
@@ -29,7 +29,7 @@ Use color with intent and sparseness (no `@@k`, no background colors, no flashin
 - `L @@W(@@r10 60@@W)@@N~`
 - `N 13` (retain unless numbering audit requires reassignment)
 - `I 10 60`
-- `V 2339 2538` (unchanged; required envelope)
+- `V 2600 2799` (unchanged; required envelope)
 - `X 32200` (retain map offset)
 - `F 15`
 - `U @@Wthe @@pmists @@Wshift and the @@Gforest @@Wrearranges itself...@@N~`
@@ -42,7 +42,7 @@ Replace the current partial/legacy topology with a full 35-room design:
 - **Grid model:** 20 x 10
 - **Coordinate system:** `x=0..19` west->east, `y=0..9` north->south
 - **Vnum mapping:** `vnum = 2339 + (y * 20) + x`
-- **Coverage rule:** every vnum 2339-2538 is a valid room (no gaps)
+- **Coverage rule:** every vnum 2600-2799 is a valid room (no gaps)
 
 ## Zone Banding (room-level identity)
 
@@ -728,7 +728,7 @@ Postmaster vnums:
 | **Completion message** | With the manscorpian king removed, coordinated cave ambushes have stopped and remaining packs are splintering into disorganized scavenger cells. Kowloon's courier office has formally designated the route as a protected contingency lane during heavy fog seasons. |
 
 ## Implementation Checklist
-1. Rebuild `#ROOMS` so vnums 2339-2538 are fully populated and connected per zone plan.
+1. Rebuild `#ROOMS` so vnums 2600-2799 are fully populated and connected per zone plan.
 2. Replace room text set with unique, lore-consistent descriptions following the color theme.
 3. Rebuild `#MOBILES` per faction tables above with correct act flags, profiles, and extensions.
 4. Rebuild `#OBJECTS` per equipment and utility tables above with correct types, wear flags, and weight ranges.

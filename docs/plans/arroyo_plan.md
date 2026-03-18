@@ -6,7 +6,7 @@
 - **File Name:** `arroyo.are`
 - **Keyword:** `arroyo`
 - **Level Range:** `55-75` (`I 55 75`)
-- **Vnum Range (fixed, unchanged):** `4439-4563` (`V 4439 4563`)
+- **Vnum Range (fixed, unchanged):** `4750-4899` (`V 4750 4899`)
 - **Total Room Envelope:** **125 rooms** (all room vnums in-range must be used)
 - **Design Goal:** Rebuild the entire area (rooms, mobs, and objects) as a lore-forward transitional fault-canyon between oasis administration and pyramid underworld theology, replacing the current mostly linear hazard crawl with a coherent civilizational ruin ecology.
 
@@ -64,7 +64,7 @@ See `docs/arroyo_lore.md` for implementation lore.
 - `L` remains level-appropriate for 55-75 presentation.
 - `N 34` preserved unless global area-number migration requires otherwise.
 - `I 55 75`
-- `V 4439 4563` unchanged.
+- `V 4750 4899` unchanged.
 - `F 15`
 - `O Virant~` normalized casing.
 - `U` reset message rewritten to reflect jurisdictional-scar identity.
@@ -89,57 +89,57 @@ Implementation must follow `docs/area_file_spec.md` requirements, including:
 
 ## Room Topology Rebuild (All 125 Rooms Used)
 
-### District A: Charter Cut (4439-4463, 25 rooms)
+### District A: Charter Cut (4750-4774, 25 rooms)
 **Theme:** entry canyon with Keeper survey relics and toll-law debris.
 
 Key anchors:
-- `4439` **Mouth of the Jurisdictional Scar** (entry, 5+ sentences).
-- `4445` **Broken Charter Obelisk** (lore anchor, extra descriptions for glyph strata).
-- `4451` **Dry Sluice Marker Yard** (oasis law crossover).
-- `4457` **Toll Ledger Switchback** (bandit + synod pressure).
-- `4463` **First Collapse Gate** (transition to buried civic ruins).
+- `4750` **Mouth of the Jurisdictional Scar** (entry, 5+ sentences).
+- `4756` **Broken Charter Obelisk** (lore anchor, extra descriptions for glyph strata).
+- `4762` **Dry Sluice Marker Yard** (oasis law crossover).
+- `4768` **Toll Ledger Switchback** (bandit + synod pressure).
+- `4774` **First Collapse Gate** (transition to buried civic ruins).
 
-### District B: Silt-Court Ruins (4464-4488, 25 rooms)
+### District B: Silt-Court Ruins (4775-4799, 25 rooms)
 **Theme:** partially buried civic quarter that processed water, tolls, and dead caravaneers.
 
 Key anchors:
-- `4464` **Sunken Assessors' Court**.
-- `4470` **Registry of Thirst Oaths**.
-- `4476` **Collapsed Cistern Tribunal**.
-- `4481` **Embalmer's Through-Hall**.
-- `4488` **Sealed Debt Archive Door** (named door + key flow).
+- `4775` **Sunken Assessors' Court**.
+- `4781` **Registry of Thirst Oaths**.
+- `4787` **Collapsed Cistern Tribunal**.
+- `4792` **Embalmer's Through-Hall**.
+- `4799` **Sealed Debt Archive Door** (named door + key flow).
 
-### District C: Brood and Ossuary Interface (4489-4513, 25 rooms)
+### District C: Brood and Ossuary Interface (4800-4824, 25 rooms)
 **Theme:** natural predator nest grown through ritual ossuary remains.
 
 Key anchors:
-- `4489` **Resin Fan Approach**.
-- `4495` **Matriarch Egg Trench**.
-- `4500` **Bone-Resin Lattice**.
-- `4506` **Stinger Reliquary** (ritualized scorpion remains).
-- `4513` **Ossuary Windbreak** (transition to deep descent).
+- `4800` **Resin Fan Approach**.
+- `4806` **Matriarch Egg Trench**.
+- `4811` **Bone-Resin Lattice**.
+- `4817` **Stinger Reliquary** (ritualized scorpion remains).
+- `4824` **Ossuary Windbreak** (transition to deep descent).
 
-### District D: Meridian Fracture Galleries (4514-4538, 25 rooms)
+### District D: Meridian Fracture Galleries (4825-4849, 25 rooms)
 **Theme:** deepest ritual-rent canyon where failed eclipse/meridian rites scorched bedrock.
 
 Key anchors:
-- `4514` **Rite-Fall Descent**.
-- `4521` **Split Meridian Vault**.
-- `4527` **Moon-Inverted Survey Hall**.
-- `4532` **Calcified Witness Pit**.
-- `4538` **Precipice of Unpaid Names**.
+- `4825` **Rite-Fall Descent**.
+- `4832` **Split Meridian Vault**.
+- `4838` **Moon-Inverted Survey Hall**.
+- `4843` **Calcified Witness Pit**.
+- `4849` **Precipice of Unpaid Names**.
 
-### District E: Heart Fault Reliquary (4539-4563, 25 rooms)
+### District E: Heart Fault Reliquary (4850-4874, 25 rooms)
 **Theme:** under-canyon jurisdiction engine where debt, memory, and burial law persist as hostile metaphysics.
 
 Key anchors:
-- `4539` **Rattle Span of the Deep Court**.
-- `4546` **Silent Aquifer Echo Chamber**.
-- `4551` **Basalt Adjudication Colonnade**.
-- `4557` **Red Seep of the Ninth Contradiction**.
-- `4559` **Matriarch of Sand-Contracts** (major boss).
-- `4561` **Throne of Reversed Passage** (secondary boss / ritual adjudicator).
-- `4563` **Heart of the Arroyo** (final encounter room, 5+ sentences, no_mob room flag).
+- `4850` **Rattle Span of the Deep Court**.
+- `4857` **Silent Aquifer Echo Chamber**.
+- `4862` **Basalt Adjudication Colonnade**.
+- `4868` **Red Seep of the Ninth Contradiction**.
+- `4870` **Matriarch of Sand-Contracts** (major boss).
+- `4872` **Throne of Reversed Passage** (secondary boss / ritual adjudicator).
+- `4874` **Heart of the Arroyo** (final encounter room, 5+ sentences, no_mob room flag).
 
 ---
 
@@ -158,7 +158,7 @@ Key anchors:
 
 ### Mob Vnum Plan
 
-- Use mob vnums sequentially within `4439-4563`.
+- Use mob vnums sequentially within `4750-4899`.
 - Target **34-40 mob templates** with strict role separation:
  - trash/core combatants,
  - elite enforcers (solo flagged),
@@ -187,16 +187,16 @@ Key anchors:
 
 ## Progression and Difficulty Curve
 
-- **4439-4463:** onboarding (55-60).
-- **4464-4488:** legal-ruin pressure and mixed caster/melee packs (58-64).
-- **4489-4513:** venom/attrition ecosystem (61-68).
-- **4514-4538:** rite hazard and undead-control encounters (66-73).
-- **4539-4563:** elite + boss gauntlet (70-75).
+- **4750-4774:** onboarding (55-60).
+- **4775-4799:** legal-ruin pressure and mixed caster/melee packs (58-64).
+- **4800-4824:** venom/attrition ecosystem (61-68).
+- **4825-4849:** rite hazard and undead-control encounters (66-73).
+- **4850-4874:** elite + boss gauntlet (70-75).
 
 Boss cadence:
-- Mini-boss at `4527` (glyph judge revenant).
-- Major boss at `4559` (Resin Contract Matriarch).
-- Final boss/culmination at `4563` (Heart adjudicator manifestation).
+- Mini-boss at `4838` (glyph judge revenant).
+- Major boss at `4870` (Resin Contract Matriarch).
+- Final boss/culmination at `4874` (Heart adjudicator manifestation).
 
 ---
 
@@ -213,7 +213,7 @@ Boss cadence:
 
 ## Implementation Checklist
 
-1. Replace all current room texts/topology while preserving full room vnum usage `4439-4563`.
+1. Replace all current room texts/topology while preserving full room vnum usage `4750-4899`.
 2. Replace all current mobiles with new faction-driven roster.
 3. Replace all current objects and drop tables to match new narrative economy.
 4. Align all strings and structures to `area_file_spec.md` constraints.

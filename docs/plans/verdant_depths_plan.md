@@ -7,7 +7,7 @@
 **Keyword:** `verdantdepths`
 **Level Range:** 75-95 (I directive: `I 75 95`)
 **Level Label:** `@@W(@@r75 95@@W)@@N`
-**Vnum Range:** 2739-2863 (V directive: `V 2739 2863`)
+**Vnum Range:** 3000-3149 (V directive: `V 3000 3149`)
 **Vnum Count:** 125
 **Connection:** Links from the Forest of Confusion's deep cave network (room 2509 north exit currently leads to 2503; a new exit from an appropriate Forest of Confusion room will lead into The Verdant Depths entry room at vnum 2739)
 **Reset Rate:** 15
@@ -119,7 +119,7 @@ The `#AREA` section lives in `area/verdantgreen.are`. Directive notes:
 - `L @@W(@@r75 95@@W)@@N~` -- white parens, light-green level numbers, white close paren, reset
 - `N 74` -- confirmed unused across all 57 loaded area files
 - `I 75 95` -- controls mob-level gating and area matching logic
-- `V 2739 2863` -- full 125-vnum envelope; all rooms, mobs, and objects must stay within this range
+- `V 3000 3149` -- full 125-vnum envelope; all rooms, mobs, and objects must stay within this range
 - `F 15` -- reset frequency in minutes, matching the Forest of Confusion parent area
 - `U` -- reset message uses primary gray `@@g` with `@@N` reset; no double-newlines, terminated with `~`
 - `T` -- rest of line is ignored by the loader; presence of the line enables teleport
@@ -128,7 +128,7 @@ The `#AREA` section lives in `area/verdantgreen.are`. Directive notes:
 
 ---
 
-## Room Layout (125 rooms, vnums 2739-2863)
+## Room Layout (125 rooms, vnums 3000-3149)
 
 ### Zone 1: The Threshold (vnums 2739-2758, 20 rooms)
 
@@ -642,12 +642,12 @@ Two bidirectional links connect the areas, giving players a surface entrance and
 3. [ ] Write `#MOBILES` section into `verdantgreen.are`
 4. [ ] Write `#MOBILES` section (61 trash mobs + 3 bosses = 64 mobs, vnums 2739-2802)
 5. [ ] Write `#OBJECTS` section (60 trash items + 21 boss items = 81 objects, vnums 2739-2819)
-6. [ ] Write `#ROOMS` section (125 rooms, vnums 2739-2863, all used)
+6. [ ] Write `#ROOMS` section (125 rooms, vnums 3000-3149, all used)
 7. [ ] Write `#RESETS` section (~80-100 mob spawns with equipment)
 8. [ ] Write `#SPECIALS` section
 9. [ ] Add `D1` (east) exit to room 2434 in `confusn.are` pointing to 2739
 10. [ ] Add `D2` (south) exit to room 2509 in `confusn.are` pointing to 2801
 11. [ ] Add `verdant_depths.are` to `area/area.lst`
 11. [ ] Run `cd src && make unit-tests` to validate
-12. [ ] Verify all vnums within 2739-2863 range
+12. [ ] Verify all vnums within 3000-3149 range
 13. [ ] Verify no vnum conflicts with existing areas

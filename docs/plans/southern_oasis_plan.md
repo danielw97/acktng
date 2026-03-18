@@ -6,7 +6,7 @@
 **File Name:** `the_southern_oasis.are`
 **Keyword:** `the southern oasis`
 **Level Range:** 50-70 (`I 50 70`)
-**Vnum Range (fixed):** **2539-2738** (`V 2539 2738`)
+**Vnum Range (fixed):** **2800-2999** (`V 2800 2999`)
 **Room Count Target:** 35/35 vnums used
 **Design Goal:** Replace the current repetitive "future pyramid road" lane pattern and rebuild the area as an active civic-military basin linked to southern pyramid expeditions and regional trade. The Southern Oasis is the fortified hinge between oasis civil life and pyramid frontier risk — an armed staging ground, not a patrol template.
 
@@ -63,7 +63,7 @@ All directives per `area_file_spec.md` section 3:
 - `L @@W(@@l50 70@@W)@@N~` — white parens, blue level numbers, white close paren, reset, `~`-terminated
 - `N <allocate at implementation time>` — area number; must be confirmed unused across all loaded area files
 - `I 50 70` — min/max level; controls mob-level gating and area matching
-- `V 2539 2738` — full 35-vnum envelope; all rooms, mobs, and objects must stay within this range
+- `V 2800 2999` — full 35-vnum envelope; all rooms, mobs, and objects must stay within this range
 - `F 15` — reset frequency in minutes
 - `U @@lwater drums echo through the Southern Oasis as convoy lanterns flare along the causeway@@N~` — reset message; no double-newlines, `~`-terminated
 - `O Virant~` — area owner must always be Virant (owner policy)
@@ -86,7 +86,7 @@ Per `area_file_spec.md` section 2:
 
 ## Area Structure (Room Topology)
 
-Target ~35 rooms in six district sets, using all vnums 2539-2738:
+Target ~35 rooms in six district sets, using all vnums 2800-2999:
 
 ### Room Description Requirements (spec compliance)
 
@@ -118,7 +118,7 @@ Per `area_file_spec.md` sections 8.1 and 8.2:
 Per `area_file_spec.md` section 13.1:
 
 - Room vnums must be assigned in ascending sequential order with no gaps.
-- All 35 room vnums (2539-2738) must be used; fill every available room-vnum slot.
+- All 35 room vnums (2800-2999) must be used; fill every available room-vnum slot.
 
 ### District 1: Lantern Causeway (2539-2573, 35 rooms)
 
@@ -291,7 +291,7 @@ All boss mobs: `act` includes `is_npc` + `stay_area` + `sentinel` + `boss` + `ag
 Per `area_file_spec.md` section 13.1:
 
 - Object vnums must be assigned in ascending sequential order with no gaps, starting from 2539.
-- Expand through contiguous sequential slots (suggested through **2609**) while staying within the 2539-2738 vnum envelope.
+- Expand through contiguous sequential slots (suggested through **2609**) while staying within the 2800-2999 vnum envelope.
 - Target composition: ~71 object templates (vnums 2539-2609).
 - Within the area, object `<name>~` values must be unique (no duplicate item names in the same area file).
 
@@ -488,7 +488,7 @@ Loot profile:
 ## Implementation Checklist
 
 ### Rooms
-- [ ] Populate all 35 room vnums (2539-2738) in ascending sequential order with no gaps.
+- [ ] Populate all 35 room vnums (2800-2999) in ascending sequential order with no gaps.
 - [ ] Write unique `<description>~` for every room (minimum 3 sentences; 5+ for important rooms).
 - [ ] Assign correct `sector_type` (`city` for causeway/bazaar, `desert` for approach, `inside` for interiors) and `room_flags` per district requirements.
 - [ ] Set `no_mob` on all boss rooms (2657, 2734).
@@ -541,7 +541,7 @@ Loot profile:
 
 ### Final Validation
 - [ ] Validate complete area file format against `docs/area_file_spec.md`.
-- [ ] Verify all vnums within `V 2539 2738` envelope.
+- [ ] Verify all vnums within `V 2800 2999` envelope.
 - [ ] Verify `#ROOMS` and `#MOBILES` and `#OBJECTS` each terminate with `#0`.
 - [ ] Verify `#RESETS`, `#SPECIALS` each terminate with `S`.
 - [ ] Verify canonical section order.

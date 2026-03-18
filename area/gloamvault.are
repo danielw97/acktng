@@ -1740,6 +1740,276 @@ Her veil is stitched with star-metal wire, and her whispered rites bend shadows 
 + 0 0 0 0 0 0 0 0 0
 l 100 30118 30120 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
+#30100
+threshold wraith gloam~
+a threshold wraith~
+A threshold wraith drifts near the outer gate, barring passage.
+~
+Formed from the accumulated dread of those who turned back at the Gloamvault's threshold. It is less a creature than a concentrated warning, given teeth.
+~
+97 0 -600 S
+5 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#30101
+gloam cultist threshold~
+a gloam cultist~
+A gloam cultist moves through the outer passages with ritualistic purpose.
+~
+One of the outer initiates of the Gloamvault cult, assigned to the threshold for a season of vigil. Robes of deep violet and ash mark their rank as the lowest of the devoted.
+~
+97 0 -500 S
+8 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#30102
+threshold shade gloamvault~
+a threshold shade~
+A threshold shade clings to the gate arch, watching.
+~
+A shade that formed at the precise boundary where the Gloamvault's influence begins. It cannot pursue beyond the threshold but will not let the unwary linger.
+~
+97 0 -600 S
+7 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#30103
+cult initiate gloam~
+a cult initiate~
+A cult initiate recites threshold liturgies from a worn vellum scroll.
+~
+Fresh to the outer order, the initiate recites the Gloamvault's threshold rites with the mispronunciations of the newly inducted. The candle-flames around them still burn the wrong color.
+~
+97 0 -400 S
+10 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#30105
+threshold keeper gloamvault~
+a threshold keeper~
+A threshold keeper stands at the inner gate, staff across the passage.
+~
+A veteran of the outer order, the threshold keeper has spent years managing the traffic of initiates and the exclusion of the uninitiated. They are patient, thorough, and entirely without mercy.
+~
+97 0 -500 S
+12 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#30108
+vestibule stalker gloam~
+a vestibule stalker~
+A vestibule stalker moves through the antechamber with hunting precision.
+~
+Assigned to the vestibule to intercept intruders who slip past the threshold wards, the vestibule stalker moves with the trained efficiency of someone who has done this many times.
+~
+97 0 -500 S
+14 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#30115
+Threshold Guardian~
+the Threshold Guardian~
+The Threshold Guardian stands at the inner vestibule passage, immovable.
+~
+The Threshold Guardian is the oldest continuous occupant of the Gloamvault's outer reaches, a revenant of the original gatekeeper who died defending the threshold centuries ago. The cult maintains the position out of tradition; the Guardian maintains it out of something older.
+~
+97 0 -700 S
+12 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#30116
+shadowed vestibule penitent gloam~
+a shadowed vestibule penitent~
+A shadowed vestibule penitent kneels in the antechamber, unmoving until disturbed.
+~
+Penitents assigned to the vestibule undergo a ritual of enforced stillness, kneeling in the dark for days at a time. The ones who survive become something harder to categorize.
+~
+97 0 -500 S
+14 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#30117
+outer gate sentinel gloam~
+an outer gate sentinel~
+An outer gate sentinel patrols the gate approach with mechanical regularity.
+~
+The outer sentinels rotate in pairs, walking a fixed patrol circuit around the gate approach. This one walks alone, which means its partner did not survive the last rotation.
+~
+97 0 -500 S
+9 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#30118
+gloam threshold watchman~
+a gloam threshold watchman~
+A gloam threshold watchman leans against the gate post, lantern dark.
+~
+A watchman of the outer perimeter, assigned to maintain vigil at the gate. The lantern they carry burned out long ago but they carry it still, habit outlasting purpose.
+~
+97 0 -400 S
+11 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#30252
+sanctum shade gloamvault inner~
+a sanctum shade~
+A sanctum shade drifts through the inner passages, trailing void-cold.
+~
+A shade that formed within the sanctum's innermost reaches, nourished by decades of ritual and sacrifice. It is more substantial than the threshold shades, and considerably more dangerous.
+~
+97 0 -700 S
+22 0
+200 -15 4 6
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#30255
+inner choir warden gloam~
+an inner choir warden~
+An inner choir warden stands guard over the sanctum approach.
+~
+Selected from the most devout of the inner order, the choir wardens maintain the sanctum's ritual passages and eliminate anything that disturbs the ongoing liturgies. Their robes bear the Gloamvault's inner sigil in bone thread.
+~
+97 0 -600 S
+24 0
+200 -15 4 6
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#30261
+sanctum stalker gloamvault~
+a sanctum stalker~
+A sanctum stalker moves through the inner halls with lethal patience.
+~
+The sanctum stalkers are the Gloamvault's inner hunters, trained to pursue and eliminate any intruder who penetrates past the vestibule. They work in silence and finish what they start.
+~
+97 0 -600 S
+27 0
+600 -30 8 10
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#30296
+inner sanctum knight gloam~
+an inner sanctum knight~
+An inner sanctum knight stands at the ritual chamber approach, armored in blackened plate.
+~
+The elite defenders of the Gloamvault's inner sanctum, these knights are chosen for their capacity to witness the deeper rites without losing coherence. Their plate is edged in cultist runes that have soaked in enough void-energy to glow faintly.
+~
+97 0 -600 S
+30 0
+600 -30 8 10
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#30301
+High Choir Warden~
+the High Choir Warden~
+The High Choir Warden presides over the inner sanctum passage with terrible authority.
+~
+The High Choir Warden is the head of the sanctum's defensive order, responsible for the security of the innermost rites. Unlike the outer wardens, the High Warden has participated directly in the sanctum's deeper liturgies, and the changes are visible in the geometry of their silhouette.
+~
+67108961 0 -900 S
+32 0
+600 -30 8 10
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#30302
+inner sanctum duelist gloam~
+an inner sanctum duelist~
+An inner sanctum duelist circles the ritual chamber, blades drawn.
+~
+A duelist sworn to the Gloamvault's inner order, trained in the cult's fighting style which incorporates ritual gesture into combat. Every kill is also an offering.
+~
+97 0 -700 S
+32 0
+600 -30 8 10
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#30303
+Sanctum High Priest~
+the Sanctum High Priest~
+The Sanctum High Priest conducts the inner rites, voice resonating with void harmonics.
+~
+The High Priest of the Gloamvault's sanctum has performed the inner liturgies so many times that the liturgies have started performing on the High Priest in return. They are less a person than a continuous ritual event, and they have been this way for longer than most people live.
+~
+67108961 0 -1000 S
+33 0
+600 -30 8 10
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#30304
+Gloamvault Void Sovereign~
+the Gloamvault Void Sovereign~
+The Gloamvault Void Sovereign occupies the deepest chamber, void radiating from every surface.
+~
+The Void Sovereign is the ultimate authority of the Gloamvault's inner sanctum, a being that has been changed by decades of void ritual to the point where it is genuinely unclear what they were before. The void does not merely surround them; it originates from them.
+~
+67108961 0 -1000 S
+34 0
+600 -30 8 10
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
 #5450
@@ -2105,5 +2375,23 @@ M 0 5460 1 5517   (null)
 
 M 0 5459 1 5521   (null)
 
+M 0 30100 3 5451   threshold wraith near outer gate
+M 0 30101 3 5453   gloam cultist near outer gate
+M 0 30102 3 5455   threshold shade near outer gate
+M 0 30103 3 5457   cult initiate near outer gate
+M 0 30105 2 5461   threshold keeper at inner gate
+M 0 30108 2 5463   vestibule stalker in antechamber
+M 0 30115 3 5465   Threshold Guardian at inner vestibule
+M 0 30116 2 5467   shadowed vestibule penitent in antechamber
+M 0 30117 2 5469   outer gate sentinel on patrol
+M 0 30118 2 5471   gloam threshold watchman at gate post
+M 0 30252 3 5490   sanctum shade in inner passages
+M 0 30255 2 5494   inner choir warden near sanctum
+M 0 30261 2 5498   sanctum stalker in inner halls
+M 0 30296 2 5510   inner sanctum knight at ritual chamber
+M 0 30301 1 5515   High Choir Warden in sanctum
+M 0 30302 2 5520   inner sanctum duelist near ritual
+M 0 30303 1 5520   Sanctum High Priest in deepest sanctum
+M 0 30304 1 5522   Gloamvault Void Sovereign in void chamber
 S
 #$

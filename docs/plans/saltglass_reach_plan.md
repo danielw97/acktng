@@ -7,7 +7,7 @@
 **Keyword:** `saltglass reach desert littoral cairn`
 **Area Number:** `N 87`
 **Level Range:** `I 55 80` (`55-80`)
-**Vnum Range:** **5724-6123** (`V 5724 6123`)
+**Vnum Range:** **6300-6699** (`V 6300 6699`)
 **Room Count Target:** **400/400 rooms used**
 **Primary Design Goal:** Build a massive jurisdictional transition corridor spanning four ecological bands — from the oasis caravan basin to the Mafdet coast — as a traversable frontier of overlapping legal authority, shattered survey infrastructure, and environmental hazard. The area is not a linear road; it is a web of routes, ruins, and contested waypoints where inland law fractures into maritime pragmatism.
 
@@ -75,7 +75,7 @@ Players traverse from oasis-connected caravan staging grounds through increasing
 - `L @@y{55 80}@@N~`
 - `N 87`
 - `I 55 80`
-- `V 5724 6123` fixed.
+- `V 6300 6699` fixed.
 - `F 15`
 - `O Virant~`
 - `U @@bSalt-crusted wind carries the scent of brine and old contracts across the @@ySaltglass Reach@@b.@@N~`
@@ -117,25 +117,25 @@ The area is divided into **8 districts** of **50 rooms each**, arranged in four 
             |           |           |
     [A: Oasis          [B: Mirror        [C: Mirror
      Staging]           Flats North]      Flats South]
-     5724-5773        5774-5823       5824-5873
+     6300-6349        6350-6399       6400-6449
             |           |           |
             +-----+-----+-----+----+
                   |           |
           [D: Glasswind    [E: Cairn Line
            Belts]           Ruins]
-           5874-5923      5924-5973
+           6450-6499      6500-6549
                   |           |
             +-----+-----+----+
             |                 |
     [F: Sealed Route   [G: Tidemouth
      Remnants]          Approach]
-     5974-6023        6024-6073
+     6550-6599        6600-6649
             |                 |
             +--------+--------+
                      |
               [H: Shoreward
                Threshold]
-               6074-6123
+               6650-6699
                      |
                 EAST (Mafdet)
 ```
@@ -152,251 +152,251 @@ The topology is not a grid. Each district has its own internal shape:
 
 ---
 
-## Room-by-Room Allocation (5724-6123)
+## Room-by-Room Allocation (6300-6699)
 
-### District A: Oasis Staging Grounds (5724-5773, 50 rooms)
+### District A: Oasis Staging Grounds (6300-6349, 50 rooms)
 
 **Theme:** Caravan marshaling area at the western mouth of the Reach, where oasis-certified convoys prepare for the crossing. Warden patrol headquarters, toll-assessment booths, and guide-hiring posts cluster around a dusty transit yard. This is the last place where oasis law operates without question.
 
 **Internal Shape:** A central hub (the Staging Yard) with five spokes — north road from the Northern Oasis approach, south road from the Southern Oasis approach, west road from the Great Oasis approach, and two eastward departures (one toward the Mirror Flats North, one toward Mirror Flats South). Side branches lead to Warden barracks, a guide camp, a Red Sand counting house, and caravan repair stalls.
 
 Key rooms:
-- 5724 **Western Approach Road** — entry from oasis basin; 5+ sentences; connects west to oasis areas.
-- 5725 **Dust-Choked Milestone** — first Reach marker, eroded Keeper survey stone.
-- 5726 **Caravan Muster Ground** — open staging area, caravan traffic flavor.
-- 5727 **Warden Toll Gate** — first toll checkpoint, manned by Reach Wardens.
-- 5729 **Staging Yard** — central hub, 5+ sentences, multiple exits radiating outward.
-- 5732 **Reach Warden Barracks** — patrol headquarters, sentinel guards.
-- 5734 **Glasswalk Guide Camp** — neutral guide-hiring post, route song flavor.
-- 5736 **Red Sand Counting House** — Outrider commercial predator den.
-- 5739 **Northern Oasis Approach** — road connecting north toward Northern Oasis.
-- 5742 **Southern Oasis Approach** — road connecting south toward Southern Oasis.
-- 5744 **Caravan Repair Yard** — sled runners, harness mending, shade shelters.
-- 5748 **Transit Seal Office** — where crossing permits are issued.
-- 5752 **Drywell Rest Stop** — last functioning well before the Flats.
-- 5754 **Heavy Road Departure** — eastward exit toward Mirror Flats South / central route.
-- 5759 **Swift Line Departure** — eastward exit toward Mirror Flats North / fast route.
-- 5764 **Provisioner's Row** — merchant stalls for crossing supplies.
-- 5769 **Cairn Tablet Reading Room** — scholarly annex with extra descriptions for lore.
-- 5773 **Eastern Boundary Marker** — last oasis-jurisdiction marker, transition text.
+- 6300 **Western Approach Road** — entry from oasis basin; 5+ sentences; connects west to oasis areas.
+- 6301 **Dust-Choked Milestone** — first Reach marker, eroded Keeper survey stone.
+- 6302 **Caravan Muster Ground** — open staging area, caravan traffic flavor.
+- 6303 **Warden Toll Gate** — first toll checkpoint, manned by Reach Wardens.
+- 6305 **Staging Yard** — central hub, 5+ sentences, multiple exits radiating outward.
+- 6308 **Reach Warden Barracks** — patrol headquarters, sentinel guards.
+- 6310 **Glasswalk Guide Camp** — neutral guide-hiring post, route song flavor.
+- 6312 **Red Sand Counting House** — Outrider commercial predator den.
+- 6315 **Northern Oasis Approach** — road connecting north toward Northern Oasis.
+- 6318 **Southern Oasis Approach** — road connecting south toward Southern Oasis.
+- 6320 **Caravan Repair Yard** — sled runners, harness mending, shade shelters.
+- 6324 **Transit Seal Office** — where crossing permits are issued.
+- 6328 **Drywell Rest Stop** — last functioning well before the Flats.
+- 6330 **Heavy Road Departure** — eastward exit toward Mirror Flats South / central route.
+- 6335 **Swift Line Departure** — eastward exit toward Mirror Flats North / fast route.
+- 6340 **Provisioner's Row** — merchant stalls for crossing supplies.
+- 6345 **Cairn Tablet Reading Room** — scholarly annex with extra descriptions for lore.
+- 6349 **Eastern Boundary Marker** — last oasis-jurisdiction marker, transition text.
 
-Remaining rooms (5728, 5730-5731, 5733, 5735, 5737-5738, 5740-5741, 5743, 5745-5747, 5749-5751, 5753, 5755-5758, 5760-5763, 5765-5768, 5770-5772): connecting passages, side alleys, storage rooms, guard posts, caravan animal pens, shade structures, and ambient transition corridors filling out the hub layout.
+Remaining rooms (6304, 6306-6307, 6309, 6311, 6313-6314, 6316-6317, 6319, 6321-6323, 6325-6327, 6329, 6331-6334, 6336-6339, 6341-6344, 6346-6348): connecting passages, side alleys, storage rooms, guard posts, caravan animal pens, shade structures, and ambient transition corridors filling out the hub layout.
 
 ---
 
-### District B: Mirror Flats North — Swift Line (5774-5823, 50 rooms)
+### District B: Mirror Flats North — Swift Line (6350-6399, 50 rooms)
 
 **Theme:** The northern crossing of the Mirror Flats, following the old Swift Line — the fast route for light, high-value cargo. Hard salt crust blinds by day and reflects moonlight at night. Caravans cross at dawn and dusk. The Flats are a geological remnant of the Iseth Reach's terminal evaporation basin. Salt crickets swarm during fog events. This route is faster but more exposed.
 
 **Internal Shape:** A sinuous east-west spine with short north-south deviations into salt-crystal formations, exposed survey rod stations, and a central maze-flagged blinding zone where the reflection is worst. The northern edge has a hidden path leading to a salt cricket breeding ground. The eastern end descends into the Glasswind Belt approach.
 
 Key rooms:
-- 5774 **Swift Line Marker One** — first cairn of the northern route, faded toll schedule.
-- 5777 **Salt Mirror Crossing** — blinding white expanse, 5+ sentences, dawn/dusk crossing flavor.
-- 5779 **Keeper Tide Rod Station** — ruined tide-measurement outpost with basalt stumps.
-- 5782 **Crystal Ridge** — elevated salt formation, lookout point, cairn kite nests.
-- 5784 **The Blinding Heart** — center of the Flats, maze-flagged zone begins (ROOM_MAZE).
-- 5785-5791 **Maze: Reflected Expanse** — 7 maze rooms, disorienting salt-mirror terrain.
-- 5794 **Salt Cricket Breeding Ground** — swarm encounter pocket, hidden north branch.
-- 5797 **Shattered Evaporation Basin** — deep salt layers exposed, geological lore.
-- 5799 **Swift Line Waypost** — ruined rest shelter, competed over by factions.
-- 5802 **Mineral Seep** — rare moisture point, salt-encrusted spring.
-- 5804 **Surveyor's Cairn Remnant** — old Keeper marker with Littoral Branch glyphs.
-- 5809 **Salt Crust Collapse** — hazard room, thin crust over void.
-- 5814 **Eastern Salt Shelf** — Flats thin out, first glass shards appear underfoot.
-- 5819 **Swift Line Terminal** — last northern cairn before the Glasswind Belt.
-- 5823 **Descent to the Glasswind** — transition to District D.
+- 6350 **Swift Line Marker One** — first cairn of the northern route, faded toll schedule.
+- 6353 **Salt Mirror Crossing** — blinding white expanse, 5+ sentences, dawn/dusk crossing flavor.
+- 6355 **Keeper Tide Rod Station** — ruined tide-measurement outpost with basalt stumps.
+- 6358 **Crystal Ridge** — elevated salt formation, lookout point, cairn kite nests.
+- 6360 **The Blinding Heart** — center of the Flats, maze-flagged zone begins (ROOM_MAZE).
+- 6361-6367 **Maze: Reflected Expanse** — 7 maze rooms, disorienting salt-mirror terrain.
+- 6370 **Salt Cricket Breeding Ground** — swarm encounter pocket, hidden north branch.
+- 6373 **Shattered Evaporation Basin** — deep salt layers exposed, geological lore.
+- 6375 **Swift Line Waypost** — ruined rest shelter, competed over by factions.
+- 6378 **Mineral Seep** — rare moisture point, salt-encrusted spring.
+- 6380 **Surveyor's Cairn Remnant** — old Keeper marker with Littoral Branch glyphs.
+- 6385 **Salt Crust Collapse** — hazard room, thin crust over void.
+- 6390 **Eastern Salt Shelf** — Flats thin out, first glass shards appear underfoot.
+- 6395 **Swift Line Terminal** — last northern cairn before the Glasswind Belt.
+- 6399 **Descent to the Glasswind** — transition to District D.
 
 Remaining rooms: connecting salt-flat passages, wind-scoured channels, abandoned sled tracks, mineral deposit clusters, exposed survey benchmarks, and environmental traversal rooms.
 
 ---
 
-### District C: Mirror Flats South — Heavy Road (5824-5873, 50 rooms)
+### District C: Mirror Flats South — Heavy Road (6400-6449, 50 rooms)
 
 **Theme:** The southern crossing of the Mirror Flats, following the old Heavy Road — the slow route for bulk commodities. Deeper salt deposits, wider passages carved by generations of laden cargo sleds. Every third cairn had a full assessment station. This route is safer but slower, with more infrastructure ruins and more faction competition.
 
 **Internal Shape:** A broader east-west corridor with assessment station complexes branching off the main road at regular intervals. A southern spur leads to the abandoned Sealed Route junction. The eastern end connects to the Cairn Line Ruins district. A central fortified waystation serves as a mid-crossing anchor.
 
 Key rooms:
-- 5824 **Heavy Road Gate** — entry cairn, toll schedule still partially legible.
-- 5827 **First Assessment Station** — ruined inspection hall, bronze scale remnants.
-- 5830 **Cargo Sled Ruts** — deep-worn passage, generations of traffic visible.
-- 5834 **Fortified Waystation** — mid-crossing rest point, 5+ sentences, hub room.
-- 5836 **Waystation Cistern** — dry cistern with mineral stratification lore.
-- 5839 **Second Assessment Station** — larger ruin, Shoreward Table fragments on walls.
-- 5842 **Sealed Route Junction** — southern spur departure, quarantine markers.
-- 5844 **Convoy Graveyard** — abandoned cargo, broken sled frames, scavenger activity.
-- 5849 **Third Assessment Station** — best-preserved station, extra descriptions for conversion tables.
-- 5852 **Heavy Road Overwatch** — elevated position, cairn kite observation.
-- 5854 **Salt-Worn Foundation Row** — exposed building foundations from Ledger-Tariff era.
-- 5859 **Brine Pool** — rare standing water, mineral-stained, fauna gathering point.
-- 5864 **Eastern Heavy Road** — road narrows as salt gives way to glass-mixed terrain.
-- 5869 **Heavy Road Terminal Cairn** — last Heavy Road marker, transition text.
-- 5873 **Cairn Line Approach** — connects east to District E.
+- 6400 **Heavy Road Gate** — entry cairn, toll schedule still partially legible.
+- 6403 **First Assessment Station** — ruined inspection hall, bronze scale remnants.
+- 6406 **Cargo Sled Ruts** — deep-worn passage, generations of traffic visible.
+- 6410 **Fortified Waystation** — mid-crossing rest point, 5+ sentences, hub room.
+- 6412 **Waystation Cistern** — dry cistern with mineral stratification lore.
+- 6415 **Second Assessment Station** — larger ruin, Shoreward Table fragments on walls.
+- 6418 **Sealed Route Junction** — southern spur departure, quarantine markers.
+- 6420 **Convoy Graveyard** — abandoned cargo, broken sled frames, scavenger activity.
+- 6425 **Third Assessment Station** — best-preserved station, extra descriptions for conversion tables.
+- 6428 **Heavy Road Overwatch** — elevated position, cairn kite observation.
+- 6430 **Salt-Worn Foundation Row** — exposed building foundations from Ledger-Tariff era.
+- 6435 **Brine Pool** — rare standing water, mineral-stained, fauna gathering point.
+- 6440 **Eastern Heavy Road** — road narrows as salt gives way to glass-mixed terrain.
+- 6445 **Heavy Road Terminal Cairn** — last Heavy Road marker, transition text.
+- 6449 **Cairn Line Approach** — connects east to District E.
 
 Remaining rooms: toll booths, guard posts, caravan shelter alcoves, salt-mining remnants, assessment clerk quarters, and transit corridor sections.
 
 ---
 
-### District D: Glasswind Belts (5874-5923, 50 rooms)
+### District D: Glasswind Belts (6450-6499, 50 rooms)
 
 **Theme:** Fields of wind-cut silica shards that abrade skin, cloth, and pack harness. The glass formed during the Ninth Meridian catastrophe's thermal pulse. Glass color indicates danger: milky (safe, pre-catastrophe), amber (thermal fault proximity), violet (eclipse-rite residue). Glasswalk Guides are essential for safe passage. Synod Whisper Cells use the Belts as concealment corridors. Glassworms burrow beneath the crust, creating collapse hazards.
 
 **Internal Shape:** A tangled web of narrow glass-walled passages, hidden Glasswalk paths, Synod smuggler tunnels, and open glass fields. The district branches extensively — multiple paths lead east, but only certain routes are safe. A central area contains a Glasswalk Guide waystation (neutral ground). The southern portion connects to the Sealed Route remnants. Dead-end glass canyons and worm-collapse chambers provide exploration danger.
 
 Key rooms:
-- 5874 **Glasswind Threshold** — first glass underfoot, color-reading tutorial in description.
-- 5877 **Milky Glass Corridor** — safe older glass, firm footing, Guide waymarker.
-- 5879 **Amber Glass Warning** — thermal fault proximity, temperature shift described.
-- 5882 **Glasswalk Guide Waystation** — neutral hub, 5+ sentences, guide services.
-- 5884 **Shardstorm Narrows** — wind-cut passage, abrasion hazard flavor.
-- 5887 **Violet Glass Field** — eclipse-rite residue zone, Synod theological significance.
-- 5889 **Glassworm Sinkhole** — collapse hazard, hollow-ringing glass crust.
-- 5892 **Synod Whisper Cache** — hidden smuggler stash, cult graffiti in Eclipsed Tongues script.
-- 5894 **Thermal Fault Ridge** — elevated glass ridge, newly fused glass visible.
-- 5897 **Freshly Vitrified Sand** — recent thermal event evidence, plot hook room.
-- 5899 **Glass Canyon Dead End** — exploration trap, worm ambush.
-- 5902 **Wind-Cut Gallery** — natural glass sculpture, environmental beauty amid hazard.
-- 5904 **Glasswalk Secret Path** — hidden safe route known only to Guides.
-- 5907 **Eclipsed Tongues Shrine** — Synod worship site, theological inscriptions.
-- 5909 **Glass Scorpion Nest** — dense predator zone, glass-carapace fauna.
-- 5912 **Subglass Worm Warren** — underground passage beneath glass crust.
-- 5914 **Eastern Glass Shelf** — Belts thin, cairn ruins visible ahead.
-- 5917 **Synod Courier Route** — unmarked whisper route bypassing cairn inspection.
-- 5919 **Guide's Song Marker** — route song inscription, oral tradition waypoint.
-- 5923 **Glasswind Eastern Exit** — transition to cairn district or Tidemouth approach.
+- 6450 **Glasswind Threshold** — first glass underfoot, color-reading tutorial in description.
+- 6453 **Milky Glass Corridor** — safe older glass, firm footing, Guide waymarker.
+- 6455 **Amber Glass Warning** — thermal fault proximity, temperature shift described.
+- 6458 **Glasswalk Guide Waystation** — neutral hub, 5+ sentences, guide services.
+- 6460 **Shardstorm Narrows** — wind-cut passage, abrasion hazard flavor.
+- 6463 **Violet Glass Field** — eclipse-rite residue zone, Synod theological significance.
+- 6465 **Glassworm Sinkhole** — collapse hazard, hollow-ringing glass crust.
+- 6468 **Synod Whisper Cache** — hidden smuggler stash, cult graffiti in Eclipsed Tongues script.
+- 6470 **Thermal Fault Ridge** — elevated glass ridge, newly fused glass visible.
+- 6473 **Freshly Vitrified Sand** — recent thermal event evidence, plot hook room.
+- 6475 **Glass Canyon Dead End** — exploration trap, worm ambush.
+- 6478 **Wind-Cut Gallery** — natural glass sculpture, environmental beauty amid hazard.
+- 6480 **Glasswalk Secret Path** — hidden safe route known only to Guides.
+- 6483 **Eclipsed Tongues Shrine** — Synod worship site, theological inscriptions.
+- 6485 **Glass Scorpion Nest** — dense predator zone, glass-carapace fauna.
+- 6488 **Subglass Worm Warren** — underground passage beneath glass crust.
+- 6490 **Eastern Glass Shelf** — Belts thin, cairn ruins visible ahead.
+- 6493 **Synod Courier Route** — unmarked whisper route bypassing cairn inspection.
+- 6495 **Guide's Song Marker** — route song inscription, oral tradition waypoint.
+- 6499 **Glasswind Eastern Exit** — transition to cairn district or Tidemouth approach.
 
 Remaining rooms: glass-walled passages, wind-sheltered alcoves, partial glass caves, scorpion ambush corridors, worm tunnel intersections, shattered glass slopes, and Guide-marked safe passages.
 
 ---
 
-### District E: Cairn Line Ruins — Measure's Rest (5924-5973, 50 rooms)
+### District E: Cairn Line Ruins — Measure's Rest (6500-6549, 50 rooms)
 
 **Theme:** The ruined checkpoint chains where the three route systems converged into a major cairn station complex. This district contains **Measure's Rest** — the fortified Reach Warden library housing the most complete surviving record of the Reach's legal infrastructure. Cairn Scavengers strip bronze fittings and tablet fragments. Red Sand Outriders have purchased several stations outright. The district has significant vertical development — cairn station interiors go up into watchtowers and down into sealed tablet vaults.
 
 **Internal Shape:** A cluster of interconnected cairn stations arranged in a rough crescent around Measure's Rest. Each station has surface-level ruins (patrol rooms, toll gates) and underground chambers (tablet vaults, assessment archives). Measure's Rest itself is a multi-level complex with a ground floor library, upper observation deck, and lower sealed archive. The layout resembles a fortified compound, not a road segment.
 
 Key rooms:
-- 5924 **Cairn Line Approach** — first visible cairn station, ruined but recognizable.
-- 5926 **Station One: Bronze Gate** — stripped cairn station, scavenger activity.
-- 5929 **Station Two: Toll Hall** — better preserved, competing toll signs from rival claimants.
-- 5932 **Station Three: Assessment Court** — Shoreward Assessor hall with wind baffles.
-- 5934 **Cairn Station Crossroads** — hub where three route lines converge, 5+ sentences.
-- 5936 **Red Sand Purchased Station** — Outrider-controlled toll point, commercial predation.
-- 5939 **Scavenger Market** — informal trade in stripped cairn materials.
-- 5942 **Landward Tidewright Cell** — archaic scribes preserving full Measure Script.
-- 5944 **Measure's Rest: Outer Court** — Warden fortress approach, 5+ sentences.
-- 5946 **Measure's Rest: Library Hall** — cairn tablet transcription archive, lore-dense.
-- 5948 **Measure's Rest: Upper Observation** — watchtower with views across the Reach.
-- 5950 **Measure's Rest: Sealed Archive** — locked lower vault, key required, valuable tablets.
-- 5952 **Measure's Rest: Warden Commander's Quarters** — faction leadership space.
-- 5954 **Tablet Restoration Workshop** — scholarly repair and translation work.
-- 5956 **Kowloon Scholar's Camp** — Jade Clerk-funded expedition camp, cross-area flavor.
-- 5959 **Forgery Detection Room** — where fabricated tablets are identified.
-- 5962 **Old Swift Line Junction** — ruined northern cairn, fast-route remnant.
-- 5964 **Old Heavy Road Junction** — ruined central cairn, bulk-route remnant.
-- 5966 **Old Sealed Route Junction** — abandoned southern cairn, quarantine markers.
-- 5969 **Cairn Capstone Observatory** — shadow-rod mounting holes, astronomical survey.
-- 5972 **Eastern Cairn Line** — last cairns before Tidemouth.
-- 5973 **Tidemouth Descent** — transition to District G.
+- 6500 **Cairn Line Approach** — first visible cairn station, ruined but recognizable.
+- 6502 **Station One: Bronze Gate** — stripped cairn station, scavenger activity.
+- 6505 **Station Two: Toll Hall** — better preserved, competing toll signs from rival claimants.
+- 6508 **Station Three: Assessment Court** — Shoreward Assessor hall with wind baffles.
+- 6510 **Cairn Station Crossroads** — hub where three route lines converge, 5+ sentences.
+- 6512 **Red Sand Purchased Station** — Outrider-controlled toll point, commercial predation.
+- 6515 **Scavenger Market** — informal trade in stripped cairn materials.
+- 6518 **Landward Tidewright Cell** — archaic scribes preserving full Measure Script.
+- 6520 **Measure's Rest: Outer Court** — Warden fortress approach, 5+ sentences.
+- 6522 **Measure's Rest: Library Hall** — cairn tablet transcription archive, lore-dense.
+- 6524 **Measure's Rest: Upper Observation** — watchtower with views across the Reach.
+- 6526 **Measure's Rest: Sealed Archive** — locked lower vault, key required, valuable tablets.
+- 6528 **Measure's Rest: Warden Commander's Quarters** — faction leadership space.
+- 6530 **Tablet Restoration Workshop** — scholarly repair and translation work.
+- 6532 **Kowloon Scholar's Camp** — Jade Clerk-funded expedition camp, cross-area flavor.
+- 6535 **Forgery Detection Room** — where fabricated tablets are identified.
+- 6538 **Old Swift Line Junction** — ruined northern cairn, fast-route remnant.
+- 6540 **Old Heavy Road Junction** — ruined central cairn, bulk-route remnant.
+- 6542 **Old Sealed Route Junction** — abandoned southern cairn, quarantine markers.
+- 6545 **Cairn Capstone Observatory** — shadow-rod mounting holes, astronomical survey.
+- 6548 **Eastern Cairn Line** — last cairns before Tidemouth.
+- 6549 **Tidemouth Descent** — transition to District G.
 
 Remaining rooms: individual cairn interiors, scavenger tunnels, patrol corridors, tablet niche chambers, assessment clerk quarters, fortification walls, and connecting passages between stations.
 
 ---
 
-### District F: Sealed Route Remnants (5974-6023, 50 rooms)
+### District F: Sealed Route Remnants (6550-6599, 50 rooms)
 
 **Theme:** The abandoned southern cairn chain dedicated to funerary and relic consignments. When the funerary institutions fragmented during the Fracture Era, the Sealed Route was abandoned. Now the quarantine stations are infiltrated by Synod Whisper Cells, and the sealed containers left behind attract Cairn Scavengers and dangerous relic hazards. This is the most dangerous and least-traveled district.
 
 **Internal Shape:** A linear southern spur branching off the Heavy Road, then curving east through quarantine stations, sealed relic vaults, and Synod-occupied passages. Dead ends and locked doors are common — this was designed for controlled passage, not free movement. The southern edge borders impassable terrain. A hidden Synod tunnel connects back to the Glasswind Belts.
 
 Key rooms:
-- 5974 **Sealed Route Marker One** — quarantine warning inscription, 5+ sentences.
-- 5976 **First Quarantine Station** — inspection hall for relic consignments.
-- 5979 **Sealed Container Yard** — abandoned cargo, some containers still sealed.
-- 5982 **Quarantine Scribe Office** — Hazard Reclassification workspace.
-- 5984 **Sealed Route Fortification** — armed escort staging area, arrow loops in walls.
-- 5987 **Relic Examination Chamber** — provenance verification room, extra descriptions.
-- 5989 **Witness Certification Hall** — where every cairn required witness certification.
-- 5992 **Synod-Infiltrated Station** — Whisper Cell occupation, cult activity.
-- 5994 **Eclipsed Tongues Ritual Room** — active Synod worship, theological inscriptions.
-- 5997 **Sealed Relic Vault** — locked door, dangerous contents, key required.
-- 5999 **Quarantine Breach** — broken containment, hazard released.
-- 6002 **Funerary Consignment Depot** — Southern Pyramid provenance marks.
-- 6004 **Synod Smuggler Tunnel** — hidden passage back to Glasswind Belts.
-- 6007 **Abandoned Escort Barracks** — Fracture-Era military quarters.
-- 6009 **Relic Cold-Storage Chamber** — unnaturally cold room, sealed crate that hums at dawn.
-- 6012 **Route Terminus Ruin** — the point where the Sealed Route simply stopped.
-- 6014 **Collapsed Quarantine Arch** — structural failure, rubble exploration.
-- 6017 **Synod Command Post** — Whisper Cell leadership, intelligence cache.
-- 6019 **Defaced Marker Row** — competing toll signs defacing each other.
-- 6023 **Sealed Route Eastern Remnant** — connects to Tidemouth approach.
+- 6550 **Sealed Route Marker One** — quarantine warning inscription, 5+ sentences.
+- 6552 **First Quarantine Station** — inspection hall for relic consignments.
+- 6555 **Sealed Container Yard** — abandoned cargo, some containers still sealed.
+- 6558 **Quarantine Scribe Office** — Hazard Reclassification workspace.
+- 6560 **Sealed Route Fortification** — armed escort staging area, arrow loops in walls.
+- 6563 **Relic Examination Chamber** — provenance verification room, extra descriptions.
+- 6565 **Witness Certification Hall** — where every cairn required witness certification.
+- 6568 **Synod-Infiltrated Station** — Whisper Cell occupation, cult activity.
+- 6570 **Eclipsed Tongues Ritual Room** — active Synod worship, theological inscriptions.
+- 6573 **Sealed Relic Vault** — locked door, dangerous contents, key required.
+- 6575 **Quarantine Breach** — broken containment, hazard released.
+- 6578 **Funerary Consignment Depot** — Southern Pyramid provenance marks.
+- 6580 **Synod Smuggler Tunnel** — hidden passage back to Glasswind Belts.
+- 6583 **Abandoned Escort Barracks** — Fracture-Era military quarters.
+- 6585 **Relic Cold-Storage Chamber** — unnaturally cold room, sealed crate that hums at dawn.
+- 6588 **Route Terminus Ruin** — the point where the Sealed Route simply stopped.
+- 6590 **Collapsed Quarantine Arch** — structural failure, rubble exploration.
+- 6593 **Synod Command Post** — Whisper Cell leadership, intelligence cache.
+- 6595 **Defaced Marker Row** — competing toll signs defacing each other.
+- 6599 **Sealed Route Eastern Remnant** — connects to Tidemouth approach.
 
 Remaining rooms: quarantine corridors, sealed niches, guard posts, escort route sections, abandoned relic inspection chambers, Synod hideouts, and structural collapse zones.
 
 ---
 
-### District G: Tidemouth Approach (6024-6073, 50 rooms)
+### District G: Tidemouth Approach (6600-6649, 50 rooms)
 
 **Theme:** Low dunes and brackish channels marking approach to the coast. The desert's dry ecology gives way to salt marsh, tidal pools, and mineral-stained sand. Tidemouth crabs dig burrows that collapse under weight. The smell of sea-salt mixes with desert mineral dust. Maritime influence increases — anchor stones, hull-caulking resin dumps, sailcloth windbreaks. This is where the Reach's administrative logic historically terminated and Mafdet's harbor jurisdiction began.
 
 **Internal Shape:** A broad, open area that narrows eastward toward the Shoreward Threshold. Multiple paths wind through dune ridges, tidal channels, and crab-burrowed flats. A northern branch follows the coast toward future Mafdet approach. A southern branch explores tide-pool caves. The central path leads to the Shoreward Seal district. The openness contrasts with the confined cairn stations — players can see the sea from elevated dunes.
 
 Key rooms:
-- 6024 **First Crab Burrow** — landmark: half a day from Mafdet, 5+ sentences.
-- 6027 **Brackish Channel Crossing** — tidal water, desert-to-coast transition.
-- 6029 **Dune Crest Overlook** — first sight of the sea on the eastern horizon.
-- 6032 **Anchor Stone Field** — maritime debris begins, resin dumps, sailcloth scraps.
-- 6034 **Tidemouth Flats** — open salt marsh, crab burrow hazards, 5+ sentences.
-- 6037 **Tidal Pool Grotto** — coastal cave, amphibious fauna.
-- 6039 **Sand-Sea Carters' Camp** — Guild caravan-to-ship transfer operation.
-- 6042 **Crab Warren** — dense burrow network, collapse risk.
-- 6044 **Mineral-Stained Dune** — vivid color from coastal mineral deposits.
-- 6047 **Tide Obelisk Stump** — Keeper-era tidal measurement station, basalt remnant.
-- 6049 **Saltmarsh Trail** — winding path through coastal vegetation.
-- 6052 **Resin Dump Clearing** — hull-caulking waste, maritime industry evidence.
-- 6054 **Wind-Torn Sailcloth Shelter** — improvised camp using ship materials.
-- 6057 **Brackish Well** — last freshwater source, mineral-tainted but drinkable.
-- 6059 **Tidemouth Warden Post** — contested jurisdiction checkpoint.
-- 6062 **Harbor Warden Forward Camp** — Mafdet's jurisdiction extending inland.
-- 6064 **Dual Jurisdiction Zone** — where Reach Wardens and Harbor Wardens overlap.
-- 6067 **Coastal Fog Bank** — reduced visibility, smuggling cover during Fog Season.
-- 6069 **Mafdet Strand Approach** — eastern exit toward future Mafdet, 5+ sentences.
-- 6073 **Tidemouth Eastern Edge** — transition to District H.
+- 6600 **First Crab Burrow** — landmark: half a day from Mafdet, 5+ sentences.
+- 6603 **Brackish Channel Crossing** — tidal water, desert-to-coast transition.
+- 6605 **Dune Crest Overlook** — first sight of the sea on the eastern horizon.
+- 6608 **Anchor Stone Field** — maritime debris begins, resin dumps, sailcloth scraps.
+- 6610 **Tidemouth Flats** — open salt marsh, crab burrow hazards, 5+ sentences.
+- 6613 **Tidal Pool Grotto** — coastal cave, amphibious fauna.
+- 6615 **Sand-Sea Carters' Camp** — Guild caravan-to-ship transfer operation.
+- 6618 **Crab Warren** — dense burrow network, collapse risk.
+- 6620 **Mineral-Stained Dune** — vivid color from coastal mineral deposits.
+- 6623 **Tide Obelisk Stump** — Keeper-era tidal measurement station, basalt remnant.
+- 6625 **Saltmarsh Trail** — winding path through coastal vegetation.
+- 6628 **Resin Dump Clearing** — hull-caulking waste, maritime industry evidence.
+- 6630 **Wind-Torn Sailcloth Shelter** — improvised camp using ship materials.
+- 6633 **Brackish Well** — last freshwater source, mineral-tainted but drinkable.
+- 6635 **Tidemouth Warden Post** — contested jurisdiction checkpoint.
+- 6638 **Harbor Warden Forward Camp** — Mafdet's jurisdiction extending inland.
+- 6640 **Dual Jurisdiction Zone** — where Reach Wardens and Harbor Wardens overlap.
+- 6643 **Coastal Fog Bank** — reduced visibility, smuggling cover during Fog Season.
+- 6645 **Mafdet Strand Approach** — eastern exit toward future Mafdet, 5+ sentences.
+- 6649 **Tidemouth Eastern Edge** — transition to District H.
 
 Remaining rooms: tidal channels, crab-burrowed passages, dune ridges, coastal caves, maritime debris fields, fishing camps, and wind-scoured transition terrain.
 
 ---
 
-### District H: Shoreward Threshold (6074-6123, 50 rooms)
+### District H: Shoreward Threshold (6650-6699, 50 rooms)
 
 **Theme:** The legal boundary zone where inland law formally yields to maritime jurisdiction. The Shoreward Seal — a large basalt slab carved with both inland charter notation and maritime loading symbols — marks the physical threshold. This district contains the ruins of the great Shoreward Assessment Halls, the Water-Debt Discharge basin, and the Dual Attestation Court. It is also the site of the area's major boss encounters, where the unresolved legal contradictions of the Reach manifest as hostile forces.
 
 **Internal Shape:** A processional approach leading to the Shoreward Seal plaza, flanked by ruined Assessment Halls. Side chambers contain the specialized conversion facilities (Water-Debt Discharge basin, Risk Assumption Oath court, Relic Quarantine Transfer hall). Below the plaza, a sealed undercroft contains the most ancient jurisdictional machinery. The final rooms are boss encounter spaces where the Reach's contested authority takes physical form.
 
 Key rooms:
-- 6074 **Shoreward Approach** — processional road, assessment hall ruins visible ahead.
-- 6076 **Assessment Hall of the Swift Line** — northern route's terminal conversion facility.
-- 6079 **Assessment Hall of the Heavy Road** — central route's conversion facility, 5+ sentences.
-- 6082 **Assessment Hall of the Sealed Route** — southern route's quarantine conversion.
-- 6084 **Shoreward Assessors' Court** — specialist clerk training school ruins.
-- 6086 **Shoreward Table Hall** — conversion ratio charts carved into walls, extra descriptions.
-- 6089 **Water-Debt Discharge Basin** — basalt basin where water-debt was symbolically terminated.
-- 6092 **Risk Assumption Oath Court** — where liability transferred from road to sea.
-- 6094 **Relic Quarantine Transfer Hall** — hazard reclassification chamber.
-- 6096 **Dual Attestation Chamber** — where both inland and maritime seals were applied.
-- 6099 **The Shoreward Seal** — the great basalt slab itself, 5+ sentences, area landmark.
-- 6102 **Dry Seal Archive** — inland witness mark storage.
-- 6104 **Wet Seal Foundry** — maritime wax/bitumen seal preparation.
-- 6106 **Jurisdictional Threshold** — the exact legal boundary, dual authority text.
-- 6109 **Undercroft Descent** — stairs down into sealed sub-level.
-- 6111 **Undercroft: Ancient Conversion Engine** — pre-Keeper jurisdictional machinery.
-- 6114 **Undercroft: Fractured Authority Chamber** — where competing laws collide, boss prelude.
-- 6116 **Lair of the Shoreward Revenant** — mini-boss room, no_mob flag.
-- 6118 **Toll-Marshal of the Three Routes** — major boss room, no_mob flag, 5+ sentences.
-- 6120 **Sanctum of Contested Jurisdiction** — second major boss, no_mob flag.
-- 6122 **Heart of the Conversion** — final boss encounter, no_mob flag, 5+ sentences.
-- 6123 **The Eastern Shore** — exit toward Mafdet, area terminus, 5+ sentences.
+- 6650 **Shoreward Approach** — processional road, assessment hall ruins visible ahead.
+- 6652 **Assessment Hall of the Swift Line** — northern route's terminal conversion facility.
+- 6655 **Assessment Hall of the Heavy Road** — central route's conversion facility, 5+ sentences.
+- 6658 **Assessment Hall of the Sealed Route** — southern route's quarantine conversion.
+- 6660 **Shoreward Assessors' Court** — specialist clerk training school ruins.
+- 6662 **Shoreward Table Hall** — conversion ratio charts carved into walls, extra descriptions.
+- 6665 **Water-Debt Discharge Basin** — basalt basin where water-debt was symbolically terminated.
+- 6668 **Risk Assumption Oath Court** — where liability transferred from road to sea.
+- 6670 **Relic Quarantine Transfer Hall** — hazard reclassification chamber.
+- 6672 **Dual Attestation Chamber** — where both inland and maritime seals were applied.
+- 6675 **The Shoreward Seal** — the great basalt slab itself, 5+ sentences, area landmark.
+- 6678 **Dry Seal Archive** — inland witness mark storage.
+- 6680 **Wet Seal Foundry** — maritime wax/bitumen seal preparation.
+- 6682 **Jurisdictional Threshold** — the exact legal boundary, dual authority text.
+- 6685 **Undercroft Descent** — stairs down into sealed sub-level.
+- 6687 **Undercroft: Ancient Conversion Engine** — pre-Keeper jurisdictional machinery.
+- 6690 **Undercroft: Fractured Authority Chamber** — where competing laws collide, boss prelude.
+- 6692 **Lair of the Shoreward Revenant** — mini-boss room, no_mob flag.
+- 6694 **Toll-Marshal of the Three Routes** — major boss room, no_mob flag, 5+ sentences.
+- 6696 **Sanctum of Contested Jurisdiction** — second major boss, no_mob flag.
+- 6698 **Heart of the Conversion** — final boss encounter, no_mob flag, 5+ sentences.
+- 6699 **The Eastern Shore** — exit toward Mafdet, area terminus, 5+ sentences.
 
 Remaining rooms: conversion clerk offices, seal storage rooms, undercroft passages, collapsed assessment wings, connecting corridors, and atmospheric transition rooms.
 
@@ -460,7 +460,7 @@ The Saltglass Reach requires **8 new area-specific ambient specials** to bring i
 
 ---
 
-## Full Mob Roster (5724-5823, 100 mob templates)
+## Full Mob Roster (6300-6399, 100 mob templates)
 
 Mob vnums are assigned sequentially. Each entry lists vnum, name, level, act flags, key combat traits, district placement, and special function assignment.
 
@@ -468,375 +468,375 @@ Mob vnums are assigned sequentially. Each entry lists vnum, name, level, act fla
 
 | Vnum | Name | Lvl | Act Flags | Role | Special |
 |---:|---|---:|---|---|---|
-| 5724 | reach warden gate sentinel | 58 | `is_npc sentinel stay_area` | Toll gate guard, non-aggressive | `spec_reach_warden` |
-| 5725 | reach warden patrol leader | 60 | `is_npc sentinel stay_area` | Barracks officer, quest offerer | `spec_reach_warden` |
-| 5726 | reach warden cartographer | 58 | `is_npc sentinel stay_area` | Transit seal office, quest offerer | `spec_reach_warden` |
-| 5727 | glasswalk guide recruiter | 56 | `is_npc sentinel stay_area` | Guide camp hiring post | `spec_reach_guide` |
-| 5728 | red sand counting clerk | 60 | `is_npc sentinel stay_area` | Red Sand counting house, non-aggressive NPC | `spec_reach_outrider` |
-| 5729 | caravan provisioner | 55 | `is_npc sentinel stay_area` | Provisioner's Row shopkeeper | `spec_reach_carter` |
-| 5730 | sand-sea carter | 56 | `is_npc stay_area` | Caravan staging yard worker | `spec_reach_carter` |
-| 5731 | reach transit clerk | 57 | `is_npc sentinel stay_area` | Transit seal office bureaucrat | `spec_reach_assessor` |
-| 5732 | drywell attendant | 55 | `is_npc sentinel stay_area` | Well keeper, ambient | `spec_reach_carter` |
-| 5733 | cairn tablet reader | 58 | `is_npc sentinel stay_area` | Scholarly annex, lore NPC | `spec_reach_tidewright` |
-| 5734 | caravan drover | 55 | `is_npc stay_area` | Animal pen worker | — |
-| 5735 | staging yard rat | 55 | `is_npc aggressive stay_area` | Light trash mob | `spec_fido` |
+| 6300 | reach warden gate sentinel | 58 | `is_npc sentinel stay_area` | Toll gate guard, non-aggressive | `spec_reach_warden` |
+| 6301 | reach warden patrol leader | 60 | `is_npc sentinel stay_area` | Barracks officer, quest offerer | `spec_reach_warden` |
+| 6302 | reach warden cartographer | 58 | `is_npc sentinel stay_area` | Transit seal office, quest offerer | `spec_reach_warden` |
+| 6303 | glasswalk guide recruiter | 56 | `is_npc sentinel stay_area` | Guide camp hiring post | `spec_reach_guide` |
+| 6304 | red sand counting clerk | 60 | `is_npc sentinel stay_area` | Red Sand counting house, non-aggressive NPC | `spec_reach_outrider` |
+| 6305 | caravan provisioner | 55 | `is_npc sentinel stay_area` | Provisioner's Row shopkeeper | `spec_reach_carter` |
+| 6306 | sand-sea carter | 56 | `is_npc stay_area` | Caravan staging yard worker | `spec_reach_carter` |
+| 6307 | reach transit clerk | 57 | `is_npc sentinel stay_area` | Transit seal office bureaucrat | `spec_reach_assessor` |
+| 6308 | drywell attendant | 55 | `is_npc sentinel stay_area` | Well keeper, ambient | `spec_reach_carter` |
+| 6309 | cairn tablet reader | 58 | `is_npc sentinel stay_area` | Scholarly annex, lore NPC | `spec_reach_tidewright` |
+| 6310 | caravan drover | 55 | `is_npc stay_area` | Animal pen worker | — |
+| 6311 | staging yard rat | 55 | `is_npc aggressive stay_area` | Light trash mob | `spec_fido` |
 
 ### District B Mobs: Mirror Flats North — Swift Line (Fauna + Warden Patrols)
 
 | Vnum | Name | Lvl | Act Flags | Role | Special |
 |---:|---|---:|---|---|---|
-| 5736 | salt cricket swarm | 56 | `is_npc aggressive stay_area no_body` | Swarm mob, light damage, disorienting | — |
-| 5737 | salt cricket swarm leader | 58 | `is_npc aggressive stay_area no_body` | Quest target, slightly harder swarm variant | — |
-| 5738 | cairn kite | 57 | `is_npc aggressive stay_area` | Raptor predator, patrols salt flats | — |
-| 5739 | cairn kite alpha | 60 | `is_npc aggressive stay_area solo` | Quest target, stronger raptor | — |
-| 5740 | salt crust lurker | 58 | `is_npc aggressive stay_area` | Ambush predator hiding in salt deposits | `spec_poison` |
-| 5741 | brine serpent | 59 | `is_npc aggressive stay_area` | Mineral seep predator | `spec_poison` |
-| 5742 | corrupted warden toll-thief | 60 | `is_npc aggressive stay_area` | Degraded Warden extorting caravans, quest target | — |
-| 5743 | swift line warden patrol | 58 | `is_npc stay_area` | Friendly patrol, non-aggressive | `spec_reach_warden` |
-| 5744 | salt-blinded drifter | 56 | `is_npc aggressive stay_area` | Lost traveler gone mad from reflection | — |
-| 5745 | mineral crust elemental | 62 | `is_npc aggressive stay_area no_body` | Salt-animated elemental, earth strong | — |
+| 6312 | salt cricket swarm | 56 | `is_npc aggressive stay_area no_body` | Swarm mob, light damage, disorienting | — |
+| 6313 | salt cricket swarm leader | 58 | `is_npc aggressive stay_area no_body` | Quest target, slightly harder swarm variant | — |
+| 6314 | cairn kite | 57 | `is_npc aggressive stay_area` | Raptor predator, patrols salt flats | — |
+| 6315 | cairn kite alpha | 60 | `is_npc aggressive stay_area solo` | Quest target, stronger raptor | — |
+| 6316 | salt crust lurker | 58 | `is_npc aggressive stay_area` | Ambush predator hiding in salt deposits | `spec_poison` |
+| 6317 | brine serpent | 59 | `is_npc aggressive stay_area` | Mineral seep predator | `spec_poison` |
+| 6318 | corrupted warden toll-thief | 60 | `is_npc aggressive stay_area` | Degraded Warden extorting caravans, quest target | — |
+| 6319 | swift line warden patrol | 58 | `is_npc stay_area` | Friendly patrol, non-aggressive | `spec_reach_warden` |
+| 6320 | salt-blinded drifter | 56 | `is_npc aggressive stay_area` | Lost traveler gone mad from reflection | — |
+| 6321 | mineral crust elemental | 62 | `is_npc aggressive stay_area no_body` | Salt-animated elemental, earth strong | — |
 
 ### District C Mobs: Mirror Flats South — Heavy Road (Faction + Fauna Mix)
 
 | Vnum | Name | Lvl | Act Flags | Role | Special |
 |---:|---|---:|---|---|---|
-| 5746 | heavy road warden sentinel | 60 | `is_npc sentinel stay_area` | Assessment station guard | `spec_reach_warden` |
-| 5747 | waystation cistern keeper | 58 | `is_npc sentinel stay_area` | Cistern lore NPC | `spec_reach_assessor` |
-| 5748 | red sand outrider scout | 62 | `is_npc aggressive stay_area` | Outrider advance party | `spec_reach_outrider` |
-| 5749 | convoy graveyard scavenger | 60 | `is_npc aggressive stay_area` | Scavenger picking through wrecked convoys | `spec_reach_scavenger` |
-| 5750 | salt flat viper | 58 | `is_npc aggressive stay_area` | Venomous snake, salt-adapted | `spec_poison` |
-| 5751 | brine pool predator | 60 | `is_npc aggressive stay_area` | Ambush hunter at water sources | — |
-| 5752 | assessment station ghost | 62 | `is_npc aggressive stay_area undead no_body` | Spectral toll clerk | `spec_cast_undead` |
-| 5753 | heavy road caravan guard | 58 | `is_npc stay_area` | Non-aggressive caravan escort NPC | — |
-| 5754 | salt slab golem | 64 | `is_npc aggressive stay_area solo` | Construct defender of old assessment station | — |
+| 6322 | heavy road warden sentinel | 60 | `is_npc sentinel stay_area` | Assessment station guard | `spec_reach_warden` |
+| 6323 | waystation cistern keeper | 58 | `is_npc sentinel stay_area` | Cistern lore NPC | `spec_reach_assessor` |
+| 6324 | red sand outrider scout | 62 | `is_npc aggressive stay_area` | Outrider advance party | `spec_reach_outrider` |
+| 6325 | convoy graveyard scavenger | 60 | `is_npc aggressive stay_area` | Scavenger picking through wrecked convoys | `spec_reach_scavenger` |
+| 6326 | salt flat viper | 58 | `is_npc aggressive stay_area` | Venomous snake, salt-adapted | `spec_poison` |
+| 6327 | brine pool predator | 60 | `is_npc aggressive stay_area` | Ambush hunter at water sources | — |
+| 6328 | assessment station ghost | 62 | `is_npc aggressive stay_area undead no_body` | Spectral toll clerk | `spec_cast_undead` |
+| 6329 | heavy road caravan guard | 58 | `is_npc stay_area` | Non-aggressive caravan escort NPC | — |
+| 6330 | salt slab golem | 64 | `is_npc aggressive stay_area solo` | Construct defender of old assessment station | — |
 
 ### District D Mobs: Glasswind Belts (Glass Fauna + Synod + Guides)
 
 | Vnum | Name | Lvl | Act Flags | Role | Special |
 |---:|---|---:|---|---|---|
-| 5755 | glass scorpion | 62 | `is_npc aggressive stay_area` | Glass-carapace predator, venomous | `spec_poison` |
-| 5756 | glass scorpion matriarch | 65 | `is_npc aggressive stay_area solo` | Larger scorpion, quest target | `spec_poison` |
-| 5757 | glassworm burrower | 63 | `is_npc aggressive stay_area` | Subsurface ambush worm | — |
-| 5758 | glassworm tunnel sentinel | 66 | `is_npc aggressive stay_area solo` | Larger worm, guards tunnel network, quest target | `spec_breath_acid` |
-| 5759 | glasswalk guide pathfinder | 60 | `is_npc sentinel stay_area` | Neutral guide at waystation | `spec_reach_guide` |
-| 5760 | glasswalk guide elder | 63 | `is_npc sentinel stay_area` | Senior guide, quest offerer | `spec_reach_guide` |
-| 5761 | synod whisper courier | 62 | `is_npc aggressive stay_area` | Smuggler carrying relic components | `spec_reach_smuggler` |
-| 5762 | synod lookout | 60 | `is_npc aggressive stay_area` | Whisper Cell sentry, quest target | `spec_reach_smuggler` |
-| 5763 | synod ritual keeper | 64 | `is_npc aggressive stay_area` | Cult caster, quest target | `spec_cast_cleric` |
-| 5764 | thermal fault elemental | 66 | `is_npc aggressive stay_area no_body` | Fire/earth elemental at fault ridge, quest target | `spec_breath_fire` |
-| 5765 | vitrified sand horror | 65 | `is_npc aggressive stay_area no_body` | Glass-animated construct, quest target | — |
-| 5766 | molten glass sentinel | 67 | `is_npc aggressive stay_area solo no_body` | Fire-element guardian of thermal anomaly, quest target | `spec_breath_fire` |
-| 5767 | shardstorm wind spirit | 63 | `is_npc aggressive stay_area no_body` | Air elemental carrying glass debris | — |
-| 5768 | amber glass crawler | 61 | `is_npc aggressive stay_area` | Insect adapted to amber-tinted glass zones | — |
-| 5769 | glassworm burrower queen | 70 | `is_npc aggressive sentinel stay_area boss no_flee` | **MINI-BOSS**: apex fauna predator of the Belts | `spec_breath_acid` |
+| 6331 | glass scorpion | 62 | `is_npc aggressive stay_area` | Glass-carapace predator, venomous | `spec_poison` |
+| 6332 | glass scorpion matriarch | 65 | `is_npc aggressive stay_area solo` | Larger scorpion, quest target | `spec_poison` |
+| 6333 | glassworm burrower | 63 | `is_npc aggressive stay_area` | Subsurface ambush worm | — |
+| 6334 | glassworm tunnel sentinel | 66 | `is_npc aggressive stay_area solo` | Larger worm, guards tunnel network, quest target | `spec_breath_acid` |
+| 6335 | glasswalk guide pathfinder | 60 | `is_npc sentinel stay_area` | Neutral guide at waystation | `spec_reach_guide` |
+| 6336 | glasswalk guide elder | 63 | `is_npc sentinel stay_area` | Senior guide, quest offerer | `spec_reach_guide` |
+| 6337 | synod whisper courier | 62 | `is_npc aggressive stay_area` | Smuggler carrying relic components | `spec_reach_smuggler` |
+| 6338 | synod lookout | 60 | `is_npc aggressive stay_area` | Whisper Cell sentry, quest target | `spec_reach_smuggler` |
+| 6339 | synod ritual keeper | 64 | `is_npc aggressive stay_area` | Cult caster, quest target | `spec_cast_cleric` |
+| 6340 | thermal fault elemental | 66 | `is_npc aggressive stay_area no_body` | Fire/earth elemental at fault ridge, quest target | `spec_breath_fire` |
+| 6341 | vitrified sand horror | 65 | `is_npc aggressive stay_area no_body` | Glass-animated construct, quest target | — |
+| 6342 | molten glass sentinel | 67 | `is_npc aggressive stay_area solo no_body` | Fire-element guardian of thermal anomaly, quest target | `spec_breath_fire` |
+| 6343 | shardstorm wind spirit | 63 | `is_npc aggressive stay_area no_body` | Air elemental carrying glass debris | — |
+| 6344 | amber glass crawler | 61 | `is_npc aggressive stay_area` | Insect adapted to amber-tinted glass zones | — |
+| 6345 | glassworm burrower queen | 70 | `is_npc aggressive sentinel stay_area boss no_flee` | **MINI-BOSS**: apex fauna predator of the Belts | `spec_breath_acid` |
 
 ### District E Mobs: Cairn Line Ruins — Measure's Rest (Multi-Faction + Scholars)
 
 | Vnum | Name | Lvl | Act Flags | Role | Special |
 |---:|---|---:|---|---|---|
-| 5770 | cairn scavenger | 62 | `is_npc aggressive stay_area` | Generic relic hunter | `spec_reach_scavenger` |
-| 5771 | cairn scavenger digger | 60 | `is_npc aggressive stay_area` | Laborer stripping bronze fittings | `spec_reach_scavenger` |
-| 5772 | cairn scavenger lookout | 61 | `is_npc aggressive stay_area` | Sentry watching for Warden patrols | `spec_reach_scavenger` |
-| 5773 | cairn scavenger warlord | 70 | `is_npc aggressive sentinel stay_area boss no_flee` | **MINI-BOSS**: relic hunter faction leader | — |
-| 5774 | red sand debt collector | 64 | `is_npc aggressive stay_area` | Outrider field agent, quest target | `spec_reach_outrider` |
-| 5775 | red sand assessor | 66 | `is_npc aggressive stay_area` | Outrider cargo evaluator, quest target | `spec_reach_outrider` |
-| 5776 | red sand enforcer | 68 | `is_npc aggressive stay_area solo` | Outrider muscle, quest target | — |
-| 5777 | measure's rest warden guard | 64 | `is_npc sentinel stay_area` | Fortress guard, non-aggressive | `spec_reach_warden` |
-| 5778 | warden commander | 68 | `is_npc sentinel stay_area` | Faction leader, quest offerer | `spec_reach_warden` |
-| 5779 | landward tidewright | 62 | `is_npc sentinel stay_area` | Archaic scribe preserving Measure Script | `spec_reach_tidewright` |
-| 5780 | kowloon scholar | 60 | `is_npc sentinel stay_area` | Jade Clerk-funded researcher, quest offerer | `spec_reach_tidewright` |
-| 5781 | tablet restoration apprentice | 58 | `is_npc sentinel stay_area` | Scholar's assistant | `spec_reach_tidewright` |
-| 5782 | cairn station construct | 66 | `is_npc aggressive sentinel stay_area` | Ancient stone guardian of cairn ruins | — |
-| 5783 | toll cairn specter | 64 | `is_npc aggressive stay_area undead no_body` | Ghost of a toll clerk, haunts ruined stations | `spec_cast_undead` |
-| 5784 | forgery detection scribe | 60 | `is_npc sentinel stay_area` | Identifies fake tablets, ambient NPC | `spec_reach_assessor` |
+| 6346 | cairn scavenger | 62 | `is_npc aggressive stay_area` | Generic relic hunter | `spec_reach_scavenger` |
+| 6347 | cairn scavenger digger | 60 | `is_npc aggressive stay_area` | Laborer stripping bronze fittings | `spec_reach_scavenger` |
+| 6348 | cairn scavenger lookout | 61 | `is_npc aggressive stay_area` | Sentry watching for Warden patrols | `spec_reach_scavenger` |
+| 6349 | cairn scavenger warlord | 70 | `is_npc aggressive sentinel stay_area boss no_flee` | **MINI-BOSS**: relic hunter faction leader | — |
+| 6350 | red sand debt collector | 64 | `is_npc aggressive stay_area` | Outrider field agent, quest target | `spec_reach_outrider` |
+| 6351 | red sand assessor | 66 | `is_npc aggressive stay_area` | Outrider cargo evaluator, quest target | `spec_reach_outrider` |
+| 6352 | red sand enforcer | 68 | `is_npc aggressive stay_area solo` | Outrider muscle, quest target | — |
+| 6353 | measure's rest warden guard | 64 | `is_npc sentinel stay_area` | Fortress guard, non-aggressive | `spec_reach_warden` |
+| 6354 | warden commander | 68 | `is_npc sentinel stay_area` | Faction leader, quest offerer | `spec_reach_warden` |
+| 6355 | landward tidewright | 62 | `is_npc sentinel stay_area` | Archaic scribe preserving Measure Script | `spec_reach_tidewright` |
+| 6356 | kowloon scholar | 60 | `is_npc sentinel stay_area` | Jade Clerk-funded researcher, quest offerer | `spec_reach_tidewright` |
+| 6357 | tablet restoration apprentice | 58 | `is_npc sentinel stay_area` | Scholar's assistant | `spec_reach_tidewright` |
+| 6358 | cairn station construct | 66 | `is_npc aggressive sentinel stay_area` | Ancient stone guardian of cairn ruins | — |
+| 6359 | toll cairn specter | 64 | `is_npc aggressive stay_area undead no_body` | Ghost of a toll clerk, haunts ruined stations | `spec_cast_undead` |
+| 6360 | forgery detection scribe | 60 | `is_npc sentinel stay_area` | Identifies fake tablets, ambient NPC | `spec_reach_assessor` |
 
 ### District F Mobs: Sealed Route Remnants (Synod + Quarantine Horrors)
 
 | Vnum | Name | Lvl | Act Flags | Role | Special |
 |---:|---|---:|---|---|---|
-| 5785 | synod tunnel sentry | 65 | `is_npc aggressive stay_area` | Smuggler tunnel guard, quest target | `spec_reach_smuggler` |
-| 5786 | synod relic handler | 66 | `is_npc aggressive stay_area` | Cult specialist moving contraband | `spec_reach_smuggler` |
-| 5787 | synod eclipsed chanter | 68 | `is_npc aggressive stay_area` | Shadow/fire caster, ritual room priest | `spec_cast_bigtime` |
-| 5788 | whisper cell commandant | 72 | `is_npc aggressive sentinel stay_area boss no_flee` | **MINI-BOSS**: Synod operative leader, quest target | `spec_cast_bigtime` |
-| 5789 | quarantine breach horror | 68 | `is_npc aggressive stay_area no_body` | Relic hazard escaped containment, quest target | `spec_breath_gas` |
-| 5790 | containment ward specter | 66 | `is_npc aggressive stay_area undead no_body` | Undead quarantine scribe | `spec_cast_undead` |
-| 5791 | sealed crate aberration | 67 | `is_npc aggressive stay_area no_body` | Animated relic container, cold/shadow | — |
-| 5792 | relic provenance ghost | 65 | `is_npc aggressive stay_area undead no_body` | Southern Pyramid provenance spirit | `spec_cast_undead` |
-| 5793 | funerary consignment golem | 69 | `is_npc aggressive stay_area solo` | Construct guarding sealed cargo | — |
-| 5794 | quarantine escort revenant | 67 | `is_npc aggressive stay_area undead` | Undead armed escort from the Fracture Era | — |
-| 5795 | sealed route marker spirit | 64 | `is_npc aggressive stay_area undead no_body` | Ghost bound to abandoned route markers | `spec_cast_undead` |
+| 6361 | synod tunnel sentry | 65 | `is_npc aggressive stay_area` | Smuggler tunnel guard, quest target | `spec_reach_smuggler` |
+| 6362 | synod relic handler | 66 | `is_npc aggressive stay_area` | Cult specialist moving contraband | `spec_reach_smuggler` |
+| 6363 | synod eclipsed chanter | 68 | `is_npc aggressive stay_area` | Shadow/fire caster, ritual room priest | `spec_cast_bigtime` |
+| 6364 | whisper cell commandant | 72 | `is_npc aggressive sentinel stay_area boss no_flee` | **MINI-BOSS**: Synod operative leader, quest target | `spec_cast_bigtime` |
+| 6365 | quarantine breach horror | 68 | `is_npc aggressive stay_area no_body` | Relic hazard escaped containment, quest target | `spec_breath_gas` |
+| 6366 | containment ward specter | 66 | `is_npc aggressive stay_area undead no_body` | Undead quarantine scribe | `spec_cast_undead` |
+| 6367 | sealed crate aberration | 67 | `is_npc aggressive stay_area no_body` | Animated relic container, cold/shadow | — |
+| 6368 | relic provenance ghost | 65 | `is_npc aggressive stay_area undead no_body` | Southern Pyramid provenance spirit | `spec_cast_undead` |
+| 6369 | funerary consignment golem | 69 | `is_npc aggressive stay_area solo` | Construct guarding sealed cargo | — |
+| 6370 | quarantine escort revenant | 67 | `is_npc aggressive stay_area undead` | Undead armed escort from the Fracture Era | — |
+| 6371 | sealed route marker spirit | 64 | `is_npc aggressive stay_area undead no_body` | Ghost bound to abandoned route markers | `spec_cast_undead` |
 
 ### District G Mobs: Tidemouth Approach (Coastal Fauna + Jurisdiction NPCs)
 
 | Vnum | Name | Lvl | Act Flags | Role | Special |
 |---:|---|---:|---|---|---|
-| 5796 | tidemouth crab | 60 | `is_npc aggressive stay_area` | Amphibious crustacean, burrow hazard | — |
-| 5797 | tidemouth crab broodmother | 65 | `is_npc aggressive stay_area solo` | Larger crab, quest target | — |
-| 5798 | tidal pool lurker | 62 | `is_npc aggressive stay_area` | Ambush predator in coastal pools | `spec_poison` |
-| 5799 | brackish channel eel | 60 | `is_npc aggressive stay_area` | Aquatic predator in tidal channels | — |
-| 5800 | saltmarsh serpent | 63 | `is_npc aggressive stay_area` | Venomous coastal snake | `spec_poison` |
-| 5801 | tidemouth raider | 64 | `is_npc aggressive stay_area` | Bandit preying on coastal transition zone, quest target | `spec_thief` |
-| 5802 | rogue outrider | 65 | `is_npc aggressive stay_area` | Red Sand agent gone independent, quest target | — |
-| 5803 | jurisdiction specter | 66 | `is_npc aggressive stay_area undead no_body` | Ghost of a boundary dispute, quest target | `spec_cast_undead` |
-| 5804 | sand-sea carter teamster | 58 | `is_npc sentinel stay_area` | Guild cargo transfer worker, non-aggressive | `spec_reach_carter` |
-| 5805 | carter camp cook | 56 | `is_npc sentinel stay_area` | Camp services NPC | `spec_reach_carter` |
-| 5806 | tidemouth warden post commander | 64 | `is_npc sentinel stay_area` | Contested jurisdiction officer, quest offerer | `spec_reach_warden` |
-| 5807 | harbor warden forward scout | 62 | `is_npc sentinel stay_area` | Mafdet jurisdiction, non-aggressive | `spec_guard` |
-| 5808 | coastal fog phantom | 63 | `is_npc aggressive stay_area night_only undead no_body` | Fog-season apparition, night only | `spec_cast_undead` |
-| 5809 | dune scarab swarm | 59 | `is_npc aggressive stay_area no_body` | Coastal insect swarm | — |
+| 6372 | tidemouth crab | 60 | `is_npc aggressive stay_area` | Amphibious crustacean, burrow hazard | — |
+| 6373 | tidemouth crab broodmother | 65 | `is_npc aggressive stay_area solo` | Larger crab, quest target | — |
+| 6374 | tidal pool lurker | 62 | `is_npc aggressive stay_area` | Ambush predator in coastal pools | `spec_poison` |
+| 6375 | brackish channel eel | 60 | `is_npc aggressive stay_area` | Aquatic predator in tidal channels | — |
+| 6376 | saltmarsh serpent | 63 | `is_npc aggressive stay_area` | Venomous coastal snake | `spec_poison` |
+| 6377 | tidemouth raider | 64 | `is_npc aggressive stay_area` | Bandit preying on coastal transition zone, quest target | `spec_thief` |
+| 6378 | rogue outrider | 65 | `is_npc aggressive stay_area` | Red Sand agent gone independent, quest target | — |
+| 6379 | jurisdiction specter | 66 | `is_npc aggressive stay_area undead no_body` | Ghost of a boundary dispute, quest target | `spec_cast_undead` |
+| 6380 | sand-sea carter teamster | 58 | `is_npc sentinel stay_area` | Guild cargo transfer worker, non-aggressive | `spec_reach_carter` |
+| 6381 | carter camp cook | 56 | `is_npc sentinel stay_area` | Camp services NPC | `spec_reach_carter` |
+| 6382 | tidemouth warden post commander | 64 | `is_npc sentinel stay_area` | Contested jurisdiction officer, quest offerer | `spec_reach_warden` |
+| 6383 | harbor warden forward scout | 62 | `is_npc sentinel stay_area` | Mafdet jurisdiction, non-aggressive | `spec_guard` |
+| 6384 | coastal fog phantom | 63 | `is_npc aggressive stay_area night_only undead no_body` | Fog-season apparition, night only | `spec_cast_undead` |
+| 6385 | dune scarab swarm | 59 | `is_npc aggressive stay_area no_body` | Coastal insect swarm | — |
 
 ### District H Mobs: Shoreward Threshold (Revenants + Bosses)
 
 | Vnum | Name | Lvl | Act Flags | Role | Special |
 |---:|---|---:|---|---|---|
-| 5810 | assessment hall guardian | 70 | `is_npc aggressive sentinel stay_area` | Stone construct defending conversion halls | — |
-| 5811 | shoreward clerk revenant | 68 | `is_npc aggressive stay_area undead` | Undead assessor, conversion table caster | `spec_cast_cleric` |
-| 5812 | toll-gate wraith | 70 | `is_npc aggressive stay_area undead no_body` | Incorporeal toll enforcer | `spec_cast_undead` |
-| 5813 | water-debt phantom | 69 | `is_npc aggressive stay_area undead no_body` | Ghost bound to the Discharge Basin | `spec_cast_undead` |
-| 5814 | risk assumption shade | 71 | `is_npc aggressive stay_area undead no_body` | Spirit of the Oath Court | `spec_cast_cleric` |
-| 5815 | conversion engine construct | 72 | `is_npc aggressive stay_area solo` | Ancient jurisdictional machinery given life | — |
-| 5816 | dual-seal sentinel | 73 | `is_npc aggressive sentinel stay_area solo` | Construct guarding the Dual Attestation Chamber | — |
-| 5817 | undercroft watcher | 71 | `is_npc aggressive stay_area undead` | Revenant guarding the sealed sub-level | `spec_cast_undead` |
-| 5818 | fractured authority elemental | 74 | `is_npc aggressive stay_area solo no_body` | Manifestation of competing laws, earth/water | `spec_breath_any` |
-| 5819 | shoreward revenant | 75 | `is_npc aggressive sentinel stay_area boss no_flee undead` | **BOSS**: Dead Assessor, caster/melee hybrid | `spec_cast_bigtime` |
-| 5820 | toll-marshal of the three routes | 78 | `is_npc aggressive sentinel stay_area boss no_flee` | **BOSS**: Animated enforcer of all three routes | `spec_cast_judge` |
-| 5821 | arbiter of the conversion | 80 | `is_npc aggressive sentinel stay_area boss no_flee no_body` | **FINAL BOSS**: The Shoreward Conversion given hostile sentience | `spec_cast_bigtime` |
-| 5822 | reach warden officer | 66 | `is_npc sentinel stay_area` | Warden at Sealed Route approach, quest offerer | `spec_reach_warden` |
-| 5823 | shoreward seal guardian | 72 | `is_npc aggressive sentinel stay_area solo` | Elite construct at the Seal itself | — |
+| 6386 | assessment hall guardian | 70 | `is_npc aggressive sentinel stay_area` | Stone construct defending conversion halls | — |
+| 6387 | shoreward clerk revenant | 68 | `is_npc aggressive stay_area undead` | Undead assessor, conversion table caster | `spec_cast_cleric` |
+| 6388 | toll-gate wraith | 70 | `is_npc aggressive stay_area undead no_body` | Incorporeal toll enforcer | `spec_cast_undead` |
+| 6389 | water-debt phantom | 69 | `is_npc aggressive stay_area undead no_body` | Ghost bound to the Discharge Basin | `spec_cast_undead` |
+| 6390 | risk assumption shade | 71 | `is_npc aggressive stay_area undead no_body` | Spirit of the Oath Court | `spec_cast_cleric` |
+| 6391 | conversion engine construct | 72 | `is_npc aggressive stay_area solo` | Ancient jurisdictional machinery given life | — |
+| 6392 | dual-seal sentinel | 73 | `is_npc aggressive sentinel stay_area solo` | Construct guarding the Dual Attestation Chamber | — |
+| 6393 | undercroft watcher | 71 | `is_npc aggressive stay_area undead` | Revenant guarding the sealed sub-level | `spec_cast_undead` |
+| 6394 | fractured authority elemental | 74 | `is_npc aggressive stay_area solo no_body` | Manifestation of competing laws, earth/water | `spec_breath_any` |
+| 6395 | shoreward revenant | 75 | `is_npc aggressive sentinel stay_area boss no_flee undead` | **BOSS**: Dead Assessor, caster/melee hybrid | `spec_cast_bigtime` |
+| 6396 | toll-marshal of the three routes | 78 | `is_npc aggressive sentinel stay_area boss no_flee` | **BOSS**: Animated enforcer of all three routes | `spec_cast_judge` |
+| 6397 | arbiter of the conversion | 80 | `is_npc aggressive sentinel stay_area boss no_flee no_body` | **FINAL BOSS**: The Shoreward Conversion given hostile sentience | `spec_cast_bigtime` |
+| 6398 | reach warden officer | 66 | `is_npc sentinel stay_area` | Warden at Sealed Route approach, quest offerer | `spec_reach_warden` |
+| 6399 | shoreward seal guardian | 72 | `is_npc aggressive sentinel stay_area solo` | Elite construct at the Seal itself | — |
 
 ### Boss Cadence Summary
 
 | Boss | Vnum | Room | Level | Type | Special |
 |---|---:|---|---:|---|---|
-| Glassworm Burrower Queen | 5769 | ~5899 (District D) | 70 | Mini-boss | `spec_breath_acid` |
-| Cairn Scavenger Warlord | 5773 | ~5939 (District E) | 70 | Mini-boss | — |
-| Whisper Cell Commandant | 5788 | ~6017 (District F) | 72 | Mini-boss | `spec_cast_bigtime` |
-| Shoreward Revenant | 5819 | 6116 (District H) | 75 | Boss | `spec_cast_bigtime` |
-| Toll-Marshal of the Three Routes | 5820 | 6118 (District H) | 78 | Boss | `spec_cast_judge` |
-| Arbiter of the Conversion | 5821 | 6122 (District H) | 80 | Final Boss | `spec_cast_bigtime` |
+| Glassworm Burrower Queen | 6345 | ~6475 (District D) | 70 | Mini-boss | `spec_breath_acid` |
+| Cairn Scavenger Warlord | 6349 | ~6515 (District E) | 70 | Mini-boss | — |
+| Whisper Cell Commandant | 6364 | ~6593 (District F) | 72 | Mini-boss | `spec_cast_bigtime` |
+| Shoreward Revenant | 6395 | 6692 (District H) | 75 | Boss | `spec_cast_bigtime` |
+| Toll-Marshal of the Three Routes | 6396 | 6694 (District H) | 78 | Boss | `spec_cast_judge` |
+| Arbiter of the Conversion | 6397 | 6698 (District H) | 80 | Final Boss | `spec_cast_bigtime` |
 
 ### Specials Assignment Summary
 
 | Special | Assigned To |
 |---|---|
-| `spec_reach_warden` | 5724, 5725, 5726, 5743, 5746, 5777, 5778, 5806, 5822 |
-| `spec_reach_guide` | 5727, 5759, 5760 |
-| `spec_reach_assessor` | 5731, 5747, 5784 |
-| `spec_reach_outrider` | 5728, 5748, 5774, 5775 |
-| `spec_reach_scavenger` | 5770, 5771, 5772 |
-| `spec_reach_tidewright` | 5733, 5779, 5780, 5781 |
-| `spec_reach_carter` | 5729, 5730, 5732, 5804, 5805 |
-| `spec_reach_smuggler` | 5761, 5762, 5785, 5786 |
-| `spec_poison` | 5740, 5741, 5750, 5755, 5756, 5798, 5800 |
-| `spec_cast_undead` | 5752, 5783, 5790, 5792, 5795, 5803, 5808, 5812, 5813, 5817 |
-| `spec_cast_cleric` | 5763, 5811, 5814 |
-| `spec_cast_bigtime` | 5787, 5788, 5819, 5821 |
-| `spec_cast_judge` | 5820 |
-| `spec_breath_fire` | 5764, 5766 |
-| `spec_breath_acid` | 5758, 5769 |
-| `spec_breath_gas` | 5789 |
-| `spec_breath_any` | 5818 |
-| `spec_fido` | 5735 |
-| `spec_thief` | 5801 |
-| `spec_guard` | 5807 |
+| `spec_reach_warden` | 6300, 6301, 6302, 6319, 6322, 6353, 6354, 6382, 6398 |
+| `spec_reach_guide` | 6303, 6335, 6336 |
+| `spec_reach_assessor` | 6307, 6323, 6360 |
+| `spec_reach_outrider` | 6304, 6324, 6350, 6351 |
+| `spec_reach_scavenger` | 6346, 6347, 6348 |
+| `spec_reach_tidewright` | 6309, 6355, 6356, 6357 |
+| `spec_reach_carter` | 6305, 6306, 6308, 6380, 6381 |
+| `spec_reach_smuggler` | 6337, 6338, 6361, 6362 |
+| `spec_poison` | 6316, 6317, 6326, 6331, 6332, 6374, 6376 |
+| `spec_cast_undead` | 6328, 6359, 6366, 6368, 6371, 6379, 6384, 6388, 6389, 6393 |
+| `spec_cast_cleric` | 6339, 6387, 6390 |
+| `spec_cast_bigtime` | 6363, 6364, 6395, 6397 |
+| `spec_cast_judge` | 6396 |
+| `spec_breath_fire` | 6340, 6342 |
+| `spec_breath_acid` | 6334, 6345 |
+| `spec_breath_gas` | 6365 |
+| `spec_breath_any` | 6394 |
+| `spec_fido` | 6311 |
+| `spec_thief` | 6377 |
+| `spec_guard` | 6383 |
 
 ---
 
-## Full Object Roster (5724-5848, 125 objects)
+## Full Object Roster (6300-6424, 125 objects)
 
 Object vnums are assigned sequentially. Each entry lists vnum, name, item type, wear flags, extra flags, weight range, and thematic notes.
 
-### Keys (5724-5728)
+### Keys (6300-6304)
 
 | Vnum | Name | Type | Wear | Extra | Wt | Notes |
 |---:|---|---|---|---|---:|---|
-| 5724 | warden archive key | key | take | — | 1 | Unlocks Measure's Rest Sealed Archive (5950) |
-| 5725 | quarantine seal key | key | take | — | 1 | Unlocks Sealed Relic Vault (5997) |
-| 5726 | shoreward threshold key | key | take | — | 1 | Unlocks Undercroft Descent (6109) |
-| 5727 | cairn station master key | key | take | — | 1 | Unlocks internal cairn station doors |
-| 5728 | synod cipher key | key | take | — | 1 | Unlocks Synod smuggler tunnel hidden door |
+| 6300 | warden archive key | key | take | — | 1 | Unlocks Measure's Rest Sealed Archive (6526) |
+| 6301 | quarantine seal key | key | take | — | 1 | Unlocks Sealed Relic Vault (6573) |
+| 6302 | shoreward threshold key | key | take | — | 1 | Unlocks Undercroft Descent (6685) |
+| 6303 | cairn station master key | key | take | — | 1 | Unlocks internal cairn station doors |
+| 6304 | synod cipher key | key | take | — | 1 | Unlocks Synod smuggler tunnel hidden door |
 
-### Weapons (5729-5748)
+### Weapons (6305-6324)
 
 | Vnum | Name | Type | Wear | Extra | Wt | value3 | Notes |
 |---:|---|---|---|---|---:|---:|---|
-| 5729 | salt-crusted bronze khopesh | weapon | hold take | — | 8 | 3 (slash) | Mirror Flats melee drop, sickle-sword with brine patina |
-| 5730 | glasswalk guide's chitin staff | weapon | hold take | two-handed | 4 | 7 (pound) | Guide weapon, chitin-and-resin construction |
-| 5731 | cairn scavenger's pry bar | weapon | hold take | — | 9 | 8 (crush) | Heavy iron tool repurposed as weapon |
-| 5732 | red sand assessor's stylus blade | weapon | hold take | — | 3 | 2 (stab) | Disguised weapon, sharp bronze writing implement |
-| 5733 | synod eclipse dagger | weapon | hold take | — | 3 | 11 (pierce) | Ritual knife with Eclipsed Tongues glyphs |
-| 5734 | warden patrol spear | weapon | hold take | two-handed | 7 | 11 (pierce) | Standard Reach Warden patrol weapon |
-| 5735 | glass-shard flensing knife | weapon | hold take | — | 4 | 1 (slice) | Glassworm-tooth blade, caster weight |
-| 5736 | toll-marshal's triple-headed flail | weapon | hold take | two-handed boss | 10 | 7 (pound) | Boss drop: Toll-Marshal. Three route-branded heads |
-| 5737 | arbiter's gavel of conversion | weapon | hold take | boss | 5 | 8 (crush) | Boss drop: Arbiter. Basalt judicial hammer, inscribed with dual notation |
-| 5738 | brine-forged scimitar | weapon | hold take | — | 8 | 3 (slash) | Tidemouth melee drop, salt-crystal edge |
-| 5739 | shoreward revenant's quill-sword | weapon | hold take | boss | 6 | 2 (stab) | Boss drop: Shoreward Revenant. Elongated stylus-blade |
-| 5740 | glassworm stinger lance | weapon | hold take | two-handed | 7 | 11 (pierce) | Crafted from glassworm tail barb |
-| 5741 | cairn kite talon dagger | weapon | hold take | — | 4 | 5 (claw) | Raptor-talon blade, light caster weapon |
-| 5742 | assessment scale mace | weapon | hold take | — | 9 | 7 (pound) | Bronze balance arm repurposed as bludgeon |
-| 5743 | tidemouth crab-claw gauntlet | weapon | hold take | fist | 10 | 0 (hit) | Fist weapon: chitin claw mounted on leather glove |
-| 5744 | thermal fault obsidian blade | weapon | hold take | — | 6 | 3 (slash) | Volcanic glass sword from thermal anomaly zone |
-| 5745 | sand-sea carter's cargo hook | weapon | hold take | — | 8 | 9 (grep) | Dock-loading hook, heavy melee |
-| 5746 | landward tidewright's inscribing rod | weapon | hold take | wand | 2 | 7 (pound) | Wand: Measure Script focus implement |
-| 5747 | quarantine ward staff | weapon | hold take | two-handed | 3 | 7 (pound) | Sealed Route containment focus, caster two-hander |
-| 5748 | glassworm queen's fang | weapon | hold take | boss | 7 | 11 (pierce) | Boss drop: Glassworm Queen. Acid-etched crystalline fang |
+| 6305 | salt-crusted bronze khopesh | weapon | hold take | — | 8 | 3 (slash) | Mirror Flats melee drop, sickle-sword with brine patina |
+| 6306 | glasswalk guide's chitin staff | weapon | hold take | two-handed | 4 | 7 (pound) | Guide weapon, chitin-and-resin construction |
+| 6307 | cairn scavenger's pry bar | weapon | hold take | — | 9 | 8 (crush) | Heavy iron tool repurposed as weapon |
+| 6308 | red sand assessor's stylus blade | weapon | hold take | — | 3 | 2 (stab) | Disguised weapon, sharp bronze writing implement |
+| 6309 | synod eclipse dagger | weapon | hold take | — | 3 | 11 (pierce) | Ritual knife with Eclipsed Tongues glyphs |
+| 6310 | warden patrol spear | weapon | hold take | two-handed | 7 | 11 (pierce) | Standard Reach Warden patrol weapon |
+| 6311 | glass-shard flensing knife | weapon | hold take | — | 4 | 1 (slice) | Glassworm-tooth blade, caster weight |
+| 6312 | toll-marshal's triple-headed flail | weapon | hold take | two-handed boss | 10 | 7 (pound) | Boss drop: Toll-Marshal. Three route-branded heads |
+| 6313 | arbiter's gavel of conversion | weapon | hold take | boss | 5 | 8 (crush) | Boss drop: Arbiter. Basalt judicial hammer, inscribed with dual notation |
+| 6314 | brine-forged scimitar | weapon | hold take | — | 8 | 3 (slash) | Tidemouth melee drop, salt-crystal edge |
+| 6315 | shoreward revenant's quill-sword | weapon | hold take | boss | 6 | 2 (stab) | Boss drop: Shoreward Revenant. Elongated stylus-blade |
+| 6316 | glassworm stinger lance | weapon | hold take | two-handed | 7 | 11 (pierce) | Crafted from glassworm tail barb |
+| 6317 | cairn kite talon dagger | weapon | hold take | — | 4 | 5 (claw) | Raptor-talon blade, light caster weapon |
+| 6318 | assessment scale mace | weapon | hold take | — | 9 | 7 (pound) | Bronze balance arm repurposed as bludgeon |
+| 6319 | tidemouth crab-claw gauntlet | weapon | hold take | fist | 10 | 0 (hit) | Fist weapon: chitin claw mounted on leather glove |
+| 6320 | thermal fault obsidian blade | weapon | hold take | — | 6 | 3 (slash) | Volcanic glass sword from thermal anomaly zone |
+| 6321 | sand-sea carter's cargo hook | weapon | hold take | — | 8 | 9 (grep) | Dock-loading hook, heavy melee |
+| 6322 | landward tidewright's inscribing rod | weapon | hold take | wand | 2 | 7 (pound) | Wand: Measure Script focus implement |
+| 6323 | quarantine ward staff | weapon | hold take | two-handed | 3 | 7 (pound) | Sealed Route containment focus, caster two-hander |
+| 6324 | glassworm queen's fang | weapon | hold take | boss | 7 | 11 (pierce) | Boss drop: Glassworm Queen. Acid-etched crystalline fang |
 
-### Armor — Head/Face/Neck (5749-5758)
-
-| Vnum | Name | Type | Wear | Extra | Wt | Notes |
-|---:|---|---|---|---|---:|---|
-| 5749 | salt-bleached sun hood | armor | head take | — | 4 | Mirror Flats head protection, linen and salt-stiffened leather |
-| 5750 | glasswalk guide's tinted goggles | armor | face take | — | 2 | Glass-reading eye protection, smoked-glass lenses |
-| 5751 | reach warden's patrol helm | armor | head take | — | 9 | Bronze helm with survey-mark crest |
-| 5752 | cairn kite feather gorget | armor | neck take | — | 4 | Raptor-feather collar, light neck protection |
-| 5753 | synod eclipse mask | armor | face take | — | 3 | Eclipsed Tongues ritual mask, dark glass and leather |
-| 5754 | shoreward assessor's circlet | armor | head take | boss | 5 | Boss drop: Shoreward Revenant. Bronze circlet with dual-notation inscription |
-| 5755 | red sand factor's silk veil | armor | face take | — | 2 | Desert sun protection and identity concealment |
-| 5756 | toll-cairn sentinel's basalt helm | armor | head take | — | 14 | Heavy stone-reinforced helm, tank weight |
-| 5757 | tidemouth salt-crust collar | armor | neck take | — | 8 | Mineral-encrusted neck guard, maritime motif |
-| 5758 | arbiter's jurisdictional crown | armor | head take | boss | 6 | Boss drop: Arbiter. Basalt crown with inland and maritime law inscriptions |
-
-### Armor — Body/About/Shoulders (5759-5768)
+### Armor — Head/Face/Neck (6325-6334)
 
 | Vnum | Name | Type | Wear | Extra | Wt | Notes |
 |---:|---|---|---|---|---:|---|
-| 5759 | glasswalk guide's leather jerkin | armor | body take | — | 7 | Chitin-reinforced desert leather, melee weight |
-| 5760 | warden patrol brigandine | armor | body take | — | 12 | Bronze-studded patrol armor, tank weight |
-| 5761 | synod whisper cloak | armor | about take | — | 3 | Dark cloth cloak with cult sigils woven in |
-| 5762 | cairn scavenger's oiled duster | armor | about take | — | 7 | Weather-resistant salvage coat |
-| 5763 | red sand outrider's silk surcoat | armor | body take | — | 4 | Fine commercial attire doubling as light armor |
-| 5764 | shoreward table vestment | armor | about take | — | 5 | Assessor's ceremonial robe with conversion tables embroidered |
-| 5765 | toll-marshal's triple-route tabard | armor | body take | boss | 11 | Boss drop: Toll-Marshal. Tabard bearing all three route insignia |
-| 5766 | salt-crusted mantle | armor | shoulders take | — | 8 | Mineral-encrusted shoulder piece, Mirror Flats origin |
-| 5767 | glassworm-hide pauldrons | armor | shoulders take | — | 10 | Translucent chitin shoulder guards |
-| 5768 | tidemouth waxed storm cloak | armor | about take | — | 7 | Maritime-influenced weather cloak, resin-sealed |
+| 6325 | salt-bleached sun hood | armor | head take | — | 4 | Mirror Flats head protection, linen and salt-stiffened leather |
+| 6326 | glasswalk guide's tinted goggles | armor | face take | — | 2 | Glass-reading eye protection, smoked-glass lenses |
+| 6327 | reach warden's patrol helm | armor | head take | — | 9 | Bronze helm with survey-mark crest |
+| 6328 | cairn kite feather gorget | armor | neck take | — | 4 | Raptor-feather collar, light neck protection |
+| 6329 | synod eclipse mask | armor | face take | — | 3 | Eclipsed Tongues ritual mask, dark glass and leather |
+| 6330 | shoreward assessor's circlet | armor | head take | boss | 5 | Boss drop: Shoreward Revenant. Bronze circlet with dual-notation inscription |
+| 6331 | red sand factor's silk veil | armor | face take | — | 2 | Desert sun protection and identity concealment |
+| 6332 | toll-cairn sentinel's basalt helm | armor | head take | — | 14 | Heavy stone-reinforced helm, tank weight |
+| 6333 | tidemouth salt-crust collar | armor | neck take | — | 8 | Mineral-encrusted neck guard, maritime motif |
+| 6334 | arbiter's jurisdictional crown | armor | head take | boss | 6 | Boss drop: Arbiter. Basalt crown with inland and maritime law inscriptions |
 
-### Armor — Arms/Wrist/Hands (5769-5778)
-
-| Vnum | Name | Type | Wear | Extra | Wt | Notes |
-|---:|---|---|---|---|---:|---|
-| 5769 | reach warden's bronze vambraces | armor | arms take | — | 10 | Standard Warden arm protection |
-| 5770 | glasswalk guide's chitin bracers | armor | wrist take | — | 3 | Glass-resistant wrist guards |
-| 5771 | cairn scavenger's work gloves | armor | hands take | — | 7 | Reinforced leather digging gloves |
-| 5772 | synod courier's wrist wraps | armor | wrist take | — | 2 | Dyed cloth bindings with hidden pockets |
-| 5773 | red sand enforcer's gauntlets | armor | hands take | — | 10 | Brass-knuckled gloves for debt collection |
-| 5774 | shoreward revenant's seal-stamp gloves | armor | hands take | boss | 4 | Boss drop: Shoreward Revenant. Ink-stained gloves that still press ghost-seals |
-| 5775 | assessment hall stone bracers | armor | wrist take | — | 13 | Heavy construct-origin arm guards |
-| 5776 | tidemouth crab-shell gauntlets | armor | hands take | — | 11 | Chitin-plated coastal fighting gloves |
-| 5777 | thermal fault obsidian bracers | armor | wrist take | — | 6 | Volcanic glass arm guards from anomaly zone |
-| 5778 | conversion engine gear-mesh sleeves | armor | arms take | — | 12 | Mechanical arm coverings from the undercroft |
-
-### Armor — Waist/Legs/Feet (5779-5788)
+### Armor — Body/About/Shoulders (6335-6344)
 
 | Vnum | Name | Type | Wear | Extra | Wt | Notes |
 |---:|---|---|---|---|---:|---|
-| 5779 | glasswalk chitin-soled sandals | armor | feet take | — | 5 | The famous glasswalk shoes: heavy leather with resin soles |
-| 5780 | salt-crusted desert boots | armor | feet take | — | 8 | Mirror Flats footwear, mineral-stiffened leather |
-| 5781 | reach warden's patrol belt | armor | waist take | — | 7 | Utility belt with seal pouch and ration hooks |
-| 5782 | cairn scavenger's tool belt | armor | waist take | — | 8 | Chisel loops, tablet wrapping, bronze-fitting pouch |
-| 5783 | synod eclipse leggings | armor | legs take | — | 4 | Dark-dyed ritual legwear |
-| 5784 | tidemouth brackish waders | armor | legs take | — | 9 | Waterproofed coastal leg protection |
-| 5785 | arbiter's basalt greaves | armor | legs take | boss | 13 | Boss drop: Arbiter. Stone-and-bronze leg armor |
-| 5786 | heavy road caravan boots | armor | feet take | — | 10 | Thick-soled boots for loaded sled following |
-| 5787 | toll-marshal's route-branded belt | armor | waist take | boss | 9 | Boss drop: Toll-Marshal. Belt buckle with three route symbols |
-| 5788 | shoreward seal stone greaves | armor | legs take | — | 14 | Heavy basalt-reinforced leg armor, tank weight |
+| 6335 | glasswalk guide's leather jerkin | armor | body take | — | 7 | Chitin-reinforced desert leather, melee weight |
+| 6336 | warden patrol brigandine | armor | body take | — | 12 | Bronze-studded patrol armor, tank weight |
+| 6337 | synod whisper cloak | armor | about take | — | 3 | Dark cloth cloak with cult sigils woven in |
+| 6338 | cairn scavenger's oiled duster | armor | about take | — | 7 | Weather-resistant salvage coat |
+| 6339 | red sand outrider's silk surcoat | armor | body take | — | 4 | Fine commercial attire doubling as light armor |
+| 6340 | shoreward table vestment | armor | about take | — | 5 | Assessor's ceremonial robe with conversion tables embroidered |
+| 6341 | toll-marshal's triple-route tabard | armor | body take | boss | 11 | Boss drop: Toll-Marshal. Tabard bearing all three route insignia |
+| 6342 | salt-crusted mantle | armor | shoulders take | — | 8 | Mineral-encrusted shoulder piece, Mirror Flats origin |
+| 6343 | glassworm-hide pauldrons | armor | shoulders take | — | 10 | Translucent chitin shoulder guards |
+| 6344 | tidemouth waxed storm cloak | armor | about take | — | 7 | Maritime-influenced weather cloak, resin-sealed |
 
-### Shields and Held Items (5789-5798)
-
-| Vnum | Name | Type | Wear | Extra | Wt | Notes |
-|---:|---|---|---|---|---:|---|
-| 5789 | warden's transit seal buckler | armor | hold take | buckler | 8 | Small shield stamped with Reach survey marks |
-| 5790 | cairn capstone shield | armor | hold take | — | 13 | Heavy shield carved from cairn stone |
-| 5791 | glassworm-shell roundshield | armor | hold take | — | 10 | Translucent chitin shield, melee weight |
-| 5792 | shoreward table fragment shield | armor | hold take | boss | 11 | Boss drop: conversion ratio chart on bronze backing |
-| 5793 | red sand ledger tome | treasure | hold take | — | 3 | Held item: Outrider's debt calculation book |
-| 5794 | glasswalk guide's route-song scroll | treasure | hold take | — | 2 | Held item: encoded navigation chant |
-| 5795 | landward tidewright's glyph tablet | treasure | hold take | — | 4 | Held item: Littoral Branch practice tablet |
-| 5796 | synod relic component pouch | treasure | hold take | — | 3 | Held item: smuggled ritual materials |
-| 5797 | shoreward seal wax stamp | treasure | hold take | — | 2 | Held item: maritime seal press |
-| 5798 | toll-marshal's jurisdiction scepter | treasure | hold take | boss | 6 | Boss drop: Toll-Marshal. Triple-headed authority rod |
-
-### Armor — Miscellaneous Slots (5799-5808)
+### Armor — Arms/Wrist/Hands (6345-6354)
 
 | Vnum | Name | Type | Wear | Extra | Wt | Notes |
 |---:|---|---|---|---|---:|---|
-| 5799 | cairn kite feather earring | armor | ear take | — | 1 | Raptor-feather ear adornment |
-| 5800 | salt crystal pendant | armor | neck take | — | 2 | Mirror Flats mineral necklace |
-| 5801 | synod eclipse signet | armor | finger take | — | 1 | Eclipsed Tongues cult ring |
-| 5802 | warden survey compass ring | armor | finger take | — | 2 | Keeper-era directional aid |
-| 5803 | glassworm tooth amulet | armor | neck take | — | 3 | Trophy pendant from Belts |
-| 5804 | red sand bronze chain | armor | neck take | — | 5 | Outrider status chain, heavy links |
-| 5805 | tidemouth barnacle-crusted bangle | armor | wrist take | — | 4 | Coastal wrist decoration with maritime motif |
-| 5806 | shoreward dual-notation pendant | armor | neck take | boss | 3 | Boss drop: Arbiter. Pendant inscribed both desert and tide glyphs |
-| 5807 | cairn station guardian's halo-sigil | armor | halo take | — | 1 | Floating glyph above ancient construct |
-| 5808 | glasswalk aura ward | armor | aura take | — | 1 | Guide's protective aura, chitin-and-glass charm |
+| 6345 | reach warden's bronze vambraces | armor | arms take | — | 10 | Standard Warden arm protection |
+| 6346 | glasswalk guide's chitin bracers | armor | wrist take | — | 3 | Glass-resistant wrist guards |
+| 6347 | cairn scavenger's work gloves | armor | hands take | — | 7 | Reinforced leather digging gloves |
+| 6348 | synod courier's wrist wraps | armor | wrist take | — | 2 | Dyed cloth bindings with hidden pockets |
+| 6349 | red sand enforcer's gauntlets | armor | hands take | — | 10 | Brass-knuckled gloves for debt collection |
+| 6350 | shoreward revenant's seal-stamp gloves | armor | hands take | boss | 4 | Boss drop: Shoreward Revenant. Ink-stained gloves that still press ghost-seals |
+| 6351 | assessment hall stone bracers | armor | wrist take | — | 13 | Heavy construct-origin arm guards |
+| 6352 | tidemouth crab-shell gauntlets | armor | hands take | — | 11 | Chitin-plated coastal fighting gloves |
+| 6353 | thermal fault obsidian bracers | armor | wrist take | — | 6 | Volcanic glass arm guards from anomaly zone |
+| 6354 | conversion engine gear-mesh sleeves | armor | arms take | — | 12 | Mechanical arm coverings from the undercroft |
 
-### Environmental Drops and Loot-Table Items (5809-5828)
+### Armor — Waist/Legs/Feet (6355-6364)
+
+| Vnum | Name | Type | Wear | Extra | Wt | Notes |
+|---:|---|---|---|---|---:|---|
+| 6355 | glasswalk chitin-soled sandals | armor | feet take | — | 5 | The famous glasswalk shoes: heavy leather with resin soles |
+| 6356 | salt-crusted desert boots | armor | feet take | — | 8 | Mirror Flats footwear, mineral-stiffened leather |
+| 6357 | reach warden's patrol belt | armor | waist take | — | 7 | Utility belt with seal pouch and ration hooks |
+| 6358 | cairn scavenger's tool belt | armor | waist take | — | 8 | Chisel loops, tablet wrapping, bronze-fitting pouch |
+| 6359 | synod eclipse leggings | armor | legs take | — | 4 | Dark-dyed ritual legwear |
+| 6360 | tidemouth brackish waders | armor | legs take | — | 9 | Waterproofed coastal leg protection |
+| 6361 | arbiter's basalt greaves | armor | legs take | boss | 13 | Boss drop: Arbiter. Stone-and-bronze leg armor |
+| 6362 | heavy road caravan boots | armor | feet take | — | 10 | Thick-soled boots for loaded sled following |
+| 6363 | toll-marshal's route-branded belt | armor | waist take | boss | 9 | Boss drop: Toll-Marshal. Belt buckle with three route symbols |
+| 6364 | shoreward seal stone greaves | armor | legs take | — | 14 | Heavy basalt-reinforced leg armor, tank weight |
+
+### Shields and Held Items (6365-6374)
+
+| Vnum | Name | Type | Wear | Extra | Wt | Notes |
+|---:|---|---|---|---|---:|---|
+| 6365 | warden's transit seal buckler | armor | hold take | buckler | 8 | Small shield stamped with Reach survey marks |
+| 6366 | cairn capstone shield | armor | hold take | — | 13 | Heavy shield carved from cairn stone |
+| 6367 | glassworm-shell roundshield | armor | hold take | — | 10 | Translucent chitin shield, melee weight |
+| 6368 | shoreward table fragment shield | armor | hold take | boss | 11 | Boss drop: conversion ratio chart on bronze backing |
+| 6369 | red sand ledger tome | treasure | hold take | — | 3 | Held item: Outrider's debt calculation book |
+| 6370 | glasswalk guide's route-song scroll | treasure | hold take | — | 2 | Held item: encoded navigation chant |
+| 6371 | landward tidewright's glyph tablet | treasure | hold take | — | 4 | Held item: Littoral Branch practice tablet |
+| 6372 | synod relic component pouch | treasure | hold take | — | 3 | Held item: smuggled ritual materials |
+| 6373 | shoreward seal wax stamp | treasure | hold take | — | 2 | Held item: maritime seal press |
+| 6374 | toll-marshal's jurisdiction scepter | treasure | hold take | boss | 6 | Boss drop: Toll-Marshal. Triple-headed authority rod |
+
+### Armor — Miscellaneous Slots (6375-6384)
+
+| Vnum | Name | Type | Wear | Extra | Wt | Notes |
+|---:|---|---|---|---|---:|---|
+| 6375 | cairn kite feather earring | armor | ear take | — | 1 | Raptor-feather ear adornment |
+| 6376 | salt crystal pendant | armor | neck take | — | 2 | Mirror Flats mineral necklace |
+| 6377 | synod eclipse signet | armor | finger take | — | 1 | Eclipsed Tongues cult ring |
+| 6378 | warden survey compass ring | armor | finger take | — | 2 | Keeper-era directional aid |
+| 6379 | glassworm tooth amulet | armor | neck take | — | 3 | Trophy pendant from Belts |
+| 6380 | red sand bronze chain | armor | neck take | — | 5 | Outrider status chain, heavy links |
+| 6381 | tidemouth barnacle-crusted bangle | armor | wrist take | — | 4 | Coastal wrist decoration with maritime motif |
+| 6382 | shoreward dual-notation pendant | armor | neck take | boss | 3 | Boss drop: Arbiter. Pendant inscribed both desert and tide glyphs |
+| 6383 | cairn station guardian's halo-sigil | armor | halo take | — | 1 | Floating glyph above ancient construct |
+| 6384 | glasswalk aura ward | armor | aura take | — | 1 | Guide's protective aura, chitin-and-glass charm |
+
+### Environmental Drops and Loot-Table Items (6385-6404)
 
 All items in this section have `ITEM_LOOT` set in extra flags. Boss-source items also have `ITEM_BOSS`.
 
 | Vnum | Name | Type | Wear | Extra | Wt | Notes |
 |---:|---|---|---|---|---:|---|
-| 5809 | salt cricket carapace | treasure | take | loot | 2 | Mirror Flats fauna drop |
-| 5810 | glass scorpion stinger | treasure | take | loot | 3 | Glasswind Belt fauna drop, venomous |
-| 5811 | glassworm segment | treasure | take | loot | 4 | Subsurface fauna drop, translucent chitin |
-| 5812 | tidemouth crab shell | treasure | take | loot | 5 | Coastal fauna drop |
-| 5813 | cairn kite tail feather | treasure | take | loot | 1 | Raptor drop, used in fletching |
-| 5814 | amber glass shard | treasure | take | loot | 2 | Glasswind material, thermal fault proximity indicator |
-| 5815 | violet glass fragment | treasure | take | loot | 2 | Eclipse-rite residue glass, Synod sacred material |
-| 5816 | milky glass chip | treasure | take | loot | 2 | Pre-catastrophe glass, stable and safe |
-| 5817 | salt crystal cluster | treasure | take | loot | 3 | Mirror Flats mineral specimen |
-| 5818 | bronze cairn fitting | treasure | take | loot | 4 | Stripped from cairn stations by scavengers |
-| 5819 | shoreward table fragment | treasure | take | loot | 3 | Conversion ratio chart on stone chip |
-| 5820 | synod liturgical scroll | treasure | take | loot | 1 | Eclipsed Tongues religious text |
-| 5821 | red sand debt token | treasure | take | loot | 1 | Outrider loan instrument, brass disc |
-| 5822 | warden transit seal blank | treasure | take | loot | 2 | Unstamped seal disc, valuable to forgers |
-| 5823 | tidal glyph rubbing | treasure | take | loot | 1 | Littoral Branch inscription copy |
-| 5824 | quarantine ward fragment | treasure | take | loot | 3 | Sealed Route containment marker piece |
-| 5825 | glassworm queen acid gland | treasure | take | loot boss | 4 | Boss drop: Glassworm Queen |
-| 5826 | scavenger warlord's trophy pouch | treasure | take | loot boss | 3 | Boss drop: Cairn Scavenger Warlord |
-| 5827 | commandant's cipher codex | treasure | take | loot boss | 2 | Boss drop: Whisper Cell Commandant |
-| 5828 | arbiter's fractured seal-stone | treasure | take | loot boss | 5 | Boss drop: Arbiter of the Conversion |
+| 6385 | salt cricket carapace | treasure | take | loot | 2 | Mirror Flats fauna drop |
+| 6386 | glass scorpion stinger | treasure | take | loot | 3 | Glasswind Belt fauna drop, venomous |
+| 6387 | glassworm segment | treasure | take | loot | 4 | Subsurface fauna drop, translucent chitin |
+| 6388 | tidemouth crab shell | treasure | take | loot | 5 | Coastal fauna drop |
+| 6389 | cairn kite tail feather | treasure | take | loot | 1 | Raptor drop, used in fletching |
+| 6390 | amber glass shard | treasure | take | loot | 2 | Glasswind material, thermal fault proximity indicator |
+| 6391 | violet glass fragment | treasure | take | loot | 2 | Eclipse-rite residue glass, Synod sacred material |
+| 6392 | milky glass chip | treasure | take | loot | 2 | Pre-catastrophe glass, stable and safe |
+| 6393 | salt crystal cluster | treasure | take | loot | 3 | Mirror Flats mineral specimen |
+| 6394 | bronze cairn fitting | treasure | take | loot | 4 | Stripped from cairn stations by scavengers |
+| 6395 | shoreward table fragment | treasure | take | loot | 3 | Conversion ratio chart on stone chip |
+| 6396 | synod liturgical scroll | treasure | take | loot | 1 | Eclipsed Tongues religious text |
+| 6397 | red sand debt token | treasure | take | loot | 1 | Outrider loan instrument, brass disc |
+| 6398 | warden transit seal blank | treasure | take | loot | 2 | Unstamped seal disc, valuable to forgers |
+| 6399 | tidal glyph rubbing | treasure | take | loot | 1 | Littoral Branch inscription copy |
+| 6400 | quarantine ward fragment | treasure | take | loot | 3 | Sealed Route containment marker piece |
+| 6401 | glassworm queen acid gland | treasure | take | loot boss | 4 | Boss drop: Glassworm Queen |
+| 6402 | scavenger warlord's trophy pouch | treasure | take | loot boss | 3 | Boss drop: Cairn Scavenger Warlord |
+| 6403 | commandant's cipher codex | treasure | take | loot boss | 2 | Boss drop: Whisper Cell Commandant |
+| 6404 | arbiter's fractured seal-stone | treasure | take | loot boss | 5 | Boss drop: Arbiter of the Conversion |
 
-### Quest Items (5829-5831)
-
-| Vnum | Name | Type | Wear | Extra | Wt | Notes |
-|---:|---|---|---|---|---:|---|
-| 5829 | forged cairn tablet | quest | take | — | 3 | Quest 93 collect target: fabricated historical precedent |
-| 5830 | reach survey waypoint marker | quest | take | — | 2 | Cartography quest series tracking item |
-| 5831 | southern pyramid relic crate seal | quest | take | — | 1 | Provenance tracking for Sealed Route quests |
-
-### Consumables and Utility (5832-5842)
+### Quest Items (6405-6407)
 
 | Vnum | Name | Type | Wear | Extra | Wt | Notes |
 |---:|---|---|---|---|---:|---|
-| 5832 | reach warden's ration brick | food | take | — | 3 | Compressed travel food, salt-preserved |
-| 5833 | salt-preserved caravan jerky | food | take | — | 2 | Standard crossing provisions |
-| 5834 | brackish well water flask | drink_con | take | — | 4 | Mineral-tainted but drinkable water |
-| 5835 | glasswalk route-lamp | light | take | — | 3 | Shielded lantern for Belt navigation |
-| 5836 | cairn station oil lamp | light | take | — | 4 | Repurposed survey lamp from cairn ruins |
-| 5837 | salt-crystal torch | light | take | — | 3 | Mineral-fueled light source, Mirror Flats |
-| 5838 | antivenom poultice | potion | take | — | 1 | Counter for glass scorpion / serpent venom |
-| 5839 | shoreward assessment stamp | treasure | take | — | 1 | Decorative/trade item: old conversion seal |
-| 5840 | transit ration token | treasure | take | — | 1 | Ceramic allotment stamp modeled on Northern Oasis design |
-| 5841 | glasswalk shoe repair kit | treasure | take | — | 3 | Chitin and resin sole patches, trade goods |
-| 5842 | cairn tablet transcription | treasure | take | — | 2 | Scholar's copy of historical toll schedules |
+| 6405 | forged cairn tablet | quest | take | — | 3 | Quest 93 collect target: fabricated historical precedent |
+| 6406 | reach survey waypoint marker | quest | take | — | 2 | Cartography quest series tracking item |
+| 6407 | southern pyramid relic crate seal | quest | take | — | 1 | Provenance tracking for Sealed Route quests |
 
-### Containers (5843-5845)
+### Consumables and Utility (6408-6418)
 
 | Vnum | Name | Type | Wear | Extra | Wt | Notes |
 |---:|---|---|---|---|---:|---|
-| 5843 | warden dispatch satchel | container | take | — | 3 | Patrol communication bag |
-| 5844 | cairn scavenger's salvage sack | container | take | — | 4 | Large carry bag for stripped materials |
-| 5845 | synod courier's sealed pouch | container | take | — | 2 | Contraband transport container |
+| 6408 | reach warden's ration brick | food | take | — | 3 | Compressed travel food, salt-preserved |
+| 6409 | salt-preserved caravan jerky | food | take | — | 2 | Standard crossing provisions |
+| 6410 | brackish well water flask | drink_con | take | — | 4 | Mineral-tainted but drinkable water |
+| 6411 | glasswalk route-lamp | light | take | — | 3 | Shielded lantern for Belt navigation |
+| 6412 | cairn station oil lamp | light | take | — | 4 | Repurposed survey lamp from cairn ruins |
+| 6413 | salt-crystal torch | light | take | — | 3 | Mineral-fueled light source, Mirror Flats |
+| 6414 | antivenom poultice | potion | take | — | 1 | Counter for glass scorpion / serpent venom |
+| 6415 | shoreward assessment stamp | treasure | take | — | 1 | Decorative/trade item: old conversion seal |
+| 6416 | transit ration token | treasure | take | — | 1 | Ceramic allotment stamp modeled on Northern Oasis design |
+| 6417 | glasswalk shoe repair kit | treasure | take | — | 3 | Chitin and resin sole patches, trade goods |
+| 6418 | cairn tablet transcription | treasure | take | — | 2 | Scholar's copy of historical toll schedules |
 
-### Furniture (5846-5848)
+### Containers (6419-6421)
 
 | Vnum | Name | Type | Wear | Extra | Wt | Notes |
 |---:|---|---|---|---|---:|---|
-| 5846 | warden barracks cot | furniture | — | — | 15 | Rest furniture in District A barracks |
-| 5847 | glasswalk guide's desert bedroll | furniture | — | — | 8 | Rest furniture in guide camps |
-| 5848 | cairn station stone bench | furniture | — | — | 15 | Rest furniture in cairn interiors |
+| 6419 | warden dispatch satchel | container | take | — | 3 | Patrol communication bag |
+| 6420 | cairn scavenger's salvage sack | container | take | — | 4 | Large carry bag for stripped materials |
+| 6421 | synod courier's sealed pouch | container | take | — | 2 | Contraband transport container |
+
+### Furniture (6422-6424)
+
+| Vnum | Name | Type | Wear | Extra | Wt | Notes |
+|---:|---|---|---|---|---:|---|
+| 6422 | warden barracks cot | furniture | — | — | 15 | Rest furniture in District A barracks |
+| 6423 | glasswalk guide's desert bedroll | furniture | — | — | 8 | Rest furniture in guide camps |
+| 6424 | cairn station stone bench | furniture | — | — | 15 | Rest furniture in cairn interiors |
 
 ### Itemization Intent
 
@@ -851,27 +851,27 @@ All items in this section have `ITEM_LOOT` set in extra flags. Boss-source items
 
 ## Progression and Difficulty Curve
 
-- **5724-5773** (District A): onboarding, 55-58. Safe hub with friendly/neutral NPCs and light patrols.
-- **5774-5823** (District B): Mirror Flats crossing, 55-62. Environmental hazard + fauna.
-- **5824-5873** (District C): Heavy Road crossing, 57-64. Moderate fauna + faction skirmishes.
-- **5874-5923** (District D): Glasswind Belts, 60-70. Exploration hazard + Synod + glass fauna + mini-boss.
-- **5924-5973** (District E): Cairn Line Ruins, 62-72. Faction density + vertical exploration + mini-boss.
-- **5974-6023** (District F): Sealed Route, 65-75. Dangerous relic hazards + Synod operations + mini-boss.
-- **6024-6073** (District G): Tidemouth Approach, 60-68. Open terrain + coastal fauna + jurisdiction conflict.
-- **6074-6123** (District H): Shoreward Threshold, 70-80. Elite + boss gauntlet.
+- **6300-6349** (District A): onboarding, 55-58. Safe hub with friendly/neutral NPCs and light patrols.
+- **6350-6399** (District B): Mirror Flats crossing, 55-62. Environmental hazard + fauna.
+- **6400-6449** (District C): Heavy Road crossing, 57-64. Moderate fauna + faction skirmishes.
+- **6450-6499** (District D): Glasswind Belts, 60-70. Exploration hazard + Synod + glass fauna + mini-boss.
+- **6500-6549** (District E): Cairn Line Ruins, 62-72. Faction density + vertical exploration + mini-boss.
+- **6550-6599** (District F): Sealed Route, 65-75. Dangerous relic hazards + Synod operations + mini-boss.
+- **6600-6649** (District G): Tidemouth Approach, 60-68. Open terrain + coastal fauna + jurisdiction conflict.
+- **6650-6699** (District H): Shoreward Threshold, 70-80. Elite + boss gauntlet.
 
 ---
 
 ## Quest Plan (Quest Files 81-95)
 
-All quests use offerer vnums from within the area (`5724-6123`) unless specified as external quest givers. Quest target vnums reference mobs within the area.
+All quests use offerer vnums from within the area (`6300-6699`) unless specified as external quest givers. Quest target vnums reference mobs within the area.
 
 ### Cartography Quest Chain (81-82)
 
 | File | Static ID | Title | Prereq | Type | Description |
 |---|---:|---|---:|---:|---|
 | `81.prop` | 80 | Saltglass Reach cartography survey: Mirror Flats | -1 | 1 (kill-variety) | Survey the Mirror Flats by eliminating threats at key waypoints. Kill one of each: salt cricket swarm leader, cairn kite alpha, corrupted Warden toll-thief. Offerer: Reach Warden cartographer in District A. Reward: 4000 gold, 4 qp. Level 55-70. |
-| `82.prop` | 81 | Saltglass Reach cartography survey: Glasswind to Tidemouth | 80 | 1 (kill-variety) | Complete the Reach survey by clearing observation points from the Glasswind Belts to the Tidemouth Dunes. Kill one of each: glass scorpion matriarch, glassworm tunnel sentinel, tidemouth crab broodmother. Offerer: same cartographer. Reward: 6000 gold, 5 qp. Level 60-75. |
+| `82.prop` | 81 | Saltglass Reach cartography survey: Glasswind to Tidemouth | 80 | 1 (kill-variety) | Complete the Reach survey by clearing observation points from the Glasswind Belts to the Tidemouth Dunes. Kill one of each: glass scorpion matriarch, glassworm tunnel sentinel, tidemouth crab broodmother. Offerer: same cartographer. Reward: 6576 gold, 5 qp. Level 60-75. |
 
 ### Faction Conflict Quests (83-87)
 
@@ -888,7 +888,7 @@ All quests use offerer vnums from within the area (`5724-6123`) unless specified
 | File | Static ID | Title | Prereq | Type | Description |
 |---|---:|---|---:|---:|---|
 | `88.prop` | 87 | Glassworm burrower queen extermination | -1 | 3 (kill-count) | The glassworm burrower queen threatens route stability across the Belts. Destroy her. Kill 1 glassworm burrower queen. Offerer: Glasswalk Guide elder. Reward: 5000 gold, 5 qp. Level 62-75. |
-| `89.prop` | 88 | Whisper Cell commandant elimination | 84 | 3 (kill-count) | Track and eliminate the Synod Whisper Cell commandant directing smuggling operations from the Sealed Route. Kill 1 Whisper Cell commandant. Offerer: Warden Commander. Reward: 6000 gold, 6 qp. Level 68-78. |
+| `89.prop` | 88 | Whisper Cell commandant elimination | 84 | 3 (kill-count) | Track and eliminate the Synod Whisper Cell commandant directing smuggling operations from the Sealed Route. Kill 1 Whisper Cell commandant. Offerer: Warden Commander. Reward: 6576 gold, 6 qp. Level 68-78. |
 | `90.prop` | 89 | Shoreward Revenant banishment | -1 | 3 (kill-count) | The Shoreward Revenant — a dead Assessor who refuses to yield jurisdiction — haunts the Shoreward Threshold. Destroy it. Kill 1 Shoreward Revenant. Offerer: Reach Warden at Tidemouth. Reward: 7000 gold, 6 qp. Level 70-80. |
 | `91.prop` | 90 | Toll-Marshal of the Three Routes: writ of dissolution | 89 | 3 (kill-count) | The Toll-Marshal enforces all three routes simultaneously, blocking the Shoreward approach. Execute the writ of dissolution. Kill 1 Toll-Marshal of the Three Routes. Offerer: same. Reward: 1832 gold, 7 qp. Level 75-80. |
 | `92.prop` | 91 | Arbiter of the Conversion: final jurisdictional reckoning | 90 | 3 (kill-count) | The Conversion itself has become hostile sentience. End the Arbiter before the legal contradiction consumes the Threshold. Kill 1 Arbiter of the Conversion. Offerer: Warden Commander. Reward: 11000 gold, 9 qp. Level 78-80. |
@@ -905,13 +905,13 @@ All quests use offerer vnums from within the area (`5724-6123`) unless specified
 
 | Offerer Role | Approximate Vnum | Location |
 |---|---|---|
-| Reach Warden Cartographer | ~5748 | District A: Transit Seal Office |
-| Warden Commander | ~5952 | District E: Measure's Rest |
-| Reach Warden Patrol Leader | ~5732 | District A: Warden Barracks |
-| Glasswalk Guide Elder | ~5882 | District D: Guide Waystation |
-| Kowloon Scholar | ~5956 | District E: Kowloon Scholar's Camp |
-| Tidemouth Warden Post Commander | ~6059 | District G: Tidemouth Warden Post |
-| Reach Warden Officer (Sealed Route) | ~5974 | District F: Sealed Route approach |
+| Reach Warden Cartographer | ~6324 | District A: Transit Seal Office |
+| Warden Commander | ~6528 | District E: Measure's Rest |
+| Reach Warden Patrol Leader | ~6308 | District A: Warden Barracks |
+| Glasswalk Guide Elder | ~6458 | District D: Guide Waystation |
+| Kowloon Scholar | ~6532 | District E: Kowloon Scholar's Camp |
+| Tidemouth Warden Post Commander | ~6635 | District G: Tidemouth Warden Post |
+| Reach Warden Officer (Sealed Route) | ~6550 | District F: Sealed Route approach |
 
 ---
 
@@ -921,9 +921,9 @@ All quests use offerer vnums from within the area (`5724-6123`) unless specified
 
 | Location | Door Description | Key Object | Reset State |
 |---|---|---|---|
-| Measure's Rest: Sealed Archive (5950) | Heavy bronze door with Keeper-era seal | Warden archive key | Locked (state 2) |
-| Sealed Relic Vault (5997) | Iron-bound quarantine door with containment wards | Quarantine seal key | Locked (state 2) |
-| Undercroft Descent (6109) | Basalt hatch with dual-jurisdiction inscription | Shoreward threshold key | Locked (state 2) |
+| Measure's Rest: Sealed Archive (6526) | Heavy bronze door with Keeper-era seal | Warden archive key | Locked (state 2) |
+| Sealed Relic Vault (6573) | Iron-bound quarantine door with containment wards | Quarantine seal key | Locked (state 2) |
+| Undercroft Descent (6685) | Basalt hatch with dual-jurisdiction inscription | Shoreward threshold key | Locked (state 2) |
 
 All locked doors require:
 - `EX_ISDOOR` set on both sides.

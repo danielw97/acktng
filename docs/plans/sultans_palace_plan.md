@@ -5,7 +5,7 @@
 **Area Name:** `@@cThe Sultan's Palace@@N` 
 **File Name:** `sultans_palace.are` 
 **Intended Level Range:** 30-50 (`I 30 50`) 
-**Vnum Range (fixed):** **5256-5330** (`V 5256 5330`) 
+**Vnum Range (fixed):** **5750-5849** (`V 5750 5849`) 
 **Room Count Target:** **75/75 rooms used** 
 **Mob Count Target:** 75/75 mobile vnums used (re-authored roster) 
 **Object Count Target:** 75/75 object vnums used (re-authored itemization)
@@ -25,7 +25,7 @@ The redesign preserves the assigned vnum envelope while replacing all rooms, mob
 ## Hard Constraints from `/docs` Specs
 
 - Keep header and records compliant with `Q 16` area format requirements.
-- Keep all authored content inside `5256-5330`.
+- Keep all authored content inside `5750-5849`.
 - Use `O Virant~` in final area header authoring.
 - All strings `~`-terminated; no blank-line double newlines in string payloads.
 - Never mention vnums in any in-world text.
@@ -147,7 +147,7 @@ The area is fully re-zoned into five 15-room bands, using every room vnum once.
 
 ## Mobile Roster Redo (75 vnums)
 
-All mob vnums `5256-5330` are reassigned into coherent factions:
+All mob vnums `5750-5849` are reassigned into coherent factions:
 
 - **Court Protocol Remnants (5256-5270)**: low-mid difficulty administrative undead/constructs.
 - **Hydraulic Tribunal Corps (5271-5285)**: disciplined defenders with control utility.
@@ -165,7 +165,7 @@ Named anchors:
 
 ## Objectization Redo (75 vnums)
 
-All object vnums `5256-5330` are repurposed across progression tiers:
+All object vnums `5750-5849` are repurposed across progression tiers:
 
 1. **Administrative relic set** (tablets, seals, bowls, insignia).
 2. **Hydraulic implements** (sluice keys, gauge rods, copper gate tools).
@@ -214,8 +214,8 @@ Design intent:
 
 ## Deliverables in Build Phase
 
-- Fully rewritten room set: 75/75 rooms using vnums 5256-5330.
-- Fully rewritten mobiles: 75/75 mobiles using vnums 5256-5330.
-- Fully rewritten objects: 75/75 objects using vnums 5256-5330.
+- Fully rewritten room set: 75/75 rooms using vnums 5750-5849.
+- Fully rewritten mobiles: 75/75 mobiles using vnums 5750-5849.
+- Fully rewritten objects: 75/75 objects using vnums 5750-5849.
 - Lore-consistent reset graph and boss progression.
 - Color-consistent strings aligned with this plan's five-color theme.

@@ -6,9 +6,9 @@
 - **Area title:** `@@eThe @@yScorched @@rWastes@@N`
 - **Keyword:** `scorched_wastes`
 - **Level band:** `I 65 85`
-- **Fixed vnum envelope (unchanged):** `V 4881 4955`
+- **Fixed vnum envelope (unchanged):** `V 5250 5349`
 - **Design mandate:** fully replace current rooms, mobs, objects, and reset logic while keeping the same vnum range.
-- **Room utilization mandate:** all **75 room vnums** in the envelope are used (`4881-4955`).
+- **Room utilization mandate:** all **75 room vnums** in the envelope are used (`5250-5349`).
 
 This redesign treats the Scorched Wastes as the **burned meridian corridor** between the oasis administration arc and the pyramid cult frontier: a place where collapsed water-law, failed eclipse rites, and desert predation overlap.
 
@@ -16,7 +16,7 @@ This redesign treats the Scorched Wastes as the **burned meridian corridor** bet
 
 - `#AREA` contains `Q 16`.
 - Owner line is `O Virant~`.
-- `V 4881 4955` is preserved exactly.
+- `V 5250 5349` is preserved exactly.
 - Strings are `~` terminated and avoid double blank lines.
 - Room descriptions are unique, with minimum sentence count and named-exit anchoring.
 - Mobile long descriptions remain one-line format; mobile descriptions end with a single trailing newline before `~`.
