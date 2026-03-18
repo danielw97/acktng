@@ -521,12 +521,22 @@ Keep track of your character's progress with these commands:
 
   @@ySCORE@@N   -- See your stats, level, HP, mana, and more
 
-  @@yWORTH@@N   -- See your experience and gold
+  @@yWORTH@@N   -- See your gold, experience earned, and experience needed to level
 
 
 @@WLeveling Up:@@N
 
   When you earn enough experience, type '@@yGAIN@@N' to advance a level.
+
+  @@RIMPORTANT:@@N You must be near a @@Wtrainer@@N to use GAIN!
+
+  At the recall point there is a trainer.  To reach it:
+
+    1. Type '@@yRECALL@@N' to teleport to the temple.
+
+    2. Go @@yUP@@N, then @@yUP@@N again to reach the trainer.
+
+    3. Type '@@yGAIN@@N' in the presence of the trainer to level up.
 
   You can gain levels in multiple classes!  This is called @@Wmulti-classing@@N.
 
@@ -690,15 +700,13 @@ After fleeing, go back @@yUP@@N.
 S
 #4913
 Trial Hall~
-@@NYou stand in a grand hall with vaulted ceilings.  Seven heavy doors line
+@@NYou stand in a grand hall with vaulted ceilings.  Heavy doors line the
 
-the walls.  Beyond each door waits a creature or object carrying
+walls.  Beyond each door waits a creature carrying equipment you will
 
-equipment you will need.  A large sign dominates the
+need.  A large sign dominates the center of the hall.  The combat arena
 
-center of the hall.  The combat arena is @@yeast@@N.
-
-Corridors branch @@ynorth@@N, @@ysouth@@N, @@ywest@@N, @@yup@@N, and @@ydown@@N.
+is @@yeast@@N.  Corridors branch @@ynorth@@N, @@ysouth@@N, @@ywest@@N, @@yup@@N, and @@ydown@@N.
 
 ~
 8 11
@@ -743,9 +751,11 @@ sign~
 @@WThe Trial Hall@@N
 
 
-Beyond each passage is a creature or training target with equipment.
+Beyond each passage is a creature carrying equipment.  Kill each one
 
-Kill each one and take their gear!
+and take their gear!  There are four targets on this level (north,
+
+south, west, up) and three more in the lower hall -- go @@yDOWN@@N to find them.
 
 
 After killing a monster:
@@ -768,7 +778,7 @@ Between fights, you may need to recover:
   @@yWAKE@@N   -- Wake up or stand up when done resting
 
 
-Kill all seven targets and collect their gear, then go @@yDOWN@@N.
+Kill the four targets here, then go @@yDOWN@@N to the lower trial hall for more!
 
 
 ~
@@ -1038,7 +1048,18 @@ You have completed the Academy of Adventure!
 Kill the sage to claim your @@Wdiploma@@N -- it has magical properties!
 
 
-@@WRemember:@@N
+@@WYour Next Steps:@@N
+
+  1. Type '@@yRECALL@@N' to teleport to the temple.
+
+  2. Go @@yUP@@N, then @@yUP@@N again to reach the trainer area.
+
+  3. There is a @@Wtrainer mob@@N there -- type '@@yGAIN@@N' to advance your level!
+
+  4. Explore the world from the recall point!
+
+
+@@WUseful Commands to Remember:@@N
 
   @@yRECALL@@N  -- Teleport back to the temple at any time
 
@@ -1060,9 +1081,9 @@ S
 Lower Trial Hall~
 @@NYou descend into a lower section of the trial hall.  More chamber doors
 
-line the walls here.  The upper trial hall
+line the walls here.  The upper trial hall is @@yup@@N.  Corridors lead
 
-is @@yup@@N.  Corridors lead @@ynorth@@N, @@ysouth@@N, and @@ywest@@N.
+@@ynorth@@N, @@ysouth@@N, @@ydown@@N, and @@ywest@@N.
 
 ~
 8 11
