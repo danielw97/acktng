@@ -1,0 +1,23 @@
+level -1
+keywords pressure point
+---
+*******************************************************************************
+       Name: Pressure Point
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 1
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: pressure point
+   Wear-Off: !Pressure Point!
+Acquisition:
+   - Pugilist: level 35
+Description:
+   Pressure Point strikes a vital nerve cluster, inflicting debilitating
+   effects alongside physical damage (1d(level/4 + 1)). The effect applied
+   is chosen randomly each use from three possibilities: a Strength debuff
+   (-level/6), a Dexterity debuff (-level/6), or a damage roll reduction
+   (-level/5). All effects last 3 rounds. Useful for hampering powerful
+   melee opponents or weakening spellcasters who rely on stats.
+*******************************************************************************
