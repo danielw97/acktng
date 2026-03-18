@@ -17,22 +17,26 @@
 /* Minimal race table: index 0 = "human-like" (all stats 13),
  *                     index 1 = "warrior-race" (str=15, rest=12)     */
 const struct race_type race_table[MAX_RACE] = {
-    [0] = {.race_str = 13, .race_int = 13, .race_wis = 13, .race_dex = 13, .race_con = 13,
+    [0] = {.race_str = 13,
+           .race_int = 13,
+           .race_wis = 13,
+           .race_dex = 13,
+           .race_con = 13,
            .skill = ""},
-    [1] = {.race_str = 15, .race_int = 12, .race_wis = 12, .race_dex = 12, .race_con = 14,
+    [1] = {.race_str = 15,
+           .race_int = 12,
+           .race_wis = 12,
+           .race_dex = 12,
+           .race_con = 14,
            .skill = ""},
 };
 
 /* Minimal class table: CLASS_MAG (0) primes INT, CLASS_WAR (1) primes STR */
 const struct class_type gclass_table[MAX_TOTAL_CLASS] = {
-    [CLASS_MAG] = {.attr_prime = APPLY_INT},
-    [CLASS_WAR] = {.attr_prime = APPLY_STR},
-    [CLASS_PSI] = {.attr_prime = APPLY_INT},
-    [CLASS_CLE] = {.attr_prime = APPLY_WIS},
-    [CLASS_CIP] = {.attr_prime = APPLY_DEX},
-    [CLASS_PUG] = {.attr_prime = APPLY_CON},
+    [CLASS_MAG] = {.attr_prime = APPLY_INT}, [CLASS_WAR] = {.attr_prime = APPLY_STR},
+    [CLASS_PSI] = {.attr_prime = APPLY_INT}, [CLASS_CLE] = {.attr_prime = APPLY_WIS},
+    [CLASS_CIP] = {.attr_prime = APPLY_DEX}, [CLASS_PUG] = {.attr_prime = APPLY_CON},
 };
-
 
 /* ── helpers ──────────────────────────────────────────────────────── */
 
@@ -70,7 +74,7 @@ static void test_get_max_stat_race_base_only(void)
    clear_pcdata(&pcdata);
 
    ch.pcdata = &pcdata;
-   ch.race = 0; /* human-like: all stats = 13 */
+   ch.race = 0;          /* human-like: all stats = 13 */
    ch.class = CLASS_CLE; /* prime = WIS, not STR */
 
    /* STR max = 13 (race base) + 0 (no prime) + 0 (no reinc) = 13 */
@@ -88,7 +92,7 @@ static void test_get_max_stat_class_prime(void)
    clear_pcdata(&pcdata);
 
    ch.pcdata = &pcdata;
-   ch.race = 0;       /* all stats 13 */
+   ch.race = 0;          /* all stats 13 */
    ch.class = CLASS_MAG; /* prime = INT */
 
    /* INT max = 13 (race) + 1 (class prime) = 14 */
@@ -108,8 +112,8 @@ static void test_get_max_stat_reinc_bonus(void)
    clear_pcdata(&pcdata);
 
    ch.pcdata = &pcdata;
-   ch.race = 0;         /* all stats 13 */
-   ch.class = CLASS_CIP; /* prime = DEX */
+   ch.race = 0;                          /* all stats 13 */
+   ch.class = CLASS_CIP;                 /* prime = DEX */
    pcdata.reincarnations[CLASS_WAR] = 2; /* WAR reinc bonus for STR */
 
    /* STR max = 13 + 0 (no prime) + (2+1)/2=1 reinc bonus = 14 */
@@ -130,7 +134,7 @@ static void test_get_max_stat_int_dual_reinc(void)
 
    ch.pcdata = &pcdata;
    ch.race = 0;
-   ch.class = CLASS_WAR; /* prime = STR */
+   ch.class = CLASS_WAR;                 /* prime = STR */
    pcdata.reincarnations[CLASS_MAG] = 2; /* (2+1)/2 = 1 */
    pcdata.reincarnations[CLASS_PSI] = 4; /* (4+1)/2 = 2 */
 
@@ -169,8 +173,8 @@ static void test_get_max_stat_cap(void)
    clear_pcdata(&pcdata);
 
    ch.pcdata = &pcdata;
-   ch.race = 1;          /* str=15 */
-   ch.class = CLASS_WAR; /* prime = STR (+1) */
+   ch.race = 1;                           /* str=15 */
+   ch.class = CLASS_WAR;                  /* prime = STR (+1) */
    pcdata.reincarnations[CLASS_WAR] = 30; /* (30+1)/2 = 15 bonus */
 
    /* Would be 15 + 1 + 15 = 31, but capped at STAT_MAX (30) */

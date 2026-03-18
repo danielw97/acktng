@@ -2151,6 +2151,12 @@ void free_char(CHAR_DATA *ch)
       PUT_FREE(ch->current_brand, brand_data_free);
    }
 
+   if (ch->revenant != NULL)
+   {
+      free(ch->revenant);
+      ch->revenant = NULL;
+   }
+
    if (ch->pcdata != NULL)
    {
       PUT_FREE(ch->pcdata, pcd_free);

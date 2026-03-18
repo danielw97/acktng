@@ -2,6 +2,7 @@ AI_SPEC_SRCS = \
 	  ai/spec_summon_water.o ai/spec_summon_fire.o ai/spec_summon_earth.o \
 	  ai/spec_summon_undead.o ai/spec_summon_holy.o ai/spec_summon_shadow.o \
 	  ai/spec_summon_metal.o ai/spec_summon_animate.o ai/spec_summon_thought.o \
+	  ai/spec_summon_revenant.o \
 	  ai/spec_breath_any.o ai/spec_breath_acid.o ai/spec_breath_fire.o \
 	  ai/spec_breath_frost.o ai/spec_breath_gas.o ai/spec_breath_lightning.o \
 	  ai/spec_cast_adept.o ai/spec_cast_cleric.o ai/spec_cast_judge.o \
@@ -58,7 +59,8 @@ AI_SPEC_SRCS = \
 
 AI_SUMMON_SRCS = ai/spec_summon_water.o ai/spec_summon_fire.o ai/spec_summon_earth.o \
 	  ai/spec_summon_undead.o ai/spec_summon_holy.o ai/spec_summon_shadow.o \
-	  ai/spec_summon_metal.o ai/spec_summon_animate.o ai/spec_summon_thought.o
+	  ai/spec_summon_metal.o ai/spec_summon_animate.o ai/spec_summon_thought.o \
+	  ai/spec_summon_revenant.o
 
 AI_SUMMON_OBJS = $(addprefix $(OBJDIR)/,$(AI_SUMMON_SRCS))
 

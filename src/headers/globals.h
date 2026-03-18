@@ -634,6 +634,7 @@ DECLARE_DO_FUN(do_ignore);
 
 */
 DECLARE_DO_FUN(do_qpspend);
+DECLARE_DO_FUN(do_revenant);
 DECLARE_DO_FUN(do_disguise);
 DECLARE_DO_FUN(do_frenzy);
 DECLARE_DO_FUN(do_adrenaline);
