@@ -20,6 +20,7 @@ const char *quest_unit_static_accept_message(int static_id);
 const char *quest_unit_static_completion_message(int static_id);
 int quest_unit_static_max_level(int static_id);
 int quest_unit_canonical_postmaster_vnum(int vnum);
+int quest_unit_calc_static_exp(int max_level, int is_boss, int is_cartography);
 
 char *_str_dup(const char *str, const char *func)
 {
@@ -430,6 +431,15 @@ static void test_loads_saltglass_and_scorching_sands_quests(void)
    assert(strstr(quest_unit_static_completion_message(126), "witness elder") != NULL);
 }
 
+static void test_static_quest_exp_calculation(void)
+{
+   /* exp_table[20].mob_base == 5800 (from const.c) */
+   int base = 3 * 5800; /* 17400 */
+   assert(quest_unit_calc_static_exp(20, 0, 0) == base);
+   assert(quest_unit_calc_static_exp(20, 1, 0) == base * 2); /* boss: double */
+   assert(quest_unit_calc_static_exp(20, 0, 1) == base * 10); /* cartography: 10x */
+}
+
 int main(void)
 {
    test_extracts_and_saves_when_target_matches();
@@ -446,6 +456,7 @@ int main(void)
    test_loads_umbra_heartspire_static_chain();
    test_postmaster_aliases_map_to_active_city_vnums();
    test_loads_saltglass_and_scorching_sands_quests();
+   test_static_quest_exp_calculation();
 
    puts("test_quest: all tests passed");
    return 0;
