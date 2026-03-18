@@ -1256,8 +1256,9 @@ struct cmd_type
    sh_int position;
    sh_int level;
    sh_int log;
-   sh_int type; /*added by Aeria for do_commands */
-   sh_int show; /*added by Aeria for do_commands */
+   sh_int type;  /* added by Aeria for do_commands */
+   sh_int show;  /* added by Aeria for do_commands */
+   sh_int flags; /* CMD_FLAG_* bitmask */
 };
 
 /*
