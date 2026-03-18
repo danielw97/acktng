@@ -580,6 +580,7 @@ DECLARE_DO_FUN(do_quit);
 DECLARE_DO_FUN(do_reboo);
 DECLARE_DO_FUN(do_reboot);
 DECLARE_DO_FUN(do_recall);
+DECLARE_DO_FUN(do_caravan);
 DECLARE_DO_FUN(do_recho);
 DECLARE_DO_FUN(do_recite);
 DECLARE_DO_FUN(do_remove);
