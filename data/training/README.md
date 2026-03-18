@@ -32,25 +32,119 @@ python3 generate_npc_training_data.py --model claude-haiku-4-5-20251001
 python3 generate_npc_training_data.py --seed 42
 ```
 
-## Training Configuration Notes
+## Training
 
-Key notes on the Axolotl config (`npc_config.yml` in the repo root):
+### Step 1 — Create npc_config.yml
 
-- `adapter: qlora` + `load_in_4bit: true` — QLoRA: 4-bit quantized base model
-  with a full-precision bf16 adapter. Halves VRAM versus full LoRA.
-- `lora_r: 16` / `lora_alpha: 16` — effective scale of 1.0 (alpha/r). Conservative
-  and appropriate for behavioral fine-tuning; a higher ratio risks overwriting
-  base model capabilities.
-- `lora_target_modules` — all 7 projection matrices targeted. Standard for
-  instruction-tuned Llama models; captures attention and MLP simultaneously.
-- `val_set_size: 0.05` — 5% of the JSONL held back for validation. Watch val
-  loss across the 12 eval checkpoints (4 per epoch × 3 epochs); stop early if
-  it plateaus or rises.
-- `sample_packing: true` — packs multiple short examples into each sequence to
-  maximize GPU utilization. Important for short NPC exchanges where individual
-  examples are well under `sequence_len`.
-- `optimizer: adamw_bnb_8bit` — 8-bit Adam from bitsandbytes. Cuts optimizer
-  state memory with negligible quality loss.
+```yaml
+base_model: meta-llama/Meta-Llama-3.1-8B-Instruct
+model_type: LlamaForCausalLM
+tokenizer_type: AutoTokenizer
+
+load_in_4bit: true
+
+datasets:
+  - path: npc_training.jsonl
+    type: chat_template
+chat_template: chatml
+
+dataset_prepared_path: last_run_prepared
+val_set_size: 0.05
+output_dir: ./outputs/npc-model
+
+adapter: qlora
+lora_r: 16
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+gradient_accumulation_steps: 4
+micro_batch_size: 2
+num_epochs: 3
+optimizer: adamw_bnb_8bit
+lr_scheduler: cosine
+learning_rate: 0.0002
+
+bf16: auto
+gradient_checkpointing: true
+warmup_steps: 10
+evals_per_epoch: 4
+saves_per_epoch: 1
+```
+
+Key notes:
+- `adapter: qlora` + `load_in_4bit: true` = QLoRA (4-bit base + bf16 adapter)
+- `lora_r: 16` / `lora_alpha: 16` → effective scale of 1.0 (conservative, appropriate for behavioral fine-tuning)
+- `val_set_size: 0.05` holds back 5% of the JSONL for validation
+- All 7 projection matrices are targeted — standard for instruction-tuned Llama models
+
+### Step 2 — Install Axolotl with ROCm
+
+The project uses an AMD RX 7900 XTX (RDNA3, gfx1100), so use PyTorch ROCm
+builds — not CUDA:
+
+```sh
+pip install torch torchvision torchaudio \
+    --index-url https://download.pytorch.org/whl/rocm6.1
+pip install axolotl bitsandbytes
+```
+
+Verify ROCm is visible:
+
+```sh
+python -c "import torch; print(torch.cuda.is_available(), torch.version.hip)"
+```
+
+### Step 3 — Run training
+
+```sh
+axolotl train npc_config.yml
+```
+
+Expected: 30–90 minutes on the 7900 XTX for ~1,000 examples at 3 epochs.
+
+Watch validation loss — with `evals_per_epoch: 4`, you get 12 eval checkpoints
+total. Stop early if val loss plateaus or rises (overfitting risk on small
+datasets).
+
+### Step 4 — Export to GGUF for Ollama
+
+```sh
+# Merge the LoRA adapter back into base weights
+python axolotl/scripts/merge_lora.py npc_config.yml
+
+# Convert to GGUF with Q4_K_M quantization
+python llama.cpp/convert_hf_to_gguf.py outputs/npc-model \
+    --outfile npc-model.Q4_K_M.gguf \
+    --outtype q4_k_m
+```
+
+### Step 5 — Serve via Ollama
+
+Create a Modelfile:
+
+```
+FROM ./npc-model.Q4_K_M.gguf
+PARAMETER num_ctx 8192
+PARAMETER temperature 0.7
+```
+
+Register and serve:
+
+```sh
+ollama create ack-npc -f Modelfile
+ollama serve
+```
+
+The game server's `call_openclaw()` needs no changes — the fine-tuned model is
+a drop-in at the same OpenAI-compatible endpoint (`localhost:11434`).
 
 ## Iteration Workflow
 
@@ -60,7 +154,7 @@ training signal. Per iteration cycle:
 1. Collect bad NPC responses from play logs
 2. Write corrected versions (in-character, concise, correct register)
 3. Append corrections to `npc_training.jsonl`
-4. Re-run `accelerate launch -m axolotl.cli.train npc_config.yml`
+4. Re-run `axolotl train npc_config.yml`
 5. Re-export to GGUF and redeploy via Ollama
 
 ## Dataset Spec
