@@ -90,12 +90,8 @@ void do_target(CHAR_DATA *ch, char *argument)
       stop_fighting(ch, FALSE);
    }
 
+   WAIT_STATE(ch, 1 * PULSE_VIOLENCE);
    check_killer(ch, victim);
-
-   if (ch->class_level[CLASS_MON] > 0 || ch->class_level[CLASS_BRA] > 0)
-      pug_attack(ch, victim->name, gsn_target);
-   else
-      war_attack(ch, victim->name, gsn_target);
-
+   one_hit(ch, victim, TYPE_UNDEFINED);
    return;
 }

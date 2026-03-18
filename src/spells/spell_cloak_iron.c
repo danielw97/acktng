@@ -31,7 +31,6 @@
 #include "globals.h"
 #include "tables.h"
 #include "magic.h"
-#include "skills.h"
 
 bool spell_cloak_iron(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
@@ -41,21 +40,12 @@ bool spell_cloak_iron(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    if (is_affected(ch, sn))
       return FALSE;
 
-   int combo_count = get_combo_count(ch);
-   int combo_bonus = combo_count > 0 ? combo_count : 0;
-
-   if (combo_count > 0)
-      reset_combo(ch);
-
    af.type = sn;
-   af.duration = get_psuedo_level(ch) / 8 + combo_bonus;
+   af.duration = get_psuedo_level(ch) / 8;
    af.location = 0;
    af.modifier = 0;
    af.bitvector = 0;
    affect_to_char(ch, &af);
-
-   if (combo_bonus > 0)
-      send_to_char("@@yYour combo reinforces the iron cloak!@@N\n\r", ch);
 
    return TRUE;
 }
