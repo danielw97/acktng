@@ -102,7 +102,7 @@ Common combinations used in quest reward items:
 | `3.prop` | 2 | Eastern trade road interdiction | 1 | 1 | `4960 4965 4988` | 0 | 55-69 | 931 | 1366 gold, 4 qp |
 | `4.prop` | 3 | Sealed-warrant courier disruption | 2 | 1 | `1832 2898 3174` | 0 | 70-84 | 931 | 5000 gold, 5 qp |
 | `5.prop` | 4 | Blightfront quarantine sweep | 3 | 1 | `2751 321 341` | 0 | 85+ | 931 | 7000 gold, 6 qp |
-| `6.prop` | 5 | Road predator cull: Banner Hills to Dustward | -1 | 1 | `1313 1314 1316` | 0 | 15-35 | 1122 | 800 gold, 2 qp |
+| `6.prop` | 5 | Road predator cull: Banner Hills to Dustward | -1 | 1 | `1313 1314 1316` | 0 | 15-30 | 1122 | 800 gold, 2 qp |
 | `7.prop` | 6 | Tollbreak crew interdiction: River Crossing | -1 | 3 | `1324` | 6 | 30-44 | 1123 | 2000 gold, 3 qp |
 | `8.prop` | 7 | Shadow trade disruption: Crossroads to Greenveil | 7 | 1 | `1325 1326 1327` | 0 | 40-54 | 1123 | 3500 gold, 4 qp |
 | `9.prop` | 8 | Convoy route security: Dustward predator sweep | -1 | 3 | `1316` | 8 | 20-34 | 1123 | 1000 gold, 2 qp |
