@@ -32,21 +32,25 @@ python3 generate_npc_training_data.py --model claude-haiku-4-5-20251001
 python3 generate_npc_training_data.py --seed 42
 ```
 
-## Behavioral Goals
+## Training Configuration Notes
 
-These are the failure modes that system prompting alone cannot reliably prevent
-in a base model. Every training example should reinforce these behaviors:
+Key notes on the Axolotl config (`npc_config.yml` in the repo root):
 
-- Speak in a medieval fantasy register; avoid modern idiom and filler phrases
-  ("absolutely!", "sounds great!", "no problem!")
-- Never respond with "I'm an AI", "I don't have information about that", or
-  equivalent out-of-character deflections
-- Keep responses to 1–3 sentences — appropriate for MUD pacing
-- Stay in persona when players ask meta or immersion-breaking questions
-- Improvise plausibly in-character rather than admitting ignorance
-- Vary response style by NPC archetype (gruff blacksmith, suspicious guard,
-  learned mage, harried innkeeper)
-- Apply a regional accent or dialect consistent with the NPC's accent tag
+- `adapter: qlora` + `load_in_4bit: true` — QLoRA: 4-bit quantized base model
+  with a full-precision bf16 adapter. Halves VRAM versus full LoRA.
+- `lora_r: 16` / `lora_alpha: 16` — effective scale of 1.0 (alpha/r). Conservative
+  and appropriate for behavioral fine-tuning; a higher ratio risks overwriting
+  base model capabilities.
+- `lora_target_modules` — all 7 projection matrices targeted. Standard for
+  instruction-tuned Llama models; captures attention and MLP simultaneously.
+- `val_set_size: 0.05` — 5% of the JSONL held back for validation. Watch val
+  loss across the 12 eval checkpoints (4 per epoch × 3 epochs); stop early if
+  it plateaus or rises.
+- `sample_packing: true` — packs multiple short examples into each sequence to
+  maximize GPU utilization. Important for short NPC exchanges where individual
+  examples are well under `sequence_len`.
+- `optimizer: adamw_bnb_8bit` — 8-bit Adam from bitsandbytes. Cuts optimizer
+  state memory with negligible quality loss.
 
 ## Iteration Workflow
 
