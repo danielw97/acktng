@@ -530,13 +530,9 @@ Keep track of your character's progress with these commands:
 
   @@RIMPORTANT:@@N You must be near a @@Wtrainer@@N to use GAIN!
 
-  At the recall point there is a trainer.  To reach it:
+  There is a trainer at the recall point.  Type '@@yRECALL@@N' to go there,
 
-    1. Type '@@yRECALL@@N' to teleport to the temple.
-
-    2. Go @@yUP@@N, then @@yUP@@N again to reach the trainer.
-
-    3. Type '@@yGAIN@@N' in the presence of the trainer to level up.
+  then type '@@yGAIN@@N' near the trainer to level up.
 
   You can gain levels in multiple classes!  This is called @@Wmulti-classing@@N.
 
@@ -1052,11 +1048,9 @@ Kill the sage to claim your @@Wdiploma@@N -- it has magical properties!
 
   1. Type '@@yRECALL@@N' to teleport to the temple.
 
-  2. Go @@yUP@@N, then @@yUP@@N again to reach the trainer area.
+  2. There is a @@Wtrainer mob@@N at recall -- type '@@yGAIN@@N' to advance your level!
 
-  3. There is a @@Wtrainer mob@@N there -- type '@@yGAIN@@N' to advance your level!
-
-  4. Explore the world from the recall point!
+  3. Then go @@yUP@@N, @@yUP@@N to begin exploring the next area!
 
 
 @@WUseful Commands to Remember:@@N
