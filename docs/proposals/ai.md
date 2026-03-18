@@ -876,6 +876,11 @@ the trained adapter is stable across lore updates. Factual lore changes
 constantly as areas are modified; runtime injection handles it without
 retraining.
 
+| Layer | Mechanism | What it controls | Update frequency |
+|---|---|---|---|
+| LoRA adapter | Offline fine-tune | Register, brevity, persona, accent blending | Rarely — per iteration cycle |
+| System prompt | Runtime injection | Current lore, NPC-specific knowledge, help topics | Every request |
+
 A RAG layer (vector-indexed area files and help text, retrieved at dispatch
 time) is the natural evolution of section 9's static area blocks. It is
 documented here as a future enhancement; the initial implementation uses the
@@ -1117,8 +1122,13 @@ Review and filter output for quality before training. Produce a `.jsonl` file
 (one JSON object per line).
 
 **Iteration source:** As the server runs, bad NPC responses collected from play
-logs become the most valuable training signal. Write corrected versions of those
-responses and add them to the training set before each re-run.
+logs become the most valuable training signal. The workflow per iteration cycle:
+
+1. Collect bad NPC responses from play logs
+2. Write corrected versions (in-character, concise, correct register)
+3. Append corrections to `npc_training.jsonl`
+4. Re-run `accelerate launch -m axolotl.cli.train npc_config.yml`
+5. Re-export to GGUF and redeploy via Ollama
 
 ### Training with Axolotl (QLoRA on ROCm)
 
@@ -1205,6 +1215,24 @@ warmup_steps: 10
 evals_per_epoch: 4
 saves_per_epoch: 1
 ```
+
+**Key configuration notes:**
+
+- `adapter: qlora` + `load_in_4bit: true` — QLoRA: 4-bit quantized base model
+  with a full-precision bf16 adapter. Halves VRAM versus full LoRA.
+- `lora_r: 16` / `lora_alpha: 16` — effective scale of 1.0 (alpha/r). Conservative
+  and appropriate for behavioral fine-tuning; a higher ratio risks overwriting
+  base model capabilities.
+- `lora_target_modules` — all 7 projection matrices targeted. Standard for
+  instruction-tuned Llama models; captures attention and MLP simultaneously.
+- `val_set_size: 0.05` — 5% of the JSONL held back for validation. Watch val
+  loss across the 12 eval checkpoints (4 per epoch × 3 epochs); stop early if
+  it plateaus or rises.
+- `sample_packing: true` — packs multiple short examples into each sequence to
+  maximize GPU utilization. Important for short NPC exchanges where individual
+  examples are well under `sequence_len`.
+- `optimizer: adamw_bnb_8bit` — 8-bit Adam from bitsandbytes. Cuts optimizer
+  state memory with negligible quality loss.
 
 **Running training:**
 
