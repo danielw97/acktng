@@ -21,6 +21,13 @@ unit-test-comm: $(OBJDIR)/tests/test_comm.o $(OBJDIR)/comm.unit-test.o $(OBJDIR)
 	rm -f tests/unit-test-comm
 	$(CC) -o tests/unit-test-comm $(OBJDIR)/tests/test_comm.o $(OBJDIR)/comm.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
+$(OBJDIR)/login.unit-test.o: login.c headers/ack.h
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_LOGIN -o $(OBJDIR)/login.unit-test.o login.c
+
+unit-test-login: $(OBJDIR)/tests/test_login.o $(OBJDIR)/login.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
+	rm -f tests/unit-test-login
+	$(CC) -o tests/unit-test-login $(OBJDIR)/tests/test_login.o $(OBJDIR)/login.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+
 unit-test-websocket-validation: $(OBJDIR)/tests/test_websocket_validation.o
 	rm -f tests/unit-test-websocket-validation
 	$(CC) -o tests/unit-test-websocket-validation $(OBJDIR)/tests/test_websocket_validation.o $(L_FLAGS)
@@ -297,13 +304,30 @@ unit-test-prompt: $(OBJDIR)/tests/test_prompt.o $(OBJDIR)/prompt.unit-test.o $(O
 	rm -f tests/unit-test-prompt
 	$(CC) -Wl,--gc-sections -o tests/unit-test-prompt $(OBJDIR)/tests/test_prompt.o $(OBJDIR)/prompt.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns unit-test-prompt
+$(OBJDIR)/handler.unit-test.o: handler.c headers/ack.h
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/handler.unit-test.o handler.c
+
+unit-test-handler: $(OBJDIR)/tests/test_handler.o $(OBJDIR)/handler.unit-test.o
+	rm -f tests/unit-test-handler
+	$(CC) -Wl,--gc-sections -o tests/unit-test-handler $(OBJDIR)/tests/test_handler.o $(OBJDIR)/handler.unit-test.o $(L_FLAGS)
+
+$(OBJDIR)/skills.unit-test.o: skills.c headers/ack.h
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/skills.unit-test.o skills.c
+
+unit-test-skills: $(OBJDIR)/tests/test_skills.o $(OBJDIR)/skills.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
+	rm -f tests/unit-test-skills
+	$(CC) -Wl,--gc-sections -o tests/unit-test-skills $(OBJDIR)/tests/test_skills.o $(OBJDIR)/skills.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+
+unit-tests: unit-test-handler unit-test-skills unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-login unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns unit-test-prompt
+	./tests/unit-test-handler
+	./tests/unit-test-skills
 	./tests/unit-test-act-flags
 	./tests/unit-test-area-format
 	./tests/unit-test-help-format
 	./tests/unit-test-sha256
 	./tests/unit-test-update
 	./tests/unit-test-comm
+	./tests/unit-test-login
 	./tests/unit-test-websocket-validation
 	./tests/unit-test-fight
 	./tests/unit-test-act-info

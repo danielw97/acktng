@@ -381,16 +381,6 @@ const struct qmessage_type qmessages[4][17] = {
 
 void do_iquest(CHAR_DATA *ch, char *argument)
 {
-   extern bool quest;
-   extern bool auto_quest;
-   extern CHAR_DATA *quest_mob;
-   extern CHAR_DATA *quest_target;
-   extern OBJ_DATA *quest_object;
-   extern int quest_timer;
-   extern int quest_wait;
-   extern int quest_level_min;
-   extern int quest_level_max;
-   extern sh_int quest_personality;
 
    char buf[MAX_STRING_LENGTH];
    char new_long_desc[MAX_STRING_LENGTH];
@@ -769,11 +759,6 @@ CHAR_DATA *get_quest_giver(int min_level, int max_level)
 void crusade_inform(void)
 {
    char buf[MAX_STRING_LENGTH];
-   extern CHAR_DATA *quest_mob;
-   extern CHAR_DATA *quest_target;
-   extern OBJ_DATA *quest_object;
-   extern int quest_timer;
-   extern sh_int quest_personality;
    extern const struct qmessage_type qmessages[4][17];
    sh_int active_personality;
 
@@ -819,9 +804,6 @@ void crusade_inform(void)
 
 void crusade_complete(CHAR_DATA *ch)
 {
-   extern CHAR_DATA *quest_mob;
-   extern OBJ_DATA *quest_object;
-   extern sh_int quest_personality;
    extern const struct qmessage_type qmessages[4][17];
    sh_int active_personality;
 
@@ -840,7 +822,6 @@ void crusade_complete(CHAR_DATA *ch)
 
 void crusade_cancel()
 {
-   extern CHAR_DATA *quest_mob;
 
    if (quest_mob)
       do_crusade(quest_mob, "Shoot! Just forget about recovering ANYTHING for me, ok?");
@@ -851,15 +832,6 @@ void crusade_cancel()
 
 void clear_crusade()
 {
-   extern bool quest;
-   extern CHAR_DATA *quest_mob;
-   extern CHAR_DATA *quest_target;
-   extern OBJ_DATA *quest_object;
-   extern int quest_timer;
-   extern int quest_wait;
-   extern sh_int quest_personality;
-   extern int quest_level_min;
-   extern int quest_level_max;
 
    /*
     * Clear ALL values, ready for next quest
@@ -905,16 +877,7 @@ void clear_crusade()
 void generate_auto_crusade()
 {
    DESCRIPTOR_DATA *d;
-   extern bool quest;
 
-   extern CHAR_DATA *quest_mob;
-   extern CHAR_DATA *quest_target;
-   extern OBJ_DATA *quest_object;
-   extern int quest_timer;
-   extern int quest_wait;
-   extern sh_int quest_personality;
-   extern int quest_level_min;
-   extern int quest_level_max;
    int hunt_flags = 0;
    char new_long_desc[MAX_STRING_LENGTH];
    sh_int loop_counter = 0;

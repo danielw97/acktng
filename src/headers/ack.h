@@ -1248,8 +1248,9 @@ struct cmd_type
    sh_int position;
    sh_int level;
    sh_int log;
-   sh_int type; /*added by Aeria for do_commands */
-   sh_int show; /*added by Aeria for do_commands */
+   sh_int type;  /* added by Aeria for do_commands */
+   sh_int show;  /* added by Aeria for do_commands */
+   sh_int flags; /* CMD_FLAG_* bitmask */
 };
 
 /*
@@ -1288,6 +1289,11 @@ bool is_same_group args((CHAR_DATA * ach, CHAR_DATA *bch));
 bool is_group_leader args((CHAR_DATA * ch));
 void send_to_room args((char *message, ROOM_INDEX_DATA *room));
 void list_who_to_output args((void));
+
+/* fight.c */
+bool shortfight_should_suppress_watched_autoattack args((int observer_is_npc,
+                                                         int observer_has_shortfight,
+                                                         int observer_is_fighting));
 
 /* act_info.c */
 void set_title args((CHAR_DATA * ch, char *title));
@@ -1422,6 +1428,7 @@ long get_cost_to_level_remort args((CHAR_DATA * ch, int class));
 bool can_wield args((CHAR_DATA * ch, OBJ_DATA *obj, int loc));
 int get_curr_str args((CHAR_DATA * ch));
 int get_max_str args((CHAR_DATA * ch));
+int get_max_stat args((CHAR_DATA * ch, int apply_type));
 int get_curr_int args((CHAR_DATA * ch));
 int get_max_int args((CHAR_DATA * ch));
 int get_curr_wis args((CHAR_DATA * ch));

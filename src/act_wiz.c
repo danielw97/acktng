@@ -3584,7 +3584,6 @@ void do_owhere(CHAR_DATA *ch, char *argument)
    OBJ_DATA *obj;
    OBJ_DATA *in_obj;
    int obj_counter = 1;
-   extern OBJ_DATA *auction_item;
    bool mailme = FALSE;
    if (is_name("mailme", argument))
       mailme = TRUE;

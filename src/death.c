@@ -1,10 +1,6 @@
 #include "globals.h"
 #include "special.h"
 
-extern POL_DATA politics_data;
-extern CHAR_DATA *quest_target;
-extern CHAR_DATA *quest_mob;
-
 /* Autogen */
 OBJ_DATA *generate_item(int level);
 bool create_loot(CHAR_DATA *ch, OBJ_DATA *obj);
@@ -34,10 +30,6 @@ void make_corpse(CHAR_DATA *ch, char *argument)
    /*
     * int counter, num;
     */
-   extern OBJ_DATA *quest_object;
-   extern int quest_timer;
-   extern CHAR_DATA *quest_target;
-
    one_argument(argument, arg);
 
    if (deathmatch)

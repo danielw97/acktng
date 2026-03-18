@@ -149,6 +149,7 @@ extern sh_int gsn_mana_sense;
 extern bool booting_up;
 extern bool area_resetting_global;
 extern bool deathmatch;
+extern bool wizlock;
 extern char *const dir_name[];
 extern char *const rev_name[];
 
@@ -195,6 +196,31 @@ extern ROOM_INDEX_DATA *room_index_hash[MAX_KEY_HASH];
 extern OBJ_INDEX_DATA *obj_index_hash[MAX_KEY_HASH];
 extern MOB_INDEX_DATA *mob_index_hash[MAX_KEY_HASH];
 extern SYS_DATA_TYPE sysdata;
+
+/* Auction globals (defined in db.c). */
+extern OBJ_DATA *auction_item;
+extern CHAR_DATA *auction_owner;
+extern CHAR_DATA *auction_bidder;
+extern int auction_bid;
+extern int auction_reserve;
+extern int auction_stage;
+extern bool auction_flop;
+
+/* Quest globals (defined in db.c). */
+extern bool quest;
+extern bool auto_quest;
+extern CHAR_DATA *quest_mob;
+extern CHAR_DATA *quest_target;
+extern OBJ_DATA *quest_object;
+extern int quest_timer;
+extern int quest_wait;
+extern sh_int quest_personality;
+extern int quest_level_min;
+extern int quest_level_max;
+
+/* Diplomatics globals (defined in db.c). */
+extern POL_DATA politics_data;
+extern COUNCIL_DATA super_councils[];
 
 /* db.c globals exposed for the save module and other subsystems. */
 extern char str_empty[];

@@ -65,6 +65,33 @@ int get_crit_mult(CHAR_DATA *ch);
 /*
  * Globals.
  */
+
+/* -S- Mod: Some Globals for auctioning an item */
+OBJ_DATA *auction_item;    /* Item being sold      */
+CHAR_DATA *auction_owner;  /* Item's owner         */
+CHAR_DATA *auction_bidder; /* Last bidder for item    */
+int auction_bid;           /* Latest price offered    */
+int auction_reserve;       /* Reserve Price     */
+int auction_stage;         /* start, 1st, 2nd, gone   */
+bool auction_flop;         /* Update called externally?    */
+
+/* -S- Mod: Globals to handle questing */
+bool quest;               /* Is there a quest running?    */
+bool auto_quest;          /* Quests start on their own?   */
+CHAR_DATA *quest_mob;     /* Mob which started quest      */
+CHAR_DATA *quest_target;  /* Target of the quest     */
+OBJ_DATA *quest_object;   /* Object to recover    */
+int quest_timer;          /* Time left to get object */
+int quest_wait = 0;       /* Min time until next quest  */
+sh_int quest_personality; /* mob's crusade personality :) */
+int quest_level_min;
+int quest_level_max;
+
+/* Zen mod: Diplomatics globals */
+POL_DATA politics_data;
+
+COUNCIL_DATA super_councils[MAX_SUPER]; /* for supernatural council meetings  */
+
 char bug_buf[2 * MAX_INPUT_LENGTH];
 char log_buf[2 * MAX_INPUT_LENGTH];
 char testerbuf[MSL];
@@ -174,10 +201,6 @@ sh_int gsn_warcry;
 #ifdef TFS
 sh_int gsn_mana_sense;
 #endif
-
-extern bool auto_quest;
-
-extern COUNCIL_DATA super_councils[MAX_SUPER];
 
 /*
  * Locals.
@@ -446,8 +469,6 @@ void boot_db(void)
     */
 
    {
-      extern POL_DATA politics_data;
-
       FILE *clanfp;
       char clan_file_name[MAX_STRING_LENGTH];
       sh_int x, y;

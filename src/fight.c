@@ -35,10 +35,6 @@
 #include "tables.h"
 #include <math.h>
 
-extern POL_DATA politics_data;
-extern CHAR_DATA *quest_target;
-extern CHAR_DATA *quest_mob;
-
 /*
  * Local functions.
  */
@@ -54,6 +50,9 @@ bool shortfight_summary_recipient_matches args((CHAR_DATA * rch, CHAR_DATA *ch, 
                                                 bool expected_shortfight));
 bool shortfight_can_broadcast_room_summary args((CHAR_DATA * ch, CHAR_DATA *victim));
 void shortfight_emit_autoattack_summary args((CHAR_DATA * ch, CHAR_DATA *victim));
+bool shortfight_should_suppress_watched_autoattack args((int observer_is_npc,
+                                                         int observer_has_shortfight,
+                                                         int observer_is_fighting));
 
 bool should_summon_assist_master_round args((int is_npc, int is_charmed, int has_master,
                                              int master_fighting, int same_room,
@@ -76,6 +75,12 @@ int do_damage args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt, int elem
 int damage args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt));
 int get_counter args((CHAR_DATA * ch));
 int get_evasion_piercing args((CHAR_DATA * ch));
+
+bool shortfight_should_suppress_watched_autoattack(int observer_is_npc, int observer_has_shortfight,
+                                                   int observer_is_fighting)
+{
+   return !observer_is_npc && observer_has_shortfight && !observer_is_fighting;
+}
 
 bool should_summon_assist_master_round(int is_npc, int is_charmed, int has_master,
                                        int master_fighting, int same_room, int is_player_summon,
