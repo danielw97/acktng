@@ -372,6 +372,7 @@ const struct cmd_type cmd_table[] = {
     CMD("quit", do_quit, POS_DEAD, 0, LOG_NORMAL, C_TYPE_MISC, C_SHOW_ALWAYS),
     CMD("recall", do_recall, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("/", do_recall, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
+    CMD("caravan", do_caravan, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("home", do_clan_recall, POS_STANDING, CLAN_ONLY, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("rent", do_rent, POS_DEAD, 0, LOG_NORMAL, C_TYPE_MISC, C_SHOW_NEVER),
     CMD("save", do_save, POS_DEAD, 0, LOG_NORMAL, C_TYPE_MISC, C_SHOW_ALWAYS),
