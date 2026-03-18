@@ -17,7 +17,7 @@ W all~
 @@WNorthwestern Watch-Post@@N~
 @@WMidgaard's@@N northwestern corner is anchored by a squat sandstone watch-post whose @@y lantern@@N brackets burn amber on iron hooks at each cardinal corner. The wide intersection was laid out during the @@yLantern Reform@@N era to accommodate patrol-wagon turns, and the worn flagstones carry faded chalk lines from successive watch rotations. A limestone water-trough occupies the curb corner where porters and off-duty guards pause to refill their skins.
 
-~
+~
 0 1
 D1
 ~
@@ -32,7 +32,7 @@ S
 @@WSilver Marketwalk@@N~
 This stretch of the upper avenue is lined with narrow-fronted silversmiths and assay offices whose display cases catch the @@y lantern@@N light in pale flashes. The walkway is wide enough for two handcarts abreast, and the cobbles underfoot have been worn smooth by decades of trade traffic. A tin notice plate nailed to a lintel post lists the current tariff schedule in cramped municipal script.
 
-~
+~
 0 1
 D1
 ~
@@ -51,7 +51,7 @@ S
 @@WCrimson Concourse@@N~
 Dyed canvas awnings in deep crimson filter a ruddy half-shade over this stretch of the boulevard, giving the road its informal name. Militia handbills are pinned to the stone columns flanking the armament factors' offices, and the air carries the sharp tang of oil-blacked iron. Negotiations between purchasing agents and smith representatives play out on folding tables set against the pillar-bases.
 
-~
+~
 0 1
 D1
 ~
@@ -70,7 +70,7 @@ S
 @@WAuburn Traverse@@N~
 Amber-glazed brickwork from the old kiln district lines both sides of this traverse, its warm tone surviving every civic renovation since the Founding Generation. A worn boot-scraper and a public hand-pump stand at the east corner of the crossing. The faint smell of beeswax polish drifts from an open workshop door set flush with the wall.
 
-~
+~
 0 1
 D1
 ~
@@ -89,7 +89,7 @@ S
 @@WGloamvault Mouth@@N~
 A heavy iron grating set flush with the pavement marks the civic descent into the Gloamvault, bolted with a registry padlock that changes quarterly. @@c Ward-sigils@@N etched on the arch stones overhead glow with a faint persistent coldness, a containment measure dating to the @@pViolet Compact@@N era. A faint chill rises through the grating, carrying the mineral smell of old deep stone.
 
-~
+~
 0 1
 D1
 ~
@@ -112,7 +112,7 @@ S
 @@WGilded Promenade@@N~
 Broad pavement flanks a double row of @@y gold-painted@@N iron lamp standards whose joined crossbars form an archway effect at each junction. Cloth pennants advertising guild services hang between the lamp poles, snapping in the passage wind that funnels down this straight run. A civic notice board near the midpoint carries current watch assignments and public-health orders sealed with the district warden's stamp.
 
-~
+~
 0 1
 D1
 ~
@@ -131,7 +131,7 @@ S
 @@WReliquary Threshold@@N~
 A limestone checkpoint arch spans the avenue here, its keystone carved with the @@pViolet Compact@@N registry glyph that dates the checkpoint to the Containment Era. @@c Ward-plinths@@N stand to either side, their carved channels still sharp despite centuries of foot traffic brushing past. The toll-clerks' booth between the plinths has been boarded shut since the Fortification Era, its function absorbed into the central watch-house.
 
-~
+~
 0 1
 D1
 ~
@@ -150,7 +150,7 @@ S
 @@WBeacon Mile North@@N~
 Tall iron beacon standards rise at regular intervals along this section of the boulevard, their multi-tier lamp housings designed to illuminate the road in all weather. Brass distance markers set flush into the curb-stone count the paces to the civic center from this point. The even @@y lamplight@@N here makes it a preferred meeting spot for off-duty couriers exchanging dispatches before the morning distribution run.
 
-~
+~
 0 1
 D1
 ~
@@ -169,7 +169,7 @@ S
 @@WCartographers' Cross@@N~
 A bronze map-post at the center of this four-way crossing marks the historic survey datum from which @@WMidgaard's@@N street grid was originally measured. @@c Etched compass routes@@N on the stone plinth below the post show principal distances to the city's gates in chiselled numerals. The cartographers' guild seal pressed into the iron base has been rubbed bright by generations of travellers checking distances before setting out.
 
-~
+~
 0 1
 D1
 ~
@@ -188,7 +188,7 @@ S
 @@WNorthern Gate@@N~
 The great stone gatehouse of @@WMidgaard's@@N northern approach rises two stories above the avenue, its portcullis raised and chained during daytime hours. @@R Iron gate-bars@@N in the recessed alcoves stand ready to be swung across the passage should the watch bell sound a full closure. A guard's brazier burns beside the duty post, and a logbook on the adjacent lectern records every departure and arrival at the gate. The Great Northern Road stretches away beyond the arch into the dark fringe of the forest, its first league torchlit by city maintenance crews.
 
-~
+~
 0 1
 D0
 ~
@@ -211,7 +211,7 @@ S
 @@WWatch-Station Row@@N~
 A series of iron-shuttered guard posts occupy the ground floors of the buildings on this section of the northern boulevard, their narrow windows angled for line-of-sight coverage of the gate approach to the west. A @@R duty roster@@N is chalked on a board outside the main post, listing shifts through the next three days. The stable yard behind the station row provides overnight quarters for patrol horses and courier mounts cleared by the gate registry.
 
-~
+~
 0 1
 D1
 ~
@@ -230,7 +230,7 @@ S
 @@WSignal Station Alley@@N~
 A short spur off the main boulevard leads to the city's signal-relay tower, a slender iron-and-stone construction used to relay lamp messages to the outlying watch-posts. Lamp operators' equipment is stacked in iron-bound crates beside the tower door, and a logbook of transmitted signals hangs on a chain inside a weather-proof box. The alley itself smells of lamp oil and the faint char of burned signal-cloth.
 
-~
+~
 0 1
 D1
 ~
@@ -249,7 +249,7 @@ S
 @@WLamp-Post Row@@N~
 The civic lamp-maintenance authority has concentrated an unusual density of @@y lamp-posts@@N along this stretch, making it the brightest section of the northern boulevard after dark. A lamp-lighter's supply box, padlocked and chained to one of the posts, contains reserve oil and wick spools for emergency maintenance. The heavy oil smell in the air is noticeable even by day.
 
-~
+~
 0 1
 D1
 ~
@@ -268,7 +268,7 @@ S
 @@WDungeon Steps@@N~
 Heavy @@R iron warning chains@@N span the flagstone stairway here, marking the descent into the public detention dungeon maintained by the civic authority. A @@c ward-seal@@N carved on the arch stone above the entrance glows faintly with the suppression sigils renewed each quarter by the reliquary clerks. A duty log sealed in a weather-proof iron box records the name of every guard rotation assigned to the dungeon approach.
 
-~
+~
 0 1
 D1
 ~
@@ -291,7 +291,7 @@ S
 @@WMarket Portico@@N~
 A colonnade of thick stone columns fronts the northern market approach, providing covered space for vendors' carts on market days. The columns carry carved emblems from four different civic administrations, each era's additions layered over the last in a sediment of official decoration. An old coin-exchange booth between two central columns is shuttered but intact, its iron shutter marked with the assay office's embossed seal.
 
-~
+~
 0 1
 D1
 ~
@@ -310,7 +310,7 @@ S
 @@WHeralds' Arch@@N~
 A carved stone arch marks the formal boundary of the herald district, the city's official zone for proclamation, registration, and public notice. The city arms are cut deep into the keystone in the style of the Standardisation Century, still crisp despite the weathering of the stone around them. Notice boards on both sides of the arch hold current civic announcements and sealed guild ordinances awaiting public reading.
 
-~
+~
 0 1
 D1
 ~
@@ -329,7 +329,7 @@ S
 @@WCoin Street North@@N~
 The northern end of the money-changers' and assayers' district begins here, a stretch of the boulevard where iron grates over every cellar window hint at the counting houses below. The perpetual clink of weighed coin rises from unseen rooms, and the foot traffic here moves with purpose, each party intent on their transaction. A pair of armed ledger-keepers loiters near a cornerstone bearing the assay district's bronze boundary marker.
 
-~
+~
 0 1
 D1
 ~
@@ -348,7 +348,7 @@ S
 @@WTraders' Junction@@N~
 A major intersection where Coin Street meets the eastern avenue, this crossing sees a constant flow of factors, merchants, and bonded couriers. @@y Lantern poles@@N mark each of the four corners, and iron ground-rings for securing laden pack animals are sunk into the curb at regular intervals. Porters with barrows navigate between standing negotiators with practised impatience.
 
-~
+~
 0 1
 D1
 ~
@@ -367,7 +367,7 @@ S
 @@WBell Quarter North@@N~
 The bell-founders and clocksmiths who occupy this stretch make the air here ring with the metallic resonance of test chimes from the upper workshops. A cracked practice bell rests in an alcove behind an iron grille, retired from service but still displayed as a mark of the quarter's trade history. The rhythm of hammering from behind closed shutters varies from the light tap of calibration tools to the heavy ring of raw casting work.
 
-~
+~
 0 1
 D1
 ~
@@ -386,7 +386,7 @@ S
 @@WEastern Promenade North@@N~
 The northeastern corner of @@WMidgaard's@@N upper boulevard, where the wide northern avenue begins its transition into the narrower trade-district streets to the south. Iron plaques on the corner building mark the eastern tax district boundary, a civic demarcation that determines which ward collects levies on goods passing this point. The pavement here is freshly patched with lighter-coloured stone from a recent repair.
 
-~
+~
 0 1
 D2
 ~
@@ -401,7 +401,7 @@ S
 @@WCivic Archives West@@N~
 The western end of the civic quarter smells of old parchment and stone dust drifting from the archives building whose tall narrow windows face the street. Index plaques on the archive facade list the document categories held within: land surveys, tax ledgers, birth registries, and watch reports going back centuries. A queue of petitioners with leather satchels waits near the intake window for the morning filing session.
 
-~
+~
 0 1
 D0
 ~
@@ -420,7 +420,7 @@ S
 @@WBarracks Lane@@N~
 The barracks for the northern watch occupies the ground and first floors of the long stone building running the length of this lane on the western side. Equipment racks are visible through the open ground-floor windows, and the smell of leather oil and steel polish drifts onto the street. Off-duty guards in grey watch-coats move between the barracks gate and the nearby mess hall, a low annexe at the lane's northern end.
 
-~
+~
 0 1
 D0
 ~
@@ -443,7 +443,7 @@ S
 @@WScribes' Square@@N~
 A small square off the civic avenue where three competing scribes' offices face each other across worn flagstones, their ink-stained apprentices collecting and delivering documents in constant rotation. Public copying boards along one wall display standardised contract forms available at a posted fee. The sound of quills scratching and stamps pressing wax is audible from the open casement windows above.
 
-~
+~
 0 1
 D0
 ~
@@ -466,7 +466,7 @@ S
 @@WAssessors' Row@@N~
 Property assessors and land-registry clerks occupy the buildings on this row, their red-painted doors distinguishing them from the plain stone facades around them. Queues form outside each office in the morning hours as landholders bring their annual declarations for stamping and recording. A wall-mounted notice board outside the senior assessor's door lists all forthcoming public property auctions and disputed boundary hearings.
 
-~
+~
 0 1
 D0
 ~
@@ -489,7 +489,7 @@ S
 @@WPilgrim's Ascent@@N~
 An open iron staircase rises from the street level here, its treads worn smooth by the passage of countless feet ascending to the elevated pilgrimage walkway above. @@c Ward-carvings@@N along the base of the staircase walls mark this as a @@pViolet Compact@@N-era structure, built when the city first formalised the pilgrim routes connecting its outer districts to the temple. A candle niche cut into the base stone holds a stub of tallow, recently lit.
 
-~
+~
 0 1
 D0
 ~
@@ -516,7 +516,7 @@ S
 @@WScholar's Walk@@N~
 The scholars' walk is a broad covered arcade built along the front of the civic library and research annex, providing shelter for reading and debate. Stone benches line the inner wall, many occupied by individuals with open volumes or rolled manuscripts balanced on their knees. The arcade floor is inlaid with @@c compass-rose tiles@@N, a decorative remnant from the original construction that no subsequent resurfacing has managed to entirely cover.
 
-~
+~
 0 1
 D0
 ~
@@ -539,7 +539,7 @@ S
 @@WTannery Row@@N~
 The tanning operations on this row have been here since the Founding Generation, and the smell makes that clear. Skins stretch on frames in the open yards behind the street-front buildings, and the chemical tang of bark-pits pervades the immediate vicinity. Trade buyers from the leather-workers' guild wait outside the largest yard's gate for the morning inspection round.
 
-~
+~
 0 1
 D0
 ~
@@ -562,7 +562,7 @@ S
 @@WMason's Yard@@N~
 An open yard behind a low iron fence holds dressed stone blocks awaiting placement in the ongoing civic repair programme. Masons' marks are chiselled into each block's face, identifying the cutter and the quarry source for the ward maintenance ledger. The yard supervisor's shed at the far corner displays the current work schedule on a chalk board visible through its open door.
 
-~
+~
 0 1
 D0
 ~
@@ -585,7 +585,7 @@ S
 @@WIronwright's Lane@@N~
 The ironwrights' guild maintains its eastern workshop annexe along this lane, filling the air with the clang of hammers on anvils and the hiss of quench-water. Iron window-grilles and decorative bracket-work line the facade of the guild building, each piece a demonstration of current members' skill. Commission orders are posted in a glass-fronted notice case beside the guild door.
 
-~
+~
 0 1
 D0
 ~
@@ -608,7 +608,7 @@ S
 @@WSky-Watch Platform@@N~
 An iron-railed viewing platform rises above the street here on a stone column, accessible by a locked external stair maintained by the civic weather service. @@c Astrological markings@@N are etched into the platform's stone railing, used by the watch service to calibrate seasonal predictions. Below the column, a brass speaking-tube connects to the weather-service office for ground-level reporting without descending the stair.
 
-~
+~
 0 1
 D0
 ~
@@ -635,7 +635,7 @@ S
 @@WCommander's Road@@N~
 The watch commander's office occupies a prominent position on this stretch, its facade slightly grander than the surrounding civic buildings with carved pilasters framing the double doors. Officers in dress uniform pass in and out at regular intervals, and a mounted dispatch rider waits at the iron ring beside the door. The road here is well-swept and free of the merchant clutter that characterises the western sections of the civic quarter.
 
-~
+~
 0 1
 D0
 ~
@@ -658,7 +658,7 @@ S
 @@WChandler's Square@@N~
 A small square where chandlers and wax merchants cluster their stalls around a central trough used for dipping and cooling tapers. The air carries the sweet heavy scent of beeswax and tallow, and rows of hanging candles dry on wooden frames erected across the square. The @@y golden sheen@@N of fresh wax catches every light source and makes this the best-illuminated open space in the civic quarter.
 
-~
+~
 0 1
 D0
 ~
@@ -681,7 +681,7 @@ S
 @@WGlassblower's Way@@N~
 Glassblowers occupy the upper floors of the buildings along this stretch, their furnace glow visible through the gaps in the wooden shutters. Finished glass panels in the ground-floor display windows show samples of tinted, etched, and patterned work available from the studios above. The ambient warmth here even in winter months is a side effect of the furnaces running through most of the day.
 
-~
+~
 0 1
 D0
 ~
@@ -704,7 +704,7 @@ S
 @@WDyer's Crossing@@N~
 The dyers' district begins here, and the evidence is immediate: coloured water runs in the gutter channel, and cloth hangs drying from every available horizontal line between the buildings. @@R Reds@@N, @@y yellows@@N, and deep @@p violets@@N dominate the current production, and the acrid smell of mordants bites at the nose. Dye-masters in stained aprons argue over colour consistency at the crossing corner.
 
-~
+~
 0 1
 D0
 ~
@@ -727,7 +727,7 @@ S
 @@WCentral Civic Plaza@@N~
 The primary open space of the civic quarter is paved in a pattern of @@W white@@N and @@c grey@@N flagstones arranged in the traditional ward-grid design. A fountain at the plaza's centre has been dry for two years, its basin used as a message-drop by the courier guild. The surrounding buildings include the district magistrate's hall, the licensing office, and the civil registry, their facades all bearing the matching civic-authority livery of grey paint and brass numerals.
 
-~
+~
 0 1
 D0
 ~
@@ -750,7 +750,7 @@ S
 @@WScrivener's Alley@@N~
 The scriveners' specialist alley runs between the civic plaza and the eastern precinct, occupied by contract specialists who handle documents too complex for the general scribes' offices. Their signs advertise services in precise language: deed transfers, guild charters, oath-ledger transcriptions, and will registration. The narrow alley concentrates foot traffic and the sound of competing apprentices calling out their masters' specialisations to passing clients.
 
-~
+~
 0 1
 D0
 ~
@@ -773,7 +773,7 @@ S
 @@WClothier's Lane@@N~
 Bolt-cloth merchants and tailors occupy both sides of this lane, their window displays showing current fabrics against which clients may compare samples from the market. Cut ends of cloth line the pavement outside the larger shops, free for the taking by those who need rags or small patches. A guild hall at the lane's eastern end controls quality standards for all fabric sold in this district.
 
-~
+~
 0 1
 D0
 ~
@@ -796,7 +796,7 @@ S
 @@WCobbler's Square@@N~
 Cobblers and leather-stitch workers cluster around this small square, their sample boots and sandals displayed on iron pegs along the front walls. The sound of lasting hammers and stitching awls carries from every open workshop door, and the smell of fresh-cut leather is pervasive. A communal stretching rack in the centre of the square is shared by several workshops for large panel work.
 
-~
+~
 0 1
 D0
 ~
@@ -819,7 +819,7 @@ S
 @@WPerfumer's Row@@N~
 The perfumers and herbalists on this row have transformed their section of the civic quarter into an olfactory contrast with the tanners' lane nearby. Dried flower bundles hang from the lintels, and the air is layered with competing scents from the open bottles displayed in each window. A civic notice requires all perfume stalls to keep their display bottles stoppered during the market inspection hours.
 
-~
+~
 0 1
 D0
 ~
@@ -842,7 +842,7 @@ S
 @@WEastern Precinct Road@@N~
 The eastern end of the civic quarter narrows here as the administrative buildings give way to the warehouse district beginning around the next corner. A milestone post at the road's edge marks the distance to the eastern gate and the toll-post on the desert road. Two civic officials in grey carry a sealed chest under escort between the tax collection office and the district treasury building.
 
-~
+~
 0 1
 D0
 ~
@@ -861,7 +861,7 @@ S
 @@WProvisioner's Lane West@@N~
 The western approach to the market quarter is dominated by provisioners' warehouses whose loading doors face the lane, kept open from before dawn until the evening bell. Sacks of grain and dried goods line the pavement under canvas awnings while factor-clerks work through consignment tallies. The lane smells of grain dust, dried herbs, and the particular oily note of preserved foodstuffs in bulk storage.
 
-~
+~
 0 1
 D0
 ~
@@ -880,7 +880,7 @@ S
 @@WSpice Market Row@@N~
 The spice merchants' row fills the air with a dense layering of cinnamon, pepper, and unfamiliar foreign aromatics from the trade routes. Coloured powder spills from imperfectly sealed bags on the lower shelves and stains the flagstones in patches of ochre and rust. Buyers from the larger cookhouses negotiate with the merchants in a mixture of standard and trade-route dialects.
 
-~
+~
 0 1
 D0
 ~
@@ -903,7 +903,7 @@ S
 @@WFishmonger's Way@@N~
 River fish and salted sea-catch are laid out on ice-packed slate slabs along this way, the @@y lantern@@N light giving the wet scales a shifting gleam. Cats loiter with patient expertise at the base of every stall, and the fishmongers' guild apprentice sweeps shaved ice and scales from the pavement with a wide broom at regular intervals. The smell is assertive and distinct from every other part of the market.
 
-~
+~
 0 1
 D0
 ~
@@ -926,7 +926,7 @@ S
 @@WButcher's Crossing@@N~
 The butchers' crossing marks the transition between the fish trade and the red-meat stalls, distinguished by the change from wet-slate tables to block-and-cleaver arrangements. Sawdust covers the pavement in front of the main stalls to absorb drippings, and the crossing itself is washed down hourly. A notice from the civic health authority is posted on the corner building specifying the permitted hours for animal delivery to the district.
 
-~
+~
 0 1
 D0
 ~
@@ -949,7 +949,7 @@ S
 @@WButcher's Plaza@@N~
 The main plaza of the meat market is surrounded by butchers' shops on three sides, their apprentices calling prices from the doorways. A central stone basin serves as a refuse collection point during market hours, emptied by the civic sanitation crew twice daily. The plaza is noisier and more chaotic than the surrounding streets, with buyers, sellers, and delivery hands all competing for space around the central cutting tables.
 
-~
+~
 0 1
 D0
 ~
@@ -972,7 +972,7 @@ S
 @@WApothecary Lane@@N~
 The apothecaries' lane provides a welcome change in atmosphere after the intensity of the meat market, its shuttered windows and measured trade creating an almost contemplative quiet. Coloured glass bottles in the display cases catch the light, and customers speak in low voices while waiting for prepared compounds. A guild examiner's seal is posted on the door of each licensed shop, indicating that the current stock has passed the quarterly purity inspection.
 
-~
+~
 0 1
 D0
 ~
@@ -995,7 +995,7 @@ S
 @@WHerbalist's Square@@N~
 Dried herb bundles are everywhere in this square: hanging from the lintels, piled on the stall surfaces, wound into braids on display racks. The combined scent is an intense botanical blend that sharpens noticeably in warm weather. Herbalists from the outer farms attend the morning market here, bringing fresh stock to supplement the merchants' dried-goods inventory.
 
-~
+~
 0 1
 D0
 ~
@@ -1018,7 +1018,7 @@ S
 @@WTailor's Row@@N~
 The tailors' row is a prosperous-looking stretch with polished wood frontages and display mannequins in the wider windows. Sample garments hang in the doorways and the sound of cutting shears and the hiss of steam pressing irons carries from the workshops inside. Measurement notices listing current commission times are posted in neat frames beside each shop entrance.
 
-~
+~
 0 1
 D0
 ~
@@ -1041,7 +1041,7 @@ S
 @@WWoodworker's Alley@@N~
 Woodworkers and carpenters occupy this alley, their plane shavings curled on the pavement outside every open workshop door. The smell of fresh-cut timber competes with linseed oil and the sharper note of lacquer from the finishing room at the alley's end. Joinery samples, tool handles, and carved panels lean against the walls as display pieces for passing trade.
 
-~
+~
 0 1
 D0
 ~
@@ -1064,7 +1064,7 @@ S
 @@WMarket Gate East@@N~
 The eastern approach to the main market district passes through a modest gate arch maintained by the market association, whose monthly dues pay for the @@y lanterns@@N burning at the arch posts day and night. A market warden in a grey and @@y yellow@@N tabard checks incoming cartloads against the registered vendor list at a small guardhouse to one side. Bulletin boards on either side of the arch post the week's market schedule and any changes to stall assignments.
 
-~
+~
 0 1
 D0
 ~
@@ -1087,7 +1087,7 @@ S
 @@WCaravan Approach@@N~
 The road widens noticeably here as it approaches the caravan quarter, the extra paving laid to accommodate the larger wagons and draft teams that are the lifeblood of @@WMidgaard's@@N long-distance trade. Wheel ruts in the stone mark the most heavily used paths, and the smell of dung, straw, and axle grease becomes apparent well before the caravan square itself comes into view.
 
-~
+~
 0 1
 D0
 ~
@@ -1110,7 +1110,7 @@ S
 @@WCaravan Square@@N~
 The open heart of @@WMidgaard's@@N caravan quarter spreads across a broad expanse of worn flagstone, large enough to hold a dozen fully laden wagon trains at once with room for their teamsters to manoeuvre. Caravans from the eastern desert routes, the northern forest roads, and the western pass all converge here, and the square is rarely quiet at any hour — at dawn the departures begin, at dusk the arrivals crowd in. Broker stalls line the southern and eastern edges, handling commissions for every major trade route the city serves. A central iron post carries route markers for outgoing wagons: @@y north to the forest gates@@N, @@R east to the desert road@@N, @@c west toward Roc Road and Kiess@@N. The ground here has been hardened by decades of iron wheel traffic and the hooves of countless draft animals.
 
-~
+~
 0 1
 D0
 ~
@@ -1133,7 +1133,7 @@ S
 @@WLivestock Market@@N~
 Pens of livestock for sale or trade fill this area of the caravan quarter: draft oxen, pack mules, riding horses, and occasional exotic animals destined for the estates of wealthy buyers. The noise and smell are considerable, and the livestock brokers move between pens with clipboards of registration papers. A civic veterinary post marks animals that have passed the health inspection required before they can enter the city proper.
 
-~
+~
 0 1
 D0
 ~
@@ -1156,7 +1156,7 @@ S
 @@WWagon Masters' Road@@N~
 The wagon masters' administration road connects the caravan square to the trade warehouses and loading bays of the outer ring. Painted kerb-markings indicate which lane is reserved for inbound heavy traffic and which for outbound light vehicles. A charter post at the road's midpoint displays the current fees for warehouse use, wagon impoundment, and driver registration.
 
-~
+~
 0 1
 D0
 ~
@@ -1179,7 +1179,7 @@ S
 @@WGoods Exchange Court@@N~
 The goods exchange court is a semi-covered area where caravan masters and wholesale buyers negotiate transfers without the cargoes needing to leave the wagon. Tally clerks move between groups, recording transaction details in bound ledgers that serve as the exchange's official record. The court's stone columns are carved with the marks of the eight original trade guilds that funded its construction.
 
-~
+~
 0 1
 D0
 ~
@@ -1202,7 +1202,7 @@ S
 @@WBroker's Crossing@@N~
 The main broker crossing is the busiest intersection in the caravan quarter, where trading agents from three directions converge to compare route intelligence and cargo values. @@y Lantern brackets@@N at each corner post carry coloured glass panels indicating the active broker districts: @@R red@@N for desert trade, @@c blue@@N for forest goods, @@y gold@@N for internal city commerce.
 
-~
+~
 0 1
 D0
 ~
@@ -1225,7 +1225,7 @@ S
 @@WPackhorse Lane@@N~
 The narrow lane used by packhorse teams delivering to the upper-level warehouses runs along the eastern edge of the caravan quarter, its pavement deeply grooved by decades of hoof traffic. Iron rings for tethering are sunk into the wall at regular intervals, and a water trough and hay rack stand at the lane's end. Animal handlers move with practiced efficiency, attaching and releasing pack loads without slowing the queue.
 
-~
+~
 0 1
 D0
 ~
@@ -1248,7 +1248,7 @@ S
 @@WStable Yard Road@@N~
 The road outside the main caravan stable yard is perpetually busy with grooms, farriers, and feed suppliers making their rounds of the horse lines. The stable yard gate is large enough to admit a full four-in-hand wagon team, and the keeper's house beside it displays the current overnight boarding rates on a wooden price board. Straw blows across the road in irregular gusts from the open yard interior.
 
-~
+~
 0 1
 D0
 ~
@@ -1271,7 +1271,7 @@ S
 @@WOutrider's Row@@N~
 Scout and outrider services available for hire to caravan masters advertise along this row with painted signs showing their route specialisations and guild affiliations. The riders themselves are often visible on this stretch, maintaining their equipment or reviewing maps pinned to the wall of the outrider guild's open-front posting office. A chalk availability board outside the office shows which scouts are currently contracted and which are free.
 
-~
+~
 0 1
 D0
 ~
@@ -1294,7 +1294,7 @@ S
 @@WCaravan Gate East@@N~
 The eastern perimeter of the caravan quarter ends at this gate, which marks the boundary between the caravan district and the trade road leading to the eastern desert approaches. Heavy bollards of black iron are set into the road to prevent unauthorised heavy vehicle entry outside licensed hours. A customs clerk in a booth on the south side stamps manifests for outbound caravans and records incoming declarations.
 
-~
+~
 0 1
 D0
 ~
@@ -1313,7 +1313,7 @@ S
 @@WWestern Workers' Road@@N~
 The western workers' road separates the craftsmen's district from the outer market wall, its wide pavement suited to the heavy material deliveries that supply the workshops beyond. Timber and stone move along this road in constant cycle, and the carters' guild maintains a duty post here to coordinate traffic. A public drinking fountain at the road's western end is one of the oldest surviving pieces of civic infrastructure in this district.
 
-~
+~
 0 1
 D0
 ~
@@ -1332,7 +1332,7 @@ S
 @@WMillwright's Square@@N~
 Millwrights and gear-smiths cluster around this square, displaying sample gears, cams, and escapement mechanisms on iron-frame boards outside their workshop doors. The metallic clicking and ratcheting of test mechanisms in progress provides a constant background rhythm. A guild patent board lists the registered mechanism designs of current members, protecting their innovations from unlicensed copying.
 
-~
+~
 0 1
 D0
 ~
@@ -1355,7 +1355,7 @@ S
 @@WPotter's Lane@@N~
 Clay dust coats the walls and pavement of this lane, where potters' wheels hum and the smell of damp earth and kiln-fired clay fills every breath. Sample pots and crockery in various stages of completion line the open window sills, and the guild journeyman marks pressed into each piece's base are visible to anyone who examines them. The kiln smoke from the lane's end houses drifts east with the prevailing wind.
 
-~
+~
 0 1
 D0
 ~
@@ -1378,7 +1378,7 @@ S
 @@WMudlark's Road@@N~
 The road takes its name from the clay workers who historically transported raw clay from the riverbank to the potters' district along this route. Modern paving has replaced the old mud-track, but the name persists. Wheelbarrow marks in the softer sections of the paving near the building edges speak to the clay trade that still passes here daily. The district boundary post at the road's corner is still marked with the old mudlark trade symbol.
 
-~
+~
 0 1
 D0
 ~
@@ -1401,7 +1401,7 @@ S
 @@WCrossroads of the Commons@@N~
 The central crossroads of the working quarter sees an unceasing flow of craftsmen, apprentices, material carriers, and guild officials in all directions through the working day. A communal notice board at the crossing's center post carries job listings, apprenticeship openings, and guild announcements from across the district. The paving at the crossing is heavier-gauge than the surrounding roads, reinforced to handle the constant heavy foot and cart traffic.
 
-~
+~
 0 1
 D0
 ~
@@ -1424,7 +1424,7 @@ S
 @@WRope-Maker's Walk@@N~
 Rope-makers occupy this walk, with long lines of twisted hemp stretched between posts the full length of the road as work progresses on large orders. Pedestrians must duck under or step around the work-in-progress, and the smell of hemp oil and raw fibre is heavy in the air. A guild quality board displays the current grade standards for rope sold in the district, verified by the civic engineer's office.
 
-~
+~
 0 1
 D0
 ~
@@ -1447,7 +1447,7 @@ S
 @@WNail-Pounders' Row@@N~
 The nail-smiths' row produces the rhythmic hammering that sets the pace for the entire working quarter from before dawn. Iron nails of every size are displayed in trays outside each shop, and bulk buyers with carts wait at the loading entrance. The guild seal on the corner building certifies that nails sold here meet the standard dimensions used by the civic construction authority.
 
-~
+~
 0 1
 D0
 ~
@@ -1470,7 +1470,7 @@ S
 @@WBarrelwright's Square@@N~
 Completed barrels and casks of every size stand outside the cooperage workshops that line this square, awaiting transport to the merchants, brewers, and provisioners who ordered them. The sound of hoop-setting hammers and the creak of stave bending fills the air throughout the working day. A cooperage standard gauge, a brass template for checking barrel dimensions, is mounted on the square's central pillar.
 
-~
+~
 0 1
 D0
 ~
@@ -1493,7 +1493,7 @@ S
 @@WRiveter's Lane@@N~
 Iron riveters and metalwork joiners make this lane ring with the percussion of their trade, the heavy thud of setting hammers audible from the street before the lane itself comes into view. Large structural components for civic construction projects are assembled and loaded here, requiring the lane to be temporarily blocked for the loading operation at least once daily. The guild foreman's office at the lane's end coordinates the day's work schedule on a board visible from the street.
 
-~
+~
 0 1
 D0
 ~
@@ -1516,7 +1516,7 @@ S
 @@WEastern Workers' Road@@N~
 The eastern end of the working quarter road sees slightly lighter traffic than the western counterpart, as most heavy deliveries arrive from the west along the main caravan route. Light manufacturing — printmaking, bookbinding, and fine leatherwork — occupies the eastern buildings, and the pace here is noticeably calmer than the percussion-heavy workshops to the west. A public bench and a small stone pool with clean water provide a brief rest point for workers in the adjacent buildings.
 
-~
+~
 0 1
 D0
 ~
@@ -1539,7 +1539,7 @@ S
 @@WWarden's Road West@@N~
 The watch patrol road runs along this section of the working quarter, providing the wardens with a clear line of sight between the main crossroads and the outer district boundary. Patrol markers, small iron pegs driven into the paving at intervals, guide the night watch rotation along their established route. The warden's sub-post at the road's corner is staffed through all three watches, its iron lantern burning around the clock.
 
-~
+~
 0 1
 D0
 ~
@@ -1562,7 +1562,7 @@ S
 @@WSlate-Tile Alley@@N~
 This alley is named for the distinctive slate-tile paving laid here by a private initiative during the Standardisation Century, still intact and far more even than the civic stone around it. Small workshops for precision craftwork — engravers, clockmakers, and seal-cutters — occupy the tight building spaces on both sides. The alley is narrow enough that two loaded porters cannot pass each other without one turning sideways.
 
-~
+~
 0 1
 D0
 ~
@@ -1585,7 +1585,7 @@ S
 @@WRow of the Weavers@@N~
 The weavers' district occupies this stretch with a colour and texture that softens the industrial character of the surrounding quarter. Finished cloth hangs drying from upper-floor rods, and the rhythmic click of working looms carries from the interior of each building. Sample bolts displayed in the ground-floor windows show the current pattern range, with the weavers' guild quality mark woven into every hem.
 
-~
+~
 0 1
 D0
 ~
@@ -1608,7 +1608,7 @@ S
 @@WChandler's Lane@@N~
 A secondary chandler's operation works out of this lane, supplying the working quarter's high consumption of tallow lights and oil lamps for the long hours of the craftsmen's shifts. Large candle molds and wax-pouring equipment are stacked outside the workshop on most mornings while the floor is being cleaned. The lane's heavy wax smell is less pleasant than the beeswax quarter to the north, as most stock here is utilitarian tallow.
 
-~
+~
 0 1
 D0
 ~
@@ -1631,7 +1631,7 @@ S
 @@WHeart of the Commons@@N~
 The informal gathering place of the working quarter is this widened section of road where the lanes from the main craft districts all converge, bringing apprentices and journeymen together at the end of the working day. A large public notice board here is managed by the workers' welfare association and carries apprenticeship postings, housing notices, and mutual-aid announcements. At midday the space fills with workers eating from paper-wrapped provisions bought at the nearby stalls.
 
-~
+~
 0 1
 D0
 ~
@@ -1654,7 +1654,7 @@ S
 @@WPresser's Walk@@N~
 Steam pressing operations in the garment district produce visible wisps of steam that drift across this walk from the pressing-house vents set low in the building walls. Garments on wooden forms are wheeled in and out of the pressing-houses on delivery carts, and the humid warmth of the walk is noticeable even in cold weather. A garment association office at the walk's end handles quality disputes and maintains the district's pressing standards register.
 
-~
+~
 0 1
 D0
 ~
@@ -1677,7 +1677,7 @@ S
 @@WDye-Master's Row@@N~
 Senior dye-masters maintain their premium operations on this row, catering to the estates and wealthy merchants who require exact colour matching for commission work. Colour sample cards in the window displays are precise to a degree that the common market stalls cannot match, each shade named and referenced against the guild colour register. The row smells of complex dye chemistry: mordants, fixatives, and the base pigment compounds that distinguish master-grade work.
 
-~
+~
 0 1
 D0
 ~
@@ -1700,7 +1700,7 @@ S
 @@WSpinner's Square@@N~
 Spinning wheels and hand-spindles work in the open-air beneath the square's central covered arcade, producing thread for the weavers further along the district. The rhythmic whir of spindles is constant throughout the working day, and the air carries drifting wisps of raw fibre. Grade markers on the thread bundles indicate the twist count and fibre origin, recorded in the guild stock ledger.
 
-~
+~
 0 1
 D0
 ~
@@ -1723,7 +1723,7 @@ S
 @@WSeamstress Row@@N~
 Seamstresses' workshops face onto this row with double-wide windows designed to maximise natural light for close needlework. Commission boards outside each shop carry waiting times for alterations, mending, and bespoke garment work. The sound of singing from the interior of the larger workshops is a noted feature of this row, the traditional working songs keeping a shared pace among the workers inside.
 
-~
+~
 0 1
 D0
 ~
@@ -1746,7 +1746,7 @@ S
 @@WWarden's Road East@@N~
 The eastern boundary of the working quarter is marked by a final patrol road that separates the craftsmen's district from the southern commons beginning beyond. A patrol sub-post on the corner maintains oversight of both districts and coordinates with the adjacent warden posts via the lamp-signal system rigged between the upper-floor windows. The paving quality changes noticeably south of this road as civic maintenance resources are distributed less evenly.
 
-~
+~
 0 1
 D0
 ~
@@ -1765,7 +1765,7 @@ S
 @@WIrongate Road West@@N~
 The western approach to the southern commons runs past the irongate warehouse complex whose @@R iron-bound@@N loading doors line the road's northern side. Heavy goods wagons from the working quarter deliver to the warehouses here before the morning market opens, blocking the road in shifts. A gate-keeper's lodge at the warehouse complex entrance checks deliveries against a day-book before allowing entry to the loading yard.
 
-~
+~
 0 1
 D0
 ~
@@ -1784,7 +1784,7 @@ S
 @@WCoppice Lane@@N~
 Coppiced timber poles for scaffolding and fuel wood are stacked along this lane from the lumber merchants whose yards back onto it. The smell of green wood and bark dust is pervasive, and the ground is always slightly soft with sawdust and wood pulp. A lumber grader's post at the lane's midpoint is where quality assessors mark each pole's grade before it enters the supply chain.
 
-~
+~
 0 1
 D0
 ~
@@ -1807,7 +1807,7 @@ S
 @@WOld Wall Road@@N~
 The road follows the line of @@WMidgaard's@@N oldest defensive wall, long since incorporated into the city's fabric but still visible as a change in building age and stone type along the road's southern side. Sections of the original wall face, much older than the Founding Generation stonework, protrude between later construction. A heritage marker placed by the civic archive designates this as a protected historic streetscape.
 
-~
+~
 0 1
 D0
 ~
@@ -1830,7 +1830,7 @@ S
 @@WSouthern Square@@N~
 A secondary market square serving the southern commons district operates here with a more working-class character than the main market to the north. Stall goods lean toward provisions, tools, and used equipment rather than the premium goods traded in the upper market. The square is noisy with haggling voices, and the central pump sees constant use from the residents of the surrounding tenements.
 
-~
+~
 0 1
 D0
 ~
@@ -1853,7 +1853,7 @@ S
 @@WCrossroads of the South@@N~
 The southern district's main crossroads is wider than the streets that feed it, with a painted hub-ring on the paving directing cart traffic in a one-way circuit around the central point. Watch posts at two of the four corners maintain visibility across the full width of the intersection. The district's public notice board here carries welfare postings and civic labour requests alongside guild announcements.
 
-~
+~
 0 1
 D0
 ~
@@ -1876,7 +1876,7 @@ S
 @@WWayfarer's Lane@@N~
 The lane used by travellers moving between the southern gate district and the central city passes through this section, with inn signs and guest-house boards marking the buildings that cater to the transit trade. Travellers with laden mule-packs and worn road boots are a common sight here regardless of the hour. A public noticeboard outside the largest guest-house carries travel advisories and road condition reports from the gate wardens.
 
-~
+~
 0 1
 D0
 ~
@@ -1899,7 +1899,7 @@ S
 @@WCourier's Row@@N~
 The city's bonded courier stations occupy this row, their horses always ready and their riders identifiable by the @@R red-banded@@N leather satchels strapped across their chests. Dispatch times and route fees are posted on the external boards, and a constant trickle of clients arrives with sealed packages and correspondence for the various route services. The row smells of horse, saddle leather, and the wax used for sealing dispatches.
 
-~
+~
 0 1
 D0
 ~
@@ -1922,7 +1922,7 @@ S
 @@WStonebrick Walk@@N~
 The oldest surviving stretch of paved road in the southern district uses the distinctive small-format stonebrick that predates the civic standardisation of road surfaces. The pattern shows repair work from at least six different eras, each generation of masons choosing slightly different stone. A civic preservation notice is mounted on the wall of the corner building indicating that the stonebrick paving cannot be replaced without the archive's approval.
 
-~
+~
 0 1
 D0
 ~
@@ -1945,7 +1945,7 @@ S
 @@WLantern Row South@@N~
 The southern district's secondary lamp maintenance route runs here, its @@y lantern posts@@N fewer and older than the northern boulevard standards but still providing functional illumination. Several posts show patched repairs to the iron casting, evidence of the age of the infrastructure in this part of the city. A lamp-lighter's hand-cart is parked against one post, its oil cans indicating a maintenance round in progress.
 
-~
+~
 0 1
 D0
 ~
@@ -1968,7 +1968,7 @@ S
 @@WIrongate Road East@@N~
 The eastern end of the irongate road approaches the district boundary where the warehouse zone gives way to the beginning of the temple approach to the south. The change in character is marked: the warehouse district's functional iron architecture transitions to the stone-and-mortar civic style that characterises the temple quarter buildings ahead. A district boundary post here carries the ward numbers for both the commercial district and the temple quarter.
 
-~
+~
 0 1
 D0
 ~
@@ -1991,7 +1991,7 @@ S
 @@WTemple Quarter West@@N~
 The western boundary of the temple quarter begins at this point, indicated by the change in flagstone colour from the grey of the commons district to the @@W white-veined@@N stone used throughout the temple precinct. The ambient noise level drops noticeably here, civic ordinances restricting commercial activity within the temple quarter boundary. A gate post without a gate — symbolic only — marks the formal entrance to the precinct, its carved arch dating to the Containment Era.
 
-~
+~
 0 1
 D0
 ~
@@ -2014,7 +2014,7 @@ S
 @@WReliquary Lane@@N~
 The reliquary transport lane connects the western approaches to the temple's collection storage on the eastern side of the precinct. Sealed cases marked with @@p reliquary custody symbols@@N are sometimes visible being transferred by uniformed temple servants. The lane's walls carry repeated @@c ward-inscriptions@@N at regular intervals, maintaining a passive containment field along the route as required by the Violet Compact protocols.
 
-~
+~
 0 1
 D0
 ~
@@ -2037,7 +2037,7 @@ S
 @@WCandle-Maker's Row@@N~
 The candle-makers who supply the temple's substantial wax consumption maintain their shops on this row, close to the precinct's main entrance. Votive candles, altar lights, and the large devotional pillars used in the main sanctum are produced here in a range of sizes and scents specified by the temple authority. The smell here is clean beeswax, quite different from the tallow operations in the working quarter.
 
-~
+~
 0 1
 D0
 ~
@@ -2060,7 +2060,7 @@ S
 @@WIncense Crossing@@N~
 The crossing of the two main temple quarter approach roads is permanently marked by a faint trace of incense smoke drifting from the devotional burning that has continued here for generations. Small stone incense niches are cut into the bases of the corner posts, tended by voluntary devotees who replace the burning cones from before dawn to after dusk. The crossing has become an informal gathering point for pilgrims orientating themselves on first arrival in the precinct.
 
-~
+~
 0 1
 D0
 ~
@@ -2083,7 +2083,7 @@ S
 @@WPilgrim's Rest@@N~
 Benches of polished stone line both sides of this wider section of the temple approach, providing rest for pilgrims who have walked long distances to reach the city. A water bowl and ladle are maintained by the temple welfare office in a stone alcove with a carved @@pprotection glyph@@N above it. The rest stop's existence is recorded in the temple's welfare charter as one of the original public services of the Founding Generation compact.
 
-~
+~
 0 1
 D0
 ~
@@ -2106,7 +2106,7 @@ S
 @@WShrine Walk@@N~
 A processional walk lined with small wayside shrines forms a formal approach route to the temple district from the south. Each shrine represents a different era of the city's history, their offerings and dedications varying from practical civic tokens to the elaborate @@preliquary frames@@N of the Containment Era. Pilgrims move slowly here, pausing at each shrine in sequence according to their particular devotional tradition.
 
-~
+~
 0 1
 D0
 ~
@@ -2129,7 +2129,7 @@ S
 @@WPrayer Lane@@N~
 The quietest lane in the temple quarter is kept so by an informal civic convention that has persisted for generations: no commercial activity, no raised voices. Priests and devotees use this lane as a meditation walk, and the buildings on both sides are temple-affiliated residences whose occupants observe the quiet hours contract. The @@c ward-markings@@N on the lane's walls include a specific sound-dampening inscription at each end.
 
-~
+~
 0 1
 D0
 ~
@@ -2152,7 +2152,7 @@ S
 @@WSanctuary Road@@N~
 The road leading to the main temple sanctuary is the most formally maintained stretch of paving in the entire quarter, resurfaced after every significant festival and kept clean by a dedicated temple grounds team. Carved stone bollards line both sides, preventing vehicles from the road surface during the major pilgrimage days. The building facades here have been uniformly rendered in @@W white mortar@@N, creating a visual corridor toward the temple ahead.
 
-~
+~
 0 1
 D0
 ~
@@ -2175,7 +2175,7 @@ S
 @@WCloister Walk@@N~
 A covered cloister walk provides a sheltered route between the temple approach and the inner precinct buildings. Stone columns support the cloister vault, their bases carved with @@pdevotional scenes@@N from the city's founding myths. The walk is used by priests in procession and by pilgrims seeking the quieter route to the main sanctum without passing through the busier outer court.
 
-~
+~
 0 1
 D0
 ~
@@ -2198,7 +2198,7 @@ S
 @@WTemple Quarter East@@N~
 The eastern boundary of the temple quarter opens onto the trade routes connecting to the eastern gate and the desert road. The transition here is more abrupt than the western boundary: the @@W white stone@@N of the precinct meets the practical grey of the commercial district with only a boundary post between them. Temple officials staff a small registry office at the boundary to monitor commercial activity approaching the precinct.
 
-~
+~
 0 1
 D0
 ~
@@ -2217,7 +2217,7 @@ S
 @@WRoc Road Junction@@N~
 The western terminus of the temple row meets the great @@WRoc Road@@N that stretches away to the west toward Kiess and the ruins of old Evermeet. The junction is marked by a civic waypost bearing four carved arms: @@y east to the temple@@N, @@c west to Roc Road@@N, @@R north to the civic quarter@@N, and @@p south to the service district@@N. The road surface here is better maintained than average, reflecting the military and trade importance of the western route. A guard detail monitors the junction at all hours, inspecting vehicles entering from the western approach.
 
-~
+~
 0 1
 D0
 ~
@@ -2240,7 +2240,7 @@ S
 @@WGate of Mercy@@N~
 The ceremonial gate that marks the formal western entrance to the temple precinct stands here, its arch of @@W white limestone@@N carved with the @@pprotection sigils@@N of the Founding Compact. The gate stands open during the day but is sealed after the evening bell by the temple gate-wardens. Supplicants and pilgrims who arrive after the closing bell are directed to the welfare shelter on the southern side of the gate.
 
-~
+~
 0 1
 D0
 ~
@@ -2263,7 +2263,7 @@ S
 @@WHigh Altar Road@@N~
 The road that connects the outer gate to the main temple altar approach is paved in the @@W white-veined@@N stone that the temple authority maintains at considerable expense. Ritual washing basins are set at intervals along the roadside, maintained full by temple novices from before dawn. The sound of devotional chanting from the inner buildings accompanies the walk along this stretch throughout the day.
 
-~
+~
 0 1
 D0
 ~
@@ -2286,7 +2286,7 @@ S
 @@WCanons' Walk@@N~
 The walk used by the temple's senior canons for their morning and evening processions is flanked by carved stone screens filtering the @@y lantern light@@N into geometric patterns on the pavement. Canon offices occupy the buildings to either side, their double-shut doors providing sound isolation for the administrative work carried on within. A carved stone lectern in an alcove holds the temple's public proclamation schedule, updated each morning.
 
-~
+~
 0 1
 D0
 ~
@@ -2309,7 +2309,7 @@ S
 @@WHall of Vigils@@N~
 The hall of vigils is a long covered corridor connecting the outer courts to the inner sanctuary, its walls lined with memorial niches holding the ashes of distinguished temple servants. @@p Violet candles@@N burn in most niches, tended by the vigil-keeping novices who rotate in two-hour shifts through the night hours. The hall's stone floor is polished to a mirror-quality by decades of careful maintenance.
 
-~
+~
 0 1
 D0
 ~
@@ -2332,7 +2332,7 @@ S
 @@WReliquary Square@@N~
 The temple's reliquary district opens onto this square, where @@p violet-robed@@N registry clerks manage the intake and certification of claimed sacred objects brought by pilgrims. A queue of pilgrims with wrapped items waits beside the reliquary intake office, their expressions ranging from hopeful to reverent. The square's flagstones are inscribed with the @@c containment grid@@N required by the Violet Compact for any outdoor reliquary handling.
 
-~
+~
 0 1
 D0
 ~
@@ -2355,7 +2355,7 @@ S
 @@WTemple Approach@@N~
 The formal approach to @@WMidgaard's@@N central temple narrows here to a width that focuses attention on the temple facade ahead. Stone benches on both sides allow pilgrims to compose themselves before entering the main sanctum. Temple guardians in ceremonial dress stand at regular intervals, their presence both protective and symbolic of the boundary between the outer city and the sacred interior.
 
-~
+~
 0 1
 D0
 ~
@@ -2378,7 +2378,7 @@ S
 @@WShrine of the Fallen@@N~
 A major memorial shrine occupies this section of the temple approach, its stone walls covered in inscribed names of those who fell defending the city during the Ash-and-Iron decades. @@p Votives@@N in brass and @@y gold@@N are placed on the ledge before the central memorial stone, some of them many decades old. Temple attendants maintain the shrine with careful reverence, cleaning the stone face and replacing lamps at the prescribed hours.
 
-~
+~
 0 1
 D0
 ~
@@ -2401,7 +2401,7 @@ S
 @@WTemple Vestibule@@N~
 The antechamber of @@WMidgaard's@@N central temple is a high-ceilinged space of @@W white stone@@N and @@p violet-hung@@N columns, designed to prepare the spirit for the sanctum beyond. Novice attendants help arriving pilgrims with the ritual preparation before proceeding to the main hall. The vestibule always carries a faint scent of the incense burned in the adjacent preparation rooms.
 
-~
+~
 8 11
 D0
 ~
@@ -2424,7 +2424,7 @@ S
 @@WThe Temple of @@yMidgaard@@N~
 The great hall of @@WMidgaard's@@N central temple rises in columns of @@W white stone@@N to a vaulted ceiling painted with the city's founding myths in @@y gold@@N and @@p violet@@N. At the hall's center stands the altar of the First Stone Accord, its surface worn smooth by the hands of supplicants across generations. @@R Braziers@@N burn at each corner of the altar platform, their smoke drawn upward by shafts cut through the vault. The temple serves as a sanctuary, a registry of oaths, and the city's primary consecrated space — the place from which all civic ceremony is measured. @@c Ward-sigils@@N in the floor glow with a steady, calming light, and the silence here is profound despite the traffic of pilgrims and officials moving through the outer halls.
 
-~
+~
 59 11
 D0
 ~
@@ -2451,7 +2451,7 @@ S
 @@WTemple Gardens East@@N~
 A walled garden maintained by the temple grounds crew occupies the space between the main sanctum and the eastern approach road. Medicinal herbs and devotional flowers are cultivated in the geometric beds, tended by novices as part of their morning duties. The garden wall carries @@p carved reliefs@@N depicting the seasons of civic life, their detail exceptional even by temple standards.
 
-~
+~
 0 1
 D0
 ~
@@ -2474,7 +2474,7 @@ S
 @@WVault Row@@N~
 The temple's secure storage and document vault annex runs along this row behind a facade of heavy iron shuttered windows and @@R iron-reinforced doors@@N. Vault clerks move between the row's buildings with sealed transfer cases under escort from temple guardians. Public access to the vault annex requires appointment and the countersignature of two canon-level officials.
 
-~
+~
 0 1
 D0
 ~
@@ -2497,7 +2497,7 @@ S
 @@WPilgrim's Crossing South@@N~
 The southern pilgrim route crosses the temple row at this point, connecting the outer city approach to the garden paths inside the precinct. A carved stone marker at the crossing shows the way to the main sanctum, the reliquary, and the welfare shelter with incised symbols readable even by those unfamiliar with the city's script. Temple charity workers distribute sealed water flasks to arriving pilgrims at the crossing during the high-traffic morning hours.
 
-~
+~
 0 1
 D0
 ~
@@ -2520,7 +2520,7 @@ S
 @@WHeralds' Gate South@@N~
 The southern herald gate of the temple precinct is where public proclamations from the temple authority are posted for the wider city. Announcement boards flank the gate on both sides, carrying festival schedules, welfare announcements, and civic-religious notices from the canon council. A herald in temple livery attends the gate during the main posting hours, answering questions about current announcements.
 
-~
+~
 0 1
 D0
 ~
@@ -2543,7 +2543,7 @@ S
 @@WMausoleum Walk@@N~
 The walk past the temple's mausoleum district carries a solemn character that reduces traffic to respectful passage. Stone-faced mausoleum entries line the walk's southern side, each bearing a carved family or guild crest above the sealed door. Maintenance workers polish the entry stones on a rotation schedule, and fresh flowers are placed by relatives on the ledges before each sealed face.
 
-~
+~
 0 1
 D0
 ~
@@ -2566,7 +2566,7 @@ S
 @@WBone Road@@N~
 The informal name given to this section of the temple road refers to the ancient burial ground that lies beneath the paving, pre-dating the city's current layout and recorded in the civic archive as a protected subsurface site. @@c Ward-markers@@N in the pavement maintain the containment protocols required by the Violet Compact for any built-over burial. The road itself shows no visible signs of the history below, but pilgrims familiar with the archive often pause here in acknowledgement.
 
-~
+~
 0 1
 D0
 ~
@@ -2589,7 +2589,7 @@ S
 @@WRiver Approach@@N~
 The temple row's approach to the city's eastern water-course carries the faint smell of moving water from the channel that flows near the precinct's outer wall. Water-transport access to the temple's service yards enters through a gated channel here, used for delivering bulk provisions and removing waste without entering the public precinct. The channel gate is operated by the temple maintenance crew and monitored from the guardhouse on the road's southern side.
 
-~
+~
 0 1
 D0
 ~
@@ -2612,7 +2612,7 @@ S
 @@WHarbour Gate Road@@N~
 The road connecting the temple quarter to the harbour approach begins here, its surface upgraded to handle the commercial traffic that supplies both the temple stores and the adjacent administrative buildings. Draymen with harbour loads navigate the road carefully to respect the precinct boundary, their cargoes checked at the boundary post before being admitted to the temple service yards.
 
-~
+~
 0 1
 D0
 ~
@@ -2635,7 +2635,7 @@ S
 @@WEastern Precinct South@@N~
 The southeastern approach to the temple precinct is the least ceremonially marked of the four boundary points, reflecting its historical use as a service and logistics entrance. Utilitarian buildings here handle the practical support of the temple: stores, laundry, equipment maintenance, and the records office for the eastern ward. Novices assigned to service duties move between these buildings with the purposeful air of those on a fixed schedule.
 
-~
+~
 0 1
 D0
 ~
@@ -2658,7 +2658,7 @@ S
 @@WEastern Gate@@N~
 The eastern boundary of @@WMidgaard@@N opens here onto the desert road that stretches away toward the great dunes and the oasis settlements beyond. The gate structure is heavier than the northern approach, reinforced during the Ash-and-Iron decades when desert incursions were a regular threat to the eastern quarter. @@R Iron-shod doors@@N stand open in their recesses during the day, their mass impressive even in repose. The eastern gate register records every traveller entering from the desert road, and gate wardens inspect all trade goods before admitting them to the city.
 
-~
+~
 0 1
 D0
 ~
@@ -2681,7 +2681,7 @@ S
 @@WWestern Service Passage@@N~
 A narrow vaulted passage cut through the building block connects the temple approach to the service lane below. The walls carry utility pipe-work and lamp brackets at head height, and the floor is well-worn from decades of service traffic. The passage smells faintly of lamp oil and the damp of the stones above, which collect moisture from the city's drainage system.
 
-~
+~
 8 11
 D0
 ~
@@ -2696,7 +2696,7 @@ S
 @@WNarrow Western Alley@@N~
 A second service alley running parallel to the western passage, slightly wider and used by deliveries that cannot fit through the tighter lane to its west. Iron hooks for hanging goods during sorting are set into the alley wall at regular intervals, and a drain channel runs the centre of the floor. The alley is lit by a single lamp bracket halfway along its length.
 
-~
+~
 8 11
 D0
 ~
@@ -2711,7 +2711,7 @@ S
 @@WThe Silkweave Outfitter@@N~
 A gentled shop interior of polished wooden shelving and soft @@y lamplight@@N displays caster robes, enchanted veils, and light arcane protective wear in the lower tier ranges. The shopkeeper keeps each item in an individual display niche, labelled with its ward rating and recommended discipline. The shop smells of cedar wood used in the display cases and the faint ozonic trace of active enchantment residue.
 
-~
+~
 8 11
 D0
 ~
@@ -2722,7 +2722,7 @@ S
 @@WThe Resonant Vestments@@N~
 Mid-tier caster protective wear fills the shelving of this well-appointed shop, each piece stored between boards of soft treated cloth to prevent resonance interference between enchanted items. A fitting alcove behind a curtain allows clients to assess the feel and weight of each garment before purchase. The shopkeeper monitors the room from an elevated desk, visible through an opening in the rear partition.
 
-~
+~
 8 11
 D0
 ~
@@ -2733,7 +2733,7 @@ S
 @@WThe Voidbound Armory@@N~
 High-end caster protective pieces are stored behind glass panels in this prestigious shop, their enchantments still visible as faint @@c blue halos@@N around the displayed items. The shopkeeper requires prospective buyers to present a practitioner's attestation before examining the senior-tier inventory. The room's walls are lined with @@p containment inscriptions@@N that prevent unintended resonance cascade from the concentrated enchantment stock.
 
-~
+~
 8 11
 D0
 ~
@@ -2744,7 +2744,7 @@ S
 @@WThe Iron Shield@@N~
 Functional melee and tank protective gear occupies this shop, its display racks built of heavy iron and rated for the weight of full plate components. The floor is reinforced beneath the heaviest display sections, and the smell of metal treatment compound and leather harness is pervasive. Samples of each item type are available for weight and fit assessment on a rack near the entrance.
 
-~
+~
 8 11
 D0
 ~
@@ -2755,7 +2755,7 @@ S
 @@WThe Tempered Forge@@N~
 Mid-tier melee and tank armour in tempered steel and reinforced leather fills the tiered shelving of this well-stocked shop. Each piece is displayed with its temper-mark, a quality indicator from the independent assayer whose seal appears on the shop's external board. The shopkeeper can describe the production process of every item in stock, a selling point advertised on the sign above the entrance.
 
-~
+~
 8 11
 D0
 ~
@@ -2766,7 +2766,7 @@ S
 @@WThe Ironclad Vault@@N~
 Heavy plate, reinforced mail, and tower-shield components of the senior tier fill this shop from floor to ceiling on iron-pinned shelving. The vault name refers to the shop's origin as a surplus store for the city's military reserve, and items here carry the quality certifications of the civic armoury inspectors. The smell of metal, oil treatment, and the faint tang of heat-treated steel is immediately noticeable on entry.
 
-~
+~
 8 11
 D0
 ~
@@ -2777,7 +2777,7 @@ S
 @@WThe Arcanist's Arsenal@@N~
 Caster-appropriate weapons — wands, focuses, bladed ritual tools, and enchanted staves — are arranged on velvet-lined display boards that run the full length of the shop walls. Each item carries a small card describing its enchantment type and the discipline recommended for its use. The shopkeeper maintains a separate sealed case for the senior-range pieces, accessible only after consulting with the client's evident level of mastery.
 
-~
+~
 8 11
 D0
 ~
@@ -2788,7 +2788,7 @@ S
 @@WThe War Blade@@N~
 Melee and tank weapons from shortswords to two-handed great-weapons are displayed on wall-mounted iron brackets in this spacious shop. Balance racks at the center of the shop allow customers to feel the weight distribution of each blade or bludgeon type before committing. The shopkeeper, a compact person whose forearms show old sparring scars, can give an informed opinion on the combat application of every piece in stock.
 
-~
+~
 8 11
 D0
 ~
@@ -2799,7 +2799,7 @@ S
 @@WThe Lamplighter's Supply@@N~
 Lanterns, torches, magical light sources, and illumination devices of every practical grade line the walls of this general supply shop. Items for beginners share space with exotic light sources designed for the highest-difficulty environments, all arranged by brightness rating on the tiered shelving. The shop is perpetually one of the best-lit in the city, as it uses its own stock for interior illumination.
 
-~
+~
 8 11
 D0
 ~
@@ -2810,7 +2810,7 @@ S
 @@WThe Postmaster's Office@@N~
 A functional and organised office where the city's postmaster handles dispatch, courier assignment, and message relay services. Pigeonhole racks cover the entire rear wall, sorted by route destination and delivery priority. The postmaster's desk is set behind a wooden counter, its surface covered in stamps, sealing wax, and open ledgers tracking current consignments through the delivery network.
 
-~
+~
 8 11
 D0
 ~
@@ -2821,7 +2821,7 @@ S
 @@WThe Quartermaster's Depot@@N~
 The civic quartermaster's supply depot stocks practical mixed armour and weapon options at standard civic contract rates. Supply manifests are visible behind the counter, and the quartermaster's assistant moves between the stacked inventory with the efficiency of someone who has done this work for years. The depot smells of preservation oil, canvas, and the damp stone of the deep storage section visible through the rear arch.
 
-~
+~
 8 11
 D0
 ~
@@ -2832,7 +2832,7 @@ S
 @@WInvasion Armory@@N~
 Maintained at the directive of the civic defence council, the invasion armory stocks high-tier armour and weapons suitable for organised city defence operations. The inventory here is drawn from military-grade requisition contracts and carries the civic defence authority's quality mark. The armorer in charge monitors access carefully and can produce records of every item sold and to whom.
 
-~
+~
 8 11
 D0
 ~
@@ -2843,7 +2843,7 @@ S
 @@WAbandoned Millinery@@N~
 A hat and trim shop that closed some years ago still has the ghost of its last display in the dusty window niche: a hat-stand draped in cobwebs and a faded order book on the counter. The sign outside has been removed, leaving only the bracket holes and a rectangle of less-weathered paint where it hung. The room is empty and smells of old fabric and disuse.
 
-~
+~
 8 11
 D0
 ~
@@ -2854,7 +2854,7 @@ S
 @@WClosed Perfumery@@N~
 The perfumery that occupied this space left its mark in the residual fragrance that clings to the walls and shelving even now, years after the last bottle was sold. Empty display racks and a stripped counter are all that remain of the original interior fittings. A notice in the boarded window reads: @@R PREMISES TO LET — apply registry office.@@N
 
-~
+~
 8 11
 D0
 ~
@@ -2865,7 +2865,7 @@ S
 @@WEmpty Haberdashery@@N~
 The haberdashery here closed with somewhat less ceremony than its neighbours: the shelves are not just empty but pulled from the walls, and the counter has been taken entirely. Someone has used the space briefly as a temporary store, evident from a few wood shavings and a discarded wrapping cord. The back room door hangs open on a broken hinge, revealing a space equally cleared of everything useful.
 
-~
+~
 8 11
 D0
 ~
@@ -2876,7 +2876,7 @@ S
 @@WVacant Cooperage@@N~
 A cooperage that moved its operations to a larger site south of the city left this space vacant and took nothing it could carry. Two broken barrel-ring formers rest against one wall, too damaged to transport but evidently not worth destroying. The smell of oak sawdust and old wood still permeates the walls and floor, resistant to the years of standing empty.
 
-~
+~
 8 11
 D0
 ~
@@ -2887,7 +2887,7 @@ S
 @@WEastern Service Passage@@N~
 A mirror of the western passage on the far side of the service row, this vaulted alley provides the eastern through-route between the temple row above and the service lane below. The walls show maintenance markings from the civic works crew, and the floor is in slightly better repair than the western counterpart. A single lamp bracket at the passage's midpoint is kept lit through all hours by the building maintenance rotation.
 
-~
+~
 8 11
 D0
 ~
@@ -2902,7 +2902,7 @@ S
 @@WNarrow Eastern Alley@@N~
 The narrow eastern alley runs close beside the building's outer wall, smelling of old stone and the drainage from the upper building's downspout that discharges into the floor channel here. It is functional but uninviting, used primarily by delivery personnel who need the eastern through-access without the longer westward detour. Iron hooks on the wall hold utility equipment for the building's service staff.
 
-~
+~
 8 11
 D0
 ~
@@ -2917,7 +2917,7 @@ S
 @@WService Lane West End@@N~
 The western end of the service lane emerges from the passage above into a narrow but fully open street connecting the two shop rows. Maintenance carts and supply deliveries use this end as a staging area, and a civic works storage locker is bolted to the wall near the alley exit. The lane receives less @@y lamplight@@N than the main streets above.
 
-~
+~
 0 1
 D0
 ~
@@ -2936,7 +2936,7 @@ S
 @@WLamp-Room Alley@@N~
 The lamp-room alley houses the maintenance store for the service lane's minimal lighting infrastructure. A steel cabinet secured to the wall holds spare wicks, oil cans, and the tools needed for lamp upkeep in the passage. The alley itself is dim by day and darker than most at night, relying on the lamp-room store's single functioning bracket.
 
-~
+~
 0 1
 D0
 ~
@@ -2959,7 +2959,7 @@ S
 @@WService Lane Step@@N~
 A slight incline in the service lane's pavement is marked by a worn painted step-notice on the wall. The step accommodates the grade change between the passage-level and the flat centre section of the service lane. Delivery workers are occasionally surprised by it in low light, and the scuff marks on the wall at hand height speak to many impacts.
 
-~
+~
 0 1
 D1
 ~
@@ -2978,7 +2978,7 @@ S
 @@WDelivery Access Road@@N~
 This section of the service lane widens slightly to allow two-way delivery traffic for the shops on the row above. Loading marks on the pavement indicate the permitted stop zones for each shop's delivery access point. A civic traffic directive is nailed to a post here limiting delivery vehicles to specific hours to prevent lane blockage.
 
-~
+~
 0 1
 D1
 ~
@@ -2997,7 +2997,7 @@ S
 @@WInspector's Walk@@N~
 The civic health inspector uses this service lane section for their quarterly circuit of the shop row's rear access points. An inspection board mounted on the wall carries the last cycle's results with pass or remediation markers beside each unit. The lane is swept regularly in preparation for inspection visits that may arrive without advance notice.
 
-~
+~
 0 1
 D1
 ~
@@ -3016,7 +3016,7 @@ S
 @@WBackstreet West@@N~
 A plain functional stretch of the service lane between the western delivery bays and the central crossing. The walls on both sides show the back faces of the shop buildings, their service doors all fitted with iron bolts and padlocks. A water drain runs the lane's centre channel, and the surface is slightly concave to direct runoff toward it.
 
-~
+~
 0 1
 D1
 ~
@@ -3035,7 +3035,7 @@ S
 @@WService Lane Centre West@@N~
 The centre-western section of the service lane is the quietest stretch between the two main access passages. A single bench — apparently left here by a previous tenant and never removed — provides an unintentional but well-used rest point. The sounds from the shops above are muted here by the building mass between the lane and the occupied floors.
 
-~
+~
 0 1
 D1
 ~
@@ -3054,7 +3054,7 @@ S
 @@WService Lane Centre@@N~
 The middle point of the service lane, equidistant from the western and eastern passages, has become an informal meeting place for service workers from the adjacent shops. A chalk message board nailed to one wall carries notes from workers to each other, ranging from roster changes to personal notices written in a variety of hands.
 
-~
+~
 0 1
 D1
 ~
@@ -3073,7 +3073,7 @@ S
 @@WService Lane Centre East@@N~
 The centre-eastern section of the service lane is marked by a slight narrowing where two building extensions encroach slightly on the lane's permitted width. Civic notices on both walls remind the building owners of the lane clearance requirements, but no enforcement action is evident. The narrowing is still passable by most delivery vehicles.
 
-~
+~
 0 1
 D1
 ~
@@ -3092,7 +3092,7 @@ S
 @@WService Lane Crossing@@N~
 The lane's central crosspoint where a perpendicular maintenance corridor intersects the main service run. Directional arrows painted on the pavement guide delivery drivers through the crossing without ambiguity. A civic maintenance valve access panel is set into the floor near the crossing centre, its iron cover worn smooth from regular use.
 
-~
+~
 0 1
 D1
 ~
@@ -3111,7 +3111,7 @@ S
 @@WBackstreet East@@N~
 The eastern section of the backstreet begins the approach toward the eastern passages, its pavement slightly better maintained due to the heavier delivery traffic from the eastern shops. Service entries for the supply depot and the armory are set into the wall above, their iron-banded doors marked with the respective building's trade designation.
 
-~
+~
 0 1
 D1
 ~
@@ -3130,7 +3130,7 @@ S
 @@WMaintenance Bay@@N~
 A maintenance bay cut into the service lane's eastern section provides a pull-in point for delivery vehicles offloading to the upper shop floor service entries. Painted loading-zone markings define the bay limits, and a civic parking notice specifies the maximum time a vehicle may occupy the bay before incurring a warden's fine.
 
-~
+~
 0 1
 D1
 ~
@@ -3149,7 +3149,7 @@ S
 @@WSouthside Passage@@N~
 A short connecting passage between the service lane and a secondary maintenance corridor provides access to the pipe-work and drainage infrastructure under the service level. Service crews descend to the lower level through a hatch here on a scheduled maintenance cycle. The passage carries a faint chemical smell from the treatment compounds used in the drainage system below.
 
-~
+~
 0 1
 D1
 ~
@@ -3168,7 +3168,7 @@ S
 @@WService Lane East Approach@@N~
 The approach to the eastern end of the service lane narrows between two building walls that were extended in different eras and never aligned with each other. A warning sign for the clearance height of the passage ahead is posted here for the benefit of drivers with tall loads. The lane floor here has been resurfaced more recently than the surrounding sections, its lighter stone standing out clearly.
 
-~
+~
 0 1
 D1
 ~
@@ -3187,7 +3187,7 @@ S
 @@WSouthern Service Bay@@N~
 A loading bay matched to the southern access requirements of the abandoned shop row below provides a staging area for any future reoccupation of those premises. Currently the bay stands empty except for some stored civic equipment under a waxed canvas cover. A service gate between this bay and the southern passage is locked with a civic works padlock.
 
-~
+~
 0 1
 D1
 ~
@@ -3206,7 +3206,7 @@ S
 @@WService Lane South-East@@N~
 The southeastern section of the service lane carries more foot traffic than the equivalent section on the western end, serving as an informal shortcut between the eastern passage and the maintenance access points on this side of the lane. Scuff marks on the building corners speak to the tight navigation required through this section with any load wider than a handcart.
 
-~
+~
 0 1
 D1
 ~
@@ -3225,7 +3225,7 @@ S
 @@WStorage Alcove@@N~
 A bricked-up alcove in the service lane wall was once a storage access point for a building that no longer exists at the surface level. The brick facing is newer than the surrounding wall, and the shape of the original arch is still visible as a discolouration in the stonework above the infill. Someone has chalked a directional arrow on the alcove face pointing toward the eastern exit.
 
-~
+~
 0 1
 D1
 ~
@@ -3244,7 +3244,7 @@ S
 @@WService Lane Far East@@N~
 The far-eastern section of the service lane is less frequented than the passages around the main shop access points. The pavement here is older and shows more wear than the recently maintained central section. A notice from the civic works department is nailed to the wall, advising that the section will be resurfaced in the coming quarter.
 
-~
+~
 0 1
 D1
 ~
@@ -3263,7 +3263,7 @@ S
 @@WService Lane East End@@N~
 The eastern end of the service lane opens onto the eastern passage approach, its threshold worn smooth by the traffic of workers moving between the two levels. A posted timetable on the wall lists the delivery windows allocated to each shop in the row above, helping to prevent conflicting access at the passages.
 
-~
+~
 0 1
 D0
 ~
@@ -3286,7 +3286,7 @@ S
 @@WEast Access Point@@N~
 The access point at the service lane's eastern extremity provides the entry to the eastern passages connecting the service lane to the rows above and below. A civic access log is kept in a weatherproof box here, recording after-hours entry with a date stamp maintained by the building's night watchman on his evening circuit.
 
-~
+~
 8 11
 D0
 ~
@@ -3305,7 +3305,7 @@ S
 @@WWestern Side Passage@@N~
 The western through-passage of the lower service level is older than its counterpart above, its stonework dating to the Founding Generation construction of the original service block. The walls have been periodically whitewashed but the original stone courses are visible beneath the newest coat. Carved civic marks from successive maintenance teams are layered on the passage keystone above the south entry.
 
-~
+~
 8 11
 D0
 ~
@@ -3320,7 +3320,7 @@ S
 @@WNarrow Back Alley West@@N~
 A secondary passage barely wide enough for a loaded porter runs parallel to the western side passage, its floor worn into a channel by centuries of foot traffic. The walls on both sides are slick with moisture from the water table beneath the service level. A lamp here is broken and has not been replaced, leaving this stretch considerably darker than the rest of the level.
 
-~
+~
 8 11
 D0
 ~
@@ -3335,7 +3335,7 @@ S
 @@WFormer Cordwainer's@@N~
 A specialist shoe workshop that operated here for three generations finally closed when the family's last member retired to the outer districts. A sign in the language of the previous quarter's dominant trade community still reads above the door in faded paint. The workshop interior holds nothing now but old benches and the distinctive smell of hide and thread that decades of trade left behind.
 
-~
+~
 8 11
 D0
 ~
@@ -3346,7 +3346,7 @@ S
 @@WDisused Potter's Shop@@N~
 The potter who worked from this unit relocated to the main pottery lane upstairs when the service row fell out of commercial favour. Two firing racks too awkward to move remain in the corner, and a crack in the wall where a kiln pipe once connected to the building's flue system has been roughly filled with mortar. The floor still carries dried clay in the joins of the flagstones.
 
-~
+~
 8 11
 D0
 ~
@@ -3357,7 +3357,7 @@ S
 @@WClosed Dye Workshop@@N~
 A dye workshop that was cleared out rapidly — evidenced by the spilled pigment ground into the floor that no cleaning has fully removed — left this space in colourful disarray. Patches of @@R red@@N, @@c blue@@N, and @@p purple@@N stain the flagstones near where the mixing stations once stood. The residual smell of mordant compounds is still detectable on warm days.
 
-~
+~
 8 11
 D0
 ~
@@ -3368,7 +3368,7 @@ S
 @@WEmpty Glassblower's@@N~
 The specialized furnace infrastructure for glassblowing was stripped out when this unit closed, leaving gaping holes in the wall where the flue connections were removed. The floor shows the marks of the heavy furnace base, a rectangle of lighter-coloured stone where the equipment protected the pavement from decades of thermal cycling. The building is structurally sound but functionally gutted.
 
-~
+~
 8 11
 D0
 ~
@@ -3379,7 +3379,7 @@ S
 @@WFormer Chandler's Stall@@N~
 Wax residue on the counter surface and the permanent bloom of tallow smell in the walls are the only inheritance of the chandler who kept this stall for many years. A price board still hangs on the wall with old prices chalked on its surface, the chalk faded but legible: standard taper, work-lamp oil, refined beeswax block. The stall has been empty long enough that mice have built in the hollow beneath the counter.
 
-~
+~
 8 11
 D0
 ~
@@ -3390,7 +3390,7 @@ S
 @@WAbandoned Scrivener's@@N~
 A scrivener's compact office was set up here during a period when the lower row attracted commercial traffic. The writing desk is still in place, bolted to the wall, and a few old quill stubs are jammed into the inkwell groove on its surface. The room is barely large enough for two people and the desk simultaneously, which may have contributed to its closure.
 
-~
+~
 8 11
 D0
 ~
@@ -3401,7 +3401,7 @@ S
 @@WFormer Apothecary@@N~
 Traces of the apothecary operation — residue rings from glass bottle bases on the shelving, a faint herbal smell that persists in the plaster — suggest a legitimate pharmaceutical operation once worked from this unit. A government certification board still hangs on the wall, its date and certifier's stamp legible despite the yellowing of the document behind the cracked glass. The shelving units are still in good condition.
 
-~
+~
 8 11
 D0
 ~
@@ -3412,7 +3412,7 @@ S
 @@WEmpty Millinery@@N~
 A second millinery that closed — this one with less sentiment than the one above — left its hatstand frames stacked in the corner and a bolt of dusty velvet behind the counter. The velvet is too degraded to be useful but also too bulky to move without effort, so it remains as the room's sole occupant. The window niche still has the display pegs for sample hats, their painted tips now chipped and dull.
 
-~
+~
 8 11
 D0
 ~
@@ -3423,7 +3423,7 @@ S
 @@WClosed Tailor's Unit@@N~
 The tailor who occupied this unit left in a hurry based on the pins still scattered on the floor and the unfinished garment form still on the fitting stand. The form itself has no garment on it now, but the chalk fitting marks are still faintly visible on its padded surface. The space would be immediately serviceable for another tailor with minimal cleaning and some basic fixtures.
 
-~
+~
 8 11
 D0
 ~
@@ -3434,7 +3434,7 @@ S
 @@WDisused Rope Store@@N~
 A rope merchant used this unit as overflow storage when the main yard above was full. Rope fragments too short to sell are still looped on the wall hooks in untidy bundles, and the hemp smell is as strong as if the stock were still fresh. The floor shows hemp-fibre staining from the bales that rested here, ground into the stone by weight and time.
 
-~
+~
 8 11
 D0
 ~
@@ -3445,7 +3445,7 @@ S
 @@WAbandoned Tool Store@@N~
 A tool merchant's annex that became uneconomic to maintain as the district's commercial activity declined. Iron wall brackets designed for hanging tool stock are still in place, the tools long gone but the bracket shapes clearly showing the intended inventory: saws, adzes, planes, and hammers of workshop size. The room is draughty where a shutter hinge has failed.
 
-~
+~
 8 11
 D0
 ~
@@ -3456,7 +3456,7 @@ S
 @@WFormer Weighing Room@@N~
 This unit served as a commercial weighing and assay point, its floor still marked with the positions of the scale bases in darker stone worn by the weight of the equipment. The scale mounting bolts are still in the floor, their holes roughly plugged with lead after the equipment was removed. The assayer's certification board on the wall is blank, the removable panel long since taken.
 
-~
+~
 8 11
 D0
 ~
@@ -3467,7 +3467,7 @@ S
 @@WEmpty Cold Store@@N~
 A cold storage unit built into the building's foundation level was used for perishable goods before the district's commercial decline. The insulating packing material has been removed, but the thick stone walls still make this unit noticeably cooler than the surrounding rooms even in warm weather. A faint smell of preserved goods persists in the stone.
 
-~
+~
 8 11
 D0
 ~
@@ -3478,7 +3478,7 @@ S
 @@WDisused Packager's Unit@@N~
 A packaging and wrapping service operated here until the volume of trade through the lower service row dropped below the threshold of profitability. Remnants of packaging material — paper sheets, cordage, and old straw — are piled in the corner where the sweepers left them after the final clearout. The unit's roll-shutter entrance still works but is kept rolled down and padlocked against casual entry.
 
-~
+~
 8 11
 D0
 ~
@@ -3489,7 +3489,7 @@ S
 @@WAbandoned Cooper's Annex@@N~
 The lower-level cooper's annex served as a finishing and inspection room for barrel work that came up through the service passage from the main cooperage above. The ring-setting block is still fixed to the floor in the centre of the room, too embedded to remove economically. A water drain channel cut specifically for the cooperage process runs from the block to the wall drain.
 
-~
+~
 8 11
 D0
 ~
@@ -3500,7 +3500,7 @@ S
 @@WFormer Finishing Room@@N~
 A general finishing and quality-check room used by several of the upper-level shops for final inspection before sale. The bright ceiling lanterns that made this room functional for close work are gone, but the brass bracket mounts remain, still reflecting the reduced illumination from the single remaining floor lamp. The room is in better structural condition than most of the adjacent abandoned units.
 
-~
+~
 8 11
 D0
 ~
@@ -3511,7 +3511,7 @@ S
 @@WEastern Side Passage Lower@@N~
 The lower eastern passage mirrors the upper level's eastern alley, its construction matching the Founding Generation stonework throughout the southern service block. The passage floor is slightly lower than the lane it connects to, creating a slight ramp at both ends that is worn slick by foot traffic despite repeated anti-slip treatments.
 
-~
+~
 8 11
 D0
 ~
@@ -3526,7 +3526,7 @@ S
 @@WNarrow Back Alley East@@N~
 The narrow eastern back alley at the lower level is darker and less maintained than the upper counterpart. Moisture stains the walls and the floor drain is partially blocked, creating a shallow puddle that never fully clears except in the driest summer months. The only active lamp is a small oil light maintained by the passage's own service contract.
 
-~
+~
 8 11
 D0
 ~
@@ -3541,7 +3541,7 @@ S
 @@WSouthern Gate Road West@@N~
 The western end of the southern gate road begins its run toward the city's southern exit, its pavement wider than the service streets above to accommodate the volume of departing trade traffic. Guard posts at the road's entry point check outbound heavy loads against the gate manifest before allowing them to proceed. The morning queue of southbound carts is a fixture of this stretch on market days.
 
-~
+~
 0 1
 D0
 ~
@@ -3556,7 +3556,7 @@ S
 @@WSouthgate Approach West@@N~
 The western approach to the southern gate district carries the smell of livestock from the animal-transport yards that border the road on the northern side. Drovers with southbound herds form a regular part of the morning traffic, and the pavement shows the distinctive wear of hoof traffic mixed with wheel ruts. A warden's post at the kerb maintains order at the livestock crossing point during the peak morning movement.
 
-~
+~
 0 1
 D0
 ~
@@ -3575,7 +3575,7 @@ S
 @@WCarter's Way@@N~
 The carters' professional community maintains its southern district offices along this section of the gate road. Route boards and freight rate lists are posted in every window, advertising runs to the southern settlements, the desert oasis routes, and the forest roads. Dispute-resolution services and cargo insurance brokers occupy the buildings between the major carters' offices.
 
-~
+~
 0 1
 D1
 ~
@@ -3590,7 +3590,7 @@ S
 @@WSouthern Transit Street@@N~
 A busy transit street connecting the residential southern district to the main gate road, this stretch handles a mix of pedestrian commuters and light cart traffic. Coffee-house windows glow @@y warm@@N at the morning hours when departing travellers take a last hot drink before heading for the gate. A public clock on the corner building keeps gate-time for travellers coordinating departure schedules.
 
-~
+~
 0 1
 D1
 ~
@@ -3605,7 +3605,7 @@ S
 @@WGate Market South@@N~
 A small permanent market at the gate road's approach caters to departing travellers with last-minute provisions, maps, and travel equipment. The stalls are compact and efficient, their operators well practised at serving customers who have one eye on the gate and little time to negotiate. Road guides, water skins, and preserved food dominate the available goods.
 
-~
+~
 0 1
 D1
 ~
@@ -3620,7 +3620,7 @@ S
 @@WSouthern Commons Road@@N~
 The road through the southern commons connects the inner city to the gate district, carrying the mundane flow of residential life: deliveries, children, workers, and errand-runners. The buildings here are older than the civic quarter standards and more varied in material and construction. A public water post at the road's midpoint is one of several maintained throughout the district by the civic welfare fund.
 
-~
+~
 0 1
 D1
 ~
@@ -3635,7 +3635,7 @@ S
 @@WGate-Road Crossing@@N~
 The principal crossing of the southern gate road sees traffic from the residential district, the gate approach, and the service corridors all converging at once during the peak hours. Civic traffic posts at each corner help direct the flow, and a warden on foot duty is assigned to the crossing during the morning and evening traffic peaks. The crossing pavement is more heavily maintained than surrounding stretches due to the wear volume.
 
-~
+~
 0 1
 D1
 ~
@@ -3650,7 +3650,7 @@ S
 @@WProvisions Lane@@N~
 Provisions merchants catering to the road traffic occupy this lane between the southern commons and the gate approach. Dried goods, preserved meat, and baked travel bread are displayed from baskets and table-fronts at every shop entrance. The smell of fresh bread from the bakers who hold the early trade is one of the more pleasant features of this otherwise purely functional stretch.
 
-~
+~
 0 1
 D1
 ~
@@ -3665,7 +3665,7 @@ S
 @@WSouthern District Lane@@N~
 The southern district lane runs parallel to the gate road, used by residents who prefer to avoid the main traffic flow. Smaller and quieter than the gate road, this lane sees foot traffic primarily from the adjacent tenements whose back entrances face onto it. Laundry lines between buildings and potted plants on windowsills give the lane a domestic character absent from the route to the gate.
 
-~
+~
 0 1
 D1
 ~
@@ -3680,7 +3680,7 @@ S
 @@WSouth Gate@@N~
 The southern gate of @@WMidgaard@@N stands at the city's lower boundary, its stone gatehouse rising above the road with the same solid authority as the northern approach but with a more weathered character. @@R Iron-bound gates@@N stand open in their recessed channel grooves, their surfaces showing the patina of centuries of weather and use. The gate road beyond stretches south through the woodlands whose canopy is visible in the distance from the arch. A duty register at the gate post records departures and arrivals, and a guard with a manifest checks southbound loads against declared cargo.
 
-~
+~
 0 1
 D1
 ~
@@ -3699,7 +3699,7 @@ S
 @@WSouthgate Road East@@N~
 The eastern stretch of the gate approach road carries lighter traffic than the main gate, primarily foot travellers and the occasional light cart not requiring the wider main lane. The buildings here are the southern district's commercial fringe: small factor's offices and travel services competing with the larger establishments on the road's western side. A guild courier relay point at the building corner operates from dawn to dusk with rotating rider coverage.
 
-~
+~
 0 1
 D1
 ~
@@ -3714,7 +3714,7 @@ S
 @@WEastern Gate Approach@@N~
 The eastern gate approach connects the southern gate district to the eastern road network, an important junction for trade traffic that has come south from the desert route before turning south again toward the woodland settlements. The road surface here carries heavy wear from the turning movements of large wagons navigating the junction. A road mileage post on the corner gives distances to the major settlements on both the eastern and southern routes.
 
-~
+~
 0 1
 D1
 ~
@@ -3729,7 +3729,7 @@ S
 @@WGate District Row@@N~
 The main commercial row of the gate district houses the services that travellers need immediately on arrival or just before departure: money-changing, luggage storage, message holding, and basic provisioning. The buildings are functional rather than impressive, their owners focused on high-volume service rather than prestige trade. Signs here are in multiple scripts to serve the diverse traffic from the eastern and southern routes.
 
-~
+~
 0 1
 D1
 ~
@@ -3744,7 +3744,7 @@ S
 @@WSouthern Exchange Lane@@N~
 The exchange lane in the southern gate district handles currency conversion for travellers from beyond the city's standard coin zone. Money-changers' boards outside each exchange office show current conversion rates for the major trade currencies. The lane is busy through most of the day, with a brief lull at midday when the exchangers take their break rotation.
 
-~
+~
 0 1
 D1
 ~
@@ -3759,7 +3759,7 @@ S
 @@WOutbound Road@@N~
 The final stretch of road approaching the gate proper is kept clear of stalls and obstacles by civic ordinance, ensuring that outbound traffic can flow without obstruction toward the gate inspection point. A civic barrier post at the road's approach marks the beginning of the restricted zone where no commercial soliciting is permitted. Gate wardens monitor compliance from the nearby post.
 
-~
+~
 0 1
 D1
 ~
@@ -3774,7 +3774,7 @@ S
 @@WGate Holding Area@@N~
 Inbound travellers cleared at the southern gate are directed to this holding area while their manifests are processed and their goods assessed for the appropriate entry levy. Benches line the perimeter wall, and a water post provides refreshment for those waiting through the processing queue. The holding area is covered by a timber roof on iron posts, providing shelter from poor weather during the inspection process.
 
-~
+~
 0 1
 D1
 ~
@@ -3789,7 +3789,7 @@ S
 @@WSouthern Gate East Road@@N~
 The eastern section of the southern gate area is the less busy of the two sides, its traffic primarily residential commuters from the eastern tenements and light goods delivery. A patrol route marking on the wall indicates the watch's nighttime circuit through this section of the gate district. Small residential services — a laundry, a cobbler, a bread seller — occupy the ground floors of the terrace.
 
-~
+~
 0 1
 D1
 ~
@@ -3804,7 +3804,7 @@ S
 @@WGate Road Far East@@N~
 The far eastern section of the southern gate road loses the commercial character of the main gate approach and becomes primarily residential, with tenement buildings replacing the factor's offices and travel services. The sound of the gate area fades here, replaced by the domestic sounds of the neighbourhood: conversation through open windows, children, cooking smells from ground-floor kitchens.
 
-~
+~
 0 1
 D1
 ~
@@ -3819,7 +3819,7 @@ S
 @@WEastern Gate Passage@@N~
 An enclosed passage at the eastern end of the southern gate road provides covered access between the gate level and the passages above it in the service level. The passage is maintained as part of the civic infrastructure contract that covers the entire southern service block. Iron brackets hold reserve lamp equipment for the southern district patrol route.
 
-~
+~
 8 11
 D0
 ~
@@ -3838,7 +3838,7 @@ S
 @@WSouthern Gate Road End@@N~
 The easternmost end of the southern gate road terminates at the boundary of the outer district, where the civic road maintenance responsibility ends and the private property boundary begins. A civic marker post establishes the exact boundary, its position unchanged since the Standardisation Century survey that formalised the district limits. The road surface beyond the post is noticeably less maintained.
 
-~
+~
 0 1
 D0
 ~
@@ -3856,10 +3856,10 @@ city guard midgaard~
 a city guard~
 A city guard stands watch here, one hand resting on the pommel of a short sword.
 
-~
+~
 One of the many posted wardens maintaining order in the streets of @@WMidgaard@@N. The grey tabard and iron-capped boots are standard civic watch issue, and the guard's alert posture suggests someone who takes the duty seriously.
 
-~
+~
 65 0 0 S
 20 1
 0 0 2 2
@@ -3873,10 +3873,10 @@ gate warden northern gate~
 the gate warden~
 The gate warden stands beside the northern gatehouse, watching the road beyond.
 
-~
+~
 The gate warden's station at the northern gatehouse is a post of some trust, requiring the judgement to distinguish travellers from threats. This one has clearly held the position for some time, their manner unhurried but their attention absolute.
 
-~
+~
 67 0 500 S
 25 1
 0 -20 3 3
@@ -3890,10 +3890,10 @@ temple guardian guard~
 a temple guardian~
 A temple guardian stands in ceremonial armour, blocking the path to the inner sanctum.
 
-~
+~
 The temple guardians combine ceremonial function with genuine fighting capability, their training a blend of martial discipline and @@pdevotional@@N focus. The polished armour and @@c ward-inscribed@@N shield mark this one as a senior-rank guardian.
 
-~
+~
 67 0 750 S
 30 0
 0 -30 3 3
@@ -3907,10 +3907,10 @@ street merchant vendor~
 a street merchant~
 A street merchant hawks wares from a canvas-covered cart parked at the kerb.
 
-~
+~
 Not affiliated with any of the established guild shops, this merchant operates on a roving permit that allows vending from any public street in the district. The selection of goods changes daily based on what sources were willing to sell that morning.
 
-~
+~
 65 0 0 S
 10 1
 0 0 0 0
@@ -3924,10 +3924,10 @@ caravan master captain~
 the caravan master~
 The caravan master stands at the center of the square, directing the wagon arrangements.
 
-~
+~
 Caravan masters earn their title through years of successfully navigating the continent's most dangerous trade routes. This one's weathered appearance and the quality of their equipment suggest experience hard-won on the desert and forest roads.
 
-~
+~
 67 0 0 S
 20 1
 0 0 3 3
@@ -3941,10 +3941,10 @@ caravan guard escort~
 a caravan guard~
 A caravan guard leans against a wagon wheel, scanning the square with practised vigilance.
 
-~
+~
 Hired muscle for the caravan circuit, this guard's relaxed posture is deceptive — the hand near the weapon and the positioned feet indicate someone ready to respond immediately. The route brands on their pack identify this as an eastern desert regular.
 
-~
+~
 65 0 0 S
 15 1
 0 0 2 2
@@ -3958,10 +3958,10 @@ street vendor seller~
 a street vendor~
 A street vendor calls out prices from behind a small folding table covered in goods.
 
-~
+~
 This vendor's permit is visible on a card hung from the table edge, confirming their licensed status in the district. The goods change with the season and the supply, and the vendor's quick assessment of a customer's likely budget precedes every interaction.
 
-~
+~
 65 0 0 S
 8 0
 0 0 0 0
@@ -3975,10 +3975,10 @@ pilgrim traveller~
 a weary pilgrim~
 A weary pilgrim rests near the shrine, eyes closed in silent devotion.
 
-~
+~
 Pilgrims arriving in @@WMidgaard@@N represent a spectrum of faiths and origins, their common ground the acknowledgement that the city's temple holds something worth the journey. This one shows the signs of a long road: worn boots, road dust, and the particular stillness of someone who has been walking for weeks.
 
-~
+~
 65 0 700 S
 5 0
 0 0 0 0
@@ -3992,10 +3992,10 @@ beggar street~
 a city beggar~
 A city beggar extends a bowl toward passing strangers with a practised gesture.
 
-~
+~
 One of @@WMidgaard's@@N many displaced citizens, this beggar occupies a regular pitch and is known to the ward welfare office by name. The civic welfare programme provides a daily ration, but the gap between that and sufficiency drives the street collection.
 
-~
+~
 65 0 -200 S
 3 0
 0 0 0 0
@@ -4009,10 +4009,10 @@ noble citizen resident~
 a noble citizen~
 A noble citizen walks the boulevard with the unhurried confidence of one who belongs here.
 
-~
+~
 The upper districts of @@WMidgaard@@N sustain a class of citizens whose wealth largely insulates them from the city's practical difficulties. This one's clothing quality and the quality of their escort — clearly hired, not obligatory — mark them as comfortably established in the northern quarter.
 
-~
+~
 65 0 200 S
 15 1
 0 0 0 0
@@ -4026,10 +4026,10 @@ gertrude executioner~
 Gertrude~
 Gertrude the Executioner stands here, methodically polishing the edge of her blade.
 
-~
+~
 A masked woman whose muscular frame speaks to years of disciplined training with heavy weapons. The look in her eyes suggests she takes genuine satisfaction in her official role, and the quality of her equipment marks her as one of @@WMidgaard's@@N most feared civic servants.
 
-~
+~
 131679 1633020 1000 S
 150 2
 0 0 0 0
@@ -4043,10 +4043,10 @@ healer temple~
 the healer~
 A healer sits here, surrounded by the quiet hum of restorative magic.
 
-~
+~
 Although long retired from adventuring, this healer continues to serve @@WMidgaard's@@N citizens and travelers with practiced skill. The lines on her face map decades of service, and her hands still carry the faint glow of channeled restoration.
 
-~
+~
 4163 8320 1000 S
 114 1
 0 0 0 0
@@ -4060,10 +4060,10 @@ temple priest canon~
 the temple priest~
 The temple priest moves through the vestibule with quiet purpose, performing the morning rites.
 
-~
+~
 The canon-level priest who leads the daily observances in the outer hall carries the calm authority of long practice. Ritual familiarity has made the movement sequences automatic, freeing attention for the spiritual focus the canons' rule demands.
 
-~
+~
 67 0 1000 S
 30 0
 0 0 0 0
@@ -4077,10 +4077,10 @@ tailor seamstress caster apprentice~
 Miriel the Seamstress~
 Miriel the Seamstress works behind a counter draped in bolts of enchanted cloth.
 
-~
+~
 Miriel has spent twenty years learning which enchantment threads complement robes and which clash with them. Her shop serves apprentice casters and junior mages who need gear appropriate to their developing skills, and she is patient with customers who do not yet know what they want.
 
-~
+~
 67 0 300 S
 25 2
 0 0 0 0
@@ -4094,10 +4094,10 @@ magister clothier caster mid~
 Aldric the Magister~
 Aldric the Magister examines a robe under a magnifying glass, checking the ward-stitching.
 
-~
+~
 A former student of the Reliquary Academy who transitioned from practice to supply, Aldric understands the mid-tier caster's needs with professional precision. His stock runs from comfortable journeyman gear to the first pieces of genuinely high-end robing.
 
-~
+~
 67 0 400 S
 50 1
 0 0 0 0
@@ -4111,10 +4111,10 @@ archwarden arcanist caster high~
 Seraphel the Archwarden~
 Seraphel the Archwarden stands motionless amid racks of shimmering arcane garments.
 
-~
+~
 Seraphel is rumoured to have assisted in the creation of several of the garments she now sells, having stepped back from field work once the commissions became more profitable than the adventuring. Her stock is the finest caster armour available in @@WMidgaard@@N, priced accordingly.
 
-~
+~
 67 0 500 S
 90 2
 0 0 0 0
@@ -4128,10 +4128,10 @@ armourer smith melee low~
 Brekka the Armourer~
 Brekka the Armourer hammers a dent from a shield with methodical strokes.
 
-~
+~
 A journeyman-grade smith who supplemented her forge training with a stint as a caravan guard, Brekka understands both the making and the using end of mid-weight armour. Her shop caters to warriors who have outgrown the training yard but not yet reached the advanced circuits.
 
-~
+~
 67 0 100 S
 25 2
 0 0 0 0
@@ -4145,10 +4145,10 @@ mastersmith armourer melee mid~
 Vorn the Mastersmith~
 Vorn the Mastersmith rests one massive hand on the counter, waiting for a customer who knows what they want.
 
-~
+~
 Vorn has little patience for indecision but infinite patience for a customer who comes in with specific requirements. His mid-tier melee stock is the result of long supply relationships with several highland forge-teams and is reliably current to the fighting styles of the past decade.
 
-~
+~
 67 0 200 S
 50 1
 0 0 0 0
@@ -4162,10 +4162,10 @@ warlord smith armourer melee high~
 Draga Ironclad~
 Draga Ironclad polishes a section of plate armour with slow, meditative movements.
 
-~
+~
 A retired campaign veteran who spent her second career supplying the very forces she once fought alongside, Draga's familiarity with high-end combat equipment is entirely practical. The pieces she stocks have seen real combat testing — she will not sell anything she would not have worn herself.
 
-~
+~
 67 0 300 S
 90 2
 0 0 0 0
@@ -4179,10 +4179,10 @@ enchanter weaponsmith caster weapons~
 Thalindra the Enchanter~
 Thalindra the Enchanter runs a slender finger along a staff's grain, testing the resonance.
 
-~
+~
 Thalindra sources her weapons from craftspeople who understand that a caster's weapon is a focus as much as a weapon. The staves, wands, and focus-blades she carries are rated both for physical function and for their arcane transmission efficiency, a specialisation few weapon dealers bother with.
 
-~
+~
 67 0 300 S
 50 2
 0 0 0 0
@@ -4196,10 +4196,10 @@ weaponmaster smith melee weapons~
 Gorven Bladewright~
 Gorven Bladewright stands with arms crossed, surveying the weapons mounted on the walls.
 
-~
+~
 Gorven has supplied weapons to everyone from first-mission fighters to veteran champions over the course of a thirty-year dealing career. He can identify the right weapon for a fighter's style within a few questions and stocks a range from first-purchase starter blades to the upper tier of non-custom work.
 
-~
+~
 67 0 100 S
 50 1
 0 0 0 0
@@ -4213,10 +4213,10 @@ storekeeper trader general store~
 Oswin the Storekeeper~
 Oswin the Storekeeper leans on the counter with the comfortable air of someone who has seen everything twice.
 
-~
+~
 Oswin runs @@WMidgaard's@@N most comprehensively stocked general store with the calm efficiency of someone who has been doing it for twenty years. He stocks illumination equipment for every archetype at every level, and his pricing is fair enough that most adventurers who stop in once become regulars.
 
-~
+~
 67 0 200 S
 30 1
 0 0 0 0
@@ -4230,10 +4230,10 @@ postmaster herald courier~
 the postmaster~
 The postmaster sorts a bundle of sealed letters with efficient, practiced hands.
 
-~
+~
 The civic postal authority employs postmasters at key points throughout @@WMidgaard@@N to handle the city's substantial correspondence traffic. This one's station serves the central district and handles priority deliveries for guild and civic senders, as well as the usual adventurer and commercial mail.
 
-~
+~
 524363 0 200 S
 30 1
 0 0 0 0
@@ -4247,10 +4247,10 @@ quartermaster supply logistics~
 the quartermaster~
 The quartermaster works through an inventory list with a stylus and wax tablet.
 
-~
+~
 Responsible for maintaining the strategic supply cache of @@WMidgaard's@@N central district, the quartermaster stocks the goods that sustaining a city's defence and civic operation requires. The catalogue is deliberately broad — useful items for every fighting style, priced for practical supply rather than retail profit.
 
-~
+~
 67 0 300 S
 40 1
 0 0 0 0
@@ -4264,10 +4264,10 @@ invasion armory keeper warden~
 the invasion warden~
 The invasion warden stands behind a heavy counter of iron-banded oak, watching the door.
 
-~
+~
 The invasion warden maintains the emergency armory that becomes critically important whenever @@WMidgaard@@N faces incursion. The stock is functional and battle-tested, and the warden's manner conveys the expectation that anyone shopping here is planning to use what they buy.
 
-~
+~
 67 0 500 S
 60 1
 0 0 0 0
@@ -4283,7 +4283,7 @@ apprentice robe grey~
 an apprentice's grey robe~
 A plain grey robe stitched with basic ward-thread at the cuffs and hem.
 
-~
+~
 9 64 8650752 0
 2 0 0 0 0 0 0 0 0 0
 3
@@ -4294,7 +4294,7 @@ cloth cowl soft grey~
 a soft grey cloth cowl~
 A lightweight cowl that offers minimal protection but channels arcane focus well.
 
-~
+~
 9 64 8388616 0
 1 0 0 0 0 0 0 0 0 0
 2
@@ -4305,7 +4305,7 @@ linen leggings pale blue~
 pale blue linen leggings~
 Light linen leggings reinforced at the knee with woven sigil-cloth.
 
-~
+~
 9 64 9437184 0
 2 0 0 0 0 0 0 0 0 0
 2
@@ -4316,7 +4316,7 @@ soft slippers silk enchanted~
 a pair of enchanted silk slippers~
 Silk slippers with a thin ward sole that dampens arcane feedback.
 
-~
+~
 9 64 10485760 0
 1 0 0 0 0 0 0 0 0 0
 1
@@ -4327,7 +4327,7 @@ scholar robe velvet deep blue~
 a deep blue velvet scholar's robe~
 Velvet robe with layered protective stitching in the deep-blue style of the Academy.
 
-~
+~
 9 64 8650752 0
 4 0 0 0 0 0 0 0 0 0
 3
@@ -4338,7 +4338,7 @@ arcane hood silk silver thread~
 a silver-threaded arcane hood~
 A hood woven with fine silver thread that provides mild ward against mental intrusion.
 
-~
+~
 9 64 8388616 0
 3 0 0 0 0 0 0 0 0 0
 2
@@ -4349,7 +4349,7 @@ ward cloak light grey~
 a light grey ward cloak~
 A travel cloak with ward-sigils sewn into the lining at collar and hem.
 
-~
+~
 9 64 8454144 0
 3 0 0 0 0 0 0 0 0 0
 3
@@ -4360,7 +4360,7 @@ runed gloves silk pale~
 pale silk runed gloves~
 Light gloves with runes at the palm and fingertips to improve spell-shaping.
 
-~
+~
 9 64 8392704 0
 2 0 0 0 0 0 0 0 0 0
 1
@@ -4371,7 +4371,7 @@ acolyte robe purple~
 an acolyte's purple robe~
 Standard acolyte robing in the purple of the Reliquary order, magically reinforced.
 
-~
+~
 9 64 8650752 0
 5 0 0 0 0 0 0 0 0 0
 3
@@ -4382,7 +4382,7 @@ channeller wristband woven sigil~
 a woven sigil wristband~
 A thick wristband of woven sigil-cloth that steadies channelling at moderate output.
 
-~
+~
 9 64 8390656 0
 2 0 0 0 0 0 0 0 0 0
 1
@@ -4393,7 +4393,7 @@ journeyman robe teal~
 a teal journeyman mage's robe~
 A teal robe marking journeyman mage status, with strengthened ward-stitching throughout.
 
-~
+~
 9 64 8650752 0
 7 0 0 0 0 0 0 0 0 0
 3
@@ -4404,7 +4404,7 @@ arcane leggings deep green~
 deep green arcane leggings~
 Reinforced leggings in deep green with arcane channelling cord woven through the seams.
 
-~
+~
 9 64 9437184 0
 5 0 0 0 0 0 0 0 0 0
 2
@@ -4415,7 +4415,7 @@ sage cloak dark blue trimmed~
 a dark blue sage's cloak~
 A heavy cloak in the dark blue of the Sage order, trimmed with ward-embroidery.
 
-~
+~
 9 64 8454144 0
 6 0 0 0 0 0 0 0 0 0
 4
@@ -4426,7 +4426,7 @@ elder robe crimson gold trim~
 a crimson elder mage's robe~
 A crimson robe with gold ward-trim, reaching the lower tier of elder mage appointments.
 
-~
+~
 9 64 8650752 0
 9 0 0 0 0 0 0 0 0 0
 3
@@ -4437,7 +4437,7 @@ elder hood crimson gold~
 a crimson gold-traced elder hood~
 A crimson hood traced with gold stitching that marks elder-tier arcane protection.
 
-~
+~
 9 64 8388616 0
 7 0 0 0 0 0 0 0 0 0
 2
@@ -4448,7 +4448,7 @@ adept robe midnight blue~
 a midnight blue adept's robe~
 A midnight blue robe with strengthened channels for adept-level arcane throughput.
 
-~
+~
 9 64 8650752 0
 11 0 0 0 0 0 0 0 0 0
 3
@@ -4459,7 +4459,7 @@ adept hood midnight blue silver~
 a midnight blue silver-trimmed adept hood~
 A hood matching the adept robe, silver trim marking mid-tier arcane rank.
 
-~
+~
 9 64 8388616 0
 9 0 0 0 0 0 0 0 0 0
 2
@@ -4470,7 +4470,7 @@ warded cloak deep violet~
 a deep violet warded cloak~
 A violet cloak with multi-layer ward panels sewn into the body.
 
-~
+~
 9 64 8454144 0
 9 0 0 0 0 0 0 0 0 0
 4
@@ -4481,7 +4481,7 @@ adept leggings violet deep~
 deep violet adept leggings~
 Adept leggings with ward-cord reinforcement along the channel lines.
 
-~
+~
 9 64 9437184 0
 9 0 0 0 0 0 0 0 0 0
 2
@@ -4492,7 +4492,7 @@ wrist bracer arcane focus copper~
 copper arcane-focus bracers~
 A pair of copper-inlaid bracers that improve arcane focus at adept throughput.
 
-~
+~
 9 64 8390656 0
 7 0 0 0 0 0 0 0 0 0
 2
@@ -4503,7 +4503,7 @@ arcane slippers silk copper rune~
 copper-rune silk arcane slippers~
 Silk slippers with copper-rune soles that reduce arcane feedback at the extremities.
 
-~
+~
 9 64 10485760 0
 7 0 0 0 0 0 0 0 0 0
 2
@@ -4514,7 +4514,7 @@ high adept robe white gold~
 a white and gold high-adept robe~
 A white robe with gold ward-stitching marking the upper adept tier.
 
-~
+~
 9 64 8650752 0
 13 0 0 0 0 0 0 0 0 0
 3
@@ -4525,7 +4525,7 @@ arcane pauldrons cloth silver~
 silver cloth arcane pauldrons~
 Light pauldrons of silver-woven cloth that protect shoulder channels during casting.
 
-~
+~
 9 64 8389120 0
 8 0 0 0 0 0 0 0 0 0
 3
@@ -4536,7 +4536,7 @@ channeller gloves silver thread~
 silver-thread channeller's gloves~
 Gloves with fine silver thread woven through the palm to stabilise channelling at high output.
 
-~
+~
 9 64 8392704 0
 8 0 0 0 0 0 0 0 0 0
 1
@@ -4547,7 +4547,7 @@ arcane coif mithril weave~
 a mithril-weave arcane coif~
 A coif of mithril-thread weave that shields the caster's mind at advanced throughput.
 
-~
+~
 9 64 8388616 0
 11 0 0 0 0 0 0 0 0 0
 2
@@ -4558,7 +4558,7 @@ arcane robe deep scarlet~
 a deep scarlet arcane robe~
 A scarlet robe of the kind issued to senior members of the Reliquary's field division.
 
-~
+~
 9 64 8650752 0
 15 0 0 0 0 0 0 0 0 0
 3
@@ -4569,7 +4569,7 @@ arcane leggings deep scarlet~
 deep scarlet arcane leggings~
 Leggings matching the senior Reliquary robe, with reinforced ward-cord throughout.
 
-~
+~
 9 64 9437184 0
 12 0 0 0 0 0 0 0 0 0
 2
@@ -4580,7 +4580,7 @@ greater ward cloak black silver~
 a black silver-edged greater ward cloak~
 A black cloak edged in silver with multi-layer warding that approaches high-tier standard.
 
-~
+~
 9 64 8454144 0
 12 0 0 0 0 0 0 0 0 0
 4
@@ -4591,7 +4591,7 @@ arcane boots black mithril~
 black mithril-soled arcane boots~
 Black boots with mithril soles that eliminate ground-feedback from high-throughput casting.
 
-~
+~
 9 64 10485760 0
 10 0 0 0 0 0 0 0 0 0
 2
@@ -4602,7 +4602,7 @@ senior robe black gold deep~
 a deep black and gold senior arcane robe~
 A black robe with heavy gold ward-stitching approaching the lower threshold of high-tier caster gear.
 
-~
+~
 9 64 8650752 0
 17 0 0 0 0 0 0 0 0 0
 3
@@ -4613,7 +4613,7 @@ archmage robe white silver~
 a white silver-blazoned archmage robe~
 A robe of the highest caster grade, white with silver blazons marking archmage standing.
 
-~
+~
 9 64 8650752 0
 19 0 0 0 0 0 0 0 0 0
 3
@@ -4624,7 +4624,7 @@ archmage hood white silver~
 a white silver-traced archmage hood~
 Hood of the archmage grade, silver tracing marking the highest ward rating.
 
-~
+~
 9 64 8388616 0
 15 0 0 0 0 0 0 0 0 0
 2
@@ -4635,7 +4635,7 @@ grand ward cloak white luminous~
 a luminous white grand ward cloak~
 A ward cloak that emits a faint pale luminescence from the density of its protective sigils.
 
-~
+~
 9 64 8454144 0
 16 0 0 0 0 0 0 0 0 0
 4
@@ -4646,7 +4646,7 @@ archmage leggings white silver~
 white silver-traced archmage leggings~
 High-ward leggings matching the archmage robe grade, with silver channel-tracing.
 
-~
+~
 9 64 9437184 0
 16 0 0 0 0 0 0 0 0 0
 2
@@ -4657,7 +4657,7 @@ arcane vambrace platinum sigil~
 platinum sigil-carved arcane vambraces~
 Platinum-engraved vambraces carved with the strongest channelling sigils in current use.
 
-~
+~
 9 64 8389632 0
 14 0 0 0 0 0 0 0 0 0
 3
@@ -4668,7 +4668,7 @@ arcane slippers platinum crystal~
 crystal-soled platinum arcane slippers~
 Slippers with crystal soles that eliminate all ground feedback during high-power casting.
 
-~
+~
 9 64 10485760 0
 14 0 0 0 0 0 0 0 0 0
 2
@@ -4679,7 +4679,7 @@ grand arcane robe azure platinum~
 an azure platinum-edged grand arcane robe~
 An azure robe edged in platinum with the highest ward-stitching density commercially available.
 
-~
+~
 9 64 8650752 0
 21 0 0 0 0 0 0 0 0 0
 3
@@ -4690,7 +4690,7 @@ grand arcane hood azure platinum~
 an azure platinum-traced grand arcane hood~
 A hood matching the grand arcane robe, with platinum trace and peak ward rating.
 
-~
+~
 9 64 8388616 0
 17 0 0 0 0 0 0 0 0 0
 2
@@ -4701,7 +4701,7 @@ supreme ward gloves platinum~
 platinum supreme ward gloves~
 Gloves at the peak of commercially produced caster hand-protection, platinum-woven throughout.
 
-~
+~
 9 64 8392704 0
 15 0 0 0 0 0 0 0 0 0
 2
@@ -4712,7 +4712,7 @@ grand pauldrons platinum cloth~
 platinum grand arcane pauldrons~
 Platinum-reinforced pauldrons at the high-tier grade for shoulder ward rating.
 
-~
+~
 9 64 8389120 0
 15 0 0 0 0 0 0 0 0 0
 3
@@ -4723,7 +4723,7 @@ wristguard mithril platinum rune~
 mithril-platinum rune wristguards~
 Mithril-platinum wristguards carved with overlapping rune sets for extreme channelling stability.
 
-~
+~
 9 64 8390656 0
 14 0 0 0 0 0 0 0 0 0
 2
@@ -4734,7 +4734,7 @@ grandmaster robe ultimate white gold~
 an ultimate white and gold grandmaster robe~
 The finest robe Seraphel stocks: white and gold ward-weave at the peak of the high tier.
 
-~
+~
 9 64 8650752 0
 23 0 0 0 0 0 0 0 0 0
 3
@@ -4745,7 +4745,7 @@ grandmaster cloak white gold~
 a white gold-blazed grandmaster cloak~
 A grandmaster cloak blazed in gold at the ultimate tier of commercial ward protection.
 
-~
+~
 9 64 8454144 0
 20 0 0 0 0 0 0 0 0 0
 4
@@ -4756,7 +4756,7 @@ grandmaster leggings white gold~
 white gold-traced grandmaster leggings~
 Grandmaster leggings with the highest commercially available ward-cord tracing.
 
-~
+~
 9 64 9437184 0
 20 0 0 0 0 0 0 0 0 0
 2
@@ -4767,7 +4767,7 @@ grandmaster hood white gold~
 a white gold-traced grandmaster hood~
 A grandmaster hood at peak ward rating, completing the grandmaster set.
 
-~
+~
 9 64 8388616 0
 18 0 0 0 0 0 0 0 0 0
 2
@@ -4778,7 +4778,7 @@ leather vest studded light~
 a light studded leather vest~
 A basic studded leather vest offering entry-level physical protection.
 
-~
+~
 9 64 8650752 0
 3 0 0 0 0 0 0 0 0 0
 7
@@ -4789,7 +4789,7 @@ leather cap studded~
 a studded leather cap~
 A leather cap reinforced with iron studs along the crown.
 
-~
+~
 9 64 8388616 0
 2 0 0 0 0 0 0 0 0 0
 6
@@ -4800,7 +4800,7 @@ leather greaves simple~
 simple leather greaves~
 Leather greaves that protect the shins and calves without restricting movement.
 
-~
+~
 9 64 9437184 0
 2 0 0 0 0 0 0 0 0 0
 7
@@ -4811,7 +4811,7 @@ leather boots thick~
 a pair of thick leather boots~
 Heavy-soled leather boots reinforced at the ankle and toe.
 
-~
+~
 9 64 10485760 0
 2 0 0 0 0 0 0 0 0 0
 8
@@ -4822,7 +4822,7 @@ ringmail shirt light~
 a light ringmail shirt~
 Ringmail shirt at the lighter end of metal armour, suitable for active fighters.
 
-~
+~
 9 64 8650752 0
 5 0 0 0 0 0 0 0 0 0
 9
@@ -4833,7 +4833,7 @@ iron helmet open face~
 an open-faced iron helmet~
 A functional iron helmet with an open face and padded interior.
 
-~
+~
 9 64 8388616 0
 4 0 0 0 0 0 0 0 0 0
 10
@@ -4844,7 +4844,7 @@ chainmail coif iron~
 an iron chainmail coif~
 A chainmail coif that covers head and neck with interlocking iron rings.
 
-~
+~
 9 64 8388616 0
 5 0 0 0 0 0 0 0 0 0
 10
@@ -4855,7 +4855,7 @@ brigandine vest iron plate~
 an iron-plated brigandine vest~
 A brigandine coat with iron plates riveted between two layers of leather.
 
-~
+~
 9 64 8650752 0
 7 0 0 0 0 0 0 0 0 0
 11
@@ -4866,7 +4866,7 @@ steel vambraces solid~
 a pair of solid steel vambraces~
 Solid steel vambraces that protect the forearms and can double as a blocking surface.
 
-~
+~
 9 64 8389632 0
 4 0 0 0 0 0 0 0 0 0
 9
@@ -4877,7 +4877,7 @@ platemail chestpiece steel~
 a steel platemail chestpiece~
 A solid steel plate chest piece appropriate for front-line tank duty.
 
-~
+~
 9 64 8650752 0
 9 0 0 0 0 0 0 0 0 0
 13
@@ -4888,7 +4888,7 @@ scale greaves heavy~
 a pair of heavy scale greaves~
 Heavy greaves of overlapping steel scale that provide substantial leg protection.
 
-~
+~
 9 64 9437184 0
 7 0 0 0 0 0 0 0 0 0
 12
@@ -4899,7 +4899,7 @@ full helm steel enclosed~
 an enclosed steel full helm~
 A closed steel helm offering full head protection at the cost of some peripheral vision.
 
-~
+~
 9 64 8388616 0
 8 0 0 0 0 0 0 0 0 0
 12
@@ -4910,7 +4910,7 @@ plate gauntlets steel reinforced~
 reinforced steel plate gauntlets~
 Heavy steel gauntlets reinforced at the knuckle and back of hand for close combat.
 
-~
+~
 9 64 8392704 0
 6 0 0 0 0 0 0 0 0 0
 10
@@ -4921,7 +4921,7 @@ plate boots steel heavy~
 heavy steel plate boots~
 Heavy steel plate boots that provide maximum foot protection at the cost of speed.
 
-~
+~
 9 64 10485760 0
 6 0 0 0 0 0 0 0 0 0
 12
@@ -4932,7 +4932,7 @@ plate pauldrons heavy steel~
 heavy steel plate pauldrons~
 Plate pauldrons of the kind issued to heavy infantry in the city militia.
 
-~
+~
 9 64 8389120 0
 7 0 0 0 0 0 0 0 0 0
 12
@@ -4943,7 +4943,7 @@ reinforced plate chest dwarven~
 a dwarven reinforced plate chest~
 A plate chestpiece forged in the dwarven highland tradition, with interlocking reinforcement.
 
-~
+~
 9 64 8650752 0
 12 0 0 0 0 0 0 0 0 0
 13
@@ -4954,7 +4954,7 @@ full plate helm dwarven steel~
 a dwarven full plate helm~
 A dwarven-forged full helm with improved visor and reinforced crown.
 
-~
+~
 9 64 8388616 0
 10 0 0 0 0 0 0 0 0 0
 13
@@ -4965,7 +4965,7 @@ plate greaves dwarven heavy~
 heavy dwarven plate greaves~
 Dwarven plate greaves with overlapping panels that allow good articulation despite weight.
 
-~
+~
 9 64 9437184 0
 10 0 0 0 0 0 0 0 0 0
 13
@@ -4976,7 +4976,7 @@ dwarven boots plate heavy~
 heavy dwarven plate boots~
 Dwarven plate boots with reinforced toe-cap and ankle guard.
 
-~
+~
 9 64 10485760 0
 10 0 0 0 0 0 0 0 0 0
 13
@@ -4987,7 +4987,7 @@ tower shield arm guard~
 a tower shield arm guard~
 A left-arm mounted shield extension that adds protection without occupying the hand.
 
-~
+~
 9 64 8389632 0
 9 0 0 0 0 0 0 0 0 0
 12
@@ -4998,7 +4998,7 @@ plate belt heavy iron~
 a heavy iron plate belt~
 A solid iron plate belt that protects the midsection without restricting movement.
 
-~
+~
 9 64 8519680 0
 8 0 0 0 0 0 0 0 0 0
 11
@@ -5009,7 +5009,7 @@ high guard plate chest steel alloy~
 a high-guard steel alloy chest plate~
 A chest plate in a steel alloy providing better protection than standard steel at lower weight.
 
-~
+~
 9 64 8650752 0
 14 0 0 0 0 0 0 0 0 0
 13
@@ -5020,7 +5020,7 @@ alloy pauldrons steel high~
 high-grade steel alloy pauldrons~
 Pauldrons in high-grade steel alloy, improved over standard issue in both weight and rating.
 
-~
+~
 9 64 8389120 0
 11 0 0 0 0 0 0 0 0 0
 12
@@ -5031,7 +5031,7 @@ alloy gauntlets high grade~
 high-grade alloy plate gauntlets~
 Heavy gauntlets in steel alloy, offering mid-tier high hand protection.
 
-~
+~
 9 64 8392704 0
 10 0 0 0 0 0 0 0 0 0
 11
@@ -5042,7 +5042,7 @@ mithril chest half plate~
 a mithril half-plate chest~
 A half-plate chest piece in mithril alloy, providing excellent protection with reduced weight.
 
-~
+~
 9 64 8650752 0
 16 0 0 0 0 0 0 0 0 0
 12
@@ -5053,7 +5053,7 @@ mithril helm half plate~
 a mithril half-plate helm~
 A mithril helm offering outstanding head protection at significantly reduced weight.
 
-~
+~
 9 64 8388616 0
 13 0 0 0 0 0 0 0 0 0
 11
@@ -5064,7 +5064,7 @@ mithril greaves half plate~
 mithril half-plate greaves~
 Mithril greaves at mid-high tier, combining excellent protection with light-footed performance.
 
-~
+~
 9 64 9437184 0
 13 0 0 0 0 0 0 0 0 0
 11
@@ -5075,7 +5075,7 @@ full mithril plate chest~
 a full mithril plate chest~
 A full plate chest in mithril construction, approaching the high tier of tank protection.
 
-~
+~
 9 64 8650752 0
 18 0 0 0 0 0 0 0 0 0
 13
@@ -5086,7 +5086,7 @@ mithril boots full plate~
 full mithril plate boots~
 Full mithril plate boots at the high end of the mid tier.
 
-~
+~
 9 64 10485760 0
 13 0 0 0 0 0 0 0 0 0
 12
@@ -5097,7 +5097,7 @@ mithril plate arms vambrace~
 mithril plate vambraces~
 Mithril plate vambraces approaching high-tier protection for the forearms.
 
-~
+~
 9 64 8389632 0
 13 0 0 0 0 0 0 0 0 0
 11
@@ -5108,7 +5108,7 @@ adamantine plate chest~
 an adamantine plate chest~
 A chest plate forged from adamantine, offering exceptional protection at high tier.
 
-~
+~
 9 64 8650752 0
 20 0 0 0 0 0 0 0 0 0
 14
@@ -5119,7 +5119,7 @@ adamantine plate helm~
 an adamantine plate helm~
 A full helm cast from adamantine, the hardest commercially worked metal.
 
-~
+~
 9 64 8388616 0
 16 0 0 0 0 0 0 0 0 0
 13
@@ -5130,7 +5130,7 @@ adamantine plate greaves~
 adamantine plate greaves~
 Adamantine greaves that protect the legs with extreme durability.
 
-~
+~
 9 64 9437184 0
 16 0 0 0 0 0 0 0 0 0
 13
@@ -5141,7 +5141,7 @@ adamantine plate boots~
 adamantine plate boots~
 Adamantine boots that provide maximum foot protection for front-line combat.
 
-~
+~
 9 64 10485760 0
 16 0 0 0 0 0 0 0 0 0
 13
@@ -5152,7 +5152,7 @@ adamantine gauntlets plate~
 adamantine plate gauntlets~
 Heavy adamantine gauntlets that turn aside blows at the highest common tier.
 
-~
+~
 9 64 8392704 0
 14 0 0 0 0 0 0 0 0 0
 12
@@ -5163,7 +5163,7 @@ adamantine pauldrons plate~
 adamantine plate pauldrons~
 Adamantine pauldrons protecting the shoulder at the highest commercial standard.
 
-~
+~
 9 64 8389120 0
 14 0 0 0 0 0 0 0 0 0
 13
@@ -5174,7 +5174,7 @@ warlord plate chest supreme~
 a supreme warlord plate chest~
 A chest plate used by warlord-rank fighters, the pinnacle of high-tier melee protection.
 
-~
+~
 9 64 8650752 0
 22 0 0 0 0 0 0 0 0 0
 15
@@ -5185,7 +5185,7 @@ warlord plate helm supreme~
 a supreme warlord plate helm~
 A warlord-grade helm offering supreme head protection in the high tier.
 
-~
+~
 9 64 8388616 0
 18 0 0 0 0 0 0 0 0 0
 14
@@ -5196,7 +5196,7 @@ warlord plate greaves supreme~
 supreme warlord plate greaves~
 Warlord-grade greaves, supreme protection for the legs in high-tier combat.
 
-~
+~
 9 64 9437184 0
 18 0 0 0 0 0 0 0 0 0
 14
@@ -5207,7 +5207,7 @@ warlord plate boots supreme~
 supreme warlord plate boots~
 Warlord-grade boots at the peak of high-tier foot protection.
 
-~
+~
 9 64 10485760 0
 18 0 0 0 0 0 0 0 0 0
 14
@@ -5218,7 +5218,7 @@ warlord vambraces plate supreme~
 supreme warlord plate vambraces~
 Supreme warlord vambraces at high-tier arm protection standard.
 
-~
+~
 9 64 8389632 0
 17 0 0 0 0 0 0 0 0 0
 13
@@ -5229,7 +5229,7 @@ champion plate chest ultimate~
 an ultimate champion plate chest~
 The finest plate chest Draga stocks: ultimate-grade champion armour at the tier ceiling.
 
-~
+~
 9 64 8650752 0
 25 0 0 0 0 0 0 0 0 0
 15
@@ -5240,7 +5240,7 @@ champion plate helm ultimate~
 an ultimate champion plate helm~
 Ultimate champion helm at the ceiling of commercially available head protection.
 
-~
+~
 9 64 8388616 0
 20 0 0 0 0 0 0 0 0 0
 14
@@ -5251,7 +5251,7 @@ champion plate greaves ultimate~
 ultimate champion plate greaves~
 Ultimate champion greaves at the high-tier ceiling for leg protection.
 
-~
+~
 9 64 9437184 0
 20 0 0 0 0 0 0 0 0 0
 14
@@ -5262,7 +5262,7 @@ champion belt waist plate ultimate~
 an ultimate champion plate belt~
 An ultimate plate belt at the peak of commercially available waist protection.
 
-~
+~
 9 64 8519680 0
 17 0 0 0 0 0 0 0 0 0
 13
@@ -5273,7 +5273,7 @@ gnarled walking staff apprentice~
 a gnarled apprentice walking staff~
 A simple gnarled staff cut from hawthorn wood, sufficient for an apprentice caster.
 
-~
+~
 5 64 8421376 0
 4 1 4 0 0 0 0 0 0 0
 3
@@ -5284,7 +5284,7 @@ focus dagger iron sigil etched~
 an iron sigil-etched focus dagger~
 A short iron dagger with sigils etched into the flat, useful as a spell-casting focus.
 
-~
+~
 5 64 8421376 0
 7 1 5 0 0 0 0 0 0 0
 2
@@ -5295,7 +5295,7 @@ crystal tipped wand short~
 a short crystal-tipped wand~
 A wand tipped with a clear crystal that amplifies basic channelling output.
 
-~
+~
 5 536870976 8421376 0
 4 1 6 0 0 0 0 0 0 0
 1
@@ -5306,7 +5306,7 @@ staff ironwood long~
 a long ironwood staff~
 A staff cut from seasoned ironwood, with the natural hardness to serve mid-tier combat.
 
-~
+~
 5 64 8421376 0
 4 2 4 0 0 0 0 0 0 0
 4
@@ -5317,7 +5317,7 @@ runed dagger silver arcane~
 a silver arcane runed dagger~
 A silver dagger with arcane runes ground into the blade that improve channelling efficiency.
 
-~
+~
 5 64 8421376 0
 7 2 5 0 0 0 0 0 0 0
 2
@@ -5328,7 +5328,7 @@ focus wand ebony carved~
 a carved ebony focus wand~
 An ebony wand carved with complex focus sigils for mid-tier channelling work.
 
-~
+~
 5 536870976 8421376 0
 4 2 6 0 0 0 0 0 0 0
 2
@@ -5339,7 +5339,7 @@ mage staff bound silver~
 a silver-bound mage staff~
 A staff bound at shaft and tip with silver that significantly improves arcane resonance.
 
-~
+~
 5 64 8421376 0
 4 2 7 0 0 0 0 0 0 0
 4
@@ -5350,7 +5350,7 @@ adept staff mithril cap~
 a mithril-capped adept staff~
 A sturdy staff with mithril caps at both ends, offering adept-tier channelling support.
 
-~
+~
 5 64 8421376 0
 4 3 6 0 0 0 0 0 0 0
 4
@@ -5361,7 +5361,7 @@ arcane blade short slender~
 a slender short arcane blade~
 A slender blade with arcane channels ground along its length for focus-combat hybrid use.
 
-~
+~
 5 64 8421376 0
 1 3 6 0 0 0 0 0 0 0
 3
@@ -5372,7 +5372,7 @@ high adept wand platinum~
 a platinum high-adept wand~
 A platinum-alloy wand resonating at high-adept channelling frequency.
 
-~
+~
 5 536870976 8421376 0
 4 3 7 0 0 0 0 0 0 0
 2
@@ -5383,7 +5383,7 @@ archmage staff platinum rune~
 a platinum rune-inscribed archmage staff~
 A staff inscribed with platinum runes, rated for archmage-level output.
 
-~
+~
 5 64 8421376 0
 4 4 6 0 0 0 0 0 0 0
 4
@@ -5394,7 +5394,7 @@ grand staff crystal arcane~
 a grand crystal arcane staff~
 A staff set with a large arcane crystal that provides outstanding channelling amplification.
 
-~
+~
 5 64 8421376 0
 4 4 7 0 0 0 0 0 0 0
 4
@@ -5405,7 +5405,7 @@ supreme wand mithril crystal~
 a mithril crystal supreme wand~
 A supreme-tier wand with mithril body and embedded crystal for maximum output.
 
-~
+~
 5 536870976 8421376 0
 4 4 8 0 0 0 0 0 0 0
 2
@@ -5416,7 +5416,7 @@ grandmaster staff adamantine~
 an adamantine grandmaster staff~
 A grandmaster staff with adamantine shaft and caps, at the commercial tier ceiling for staves.
 
-~
+~
 5 64 8421376 0
 4 5 7 0 0 0 0 0 0 0
 4
@@ -5427,7 +5427,7 @@ ultimate focus blade arcane~
 an ultimate arcane focus blade~
 Thalindra's finest: an arcane blade at the ultimate commercial tier for caster weapons.
 
-~
+~
 5 64 8421376 0
 1 5 8 0 0 0 0 0 0 0
 3
@@ -5438,7 +5438,7 @@ short sword iron training~
 an iron training short sword~
 A standard iron short sword of the kind issued to militia trainees.
 
-~
+~
 5 64 8421376 0
 1 1 5 0 0 0 0 0 0 0
 7
@@ -5449,7 +5449,7 @@ iron mace simple~
 a simple iron mace~
 A basic iron mace with a flanged head, reliable if unadorned.
 
-~
+~
 5 64 8421376 0
 4 1 6 0 0 0 0 0 0 0
 9
@@ -5460,7 +5460,7 @@ steel sword straight one hand~
 a straight steel one-handed sword~
 A straight steel blade suitable for one-handed fighting styles.
 
-~
+~
 5 64 8421376 0
 1 2 5 0 0 0 0 0 0 0
 8
@@ -5471,7 +5471,7 @@ battle axe steel~
 a steel battle axe~
 A well-balanced steel battle axe with a single broad blade.
 
-~
+~
 5 64 8421376 0
 1 2 6 0 0 0 0 0 0 0
 10
@@ -5482,7 +5482,7 @@ warhammer iron reinforced~
 a reinforced iron warhammer~
 An iron warhammer with reinforced handle and double-face head for smashing blows.
 
-~
+~
 5 64 8421376 0
 4 2 7 0 0 0 0 0 0 0
 12
@@ -5493,7 +5493,7 @@ long sword steel quality~
 a quality steel long sword~
 A quality long sword with a blade length appropriate for mid-tier swordwork.
 
-~
+~
 5 64 8421376 0
 1 3 6 0 0 0 0 0 0 0
 9
@@ -5504,7 +5504,7 @@ great sword two handed steel~
 a steel two-handed great sword~
 A steel great sword requiring both hands, dealing heavy slashing damage.
 
-~
+~
 5 -2147483584 8421376 0
 1 3 8 0 0 0 0 0 0 0
 14
@@ -5515,7 +5515,7 @@ mithril sword one hand~
 a mithril one-handed sword~
 A mithril alloy sword with an edge that holds longer than standard steel.
 
-~
+~
 5 64 8421376 0
 1 3 7 0 0 0 0 0 0 0
 8
@@ -5526,7 +5526,7 @@ mithril warhammer heavy~
 a heavy mithril warhammer~
 A mithril warhammer with exceptional impact at the mid-high tier.
 
-~
+~
 5 64 8421376 0
 4 3 8 0 0 0 0 0 0 0
 12
@@ -5537,7 +5537,7 @@ mithril great sword two hand~
 a mithril two-handed great sword~
 A mithril great sword offering superior performance for heavy two-handed fighters.
 
-~
+~
 5 -2147483584 8421376 0
 1 4 7 0 0 0 0 0 0 0
 13
@@ -5548,7 +5548,7 @@ adamantine sword one hand~
 an adamantine one-handed sword~
 An adamantine sword at the high tier of one-handed combat performance.
 
-~
+~
 5 64 8421376 0
 1 4 7 0 0 0 0 0 0 0
 9
@@ -5559,7 +5559,7 @@ adamantine maul heavy two hand~
 a heavy adamantine maul~
 An adamantine maul for two-handed smashing combat at the high tier.
 
-~
+~
 5 -2147483584 8421376 0
 4 4 8 0 0 0 0 0 0 0
 15
@@ -5570,7 +5570,7 @@ warlord sword adamantine supreme~
 a supreme warlord adamantine sword~
 A warlord-grade adamantine sword near the ceiling of high-tier one-handed performance.
 
-~
+~
 5 64 8421376 0
 1 5 7 0 0 0 0 0 0 0
 10
@@ -5581,7 +5581,7 @@ champion great sword ultimate two hand~
 an ultimate champion two-handed great sword~
 A two-handed champion-grade great sword at the ultimate commercial tier.
 
-~
+~
 5 -2147483584 8421376 0
 1 5 9 0 0 0 0 0 0 0
 15
@@ -5592,7 +5592,7 @@ ultimate warhammer champion heavy~
 an ultimate champion warhammer~
 Gorven's finest: an ultimate-tier champion warhammer at the ceiling of commercial melee weapons.
 
-~
+~
 5 64 8421376 0
 4 5 8 0 0 0 0 0 0 0
 14
@@ -5603,7 +5603,7 @@ tallow candle short~
 a short tallow candle~
 A cheap tallow candle that provides enough light for reading or corridor work.
 
-~
+~
 1 0 8421376 0
 0 0 48 0 0 0 0 0 0 0
 1
@@ -5614,7 +5614,7 @@ lantern oil common~
 a common oil lantern~
 A standard oil lantern with a shuttered glass face and iron handle.
 
-~
+~
 1 0 8421376 0
 0 0 72 0 0 0 0 0 0 0
 4
@@ -5625,7 +5625,7 @@ torch pine tar~
 a pine-tar torch~
 A pine-tar soaked torch that burns hot and bright.
 
-~
+~
 1 0 8421376 0
 0 0 36 0 0 0 0 0 0 0
 2
@@ -5636,7 +5636,7 @@ glow crystal small~
 a small glow crystal~
 A small crystal with a persistent luminescent charge useful for casters.
 
-~
+~
 1 64 8421376 0
 0 0 0 0 0 0 0 0 0 0
 1
@@ -5647,7 +5647,7 @@ ward lamp small arcane~
 a small arcane ward lamp~
 A ward lamp whose light suppresses low-level shadows and hostile minor entities.
 
-~
+~
 1 64 8421376 0
 0 0 0 0 0 0 0 0 0 0
 3
@@ -5658,7 +5658,7 @@ beacon stone cold fire~
 a cold-fire beacon stone~
 A stone that emits cold bluish light without heat, favoured by dungeon explorers.
 
-~
+~
 1 64 8421376 0
 0 0 0 0 0 0 0 0 0 0
 2
@@ -5669,7 +5669,7 @@ lantern silver enchanted~
 an enchanted silver lantern~
 A silver lantern whose enchanted flame burns indefinitely without fuel.
 
-~
+~
 1 64 8421376 0
 0 0 0 0 0 0 0 0 0 0
 3
@@ -5680,7 +5680,7 @@ arcane torch floating~
 a floating arcane torch~
 An arcane torch that hovers at shoulder height and follows the bearer.
 
-~
+~
 1 64 8421376 0
 0 0 0 0 0 0 0 0 0 0
 1
@@ -5691,7 +5691,7 @@ war lantern iron heavy~
 a heavy iron war lantern~
 A heavy iron lantern built to withstand combat conditions and stay lit.
 
-~
+~
 1 64 8421376 0
 0 0 0 0 0 0 0 0 0 0
 7
@@ -5702,7 +5702,7 @@ mithril lantern bright~
 a bright mithril lantern~
 A mithril-bodied lantern that provides exceptional illumination in dark environments.
 
-~
+~
 1 64 8421376 0
 0 0 0 0 0 0 0 0 0 0
 4
@@ -5713,7 +5713,7 @@ ward globe silver arcane bright~
 a bright silver arcane ward globe~
 A globe of compressed arcane light, bright enough to illuminate a full corridor.
 
-~
+~
 1 64 8421376 0
 0 0 0 0 0 0 0 0 0 0
 2
@@ -5724,7 +5724,7 @@ sunstone brilliant gold~
 a brilliant gold sunstone~
 A gold-veined sunstone that emits light equivalent to daylight in its immediate vicinity.
 
-~
+~
 1 64 8421376 0
 0 0 0 0 0 0 0 0 0 0
 3
@@ -5735,7 +5735,7 @@ adamantine lantern sealed~
 a sealed adamantine lantern~
 An adamantine lantern sealed against weather and impacts, burning indefinitely.
 
-~
+~
 1 64 8421376 0
 0 0 0 0 0 0 0 0 0 0
 8
@@ -5746,7 +5746,7 @@ prime focus crystal light ultimate~
 an ultimate prime focus crystal~
 A focus crystal at the apex of light items, providing extraordinary illumination.
 
-~
+~
 1 64 8421376 0
 0 0 0 0 0 0 0 0 0 0
 1
@@ -5757,7 +5757,7 @@ eternal flame shard sacred~
 a shard of eternal sacred flame~
 Oswin's rarest stock: a shard of eternal flame that never dims regardless of conditions.
 
-~
+~
 1 64 8421376 0
 0 0 0 0 0 0 0 0 0 0
 1
@@ -5768,7 +5768,7 @@ scroll recall city blank~
 a blank city recall scroll~
 A scroll enchanted to return the bearer to the city centre when activated.
 
-~
+~
 2 64 8421376 0
 10 62 -1 -1 0 0 0 0 0 0
 1
@@ -5779,7 +5779,7 @@ map district northern quarter~
 a map of the northern quarter~
 A detailed hand-drawn map of the northern quarter, current to the last civic survey.
 
-~
+~
 2 0 8421376 0
 5 -1 -1 -1 0 0 0 0 0 0
 1
@@ -5790,7 +5790,7 @@ sealed letter courier standard~
 a standard courier's sealed letter~
 A sealed letter ready for delivery, handed in at any postal station.
 
-~
+~
 2 0 8421376 0
 5 -1 -1 -1 0 0 0 0 0 0
 1
@@ -5801,7 +5801,7 @@ scroll identify basic~
 a basic identify scroll~
 A scroll that reveals the basic properties of an item when read.
 
-~
+~
 2 64 8421376 0
 15 53 -1 -1 0 0 0 0 0 0
 1
@@ -5812,7 +5812,7 @@ scroll detect invis~
 a detect invis scroll~
 A scroll granting temporary ability to detect invisible objects and creatures.
 
-~
+~
 2 64 8421376 0
 20 17 -1 -1 0 0 0 0 0 0
 1
@@ -5823,7 +5823,7 @@ scroll fly levitation~
 a levitation scroll~
 A scroll that grants brief levitation to the user.
 
-~
+~
 2 64 8421376 0
 25 56 -1 -1 0 0 0 0 0 0
 1
@@ -5834,7 +5834,7 @@ scroll haste speed~
 a haste scroll~
 A scroll that temporarily speeds the user's reflexes and movement.
 
-~
+~
 2 64 8421376 0
 30 44 -1 -1 0 0 0 0 0 0
 1
@@ -5845,7 +5845,7 @@ scroll pass door~
 a pass door scroll~
 A scroll that allows the user to pass through a locked or barred door once.
 
-~
+~
 2 64 8421376 0
 35 -1 -1 -1 0 0 0 0 0 0
 1
@@ -5856,7 +5856,7 @@ scroll protection evil~
 a protection from evil scroll~
 A scroll that raises a ward against evil-aligned attacks and creatures.
 
-~
+~
 2 64 8421376 0
 40 -1 -1 -1 0 0 0 0 0 0
 1
@@ -5867,7 +5867,7 @@ scroll protection good~
 a protection from good scroll~
 A scroll that raises a ward against good-aligned threats.
 
-~
+~
 2 64 8421376 0
 40 80 -1 -1 0 0 0 0 0 0
 1
@@ -5878,7 +5878,7 @@ scroll word recall premium~
 a premium word of recall scroll~
 A premium-grade recall scroll with a strengthened enchantment for reliable function.
 
-~
+~
 2 64 8421376 0
 50 62 -1 -1 0 0 0 0 0 0
 1
@@ -5889,7 +5889,7 @@ scroll remove curse~
 a remove curse scroll~
 A scroll with sufficient power to lift most standard curses.
 
-~
+~
 2 64 8421376 0
 55 -1 -1 -1 0 0 0 0 0 0
 1
@@ -5900,7 +5900,7 @@ scroll teleport short range~
 a short-range teleport scroll~
 A scroll that teleports the user to a random nearby location.
 
-~
+~
 2 64 8421376 0
 60 -1 -1 -1 0 0 0 0 0 0
 1
@@ -5911,7 +5911,7 @@ scroll gate realm~
 a realm gate scroll~
 A scroll that opens a temporary gate to a known destination.
 
-~
+~
 2 64 8421376 0
 75 39 -1 -1 0 0 0 0 0 0
 1
@@ -5922,7 +5922,7 @@ scroll dispel magic master~
 a master dispel magic scroll~
 A powerful scroll capable of stripping significant enchantments from a target.
 
-~
+~
 2 64 8421376 0
 90 20 -1 -1 0 0 0 0 0 0
 1
@@ -5933,7 +5933,7 @@ potion cure light wounds~
 a potion of cure light wounds~
 A small flask of restorative liquid that heals minor wounds.
 
-~
+~
 10 192 8421376 0
 10 2 -1 -1 0 0 0 0 0 0
 1
@@ -5944,7 +5944,7 @@ potion cure serious wounds~
 a potion of cure serious wounds~
 A flask of restorative liquid that heals significant wounds.
 
-~
+~
 10 192 8421376 0
 30 4 -1 -1 0 0 0 0 0 0
 1
@@ -5955,7 +5955,7 @@ potion cure critical wounds~
 a potion of cure critical wounds~
 A flask of potent healing that restores major injuries.
 
-~
+~
 10 192 8421376 0
 60 5 -1 -1 0 0 0 0 0 0
 1
@@ -5966,7 +5966,7 @@ potion heroism bless strength~
 a potion of heroism~
 A potion that grants temporary battlefield enhancement to the drinker.
 
-~
+~
 10 192 8421376 0
 40 6 -1 -1 0 0 0 0 0 0
 1
@@ -5977,7 +5977,7 @@ iron ring grip plain~
 a plain iron grip ring~
 A plain iron ring worn on the finger to improve weapon grip in wet conditions.
 
-~
+~
 9 64 8396800 0
 1 0 0 0 0 0 0 0 0 0
 1
@@ -5988,7 +5988,7 @@ neck clasp iron simple~
 a simple iron neck clasp~
 A simple iron clasp worn at the neck to secure cloaks and provide minimal protection.
 
-~
+~
 9 64 8388736 0
 2 0 0 0 0 0 0 0 0 0
 1
@@ -5999,7 +5999,7 @@ waist sash reinforced leather~
 a reinforced leather waist sash~
 A thick leather sash with iron-reinforced panels protecting the midsection.
 
-~
+~
 9 64 8519680 0
 3 0 0 0 0 0 0 0 0 0
 4
@@ -6010,7 +6010,7 @@ ear stud iron ward small~
 a small iron ward ear stud~
 A small iron stud worn in the ear with a faint protective ward.
 
-~
+~
 9 64 8388672 0
 1 0 0 0 0 0 0 0 0 0
 0
@@ -6021,7 +6021,7 @@ potion strength bull~
 a potion of bull's strength~
 A potion that temporarily grants exceptional physical strength.
 
-~
+~
 10 192 8421376 0
 50 -1 -1 -1 0 0 0 0 0 0
 1
@@ -6032,7 +6032,7 @@ potion sanctuary divine~
 a potion of divine sanctuary~
 A potion that briefly wraps the drinker in a protective divine aura.
 
-~
+~
 10 192 8421376 0
 70 -1 -1 -1 0 0 0 0 0 0
 1
@@ -6043,7 +6043,7 @@ wrist wrap combat iron~
 an iron combat wrist wrap~
 Iron-reinforced wrist wraps for combat protection at the wrist joint.
 
-~
+~
 9 64 8390656 0
 4 0 0 0 0 0 0 0 0 0
 3
@@ -6054,7 +6054,7 @@ ring steel fortified~
 a fortified steel ring~
 A thick steel ring worn on the finger with basic fortifying enchantment.
 
-~
+~
 9 64 8396800 0
 3 0 0 0 0 0 0 0 0 0
 1
@@ -6065,7 +6065,7 @@ neck gorget steel~
 a steel neck gorget~
 A steel gorget protecting the throat and neck, worn over or under armour.
 
-~
+~
 9 64 8388736 0
 5 0 0 0 0 0 0 0 0 0
 5
@@ -6076,7 +6076,7 @@ potion full heal restoration~
 a potion of full restoration~
 A premium restorative potion that fully heals most moderate injuries.
 
-~
+~
 10 192 8421376 0
 100 7 -1 -1 0 0 0 0 0 0
 1
@@ -6087,7 +6087,7 @@ ear crystal mithril ward~
 a mithril ward ear crystal~
 A mithril crystal worn in the ear with a strong protective ward.
 
-~
+~
 9 64 8388672 0
 5 0 0 0 0 0 0 0 0 0
 0
@@ -6098,7 +6098,7 @@ invasion shield buckler iron~
 an iron invasion buckler~
 A heavy iron buckler issued to front-line defenders during city invasions.
 
-~
+~
 9 268435520 8421376 0
 8 0 0 0 0 0 0 0 0 0
 10
@@ -6109,7 +6109,7 @@ siege cloak heavy warded~
 a heavy warded siege cloak~
 A heavy cloak with multi-layer battle-ward stitching for active combat conditions.
 
-~
+~
 9 64 8454144 0
 8 0 0 0 0 0 0 0 0 0
 6
@@ -6120,7 +6120,7 @@ invasion robe battle mage~
 a battle-mage invasion robe~
 A reinforced robe designed for casters who need to maintain position under fire.
 
-~
+~
 9 64 8650752 0
 10 0 0 0 0 0 0 0 0 0
 4
@@ -6131,7 +6131,7 @@ invasion plate chest battle~
 a battle invasion plate chest~
 Heavy chest armour specifically rated for the sustained impact of invasion combat.
 
-~
+~
 9 64 8650752 0
 13 0 0 0 0 0 0 0 0 0
 14
@@ -6142,7 +6142,7 @@ siege hammer two hand invasion~
 a two-handed siege hammer~
 A heavy two-handed hammer for breaking through defensive formations.
 
-~
+~
 5 -2147483584 8421376 0
 4 4 6 0 0 0 0 0 0 0
 15
@@ -6153,7 +6153,7 @@ invasion sword battle straight~
 a straight battle invasion sword~
 A straight sword designed for fast repeated strikes in close-quarters invasion fighting.
 
-~
+~
 5 64 8421376 0
 1 3 7 0 0 0 0 0 0 0
 9
@@ -6164,7 +6164,7 @@ siege staff battle mage heavy~
 a heavy battle-mage siege staff~
 A staff reinforced for battle use, maintaining arcane function in active combat.
 
-~
+~
 5 64 8421376 0
 4 3 7 0 0 0 0 0 0 0
 5
@@ -6175,7 +6175,7 @@ battle shield large invasion~
 a large invasion battle shield~
 A large rectangular shield providing substantial cover during invasion assaults.
 
-~
+~
 9 268435520 8421376 0
 12 0 0 0 0 0 0 0 0 0
 14
@@ -6186,7 +6186,7 @@ invasion helm warplate~
 a warplate invasion helm~
 A heavy warplate helm rated for invasion-level combat without visor obstruction.
 
-~
+~
 9 64 8388616 0
 13 0 0 0 0 0 0 0 0 0
 14
@@ -6197,7 +6197,7 @@ battle robe arcane reinforced~
 a reinforced arcane battle robe~
 A battle robe with triple-layer ward panels for high-tier casters in invasion combat.
 
-~
+~
 9 64 8650752 0
 15 0 0 0 0 0 0 0 0 0
 4
@@ -6208,7 +6208,7 @@ invasion gauntlets mithril battle~
 mithril invasion battle gauntlets~
 Mithril gauntlets specifically reinforced for the sustained combat of invasion scenarios.
 
-~
+~
 9 64 8392704 0
 12 0 0 0 0 0 0 0 0 0
 11
@@ -6219,7 +6219,7 @@ siege sword mithril heavy~
 a heavy mithril siege sword~
 A heavy mithril sword for sustained siege combat, with superior edge retention.
 
-~
+~
 5 64 8421376 0
 1 4 8 0 0 0 0 0 0 0
 10
@@ -6230,7 +6230,7 @@ grand invasion buckler adamantine~
 an adamantine grand invasion buckler~
 An adamantine buckler at the high tier of defensive invasion equipment.
 
-~
+~
 9 268435520 8421376 0
 16 0 0 0 0 0 0 0 0 0
 12
@@ -6241,7 +6241,7 @@ battle staff adamantine siege~
 an adamantine siege battle staff~
 An adamantine staff built for high-tier battle-casters in invasion conditions.
 
-~
+~
 5 64 8421376 0
 4 5 7 0 0 0 0 0 0 0
 5
@@ -6252,7 +6252,7 @@ supreme invasion sword champion~
 a champion supreme invasion sword~
 The warden's finest: a champion-grade invasion sword at the upper tier.
 
-~
+~
 5 64 8421376 0
 1 5 8 0 0 0 0 0 0 0
 11
@@ -6263,7 +6263,7 @@ bread loaf fresh~
 a fresh loaf of bread~
 A loaf of fresh bread from the market bakery, still warm.
 
-~
+~
 19 0 8421376 0
 8 0 0 0 0 0 0 0 0 0
 2
@@ -6274,7 +6274,7 @@ coin gold midgaard standard~
 a gold standard coin~
 A standard gold coin bearing the civic seal of @@WMidgaard@@N.
 
-~
+~
 18 0 8421376 0
 0 0 0 0 0 0 0 0 0 0
 0
@@ -6285,7 +6285,7 @@ temple pendant silver ward~
 a silver ward pendant~
 A silver pendant bearing the temple's ward-sigil, worn by the faithful.
 
-~
+~
 9 64 8388736 0
 1 0 0 0 0 0 0 0 0 0
 1
@@ -6296,7 +6296,7 @@ city watch badge iron~
 an iron city watch badge~
 An iron badge identifying the bearer as a member of the city watch.
 
-~
+~
 18 0 8421376 0
 0 0 0 0 0 0 0 0 0 0
 1
@@ -6307,7 +6307,7 @@ civic notice board placard~
 a civic notice placard~
 A placard from the civic notice board listing current public announcements.
 
-~
+~
 18 0 8421376 0
 0 0 0 0 0 0 0 0 0 0
 0
@@ -6318,7 +6318,7 @@ pilgrim token stone worn~
 a worn pilgrim token~
 A smooth stone token carried by a pilgrim, marked with a devotional symbol.
 
-~
+~
 18 0 8421376 0
 0 0 0 0 0 0 0 0 0 0
 1
@@ -6329,7 +6329,7 @@ caravan manifest paper sealed~
 a sealed caravan manifest~
 A sealed cargo manifest from the current caravan, marked with a wax seal.
 
-~
+~
 18 0 8421376 0
 0 0 0 0 0 0 0 0 0 0
 0
@@ -6340,7 +6340,7 @@ torch extra spare~
 a spare torch~
 A spare torch kept behind the counter for emergencies.
 
-~
+~
 1 0 8421376 0
 0 0 36 0 0 0 0 0 0 0
 2
@@ -6351,7 +6351,7 @@ quartermaster manifest supply list~
 a supply manifest~
 The quartermaster's current supply list, detailing available stock.
 
-~
+~
 18 0 8421376 0
 0 0 0 0 0 0 0 0 0 0
 0
@@ -6362,7 +6362,7 @@ postal bag sealed courier~
 a sealed courier postal bag~
 A sealed postal bag ready for the next courier run.
 
-~
+~
 18 0 8421376 0
 0 0 0 0 0 0 0 0 0 0
 3
@@ -6373,7 +6373,7 @@ ritual candle purple temple~
 a purple ritual candle~
 A purple candle used in the daily temple observances.
 
-~
+~
 1 64 8421376 0
 0 0 24 0 0 0 0 0 0 0
 1
@@ -6384,7 +6384,7 @@ herb bundle tied healer~
 a tied bundle of healing herbs~
 A bundle of herbs tied with cord, used by healers in their restorative work.
 
-~
+~
 19 64 8421376 0
 4 0 0 0 0 0 0 0 0 0
 1
@@ -6395,7 +6395,7 @@ parchment roll blank inscription~
 a blank parchment roll~
 A roll of blank parchment for correspondence or inscription work.
 
-~
+~
 18 0 8421376 0
 0 0 0 0 0 0 0 0 0 0
 1
@@ -6406,7 +6406,7 @@ iron key standard civic~
 a standard civic iron key~
 A standard iron key for civic district doors, widely duplicated.
 
-~
+~
 18 0 8421376 0
 0 0 0 0 0 0 0 0 0 0
 1
@@ -6417,7 +6417,7 @@ merchant ledger accounts bound~
 a bound merchant ledger~
 A bound merchant ledger filled with accounts in tight script.
 
-~
+~
 18 0 8421376 0
 0 0 0 0 0 0 0 0 0 0
 3
@@ -6428,7 +6428,7 @@ waterskin full travel~
 a full travel waterskin~
 A full waterskin for road travel, the standard issue for caravans.
 
-~
+~
 19 0 8421376 0
 6 0 0 0 0 0 0 0 0 0
 3
@@ -6439,7 +6439,7 @@ rope hemp standard coil~
 a coil of hemp rope~
 A standard coil of hemp rope, twenty feet in length.
 
-~
+~
 18 0 8421376 0
 0 0 0 0 0 0 0 0 0 0
 5
@@ -6450,7 +6450,7 @@ gem sapphire cut small~
 a small cut sapphire~
 A small cut sapphire from the jewellers' district, modest quality.
 
-~
+~
 18 0 8421376 0
 0 0 0 0 0 0 0 0 0 0
 0
@@ -6461,7 +6461,7 @@ ward chalk stick reliquary~
 a stick of reliquary ward chalk~
 Ward chalk used by the reliquary clerks for drawing protective sigils.
 
-~
+~
 18 64 8421376 0
 0 0 0 0 0 0 0 0 0 0
 0
@@ -6472,7 +6472,7 @@ temple incense stick sacred~
 a stick of sacred temple incense~
 Sacred incense burned at the temple's inner altar during the morning rites.
 
-~
+~
 18 64 8421376 0
 0 0 0 0 0 0 0 0 0 0
 0
@@ -6503,8 +6503,6 @@ M 0 1100 20 1160
 M 0 1100 20 1180 
 
 M 0 1101 1 1109 
-
-M 0 1102 2 1209 
 
 M 0 1103 5 1120 
 
@@ -6920,6 +6918,7 @@ G 0 1280 5
 
 G 0 1295 5 
 
+M 0 1102 1 1209 (null)
 S
 #SPECIALS
 M 1100 spec_midgaard_city_guard
@@ -6932,7 +6931,7 @@ M 1106 spec_midgaard_street_vendor
 M 1107 spec_midgaard_pilgrim
 M 1108 spec_midgaard_beggar
 M 1110 spec_midgaard_executioner
-M 1111 spec_midgaard_healer
+M 1111 (null)
 M 1112 spec_midgaard_temple_priest
 M 1113 spec_midgaard_shopkeeper
 M 1114 spec_midgaard_shopkeeper
