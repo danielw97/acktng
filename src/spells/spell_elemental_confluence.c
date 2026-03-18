@@ -23,10 +23,11 @@ bool spell_elemental_confluence(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_
        NULL, TO_ROOM);
    send_to_char(
        "@@pYou invoke the Convergence Codices, unleashing all four elements at once!@@N\n\r", ch);
-   act("@@pFire, storm, tide, and stone converge upon $n in a devastating confluence!@@N", victim, NULL,
-       NULL, TO_ROOM);
+   act("@@pFire, storm, tide, and stone converge upon $n in a devastating confluence!@@N", victim,
+       NULL, NULL, TO_ROOM);
    send_to_char(
-       "@@pFire, storm, tide, and stone converge upon you in a devastating confluence!@@N\n\r", victim);
+       "@@pFire, storm, tide, and stone converge upon you in a devastating confluence!@@N\n\r",
+       victim);
 
    sp_damage(obj, ch, victim, dam, ELEMENT_FIRE | ELEMENT_AIR | ELEMENT_WATER | ELEMENT_EARTH, sn,
              TRUE);

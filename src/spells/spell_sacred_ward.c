@@ -13,8 +13,8 @@ bool spell_sacred_ward(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    AFFECT_DATA af;
    int heal_mod;
 
-   heal_mod = ch->class_level[CLASS_TEM] * 3 + ch->class_level[CLASS_PAL] +
-              ch->class_level[CLASS_PRI];
+   heal_mod =
+       ch->class_level[CLASS_TEM] * 3 + ch->class_level[CLASS_PAL] + ch->class_level[CLASS_PRI];
 
    act("@@a$n calls forth a sacred ward, blessing the ground with holy power!@@N", ch, NULL, NULL,
        TO_ROOM);

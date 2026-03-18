@@ -325,7 +325,14 @@ unit-test-skills: $(OBJDIR)/tests/test_skills.o $(OBJDIR)/skills.unit-test.o $(O
 	rm -f tests/unit-test-skills
 	$(CC) -Wl,--gc-sections -o tests/unit-test-skills $(OBJDIR)/tests/test_skills.o $(OBJDIR)/skills.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-unit-tests: unit-test-handler unit-test-skills unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-login unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns unit-test-prompt unit-test-adept-skills
+$(OBJDIR)/revenant.unit-test.o: revenant.c headers/ack.h
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/revenant.unit-test.o revenant.c
+
+unit-test-revenant: $(OBJDIR)/tests/test_revenant.o $(OBJDIR)/revenant.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
+	rm -f tests/unit-test-revenant
+	$(CC) -Wl,--gc-sections -o tests/unit-test-revenant $(OBJDIR)/tests/test_revenant.o $(OBJDIR)/revenant.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+
+unit-tests: unit-test-handler unit-test-skills unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-login unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns unit-test-prompt unit-test-revenant unit-test-adept-skills
 	./tests/unit-test-handler
 	./tests/unit-test-skills
 	./tests/unit-test-act-flags
@@ -367,6 +374,7 @@ unit-tests: unit-test-handler unit-test-skills unit-test-act-flags unit-test-are
 	./tests/unit-test-interp
 	./tests/unit-test-strfuns
 	./tests/unit-test-prompt
+	./tests/unit-test-revenant
 	./tests/unit-test-adept-skills
 	$(MAKE) integration-test
 	$(MAKE) integration-test-telnet

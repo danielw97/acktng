@@ -31,7 +31,8 @@ bool spell_cognitive_disruption(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_
 
    act("@@G$n disrupts $N's cognitive focus, scattering $S concentration!@@N", ch, NULL, victim,
        TO_NOTVICT);
-   act("@@G$n disrupts your cognitive focus -- your thoughts scatter!@@N", ch, NULL, victim, TO_VICT);
+   act("@@G$n disrupts your cognitive focus -- your thoughts scatter!@@N", ch, NULL, victim,
+       TO_VICT);
    act("@@GYou disrupt $N's cognitive focus, scattering $S concentration!@@N", ch, NULL, victim,
        TO_CHAR);
 

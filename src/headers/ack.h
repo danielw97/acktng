@@ -710,6 +710,7 @@ struct char_data
    bool using_named_door;
    NPC_GROUP_DATA *ngroup;
    long lore_flags;
+   REVENANT_DATA *revenant; /* non-NULL if this NPC is a revenant */
 };
 
 /*
@@ -1416,6 +1417,14 @@ void check_killer args((CHAR_DATA * ch, CHAR_DATA *victim));
 
 /* ai.c */
 void ai_update args((void));
+
+/* revenant.c */
+bool is_revenant args((CHAR_DATA * ch));
+CHAR_DATA *find_revenant args((CHAR_DATA * ch));
+CHAR_DATA *revenant_create args((CHAR_DATA * caster, OBJ_DATA *corpse));
+void revenant_apply_tracks args((CHAR_DATA * rev));
+void revenant_aura_tick args((CHAR_DATA * rev));
+int revenant_spite_retaliate args((CHAR_DATA * rev, CHAR_DATA *attacker, int damage_taken));
 
 /* handler.c */
 bool remove_obj args((CHAR_DATA * ch, int iWear, bool fReplace));

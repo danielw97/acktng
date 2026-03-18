@@ -35,9 +35,10 @@ bool spell_predictive_collapse(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_D
 
    act("@@G$n models $N's responses and collapses $S combat patterns!@@N", ch, NULL, victim,
        TO_NOTVICT);
-   act("@@G$n collapses your combat patterns -- every response you attempt was predicted!@@N", ch, NULL,
-       victim, TO_VICT);
-   act("@@GYou model $N's responses and collapse $S combat patterns!@@N", ch, NULL, victim, TO_CHAR);
+   act("@@G$n collapses your combat patterns -- every response you attempt was predicted!@@N", ch,
+       NULL, victim, TO_VICT);
+   act("@@GYou model $N's responses and collapse $S combat patterns!@@N", ch, NULL, victim,
+       TO_CHAR);
 
    sp_damage(obj, ch, victim, dam, ELEMENT_MENTAL | ELEMENT_SHADOW, sn, TRUE);
    return TRUE;

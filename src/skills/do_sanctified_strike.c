@@ -51,8 +51,8 @@ void do_sanctified_strike(CHAR_DATA *ch, char *argument)
    check_killer(ch, victim);
    if (can_hit_skill(ch, victim, gsn_sanctified_strike))
    {
-      act("@@a$n strikes $N with sanctified force, holy light mending $s wounds!@@N", ch, NULL, victim,
-          TO_NOTVICT);
+      act("@@a$n strikes $N with sanctified force, holy light mending $s wounds!@@N", ch, NULL,
+          victim, TO_NOTVICT);
       act("@@a$n strikes you with sanctified force!@@N", ch, NULL, victim, TO_VICT);
       act("@@aYou strike $N with sanctified force, holy light mending your wounds!@@N", ch, NULL,
           victim, TO_CHAR);

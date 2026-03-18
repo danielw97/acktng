@@ -26,8 +26,8 @@ bool spell_entropic_shield(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA 
 
    act("@@GAn entropic field shimmers into existence around $n, degrading incoming attacks.@@N", ch,
        NULL, NULL, TO_ROOM);
-   send_to_char(
-       "@@GAn entropic field shimmers into existence around you, degrading incoming attacks.@@N\n\r",
-       ch);
+   send_to_char("@@GAn entropic field shimmers into existence around you, degrading incoming "
+                "attacks.@@N\n\r",
+                ch);
    return TRUE;
 }

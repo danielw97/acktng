@@ -116,7 +116,7 @@ SPELL_OBJS = \
 	spells/spell_visit.o spells/spell_wall_of_fire.o spells/spell_waterelem.o \
 	spells/spell_weaken.o \
 	spells/spell_window.o spells/spell_wither_shadow.o spells/spell_word_of_recall.o \
-	spells/spell_wraith_touch.o \
+	spells/spell_revenant.o spells/spell_wraith_touch.o \
 	spells/spell_elemental_confluence.o spells/spell_convergence_shield.o \
 	spells/spell_sacred_ward.o \
 	spells/spell_momentum_drain.o spells/spell_entropic_shield.o \
@@ -154,7 +154,7 @@ O_FILES = affect.o ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o ac
 	  const.o const_color.o const_class.o const_race.o const_clan.o const_exp.o const_liq.o \
 	  damage.o cloak.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
 	  heal.o interp.o invasion.o item_generation.o item_generation_tables.o keep.o lists.o lookup.o macros.o magic.o mapper.o \
-	  obj_fun.o pdelete.o $(QUEST_OBJS) reincarnate.o \
+	  obj_fun.o pdelete.o $(QUEST_OBJS) reincarnate.o revenant.o \
 	  save/save.o save/save_players.o save/save_objects.o save/save_mobs.o save/save_areas.o \
 	  save/save_area_files.o save/save_rulers.o save/save_socials.o save/save_sysdata.o save/save_notes.o \
 	  scheck.o skills.o skills_chi.o skills_combo.o skills_obj.o skills_poison.o special.o spell_dam.o spendqp.o ssm.o \

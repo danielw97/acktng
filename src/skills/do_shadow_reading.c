@@ -41,6 +41,6 @@ void do_shadow_reading(CHAR_DATA *ch, char *argument)
 
    act("@@d$n's eyes flicker with shadow-sight, reading $s opponent's defenses.@@N", ch, NULL, NULL,
        TO_ROOM);
-   send_to_char(
-       "@@dYour eyes flicker with shadow-sight, reading your opponent's defenses.@@N\n\r", ch);
+   send_to_char("@@dYour eyes flicker with shadow-sight, reading your opponent's defenses.@@N\n\r",
+                ch);
 }
