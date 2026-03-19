@@ -14,5 +14,17 @@ Noun Damage: None
 Acquisition:
    - Wizard: level 48
 Description:
-   Cloak:elements is a protective/support spell that strengthens, restores, or safeguards the target.
+   Cloak:elements is the Wizard's signature remort cloak. It surrounds the
+   caster in a crackling aura of raw elemental power. When the caster takes
+   non-physical (spell) damage, the cloak lashes back and reflects 15% of the
+   incoming damage at the attacker as water-element damage.
+
+   The reflected damage bypasses reflection and absorption effects (it carries
+   NO_REFLECT and NO_ABSORB flags). The cloak only triggers against non-
+   physical damage that does not already have NO_REFLECT or NO_ABSORB set --
+   physical attacks do not activate it.
+
+   For a similar effect against physical damage, see cloak:flaming (Sorcerer).
+
+   Duration scales with pseudo-level (pseudo_level / 8 rounds).
 *******************************************************************************

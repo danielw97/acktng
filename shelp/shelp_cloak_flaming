@@ -14,5 +14,17 @@ Noun Damage: None
 Acquisition:
    - Sorcerer: level 48
 Description:
-   Cloak:flaming is a protective/support spell that strengthens, restores, or safeguards the target.
+   Cloak:flaming is the Sorcerer's signature remort cloak. It wraps the
+   caster in a cloak of searing flame. When the caster takes physical damage,
+   the cloak erupts and reflects 15% of the incoming damage back at the
+   attacker as fire-element damage.
+
+   The reflected damage bypasses reflection and absorption effects (it carries
+   NO_REFLECT and NO_ABSORB flags). The cloak only triggers against physical
+   attacks -- spells and non-physical damage do not activate it.
+
+   For a similar effect against non-physical damage, see cloak:elements
+   (Wizard).
+
+   Duration scales with pseudo-level (pseudo_level / 8 rounds).
 *******************************************************************************
