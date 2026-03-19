@@ -367,3 +367,8 @@ DECLARE_SPELL_FUN(spell_momentum_drain);       /* slot 763 */
 DECLARE_SPELL_FUN(spell_entropic_shield);      /* slot 764 */
 DECLARE_SPELL_FUN(spell_cognitive_disruption); /* slot 765 */
 DECLARE_SPELL_FUN(spell_predictive_collapse);  /* slot 766 */
+DECLARE_SPELL_FUN(spell_psishield);            /* slot 767 */
+DECLARE_SPELL_FUN(spell_arcaneshield);         /* slot 768 */
+DECLARE_SPELL_FUN(spell_cloak_precision);      /* slot 769 */
+DECLARE_SPELL_FUN(spell_holyshield);           /* slot 770 */
+DECLARE_SPELL_FUN(spell_cloak_valor);          /* slot 771 */

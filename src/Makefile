@@ -34,7 +34,7 @@ MAIN_OBJS = $(addprefix $(OBJDIR)/,$(O_FILES))
 
 SPELL_OBJS = \
 	spells/spell_acid_blast.o spells/spell_acid_breath.o spells/spell_animate.o \
-	spells/spell_arcane_lock.o spells/spell_arc_lightning.o spells/spell_armor.o \
+	spells/spell_arcane_lock.o spells/spell_arcaneshield.o spells/spell_arc_lightning.o spells/spell_armor.o \
 	spells/spell_astral_projection.o spells/spell_badbreath.o \
 	spells/spell_bark_skin.o spells/spell_barrier.o spells/spell_beacon.o \
 	spells/spell_black_curse.o spells/spell_black_hand.o spells/spell_bless.o \
@@ -45,8 +45,8 @@ SPELL_OBJS = \
 	spells/spell_chill_touch.o spells/spell_cloak_absorb.o spells/spell_cloak_adept.o \
 	spells/spell_cloak_drain.o spells/spell_cloak_elements.o spells/spell_cloak_flaming.o \
 	spells/spell_cloak_iron.o spells/spell_cloak_mental.o spells/spell_cloak_misery.o \
-	spells/spell_cloak_oathbreaker.o spells/spell_cloak_reflect.o \
-	spells/spell_cloak_transcendence.o spells/spell_color_spray.o \
+	spells/spell_cloak_oathbreaker.o spells/spell_cloak_precision.o spells/spell_cloak_reflect.o \
+	spells/spell_cloak_transcendence.o spells/spell_cloak_valor.o spells/spell_color_spray.o \
 	spells/spell_condense_soul.o spells/spell_cone_cold.o spells/spell_consecrate.o \
 	spells/spell_continual_light.o spells/spell_control_weather.o \
 	spells/spell_corrupt_bond.o spells/spell_creature_bond.o \
@@ -73,7 +73,7 @@ SPELL_OBJS = \
 	spells/spell_haste.o spells/spell_heal.o spells/spell_healing_light.o \
 	spells/spell_heat_armor.o spells/spell_hellspawn.o spells/spell_high_explosive.o \
 	spells/spell_holy_armor.o spells/spell_holy_avenger.o spells/spell_holy_light.o \
-	spells/spell_holy_word.o spells/spell_holy_wrath.o spells/spell_hypnosis.o spells/spell_ice_bolt.o \
+	spells/spell_holy_word.o spells/spell_holy_wrath.o spells/spell_holyshield.o spells/spell_hypnosis.o spells/spell_ice_bolt.o \
 	spells/spell_iceshield.o spells/spell_identify.o spells/spell_influx.o \
 	spells/spell_infravision.o spells/spell_infuse.o spells/spell_invis.o \
 	spells/spell_iron_golem.o spells/spell_kinetic_reversion.o \
@@ -91,7 +91,7 @@ SPELL_OBJS = \
 	spells/spell_phobia.o spells/spell_phoenix_flare.o spells/spell_physic_crush.o \
 	spells/spell_physic_thrust.o spells/spell_planergy.o spells/spell_poison.o \
 	spells/spell_poison_arsenic.o spells/spell_poison_quinine.o \
-	spells/spell_poison_weapon.o spells/spell_portal.o \
+	spells/spell_poison_weapon.o spells/spell_portal.o spells/spell_psishield.o \
 	spells/spell_prayer.o spells/spell_precognition.o \
 	spells/spell_protection.o spells/spell_psionic_recovery.o spells/spell_purify.o \
 	spells/spell_refresh.o spells/spell_refresh_mana.o spells/spell_refuge.o \

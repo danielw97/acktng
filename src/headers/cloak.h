@@ -22,4 +22,11 @@ bool cloak_oathbreaker_avoids_spell_damage(int dam, int element, bool has_cloak,
 bool cloak_transcendence_avoids_physical_hit(int dam, int element, int dt, bool has_cloak,
                                              int pseudo_level, int roll_percent);
 
+int cloak_precision_reduce_crit_chance(CHAR_DATA *victim, int crit_chance);
+int cloak_precision_reduce_crit_damage(CHAR_DATA *victim, int dam);
+int cloak_precision_crit_chance_reduction(int pseudo_level);
+int cloak_precision_crit_damage_reduction(int dam, int pseudo_level);
+bool cloak_valor_consume_guaranteed_crit(CHAR_DATA *ch);
+int cloak_valor_proc_chance(int pseudo_level);
+
 #endif
