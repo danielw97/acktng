@@ -94,7 +94,47 @@ Rakuen itself, chronically resource-constrained and operating under chronic emer
 
 ---
 
-## VII. The Assassination Boundary
+## VII. The Skills and the Stance
+
+The cipher tradition's characteristic skills each trace to specific aspects of the three-lineage inheritance:
+
+**Enhanced critical** is the tradition's formalized expression of its foundational insight: every control system creates its own perimeter, and every perimeter has a fault. A cipher who has internalized the system-modeling methodology identifies fault lines in opponents' defenses the way route guides identified fault lines in terrain — not through exceptional strength but through accumulated understanding of where structures are weakest. Strikes delivered to identified fault lines produce disproportionate effect.
+
+**Backstab** and **circle** are the positional applications of the route guide lineage's fundamental skill: the identification and traversal of gaps in coverage. A backstab is not simply an attack from behind — it is the exploitation of a specific positional gap that the practitioner has created through patient observation and deliberate approach. Circle extends this to sequential gap exploitation: finding the next gap before the first has been noticed.
+
+**Shadow step** — the practitioners' term for it is **gap transit** — is the capacity to move through the gap between two systems of control rather than around either. The metaphor derives from the early route guides' specific skill of navigating the space between rival authority systems in the post-collapse eastern desert: neither inside either system nor outside both, but in the seam that neither system's patrol patterns covered. Applied in combat, gap transit means moving through the defensive gap created by an opponent's attention commitment to another threat vector.
+
+**Garrote** carries the tradition name **Reach Silence**, after the specific operational context in which the technique was systematized — the Saltglass Reach corridor, where any noise during transit through the glass-terrain could alert route predators to a guide's position. The technique that produces silent, rapid incapacitation of a single target while the practitioner remains undetected was developed from the specific demands of that environment. In combat application, Reach Silence is the terminal expression of the cipher tradition's preference for closing engagements without increasing operational visibility.
+
+**Sneak** and **hide** are the foundational positional skills of all three lineages — route guides, fence operators, and intelligence dealers all required the capacity to be present in environments without being noticed. The cipher tradition's approach to concealment is methodological rather than technical: a practitioner who understands how an observation system works can position themselves in the system's unobserved zones through understanding rather than through any specific technique.
+
+**Dodge** and **parry** are the cipher tradition's defensive posture — the practitioner who has correctly modeled the engagement has already positioned themselves to be where attacks aren't. When modeling fails or conditions change faster than the model can update, dodge and parry are the gap-transit principles applied defensively: moving through the gap the attack has created by committing to a specific vector.
+
+**The Seam Strike**: The cipher tradition's most striking specific capability — the rare exploit that practitioners call the **Seam Strike** — represents the deepest expression of the fault-identification methodology. The Saltglass Reach provided the tradition's foundational metaphor: the Ninth Meridian Catastrophe's thermal pulse fused the desert sand into glass, but the glass is not uniform. It contains hairline fractures — seams — that run through it at specific angles determined by how the thermal pulse propagated. A practitioner who has learned to read those seams can traverse the Reach, or shatter sections of it, with precise targeted pressure rather than with the overwhelming force that would be required to break the glass without identifying the fault lines.
+
+In combat application, the Seam Strike occurs when a cipher has fully identified the specific structural fault in an opponent's defense — not a general weakness but the precise point where force delivered at the precise angle produces doubled effect. The encounter rate is genuinely low (approximately one in a hundred engagements where backstab or circle is delivered). Senior practitioners report that the Seam Strike is not executed consciously but recognized retrospectively: the full internalization of the Gap Intuition stance produces moments when the fault line is simply apparent, and the delivery follows without deliberate decision.
+
+**The Stance: Gap Intuition**
+
+When a cipher practitioner has fully internalized the system-modeling methodology — when the identification of gaps in control systems has moved from deliberate calculation to direct perception — the tradition formally recognizes this as the **Cipher stance**, which practitioners call **Gap Intuition**.
+
+The stance's combined effect (improved AC and hit rate) reflects the comprehensive situational awareness of a practitioner who perceives gaps rather than calculating them. The AC improvement represents the practitioner's capacity to be where attacks aren't before they arrive — not faster reflexes but better positioning. The hit rate improvement represents the practitioner's capacity to find the gap in the opponent's defense at the moment the strike is delivered, rather than striking at defended positions and hoping.
+
+---
+
+## VIII. The Serathi Thread
+
+The route guide lineage's knowledge of secondary paths and bypass routes — the earliest documented form of what became the cipher tradition's information-as-currency orientation — owes significant unacknowledged debt to **Serathi sky-road mapping**.
+
+The Serathi peoples mapped aerial observation routes through the desert civilization's geographic terrain across generations — a systematic documentation of the landscape from altitude that captured features invisible to ground-level observation. The charter road system's route network was partly designed using Serathi geographic knowledge that the Keepers of Measure incorporated into their planning without formal acknowledgment. The shadow economy that the charter road system created — the gaps in its coverage that cipher tradition practitioners navigated — was therefore partly a function of what the Serathi mapping had not documented, or had documented and the Keepers had not incorporated.
+
+Route guides who survived the Ninth Meridian Catastrophe and began selling their knowledge of secondary paths were often selling knowledge derived from this mixed Keeper-and-Serathi geographic inheritance. The Serathi themselves maintained their own documentation of routes and terrain features that the Keeper system had incorporated without crediting; practitioners who access the Kiess archives (which preserved some Serathi records under the city's anti-sealed-warrant charter framework) find that certain cipher tradition route guides' techniques have specific resonances with Serathi observational methodology.
+
+The cipher tradition has no formal position on this debt because the tradition has no formal positions on anything. Pragmatist practitioners note that the route guide lineage worked with the knowledge it had available, derived from whatever sources were accessible. The Reform faction, which holds that the cipher tradition's value lies in revealing where institutional models of reality diverge from actual reality, occasionally notes that the institutional model of the charter road network's origin omits the Serathi contribution — an omission with implications for who the charter system credited and what it claimed to have created.
+
+---
+
+## IX. The Assassination Boundary
 
 The cipher tradition's relationship with the **Assassin** tradition is institutionally complex. Both descend from the post-Ninth Meridian breakdown environment. Both emphasize positioning, information advantage, and the exploitation of institutional gaps. Both maintain low official profiles.
 
@@ -104,10 +144,10 @@ The moral distinction practitioners draw is less clear and more contested. Assas
 
 ---
 
-## VIII. Cross-References
+## X. Cross-References
 
 - **Timeline**: Era VII (Ninth Meridian Catastrophe; post-collapse operators; cipher tradition crystallization), Era IX (Kel'Shadra Night of Unsounded Bells), Era XII (Violet Compact; Sealed Names apparatus)
-- **Saltglass Reach**: Primary operating corridor; three-route system; fence operator market structure
+- **Saltglass Reach**: Primary operating corridor; three-route system; fence operator market structure; Seam Strike metaphor origin
 - **Mafdet**: Swift-court jurisdiction mapping; Strandline Compact authority boundaries
 - **Kel'Shadra / Gloamvault**: Chamber of Redactions; document control systems as both employer and target
 - **Eccentric Woodland**: Route predation corridor; Rakuen route
@@ -116,5 +156,6 @@ The moral distinction practitioners draw is less clear and more contested. Assas
 - **Assassin**: Parallel successor remort path; post-empire intelligence agent lineage
 - **Warlock**: Alternative successor remort path; shadow-compact resonance tradition
 - **Nightblade**: Adept synthesis of Assassin and Warlock traditions
+- **Serathi**: Sky-road mapping tradition; unacknowledged source of route guide geographic knowledge
 
 See also: `saltglass_reach_lore.md`, `mafdet_lore.md`, `kelshadra_lore.md`, `midgaard_lore.md`, `timeline.md`

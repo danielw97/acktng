@@ -20,13 +20,15 @@ The mainstream's response — that developing imposition technique requires trea
 
 ## II. The Expulsion and Independent Schools
 
-The expulsion of several Assertion Wing teachers from affiliated academies was not a single event but a **series of individual decisions** made by different academy administrations at different times, for different immediate reasons, that accumulated into the effective institutional separation of the Wing from the academic mainstream.
+The expulsion of several Assertion Wing teachers from affiliated academies was not a single event but a series of individual decisions that accumulated into formal institutional separation. What converted ongoing tension into permanent break was the demonstration of the **Long Hold**.
 
-The sequence was consistent: an Assertion Wing teacher would develop techniques that crossed the mainstream's ethical threshold; they would be warned; they would continue; they would be expelled; they would establish an independent school rather than seek reinstatement. The independence was never framed as rebellion — it was framed as **continuation of research the academies had declined to support**, which is technically accurate and also strategically useful framing: it positioned the expelled faculty as scholars pursuing legitimate inquiry rather than as expelled practitioners seeking revenge on institutions that had wronged them.
+**Vel Ashe**, an Assertion Wing teacher with a documented history of escalating technique development, had developed a method for maintaining continuous low-intensity cognitive pressure on a specific target across weeks rather than moments. The Long Hold operated below the threshold of obvious behavioral disruption — it redirected the target's assessments and preferences gradually, in ways indistinguishable from authentic reconsideration. The technique's critical property was not its effectiveness but its target: a practitioner using the Long Hold could redirect the evaluations of whoever was evaluating them.
 
-The independent schools maintained informal relationships with each other and with the academic mainstream through individual practitioner contacts — the psionicist community was never large enough that institutional separation created complete personal separation. Practitioners from mainstream institutions and independent schools occasionally collaborated on research, though the collaboration was usually not acknowledged in formal documentation from either side.
+When Vel Ashe demonstrated this on a member of the academic monitoring committee — three weeks of shifted assessment before comparative behavioral analysis detected the technique — the institutional response was complete and immediate. The expulsion documents, preserved in Kiess's archives, are notable for not disputing the technique's theoretical coherence or its effectiveness. The grounds were purely institutional: the Long Hold made academic oversight of its own practice impossible. Vel Ashe and four colleagues who had co-developed the technique were expelled within the week.
 
-The independent school structure produced Egomancer training environments that were substantially different from mainstream psionicist training. Without the academic framework's credential requirements and peer-review culture, independent school instruction was more directly practitioner-to-practitioner: transmission of what worked, tested against the specific students' capabilities, without the requirement to justify each technique against theoretical standards the mainstream had established.
+Vel Ashe's response to expulsion was characteristic of the Assertion Wing's methodology: she treated the mainstream's rejection as data rather than as a verdict. If the academies were unable to accommodate a technique because the technique could be applied to the people doing the accommodating, that was information about the technique's operational scope rather than about its legitimacy. The independent school she founded in the years following expulsion was deliberately not framed as a rival academy — it was a practitioner community without the institutional constraints that made the Long Hold untenable in academic contexts.
+
+The independent schools founded by expelled Assertion Wing teachers maintained informal relationships with each other and, more cautiously, with the academic mainstream through individual practitioner contacts. Practitioners from both institutional contexts occasionally collaborated on research that neither side acknowledged formally. The independent school structure produced Egomancer training environments substantively different from mainstream psionicist training: practitioner-to-practitioner transmission of what worked, tested against specific students' capabilities, without the requirement to justify technique against theoretical standards that the mainstream's institutional interests had shaped.
 
 ---
 
@@ -60,7 +62,7 @@ The Egomancer independent schools have developed various responses to this chall
 
 ## VI. Cross-References
 
-- **Timeline**: Era XII (Assertion Wing development; expulsion events; independent school founding), Era XIII (Kinetic Formulists' manuscripts; Kinetimancer synthesis identified theoretically)
+- **Timeline**: Era XII (Assertion Wing development; Long Hold demonstration; Vel Ashe expulsion; independent school founding), Era XIII (Kinetic Formulists' manuscripts; Kinetimancer synthesis identified theoretically)
 - **Psionicist**: Parent tradition; Assertion Wing origin; theoretical dispute about directionality
 - **Necromancer**: Parallel remort path from Psionicist; Kinetimancer synthesis prerequisite
 - **Kinetimancer**: Adept synthesis; momentum analogue in entropy and will-redirection
