@@ -162,7 +162,7 @@ Overgrowth: [||||||||||||--------] 60/100
 A prompt token `%o` displays current Overgrowth. At 0, it displays nothing
 (clean prompt for non-Druids and out-of-combat Druids).
 
-### Passive Keystone: Substrate Attunement
+### Passive Keystone: Substrate Piercing
 
 Each mortal class has a passive keystone unlocked through reincarnation:
 
@@ -174,43 +174,45 @@ Each mortal class has a passive keystone unlocked through reincarnation:
 | Magi | Potency | +INT*2% spell damage |
 | Psionicist | Spell Critical | Spell crit chance |
 | Cleric | Spell Critical Damage | Spell crit multiplier |
-| **Druid** | **Substrate Attunement** | **Overgrowth cost multiplier reduced from 2% to 1.5% per point** |
+| **Druid** | **Substrate Piercing** | **Flat % reduction to target's spell resistance/saves** |
 
-Substrate Attunement reduces the Overgrowth cost curve without changing the
-power curve. The Druid still gains +3% spell power per Overgrowth point, but
-pays only +1.5% HP cost per point instead of +2%. This widens the efficiency
-window — an attuned Druid can push deeper into Overgrowth before the cost
-becomes lethal.
+Substrate Piercing reduces the target's effective spell resistance against the
+caster's spells. This is universally valuable — every class that casts benefits
+from targets resisting less. A Grand Magi with Substrate Piercing lands more
+damage through saves. A Priest with Substrate Piercing lands debuffs more
+reliably. A Nightblade with Substrate Piercing gets hexes through resistance
+that would otherwise block them.
 
-**Effect at key Overgrowth levels:**
+**Thematic basis:** The Druid's magic doesn't travel through formal arcane
+channels or divine invocation — it comes through the substrate itself. The
+ground beneath the target's feet, the air in their lungs, the water in their
+body. You can ward against a fireball. You can't ward against the earth
+deciding you don't belong. A character who has trained as a Druid carries this
+understanding into every subsequent class: their spells find paths through
+resistance that purely institutional casters miss.
 
-| Overgrowth | Power | Cost (normal) | Cost (attuned) | Efficiency gap |
-|------------|-------|---------------|----------------|----------------|
-| 0 | 1.00x | 1.00x | 1.00x | — |
-| 20 | 1.60x | 1.40x | 1.30x | 7% cheaper |
-| 40 | 2.20x | 1.80x | 1.60x | 11% cheaper |
-| 60 | 2.80x | 2.20x | 1.90x | 14% cheaper |
-| 80 | 3.40x | 2.60x | 2.20x | 15% cheaper |
-| 100 | 4.00x | 3.00x | 2.50x | 17% cheaper |
+**Mechanical effect:** -10% to target's effective spell saves/resistance when
+the caster has Substrate Piercing. Applied before the save roll, multiplicative
+with existing resistance. Does not stack with itself.
 
-At Overgrowth 100, an attuned Druid pays 2.5x base cost instead of 3.0x —
-the difference between surviving another cast or dying. The keystone rewards
-the same aggressive Overgrowth management that defines the class, making
-experienced (reincarnated) Druids noticeably more resilient at high Overgrowth.
-
-**Implementation:** `gsn_substrate_attunement` is added to the `reinc_rules`
+**Implementation:** `gsn_substrate_piercing` is added to the `reinc_rules`
 table in `skills.c`:
 
 ```c
-{&gsn_substrate_attunement, CLASS_DRU, -1, 1},
+{&gsn_substrate_piercing, CLASS_DRU, -1, 1},
 ```
 
-The HP-cost calculation in `do_cast()` checks for the keystone:
+Applied in `spell_save()` or equivalent resistance check:
 
 ```c
-int cost_per_point = can_use_skill(ch, gsn_substrate_attunement) ? 15 : 20;
-int cost = base_cost * (1000 + ch->overgrowth * cost_per_point) / 1000;
+if (can_use_skill(ch, gsn_substrate_piercing))
+    save_chance = save_chance * 90 / 100;  /* 10% reduction */
 ```
+
+**Note:** The Overgrowth cost reduction (originally proposed as the keystone)
+is moved to a Thornwarden passive skill (Deep Roots) and a Hierophant passive
+(Hierophant's Wisdom), keeping the mechanic within the Druid lineage where it
+is relevant rather than as a universal unlock.
 
 ---
 
@@ -1039,7 +1041,8 @@ communion in ways that neither tradition fully acknowledges.
 - [ ] Add Druid to character creation class list in `comm.c`
 - [ ] Handle 28-entry class arrays in `save.c` (backward-compatible load)
 - [ ] Reset `overgrowth` to 0 in `raw_kill()` / death path
-- [ ] Add `gsn_substrate_attunement` global and reinc_rules entry in `skills.c`
+- [ ] Add `gsn_substrate_piercing` global and reinc_rules entry in `skills.c`
+- [ ] Apply Substrate Piercing in spell save/resistance checks
 - [ ] Expand `gclass_table` stubs in all unit test files to 28 entries
 - [ ] Update integration test for 7th class option
 - [ ] Run `make unit-tests` to verify no regressions
