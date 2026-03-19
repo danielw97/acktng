@@ -1,5 +1,9 @@
 # CLAUDE.md — ACK!MUD TNG 4.3.1
 
+## Design Document Requirement
+
+For any implementation task, you MUST first deliver a design document describing the proposed changes — including the problem, approach, affected files, and any trade-offs — and discuss it with the user. Do NOT begin implementation until the user has explicitly signed off on the design document. No code changes, no file creation, no prototyping until approval is given.
+
 ## Project Overview
 
 ACK!TNG is a MUD (Multi-User Dungeon) game server written in C, descended from Diku → Merc → ACK! lineage. The server binary is called `ack` and runs from the `area/` directory, accepting telnet connections on a configurable port.
