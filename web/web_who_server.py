@@ -74,6 +74,10 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
             self._send_html(_build_world_map_page(), title="World Map")
             return
 
+        if route in ("/stories", "/stories/"):
+            self._send_html(_build_stories_page(), title="Tales from the Age of Monuments")
+            return
+
         if route in ("/help", "/help/"):
             self._send_html(_build_topic_index_page("Help Topics", "helps", HELP_DIR, help_query), title="Help Topics")
             return
@@ -273,6 +277,10 @@ def _build_home_page() -> str:
 
 def _build_world_map_page() -> str:
     return _load_template("world_map.html")
+
+
+def _build_stories_page() -> str:
+    return _load_template("stories.html")
 
 
 def _build_mud_client_page() -> str:

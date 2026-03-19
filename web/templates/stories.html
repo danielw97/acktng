@@ -1,0 +1,239 @@
+<h1>Tales from the Age of Monuments</h1>
+<p class='muted'>Four stories from the pivotal events that shaped the world — drawn from the historical record.</p>
+
+<style>
+.story-card{
+  background:var(--bg-card);
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  margin:1.25rem 0;
+  overflow:hidden;
+  transition:border-color .2s,box-shadow .2s;
+}
+.story-card:hover{
+  border-color:var(--line-bright);
+  box-shadow:0 0 24px rgba(91,156,246,.08);
+}
+.story-header{
+  padding:1.25rem 1.4rem 1rem;
+  cursor:pointer;
+  user-select:none;
+  display:flex;
+  align-items:flex-start;
+  gap:1rem;
+}
+.story-header:hover .story-toggle{color:var(--accent-bright);}
+.story-era{
+  font-size:.75rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:.3rem;
+}
+.story-title{
+  font-size:1.15rem;
+  font-weight:700;
+  color:#eef2ff;
+  margin-bottom:.45rem;
+  line-height:1.25;
+}
+.story-teaser{
+  color:var(--muted);
+  font-size:.91rem;
+  font-style:italic;
+  line-height:1.5;
+}
+.story-toggle{
+  margin-left:auto;
+  font-size:1.3rem;
+  color:var(--muted-dim);
+  flex-shrink:0;
+  transition:transform .25s,color .18s;
+  padding-top:.1rem;
+}
+.story-body{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s ease,padding .3s ease;
+}
+.story-body.open{
+  max-height:9999px;
+}
+.story-text{
+  padding:.25rem 1.4rem 1.5rem;
+  border-top:1px solid var(--line);
+}
+.story-text p{
+  margin:.8rem 0;
+  font-size:.96rem;
+  line-height:1.75;
+  color:var(--text);
+}
+.story-text p:first-child{margin-top:.85rem;}
+.story-text .drop-cap::first-letter{
+  float:left;
+  font-size:3.4rem;
+  font-weight:700;
+  line-height:.85;
+  margin:.06em .1em -.06em 0;
+  color:var(--accent-bright);
+}
+.read-btn{
+  display:inline-block;
+  margin-top:.55rem;
+  padding:.3rem .75rem;
+  background:var(--accent-dim);
+  border:1px solid var(--line);
+  border-radius:999px;
+  font-size:.8rem;
+  font-weight:600;
+  color:var(--accent-bright);
+  letter-spacing:.03em;
+  cursor:pointer;
+  transition:background .18s,border-color .18s;
+}
+.story-header:hover .read-btn{
+  background:rgba(91,156,246,.18);
+  border-color:var(--line-bright);
+}
+.story-card.expanded .story-toggle{transform:rotate(180deg);}
+</style>
+
+<script>
+function toggleStory(id) {
+  var card = document.getElementById(id);
+  var body = card.querySelector('.story-body');
+  var btn  = card.querySelector('.read-btn');
+  var open = body.classList.toggle('open');
+  card.classList.toggle('expanded', open);
+  btn.textContent = open ? 'Close story' : 'Read story';
+}
+</script>
+
+<!-- ── Story 1 ── -->
+<div class='story-card' id='s1'>
+  <div class='story-header' onclick='toggleStory("s1")'>
+    <div style='flex:1'>
+      <div class='story-era'>Era I &mdash; The Primordial Age</div>
+      <div class='story-title'>The Name-Eater</div>
+      <div class='story-teaser'>
+        Something fell from the sky, and it was not fire. It consumed names, certainties, and the
+        knowledge of one's own blood&nbsp;&mdash; and from the survivors, a new kind of power was born.
+      </div>
+      <span class='read-btn'>Read story</span>
+    </div>
+    <span class='story-toggle'>&#8964;</span>
+  </div>
+  <div class='story-body'>
+    <div class='story-text'>
+      <p class='drop-cap'>Before the dynasty. Before the courts. Before the first obelisk was raised to cast a legal shadow across the sand.</p>
+      <p>There was a night when the sky cracked open and something fell through.</p>
+      <p>Not fire. Fire burns and is done. What fell from that wound in heaven had no name, because it consumed names &mdash; drew them inward like water into dry stone. By morning, the village elder who had governed the river basin for forty years could not remember the word for <em>water</em>. By the third day, children forgot their mothers' faces. By the seventh, the dead began to rise &mdash; not as monsters, but confused, wandering, asking for people who had never existed.</p>
+      <p>Shaper Anhet-Mersu was one of the first to understand what was happening, because she was one of the few who had written things down. While her neighbours' memories collapsed like rain-softened walls, her clay tablets held. Each morning she read them back to herself to remember who she was.</p>
+      <p>She carried that lesson to the survivors who gathered on the high ground. <em>We must write everything. Carve it in stone, not press it in clay. Build institutions that remember even when we cannot.</em></p>
+      <p>It was not comfort. It was a sentence.</p>
+      <p>The kings who emerged from those survivors did not rule by tradition or bloodline. Tradition had dissolved. Bloodline meant nothing when no one could remember who had begotten whom. They ruled because they controlled what could be remembered &mdash; who could be judged &mdash; which truths were fit to survive.</p>
+      <p>This was called governance. Later it would be called law. Later still, religion.</p>
+      <p>The Black Sun Shard settled into the desert bedrock and waited. The survivors built over it, around it, above it. They built the world's first archive, then the world's first prison, then the world's first god.</p>
+      <p>All three were the same structure.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── Story 2 ── -->
+<div class='story-card' id='s2'>
+  <div class='story-header' onclick='toggleStory("s2")'>
+    <div style='flex:1'>
+      <div class='story-era'>Era VII &mdash; The Ninth Meridian Catastrophe</div>
+      <div class='story-title'>The Dry Meridian</div>
+      <div class='story-teaser'>
+        Court astrologer Veth Aldar-Senne spent thirty years calculating the position of the ninth sun.
+        He was not wrong. That was almost the worst part.
+      </div>
+      <span class='read-btn'>Read story</span>
+    </div>
+    <span class='story-toggle'>&#8964;</span>
+  </div>
+  <div class='story-body'>
+    <div class='story-text'>
+      <p class='drop-cap'>Court astrologer Veth Aldar-Senne had spent thirty years calculating the position of the ninth sun. That was what they called it &mdash; the ninth sun &mdash; though it was not a sun at all but a convergence: eight eclipses aligning in a single year, occurring every eight hundred and forty-seven years, which meant no living person had witnessed one before and no living person would verify his mathematics.</p>
+      <p>He presented his findings to the Water Court on the last day of the wet season.</p>
+      <p><em>If we anchor the conjunction with sufficient rite,</em> he said, <em>the drought cycle breaks. The Iseth Reach fills again. The road network survives.</em></p>
+      <p>The Court voted in favour. The alternative was collapse.</p>
+      <p>Observatory-cisterns were retrofitted across the entire road network. Caravan chiefs who had survived the Charter Wars on sheer stubbornness stood at their loaded waystones and watched priest-engineers install eclipse-sighting tubes in the water allocation towers. Some of them left. Those who stayed were present when the conjunction arrived.</p>
+      <p>Veth Aldar-Senne performed the rite correctly. He is certain of this even now &mdash; even as a fragment of archived testimony sealed in a flooded vault beneath the cracked basin of the Great Oasis. He performed the rite exactly as calculated.</p>
+      <p>The sky listened. And then the sky answered.</p>
+      <p>The thermal pulse moved east through the dry Iseth channel faster than a horse could run. The river had been dying for a decade; now it did not merely die but crystallised &mdash; the pulse fused the Saltglass Reach's loose sands into great belts of greenish glass that still stand today, a monument to the precision of the calculations and the totality of their failure.</p>
+      <p>At the oasis, the Toll Pavilion fell. The last High Water Judge died in the rubble, one hand still gripping the arbitration scales. The cistern chambers collapsed. The water was gone.</p>
+      <p>The Charter Wars had been bad. What followed was worse: the silence of roads with no one left to fight over them, and a thousand years of accumulated administration dissolving in a single afternoon because the sky had been asked a question it chose to answer honestly.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── Story 3 ── -->
+<div class='story-card' id='s3'>
+  <div class='story-header' onclick='toggleStory("s3")'>
+    <div style='flex:1'>
+      <div class='story-era'>Era VIII &mdash; The Week of Impossible Dawns</div>
+      <div class='story-title'>The Wrong Shadows</div>
+      <div class='story-teaser'>
+        She noticed it because she was feeding her animals. The lamp was to the west, and the shadows
+        pointed east. She moved the lamp. The shadows stayed.
+      </div>
+      <span class='read-btn'>Read story</span>
+    </div>
+    <span class='story-toggle'>&#8964;</span>
+  </div>
+  <div class='story-body'>
+    <div class='story-text'>
+      <p class='drop-cap'>She remembered it because she was feeding her animals.</p>
+      <p>She had gone to the stable before dawn, as she did every morning, and she noticed the lamp was casting the wrong shadows. The shadows pointed east. The lamp was to the west. She moved the lamp. The shadows stayed.</p>
+      <p>She went outside.</p>
+      <p>The stars were still visible, though the sky had lightened &mdash; not the pale grey of pre-dawn but the full blue of late morning, with the sun beginning its arc. And the stars still there, bright as winter, crowded against the light.</p>
+      <p>She had no theological vocabulary for this. She was not a priest. She sold dried date cakes to caravan crews and mended harness leather. What she had was the evidence of her own eyes, and her eyes said something was wrong with the sky.</p>
+      <p>By midday, the funerary wards on the old Jackal Tribunal outpost a mile up the road had begun to burn, though no one had lit them and the building had been abandoned for forty years. She could hear the bells going &mdash; all of them at once, which never happened, because each bell corresponded to a specific death-rite and they rang in sequence, not chorus.</p>
+      <p>By the second evening, her neighbour across the lane had packed everything he could carry and left heading north. He did not say where. He did not say goodbye.</p>
+      <p>On the fifth night the guardian spirits of the Northern Pyramid went to war with each other &mdash; she saw the light of it from the dunes, flashes in the upper windows, colours that had no names. In the Southern Pyramid, they said later, the tier wardens wept obsidian tears. Liquid volcanic glass ran down stone faces and pooled on threshold floors that no living person had crossed in a generation.</p>
+      <p>By the end of the week, the Great Pyramid was sealed. She could see it from her rooftop &mdash; two hours east by foot &mdash; the massive face of it, the processional courts below. Every entrance closed. The bloodline locks shutting themselves with sounds that carried across the dunes like distant thunder, like an old machine completing the last task it had been given, by people who were now dead, in a language no one alive could read.</p>
+      <p>No custodians remained. The last of them had died in the Charter Wars.</p>
+      <p>Whatever was sleeping in the heart of that pyramid was sleeping without a keeper now.</p>
+      <p>She left on the ninth morning. She did not look back. It would not have helped to look back, because the shadows behind her were still pointing in the wrong direction.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── Story 4 ── -->
+<div class='story-card' id='s4'>
+  <div class='story-header' onclick='toggleStory("s4")'>
+    <div style='flex:1'>
+      <div class='story-era'>Era X &mdash; The Spirebound Conclave</div>
+      <div class='story-title'>The Continuance Doctrine</div>
+      <div class='story-teaser'>
+        The document that sent Maret down the mountain read: <em>Transfer under seal. Civic debt adjudicated.
+        Term: indeterminate.</em> She had borrowed grain during the flood year, when everyone had borrowed grain.
+      </div>
+      <span class='read-btn'>Read story</span>
+    </div>
+    <span class='story-toggle'>&#8964;</span>
+  </div>
+  <div class='story-body'>
+    <div class='story-text'>
+      <p class='drop-cap'>The document that sent Maret down the mountain read: <em>Transfer under seal. Civic debt adjudicated. Term: indeterminate.</em></p>
+      <p>She had borrowed grain during the flood year, when everyone had borrowed grain, when the alternative was watching her children calculate portions. The Jade Clerk's office had been sympathetic. The Jade Clerk's office had also, she later understood, been one of three institutions that countersigned her transfer.</p>
+      <p>The Conclave called it volunteerism. They believed &mdash; or claimed to believe &mdash; in something called Continuance: the doctrine that no discovery should die with its keeper, that knowledge was civilisation's truest inheritance, that the work justified whatever it required.</p>
+      <p>They were not entirely wrong about the doctrine.</p>
+      <p>They were entirely wrong about the requirement.</p>
+      <p>Maret spent fourteen months in the middle levels, carrying supplies between the Prism Thesis workshops and the Pale Ledger vaults. She learned more than she was meant to learn, because they had stopped being careful. The three factions &mdash; Ember Canon, Prism Thesis, Pale Ledger &mdash; were consuming each other, and the borrowed prisoners and condemned debtors they had assembled were barely supervised.</p>
+      <p>She was in the supply corridor between levels four and five when the seismic event struck. Later she would hear it described as catastrophe: the firestorm above, the crystal resonance break in the middle, the flood inversion below. In the moment it was simply the mountain deciding it had heard enough.</p>
+      <p>She survived because the supply corridor was built to collapse inward, not outward. A design feature. The Conclave believed in structural redundancy, even when it no longer believed in much else.</p>
+      <p>She walked out through the rubble over two days, in darkness, following a draft of cold air.</p>
+      <p>The regional authorities declared the site cursed and collapsed the upper approaches. This was not difficult to believe. What she found harder to understand &mdash; what she would spend the rest of her life failing to understand &mdash; was the sealed warrant in her own file, which she had found in an unlocked archive room during her second day of escaping.</p>
+      <p><em>Civic debt adjudicated. Transferred for purposes of research continuance.</em> Six iron bars and a condemned debtor, the ledger line read. Signed by a name she recognised: a guild master in the city she had left, whose grain she had borrowed in the flood year, whose account was therefore paid and closed.</p>
+      <p>The Continuance Doctrine. Knowledge should not die with its keeper.</p>
+      <p>Maret walked north. The documents she carried did not die with her &mdash; which was not what the Conclave had intended, but served the same purpose. Years later, when she handed them to an archivist in a city that had not yet built its own walls, the truth of the Conclave's administration was entered into a record.</p>
+      <p>The record was sealed immediately.</p>
+      <p>The record still exists.</p>
+    </div>
+  </div>
+</div>
