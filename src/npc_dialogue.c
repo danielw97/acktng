@@ -18,7 +18,10 @@
 #include <string.h>
 #include <time.h>
 #include <pthread.h>
-#include <curl/curl.h>
+#include <sys/socket.h>
+#include <netdb.h>
+#include <unistd.h>
+#include <errno.h>
 
 #include "globals.h"
 #include "npc_dialogue.h"
@@ -501,88 +504,211 @@ static bool parse_json_response(const char *json, char *out, size_t cap)
 }
 
 /* =========================================================================
- * Curl write callback.
+ * URL components — parsed once from TNGAI_URL at init time.
  * ========================================================================= */
 
-typedef struct
-{
-   char *buf;
-   size_t len;
-   size_t cap;
-} CURL_BUF;
+static char tngai_host[256];
+static char tngai_port[8];
+static char tngai_path[256];
 
-static size_t curl_write_cb(void *ptr, size_t size, size_t nmemb, void *userdata)
+/*
+ * Parse "http://host:port/path" into the static buffers above.
+ * Returns TRUE on success.
+ */
+static bool parse_tngai_url(void)
 {
-   CURL_BUF *cb = (CURL_BUF *)userdata;
-   size_t got = size * nmemb;
+   const char *url = TNGAI_URL;
+   const char *p;
+   const char *host_start;
+   const char *host_end;
+   const char *port_start;
+   const char *path_start;
 
-   if (cb->len + got + 1 > cb->cap)
+   /* Skip "http://" */
+   if (strncmp(url, "http://", 7) != 0)
+      return FALSE;
+   p = url + 7;
+   host_start = p;
+
+   /* Find host:port boundary or path */
+   host_end = strpbrk(p, ":/");
+   if (host_end == NULL)
    {
-      size_t new_cap = cb->cap + got + 4096;
-      char *new_buf = realloc(cb->buf, new_cap);
-      if (new_buf == NULL)
-         return 0;
-      cb->buf = new_buf;
-      cb->cap = new_cap;
+      strncpy(tngai_host, host_start, sizeof(tngai_host) - 1);
+      strncpy(tngai_port, "80", sizeof(tngai_port) - 1);
+      strncpy(tngai_path, "/", sizeof(tngai_path) - 1);
+      return TRUE;
    }
 
-   memcpy(cb->buf + cb->len, ptr, got);
-   cb->len += got;
-   cb->buf[cb->len] = '\0';
-   return got;
+   /* Copy host */
+   {
+      size_t hlen = (size_t)(host_end - host_start);
+      if (hlen >= sizeof(tngai_host))
+         hlen = sizeof(tngai_host) - 1;
+      memcpy(tngai_host, host_start, hlen);
+      tngai_host[hlen] = '\0';
+   }
+
+   if (*host_end == ':')
+   {
+      port_start = host_end + 1;
+      path_start = strchr(port_start, '/');
+      if (path_start == NULL)
+      {
+         strncpy(tngai_port, port_start, sizeof(tngai_port) - 1);
+         strncpy(tngai_path, "/", sizeof(tngai_path) - 1);
+      }
+      else
+      {
+         size_t plen = (size_t)(path_start - port_start);
+         if (plen >= sizeof(tngai_port))
+            plen = sizeof(tngai_port) - 1;
+         memcpy(tngai_port, port_start, plen);
+         tngai_port[plen] = '\0';
+         strncpy(tngai_path, path_start, sizeof(tngai_path) - 1);
+      }
+   }
+   else
+   {
+      strncpy(tngai_port, "80", sizeof(tngai_port) - 1);
+      strncpy(tngai_path, host_end, sizeof(tngai_path) - 1);
+   }
+
+   return TRUE;
 }
 
 /* =========================================================================
- * HTTP call to tng-ai.
+ * HTTP call to tng-ai via POSIX sockets.
  * ========================================================================= */
 
 static void call_tngai(const NPC_DLG_REQ *req, char *response_text, size_t cap)
 {
-   CURL *curl;
-   CURLcode res;
-   CURL_BUF body;
+   struct addrinfo hints, *res, *rp;
+   int sockfd = -1;
    char request_json[1024 * 24];
+   char http_req[1024 * 26];
+   char *resp_buf = NULL;
+   size_t resp_len = 0;
+   size_t resp_cap = 0;
+   struct timeval tv;
+   int json_len;
+   int http_len;
 
    response_text[0] = '\0';
 
-   body.buf = malloc(4096);
-   if (body.buf == NULL)
-      return;
-   body.buf[0] = '\0';
-   body.len = 0;
-   body.cap = 4096;
-
    build_json_request(request_json, sizeof(request_json), req);
+   json_len = (int)strlen(request_json);
 
-   curl = curl_easy_init();
-   if (curl == NULL)
+   /* Build HTTP request */
+   http_len = snprintf(http_req, sizeof(http_req),
+                       "POST %s HTTP/1.1\r\n"
+                       "Host: %s:%s\r\n"
+                       "Content-Type: application/json\r\n"
+                       "Content-Length: %d\r\n"
+                       "Connection: close\r\n"
+                       "\r\n"
+                       "%s",
+                       tngai_path, tngai_host, tngai_port, json_len, request_json);
+
+   /* Resolve host */
+   memset(&hints, 0, sizeof(hints));
+   hints.ai_family = AF_UNSPEC;
+   hints.ai_socktype = SOCK_STREAM;
+
+   if (getaddrinfo(tngai_host, tngai_port, &hints, &res) != 0)
    {
-      free(body.buf);
+      log_f("call_tngai: getaddrinfo failed for %s:%s", tngai_host, tngai_port);
       return;
    }
 
-   struct curl_slist *headers = NULL;
-   headers = curl_slist_append(headers, "Content-Type: application/json");
+   /* Connect to first available address */
+   for (rp = res; rp != NULL; rp = rp->ai_next)
+   {
+      sockfd = socket(rp->ai_family, rp->ai_socktype, rp->ai_protocol);
+      if (sockfd < 0)
+         continue;
 
-   curl_easy_setopt(curl, CURLOPT_URL, TNGAI_URL);
-   curl_easy_setopt(curl, CURLOPT_POSTFIELDS, request_json);
-   curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
-   curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, curl_write_cb);
-   curl_easy_setopt(curl, CURLOPT_WRITEDATA, &body);
-   curl_easy_setopt(curl, CURLOPT_TIMEOUT, TNGAI_TIMEOUT);
-   curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, TNGAI_TIMEOUT);
+      /* Set timeouts */
+      tv.tv_sec = TNGAI_TIMEOUT;
+      tv.tv_usec = 0;
+      setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
+      setsockopt(sockfd, SOL_SOCKET, SO_SNDTIMEO, &tv, sizeof(tv));
 
-   res = curl_easy_perform(curl);
+      if (connect(sockfd, rp->ai_addr, rp->ai_addrlen) == 0)
+         break;
 
-   curl_slist_free_all(headers);
-   curl_easy_cleanup(curl);
+      close(sockfd);
+      sockfd = -1;
+   }
+   freeaddrinfo(res);
 
-   if (res == CURLE_OK)
-      parse_json_response(body.buf, response_text, cap);
-   else
-      log_f("call_tngai: curl error: %s", curl_easy_strerror(res));
+   if (sockfd < 0)
+   {
+      log_f("call_tngai: connect failed to %s:%s", tngai_host, tngai_port);
+      return;
+   }
 
-   free(body.buf);
+   /* Send request */
+   {
+      size_t sent = 0;
+      while (sent < (size_t)http_len)
+      {
+         ssize_t n = write(sockfd, http_req + sent, (size_t)http_len - sent);
+         if (n <= 0)
+         {
+            log_f("call_tngai: write failed: %s", strerror(errno));
+            close(sockfd);
+            return;
+         }
+         sent += (size_t)n;
+      }
+   }
+
+   /* Read response into a dynamically growing buffer */
+   resp_cap = 4096;
+   resp_buf = malloc(resp_cap);
+   if (resp_buf == NULL)
+   {
+      close(sockfd);
+      return;
+   }
+   resp_len = 0;
+
+   for (;;)
+   {
+      ssize_t n;
+      if (resp_len + 1024 > resp_cap)
+      {
+         size_t new_cap = resp_cap + 4096;
+         char *new_buf = realloc(resp_buf, new_cap);
+         if (new_buf == NULL)
+            break;
+         resp_buf = new_buf;
+         resp_cap = new_cap;
+      }
+      n = read(sockfd, resp_buf + resp_len, resp_cap - resp_len - 1);
+      if (n <= 0)
+         break;
+      resp_len += (size_t)n;
+   }
+   resp_buf[resp_len] = '\0';
+   close(sockfd);
+
+   /* Find body after \r\n\r\n header terminator */
+   {
+      const char *body = strstr(resp_buf, "\r\n\r\n");
+      if (body != NULL)
+      {
+         body += 4;
+         parse_json_response(body, response_text, cap);
+      }
+      else
+      {
+         log_f("call_tngai: malformed HTTP response (no header terminator)");
+      }
+   }
+
+   free(resp_buf);
 }
 
 /* =========================================================================
@@ -1234,7 +1360,11 @@ void npc_dialogue_init(void)
       for (j = 0; j < NUM_KNOW_FLAGS; j++)
          topic_blocks[i][j] = NULL;
 
-   curl_global_init(CURL_GLOBAL_DEFAULT);
+   if (!parse_tngai_url())
+   {
+      log_f("npc_dialogue_init: failed to parse TNGAI_URL");
+      return;
+   }
    load_knowledge_blocks();
 
    if (pthread_create(&worker, NULL, npc_dialogue_worker, NULL) != 0)
