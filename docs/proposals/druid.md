@@ -25,10 +25,10 @@ codependent pairing.
 
 | Tier | Class | Who | Prime | HP Gain | Mana Gain | Prerequisites |
 |------|-------|-----|-------|---------|-----------|---------------|
-| Mortal | Druid | Dru | WIS | 5 | 0 | — |
-| Remort | Thornwarden | Tho | WIS | 10 | 0 | Druid |
-| Remort | Wildspeaker | Wil | WIS | 8 | 0 | Druid |
-| Adept | Hierophant | Hie | WIS | 16 | 0 | Thornwarden + Wildspeaker |
+| Mortal | Druid | Dru | CON | 5 | 0 | — |
+| Remort | Thornwarden | Tho | CON | 10 | 0 | Druid |
+| Remort | Wildspeaker | Wil | CON | 8 | 0 | Druid |
+| Adept | Hierophant | Hie | CON | 16 | 0 | Thornwarden + Wildspeaker |
 
 All four classes have **zero mana gain**. They never use mana. Their HP gain is
 higher than standard casters to compensate for spending HP to cast — a Druid
@@ -161,6 +161,58 @@ Overgrowth: [||||||||||||--------] 60/100
 
 A prompt token `%o` displays current Overgrowth. At 0, it displays nothing
 (clean prompt for non-Druids and out-of-combat Druids).
+
+### Passive Keystone: Substrate Attunement
+
+Each mortal class has a passive keystone unlocked through reincarnation:
+
+| Mortal | Keystone | Effect |
+|--------|----------|--------|
+| Warden | Enhanced Damage | Flat melee damage bonus |
+| Cipher | Enhanced Critical | Better crit chance |
+| Pugilist | Counter | Counterattack on melee hit |
+| Magi | Potency | +INT*2% spell damage |
+| Psionicist | Spell Critical | Spell crit chance |
+| Cleric | Spell Critical Damage | Spell crit multiplier |
+| **Druid** | **Substrate Attunement** | **Overgrowth cost multiplier reduced from 2% to 1.5% per point** |
+
+Substrate Attunement reduces the Overgrowth cost curve without changing the
+power curve. The Druid still gains +3% spell power per Overgrowth point, but
+pays only +1.5% HP cost per point instead of +2%. This widens the efficiency
+window — an attuned Druid can push deeper into Overgrowth before the cost
+becomes lethal.
+
+**Effect at key Overgrowth levels:**
+
+| Overgrowth | Power | Cost (normal) | Cost (attuned) | Efficiency gap |
+|------------|-------|---------------|----------------|----------------|
+| 0 | 1.00x | 1.00x | 1.00x | — |
+| 20 | 1.60x | 1.40x | 1.30x | 7% cheaper |
+| 40 | 2.20x | 1.80x | 1.60x | 11% cheaper |
+| 60 | 2.80x | 2.20x | 1.90x | 14% cheaper |
+| 80 | 3.40x | 2.60x | 2.20x | 15% cheaper |
+| 100 | 4.00x | 3.00x | 2.50x | 17% cheaper |
+
+At Overgrowth 100, an attuned Druid pays 2.5x base cost instead of 3.0x —
+the difference between surviving another cast or dying. The keystone rewards
+the same aggressive Overgrowth management that defines the class, making
+experienced (reincarnated) Druids noticeably more resilient at high Overgrowth.
+
+**Implementation:** `gsn_substrate_attunement` is added to the `reinc_rules`
+table in `skills.c`:
+
+```c
+{&gsn_substrate_attunement, CLASS_DRU, -1, 1},
+```
+
+The HP-cost calculation in `do_cast()` checks for the keystone:
+
+```c
+int cost_per_point = can_use_skill(ch, gsn_substrate_attunement) ? 15 : 20;
+int cost = base_cost * (1000 + ch->overgrowth * cost_per_point) / 1000;
+```
+
+---
 
 ### Implementation: HP Cost in do_cast
 
@@ -785,10 +837,10 @@ Four new entries appended to `gclass_table`:
 
 ```c
 /* Druid lineage (appended after existing 24) */
-{"Dru", "Druid",        APPLY_WIS,  5, 0, MORTAL, {-1, -1}},
-{"Tho", "Thornwarden",  APPLY_WIS, 10, 0, REMORT, {CLASS_DRU, -1}},
-{"Wil", "Wildspeaker",  APPLY_WIS,  8, 0, REMORT, {CLASS_DRU, -1}},
-{"Hie", "Hierophant",   APPLY_WIS, 16, 0, ADEPT,  {CLASS_THO, CLASS_WIL}},
+{"Dru", "Druid",        APPLY_CON,  5, 0, MORTAL, {-1, -1}},
+{"Tho", "Thornwarden",  APPLY_CON, 10, 0, REMORT, {CLASS_DRU, -1}},
+{"Wil", "Wildspeaker",  APPLY_CON,  8, 0, REMORT, {CLASS_DRU, -1}},
+{"Hie", "Hierophant",   APPLY_CON, 16, 0, ADEPT,  {CLASS_THO, CLASS_WIL}},
 ```
 
 All four have `mana_gain = 0`.
@@ -987,6 +1039,7 @@ communion in ways that neither tradition fully acknowledges.
 - [ ] Add Druid to character creation class list in `comm.c`
 - [ ] Handle 28-entry class arrays in `save.c` (backward-compatible load)
 - [ ] Reset `overgrowth` to 0 in `raw_kill()` / death path
+- [ ] Add `gsn_substrate_attunement` global and reinc_rules entry in `skills.c`
 - [ ] Expand `gclass_table` stubs in all unit test files to 28 entries
 - [ ] Update integration test for 7th class option
 - [ ] Run `make unit-tests` to verify no regressions
