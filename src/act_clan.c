@@ -285,6 +285,8 @@ void save_clan_table()
    }
    else
    {
+      fprintf(fp, "%d\n", MAX_CLAN);
+
       for (x = 1; x < MAX_CLAN; x++)
       {
          for (y = 1; y < MAX_CLAN; y++)
