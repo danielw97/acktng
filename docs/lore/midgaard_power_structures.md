@@ -66,7 +66,10 @@ Official routes, names, and tariffs. The sealed **Breach Tower** is believed to 
 Index plaques on the archive facade list categories held within: land surveys, tax ledgers, birth registries, and watch reports going back centuries.
 
 ### Charter Sovereignty Office
-The body that formally processes — and refuses — annexation petitions, including Rakuen's three attempts. Aware of Kiess's standing charter-consultation offer to Rakuen.
+The body that formally processes — and refuses — annexation petitions, including Rakuen's three attempts. Aware of Kiess's standing charter-consultation offer to Rakuen. Also administers the Sealed Family charter renewal protocol and technically accepts new charter petitions (none granted since the Ash-and-Iron Decades). See: `docs/lore/midgaard_sealed_families_lore.md`.
+
+### The Sealed Families
+Eleven hereditary elite lineages holding wax-sealed charter documents that confer preferential licensing, archive access, tribunal standing, and upper-district ward-residence rights. Descended from the three founding blocs (River Factors, Upland Syndicate, Temple Compact), Lantern Reform-era institutional innovators, and Ash-and-Iron crisis-service families. The Sealed Families operate below formal governance but above ordinary commerce — the city's investor class, landlord stratum, and patron network. Divided across the Continuity/Reckoning split. A twelfth charter (House Vethlan) is suspended under disputed circumstances. Full detail: `docs/lore/midgaard_sealed_families_lore.md`.
 
 ---
 
