@@ -97,8 +97,8 @@ commerce infrastructure, with the Harbor Syndics as the facade.
 - Transporting contraband items between cities without detection
 - Bribing or blackmailing NPC customs officials
 - Disrupting rival trade routes (Jackal Synod relic shipments)
-- Operating shadow shops that sell restricted items to members
-- Manipulating commodity prices by controlling supply chokepoints
+- Operating shadow stashes that distribute restricted items to members
+- Manipulating commodity availability by controlling supply chokepoints
 - Running protection rackets on NPC merchant caravans
 
 ### Headquarters
@@ -119,7 +119,7 @@ tonight"* — triggers recruitment.
 | Rank | Title | Access |
 |---|---|---|
 | 0 | Runner | Basic smuggling courier missions; society channel |
-| 1 | Hauler | Access to shadow shop; can transport restricted goods |
+| 1 | Hauler | Access to shadow stash; can transport restricted goods |
 | 2 | Factor | Bribery missions; access to trade intelligence reports |
 | 3 | Broker | Can set up dead drops; cross-city smuggling routes |
 | 4 | Syndic | Can recruit new members; access to price manipulation |

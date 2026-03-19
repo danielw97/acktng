@@ -321,7 +321,6 @@ Mobs with `society_npc_role == SOCIETY_NPC_GUARD` have a `spec_fun` that:
 Existing city guard NPCs (non-society) gain awareness of exposed players.
 When `ch->pcdata->society_exposed == TRUE`, city guard NPCs in cities hostile
 to the player's society may:
-- Refuse to sell items
 - Refuse to provide services (banking, training)
 - Attack on sight (in extreme cases — only in the rival society's base city)
 
