@@ -112,13 +112,13 @@ until rank recovers.
 | `patrol_sense` | -99 (Watchman) | Detect aggressive mobs within 2 rooms in any direction. Shows direction and approximate strength (weak/moderate/dangerous). |
 | `field_mend` | 1 (Guard) | Perform basic field medicine on self or an ally. Restores a small amount of HP outside of combat. 5-minute cooldown. Does not scale with level — pure utility. |
 | `rally_cry` | 100 (Sergeant) | Shout a rallying cry that briefly suppresses fear effects on all group members in the room. 10-minute cooldown. Does not grant combat bonuses — only removes existing fear/panic debuffs. |
-| `shield_wall` | 200 (Lieutenant) | **Combat.** Activate a defensive formation. For the next 3 combat rounds, the player's `block` chance is increased by 15% and successful blocks also reduce the damage of the next hit that lands by 25%. Requires a shield equipped. 5-minute cooldown. Implemented as an affect with `APPLY_BLOCK` modifier and a flag checked in `calculate_damage()`. |
+| `shield_wall` | 200 (Lieutenant) | **Combat (passive).** While a shield is equipped, successful block checks also reduce the damage of the next attack that lands by 20%. Checked in `calculate_damage()` after a block in `check_avoidance()` sets a per-round flag. Always active — no cooldown, no activation command. |
 | `tactical_assess` | 300 (Captain) | Examine a mob to reveal its special attacks, resistances, and approximate HP percentage. More detailed than standard `consider`. |
 | `command_presence` | 400 (Marshal) | Passive aura: guard NPCs in the current room defer to the player, suppressing their aggro against the player's group. Does not affect non-guard mobs. 30-minute cooldown. |
 
 Note: `fortify` (previously in the Lieutenant slot) is moved to a task
 mechanic rather than a persistent skill. `shield_wall` replaces it as the
-rank 3 combat skill.
+rank 3 passive combat skill.
 
 ---
 

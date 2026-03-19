@@ -122,13 +122,13 @@ skill unlocks when the player's rank score reaches the listed threshold.
 | `wayfind` | -99 (Runner) | In wilderness rooms, reveal the shortest route to the nearest city or Road Warden post. Displays a series of exit directions. |
 | `road_camp` | 1 (Outrider) | Establish a temporary camp in an outdoor room. The camp provides a safe resting point where aggressive mobs will not initiate combat. Lasts 30 minutes. |
 | `forced_march` | 100 (Trailkeeper) | For the next 5 minutes, the player's movement between rooms has no movement-point cost. 30-minute cooldown. |
-| `skirmish` | 200 (Road Sergeant) | **Combat.** A quick guerrilla strike honed from ambush-clearing patrols. Usable once per fight. Deals weapon damage plus a flat bonus equal to 10% of the player's level, and if it hits, the target's `speed` stat is reduced by 3 for 2 rounds (checked via an affect with `APPLY_SPEED` modifier). This makes the target easier to hit and harder to avoid for the duration. 4-minute cooldown. |
+| `road_grit` | 200 (Road Sergeant) | **Combat (passive).** Constant exposure to ambushes has sharpened reflexes. Dodge chance is increased by 5% (added to `get_dodge()` return value). Always active — no cooldown, no activation command. |
 | `dispatch_rider` | 300 (Road Captain) | Send a message to any online Road Warden member regardless of distance. Functions as a one-way long-range tell. 10-minute cooldown. |
 | `road_gate` | 400 (Warden-Master) | Open a temporary portal from the current room to the nearest Road Warden post. The portal lasts 2 minutes and can be used by any member of the player's group. One use per day. |
 
 Note: `route_marker` (previously in the Road Sergeant slot) is moved to rank
-4 as an extension of `dispatch_rider`. `skirmish` replaces it as the rank 3
-combat skill.
+4 as an extension of `dispatch_rider`. `road_grit` replaces it as the rank 3
+passive combat skill.
 
 ---
 

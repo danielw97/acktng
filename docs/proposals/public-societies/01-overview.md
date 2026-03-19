@@ -60,13 +60,15 @@ them is the cost of leaving.
 
 Public society skills are primarily practical utility: field medicine, equipment
 repair, navigation, appraisal, and logistics. Each society also provides one
-directly applicable combat skill (unlocked at rank 3 / Officer tier) that
-hooks into the combat system — block bonuses, extra attacks, damage reduction,
-evasion piercing, in-combat healing, or debuffs. These combat skills are
-meaningful but narrow: they reward society membership without replacing class
-abilities or dominating the combat meta. They use existing combat hooks
-(`check_avoidance()`, `calculate_damage()`, `multi_hit()`, `APPLY_*` affects)
-rather than introducing new combat subsystems.
+**passive** combat skill (unlocked at rank 3 / Officer tier) that is always
+active during combat with no activation command or cooldown — like how extra
+attack passively grants bonus autoattacks. These passive combat skills hook
+into existing combat functions (`check_avoidance()`, `calculate_damage()`,
+`multi_hit()`, `get_dodge()`) and provide small, meaningful bonuses: a chance
+for a bonus autoattack, flat damage reduction, improved dodge, post-block
+damage mitigation, in-combat HP regeneration, or evasion piercing against
+marked targets. They reward society membership without replacing class
+abilities or dominating the combat meta.
 
 ### 5. One Society, One Commitment
 

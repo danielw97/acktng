@@ -110,13 +110,13 @@ listed threshold.
 | `forage` | -99 (Responder) | Gather a random botanical material or food item from the current outdoor room. One item per use. 3-minute cooldown. Items are consumed for tasks. |
 | `field_repair` | 1 (Warden) | Repair a damaged piece of equipment, restoring a portion of its condition. Cannot improve beyond original state. Works on own or ally's gear. 10-minute cooldown. |
 | `ember_signal` | 100 (Senior Warden) | Light an emergency signal in the current room. All Ember Wardens in the same area receive a notification with the room name. One signal active at a time. |
-| `cauterize` | 200 (Warden-Lieutenant) | **Combat.** Sear a wound shut mid-fight. Usable on self or an ally in combat. Restores HP equal to 5% of the target's `max_hit` and removes one bleed or poison DOT effect. 3-round cooldown. Implemented as an instant heal in the combat round with a DOT-cleanse check on `APPLY_DOT` affects. |
+| `ember_vitality` | 200 (Warden-Lieutenant) | **Combat (passive).** Emergency conditioning grants passive HP regeneration during combat. Each combat round, the player recovers HP equal to 1% of their `max_hit`. Checked in `violence_update()` before `multi_hit()`. Always active — no cooldown, no activation command. |
 | `containment_ward` | 300 (Warden-Captain) | Place a temporary barrier on a room exit that prevents mobs below a level threshold from passing through. Lasts 10 minutes. One ward active at a time. |
 | `emergency_cache` | 400 (Warden-Commander) | Create a supply cache in the current outdoor room containing basic healing and food items. Accessible by any Ember Warden. Lasts 24 hours. One cache active at a time. |
 
 Note: `stabilize` (previously in the Warden-Lieutenant slot) is moved to rank
 5 as a passive death-prevention trigger on the `emergency_cache` skill.
-`cauterize` replaces it as the rank 3 combat skill.
+`ember_vitality` replaces it as the rank 3 passive combat skill.
 
 ---
 
