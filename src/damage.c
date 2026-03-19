@@ -299,6 +299,10 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
       if (stance_app[ch->stance].spell_mod != 0)
          dam += dam * stance_app[ch->stance].spell_mod / 10;
+
+      /* Overgrowth: Druid spells (growth > 0) get bonus damage from overgrowth */
+      if (dt >= 0 && dt < MAX_SKILL && skill_table[dt].growth > 0 && ch->overgrowth > 0)
+         dam = dam * (100 + ch->overgrowth * 3) / 100;
    }
    else
       dam += get_damroll(ch) / 3;

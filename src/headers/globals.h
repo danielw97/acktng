@@ -172,6 +172,9 @@ extern sh_int gsn_rend;
 extern sh_int gsn_field_patch;
 extern sh_int gsn_weapon_mastery;
 
+/* Druid skills */
+extern sh_int gsn_substrate_piercing;
+
 /* Pugilist skills */
 extern sh_int gsn_grapple;
 extern sh_int gsn_choke_hold;

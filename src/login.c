@@ -312,15 +312,17 @@ void show_cmenu_to(DESCRIPTOR_DATA *d)
    strcat(menu, "Being a MultiClass Mud, this order is very important, as it\n\r");
    strcat(menu, "will determine how easily you progress in each class, and\n\r");
    strcat(menu, "how well you can use the skills/spells of each class.\n\r");
-   strcat(menu, "There are six classes.  Please list, in order of best to\n\r");
+   strcat(menu, "There are seven classes.  Please list, in order of best to\n\r");
    strcat(menu, "worst, the order your 4 classes will be.\n\r");
    strcat(menu, "(The 1st you pick will be your prime class, gaining a +1 bonus.\n\r");
    strcat(menu, "For example, psi mag cle cip.\n\r");
    strcat(menu, "Abr    Prime Atr    Name\n\r");
    strcat(menu, "---    ---------    ----\n\r");
 
-   for (iClass = 0; iClass < MAX_CLASS; iClass++)
+   for (iClass = 0; iClass < MAX_TOTAL_CLASS; iClass++)
    {
+      if (!IS_MORTAL_CLASS(iClass))
+         continue;
       char stat[MSL];
       strcpy(stat, stat_to_string(gclass_table[iClass].attr_prime));
       comm_format_class_menu_line(buf, sizeof(buf), gclass_table[iClass].who_name, stat,
@@ -725,7 +727,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
       one_argument(argument, arg);
       if (arg[0] != '\0')
       {
-         for (cnt = 0; cnt < MAX_CLASS; cnt++)
+         for (cnt = 0; cnt < MAX_TOTAL_CLASS; cnt++)
          {
             if (IS_MORTAL_CLASS(cnt) && (!str_cmp(arg, gclass_table[cnt].who_name) ||
                                          !str_cmp(arg, gclass_table[cnt].class_name)))

@@ -372,3 +372,48 @@ DECLARE_SPELL_FUN(spell_arcaneshield);         /* slot 768 */
 DECLARE_SPELL_FUN(spell_cloak_precision);      /* slot 769 */
 DECLARE_SPELL_FUN(spell_holyshield);           /* slot 770 */
 DECLARE_SPELL_FUN(spell_cloak_valor);          /* slot 771 */
+
+/* Druid spells (slots 800+) */
+DECLARE_SPELL_FUN(spell_thornlash);
+DECLARE_SPELL_FUN(spell_nettlesting);
+DECLARE_SPELL_FUN(spell_rockburst);
+DECLARE_SPELL_FUN(spell_wither);
+DECLARE_SPELL_FUN(spell_briar_volley);
+DECLARE_SPELL_FUN(spell_blight_touch);
+DECLARE_SPELL_FUN(spell_tremor);
+DECLARE_SPELL_FUN(spell_creeping_rot);
+DECLARE_SPELL_FUN(spell_fissure);
+DECLARE_SPELL_FUN(spell_fungal_eruption);
+DECLARE_SPELL_FUN(spell_quake);
+DECLARE_SPELL_FUN(spell_strangling_vines);
+DECLARE_SPELL_FUN(spell_rot);
+DECLARE_SPELL_FUN(spell_upheaval);
+DECLARE_SPELL_FUN(spell_sap_mend);
+DECLARE_SPELL_FUN(spell_mend_wounds);
+DECLARE_SPELL_FUN(spell_purge_toxin);
+DECLARE_SPELL_FUN(spell_verdant_mend);
+DECLARE_SPELL_FUN(spell_heartwood_balm);
+DECLARE_SPELL_FUN(spell_primal_restoration);
+DECLARE_SPELL_FUN(spell_sap_transfusion);
+DECLARE_SPELL_FUN(spell_barkskin);
+DECLARE_SPELL_FUN(spell_roothold);
+DECLARE_SPELL_FUN(spell_thornhide);
+DECLARE_SPELL_FUN(spell_ironpine_vigor);
+DECLARE_SPELL_FUN(spell_gift_of_the_forest);
+DECLARE_SPELL_FUN(spell_natures_ward);
+DECLARE_SPELL_FUN(spell_ancient_bark);
+DECLARE_SPELL_FUN(spell_tangling_roots);
+DECLARE_SPELL_FUN(spell_sap_strength);
+DECLARE_SPELL_FUN(spell_spore_cloud);
+DECLARE_SPELL_FUN(spell_wither_limbs);
+DECLARE_SPELL_FUN(spell_entangling_growth);
+DECLARE_SPELL_FUN(spell_curse_of_decay);
+DECLARE_SPELL_FUN(spell_creeping_blight);
+DECLARE_SPELL_FUN(spell_forestsight);
+DECLARE_SPELL_FUN(spell_sense_life);
+DECLARE_SPELL_FUN(spell_know_terrain);
+DECLARE_SPELL_FUN(spell_passage);
+DECLARE_SPELL_FUN(spell_greensight);
+DECLARE_SPELL_FUN(spell_rootway);
+DECLARE_SPELL_FUN(spell_call_of_the_wild);
+DECLARE_SPELL_FUN(spell_living_bridge);

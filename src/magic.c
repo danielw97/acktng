@@ -550,7 +550,19 @@ void do_cast(CHAR_DATA *ch, char *argument)
       break;
    }
 
-   if (ch->mana < mana)
+   /* Overgrowth: Druid spells (growth > 0) cost HP instead of mana */
+   if (skill_table[sn].growth > 0)
+   {
+      int hp_cost = skill_table[sn].min_mana * (100 + ch->overgrowth * 2) / 100;
+
+      if (ch->hit <= hp_cost && ch->hit <= 1)
+      {
+         send_to_char("You don't have enough life force.\n\r", ch);
+         return;
+      }
+   }
+
+   if (skill_table[sn].growth == 0 && ch->mana < mana)
    {
       send_to_char("You don't have enough mana.\n\r", ch);
       return;
@@ -587,7 +599,15 @@ void do_cast(CHAR_DATA *ch, char *argument)
       {
          send_to_char("You lost your concentration.\n\r", ch);
 
-         ch->mana -= mana / 2;
+         if (skill_table[sn].growth > 0)
+         {
+            int hp_cost = skill_table[sn].min_mana * (100 + ch->overgrowth * 2) / 100;
+            ch->hit -= hp_cost / 2;
+            if (ch->hit < 1)
+               ch->hit = 1;
+         }
+         else
+            ch->mana -= mana / 2;
          return;
       }
    }
@@ -631,7 +651,22 @@ void do_cast(CHAR_DATA *ch, char *argument)
       if (!IS_NPC(ch) && is_mental_power_spell(sn))
          ch->mental_power++;
 
-      ch->mana -= mana; /* Only use mana if spell was called correctly */
+      /* Overgrowth: Druid spells cost HP and build overgrowth */
+      if (skill_table[sn].growth > 0)
+      {
+         int hp_cost = skill_table[sn].min_mana * (100 + ch->overgrowth * 2) / 100;
+         ch->hit -= hp_cost;
+         if (ch->hit < 1)
+         {
+            ch->hit = 1;
+            ch->overgrowth = 100;
+         }
+         ch->overgrowth += skill_table[sn].growth;
+         if (ch->overgrowth > 100)
+            ch->overgrowth = 100;
+      }
+      else
+         ch->mana -= mana; /* Only use mana if spell was called correctly */
    }
 
    if (multi_cast)
@@ -675,7 +710,21 @@ void do_cast(CHAR_DATA *ch, char *argument)
             if (!IS_NPC(ch) && is_mental_power_spell(sn))
                ch->mental_power++;
 
-            ch->mana -= mana; /* Only use mana if spell was called correctly */
+            if (skill_table[sn].growth > 0)
+            {
+               int hp_cost = skill_table[sn].min_mana * (100 + ch->overgrowth * 2) / 100;
+               ch->hit -= hp_cost;
+               if (ch->hit < 1)
+               {
+                  ch->hit = 1;
+                  ch->overgrowth = 100;
+               }
+               ch->overgrowth += skill_table[sn].growth;
+               if (ch->overgrowth > 100)
+                  ch->overgrowth = 100;
+            }
+            else
+               ch->mana -= mana; /* Only use mana if spell was called correctly */
          }
       }
    }
@@ -723,7 +772,21 @@ void do_cast(CHAR_DATA *ch, char *argument)
             if (!IS_NPC(ch) && is_mental_power_spell(sn))
                ch->mental_power++;
 
-            ch->mana -= mana; /* Only use mana if spell was called correctly */
+            if (skill_table[sn].growth > 0)
+            {
+               int hp_cost = skill_table[sn].min_mana * (100 + ch->overgrowth * 2) / 100;
+               ch->hit -= hp_cost;
+               if (ch->hit < 1)
+               {
+                  ch->hit = 1;
+                  ch->overgrowth = 100;
+               }
+               ch->overgrowth += skill_table[sn].growth;
+               if (ch->overgrowth > 100)
+                  ch->overgrowth = 100;
+            }
+            else
+               ch->mana -= mana; /* Only use mana if spell was called correctly */
          }
       }
    }

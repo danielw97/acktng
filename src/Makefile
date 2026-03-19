@@ -120,7 +120,8 @@ SPELL_OBJS = \
 	spells/spell_elemental_confluence.o spells/spell_convergence_shield.o \
 	spells/spell_sacred_ward.o \
 	spells/spell_momentum_drain.o spells/spell_entropic_shield.o \
-	spells/spell_cognitive_disruption.o spells/spell_predictive_collapse.o
+	spells/spell_cognitive_disruption.o spells/spell_predictive_collapse.o \
+	spells/spell_druid.o
 
 SKILL_OBJS = \
 	skills/do_anti_magic_shell.o skills/do_aurabolt.o skills/do_backstab.o \

@@ -238,6 +238,9 @@ sh_int gsn_pressure_point;
 sh_int gsn_feint;
 sh_int gsn_conditioning;
 
+/* Druid skills */
+sh_int gsn_substrate_piercing;
+
 #ifdef TFS
 sh_int gsn_mana_sense;
 #endif

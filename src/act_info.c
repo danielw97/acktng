@@ -1801,6 +1801,13 @@ void do_score(CHAR_DATA *ch, char *argument)
    sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
    send_to_char(buf2, ch);
 
+   if (ch->overgrowth > 0)
+   {
+      sprintf(buf, "@@aOvergrowth: @@y%d%%@@N", ch->overgrowth);
+      sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
+      send_to_char(buf2, ch);
+   }
+
    if (score_should_show_invasion_rewards(ch))
    {
       sprintf(buf,

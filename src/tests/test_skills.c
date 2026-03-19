@@ -26,6 +26,7 @@ sh_int gsn_dual_fist = 11;
 sh_int gsn_equip_wand = 12;
 sh_int gsn_enhanced_sword_critical = 13;
 sh_int gsn_notrip = 14;
+sh_int gsn_substrate_piercing = 16;
 
 /* ── minimal skill_table ───────────────────────────────────────────── */
 struct skill_type skill_table[MAX_SKILL];
@@ -45,6 +46,8 @@ const struct class_type gclass_table[MAX_TOTAL_CLASS] = {
     [15] = {.tier = REMORT}, [16] = {.tier = REMORT}, [17] = {.tier = REMORT},
     [18] = {.tier = ADEPT},  [19] = {.tier = ADEPT},  [20] = {.tier = ADEPT},
     [21] = {.tier = ADEPT},  [22] = {.tier = ADEPT},  [23] = {.tier = ADEPT},
+    [24] = {.tier = MORTAL}, [25] = {.tier = REMORT}, [26] = {.tier = REMORT},
+    [27] = {.tier = ADEPT},
 };
 
 /* ── test doubles ─────────────────────────────────────────────────── */
