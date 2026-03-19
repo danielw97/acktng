@@ -121,6 +121,7 @@ const struct cmd_type cmd_table[] = {
     CMD("consider", do_consider, POS_RESTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("credits", do_credits, POS_DEAD, 0, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS),
     CMD("cwhere", do_cwhere, POS_DEAD, CLAN_ONLY, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS),
+    CMD("claneq", do_claneq, POS_STANDING, CLAN_ONLY, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("delete", do_delete, POS_STANDING, 0, LOG_NORMAL, C_TYPE_CONFIG, C_SHOW_ALWAYS),
     CMD("diagnose", do_diagnose, POS_RESTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("equipment", do_equipment, POS_DEAD, 0, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS),

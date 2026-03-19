@@ -288,6 +288,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
    {
       fprintf(fp, "Generation   %d\n", ch->pcdata->generation);
       fprintf(fp, "Clan         %d\n", ch->pcdata->clan);
+      fprintf(fp, "ClaneqWt     %d\n", ch->pcdata->claneq_weight);
       fprintf(fp, "Mkills	   %d\n", ch->pcdata->mkills);
       fprintf(fp, "Mkilled	   %d\n", ch->pcdata->mkilled);
       fprintf(fp, "Pkills	   %d\n", ch->pcdata->pkills);
@@ -922,6 +923,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          if (!IS_NPC(ch))
          {
             KEY("Clan", ch->pcdata->clan, fread_number(fp));
+            KEY("ClaneqWt", ch->pcdata->claneq_weight, fread_number(fp));
          }
          KEY("Class", ch->class, fread_number(fp));
          KEY("Config", ch->config, fread_number(fp));

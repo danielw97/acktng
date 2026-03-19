@@ -32,6 +32,251 @@
 #include <time.h>
 #include "globals.h"
 
+void set_obj_stat_auto(OBJ_DATA *obj);
+void set_aff_to_obj(OBJ_DATA *obj, int location, int modifier);
+
+/* Clan color code extracted from the clan abbreviation (e.g. "@@y" from "@@yACCRD@@N") */
+static const char *get_clan_color_code(int clan_id)
+{
+   const char *abbr;
+   if (clan_id < 1 || clan_id >= MAX_CLAN)
+      return "@@N";
+   abbr = clan_table[clan_id].clan_abbr;
+   if (abbr[0] == '@' && abbr[1] == '@')
+      return abbr; /* point to the "@@X..." portion, act() will handle it */
+   return "@@N";
+}
+
+/* Stat weight for clan equipment: melee=8, caster=3, tank=13 (matches emblem system) */
+static int claneq_stat_weight(int weight_type)
+{
+   switch (weight_type)
+   {
+   case CLANEQ_WEIGHT_CASTER:
+      return 3;
+   case CLANEQ_WEIGHT_TANK:
+      return 13;
+   default:
+      return 8; /* melee */
+   }
+}
+
+static const char *claneq_weight_name(int weight_type)
+{
+   switch (weight_type)
+   {
+   case CLANEQ_WEIGHT_CASTER:
+      return "caster";
+   case CLANEQ_WEIGHT_TANK:
+      return "tank";
+   default:
+      return "melee";
+   }
+}
+
+/* Create a clan equipment piece for a character. */
+OBJ_DATA *create_clan_eq(CHAR_DATA *ch)
+{
+   char buf[MAX_STRING_LENGTH];
+   char color[4];
+   OBJ_DATA *obj;
+   int clan_id;
+   int level;
+
+   if (ch == NULL || IS_NPC(ch))
+      return NULL;
+
+   clan_id = ch->pcdata->clan;
+   if (clan_id < 1 || clan_id >= MAX_CLAN)
+      return NULL;
+
+   level = get_psuedo_level(ch);
+   if (level < 1)
+      level = 1;
+
+   /* Extract the two-char color code (e.g. "@@y" -> "y") */
+   {
+      const char *abbr = clan_table[clan_id].clan_abbr;
+      if (abbr[0] == '@' && abbr[1] == '@' && abbr[2] != '\0')
+      {
+         snprintf(color, sizeof(color), "@@%c", abbr[2]);
+      }
+      else
+         snprintf(color, sizeof(color), "@@N");
+   }
+
+   obj = create_object(get_obj_index(OBJ_VNUM_MUSHROOM), 0);
+   if (obj == NULL)
+      return NULL;
+
+   obj->item_type = ITEM_ARMOR;
+   obj->level = level;
+   obj->wear_flags = ITEM_TAKE | ITEM_WEAR_CLAN_COLORS;
+   obj->weight = claneq_stat_weight(ch->pcdata->claneq_weight);
+   obj->cost = 0;
+   obj->obj_fun = obj_fun_lookup("objfun_clan");
+
+   /* Set flags: NODROP, NOLOOT, CLAN_EQ, NOSAC, NOREMOVE */
+   REMOVE_BIT(obj->extra_flags, ITEM_NOSAVE);
+   REMOVE_BIT(obj->extra_flags, ITEM_BIND_EQUIP);
+   SET_BIT(obj->extra_flags, ITEM_NODROP);
+   SET_BIT(obj->extra_flags, ITEM_NOLOOT);
+   SET_BIT(obj->extra_flags, ITEM_CLAN_EQ);
+   SET_BIT(obj->extra_flags, ITEM_NOSAC);
+
+   /* Name / descriptions themed to the clan */
+   snprintf(buf, sizeof(buf), "clan colors %s", clan_table[clan_id].clan_name);
+   free_string(obj->name);
+   obj->name = str_dup(buf);
+
+   snprintf(buf, sizeof(buf), "%sthe colors of %s@@N", color, clan_table[clan_id].clan_name);
+   free_string(obj->short_descr);
+   obj->short_descr = str_dup(buf);
+
+   snprintf(buf, sizeof(buf), "%sThe colors of %s@@N lie here.", color,
+            clan_table[clan_id].clan_name);
+   free_string(obj->description);
+   obj->description = str_dup(buf);
+
+   set_obj_stat_auto(obj);
+
+   return obj;
+}
+
+/* Adjust an existing clan eq piece to match the owner's current level and weight. */
+void claneq_adjust(OBJ_DATA *obj, CHAR_DATA *ch)
+{
+   AFFECT_DATA *paf;
+   AFFECT_DATA *paf_next;
+   int level;
+
+   if (obj == NULL || ch == NULL || IS_NPC(ch))
+      return;
+
+   level = get_psuedo_level(ch);
+   if (level < 1)
+      level = 1;
+
+   obj->level = level;
+   obj->weight = claneq_stat_weight(ch->pcdata->claneq_weight);
+
+   /* Strip existing affects before recalculating */
+   for (paf = obj->first_apply; paf != NULL; paf = paf_next)
+   {
+      paf_next = paf->next;
+      UNLINK(paf, obj->first_apply, obj->last_apply, next, prev);
+      PUT_FREE(paf, affect_free);
+   }
+   obj->first_apply = NULL;
+   obj->last_apply = NULL;
+
+   set_obj_stat_auto(obj);
+}
+
+/* Find the character's clan eq (worn or carried). */
+OBJ_DATA *find_clan_eq(CHAR_DATA *ch)
+{
+   OBJ_DATA *obj;
+
+   if (ch == NULL)
+      return NULL;
+
+   for (obj = ch->first_carry; obj != NULL; obj = obj->next_in_carry_list)
+   {
+      if (IS_SET(obj->extra_flags, ITEM_CLAN_EQ) && IS_SET(obj->wear_flags, ITEM_WEAR_CLAN_COLORS))
+         return obj;
+   }
+   return NULL;
+}
+
+/* Destroy all clan eq on a character. */
+void destroy_clan_eq(CHAR_DATA *ch)
+{
+   OBJ_DATA *obj;
+   OBJ_DATA *obj_next;
+
+   if (ch == NULL)
+      return;
+
+   for (obj = ch->first_carry; obj != NULL; obj = obj_next)
+   {
+      obj_next = obj->next_in_carry_list;
+      if (IS_SET(obj->extra_flags, ITEM_CLAN_EQ) && IS_SET(obj->wear_flags, ITEM_WEAR_CLAN_COLORS))
+      {
+         if (obj->wear_loc != WEAR_NONE)
+            unequip_char(ch, obj);
+         act("$p shatters into dust!", ch, obj, NULL, TO_CHAR);
+         act("$p carried by $n shatters into dust!", ch, obj, NULL, TO_ROOM);
+         extract_obj(obj);
+      }
+   }
+}
+
+/* Player command: claneq <melee|caster|tank> */
+void do_claneq(CHAR_DATA *ch, char *argument)
+{
+   char buf[MAX_STRING_LENGTH];
+   OBJ_DATA *obj;
+   int new_weight;
+
+   if (IS_NPC(ch))
+      return;
+
+   if (ch->pcdata->clan == 0)
+   {
+      send_to_char("You are not in a clan.\n\r", ch);
+      return;
+   }
+
+   if (argument[0] == '\0')
+   {
+      snprintf(buf, sizeof(buf),
+               "Your clan equipment is currently set to: @@W%s@@N.\n\r"
+               "Syntax: claneq <melee|caster|tank>\n\r",
+               claneq_weight_name(ch->pcdata->claneq_weight));
+      send_to_char(buf, ch);
+      return;
+   }
+
+   if (!str_prefix(argument, "melee"))
+      new_weight = CLANEQ_WEIGHT_MELEE;
+   else if (!str_prefix(argument, "caster"))
+      new_weight = CLANEQ_WEIGHT_CASTER;
+   else if (!str_prefix(argument, "tank"))
+      new_weight = CLANEQ_WEIGHT_TANK;
+   else
+   {
+      send_to_char("Valid options: melee, caster, tank.\n\r", ch);
+      return;
+   }
+
+   ch->pcdata->claneq_weight = new_weight;
+
+   obj = find_clan_eq(ch);
+   if (obj != NULL)
+   {
+      bool was_worn = (obj->wear_loc != WEAR_NONE);
+
+      if (was_worn)
+         unequip_char(ch, obj);
+
+      claneq_adjust(obj, ch);
+
+      if (was_worn)
+         equip_char(ch, obj, WEAR_CLAN_COLORS);
+
+      snprintf(buf, sizeof(buf), "Your clan colors shimmer and reform with a %s focus!\n\r",
+               claneq_weight_name(new_weight));
+      send_to_char(buf, ch);
+   }
+   else
+   {
+      snprintf(buf, sizeof(buf), "Clan equipment weight set to %s. Your colors will adjust.\n\r",
+               claneq_weight_name(new_weight));
+      send_to_char(buf, ch);
+   }
+}
+
 /* These set of clan functions by Zen */
 
 void save_clan_table()
@@ -628,6 +873,18 @@ void do_accept(CHAR_DATA *ch, char *argument)
    act("$N accepts you into $S clan!", victim, NULL, ch, TO_VICT);
    act("You accept $N into your clan!", ch, NULL, victim, TO_VICT);
 
+   /* Grant clan equipment */
+   {
+      OBJ_DATA *claneq = create_clan_eq(victim);
+      if (claneq != NULL)
+      {
+         obj_to_char(claneq, victim);
+         act("$p materializes before you, bearing the colors of your new clan!", victim, claneq,
+             NULL, TO_CHAR);
+         act("$p materializes before $n!", victim, claneq, NULL, TO_ROOM);
+      }
+   }
+
    sprintf(buf, "%s has accepted %s into clan %s.", ch->name, victim->name,
            clan_table[ch->pcdata->clan].clan_name);
    monitor_chan(buf, MONITOR_CLAN);
@@ -715,6 +972,8 @@ void do_leave(CHAR_DATA *ch, char *argument)
    sprintf(buf, "%s has left clan %s.", ch->name, clan_table[ch->pcdata->clan].clan_name);
    monitor_chan(buf, MONITOR_CLAN);
 
+   destroy_clan_eq(ch);
+
    ch->pcdata->clan = 0;
    send_to_char("You leave your clan.  Let's hope they don't get mad!\n\r", ch);
    if (IS_SET(ch->pcdata->pflags, PFLAG_CLAN_DIPLOMAT))
@@ -784,6 +1043,8 @@ void do_banish(CHAR_DATA *ch, char *argument)
       send_to_char("Nice Try.", ch);
       return;
    }
+
+   destroy_clan_eq(victim);
 
    victim->pcdata->clan = 0;
 
