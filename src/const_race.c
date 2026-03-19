@@ -78,7 +78,7 @@ const struct race_type race_table[MAX_RACE] = {
      MAX_CLASS,
      {2, 0, 3, 4, 1, 5},
      "Cle, Psi, Mag, Cip, War, Pug",
-     "sneak \'spell critical damage\' \'spell critical\'",
+     "sneak vigilance \'spell critical damage\' \'spell critical\'",
      ELE_SHADOW | ELE_HOLY,   /* strong magic realms */
      ELE_PHYSICAL | ELE_FIRE, /* weak */
      ELE_SHADOW | ELE_MENTAL, /* resist */
@@ -208,7 +208,7 @@ const struct race_type race_table[MAX_RACE] = {
      MAX_CLASS,
      {3, 0, 2, 4, 1, 5},
      "Cle, Psi, Cip, Mag, War, Pug",
-     "hunt \'spell critical damage\' \'spell critical\'",
+     "hunt vigilance \'spell critical damage\' \'spell critical\'",
      ELE_WATER | ELE_MENTAL, /* strong magic realms */
      ELE_FIRE | ELE_EARTH,   /* weak */
      ELE_WATER | ELE_POISON, /* resist */
@@ -234,7 +234,7 @@ const struct race_type race_table[MAX_RACE] = {
      MAX_CLASS,
      {3, 1, 4, 0, 5, 2},
      "War, Cle, Pug, Mag, Cip, Psi",
-     "\'stone skin\' \'enhanced damage\' \'spell critical damage\' \'spell critical\'",
+     "\'stone skin\' \'enhanced damage\' vigilance \'spell critical damage\' \'spell critical\'",
      ELE_EARTH | ELE_HOLY,     /* strong magic realms */
      ELE_SHADOW | ELE_WATER,   /* weak */
      ELE_EARTH | ELE_PHYSICAL, /* resist */
@@ -294,7 +294,7 @@ const struct race_type race_table[MAX_RACE] = {
      MAX_CLASS,
      {4, 0, 3, 5, 2, 1},
      "Cle, Pug, Psi, Cip, Mag, War",
-     "counter \'spell critical damage\' \'spell critical\'",
+     "counter vigilance \'spell critical damage\' \'spell critical\'",
      ELE_WATER | ELE_POISON, /* strong magic realms */
      ELE_FIRE | ELE_AIR,     /* weak */
      ELE_POISON | ELE_WATER, /* resist */

@@ -321,6 +321,17 @@ const struct cmd_type cmd_table[] = {
         C_SHOW_SKILL),
     CMD("feint", do_feint, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
     CMD("conditioning", do_conditioning, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    /* Sentinel skills */
+    CMD("verdict", do_verdict, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("read opponent", do_read_opponent, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+        C_SHOW_SKILL),
+    CMD("binding strike", do_binding_strike, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+        C_SHOW_SKILL),
+    CMD("ninth descent", do_ninth_descent, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+        C_SHOW_SKILL),
+    CMD("condemn", do_condemn, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("seal testimony", do_seal_testimony, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+        C_SHOW_SKILL),
 
     /*
      * Object manipulation commands.

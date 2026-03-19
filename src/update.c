@@ -32,6 +32,7 @@
 #include <time.h>
 #include "globals.h"
 #include "weapon_bond.h"
+#include "sentinel.h"
 #include <signal.h>
 #include "npc_dialogue.h"
 
@@ -396,6 +397,33 @@ void round_char_update(CHAR_DATA *ch)
    {
       send_to_char("Your chi has dissipated as you are not fighting.\n\r", ch);
       ch->chi = 0;
+   }
+
+   /* Sentinel: testimony cooldown tick */
+   if (ch->testimony_cooldown > 0)
+      ch->testimony_cooldown--;
+
+   /* Sentinel: passive testimony accumulation while fighting same target */
+   if (is_fighting(ch) && is_sentinel_class(ch) && ch->testimony_target != NULL &&
+       ch->fighting == ch->testimony_target)
+   {
+      ch->testimony_combat_rounds++;
+      if (ch->testimony_combat_rounds % TESTIMONY_PASSIVE_INTERVAL == 0)
+         add_testimony(ch, 1);
+   }
+
+   /* Sentinel: out-of-combat testimony decay */
+   if (!is_fighting(ch) && ch->testimony > 0)
+   {
+      ch->testimony--;
+      if (ch->testimony > 0)
+         send_to_char("@@yYour testimony fades slightly...@@N\n\r", ch);
+      else
+      {
+         send_to_char("@@yYour testimony has fully faded.@@N\n\r", ch);
+         ch->testimony_target = NULL;
+         ch->testimony_combat_rounds = 0;
+      }
    }
 
    if (!is_fighting(ch) && ch->arcane_power > 0)

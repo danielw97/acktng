@@ -66,4 +66,7 @@ const struct class_type gclass_table[MAX_TOTAL_CLASS] = {
     {"Tho", "Thornwarden", APPLY_CON, 10, 0, REMORT, {CLASS_DRU, -1}},
     {"Wil", "Wildspeaker", APPLY_CON, 8, 0, REMORT, {CLASS_DRU, -1}},
     {"Hie", "Hierophant", APPLY_CON, 16, 0, ADEPT, {CLASS_THO, CLASS_WIL}},
+
+    /* Sentinel lineage (28) */
+    {"Sen", "Sentinel", APPLY_WIS, 6, 1, MORTAL, {-1, -1}},
 };
