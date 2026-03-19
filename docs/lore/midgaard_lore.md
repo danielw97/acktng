@@ -158,11 +158,12 @@ Plan application:
 ### XIII. Social Strata and Daily Survival
 Midgaard’s prosperity is uneven; expansion should foreground social texture across districts:
 
+- **Sealed Families:** hereditary charter-holding elite with preferential licensing, archive access, and upper-district ward-residence rights. Eleven active lineages descended from founding blocs, Lantern Reform innovators, and Ash-and-Iron crisis-service families. See: `docs/lore/midgaard_sealed_families_lore.md`.
 - **Ledgered citizens:** guild-registered, legally visible, tax-enrolled; stable but scrutinized.
 - **Day-mark laborers:** legal but precarious workers paid by stamped day tokens.
 - **Shadow residents:** undocumented dwellers in service corridors and intake-adjacent districts.
 
-This structure supports grounded quest design (identity papers, wages withheld, mistaken warrants, mercy appeals) and prevents lore from becoming purely top-down institutional history.
+This four-tier structure supports grounded quest design (identity papers, wages withheld, mistaken warrants, mercy appeals, charter politics, class friction) and prevents lore from becoming purely top-down institutional history. The distance between the Sealed Families’ upper-district boulevard culture and the shadow residents’ undocumented existence is Midgaard’s deepest social tension — one that both the Continuity and Reckoning factions exploit but neither addresses directly.
 
 ### XIV. External Diplomacy Without Borders Myth
 Midgaard presents itself as neutral and practical, but diplomacy is managed as controlled permeability:
