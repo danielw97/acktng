@@ -84,7 +84,7 @@ Wizards focus around charmies and elemental DoTs as well as HoTs. Wizard and Sor
 
 - Prime: INT
 - Stance: Wizard (AC+2, DR-3, HR-3, Heal-2, Spell+5, DUAL_CAST, NO_HIT)
-- Key spells/skills: iron golem, diamond golem, creature bond, arc lightning, terra rend, tidal lash, phoenix flare, regen (HoT), mana drain, room dispel, mystical focus
+- Key spells/skills: iron golem, diamond golem, creature bond, arc lightning, terra rend, tidal lash, phoenix flare, mana drain, room dispel, mystical focus
 
 ### Paladin (Pal)
 
