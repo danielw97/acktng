@@ -28,7 +28,7 @@ void invasion_force_unlock_exit(CHAR_DATA *ch, EXIT_DATA *pexit);
 
 static void test_invasion_target_room_vnum(void)
 {
-   assert(INVASION_SPAWN_VNUM == 1026);
+   assert(INVASION_SPAWN_VNUM == 1209);
 }
 
 static void test_boss_spawn_count_scales_with_uptime(void)
