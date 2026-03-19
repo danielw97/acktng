@@ -116,7 +116,7 @@
 
 - [ ] Reckoning: `cipher_read`, `archive_search`, `forge_document`,
   `informant_network`, `shadow_copy`, `expose`
-- [ ] Jade Eels: `appraise_contraband`, `bribe`, `smuggle`, `black_market`,
+- [ ] Jade Eels: `assess_cargo`, `bribe`, `smuggle`, `black_market`,
   `price_fix`, `trade_embargo`
 - [ ] Ash Cult: `ashmark`, `kindle`, `sabotage`, `ash_ward`, `invoke_cinder`,
   `pyroclasm`

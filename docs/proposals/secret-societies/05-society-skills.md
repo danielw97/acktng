@@ -126,7 +126,7 @@ This skill cannot be used in combat. Cooldown: 10 minutes.
 
 | Slot | Skill | Rank | Description |
 |---|---|---|---|
-| 0 | `appraise_contraband` | 0 | Identify the true value and restricted status of an item. Reveals whether an item would trigger guard detection. |
+| 0 | `assess_cargo` | 0 | Identify the true value and restricted status of an item. Reveals whether an item would trigger guard detection. Unlike the general `appraise` skill (which shows item stats), this focuses on smuggling risk and contraband classification. |
 | 1 | `bribe` | 1 | Attempt to bribe an NPC shopkeeper or guard. On success, the NPC ignores one instance of contraband or trespass. Costs gold. |
 | 2 | `smuggle` | 2 | Conceal one item in inventory from guard NPC detection and the `inventory` display of other players. Item is still usable. |
 | 3 | `black_market` | 3 | Summon a temporary shadow merchant NPC in the current room (if private). Sells restricted items at inflated prices. 1-hour cooldown. |
