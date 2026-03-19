@@ -60,4 +60,10 @@ const struct class_type gclass_table[MAX_TOTAL_CLASS] = {
     {"Cru", "Crusader", APPLY_STR, 28, 0, ADEPT, {CLASS_KNI, CLASS_SWO}},
     {"Kin", "Kinetimancer", APPLY_INT, 12, 16, ADEPT, {CLASS_NEC, CLASS_EGO}},
     {"Mar", "Martial Artist", APPLY_CON, 28, 0, ADEPT, {CLASS_MON, CLASS_BRA}},
+
+    /* Druid lineage (24-27) */
+    {"Dru", "Druid", APPLY_CON, 5, 0, MORTAL, {-1, -1}},
+    {"Tho", "Thornwarden", APPLY_CON, 10, 0, REMORT, {CLASS_DRU, -1}},
+    {"Wil", "Wildspeaker", APPLY_CON, 8, 0, REMORT, {CLASS_DRU, -1}},
+    {"Hie", "Hierophant", APPLY_CON, 16, 0, ADEPT, {CLASS_THO, CLASS_WIL}},
 };

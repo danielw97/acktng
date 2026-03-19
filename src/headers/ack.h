@@ -679,6 +679,7 @@ struct char_data
    int loot_chance[MAX_LOOT];
    int loot[MAX_LOOT];
    int chi;
+   sh_int overgrowth;
    char *target; /* last ch to attack */
    sh_int wimpy;
    int deaf;
@@ -1239,6 +1240,7 @@ struct skill_type
    char *noun_damage; /* Damage message              */
    char *msg_off;     /* Wear off message            */
    char *room_off;    /* Wear off msg TO_ROOM        */
+   sh_int growth;     /* Overgrowth growth per cast (Druid spells) */
 };
 
 /*

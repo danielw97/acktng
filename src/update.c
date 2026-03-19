@@ -1440,6 +1440,15 @@ void char_update(void)
          }
       }
 
+      /* Overgrowth decay: out of combat, decay 1/tick (2 if resting/sleeping) */
+      if (ch->overgrowth > 0 && !is_fighting(ch) && ch->wait == 0)
+      {
+         int decay = (ch->position == POS_RESTING || ch->position == POS_SLEEPING) ? 2 : 1;
+         ch->overgrowth -= decay;
+         if (ch->overgrowth < 0)
+            ch->overgrowth = 0;
+      }
+
       /*
        * if ( ch->stunTimer > 0 )
        * {

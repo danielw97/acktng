@@ -59,6 +59,7 @@ sh_int gsn_bare_hand;
 sh_int gsn_elemental_attunement;
 sh_int gsn_oathshield, gsn_sanctified_strike;
 sh_int gsn_shadow_reading, gsn_hex_ward, gsn_reflex_disruption;
+sh_int gsn_substrate_piercing;
 
 /* ── minimal stubs ─────────────────────────────────────────────────── */
 const struct race_type race_table[MAX_RACE] = {[0] = {.skill = ""}};
@@ -71,6 +72,8 @@ const struct class_type gclass_table[MAX_TOTAL_CLASS] = {
     [15] = {.tier = REMORT}, [16] = {.tier = REMORT}, [17] = {.tier = REMORT},
     [18] = {.tier = ADEPT},  [19] = {.tier = ADEPT},  [20] = {.tier = ADEPT},
     [21] = {.tier = ADEPT},  [22] = {.tier = ADEPT},  [23] = {.tier = ADEPT},
+    [24] = {.tier = MORTAL}, [25] = {.tier = REMORT}, [26] = {.tier = REMORT},
+    [27] = {.tier = ADEPT},
 };
 
 /* ── skill_lookup helper ───────────────────────────────────────────── */

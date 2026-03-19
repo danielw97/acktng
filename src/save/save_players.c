@@ -226,6 +226,18 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
       fprintf(fp, "%2d ", ch->class_level[cnt]);
    fprintf(fp, "\n");
 
+   fprintf(fp, "Druidlevels  ");
+   for (cnt = CLASS_DRU; cnt <= CLASS_HIE; cnt++)
+      fprintf(fp, "%2d ", ch->class_level[cnt]);
+   fprintf(fp, "\n");
+
+   fprintf(fp, "Druidreinc   ");
+   for (cnt = CLASS_DRU; cnt <= CLASS_HIE; cnt++)
+      fprintf(fp, "%2d ", ch->pcdata->reincarnations[cnt]);
+   fprintf(fp, "\n");
+
+   fprintf(fp, "Overgrowth   %d\n", ch->overgrowth);
+
    fprintf(fp, "Reincarnations ");
    for (cnt = 0; cnt < MAX_CLASS; cnt++)
       fprintf(fp, "%2d ", ch->pcdata->reincarnations[cnt]);
@@ -528,6 +540,11 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
          ch->class_level[foo] = -1;
       for (foo = CLASS_GMA; foo < CLASS_GMA + MAX_CLASS; foo++)
          ch->class_level[foo] = -1;
+      for (foo = CLASS_DRU; foo <= CLASS_HIE; foo++)
+         ch->class_level[foo] = -1;
+      for (foo = CLASS_DRU; foo <= CLASS_HIE; foo++)
+         ch->pcdata->reincarnations[foo] = 0;
+      ch->overgrowth = 0;
       ch->pcdata->reincarnate_race = -1;
       ch->pcdata->reincarnate_class = -1;
       ch->pcdata->reincarnate_confirm = FALSE;
@@ -952,6 +969,22 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             break;
          }
 
+         if (!str_cmp(word, "Druidlevels"))
+         {
+            for (cnt = CLASS_DRU; cnt <= CLASS_HIE; cnt++)
+               ch->class_level[cnt] = fread_number(fp);
+            fMatch = TRUE;
+            break;
+         }
+
+         if (!str_cmp(word, "Druidreinc"))
+         {
+            for (cnt = CLASS_DRU; cnt <= CLASS_HIE; cnt++)
+               ch->pcdata->reincarnations[cnt] = fread_number(fp);
+            fMatch = TRUE;
+            break;
+         }
+
          break;
 
       case 'E':
@@ -1100,6 +1133,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             fMatch = TRUE;
             break;
          }
+         KEY("Overgrowth", ch->overgrowth, fread_number(fp));
          break;
 
       case 'P':

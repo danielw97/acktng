@@ -201,6 +201,7 @@ static const struct reinc_unlock_rule reinc_rules[] = {
     {&gsn_equip_wand, CLASS_WIZ, CLASS_SOR, 20},
     {&gsn_equip_wand, CLASS_NEC, CLASS_EGO, 20},
     {&gsn_equip_wand, CLASS_PRI, CLASS_PAL, 20},
+    {&gsn_substrate_piercing, CLASS_DRU, -1, 1},
 };
 
 bool can_use_skill(CHAR_DATA *ch, int gsn)

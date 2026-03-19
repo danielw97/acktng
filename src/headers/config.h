@@ -132,9 +132,14 @@
 #define CLASS_CRU 21
 #define CLASS_KIN 22
 #define CLASS_MAR 23
+/* Druid lineage (appended, non-contiguous with tier ranges) */
+#define CLASS_DRU 24
+#define CLASS_THO 25
+#define CLASS_WIL 26
+#define CLASS_HIE 27
 
 /* Total class count across all tiers */
-#define MAX_TOTAL_CLASS (MAX_CLASS + MAX_REMORT + MAX_CLASS)
+#define MAX_TOTAL_CLASS 28
 
 /* Helper macros to determine which tier a class ID belongs to */
 #define IS_MORTAL_CLASS(c) (gclass_table[c].tier == MORTAL)
