@@ -6,7 +6,7 @@ This document defines the intended design, role, and mechanical identity of ever
 
 - **Mortal** (6 classes): Base classes available at character creation.
 - **Remort** (12 classes): Advanced classes, each requiring one mortal prerequisite.
-- **Adept** (6 classes): Apex classes, each requiring two remort prerequisites. All adept classes gain +500 damcap.
+- **Adept** (6 classes): Apex classes, each requiring either of two associated remort prerequisites. All adept classes gain +500 damcap.
 
 ---
 
@@ -194,7 +194,7 @@ All adept classes gain +500 damcap.
 
 ### Nightblade (Nig)
 
-**Prerequisites:** Assassin + Warlock
+**Prerequisite (either):** Assassin + Warlock
 
 Increases Backstab and Circle's damage. Gains a double backstab (STANCE_DUAL_BACKSTAB). Enhances critical. Adds a new poison (Nightshade). Adds an extra attack. Has a new stance, **Nightblade**.
 
@@ -204,7 +204,7 @@ Increases Backstab and Circle's damage. Gains a double backstab (STANCE_DUAL_BAC
 
 ### Templar (Tem)
 
-**Prerequisites:** Paladin + Priest
+**Prerequisite (either):** Paladin + Priest
 
 Increases healing done. Adds cure poison, cure blind, remove curse to group heal and heal (Enhanced Heal). Has a new AoE holy cast. Increases damage from physical damage and holy spells. Adds an extra attack. Has a new stance, **Templar**.
 
@@ -214,7 +214,7 @@ Increases healing done. Adds cure poison, cure blind, remove curse to group heal
 
 ### Martial Artist (Mar)
 
-**Prerequisites:** Monk + Brawler
+**Prerequisite (either):** Monk + Brawler
 
 Increases autoattack damage. Adds an extra attack. Has a new combo skill. Has a new stance, **Martial**.
 
@@ -224,7 +224,7 @@ Increases autoattack damage. Adds an extra attack. Has a new combo skill. Has a 
 
 ### Crusader (Cru)
 
-**Prerequisites:** Knight + Swordsman
+**Prerequisite (either):** Knight + Swordsman
 
 Increases combo damage. Adds an extra attack. Has a new combo skill. Has a new stance, **Crusader**.
 
@@ -234,7 +234,7 @@ Increases combo damage. Adds an extra attack. Has a new combo skill. Has a new s
 
 ### Grand Magi (Gma)
 
-**Prerequisites:** Sorcerer + Wizard
+**Prerequisite (either):** Sorcerer + Wizard
 
 Increases spell damage and damcap. Will have new spells. Has an existing stance, **Magi**.
 
@@ -244,7 +244,7 @@ Increases spell damage and damcap. Will have new spells. Has an existing stance,
 
 ### Kinetimancer (Kin)
 
-**Prerequisites:** Necromancer + Egomancer
+**Prerequisite (either):** Necromancer + Egomancer
 
 Increases spell damage and damcap. Will have new spells. Has an existing stance, **Magi** (shared with Grand Magi via EITHER_CLASS).
 
