@@ -385,15 +385,222 @@ strength.
 | Mana/level | 1 | Primarily physical; minimal mana for a small number of WIS-powered observation abilities |
 | Tier | MORTAL | Available at character creation |
 
-### Suggested Mortal Skills
+### Mortal Skill List
 
-| Skill | Type | Description | Thematic Source |
-|-------|------|-------------|-----------------|
-| **Verdict** | Active (offensive) | Consume all testimony marks for a single strike whose damage and effect scale with marks (see Testimony section). The Sentinel's signature spend ability. | Tribunal sentence enforcement |
-| **Read Opponent** | Active (self-buff) | Instantly grants +2 testimony marks. 8-round cooldown. Costs an action — the Sentinel studies rather than attacks. | Silence-court testimony cross-reference |
-| **Binding Strike** | Active (offensive + debuff) | Melee attack that deals modest damage and reduces target dodge/parry for 3 rounds. Does not generate testimony. Bread-and-butter offensive skill that softens opponents for the verdict. | Tribunal restraint and containment |
-| **Testimonial Guard** | Passive | WIS-scaled resistance to fear, charm, and mental effects. At 5+ testimony marks, immunity to fear — the Sentinel's focus is too deep to be shaken. | Silence-court mind-discipline training |
-| **Ninth Descent** | Active (self-buff) | For 4 combat rounds, each successful avoidance grants +2 testimony instead of +1. High mana cost (uses the Sentinel's small mana pool). 20-round cooldown. The burst window for reaching high verdict tiers quickly. | Khenari Doctrine of Ninth Descent |
+The Sentinel has 19 skills: 8 class-specific, 11 shared. This is
+comparable to Warden (20) and Pugilist (16), with level distribution
+concentrated in 5–50 — faster than Cipher (5–70), slower than Warden
+(5–40).
+
+The design principle: shared skills give the Sentinel baseline melee
+competence; class-specific skills define its identity around observation,
+testimony accumulation, and verdict delivery.
+
+#### Complete Skill Table
+
+| Lv | Skill | Type | Class-Specific | Beats | Mana | Description |
+|----|-------|------|:-:|----:|-----:|-------------|
+| 5 | weapon mastery | Passive | | 0 | 0 | Improved weapon proficiency. Shared with Warden (5), Pugilist (15). |
+| 5 | conditioning | Passive | | 0 | 0 | Stamina training — improved movement regeneration. Shared with Pugilist (5). Sentinels train endurance through the silence-court descent rituals. |
+| 8 | parry | Passive | | 0 | 0 | Chance to deflect incoming melee attacks with weapon. Shared with Warden (10), Cipher (52). Early parry (level 8) reflects the Sentinel's core identity as a defensive reader — parry is the first avoidance skill and the first testimony generator. |
+| 10 | read opponent | Active (self-buff) | Yes | 24 | 8 | Study the current target, instantly granting +2 testimony marks. 8-round cooldown. Costs an action — the Sentinel observes rather than attacks. At WIS 22, the cooldown is reduced by 1 round (7 rounds). Use this to fast-charge toward a verdict threshold when defensive procs are building too slowly. |
+| 12 | testimonial guard | Passive | Yes | 0 | 0 | WIS-scaled resistance to fear, charm, and other mental effects. Resistance percentage equals `get_curr_wis(ch) * 3` (66% at WIS 22). At 5+ testimony marks on the current target, grants full immunity to fear — the Sentinel's observational focus is too deep to break. The silence-court descent ritual trained practitioners to maintain composure under psychic pressure; this is that training expressed as combat discipline. |
+| 15 | rescue | Active (utility) | | 12 | 0 | Interpose yourself between an ally and their attacker, redirecting aggro. Shared with Warden (15). The Tribunal enforced order — protecting the accused from mob justice was as much a duty as delivering sentences. |
+| 18 | dodge | Passive | | 0 | 0 | Chance to evade incoming melee attacks entirely. Shared with Cipher (7), Pugilist (27). Later than Cipher (who relies on evasion as primary defense) but earlier than Pugilist (who absorbs hits). Combined with early parry, gives the Sentinel two avoidance skills — and two testimony generators — by level 18. |
+| 20 | verdict | Active (offensive) | Yes | 24 | 0 | The Sentinel's signature ability. Consume all accumulated testimony marks and deliver a single melee strike whose damage multiplier and secondary effect scale with marks spent. No mana cost — the verdict is powered by observation, not magic. See the Testimony section for the full verdict tier table (Rebuke at 1–2 marks through Final Verdict at 9). Damage formula: `(base_damage * tier_multiplier) + (get_curr_wis(ch) * get_pseudo_level(ch) / 80)`. After spending, a 2-round cooldown before testimony accumulates again. |
+| 22 | binding strike | Active (offensive + debuff) | Yes | 18 | 5 | A precise melee strike targeting structural weaknesses identified through observation. Deals 1.5x weapon damage and reduces the target's dodge and parry by 10% for 3 rounds. Does not generate testimony (the Sentinel is acting, not observing). Low mana cost makes it sustainable as a bread-and-butter offensive skill between verdict cycles. The debuff stacks with the Censure verdict's HR reduction but does not stack with itself. |
+| 25 | read intent | Active (defensive) | | 18 | 0 | Anticipate the target's next action, granting a short defensive advantage. Shared with Warden (25), Cipher (20). For the Sentinel, this is a natural expression of the Tribunal's cross-reference methodology — reading intent is what the tradition was built on. |
+| 28 | shield block | Passive | | 0 | 0 | Chance to block incoming attacks with a shield. Shared with Warden (40), Pugilist (18). The Sentinel gets this at a middle level — earlier than Warden (who prefers two-handed weapons) but later than Pugilist (who uses shields as primary defense). Provides a third avoidance type and third testimony generation source. |
+| 30 | measured response | Passive | Yes | 0 | 0 | After a successful parry or dodge, chance to deliver an automatic counter-strike. Proc rate: `get_curr_wis(ch) * 2`% (44% at WIS 22). Unlike Counter (CON 22 racial passive, which fires after any avoidance including block), Measured Response fires only on parry and dodge, deals 75% weapon damage (not full), but generates +1 testimony on proc. This creates a feedback loop: avoid → counter-hit → testimony — but the loop is bounded by avoidance probability and the 75% damage penalty prevents it from being a pure DPS gain. The Tribunal methodology: observe, then act — but the act is measured, not overwhelming. |
+| 32 | fortify | Active (self-buff) | | 24 | 0 | Brace for incoming damage, temporarily increasing AC. Shared with Warden (22). Later than Warden because the Sentinel's primary defense is avoidance, not absorption — fortify is a fallback, not a core tool. |
+| 35 | ninth descent | Active (self-buff) | Yes | 12 | 25 | Enter the focused perceptive state of the silence-court descent ritual. For 4 combat rounds, each successful avoidance (dodge, parry, or block) grants +2 testimony instead of +1. Measured Response procs during Ninth Descent also grant +2. High mana cost (25 — roughly 25% of the Sentinel's mana pool at level 35 with 1 mana/level) limits this to once per fight. 20-round cooldown. This is the Sentinel's burst window: pop Ninth Descent, survive 4 rounds of incoming attacks, and reach Sealing or Final Verdict range in half the normal time. Named for the Khenari Doctrine of Ninth Descent — the nine-stage chant structure of the silence-court ritual, where each descent deepened perceptive acuity. |
+| 38 | disarm | Active (offensive) | | 24 | 0 | Knock the weapon from the target's hands. Shared with Warden (12), Cipher (53). Much later than Warden (who uses brute force disarms) because the Sentinel disarms through reading the opponent's grip — effective but slower to learn. |
+| 40 | nodisarm | Passive | | 0 | 0 | Resistance to being disarmed. Shared with Warden (30), Cipher (40). The Sentinel's weapon grip is informed by the same observational awareness that reads opponents — anticipating the disarm attempt before it arrives. |
+| 42 | dirt | Active (offensive + debuff) | | 18 | 0 | Throw dirt in the target's eyes, blinding them briefly. Shared with Warden (35), Cipher (36), Pugilist (47). The Sentinel's version is pragmatic, not elegant — the Tribunal was concerned with outcomes, not aesthetics. |
+| 45 | condemn | Active (offensive + debuff) | Yes | 24 | 15 | Formally denounce the target, applying a WIS-scaled debuff that reduces the target's saves vs. physical attacks by `get_curr_wis(ch) / 3` (7 at WIS 22) for 5 rounds. Can only be used against a target with 3+ testimony marks (the Sentinel needs sufficient observation before pronouncing judgment). Does not consume testimony — the marks remain for a future verdict. The condemn + verdict sequence is the Sentinel's peak single-target burst: condemn to lower saves, then fire a high-mark verdict for maximum effect. Mana cost (15) means using both condemn and Ninth Descent in the same fight is expensive at mortal levels. |
+| 50 | seal testimony | Active (defensive) | Yes | 12 | 10 | Preserve current testimony marks against loss. For 3 rounds after activation, stun effects reduce testimony by only 1 mark (instead of half), and target-switch penalty is reduced to losing 2 marks (instead of full reset). Does not prevent loss from flee/recall or target death. This is the Sentinel's anti-disruption tool for long boss fights where a stun at 7 marks would be devastating. The Tribunal sealed records against tampering — this is that practice applied to the Sentinel's accumulated observations. |
+
+**Total: 19 skills** — 8 class-specific, 11 shared.
+
+#### Skill Progression by Phase
+
+**Levels 5–18 (Foundation):**
+The Sentinel learns basic combat competence: weapon handling (5),
+conditioning (5), parry (8), read opponent (10), testimonial guard (12),
+rescue (15), dodge (18). By level 18, the Sentinel has two avoidance
+skills generating testimony and a way to fast-charge with read opponent
+— but no verdict yet. This teaches players the defensive rhythm before
+giving them the payoff.
+
+**Levels 20–30 (Core Identity):**
+Verdict (20) unlocks the spend mechanic and defines the class. Binding
+strike (22) provides sustained offense between verdict cycles. Read
+intent (25) and shield block (28) expand the defensive toolkit. Measured
+response (30) adds the counter-attack passive that feeds back into
+testimony. By level 30 the Sentinel's full combat loop is online: avoid
+→ build testimony → verdict → repeat.
+
+**Levels 32–42 (Refinement):**
+Fortify (32), ninth descent (35), disarm (38), nodisarm (40), and dirt
+(42) add tactical options. Ninth Descent is the key pickup — it
+transforms the Sentinel from a steady builder into someone who can burst
+to high verdict tiers when needed. This phase gives the Sentinel tools
+to handle varied situations rather than deepening the core loop.
+
+**Levels 45–50 (Mastery):**
+Condemn (45) and seal testimony (50) are the capstone skills that reward
+experienced play. Condemn adds a debuff → verdict burst combo for
+maximum single-target damage. Seal testimony protects against disruption
+in the hardest content. These skills have the highest skill floor — a
+new player doesn't need them, but a skilled Sentinel uses them to
+squeeze out the class's full potential.
+
+#### Comparison with Other Mortal Melee Classes
+
+| Aspect | Warden | Cipher | Pugilist | Sentinel |
+|--------|--------|--------|----------|----------|
+| Total skills | 20 | 25 | 16 | 19 |
+| Level range | 5–40 | 5–70 | 5–66 | 5–50 |
+| Active / Passive | 12 / 8 | 10 / 15 | 7 / 9 | 11 / 8 |
+| Class-specific | combo chain, warcry, berserk, rend | backstab, circle, shadow step, feign death, mark target | chi skills, flurry, pummel, pressure point | verdict, testimony skills, condemn, seal |
+| Resource system | Combo (varied offense → auto-finisher) | None (cooldown-based) | Chi (+1 per hit → choose skill) | Testimony (+1 per avoid → choose when to spend) |
+| Avoidance skills | parry, shield block | dodge, parry | dodge, shield block, roll with blow, counter | parry, dodge, shield block, measured response |
+| Primary defense | HP pool (7/level) | Evasion (dodge-first) | Toughness (7/level + counter + iron skin) | Avoidance (parry-first + WIS scaling) |
+
+#### Skill Table Entry Format
+
+For implementation, each class-specific skill maps to a skill table entry
+in `skills/skill_table_data.c`:
+
+```c
+/* Example: verdict */
+{NORM,
+ "verdict",
+ {LEVELS_INIT, L(CLASS_SEN, 20)},
+ spell_null,
+ TAR_CHAR_OFFENSIVE,
+ POS_FIGHTING,
+ &gsn_verdict,
+ SLOT(0),
+ 0,      /* no mana cost */
+ 24,     /* beats (lag) */
+ TRUE,   /* can_learn */
+ "verdict",
+ "!verdict!",
+ ""},
+
+/* Example: read opponent */
+{NORM,
+ "read opponent",
+ {LEVELS_INIT, L(CLASS_SEN, 10)},
+ spell_null,
+ TAR_CHAR_OFFENSIVE,
+ POS_FIGHTING,
+ &gsn_read_opponent,
+ SLOT(0),
+ 8,      /* mana cost */
+ 24,     /* beats */
+ TRUE,
+ "",
+ "You lose your read on $N.",
+ ""},
+
+/* Example: testimonial guard (passive) */
+{NORM,
+ "testimonial guard",
+ {LEVELS_INIT, L(CLASS_SEN, 12)},
+ spell_null,
+ TAR_IGNORE,
+ POS_STANDING,
+ &gsn_testimonial_guard,
+ SLOT(0),
+ 0,
+ 0,
+ FALSE,  /* passive — cannot be manually activated */
+ "",
+ "!testimonial guard!",
+ ""},
+
+/* Example: measured response (passive with counter-attack) */
+{NORM,
+ "measured response",
+ {LEVELS_INIT, L(CLASS_SEN, 30)},
+ spell_null,
+ TAR_IGNORE,
+ POS_FIGHTING,
+ &gsn_measured_response,
+ SLOT(0),
+ 0,
+ 0,
+ FALSE,
+ "measured response",
+ "!measured response!",
+ ""},
+
+/* Example: ninth descent */
+{NORM,
+ "ninth descent",
+ {LEVELS_INIT, L(CLASS_SEN, 35)},
+ spell_null,
+ TAR_IGNORE,
+ POS_FIGHTING,
+ &gsn_ninth_descent,
+ SLOT(0),
+ 25,     /* high mana cost */
+ 12,     /* short lag — it's a self-buff */
+ TRUE,
+ "",
+ "Your heightened awareness fades.",
+ ""},
+
+/* Example: condemn */
+{NORM,
+ "condemn",
+ {LEVELS_INIT, L(CLASS_SEN, 45)},
+ spell_null,
+ TAR_CHAR_OFFENSIVE,
+ POS_FIGHTING,
+ &gsn_condemn,
+ SLOT(0),
+ 15,
+ 24,
+ TRUE,
+ "",
+ "The weight of condemnation lifts from you.",
+ "$n is no longer condemned."},
+
+/* Example: seal testimony */
+{NORM,
+ "seal testimony",
+ {LEVELS_INIT, L(CLASS_SEN, 50)},
+ spell_null,
+ TAR_IGNORE,
+ POS_FIGHTING,
+ &gsn_seal_testimony,
+ SLOT(0),
+ 10,
+ 12,
+ TRUE,
+ "",
+ "Your sealed testimony fades.",
+ ""},
+
+/* Example: binding strike */
+{NORM,
+ "binding strike",
+ {LEVELS_INIT, L(CLASS_SEN, 22)},
+ spell_null,
+ TAR_CHAR_OFFENSIVE,
+ POS_FIGHTING,
+ &gsn_binding_strike,
+ SLOT(0),
+ 5,
+ 18,
+ TRUE,
+ "binding strike",
+ "Your movements are no longer impaired.",
+ "$n's movements are no longer impaired."},
+```
 
 ### Weapon Proficiencies
 
@@ -488,10 +695,17 @@ survives through DEX-based evasion rather than the Warden's HP pool.
 
 ### Damage Output
 
-The Sentinel should deal moderate sustained damage with occasional burst
-from Verdict Strike. WIS-scaled damage should be competitive with but not
-exceed STR-scaled damage at equivalent levels — the Sentinel's advantage is
-defensive reading and counter-striking, not raw output.
+The Sentinel should deal moderate sustained damage through binding strike
+and measured response procs, with significant burst from high-mark
+verdicts. Between verdict cycles, the Sentinel's DPS is lower than a
+Warden or Pugilist of equivalent level — no Enhanced Damage passive, no
+combo finishers, no chi skills. The verdict burst compensates: a 7–9
+mark verdict delivers damage comparable to a full Warden combo chain in a
+single hit. Over a long fight, total damage output should be competitive
+with but not exceed STR-scaled classes. The Sentinel's advantage is not
+raw output but the combination of sustained avoidance, targeted debuffs
+(binding strike, condemn, verdict secondary effects), and burst timing
+control.
 
 ---
 
@@ -533,10 +747,29 @@ defensive reading and counter-striking, not raw output.
 
 ### Skill Implementation
 
-1. Add Sentinel skills (verdict, read opponent, binding strike,
-   testimonial guard, ninth descent) to the skill table
-2. Implement skill functions in a new `skills_sentinel.c`
-3. Add WIS-based verdict damage scaling in `damage.c`
+1. Add 8 new GSN declarations to `globals.h` and `db.c`: `gsn_verdict`,
+   `gsn_read_opponent`, `gsn_binding_strike`, `gsn_testimonial_guard`,
+   `gsn_ninth_descent`, `gsn_measured_response`, `gsn_condemn`,
+   `gsn_seal_testimony`
+2. Add all 8 class-specific skill entries to `skills/skill_table_data.c`
+   (see Skill Table Entry Format in Class Design section)
+3. Add `CLASS_SEN` to the level arrays of 11 shared skills: weapon
+   mastery (5), conditioning (5), parry (8), rescue (15), dodge (18),
+   read intent (25), shield block (28), fortify (32), disarm (38),
+   nodisarm (40), dirt (42)
+4. Implement skill functions in a new `skills_sentinel.c`:
+   - `do_verdict()` — consume testimony, calculate tier, apply damage +
+     secondary effect
+   - `do_read_opponent()` — grant +2 testimony, apply cooldown
+   - `do_binding_strike()` — deal 1.5x damage, apply dodge/parry debuff
+   - `do_ninth_descent()` — apply testimony-doubling buff for 4 rounds
+   - `do_condemn()` — check 3+ testimony, apply saves debuff
+   - `do_seal_testimony()` — apply anti-disruption buff for 3 rounds
+5. Add passive checks in `fight.c`:
+   - `gsn_testimonial_guard` in fear/charm save calculations
+   - `gsn_measured_response` in `check_avoidance()` after parry/dodge
+     success (75% damage counter-attack + testimony generation)
+6. Add WIS-based verdict damage scaling in `damage.c`
 
 ### Lore Documentation
 
