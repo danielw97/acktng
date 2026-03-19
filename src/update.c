@@ -33,6 +33,7 @@
 #include "globals.h"
 #include "weapon_bond.h"
 #include <signal.h>
+#include "npc_dialogue.h"
 
 bool should_abort_for_checkpoint_timeout(int usage_now, int checkpoint, int threshold,
                                          bool disable_abort)
@@ -915,6 +916,12 @@ void mobile_update(void)
             act("$n gets $p.", ch, obj_best, NULL, TO_ROOM);
          }
       }
+
+      /*
+       * Don't wander while waiting to deliver a dialogue response.
+       */
+      if (IS_SET(ch->act, ACT_AI_DIALOGUE) && ch->dlg_pending)
+         continue;
 
       /*
        * Wander
@@ -2023,6 +2030,8 @@ static void hotreboot_update(void)
 
 void update_handler(void)
 {
+   npc_dialogue_deliver();
+
    static int pulse_message;
    static int objfun_check;
    static int pulse_area;

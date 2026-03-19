@@ -31,6 +31,7 @@
 #include <string.h>
 #include <time.h>
 #include "globals.h"
+#include "npc_dialogue.h"
 
 /*
  * Local functions.
@@ -960,6 +961,19 @@ void do_say(CHAR_DATA *ch, char *argument)
    {
       sprintf(buf, "$n says '%s$t%s'.", color_string(ppl, "say"), color_string(ppl, "normal"));
       act(buf, ch, argument, ppl, TO_VICT);
+   }
+
+   /* Dispatch to an AI-enabled NPC in the room (players only, one NPC per say) */
+   if (!IS_NPC(ch))
+   {
+      for (ppl = ch->in_room->first_person; ppl != NULL; ppl = ppl->next_in_room)
+      {
+         if (IS_NPC(ppl) && IS_SET(ppl->act, ACT_AI_DIALOGUE))
+         {
+            npc_dialogue_dispatch(ppl, ch, argument);
+            break;
+         }
+      }
    }
    return;
 }

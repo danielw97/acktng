@@ -23,7 +23,7 @@ PROF    =
 #SOLARIS_LINK = -lnsl -lsocket -lresolv
 
 C_FLAGS = -O -g2 -Wall -DACK_43 $(PROF) $(SOLARIS_FLAG) -Iheaders -Iai/headers -Itests/headers -Iquests
-L_FLAGS = -O -g2 -lcrypt $(PROF) $(SOLARIS_LINK)
+L_FLAGS = -O -g2 -lcrypt -lcurl -lpthread $(PROF) $(SOLARIS_LINK)
 
 OBJDIR = build/obj
 
@@ -150,7 +150,7 @@ SKILL_OBJS = \
 
 QUEST_OBJS = quests/template.o quests/state.o quests/cartography.o quests/notify.o quests/commands.o quests/crusade.o
 
-O_FILES = affect.o ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_wiz.o \
+O_FILES = affect.o ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_wiz.o npc_dialogue.o \
 	  areachk.o board.o build.o buildare.o buildtab.o caravan.o clutch.o comm.o hotreboot.o login.o socket.o prompt.o \
 	  const.o const_color.o const_class.o const_race.o const_clan.o const_exp.o const_liq.o \
 	  damage.o cloak.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
