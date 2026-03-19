@@ -110,7 +110,9 @@ The relationship between Serathi sky-road communities and Kiess is the defining 
 
 The Serathi response to this encroachment has been consistent: they document it (sky-readers add every new structure to the roost-chronicles with the date of first observation), they protest it through the formal mechanism of sky-road declaration (hovering in formation above the encroaching structure and performing the territorial recitation), and they negotiate it through the established process of corridor-for-chronicle exchange. They do not wage war over it. They do not abandon the corridors. They are persistent without being aggressive, which Kiess's Syndic Council finds simultaneously reassuring and maddening.
 
-See also: `kelshadra_lore.md`, `eccentric_woodland_lore.md`
+The sky-road recognition dispute is now in its third generation of active negotiation. Kiess granted provisional recognition of the Thornwall Corridor segment two generations ago — in exchange for Evermeet chronicle recitation — but cannot formalize it without Midgaard's participation. Midgaard's Continuity faction blocks the question from inter-city corridor law proceedings by categorizing it as an internal Kiess matter. The sky-readers' roost-chronicles document which officials have blocked which proceedings, and with what concurrent commercial interests in the encroaching construction. A quiet conversation with Mafdet's Ledger Houses about the Littoral Branch framework's potential to provide recognition outside Midgaard's jurisdiction is at an early stage.
+
+See also: `kelshadra_lore.md`, `eccentric_woodland_lore.md`, `skyroad_recognition_dispute_lore.md`
 
 ### The Forest of Confusion and Verdant Depths
 
@@ -118,7 +120,9 @@ Serathi sky-roads cross above the Forest of Confusion, and their roost-chronicle
 
 Their relationship with the Rivennid is limited but respectful: the Serathi observe from above the same forest that the Rivennid inhabit below, and their complementary perspectives on the forest's state have occasionally produced useful intelligence for both peoples. The Serathi's primary concern is the disruption of thermal-current patterns that the dead forest zones create — the blight changes ground-surface temperature in ways that destabilize the updraft columns that Serathi use for sustained flight over the affected area.
 
-See also: `rivennid_lore.md`, `verdant_depths_lore.md`, `withered_depths_lore.md`
+The roost-chronicles' advance pattern data has recently become significant in a new context: when overlaid on historical records of the Spirebound Conclave's survey party movements, the Withered Depths' expansion pattern maps onto the Conclave's old survey routes with a correspondence too close to be coincidental. This observation — along with parallel findings from Rivennid mycelial signals, Khephari crystal resonance detection, Deltari flow-reading, and Kethari aquifer-silence records — has prompted the first active coordination discussion in the Parallel Record Compact, of which the Serathi sky-readers are a member.
+
+See also: `rivennid_lore.md`, `verdant_depths_lore.md`, `withered_depths_lore.md`, `withered_depths_convergence_lore.md`, `parallel_record_compact_lore.md`
 
 ### Midgaard
 

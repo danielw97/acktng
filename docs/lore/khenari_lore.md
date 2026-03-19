@@ -131,13 +131,23 @@ This is consistent with the Khenari approach to such matters generally: the reco
 
 See also: `necromancer_lore.md`
 
+### Ushabti
+
+The question of whether Ushabti destruction requires Khenari death-administration has been formally open since a Khenari mnemonist administered the Ninth Descent for a human subject destroyed in the same cosmic law judgment that reduced an Ushabti to rubble — and then could not determine whether the rubble required a ledger entry. The Khenari's provisional ruling holds that Ushabti who demonstrate specific memory distinguishing them as individuals require death-ledger entry. The working protocol has produced seventeen **Stone Ledger** entries — a supplemental archive maintained for Ushabti subjects, distinct from the standard death-ledger pending formal resolution.
+
+Several Ushabti have visited the Stone Ledger to review and, in three cases, correct their entries. An Ushabti reviewing its own death-ledger entry has no precedent in Khenari archival tradition. The full ledger-law council has not yet convened on the question; a preliminary panel has been reviewing the working group's materials for two generations without issuing a readiness determination.
+
+See also: `ushabti_lore.md`, `khenari_ushabti_jurisdiction_lore.md`
+
 ### Kethari
 
 The Khenari and the Kethari share adjacent territory in the Akh'enet corridor and parallel experiences of human institutional engagement. Both peoples provide expertise to human institutions; both are systematically under-credited for that expertise; both maintain independent records that are more accurate than the human institutional records that reference them.
 
 The most substantive difference is in their relationship to death and time. The Khenari process death administratively — it is a transaction requiring nine stages of documentation. The Kethari process death geologically — it is a material transition in which organic matter desiccates, compresses, and becomes part of the desert's physical record. Both approaches are serious; neither finds the other incomprehensible; both occasionally find the other's framework insufficient for specific problems.
 
-See also: `kethari_lore.md`
+Within the Desert Compact — the informal order of precedence that structures relations among the eastern peoples — the Kethari hold acknowledged first presence (water-memory predating all formal institutions) while the Khenari hold second presence (death-administration authority that applies wherever people die, crossing geographic lines). Both peoples contribute to cross-verification of the Parallel Record Compact's consolidated documentation of the sealed institutional record.
+
+See also: `kethari_lore.md`, `desert_compact_lore.md`, `parallel_record_compact_lore.md`
 
 ---
 

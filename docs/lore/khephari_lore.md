@@ -100,7 +100,9 @@ The practical relationship is genuinely collaborative. Khephari earth-sense and 
 
 The Ashfall catastrophe sits in that gap as its most catastrophic example. Khephari warnings were documented, submitted, and filed.
 
-See also: `human_lore.md`
+A more recent example: Khephari road engineers in the western territories have been detecting returning crystal resonance — the same frequency signature documented during the Conclave's operational period — in road foundations near the Forest of Confusion for thirty years. The signal is strengthening and directional. Their supplemental records on this observation have not been requested by any road-law maintenance body. The Khephari have shared the data with the Parallel Record Compact, where it has combined with four other peoples' parallel observations to triangulate on a specific site in the Withered Depths' interior.
+
+See also: `human_lore.md`, `withered_depths_convergence_lore.md`
 
 ### Kethari
 
@@ -108,7 +110,9 @@ The Khephari and the Kethari are both ancient desert peoples with comprehensive 
 
 Their relationship is characterized by the particular respect that similar epistemologies generate: both evaluate knowledge by physical verification rather than institutional authorization; both have deep, patient relationships with the desert's timescale; both have the experience of watching human institutions receive important information and file it without action. The Ashfall catastrophe sits in Khephari memory as the most catastrophic example; the Kethari have their own accumulated instances across the water-rights history of the Deepwell Confluence. They compare notes occasionally, without particular rancor.
 
-See also: `kethari_lore.md`
+In the Desert Compact's informal order of precedence — the ancient structure of mutual acknowledgment among the four eastern peoples — both hold distinct authority domains: Kethari first presence on water and deep-time physical knowledge; Khephari third presence on structural authority and built infrastructure. Their engineers and elders consult each other as a matter of practice on any question where their domains intersect.
+
+See also: `kethari_lore.md`, `desert_compact_lore.md`
 
 ### Serathi
 
