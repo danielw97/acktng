@@ -18,7 +18,7 @@
 #include "globals.h"
 
 #define MAX_WORLD_CARAVANS 5
-#define CARAVAN_MOB_VNUM 3358
+#define CARAVAN_MOB_VNUM 65398
 #define CARAVAN_SAY_PULSE_MIN 2
 #define CARAVAN_SAY_PULSE_MAX 5
 #define CARAVAN_SAY_CHANCE 35
