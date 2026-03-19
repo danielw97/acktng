@@ -449,11 +449,11 @@ static bool parse_json_response(const char *json, char *out, size_t cap)
 
    out[0] = '\0';
 
-   p = strstr(json, "\"content\":");
+   p = strstr(json, "\"response\":");
    if (p == NULL)
       return FALSE;
 
-   p += strlen("\"content\":");
+   p += strlen("\"response\":");
    while (*p == ' ' || *p == '\t') p++;
    if (*p != '"') return FALSE;
    p++; /* skip opening quote */

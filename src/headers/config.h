@@ -968,8 +968,8 @@
 #define ACT_AI_DIALOGUE BIT_34 /* NPC responds to say via LLM */
 
 /* NPC Dialogue AI */
-#define OPENCLAW_URL     "http://localhost:11434/v1/chat/completions"
-#define OPENCLAW_MODEL   "ack-npc"
+#define OPENCLAW_URL     "http://192.168.1.111:8000/v1/chat"
+#define OPENCLAW_MODEL   "llama-3.3-70b-versatile"
 #define OPENCLAW_TIMEOUT 5L   /* curl timeout in seconds */
 #define MAX_DIALOGUE_TURNS  8
 #define MAX_REQUEST_TURNS   9 /* history + new user turn */
