@@ -83,7 +83,15 @@ a purely combat-session resource.
 
 ### How Overgrowth Works
 
-**On every Druid spell cast:**
+Overgrowth only activates for spells with a non-zero `growth` field in the
+spell table — i.e., spells specifically designed for the Druid lineage. If a
+Druid-lineage character casts a non-Druid spell (e.g., from a previous Magi
+class), it uses normal mana and does not interact with Overgrowth at all. This
+means a character who has leveled as both Magi and Druid has two separate
+casting modes: mana spells from their Magi list and HP spells from their Druid
+list. Overgrowth never bleeds into non-Druid casting.
+
+**On every Druid spell cast (growth > 0):**
 
 1. Calculate base HP cost from the spell's `min_mana` field (reinterpreted as
    `min_hp_cost` for Druid spells)
@@ -222,12 +230,13 @@ The existing `do_cast()` in `magic.c` checks `ch->mana < mana` and deducts
 from `ch->mana`. For Druid classes, this path is replaced:
 
 ```c
-if (is_druid_class(ch))
+if (skill_table[sn].growth > 0)
 {
+    /* Druid spell: HP cost with Overgrowth scaling */
     int base_cost = skill_table[sn].min_mana;
     int cost = base_cost * (100 + ch->overgrowth * 2) / 100;
 
-    if (ch->hit <= cost && ch->hit <= 1)
+    if (ch->hit <= 1)
     {
         send_to_char("Your body has nothing left to give.\n\r", ch);
         return;
@@ -261,8 +270,11 @@ else
 }
 ```
 
-The `is_druid_class()` helper returns TRUE for Druid, Thornwarden, Wildspeaker,
-and Hierophant — any class in the Druid lineage.
+The check is `skill_table[sn].growth > 0`, not `is_druid_class(ch)`. This
+means the HP-cost path activates based on the **spell**, not the **caster**.
+Only spells with a non-zero `growth` field (Druid spells) use HP and generate
+Overgrowth. A Druid casting a Magi spell they learned in a previous class
+uses mana normally.
 
 ### Implementation: Overgrowth Power Multiplier
 
@@ -270,9 +282,9 @@ The Overgrowth power multiplier is applied in damage calculation functions.
 A new helper:
 
 ```c
-int apply_overgrowth_bonus(CHAR_DATA *ch, int base_damage)
+int apply_overgrowth_bonus(CHAR_DATA *ch, int sn, int base_damage)
 {
-    if (!is_druid_class(ch) || ch->overgrowth == 0)
+    if (skill_table[sn].growth == 0 || ch->overgrowth == 0)
         return base_damage;
     return base_damage * (100 + ch->overgrowth * 3) / 100;
 }
@@ -280,7 +292,9 @@ int apply_overgrowth_bonus(CHAR_DATA *ch, int base_damage)
 
 This is called in `spell_damage()` (for offensive spells) and in healing spell
 functions (Overgrowth also amplifies healing spells — the substrate gives more
-of everything). Applied after spellpower modifiers, before victim resistance.
+of everything). The `sn` parameter is checked for `growth > 0` so the bonus
+only applies to Druid spells, not to any mana spell a Druid-lineage character
+might also know. Applied after spellpower modifiers, before victim resistance.
 
 ### Implementation: Overgrowth Decay in update.c
 
