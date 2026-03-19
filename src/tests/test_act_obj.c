@@ -10,6 +10,7 @@ bool should_enforce_equip_restrictions(const CHAR_DATA *ch);
 #define KEEP_CHEST_PUT_ALLOWED 0
 #define KEEP_CHEST_PUT_ERR_FULL 1
 #define KEEP_CHEST_PUT_ERR_INVALID_ITEM 2
+#define KEEP_CHEST_PUT_ERR_BONDED 3
 
 static void init_obj(OBJ_DATA *obj)
 {
@@ -133,10 +134,26 @@ static void test_keep_chest_defaults_to_fifty_when_capacity_unset(void)
    assert(keep_chest_put_denial_reason(&chest, &candidate) == KEEP_CHEST_PUT_ERR_FULL);
 }
 
+static void test_keep_chest_rejects_bonded_weapon(void)
+{
+   OBJ_DATA chest;
+   OBJ_DATA weapon;
+
+   init_obj(&chest);
+   init_obj(&weapon);
+   chest.item_type = ITEM_CONTAINER;
+   chest.value[1] = CONT_KEEP_CHEST;
+   weapon.item_type = ITEM_WEAPON;
+   SET_BIT(weapon.extra_flags, ITEM_BONDED);
+
+   assert(keep_chest_put_denial_reason(&chest, &weapon) == KEEP_CHEST_PUT_ERR_BONDED);
+}
+
 int main(void)
 {
    test_keep_chest_rejects_corpse_pc();
    test_keep_chest_rejects_container_items();
+   test_keep_chest_rejects_bonded_weapon();
    test_keep_chest_respects_capacity_limit();
    test_keep_chest_defaults_to_fifty_when_capacity_unset();
    test_equip_restrictions_enforced_for_players();
