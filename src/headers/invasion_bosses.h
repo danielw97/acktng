@@ -44,7 +44,8 @@ static const BOSS_PROFILE boss_profiles[] = {
      * ================================================================== */
     {"Lady Sekhmet, Wrath of the Solar Court",
      "@@e",
-     "War standards ignite as @@eLady Sekhmet, Wrath of the Solar Court@@N marches from the sealed sancta! "
+     "War standards ignite as @@eLady Sekhmet, Wrath of the Solar Court@@N marches from the sealed "
+     "sancta! "
      "Solar fire and pyramid stone are her armor — the blood courts ride again!",
      ELE_FIRE | ELE_EARTH,
      ELE_WATER | ELE_HOLY,
@@ -65,7 +66,8 @@ static const BOSS_PROFILE boss_profiles[] = {
      * ================================================================== */
     {"The Moon Sovereign",
      "@@d",
-     "The ground trembles as @@dThe Moon Sovereign@@N ascends from the nadir of the Southern Pyramid! "
+     "The ground trembles as @@dThe Moon Sovereign@@N ascends from the nadir of the Southern "
+     "Pyramid! "
      "Seven tiers of death rise with $m — silence, decay, shadow, bone, venom, fire, and void!",
      ELE_WATER | ELE_SHADOW,
      ELE_FIRE | ELE_EARTH,
@@ -86,13 +88,15 @@ static const BOSS_PROFILE boss_profiles[] = {
      * ================================================================== */
     {"The Recursor",
      "@@p",
-     "The air fills with whispered docket numbers as @@pThe Recursor@@N converges from all directions! "
+     "The air fills with whispered docket numbers as @@pThe Recursor@@N converges from all "
+     "directions! "
      "It is not a creature — it is a procedure that forgot how to stop!",
      ELE_SHADOW | ELE_MENTAL,
      ELE_HOLY | ELE_AIR,
      {"hellspawn", "blindness", "curse", "harm", "energy drain", "weaken", NULL},
      "$n's distributed presence converges and $s voice echoes from every surface: RESUBMIT!",
-     "$n strikes with administrative precision, each blow a verdict rendered in institutional code!",
+     "$n strikes with administrative precision, each blow a verdict rendered in institutional "
+     "code!",
      "headbutt"},
 
     /* ==================================================================
@@ -108,7 +112,8 @@ static const BOSS_PROFILE boss_profiles[] = {
      * ================================================================== */
     {"The Thornwood Lich",
      "@@d",
-     "The ground splits with crystalline light as @@dThe Thornwood Lich@@N rises from the substrate! "
+     "The ground splits with crystalline light as @@dThe Thornwood Lich@@N rises from the "
+     "substrate! "
      "Root and bone fuse beneath $s will — the estate-forest marches as one predatory system!",
      ELE_EARTH | ELE_SHADOW,
      ELE_FIRE | ELE_HOLY,
@@ -129,7 +134,8 @@ static const BOSS_PROFILE boss_profiles[] = {
      * ================================================================== */
     {"Vizier Khamsin the Deceiver",
      "@@y",
-     "Sand and ink swirl as @@yVizier Khamsin the Deceiver@@N steps from a corridor that was not there! "
+     "Sand and ink swirl as @@yVizier Khamsin the Deceiver@@N steps from a corridor that was not "
+     "there! "
      "History itself bends around $m — what you remember may already be $s revision!",
      ELE_MENTAL | ELE_SHADOW,
      ELE_HOLY | ELE_PHYSICAL,
@@ -193,7 +199,8 @@ static const BOSS_PROFILE boss_profiles[] = {
      * ================================================================== */
     {"Apep the Serpent God",
      "@@d",
-     "Names dissolve and memories contradict as @@dApep the Serpent God@@N uncoils from the Black Sun! "
+     "Names dissolve and memories contradict as @@dApep the Serpent God@@N uncoils from the Black "
+     "Sun! "
      "It is not a creature — it is the hunger of anti-light given form!",
      ELE_SHADOW | ELE_MENTAL | ELE_POISON,
      ELE_HOLY | ELE_FIRE,
@@ -300,7 +307,8 @@ static const BOSS_PROFILE boss_profiles[] = {
      * ================================================================== */
     {"High Sorceress Neferu",
      "@@a",
-     "Seal geometry fractures the air as @@aHigh Sorceress Neferu@@N steps from a fold in containment! "
+     "Seal geometry fractures the air as @@aHigh Sorceress Neferu@@N steps from a fold in "
+     "containment! "
      "She was consumed by the mathematics she mastered — or perhaps she became them!",
      ELE_WATER | ELE_AIR | ELE_MENTAL,
      ELE_FIRE | ELE_EARTH,
@@ -321,12 +329,14 @@ static const BOSS_PROFILE boss_profiles[] = {
      * ================================================================== */
     {"Warden-Prime Istrane of the Ninth Chain",
      "@@d",
-     "Command chains rattle as @@dWarden-Prime Istrane of the Ninth Chain@@N rises from the Sepulcher! "
+     "Command chains rattle as @@dWarden-Prime Istrane of the Ninth Chain@@N rises from the "
+     "Sepulcher! "
      "The dead answer to chain of command — and $e has never relinquished $s post!",
      ELE_PHYSICAL | ELE_SHADOW,
      ELE_HOLY | ELE_AIR,
      {"hellspawn", "harm", "curse", "blindness", NULL},
-     "$n raises a chain of command links and the oath-bound dead answer with terrifying discipline!",
+     "$n raises a chain of command links and the oath-bound dead answer with terrifying "
+     "discipline!",
      "$n's sepulcher mace crashes down with the force of postmortem continuity!",
      "bash"},
 

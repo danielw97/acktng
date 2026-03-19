@@ -592,7 +592,8 @@ static const char *invasion_boss_trash_talk_for_profile(int prof_idx)
         "The basalt outcrop where they signed their Covenant will be my altar.",
         "True salvation requires the city's destruction. Honest poverty follows.",
         "I carry a fragment of Conclave crystal that still hums with the mountain's judgment.",
-        "The Temple Circle calls me heretic. The Wardens call me terrorist. The mountain calls me voice.",
+        "The Temple Circle calls me heretic. The Wardens call me terrorist. The mountain calls me "
+        "voice.",
         "Civilization is tinder stacked against a volcano. I am the spark.",
         "The Cinderteeth speak. Those who listen carry fire. Those who do not become ash."},
        /* 6 - The Blightmother */
@@ -705,7 +706,8 @@ static const char *invasion_boss_trash_talk_for_profile(int prof_idx)
         "The Seal College maintained static defenses. I proposed adaptive ones. Adaptation won.",
         "Every fracture in the seal geometry is a door I can use.",
         "Consumed or transformed -- the distinction is less clear from this side.",
-        "My calibration instruments descend from the obelisk-line survey tradition. Precision is heritage.",
+        "My calibration instruments descend from the obelisk-line survey tradition. Precision is "
+        "heritage.",
         "I am Neferu. I did not disappear. I distributed."},
        /* 13 - Warden-Prime Istrane of the Ninth Chain */
        {"A dead officer is a broken chain link. I fixed the chain permanently.",
@@ -717,7 +719,8 @@ static const char *invasion_boss_trash_talk_for_profile(int prof_idx)
         "Chain-of-command continuity requires that death be reclassified as a staffing issue.",
         "I have enforced containment since before your grandparents' grandparents were born.",
         "The Night of Unsounded Bells broke the Gloamvault. It did not break the Ninth Chain.",
-        "My oath-bound mace has struck every living thing that tried to leave without authorization.",
+        "My oath-bound mace has struck every living thing that tried to leave without "
+        "authorization.",
         "The Chamber of Redactions edits records. I edit the people who dispute the records.",
         "Postmortem binding is not cruelty. It is institutional resilience.",
         "The Crypts were built to make disappearance permanent. I am the enforcement mechanism.",

@@ -47,8 +47,7 @@ static const WAVE_MOB_PROFILE invasion_wave_profiles[] = {
      "form radiating the cold of the preparation chamber and its tools repurposed for harm.",
      ELE_POISON | ELE_MENTAL, ELE_FIRE | ELE_HOLY,
      CAST_ACID_BLAST | CAST_MIND_BOLT | CAST_BLOODY_TEARS, DEF_CURE_LIGHT,
-     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM,
-     0},
+     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM, 0},
 
     /* 3  ASP CULTIST */
     {"Asp Cultist", "@@g",
@@ -81,10 +80,9 @@ static const WAVE_MOB_PROFILE invasion_wave_profiles[] = {
     {"Venom-Hierophant", "@@g",
      "A Venom-Hierophant of the Moon Sovereign's fifth tier sweeps forward in robes damp with "
      "offered poison, its liturgy reduced to hissing syllables that raise blisters on the air.",
-     ELE_POISON | ELE_SHADOW, ELE_HOLY | ELE_FIRE,
-     CAST_ACID_BLAST | CAST_PLANERGY | CAST_SUFFOCATE, DEF_CURE_SERIOUS,
-     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM,
-     0},
+     ELE_POISON | ELE_SHADOW, ELE_HOLY | ELE_FIRE, CAST_ACID_BLAST | CAST_PLANERGY | CAST_SUFFOCATE,
+     DEF_CURE_SERIOUS,
+     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM, 0},
 
     /* 7  KHAMSIN ILLUSIONIST */
     {"Khamsin Illusionist", "@@d",
@@ -123,8 +121,8 @@ static const WAVE_MOB_PROFILE invasion_wave_profiles[] = {
      "A Chain-Officer of the Ninth Chain steps from the Crypts' enforcement corridor still wearing "
      "its docket of active warrants, restraint-links jangling with the weight of old sentences.",
      ELE_PHYSICAL | ELE_SHADOW, ELE_HOLY | ELE_AIR, 0, 0,
-     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_FIFTH | MOB_HEADBUTT | MOB_DUALWIELD |
-         MOB_ENHANCED | MOB_PARRY | MOB_DODGE | MOB_NODISARM | MOB_NOTRIP,
+     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_FIFTH | MOB_HEADBUTT | MOB_DUALWIELD | MOB_ENHANCED |
+         MOB_PARRY | MOB_DODGE | MOB_NODISARM | MOB_NOTRIP,
      20},
 
     /* 11 NULL-SCRIBED SHADE */
@@ -143,8 +141,7 @@ static const WAVE_MOB_PROFILE invasion_wave_profiles[] = {
      "rotted to something unrecognisable.",
      ELE_SHADOW | ELE_MENTAL, ELE_FIRE | ELE_HOLY,
      CAST_MIND_FLAIL | CAST_MIND_BOLT | CAST_BLOODY_TEARS, DEF_CURE_CRITIC,
-     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM,
-     0},
+     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM, 0},
 
     /* 13 RECURRENCE SENTINEL */
     {"Recurrence Sentinel", "@@l",
@@ -161,8 +158,8 @@ static const WAVE_MOB_PROFILE invasion_wave_profiles[] = {
      "seal of its sentence bolted through its collar and its weapons still issued by an office "
      "that disavowed it decades ago.",
      ELE_PHYSICAL | ELE_MENTAL, ELE_HOLY | ELE_AIR, 0, 0,
-     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_FIFTH | MOB_DUALWIELD | MOB_HEADBUTT |
-         MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM,
+     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_FIFTH | MOB_DUALWIELD | MOB_HEADBUTT | MOB_COUNTER |
+         MOB_PARRY | MOB_DODGE | MOB_NODISARM,
      10},
 
     /* 15 ARCHIVE REVENANT */
@@ -171,8 +168,7 @@ static const WAVE_MOB_PROFILE invasion_wave_profiles[] = {
      "pages and its voice the dry scratch of an autoquill still transcribing.",
      ELE_MENTAL | ELE_SHADOW, ELE_HOLY | ELE_FIRE,
      CAST_EGO_WHIP | CAST_MIND_BOLT | CAST_BLOODY_TEARS, DEF_CURE_SERIOUS,
-     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM,
-     0},
+     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM, 0},
 
     /* 16 VOID HERALD */
     {"Void Herald", "@@l",
@@ -194,7 +190,8 @@ static const WAVE_MOB_PROFILE invasion_wave_profiles[] = {
     /* 18 WARDEN-SHARD */
     {"Warden-Shard", "@@d",
      "A Warden-Shard is a splinter of Warden-Prime Istrane's fractured authority given independent "
-     "will, still wearing the insignia of the Ninth Chain and still executing containment protocol.",
+     "will, still wearing the insignia of the Ninth Chain and still executing containment "
+     "protocol.",
      ELE_SHADOW | ELE_PHYSICAL, ELE_HOLY | ELE_AIR, 0, 0,
      MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_FIFTH | MOB_HEADBUTT | MOB_CHARGE | MOB_ENHANCED |
          MOB_PARRY | MOB_DODGE | MOB_NODISARM | MOB_NOTRIP,
@@ -206,8 +203,7 @@ static const WAVE_MOB_PROFILE invasion_wave_profiles[] = {
      "its logic intact but its purpose narrowed to a single unresolved case file: yours.",
      ELE_MENTAL | ELE_SHADOW, ELE_HOLY | ELE_EARTH,
      CAST_MIND_FLAIL | CAST_HELLSPAWN | CAST_EGO_WHIP, DEF_CURE_LIGHT,
-     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM,
-     0},
+     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM, 0},
 
     /* ==================================================================== */
     /* ---- SPIREBOUND CONCLAVE / DEPTHS ---------------------------------- */
@@ -239,10 +235,9 @@ static const WAVE_MOB_PROFILE invasion_wave_profiles[] = {
     {"Withered Druid", "@@g",
      "A Withered Druid staggers from the Depths' infected root-line, the Blightmother's spores "
      "flowering along its clavicles and its earth-commune rites now channelling pure corruption.",
-     ELE_EARTH | ELE_POISON, ELE_FIRE | ELE_HOLY,
-     CAST_EARTHQUAKE | CAST_ACID_BLAST | CAST_PLANERGY, DEF_CURE_LIGHT,
-     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_HEADBUTT | MOB_PARRY | MOB_DODGE | MOB_NODISARM,
-     0},
+     ELE_EARTH | ELE_POISON, ELE_FIRE | ELE_HOLY, CAST_EARTHQUAKE | CAST_ACID_BLAST | CAST_PLANERGY,
+     DEF_CURE_LIGHT,
+     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_HEADBUTT | MOB_PARRY | MOB_DODGE | MOB_NODISARM, 0},
 
     /* 23 BLIGHTWOOD SHAMBLER */
     {"Blightwood Shambler", "@@g",
@@ -261,8 +256,7 @@ static const WAVE_MOB_PROFILE invasion_wave_profiles[] = {
      "scratching entries no living hand will read.",
      ELE_SHADOW | ELE_MENTAL, ELE_HOLY | ELE_FIRE,
      CAST_HELLSPAWN | CAST_EGO_WHIP | CAST_BLOODY_TEARS, DEF_CURE_SERIOUS,
-     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM,
-     0},
+     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM, 0},
 
     /* 25 THORNFANG HUNTER */
     {"Thornfang Hunter", "@@g",
@@ -299,8 +293,8 @@ static const WAVE_MOB_PROFILE invasion_wave_profiles[] = {
      "A Crystal Substrate Warden of Thornwood stands on a bed of self-grown facets, its body "
      "threaded through with the crystal substrate's binding lattice and its patrol-range "
      "extended beyond any prior record.",
-     ELE_EARTH | ELE_MENTAL, ELE_FIRE | ELE_AIR,
-     CAST_EARTHQUAKE | CAST_MIND_BOLT | CAST_HEAT_ARMOR, DEF_CURE_LIGHT,
+     ELE_EARTH | ELE_MENTAL, ELE_FIRE | ELE_AIR, CAST_EARTHQUAKE | CAST_MIND_BOLT | CAST_HEAT_ARMOR,
+     DEF_CURE_LIGHT,
      MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_HEADBUTT | MOB_CHARGE | MOB_ENHANCED | MOB_PARRY |
          MOB_DODGE | MOB_NODISARM | MOB_NOTRIP,
      20},
@@ -325,18 +319,17 @@ static const WAVE_MOB_PROFILE invasion_wave_profiles[] = {
      "command articles still sealed at its belt and its hollow eyes registering you as an "
      "unclassified intrusion requiring termination.",
      ELE_PHYSICAL | ELE_SHADOW, ELE_FIRE | ELE_HOLY, 0, 0,
-     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_FIFTH | MOB_DUALWIELD | MOB_HEADBUTT |
-         MOB_ENHANCED | MOB_PARRY | MOB_DODGE | MOB_NODISARM | MOB_NOTRIP,
+     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_FIFTH | MOB_DUALWIELD | MOB_HEADBUTT | MOB_ENHANCED |
+         MOB_PARRY | MOB_DODGE | MOB_NODISARM | MOB_NOTRIP,
      20},
 
     /* 31 BINDER COLLEGIUM CLERK */
     {"Binder Collegium Clerk", "@@d",
      "A Binder Collegium Clerk advances with ink-blackened fingers and the methodical calm of "
      "someone who treats every soul it encounters as a case file awaiting proper categorisation.",
-     ELE_SHADOW | ELE_MENTAL, ELE_HOLY | ELE_FIRE,
-     CAST_HELLSPAWN | CAST_MIND_BOLT | CAST_EGO_WHIP, DEF_CURE_SERIOUS,
-     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM,
-     0},
+     ELE_SHADOW | ELE_MENTAL, ELE_HOLY | ELE_FIRE, CAST_HELLSPAWN | CAST_MIND_BOLT | CAST_EGO_WHIP,
+     DEF_CURE_SERIOUS,
+     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM, 0},
 
     /* 32 GALLOWS SYNDICATE ENFORCER */
     {"Gallows Syndicate Enforcer", "@@d",
@@ -344,8 +337,8 @@ static const WAVE_MOB_PROFILE invasion_wave_profiles[] = {
      "its coil of toxin-soaked wire and its chit-ledger of outstanding collection orders, "
      "your name already pencilled onto the next available line.",
      ELE_POISON | ELE_PHYSICAL, ELE_HOLY | ELE_FIRE, CAST_ACID_BLAST | CAST_PLANERGY, 0,
-     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_KICK | MOB_TRIP | MOB_DIRT | MOB_DISARM |
-         MOB_PARRY | MOB_DODGE,
+     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_KICK | MOB_TRIP | MOB_DIRT | MOB_DISARM | MOB_PARRY |
+         MOB_DODGE,
      10},
 
     /* 33 CRIMSON HOUSEHOLD RETAINER */
@@ -365,8 +358,7 @@ static const WAVE_MOB_PROFILE invasion_wave_profiles[] = {
      "a forecast it filed three years ago.",
      ELE_MENTAL | ELE_AIR, ELE_EARTH | ELE_FIRE,
      CAST_MIND_FLAIL | CAST_MIND_BOLT | CAST_EGO_WHIP | CAST_PHOBIA, 0,
-     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM,
-     0},
+     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM, 0},
 
     /* 35 EBON PULSE VESSEL */
     {"Ebon Pulse Vessel", "@@d",
@@ -375,8 +367,7 @@ static const WAVE_MOB_PROFILE invasion_wave_profiles[] = {
      "shadow registers and its purpose the perpetuation of institutional continuity at any cost.",
      ELE_SHADOW | ELE_MENTAL, ELE_HOLY | ELE_FIRE,
      CAST_HELLSPAWN | CAST_BLOODY_TEARS | CAST_PHOBIA | CAST_MIND_BOLT, DEF_CURE_SERIOUS,
-     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM,
-     0},
+     MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_COUNTER | MOB_PARRY | MOB_DODGE | MOB_NODISARM, 0},
 
     /* 36 LAST BELL REVENANT */
     {"Last Bell Revenant", "@@d",
@@ -427,8 +418,8 @@ static const WAVE_MOB_PROFILE invasion_wave_profiles[] = {
      "A Root Covenant Druid of the Thornwood rises from the loam it was kneeling in, the "
      "earth-communion of the crystal substrate still threading its fingers and its binding "
      "rites drawn from geology rather than sky.",
-     ELE_EARTH | ELE_WATER, ELE_FIRE | ELE_AIR,
-     CAST_EARTHQUAKE | CAST_PLANERGY | CAST_SUFFOCATE, DEF_CURE_SERIOUS,
+     ELE_EARTH | ELE_WATER, ELE_FIRE | ELE_AIR, CAST_EARTHQUAKE | CAST_PLANERGY | CAST_SUFFOCATE,
+     DEF_CURE_SERIOUS,
      MOB_SECOND | MOB_THIRD | MOB_FOURTH | MOB_HEADBUTT | MOB_COUNTER | MOB_PARRY | MOB_DODGE |
          MOB_NODISARM,
      0},
