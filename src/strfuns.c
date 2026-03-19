@@ -1357,7 +1357,7 @@ char *affect_bit_name(int vector)
 /*
  * Return ascii name of extra flags vector.
  */
-char *extra_bit_name(int extra_flags)
+char *extra_bit_name(unsigned long long extra_flags)
 {
    static char buf[512];
 
@@ -1424,6 +1424,8 @@ char *extra_bit_name(int extra_flags)
       safe_strcat(MAX_STRING_LENGTH, buf, " fist");
    if (extra_flags & ITEM_TWO_HANDED)
       safe_strcat(MAX_STRING_LENGTH, buf, " 2-handed");
+   if (extra_flags & ITEM_BONDED)
+      safe_strcat(MAX_STRING_LENGTH, buf, " bonded");
 
    return (buf[0] != '\0') ? buf + 1 : "none";
 }

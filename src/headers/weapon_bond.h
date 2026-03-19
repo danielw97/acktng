@@ -83,10 +83,9 @@
 
 #define WEAPON_TYPE_SWORD 3
 
-/* ── Bonded weapon marker: value[9] set to this magic number ──── */
+/* ── Bonded weapon marker: uses ITEM_BONDED extra flag (BIT_33) ── */
 
-#define BOND_MARKER 7777
-#define IS_OBJ_BONDED(obj) ((obj)->value[9] == BOND_MARKER)
+#define IS_OBJ_BONDED(obj) (!!(IS_SET((obj)->extra_flags, ITEM_BONDED)))
 
 /* ── Bond Data (stored on PC_DATA, persisted in player files) ─── */
 

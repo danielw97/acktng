@@ -898,7 +898,7 @@ struct obj_index_data
    char *description;
    unsigned short vnum;
    int item_type;
-   int extra_flags;
+   unsigned long long extra_flags;
    int wear_flags;
    /*
     * class_flags changed to item_apply for magic apply, etc
@@ -946,7 +946,7 @@ struct obj_data
    char *short_descr;
    char *description;
    int item_type;
-   int extra_flags;
+   unsigned long long extra_flags;
    int wear_flags;
    int item_apply;
    int wear_loc;

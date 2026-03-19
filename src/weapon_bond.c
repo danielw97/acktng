@@ -442,7 +442,7 @@ static void bond_weapon(CHAR_DATA *ch, char *argument)
    ch->pcdata->bond = bond;
 
    /* Transform the existing weapon into the bonded version */
-   obj->value[9] = BOND_MARKER;
+   SET_BIT(obj->extra_flags, ITEM_BONDED);
    SET_BIT(obj->extra_flags, ITEM_NODROP);
    SET_BIT(obj->extra_flags, ITEM_NOREMOVE);
    SET_BIT(obj->extra_flags, ITEM_NODISARM);

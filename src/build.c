@@ -2941,7 +2941,8 @@ void build_setobject(CHAR_DATA *ch, char *argument)
    char *argn;
    OBJ_INDEX_DATA *pObj;
    AREA_DATA *pArea;
-   int value, num;
+   unsigned long long value;
+   int num;
 
    smash_tilde(argument);
    argument = one_argument(argument, arg1);

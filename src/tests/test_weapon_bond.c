@@ -226,8 +226,8 @@ static void test_is_bonded_weapon(void)
    pcdata.bond = &bond;
    assert(is_bonded_weapon(&ch, &obj) == FALSE);
 
-   /* PC with bond data and obj marked */
-   obj.value[9] = BOND_MARKER;
+   /* PC with bond data and obj marked with ITEM_BONDED */
+   SET_BIT(obj.extra_flags, ITEM_BONDED);
    assert(is_bonded_weapon(&ch, &obj) == TRUE);
 
    printf("  test_is_bonded_weapon: PASSED\n");
