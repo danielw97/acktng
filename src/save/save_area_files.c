@@ -354,8 +354,8 @@ void build_save_objects()
    fprintf(SaveFile, "%s~\n", pObject->name);
    fprintf(SaveFile, "%s~\n", pObject->short_descr);
    fprintf(SaveFile, "%s~\n", pObject->description);
-   fprintf(SaveFile, "%i %i %i %i\n", pObject->item_type, pObject->extra_flags, pObject->wear_flags,
-           pObject->item_apply);
+   fprintf(SaveFile, "%i %llu %i %i\n", pObject->item_type, pObject->extra_flags,
+           pObject->wear_flags, pObject->item_apply);
 
    /*
     * Check for pills, potions, scrolls, staffs and wands.
@@ -1053,7 +1053,7 @@ void load_objects(FILE *fp)
       pObjIndex->description[0] = UPPER(pObjIndex->description[0]);
 
       pObjIndex->item_type = fread_number(fp);
-      pObjIndex->extra_flags = fread_number(fp);
+      pObjIndex->extra_flags = fread_number_ull(fp);
       if (area_revision < 15)
       {
          int temp_flags, index, new_flags = 0;

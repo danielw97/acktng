@@ -21,7 +21,9 @@ void send_to_char(const char *txt, CHAR_DATA *ch)
    send_count++;
 }
 
-void act(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type) {}
+void act(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type)
+{
+}
 
 void char_from_room(CHAR_DATA *ch)
 {
@@ -35,7 +37,9 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *room)
    room_changed++;
 }
 
-void do_look(CHAR_DATA *ch, char *arg) {}
+void do_look(CHAR_DATA *ch, char *arg)
+{
+}
 
 /* Minimal str_prefix: returns FALSE (match) when astr is a prefix of bstr */
 bool str_prefix(const char *astr, const char *bstr)
@@ -113,10 +117,10 @@ static void test_npc_is_ignored(void)
    CHAR_DATA ch;
    PC_DATA pcdata;
    clear_character(&ch, &pcdata);
-   ch.pcdata = NULL;                    /* NPC has no pcdata */
-   ch.act = ACT_IS_NPC;                 /* mark as NPC */
+   ch.pcdata = NULL;    /* NPC has no pcdata */
+   ch.act = ACT_IS_NPC; /* mark as NPC */
    do_caravan(&ch, "kiess");
-   assert(send_count == 0);             /* NPCs get no output and are silently rejected */
+   assert(send_count == 0); /* NPCs get no output and are silently rejected */
    assert(room_changed == 0);
 }
 

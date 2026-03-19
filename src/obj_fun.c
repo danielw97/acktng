@@ -41,6 +41,10 @@ DECLARE_OBJ_FUN(objfun_healing);      /* test obj_fun   */
 DECLARE_OBJ_FUN(objfun_dispeller);    /* test obj_fun   */
 DECLARE_OBJ_FUN(objfun_regen);        /* test obj_fun   */
 DECLARE_OBJ_FUN(objfun_clan);
+DECLARE_OBJ_FUN(objfun_bond_edge);
+DECLARE_OBJ_FUN(objfun_bond_guard);
+DECLARE_OBJ_FUN(objfun_bond_keen);
+DECLARE_OBJ_FUN(objfun_bond_spirit);
 
 OBJ_FUN *obj_fun_lookup(const char *name)
 {
@@ -64,6 +68,14 @@ OBJ_FUN *obj_fun_lookup(const char *name)
       return objfun_regen;
    if (!str_cmp(name, "objfun_clan"))
       return objfun_clan;
+   if (!str_cmp(name, "objfun_bond_edge"))
+      return objfun_bond_edge;
+   if (!str_cmp(name, "objfun_bond_guard"))
+      return objfun_bond_guard;
+   if (!str_cmp(name, "objfun_bond_keen"))
+      return objfun_bond_keen;
+   if (!str_cmp(name, "objfun_bond_spirit"))
+      return objfun_bond_spirit;
 
    return 0;
 }
@@ -91,6 +103,14 @@ char *rev_obj_fun_lookup(void *func)
 
    if (func == objfun_clan)
       return "objfun_clan";
+   if (func == objfun_bond_edge)
+      return "objfun_bond_edge";
+   if (func == objfun_bond_guard)
+      return "objfun_bond_guard";
+   if (func == objfun_bond_keen)
+      return "objfun_bond_keen";
+   if (func == objfun_bond_spirit)
+      return "objfun_bond_spirit";
 
    return 0;
 }
@@ -107,6 +127,10 @@ void print_obj_fun_lookup(char *buf)
    strcat(buf, " objfun_dispeller \n\r  ");
    strcat(buf, " objfun_regen \n\r  ");
    strcat(buf, " objfun_clan \n\r");
+   strcat(buf, " objfun_bond_edge \n\r");
+   strcat(buf, " objfun_bond_guard \n\r");
+   strcat(buf, " objfun_bond_keen \n\r");
+   strcat(buf, " objfun_bond_spirit \n\r");
 
    return;
 }

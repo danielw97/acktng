@@ -1,5 +1,6 @@
 #include "globals.h"
 #include "magic.h"
+#include "weapon_bond.h"
 
 void disarm(CHAR_DATA *ch, CHAR_DATA *victim);
 int find_door(CHAR_DATA *ch, char *arg);
@@ -60,6 +61,16 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim)
    if (obj == NULL || IS_SET(obj->extra_flags, ITEM_FIST))
    {
       send_to_char("Your opponent is not wielding a weapon.\n\r", ch);
+      return;
+   }
+
+   /* Bonded weapons cannot be disarmed */
+   if (IS_OBJ_BONDED(obj))
+   {
+      act("$N's bonded blade resists your disarm attempt!", ch, NULL, victim, TO_CHAR);
+      act("Your bonded blade holds firm against $n's disarm!", ch, NULL, victim, TO_VICT);
+      act("$N's blade flares as it resists $n's disarm attempt!", ch, NULL, victim, TO_NOTVICT);
+      WAIT_STATE(ch, 18);
       return;
    }
 

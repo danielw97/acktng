@@ -646,6 +646,7 @@ const struct lookup_type tab_obj_flags[] = {{"nada", 0, 0},
                                             {"wand", BIT_30, NO_USE},
                                             {"fist", BIT_31, NO_USE},
                                             {"two-handed", BIT_32, NO_USE},
+                                            {"bonded", BIT_33, NO_USE},
                                             {NULL, 0}};
 
 const struct lookup_type tab_wear_flags[] = {{"halo", BIT_1, 50},

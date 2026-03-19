@@ -85,7 +85,7 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
    fprintf(fp, "ShortDescr   %s~\n", obj->short_descr);
    fprintf(fp, "Description  %s~\n", obj->description);
    fprintf(fp, "Vnum         %d\n", obj->pIndexData->vnum);
-   fprintf(fp, "ExtraFlags   %d\n", obj->extra_flags);
+   fprintf(fp, "ExtraFlags   %llu\n", obj->extra_flags);
    fprintf(fp, "WearFlags    %d\n", obj->wear_flags);
    fprintf(fp, "WearLoc      %d\n", obj->wear_loc);
    if (obj->obj_fun != NULL)
@@ -213,7 +213,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
          break;
 
       case 'E':
-         KEY("ExtraFlags", obj->extra_flags, fread_number(fp));
+         KEY("ExtraFlags", obj->extra_flags, fread_number_ull(fp));
 
          if (!str_cmp(word, "ExtraDescr"))
          {
@@ -523,7 +523,7 @@ static void fwrite_chest(OBJ_DATA *obj, FILE *fp, int iNest)
    fprintf(fp, "ShortDescr   %s~\n", obj->short_descr);
    fprintf(fp, "Description  %s~\n", obj->description);
    fprintf(fp, "Vnum         %d\n", obj->pIndexData->vnum);
-   fprintf(fp, "ExtraFlags   %d\n", obj->extra_flags);
+   fprintf(fp, "ExtraFlags   %llu\n", obj->extra_flags);
    fprintf(fp, "WearFlags    %d\n", obj->wear_flags);
    fprintf(fp, "WearLoc      %d\n", obj->wear_loc);
    if (obj->obj_fun != NULL)
@@ -638,7 +638,7 @@ static void fread_chest_item(FILE *fp)
          break;
 
       case 'E':
-         KEY("ExtraFlags", obj->extra_flags, fread_number(fp));
+         KEY("ExtraFlags", obj->extra_flags, fread_number_ull(fp));
 
          if (!str_cmp(word, "ExtraDescr"))
          {

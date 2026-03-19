@@ -65,6 +65,7 @@ extern sh_int gsn_spell_critical;
 extern sh_int gsn_spell_critical_damage;
 extern sh_int gsn_detox;
 extern sh_int gsn_enhanced_sword;
+extern sh_int gsn_weapon_bond;
 extern sh_int gsn_enhanced_sword_critical;
 extern sh_int gsn_two_handed;
 extern sh_int gsn_bare_hand;
@@ -659,6 +660,7 @@ DECLARE_DO_FUN(do_ignore);
 */
 DECLARE_DO_FUN(do_qpspend);
 DECLARE_DO_FUN(do_revenant);
+DECLARE_DO_FUN(do_bond);
 DECLARE_DO_FUN(do_disguise);
 DECLARE_DO_FUN(do_frenzy);
 DECLARE_DO_FUN(do_adrenaline);

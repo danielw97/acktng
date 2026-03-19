@@ -172,6 +172,7 @@ sh_int gsn_shadow_reading;
 sh_int gsn_hex_ward;
 sh_int gsn_reflex_disruption;
 sh_int gsn_hide;
+sh_int gsn_weapon_bond;
 sh_int gsn_hunt;
 sh_int gsn_peek;
 sh_int gsn_pick_lock;

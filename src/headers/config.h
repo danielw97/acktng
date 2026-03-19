@@ -1174,6 +1174,7 @@
 #define ITEM_EXTRA_WAND BIT_30
 #define ITEM_FIST BIT_31
 #define ITEM_TWO_HANDED BIT_32
+#define ITEM_BONDED BIT_33
 
 /* Class-restricted stuff dropped. */
 

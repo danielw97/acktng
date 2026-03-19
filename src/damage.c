@@ -4,6 +4,7 @@
 #include "magic.h"
 #include "cloak.h"
 #include "special.h"
+#include "weapon_bond.h"
 
 #include <stdio.h>
 #include <stdlib.h> /* For div_t, div() */
@@ -148,7 +149,10 @@ void update_kill_counts(CHAR_DATA *ch, CHAR_DATA *victim)
       if (!IS_NPC(victim))
          ch->pcdata->pkills++;
       else
+      {
          ch->pcdata->mkills++;
+         bond_award_kill(ch, victim);
+      }
    }
 
    if (!IS_NPC(victim))
