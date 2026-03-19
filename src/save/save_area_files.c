@@ -319,6 +319,10 @@ void build_save_mobs()
    fprintf(SaveFile, "\n");
    if (pMobIndex->lore_flags != 0)
       fprintf(SaveFile, "^ %ld\n", pMobIndex->lore_flags);
+   if (IS_SET(pMobIndex->act, ACT_AI_DIALOGUE) && pMobIndex->ai_prompt != NULL &&
+       pMobIndex->ai_prompt[0] != '\0')
+      fprintf(SaveFile, "a %d %d %s~\n", pMobIndex->ai_knowledge, pMobIndex->accent,
+              pMobIndex->ai_prompt);
 
    Pointer = Pointer->next;
    if (Pointer == NULL) /* End */

@@ -570,6 +570,18 @@ void build_showmob(CHAR_DATA *ch, char *argument)
            pMob->long_descr[0] != '\0' ? pMob->long_descr : "(none).\n\r");
    strcat(buf1, buf);
 
+   if (IS_SET(pMob->act, ACT_AI_DIALOGUE))
+   {
+      sprintf(buf, "@@WAI Knowledge:@@y %s\n\r",
+              bit_table_lookup(tab_knowledge, pMob->ai_knowledge));
+      strcat(buf1, buf);
+      sprintf(buf, "@@WAI Accent:@@y %s\n\r", rev_table_lookup(tab_accent, pMob->accent));
+      strcat(buf1, buf);
+      sprintf(buf, "@@WAI Prompt:@@y %s\n\r",
+              (pMob->ai_prompt != NULL && pMob->ai_prompt[0] != '\0') ? pMob->ai_prompt : "(none)");
+      strcat(buf1, buf);
+   }
+
    if (pMob->spec_fun != 0)
    {
       sprintf(buf, "@@WMobile has spec fun: @@y%s\n\r", rev_spec_lookup(pMob->spec_fun));
@@ -2199,6 +2211,69 @@ void build_setmob(CHAR_DATA *ch, char *argument)
    {
       build_strdup(&pMob->description, arg3, TRUE, ch);
       area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "ai_prompt"))
+   {
+      if (!IS_SET(pMob->act, ACT_AI_DIALOGUE))
+      {
+         send_to_char("Mob must have ai_dialogue act flag set first.\n\r", ch);
+         return;
+      }
+      build_strdup(&pMob->ai_prompt, arg3, TRUE, ch);
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "knowledge"))
+   {
+      unsigned long long int value;
+
+      if (!IS_SET(pMob->act, ACT_AI_DIALOGUE))
+      {
+         send_to_char("Mob must have ai_dialogue act flag set first.\n\r", ch);
+         return;
+      }
+      value = table_lookup(tab_knowledge, arg3);
+      if (value == 0)
+      {
+         char buf[MAX_STRING_LENGTH];
+         sprintf(buf, "Invalid knowledge flag. Valid flags:\n\r");
+         table_printout(tab_knowledge, buf);
+         send_to_char(buf, ch);
+         return;
+      }
+      if (IS_SET(pMob->ai_knowledge, value))
+         REMOVE_BIT(pMob->ai_knowledge, value);
+      else
+         SET_BIT(pMob->ai_knowledge, value);
+      area_modified(pArea);
+      send_to_char("Knowledge flag toggled.\n\r", ch);
+      return;
+   }
+
+   if (!str_cmp(arg2, "accent"))
+   {
+      unsigned long long int value;
+
+      if (!IS_SET(pMob->act, ACT_AI_DIALOGUE))
+      {
+         send_to_char("Mob must have ai_dialogue act flag set first.\n\r", ch);
+         return;
+      }
+      value = table_lookup(tab_accent, arg3);
+      if (value == 0 && str_cmp(arg3, "none"))
+      {
+         char buf[MAX_STRING_LENGTH];
+         sprintf(buf, "Invalid accent. Valid accents:\n\r");
+         table_printout(tab_accent, buf);
+         send_to_char(buf, ch);
+         return;
+      }
+      pMob->accent = (sh_int)value;
+      area_modified(pArea);
+      send_to_char("Accent set.\n\r", ch);
       return;
    }
 
