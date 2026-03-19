@@ -750,11 +750,10 @@ struct pc_data
    char *bamfout;
    char *title;
    char *immskll;
-   char *host;           /* Used to tell PC last login site */
-   sh_int failures;      /* Failed logins */
-   sh_int clan;          /* will be used to denote clan membership */
-   sh_int claneq_weight; /* melee/caster/tank stat weighting for clan equipment */
-   int generation;       /* Used for vamps */
+   char *host;      /* Used to tell PC last login site */
+   sh_int failures; /* Failed logins */
+   sh_int clan;     /* will be used to denote clan membership */
+   int generation;  /* Used for vamps */
    sh_int perm_str;
    sh_int perm_int;
    sh_int perm_wis;

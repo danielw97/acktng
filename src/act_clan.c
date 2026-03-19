@@ -47,31 +47,15 @@ static const char *get_clan_color_code(int clan_id)
    return "@@N";
 }
 
-/* Stat weight for clan equipment: melee=8, caster=3, tank=13 (matches emblem system) */
-static int claneq_stat_weight(int weight_type)
+/* Map obj->weight to a human-readable style name.
+ * melee=8, caster=3, tank=13 (matches emblem system). */
+static const char *claneq_weight_name(int obj_weight)
 {
-   switch (weight_type)
-   {
-   case CLANEQ_WEIGHT_CASTER:
-      return 3;
-   case CLANEQ_WEIGHT_TANK:
-      return 13;
-   default:
-      return 8; /* melee */
-   }
-}
-
-static const char *claneq_weight_name(int weight_type)
-{
-   switch (weight_type)
-   {
-   case CLANEQ_WEIGHT_CASTER:
+   if (obj_weight == CLANEQ_WEIGHT_CASTER)
       return "caster";
-   case CLANEQ_WEIGHT_TANK:
+   if (obj_weight == CLANEQ_WEIGHT_TANK)
       return "tank";
-   default:
-      return "melee";
-   }
+   return "melee";
 }
 
 /* Create a clan equipment piece for a character. */
@@ -112,7 +96,7 @@ OBJ_DATA *create_clan_eq(CHAR_DATA *ch)
    obj->item_type = ITEM_ARMOR;
    obj->level = level;
    obj->wear_flags = ITEM_TAKE | ITEM_WEAR_CLAN_COLORS;
-   obj->weight = claneq_stat_weight(ch->pcdata->claneq_weight);
+   obj->weight = CLANEQ_WEIGHT_MELEE;
    obj->cost = 0;
    obj->obj_fun = obj_fun_lookup("objfun_clan");
 
@@ -143,7 +127,8 @@ OBJ_DATA *create_clan_eq(CHAR_DATA *ch)
    return obj;
 }
 
-/* Adjust an existing clan eq piece to match the owner's current level and weight. */
+/* Adjust an existing clan eq piece to match the owner's current level.
+ * The object's weight (stat focus) is preserved. */
 void claneq_adjust(OBJ_DATA *obj, CHAR_DATA *ch)
 {
    AFFECT_DATA *paf;
@@ -158,7 +143,6 @@ void claneq_adjust(OBJ_DATA *obj, CHAR_DATA *ch)
       level = 1;
 
    obj->level = level;
-   obj->weight = claneq_stat_weight(ch->pcdata->claneq_weight);
 
    /* Strip existing affects before recalculating */
    for (paf = obj->first_apply; paf != NULL; paf = paf_next)
@@ -228,12 +212,15 @@ void do_claneq(CHAR_DATA *ch, char *argument)
       return;
    }
 
+   obj = find_clan_eq(ch);
+
    if (argument[0] == '\0')
    {
+      const char *current = obj != NULL ? claneq_weight_name(obj->weight) : "melee";
       snprintf(buf, sizeof(buf),
                "Your clan equipment is currently set to: @@W%s@@N.\n\r"
                "Syntax: claneq <melee|caster|tank>\n\r",
-               claneq_weight_name(ch->pcdata->claneq_weight));
+               current);
       send_to_char(buf, ch);
       return;
    }
@@ -250,28 +237,25 @@ void do_claneq(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   ch->pcdata->claneq_weight = new_weight;
+   if (obj == NULL)
+   {
+      send_to_char("You don't have your clan colors.\n\r", ch);
+      return;
+   }
 
-   obj = find_clan_eq(ch);
-   if (obj != NULL)
    {
       bool was_worn = (obj->wear_loc != WEAR_NONE);
 
       if (was_worn)
          unequip_char(ch, obj);
 
+      obj->weight = new_weight;
       claneq_adjust(obj, ch);
 
       if (was_worn)
          equip_char(ch, obj, WEAR_CLAN_COLORS);
 
       snprintf(buf, sizeof(buf), "Your clan colors shimmer and reform with a %s focus!\n\r",
-               claneq_weight_name(new_weight));
-      send_to_char(buf, ch);
-   }
-   else
-   {
-      snprintf(buf, sizeof(buf), "Clan equipment weight set to %s. Your colors will adjust.\n\r",
                claneq_weight_name(new_weight));
       send_to_char(buf, ch);
    }

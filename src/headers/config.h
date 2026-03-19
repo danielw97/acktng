@@ -66,9 +66,9 @@
 
 #define MAX_CLAN_EQ 6 /* Number of clan eq items */
 
-#define CLANEQ_WEIGHT_MELEE 0
-#define CLANEQ_WEIGHT_CASTER 1
-#define CLANEQ_WEIGHT_TANK 2
+#define CLANEQ_WEIGHT_MELEE 8
+#define CLANEQ_WEIGHT_CASTER 3
+#define CLANEQ_WEIGHT_TANK 13
 #define MAX_COLOR 16 /* eg look, prompt, shout */
 #define MAX_ANSI 28  /* eg red, black, etc (was 11) */
 #define MAX_ALIASES 6
