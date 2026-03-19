@@ -1237,7 +1237,7 @@
 
     {NORM,
      "regen",
-     {LEVELS_INIT},
+     {LEVELS_INIT, L(CLASS_MAG, 40), L(CLASS_WIZ, 25)},
      spell_regen,
      TAR_CHAR_DEFENSIVE,
      POS_FIGHTING,
