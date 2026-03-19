@@ -717,6 +717,12 @@ struct char_data
    void *dlg_state;   /* NPC_DLG_STATE* for ACT_AI_DIALOGUE mobs; NULL otherwise */
    bool dlg_pending;  /* TRUE while an NPC_DLG_REQ is outstanding */
    REVENANT_DATA *revenant; /* non-NULL if this NPC is a revenant */
+
+   /* Sentinel testimony system */
+   int testimony;               /* accumulated marks on current target, 0-9 */
+   CHAR_DATA *testimony_target; /* who marks are tracked against */
+   int testimony_cooldown;      /* rounds until testimony can accumulate again after verdict */
+   int testimony_combat_rounds; /* rounds in combat with current target (for passive tick) */
 };
 
 /*

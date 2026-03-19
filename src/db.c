@@ -238,6 +238,17 @@ sh_int gsn_pressure_point;
 sh_int gsn_feint;
 sh_int gsn_conditioning;
 
+/* Sentinel skills */
+sh_int gsn_vigilance;
+sh_int gsn_verdict;
+sh_int gsn_read_opponent;
+sh_int gsn_binding_strike;
+sh_int gsn_testimonial_guard;
+sh_int gsn_ninth_descent;
+sh_int gsn_measured_response;
+sh_int gsn_condemn;
+sh_int gsn_seal_testimony;
+
 /* Druid skills */
 sh_int gsn_substrate_piercing;
 

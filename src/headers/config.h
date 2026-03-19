@@ -141,9 +141,11 @@
 #define CLASS_THO 25
 #define CLASS_WIL 26
 #define CLASS_HIE 27
+/* Sentinel lineage (appended) */
+#define CLASS_SEN 28
 
 /* Total class count across all tiers */
-#define MAX_TOTAL_CLASS 28
+#define MAX_TOTAL_CLASS 29
 
 /* Helper macros to determine which tier a class ID belongs to */
 #define IS_MORTAL_CLASS(c) (gclass_table[c].tier == MORTAL)
