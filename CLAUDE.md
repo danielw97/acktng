@@ -4,6 +4,10 @@
 
 ACK!TNG is a MUD (Multi-User Dungeon) game server written in C, descended from Diku → Merc → ACK! lineage. The server binary is called `ack` and runs from the `area/` directory, accepting telnet connections on a configurable port.
 
+## Game World Lore
+
+When you need information about the game world (history, factions, geography, lore, etc.), search `docs/lore/` — it is the canonical source for all world-building documentation. The directories `lore/` and `data/knowledge/` are generated from `docs/lore/` and contain no additional information.
+
 ## Build System
 
 All build commands run from the `src/` directory:
