@@ -288,7 +288,7 @@ static int city_for_room(int vnum)
 typedef struct
 {
    char role[16];
-   char content[512];
+   char content[1024];
 } DIALOGUE_TURN;
 
 typedef struct
@@ -312,7 +312,7 @@ static NPC_DLG_STATE *get_or_create_dlg_state(CHAR_DATA *npc)
 typedef struct
 {
    char role[16];
-   char content[512];
+   char content[1024];
 } DIALOGUE_TURN_COPY;
 
 typedef struct npc_dlg_req
@@ -331,7 +331,7 @@ typedef struct npc_dlg_resp
 {
    CHAR_DATA *npc;
    CHAR_DATA *player;
-   char response_text[512];
+   char response_text[1024];
    struct npc_dlg_resp *next;
 } NPC_DLG_RESP;
 
@@ -731,7 +731,7 @@ static void *npc_dialogue_worker(void *unused)
       req_head = req->next;
       pthread_mutex_unlock(&req_mutex);
 
-      char response_text[512];
+      char response_text[1024];
       call_tngai(req, response_text, sizeof(response_text));
 
       if (response_text[0] != '\0')
@@ -1439,7 +1439,7 @@ void npc_dialogue_deliver(void)
 
       /* Apply accent post-processing */
       {
-         char accented[512];
+         char accented[1024];
          accent_text(resp->npc, resp->response_text, accented, sizeof(accented));
 
          /* Append assistant turn to live history */
