@@ -517,7 +517,8 @@ static void bond_status(CHAR_DATA *ch)
       if (bond->mastery)
          send_to_char("@@eMastery@@N:     @@WACTIVE@@N\n\r", ch);
       else if (bond->rank == BOND_MAX_RANK)
-         send_to_char("@@eMastery@@N:     @@dAvailable (use 'bond mastery')@@N\n\r", ch);
+         send_to_char("@@eMastery@@N:     @@dAvailable (use 'bond mastery', costs 100 qp)@@N\n\r",
+                      ch);
    }
    else
    {
@@ -754,7 +755,8 @@ static void bond_rankup(CHAR_DATA *ch)
    if (bond->rank == BOND_MAX_RANK)
    {
       send_to_char("@@eYou have reached the pinnacle of this path.@@N\n\r", ch);
-      send_to_char("@@dUse 'bond mastery' to unlock your weapon's true power.@@N\n\r", ch);
+      send_to_char(
+          "@@dUse 'bond mastery' to unlock your weapon's true power (costs 100 qp).@@N\n\r", ch);
    }
 
    bond_recalculate(ch);
@@ -792,6 +794,16 @@ static void bond_mastery(CHAR_DATA *ch)
       return;
    }
 
+   if (ch->quest_points < BOND_MASTERY_QP_COST)
+   {
+      char buf[MAX_STRING_LENGTH];
+      sprintf(buf, "Unlocking mastery costs %d quest points (you have %d).\n\r",
+              BOND_MASTERY_QP_COST, ch->quest_points);
+      send_to_char(buf, ch);
+      return;
+   }
+
+   ch->quest_points -= BOND_MASTERY_QP_COST;
    bond->mastery = TRUE;
 
    switch (bond->track)
@@ -930,7 +942,7 @@ void do_bond(CHAR_DATA *ch, char *argument)
       send_to_char("  bond track <name>      - Choose a track (edge/guard/keen/spirit)\n\r", ch);
       send_to_char("  bond track <name> confirm - Switch tracks (resets rank)\n\r", ch);
       send_to_char("  bond rankup            - Spend bond points to advance rank\n\r", ch);
-      send_to_char("  bond mastery           - Unlock mastery at max rank\n\r", ch);
+      send_to_char("  bond mastery           - Unlock mastery at max rank (100 qp)\n\r", ch);
       send_to_char("  bond name <new name>   - Rename your bonded weapon\n\r", ch);
       send_to_char("  bond tracks            - List all available tracks\n\r", ch);
       return;

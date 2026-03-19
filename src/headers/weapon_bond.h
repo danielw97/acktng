@@ -77,7 +77,8 @@
 
 /* ── Broken Bond debuff ───────────────────────────────────────── */
 
-#define BOND_BROKEN_DURATION 10 /* ticks (~5-10 minutes real time) */
+#define BOND_BROKEN_DURATION 10  /* ticks (~5-10 minutes real time) */
+#define BOND_MASTERY_QP_COST 100 /* quest points to unlock mastery   */
 
 /* ── Weapon type: swords are value[3] == 3 (slash) ────────────── */
 

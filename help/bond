@@ -6,7 +6,7 @@ Syntax: bond <weapon>              - Bond to a sword
         bond track <name>          - Choose a track (edge/guard/keen/spirit)
         bond track <name> confirm  - Switch tracks (resets rank and points)
         bond rankup                - Spend bond points to advance rank
-        bond mastery               - Unlock mastery at max rank
+        bond mastery               - Unlock mastery at max rank (100 qp)
         bond name <new name>       - Rename your bonded weapon
         bond tracks                - List all available tracks
 
