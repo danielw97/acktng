@@ -532,24 +532,34 @@ void boot_db(void)
          fpArea = clanfp;
          db_set_area_name(clan_file_name);
 
-         for (x = 1; x < MAX_CLAN; x++)
+         sh_int file_max_clan = fread_number(clanfp);
+         if (file_max_clan != MAX_CLAN)
          {
-            for (y = 1; y < MAX_CLAN; y++)
+            log_f("WARNING: clandata.dat has MAX_CLAN=%d but code expects %d. "
+                  "Skipping load, using defaults.",
+                  file_max_clan, MAX_CLAN);
+         }
+         else
+         {
+            for (x = 1; x < MAX_CLAN; x++)
             {
-               politics_data.diplomacy[x][y] = fread_number(clanfp);
+               for (y = 1; y < MAX_CLAN; y++)
+               {
+                  politics_data.diplomacy[x][y] = fread_number(clanfp);
+               }
             }
-         }
 
-         for (x = 1; x < MAX_CLAN; x++)
-         {
-            politics_data.treasury[x] = fread_number(clanfp);
-         }
-
-         for (x = 1; x < MAX_CLAN; x++)
-         {
-            for (y = 1; y < MAX_CLAN; y++)
+            for (x = 1; x < MAX_CLAN; x++)
             {
-               politics_data.end_current_state[x][y] = fread_number(clanfp);
+               politics_data.treasury[x] = fread_number(clanfp);
+            }
+
+            for (x = 1; x < MAX_CLAN; x++)
+            {
+               for (y = 1; y < MAX_CLAN; y++)
+               {
+                  politics_data.end_current_state[x][y] = fread_number(clanfp);
+               }
             }
          }
 
