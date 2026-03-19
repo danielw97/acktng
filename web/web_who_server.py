@@ -78,40 +78,51 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
             self._send_html(_build_stories_page(), title="Tales from the Age of Monuments")
             return
 
-        if route in ("/help", "/help/"):
-            self._send_html(_build_topic_index_page("Help Topics", "helps", HELP_DIR, help_query), title="Help Topics")
+        if route in ("/help", "/help/", "/helps", "/helps/"):
+            self._redirect_to("/reference/help/")
             return
 
-        if route in ("/shelp", "/shelp/"):
+        if route in ("/shelp", "/shelp/", "/shelps", "/shelps/"):
+            self._redirect_to("/reference/shelp/")
+            return
+
+        if route in ("/lore", "/lore/", "/lores", "/lores/"):
+            self._redirect_to("/reference/lore/")
+            return
+
+        if route in ("/reference", "/reference/"):
+            self._redirect_to("/reference/help/")
+            return
+
+        if route in ("/reference/help", "/reference/help/"):
             self._send_html(
-                _build_topic_index_page("Spell Help Topics", "shelps", SHELP_DIR, help_query), title="Spell Help Topics"
+                _build_reference_page("help", help_query),
+                title="Help Topics",
             )
             return
 
-        if route in ("/helps", "/helps/"):
-            self._redirect_to("/help/")
+        if route in ("/reference/shelp", "/reference/shelp/"):
+            self._send_html(
+                _build_reference_page("shelp", help_query),
+                title="Spell Help Topics",
+            )
             return
 
-        if route in ("/shelps", "/shelps/"):
-            self._redirect_to("/shelp/")
+        if route in ("/reference/lore", "/reference/lore/"):
+            self._send_html(
+                _build_reference_page("lore", help_query),
+                title="Lore Topics",
+            )
             return
 
         if route.startswith("/helps/"):
             topic = route[len("/helps/") :]
-            self._send_topic_page("Help", HELP_DIR, topic, "helps")
+            self._send_topic_page("Help", HELP_DIR, topic, "reference/help")
             return
 
         if route.startswith("/shelps/"):
             topic = route[len("/shelps/") :]
-            self._send_topic_page("Spell Help", SHELP_DIR, topic, "shelps")
-            return
-
-        if route in ("/lore", "/lore/"):
-            self._send_html(_build_topic_index_page("Lore Topics", "lores", LORE_DIR, help_query), title="Lore Topics")
-            return
-
-        if route in ("/lores", "/lores/"):
-            self._redirect_to("/lore/")
+            self._send_topic_page("Spell Help", SHELP_DIR, topic, "reference/shelp")
             return
 
         if route.startswith("/lores/"):
@@ -138,7 +149,7 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
         first_entry = _extract_first_lore_entry(_read_cached_topic(topic_path))
         body = (
             f"<h1>Lore: {escape(topic_path.name)}</h1>"
-            f"<p><a href='/lore/'>Back to Lore index</a></p>"
+            f"<p><a href='/reference/lore/'>Back to Lore index</a></p>"
             f"<pre>{escape(first_entry)}</pre>"
         )
         self._send_html(body, title=f"Lore: {topic_path.name}")
@@ -247,10 +258,16 @@ def _extract_first_lore_entry(content: str) -> str:
     return content.strip()
 
 
+_REFERENCE_TABS = [
+    ("help",  "Help",       "helps",  HELP_DIR,  "topic"),
+    ("shelp", "Spell Help", "shelps", SHELP_DIR, "spell / skill"),
+    ("lore",  "Lore",       "lores",  LORE_DIR,  "topic"),
+]
+
 _SEARCH_FORM_META: dict[str, tuple[str, str, str, str]] = {
-    "helps":  ("Help:",  "help-q",  "topic",         "/help/"),
-    "shelps": ("SHelp:", "shelp-q", "spell / skill", "/shelp/"),
-    "lores":  ("Lore:",  "lore-q",  "topic",         "/lore/"),
+    "helps":  ("Help:",  "help-q",  "topic",         "/reference/help/"),
+    "shelps": ("SHelp:", "shelp-q", "spell / skill", "/reference/shelp/"),
+    "lores":  ("Lore:",  "lore-q",  "topic",         "/reference/lore/"),
 }
 
 
@@ -289,6 +306,23 @@ def _build_topic_index_page(title: str, route_base: str, base_dir: Path, query: 
         query_blurb = f"<p>Filtered by <strong>{escape(query)}</strong>.</p>"
 
     return f"{search_form}<h1>{escape(title)}</h1>{query_blurb}<ul>{''.join(links)}</ul>"
+
+
+def _build_reference_page(active_tab: str, query: str = "") -> str:
+    """Build the unified Reference page with Help / Spell Help / Lore sub-nav."""
+    tab_parts = []
+    for slug, label, _route, _dir, _ph in _REFERENCE_TABS:
+        css_class = "active" if slug == active_tab else ""
+        tab_parts.append(f"<a href='/reference/{slug}/' class='{css_class}'>{label}</a>")
+    sub_nav = f"<nav class='sub-nav'>{''.join(tab_parts)}</nav>"
+
+    for slug, label, route_base, base_dir, placeholder in _REFERENCE_TABS:
+        if slug == active_tab:
+            index_html = _build_topic_index_page(f"{label} Topics", route_base, base_dir, query)
+            return f"{sub_nav}{index_html}"
+
+    # Fallback (should not happen)
+    return sub_nav
 
 
 def _build_home_page() -> str:
