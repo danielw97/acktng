@@ -23,7 +23,7 @@ PROF    =
 #SOLARIS_LINK = -lnsl -lsocket -lresolv
 
 C_FLAGS = -O -g2 -Wall -DACK_43 $(PROF) $(SOLARIS_FLAG) -Iheaders -Iai/headers -Itests/headers -Iquests
-L_FLAGS = -O -g2 -lcrypt -lcurl -lpthread $(PROF) $(SOLARIS_LINK)
+L_FLAGS = -O -g2 -lcrypt -lpthread $(PROF) $(SOLARIS_LINK)
 
 OBJDIR = build/obj
 

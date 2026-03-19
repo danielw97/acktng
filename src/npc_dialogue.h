@@ -7,7 +7,7 @@
 
 /*
  * Initialize the NPC dialogue system.
- * Calls curl_global_init() and spawns the worker thread.
+ * Parses the TNGAI_URL and spawns the worker thread.
  * Must be called once from main() after boot_db().
  */
 void npc_dialogue_init(void);
