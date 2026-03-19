@@ -58,10 +58,15 @@ skills to become immediately unusable.** This makes society membership a
 meaningful, ongoing commitment: the skills are the reason to stay, and losing
 them is the cost of leaving.
 
-Public society skills provide practical, non-combat utility: field medicine,
-equipment repair, navigation, appraisal, fortification, and logistics. They
-do not modify `hitroll`, `damroll`, `armor`, `max_hit`, `max_mana`, or saving
-throws. They grant capabilities, not power.
+Public society skills are primarily practical utility: field medicine, equipment
+repair, navigation, appraisal, and logistics. Each society also provides one
+directly applicable combat skill (unlocked at rank 3 / Officer tier) that
+hooks into the combat system — block bonuses, extra attacks, damage reduction,
+evasion piercing, in-combat healing, or debuffs. These combat skills are
+meaningful but narrow: they reward society membership without replacing class
+abilities or dominating the combat meta. They use existing combat hooks
+(`check_avoidance()`, `calculate_damage()`, `multi_hit()`, `APPLY_*` affects)
+rather than introducing new combat subsystems.
 
 ### 5. One Society, One Commitment
 

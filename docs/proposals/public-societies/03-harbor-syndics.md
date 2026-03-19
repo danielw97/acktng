@@ -52,7 +52,7 @@ Syndics' own ranks makes these investigations frustratingly inconclusive.
 
 **Trade contracts, shipping management, and commercial arbitration.** The
 Harbor Syndics offer an economy-focused gameplay loop. Tasks involve buying,
-selling, appraising, transporting, and protecting legitimate cargo.
+appraising, transporting, and protecting legitimate cargo.
 
 Harbor Syndic tasks involve:
 
@@ -107,10 +107,13 @@ skill unlocks when the player's rank score reaches the listed threshold.
 |---|---|---|
 | `appraise` | -99 (Clerk) | Determine the exact gold value of any item, including hidden modifiers. More accurate than standard `value` at shops. |
 | `manifest` | 1 (Factor) | Create an itemized manifest of your inventory showing item names, types, and values. Can be given to NPCs as proof of cargo for trade tasks. |
-| `haggle` | 100 (Assessor) | When buying from or selling to an NPC shop, temporarily improve the price by up to 10% based on proficiency. 15-minute cooldown per shop. |
-| `trade_ledger` | 200 (Arbiter) | View a summary of NPC shop inventories in the current area without visiting each shop. Shows item names and approximate prices. |
+| `haggle` | 100 (Assessor) | When buying from an NPC shop, temporarily improve the price by up to 10% based on proficiency. 15-minute cooldown per shop. |
+| `longshoreman` | 200 (Arbiter) | **Combat.** Years of hauling cargo have built raw striking power. Grants a passive +5% chance per combat round for one bonus autoattack. Checked in `multi_hit()` alongside the standard extra-attack logic. Does not stack with itself. |
 | `bonded_cargo` | 300 (Senior Syndic) | Seal an item in a bonded cargo container that protects it from theft, drop-on-death, and decay for 1 hour. One container active at a time. |
 | `commercial_writ` | 400 (Port Master) | Issue a writ that grants a named player a one-time 15% discount at any NPC shop in Kowloon. The writ is a transferable item. One writ per day. |
+
+Note: `trade_ledger` (previously in the Arbiter slot) is moved to a task
+mechanic. `longshoreman` replaces it as the rank 3 combat skill.
 
 ---
 

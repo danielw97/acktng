@@ -113,9 +113,12 @@ threshold.
 | `frontier_scan` | -99 (Sentry) | Survey the current outdoor room and its exits for recent mob movement. Reveals how many aggressive mobs are in adjacent rooms. |
 | `shelter` | 1 (Ranger) | Construct a temporary shelter in the current outdoor room. The shelter provides weather protection and slightly accelerated HP/mana regen for the builder's group. Lasts 1 hour. |
 | `trailblaze` | 100 (Pathfinder) | Mark a path through the current room. Wall Command members who enter the room see the mark and the direction it points, aiding navigation in confusing wilderness areas. Lasts 12 hours. |
-| `barricade` | 200 (Wall Sergeant) | Block a room exit with a barricade that prevents mob movement for 10 minutes. Players can pass through with a brief delay (1 round of lag). One barricade active at a time. |
+| `bulwark` | 200 (Wall Sergeant) | **Combat.** Brace for impact. For the next 4 combat rounds, incoming physical damage is reduced by 15%. Implemented as an affect with a flag checked in `calculate_damage()` that modifies `dam` after all other reductions. Additionally, if the player is hit while bulwark is active, there is a 10% chance the attacker is staggered (loses their next autoattack). 5-minute cooldown. |
 | `signal_tower` | 300 (Wall Captain) | Erect a temporary signal point in the current outdoor room. All Wall Command members in the same area receive a notification when an aggressive mob enters a room adjacent to the signal. Lasts 30 minutes. |
 | `frontier_passage` | 400 (Castellan) | Open a shortcut through difficult terrain, creating a temporary one-way exit from the current room to a room you have previously trailblazed. Lasts 10 minutes. One use per day. |
+
+Note: `barricade` (previously in the Wall Sergeant slot) is moved to a task
+mechanic. `bulwark` replaces it as the rank 3 combat skill.
 
 ---
 

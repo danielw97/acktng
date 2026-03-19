@@ -109,9 +109,13 @@ skill unlocks when the player's rank score reaches the listed threshold.
 | `oath_mark` | -99 (Petitioner) | Mark an NPC or player as an oath-subject. The mark is visible only to Shrine members and persists for 1 hour. Used to identify task targets. |
 | `track_quarry` | 1 (Sworn) | When used in a room the target has recently visited, reveals the direction they departed. Works on NPCs and players. 5-minute cooldown. |
 | `writ_of_hold` | 100 (Claw Agent) | Present a writ to an NPC, preventing them from moving for 5 minutes. The NPC must be a valid task target. Does not work on players or bosses. |
-| `interrogate` | 200 (Arbiter) | Question an NPC in the room to learn information about a target's location or schedule. Success depends on proficiency. 10-minute cooldown. |
+| `marked_strike` | 200 (Arbiter) | **Combat.** When fighting a target the player has `oath_mark`ed, autoattacks gain +10% evasion piercing (added to `get_evasion_piercing()`) and a 10% chance to bypass parry/dodge/block entirely. The bonus is checked in `check_avoidance()` against the `oath_mark` affect on the victim. Only active against oath-marked targets. |
 | `oath_seal` | 300 (Senior Arbiter) | Seal a sworn agreement between two parties (player-to-player or player-to-NPC). If either party breaks the agreement, the other is notified. Cosmetic/RP authority. |
 | `judgment` | 400 (High Claw) | Declare judgment on an NPC oath-breaker, stripping their shop/service functions for 30 minutes. Powerful enforcement tool. One use per day. |
+
+Note: `interrogate` (previously in the Arbiter slot) is moved to rank 3 as
+part of the `writ_of_hold` skill's extended functionality. `marked_strike`
+replaces it as the rank 3 combat skill.
 
 ---
 

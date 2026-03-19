@@ -113,18 +113,22 @@ into 5 phases.
 
 ### Per-Society Skills
 
-- [ ] Guard Command: `patrol_sense`, `field_mend`, `rally_cry`, `fortify`,
-  `tactical_assess`, `command_presence`
-- [ ] Harbor Syndics: `appraise`, `manifest`, `haggle`, `trade_ledger`,
-  `bonded_cargo`, `commercial_writ`
-- [ ] Ember Wardens: `forage`, `field_repair`, `ember_signal`, `stabilize`,
-  `containment_ward`, `emergency_cache`
+- [ ] Guard Command: `patrol_sense`, `field_mend`, `rally_cry`, `shield_wall`
+  (combat: +block% and post-block damage reduction), `tactical_assess`,
+  `command_presence`
+- [ ] Harbor Syndics: `appraise`, `manifest`, `haggle`, `longshoreman`
+  (combat: bonus autoattack chance), `bonded_cargo`, `commercial_writ`
+- [ ] Ember Wardens: `forage`, `field_repair`, `ember_signal`, `cauterize`
+  (combat: in-combat heal + DOT cleanse), `containment_ward`,
+  `emergency_cache`
 - [ ] Shrine of the First Claw: `oath_mark`, `track_quarry`, `writ_of_hold`,
-  `interrogate`, `oath_seal`, `judgment`
-- [ ] Wall Command: `frontier_scan`, `shelter`, `trailblaze`, `barricade`,
-  `signal_tower`, `frontier_passage`
-- [ ] Road Wardens: `wayfind`, `road_camp`, `forced_march`, `route_marker`,
-  `dispatch_rider`, `road_gate`
+  `marked_strike` (combat: evasion piercing + avoidance bypass vs marked
+  targets), `oath_seal`, `judgment`
+- [ ] Wall Command: `frontier_scan`, `shelter`, `trailblaze`, `bulwark`
+  (combat: damage reduction + attacker stagger chance), `signal_tower`,
+  `frontier_passage`
+- [ ] Road Wardens: `wayfind`, `road_camp`, `forced_march`, `skirmish`
+  (combat: bonus damage + speed debuff), `dispatch_rider`, `road_gate`
 - [ ] Register all skill commands in `interp.c`
 - [ ] Write unit tests for each skill's gating logic
 
