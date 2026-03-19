@@ -1185,7 +1185,7 @@ void npc_dialogue_dispatch(CHAR_DATA *npc, CHAR_DATA *player, const char *messag
     * Enqueue a fixed confused refusal directly without hitting the API. */
    for (i = 0; INJECTION_TRIGGERS[i] != NULL; i++)
    {
-      if (str_infix(INJECTION_TRIGGERS[i], sanitized))
+      if (!str_infix(INJECTION_TRIGGERS[i], sanitized))
       {
          NPC_DLG_RESP *resp = malloc(sizeof(NPC_DLG_RESP));
          log_f("npc_dialogue: injection attempt by %s blocked: %.80s", player->name, sanitized);
