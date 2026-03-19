@@ -8,11 +8,16 @@ membership rosters, war declarations, and visible diplomacy, secret societies
 operate in shadow — their members are unknown to outsiders, their goals are
 ambiguous, and their activities are deniable.
 
-A player may belong to one clan **and** one secret society simultaneously. The
-two systems are independent but interact at specific points: society missions may
-target rival clans, society intelligence networks may reveal clan diplomacy
-states, and society rank may unlock dialogue options with AI-enabled NPCs who
-recognize the player's hidden allegiance.
+A player may belong to one clan, one public society, **and** one secret society
+simultaneously. The three systems are independent but interact at specific
+points: society missions may target rival clans, society intelligence networks
+may reveal clan diplomacy states, and society rank may unlock dialogue options
+with AI-enabled NPCs who recognize the player's hidden allegiance.
+
+See `docs/proposals/public-societies/` for the public societies system —
+open, well-known civic institutions (Guard Command, Harbor Syndics, Ember
+Wardens, Shrine of the First Claw, Wall Command, Road Wardens) that operate
+as the visible counterpart to the covert organizations described here.
 
 ---
 
@@ -103,6 +108,7 @@ Each society is detailed in `03-society-definitions.md`.
 
 | System | Interaction |
 |---|---|
+| **Public Societies** | Independent membership; a player can be in both. Public societies are visible civic institutions; secret societies are covert. See `docs/proposals/public-societies/`. |
 | **Clans** | Independent membership; society missions may reference clan targets |
 | **AI Dialogue** | Society NPCs use `ACT_AI_DIALOGUE`; members get additional dialogue paths |
 | **Lore System** | Society lore entries injected for society-aware NPCs via `lore_flags` |

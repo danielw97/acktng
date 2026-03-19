@@ -1,0 +1,137 @@
+# Public Society: The Harbor Syndics
+
+**Constant:** `PUB_SOCIETY_HARBOR_SYNDICS`
+**Base City:** Kowloon
+**Abbreviation:** SYNDX
+**Level Requirement:** 15
+
+---
+
+## Lore Origin
+
+The Harbor Syndics are one of Kowloon's five governing institutions, documented
+in the city lore as the authority over maritime commerce, port administration,
+and trade regulation. Founded under the Neon Covenant's compact — "one
+ledger, one ration code" — the Syndics manage everything that moves through
+Kowloon's delta port: cargo manifests, berthing assignments, tariff collection,
+trade dispute arbitration, and the licensing of merchant vessels.
+
+The Syndics are the most institutionally stable of Kowloon's five pillars. The
+Jade Magistracy handles law, the Temple Circle handles religion, the Wardens of
+Iron handle defense, and the Courier Lantern Office handles communications —
+but the Syndics handle money, and money is what keeps Kowloon's massive port
+infrastructure functioning.
+
+The Syndics recruit openly. Their offices line the harbor district, their
+agents staff every customs checkpoint, and their trade schools train
+apprentices in accounting, appraisal, and contract law. For players interested
+in the economic side of the game, the Harbor Syndics are the natural home.
+
+---
+
+## Philosophy
+
+*"One ledger, one standard, one port."*
+
+The Syndics believe that fair, regulated trade is the foundation of
+civilization. Unregulated commerce breeds fraud, exploitation, and the kind of
+shadow economies that organizations like the Jade Eels thrive in. The Syndics'
+mission is to ensure that every transaction passing through Kowloon's port is
+documented, taxed, and arbitrable — not because they love bureaucracy, but
+because the alternative is piracy with extra steps.
+
+This puts the Syndics in direct institutional tension with the Jade Eels, who
+view the Syndics as the legitimate face of a system that exists to enrich
+itself. The Syndics are aware of smuggling operations in their port and
+periodically launch investigations — but the Jade Eels' infiltration of the
+Syndics' own ranks makes these investigations frustratingly inconclusive.
+
+---
+
+## Gameplay Loop
+
+**Trade contracts, shipping management, and commercial arbitration.** The
+Harbor Syndics offer an economy-focused gameplay loop. Tasks involve buying,
+selling, appraising, transporting, and protecting legitimate cargo.
+
+Harbor Syndic tasks involve:
+
+- Appraising cargo shipments for customs clearance (identify item values)
+- Transporting trade goods between Kowloon's harbor and inland destinations
+- Negotiating trade contracts with NPC merchants in other cities
+- Investigating suspected fraudulent cargo manifests
+- Protecting trade shipments from bandit and pirate NPCs
+- Auditing NPC shops for price irregularities
+
+The Harbor Syndics are the best public society for players who enjoy economic
+gameplay, item trading, and inter-city commerce.
+
+---
+
+## Hall Location
+
+The Harbor Syndics Hall is a large administrative complex on Kowloon's central
+wharf. It contains:
+
+- A registration desk (enrollment NPC)
+- A contracts board (task assignment NPC)
+- A bonded warehouse (society merchant NPC with trade goods and appraisal tools)
+- A training office (practice NPC for society skills)
+- A senior syndic's chamber (commanding officer NPC for promotions)
+- A records room (accessible to rank 3+; contains trade intelligence)
+
+The Hall is public. Anyone can enter. Only members can use the bonded
+warehouse, training office, and records room.
+
+---
+
+## Ranks
+
+| Rank | Title | Access |
+|---|---|---|
+| 0 | Clerk | Basic courier and appraisal tasks; society channel |
+| 1 | Factor | Access to bonded warehouse; trade transport tasks |
+| 2 | Assessor | Audit and investigation tasks; mid-tier skills |
+| 3 | Arbiter | Can mentor recruits; access to cross-city trade tasks |
+| 4 | Senior Syndic | Can enroll new members; access to high-value contracts |
+| 5 | Port Master | Inner circle; controls contract assignments; top-tier skills |
+
+---
+
+## Skills
+
+Harbor Syndic skills focus on commerce, appraisal, and trade logistics.
+
+| Slot | Skill | Rank | Description |
+|---|---|---|---|
+| 0 | `appraise` | 0 | Determine the exact gold value of any item, including hidden modifiers. More accurate than standard `value` at shops. |
+| 1 | `manifest` | 1 | Create an itemized manifest of your inventory showing item names, types, and values. Can be given to NPCs as proof of cargo for trade tasks. |
+| 2 | `haggle` | 2 | When buying from or selling to an NPC shop, temporarily improve the price by up to 10% based on proficiency. 15-minute cooldown per shop. |
+| 3 | `trade_ledger` | 3 | View a summary of NPC shop inventories in the current area without visiting each shop. Shows item names and approximate prices. |
+| 4 | `bonded_cargo` | 4 | Seal an item in a bonded cargo container that protects it from theft, drop-on-death, and decay for 1 hour. One container active at a time. |
+| 5 | `commercial_writ` | 5 | Issue a writ that grants a named player a one-time 15% discount at any NPC shop in Kowloon. The writ is a transferable item. One writ per day. |
+
+---
+
+## Task Examples
+
+| Difficulty | Type | Example |
+|---|---|---|
+| 1 | Courier | Deliver a sealed trade manifest from the harbor to the Jade Magistracy |
+| 2 | Appraisal | Assess the contents of a cargo hold (identify 5 items and report values) |
+| 3 | Investigation | Audit a harbor-district shop suspected of fencing stolen goods |
+| 4 | Trade Route | Transport high-value cargo from Kowloon to Mafdet without loss |
+| 5 | Arbitration | Resolve a trade dispute between two NPC merchant houses (multi-step negotiation) |
+
+---
+
+## Affiliated NPCs
+
+| Role | Description |
+|---|---|
+| **Registrar** | Processes new members; explains requirements and benefits |
+| **Contracts Clerk** | Assigns tasks from the contracts board; reports completion |
+| **Bonded Warehouseman** | Sells trade tools and appraisal instruments |
+| **Trade Instructor** | Teaches society skills; available for practice sessions |
+| **Senior Syndic** | Handles promotions; provides trade intelligence |
+| **Customs Inspectors** | Recognize members by rank; provide passage through checkpoints |

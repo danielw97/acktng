@@ -1,0 +1,142 @@
+# Public Society: The Wall Command
+
+**Constant:** `PUB_SOCIETY_WALL_COMMAND`
+**Base City:** Kiess
+**Abbreviation:** WALLC
+**Level Requirement:** 15
+
+---
+
+## Lore Origin
+
+The Wall Command is one of Kiess's three governing powers, documented in the
+city lore alongside the Compact Temples and the Trade Syndics. Kiess was built
+on the ruins of Evermeet at the western edge of the continent, facing the Roc
+Road corridor that connects it to the eastern cities and the Cinderteeth
+Mountains that loom to the north. The Wall Command exists because Kiess is a
+frontier city — the western bulwark, the last settlement before the wilderness,
+and the first line of defense against whatever comes down from the mountains.
+
+The Wall Command maintains Kiess's fortifications, patrols the Roc Road
+corridor's western reaches, monitors the Cinderteeth approaches for volcanic
+and creature activity, and secures the frontier gate that controls access to
+the wilderness beyond. Its soldiers are not the parade-ground officers of
+Midgaard's Guard Command — they are frontier troops, accustomed to long patrols
+in hostile terrain, improvised defenses, and operating far from resupply.
+
+The Wall Command recruits anyone willing to serve on the frontier. Its founding
+charter includes Kiess's anti-sealed-warrant doctrine, meaning the Wall
+Command operates with unusual transparency — no secret orders, no sealed
+warrants, no classified operations. Everything the Wall Command does is logged
+and auditable. This makes it the most principled military institution on the
+continent and the most frustrating for anyone who wants it to bend rules.
+
+---
+
+## Philosophy
+
+*"The wall does not negotiate."*
+
+The Wall Command's doctrine is physical security through visible strength.
+Walls are built, manned, and maintained. Patrols run on schedule. Threats are
+identified, reported, and neutralized. The Wall Command does not engage in
+intelligence operations, covert actions, or political maneuvering — it builds
+walls and defends them.
+
+This rigidity is informed by Kiess's founding charter, which was written as a
+direct repudiation of the Spirebound Conclave's institutional secrecy and the
+Violet Compact's sealed-warrant system. The Wall Command's transparency
+doctrine means that every patrol route, every garrison strength, and every
+operational order is a matter of public record. The Command's enemies know
+exactly what it will do, but its citizens know they can trust it.
+
+---
+
+## Gameplay Loop
+
+**Frontier patrols, fortification, and wilderness security.** The Wall Command
+offers an exploration-and-defense gameplay loop. Tasks send players into
+frontier territory to patrol, build, defend, and report.
+
+Wall Command tasks involve:
+
+- Patrolling the Roc Road corridor and frontier approaches
+- Scouting Cinderteeth approaches for creature activity or volcanic signs
+- Reinforcing frontier positions (use skills at specific locations)
+- Escorting trade caravans through the Roc Road corridor
+- Clearing beast nests and hostile camps in frontier territory
+- Reporting on terrain conditions and route safety
+
+The Wall Command is the best public society for players who enjoy exploration,
+frontier adventure, and the fantasy of being a frontier soldier.
+
+---
+
+## Hall Location
+
+The Wall Command Garrison is a stone fortress near Kiess's frontier gate. It
+contains:
+
+- A recruitment post (enrollment NPC)
+- A patrol board (task assignment NPC)
+- A frontier armory (society merchant NPC with survival gear and fortification tools)
+- A training yard (practice NPC for society skills)
+- A commander's quarters (commanding officer NPC for promotions and briefings)
+- A scout's lodge (rest area with outdoor survival bonuses for members)
+
+The Garrison is public. Anyone can enter the outer yard. The armory, training
+yard, and commander's quarters are restricted to members.
+
+---
+
+## Ranks
+
+| Rank | Title | Access |
+|---|---|---|
+| 0 | Sentry | Basic patrol and scouting tasks; society channel |
+| 1 | Ranger | Access to frontier armory; escort and clearing tasks |
+| 2 | Pathfinder | Advanced frontier tasks; mid-tier skills |
+| 3 | Wall Sergeant | Can mentor recruits; access to Cinderteeth-approach tasks |
+| 4 | Wall Captain | Can enroll new members; access to deep frontier missions |
+| 5 | Castellan | Inner circle; commands patrol assignments; top-tier skills |
+
+---
+
+## Skills
+
+Wall Command skills focus on wilderness survival, fortification, and frontier
+awareness.
+
+| Slot | Skill | Rank | Description |
+|---|---|---|---|
+| 0 | `frontier_scan` | 0 | Survey the current outdoor room and its exits for recent mob movement. Reveals how many aggressive mobs are in adjacent rooms. |
+| 1 | `shelter` | 1 | Construct a temporary shelter in the current outdoor room. The shelter provides weather protection and slightly accelerated HP/mana regen for the builder's group. Lasts 1 hour. |
+| 2 | `trailblaze` | 2 | Mark a path through the current room. Wall Command members who enter the room see the mark and the direction it points, aiding navigation in confusing wilderness areas. Lasts 12 hours. |
+| 3 | `barricade` | 3 | Block a room exit with a barricade that prevents mob movement for 10 minutes. Players can pass through with a brief delay (1 round of lag). One barricade active at a time. |
+| 4 | `signal_tower` | 4 | Erect a temporary signal point in the current outdoor room. All Wall Command members in the same area receive a notification when an aggressive mob enters a room adjacent to the signal. Lasts 30 minutes. |
+| 5 | `frontier_passage` | 5 | Open a shortcut through difficult terrain, creating a temporary one-way exit from the current room to a room you have previously trailblazed. Lasts 10 minutes. One use per day. |
+
+---
+
+## Task Examples
+
+| Difficulty | Type | Example |
+|---|---|---|
+| 1 | Patrol | Walk the Roc Road western checkpoint route (visit 4 rooms) |
+| 2 | Scouting | Scout the northern Cinderteeth approach and report creature activity |
+| 3 | Fortification | Reinforce the frontier outpost (use barricade at 3 designated rooms) |
+| 4 | Escort | Escort a supply caravan from Kiess through the Roc Road to the halfway point |
+| 5 | Expedition | Clear and secure a new frontier outpost location deep in the western wilderness |
+
+---
+
+## Affiliated NPCs
+
+| Role | Description |
+|---|---|
+| **Recruitment Sergeant** | Processes new members; explains frontier service requirements |
+| **Patrol Officer** | Assigns tasks from the patrol board; reports completion |
+| **Frontier Quartermaster** | Sells survival gear, fortification tools, and rations |
+| **Drill Ranger** | Teaches society skills; available for practice sessions |
+| **Castellan** | Handles promotions; provides frontier intelligence briefings |
+| **Wall Sentries** | Recognize members by rank; provide passage through the frontier gate |
