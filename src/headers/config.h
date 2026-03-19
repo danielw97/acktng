@@ -65,12 +65,16 @@
 #define MAX_MORT_COMBO 4
 
 #define MAX_CLAN_EQ 6 /* Number of clan eq items */
-#define MAX_COLOR 16  /* eg look, prompt, shout */
-#define MAX_ANSI 28   /* eg red, black, etc (was 11) */
+
+#define CLANEQ_WEIGHT_MELEE 8
+#define CLANEQ_WEIGHT_CASTER 3
+#define CLANEQ_WEIGHT_TANK 13
+#define MAX_COLOR 16 /* eg look, prompt, shout */
+#define MAX_ANSI 28  /* eg red, black, etc (was 11) */
 #define MAX_ALIASES 6
 #define MAX_IGNORES 3
 #define MAX_RACE 10
-#define MAX_CLAN 9     /* number of clans */
+#define MAX_CLAN 11    /* number of clans (0=None + 10 clans) */
 #define EXP_LEVEL 1000 /* exp per level */
 #define MAX_SKILL 999
 #define MAX_CLASS 6

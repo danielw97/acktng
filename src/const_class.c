@@ -53,7 +53,7 @@ const struct class_type gclass_table[MAX_TOTAL_CLASS] = {
     {"Ego", "Egomancer", APPLY_INT, 6, 8, REMORT, {CLASS_PSI, -1}},
     {"Bra", "Brawler", APPLY_CON, 14, 0, REMORT, {CLASS_PUG, -1}},
 
-    /* Adept (18-23): tier=ADEPT, two remort prerequisites */
+    /* Adept (18-23): tier=ADEPT, either of two remort prerequisites */
     {"Gra", "Grand Magi", APPLY_INT, 8, 20, ADEPT, {CLASS_SOR, CLASS_WIZ}},
     {"Tem", "Templar", APPLY_WIS, 16, 12, ADEPT, {CLASS_PAL, CLASS_PRI}},
     {"Nig", "Nightblade", APPLY_DEX, 20, 8, ADEPT, {CLASS_ASS, CLASS_WLK}},
