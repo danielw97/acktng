@@ -12,6 +12,9 @@ sh_int gsn_parry = 1;
 sh_int gsn_dodge = 2;
 sh_int gsn_shield_block = 3;
 sh_int gsn_counter = 4;
+sh_int gsn_vigilance = 5;
+sh_int gsn_measured_response = 6;
+sh_int gsn_ninth_descent = 7;
 
 const struct stance_app_type stance_app[MAX_STANCE] = {
     [2] = {.speed_mod = 3},
@@ -36,6 +39,33 @@ int get_curr_dex(CHAR_DATA *ch)
 int get_curr_con(CHAR_DATA *ch)
 {
    return ch->saving_throw;
+}
+int get_curr_wis(CHAR_DATA *ch)
+{
+   return ch->armor;
+}
+
+/* Sentinel stubs for fight.c */
+bool is_sentinel_class(CHAR_DATA *ch)
+{
+   return ch->class_level[CLASS_SEN] > 0;
+}
+void set_testimony_target(CHAR_DATA *ch, CHAR_DATA *victim)
+{
+   ch->testimony_target = victim;
+   ch->testimony_combat_rounds = 0;
+}
+void add_testimony(CHAR_DATA *ch, int amount)
+{
+   ch->testimony = ch->testimony + amount;
+   if (ch->testimony > 9)
+      ch->testimony = 9;
+}
+bool is_affected(CHAR_DATA *ch, int sn)
+{
+   (void)ch;
+   (void)sn;
+   return FALSE;
 }
 int get_speed(CHAR_DATA *ch)
 {

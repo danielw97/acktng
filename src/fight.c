@@ -33,6 +33,7 @@
 #include "magic.h"
 #include "cloak.h"
 #include "tables.h"
+#include "sentinel.h"
 #include <math.h>
 
 /*
@@ -955,6 +956,26 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       if (number_percent() < (get_counter(victim) - get_evasion_piercing(ch)))
          one_hit(victim, ch, gsn_counter);
 
+      /* Sentinel: testimony accumulation on parry */
+      if (is_sentinel_class(victim) && victim->fighting == ch)
+      {
+         if (victim->testimony_target != ch)
+         {
+            victim->testimony = 0;
+            set_testimony_target(victim, ch);
+         }
+         add_testimony(victim, 1);
+      }
+
+      /* Sentinel: measured response — counter-attack on parry */
+      if (can_use_skill(victim, gsn_measured_response) &&
+          number_percent() < get_curr_wis(victim) * 2)
+      {
+         one_hit(victim, ch, gsn_measured_response);
+         if (is_sentinel_class(victim) && victim->fighting == ch)
+            add_testimony(victim, 1);
+      }
+
       return TRUE;
    }
 
@@ -990,6 +1011,17 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       if (number_percent() < (get_counter(victim) - get_evasion_piercing(ch)))
          one_hit(victim, ch, gsn_counter);
 
+      /* Sentinel: testimony accumulation on block */
+      if (is_sentinel_class(victim) && victim->fighting == ch)
+      {
+         if (victim->testimony_target != ch)
+         {
+            victim->testimony = 0;
+            set_testimony_target(victim, ch);
+         }
+         add_testimony(victim, 1);
+      }
+
       return TRUE;
    }
 
@@ -1023,6 +1055,26 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
 
       if (number_percent() < (get_counter(victim) - get_evasion_piercing(ch)))
          one_hit(victim, ch, gsn_counter);
+
+      /* Sentinel: testimony accumulation on dodge */
+      if (is_sentinel_class(victim) && victim->fighting == ch)
+      {
+         if (victim->testimony_target != ch)
+         {
+            victim->testimony = 0;
+            set_testimony_target(victim, ch);
+         }
+         add_testimony(victim, 1);
+      }
+
+      /* Sentinel: measured response — counter-attack on dodge */
+      if (can_use_skill(victim, gsn_measured_response) &&
+          number_percent() < get_curr_wis(victim) * 2)
+      {
+         one_hit(victim, ch, gsn_measured_response);
+         if (is_sentinel_class(victim) && victim->fighting == ch)
+            add_testimony(victim, 1);
+      }
 
       return TRUE;
    }
@@ -1074,6 +1126,10 @@ int get_parry(CHAR_DATA *ch)
 
    chance += ch->parry_mod;
 
+   /* Vigilance: WIS-based parry bonus */
+   if (can_use_skill(ch, gsn_vigilance))
+      chance += get_curr_wis(ch) * 2 / 5;
+
    if (chance > 50)
       chance = 50;
 
@@ -1117,6 +1173,10 @@ int get_dodge(CHAR_DATA *ch)
    chance += get_speed(ch) * 5;
 
    chance += ch->dodge_mod;
+
+   /* Vigilance: WIS-based dodge bonus */
+   if (can_use_skill(ch, gsn_vigilance))
+      chance += get_curr_wis(ch) * 2 / 5;
 
    if (chance > 50)
       chance = 50;

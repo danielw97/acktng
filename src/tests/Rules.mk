@@ -355,7 +355,11 @@ unit-test-clandata: $(OBJDIR)/tests/test_clandata.o
 	rm -f tests/unit-test-clandata
 	$(CC) -o tests/unit-test-clandata $(OBJDIR)/tests/test_clandata.o $(L_FLAGS)
 
-unit-tests: unit-test-clandata unit-test-act-clan unit-test-weapon-bond unit-test-handler unit-test-skills unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-login unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns unit-test-prompt unit-test-revenant unit-test-adept-skills unit-test-caravan-travel unit-test-overgrowth
+unit-test-sentinel: $(OBJDIR)/tests/test_sentinel.o $(OBJDIR)/tests/test_is_fighting.o
+	rm -f tests/unit-test-sentinel
+	$(CC) -o tests/unit-test-sentinel $(OBJDIR)/tests/test_sentinel.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+
+unit-tests: unit-test-sentinel unit-test-clandata unit-test-act-clan unit-test-weapon-bond unit-test-handler unit-test-skills unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-login unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns unit-test-prompt unit-test-revenant unit-test-adept-skills unit-test-caravan-travel unit-test-overgrowth
 	./tests/unit-test-handler
 	./tests/unit-test-skills
 	./tests/unit-test-act-flags
@@ -404,5 +408,6 @@ unit-tests: unit-test-clandata unit-test-act-clan unit-test-weapon-bond unit-tes
 	./tests/unit-test-overgrowth
 	./tests/unit-test-act-clan
 	./tests/unit-test-clandata
+	./tests/unit-test-sentinel
 	$(MAKE) integration-test
 	$(MAKE) integration-test-telnet

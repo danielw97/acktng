@@ -185,6 +185,17 @@ extern sh_int gsn_pressure_point;
 extern sh_int gsn_feint;
 extern sh_int gsn_conditioning;
 
+/* Sentinel skills */
+extern sh_int gsn_vigilance;
+extern sh_int gsn_verdict;
+extern sh_int gsn_read_opponent;
+extern sh_int gsn_binding_strike;
+extern sh_int gsn_testimonial_guard;
+extern sh_int gsn_ninth_descent;
+extern sh_int gsn_measured_response;
+extern sh_int gsn_condemn;
+extern sh_int gsn_seal_testimony;
+
 #ifdef TFS
 extern sh_int gsn_mana_sense;
 #endif
@@ -698,6 +709,14 @@ DECLARE_DO_FUN(do_roll_with_blow);
 DECLARE_DO_FUN(do_pressure_point);
 DECLARE_DO_FUN(do_feint);
 DECLARE_DO_FUN(do_conditioning);
+
+/* Sentinel skills */
+DECLARE_DO_FUN(do_verdict);
+DECLARE_DO_FUN(do_read_opponent);
+DECLARE_DO_FUN(do_binding_strike);
+DECLARE_DO_FUN(do_ninth_descent);
+DECLARE_DO_FUN(do_condemn);
+DECLARE_DO_FUN(do_seal_testimony);
 DECLARE_DO_FUN(do_stance);
 DECLARE_DO_FUN(do_enchant);
 
