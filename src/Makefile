@@ -76,7 +76,7 @@ SPELL_OBJS = \
 	spells/spell_holy_word.o spells/spell_holy_wrath.o spells/spell_holyshield.o spells/spell_hypnosis.o spells/spell_ice_bolt.o \
 	spells/spell_iceshield.o spells/spell_identify.o spells/spell_influx.o \
 	spells/spell_infravision.o spells/spell_infuse.o spells/spell_invis.o \
-	spells/spell_iron_golem.o spells/spell_kinetic_reversion.o \
+	spells/spell_iron_golem.o \
 	spells/spell_know_alignment.o spells/spell_know_critical.o spells/spell_know_item.o \
 	spells/spell_know_weakness.o spells/spell_laserbolt.o spells/spell_lava_burst.o \
 	spells/spell_lightning_bolt.o spells/spell_lightning_breath.o \
@@ -144,7 +144,7 @@ SKILL_OBJS = \
 	skills/do_iron_skin.o skills/do_roll_with_blow.o skills/do_pressure_point.o \
 	skills/do_feint.o skills/do_conditioning.o \
 	skills/do_chi_surge.o skills/do_breath_of_endurance.o skills/do_fist_of_the_interior_form.o \
-	skills/do_momentum_chain.o skills/do_iron_resolve.o skills/do_overwhelming_assault.o \
+	skills/do_momentum_chain.o skills/do_veterans_cadence.o skills/do_overwhelming_assault.o \
 	skills/do_oathshield.o skills/do_sanctified_strike.o \
 	skills/do_shadow_reading.o skills/do_hex_ward.o skills/do_reflex_disruption.o
 

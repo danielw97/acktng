@@ -19,7 +19,7 @@ sh_int gsn_chi_surge;
 sh_int gsn_breath_of_endurance;
 sh_int gsn_fist_interior;
 sh_int gsn_momentum_chain;
-sh_int gsn_iron_resolve;
+sh_int gsn_veterans_cadence;
 sh_int gsn_overwhelming_assault;
 sh_int gsn_anti_magic_shell;
 sh_int gsn_enhanced_heal;

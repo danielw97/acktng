@@ -44,11 +44,12 @@
 const char *skill_name_legacy(const char *old_name)
 {
    static const char *aliases[][2] = {
-      {"shadow step",    "gap transit"        },
-      {"garrote",        "reach silence"      },
+      {"shadow step",    "gap transit"          },
+      {"garrote",        "reach silence"        },
       {"pressure point", "applied understanding"},
-      {"fortify",        "seven shade hold"   },
-      {NULL,             NULL                 }
+      {"fortify",        "seven shade hold"     },
+      {"iron resolve",   "veteran's cadence"    },
+      {NULL,             NULL                   }
    };
    int i;
    for (i = 0; aliases[i][0] != NULL; i++)
