@@ -227,6 +227,23 @@ ul li{margin:.25rem 0;}
   font-family:inherit;
   outline:none;
 }
+
+/* ── MUD client fullscreen ── */
+#mud-client-container.mud-fullscreen{
+  position:fixed;
+  top:0;left:0;
+  width:100vw;height:100vh;
+  z-index:9999;
+  background:var(--bg);
+  padding:1rem 1.25rem;
+  display:flex;
+  flex-direction:column;
+  box-sizing:border-box;
+}
+#mud-client-container.mud-fullscreen .mud-output{
+  flex:1;
+  height:auto;
+}
 </style>
 </head><body>
 <header class='site-brand'>

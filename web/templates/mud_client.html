@@ -1,3 +1,4 @@
+<div id='mud-client-container'>
 <h1>ACKMUD Web Client</h1>
 <p class='muted'>Select a world and press Connect.</p>
 <div class='mud-controls'>
@@ -5,11 +6,13 @@
   <select id='world-select'>__WORLD_OPTIONS__</select>
   <button id='connect-btn' type='button'>Connect</button>
   <button id='disconnect-btn' type='button'>Disconnect</button>
+  <button id='fullscreen-btn' type='button' style='margin-left:auto'>&#x26F6; Fullscreen</button>
 </div>
 <pre id='mud-output' class='mud-output'>Ready.</pre>
 <div class='mud-controls'>
   <input id='mud-command' placeholder='Type a command and press Enter' style='flex:1;min-width:280px;'>
   <button id='send-btn' type='button'>Send</button>
+</div>
 </div>
 <script>
 (() => {
@@ -19,7 +22,15 @@
   const commandInput = document.getElementById('mud-command');
   const sendBtn = document.getElementById('send-btn');
   const output = document.getElementById('mud-output');
+  const fullscreenBtn = document.getElementById('fullscreen-btn');
+  const container = document.getElementById('mud-client-container');
   let socket = null;
+
+  fullscreenBtn.addEventListener('click', () => {
+    const isFullscreen = container.classList.toggle('mud-fullscreen');
+    fullscreenBtn.textContent = isFullscreen ? '\u2715 Exit Fullscreen' : '\u26F6 Fullscreen';
+    output.scrollTop = output.scrollHeight;
+  });
 
   const ANSI_COLORS = {
     30: '#222222', 31: '#ff5f56', 32: '#27c93f', 33: '#ffbd2e',
