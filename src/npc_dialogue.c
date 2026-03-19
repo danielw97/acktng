@@ -321,6 +321,7 @@ typedef struct npc_dlg_req
    CHAR_DATA *player;
    char player_name[50];
    char system_prompt[16384];
+   char help_context[1600]; /* injected help/shelp entries; empty string if none */
    int history_count;
    DIALOGUE_TURN_COPY history[MAX_REQUEST_TURNS];
    struct npc_dlg_req *next;
@@ -935,10 +936,123 @@ static const char *accent_instructions[MAX_ACCENT] = {
 };
 
 /* =========================================================================
+ * Help/shelp context collection for KNOW_HELPS mobs.
+ * ========================================================================= */
+
+/* Common English stop-words to skip when extracting search keywords. */
+static const char *help_stop_words[] = {
+   "the", "and", "is", "are", "you", "how", "what", "can", "does", "do",
+   "a", "an", "in", "to", "of", "it", "i", "me", "my", "we", "for",
+   "on", "at", "be", "was", "if", "or", "not", NULL
+};
+
+static bool is_stop_word(const char *w)
+{
+   int i;
+   for (i = 0; help_stop_words[i] != NULL; i++)
+      if (!str_cmp(w, help_stop_words[i]))
+         return TRUE;
+   return FALSE;
+}
+
+/*
+ * Search first_help and first_shelp for entries whose keyword matches any
+ * word in `message`.  Writes up to `cap` bytes of formatted context to `out`.
+ */
+static void collect_help_context(const char *message, char *out, size_t cap)
+{
+   char msg_copy[512];
+   char word[64];
+   const char *p;
+   HELP_DATA *pHelp;
+   HELP_DATA *matches[4];
+   int match_count = 0;
+   int i;
+
+   out[0] = '\0';
+
+   /* Skip greet cues — they carry no question keywords. */
+   if (strncmp(message, "[GREET]", 7) == 0)
+      return;
+
+   snprintf(msg_copy, sizeof(msg_copy), "%s", message);
+
+   p = msg_copy;
+   while (*p != '\0' && match_count < 4)
+   {
+      /* Extract next whitespace-delimited word */
+      p = one_argument((char *)p, word);
+
+      if (word[0] == '\0')
+         break;
+      if (strlen(word) <= 3)
+         continue;
+      if (is_stop_word(word))
+         continue;
+
+      /* Search help then shelp */
+      for (pHelp = first_help; pHelp != NULL && match_count < 4; pHelp = pHelp->next)
+      {
+         bool already = FALSE;
+         if (!str_prefix(word, pHelp->keyword))
+         {
+            for (i = 0; i < match_count; i++)
+               if (matches[i] == pHelp) { already = TRUE; break; }
+            if (!already)
+               matches[match_count++] = pHelp;
+         }
+      }
+      for (pHelp = first_shelp; pHelp != NULL && match_count < 4; pHelp = pHelp->next)
+      {
+         bool already = FALSE;
+         if (!str_prefix(word, pHelp->keyword))
+         {
+            for (i = 0; i < match_count; i++)
+               if (matches[i] == pHelp) { already = TRUE; break; }
+            if (!already)
+               matches[match_count++] = pHelp;
+         }
+      }
+   }
+
+   for (i = 0; i < match_count; i++)
+   {
+      char header[128];
+      char snippet[304];
+      size_t tlen;
+
+      snprintf(header, sizeof(header), "[HELP: %s]\n", matches[i]->keyword);
+      if (strlen(out) + strlen(header) + 1 >= cap)
+         break;
+      strncat(out, header, cap - strlen(out) - 1);
+
+      /* Truncate text to 300 chars */
+      tlen = strlen(matches[i]->text);
+      if (tlen > 300)
+         tlen = 300;
+      memcpy(snippet, matches[i]->text, tlen);
+      snippet[tlen] = '\n';
+      snippet[tlen + 1] = '\0';
+
+      if (strlen(out) + strlen(snippet) + 1 >= cap)
+         break;
+      strncat(out, snippet, cap - strlen(out) - 1);
+   }
+}
+
+#ifdef UNIT_TEST_NPC_DIALOGUE
+/* Thin wrapper exposing collect_help_context for unit tests. */
+void npc_dialogue_test_collect_help_context(const char *message, char *out, size_t cap)
+{
+   collect_help_context(message, out, cap);
+}
+#endif
+
+/* =========================================================================
  * System prompt assembly.
  * ========================================================================= */
 
-static void build_system_prompt(char *buf, size_t cap, CHAR_DATA *npc)
+static void build_system_prompt(char *buf, size_t cap, CHAR_DATA *npc, const char *help_context)
 {
    int city;
    int i;
@@ -1089,6 +1203,14 @@ static void build_system_prompt(char *buf, size_t cap, CHAR_DATA *npc)
       safe_append(buf, cap, "\n");
    }
 
+   /* 7b. Help/shelp file context (injected per-message when KNOW_HELPS is set) */
+   if (help_context != NULL && help_context[0] != '\0')
+   {
+      safe_append(buf, cap, "HELP FILE CONTEXT (use this to inform your answer):\n");
+      safe_append(buf, cap, help_context);
+      safe_append(buf, cap, "\n");
+   }
+
    /* 8. Behavioral guardrails */
    safe_append(buf, cap,
                "Keep responses to 1-3 sentences. Stay in character at all times."
@@ -1215,8 +1337,13 @@ void npc_dialogue_dispatch(CHAR_DATA *npc, CHAR_DATA *player, const char *messag
    req->player = player;
    strncpy(req->player_name, player->name, sizeof(req->player_name) - 1);
 
+   /* Collect help/shelp context when the mob has KNOW_HELPS set. */
+   req->help_context[0] = '\0';
+   if (npc->pIndexData != NULL && (npc->pIndexData->ai_knowledge & KNOW_HELPS))
+      collect_help_context(sanitized, req->help_context, sizeof(req->help_context));
+
    /* Build system prompt */
-   build_system_prompt(req->system_prompt, sizeof(req->system_prompt), npc);
+   build_system_prompt(req->system_prompt, sizeof(req->system_prompt), npc, req->help_context);
 
    /* Serialize history snapshot */
    req->history_count = 0;

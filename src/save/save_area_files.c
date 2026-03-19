@@ -1534,7 +1534,7 @@ void load_specials(FILE *fp)
       switch (letter = fread_letter(fp))
       {
       default:
-         bug("Load_specials: letter '%c' not *, M, or S.", letter);
+         bug("Load_specials: letter '%c' not *, M, E, or S.", letter);
          hang("Loading Specials in db.c");
 
       case 'S':
@@ -1562,6 +1562,7 @@ void load_specials(FILE *fp)
             LINK(pList, area_load->first_area_specfunc, area_load->last_area_specfunc, next, prev);
          }
          break;
+
       }
       /*
        * NB. Comments will not be saved when using areasave - MAG.

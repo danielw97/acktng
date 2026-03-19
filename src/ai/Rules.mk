@@ -55,7 +55,8 @@ AI_SPEC_SRCS = \
 	  ai/spec_cinderteeth_warlord.o ai/spec_cinderteeth_warden_cmd.o \
 	  ai/spec_cinderteeth_sulfur_colossus.o ai/spec_cinderteeth_anchor.o \
 	  ai/spec_cinderteeth_ventspeaker.o ai/spec_cinderteeth_oracle.o \
-	  ai/spec_cinderteeth_caldera_watcher.o ai/spec_cinderteeth_patriarch.o
+	  ai/spec_cinderteeth_caldera_watcher.o ai/spec_cinderteeth_patriarch.o \
+	  ai/spec_mudschool_guide.o
 
 AI_SUMMON_SRCS = ai/spec_summon_water.o ai/spec_summon_fire.o ai/spec_summon_earth.o \
 	  ai/spec_summon_undead.o ai/spec_summon_holy.o ai/spec_summon_shadow.o \
