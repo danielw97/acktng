@@ -28,6 +28,7 @@
 
   fullscreenBtn.addEventListener('click', () => {
     const isFullscreen = container.classList.toggle('mud-fullscreen');
+    document.body.classList.toggle('mud-fullscreen-active', isFullscreen);
     fullscreenBtn.textContent = isFullscreen ? '\u2715 Exit Fullscreen' : '\u26F6 Fullscreen';
     output.scrollTop = output.scrollHeight;
   });

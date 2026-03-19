@@ -229,6 +229,11 @@ ul li{margin:.25rem 0;}
 }
 
 /* ── MUD client fullscreen ── */
+body.mud-fullscreen-active main{
+  /* backdrop-filter creates a containing block for position:fixed children,
+     preventing true fullscreen. Clear it when the MUD client is fullscreen. */
+  backdrop-filter:none;
+}
 #mud-client-container.mud-fullscreen{
   position:fixed;
   top:0;left:0;
