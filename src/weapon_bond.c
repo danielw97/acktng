@@ -315,7 +315,7 @@ void bond_recalculate(CHAR_DATA *ch)
 void bond_award_kill(CHAR_DATA *ch, CHAR_DATA *victim)
 {
    OBJ_DATA *wield;
-   int gain;
+   int level_diff;
 
    if (ch == NULL || IS_NPC(ch) || ch->pcdata->bond == NULL)
       return;
@@ -330,12 +330,12 @@ void bond_award_kill(CHAR_DATA *ch, CHAR_DATA *victim)
        wield->wear_loc != WEAR_TWO_HANDED)
       return;
 
-   /* Bond points: (mob_level - wielder_level + 10) / 10, minimum 0 */
-   gain = (victim->level - get_psuedo_level(ch) + 10) / 10;
-   if (gain <= 0)
-      return;
-
-   ch->pcdata->bond->bond_points += gain;
+   /* Bond points: mob must be 10+ levels above wielder for 1 pt, 20+ for 2 pts */
+   level_diff = victim->level - get_psuedo_level(ch);
+   if (level_diff >= 20)
+      ch->pcdata->bond->bond_points += 2;
+   else if (level_diff >= 10)
+      ch->pcdata->bond->bond_points += 1;
 }
 
 /* ── Destroy the old bonded weapon and apply Broken Bond debuff ─ */
