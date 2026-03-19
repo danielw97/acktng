@@ -36,6 +36,27 @@
 #include "save.h"
 #include "weapon_bond.h"
 
+/*
+ * skill_name_legacy -- maps a pre-rename skill name to its current name.
+ * Returns the new name string if old_name is a legacy name, NULL otherwise.
+ * Used during character file load to silently migrate old save files.
+ */
+const char *skill_name_legacy(const char *old_name)
+{
+   static const char *aliases[][2] = {
+      {"shadow step",    "gap transit"        },
+      {"garrote",        "reach silence"      },
+      {"pressure point", "applied understanding"},
+      {"fortify",        "seven shade hold"   },
+      {NULL,             NULL                 }
+   };
+   int i;
+   for (i = 0; aliases[i][0] != NULL; i++)
+      if (!strcmp(old_name, aliases[i][0]))
+         return aliases[i][1];
+   return NULL;
+}
+
 char *cap_nocol(const char *str)
 {
    static char strcap[MAX_STRING_LENGTH];
@@ -1427,6 +1448,12 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             value = fread_number(fp);
             skill_word = fread_word(fp);
             sn = skill_lookup(skill_word);
+            if (sn < 0)
+            {
+               const char *new_name = skill_name_legacy(skill_word);
+               if (new_name != NULL)
+                  sn = skill_lookup(new_name);
+            }
             if (sn < 0)
             {
                sprintf(log_buf, "Loading pfile %s, unknown skill %s.", ch->name, skill_word);

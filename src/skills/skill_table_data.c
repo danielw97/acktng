@@ -2371,11 +2371,11 @@
      "$N shakes his head, and seems less focused."},
 
     /* Cipher skills */
-    {NORM,         "garrote",  {LEVELS_INIT, L(CLASS_CIP, 30)},
-     spell_null,   TAR_IGNORE, POS_STANDING,
-     &gsn_garrote, SLOT(0),    1,
-     24,           TRUE,       "garrote",
-     "!Garrote!",  ""},
+    {NORM,             "reach silence",   {LEVELS_INIT, L(CLASS_CIP, 30)},
+     spell_null,       TAR_IGNORE,        POS_STANDING,
+     &gsn_garrote,     SLOT(0),           1,
+     24,               TRUE,              "reach silence",
+     "!Reach Silence!", ""},
 
     {NORM,
      "feign death",
@@ -2393,7 +2393,7 @@
      ""},
 
     {NORM,
-     "shadow step",
+     "gap transit",
      {LEVELS_INIT, L(CLASS_CIP, 45)},
      spell_null,
      TAR_IGNORE,
@@ -2404,7 +2404,7 @@
      24,
      TRUE,
      "",
-     "!Shadow Step!",
+     "!Gap Transit!",
      ""},
 
     {NORM,
@@ -2466,7 +2466,7 @@
      "!Cleave!",  ""},
 
     {NORM,
-     "fortify",
+     "seven shade hold",
      {LEVELS_INIT, L(CLASS_WAR, 22), L(CLASS_SEN, 32)},
      spell_null,
      TAR_IGNORE,
@@ -2477,7 +2477,7 @@
      24,
      TRUE,
      "",
-     "You relax your defensive stance.",
+     "You release the Seven Shade Hold.",
      ""},
 
     {NORM,       "taunt",    {LEVELS_INIT, L(CLASS_WAR, 12)},
@@ -2590,7 +2590,7 @@
      ""},
 
     {NORM,
-     "pressure point",
+     "applied understanding",
      {LEVELS_INIT, L(CLASS_PUG, 35)},
      spell_null,
      TAR_IGNORE,
@@ -2600,8 +2600,8 @@
      1,
      24,
      TRUE,
-     "pressure point",
-     "!Pressure Point!",
+     "applied understanding",
+     "!Applied Understanding!",
      ""},
 
     {NORM,

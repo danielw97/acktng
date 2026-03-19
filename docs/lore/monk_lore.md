@@ -40,7 +40,43 @@ The **moral ambivalence about combat** that runs through the Monk tradition deri
 
 ---
 
-## IV. The Pugilist Tradition and the Relationship with Brawlers
+## IV. The Skills of the Tradition
+
+The Monk tradition's characteristic skills are not techniques taught as discrete items but names given to specific aspects of an integrated physical methodology that the Interior Forms produce:
+
+**Martial arts** is the broad category that encompasses the tradition's combat applications — the same term used for the pugilist tradition's foundational skill, though the monk tradition's version is the Interior Forms' principled development of the same domain. The Forms-based practitioner and the pit-tested practitioner have both arrived at martial arts through different routes.
+
+**Counter** is the specific defensive capability that the Inner Forms develop in practitioners who have worked with the breathing and movement integration long enough that the body's response precedes the conscious decision. A practitioner who counters is not blocking and then responding — they are already moving to the position from which the counter-strike is delivered before the attack has completed. Senior practitioners describe this as a consequence of the Inner Forms' work with attention and anticipation rather than as a separate technique. The Outer Forms practitioner who has not developed the Inner Forms' depth can simulate counter through deliberate decision, but the result is slower and less reliable than the integrated reflex the Inner Forms develop.
+
+**Iron skin** is the tradition's term for the physical resilience that Outer Forms mastery produces in the practitioner's surface capacity to absorb and distribute impact. The name is metaphorical — the practitioner's skin has not changed — but the physical reality it describes is documented: a practitioner whose postural alignment, muscle engagement timing, and impact absorption have been developed through sustained Outer Forms work presents a physical surface that distributes incoming force through capable structures rather than concentrating it in vulnerable tissue. From an opponent's perspective, the effect is indistinguishable from significantly hardened skin. The tradition uses the term because the metaphor communicates the functional truth even though the literal description would be more complex.
+
+**Roll with blow** is the technique of moving with incoming force rather than against it — specifically the capacity to redirect an impact's energy through the body in ways that dramatically reduce its effective damage by extending the impact duration across a larger surface area and longer time window. The technique appears in the Outer Forms as a specific postural and movement sequence that new practitioners find counterintuitive: the instinct is to resist impact, and roll with blow requires moving into the impact's direction of travel. Practitioners who have developed the technique report that the Forms' explanation — that resistance concentrates force while yielding distributes it — becomes physically obvious once the technique is established, though it is not obvious before.
+
+**Pressure point** — the tradition's preferred term is **applied understanding**, and practitioners use both names — represents the highest practical expression of the Interior Forms in combat application. The systematic study of how the body works, which is the Forms' foundational methodology, produces practitioners who have accumulated detailed working knowledge of which points in the body's structure, when correctly targeted, produce disproportionate effect relative to the force applied. This knowledge is not theoretical anatomy but practical observation refined through generations of empirical testing in actual training contexts. A practitioner with developed applied understanding can identify and target these points under combat conditions without accessing any formal anatomical framework — they know because the knowledge has been transmitted through demonstration and confirmed through experience.
+
+**Conditioning** is the systematic maintenance of the physical substrate the Forms require. A practitioner whose conditioning has lapsed discovers their Forms knowledge persists but their Forms capacity has degraded — the knowledge of what to do is present; the physical capability to execute it under stress is diminished. Senior Monk practitioners identify conditioning as the skill that is most undervalued by beginning practitioners and most clearly understood by experienced ones. The Outer Forms' physical demands are non-trivial; the Inner Forms' demands on breath and sustained engagement capacity are more demanding still. Conditioning is the practice that makes the other skills available rather than merely known.
+
+---
+
+## V. The Stance: Deepest Form
+
+When a Monk practitioner has fully integrated Outer and Inner Forms — when the breath control, postural discipline, and movement economy are no longer deliberate practices but unrestricted expressions of what the practitioner's body has become — the tradition recognizes this as the **Monk stance**, which senior practitioners call **Deepest Form**.
+
+The name references the Interior Forms' organizational framework: the Deepest Forms are not a higher level of instruction but the description of what emerges when Outer and Inner Forms are genuinely integrated. The stance's mechanical effects — enhanced damage and hit rates, increased speed — do not represent new capacities that training has added. They represent the removal of the limitations that the gap between knowledge and embodied capacity had previously imposed. The Monk in Deepest Form is not a different practitioner than before; they are finally the practitioner the Forms were developing, without the constraints of incomplete integration.
+
+---
+
+## VI. The Khephari Thread
+
+The mountain monasteries that produced the Monk tradition's foundational Interior Forms occupied foothills adjacent to the Cinderteeth Mountains' approaches — terrain where the **Khephari** peoples maintained their own tradition of direct physical engagement with geological conditions. The Khephari were documented by Keeper Era surveyors as having "anomalous earth-sense" — the capacity to detect hydraulic pressure changes, subsurface structural conditions, and geological stress states through direct physical contact with terrain.
+
+The Khephari earth-sense and the early monastery traditions' emphasis on footwork economy and postural stability share a domain: both concern the practitioner's relationship to ground as a physical substrate that communicates information about the forces acting on it. Whether early monastery practitioners learned directly from Khephari knowledge-holders, or whether the volcanic, seismically active terrain simply imposed similar adaptations on both communities independently, is not documented in the tradition's records.
+
+Senior Monk tradition scholars who have engaged with this question note its unresolvability without concluding that it is therefore unimportant. The Khephari maintained their own documentation of their earth-sense tradition; that documentation exists in Kiess's archives and has never been systematically compared with the earliest Interior Forms documents. The comparison has not been performed because the institutional impetus to credit a non-human people's knowledge contribution to a formally documented human tradition is not one the tradition's institutions have experienced as compelling. The question remains open in the scholarly sense and closed in the practical sense — which the Monk tradition's more careful scholars find familiar.
+
+---
+
+## VII. The Pugilist Tradition and the Relationship with Brawlers
 
 A parallel fighting tradition developed entirely independently of the Monk monasteries: the **pugilist path**, which originated among cistern laborers, caravan porters, and bound-service workers at pyramid construction sites during the Solar Court era. These workers developed close-quarters fighting disciplines from accumulated physical necessity — timing, stamina, and body knowledge built across generations without formal instruction. Their techniques required no equipment, no record, and no institution to survive, and so survived every collapse that destroyed more formal traditions.
 
@@ -52,7 +88,7 @@ The synthesis that eventually produced the **Martial Artist** adept path was not
 
 ---
 
-## V. The Mountain Monasteries and the Keeper Era
+## VIII. The Mountain Monasteries and the Keeper Era
 
 The mountain monasteries existed in an ambiguous relationship with Keeper Era civilization. The Keepers of Measure were not fundamentally hostile to the monastic communities — their survey network included routes through the monastery-adjacent territories, and their anomaly tablets sometimes document contacts with monastery guides who provided local terrain expertise. But the Keepers' institutional culture valued **measurement and external verification**, and the Monk tradition's inner disciplines were specifically resistant to external verification by design.
 
@@ -62,7 +98,7 @@ The monasteries, for their part, found Keeper administrative culture alien — t
 
 ---
 
-## VI. Monks and the Ninth Meridian Collapse
+## IX. Monks and the Ninth Meridian Collapse
 
 The monasteries were not immediately affected by the Ninth Meridian Catastrophe in the way that road warden companies and Keeper Era administrative institutions were. The high-altitude monastery locations were geographically removed from the desert oasis system that the Catastrophe most directly disrupted. The monasteries had always been substantially self-sufficient — they had to be, given their remote locations — and so the collapse of the charter road network's food and supply distribution system was inconvenient but not immediately existential.
 
@@ -74,7 +110,7 @@ The compressed training lineage is still identifiable in contemporary Monk pract
 
 ---
 
-## VII. Monks Within the Five Cities
+## X. Monks Within the Five Cities
 
 ### Midgaard
 
@@ -88,7 +124,7 @@ The harbor districts of Kowloon are perhaps the most culturally distinctive Monk
 
 ---
 
-## VIII. Cross-References
+## XI. Cross-References
 
 - **Timeline**: Primordial/pre-Keeper era (mountain monasteries; Interior Forms development), Era II (Keeper Era contact with monasteries), Era VII (Ninth Meridian; crisis period monastery adaptations), Era XI (Ash-and-Iron; Midgaard militarization includes Monk practitioners)
 - **Cinderteeth Mountains**: Adjacent to original monastery territories; Ventspeaker community contacts
@@ -96,5 +132,7 @@ The harbor districts of Kowloon are perhaps the most culturally distinctive Monk
 - **Martial Artist**: Adept synthesis of Monk and Brawler; empirical discovery of complementary methods
 - **Warden**: Interior Forms dispute; contested overlap in body-discipline theory
 - **Psionicist**: Parallel tradition in contemplative mental discipline; distinct methodology but shared domain
+- **Khephari**: Earth-sense tradition; possible early contact with monastery foothills communities; unresolved question of knowledge debt
+- **Pugilist**: Common ancestor of Brawler remort path; working-class parallel tradition with distinct origin
 
 See also: `cinderteeth_mountains_lore.md`, `brawler_lore.md`, `martial_artist_lore.md`, `timeline.md`

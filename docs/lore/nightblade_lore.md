@@ -18,7 +18,23 @@ The synthesis was **never institutionalized** — there is no historical Nightbl
 
 ---
 
-## II. The Doctrine of Pre-Contact Resistance Stripping
+## II. The Founding Practitioners
+
+The tradition credits two practitioners with the first systematic integration of what became the Nightblade synthesis: a practitioner known by the work-name **Osh**, and a Warlock practitioner known in the tradition only as **the Pale Referral**.
+
+Osh was an Assassin practitioner who had specialized in operations against spiritually-warded targets — a niche that emerged from the post-empire period's proliferation of Priest tradition ward-networks protecting politically significant individuals. Operations against warded targets consistently required consultation with practitioners who understood ward construction and could advise on vulnerabilities. Osh had developed these consulting relationships into working familiarity with shadow-compact technique sufficient to begin applying it directly rather than merely consulting practitioners who applied it.
+
+The Pale Referral's name comes from the referral chain tradition: in the Assassin network's referral system, practitioners are known by descriptions that identify their capabilities without identifying their persons. "Pale Referral" designated a Warlock practitioner whose referral chain specialty was operations in environments with active spiritual protection infrastructure — the practitioner referrals went to when wards were the primary obstacle. The Pale Referral's specific contribution was the discovery that shadow-compact techniques could be timed and calibrated to specific positional strike windows rather than simply deployed as stand-alone effects.
+
+Their collaboration developed over a series of contract engagements in the **Eccentric Woodland** corridor during the post-empire institutional fragmentation period — a geographic context where route predation was endemic, institutional authority was absent, and operations regularly required working against targets who maintained spiritual protection because official legal protection was unavailable. The Woodland's disorienting environmental properties and the absence of institutional oversight created conditions where improvised synthesis was both necessary and unmonitored.
+
+The operational notes they produced — practical descriptions of what had worked in specific engagement contexts — circulated among practitioners operating in the Woodland corridor and became the transmission that subsequent Nightblade practitioners identify as the tradition's founding documentation. These notes are referenced as the **Woodland Sequence** in the tradition's internal discourse. Practitioners who can trace their lineage to those notes through unbroken chains of practitioner relationships describe themselves as carrying the tradition's founding transmission; practitioners who cannot so trace themselves are understood to be working from derived knowledge rather than from the original documented synthesis.
+
+The Woodland Sequence is not accessible in any archive. It was never written in a form that survived its original operational context — the notes were practically oriented, circulated by hand, and not preserved by any institution. The tradition's founding documents exist only in practitioner memory and in references within documents that reference them. This is consistent with the tradition's broader character: no guild, no founding treaty, no charter registration.
+
+---
+
+## III. The Doctrine of Pre-Contact Resistance Stripping
 
 The Nightblade tradition's foundational doctrine contribution — the **stripping of resistance before contact** — represents a genuine conceptual extension of the Assassin tradition's methodology rather than merely an addition of new techniques.
 
@@ -38,7 +54,7 @@ The specific technique categories that enable this shift:
 
 ---
 
-## III. The Dual Backstab Capability
+## IV. The Dual Backstab Capability
 
 The **Nightblade stance's dual backstab flag** — the capacity to deliver two near-simultaneous precision strikes from advantaged positioning — is the most directly combat-visible expression of the tradition's synthesis. In mechanical terms, it represents the application of Warlock shadow-reading and hex timing to the Assassin tradition's positional strike methodology: rather than a single precision strike from a manufactured opening, the practitioner delivers two strikes, each using the opening created by the other.
 
@@ -48,7 +64,7 @@ This requires the practitioner to model the target's defensive response to the f
 
 ---
 
-## IV. The Nightshade Doctrine
+## V. The Nightshade Doctrine
 
 The **Poison:Nightshade** technique learned at Nightblade level 2 is the tradition's specific development of the Warlock tradition's entropic hex practice applied to organic systems. The Warlock tradition's entropy hexes work with the general processes of dissolution; nightshade poison works with specific biological pathways that the Entropy Scholar tradition had documented as particularly effective for accelerating specific types of system degradation.
 
@@ -58,9 +74,9 @@ The combination of shadow-hex stripping and poison stripping in a single engagem
 
 ---
 
-## V. Cross-References
+## VI. Cross-References
 
-- **Timeline**: Post-empire period (Assassin-Warlock practitioner contact in post-empire margins), Era XII (Violet Compact; Nightblade tradition in informal registry status)
+- **Timeline**: Post-empire period (Osh and the Pale Referral; Eccentric Woodland Sequence; Assassin-Warlock synthesis founding), Era XII (Violet Compact; Nightblade tradition in informal registry status)
 - **Assassin**: Component tradition; patience-and-positioning methodology; pre-contact opening identification
 - **Warlock**: Component tradition; shadow-compact practice; hex and ward-dissolution techniques
 - **Cipher**: Grandparent tradition; shared shadow-economy operating environment

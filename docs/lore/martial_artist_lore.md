@@ -46,7 +46,23 @@ The **maximum chi pool expansion** (from 20 to 25) that distinguishes Martial Ar
 
 ---
 
-## IV. The Two-Apprenticeship Structure
+## IV. The Copper Bracket and the Founding Moment
+
+The cross-training synthesis that the Martial Artist tradition formally dates as its founding moment occurred at the **Copper Bracket Fights** in Kowloon's **Seventh Harbor Circuit** during the reconstruction period following the Ashfall Monsoon. The event was not organized as a cross-training experiment — it was a high-stakes inter-circuit competition between established practitioners, including several who had completed informal cross-training independently in the years after the Ashfall displaced populations had settled in Kowloon and brought both monastery lineages and pit circuit traditions into intense contact.
+
+Two practitioners are named in the tradition's oral account: **Meret Sohn** and **Tessala Wink**.
+
+Meret Sohn was a monastery-trained practitioner who had sought pit training following a series of engagements during the Ashfall reconstruction period where the Forms' structural sophistication had proven insufficient against practitioners whose chaotic aggressive pressure disrupted the conditions the Forms assumed. Sohn had spent two years in the harbor circuits before the Copper Bracket — enough time to develop genuine Brawler-tradition pressure technique without losing the Interior Forms' breath and structural foundation.
+
+Tessala Wink was a pit-circuit veteran who had sought monastery instruction after repeated losses against Monk opponents in extended engagements where Wink's superior early-engagement intensity degraded over time into a disadvantage. Wink had found the monastery's theoretical framework alien — the emphasis on principle comprehension before physical practice inverted the learning order that pit training had established — but had persisted long enough to develop working Inner Forms capacity.
+
+When Sohn and Wink met in the Copper Bracket semi-final, both traditions' practitioners watching the engagement reported something they had not observed before: a fighter who was simultaneously applying the Interior Forms' structural timing and the pit circuit's grinding pressure, neither technique compromising the other. Sohn's breath control allowed sustained output that the Forms alone couldn't generate into chaos; Wink's pressure timing allowed the Forms' structural precision to land in conditions the Forms hadn't been designed for. Neither practitioner was performing what their origin tradition had taught them. Each was performing something their origin tradition had made possible, combined with what the other tradition had contributed.
+
+The engagement was not the first instance of cross-training synthesis in Kowloon's harbor districts — both practitioners had predecessors. What made it the tradition's founding event was visibility: the Copper Bracket drew enough practitioners from both traditions that the demonstration was publicly witnessed, widely discussed, and produced the first generation of deliberately cross-trained practitioners who had a shared reference point. When subsequent practitioners describe the Martial Artist synthesis to those outside the tradition, they point to the Copper Bracket. When they describe it to those inside, they point to what Sohn and Wink found in each other's technique that neither had found alone.
+
+---
+
+## V. The Two-Apprenticeship Structure
 
 Senior Martial Artist practitioners describe the formation process as drawing from two traditions, though **mastery of either apprenticeship is sufficient** to begin the synthesis. A practitioner who has completed either the Monk or the Brawler tradition at depth can achieve the Martial Artist convergence, though the two traditions contribute different foundational elements.
 
@@ -58,9 +74,9 @@ This is why the Martial Artist tradition is categorically a second-apprenticeshi
 
 ---
 
-## V. Cross-References
+## VI. Cross-References
 
-- **Timeline**: Era XI (mountain monastery Interior Forms origin; harbor pit fighting culture origin), Era XIV (Kowloon's founding brings monastery lineages and pit fighters into sustained contact; mutual discovery of incompleteness begins), Era XIX (Ash-and-Iron Decades: monastery-pit synthesis codified; first Martial Artists; chi integration discovery)
+- **Timeline**: Era XI (mountain monastery Interior Forms origin; harbor pit fighting culture origin), Era XIV (Kowloon's founding brings monastery lineages and pit fighters into sustained contact; mutual discovery of incompleteness begins), Era XIX (Ash-and-Iron Decades: Copper Bracket Fights; Meret Sohn and Tessala Wink; Martial Artist synthesis founding moment; chi integration discovery)
 - **Monk**: Component tradition; Interior Forms; chi work; breath and structural timing
 - **Brawler**: Component tradition; pit-tested technique; physical impact methodology; pressure and attrition
 - **Kowloon**: Harbor district synthesis context; Monk-Brawler cross-training incubation environment

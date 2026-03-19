@@ -48,7 +48,47 @@ The Scorching Sands route itself — the full corridor from the eastern desert a
 
 ---
 
-## V. The Interior Forms Dispute
+## V. The Skills of the Tradition
+
+The warden tradition's characteristic skills can each be traced to the specific doctrinal and historical context that produced them:
+
+**Enhanced damage** is the tradition's foundational commitment to decisive positional striking — landing hard because the warden has learned to commit fully when commitment is warranted, with body weight and position behind every blow. Dunmar's doctrine holds that half-strikes waste the opportunity that discipline creates.
+
+**Fortify** is known within the tradition as the **Seven Shade Hold** — named after the tactical achievement at the Seven Shade Arches, the ability to transform temporary ground into a defensible position through a combination of physical presence and immediate terrain adaptation. A warden who executes the Seven Shade Hold is doing in small scale what Dunmar did across forty-three days: convincing the ground, and anyone on it, that it will be held.
+
+**Bash** reflects the tradition's positional doctrine most directly: a forceful disruptive strike intended not primarily to damage but to break formation coherence and create the opening that a disciplined warden then exploits from their prepared position. The road warden companies' convoy protection context shaped this — the primary tactical problem was keeping hostile forces away from cargo, and interrupting their formation was more valuable than winning individual exchanges.
+
+**Cleave** and **rend** are the tradition's logistics-first doctrine applied to individual targets. The road warden companies learned that disabling opponents' capacity to continue the engagement — damaging the equipment and physical infrastructure of a hostile force — was often more effective than maximizing individual kill rate. Cleave targets broad force-delivery surfaces; rend targets specific physical capacity. Both reflect the warden's trained preference for ending engagements through cumulative attrition rather than dramatic single events.
+
+**Parry** and **shield block** are positional tools — the defensive side of the tradition's complete-control doctrine. A warden who cannot defend their ground has not defended it regardless of how much damage they've inflicted. Both skills reflect the convoy protection context: the warden's job was to remain functional until the cargo arrived safely, not to achieve spectacular individual outcomes.
+
+**Berserk** carries specific doctrinal significance that is sometimes misunderstood. The Dunmar School does not consider berserk a failure of discipline — it considers berserk the highest expression of discipline in circumstances that require it. Dunmar's oral record preserves three specific accounts of what he called the *Last Watch Release*: moments during the Forty-Three Days when he ordered all-in assault — complete release of positional discipline, full commitment to aggressive output — not because the position was recoverable, but to buy the wounded enough time to fall back to the next defensible shade structure.
+
+The doctrine is precise: berserk is warranted when holding the current position has become objectively impossible, the principal objective (the cargo, the route, the person being protected) can still be preserved through aggressive cover, and no alternative exists. A warden who triggers berserk when any of these conditions is not met is not performing doctrine — they are using doctrine's name to excuse a failure of discipline. The Registry School considers this distinction too fine to be reliably maintained under combat stress and treats berserk as a dangerous inheritance; the Dunmar School considers this objection a failure of trust in trained judgment.
+
+---
+
+## VI. The Stance: Dunmar's Watch
+
+When a warden practitioner has internalized the tradition's full formation doctrine — when the balance between positional discipline and decisive action is no longer a deliberate calculation but an integrated reflex — the tradition formally recognizes this through the **Warden stance**, which the Dunmar School calls **Dunmar's Watch**.
+
+The name refers to the specific quality of awareness that Dunmar maintained across all forty-three days: complete situational awareness of the Seven Shade Arches, every hostile's position, every friendly's condition, every arc of potential attack or approach. Not anticipation of specific events, but the comprehensive presence that allowed him to respond appropriately to whatever the engagement produced.
+
+The stance's effect — enhanced damage rating — does not represent increased raw aggression. It represents the advantage of a practitioner who wastes no movement: who strikes when and where the situation has already been positioned to reward the strike, so that the same physical effort produces greater effect than it would from a less integrated practitioner. The warden hits harder in Dunmar's Watch not because they are stronger, but because they have learned to stop missing the moment.
+
+---
+
+## VII. The Deltari Infrastructure Thread
+
+One thread in the warden tradition's history that formal doctrine does not address concerns the physical environment that the road warden companies were chartered to protect. The charter road network's cistern-supported route system — the infrastructure that made desert water convoys viable — was built and maintained by **Deltari hydraulic engineers** whose expertise the Keeper Era's administrative framework employed without formal acknowledgment.
+
+The road warden companies' combat doctrine developed in direct relationship to this infrastructure. The Seven Shade Arches were Deltari-engineered shade structures. Dunmar's tactical doctrine of fighting near shade infrastructure reflected a combat environment that Deltari construction had created. The specific problem the warden tradition was institutionally designed to solve — protecting water convoys in a cistern-supported desert network — was inseparable from the hydraulic infrastructure that Deltari labor built.
+
+Whether this constitutes a meaningful debt to the Deltari tradition is not a question the warden tradition's formal doctrine has ever engaged with directly. The Reckoning faction has occasionally raised it as one thread in the broader question of unacknowledged institutional debts in the five-city governance structure. The Dunmar School's response, when the question reaches them at all, is that doctrine is derived from problems and conditions rather than from the identities of those who created the conditions — which is historically accurate and does not constitute acknowledgment.
+
+---
+
+## VIII. The Interior Forms Dispute
 
 A persistent minor controversy within warden circles concerns the relationship between warden doctrine and the **Interior Forms** — the body-discipline system developed by the mountain monasteries that became the foundation of the Monk tradition. Some warden lineages incorporated elements of monastic breath control and posture work into their training, producing hybrid practitioners who felt at home in both warden and monk contexts.
 
@@ -60,7 +100,7 @@ This dispute is largely academic in the modern era. The practical overlap betwee
 
 ---
 
-## VI. Wardens Within the Five Cities
+## IX. Wardens Within the Five Cities
 
 ### Midgaard
 
@@ -86,7 +126,7 @@ Mafdet employs wardens primarily through the **Harbor Wardens** institution — 
 
 ---
 
-## VII. The Ashbound Question
+## X. The Ashbound Question
 
 One thread in warden history that is rarely discussed openly concerns the **Ashbound** — the forces that besieged Dunmar at the Seven Shade Arches during the Ninth Meridian aftermath. The historical record is sparse and contested. What is clear is that the Ashbound were not simply bandits or opportunists; they had organizational coherence, tactical doctrine of their own, and specific interest in the water convoy Dunmar was protecting.
 
@@ -96,7 +136,7 @@ The Dunmar School does not engage with this argument. The **Registry School** fi
 
 ---
 
-## VIII. Cross-References
+## XI. Cross-References
 
 - **Timeline**: Era II (road warden companies), Era VII (Ninth Meridian, Reaver Confederates, Caleph Dunmar's engagement), Era XI (Ash-and-Iron militarization), Era XII (Violet Compact registry formalization)
 - **Scorching Sands**: Dunmar's engagement site; the Seven Shade Arches waystation
@@ -109,5 +149,6 @@ The Dunmar School does not engage with this argument. The **Registry School** fi
 - **Crusader**: Adept synthesis of Knight and Swordsman; reclaims the Solar Court's original campaign-honor title
 - **Monk**: Interior Forms dispute; partial overlap in body-discipline theory
 - **Eastern Desert**: Charter road network; Ninth Meridian Catastrophe
+- **Deltari**: Cistern and shade infrastructure builders; environmental context for warden doctrine development
 
 See also: `scorching_sands_lore.md`, `midgaard_lore.md`, `kowloon_lore.md`, `timeline.md`
