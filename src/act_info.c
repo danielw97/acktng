@@ -2277,21 +2277,23 @@ void do_who(CHAR_DATA *ch, char *argument)
    buf4[0] = '\0';
 
    sprintf(buf, "WHO Listing: " mudnamecolor "\n\r");
+   safe_strcat(MAX_STRING_LENGTH, buf,
+               "@@R+-------------------------------------------------------------------------------"
+               "-------+\n\r");
    safe_strcat(
        MAX_STRING_LENGTH, buf,
-       "@@R+--------------------------------------------------------------------------------+\n\r");
+       "| @@dWi Pr Wl Sw Eg Br To Ws@@R                                                          "
+       "    |\n\r");
+   safe_strcat(
+       MAX_STRING_LENGTH, buf,
+       "| @@mSo Pa An Kn Ne Mo@@R                                                                "
+       "    |\n\r");
    safe_strcat(MAX_STRING_LENGTH, buf,
-               "| @@dWi Pr Wl Sw Eg Br@@R                                                          "
-               "    |\n\r");
-   safe_strcat(MAX_STRING_LENGTH, buf,
-               "| @@mSo Pa An Kn Ne Mo@@R                                                          "
-               "    |\n\r");
-   safe_strcat(MAX_STRING_LENGTH, buf,
-               "| @@bMa Cl Th Wa Ps Pu @@eRace Clan  ABJPW    Player	Title	                 "
+               "| @@bMa Cl Th Wa Ps Pu Dr @@eRace Clan  ABJPW    Player	Title	                    "
                "@@R(flags) @@R|\n\r");
-   safe_strcat(
-       MAX_STRING_LENGTH, buf,
-       "|------------------------------------+-------------------------------------------|\n\r");
+   safe_strcat(MAX_STRING_LENGTH, buf,
+               "|------------------------------------------+---------------------------------------"
+               "----|\n\r");
 
    for (int i = 0; i < 4; i++)
    {
@@ -2320,24 +2322,28 @@ void do_who(CHAR_DATA *ch, char *argument)
             switch (i)
             {
             case 0:
-               safe_strcat(MAX_STRING_LENGTH, buf,
-                           "@@R|------------------------------------|----------@@lImmortals@@R-----"
-                           "-------------------|@@g\n\r");
+               safe_strcat(
+                   MAX_STRING_LENGTH, buf,
+                   "@@R|------------------------------------------|----------@@lImmortals@@R-----"
+                   "-------------------|@@g\n\r");
                break;
             case 1:
-               safe_strcat(MAX_STRING_LENGTH, buf,
-                           "@@R|------------------------------------|------------@@WAdepts@@R------"
-                           "-------------------|@@g\n\r");
+               safe_strcat(
+                   MAX_STRING_LENGTH, buf,
+                   "@@R|------------------------------------------|------------@@WAdepts@@R------"
+                   "-------------------|@@g\n\r");
                break;
             case 2:
-               safe_strcat(MAX_STRING_LENGTH, buf,
-                           "@@R|------------------------------------|----------@@mRemortals@@R-----"
-                           "-------------------|@@g\n\r");
+               safe_strcat(
+                   MAX_STRING_LENGTH, buf,
+                   "@@R|------------------------------------------|----------@@mRemortals@@R-----"
+                   "-------------------|@@g\n\r");
                break;
             case 3:
-               safe_strcat(MAX_STRING_LENGTH, buf,
-                           "@@R|------------------------------------|-----------@@cMortals@@R------"
-                           "-------------------|@@g\n\r");
+               safe_strcat(
+                   MAX_STRING_LENGTH, buf,
+                   "@@R|------------------------------------------|-----------@@cMortals@@R------"
+                   "-------------------|@@g\n\r");
                break;
             }
          }
@@ -2365,17 +2371,17 @@ void do_who(CHAR_DATA *ch, char *argument)
                sprintf(tmp, "@@W%s@@g", wn ? wn : "Immortal");
                break;
             }
-            /* Center within 18 visible chars to match mortal/adept column width */
-            sprintf(buf3, "%s", center_text(tmp, 18));
+            /* Center within 21 visible chars to match mortal/adept column width */
+            sprintf(buf3, "%s", center_text(tmp, 21));
          }
          else if (IS_SET(wch->pcdata->pflags, PFLAG_AMBAS))
          {
-            sprintf(buf3, "%s", center_text("AMBASSADOR", 18));
+            sprintf(buf3, "%s", center_text("AMBASSADOR", 21));
          }
          else if (is_adept(wch))
          {
-            /* Adept: center title within 18 visible chars */
-            sprintf(buf3, "%s", center_text(get_adept_name(wch), 18));
+            /* Adept: center title within 21 visible chars */
+            sprintf(buf3, "%s", center_text(get_adept_name(wch), 21));
          }
          else if (is_remort(wch))
          {
@@ -2553,34 +2559,34 @@ void do_who(CHAR_DATA *ch, char *argument)
       }
    }
 
-   safe_strcat(
-       MAX_STRING_LENGTH, buf,
-       "@@R|------------------------------------+-------------------------------------------|\n\r");
+   safe_strcat(MAX_STRING_LENGTH, buf,
+               "@@R|------------------------------------------+------------------------------------"
+               "-------|\n\r");
    send_to_char(buf, ch);
    buf[0] = '\0';
 
    sprintf(buf4, "(%d Player%s)  KEY: (A)fk  (B)uilding  (*)Clan Boss  (P)kok  (W)riting",
            player_cnt, player_cnt == 1 ? "" : "s");
-   sprintf(buf2, "@@R|@@G %s @@R|\n\r", center_text(buf4, 78));
+   sprintf(buf2, "@@R|@@G %s @@R|\n\r", center_text(buf4, 84));
    safe_strcat(MAX_STRING_LENGTH, buf, buf2);
    sprintf(buf4, " (L) Clan Leader  (!) Clan Armourer ");
-   sprintf(buf2, "@@R|@@G %s @@R|\n\r", center_text(buf4, 78));
+   sprintf(buf2, "@@R|@@G %s @@R|\n\r", center_text(buf4, 84));
    safe_strcat(MAX_STRING_LENGTH, buf, buf2);
 
    if (happy_hour)
    {
       sprintf(buf4, "@@yHappy Hour is active!@@N");
-      sprintf(buf2, "@@R|@@G %s @@R|\r\n", center_text(buf4, 78));
+      sprintf(buf2, "@@R|@@G %s @@R|\r\n", center_text(buf4, 84));
       safe_strcat(MAX_STRING_LENGTH, buf, buf2);
    }
 
    sprintf(buf4, "There have been a maximum of %d player%s logged on this session", player_cnt,
            player_cnt == 1 ? "" : "s");
-   sprintf(buf2, "@@R|@@G %s @@R|\n\r", center_text(buf4, 78));
+   sprintf(buf2, "@@R|@@G %s @@R|\n\r", center_text(buf4, 84));
    safe_strcat(MAX_STRING_LENGTH, buf, buf2);
-   safe_strcat(
-       MAX_STRING_LENGTH, buf,
-       "@@R|--------------------------------------------------------------------------------|\n\r");
+   safe_strcat(MAX_STRING_LENGTH, buf,
+               "@@R|-------------------------------------------------------------------------------"
+               "-------|\n\r");
 
    send_to_char(buf, ch);
    send_to_char(color_string(ch, "normal"), ch);
