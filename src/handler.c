@@ -342,7 +342,8 @@ static int get_stat_reinc_bonus(CHAR_DATA *ch, int apply_type)
       if (ch->pcdata->reincarnations[CLASS_WAR] > 0)
          return (ch->pcdata->reincarnations[CLASS_WAR] + 1) / 2;
       return 0;
-   case APPLY_INT: {
+   case APPLY_INT:
+   {
       int bonus = 0;
       if (ch->pcdata->reincarnations[CLASS_MAG] > 0)
          bonus += (ch->pcdata->reincarnations[CLASS_MAG] + 1) / 2;

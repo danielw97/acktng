@@ -201,6 +201,7 @@ static const struct reinc_unlock_rule reinc_rules[] = {
     {&gsn_equip_wand, CLASS_WIZ, CLASS_SOR, 20},
     {&gsn_equip_wand, CLASS_NEC, CLASS_EGO, 20},
     {&gsn_equip_wand, CLASS_PRI, CLASS_PAL, 20},
+    {&gsn_substrate_piercing, CLASS_DRU, -1, 1},
 };
 
 bool can_use_skill(CHAR_DATA *ch, int gsn)
@@ -310,8 +311,8 @@ bool skill_success(CHAR_DATA *ch, CHAR_DATA *victim, int gsn, int bonus)
       int threshold;
       int bonus;
    } skill_bonuses[] = {
-       {LEVEL_ONE, 5},    {LEVEL_TWO, 5},    {LEVEL_THREE, 5}, {LEVEL_FOUR, 5},
-       {LEVEL_FIVE, 5},   {LEVEL_MASTER, 1}, {LEVEL_GM, 1},
+       {LEVEL_ONE, 5},  {LEVEL_TWO, 5},    {LEVEL_THREE, 5}, {LEVEL_FOUR, 5},
+       {LEVEL_FIVE, 5}, {LEVEL_MASTER, 1}, {LEVEL_GM, 1},
    };
    int chance = 70;
    int i;

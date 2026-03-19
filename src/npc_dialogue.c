@@ -1,9 +1,9 @@
 /*
- * npc_dialogue.c — LLM-powered NPC dialogue via OpenClaw (OpenAI-compatible).
+ * npc_dialogue.c — LLM-powered NPC dialogue via tng-ai (POST /v1/chat).
  *
  * Architecture:
  *   Game loop thread: npc_dialogue_dispatch() enqueues requests immediately.
- *   Worker thread:    dequeues, calls OpenClaw over HTTP (blocking), enqueues
+ *   Worker thread:    dequeues, calls tng-ai over HTTP (blocking), enqueues
  *                     responses.
  *   Game loop thread: npc_dialogue_deliver() drains responses each tick and
  *                     calls do_say() for valid NPC+player pairs.
@@ -413,10 +413,13 @@ static void build_json_request(char *buf, size_t cap, const NPC_DLG_REQ *req)
    char turn_buf[1024];
    int  i;
 
+   char header[128];
+
    buf[0] = '\0';
-   safe_append(buf, cap, "{\"model\":\"");
-   safe_append(buf, cap, OPENCLAW_MODEL);
-   safe_append(buf, cap, "\",\"max_tokens\":100,\"temperature\":0.7,\"messages\":[");
+   snprintf(header, sizeof(header),
+            "{\"model\":\"%s\",\"max_tokens\":%d,\"temperature\":0.7,\"messages\":[",
+            TNGAI_MODEL, TNGAI_MAX_TOKENS);
+   safe_append(buf, cap, header);
 
    /* System message */
    json_escape(escaped, sizeof(escaped), req->system_prompt);
@@ -528,10 +531,10 @@ static size_t curl_write_cb(void *ptr, size_t size, size_t nmemb, void *userdata
 }
 
 /* =========================================================================
- * HTTP call to OpenClaw.
+ * HTTP call to tng-ai.
  * ========================================================================= */
 
-static void call_openclaw(const NPC_DLG_REQ *req, char *response_text, size_t cap)
+static void call_tngai(const NPC_DLG_REQ *req, char *response_text, size_t cap)
 {
    CURL     *curl;
    CURLcode  res;
@@ -559,13 +562,13 @@ static void call_openclaw(const NPC_DLG_REQ *req, char *response_text, size_t ca
    struct curl_slist *headers = NULL;
    headers = curl_slist_append(headers, "Content-Type: application/json");
 
-   curl_easy_setopt(curl, CURLOPT_URL,            OPENCLAW_URL);
+   curl_easy_setopt(curl, CURLOPT_URL,            TNGAI_URL);
    curl_easy_setopt(curl, CURLOPT_POSTFIELDS,      request_json);
    curl_easy_setopt(curl, CURLOPT_HTTPHEADER,      headers);
    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION,   curl_write_cb);
    curl_easy_setopt(curl, CURLOPT_WRITEDATA,       &body);
-   curl_easy_setopt(curl, CURLOPT_TIMEOUT,         OPENCLAW_TIMEOUT);
-   curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT,  OPENCLAW_TIMEOUT);
+   curl_easy_setopt(curl, CURLOPT_TIMEOUT,         TNGAI_TIMEOUT);
+   curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT,  TNGAI_TIMEOUT);
 
    res = curl_easy_perform(curl);
 
@@ -575,7 +578,7 @@ static void call_openclaw(const NPC_DLG_REQ *req, char *response_text, size_t ca
    if (res == CURLE_OK)
       parse_json_response(body.buf, response_text, cap);
    else
-      log_f("call_openclaw: curl error: %s", curl_easy_strerror(res));
+      log_f("call_tngai: curl error: %s", curl_easy_strerror(res));
 
    free(body.buf);
 }
@@ -600,7 +603,7 @@ static void *npc_dialogue_worker(void *unused)
       pthread_mutex_unlock(&req_mutex);
 
       char response_text[512];
-      call_openclaw(req, response_text, sizeof(response_text));
+      call_tngai(req, response_text, sizeof(response_text));
 
       if (response_text[0] != '\0')
       {
@@ -966,6 +969,67 @@ static void build_system_prompt(char *buf, size_t cap, CHAR_DATA *npc)
 }
 
 /* =========================================================================
+ * Prompt injection defence.
+ * ========================================================================= */
+
+/* Tokens that indicate a structural injection attempt; stripped from input. */
+static const char *STRIP_TOKENS[] = {
+    "[INST]", "<<SYS>>", "<|system|>", "</s>", "<|im_start|>", "<|im_end|>",
+    NULL
+};
+
+/* Phrases that signal a persona-override attempt; trigger keyword short-circuit. */
+static const char *INJECTION_TRIGGERS[] = {
+    "ignore previous",
+    "ignore all previous",
+    "disregard previous",
+    "forget previous",
+    "you are now",
+    "act as",
+    "pretend you are",
+    "pretend to be",
+    "your new instructions",
+    NULL
+};
+
+void npc_dialogue_sanitize_input(char *dst, const char *src)
+{
+   const char *p   = src;
+   size_t      di  = 0;
+   size_t      cap = 512; /* dst is always 512 bytes per API contract */
+
+   while (*p && di + 1 < cap)
+   {
+      int    stripped = 0;
+      int    i;
+      size_t tlen;
+
+      /* Check for tokens to strip entirely (case-insensitive) */
+      for (i = 0; STRIP_TOKENS[i] != NULL; i++)
+      {
+         tlen = strlen(STRIP_TOKENS[i]);
+         if (strncasecmp(p, STRIP_TOKENS[i], tlen) == 0)
+         {
+            p      += tlen;
+            stripped = 1;
+            break;
+         }
+      }
+
+      if (stripped)
+         continue;
+
+      /* Replace angle brackets to prevent structural role confusion */
+      if      (*p == '<') dst[di++] = '(';
+      else if (*p == '>') dst[di++] = ')';
+      else                dst[di++] = *p;
+
+      p++;
+   }
+   dst[di] = '\0';
+}
+
+/* =========================================================================
  * Public API: dispatch.
  * ========================================================================= */
 
@@ -973,12 +1037,16 @@ void npc_dialogue_dispatch(CHAR_DATA *npc, CHAR_DATA *player, const char *messag
 {
    NPC_DLG_STATE    *state;
    NPC_DLG_REQ      *req;
+   char              sanitized[512];
    char              user_turn[512];
    int               i;
 
    /* Don't stack requests */
    if (npc->dlg_pending)
       return;
+
+   /* Sanitize input: strip role-boundary tokens, replace angle brackets */
+   npc_dialogue_sanitize_input(sanitized, message);
 
    state = get_or_create_dlg_state(npc);
 
@@ -990,7 +1058,32 @@ void npc_dialogue_dispatch(CHAR_DATA *npc, CHAR_DATA *player, const char *messag
    }
 
    /* Build user turn: "PlayerName: message" */
-   snprintf(user_turn, sizeof(user_turn), "%s: %s", player->name, message);
+   snprintf(user_turn, sizeof(user_turn), "%s: %s", player->name, sanitized);
+
+   /* Keyword short-circuit: detect persona-override attempts.
+    * Enqueue a fixed confused refusal directly without hitting the API. */
+   for (i = 0; INJECTION_TRIGGERS[i] != NULL; i++)
+   {
+      if (str_infix(INJECTION_TRIGGERS[i], sanitized))
+      {
+         NPC_DLG_RESP *resp = malloc(sizeof(NPC_DLG_RESP));
+         log_f("npc_dialogue: injection attempt by %s blocked: %.80s",
+               player->name, sanitized);
+         if (resp != NULL)
+         {
+            resp->npc    = npc;
+            resp->player = player;
+            strncpy(resp->response_text, "I am not certain I follow your meaning.",
+                    sizeof(resp->response_text) - 1);
+            resp->response_text[sizeof(resp->response_text) - 1] = '\0';
+            pthread_mutex_lock(&resp_mutex);
+            resp->next = resp_head;
+            resp_head  = resp;
+            pthread_mutex_unlock(&resp_mutex);
+         }
+         return;
+      }
+   }
 
    /* Allocate request (malloc — never touches the MUD allocator from worker) */
    req = malloc(sizeof(NPC_DLG_REQ));

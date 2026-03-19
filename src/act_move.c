@@ -1233,6 +1233,100 @@ void do_recall(CHAR_DATA *ch, char *argument)
    return;
 }
 
+#define CARAVAN_MIDGAARD_VNUM 1151 /* Caravan Square, Midgaard */
+
+typedef struct caravan_dest CARAVAN_DEST;
+struct caravan_dest
+{
+   const char *name;
+   int dest_vnum;
+   int quest_template_id; /* completed_quests[id] must be TRUE */
+   const char *city_name;
+};
+
+/* City cartography quest template IDs (file N.prop -> id N-1) */
+static const CARAVAN_DEST caravan_destinations[] = {
+    {"kiess", 3661, 144, "Kiess"},
+    {"kowloon", 3833, 145, "Kowloon"},
+    {"mafdet", 3878, 146, "Mafdet"},
+    {"rakuen", 4556, 148, "Rakuen"},
+};
+static const int num_caravan_destinations =
+    (int)(sizeof(caravan_destinations) / sizeof(caravan_destinations[0]));
+
+void do_caravan(CHAR_DATA *ch, char *argument)
+{
+   ROOM_INDEX_DATA *dest_room;
+   const CARAVAN_DEST *dest;
+   int i;
+
+   if (IS_NPC(ch))
+      return;
+
+   if (ch->fighting != NULL)
+   {
+      send_to_char("You cannot board a caravan while fighting!\n\r", ch);
+      return;
+   }
+
+   if (ch->in_room == NULL || ch->in_room->vnum != CARAVAN_MIDGAARD_VNUM)
+   {
+      send_to_char("You must be at the Caravan Square in Midgaard to use caravan travel.\n\r", ch);
+      return;
+   }
+
+   if (argument[0] == '\0')
+   {
+      send_to_char("Caravan travel is available to: Kiess, Kowloon, Mafdet, Rakuen.\n\r", ch);
+      send_to_char("Usage: caravan <city>\n\r", ch);
+      return;
+   }
+
+   dest = NULL;
+   for (i = 0; i < num_caravan_destinations; i++)
+   {
+      if (!str_prefix(argument, caravan_destinations[i].name))
+      {
+         dest = &caravan_destinations[i];
+         break;
+      }
+   }
+
+   if (dest == NULL)
+   {
+      send_to_char("Caravan travel is available to: Kiess, Kowloon, Mafdet, Rakuen.\n\r", ch);
+      return;
+   }
+
+   if (dest->quest_template_id >= 0 && dest->quest_template_id < QUEST_MAX_TEMPLATES &&
+       !ch->pcdata->completed_quests[dest->quest_template_id])
+   {
+      char buf[MAX_STRING_LENGTH];
+      sprintf(buf,
+              "You haven't completed the cartographic survey of %s. "
+              "The caravan master cannot route you there without proper navigation records.\n\r",
+              dest->city_name);
+      send_to_char(buf, ch);
+      return;
+   }
+
+   dest_room = get_room_index(dest->dest_vnum);
+   if (dest_room == NULL)
+   {
+      send_to_char("The caravan route to that city is not currently available.\n\r", ch);
+      return;
+   }
+
+   act("$n climbs aboard a departing caravan wagon bound for the road.", ch, NULL, NULL, TO_ROOM);
+
+   char_from_room(ch);
+   char_to_room(ch, dest_room);
+
+   act("$n steps down from a caravan wagon, having arrived from Midgaard.", ch, NULL, NULL,
+       TO_ROOM);
+   do_look(ch, "auto");
+}
+
 void do_train(CHAR_DATA *ch, char *argument)
 {
    char buf[MAX_STRING_LENGTH];

@@ -34,6 +34,7 @@
  */
 
 #include "save.h"
+#include "weapon_bond.h"
 
 char *cap_nocol(const char *str)
 {
@@ -225,6 +226,18 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
       fprintf(fp, "%2d ", ch->class_level[cnt]);
    fprintf(fp, "\n");
 
+   fprintf(fp, "Druidlevels  ");
+   for (cnt = CLASS_DRU; cnt <= CLASS_HIE; cnt++)
+      fprintf(fp, "%2d ", ch->class_level[cnt]);
+   fprintf(fp, "\n");
+
+   fprintf(fp, "Druidreinc   ");
+   for (cnt = CLASS_DRU; cnt <= CLASS_HIE; cnt++)
+      fprintf(fp, "%2d ", ch->pcdata->reincarnations[cnt]);
+   fprintf(fp, "\n");
+
+   fprintf(fp, "Overgrowth   %d\n", ch->overgrowth);
+
    fprintf(fp, "Reincarnations ");
    for (cnt = 0; cnt < MAX_CLASS; cnt++)
       fprintf(fp, "%2d ", ch->pcdata->reincarnations[cnt]);
@@ -392,6 +405,20 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
       fprintf(fp, "Pagelen      %d\n", ch->pcdata->pagelen);
       fprintf(fp, "Pflags       %d\n", ch->pcdata->pflags);
 
+      /* Weapon bond data */
+      if (ch->pcdata->bond != NULL)
+      {
+         BOND_DATA *bond = ch->pcdata->bond;
+         fprintf(fp, "BondVnum     %d\n", bond->base_obj_vnum);
+         fprintf(fp, "BondLevel    %d\n", bond->base_level);
+         fprintf(fp, "BondPoints   %d\n", bond->bond_points);
+         fprintf(fp, "BondTrack    %d\n", bond->track);
+         fprintf(fp, "BondRank     %d\n", bond->rank);
+         fprintf(fp, "BondMastery  %d\n", bond->mastery ? 1 : 0);
+         fprintf(fp, "BondName     %s~\n", bond->weapon_name ? bond->weapon_name : "");
+         fprintf(fp, "BondShort    %s~\n", bond->weapon_short ? bond->weapon_short : "");
+      }
+
       for (sn = 0; sn < MAX_SKILL; sn++)
       {
          if (skill_table[sn].name != NULL && ch->pcdata->learned[sn] > 0)
@@ -513,6 +540,11 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
          ch->class_level[foo] = -1;
       for (foo = CLASS_GMA; foo < CLASS_GMA + MAX_CLASS; foo++)
          ch->class_level[foo] = -1;
+      for (foo = CLASS_DRU; foo <= CLASS_HIE; foo++)
+         ch->class_level[foo] = -1;
+      for (foo = CLASS_DRU; foo <= CLASS_HIE; foo++)
+         ch->pcdata->reincarnations[foo] = 0;
+      ch->overgrowth = 0;
       ch->pcdata->reincarnate_race = -1;
       ch->pcdata->reincarnate_class = -1;
       ch->pcdata->reincarnate_confirm = FALSE;
@@ -831,6 +863,75 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          {
             SKEY("Bamfin", ch->pcdata->bamfin, fread_string(fp));
             SKEY("Bamfout", ch->pcdata->bamfout, fread_string(fp));
+
+            if (!str_cmp(word, "BondVnum"))
+            {
+               if (ch->pcdata->bond == NULL)
+                  ch->pcdata->bond = (BOND_DATA *)calloc(1, sizeof(BOND_DATA));
+               ch->pcdata->bond->base_obj_vnum = fread_number(fp);
+               fMatch = TRUE;
+               break;
+            }
+            if (!str_cmp(word, "BondLevel"))
+            {
+               if (ch->pcdata->bond == NULL)
+                  ch->pcdata->bond = (BOND_DATA *)calloc(1, sizeof(BOND_DATA));
+               ch->pcdata->bond->base_level = fread_number(fp);
+               fMatch = TRUE;
+               break;
+            }
+            if (!str_cmp(word, "BondPoints"))
+            {
+               if (ch->pcdata->bond == NULL)
+                  ch->pcdata->bond = (BOND_DATA *)calloc(1, sizeof(BOND_DATA));
+               ch->pcdata->bond->bond_points = fread_number(fp);
+               fMatch = TRUE;
+               break;
+            }
+            if (!str_cmp(word, "BondTrack"))
+            {
+               if (ch->pcdata->bond == NULL)
+                  ch->pcdata->bond = (BOND_DATA *)calloc(1, sizeof(BOND_DATA));
+               ch->pcdata->bond->track = fread_number(fp);
+               fMatch = TRUE;
+               break;
+            }
+            if (!str_cmp(word, "BondRank"))
+            {
+               if (ch->pcdata->bond == NULL)
+                  ch->pcdata->bond = (BOND_DATA *)calloc(1, sizeof(BOND_DATA));
+               ch->pcdata->bond->rank = fread_number(fp);
+               fMatch = TRUE;
+               break;
+            }
+            if (!str_cmp(word, "BondMastery"))
+            {
+               if (ch->pcdata->bond == NULL)
+                  ch->pcdata->bond = (BOND_DATA *)calloc(1, sizeof(BOND_DATA));
+               ch->pcdata->bond->mastery = (fread_number(fp) != 0);
+               fMatch = TRUE;
+               break;
+            }
+            if (!str_cmp(word, "BondName"))
+            {
+               if (ch->pcdata->bond == NULL)
+                  ch->pcdata->bond = (BOND_DATA *)calloc(1, sizeof(BOND_DATA));
+               if (ch->pcdata->bond->weapon_name != NULL)
+                  free_string(ch->pcdata->bond->weapon_name);
+               ch->pcdata->bond->weapon_name = fread_string(fp);
+               fMatch = TRUE;
+               break;
+            }
+            if (!str_cmp(word, "BondShort"))
+            {
+               if (ch->pcdata->bond == NULL)
+                  ch->pcdata->bond = (BOND_DATA *)calloc(1, sizeof(BOND_DATA));
+               if (ch->pcdata->bond->weapon_short != NULL)
+                  free_string(ch->pcdata->bond->weapon_short);
+               ch->pcdata->bond->weapon_short = fread_string(fp);
+               fMatch = TRUE;
+               break;
+            }
          }
          break;
 
@@ -864,6 +965,22 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             ch->pcdata->dimcol = temp[0];
             /*              fread_to_eol( fp );   */
             free_string(temp);
+            fMatch = TRUE;
+            break;
+         }
+
+         if (!str_cmp(word, "Druidlevels"))
+         {
+            for (cnt = CLASS_DRU; cnt <= CLASS_HIE; cnt++)
+               ch->class_level[cnt] = fread_number(fp);
+            fMatch = TRUE;
+            break;
+         }
+
+         if (!str_cmp(word, "Druidreinc"))
+         {
+            for (cnt = CLASS_DRU; cnt <= CLASS_HIE; cnt++)
+               ch->pcdata->reincarnations[cnt] = fread_number(fp);
             fMatch = TRUE;
             break;
          }
@@ -1016,6 +1133,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             fMatch = TRUE;
             break;
          }
+         KEY("Overgrowth", ch->overgrowth, fread_number(fp));
          break;
 
       case 'P':

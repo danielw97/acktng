@@ -123,6 +123,8 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_summon_animate;
    if (!str_cmp(name, "spec_summon_thought"))
       return spec_summon_thought;
+   if (!str_cmp(name, "spec_summon_revenant"))
+      return spec_summon_revenant;
    if (!str_cmp(name, "spec_lamplighter"))
       return spec_lamplighter;
    if (!str_cmp(name, "spec_warden"))
@@ -389,6 +391,8 @@ char *rev_spec_lookup(void *func)
       return "spec_summon_animate";
    if (func == spec_summon_thought)
       return "spec_summon_thought";
+   if (func == spec_summon_revenant)
+      return "spec_summon_revenant";
    if (func == spec_lamplighter)
       return "spec_lamplighter";
    if (func == spec_warden)
@@ -610,6 +614,7 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_summon_metal        \n\r");
    strcat(buf, "       spec_summon_animate      \n\r");
    strcat(buf, "       spec_summon_thought      \n\r");
+   strcat(buf, "       spec_summon_revenant     \n\r");
    strcat(buf, "       spec_lamplighter         \n\r");
    strcat(buf, "       spec_warden              \n\r");
    strcat(buf, "       spec_vendor              \n\r");
@@ -805,7 +810,7 @@ bool is_player_summon_special(SPEC_FUN *spec_fun)
           spec_fun == spec_summon_earth || spec_fun == spec_summon_undead ||
           spec_fun == spec_summon_holy || spec_fun == spec_summon_shadow ||
           spec_fun == spec_summon_metal || spec_fun == spec_summon_animate ||
-          spec_fun == spec_summon_thought;
+          spec_fun == spec_summon_thought || spec_fun == spec_summon_revenant;
 }
 
 bool spec_summon_cast_random(CHAR_DATA *ch, CHAR_DATA *target, const char *const *spells,

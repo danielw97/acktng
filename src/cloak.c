@@ -83,7 +83,8 @@ int cloak_apply_reactive_effects(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int 
    if (!IS_AFFECTED(victim, AFF_CLOAK_FLAMING) &&
        !is_affected(victim, skill_lookup("cloak:elements")) &&
        !is_affected(victim, skill_lookup("cloak:drain")) &&
-       !is_affected(victim, skill_lookup("cloak:misery")))
+       !is_affected(victim, skill_lookup("cloak:misery")) &&
+       !is_affected(victim, skill_lookup("cloak:valor")))
       return reactive_damage;
 
    if ((IS_AFFECTED(victim, AFF_CLOAK_FLAMING) ||
@@ -321,6 +322,56 @@ int cloak_apply_reactive_effects(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int 
       reactive_damage += drain_damage;
    }
 
+   if ((is_affected(victim, skill_lookup("cloak:valor"))) && (ch != victim) &&
+       !is_affected(victim, skill_lookup("valor_crit")) &&
+       (number_range(0, 99) < cloak_valor_proc_chance(get_psuedo_level(victim))))
+   {
+      AFFECT_DATA af;
+
+      if (!shortfight_round)
+      {
+         act("@@N$n's @@Wcloak@@N flares with righteous fury!!", victim, NULL, ch, TO_NOTVICT);
+      }
+      else
+      {
+         CHAR_DATA *rch;
+         for (rch = ch->in_room->first_person; rch != NULL; rch = rch->next_in_room)
+         {
+            char buf[MSL];
+            if (rch == ch || rch == victim)
+               continue;
+            if (!IS_NPC(rch) && IS_SET(rch->config, CONFIG_SHORT_FIGHT))
+               continue;
+            sprintf(buf, "@@N%s's @@Wcloak@@N flares with righteous fury!!\n\r", PERS(victim, rch));
+            send_to_char(buf, rch);
+         }
+      }
+
+      if (!(shortfight_round && !IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT)))
+      {
+         if (!IS_NPC(ch) && IS_SET(ch->pcdata->pflags, PFLAG_BLIND_PLAYER))
+            act("Valor cloak on $K flares", ch, NULL, victim, TO_CHAR);
+         else
+            act("@@N$N's @@Wcloak@@N flares with righteous fury!!", ch, NULL, victim, TO_CHAR);
+      }
+
+      if (!(shortfight_round && !IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT)))
+      {
+         if (!IS_NPC(victim) && IS_SET(victim->pcdata->pflags, PFLAG_BLIND_PLAYER))
+            act("Your Valor cloak flares", victim, NULL, ch, TO_CHAR);
+         else
+            act("@@NYour @@Wcloak@@N flares, granting you righteous fury!!!", victim, NULL, ch,
+                TO_CHAR);
+      }
+
+      af.type = skill_lookup("valor_crit");
+      af.duration = 2;
+      af.location = 0;
+      af.modifier = 0;
+      af.bitvector = 0;
+      affect_to_char(victim, &af);
+   }
+
    return reactive_damage;
 }
 #endif
@@ -386,6 +437,69 @@ long cloak_drain_attacker_hp_after_hit(long attacker_hp, int drain_damage)
 
    return next_hp;
 }
+
+int cloak_precision_crit_chance_reduction(int pseudo_level)
+{
+   if (pseudo_level < 0)
+      return 0;
+
+   return pseudo_level / 5;
+}
+
+int cloak_precision_crit_damage_reduction(int dam, int pseudo_level)
+{
+   int reduction;
+
+   if (pseudo_level < 0 || dam <= 0)
+      return dam;
+
+   reduction = dam * 25 / 100;
+   dam -= reduction;
+
+   if (dam < 0)
+      return 0;
+
+   return dam;
+}
+
+int cloak_valor_proc_chance(int pseudo_level)
+{
+   if (pseudo_level < 0)
+      return 0;
+
+   return pseudo_level / 10;
+}
+
+#ifndef UNIT_TEST_CLOAK
+int cloak_precision_reduce_crit_chance(CHAR_DATA *victim, int crit_chance)
+{
+   if (is_affected(victim, skill_lookup("cloak:precision")))
+   {
+      int reduction = cloak_precision_crit_chance_reduction(get_psuedo_level(victim));
+      crit_chance -= reduction;
+      if (crit_chance < 0)
+         crit_chance = 0;
+   }
+   return crit_chance;
+}
+
+int cloak_precision_reduce_crit_damage(CHAR_DATA *victim, int dam)
+{
+   if (is_affected(victim, skill_lookup("cloak:precision")))
+      dam = cloak_precision_crit_damage_reduction(dam, get_psuedo_level(victim));
+   return dam;
+}
+
+bool cloak_valor_consume_guaranteed_crit(CHAR_DATA *ch)
+{
+   if (is_affected(ch, skill_lookup("valor_crit")))
+   {
+      affect_strip(ch, skill_lookup("valor_crit"));
+      return TRUE;
+   }
+   return FALSE;
+}
+#endif
 
 long cloak_drain_victim_hp_after_hit(long victim_hp, long victim_max_hp, int drain_damage)
 {

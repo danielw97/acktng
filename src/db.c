@@ -159,7 +159,20 @@ sh_int gsn_shieldblock;
 sh_int gsn_chiblock;
 sh_int gsn_holystrike;
 sh_int gsn_anti_magic_shell;
+sh_int gsn_chi_surge;
+sh_int gsn_breath_of_endurance;
+sh_int gsn_fist_interior;
+sh_int gsn_momentum_chain;
+sh_int gsn_iron_resolve;
+sh_int gsn_overwhelming_assault;
+sh_int gsn_elemental_attunement;
+sh_int gsn_oathshield;
+sh_int gsn_sanctified_strike;
+sh_int gsn_shadow_reading;
+sh_int gsn_hex_ward;
+sh_int gsn_reflex_disruption;
 sh_int gsn_hide;
+sh_int gsn_weapon_bond;
 sh_int gsn_hunt;
 sh_int gsn_peek;
 sh_int gsn_pick_lock;
@@ -197,6 +210,36 @@ sh_int gsn_scout;
 sh_int gsn_potency;
 sh_int gsn_thaumatergy;
 sh_int gsn_warcry;
+
+/* Cipher skills */
+sh_int gsn_garrote;
+sh_int gsn_feign_death;
+sh_int gsn_shadow_step;
+sh_int gsn_mark_target;
+sh_int gsn_conceal;
+sh_int gsn_set_trap;
+sh_int gsn_read_intent;
+
+/* Warden skills */
+sh_int gsn_cleave;
+sh_int gsn_fortify;
+sh_int gsn_taunt;
+sh_int gsn_rend;
+sh_int gsn_field_patch;
+sh_int gsn_weapon_mastery;
+
+/* Pugilist skills */
+sh_int gsn_grapple;
+sh_int gsn_choke_hold;
+sh_int gsn_leg_sweep;
+sh_int gsn_iron_skin;
+sh_int gsn_roll_with_blow;
+sh_int gsn_pressure_point;
+sh_int gsn_feint;
+sh_int gsn_conditioning;
+
+/* Druid skills */
+sh_int gsn_substrate_piercing;
 
 #ifdef TFS
 sh_int gsn_mana_sense;
@@ -2122,6 +2165,12 @@ void free_char(CHAR_DATA *ch)
    if (ch->current_brand)
    {
       PUT_FREE(ch->current_brand, brand_data_free);
+   }
+
+   if (ch->revenant != NULL)
+   {
+      free(ch->revenant);
+      ch->revenant = NULL;
    }
 
    if (ch->pcdata != NULL)

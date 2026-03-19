@@ -14,5 +14,16 @@ Noun Damage: None
 Acquisition:
    - Knight: level 48
 Description:
-   Cloak:iron is a protective/support spell that strengthens, restores, or safeguards the target.
+   Cloak:iron is the Knight's signature remort cloak. It encases the caster
+   in an aura of hardened iron, providing a flat reduction to all incoming
+   physical damage. The reduction amount is equal to pseudo_level / 2.
+
+   For example, at pseudo-level 100, every physical hit against the Knight
+   is reduced by 50 damage. This reduction is applied before other damage
+   modifiers such as sanctuary or elemental resistance.
+
+   The cloak does not affect non-physical (magical) damage. For magical
+   damage reduction, see cloak:mental (Monk).
+
+   Duration scales with pseudo-level (pseudo_level / 8 rounds).
 *******************************************************************************

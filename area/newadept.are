@@ -5,7 +5,7 @@ K none ~
 L {?? ??}~
 N 2
 I 150 150
-V 50 149
+V 1 149
 X 0
 F 15
 U @@WThe @@ysun@@W seems trying to make itself visible through the fog.@@N~
@@ -13,7 +13,7 @@ O Virant~
 R Virant~
 W Virant~
 #ROOMS
-#50
+#1
 Path to the Wizard's Keep~
 This is a simple path. To the north, the Wizard's Keep can be seen, a majestic
 
@@ -26,13 +26,13 @@ place for adepts. A dense forest can be seen below.
 D0
 ~
 ~
-0 -1 51
+0 -1 2
 D5
 ~
 ~
 0 0 2725
 S
-#51
+#2
 Path to Keep~
 The path continues on, stretching north towards the Wizard's Keep. Birds can
 
@@ -51,13 +51,13 @@ thing. The smell of the forest is overwhelming.
 D0
 ~
 ~
-0 -1 52
+0 -1 3
 D2
 ~
 ~
-0 -1 50
+0 -1 1
 S
-#52
+#3
 Path to Keep~
 The path continues on, stretching north towards the Wizard's Keep. Birds can
 
@@ -76,17 +76,17 @@ thing. A faint scent of smoke wafts in from the east.
 D0
 ~
 ~
-0 -1 53
+0 -1 4
 D1
 ~
 ~
-481 50 86
+481 1 37
 D2
 ~
 ~
-0 -1 51
+0 -1 2
 S
-#53
+#4
 Road to Keep~
 The road widens here as it approaches the Keep from the south. Worn cobblestones
 
@@ -102,21 +102,21 @@ lingers in the air, and the Keep's imposing silhouette looms just to the north.
 D0
 ~
 ~
-0 -1 87
+0 -1 38
 D1
 ~
 ~
-0 -1 54
+0 -1 5
 D2
 ~
 ~
-0 -1 52
+0 -1 3
 D3
 ~
 ~
-0 -1 55
+0 -1 6
 S
-#54
+#5
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -135,13 +135,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 65
+0 -1 16
 D3
 ~
 ~
-0 -1 53
+0 -1 4
 S
-#55
+#6
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -160,13 +160,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 53
+0 -1 4
 D3
 ~
 ~
-0 -1 56
+0 -1 7
 S
-#56
+#7
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -185,13 +185,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 55
+0 -1 6
 D3
 ~
 ~
-0 -1 57
+0 -1 8
 S
-#57
+#8
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -210,13 +210,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 56
+0 -1 7
 D3
 ~
 ~
-0 -1 58
+0 -1 9
 S
-#58
+#9
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -235,13 +235,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 57
+0 -1 8
 D3
 ~
 ~
-0 -1 59
+0 -1 10
 S
-#59
+#10
 Corner of the path around the Keep~
 To the east and the north, a path around the keep stretches. To the south and
 
@@ -257,13 +257,13 @@ shines brightly above, giving an almost cheerful feeling to the area.
 D0
 ~
 ~
-0 -1 60
+0 -1 11
 D1
 ~
 ~
-0 -1 58
+0 -1 9
 S
-#60
+#11
 Northern Keep Path~
 The path curves gently around the northern face of the Keep. The great stone
 
@@ -279,13 +279,13 @@ cold wind channels through here, carrying the smell of still water.
 D0
 ~
 ~
-0 -1 61
+0 -1 12
 D2
 ~
 ~
-0 -1 59
+0 -1 10
 S
-#61
+#12
 Northern Keep Path~
 The northern stretch of the outer path runs straight and silent. The Keep's
 
@@ -301,13 +301,13 @@ can be seen as a guard makes their rounds far above.
 D0
 ~
 ~
-0 -1 62
+0 -1 13
 D2
 ~
 ~
-0 -1 60
+0 -1 11
 S
-#62
+#13
 Narrow Northern Path~
 The path here is particularly narrow, the moat pressing close on the north
 
@@ -323,13 +323,13 @@ milestone marks the midpoint of the northern walk.
 D0
 ~
 ~
-0 -1 63
+0 -1 14
 D2
 ~
 ~
-0 -1 61
+0 -1 12
 S
-#63
+#14
 Eastern Keep Path~
 The path begins to widen as it turns south, the moat receding behind you.
 
@@ -345,13 +345,13 @@ chirping of birds from the southern forest can be heard again.
 D0
 ~
 ~
-0 -1 64
+0 -1 15
 D2
 ~
 ~
-0 -1 62
+0 -1 13
 S
-#64
+#15
 Corner of the path around the Keep~
 To the east and the south, a path around the keep stretches. To the north and
 
@@ -367,13 +367,13 @@ shines brightly above, giving an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 75
+0 -1 26
 D2
 ~
 ~
-0 -1 63
+0 -1 14
 S
-#65
+#16
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -392,13 +392,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 66
+0 -1 17
 D3
 ~
 ~
-0 -1 54
+0 -1 5
 S
-#66
+#17
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -417,13 +417,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 67
+0 -1 18
 D3
 ~
 ~
-0 -1 65
+0 -1 16
 S
-#67
+#18
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -442,13 +442,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 68
+0 -1 19
 D3
 ~
 ~
-0 -1 66
+0 -1 17
 S
-#68
+#19
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -467,13 +467,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 69
+0 -1 20
 D3
 ~
 ~
-0 -1 67
+0 -1 18
 S
-#69
+#20
 Corner of the path around the Keep~
 To the west and the north, a path around the keep stretches. To the south and
 
@@ -489,13 +489,13 @@ shines brightly above, giving an almost cheerful feeling to the area.
 D0
 ~
 ~
-0 -1 70
+0 -1 21
 D3
 ~
 ~
-0 -1 68
+0 -1 19
 S
-#70
+#21
 Northwestern Keep Path~
 The northwestern corner of the outer path curves tightly around the Keep. The
 
@@ -511,13 +511,13 @@ the base of the Keep's wall and a raven watches from atop the battlements.
 D0
 ~
 ~
-0 -1 71
+0 -1 22
 D2
 ~
 ~
-0 -1 69
+0 -1 20
 S
-#71
+#22
 Northern Keep Path~
 The northern path stretches east and west along the Keep's rear face. The moat
 
@@ -533,13 +533,13 @@ the Keep's walls on this side, lending the path an eerie quiet.
 D0
 ~
 ~
-0 -1 72
+0 -1 23
 D2
 ~
 ~
-0 -1 70
+0 -1 21
 S
-#72
+#23
 Narrow Northern Path~
 A narrow section of the outer path runs here, hemmed in by the moat to the
 
@@ -555,13 +555,13 @@ cobblestones, and the air smells faintly of algae and cold stone.
 D0
 ~
 ~
-0 -1 73
+0 -1 24
 D2
 ~
 ~
-0 -1 71
+0 -1 22
 S
-#73
+#24
 Eastern Keep Path~
 The path widens slightly here as it passes beneath a cracked buttress. A few
 
@@ -577,13 +577,13 @@ the path's edge. The moat laps quietly against the stone to the south.
 D0
 ~
 ~
-0 -1 74
+0 -1 25
 D2
 ~
 ~
-0 -1 72
+0 -1 23
 S
-#74
+#25
 Corner of the path around the Keep~
 To the west and the south, a path around the keep stretches. To the north and
 
@@ -599,13 +599,13 @@ shines brightly above, giving an almost cheerful feeling to the area.
 D2
 ~
 ~
-0 -1 73
+0 -1 24
 D3
 ~
 ~
-0 0 85
+0 0 36
 S
-#75
+#26
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -624,13 +624,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 76
+0 -1 27
 D3
 ~
 ~
-0 -1 64
+0 -1 15
 S
-#76
+#27
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -649,13 +649,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 77
+0 -1 28
 D3
 ~
 ~
-0 -1 75
+0 -1 26
 S
-#77
+#28
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -674,13 +674,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 78
+0 -1 29
 D3
 ~
 ~
-0 -1 76
+0 -1 27
 S
-#78
+#29
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -699,13 +699,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 79
+0 -1 30
 D3
 ~
 ~
-0 -1 77
+0 -1 28
 S
-#79
+#30
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -724,13 +724,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 80
+0 -1 31
 D3
 ~
 ~
-0 -1 78
+0 -1 29
 S
-#80
+#31
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -749,13 +749,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 81
+0 -1 32
 D3
 ~
 ~
-0 -1 79
+0 -1 30
 S
-#81
+#32
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -774,13 +774,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 82
+0 -1 33
 D3
 ~
 ~
-0 -1 80
+0 -1 31
 S
-#82
+#33
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -799,13 +799,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 83
+0 -1 34
 D3
 ~
 ~
-0 -1 81
+0 -1 32
 S
-#83
+#34
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -824,13 +824,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 84
+0 -1 35
 D3
 ~
 ~
-0 -1 82
+0 -1 33
 S
-#84
+#35
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -849,13 +849,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 85
+0 -1 36
 D3
 ~
 ~
-0 -1 83
+0 -1 34
 S
-#85
+#36
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you
 
@@ -874,13 +874,13 @@ an almost cheerful feeling to the area.
 D1
 ~
 ~
-0 -1 74
+0 -1 25
 D3
 ~
 ~
-0 -1 84
+0 -1 35
 S
-#86
+#37
 Hermit's Side Path~
 A narrow side path branches off from the main road here, cutting through a
 
@@ -896,9 +896,9 @@ boot prints in the soft mud suggest someone passes this way with purpose.
 D3
 ~
 ~
-481 50 52
+481 1 3
 S
-#87
+#38
 Gate of the Wizard's Keep~
 To the north, a large gate can be seen in front of the Wizard's Keep. It is a
 
@@ -917,13 +917,13 @@ sun.
 D0
 ~
 ~
-481 51 88
+481 2 39
 D2
 ~
 ~
-0 0 53
+0 0 4
 S
-#88
+#39
 Courtyard~
 The inner courtyard of the Wizard's Keep spreads out before you, enclosed by
 
@@ -942,21 +942,21 @@ smell of torch smoke and steel lingers in the still air.
 D0
 ~
 ~
-0 -1 91
+0 -1 42
 D1
 ~
 ~
-0 -1 90
+0 -1 41
 D2
 ~
 ~
-481 51 87
+481 2 38
 D3
 ~
 ~
-0 -1 89
+0 -1 40
 S
-#89
+#40
 Courtyard~
 The eastern section of the courtyard is quieter than the main gate area. A
 
@@ -975,17 +975,17 @@ flagstones at this hour.
 D0
 ~
 ~
-0 0 92
+0 0 43
 D1
 ~
 ~
-0 -1 88
+0 -1 39
 D3
 ~
 ~
-0 -1 97
+0 -1 48
 S
-#90
+#41
 Courtyard~
 The western portion of the courtyard holds a small barracks building, its
 
@@ -1004,17 +1004,17 @@ boot lies near the entrance.
 D0
 ~
 ~
-0 0 93
+0 0 44
 D1
 ~
 ~
-0 -1 99
+0 -1 50
 D3
 ~
 ~
-0 -1 88
+0 -1 39
 S
-#91
+#42
 Courtyard~
 The northern edge of the courtyard abuts the Keep's main keep building. A
 
@@ -1033,21 +1033,21 @@ flank the entrance, their flames guttering in the breeze.
 D0
 ~
 ~
-0 -1 94
+0 -1 45
 D1
 ~
 ~
-0 -1 93
+0 -1 44
 D2
 ~
 ~
-0 -1 88
+0 -1 39
 D3
 ~
 ~
-0 -1 92
+0 -1 43
 S
-#92
+#43
 Courtyard~
 A corner of the courtyard, sheltered from the wind by the intersecting walls.
 
@@ -1063,17 +1063,17 @@ to bother harvesting. Fallen apples rot softly in the grass at its base.
 D0
 ~
 ~
-0 0 95
+0 0 46
 D1
 ~
 ~
-0 -1 91
+0 -1 42
 D2
 ~
 ~
-0 -1 89
+0 -1 40
 S
-#93
+#44
 Courtyard~
 The western corner of the courtyard is poorly lit, the torches on the nearby
 
@@ -1092,17 +1092,17 @@ straw drifts from them.
 D0
 ~
 ~
-0 0 96
+0 0 47
 D2
 ~
 ~
-0 -1 90
+0 -1 41
 D3
 ~
 ~
-0 -1 91
+0 -1 42
 S
-#94
+#45
 Courtyard~
 The courtyard's northern interior lies just before the great Keep doors. This
 
@@ -1121,21 +1121,21 @@ that never flickers. The air here smells faintly of arcane reagents.
 D0
 ~
 ~
-0 -1 101
+0 -1 52
 D1
 ~
 ~
-0 -1 96
+0 -1 47
 D2
 ~
 ~
-0 -1 91
+0 -1 42
 D3
 ~
 ~
-0 -1 95
+0 -1 46
 S
-#95
+#46
 Courtyard~
 A narrow slice of the courtyard wedged between the Keep's eastern wall and a
 
@@ -1154,13 +1154,13 @@ approach.
 D1
 ~
 ~
-0 -1 94
+0 -1 45
 D2
 ~
 ~
-0 -1 92
+0 -1 43
 S
-#96
+#47
 Courtyard~
 The rear western corner of the courtyard is dim and largely unvisited. A
 
@@ -1179,13 +1179,13 @@ uneven underfoot.
 D2
 ~
 ~
-0 -1 93
+0 -1 44
 D3
 ~
 ~
-0 -1 94
+0 -1 45
 S
-#97
+#48
 A Guard's Tower~
 The base of the eastern guard tower rises here, its stone steps spiraling
 
@@ -1204,13 +1204,13 @@ empty cup suggests the tower is occupied. The smell of lamp oil is strong.
 D1
 ~
 ~
-0 -1 89
+0 -1 40
 D4
 ~
 ~
-0 -1 98
+0 -1 49
 S
-#98
+#49
 Eastern Tower Top~
 The upper level of the eastern guard tower commands an excellent view of the
 
@@ -1229,9 +1229,9 @@ here when not on watch. The wind is sharp and cold at this height.
 D5
 ~
 ~
-0 -1 97
+0 -1 48
 S
-#99
+#50
 Guard's Tower~
 The base of the western guard tower is darker than its eastern counterpart,
 
@@ -1250,13 +1250,13 @@ Worn boot-marks trace a familiar path across the floor.
 D3
 ~
 ~
-0 -1 90
+0 -1 41
 D4
 ~
 ~
-0 -1 100
+0 -1 51
 S
-#100
+#51
 Western Tower Top~
 The summit of the western guard tower offers a sweeping view over the Keep's
 
@@ -1275,9 +1275,9 @@ air up here tastes of iron and cold sky.
 D5
 ~
 ~
-0 -1 99
+0 -1 50
 S
-#101
+#52
 Entrance to the Wizard's Keep~
 The main entrance hall of the Wizard's Keep stretches before you. A vaulted
 
@@ -1299,13 +1299,13 @@ passages ahead. The air hums with contained magical energy.
 D0
 ~
 ~
-481 52 102
+481 3 53
 D2
 ~
 ~
-0 -1 94
+0 -1 45
 S
-#102
+#53
 Keep Antechamber~
 A transition chamber between the Keep's entrance and its inner passages. The
 
@@ -1327,17 +1327,17 @@ across the threshold to the south.
 D2
 ~
 ~
-481 52 101
+481 3 52
 D4
 ~
 ~
-0 -1 103
+0 -1 54
 D5
 ~
 ~
-225 -1 109
+225 -1 60
 S
-#103
+#54
 Entrance to the Rotunda~
 The passage opens into a grand circular antechamber that serves as the
 
@@ -1356,25 +1356,25 @@ north into the rotunda proper, and a staircase descends into the basement below.
 D0
 ~
 ~
-0 -1 115
+0 -1 66
 D1
 ~
 ~
-0 -1 106
+0 -1 57
 D2
 ~
 ~
-0 -1 105
+0 -1 56
 D3
 ~
 ~
-0 -1 104
+0 -1 55
 D5
 ~
 ~
-0 -1 102
+0 -1 53
 S
-#104
+#55
 Rotunda~
 The western arc of the grand rotunda curves gently around you. The polished
 
@@ -1393,13 +1393,13 @@ the patterns. The smell of old parchment and arcane chemicals permeates the air.
 D1
 ~
 ~
-0 -1 103
+0 -1 54
 D2
 ~
 ~
-0 -1 108
+0 -1 59
 S
-#105
+#56
 Rotunda~
 A southern alcove of the rotunda holds a long reading bench and a glass-fronted
 
@@ -1418,17 +1418,17 @@ though someone was here recently and left in haste.
 D0
 ~
 ~
-0 -1 103
+0 -1 54
 D1
 ~
 ~
-0 0 107
+0 0 58
 D3
 ~
 ~
-0 -1 108
+0 -1 59
 S
-#106
+#57
 Rotunda~
 The northern arc of the rotunda is dominated by a massive carved stone map of
 
@@ -1447,13 +1447,13 @@ is painted with a sweeping mural of the sky at midnight.
 D2
 ~
 ~
-0 -1 107
+0 -1 58
 D3
 ~
 ~
-0 -1 103
+0 -1 54
 S
-#107
+#58
 Rotunda~
 A quiet eastern alcove of the rotunda serves as a small meditation space. A
 
@@ -1472,13 +1472,13 @@ overhead pulse slowly, as if in rhythm with something unseen.
 D0
 ~
 ~
-0 -1 106
+0 -1 57
 D3
 ~
 ~
-0 -1 105
+0 -1 56
 S
-#108
+#59
 Rotunda~
 The southern curve of the rotunda connects its various alcoves. A series of
 
@@ -1500,13 +1500,13 @@ stone basin.
 D0
 ~
 ~
-0 0 104
+0 0 55
 D1
 ~
 ~
-0 -1 105
+0 -1 56
 S
-#109
+#60
 Basement~
 Stone steps lead down into the Keep's basement, a low-ceilinged space of
 
@@ -1525,13 +1525,13 @@ crates, kegs, and a collection of items covered by dusty canvas.
 D2
 ~
 ~
-0 -1 110
+0 -1 61
 D4
 ~
 ~
-225 -1 102
+225 -1 53
 S
-#110
+#61
 Basement Storage Hall~
 A wide corridor in the Keep's basement serves as its main storage hall. The
 
@@ -1550,17 +1550,17 @@ uneven, worn down by years of foot traffic to and from the kitchen above.
 D0
 ~
 ~
-0 -1 109
+0 -1 60
 D1
 ~
 ~
-0 -1 114
+0 -1 65
 D2
 ~
 ~
-0 -1 111
+0 -1 62
 S
-#111
+#62
 Basement Corridor~
 The corridor narrows as it leads deeper into the basement. The torches here
 
@@ -1579,13 +1579,13 @@ colder.
 D0
 ~
 ~
-0 -1 110
+0 -1 61
 D1
 ~
 ~
-0 -1 112
+0 -1 63
 S
-#112
+#63
 Entrance to Prison~
 A heavy iron door, now standing open, marks the entrance to the Keep's old
 
@@ -1604,13 +1604,13 @@ from the cells beyond.
 D1
 ~
 ~
-0 -1 113
+0 -1 64
 D3
 ~
 ~
-0 -1 111
+0 -1 62
 S
-#113
+#64
 Prison Cell~
 A single damp cell, its walls scratched with the tally marks of a long-gone
 
@@ -1629,9 +1629,9 @@ light is a thin sliver from the door crack behind you.
 D3
 ~
 ~
-0 -1 112
+0 -1 63
 S
-#114
+#65
 Wine Cellar~
 The Keep's wine cellar is a vaulted stone room lined floor to ceiling with
 
@@ -1653,9 +1653,9 @@ inventory. The smell of old wine and damp wood is pleasantly strong.
 D3
 ~
 ~
-0 -1 110
+0 -1 61
 S
-#115
+#66
 Entrance to the Foyer~
 A formal passage connecting the rotunda antechamber to the Keep's grand foyer.
 
@@ -1674,13 +1674,13 @@ echo turns every footstep into a small announcement of your presence.
 D0
 ~
 ~
-225 53 116
+225 4 67
 D2
 ~
 ~
-0 -1 103
+0 -1 54
 S
-#116
+#67
 Foyer~
 The grand foyer of the Wizard's Keep is a sweeping space of high ceilings and
 
@@ -1702,21 +1702,21 @@ passages ahead.
 D0
 ~
 ~
-0 -1 117
+0 -1 68
 D1
 ~
 ~
-0 -1 127
+0 -1 78
 D2
 ~
 ~
-225 109 115
+225 60 66
 D3
 ~
 ~
-0 -1 126
+0 -1 77
 S
-#117
+#68
 Foyer~
 The northern section of the foyer narrows into a more intimate corridor, its
 
@@ -1735,21 +1735,21 @@ air here carries a constant low hum, as if the artefacts are restless.
 D0
 ~
 ~
-0 -1 118
+0 -1 69
 D1
 ~
 ~
-0 -1 125
+0 -1 76
 D2
 ~
 ~
-0 -1 116
+0 -1 67
 D3
 ~
 ~
-0 -1 124
+0 -1 75
 S
-#118
+#69
 Foyer~
 A wide landing within the foyer connects the upper display corridor to the
 
@@ -1768,21 +1768,21 @@ interior. The scent of magical reagents is noticeably stronger here.
 D0
 ~
 ~
-0 -1 119
+0 -1 70
 D1
 ~
 ~
-0 -1 123
+0 -1 74
 D2
 ~
 ~
-0 -1 117
+0 -1 68
 D3
 ~
 ~
-0 -1 122
+0 -1 73
 S
-#119
+#70
 Foyer - NORTH SECRET CODE FOR DOOR~
 A long corridor terminates at a reinforced door set with a complex runic lock.
 
@@ -1804,21 +1804,21 @@ of any decoration.
 D0
 ~
 ~
-0 -1 128
+0 -1 79
 D1
 ~
 ~
-0 -1 121
+0 -1 72
 D2
 ~
 ~
-0 -1 118
+0 -1 69
 D3
 ~
 ~
-0 -1 120
+0 -1 71
 S
-#120
+#71
 Foyer Lobby~
 A small side lobby off the main foyer corridor. A wooden bench along one wall
 
@@ -1840,13 +1840,13 @@ marble of the main foyer.
 D1
 ~
 ~
-0 -1 119
+0 -1 70
 D2
 ~
 ~
-0 0 122
+0 0 73
 S
-#121
+#72
 Foyer Lobby~
 A narrow lobby annexe to the main foyer corridor, its ceiling lower than the
 
@@ -1868,13 +1868,13 @@ minutes.
 D2
 ~
 ~
-0 -1 123
+0 -1 74
 D3
 ~
 ~
-0 -1 119
+0 -1 70
 S
-#122
+#73
 Foyer Lobby~
 A corner room connecting two lobby passages, sparsely furnished with a wooden
 
@@ -1893,17 +1893,17 @@ feel slightly uneasy to linger in.
 D0
 ~
 ~
-0 -1 120
+0 -1 71
 D1
 ~
 ~
-0 -1 118
+0 -1 69
 D2
 ~
 ~
-0 0 124
+0 0 75
 S
-#123
+#74
 Foyer Lobby~
 A secondary corridor of the foyer lobby runs east to west. The walls here are
 
@@ -1922,17 +1922,17 @@ doors is clearly meant to be forgotten.
 D0
 ~
 ~
-0 0 121
+0 0 72
 D2
 ~
 ~
-0 -1 125
+0 -1 76
 D3
 ~
 ~
-0 -1 118
+0 -1 69
 S
-#124
+#75
 Foyer Lobby~
 A quiet corner of the lobby, partially hidden behind a tapestry depicting the
 
@@ -1951,17 +1951,17 @@ cool and dark, and something small and metallic glints on the floor.
 D0
 ~
 ~
-0 -1 122
+0 -1 73
 D1
 ~
 ~
-0 -1 117
+0 -1 68
 D2
 ~
 ~
-0 0 126
+0 0 77
 S
-#125
+#76
 Foyer Lobby~
 A passage along the foyer's eastern edge, its stone floors slightly warmer
 
@@ -1980,17 +1980,17 @@ distant fire crackling can be heard faintly underfoot.
 D0
 ~
 ~
-0 0 123
+0 0 74
 D2
 ~
 ~
-0 0 127
+0 0 78
 D3
 ~
 ~
-0 -1 117
+0 -1 68
 S
-#126
+#77
 Foyer Lobby~
 The southernmost part of the foyer lobby, where the grand passage begins to
 
@@ -2009,17 +2009,17 @@ a slightly different room than the one you stand in.
 D0
 ~
 ~
-0 -1 124
+0 -1 75
 D1
 ~
 ~
-0 -1 116
+0 -1 67
 D3
 ~
 ~
-481 -1 129
+481 -1 80
 S
-#127
+#78
 Foyer Lobby~
 An alcove off the foyer's eastern passage, furnished with a low table and
 
@@ -2038,13 +2038,13 @@ left recently, though in haste or simply forgetfulness is unclear.
 D0
 ~
 ~
-0 -1 125
+0 -1 76
 D3
 ~
 ~
-0 -1 116
+0 -1 67
 S
-#128
+#79
 North - SECRET KEYWORD FOR DOOR~
 Beyond the runed door lies a short passage of polished obsidian-black stone.
 
@@ -2063,13 +2063,13 @@ for the distant sound of something rhythmic and mechanical further ahead.
 D0
 ~
 ~
-0 -1 134
+0 -1 85
 D2
 ~
 ~
-0 -1 119
+0 -1 70
 S
-#129
+#80
 Secret Passageway~
 A concealed passage, its entrance masked by a section of false wall. The
 
@@ -2088,13 +2088,13 @@ the floor is bare stone free of dust, suggesting it is used with some regularity
 D1
 ~
 ~
-481 -1 126
+481 -1 77
 D3
 ~
 ~
-0 -1 130
+0 -1 81
 S
-#130
+#81
 Secret Passageway~
 The hidden passage continues, curving gradually to the east. The walls are
 
@@ -2113,13 +2113,13 @@ mechanism is long since gone.
 D1
 ~
 ~
-0 -1 129
+0 -1 80
 D3
 ~
 ~
-0 -1 131
+0 -1 82
 S
-#131
+#82
 Secret Passageway~
 A deeper section of the secret passage, far from the bustle of the Keep above.
 
@@ -2138,13 +2138,13 @@ smells of damp rock and old secrets.
 D1
 ~
 ~
-0 -1 130
+0 -1 81
 D3
 ~
 ~
-0 -1 132
+0 -1 83
 S
-#132
+#83
 Secret Passageway~
 The secret passage descends slightly here, the floor sloping downward at a
 
@@ -2163,13 +2163,13 @@ have been writing, but the marks have been deliberately defaced.
 D1
 ~
 ~
-0 -1 131
+0 -1 82
 D5
 ~
 ~
-0 -1 133
+0 -1 84
 S
-#133
+#84
 Secret Room~
 A hidden chamber concealed at the end of the secret passage. The room is small
 
@@ -2191,9 +2191,9 @@ single sealed iron box remains untouched in the corner, its lock intact.
 D4
 ~
 ~
-0 -1 132
+0 -1 83
 S
-#134
+#85
 End of the Road...for now.~
 The passage through the obsidian corridor terminates abruptly at a blank wall.
 
@@ -2215,11 +2215,11 @@ tantalising sense that something important lies just beyond.
 D2
 ~
 ~
-0 -1 128
+0 -1 79
 S
 #0
 #MOBILES
-#50
+#1
 A Patrolman of the Keep~
 @@WA @@BPatrolman@@W of the Keep@@N~
 @@WA @@BPatrolman@@W of the Keep@@N is here, pacing a well-worn circuit of the grounds.
@@ -2240,7 +2240,7 @@ A shortsword hangs at their hip and a battered shield is strapped across their b
 + 0 0 0 0 0 0 0 0 0
 l 10 170 171 172 173 0 0 0 0 0 
 L 25 25 25 25 0 0 0 0 0 
-#51
+#2
 A Guardsman of the Keep~
 @@WA @@BGuardsman @@Wof the Keep@@N~
 @@WA @@BGuardsman @@Wof the Keep@@N stands watch at his post.
@@ -2261,7 +2261,7 @@ Keep's crest gleams on the breast of his surcoat.
 + 0 0 0 0 0 0 0 0 0
 l 15 174 175 176 177 0 0 0 0 0 
 L 25 25 25 25 0 0 0 0 0 
-#52
+#3
 A Grumpy Hermit~
 @@WA Grumpy @@BHermit@@N~
 @@WA Grumpy @@BHermit@@N is here, glaring at you with undisguised irritation.
@@ -2282,7 +2282,7 @@ and his gnarled hands rest on a knotted walking staff worn smooth by years of us
 + 200 0 0 0 0 0 0 0 0
 l 25 178 179 180 0 0 0 0 0 0 
 L 33 33 33 0 0 0 0 0 0 
-#53
+#4
 A Guard Captain~
 @@WA Guard @@BCaptain@@N~
 @@WA Guard @@BCaptain@@N stands here, overseeing the Keep with sharp authority.
@@ -2303,7 +2303,7 @@ and her gaze sweeps the courtyard with the calm alertness of someone who expects
 + 0 0 0 0 0 0 0 0 0
 l 150 192 193 194 195 196 197 0 0 0 
 L 20 20 20 15 15 10 0 0 0 
-#54
+#5
 A Guard Captain~
 @@WA Guard @@BCaptain@@N~
 @@WA Guard @@BCaptain@@N stands here.
@@ -2322,7 +2322,7 @@ foggy glass. Something about them feels unfinished, like a half-formed thought.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#55
+#6
 A Wizard's Servant~
 @@WA Wizard's @@BServant@@N~
 @@WA Wizard's @@BServant@@N is here, quietly attending to their duties.
@@ -2343,7 +2343,7 @@ visitors, though a faint shimmer about their eyes hints at an enchanted compulsi
 + 400 0 0 0 0 0 0 0 0
 l 10 182 183 0 0 0 0 0 0 0 
 L 50 50 0 0 0 0 0 0 0 
-#56
+#7
 A Keep Drudge~
 @@WA Keep @@BDrudge@@N~
 @@WA Keep @@BDrudge@@N is here, hauling supplies with plodding determination.
@@ -2364,7 +2364,7 @@ callused hands suggest a lifetime spent in physical labour within the Keep's wal
 + 0 0 0 0 0 0 0 0 0
 l 10 184 185 0 0 0 0 0 0 0 
 L 50 50 0 0 0 0 0 0 0 
-#57
+#8
 A Keep Guard~
 @@WA Keep @@BGuard@@N~
 @@WA Keep @@BGuard@@N stands here, guarding the courtyard with vigilant eyes.
@@ -2385,7 +2385,7 @@ upright, its butt resting on the flagstones with a faint clank as they shift wei
 + 0 0 0 0 0 0 0 0 0
 l 10 186 187 0 0 0 0 0 0 0 
 L 50 50 0 0 0 0 0 0 0 
-#58
+#9
 A Keep Sentinel~
 @@WA Keep @@BSentinel@@N~
 @@WA Keep @@BSentinel@@N stands here, radiating an aura of cold authority.
@@ -2406,7 +2406,7 @@ and no sound comes from within the armour, yet their presence alone commands sil
 + 0 0 0 0 0 0 0 0 0
 l 15 188 189 190 191 0 0 0 0 0 
 L 25 25 25 25 0 0 0 0 0 
-#59
+#10
 A Keep Arcanist~
 @@WA Keep @@BArcanist@@N~
 @@WA Keep @@BArcanist@@N paces here, muttering arcane formulae beneath their breath.
@@ -2427,7 +2427,7 @@ up to the knuckles, and a focus ring on their right hand pulses with contained e
 + 0 0 0 0 0 0 0 0 0
 l 15 198 199 200 0 0 0 0 0 0 
 L 40 35 25 0 0 0 0 0 0 
-#60
+#11
 A Keep Inquisitor~
 @@WA Keep @@BInquisitor@@N~
 @@WA Keep @@BInquisitor@@N stands here, studying you with cold and measured suspicion.
@@ -2448,7 +2448,7 @@ about you, and one hand rests habitually on the grip of the blade at their hip.
 + 0 0 0 0 0 0 0 0 0
 l 15 201 202 203 204 0 0 0 0 0 
 L 30 30 25 15 0 0 0 0 0 
-#61
+#12
 A Tower Watcher~
 @@WA Tower @@BWatcher@@N~
 @@WA Tower @@BWatcher@@N stands at the battlements here, crossbow in hand.
@@ -2469,7 +2469,7 @@ steady in their hands and a quiver of bolts hangs at their hip, well within reac
 + 0 0 0 0 0 0 0 0 0
 l 10 205 206 0 0 0 0 0 0 0 
 L 60 40 0 0 0 0 0 0 0 
-#62
+#13
 A Keep Jailer~
 @@WA Keep @@BJailer@@N~
 @@WA Keep @@BJailer@@N sits here, turning a ring of keys over thick fingers.
@@ -2490,7 +2490,7 @@ from a hook at their belt, its head dark with old stains that tell their own sto
 + 0 0 0 0 0 0 0 0 0
 l 10 207 208 0 0 0 0 0 0 0 
 L 55 45 0 0 0 0 0 0 0 
-#63
+#14
 A Rotunda Scholar~
 @@WA Rotunda @@BScholar@@N~
 @@WA Rotunda @@BScholar@@N stands here, surrounded by a slow orbit of floating scrolls.
@@ -2511,7 +2511,7 @@ writes of its own accord, never pausing even as they turn to regard you with cur
 + 400 0 0 0 0 0 0 0 0
 l 10 209 210 211 0 0 0 0 0 0 
 L 40 35 25 0 0 0 0 0 0 
-#64
+#15
 A Foyer Warden~
 @@WA Foyer @@BWarden@@N~
 @@WA Foyer @@BWarden@@N patrols here with measured, deliberate steps.
@@ -2532,7 +2532,7 @@ to test its lock before moving on, unhurried and utterly reliable in their routi
 + 0 0 0 0 0 0 0 0 0
 l 15 212 213 214 215 0 0 0 0 0 
 L 30 25 25 20 0 0 0 0 0 
-#65
+#16
 The Keeper of the Sanctum~
 @@WThe @@BKeeper @@Wof the Sanctum@@N~
 @@WThe @@BKeeper @@Wof the Sanctum@@N stands here, wreathed in arcs of crackling arcane energy.
@@ -2557,7 +2557,7 @@ the absolute cold authority of one who has held power for centuries unchallenged
 + 500 0 0 0 0 0 0 0 0
 l 150 216 217 218 219 220 221 222 0 0 
 L 20 15 15 15 10 10 15 0 0 
-#66
+#17
 The Vault Sentinel~
 @@WThe @@BVault @@WSentinel@@N~
 @@WThe @@BVault @@WSentinel@@N looms here, its forge-coal eyes burning with warding fury.
@@ -2582,7 +2582,7 @@ and to shatter it would be to silence the construct forever.
 + 0 0 0 0 0 0 0 0 0
 l 50 223 224 225 226 227 228 0 0 0 
 L 20 20 20 15 15 10 0 0 0 
-#67
+#18
 The Hermit Archon~
 @@WThe @@BHermit @@WArchon@@N~
 @@WThe @@BHermit @@WArchon@@N crouches here, radiating barely contained magical fury.
@@ -2609,7 +2609,7 @@ l 150 229 230 231 232 0 0 0 0 0
 L 30 25 25 20 0 0 0 0 0 
 #0
 #OBJECTS
-#50
+#1
 A Key to the hermit~
 key to the Hermit~
 A key lies here, discarded~
@@ -2618,7 +2618,7 @@ A key lies here, discarded~
 4
 L
 1
-#51
+#2
 a Ground's Key~
 a Ground's Key~
 A key lies here, discarded~
@@ -2627,7 +2627,7 @@ A key lies here, discarded~
 4
 L
 1
-#52
+#3
 wizard's Keep Key~
 wizard's Keep Key~
 A key lies here~
@@ -2636,7 +2636,7 @@ A key lies here~
 4
 L
 1
-#53
+#4
 Key to Foyer~
 ~
 ~
@@ -2645,7 +2645,7 @@ Key to Foyer~
 4
 L
 1
-#54
+#5
 Spaulders of the Keep Keep's guard~
 @@WSpaulders of the @@BKeep's@@W Guard@@N~
 A pair of epaulets lies here, discarded~
@@ -2654,7 +2654,7 @@ A pair of epaulets lies here, discarded~
 8
 L
 150
-#55
+#6
 Signet Ring of the Keep's Guard~
 @@WSignet Ring of the @@BKeep's@@N Guard@@N~
 A signet ring lies here, discarded~
@@ -2663,7 +2663,7 @@ A signet ring lies here, discarded~
 8
 L
 150
-#56
+#7
 Bracers of the Keep's Guard~
 @@WBracers of the @@BKeep's@@W Guard@@N~
 A pair of bracers lies here, discarded~
@@ -2672,7 +2672,7 @@ A pair of bracers lies here, discarded~
 8
 L
 150
-#57
+#8
 Earrings of the Keep's Guard~
 @@WEarrings of the @@BKeep's@@W Guard@@N~
 Some earrings lie here, forgotten~
@@ -2681,7 +2681,7 @@ Some earrings lie here, forgotten~
 8
 L
 150
-#58
+#9
 Gauntlets of the Keep's Guard~
 @@WGauntlets of the @@BKeep's@@W Guard@@N~
 A pair of gauntlets lies here, discarded~
@@ -2690,7 +2690,7 @@ A pair of gauntlets lies here, discarded~
 13
 L
 150
-#59
+#10
 Breastplate of the Keep's Guard~
 @@WBreastplate of the @@BKeep's@@W Guard@@N~
 A breastplate lies here, discarded~
@@ -2699,7 +2699,7 @@ A breastplate lies here, discarded~
 8
 L
 150
-#60
+#11
 Chainmail Sleeves of the Keep's Guard~
 @@WChainmail Sleeves of the @@BKeep's@@W Guard@@N~
 A pair of chainmail sleeves lie here, abandoned~
@@ -2708,7 +2708,7 @@ A pair of chainmail sleeves lie here, abandoned~
 8
 L
 150
-#61
+#12
 Bastard sword of the keep's guard keep~
 @@WBastard Sword of the @@BKeep's@@W Guard@@N~
 ~
@@ -2717,7 +2717,7 @@ Bastard sword of the keep's guard keep~
 8
 L
 150
-#62
+#13
 Cloak of the Hermit~
 @@WCloak of the @@BHermit@@N~
 A cloak lies here, discarded~
@@ -2726,7 +2726,7 @@ A cloak lies here, discarded~
 4
 L
 150
-#63
+#14
 A Hermit's Mask~
 @@WA @@BHermit's@@W Mask@@N~
 A mask lies here, discarded~
@@ -2735,7 +2735,7 @@ A mask lies here, discarded~
 4
 L
 150
-#64
+#15
 A Hermit's Boots~
 @@WA @@BHermit's @@WBoots@@N~
 A pair of boots lie here, discarded~
@@ -2744,7 +2744,7 @@ A pair of boots lie here, discarded~
 4
 L
 150
-#65
+#16
 npc~
 @@WWizard's Keep @@BNPC Shield@@N~
 ~
@@ -2753,7 +2753,7 @@ npc~
 1
 L
 1
-#66
+#17
 A Servant's Bonnet~
 @@WA @@BServant's @@WBonnet@@N~
 A bonnet is discarded here~
@@ -2762,7 +2762,7 @@ A bonnet is discarded here~
 2
 L
 150
-#67
+#18
 A Servant's Cravat~
 @@WA @@BServant's @@WCravat@@N~
 A cravat is abandoned here~
@@ -2771,7 +2771,7 @@ A cravat is abandoned here~
 2
 L
 150
-#68
+#19
 A Drudge's Hood~
 @@WA @@BDrudge's@@W Hood@@N~
 A hood is abandoned here~
@@ -2780,7 +2780,7 @@ A hood is abandoned here~
 7
 L
 150
-#69
+#20
 A Drudge's Belt~
 @@WA @@BDrudge's@@W Belt@@N~
 A discarded belt lies here~
@@ -2789,7 +2789,7 @@ A discarded belt lies here~
 7
 L
 150
-#70
+#21
 A Guard's Helmet~
 @@WA @@BGuard's@@W Helmet@@N~
 A helmet lies here, discarded~
@@ -2798,7 +2798,7 @@ A helmet lies here, discarded~
 14
 L
 150
-#71
+#22
 A Guard's Breastplate~
 @@WA @@BGuard's @@WBreastplate@@N~
 A breastplate is discarded here~
@@ -2807,7 +2807,7 @@ A breastplate is discarded here~
 14
 L
 150
-#72
+#23
 A Sentinel's Pauldrons~
 @@WA @@BSentinel's @@WPauldrons@@N~
 A discarded set of pauldrons lies here~
@@ -2816,7 +2816,7 @@ A discarded set of pauldrons lies here~
 14
 L
 150
-#73
+#24
 A sentinel's shield~
 @@WA @@BSentinel's@@W Shield@@N~
 An abandoned shield lies here~
@@ -2825,7 +2825,7 @@ An abandoned shield lies here~
 14
 L
 150
-#74
+#25
 A Sentinel's Gorget~
 @@WA @@BSentinel's@@W Gorget@@N~
 A discarded gorget lies here~
@@ -2834,7 +2834,7 @@ A discarded gorget lies here~
 14
 L
 150
-#75
+#26
 A Sentinel's Greaves~
 @@WA @@BSentinel's@@W Greaves@@N~
 A discarded pair of greaves lies here~
@@ -2843,7 +2843,7 @@ A discarded pair of greaves lies here~
 14
 L
 150
-#76
+#27
 A Captain's Helm~
 @@WA @@BCaptain's @@WHelm@@N~
 A helm lies here, discarded~
@@ -2852,7 +2852,7 @@ A helm lies here, discarded~
 7
 L
 150
-#77
+#28
 A Captain's Breastplate~
 @@WA @@BCaptain's @@WBreastplate@@N~
 A discarded breastplate lies here~
@@ -2861,7 +2861,7 @@ A discarded breastplate lies here~
 7
 L
 150
-#78
+#29
 Bracers of the Guard Captain~
 @@WBracers of the Guard @@BCaptain@@N~
 Discarded bracers lie here~
@@ -2870,7 +2870,7 @@ Discarded bracers lie here~
 7
 L
 150
-#79
+#30
 Greaves of the Guard Captain~
 @@WGreaves of the Guard @@BCaptain@@N~
 Greaves lie here, discarded~
@@ -2879,7 +2879,7 @@ Greaves lie here, discarded~
 7
 L
 150
-#80
+#31
 Buckler of the Guard Captain~
 @@WBuckler of the Guard @@BCaptain@@N~
 A discarded buckler lies here~
@@ -2888,7 +2888,7 @@ A discarded buckler lies here~
 7
 L
 150
-#81
+#32
 Ribbon of the Guard Captain~
 @@WRibbon of the Guard @@BCaptain@@N~
 ~
@@ -2897,7 +2897,7 @@ Ribbon of the Guard Captain~
 9
 L
 150
-#82
+#33
 Arcanist's Cowl~
 @@WArcanist's @@BCowl@@N~
 An arcane cowl lies here, discarded~
@@ -2906,7 +2906,7 @@ An arcane cowl lies here, discarded~
 2
 L
 150
-#83
+#34
 Arcanist's Robe~
 @@WArcanist's @@BRobe@@N~
 A robe lies crumpled here~
@@ -2915,7 +2915,7 @@ A robe lies crumpled here~
 8
 L
 150
-#84
+#35
 Arcanist's Focus Ring~
 @@WArcanist's @@BFocus Ring@@N~
 A slim ring lies here, glowing faintly~
@@ -2924,7 +2924,7 @@ A slim ring lies here, glowing faintly~
 8
 L
 150
-#85
+#36
 Inquisitor's Pauldrons~
 @@WInquisitor's @@BPauldrons@@N~
 Darkened pauldrons lie here, abandoned~
@@ -2933,7 +2933,7 @@ Darkened pauldrons lie here, abandoned~
 8
 L
 150
-#86
+#37
 Inquisitor's Vambraces~
 @@WInquisitor's @@BVambraces@@N~
 A pair of vambraces lies here, discarded~
@@ -2942,7 +2942,7 @@ A pair of vambraces lies here, discarded~
 8
 L
 150
-#87
+#38
 Inquisitor's Blade~
 @@WInquisitor's @@BBlade@@N~
 A thin blade lies here, its edge still keen~
@@ -2951,7 +2951,7 @@ A thin blade lies here, its edge still keen~
 8
 L
 150
-#88
+#39
 Inquisitor's Sigil Pin~
 @@WInquisitor's @@BSigil Pin@@N~
 A sharp pin bearing a silver sigil lies here~
@@ -2960,7 +2960,7 @@ A sharp pin bearing a silver sigil lies here~
 8
 L
 150
-#89
+#40
 Watcher's Longbow~
 @@WWatcher's @@BLongbow@@N~
 A longbow lies here, unstrung~
@@ -2969,7 +2969,7 @@ A longbow lies here, unstrung~
 8
 L
 150
-#90
+#41
 Watcher's Grey Cloak~
 @@WWatcher's @@BGrey Cloak@@N~
 A grey cloak lies here, folded neatly~
@@ -2978,7 +2978,7 @@ A grey cloak lies here, folded neatly~
 8
 L
 150
-#91
+#42
 Jailer's Manacles~
 @@WJailer's @@BManacles@@N~
 A set of heavy manacles lies here~
@@ -2987,7 +2987,7 @@ A set of heavy manacles lies here~
 8
 L
 150
-#92
+#43
 Jailer's Iron Club~
 @@WJailer's @@BIron Club@@N~
 A heavy iron club lies here, stained dark~
@@ -2996,7 +2996,7 @@ A heavy iron club lies here, stained dark~
 8
 L
 150
-#93
+#44
 Scholar's Ink-Stained Gloves~
 @@WScholar's @@BInk-Stained Gloves@@N~
 A pair of ink-stained gloves lies here~
@@ -3005,7 +3005,7 @@ A pair of ink-stained gloves lies here~
 13
 L
 150
-#94
+#45
 Scholar's Tome~
 @@WScholar's @@BTome@@N~
 A heavy tome lies here, its pages still turning~
@@ -3014,7 +3014,7 @@ A heavy tome lies here, its pages still turning~
 9
 L
 150
-#95
+#46
 Scholar's Meditation Circlet~
 @@WScholar's @@BMeditation Circlet@@N~
 A delicate circlet lies here, humming softly~
@@ -3023,7 +3023,7 @@ A delicate circlet lies here, humming softly~
 7
 L
 150
-#96
+#47
 Warden's Half-Plate~
 @@WWarden's @@BHalf-Plate@@N~
 A set of polished half-plate lies here~
@@ -3032,7 +3032,7 @@ A set of polished half-plate lies here~
 8
 L
 150
-#97
+#48
 Warden's Greaves~
 @@WWarden's @@BGreaves@@N~
 Heavy greaves lie here, discarded~
@@ -3041,7 +3041,7 @@ Heavy greaves lie here, discarded~
 8
 L
 150
-#98
+#49
 Warden's Tower Shield~
 @@WWarden's @@BTower Shield@@N~
 A tower shield lies here, its face bearing the Keep's crest~
@@ -3050,7 +3050,7 @@ A tower shield lies here, its face bearing the Keep's crest~
 8
 L
 150
-#99
+#50
 Warden's Longsword~
 @@WWarden's @@BLongsword@@N~
 A longsword lies here, its blade etched with wardings~
@@ -3059,7 +3059,7 @@ A longsword lies here, its blade etched with wardings~
 8
 L
 150
-#100
+#51
 Sanctum Keeper's Crown~
 @@WSanctum @@BKeeper's@@W Crown@@N~
 An ornate crown lies here, humming with power~
@@ -3068,7 +3068,7 @@ An ornate crown lies here, humming with power~
 7
 L
 150
-#101
+#52
 Sanctum Keeper's Robes~
 @@WSanctum @@BKeeper's@@W Robes@@N~
 Magnificent robes lie here, rippling with arcane light~
@@ -3077,7 +3077,7 @@ Magnificent robes lie here, rippling with arcane light~
 7
 L
 150
-#102
+#53
 Sanctum Keeper's Bracers~
 @@WSanctum @@BKeeper's@@W Bracers@@N~
 Ornate bracers lie here, etched with living runes~
@@ -3086,7 +3086,7 @@ Ornate bracers lie here, etched with living runes~
 7
 L
 150
-#103
+#54
 Sanctum Keeper's Ring~
 @@WSanctum @@BKeeper's@@W Ring@@N~
 A powerful ring lies here, pulsing with cold light~
@@ -3095,7 +3095,7 @@ A powerful ring lies here, pulsing with cold light~
 7
 L
 150
-#104
+#55
 Sanctum Keeper's Amulet~
 @@WSanctum @@BKeeper's@@W Amulet@@N~
 A glowing amulet lies here, warm to the touch~
@@ -3104,7 +3104,7 @@ A glowing amulet lies here, warm to the touch~
 7
 L
 150
-#105
+#56
 Sanctum Keeper's Sceptre~
 @@WSanctum @@BKeeper's@@W Sceptre@@N~
 A sceptre of dark wood and crystal lies here, radiating authority~
@@ -3113,7 +3113,7 @@ A sceptre of dark wood and crystal lies here, radiating authority~
 9
 L
 150
-#106
+#57
 Sanctum Keeper's Boots~
 @@WSanctum @@BKeeper's@@W Boots@@N~
 Rune-etched boots lie here, silent on any surface~
@@ -3122,7 +3122,7 @@ Rune-etched boots lie here, silent on any surface~
 7
 L
 150
-#107
+#58
 Vault Sentinel's Core~
 @@WVault @@BSentinel's@@W Core@@N~
 A glowing iron core lies here, still warm from the golem~
@@ -3131,7 +3131,7 @@ A glowing iron core lies here, still warm from the golem~
 14
 L
 150
-#108
+#59
 Vault Sentinel's Fist~
 @@WVault @@BSentinel's@@W Fist@@N~
 An enormous iron gauntlet lies here, covered in warding runes~
@@ -3140,7 +3140,7 @@ An enormous iron gauntlet lies here, covered in warding runes~
 13
 L
 150
-#109
+#60
 Vault Sentinel's Legplates~
 @@WVault @@BSentinel's@@W Legplates@@N~
 Massive iron legplates lie here, still ringing from battle~
@@ -3149,7 +3149,7 @@ Massive iron legplates lie here, still ringing from battle~
 14
 L
 150
-#110
+#61
 Vault Sentinel's Chestplate~
 @@WVault @@BSentinel's@@W Chestplate@@N~
 An iron chestplate etched with warding runes lies here~
@@ -3158,7 +3158,7 @@ An iron chestplate etched with warding runes lies here~
 14
 L
 150
-#111
+#62
 Vault Sentinel's Pauldrons~
 @@WVault @@BSentinel's@@W Pauldrons@@N~
 Iron pauldrons carved with runes lie here, heavy with power~
@@ -3167,7 +3167,7 @@ Iron pauldrons carved with runes lie here, heavy with power~
 14
 L
 150
-#112
+#63
 Vault Sentinel's Eye~
 @@WVault @@BSentinel's@@W Eye@@N~
 A burning red gem lies here, torn from the golem's skull~
@@ -3176,7 +3176,7 @@ A burning red gem lies here, torn from the golem's skull~
 7
 L
 150
-#113
+#64
 Archon's Tattered Cloak~
 @@WArchon's @@BTattered Cloak@@N~
 A ragged yet powerful cloak lies here~
@@ -3185,7 +3185,7 @@ A ragged yet powerful cloak lies here~
 4
 L
 150
-#114
+#65
 Archon's Gnarled Staff~
 @@WArchon's @@BGnarled Staff@@N~
 An ancient gnarled staff lies here, crackling with energy~
@@ -3194,7 +3194,7 @@ An ancient gnarled staff lies here, crackling with energy~
 9
 L
 150
-#115
+#66
 Archon's Iron Boots~
 @@WArchon's @@BIron Boots@@N~
 Heavy boots lie here, worn by centuries of walking~
@@ -3203,7 +3203,7 @@ Heavy boots lie here, worn by centuries of walking~
 4
 L
 150
-#116
+#67
 Archon's Feral Ring~
 @@WArchon's @@BFeral Ring@@N~
 A crude iron ring lies here, vibrating with barely contained power~
@@ -3214,127 +3214,127 @@ L
 150
 #0
 #RESETS
-D 0 52 1 1   (null)
+D 0 3 1 1   (null)
 
-D 0 52 1 2   (null)
+D 0 3 1 2   (null)
 
-D 0 87 0 2   (null)
+D 0 38 0 2   (null)
 
-D 0 101 0 2   (null)
+D 0 52 0 2   (null)
 
-D 0 102 5 2   (null)
+D 0 53 5 2   (null)
 
-D 0 115 0 2   (null)
+D 0 66 0 2   (null)
 
-D 0 126 3 1   (null)
+D 0 77 3 1   (null)
 
-M 0 50 25 57   (null)
+M 0 1 25 8   (null)
 
-M 0 50 25 59   (null)
+M 0 1 25 10   (null)
 
-M 0 50 25 61   (null)
+M 0 1 25 12   (null)
 
-G 0 50 0   (null)
+G 0 1 0   (null)
 
-M 0 50 25 63   (null)
+M 0 1 25 14   (null)
 
-M 0 50 25 75   (null)
+M 0 1 25 26   (null)
 
-M 0 50 25 77   (null)
+M 0 1 25 28   (null)
 
-M 0 50 25 79   (null)
+M 0 1 25 30   (null)
 
-M 0 50 25 81   (null)
+M 0 1 25 32   (null)
 
-M 0 50 25 83   (null)
+M 0 1 25 34   (null)
 
-M 0 50 25 85   (null)
+M 0 1 25 36   (null)
 
-M 0 50 25 73   (null)
+M 0 1 25 24   (null)
 
-M 0 50 25 71   (null)
+M 0 1 25 22   (null)
 
-M 0 50 25 69   (null)
+M 0 1 25 20   (null)
 
-M 0 50 25 67   (null)
+M 0 1 25 18   (null)
 
-M 0 50 25 65   (null)
+M 0 1 25 16   (null)
 
-M 0 51 1 87   (null)
+M 0 2 1 38   (null)
 
-M 0 52 1 86   (null)
+M 0 3 1 37   (null)
 
-G 0 51 0   (null)
+G 0 2 0   (null)
 
-M 0 53 1 98   (null)
+M 0 4 1 49   (null)
 
-E 0 65 0 0   (null)
+E 0 16 0 0   (null)
 
-M 0 54 1 100   (null)
+M 0 5 1 51   (null)
 
-M 0 55 3 94   (null)
+M 0 6 3 45   (null)
 
-E 0 65 0 0   (null)
+E 0 16 0 0   (null)
 
-M 0 56 4 89   (null)
+M 0 7 4 40   (null)
 
-E 0 65 0 0   (null)
+E 0 16 0 0   (null)
 
-M 0 57 5 90   (null)
+M 0 8 5 41   (null)
 
-E 0 65 0 0   (null)
+E 0 16 0 0   (null)
 
-M 0 58 2 101   (null)
+M 0 9 2 52   (null)
 
-E 0 65 0 0   (null)
+E 0 16 0 0   (null)
 
-G 0 52 0   (null)
+G 0 3 0   (null)
 
-M 0 58 2 101   (null)
+M 0 9 2 52   (null)
 
-E 0 65 0 0   (null)
+E 0 16 0 0   (null)
 
-M 0 59 3 106   (null)
+M 0 10 3 57   (null)
 
-M 0 59 3 107   (null)
+M 0 10 3 58   (null)
 
-M 0 60 2 117   (null)
+M 0 11 2 68   (null)
 
-M 0 60 2 122   (null)
+M 0 11 2 73   (null)
 
-M 0 61 2 98   (null)
+M 0 12 2 49   (null)
 
-M 0 61 2 100   (null)
+M 0 12 2 51   (null)
 
-M 0 62 2 112   (null)
+M 0 13 2 63   (null)
 
-M 0 62 2 113   (null)
+M 0 13 2 64   (null)
 
-M 0 63 3 104   (null)
+M 0 14 3 55   (null)
 
-M 0 63 3 108   (null)
+M 0 14 3 59   (null)
 
-M 0 64 3 119   (null)
+M 0 15 3 70   (null)
 
-M 0 64 3 124   (null)
+M 0 15 3 75   (null)
 
-M 0 65 1 133   (null)
+M 0 16 1 84   (null)
 
-M 0 66 1 129   (null)
+M 0 17 1 80   (null)
 
-M 0 67 1 132   (null)
+M 0 18 1 83   (null)
 
 S
 #SPECIALS
-M 53 spec_keep_physical_captain
-M 54 spec_keep_elemental_captain
-M 67 spec_hermit_archon
-M 65 spec_sanctum_keeper
+M 4 spec_keep_physical_captain
+M 5 spec_keep_elemental_captain
+M 18 spec_hermit_archon
+M 16 spec_sanctum_keeper
 S
 #OBJFUNS
-O 81 objfun_healing
-O 94 objfun_healing
-O 105 objfun_healing
-O 114 objfun_healing
+O 32 objfun_healing
+O 45 objfun_healing
+O 56 objfun_healing
+O 65 objfun_healing
 S
 #$

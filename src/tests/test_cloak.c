@@ -108,6 +108,36 @@ static void test_cloak_adept_helpers(void)
    assert(cloak_adept_scale_damage(&ch, 100) == 120);
 }
 
+static void test_precision_crit_chance_reduction(void)
+{
+   /* pseudo_level / 5 */
+   assert(cloak_precision_crit_chance_reduction(50) == 10);
+   assert(cloak_precision_crit_chance_reduction(100) == 20);
+   assert(cloak_precision_crit_chance_reduction(0) == 0);
+   assert(cloak_precision_crit_chance_reduction(-5) == 0);
+   assert(cloak_precision_crit_chance_reduction(48) == 9);
+}
+
+static void test_precision_crit_damage_reduction(void)
+{
+   /* Reduces crit damage by 25% */
+   assert(cloak_precision_crit_damage_reduction(1000, 50) == 750);
+   assert(cloak_precision_crit_damage_reduction(100, 50) == 75);
+   assert(cloak_precision_crit_damage_reduction(0, 50) == 0);
+   assert(cloak_precision_crit_damage_reduction(100, -5) == 100);
+   assert(cloak_precision_crit_damage_reduction(4, 50) == 3);
+}
+
+static void test_valor_proc_chance(void)
+{
+   /* pseudo_level / 10 */
+   assert(cloak_valor_proc_chance(50) == 5);
+   assert(cloak_valor_proc_chance(100) == 10);
+   assert(cloak_valor_proc_chance(0) == 0);
+   assert(cloak_valor_proc_chance(-5) == 0);
+   assert(cloak_valor_proc_chance(48) == 4);
+}
+
 int main(void)
 {
    test_cloak_reactive_can_trigger_for_all_elements();
@@ -120,6 +150,9 @@ int main(void)
    test_attacker_hp_has_floor();
    test_victim_hp_heals_half_and_caps_at_max();
    test_cloak_adept_helpers();
+   test_precision_crit_chance_reduction();
+   test_precision_crit_damage_reduction();
+   test_valor_proc_chance();
 
    puts("test_cloak: all tests passed");
    return 0;

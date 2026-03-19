@@ -65,12 +65,16 @@
 #define MAX_MORT_COMBO 4
 
 #define MAX_CLAN_EQ 6 /* Number of clan eq items */
-#define MAX_COLOR 16  /* eg look, prompt, shout */
-#define MAX_ANSI 28   /* eg red, black, etc (was 11) */
+
+#define CLANEQ_WEIGHT_MELEE 8
+#define CLANEQ_WEIGHT_CASTER 3
+#define CLANEQ_WEIGHT_TANK 13
+#define MAX_COLOR 16 /* eg look, prompt, shout */
+#define MAX_ANSI 28  /* eg red, black, etc (was 11) */
 #define MAX_ALIASES 6
 #define MAX_IGNORES 3
 #define MAX_RACE 10
-#define MAX_CLAN 9     /* number of clans */
+#define MAX_CLAN 11    /* number of clans (0=None + 10 clans) */
 #define EXP_LEVEL 1000 /* exp per level */
 #define MAX_SKILL 999
 #define MAX_CLASS 6
@@ -132,9 +136,14 @@
 #define CLASS_CRU 21
 #define CLASS_KIN 22
 #define CLASS_MAR 23
+/* Druid lineage (appended, non-contiguous with tier ranges) */
+#define CLASS_DRU 24
+#define CLASS_THO 25
+#define CLASS_WIL 26
+#define CLASS_HIE 27
 
 /* Total class count across all tiers */
-#define MAX_TOTAL_CLASS (MAX_CLASS + MAX_REMORT + MAX_CLASS)
+#define MAX_TOTAL_CLASS 28
 
 /* Helper macros to determine which tier a class ID belongs to */
 #define IS_MORTAL_CLASS(c) (gclass_table[c].tier == MORTAL)
@@ -342,7 +351,7 @@
 #define ROOM_VNUM_CHAT 491
 #define ROOM_VNUM_TEMPLE 1209
 #define ROOM_VNUM_ALTAR 970
-#define ROOM_VNUM_SCHOOL 4564
+#define ROOM_VNUM_SCHOOL 4900
 #define ROOM_VNUM_DONATION 65326
 #define ROOM_VNUM_MORGUE 65323
 #define ROOM_VNUM_MORIBUND 65324
@@ -413,6 +422,8 @@
 #define SHADOW_SHIELD 3
 #define ICE_SHIELD 4
 #define PSI_SHIELD 5
+#define HOLY_SHIELD 6
+#define ARCANE_SHIELD 7
 
 /* These are for skill_table lookup funcs... to save writing 2 functions */
 #define RETURN_BEST_LEVEL 1
@@ -967,10 +978,11 @@
 #define BIT_34 8589934592ULL
 #define ACT_AI_DIALOGUE BIT_34 /* NPC responds to say via LLM */
 
-/* NPC Dialogue AI */
-#define OPENCLAW_URL     "http://192.168.1.111:8000/v1/chat"
-#define OPENCLAW_MODEL   "llama-3.3-70b-versatile"
-#define OPENCLAW_TIMEOUT 5L   /* curl timeout in seconds */
+/* NPC Dialogue AI (tng-ai service) */
+#define TNGAI_URL        "http://192.168.1.111:8000/v1/chat"
+#define TNGAI_MODEL      "llama-3.3-70b-versatile"
+#define TNGAI_TIMEOUT    5L  /* curl timeout in seconds */
+#define TNGAI_MAX_TOKENS 100 /* token cap for NPC responses (1-3 sentences) */
 #define MAX_DIALOGUE_TURNS  8
 #define MAX_REQUEST_TURNS   9 /* history + new user turn */
 #define DIALOGUE_HISTORY_EXPIRY 300 /* seconds of silence before history resets */
@@ -1031,6 +1043,19 @@
                     /*
                      * by a Creator
                      */
+
+/*
+ * Macros for sparse skill/spell level definitions in skill_table_data.c and
+ * spell_table_data.c.  Instead of listing all MAX_TOTAL_CLASS entries, only
+ * specify the classes that actually receive the skill:
+ *
+ *   {LEVELS_INIT, L(CLASS_MAG, 5), L(CLASS_WIZ, 3)}
+ *
+ * LEVELS_INIT uses a GCC range designator to fill all entries with NO_USE.
+ * Each L(cls, lvl) then overrides the specific class entry.
+ */
+#define LEVELS_INIT [0 ... MAX_TOTAL_CLASS - 1] = NO_USE
+#define L(cls, lvl) [cls] = (lvl)
 
 /*
  * New bits to determine what skills a mob can do in combat -S-
@@ -1214,6 +1239,7 @@
 #define ITEM_EXTRA_WAND BIT_30
 #define ITEM_FIST BIT_31
 #define ITEM_TWO_HANDED BIT_32
+#define ITEM_BONDED BIT_33
 
 /* Class-restricted stuff dropped. */
 

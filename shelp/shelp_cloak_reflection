@@ -14,5 +14,15 @@ Noun Damage: None
 Acquisition:
    - Not learnable by player classes.
 Description:
-   Cloak:reflection is a protective/support spell that strengthens, restores, or safeguards the target.
+   Cloak:reflection surrounds the caster in a shimmering, multi-hued cloak
+   that has a chance to reflect offensive spells back at the original caster.
+   When a spell hits the caster, there is a (pseudo_level - 70) percent
+   chance that the cloak will reflect the spell, dealing its full damage back
+   to the attacker instead.
+
+   The cloak only triggers against offensive targeted spells
+   (TAR_CHAR_OFFENSIVE) and does not activate if the caster is targeting
+   themselves. Reflected spells deal their original damage to the attacker.
+
+   Duration scales with pseudo-level (pseudo_level / 8 rounds).
 *******************************************************************************

@@ -1,0 +1,22 @@
+level -1
+keywords garrote
+---
+*******************************************************************************
+       Name: Garrote
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 1
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: garrote
+   Wear-Off: !Garrote!
+Acquisition:
+   - Cipher: level 30
+Description:
+   Garrote loops a wire or cord around the victim's throat while attacking from
+   stealth. Requires the Cipher to be hiding or sneaking before the attack is
+   initiated. The hold restricts breathing, applying AFF_HOLD for 2 rounds and
+   dealing damage scaled to Cipher level. Breaks the caster out of hiding and
+   initiates combat engagement with the target.
+*******************************************************************************

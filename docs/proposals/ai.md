@@ -1677,10 +1677,11 @@ into one of two advanced classes built on each mortal class: Magi leads to
 Sorcerer or Wizard. Cleric leads to Paladin or Priest. Cipher leads to
 Assassin or Warlock. Warden leads to Knight or Swordsman. Psionicist leads
 to Necromancer or Egomancer. Pugilist leads to Monk or Brawler. After
-completing two remort classes, the Adept tier unlocks: Grand Magi (from
-Sorcerer + Wizard), Templar (from Paladin + Priest), Nightblade (from
-Assassin + Warlock), Crusader (from Knight + Swordsman), Kinetimancer (from
-Necromancer + Egomancer), Martial Artist (from Monk + Brawler).
+completing two remort classes, the Adept tier unlocks. Each adept requires
+either of its two associated remorts: Grand Magi (from Sorcerer or Wizard),
+Templar (from Paladin or Priest), Nightblade (from Assassin or Warlock),
+Crusader (from Knight or Swordsman), Kinetimancer (from Necromancer or
+Egomancer), Martial Artist (from Monk or Brawler).
 
 LEVELING: Experience is gained by killing monsters. Type WORTH to see how
 much experience is needed for the next level. When you have enough

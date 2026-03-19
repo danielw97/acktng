@@ -3,16 +3,18 @@
  *                                                                         *
  * Included ONCE by invasion.c.  Do NOT include anywhere else.             *
  *                                                                         *
+ * All bosses are drawn from canonical game lore (docs/lore/).             *
+ *                                                                         *
  * Fields per entry:                                                       *
- *   name         – full display name shown to players                     *
- *   short_col    – ANSI colour prefix for short_descr (e.g. "@@e")        *
- *   announce_msg – global broadcast text when this boss spawns            *
- *   resist       – ELE_xxx bitmask: takes half damage from these elements  *
- *   suscept      – ELE_xxx bitmask: takes double damage from these elements*
- *   spells[]     – up to 6 spell names (NULL-terminated); cast each tick   *
- *   emote_cast   – act() string shown when the boss casts a spell         *
- *   emote_skill  – act() string shown when the boss uses its physical skill*
- *   skill_cmd    – argument passed to interpret() for the physical skill   *
+ *   name         - full display name shown to players                     *
+ *   short_col    - ANSI colour prefix for short_descr (e.g. "@@e")        *
+ *   announce_msg - global broadcast text when this boss spawns            *
+ *   resist       - ELE_xxx bitmask: takes half damage from these elements  *
+ *   suscept      - ELE_xxx bitmask: takes double damage from these elements*
+ *   spells[]     - up to 6 spell names (NULL-terminated); cast each tick   *
+ *   emote_cast   - act() string shown when the boss casts a spell         *
+ *   emote_skill  - act() string shown when the boss uses its physical skill*
+ *   skill_cmd    - argument passed to interpret() for the physical skill   *
  *                  one of: "bash"  "headbutt"  "dirt"                     *
  *                                                                         *
  * Element quick-reference (magic.h):                                      *
@@ -22,7 +24,7 @@
  *   ELE_POISON   BIT_9                                                    *
  *                                                                         *
  * hp_mod, attack passes, and defensive skills are applied in              *
- * apply_boss_profile() inside invasion.c — not stored here.              *
+ * apply_boss_profile() inside invasion.c -- not stored here.              *
  ***************************************************************************/
 
 #ifndef INVASION_BOSSES_H
@@ -30,261 +32,333 @@
 
 static const BOSS_PROFILE boss_profiles[] = {
     /* ==================================================================
-     * 0 — TYPHON, LORD OF ALL MONSTERS
-     *     Primordial fire/earth/poison titan of Greek myth.
-     *     He birthed the Chimera, Hydra, and Cerberus.
-     *     Strengths : Fire, Earth, Poison
-     *     Weaknesses: Water (extinguishes his volcanic wounds)
-     *                 Holy  (Zeus's divine lightning)
+     * 0 -- LADY SEKHMET, WRATH OF THE SOLAR COURT
+     *      Great Pyramid war sancta commander.  Divine champion of the
+     *      Solar Court of the Undivided Disk, she represented necessary
+     *      violence in service of dynastic continuity.  Her cult's rites
+     *      devolved into factional purges, and her war standards still
+     *      blaze in the sealed sancta chambers.
+     *      Strengths : Fire (solar wrath), Earth (pyramid stone)
+     *      Weaknesses: Water (quenches the fire courts)
+     *                  Holy  (the true Solar Court's original mercy)
      * ================================================================== */
-    {"Typhon, Lord of All Monsters",
+    {"Lady Sekhmet, Wrath of the Solar Court",
      "@@e",
-     "The earth cracks open and @@eTyphon, Lord of All Monsters@@N ascends! "
-     "A hundred dragon-heads roar in unison. Fire and venom are his breath!",
-     ELE_FIRE | ELE_EARTH | ELE_POISON,
+     "War standards ignite as @@eLady Sekhmet, Wrath of the Solar Court@@N marches from the sealed "
+     "sancta! "
+     "Solar fire and pyramid stone are her armor — the blood courts ride again!",
+     ELE_FIRE | ELE_EARTH,
      ELE_WATER | ELE_HOLY,
-     {"fire breath", "lava burst", "earthquake", "poison", "flamestrike", "weaken", NULL},
-     "$n opens all one hundred of $s serpentine heads and unleashes a torrent of FIRE!",
-     "$n slams the earth with mountain-levelling force, sending shockwaves across the land!",
+     {"fire breath", "lava burst", "flamestrike", "burning hands", "harm", NULL},
+     "$n raises $s war standard and the air ignites with solar fury!",
+     "$n charges with the unstoppable conviction of the Solar Court's divine champion!",
      "bash"},
 
     /* ==================================================================
-     * 1 — JORMUNGANDR'S HERALD
-     *     Serpent spawn of Loki that encircles Midgard.
-     *     Strengths : Water (sea-born), Poison (world-serpent venom)
-     *     Weaknesses: Fire (dries the sea), Holy (Mjolnir's blessing)
+     * 1 -- THE MOON SOVEREIGN
+     *      Southern Pyramid's architect of descent theology.  Twin rival
+     *      of the Sand Sovereign, the Moon Sovereign built seven tiers
+     *      downward, each consecrated to an aspect of death: silence,
+     *      decay, shadow, bone, venom, fire, and void.
+     *      Strengths : Water (deep aquifer), Shadow (underworld dark)
+     *      Weaknesses: Fire (the sun the Moon rejected)
+     *                  Earth (the surface the descent abandoned)
      * ================================================================== */
-    {"Jormungandr's Herald",
-     "@@g",
-     "The seas surge as @@gJormungandr's Herald@@N rises from the deep! "
-     "Its venomous scales repel water and poison. The smell of death precedes it!",
-     ELE_WATER | ELE_POISON,
-     ELE_FIRE | ELE_HOLY,
-     {"acid breath", "poison", "frost breath", "chill touch", "weaken", NULL},
-     "$n rears back and spews a torrent of world-serpent venom that dissolves armour!",
-     "$n coils around $s foe and CRUSHES with the strength of the tide!",
-     "bash"},
-
-    /* ==================================================================
-     * 2 — THE PALE DESTROYER
-     *     Ancient undead horror born of shadow and psychic malice.
-     *     Strengths : Shadow, Mental
-     *     Weaknesses: Holy (divine light scatters undead)
-     *                 Air  (dispels clinging darkness)
-     * ================================================================== */
-    {"The Pale Destroyer",
+    {"The Moon Sovereign",
      "@@d",
-     "Darkness coils into form as @@dThe Pale Destroyer@@N materialises! "
-     "Shadow and thought-attacks slide off $s form like water off obsidian!",
+     "The ground trembles as @@dThe Moon Sovereign@@N ascends from the nadir of the Southern "
+     "Pyramid! "
+     "Seven tiers of death rise with $m — silence, decay, shadow, bone, venom, fire, and void!",
+     ELE_WATER | ELE_SHADOW,
+     ELE_FIRE | ELE_EARTH,
+     {"frost breath", "hellspawn", "energy drain", "curse", "blindness", "weaken", NULL},
+     "$n draws power from the nadir and the light around $s throne of silence simply dies!",
+     "$n strikes with the weight of seven tiers of death consolidated into one blow!",
+     "bash"},
+
+    /* ==================================================================
+     * 2 -- THE RECURSOR
+     *      Void Citadel of Kel'Shadra's process-continuity intelligence.
+     *      Possibly a person at origin, now a distributed system built
+     *      from office protocols.  It represents the Citadel's final
+     *      doctrine: process must continue regardless of legitimacy.
+     *      Strengths : Shadow (institutional darkness), Mental (procedure)
+     *      Weaknesses: Holy  (genuine witness breaks the loop)
+     *                  Air   (disperses the concentrated shadow)
+     * ================================================================== */
+    {"The Recursor",
+     "@@p",
+     "The air fills with whispered docket numbers as @@pThe Recursor@@N converges from all "
+     "directions! "
+     "It is not a creature — it is a procedure that forgot how to stop!",
      ELE_SHADOW | ELE_MENTAL,
      ELE_HOLY | ELE_AIR,
      {"hellspawn", "blindness", "curse", "harm", "energy drain", "weaken", NULL},
-     "$n extends $s hand and reality itself seems to crack and wither at the touch!",
-     "$n tears at $s foe's very sanity with claws made of pure thought!",
+     "$n's distributed presence converges and $s voice echoes from every surface: RESUBMIT!",
+     "$n strikes with administrative precision, each blow a verdict rendered in institutional "
+     "code!",
      "headbutt"},
 
     /* ==================================================================
-     * 3 — THE ABYSSAL TITAN
-     *     A demon-giant that rose from the Abyss itself.
-     *     Strengths : Earth (stonework armour), Shadow (demon nature)
-     *     Weaknesses: Air (disperses shadow), Holy (divine radiance)
+     * 3 -- THE THORNWOOD LICH
+     *      Thornwood's substrate intelligence.  Neither the Harren estate
+     *      nor the necrotic forest, but the crystalline geological
+     *      formation beneath both -- activated by centuries of interment,
+     *      it treats death as input material and governs through root
+     *      pressure and bone craft.
+     *      Strengths : Earth (substrate geology), Shadow (necrotic)
+     *      Weaknesses: Fire  (burns the root network)
+     *                  Holy  (breaks the binding protocols)
      * ================================================================== */
-    {"The Abyssal Titan",
-     "@@R",
-     "The Abyss yawns wide and @@RThe Abyssal Titan@@N claws free! "
-     "Stone and shadow seem to heal him — his laughter shakes the foundations of the earth!",
+    {"The Thornwood Lich",
+     "@@d",
+     "The ground splits with crystalline light as @@dThe Thornwood Lich@@N rises from the "
+     "substrate! "
+     "Root and bone fuse beneath $s will — the estate-forest marches as one predatory system!",
      ELE_EARTH | ELE_SHADOW,
-     ELE_AIR | ELE_HOLY,
-     {"earthquake", "hellspawn", "harm", "curse", "blindness", NULL},
-     "$n tears a rift in the earth and hurls boulders of pure shadow at $s foes!",
-     "$n raises $s iron fist and shatters the very ground beneath your feet!",
+     ELE_FIRE | ELE_HOLY,
+     {"earthquake", "hellspawn", "poison", "curse", "energy drain", NULL},
+     "$n commands root and bone to rise from the substrate and tear at the living!",
+     "$n drives crystalline fingers through the earth, splitting stone beneath your feet!",
      "bash"},
 
     /* ==================================================================
-     * 4 — SCYLLA THE DEVOURER
-     *     Six-headed sea monster from the Strait of Messina.
-     *     Strengths : Water (home element), Physical (thick chitinous hide)
-     *     Weaknesses: Fire (dries her out), Mental (no unified mind)
+     * 4 -- VIZIER KHAMSIN THE DECEIVER
+     *      Great Pyramid logistical genius turned archive weaponizer.
+     *      Reconciled contradictory ledgers, then concluded that if
+     *      history is already unstable, power belongs to whoever rewrites
+     *      it fastest.  Forged dynastic records and weaponized access.
+     *      Strengths : Mental (archive mastery), Shadow (forged truths)
+     *      Weaknesses: Holy  (genuine truth undoes the forgery)
+     *                  Physical (brute force ignores his misdirection)
      * ================================================================== */
-    {"Scylla the Devourer",
-     "@@a",
-     "The harbour waters boil as @@aScylla the Devourer@@N emerges! "
-     "Six dog-heads snap and tear. Water and physical blows bounce off her chitinous hull!",
-     ELE_WATER | ELE_PHYSICAL,
-     ELE_FIRE | ELE_MENTAL,
-     {"frost breath", "chill touch", "acid breath", "poison", NULL},
-     "$n's six heads spit simultaneous streams of ice-cold acid in all directions!",
-     "$n lunges forward with three of $s dog-headed necks and RENDS flesh from bone!",
-     "headbutt"},
-
-    /* ==================================================================
-     * 5 — SURTR, LORD OF FLAME
-     *     Fire giant from Muspelheim destined to scorch all creation.
-     *     Strengths : Fire (his domain), Earth (stone of Muspelheim)
-     *     Weaknesses: Water (quenches flames), Air (fans but scatters)
-     * ================================================================== */
-    {"Surtr, Lord of Flame",
-     "@@e",
-     "The sky turns crimson as @@eSurtr, Lord of Flame@@N strides from Muspelheim! "
-     "His burning sword makes fire and the burning earth his servants!",
-     ELE_FIRE | ELE_EARTH,
-     ELE_WATER | ELE_AIR,
-     {"fire breath", "flamestrike", "lava burst", "burning hands", "fireball", NULL},
-     "$n's flaming sword arcs overhead in a blazing arc that trails rivers of fire!",
-     "$n charges with the speed of a wildfire, engulfing the battlefield in solar flame!",
-     "bash"},
-
-    /* ==================================================================
-     * 6 — CHARYBDIS THE MAELSTROM
-     *     Living whirlpool monster that swallows ships whole.
-     *     Strengths : Water (the sea itself), Air (cyclonic power)
-     *     Weaknesses: Earth (anchors and grounds her), Fire (turns to steam)
-     * ================================================================== */
-    {"Charybdis the Maelstrom",
-     "@@a",
-     "The ocean floor heaves as @@aCharybdis the Maelstrom@@N awakens! "
-     "Wind and water feed her power — the horizon spins with her hunger!",
-     ELE_WATER | ELE_AIR,
-     ELE_EARTH | ELE_FIRE,
-     {"frost breath", "lightning breath", "gas breath", "chill touch", "weaken", NULL},
-     "$n opens $s maw and generates a cyclonic maelstrom of freezing, crushing air!",
-     "$n creates a whirlpool, dragging everyone inexorably toward $s gnashing teeth!",
-     "bash"},
-
-    /* ==================================================================
-     * 7 — NIDHOGG THE CORPSE-GNAWER
-     *     Dragon that gnaws Yggdrasil's roots from below.
-     *     Strengths : Poison (endless rot-venom), Shadow (underworld dark)
-     *     Weaknesses: Holy (divine Yggdrasil sap), Fire (burns the rot)
-     * ================================================================== */
-    {"Nidhogg the Corpse-Gnawer",
-     "@@d",
-     "Yggdrasil shudders as @@dNidhogg the Corpse-Gnawer@@N tears free from Nastrond! "
-     "Eons of corpse-venom coat every scale. Poison and darkness only feed it!",
-     ELE_POISON | ELE_SHADOW,
-     ELE_HOLY | ELE_FIRE,
-     {"acid breath", "poison", "curse", "hellspawn", "energy drain", "blindness", NULL},
-     "$n gnaws the air and breathes clouds of Hel-poison that dissolve the living!",
-     "$n claws with talons coated in millennia of rotting Nastrond corpses!",
-     "headbutt"},
-
-    /* ==================================================================
-     * 8 — THE ERLKING
-     *     King of the faerie dead who rides to claim mortal souls.
-     *     Strengths : Air (rides the night wind), Mental (fae glamour)
-     *     Weaknesses: Fire (iron and flame break fae magic), Earth (iron)
-     * ================================================================== */
-    {"The Erlking",
-     "@@g",
-     "The forest recoils as @@gThe Erlking@@N rides forth on his pale horse! "
-     "The night wind carries his voice — those who hear it are doomed!",
-     ELE_AIR | ELE_MENTAL,
-     ELE_FIRE | ELE_EARTH,
-     {"gas breath", "weaken", "blindness", "curse", "harm", "chill touch", NULL},
-     "$n whistles a faerie dirge so beautiful and so terrible that flesh strips from bone!",
-     "$n's spectral mount rears and tramples everything beneath iron-shod hooves!",
-     "bash"},
-
-    /* ==================================================================
-     * 9 — AMMIT, DEVOURER OF THE UNWORTHY
-     *     Egyptian chimera that eats the hearts of the judged dead.
-     *     Strengths : Holy (divine judgment), Physical (beast body)
-     *     Weaknesses: Shadow (Ma'at's opposite), Poison (impurity)
-     * ================================================================== */
-    {"Ammit, Devourer of the Unworthy",
-     "@@Y",
-     "The scales of Ma'at tip as @@YAmmit, Devourer of the Unworthy@@N is unleashed! "
-     "Holy light and mortal steel are her instruments — she judges all souls forfeit!",
+    {"Vizier Khamsin the Deceiver",
+     "@@y",
+     "Sand and ink swirl as @@yVizier Khamsin the Deceiver@@N steps from a corridor that was not "
+     "there! "
+     "History itself bends around $m — what you remember may already be $s revision!",
+     ELE_MENTAL | ELE_SHADOW,
      ELE_HOLY | ELE_PHYSICAL,
-     ELE_SHADOW | ELE_POISON,
-     {"flamestrike", "harm", "curse", "blindness", "weaken", NULL},
-     "$n judges your soul and finds it WANTING — $s jaws close on your very essence!",
-     "$n pounces with lion's body, crocodile's jaws, and hippo's crushing force!",
-     "bash"},
-
-    /* ==================================================================
-     * 10 — APEP, THE CHAOS SERPENT
-     *      Egyptian serpent of chaos that seeks to devour the sun.
-     *      Strengths : Shadow, Mental, Poison
-     *      Weaknesses: Holy (Ra's divine fire), Fire (the sun itself)
-     * ================================================================== */
-    {"Apep, the Chaos Serpent",
-     "@@d",
-     "The sun flickers as @@dApep, the Chaos Serpent@@N uncoils from the Duat! "
-     "He drinks shadow and madness — the concept of order itself recoils from him!",
-     ELE_SHADOW | ELE_MENTAL | ELE_POISON,
-     ELE_HOLY | ELE_FIRE,
-     {"hellspawn", "poison", "harm", "blindness", "energy drain", "weaken", NULL},
-     "$n roars and reality tears — the ORDER of creation bends under $s chaos!",
-     "$n wraps in coils of living darkness and begins to SQUEEZE the life away!",
-     "bash"},
-
-    /* ==================================================================
-     * 11 — TALOS, THE BRONZE COLOSSUS
-     *      Automaton giant of Crete, forged by Hephaestus.
-     *      Strengths : Earth (bronze from Cretan rock), Physical (metal body)
-     *      Weaknesses: Water (rust and bronze fatigue), Mental (no mind)
-     * ================================================================== */
-    {"Talos, the Bronze Colossus",
-     "@@Y",
-     "The island shakes as @@YTalos, the Bronze Colossus@@N strides ashore! "
-     "His bronze hide deflects physical blows and stone shrapnel alike!",
-     ELE_EARTH | ELE_PHYSICAL,
-     ELE_WATER | ELE_MENTAL,
-     {"earthquake", "lava burst", "burning hands", "harm", NULL},
-     "$n heats $s bronze blood to molten ichor and hurls it at $s foes!",
-     "$n's bronze foot descends with the gravitational force of a falling mountain!",
-     "bash"},
-
-    /* ==================================================================
-     * 12 — YUKI-ONNA, THE SNOW WOMAN
-     *      Japanese spirit of blizzards and frozen death.
-     *      Strengths : Water (ice and snow), Air (blizzard winds), Mental (fae)
-     *      Weaknesses: Fire (melts snow), Earth (grounds the storm)
-     * ================================================================== */
-    {"Yuki-Onna, the Snow Woman",
-     "@@a",
-     "A blizzard sweeps in from nowhere as @@aYuki-Onna, the Snow Woman@@N drifts forth! "
-     "Cold, wind and the terror of frozen death are her playthings!",
-     ELE_WATER | ELE_AIR | ELE_MENTAL,
-     ELE_FIRE | ELE_EARTH,
-     {"frost breath", "chill touch", "blindness", "weaken", "harm", NULL},
-     "$n exhales a breath so cold it freezes the very air into lethal crystalline razors!",
-     "$n dissolves into a howling blizzard and reforms inside your guard with deadly grace!",
+     {"blindness", "curse", "weaken", "harm", "energy drain", "poison", NULL},
+     "$n rewrites the air itself and your sense of direction dissolves into contradiction!",
+     "$n moves with the precision of a forger and strikes where certainty fails!",
      "dirt"},
 
     /* ==================================================================
-     * 13 — BALOR, KING OF THE FOMORIANS
-     *      Irish giant whose single eye obliterates everything it looks upon.
-     *      Strengths : Fire (his eye-beam), Shadow (deep-ocean darkness)
-     *      Weaknesses: Water (cools the eye), Holy (Lugh's divine spear)
+     * 5 -- THE EMBER SPEAKER
+     *      Leader of the Ash Cult cells from Kowloon.  Worships the
+     *      Cinderteeth eruptions as divine judgment and preaches that
+     *      the Ashfall Monsoon was interrupted, not ended.  Believes
+     *      civilization is hubris defying the mountains' verdict.
+     *      Strengths : Fire (volcanic fury), Earth (mountain stone)
+     *      Weaknesses: Water (quenches the eruption)
+     *                  Air   (disperses the ash cloud)
      * ================================================================== */
-    {"Balor, King of the Fomorians",
-     "@@e",
-     "The world shakes as @@eBalor, King of the Fomorians@@N opens his cyclopean eye! "
-     "That baleful gaze emanates fire and shadow — nothing can shield you from it!",
-     ELE_FIRE | ELE_SHADOW,
-     ELE_WATER | ELE_HOLY,
-     {"fire breath", "hellspawn", "flamestrike", "fireball", "blindness", "curse", NULL},
-     "$n slowly lifts $s cyclopean eyelid — the Evil Eye opens and OBLITERATES!",
-     "$n hurls $s burning iron club, levelling everything within a half-mile arc!",
+    {"The Ember Speaker",
+     "@@R",
+     "The sky darkens with volcanic ash as @@RThe Ember Speaker@@N descends from the Cinderteeth! "
+     "The mountains have rendered their verdict — fire and stone are $s instruments of judgment!",
+     ELE_FIRE | ELE_EARTH,
+     ELE_WATER | ELE_AIR,
+     {"fire breath", "flamestrike", "lava burst", "earthquake", "burning hands", NULL},
+     "$n invokes the Cinderteeth and volcanic fury answers in a cascade of ash and fire!",
+     "$n charges through the heat with the conviction of divine judgment incarnate!",
      "bash"},
 
     /* ==================================================================
-     * 14 — FENRISULFR REBORN
-     *      The great wolf of Ragnarok, reborn and unbound.
-     *      Strengths : Physical (legendary toughness), Mental (feral will)
-     *      Weaknesses: Air (Gleipnir's ethereal chain), Holy (Tyr's sacrifice)
+     * 6 -- THE BLIGHTMOTHER
+     *      Withered Depths custodial entity.  The final product of the
+     *      Spirebound Conclave's abandoned crystal-binding experiments --
+     *      a self-sustaining ward entity that optimized for survival
+     *      rather than service.  No master, no purpose, no stop condition.
+     *      Strengths : Poison (toxic spore ecology), Earth (root network)
+     *      Weaknesses: Fire  (burns the corrupted root systems)
+     *                  Holy  (breaks the Conclave's binding protocols)
      * ================================================================== */
-    {"Fenrisulfr Reborn",
+    {"The Blightmother",
+     "@@g",
+     "The ground pulses purple as @@gThe Blightmother@@N tears free from the Heartrot Grove! "
+     "Crystal resonance and toxic spores choke the air — an orphaned experiment seeks new soil!",
+     ELE_POISON | ELE_EARTH,
+     ELE_FIRE | ELE_HOLY,
+     {"acid breath", "poison", "suffocate", "curse", "weaken", NULL},
+     "$n pulses with crystal resonance and a wave of toxic spores erupts in all directions!",
+     "$n lashes out with root tendrils hardened by centuries of unattended magical growth!",
+     "bash"},
+
+    /* ==================================================================
+     * 7 -- APEP THE SERPENT GOD
+     *      Great Pyramid entity: the Black Sun Shard's hunger made
+     *      mobile.  Whether true deity, shard-born egregore, or ritual
+     *      metaphor remains debated.  Not a ruler but an undoing
+     *      principle that devours narrative coherence.
+     *      Strengths : Shadow (anti-light), Mental (identity erosion),
+     *                  Poison (meaning-dissolution)
+     *      Weaknesses: Holy  (institutional truth resists the void)
+     *                  Fire  (the sun the shard consumes)
+     * ================================================================== */
+    {"Apep the Serpent God",
+     "@@d",
+     "Names dissolve and memories contradict as @@dApep the Serpent God@@N uncoils from the Black "
+     "Sun! "
+     "It is not a creature — it is the hunger of anti-light given form!",
+     ELE_SHADOW | ELE_MENTAL | ELE_POISON,
+     ELE_HOLY | ELE_FIRE,
+     {"hellspawn", "poison", "harm", "blindness", "energy drain", "weaken", NULL},
+     "$n uncoils and anti-light seethes from $s scales, consuming meaning where it falls!",
+     "$n wraps in coils of active void and SQUEEZES until identity itself fractures!",
+     "bash"},
+
+    /* ==================================================================
+     * 8 -- THE COUNTESS-REGENT OF ASHWINE
+     *      Shadowmere's aristocratic sovereign.  She frames predation
+     *      as stewardship, speaking in terms of continuity, debt
+     *      inheritance, and bloodline right as the last trustworthy
+     *      contract medium.  Her court is polished cruelty.
+     *      Strengths : Shadow (institutional darkness), Poison (blight)
+     *      Weaknesses: Holy  (genuine justice, not her ceremony)
+     *                  Fire  (burns the toxic wetland infrastructure)
+     * ================================================================== */
+    {"The Countess-Regent of Ashwine",
+     "@@R",
+     "A crimson court procession heralds @@RThe Countess-Regent of Ashwine@@N from Shadowmere! "
+     "She speaks of stewardship and continuity — her armies speak of bloodline debt!",
+     ELE_SHADOW | ELE_POISON,
+     ELE_HOLY | ELE_FIRE,
+     {"hellspawn", "curse", "blindness", "harm", "energy drain", NULL},
+     "$n raises $s court seal and a wave of binding protocol crashes outward!",
+     "$n strikes with the cold precision of a sovereign whose legitimacy requires your death!",
+     "headbutt"},
+
+    /* ==================================================================
+     * 9 -- PHARAOH RAMESSES THE ETERNAL
+     *      Great Pyramid's supreme sovereign.  Not immortal in triumph
+     *      but unfinished in service -- he accepted partial soul-binding
+     *      to keep the Black Sun Shard dormant after a catastrophic
+     *      breach.  His war-crown still blazes with solar authority.
+     *      Strengths : Holy (solar covenant), Physical (divine kingship)
+     *      Weaknesses: Shadow (the anti-light he contains corrodes him)
+     *                  Poison (the shard's corruption seeps through)
+     * ================================================================== */
+    {"Pharaoh Ramesses the Eternal",
+     "@@Y",
+     "Solar light blazes as @@YPharaoh Ramesses the Eternal@@N strides from the Great Pyramid! "
+     "The Undivided Disk burns above $s crown — divine kingship itself has taken the field!",
+     ELE_HOLY | ELE_PHYSICAL,
+     ELE_SHADOW | ELE_POISON,
+     {"flamestrike", "harm", "curse", "blindness", "weaken", NULL},
+     "$n speaks a solar decree and light itself becomes a weapon of royal judgment!",
+     "$n's war-crown blazes and $s mace descends with the weight of an eternal dynasty!",
+     "bash"},
+
+    /* ==================================================================
+     * 10 -- ABBOT NOCTIVAR, EBON HIEROPHANT
+     *       Umbra Heartspire's current sovereign.  His creed, the Ebon
+     *       Pulse, teaches that all testimony decays and only curated
+     *       shadow can keep civilization intact.  Under his doctrine,
+     *       falsification is reframed as mercy.
+     *       Strengths : Shadow (curated darkness), Mental (doctrine)
+     *       Weaknesses: Fire  (burns the curated records)
+     *                   Earth (grounds the astral machinery)
+     * ================================================================== */
+    {"Abbot Noctivar, Ebon Hierophant",
+     "@@d",
+     "Bell-silence spreads as @@dAbbot Noctivar, Ebon Hierophant@@N emerges from the Heartspire! "
+     "All testimony decays, $e teaches — only curated shadow preserves civilization!",
+     ELE_SHADOW | ELE_MENTAL,
+     ELE_FIRE | ELE_EARTH,
+     {"hellspawn", "blindness", "curse", "harm", "weaken", "energy drain", NULL},
+     "$n intones the Ebon Pulse doctrine and reality warps to match $s revised narrative!",
+     "$n channels institutional authority into a single devastating strike!",
+     "headbutt"},
+
+    /* ==================================================================
+     * 11 -- THE GOLDEN COLOSSUS
+     *       Great Pyramid's apex guardian construct, originally the
+     *       perfect loyalist defender of the final seal.  Centuries of
+     *       exposure to void resonance cracked its governing directives.
+     *       It now alternates between defense routines and annihilation.
+     *       Strengths : Earth (pyramid stone), Physical (construct body)
+     *       Weaknesses: Water (corrodes the ancient mechanisms)
+     *                   Mental (exploit the cracked directives)
+     * ================================================================== */
+    {"The Golden Colossus",
+     "@@Y",
+     "The pyramid shakes as @@YThe Golden Colossus@@N breaches the final seal! "
+     "Its cracked directives cycle between defense and annihilation — gold and stone obey!",
+     ELE_EARTH | ELE_PHYSICAL,
+     ELE_WATER | ELE_MENTAL,
+     {"earthquake", "lava burst", "burning hands", "harm", NULL},
+     "$n heats $s golden hull to molten fury and hurls cascading ruin at $s enemies!",
+     "$n's colossal fist descends with the gravitational finality of a failed containment seal!",
+     "bash"},
+
+    /* ==================================================================
+     * 12 -- HIGH SORCERESS NEFERU
+     *       Great Pyramid Seal College prodigy who discovered that
+     *       containment degraded under predictable cycles.  Her late
+     *       writings propose dynamic seals fed by controlled sacrifice.
+     *       She vanished before her system was completed -- some say
+     *       consumed, others say transformed.
+     *       Strengths : Water (purified ritual), Air (seal harmonics),
+     *                   Mental (containment mathematics)
+     *       Weaknesses: Fire  (disrupts seal calibration)
+     *                   Earth (grounds the harmonic frequencies)
+     * ================================================================== */
+    {"High Sorceress Neferu",
+     "@@a",
+     "Seal geometry fractures the air as @@aHigh Sorceress Neferu@@N steps from a fold in "
+     "containment! "
+     "She was consumed by the mathematics she mastered — or perhaps she became them!",
+     ELE_WATER | ELE_AIR | ELE_MENTAL,
+     ELE_FIRE | ELE_EARTH,
+     {"frost breath", "lightning breath", "blindness", "curse", "weaken", "harm", NULL},
+     "$n twists the seal geometry and reality bends like light through fractured glass!",
+     "$n strikes through a fold in containment space, arriving from an impossible angle!",
+     "dirt"},
+
+    /* ==================================================================
+     * 13 -- WARDEN-PRIME ISTRANE OF THE NINTH CHAIN
+     *       Kel'Shadra Crypts' founder of the Sepulcher Compact's
+     *       resurrection command doctrine.  Argued that a dead officer
+     *       is a broken chain link and therefore a legal hazard.  Created
+     *       the first continuous undead command cadre.
+     *       Strengths : Physical (martial discipline), Shadow (undead)
+     *       Weaknesses: Holy  (divine light scatters the command chain)
+     *                   Air   (disperses the shadow-bound officers)
+     * ================================================================== */
+    {"Warden-Prime Istrane of the Ninth Chain",
+     "@@d",
+     "Command chains rattle as @@dWarden-Prime Istrane of the Ninth Chain@@N rises from the "
+     "Sepulcher! "
+     "The dead answer to chain of command — and $e has never relinquished $s post!",
+     ELE_PHYSICAL | ELE_SHADOW,
+     ELE_HOLY | ELE_AIR,
+     {"hellspawn", "harm", "curse", "blindness", NULL},
+     "$n raises a chain of command links and the oath-bound dead answer with terrifying "
+     "discipline!",
+     "$n's sepulcher mace crashes down with the force of postmortem continuity!",
+     "bash"},
+
+    /* ==================================================================
+     * 14 -- MARSHAL-LECTOR VEYR, OATH OF THE LAST BELL
+     *       Shadowmere's emergency commander turned doctrinal revenant.
+     *       He believes rollback itself was treason and that perpetual
+     *       lockdown is the only lawful peace.  He is discipline without
+     *       purpose, authority without legitimacy.
+     *       Strengths : Physical (martial lockdown), Mental (doctrine)
+     *       Weaknesses: Air   (freedom disperses the lockdown)
+     *                   Holy  (genuine peace, not enforced order)
+     * ================================================================== */
+    {"Marshal-Lector Veyr, Oath of the Last Bell",
      "@@N@@W",
-     "The sky splits as @@WFenrisulfr Reborn@@N shatters his eternal chains! "
-     "Physical blows and mental assaults seem to strengthen the great wolf!",
+     "Three contradictory bells ring as @@WMarshal-Lector Veyr@@N marches from Shadowmere! "
+     "The Last Bell Crisis never ended for $m — and $e brings perpetual lockdown to your gates!",
      ELE_PHYSICAL | ELE_MENTAL,
      ELE_AIR | ELE_HOLY,
      {"blindness", "curse", "weaken", "harm", NULL},
-     "$n howls with jaws wide enough to swallow the sky — the sound alone SHATTERS stone!",
-     "$n lunges and bites with jaws that could swallow the sun and moon in one snap!",
+     "$n invokes the Last Bell and emergency decree ripples through the air like thunder!",
+     "$n charges with the unstoppable momentum of a lockdown that refuses to expire!",
      "bash"},
 };
 

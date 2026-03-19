@@ -68,7 +68,7 @@ char *affect_loc_name args((int location));
 char *affect_bit_name args((int vector));
 char *raffect_bit_name args((int vector));
 
-char *extra_bit_name args((int extra_flags));
+char *extra_bit_name args((unsigned long long extra_flags));
 char *race_name args((CHAR_DATA * ch));
 char *short_race_name args((CHAR_DATA * ch));
 char *get_adept_name args((CHAR_DATA * ch));

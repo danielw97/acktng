@@ -1,5 +1,6 @@
 #include "globals.h"
 #include "special.h"
+#include "weapon_bond.h"
 
 /* Autogen */
 OBJ_DATA *generate_item(int level);
@@ -75,7 +76,9 @@ void make_corpse(CHAR_DATA *ch, char *argument)
          name = ch->short_descr;
          corpse = create_object(get_obj_index(OBJ_VNUM_CORPSE_NPC), 0);
          corpse->timer = number_range(3, 6);
-         corpse->level = ch->level; /* for animate spell */
+         corpse->level = ch->level; /* for animate/revenant spell */
+         if (ch->pIndexData != NULL)
+            corpse->value[4] = ch->pIndexData->vnum; /* original mob vnum for revenant */
          /*
           * Takes a mob 2 rl hours to gain full gold.
           */
@@ -160,6 +163,11 @@ void make_corpse(CHAR_DATA *ch, char *argument)
    for (obj = ch->first_carry; obj != NULL; obj = obj_next)
    {
       obj_next = obj->next_in_carry_list;
+
+      /* Bonded weapons stay equipped on the swordsman through death */
+      if (IS_OBJ_BONDED(obj))
+         continue;
+
       obj_from_char(obj);
       if ((obj == quest_object) && (ch == quest_target))
       {
@@ -296,6 +304,7 @@ void raw_kill(CHAR_DATA *victim, char *argument)
       affect_remove(victim, victim->first_affect);
    victim->affected_by = 0;
    victim->armor = 100;
+   victim->overgrowth = 0;
    victim->position = POS_RESTING;
    victim->hit = UMAX(1, victim->hit);
    victim->mana = UMAX(1, victim->mana);

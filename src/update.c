@@ -31,6 +31,7 @@
 #include <string.h>
 #include <time.h>
 #include "globals.h"
+#include "weapon_bond.h"
 #include <signal.h>
 #include "npc_dialogue.h"
 
@@ -191,6 +192,26 @@ void init_alarm_handler()
 /*
  * Advancement stuff.
  */
+OBJ_DATA *find_clan_eq(CHAR_DATA *ch);
+void claneq_adjust(OBJ_DATA *obj, CHAR_DATA *ch);
+
+static void claneq_level_check(CHAR_DATA *ch)
+{
+   OBJ_DATA *obj;
+   if (IS_NPC(ch) || ch->pcdata->clan == 0)
+      return;
+   obj = find_clan_eq(ch);
+   if (obj != NULL)
+   {
+      bool was_worn = (obj->wear_loc != WEAR_NONE);
+      if (was_worn)
+         unequip_char(ch, obj);
+      claneq_adjust(obj, ch);
+      if (was_worn)
+         equip_char(ch, obj, WEAR_CLAN_COLORS);
+   }
+}
+
 void advance_level(CHAR_DATA *ch, int class, bool show)
 {
    char buf[MAX_STRING_LENGTH];
@@ -235,6 +256,8 @@ void advance_level(CHAR_DATA *ch, int class, bool show)
    if (show)
       send_to_char(buf, ch);
 
+   bond_recalculate(ch);
+   claneq_level_check(ch);
    return;
 }
 
@@ -281,6 +304,8 @@ void advance_level_remort(CHAR_DATA *ch, int class, bool show)
    if (show)
       send_to_char(buf, ch);
 
+   bond_recalculate(ch);
+   claneq_level_check(ch);
    return;
 }
 
@@ -329,6 +354,8 @@ void advance_level_adept(CHAR_DATA *ch, int class, bool show)
    if (show)
       send_to_char(buf, ch);
 
+   bond_recalculate(ch);
+   claneq_level_check(ch);
    return;
 }
 
@@ -919,10 +946,10 @@ void mobile_update(void)
       /*
        * Flee
        */
-      if (!IS_SET(ch->act, ACT_INVASION) && ch->hit < (get_max_hp(ch) / 2) &&
-          (door = number_bits(3)) <= 5 && (pexit = ch->in_room->exit[door]) != NULL &&
-          pexit->to_room != NULL && !IS_SET(pexit->exit_info, EX_CLOSED) &&
-          !IS_SET(pexit->to_room->room_flags, ROOM_NO_MOB))
+      if (!IS_SET(ch->act, ACT_INVASION) && IS_SET(ch->act, ACT_WIMPY) &&
+          ch->hit < (get_max_hp(ch) / 2) && (door = number_bits(3)) <= 5 &&
+          (pexit = ch->in_room->exit[door]) != NULL && pexit->to_room != NULL &&
+          !IS_SET(pexit->exit_info, EX_CLOSED) && !IS_SET(pexit->to_room->room_flags, ROOM_NO_MOB))
       {
          CHAR_DATA *rch;
          bool found;
@@ -1441,6 +1468,15 @@ void char_update(void)
             else if (IS_SET(ch->in_room->room_flags, ROOM_COLD))
                send_to_char("You feel your skin freezing.\n\r", ch);
          }
+      }
+
+      /* Overgrowth decay: out of combat, decay 1/tick (2 if resting/sleeping) */
+      if (ch->overgrowth > 0 && !is_fighting(ch) && ch->wait == 0)
+      {
+         int decay = (ch->position == POS_RESTING || ch->position == POS_SLEEPING) ? 2 : 1;
+         ch->overgrowth -= decay;
+         if (ch->overgrowth < 0)
+            ch->overgrowth = 0;
       }
 
       /*

@@ -329,6 +329,7 @@ static int container_item_count(const OBJ_DATA *container)
 #define KEEP_CHEST_PUT_ALLOWED 0
 #define KEEP_CHEST_PUT_ERR_FULL 1
 #define KEEP_CHEST_PUT_ERR_INVALID_ITEM 2
+#define KEEP_CHEST_PUT_ERR_BONDED 3
 
 int keep_chest_put_denial_reason(const OBJ_DATA *container_obj, const OBJ_DATA *obj)
 {
@@ -344,6 +345,9 @@ int keep_chest_put_denial_reason(const OBJ_DATA *container_obj, const OBJ_DATA *
    if (obj != NULL && (obj->item_type == ITEM_CORPSE_PC || obj->item_type == ITEM_CORPSE_NPC ||
                        obj->item_type == ITEM_CONTAINER))
       return KEEP_CHEST_PUT_ERR_INVALID_ITEM;
+
+   if (obj != NULL && IS_SET(obj->extra_flags, ITEM_BONDED))
+      return KEEP_CHEST_PUT_ERR_BONDED;
 
    return KEEP_CHEST_PUT_ALLOWED;
 }
@@ -775,6 +779,12 @@ void do_put(CHAR_DATA *ch, char *argument)
                if (keep_chest_restriction == KEEP_CHEST_PUT_ERR_INVALID_ITEM)
                {
                   send_to_char("Keep chests cannot hold corpses or containers.\n\r", ch);
+                  continue;
+               }
+
+               if (keep_chest_restriction == KEEP_CHEST_PUT_ERR_BONDED)
+               {
+                  send_to_char("Your bonded weapon refuses to leave your side.\n\r", ch);
                   continue;
                }
             }

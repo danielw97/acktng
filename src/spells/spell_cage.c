@@ -31,6 +31,7 @@
 #include "globals.h"
 #include "tables.h"
 #include "magic.h"
+#include "skills.h"
 
 bool spell_cage(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
@@ -48,11 +49,20 @@ bool spell_cage(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       return FALSE;
    }
 
+   int combo_count = get_combo_count(ch);
+   int combo_bonus = combo_count > 0 ? combo_count : 0;
+
+   if (combo_count > 0)
+      reset_combo(ch);
+
    act("@@NA paralysing @@rCage@@N surrounds the room.", ch, NULL, NULL, TO_ROOM);
    send_to_char("@@NYou surround the room with a paralyzing @@rCage@@N.\n\r", ch);
 
+   if (combo_bonus > 0)
+      send_to_char("@@yYour combo strengthens the cage!@@N\n\r", ch);
+
    raf.type = sn;
-   raf.duration = (level / 20) + number_range(2, 10);
+   raf.duration = (level / 20) + number_range(2, 10) + combo_bonus;
    raf.level = level;
    raf.bitvector = ROOM_BV_HOLD;
    raf.caster = ch;

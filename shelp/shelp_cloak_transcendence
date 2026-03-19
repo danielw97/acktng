@@ -14,5 +14,17 @@ Noun Damage: None
 Acquisition:
    - Assassin: level 48
 Description:
-   Cloak:transcendence is a protective/support spell that strengthens, restores, or safeguards the target.
+   Cloak:transcendence is the Assassin's signature remort cloak. It envelops
+   the caster in a shimmering aura of transcendent agility, granting a small
+   chance to completely avoid incoming physical attacks.
+
+   When the caster would take physical damage, there is a pseudo_level / 15
+   percent chance that the Assassin transcends the strike entirely, taking no
+   damage. For example, at pseudo-level 150, there is a 10% chance to avoid
+   each physical hit.
+
+   The cloak does not protect against non-physical (spell) damage. For
+   magical avoidance, see cloak:oathbreaker (Warlock).
+
+   Duration scales with pseudo-level (pseudo_level / 8 rounds).
 *******************************************************************************

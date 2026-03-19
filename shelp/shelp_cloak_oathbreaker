@@ -14,5 +14,17 @@ Noun Damage: None
 Acquisition:
    - Warlock: level 48
 Description:
-   Cloak:oathbreaker is a protective/support spell that strengthens, restores, or safeguards the target.
+   Cloak:oathbreaker is the Warlock's signature remort cloak. It shrouds the
+   caster in dark, oath-defying energy that grants a chance to completely
+   avoid incoming magical (spell) damage.
+
+   When the caster would take non-physical damage that does not have
+   NO_REFLECT or NO_ABSORB flags, there is a pseudo_level / 10 percent chance
+   that the cloak shatters the incoming magic harmlessly. For example, at
+   pseudo-level 100, there is a 10% chance to avoid each spell hit entirely.
+
+   The cloak does not protect against physical damage. For physical avoidance,
+   see cloak:transcendence (Assassin).
+
+   Duration scales with pseudo-level (pseudo_level / 8 rounds).
 *******************************************************************************

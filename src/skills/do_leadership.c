@@ -49,6 +49,12 @@ void do_leadership(CHAR_DATA *ch, char *argument)
 
    raise_skill(ch, gsn_leadership);
 
+   int combo_count = get_combo_count(ch);
+   int bonus = combo_count > 0 ? combo_count : 1;
+
+   if (combo_count > 0)
+      reset_combo(ch);
+
    for (gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room)
    {
       if (is_affected(gch, gsn_leadership) || !is_same_group(ch, gch))
@@ -60,9 +66,13 @@ void do_leadership(CHAR_DATA *ch, char *argument)
       af.duration_type = DURATION_ROUND;
       af.duration = 50;
       af.location = APPLY_HITROLL;
-      af.modifier = stat / 2;
+      af.modifier = (stat / 2) * bonus;
       af.bitvector = 0;
       affect_to_char(gch, &af);
    }
+
+   if (combo_count > 0)
+      send_to_char("@@yYour combo empowers your rally cry!@@N\n\r", ch);
+
    send_to_char("You inspire the troops!\n\r", ch);
 }

@@ -1,8 +1,22 @@
 # CLAUDE.md — ACK!MUD TNG 4.3.1
 
+## Design Document Requirement
+
+For any implementation task, you MUST first deliver a design document describing the proposed changes — including the problem, approach, affected files, and any trade-offs — and discuss it with the user. Do NOT begin implementation until the user has explicitly signed off on the design document. No code changes, no file creation, no prototyping until approval is given. Design documents should be placed in `docs/proposals/`.
+
+When writing any document (design proposals, lore files, area plans, etc.), write and deliver it in sections rather than producing the entire document at once. Continue through all sections without waiting for confirmation between them, unless the user asks for a different approach.
+
 ## Project Overview
 
 ACK!TNG is a MUD (Multi-User Dungeon) game server written in C, descended from Diku → Merc → ACK! lineage. The server binary is called `ack` and runs from the `area/` directory, accepting telnet connections on a configurable port.
+
+## Game World Lore
+
+When you need information about the game world (history, factions, geography, lore, etc.), search `docs/lore/` — it is the canonical source for all world-building documentation. The directories `lore/` and `data/knowledge/` are generated from `docs/lore/` and contain no additional information.
+
+## Specifications and Documentation
+
+The `docs/` directory is the canonical source for all game specifications (area files, objects, mobs, rooms, quests, help files, data structures, etc.). You should never need to search `src/` to understand a specification — everything should be documented in `docs/`. If you find that a specification detail is missing from `docs/` and you had to look in `src/` to determine the answer, that information must be added to the appropriate `docs/` specification file before the task is complete.
 
 ## Build System
 

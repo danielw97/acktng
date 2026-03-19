@@ -20,6 +20,14 @@ void npc_dialogue_init(void);
 void npc_dialogue_dispatch(CHAR_DATA *npc, CHAR_DATA *player, const char *message);
 
 /*
+ * Sanitize player input before dispatch.
+ * Strips model role-boundary tokens ([INST], <<SYS>>, <|system|>, etc.) and
+ * replaces angle brackets with parentheses to prevent prompt injection.
+ * dst must be at least 512 bytes; src and dst must not overlap.
+ */
+void npc_dialogue_sanitize_input(char *dst, const char *src);
+
+/*
  * Deliver pending NPC dialogue responses.
  * Called from update_handler() at the top of each tick.
  * Drains the response queue and calls do_say() for each valid response.

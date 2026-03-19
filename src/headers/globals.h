@@ -65,6 +65,7 @@ extern sh_int gsn_spell_critical;
 extern sh_int gsn_spell_critical_damage;
 extern sh_int gsn_detox;
 extern sh_int gsn_enhanced_sword;
+extern sh_int gsn_weapon_bond;
 extern sh_int gsn_enhanced_sword_critical;
 extern sh_int gsn_two_handed;
 extern sh_int gsn_bare_hand;
@@ -95,6 +96,18 @@ extern sh_int gsn_shieldblock;
 extern sh_int gsn_chiblock;
 extern sh_int gsn_holystrike;
 extern sh_int gsn_anti_magic_shell;
+extern sh_int gsn_chi_surge;
+extern sh_int gsn_breath_of_endurance;
+extern sh_int gsn_fist_interior;
+extern sh_int gsn_momentum_chain;
+extern sh_int gsn_iron_resolve;
+extern sh_int gsn_overwhelming_assault;
+extern sh_int gsn_elemental_attunement;
+extern sh_int gsn_oathshield;
+extern sh_int gsn_sanctified_strike;
+extern sh_int gsn_shadow_reading;
+extern sh_int gsn_hex_ward;
+extern sh_int gsn_reflex_disruption;
 extern sh_int gsn_fleche;
 extern sh_int gsn_hide;
 extern sh_int gsn_hunt;
@@ -141,6 +154,36 @@ extern sh_int gsn_scout;
 extern sh_int gsn_potency;
 extern sh_int gsn_thaumatergy;
 extern sh_int gsn_warcry;
+
+/* Cipher skills */
+extern sh_int gsn_garrote;
+extern sh_int gsn_feign_death;
+extern sh_int gsn_shadow_step;
+extern sh_int gsn_mark_target;
+extern sh_int gsn_conceal;
+extern sh_int gsn_set_trap;
+extern sh_int gsn_read_intent;
+
+/* Warden skills */
+extern sh_int gsn_cleave;
+extern sh_int gsn_fortify;
+extern sh_int gsn_taunt;
+extern sh_int gsn_rend;
+extern sh_int gsn_field_patch;
+extern sh_int gsn_weapon_mastery;
+
+/* Druid skills */
+extern sh_int gsn_substrate_piercing;
+
+/* Pugilist skills */
+extern sh_int gsn_grapple;
+extern sh_int gsn_choke_hold;
+extern sh_int gsn_leg_sweep;
+extern sh_int gsn_iron_skin;
+extern sh_int gsn_roll_with_blow;
+extern sh_int gsn_pressure_point;
+extern sh_int gsn_feint;
+extern sh_int gsn_conditioning;
 
 #ifdef TFS
 extern sh_int gsn_mana_sense;
@@ -304,6 +347,7 @@ DECLARE_DO_FUN(do_mbid);
 DECLARE_DO_FUN(do_cdonate);
 DECLARE_DO_FUN(do_circle);
 DECLARE_DO_FUN(do_clan);
+DECLARE_DO_FUN(do_claneq);
 DECLARE_DO_FUN(do_clan_list);
 DECLARE_DO_FUN(do_clan_recall);
 DECLARE_DO_FUN(do_clutch);
@@ -392,6 +436,17 @@ DECLARE_DO_FUN(do_phantomfist);
 DECLARE_DO_FUN(do_flurry);
 DECLARE_DO_FUN(do_chakra);
 DECLARE_DO_FUN(do_anti_magic_shell);
+DECLARE_DO_FUN(do_chi_surge);
+DECLARE_DO_FUN(do_breath_of_endurance);
+DECLARE_DO_FUN(do_fist_of_the_interior_form);
+DECLARE_DO_FUN(do_momentum_chain);
+DECLARE_DO_FUN(do_iron_resolve);
+DECLARE_DO_FUN(do_overwhelming_assault);
+DECLARE_DO_FUN(do_oathshield);
+DECLARE_DO_FUN(do_sanctified_strike);
+DECLARE_DO_FUN(do_shadow_reading);
+DECLARE_DO_FUN(do_hex_ward);
+DECLARE_DO_FUN(do_reflex_disruption);
 DECLARE_DO_FUN(do_holystrike);
 DECLARE_DO_FUN(do_fleche);
 DECLARE_DO_FUN(do_shieldblock);
@@ -530,6 +585,7 @@ DECLARE_DO_FUN(do_quit);
 DECLARE_DO_FUN(do_reboo);
 DECLARE_DO_FUN(do_reboot);
 DECLARE_DO_FUN(do_recall);
+DECLARE_DO_FUN(do_caravan);
 DECLARE_DO_FUN(do_recho);
 DECLARE_DO_FUN(do_recite);
 DECLARE_DO_FUN(do_remove);
@@ -607,12 +663,41 @@ DECLARE_DO_FUN(do_ignore);
 
 */
 DECLARE_DO_FUN(do_qpspend);
+DECLARE_DO_FUN(do_revenant);
+DECLARE_DO_FUN(do_bond);
 DECLARE_DO_FUN(do_disguise);
 DECLARE_DO_FUN(do_frenzy);
 DECLARE_DO_FUN(do_adrenaline);
 DECLARE_DO_FUN(do_target);
 DECLARE_DO_FUN(do_charge);
 DECLARE_DO_FUN(do_connect);
+
+/* Cipher skills */
+DECLARE_DO_FUN(do_garrote);
+DECLARE_DO_FUN(do_feign_death);
+DECLARE_DO_FUN(do_shadow_step);
+DECLARE_DO_FUN(do_mark_target);
+DECLARE_DO_FUN(do_conceal);
+DECLARE_DO_FUN(do_set_trap);
+DECLARE_DO_FUN(do_read_intent);
+
+/* Warden skills */
+DECLARE_DO_FUN(do_cleave);
+DECLARE_DO_FUN(do_fortify);
+DECLARE_DO_FUN(do_taunt);
+DECLARE_DO_FUN(do_rend);
+DECLARE_DO_FUN(do_field_patch);
+DECLARE_DO_FUN(do_weapon_mastery);
+
+/* Pugilist skills */
+DECLARE_DO_FUN(do_grapple);
+DECLARE_DO_FUN(do_choke_hold);
+DECLARE_DO_FUN(do_leg_sweep);
+DECLARE_DO_FUN(do_iron_skin);
+DECLARE_DO_FUN(do_roll_with_blow);
+DECLARE_DO_FUN(do_pressure_point);
+DECLARE_DO_FUN(do_feint);
+DECLARE_DO_FUN(do_conditioning);
 DECLARE_DO_FUN(do_stance);
 DECLARE_DO_FUN(do_enchant);
 

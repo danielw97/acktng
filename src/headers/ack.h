@@ -682,6 +682,7 @@ struct char_data
    int loot_chance[MAX_LOOT];
    int loot[MAX_LOOT];
    int chi;
+   sh_int overgrowth;
    char *target; /* last ch to attack */
    sh_int wimpy;
    int deaf;
@@ -715,6 +716,7 @@ struct char_data
    long lore_flags;
    void *dlg_state;   /* NPC_DLG_STATE* for ACT_AI_DIALOGUE mobs; NULL otherwise */
    bool dlg_pending;  /* TRUE while an NPC_DLG_REQ is outstanding */
+   REVENANT_DATA *revenant; /* non-NULL if this NPC is a revenant */
 };
 
 /*
@@ -823,6 +825,8 @@ struct pc_data
    /* --- Quest system --- */
    QUEST_DATA quests[QUEST_MAX_QUESTS];
    bool completed_quests[QUEST_MAX_TEMPLATES];
+   /* --- Weapon bond system --- */
+   BOND_DATA *bond;
 };
 
 /*
@@ -900,7 +904,7 @@ struct obj_index_data
    char *description;
    unsigned short vnum;
    int item_type;
-   int extra_flags;
+   unsigned long long extra_flags;
    int wear_flags;
    /*
     * class_flags changed to item_apply for magic apply, etc
@@ -948,7 +952,7 @@ struct obj_data
    char *short_descr;
    char *description;
    int item_type;
-   int extra_flags;
+   unsigned long long extra_flags;
    int wear_flags;
    int item_apply;
    int wear_loc;
@@ -1241,6 +1245,7 @@ struct skill_type
    char *noun_damage; /* Damage message              */
    char *msg_off;     /* Wear off message            */
    char *room_off;    /* Wear off msg TO_ROOM        */
+   sh_int growth;     /* Overgrowth growth per cast (Druid spells) */
 };
 
 /*
@@ -1421,6 +1426,14 @@ void check_killer args((CHAR_DATA * ch, CHAR_DATA *victim));
 
 /* ai.c */
 void ai_update args((void));
+
+/* revenant.c */
+bool is_revenant args((CHAR_DATA * ch));
+CHAR_DATA *find_revenant args((CHAR_DATA * ch));
+CHAR_DATA *revenant_create args((CHAR_DATA * caster, OBJ_DATA *corpse));
+void revenant_apply_tracks args((CHAR_DATA * rev));
+void revenant_aura_tick args((CHAR_DATA * rev));
+int revenant_spite_retaliate args((CHAR_DATA * rev, CHAR_DATA *attacker, int damage_taken));
 
 /* handler.c */
 bool remove_obj args((CHAR_DATA * ch, int iWear, bool fReplace));
