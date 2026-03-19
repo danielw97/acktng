@@ -2289,10 +2289,10 @@ void do_who(CHAR_DATA *ch, char *argument)
                "         "
                " |\n\r");
    safe_strcat(MAX_STRING_LENGTH, buf,
-               "| @@bMa Cl Th Wa Ps Pu Dr @@eRace Clan  ABJPW    Player	Title	                    "
+               "| @@bMa Cl Th Wa Ps Pu Dr Se @@eRace Clan  ABJPW    Player	Title	                 "
                "@@R(flags) @@R|\n\r");
    safe_strcat(MAX_STRING_LENGTH, buf,
-               "|------------------------------------------+---------------------------------------"
+               "|---------------------------------------------+------------------------------------"
                "----|\n\r");
 
    for (int i = 0; i < 4; i++)
@@ -2324,26 +2324,26 @@ void do_who(CHAR_DATA *ch, char *argument)
             case 0:
                safe_strcat(
                    MAX_STRING_LENGTH, buf,
-                   "@@R|------------------------------------------|----------@@lImmortals@@R-----"
-                   "-------------------|@@g\n\r");
+                   "@@R|---------------------------------------------|----------@@lImmortals@@R-----"
+                   "----------------|@@g\n\r");
                break;
             case 1:
                safe_strcat(
                    MAX_STRING_LENGTH, buf,
-                   "@@R|------------------------------------------|------------@@WAdepts@@R------"
-                   "-------------------|@@g\n\r");
+                   "@@R|---------------------------------------------|------------@@WAdepts@@R------"
+                   "----------------|@@g\n\r");
                break;
             case 2:
                safe_strcat(
                    MAX_STRING_LENGTH, buf,
-                   "@@R|------------------------------------------|----------@@mRemortals@@R-----"
-                   "-------------------|@@g\n\r");
+                   "@@R|---------------------------------------------|----------@@mRemortals@@R-----"
+                   "----------------|@@g\n\r");
                break;
             case 3:
                safe_strcat(
                    MAX_STRING_LENGTH, buf,
-                   "@@R|------------------------------------------|-----------@@cMortals@@R------"
-                   "-------------------|@@g\n\r");
+                   "@@R|---------------------------------------------|-----------@@cMortals@@R------"
+                   "----------------|@@g\n\r");
                break;
             }
          }
@@ -2371,17 +2371,17 @@ void do_who(CHAR_DATA *ch, char *argument)
                sprintf(tmp, "@@W%s@@g", wn ? wn : "Immortal");
                break;
             }
-            /* Center within 21 visible chars to match mortal/adept column width */
-            sprintf(buf3, "%s", center_text(tmp, 21));
+            /* Center within 24 visible chars to match mortal/adept column width */
+            sprintf(buf3, "%s", center_text(tmp, 24));
          }
          else if (IS_SET(wch->pcdata->pflags, PFLAG_AMBAS))
          {
-            sprintf(buf3, "%s", center_text("AMBASSADOR", 21));
+            sprintf(buf3, "%s", center_text("AMBASSADOR", 24));
          }
          else if (is_adept(wch))
          {
-            /* Adept: center title within 21 visible chars */
-            sprintf(buf3, "%s", center_text(get_adept_name(wch), 21));
+            /* Adept: center title within 24 visible chars */
+            sprintf(buf3, "%s", center_text(get_adept_name(wch), 24));
          }
          else if (is_remort(wch))
          {
@@ -2560,8 +2560,8 @@ void do_who(CHAR_DATA *ch, char *argument)
    }
 
    safe_strcat(MAX_STRING_LENGTH, buf,
-               "@@R|------------------------------------------+------------------------------------"
-               "-------|\n\r");
+               "@@R|---------------------------------------------+------------------------------------"
+               "----|\n\r");
    send_to_char(buf, ch);
    buf[0] = '\0';
 
