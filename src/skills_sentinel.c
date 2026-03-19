@@ -1,6 +1,7 @@
 #include "globals.h"
 #include "magic.h"
 #include "sentinel.h"
+#include "skills.h"
 
 /*
  * Sentinel testimony management functions.
