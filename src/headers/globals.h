@@ -344,6 +344,7 @@ DECLARE_DO_FUN(do_mbid);
 DECLARE_DO_FUN(do_cdonate);
 DECLARE_DO_FUN(do_circle);
 DECLARE_DO_FUN(do_clan);
+DECLARE_DO_FUN(do_claneq);
 DECLARE_DO_FUN(do_clan_list);
 DECLARE_DO_FUN(do_clan_recall);
 DECLARE_DO_FUN(do_clutch);

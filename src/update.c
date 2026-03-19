@@ -191,6 +191,26 @@ void init_alarm_handler()
 /*
  * Advancement stuff.
  */
+OBJ_DATA *find_clan_eq(CHAR_DATA *ch);
+void claneq_adjust(OBJ_DATA *obj, CHAR_DATA *ch);
+
+static void claneq_level_check(CHAR_DATA *ch)
+{
+   OBJ_DATA *obj;
+   if (IS_NPC(ch) || ch->pcdata->clan == 0)
+      return;
+   obj = find_clan_eq(ch);
+   if (obj != NULL)
+   {
+      bool was_worn = (obj->wear_loc != WEAR_NONE);
+      if (was_worn)
+         unequip_char(ch, obj);
+      claneq_adjust(obj, ch);
+      if (was_worn)
+         equip_char(ch, obj, WEAR_CLAN_COLORS);
+   }
+}
+
 void advance_level(CHAR_DATA *ch, int class, bool show)
 {
    char buf[MAX_STRING_LENGTH];
@@ -236,6 +256,7 @@ void advance_level(CHAR_DATA *ch, int class, bool show)
       send_to_char(buf, ch);
 
    bond_recalculate(ch);
+   claneq_level_check(ch);
    return;
 }
 
@@ -283,6 +304,7 @@ void advance_level_remort(CHAR_DATA *ch, int class, bool show)
       send_to_char(buf, ch);
 
    bond_recalculate(ch);
+   claneq_level_check(ch);
    return;
 }
 
@@ -332,6 +354,7 @@ void advance_level_adept(CHAR_DATA *ch, int class, bool show)
       send_to_char(buf, ch);
 
    bond_recalculate(ch);
+   claneq_level_check(ch);
    return;
 }
 
