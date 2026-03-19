@@ -122,7 +122,9 @@ The Serathi observe the Forest of Confusion and Verdant Depths from above; the R
 
 The Serathi's primary practical concern is the disruption to thermal-current patterns over the dead-forest zones, which destabilizes the updraft columns they rely on for flight over the affected area. The Rivennid's concern is existential — the blight threatens their home ecosystem. Both peoples have independently documented evidence of the Withered Depths' expansion that Midgaard's arcanist registry has received without action. Both find this pattern instructive in consistent ways.
 
-See also: `serathi_lore.md`, `verdant_depths_lore.md`
+Rivennid network-memory has recently detected a specific anomaly: the Withered Depths' mycelial advance appears to be routing around something buried in the Depths' interior rather than spreading through the path of least resistance. This observation, shared through the Parallel Record Compact, has converged with parallel findings from four other non-human peoples into a triangulated picture of a specific site that may be the Conclave's primary crystal implantation point — and which the Depths appears to be routing water and crystal resonance toward rather than consuming. The Rivennid brought this observation to the Compact; the convergence triggered the first active coordination discussion in the Compact's history.
+
+See also: `serathi_lore.md`, `verdant_depths_lore.md`, `withered_depths_convergence_lore.md`, `parallel_record_compact_lore.md`
 
 ---
 

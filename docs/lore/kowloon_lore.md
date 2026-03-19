@@ -145,3 +145,5 @@ Kowloon's founding trauma, civic mythology, and ongoing security tensions all tr
 - The current **exhalation phase** is being tracked by both Kowloon's Wardens of Iron dispatch network and the Jade Magistracy's engineering delegation, with concern that the venting rate pattern resembles pre-Ashfall activity. The comparison has not been published.
 
 For full Cinderteeth institutional history including the Ventspeakers, the Spirebound Conclave, the Conclave Transfer Chain, and the Ash Cult's doctrinal lineage, see: `docs/lore/cinderteeth_mountains_lore.md`.
+
+For the Ashborn founding dispute — the Neon Covenant's exclusion of the Ashborn from governance, the Ash Cult's multi-generational recognized-interest campaign, and the Black Ledger's circular evidentiary trap — see: `docs/lore/ashborn_kowloon_founding_dispute_lore.md`.

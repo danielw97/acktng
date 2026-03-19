@@ -106,7 +106,9 @@ This is not a misunderstanding. It was institutional bad faith, clearly legible 
 
 The Ashborn do not organize their lives around this grievance. Their culture processes damage and moves on — the repair is slow, the work continues. They remain in Midgaard's foundry districts, remain essential to the city's metalwork economy, and remain classified in some official records as a subcategory of human rather than a distinct people. The classification does not change what they are. They know what they are. They continue building.
 
-See also: `human_lore.md`
+In Kowloon, the Ash Cult's multi-generational campaign for formal civic recognition as a distinct people — rather than "foundry district residents" — has reached recognized-interest-organization status, a compromise that allows Cult representatives to address the Jade Magistracy without granting them the governance standing the Cult seeks. The **Black Ledger** question — whether Ashborn names appear in Kowloon's sealed record of non-human peoples transferred to the Spirebound Conclave — remains trapped in a circular evidentiary problem: proving Ashborn were transferred requires opening the Ledger, which requires proof of harm, which is in the Ledger.
+
+See also: `human_lore.md`, `ashborn_kowloon_founding_dispute_lore.md`, `kowloon_lore.md`
 
 ### Serathi
 

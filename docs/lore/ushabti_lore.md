@@ -116,7 +116,9 @@ The Ushabti continue anyway, because the Solar Court's purpose — containing th
 
 What the Ushabti find humans unable to answer cleanly is the implication of their existence: if the Solar Court's purpose survived the Solar Court's collapse, what other obligations survive the collapse of the institutions that created them? The Ashborn misclassified after the Ashfall. The families in the Black Ledger. The forest poisoned by Conclave experiments. The Ushabti do not push this argument. They exist, and their existence asks the question.
 
-See also: `human_lore.md`
+The Ushabti observe the Parallel Record Compact — the informal inter-racial archival body cross-verifying non-human parallel records against the sealed institutional record — without joining it. Their observation is characterized by Compact members as significant: cosmic law does not observe things it does not consider potentially relevant.
+
+See also: `human_lore.md`, `parallel_record_compact_lore.md`
 
 ### Kethari
 
@@ -124,7 +126,9 @@ The Ushabti's cosmic law authority and the Kethari's water-memory represent two 
 
 The Ushabti's relationship to the Kethari is one of considered mutual acknowledgment: both are ancient presences in the corridor; both maintain claims to authority that surviving human institutions do not fully recognize; both have the experience of operating without the principal that originally authorized them (the Ushabti without the Solar Court; the Kethari without the Aquifer Covenant's formal recognition in current water law). The Kethari's interest in Khar'Daan — the sunken necropolis in the mineral fault — is a point of substantive connection: the Ushabti have professional interest in any site where cosmic law may apply, and the Kethari have water-memory records of Khar'Daan's physical history that inform understanding of what the site actually contains.
 
-See also: `kethari_lore.md`, `great_pyramid_lore.md`
+In the Desert Compact's informal order of precedence, the Ushabti are the newest presence — the unresolved question being whether they are a people or an institutional artifact of the dissolved Solar Court. The Kethari elders, who operate on the longest timescale of any Compact member, are beginning to treat the question as functionally resolved; the Kethari's own position is that persistence without institutional sponsorship for sufficient time constitutes personhood independent of origin. The Ushabti note this without formally responding.
+
+See also: `kethari_lore.md`, `great_pyramid_lore.md`, `desert_compact_lore.md`
 
 ### Serathi
 
