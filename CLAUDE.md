@@ -2,7 +2,7 @@
 
 ## Design Document Requirement
 
-For any implementation task, you MUST first deliver a design document describing the proposed changes — including the problem, approach, affected files, and any trade-offs — and discuss it with the user. Do NOT begin implementation until the user has explicitly signed off on the design document. No code changes, no file creation, no prototyping until approval is given.
+For any implementation task, you MUST first deliver a design document describing the proposed changes — including the problem, approach, affected files, and any trade-offs — and discuss it with the user. Do NOT begin implementation until the user has explicitly signed off on the design document. No code changes, no file creation, no prototyping until approval is given. Design documents should be placed in `docs/proposals/`.
 
 ## Project Overview
 
