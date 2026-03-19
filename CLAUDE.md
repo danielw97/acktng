@@ -8,6 +8,10 @@ ACK!TNG is a MUD (Multi-User Dungeon) game server written in C, descended from D
 
 When you need information about the game world (history, factions, geography, lore, etc.), search `docs/lore/` — it is the canonical source for all world-building documentation. The directories `lore/` and `data/knowledge/` are generated from `docs/lore/` and contain no additional information.
 
+## Specifications and Documentation
+
+The `docs/` directory is the canonical source for all game specifications (area files, objects, mobs, rooms, quests, help files, data structures, etc.). You should never need to search `src/` to understand a specification — everything should be documented in `docs/`. If you find that a specification detail is missing from `docs/` and you had to look in `src/` to determine the answer, that information must be added to the appropriate `docs/` specification file before the task is complete.
+
 ## Build System
 
 All build commands run from the `src/` directory:
