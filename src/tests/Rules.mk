@@ -314,7 +314,7 @@ unit-test-prompt: $(OBJDIR)/tests/test_prompt.o $(OBJDIR)/prompt.unit-test.o $(O
 	rm -f tests/unit-test-prompt
 	$(CC) -Wl,--gc-sections -o tests/unit-test-prompt $(OBJDIR)/tests/test_prompt.o $(OBJDIR)/prompt.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-$(OBJDIR)/const.unit-test.o: const.c headers/ack.h
+$(OBJDIR)/const.unit-test.o: const.c headers/ack.h spells/spell_table_data.c skills/skill_table_data.c
 	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/const.unit-test.o const.c
 
 $(OBJDIR)/stance.unit-test.o: stance.c headers/ack.h

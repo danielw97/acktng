@@ -22,7 +22,7 @@ sh_int gsn_chi_surge;
 sh_int gsn_breath_of_endurance;
 sh_int gsn_fist_interior;
 sh_int gsn_momentum_chain;
-sh_int gsn_iron_resolve;
+sh_int gsn_veterans_cadence;
 sh_int gsn_overwhelming_assault;
 sh_int gsn_anti_magic_shell;
 sh_int gsn_enhanced_heal;
@@ -125,7 +125,7 @@ static void test_martial_artist_skills_registered(void)
 static void test_crusader_skills_registered(void)
 {
    assert_skill_at_class_level("momentum chain", CLASS_CRU, 5);
-   assert_skill_at_class_level("iron resolve", CLASS_CRU, 10);
+   assert_skill_at_class_level("veteran's cadence", CLASS_CRU, 10);
    assert_skill_at_class_level("overwhelming assault", CLASS_CRU, 15);
    printf("PASS: test_crusader_skills_registered\n");
 }
@@ -169,7 +169,7 @@ static void test_adept_skills_have_gsn_pointers(void)
    assert_skill_has_gsn("breath of endurance");
    assert_skill_has_gsn("fist of the interior form");
    assert_skill_has_gsn("momentum chain");
-   assert_skill_has_gsn("iron resolve");
+   assert_skill_has_gsn("veteran's cadence");
    assert_skill_has_gsn("overwhelming assault");
    assert_skill_has_gsn("elemental attunement");
    assert_skill_has_gsn("oathshield");
@@ -198,7 +198,7 @@ static void test_martial_artist_skills_exclusive_to_adept(void)
 static void test_crusader_skills_exclusive_to_adept(void)
 {
    int sn;
-   const char *names[] = {"momentum chain", "iron resolve", "overwhelming assault"};
+   const char *names[] = {"momentum chain", "veteran's cadence", "overwhelming assault"};
 
    for (int n = 0; n < 3; n++)
    {

@@ -272,7 +272,7 @@ const struct cmd_type cmd_table[] = {
         C_TYPE_ACTION, C_SHOW_SKILL),
     CMD("momentum chain", do_momentum_chain, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
         C_SHOW_SKILL),
-    CMD("iron resolve", do_iron_resolve, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("veteran's cadence", do_veterans_cadence, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
     CMD("overwhelming assault", do_overwhelming_assault, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
         C_SHOW_SKILL),
     CMD("oathshield", do_oathshield, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
