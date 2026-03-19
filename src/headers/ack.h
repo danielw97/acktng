@@ -550,9 +550,9 @@ struct mob_index_data
    sh_int position;
    int hunt_flags;
    long lore_flags;
-   char *ai_prompt;    /* system prompt persona text; NULL if not AI-enabled */
-   int ai_knowledge;   /* KNOW_* bitmask of topic blocks to inject */
-   sh_int accent;      /* ACCENT_* city accent; ACCENT_NONE = 0 */
+   char *ai_prompt;  /* system prompt persona text; NULL if not AI-enabled */
+   int ai_knowledge; /* KNOW_* bitmask of topic blocks to inject */
+   sh_int accent;    /* ACCENT_* city accent; ACCENT_NONE = 0 */
 };
 
 /*
@@ -714,8 +714,8 @@ struct char_data
    bool using_named_door;
    NPC_GROUP_DATA *ngroup;
    long lore_flags;
-   void *dlg_state;   /* NPC_DLG_STATE* for ACT_AI_DIALOGUE mobs; NULL otherwise */
-   bool dlg_pending;  /* TRUE while an NPC_DLG_REQ is outstanding */
+   void *dlg_state;         /* NPC_DLG_STATE* for ACT_AI_DIALOGUE mobs; NULL otherwise */
+   bool dlg_pending;        /* TRUE while an NPC_DLG_REQ is outstanding */
    REVENANT_DATA *revenant; /* non-NULL if this NPC is a revenant */
 };
 

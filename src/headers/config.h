@@ -979,56 +979,56 @@
 #define ACT_AI_DIALOGUE BIT_34 /* NPC responds to say via LLM */
 
 /* NPC Dialogue AI (tng-ai service) */
-#define TNGAI_URL        "http://192.168.1.111:8000/v1/chat"
-#define TNGAI_MODEL      "llama-3.3-70b-versatile"
-#define TNGAI_TIMEOUT    5L  /* curl timeout in seconds */
+#define TNGAI_URL "http://192.168.1.111:8000/v1/chat"
+#define TNGAI_MODEL "llama-3.3-70b-versatile"
+#define TNGAI_TIMEOUT 5L     /* curl timeout in seconds */
 #define TNGAI_MAX_TOKENS 100 /* token cap for NPC responses (1-3 sentences) */
-#define MAX_DIALOGUE_TURNS  8
-#define MAX_REQUEST_TURNS   9 /* history + new user turn */
+#define MAX_DIALOGUE_TURNS 8
+#define MAX_REQUEST_TURNS 9         /* history + new user turn */
 #define DIALOGUE_HISTORY_EXPIRY 300 /* seconds of silence before history resets */
 
 /* Knowledge topic bitmask (ai_knowledge field) */
-#define KNOW_WEAPONS    (1 << 0)
-#define KNOW_TRADE      (1 << 1)
-#define KNOW_MAGIC      (1 << 2)
-#define KNOW_TEMPLE     (1 << 3)
+#define KNOW_WEAPONS (1 << 0)
+#define KNOW_TRADE (1 << 1)
+#define KNOW_MAGIC (1 << 2)
+#define KNOW_TEMPLE (1 << 3)
 #define KNOW_UNDERWORLD (1 << 4)
-#define KNOW_HARBOR     (1 << 5)
-#define KNOW_GUARD      (1 << 6)
-#define KNOW_HISTORY    (1 << 7)
+#define KNOW_HARBOR (1 << 5)
+#define KNOW_GUARD (1 << 6)
+#define KNOW_HISTORY (1 << 7)
 #define KNOW_WILDERNESS (1 << 8)
-#define KNOW_POLITICS   (1 << 9)
-#define NUM_KNOW_FLAGS  10
+#define KNOW_POLITICS (1 << 9)
+#define NUM_KNOW_FLAGS 10
 
 /* City indices for knowledge lookup table */
-#define CITY_GLOBAL   0
+#define CITY_GLOBAL 0
 #define CITY_MIDGAARD 1
-#define CITY_KOWLOON  2
-#define CITY_KIESS    3
-#define CITY_RAKUEN   4
-#define CITY_MAFDET   5
-#define NUM_CITIES    6
+#define CITY_KOWLOON 2
+#define CITY_KIESS 3
+#define CITY_RAKUEN 4
+#define CITY_MAFDET 5
+#define NUM_CITIES 6
 
 /* City vnum ranges (room vnums) used by city_for_room() */
 #define MIDGAARD_VNUM_MIN 1100
 #define MIDGAARD_VNUM_MAX 1699
-#define KIESS_VNUM_MIN    3650
-#define KIESS_VNUM_MAX    3749
-#define KOWLOON_VNUM_MIN  3750
-#define KOWLOON_VNUM_MAX  3849
-#define MAFDET_VNUM_MIN   3850
-#define MAFDET_VNUM_MAX   3949
-#define RAKUEN_VNUM_MIN   4550
-#define RAKUEN_VNUM_MAX   4749
+#define KIESS_VNUM_MIN 3650
+#define KIESS_VNUM_MAX 3749
+#define KOWLOON_VNUM_MIN 3750
+#define KOWLOON_VNUM_MAX 3849
+#define MAFDET_VNUM_MIN 3850
+#define MAFDET_VNUM_MAX 3949
+#define RAKUEN_VNUM_MIN 4550
+#define RAKUEN_VNUM_MAX 4749
 
 /* City accent constants (accent field on MOB_INDEX_DATA) */
-#define ACCENT_NONE     0
+#define ACCENT_NONE 0
 #define ACCENT_MIDGAARD 1 /* clipped bureaucratic, ledger idiom */
-#define ACCENT_KOWLOON  2 /* terse, elliptic, proverb-laden */
-#define ACCENT_MAFDET   3 /* formal titles, trade jargon, oath references */
-#define ACCENT_KIESS    4 /* measured, watchful, frontier caution */
-#define ACCENT_RAKUEN   5 /* warm but weary, garden metaphors */
-#define MAX_ACCENT      6
+#define ACCENT_KOWLOON 2  /* terse, elliptic, proverb-laden */
+#define ACCENT_MAFDET 3   /* formal titles, trade jargon, oath references */
+#define ACCENT_KIESS 4    /* measured, watchful, frontier caution */
+#define ACCENT_RAKUEN 5   /* warm but weary, garden metaphors */
+#define MAX_ACCENT 6
 
 /* build bits for OLC -S- */
 #define ACT_BUILD_NOWT 0  /* not doing anything   */
