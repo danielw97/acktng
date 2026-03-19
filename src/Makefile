@@ -140,9 +140,11 @@ SKILL_OBJS = \
 	skills/do_read_intent.o \
 	skills/do_cleave.o skills/do_fortify.o skills/do_taunt.o \
 	skills/do_rend.o skills/do_field_patch.o skills/do_weapon_mastery.o \
+	skills/do_ashfall_strike.o \
 	skills/do_grapple.o skills/do_choke_hold.o skills/do_leg_sweep.o \
 	skills/do_iron_skin.o skills/do_roll_with_blow.o skills/do_pressure_point.o \
 	skills/do_feint.o skills/do_conditioning.o \
+	skills/do_harbor_dust.o \
 	skills/do_chi_surge.o skills/do_breath_of_endurance.o skills/do_fist_of_the_interior_form.o \
 	skills/do_momentum_chain.o skills/do_veterans_cadence.o skills/do_overwhelming_assault.o \
 	skills/do_oathshield.o skills/do_sanctified_strike.o \

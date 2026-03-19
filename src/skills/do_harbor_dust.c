@@ -24,59 +24,85 @@
  *  benefitting.  We hope that you share your changes too.  What goes      *
  *  around, comes around.                                                  *
  ***************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "globals.h"
-#include "tables.h"
 #include "magic.h"
+#include "skills.h"
 
-bool spell_jackal_verdict(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+void do_harbor_dust(CHAR_DATA *ch, char *argument)
 {
-   CHAR_DATA *vch;
-   CHAR_DATA *vch_next;
+   AFFECT_DATA af;
+   char arg[MAX_INPUT_LENGTH];
+   CHAR_DATA *victim;
 
-   if (obj == NULL)
+   if (!can_use_skill_message(ch, gsn_harbor_dust))
+      return;
+
+   one_argument(argument, arg);
+
+   if (arg[0] == '\0' && !is_fighting(ch))
    {
-      send_to_char("You invoke the Jackal Tribunal's verdict against your enemies!\n\r", ch);
-      act("$n invokes the Jackal Tribunal — all who stand condemned, suffer!", ch, NULL, NULL,
-          TO_ROOM);
+      send_to_char("Throw harbor dust at whom?\n\r", ch);
+      return;
+   }
+
+   if ((victim = get_char_room(ch, arg)) == NULL && !is_fighting(ch))
+   {
+      send_to_char("They aren't here.\n\r", ch);
+      return;
+   }
+
+   if (!subtract_energy_cost(ch, gsn_harbor_dust))
+      return;
+
+   if (victim == NULL)
+      victim = ch->fighting;
+
+   if (victim == ch)
+   {
+      send_to_char("That wouldn't be too smart, would it??.\n\r", ch);
+      return;
+   }
+
+   if (is_safe(ch, victim))
+   {
+      send_to_char("They are safe!\n\r", ch);
+      return;
+   }
+
+   if (IS_AFFECTED(victim, AFF_BLIND))
+   {
+      send_to_char("Your target is already blinded!\n\r", ch);
+      return;
+   }
+
+   WAIT_STATE(ch, skill_table[gsn_harbor_dust].beats);
+
+   raise_skill(ch, gsn_harbor_dust);
+
+   if (!can_hit_skill(ch, victim, gsn_harbor_dust))
+   {
+      act("You fling harbor dust at $M but the wind takes it!", ch, NULL, victim, TO_CHAR);
+      act("$n flings harbor dust at you but misses!", ch, NULL, victim, TO_VICT);
+      act("$n flings harbor dust at $N but misses!", ch, NULL, victim, TO_NOTVICT);
+      return;
    }
    else
    {
-      act("The Tribunal's verdict flows from $p, condemning $n's enemies!", ch, obj, NULL,
-          TO_CHAR);
-      act("The Tribunal's verdict flows from $p, condemning $n's enemies!", ch, obj, NULL,
-          TO_ROOM);
-   }
-   CREF(vch_next, CHAR_NEXT);
-   for (vch = first_char; vch != NULL; vch = vch_next)
-   {
-      vch_next = vch->next;
-      if (vch->in_room == NULL)
-         continue;
-      if (vch->in_room == ch->in_room)
-      {
-         if (vch != ch && (IS_NPC(ch) ? !IS_NPC(vch) : IS_NPC(vch)))
-         {
-            act("$n staggers under the weight of the Tribunal's judgment!", vch, NULL, NULL,
-                TO_ROOM);
-            send_to_char(
-                "The Jackal Tribunal's judgment falls on you like a crushing weight!\n\r", vch);
-            sp_damage(NULL, ch, vch, level + dice(20, 10), ELE_EARTH, sn, TRUE);
-         }
-         else
-         {
-            act("$n stands uncondemned by the Tribunal's verdict.", vch, NULL, NULL, TO_ROOM);
-            send_to_char("The Tribunal finds no verdict against you.\n\r", vch);
-         }
-         continue;
-      }
+      act("You fling a fistful of harbor dust into $S eyes!", ch, NULL, victim, TO_CHAR);
+      act("$n flings a fistful of harbor dust into your eyes!", ch, NULL, victim, TO_VICT);
+      act("$n flings harbor dust at $N's eyes!", ch, NULL, victim, TO_NOTVICT);
 
-      if (vch->in_room->area == ch->in_room->area)
-         send_to_char("A distant sense of judgment settles over you briefly.\n\r", vch);
+      af.type = skill_lookup("blindness");
+      af.location = APPLY_HITROLL;
+      af.modifier = -2;
+      af.duration = 3;
+      af.duration_type = DURATION_ROUND;
+      af.bitvector = AFF_BLIND;
+      affect_to_char(victim, &af);
    }
-   CUREF(vch_next);
-   return TRUE;
+
+   set_fighting(victim, ch, TRUE);
+
+   combo(ch, victim, gsn_harbor_dust);
+   return;
 }

@@ -171,6 +171,7 @@ extern sh_int gsn_taunt;
 extern sh_int gsn_rend;
 extern sh_int gsn_field_patch;
 extern sh_int gsn_weapon_mastery;
+extern sh_int gsn_ashfall_strike;
 
 /* Druid skills */
 extern sh_int gsn_substrate_piercing;
@@ -184,6 +185,7 @@ extern sh_int gsn_roll_with_blow;
 extern sh_int gsn_pressure_point;
 extern sh_int gsn_feint;
 extern sh_int gsn_conditioning;
+extern sh_int gsn_harbor_dust;
 
 /* Sentinel skills */
 extern sh_int gsn_vigilance;
@@ -372,6 +374,8 @@ DECLARE_DO_FUN(do_deathmatc);
 DECLARE_DO_FUN(do_deathmatch);
 DECLARE_DO_FUN(do_diagnose);
 DECLARE_DO_FUN(do_dirt);
+DECLARE_DO_FUN(do_ashfall_strike);
+DECLARE_DO_FUN(do_harbor_dust);
 DECLARE_DO_FUN(do_dog);
 DECLARE_DO_FUN(do_donate);
 DECLARE_DO_FUN(do_edit);

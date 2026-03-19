@@ -32,17 +32,48 @@
 #include "tables.h"
 #include "magic.h"
 
-bool spell_control_weather(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+bool spell_seal_calculus(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   if (!str_cmp(target_name, "better"))
-      weather_info.change += dice(level / 3, 4);
-   else if (!str_cmp(target_name, "worse"))
-      weather_info.change -= dice(level / 3, 4);
+   CHAR_DATA *vch;
+   AFFECT_DATA af;
+   bool affected_any = FALSE;
+
+   if (obj == NULL)
+   {
+      act("$n traces the Seal College's binding geometry across the floor!", ch, NULL, NULL,
+          TO_ROOM);
+      send_to_char(
+          "You lay the Seal College's geometric binding across the ground!\n\r", ch);
+   }
    else
    {
-      send_to_char("Do you want it to get better or worse?\n\r", ch);
-      return FALSE;
+      act("Binding geometry flows from $p across the floor!", ch, obj, NULL, TO_ROOM);
+      act("Binding geometry flows from $p across the floor!", ch, obj, NULL, TO_CHAR);
    }
-   send_to_char("Ok.\n\r", ch);
+
+   for (vch = ch->in_room->first_person; vch != NULL; vch = vch->next_in_room)
+   {
+      if (vch == ch)
+         continue;
+      if (IS_NPC(ch) ? IS_NPC(vch) : !IS_NPC(vch))
+         continue;
+      if (saves_spell(level, vch))
+         continue;
+
+      af.type = sn;
+      af.duration = level / 15 + 2;
+      af.location = APPLY_SPEED;
+      af.modifier = -(level / 10 + 1);
+      af.bitvector = 0;
+      affect_join(vch, &af);
+
+      act("Geometric lines close around $n's feet!", vch, NULL, NULL, TO_ROOM);
+      send_to_char("The Seal College's geometry closes around your feet!\n\r", vch);
+      affected_any = TRUE;
+   }
+
+   if (!affected_any)
+      send_to_char("The geometric binding finds no suitable targets.\n\r", ch);
+
    return TRUE;
 }

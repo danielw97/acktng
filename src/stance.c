@@ -14,14 +14,14 @@ bool is_legal_stance(CHAR_DATA *ch, int stance);
 const struct stance_app_type stance_app[MAX_STANCE] = {
     {"Adventurer", 0, 0, 0, 0, 0, 0, 0, MORTAL, -1, -1, -1, -1},
     /* Mortal stances */
-    {"Magi", 5, -3, -3, 0, 0, 2, STANCE_MULTI_CAST | STANCE_NO_HIT, MORTAL, CLASS_MAG, 60, -1, -1,
-     CLASS_MAG},
-    {"Psionicist", 5, -3, -3, 0, 0, 2, STANCE_MULTI_CAST | STANCE_NO_HIT, MORTAL, CLASS_PSI, 60, -1,
-     -1, CLASS_PSI},
-    {"Healer", 0, 0, 0, 0, 1, 0, 0, MORTAL, CLASS_CLE, 60, -1, -1, CLASS_CLE},
+    {"Ember Protocol", 5, -3, -3, 0, 0, 2, STANCE_MULTI_CAST | STANCE_NO_HIT, MORTAL, CLASS_MAG,
+     60, -1, -1, CLASS_MAG},
+    {"Long Hold", 5, -3, -3, 0, 0, 2, STANCE_MULTI_CAST | STANCE_NO_HIT, MORTAL, CLASS_PSI, 60,
+     -1, -1, CLASS_PSI},
+    {"Solar Office", 0, 0, 0, 0, 1, 0, 0, MORTAL, CLASS_CLE, 60, -1, -1, CLASS_CLE},
     {"Dunmar's Watch", 0, 1, 0, 0, 0, 0, 0, MORTAL, CLASS_WAR, 60, -1, -1, CLASS_WAR},
     {"Gap Intuition", -1, 0, 1, 0, 0, 0, 0, MORTAL, CLASS_CIP, 60, -1, -1, CLASS_CIP},
-    {"Pugilist", 0, 0, 0, 1, 0, 0, 0, MORTAL, CLASS_PUG, 60, -1, -1, CLASS_PUG},
+    {"Economy of Motion", 0, 0, 0, 1, 0, 0, 0, MORTAL, CLASS_PUG, 60, -1, -1, CLASS_PUG},
     /* Remort stances */
     {"Assassin", -3, 0, 3, 1, 0, 0, 0, REMORT, CLASS_ASS, 1, -1, -1, -1},
     {"Ninja", 0, 0, 0, 2, 0, 0, STANCE_NINJA, REMORT, CLASS_ASS, 30, -1, -1, -1},

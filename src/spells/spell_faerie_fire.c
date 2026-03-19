@@ -32,7 +32,7 @@
 #include "tables.h"
 #include "magic.h"
 
-bool spell_faerie_fire(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+bool spell_prism_mark(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    AFFECT_DATA af;
@@ -48,7 +48,10 @@ bool spell_faerie_fire(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    af.modifier = 2 * get_psuedo_level(ch);
    af.bitvector = AFF_FAERIE_FIRE;
    affect_to_char(victim, &af);
-   send_to_char("You are surrounded by a pink outline.\n\r", victim);
-   act("$n is surrounded by a pink outline.", victim, NULL, NULL, TO_ROOM);
+   send_to_char(
+       "Prism Thesis crystal harmonics lock onto you — refracted light traces your outline.\n\r",
+       victim);
+   act("$n is outlined in refracting crystal light, every movement visible.", victim, NULL, NULL,
+       TO_ROOM);
    return TRUE;
 }

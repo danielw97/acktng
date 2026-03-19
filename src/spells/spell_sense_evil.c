@@ -32,7 +32,7 @@
 #include "tables.h"
 #include "magic.h"
 
-bool spell_sense_evil(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+bool spell_pale_imprint(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    AFFECT_DATA af;
@@ -48,7 +48,10 @@ bool spell_sense_evil(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    af.location = APPLY_NONE;
    af.bitvector = AFF_DETECT_EVIL;
    affect_to_char(victim, &af);
-   send_to_char("Your eyes tingle.\n\r", victim);
-   act("$n's eyes glow briefly.", victim, NULL, NULL, TO_ROOM);
+   send_to_char(
+       "The Pale Ledger's imprint settles into your awareness — you sense hostile intent.\n\r",
+       victim);
+   act("$n's focus sharpens as the Pale Ledger's imprint takes hold.", victim, NULL, NULL,
+       TO_ROOM);
    return TRUE;
 }
