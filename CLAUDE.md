@@ -4,7 +4,7 @@
 
 For any implementation task, you MUST first deliver a design document describing the proposed changes — including the problem, approach, affected files, and any trade-offs — and discuss it with the user. Do NOT begin implementation until the user has explicitly signed off on the design document. No code changes, no file creation, no prototyping until approval is given. Design documents should be placed in `docs/proposals/`.
 
-When writing any document (design proposals, lore files, area plans, etc.), write it in sections rather than producing the entire document at once. Present each section to the user and wait for feedback before proceeding to the next, unless the user explicitly asks for the full document at once.
+When writing any document (design proposals, lore files, area plans, etc.), write and deliver it in sections rather than producing the entire document at once. Continue through all sections without waiting for confirmation between them, unless the user asks for a different approach.
 
 ## Project Overview
 
