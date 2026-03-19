@@ -71,10 +71,15 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
    if (auction_item != NULL)
       do_auction(ch, "stop");
 
-   sprintf(buf,
-           "\n\r**** HOTreboot by An Immortal - Please remain ONLINE ****\n\r*********** We will "
-           "be back in 30 seconds!! *************%s\n\n\r",
-           "");
+   if (ch != NULL)
+      sprintf(buf,
+              "\n\r**** HOTreboot by %s - Please remain ONLINE ****\n\r*********** We will "
+              "be back in 30 seconds!! *************\n\n\r",
+              ch->name);
+   else
+      sprintf(buf,
+              "\n\r**** HOTreboot: Automated Deployment - Please remain ONLINE ****\n\r*********** We will "
+              "be back in 30 seconds!! *************\n\n\r");
 
    /*
     * For each PLAYING descriptor( non-negative ), save its state
