@@ -4,6 +4,8 @@
 
 For any implementation task, you MUST first deliver a design document describing the proposed changes — including the problem, approach, affected files, and any trade-offs — and discuss it with the user. Do NOT begin implementation until the user has explicitly signed off on the design document. No code changes, no file creation, no prototyping until approval is given. Design documents should be placed in `docs/proposals/`.
 
+When writing any document (design proposals, lore files, area plans, etc.), write it in sections rather than producing the entire document at once. Present each section to the user and wait for feedback before proceeding to the next, unless the user explicitly asks for the full document at once.
+
 ## Project Overview
 
 ACK!TNG is a MUD (Multi-User Dungeon) game server written in C, descended from Diku → Merc → ACK! lineage. The server binary is called `ack` and runs from the `area/` directory, accepting telnet connections on a configurable port.
