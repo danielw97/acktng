@@ -91,7 +91,10 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
             return
 
         if route in ("/reference", "/reference/"):
-            self._redirect_to("/reference/help/")
+            self._send_html(
+                _build_reference_page("help", help_query),
+                title="Help Topics",
+            )
             return
 
         if route in ("/reference/help", "/reference/help/"):
