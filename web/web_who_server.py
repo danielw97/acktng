@@ -243,9 +243,29 @@ def _extract_first_lore_entry(content: str) -> str:
     return content.strip()
 
 
+_SEARCH_FORM_META: dict[str, tuple[str, str, str, str]] = {
+    "helps":  ("Help:",  "help-q",  "topic",         "/help/"),
+    "shelps": ("SHelp:", "shelp-q", "spell / skill", "/shelp/"),
+    "lores":  ("Lore:",  "lore-q",  "topic",         "/lore/"),
+}
+
+
 def _build_topic_index_page(title: str, route_base: str, base_dir: Path, query: str = "") -> str:
+    label_text, input_id, placeholder, action = _SEARCH_FORM_META.get(
+        route_base, (title + ":", route_base + "-q", "topic", f"/{route_base}/")
+    )
+    search_form = (
+        f"<section class='help-forms'>"
+        f"<form method='get' action='{action}'>"
+        f"<label for='{input_id}'>{escape(label_text)}</label>"
+        f"<input id='{input_id}' name='q' placeholder='{escape(placeholder)}' value='{escape(query)}'>"
+        f"<button type='submit'>Search</button>"
+        f"</form>"
+        f"</section>"
+    )
+
     if not base_dir.exists() or not base_dir.is_dir():
-        return f"<h1>{escape(title)}</h1><p>No topics available.</p>"
+        return f"{search_form}<h1>{escape(title)}</h1><p>No topics available.</p>"
 
     normalized_query = query.strip().lower()
     topic_names = _get_topic_names(base_dir)
@@ -257,14 +277,14 @@ def _build_topic_index_page(title: str, route_base: str, base_dir: Path, query: 
 
     if not links:
         if normalized_query:
-            return f"<h1>{escape(title)}</h1><p>No topics match <strong>{escape(query)}</strong>.</p>"
-        return f"<h1>{escape(title)}</h1><p>No topics available.</p>"
+            return f"{search_form}<h1>{escape(title)}</h1><p>No topics match <strong>{escape(query)}</strong>.</p>"
+        return f"{search_form}<h1>{escape(title)}</h1><p>No topics available.</p>"
 
     query_blurb = ""
     if normalized_query:
         query_blurb = f"<p>Filtered by <strong>{escape(query)}</strong>.</p>"
 
-    return f"<h1>{escape(title)}</h1>{query_blurb}<ul>{''.join(links)}</ul>"
+    return f"{search_form}<h1>{escape(title)}</h1>{query_blurb}<ul>{''.join(links)}</ul>"
 
 
 def _build_home_page() -> str:
