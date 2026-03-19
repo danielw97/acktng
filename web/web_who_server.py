@@ -20,6 +20,7 @@ WHO_HTML_FILE = WEB_DIR / "soewholist.html"
 WHO_COUNT_FILE = WEB_DIR / "whocount.html"
 HELP_DIR = ROOT_DIR / "help"
 SHELP_DIR = ROOT_DIR / "shelp"
+LORE_DIR = ROOT_DIR / "lore"
 TEMPLATE_DIR = WEB_DIR / "templates"
 IMG_DIR = WEB_DIR / "img"
 WORLD_TARGETS = [
@@ -101,6 +102,19 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
             self._send_topic_page("Spell Help", SHELP_DIR, topic, "shelps")
             return
 
+        if route in ("/lore", "/lore/"):
+            self._send_html(_build_topic_index_page("Lore Topics", "lores", LORE_DIR, help_query), title="Lore Topics")
+            return
+
+        if route in ("/lores", "/lores/"):
+            self._redirect_to("/lore/")
+            return
+
+        if route.startswith("/lores/"):
+            topic = route[len("/lores/") :]
+            self._send_lore_topic_page(topic)
+            return
+
         self.send_error(404, "Not Found")
 
     def do_POST(self) -> None:  # noqa: N802 (BaseHTTPRequestHandler interface)
@@ -110,6 +124,20 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
         self.send_response(302)
         self.send_header("Location", location)
         self.end_headers()
+
+    def _send_lore_topic_page(self, topic: str) -> None:
+        topic_path = _safe_topic_path(LORE_DIR, topic)
+        if topic_path is None:
+            self.send_error(404, "Not Found")
+            return
+
+        first_entry = _extract_first_lore_entry(_read_cached_topic(topic_path))
+        body = (
+            f"<h1>Lore: {escape(topic_path.name)}</h1>"
+            f"<p><a href='/lore/'>Back to Lore index</a></p>"
+            f"<pre>{escape(first_entry)}</pre>"
+        )
+        self._send_html(body, title=f"Lore: {topic_path.name}")
 
     def _send_topic_page(self, page_name: str, base_dir: Path, topic: str, base_route: str) -> None:
         topic_path = _safe_topic_path(base_dir, topic)
@@ -187,6 +215,32 @@ def _safe_topic_path(base_dir: Path, topic: str) -> Path | None:
         return None
 
     return candidate
+
+
+def _extract_first_lore_entry(content: str) -> str:
+    """Return only the first (unflagged) entry from a lore file.
+
+    Lore files are structured as:
+        keywords ...
+        ---
+        [first entry — universal prose]
+        flags ...
+        ---
+        [subsequent city/faction-specific entries]
+
+    This function skips the keywords header block and returns the text of
+    the first entry only, stripping any trailing whitespace.
+    """
+    blocks = content.split("\n---\n")
+    for i, block in enumerate(blocks):
+        stripped = block.strip()
+        if stripped.startswith("keywords "):
+            # The next block is the first entry
+            if i + 1 < len(blocks):
+                return blocks[i + 1].strip()
+            return ""
+    # Fallback: no keywords header found — return the whole content
+    return content.strip()
 
 
 def _build_topic_index_page(title: str, route_base: str, base_dir: Path, query: str = "") -> str:
