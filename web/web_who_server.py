@@ -280,7 +280,10 @@ def _build_world_map_page() -> str:
 
 
 def _build_stories_page() -> str:
-    return _load_template("stories.html")
+    stories_dir = TEMPLATE_DIR / "stories"
+    fragments = sorted(stories_dir.glob("*.html"))
+    stories_html = "\n\n".join(p.read_text(encoding="utf-8", errors="replace") for p in fragments)
+    return _load_template("stories.html").replace("__STORIES__", stories_html)
 
 
 def _build_mud_client_page() -> str:
