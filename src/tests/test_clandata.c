@@ -221,14 +221,16 @@ static void test_value_count(void)
       count++;
    fclose(fp);
 
-   /* Expected: 1 header + (MAX_CLAN-1)^2 diplomacy + (MAX_CLAN-1) treasury + (MAX_CLAN-1)^2 end_state */
+   /* Expected: 1 header + (MAX_CLAN-1)^2 diplomacy + (MAX_CLAN-1) treasury + (MAX_CLAN-1)^2
+    * end_state */
    int n = MAX_CLAN - 1;
    int expected = 1 + n * n + n + n * n;
    assert(count == expected);
 
    remove(TEST_FILE);
-   printf("  PASS: file contains exactly %d values (1 header + %d diplomacy + %d treasury + %d end_state)\n", expected,
-          n * n, n, n * n);
+   printf("  PASS: file contains exactly %d values (1 header + %d diplomacy + %d treasury + %d "
+          "end_state)\n",
+          expected, n * n, n, n * n);
 }
 
 int main(void)

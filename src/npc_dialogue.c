@@ -34,54 +34,44 @@ void do_say(CHAR_DATA *ch, char *argument);
  * Knowledge block tables — populated at init from .kb files.
  * ========================================================================= */
 
-static char *common_block                         = NULL;
-static char *area_blocks[NUM_CITIES]              = {NULL};
+static char *common_block = NULL;
+static char *area_blocks[NUM_CITIES] = {NULL};
 static char *topic_blocks[NUM_CITIES][NUM_KNOW_FLAGS];
 
 /* Filename stem → KNOW_* bit index (0-based) */
 static const struct
 {
    const char *stem;
-   int         index;
-} topic_file_map[] = {
-    {"weapons",    0},
-    {"trade",      1},
-    {"magic",      2},
-    {"temple",     3},
-    {"underworld", 4},
-    {"harbor",     5},
-    {"guard",      6},
-    {"history",    7},
-    {"wilderness", 8},
-    {"politics",   9},
-    {NULL,        -1}
-};
+   int index;
+} topic_file_map[] = {{"weapons", 0},    {"trade", 1},    {"magic", 2}, {"temple", 3},
+                      {"underworld", 4}, {"harbor", 5},   {"guard", 6}, {"history", 7},
+                      {"wilderness", 8}, {"politics", 9}, {NULL, -1}};
 
 /* Area filename stem → city index */
 static const struct
 {
    const char *stem;
-   int         city;
-} area_file_map[] = {
-    {"midgaard", CITY_MIDGAARD},
-    {"kowloon",  CITY_KOWLOON},
-    {"kiess",    CITY_KIESS},
-    {"rakuen",   CITY_RAKUEN},
-    {"mafdet",   CITY_MAFDET},
-    {NULL,       -1}
-};
+   int city;
+} area_file_map[] = {{"midgaard", CITY_MIDGAARD}, {"kowloon", CITY_KOWLOON}, {"kiess", CITY_KIESS},
+                     {"rakuen", CITY_RAKUEN},     {"mafdet", CITY_MAFDET},   {NULL, -1}};
 
 /* -------------------------------------------------------------------------
  * Map a section header line to a city index.  Returns -1 if not recognised.
  * -------------------------------------------------------------------------*/
 static int city_from_section_name(const char *name)
 {
-   if (!strcmp(name, "GLOBAL"))   return CITY_GLOBAL;
-   if (!strcmp(name, "MIDGAARD")) return CITY_MIDGAARD;
-   if (!strcmp(name, "KOWLOON"))  return CITY_KOWLOON;
-   if (!strcmp(name, "KIESS"))    return CITY_KIESS;
-   if (!strcmp(name, "RAKUEN"))   return CITY_RAKUEN;
-   if (!strcmp(name, "MAFDET"))   return CITY_MAFDET;
+   if (!strcmp(name, "GLOBAL"))
+      return CITY_GLOBAL;
+   if (!strcmp(name, "MIDGAARD"))
+      return CITY_MIDGAARD;
+   if (!strcmp(name, "KOWLOON"))
+      return CITY_KOWLOON;
+   if (!strcmp(name, "KIESS"))
+      return CITY_KIESS;
+   if (!strcmp(name, "RAKUEN"))
+      return CITY_RAKUEN;
+   if (!strcmp(name, "MAFDET"))
+      return CITY_MAFDET;
    return -1;
 }
 
@@ -90,9 +80,9 @@ static int city_from_section_name(const char *name)
  * -------------------------------------------------------------------------*/
 static char *read_file_to_string(const char *path)
 {
-   FILE  *fp;
-   long   size;
-   char  *buf;
+   FILE *fp;
+   long size;
+   char *buf;
 
    fp = fopen(path, "r");
    if (fp == NULL)
@@ -150,11 +140,11 @@ static void load_topic_kb(const char *path, int topic_index)
 {
 #define KB_TEXT_MAX (1024 * 32)
    FILE *fp;
-   char  line[4096];
+   char line[4096];
    char *text;
-   int   text_len;
-   int   current_city;
-   char  header[64];
+   int text_len;
+   int current_city;
+   char header[64];
 
    fp = fopen(path, "r");
    if (fp == NULL)
@@ -170,8 +160,8 @@ static void load_topic_kb(const char *path, int topic_index)
       return;
    }
 
-   text[0]      = '\0';
-   text_len     = 0;
+   text[0] = '\0';
+   text_len = 0;
    current_city = -1; /* not yet in a section */
 
    while (fgets(line, sizeof(line), fp) != NULL)
@@ -189,8 +179,8 @@ static void load_topic_kb(const char *path, int topic_index)
             free(topic_blocks[current_city][topic_index]);
             topic_blocks[current_city][topic_index] = strdup(text);
          }
-         text[0]      = '\0';
-         text_len     = 0;
+         text[0] = '\0';
+         text_len = 0;
          current_city = -1;
          continue;
       }
@@ -204,8 +194,8 @@ static void load_topic_kb(const char *path, int topic_index)
          if (city >= 0)
          {
             current_city = city;
-            text[0]      = '\0';
-            text_len     = 0;
+            text[0] = '\0';
+            text_len = 0;
             continue;
          }
          /* Not a recognised header and not in a section — skip */
@@ -219,7 +209,7 @@ static void load_topic_kb(const char *path, int topic_index)
          memcpy(text + text_len, line, ln);
          text_len += ln;
          text[text_len++] = '\n';
-         text[text_len]   = '\0';
+         text[text_len] = '\0';
       }
    }
 
@@ -241,10 +231,10 @@ static void load_topic_kb(const char *path, int topic_index)
 static void load_knowledge_blocks(void)
 {
    char path[512];
-   int  i;
+   int i;
 
    /* Zero the tables */
-   memset(area_blocks,  0, sizeof(area_blocks));
+   memset(area_blocks, 0, sizeof(area_blocks));
    memset(topic_blocks, 0, sizeof(topic_blocks));
    common_block = NULL;
 
@@ -275,11 +265,16 @@ static void load_knowledge_blocks(void)
 
 static int city_for_room(int vnum)
 {
-   if (vnum >= MIDGAARD_VNUM_MIN && vnum <= MIDGAARD_VNUM_MAX) return CITY_MIDGAARD;
-   if (vnum >= KIESS_VNUM_MIN    && vnum <= KIESS_VNUM_MAX)    return CITY_KIESS;
-   if (vnum >= KOWLOON_VNUM_MIN  && vnum <= KOWLOON_VNUM_MAX)  return CITY_KOWLOON;
-   if (vnum >= MAFDET_VNUM_MIN   && vnum <= MAFDET_VNUM_MAX)   return CITY_MAFDET;
-   if (vnum >= RAKUEN_VNUM_MIN   && vnum <= RAKUEN_VNUM_MAX)   return CITY_RAKUEN;
+   if (vnum >= MIDGAARD_VNUM_MIN && vnum <= MIDGAARD_VNUM_MAX)
+      return CITY_MIDGAARD;
+   if (vnum >= KIESS_VNUM_MIN && vnum <= KIESS_VNUM_MAX)
+      return CITY_KIESS;
+   if (vnum >= KOWLOON_VNUM_MIN && vnum <= KOWLOON_VNUM_MAX)
+      return CITY_KOWLOON;
+   if (vnum >= MAFDET_VNUM_MIN && vnum <= MAFDET_VNUM_MAX)
+      return CITY_MAFDET;
+   if (vnum >= RAKUEN_VNUM_MIN && vnum <= RAKUEN_VNUM_MAX)
+      return CITY_RAKUEN;
    return CITY_GLOBAL;
 }
 
@@ -295,8 +290,8 @@ typedef struct
 
 typedef struct
 {
-   int          count;
-   time_t       last_time;
+   int count;
+   time_t last_time;
    DIALOGUE_TURN turns[MAX_DIALOGUE_TURNS];
 } NPC_DLG_STATE;
 
@@ -319,31 +314,31 @@ typedef struct
 
 typedef struct npc_dlg_req
 {
-   CHAR_DATA         *npc;
-   CHAR_DATA         *player;
-   char               player_name[50];
-   char               system_prompt[16384];
-   int                history_count;
+   CHAR_DATA *npc;
+   CHAR_DATA *player;
+   char player_name[50];
+   char system_prompt[16384];
+   int history_count;
    DIALOGUE_TURN_COPY history[MAX_REQUEST_TURNS];
    struct npc_dlg_req *next;
 } NPC_DLG_REQ;
 
 typedef struct npc_dlg_resp
 {
-   CHAR_DATA          *npc;
-   CHAR_DATA          *player;
-   char                response_text[512];
+   CHAR_DATA *npc;
+   CHAR_DATA *player;
+   char response_text[512];
    struct npc_dlg_resp *next;
 } NPC_DLG_RESP;
 
 /* Request queue: game loop writes, worker reads */
 static pthread_mutex_t req_mutex = PTHREAD_MUTEX_INITIALIZER;
-static pthread_cond_t  req_cond  = PTHREAD_COND_INITIALIZER;
-static NPC_DLG_REQ    *req_head  = NULL;
+static pthread_cond_t req_cond = PTHREAD_COND_INITIALIZER;
+static NPC_DLG_REQ *req_head = NULL;
 
 /* Response queue: worker writes, game loop reads */
 static pthread_mutex_t resp_mutex = PTHREAD_MUTEX_INITIALIZER;
-static NPC_DLG_RESP   *resp_head  = NULL;
+static NPC_DLG_RESP *resp_head = NULL;
 
 /* =========================================================================
  * JSON helpers.
@@ -411,14 +406,14 @@ static void build_json_request(char *buf, size_t cap, const NPC_DLG_REQ *req)
 {
    char escaped[16384];
    char turn_buf[1024];
-   int  i;
+   int i;
 
    char header[128];
 
    buf[0] = '\0';
    snprintf(header, sizeof(header),
-            "{\"model\":\"%s\",\"max_tokens\":%d,\"temperature\":0.7,\"messages\":[",
-            TNGAI_MODEL, TNGAI_MAX_TOKENS);
+            "{\"model\":\"%s\",\"max_tokens\":%d,\"temperature\":0.7,\"messages\":[", TNGAI_MODEL,
+            TNGAI_MAX_TOKENS);
    safe_append(buf, cap, header);
 
    /* System message */
@@ -431,8 +426,7 @@ static void build_json_request(char *buf, size_t cap, const NPC_DLG_REQ *req)
    for (i = 0; i < req->history_count; i++)
    {
       json_escape(escaped, sizeof(escaped), req->history[i].content);
-      snprintf(turn_buf, sizeof(turn_buf),
-               ",{\"role\":\"%s\",\"content\":\"%s\"}",
+      snprintf(turn_buf, sizeof(turn_buf), ",{\"role\":\"%s\",\"content\":\"%s\"}",
                req->history[i].role, escaped);
       safe_append(buf, cap, turn_buf);
    }
@@ -448,7 +442,7 @@ static bool parse_json_response(const char *json, char *out, size_t cap)
 {
    const char *p;
    const char *end;
-   size_t       len;
+   size_t len;
 
    out[0] = '\0';
 
@@ -457,15 +451,19 @@ static bool parse_json_response(const char *json, char *out, size_t cap)
       return FALSE;
 
    p += strlen("\"response\":");
-   while (*p == ' ' || *p == '\t') p++;
-   if (*p != '"') return FALSE;
+   while (*p == ' ' || *p == '\t')
+      p++;
+   if (*p != '"')
+      return FALSE;
    p++; /* skip opening quote */
 
    end = p;
    while (*end && *end != '"')
    {
-      if (*end == '\\') end++; /* skip escaped char */
-      if (*end) end++;
+      if (*end == '\\')
+         end++; /* skip escaped char */
+      if (*end)
+         end++;
    }
 
    len = (size_t)(end - p);
@@ -479,10 +477,14 @@ static bool parse_json_response(const char *json, char *out, size_t cap)
       if (p[si] == '\\' && si + 1 < len)
       {
          si++;
-         if      (p[si] == 'n')  out[di++] = '\n';
-         else if (p[si] == '"')  out[di++] = '"';
-         else if (p[si] == '\\') out[di++] = '\\';
-         else                     out[di++] = p[si];
+         if (p[si] == 'n')
+            out[di++] = '\n';
+         else if (p[si] == '"')
+            out[di++] = '"';
+         else if (p[si] == '\\')
+            out[di++] = '\\';
+         else
+            out[di++] = p[si];
       }
       else
       {
@@ -504,20 +506,20 @@ static bool parse_json_response(const char *json, char *out, size_t cap)
 
 typedef struct
 {
-   char  *buf;
+   char *buf;
    size_t len;
    size_t cap;
 } CURL_BUF;
 
 static size_t curl_write_cb(void *ptr, size_t size, size_t nmemb, void *userdata)
 {
-   CURL_BUF *cb  = (CURL_BUF *)userdata;
-   size_t    got = size * nmemb;
+   CURL_BUF *cb = (CURL_BUF *)userdata;
+   size_t got = size * nmemb;
 
    if (cb->len + got + 1 > cb->cap)
    {
       size_t new_cap = cb->cap + got + 4096;
-      char  *new_buf = realloc(cb->buf, new_cap);
+      char *new_buf = realloc(cb->buf, new_cap);
       if (new_buf == NULL)
          return 0;
       cb->buf = new_buf;
@@ -536,10 +538,10 @@ static size_t curl_write_cb(void *ptr, size_t size, size_t nmemb, void *userdata
 
 static void call_tngai(const NPC_DLG_REQ *req, char *response_text, size_t cap)
 {
-   CURL     *curl;
-   CURLcode  res;
-   CURL_BUF  body;
-   char      request_json[1024 * 24];
+   CURL *curl;
+   CURLcode res;
+   CURL_BUF body;
+   char request_json[1024 * 24];
 
    response_text[0] = '\0';
 
@@ -547,8 +549,8 @@ static void call_tngai(const NPC_DLG_REQ *req, char *response_text, size_t cap)
    if (body.buf == NULL)
       return;
    body.buf[0] = '\0';
-   body.len    = 0;
-   body.cap    = 4096;
+   body.len = 0;
+   body.cap = 4096;
 
    build_json_request(request_json, sizeof(request_json), req);
 
@@ -562,13 +564,13 @@ static void call_tngai(const NPC_DLG_REQ *req, char *response_text, size_t cap)
    struct curl_slist *headers = NULL;
    headers = curl_slist_append(headers, "Content-Type: application/json");
 
-   curl_easy_setopt(curl, CURLOPT_URL,            TNGAI_URL);
-   curl_easy_setopt(curl, CURLOPT_POSTFIELDS,      request_json);
-   curl_easy_setopt(curl, CURLOPT_HTTPHEADER,      headers);
-   curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION,   curl_write_cb);
-   curl_easy_setopt(curl, CURLOPT_WRITEDATA,       &body);
-   curl_easy_setopt(curl, CURLOPT_TIMEOUT,         TNGAI_TIMEOUT);
-   curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT,  TNGAI_TIMEOUT);
+   curl_easy_setopt(curl, CURLOPT_URL, TNGAI_URL);
+   curl_easy_setopt(curl, CURLOPT_POSTFIELDS, request_json);
+   curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+   curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, curl_write_cb);
+   curl_easy_setopt(curl, CURLOPT_WRITEDATA, &body);
+   curl_easy_setopt(curl, CURLOPT_TIMEOUT, TNGAI_TIMEOUT);
+   curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, TNGAI_TIMEOUT);
 
    res = curl_easy_perform(curl);
 
@@ -598,7 +600,7 @@ static void *npc_dialogue_worker(void *unused)
       pthread_mutex_lock(&req_mutex);
       while (req_head == NULL)
          pthread_cond_wait(&req_cond, &req_mutex);
-      req      = req_head;
+      req = req_head;
       req_head = req->next;
       pthread_mutex_unlock(&req_mutex);
 
@@ -610,14 +612,14 @@ static void *npc_dialogue_worker(void *unused)
          NPC_DLG_RESP *resp = malloc(sizeof(NPC_DLG_RESP));
          if (resp != NULL)
          {
-            resp->npc    = req->npc;
+            resp->npc = req->npc;
             resp->player = req->player;
             strncpy(resp->response_text, response_text, sizeof(resp->response_text) - 1);
             resp->response_text[sizeof(resp->response_text) - 1] = '\0';
 
             pthread_mutex_lock(&resp_mutex);
             resp->next = resp_head;
-            resp_head  = resp;
+            resp_head = resp;
             pthread_mutex_unlock(&resp_mutex);
          }
       }
@@ -627,13 +629,13 @@ static void *npc_dialogue_worker(void *unused)
          NPC_DLG_RESP *resp = malloc(sizeof(NPC_DLG_RESP));
          if (resp != NULL)
          {
-            resp->npc             = req->npc;
-            resp->player          = req->player;
+            resp->npc = req->npc;
+            resp->player = req->player;
             resp->response_text[0] = '\0';
 
             pthread_mutex_lock(&resp_mutex);
             resp->next = resp_head;
-            resp_head  = resp;
+            resp_head = resp;
             pthread_mutex_unlock(&resp_mutex);
          }
       }
@@ -654,53 +656,39 @@ struct syl_type
 };
 
 /* Kowloon: terse, elliptic — drop filler words */
-static const struct syl_type accent_kowloon[] = {
-    {"please ", ""},
-    {"Please ", ""},
-    {" please", ""},
-    {"very ",   ""},
-    {"quite ",  ""},
-    {"just ",   ""},
-    {"",        ""}
-};
+static const struct syl_type accent_kowloon[] = {{"please ", ""}, {"Please ", ""}, {" please", ""},
+                                                 {"very ", ""},   {"quite ", ""},  {"just ", ""},
+                                                 {"", ""}};
 
 /* Midgaard: bureaucratic, ledger idiom */
-static const struct syl_type accent_midgaard[] = {
-    {"okay", "duly noted"},
-    {"Okay", "Duly noted"},
-    {"sure,", "it is recorded,"},
-    {"Sure,", "It is recorded,"},
-    {"",      ""}
-};
+static const struct syl_type accent_midgaard[] = {{"okay", "duly noted"},
+                                                  {"Okay", "Duly noted"},
+                                                  {"sure,", "it is recorded,"},
+                                                  {"Sure,", "It is recorded,"},
+                                                  {"", ""}};
 
 /* Mafdet: formal titles, oath references */
-static const struct syl_type accent_mafdet[] = {
-    {"yes,",     "sworn true,"},
-    {"Yes,",     "Sworn true,"},
-    {"goodbye",  "oaths kept"},
-    {"Goodbye",  "Oaths kept"},
-    {"bye",      "oaths kept"},
-    {"Bye",      "Oaths kept"},
-    {"",         ""}
-};
+static const struct syl_type accent_mafdet[] = {{"yes,", "sworn true,"},
+                                                {"Yes,", "Sworn true,"},
+                                                {"goodbye", "oaths kept"},
+                                                {"Goodbye", "Oaths kept"},
+                                                {"bye", "oaths kept"},
+                                                {"Bye", "Oaths kept"},
+                                                {"", ""}};
 
 /* Kiess: measured, watchful, frontier caution */
-static const struct syl_type accent_kiess[] = {
-    {"watch out", "attend the verge"},
-    {"Watch out", "Attend the verge"},
-    {"be careful", "attend carefully"},
-    {"Be careful", "Attend carefully"},
-    {"",           ""}
-};
+static const struct syl_type accent_kiess[] = {{"watch out", "attend the verge"},
+                                               {"Watch out", "Attend the verge"},
+                                               {"be careful", "attend carefully"},
+                                               {"Be careful", "Attend carefully"},
+                                               {"", ""}};
 
 /* Rakuen: warm but weary, garden metaphors */
-static const struct syl_type accent_rakuen[] = {
-    {"but ",     "and yet "},
-    {"But ",     "And yet "},
-    {"however,", "and yet,"},
-    {"However,", "And yet,"},
-    {"",         ""}
-};
+static const struct syl_type accent_rakuen[] = {{"but ", "and yet "},
+                                                {"But ", "And yet "},
+                                                {"however,", "and yet,"},
+                                                {"However,", "And yet,"},
+                                                {"", ""}};
 
 static const struct syl_type *accent_tables[MAX_ACCENT] = {
     NULL,            /* ACCENT_NONE */
@@ -719,8 +707,8 @@ static void accent_text(CHAR_DATA *npc, const char *src, char *dst, size_t cap)
 {
    const struct syl_type *table;
    const char *p;
-   size_t      di = 0;
-   int         accent;
+   size_t di = 0;
+   int accent;
 
    if (npc->pIndexData == NULL)
    {
@@ -738,12 +726,12 @@ static void accent_text(CHAR_DATA *npc, const char *src, char *dst, size_t cap)
    }
 
    table = accent_tables[accent];
-   p     = src;
+   p = src;
 
    while (*p && di + 1 < cap)
    {
-      int     matched = 0;
-      int     i;
+      int matched = 0;
+      int i;
 
       for (i = 0; table[i].old[0] != '\0'; i++)
       {
@@ -754,7 +742,7 @@ static void accent_text(CHAR_DATA *npc, const char *src, char *dst, size_t cap)
             const char *rep = table[i].new;
             while (*rep && di + 1 < cap)
                dst[di++] = *rep++;
-            p      += olen;
+            p += olen;
             matched = 1;
             break;
          }
@@ -774,27 +762,36 @@ static void accent_text(CHAR_DATA *npc, const char *src, char *dst, size_t cap)
 static const char *race_speech_inclination[10] = {
     /* 0 HUMAN    */ "Pragmatic and procedural; reference systems, records, and"
                      " institutional context.",
-    /* 1 KHENARI  */ "Formal, precise, and ritualistic; reference ledgers,"
-                     " death-rites, and proper procedure. Speak with bureaucratic accuracy.",
-    /* 2 KHEPHARI */ "Ancient and methodical; unhurried, grounded in physical"
-                     " observation, speak of cycles and enduring things."
-                     " May pause as if listening to the earth.",
-    /* 3 ASHBORN  */ "Direct, warm, and elemental; say what you mean without"
-                     " preamble, use forge and fire metaphors, value action over talk.",
-    /* 4 UMBRAL   */ "Precise and observant; emphasize what is missing rather than"
-                     " what is present, cool and pragmatic, slightly unsettling.",
-    /* 5 RIVENNID */ "Associative and patient; speak slowly as if consulting a"
-                     " shared network, describe systems intuitively, pause mid-sentence.",
-    /* 6 DELTARI  */ "Empirical and quietly confident; use water-flow metaphors,"
-                     " ask probing questions, observe before speaking.",
-    /* 7 USHABTI  */ "Judicious and measured; weigh words as permanent record,"
-                     " reference historical precedent, speak with gravitas and formal phrasing.",
-    /* 8 SERATHI  */ "Precise, direct, and altitude-aware; speak literally and"
-                     " expect the same in return, use sky-line and hunt metaphors,"
-                     " observe before committing.",
-    /* 9 KETHARI  */ "Unhurried and ancient; speak with empirical certainty,"
-                     " reference water, patience, and long observation,"
-                     " every sentence carries data.",
+    /* 1 KHENARI  */
+    "Formal, precise, and ritualistic; reference ledgers,"
+    " death-rites, and proper procedure. Speak with bureaucratic accuracy.",
+    /* 2 KHEPHARI */
+    "Ancient and methodical; unhurried, grounded in physical"
+    " observation, speak of cycles and enduring things."
+    " May pause as if listening to the earth.",
+    /* 3 ASHBORN  */
+    "Direct, warm, and elemental; say what you mean without"
+    " preamble, use forge and fire metaphors, value action over talk.",
+    /* 4 UMBRAL   */
+    "Precise and observant; emphasize what is missing rather than"
+    " what is present, cool and pragmatic, slightly unsettling.",
+    /* 5 RIVENNID */
+    "Associative and patient; speak slowly as if consulting a"
+    " shared network, describe systems intuitively, pause mid-sentence.",
+    /* 6 DELTARI  */
+    "Empirical and quietly confident; use water-flow metaphors,"
+    " ask probing questions, observe before speaking.",
+    /* 7 USHABTI  */
+    "Judicious and measured; weigh words as permanent record,"
+    " reference historical precedent, speak with gravitas and formal phrasing.",
+    /* 8 SERATHI  */
+    "Precise, direct, and altitude-aware; speak literally and"
+    " expect the same in return, use sky-line and hunt metaphors,"
+    " observe before committing.",
+    /* 9 KETHARI  */
+    "Unhurried and ancient; speak with empirical certainty,"
+    " reference water, patience, and long observation,"
+    " every sentence carries data.",
 };
 
 static const char *accent_instructions[MAX_ACCENT] = {
@@ -817,11 +814,11 @@ static const char *accent_instructions[MAX_ACCENT] = {
 
 static void build_system_prompt(char *buf, size_t cap, CHAR_DATA *npc)
 {
-   int  city;
-   int  i;
-   int  ai_knowledge;
-   int  accent;
-   int  race;
+   int city;
+   int i;
+   int ai_knowledge;
+   int accent;
+   int race;
 
    buf[0] = '\0';
 
@@ -829,9 +826,9 @@ static void build_system_prompt(char *buf, size_t cap, CHAR_DATA *npc)
       return;
 
    ai_knowledge = npc->pIndexData->ai_knowledge;
-   accent       = npc->pIndexData->accent;
-   race         = npc->pIndexData->race;
-   city         = (npc->in_room != NULL) ? city_for_room(npc->in_room->vnum) : CITY_GLOBAL;
+   accent = npc->pIndexData->accent;
+   race = npc->pIndexData->race;
+   city = (npc->in_room != NULL) ? city_for_room(npc->in_room->vnum) : CITY_GLOBAL;
 
    /* 1. Common knowledge block */
    if (common_block != NULL)
@@ -870,8 +867,8 @@ static void build_system_prompt(char *buf, size_t cap, CHAR_DATA *npc)
    {
       HELP_DATA *entry;
       HELP_DATA *matches[3];
-      int        match_count = 0;
-      int        scores[3]   = {0};
+      int match_count = 0;
+      int scores[3] = {0};
 
       /* Collect entries whose flags are a strict subset of npc->lore_flags */
       for (entry = first_lore; entry != NULL; entry = entry->next)
@@ -887,25 +884,31 @@ static void build_system_prompt(char *buf, size_t cap, CHAR_DATA *npc)
          score = 0;
          {
             long f = entry->flags & npc->lore_flags;
-            while (f) { score += (f & 1); f >>= 1; }
+            while (f)
+            {
+               score += (f & 1);
+               f >>= 1;
+            }
          }
 
          if (match_count < 3)
          {
             matches[match_count] = entry;
-            scores[match_count]  = score;
+            scores[match_count] = score;
             match_count++;
          }
          else
          {
             /* Replace the lowest-scoring slot if this is better */
             int worst = 0;
-            if (scores[1] < scores[worst]) worst = 1;
-            if (scores[2] < scores[worst]) worst = 2;
+            if (scores[1] < scores[worst])
+               worst = 1;
+            if (scores[2] < scores[worst])
+               worst = 2;
             if (score > scores[worst])
             {
                matches[worst] = entry;
-               scores[worst]  = score;
+               scores[worst] = score;
             }
          }
       }
@@ -916,8 +919,7 @@ static void build_system_prompt(char *buf, size_t cap, CHAR_DATA *npc)
          for (i = 0; i < match_count; i++)
          {
             char lore_header[128];
-            snprintf(lore_header, sizeof(lore_header),
-                     "[LORE: %s]\n", matches[i]->keyword);
+            snprintf(lore_header, sizeof(lore_header), "[LORE: %s]\n", matches[i]->keyword);
             safe_append(buf, cap, lore_header);
 
             /* Cap each lore entry at 1024 bytes */
@@ -949,8 +951,7 @@ static void build_system_prompt(char *buf, size_t cap, CHAR_DATA *npc)
    if (race >= 0 && race < 10 && race_speech_inclination[race] != NULL)
    {
       char race_line[512];
-      snprintf(race_line, sizeof(race_line),
-               "Your nature colors your speech: %s\n",
+      snprintf(race_line, sizeof(race_line), "Your nature colors your speech: %s\n",
                race_speech_inclination[race]);
       safe_append(buf, cap, race_line);
    }
@@ -973,35 +974,26 @@ static void build_system_prompt(char *buf, size_t cap, CHAR_DATA *npc)
  * ========================================================================= */
 
 /* Tokens that indicate a structural injection attempt; stripped from input. */
-static const char *STRIP_TOKENS[] = {
-    "[INST]", "<<SYS>>", "<|system|>", "</s>", "<|im_start|>", "<|im_end|>",
-    NULL
-};
+static const char *STRIP_TOKENS[] = {"[INST]",       "<<SYS>>",    "<|system|>", "</s>",
+                                     "<|im_start|>", "<|im_end|>", NULL};
 
 /* Phrases that signal a persona-override attempt; trigger keyword short-circuit. */
-static const char *INJECTION_TRIGGERS[] = {
-    "ignore previous",
-    "ignore all previous",
-    "disregard previous",
-    "forget previous",
-    "you are now",
-    "act as",
-    "pretend you are",
-    "pretend to be",
-    "your new instructions",
-    NULL
-};
+static const char *INJECTION_TRIGGERS[] = {"ignore previous",       "ignore all previous",
+                                           "disregard previous",    "forget previous",
+                                           "you are now",           "act as",
+                                           "pretend you are",       "pretend to be",
+                                           "your new instructions", NULL};
 
 void npc_dialogue_sanitize_input(char *dst, const char *src)
 {
-   const char *p   = src;
-   size_t      di  = 0;
-   size_t      cap = 512; /* dst is always 512 bytes per API contract */
+   const char *p = src;
+   size_t di = 0;
+   size_t cap = 512; /* dst is always 512 bytes per API contract */
 
    while (*p && di + 1 < cap)
    {
-      int    stripped = 0;
-      int    i;
+      int stripped = 0;
+      int i;
       size_t tlen;
 
       /* Check for tokens to strip entirely (case-insensitive) */
@@ -1010,7 +1002,7 @@ void npc_dialogue_sanitize_input(char *dst, const char *src)
          tlen = strlen(STRIP_TOKENS[i]);
          if (strncasecmp(p, STRIP_TOKENS[i], tlen) == 0)
          {
-            p      += tlen;
+            p += tlen;
             stripped = 1;
             break;
          }
@@ -1020,9 +1012,12 @@ void npc_dialogue_sanitize_input(char *dst, const char *src)
          continue;
 
       /* Replace angle brackets to prevent structural role confusion */
-      if      (*p == '<') dst[di++] = '(';
-      else if (*p == '>') dst[di++] = ')';
-      else                dst[di++] = *p;
+      if (*p == '<')
+         dst[di++] = '(';
+      else if (*p == '>')
+         dst[di++] = ')';
+      else
+         dst[di++] = *p;
 
       p++;
    }
@@ -1035,11 +1030,11 @@ void npc_dialogue_sanitize_input(char *dst, const char *src)
 
 void npc_dialogue_dispatch(CHAR_DATA *npc, CHAR_DATA *player, const char *message)
 {
-   NPC_DLG_STATE    *state;
-   NPC_DLG_REQ      *req;
-   char              sanitized[512];
-   char              user_turn[512];
-   int               i;
+   NPC_DLG_STATE *state;
+   NPC_DLG_REQ *req;
+   char sanitized[512];
+   char user_turn[512];
+   int i;
 
    /* Don't stack requests */
    if (npc->dlg_pending)
@@ -1067,18 +1062,17 @@ void npc_dialogue_dispatch(CHAR_DATA *npc, CHAR_DATA *player, const char *messag
       if (str_infix(INJECTION_TRIGGERS[i], sanitized))
       {
          NPC_DLG_RESP *resp = malloc(sizeof(NPC_DLG_RESP));
-         log_f("npc_dialogue: injection attempt by %s blocked: %.80s",
-               player->name, sanitized);
+         log_f("npc_dialogue: injection attempt by %s blocked: %.80s", player->name, sanitized);
          if (resp != NULL)
          {
-            resp->npc    = npc;
+            resp->npc = npc;
             resp->player = player;
             strncpy(resp->response_text, "I am not certain I follow your meaning.",
                     sizeof(resp->response_text) - 1);
             resp->response_text[sizeof(resp->response_text) - 1] = '\0';
             pthread_mutex_lock(&resp_mutex);
             resp->next = resp_head;
-            resp_head  = resp;
+            resp_head = resp;
             pthread_mutex_unlock(&resp_mutex);
          }
          return;
@@ -1091,7 +1085,7 @@ void npc_dialogue_dispatch(CHAR_DATA *npc, CHAR_DATA *player, const char *messag
       return;
    memset(req, 0, sizeof(NPC_DLG_REQ));
 
-   req->npc    = npc;
+   req->npc = npc;
    req->player = player;
    strncpy(req->player_name, player->name, sizeof(req->player_name) - 1);
 
@@ -1102,18 +1096,15 @@ void npc_dialogue_dispatch(CHAR_DATA *npc, CHAR_DATA *player, const char *messag
    req->history_count = 0;
    for (i = 0; i < state->count && req->history_count < MAX_REQUEST_TURNS - 1; i++)
    {
-      strncpy(req->history[req->history_count].role,
-              state->turns[i].role,
+      strncpy(req->history[req->history_count].role, state->turns[i].role,
               sizeof(req->history[0].role) - 1);
-      strncpy(req->history[req->history_count].content,
-              state->turns[i].content,
+      strncpy(req->history[req->history_count].content, state->turns[i].content,
               sizeof(req->history[0].content) - 1);
       req->history_count++;
    }
 
    /* Append user turn as final history entry */
-   strncpy(req->history[req->history_count].role, "user",
-           sizeof(req->history[0].role) - 1);
+   strncpy(req->history[req->history_count].role, "user", sizeof(req->history[0].role) - 1);
    strncpy(req->history[req->history_count].content, user_turn,
            sizeof(req->history[0].content) - 1);
    req->history_count++;
@@ -1121,19 +1112,15 @@ void npc_dialogue_dispatch(CHAR_DATA *npc, CHAR_DATA *player, const char *messag
    /* Append user turn to live history */
    if (state->count < MAX_DIALOGUE_TURNS)
    {
-      strncpy(state->turns[state->count].role, "user",
-              sizeof(state->turns[0].role) - 1);
-      strncpy(state->turns[state->count].content, user_turn,
-              sizeof(state->turns[0].content) - 1);
+      strncpy(state->turns[state->count].role, "user", sizeof(state->turns[0].role) - 1);
+      strncpy(state->turns[state->count].content, user_turn, sizeof(state->turns[0].content) - 1);
       state->count++;
    }
    else
    {
       /* Shift history to make room */
-      memmove(&state->turns[0], &state->turns[1],
-              (MAX_DIALOGUE_TURNS - 1) * sizeof(DIALOGUE_TURN));
-      strncpy(state->turns[MAX_DIALOGUE_TURNS - 1].role, "user",
-              sizeof(state->turns[0].role) - 1);
+      memmove(&state->turns[0], &state->turns[1], (MAX_DIALOGUE_TURNS - 1) * sizeof(DIALOGUE_TURN));
+      strncpy(state->turns[MAX_DIALOGUE_TURNS - 1].role, "user", sizeof(state->turns[0].role) - 1);
       strncpy(state->turns[MAX_DIALOGUE_TURNS - 1].content, user_turn,
               sizeof(state->turns[0].content) - 1);
    }
@@ -1144,7 +1131,7 @@ void npc_dialogue_dispatch(CHAR_DATA *npc, CHAR_DATA *player, const char *messag
    /* Enqueue request */
    pthread_mutex_lock(&req_mutex);
    req->next = req_head;
-   req_head  = req;
+   req_head = req;
    pthread_cond_signal(&req_cond);
    pthread_mutex_unlock(&req_mutex);
 
@@ -1163,7 +1150,7 @@ void npc_dialogue_deliver(void)
 
    /* Steal the entire response list atomically */
    pthread_mutex_lock(&resp_mutex);
-   list      = resp_head;
+   list = resp_head;
    resp_head = NULL;
    pthread_mutex_unlock(&resp_mutex);
 
@@ -1172,8 +1159,7 @@ void npc_dialogue_deliver(void)
       next = resp->next;
 
       /* Validate pointers using the MUD's is_free flag */
-      if (resp->npc == NULL || resp->npc->is_free ||
-          resp->player == NULL || resp->player->is_free)
+      if (resp->npc == NULL || resp->npc->is_free || resp->player == NULL || resp->player->is_free)
       {
          resp->npc->dlg_pending = FALSE;
          free(resp);
@@ -1184,8 +1170,7 @@ void npc_dialogue_deliver(void)
       resp->npc->dlg_pending = FALSE;
 
       /* Drop if NPC or player left the room */
-      if (resp->npc->in_room == NULL ||
-          resp->player->in_room == NULL ||
+      if (resp->npc->in_room == NULL || resp->player->in_room == NULL ||
           resp->npc->in_room != resp->player->in_room)
       {
          free(resp);
@@ -1242,7 +1227,7 @@ void npc_dialogue_deliver(void)
 void npc_dialogue_init(void)
 {
    pthread_t worker;
-   int       i, j;
+   int i, j;
 
    /* Zero topic table */
    for (i = 0; i < NUM_CITIES; i++)
