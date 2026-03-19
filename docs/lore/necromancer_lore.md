@@ -76,7 +76,29 @@ What is not in dispute is the historical scope of death-management knowledge tha
 
 ---
 
-## V. The Kinetimancer Synthesis
+## V. The Khenari Acknowledgment Dispute
+
+The historical record of Khenari knowledge incorporated into Entropy Scholar practice without formal acknowledgment — documented in the Kiess archives under "disputed institutional precedence claims" — has not remained purely historical. In the modern era it has become an active institutional dispute, and the Necromancer tradition's relationship to that dispute is one of the sharper moral questions practitioners currently navigate.
+
+The **Khenari Heritage Documentation Council**, a body formed in the late Compact era by Khenari community representatives in Kiess and Mafdet, submitted a formal petition to the Kiess archive administration in Era XX requesting that the disputed precedence records be reclassified from "contested" to "primary source documentation" — a reclassification that would give the records legal standing in academic citation disputes. The petition does not claim compensation, property rights over specific techniques, or any modification to how practitioners practice. It claims only that the records be acknowledged as what they are: documentation of Khenari knowledge contributions that the Entropy Scholar tradition incorporated and that subsequent Necromancer lineages practice in direct methodological continuity with.
+
+The Kiess archive administration, operating under the anti-sealed-warrant charter's principle that classification decisions cannot suppress accurate records, accepted the reclassification petition. The disputed precedence records are now classified as primary source documentation in the Kiess archives. They remain classified as "contested historical claims" in Midgaard's registry archive, which does not recognize the Kiess reclassification as binding on registry holdings.
+
+The Necromancer tradition's response has not been unified.
+
+A faction that calls itself, with deliberate plainness, the **Acknowledgment Line** holds that the reclassification is not enough — that honest practitioners should incorporate the Khenari contribution into the tradition's formal origin documentation, not as a historical footnote but as a co-founder claim. The Acknowledgment Line's position is that the *condense soul* and *soul net* techniques, which trace directly to the Akh'enet methodological lineage that Khenari practitioners developed and transmitted, cannot honestly be taught without acknowledging who developed them. Several Acknowledgment Line practitioners have begun teaching the relevant techniques under dual names: the standard Entropy Scholar designation alongside the Khenari practitioner name preserved in the Kiess primary source records.
+
+A larger faction, with no collective name but commonly called the **Continuity practitioners** by the Acknowledgment Line, holds that the petition and reclassification are appropriate — the records should be accurate — but that the tradition's formal origin documentation is a separate question from archival classification. They argue that every practitioner lineage incorporates knowledge from multiple sources; that the Entropy Scholar tradition's methodological synthesis is its own intellectual achievement regardless of the substrate it drew from; and that retroactive co-founder claims would require doing the same for every other knowledge contribution the tradition absorbed, which would be historically unmanageable and would not serve anyone's interests including the Khenari's.
+
+What neither faction disputes is the content of the Kiess records themselves: specific Entropy Scholars, named in those records, consulted Khenari practitioners on specific questions — the management of death transitions in Black Sun Shard-adjacent environments, the prevention of adverse Shard propagation through uncontrolled departures — and incorporated the answers into their own documented research without naming the source. That these events occurred is not contested. The contested question is what the tradition's current obligations are in relation to events that occurred generations before any living practitioner began their training.
+
+The Khenari community's own position is, characteristically, recorded rather than performed. The Heritage Documentation Council's petition response to the Kiess archive administration's reclassification decision is a single sentence: *"The record is now accurate. We will note what is done with it."*
+
+What is done with it remains, in the current era, an open question that individual Necromancer practitioners answer differently.
+
+---
+
+## VI. The Kinetimancer Synthesis
 
 The **Kinetimancer** adept path represents the synthesis of Necromancer entropy practice and **Egomancer** will-imposition practice — a combination that the tradition's founding documentation, the **Kinetic Formulists'** manuscripts, described as demonstrating that both traditions were working with **momentum**.
 
@@ -86,12 +108,12 @@ The synthesis does not merely combine two traditions; it creates a new applicati
 
 ---
 
-## VI. Cross-References
+## VII. Cross-References
 
 - **Timeline**: Pre-Keeper era (Entropy Scholars origin; working in margins), Era III (Black Sun Shard adjacent phenomena; death boundary anomalies; Solar Court Embalmer Houses), Era IV (Akh'enet mortuary-port structure; Jackal Balance Court), Era X (Psionicist academies' heresy designation conflict), Era XII (Kinetic Formulists' manuscripts; Violet Compact registration controversy)
 - **Great Pyramid**: Black Sun Shard death-boundary anomalies; Embalmer Houses as institutional predecessor
 - **Akh'enet**: Mortuary-port administrative tradition; Jackal Balance Court; death-administrative lineage context; condense soul and soul net methodological inheritance
-- **Khenari**: Death-ritual specialist people; practical knowledge documented in Kiess archives; disputed institutional precedence claims
+- **Khenari**: Death-ritual specialist people; practical knowledge reclassified as primary source documentation in Kiess archives; Khenari Heritage Documentation Council acknowledgment petition; Acknowledgment Line vs. Continuity practitioners split
 - **Psionicist**: Parent tradition; heresy-designating institution; shared contested domain
 - **Egomancer**: Parallel remort path; Kinetimancer synthesis prerequisite
 - **Kinetimancer**: Adept synthesis; Kinetic Formulists' momentum analysis

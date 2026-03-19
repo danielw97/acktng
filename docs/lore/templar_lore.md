@@ -64,6 +64,20 @@ The **Violet Compact's sanctioned Templar Corps** is the tradition's formal civi
 
 The Corps' sanctioned status creates an interesting political dynamic: Templars are simultaneously affiliated with civic authority (through the Compact's sanction) and with religious authority (through the Paladin and Priest traditions' theological frameworks). In most situations these authorities are aligned. When they diverge — when civic authority and religious commitment require different actions — the Templar tradition's Solar Court ancestry (auxiliary oath-bound to sacred spaces rather than to commanders) provides the doctrinal framework for how the conflict is resolved: the oath governs.
 
+### Rakuen and the Chronic Emergency Variation
+
+The five cities' Templar Corps assignments are not uniform in character, and no assignment produces a more distinct variant of the tradition than **Rakuen**.
+
+Rakuen is a city in permanent disaster posture. It has been refused annexation by Midgaard three times. Its infrastructure is rebuilt after each catastrophe on foundations still weakened by the previous one. Its three-faction governance structure — the Reconstruction Authority, the Open Ledger Civic Assembly, and the Embankment Ward Councils — produces functional governance under conditions that would collapse any of the three bodies operating alone, and produces grinding institutional tension under conditions that aren't actively catastrophic. It is chronically short of everything except the specific competencies that living in Rakuen forces.
+
+The Templar Corps' garrison in Rakuen is the Corps' oldest continuously operating posting. It has also been the most completely destroyed and rebuilt, multiple times. The Rakuen garrison has been swept away by flooding, buried by ashfall, and dispersed by fire. Its practitioner lineage has survived every one of these dispersals by carrying doctrine in practitioners rather than in buildings, which is — and Rakuen Templars note this with a particular flatness — consistent with the Solar Court auxiliary tradition the Corps claims as its origin.
+
+What chronic emergency does to Templar doctrine is not dilute it but stress-test it. The **Enhanced Heal** integration — the signature Templar technique of addressing physical damage and status conditions simultaneously — was developed in garrison conditions where two separate sequential treatments was a luxury the garrison crisis didn't permit. Rakuen Templars work in conditions where that original problem never went away. The technique has been refined in Rakuen to a degree that standard Corps training does not approach, because Rakuen practitioners cannot afford the gap that sequential treatment creates.
+
+The oath-binding aspect of the tradition has developed differently in Rakuen as well. In stable cities, oath-marking functions with institutional backing: a Paladin's oath archive gives the oath legal weight through the corps' archive infrastructure. In Rakuen, the archive has been flooded, burned, or evacuated too many times for practitioners to treat institutional backing as reliable. Rakuen Templars tend to operate on what they call **bare oath** doctrine — the position that an oath is binding because the practitioner has made it, not because an institution has recorded it. The Solar Court auxiliary tradition supports this view directly: auxiliaries were oath-bound to sacred spaces, not to commanders or institutional records. Rakuen practitioners are working closer to that original model than Corps practitioners anywhere else.
+
+The standard Corps' relationship to the Rakuen garrison is one of institutional ambivalence. Rakuen-trained Templars are the Corps' most practically capable practitioners and the least institutionally manageable. They tend to treat the Corps' standard operational protocols as guidelines calibrated for conditions that aren't the conditions they work in — which is accurate. Corps leadership in Midgaard has twice attempted to bring the Rakuen garrison into tighter institutional alignment, and twice found that the garrison's response to tighter oversight requirements was to function somewhat less effectively in actual emergencies. Both oversight programs were quietly dropped.
+
 ---
 
 ## VI. Cross-References
@@ -74,6 +88,7 @@ The Corps' sanctioned status creates an interesting political dynamic: Templars 
 - **Cleric**: Grandparent tradition; Solar Court foundational inheritance
 - **Great Pyramid / Solar Court**: Temple-guard auxiliary origin; dual-function precedent
 - **Midgaard**: Violet Compact institutional home; garrison crisis context; Templar Corps sanctioning
-- **Kiess / Rakuen**: Templar Corps garrison assignments; dual-function requirements in remote posts
+- **Kiess**: Templar Corps garrison assignment; anti-sealed-warrant charter creates different legal operating conditions
+- **Rakuen**: Oldest continuously operating Corps garrison; chronic emergency context; bare oath doctrine; Enhanced Heal refinement; Corps ambivalence about Rakuen practitioners
 
 See also: `paladin_lore.md`, `priest_lore.md`, `cleric_lore.md`, `midgaard_lore.md`, `great_pyramid_lore.md`, `timeline.md`

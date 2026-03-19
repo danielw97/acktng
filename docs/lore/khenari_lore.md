@@ -119,6 +119,18 @@ The Khenari find the Serathi's sky-reading tradition interesting from a document
 
 See also: `serathi_lore.md`
 
+### The Entropy Scholars and Their Descendants
+
+The Khenari Heritage Documentation Council's petition to the Kiess archive administration — requesting reclassification of disputed precedence records from "contested" to "primary source documentation" — was filed in the late Compact era and accepted. The petition concerns a specific body of records documenting instances where Entropy Scholar practitioners (the forerunners of modern Necromancers) consulted Khenari death-ritual specialists on questions of death-transition management in Black Sun Shard-adjacent environments, and incorporated those answers into their own research without formal acknowledgment. The records are now classified as primary source documentation in Kiess; Midgaard's registry archive continues to classify them as contested.
+
+The Heritage Documentation Council's public statement on the petition's acceptance was one sentence. The Council continues to record what is done with the reclassified documentation.
+
+The Necromancer tradition is split between practitioners who have begun formally acknowledging the Khenari contribution in their teaching and practitioners who hold that archival reclassification and formal origin documentation are separate questions. The Khenari observe both positions. They note that the *condense soul* and *soul net* techniques whose Akh'enet-Khenari methodological lineage is now primary-source documented remain in active practice regardless of how individual Necromancer practitioners characterize their origin.
+
+This is consistent with the Khenari approach to such matters generally: the record is what matters. Human practitioners' relationship to the record is their own affair, observed and noted.
+
+See also: `necromancer_lore.md`
+
 ### Kethari
 
 The Khenari and the Kethari share adjacent territory in the Akh'enet corridor and parallel experiences of human institutional engagement. Both peoples provide expertise to human institutions; both are systematically under-credited for that expertise; both maintain independent records that are more accurate than the human institutional records that reference them.

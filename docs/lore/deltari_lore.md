@@ -57,6 +57,28 @@ The Deltari position on the Black Ledger is consistent: it should be opened. The
 
 The Jade Magistracy's continued refusal to open the ledger creates a persistent tension between Deltari communities and Kowloon's official institutions that has never been fully resolved.
 
+### The Hydraulic Heritage Council
+
+The **Deltari Hydraulic Heritage Council** was formed in the current era from Deltari community representatives across all five cities. Its mandate is narrow and specific: formal acknowledgment in civic institutional histories that Deltari hydraulic engineers designed and built the cistern network infrastructure underlying the Keeper Era's desert road system — the infrastructure that made large-scale water convoy operations viable and that the road warden companies (forerunners of the modern Warden tradition) were institutionally organized to protect.
+
+The Council's petition to Midgaard's Guard Command requests one thing: that the Guard Command's official institutional history, which currently traces the warden tradition through the road warden companies without describing the infrastructure those companies were protecting, include language acknowledging that the cistern and shade infrastructure enabling desert water convoys was Deltari-engineered.
+
+The petition explicitly does not claim:
+- Compensation of any kind
+- Rights in the warden tradition's practice or identity
+- Revision of the Seven Shade Arches' foundational narrative
+- Any modification to how wardens train or operate
+
+It claims only that the infrastructure that defined the warden tradition's original operational problem was Deltari work, and that the Guard Command's institutional history should be accurate about this.
+
+The **Continuity faction** within Midgaard's politics has advised Guard Command to defer the petition indefinitely, on the grounds that incorporating the acknowledgment into official documentation would create legal precedent for similar petitions from other historically exploited communities whose knowledge contributions are documented in the Kiess archives. The Continuity faction's position is not that the acknowledgment is inaccurate but that accuracy is not the only relevant consideration.
+
+The **Reckoning faction** has publicly supported the petition, framing it explicitly as a limited acknowledgment that costs Guard Command nothing material while addressing a genuine historical falsification in official records. Several Reckoning-aligned civic historians have submitted supporting analyses demonstrating that the Guard Command history's current language, while never explicitly stating that wardens built the cistern network, structurally implies it through omission.
+
+Guard Command's current response has been neither deferral nor acceptance: a review committee was convened, met twice, and has not issued a report. This outcome is, according to Deltari oral tradition, consistent with every previous attempt to achieve formal acknowledgment through Midgaard's institutional channels. The flow records say: eddies where current meets obstruction.
+
+See also: `warden_lore.md`
+
 ### Water-Reading
 
 The Deltari perceptual gift — their ability to **read the flow** — extends beyond literal water. In the same way that a skilled physician can read the state of a body through pulse and breath, skilled Deltari readers can assess the state of complex systems through the patterns of movement within them: market flows, information flows, power flows. They describe it in water metaphors — eddies where current meets obstruction, the turbulence downstream from structural failure, the deep smooth current that indicates genuine depth.
