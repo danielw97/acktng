@@ -86,32 +86,33 @@ training ground, and command post.
 
 ---
 
-## Ranks
+## Rank Titles
 
-| Rank | Title | Access |
-|---|---|---|
-| 0 | Responder | Basic emergency and gathering tasks; society channel |
-| 1 | Warden | Access to supply depot; delivery and escort tasks |
-| 2 | Senior Warden | Repair and containment tasks; mid-tier skills |
-| 3 | Warden-Lieutenant | Can mentor recruits; access to woodland expeditions |
-| 4 | Warden-Captain | Can enroll new members; access to cross-city emergency tasks |
-| 5 | Warden-Commander | Inner circle; directs emergency response; top-tier skills |
+| Rank Score | Title |
+|---|---|
+| -99 to 0 | Responder |
+| 1 to 99 | Warden |
+| 100 to 199 | Senior Warden |
+| 200 to 299 | Warden-Lieutenant |
+| 300 to 399 | Warden-Captain |
+| 400 to 500 | Warden-Commander |
 
 ---
 
 ## Skills
 
 Ember Warden skills focus on survival, resource management, and environmental
-interaction.
+interaction. Each skill unlocks when the player's rank score reaches the
+listed threshold.
 
-| Slot | Skill | Rank | Description |
-|---|---|---|---|
-| 0 | `forage` | 0 | Gather a random botanical material or food item from the current outdoor room. One item per use. 3-minute cooldown. Items are consumed for tasks or sold. |
-| 1 | `field_repair` | 1 | Repair a damaged piece of equipment, restoring a portion of its condition. Cannot improve beyond original state. Works on own or ally's gear. 10-minute cooldown. |
-| 2 | `ember_signal` | 2 | Light an emergency signal in the current room. All Ember Wardens in the same area receive a notification with the room name. One signal active at a time. |
-| 3 | `stabilize` | 3 | Stabilize a mortally wounded ally, preventing death for 30 seconds (enough time to heal or flee). Cannot be used in the same fight twice. |
-| 4 | `containment_ward` | 4 | Place a temporary barrier on a room exit that prevents mobs below a level threshold from passing through. Lasts 10 minutes. One ward active at a time. |
-| 5 | `emergency_cache` | 5 | Create a supply cache in the current outdoor room containing basic healing and food items. Accessible by any Ember Warden. Lasts 24 hours. One cache active at a time. |
+| Skill | Rank Required | Description |
+|---|---|---|
+| `forage` | -99 (Responder) | Gather a random botanical material or food item from the current outdoor room. One item per use. 3-minute cooldown. Items are consumed for tasks or sold. |
+| `field_repair` | 1 (Warden) | Repair a damaged piece of equipment, restoring a portion of its condition. Cannot improve beyond original state. Works on own or ally's gear. 10-minute cooldown. |
+| `ember_signal` | 100 (Senior Warden) | Light an emergency signal in the current room. All Ember Wardens in the same area receive a notification with the room name. One signal active at a time. |
+| `stabilize` | 200 (Warden-Lieutenant) | Stabilize a mortally wounded ally, preventing death for 30 seconds (enough time to heal or flee). Cannot be used in the same fight twice. |
+| `containment_ward` | 300 (Warden-Captain) | Place a temporary barrier on a room exit that prevents mobs below a level threshold from passing through. Lasts 10 minutes. One ward active at a time. |
+| `emergency_cache` | 400 (Warden-Commander) | Create a supply cache in the current outdoor room containing basic healing and food items. Accessible by any Ember Warden. Lasts 24 hours. One cache active at a time. |
 
 ---
 

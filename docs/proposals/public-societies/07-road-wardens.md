@@ -99,31 +99,32 @@ training paddock, and warden-master's office.
 
 ---
 
-## Ranks
+## Rank Titles
 
-| Rank | Title | Access |
-|---|---|---|
-| 0 | Runner | Basic escort and delivery tasks; society channel |
-| 1 | Outrider | Access to supply post; route-clearing tasks |
-| 2 | Trailkeeper | Scouting and maintenance tasks; mid-tier skills |
-| 3 | Road Sergeant | Can mentor recruits; access to long-distance route tasks |
-| 4 | Road Captain | Can enroll new members; access to cross-continental tasks |
-| 5 | Warden-Master | Inner circle; commands route assignments; top-tier skills |
+| Rank Score | Title |
+|---|---|
+| -99 to 0 | Runner |
+| 1 to 99 | Outrider |
+| 100 to 199 | Trailkeeper |
+| 200 to 299 | Road Sergeant |
+| 300 to 399 | Road Captain |
+| 400 to 500 | Warden-Master |
 
 ---
 
 ## Skills
 
-Road Warden skills focus on travel, navigation, and wilderness logistics.
+Road Warden skills focus on travel, navigation, and wilderness logistics. Each
+skill unlocks when the player's rank score reaches the listed threshold.
 
-| Slot | Skill | Rank | Description |
-|---|---|---|---|
-| 0 | `wayfind` | 0 | In wilderness rooms, reveal the shortest route to the nearest city or Road Warden post. Displays a series of exit directions. |
-| 1 | `road_camp` | 1 | Establish a temporary camp in an outdoor room. The camp provides a safe resting point where aggressive mobs will not initiate combat. Lasts 30 minutes. |
-| 2 | `forced_march` | 2 | For the next 5 minutes, the player's movement between rooms has no movement-point cost. 30-minute cooldown. |
-| 3 | `route_marker` | 3 | Place a permanent waypoint marker in the current room visible to all Road Wardens. Markers persist across reboots (saved to area file). Maximum 20 markers per player. |
-| 4 | `dispatch_rider` | 4 | Send a message to any online Road Warden member regardless of distance. Functions as a one-way long-range tell. 10-minute cooldown. |
-| 5 | `road_gate` | 5 | Open a temporary portal from the current room to the nearest Road Warden post. The portal lasts 2 minutes and can be used by any member of the player's group. One use per day. |
+| Skill | Rank Required | Description |
+|---|---|---|
+| `wayfind` | -99 (Runner) | In wilderness rooms, reveal the shortest route to the nearest city or Road Warden post. Displays a series of exit directions. |
+| `road_camp` | 1 (Outrider) | Establish a temporary camp in an outdoor room. The camp provides a safe resting point where aggressive mobs will not initiate combat. Lasts 30 minutes. |
+| `forced_march` | 100 (Trailkeeper) | For the next 5 minutes, the player's movement between rooms has no movement-point cost. 30-minute cooldown. |
+| `route_marker` | 200 (Road Sergeant) | Place a permanent waypoint marker in the current room visible to all Road Wardens. Markers persist across reboots (saved to area file). Maximum 20 markers per player. |
+| `dispatch_rider` | 300 (Road Captain) | Send a message to any online Road Warden member regardless of distance. Functions as a one-way long-range tell. 10-minute cooldown. |
+| `road_gate` | 400 (Warden-Master) | Open a temporary portal from the current room to the nearest Road Warden post. The portal lasts 2 minutes and can be used by any member of the player's group. One use per day. |
 
 ---
 

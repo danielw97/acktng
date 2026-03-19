@@ -87,32 +87,34 @@ armory, training yard, and briefing room.
 
 ---
 
-## Ranks
+## Rank Titles
 
-| Rank | Title | Access |
-|---|---|---|
-| 0 | Watchman | Basic patrol and hunt tasks; society channel |
-| 1 | Guard | Access to armory; escort tasks |
-| 2 | Sergeant | Advanced hunt and defense tasks; mid-tier skills |
-| 3 | Lieutenant | Can mentor recruits; access to cross-district tasks |
-| 4 | Captain | Can enroll new members; access to inter-city tasks |
-| 5 | Marshal | Inner circle; commands patrol assignments; top-tier skills |
+| Rank Score | Title |
+|---|---|
+| -99 to 0 | Watchman |
+| 1 to 99 | Guard |
+| 100 to 199 | Sergeant |
+| 200 to 299 | Lieutenant |
+| 300 to 399 | Captain |
+| 400 to 500 | Marshal |
 
 ---
 
 ## Skills
 
 Guard Command skills focus on martial readiness, tactical awareness, and field
-survival.
+survival. Each skill unlocks when the player's rank score reaches the listed
+threshold. If rank drops below the threshold, the skill becomes unavailable
+until rank recovers.
 
-| Slot | Skill | Rank | Description |
-|---|---|---|---|
-| 0 | `patrol_sense` | 0 | Detect aggressive mobs within 2 rooms in any direction. Shows direction and approximate strength (weak/moderate/dangerous). |
-| 1 | `field_mend` | 1 | Perform basic field medicine on self or an ally. Restores a small amount of HP outside of combat. 5-minute cooldown. Does not scale with level — pure utility. |
-| 2 | `rally_cry` | 2 | Shout a rallying cry that briefly suppresses fear effects on all group members in the room. 10-minute cooldown. Does not grant combat bonuses — only removes existing fear/panic debuffs. |
-| 3 | `fortify` | 3 | Temporarily reinforce a room exit, increasing the difficulty of mobs entering from that direction. Lasts 15 minutes. One fortification active at a time. |
-| 4 | `tactical_assess` | 4 | Examine a mob to reveal its special attacks, resistances, and approximate HP percentage. More detailed than standard `consider`. |
-| 5 | `command_presence` | 5 | Passive aura: guard NPCs in the current room defer to the player, suppressing their aggro against the player's group. Does not affect non-guard mobs. 30-minute cooldown. |
+| Skill | Rank Required | Description |
+|---|---|---|
+| `patrol_sense` | -99 (Watchman) | Detect aggressive mobs within 2 rooms in any direction. Shows direction and approximate strength (weak/moderate/dangerous). |
+| `field_mend` | 1 (Guard) | Perform basic field medicine on self or an ally. Restores a small amount of HP outside of combat. 5-minute cooldown. Does not scale with level — pure utility. |
+| `rally_cry` | 100 (Sergeant) | Shout a rallying cry that briefly suppresses fear effects on all group members in the room. 10-minute cooldown. Does not grant combat bonuses — only removes existing fear/panic debuffs. |
+| `fortify` | 200 (Lieutenant) | Temporarily reinforce a room exit, increasing the difficulty of mobs entering from that direction. Lasts 15 minutes. One fortification active at a time. |
+| `tactical_assess` | 300 (Captain) | Examine a mob to reveal its special attacks, resistances, and approximate HP percentage. More detailed than standard `consider`. |
+| `command_presence` | 400 (Marshal) | Passive aura: guard NPCs in the current room defer to the player, suppressing their aggro against the player's group. Does not affect non-guard mobs. 30-minute cooldown. |
 
 ---
 

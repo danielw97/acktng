@@ -86,31 +86,32 @@ chambers are restricted to members.
 
 ---
 
-## Ranks
+## Rank Titles
 
-| Rank | Title | Access |
-|---|---|---|
-| 0 | Petitioner | Basic investigation and escort tasks; society channel |
-| 1 | Sworn | Access to armory; tracking and confrontation tasks |
-| 2 | Claw Agent | Cross-city enforcement tasks; mid-tier skills |
-| 3 | Arbiter | Can mentor recruits; arbitration tasks; oath vault access |
-| 4 | Senior Arbiter | Can enroll new members; access to high-value bounties |
-| 5 | High Claw | Inner circle; sets enforcement priorities; top-tier skills |
+| Rank Score | Title |
+|---|---|
+| -99 to 0 | Petitioner |
+| 1 to 99 | Sworn |
+| 100 to 199 | Claw Agent |
+| 200 to 299 | Arbiter |
+| 300 to 399 | Senior Arbiter |
+| 400 to 500 | High Claw |
 
 ---
 
 ## Skills
 
-Shrine skills focus on tracking, investigation, and enforcement authority.
+Shrine skills focus on tracking, investigation, and enforcement authority. Each
+skill unlocks when the player's rank score reaches the listed threshold.
 
-| Slot | Skill | Rank | Description |
-|---|---|---|---|
-| 0 | `oath_mark` | 0 | Mark an NPC or player as an oath-subject. The mark is visible only to Shrine members and persists for 1 hour. Used to identify task targets. |
-| 1 | `track_quarry` | 1 | When used in a room the target has recently visited, reveals the direction they departed. Works on NPCs and players. 5-minute cooldown. |
-| 2 | `writ_of_hold` | 2 | Present a writ to an NPC, preventing them from moving for 5 minutes. The NPC must be a valid task target. Does not work on players or bosses. |
-| 3 | `interrogate` | 3 | Question an NPC in the room to learn information about a target's location or schedule. Success depends on proficiency. 10-minute cooldown. |
-| 4 | `oath_seal` | 4 | Seal a sworn agreement between two parties (player-to-player or player-to-NPC). If either party breaks the agreement, the other is notified. Cosmetic/RP authority. |
-| 5 | `judgment` | 5 | Declare judgment on an NPC oath-breaker, stripping their shop/service functions for 30 minutes. Powerful enforcement tool. One use per day. |
+| Skill | Rank Required | Description |
+|---|---|---|
+| `oath_mark` | -99 (Petitioner) | Mark an NPC or player as an oath-subject. The mark is visible only to Shrine members and persists for 1 hour. Used to identify task targets. |
+| `track_quarry` | 1 (Sworn) | When used in a room the target has recently visited, reveals the direction they departed. Works on NPCs and players. 5-minute cooldown. |
+| `writ_of_hold` | 100 (Claw Agent) | Present a writ to an NPC, preventing them from moving for 5 minutes. The NPC must be a valid task target. Does not work on players or bosses. |
+| `interrogate` | 200 (Arbiter) | Question an NPC in the room to learn information about a target's location or schedule. Success depends on proficiency. 10-minute cooldown. |
+| `oath_seal` | 300 (Senior Arbiter) | Seal a sworn agreement between two parties (player-to-player or player-to-NPC). If either party breaks the agreement, the other is notified. Cosmetic/RP authority. |
+| `judgment` | 400 (High Claw) | Declare judgment on an NPC oath-breaker, stripping their shop/service functions for 30 minutes. Powerful enforcement tool. One use per day. |
 
 ---
 

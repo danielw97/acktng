@@ -89,32 +89,33 @@ yard, and commander's quarters are restricted to members.
 
 ---
 
-## Ranks
+## Rank Titles
 
-| Rank | Title | Access |
-|---|---|---|
-| 0 | Sentry | Basic patrol and scouting tasks; society channel |
-| 1 | Ranger | Access to frontier armory; escort and clearing tasks |
-| 2 | Pathfinder | Advanced frontier tasks; mid-tier skills |
-| 3 | Wall Sergeant | Can mentor recruits; access to Cinderteeth-approach tasks |
-| 4 | Wall Captain | Can enroll new members; access to deep frontier missions |
-| 5 | Castellan | Inner circle; commands patrol assignments; top-tier skills |
+| Rank Score | Title |
+|---|---|
+| -99 to 0 | Sentry |
+| 1 to 99 | Ranger |
+| 100 to 199 | Pathfinder |
+| 200 to 299 | Wall Sergeant |
+| 300 to 399 | Wall Captain |
+| 400 to 500 | Castellan |
 
 ---
 
 ## Skills
 
 Wall Command skills focus on wilderness survival, fortification, and frontier
-awareness.
+awareness. Each skill unlocks when the player's rank score reaches the listed
+threshold.
 
-| Slot | Skill | Rank | Description |
-|---|---|---|---|
-| 0 | `frontier_scan` | 0 | Survey the current outdoor room and its exits for recent mob movement. Reveals how many aggressive mobs are in adjacent rooms. |
-| 1 | `shelter` | 1 | Construct a temporary shelter in the current outdoor room. The shelter provides weather protection and slightly accelerated HP/mana regen for the builder's group. Lasts 1 hour. |
-| 2 | `trailblaze` | 2 | Mark a path through the current room. Wall Command members who enter the room see the mark and the direction it points, aiding navigation in confusing wilderness areas. Lasts 12 hours. |
-| 3 | `barricade` | 3 | Block a room exit with a barricade that prevents mob movement for 10 minutes. Players can pass through with a brief delay (1 round of lag). One barricade active at a time. |
-| 4 | `signal_tower` | 4 | Erect a temporary signal point in the current outdoor room. All Wall Command members in the same area receive a notification when an aggressive mob enters a room adjacent to the signal. Lasts 30 minutes. |
-| 5 | `frontier_passage` | 5 | Open a shortcut through difficult terrain, creating a temporary one-way exit from the current room to a room you have previously trailblazed. Lasts 10 minutes. One use per day. |
+| Skill | Rank Required | Description |
+|---|---|---|
+| `frontier_scan` | -99 (Sentry) | Survey the current outdoor room and its exits for recent mob movement. Reveals how many aggressive mobs are in adjacent rooms. |
+| `shelter` | 1 (Ranger) | Construct a temporary shelter in the current outdoor room. The shelter provides weather protection and slightly accelerated HP/mana regen for the builder's group. Lasts 1 hour. |
+| `trailblaze` | 100 (Pathfinder) | Mark a path through the current room. Wall Command members who enter the room see the mark and the direction it points, aiding navigation in confusing wilderness areas. Lasts 12 hours. |
+| `barricade` | 200 (Wall Sergeant) | Block a room exit with a barricade that prevents mob movement for 10 minutes. Players can pass through with a brief delay (1 round of lag). One barricade active at a time. |
+| `signal_tower` | 300 (Wall Captain) | Erect a temporary signal point in the current outdoor room. All Wall Command members in the same area receive a notification when an aggressive mob enters a room adjacent to the signal. Lasts 30 minutes. |
+| `frontier_passage` | 400 (Castellan) | Open a shortcut through difficult terrain, creating a temporary one-way exit from the current room to a room you have previously trailblazed. Lasts 10 minutes. One use per day. |
 
 ---
 

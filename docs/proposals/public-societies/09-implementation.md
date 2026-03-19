@@ -27,7 +27,7 @@ into 5 phases.
 
 ### Struct Modifications (`src/headers/ack.h`)
 
-- [ ] Add to `PC_DATA`: `pub_society`, `pub_society_rank`, `pub_society_rep`,
+- [ ] Add to `PC_DATA`: `pub_society`, `pub_society_rank` (int, -500 to 500),
   `pub_society_tasks`, `pub_society_joined`
 - [ ] Add to `MOB_INDEX_DATA`: `pub_society`, `pub_society_npc_role`
 
@@ -72,16 +72,24 @@ into 5 phases.
   `promote`, `resign`, `history`
 - [ ] Implement public society channel via `CHANNEL_PUB_SOCIETY`
 
-### Rank Advancement
+### Rank and Skill Gating
 
-- [ ] Implement `do_pub_society_promote()`: check task count and reputation
-- [ ] Write unit test: promotion requirements are correctly enforced
+- [ ] Implement `pub_society_skills_available()`: return number of skills
+  unlocked at a given rank score
+- [ ] Implement `can_use_pub_society_skill()`: check membership and rank
+  threshold for the specific skill
+- [ ] Implement rank title lookup from rank score
+- [ ] Write unit test: skills unlock/lock correctly at each threshold
+- [ ] Write unit test: rank title updates dynamically with score changes
 
-### Departure
+### Departure and Skill Loss
 
 - [ ] Implement `do_pub_society_resign()`: confirmation prompt, field clearing,
-  7-day cooldown
-- [ ] Implement automatic discharge when reputation drops below -300
+  7-day cooldown, all skills immediately unusable
+- [ ] Implement automatic discharge when rank drops below -300
+- [ ] Write unit test: leaving zeroes membership and disables all skills
+- [ ] Write unit test: skill proficiency is retained in `learned[]` but
+  `can_use_pub_society_skill()` returns FALSE when not a member
 
 ### Visibility
 
@@ -100,7 +108,8 @@ into 5 phases.
 - [ ] Define all 36 public society skills (6 per society) in
   `src/skills/skill_table_data.c`
 - [ ] Add `gsn_*` declarations for all public society skills in `globals.h`
-- [ ] Implement `can_use_pub_society_skill()` gating function
+- [ ] Verify `can_use_pub_society_skill()` gates on both membership and rank
+  score threshold (implemented in Phase 2)
 
 ### Per-Society Skills
 
@@ -226,7 +235,7 @@ into 5 phases.
 
 | Test File | Tests |
 |---|---|
-| `test_pub_society.c` | `can_join_pub_society()`, rank requirements, reputation bounds |
+| `test_pub_society.c` | `can_join_pub_society()`, `pub_society_skills_available()`, rank threshold gating, skill loss on departure |
 | `test_pub_society_save.c` | Save/load round-trip; backward compatibility |
 
 ### Integration Test

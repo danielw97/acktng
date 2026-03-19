@@ -85,31 +85,32 @@ warehouse, training office, and records room.
 
 ---
 
-## Ranks
+## Rank Titles
 
-| Rank | Title | Access |
-|---|---|---|
-| 0 | Clerk | Basic courier and appraisal tasks; society channel |
-| 1 | Factor | Access to bonded warehouse; trade transport tasks |
-| 2 | Assessor | Audit and investigation tasks; mid-tier skills |
-| 3 | Arbiter | Can mentor recruits; access to cross-city trade tasks |
-| 4 | Senior Syndic | Can enroll new members; access to high-value contracts |
-| 5 | Port Master | Inner circle; controls contract assignments; top-tier skills |
+| Rank Score | Title |
+|---|---|
+| -99 to 0 | Clerk |
+| 1 to 99 | Factor |
+| 100 to 199 | Assessor |
+| 200 to 299 | Arbiter |
+| 300 to 399 | Senior Syndic |
+| 400 to 500 | Port Master |
 
 ---
 
 ## Skills
 
-Harbor Syndic skills focus on commerce, appraisal, and trade logistics.
+Harbor Syndic skills focus on commerce, appraisal, and trade logistics. Each
+skill unlocks when the player's rank score reaches the listed threshold.
 
-| Slot | Skill | Rank | Description |
-|---|---|---|---|
-| 0 | `appraise` | 0 | Determine the exact gold value of any item, including hidden modifiers. More accurate than standard `value` at shops. |
-| 1 | `manifest` | 1 | Create an itemized manifest of your inventory showing item names, types, and values. Can be given to NPCs as proof of cargo for trade tasks. |
-| 2 | `haggle` | 2 | When buying from or selling to an NPC shop, temporarily improve the price by up to 10% based on proficiency. 15-minute cooldown per shop. |
-| 3 | `trade_ledger` | 3 | View a summary of NPC shop inventories in the current area without visiting each shop. Shows item names and approximate prices. |
-| 4 | `bonded_cargo` | 4 | Seal an item in a bonded cargo container that protects it from theft, drop-on-death, and decay for 1 hour. One container active at a time. |
-| 5 | `commercial_writ` | 5 | Issue a writ that grants a named player a one-time 15% discount at any NPC shop in Kowloon. The writ is a transferable item. One writ per day. |
+| Skill | Rank Required | Description |
+|---|---|---|
+| `appraise` | -99 (Clerk) | Determine the exact gold value of any item, including hidden modifiers. More accurate than standard `value` at shops. |
+| `manifest` | 1 (Factor) | Create an itemized manifest of your inventory showing item names, types, and values. Can be given to NPCs as proof of cargo for trade tasks. |
+| `haggle` | 100 (Assessor) | When buying from or selling to an NPC shop, temporarily improve the price by up to 10% based on proficiency. 15-minute cooldown per shop. |
+| `trade_ledger` | 200 (Arbiter) | View a summary of NPC shop inventories in the current area without visiting each shop. Shows item names and approximate prices. |
+| `bonded_cargo` | 300 (Senior Syndic) | Seal an item in a bonded cargo container that protects it from theft, drop-on-death, and decay for 1 hour. One container active at a time. |
+| `commercial_writ` | 400 (Port Master) | Issue a writ that grants a named player a one-time 15% discount at any NPC shop in Kowloon. The writ is a transferable item. One writ per day. |
 
 ---
 

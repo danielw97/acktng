@@ -4,8 +4,7 @@
 
 ```c
 #define MAX_PUB_SOCIETY        7   /* 0 = none, 1-6 = the six societies        */
-#define MAX_PUB_SOCIETY_RANK   6   /* ranks 0-5 (0 = recruit, 5 = commander)   */
-#define MAX_PUB_SOCIETY_REP  500   /* reputation cap (positive and negative)    */
+#define MAX_PUB_SOCIETY_RANK 500   /* rank cap (positive and negative)          */
 
 #define PUB_SOCIETY_NONE              0
 #define PUB_SOCIETY_GUARD_COMMAND     1   /* Midgaard — military defense         */
@@ -59,23 +58,27 @@ society fields.
 ```c
 /* In PC_DATA (ack.h) */
 sh_int pub_society;              /* Public society ID (0 = none, 1-6)       */
-sh_int pub_society_rank;         /* Rank within society (0-5)               */
-int    pub_society_rep;          /* Reputation (-500 to 500)                */
+int    pub_society_rank;         /* Rank score (-500 to 500)                */
 int    pub_society_tasks;        /* Lifetime completed task count           */
 time_t pub_society_joined;       /* Timestamp of joining                    */
 ```
 
+Rank is a single numeric score that serves as both reputation and progression
+axis. There is no separate reputation field — rank **is** reputation. As rank
+crosses thresholds, skills unlock and the player's displayed title changes
+automatically.
+
 ### Comparison with Secret Society Fields
 
 Public societies require fewer fields because they have no exposure system,
-no sigil mechanics, no PvP windows, and no disavowal. The fields track only
-membership, rank, reputation, task count, and join date.
+no sigil mechanics, no PvP windows, and no disavowal. Rank and reputation
+are collapsed into a single field.
 
 | Feature | Secret Society | Public Society |
 |---|---|---|
 | Society ID | `society` | `pub_society` |
-| Rank | `society_rank` | `pub_society_rank` |
-| Reputation | `society_rep` | `pub_society_rep` |
+| Rank | `society_rank` | `pub_society_rank` (numeric score, -500 to 500) |
+| Reputation | `society_rep` | Merged into `pub_society_rank` |
 | Task/mission count | `society_missions` | `pub_society_tasks` |
 | Join timestamp | `society_joined` | `pub_society_joined` |
 | Flags bitfield | `society_flags` | Not needed |
@@ -87,29 +90,47 @@ membership, rank, reputation, task count, and join date.
 
 ---
 
-## Reputation
+## Rank Thresholds and Skill Gating
 
-Public society reputation uses the same -500 to +500 range as secret
-societies. The tier labels reflect institutional standing:
+Rank is a signed integer from -500 to +500. As rank crosses thresholds, skills
+unlock immediately. If rank drops below a threshold, the skill becomes
+unavailable until rank recovers.
 
-| Range | Label | Effect |
-|---|---|---|
-| -500 to -300 | Dishonorably Discharged | Expelled; barred for 30 days |
-| -299 to -100 | Disciplined | Restricted task access |
-| -99 to 99 | Standing | Standard access |
-| 100 to 299 | Commended | Priority task access |
-| 300 to 499 | Decorated | Command tasks; institutional privileges |
-| 500 | Exemplary | Maximum standing; leadership tier |
+| Range | Title | Skills Unlocked | Effect |
+|---|---|---|---|
+| -500 to -300 | Dishonorably Discharged | None | Expelled; barred for 30 days |
+| -299 to -100 | Disciplined | None (suspended) | All skills suspended; restricted task access |
+| -99 to 0 | Recruit | Skill 1 | Basic access only |
+| 1 to 99 | Member | Skills 1-2 | Standard access |
+| 100 to 199 | Veteran | Skills 1-3 | Priority task access |
+| 200 to 299 | Officer | Skills 1-4 | Can mentor recruits |
+| 300 to 399 | Senior Officer | Skills 1-5 | Can enroll new members; institutional privileges |
+| 400 to 500 | Commander | Skills 1-6 (all) | Maximum standing; leadership tier |
 
-Reputation changes:
+### Skill Access Check
+
+```c
+/* Returns the number of society skills unlocked at the given rank score */
+int pub_society_skills_available(int rank_score)
+{
+   if (rank_score < -99)  return 0;  /* Disciplined or Discharged */
+   if (rank_score <= 0)   return 1;  /* Recruit */
+   if (rank_score < 100)  return 2;  /* Member */
+   if (rank_score < 200)  return 3;  /* Veteran */
+   if (rank_score < 300)  return 4;  /* Officer */
+   if (rank_score < 400)  return 5;  /* Senior Officer */
+   return 6;                         /* Commander */
+}
+```
+
+Rank changes:
 - Completing tasks: +10 to +50 depending on difficulty
 - Failing tasks: -5 to -20 depending on severity
 - Abandoning tasks: -3 to -10
-- Mentoring a recruit (rank 3+): +15
-- Time-based decay: reputation above 300 decays by 1 per game day toward 300
+- Mentoring a recruit (Officer+): +15
+- Time-based decay: rank above 300 decays by 1 per game day toward 300
 
-No exposure penalties exist for public societies. The reputation system is
-simpler because public society work carries no risk of identity compromise.
+No exposure penalties exist for public societies.
 
 ---
 
@@ -151,8 +172,7 @@ secret societies.
 
 ```
 PubSociety   2
-PubSocRank   3
-PubSocRep    225
+PubSocRank   225
 PubSocTasks  28
 PubSocJoined 1742400000
 ```
@@ -166,7 +186,6 @@ if (ch->pcdata->pub_society > 0)
 {
    fprintf(fp, "PubSociety   %d\n", ch->pcdata->pub_society);
    fprintf(fp, "PubSocRank   %d\n", ch->pcdata->pub_society_rank);
-   fprintf(fp, "PubSocRep    %d\n", ch->pcdata->pub_society_rep);
    fprintf(fp, "PubSocTasks  %d\n", ch->pcdata->pub_society_tasks);
    fprintf(fp, "PubSocJoined %ld\n", (long)ch->pcdata->pub_society_joined);
 }
@@ -199,11 +218,10 @@ struct pub_society_task_type
 {
    int    id;                      /* unique task ID                         */
    sh_int pub_society;             /* which society offers this              */
-   sh_int min_rank;                /* minimum rank to accept                 */
-   sh_int min_rep;                 /* minimum reputation to accept           */
+   int    min_rank;                /* minimum rank score to accept           */
    sh_int difficulty;              /* 1-5 scale                              */
-   int    rep_reward;              /* reputation gained on success           */
-   int    rep_penalty;             /* reputation lost on failure             */
+   int    rank_reward;             /* rank gained on success                 */
+   int    rank_penalty;            /* rank lost on failure                   */
    int    gold_reward;             /* gold paid on success                   */
    int    time_limit;              /* ticks before auto-failure (0=none)     */
    char  *name;                    /* task name shown to player              */
@@ -262,10 +280,10 @@ prefix (or the `covert` subcommand — TBD at implementation).
 
 | Location | New Fields | Size Impact |
 |---|---|---|
-| `PC_DATA` | 5 fields (pub_society through pub_society_joined) | ~20 bytes per player |
+| `PC_DATA` | 4 fields (pub_society through pub_society_joined) | ~16 bytes per player |
 | `MOB_INDEX_DATA` | 2 fields (pub_society, pub_society_npc_role) | ~4 bytes per mob template |
 | `pub_society_table[]` | Static array of 7 entries | ~300 bytes total (constant) |
-| Player save file | 5 new lines per society member | ~80 bytes per save |
+| Player save file | 4 new lines per society member | ~60 bytes per save |
 
 Combined with the secret society fields, total per-player overhead for both
-systems is ~48 bytes — negligible.
+systems is ~44 bytes — negligible.

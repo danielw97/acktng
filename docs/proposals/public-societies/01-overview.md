@@ -48,19 +48,33 @@ military patrols, trade contracts, disaster response, justice enforcement,
 frontier defense, or inter-city logistics. These are straightforward,
 legitimate activities — no smuggling, no sabotage, no exposure risk.
 
-### 4. Utility Skills
+### 4. Rank-Gated Skills
+
+Each public society provides 6 unique skills. Skills unlock automatically as
+the player's rank score crosses defined thresholds — no promotion request
+needed. If rank drops below a threshold, the corresponding skill becomes
+unavailable until rank recovers. **Leaving the society causes all society
+skills to become immediately unusable.** This makes society membership a
+meaningful, ongoing commitment: the skills are the reason to stay, and losing
+them is the cost of leaving.
 
 Public society skills provide practical, non-combat utility: field medicine,
-equipment repair, navigation, appraisal, fortification, and logistics. Like
-secret society skills, they do not modify `hitroll`, `damroll`, `armor`,
-`max_hit`, `max_mana`, or saving throws. They grant capabilities, not power.
+equipment repair, navigation, appraisal, fortification, and logistics. They
+do not modify `hitroll`, `damroll`, `armor`, `max_hit`, `max_mana`, or saving
+throws. They grant capabilities, not power.
 
-### 5. Horizontal Progression
+### 5. One Society, One Commitment
 
-Rank in a public society grants access to better missions, higher-tier skills,
-institutional services (discounts at society-affiliated shops, access to
-restricted areas), and civic authority (the ability to deputize, arbitrate, or
-inspect). It does not grant combat advantages.
+A player can join **one and only one** public society at a time. This is the
+core constraint that gives the choice weight. Different societies offer
+different skill sets, different task types, and different institutional
+benefits. Choosing the Guard Command means not having access to the Harbor
+Syndics' trade skills or the Road Wardens' travel abilities. The choice
+defines a playstyle.
+
+Switching is possible but costly: leave the current society (losing all skills
+and benefits immediately), wait 7 days, then join another and rebuild rank
+from scratch.
 
 ### 6. Cooperative Structure
 
@@ -115,55 +129,47 @@ All public societies share a base requirement:
 - Must not have left a public society within the last 7 real days (shorter
   cooldown than secret societies, reflecting the lower commitment)
 
-### Rank Structure
+### Rank (Core Progression)
 
-All public societies use a shared 6-rank structure (0-5), though titles differ
-per society:
+Rank is the **sole progression axis** for public societies. A player's rank
+is a numeric score that goes up when they complete tasks and goes down when
+they fail or abandon them. Rank directly determines which skills the player
+has access to, which tasks they can accept, and what institutional privileges
+they hold.
 
-| Rank | General Label | Description |
-|---|---|---|
-| 0 | Recruit | New member; basic missions and skills |
-| 1 | Member | Full access to society hall and services |
-| 2 | Veteran | Access to advanced missions and mid-tier skills |
-| 3 | Officer | Can mentor recruits; access to institutional intelligence |
-| 4 | Senior Officer | Can enroll new members; access to high-tier missions |
-| 5 | Commander | Inner circle; institutional authority; top-tier skills |
+There is no separate promotion step. As rank crosses a threshold, the
+corresponding skill unlocks immediately. If rank drops below a threshold
+(through task failure or other penalties), the skill becomes unavailable
+again until rank recovers.
 
-### Advancement
+Public society rank uses a -500 to +500 range:
 
-Promotion requires completed tasks and reputation, similar to secret societies
-but with no exposure checks or special rank missions:
+| Range | Title | Skills Unlocked | Effect |
+|---|---|---|---|
+| -500 to -300 | Dishonorably Discharged | None | Expelled; barred from rejoining for 30 days |
+| -299 to -100 | Disciplined | None (suspended) | All skills suspended; restricted task access |
+| -99 to 0 | Recruit | Skill 1 | Basic access only |
+| 1 to 99 | Member | Skills 1-2 | Standard access |
+| 100 to 199 | Veteran | Skills 1-3 | Priority task access |
+| 200 to 299 | Officer | Skills 1-4 | Can mentor recruits |
+| 300 to 399 | Senior Officer | Skills 1-5 | Can enroll new members; institutional privileges |
+| 400 to 500 | Commander | Skills 1-6 (all) | Maximum standing; leadership tier |
 
-| Rank | Tasks Required | Reputation Required |
-|---|---|---|
-| 0 -> 1 | 5 completed | 50+ |
-| 1 -> 2 | 12 completed | 125+ |
-| 2 -> 3 | 25 completed | 225+ |
-| 3 -> 4 | 40 completed | 350+ |
-| 4 -> 5 | 60 completed | 450+ |
+Each society defines 6 skills. This makes rank a living, dynamic gate — a
+Senior Officer who fails several tasks and drops to Veteran loses access to
+their 5th skill until they rebuild.
 
-Promotion is requested at the society's commanding officer NPC:
+Rank changes:
+- Completing tasks: +10 to +50 depending on difficulty
+- Failing tasks: -5 to -20 depending on severity
+- Abandoning tasks: -3 to -10
+- Mentoring a recruit (Officer+): +15
+- Time-based decay: rank above 300 decays by 1 per game day toward 300
 
-```
-society promote
-```
+Each society overrides the general title labels (Recruit, Member, Veteran,
+etc.) with its own thematic titles — see individual society files.
 
-### Reputation
-
-Public society reputation uses the same -500 to +500 range as secret
-societies, but with different tier labels reflecting institutional standing
-rather than trust/suspicion:
-
-| Range | Label | Effect |
-|---|---|---|
-| -500 to -300 | Dishonorably Discharged | Expelled; barred from rejoining for 30 days |
-| -299 to -100 | Disciplined | Restricted mission access; under review |
-| -99 to 99 | Standing | Standard access |
-| 100 to 299 | Commended | Access to priority missions |
-| 300 to 499 | Decorated | Access to command missions; institutional privileges |
-| 500 | Exemplary | Maximum standing; society leadership tier |
-
-### Leaving
+### Leaving and Loss of Benefits
 
 A player can leave their public society at any time:
 
@@ -171,10 +177,25 @@ A player can leave their public society at any time:
 society resign
 ```
 
-This resets all public society fields and imposes a 7-day cooldown before
-joining another. Voluntary departure has no reputation penalty — it is an
-honorable discharge. Expulsion (reputation below -300) imposes a 30-day
-cooldown.
+**Leaving a public society means losing everything it granted.** On departure:
+
+- All public society skills become immediately unusable. Proficiency values
+  are retained in `learned[]` (so rejoining the same society later does not
+  require re-practicing from scratch), but all skill checks auto-fail while
+  the player is not a member.
+- Access to the society hall's restricted areas (armory, training yard,
+  command post) is revoked.
+- The society communication channel is removed.
+- Society-affiliated NPC merchants and trainers will no longer serve the
+  player.
+- Any active society task is automatically abandoned.
+- The player's reputation is preserved internally (for potential re-enrollment)
+  but provides no benefits while unaffiliated.
+- A 7-day cooldown is imposed before joining any public society.
+
+Voluntary departure has no reputation penalty — it is an honorable discharge.
+Expulsion (reputation below -300) imposes a 30-day cooldown and resets
+reputation to 0.
 
 ### Visibility
 
