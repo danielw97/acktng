@@ -540,33 +540,100 @@ and its successors (Thornwarden spells are available to Hierophant, etc.).
 
 ### Mortal Druid Spells (Levels 1-100)
 
-| Spell | Level | Base HP Cost | Growth | Target | Effect |
-|-------|-------|-------------|--------|--------|--------|
-| Thornlash | 1 | 12 | 3 | Offensive | Single-target nature damage |
-| Sap Mend | 3 | 8 | 4 | Self | Heals 20-40 HP (net positive) |
-| Barkskin | 7 | 15 | 2 | Self | AC bonus, 12 ticks |
-| Rockburst | 12 | 18 | 4 | Offensive | Earth damage, chance to stun |
-| Roothold | 18 | 20 | 2 | Self | Prevents flee/push, 6 ticks |
-| Wither | 25 | 22 | 5 | Offensive | Decay damage + minor STR debuff |
-| Forestsight | 30 | 10 | 1 | Self | Detect hidden in outdoor rooms |
-| Blight Touch | 38 | 28 | 5 | Offensive | Decay DoT, 4 ticks |
-| Verdant Mend | 45 | 20 | 5 | Defensive | Heal target 50-80 HP |
-| Quake Strike | 55 | 35 | 6 | Offensive | Area earth damage |
-| Entangling Growth | 65 | 30 | 4 | Offensive | Root/snare, 3 ticks |
-| Rot | 75 | 40 | 6 | Offensive | Heavy decay damage |
-| Gift of the Forest | 85 | 25 | 3 | Defensive | +2 to all stats, 10 ticks |
-| Ironpine Vigor | 95 | 35 | 4 | Defensive | Increase target max HP by 15% |
+Mortal caster spell counts for reference: Magi has 45 spells (levels 3-80),
+Cleric has 32 spells (levels 5-89), Psionicist has 31 spells (levels 4-80).
+The mortal Druid targets ~35 spells across levels 3-90, with a mix of
+earth/poison/decay offense, self/ally healing, buffs, debuffs, and utility.
+
+All HP costs below are base values before Overgrowth scaling. All Druid spells
+use the existing element system: `ELE_EARTH`, `ELE_POISON`, `ELE_WATER`,
+`ELE_PHYSICAL`, or `ELE_NONE` for buffs/heals.
+
+#### Offensive Spells
+
+| Spell | Lvl | HP Cost | Growth | Beats | Target | Element | Damage Noun | Notes |
+|-------|-----|---------|--------|-------|--------|---------|-------------|-------|
+| thornlash | 3 | 12 | 3 | 12 | TAR_CHAR_OFFENSIVE | EARTH | thornlash | Entry-level damage. Equivalent to magic missile. |
+| nettlesting | 6 | 12 | 3 | 12 | TAR_CHAR_OFFENSIVE | POISON | nettlesting | Poison-element variant. |
+| rockburst | 10 | 15 | 4 | 12 | TAR_CHAR_OFFENSIVE | EARTH | rockburst | Scaling earth damage. Equivalent to burning hands. |
+| wither | 16 | 15 | 4 | 12 | TAR_CHAR_OFFENSIVE | POISON | wither | Decay damage. Equivalent to chill touch. |
+| briar volley | 20 | 18 | 4 | 12 | TAR_CHAR_OFFENSIVE | EARTH | briar volley | Thorn projectiles. Equivalent to lightning bolt. |
+| blight touch | 25 | 20 | 5 | 12 | TAR_CHAR_OFFENSIVE | POISON | blight touch | Apply poison DoT (4 ticks). Like poison spell. |
+| tremor | 32 | 20 | 5 | 12 | TAR_CHAR_OFFENSIVE | EARTH | tremor | Heavy earth damage. Equivalent to fireball. |
+| creeping rot | 38 | 22 | 5 | 12 | TAR_CHAR_OFFENSIVE | POISON | creeping rot | Decay DoT + minor healing reduction. |
+| fissure | 46 | 25 | 6 | 12 | TAR_CHAR_OFFENSIVE | EARTH | fissure | High earth damage, chance to knock down. |
+| fungal eruption | 55 | 30 | 6 | 24 | TAR_IGNORE | POISON | fungal eruption | Area poison damage to all enemies in room. |
+| quake | 60 | 30 | 6 | 12 | TAR_IGNORE | EARTH | earthquake | Area earth damage. Equivalent to earthquake. |
+| strangling vines | 65 | 35 | 5 | 24 | TAR_CHAR_OFFENSIVE | EARTH | strangling vines | Heavy damage + 2-tick snare (victim can't flee). |
+| rot | 75 | 40 | 7 | 12 | TAR_CHAR_OFFENSIVE | POISON | rot | Heavy decay damage. High-level nuke. |
+| upheaval | 85 | 50 | 7 | 24 | TAR_IGNORE | EARTH | upheaval | Major area earth damage. Capstone AoE. |
+
+#### Healing Spells
+
+| Spell | Lvl | HP Cost | Growth | Beats | Target | Notes |
+|-------|-----|---------|--------|-------|--------|-------|
+| sap mend | 3 | 8 | 3 | 12 | TAR_CHAR_SELF | Heals 20-35 HP. Net positive. Self only. |
+| mend wounds | 12 | 12 | 4 | 12 | TAR_CHAR_DEFENSIVE | Heals target 25-45 HP. First other-target heal. |
+| purge toxin | 22 | 10 | 3 | 12 | TAR_CHAR_DEFENSIVE | Cure poison on target. Equivalent to cure poison. |
+| verdant mend | 35 | 20 | 5 | 12 | TAR_CHAR_DEFENSIVE | Heals target 50-80 HP. Main heal. Equivalent to heal. |
+| heartwood balm | 50 | 15 | 5 | 12 | TAR_CHAR_DEFENSIVE | Cure blindness + cure poison combined. |
+| primal restoration | 70 | 35 | 6 | 12 | TAR_CHAR_DEFENSIVE | Large heal (80-120 HP) + cure poison + cure blind. |
+| sap transfusion | 80 | Special | 3 | 12 | TAR_CHAR_DEFENSIVE | Transfer own HP to target at 1:1 ratio. Not subject to Overgrowth cost scaling. Flat Overgrowth growth. |
+
+Healing spells always cost less HP than they restore (net positive). The
+Overgrowth growth makes each successive heal generate more Overgrowth,
+increasing the cost of the *next* spell cast. Self-healing keeps the Druid
+alive; the Overgrowth tax is paid on the spell that follows.
+
+#### Buff Spells
+
+| Spell | Lvl | HP Cost | Growth | Beats | Target | Notes |
+|-------|-----|---------|--------|-------|--------|-------|
+| barkskin | 5 | 10 | 2 | 12 | TAR_CHAR_SELF | AC bonus, 12 ticks. Equivalent to armor. |
+| roothold | 9 | 12 | 2 | 18 | TAR_CHAR_SELF | Prevents flee/push on self, 6 ticks. |
+| thornhide | 14 | 15 | 2 | 18 | TAR_CHAR_SELF | Reflects a portion of melee damage, 8 ticks. |
+| stone skin | 28 | 18 | 3 | 18 | TAR_CHAR_SELF | Major AC buff, 10 ticks. Same as Magi stone skin. |
+| ironpine vigor | 36 | 20 | 3 | 18 | TAR_CHAR_DEFENSIVE | Increase target max HP by 10%, 10 ticks. |
+| gift of the forest | 45 | 20 | 3 | 18 | TAR_CHAR_DEFENSIVE | +2 all stats, 10 ticks. Equivalent to bless+. |
+| nature's ward | 55 | 25 | 3 | 24 | TAR_CHAR_SELF | Resist poison + earth damage, 10 ticks. |
+| ancient bark | 68 | 35 | 3 | 24 | TAR_CHAR_SELF | Large AC buff + thorns reflection, 8 ticks. Stacks with barkskin. |
+
+#### Debuff Spells
+
+| Spell | Lvl | HP Cost | Growth | Beats | Target | Notes |
+|-------|-----|---------|--------|-------|--------|-------|
+| tangling roots | 8 | 10 | 3 | 12 | TAR_CHAR_OFFENSIVE | Faerie fire equivalent (lower AC on target). |
+| sap strength | 18 | 15 | 4 | 12 | TAR_CHAR_OFFENSIVE | -2 STR on target, 6 ticks. |
+| spore cloud | 30 | 18 | 4 | 12 | TAR_CHAR_OFFENSIVE | Blind, 3 ticks. Equivalent to blindness. |
+| wither limbs | 40 | 20 | 4 | 12 | TAR_CHAR_OFFENSIVE | -2 DEX on target, 6 ticks. |
+| entangling growth | 52 | 25 | 4 | 24 | TAR_CHAR_OFFENSIVE | Root/snare — victim cannot flee, 3 ticks. |
+| curse of decay | 62 | 30 | 5 | 12 | TAR_CHAR_OFFENSIVE | Curse equivalent + poison DoT combined. |
+| creeping blight | 78 | 40 | 5 | 24 | TAR_CHAR_OFFENSIVE | -3 STR, -3 CON, healing reduction, 6 ticks. High-level debuff. |
+
+#### Utility Spells
+
+| Spell | Lvl | HP Cost | Growth | Beats | Target | Notes |
+|-------|-----|---------|--------|-------|--------|-------|
+| forestsight | 7 | 5 | 1 | 12 | TAR_CHAR_SELF | Detect hidden. Equivalent to detect hidden. |
+| sense life | 11 | 5 | 1 | 12 | TAR_CHAR_SELF | Detect invis. Equivalent to detect invis. |
+| know terrain | 15 | 8 | 1 | 12 | TAR_CHAR_SELF | Know alignment equivalent (sense target nature). |
+| passage | 24 | 12 | 2 | 18 | TAR_CHAR_SELF | Pass door equivalent (roots find a path). |
+| greensight | 42 | 15 | 2 | 24 | TAR_CHAR_DEFENSIVE | Infravision equivalent + detect hidden combined. |
+| rootway | 58 | 30 | 3 | 12 | TAR_IGNORE | Teleport equivalent. Travel through root network. |
+| call of the wild | 72 | 40 | 3 | 12 | TAR_IGNORE | Summon equivalent. Call target through substrate. |
+| living bridge | 90 | 60 | 3 | 12 | TAR_IGNORE | Portal equivalent. Grow a passage to target's room. |
+
+**Total: 36 spells** (14 offensive, 7 healing, 8 buff, 7 debuff, 8 utility —
+some spells bridge categories). Distributed across levels 3-90.
 
 ### Mortal Druid Skills (Levels 1-100)
 
-| Skill | Level | Effect |
-|-------|-------|--------|
-| Forage | 5 | Find food/water in wilderness rooms |
-| Herb Lore | 15 | Identify potion/pill effects |
-| Substrate Sense | 35 | Sense living creatures in adjacent rooms |
-| Nature's Resilience | 50 | Passive: reduce Overgrowth decay delay by 1 tick |
-| Second Attack | 20 | Standard second attack |
-| Meditation | 40 | Accelerate Overgrowth decay while resting |
+Mortal casters have very few skills (Magi: 1, Cleric: 1, Psionicist: 3).
+The Druid follows this pattern — one passive keystone skill.
+
+| Skill | Lvl | Beats | Target | Notes |
+|-------|-----|-------|--------|-------|
+| substrate piercing | 20 | 0 | TAR_IGNORE | Passive keystone. -10% target spell resistance. See keystone section. |
 
 ### Thornwarden Spells (Remort, Levels 1-100)
 
