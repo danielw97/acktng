@@ -1,42 +1,15 @@
-<h1 id='map-title'>Stylized World Map</h1>
-<p class='muted' id='map-subtitle'>A stylized rendering of the known world.</p>
+<h1>World Map</h1>
+<p class='muted'>A stylized rendering of the known world.</p>
 
-<div style='display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0;'>
-  <button type='button' class='map-btn active' onclick='showMap(this,"acktng","Stylized World Map","A stylized rendering of the known world.")'>Stylized World Map</button>
-  <button type='button' class='map-btn' onclick='showMap(this,"world_map","World Map","The Known World — cartographed by the Granite Arcade of Midgaard, Third Age, Containment Era.")'>World Map</button>
-  <button type='button' class='map-btn' onclick='showMap(this,"midgaard_map","Midgaard","The seat of Compact authority — ash-mortar streets, violet ward markings, and the deep gate of the Gloamvault.")'>Midgaard</button>
-  <button type='button' class='map-btn' onclick='showMap(this,"kiess_map","Kiess","Built on Evermeet ruins — prismatic civic stone, three-power governance, and the East Gate road to the world.")'>Kiess</button>
-  <button type='button' class='map-btn' onclick='showMap(this,"kowloon_map","Kowloon","Coppersalt Bay harbor city — Five Houses, color-coded gates, basalt covenant foundations.")'>Kowloon</button>
-  <button type='button' class='map-btn' onclick='showMap(this,"mafdet_map","Mafdet","Strand Folk harbor trade city — Shrine of First Claw, the harbor chain, and four Ledger Houses.")'>Mafdet</button>
-  <button type='button' class='map-btn' onclick='showMap(this,"rakuen_map","Rakuen","Terraced river city — root-woven lower districts, raised causeways, and the Bloom Pavilion above the flood line.")'>Rakuen</button>
-</div>
-
-<div style='margin:1rem 0;text-align:center;'>
-  <a id='map-link' href='/img/acktng.png' target='_blank' title='Open full-size map'>
+<div style='margin:1.25rem 0;text-align:center;'>
+  <a href='/img/acktng.png' target='_blank' title='Open full-size map'>
     <img
-      id='map-img'
       src='/img/acktng.png'
-      alt='Map'
-      style='max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);box-shadow:0 8px 32px rgba(0,0,0,.55);cursor:zoom-in;'
+      alt='Stylized World Map'
+      style='max-width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--line);box-shadow:0 8px 40px rgba(0,0,0,.6);cursor:zoom-in;transition:box-shadow .2s;'
+      onmouseover="this.style.boxShadow='0 8px 48px rgba(91,156,246,.25)'"
+      onmouseout="this.style.boxShadow='0 8px 40px rgba(0,0,0,.6)'"
     >
   </a>
 </div>
 <p class='muted' style='font-size:.85rem;text-align:center;'>Click the map to open the full-resolution image.</p>
-
-<style>
-.map-btn{background:rgba(121,183,255,.10);border:1px solid var(--line);border-radius:999px;color:var(--text);font-family:inherit;font-size:.88rem;font-weight:600;letter-spacing:.02em;padding:.45rem .9rem;cursor:pointer;transition:background .15s,border-color .15s;}
-.map-btn:hover{background:rgba(121,183,255,.22);border-color:#4d72b8;}
-.map-btn.active{background:rgba(121,183,255,.28);border-color:#79b7ff;color:#d4eaff;}
-</style>
-
-<script>
-function showMap(btn, key, title, subtitle) {
-  document.querySelectorAll('.map-btn').forEach(function(b){ b.classList.remove('active'); });
-  btn.classList.add('active');
-  var src = '/img/' + key + '.png';
-  document.getElementById('map-img').src = src;
-  document.getElementById('map-link').href = src;
-  document.getElementById('map-title').textContent = title;
-  document.getElementById('map-subtitle').textContent = subtitle;
-}
-</script>
