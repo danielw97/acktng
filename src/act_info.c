@@ -2282,12 +2282,12 @@ void do_who(CHAR_DATA *ch, char *argument)
                "-------+\n\r");
    safe_strcat(
        MAX_STRING_LENGTH, buf,
-       "| @@dWi Pr Wl Sw Eg Br To Ws@@R                                                          "
-       "    |\n\r");
+       "| @@dPr Wl Sw Eg Br To Ws@@R                                                                "
+       " |\n\r");
    safe_strcat(
        MAX_STRING_LENGTH, buf,
-       "| @@mSo Pa An Kn Ne Mo@@R                                                                "
-       "    |\n\r");
+       "| @@mSo Pa An Kn Ne Mo Wi@@R                                                                "
+       " |\n\r");
    safe_strcat(MAX_STRING_LENGTH, buf,
                "| @@bMa Cl Th Wa Ps Pu Dr @@eRace Clan  ABJPW    Player	Title	                    "
                "@@R(flags) @@R|\n\r");
