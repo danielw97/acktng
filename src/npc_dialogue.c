@@ -147,7 +147,6 @@ static void load_topic_kb(const char *path, int topic_index)
    char *text;
    int text_len;
    int current_city;
-   char header[64];
 
    fp = fopen(path, "r");
    if (fp == NULL)
@@ -192,8 +191,7 @@ static void load_topic_kb(const char *path, int topic_index)
       if (current_city < 0)
       {
          int city;
-         snprintf(header, sizeof(header), "%s", line);
-         city = city_from_section_name(header);
+         city = city_from_section_name(line);
          if (city >= 0)
          {
             current_city = city;
@@ -409,7 +407,6 @@ static void json_escape(char *dst, size_t cap, const char *src)
 static void build_json_request(char *buf, size_t cap, const NPC_DLG_REQ *req)
 {
    char escaped[16384];
-   char turn_buf[1024];
    int i;
 
    char header[128];
@@ -430,9 +427,11 @@ static void build_json_request(char *buf, size_t cap, const NPC_DLG_REQ *req)
    for (i = 0; i < req->history_count; i++)
    {
       json_escape(escaped, sizeof(escaped), req->history[i].content);
-      snprintf(turn_buf, sizeof(turn_buf), ",{\"role\":\"%s\",\"content\":\"%s\"}",
-               req->history[i].role, escaped);
-      safe_append(buf, cap, turn_buf);
+      safe_append(buf, cap, ",{\"role\":\"");
+      safe_append(buf, cap, req->history[i].role);
+      safe_append(buf, cap, "\",\"content\":\"");
+      safe_append(buf, cap, escaped);
+      safe_append(buf, cap, "\"}");
    }
 
    safe_append(buf, cap, "]}");
@@ -1166,7 +1165,7 @@ static void build_system_prompt(char *buf, size_t cap, CHAR_DATA *npc, const cha
             size_t tlen = strlen(matches[i]->text);
             if (tlen > 1024)
             {
-               char lore_chunk[1028];
+               char lore_chunk[1031]; /* 1024 bytes of text + "[...]\n" (6) + NUL (1) */
                memcpy(lore_chunk, matches[i]->text, 1024);
                memcpy(lore_chunk + 1024, "[...]\n", 7);
                safe_append(buf, cap, lore_chunk);
@@ -1281,7 +1280,7 @@ void npc_dialogue_dispatch(CHAR_DATA *npc, CHAR_DATA *player, const char *messag
    NPC_DLG_STATE *state;
    NPC_DLG_REQ *req;
    char sanitized[512];
-   char user_turn[512];
+   char user_turn[560]; /* player name (up to ~30) + ": " + sanitized (up to 511) + NUL */
    int i;
 
    /* Don't stack requests */

@@ -35,17 +35,6 @@
 void set_obj_stat_auto(OBJ_DATA *obj);
 void set_aff_to_obj(OBJ_DATA *obj, int location, int modifier);
 
-/* Clan color code extracted from the clan abbreviation (e.g. "@@y" from "@@yACCRD@@N") */
-static const char *get_clan_color_code(int clan_id)
-{
-   const char *abbr;
-   if (clan_id < 1 || clan_id >= MAX_CLAN)
-      return "@@N";
-   abbr = clan_table[clan_id].clan_abbr;
-   if (abbr[0] == '@' && abbr[1] == '@')
-      return abbr; /* point to the "@@X..." portion, act() will handle it */
-   return "@@N";
-}
 
 /* Map obj->weight to a human-readable style name.
  * melee=8, caster=3, tank=13 (matches emblem system). */
