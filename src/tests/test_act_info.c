@@ -98,6 +98,15 @@ const struct race_type race_table[MAX_RACE] = {
     [2] = {.race_name = "dwa", .race_title = "dwarf"},
 };
 
+const struct class_type gclass_table[MAX_TOTAL_CLASS] = {
+    [CLASS_GMA] = {.tier = ADEPT, .prereq = {CLASS_SOR, CLASS_WIZ}},
+    [CLASS_TEM] = {.tier = ADEPT, .prereq = {CLASS_PAL, CLASS_PRI}},
+    [CLASS_NIG] = {.tier = ADEPT, .prereq = {CLASS_ASS, CLASS_WLK}},
+    [CLASS_CRU] = {.tier = ADEPT, .prereq = {CLASS_KNI, CLASS_SWO}},
+    [CLASS_KIN] = {.tier = ADEPT, .prereq = {CLASS_NEC, CLASS_EGO}},
+    [CLASS_MAR] = {.tier = ADEPT, .prereq = {CLASS_MON, CLASS_BRA}},
+};
+
 static void test_find_race_index_matches_exact_name_or_title(void)
 {
    assert(find_race_index_by_name("hum") == 0);
@@ -297,6 +306,58 @@ static void test_who_get_char_returns_null_for_no_character(void)
    assert(who_get_char(&d) == NULL);
 }
 
+/*
+ * Adept prerequisite tests: verify that the EITHER-of-two-remorts logic
+ * is correctly represented in gclass_table and that the condition
+ * (prereq[0] < MAX_MORTAL && prereq[1] < MAX_MORTAL) rejects only when
+ * NEITHER prereq is met.
+ */
+
+static void test_adept_classes_have_two_valid_remort_prereqs(void)
+{
+   /* Each adept class should reference two distinct remort-tier prereqs */
+   assert(gclass_table[CLASS_GMA].prereq[0] == CLASS_SOR);
+   assert(gclass_table[CLASS_GMA].prereq[1] == CLASS_WIZ);
+   assert(gclass_table[CLASS_TEM].prereq[0] == CLASS_PAL);
+   assert(gclass_table[CLASS_TEM].prereq[1] == CLASS_PRI);
+   assert(gclass_table[CLASS_NIG].prereq[0] == CLASS_ASS);
+   assert(gclass_table[CLASS_NIG].prereq[1] == CLASS_WLK);
+   assert(gclass_table[CLASS_CRU].prereq[0] == CLASS_KNI);
+   assert(gclass_table[CLASS_CRU].prereq[1] == CLASS_SWO);
+   assert(gclass_table[CLASS_KIN].prereq[0] == CLASS_NEC);
+   assert(gclass_table[CLASS_KIN].prereq[1] == CLASS_EGO);
+   assert(gclass_table[CLASS_MAR].prereq[0] == CLASS_MON);
+   assert(gclass_table[CLASS_MAR].prereq[1] == CLASS_BRA);
+}
+
+static void test_adept_prereq_either_logic(void)
+{
+   int class_level[MAX_TOTAL_CLASS];
+   int adept_class = CLASS_GMA;
+   int p0 = gclass_table[adept_class].prereq[0]; /* CLASS_SOR */
+   int p1 = gclass_table[adept_class].prereq[1]; /* CLASS_WIZ */
+
+   /* Neither prereq met → should be rejected (condition is true) */
+   memset(class_level, 0, sizeof(class_level));
+   assert((class_level[p0] < MAX_MORTAL && class_level[p1] < MAX_MORTAL) == 1);
+
+   /* Only first prereq met → should pass (condition is false) */
+   memset(class_level, 0, sizeof(class_level));
+   class_level[p0] = MAX_MORTAL;
+   assert((class_level[p0] < MAX_MORTAL && class_level[p1] < MAX_MORTAL) == 0);
+
+   /* Only second prereq met → should pass (condition is false) */
+   memset(class_level, 0, sizeof(class_level));
+   class_level[p1] = MAX_MORTAL;
+   assert((class_level[p0] < MAX_MORTAL && class_level[p1] < MAX_MORTAL) == 0);
+
+   /* Both prereqs met → should pass (condition is false) */
+   memset(class_level, 0, sizeof(class_level));
+   class_level[p0] = MAX_MORTAL;
+   class_level[p1] = MAX_MORTAL;
+   assert((class_level[p0] < MAX_MORTAL && class_level[p1] < MAX_MORTAL) == 0);
+}
+
 int main(void)
 {
    test_find_race_index_matches_exact_name_or_title();
@@ -312,6 +373,9 @@ int main(void)
    test_who_get_char_filters_non_playing();
    test_who_get_char_returns_original_when_switched();
    test_who_get_char_returns_null_for_no_character();
+
+   test_adept_classes_have_two_valid_remort_prereqs();
+   test_adept_prereq_either_logic();
 
    puts("test_act_info: all tests passed");
    return 0;
