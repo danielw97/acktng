@@ -7,9 +7,8 @@
 bool spec_undead(CHAR_DATA *ch)
 {
    CHAR_DATA *victim;
-   CHAR_DATA *ach;
    char *spell;
-   int sn, sum_lev;
+   int sn;
 
    if (!is_fighting(ch))
       return FALSE;
@@ -61,8 +60,8 @@ bool spec_undead(CHAR_DATA *ch)
          spell = "fireball";
          break;
       default:
-         min_level = 1;
-         spell = "summon";
+         min_level = 0;
+         spell = "blindness";
          break;
       }
 
@@ -77,33 +76,7 @@ bool spec_undead(CHAR_DATA *ch)
    if ((sn = skill_lookup(spell)) < 0)
       return FALSE;
 
-   if (!str_cmp(spell, "summon")) /* CHECK FOR NPC!!!!!!!!!!!!! */
-   {
-      sum_lev = ch->level * 2 / 3;
-      for (ach = first_char; ach != NULL; ach = ach->next)
-      {
-         if (!IS_SET(ach->act, ACT_UNDEAD) || ach->level > sum_lev ||
-             !IS_NPC(ach) /* Kavir got summoned!  :P */
-             || ach->in_room == ch->in_room || !can_see(ch, ach) || number_bits(2) != 0)
-            continue;
-
-         victim = ach;
-         break;
-      }
-      if (ach == NULL)
-         return FALSE;
-
-      act("$n's eyes turn black for an instant!", ch, NULL, NULL, TO_ROOM);
-      act("$n disappears suddenly.", victim, NULL, NULL, TO_ROOM);
-      char_from_room(victim);
-      char_to_room(victim, ch->in_room);
-      act("$n arrives suddenly.", victim, NULL, NULL, TO_ROOM);
-      multi_hit(victim, ch->fighting, TYPE_UNDEFINED);
-   }
-   else
-   {
-      (*skill_table[sn].spell_fun)(sn, ch->level, ch, victim, NULL);
-   }
+   (*skill_table[sn].spell_fun)(sn, ch->level, ch, victim, NULL);
 
    return TRUE;
 }
