@@ -148,7 +148,7 @@
 
   const sendCommand = () => {
     const command = commandInput.value;
-    if (!socket || socket.readyState !== WebSocket.OPEN || !command.trim()) return;
+    if (!socket || socket.readyState !== WebSocket.OPEN) return;
     socket.send(`${command}\n`);
     appendOutput(`\n> ${command}\n`);
     commandInput.value = '';
