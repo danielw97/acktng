@@ -108,7 +108,7 @@ skill unlocks when the player's rank score reaches the listed threshold.
 | `appraise` | -99 (Clerk) | Determine the exact gold value of any item, including hidden modifiers. More accurate than standard `value` at shops. |
 | `manifest` | 1 (Factor) | Create an itemized manifest of your inventory showing item names, types, and values. Can be given to NPCs as proof of cargo for trade tasks. |
 | `haggle` | 100 (Assessor) | When buying from an NPC shop, temporarily improve the price by up to 10% based on proficiency. 15-minute cooldown per shop. |
-| `longshoreman` | 200 (Arbiter) | **Combat (passive).** Years of hauling cargo have built raw striking power. Each combat round has a 5% chance to land one bonus autoattack. Checked in `multi_hit()` alongside the standard extra-attack logic. Always active — no cooldown, no activation command. |
+| `longshoreman` | 200 (Arbiter) | **Combat (passive).** Years of hauling cargo have built raw striking power. Grants one additional autoattack per round, checked in `multi_hit()` in the same block that grants bonus hits for Pugilist, Warden, and other mortal/remort classes (around lines 328-357). Uses the same probability roll as those class-based extra attacks. Always active — no cooldown, no activation command. |
 | `bonded_cargo` | 300 (Senior Syndic) | Seal an item in a bonded cargo container that protects it from theft, drop-on-death, and decay for 1 hour. One container active at a time. |
 | `commercial_writ` | 400 (Port Master) | Issue a writ that grants a named player a one-time 15% discount at any NPC shop in Kowloon. The writ is a transferable item. One writ per day. |
 
