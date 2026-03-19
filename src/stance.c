@@ -19,8 +19,8 @@ const struct stance_app_type stance_app[MAX_STANCE] = {
     {"Psionicist", 5, -3, -3, 0, 0, 2, STANCE_MULTI_CAST | STANCE_NO_HIT, MORTAL, CLASS_PSI, 60, -1,
      -1, CLASS_PSI},
     {"Healer", 0, 0, 0, 0, 1, 0, 0, MORTAL, CLASS_CLE, 60, -1, -1, CLASS_CLE},
-    {"Warden", 0, 1, 0, 0, 0, 0, 0, MORTAL, CLASS_WAR, 60, -1, -1, CLASS_WAR},
-    {"Cipher", -1, 0, 1, 0, 0, 0, 0, MORTAL, CLASS_CIP, 60, -1, -1, CLASS_CIP},
+    {"Dunmar's Watch", 0, 1, 0, 0, 0, 0, 0, MORTAL, CLASS_WAR, 60, -1, -1, CLASS_WAR},
+    {"Gap Intuition", -1, 0, 1, 0, 0, 0, 0, MORTAL, CLASS_CIP, 60, -1, -1, CLASS_CIP},
     {"Pugilist", 0, 0, 0, 1, 0, 0, 0, MORTAL, CLASS_PUG, 60, -1, -1, CLASS_PUG},
     /* Remort stances */
     {"Assassin", -3, 0, 3, 1, 0, 0, 0, REMORT, CLASS_ASS, 1, -1, -1, -1},
@@ -38,7 +38,7 @@ const struct stance_app_type stance_app[MAX_STANCE] = {
      -1, -1},
     {"Egomancer", 2, -3, -3, 0, 0, 5, STANCE_DUAL_CAST | STANCE_NO_HIT, REMORT, CLASS_EGO, 1, -1,
      -1, -1},
-    {"Monk", 0, 3, 3, 2, 0, 0, 0, REMORT, CLASS_MON, 1, -1, -1, -1},
+    {"Deepest Form", 0, 3, 3, 2, 0, 0, 0, REMORT, CLASS_MON, 1, -1, -1, -1},
     {"Brawler", 0, 3, 3, 2, 0, 0, 0, REMORT, CLASS_BRA, 1, -1, -1, -1},
     /* Adept Stances */
     {"Magi", 2, -1, -1, 0, 0, 3,

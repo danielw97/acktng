@@ -102,5 +102,6 @@ void fread_obj args((CHAR_DATA * ch, FILE *fp));
 /* save_players.c */
 void fwrite_char args((CHAR_DATA * ch, FILE *fp));
 void fread_char args((CHAR_DATA * ch, FILE *fp));
+const char *skill_name_legacy(const char *old_name);
 
 #endif /* SAVE_SAVE_H */

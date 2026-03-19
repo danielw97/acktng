@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
+extern const char *skill_name_legacy(const char *old_name);
+
 void *hash_ref_from_vnum(int vnum);
 int vnum_from_hash_ref(void *ref);
 int resolve_persistent_container_room_vnum_for_test(int room_vnum);
@@ -311,6 +313,43 @@ static void test_quest_static_done_cap_clamps_negative_to_zero(void)
    assert(quest_static_done_cap_true_count_for_test(-5) == 0);
 }
 
+/* ── skill_name_legacy migration tests ──────────────────────────────── */
+
+static void test_skill_name_legacy_shadow_step(void)
+{
+   const char *result = skill_name_legacy("shadow step");
+   assert(result != NULL);
+   assert(strcmp(result, "gap transit") == 0);
+}
+
+static void test_skill_name_legacy_garrote(void)
+{
+   const char *result = skill_name_legacy("garrote");
+   assert(result != NULL);
+   assert(strcmp(result, "reach silence") == 0);
+}
+
+static void test_skill_name_legacy_pressure_point(void)
+{
+   const char *result = skill_name_legacy("pressure point");
+   assert(result != NULL);
+   assert(strcmp(result, "applied understanding") == 0);
+}
+
+static void test_skill_name_legacy_fortify(void)
+{
+   const char *result = skill_name_legacy("fortify");
+   assert(result != NULL);
+   assert(strcmp(result, "seven shade hold") == 0);
+}
+
+static void test_skill_name_legacy_unknown_returns_null(void)
+{
+   assert(skill_name_legacy("backstab") == NULL);
+   assert(skill_name_legacy("") == NULL);
+   assert(skill_name_legacy("gap transit") == NULL);
+}
+
 static void test_quest_static_done_cap_clamps_above_max(void)
 {
    int count_large = quest_static_done_cap_true_count_for_test(9999);
@@ -342,6 +381,11 @@ int main(void)
    test_quest_static_done_cap_clears_slots_above_saved_cap();
    test_quest_static_done_cap_clamps_negative_to_zero();
    test_quest_static_done_cap_clamps_above_max();
+   test_skill_name_legacy_shadow_step();
+   test_skill_name_legacy_garrote();
+   test_skill_name_legacy_pressure_point();
+   test_skill_name_legacy_fortify();
+   test_skill_name_legacy_unknown_returns_null();
 
    puts("test_save: all tests passed");
    return 0;
