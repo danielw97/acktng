@@ -833,57 +833,9 @@ changes to the class system. This section documents every affected system.
 
 **config.h changes:**
 
-```c
-/* Change MAX_CLASS from 6 to 7 */
-#define MAX_CLASS 7
-
-/* MAX_REMORT becomes 14 (7 * 2) */
-#define MAX_REMORT (MAX_CLASS * 2)
-
-/* MAX_TOTAL_CLASS becomes 7 + 14 + 7 = 28 */
-#define MAX_TOTAL_CLASS (MAX_CLASS + MAX_REMORT + MAX_CLASS)
-
-/* New class IDs */
-/* Mortal (0-6) */
-#define CLASS_DRU 6    /* Druid — replaces CLASS_SOR's slot */
-
-/* All remort IDs shift: remort range is now 7-20 */
-#define CLASS_SOR 7
-#define CLASS_PAL 8
-#define CLASS_ASS 9
-#define CLASS_KNI 10
-#define CLASS_NEC 11
-#define CLASS_MON 12
-#define CLASS_WIZ 13
-#define CLASS_PRI 14
-#define CLASS_WLK 15
-#define CLASS_SWO 16
-#define CLASS_EGO 17
-#define CLASS_BRA 18
-#define CLASS_THO 19   /* Thornwarden */
-#define CLASS_WIL 20   /* Wildspeaker */
-
-/* Adept range is now 21-27 */
-#define CLASS_GMA 21
-#define CLASS_TEM 22
-#define CLASS_NIG 23
-#define CLASS_CRU 24
-#define CLASS_KIN 25
-#define CLASS_MAR 26
-#define CLASS_HIE 27   /* Hierophant */
-```
-
-**WARNING:** Renumbering all class IDs is the most disruptive change in this
-proposal. Every reference to a class constant throughout the codebase must be
-updated. The alternative — appending new class IDs at the end (e.g., Druid=24,
-Thornwarden=25, Wildspeaker=26, Hierophant=27) — avoids renumbering but breaks
-the tier-range assumptions that `IS_MORTAL_CLASS`, `IS_REMORT_CLASS`, and
-`IS_ADEPT_CLASS` depend on.
-
-**Recommended approach:** Append at end and modify the tier macros to use
-`gclass_table[c].tier` (which they already do) rather than range checks. The
-class table's `tier` field already correctly identifies class tier regardless of
-ID ordering. This avoids renumbering:
+New class IDs are appended after the existing 24 classes. Existing class IDs
+are not renumbered — all current code referencing `CLASS_MAG` through
+`CLASS_MAR` continues to work unchanged.
 
 ```c
 /* Append new classes after existing 24 */
@@ -896,9 +848,25 @@ ID ordering. This avoids renumbering:
 #define MAX_TOTAL_CLASS 28
 ```
 
-The `MAX_CLASS`, `MAX_REMORT`, and adept count macros would need to be
-decoupled from the assumption that classes are contiguous by tier. Since the
-tier macros already use `gclass_table[c].tier`, this is the lower-risk path.
+The `MAX_CLASS` and `MAX_REMORT` macros (currently `MAX_CLASS = 6`,
+`MAX_REMORT = MAX_CLASS * 2`, `MAX_TOTAL_CLASS = MAX_CLASS + MAX_REMORT +
+MAX_CLASS`) assume classes are contiguous by tier. With Druid classes appended
+at the end, this formula no longer holds. The fix: replace the formula with a
+literal count:
+
+```c
+#define MAX_TOTAL_CLASS 28
+```
+
+The tier macros `IS_MORTAL_CLASS(c)`, `IS_REMORT_CLASS(c)`, and
+`IS_ADEPT_CLASS(c)` already use `gclass_table[c].tier` rather than range
+checks, so they work correctly regardless of ID ordering. No change needed.
+
+Any code that iterates mortal classes as `0..MAX_CLASS-1` or remort classes as
+`MAX_CLASS..MAX_CLASS+MAX_REMORT-1` must be audited. These loops should be
+changed to iterate `0..MAX_TOTAL_CLASS-1` and filter by
+`gclass_table[c].tier`. A codebase search for `MAX_CLASS` and `MAX_REMORT`
+usage will identify all sites.
 
 ### const_class.c Changes
 
