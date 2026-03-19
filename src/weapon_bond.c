@@ -1157,6 +1157,9 @@ void objfun_bond_spirit(OBJ_DATA *obj, CHAR_DATA *keeper)
    if (obj->item_type != ITEM_WEAPON)
       return;
 
+   if (keeper->fighting == NULL)
+      return;
+
    if (get_eq_char(keeper, WEAR_HOLD_HAND_L) != obj &&
        get_eq_char(keeper, WEAR_HOLD_HAND_R) != obj && get_eq_char(keeper, WEAR_TWO_HANDED) != obj)
       return;
@@ -1176,21 +1179,8 @@ void objfun_bond_spirit(OBJ_DATA *obj, CHAR_DATA *keeper)
       keeper->hit = UMIN(keeper->hit + heal, get_max_hp(keeper));
       keeper->mana = UMIN(keeper->mana + mana_restore, get_max_mana(keeper));
 
-      if (keeper->fighting != NULL)
-      {
-         act("@@m$p@@m channels the spirit of steel, mending flesh and restoring focus.@@N", keeper,
-             obj, NULL, TO_CHAR);
-         act("@@m$n@@m's bonded blade pulses with ethereal energy.@@N", keeper, obj, NULL, TO_ROOM);
-      }
-      else
-      {
-         if (number_percent() < 30) /* Less spammy out of combat */
-         {
-            act("@@m$p@@m breathes softly, a gentle warmth flowing through your hands.@@N", keeper,
-                obj, NULL, TO_CHAR);
-            act("@@m$n@@m's bonded blade glows faintly with living warmth.@@N", keeper, obj, NULL,
-                TO_ROOM);
-         }
-      }
+      act("@@m$p@@m channels the spirit of steel, mending flesh and restoring focus.@@N", keeper,
+          obj, NULL, TO_CHAR);
+      act("@@m$n@@m's bonded blade pulses with ethereal energy.@@N", keeper, obj, NULL, TO_ROOM);
    }
 }

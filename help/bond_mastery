@@ -24,8 +24,8 @@ activates periodically during combat.
 
   Spirit Mastery: "Living Steel"
     Your blade breathes with living energy. It periodically restores
-    4% of max HP and 4% of max mana, both in and out of combat.
-    ~8% chance per tick.
+    4% of max HP and 4% of max mana during combat. ~8% chance per
+    combat tick.
 
 Mastery persists through death, track changes (if you re-achieve rank 5),
 and logout. It is a permanent upgrade once activated.
