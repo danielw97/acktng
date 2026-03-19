@@ -7,7 +7,7 @@
 
 ## Summary of Current State
 
-Each adept class currently has **very few** dedicated spells/skills (1-4 each), plus passive bonuses, a stance, and inherited access to all prerequisite class abilities. The adept tier (levels 1-20) sits atop two completed remort paths, so characters already have extensive spell/skill inventories from mortal + remort. Adept-exclusive abilities are meant to be the capstone synthesis that neither parent tradition achieves alone.
+Each adept class currently has **very few** dedicated spells/skills (1-4 each), plus passive bonuses, a stance, and inherited access to all prerequisite class abilities. The adept tier (levels 1-20) sits atop at least one completed remort path, so characters already have extensive spell/skill inventories from mortal + remort. Adept-exclusive abilities are meant to be the capstone synthesis that neither parent tradition achieves alone.
 
 ---
 

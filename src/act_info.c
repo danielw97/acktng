@@ -4540,11 +4540,11 @@ void do_gain(CHAR_DATA *ch, char *argument)
          {
             if (ch->class_level[cnt] > 0 || allow_adept)
             {
-               if (ch->class_level[gclass_table[cnt].prereq[0]] < MAX_MORTAL ||
+               if (ch->class_level[gclass_table[cnt].prereq[0]] < MAX_MORTAL &&
                    ch->class_level[gclass_table[cnt].prereq[1]] < MAX_MORTAL)
                {
-                  send_to_char("You need to be level 100 in both remortal classes before you can "
-                               "adept in this class!\n\r",
+                  send_to_char("You need to be level 100 in at least one of this class's remort "
+                               "prerequisites before you can adept!\n\r",
                                ch);
                   return;
                }
