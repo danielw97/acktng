@@ -1730,9 +1730,9 @@
      ""},
 
     {NORM,
-     "Kinetic Reversion",
+     "Predictive Collapse",
      {LEVELS_INIT, L(CLASS_KIN, 2)},
-     spell_kinetic_reversion,
+     spell_predictive_collapse,
      TAR_CHAR_OFFENSIVE,
      POS_FIGHTING,
      NULL,
@@ -1740,8 +1740,8 @@
      120,
      12,
      TRUE,
-     "Kinetic Reversion",
-     "!Kinetic Reversion!",
+     "Predictive Collapse",
+     "!Predictive Collapse!",
      ""},
 
     {NORM,

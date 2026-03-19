@@ -76,7 +76,7 @@ SPELL_OBJS = \
 	spells/spell_holy_word.o spells/spell_holy_wrath.o spells/spell_holyshield.o spells/spell_hypnosis.o spells/spell_ice_bolt.o \
 	spells/spell_iceshield.o spells/spell_identify.o spells/spell_influx.o \
 	spells/spell_infravision.o spells/spell_infuse.o spells/spell_invis.o \
-	spells/spell_iron_golem.o spells/spell_kinetic_reversion.o \
+	spells/spell_iron_golem.o \
 	spells/spell_know_alignment.o spells/spell_know_critical.o spells/spell_know_item.o \
 	spells/spell_know_weakness.o spells/spell_laserbolt.o spells/spell_lava_burst.o \
 	spells/spell_lightning_bolt.o spells/spell_lightning_breath.o \

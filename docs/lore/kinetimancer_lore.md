@@ -42,15 +42,15 @@ The **predictive collapse** technique that characterizes high-level Kinetimancer
 
 ---
 
-## IV. The Kinetic Reversion Technique
+## IV. The Predictive Collapse Technique
 
-The tradition's signature technique — **Kinetic Reversion**, learned at Kinetimancer level 2 — is a practical expression of the momentum doctrine that is conceptually simple and technically demanding. The technique takes incoming force — an attack, a spell effect, a physical impact — and reverses its momentum vector, returning it toward its origin.
+The tradition's signature technique — **Predictive Collapse**, learned at Kinetimancer level 2 — is a practical expression of the momentum doctrine that is conceptually simple and technically demanding. The technique takes incoming force — an attack, a spell effect, a physical impact — and reverses its momentum vector, returning it toward its origin.
 
 The conceptual simplicity: momentum can be redirected by the same mathematics that describes its original motion.
 
-The technical demands: identifying the momentum vector of an incoming effect fast enough to redirect it before it reaches its target (which requires anticipatory cognitive modeling rather than reactive response); applying the redirection with enough precision that the reversed momentum actually reaches the intended return destination rather than dispersing into the environment; maintaining awareness of what the Reversion will do to the combat situation after application, since a successfully reversed effect changes the tactical context in ways that must be anticipated.
+The technical demands: identifying the momentum vector of an incoming effect fast enough to redirect it before it reaches its target (which requires anticipatory cognitive modeling rather than reactive response); applying the redirection with enough precision that the reversed momentum actually reaches the intended return destination rather than dispersing into the environment; maintaining awareness of what the Collapse will do to the combat situation after application, since a successfully reversed effect changes the tactical context in ways that must be anticipated.
 
-Practitioners who have mastered the technique describe it as fundamentally changing their relationship to incoming attacks: rather than treating every incoming effect as something to defend against, they treat every incoming effect as a potential resource. An opponent who attacks is providing momentum that can be redirected. The more powerful the attack, the more momentum is available for redirection. This inverts the normal logic of combat, in which more powerful attacks are more threatening — for a practitioner with Kinetic Reversion, more powerful attacks are more useful.
+Practitioners who have mastered the technique describe it as fundamentally changing their relationship to incoming attacks: rather than treating every incoming effect as something to defend against, they treat every incoming effect as a potential resource. An opponent who attacks is providing momentum that can be redirected. The more powerful the attack, the more momentum is available for redirection. This inverts the normal logic of combat, in which more powerful attacks are more threatening — for a practitioner with Predictive Collapse, more powerful attacks are more useful.
 
 ---
 

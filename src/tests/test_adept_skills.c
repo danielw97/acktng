@@ -215,7 +215,7 @@ static void test_existing_adept_skills_still_registered(void)
    assert_skill_at_class_level("anti magic shell", CLASS_CRU, 2);
    assert_skill_at_class_level("enhanced heal", CLASS_TEM, 1);
    assert_skill_at_class_level("elemental inferno", CLASS_GMA, 1);
-   assert_skill_at_class_level("Kinetic Reversion", CLASS_KIN, 2);
+   assert_skill_at_class_level("Predictive Collapse", CLASS_KIN, 2);
    assert_skill_at_class_level("poison:nightshade", CLASS_NIG, 2);
    printf("PASS: test_existing_adept_skills_still_registered\n");
 }

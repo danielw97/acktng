@@ -273,9 +273,11 @@ The Egomancer component of the synthesis. This is targeted cognitive disruption 
 
 Mechanically: a targeted debuff that reduces the target's accuracy, causes occasional misfires on active skills they attempt, and briefly suppresses any "building charge" effects they have active (combo stacks, chi accumulation, active buff chains). It is the Kinetimancer's specific counter to momentum-building opponents — turning their buildup against them by disrupting the cognitive coherence that buildup requires.
 
-**3. Add: Predictive Collapse (Level 15)**
+**3. Add: [Name TBD] (Level 15)**
 
-The explicitly named apex technique of the Kinetimancer tradition — described in `kinetimancer_lore.md` Section III and cross-referenced in the Egomancer and Necromancer lore files as the full-synthesis expression of the tradition. The lore describes it as deploying entropy effects calibrated precisely to anticipated opponent responses, using real-time cognitive modeling to identify exactly when and where the entropy application will land with maximum effect.
+The apex synthesis technique of the Kinetimancer tradition — described in `kinetimancer_lore.md` Section III and cross-referenced in the Egomancer and Necromancer lore files. The lore describes it as deploying entropy effects calibrated precisely to anticipated opponent responses, using real-time cognitive modeling to identify exactly when and where the entropy application will land with maximum effect.
+
+*Note: the name "Predictive Collapse" was originally proposed for this skill but has since been given to the existing L2 skill (formerly "Kinetic Reversion"). A new name is needed for this L15 slot.*
 
 Mechanically: a high-mana spell that deals substantial entropy-type damage, with a large bonus against opponents who are in a "building" state (mid-combo, mid-cast, charging an ability). It is the synthesis skill in the same way that Convergent Cascade is for Grand Magi: the moment where both component traditions operate simultaneously to produce an effect neither achieves alone. A Necromancer deploys entropy broadly; an Egomancer reads cognitive states; the Kinetimancer deploys entropy at the precise cognitive moment when it collapses the opponent's developing action.
 

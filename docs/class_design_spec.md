@@ -250,4 +250,4 @@ Increases spell damage and damcap. Will have new spells. Has an existing stance,
 
 - Prime: INT
 - Stance: Magi (AC+2, DR-1, HR-1, Spell+3, EITHER_CLASS, MULTI_CAST, DUAL_CAST, NO_HIT)
-- Key additions: kinetic reversion, non-physical spell damage scaling, shadow/poison/mental damage bonus
+- Key additions: predictive collapse, non-physical spell damage scaling, shadow/poison/mental damage bonus
