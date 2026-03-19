@@ -417,6 +417,12 @@ static size_t sanitize_websocket_text_payload(const unsigned char *src, size_t s
          }
       }
 
+      if (src[i] == '\r')
+      {
+         i++;
+         continue; /* strip carriage return */
+      }
+
       dst[j++] = src[i++];
    }
 
