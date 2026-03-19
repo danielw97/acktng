@@ -1000,6 +1000,7 @@
 #define KNOW_HISTORY (1 << 7)
 #define KNOW_WILDERNESS (1 << 8)
 #define KNOW_POLITICS (1 << 9)
+#define KNOW_HELPS    (1 << 10) /* search help/shelp files at AI dispatch time */
 #define NUM_KNOW_FLAGS 10
 
 /* City indices for knowledge lookup table */

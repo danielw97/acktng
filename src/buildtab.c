@@ -603,6 +603,7 @@ const struct lookup_type tab_knowledge[] = {{"weapons", KNOW_WEAPONS, 0},
                                             {"history", KNOW_HISTORY, 0},
                                             {"wilderness", KNOW_WILDERNESS, 0},
                                             {"politics", KNOW_POLITICS, 0},
+                                            {"helps", KNOW_HELPS, 0},
                                             {NULL, 0}};
 
 const struct lookup_type tab_accent[] = {{"none", ACCENT_NONE, 0},

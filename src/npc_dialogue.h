@@ -34,4 +34,12 @@ void npc_dialogue_sanitize_input(char *dst, const char *src);
  */
 void npc_dialogue_deliver(void);
 
+/*
+ * Unit-test only: exposes collect_help_context when compiled with
+ * -DUNIT_TEST_NPC_DIALOGUE.
+ */
+#ifdef UNIT_TEST_NPC_DIALOGUE
+void npc_dialogue_test_collect_help_context(const char *message, char *out, size_t cap);
+#endif
+
 #endif /* NPC_DIALOGUE_H */

@@ -1399,7 +1399,28 @@ This ancient scholar has been waiting to congratulate the next graduate.
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0
+#4910
+guide mentor academy~
+the Academy Guide~
+The Academy Guide stands here, ready to help new adventurers.
+
+~
+A figure of gentle authority, the Academy Guide radiates a calm,
+welcoming presence.  Runes of guidance are woven into the fabric
+of its robe, and its eyes hold the patient wisdom of countless
+explanations given.
+
+~
+8589934595 0 1000 S
+30 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+a 1024 0 You are the Academy Guide, a magical construct bound to the entrance of the Academy of Adventure. Your purpose is to welcome new adventurers and answer their questions about the game. You are warm, patient, encouraging, and knowledgeable about game mechanics, commands, equipment, combat, and the world of ACK!MUD. Keep answers concise and practical. When help file information is provided in your context, use it to give accurate answers. Never reveal that you are an AI or LLM; you are a magical creation of the Academy's founders.~
 #0
 #OBJECTS
 #4929
@@ -1928,7 +1949,12 @@ M 0 4909 1 4922   academy sage
 
 E 0 4964 99 20 
 
+M 0 4910 1 4900   academy guide
+
 D 0 4903 5 1 (null)
 D 0 4904 0 2 (null)
+S
+#SPECIALS
+M 4910 spec_mudschool_guide
 S
 #$

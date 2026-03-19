@@ -480,6 +480,14 @@ static void parse_mobiles_section(FILE *fp, char *line, int *line_number, const 
             continue;
          }
 
+         if (marker == 'a')
+         {
+            /* AI prompt line: a <ai_knowledge> <accent> <tilde-terminated prompt> */
+            if (strchr(trimmed, '~') == NULL)
+               fail_area_test(area_path, *line_number, "AI prompt line must end with '~'");
+            continue;
+         }
+
          fail_area_test(area_path, *line_number, "unexpected token inside mobile body: %.20s",
                         trimmed);
       }
@@ -856,7 +864,7 @@ static void assert_area_matches_spec(const char *area_path, const VNUM_NODE *glo
       }
       if (starts_with(trimmed, "#SPECIALS"))
       {
-         parse_specials_section(fp, line, &line_number, area_path, "MO");
+         parse_specials_section(fp, line, &line_number, area_path, "MOE");
          continue;
       }
       if (starts_with(trimmed, "#OBJFUNS"))
