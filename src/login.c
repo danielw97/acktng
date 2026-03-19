@@ -879,6 +879,13 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
          }
          ch->deaf = 0;
          char_to_room(ch, get_room_index(ROOM_VNUM_SCHOOL));
+         ch->pcdata->is_new_player = TRUE;
+         {
+            CHAR_DATA *mob;
+            for (mob = ch->in_room->first_person; mob != NULL; mob = mob->next_in_room)
+               if (IS_NPC(mob) && mob->spec_fun != NULL)
+                  (*mob->spec_fun)(mob);
+         }
          /*
           * Needed in case newbie drops an item.
           */

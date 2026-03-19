@@ -833,6 +833,7 @@ struct pc_data
    bool completed_quests[QUEST_MAX_TEMPLATES];
    /* --- Weapon bond system --- */
    BOND_DATA *bond;
+   bool is_new_player; /* TRUE for brand-new characters; cleared after first greeting */
 };
 
 /*
