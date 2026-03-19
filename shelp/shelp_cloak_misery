@@ -17,5 +17,18 @@ Acquisition:
    - Assassin: level 80
    - Warlock: level 80
 Description:
-   Cloak:misery is a protective/support spell that strengthens, restores, or safeguards the target.
+   Cloak:misery is a shared higher-level cloak available to several remort
+   classes. It wraps the caster in a dark aura of suffering. When the caster
+   is struck in combat, there is a 35% chance the cloak will activate and
+   shroud the attacker in misery.
+
+   The effect applies a short curse to the attacker (1 round duration):
+     - Hitroll: -1
+     - Damroll: -1
+     - AC: -5
+
+   While the individual debuffs are small, they can stack with repeated
+   procs, steadily weakening an opponent over a prolonged fight.
+
+   Duration scales with pseudo-level (pseudo_level / 8 rounds).
 *******************************************************************************

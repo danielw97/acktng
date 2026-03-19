@@ -413,6 +413,8 @@
 #define SHADOW_SHIELD 3
 #define ICE_SHIELD 4
 #define PSI_SHIELD 5
+#define HOLY_SHIELD 6
+#define ARCANE_SHIELD 7
 
 /* These are for skill_table lookup funcs... to save writing 2 functions */
 #define RETURN_BEST_LEVEL 1

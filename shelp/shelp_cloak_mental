@@ -14,5 +14,17 @@ Noun Damage: None
 Acquisition:
    - Monk: level 48
 Description:
-   Cloak:mental is a protective/support spell that strengthens, restores, or safeguards the target.
+   Cloak:mental is the Monk's signature remort cloak. It surrounds the caster
+   in a shimmering aura of mental fortitude, providing a flat reduction to all
+   incoming non-physical (magical) damage. The reduction amount is equal to
+   pseudo_level / 2.
+
+   For example, at pseudo-level 100, every magical hit against the Monk is
+   reduced by 50 damage. This reduction is applied before other damage
+   modifiers such as elemental resistance.
+
+   The cloak does not affect physical damage. For physical damage reduction,
+   see cloak:iron (Knight).
+
+   Duration scales with pseudo-level (pseudo_level / 8 rounds).
 *******************************************************************************
