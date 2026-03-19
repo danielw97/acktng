@@ -84,7 +84,13 @@ One thread in the warden tradition's history that formal doctrine does not addre
 
 The road warden companies' combat doctrine developed in direct relationship to this infrastructure. The Seven Shade Arches were Deltari-engineered shade structures. Dunmar's tactical doctrine of fighting near shade infrastructure reflected a combat environment that Deltari construction had created. The specific problem the warden tradition was institutionally designed to solve — protecting water convoys in a cistern-supported desert network — was inseparable from the hydraulic infrastructure that Deltari labor built.
 
-Whether this constitutes a meaningful debt to the Deltari tradition is not a question the warden tradition's formal doctrine has ever engaged with directly. The Reckoning faction has occasionally raised it as one thread in the broader question of unacknowledged institutional debts in the five-city governance structure. The Dunmar School's response, when the question reaches them at all, is that doctrine is derived from problems and conditions rather than from the identities of those who created the conditions — which is historically accurate and does not constitute acknowledgment.
+Whether this constitutes a meaningful debt to the Deltari tradition was, until recently, not a question the warden tradition's formal doctrine engaged with directly. The Reckoning faction had occasionally raised it as one thread in the broader question of unacknowledged institutional debts in the five-city governance structure. The Dunmar School's response, when the question reached them at all, was that doctrine is derived from problems and conditions rather than from the identities of those who created the conditions — which is historically accurate and does not constitute acknowledgment.
+
+That changed when the **Deltari Hydraulic Heritage Council** submitted a formal petition to Midgaard's Guard Command requesting that the Guard Command's official institutional history include language acknowledging Deltari engineers as the builders of the cistern and shade infrastructure the road warden companies were organized to protect. The petition is narrow — it asks for accurate institutional history, not compensation or revision of the tradition's identity — but it forces the question into formal institutional channels where informal deflection is harder to maintain.
+
+Guard Command convened a review committee. The review committee has met twice and not reported. Continuity faction advisors have recommended indefinite deferral. Reckoning faction historians have submitted supporting analyses.
+
+Working wardens in the field are largely following the institutional non-response with pragmatic indifference — the petition has no operational implications for their work. But wardens with opinions about the Continuity/Reckoning split now have a specific, concrete case rather than an abstract ideological disagreement: either Midgaard's official military history should be accurate about the infrastructure that produced the tradition, or it shouldn't. Both the Dunmar School's "doctrine derives from conditions, not identities" position and the Registry School's "civic legitimacy requires institutional compliance" position have something to say about this, and neither says it comfortably.
 
 ---
 
@@ -136,7 +142,29 @@ The Dunmar School does not engage with this argument. The **Registry School** fi
 
 ---
 
-## XI. Cross-References
+## XI. The Thornwood Perimeter
+
+The **Thornwood estate** — a former frontier manor north of Midgaard that underwent what warden field reports describe with characteristic understatement as "ecological conversion" — presents the warden tradition with a jurisdictional problem it was not designed to solve and has not resolved.
+
+The estate's territory is marked on Lantern Road patrol maps with a notation that translates, in practice, as "route around." Great Northern Forest wardens do not contract for operations inside the perimeter. Guard Command has never issued formal orders establishing a Thornwood containment line. The Thornwood is not, in any official sense, a warden problem.
+
+It is, in the practical sense, unavoidable.
+
+The Wild Hunt — the estate's mobile enforcement arm — operates outside the estate's fixed perimeter. Caravan routes within a day's travel of the estate have elevated insurance rates and modified escort contracts. The grave tunnel connecting the estate to Midgaard's burial route network is infrastructure that neither Midgaard nor Shadowmere is willing to close. The estate's binding is documented as failing. None of these facts are the warden tradition's official problem, and none of them are problems the warden tradition can ignore without consequences for the convoys and routes it is commissioned to protect.
+
+The formation that occupies the Thornwood perimeter is called, informally, the **Pale Line** — a loose network of independent wardens, a handful of Guard Command wardens operating outside their official assignments, and a small number of Shadowmere-adjacent practitioners who have their own reasons to track the estate's expansion. The Pale Line is not an institution. It has no charter, no commissioning authority, no formal doctrine, and no pay structure. It is precisely the kind of formation that the Registry School would call Reaver Confederates by another name.
+
+The Dunmar School's position is more complicated. The Pale Line's function — holding a perimeter against something that would otherwise expand into the routes and settlements that legitimate convoys depend on — maps directly onto the foundational Dunmar doctrine of protecting the principal objective by holding defensible ground. The problem is that the Thornwood perimeter is not assigned ground; it is ground that no authority has claimed. Dunmar held the Seven Shade Arches under commission. The Pale Line holds the Thornwood approaches under self-assigned obligation that the tradition's formal doctrine has no vocabulary for.
+
+This tension is exactly the one the Ash-and-Iron Decades' requisition office system was supposed to resolve: wardens without charters become Reaver Confederates. But the requisition office's solution was to issue charters, and no city authority has issued a charter for Thornwood perimeter work because doing so would require officially acknowledging that the estate is an ongoing threat requiring civic response — which Midgaard's Continuity faction will not do, because acknowledging the threat would require acknowledging the sealed warrant questions that connect Midgaard's institutional history to the estate's current state.
+
+The Pale Line wardens hold the perimeter anyway. They hold it because the convoys they have spent their careers protecting move through territory that borders on what the Thornwood is becoming, and the alternative to holding is watching it expand into routes that will then require rerouting or abandoning. Dunmar's doctrine does not require a commission to define what is worth protecting. It requires the warden to be clear about what the principal objective is. The Pale Line wardens are clear: the routes hold, or the region doesn't.
+
+Whether this is Dunmar School doctrine or simply Dunmar School doctrine's name applied to something more desperate is the question the formation does not answer aloud.
+
+---
+
+## XII. Cross-References
 
 - **Timeline**: Era II (road warden companies), Era VII (Ninth Meridian, Reaver Confederates, Caleph Dunmar's engagement), Era XI (Ash-and-Iron militarization), Era XII (Violet Compact registry formalization)
 - **Scorching Sands**: Dunmar's engagement site; the Seven Shade Arches waystation
@@ -151,4 +179,6 @@ The Dunmar School does not engage with this argument. The **Registry School** fi
 - **Eastern Desert**: Charter road network; Ninth Meridian Catastrophe
 - **Deltari**: Cistern and shade infrastructure builders; environmental context for warden doctrine development
 
-See also: `scorching_sands_lore.md`, `midgaard_lore.md`, `kowloon_lore.md`, `timeline.md`
+- **Thornwood**: Pale Line perimeter formation; jurisdictional void between Midgaard's Continuity faction non-acknowledgment and the estate's actual expansion; Dunmar School doctrine applied without commission
+
+See also: `scorching_sands_lore.md`, `midgaard_lore.md`, `kowloon_lore.md`, `thornwood_lore.md`, `timeline.md`

@@ -94,6 +94,10 @@ The cistern labor context that produced the pugilist tradition's earliest practi
 
 Whether this constitutes a meaningful debt to the Deltari tradition is contested within the few pugilist lineages that discuss the question at all. The body knowledge the tradition carries is human-generic — any population doing sustained physical labor in confined spaces would develop similar physical adaptations — and the specific environment those adaptations developed in was Deltari-built but not Deltari-exclusive in its occupancy. The Deltari themselves do not appear in the tradition's oral transmission as teachers or acknowledged sources. The connection is environmental rather than direct.
 
+The **Deltari Hydraulic Heritage Council's** formal petition to Midgaard's Guard Command — asking that the Guard Command's institutional history acknowledge Deltari engineers as the builders of the cistern network the road warden tradition was organized to protect — is the kind of event that the pugilist tradition, without institutional structures, has no formal mechanism to respond to. No pugilist body was petitioned; no pugilist body has standing to issue a position. Individual practitioners who have thought about the question find that it surfaces a distinction the tradition has always lived with but rarely articulated: the pugilist tradition carries working knowledge that belongs to the people who hold it, not to the environmental context in which it developed. The cisterns were Deltari work. The bodies that worked in them were not Deltari. The knowledge that developed through those bodies belongs to those lineages of practitioners, derived from conditions that Deltari engineering created.
+
+Whether that derivation creates obligation is a question the tradition has no formal method for answering — which does not mean practitioners have no opinions about it.
+
 ---
 
 ## VIII. Cross-References

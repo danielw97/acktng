@@ -68,7 +68,31 @@ The **Night of Unsounded Bells** — the suppression event that collapsed the re
 
 ---
 
-## VI. Ciphers Within the Five Cities
+## VI. The Void Citadel Monitoring Network
+
+The intelligence dealer lineage — the third of the cipher tradition's foundational strands — has a current operational focus that most other practitioner traditions are either unaware of or prefer not to ask about: a sustained, multi-city information network monitoring the **Void Citadel's** operational status.
+
+The Void Citadel's recurrence technology — the extraction, projection, and iterative replay of testimony for the purpose of dissolving cognitive resistance — was the institutional governance mechanism of a structure that no legitimate authority currently controls. The Recurrence Chancery, the Null Spire Conductorate, and the Heraldic Ten were not dismantled after the Gloamvault's collapse; they were evacuated and abandoned, which is different. An institution designed to operate without the consent of those it governs does not become inoperable simply because its architects are gone. It becomes available to whoever arrives next.
+
+The cipher tradition's private intelligence dealers understood this before any of the five cities' official institutions articulated the problem. The first monitoring effort was not coordinated or institutionally sanctioned — it was three independent fence operators in Kiess who noticed that shipments routed near the Citadel's approach corridors were arriving with disrupted documentation, as if someone was operating sorting and classification processes at the approach nodes. One fence operator with access to contacts in the Recurrence Chancery's former administrative zone confirmed that two of the three known intake stations were receiving materials. She did not confirm who was operating them.
+
+That was enough. The private intelligence dealers who learned of her report began selling Void Citadel assessments.
+
+The current monitoring network operates across all five cities through practitioners whose primary function is, on paper, something else entirely: route guides checking the approach corridor traffic for signs of institutional resumption; fence operators monitoring what goods are moving near the Citadel's formerly active supply lines; document specialists tracking whether Citadel-origin classification seals appear on materials circulating in the black market. No single practitioner sees the whole picture. The intelligence is aggregated by a coordinating faction within the private intelligence dealer lineage that several senior practitioners describe, with characteristic cipher understatement, as "the Citadel office."
+
+The Citadel office sells its assessments to all five cities' intelligence institutions on a subscription basis. The assessment is updated quarterly. Its contents are not published; the existence of the subscription is not acknowledged by any of the five cities publicly. What is known — because the cipher tradition has no secrecy doctrine about its own practices, only about its clients' affairs — is that all five cities have been subscribers at some point, that the subscription has never lapsed for all five simultaneously, and that the price has increased in each of the last four assessment cycles.
+
+What the assessments currently say is not documented in any publicly accessible source. What practitioners who have been near the Citadel office infer from the price increases is that the operational picture at the Citadel is becoming more complex, not less.
+
+The **psionicist academies** and the cipher tradition are not natural allies — their operating domains are different and their institutional positions are orthogonal. But psionicist practitioners who are aware of the Citadel's recurrence technology have a specific professional interest in the monitoring network that the academies are not positioned to operate themselves. The academies cannot maintain operational intelligence assets without triggering the same five-city skepticism about cognitive-manipulation applications that makes all psionicist practice politically fraught. A cipher tradition network that sells information without conducting the cognitive operations the information describes is, in this specific case, more useful than a psionicist investigation would be.
+
+The cipher tradition does not provide this service as a favor to the psionicist academies. It provides the service because the Void Citadel monitoring operation is valuable intelligence that five city-states will pay for, and because practitioners who understand the recurrence technology's operational implications understand that the alternative to selling the assessments is watching someone operate the Citadel without anyone tracking what they're doing.
+
+That is, in the cipher tradition's analysis, a gap that nothing and no one should leave unfilled.
+
+---
+
+## VII. Ciphers Within the Five Cities
 
 ### Midgaard
 
@@ -94,7 +118,7 @@ Rakuen itself, chronically resource-constrained and operating under chronic emer
 
 ---
 
-## VII. The Skills and the Stance
+## VIII. The Skills and the Stance
 
 The cipher tradition's characteristic skills each trace to specific aspects of the three-lineage inheritance:
 
@@ -122,7 +146,7 @@ The stance's combined effect (improved AC and hit rate) reflects the comprehensi
 
 ---
 
-## VIII. The Serathi Thread
+## IX. The Serathi Thread
 
 The route guide lineage's knowledge of secondary paths and bypass routes — the earliest documented form of what became the cipher tradition's information-as-currency orientation — owes significant unacknowledged debt to **Serathi sky-road mapping**.
 
@@ -134,7 +158,7 @@ The cipher tradition has no formal position on this debt because the tradition h
 
 ---
 
-## IX. The Assassination Boundary
+## X. The Assassination Boundary
 
 The cipher tradition's relationship with the **Assassin** tradition is institutionally complex. Both descend from the post-Ninth Meridian breakdown environment. Both emphasize positioning, information advantage, and the exploitation of institutional gaps. Both maintain low official profiles.
 
@@ -144,7 +168,7 @@ The moral distinction practitioners draw is less clear and more contested. Assas
 
 ---
 
-## X. Cross-References
+## XI. Cross-References
 
 - **Timeline**: Era VII (Ninth Meridian Catastrophe; post-collapse operators; cipher tradition crystallization), Era IX (Kel'Shadra Night of Unsounded Bells), Era XII (Violet Compact; Sealed Names apparatus)
 - **Saltglass Reach**: Primary operating corridor; three-route system; fence operator market structure; Seam Strike metaphor origin
@@ -153,6 +177,8 @@ The moral distinction practitioners draw is less clear and more contested. Assas
 - **Eccentric Woodland**: Route predation corridor; Rakuen route
 - **Midgaard**: Sealed Names apparatus; registry system as primary target environment
 - **Kowloon**: Jade Eels; Harbor Syndic adversarial accommodation; Black Ledger
+- **Void Citadel**: Active monitoring target; quarterly assessments sold to all five cities; "Citadel office" coordinating faction
+- **Psionicist**: Indirect beneficiary of Void Citadel monitoring; cannot maintain operational assets directly
 - **Assassin**: Parallel successor remort path; post-empire intelligence agent lineage
 - **Warlock**: Alternative successor remort path; shadow-compact resonance tradition
 - **Nightblade**: Adept synthesis of Assassin and Warlock traditions

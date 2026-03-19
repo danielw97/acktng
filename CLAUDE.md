@@ -6,6 +6,8 @@ For any implementation task that involves `src/` changes, you MUST first deliver
 
 Changes that do not touch `src/` (e.g. lore files, area files, documentation, help files) do NOT require a design document and may be implemented directly.
 
+Once a proposal has been fully implemented, move it from `docs/proposals/` to `docs/proposals/completed/`. Active proposals (pending discussion or implementation) live in `docs/proposals/`. Completed proposals (fully implemented) live in `docs/proposals/completed/`.
+
 When writing any document (design proposals, lore files, area plans, etc.), write and deliver it in sections rather than producing the entire document at once. Continue through all sections without waiting for confirmation between them, unless the user asks for a different approach.
 
 ## Project Overview

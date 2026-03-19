@@ -52,7 +52,35 @@ What the Keep did not inherit was the Axiomatic Schools' full independence from 
 
 ---
 
-## V. Cross-References
+## V. The Tradition in Practice: Variation Across the Five Cities
+
+The Axiomatic Schools' formal proof methodology was developed in conditions of institutional stability — a post-Conclave arcane community building permanent research institutions with the explicit goal of never again producing a catastrophe through unsupervised research. The methodology's design assumptions include: stable record-keeping environments, reliable peer review access, time sufficient for thorough documentation before application, and institutional structures that can maintain methodological accountability across practitioner generations.
+
+Midgaard's Wizard's Keep most closely approximates those assumptions. Kiess's Wizard practitioners operate in a more politically exposed environment — the anti-sealed-warrant charter makes the Keep's triple-ledger documentation system legally non-compulsory in ways that create occasional jurisdictional tension — but with adequate institutional support. Kowloon's practitioners work with Harbor Syndic oversight applied to combat magic licensing that the Axiomatic tradition finds procedurally misaligned with its own accountability frameworks, but functional.
+
+**Rakuen** is where the methodology's assumptions are most systematically violated.
+
+Rakuen's chronic emergency posture means that the conditions under which formal proof methodology was designed to operate — stable institutions, time for documentation, peer review infrastructure — are the conditions that exist in Rakuen between disasters rather than as the default state. The Rakuen-based Wizard tradition has been forced to develop answers to a question the Axiomatic Schools never seriously engaged with: what does formal proof methodology require when the practitioner cannot afford to be thorough?
+
+The **Rakuen Compression Protocols** — the informal name for the set of abbreviated documentation standards that Rakuen practitioners developed over several generations — are not a relaxation of the formal proof requirement. They are a reformulation of it for time-constrained conditions. The core principle of the Compression Protocols is that the minimum viable documentation for any operation is the documentation required to reproduce its effects and identify its failure modes. Everything else is desirable but not load-bearing. A practitioner in Rakuen who has five minutes before a flood wall fails does not need a complete formal proof tree. They need to know what the operation does, what could go wrong, and how to replicate the parts that worked if they have to do it again in six hours when the next wave arrives.
+
+Midgaard-based Wizard practitioners have several objections to the Compression Protocols, all of which are methodologically valid:
+1. Abbreviated documentation cannot support reliable peer review
+2. "Minimum viable documentation" creates pressure to redefine "minimum viable" downward under operational stress
+3. A tradition that permits emergency exemptions eventually finds everything is an emergency
+
+Rakuen practitioners have several responses, all of which are also methodologically valid:
+1. Peer review that cannot function under pressure has not been tested; Rakuen tests everything
+2. The pressure to compress documentation is observable and documentable; the Rakuen protocols require practitioners to record which compressions they made, creating a secondary accountability layer
+3. The Axiomatic Schools were founded after a catastrophe. Practitioners who have never worked in catastrophe conditions are describing their methodology's upper bound, not its general case.
+
+The underlying disagreement is about what the Axiomatic methodology is *for*. Midgaard's Wizard institutions hold that the methodology is the discipline — that maintaining the full formal proof requirement even in suboptimal conditions is what distinguishes responsible arcane practice from the Conclave's institutionally catastrophic approach. Rakuen practitioners hold that the methodology is a tool — that a tool which cannot be used in the conditions where it's most needed has been confused with its purpose.
+
+Neither position is wrong about what it values. The specific practitioner whose work most clearly surfaces this tension is a Rakuen-based Wizard named **Senna Tareth**, who documented the Compression Protocols in the only formal paper submitted to the Keep's peer review process from Rakuen in the current era. The paper was peer-reviewed, found methodologically coherent, and classified by the Keep as "accepted with reservations about generalizability." Tareth's response to the classification was to add it, as a footnote, to the Compression Protocols' documentation itself: *"The institution that reviewed this work has not operated in Rakuen. Its reservations about generalizability are noted."*
+
+---
+
+## VI. Cross-References
 
 - **Timeline**: Era XII (Axiomatic Schools founding; post-Conclave arcane institution development), Era XIII (Convergence Codices and Confluent Theorist documentation), Era XV (Ash-and-Iron Decades; Grand Magi proto-tradition during storm-front work)
 - **Magi**: Parent tradition; Wizard's Keep institutional framework
@@ -60,5 +88,6 @@ What the Keep did not inherit was the Axiomatic Schools' full independence from 
 - **Grand Magi**: Adept synthesis; Axiomatic + Chromatic Circle convergence; Confluent Theorist lineage
 - **Wizard's Keep**: Primary institutional home; Triple-Ledger Rule as Axiomatic methodology application
 - **Sunken Sanctum**: Spirebound Conclave catastrophe that created the institutional context for both Keep and Axiomatic Schools
+- **Rakuen**: Compression Protocols; chronic emergency variant of formal proof methodology; Senna Tareth's peer-reviewed paper; the methodology-as-tool vs. methodology-as-discipline debate
 
 See also: `magi_lore.md`, `sorcerer_lore.md`, `grand_magi_lore.md`, `wizards_keep.lore`, `timeline.md`

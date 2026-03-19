@@ -40,7 +40,31 @@ The tradition that emerged from this recognition is the modern Grand Magi adept 
 
 ---
 
-## IV. The Elemental Doctrine
+## IV. The Founding Argument and Its Cost
+
+The practitioners who performed the Ashfall Monsoon intervention were awarded the Grand Magi designation as civic recognition — and then discovered that the two traditions they had synthesized were not eager to have the synthesis formally institutionalized.
+
+The Axiomatic Schools' position was that the Ashfall intervention, while effective, had been conducted under conditions that the formal proof methodology explicitly did not endorse: multiple practitioners improvising integrated multi-school techniques in real time without pre-established documentation, peer review, or methodology verification. The Schools could acknowledge that the outcome was successful without endorsing the process, and they did. Their formal assessment of the Ashfall intervention, published in the Keep's review archive, was that it constituted "an emergency operation whose effectiveness does not validate the methodology, which remains unverified under standard protocol conditions."
+
+The Chromatic Circle remnants' position was more complicated. The Circle had spent generations operating at the margins of academic legitimacy — suppressed after the Conclave's collapse, incorporated into academic structures on terms that gave the academies authority over Circle-derived knowledge without giving Circle-lineage practitioners equal institutional standing. The Ashfall intervention was, for Circle-lineage practitioners, the most visible public demonstration of synthesis methodology that had ever occurred. The Axiomatic Schools' lukewarm formal assessment of the intervention felt, to Circle practitioners, like the academic mainstream using its institutional position to manage the narrative of an event it had not contributed to.
+
+The practitioner who forced the argument into the open was a Grand Magi honoree named **Issel Kordath**, who had trained in Circle-lineage synthesis practice before completing Axiomatic Schools formal methodology through the Keep's post-Ashfall credentialing program. Kordath submitted a formal documentation request to the Keep's peer review archive: that the Convergence Codices — the Confluent Theorist manuscripts that had predicted the Ashfall synthesis's effectiveness before it happened, that the academies had classified as "historically significant but theoretically unverified" — be reclassified as verified, given that the Ashfall intervention constituted exactly the empirical test the academies had claimed the Codices lacked.
+
+The Keep's response was that a single emergency application in non-controlled conditions did not constitute formal verification under triple-ledger protocol standards.
+
+Kordath's counter was that the triple-ledger protocol had been designed for magical operations conducted in controlled institutional settings — that applying it as the evidentiary standard for multi-domain synthesis performed under natural catastrophe conditions was a misapplication of the methodology, substituting the protocol's form for its purpose.
+
+The Keep's response was that the purpose of the triple-ledger rule was to prevent exactly the kind of institutional exception-making that emergency conditions tend to produce — that a verification standard which yields to sufficiently dramatic demonstrations would not provide the accountability that post-Conclave arcane governance required.
+
+Kordath documented the exchange in a paper submitted to three separate archives and presented the paper to Circle-lineage practitioners across the five cities before the Keep could decline to publish it. The paper was not an attack on the Axiomatic methodology; it was a careful argument that the Keep was applying the methodology's standards to a question the methodology had not been designed to address. It closed with the same observation the Convergence Codices had opened with: both the Axiomatic Schools and the Chromatic Circle were, in their purely separate forms, incomplete — and an institution that could not verify this was one that had made incompleteness a feature of its governance.
+
+What Kordath lost in this exchange: the Keep's credentialing board declined to advance Kordath's applications for senior research positions for three consecutive cycles, each time citing procedural grounds. What Kordath won: the Grand Magi tradition's internal culture, from that point forward, treats the founding argument as unfinished. Senior Grand Magi practitioners do not cite the Keep's formal methodology standards without also acknowledging the Compression Protocols debate, the Codices' reclassification dispute, and the specific exchange that produced neither victory. They inherit Kordath's argument the way the warden tradition inherits Dunmar's forty-three days: as the foundational event that defined what the tradition actually stands for, which is different from what its institutional recognition says it stands for.
+
+The Convergence Codices remain classified as "historically significant but theoretically unverified" in the Keep's primary archive. In the Kiess archive, they are classified as verified primary source documentation under the anti-sealed-warrant framework. Grand Magi practitioners who want to know what their tradition's founding documents actually say know which archive to consult.
+
+---
+
+## V. The Elemental Doctrine
 
 The modern Grand Magi elemental doctrine organizes practice around **four primary domains** — fire, air/storm, water/tide, and earth/stone — and their interactions. This organization reflects both the Confluent Theorists' analytical framework and the practical experience of the Ashfall Monsoon intervention, which required working specifically with these domains in coordinated combination.
 
@@ -52,7 +76,7 @@ The Convergence Codices' theoretical documentation of multi-school interaction e
 
 ---
 
-## V. Cross-References
+## VI. Cross-References
 
 - **Timeline**: Era III (Solar Court honorific origin), Era X (Chromatic Circle and Axiomatic Schools era; Confluent Theorists and Convergence Codices), Era XV (Ash-and-Iron Decades; Ashfall Monsoon; tradition reclamation)
 - **Sorcerer**: Component tradition; Chromatic Circle breadth-and-synthesis methodology
@@ -60,5 +84,7 @@ The Convergence Codices' theoretical documentation of multi-school interaction e
 - **Magi**: Grandparent tradition; Wizard's Keep institutional framework
 - **Cinderteeth Mountains**: Ashfall Monsoon source; Grand Magi tradition reclamation context
 - **Great Pyramid / Solar Court**: Ancient honorific origin; cosmological elemental stability demonstration
+- **Issel Kordath**: Founding argument practitioner; Convergence Codices reclassification dispute; Keep credentialing friction; Kordath's paper distributed to Circle-lineage archives
+- **Kiess**: Anti-sealed-warrant framework classifies Convergence Codices as verified primary source documentation; preferred archive for Grand Magi foundational texts
 
 See also: `sorcerer_lore.md`, `wizard_lore.md`, `magi_lore.md`, `cinderteeth_mountains_lore.md`, `timeline.md`
