@@ -227,6 +227,7 @@ sh_int gsn_taunt;
 sh_int gsn_rend;
 sh_int gsn_field_patch;
 sh_int gsn_weapon_mastery;
+sh_int gsn_ashfall_strike;
 
 /* Pugilist skills */
 sh_int gsn_grapple;
@@ -237,6 +238,7 @@ sh_int gsn_roll_with_blow;
 sh_int gsn_pressure_point;
 sh_int gsn_feint;
 sh_int gsn_conditioning;
+sh_int gsn_harbor_dust;
 
 /* Sentinel skills */
 sh_int gsn_vigilance;

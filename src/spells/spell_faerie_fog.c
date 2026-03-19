@@ -32,19 +32,25 @@
 #include "tables.h"
 #include "magic.h"
 
-bool spell_faerie_fog(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+bool spell_ledger_mark(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *ich;
 
    if (obj == NULL)
    {
-      act("$n conjures a cloud of purple smoke.", ch, NULL, NULL, TO_ROOM);
-      send_to_char("You conjure a cloud of purple smoke.\n\r", ch);
+      act("$n inscribes the Ledger Priests' mark of disclosure upon the air.", ch, NULL, NULL,
+          TO_ROOM);
+      send_to_char(
+          "You inscribe the Ledger Priests' mark of disclosure — none shall hide from the "
+          "record.\n\r",
+          ch);
    }
    else
    {
-      act("A cloud of purple smoke flows from $p.", ch, obj, NULL, TO_ROOM);
-      act("A cloud of purple smoke flows from $p.", ch, obj, NULL, TO_ROOM);
+      act("The Ledger mark flows from $p, inscribing all who would evade the record.", ch, obj,
+          NULL, TO_ROOM);
+      act("The Ledger mark flows from $p, inscribing all who would evade the record.", ch, obj,
+          NULL, TO_CHAR);
    }
    for (ich = ch->in_room->first_person; ich != NULL; ich = ich->next_in_room)
    {
@@ -60,8 +66,8 @@ bool spell_faerie_fog(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       REMOVE_BIT(ich->affected_by, AFF_HIDE);
       REMOVE_BIT(ich->affected_by, AFF_INVISIBLE);
       REMOVE_BIT(ich->affected_by, AFF_SNEAK);
-      act("$n is revealed!", ich, NULL, NULL, TO_ROOM);
-      send_to_char("You are revealed!\n\r", ich);
+      act("$n is marked — the Ledger has found them!", ich, NULL, NULL, TO_ROOM);
+      send_to_char("The Ledger mark falls on you — you are inscribed and revealed!\n\r", ich);
    }
 
    return TRUE;

@@ -32,48 +32,38 @@
 #include "tables.h"
 #include "magic.h"
 
-bool spell_call_lightning(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+bool spell_shard_ward(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *vch;
    CHAR_DATA *vch_next;
    int dam;
 
-   if (!IS_OUTSIDE(ch))
-   {
-      send_to_char("You must be out of doors.\n\r", ch);
-      return FALSE;
-   }
-
-   if (weather_info.sky < SKY_RAINING)
-   {
-      send_to_char("You need bad weather.\n\r", ch);
-      return FALSE;
-   }
-
    dam = dice(level, 8);
 
    if (obj == NULL)
    {
-      act("$n calls God's lightning to strike $s foes!", ch, NULL, NULL, TO_ROOM);
-      send_to_char("God's lightning strikes your foes!\n\r", ch);
+      act("$n traces a solar seal, driving the Disk's ward against $s foes!", ch, NULL, NULL,
+          TO_ROOM);
+      send_to_char("You invoke the Solar Court's containment ward against your foes!\n\r", ch);
    }
    else
    {
-      act("$p summons lightning to strike $n's foes!", ch, obj, NULL, TO_ROOM);
-      act("$p summons lightning to strike your foes!", ch, obj, NULL, TO_CHAR);
+      act("$p blazes with containment light, driving the ward into $n's foes!", ch, obj, NULL,
+          TO_ROOM);
+      act("$p blazes with containment light, driving the ward into your foes!", ch, obj, NULL,
+          TO_CHAR);
    }
 
    aoe_damage(ch, obj, sn, level, dam, dam, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, AOE_SAVES);
 
-   /* Notify others in the same area who are outdoors. */
    CREF(vch_next, CHAR_NEXTROOM);
    for (vch = first_char; vch != NULL; vch = vch_next)
    {
       vch_next = vch->next;
       if (vch->in_room == NULL || vch->in_room == ch->in_room)
          continue;
-      if (vch->in_room->area == ch->in_room->area && IS_OUTSIDE(vch) && IS_AWAKE(vch))
-         send_to_char("Lightning flashes in the sky.\n\r", vch);
+      if (vch->in_room->area == ch->in_room->area && IS_AWAKE(vch))
+         send_to_char("A distant radiance pulses through the air.\n\r", vch);
    }
    CUREF(vch_next);
    return TRUE;

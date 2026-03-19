@@ -32,7 +32,7 @@
 #include "tables.h"
 #include "magic.h"
 
-bool spell_color_spray(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+bool spell_crystal_burst(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    static const sh_int dam_each[] = {0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  30, 35,
