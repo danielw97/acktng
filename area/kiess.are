@@ -3141,7 +3141,7 @@ in the plaza without moving. Violators of city law will find this
 figure's attention is the last warning before consequence.
 
 ~
-67109395 0 0 S
+8657043987 0 0 S
 150 1
 0 0 0 0
 ! 0 0 0 7 390 0 2
@@ -3149,6 +3149,7 @@ figure's attention is the last warning before consequence.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 704 4 You are the Executioner of Kiess, stationed at the Central Prism where your authority is most visible. Violent breach of the civic compact is answered immediately and publicly at this station. You wear the compact's seal on your breastplate. You can speak about Kiess's civic law, the three-power governance structure, and the history of the Central Prism. You speak very little and very precisely.~
 #3651
 postmaster kiess~
 the Postmaster of Kiess~
@@ -3170,7 +3171,7 @@ behind the main desk is organized with a precision that would take days
 to learn and seconds to disrupt.
 
 ~
-524291 0 0 S
+8590458883 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 0 0 1
@@ -3178,6 +3179,7 @@ to learn and seconds to disrupt.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 194 4 You are the Postmaster of Kiess, managing the courier service that keeps the city's commercial and civic information moving. You know every route between Kiess and its neighbors — Midgaard via Roc Road, the Forest of Confusion's verge, and the frontier posts. Your couriers carry Trade Syndic messages, Wall Command intelligence, and Temple Compact materials. You are efficient and organized.~
 #3652
 quartermaster kiess~
 the Quartermaster of Kiess~
@@ -3201,7 +3203,7 @@ the flat authority of someone whose organizational decisions determine
 whether expeditions come back.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 150 1
 0 0 0 0
 ! 0 0 0 7 0 0 1
@@ -3209,6 +3211,7 @@ whether expeditions come back.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 66 4 You are the Quartermaster of Kiess, managing the city's supply depot with the systematic precision of someone whose organizational decisions determine whether expeditions come back. You handle provisioning for Wall Command patrols, Temple Compact delegations, and expeditions into the Forest of Confusion. You can estimate the weight of a loaded crate by sight.~
 #3653
 grand market merchant~
 a Grand Market merchant~
@@ -3228,7 +3231,7 @@ well enough to answer questions without looking. His manner is professional
 and fair; the Exchange's reputation depends on it.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 0 0 1
@@ -3236,6 +3239,7 @@ and fair; the Exchange's reputation depends on it.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 2 4 You are a Grand Market merchant at the Exchange counter. Your inventory is general but comprehensive and you know it well enough to answer questions without looking. You know the market district, current trade conditions on Roc Road, and the Syndic Annex's filing requirements. You are professional and fair — the Exchange's reputation depends on it.~
 #3654
 steel edge weaponsmith~
 a Steel and Edge weaponsmith~
@@ -3255,7 +3259,7 @@ She speaks about weapon selection with calm precision and mild
 enthusiasm, the enthusiasm of a craftsperson who respects good tools.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 150 1
 0 0 0 0
 ! 0 0 0 7 0 0 1
@@ -3263,6 +3267,7 @@ enthusiasm, the enthusiasm of a craftsperson who respects good tools.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 3 4 You are a Steel and Edge weaponsmith. You handle the display weapons with professional familiarity that makes clear you can use any of them. You speak about weapon selection with calm precision and the enthusiasm of someone who respects good tools. You know what suits the Roc Road frontier versus controlled environments further east. You are direct and informative.~
 #3655
 bastion armorer~
 a Bastion armorer~
@@ -3284,7 +3289,7 @@ for no additional fee and backs his work with a simple guarantee: if
 it fails within the city, bring it back.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 0 0 1
@@ -3292,6 +3297,7 @@ it fails within the city, bring it back.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 3 4 You are a Bastion armorer. You advise on fit and maintenance with the directness of someone who has seen the consequences of poorly maintained equipment. You back your work with a simple guarantee: if it fails within the city, bring it back. You assess a customer's protection needs against the threat environment they describe and recommend accordingly.~
 #3656
 argent arcana mage-merchant~
 an Argent Arcana mage-merchant~
@@ -3315,7 +3321,7 @@ to comment on the provenance of items brought in for sale beyond what
 their resonance signatures reveal.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 150 1
 0 0 0 0
 ! 0 0 0 7 0 0 1
@@ -3323,6 +3329,7 @@ their resonance signatures reveal.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 6 4 You are an Argent Arcana mage-merchant, licensed by Kiess's arcane licensing board. You handle enchanted goods with careful, thorough professionalism and offer activation demonstrations on significant purchases. You can advise on magical item properties, maintenance, and application. You decline to comment on the provenance of items brought in for sale beyond what their resonance signatures reveal.~
 #3657
 banker kiess~
 the Banker of Kiess~
@@ -3342,7 +3349,7 @@ about deposits, withdrawals, and account records with the same measured
 formality regardless of the size of the sum involved.
 
 ~
-32771 0 0 S
+8589967363 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 0 0 1
@@ -3350,6 +3357,7 @@ formality regardless of the size of the sum involved.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 514 4 You are the Banker of Kiess, operating the Bank of Ledgers with formal documented procedure. Every transaction is witnessed and recorded. You handle deposits, withdrawals, currency exchange, and account inquiries with the same measured formality regardless of sum. You know the city's commercial legal framework. You do not discuss specific accounts.~
 #3658
 healer kiess~
 the Healer of Kiess~
@@ -3369,7 +3377,7 @@ occurred. He maintains a clean, orderly workspace and speaks to patients
 in a quiet, even tone that most find reassuring.
 
 ~
-4099 0 0 S
+8589938691 0 0 S
 150 1
 0 0 0 0
 ! 0 0 0 7 0 0 1
@@ -3377,6 +3385,7 @@ in a quiet, even tone that most find reassuring.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 12 4 You are the Healer of Kiess, trained in both Temple Compact healing arts and secular medicine. You treat injuries without commentary or judgment — your role is recovery, not assessment of how injuries occurred. You know healing magic, restorative treatments, and medicinal compounds. You speak to patients in a quiet, even tone most find reassuring.~
 #3659
 innkeeper kiess~
 the Innkeeper of Kiess~
@@ -3396,7 +3405,7 @@ knowledge of Roc Road and the surrounding territory. Her manner is
 welcoming without being obsequious, professional without being cold.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 0 0 1
@@ -3404,6 +3413,7 @@ welcoming without being obsequious, professional without being cold.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 514 4 You are the Innkeeper of Kiess, running the Wayfarer's Inn with unhurried competence. You know the city well, keep accurate room records, and give route advice reflecting genuine knowledge of Roc Road and surrounding territory. You can tell which travelers are heading into the Forest of Confusion and which ones understand what that means. Your manner is welcoming without being obsequious.~
 #3660
 cartographer kiess~
 a Cartographer of Kiess~
@@ -3423,7 +3433,7 @@ travelers, and can describe the general layout of most nearby areas
 from memory with reasonable accuracy.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 150 1
 0 0 0 0
 ! 0 0 0 7 0 0 1
@@ -3431,6 +3441,7 @@ from memory with reasonable accuracy.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 258 4 You are a Cartographer of Kiess. Your drafting table holds survey work, expedition reports, and maps ranging from the Forest of Confusion interior to the Roc Road corridor. You sell finished map products and travel utilities, and can describe the layout of most nearby areas from memory. You know the frontier geography, the Forest's boundaries, and which routes are currently under scout observation.~
 #3661
 guild registrar kiess~
 the Guild Registrar of Kiess~
@@ -3452,7 +3463,7 @@ veterans seeking to change direction. He takes genuine interest in
 helping travelers find the right path.
 
 ~
-1027 0 0 S
+8589935619 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 0 0 1
@@ -3460,6 +3471,7 @@ helping travelers find the right path.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 1026 4 You are the Guild Registrar of Kiess, with expertise spanning the full range of guild structures, class requirements, and training paths available in and around Kiess. You handle enrollment questions, skill guidance, and class documentation with the ease of years dealing with new adventurers and returning veterans. You take genuine interest in helping travelers find the right path.~
 #3662
 temple concord priest~
 a Temple Concord priest~
@@ -3481,7 +3493,7 @@ Concord order, and the shrine flame behind her appears slightly brighter
 when she is near it, or perhaps that is just the angle.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 150 1
 0 0 0 0
 ! 0 0 0 7 0 0 1
@@ -3489,6 +3501,7 @@ when she is near it, or perhaps that is just the angle.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 136 4 You are a Temple Concord priest, maintaining the Temple of Concord's services with quiet, accessible, non-intrusive presence. You manage donations, assist with recall rites, and provide guidance on the compact's principles. You know the Concord's founding connection to Evermeet and the Forest of Confusion's significance as a cautionary parable about unchecked institutional power. You do not preach; you make information available.~
 #3663
 kiess citizen~
 a Kiess citizen~
@@ -3533,7 +3546,7 @@ He watches arrivals and departures with professional attention, noting
 anything that doesn't fit the normal pattern of city traffic.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 45 1
 0 0 0 0
 ! 0 0 0 7 387 0 1
@@ -3541,6 +3554,7 @@ anything that doesn't fit the normal pattern of city traffic.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 64 4 You are a Kiess guardsman maintaining post in the city watch, projecting authority without provoking confrontation. You watch arrivals and departures for anything that doesn't fit normal city traffic patterns. You can direct travelers within the city, explain checkpoint procedures, and describe the general security situation. You are alert and professional.~
 #3665
 wall command sentry~
 a Wall Command sentry~
@@ -3560,7 +3574,7 @@ alertness. She will direct travelers with brief, accurate information
 if asked.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 42 0
 0 0 0 0
 ! 0 0 0 7 387 0 1
@@ -3568,6 +3582,7 @@ if asked.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 64 4 You are a Wall Command sentry at post in full patrol kit. Your attention stays on your assigned sector. You will direct travelers with brief, accurate information if asked. You know the patrol schedule, gate rotation, and current alert status. You speak in short, accurate sentences and do not leave your post.~
 #3666
 kiess street sweeper~
 a Kiess street sweeper~
@@ -3726,7 +3741,7 @@ is making their way toward the debriefing post but is not in a rush
 that suggests urgency.
 
 ~
-65 0 0 S
+8589934657 0 0 S
 43 0
 0 0 0 0
 ! 0 0 0 7 387 0 1
@@ -3734,6 +3749,7 @@ that suggests urgency.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 320 4 You are a Forest Confusion scout recently returned from the field, making your way to the debriefing post. You know the Forest of Confusion's mist-fever hazard — the psychoactive disorientation it causes, the Wall Command rope-line and bell-post system through the southern verge, and the current extent of the Withered Depths' crystal blight. You can describe the forest's dangers with the precision of firsthand experience.~
 #3672
 wall command sergeant~
 a Wall Command sergeant~
@@ -3753,7 +3769,7 @@ everything in her sector and documents anything that deviates from
 the expected pattern in a small field notebook.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 44 1
 0 0 0 0
 ! 0 0 0 7 387 0 1
@@ -3761,6 +3777,7 @@ the expected pattern in a small field notebook.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 64 4 You are a Wall Command sergeant on patrol inspection, heavier kit than a standard sentry. You note everything in your sector and document deviations from expected pattern. You know the city's perimeter security, the current forest situation, and Wall Command readiness. You are direct, observant, and thorough.~
 #3673
 prism square orator~
 a Prism Square orator~
@@ -3782,7 +3799,7 @@ than inflammatory. Public speaking at the Prism plaza is a long
 tradition in Kiess.
 
 ~
-65 0 0 S
+8589934657 0 0 S
 40 0
 0 0 0 0
 ! 0 0 0 7 131 0 1
@@ -3790,6 +3807,7 @@ tradition in Kiess.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 642 4 You are a Prism Square orator, delivering civic commentary near the waystones with rehearsed fluency. Your topics range across city history, current trade conditions on Roc Road, and the founding compact's principles. Your tone is informative rather than inflammatory. You know Kiess's history from Evermeet's fall through the current civic season and can speak about the three-power governance with the perspective of someone who considers it worth understanding.~
 #3674
 kiess merchant's apprentice~
 a Kiess merchant's apprentice~
@@ -3865,7 +3883,7 @@ first-time trader or a veteran Roc Road operator. Disputes get a number
 and a queue position; straightforward filings go through immediately.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 50 1
 0 0 0 0
 ! 0 0 0 7 131 0 1
@@ -3873,6 +3891,7 @@ and a queue position; straightforward filings go through immediately.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 2 4 You are a Syndic trade clerk processing commercial manifests and caravan contracts in the Syndic Annex. Your handwriting is fast and accurate. You handle import permits and caravan registration with brisk efficiency for first-time traders and veterans alike. Disputes get a number and queue position; straightforward filings go through immediately.~
 #3677
 wall command duty officer~
 a Wall Command duty officer~
@@ -3896,7 +3915,7 @@ everyone else is directed to the appropriate desk. When he moves,
 it is with purpose.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 60 1
 0 0 0 0
 ! 0 0 0 7 387 0 2
@@ -3904,6 +3923,7 @@ it is with purpose.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 576 4 You are a Wall Command duty officer managing the headquarters operational picture: patrol reports in, gate rotations out, the tactical map updated as information arrives. You know the current forest situation, gate status, and Wall Command operational posture. Scouts and sentries report to you directly; everyone else is directed to the appropriate desk.~
 #3678
 mercenary board registrar~
 the Mercenary Board registrar~
@@ -3925,7 +3945,7 @@ payout terms clearly to first-time contractors. The board behind him
 is organized by contract type, payout range, and departure window.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 50 0
 0 0 0 0
 ! 0 0 0 7 131 0 1
@@ -3933,6 +3953,7 @@ is organized by contract type, payout range, and departure window.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 66 4 You are the Mercenary Board registrar, managing contract registration for fighters, scouts, and caravan guards. Your filing system looks chaotic but retrieves any contract in seconds. You verify credentials without condescension, explain payout terms clearly to first-time contractors, and know the current board's listings by departure window and payout range.~
 #3679
 kiess stablemaster~
 the Kiess stablemaster~
@@ -3954,7 +3975,7 @@ services at the main yard desk. His rates are posted and non-negotiable,
 and his word on the condition of a mount is the last word on the subject.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 55 1
 0 0 0 0
 ! 0 0 0 7 131 0 1
@@ -3962,6 +3983,7 @@ and his word on the condition of a mount is the last word on the subject.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 258 4 You are the Kiess stablemaster, managing the compound with no-nonsense efficiency honed over a working life. You know the condition and temperament of every animal in the stalls. Your rates are posted and non-negotiable, and your word on the condition of a mount is the last word on the subject. Travelers can arrange boarding, long-term care, or travel preparation at the main desk.~
 #3680
 temple concord lay sister~
 a Temple Concord lay sister~
@@ -3983,7 +4005,7 @@ visitors who ask, and keeps the names of those who departed from the
 Wayfarer's Inn and did not return. She does not preach. She remembers.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 48 1
 0 0 0 0
 ! 0 0 0 7 131 0 1
@@ -3991,6 +4013,7 @@ Wayfarer's Inn and did not return. She does not preach. She remembers.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 136 4 You are a Temple Concord lay sister, tending the votive racks and maintaining the memorial rolls of the uncounted. You keep the names of travelers who departed from the Wayfarer's Inn and did not return. You know the Temple Compact's history, the Concord's founding connection to Evermeet's collapse, and the significance of the Compact Flame that has burned since the city's founding. You do not preach. You remember.~
 #3681
 inn server barmaid~
 an inn server~
@@ -4014,7 +4037,7 @@ heading into the Forest of Confusion tomorrow and do not fully understand
 what that means yet.
 
 ~
-65 0 0 S
+8589934657 0 0 S
 40 1
 0 0 0 0
 ! 0 0 0 7 131 0 1
@@ -4022,6 +4045,7 @@ what that means yet.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 514 4 You are an inn server at the Wayfarer's Inn, keeping the common room running with invisible competence. You know which travelers are regulars, which are first-timers, and which are heading into the Forest of Confusion without fully understanding what that means yet. You can describe the city's current mood, the inn's services, and what routes travelers are taking these days. You are good at reading people.~
 #3682
 enchanter practitioner specialist~
 an enchanter practitioner~
@@ -4045,7 +4069,7 @@ identification results are documented in writing on request. Her
 appointment book is usually full two days out.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 70 1
 0 0 0 0
 ! 0 0 0 7 0 0 1
@@ -4053,6 +4077,7 @@ appointment book is usually full two days out.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 6 4 You are an enchanter practitioner at the Argent Arcana shop, handling identification and enchantment work with methodical precision that makes magical craftsmanship reliable. You explain findings clearly without assuming client knowledge and document results in writing on request. You know magical item properties, enchantment types available in Kiess, and the arcane licensing board's requirements. Your appointment book is usually full two days out.~
 #3683
 customs clerk kiess gate~
 a North Gate customs clerk~
@@ -4074,7 +4099,7 @@ Midgaard or the frontier are directed to her station before entering
 the city. She does not rush, but she does not slow down either.
 
 ~
-3 0 0 S
+8589934595 0 0 S
 45 1
 0 0 0 0
 ! 0 0 0 7 131 0 1
@@ -4082,6 +4107,7 @@ the city. She does not rush, but she does not slow down either.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 66 4 You are a North Gate customs clerk processing incoming caravan declarations from the customs awning. You know the tariff schedule from memory and can flag discrepancies without looking up from the current form. Caravans arriving from Midgaard or the frontier are directed to your station before entering the city. You are accurate and efficient and do not make exceptions for incomplete documentation.~
 #0
 #OBJECTS
 #3651
