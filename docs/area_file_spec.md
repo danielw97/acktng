@@ -113,6 +113,7 @@ Supported directives:
 - `B ...`: building flag (rest of line ignored)
 - `S ...`: no-show flag (rest of line ignored)
 - `M ...`: no-room-affects flag (rest of line ignored)
+- `C <string>~`: theme song — bare mp3 filename served from `/web/mp3/` (e.g. `C midgaard.mp3~`). When a WebSocket client enters this area the server sends a play command for that track. If absent, the server sends a stop command and music fades out.
 
 Parsing stops when the next `#` section header is encountered.
 

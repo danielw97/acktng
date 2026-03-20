@@ -335,7 +335,7 @@ static void parse_area_section(FILE *fp, char *line, int *line_number, const cha
       if (trimmed[0] == '*')
          continue;
 
-      if (strchr("QKNILVXFUORWPTBSM", trimmed[0]) == NULL)
+      if (strchr("QKNILVXFUORWPTBSMC", trimmed[0]) == NULL)
          fail_area_test(area_path, *line_number, "invalid #AREA directive '%c'", trimmed[0]);
 
       if (trimmed[0] == 'Q')
@@ -384,8 +384,8 @@ static void parse_area_section(FILE *fp, char *line, int *line_number, const cha
                            "#AREA '%c' directive must contain exactly 1 integer", trimmed[0]);
       }
 
-      /* Directives K, L, O, U take tilde-terminated string values that may span multiple lines */
-      if (strchr("KLOU", trimmed[0]) != NULL && strchr(line, '~') == NULL)
+      /* Directives K, L, O, U, C take tilde-terminated string values that may span multiple lines */
+      if (strchr("KLOUC", trimmed[0]) != NULL && strchr(line, '~') == NULL)
          consume_tilde_string(fp, line, line_number, area_path);
    }
 

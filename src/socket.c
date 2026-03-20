@@ -399,6 +399,16 @@ static void send_music_play(DESCRIPTOR_DATA *d, const char *filename)
    write_websocket_frame(d, 0x1, (const unsigned char *)buf, strlen(buf));
 }
 
+static void send_music_stop(DESCRIPTOR_DATA *d)
+{
+   const char *msg = "{\"type\":\"music\",\"action\":\"stop\"}";
+   write_websocket_frame(d, 0x1, (const unsigned char *)msg, strlen(msg));
+}
+
+/* Sentinel: websocket_current_music is set to this when a stop has been sent,
+ * so we can distinguish "stop already sent" from "nothing sent yet" (NULL). */
+#define MUSIC_STOPPED ((const char *)1)
+
 void send_area_music(CHAR_DATA *ch)
 {
    DESCRIPTOR_DATA *d;
@@ -407,13 +417,23 @@ void send_area_music(CHAR_DATA *ch)
    if (IS_NPC(ch) || (d = ch->desc) == NULL || !d->websocket_active)
       return;
 
-   track = ch->in_room->area->music; /* NULL means default theme */
+   track = ch->in_room->area->music; /* NULL means no music for this area */
 
-   if (track == d->websocket_current_music)
-      return;
-
-   send_music_play(d, track ? track : "theme.mp3");
-   d->websocket_current_music = track;
+   if (track == NULL)
+   {
+      /* No music for this area — stop playback if not already stopped */
+      if (d->websocket_current_music == MUSIC_STOPPED)
+         return;
+      send_music_stop(d);
+      d->websocket_current_music = MUSIC_STOPPED;
+   }
+   else
+   {
+      if (track == d->websocket_current_music)
+         return;
+      send_music_play(d, track);
+      d->websocket_current_music = track;
+   }
 }
 
 static size_t sanitize_websocket_text_payload(const unsigned char *src, size_t src_len,
