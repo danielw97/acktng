@@ -257,6 +257,7 @@
 
 /* Command flags (cmd_type.flags) */
 #define CMD_FLAG_NINJA_OK BIT_1 /* command does not break ninja stance */
+#define CMD_FLAG_WAIT     BIT_2 /* command introduces wait state; queue while ch->wait > 0 */
 
 /*
  * Well known mob virtual numbers.
