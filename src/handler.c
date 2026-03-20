@@ -35,6 +35,7 @@
 #ifndef DEC_ACT_MOB_H
 #include "act_mob.h"
 #endif
+#include "socket.h"
 
 static char buf[MAX_STRING_LENGTH];
 
@@ -1108,6 +1109,7 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
       }
    }
 
+   send_area_music(ch);
    return;
 }
 
