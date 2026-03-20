@@ -169,7 +169,9 @@ Whenever a new player command is added, a corresponding detailed help entry MUST
 - Examples of usage
 - Any restrictions (level, class, position, etc.)
 
-These are hard requirements — no spell, skill, or command addition is complete without its help entry.
+Likewise, whenever a spell or skill is removed, its `shelp/` entry MUST also be removed. Whenever a command is removed, its `help/` entry MUST also be removed.
+
+These are hard requirements — no spell, skill, or command addition is complete without its help entry, and no removal is complete without also removing the corresponding help entry.
 
 ## Common Pitfalls
 
