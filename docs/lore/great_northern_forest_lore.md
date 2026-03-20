@@ -58,19 +58,90 @@ The Ash Winters killed an estimated third of the forest's large game population 
 
 The period forged the first written **Passage Tithe** system: caravans paid in grain, salt, lamp oil, and iron nails rather than coin alone. This stabilized key waystations, many of which later became permanent room anchors in the road band. Even now, relic toll ledgers are found in ruined guard huts throughout Mosswater Bends.
 
-### The Northern Covenant and Kowloon Contact
-Generations later, when Kowloon emerged as a disciplined city of covenant law and ledger order in the north (see `docs/kowloon_plan.md` for full Kowloon history), it sought reliable overland connection to Midgaard's markets and guild routes. Envoys from Kowloon's Harbor Syndics and Jade Magistracy met Midgaard's wardens at a neutral glade now called **The Oath-Crossing**. There, both parties adopted the forest road charter:
+### The Northern Road Wars: Toll Authority and the Road to the Covenant
 
-1. No army may march the Lantern Road in war formation.
+The road Ilren Voss built belonged, in the view of Midgaard's Magistrate Ledgerhouse, to Midgaard. Construction funds had come from Midgaard's guild treasury; maintenance costs came from Midgaard's road warden commission; and the toll authority that made both economically sustainable was, in Midgaard's reading, a property right.
+
+Kowloon, founded after the Lantern Road already existed, needed it to move ore and timber south to Midgaard's markets. The initial arrangement was informal — Kowloon caravans paid Midgaard-rate warden levies, and no one had written down what authority governed the road because no one had anticipated that a second city would need to.
+
+For a generation or two after Kowloon's founding, this worked. Then Kowloon grew from a disaster-survival compact into a prosperous commercial city, and the Jade Magistracy's clerks began noticing something in the toll records: Midgaard rates changed unilaterally, without consultation. Preferred-status cargo categories appeared that benefited Midgaard merchants and disadvantaged Kowloon merchants. Warden commission rulings on disputed cargo consistently found in Midgaard's favor. Kowloon filed formal protests. Midgaard's Ledgerhouse acknowledged receipt and took no action, on the grounds that Kowloon's protests had no standing in Midgaard's jurisdiction over a road Midgaard had built.
+
+The protests escalated over the following decade. Kowloon's Harbor Syndics stopped paying Midgaard-rate levies on certain cargo categories, substituting Jade Magistracy-certified schedules. Midgaard's warden commission began impounding Kowloon-certified cargo at checkpoints. Kowloon's Wardens of Iron began escorting caravans with armed companies. Within fifteen years, both cities had armed personnel operating simultaneously in the same forest corridors — nominally for protection, in practice each monitoring and occasionally confronting the other.
+
+This period, running roughly from one generation after Kowloon's founding through the signing of the Northern Covenant two generations later, is what Midgaard's institutional archives call the "northern road dispute" and Kowloon's archives call the "Lantern Road authority crisis." Neither name has become canonical because neither city has chosen to write an account of the period that names the other party honestly. The period is part of the broader "border wars" that Midgaard's military historians reference when accounting for the institutional changes that produced the Guard Command's modern provisioning doctrine.
+
+### The Burnt Crossing
+
+The flashpoint had been building for years before it arrived. Midgaard's Guard Command authorized a military column — approximately four hundred soldiers organized in war formation, under military command rather than warden commission authority — to march the Lantern Road and establish a permanent garrison post at its midpoint. The stated purpose was security against Ashfang warband activity in the deep forest, which was genuine: the warbands had been exploiting the ungoverned gap between Midgaard's southernmost reach and Kowloon's northernmost customs post, and Midgaard had the casualties to show for it.
+
+The actual purpose — which two centuries of Midgaard archival management has not entirely erased — was territorial. Whoever held a permanent garrison at the road's midpoint controlled it. Kowloon understood this as clearly as Midgaard did.
+
+Kowloon's Courier Lantern Office relay stations in the northern crown provided enough advance warning that the Wardens of Iron dispatched their own armed company before the Midgaard column reached the forest. The company's formal orders described its mission as "ensuring Kowloon's commercial interests in the northern corridor are represented on the ground." The Wardens' internal archives use language that is somewhat less careful.
+
+The two forces arrived at the same ford simultaneously: the deepest-channel crossing of the Mosswater Bends, the only passage for heavy wagons at that season, surrounded by the Mire-Speakers' fenland platforms. Neither force had orders to attack. Neither had orders to yield. The standoff lasted three days. On the third night, an exchange of arrows — which party fired first is disputed by the only accounts that exist, all written by parties with reasons not to have fired first — became a two-day engagement.
+
+Midgaard soldiers fighting from positions on the eastern bank destroyed several Mire-Speaker fishing platforms that they had occupied without asking. Kowloon forces responding from the western bank took cover at a Cairn-Keeper burial mound on the ridgeline approach, breaking open ancestral stone niches to use as field positions and scattering grave goods. When the fighting ended inconclusively, with both forces withdrawing, the site had:
+
+- Somewhere between twenty and thirty dead, depending on whose count you use; Midgaard's official record gives fourteen, Kowloon's gives eleven, and neither figure accounts for the other's casualties
+- Two Mire-Speaker platforms destroyed, representing seasons of fishing access for the community that maintained them
+- A partially dismantled Cairn-Keeper burial mound whose sealed ancestral niches had been broken open
+
+Both cities' official records, issued within weeks of the withdrawal, attributed the violence to Ashfang raiders. Neither city's record mentions the other. The Mire-Speakers and Cairn-Keepers were not asked whether they found this account credible.
+
+The Cairn-Keepers named the site the **Burnt Crossing** — their term for a location desecrated by violence against the dead. Nothing burned there. The name stuck.
+
+### The Forest Peoples' Response
+
+The Cairn-Keepers acted within a season. They closed their ridge passes — the high-ground routes that bypassed the Mosswater Bends' seasonal flooding — to all organized parties. Their definition of "organized" was precise: groups of more than four, carrying weapons, under a named commander. This excluded warden companies and military escorts entirely. Individual travelers could still pass. Caravans could not.
+
+The Mire-Speakers discontinued their channel-crossing guidance for Lantern Road convoys through the Mosswater Bends. Voss's original compact had promised the road would never dam a natural waterway; the guidance service had been the Mire-Speakers' part of the informal reciprocal arrangement that had kept that promise meaningful. Neither city had offered restitution for the destroyed platforms. The guidance stopped.
+
+The Everkeepers said nothing. They stopped permitting salvage of storm-fallen ironpines. The particular high-grade timber both cities' military contractors used for siege infrastructure came primarily from ironpine storm-fall in the Ironpine Rise. The Everkeepers' position — never announced, simply enacted — was that ironpine salvage had always been contingent on the forest's integrity being respected. One by one, salvage requests were declined.
+
+Midgaard's timber supply dropped within a season. Kowloon's ore convoys through the Mosswater Bends fell to a fraction of normal throughput. Both cities felt the same damage. Neither could compel cooperation from communities whose territorial knowledge was not reproducible by survey or map. The forest did not declare war on either city. It became unavailable.
+
+### The Oath-Crossing Negotiations
+
+Cairn-Keeper elder **Toreth Gael** sent identical letters to Midgaard's Guard Command and Kowloon's Wardens of Iron. The letters offered the neutral glade at the Oath-Crossing as a meeting site and proposed an agenda: a permanent framework for the Lantern Road that neither city controlled unilaterally. The letters included one non-negotiable condition: the forest peoples would be parties to the framework, not consulted witnesses — their approval was required for the agreement to take effect.
+
+Both cities accepted. Both had run the calculation: another Burnt Crossing, in a forest that had already demonstrated it could withdraw cooperation, produced outcomes neither could sustain.
+
+Three accounts of the negotiations survive. Midgaard's warden commission records document what Midgaard's negotiators said. Kowloon's Jade Magistracy registry documents what Kowloon's envoys said. Toreth Gael's standing-stone carving at the Oath-Crossing documents what was actually said, in the order it was said, without editorial management by either party. The standing-stone account is the primary source.
+
+**Toll authority** was the first sticking point. Midgaard claimed road ownership based on construction history and maintenance costs. Kowloon claimed equal standing based on commercial necessity and the convoy levies it had been paying for generations. Toreth Gael's resolution was structural: neither city would hold toll authority over the other's caravans in the forest itself. Tolls at city approaches — before and after the forest — remained each city's prerogative. In the forest, movement was governed by the charter, not by either city's tariff schedule.
+
+**Garrison rights** were the second sticking point. Midgaard wanted permanent military posts. Kowloon wanted no permanent Midgaard military presence in the northern corridor. The clause that emerged — "no army may march the Lantern Road in war formation" — was Midgaard's negotiators' specific contribution. They recognized that "no armies" was unenforceable as written but that "no war formation" could be operationally defined: column organization, standard-bearing, military command hierarchy. The distinction preserved both cities' ability to maintain armed warden companies while prohibiting exactly what the column had been doing when it marched toward the Mosswater Bends. Kowloon accepted it because the prohibition covered the behavior, not the personnel.
+
+**Restitution for the Burnt Crossing** was the third sticking point and the one neither city wanted to negotiate. Neither city would accept a document acknowledging its forces' presence during the incident. Toreth Gael accepted this on one condition: the burial mound at the Burnt Crossing would be restored at both cities' combined expense, under Cairn-Keeper supervision. The restoration was not to be documented as compensation for any specific action by either city. It was to be documented as a joint civic investment in forest heritage — language both cities' archives could absorb without acknowledging what the investment was actually paying for. The restoration took three years. It is the only project in the five-city network's recorded history that both cities funded simultaneously without either claiming credit. The restored mound bears a single addition to its carved inscription: a Cairn-Keeper glyph meaning "witnessed."
+
+**The arbitration mechanism** was the final piece. Kowloon wanted Jade Magistracy binding arbitration. Midgaard wanted Guard Command binding arbitration. Toreth Gael proposed standing-stone witness judgment: disputes presented before assembled neutral observers, verdict carved into the stone, neither city's court in control. Both cities accepted because both could live with a system neither dominated, and because the alternative — the other city's court — neither could accept at all.
+
+The Northern Covenant's four articles emerged from these negotiations with the forest peoples as signatories, not witnesses:
+
+1. **No army may march the Lantern Road in war formation.**
 2. Timbering along the route is restricted to safety cuts and bridge repair.
 3. Shrine groves and burial mounds are inviolable.
 4. Both cities maintain wardens, but neither claims the forest as sole territory.
 
-A fifth article was added forty years later after a convoy massacre blamed on falsified seals: **all northern-bound manifests must carry dual marks**---Midgaard wax and Kowloon thread-knot. This reduced smuggling fraud and gave rise to mixed patrol teams near the northern approaches.
+### The Convoy Massacre and the Fifth Article
 
-This compact made the Great Northern Forest not merely a passage, but a diplomatic buffer where Midgaard pragmatism meets Kowloon's covenant culture.
+The Northern Covenant's first forty years were not peaceful — the toll dispute continued as a commercial and archival argument conducted through clerk exchanges and warden tribunals, which is approximately the most Kowloon-vs-Midgaard conflict can look when both parties are genuinely committed to the Covenant's framework. It was grinding and exhausting and it produced eleven tribunal verdicts in forty years, of which both cities accepted the ones they won and filed archival objections to the ones they lost. This was, by any reasonable standard, progress.
 
-The Oath-Crossing negotiations were not smooth. Kowloon's envoys, trained in the city's precise contractual tradition, initially demanded that the forest charter include binding arbitration clauses enforceable by Kowloon's Jade Magistracy. Midgaard's wardens, who had spent decades earning trust from forest peoples through informal agreements and shared labor, refused any arrangement that gave a single city's courts jurisdiction over neutral ground. The compromise came from an unexpected source: a Cairn-Keeper elder named Toreth Gael, who proposed that disputes be settled at the standing stones under the old forest custom of witness judgment, where both parties presented their case before assembled neutral observers and the verdict was carved into the stone itself. This hybrid system, combining Kowloon's insistence on written record with the forest's tradition of communal witness, became the foundation of the modern warden tribunal system and is still practiced at the Oath-Crossing stones.
+Then a Kowloon-bound ore convoy of eleven wagons was attacked in the Mosswater Bends. The attackers had used falsified Midgaard warden seals to pass through the southern Lantern Road checkpoint without inspection. All seventeen convoy members were killed. Two of them were Jade Magistracy clerks traveling to audit the northern toll accounts.
+
+The presence of Kowloon's own officials in the convoy was almost certainly not coincidental. The attack was timed precisely to the patrol rotation gap between the southern warden post's morning and afternoon rounds — knowledge that required either surveillance of the checkpoint schedule or access to someone who knew it. The falsified seals were high-quality enough that the checkpoint warden who passed them did not flag them until told afterward to re-examine the records.
+
+Kowloon's Jade Magistracy formally accused Midgaard's warden commission of negligence at minimum. The faction within Kowloon that had never fully trusted the Covenant's framework made the harder accusation in public. Joint investigation was conducted under Covenant provisions.
+
+The seals were definitively identified as forgeries. The investigation identified two probable explanations and closed without choosing between them: a commercially motivated operation by interests within Midgaard's Upland Syndicate, whose market position had been eroding as Kowloon's northern ore trade expanded (access to Midgaard's seal materials through guild connections was feasible; motive was clear); or an Ashfang-connected raiding band with access to acquired seal-making infrastructure, acting opportunistically against a high-value target. Midgaard's Continuity faction preferred the second explanation. Kowloon's Reckoning-adjacent faction preferred the first. The case was never closed with a verdict.
+
+The fifth article of the Northern Covenant emerged from the Jade Magistracy's non-negotiable demand:
+
+**5. All northern-bound manifests must carry dual marks — Midgaard wax and Kowloon thread-knot — authenticated by inspectors from both cities.**
+
+Mixed patrol teams followed — Midgaard's proposal, accepted by Kowloon. Each city's personnel could verify the other's marks in real time. Kowloon's Jade Magistracy records note, without editorial comment, that mixed patrols also placed Kowloon personnel at Midgaard's southern checkpoint — a position from which Kowloon's representatives could observe Midgaard warden operations directly. This had been a standing intelligence concern since the Burnt Crossing. The convoy massacre, whatever its actual origin, produced a security arrangement Kowloon had wanted for forty years.
+
+The Burnt Crossing burial mound at Mosswater Bends received a second carved addition after the massacre investigation closed. The same Cairn-Keeper glyph for "witnessed." Cut smaller than the first. Newer. Facing the road.
 
 ### How Kowloon Influence Appears in the Forest
 Kowloon's influence is strongest in the northern crown and checkpoint rings:

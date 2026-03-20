@@ -392,12 +392,30 @@ The maritime gateway is formalized.
 
 ---
 
+## Era XVII–XVIII: The Northern Road Wars (The Border Wars, Northern Front)
+
+The period between Kowloon's consolidation and the Northern Covenant — approximately two to three generations — is the northern dimension of what Midgaard's institutional historians call the "border wars": a sustained multi-front military and paramilitary pressure on the road network. The three fronts (northern toll dispute, western Evermeet collapse, Ashfang warband activity) were simultaneous and interrelated.
+
+| Event | Category | Sources |
+|-------|----------|---------|
+| Kowloon's **Jade Magistracy** begins formally contesting Midgaard's unilateral toll authority on the Lantern Road. Midgaard's Ledgerhouse declines to engage. Kowloon caravans begin substituting Jade Magistracy-certified tariff schedules for Midgaard warden levies. | Political | great_northern_forest_lore, midgaard_lore |
+| Midgaard's warden commission begins **impounding Kowloon-certified cargo** at Lantern Road checkpoints. Kowloon's Wardens of Iron begin escorting caravans with armed companies. Both cities now have armed personnel operating simultaneously in the same forest corridors. | War/Conflict | great_northern_forest_lore, midgaard_lore |
+| The **Ashfang warbands** consolidate in the deep forest interior, exploiting the ungoverned jurisdictional gap between Midgaard's southernmost outposts and Kowloon's northernmost customs posts — a gap that persists because neither city will acknowledge the other's authority to fill it. Northern ore and timber supplies to Midgaard are interdicted. | War/Conflict | great_northern_forest_lore, midgaard_lore |
+| Midgaard's Guard Command authorizes a **military column of approximately 400 soldiers** to march the Lantern Road in war formation and establish a permanent garrison at the road's midpoint. Stated purpose: Ashfang security. Actual purpose: territorial claim. Kowloon's Courier Lantern Office relay stations provide advance warning; the Wardens of Iron dispatch their own armed company northward. | War/Conflict | great_northern_forest_lore, midgaard_lore |
+| **The Burnt Crossing**: the Midgaard column and Kowloon company arrive simultaneously at the only heavy-wagon ford in the Mosswater Bends. The three-day standoff becomes a two-day engagement. Mire-Speaker fishing platforms are destroyed by Midgaard soldiers taking positions; a Cairn-Keeper burial mound is dismantled for field fortification by Kowloon forces. Both cities withdraw. Both cities' official records blame Ashfang raiders. The Cairn-Keepers name the site for desecration against the dead. Combined casualties: at least twenty, likely more; neither city's official count acknowledges the other's dead. | War/Conflict | great_northern_forest_lore, midgaard_lore |
+| The **forest peoples' economic boycott**: the Cairn-Keepers close ridge passes to all organized parties; the Mire-Speakers discontinue channel-crossing guidance; the Everkeepers stop permitting ironpine storm-fall salvage. Neither city can compel cooperation from communities whose territorial knowledge is irreplaceable. Midgaard's timber supply drops within a season. Kowloon's northern ore throughput falls to a fraction of normal. | Political | great_northern_forest_lore |
+| **Cairn-Keeper elder Toreth Gael** sends identical letters to both cities' military commands offering the Oath-Crossing glade as neutral meeting ground. Non-negotiable condition: the forest peoples will be parties to any settlement, not consulted witnesses. Both cities accept — neither has a viable alternative. | Political | great_northern_forest_lore |
+
+---
+
 ## Era XVIII: The Northern Covenant (Forest Charter)
 
 | Event | Category | Sources |
 |-------|----------|---------|
-| Kowloon and Midgaard envoys meet at **The Oath-Crossing** glade. Forest road charter adopted: no armies in war formation, timbering restricted, shrine groves inviolable, neither city claims sole territory. | Political | great_northern_forest_lore |
-| **Cairn-Keeper elder Toreth Gael** proposes disputes be settled at standing stones under witness judgment — combining Kowloon's written-record insistence with forest communal witness tradition. This becomes the warden tribunal system. | Political | great_northern_forest_lore |
+| Kowloon and Midgaard envoys meet at **The Oath-Crossing** glade. Three-way negotiations produce the forest road charter. The "no army in war formation" clause is the Burnt Crossing's direct institutional consequence — Midgaard's negotiators drafted it to be operationally precise (column organization, military command hierarchy, standard-bearing) rather than vague ("no armies"), preserving warden companies while prohibiting exactly what the column was. | Political | great_northern_forest_lore, midgaard_lore |
+| Toll authority resolved: neither city holds tariff authority over the other's caravans inside the forest. Tolls at city approaches remain each city's prerogative; forest movement is governed by the charter. | Political | great_northern_forest_lore |
+| The **Burnt Crossing burial mound** is restored at both cities' combined expense under Cairn-Keeper supervision — the only five-city-network project both cities have funded without either claiming credit. The restored mound receives a new carved inscription: a Cairn-Keeper glyph meaning "witnessed." | Political | great_northern_forest_lore |
+| **Cairn-Keeper elder Toreth Gael** proposes disputes be settled at standing stones under witness judgment — combining Kowloon's written-record insistence with forest communal witness tradition. Neither city's courts control the mechanism. This becomes the foundation of the modern warden tribunal system. | Political | great_northern_forest_lore |
 | **Dual-mark requirement** added 40 years later after convoy massacre: all northern manifests must carry both Midgaard wax and Kowloon thread-knot. | Political | great_northern_forest_lore |
 
 ---
