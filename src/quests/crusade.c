@@ -951,23 +951,31 @@ static void crusade_build_conversation_context(void)
 {
    const char *item_name = quest_object ? quest_object->short_descr : "the item";
    const char *target_name = quest_target ? quest_target->short_descr : "an unknown thief";
+   const char *giver_area = (quest_mob != NULL && quest_mob->in_room != NULL && quest_mob->in_room->area != NULL)
+                                ? quest_mob->in_room->area->name
+                                : "an unknown area";
+   const char *target_area = (quest_target != NULL && quest_target->in_room != NULL && quest_target->in_room->area != NULL)
+                                 ? quest_target->in_room->area->name
+                                 : "an unknown area";
 
    if (quest_target != NULL)
    {
       snprintf(quest_conversation_context, sizeof(quest_conversation_context),
                "You are the quest giver in an active crusade. "
-               "Your '%s' was stolen by '%s'. "
+               "You are currently located in '%s'. "
+               "Your '%s' was stolen by '%s', who is in '%s'. "
                "You have been seeking its return for %d of 15 minutes. "
                "You want adventurers to kill the thief and return the item.",
-               item_name, target_name, quest_timer);
+               giver_area, item_name, target_name, target_area, quest_timer);
    }
    else
    {
       snprintf(quest_conversation_context, sizeof(quest_conversation_context),
                "You are the quest giver in an active crusade. "
+               "You are currently located in '%s'. "
                "Your '%s' was stolen and the thief has been slain. "
                "You have been waiting %d of 15 minutes for someone to return it to you.",
-               item_name, quest_timer);
+               giver_area, item_name, quest_timer);
    }
 }
 
