@@ -388,6 +388,10 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
       }
    }
 
+   /* Public society: Harbor Syndics longshoreman extra attack */
+   if (pub_society_extra_attack(ch) && ch->fighting == victim)
+      one_hit(ch, victim, dt);
+
    if (IS_SET(race_table[ch->race].race_flags, RACE_MOD_TAIL) && number_percent() < 25)
       one_hit(ch, victim, TYPE_HIT + 13);
 
@@ -920,6 +924,10 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    if (ch->position <= POS_STUNNED)
       return FALSE;
 
+   /* Public society: Shrine marked_strike bypasses avoidance 10% of the time */
+   if (pub_society_marked_strike_check(ch, victim))
+      return FALSE;
+
    if (IS_NPC(ch) && IS_SET(ch->act, ACT_SOLO))
       max_avoidance += 10;
    if (IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS))
@@ -1173,6 +1181,9 @@ int get_dodge(CHAR_DATA *ch)
    chance += get_speed(ch) * 5;
 
    chance += ch->dodge_mod;
+
+   /* Public society: Road Wardens road_grit +5% dodge */
+   chance += pub_society_dodge_bonus(ch);
 
    /* Vigilance: WIS-based dodge bonus */
    if (can_use_skill(ch, gsn_vigilance))

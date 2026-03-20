@@ -59,6 +59,10 @@
 #include "quest.h"
 #endif
 
+#ifndef PUB_SOCIETY_H
+#include "pub_society.h"
+#endif
+
 #ifndef INVASION_H
 #include "invasion.h"
 #endif
@@ -550,6 +554,8 @@ struct mob_index_data
    sh_int position;
    int hunt_flags;
    long lore_flags;
+   sh_int pub_society;
+   sh_int pub_society_npc_role;
    char *ai_prompt;  /* system prompt persona text; NULL if not AI-enabled */
    int ai_knowledge; /* KNOW_* bitmask of topic blocks to inject */
    sh_int accent;    /* ACCENT_* city accent; ACCENT_NONE = 0 */
@@ -833,6 +839,12 @@ struct pc_data
    bool completed_quests[QUEST_MAX_TEMPLATES];
    /* --- Weapon bond system --- */
    BOND_DATA *bond;
+   /* --- Public society system --- */
+   int pub_society;      /* PUB_SOCIETY_* constant */
+   int pub_society_rank; /* rank score, -500 to 500 */
+   int pub_society_tasks_done;
+   int pub_society_joined; /* timestamp of enrollment */
+   int pub_society_left;   /* timestamp of last departure (for cooldown) */
    bool is_new_player; /* TRUE for brand-new characters; cleared after first greeting */
 };
 

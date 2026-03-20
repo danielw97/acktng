@@ -730,6 +730,10 @@ D2
 ~
 ~
 0 -1 3896
+D0
+~
+~
+0 -1 8100
 S
 #3896
 @@yMarket of the Shoreward Tables@@N~
@@ -756,6 +760,10 @@ E
 conversion-ratio charts~
 @@yThe stone charts list current ratios for the most common cargo categories: grain, salt, preserved fish, timber, metal bar stock, and luxury goods. Each entry shows the Great Oasis Saltweight standard value, the Mafdet harbor-measure equivalent, and the current market adjustment factor. A notation at the bottom reads: RATIOS CERTIFIED BY TIDE LEDGER HALL â DISPUTES FILED AT SHOREWARD HOUSE WITHIN THREE DAYS OF TRANSACTION.@@N
 ~
+D5
+~
+~
+0 -1 8320
 S
 #3897
 @@bMarket Square, Southern Wing@@N~
@@ -938,6 +946,10 @@ D3
 ~
 ~
 0 -1 3908
+D2
+~
+~
+0 -1 8313
 S
 #3910
 @@bNorthern Market Extension@@N~

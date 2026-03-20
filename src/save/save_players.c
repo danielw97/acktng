@@ -474,6 +474,16 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
          fprintf(fp, "BondShort    %s~\n", bond->weapon_short ? bond->weapon_short : "");
       }
 
+      /* Public society data */
+      if (ch->pcdata->pub_society > 0)
+      {
+         fprintf(fp, "PubSociety   %d\n", ch->pcdata->pub_society);
+         fprintf(fp, "PubSocRank   %d\n", ch->pcdata->pub_society_rank);
+         fprintf(fp, "PubSocTasks  %d\n", ch->pcdata->pub_society_tasks_done);
+         fprintf(fp, "PubSocJoined %d\n", ch->pcdata->pub_society_joined);
+         fprintf(fp, "PubSocLeft   %d\n", ch->pcdata->pub_society_left);
+      }
+
       for (sn = 0; sn < MAX_SKILL; sn++)
       {
          if (skill_table[sn].name != NULL && ch->pcdata->learned[sn] > 0)
@@ -1199,6 +1209,11 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             KEY("Pkills", ch->pcdata->pkills, fread_number(fp));
             KEY("Pkilled", ch->pcdata->pkilled, fread_number(fp));
             KEY("Pflags", ch->pcdata->pflags, fread_number(fp));
+            KEY("PubSociety", ch->pcdata->pub_society, fread_number(fp));
+            KEY("PubSocRank", ch->pcdata->pub_society_rank, fread_number(fp));
+            KEY("PubSocTasks", ch->pcdata->pub_society_tasks_done, fread_number(fp));
+            KEY("PubSocJoined", ch->pcdata->pub_society_joined, fread_number(fp));
+            KEY("PubSocLeft", ch->pcdata->pub_society_left, fread_number(fp));
             KEY("QuestPoints", ch->pcdata->post_quest_points, fread_number(fp));
             KEY("PropDynCooldown", ch->pcdata->quest_dynamic_cooldown_until, fread_number(fp));
          }

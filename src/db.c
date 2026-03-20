@@ -254,6 +254,43 @@ sh_int gsn_seal_testimony;
 /* Druid skills */
 sh_int gsn_substrate_piercing;
 
+/* Public society skills */
+sh_int gsn_patrol_sense;
+sh_int gsn_field_mend;
+sh_int gsn_rally_cry;
+sh_int gsn_shield_wall;
+sh_int gsn_tactical_assess;
+sh_int gsn_command_presence;
+sh_int gsn_dockside_audit;
+sh_int gsn_haggle;
+sh_int gsn_longshoreman;
+sh_int gsn_bonded_cargo;
+sh_int gsn_anchor_slam;
+sh_int gsn_forage;
+sh_int gsn_field_repair;
+sh_int gsn_ember_signal;
+sh_int gsn_ember_vitality;
+sh_int gsn_containment_ward;
+sh_int gsn_controlled_burn;
+sh_int gsn_oath_mark;
+sh_int gsn_track_quarry;
+sh_int gsn_writ_of_hold;
+sh_int gsn_marked_strike;
+sh_int gsn_claws_pursuit;
+sh_int gsn_claws_judgment;
+sh_int gsn_dig_in;
+sh_int gsn_shelter;
+sh_int gsn_trailblaze;
+sh_int gsn_bulwark;
+sh_int gsn_signal_tower;
+sh_int gsn_rampart_slam;
+sh_int gsn_wayfind;
+sh_int gsn_road_camp;
+sh_int gsn_forced_march;
+sh_int gsn_road_grit;
+sh_int gsn_dispatch_rider;
+sh_int gsn_waylay;
+
 #ifdef TFS
 sh_int gsn_mana_sense;
 #endif
@@ -512,6 +549,9 @@ void boot_db(void)
       }
    }
 
+   /* Link public society skill gsns after gsn resolution */
+   pub_society_boot_init();
+
    /*
     * Clear list of used areas
     */
@@ -693,6 +733,54 @@ void boot_db(void)
     * Reset all areas once.
     * Load up the notes file.
     */
+   /* Set pub_society fields on society hall NPCs by vnum */
+   {
+      MOB_INDEX_DATA *pMob;
+      int vnum;
+      /* Guard Command recruiter (Midgaard) */
+      vnum = 7800;
+      if ((pMob = get_mob_index(vnum)) != NULL)
+      {
+         pMob->pub_society = PUB_SOCIETY_GUARD_COMMAND;
+         pMob->pub_society_npc_role = PUB_SOC_NPC_RECRUITER;
+      }
+      /* Wall Command recruiter (Kiess) */
+      vnum = 7900;
+      if ((pMob = get_mob_index(vnum)) != NULL)
+      {
+         pMob->pub_society = PUB_SOCIETY_WALL_COMMAND;
+         pMob->pub_society_npc_role = PUB_SOC_NPC_RECRUITER;
+      }
+      /* Harbor Syndics recruiter (Kowloon) */
+      vnum = 8000;
+      if ((pMob = get_mob_index(vnum)) != NULL)
+      {
+         pMob->pub_society = PUB_SOCIETY_HARBOR_SYNDICS;
+         pMob->pub_society_npc_role = PUB_SOC_NPC_RECRUITER;
+      }
+      /* Shrine of the First Claw recruiter (Mafdet) */
+      vnum = 8100;
+      if ((pMob = get_mob_index(vnum)) != NULL)
+      {
+         pMob->pub_society = PUB_SOCIETY_FIRST_CLAW;
+         pMob->pub_society_npc_role = PUB_SOC_NPC_RECRUITER;
+      }
+      /* Ember Wardens recruiter (Rakuen) */
+      vnum = 8200;
+      if ((pMob = get_mob_index(vnum)) != NULL)
+      {
+         pMob->pub_society = PUB_SOCIETY_EMBER_WARDENS;
+         pMob->pub_society_npc_role = PUB_SOC_NPC_RECRUITER;
+      }
+      /* Road Wardens recruiter (Midgaard crossroads) */
+      vnum = 8300;
+      if ((pMob = get_mob_index(vnum)) != NULL)
+      {
+         pMob->pub_society = PUB_SOCIETY_ROAD_WARDENS;
+         pMob->pub_society_npc_role = PUB_SOC_NPC_RECRUITER;
+      }
+   }
+
    {
       log_f("Fixing Exits......");
       fix_exits();

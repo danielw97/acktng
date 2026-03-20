@@ -393,6 +393,14 @@ void round_char_update(CHAR_DATA *ch)
    round_update_dot(ch);
    update_buff_duration(ch, DURATION_ROUND);
 
+   /* Public society: Ember Wardens ember_vitality in-combat HP regen */
+   if (is_fighting(ch))
+   {
+      int regen = pub_society_hp_regen(ch);
+      if (regen > 0)
+         ch->hit = UMIN(ch->hit + regen, ch->max_hit);
+   }
+
    if (!is_fighting(ch) && ch->chi > 0)
    {
       send_to_char("Your chi has dissipated as you are not fighting.\n\r", ch);

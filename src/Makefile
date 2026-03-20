@@ -148,13 +148,25 @@ SKILL_OBJS = \
 	skills/do_chi_surge.o skills/do_breath_of_endurance.o skills/do_fist_of_the_interior_form.o \
 	skills/do_momentum_chain.o skills/do_veterans_cadence.o skills/do_overwhelming_assault.o \
 	skills/do_oathshield.o skills/do_sanctified_strike.o \
-	skills/do_shadow_reading.o skills/do_hex_ward.o skills/do_reflex_disruption.o
+	skills/do_shadow_reading.o skills/do_hex_ward.o skills/do_reflex_disruption.o \
+	skills/do_patrol_sense.o skills/do_field_mend.o skills/do_rally_cry.o \
+	skills/do_tactical_assess.o skills/do_command_presence.o \
+	skills/do_dockside_audit.o skills/do_haggle.o skills/do_bonded_cargo.o \
+	skills/do_anchor_slam.o \
+	skills/do_forage.o skills/do_field_repair.o skills/do_ember_signal.o \
+	skills/do_containment_ward.o skills/do_controlled_burn.o \
+	skills/do_oath_mark.o skills/do_track_quarry.o skills/do_writ_of_hold.o \
+	skills/do_claws_pursuit.o skills/do_claws_judgment.o \
+	skills/do_dig_in.o skills/do_shelter.o skills/do_trailblaze.o \
+	skills/do_signal_tower.o skills/do_rampart_slam.o \
+	skills/do_wayfind.o skills/do_road_camp.o skills/do_forced_march.o \
+	skills/do_dispatch_rider.o skills/do_waylay.o
 
 QUEST_OBJS = quests/template.o quests/state.o quests/cartography.o quests/notify.o quests/commands.o quests/crusade.o
 
-O_FILES = affect.o ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_wiz.o npc_dialogue.o \
+O_FILES = affect.o ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_pub_society.o act_wiz.o npc_dialogue.o \
 	  areachk.o board.o build.o buildare.o buildtab.o caravan.o clutch.o comm.o hotreboot.o login.o socket.o prompt.o \
-	  const.o const_color.o const_class.o const_race.o const_clan.o const_exp.o const_liq.o \
+	  const.o const_color.o const_class.o const_race.o const_clan.o const_exp.o const_liq.o const_pub_society.o \
 	  damage.o cloak.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
 	  heal.o interp.o invasion.o item_generation.o item_generation_tables.o keep.o lists.o lookup.o macros.o magic.o mapper.o \
 	  obj_fun.o pdelete.o $(QUEST_OBJS) reincarnate.o revenant.o \

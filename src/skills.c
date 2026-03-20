@@ -260,6 +260,10 @@ bool can_use_skill(CHAR_DATA *ch, int gsn)
       }
    }
 
+   /* Check public society skills */
+   if (can_use_pub_society_skill(ch, gsn))
+      return TRUE;
+
    return FALSE;
 }
 
