@@ -1623,6 +1623,8 @@ void crusade_inform args((void));
 void crusade_complete args((CHAR_DATA * ch));
 void crusade_cancel args((void));
 void generate_auto_crusade args((void));
+void crusade_ai_poll args((void));
+void crusade_dialogue_dispatch args((CHAR_DATA * npc, CHAR_DATA * ch, const char *argument));
 
 /*------*\
 ) save.c (
