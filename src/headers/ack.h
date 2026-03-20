@@ -846,7 +846,7 @@ struct pc_data
    int pub_society_tasks_done;
    int pub_society_joined; /* timestamp of enrollment */
    int pub_society_left;   /* timestamp of last departure (for cooldown) */
-   bool is_new_player; /* TRUE for brand-new characters; cleared after first greeting */
+   bool is_new_player;     /* TRUE for brand-new characters; cleared after first greeting */
 };
 
 /*
@@ -1624,7 +1624,7 @@ void crusade_complete args((CHAR_DATA * ch));
 void crusade_cancel args((void));
 void generate_auto_crusade args((void));
 void crusade_ai_poll args((void));
-void crusade_dialogue_dispatch args((CHAR_DATA * npc, CHAR_DATA * ch, const char *argument));
+void crusade_dialogue_dispatch args((CHAR_DATA * npc, CHAR_DATA *ch, const char *argument));
 
 /*------*\
 ) save.c (

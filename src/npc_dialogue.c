@@ -944,11 +944,10 @@ static const char *accent_instructions[MAX_ACCENT] = {
  * ========================================================================= */
 
 /* Common English stop-words to skip when extracting search keywords. */
-static const char *help_stop_words[] = {
-   "the", "and", "is", "are", "you", "how", "what", "can", "does", "do",
-   "a", "an", "in", "to", "of", "it", "i", "me", "my", "we", "for",
-   "on", "at", "be", "was", "if", "or", "not", NULL
-};
+static const char *help_stop_words[] = {"the",  "and", "is", "are", "you", "how", "what", "can",
+                                        "does", "do",  "a",  "an",  "in",  "to",  "of",   "it",
+                                        "i",    "me",  "my", "we",  "for", "on",  "at",   "be",
+                                        "was",  "if",  "or", "not", NULL};
 
 static bool is_stop_word(const char *w)
 {
@@ -1001,7 +1000,11 @@ static void collect_help_context(const char *message, char *out, size_t cap)
          if (!str_prefix(word, pHelp->keyword))
          {
             for (i = 0; i < match_count; i++)
-               if (matches[i] == pHelp) { already = TRUE; break; }
+               if (matches[i] == pHelp)
+               {
+                  already = TRUE;
+                  break;
+               }
             if (!already)
                matches[match_count++] = pHelp;
          }
@@ -1012,7 +1015,11 @@ static void collect_help_context(const char *message, char *out, size_t cap)
          if (!str_prefix(word, pHelp->keyword))
          {
             for (i = 0; i < match_count; i++)
-               if (matches[i] == pHelp) { already = TRUE; break; }
+               if (matches[i] == pHelp)
+               {
+                  already = TRUE;
+                  break;
+               }
             if (!already)
                matches[match_count++] = pHelp;
          }

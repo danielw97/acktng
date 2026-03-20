@@ -2308,4 +2308,3 @@ void do_beep(CHAR_DATA *ch, char *argument)
    victim->position = pos;
    return;
 }
-

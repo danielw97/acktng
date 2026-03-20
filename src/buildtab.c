@@ -593,18 +593,13 @@ const struct lookup_type tab_affected_by[] =
      {"pass_door", 1048576, 5000},
      {NULL, 0}};
 
-const struct lookup_type tab_knowledge[] = {{"weapons", KNOW_WEAPONS, 0},
-                                            {"trade", KNOW_TRADE, 0},
-                                            {"magic", KNOW_MAGIC, 0},
-                                            {"temple", KNOW_TEMPLE, 0},
-                                            {"underworld", KNOW_UNDERWORLD, 0},
-                                            {"harbor", KNOW_HARBOR, 0},
-                                            {"guard", KNOW_GUARD, 0},
-                                            {"history", KNOW_HISTORY, 0},
-                                            {"wilderness", KNOW_WILDERNESS, 0},
-                                            {"politics", KNOW_POLITICS, 0},
-                                            {"helps", KNOW_HELPS, 0},
-                                            {NULL, 0}};
+const struct lookup_type tab_knowledge[] = {
+    {"weapons", KNOW_WEAPONS, 0},       {"trade", KNOW_TRADE, 0},
+    {"magic", KNOW_MAGIC, 0},           {"temple", KNOW_TEMPLE, 0},
+    {"underworld", KNOW_UNDERWORLD, 0}, {"harbor", KNOW_HARBOR, 0},
+    {"guard", KNOW_GUARD, 0},           {"history", KNOW_HISTORY, 0},
+    {"wilderness", KNOW_WILDERNESS, 0}, {"politics", KNOW_POLITICS, 0},
+    {"helps", KNOW_HELPS, 0},           {NULL, 0}};
 
 const struct lookup_type tab_accent[] = {{"none", ACCENT_NONE, 0},
                                          {"midgaard", ACCENT_MIDGAARD, 0},

@@ -14,10 +14,10 @@ bool is_legal_stance(CHAR_DATA *ch, int stance);
 const struct stance_app_type stance_app[MAX_STANCE] = {
     {"Adventurer", 0, 0, 0, 0, 0, 0, 0, MORTAL, -1, -1, -1, -1},
     /* Mortal stances */
-    {"Ember Protocol", 5, -3, -3, 0, 0, 2, STANCE_MULTI_CAST | STANCE_NO_HIT, MORTAL, CLASS_MAG,
-     60, -1, -1, CLASS_MAG},
-    {"Long Hold", 5, -3, -3, 0, 0, 2, STANCE_MULTI_CAST | STANCE_NO_HIT, MORTAL, CLASS_PSI, 60,
-     -1, -1, CLASS_PSI},
+    {"Ember Protocol", 5, -3, -3, 0, 0, 2, STANCE_MULTI_CAST | STANCE_NO_HIT, MORTAL, CLASS_MAG, 60,
+     -1, -1, CLASS_MAG},
+    {"Long Hold", 5, -3, -3, 0, 0, 2, STANCE_MULTI_CAST | STANCE_NO_HIT, MORTAL, CLASS_PSI, 60, -1,
+     -1, CLASS_PSI},
     {"Solar Office", 0, 0, 0, 0, 1, 0, 0, MORTAL, CLASS_CLE, 60, -1, -1, CLASS_CLE},
     {"Dunmar's Watch", 0, 1, 0, 0, 0, 0, 0, MORTAL, CLASS_WAR, 60, -1, -1, CLASS_WAR},
     {"Gap Intuition", -1, 0, 1, 0, 0, 0, 0, MORTAL, CLASS_CIP, 60, -1, -1, CLASS_CIP},

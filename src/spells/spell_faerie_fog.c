@@ -40,10 +40,9 @@ bool spell_ledger_mark(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    {
       act("$n inscribes the Ledger Priests' mark of disclosure upon the air.", ch, NULL, NULL,
           TO_ROOM);
-      send_to_char(
-          "You inscribe the Ledger Priests' mark of disclosure — none shall hide from the "
-          "record.\n\r",
-          ch);
+      send_to_char("You inscribe the Ledger Priests' mark of disclosure — none shall hide from the "
+                   "record.\n\r",
+                   ch);
    }
    else
    {

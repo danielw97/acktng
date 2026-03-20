@@ -1562,7 +1562,6 @@ void load_specials(FILE *fp)
             LINK(pList, area_load->first_area_specfunc, area_load->last_area_specfunc, next, prev);
          }
          break;
-
       }
       /*
        * NB. Comments will not be saved when using areasave - MAG.

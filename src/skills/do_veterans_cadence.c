@@ -51,12 +51,12 @@ void do_veterans_cadence(CHAR_DATA *ch, char *argument)
 
    ch->cooldown[gsn_veterans_cadence] = 12;
 
-   af.type     = gsn_veterans_cadence;
+   af.type = gsn_veterans_cadence;
    af.duration = 6 + ch->class_level[CLASS_CRU] / 4;
    af.duration_type = DURATION_ROUND;
    af.location = APPLY_DAMROLL;
-   af.modifier = 4 + ch->class_level[CLASS_CRU] + ch->class_level[CLASS_KNI]
-                 + ch->class_level[CLASS_SWO];
+   af.modifier =
+       4 + ch->class_level[CLASS_CRU] + ch->class_level[CLASS_KNI] + ch->class_level[CLASS_SWO];
    af.bitvector = 0;
    affect_to_char(ch, &af);
 
@@ -64,9 +64,9 @@ void do_veterans_cadence(CHAR_DATA *ch, char *argument)
    {
       act("$n settles into a steady rhythm, each blow carrying the weight of hard-won experience.",
           ch, NULL, NULL, TO_ROOM);
-      send_to_char(
-          "You settle into a steady rhythm, each blow carrying the weight of hard-won experience.\n\r",
-          ch);
+      send_to_char("You settle into a steady rhythm, each blow carrying the weight of hard-won "
+                   "experience.\n\r",
+                   ch);
    }
    else if (stacks == 1)
    {
@@ -75,8 +75,8 @@ void do_veterans_cadence(CHAR_DATA *ch, char *argument)
    }
    else
    {
-      act("$n reaches full campaign tempo, unstoppable as a force that has never once broken.",
-          ch, NULL, NULL, TO_ROOM);
+      act("$n reaches full campaign tempo, unstoppable as a force that has never once broken.", ch,
+          NULL, NULL, TO_ROOM);
       send_to_char(
           "You reach full campaign tempo, unstoppable as a force that has never once broken.\n\r",
           ch);

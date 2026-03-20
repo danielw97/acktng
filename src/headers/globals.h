@@ -312,9 +312,9 @@ extern int quest_wait;
 extern sh_int quest_personality;
 extern int quest_level_min;
 extern int quest_level_max;
-extern bool quest_ai_pending;     /* AI generation in flight?        */
+extern bool quest_ai_pending;      /* AI generation in flight?        */
 extern char quest_ai_tmpfile[256]; /* Temp file path for AI output    */
-extern pid_t quest_ai_pid;        /* Child process PID               */
+extern pid_t quest_ai_pid;         /* Child process PID               */
 extern time_t quest_ai_start_time; /* Time child was launched         */
 
 /* Diplomatics globals (defined in db.c). */

@@ -35,7 +35,6 @@
 void set_obj_stat_auto(OBJ_DATA *obj);
 void set_aff_to_obj(OBJ_DATA *obj, int location, int modifier);
 
-
 /* Map obj->weight to a human-readable style name.
  * melee=8, caster=3, tank=13 (matches emblem system). */
 static const char *claneq_weight_name(int obj_weight)

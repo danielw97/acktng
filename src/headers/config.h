@@ -257,7 +257,7 @@
 
 /* Command flags (cmd_type.flags) */
 #define CMD_FLAG_NINJA_OK BIT_1 /* command does not break ninja stance */
-#define CMD_FLAG_WAIT     BIT_2 /* command introduces wait state; queue while ch->wait > 0 */
+#define CMD_FLAG_WAIT BIT_2     /* command introduces wait state; queue while ch->wait > 0 */
 
 /*
  * Well known mob virtual numbers.
@@ -1009,7 +1009,7 @@
 #define KNOW_HISTORY (1 << 7)
 #define KNOW_WILDERNESS (1 << 8)
 #define KNOW_POLITICS (1 << 9)
-#define KNOW_HELPS    (1 << 10) /* search help/shelp files at AI dispatch time */
+#define KNOW_HELPS (1 << 10) /* search help/shelp files at AI dispatch time */
 #define NUM_KNOW_FLAGS 10
 
 /* City indices for knowledge lookup table */

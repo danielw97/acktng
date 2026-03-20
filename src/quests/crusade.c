@@ -65,11 +65,10 @@ static char ai_item_long[256];
 static char quest_conversation_context[4096];
 
 /* Fallback item names used when AI generation fails or times out */
-static const char *fallback_item_names[] = {"a worn cloth doll",    "a carved wooden idol",
-                                            "a dueling commission", "a keeper's survey rod",
-                                            "a campaign seal",      "an ashfall shard",
-                                            "a faded ledger page",  "a sealed proclamation",
-                                            NULL};
+static const char *fallback_item_names[] = {
+    "a worn cloth doll",     "a carved wooden idol",  "a dueling commission",
+    "a keeper's survey rod", "a campaign seal",       "an ashfall shard",
+    "a faded ledger page",   "a sealed proclamation", NULL};
 
 static void format_quest_message(char *dest, const char *message, const char *value1,
                                  const char *value2)
@@ -407,11 +406,13 @@ const struct qmessage_type qmessages[9][17] = {
     /* Personality 4: Scholarly — measured academic, references records and precedent */
     {{"@@lBy my ledger, my %s @@lhas gone missing. I have noted the matter formally.", ""},
      {"@@lThe absence of my %s @@lviolates established protocol. Is anyone investigating?", ""},
-     {"@@lAccording to my records, my %s @@lhas not yet been recovered. A disconcerting entry.", ""},
+     {"@@lAccording to my records, my %s @@lhas not yet been recovered. A disconcerting entry.",
+      ""},
      {"@@lI would appreciate a status report on the recovery of my %s@@l.", ""},
      {"@@lThe matter of my %s @@lremains unresolved. I have filed the appropriate notices.", ""},
      {"@@lFor reference: my %s @@lwas last documented in my possession. Leads are lacking.", ""},
-     {"@@lI have consulted three precedents for recovering stolen %s@@l. None were encouraging.", ""},
+     {"@@lI have consulted three precedents for recovering stolen %s@@l. None were encouraging.",
+      ""},
      {"@@lRecords confirm: %s @@ltook my %s@@l. I have annotated the relevant section.",
       "@@lThe file on my %s @@lnotes: whoever held it has been struck from the roster."},
      {"@@lI would pay for a certified account of how %s @@lcame to possess my %s@@l.",
@@ -1378,8 +1379,8 @@ void crusade_cancel()
 
    if (quest_mob)
    {
-      active_personality = quest_resolve_crusade_personality(quest_personality,
-                                                             quest_mob ? quest_mob->level : 1);
+      active_personality =
+          quest_resolve_crusade_personality(quest_personality, quest_mob ? quest_mob->level : 1);
       if (using_ai_messages && ai_msg_m1[14] && ai_msg_m1[14][0] != '\0')
       {
          msg = ai_msg_m1[14];

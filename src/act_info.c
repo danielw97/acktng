@@ -2288,9 +2288,10 @@ void do_who(CHAR_DATA *ch, char *argument)
                "| @@mSo Pa An Kn Ne Mo Wi@@R                                                       "
                "         "
                " |\n\r");
-   safe_strcat(MAX_STRING_LENGTH, buf,
-               "| @@bMa Cl Th Wa Ps Pu Dr Se @@eRace Clan  ABJPW    Player    Title                  "
-               "@@R(flags) @@R|\n\r");
+   safe_strcat(
+       MAX_STRING_LENGTH, buf,
+       "| @@bMa Cl Th Wa Ps Pu Dr Se @@eRace Clan  ABJPW    Player    Title                  "
+       "@@R(flags) @@R|\n\r");
    safe_strcat(MAX_STRING_LENGTH, buf,
                "|---------------------------------------------+------------------------------------"
                "----|\n\r");
@@ -2322,28 +2323,28 @@ void do_who(CHAR_DATA *ch, char *argument)
             switch (i)
             {
             case 0:
-               safe_strcat(
-                   MAX_STRING_LENGTH, buf,
-                   "@@R|---------------------------------------------|----------@@lImmortals@@R-----"
-                   "----------------|@@g\n\r");
+               safe_strcat(MAX_STRING_LENGTH, buf,
+                           "@@R|---------------------------------------------|----------@@"
+                           "lImmortals@@R-----"
+                           "----------------|@@g\n\r");
                break;
             case 1:
-               safe_strcat(
-                   MAX_STRING_LENGTH, buf,
-                   "@@R|---------------------------------------------|------------@@WAdepts@@R------"
-                   "----------------|@@g\n\r");
+               safe_strcat(MAX_STRING_LENGTH, buf,
+                           "@@R|---------------------------------------------|------------@@"
+                           "WAdepts@@R------"
+                           "----------------|@@g\n\r");
                break;
             case 2:
-               safe_strcat(
-                   MAX_STRING_LENGTH, buf,
-                   "@@R|---------------------------------------------|----------@@mRemortals@@R-----"
-                   "----------------|@@g\n\r");
+               safe_strcat(MAX_STRING_LENGTH, buf,
+                           "@@R|---------------------------------------------|----------@@"
+                           "mRemortals@@R-----"
+                           "----------------|@@g\n\r");
                break;
             case 3:
-               safe_strcat(
-                   MAX_STRING_LENGTH, buf,
-                   "@@R|---------------------------------------------|-----------@@cMortals@@R------"
-                   "----------------|@@g\n\r");
+               safe_strcat(MAX_STRING_LENGTH, buf,
+                           "@@R|---------------------------------------------|-----------@@"
+                           "cMortals@@R------"
+                           "----------------|@@g\n\r");
                break;
             }
          }
@@ -2559,9 +2560,10 @@ void do_who(CHAR_DATA *ch, char *argument)
       }
    }
 
-   safe_strcat(MAX_STRING_LENGTH, buf,
-               "@@R|---------------------------------------------+------------------------------------"
-               "----|\n\r");
+   safe_strcat(
+       MAX_STRING_LENGTH, buf,
+       "@@R|---------------------------------------------+------------------------------------"
+       "----|\n\r");
    send_to_char(buf, ch);
    buf[0] = '\0';
 
