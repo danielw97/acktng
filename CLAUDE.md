@@ -4,7 +4,7 @@
 
 For any implementation task that involves `src/` changes, you MUST first deliver a design document describing the proposed changes — including the problem, approach, affected files, and any trade-offs — and discuss it with the user. Do NOT begin implementation until the user has explicitly signed off on the design document. No code changes, no file creation, no prototyping until approval is given. Design documents should be placed in `docs/proposals/`.
 
-Changes that do not touch `src/` (e.g. lore files, area files, documentation, help files) do NOT require a design document and may be implemented directly.
+Changes that do not touch `src/` (e.g. lore files, area files, documentation, help files) do NOT require a design document and may be implemented directly. Bugfixes to `src/` also do NOT require a design document and may be implemented directly.
 
 Once a proposal has been fully implemented, move it from `docs/proposals/` to `docs/proposals/completed/`. Active proposals (pending discussion or implementation) live in `docs/proposals/`. Completed proposals (fully implemented) live in `docs/proposals/completed/`.
 
