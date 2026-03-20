@@ -309,6 +309,10 @@
 #define PULSE_RAUCTION (30 * PULSE_PER_SECOND)
 #define PULSE_MAUCTION (30 * PULSE_PER_SECOND)
 
+/* Duration of an automatically triggered happy hour in ticks (1 tick = 1 in-game hour =
+ * 60 real seconds).  12 ticks = half an in-game day = ~12 real minutes. */
+#define HAPPY_HOUR_AUTO_DURATION 12
+
 #define LIQUID_BLOOD 13
 
 /*
