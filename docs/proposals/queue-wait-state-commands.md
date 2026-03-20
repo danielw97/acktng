@@ -62,14 +62,18 @@ Replace `CMD(...)` with `CMD_WAIT(...)` (or `CMD_NINJA_WAIT`) for every command 
 | `kick`, `bash`, `punch`, `road sweep`, `checkpoint break`, `charge`, `fleche`, `holystrike` | `skills/` → `war_attack()` | `WAIT_STATE(ch, beats)` via `war_attack` |
 | `palmstrike`, `aurabolt`, `pummel`, `spinfist` | `skills/` → `pug_attack()` | `WAIT_STATE(ch, beats)` via `pug_attack` |
 | `dirt`, `ashfall strike`, `harbor dust`, `trip`, `berserk`, `disarm`, `frenzy`, `target`, `dunmar's call`, `riposte`, `anti magic shell`, `chi surge`, `breath of endurance`, `fist of the interior form`, `momentum chain`, `veteran's cadence`, `overwhelming assault`, `oathshield`, `sanctified strike`, `shadow reading`, `hex ward`, `reflex disruption`, `shieldblock`, `chiblock`, `chakra`, `flurry`, `reach silence`, `dissolution protocol`, `gap transit`, `asset flag`, `gap hold`, `seam snare`, `read intent`, `cleave`, `seven shade hold`, `charter challenge`, `rend`, `field patch`, `weapon mastery`, `grapple`, `choke hold`, `leg sweep`, `iron skin`, `roll with blow`, `applied understanding`, `feint`, `cistern discipline`, `verdict`, `read opponent`, `binding strike`, `ninth descent`, `condemn`, `seal testimony`, `rescue` | `skills/` | Direct `WAIT_STATE(ch, beats)` |
+| `morale` | `skills/do_morale.c` | Combat support skill; add `WAIT_STATE(ch, beats)` to implementation |
+| `leadership` | `skills/do_leadership.c` | Combat support skill; add `WAIT_STATE(ch, beats)` to implementation |
+| `stun` | `skills/do_stun.c` | Combat skill; add `WAIT_STATE(ch, beats)` to implementation |
+| `interior discipline` | `skills/do_mindoverbody.c` | In-combat chi skill; add `WAIT_STATE(ch, beats)` to implementation |
 
-**Commands intentionally NOT flagged** (they may sometimes call `WAIT_STATE` but should execute immediately):
+**Commands intentionally NOT flagged** (should execute immediately):
 
 - `flee`, `recall`, `/` — escape commands; must execute without queuing
 - `shout` — communication command; the wait is an anti-spam throttle, not an action delay
 - `password` — the wait only fires on wrong password entry (security lockout)
-- `smash`, `stun`, `morale`, `leadership`, `interior discipline` — do not call `WAIT_STATE` in their implementation
-- `assist`, `revenant`, `disguise`, `reach remedy` — do not call `WAIT_STATE`
+- `smash` — opens doors, not a combat action
+- `assist`, `revenant`, `disguise`, `reach remedy` — do not call `WAIT_STATE` and are not combat-round actions
 
 ### 4. New helper function in `interp.c`
 
@@ -161,6 +165,10 @@ if (d->incomm[0] != '\0')
 | `src/headers/config.h` | Add `CMD_FLAG_WAIT BIT_2` |
 | `src/interp.c` | Add `CMD_WAIT` / `CMD_NINJA_WAIT` macros; update command table; add `command_has_wait_flag()` |
 | `src/socket.c` | Restructure input processing loop |
+| `src/skills/do_morale.c` | Add `WAIT_STATE(ch, skill_table[gsn_morale].beats)` |
+| `src/skills/do_leadership.c` | Add `WAIT_STATE(ch, skill_table[gsn_leadership].beats)` |
+| `src/skills/do_stun.c` | Add `WAIT_STATE(ch, skill_table[gsn_stun].beats)` |
+| `src/skills/do_mindoverbody.c` | Add `WAIT_STATE(ch, skill_table[gsn_mindoverbody].beats)` |
 | `src/tests/test_command_wait_flag.c` | New unit test |
 
 ## Trade-offs
