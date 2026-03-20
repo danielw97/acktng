@@ -60,6 +60,8 @@
 #include "globals.h"
 #include "cursor.h"
 
+bool command_has_wait_flag args((CHAR_DATA * ch, const char *argument));
+
 /*
  * Socket and TCP/IP stuff.
  */
@@ -734,13 +736,25 @@ void game_loop(int control)
             }
          }
 
+         /* Read the next command before checking wait, so we can inspect it. */
+         read_from_buffer(d);
+
          if (d->character != NULL && d->character->wait > 0)
          {
             --d->character->wait;
-            continue;
+
+            /*
+             * If the pending command introduces a wait state, keep it queued.
+             * incomm is left non-empty; read_from_buffer will not overwrite it
+             * on the next pulse, so the command stays queued until wait expires.
+             * Non-wait-state commands (look, score, say, etc.) fall through and
+             * execute immediately.
+             */
+            if (d->incomm[0] != '\0' && d->connected == CON_PLAYING
+                && command_has_wait_flag(d->character, d->incomm))
+               continue;
          }
 
-         read_from_buffer(d);
          if (d->incomm[0] != '\0')
          {
             d->fcommand = TRUE;

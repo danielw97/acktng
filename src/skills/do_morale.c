@@ -75,4 +75,5 @@ void do_morale(CHAR_DATA *ch, char *argument)
       send_to_char("@@yYour combo empowers your rally cry!@@N\n\r", ch);
 
    send_to_char("You inspire the troops!\n\r", ch);
+   WAIT_STATE(ch, skill_table[gsn_morale].beats);
 }
