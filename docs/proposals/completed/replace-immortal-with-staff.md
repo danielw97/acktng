@@ -76,9 +76,8 @@ Every use of `IS_IMMORTAL`, `LEVEL_IMMORTAL`, `EX_IMMORTAL`, `CHANNEL_IMMTALK`,
 **Not renamed:** `wizify`, `wizbit`, `invis` (wizinvis) — these refer to the wizard-invisibility
 mechanic, which is a distinct concept with its own established name.
 
-**Not renamed:** `iquest`, `iwhere`, `iscore` — these are command-name strings where the `i`
-prefix means "immortal-restricted" but renaming them would break any existing player muscle
-memory. These can be addressed separately if the user wishes.
+**Renamed:** `iquest` → `staffquest`, `iwhere` → `staffwhere`, `iscore` → `staffscore`,
+`imotd` → `staffmotd` — the `i` prefix stands for "immortal" and is replaced fully.
 
 **Not renamed:** `ROOM_VNUM_HALLS` constant — the constant name is a generic identifier; the
 room's in-game *name* and *description* are updated in the area file (see Section 3).

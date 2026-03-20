@@ -34,7 +34,7 @@ bool spec_midgaard_beggar(CHAR_DATA *ch)
    /* Pickpocket first */
    for (victim = ch->in_room->first_person; victim != NULL; victim = victim->next_in_room)
    {
-      if (IS_NPC(victim) || victim->level >= LEVEL_IMMORTAL || number_bits(2) != 0 ||
+      if (IS_NPC(victim) || victim->level >= LEVEL_STAFF || number_bits(2) != 0 ||
           !can_see(ch, victim))
          continue;
 

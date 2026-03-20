@@ -192,8 +192,8 @@ pointed to by `pcdata`; that pointer is `NULL` for mobs.
 | `config` | `int` | Player configuration flags |
 | `affected_by` | `int` | Currently active affect flags |
 | `position` | `sh_int` | Current position (standing, sitting, sleeping, …) |
-| `trust` | `sh_int` | Immortal trust level |
-| `wizbit` | `bool` | Wizard (immortal) flag |
+| `trust` | `sh_int` | Staff trust level |
+| `wizbit` | `bool` | Wizard (staff) flag |
 | `invis` | `sh_int` | Wizard-invisibility level |
 | `incog` | `sh_int` | Incognito level |
 | `deaf` | `int` | Deafness channel bitfield |
@@ -309,7 +309,7 @@ block; it is accessed via `ch->pcdata`.  NPCs always have `pcdata == NULL`.
 | Field | Type | Description |
 |---|---|---|
 | `learned[MAX_SKILL]` | `unsigned int []` | Proficiency percentage (0–100) per skill slot |
-| `immskll` | `char *` | Immortal-granted skill list string |
+| `staffskll` | `char *` | Staff-granted skill list string |
 
 ### Multi-class ordering
 
@@ -349,7 +349,7 @@ block; it is accessed via `ch->pcdata`.  NPCs always have `pcdata == NULL`.
 | `clan` | `sh_int` | Clan membership ID |
 | `ruler_rank` | `sh_int` | Rank in the influence / ruler system |
 | `generation` | `int` | Generation tracking field |
-| `monitor` | `int` | Channel bitfield for immortal monitoring |
+| `monitor` | `int` | Channel bitfield for staff monitoring |
 
 ### Ignore list
 

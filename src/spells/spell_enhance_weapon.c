@@ -38,9 +38,9 @@ bool spell_enhance_weapon(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *
    AFFECT_DATA *paf;
 
    /*
-    * Quick way to stop imms (Bash?) enchanting weapons for players
+    * Quick way to stop staff (Bash?) enchanting weapons for players
     */
-   if (IS_IMMORTAL(ch) && ch->level != 85)
+   if (IS_STAFF(ch) && ch->level != 85)
    {
       send_to_char("Nothing Happens.\n\r", ch);
       return FALSE;

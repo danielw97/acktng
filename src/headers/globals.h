@@ -440,9 +440,9 @@ DECLARE_DO_FUN(do_heal);
 DECLARE_DO_FUN(do_hunt);
 DECLARE_DO_FUN(do_palmstrike);
 DECLARE_DO_FUN(do_resetpassword);
-DECLARE_DO_FUN(do_iscore);
+DECLARE_DO_FUN(do_staffscore);
 DECLARE_DO_FUN(do_isnoop);
-DECLARE_DO_FUN(do_iwhere);
+DECLARE_DO_FUN(do_staffwhere);
 DECLARE_DO_FUN(do_leav);
 DECLARE_DO_FUN(do_leave);
 DECLARE_DO_FUN(do_lhunt);
@@ -456,7 +456,7 @@ DECLARE_DO_FUN(do_players);
 DECLARE_DO_FUN(do_pray);
 DECLARE_DO_FUN(do_punch);
 DECLARE_DO_FUN(do_quest);
-DECLARE_DO_FUN(do_iquest);
+DECLARE_DO_FUN(do_staffquest);
 DECLARE_DO_FUN(do_race);
 DECLARE_DO_FUN(do_race_list);
 DECLARE_DO_FUN(do_retrieve);
@@ -590,7 +590,7 @@ DECLARE_DO_FUN(do_rhelp);
 DECLARE_DO_FUN(do_hide);
 DECLARE_DO_FUN(do_holylight);
 DECLARE_DO_FUN(do_idea);
-DECLARE_DO_FUN(do_immtalk);
+DECLARE_DO_FUN(do_stafftalk);
 DECLARE_DO_FUN(do_incognito);
 DECLARE_DO_FUN(do_inventory);
 DECLARE_DO_FUN(do_invis);
@@ -779,19 +779,19 @@ DECLARE_DO_FUN(do_rulers);
 DECLARE_DO_FUN(do_scout);
 
 /*
- *  New immcommands
+ *  New staff commands
  */
 
 DECLARE_DO_FUN(do_alink);
 DECLARE_DO_FUN(do_for);       /* Flar */
 DECLARE_DO_FUN(do_hotreboo);  /* Flar */
 DECLARE_DO_FUN(do_hotreboot); /* Flar */
-DECLARE_DO_FUN(do_imtlset);   /* Flar */
+DECLARE_DO_FUN(do_staffset);   /* Flar */
 DECLARE_DO_FUN(do_gain_stat_reset);
 DECLARE_DO_FUN(do_sedit);
 DECLARE_DO_FUN(do_olmsg);
 DECLARE_DO_FUN(do_scheck);
-DECLARE_DO_FUN(do_immbrand);
+DECLARE_DO_FUN(do_staffbrand);
 DECLARE_DO_FUN(do_sysdata);
 DECLARE_DO_FUN(do_areasave);
 DECLARE_DO_FUN(do_mapper);

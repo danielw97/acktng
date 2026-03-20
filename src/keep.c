@@ -313,7 +313,7 @@ void do_keep(CHAR_DATA *ch, char *argument)
       {
          if (get_room_index(ch->pcdata->keep_vnum) == NULL)
          {
-            send_to_char("Your keep cannot be found. Contact an immortal.\n\r", ch);
+            send_to_char("Your keep cannot be found. Contact staff.\n\r", ch);
             return;
          }
 
@@ -364,7 +364,7 @@ void do_keep(CHAR_DATA *ch, char *argument)
          keep_chest = keep_find_chest_in_room(ch->in_room);
          if (keep_chest == NULL)
          {
-            send_to_char("Your keep chest cannot be found. Contact an immortal.\n\r", ch);
+            send_to_char("Your keep chest cannot be found. Contact staff.\n\r", ch);
             return;
          }
 
@@ -434,7 +434,7 @@ void do_keep(CHAR_DATA *ch, char *argument)
       keep_room = get_room_index(ch->pcdata->keep_vnum);
       if (keep_room == NULL)
       {
-         send_to_char("Your keep cannot be found. Contact an immortal.\n\r", ch);
+         send_to_char("Your keep cannot be found. Contact staff.\n\r", ch);
          return;
       }
 

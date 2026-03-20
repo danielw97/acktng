@@ -427,7 +427,7 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
                LINK(brand_member, first_brand, last_brand, next, prev);
                save_brands();
                send_to_char(
-                   "Your messages have been updated, and logged for inspection by an Immortal.\n\r",
+                   "Your messages have been updated, and logged for inspection by staff.\n\r",
                    ch);
             }
             return;
@@ -504,7 +504,7 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
             LINK(brand_member, first_brand, last_brand, next, prev);
             save_brands();
             send_to_char(
-                "Your messages have been updated, and logged for inspection by an Immortal.\n\r",
+                "Your messages have been updated, and logged for inspection by staff.\n\r",
                 ch);
          }
          return;
@@ -639,7 +639,7 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
    }
 }
 
-void do_immbrand(CHAR_DATA *ch, char *argument)
+void do_staffbrand(CHAR_DATA *ch, char *argument)
 {
    DL_LIST *brand_list;
    DL_LIST *this_brand;
@@ -658,7 +658,7 @@ void do_immbrand(CHAR_DATA *ch, char *argument)
 
    if (arg[0] == '\0')
    {
-      do_immbrand(ch, "read");
+      do_staffbrand(ch, "read");
       return;
    }
 

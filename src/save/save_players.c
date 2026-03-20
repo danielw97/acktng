@@ -364,7 +364,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
       fprintf(fp, "Roomenter    %s~\n", ch->pcdata->room_enter);
       fprintf(fp, "Roomexit     %s~\n", ch->pcdata->room_exit);
       fprintf(fp, "Title        %s~\n", ch->pcdata->title);
-      fprintf(fp, "Immskll      %s~\n", ch->pcdata->immskll);
+      fprintf(fp, "Immskll      %s~\n", ch->pcdata->staffskll);
       fprintf(fp, "Keep         %d\n", ch->pcdata->keep_vnum);
       fprintf(fp, "KeepHealerBought %d\n", ch->pcdata->keep_healer_bought);
       fprintf(fp, "KeepHealerVnum %d\n", ch->pcdata->keep_healer_vnum);
@@ -544,7 +544,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       ch->pcdata->room_enter = str_dup("");
       ch->pcdata->room_exit = str_dup("");
       ch->pcdata->title = str_dup("");
-      ch->pcdata->immskll = str_dup("");
+      ch->pcdata->staffskll = str_dup("");
       ch->pcdata->perm_str = 13;
       ch->pcdata->perm_int = 13;
       ch->pcdata->perm_wis = 13;
@@ -1125,7 +1125,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
                break;
             }
          }
-         SKEY("Immskll", ch->pcdata->immskll, fread_string(fp));
+         SKEY("Immskll", ch->pcdata->staffskll, fread_string(fp));
          KEY("Incog", ch->incog, fread_number(fp));
          KEY("Invis", ch->invis, fread_number(fp));
          if (!IS_NPC(ch))

@@ -799,7 +799,7 @@ const struct lookup_type tab_door_types[] = {
      */
     {"door", 1, 50},          {"closed", 2, 0},
     {"locked", 4, 0},         {"climb", 8, 0},
-    {"immortal", 16, NO_USE}, {"pickproof", 32, 500},
+    {"staff", 16, NO_USE}, {"pickproof", 32, 500},
     {"smashproof", 64, 500},  {"passproof", 128, 500},
     {"nodetect", 256, 900},   {NULL, 0}};
 

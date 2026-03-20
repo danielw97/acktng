@@ -62,6 +62,7 @@ static void test_login_name_rejects_reserved_words(void)
    assert(!is_login_name_format_valid("enemy"));
    assert(!is_login_name_format_valid("tank"));
    assert(!is_login_name_format_valid("immortal"));
+   assert(!is_login_name_format_valid("staff"));
    assert(!is_login_name_format_valid("zen"));
    assert(!is_login_name_format_valid("someone"));
    assert(!is_login_name_format_valid("auto"));

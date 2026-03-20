@@ -323,7 +323,7 @@ void save_board(BOARD_DATA *board, CHAR_DATA *ch)
    sprintf(buf, "%s/board.%i", BOARD_DIR, board->vnum);
    if ((board_file = fopen(buf, "w")) == NULL)
    {
-      send_to_char("Cannot save board, please contact an immortal.\n\r", ch);
+      send_to_char("Cannot save board, please contact staff.\n\r", ch);
       bug("Could not save file board.%i.", board->vnum);
       return;
    }

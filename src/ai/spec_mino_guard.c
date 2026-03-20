@@ -16,7 +16,7 @@ bool spec_mino_guard(CHAR_DATA *ch)
    {
       if (victim == NULL || ch == NULL)
          continue;
-      if ((IS_NPC(victim)) || (ch == victim) || (IS_IMMORTAL(victim)))
+      if ((IS_NPC(victim)) || (ch == victim) || (IS_STAFF(victim)))
          continue;
       pass = get_eq_char(victim, WEAR_HOLD_HAND_R);
       if (pass != NULL && pass->pIndexData->vnum == OBJ_VNUM_MINO_PASS)

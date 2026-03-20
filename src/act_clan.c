@@ -293,7 +293,7 @@ void do_leave(CHAR_DATA *ch, char *argument)
    return;
 }
 
-/* CSET is an immortal command, used to set a players clan. */
+/* CSET is a staff command, used to set a players clan. */
 
 void do_cset(CHAR_DATA *ch, char *argument)
 {

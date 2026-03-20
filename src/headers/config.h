@@ -88,7 +88,7 @@
 #define MAX_PC_CLASS 4
 #define MAX_LEVEL 105
 #define LEVEL_HERO (MAX_LEVEL - 4)
-#define LEVEL_IMMORTAL (MAX_LEVEL - 3)
+#define LEVEL_STAFF (MAX_LEVEL - 3)
 #define MAX_MORTAL (MAX_LEVEL - 5)
 #define MAX_MOB_LEVEL 171
 #define MAX_ADEPT 20
@@ -153,7 +153,7 @@
 #define IS_ADEPT_CLASS(c) (gclass_table[c].tier == ADEPT)
 #define CLASS_TIER(c) (gclass_table[c].tier)
 
-#define MAX_NUM_IMMS 5
+#define MAX_NUM_STAFF 5
 
 #define DURATION_HOUR 0
 #define DURATION_ROUND 1
@@ -249,7 +249,7 @@
 #define C_TYPE_INFO 3
 #define C_TYPE_ACTION 4
 #define C_TYPE_OBJECT 5
-#define C_TYPE_IMM 6
+#define C_TYPE_STAFF 6
 
 #define C_SHOW_NEVER -1
 #define C_SHOW_ALWAYS 0
@@ -366,7 +366,7 @@
 #define ROOM_VNUM_MORIBUND 65324
 #define ROOM_VNUM_BUILDER 65315
 #define ROOM_VNUM_BODIES 65290
-#define ROOM_VNUM_HALLS 65312 /* The Halls of the Immortals */
+#define ROOM_VNUM_HALLS 65312 /* The Halls of the Staff */
 #define ROOM_VNUM_CLAN 65325  /* for leaders only */
 #define ROOM_VNUM_DM_RECALL 917
 #define ROOM_VNUM_ETHEREAL_PLANE 3850
@@ -582,7 +582,7 @@
 #define EX_CLOSED 2
 #define EX_LOCKED 4
 #define EX_CLIMB 8
-#define EX_IMMORTAL 16
+#define EX_STAFF 16
 #define EX_PICKPROOF 32
 #define EX_SMASHPROOF 64
 #define EX_PASSPROOF 128
@@ -775,7 +775,7 @@
 #define CHANNEL_AUCTION 1
 #define CHANNEL_GOSSIP 2
 #define CHANNEL_MUSIC 4
-#define CHANNEL_IMMTALK 8
+#define CHANNEL_STAFFTALK 8
 #define CHANNEL_NEWBIE 16
 #define CHANNEL_QUESTION 32
 #define CHANNEL_SHOUT 64
@@ -808,12 +808,12 @@
  * NOTE 32 is the last allowable channel ZEN
  */
 
-/* Monitor channels - for imms to select what mud-based info they receive */
+/* Monitor channels - for staff to select what mud-based info they receive */
 #define MONITOR_CONNECT 1
 #define MONITOR_AREA_UPDATE 2
 #define MONITOR_AREA_BUGS 4
 #define MONITOR_AREA_SAVING 8
-#define MONITOR_GEN_IMM 16
+#define MONITOR_GEN_STAFF 16
 #define MONITOR_GEN_MORT 32
 #define MONITOR_COMBAT 64
 #define MONITOR_HUNTING 128

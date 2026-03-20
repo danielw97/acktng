@@ -3864,7 +3864,7 @@ void build_addreset(CHAR_DATA *ch, char *argument)
          return;
       }
 
-      if (IS_SET(pObj->extra_flags, ITEM_CLAN_EQ) && !IS_IMMORTAL(ch))
+      if (IS_SET(pObj->extra_flags, ITEM_CLAN_EQ) && !IS_STAFF(ch))
       {
          send_to_char("You can't use that object for a reset.\n\r", ch);
          return;
@@ -3918,7 +3918,7 @@ void build_addreset(CHAR_DATA *ch, char *argument)
          return;
       }
 
-      if (IS_SET(pObj->extra_flags, ITEM_CLAN_EQ) && !IS_IMMORTAL(ch))
+      if (IS_SET(pObj->extra_flags, ITEM_CLAN_EQ) && !IS_STAFF(ch))
       {
          send_to_char("You can't use that object for a reset.\n\r", ch);
          return;
@@ -3987,7 +3987,7 @@ void build_addreset(CHAR_DATA *ch, char *argument)
          return;
       }
 
-      if (IS_SET(pObj->extra_flags, ITEM_CLAN_EQ) && !IS_IMMORTAL(ch))
+      if (IS_SET(pObj->extra_flags, ITEM_CLAN_EQ) && !IS_STAFF(ch))
       {
          send_to_char("You can't use that object for a reset.\n\r", ch);
          return;
@@ -4014,7 +4014,7 @@ void build_addreset(CHAR_DATA *ch, char *argument)
          return;
       }
 
-      if (IS_SET(pObj->extra_flags, ITEM_CLAN_EQ) && !IS_IMMORTAL(ch))
+      if (IS_SET(pObj->extra_flags, ITEM_CLAN_EQ) && !IS_STAFF(ch))
       {
          send_to_char("You can't use that object for a reset.\n\r", ch);
          return;

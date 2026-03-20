@@ -523,7 +523,7 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          i = buf2;
          break;
       case 'R':
-         if (IS_IMMORTAL(ch) && ch->in_room != NULL)
+         if (IS_STAFF(ch) && ch->in_room != NULL)
             sprintf(buf2, "%d", ch->in_room->vnum);
          else
             sprintf(buf2, " ");
@@ -538,7 +538,7 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          break;
 
       case 'z':
-         if (IS_IMMORTAL(ch) && ch->in_room != NULL)
+         if (IS_STAFF(ch) && ch->in_room != NULL)
             sprintf(buf2, "%s", ch->in_room->area->name);
          else
             sprintf(buf2, " ");
@@ -565,7 +565,7 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
       case 'i':
          if (IS_NPC(ch))
             break;
-         if (IS_IMMORTAL(ch))
+         if (IS_STAFF(ch))
             sprintf(buf2, "INVIS: %d", IS_SET(ch->act, PLR_WIZINVIS) ? ch->invis : 0);
          else
          {

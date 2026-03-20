@@ -94,7 +94,7 @@ int build_canread(AREA_DATA *Area, CHAR_DATA *ch, int showerror)
 
    if (Area->can_read != NULL)
       if (is_name("all", Area->can_read) || is_name(ch->name, Area->can_read) ||
-          (is_name("gods", Area->can_read) && IS_IMMORTAL(ch)))
+          (is_name("gods", Area->can_read) && IS_STAFF(ch)))
          return 1;
 
    if (showerror == AREA_SHOWERROR)
@@ -110,7 +110,7 @@ int build_canwrite(AREA_DATA *Area, CHAR_DATA *ch, int showerror)
 
    if (Area->can_write != NULL)
       if (is_name("all", Area->can_write) || is_name(ch->name, Area->can_write) ||
-          (is_name("gods", Area->can_write) && IS_IMMORTAL(ch)))
+          (is_name("gods", Area->can_write) && IS_STAFF(ch)))
          return 1;
 
    if (showerror == AREA_SHOWERROR)

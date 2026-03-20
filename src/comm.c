@@ -487,7 +487,7 @@ void act(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, 
                 */
             case 'L':
                can_see_message = TRUE;
-               if (IS_IMMORTAL(to))
+               if (IS_STAFF(to))
                {
                   if (IS_SET(ch->act, PLR_WIZINVIS) && ch->invis > get_trust(to)
                       /*
@@ -657,7 +657,7 @@ void info(char *message, int lv)
 void log_chan(const char *message, int lv)
 {
    /*
-    * Used to send messages to Immortals.
+    * Used to send messages to staff.
     * * Level is used to determine WHO gets the message...
     */
    char buf[MAX_STRING_LENGTH];

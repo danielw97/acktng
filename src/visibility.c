@@ -155,7 +155,7 @@ bool can_drop_obj(CHAR_DATA *ch, OBJ_DATA *obj)
    if (!IS_SET(obj->extra_flags, ITEM_NODROP))
       return TRUE;
 
-   if (!IS_NPC(ch) && ch->level >= LEVEL_IMMORTAL)
+   if (!IS_NPC(ch) && ch->level >= LEVEL_STAFF)
       return TRUE;
 
    return FALSE;

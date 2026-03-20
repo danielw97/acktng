@@ -475,9 +475,9 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
    ansi[0] = '\0';
 
    /*
-    * Allows immortals to communicate in silent rooms
+    * Allows staff to communicate in silent rooms
     */
-   if (IS_SET(ch->in_room->room_flags, ROOM_QUIET) && !IS_IMMORTAL(ch)) /* Sssshhh! */
+   if (IS_SET(ch->in_room->room_flags, ROOM_QUIET) && !IS_STAFF(ch)) /* Sssshhh! */
    {
       send_to_char("Ssshhh!  This is a quiet room!\n\r", ch);
       return;
@@ -586,7 +586,7 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
       ch->position = position;
       break;
 
-   case CHANNEL_IMMTALK:
+   case CHANNEL_STAFFTALK:
       sprintf(buf, "$n: $t.");
       position = ch->position;
       ch->position = POS_STANDING;
@@ -644,11 +644,11 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
              !IS_SET(och->deaf, CHANNEL_HERMIT))
          {
 
-            if (IS_SET(vch->in_room->room_flags, ROOM_QUIET) && !IS_IMMORTAL(ch))
+            if (IS_SET(vch->in_room->room_flags, ROOM_QUIET) && !IS_STAFF(ch))
                continue;
             if (channel == CHANNEL_CREATOR && get_trust(och) < MAX_LEVEL)
                continue;
-            if (channel == CHANNEL_IMMTALK && !IS_HERO(och))
+            if (channel == CHANNEL_STAFFTALK && !IS_HERO(och))
                continue;
             if (channel == CHANNEL_DIPLOMAT && !IS_SET(och->pcdata->pflags, PFLAG_CLAN_DIPLOMAT))
                continue;
@@ -879,7 +879,7 @@ void do_yell(CHAR_DATA *ch, char *argument)
    return;
 }
 
-void do_immtalk(CHAR_DATA *ch, char *argument)
+void do_stafftalk(CHAR_DATA *ch, char *argument)
 {
    char check[MSL];
 
@@ -892,7 +892,7 @@ void do_immtalk(CHAR_DATA *ch, char *argument)
    }
    else
 #endif
-   talk_channel(ch, argument, CHANNEL_IMMTALK, "immtalk");
+   talk_channel(ch, argument, CHANNEL_STAFFTALK, "stafftalk");
    return;
 }
 void do_diptalk(CHAR_DATA *ch, char *argument)
@@ -940,7 +940,7 @@ void do_say(CHAR_DATA *ch, char *argument)
    char buf[MAX_STRING_LENGTH];
    CHAR_DATA *ppl;
 
-   if (IS_SET(ch->in_room->room_flags, ROOM_QUIET) && !IS_IMMORTAL(ch))
+   if (IS_SET(ch->in_room->room_flags, ROOM_QUIET) && !IS_STAFF(ch))
    {
       send_to_char("Sssshhhh! This is a quiet room!\n\r", ch);
       return;
@@ -1027,9 +1027,9 @@ void do_ignore(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (IS_IMMORTAL(victim))
+   if (IS_STAFF(victim))
    {
-      send_to_char("You cannot ignore immortals!\n\r", ch);
+      send_to_char("You cannot ignore staff!\n\r", ch);
       return;
    }
    /*
@@ -1125,7 +1125,7 @@ void do_tell(CHAR_DATA *ch, char *argument)
    CHAR_DATA *victim;
    int position;
 
-   if (ch->in_room->vnum == ROOM_VNUM_JAIL && !IS_IMMORTAL(ch))
+   if (ch->in_room->vnum == ROOM_VNUM_JAIL && !IS_STAFF(ch))
    {
       send_to_char("You cannot send tells from jail.\n\r", ch);
       return;
@@ -1153,7 +1153,7 @@ void do_tell(CHAR_DATA *ch, char *argument)
 
    /*
     * See if character is playing and visible to ch... if victim is
-    * * an immortal they are told that a player is trying to talk to them.
+    * * a staff member they are told that a player is trying to talk to them.
     * * -- Stephen
     */
 
@@ -1174,7 +1174,7 @@ void do_tell(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (IS_SET(victim->in_room->room_flags, ROOM_QUIET) && !IS_IMMORTAL(ch))
+   if (IS_SET(victim->in_room->room_flags, ROOM_QUIET) && !IS_STAFF(ch))
    {
       act("$N is in a quiet room, $E can't hear you.", ch, NULL, victim, TO_CHAR);
       return;
@@ -1204,7 +1204,7 @@ void do_tell(CHAR_DATA *ch, char *argument)
       return;
        }*/
 
-   if (!IS_IMMORTAL(ch) && !IS_AWAKE(victim))
+   if (!IS_STAFF(ch) && !IS_AWAKE(victim))
    {
       act("$E can't hear you.", ch, 0, victim, TO_CHAR);
       return;
@@ -1241,13 +1241,13 @@ void do_reply(CHAR_DATA *ch, char *argument)
       send_to_char("They aren't here.\n\r", ch);
       return;
    }
-   if (IS_SET(victim->in_room->room_flags, ROOM_QUIET) && !IS_IMMORTAL(ch))
+   if (IS_SET(victim->in_room->room_flags, ROOM_QUIET) && !IS_STAFF(ch))
    {
       act("$N is in a quiet room.  $E can't hear you.", ch, NULL, victim, TO_CHAR);
       return;
    }
 
-   if (!IS_IMMORTAL(ch) && !IS_AWAKE(victim))
+   if (!IS_STAFF(ch) && !IS_AWAKE(victim))
    {
       act("$E can't hear you.", ch, 0, victim, TO_CHAR);
       return;
@@ -2032,7 +2032,7 @@ void do_pray(CHAR_DATA *ch, char *argument)
 
    if (ch->level > LEVEL_HERO)
    {
-      send_to_char("Hey, try immtalk why don't you?\n\r", ch);
+      send_to_char("Hey, try stafftalk why don't you?\n\r", ch);
       return;
    }
 
@@ -2043,7 +2043,7 @@ void do_pray(CHAR_DATA *ch, char *argument)
    }
 
    /*
-    * allows mortals to send messages to immortals...
+    * allows mortals to send messages to staff...
     * * uses notify to send the message.
     * * -- Stephen
     */
@@ -2137,7 +2137,7 @@ void do_tongue(CHAR_DATA *ch, char *argument)
       }
 
       if (rch != ch)
-         act((ch->race == rch->race || rch->level > LEVEL_IMMORTAL) ? buf2 : buf3, ch, NULL, rch,
+         act((ch->race == rch->race || rch->level > LEVEL_STAFF) ? buf2 : buf3, ch, NULL, rch,
              TO_VICT);
    }
 
@@ -2186,7 +2186,7 @@ void do_whisper(CHAR_DATA *ch, char *argument)
       send_to_char("They aren't here.\n\r", ch);
       return;
    }
-   if (!IS_IMMORTAL(ch) && !IS_AWAKE(victim))
+   if (!IS_STAFF(ch) && !IS_AWAKE(victim))
    {
       act("$E can't hear you.", ch, 0, victim, TO_CHAR);
       return;
@@ -2233,7 +2233,7 @@ void do_ask(CHAR_DATA *ch, char *argument)
       send_to_char("They aren't here.\n\r", ch);
       return;
    }
-   if (!IS_IMMORTAL(ch) && !IS_AWAKE(victim))
+   if (!IS_STAFF(ch) && !IS_AWAKE(victim))
    {
       act("$E can't hear you.", ch, 0, victim, TO_CHAR);
       return;

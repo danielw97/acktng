@@ -88,7 +88,7 @@ bool is_parse_name_syntax_valid(const char *name)
 static bool is_reserved_login_name(const char *name)
 {
    static const char *const reserved_names[] = {"all", "auto", "everymob", "localmobs", "immortal",
-                                                "zen", "self", "someone",  "tank",      "enemy"};
+                                                "staff", "zen", "self", "someone", "tank", "enemy"};
    size_t i;
 
    if (name == NULL || name[0] == '\0')
@@ -533,12 +533,12 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
          char msgbuf[MSL];
          for (brands = first_brand, numbrands = 0; brands; brands = brands->next, numbrands++)
             ;
-         do_help(ch, "imotd");
+         do_help(ch, "staffmotd");
          sprintf(msgbuf, "There are currently %d outstanding brands.\n\r%s", numbrands,
                  ((numbrands < 50)
                       ? ""
-                      : "@@eWarning: Process these brands immediately using immbrand list, "
-                        "immbrand read, and immbrand remove to avoid disk overflow!!@@N\n\r"));
+                      : "@@eWarning: Process these brands immediately using staffbrand list, "
+                        "staffbrand read, and staffbrand remove to avoid disk overflow!!@@N\n\r"));
          send_to_char(msgbuf, ch);
       }
       else
@@ -915,7 +915,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
       {
          char_to_room(ch, ch->in_room);
       }
-      else if (IS_IMMORTAL(ch))
+      else if (IS_STAFF(ch))
       {
          char_to_room(ch, get_room_index(ROOM_VNUM_CHAT));
       }

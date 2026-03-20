@@ -217,7 +217,7 @@ static void walk_pcdata(PC_DATA *p)
    touch(p->title);
    touch(p->room_enter);
    touch(p->room_exit);
-   touch(p->immskll);
+   touch(p->staffskll);
    touch(p->host);
    touch(p->who_name);
    touch(p->header);
@@ -623,8 +623,8 @@ void walk_sysdata(void)
 {
    sh_int looper;
    touch(sysdata.playtesters);
-   for (looper = 0; looper < MAX_NUM_IMMS; looper++)
-      touch(sysdata.imms[looper].this_string);
+   for (looper = 0; looper < MAX_NUM_STAFF; looper++)
+      touch(sysdata.staff[looper].this_string);
 }
 
 void do_scheck(CHAR_DATA *ch, char *argument)

@@ -694,14 +694,14 @@ void quest_accept(CHAR_DATA *ch, int list_number)
       return;
    }
 
-   if (!IS_IMMORTAL(ch) && get_psuedo_level(ch) < tpl->min_level)
+   if (!IS_STAFF(ch) && get_psuedo_level(ch) < tpl->min_level)
    {
       sprintf(buf, "You must be at least pseudo-level %d for that quest.\n\r", tpl->min_level);
       send_to_char(buf, ch);
       return;
    }
 
-   if (!IS_IMMORTAL(ch) && tpl->max_level > 0 && get_psuedo_level(ch) > tpl->max_level)
+   if (!IS_STAFF(ch) && tpl->max_level > 0 && get_psuedo_level(ch) > tpl->max_level)
    {
       sprintf(buf, "You must be pseudo-level %d or lower for that quest.\n\r", tpl->max_level);
       send_to_char(buf, ch);

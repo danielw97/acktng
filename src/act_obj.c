@@ -458,7 +458,7 @@ void do_get(CHAR_DATA *ch, char *argument)
       pd = one_argument(pd, name);
       pd = one_argument(pd, name);
       pd = one_argument(pd, name);
-      if (str_cmp(name, ch->name) && !IS_IMMORTAL(ch))
+      if (str_cmp(name, ch->name) && !IS_STAFF(ch))
       {
          bool fGroup = FALSE;
          victim = NULL;
@@ -1140,7 +1140,7 @@ void do_eat(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!IS_IMMORTAL(ch))
+   if (!IS_STAFF(ch))
    {
       if (obj->item_type != ITEM_PILL)
       {
@@ -3472,7 +3472,7 @@ void do_auction(CHAR_DATA *ch, char *argument)
       return;
 
    argument = one_argument(argument, arg);
-   if ((IS_IMMORTAL(ch)) && ((!str_cmp(arg, "stop")) || (!str_cmp(arg, "take"))))
+   if ((IS_STAFF(ch)) && ((!str_cmp(arg, "stop")) || (!str_cmp(arg, "take"))))
       if (auction_item != NULL)
       {
          CHAR_DATA *ach;
@@ -3486,7 +3486,7 @@ void do_auction(CHAR_DATA *ch, char *argument)
                good_buyer = TRUE;
          }
 
-         sprintf(buf, "The auction of %s has been stopped by an @@mImmortal@@N.\n\r",
+         sprintf(buf, "The auction of %s has been stopped by @@mstaff@@N.\n\r",
                  auction_item->short_descr);
          if (!str_cmp(arg, "take"))
          {
