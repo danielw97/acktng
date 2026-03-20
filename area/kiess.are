@@ -228,6 +228,10 @@ stelae marker route~
 Confusion and note the estimated travel time in good weather.@@N
 
 ~
+D4
+~
+~
+0 -1 7900
 S
 #3656
 @@WNorth Gate Guard Platform@@N~
@@ -1558,10 +1562,6 @@ D2
 ~
 ~
 0 -1 3710
-D3
-~
-~
-0 -1 7900
 E
 gatekeeper sentinels statues~
 @@WThe paired Gatekeeper Sentinels face outward with blank stone

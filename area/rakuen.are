@@ -1203,10 +1203,6 @@ D3
 ~
 ~
 0 -1 4599
-D1
-~
-~
-0 -1 8200
 S
 #4601
 @@WEmber Warden Barracks Approach@@N~
@@ -1668,6 +1664,10 @@ D3
 ~
 ~
 0 -1 4623
+D0
+~
+~
+0 -1 8200
 S
 #4621
 @@GFounder's Hearth@@N~

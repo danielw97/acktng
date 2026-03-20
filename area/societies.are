@@ -22,7 +22,7 @@ A large, well-marked building near @@WMidgaard's@@N central square. Stone walls 
 D5
 ~
 ~
-0 -1 1150
+0 -1 1134
 S
 #7900
 @@yThe Wall Command Garrison@@N~
@@ -30,10 +30,10 @@ A stone fortress near @@WKiess's@@N frontier gate. The garrison's thick walls ar
 
 ~
 0 0
-D1
+D5
 ~
 ~
-0 -1 3700
+0 -1 3655
 S
 #8000
 @@yThe Harbor Syndics Hall@@N~
@@ -41,10 +41,10 @@ A large administrative complex on @@WKowloon's@@N central wharf. The smell of sa
 
 ~
 0 0
-D1
+D3
 ~
 ~
-0 -1 3780
+0 -1 3809
 S
 #8100
 @@yThe Shrine of the First Claw@@N~
@@ -55,7 +55,7 @@ A stone-and-bronze temple complex near @@WMafdet's@@N central market. Bronze cla
 D2
 ~
 ~
-0 -1 3900
+0 -1 3895
 S
 #8200
 @@yThe Ember Warden Station@@N~
@@ -63,10 +63,10 @@ A fortified compound near @@WRakuen's@@N main gate. Emergency equipment hangs fr
 
 ~
 0 0
-D3
+D2
 ~
 ~
-0 -1 4600
+0 -1 4620
 S
 #8300
 @@yThe Road Warden Lodge@@N~
@@ -77,7 +77,7 @@ A traveler's compound at the @@WMidgaard@@N crossroads, where the major routes t
 D4
 ~
 ~
-0 -1 1150
+0 -1 1134
 S
 #0
 #MOBILES
