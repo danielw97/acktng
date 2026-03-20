@@ -109,6 +109,44 @@ Over generations, the six founding houses dissolved into five civic institutions
 
 No seat rules alone. Each can censure another, and all five are bound by tribunal record kept in triplicate on oiled vellum. The city believes balance is safer than trust.
 
+### The Northern Road War and the Oath-Crossing Compact
+
+Kowloon's second generation inherited functional walls and working institutions — and a festering commercial dispute with Midgaard that the founders had set aside to survive and would eventually be forced to settle with iron.
+
+The dispute's origin was structural: two cities, one road. The **Lantern Road** running through the Great Northern Forest connected Midgaard's southern registries to Kowloon's northern harbor, and both cities had imposed tariff schedules on the same transit corridor — Midgaard on the grounds that it had funded the road's original construction under the Lantern Reforms, Kowloon on the grounds that it maintained the northern gate and absorbed the security cost of keeping the road usable. For a generation, merchants paid both schedules and complained to both cities' magistrates. The magistrates filed each other's protests and took no action.
+
+The escalation began when the **Jade Magistracy** moved from protest to enforcement: Kowloon road inspectors began impounding cargo that had paid Midgaard tariffs but not Kowloon's schedule, holding wagons at the Jade Gate until the Kowloon fee was settled. Midgaard responded by dispatching armed escorts with northbound convoys, instructing them to refuse impoundment and continue through. The escort instructions did not specify what to do if Kowloon's inspectors were backed by Wardens of Iron.
+
+The **Wardens of Iron**, as the Ohn-Sek succession institution, were Kowloon's military-administrative force — wall command, gate discipline, armed response. They were not a standing army in the traditional sense; they were a civic security institution designed for riot suppression, emergency defense, and gate enforcement. Their deployment to the northern road represented an escalation from customs dispute to military posture. Both cities understood this and continued anyway, because neither could accept the other's tariff supremacy without conceding commercial primacy over the entire corridor.
+
+**The Burnt Crossing** was the convergence point. A Midgaard military column — dispatched, in the official record, "to establish a formal garrison presence at the road's midpoint to ensure safe passage of registered merchant convoys" — arrived at the Mosswater Bends ford simultaneously with a Wardens of Iron company dispatched "to ensure Kowloon's interests are represented on the ground during the midpoint dispute." The ford was narrow enough that both forces were already in contact before either commander had made a decision. Two days later, both forces had withdrawn. More than twenty people were dead. Both cities' official records attributed the deaths to Ashfang raider activity in the area.
+
+The forest peoples whose territory the crossing occupied did not attribute the deaths to Ashfang raiders. The Cairn-Keeper community that maintained a burial site at the ford built a burial mound for the Burnt Crossing dead and marked it with a dispute-glyph: *witnessed and unresolved*. This mound became the physical symbol of the Oath-Crossing negotiations.
+
+**What Kowloon brought to the Oath-Crossing:**
+
+The Jade Magistracy's position was not primarily military but administrative. They were not trying to win a war; they were trying to prevent Midgaard from establishing de facto tariff supremacy through garrison presence. The core demand was simple: no armed Midgaard column may traverse the northern corridor without Kowloon's prior notification and acknowledgment. This demand was about information, not territory — Kowloon's gate security apparatus could not function if Midgaard could move armed forces through Kowloon's commercial corridor without warning.
+
+The secondary demand was recognition of the Wardens of Iron as the legitimate security authority for the corridor's northern section, with Midgaard's road warden companies acknowledged as the legitimate authority for the southern section, and a defined boundary at the forest's midpoint.
+
+The tertiary demand — the one the Jade Magistracy held until last — was that the Burnt Crossing dead be formally acknowledged in both cities' records. Not Ashfang raiders. The people who were actually there.
+
+**What Kowloon won:**
+
+Article Three of the Oath-Crossing Compact — the war-formation clause — prohibits any armed Midgaard force from traversing the Lantern Road in battle column formation without prior written notification to Kowloon's road authority and receipt of a counter-signed acknowledgment. In exchange, Kowloon accepted joint patrol authority over disputed corridor segments rather than asserting exclusive northern jurisdiction, and agreed that Midgaard's road warden companies could operate as far north as the forest midpoint under the dual-mark system — any armed convoy carrying Kowloon's acknowledgment mark alongside Midgaard's dispatch seal.
+
+The Fifth Article's dual-mark requirement was added after a convoy massacre during the negotiation period itself — seventeen dead, including two Jade Magistracy clerks, under falsified Midgaard seals. The investigation never produced a conviction, but the Fifth Article made falsification structurally harder: Kowloon's acknowledgment mark must be physically present on the convoy document, not merely referenced. A document bearing only a Midgaard dispatch seal is sufficient for a civilian convoy; an armed escort convoy without the Kowloon acknowledgment mark is in violation of the Compact regardless of what the seal claims.
+
+The Burnt Crossing mound was formally included in the Oath-Crossing settlement as the first item under Article One: restitution for those killed. The Cairn-Keeper elder **Toreth Gael**, who served as the non-negotiable third party throughout the negotiations, required that both cities contribute materials to the mound's restoration and that it be marked with a second dispute-glyph: *witnessed and partially resolved*. The "partially" was Toreth Gael's. Neither city's ambassador was prepared to argue with it.
+
+**The Wardens of Iron after the Oath-Crossing:**
+
+The road war reshaped the Wardens of Iron's institutional identity. Before the conflict, they were primarily a domestic security force — gate discipline, wall maintenance, emergency response. After the Oath-Crossing, they developed the provisioning doctrine and frontier patrol protocols that the modern Wardens operate under: extended-range patrol rotations, intelligence-sharing formats with Midgaard's Guard Command, and the emergency convoy escort procedures that became the template for the broader warden tradition. Midgaard's Guard Command and Kowloon's Wardens of Iron share a provisioning doctrine today that neither city developed independently — it was negotiated jointly during the conflict's latter stages as both forces realized that a shared logistics framework would reduce the kind of communication failure that produced the Burnt Crossing.
+
+The Ashfang warbands — whom both cities blamed in their official Burnt Crossing records — are a real institutional consequence of the road war period. The ungoverned gap between Midgaard's southernmost forest reach and Kowloon's northernmost customs post was the territory the warbands occupied. They were not a cause of the war; they were a consequence of both cities refusing to govern shared territory, then spending two generations in armed dispute over who had jurisdiction over it. The Oath-Crossing closed the jurisdictional gap; the warbands by that point had become self-sustaining raiding organizations. The modern road warden system was formalized partly as a response to warband interdiction in the immediate post-Oath-Crossing years.
+
+See also: `great_northern_forest_lore.md` for the forest peoples' perspective on the road war, the Burnt Crossing, and the negotiation's three contested points. See `five_cities_intercity_lore.md` for the Oath-Crossing's place in the broader Midgaard-Kowloon bilateral relationship.
+
 ### Colors of Power, Memory, and Street Life
 Kowloon's colors are not decoration—they are civic shorthand born from disaster, readable at a glance by anyone who lives inside the walls:
 - **Crimson (`@@R`)** marks emergency lanes, legal notices, execution authority, and the painted boundaries of martial-law zones. When crimson flags fly from the watchtowers, citizens know to clear the streets.
@@ -185,7 +223,7 @@ Common superstitions include: never count your coins under violet light (invites
 For full-spectrum five-city diplomacy and conflict context, see: `docs/lore/five_cities_intercity_lore.md`.
 
 Kowloon's highest-impact ties in that matrix are:
-- Kowloon <-> Midgaard: convoy safety and tribunal evidence interoperability.
+- Kowloon <-> Midgaard: convoy safety and tribunal evidence interoperability; the Oath-Crossing Compact (war-formation clause, dual-mark requirement, joint patrol authority); shared Wardens of Iron / Guard Command provisioning doctrine developed during the Northern Road War.
 - Kowloon <-> Kiess: labor-contract legality versus throughput pressure.
 - Kowloon <-> Rakuen: Southern Grain Compact (reserve allocation dispatchable within two weeks of formal emergency declaration; activated four times in sixty years), flood-architecture knowledge exchange (Jade Magistracy engineering delegation studied Rakuen's root-weave lower terraces during the last Ledger Vigil; findings not yet shared with Rakuen), route-surcharge friction, Conclave guilt chain triangulation (Kowloon's Black Ledger and Midgaard's trade ledger are two documented transfer points; Rakuen's Garden Ledger is the third — the destination where transferred persons' testimonies were subsequently silenced through the Kel'Shadra witnessing mechanism).
 - Kowloon <-> Mafdet: manifest language and dock conversion disputes.
