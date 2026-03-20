@@ -10,7 +10,7 @@ write     - place you in editor to begin writing note
 edit      - also places you in editor to write note
 post      - posts your note to the player you are writing to
 @@yTo Read:@@N
-list      - lists all letters your have recieved, both old and new
+list      - lists all letters you have received, both old and new
 read #    - readds the message number specified
 remove #  - giving the number of which note, removes it from the list
 @@GExamples!!!!@@N
