@@ -793,6 +793,8 @@ void boot_db(void)
             pArea->music = str_dup("kiess.mp3");
          else if (!str_cmp(pArea->filename, "mafdet.are"))
             pArea->music = str_dup("mafdet.mp3");
+         else if (!str_cmp(pArea->filename, "newschool.are"))
+            pArea->music = str_dup("mudschool.mp3");
          /* else music remains NULL → default theme */
       }
    }
