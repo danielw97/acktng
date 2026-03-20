@@ -1,9 +1,20 @@
 level 1
-keywords zmud client
+keywords zmud client mudclient
 ---
-For those of you that haven't already, we recommend downloading a mud client
-from the Internet.  @@lShades @@dof @@eEvil@@N recommends zmud, which can be
-found at http://www.rt66.com/ zugg/zmud.html . For those of you that already
-have zmud--here is a tip from Zugg himself :) Zmud sets the default color
-scheme to bright, which unfortunatly swapps our colours around.  Reset the
-color scheme in zmud to dim, and they will appear as we want them.
+@@yMUD CLIENTS@@N
+
+Using a dedicated MUD client is strongly recommended.  It gives you
+features like triggers, aliases, macros, scrollback, and proper color
+rendering that a plain telnet session cannot match.
+
+Popular free options:
+  @@cMUSHclient@@N  — Windows, highly scriptable
+  @@cTintin++@@N   — Linux/Mac/Windows, lightweight
+  @@cMudlet@@N     — cross-platform, active development
+
+@@yColor Note:@@N
+
+ACK!TNG uses ANSI color codes.  Make sure your client has color enabled
+and is set to use the standard 16-color ANSI palette.  Some clients
+default to a "bright" scheme that swaps colors — switch to "normal" or
+"dim" if colors look wrong.
