@@ -23,6 +23,7 @@ SHELP_DIR = ROOT_DIR / "shelp"
 LORE_DIR = ROOT_DIR / "lore"
 TEMPLATE_DIR = WEB_DIR / "templates"
 IMG_DIR = WEB_DIR / "img"
+MP3_DIR = WEB_DIR / "mp3"
 WORLD_TARGETS = [
     {"id": "acktng", "name": "ACK!TNG", "host": "ackmud.com", "port": 8890},
     {"id": "ack431", "name": "ACK! 4.3.1", "host": "ackmud.com", "port": 8891},
@@ -60,6 +61,11 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
         if route.startswith("/img/"):
             image_name = route[len("/img/") :]
             self._send_static_image(image_name)
+            return
+
+        if route.startswith("/web/mp3/"):
+            filename = route[len("/web/mp3/") :]
+            self._send_static_audio(filename)
             return
 
         if route in ("/players", "/players/", "/who", "/who/"):
@@ -192,6 +198,20 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
         self.send_header("Content-Length", str(len(image_bytes)))
         self.end_headers()
         self.wfile.write(image_bytes)
+
+    def _send_static_audio(self, filename: str) -> None:
+        audio_path = _safe_topic_path(MP3_DIR, filename)
+        if audio_path is None:
+            self.send_error(404, "Not Found")
+            return
+
+        audio_bytes = audio_path.read_bytes()
+        content_type, _ = mimetypes.guess_type(str(audio_path))
+        self.send_response(200)
+        self.send_header("Content-Type", content_type or "audio/mpeg")
+        self.send_header("Content-Length", str(len(audio_bytes)))
+        self.end_headers()
+        self.wfile.write(audio_bytes)
 
     def log_message(self, fmt: str, *args: object) -> None:
         return
