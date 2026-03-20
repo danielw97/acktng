@@ -543,65 +543,69 @@ const struct qmessage_type qmessages[9][17] = {
 
 };
 
-void do_iquest(CHAR_DATA *ch, char *argument)
+static void show_iquest_status(CHAR_DATA *ch)
 {
-
    char buf[MAX_STRING_LENGTH];
 
-   if (argument[0] == '\0') /* Display status */
+   if (!quest)
    {
-      if (!quest)
-      {
-         send_to_char("There is no quest currently running.\n\r", ch);
-         if (auto_quest)
-            send_to_char("Quests are currently running automatically.\n\r", ch);
-         if (quest_wait > 0)
-         {
-            sprintf(buf, "The next quest may occur in %d minutes.\n\r", quest_wait);
-            send_to_char(buf, ch);
-         }
-         return;
-      }
-      else
-         send_to_char("There is currently a quest running ", ch);
-
+      send_to_char("There is no quest currently running.\n\r", ch);
       if (auto_quest)
-         send_to_char("(Automatically)", ch);
-
-      send_to_char("\n\rQuest Details:\n\r\n\r", ch);
-      if (quest_mob)
+         send_to_char("Quests are currently running automatically.\n\r", ch);
+      if (quest_wait > 0)
       {
-
-         sprintf(buf, "The questing mobile is: %s [In Room %d]\n\r", quest_mob->short_descr,
-                 quest_mob->in_room->vnum);
+         sprintf(buf, "The next quest may occur in %d minutes.\n\r", quest_wait);
          send_to_char(buf, ch);
       }
-      else
-      {
-         send_to_char("The questing mobile is dead!\n\r", ch);
-      }
-      if (quest_target)
-      {
-         sprintf(buf, "Target Mobile is: %s [In Room %d]\n\r", quest_target->short_descr,
-                 quest_target->in_room->vnum);
-         send_to_char(buf, ch);
-      }
-      else
-         send_to_char("The target mobile is dead!\n\r", ch);
+      return;
+   }
 
-      sprintf(buf, "Target Object is: %s.\n\r", quest_object->short_descr);
+   send_to_char("There is currently a quest running ", ch);
+
+   if (auto_quest)
+      send_to_char("(Automatically)", ch);
+
+   send_to_char("\n\rQuest Details:\n\r\n\r", ch);
+   if (quest_mob)
+   {
+      sprintf(buf, "The questing mobile is: %s [In Room %d]\n\r", quest_mob->short_descr,
+              quest_mob->in_room->vnum);
       send_to_char(buf, ch);
-
-      sprintf(buf, "Quest Object is worth: %d QP, %d Prac, %d GP\n\r", quest_object->value[0],
-              quest_object->value[1], quest_object->value[2]);
+   }
+   else
+   {
+      send_to_char("The questing mobile is dead!\n\r", ch);
+   }
+   if (quest_target)
+   {
+      sprintf(buf, "Target Mobile is: %s [In Room %d]\n\r", quest_target->short_descr,
+              quest_target->in_room->vnum);
       send_to_char(buf, ch);
+   }
+   else
+      send_to_char("The target mobile is dead!\n\r", ch);
 
-      sprintf(buf, "The Quest has been running for %d/15 minutes.\n\r", quest_timer);
-      send_to_char(buf, ch);
+   sprintf(buf, "Target Object is: %s.\n\r", quest_object->short_descr);
+   send_to_char(buf, ch);
 
-      sprintf(buf, "Quest level range is: %d to %d.\n\r", quest_level_min, quest_level_max);
-      send_to_char(buf, ch);
+   sprintf(buf, "Quest Object is worth: %d QP, %d Prac, %d GP\n\r", quest_object->value[0],
+           quest_object->value[1], quest_object->value[2]);
+   send_to_char(buf, ch);
 
+   sprintf(buf, "The Quest has been running for %d/15 minutes.\n\r", quest_timer);
+   send_to_char(buf, ch);
+
+   sprintf(buf, "Quest level range is: %d to %d.\n\r", quest_level_min, quest_level_max);
+   send_to_char(buf, ch);
+}
+
+void do_iquest(CHAR_DATA *ch, char *argument)
+{
+   char buf[MAX_STRING_LENGTH];
+
+   if (argument[0] == '\0' || !str_cmp(argument, "status"))
+   {
+      show_iquest_status(ch);
       return;
    }
    if (!strcmp(argument, "stop"))
