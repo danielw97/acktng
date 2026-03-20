@@ -2129,12 +2129,16 @@ void update_handler(void)
    {
       alarm_update();
       pulse_violence = PULSE_VIOLENCE;
+      log_f("update: violence_update");
       violence_update();
+      log_f("update: round_update");
       round_update();
+      log_f("update: violence block done");
    }
 
    if (--pulse_gain <= 0)
    {
+      log_f("update: gain_update");
       gain_update();
       pulse_gain = PULSE_PER_SECOND * number_range(5, 8);
    }
@@ -2143,7 +2147,9 @@ void update_handler(void)
    {
       pulse_point = PULSE_TICK;
       weather_update();
+      log_f("update: char_update");
       char_update();
+      log_f("update: obj_update");
       obj_update();
       quest_update();
       invasion_update();
