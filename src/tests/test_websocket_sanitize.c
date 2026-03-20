@@ -4,11 +4,11 @@
 #include <string.h>
 
 /* Minimal telnet constants needed by the function under test */
-#define IAC  255
-#define GA   249
+#define IAC 255
+#define GA 249
 #define WILL 251
 #define WONT 252
-#define DO   253
+#define DO 253
 #define DONT 254
 
 /*
@@ -119,8 +119,7 @@ static void test_iac_ga_stripped(void)
 {
    unsigned char input[] = {'A', IAC, GA, 'B'};
    unsigned char out[64];
-   size_t n =
-       sanitize_websocket_text_payload(input, sizeof(input), out, sizeof(out));
+   size_t n = sanitize_websocket_text_payload(input, sizeof(input), out, sizeof(out));
    assert(n == 2);
    assert(out[0] == 'A');
    assert(out[1] == 'B');
@@ -130,8 +129,7 @@ static void test_iac_will_stripped(void)
 {
    unsigned char input[] = {'X', IAC, WILL, 1, 'Y'};
    unsigned char out[64];
-   size_t n =
-       sanitize_websocket_text_payload(input, sizeof(input), out, sizeof(out));
+   size_t n = sanitize_websocket_text_payload(input, sizeof(input), out, sizeof(out));
    assert(n == 2);
    assert(out[0] == 'X');
    assert(out[1] == 'Y');

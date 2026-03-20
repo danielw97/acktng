@@ -2626,6 +2626,12 @@ void remember_attack(CHAR_DATA *ch, CHAR_DATA *victim)
 
 void quest_update()
 {
+   /* While AI generation is pending, poll the child and defer all other logic */
+   if (quest_ai_pending)
+   {
+      crusade_ai_poll();
+      return;
+   }
 
    if (!quest && !auto_quest)
       return;

@@ -54,11 +54,14 @@ static void test_range_clamps_to_valid_bounds(void)
 
 static void test_invalid_personality_resolves_from_mob_level(void)
 {
+   /* Out-of-range personalities (0 and 9+) resolve via tier */
    assert(quest_resolve_crusade_personality(0, 10) == 1);
    assert(quest_resolve_crusade_personality(0, 75) == 1);
    assert(quest_resolve_crusade_personality(0, 100) == 1);
    assert(quest_resolve_crusade_personality(0, 120) == 2);
    assert(quest_resolve_crusade_personality(0, 150) == 3);
+   assert(quest_resolve_crusade_personality(9, 50) == 1);
+   assert(quest_resolve_crusade_personality(-1, 155) == 3);
 }
 
 static void test_crusade_level_cap_for_range(void)
@@ -123,9 +126,15 @@ static void test_effective_range_helper(void)
 
 static void test_valid_personality_is_preserved(void)
 {
+   /* All personalities 1–8 should be passed through unchanged */
    assert(quest_resolve_crusade_personality(1, 120) == 1);
    assert(quest_resolve_crusade_personality(2, 10) == 2);
    assert(quest_resolve_crusade_personality(3, 75) == 3);
+   assert(quest_resolve_crusade_personality(4, 50) == 4);
+   assert(quest_resolve_crusade_personality(5, 130) == 5);
+   assert(quest_resolve_crusade_personality(6, 160) == 6);
+   assert(quest_resolve_crusade_personality(7, 1) == 7);
+   assert(quest_resolve_crusade_personality(8, 170) == 8);
 }
 
 static void test_crusade_mobile_validation_excludes_invaders(void)

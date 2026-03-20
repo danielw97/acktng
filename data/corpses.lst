@@ -17,5 +17,993 @@ Cost         86
 Values       0 0 0 1
 End
 
+#OBJECT
+WhereVnum    65323
+Nest         0
+Name         corpse Asdfasdf~
+ShortDescr   the corpse of Asdfasdf~
+Description  The corpse of Asdfasdf lies here.~
+Vnum         65411
+ExtraFlags   16384
+WearFlags    16777216
+WearLoc      -1
+ClassFlags   0
+ItemType     24
+Weight       10
+Level        0
+Timer        27
+Cost         10
+Values       0 0 0 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         lantern academy~
+ShortDescr   an academy lantern~
+Description  A brass lantern flickers softly on the floor here.~
+Vnum         4931
+ExtraFlags   0
+WearFlags    8421376
+WearLoc      -1
+ClassFlags   1
+ItemType     1
+Weight       8
+Level        1
+Timer        0
+Cost         86
+Values       0 0 -1 0
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         buckler training~
+ShortDescr   a training buckler~
+Description  A small round buckler leans against the wall here.~
+Vnum         4933
+ExtraFlags   0
+WearFlags    8421376
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       5 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         sword training~
+ShortDescr   a training sword~
+Description  A well-balanced training sword rests here.~
+Vnum         4932
+ExtraFlags   0
+WearFlags    8421376
+WearLoc      -1
+ClassFlags   1
+ItemType     5
+Weight       8
+Level        1
+Timer        0
+Cost         176
+Values       0 4 4 3
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 10 18 0
+Affect       -1 -1 10 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         leggings iron~
+ShortDescr   a pair of iron leggings~
+Description  A pair of iron leggings lies here.~
+Vnum         4945
+ExtraFlags   0
+WearFlags    9437184
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       3 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         belt studded~
+ShortDescr   a studded belt~
+Description  A sturdy studded leather belt lies here.~
+Vnum         4944
+ExtraFlags   0
+WearFlags    8519680
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       3 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         vest chainmail~
+ShortDescr   a chainmail vest~
+Description  A chainmail vest lies in a heap on the ground here.~
+Vnum         4943
+ExtraFlags   0
+WearFlags    8650752
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       3 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         cloak tattered~
+ShortDescr   a tattered cloak~
+Description  A tattered but still serviceable cloak lies here.~
+Vnum         4942
+ExtraFlags   0
+WearFlags    8454144
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       3 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         shoulderpads leather~
+ShortDescr   a pair of leather shoulderpads~
+Description  A pair of leather shoulderpads has been left here.~
+Vnum         4941
+ExtraFlags   0
+WearFlags    8389120
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       3 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         amulet amber~
+ShortDescr   an amber amulet~
+Description  A warm amber amulet on a cord lies here.~
+Vnum         4940
+ExtraFlags   0
+WearFlags    8388736
+WearLoc      -1
+ClassFlags   1
+ItemType     8
+Weight       8
+Level        1
+Timer        0
+Cost         86
+Values       0 0 0 0
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         chain silver necklace~
+ShortDescr   a silver chain~
+Description  A gleaming silver chain necklace lies here.~
+Vnum         4939
+ExtraFlags   0
+WearFlags    8388736
+WearLoc      -1
+ClassFlags   1
+ItemType     8
+Weight       8
+Level        1
+Timer        0
+Cost         86
+Values       0 0 0 0
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         ring silver~
+ShortDescr   a silver ring~
+Description  A polished silver ring lies here.~
+Vnum         4952
+ExtraFlags   0
+WearFlags    8396800
+WearLoc      -1
+ClassFlags   1
+ItemType     8
+Weight       8
+Level        1
+Timer        0
+Cost         86
+Values       0 0 0 0
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         ring copper~
+ShortDescr   a copper ring~
+Description  A simple copper ring lies here.~
+Vnum         4951
+ExtraFlags   0
+WearFlags    8396800
+WearLoc      -1
+ClassFlags   1
+ItemType     8
+Weight       8
+Level        1
+Timer        0
+Cost         86
+Values       0 0 0 0
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         wings feathered~
+ShortDescr   a pair of feathered wings~
+Description  A pair of feathered wings lies here.~
+Vnum         4958
+ExtraFlags   0
+WearFlags    8388864
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       4 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         aura shimmering~
+ShortDescr   a shimmering aura~
+Description  A bottle of shimmering aura essence lies here.~
+Vnum         4956
+ExtraFlags   0
+WearFlags    8388610
+WearLoc      -1
+ClassFlags   1
+ItemType     8
+Weight       8
+Level        1
+Timer        0
+Cost         86
+Values       0 0 0 0
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         halo glowing~
+ShortDescr   a glowing halo~
+Description  A softly glowing golden halo floats here.~
+Vnum         4955
+ExtraFlags   0
+WearFlags    8388609
+WearLoc      -1
+ClassFlags   1
+ItemType     8
+Weight       8
+Level        1
+Timer        0
+Cost         86
+Values       0 0 0 0
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         hooves iron~
+ShortDescr   a set of iron hooves~
+Description  A set of iron horseshoe-like hooves lies here.~
+Vnum         4962
+ExtraFlags   0
+WearFlags    12582912
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       3 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         wrap tail~
+ShortDescr   a tail wrap~
+Description  A leather tail wrap lies coiled here.~
+Vnum         4961
+ExtraFlags   0
+WearFlags    8912896
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       4 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         guard beak~
+ShortDescr   a beak guard~
+Description  An iron beak guard lies here.~
+Vnum         4959
+ExtraFlags   0
+WearFlags    8388640
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       4 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         diploma academy~
+ShortDescr   an academy diploma~
+Description  You see an academy diploma here, rolled up with a ribbon.~
+Vnum         4964
+ExtraFlags   67108928
+WearFlags    8421376
+WearLoc      -1
+ClassFlags   1
+ItemType     1
+Weight       8
+Level        5
+Timer        0
+Cost         103
+Values       0 0 0 -1
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 2 18 0
+Affect       -1 -1 2 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 6 12 0
+Affect       -1 -1 6 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         0
+Name         corpse Asdfasdf~
+ShortDescr   the corpse of Asdfasdf~
+Description  The corpse of Asdfasdf lies here.~
+Vnum         65411
+ExtraFlags   16384
+WearFlags    16777216
+WearLoc      -1
+ClassFlags   0
+ItemType     24
+Weight       10
+Level        0
+Timer        27
+Cost         10
+Values       0 0 0 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         lantern academy~
+ShortDescr   an academy lantern~
+Description  A brass lantern flickers softly on the floor here.~
+Vnum         4931
+ExtraFlags   0
+WearFlags    8421376
+WearLoc      -1
+ClassFlags   1
+ItemType     1
+Weight       8
+Level        1
+Timer        0
+Cost         86
+Values       0 0 -1 0
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         buckler training~
+ShortDescr   a training buckler~
+Description  A small round buckler leans against the wall here.~
+Vnum         4933
+ExtraFlags   0
+WearFlags    8421376
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       5 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         sword training~
+ShortDescr   a training sword~
+Description  A well-balanced training sword rests here.~
+Vnum         4932
+ExtraFlags   0
+WearFlags    8421376
+WearLoc      -1
+ClassFlags   1
+ItemType     5
+Weight       8
+Level        1
+Timer        0
+Cost         176
+Values       0 4 4 3
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 10 18 0
+Affect       -1 -1 10 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         leggings iron~
+ShortDescr   a pair of iron leggings~
+Description  A pair of iron leggings lies here.~
+Vnum         4945
+ExtraFlags   0
+WearFlags    9437184
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       3 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         belt studded~
+ShortDescr   a studded belt~
+Description  A sturdy studded leather belt lies here.~
+Vnum         4944
+ExtraFlags   0
+WearFlags    8519680
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       3 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         vest chainmail~
+ShortDescr   a chainmail vest~
+Description  A chainmail vest lies in a heap on the ground here.~
+Vnum         4943
+ExtraFlags   0
+WearFlags    8650752
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       3 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         cloak tattered~
+ShortDescr   a tattered cloak~
+Description  A tattered but still serviceable cloak lies here.~
+Vnum         4942
+ExtraFlags   0
+WearFlags    8454144
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       3 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         shoulderpads leather~
+ShortDescr   a pair of leather shoulderpads~
+Description  A pair of leather shoulderpads has been left here.~
+Vnum         4941
+ExtraFlags   0
+WearFlags    8389120
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       3 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         amulet amber~
+ShortDescr   an amber amulet~
+Description  A warm amber amulet on a cord lies here.~
+Vnum         4940
+ExtraFlags   0
+WearFlags    8388736
+WearLoc      -1
+ClassFlags   1
+ItemType     8
+Weight       8
+Level        1
+Timer        0
+Cost         86
+Values       0 0 0 0
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         chain silver necklace~
+ShortDescr   a silver chain~
+Description  A gleaming silver chain necklace lies here.~
+Vnum         4939
+ExtraFlags   0
+WearFlags    8388736
+WearLoc      -1
+ClassFlags   1
+ItemType     8
+Weight       8
+Level        1
+Timer        0
+Cost         86
+Values       0 0 0 0
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         ring silver~
+ShortDescr   a silver ring~
+Description  A polished silver ring lies here.~
+Vnum         4952
+ExtraFlags   0
+WearFlags    8396800
+WearLoc      -1
+ClassFlags   1
+ItemType     8
+Weight       8
+Level        1
+Timer        0
+Cost         86
+Values       0 0 0 0
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         ring copper~
+ShortDescr   a copper ring~
+Description  A simple copper ring lies here.~
+Vnum         4951
+ExtraFlags   0
+WearFlags    8396800
+WearLoc      -1
+ClassFlags   1
+ItemType     8
+Weight       8
+Level        1
+Timer        0
+Cost         86
+Values       0 0 0 0
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         wings feathered~
+ShortDescr   a pair of feathered wings~
+Description  A pair of feathered wings lies here.~
+Vnum         4958
+ExtraFlags   0
+WearFlags    8388864
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       4 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         aura shimmering~
+ShortDescr   a shimmering aura~
+Description  A bottle of shimmering aura essence lies here.~
+Vnum         4956
+ExtraFlags   0
+WearFlags    8388610
+WearLoc      -1
+ClassFlags   1
+ItemType     8
+Weight       8
+Level        1
+Timer        0
+Cost         86
+Values       0 0 0 0
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         halo glowing~
+ShortDescr   a glowing halo~
+Description  A softly glowing golden halo floats here.~
+Vnum         4955
+ExtraFlags   0
+WearFlags    8388609
+WearLoc      -1
+ClassFlags   1
+ItemType     8
+Weight       8
+Level        1
+Timer        0
+Cost         86
+Values       0 0 0 0
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         hooves iron~
+ShortDescr   a set of iron hooves~
+Description  A set of iron horseshoe-like hooves lies here.~
+Vnum         4962
+ExtraFlags   0
+WearFlags    12582912
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       3 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         wrap tail~
+ShortDescr   a tail wrap~
+Description  A leather tail wrap lies coiled here.~
+Vnum         4961
+ExtraFlags   0
+WearFlags    8912896
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       4 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         guard beak~
+ShortDescr   a beak guard~
+Description  An iron beak guard lies here.~
+Vnum         4959
+ExtraFlags   0
+WearFlags    8388640
+WearLoc      -1
+ClassFlags   1
+ItemType     9
+Weight       8
+Level        1
+Timer        0
+Cost         126
+Values       4 0 0 0
+Affect       -1 -1 -10 17 0
+Affect       -1 -1 1 18 0
+Affect       -1 -1 1 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 5 12 0
+Affect       -1 -1 5 14 0
+End
+
+#OBJECT
+WhereVnum    65323
+Nest         1
+Name         diploma academy~
+ShortDescr   an academy diploma~
+Description  You see an academy diploma here, rolled up with a ribbon.~
+Vnum         4964
+ExtraFlags   67108928
+WearFlags    8421376
+WearLoc      -1
+ClassFlags   1
+ItemType     1
+Weight       8
+Level        5
+Timer        0
+Cost         103
+Values       0 0 0 -1
+Affect       -1 -1 -5 17 0
+Affect       -1 -1 2 18 0
+Affect       -1 -1 2 19 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 6 12 0
+Affect       -1 -1 6 14 0
+End
+
 #END
 

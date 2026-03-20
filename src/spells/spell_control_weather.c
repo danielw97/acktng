@@ -42,8 +42,7 @@ bool spell_seal_calculus(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
    {
       act("$n traces the Seal College's binding geometry across the floor!", ch, NULL, NULL,
           TO_ROOM);
-      send_to_char(
-          "You lay the Seal College's geometric binding across the ground!\n\r", ch);
+      send_to_char("You lay the Seal College's geometric binding across the ground!\n\r", ch);
    }
    else
    {

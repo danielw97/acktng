@@ -257,7 +257,7 @@
 
 /* Command flags (cmd_type.flags) */
 #define CMD_FLAG_NINJA_OK BIT_1 /* command does not break ninja stance */
-#define CMD_FLAG_WAIT     BIT_2 /* command introduces wait state; queue while ch->wait > 0 */
+#define CMD_FLAG_WAIT BIT_2     /* command introduces wait state; queue while ch->wait > 0 */
 
 /*
  * Well known mob virtual numbers.
@@ -294,6 +294,8 @@
 
 #define OBJ_VNUM_QUEST_MIN 65446
 #define OBJ_VNUM_QUEST_MAX 65451
+/* Single AI-described quest item template (within the MIN/MAX range) */
+#define OBJ_VNUM_QUEST_ITEM 65446
 
 #define PULSE_PER_SECOND 8
 #define PULSE_VIOLENCE (2 * PULSE_PER_SECOND)
@@ -306,6 +308,10 @@
 #define PULSE_AUCTION (30 * PULSE_PER_SECOND)
 #define PULSE_RAUCTION (30 * PULSE_PER_SECOND)
 #define PULSE_MAUCTION (30 * PULSE_PER_SECOND)
+
+/* Duration of an automatically triggered happy hour in ticks (1 tick = 1 in-game hour =
+ * 60 real seconds).  12 ticks = half an in-game day = ~12 real minutes. */
+#define HAPPY_HOUR_AUTO_DURATION 12
 
 #define LIQUID_BLOOD 13
 
@@ -988,6 +994,10 @@
 #define TNGAI_MODEL "llama-3.3-70b-versatile"
 #define TNGAI_TIMEOUT 5L     /* socket timeout in seconds */
 #define TNGAI_MAX_TOKENS 100 /* token cap for NPC responses (1-3 sentences) */
+/* Crusade AI generation script (relative to area/ run directory) */
+#define CRUSADE_AI_SCRIPT "../src/quests/crusade_ai_gen.py"
+/* Timeout for the crusade AI child process (seconds) */
+#define CRUSADE_AI_TIMEOUT 10
 #define MAX_DIALOGUE_TURNS 8
 #define MAX_REQUEST_TURNS 9         /* history + new user turn */
 #define DIALOGUE_HISTORY_EXPIRY 300 /* seconds of silence before history resets */
@@ -1003,7 +1013,7 @@
 #define KNOW_HISTORY (1 << 7)
 #define KNOW_WILDERNESS (1 << 8)
 #define KNOW_POLITICS (1 << 9)
-#define KNOW_HELPS    (1 << 10) /* search help/shelp files at AI dispatch time */
+#define KNOW_HELPS (1 << 10) /* search help/shelp files at AI dispatch time */
 #define NUM_KNOW_FLAGS 10
 
 /* City indices for knowledge lookup table */

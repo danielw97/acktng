@@ -65,10 +65,9 @@ bool spell_recurrence_loop(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA 
          {
             act("$n staggers as the recurrence loop floods $s mind with iterating memory!", vch,
                 NULL, NULL, TO_ROOM);
-            send_to_char(
-                "The same memory floods through your mind again — and again — resistance "
-                "collapsing!\n\r",
-                vch);
+            send_to_char("The same memory floods through your mind again — and again — resistance "
+                         "collapsing!\n\r",
+                         vch);
             sp_damage(obj, ch, vch, (get_psuedo_level(ch) / 2) + dice(6, 12),
                       ELEMENT_MENTAL | NO_REFLECT | NO_ABSORB, sn, TRUE);
          }

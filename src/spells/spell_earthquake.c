@@ -45,10 +45,8 @@ bool spell_jackal_verdict(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *
    }
    else
    {
-      act("The Tribunal's verdict flows from $p, condemning $n's enemies!", ch, obj, NULL,
-          TO_CHAR);
-      act("The Tribunal's verdict flows from $p, condemning $n's enemies!", ch, obj, NULL,
-          TO_ROOM);
+      act("The Tribunal's verdict flows from $p, condemning $n's enemies!", ch, obj, NULL, TO_CHAR);
+      act("The Tribunal's verdict flows from $p, condemning $n's enemies!", ch, obj, NULL, TO_ROOM);
    }
    CREF(vch_next, CHAR_NEXT);
    for (vch = first_char; vch != NULL; vch = vch_next)
@@ -62,8 +60,8 @@ bool spell_jackal_verdict(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *
          {
             act("$n staggers under the weight of the Tribunal's judgment!", vch, NULL, NULL,
                 TO_ROOM);
-            send_to_char(
-                "The Jackal Tribunal's judgment falls on you like a crushing weight!\n\r", vch);
+            send_to_char("The Jackal Tribunal's judgment falls on you like a crushing weight!\n\r",
+                         vch);
             sp_damage(NULL, ch, vch, level + dice(20, 10), ELE_EARTH, sn, TRUE);
          }
          else

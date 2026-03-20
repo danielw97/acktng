@@ -23,7 +23,7 @@ struct cmd_type
 
 /* Must match config.h CMD_FLAG_NINJA_OK (BIT_1 = 1), CMD_FLAG_WAIT (BIT_2 = 2) */
 #define CMD_FLAG_NINJA_OK 1
-#define CMD_FLAG_WAIT     2
+#define CMD_FLAG_WAIT 2
 
 extern const struct cmd_type cmd_table[];
 
@@ -142,15 +142,33 @@ static void test_all_commands_have_handler(void)
  */
 static void test_wait_flag_set_on_wait_state_commands(void)
 {
-   const char *wait_cmds[] = {
-      "north", "south", "east", "west", "up", "down",
-      "cast", "kill", "murder", "backstab", "bs",
-      "kick", "bash", "punch", "trip", "dirt",
-      "charge", "fleche", "holystrike",
-      "morale", "leadership", "stun",
-      "checkpoint break", "road sweep", "dunmar's call", "interior discipline",
-      NULL
-   };
+   const char *wait_cmds[] = {"north",
+                              "south",
+                              "east",
+                              "west",
+                              "up",
+                              "down",
+                              "cast",
+                              "kill",
+                              "murder",
+                              "backstab",
+                              "bs",
+                              "kick",
+                              "bash",
+                              "punch",
+                              "trip",
+                              "dirt",
+                              "charge",
+                              "fleche",
+                              "holystrike",
+                              "morale",
+                              "leadership",
+                              "stun",
+                              "checkpoint break",
+                              "road sweep",
+                              "dunmar's call",
+                              "interior discipline",
+                              NULL};
    int i;
 
    for (i = 0; wait_cmds[i] != NULL; i++)
@@ -174,8 +192,8 @@ static void test_wait_flag_set_on_wait_state_commands(void)
  */
 static void test_wait_flag_absent_from_instant_commands(void)
 {
-   const char *instant_cmds[] = {"look", "score", "say", "inventory", "flee", "recall",
-                                  "help", "who", "quit", NULL};
+   const char *instant_cmds[] = {"look",   "score", "say", "inventory", "flee",
+                                 "recall", "help",  "who", "quit",      NULL};
    int i;
 
    for (i = 0; instant_cmds[i] != NULL; i++)

@@ -51,7 +51,6 @@ bool spell_pale_imprint(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    send_to_char(
        "The Pale Ledger's imprint settles into your awareness — you sense hostile intent.\n\r",
        victim);
-   act("$n's focus sharpens as the Pale Ledger's imprint takes hold.", victim, NULL, NULL,
-       TO_ROOM);
+   act("$n's focus sharpens as the Pale Ledger's imprint takes hold.", victim, NULL, NULL, TO_ROOM);
    return TRUE;
 }

@@ -15,12 +15,15 @@ from urllib.parse import parse_qs, unquote, urlparse
 HOST = "0.0.0.0"
 PORT = int(os.environ.get("ACK_WEB_PORT", "80"))
 WEB_DIR = Path(__file__).resolve().parent
-ROOT_DIR = WEB_DIR.parent
-WHO_HTML_FILE = WEB_DIR / "soewholist.html"
-WHO_COUNT_FILE = WEB_DIR / "whocount.html"
-HELP_DIR = ROOT_DIR / "help"
-SHELP_DIR = ROOT_DIR / "shelp"
-LORE_DIR = ROOT_DIR / "lore"
+_ACK_ROOT_DEFAULT = WEB_DIR.parent
+# When running from a separate web repo, set ACK_ROOT_DIR to the acktng checkout path.
+# All other paths can be overridden individually if needed.
+ACK_ROOT_DIR = Path(os.environ.get("ACK_ROOT_DIR", str(_ACK_ROOT_DEFAULT)))
+WHO_HTML_FILE = Path(os.environ.get("ACK_WHO_HTML_FILE", str(WEB_DIR / "soewholist.html")))
+WHO_COUNT_FILE = Path(os.environ.get("ACK_WHO_COUNT_FILE", str(WEB_DIR / "whocount.html")))
+HELP_DIR = Path(os.environ.get("ACK_HELP_DIR", str(ACK_ROOT_DIR / "help")))
+SHELP_DIR = Path(os.environ.get("ACK_SHELP_DIR", str(ACK_ROOT_DIR / "shelp")))
+LORE_DIR = Path(os.environ.get("ACK_LORE_DIR", str(ACK_ROOT_DIR / "lore")))
 TEMPLATE_DIR = WEB_DIR / "templates"
 IMG_DIR = WEB_DIR / "img"
 MP3_DIR = WEB_DIR / "mp3"
