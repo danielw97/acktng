@@ -32,6 +32,7 @@
  * ========================================================================= */
 
 void do_say(CHAR_DATA *ch, char *argument);
+void do_crusade(CHAR_DATA *ch, char *argument);
 
 /* =========================================================================
  * Knowledge block tables — populated at init from .kb files.
@@ -322,6 +323,7 @@ typedef struct npc_dlg_req
    char help_context[1600]; /* injected help/shelp entries; empty string if none */
    int history_count;
    DIALOGUE_TURN_COPY history[MAX_REQUEST_TURNS];
+   dlg_delivery_t delivery; /* DLG_DELIVER_SAY or DLG_DELIVER_CRUSADE */
    struct npc_dlg_req *next;
 } NPC_DLG_REQ;
 
@@ -330,6 +332,7 @@ typedef struct npc_dlg_resp
    CHAR_DATA *npc;
    CHAR_DATA *player;
    char response_text[1024];
+   dlg_delivery_t delivery; /* copied from the originating request */
    struct npc_dlg_resp *next;
 } NPC_DLG_RESP;
 
@@ -740,6 +743,7 @@ static void *npc_dialogue_worker(void *unused)
          {
             resp->npc = req->npc;
             resp->player = req->player;
+            resp->delivery = req->delivery;
             strncpy(resp->response_text, response_text, sizeof(resp->response_text) - 1);
             resp->response_text[sizeof(resp->response_text) - 1] = '\0';
 
@@ -757,6 +761,7 @@ static void *npc_dialogue_worker(void *unused)
          {
             resp->npc = req->npc;
             resp->player = req->player;
+            resp->delivery = req->delivery;
             resp->response_text[0] = '\0';
 
             pthread_mutex_lock(&resp_mutex);
@@ -1334,6 +1339,7 @@ void npc_dialogue_dispatch(CHAR_DATA *npc, CHAR_DATA *player, const char *messag
 
    req->npc = npc;
    req->player = player;
+   req->delivery = DLG_DELIVER_SAY;
    strncpy(req->player_name, player->name, sizeof(req->player_name) - 1);
 
    /* Collect help/shelp context when the mob has KNOW_HELPS set. */
@@ -1422,12 +1428,15 @@ void npc_dialogue_deliver(void)
       /* Clear pending regardless of whether we deliver */
       resp->npc->dlg_pending = FALSE;
 
-      /* Drop if NPC or player left the room */
-      if (resp->npc->in_room == NULL || resp->player->in_room == NULL ||
-          resp->npc->in_room != resp->player->in_room)
+      /* For room-based delivery: drop if NPC or player left the room */
+      if (resp->delivery != DLG_DELIVER_CRUSADE)
       {
-         free(resp);
-         continue;
+         if (resp->npc->in_room == NULL || resp->player->in_room == NULL ||
+             resp->npc->in_room != resp->player->in_room)
+         {
+            free(resp);
+            continue;
+         }
       }
 
       /* Empty text = timed-out or failed request; discard silently */
@@ -1466,11 +1475,135 @@ void npc_dialogue_deliver(void)
             state->last_time = time(NULL);
          }
 
-         do_say(resp->npc, accented);
+         if (resp->delivery == DLG_DELIVER_CRUSADE)
+            do_crusade(resp->npc, accented);
+         else
+            do_say(resp->npc, accented);
       }
 
       free(resp);
    }
+}
+
+/* =========================================================================
+ * Public API: crusade-channel dispatch.
+ * ========================================================================= */
+
+void npc_dialogue_dispatch_crusade(CHAR_DATA *npc, CHAR_DATA *player, const char *message,
+                                   const char *quest_context)
+{
+   NPC_DLG_STATE *state;
+   NPC_DLG_REQ *req;
+   char sanitized[512];
+   char user_turn[560];
+   int i;
+
+   if (npc == NULL || player == NULL || message == NULL)
+      return;
+
+   /* Don't stack requests */
+   if (npc->dlg_pending)
+      return;
+
+   npc_dialogue_sanitize_input(sanitized, message);
+
+   state = get_or_create_dlg_state(npc);
+
+   /* Expire history after silence */
+   if (state->count > 0 && state->last_time > 0 &&
+       (time(NULL) - state->last_time) > DIALOGUE_HISTORY_EXPIRY)
+   {
+      state->count = 0;
+   }
+
+   snprintf(user_turn, sizeof(user_turn), "%s: %s", player->name, sanitized);
+
+   /* Keyword short-circuit for injection attempts */
+   for (i = 0; INJECTION_TRIGGERS[i] != NULL; i++)
+   {
+      if (!str_infix(INJECTION_TRIGGERS[i], sanitized))
+      {
+         NPC_DLG_RESP *resp = malloc(sizeof(NPC_DLG_RESP));
+         log_f("npc_dialogue: crusade injection attempt by %s blocked: %.80s", player->name,
+               sanitized);
+         if (resp != NULL)
+         {
+            resp->npc = npc;
+            resp->player = player;
+            resp->delivery = DLG_DELIVER_CRUSADE;
+            strncpy(resp->response_text, "I am not certain I follow your meaning.",
+                    sizeof(resp->response_text) - 1);
+            resp->response_text[sizeof(resp->response_text) - 1] = '\0';
+            pthread_mutex_lock(&resp_mutex);
+            resp->next = resp_head;
+            resp_head = resp;
+            pthread_mutex_unlock(&resp_mutex);
+         }
+         return;
+      }
+   }
+
+   req = malloc(sizeof(NPC_DLG_REQ));
+   if (req == NULL)
+      return;
+   memset(req, 0, sizeof(NPC_DLG_REQ));
+
+   req->npc = npc;
+   req->player = player;
+   req->delivery = DLG_DELIVER_CRUSADE;
+   strncpy(req->player_name, player->name, sizeof(req->player_name) - 1);
+
+   /* Build system prompt, then append quest context */
+   build_system_prompt(req->system_prompt, sizeof(req->system_prompt), npc, NULL);
+   if (quest_context != NULL && quest_context[0] != '\0')
+   {
+      safe_append(req->system_prompt, sizeof(req->system_prompt),
+                  "\nCURRENT CRUSADE QUEST CONTEXT:\n");
+      safe_append(req->system_prompt, sizeof(req->system_prompt), quest_context);
+      safe_append(req->system_prompt, sizeof(req->system_prompt), "\n");
+   }
+
+   /* Serialize history snapshot */
+   req->history_count = 0;
+   for (i = 0; i < state->count && req->history_count < MAX_REQUEST_TURNS - 1; i++)
+   {
+      strncpy(req->history[req->history_count].role, state->turns[i].role,
+              sizeof(req->history[0].role) - 1);
+      strncpy(req->history[req->history_count].content, state->turns[i].content,
+              sizeof(req->history[0].content) - 1);
+      req->history_count++;
+   }
+
+   strncpy(req->history[req->history_count].role, "user", sizeof(req->history[0].role) - 1);
+   strncpy(req->history[req->history_count].content, user_turn,
+           sizeof(req->history[0].content) - 1);
+   req->history_count++;
+
+   /* Append user turn to live history */
+   if (state->count < MAX_DIALOGUE_TURNS)
+   {
+      strncpy(state->turns[state->count].role, "user", sizeof(state->turns[0].role) - 1);
+      strncpy(state->turns[state->count].content, user_turn, sizeof(state->turns[0].content) - 1);
+      state->count++;
+   }
+   else
+   {
+      memmove(&state->turns[0], &state->turns[1], (MAX_DIALOGUE_TURNS - 1) * sizeof(DIALOGUE_TURN));
+      strncpy(state->turns[MAX_DIALOGUE_TURNS - 1].role, "user", sizeof(state->turns[0].role) - 1);
+      strncpy(state->turns[MAX_DIALOGUE_TURNS - 1].content, user_turn,
+              sizeof(state->turns[0].content) - 1);
+   }
+   state->last_time = time(NULL);
+
+   req->next = NULL;
+
+   pthread_mutex_lock(&req_mutex);
+   req->next = req_head;
+   req_head = req;
+   pthread_cond_signal(&req_cond);
+   pthread_mutex_unlock(&req_mutex);
+
+   npc->dlg_pending = TRUE;
 }
 
 /* =========================================================================

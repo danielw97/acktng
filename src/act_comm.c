@@ -39,7 +39,6 @@
 void note_attach args((CHAR_DATA * ch));
 void note_remove args((CHAR_DATA * ch, NOTE_DATA *pnote));
 void talk_channel args((CHAR_DATA * ch, char *argument, int channel, const char *verb));
-void ask_quest_question(CHAR_DATA *ch, char *argument);
 
 /* Added back-in the note code, but made more like PO system */
 bool is_note_to(CHAR_DATA *ch, NOTE_DATA *pnote)
@@ -749,11 +748,9 @@ void do_crusade(CHAR_DATA *ch, char *argument)
    else
       talk_channel(ch, argument, CHANNEL_CRUSADE, "@@lcrusade");
 
-   if ((!str_cmp(argument, "what mob?")) || (!str_cmp(argument, "who was the thief?")) ||
-       (!str_cmp(argument, "who is the thief?")) || (!str_cmp(argument, "what item?")) ||
-       (!str_cmp(argument, "where are you?")) || (!str_cmp(argument, "who stole the item?")) ||
-       (!str_cmp(argument, "where is the thief?")))
-      ask_quest_question(ch, argument);
+   /* Route player messages to quest mob AI dialogue when a quest is live */
+   if (!IS_NPC(ch) && quest && quest_mob != NULL)
+      crusade_dialogue_dispatch(quest_mob, ch, argument);
 
    return;
 }
@@ -2312,93 +2309,3 @@ void do_beep(CHAR_DATA *ch, char *argument)
    return;
 }
 
-void ask_quest_question(CHAR_DATA *ch, char *argument)
-{
-   extern CHAR_DATA *quest_mob;
-   extern CHAR_DATA *quest_target;
-   extern OBJ_DATA *quest_object;
-   extern int quest_timer;
-   extern bool quest;
-   char buf[MAX_STRING_LENGTH];
-   buf[0] = '\0';
-
-   if (!quest || IS_NPC(ch))
-      return;
-
-   if ((!str_cmp(argument, "who is the thief?")) || (!str_cmp(argument, "who was the thief?")) ||
-       (!str_cmp(argument, "what mob?")) || (!str_cmp(argument, "who stole the item?")))
-   {
-      if (quest_mob)
-      {
-         if (quest_timer < 7)
-         {
-            sprintf(buf, "@@eI don't even know who stole it yet!@@N");
-         }
-         else if (quest_object && quest_target)
-         {
-            sprintf(buf, "@@NIt was %s @@N who stole my %s@@N.", quest_target->short_descr,
-                    quest_object->short_descr);
-         }
-      }
-      else if (quest_object)
-      {
-         sprintf(buf, "@@NDon't worry about who stole my %s@@N, he has recieved his just reward!",
-                 quest_object->short_descr);
-      }
-      if (quest_mob != NULL)
-         do_crusade(quest_mob, buf);
-      return;
-   }
-
-   if (!str_cmp(argument, "what item?"))
-   {
-      if (quest_mob && quest_object)
-      {
-         sprintf(buf, "@@NMy %s @@Nwas stolen from me.", quest_object->short_descr);
-         do_crusade(quest_mob, buf);
-         return;
-      }
-   }
-
-   if (!str_cmp(argument, "where are you?"))
-      if (quest_mob)
-      {
-         sprintf(buf, "@@NYou can find me in %s@@N, please hurry!!",
-                 quest_mob->in_room->area->name);
-         do_crusade(quest_mob, buf);
-         return;
-      }
-
-   if (!str_cmp(argument, "where is the thief?"))
-   {
-      if (quest_mob)
-      {
-         if ((quest_target) && (quest_timer > 7))
-         {
-            if (quest_timer < 10)
-            {
-               sprintf(buf, "@@NI don't really know where %s@@N is, let me try and find out.",
-                       quest_target->short_descr);
-            }
-            else if (quest_target)
-            {
-               sprintf(buf, "@@NI'm not really sure, but I THINK %s@@N is in %s@@N",
-                       quest_target->short_descr, quest_target->in_room->area->name);
-            }
-         }
-         else if ((quest_target) && (quest_timer <= 7))
-         {
-            sprintf(buf, "@@eI don't even know who stole it yet!@@N");
-         }
-         else
-         {
-            sprintf(buf,
-                    "@@NDon't worry about where the thief who stole my %s@@N is, he has recieved "
-                    "his just reward",
-                    quest_object->short_descr);
-         }
-         do_crusade(quest_mob, buf);
-      }
-   }
-   return;
-}
