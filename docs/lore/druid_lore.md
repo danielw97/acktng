@@ -10,6 +10,52 @@ The druid lineage progresses through four stages: the foundational **Druid** cla
 
 ---
 
+## The Foundational Druid Class
+
+### Constitution as Covenant
+
+The druid tradition's primary attribute is **constitution** — not intelligence, not wisdom, not strength, but the raw physical capacity to endure cost. This is not incidental. Every other casting tradition in the five-city network draws on internal reserves that are distinct from the body's structural integrity: a wizard's mana is not their blood; a cleric's connection to cosmological infrastructure is not their flesh. A druid's casting resource is their life. A practitioner who enters the tradition with poor physical endurance is a practitioner who has very little to give, and the living world does not extend credit.
+
+The tradition understands this clearly and trains for it explicitly. Foundational druid training emphasizes physical conditioning alongside ritual knowledge — not because druids are fighters (though the later Thornwarden path develops martial capacity), but because the practitioner who cannot sustain physical hardship cannot sustain the Overgrowth curve. A druid who collapses from exhaustion before completing a sustained casting sequence has not failed magically; they have failed constitutionally. The distinction is important: it means the training target is the body, not the mind. A more intelligent druid who has not built their physical endurance is a less capable druid than a less intelligent one who has.
+
+The Exchange School makes this point bluntly: you cannot give what you do not have. The Covenant School's formulation is gentler — the living world can only commune with what is present, and a body that has not built sufficient presence has nothing to offer — but the practical training recommendation is the same. Build constitution first.
+
+### The Spell Progression: A Training Arc
+
+The foundational druid's spell progression from level three to ninety is not a linear escalation of power but a structured teaching arc in which each new ability is a lesson about the tradition's principles as much as a functional tool.
+
+**The initial pairing (level 3)** is philosophically deliberate: *thornlash* and *sap mend* are learned simultaneously. The first offensive spell and the first healing spell arrive together. The tradition's opening lesson is that the capacity to harm and the capacity to restore are not different categories of knowledge — they are the same knowledge applied to different purposes. Both draw equally on the practitioner's constitution (growth value 3 each). The practitioner who can heal can harm; the practitioner who can harm can heal. The training programs that introduce these spells in the wrong order, or treat them as separately tracked competencies, are considered by the tradition to be missing the foundational point.
+
+**Early acquisition (levels 5–20)** builds the practitioner's vocabulary across all four functional areas in parallel: defense (*barkskin* at 5, *roothold* at 9, *thornhide* at 14), offense (*nettlesting* at 6, *rockburst* at 10, *wither* at 16, *briar volley* at 20), sensory (*forestsight* at 7, *sense life* at 11, *know terrain* at 15), and control (*tangling roots* at 8, *sap strength* at 18). The mending arc continues with *mend wounds* at 12 and *purge toxin* at 22.
+
+The pattern of cross-category alternation in early acquisition is understood in the tradition as a deliberate teaching rhythm: a druid who specializes too early — who develops offensive capacity without contemporaneous defensive and sensory development — is building a practice that will fail under ecological pressure, because the living world does not separate threat from health any more than the druid's spell list does. A forest threatened by fungal blight is simultaneously a forest generating healing potential in its own immune response. Reading both at once is required.
+
+**Substrate piercing** unlocks at level 20 as the tradition's first passive skill, accessible after one reincarnation. The name refers to a quality of tactile and kinesthetic attunement that develops in practitioners who have spent sustained time in Overgrowth: the body's contact with surfaces — soil, bark, stone — becomes informationally richer, as though the tissue itself has been calibrated by repeated HP exchange to read the living substrate beneath. A practitioner with substrate piercing active does not simply stand on earth; they stand in it, in the sense that the boundary between their physical body and the living material they contact has become partially permeable to information in both directions. The Root Covenant clan theology describes this as "reshaping the substrate that spells depend on" — a formulation that the Exchange School finds imprecise but recognizes as pointing at something real.
+
+**Mid-range acquisition (levels 22–50)** deepens Overgrowth commitment. *Blight touch* at 25 is the first spell with a damage-over-time component (growth 5), introducing the practitioner to extended-duration effects that require the body to maintain a sustained low-level expenditure across multiple rounds rather than a single acute cost. *Tremor* at 32 and *creeping rot* at 38 continue the escalation in both earth and poison domains (growth 5 each). *Verdant mend* at 35 provides the first healing spell capable of addressing significant combat damage without requiring the practitioner to be fully out of Overgrowth first — a practical necessity given that mid-range combat routinely involves HP expenditure that low-growth heals cannot address quickly.
+
+*Ironpine vigor* at 36 is the first buff that references a specific ecological heritage: the ironpine's distinctive structural density. A practitioner who has developed genuine attunement with ironpine stands — through the Everkeepers' old territories or through the northern routes maintained by road wardens — finds this spell more reliable than one who knows the ironpine only abstractly. This is a general principle of the tradition's buff spells: they work better when the practitioner has actual experiential acquaintance with what they are drawing on.
+
+**High-range acquisition (levels 55–90)** commits the practitioner fully to the deep Overgrowth curve. *Fissure* at 46 (growth 6) and *fungal eruption* at 55 (growth 6, AoE) establish the first truly heavy offensive expenditures. *Quake* at 60 and *upheaval* at 85 (both growth 6 and 7 respectively) are the highest-growth AoE spells in the catalogue — room-scale earth disruptions that cost substantially more than any single-target attack. A practitioner casting *upheaval* has committed significant vitality to the act and is operating well into Overgrowth by the time the spell completes.
+
+*Rot* at 75 and *creeping blight* at 78 (growth 7 and 5 respectively) represent the poison doctrine's endpoint: *rot* is the most powerful single-target poison effect in the catalogue, a direct acceleration of biological decay that does not try to be anything other than what it is. *Creeping blight* pairs it with the tradition's deepest stat-drain combination (STR and CON simultaneously), reflecting the understanding that what decay does is consume precisely the things that sustained the living system.
+
+*Sap transfusion* at 80 (growth 3) stands out: despite arriving at high level, it has one of the lowest growth values in the catalogue. This is intentional. The spell is not powerful in the sense that it draws heavily on the practitioner's connection to the living world; it is powerful in the sense that it does exactly what it does, directly, with minimal conversion loss. The tradition keeps it accessible specifically because there are moments in deep Overgrowth when the practitioner needs to give HP to someone else and cannot afford to also pay heavy growth costs for the privilege of doing so.
+
+*Living bridge* at 90 is the final spell, and it arrives as the capstone of the utility arc (*forestsight* at 7 → *sense life* at 11 → *passage* at 24 → *greensight* at 42 → *rootway* at 58 → *call of the wild* at 72 → *living bridge* at 90). A portal sustained through root and mycelial networks, usable from anywhere the practitioner has sufficient living-world contact, it is the tradition's statement about what full attainment means: you are not simply a practitioner who can fight in the forest, or heal wounds the forest might sustain. You have become a node in the living network itself.
+
+### The Overgrowth Accumulation Curve
+
+The most important practical fact about foundational druid combat is that the Overgrowth state is not just a warning indicator — it is the tradition's core power mechanic turned against the practitioner. When a druid's Overgrowth counter is elevated, their druid-school damage spells hit harder (the living world's response amplified by the depth of commitment), but each subsequent spell costs proportionally more HP and the Overgrowth counter climbs further. The curve is self-reinforcing in both directions: deeper Overgrowth produces more damage output and accelerates the practitioner's consumption simultaneously.
+
+The combat decisions this creates distinguish druid play from all other traditions. A wizard manages a depleting mana pool and eventually cannot cast. A druid manages a depleting HP pool that is also their life total — and the deeper they go into Overgrowth, the more lethal each subsequent decision becomes. The practitioner who pushes to 30% HP while in heavy Overgrowth and commits to another *fissure* is not simply spending resources; they are spending the margin between combat effectiveness and death.
+
+The Exchange School's training programs spend significant time on what they call **commitment calibration**: developing the practitioner's ability to judge, in live combat conditions, exactly how far into Overgrowth the current situation warrants. This is not a formula. It is a trained judgment about probability and cost, and it develops through practice and consequence. The Covenant School notes that this judgment cannot be separated from the practitioner's relationship with the living world they are drawing on — that the most reliable guide to how far is too far is the living world's own feedback, accessible to practitioners who have developed sufficient attunement to read it in real time.
+
+Both schools agree on the recovery principle: a druid who manages Overgrowth well spends combat moving up and down the curve in controlled increments, not climbing to a peak and hoping the enemy dies before the HP budget runs out. The practitioner who treats Overgrowth as a one-way escalation ramp is practicing the doctrine of the Withered Depths order's final generation — burning everything on the assumption that the thing being contained will yield before the practitioner does. History records how that ended.
+
+---
+
 ## I. The Three Ancient Orders
 
 ### The Everkeepers
@@ -110,37 +156,33 @@ The druid spell catalogue is best understood as a map of the tradition's philoso
 
 ---
 
-## V. The Remort Paths: Thornwarden and Wildspeaker
+## V. The Remort Paths and the Adept Designation
 
-The druid lineage's first branching offers two paths for practitioners who have completed their foundational training and are ready to specialize. Neither path is a negation of the other; both are developments of the same foundational practice in different directions. The Hierophant designation, available only to practitioners who have mastered both, represents the resolution of the tension between the two — or, in a less idealistic formulation, the practitioner who can hold both tensions simultaneously.
+The druid lineage's first branching, available to practitioners who have completed their foundational training, offers two specialized remort paths. The adept designation integrates both.
 
-### The Thornwarden Path
+### Thornwarden
 
-The **Thornwarden** is the tradition's martial-enforcement specialization. The name comes from the Everkeepers' practice of maintaining thorn-boundaries — bramble-wall structures cultivated to protect planting-rings from deer, small predators, and opportunistic human encroachment. The thorn boundary was not aggressive; it was declarative. It said: this ground is under cultivation, and entry will be costly.
+The **Thornwarden** is the tradition's martial-enforcement specialization, developing the foundational druid's capacities toward territorial boundary-declaration and physical presence as the living world's edge. The path's name and doctrine trace directly to the Everkeepers' thorn-boundary practice — the bramble-walls that declared planting-rings under cultivation. Where a foundational druid casts from range, the Thornwarden becomes the thorn-wall in mobile form: the point at which the forest's patience runs out and something with thorns is standing where you hoped to pass.
 
-The Thornwarden path develops the practitioner's capacity to translate this declarative function into mobile form. Where a foundational druid casts earth and nature spells at range, the Thornwarden learns to anchor their offensive capacity to physical presence — to be the thorn boundary rather than to project one. Their enhancement to the tradition's offensive earth spells reflects the Everkeepers' structural heritage: strikes that land with the weight of things that have been growing toward this moment for a long time.
+The Thornwarden's enhanced damage output to earth spells reflects not aggression but structural heritage: strikes that land with the weight of things that have been growing toward this moment for a long time. The path also develops the combat applications of substrate piercing and the full defensive ecology of barkskin, thornhide, and ancient bark.
 
-Thornwardens are frequently the practitioners who work most visibly in civic contexts — not because they are more civic-minded than Wildspeakers, but because their function is legible in civic terms. A Thornwarden protecting a stand of ironpine from a logging operation or enforcing a grove exclusion against a city's survey teams is doing something that civic officials can categorize as security or enforcement work, even if the Thornwarden's own understanding of the mandate is entirely different. The Thornwarden's charter is the living world's boundary, not any city's law — but the behaviors these two mandates produce can look similar from outside.
+For full Thornwarden lore — the Everkeeper inheritance, boundary doctrine, civic institution relationships, and the Dunmar School cooperation — see `thornwarden_lore.md`.
 
-The **Dunmar School** within warden circles has long maintained an unofficial working relationship with Thornwarden practitioners. The relationship is not institutionalized — the warden tradition's Registry School considers any formal connection to a non-chartered practice legally problematic — but road wardens in the northern forest often know which Thornwardens patrol which routes, and there is a documented pattern of mutual non-interference that operates as a functional if unacknowledged cooperation. Both traditions orient toward protection of existing conditions against disruption; both consider themselves answerable to standards that transcend the authority of any specific commissioning institution.
+### Wildspeaker
 
-### The Wildspeaker Path
+The **Wildspeaker** is the tradition's ecological-communion specialization, developing the foundational druid's capacities toward deep attunement with the living world's informational systems, biological-reading healing, and the full deployment of the sensory and network-mobility spell arc. The path's primary historical ancestry is the unnamed Withered Depths order whose ecological knowledge is the tradition's richest — and whose demographic failure is the path's named cautionary example for immersion failure.
 
-The **Wildspeaker** is the tradition's ecological-communion specialization. Where the Thornwarden develops the practitioner's capacity to act as an extension of the living world's boundaries, the Wildspeaker develops the practitioner's capacity to read what the living world is saying and to say things back to it.
+What Wildspeakers develop is not linguistic communication with the forest but the capacity to receive the living world's continuous broadcast of its own state at actionable resolution. Their healing is more precise than the foundational druid's because it reads what damage actually is rather than what it looks like. Their mobility through the root and mycelial network is, in the tradition's understanding, not teleportation but traversal of an existing living circulatory system.
 
-This is not communication in the linguistic sense — there is no shared vocabulary between a human practitioner and an old-growth forest, and claims that Wildspeakers can "speak to trees" in a conversational way are understood within the tradition as poetic compression of something more technically complex. What Wildspeakers develop is the ability to read ecological signals — the kind of environmental intelligence that the Withered Depths druids encoded in their counter-rituals, that the stone-antler circles read in birdsong patterns, that the Rivennid partially decode in mycelial signals. The living world is continuously broadcasting information about its own state. The Wildspeaker learns to receive it.
+For full Wildspeaker lore — the Withered Depths lineage, ecological signal reading, the healing doctrine, immersion failure, and the Parallel Record Compact relationship — see `wildspeaker_lore.md`.
 
-The practical applications of this attunement are extensive. A Wildspeaker who can read soil chemistry through touch, interpret root-network stress signals, or track a target through ecosystemic disturbance rather than visible footprints is not performing magic in the arcane sense — they are operating with a higher information bandwidth than untrained practitioners, drawing on inputs that other traditions are not sensitive to. Their healing magic is particularly effective because it can read what the patient's body needs at a biological level rather than applying generalized restorative force.
+### Hierophant
 
-The Wildspeaker path carries a specific professional risk that the tradition's training programs address directly: **immersion failure**. A practitioner who spends extended time in deep attunement with old-growth forests sometimes finds that the return to human-scale concerns is difficult. The forest's temporal scale is not human temporal scale. An old-growth stand that has been growing for three hundred years has a different relationship to urgency than a person who needs to eat today. Wildspeakers who have spent seasons in deep attunement sometimes return to city environments with impaired judgment about the urgency of human timelines — a problem that the Withered Depths druids' tradition may have experienced in the generations when they prioritized the forest's long-term containment needs over the shorter-term demographic question of recruiting enough apprentices to survive.
+The **Hierophant** designation is available to practitioners who have completed both remort paths and demonstrated genuine integration — not the ability to do both Thornwarden and Wildspeaker things, but the elimination of the transition between them. The practitioner who is truly deep-rooted holds boundary and receives signal simultaneously. The Cairn-Keepers' stone-antler successors use that term — *deep-rooted* — for the quality they evaluate in megalith-site petitioners; Hierophants are the druid tradition's practitioners most reliably described this way.
 
-### The Hierophant Designation
+Hierophants are the tradition's rarest outcome and its most complete answer to the Living Archive Problem: the practitioners most likely to be capable of the maintenance functions the ancient orders served, and most conspicuously absent from the current discussions about whether those functions need to be performed again.
 
-The **Hierophant** designation requires mastery of both the Thornwarden and Wildspeaker paths — not simply attainment of both remort classes, but demonstrated integration of their approaches into a coherent practice. The designation is the druid tradition's acknowledgment that the apparent tension between enforcement and communion, between acting as the living world's agent and listening to what the living world requires, is not a contradiction to be resolved but a productive duality to be inhabited.
-
-In practice, Hierophants are extraordinarily rare. The combination of requirements — the Thornwarden's years of physical-enforcement training, the Wildspeaker's years of deep attunement work, and the additional years of integration — produces practitioners who have spent most of their adult lives in preparation. Those who achieve the designation are typically middle-aged by human standards and are often described by contemporaries as operating with a quality of attention that feels qualitatively different from either single-path practitioners or non-druid practitioners. The Cairn-Keepers' stone-antler successors use the term *deep-rooted* for the quality they evaluate in potential megalith-site visitors; Hierophants are typically described this way.
-
-The Hierophant's enhanced damage output reflects not aggression but the specific power that comes from complete integration: a practitioner who understands both the boundary-declaration function and the living-world-listening function has access to a quality of timing — of knowing when to strike, where to strike, and with what force the moment warrants — that single-path practitioners cannot fully achieve. This is the same quality the Warden tradition's Dunmar's Watch stance aims at from a completely different direction: the advantage of the practitioner who is wasting no movement because they have stopped missing the moment.
+For full Hierophant lore — what integration actually means, the CON ceiling, the succession problem, and the relationship to the ancient orders' maintenance functions — see `hierophant_lore.md`.
 
 ---
 
@@ -210,19 +252,22 @@ The Covenant School practitioners think they know what it is, but they do not sa
 
 ## VIII. Cross-References
 
-- **Timeline**: Pre-city era (Three ancient orders, Everkeepers, Withered Depths druids, Cairn-Keepers), Era VII (Ninth Meridian and order decline), Era XII (Violet Compact registration non-event), modern era (reconstruction)
-- **Great Northern Forest**: Everkeepers; ironpine planting-rings; Cairn-Keepers; stone-antler circles; Ancestor Deeps; Mire-Speaker descendants
-- **Withered Depths**: Unnamed ancient order; confusion-mist quarantine origin; withered druid undead remnants; Blightmother's crystal-laced barriers; pulsing blight key
-- **Forest of Confusion**: Failed druidic quarantine merged with Verdant Depths ecological intelligence; mist-fever as quarantine symptom
-- **Kiess**: Anti-sealed-warrant charter; scholarly access to druidic records; Forest of Confusion proximity; expeditions into Withered Depths region
-- **Midgaard**: Registry non-event; Continuity faction aversion to formalizing druidic history; Reckoning faction as qualified ally
-- **Kowloon**: Covenant charter skepticism; Jade Magistracy non-adjudication of megalith sites; northern forest patrol avoidance
-- **Rivennid**: Mycelial signal-record encoding ancient druidic ritual patterns; Parallel Record Compact coordination
-- **Parallel Record Compact**: Five-thread convergence triangulating Withered Depths accumulation; potential collaboration not yet formalized
-- **Warden**: Thornwarden conceptual DNA; Dunmar School informal cooperation; Registry School institutional distance
-- **Cleric**: Infrastructuralist parallel; Shard-containment doctrine as contrast case for nature-maintenance doctrine
-- **Necromancer**: Decay-as-ecological-mechanism contrast with decay-as-extracted-resource; Withered Depths shared geography
+- **Thornwarden**: Martial-enforcement remort path; Everkeeper boundary-declaration doctrine; Dunmar School cooperation; substrate piercing combat application; see `thornwarden_lore.md`
+- **Wildspeaker**: Ecological-communion remort path; Withered Depths order lineage; biological-reading healing; immersion failure; Parallel Record Compact relationship; see `wildspeaker_lore.md`
+- **Hierophant**: Adept designation; integration doctrine; *deep-rooted* quality; succession problem; Living Archive Problem as central concern; see `hierophant_lore.md`
+- **Timeline**: Pre-city era (Three ancient orders, Everkeepers, Withered Depths druids, Cairn-Keepers), Era X (Conclave forest trials, druid opposition), Era XI (confusion-mist quarantine created), Era XIV (Ash Winters, Everkeeper demographic decline begins), Era XIX (last Everkeeper planting-ring; Withered Depths order final generation), Era XV (Violet Compact registration non-event), modern era (reconstruction; Wildspeaker Compact relationship)
+- **Great Northern Forest**: Everkeepers; ironpine planting-rings; Cairn-Keepers; stone-antler circles; Ancestor Deeps; Mire-Speaker descendants; see `great_northern_forest_lore.md`
+- **Withered Depths**: Unnamed ancient order; confusion-mist quarantine origin; withered druid undead remnants; Blightmother's crystal-laced barriers; pulsing blight key; see `withered_depths_lore.md`
+- **Forest of Confusion**: Failed druidic quarantine merged with Verdant Depths ecological intelligence; mist-fever as quarantine symptom; see `kiess_lore.md`
+- **Kiess**: Anti-sealed-warrant charter; scholarly access to druidic records; Forest of Confusion proximity; expeditions into Withered Depths region; see `kiess_lore.md`
+- **Midgaard**: Registry non-event; Continuity faction aversion to formalizing druidic history; Reckoning faction as qualified ally; see `midgaard_lore.md`
+- **Kowloon**: Covenant charter skepticism; Jade Magistracy non-adjudication of megalith sites; northern forest patrol avoidance; see `kowloon_lore.md`
+- **Rivennid**: Mycelial signal-record encoding ancient druidic ritual patterns; Parallel Record Compact coordination; see `rivennid_lore.md`
+- **Parallel Record Compact**: Five-thread convergence triangulating Withered Depths accumulation; potential collaboration not yet formalized; see `parallel_record_compact_lore.md`
+- **Warden**: Thornwarden conceptual DNA; Dunmar School informal cooperation; Dunmar's Watch integration parallel with Hierophant; see `warden_lore.md`
+- **Root Covenant**: Substrate theology as parallel framework for substrate piercing; see `clan_root_covenant_lore.md`
+- **Cleric**: Infrastructuralist parallel; Shard-containment doctrine as contrast case for nature-maintenance doctrine; see `cleric_lore.md`
+- **Necromancer**: Decay-as-ecological-mechanism contrast with decay-as-extracted-resource; Withered Depths shared geography; see `necromancer_lore.md`
 - **Magi / Wizard / Sorcerer**: Arcane tradition contrast (internal reserves vs. HP-as-vitality exchange)
-- **Warden**: Dunmar's Watch integration parallel with Hierophant integration; shared emphasis on non-wasted movement
 
-See also: `great_northern_forest_lore.md`, `withered_depths_lore.md`, `eccentric_woodland_lore.md`, `kiess_lore.md`, `rivennid_lore.md`, `parallel_record_compact_lore.md`, `timeline.md`
+See also: `thornwarden_lore.md`, `wildspeaker_lore.md`, `hierophant_lore.md`, `great_northern_forest_lore.md`, `withered_depths_lore.md`, `eccentric_woodland_lore.md`, `kiess_lore.md`, `rivennid_lore.md`, `parallel_record_compact_lore.md`, `warden_lore.md`, `timeline.md`

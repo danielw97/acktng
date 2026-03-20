@@ -180,5 +180,7 @@ Whether this is Dunmar School doctrine or simply Dunmar School doctrine's name a
 - **Deltari**: Cistern and shade infrastructure builders; environmental context for warden doctrine development
 
 - **Thornwood**: Pale Line perimeter formation; jurisdictional void between Midgaard's Continuity faction non-acknowledgment and the estate's actual expansion; Dunmar School doctrine applied without commission
+- **Thornwarden**: The druid lineage's martial-enforcement remort path; shares the Dunmar School's boundary-declaration orientation and non-wasted-movement principle; documented informal cooperation in northern forest patrol routes; see `thornwarden_lore.md`
+- **Hierophant**: The druid adept designation; achieves the same integrated attentional quality as Dunmar's Watch (simultaneous situational awareness without anticipation of specific events, the advantage of not wasting movement) through a completely different developmental path; see `hierophant_lore.md`
 
-See also: `scorching_sands_lore.md`, `midgaard_lore.md`, `kowloon_lore.md`, `thornwood_lore.md`, `timeline.md`
+See also: `scorching_sands_lore.md`, `midgaard_lore.md`, `kowloon_lore.md`, `thornwood_lore.md`, `thornwarden_lore.md`, `hierophant_lore.md`, `timeline.md`
