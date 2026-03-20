@@ -130,7 +130,6 @@ const struct cmd_type cmd_table[] = {
     CMD("compare", do_compare, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("consider", do_consider, POS_RESTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("credits", do_credits, POS_DEAD, 0, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS),
-    CMD("cwhere", do_cwhere, POS_DEAD, CLAN_ONLY, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS),
     CMD("claneq", do_claneq, POS_STANDING, CLAN_ONLY, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("delete", do_delete, POS_STANDING, 0, LOG_NORMAL, C_TYPE_CONFIG, C_SHOW_ALWAYS),
     CMD("diagnose", do_diagnose, POS_RESTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
@@ -169,13 +168,11 @@ const struct cmd_type cmd_table[] = {
      * Configuration commands.
      */
 
-    CMD("accept", do_accept, POS_DEAD, CLAN_ONLY, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("alias", do_alias, POS_DEAD, 0, LOG_NORMAL, C_TYPE_CONFIG, C_SHOW_ALWAYS),
     CMD("auto", do_auto, POS_DEAD, 0, LOG_NORMAL, C_TYPE_CONFIG, C_SHOW_ALWAYS),
     CMD("autoexit", do_autoexit, POS_DEAD, 0, LOG_NORMAL, C_TYPE_CONFIG, C_SHOW_ALWAYS),
     CMD("autoloot", do_autoloot, POS_DEAD, 0, LOG_NORMAL, C_TYPE_CONFIG, C_SHOW_ALWAYS),
     CMD("autosac", do_autosac, POS_DEAD, 0, LOG_NORMAL, C_TYPE_CONFIG, C_SHOW_ALWAYS),
-    CMD("banish", do_banish, POS_DEAD, CLAN_ONLY, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("blank", do_blank, POS_DEAD, 0, LOG_NORMAL, C_TYPE_CONFIG, C_SHOW_ALWAYS),
     CMD("brief", do_brief, POS_DEAD, 0, LOG_NORMAL, C_TYPE_CONFIG, C_SHOW_ALWAYS),
     CMD("channels", do_channels, POS_DEAD, 0, LOG_NORMAL, C_TYPE_CONFIG, C_SHOW_ALWAYS),
@@ -383,7 +380,6 @@ const struct cmd_type cmd_table[] = {
     CMD("lock", do_lock, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("open", do_open, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
 
-    CMD("make", do_make, POS_DEAD, CLAN_ONLY, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD_WAIT("pick", do_pick, POS_RESTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
     CMD("put", do_put, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("quaff", do_quaff, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
@@ -430,21 +426,12 @@ const struct cmd_type cmd_table[] = {
     CMD("where", do_where, POS_RESTING, 0, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS),
 
     CMD("disguise", do_disguise, POS_STANDING, 0, LOG_ALWAYS, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("politics", do_politics, POS_RESTING, 0, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS),
     CMD("rulers", do_rulers, POS_RESTING, 0, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS),
 
     CMD("learned", do_learned, POS_SLEEPING, 0, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS),
 
     CMD("scout", do_scout, POS_STANDING, 1, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
 
-    /*
-     * NEW CLAN COMMANDS Zen
-     */
-
-    CMD("ctoggle", do_ctoggle, POS_RESTING, BOSS_ONLY, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
-    CMD("negotiate", do_negotiate, POS_RESTING, CLAN_ONLY, LOG_NORMAL, C_TYPE_ACTION,
-        C_SHOW_ALWAYS),
-    CMD("council", do_council, POS_RESTING, 0, LOG_NORMAL, C_TYPE_MISC, C_SHOW_NEVER),
     CMD("qpspend", do_qpspend, POS_STANDING, 1, LOG_NORMAL, C_TYPE_MISC, C_SHOW_ALWAYS),
 
     /*
