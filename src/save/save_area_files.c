@@ -261,6 +261,8 @@ void build_save_area()
       fprintf(SaveFile, "S Title not shown on area list.\n");
    if (IS_SET(CurSaveArea->flags, AREA_NO_ROOM_AFF))
       fprintf(SaveFile, "M No bad room spells allowed.\n");
+   if (CurSaveArea->music != NULL)
+      fprintf(SaveFile, "C %s~\n", CurSaveArea->music);
 
    /*     fprintf( Envy, "#AREA\n" );                      remove save bug */
    /*     fprintf( Envy, "%s~\n", CurSaveArea->name );                     */
@@ -827,6 +829,9 @@ void load_area(FILE *fp)
       case 'I':
          pArea->min_level = fread_number(fp);
          pArea->max_level = fread_number(fp);
+         break;
+      case 'C':
+         pArea->music = fread_string(fp);
          break;
       }
    }

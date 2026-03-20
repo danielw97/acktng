@@ -781,24 +781,6 @@ void boot_db(void)
       }
    }
 
-   /* Set web music track for areas that have area-specific music */
-   {
-      AREA_DATA *pArea;
-      for (pArea = first_area; pArea != NULL; pArea = pArea->next)
-      {
-         if (!str_cmp(pArea->filename, "midgaard.are") ||
-             !str_cmp(pArea->filename, "midgaard_shops.are"))
-            pArea->music = str_dup("midgaard.mp3");
-         else if (!str_cmp(pArea->filename, "kiess.are"))
-            pArea->music = str_dup("kiess.mp3");
-         else if (!str_cmp(pArea->filename, "mafdet.are"))
-            pArea->music = str_dup("mafdet.mp3");
-         else if (!str_cmp(pArea->filename, "newschool.are"))
-            pArea->music = str_dup("mudschool.mp3");
-         /* else music remains NULL → default theme */
-      }
-   }
-
    {
       log_f("Fixing Exits......");
       fix_exits();
