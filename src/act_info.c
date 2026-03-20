@@ -191,7 +191,21 @@ void do_rhelp(CHAR_DATA *ch, char *argument)
    }
 
    sprintf(buf, "RHELP for race %s\r\n", race_table[i].race_title);
-   strcpy(sendBuf, buf);
+   send_to_char(buf, ch);
+
+   {
+      HELP_DATA *pHelp;
+      for (pHelp = first_help; pHelp != NULL; pHelp = pHelp->next)
+      {
+         if (!str_cmp(race_table[i].race_title, pHelp->keyword))
+         {
+            send_to_char(pHelp->text[0] == '.' ? pHelp->text + 1 : pHelp->text, ch);
+            break;
+         }
+      }
+   }
+
+   strcpy(sendBuf, "");
 
    sprintf(buf, "Class Order: %s\r\n", class_order(i));
    strcat(sendBuf, buf);
