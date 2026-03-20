@@ -77,3 +77,61 @@ What the woodland communities traded: hardwood timber (essential for constructio
 What the Kings offered: salt, metal tools, and manufactured goods. The exchange was less institutionalized than the Kethari or Deltari relationships. Arboreal Covenant trade moved through intermediaries rather than direct diplomatic contact. Serathi sky-road couriers carried initial contact messages; Deltari traders who had independent relationships with both parties often served as brokers. The Kings' formal administrative apparatus never fully penetrated the woodland relationship. There are no Shoreward Assessors' files for Arboreal Covenant goods — they entered the desert supply chain already classified as third-party goods under Deltari or Serathi import categories.
 
 This arm's-length relationship meant the woodland communities were largely unaffected by the Salt Ledger Kingdoms' political crises. When the Charter Wars disrupted the road network, they redirected their trade to other intermediaries without great difficulty. The category "Arboreal Covenant signatories" disappeared from the administrative record not because the communities dispersed but because the administrative apparatus that had been classifying them ceased to function.
+
+---
+
+## Part II: The Ninth Meridian Collapse and Its Global Effects (Era VII)
+
+The Ninth Meridian Collapse is recorded in eastern desert sources as an administrative and infrastructural failure — the road network fracturing under the combined pressure of Charter War debt, aquifer mismanagement, and the Pyramid's destabilizing resonance experiments. From inside the desert, it looked like a series of institutional collapses: toll-collection authorities folding, cistern-relay stations going unmaintained, the Shoreward Assessors' translation offices closing for lack of funding. The Kings did not announce a collapse. Things simply stopped working.
+
+From outside the desert, it looked different. The road network had been the eastern hemisphere's dominant trade infrastructure for three generations. Its failure did not merely inconvenience the peoples who had traded along it — it removed the organizing principle around which regional economies had structured themselves. What follows is how the collapse registered in each major external community.
+
+---
+
+### Effects on the Kethari
+
+The Kethari were better positioned than anyone to survive the Collapse, and they did — but not without cost. The Aquifer Covenant's legal framework had always been independent of Salt Ledger institutional backing; the Kethari had insisted on this from the earliest negotiations, and the insistence proved correct. When the Kings' legal apparatus ceased to function, Kethari subsurface territorial claims did not suddenly become contested in the way that surface claims did. The covenant was older than the Kings and outlasted them.
+
+What the Kethari lost was the surface economy that had made their subsurface access valuable. The markets that paid premium prices for high-purity mineral salt dried up as the provisioning networks that served those markets collapsed. Kethari traders who had built commercial relationships along the Reach suddenly had no buyers for their most valuable goods. The transition from commercial partner to independent subsurface community required a generation of adjustment — a period the Kethari water-memory archives record with unusual specificity, cataloguing the closing of each surface trading relationship and the internal decisions made about what to maintain versus what to abandon.
+
+The Collapse also ended Kethari involvement in the Shoreward Assessors' translation infrastructure. The specialist clerks who had handled Kethari goods — the bilingual intermediaries who understood both surface commercial law and Kethari covenant frameworks — lost their institutional context when the Assessors' offices closed. Some of those clerks eventually became independent brokers working for whoever could pay them. Others joined Kethari communities directly. The translation knowledge dispersed rather than disappeared, which is why later researchers have been able to reconstruct so much of the Assessors' methodology: fragments survived in too many hands to be lost entirely.
+
+---
+
+### Effects on the Serathi
+
+The Collapse severed the Serathi from their primary income source without warning. Serathi sky-road work had been commercially structured around the road network — route reconnaissance, storm-warning services, diplomatic courier runs — all of it dependent on the caravan traffic the network generated. When the caravans stopped, the commercial rationale for maintaining sky-road corridor infrastructure evaporated.
+
+The roost-point provisioning system that the Kings had maintained as a concession to the Serathi was among the first things to fail. Supply chains to locations with no commercial traffic were exactly the kind of expenditure a collapsing administration cut first. Serathi communities that had structured their logistics around roost-point provisions found themselves without a food supply, in locations chosen for sky-road convenience rather than ground-level resource access. The internal crisis this produced is documented in the roost-chronicles with the same methodical precision applied to everything else — and the chronicles are notably explicit that the cause was external, not a Serathi planning failure. Several roost-chronicle entries from this period read as formal legal records of breach of contract, carefully documenting the Kings' obligations and the specific dates each obligation went unmet.
+
+The long-term effect was structural. Serathi communities relocated to positions with independent resource access, abandoning sky-road corridor logic in favor of survivable geography. The sky-road network contracted significantly. Routes that had connected distant regions through a coordinated corridor system became individual paths maintained by whatever community happened to live nearby, with no coordinating authority ensuring they remained open. Cross-regional Serathi communication, which had been the nervous system of the sky-road network, became slower and more fragmented. The Serathi did not lose their sky-road capability, but they lost the organizational scale that had made that capability commercially significant.
+
+---
+
+### Effects on the Khephari
+
+The Khephari fragmentation that had begun during the Charter Wars accelerated sharply during the Collapse. The road-permit leverage that the Kings had held over Ochre Basin communities evaporated along with the administrative apparatus that enforced it — but this did not help the Khephari, because the markets those permits had provided access to also ceased to function. The removal of the constraint and the removal of the opportunity arrived simultaneously.
+
+Communities that had already established Kethari subsurface corridor access survived better than those that had not. The ochre pigment trade found a partial replacement market through Kethari intermediaries, who maintained connections to a smaller but more resilient network of buyers. The ceramic goods trade had no equivalent replacement — the specific market for Ochre Basin ceramics had been court-driven, and without the court, it disappeared.
+
+Two Khephari communities are documented as having survived the Collapse as distinct social units. The rest are not. The Shoreward Assessors' administrative category persisted in records, as noted, but the communities it once described were absorbed, dispersed, or simply gone within two generations of the Collapse. The ochre processing techniques they had developed were partially preserved — the Kethari communities that incorporated Khephari traders maintained some of the methodology — but the full specialized knowledge of staged mineral extraction was not reconstructed until much later, and the reconstruction was imperfect.
+
+---
+
+### Effects on the Deltari
+
+The Deltari experienced the Collapse as a contract crisis before they experienced it as anything else. The price guarantee system the Shoreward Assessors had established — minimum purchase commitments in exchange for supply priority — became unenforceable the moment the Kings' treasury ceased to function. The Deltari had structured their grain surplus management around guaranteed buyers; the removal of that guarantee in a single season created an immediate storage and distribution problem of enormous scale.
+
+The delta's agricultural system was sophisticated enough to handle bad water years, but it was not designed to handle a permanent loss of its primary export market. Grain that could not be sold accumulated faster than it could be consumed or preserved. Communities that had specialized in surplus production found themselves with surpluses they could not move. The transition required by the Collapse — shifting from export-oriented surplus production to subsistence-calibrated agriculture — took two generations and produced significant population decline during the adjustment period.
+
+What the Deltari retained was their record-keeping tradition. The reed-ledger system continued operating even as the economy it was documenting collapsed, because the communities that maintained it had structured record-keeping as a civic practice rather than a commercial service. Delta communities kept documenting transactions, population figures, water levels, and agricultural yields through the Collapse and afterward. Those records are why the Ninth Meridian Collapse is better understood than most Era VII events — the Deltari wrote it down as it happened, with the same methodical consistency they had applied to grain contract pricing.
+
+---
+
+### Effects on the Western Woodland Communities
+
+The western woodland communities were the least affected of the major trading partners, for the same reason they had been least integrated: they had never structured their economy around the road network. The goods they had traded — timber, resins, cattle — were available through multiple channels, and when the desert channel closed, they found others.
+
+What the Collapse did affect was the woodland communities' relationship with the Serathi. The sky-road courier network that had served as intermediary between the woodlands and the desert contracted sharply when the Serathi lost their provisioning infrastructure. Routes that had been commercially maintained became irregular and unreliable. For a generation, woodland communities had significantly reduced contact with any region beyond their immediate geography — not because the Collapse had harmed them directly, but because the connective tissue between them and the wider world had been provided by institutions that no longer existed.
+
+The long-term result was insularity. Woodland communities that had been part of a loose but functional pan-regional trade network became locally self-sufficient by necessity. When that insularity eventually broke down — centuries later, as new trade networks formed — the woodland peoples were among the least integrated into the emerging structures, starting from a position of deep unfamiliarity with commercial relationships their ancestors had navigated through intermediaries they no longer had.
