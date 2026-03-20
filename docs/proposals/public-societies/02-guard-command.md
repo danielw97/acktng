@@ -114,7 +114,7 @@ until rank recovers.
 | `rally_cry` | 100 (Sergeant) | Shout a rallying cry that briefly suppresses fear effects on all group members in the room. 10-minute cooldown. Does not grant combat bonuses — only removes existing fear/panic debuffs. |
 | `shield_wall` | 200 (Lieutenant) | **Combat (passive).** While a shield is equipped, successful block checks also reduce the damage of the next attack that lands by 20%. Checked in `calculate_damage()` after a block in `check_avoidance()` sets a per-round flag. Always active — no cooldown, no activation command. |
 | `tactical_assess` | 300 (Captain) | Examine a mob to reveal its special attacks, resistances, and approximate HP percentage. More detailed than standard `consider`. |
-| `command_presence` | 400 (Marshal) | Passive aura: guard NPCs in the current room defer to the player, suppressing their aggro against the player's group. Does not affect non-guard mobs. 30-minute cooldown. |
+| `command_presence` | 400 (Marshal) | **Combat (active).** Deliver a commanding strike and rally your group. Deals physical damage (`do_damage()` with `gsn_command_presence`, `ELE_PHYSICAL`) and applies a 3-round `APPLY_HITROLL` buff (+5) to all group members in the room via `is_same_group()` iteration. Proficiency-gated. `WAIT_STATE` cooldown of 24 beats (6 seconds). The Marshal leads from the front. |
 
 Note: `fortify` (previously in the Lieutenant slot) is moved to a task
 mechanic rather than a persistent skill. `shield_wall` replaces it as the

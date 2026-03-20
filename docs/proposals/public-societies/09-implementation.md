@@ -115,20 +115,22 @@ into 5 phases.
 
 - [ ] Guard Command: `patrol_sense`, `field_mend`, `rally_cry`, `shield_wall`
   (passive: post-block damage reduction), `tactical_assess`,
-  `command_presence`
+  `command_presence` (active: strike + group hitroll buff)
 - [ ] Harbor Syndics: `appraise`, `manifest`, `haggle`, `longshoreman`
-  (passive: bonus autoattack chance), `bonded_cargo`, `commercial_writ`
+  (passive: bonus autoattack), `bonded_cargo`, `anchor_slam` (active:
+  heavy hit + speed debuff)
 - [ ] Ember Wardens: `forage`, `field_repair`, `ember_signal`,
   `ember_vitality` (passive: in-combat HP regen), `containment_ward`,
-  `emergency_cache`
+  `controlled_burn` (active: fire hit + fire DOT)
 - [ ] Shrine of the First Claw: `oath_mark`, `track_quarry`, `writ_of_hold`,
-  `marked_strike` (passive: evasion piercing + avoidance bypass vs marked
-  targets), `oath_seal`, `judgment`
+  `marked_strike` (passive: evasion piercing vs marked targets),
+  `oath_seal`, `claws_judgment` (active: 2x damage vs oath_marked)
 - [ ] Wall Command: `frontier_scan`, `shelter`, `trailblaze`, `bulwark`
   (passive: flat physical damage reduction), `signal_tower`,
-  `frontier_passage`
+  `rampart_slam` (active: shield slam + stun)
 - [ ] Road Wardens: `wayfind`, `road_camp`, `forced_march`, `road_grit`
-  (passive: dodge chance bonus), `dispatch_rider`, `road_gate`
+  (passive: dodge bonus), `dispatch_rider`, `waylay` (active: hit +
+  dodge/speed debuff)
 - [ ] Register all skill commands in `interp.c`
 - [ ] Write unit tests for each skill's gating logic
 

@@ -110,7 +110,7 @@ skill unlocks when the player's rank score reaches the listed threshold.
 | `haggle` | 100 (Assessor) | When buying from an NPC shop, temporarily improve the price by up to 10% based on proficiency. 15-minute cooldown per shop. |
 | `longshoreman` | 200 (Arbiter) | **Combat (passive).** Years of hauling cargo have built raw striking power. Grants one additional autoattack per round, checked in `multi_hit()` in the same block that grants bonus hits for Pugilist, Warden, and other mortal/remort classes (around lines 328-357). Uses the same probability roll as those class-based extra attacks. Always active — no cooldown, no activation command. |
 | `bonded_cargo` | 300 (Senior Syndic) | Seal an item in a bonded cargo container that protects it from theft, drop-on-death, and decay for 1 hour. One container active at a time. |
-| `commercial_writ` | 400 (Port Master) | Issue a writ that grants a named player a one-time 15% discount at any NPC shop in Kowloon. The writ is a transferable item. One writ per day. |
+| `anchor_slam` | 400 (Port Master) | **Combat (active).** Swing with dockyard brutality. Deals heavy physical damage (`do_damage()` with `gsn_anchor_slam`, `ELE_PHYSICAL`) and applies a 2-round `APPLY_SPEED` debuff (-3) to the target via `affect_to_char()`, reducing their extra attack chance and avoidance. Proficiency-gated. `WAIT_STATE` cooldown of 24 beats (6 seconds). Maritime brute force. |
 
 Note: `trade_ledger` (previously in the Arbiter slot) is moved to a task
 mechanic. `longshoreman` replaces it as the rank 3 combat skill.

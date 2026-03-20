@@ -111,7 +111,7 @@ skill unlocks when the player's rank score reaches the listed threshold.
 | `writ_of_hold` | 100 (Claw Agent) | Present a writ to an NPC, preventing them from moving for 5 minutes. The NPC must be a valid task target. Does not work on players or bosses. |
 | `marked_strike` | 200 (Arbiter) | **Combat (passive).** When fighting a target the player has `oath_mark`ed, all autoattacks gain +10% evasion piercing (added to `get_evasion_piercing()`) and a 10% chance to bypass parry/dodge/block entirely. Checked automatically in `check_avoidance()` against the `oath_mark` affect on the victim. Always active against marked targets — no cooldown, no activation command. |
 | `oath_seal` | 300 (Senior Arbiter) | Seal a sworn agreement between two parties (player-to-player or player-to-NPC). If either party breaks the agreement, the other is notified. Cosmetic/RP authority. |
-| `judgment` | 400 (High Claw) | Declare judgment on an NPC oath-breaker, stripping their shop/service functions for 30 minutes. Powerful enforcement tool. One use per day. |
+| `claws_judgment` | 400 (High Claw) | **Combat (active).** Execute the Shrine's sentence. Only usable against a target the player has `oath_mark`ed (refuses to fire otherwise). Deals massive physical damage (`do_damage()` with `gsn_claws_judgment`, `ELE_PHYSICAL`) with a 2x damage multiplier against the marked target. The bounty hunter's finishing blow. Proficiency-gated. `WAIT_STATE` cooldown of 24 beats (6 seconds). The claw falls where the oath breaks. |
 
 Note: `interrogate` (previously in the Arbiter slot) is moved to rank 3 as
 part of the `writ_of_hold` skill's extended functionality. `marked_strike`

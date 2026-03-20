@@ -67,8 +67,19 @@ into existing combat functions (`check_avoidance()`, `calculate_damage()`,
 `multi_hit()`, `get_dodge()`) and provide small, meaningful bonuses: a chance
 for a bonus autoattack, flat damage reduction, improved dodge, post-block
 damage mitigation, in-combat HP regeneration, or evasion piercing against
-marked targets. They reward society membership without replacing class
-abilities or dominating the combat meta.
+marked targets.
+
+At the highest rank (Commander tier, rank 400+), each society unlocks one
+**active** combat skill — a player-typed command usable during combat. These
+follow the standard skill pattern: `can_use_skill()` gate, proficiency roll,
+`do_damage()` call with the skill's `gsn_*` as damage type, optional
+`affect_to_char()` for buffs/debuffs, and a `WAIT_STATE` cooldown. Each is
+thematically tied to its society's identity: a rallying group buff (Guard
+Command), a heavy debuffing strike (Harbor Syndics), a fire DOT (Ember
+Wardens), a mark-dependent finisher (Shrine of the First Claw), a
+shield-based stun (Wall Command), or an accuracy-reducing ambush strike (Road
+Wardens). These are powerful but not class-defining — they reward sustained
+commitment to a single society at maximum rank.
 
 ### 5. One Society, One Commitment
 

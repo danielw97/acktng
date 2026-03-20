@@ -124,7 +124,7 @@ skill unlocks when the player's rank score reaches the listed threshold.
 | `forced_march` | 100 (Trailkeeper) | For the next 5 minutes, the player's movement between rooms has no movement-point cost. 30-minute cooldown. |
 | `road_grit` | 200 (Road Sergeant) | **Combat (passive).** Constant exposure to ambushes has sharpened reflexes. Dodge chance is increased by 5% (added to `get_dodge()` return value). Always active — no cooldown, no activation command. |
 | `dispatch_rider` | 300 (Road Captain) | Send a message to any online Road Warden member regardless of distance. Functions as a one-way long-range tell. 10-minute cooldown. |
-| `road_gate` | 400 (Warden-Master) | Open a temporary portal from the current room to the nearest Road Warden post. The portal lasts 2 minutes and can be used by any member of the player's group. One use per day. |
+| `waylay` | 400 (Warden-Master) | **Combat (active).** Strike from a cleared angle, exploiting the target's blind spot. Deals physical damage (`do_damage()` with `gsn_waylay`, `ELE_PHYSICAL`) with bonus damage scaling and applies a 2-round debuff: `APPLY_DODGE` (-5) and `APPLY_SPEED` (-2) via `affect_to_char()`, making the target easier to hit and slower to react. Proficiency-gated. `WAIT_STATE` cooldown of 24 beats (6 seconds). The road teaches you where the ambushes hide. |
 
 Note: `route_marker` (previously in the Road Sergeant slot) is moved to rank
 4 as an extension of `dispatch_rider`. `road_grit` replaces it as the rank 3
