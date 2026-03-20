@@ -469,6 +469,7 @@ const struct lookup_type tab_mob_flags[] = {
     {"noassist", ACT_NOASSIST, 5000}, /*  mob is designed to not assist no matter what*/
     {"day_only", ACT_DAYONLY, NO_USE},
     {"night_only", ACT_NIGHTONLY, NO_USE},
+    {"ai_dialogue", ACT_AI_DIALOGUE, NO_USE},
     {NULL, 0}};
 
 /* New bits to handle how mobs act */
@@ -591,6 +592,27 @@ const struct lookup_type tab_affected_by[] =
      {"flying", 524288, 5000},
      {"pass_door", 1048576, 5000},
      {NULL, 0}};
+
+const struct lookup_type tab_knowledge[] = {{"weapons", KNOW_WEAPONS, 0},
+                                            {"trade", KNOW_TRADE, 0},
+                                            {"magic", KNOW_MAGIC, 0},
+                                            {"temple", KNOW_TEMPLE, 0},
+                                            {"underworld", KNOW_UNDERWORLD, 0},
+                                            {"harbor", KNOW_HARBOR, 0},
+                                            {"guard", KNOW_GUARD, 0},
+                                            {"history", KNOW_HISTORY, 0},
+                                            {"wilderness", KNOW_WILDERNESS, 0},
+                                            {"politics", KNOW_POLITICS, 0},
+                                            {"helps", KNOW_HELPS, 0},
+                                            {NULL, 0}};
+
+const struct lookup_type tab_accent[] = {{"none", ACCENT_NONE, 0},
+                                         {"midgaard", ACCENT_MIDGAARD, 0},
+                                         {"kowloon", ACCENT_KOWLOON, 0},
+                                         {"mafdet", ACCENT_MAFDET, 0},
+                                         {"kiess", ACCENT_KIESS, 0},
+                                         {"rakuen", ACCENT_RAKUEN, 0},
+                                         {NULL, 0}};
 
 const struct lookup_type tab_item_types[] = {
     /* { "nada",			0, 0 },  */

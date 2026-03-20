@@ -478,6 +478,13 @@ static void validate_mobiles_section_format(FILE *fp, const char *area_name)
                   break;
             }
          }
+         else if (trimmed[0] == 'a')
+         {
+            /* AI prompt line: a <ai_knowledge> <accent> <tilde-terminated prompt> */
+            if (strchr(trimmed, '~') == NULL)
+               fail_area_validation(area_name, current_area_line(fp),
+                                    "AI prompt line missing tilde terminator: %s", trimmed);
+         }
          else
             fail_area_validation(area_name, current_area_line(fp),
                                  "unexpected trailing line in #MOBILES entry: %s", trimmed);

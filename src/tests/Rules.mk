@@ -32,6 +32,10 @@ unit-test-websocket-validation: $(OBJDIR)/tests/test_websocket_validation.o
 	rm -f tests/unit-test-websocket-validation
 	$(CC) -o tests/unit-test-websocket-validation $(OBJDIR)/tests/test_websocket_validation.o $(L_FLAGS)
 
+unit-test-websocket-sanitize: $(OBJDIR)/tests/test_websocket_sanitize.o
+	rm -f tests/unit-test-websocket-sanitize
+	$(CC) -o tests/unit-test-websocket-sanitize $(OBJDIR)/tests/test_websocket_sanitize.o $(L_FLAGS)
+
 $(OBJDIR)/fight.unit-test.o: fight.c headers/ack.h
 	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/fight.unit-test.o fight.c
 
@@ -251,6 +255,16 @@ unit-test-special: $(OBJDIR)/tests/test_special.o $(OBJDIR)/special.unit-test.o 
 	rm -f tests/unit-test-special
 	$(CC) -Wl,--gc-sections -o tests/unit-test-special $(OBJDIR)/tests/test_special.o $(OBJDIR)/special.unit-test.o $(AI_SUMMON_OBJS) $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
+$(OBJDIR)/npc_dialogue.unit-test.o: npc_dialogue.c headers/ack.h
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_NPC_DIALOGUE -ffunction-sections -fdata-sections -o $(OBJDIR)/npc_dialogue.unit-test.o npc_dialogue.c
+
+$(OBJDIR)/tests/test_npc_dialogue_help.o: tests/test_npc_dialogue_help.c headers/ack.h
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -I. -Itests/headers -o $(OBJDIR)/tests/test_npc_dialogue_help.o tests/test_npc_dialogue_help.c
+
+unit-test-npc-dialogue-help: $(OBJDIR)/tests/test_npc_dialogue_help.o $(OBJDIR)/npc_dialogue.unit-test.o
+	rm -f tests/unit-test-npc-dialogue-help
+	$(CC) -Wl,--gc-sections -o tests/unit-test-npc-dialogue-help $(OBJDIR)/tests/test_npc_dialogue_help.o $(OBJDIR)/npc_dialogue.unit-test.o $(L_FLAGS)
+
 
 
 $(OBJDIR)/item_generation.unit-test.o: item_generation.c headers/ack.h
@@ -304,8 +318,15 @@ unit-test-prompt: $(OBJDIR)/tests/test_prompt.o $(OBJDIR)/prompt.unit-test.o $(O
 	rm -f tests/unit-test-prompt
 	$(CC) -Wl,--gc-sections -o tests/unit-test-prompt $(OBJDIR)/tests/test_prompt.o $(OBJDIR)/prompt.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-$(OBJDIR)/const.unit-test.o: const.c headers/ack.h
+$(OBJDIR)/const.unit-test.o: const.c headers/ack.h spells/spell_table_data.c skills/skill_table_data.c
 	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/const.unit-test.o const.c
+
+$(OBJDIR)/stance.unit-test.o: stance.c headers/ack.h
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/stance.unit-test.o stance.c
+
+unit-test-skill-renames: $(OBJDIR)/tests/test_skill_renames.o $(OBJDIR)/const.unit-test.o $(OBJDIR)/stance.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
+	rm -f tests/unit-test-skill-renames
+	$(CC) -Wl,--gc-sections -Wl,--unresolved-symbols=ignore-all -o tests/unit-test-skill-renames $(OBJDIR)/tests/test_skill_renames.o $(OBJDIR)/const.unit-test.o $(OBJDIR)/stance.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 unit-test-adept-skills: $(OBJDIR)/tests/test_adept_skills.o $(OBJDIR)/const.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-adept-skills
@@ -343,7 +364,23 @@ unit-test-weapon-bond: $(OBJDIR)/tests/test_weapon_bond.o $(OBJDIR)/weapon_bond.
 	rm -f tests/unit-test-weapon-bond
 	$(CC) -Wl,--gc-sections -o tests/unit-test-weapon-bond $(OBJDIR)/tests/test_weapon_bond.o $(OBJDIR)/weapon_bond.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-unit-tests: unit-test-weapon-bond unit-test-handler unit-test-skills unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-login unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns unit-test-prompt unit-test-revenant unit-test-adept-skills unit-test-caravan-travel
+unit-test-overgrowth: $(OBJDIR)/tests/test_overgrowth.o $(OBJDIR)/tests/test_is_fighting.o
+	rm -f tests/unit-test-overgrowth
+	$(CC) -o tests/unit-test-overgrowth $(OBJDIR)/tests/test_overgrowth.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+
+unit-test-act-clan: $(OBJDIR)/tests/test_act_clan.o
+	rm -f tests/unit-test-act-clan
+	$(CC) -o tests/unit-test-act-clan $(OBJDIR)/tests/test_act_clan.o $(L_FLAGS)
+
+unit-test-clandata: $(OBJDIR)/tests/test_clandata.o
+	rm -f tests/unit-test-clandata
+	$(CC) -o tests/unit-test-clandata $(OBJDIR)/tests/test_clandata.o $(L_FLAGS)
+
+unit-test-sentinel: $(OBJDIR)/tests/test_sentinel.o $(OBJDIR)/tests/test_is_fighting.o
+	rm -f tests/unit-test-sentinel
+	$(CC) -o tests/unit-test-sentinel $(OBJDIR)/tests/test_sentinel.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
+
+unit-tests: unit-test-sentinel unit-test-clandata unit-test-act-clan unit-test-weapon-bond unit-test-handler unit-test-skills unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-login unit-test-websocket-validation unit-test-websocket-sanitize unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns unit-test-prompt unit-test-revenant unit-test-adept-skills unit-test-skill-renames unit-test-caravan-travel unit-test-overgrowth unit-test-npc-dialogue-help
 	./tests/unit-test-handler
 	./tests/unit-test-skills
 	./tests/unit-test-act-flags
@@ -354,6 +391,7 @@ unit-tests: unit-test-weapon-bond unit-test-handler unit-test-skills unit-test-a
 	./tests/unit-test-comm
 	./tests/unit-test-login
 	./tests/unit-test-websocket-validation
+	./tests/unit-test-websocket-sanitize
 	./tests/unit-test-fight
 	./tests/unit-test-act-info
 	./tests/unit-test-act-move
@@ -387,7 +425,13 @@ unit-tests: unit-test-weapon-bond unit-test-handler unit-test-skills unit-test-a
 	./tests/unit-test-prompt
 	./tests/unit-test-revenant
 	./tests/unit-test-adept-skills
+	./tests/unit-test-skill-renames
 	./tests/unit-test-caravan-travel
 	./tests/unit-test-weapon-bond
+	./tests/unit-test-overgrowth
+	./tests/unit-test-act-clan
+	./tests/unit-test-clandata
+	./tests/unit-test-sentinel
+	./tests/unit-test-npc-dialogue-help
 	$(MAKE) integration-test
 	$(MAKE) integration-test-telnet

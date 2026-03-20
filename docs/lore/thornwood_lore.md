@@ -269,6 +269,18 @@ No major power openly claims full jurisdiction:
 
 This legal ambiguity is one reason Thornwood persists. No authority wants the political cost of claiming it, and no authority wants a rival to claim it first.
 
+### The Pale Line
+
+The **Pale Line** is what Thornwood-adjacent wardens call the informal perimeter formation that has developed around the estate's approach corridors — independent wardens, off-assignment Guard Command practitioners, and a small number of Shadowmere-adjacent contacts maintaining a loose watch on the estate's territorial behavior without any commissioning authority to justify it.
+
+Midgaard's Continuity faction does not acknowledge the Pale Line's existence officially. The Reckoning faction is aware of it and does not interfere. Guard Command has not ordered it disbanded, which is notable, given that operating outside commission is technically a registry violation. The most plausible explanation — that specific people in Guard Command's administrative structure are quietly tolerating a perimeter operation they cannot officially sanction — is consistent with the Continuity faction's general approach to Thornwood: deniable containment rather than acknowledged response.
+
+The Pale Line's primary function is early warning. When the Wild Hunt's range expands, the Pale Line documents it. When route traffic near the estate decreases — indicating increased Hunt activity in that corridor — the Pale Line updates the informal route warnings that caravan insurance assessors rely on. It is not a fighting force in any institutional sense. Most of its practitioners would, if asked directly, describe themselves as wardens doing what wardens do: holding ground between something dangerous and the routes that people depend on.
+
+The commissioning question — who authorized them, whose authority they operate under — is one they decline to answer, not because the answer is complex but because answering it would force Midgaard's institutions into a position they have carefully avoided: officially acknowledging that the estate requires a perimeter.
+
+See also: `warden_lore.md`
+
 ### The Archive Problem
 
 Thornwood generated burial contracts, debt ledgers, succession records, and interment manifests across its entire operational history. These documents are now fragmented across:

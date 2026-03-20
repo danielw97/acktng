@@ -100,7 +100,7 @@ extern sh_int gsn_chi_surge;
 extern sh_int gsn_breath_of_endurance;
 extern sh_int gsn_fist_interior;
 extern sh_int gsn_momentum_chain;
-extern sh_int gsn_iron_resolve;
+extern sh_int gsn_veterans_cadence;
 extern sh_int gsn_overwhelming_assault;
 extern sh_int gsn_elemental_attunement;
 extern sh_int gsn_oathshield;
@@ -171,6 +171,10 @@ extern sh_int gsn_taunt;
 extern sh_int gsn_rend;
 extern sh_int gsn_field_patch;
 extern sh_int gsn_weapon_mastery;
+extern sh_int gsn_ashfall_strike;
+
+/* Druid skills */
+extern sh_int gsn_substrate_piercing;
 
 /* Pugilist skills */
 extern sh_int gsn_grapple;
@@ -181,6 +185,18 @@ extern sh_int gsn_roll_with_blow;
 extern sh_int gsn_pressure_point;
 extern sh_int gsn_feint;
 extern sh_int gsn_conditioning;
+extern sh_int gsn_harbor_dust;
+
+/* Sentinel skills */
+extern sh_int gsn_vigilance;
+extern sh_int gsn_verdict;
+extern sh_int gsn_read_opponent;
+extern sh_int gsn_binding_strike;
+extern sh_int gsn_testimonial_guard;
+extern sh_int gsn_ninth_descent;
+extern sh_int gsn_measured_response;
+extern sh_int gsn_condemn;
+extern sh_int gsn_seal_testimony;
 
 /* Public society skills */
 extern sh_int gsn_patrol_sense;
@@ -383,6 +399,7 @@ DECLARE_DO_FUN(do_mbid);
 DECLARE_DO_FUN(do_cdonate);
 DECLARE_DO_FUN(do_circle);
 DECLARE_DO_FUN(do_clan);
+DECLARE_DO_FUN(do_claneq);
 DECLARE_DO_FUN(do_clan_list);
 DECLARE_DO_FUN(do_clan_recall);
 DECLARE_DO_FUN(do_clutch);
@@ -396,6 +413,8 @@ DECLARE_DO_FUN(do_deathmatc);
 DECLARE_DO_FUN(do_deathmatch);
 DECLARE_DO_FUN(do_diagnose);
 DECLARE_DO_FUN(do_dirt);
+DECLARE_DO_FUN(do_ashfall_strike);
+DECLARE_DO_FUN(do_harbor_dust);
 DECLARE_DO_FUN(do_dog);
 DECLARE_DO_FUN(do_donate);
 DECLARE_DO_FUN(do_edit);
@@ -475,7 +494,7 @@ DECLARE_DO_FUN(do_chi_surge);
 DECLARE_DO_FUN(do_breath_of_endurance);
 DECLARE_DO_FUN(do_fist_of_the_interior_form);
 DECLARE_DO_FUN(do_momentum_chain);
-DECLARE_DO_FUN(do_iron_resolve);
+DECLARE_DO_FUN(do_veterans_cadence);
 DECLARE_DO_FUN(do_overwhelming_assault);
 DECLARE_DO_FUN(do_oathshield);
 DECLARE_DO_FUN(do_sanctified_strike);
@@ -733,6 +752,14 @@ DECLARE_DO_FUN(do_roll_with_blow);
 DECLARE_DO_FUN(do_pressure_point);
 DECLARE_DO_FUN(do_feint);
 DECLARE_DO_FUN(do_conditioning);
+
+/* Sentinel skills */
+DECLARE_DO_FUN(do_verdict);
+DECLARE_DO_FUN(do_read_opponent);
+DECLARE_DO_FUN(do_binding_strike);
+DECLARE_DO_FUN(do_ninth_descent);
+DECLARE_DO_FUN(do_condemn);
+DECLARE_DO_FUN(do_seal_testimony);
 DECLARE_DO_FUN(do_stance);
 DECLARE_DO_FUN(do_enchant);
 

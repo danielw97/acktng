@@ -23,7 +23,7 @@ PROF    =
 #SOLARIS_LINK = -lnsl -lsocket -lresolv
 
 C_FLAGS = -O -g2 -Wall -DACK_43 $(PROF) $(SOLARIS_FLAG) -Iheaders -Iai/headers -Itests/headers -Iquests
-L_FLAGS = -O -g2 -lcrypt $(PROF) $(SOLARIS_LINK)
+L_FLAGS = -O -g2 -lcrypt -lpthread $(PROF) $(SOLARIS_LINK)
 
 OBJDIR = build/obj
 
@@ -34,7 +34,7 @@ MAIN_OBJS = $(addprefix $(OBJDIR)/,$(O_FILES))
 
 SPELL_OBJS = \
 	spells/spell_acid_blast.o spells/spell_acid_breath.o spells/spell_animate.o \
-	spells/spell_arcane_lock.o spells/spell_arc_lightning.o spells/spell_armor.o \
+	spells/spell_arcane_lock.o spells/spell_arcaneshield.o spells/spell_arc_lightning.o spells/spell_armor.o \
 	spells/spell_astral_projection.o spells/spell_badbreath.o \
 	spells/spell_bark_skin.o spells/spell_barrier.o spells/spell_beacon.o \
 	spells/spell_black_curse.o spells/spell_black_hand.o spells/spell_bless.o \
@@ -45,8 +45,8 @@ SPELL_OBJS = \
 	spells/spell_chill_touch.o spells/spell_cloak_absorb.o spells/spell_cloak_adept.o \
 	spells/spell_cloak_drain.o spells/spell_cloak_elements.o spells/spell_cloak_flaming.o \
 	spells/spell_cloak_iron.o spells/spell_cloak_mental.o spells/spell_cloak_misery.o \
-	spells/spell_cloak_oathbreaker.o spells/spell_cloak_reflect.o \
-	spells/spell_cloak_transcendence.o spells/spell_color_spray.o \
+	spells/spell_cloak_oathbreaker.o spells/spell_cloak_precision.o spells/spell_cloak_reflect.o \
+	spells/spell_cloak_transcendence.o spells/spell_cloak_valor.o spells/spell_color_spray.o \
 	spells/spell_condense_soul.o spells/spell_cone_cold.o spells/spell_consecrate.o \
 	spells/spell_continual_light.o spells/spell_control_weather.o \
 	spells/spell_corrupt_bond.o spells/spell_creature_bond.o \
@@ -73,10 +73,10 @@ SPELL_OBJS = \
 	spells/spell_haste.o spells/spell_heal.o spells/spell_healing_light.o \
 	spells/spell_heat_armor.o spells/spell_hellspawn.o spells/spell_high_explosive.o \
 	spells/spell_holy_armor.o spells/spell_holy_avenger.o spells/spell_holy_light.o \
-	spells/spell_holy_word.o spells/spell_holy_wrath.o spells/spell_hypnosis.o spells/spell_ice_bolt.o \
+	spells/spell_holy_word.o spells/spell_holy_wrath.o spells/spell_holyshield.o spells/spell_hypnosis.o spells/spell_ice_bolt.o \
 	spells/spell_iceshield.o spells/spell_identify.o spells/spell_influx.o \
 	spells/spell_infravision.o spells/spell_infuse.o spells/spell_invis.o \
-	spells/spell_iron_golem.o spells/spell_kinetic_reversion.o \
+	spells/spell_iron_golem.o \
 	spells/spell_know_alignment.o spells/spell_know_critical.o spells/spell_know_item.o \
 	spells/spell_know_weakness.o spells/spell_laserbolt.o spells/spell_lava_burst.o \
 	spells/spell_lightning_bolt.o spells/spell_lightning_breath.o \
@@ -91,7 +91,7 @@ SPELL_OBJS = \
 	spells/spell_phobia.o spells/spell_phoenix_flare.o spells/spell_physic_crush.o \
 	spells/spell_physic_thrust.o spells/spell_planergy.o spells/spell_poison.o \
 	spells/spell_poison_arsenic.o spells/spell_poison_quinine.o \
-	spells/spell_poison_weapon.o spells/spell_portal.o \
+	spells/spell_poison_weapon.o spells/spell_portal.o spells/spell_psishield.o \
 	spells/spell_prayer.o spells/spell_precognition.o \
 	spells/spell_protection.o spells/spell_psionic_recovery.o spells/spell_purify.o \
 	spells/spell_refresh.o spells/spell_refresh_mana.o spells/spell_refuge.o \
@@ -120,7 +120,8 @@ SPELL_OBJS = \
 	spells/spell_elemental_confluence.o spells/spell_convergence_shield.o \
 	spells/spell_sacred_ward.o \
 	spells/spell_momentum_drain.o spells/spell_entropic_shield.o \
-	spells/spell_cognitive_disruption.o spells/spell_predictive_collapse.o
+	spells/spell_cognitive_disruption.o spells/spell_predictive_collapse.o \
+	spells/spell_druid.o
 
 SKILL_OBJS = \
 	skills/do_anti_magic_shell.o skills/do_aurabolt.o skills/do_backstab.o \
@@ -139,11 +140,13 @@ SKILL_OBJS = \
 	skills/do_read_intent.o \
 	skills/do_cleave.o skills/do_fortify.o skills/do_taunt.o \
 	skills/do_rend.o skills/do_field_patch.o skills/do_weapon_mastery.o \
+	skills/do_ashfall_strike.o \
 	skills/do_grapple.o skills/do_choke_hold.o skills/do_leg_sweep.o \
 	skills/do_iron_skin.o skills/do_roll_with_blow.o skills/do_pressure_point.o \
 	skills/do_feint.o skills/do_conditioning.o \
+	skills/do_harbor_dust.o \
 	skills/do_chi_surge.o skills/do_breath_of_endurance.o skills/do_fist_of_the_interior_form.o \
-	skills/do_momentum_chain.o skills/do_iron_resolve.o skills/do_overwhelming_assault.o \
+	skills/do_momentum_chain.o skills/do_veterans_cadence.o skills/do_overwhelming_assault.o \
 	skills/do_oathshield.o skills/do_sanctified_strike.o \
 	skills/do_shadow_reading.o skills/do_hex_ward.o skills/do_reflex_disruption.o \
 	skills/do_patrol_sense.o skills/do_field_mend.o skills/do_rally_cry.o \
@@ -161,7 +164,7 @@ SKILL_OBJS = \
 
 QUEST_OBJS = quests/template.o quests/state.o quests/cartography.o quests/notify.o quests/commands.o quests/crusade.o
 
-O_FILES = affect.o ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_pub_society.o act_wiz.o \
+O_FILES = affect.o ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_pub_society.o act_wiz.o npc_dialogue.o \
 	  areachk.o board.o build.o buildare.o buildtab.o caravan.o clutch.o comm.o hotreboot.o login.o socket.o prompt.o \
 	  const.o const_color.o const_class.o const_race.o const_clan.o const_exp.o const_liq.o const_pub_society.o \
 	  damage.o cloak.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
@@ -170,7 +173,7 @@ O_FILES = affect.o ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o ac
 	  save/save.o save/save_players.o save/save_objects.o save/save_mobs.o save/save_areas.o \
 	  save/save_area_files.o save/save_rulers.o save/save_socials.o save/save_sysdata.o save/save_notes.o \
 	  scheck.o skills.o skills_chi.o skills_combo.o skills_obj.o skills_poison.o special.o spell_dam.o spendqp.o ssm.o \
-	  stance.o strfuns.o tables.o trigger.o update.o visibility.o weapon_bond.o wizutil.o \
+	  skills_sentinel.o stance.o strfuns.o tables.o trigger.o update.o visibility.o weapon_bond.o wizutil.o \
 	  write.o $(AI_SPEC_SRCS) $(SPELL_OBJS) $(SKILL_OBJS)
 
 # Source files for linting (all .c and .h excluding third-party sha256 and build artifacts)

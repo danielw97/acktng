@@ -67,4 +67,5 @@ void do_mindoverbody(CHAR_DATA *ch, char *argument)
    affect_to_char(ch, &af);
    act("$n begins to focus on mind over body.", ch, NULL, NULL, TO_ROOM);
    send_to_char("You begin to focus on mind over body.\n\r", ch);
+   WAIT_STATE(ch, skill_table[gsn_mindoverbody].beats);
 }

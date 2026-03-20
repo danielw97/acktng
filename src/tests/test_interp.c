@@ -21,8 +21,9 @@ struct cmd_type
    short flags; /* CMD_FLAG_* bitmask */
 };
 
-/* Must match config.h CMD_FLAG_NINJA_OK (BIT_1 = 1) */
+/* Must match config.h CMD_FLAG_NINJA_OK (BIT_1 = 1), CMD_FLAG_WAIT (BIT_2 = 2) */
 #define CMD_FLAG_NINJA_OK 1
+#define CMD_FLAG_WAIT     2
 
 extern const struct cmd_type cmd_table[];
 
@@ -136,6 +137,63 @@ static void test_all_commands_have_handler(void)
    }
 }
 
+/*
+ * Commands that introduce a wait state must have CMD_FLAG_WAIT set.
+ */
+static void test_wait_flag_set_on_wait_state_commands(void)
+{
+   const char *wait_cmds[] = {
+      "north", "south", "east", "west", "up", "down",
+      "cast", "kill", "murder", "backstab", "bs",
+      "kick", "bash", "punch", "trip", "dirt",
+      "charge", "fleche", "holystrike",
+      "morale", "leadership", "stun",
+      "checkpoint break", "road sweep", "dunmar's call", "interior discipline",
+      NULL
+   };
+   int i;
+
+   for (i = 0; wait_cmds[i] != NULL; i++)
+   {
+      int idx = find_cmd(wait_cmds[i]);
+      if (idx < 0)
+      {
+         fprintf(stderr, "FAIL: wait command \"%s\" not found in cmd_table\n", wait_cmds[i]);
+         assert(0);
+      }
+      if (!(cmd_table[idx].flags & CMD_FLAG_WAIT))
+      {
+         fprintf(stderr, "FAIL: command \"%s\" missing CMD_FLAG_WAIT\n", wait_cmds[i]);
+         assert(0);
+      }
+   }
+}
+
+/*
+ * Commands that should NOT queue must NOT have CMD_FLAG_WAIT.
+ */
+static void test_wait_flag_absent_from_instant_commands(void)
+{
+   const char *instant_cmds[] = {"look", "score", "say", "inventory", "flee", "recall",
+                                  "help", "who", "quit", NULL};
+   int i;
+
+   for (i = 0; instant_cmds[i] != NULL; i++)
+   {
+      int idx = find_cmd(instant_cmds[i]);
+      if (idx < 0)
+      {
+         fprintf(stderr, "FAIL: command \"%s\" not found in cmd_table\n", instant_cmds[i]);
+         assert(0);
+      }
+      if (cmd_table[idx].flags & CMD_FLAG_WAIT)
+      {
+         fprintf(stderr, "FAIL: command \"%s\" unexpectedly has CMD_FLAG_WAIT\n", instant_cmds[i]);
+         assert(0);
+      }
+   }
+}
+
 int main(void)
 {
    test_no_duplicate_commands();
@@ -143,6 +201,8 @@ int main(void)
    test_ninja_flag_absent_from_ordinary_commands();
    test_sentinel_terminates_table();
    test_all_commands_have_handler();
+   test_wait_flag_set_on_wait_state_commands();
+   test_wait_flag_absent_from_instant_commands();
    puts("test_interp: all tests passed");
    return 0;
 }

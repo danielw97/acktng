@@ -60,6 +60,8 @@
 #include "globals.h"
 #include "cursor.h"
 
+bool command_has_wait_flag args((CHAR_DATA * ch, const char *argument));
+
 /*
  * Socket and TCP/IP stuff.
  */
@@ -89,6 +91,8 @@ void stop_idling(CHAR_DATA *ch);
 void new_descriptor(int control);
 void init_descriptor(DESCRIPTOR_DATA *dnew, int desc);
 bool read_from_descriptor(DESCRIPTOR_DATA *d);
+bool write_websocket_frame(DESCRIPTOR_DATA *d, unsigned char opcode, const unsigned char *payload,
+                           size_t payload_len);
 
 DESCRIPTOR_DATA *d_next; /* Next descriptor in loop      */
 
@@ -380,6 +384,12 @@ bool handle_websocket_handshake(DESCRIPTOR_DATA *d)
    memmove(d->inbuf, end_headers + 4, d->inbuf_len);
    d->inbuf[d->inbuf_len] = '\0';
 
+   {
+      const char *music_cmd =
+          "{\"type\":\"music\",\"action\":\"play\",\"url\":\"/web/mp3/theme.mp3\"}";
+      write_websocket_frame(d, 0x1, (const unsigned char *)music_cmd, strlen(music_cmd));
+   }
+
    queue_login_greeting(d);
    return TRUE;
 }
@@ -415,6 +425,12 @@ static size_t sanitize_websocket_text_payload(const unsigned char *src, size_t s
             i += 3;
             continue;
          }
+      }
+
+      if (src[i] == '\r')
+      {
+         i++;
+         continue; /* strip carriage return */
       }
 
       dst[j++] = src[i++];
@@ -728,13 +744,25 @@ void game_loop(int control)
             }
          }
 
+         /* Read the next command before checking wait, so we can inspect it. */
+         read_from_buffer(d);
+
          if (d->character != NULL && d->character->wait > 0)
          {
             --d->character->wait;
-            continue;
+
+            /*
+             * If the pending command introduces a wait state, keep it queued.
+             * incomm is left non-empty; read_from_buffer will not overwrite it
+             * on the next pulse, so the command stays queued until wait expires.
+             * Non-wait-state commands (look, score, say, etc.) fall through and
+             * execute immediately.
+             */
+            if (d->incomm[0] != '\0' && d->connected == CON_PLAYING
+                && command_has_wait_flag(d->character, d->incomm))
+               continue;
          }
 
-         read_from_buffer(d);
          if (d->incomm[0] != '\0')
          {
             d->fcommand = TRUE;

@@ -68,7 +68,7 @@ void do_fist_of_the_interior_form(CHAR_DATA *ch, char *argument)
           "Form!@@N",
           ch, NULL, victim, TO_CHAR);
 
-      calculate_damage(ch, victim, dam, gsn_fist_interior, ELE_PHYSICAL | ELE_HOLY, TRUE);
+      calculate_damage(ch, victim, dam, gsn_fist_interior, ELE_PHYSICAL, TRUE);
    }
    else
    {

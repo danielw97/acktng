@@ -28,38 +28,36 @@
 #include "globals.h"
 
 const struct clan_type clan_table[MAX_CLAN] = {
-    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+    /* 0: No clan */
+    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1, -1, -1}},
 
-    },
+    /* 1: The Lantern Accord - Midgaard civic continuity */
+    {"The Lantern Accord", "@@yACCRD@@N", 0, 0, "N/A", " ", {-1, -1, -1, -1, -1, -1}},
 
-    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+    /* 2: The Open Ledger - Archive reform and truth-seekers */
+    {"The Open Ledger", "@@WLEDGR@@N", 0, 0, "N/A", " ", {-1, -1, -1, -1, -1, -1}},
 
-    },
+    /* 3: The Jade Compact - Kowloon delta commerce */
+    {"The Jade Compact", "@@aJADEC@@N", 0, 0, "N/A", " ", {-1, -1, -1, -1, -1, -1}},
 
-    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+    /* 4: The Ember Speakers - Ash Cult volcanic theology */
+    {"The Ember Speakers", "@@REMBER@@N", 0, 0, "N/A", " ", {-1, -1, -1, -1, -1, -1}},
 
-    },
+    /* 5: The Red Sand Accounts - Mafdet maritime debt enforcement */
+    {"The Red Sand Accounts", "@@eRDSND@@N", 0, 0, "N/A", " ", {-1, -1, -1, -1, -1, -1}},
 
-    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+    /* 6: The Charter Wardens - Kiess anti-secrecy legal reform */
+    {"The Charter Wardens", "@@lCHRTR@@N", 0, 0, "N/A", " ", {-1, -1, -1, -1, -1, -1}},
 
-    },
+    /* 7: The Jackal Synod - Desert death-rite toll enforcement */
+    {"The Jackal Synod", "@@dJCKAL@@N", 0, 0, "N/A", " ", {-1, -1, -1, -1, -1, -1}},
 
-    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
+    /* 8: The Root Covenant - Thornwood substrate theology */
+    {"The Root Covenant", "@@gROOTC@@N", 0, 0, "N/A", " ", {-1, -1, -1, -1, -1, -1}},
 
-    },
+    /* 9: The Waystone Circle - Desert road preservation */
+    {"The Waystone Circle", "@@GWYSTN@@N", 0, 0, "N/A", " ", {-1, -1, -1, -1, -1, -1}},
 
-    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
-
-    },
-
-    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
-
-    },
-    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
-
-    },
-    {"None", "None ", 0, 0, "N/A", " ", {-1, -1, -1, -1}
-
-    },
-
+    /* 10: The Oathbound March - Multi-race recognition alliance */
+    {"The Oathbound March", "@@pOATHB@@N", 0, 0, "N/A", " ", {-1, -1, -1, -1, -1, -1}},
 };

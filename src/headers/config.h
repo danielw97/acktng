@@ -65,12 +65,16 @@
 #define MAX_MORT_COMBO 4
 
 #define MAX_CLAN_EQ 6 /* Number of clan eq items */
-#define MAX_COLOR 16  /* eg look, prompt, shout */
-#define MAX_ANSI 28   /* eg red, black, etc (was 11) */
+
+#define CLANEQ_WEIGHT_MELEE 8
+#define CLANEQ_WEIGHT_CASTER 3
+#define CLANEQ_WEIGHT_TANK 13
+#define MAX_COLOR 16 /* eg look, prompt, shout */
+#define MAX_ANSI 28  /* eg red, black, etc (was 11) */
 #define MAX_ALIASES 6
 #define MAX_IGNORES 3
 #define MAX_RACE 10
-#define MAX_CLAN 9     /* number of clans */
+#define MAX_CLAN 11    /* number of clans (0=None + 10 clans) */
 #define EXP_LEVEL 1000 /* exp per level */
 #define MAX_SKILL 999
 #define MAX_CLASS 6
@@ -132,9 +136,16 @@
 #define CLASS_CRU 21
 #define CLASS_KIN 22
 #define CLASS_MAR 23
+/* Druid lineage (appended, non-contiguous with tier ranges) */
+#define CLASS_DRU 24
+#define CLASS_THO 25
+#define CLASS_WIL 26
+#define CLASS_HIE 27
+/* Sentinel lineage (appended) */
+#define CLASS_SEN 28
 
 /* Total class count across all tiers */
-#define MAX_TOTAL_CLASS (MAX_CLASS + MAX_REMORT + MAX_CLASS)
+#define MAX_TOTAL_CLASS 29
 
 /* Helper macros to determine which tier a class ID belongs to */
 #define IS_MORTAL_CLASS(c) (gclass_table[c].tier == MORTAL)
@@ -246,6 +257,7 @@
 
 /* Command flags (cmd_type.flags) */
 #define CMD_FLAG_NINJA_OK BIT_1 /* command does not break ninja stance */
+#define CMD_FLAG_WAIT     BIT_2 /* command introduces wait state; queue while ch->wait > 0 */
 
 /*
  * Well known mob virtual numbers.
@@ -413,6 +425,8 @@
 #define SHADOW_SHIELD 3
 #define ICE_SHIELD 4
 #define PSI_SHIELD 5
+#define HOLY_SHIELD 6
+#define ARCANE_SHIELD 7
 
 /* These are for skill_table lookup funcs... to save writing 2 functions */
 #define RETURN_BEST_LEVEL 1
@@ -966,6 +980,61 @@
 #define ACT_NOASSIST BIT_31
 #define ACT_DAYONLY BIT_32   /* Mob only active during day */
 #define ACT_NIGHTONLY BIT_33 /* Mob only active during night */
+#define BIT_34 8589934592ULL
+#define ACT_AI_DIALOGUE BIT_34 /* NPC responds to say via LLM */
+
+/* NPC Dialogue AI (tng-ai service) */
+#define TNGAI_URL "http://192.168.1.111:8000/v1/chat"
+#define TNGAI_MODEL "llama-3.3-70b-versatile"
+#define TNGAI_TIMEOUT 5L     /* socket timeout in seconds */
+#define TNGAI_MAX_TOKENS 100 /* token cap for NPC responses (1-3 sentences) */
+#define MAX_DIALOGUE_TURNS 8
+#define MAX_REQUEST_TURNS 9         /* history + new user turn */
+#define DIALOGUE_HISTORY_EXPIRY 300 /* seconds of silence before history resets */
+
+/* Knowledge topic bitmask (ai_knowledge field) */
+#define KNOW_WEAPONS (1 << 0)
+#define KNOW_TRADE (1 << 1)
+#define KNOW_MAGIC (1 << 2)
+#define KNOW_TEMPLE (1 << 3)
+#define KNOW_UNDERWORLD (1 << 4)
+#define KNOW_HARBOR (1 << 5)
+#define KNOW_GUARD (1 << 6)
+#define KNOW_HISTORY (1 << 7)
+#define KNOW_WILDERNESS (1 << 8)
+#define KNOW_POLITICS (1 << 9)
+#define KNOW_HELPS    (1 << 10) /* search help/shelp files at AI dispatch time */
+#define NUM_KNOW_FLAGS 10
+
+/* City indices for knowledge lookup table */
+#define CITY_GLOBAL 0
+#define CITY_MIDGAARD 1
+#define CITY_KOWLOON 2
+#define CITY_KIESS 3
+#define CITY_RAKUEN 4
+#define CITY_MAFDET 5
+#define NUM_CITIES 6
+
+/* City vnum ranges (room vnums) used by city_for_room() */
+#define MIDGAARD_VNUM_MIN 1100
+#define MIDGAARD_VNUM_MAX 1699
+#define KIESS_VNUM_MIN 3650
+#define KIESS_VNUM_MAX 3749
+#define KOWLOON_VNUM_MIN 3750
+#define KOWLOON_VNUM_MAX 3849
+#define MAFDET_VNUM_MIN 3850
+#define MAFDET_VNUM_MAX 3949
+#define RAKUEN_VNUM_MIN 4550
+#define RAKUEN_VNUM_MAX 4749
+
+/* City accent constants (accent field on MOB_INDEX_DATA) */
+#define ACCENT_NONE 0
+#define ACCENT_MIDGAARD 1 /* clipped bureaucratic, ledger idiom */
+#define ACCENT_KOWLOON 2  /* terse, elliptic, proverb-laden */
+#define ACCENT_MAFDET 3   /* formal titles, trade jargon, oath references */
+#define ACCENT_KIESS 4    /* measured, watchful, frontier caution */
+#define ACCENT_RAKUEN 5   /* warm but weary, garden metaphors */
+#define MAX_ACCENT 6
 
 /* build bits for OLC -S- */
 #define ACT_BUILD_NOWT 0  /* not doing anything   */
@@ -1324,6 +1393,7 @@
 #define HELP_DIR "../help/"
 #define SHELP_DIR "../shelp/"
 #define LORE_DIR "../lore/"
+#define KNOWLEDGE_DIR "../data/knowledge/"
 
 /*
  * Lore perspective flags -- used on both lore entries and NPCs.

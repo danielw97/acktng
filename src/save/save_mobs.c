@@ -296,9 +296,17 @@ void fread_corpse(FILE *fp)
          {
             int iValue;
             int sn;
+            const char *spell_word;
 
             iValue = fread_number(fp);
-            sn = skill_lookup(fread_word(fp));
+            spell_word = fread_word(fp);
+            sn = skill_lookup(spell_word);
+            if (sn < 0)
+            {
+               const char *new_name = skill_name_legacy(spell_word);
+               if (new_name != NULL)
+                  sn = skill_lookup(new_name);
+            }
             if (iValue < 0 || iValue > 3)
             {
                monitor_chan("Fread_obj: bad iValue ", MONITOR_BAD);

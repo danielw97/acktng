@@ -145,7 +145,7 @@ DECLARE_SPELL_FUN(spell_bless);
 DECLARE_SPELL_FUN(spell_blindness);
 DECLARE_SPELL_FUN(spell_bloody_tears);
 DECLARE_SPELL_FUN(spell_burning_hands);
-DECLARE_SPELL_FUN(spell_call_lightning);
+DECLARE_SPELL_FUN(spell_shard_ward);
 DECLARE_SPELL_FUN(spell_calm);
 DECLARE_SPELL_FUN(spell_cause_critical);
 DECLARE_SPELL_FUN(spell_cause_light);
@@ -153,9 +153,9 @@ DECLARE_SPELL_FUN(spell_cause_serious);
 DECLARE_SPELL_FUN(spell_change_sex);
 DECLARE_SPELL_FUN(spell_charm_person);
 DECLARE_SPELL_FUN(spell_chill_touch);
-DECLARE_SPELL_FUN(spell_color_spray);
+DECLARE_SPELL_FUN(spell_crystal_burst);
 DECLARE_SPELL_FUN(spell_continual_light);
-DECLARE_SPELL_FUN(spell_control_weather);
+DECLARE_SPELL_FUN(spell_seal_calculus);
 DECLARE_SPELL_FUN(spell_cure_blindness);
 DECLARE_SPELL_FUN(spell_cure_critical);
 DECLARE_SPELL_FUN(spell_cure_light);
@@ -174,13 +174,13 @@ DECLARE_SPELL_FUN(spell_dimension_blade);
 DECLARE_SPELL_FUN(spell_dispel_evil);
 DECLARE_SPELL_FUN(spell_dispel_magic);
 DECLARE_SPELL_FUN(spell_dispel_object);
-DECLARE_SPELL_FUN(spell_earthquake);
+DECLARE_SPELL_FUN(spell_jackal_verdict);
 DECLARE_SPELL_FUN(spell_enchant_weapon);
 DECLARE_SPELL_FUN(spell_encumber);
 DECLARE_SPELL_FUN(spell_enhance_weapon);
 DECLARE_SPELL_FUN(spell_energy_drain);
-DECLARE_SPELL_FUN(spell_faerie_fire);
-DECLARE_SPELL_FUN(spell_faerie_fog);
+DECLARE_SPELL_FUN(spell_prism_mark);
+DECLARE_SPELL_FUN(spell_ledger_mark);
 DECLARE_SPELL_FUN(spell_fighting_trance);
 DECLARE_SPELL_FUN(spell_fireball);
 DECLARE_SPELL_FUN(spell_fire_blade);
@@ -220,7 +220,7 @@ DECLARE_SPELL_FUN(spell_regen);
 DECLARE_SPELL_FUN(spell_remove_curse);
 DECLARE_SPELL_FUN(spell_sanctuary);
 DECLARE_SPELL_FUN(spell_see_magic);
-DECLARE_SPELL_FUN(spell_sense_evil);
+DECLARE_SPELL_FUN(spell_pale_imprint);
 DECLARE_SPELL_FUN(spell_shocking_grasp);
 DECLARE_SPELL_FUN(spell_shield);
 DECLARE_SPELL_FUN(spell_sleep);
@@ -246,7 +246,7 @@ DECLARE_SPELL_FUN(spell_visit);
 DECLARE_SPELL_FUN(spell_chain_lightning);
 DECLARE_SPELL_FUN(spell_phobia);
 DECLARE_SPELL_FUN(spell_barrier);
-DECLARE_SPELL_FUN(spell_mindflame);
+DECLARE_SPELL_FUN(spell_recurrence_loop);
 DECLARE_SPELL_FUN(spell_laserbolt);
 DECLARE_SPELL_FUN(spell_hellspawn);
 DECLARE_SPELL_FUN(spell_travel);
@@ -319,7 +319,7 @@ DECLARE_SPELL_FUN(spell_thought_vise); /* 670 */
 DECLARE_SPELL_FUN(spell_black_curse);
 DECLARE_SPELL_FUN(spell_spirit_curse);
 DECLARE_SPELL_FUN(spell_rictus_curse);
-DECLARE_SPELL_FUN(spell_kinetic_reversion);
+DECLARE_SPELL_FUN(spell_predictive_collapse);
 DECLARE_SPELL_FUN(spell_cloak_misery);
 DECLARE_SPELL_FUN(spell_cloak_drain);
 DECLARE_SPELL_FUN(spell_cloak_iron);
@@ -367,3 +367,53 @@ DECLARE_SPELL_FUN(spell_momentum_drain);       /* slot 763 */
 DECLARE_SPELL_FUN(spell_entropic_shield);      /* slot 764 */
 DECLARE_SPELL_FUN(spell_cognitive_disruption); /* slot 765 */
 DECLARE_SPELL_FUN(spell_predictive_collapse);  /* slot 766 */
+DECLARE_SPELL_FUN(spell_psishield);            /* slot 767 */
+DECLARE_SPELL_FUN(spell_arcaneshield);         /* slot 768 */
+DECLARE_SPELL_FUN(spell_cloak_precision);      /* slot 769 */
+DECLARE_SPELL_FUN(spell_holyshield);           /* slot 770 */
+DECLARE_SPELL_FUN(spell_cloak_valor);          /* slot 771 */
+
+/* Druid spells (slots 800+) */
+DECLARE_SPELL_FUN(spell_thornlash);
+DECLARE_SPELL_FUN(spell_nettlesting);
+DECLARE_SPELL_FUN(spell_rockburst);
+DECLARE_SPELL_FUN(spell_wither);
+DECLARE_SPELL_FUN(spell_briar_volley);
+DECLARE_SPELL_FUN(spell_blight_touch);
+DECLARE_SPELL_FUN(spell_tremor);
+DECLARE_SPELL_FUN(spell_creeping_rot);
+DECLARE_SPELL_FUN(spell_fissure);
+DECLARE_SPELL_FUN(spell_fungal_eruption);
+DECLARE_SPELL_FUN(spell_quake);
+DECLARE_SPELL_FUN(spell_strangling_vines);
+DECLARE_SPELL_FUN(spell_rot);
+DECLARE_SPELL_FUN(spell_upheaval);
+DECLARE_SPELL_FUN(spell_sap_mend);
+DECLARE_SPELL_FUN(spell_mend_wounds);
+DECLARE_SPELL_FUN(spell_purge_toxin);
+DECLARE_SPELL_FUN(spell_verdant_mend);
+DECLARE_SPELL_FUN(spell_heartwood_balm);
+DECLARE_SPELL_FUN(spell_primal_restoration);
+DECLARE_SPELL_FUN(spell_sap_transfusion);
+DECLARE_SPELL_FUN(spell_barkskin);
+DECLARE_SPELL_FUN(spell_roothold);
+DECLARE_SPELL_FUN(spell_thornhide);
+DECLARE_SPELL_FUN(spell_ironpine_vigor);
+DECLARE_SPELL_FUN(spell_gift_of_the_forest);
+DECLARE_SPELL_FUN(spell_natures_ward);
+DECLARE_SPELL_FUN(spell_ancient_bark);
+DECLARE_SPELL_FUN(spell_tangling_roots);
+DECLARE_SPELL_FUN(spell_sap_strength);
+DECLARE_SPELL_FUN(spell_spore_cloud);
+DECLARE_SPELL_FUN(spell_wither_limbs);
+DECLARE_SPELL_FUN(spell_entangling_growth);
+DECLARE_SPELL_FUN(spell_curse_of_decay);
+DECLARE_SPELL_FUN(spell_creeping_blight);
+DECLARE_SPELL_FUN(spell_forestsight);
+DECLARE_SPELL_FUN(spell_sense_life);
+DECLARE_SPELL_FUN(spell_know_terrain);
+DECLARE_SPELL_FUN(spell_passage);
+DECLARE_SPELL_FUN(spell_greensight);
+DECLARE_SPELL_FUN(spell_rootway);
+DECLARE_SPELL_FUN(spell_call_of_the_wild);
+DECLARE_SPELL_FUN(spell_living_bridge);

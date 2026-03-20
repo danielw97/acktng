@@ -155,4 +155,6 @@ void spec_hermit_archon_damage(CHAR_DATA *ch, int element, int dam);
 void spec_sanctum_keeper_damage(CHAR_DATA *ch, int element, int dam);
 void spec_cinderteeth_anchor_damage(CHAR_DATA *ch, int element, int dam);
 
+DECLARE_SPEC_FUN(spec_mudschool_guide);
+
 #endif

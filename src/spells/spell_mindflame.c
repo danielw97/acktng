@@ -32,10 +32,11 @@
 #include "tables.h"
 #include "magic.h"
 
-bool spell_mindflame(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+bool spell_recurrence_loop(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    /*
-    * Psi Multiple Attack - screws up all those affected
+    * Void Citadel recurrence technology — iterative memory flooding that
+    * collapses cognitive resistance through repetition rather than direct force.
     */
 
    CHAR_DATA *vch;
@@ -43,13 +44,14 @@ bool spell_mindflame(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    if (obj == NULL)
    {
-      send_to_char("You initiate a mindflame attack!!\n\r", ch);
-      act("$n concentrates, and initiates a mindlame attack!", ch, NULL, NULL, TO_ROOM);
+      send_to_char("You initiate the recurrence loop — memory floods against them!\n\r", ch);
+      act("$n's eyes go distant as $e initiates the Void Citadel's recurrence loop!", ch, NULL,
+          NULL, TO_ROOM);
    }
    else
    {
-      act("$p glows, and initiates a mindflame attack!", ch, obj, NULL, TO_ROOM);
-      act("$p glows, and initiates a mindflame attack!", ch, obj, NULL, TO_CHAR);
+      act("$p pulses as the recurrence loop floods outward from $n!", ch, obj, NULL, TO_ROOM);
+      act("$p pulses as the recurrence loop floods outward!", ch, obj, NULL, TO_CHAR);
    }
    CREF(vch_next, CHAR_NEXT);
    for (vch = first_char; vch != NULL; vch = vch_next)
@@ -61,8 +63,12 @@ bool spell_mindflame(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       {
          if (vch != ch && (IS_NPC(ch) ? !IS_NPC(vch) : IS_NPC(vch)))
          {
-            act("$n rolls on the floor, clutching $s head in pain!", vch, NULL, NULL, TO_ROOM);
-            send_to_char("You roll on the floor, clutching your head in pain!\n\r", vch);
+            act("$n staggers as the recurrence loop floods $s mind with iterating memory!", vch,
+                NULL, NULL, TO_ROOM);
+            send_to_char(
+                "The same memory floods through your mind again — and again — resistance "
+                "collapsing!\n\r",
+                vch);
             sp_damage(obj, ch, vch, (get_psuedo_level(ch) / 2) + dice(6, 12),
                       ELEMENT_MENTAL | NO_REFLECT | NO_ABSORB, sn, TRUE);
          }
@@ -70,7 +76,7 @@ bool spell_mindflame(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       }
 
       if (vch->in_room->area == ch->in_room->area)
-         send_to_char("You notice a slight burning feeling in your mind.\n\r", vch);
+         send_to_char("A distant repetitive pressure brushes the edge of your mind.\n\r", vch);
    }
    CUREF(vch_next);
    return TRUE;

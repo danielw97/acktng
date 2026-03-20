@@ -210,6 +210,20 @@ A shadow hound lurks here in the darkness.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
+#65398
+caravan drover teamster trader~
+a caravan drover~
+A caravan drover stands here, ready to move goods.
+~
+~
+1 0 0 S
+20 1
+0 0 2 2
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
 #65402

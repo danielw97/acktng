@@ -53,8 +53,10 @@ bool fLogAll = FALSE;
 
 /*
  * Convenience macros for the command table.
- * CMD       - normal command (flags = 0)
- * CMD_NINJA - command that does not break ninja stance (flags = CMD_FLAG_NINJA_OK)
+ * CMD            - normal command (flags = 0)
+ * CMD_NINJA      - command that does not break ninja stance (flags = CMD_FLAG_NINJA_OK)
+ * CMD_WAIT       - command that introduces wait state; queued while ch->wait > 0
+ * CMD_NINJA_WAIT - CMD_NINJA + CMD_WAIT
  */
 #define CMD(name, fun, pos, lvl, log, type, show)                                                  \
    {                                                                                               \
@@ -63,6 +65,14 @@ bool fLogAll = FALSE;
 #define CMD_NINJA(name, fun, pos, lvl, log, type, show)                                            \
    {                                                                                               \
       name, fun, pos, lvl, log, type, show, CMD_FLAG_NINJA_OK                                      \
+   }
+#define CMD_WAIT(name, fun, pos, lvl, log, type, show)                                             \
+   {                                                                                               \
+      name, fun, pos, lvl, log, type, show, CMD_FLAG_WAIT                                          \
+   }
+#define CMD_NINJA_WAIT(name, fun, pos, lvl, log, type, show)                                       \
+   {                                                                                               \
+      name, fun, pos, lvl, log, type, show, CMD_FLAG_NINJA_OK | CMD_FLAG_WAIT                      \
    }
 
 /*
@@ -76,12 +86,12 @@ const struct cmd_type cmd_table[] = {
     /*
      * command table modified by Aeria
      */
-    CMD("north", do_north, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
-    CMD("east", do_east, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
-    CMD("south", do_south, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
-    CMD("west", do_west, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
-    CMD("up", do_up, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
-    CMD("down", do_down, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
+    CMD_WAIT("north", do_north, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
+    CMD_WAIT("east", do_east, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
+    CMD_WAIT("south", do_south, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
+    CMD_WAIT("west", do_west, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
+    CMD_WAIT("up", do_up, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
+    CMD_WAIT("down", do_down, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("map", do_mapper, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
 
     /*
@@ -89,12 +99,12 @@ const struct cmd_type cmd_table[] = {
      * Placed here so one and two letter abbreviations work.
      */
     CMD("buy", do_buy, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
-    CMD("cast", do_cast, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
+    CMD_WAIT("cast", do_cast, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("exits", do_exits, POS_RESTING, 0, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS),
     CMD("get", do_get, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("gain", do_gain, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("inventory", do_inventory, POS_DEAD, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
-    CMD_NINJA("kill", do_kill, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
+    CMD_NINJA_WAIT("kill", do_kill, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("look", do_look, POS_RESTING, 0, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS),
     CMD("rest", do_rest, POS_RESTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("sleep", do_sleep, POS_SLEEPING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
@@ -121,6 +131,7 @@ const struct cmd_type cmd_table[] = {
     CMD("consider", do_consider, POS_RESTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("credits", do_credits, POS_DEAD, 0, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS),
     CMD("cwhere", do_cwhere, POS_DEAD, CLAN_ONLY, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS),
+    CMD("claneq", do_claneq, POS_STANDING, CLAN_ONLY, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("delete", do_delete, POS_STANDING, 0, LOG_NORMAL, C_TYPE_CONFIG, C_SHOW_ALWAYS),
     CMD("diagnose", do_diagnose, POS_RESTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("equipment", do_equipment, POS_DEAD, 0, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS),
@@ -179,7 +190,7 @@ const struct cmd_type cmd_table[] = {
     CMD("title", do_title, POS_DEAD, 0, LOG_NORMAL, C_TYPE_CONFIG, C_SHOW_ALWAYS),
     CMD("wimpy", do_wimpy, POS_DEAD, 0, LOG_NORMAL, C_TYPE_CONFIG, C_SHOW_ALWAYS),
     CMD("worth", do_worth, POS_DEAD, 0, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS),
-    CMD("stance", do_stance, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
+    CMD_WAIT("stance", do_stance, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("email", do_email, POS_RESTING, 20, LOG_NORMAL, C_TYPE_CONFIG, C_SHOW_ALWAYS),
 
     /*
@@ -227,99 +238,112 @@ const struct cmd_type cmd_table[] = {
      * Combat commands.
      */
     CMD("assist", do_assist, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD_NINJA("backstab", do_backstab, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD_NINJA("bs", do_backstab, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("dirt", do_dirt, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("trip", do_trip, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_NINJA_WAIT("backstab", do_backstab, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_NINJA_WAIT("bs", do_backstab, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("dirt", do_dirt, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("ashfall strike", do_ashfall_strike, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("harbor dust", do_harbor_dust, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("trip", do_trip, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
     CMD("smash", do_smash, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("bash", do_bash, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("berserk", do_beserk, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("circle", do_circle, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("detox", do_detox, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("disarm", do_disarm, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("bash", do_bash, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("berserk", do_beserk, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("circle", do_circle, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("reach remedy", do_detox, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("disarm", do_disarm, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
     CMD("flee", do_flee, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("headbutt", do_headbutt, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("kick", do_kick, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("knee", do_knee, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("leadership", do_leadership, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("morale", do_morale, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("checkpoint break", do_headbutt, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("kick", do_kick, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("road sweep", do_knee, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("leadership", do_leadership, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("morale", do_morale, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
     CMD("murde", do_murde, POS_FIGHTING, 5, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_NEVER),
-    CMD_NINJA("murder", do_murder, POS_FIGHTING, 5, LOG_ALWAYS, C_TYPE_ACTION, C_SHOW_ALWAYS),
-    CMD("palmstrike", do_palmstrike, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("poison:arsenic", do_poison_arsenic, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+    CMD_NINJA_WAIT("murder", do_murder, POS_FIGHTING, 5, LOG_ALWAYS, C_TYPE_ACTION, C_SHOW_ALWAYS),
+    CMD_WAIT("palmstrike", do_palmstrike, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("poison:arsenic", do_poison_arsenic, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
         C_SHOW_SKILL),
-    CMD("poison:quinine", do_poison_quinine, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+    CMD_WAIT("poison:quinine", do_poison_quinine, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
         C_SHOW_SKILL),
-    CMD("poison:nightshade", do_poison_nightshade, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+    CMD_WAIT("poison:nightshade", do_poison_nightshade, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
         C_SHOW_SKILL),
-    CMD("punch", do_punch, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("rescue", do_rescue, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("punch", do_punch, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("rescue", do_rescue, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
     CMD("revenant", do_revenant, POS_RESTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
-    CMD("bond", do_bond, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
-    CMD("stun", do_stun, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("frenzy", do_frenzy, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("charge", do_charge, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("target", do_target, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("warcry", do_warcry, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("riposte", do_riposte, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("anti magic shell", do_anti_magic_shell, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+    CMD_WAIT("bond", do_bond, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
+    CMD_WAIT("stun", do_stun, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("frenzy", do_frenzy, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("charge", do_charge, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("target", do_target, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("dunmar's call", do_warcry, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("riposte", do_riposte, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("anti magic shell", do_anti_magic_shell, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
         C_SHOW_SKILL),
-    CMD("chi surge", do_chi_surge, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("breath of endurance", do_breath_of_endurance, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+    CMD_WAIT("chi surge", do_chi_surge, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("breath of endurance", do_breath_of_endurance, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
         C_SHOW_SKILL),
-    CMD("fist of the interior form", do_fist_of_the_interior_form, POS_FIGHTING, 0, LOG_NORMAL,
+    CMD_WAIT("fist of the interior form", do_fist_of_the_interior_form, POS_FIGHTING, 0, LOG_NORMAL,
         C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("momentum chain", do_momentum_chain, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+    CMD_WAIT("momentum chain", do_momentum_chain, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
         C_SHOW_SKILL),
-    CMD("iron resolve", do_iron_resolve, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("overwhelming assault", do_overwhelming_assault, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+    CMD_WAIT("veteran's cadence", do_veterans_cadence, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("overwhelming assault", do_overwhelming_assault, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
         C_SHOW_SKILL),
-    CMD("oathshield", do_oathshield, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("sanctified strike", do_sanctified_strike, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+    CMD_WAIT("oathshield", do_oathshield, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("sanctified strike", do_sanctified_strike, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
         C_SHOW_SKILL),
-    CMD("shadow reading", do_shadow_reading, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+    CMD_WAIT("shadow reading", do_shadow_reading, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
         C_SHOW_SKILL),
-    CMD("hex ward", do_hex_ward, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("reflex disruption", do_reflex_disruption, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+    CMD_WAIT("hex ward", do_hex_ward, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("reflex disruption", do_reflex_disruption, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
         C_SHOW_SKILL),
-    CMD("holystrike", do_holystrike, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("shieldblock", do_shieldblock, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("chiblock", do_chiblock, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("chakra", do_chakra, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("spinfist", do_spinfist, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("pummel", do_pummel, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("aurabolt", do_aurabolt, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("phantomfist", do_phantomfist, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("mindoverbody", do_mindoverbody, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("flurry", do_flurry, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("fleche", do_fleche, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("holystrike", do_holystrike, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("shieldblock", do_shieldblock, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("chiblock", do_chiblock, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("chakra", do_chakra, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("spinfist", do_spinfist, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("pummel", do_pummel, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("aurabolt", do_aurabolt, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("phantomfist", do_phantomfist, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("interior discipline", do_mindoverbody, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("flurry", do_flurry, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("fleche", do_fleche, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
     /* Cipher skills */
-    CMD_NINJA("garrote", do_garrote, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("feign death", do_feign_death, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("shadow step", do_shadow_step, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("mark target", do_mark_target, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("conceal", do_conceal, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("set trap", do_set_trap, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("read intent", do_read_intent, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_NINJA_WAIT("reach silence", do_garrote, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("dissolution protocol", do_feign_death, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("gap transit", do_shadow_step, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("asset flag", do_mark_target, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("gap hold", do_conceal, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("seam snare", do_set_trap, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("read intent", do_read_intent, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
     /* Warden skills */
-    CMD("cleave", do_cleave, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("fortify", do_fortify, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("taunt", do_taunt, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("rend", do_rend, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("field patch", do_field_patch, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("weapon mastery", do_weapon_mastery, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION,
+    CMD_WAIT("cleave", do_cleave, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("seven shade hold", do_fortify, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("charter challenge", do_taunt, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("rend", do_rend, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("field patch", do_field_patch, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("weapon mastery", do_weapon_mastery, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION,
         C_SHOW_SKILL),
     /* Pugilist skills */
-    CMD("grapple", do_grapple, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("choke hold", do_choke_hold, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("leg sweep", do_leg_sweep, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("iron skin", do_iron_skin, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("roll with blow", do_roll_with_blow, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION,
+    CMD_WAIT("grapple", do_grapple, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("choke hold", do_choke_hold, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("leg sweep", do_leg_sweep, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("iron skin", do_iron_skin, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("roll with blow", do_roll_with_blow, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION,
         C_SHOW_SKILL),
-    CMD("pressure point", do_pressure_point, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+    CMD_WAIT("applied understanding", do_pressure_point, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
         C_SHOW_SKILL),
-    CMD("feint", do_feint, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
-    CMD("conditioning", do_conditioning, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("feint", do_feint, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("cistern discipline", do_conditioning, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    /* Sentinel skills */
+    CMD_WAIT("verdict", do_verdict, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("read opponent", do_read_opponent, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+        C_SHOW_SKILL),
+    CMD_WAIT("binding strike", do_binding_strike, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+        C_SHOW_SKILL),
+    CMD_WAIT("ninth descent", do_ninth_descent, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+        C_SHOW_SKILL),
+    CMD_WAIT("condemn", do_condemn, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("seal testimony", do_seal_testimony, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+        C_SHOW_SKILL),
 
     /*
      * Object manipulation commands.
@@ -328,7 +352,7 @@ const struct cmd_type cmd_table[] = {
     CMD("adapt", do_adapt, POS_STANDING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("auction", do_auction, POS_STANDING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("bid", do_bid, POS_STANDING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
-    CMD("brandish", do_brandish, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
+    CMD_WAIT("brandish", do_brandish, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("cdonate", do_cdonate, POS_RESTING, CLAN_ONLY, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("close", do_close, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("clutch", do_clutch, POS_STANDING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
@@ -343,10 +367,10 @@ const struct cmd_type cmd_table[] = {
     CMD("open", do_open, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
 
     CMD("make", do_make, POS_DEAD, CLAN_ONLY, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
-    CMD("pick", do_pick, POS_RESTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("pick", do_pick, POS_RESTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
     CMD("put", do_put, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("quaff", do_quaff, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
-    CMD("recite", do_recite, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
+    CMD_WAIT("recite", do_recite, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("remove", do_remove, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
     CMD("sedit", do_sedit, POS_DEAD, L_DEI, LOG_ALWAYS, C_TYPE_CONFIG, C_SHOW_NEVER),
     CMD("take", do_get, POS_RESTING, 0, LOG_NORMAL, C_TYPE_OBJECT, C_SHOW_ALWAYS),
@@ -382,7 +406,7 @@ const struct cmd_type cmd_table[] = {
     CMD("sneak", do_sneak, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
     CMD("spells", do_spells, POS_SLEEPING, 0, LOG_NORMAL, C_TYPE_INFO, C_SHOW_ALWAYS),
     CMD("split", do_split, POS_RESTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
-    CMD_NINJA("steal", do_steal, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_NINJA_WAIT("steal", do_steal, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
     CMD("train", do_train, POS_RESTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("visible", do_visible, POS_SLEEPING, 0, LOG_NORMAL, C_TYPE_MISC, C_SHOW_ALWAYS),
     CMD("wake", do_wake, POS_SLEEPING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
@@ -639,6 +663,30 @@ static int find_command(CHAR_DATA *ch, const char *word, bool exact)
          return i;
    }
    return -1;
+}
+
+/*
+ * Returns TRUE if the command in 'argument' has CMD_FLAG_WAIT set,
+ * meaning it should be held in the queue while ch->wait > 0.
+ */
+bool command_has_wait_flag(CHAR_DATA *ch, const char *argument)
+{
+   char word[MAX_INPUT_LENGTH];
+   int cmd;
+
+   /* Skip leading spaces and grab first word */
+   while (*argument == ' ')
+      argument++;
+   argument = one_argument((char *)argument, word);
+
+   if (word[0] == '\0')
+      return FALSE;
+
+   cmd = find_command(ch, word, FALSE);
+   if (cmd < 0)
+      return FALSE;
+
+   return IS_SET(cmd_table[cmd].flags, CMD_FLAG_WAIT);
 }
 
 /*

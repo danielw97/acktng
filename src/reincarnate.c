@@ -2,6 +2,8 @@
 
 int stat_calculated_value(int val, int statcap_bonus);
 void remove_all(CHAR_DATA *ch);
+OBJ_DATA *find_clan_eq(CHAR_DATA *ch);
+void claneq_adjust(OBJ_DATA *obj, CHAR_DATA *ch);
 
 void do_reincarnate(CHAR_DATA *ch, char *argument)
 {
@@ -255,6 +257,20 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
          ch->class_level[ch->class] = 1;
          reset_gain_stats(ch);
          advance_level(ch, ch->class, TRUE);
+
+         /* Reset clan eq to level 1 after reincarnation */
+         if (ch->pcdata->clan > 0)
+         {
+            OBJ_DATA *ceq = find_clan_eq(ch);
+            if (ceq != NULL)
+            {
+               ceq->level = 1;
+               claneq_adjust(ceq, ch);
+               send_to_char(
+                   "@@eYour clan colors fade and reform, diminished by your rebirth.@@N\n\r", ch);
+            }
+         }
+
          do_save(ch, "");
       }
       else

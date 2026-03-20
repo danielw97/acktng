@@ -46,4 +46,5 @@ void do_stun(CHAR_DATA *ch, char *argument)
       return;
    }
    stun(ch, victim);
+   WAIT_STATE(ch, skill_table[gsn_stun].beats);
 }

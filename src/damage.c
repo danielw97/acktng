@@ -299,6 +299,10 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
       if (stance_app[ch->stance].spell_mod != 0)
          dam += dam * stance_app[ch->stance].spell_mod / 10;
+
+      /* Overgrowth: Druid spells (growth > 0) get bonus damage from overgrowth */
+      if (dt >= 0 && dt < MAX_SKILL && skill_table[dt].growth > 0 && ch->overgrowth > 0)
+         dam = dam * (100 + ch->overgrowth * 3) / 100;
    }
    else
       dam += get_damroll(ch) / 3;
@@ -321,7 +325,11 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
    else
       crit_chance = get_crit(ch);
 
-   if (crit_possible && number_range(0, 100) < crit_chance)
+   crit_chance = cloak_precision_reduce_crit_chance(victim, crit_chance);
+
+   if (crit_possible && cloak_valor_consume_guaranteed_crit(ch))
+      critical = TRUE;
+   else if (crit_possible && number_range(0, 100) < crit_chance)
       critical = TRUE;
 
    if (critical && !IS_SET(element, ELE_PHYSICAL) && is_arcane_spell(dt))
@@ -333,6 +341,8 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
          dam += dam * get_spell_crit_mult(ch) / 100;
       else
          dam += dam * get_crit_mult(ch) / 100;
+
+      dam = cloak_precision_reduce_crit_damage(victim, dam);
    }
 
    int skin_mods;
@@ -799,7 +809,9 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
    /* for now, can only have one shield up, or alternatively, only the first
   shield does anything		 */
 
-   if ((victim->first_shield != NULL) && (ch != victim) && (dam > 0) && !IS_SET(element, NO_ABSORB))
+   if ((victim->first_shield != NULL) && (ch != victim) && (dam > 0) &&
+       !IS_SET(element, NO_ABSORB) &&
+       !(victim->first_shield->type == ARCANE_SHIELD && IS_SET(element, ELE_PHYSICAL)))
    {
       char buf1[MSL];
       char buf2[MSL];
@@ -832,6 +844,23 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
          {
             reactive_dam = damage_dealt_to_victim * 25 / 100;
             reactive_element = ELE_AIR;
+         }
+         else if (victim->first_shield->sn == skill_lookup("psishield"))
+         {
+            reactive_dam = damage_dealt_to_victim * 30 / 100;
+            reactive_element = ELE_MENTAL;
+         }
+         else if (victim->first_shield->sn == skill_lookup("holyshield"))
+         {
+            if (!IS_SET(element, ELE_PHYSICAL))
+            {
+               reactive_dam = damage_dealt_to_victim * 30 / 100;
+               reactive_element = ELE_HOLY;
+            }
+            else
+            {
+               reactive_dam = 0;
+            }
          }
 
          reactive_applied = do_damage(victim, ch, reactive_dam, -1,

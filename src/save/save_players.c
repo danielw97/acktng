@@ -36,6 +36,61 @@
 #include "save.h"
 #include "weapon_bond.h"
 
+/*
+ * skill_name_legacy -- maps a pre-rename skill name to its current name.
+ * Returns the new name string if old_name is a legacy name, NULL otherwise.
+ * Used during character file load to silently migrate old save files.
+ */
+const char *skill_name_legacy(const char *old_name)
+{
+   static const char *aliases[][2] = {
+      {"shadow step",          "gap transit"            },
+      {"garrote",              "reach silence"          },
+      {"pressure point",       "applied understanding"  },
+      {"fortify",              "seven shade hold"       },
+      {"iron resolve",         "veteran's cadence"      },
+      /* Mortal class skill/spell renames */
+      {"warcry",               "dunmar's call"          },
+      {"headbutt",             "checkpoint break"       },
+      {"knee",                 "road sweep"             },
+      {"detox",                "reach remedy"           },
+      {"taunt",                "charter challenge"      },
+      {"feign death",          "dissolution protocol"   },
+      {"mark target",          "asset flag"             },
+      {"conceal",              "gap hold"               },
+      {"set trap",             "seam snare"             },
+      {"mindoverbody",         "interior discipline"    },
+      {"conditioning",         "cistern discipline"     },
+      {"mystical potency",     "compact amplification"  },
+      {"spell critical",       "cognitive fault"        },
+      {"spell critical damage","solar precision"        },
+      {"Mind Over Body",       "interior discipline"    },
+      {"see magic",            "architecture scan"      },
+      {"fighting trance",      "assertion form"         },
+      {"night vision",         "peripheral extension"   },
+      {"acid blast",           "dissolution"            },
+      {"call lightning",       "shard ward"             },
+      {"cause critical",       "tribunal's hand"        },
+      {"cause serious",        "solar censure"          },
+      {"control weather",      "seal calculus"          },
+      {"purge",                "cognitive flush"        },
+      {"earthquake",           "jackal's verdict"       },
+      {"faerie fire",          "prism mark"             },
+      {"faerie fog",           "ledger mark"            },
+      {"sense evil",           "pale imprint"           },
+      {"mindflame",            "recurrence loop"        },
+      {"color spray",          "crystal burst"          },
+      {"holy word",            "disk's word"            },
+      {"prayer",               "solar invocation"       },
+      {NULL,                   NULL                     }
+   };
+   int i;
+   for (i = 0; aliases[i][0] != NULL; i++)
+      if (!strcmp(old_name, aliases[i][0]))
+         return aliases[i][1];
+   return NULL;
+}
+
 char *cap_nocol(const char *str)
 {
    static char strcap[MAX_STRING_LENGTH];
@@ -225,6 +280,18 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
    for (cnt = CLASS_GMA; cnt < CLASS_GMA + MAX_CLASS; cnt++)
       fprintf(fp, "%2d ", ch->class_level[cnt]);
    fprintf(fp, "\n");
+
+   fprintf(fp, "Druidlevels  ");
+   for (cnt = CLASS_DRU; cnt <= CLASS_HIE; cnt++)
+      fprintf(fp, "%2d ", ch->class_level[cnt]);
+   fprintf(fp, "\n");
+
+   fprintf(fp, "Druidreinc   ");
+   for (cnt = CLASS_DRU; cnt <= CLASS_HIE; cnt++)
+      fprintf(fp, "%2d ", ch->pcdata->reincarnations[cnt]);
+   fprintf(fp, "\n");
+
+   fprintf(fp, "Overgrowth   %d\n", ch->overgrowth);
 
    fprintf(fp, "Reincarnations ");
    for (cnt = 0; cnt < MAX_CLASS; cnt++)
@@ -538,6 +605,11 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
          ch->class_level[foo] = -1;
       for (foo = CLASS_GMA; foo < CLASS_GMA + MAX_CLASS; foo++)
          ch->class_level[foo] = -1;
+      for (foo = CLASS_DRU; foo <= CLASS_HIE; foo++)
+         ch->class_level[foo] = -1;
+      for (foo = CLASS_DRU; foo <= CLASS_HIE; foo++)
+         ch->pcdata->reincarnations[foo] = 0;
+      ch->overgrowth = 0;
       ch->pcdata->reincarnate_race = -1;
       ch->pcdata->reincarnate_class = -1;
       ch->pcdata->reincarnate_confirm = FALSE;
@@ -962,6 +1034,22 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             break;
          }
 
+         if (!str_cmp(word, "Druidlevels"))
+         {
+            for (cnt = CLASS_DRU; cnt <= CLASS_HIE; cnt++)
+               ch->class_level[cnt] = fread_number(fp);
+            fMatch = TRUE;
+            break;
+         }
+
+         if (!str_cmp(word, "Druidreinc"))
+         {
+            for (cnt = CLASS_DRU; cnt <= CLASS_HIE; cnt++)
+               ch->pcdata->reincarnations[cnt] = fread_number(fp);
+            fMatch = TRUE;
+            break;
+         }
+
          break;
 
       case 'E':
@@ -1110,6 +1198,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             fMatch = TRUE;
             break;
          }
+         KEY("Overgrowth", ch->overgrowth, fread_number(fp));
          break;
 
       case 'P':
@@ -1408,6 +1497,12 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             value = fread_number(fp);
             skill_word = fread_word(fp);
             sn = skill_lookup(skill_word);
+            if (sn < 0)
+            {
+               const char *new_name = skill_name_legacy(skill_word);
+               if (new_name != NULL)
+                  sn = skill_lookup(new_name);
+            }
             if (sn < 0)
             {
                sprintf(log_buf, "Loading pfile %s, unknown skill %s.", ch->name, skill_word);

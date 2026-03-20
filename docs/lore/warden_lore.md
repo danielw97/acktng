@@ -48,7 +48,53 @@ The Scorching Sands route itself — the full corridor from the eastern desert a
 
 ---
 
-## V. The Interior Forms Dispute
+## V. The Skills of the Tradition
+
+The warden tradition's characteristic skills can each be traced to the specific doctrinal and historical context that produced them:
+
+**Enhanced damage** is the tradition's foundational commitment to decisive positional striking — landing hard because the warden has learned to commit fully when commitment is warranted, with body weight and position behind every blow. Dunmar's doctrine holds that half-strikes waste the opportunity that discipline creates.
+
+**Fortify** is known within the tradition as the **Seven Shade Hold** — named after the tactical achievement at the Seven Shade Arches, the ability to transform temporary ground into a defensible position through a combination of physical presence and immediate terrain adaptation. A warden who executes the Seven Shade Hold is doing in small scale what Dunmar did across forty-three days: convincing the ground, and anyone on it, that it will be held.
+
+**Bash** reflects the tradition's positional doctrine most directly: a forceful disruptive strike intended not primarily to damage but to break formation coherence and create the opening that a disciplined warden then exploits from their prepared position. The road warden companies' convoy protection context shaped this — the primary tactical problem was keeping hostile forces away from cargo, and interrupting their formation was more valuable than winning individual exchanges.
+
+**Cleave** and **rend** are the tradition's logistics-first doctrine applied to individual targets. The road warden companies learned that disabling opponents' capacity to continue the engagement — damaging the equipment and physical infrastructure of a hostile force — was often more effective than maximizing individual kill rate. Cleave targets broad force-delivery surfaces; rend targets specific physical capacity. Both reflect the warden's trained preference for ending engagements through cumulative attrition rather than dramatic single events.
+
+**Parry** and **shield block** are positional tools — the defensive side of the tradition's complete-control doctrine. A warden who cannot defend their ground has not defended it regardless of how much damage they've inflicted. Both skills reflect the convoy protection context: the warden's job was to remain functional until the cargo arrived safely, not to achieve spectacular individual outcomes.
+
+**Berserk** carries specific doctrinal significance that is sometimes misunderstood. The Dunmar School does not consider berserk a failure of discipline — it considers berserk the highest expression of discipline in circumstances that require it. Dunmar's oral record preserves three specific accounts of what he called the *Last Watch Release*: moments during the Forty-Three Days when he ordered all-in assault — complete release of positional discipline, full commitment to aggressive output — not because the position was recoverable, but to buy the wounded enough time to fall back to the next defensible shade structure.
+
+The doctrine is precise: berserk is warranted when holding the current position has become objectively impossible, the principal objective (the cargo, the route, the person being protected) can still be preserved through aggressive cover, and no alternative exists. A warden who triggers berserk when any of these conditions is not met is not performing doctrine — they are using doctrine's name to excuse a failure of discipline. The Registry School considers this distinction too fine to be reliably maintained under combat stress and treats berserk as a dangerous inheritance; the Dunmar School considers this objection a failure of trust in trained judgment.
+
+---
+
+## VI. The Stance: Dunmar's Watch
+
+When a warden practitioner has internalized the tradition's full formation doctrine — when the balance between positional discipline and decisive action is no longer a deliberate calculation but an integrated reflex — the tradition formally recognizes this through the **Warden stance**, which the Dunmar School calls **Dunmar's Watch**.
+
+The name refers to the specific quality of awareness that Dunmar maintained across all forty-three days: complete situational awareness of the Seven Shade Arches, every hostile's position, every friendly's condition, every arc of potential attack or approach. Not anticipation of specific events, but the comprehensive presence that allowed him to respond appropriately to whatever the engagement produced.
+
+The stance's effect — enhanced damage rating — does not represent increased raw aggression. It represents the advantage of a practitioner who wastes no movement: who strikes when and where the situation has already been positioned to reward the strike, so that the same physical effort produces greater effect than it would from a less integrated practitioner. The warden hits harder in Dunmar's Watch not because they are stronger, but because they have learned to stop missing the moment.
+
+---
+
+## VII. The Deltari Infrastructure Thread
+
+One thread in the warden tradition's history that formal doctrine does not address concerns the physical environment that the road warden companies were chartered to protect. The charter road network's cistern-supported route system — the infrastructure that made desert water convoys viable — was built and maintained by **Deltari hydraulic engineers** whose expertise the Keeper Era's administrative framework employed without formal acknowledgment.
+
+The road warden companies' combat doctrine developed in direct relationship to this infrastructure. The Seven Shade Arches were Deltari-engineered shade structures. Dunmar's tactical doctrine of fighting near shade infrastructure reflected a combat environment that Deltari construction had created. The specific problem the warden tradition was institutionally designed to solve — protecting water convoys in a cistern-supported desert network — was inseparable from the hydraulic infrastructure that Deltari labor built.
+
+Whether this constitutes a meaningful debt to the Deltari tradition was, until recently, not a question the warden tradition's formal doctrine engaged with directly. The Reckoning faction had occasionally raised it as one thread in the broader question of unacknowledged institutional debts in the five-city governance structure. The Dunmar School's response, when the question reached them at all, was that doctrine is derived from problems and conditions rather than from the identities of those who created the conditions — which is historically accurate and does not constitute acknowledgment.
+
+That changed when the **Deltari Hydraulic Heritage Council** submitted a formal petition to Midgaard's Guard Command requesting that the Guard Command's official institutional history include language acknowledging Deltari engineers as the builders of the cistern and shade infrastructure the road warden companies were organized to protect. The petition is narrow — it asks for accurate institutional history, not compensation or revision of the tradition's identity — but it forces the question into formal institutional channels where informal deflection is harder to maintain.
+
+Guard Command convened a review committee. The review committee has met twice and not reported. Continuity faction advisors have recommended indefinite deferral. Reckoning faction historians have submitted supporting analyses.
+
+Working wardens in the field are largely following the institutional non-response with pragmatic indifference — the petition has no operational implications for their work. But wardens with opinions about the Continuity/Reckoning split now have a specific, concrete case rather than an abstract ideological disagreement: either Midgaard's official military history should be accurate about the infrastructure that produced the tradition, or it shouldn't. Both the Dunmar School's "doctrine derives from conditions, not identities" position and the Registry School's "civic legitimacy requires institutional compliance" position have something to say about this, and neither says it comfortably.
+
+---
+
+## VIII. The Interior Forms Dispute
 
 A persistent minor controversy within warden circles concerns the relationship between warden doctrine and the **Interior Forms** — the body-discipline system developed by the mountain monasteries that became the foundation of the Monk tradition. Some warden lineages incorporated elements of monastic breath control and posture work into their training, producing hybrid practitioners who felt at home in both warden and monk contexts.
 
@@ -60,7 +106,7 @@ This dispute is largely academic in the modern era. The practical overlap betwee
 
 ---
 
-## VI. Wardens Within the Five Cities
+## IX. Wardens Within the Five Cities
 
 ### Midgaard
 
@@ -86,7 +132,7 @@ Mafdet employs wardens primarily through the **Harbor Wardens** institution — 
 
 ---
 
-## VII. The Ashbound Question
+## X. The Ashbound Question
 
 One thread in warden history that is rarely discussed openly concerns the **Ashbound** — the forces that besieged Dunmar at the Seven Shade Arches during the Ninth Meridian aftermath. The historical record is sparse and contested. What is clear is that the Ashbound were not simply bandits or opportunists; they had organizational coherence, tactical doctrine of their own, and specific interest in the water convoy Dunmar was protecting.
 
@@ -96,7 +142,29 @@ The Dunmar School does not engage with this argument. The **Registry School** fi
 
 ---
 
-## VIII. Cross-References
+## XI. The Thornwood Perimeter
+
+The **Thornwood estate** — a former frontier manor north of Midgaard that underwent what warden field reports describe with characteristic understatement as "ecological conversion" — presents the warden tradition with a jurisdictional problem it was not designed to solve and has not resolved.
+
+The estate's territory is marked on Lantern Road patrol maps with a notation that translates, in practice, as "route around." Great Northern Forest wardens do not contract for operations inside the perimeter. Guard Command has never issued formal orders establishing a Thornwood containment line. The Thornwood is not, in any official sense, a warden problem.
+
+It is, in the practical sense, unavoidable.
+
+The Wild Hunt — the estate's mobile enforcement arm — operates outside the estate's fixed perimeter. Caravan routes within a day's travel of the estate have elevated insurance rates and modified escort contracts. The grave tunnel connecting the estate to Midgaard's burial route network is infrastructure that neither Midgaard nor Shadowmere is willing to close. The estate's binding is documented as failing. None of these facts are the warden tradition's official problem, and none of them are problems the warden tradition can ignore without consequences for the convoys and routes it is commissioned to protect.
+
+The formation that occupies the Thornwood perimeter is called, informally, the **Pale Line** — a loose network of independent wardens, a handful of Guard Command wardens operating outside their official assignments, and a small number of Shadowmere-adjacent practitioners who have their own reasons to track the estate's expansion. The Pale Line is not an institution. It has no charter, no commissioning authority, no formal doctrine, and no pay structure. It is precisely the kind of formation that the Registry School would call Reaver Confederates by another name.
+
+The Dunmar School's position is more complicated. The Pale Line's function — holding a perimeter against something that would otherwise expand into the routes and settlements that legitimate convoys depend on — maps directly onto the foundational Dunmar doctrine of protecting the principal objective by holding defensible ground. The problem is that the Thornwood perimeter is not assigned ground; it is ground that no authority has claimed. Dunmar held the Seven Shade Arches under commission. The Pale Line holds the Thornwood approaches under self-assigned obligation that the tradition's formal doctrine has no vocabulary for.
+
+This tension is exactly the one the Ash-and-Iron Decades' requisition office system was supposed to resolve: wardens without charters become Reaver Confederates. But the requisition office's solution was to issue charters, and no city authority has issued a charter for Thornwood perimeter work because doing so would require officially acknowledging that the estate is an ongoing threat requiring civic response — which Midgaard's Continuity faction will not do, because acknowledging the threat would require acknowledging the sealed warrant questions that connect Midgaard's institutional history to the estate's current state.
+
+The Pale Line wardens hold the perimeter anyway. They hold it because the convoys they have spent their careers protecting move through territory that borders on what the Thornwood is becoming, and the alternative to holding is watching it expand into routes that will then require rerouting or abandoning. Dunmar's doctrine does not require a commission to define what is worth protecting. It requires the warden to be clear about what the principal objective is. The Pale Line wardens are clear: the routes hold, or the region doesn't.
+
+Whether this is Dunmar School doctrine or simply Dunmar School doctrine's name applied to something more desperate is the question the formation does not answer aloud.
+
+---
+
+## XII. Cross-References
 
 - **Timeline**: Era II (road warden companies), Era VII (Ninth Meridian, Reaver Confederates, Caleph Dunmar's engagement), Era XI (Ash-and-Iron militarization), Era XII (Violet Compact registry formalization)
 - **Scorching Sands**: Dunmar's engagement site; the Seven Shade Arches waystation
@@ -109,5 +177,8 @@ The Dunmar School does not engage with this argument. The **Registry School** fi
 - **Crusader**: Adept synthesis of Knight and Swordsman; reclaims the Solar Court's original campaign-honor title
 - **Monk**: Interior Forms dispute; partial overlap in body-discipline theory
 - **Eastern Desert**: Charter road network; Ninth Meridian Catastrophe
+- **Deltari**: Cistern and shade infrastructure builders; environmental context for warden doctrine development
 
-See also: `scorching_sands_lore.md`, `midgaard_lore.md`, `kowloon_lore.md`, `timeline.md`
+- **Thornwood**: Pale Line perimeter formation; jurisdictional void between Midgaard's Continuity faction non-acknowledgment and the estate's actual expansion; Dunmar School doctrine applied without commission
+
+See also: `scorching_sands_lore.md`, `midgaard_lore.md`, `kowloon_lore.md`, `thornwood_lore.md`, `timeline.md`

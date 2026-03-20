@@ -14,5 +14,16 @@ Noun Damage: None
 Acquisition:
    - Not learnable by player classes.
 Description:
-   Cloak:absorption is a protective/support spell that strengthens, restores, or safeguards the target.
+   Cloak:absorption surrounds the caster in a shimmering cloak that has a
+   chance to absorb offensive spells cast against them. When a spell hits the
+   caster, there is a (pseudo_level - 55) percent chance that the cloak will
+   absorb the spell entirely, negating its damage.
+
+   When a spell is absorbed, the mana cost of that spell is restored to the
+   caster's mana pool (up to their maximum mana), effectively turning enemy
+   spells into fuel.
+
+   The cloak only triggers against offensive targeted spells (TAR_CHAR_OFFENSIVE).
+
+   Duration scales with pseudo-level (pseudo_level / 8 rounds).
 *******************************************************************************

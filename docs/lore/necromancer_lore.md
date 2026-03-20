@@ -50,7 +50,55 @@ The application is effective and disturbing to observe, which is why Necromancer
 
 ---
 
-## IV. The Kinetimancer Synthesis
+## IV. The Death-Administrative Lineage
+
+The Entropy Scholars' emergence in "geographic and institutional margins" is not a random geographical accident — the margins they occupied were specifically the spaces adjacent to existing death-administrative institutions that the Entropy Scholars were working beyond those institutions' authority. Three such institutional contexts are particularly significant for understanding what the modern Necromancer tradition is actually an extension of, rather than a departure from:
+
+**Akh'enet's mortuary-port structure**: Akh'enet institutionalized death as a municipal transfer process over multiple eras of the desert civilization's development. Contracts, debt obligations, and civic inheritance were designed to survive the person; tomb architecture included filing niches, tally grooves, and adjudication benches alongside religious iconography. The **Jackal Balance Court** — one of Akh'enet's defining institutions — fused debt adjudication with funerary sentence rites to the point where legal process and death administration used the same vocabulary. A judgment issued from the Court's silence chambers carried authority over both the debtor's living estate and the disposition of the debtor's remains.
+
+The Entropy Scholars who worked in and around Akh'enet were not working against this institutional logic. They were extending it past the point where Akh'enet's institutions had stopped. Where the Jackal Balance Court processed the dead through institutional channels — determining what obligations survived, what records were transferred, what property was redistributed — the Entropy Scholars asked what remained after the processing was complete. The question was not theologically transgressive by Akh'enet's institutional standards; it was simply further than Akh'enet's institutions had authorization to go.
+
+The tradition's **condense soul** and **soul net** techniques — which capture and concentrate residual spiritual energy before it dissipates — are the most direct technical inheritances of this Akh'enet methodological lineage. The techniques treat residual spiritual energy exactly as Akh'enet's courts treated residual legal obligations: as something that survives the person's death and can be formally captured and directed rather than allowed to dissipate unmanaged.
+
+**The Solar Court's Embalmer Houses**: One of the Solar Court's five institutional offices, the Embalmer Houses performed the physical preparation of the dead for the cosmological transitions the Solar Court's theology required. Their methods were not merely preservationist — they were based on a working theory of what the body's relationship to spiritual residue required in physical terms, and their techniques for managing that relationship without disturbing the Black Sun Shard's containment represented a sophisticated institutional response to real cosmological dangers.
+
+The Entropy Scholars' distinction from the Embalmer Houses was not primarily methodological but jurisdictional: the Embalmer Houses operated in service of the deceased's institutional continuity, facilitating transitions that the Solar Court's cosmology specified. The Entropy Scholars operated in the analytical mode — studying what those transitions actually involved, rather than facilitating them through traditional channels. When the Embalmer Houses prepared a body, they were maintaining the machinery of cosmic order. When the Entropy Scholars observed the same process from outside the institution, they were learning how the machinery worked.
+
+Modern Necromancer practice's **revenant** technique — the sustained direction of a departed entity as an operational force — represents the most direct divergence from the Embalmer Houses' approach. Where the Embalmer Houses' work facilitated the departed entity's transition to whatever the Solar Court's theology specified next, the revenant technique retains the entity in active directed service. The Embalmer Houses would have considered this a violation of the departure's natural process; the Entropy Scholars' descendants note that the Embalmer Houses no longer exist and the Solar Court's institutional authority to specify what constitutes a natural departure process is no longer operational.
+
+**The Khenari death-ritual specialists**: The Khenari people had developed death-ritual administrative expertise over centuries as part of the broader institutional apparatus surrounding the Solar Court and the desert pyramid civilization. Their methods for managing the transition between living and deceased status — the documentation procedures, physical preparation techniques, and specific protocols that prevented the Black Sun Shard's memory-consuming effects from propagating inappropriately through death transitions — constituted a body of practical knowledge that operated independently of the Embalmer Houses' more theologically oriented practice.
+
+Entropy Scholars who worked in areas where Khenari practitioners operated found that the Khenari's death-administrative techniques addressed some of the same practical problems from a different direction. The Khenari's knowledge of how to manage death transitions without triggering adverse Black Sun Shard interactions was, from the Entropy Scholars' analytical perspective, knowledge about the specific mechanisms through which the life-death boundary could be managed rather than simply crossed.
+
+The debt that the Entropy Scholar tradition — and by extension the modern Necromancer tradition — owes to Khenari practical knowledge is documented in records that the Khenari themselves maintained and that are preserved in Kiess's anti-sealed-warrant archives under the classification "disputed institutional precedence claims." The documentation records specific instances where Entropy Scholars consulted Khenari practitioners and incorporated their techniques without formal acknowledgment. Whether the modern Necromancer tradition characterizes this as historical appropriation or as the normal transmission of knowledge across practitioner communities without institutional framework depends substantially on which position the specific practitioner finds more comfortable.
+
+What is not in dispute is the historical scope of death-management knowledge that predates the Entropy Scholars' own research: Akh'enet's administrative mortuary tradition, the Solar Court's Embalmer Houses, and the Khenari's independent expertise constitute a centuries-deep lineage of institutionalized death knowledge that the Entropy Scholars worked in the margins of, and that modern Necromancer practice is the continuation of — through different channels, without the institutional authorization, but in genuine methodological continuity.
+
+---
+
+## V. The Khenari Acknowledgment Dispute
+
+The historical record of Khenari knowledge incorporated into Entropy Scholar practice without formal acknowledgment — documented in the Kiess archives under "disputed institutional precedence claims" — has not remained purely historical. In the modern era it has become an active institutional dispute, and the Necromancer tradition's relationship to that dispute is one of the sharper moral questions practitioners currently navigate.
+
+The **Khenari Heritage Documentation Council**, a body formed in the late Compact era by Khenari community representatives in Kiess and Mafdet, submitted a formal petition to the Kiess archive administration in Era XX requesting that the disputed precedence records be reclassified from "contested" to "primary source documentation" — a reclassification that would give the records legal standing in academic citation disputes. The petition does not claim compensation, property rights over specific techniques, or any modification to how practitioners practice. It claims only that the records be acknowledged as what they are: documentation of Khenari knowledge contributions that the Entropy Scholar tradition incorporated and that subsequent Necromancer lineages practice in direct methodological continuity with.
+
+The Kiess archive administration, operating under the anti-sealed-warrant charter's principle that classification decisions cannot suppress accurate records, accepted the reclassification petition. The disputed precedence records are now classified as primary source documentation in the Kiess archives. They remain classified as "contested historical claims" in Midgaard's registry archive, which does not recognize the Kiess reclassification as binding on registry holdings.
+
+The Necromancer tradition's response has not been unified.
+
+A faction that calls itself, with deliberate plainness, the **Acknowledgment Line** holds that the reclassification is not enough — that honest practitioners should incorporate the Khenari contribution into the tradition's formal origin documentation, not as a historical footnote but as a co-founder claim. The Acknowledgment Line's position is that the *condense soul* and *soul net* techniques, which trace directly to the Akh'enet methodological lineage that Khenari practitioners developed and transmitted, cannot honestly be taught without acknowledging who developed them. Several Acknowledgment Line practitioners have begun teaching the relevant techniques under dual names: the standard Entropy Scholar designation alongside the Khenari practitioner name preserved in the Kiess primary source records.
+
+A larger faction, with no collective name but commonly called the **Continuity practitioners** by the Acknowledgment Line, holds that the petition and reclassification are appropriate — the records should be accurate — but that the tradition's formal origin documentation is a separate question from archival classification. They argue that every practitioner lineage incorporates knowledge from multiple sources; that the Entropy Scholar tradition's methodological synthesis is its own intellectual achievement regardless of the substrate it drew from; and that retroactive co-founder claims would require doing the same for every other knowledge contribution the tradition absorbed, which would be historically unmanageable and would not serve anyone's interests including the Khenari's.
+
+What neither faction disputes is the content of the Kiess records themselves: specific Entropy Scholars, named in those records, consulted Khenari practitioners on specific questions — the management of death transitions in Black Sun Shard-adjacent environments, the prevention of adverse Shard propagation through uncontrolled departures — and incorporated the answers into their own documented research without naming the source. That these events occurred is not contested. The contested question is what the tradition's current obligations are in relation to events that occurred generations before any living practitioner began their training.
+
+The Khenari community's own position is, characteristically, recorded rather than performed. The Heritage Documentation Council's petition response to the Kiess archive administration's reclassification decision is a single sentence: *"The record is now accurate. We will note what is done with it."*
+
+What is done with it remains, in the current era, an open question that individual Necromancer practitioners answer differently.
+
+---
+
+## VI. The Kinetimancer Synthesis
 
 The **Kinetimancer** adept path represents the synthesis of Necromancer entropy practice and **Egomancer** will-imposition practice — a combination that the tradition's founding documentation, the **Kinetic Formulists'** manuscripts, described as demonstrating that both traditions were working with **momentum**.
 
@@ -60,14 +108,16 @@ The synthesis does not merely combine two traditions; it creates a new applicati
 
 ---
 
-## V. Cross-References
+## VII. Cross-References
 
-- **Timeline**: Pre-Keeper era (Entropy Scholars origin; working in margins), Era III (Black Sun Shard adjacent phenomena; death boundary anomalies), Era X (Psionicist academies' heresy designation conflict), Era XII (Kinetic Formulists' manuscripts; Violet Compact registration controversy)
-- **Great Pyramid**: Black Sun Shard death-boundary anomalies; Embalmer Houses as competing tradition
+- **Timeline**: Pre-Keeper era (Entropy Scholars origin; working in margins), Era III (Black Sun Shard adjacent phenomena; death boundary anomalies; Solar Court Embalmer Houses), Era IV (Akh'enet mortuary-port structure; Jackal Balance Court), Era X (Psionicist academies' heresy designation conflict), Era XII (Kinetic Formulists' manuscripts; Violet Compact registration controversy)
+- **Great Pyramid**: Black Sun Shard death-boundary anomalies; Embalmer Houses as institutional predecessor
+- **Akh'enet**: Mortuary-port administrative tradition; Jackal Balance Court; death-administrative lineage context; condense soul and soul net methodological inheritance
+- **Khenari**: Death-ritual specialist people; practical knowledge reclassified as primary source documentation in Kiess archives; Khenari Heritage Documentation Council acknowledgment petition; Acknowledgment Line vs. Continuity practitioners split
 - **Psionicist**: Parent tradition; heresy-designating institution; shared contested domain
 - **Egomancer**: Parallel remort path; Kinetimancer synthesis prerequisite
 - **Kinetimancer**: Adept synthesis; Kinetic Formulists' momentum analysis
 - **Cleric**: Primary theological adversary; Jackal Tribunal authority claims; cosmological accounting arguments
-- **Khar'Daan / Akh'enet**: Death-administration institutional contexts where Necromancer practice is most visible
+- **Kiess**: Anti-sealed-warrant archives preserve Khenari documentation of disputed precedence claims
 
 See also: `psionicist_lore.md`, `egomancer_lore.md`, `kinetimancer_lore.md`, `great_pyramid_lore.md`, `khardaan_lore.md`, `timeline.md`

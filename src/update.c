@@ -32,7 +32,9 @@
 #include <time.h>
 #include "globals.h"
 #include "weapon_bond.h"
+#include "sentinel.h"
 #include <signal.h>
+#include "npc_dialogue.h"
 
 bool should_abort_for_checkpoint_timeout(int usage_now, int checkpoint, int threshold,
                                          bool disable_abort)
@@ -191,6 +193,26 @@ void init_alarm_handler()
 /*
  * Advancement stuff.
  */
+OBJ_DATA *find_clan_eq(CHAR_DATA *ch);
+void claneq_adjust(OBJ_DATA *obj, CHAR_DATA *ch);
+
+static void claneq_level_check(CHAR_DATA *ch)
+{
+   OBJ_DATA *obj;
+   if (IS_NPC(ch) || ch->pcdata->clan == 0)
+      return;
+   obj = find_clan_eq(ch);
+   if (obj != NULL)
+   {
+      bool was_worn = (obj->wear_loc != WEAR_NONE);
+      if (was_worn)
+         unequip_char(ch, obj);
+      claneq_adjust(obj, ch);
+      if (was_worn)
+         equip_char(ch, obj, WEAR_CLAN_COLORS);
+   }
+}
+
 void advance_level(CHAR_DATA *ch, int class, bool show)
 {
    char buf[MAX_STRING_LENGTH];
@@ -236,6 +258,7 @@ void advance_level(CHAR_DATA *ch, int class, bool show)
       send_to_char(buf, ch);
 
    bond_recalculate(ch);
+   claneq_level_check(ch);
    return;
 }
 
@@ -283,6 +306,7 @@ void advance_level_remort(CHAR_DATA *ch, int class, bool show)
       send_to_char(buf, ch);
 
    bond_recalculate(ch);
+   claneq_level_check(ch);
    return;
 }
 
@@ -332,6 +356,7 @@ void advance_level_adept(CHAR_DATA *ch, int class, bool show)
       send_to_char(buf, ch);
 
    bond_recalculate(ch);
+   claneq_level_check(ch);
    return;
 }
 
@@ -380,6 +405,33 @@ void round_char_update(CHAR_DATA *ch)
    {
       send_to_char("Your chi has dissipated as you are not fighting.\n\r", ch);
       ch->chi = 0;
+   }
+
+   /* Sentinel: testimony cooldown tick */
+   if (ch->testimony_cooldown > 0)
+      ch->testimony_cooldown--;
+
+   /* Sentinel: passive testimony accumulation while fighting same target */
+   if (is_fighting(ch) && is_sentinel_class(ch) && ch->testimony_target != NULL &&
+       ch->fighting == ch->testimony_target)
+   {
+      ch->testimony_combat_rounds++;
+      if (ch->testimony_combat_rounds % TESTIMONY_PASSIVE_INTERVAL == 0)
+         add_testimony(ch, 1);
+   }
+
+   /* Sentinel: out-of-combat testimony decay */
+   if (!is_fighting(ch) && ch->testimony > 0)
+   {
+      ch->testimony--;
+      if (ch->testimony > 0)
+         send_to_char("@@yYour testimony fades slightly...@@N\n\r", ch);
+      else
+      {
+         send_to_char("@@yYour testimony has fully faded.@@N\n\r", ch);
+         ch->testimony_target = NULL;
+         ch->testimony_combat_rounds = 0;
+      }
    }
 
    if (!is_fighting(ch) && ch->arcane_power > 0)
@@ -900,6 +952,12 @@ void mobile_update(void)
             act("$n gets $p.", ch, obj_best, NULL, TO_ROOM);
          }
       }
+
+      /*
+       * Don't wander while waiting to deliver a dialogue response.
+       */
+      if (IS_SET(ch->act, ACT_AI_DIALOGUE) && ch->dlg_pending)
+         continue;
 
       /*
        * Wander
@@ -1446,6 +1504,15 @@ void char_update(void)
             else if (IS_SET(ch->in_room->room_flags, ROOM_COLD))
                send_to_char("You feel your skin freezing.\n\r", ch);
          }
+      }
+
+      /* Overgrowth decay: out of combat, decay 1/tick (2 if resting/sleeping) */
+      if (ch->overgrowth > 0 && !is_fighting(ch) && ch->wait == 0)
+      {
+         int decay = (ch->position == POS_RESTING || ch->position == POS_SLEEPING) ? 2 : 1;
+         ch->overgrowth -= decay;
+         if (ch->overgrowth < 0)
+            ch->overgrowth = 0;
       }
 
       /*
@@ -1999,6 +2066,8 @@ static void hotreboot_update(void)
 
 void update_handler(void)
 {
+   npc_dialogue_deliver();
+
    static int pulse_message;
    static int objfun_check;
    static int pulse_area;

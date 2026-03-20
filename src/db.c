@@ -163,7 +163,7 @@ sh_int gsn_chi_surge;
 sh_int gsn_breath_of_endurance;
 sh_int gsn_fist_interior;
 sh_int gsn_momentum_chain;
-sh_int gsn_iron_resolve;
+sh_int gsn_veterans_cadence;
 sh_int gsn_overwhelming_assault;
 sh_int gsn_elemental_attunement;
 sh_int gsn_oathshield;
@@ -227,6 +227,7 @@ sh_int gsn_taunt;
 sh_int gsn_rend;
 sh_int gsn_field_patch;
 sh_int gsn_weapon_mastery;
+sh_int gsn_ashfall_strike;
 
 /* Pugilist skills */
 sh_int gsn_grapple;
@@ -237,6 +238,21 @@ sh_int gsn_roll_with_blow;
 sh_int gsn_pressure_point;
 sh_int gsn_feint;
 sh_int gsn_conditioning;
+sh_int gsn_harbor_dust;
+
+/* Sentinel skills */
+sh_int gsn_vigilance;
+sh_int gsn_verdict;
+sh_int gsn_read_opponent;
+sh_int gsn_binding_strike;
+sh_int gsn_testimonial_guard;
+sh_int gsn_ninth_descent;
+sh_int gsn_measured_response;
+sh_int gsn_condemn;
+sh_int gsn_seal_testimony;
+
+/* Druid skills */
+sh_int gsn_substrate_piercing;
 
 /* Public society skills */
 sh_int gsn_patrol_sense;
@@ -569,24 +585,34 @@ void boot_db(void)
          fpArea = clanfp;
          db_set_area_name(clan_file_name);
 
-         for (x = 1; x < MAX_CLAN; x++)
+         sh_int file_max_clan = fread_number(clanfp);
+         if (file_max_clan != MAX_CLAN)
          {
-            for (y = 1; y < MAX_CLAN; y++)
+            log_f("WARNING: clandata.dat has MAX_CLAN=%d but code expects %d. "
+                  "Skipping load, using defaults.",
+                  file_max_clan, MAX_CLAN);
+         }
+         else
+         {
+            for (x = 1; x < MAX_CLAN; x++)
             {
-               politics_data.diplomacy[x][y] = fread_number(clanfp);
+               for (y = 1; y < MAX_CLAN; y++)
+               {
+                  politics_data.diplomacy[x][y] = fread_number(clanfp);
+               }
             }
-         }
 
-         for (x = 1; x < MAX_CLAN; x++)
-         {
-            politics_data.treasury[x] = fread_number(clanfp);
-         }
-
-         for (x = 1; x < MAX_CLAN; x++)
-         {
-            for (y = 1; y < MAX_CLAN; y++)
+            for (x = 1; x < MAX_CLAN; x++)
             {
-               politics_data.end_current_state[x][y] = fread_number(clanfp);
+               politics_data.treasury[x] = fread_number(clanfp);
+            }
+
+            for (x = 1; x < MAX_CLAN; x++)
+            {
+               for (y = 1; y < MAX_CLAN; y++)
+               {
+                  politics_data.end_current_state[x][y] = fread_number(clanfp);
+               }
             }
          }
 

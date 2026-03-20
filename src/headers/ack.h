@@ -556,6 +556,9 @@ struct mob_index_data
    long lore_flags;
    sh_int pub_society;
    sh_int pub_society_npc_role;
+   char *ai_prompt;  /* system prompt persona text; NULL if not AI-enabled */
+   int ai_knowledge; /* KNOW_* bitmask of topic blocks to inject */
+   sh_int accent;    /* ACCENT_* city accent; ACCENT_NONE = 0 */
 };
 
 /*
@@ -685,6 +688,7 @@ struct char_data
    int loot_chance[MAX_LOOT];
    int loot[MAX_LOOT];
    int chi;
+   sh_int overgrowth;
    char *target; /* last ch to attack */
    sh_int wimpy;
    int deaf;
@@ -716,7 +720,15 @@ struct char_data
    bool using_named_door;
    NPC_GROUP_DATA *ngroup;
    long lore_flags;
+   void *dlg_state;         /* NPC_DLG_STATE* for ACT_AI_DIALOGUE mobs; NULL otherwise */
+   bool dlg_pending;        /* TRUE while an NPC_DLG_REQ is outstanding */
    REVENANT_DATA *revenant; /* non-NULL if this NPC is a revenant */
+
+   /* Sentinel testimony system */
+   int testimony;               /* accumulated marks on current target, 0-9 */
+   CHAR_DATA *testimony_target; /* who marks are tracked against */
+   int testimony_cooldown;      /* rounds until testimony can accumulate again after verdict */
+   int testimony_combat_rounds; /* rounds in combat with current target (for passive tick) */
 };
 
 /*
@@ -833,6 +845,7 @@ struct pc_data
    int pub_society_tasks_done;
    int pub_society_joined; /* timestamp of enrollment */
    int pub_society_left;   /* timestamp of last departure (for cooldown) */
+   bool is_new_player; /* TRUE for brand-new characters; cleared after first greeting */
 };
 
 /*
@@ -1251,6 +1264,7 @@ struct skill_type
    char *noun_damage; /* Damage message              */
    char *msg_off;     /* Wear off message            */
    char *room_off;    /* Wear off msg TO_ROOM        */
+   sh_int growth;     /* Overgrowth growth per cast (Druid spells) */
 };
 
 /*

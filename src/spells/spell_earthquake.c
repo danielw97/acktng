@@ -32,20 +32,23 @@
 #include "tables.h"
 #include "magic.h"
 
-bool spell_earthquake(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+bool spell_jackal_verdict(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *vch;
    CHAR_DATA *vch_next;
 
    if (obj == NULL)
    {
-      send_to_char("The earth trembles beneath your feet!\n\r", ch);
-      act("$n makes the earth tremble and shiver.", ch, NULL, NULL, TO_ROOM);
+      send_to_char("You invoke the Jackal Tribunal's verdict against your enemies!\n\r", ch);
+      act("$n invokes the Jackal Tribunal — all who stand condemned, suffer!", ch, NULL, NULL,
+          TO_ROOM);
    }
    else
    {
-      act("$p vibrates violently, making the earth tremble!", ch, obj, NULL, TO_CHAR);
-      act("$p vibrates violenty, making the earth around $n tremble!", ch, obj, NULL, TO_ROOM);
+      act("The Tribunal's verdict flows from $p, condemning $n's enemies!", ch, obj, NULL,
+          TO_CHAR);
+      act("The Tribunal's verdict flows from $p, condemning $n's enemies!", ch, obj, NULL,
+          TO_ROOM);
    }
    CREF(vch_next, CHAR_NEXT);
    for (vch = first_char; vch != NULL; vch = vch_next)
@@ -57,20 +60,22 @@ bool spell_earthquake(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       {
          if (vch != ch && (IS_NPC(ch) ? !IS_NPC(vch) : IS_NPC(vch)))
          {
-            act("$n loses $s footing, and falls to the ground!", vch, NULL, NULL, TO_ROOM);
-            send_to_char("You lose your footing, and fall to the ground!", vch);
+            act("$n staggers under the weight of the Tribunal's judgment!", vch, NULL, NULL,
+                TO_ROOM);
+            send_to_char(
+                "The Jackal Tribunal's judgment falls on you like a crushing weight!\n\r", vch);
             sp_damage(NULL, ch, vch, level + dice(20, 10), ELE_EARTH, sn, TRUE);
          }
          else
          {
-            act("$n keeps $s footing, and stays where $e is.", vch, NULL, NULL, TO_ROOM);
-            send_to_char("You keep your footing.\n\r", vch);
+            act("$n stands uncondemned by the Tribunal's verdict.", vch, NULL, NULL, TO_ROOM);
+            send_to_char("The Tribunal finds no verdict against you.\n\r", vch);
          }
          continue;
       }
 
       if (vch->in_room->area == ch->in_room->area)
-         send_to_char("The earth trembles and shivers.\n\r", vch);
+         send_to_char("A distant sense of judgment settles over you briefly.\n\r", vch);
    }
    CUREF(vch_next);
    return TRUE;

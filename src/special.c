@@ -93,6 +93,8 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_sylai_priest;
    if (!str_cmp(name, "spec_cast_bigtime"))
       return spec_cast_bigtime;
+   if (!str_cmp(name, "spec_mudschool_guide"))
+      return spec_mudschool_guide;
    if (!str_cmp(name, "spec_sage"))
       return spec_sage;
    if (!str_cmp(name, "spec_wizardofoz"))
@@ -361,6 +363,8 @@ char *rev_spec_lookup(void *func)
       return "spec_sylai_priest";
    if (func == spec_cast_bigtime)
       return "spec_cast_bigtime";
+   if (func == spec_mudschool_guide)
+      return "spec_mudschool_guide";
    if (func == spec_sage)
       return "spec_sage";
    if (func == spec_wizardofoz)

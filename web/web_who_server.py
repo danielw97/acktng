@@ -20,8 +20,10 @@ WHO_HTML_FILE = WEB_DIR / "soewholist.html"
 WHO_COUNT_FILE = WEB_DIR / "whocount.html"
 HELP_DIR = ROOT_DIR / "help"
 SHELP_DIR = ROOT_DIR / "shelp"
+LORE_DIR = ROOT_DIR / "lore"
 TEMPLATE_DIR = WEB_DIR / "templates"
 IMG_DIR = WEB_DIR / "img"
+MP3_DIR = WEB_DIR / "mp3"
 WORLD_TARGETS = [
     {"id": "acktng", "name": "ACK!TNG", "host": "ackmud.com", "port": 8890},
     {"id": "ack431", "name": "ACK! 4.3.1", "host": "ackmud.com", "port": 8891},
@@ -61,6 +63,11 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
             self._send_static_image(image_name)
             return
 
+        if route.startswith("/web/mp3/"):
+            filename = route[len("/web/mp3/") :]
+            self._send_static_audio(filename)
+            return
+
         if route in ("/players", "/players/", "/who", "/who/"):
             self._send_html(self._build_players_page(), title="ACKMUD Player List")
             return
@@ -73,32 +80,63 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
             self._send_html(_build_world_map_page(), title="World Map")
             return
 
-        if route in ("/help", "/help/"):
-            self._send_html(_build_topic_index_page("Help Topics", "helps", HELP_DIR, help_query), title="Help Topics")
+        if route in ("/stories", "/stories/"):
+            self._send_html(_build_stories_page(), title="Tales from the Age of Monuments")
             return
 
-        if route in ("/shelp", "/shelp/"):
+        if route in ("/help", "/help/", "/helps", "/helps/"):
+            self._redirect_to("/reference/help/")
+            return
+
+        if route in ("/shelp", "/shelp/", "/shelps", "/shelps/"):
+            self._redirect_to("/reference/shelp/")
+            return
+
+        if route in ("/lore", "/lore/", "/lores", "/lores/"):
+            self._redirect_to("/reference/lore/")
+            return
+
+        if route in ("/reference", "/reference/"):
             self._send_html(
-                _build_topic_index_page("Spell Help Topics", "shelps", SHELP_DIR, help_query), title="Spell Help Topics"
+                _build_reference_page("help", help_query),
+                title="Help Topics",
             )
             return
 
-        if route in ("/helps", "/helps/"):
-            self._redirect_to("/help/")
+        if route in ("/reference/help", "/reference/help/"):
+            self._send_html(
+                _build_reference_page("help", help_query),
+                title="Help Topics",
+            )
             return
 
-        if route in ("/shelps", "/shelps/"):
-            self._redirect_to("/shelp/")
+        if route in ("/reference/shelp", "/reference/shelp/"):
+            self._send_html(
+                _build_reference_page("shelp", help_query),
+                title="Spell Help Topics",
+            )
+            return
+
+        if route in ("/reference/lore", "/reference/lore/"):
+            self._send_html(
+                _build_reference_page("lore", help_query),
+                title="Lore Topics",
+            )
             return
 
         if route.startswith("/helps/"):
             topic = route[len("/helps/") :]
-            self._send_topic_page("Help", HELP_DIR, topic, "helps")
+            self._send_topic_page("Help", HELP_DIR, topic, "reference/help")
             return
 
         if route.startswith("/shelps/"):
             topic = route[len("/shelps/") :]
-            self._send_topic_page("Spell Help", SHELP_DIR, topic, "shelps")
+            self._send_topic_page("Spell Help", SHELP_DIR, topic, "reference/shelp")
+            return
+
+        if route.startswith("/lores/"):
+            topic = route[len("/lores/") :]
+            self._send_lore_topic_page(topic)
             return
 
         self.send_error(404, "Not Found")
@@ -110,6 +148,20 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
         self.send_response(302)
         self.send_header("Location", location)
         self.end_headers()
+
+    def _send_lore_topic_page(self, topic: str) -> None:
+        topic_path = _safe_topic_path(LORE_DIR, topic)
+        if topic_path is None:
+            self.send_error(404, "Not Found")
+            return
+
+        first_entry = _extract_first_lore_entry(_read_cached_topic(topic_path))
+        body = (
+            f"<h1>Lore: {escape(topic_path.name)}</h1>"
+            f"<p><a href='/reference/lore/'>Back to Lore index</a></p>"
+            f"<pre>{escape(first_entry)}</pre>"
+        )
+        self._send_html(body, title=f"Lore: {topic_path.name}")
 
     def _send_topic_page(self, page_name: str, base_dir: Path, topic: str, base_route: str) -> None:
         topic_path = _safe_topic_path(base_dir, topic)
@@ -146,6 +198,20 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
         self.send_header("Content-Length", str(len(image_bytes)))
         self.end_headers()
         self.wfile.write(image_bytes)
+
+    def _send_static_audio(self, filename: str) -> None:
+        audio_path = _safe_topic_path(MP3_DIR, filename)
+        if audio_path is None:
+            self.send_error(404, "Not Found")
+            return
+
+        audio_bytes = audio_path.read_bytes()
+        content_type, _ = mimetypes.guess_type(str(audio_path))
+        self.send_response(200)
+        self.send_header("Content-Type", content_type or "audio/mpeg")
+        self.send_header("Content-Length", str(len(audio_bytes)))
+        self.end_headers()
+        self.wfile.write(audio_bytes)
 
     def log_message(self, fmt: str, *args: object) -> None:
         return
@@ -189,9 +255,61 @@ def _safe_topic_path(base_dir: Path, topic: str) -> Path | None:
     return candidate
 
 
+def _extract_first_lore_entry(content: str) -> str:
+    """Return only the first (unflagged) entry from a lore file.
+
+    Lore files are structured as:
+        keywords ...
+        ---
+        [first entry — universal prose]
+        flags ...
+        ---
+        [subsequent city/faction-specific entries]
+
+    This function skips the keywords header block and returns the text of
+    the first entry only, stripping any trailing whitespace.
+    """
+    blocks = content.split("\n---\n")
+    for i, block in enumerate(blocks):
+        stripped = block.strip()
+        if stripped.startswith("keywords "):
+            # The next block is the first entry
+            if i + 1 < len(blocks):
+                return blocks[i + 1].strip()
+            return ""
+    # Fallback: no keywords header found — return the whole content
+    return content.strip()
+
+
+_REFERENCE_TABS = [
+    ("help",  "Help",       "helps",  HELP_DIR,  "topic"),
+    ("shelp", "Spell Help", "shelps", SHELP_DIR, "spell / skill"),
+    ("lore",  "Lore",       "lores",  LORE_DIR,  "topic"),
+]
+
+_SEARCH_FORM_META: dict[str, tuple[str, str, str, str]] = {
+    "helps":  ("Help:",  "help-q",  "topic",         "/reference/help/"),
+    "shelps": ("SHelp:", "shelp-q", "spell / skill", "/reference/shelp/"),
+    "lores":  ("Lore:",  "lore-q",  "topic",         "/reference/lore/"),
+}
+
+
 def _build_topic_index_page(title: str, route_base: str, base_dir: Path, query: str = "") -> str:
+    label_text, input_id, placeholder, action = _SEARCH_FORM_META.get(
+        route_base, (title + ":", route_base + "-q", "topic", f"/{route_base}/")
+    )
+    search_form = (
+        f"<section class='help-forms'>"
+        f"<form method='get' action='{action}'>"
+        f"<label for='{input_id}'>{escape(label_text)}</label>"
+        f"<input id='{input_id}' name='q' placeholder='{escape(placeholder)}' value='{escape(query)}'>"
+        f"<button type='submit'>Search</button>"
+        f"</form>"
+        f"</section>"
+    )
+
     if not base_dir.exists() or not base_dir.is_dir():
-        return f"<h1>{escape(title)}</h1><p>No topics available.</p>"
+        return f"{search_form}<h1>{escape(title)}</h1><p>No topics available.</p>"
 
     normalized_query = query.strip().lower()
     topic_names = _get_topic_names(base_dir)
@@ -203,14 +321,31 @@ def _build_topic_index_page(title: str, route_base: str, base_dir: Path, query: 
 
     if not links:
         if normalized_query:
-            return f"<h1>{escape(title)}</h1><p>No topics match <strong>{escape(query)}</strong>.</p>"
-        return f"<h1>{escape(title)}</h1><p>No topics available.</p>"
+            return f"{search_form}<h1>{escape(title)}</h1><p>No topics match <strong>{escape(query)}</strong>.</p>"
+        return f"{search_form}<h1>{escape(title)}</h1><p>No topics available.</p>"
 
     query_blurb = ""
     if normalized_query:
         query_blurb = f"<p>Filtered by <strong>{escape(query)}</strong>.</p>"
 
-    return f"<h1>{escape(title)}</h1>{query_blurb}<ul>{''.join(links)}</ul>"
+    return f"{search_form}<h1>{escape(title)}</h1>{query_blurb}<ul>{''.join(links)}</ul>"
+
+
+def _build_reference_page(active_tab: str, query: str = "") -> str:
+    """Build the unified Reference page with Help / Spell Help / Lore sub-nav."""
+    tab_parts = []
+    for slug, label, _route, _dir, _ph in _REFERENCE_TABS:
+        css_class = "active" if slug == active_tab else ""
+        tab_parts.append(f"<a href='/reference/{slug}/' class='{css_class}'>{label}</a>")
+    sub_nav = f"<nav class='sub-nav'>{''.join(tab_parts)}</nav>"
+
+    for slug, label, route_base, base_dir, placeholder in _REFERENCE_TABS:
+        if slug == active_tab:
+            index_html = _build_topic_index_page(f"{label} Topics", route_base, base_dir, query)
+            return f"{sub_nav}{index_html}"
+
+    # Fallback (should not happen)
+    return sub_nav
 
 
 def _build_home_page() -> str:
@@ -219,6 +354,13 @@ def _build_home_page() -> str:
 
 def _build_world_map_page() -> str:
     return _load_template("world_map.html")
+
+
+def _build_stories_page() -> str:
+    stories_dir = TEMPLATE_DIR / "stories"
+    fragments = sorted(stories_dir.glob("*.html"))
+    stories_html = "\n\n".join(p.read_text(encoding="utf-8", errors="replace") for p in fragments)
+    return _load_template("stories.html").replace("__STORIES__", stories_html)
 
 
 def _build_mud_client_page() -> str:

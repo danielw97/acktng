@@ -131,9 +131,11 @@ Of all the non-Kethari peoples, the Khephari are most consistently accorded Keth
 
 The Khephari's earth-sense and the Kethari's water-memory are complementary: the Khephari read the ground's structural behavior through vibration; the Kethari read the same ground's hydraulic behavior through chemical sensing and accumulated observation. Together, they constitute a comprehensive environmental survey capability that exceeds anything human institutions have yet achieved with instrumentation.
 
-There is no formal alliance between the two peoples — neither culture is organized for formal alliances of the human institutional type — but their representatives at oasis-corridor gatherings have consistently demonstrated the kind of mutual comprehension that comes from parallel epistemologies applied to the same physical territory.
+There is no formal alliance between the two peoples — neither culture is organized for formal alliances of the human institutional type — but their representatives at oasis-corridor gatherings have consistently demonstrated the kind of mutual comprehension that comes from parallel epistemologies applied to the same physical territory. In the Desert Compact's informal order of precedence, both the Kethari (first presence) and the Khephari (third presence, structural authority) acknowledge each other's domains without overlap or contest.
 
-See also: `khephari_lore.md`
+Recently, Khephari engineers maintaining western road foundations have begun detecting returning crystal resonance — the same signature they documented during the Spirebound Conclave's operational period — in an area that the Kethari's aquifer silence records suggest is connected to an anomaly in the Withered Depths' interior. The two communities have compared notes; the comparison is one of five independent observational threads that the Parallel Record Compact is now treating as its first active multi-race coordination question.
+
+See also: `khephari_lore.md`, `desert_compact_lore.md`, `withered_depths_convergence_lore.md`
 
 ### The Khenari
 
@@ -141,7 +143,9 @@ The Kethari and the Khenari have adjacent but non-overlapping territories and co
 
 Where they differ most fundamentally is in their relationship to time and change. The Khenari process change through documentation — every transition is recorded, filed, classified, and closed. The Kethari process change through patience — every change is observed, added to the water-memory, and evaluated against the longer pattern. The Khenari's Doctrine of Ninth Descent treats death as requiring nine sequential administrative stages; the Kethari's desert philosophy treats death as simply the next form of the physical material that constitutes a living being. Desert sand is, in substantial part, the compressed remains of everything that has died in that desert. The Kethari find this comforting rather than disturbing.
 
-See also: `khenari_lore.md`, `akhenet_lore.md`
+The Desert Compact's order of precedence acknowledges both peoples' domains without overlap: Kethari first presence on deep-time physical knowledge, Khenari second presence on death-administration authority. The Khenari's current debate over whether Ushabti destruction requires death-ledger entry — the Jurisdiction Question — is observed by Kethari elders with the patient interest they bring to any system under strain. Their position: time will tell.
+
+See also: `khenari_lore.md`, `akhenet_lore.md`, `desert_compact_lore.md`, `parallel_record_compact_lore.md`
 
 ### The Ushabti
 
@@ -149,7 +153,9 @@ The Ushabti's cosmic law authority and the Kethari's water-memory represent two 
 
 The Kethari do not dispute the Ushabti's cosmic law authority — the Pyramid's suppression of the Black Sun Shard is, from the Kethari perspective, genuinely important and not something they would have been equipped to manage. What they observe with some precision is that the Ushabti's authority is parasitic on an institution that collapsed, while the Kethari's water-memory continues uninterrupted. Both facts are true simultaneously. The Kethari file this alongside their other observations of the gap between institutional claims and physical persistence.
 
-See also: `ushabti_lore.md`, `great_pyramid_lore.md`
+In the Desert Compact's informal order of precedence, the Kethari hold first presence (water-memory older than all formal institutions) while the Ushabti are the newest presence — the unresolved question being whether the Ushabti are a people or an institutional artifact of the dissolved Solar Court. The eldest Kethari coil-gathering members are beginning to treat this question as functionally resolved: a people who persist without an institution for long enough become a people in their own right.
+
+See also: `ushabti_lore.md`, `great_pyramid_lore.md`, `desert_compact_lore.md`
 
 ### Humans
 

@@ -1,8 +1,26 @@
 # CLAUDE.md — ACK!MUD TNG 4.3.1
 
+## Design Document Requirement
+
+For any implementation task that involves `src/` changes, you MUST first deliver a design document describing the proposed changes — including the problem, approach, affected files, and any trade-offs — and discuss it with the user. Do NOT begin implementation until the user has explicitly signed off on the design document. No code changes, no file creation, no prototyping until approval is given. Design documents should be placed in `docs/proposals/`.
+
+Changes that do not touch `src/` (e.g. lore files, area files, documentation, help files) do NOT require a design document and may be implemented directly.
+
+Once a proposal has been fully implemented, move it from `docs/proposals/` to `docs/proposals/completed/`. Active proposals (pending discussion or implementation) live in `docs/proposals/`. Completed proposals (fully implemented) live in `docs/proposals/completed/`.
+
+When writing any document (design proposals, lore files, area plans, etc.), write and deliver it in sections rather than producing the entire document at once. Continue through all sections without waiting for confirmation between them, unless the user asks for a different approach.
+
 ## Project Overview
 
 ACK!TNG is a MUD (Multi-User Dungeon) game server written in C, descended from Diku → Merc → ACK! lineage. The server binary is called `ack` and runs from the `area/` directory, accepting telnet connections on a configurable port.
+
+## Game World Lore
+
+When you need information about the game world (history, factions, geography, lore, etc.), search `docs/lore/` — it is the canonical source for all world-building documentation. The directories `lore/` and `data/knowledge/` are generated from `docs/lore/` and contain no additional information.
+
+## Specifications and Documentation
+
+The `docs/` directory is the canonical source for all game specifications (area files, objects, mobs, rooms, quests, help files, data structures, etc.). You should never need to search `src/` to understand a specification — everything should be documented in `docs/`. If you find that a specification detail is missing from `docs/` and you had to look in `src/` to determine the answer, that information must be added to the appropriate `docs/` specification file before the task is complete.
 
 ## Build System
 
@@ -136,6 +154,24 @@ The GitHub Actions workflow `.github/workflows/validate-open-prs.yml`:
 - For each open PR: checks out the PR head, runs `make unit-tests` from `src/`
 - Auto-approves PRs where tests pass; requests changes where tests fail
 - Branch protection should require this check to pass
+
+## Spells, Skills, and Commands
+
+Whenever a new spell or skill is added, a corresponding detailed help entry MUST be added to the `shelp/` directory. The help file should cover:
+- What the spell/skill does
+- How to use it (syntax, targets, etc.)
+- Any relevant mechanics (damage, duration, cooldown, mana cost, etc.)
+- Class/level availability if applicable
+
+Whenever a new player command is added, a corresponding detailed help entry MUST be added to the `help/` directory. The help file should cover:
+- What the command does
+- Full syntax and all options/arguments
+- Examples of usage
+- Any restrictions (level, class, position, etc.)
+
+Likewise, whenever a spell or skill is removed, its `shelp/` entry MUST also be removed. Whenever a command is removed, its `help/` entry MUST also be removed.
+
+These are hard requirements — no spell, skill, or command addition is complete without its help entry, and no removal is complete without also removing the corresponding help entry.
 
 ## Common Pitfalls
 

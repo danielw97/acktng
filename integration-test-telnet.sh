@@ -69,21 +69,15 @@ MUD_PID=$!
 echo "integration-test-telnet: MUD started (PID $MUD_PID), waiting for boot..."
 
 # ---------------------------------------------------------------------------
-# Step 4: wait until the server is accepting TCP connections (max 90 s).
+# Step 4: wait until the server is ready (game loop started, max 90 s).
+# The server logs "ACK! MUD is ready on port N." just before entering the
+# game loop.  Waiting for TCP connectivity is not sufficient because the
+# port is opened before area files are loaded, so connections sent too
+# early receive no greeting.
 # ---------------------------------------------------------------------------
 boot_wait=0
 while [ "$boot_wait" -lt 90 ]; do
-    if python3 -c "
-import socket, sys
-s = socket.socket()
-s.settimeout(1)
-try:
-    s.connect(('127.0.0.1', $TEST_PORT))
-    s.close()
-    sys.exit(0)
-except Exception:
-    sys.exit(1)
-" 2>/dev/null; then
+    if grep -q "MUD is ready on port" "$LOG_FILE" 2>/dev/null; then
         break
     fi
     if ! kill -0 "$MUD_PID" 2>/dev/null; then
@@ -99,7 +93,7 @@ except Exception:
 done
 
 if [ "$boot_wait" -ge 90 ]; then
-    echo "integration-test-telnet: FAILED - MUD did not accept connections after 90s"
+    echo "integration-test-telnet: FAILED - MUD did not reach ready state after 90s"
     echo "--- MUD output ---"
     cat "$LOG_FILE"
     echo "------------------"
@@ -279,7 +273,7 @@ _ = client.recv_until('elect', timeout=5.0)
 
 client.send('3')
 _ = client.recv_until('lass', timeout=5.0)
-client.send('War Mag Cle Cip')
+client.send('War Mag Cle Sen')
 _ = client.recv_until('elect', timeout=5.0)
 
 client.send('4')

@@ -100,6 +100,12 @@ Midgaard's arcanist registry contains reports of "anomalous decay patterns" forw
 
 Proto-Kowloon's delta settlements made similar transfers of condemned debtors to the Conclave (see `kowloon_lore.md`). Kowloon's legendary **Black Ledger** — said to be sealed in an undercity cistern beneath the central quadrants — contains the original unredacted census including names of those transferred. If the Withered Depths' corruption is ever definitively linked to the Conclave's field trials, both cities face the same reckoning: their founding-era institutions supplied the human subjects whose exploitation funded the research whose byproducts are now destroying the forest.
 
+### The Five-Thread Convergence
+
+Human institutional analysis of the Withered Depths has consistently framed its advance as ecological — blight spreads through available fuel. Five non-human peoples' parallel observational records, recently compared through the Parallel Record Compact, suggest a different interpretation: the Depths' advance is routing, not spreading. The Rivennid detect deliberate routing in mycelial signals. The Khephari detect returning Conclave-frequency crystal resonance in western road foundations. The Serathi's roost-chronicles show the advance maps onto old Conclave survey routes. The Deltari track rerouted (not depleted) aquifer water flowing toward a specific interior location. The Kethari document an aquifer silence growing in the same direction. Together these observations triangulate on a specific site in the Depths' interior — potentially the Conclave's primary crystal implantation point — which the Depths appears to be accumulating toward rather than past. The Parallel Record Compact is engaged in its first active coordination discussion around this finding.
+
+See also: `withered_depths_convergence_lore.md`, `parallel_record_compact_lore.md`
+
 ### Kiess's Proximity
 
 Kiess serves as the primary staging base for expeditions into the Forest of Confusion and its deeper reaches (see `kiess_lore.md`). Scouts report at debriefing posts inside the north ring, healers process the wounded in central wards, and quartermaster supply trains cycle between the depot and forest-edge staging trails. Kiess's **Syndic Council Annex** holds a palm-sized obsidian disc inscribed with three interlocking circles that matches the Conclave's triune seal exactly — the seal of the Ember Canon, the Prism Thesis, and the Pale Ledger. The Syndics classify it as "provenance unknown" and decline to discuss it further.

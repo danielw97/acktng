@@ -316,7 +316,7 @@ _ = ws.recv_until('elect', timeout=5.0)
 
 send('3')
 _ = ws.recv_until('lass', timeout=5.0)
-send('War Mag Cle Cip')
+send('War Mag Cle Sen')
 _ = ws.recv_until('elect', timeout=5.0)
 
 send('4')

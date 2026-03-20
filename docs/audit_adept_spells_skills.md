@@ -7,7 +7,7 @@
 
 ## Summary of Current State
 
-Each adept class currently has **very few** dedicated spells/skills (1-4 each), plus passive bonuses, a stance, and inherited access to all prerequisite class abilities. The adept tier (levels 1-20) sits atop two completed remort paths, so characters already have extensive spell/skill inventories from mortal + remort. Adept-exclusive abilities are meant to be the capstone synthesis that neither parent tradition achieves alone.
+Each adept class currently has **very few** dedicated spells/skills (1-4 each), plus passive bonuses, a stance, and inherited access to all prerequisite class abilities. The adept tier (levels 1-20) sits atop at least one completed remort path, so characters already have extensive spell/skill inventories from mortal + remort. Adept-exclusive abilities are meant to be the capstone synthesis that neither parent tradition achieves alone.
 
 ---
 
@@ -163,20 +163,20 @@ Each adept class currently has **very few** dedicated spells/skills (1-4 each), 
 
 | Ability | Level | Type | Description |
 |---------|-------|------|-------------|
-| Kinetic Reversion | 2 | Spell (offensive) | Force reflection/reversal attack |
+| Predictive Collapse | 2 | Spell (offensive) | Force reflection/reversal attack |
 | Magi Stance (shared) | 1 | Stance | Either-class, multi-cast, dual-cast, no-hit |
 | Passive: Non-physical spell damage | scaling | Passive | +2% per adept level (up to +40%) |
 | Passive: Shadow/poison/mental damage reinc | scaling | Passive | +2% per adept reinc |
 
 ### Thematic Assessment
 
-**All current abilities are strongly thematic.** Kinetic Reversion is the tradition's signature technique explicitly documented in the lore (Section IV) — reversing incoming force momentum. The non-physical damage bonus reflects the tradition's operation across shadow, poison, and mental domains.
+**All current abilities are strongly thematic.** Predictive Collapse is the tradition's signature technique explicitly documented in the lore (Section IV) — reversing incoming force momentum. The non-physical damage bonus reflects the tradition's operation across shadow, poison, and mental domains.
 
-**However, the Kinetimancer has the smallest adept-exclusive toolkit** — just one active ability (Kinetic Reversion) plus the shared Magi stance. Given the rich lore about momentum doctrine, cognitive modeling, and predictive collapse, this class has the most room for thematic expansion.
+**However, the Kinetimancer has the smallest adept-exclusive toolkit** — just one active ability (Predictive Collapse) plus the shared Magi stance. Given the rich lore about momentum doctrine, cognitive modeling, and predictive collapse, this class has the most room for thematic expansion.
 
 ### Recommendations: Removals
 
-**None.** Kinetic Reversion is the tradition's defining technique with extensive lore support.
+**None.** Predictive Collapse is the tradition's defining technique with extensive lore support.
 
 ### Recommendations: Additions
 
@@ -237,7 +237,7 @@ Each adept class currently has **very few** dedicated spells/skills (1-4 each), 
 | Templar | 1 skill (Enhanced Heal) | 5+ |
 | Nightblade | 1 skill (Poison:Nightshade) | 4 |
 | Crusader | 1 skill (Anti Magic Shell) | 3 |
-| Kinetimancer | 1 spell (Kinetic Reversion) | 2 |
+| Kinetimancer | 1 spell (Predictive Collapse) | 2 |
 | Martial Artist | 0 | 5+ |
 
 Grand Magi has a full elemental spell ladder (4 spells). Every other adept class has 0-1 exclusive active abilities. This creates a significant gameplay asymmetry — Grand Magi players have new buttons to press at 1, 5, 10, and 15, while other adept players primarily experience passive number increases.

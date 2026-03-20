@@ -1815,6 +1815,25 @@ void extract_char(CHAR_DATA *ch, bool fPull)
       die_follower(ch);
 
    stop_fighting(ch, TRUE);
+
+   /* Clear testimony_target pointers for any Sentinel targeting this char */
+   {
+      CHAR_DATA *tch;
+      for (tch = first_char; tch; tch = tch->next)
+      {
+         if (tch->testimony_target == ch)
+         {
+            tch->testimony = 0;
+            tch->testimony_target = NULL;
+            tch->testimony_combat_rounds = 0;
+         }
+      }
+   }
+   /* Reset this char's own testimony */
+   ch->testimony = 0;
+   ch->testimony_target = NULL;
+   ch->testimony_cooldown = 0;
+   ch->testimony_combat_rounds = 0;
    ch->is_quitting = TRUE;
    while ((this_object = ch->last_carry) != NULL)
       extract_obj(this_object);

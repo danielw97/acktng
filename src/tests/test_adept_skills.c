@@ -22,7 +22,7 @@ sh_int gsn_chi_surge;
 sh_int gsn_breath_of_endurance;
 sh_int gsn_fist_interior;
 sh_int gsn_momentum_chain;
-sh_int gsn_iron_resolve;
+sh_int gsn_veterans_cadence;
 sh_int gsn_overwhelming_assault;
 sh_int gsn_anti_magic_shell;
 sh_int gsn_enhanced_heal;
@@ -59,6 +59,7 @@ sh_int gsn_bare_hand;
 sh_int gsn_elemental_attunement;
 sh_int gsn_oathshield, gsn_sanctified_strike;
 sh_int gsn_shadow_reading, gsn_hex_ward, gsn_reflex_disruption;
+sh_int gsn_substrate_piercing;
 
 /* ── minimal stubs ─────────────────────────────────────────────────── */
 const struct race_type race_table[MAX_RACE] = {[0] = {.skill = ""}};
@@ -71,6 +72,8 @@ const struct class_type gclass_table[MAX_TOTAL_CLASS] = {
     [15] = {.tier = REMORT}, [16] = {.tier = REMORT}, [17] = {.tier = REMORT},
     [18] = {.tier = ADEPT},  [19] = {.tier = ADEPT},  [20] = {.tier = ADEPT},
     [21] = {.tier = ADEPT},  [22] = {.tier = ADEPT},  [23] = {.tier = ADEPT},
+    [24] = {.tier = MORTAL}, [25] = {.tier = REMORT}, [26] = {.tier = REMORT},
+    [27] = {.tier = ADEPT},
 };
 
 /* ── skill_lookup helper ───────────────────────────────────────────── */
@@ -122,7 +125,7 @@ static void test_martial_artist_skills_registered(void)
 static void test_crusader_skills_registered(void)
 {
    assert_skill_at_class_level("momentum chain", CLASS_CRU, 5);
-   assert_skill_at_class_level("iron resolve", CLASS_CRU, 10);
+   assert_skill_at_class_level("veteran's cadence", CLASS_CRU, 10);
    assert_skill_at_class_level("overwhelming assault", CLASS_CRU, 15);
    printf("PASS: test_crusader_skills_registered\n");
 }
@@ -166,7 +169,7 @@ static void test_adept_skills_have_gsn_pointers(void)
    assert_skill_has_gsn("breath of endurance");
    assert_skill_has_gsn("fist of the interior form");
    assert_skill_has_gsn("momentum chain");
-   assert_skill_has_gsn("iron resolve");
+   assert_skill_has_gsn("veteran's cadence");
    assert_skill_has_gsn("overwhelming assault");
    assert_skill_has_gsn("elemental attunement");
    assert_skill_has_gsn("oathshield");
@@ -195,7 +198,7 @@ static void test_martial_artist_skills_exclusive_to_adept(void)
 static void test_crusader_skills_exclusive_to_adept(void)
 {
    int sn;
-   const char *names[] = {"momentum chain", "iron resolve", "overwhelming assault"};
+   const char *names[] = {"momentum chain", "veteran's cadence", "overwhelming assault"};
 
    for (int n = 0; n < 3; n++)
    {
@@ -212,7 +215,7 @@ static void test_existing_adept_skills_still_registered(void)
    assert_skill_at_class_level("anti magic shell", CLASS_CRU, 2);
    assert_skill_at_class_level("enhanced heal", CLASS_TEM, 1);
    assert_skill_at_class_level("elemental inferno", CLASS_GMA, 1);
-   assert_skill_at_class_level("Kinetic Reversion", CLASS_KIN, 2);
+   assert_skill_at_class_level("Predictive Collapse", CLASS_KIN, 2);
    assert_skill_at_class_level("poison:nightshade", CLASS_NIG, 2);
    printf("PASS: test_existing_adept_skills_still_registered\n");
 }

@@ -319,6 +319,10 @@ void build_save_mobs()
    fprintf(SaveFile, "\n");
    if (pMobIndex->lore_flags != 0)
       fprintf(SaveFile, "^ %ld\n", pMobIndex->lore_flags);
+   if (IS_SET(pMobIndex->act, ACT_AI_DIALOGUE) && pMobIndex->ai_prompt != NULL &&
+       pMobIndex->ai_prompt[0] != '\0')
+      fprintf(SaveFile, "a %d %d %s~\n", pMobIndex->ai_knowledge, pMobIndex->accent,
+              pMobIndex->ai_prompt);
 
    Pointer = Pointer->next;
    if (Pointer == NULL) /* End */
@@ -993,6 +997,20 @@ void load_mobiles(FILE *fp)
       else
          ungetc(letter, fp);
 
+      pMobIndex->ai_prompt = NULL;
+      pMobIndex->ai_knowledge = 0;
+      pMobIndex->accent = ACCENT_NONE;
+
+      letter = fread_letter(fp);
+      if (letter == 'a')
+      {
+         pMobIndex->ai_knowledge = fread_number(fp);
+         pMobIndex->accent = (sh_int)fread_number(fp);
+         pMobIndex->ai_prompt = fread_string(fp);
+      }
+      else
+         ungetc(letter, fp);
+
       iHash = vnum % MAX_KEY_HASH;
       SING_TOPLINK(pMobIndex, mob_index_hash[iHash], next);
       /* MAG Mod */
@@ -1516,7 +1534,7 @@ void load_specials(FILE *fp)
       switch (letter = fread_letter(fp))
       {
       default:
-         bug("Load_specials: letter '%c' not *, M, or S.", letter);
+         bug("Load_specials: letter '%c' not *, M, E, or S.", letter);
          hang("Loading Specials in db.c");
 
       case 'S':
@@ -1544,6 +1562,7 @@ void load_specials(FILE *fp)
             LINK(pList, area_load->first_area_specfunc, area_load->last_area_specfunc, next, prev);
          }
          break;
+
       }
       /*
        * NB. Comments will not be saved when using areasave - MAG.
