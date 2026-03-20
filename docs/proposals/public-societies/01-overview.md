@@ -73,7 +73,8 @@ At the highest rank (Commander tier, rank 400+), each society unlocks one
 **active** combat skill — a player-typed command usable during combat. These
 follow the standard skill pattern: `can_use_skill()` gate, proficiency roll,
 `do_damage()` call with the skill's `gsn_*` as damage type, optional
-`affect_to_char()` for buffs/debuffs, and a `WAIT_STATE` cooldown. Each is
+`affect_to_char()` for buffs/debuffs, a `WAIT_STATE` action delay, and a
+20-round `cooldown[]` recharge timer. Each is
 thematically tied to its society's identity: a rallying group buff (Guard
 Command), a heavy debuffing strike (Harbor Syndics), a fire DOT (Ember
 Wardens), a mark-dependent finisher (Shrine of the First Claw), a
