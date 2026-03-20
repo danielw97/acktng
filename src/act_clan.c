@@ -249,6 +249,50 @@ void do_claneq(CHAR_DATA *ch, char *argument)
    }
 }
 
+void do_leav(CHAR_DATA *ch, char *argument)
+{
+   send_to_char("If you want to LEAVE, spell it out!!\n\r", ch);
+   return;
+}
+
+void do_leave(CHAR_DATA *ch, char *argument)
+{
+   char buf[MAX_STRING_LENGTH];
+
+   if (IS_NPC(ch))
+      return;
+
+   if (ch->pcdata->clan == 0) /* No clan */
+   {
+      send_to_char("You must be IN a clan before you can leave it!\n\r", ch);
+      return;
+   }
+
+   sprintf(buf, "%s has left clan %s.", ch->name, clan_table[ch->pcdata->clan].clan_name);
+   monitor_chan(buf, MONITOR_CLAN);
+
+   destroy_clan_eq(ch);
+
+   ch->pcdata->clan = 0;
+   send_to_char("You leave your clan.  Let's hope they don't get mad!\n\r", ch);
+   if (IS_SET(ch->pcdata->pflags, PFLAG_CLAN_DIPLOMAT))
+      REMOVE_BIT(ch->pcdata->pflags, PFLAG_CLAN_DIPLOMAT);
+
+   if (IS_SET(ch->pcdata->pflags, PFLAG_CLAN_TREASURER))
+      REMOVE_BIT(ch->pcdata->pflags, PFLAG_CLAN_TREASURER);
+
+   if (IS_SET(ch->pcdata->pflags, PFLAG_CLAN_ARMOURER))
+      REMOVE_BIT(ch->pcdata->pflags, PFLAG_CLAN_ARMOURER);
+
+   if (IS_SET(ch->pcdata->pflags, PFLAG_CLAN_LEADER))
+      REMOVE_BIT(ch->pcdata->pflags, PFLAG_CLAN_LEADER);
+
+   if (IS_SET(ch->pcdata->pflags, PFLAG_CLAN_BOSS))
+      REMOVE_BIT(ch->pcdata->pflags, PFLAG_CLAN_BOSS);
+
+   return;
+}
+
 /* CSET is an immortal command, used to set a players clan. */
 
 void do_cset(CHAR_DATA *ch, char *argument)

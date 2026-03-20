@@ -33,6 +33,7 @@ your clan's emblem. Use @@yclaneq@@g to choose the stat focus of your colors:
   @@yclaneq <style>@@g  -- Set your clan colors to melee, caster, or tank
   @@yclist@@g           -- List all clans and basic clan information
   @@yhome@@g            -- Recall directly to your clan headquarters
+  @@yleave@@g           -- Voluntarily depart from your clan
 
 @@yOTHER AFFILIATIONS@@g
 

@@ -404,6 +404,8 @@ const struct cmd_type cmd_table[] = {
     CMD("hide", do_hide, POS_RESTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
     CMD("hunt", do_hunt, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
     CMD("keep", do_keep, POS_DEAD, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
+    CMD("leav", do_leav, POS_RESTING, CLAN_ONLY, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_NEVER),
+    CMD("leave", do_leave, POS_RESTING, CLAN_ONLY, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
     CMD("qui", do_qui, POS_DEAD, 0, LOG_NORMAL, C_TYPE_MISC, C_SHOW_NEVER),
     CMD("quit", do_quit, POS_DEAD, 0, LOG_NORMAL, C_TYPE_MISC, C_SHOW_ALWAYS),
     CMD("recall", do_recall, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),

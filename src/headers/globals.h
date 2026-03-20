@@ -443,6 +443,8 @@ DECLARE_DO_FUN(do_resetpassword);
 DECLARE_DO_FUN(do_iscore);
 DECLARE_DO_FUN(do_isnoop);
 DECLARE_DO_FUN(do_iwhere);
+DECLARE_DO_FUN(do_leav);
+DECLARE_DO_FUN(do_leave);
 DECLARE_DO_FUN(do_lhunt);
 DECLARE_DO_FUN(do_monitor);
 DECLARE_DO_FUN(do_mpcr);
