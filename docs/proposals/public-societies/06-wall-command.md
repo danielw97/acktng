@@ -110,7 +110,7 @@ threshold.
 
 | Skill | Rank Required | Description |
 |---|---|---|
-| `frontier_scan` | -99 (Sentry) | Survey the current outdoor room and its exits for recent mob movement. Reveals how many aggressive mobs are in adjacent rooms. |
+| `dig_in` | -99 (Sentry) | Fortify your position in the current room, granting a 10-minute buff that reduces movement cost to zero when moving back to this room (you can always retreat to your fortified position cheaply) and provides a +5 AC bonus while in the room. One fortified position active at a time; fortifying a new room replaces the previous one. The sentry digs in and holds ground — the most fundamental Wall Command discipline. |
 | `shelter` | 1 (Ranger) | Construct a temporary shelter in the current outdoor room. The shelter provides weather protection and slightly accelerated HP/mana regen for the builder's group. Lasts 1 hour. |
 | `trailblaze` | 100 (Pathfinder) | Mark a path through the current room. Wall Command members who enter the room see the mark and the direction it points, aiding navigation in confusing wilderness areas. Lasts 12 hours. |
 | `bulwark` | 200 (Wall Sergeant) | **Combat (passive).** Frontier hardening reduces all incoming physical damage by 5%. Checked in `calculate_damage()` as a flat reduction after all other modifiers. Always active — no cooldown, no activation command. |

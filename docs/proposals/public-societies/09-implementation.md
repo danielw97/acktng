@@ -115,8 +115,9 @@ into 5 phases.
 
 - [ ] Guard Command: `patrol_sense`, `field_mend`, `rally_cry`, `shield_wall`
   (passive: post-block damage reduction), `tactical_assess`,
-  `command_presence` (active: strike + group hitroll buff)
-- [ ] Harbor Syndics: `appraise`, `manifest`, `haggle`, `longshoreman`
+  `command_presence` (active combo builder: strike + group hitroll buff,
+  feeds `ch->combo[]`)
+- [ ] Harbor Syndics: `appraise`, `dockside_audit`, `haggle`, `longshoreman`
   (passive: bonus autoattack), `bonded_cargo`, `anchor_slam` (active
   combo builder: heavy hit + speed debuff, feeds `ch->combo[]`)
 - [ ] Ember Wardens: `forage`, `field_repair`, `ember_signal`,
@@ -125,15 +126,16 @@ into 5 phases.
   chi spend doubles DOT duration)
 - [ ] Shrine of the First Claw: `oath_mark`, `track_quarry`, `writ_of_hold`,
   `marked_strike` (passive: evasion piercing vs marked targets),
-  `oath_seal`, `claws_judgment` (active combo finisher: 2x damage vs
-  oath_marked, requires `is_valid_finisher()` + mark)
-- [ ] Wall Command: `frontier_scan`, `shelter`, `trailblaze`, `bulwark`
+  `claws_pursuit` (pursuit buff vs marked target), `claws_judgment`
+  (active combo finisher: 2x damage vs oath_marked, requires
+  `is_valid_finisher()` + mark)
+- [ ] Wall Command: `dig_in`, `shelter`, `trailblaze`, `bulwark`
   (passive: flat physical damage reduction), `signal_tower`,
   `rampart_slam` (active combo builder: shield slam + stun, feeds
   `ch->combo[]`)
 - [ ] Road Wardens: `wayfind`, `road_camp`, `forced_march`, `road_grit`
-  (passive: dodge bonus), `dispatch_rider`, `waylay` (active: hit +
-  dodge/speed debuff)
+  (passive: dodge bonus), `dispatch_rider`, `waylay` (active positional:
+  hit + dodge/speed debuff, requires target fighting someone else)
 - [ ] Register all skill commands in `interp.c`
 - [ ] Write unit tests for each skill's gating logic
 

@@ -85,18 +85,22 @@ commitment to a single society at maximum rank.
 Where thematically appropriate, Commander-tier skills integrate with existing
 combat subsystems rather than standing alone:
 
-- **Combo system:** `anchor_slam` (Harbor Syndics) and `rampart_slam` (Wall
-  Command) are combo builders — they feed into the `ch->combo[]` array via
-  `combo(ch, victim, gsn)` just like bash, kick, and other war-attack skills.
-  `claws_judgment` (Shrine of the First Claw) is a combo finisher — it
-  requires `is_valid_finisher()` (like fleche and holystrike) and triggers the
-  finisher chain sequence on hit, giving Shrine members a unique way to close
-  out a combo that is gated behind both combo readiness and an active
-  `oath_mark`.
+- **Combo system:** `command_presence` (Guard Command), `anchor_slam` (Harbor
+  Syndics), and `rampart_slam` (Wall Command) are combo builders — they feed
+  into the `ch->combo[]` array via `combo(ch, victim, gsn)` just like bash,
+  kick, and other war-attack skills. `claws_judgment` (Shrine of the First
+  Claw) is a combo finisher — it requires `is_valid_finisher()` (like fleche
+  and holystrike) and triggers the finisher chain sequence on hit, giving
+  Shrine members a unique way to close out a combo that is gated behind both
+  combo readiness and an active `oath_mark`.
 - **Chi system:** `controlled_burn` (Ember Wardens) has an optional chi
   enhancement — if the player has chi access (`get_chi(ch) >= 5`), they may
   spend 5 chi to double the DOT duration. This rewards martial artist / Ember
   Warden cross-builds without penalizing non-chi users.
+- **Positional system:** `waylay` (Road Wardens) uses the same positional
+  gate as `circle` from the backstab system — it can only be used when the
+  target is fighting someone else. This gives it the ambush identity of a
+  flanking strike without duplicating backstab's mechanics.
 
 ### 5. One Society, One Commitment
 
