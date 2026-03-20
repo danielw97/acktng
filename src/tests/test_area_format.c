@@ -384,7 +384,8 @@ static void parse_area_section(FILE *fp, char *line, int *line_number, const cha
                            "#AREA '%c' directive must contain exactly 1 integer", trimmed[0]);
       }
 
-      /* Directives K, L, O, U, C take tilde-terminated string values that may span multiple lines */
+      /* Directives K, L, O, U, C take tilde-terminated string values that may span multiple lines
+       */
       if (strchr("KLOUC", trimmed[0]) != NULL && strchr(line, '~') == NULL)
          consume_tilde_string(fp, line, line_number, area_path);
    }

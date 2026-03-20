@@ -955,10 +955,12 @@ static void crusade_build_conversation_context(void)
 {
    const char *item_name = quest_object ? quest_object->short_descr : "the item";
    const char *target_name = quest_target ? quest_target->short_descr : "an unknown thief";
-   const char *giver_area = (quest_mob != NULL && quest_mob->in_room != NULL && quest_mob->in_room->area != NULL)
-                                ? quest_mob->in_room->area->name
-                                : "an unknown area";
-   const char *target_area = (quest_target != NULL && quest_target->in_room != NULL && quest_target->in_room->area != NULL)
+   const char *giver_area =
+       (quest_mob != NULL && quest_mob->in_room != NULL && quest_mob->in_room->area != NULL)
+           ? quest_mob->in_room->area->name
+           : "an unknown area";
+   const char *target_area = (quest_target != NULL && quest_target->in_room != NULL &&
+                              quest_target->in_room->area != NULL)
                                  ? quest_target->in_room->area->name
                                  : "an unknown area";
 

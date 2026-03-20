@@ -94,8 +94,7 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
       {
          /* Use write_to_buffer so close_socket's process_output call applies
           * WebSocket framing for clients that upgraded to WebSocket. */
-         write_to_buffer(d, "\n\r@Sorry, ACK! MUD rebooting. Come back in a few minutes.\n\r",
-                         0);
+         write_to_buffer(d, "\n\r@Sorry, ACK! MUD rebooting. Come back in a few minutes.\n\r", 0);
          close_socket(d); /* throw'em out */
       }
       else

@@ -12,6 +12,7 @@ U @@WThe @@ysun@@W shines everywhere.@@N~
 O Virant~
 R Virant~
 W Virant~
+S Title not shown on area list.
 #ROOMS
 #7300
 New room~
@@ -49,7 +50,7 @@ L
 1
 #7302
 Virant keep chest~
-Virant's Keep Chest~
+virant's Keep Chest~
 Virant's Keep Chest rests here.~
 15 8388608 0 1
 10000 21 -1 50 0 0 0 0 0 0
@@ -59,5 +60,6 @@ L
 #0
 #RESETS
 O 0 7302 1 7302 (null)
+
 S
 #$
