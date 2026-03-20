@@ -5258,7 +5258,7 @@ void do_shelp(CHAR_DATA *ch, char *argument)
       if (pHelp->level > get_trust(ch))
          continue;
 
-      if (!str_prefix(search_term, pHelp->keyword))
+      if (!str_prefix(full_argument, pHelp->keyword))
       {
          if (pHelp->level >= 0)
          {
