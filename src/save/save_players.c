@@ -832,29 +832,32 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          KEY("Adeptlevel", ch->adept_level, fread_number(fp));
          if (!IS_NPC(ch))
          {
-            SKEY("Alias_Name0", ch->pcdata->alias_name[0], fread_string(fp));
-
-            SKEY("Alias_Name1", ch->pcdata->alias_name[1], fread_string(fp));
-
-            SKEY("Alias_Name2", ch->pcdata->alias_name[2], fread_string(fp));
-
-            SKEY("Alias_Name3", ch->pcdata->alias_name[3], fread_string(fp));
-
-            SKEY("Alias_Name4", ch->pcdata->alias_name[4], fread_string(fp));
-
-            SKEY("Alias_Name5", ch->pcdata->alias_name[5], fread_string(fp));
-
-            SKEY("Alias0", ch->pcdata->alias[0], fread_string(fp));
-
-            SKEY("Alias1", ch->pcdata->alias[1], fread_string(fp));
-
-            SKEY("Alias2", ch->pcdata->alias[2], fread_string(fp));
-
-            SKEY("Alias3", ch->pcdata->alias[3], fread_string(fp));
-
-            SKEY("Alias4", ch->pcdata->alias[4], fread_string(fp));
-
-            SKEY("Alias5", ch->pcdata->alias[5], fread_string(fp));
+            /* Alias_NameN — prefix match so MAX_ALIASES can be bumped freely */
+            if (!str_prefix("Alias_Name", word))
+            {
+               int idx = atoi(word + 10);
+               if (idx >= 0 && idx < MAX_ALIASES)
+               {
+                  if (ch->pcdata->alias_name[idx] != NULL)
+                     free_string(ch->pcdata->alias_name[idx]);
+                  ch->pcdata->alias_name[idx] = fread_string(fp);
+                  fMatch = TRUE;
+                  break;
+               }
+            }
+            /* AliasN (not Alias_Name) */
+            if (!str_prefix("Alias", word) && word[5] != '_')
+            {
+               int idx = atoi(word + 5);
+               if (idx >= 0 && idx < MAX_ALIASES)
+               {
+                  if (ch->pcdata->alias[idx] != NULL)
+                     free_string(ch->pcdata->alias[idx]);
+                  ch->pcdata->alias[idx] = fread_string(fp);
+                  fMatch = TRUE;
+                  break;
+               }
+            }
          }
 
          if (!str_cmp(word, "Adeptreincarnations"))
