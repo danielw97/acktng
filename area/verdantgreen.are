@@ -2446,7 +2446,7 @@ This predator has evolved camouflage so perfect that its outline dissolves into 
 97 65536 -300 S
 80 0
 150 -15 10 10
-! 0 0 0 7 1052802 0 0
+! 0 0 21 7 1052802 0 0
 | 2 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2461,7 +2461,7 @@ Whatever this creature was before the forest's will took it, it is now armored i
 97 0 -300 S
 82 0
 200 -15 11 11
-! 0 0 0 7 1052802 0 0
+! 0 0 21 7 1052802 0 0
 | 32 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2476,7 +2476,7 @@ The canopy lurker does not move until something passes beneath it, at which poin
 97 65536 -350 S
 84 0
 250 -18 12 12
-! 0 0 0 7 1052802 0 0
+! 0 0 21 7 1052802 0 0
 | 2 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2491,7 +2491,7 @@ This is one of the original inhabitants of the Verdant Depths; its bark has fuse
 97 0 -350 S
 86 0
 300 -20 13 13
-! 0 0 0 7 1062150 0 0
+! 0 0 21 7 1062150 0 0
 | 32 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2506,7 +2506,7 @@ Whatever this creature was before the fungal infection completed its work, it is
 97 0 -300 S
 83 0
 200 -16 11 11
-! 0 0 0 7 1052802 0 0
+! 0 0 21 7 1052802 0 0
 | 512 128 0 0 0 32 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2521,7 +2521,7 @@ The deepwood wolf has lived in this place long enough that the forest's particul
 97 0 -350 S
 85 0
 250 -18 12 12
-! 0 0 0 7 1052802 0 0
+! 0 0 14 7 1052802 0 0
 | 2 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2536,7 +2536,7 @@ There is no brain in the vine strangler that a conventional anatomist would reco
 97 0 -400 S
 87 0
 350 -22 14 14
-! 0 0 0 7 1062150 0 0
+! 0 0 21 7 1062150 0 0
 | 32 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2551,7 +2551,7 @@ This construct was built by hands now centuries gone to serve a purpose that has
 97 0 -350 S
 88 0
 400 -25 14 12
-! 0 0 0 7 1062150 0 96
+! 0 0 19 7 1062150 0 96
 | 34 0 0 0 0 34 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2566,7 +2566,7 @@ She was once a guardian of the forest's living heart; the corruption that took h
 97 0 -400 S
 85 2
 200 -15 10 10
-! 0 0 0 7 4098 6656 0
+! 0 0 21 7 4098 6656 0
 | 4 2 0 0 0 0 0
 + 20 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2581,7 +2581,7 @@ The thornfang stalker is a pack hunter operating alone only because the pack has
 97 0 -450 S
 90 0
 500 -25 16 16
-! 0 0 0 7 1062150 0 0
+! 0 0 16 7 1062150 0 0
 | 2 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2596,7 +2596,7 @@ The rootweaver spider has evolved alongside the forest's root network to the poi
 97 0 -400 S
 88 0
 350 -22 13 13
-! 0 0 0 7 1052802 0 0
+! 0 0 12 7 1052802 0 0
 | 32 0 0 0 0 512 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2611,7 +2611,7 @@ This construct was once a treant; the petrification process preserved the struct
 33554529 0 -500 S
 92 0
 800 -30 18 16
-! 0 0 0 7 1619980 0 96
+! 0 0 19 7 1619980 0 96
 | 34 0 0 0 0 34 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2626,7 +2626,7 @@ Multiple fungal species have merged here into a single colony that has achieved 
 97 0 -450 S
 90 0
 500 -25 16 15
-! 0 0 0 7 1062150 0 0
+! 0 0 21 7 1062150 0 0
 | 512 128 0 0 0 32 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2641,7 +2641,7 @@ The heartwood guardians were not made in any conventional sense -- they grew, ov
 33554529 0 -500 S
 93 0
 900 -32 19 18
-! 0 0 0 7 1619980 0 0
+! 0 0 21 7 1619980 0 0
 | 32 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2656,7 +2656,7 @@ The rotwood shambler is what results when the Blightwood Ancient's decay network
 97 0 -400 S
 86 0
 300 -20 13 12
-! 0 0 0 7 1052802 0 0
+! 0 0 21 7 1052802 0 0
 | 32 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2671,7 +2671,7 @@ The sporecrown drone is a purpose-built extension of the Blightwood Ancient's se
 97 0 -300 S
 84 0
 250 -18 11 11
-! 0 0 0 7 1052802 0 0
+! 0 0 21 7 1052802 0 0
 | 512 128 0 0 0 32 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2686,7 +2686,7 @@ The packmate operates in a distributed hunting pattern coordinated through subso
 97 0 -400 S
 89 0
 400 -22 14 14
-! 0 0 0 7 1062150 0 0
+! 0 0 16 7 1062150 0 0
 | 2 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2701,7 +2701,7 @@ Each tendril in this mass is a separate organism that has surrendered individual
 97 0 -350 S
 87 0
 350 -22 13 13
-! 0 0 0 7 1052802 0 0
+! 0 0 21 7 1052802 0 0
 | 32 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2716,7 +2716,7 @@ The canopy weaver's web spans the entire zone's canopy and serves simultaneously
 33554529 0 -500 S
 91 0
 700 -28 17 16
-! 0 0 0 7 1619980 0 0
+! 0 0 21 7 1619980 0 0
 | 32 0 0 0 0 512 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2731,7 +2731,7 @@ The verdant wraith is what remains of a consciousness that was once part of the 
 33554529 2 -600 S
 95 0
 1000 -35 20 18
-! 0 0 0 7 4098 6656 0
+! 0 0 10 7 4098 6656 0
 | 4 2 0 0 0 0 0
 + 30 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2746,7 +2746,7 @@ The creeping shadow fox's fur absorbs light in a way that ordinary biology canno
 97 65536 -250 S
 81 0
 170 -13 10 10
-! 0 0 0 7 1052802 0 0
+! 0 0 14 7 1052802 0 0
 | 2 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2761,7 +2761,7 @@ The tanglewood serpent's camouflage is not a fixed pattern but an active process
 97 65536 -300 S
 83 0
 220 -15 11 11
-! 0 0 0 7 1052802 0 0
+! 0 0 11 7 1052802 0 0
 | 2 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2776,7 +2776,7 @@ The fungal tick swarm has no individual intelligence but the swarm as a whole de
 65633 0 -250 S
 80 0
 150 -8 8 8
-! 0 0 0 7 1052802 0 0
+! 0 0 21 7 1052802 0 0
 | 512 128 0 0 0 32 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2806,7 +2806,7 @@ The hollow tree lurker has modified the trunk it occupies over years of habitati
 97 65536 -300 S
 83 0
 220 -15 11 11
-! 0 0 0 7 1052802 0 0
+! 0 0 21 7 1052802 0 0
 | 2 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2821,7 +2821,7 @@ The mosswort beetle's shell is genuinely impenetrable to most conventional weapo
 97 0 -250 S
 80 0
 150 -15 9 8
-! 0 0 0 7 1052802 0 0
+! 0 0 13 7 1052802 0 0
 | 32 0 0 0 0 512 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2836,7 +2836,7 @@ The deepwood bear has been in the Verdant Depths long enough that the forest's i
 97 0 -350 S
 88 0
 400 -22 14 14
-! 0 0 0 7 1062150 0 0
+! 0 0 14 7 1062150 0 0
 | 2 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2851,7 +2851,7 @@ What animates this body of semi-solidified tree sap is debatable; what is certai
 262241 0 -450 S
 90 0
 500 -25 16 15
-! 0 0 0 7 1062150 0 0
+! 0 0 21 7 1062150 0 0
 | 512 0 0 0 0 2 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2866,7 +2866,7 @@ The whispering shade is a creature of the spaces between things -- between light
 97 65538 -450 S
 86 0
 300 -20 13 12
-! 0 0 0 7 1062150 0 0
+! 0 0 10 7 1062150 0 0
 | 4 2 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2896,7 +2896,7 @@ The thorn-crown stag was once part of the forest's natural ecology; the corrupti
 97 0 -300 S
 84 1
 250 -18 12 11
-! 0 0 0 7 1052802 0 0
+! 0 0 16 7 1052802 0 0
 | 2 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2911,7 +2911,7 @@ The mycelium crawler is a primarily subterranean organism that uses the forest's
 97 0 -300 S
 82 0
 200 -15 10 10
-! 0 0 0 7 1052802 0 0
+! 0 0 21 7 1052802 0 0
 | 512 128 0 0 0 32 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2926,7 +2926,7 @@ The fungal infection that controls this boar has removed everything that might m
 97 0 -350 S
 85 0
 270 -18 12 12
-! 0 0 0 7 1052802 0 0
+! 0 0 16 7 1052802 0 0
 | 2 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2941,7 +2941,7 @@ The elder vine serpent has been in the Verdant Depths long enough that the fores
 33554529 0 -500 S
 91 0
 700 -28 17 16
-! 0 0 0 7 1619980 0 0
+! 0 0 11 7 1619980 0 0
 | 32 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2956,7 +2956,7 @@ The living deadfall is animated timber -- logs and branches that have been given
 97 0 -350 S
 87 0
 350 -22 13 12
-! 0 0 0 7 1052802 0 0
+! 0 0 21 7 1052802 0 0
 | 32 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2971,7 +2971,7 @@ The deepwood shaman was once a druid, a cleric, or something similar; the forest
 33554529 0 -500 S
 93 0
 900 -30 17 15
-! 0 0 0 7 12294 6656 0
+! 0 0 5 7 12294 6656 0
 | 0 0 0 0 0 0 0
 + 35 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2986,7 +2986,7 @@ The rootwoven horror is one of the forest's larger-scale defensive constructs, a
 33554529 0 -550 S
 94 0
 1000 -33 20 19
-! 0 0 0 7 1619980 0 0
+! 0 0 21 7 1619980 0 0
 | 32 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3001,7 +3001,7 @@ The blightspore walker is a fungal organism that has achieved locomotion by anim
 97 0 -350 S
 86 0
 300 -18 12 12
-! 0 0 0 7 1052802 0 0
+! 0 0 21 7 1052802 0 0
 | 512 128 0 0 0 32 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3016,7 +3016,7 @@ The thornfang whelp has not yet reached the full size of the pack's adults but h
 97 0 -250 S
 82 0
 180 -13 10 10
-! 0 0 0 7 1052802 0 0
+! 0 0 16 7 1052802 0 0
 | 2 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3031,7 +3031,7 @@ The rootbound guardian grew from the Rootmother's root-network in response to in
 97 0 -400 S
 90 0
 500 -25 15 14
-! 0 0 0 7 1062150 0 32
+! 0 0 21 7 1062150 0 32
 | 32 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3046,7 +3046,7 @@ The canopy strangler waits in the upper canopy for extended periods, its body pe
 97 65536 -400 S
 88 0
 400 -22 14 13
-! 0 0 0 7 1062150 0 0
+! 0 0 21 7 1062150 0 0
 | 32 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3061,7 +3061,7 @@ She was old when the corruption found her, and the corruption found in her a con
 33554529 0 -500 S
 91 2
 700 -25 15 14
-! 0 0 0 7 12294 6656 0
+! 0 0 21 7 12294 6656 0
 | 4 2 0 0 0 0 0
 + 30 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3076,7 +3076,7 @@ The mosswort queen does not need to fight well because everything in her immedia
 97 0 -300 S
 85 2
 280 -20 12 12
-! 0 0 0 7 1052802 0 0
+! 0 0 21 7 1052802 0 0
 | 32 0 0 0 0 512 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3091,7 +3091,7 @@ The verdant hulk is a plant-beast amalgamation that the Verdant Depths has been 
 33554529 0 -500 S
 92 0
 850 -30 18 17
-! 0 0 0 7 1619980 0 0
+! 0 0 21 7 1619980 0 0
 | 32 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3106,7 +3106,7 @@ The fungal infection that animated this stag did so long after the animal's deat
 16481 0 -400 S
 83 1
 220 -15 11 11
-! 0 0 0 7 1052802 0 0
+! 0 0 16 7 1052802 0 0
 | 256 8 0 0 0 256 8
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3136,7 +3136,7 @@ The barkskin wolf is a deepwood wolf variant whose hide has undergone a secondar
 97 0 -380 S
 87 0
 360 -22 13 13
-! 0 0 0 7 1062150 0 0
+! 0 0 14 7 1062150 0 0
 | 2 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3151,7 +3151,7 @@ The deepwood centipede is venomous in all developmental stages, but the adult's 
 97 0 -300 S
 84 0
 250 -18 12 11
-! 0 0 0 7 1052802 0 0
+! 0 0 13 7 1052802 0 0
 | 32 0 0 0 0 512 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3181,7 +3181,7 @@ The fungal broodmother is the Blightwood Ancient's primary reproductive instrume
 33554529 0 -500 S
 93 2
 950 -30 18 17
-! 0 0 0 7 1619980 0 0
+! 0 0 21 7 1619980 0 0
 | 512 128 0 0 0 32 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3196,7 +3196,7 @@ The ancient moss elemental is an elemental not in the sense of having been summo
 97 0 -450 S
 90 0
 550 -27 15 14
-! 0 0 0 7 1062150 0 96
+! 0 0 19 7 1062150 0 96
 | 34 0 0 0 0 34 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3211,7 +3211,7 @@ The twisted ent has been corrupted not by external agency but by an internal pro
 97 0 -350 S
 88 0
 400 -22 13 13
-! 0 0 0 7 1062150 0 0
+! 0 0 21 7 1062150 0 0
 | 32 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3241,7 +3241,7 @@ The gloomwing moth's wing-dust is its primary survival mechanism: a chemical com
 97 65536 -250 S
 82 0
 200 -13 10 10
-! 0 0 0 7 1052802 0 0
+! 0 0 13 7 1052802 0 0
 | 32 0 0 0 0 512 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3256,7 +3256,7 @@ The sap ooze is the forest's most basic animated construct -- tree sap given the
 327777 0 -300 S
 85 0
 280 -15 10 10
-! 0 0 0 7 1052802 0 0
+! 0 0 21 7 1052802 0 0
 | 512 0 0 0 0 2 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3271,7 +3271,7 @@ The grove keeper was created to protect a specific grove and given the intellige
 33554529 0 -550 S
 91 0
 750 -28 17 15
-! 0 0 0 7 12294 6656 0
+! 0 0 5 7 12294 6656 0
 | 0 0 0 0 0 0 0
 + 30 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3286,7 +3286,7 @@ The corpseflower lurker lures prey with a scent system that mimics the specific 
 97 65536 -400 S
 86 0
 300 -20 13 12
-! 0 0 0 7 1052802 0 0
+! 0 0 21 7 1052802 0 0
 | 32 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3301,7 +3301,7 @@ The brambleback tortoise's shell has been colonized by thorn-producing plants to
 97 0 -350 S
 88 0
 450 -30 12 12
-! 0 0 0 7 1062150 0 32
+! 0 0 17 7 1062150 0 32
 | 32 0 0 0 0 512 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3316,7 +3316,7 @@ The sporeveil phantom is a consciousness that has distributed itself through a s
 97 2 -450 S
 90 0
 500 -25 14 14
-! 0 0 0 7 1062150 0 0
+! 0 0 10 7 1062150 0 0
 | 4 2 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3331,7 +3331,7 @@ The thornroot drake is the forest's response to the question of what form the ap
 33554529 0 -600 S
 95 0
 1100 -35 22 20
-! 0 0 0 7 1619980 0 0
+! 0 0 18 7 1619980 0 0
 | 32 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3362,7 +3362,7 @@ Her roots extend in every direction into the living rock, drawing nourishment fr
 67108979 0 -700 S
 100 2
 10000 -50 30 28
-! 0 0 0 7 1618040 6144 48
+! 0 0 21 7 1618040 6144 48
 | 32 128 0 0 0 2 128
 + 50 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3378,7 +3378,7 @@ The spores that fall constantly from its mass carry the chemistry of centuries o
 67108979 0 -700 S
 100 0
 10000 -50 28 26
-! 0 0 0 7 1618040 896 80
+! 0 0 21 7 1618040 896 80
 | 512 128 0 0 0 32 128
 + 50 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3394,7 +3394,7 @@ It is larger than the packmates, faster than the stalkers, and more patient than
 67108979 0 -700 S
 100 1
 12000 -50 35 33
-! 0 0 0 7 1634680 0 0
+! 0 0 16 7 1634680 0 0
 | 2 4 0 0 0 2 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 

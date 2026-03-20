@@ -6991,6 +6991,7 @@ Wind-polished insignia mark this reach warden gate sentinel as part of the Reach
 67 0 200 S
 58 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6301
 reach warden patrol leader~
 a reach warden patrol leader~
@@ -7001,6 +7002,7 @@ Salt-stiffened documents hang from this reach warden patrol leader's belt. Stagi
 67 0 200 S
 60 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6302
 reach warden cartographer~
 a reach warden cartographer~
@@ -7011,6 +7013,7 @@ This reach warden cartographer watches every approach like an audit waiting to h
 67 0 200 S
 58 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6303
 glasswalk guide recruiter~
 a glasswalk guide recruiter~
@@ -7021,6 +7024,7 @@ This glasswalk guide recruiter keeps a wary eye on weather, footing, and people 
 67 0 200 S
 56 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6304
 red sand counting clerk~
 a red sand counting clerk~
@@ -7031,6 +7035,7 @@ Salt-stiffened documents hang from this red sand counting clerk's belt. Staging 
 67 0 200 S
 60 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6305
 caravan provisioner~
 a caravan provisioner~
@@ -7041,6 +7046,7 @@ Dust and salt cling to this caravan provisioner's kit from constant travel work.
 67 0 200 S
 55 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6306
 sand-sea carter~
 a sand-sea carter~
@@ -7051,6 +7057,7 @@ This sand-sea carter keeps a wary eye on weather, footing, and people alike. Sta
 65 0 200 S
 56 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6307
 reach transit clerk~
 a reach transit clerk~
@@ -7061,6 +7068,7 @@ Salt-stiffened documents hang from this reach transit clerk's belt. Staging dust
 67 0 200 S
 57 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6308
 drywell attendant~
 a drywell attendant~
@@ -7071,6 +7079,7 @@ Wind, salt, and old violence have left their mark on this drywell attendant. Sta
 67 0 200 S
 55 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6309
 cairn tablet reader~
 a cairn tablet reader~
@@ -7081,6 +7090,7 @@ This cairn tablet reader keeps a wary eye on weather, footing, and people alike.
 67 0 200 S
 58 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6310
 caravan drover~
 a caravan drover~
@@ -7091,6 +7101,7 @@ This caravan drover moves with the practical calm of someone who knows the route
 65 0 200 S
 55 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6311
 staging yard rat~
 a staging yard rat~
@@ -7101,6 +7112,7 @@ Salt and glass dust cling to this staging yard rat's shell and claws. Staging du
 97 0 -350 S
 55 0
 0 0 0 0
+! 0 0 16 7 0 0 0
 #6312
 salt cricket swarm~
 a salt cricket swarm~
@@ -7111,6 +7123,7 @@ This salt cricket swarm prowls the Reach like it owns the ground beneath it. Sta
 65633 0 -350 S
 56 0
 0 0 0 0
+! 0 0 13 7 0 0 0
 #6313
 salt cricket swarm leader~
 a salt cricket swarm leader~
@@ -7121,6 +7134,7 @@ This salt cricket swarm leader tracks movement with predatory focus. Staging dus
 65633 0 -350 S
 58 0
 0 0 0 0
+! 0 0 13 7 0 0 0
 #6314
 cairn kite~
 a cairn kite~
@@ -7131,6 +7145,7 @@ Salt and glass dust cling to this cairn kite's shell and claws. Staging dust cur
 97 0 -350 S
 57 0
 0 0 0 0
+! 0 0 15 7 0 0 0
 #6315
 cairn kite alpha~
 a cairn kite alpha~
@@ -7141,6 +7156,7 @@ This cairn kite alpha prowls the Reach like it owns the ground beneath it. Stagi
 33554529 0 -350 S
 60 0
 0 0 0 0
+! 0 0 15 7 0 0 0
 #6316
 salt crust lurker~
 a salt crust lurker~
@@ -7151,6 +7167,7 @@ This salt crust lurker bears the hard-worn look of the Reach. Staging dust curls
 97 0 -350 S
 58 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6317
 brine serpent~
 a brine serpent~
@@ -7161,6 +7178,7 @@ Salt and glass dust cling to this brine serpent's shell and claws. Staging dust 
 97 0 -350 S
 59 0
 0 0 0 0
+! 0 0 11 7 0 0 0
 #6318
 corrupted warden toll-thief~
 a corrupted warden toll-thief~
@@ -7171,6 +7189,7 @@ Wind-polished insignia mark this corrupted warden toll-thief as part of the Reac
 97 0 -350 S
 60 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6319
 swift line warden patrol~
 a swift line warden patrol~
@@ -7181,6 +7200,7 @@ Salt-stiffened documents hang from this swift line warden patrol's belt. Staging
 65 0 200 S
 58 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6320
 salt-blinded drifter~
 a salt-blinded drifter~
@@ -7191,6 +7211,7 @@ Wind, salt, and old violence have left their mark on this salt-blinded drifter. 
 97 0 -350 S
 56 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6321
 mineral crust elemental~
 a mineral crust elemental~
@@ -7201,6 +7222,7 @@ A low grinding note follows this mineral crust elemental whenever it shifts weig
 65633 0 -350 S
 62 0
 0 0 0 0
+! 0 0 19 7 0 0 0
 #6322
 heavy road warden sentinel~
 a heavy road warden sentinel~
@@ -7211,6 +7233,7 @@ Salt-stiffened documents hang from this heavy road warden sentinel's belt. Stagi
 67 0 200 S
 60 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6323
 waystation cistern keeper~
 a waystation cistern keeper~
@@ -7221,6 +7244,7 @@ Wind, salt, and old violence have left their mark on this waystation cistern kee
 67 0 200 S
 58 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6324
 red sand outrider scout~
 a red sand outrider scout~
@@ -7231,6 +7255,7 @@ This red sand outrider scout waits in the open like part of the landscape itself
 97 0 -350 S
 62 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6325
 convoy graveyard scavenger~
 a convoy graveyard scavenger~
@@ -7241,6 +7266,7 @@ This convoy graveyard scavenger bears the hard-worn look of the Reach. Staging d
 97 0 -350 S
 60 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6326
 salt flat viper~
 a salt flat viper~
@@ -7251,6 +7277,7 @@ Salt and glass dust cling to this salt flat viper's shell and claws. Staging dus
 97 0 -350 S
 58 0
 0 0 0 0
+! 0 0 11 7 0 0 0
 #6327
 brine pool predator~
 a brine pool predator~
@@ -7261,6 +7288,7 @@ This brine pool predator waits in the open like part of the landscape itself. St
 97 0 -350 S
 60 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6328
 assessment station ghost~
 an assessment station ghost~
@@ -7271,6 +7299,7 @@ This assessment station ghost flickers at the edges like law refusing to die. St
 82017 0 -500 S
 62 0
 0 0 0 0
+! 0 0 10 7 0 0 0
 #6329
 heavy road caravan guard~
 a heavy road caravan guard~
@@ -7281,6 +7310,7 @@ Wind, salt, and old violence have left their mark on this heavy road caravan gua
 65 0 200 S
 58 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6330
 salt slab golem~
 a salt slab golem~
@@ -7291,6 +7321,7 @@ A low grinding note follows this salt slab golem whenever it shifts weight. Stag
 33554529 0 -350 S
 64 0
 0 0 0 0
+! 0 0 19 7 0 0 0
 #6331
 glass scorpion~
 a glass scorpion~
@@ -7301,6 +7332,7 @@ This glass scorpion tracks movement with predatory focus. Staging dust curls aro
 97 0 -350 S
 62 0
 0 0 0 0
+! 0 0 12 7 0 0 0
 #6332
 glass scorpion matriarch~
 a glass scorpion matriarch~
@@ -7311,6 +7343,7 @@ Salt and glass dust cling to this glass scorpion matriarch's shell and claws. St
 33554529 0 -350 S
 65 0
 0 0 0 0
+! 0 0 12 7 0 0 0
 #6333
 glassworm burrower~
 a glassworm burrower~
@@ -7321,6 +7354,7 @@ This glassworm burrower prowls the Reach like it owns the ground beneath it. Sta
 97 0 -350 S
 63 0
 0 0 0 0
+! 0 0 12 7 0 0 0
 #6334
 glassworm tunnel sentinel~
 a glassworm tunnel sentinel~
@@ -7331,6 +7365,7 @@ This glassworm tunnel sentinel stands with brutal stillness until something cros
 33554529 0 -350 S
 66 0
 0 0 0 0
+! 0 0 12 7 0 0 0
 #6335
 glasswalk guide pathfinder~
 a glasswalk guide pathfinder~
@@ -7341,6 +7376,7 @@ Dust and salt cling to this glasswalk guide pathfinder's kit from constant trave
 67 0 200 S
 60 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6336
 glasswalk guide elder~
 a glasswalk guide elder~
@@ -7351,6 +7387,7 @@ This glasswalk guide elder keeps a wary eye on weather, footing, and people alik
 67 0 200 S
 63 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6337
 synod whisper courier~
 a synod whisper courier~
@@ -7361,6 +7398,7 @@ This synod whisper courier bears the hard-worn look of the Reach. Staging dust c
 97 0 -350 S
 62 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6338
 synod lookout~
 a synod lookout~
@@ -7371,6 +7409,7 @@ Wind, salt, and old violence have left their mark on this synod lookout. Staging
 97 0 -350 S
 60 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6339
 synod ritual keeper~
 a synod ritual keeper~
@@ -7381,6 +7420,7 @@ This synod ritual keeper waits in the open like part of the landscape itself. St
 97 0 -350 S
 64 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6340
 thermal fault elemental~
 a thermal fault elemental~
@@ -7391,6 +7431,7 @@ This thermal fault elemental stands with brutal stillness until something crosse
 65633 0 -350 S
 66 0
 0 0 0 0
+! 0 0 19 7 0 0 0
 #6341
 vitrified sand horror~
 a vitrified sand horror~
@@ -7401,6 +7442,7 @@ Hairline fractures and mineral crust seam this vitrified sand horror's hardened 
 65633 0 -350 S
 65 0
 0 0 0 0
+! 0 0 19 7 0 0 0
 #6342
 molten glass sentinel~
 a molten glass sentinel~
@@ -7411,6 +7453,7 @@ A low grinding note follows this molten glass sentinel whenever it shifts weight
 33620065 0 -350 S
 67 0
 0 0 0 0
+! 0 0 19 7 0 0 0
 #6343
 shardstorm wind spirit~
 a shardstorm wind spirit~
@@ -7421,6 +7464,7 @@ This shardstorm wind spirit flickers at the edges like law refusing to die. Stag
 65633 0 -350 S
 63 0
 0 0 0 0
+! 0 0 19 7 0 0 0
 #6344
 amber glass crawler~
 an amber glass crawler~
@@ -7431,6 +7475,7 @@ Salt and glass dust cling to this amber glass crawler's shell and claws. Staging
 97 0 -350 S
 61 0
 0 0 0 0
+! 0 0 13 7 0 0 0
 #6345
 glassworm burrower queen~
 a glassworm burrower queen~
@@ -7441,6 +7486,7 @@ This glassworm burrower queen prowls the Reach like it owns the ground beneath i
 67108979 0 -350 S
 70 0
 0 0 0 0
+! 0 0 12 7 0 0 0
 #6346
 cairn scavenger~
 a cairn scavenger~
@@ -7451,6 +7497,7 @@ This cairn scavenger bears the hard-worn look of the Reach. Staging dust curls a
 97 0 -350 S
 62 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6347
 cairn scavenger digger~
 a cairn scavenger digger~
@@ -7461,6 +7508,7 @@ Wind, salt, and old violence have left their mark on this cairn scavenger digger
 97 0 -350 S
 60 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6348
 cairn scavenger lookout~
 a cairn scavenger lookout~
@@ -7471,6 +7519,7 @@ This cairn scavenger lookout waits in the open like part of the landscape itself
 97 0 -350 S
 61 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6349
 cairn scavenger warlord~
 a cairn scavenger warlord~
@@ -7481,6 +7530,7 @@ This cairn scavenger warlord bears the hard-worn look of the Reach. Staging dust
 67108979 0 -350 S
 70 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6350
 red sand debt collector~
 a red sand debt collector~
@@ -7491,6 +7541,7 @@ Wind, salt, and old violence have left their mark on this red sand debt collecto
 97 0 -350 S
 64 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6351
 red sand assessor~
 a red sand assessor~
@@ -7501,6 +7552,7 @@ Wind-polished insignia mark this red sand assessor as part of the Reach's legal 
 97 0 -350 S
 66 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6352
 red sand enforcer~
 a red sand enforcer~
@@ -7511,6 +7563,7 @@ This red sand enforcer bears the hard-worn look of the Reach. Glare from the fla
 33554529 0 -350 S
 68 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6353
 measure's rest warden guard~
 a measure's rest warden guard~
@@ -7521,6 +7574,7 @@ This measure's rest warden guard watches every approach like an audit waiting to
 67 0 200 S
 64 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6354
 warden commander~
 a warden commander~
@@ -7531,6 +7585,7 @@ Wind-polished insignia mark this warden commander as part of the Reach's legal m
 67 0 200 S
 68 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6355
 landward tidewright~
 a landward tidewright~
@@ -7541,6 +7596,7 @@ This landward tidewright moves with the practical calm of someone who knows the 
 67 0 200 S
 62 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6356
 kowloon scholar~
 a kowloon scholar~
@@ -7551,6 +7607,7 @@ Dust and salt cling to this kowloon scholar's kit from constant travel work. Gla
 67 0 200 S
 60 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6357
 tablet restoration apprentice~
 a tablet restoration apprentice~
@@ -7561,6 +7618,7 @@ This tablet restoration apprentice keeps a wary eye on weather, footing, and peo
 67 0 200 S
 58 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6358
 cairn station construct~
 a cairn station construct~
@@ -7571,6 +7629,7 @@ This cairn station construct stands with brutal stillness until something crosse
 99 0 -350 S
 66 0
 0 0 0 0
+! 0 0 19 7 0 0 0
 #6359
 toll cairn specter~
 a toll cairn specter~
@@ -7581,6 +7640,7 @@ Cold grit eddies through this toll cairn specter with every movement. Glare from
 82017 0 -500 S
 64 0
 0 0 0 0
+! 0 0 10 7 0 0 0
 #6360
 forgery detection scribe~
 a forgery detection scribe~
@@ -7591,6 +7651,7 @@ Wind-polished insignia mark this forgery detection scribe as part of the Reach's
 67 0 200 S
 60 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6361
 synod tunnel sentry~
 a synod tunnel sentry~
@@ -7601,6 +7662,7 @@ This synod tunnel sentry bears the hard-worn look of the Reach. Glare from the f
 97 0 -350 S
 65 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6362
 synod relic handler~
 a synod relic handler~
@@ -7611,6 +7673,7 @@ Wind, salt, and old violence have left their mark on this synod relic handler. G
 97 0 -350 S
 66 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6363
 synod eclipsed chanter~
 a synod eclipsed chanter~
@@ -7621,6 +7684,7 @@ This synod eclipsed chanter waits in the open like part of the landscape itself.
 97 0 -350 S
 68 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6364
 whisper cell commandant~
 a whisper cell commandant~
@@ -7631,6 +7695,7 @@ This whisper cell commandant bears the hard-worn look of the Reach. Glare from t
 67108979 0 -350 S
 72 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6365
 quarantine breach horror~
 a quarantine breach horror~
@@ -7641,6 +7706,7 @@ Hairline fractures and mineral crust seam this quarantine breach horror's harden
 65633 0 -350 S
 68 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6366
 containment ward specter~
 a containment ward specter~
@@ -7651,6 +7717,7 @@ The outline of this containment ward specter blurs as if written in windblown as
 82017 0 -500 S
 66 0
 0 0 0 0
+! 0 0 10 7 0 0 0
 #6367
 sealed crate aberration~
 a sealed crate aberration~
@@ -7661,6 +7728,7 @@ This sealed crate aberration stands with brutal stillness until something crosse
 65633 0 -350 S
 67 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6368
 relic provenance ghost~
 a relic provenance ghost~
@@ -7671,6 +7739,7 @@ Cold grit eddies through this relic provenance ghost with every movement. Glare 
 82017 0 -500 S
 65 0
 0 0 0 0
+! 0 0 10 7 0 0 0
 #6369
 funerary consignment golem~
 a funerary consignment golem~
@@ -7681,6 +7750,7 @@ A low grinding note follows this funerary consignment golem whenever it shifts w
 33554529 0 -350 S
 69 0
 0 0 0 0
+! 0 0 19 7 0 0 0
 #6370
 quarantine escort revenant~
 a quarantine escort revenant~
@@ -7691,6 +7761,7 @@ This quarantine escort revenant flickers at the edges like law refusing to die. 
 16481 0 -500 S
 67 0
 0 0 0 0
+! 0 0 10 7 0 0 0
 #6371
 sealed route marker spirit~
 a sealed route marker spirit~
@@ -7701,6 +7772,7 @@ Cold grit eddies through this sealed route marker spirit with every movement. Gl
 82017 0 -500 S
 64 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6372
 tidemouth crab~
 a tidemouth crab~
@@ -7711,6 +7783,7 @@ This tidemouth crab prowls the Reach like it owns the ground beneath it. Glare f
 97 0 -350 S
 60 0
 0 0 0 0
+! 0 0 22 7 0 0 0
 #6373
 tidemouth crab broodmother~
 a tidemouth crab broodmother~
@@ -7721,6 +7794,7 @@ This tidemouth crab broodmother tracks movement with predatory focus. Glare from
 33554529 0 -350 S
 65 0
 0 0 0 0
+! 0 0 22 7 0 0 0
 #6374
 tidal pool lurker~
 a tidal pool lurker~
@@ -7731,6 +7805,7 @@ Wind, salt, and old violence have left their mark on this tidal pool lurker. Gla
 97 0 -350 S
 62 0
 0 0 0 0
+! 0 0 22 7 0 0 0
 #6375
 brackish channel eel~
 a brackish channel eel~
@@ -7741,6 +7816,7 @@ This brackish channel eel prowls the Reach like it owns the ground beneath it. G
 97 0 -350 S
 60 0
 0 0 0 0
+! 0 0 22 7 0 0 0
 #6376
 saltmarsh serpent~
 a saltmarsh serpent~
@@ -7751,6 +7827,7 @@ This saltmarsh serpent tracks movement with predatory focus. Glare from the flat
 97 0 -350 S
 63 0
 0 0 0 0
+! 0 0 11 7 0 0 0
 #6377
 tidemouth raider~
 a tidemouth raider~
@@ -7761,6 +7838,7 @@ Wind, salt, and old violence have left their mark on this tidemouth raider. Glar
 97 0 -350 S
 64 0
 0 0 0 0
+! 0 0 22 7 0 0 0
 #6378
 rogue outrider~
 a rogue outrider~
@@ -7771,6 +7849,7 @@ This rogue outrider waits in the open like part of the landscape itself. Glare f
 97 0 -350 S
 65 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6379
 jurisdiction specter~
 a jurisdiction specter~
@@ -7781,6 +7860,7 @@ This jurisdiction specter flickers at the edges like law refusing to die. Glare 
 82017 0 -500 S
 66 0
 0 0 0 0
+! 0 0 10 7 0 0 0
 #6380
 sand-sea carter teamster~
 a sand-sea carter teamster~
@@ -7791,6 +7871,7 @@ Dust and salt cling to this sand-sea carter teamster's kit from constant travel 
 67 0 200 S
 58 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6381
 carter camp cook~
 a carter camp cook~
@@ -7801,6 +7882,7 @@ This carter camp cook keeps a wary eye on weather, footing, and people alike. Gl
 67 0 200 S
 56 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6382
 tidemouth warden post commander~
 a tidemouth warden post commander~
@@ -7811,6 +7893,7 @@ Salt-stiffened documents hang from this tidemouth warden post commander's belt. 
 67 0 200 S
 64 0
 0 0 0 0
+! 0 0 22 7 0 0 0
 #6383
 harbor warden forward scout~
 a harbor warden forward scout~
@@ -7821,6 +7904,7 @@ This harbor warden forward scout watches every approach like an audit waiting to
 67 0 200 S
 62 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6384
 coastal fog phantom~
 a coastal fog phantom~
@@ -7831,6 +7915,7 @@ The outline of this coastal fog phantom blurs as if written in windblown ash. Gl
 4295049313 0 -500 S
 63 0
 0 0 0 0
+! 0 0 10 7 0 0 0
 #6385
 dune scarab swarm~
 a dune scarab swarm~
@@ -7841,6 +7926,7 @@ This dune scarab swarm tracks movement with predatory focus. Glare from the flat
 65633 0 -350 S
 59 0
 0 0 0 0
+! 0 0 13 7 0 0 0
 #6386
 assessment hall guardian~
 an assessment hall guardian~
@@ -7851,6 +7937,7 @@ Wind, salt, and old violence have left their mark on this assessment hall guardi
 99 0 -350 S
 70 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6387
 shoreward clerk revenant~
 a shoreward clerk revenant~
@@ -7861,6 +7948,7 @@ Wind-polished insignia mark this shoreward clerk revenant as part of the Reach's
 16481 0 -500 S
 68 0
 0 0 0 0
+! 0 0 10 7 0 0 0
 #6388
 toll-gate wraith~
 a toll-gate wraith~
@@ -7871,6 +7959,7 @@ This toll-gate wraith flickers at the edges like law refusing to die. Glare from
 82017 0 -500 S
 70 0
 0 0 0 0
+! 0 0 10 7 0 0 0
 #6389
 water-debt phantom~
 a water-debt phantom~
@@ -7881,6 +7970,7 @@ Cold grit eddies through this water-debt phantom with every movement. Glare from
 82017 0 -500 S
 69 0
 0 0 0 0
+! 0 0 10 7 0 0 0
 #6390
 risk assumption shade~
 a risk assumption shade~
@@ -7891,6 +7981,7 @@ The outline of this risk assumption shade blurs as if written in windblown ash. 
 82017 0 -500 S
 71 0
 0 0 0 0
+! 0 0 10 7 0 0 0
 #6391
 conversion engine construct~
 a conversion engine construct~
@@ -7901,6 +7992,7 @@ This conversion engine construct stands with brutal stillness until something cr
 33554529 0 -350 S
 72 0
 0 0 0 0
+! 0 0 19 7 0 0 0
 #6392
 dual-seal sentinel~
 a dual-seal sentinel~
@@ -7911,6 +8003,7 @@ Hairline fractures and mineral crust seam this dual-seal sentinel's hardened for
 33554531 0 -350 S
 73 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6393
 undercroft watcher~
 an undercroft watcher~
@@ -7921,6 +8014,7 @@ This undercroft watcher waits in the open like part of the landscape itself. Gla
 16481 0 -500 S
 71 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6394
 fractured authority elemental~
 a fractured authority elemental~
@@ -7931,6 +8025,7 @@ This fractured authority elemental stands with brutal stillness until something 
 33620065 0 -350 S
 74 0
 0 0 0 0
+! 0 0 19 7 0 0 0
 #6395
 shoreward revenant~
 the shoreward revenant~
@@ -7941,6 +8036,7 @@ Cold grit eddies through this shoreward revenant with every movement. Glare from
 67125363 0 -500 S
 75 0
 0 0 0 0
+! 0 0 10 7 0 0 0
 #6396
 toll-marshal of the three routes~
 the toll-marshal of the three routes~
@@ -7951,6 +8047,7 @@ This toll-marshal of the three routes waits in the open like part of the landsca
 67108979 0 -350 S
 78 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6397
 arbiter of the conversion~
 the arbiter of the conversion~
@@ -7961,6 +8058,7 @@ This arbiter of the conversion bears the hard-worn look of the Reach. Glare from
 67174515 0 -350 S
 80 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6398
 reach warden officer~
 a reach warden officer~
@@ -7971,6 +8069,7 @@ This reach warden officer watches every approach like an audit waiting to happen
 67 0 200 S
 66 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #6399
 shoreward seal guardian~
 a shoreward seal guardian~
@@ -7981,6 +8080,7 @@ This shoreward seal guardian waits in the open like part of the landscape itself
 33554531 0 -350 S
 72 0
 0 0 0 0
+! 0 0 9 7 0 0 0
 #29904
 caravan raider saltglass eastern road~
 a caravan raider~
@@ -7991,7 +8091,7 @@ One of the raiders who prey on caravan traffic through the saltglass reaches, th
 97 0 -400 S
 55 0
 1500 -55 16 20
-! 0 0 0 7 0 0 0
+! 0 0 9 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -8006,7 +8106,7 @@ The captain of a road bandit crew, the road bandit captain has survived long eno
 97 0 -500 S
 60 0
 1500 -55 16 20
-! 0 0 0 7 0 0 0
+! 0 0 9 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -8021,7 +8121,7 @@ A marauder of the eastern road, operating with the confidence of someone who has
 97 0 -500 S
 65 0
 1500 -55 16 20
-! 0 0 0 7 0 0 0
+! 0 0 9 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0

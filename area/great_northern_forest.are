@@ -7943,7 +7943,7 @@ This lean predator has a thick grey pelt dusted with forest debris. Its yellow e
 97 0 0 S
 22 0
 0 0 0 0
-! 0 0 0 7 385 0 0
+! 0 0 14 7 385 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 15579 15561 0 0 0 0 0 0 0 
@@ -7958,7 +7958,7 @@ Bristle-backed and thick-necked, this boar has the compact musculature of a crea
 97 0 0 S
 20 0
 0 0 0 0
-! 0 0 0 7 385 0 0
+! 0 0 16 7 385 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 15580 0 0 0 0 0 0 0 0 
@@ -7973,7 +7973,7 @@ This arachnid is the size of a large dog, its segmented legs spanning nearly six
 97 0 -200 S
 24 0
 0 0 0 0
-! 0 0 0 7 385 0 0
+! 0 0 12 7 385 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 30 15578 0 0 0 0 0 0 0 0 
@@ -8018,7 +8018,7 @@ This young buck carries a modest rack of velvet-covered antlers. Its tawny coat 
 65 0 0 S
 18 1
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 16 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8033,7 +8033,7 @@ This sleek fox has a brilliant rust-red coat and a white-tipped tail. It watches
 193 0 0 S
 18 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 14 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8048,7 +8048,7 @@ This thick-bodied serpent has distinctive copper-brown banding along its length.
 97 0 0 S
 20 0
 0 0 0 0
-! 0 0 0 7 128 0 0
+! 0 0 11 7 128 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8078,7 +8078,7 @@ This adolescent bear has a glossy black coat and powerful shoulders. Though not 
 97 0 0 S
 26 0
 0 0 0 0
-! 0 0 0 7 1409 0 0
+! 0 0 14 7 1409 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 15583 0 0 0 0 0 0 0 0 
@@ -8093,7 +8093,7 @@ Leaner and faster than the timber wolves, this pack runner serves as scout and f
 97 0 0 S
 24 0
 0 0 0 0
-! 0 0 0 7 385 0 0
+! 0 0 14 7 385 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 40 15579 15561 0 0 0 0 0 0 0 
@@ -8138,7 +8138,7 @@ This impressive raptor sits motionless on a high branch, its tufted ear-horns si
 65 0 0 S
 20 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 15 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8153,7 +8153,7 @@ This stocky, low-slung beast has distinctive black and white facial markings and
 97 0 0 S
 22 0
 0 0 0 0
-! 0 0 0 7 385 0 0
+! 0 0 16 7 385 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8243,7 +8243,7 @@ This heavy-bodied serpent moves through the fen channels with sinuous grace. Its
 97 0 0 S
 28 0
 0 0 0 0
-! 0 0 0 7 1048961 0 0
+! 0 0 11 7 1048961 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 40 15581 0 0 0 0 0 0 0 0 
@@ -8258,7 +8258,7 @@ This enormous amphibian is as large as a bushel basket, with mottled green-brown
 97 0 0 S
 30 0
 0 0 0 0
-! 0 0 0 7 1053057 0 0
+! 0 0 17 7 1053057 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 15582 0 0 0 0 0 0 0 0 
@@ -8273,7 +8273,7 @@ Standing nearly as tall as a man, this massive wading bird has a dagger-like bea
 97 0 0 S
 32 0
 0 0 0 0
-! 0 0 0 7 1053057 0 0
+! 0 0 15 7 1053057 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8288,7 +8288,7 @@ Only the ridged eyes and nostrils of this massive reptile break the surface of t
 97 0 0 S
 38 0
 0 0 0 0
-! 0 0 0 7 1053665 0 0
+! 0 0 17 7 1053665 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 80 15503 15527 0 0 0 0 0 0 0 
@@ -8303,7 +8303,7 @@ This misshapen creature seems to be made of compacted peat and rotting vegetatio
 97 0 -300 S
 42 0
 0 0 0 0
-! 0 0 0 7 1086435 0 0
+! 0 0 22 7 1086435 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 80 15503 15541 0 0 0 0 0 0 0 
@@ -8348,7 +8348,7 @@ Dozens of bloated, glistening leeches swarm through the fetid water, their segme
 65633 0 0 S
 30 0
 0 0 0 0
-! 0 0 0 7 1053057 0 0
+! 0 0 22 7 1053057 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8363,7 +8363,7 @@ This ancient-looking turtle has a shell encrusted with thick green moss, making 
 97 0 0 S
 34 0
 0 0 0 0
-! 0 0 0 7 1053057 0 0
+! 0 0 17 7 1053057 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8378,7 +8378,7 @@ This eerie sphere of pale green luminescence drifts through the fen mist with ap
 65633 0 -400 S
 36 0
 0 0 0 0
-! 0 0 0 7 128 16 0
+! 0 0 19 7 128 16 0
 | 0 0 4 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 60 15523 0 0 0 0 0 0 0 0 
@@ -8393,7 +8393,7 @@ This thick, sinuous eel generates crackling arcs of energy along its slick body.
 97 0 0 S
 32 0
 0 0 0 0
-! 0 0 0 7 1053057 0 0
+! 0 0 22 7 1053057 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8408,7 +8408,7 @@ Smaller than its timber cousin but adapted to the wetlands, this wolf has a dull
 97 0 0 S
 28 0
 0 0 0 0
-! 0 0 0 7 1048961 0 0
+! 0 0 14 7 1048961 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8438,7 +8438,7 @@ This small but deadly serpent is nearly invisible against the dark fen mud. Its 
 97 0 0 S
 30 0
 0 0 0 0
-! 0 0 0 7 1053057 0 0
+! 0 0 11 7 1053057 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8453,7 +8453,7 @@ This elegant wading bird moves with slow deliberation through the fen shallows, 
 65 0 0 S
 26 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 15 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8513,7 +8513,7 @@ Larger and shaggier than the lowland timber wolves, this mountain predator has t
 97 0 0 S
 38 0
 0 0 0 0
-! 0 0 0 7 1053665 0 0
+! 0 0 14 7 1053665 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 60 15579 15561 0 0 0 0 0 0 0 
@@ -8528,7 +8528,7 @@ This large feline has a tawny coat mottled with grey to match the granite outcro
 97 0 0 S
 42 0
 0 0 0 0
-! 0 0 0 7 1086435 0 0
+! 0 0 16 7 1086435 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 60 15585 0 0 0 0 0 0 0 0 
@@ -8543,7 +8543,7 @@ This lean, dangerous-looking man has the ash-blackened teeth that mark the Ashfa
 105 0 -600 S
 50 1
 0 0 0 0
-! 0 0 0 7 1220579 0 0
+! 0 0 3 7 1220579 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 15504 15528 15553 15587 0 0 0 0 0 
@@ -8558,7 +8558,7 @@ This heavily scarred woman carries a blackened axe and wears spiked pauldrons fa
 105 0 -650 S
 55 2
 0 0 0 0
-! 0 0 0 7 1228771 0 0
+! 0 0 3 7 1228771 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 120 15504 15528 15547 15553 0 0 0 0 0 
@@ -8573,7 +8573,7 @@ This translucent figure wears the tattered remnants of bark-cloth robes and tend
 16481 0 -300 S
 52 0
 0 0 0 0
-! 0 0 0 7 1053057 4608 2
+! 0 0 10 7 1053057 4608 2
 | 0 0 4 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 80 15555 15510 0 0 0 0 0 0 0 
@@ -8603,7 +8603,7 @@ This massive brown bear has a hump of muscle across its shoulders and claws the 
 97 0 0 S
 48 0
 0 0 0 0
-! 0 0 0 7 1089507 0 0
+! 0 0 14 7 1089507 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 60 15583 15585 0 0 0 0 0 0 0 
@@ -8618,7 +8618,7 @@ The largest wolf in the ridge pack, this alpha has a silver-streaked mane and ca
 33554529 0 0 S
 60 1
 0 0 0 0
-! 0 0 0 7 1753059 0 0
+! 0 0 14 7 1753059 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 120 15579 15561 15565 0 0 0 0 0 0 
@@ -8633,7 +8633,7 @@ This powerful raptor has a wingspan of nearly six feet and talons capable of pie
 97 0 0 S
 35 0
 0 0 0 0
-! 0 0 0 7 1053665 0 0
+! 0 0 15 7 1053665 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8648,7 +8648,7 @@ This cunning warband operative lays traps and deadfalls to slow caravans for the
 105 0 -600 S
 52 1
 0 0 0 0
-! 0 0 0 7 1220579 0 0
+! 0 0 3 7 1220579 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 15504 15540 15587 0 0 0 0 0 0 
@@ -8663,7 +8663,7 @@ Stockier and more muscular than its lowland cousins, this ridge boar has enormou
 97 0 0 S
 40 0
 0 0 0 0
-! 0 0 0 7 1086435 0 0
+! 0 0 16 7 1086435 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8678,7 +8678,7 @@ This thick-bodied serpent has dark banding that perfectly mimics the iron-staine
 97 0 0 S
 36 0
 0 0 0 0
-! 0 0 0 7 1053665 0 0
+! 0 0 11 7 1053665 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8708,7 +8708,7 @@ Compact and explosively powerful, this wolverine has no fear of creatures many t
 113 0 0 S
 44 0
 0 0 0 0
-! 0 0 0 7 1089507 0 0
+! 0 0 16 7 1089507 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8723,7 +8723,7 @@ This ambush predator builds silk-lined burrows beneath the root hollows of ironp
 97 0 -200 S
 38 0
 0 0 0 0
-! 0 0 0 7 1053665 0 0
+! 0 0 12 7 1053665 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8738,7 +8738,7 @@ This medium-sized cat has a coat of mottled grey and black that makes it almost 
 97 0 0 S
 46 0
 0 0 0 0
-! 0 0 0 7 1089507 0 0
+! 0 0 16 7 1089507 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8753,7 +8753,7 @@ This gaunt man wears a necklace of blackened teeth and a cloak of scorched hides
 105 0 -700 S
 58 1
 0 0 0 0
-! 0 0 0 7 1089507 2184 4
+! 0 0 3 7 1089507 2184 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 120 15504 15553 15540 15517 0 0 0 0 0 
@@ -8783,7 +8783,7 @@ This spectral figure wears the ritual garments of the ancient Cairn-Keepers, now
 82017 0 -500 S
 70 0
 0 0 0 0
-! 0 0 0 7 1089507 106496 2
+! 0 0 10 7 1089507 106496 2
 | 0 0 4 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 15510 15534 15556 15589 0 0 0 0 0 
@@ -8798,7 +8798,7 @@ This young woman wears living vines woven into her hair and clothing, and her sk
 105 0 -800 S
 65 2
 0 0 0 0
-! 0 0 0 7 1220579 6656 4
+! 0 0 5 7 1220579 6656 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 15508 15557 15548 15588 0 0 0 0 0 
@@ -8813,7 +8813,7 @@ This older man wears robes woven from bark strips and living vines. His face is 
 105 0 -850 S
 72 1
 0 0 0 0
-! 0 0 0 7 1089507 6656 8
+! 0 0 5 7 1089507 6656 8
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 120 15508 15532 15557 15548 0 0 0 0 0 
@@ -8828,7 +8828,7 @@ This wolf stands nearly as tall as a man at the shoulder, a throwback to the gre
 97 0 0 S
 68 0
 0 0 0 0
-! 0 0 0 7 1769443 0 0
+! 0 0 14 7 1769443 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 80 15579 15561 0 0 0 0 0 0 0 
@@ -8843,7 +8843,7 @@ This monstrous bear stands over ten feet tall on its hind legs. Its fur is grizz
 97 0 0 S
 75 0
 0 0 0 0
-! 0 0 0 7 1834979 0 0
+! 0 0 14 7 1834979 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 15583 0 0 0 0 0 0 0 0 
@@ -8858,7 +8858,7 @@ This ethereal figure appears as a towering humanoid shape formed from crackling 
 97 0 200 S
 72 0
 0 0 0 0
-! 0 0 0 7 1089507 16640 0
+! 0 0 19 7 1089507 16640 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8873,7 +8873,7 @@ This massive man has the ash-stained teeth and scorched-bone decorations of the 
 33554553 0 -800 S
 82 1
 0 0 0 0
-! 0 0 0 7 2097127 2184 16
+! 0 0 3 7 2097127 2184 16
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 200 15509 15533 15553 15517 0 0 0 0 0 
@@ -8903,7 +8903,7 @@ This once-noble stag has been twisted by the corruption that spreads from the Ro
 97 0 -400 S
 70 1
 0 0 0 0
-! 0 0 0 7 1769443 0 0
+! 0 0 16 7 1769443 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 80 15588 15585 0 0 0 0 0 0 0 
@@ -8933,7 +8933,7 @@ This living tree stands over twenty feet tall, its massive trunk creaking and gr
 33554547 0 300 S
 85 0
 0 0 0 0
-! 0 0 0 7 2097127 0 0
+! 0 0 21 7 2097127 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 150 15522 15544 15585 0 0 0 0 0 0 
@@ -8948,7 +8948,7 @@ This enormous serpent has a body as thick as a man's thigh, patterned in browns 
 97 0 -300 S
 65 0
 0 0 0 0
-! 0 0 0 7 1769443 0 0
+! 0 0 11 7 1769443 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -8963,7 +8963,7 @@ This Ashfang warrior has gone fully feral, living deep in the forest and fightin
 121 0 -700 S
 75 1
 0 0 0 0
-! 0 0 0 7 1834979 0 0
+! 0 0 3 7 1834979 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 120 15504 15533 15540 0 0 0 0 0 0 
@@ -8978,7 +8978,7 @@ This enormous moth has wings spanning nearly four feet, covered in pale scales t
 97 0 -200 S
 62 0
 0 0 0 0
-! 0 0 0 7 1089507 8208 0
+! 0 0 10 7 1089507 8208 0
 | 0 0 4 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -9068,7 +9068,7 @@ This slender serpent has pale, almost translucent scales that make it nearly inv
 97 0 0 S
 45 0
 0 0 0 0
-! 0 0 0 7 1089507 0 0
+! 0 0 11 7 1089507 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -9083,7 +9083,7 @@ This Ashfang warrior operates in the northern reaches, testing Kowloon's souther
 121 0 -700 S
 70 1
 0 0 0 0
-! 0 0 0 7 1769443 0 0
+! 0 0 3 7 1769443 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 120 15504 15528 15553 15587 0 0 0 0 0 
@@ -9098,7 +9098,7 @@ This magnificent bull elk stands tall at the shoulder and carries a rack of antl
 97 0 0 S
 55 1
 0 0 0 0
-! 0 0 0 7 1228771 0 0
+! 0 0 16 7 1228771 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -9113,7 +9113,7 @@ This wolf has adapted to the perpetual cold of the Northern Crown, developing a 
 97 0 0 S
 50 0
 0 0 0 0
-! 0 0 0 7 1220579 0 0
+! 0 0 14 7 1220579 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -9128,7 +9128,7 @@ This tormented spirit is the ghost of someone who violated the original Midgaard
 82017 0 -900 S
 80 0
 0 0 0 0
-! 0 0 0 7 1228771 106496 2
+! 0 0 10 7 1228771 106496 2
 | 0 0 4 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 150 15513 15537 15558 0 0 0 0 0 0 
@@ -9158,7 +9158,7 @@ This legendary creature appears only at the edge of great change. Its coat is pu
 33554499 0 1000 S
 90 1
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 16 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 15560 15584 0 0 0 0 0 0 0 
@@ -9173,7 +9173,7 @@ This colossus of the Northern Crown stands over twelve feet tall at the shoulder
 33554547 0 0 S
 95 1
 0 0 0 0
-! 0 0 0 7 2097127 0 0
+! 0 0 14 7 2097127 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 200 15514 15536 15568 15583 0 0 0 0 0 
@@ -9188,7 +9188,7 @@ This medium-sized feline has evolved to hunt in the perpetual mist of the Northe
 97 0 0 S
 48 0
 0 0 0 0
-! 0 0 0 7 1089507 0 0
+! 0 0 16 7 1089507 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -9203,7 +9203,7 @@ The most dangerous Ashfang commander in the Northern Crown, this warmaster has u
 33554553 0 -800 S
 88 1
 0 0 0 0
-! 0 0 0 7 2097127 2184 16
+! 0 0 3 7 2097127 2184 16
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 200 15519 15546 15567 15553 0 0 0 0 0 
@@ -9218,7 +9218,7 @@ This devoted follower of the Thornmother has been stationed in the Northern Crow
 105 0 -850 S
 78 2
 0 0 0 0
-! 0 0 0 7 1228771 6656 8
+! 0 0 5 7 1228771 6656 8
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 120 15508 15557 15548 15588 0 0 0 0 0 
@@ -9233,7 +9233,7 @@ This female elk is larger than lowland varieties, with a thick winter coat and a
 97 0 0 S
 40 2
 0 0 0 0
-! 0 0 0 7 1086435 0 0
+! 0 0 16 7 1086435 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -9248,7 +9248,7 @@ This large serpent has adapted to the frigid waters of the Northern Crown. Its b
 97 0 0 S
 55 0
 0 0 0 0
-! 0 0 0 7 1228771 0 0
+! 0 0 11 7 1228771 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -9278,7 +9278,7 @@ This large raptor has been marked by the stone-antler circle, with small bone fr
 97 0 0 S
 42 0
 0 0 0 0
-! 0 0 0 7 1086435 0 0
+! 0 0 10 7 1086435 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -9308,7 +9308,7 @@ The Thornmother's elite guard, this warrior is encased in living armor of thorny
 121 0 -900 S
 82 1
 0 0 0 0
-! 0 0 0 7 2097127 0 0
+! 0 0 21 7 2097127 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 150 15521 15545 15557 0 0 0 0 0 0 
@@ -9323,7 +9323,7 @@ This spectral boar has a pale, translucent hide through which the shapes of its 
 97 0 0 S
 60 0
 0 0 0 0
-! 0 0 0 7 1753059 0 0
+! 0 0 3 7 1753059 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -9338,7 +9338,7 @@ This large female bear is defending the den where her cubs shelter. She is small
 113 0 0 S
 65 2
 0 0 0 0
-! 0 0 0 7 1769443 0 0
+! 0 0 14 7 1769443 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -9458,7 +9458,7 @@ A variant wolf of the northern forest, the ashfang has adapted to the ash-soil r
 97 0 -300 S
 30 0
 600 -30 8 10
-! 0 0 0 7 0 0 0
+! 0 0 3 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -9473,7 +9473,7 @@ A treant that has stood in place so long that the roots and the creature have be
 97 0 -200 S
 35 0
 600 -30 8 10
-! 0 0 0 7 0 0 0
+! 0 0 21 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -9503,7 +9503,7 @@ A lynx adapted to the shadowmere reaches of the northern forest, where the canop
 97 0 -300 S
 45 0
 1000 -45 12 14
-! 0 0 0 7 0 0 0
+! 0 0 16 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -9638,7 +9638,7 @@ A wraith formed from the accumulated sorrow of the northern forest's dead, the d
 97 0 -700 S
 55 0
 1500 -55 16 20
-! 0 0 0 7 0 0 0
+! 0 0 10 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -9668,7 +9668,7 @@ The apex predator of the northern forest, the Ashfang Prime has been hunting her
 67108961 0 -800 S
 150 0
 8000 -110 38 50
-! 0 0 0 7 0 0 0
+! 0 0 3 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0

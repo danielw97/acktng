@@ -1772,7 +1772,7 @@ stripping flesh from bone with abrasive fury.
 97 0 -100 S
 55 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 19 7 1025 0 0
 | 16 64 0 0 0 16 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1788,7 +1788,7 @@ with venomous patience for an unwary traveler.
 97 0 -200 S
 58 0
 0 0 0 0
-! 0 0 0 7 1153 0 0
+! 0 0 11 7 1153 0 0
 | 512 32 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1804,7 +1804,7 @@ menacingly as venom drips from a barbed stinger.
 97 0 -300 S
 60 0
 0 0 0 0
-! 0 0 0 7 3074 0 0
+! 0 0 12 7 3074 0 0
 | 514 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1820,7 +1820,7 @@ from hunger and will attack anything that moves.
 97 0 -150 S
 62 0
 0 0 0 0
-! 0 0 0 7 1154 0 0
+! 0 0 14 7 1154 0 0
 | 2 128 0 0 0 0 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1836,7 +1836,7 @@ through the dust as empty eye sockets glow with pale malice.
 16481 0 -500 S
 64 0
 0 0 0 0
-! 0 0 0 7 2305 0 0
+! 0 0 10 7 2305 0 0
 | 2 128 0 0 0 768 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1852,7 +1852,7 @@ limbs end in hooked claws that grip the stone with frightening ease.
 97 0 -200 S
 65 0
 0 0 0 0
-! 0 0 0 7 3202 0 0
+! 0 0 17 7 3202 0 0
 | 34 64 0 0 0 32 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1868,7 +1868,7 @@ the arroyo with a mournful wail that chills the blood.
 278625 0 -700 S
 67 0
 0 0 0 0
-! 0 0 0 7 1537 2105344 0
+! 0 0 10 7 1537 2105344 0
 | 256 128 0 0 0 258 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1884,7 +1884,7 @@ larger than any natural gila and exudes a toxic miasma.
 97 0 -250 S
 68 0
 0 0 0 0
-! 0 0 0 7 1538 0 0
+! 0 0 17 7 1538 0 0
 | 544 16 0 0 0 544 16
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1900,7 +1900,7 @@ deep arroyo with relentless, single-minded aggression.
 33816673 0 0 S
 70 0
 5 5 0 0
-! 0 0 0 7 11012 4096 0
+! 0 0 19 7 11012 4096 0
 | 34 64 0 0 0 162 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1932,7 +1932,7 @@ grace, its amber eyes locked on prey with predatory focus.
 97 0 -200 S
 73 0
 0 0 0 0
-! 0 0 0 7 9348 0 0
+! 0 0 16 7 9348 0 0
 | 2 32 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1948,7 +1948,7 @@ shape before dissolving and reforming in a ceaseless grinding storm.
 33816673 0 0 S
 75 0
 5 5 0 0
-! 0 0 0 7 12036 33558528 0
+! 0 0 19 7 12036 33558528 0
 | 48 64 0 0 0 50 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1964,7 +1964,7 @@ color of dried blood and fangs that drip with corrosive venom.
 97 0 -300 S
 60 0
 0 0 0 0
-! 0 0 0 7 1153 0 0
+! 0 0 11 7 1153 0 0
 | 640 64 0 0 0 512 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1980,7 +1980,7 @@ adding to a grisly collection with long, cracked fingernails.
 16481 0 -600 S
 65 0
 0 0 0 0
-! 0 0 0 7 3074 0 2
+! 0 0 10 7 3074 0 2
 | 258 128 0 0 0 768 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1996,7 +1996,7 @@ still moves with jerky, purposeful malice.
 16481 0 -500 S
 58 0
 0 0 0 0
-! 0 0 0 7 513 0 0
+! 0 0 10 7 513 0 0
 | 2 64 0 0 0 384 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2012,7 +2012,7 @@ bloodshot eyes and lets out an ear-splitting screech.
 97 0 -400 S
 70 2
 0 0 0 0
-! 0 0 0 7 1057794 1280 0
+! 0 0 15 7 1057794 1280 0
 | 144 32 0 0 0 16 32
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2028,7 +2028,7 @@ to a charcoal hue, and its venom burns like liquid fire.
 97 0 -200 S
 63 0
 0 0 0 0
-! 0 0 0 7 1153 0 0
+! 0 0 11 7 1153 0 0
 | 640 64 0 0 0 128 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2044,7 +2044,7 @@ grown aggressive enough to attack the living in its hunger.
 97 0 -100 S
 66 0
 0 0 0 0
-! 0 0 0 7 9218 0 0
+! 0 0 15 7 9218 0 0
 | 18 32 0 0 0 16 32
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2060,7 +2060,7 @@ a grotesque statue that somehow still moves with terrible purpose.
 278625 0 -600 S
 71 0
 3 3 0 0
-! 0 0 0 7 2818 0 0
+! 0 0 10 7 2818 0 0
 | 34 64 0 0 0 290 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2076,7 +2076,7 @@ of silk so tough they can snare a running horse.
 97 0 -300 S
 69 0
 0 0 0 0
-! 0 0 0 7 1666 0 0
+! 0 0 12 7 1666 0 0
 | 514 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2092,7 +2092,7 @@ swarms of the arroyo from atop a mound of shed exoskeletons.
 67108979 0 -500 S
 80 2
 15 15 10 10
-! 0 0 0 7 601856 128 8
+! 0 0 12 7 601856 128 8
 | 544 128 0 0 0 546 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2140,7 +2140,7 @@ undead horror wears a crown of fused skulls and wields a femur the size of a pil
 67125363 0 -1000 S
 80 0
 20 10 15 15
-! 0 0 0 7 1649408 2105344 12
+! 0 0 10 7 1649408 2105344 12
 | 258 128 0 0 0 770 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2156,7 +2156,7 @@ funnels of razor sand orbit a core of molten glass where two furious eyes burn.
 67371123 0 0 S
 80 0
 25 20 20 20
-! 0 0 0 7 667392 50335776 24
+! 0 0 19 7 667392 50335776 24
 | 176 64 0 0 0 178 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2172,7 +2172,7 @@ larger creatures and attacks with desperate ferocity.
 97 0 -150 S
 56 0
 0 0 0 0
-! 0 0 0 7 1153 0 0
+! 0 0 14 7 1153 0 0
 | 2 64 0 0 0 0 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2188,7 +2188,7 @@ shimmering with heat as it clacks razor-edged mandibles.
 97 0 -100 S
 57 0
 0 0 0 0
-! 0 0 0 7 2561 0 0
+! 0 0 13 7 2561 0 0
 | 34 64 0 0 0 32 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2204,7 +2204,7 @@ and delivers an agonizing venomous bite from oversized fangs.
 97 0 -200 S
 59 0
 0 0 0 0
-! 0 0 0 7 1154 0 0
+! 0 0 13 7 1154 0 0
 | 514 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2220,7 +2220,7 @@ choking grit while shrieking with high-pitched laughter.
 97 0 -300 S
 61 0
 0 0 0 0
-! 0 0 0 7 1537 1024 0
+! 0 0 20 7 1537 1024 0
 | 48 64 0 0 0 48 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2236,7 +2236,7 @@ with the single-minded aggression born of territorial instinct.
 97 0 -200 S
 57 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 11 7 1025 0 0
 | 512 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2252,7 +2252,7 @@ but the enchantment that animates it stubbornly refuses to fade.
 33816673 0 0 S
 74 0
 5 5 0 0
-! 0 0 0 7 11012 0 0
+! 0 0 19 7 11012 0 0
 | 34 64 0 0 0 34 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2268,7 +2268,7 @@ its hollow eye sockets burning with the remnants of magical knowledge.
 16481 0 -700 S
 72 0
 0 0 0 0
-! 0 0 0 7 1537 16779296 4
+! 0 0 10 7 1537 16779296 4
 | 384 64 0 0 0 384 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2284,7 +2284,7 @@ viper strikes with blinding speed at any warm body that passes below.
 97 0 -200 S
 63 0
 0 0 0 0
-! 0 0 0 7 1153 0 0
+! 0 0 11 7 1153 0 0
 | 512 32 0 0 0 512 32
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2300,7 +2300,7 @@ of sand orbit its core in an endless, mesmerizing pattern.
 262241 0 0 S
 66 0
 0 0 0 0
-! 0 0 0 7 1537 5120 0
+! 0 0 19 7 1537 5120 0
 | 48 64 0 0 0 48 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2332,7 +2332,7 @@ the ancient ruins and still obeys its crumbling directive with blind loyalty.
 33816673 0 0 S
 68 0
 3 3 0 0
-! 0 0 0 7 2818 0 0
+! 0 0 19 7 2818 0 0
 | 32 64 0 0 0 34 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2348,7 +2348,7 @@ enough to attack the living rather than wait for them to expire.
 97 0 -100 S
 59 0
 0 0 0 0
-! 0 0 0 7 9217 0 0
+! 0 0 15 7 9217 0 0
 | 18 32 0 0 0 16 32
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2364,7 +2364,7 @@ retains the killing instincts it possessed millions of years ago.
 278625 0 -500 S
 71 0
 3 0 0 0
-! 0 0 0 7 2818 0 0
+! 0 0 10 7 2818 0 0
 | 34 64 0 0 0 288 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2380,7 +2380,7 @@ engulfs and suffocates anything that stumbles into its reach.
 262241 0 0 S
 64 0
 2 0 0 0
-! 0 0 0 7 769 2097152 0
+! 0 0 19 7 769 2097152 0
 | 96 128 0 0 0 34 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2396,7 +2396,7 @@ scorched footprints in stone and ignites anything flammable it touches.
 97 0 -200 S
 67 0
 0 0 0 0
-! 0 0 0 7 3074 32 0
+! 0 0 17 7 3074 32 0
 | 130 64 0 0 0 128 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2412,7 +2412,7 @@ clings to the canyon walls and reaches out with freezing tendrils.
 16481 0 -800 S
 66 0
 0 0 0 0
-! 0 0 0 7 1537 8192 0
+! 0 0 10 7 1537 8192 0
 | 256 128 0 0 0 258 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2428,7 +2428,7 @@ stone chisels and a temperament that makes cornered wolverines seem docile.
 97 0 -200 S
 62 0
 0 0 0 0
-! 0 0 0 7 11266 0 0
+! 0 0 16 7 11266 0 0
 | 34 16 0 0 0 32 16
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2444,7 +2444,7 @@ it drags a vortex of cutting grit in its spectral wake.
 278625 0 -600 S
 74 0
 2 2 0 0
-! 0 0 0 7 1538 2105344 0
+! 0 0 10 7 1538 2105344 0
 | 272 128 0 0 0 274 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2476,7 +2476,7 @@ recorded history, its armored hide scarred by countless battles.
 33554529 0 -300 S
 75 0
 8 5 0 0
-! 0 0 0 7 273156 4096 8
+! 0 0 18 7 273156 4096 8
 | 34 16 0 0 0 546 16
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 

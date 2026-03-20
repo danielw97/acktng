@@ -1754,7 +1754,7 @@ Desert predator named for the translucent quality of its carapace, which makes i
 262241 0 0 S
 40 0
 0 0 0 0
-! 0 0 0 7 128 0 0
+! 0 0 12 7 128 0 0
 | 0 0 0 0 0 128 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1769,7 +1769,7 @@ The most common dangerous predator in the oasis margins, the basin viper preys o
 262241 0 0 S
 43 0
 0 0 0 0
-! 0 0 0 7 128 512 0
+! 0 0 11 7 128 512 0
 | 0 0 0 0 0 512 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1784,7 +1784,7 @@ Common desert canid that has adapted to oasis life, the sand jackal is technical
 262241 0 0 S
 40 0
 0 0 0 0
-! 0 0 0 7 128 0 0
+! 0 0 14 7 128 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1859,7 +1859,7 @@ A preserved guardian of the cistern ring, the sentinel's form is simultaneously 
 99 512 0 S
 52 0
 0 0 0 0
-! 0 0 0 7 4480 0 8
+! 0 0 19 7 4480 0 8
 | 0 0 0 0 0 2 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1874,7 +1874,7 @@ One of the specialized guardians assigned to the sluice control mechanisms, the 
 99 512 0 S
 54 0
 0 0 0 0
-! 0 0 0 7 4480 0 8
+! 0 0 19 7 4480 0 8
 | 0 0 0 0 0 2 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1889,7 +1889,7 @@ The guardian assigned to the Ledger Vault, the archive keeper uses defensive cas
 99 512 0 S
 50 0
 0 0 0 0
-! 0 0 0 7 384 0 24
+! 0 0 19 7 384 0 24
 | 0 0 0 0 0 2 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1904,7 +1904,7 @@ A more powerful variant of the oathbound cistern sentinel, assigned to the ring'
 99 512 0 S
 57 0
 0 0 0 0
-! 0 0 0 7 4480 0 24
+! 0 0 19 7 4480 0 24
 | 0 0 0 0 0 2 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1919,7 +1919,7 @@ The sentinel variant assigned to the cistern ring's deepest preserved sections, 
 99 520 0 S
 56 0
 0 0 0 0
-! 0 0 0 7 4480 0 16
+! 0 0 19 7 4480 0 16
 | 0 0 0 0 0 2 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1949,7 +1949,7 @@ Large predatory eel adapted to the cold, mineral-rich deep aquifer environment, 
 262241 0 0 S
 50 0
 0 0 0 0
-! 0 0 0 7 128 0 0
+! 0 0 22 7 128 0 0
 | 0 0 0 0 0 64 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1964,7 +1964,7 @@ A crustacean that has adapted to the deep aquifer environment over generations o
 262241 0 0 S
 48 0
 0 0 0 0
-! 0 0 0 7 128 0 0
+! 0 0 22 7 128 0 0
 | 0 0 0 0 0 64 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1979,7 +1979,7 @@ Shoaling fish that colonized the flooded cistern, the blind cave fish have adapt
 262241 0 0 S
 45 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 22 7 0 0 0
 | 0 0 0 0 0 64 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1994,7 +1994,7 @@ The senior guardian of the cistern gate, the Guardian Eternal is the most formid
 67108979 520 0 S
 58 0
 0 0 0 0
-! 0 0 0 7 41539 0 224
+! 0 0 19 7 41539 0 224
 | 0 0 0 0 0 2 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -2009,7 +2009,7 @@ The Oasis Wyrm is the sole reason the Great Oasis still functions as a spring-fe
 67108987 520 0 S
 60 0
 0 0 0 0
-! 0 0 0 7 41539 0 224
+! 0 0 18 7 41539 0 224
 | 0 0 0 0 0 66 128
 + 0 0 0 0 0 0 0 0 0
 l 150 8634 8635 8636 8637 8638 0 0 0 0

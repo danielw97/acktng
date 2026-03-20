@@ -1341,7 +1341,7 @@ This plump bird has collected all sorts of shiny things -- rings
 3 0 0 S
 1 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 15 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1360,7 +1360,7 @@ This harmless-looking ball of light has all sorts of magical oddities
 3 0 0 S
 1 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 19 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 

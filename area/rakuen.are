@@ -2334,7 +2334,7 @@ fast, accurate, and entirely free of judgment.@@N
 67 0 500 S
 40 2
 0 0 3 3
-! 0 0 0 7 0 0 1
+! 0 0 8 7 0 0 1
 #4651
 canopy compact runner rakuen~
 @@Gthe Canopy Compact Runner@@N~
@@ -2347,7 +2347,7 @@ answer questions while still walking.@@N
 65 0 500 S
 35 1
 0 0 2 2
-! 0 0 0 7 0 0 1
+! 0 0 8 7 0 0 1
 #4652
 woodland contract guide rakuen~
 @@bthe Woodland Contract Guide@@N~
@@ -2490,7 +2490,7 @@ for several years.@@N
 99 0 -500 S
 50 0
 0 0 5 5
-! 0 0 7 7 0 0 1
+! 0 0 10 7 0 0 1
 #4663
 rest garden keeper rakuen~
 @@Gthe Rest Garden Keeper@@N~
@@ -2556,7 +2556,7 @@ territory. @@gThis one is larger than average. The salvage court has been notifi
 99 0 -500 S
 48 0
 0 0 4 4
-! 0 0 7 7 0 0 1
+! 0 0 22 7 0 0 1
 #4668
 lower terrace scavenger hound rakuen~
 @@gthe Scavenger Hound@@N~
@@ -2569,7 +2569,7 @@ of evasiveness and the sympathy of the rest garden keeper.@@N
 97 0 -250 S
 43 0
 0 0 4 4
-! 0 0 7 7 0 0 1
+! 0 0 14 7 0 0 1
 #4669
 ration clerk causeway rakuen~
 @@Wthe Ration Clerk@@N~
@@ -2997,7 +2997,7 @@ surface variety, faster, and considerably less averse to confined spaces.@@N
 99 0 -500 S
 52 0
 0 0 5 5
-! 0 0 7 7 0 0 1
+! 0 0 22 7 0 0 1
 #0
 #OBJECTS
 #4700

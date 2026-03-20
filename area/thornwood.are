@@ -2411,6 +2411,7 @@ A residual presence accumulated over generations of funeral convoy traffic throu
 82017 512 -500 S
 50 0
 0 0 2 2
+! 0 0 10 7 0 0 0
 #551
 wraith gate estate~
 the estate gate wraith~
@@ -2421,6 +2422,7 @@ The Gatewarden, risen and retained at post, challenges entry with estate protoco
 82019 520 -600 S
 52 0
 0 -20 3 3
+! 0 0 10 7 0 0 0
 #552
 sentinel thorn hedge~
 a thorn hedge sentinel~
@@ -2431,6 +2433,7 @@ A perimeter guard whose body has been partially incorporated into the estate's t
 16481 512 -400 S
 53 0
 0 -10 3 2
+! 0 0 0 7 0 0 0
 #553
 revenant cart corpse~
 a corpse-cart revenant~
@@ -2441,6 +2444,7 @@ A former cart-driver, risen still in the posture of handling a vehicle that no l
 16481 512 -350 S
 51 0
 0 0 2 3
+! 0 0 10 7 0 0 0
 #554
 phantom road approach~
 an approach road phantom~
@@ -2451,6 +2455,7 @@ Visible only at night, this presence patrols the lantern alley and approach road
 4295049313 33280 -500 S
 54 0
 0 -15 4 3
+! 0 0 10 7 0 0 0
 #555
 wraith household estate~
 an estate household wraith~
@@ -2461,6 +2466,7 @@ A domestic servant, risen to perform household duties that no longer have purpos
 82019 514 -500 S
 57 0
 0 -20 3 4
+! 0 0 10 7 0 0 0
 #556
 knight thorn~
 a thorn knight~
@@ -2493,6 +2499,7 @@ The household's administrative lead, risen to manage the dead staff with the sam
 16483 520 -550 S
 58 0
 0 -25 4 4
+! 0 0 10 7 0 0 0
 #559
 cultist chapel~
 a chapel cultist~
@@ -2536,6 +2543,7 @@ The kitchen specter, going through the motions of meal preparation for eternity,
 81987 512 -400 S
 55 0
 0 -10 2 3
+! 0 0 10 7 0 0 0
 #563
 revenant stable~
 the stable revenant~
@@ -2546,6 +2554,7 @@ The former stable hand, risen and still working, tending substrate horses that t
 16481 512 -500 S
 57 0
 0 -15 4 4
+! 0 0 10 7 0 0 0
 #564
 revenant deferred name~
 a deferred-name revenant~
@@ -2556,6 +2565,7 @@ One of the unnamed dead â interred under a case number, the naming rite nev
 16481 512 -650 S
 61 0
 0 -30 5 5
+! 0 0 10 7 0 0 0
 #565
 laborer bone processing~
 a bone processing laborer~
@@ -2566,6 +2576,7 @@ A former grave laborer from the ossuary expansion era, risen still performing th
 16481 512 -550 S
 63 0
 0 -30 5 6
+! 0 0 10 7 0 0 0
 #566
 watcher charnel verge~
 the charnel verge watcher~
@@ -2576,7 +2587,7 @@ A boundary-enforcer at the charnel verge gate â the equivalent of a Thorn K
 33570913 520 -700 S
 65 0
 0 -50 6 6
-! 0 0 0 7 99 0 0
+! 0 0 10 7 99 0 0
 #567
 crow exhumation~
 an exhumation crow~
@@ -2587,6 +2598,7 @@ A corvid adapted to the burial field's substrate-rich environment â larger 
 101 524288 -200 S
 60 0
 0 -20 6 4
+! 0 0 15 7 0 0 0
 #568
 monk ossuary~
 an ossuary monk~
@@ -2608,6 +2620,7 @@ Pre-estate burial dead disturbed by the Harren estate's expansion into their bur
 82017 512 -400 S
 63 0
 0 -30 5 5
+! 0 0 10 7 0 0 0
 | 0 0 0 0 0 256 2
 #570
 shaman thornwood~
@@ -2619,7 +2632,7 @@ A living shaman who negotiates with the substrate rather than serves it, not agg
 33554499 48 0 S
 67 0
 0 -40 4 5
-! 0 0 0 7 0 4098 12
+! 0 0 5 7 0 4098 12
 #571
 cultist root weave~
 a root weave cultist~
@@ -2630,7 +2643,7 @@ A junior cultist who has spent too long in the gravewood and drifted from the or
 97 16 -500 S
 64 0
 0 -25 4 5
-! 0 0 0 7 0 512 0
+! 0 0 5 7 0 512 0
 #572
 root-crawler substrate~
 a substrate-adapted root-crawler~
@@ -2641,6 +2654,7 @@ Something that was not always this â the substrate's integration process pr
 327777 512 -800 S
 65 0
 0 -35 6 6
+! 0 0 21 7 0 0 0
 | 0 0 32 0 0 2 0
 #573
 risen face-down~
@@ -2652,6 +2666,7 @@ An oathbreaker burial from the pre-estate ridge-clan community, risen wrong: fac
 16497 512 -900 S
 64 0
 0 -35 6 7
+! 0 0 10 7 0 0 0
 | 0 0 0 0 0 256 0
 #574
 guardian thorn ring~
@@ -2663,6 +2678,7 @@ Assigned to protect the old thorn rings, it does not roam â its precise nat
 99 520 -600 S
 66 0
 0 -45 6 6
+! 0 0 0 7 0 0 0
 #575
 lurker mire~
 a mire lurker~
@@ -2673,6 +2689,7 @@ Substrate-adapted beings whose skin carries the color and texture of deep mud, e
 268435553 512 -500 S
 65 0
 0 -40 7 6
+! 0 0 22 7 0 0 0
 | 0 0 64 0 0 512 128
 #576
 shade deep mire~
@@ -2684,6 +2701,7 @@ Older than the mire itself â cold presences that may be substrate output ex
 268517473 512 -700 S
 67 0
 0 -50 6 7
+! 0 0 10 7 0 0 0
 | 0 0 0 0 0 256 2
 #577
 corpse sulfur bloated~
@@ -2695,6 +2713,7 @@ The terminal product of the alchemical runoff channel's effect on interred remai
 268451937 512 -400 S
 62 0
 0 0 3 5
+! 0 0 21 7 0 0 0
 | 0 0 0 0 0 512 128
 #578
 attendant fog shrine~
@@ -2717,6 +2736,7 @@ An entity from the substrate's water table interface â water and crystal-co
 268763233 512 -800 S
 66 0
 0 -40 5 6
+! 0 0 22 7 0 0 0
 | 0 0 64 0 0 512 128
 #580
 journeyman bone weaver~
@@ -2728,6 +2748,7 @@ A practitioner of bone craft at the journeyman level â skilled enough for s
 97 512 -400 S
 66 0
 0 -35 5 6
+! 0 0 0 7 0 0 0
 #581
 master bone weaver~
 the bone weaver master~
@@ -2751,6 +2772,7 @@ A mid-scale bone construct assembled from dozens of sources and fused at joints 
 268517473 512 -600 S
 68 0
 0 -55 7 7
+! 0 0 19 7 0 0 0
 | 0 0 32 0 0 512 128
 #583
 fiend marrow~
@@ -2762,7 +2784,7 @@ A large-scale construct at four meters in height, with excess limbs and articula
 302071905 512 -700 S
 72 0
 0 -80 9 9
-! 0 0 0 7 1091 0 0
+! 0 0 20 7 1091 0 0
 | 0 0 32 0 0 512 128
 l 100 1206 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
@@ -2787,6 +2809,7 @@ A predatory presence that has developed in the cave system's crystal-rich enviro
 262241 512 -800 S
 70 0
 0 -60 8 8
+! 0 0 0 7 0 0 0
 | 0 0 32 0 0 512 0
 #586
 watcher binding~
@@ -2798,6 +2821,7 @@ Assigned to guard the cave system's binding-critical areas, stationed and non-pa
 16483 536 -700 S
 72 0
 0 -70 9 8
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 256 0
 #587
 echo substrate~
@@ -2809,6 +2833,7 @@ An echo entity â a resonance phenomenon from the crystal formation that has
 268517473 512 -900 S
 71 0
 0 -65 8 9
+! 0 0 21 7 0 0 0
 | 0 0 0 0 0 256 2
 #588
 horror cave root~
@@ -2820,6 +2845,7 @@ A section of the root network that has achieved mobile expression â a mass 
 262241 512 -700 S
 73 0
 0 -75 10 9
+! 0 0 21 7 0 0 0
 | 0 0 32 0 0 512 0
 #589
 thornwood witch~
@@ -2831,7 +2857,7 @@ The oldest human in the wood, possibly predating the estate itself, operating in
 33554499 56 0 S
 72 2
 50 -80 8 8
-! 0 0 0 7 0 6146 12
+! 0 0 10 7 0 6146 12
 #590
 lord harren revenant estate~
 Lord Harren, the Estate Revenant~
@@ -2842,7 +2868,7 @@ The last living head of the Harren family, risen and retained at his estate â
 100679747 524 -800 S
 76 1
 100 -100 10 10
-! 0 0 0 7 1091 4096 8
+! 0 0 10 7 1091 4096 8
 l 100 1215 1216 0 0 0 0 0 0 0
 L 60 40 0 0 0 0 0 0 0
 #591
@@ -2881,7 +2907,7 @@ The substrate intelligence that emerged from the crystal formation during the Re
 67190851 664 -1000 S
 80 0
 200 -150 12 12
-! 0 0 0 7 0 33554434 14
+! 0 0 10 7 0 33554434 14
 | 0 0 0 0 0 256 2
 l 100 1219 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
@@ -2895,6 +2921,7 @@ A mounted enforcer of the Wild Hunt â rider and substrate horse moving as a
 4328538209 512 -700 S
 70 0
 0 -70 9 8
+! 0 0 0 7 0 0 0
 l 100 1212 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
 #0

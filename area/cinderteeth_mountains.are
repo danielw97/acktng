@@ -10817,7 +10817,7 @@ Faded ashfang territorial markings cover his forearms. He moves in tight, watchf
 16777313 0 -300 S
 145 1
 0 0 5 5
-! 0 0 0 7 2093807 0 1
+! 0 0 3 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -10832,7 +10832,7 @@ Heavier-built than the scouts and more openly armed — this is an Ashfang mid-r
 16777313 0 -300 S
 146 1
 0 0 5 5
-! 0 0 0 7 2093807 0 1
+! 0 0 3 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -10847,7 +10847,7 @@ Iron-studded mountain gear and a weighted maul on his belt hook — the enforcer
 16777313 0 -300 S
 147 1
 0 -25 6 6
-! 0 0 0 7 2093807 0 1
+! 0 0 3 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -10862,7 +10862,7 @@ She wears a battered command insignia on her left shoulder — a captain's mark 
 99 0 -300 S
 147 2
 0 -25 6 6
-! 0 0 0 7 2093807 0 1
+! 0 0 3 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 6124 0 0 0 0 0 0 0 0
@@ -10877,7 +10877,7 @@ The Ashfang saboteur carries two short blades and a pouch of contact toxins deri
 16777313 0 -300 S
 146 2
 0 0 5 5
-! 0 0 0 7 2093807 0 1
+! 0 0 3 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -10892,7 +10892,7 @@ The Ashfang shaman functions as the canyon hierarchy's link to mountain spirits 
 16777313 0 -300 S
 146 2
 0 0 5 5
-! 0 0 0 7 0 0 1
+! 0 0 3 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -10907,7 +10907,7 @@ Larger than his subordinates and carrying the authority of a man who has survive
 83886195 0 -700 S
 148 1
 0 -100 10 10
-! 0 0 0 7 2093807 0 1
+! 0 0 3 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 6130 0 0 0 0 0 0 0 0
@@ -10922,7 +10922,7 @@ A mid-size burrowing mammal adapted to volcanic substrate — heat-tolerant skin
 16777313 0 0 S
 145 0
 0 0 5 5
-! 0 0 0 7 2093807 0 1
+! 0 0 3 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -10937,7 +10937,7 @@ Heavier and more aggressive than lowland varieties, adapted to the sparse game a
 16777313 0 0 S
 147 0
 0 -25 6 6
-! 0 0 0 7 2093807 0 1
+! 0 0 14 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -10952,7 +10952,7 @@ Age has deposited mineral plating along its back ridge from years of mineral-lic
 50331745 0 0 S
 148 0
 0 -50 7 7
-! 0 0 0 7 2093807 0 1
+! 0 0 14 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -10967,7 +10967,7 @@ An animate volcanic construct of pre-Keeper origin — stone given purpose by ge
 16777313 0 0 S
 146 0
 0 0 5 5
-! 0 0 0 7 2093807 0 1
+! 0 0 19 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -10982,7 +10982,7 @@ Vent-crabs cluster near sulfur seeps and thermal spring outlets where warm water
 16777313 0 0 S
 145 0
 0 0 5 5
-! 0 0 0 7 2093807 0 1
+! 0 0 12 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -10997,7 +10997,7 @@ The hawk's feathers carry a persistent amber sheen from resin contact, and its t
 16777313 0 0 S
 145 0
 0 0 5 5
-! 0 0 0 7 2093807 0 1
+! 0 0 15 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11012,7 +11012,7 @@ The foothills scavenger vulture follows combat and injury with unhurried patienc
 16777313 0 0 S
 145 0
 0 0 5 5
-! 0 0 0 7 2093807 0 1
+! 0 0 15 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11027,7 +11027,7 @@ The ghost still follows the rotation schedule that was current when it died — 
 16793697 0 -500 S
 146 0
 0 0 5 5
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11042,7 +11042,7 @@ The quartermaster maintains weapon stores, supply rotations, and the informal ba
 16777283 0 -300 S
 147 1
 0 -25 6 6
-! 0 0 0 7 2093807 0 1
+! 0 0 3 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11057,7 +11057,7 @@ Its scales carry an orange mineral deposit from years of proximity to the iron-r
 50331745 0 0 S
 147 0
 0 -50 7 7
-! 0 0 0 7 2093807 0 1
+! 0 0 17 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11072,7 +11072,7 @@ The ghost still attempts to take condition-window readings on a survey instrumen
 16793697 0 -500 S
 145 0
 0 0 5 5
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11087,7 +11087,7 @@ Composed of layered banded obsidian from the lower mountain deposits. A geologic
 50331745 0 0 S
 148 0
 0 -50 7 7
-! 0 0 0 7 2093807 0 1
+! 0 0 19 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11102,7 +11102,7 @@ The Ashfang remnant tracker is the hierarchy's pursuit specialist — trained to
 16908385 0 -300 S
 146 2
 0 0 5 5
-! 0 0 0 7 2093807 0 1
+! 0 0 3 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11132,7 +11132,7 @@ Chalk-white ash has bleached its dark winter coat into an irregular salt-and-pep
 16777313 0 0 S
 149 0
 0 -25 6 6
-! 0 0 0 7 2093807 0 1
+! 0 0 14 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11147,7 +11147,7 @@ Fur matted with chalk-ash mineral deposit along the spine and flanks from years 
 50331745 0 0 S
 150 0
 0 -50 7 7
-! 0 0 0 7 2093807 0 1
+! 0 0 14 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11162,7 +11162,7 @@ The wraith is the residual consciousness of a merchant killed when the Long Sadd
 16793697 0 -500 S
 149 0
 0 -25 6 6
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11177,7 +11177,7 @@ Compressed chalk-dust given motion by volcanic static charge — the elemental t
 16777313 0 0 S
 150 0
 0 -25 6 6
-! 0 0 0 7 2093807 0 1
+! 0 0 19 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11192,7 +11192,7 @@ Each scale carries a micro-crystalline structure that functions as a resonance r
 50331745 0 0 S
 150 0
 0 -50 7 7
-! 0 0 0 7 2093807 0 1
+! 0 0 18 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11207,7 +11207,7 @@ The revenant was a warden attendant who refused to abandon the lodge when the ro
 16793697 0 -500 S
 151 0
 0 -50 7 7
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11237,7 +11237,7 @@ The saddle pass vulture follows the same routes as the mountain bears and waits 
 16777281 0 0 S
 148 0
 0 0 5 5
-! 0 0 0 7 2093807 0 1
+! 0 0 15 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11252,7 +11252,7 @@ A winter-close casualty who attempted the Upper Hollow after the seasonal closur
 16793697 0 -500 S
 149 0
 0 -25 6 6
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11267,7 +11267,7 @@ Evolved to survive buried in the deep mineral accumulations of saddle depression
 16777313 0 0 S
 149 0
 0 -25 6 6
-! 0 0 0 7 2093807 0 1
+! 0 0 13 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11282,7 +11282,7 @@ Several generations of feral breeding have stripped away domestic behaviors whil
 16908385 0 -300 S
 148 0
 0 0 5 5
-! 0 0 0 7 2093807 0 1
+! 0 0 14 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11297,7 +11297,7 @@ The ghost was processing emergency-powers paperwork when the Ashfall crisis esca
 16793697 0 -500 S
 150 0
 0 -25 6 6
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11312,7 +11312,7 @@ The ledge crawler hunts by waiting for prey to pass beneath its shelf position a
 16777313 0 0 S
 149 0
 0 -25 6 6
-! 0 0 0 7 2093807 0 1
+! 0 0 13 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11327,7 +11327,7 @@ A heat-adapted bird of prey nesting in rocky outcrops above the scree line. It h
 16777313 0 0 S
 150 0
 0 -25 6 6
-! 0 0 0 7 2093807 0 1
+! 0 0 15 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11372,7 +11372,7 @@ Old enough and dense enough to have developed a persistent core that maintains s
 50331745 0 0 S
 151 0
 0 -50 7 7
-! 0 0 0 7 2093807 0 1
+! 0 0 19 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11387,7 +11387,7 @@ The ghost of a toll station keeper who died at his post when the route house sys
 16793697 0 -500 S
 149 0
 0 -25 6 6
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11402,7 +11402,7 @@ The glow-hawk navigates by volcanic heat signature rather than visible light. It
 16777313 0 0 S
 151 0
 0 -50 7 7
-! 0 0 0 7 2093807 0 1
+! 0 0 15 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11417,7 +11417,7 @@ Chitin-reinforced undersides adapted to the obsidian-glass debris fields of the 
 16777313 0 0 S
 150 0
 0 -25 6 6
-! 0 0 0 7 2093807 0 1
+! 0 0 13 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11432,7 +11432,7 @@ A magnetically coherent mass of banded obsidian fragments drawn together by geol
 16777313 0 0 S
 151 0
 0 -50 7 7
-! 0 0 0 7 2093807 0 1
+! 0 0 19 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11462,7 +11462,7 @@ The pack-leader coordinates foraging circuits and identifies threats before comm
 16777313 0 0 S
 152 0
 0 -50 7 7
-! 0 0 0 7 2093807 0 1
+! 0 0 3 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11477,7 +11477,7 @@ Everything within her patrol radius is considered a threat to the clutch. She ha
 50331745 0 0 S
 152 0
 0 -50 7 7
-! 0 0 0 7 2093807 0 1
+! 0 0 22 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11492,7 +11492,7 @@ Adapted to the sulfur-contaminated water of the Dead Pools approach — its dige
 16777313 0 0 S
 150 0
 0 -25 6 6
-! 0 0 0 7 2093807 0 1
+! 0 0 22 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11507,7 +11507,7 @@ A gas-phase entity sustained by the high-density sulfur seep chemistry of the Su
 16777313 0 0 S
 152 0
 0 -50 7 7
-! 0 0 0 7 2093807 0 1
+! 0 0 19 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11522,7 +11522,7 @@ An energy entity inhabiting the crystalline lattice of the Yellow Garden formati
 16842849 0 0 S
 152 0
 0 -50 7 7
-! 0 0 0 7 0 0 1
+! 0 0 19 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11537,7 +11537,7 @@ Grown from the fan surface itself — mineral accretion over centuries has built
 83886195 0 -700 S
 156 0
 0 -100 10 10
-! 0 0 0 7 2093823 0 1
+! 0 0 19 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 6138 0 0 0 0 0 0 0 0
@@ -11567,7 +11567,7 @@ Killed when the North Fan operations collapsed — whether by creature incursion
 16793697 0 -500 S
 151 0
 0 -50 7 7
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11582,7 +11582,7 @@ A magnetically coherent cloud of obsidian glass particles too fine to coalesce i
 16842849 0 0 S
 151 0
 0 -50 7 7
-! 0 0 0 7 0 0 1
+! 0 0 13 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11597,7 +11597,7 @@ Consolidated from the iron-mineral deposits in the fan drainage basin — rust-r
 16777313 0 0 S
 153 0
 0 -50 7 7
-! 0 0 0 7 2093807 0 1
+! 0 0 19 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11612,7 +11612,7 @@ Inhabits the residual lava tube network beneath the fan surface, emerging throug
 50331745 0 0 S
 153 0
 0 -75 8 8
-! 0 0 0 7 2093807 0 1
+! 0 0 17 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11627,7 +11627,7 @@ From the Ashblind Convoy — one of the dead who drank from the Dead Pools witho
 16793697 0 -500 S
 152 0
 0 -50 7 7
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11642,7 +11642,7 @@ Its scales have developed a mineral impregnation from sustained thermal exposure
 50331745 0 0 S
 154 0
 0 -75 8 8
-! 0 0 0 7 2093807 0 1
+! 0 0 18 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11657,7 +11657,7 @@ The elder has claimed the upper-fan perch as its primary watch position for deca
 16777313 0 0 S
 152 0
 0 -50 7 7
-! 0 0 0 7 2093807 0 1
+! 0 0 15 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11672,7 +11672,7 @@ Composed of polished banded obsidian — one of the densest mineral-animate form
 50331745 0 0 S
 154 0
 0 -75 8 8
-! 0 0 0 7 2093807 0 1
+! 0 0 19 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11687,7 +11687,7 @@ Killed mid-harvest at the crystal platform — the shearing tools it died holdin
 16793697 0 -500 S
 151 0
 0 -50 7 7
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11702,7 +11702,7 @@ Adapted to the obsidian fan's thermal profile rather than higher-altitude volcan
 16777313 0 0 S
 151 0
 0 -50 7 7
-! 0 0 0 7 2093807 0 1
+! 0 0 15 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11717,7 +11717,7 @@ The serpent navigates by the subsurface vibration that permeates the Bellspine f
 16777313 0 0 S
 153 0
 0 -50 7 7
-! 0 0 0 7 2093807 0 1
+! 0 0 11 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11732,7 +11732,7 @@ The elder has occupied this section of the echo chambers long enough that Concla
 50331745 0 0 S
 155 0
 0 -75 8 8
-! 0 0 0 7 2093823 0 1
+! 0 0 11 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11762,7 +11762,7 @@ Separated from one of the fault-embedded Conclave crystal anchors and developed 
 16842849 0 0 S
 154 0
 0 -50 7 7
-! 0 0 0 7 0 0 1
+! 0 0 19 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11777,7 +11777,7 @@ A ghost sustained by the ongoing resonance output of the Conclave crystal anchor
 16859233 0 -500 S
 155 0
 0 -75 8 8
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11792,7 +11792,7 @@ One of the deliberately unnamed dead — whose name-stone was legally voided by 
 16793697 0 -500 S
 155 0
 0 -75 8 8
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11807,7 +11807,7 @@ No visible light-sensing organs — the Bellspine's resonance environment makes 
 50331745 0 0 S
 155 0
 0 -75 8 8
-! 0 0 0 7 2093823 0 1
+! 0 0 16 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11837,7 +11837,7 @@ Formed from the tremor-fractured rock plates of the pass ledge system — each p
 16777313 0 0 S
 156 0
 0 -75 8 8
-! 0 0 0 7 2093823 0 1
+! 0 0 19 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11852,7 +11852,7 @@ Most bears avoid the resonance-active sections of the Bellspine. This one has ad
 16777313 0 0 S
 154 0
 0 -50 7 7
-! 0 0 0 7 2093807 0 1
+! 0 0 14 7 2093807 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11867,7 +11867,7 @@ The Conclave's most successful automated defense measure — a mobile crystal-ar
 83886195 0 -700 S
 160 0
 0 -100 11 11
-! 0 0 0 7 2093823 0 1
+! 0 0 19 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 200 6126 6141 0 0 0 0 0 0 0
@@ -11897,7 +11897,7 @@ A seismic energy entity inhabiting the active fault intersections of the Bellspi
 16777313 0 0 S
 157 0
 0 -75 8 8
-! 0 0 0 7 2093823 0 1
+! 0 0 19 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11912,7 +11912,7 @@ One of the documented casualties that established the winter closure protocol. I
 16859233 0 -500 S
 155 0
 0 -75 8 8
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11927,7 +11927,7 @@ Each insect is essentially a mobile antenna for the ambient resonance, and the s
 16842849 0 0 S
 154 0
 0 -50 7 7
-! 0 0 0 7 0 0 1
+! 0 0 13 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11942,7 +11942,7 @@ The colony has echolocation tuned to the Bellspine's bell-tone frequencies rathe
 16842849 0 0 S
 153 0
 0 -50 7 7
-! 0 0 0 7 0 0 1
+! 0 0 15 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11957,7 +11957,7 @@ One of the Hushed Mile convoy loss casualties — killed when a resonance pulse 
 16793697 0 -500 S
 156 0
 0 -75 8 8
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11972,7 +11972,7 @@ Enough anchors in close proximity, sharing resonance output, have produced a met
 16842849 0 0 S
 158 0
 0 -75 8 8
-! 0 0 0 7 0 0 1
+! 0 0 19 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -11987,7 +11987,7 @@ The wyrm inhabits the deep fault system and uses the fault openings as ambush po
 50331745 0 0 S
 158 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 18 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12017,7 +12017,7 @@ Ash-stained travel robes and a fire-hardened weapon — the marks of a cultist w
 16777313 0 -500 S
 158 0
 0 -75 8 8
-! 0 0 0 7 2093823 0 1
+! 0 0 3 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12032,7 +12032,7 @@ The interpreter-priest is responsible for translating vent gas output patterns i
 16777313 0 -500 S
 159 0
 0 -75 8 8
-! 0 0 0 7 0 0 1
+! 0 0 3 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12047,7 +12047,7 @@ Years of continuous vent exposure have produced minor physiological adaptation �
 16777313 0 -500 S
 159 0
 0 -75 8 8
-! 0 0 0 7 2093823 0 1
+! 0 0 3 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12062,7 +12062,7 @@ A remnant from the last formally authorized expedition into the Western Fold und
 16793697 0 -500 S
 160 0
 0 -100 9 9
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12092,7 +12092,7 @@ The fire-keeper manages the tiered fire-pit complex with a combination of practi
 16777313 0 -500 S
 161 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 3 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12107,7 +12107,7 @@ The doctrinal enforcer is one of the inner circle's compliance specialists — t
 50331745 0 -500 S
 162 0
 0 -100 9 9
-! 0 0 0 7 0 0 1
+! 0 0 3 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12122,7 +12122,7 @@ The ghost of a Conclave monitoring technician who died in the field before the s
 16859233 0 -500 S
 160 0
 0 -100 9 9
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12137,7 +12137,7 @@ This is Cairn-Mother Retha An — the last practicing Ventspeaker, who held the 
 83968115 0 -700 S
 163 0
 0 -100 11 11
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 6144 0 0 0 0 0 0 0 0
@@ -12152,7 +12152,7 @@ One of the mountain's apex creatures — heat-resistant, fire-breathing, and ada
 50331745 0 0 S
 162 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 17 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12167,7 +12167,7 @@ Long enough at vent-proximity to have developed genuine geological intuition ben
 16777313 0 -500 S
 163 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 3 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12182,7 +12182,7 @@ The doctrine-speaker maintains the oral doctrinal tradition by rote recitation a
 16777313 0 -500 S
 164 0
 0 -100 9 9
-! 0 0 0 7 0 0 1
+! 0 0 3 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12197,7 +12197,7 @@ Responsible for the Fold's doctrinal record system — maintaining the accumulat
 16777283 0 -500 S
 164 2
 0 -100 9 9
-! 0 0 0 7 0 0 1
+! 0 0 3 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 6127 0 0 0 0 0 0 0 0
@@ -12212,7 +12212,7 @@ The titan has a symbiotic relationship with the thermophilic fungal network of t
 50331745 0 0 S
 164 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 19 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12227,7 +12227,7 @@ Generated by the electrochemical gradient of the iron-mineral springs — a livi
 16777313 0 0 S
 163 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 19 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12242,7 +12242,7 @@ The ritualist manages the fire sequence that the Ash Cult doctrine holds as the 
 16777313 0 -500 S
 165 0
 0 -100 9 9
-! 0 0 0 7 0 0 1
+! 0 0 3 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12257,7 +12257,7 @@ The cult's primary conduit for vent pronouncements to the wider membership — e
 50331745 0 -500 S
 165 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 3 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12272,7 +12272,7 @@ Decades of direct gas exposure have produced genuine geological intuition beneat
 83886195 0 -700 S
 166 0
 0 -100 11 11
-! 0 0 0 7 2093823 0 1
+! 0 0 3 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 6146 0 0 0 0 0 0 0 0
@@ -12287,7 +12287,7 @@ Formed by the energy release of the Sanctum Scar surface collapse event — the 
 16777313 0 0 S
 163 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 19 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12302,7 +12302,7 @@ Its internal temperature regulation has decoupled from ambient temperature, allo
 50331745 0 0 S
 165 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 18 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12317,7 +12317,7 @@ Large enough to destabilize scree-shelf formations simply by moving near them. I
 16777313 0 0 S
 165 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 19 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12332,7 +12332,7 @@ The apex aerial predator of the upper approaches — its wingspan casts a moving
 50331745 0 0 S
 166 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 15 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12347,7 +12347,7 @@ Eye membranes filter the disorienting reflections that affect other creatures, a
 16777313 0 0 S
 166 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 19 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12362,7 +12362,7 @@ A magnetically coherent cloud of volcanic glass particles shed by the upper-ridg
 16842849 0 0 S
 167 0
 0 -100 9 9
-! 0 0 0 7 0 0 1
+! 0 0 19 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12377,7 +12377,7 @@ A ghost anchored to the toxic gas concentration of a vent inversion pocket — i
 16859233 0 -500 S
 167 0
 0 -100 9 9
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12392,7 +12392,7 @@ Its scales incorporate mineral compounds that resist heat damage, and its intern
 50331745 0 0 S
 167 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 11 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12407,7 +12407,7 @@ The prowler has claimed the Secondtooth approach as its primary range, exploitin
 16777313 0 0 S
 167 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 16 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12422,7 +12422,7 @@ Composed of the high-altitude, high-pressure obsidian that forms near the Ember 
 50331745 0 0 S
 168 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 19 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12437,7 +12437,7 @@ Killed by a direct strike in the upper approach and trapped in the discharge mom
 16859233 0 -500 S
 167 0
 0 -100 9 9
-! 0 0 0 7 0 0 1
+! 0 0 10 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12467,7 +12467,7 @@ A lava-birthed entity formed when cooling magma deposits achieved sufficient min
 16777313 0 0 S
 168 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 19 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12482,7 +12482,7 @@ So large that its movement generates its own minor scree events — it sheds mat
 16777313 0 0 S
 169 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 19 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12497,7 +12497,7 @@ The volcanic output given will and direction — a concentration of the caldera'
 16842849 0 0 S
 169 0
 0 -100 9 9
-! 0 0 0 7 0 0 1
+! 0 0 19 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12527,7 +12527,7 @@ The mountain's apex predator — the dominant life form on the Secondtooth calde
 83886195 0 -700 S
 168 0
 0 -100 11 11
-! 0 0 0 7 2093823 0 1
+! 0 0 19 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 200 6128 6151 0 0 0 0 0 0 0
@@ -12542,7 +12542,7 @@ A construct of long volcanic standing — its mineral body is dense with thermal
 50331745 0 0 S
 169 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 19 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12557,7 +12557,7 @@ One of the Patriarch's doctrinal guardians — an undead entity sustained by pro
 16793697 0 -500 S
 169 0
 0 -100 9 9
-! 0 0 0 7 0 0 1
+! 0 0 3 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12572,7 +12572,7 @@ The Patriarch's outer guardian — assembled from the highest-density caldera ro
 50331745 0 0 S
 169 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 19 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -12587,7 +12587,7 @@ Not a creature in any conventional sense — the geological intelligence of the 
 83951731 0 -1000 S
 170 0
 0 -100 12 12
-! 0 0 0 7 0 0 1
+! 0 0 3 7 0 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 6152 0 0 0 0 0 0 0 0
@@ -12602,7 +12602,7 @@ A thermophilic arthropod with mineral-impregnated leg-pads capable of crossing a
 16777313 0 0 S
 168 0
 0 -100 9 9
-! 0 0 0 7 2093823 0 1
+! 0 0 12 7 2093823 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0

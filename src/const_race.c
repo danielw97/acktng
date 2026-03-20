@@ -301,4 +301,193 @@ const struct race_type race_table[MAX_RACE] = {
      ELE_FIRE | ELE_HOLY,    /* suscept */
      TRUE},
 
+
+    /* ------------------------------------------------------------------ *
+     *  NPC-ONLY RACES  (player_allowed = FALSE, indices 10–22)           *
+     *  Stats are nominal; element profiles drive combat behaviour.       *
+     * ------------------------------------------------------------------ */
+
+    /* Undead — reanimated dead powered by shadow and necrotic force.
+     * DARKNESS: shun light.  SLOW_HEAL: barely mend between fights.
+     * Resist poison (undead don't metabolise toxins). */
+    {"Und", "Undead", 3001, 0, 15, 15, 15, 15, 15,
+     RACE_MOD_DARKNESS | RACE_MOD_SLOW_HEAL,
+     {TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE},
+     0, {0, 1, 2, 3, 4, 5}, "", "",
+     ELE_SHADOW | ELE_PHYSICAL, /* strong */
+     ELE_HOLY | ELE_MENTAL,     /* weak */
+     ELE_SHADOW | ELE_POISON,   /* resist */
+     ELE_HOLY | ELE_FIRE,       /* suscept */
+     FALSE},
+
+    /* Serpent — actual snakes (not Kethari sapients); venomous constrictors.
+     * TAIL: serpentine body.  TOUGH_SKIN: scaled hide.  IMMUNE_POISON. */
+    {"Snk", "Serpent", 3001, 0, 15, 15, 15, 18, 15,
+     RACE_MOD_TAIL | RACE_MOD_TOUGH_SKIN | RACE_MOD_IMMUNE_POISON,
+     {TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE},
+     0, {0, 1, 2, 3, 4, 5}, "", "",
+     ELE_POISON | ELE_WATER, /* strong */
+     ELE_FIRE | ELE_AIR,     /* weak */
+     ELE_POISON,             /* resist */
+     ELE_FIRE | ELE_HOLY,    /* suscept */
+     FALSE},
+
+    /* Arachnid — spiders, scorpions, glassworms; multi-legged venomous hunters.
+     * TOUGH_SKIN: chitinous exoskeleton. */
+    {"Arc", "Arachnid", 3001, 0, 15, 15, 15, 18, 16,
+     RACE_MOD_TOUGH_SKIN,
+     {TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE},
+     0, {0, 1, 2, 3, 4, 5}, "", "",
+     ELE_POISON | ELE_EARTH, /* strong */
+     ELE_FIRE | ELE_AIR,     /* weak */
+     ELE_POISON | ELE_EARTH, /* resist */
+     ELE_FIRE,               /* suscept */
+     FALSE},
+
+    /* Insect — beetles, scarabs, swarms, centipedes, leeches, crickets.
+     * TINY: diminutive form.  TOUGH_SKIN: hard carapace. */
+    {"Ins", "Insect", 3001, 0, 10, 15, 15, 20, 15,
+     RACE_MOD_TINY | RACE_MOD_TOUGH_SKIN,
+     {TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE},
+     0, {0, 1, 2, 3, 4, 5}, "", "",
+     ELE_EARTH | ELE_POISON, /* strong */
+     ELE_FIRE | ELE_AIR,     /* weak */
+     ELE_POISON,             /* resist */
+     ELE_FIRE | ELE_AIR,     /* suscept */
+     FALSE},
+
+    /* Canine — wolves, jackals (animal), hounds, foxes, bears; pack hunters.
+     * FAST_HEAL: vigorous natural recovery. */
+    {"Can", "Canine", 3001, 0, 17, 12, 14, 18, 16,
+     RACE_MOD_FAST_HEAL,
+     {TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE},
+     0, {0, 1, 2, 3, 4, 5}, "", "",
+     ELE_PHYSICAL | ELE_AIR, /* strong */
+     ELE_SHADOW | ELE_MENTAL, /* weak */
+     ELE_PHYSICAL,            /* resist */
+     ELE_SHADOW | ELE_MENTAL, /* suscept */
+     FALSE},
+
+    /* Avian — birds of prey, scavengers, bats; swift and keen-eyed.
+     * FAST_HEAL: rapid metabolism and recovery. */
+    {"Avi", "Avian", 3001, 0, 12, 14, 15, 22, 14,
+     RACE_MOD_FAST_HEAL,
+     {TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE},
+     0, {0, 1, 2, 3, 4, 5}, "", "",
+     ELE_AIR | ELE_PHYSICAL, /* strong */
+     ELE_EARTH | ELE_SHADOW, /* weak */
+     ELE_AIR,                /* resist */
+     ELE_EARTH | ELE_FIRE,   /* suscept */
+     FALSE},
+
+    /* Feline — cats, lions, panthers, tigers; also large ungulates as mammal catch-all.
+     * FAST_HEAL: natural vitality. */
+    {"Fel", "Feline", 3001, 0, 17, 12, 14, 20, 15,
+     RACE_MOD_FAST_HEAL,
+     {TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE},
+     0, {0, 1, 2, 3, 4, 5}, "", "",
+     ELE_PHYSICAL | ELE_AIR,  /* strong */
+     ELE_SHADOW | ELE_MENTAL, /* weak */
+     ELE_PHYSICAL,             /* resist */
+     ELE_SHADOW | ELE_MENTAL,  /* suscept */
+     FALSE},
+
+    /* Reptile — lizards, crocodiles, basilisks, frogs, tortoises; cold-blooded.
+     * TOUGH_SKIN: thick scaly hide. */
+    {"Rep", "Reptile", 3001, 0, 16, 12, 14, 15, 18,
+     RACE_MOD_TOUGH_SKIN,
+     {TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE},
+     0, {0, 1, 2, 3, 4, 5}, "", "",
+     ELE_EARTH | ELE_POISON, /* strong */
+     ELE_AIR | ELE_MENTAL,   /* weak */
+     ELE_EARTH | ELE_POISON, /* resist */
+     ELE_AIR | ELE_FIRE,     /* suscept */
+     FALSE},
+
+    /* Dragon — all dragons, drakes, wyrms, wyverns; apex predators.
+     * HUGE: enormous size.  TOUGH_SKIN: armoured scales.  FAST_HEAL: draconic vitality. */
+    {"Drg", "Dragon", 3001, 0, 22, 18, 16, 16, 22,
+     RACE_MOD_HUGE | RACE_MOD_TOUGH_SKIN | RACE_MOD_FAST_HEAL,
+     {TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE},
+     0, {0, 1, 2, 3, 4, 5}, "", "",
+     ELE_FIRE | ELE_EARTH,   /* strong */
+     ELE_MENTAL | ELE_SHADOW, /* weak */
+     ELE_FIRE | ELE_PHYSICAL, /* resist */
+     ELE_MENTAL | ELE_HOLY,   /* suscept */
+     FALSE},
+
+    /* Elemental — elementals, golems, animated constructs, dust devils, sandstorms, djinn.
+     * HUGE: massive forms.  TOUGH_SKIN: stone/metal/crystal body.  SLOW_HEAL: inorganic repair. */
+    {"Elm", "Elemental", 3001, 0, 22, 15, 15, 12, 22,
+     RACE_MOD_HUGE | RACE_MOD_TOUGH_SKIN | RACE_MOD_SLOW_HEAL,
+     {TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE},
+     0, {0, 1, 2, 3, 4, 5}, "", "",
+     ELE_EARTH | ELE_PHYSICAL, /* strong */
+     ELE_HOLY | ELE_MENTAL,    /* weak */
+     ELE_PHYSICAL | ELE_POISON, /* resist */
+     ELE_HOLY | ELE_MENTAL,    /* suscept */
+     FALSE},
+
+    /* Demon — demons, fiends, gargoyles, infernals; shadow-born corruptors.
+     * LARGE: imposing size.  TOUGH_SKIN: hide or stone.  DARKNESS: children of shadow. */
+    {"Dem", "Demon", 3001, 0, 20, 18, 14, 18, 18,
+     RACE_MOD_LARGE | RACE_MOD_TOUGH_SKIN | RACE_MOD_DARKNESS,
+     {TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE},
+     0, {0, 1, 2, 3, 4, 5}, "", "",
+     ELE_SHADOW | ELE_FIRE,          /* strong */
+     ELE_HOLY | ELE_MENTAL,          /* weak */
+     ELE_SHADOW | ELE_FIRE | ELE_POISON, /* resist */
+     ELE_HOLY | ELE_AIR,             /* suscept */
+     FALSE},
+
+    /* Plant — treants, tendrils, vine creatures, fungal horrors, bog beasts, dryads.
+     * TOUGH_SKIN: bark or fibrous hide.  SLOW_HEAL: plant regeneration is slow. */
+    {"Pla", "Plant", 3001, 0, 18, 12, 16, 10, 20,
+     RACE_MOD_TOUGH_SKIN | RACE_MOD_SLOW_HEAL,
+     {TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE},
+     0, {0, 1, 2, 3, 4, 5}, "", "",
+     ELE_EARTH | ELE_WATER, /* strong */
+     ELE_FIRE | ELE_AIR,    /* weak */
+     ELE_EARTH | ELE_POISON, /* resist */
+     ELE_FIRE | ELE_AIR,    /* suscept */
+     FALSE},
+
+    /* Aquatic — fish, eels, crabs, water nymphs, bog hydras, tidal lurkers.
+     * IMMUNE_POISON: aquatic creatures tolerate waterborne toxins. */
+    {"Aqu", "Aquatic", 3001, 0, 15, 14, 14, 18, 16,
+     RACE_MOD_IMMUNE_POISON,
+     {TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
+      TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE},
+     0, {0, 1, 2, 3, 4, 5}, "", "",
+     ELE_WATER | ELE_POISON, /* strong */
+     ELE_FIRE | ELE_EARTH,   /* weak */
+     ELE_WATER | ELE_POISON, /* resist */
+     ELE_FIRE | ELE_EARTH,   /* suscept */
+     FALSE},
+
 };
