@@ -191,8 +191,11 @@ int main(int argc, char **argv)
    if (fCopyOver)
    {
       extern bool disable_timer_abort;
+      extern int last_checkpoint;
+      extern int get_user_seconds(void);
       disable_timer_abort = TRUE;
       copyover_recover();
+      last_checkpoint = get_user_seconds(); /* prevent false alarm abort after long recovery */
       disable_timer_abort = FALSE;
    }
 

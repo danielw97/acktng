@@ -169,7 +169,16 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
    /* Stop the virtual timer before exec. POSIX preserves interval timers
     * across execl but resets signal handlers to SIG_DFL. If the timer fires
     * during boot_db() in the new process (before init_alarm_handler installs
-    * the SIGVTALRM handler), the default action kills the process. */
+    * the SIGVTALRM handler), the default action kills the process.
+    *
+    * Two-step defence:
+    *  1. SIG_IGN is preserved across execl, so any SIGVTALRM that is already
+    *     pending in the kernel signal queue will be silently discarded when
+    *     delivered to the new process.  init_alarm_handler() later overwrites
+    *     this with the real handler.
+    *  2. setitimer(zero) stops the repeating timer so no further signals are
+    *     generated. */
+   signal(SIGVTALRM, SIG_IGN);
    {
       struct itimerval zero_timer;
       memset(&zero_timer, 0, sizeof(zero_timer));
@@ -243,10 +252,12 @@ void copyover_recover()
        * Now, find the pfile
        */
 
+      log_f("copyover_recover: loading player '%s' on fd %d", name, desc);
       fOld = load_char_obj(d, name, FALSE);
 
       if (!fOld) /* Player file not found?! */
       {
+         log_f("copyover_recover: player file not found for '%s'", name);
          write_to_descriptor(
              desc,
              "\n\rSomehow, your character was lost in the HOTreboot. Sorry, you must relog in.\n\r",
@@ -257,6 +268,7 @@ void copyover_recover()
       {
          CHAR_DATA *this_char;
 
+         log_f("copyover_recover: player '%s' loaded, sending recovery message", name);
          write_to_descriptor(desc, "\n\rCopyover recovery complete.\n\r", 0);
 
          /*
@@ -333,6 +345,7 @@ void copyover_recover()
          }
          d->connected = CON_PLAYING;
          list_who_to_output();
+         log_f("copyover_recover: player '%s' fully recovered", name);
       }
    }
 
@@ -341,5 +354,6 @@ void copyover_recover()
       fclose(fp);
       fp = NULL;
    }
+   log_f("copyover_recover: all players recovered");
    disable_timer_abort = FALSE;
 }

@@ -1413,7 +1413,8 @@ void npc_dialogue_deliver(void)
       /* Validate pointers using the MUD's is_free flag */
       if (resp->npc == NULL || resp->npc->is_free || resp->player == NULL || resp->player->is_free)
       {
-         resp->npc->dlg_pending = FALSE;
+         if (resp->npc != NULL && !resp->npc->is_free)
+            resp->npc->dlg_pending = FALSE;
          free(resp);
          continue;
       }

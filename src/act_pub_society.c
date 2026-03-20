@@ -23,6 +23,8 @@ bool can_use_pub_society_skill(CHAR_DATA *ch, int gsn)
       return FALSE;
 
    int soc = ch->pcdata->pub_society;
+   if (soc >= MAX_PUB_SOCIETY)
+      return FALSE;
    for (i = 0; i < PUB_SOCIETY_SKILLS_PER; i++)
    {
       if (pub_society_table[soc].skill_gsns[i] == gsn)
