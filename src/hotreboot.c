@@ -92,8 +92,10 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
 
       if (!d->character || d->connected < 0) /* drop those logging on */
       {
-         write_to_descriptor(d->descriptor,
-                             "\n\r@Sorry, ACK! MUD rebooting. Come back in a few minutes.\n\r", 0);
+         /* Use write_to_buffer so close_socket's process_output call applies
+          * WebSocket framing for clients that upgraded to WebSocket. */
+         write_to_buffer(d, "\n\r@Sorry, ACK! MUD rebooting. Come back in a few minutes.\n\r",
+                         0);
          close_socket(d); /* throw'em out */
       }
       else
@@ -102,11 +104,10 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
                  d->websocket_active ? 1 : 0);
          if (och->level == 1)
          {
-
-            write_to_descriptor(d->descriptor,
-                                "Since you are level one, and level one characters do not "
-                                "save....you have been advanced!\n\r",
-                                0);
+            write_to_buffer(d,
+                            "Since you are level one, and level one characters do not "
+                            "save....you have been advanced!\n\r",
+                            0);
             och->level = 2;
             och->class_level[och->class] = 2;
          }
@@ -114,7 +115,10 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
          och->mana = och->max_mana;
          och->move = och->max_move;
          save_char_obj(och);
-         write_to_descriptor(d->descriptor, buf, 0);
+         /* Use write_to_buffer + process_output so WebSocket clients receive a
+          * properly framed message and stay connected through the exec(). */
+         write_to_buffer(d, buf, 0);
+         process_output(d, FALSE);
       }
    }
 
