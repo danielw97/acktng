@@ -276,191 +276,189 @@ Court veteran, rather than something anachronistic.
 
 ---
 
-## Section VI: Player Conversation with the Quest Mob
+## Section VI: Player Conversation via the Crusade Channel
 
-### Discovery
+### How the channel works
 
-The codebase already has a complete AI NPC dialogue system in `src/npc_dialogue.c`:
+`do_crusade()` in `act_comm.c` serves double duty: players call it to
+broadcast on the crusade channel, and the quest mob calls it to broadcast its
+own announcements. When a player types `crusade <message>`, `talk_channel()`
+broadcasts it to everyone, then — if the message matches exact keywords —
+`ask_quest_question()` fires a static response back via `do_crusade(quest_mob,
+buf)`. The response reaches every player on the channel, regardless of where
+they are.
 
-- **Worker thread** (`pthread`) makes blocking HTTP calls to a `tng-ai`
-  service without freezing the game loop
-- **`ACT_AI_DIALOGUE` mob flag** on any NPC causes `do_say()` to dispatch
-  player speech to the AI via `npc_dialogue_dispatch()`
-- **Per-instance conversation history** (`dlg_state` on `CHAR_DATA`) gives
-  multi-turn coherence
-- **`npc_dialogue_deliver()`** is called every tick to push AI responses out
-  as `do_say()` calls
-- **`ask_quest_question()`** in `act_comm.c` is the current static
-  keyword-match fallback (called from the crusade channel handler when
-  players say exact phrases like "who is the thief?")
+This is exactly the right delivery path. Players already talk to the quest
+mob through the crusade channel. The change is to replace the static
+keyword-matching with live AI dispatch through the same path.
 
-The conversation feature therefore requires **no new threading, no fork/pipe,
-no Python helper** for this part — only wiring the quest mob into the existing
-system and injecting quest context into its system prompt.
+### Discovery: existing AI pipeline
+
+`src/npc_dialogue.c` already has everything needed for non-blocking AI calls:
+
+- A **worker thread** (`pthread`) makes blocking HTTP calls to `tng-ai`
+- **`npc_dialogue_dispatch()`** enqueues a request immediately and returns
+- **`npc_dialogue_deliver()`** drains responses each tick, currently calling
+  `do_say()` to deliver them
+
+The only piece missing is a delivery mode that calls `do_crusade()` instead
+of `do_say()`. Adding that is a small, contained change to `npc_dialogue.c`.
 
 ### Approach
 
-#### 1. New field on CHAR_DATA: `quest_extra_prompt`
+#### 1. Add a delivery-type field to `NPC_DLG_RESP`
 
 ```c
-/* In ack.h, CHAR_DATA struct */
-char *quest_extra_prompt;   /* NULL normally; set for quest mob during active quest */
+typedef enum { DLG_DELIVER_SAY, DLG_DELIVER_CRUSADE } dlg_delivery_t;
+
+typedef struct npc_dlg_resp {
+    CHAR_DATA       *npc;
+    CHAR_DATA       *player;
+    char             response_text[1024];
+    dlg_delivery_t   delivery;        /* NEW */
+    struct npc_dlg_resp *next;
+} NPC_DLG_RESP;
 ```
 
-Allocated with `str_dup()` at quest start, freed with `free_string()` in
-`clear_crusade()`. Parallels the existing `long_descr_orig` pattern.
-
-#### 2. `build_system_prompt()` appends the quest context
-
-At the end of `build_system_prompt()` in `npc_dialogue.c`, before the
-behavioral guardrails line:
+`npc_dialogue_deliver()` gains one branch:
 
 ```c
-/* Quest context — injected when this mob is the active quest giver */
-if (npc->quest_extra_prompt != NULL && npc->quest_extra_prompt[0] != '\0')
-{
-    safe_append(buf, cap, "\nQUEST CONTEXT:\n");
-    safe_append(buf, cap, npc->quest_extra_prompt);
-    safe_append(buf, cap, "\n");
-}
+if (resp->delivery == DLG_DELIVER_CRUSADE)
+    do_crusade(resp->npc, accented);
+else
+    do_say(resp->npc, accented);
 ```
 
-#### 3. Quest context string is built at quest start
+No other change to the deliver path — history, accent post-processing, and
+pointer validation all remain identical.
 
-Built in `generate_auto_crusade()` (and the `iquest start` path) immediately
-after the quest object strings are determined — at the point where the mob's
-`long_descr` is already being rewritten. The content is:
+#### 2. Add `npc_dialogue_dispatch_crusade()` to `npc_dialogue.c`
 
-```
-You are currently participating in a crusade. An item belonging to you has
-been stolen. Here is what you know:
-
-- Your stolen item: [quest_object->short_descr]
-- Item description: [quest_object->long_descr] (omit the "lies here" suffix)
-- The thief (revealed after timer >= 7): [quest_target->short_descr], last
-  seen in [quest_target->in_room->area->name]
-- Quest timer: [quest_timer]/15 minutes elapsed
-
-Respond to questions about the theft naturally and in character. You are
-distressed/indifferent/enraged (per your personality) about the loss.
-If asked who stole it before timer 7, say you don't know yet.
-Do not break character. Do not use modern language.
-```
-
-The thief information is conditionally included in the string only after
-`quest_timer >= 7` — but since the string is built once at quest start when
-`quest_timer == 0`, it should instead say "you don't know who stole it yet"
-and the AI is instructed to say the same until the thief is announced.
-
-A simpler and correct approach: the context string is **rebuilt each time
-`crusade_inform()` fires** (each minute), so it reflects the current timer
-and whether the thief is known. Since `build_system_prompt` is called per
-request, the updated `quest_extra_prompt` is always current.
-
-#### 4. `ACT_AI_DIALOGUE` set on quest mob at quest start
+A thin variant of `npc_dialogue_dispatch()` that accepts an explicit system
+prompt (bypassing `build_system_prompt()`) and sets `DLG_DELIVER_CRUSADE` on
+the response. Signature exposed in `npc_dialogue.h`:
 
 ```c
-/* In generate_auto_crusade() / do_iquest start, alongside existing ACT_ sets */
-SET_BIT(quest_mob->act, ACT_AI_DIALOGUE);
+void npc_dialogue_dispatch_crusade(CHAR_DATA *npc, CHAR_DATA *player,
+                                   const char *message,
+                                   const char *system_prompt);
 ```
 
-Removed in `clear_crusade()` alongside the other flag cleanups:
+Internally identical to `npc_dialogue_dispatch()` except it skips
+`build_system_prompt()` (uses the provided prompt directly) and sets
+`delivery = DLG_DELIVER_CRUSADE` on the queued request.
+
+The `dlg_pending` guard, history management, and injection-defence
+(`npc_dialogue_sanitize_input()`) all apply unchanged.
+
+#### 3. `crusade_dialogue_dispatch()` in `crusade.c`
+
+Builds the quest-aware system prompt and calls
+`npc_dialogue_dispatch_crusade()`. Called from `do_crusade()` in place of
+`ask_quest_question()`.
+
+The system prompt is assembled from:
+
+- The mob's own `pIndexData->ai_prompt` (if set — the mob's static persona)
+- Race speech inclination for `quest_mob->pIndexData->race`
+- Accent instruction for `quest_mob->pIndexData->accent`
+- **Quest context block** (built fresh per call):
+
+```
+QUEST CONTEXT:
+You are the victim of a theft. Players are speaking to you via the crusade
+channel from anywhere in the world.
+
+Your stolen item: [quest_object->short_descr]
+What it is: [quest_object->long_descr stripped of "lies here"]
+Time elapsed: [quest_timer] of 15 minutes
+
+[if quest_timer < 7:]
+You do not yet know who stole it. You are still searching for information.
+
+[if quest_timer >= 7 and quest_target alive:]
+You know the thief is [quest_target->short_descr], last known to be in
+[quest_target->in_room->area->name].
+
+[if quest_target dead:]
+The thief has been killed, but your item has not yet been returned.
+
+Respond naturally in character. Keep it to 1–2 sentences. Do not break
+character. Do not use modern language or refer to game mechanics.
+```
+
+The prompt is built fresh on every `crusade_dialogue_dispatch()` call, so it
+always reflects current `quest_timer` and `quest_target` state with no
+separate "rebuild each tick" logic needed.
+
+#### 4. Replace `ask_quest_question()` in `do_crusade()`
 
 ```c
-REMOVE_BIT(quest_mob->act, ACT_AI_DIALOGUE);
+/* act_comm.c — do_crusade(), replacing the keyword-match block */
+if (!IS_NPC(ch) && quest && quest_mob != NULL)
+    crusade_dialogue_dispatch(quest_mob, ch, argument);
 ```
 
-This makes `do_say()` automatically dispatch player speech to `npc_dialogue_dispatch()`
-for any player in the quest mob's room — using the full existing pipeline
-with history, accent, lore, and race inclination.
+This fires for **any** player message on the crusade channel while a quest is
+active — not just exact keyword matches. The `dlg_pending` guard inside
+`npc_dialogue_dispatch_crusade()` prevents stacking if the mob is already
+mid-response.
 
-#### 5. Replace `ask_quest_question()` with AI dispatch
-
-`ask_quest_question()` is called from the crusade channel handler
-(`do_crusade_channel` in `act_comm.c:756`) when players type exact keyword
-phrases. This becomes redundant once the mob has `ACT_AI_DIALOGUE` — players
-can just `say` their questions naturally.
-
-The static function is replaced by a single call to `npc_dialogue_dispatch()`
-if the quest mob is reachable, routing the question through the AI pipeline
-instead:
-
-```c
-/* Replace ask_quest_question() call site in act_comm.c */
-if (quest && quest_mob != NULL && !IS_SET(quest_mob->act, ACT_PET))
-    npc_dialogue_dispatch(quest_mob, ch, argument);
-```
-
-If the quest mob is dead or `dlg_pending`, the dispatch is silently dropped
-(existing `npc_dialogue_dispatch()` already guards against stacking).
-
-The `ask_quest_question()` function definition is removed entirely.
-
-#### 6. Context string update each crusade tick
-
-`crusade_inform()` fires every minute. After updating `quest_timer`, it
-rebuilds `quest_mob->quest_extra_prompt` so the next player conversation
-request carries current state (timer, thief identity if now revealed):
-
-```c
-void crusade_update_quest_context(void)
-{
-    char buf[2048];
-    /* build context string reflecting current quest_timer and quest_target */
-    if (quest_mob->quest_extra_prompt != NULL)
-        free_string(quest_mob->quest_extra_prompt);
-    quest_mob->quest_extra_prompt = str_dup(buf);
-}
-```
-
-Called at the end of `crusade_inform()`.
+`ask_quest_question()` is removed entirely (definition and declaration).
 
 ### What Players Experience
 
-A player walking into the quest mob's room and typing:
+A player types:
 
 ```
-say Do you know who took it?
+crusade Do you have any idea who took it?
 ```
 
-Gets a response driven by the mob's full persona (race, accent, lore flags,
-ai_prompt if any) **plus** the quest context, in the mob's established voice.
-The mob might reply:
+The crusade channel broadcasts that to everyone as today. Then, within a
+second or two, the quest mob's AI-generated response appears on the channel
+for all players:
 
-> *A dark stalker rasps, 'The trail goes cold. Something moved through here
-> — I sensed it take the shard. I do not yet know its face.'*
+> *@@la dark stalker @@lcrusades @@N'[Lv 25-50]@@N The scent is fresh but
+> the trail is tangled. I have not yet named the thief.'*
 
-Or for a noble-tier NPC:
+Or after the thief is revealed:
 
-> *Sir Aldric says, 'I have dispatched my steward to inquire. Until the
-> thief's name is confirmed, I shall not give you false intelligence.'*
+> *@@lSir Aldric @@lcrusades @@N'[Lv 80-100]@@N It was a wretched orc
+> scout in the Forgotten Dungeon who took my campaign seal. I do not ask
+> again — I demand.*'*
 
-Multiple players in the room can each speak to the mob. The conversation
-history is per-NPC-instance, so coherence is maintained across the multi-turn
-exchange. History expires after `DIALOGUE_HISTORY_EXPIRY` seconds of silence
-(existing behavior).
+The response goes to the whole channel, consistent with how every other
+crusade message works. Conversation history is maintained per NPC instance so
+multi-turn exchanges are coherent even across different players asking
+different questions.
 
 ### Additional Affected Files
 
 | File | Change |
 |------|--------|
-| `src/headers/ack.h` | Add `char *quest_extra_prompt` to `CHAR_DATA` |
-| `src/npc_dialogue.c` | Append `quest_extra_prompt` in `build_system_prompt()` |
-| `src/quests/crusade.c` | Set/clear `ACT_AI_DIALOGUE` and `quest_extra_prompt` at quest start/end; add `crusade_update_quest_context()`; call it from `crusade_inform()` |
-| `src/act_comm.c` | Replace `ask_quest_question()` call with `npc_dialogue_dispatch()`; remove `ask_quest_question()` definition and declaration |
-| `src/tests/test_crusade.c` | Add tests for `crusade_update_quest_context()` output at timer 0, 7, and 15 |
+| `src/npc_dialogue.h` | Expose `npc_dialogue_dispatch_crusade()`; add `dlg_delivery_t` enum |
+| `src/npc_dialogue.c` | Add `dlg_delivery_t` to `NPC_DLG_RESP`; add `DLG_DELIVER_CRUSADE` branch in `npc_dialogue_deliver()`; implement `npc_dialogue_dispatch_crusade()` |
+| `src/quests/crusade.c` | Add `crusade_dialogue_dispatch()`; call it from quest start/inform as needed |
+| `src/act_comm.c` | Replace `ask_quest_question()` call with `crusade_dialogue_dispatch()`; remove `ask_quest_question()` definition and declaration |
+| `src/tests/test_crusade.c` | Add tests for the quest context prompt at timer 0, 7, and 15 |
+
+No changes to `CHAR_DATA` or `ack.h`. No new mob flags. `ACT_AI_DIALOGUE` is
+not set on the quest mob — this path bypasses the `do_say()` hook entirely.
 
 ### Trade-offs
 
-- **dlg_pending contention**: If the AI worker is busy (e.g. processing
-  another NPC's response), `npc_dialogue_dispatch()` drops the request
-  silently (existing behavior). Players get no response rather than a wrong
-  one — acceptable.
-- **Shared pIndexData unchanged**: `quest_extra_prompt` lives on the
-  `CHAR_DATA` instance, not `pIndexData`, so other instances of the same
-  mob template are unaffected.
-- **History coherence**: The quest mob accumulates conversation history from
-  all players in the room. Since players can see each other's `say` messages,
-  this is natural — the mob is having a multi-party conversation.
-- **No lore risk**: The existing `npc_dialogue_sanitize_input()` injection
-  defence applies to player speech as before.
+- **Global channel, not room-local**: The AI response goes to every player
+  on the crusade channel, which is consistent with all other crusade traffic.
+  Players don't need to be in the quest mob's room.
+- **One pending response at a time**: The `dlg_pending` guard means if a
+  player spams `crusade`, only one AI call is in flight. Subsequent messages
+  are dropped silently until the response is delivered. Acceptable — the
+  channel is already rate-limiting by human typing speed.
+- **History is mob-keyed, not player-keyed**: All crusade-channel questions
+  share one conversation history on the quest mob instance. This is
+  appropriate — the mob is having one ongoing conversation with the party of
+  questors, not separate private threads.
+- **`do_crusade()` forward declaration**: `crusade.c` already calls
+  `do_crusade()` elsewhere, so the forward declaration is already present.
+- **No lore risk**: `npc_dialogue_sanitize_input()` applies to player input
+  before it enters the prompt.
