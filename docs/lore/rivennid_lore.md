@@ -126,6 +126,16 @@ Rivennid network-memory has recently detected a specific anomaly: the Withered D
 
 See also: `serathi_lore.md`, `verdant_depths_lore.md`, `withered_depths_convergence_lore.md`, `parallel_record_compact_lore.md`
 
+### Druid Tradition
+
+The Rivennid's mycelial network preserves, in a form they do not fully interpret, signal patterns from the period when the unnamed Withered Depths druidic order's rituals were active. These are not memory in any human sense; they are the network's record of the specific biological signals the druidic rituals produced — the chemical and electrical patterns that the forest's own circulatory system encoded as the practitioners performed their containment work.
+
+**Wildspeaker** druid practitioners who have been given access to these records describe them as the most intact ecological intelligence from the pre-collapse era — and among the most difficult to read, because the context that would make the signals interpretable (the practitioner who produced them and could explain what they were doing) no longer exists. The Exchange School considers them a primary research priority; the Covenant School considers them an argument for why the reconstruction without transmission from masters is necessarily incomplete.
+
+The Rivennid have not formally offered druid practitioners access to the relevant network segments, nor have druid practitioners formally requested it. The absence of this formal exchange, despite both parties having obvious complementary interests, is a characteristic product of both traditions' non-civic status: neither has an institutional framework for negotiating inter-tradition knowledge exchange, and neither is inclined to approach a city's institutions to provide one.
+
+See also: `druid_lore.md`, `wildspeaker_lore.md`, `withered_depths_lore.md`
+
 ---
 
 ## Narrative Tone

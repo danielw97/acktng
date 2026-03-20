@@ -292,3 +292,15 @@ The practical implication for adventurers: understanding the Withered Depths' co
 For full Cinderteeth institutional history including the Prism Thesis faction, Conclave Transfer Chain, Western Fold site, and Prism Adept Serai's biography, see: `docs/lore/cinderteeth_mountains_lore.md`.
 
 ---
+
+## Druid Tradition Cross-Reference
+
+The unnamed druidic order that maintained the Withered Depths' predecessor forest is the primary historical ancestor of the modern **Wildspeaker** remort path. Their methodology — understanding the forest as a living archive, maintaining it through controlled burning, selective planting, and ritual communion, and encoding knowledge in the forest's own biological memory rather than in human-institutional records — constitutes the most complete attunement practice the tradition's reconstruction is attempting to recover.
+
+Their final act — the creation of the confusion mists as a quarantine measure — was technically sophisticated (a mist calibrated to contain Conclave crystal resonance rather than simply spread) and ultimately insufficient (the quarantine worked only as long as the practitioners lived to maintain it). The failure mode — prioritizing the forest's long-term containment needs over the short-term demographic question of whether enough practitioners would exist to do the work — is named **immersion failure** in the modern Wildspeaker training programs.
+
+The **withered druids** in Heartrot Grove (Zone 7) are the undead remnants of the order's final generation. Their endless behavioral loop — perform the ritual, defend the site, perform the ritual — is the physical record of what immersion failure at its most extreme looks like: practitioners so deeply entwined with the living world's long timescale that they did not adequately weight the urgency of their own survival. They are not enemies in any motivational sense. They are the endpoint of a training failure the modern tradition is explicitly designed to prevent.
+
+The Rivennid's mycelial network preserves, in a form they do not fully interpret, signal patterns from the period when this order's rituals were active. Wildspeaker practitioners who have worked with these records describe them as the most intact ecological intelligence from the pre-collapse druid era — and the most difficult to read without the context the order itself would have provided.
+
+See also: `druid_lore.md`, `wildspeaker_lore.md`, `hierophant_lore.md`, `rivennid_lore.md`

@@ -126,3 +126,15 @@ These symbols reinforce the multi-color theme and give players narrative continu
 - Social gameplay is encouraged through escort contracts, checkpoint diplomacy quests, and deep-interior bounty chains.
 
 ---
+
+## Druid Tradition Cross-Reference
+
+The Great Northern Forest is the primary geographical context for two of the three ancient druidic orders whose legacy defines the modern druid tradition.
+
+The **Everkeepers** operated throughout the Ironpine Rise. Their stone planting-rings (seven paces across, compass-oriented) are the tradition's most visible physical record. The rings continue to function as self-sustaining forestry sites; road wardens treat them as protected sites by informal convention. No new rings have been added in approximately four human generations — the order's last planting-ring dates to the Ash Winters period, when the Everkeepers refused to artificially accelerate ironpine growth and the resulting demographic decline ended the tradition. See `druid_lore.md` and `thornwarden_lore.md` for the Everkeeper inheritance in the modern tradition.
+
+The **Cairn-Keepers** held the high ridges and megalith sites of the Ancestor Deeps. Their direct successor tradition, the stone-antler circles, still guards the megalith sites and demands ritual permission for access. Modern druid practitioners who approach these sites seeking access to the old knowledge have been granted it in some cases and denied it in others; the stone-antler circles evaluate petitioners on grounds they do not fully articulate, centering on whether the relationship with the living world is oriented toward maintenance rather than extraction. See `druid_lore.md` and `hierophant_lore.md`.
+
+The **Mire-Speaker** descendants in the Mosswater Bends are one of the oral-record sources that the modern druid reconstruction has drawn on, alongside the stone-antler circles and the Rivennid's mycelial signal-record.
+
+See also: `druid_lore.md`, `thornwarden_lore.md`, `wildspeaker_lore.md`, `hierophant_lore.md`
