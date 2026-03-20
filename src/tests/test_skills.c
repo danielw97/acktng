@@ -79,6 +79,13 @@ char *one_argument(char *argument, char *arg_first)
    return argument;
 }
 
+bool can_use_pub_society_skill(CHAR_DATA *ch, int gsn)
+{
+   (void)ch;
+   (void)gsn;
+   return FALSE;
+}
+
 int skill_lookup(const char *name)
 {
    (void)name;

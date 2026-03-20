@@ -70,6 +70,24 @@ sh_int get_psuedo_level(CHAR_DATA *ch)
    return ch->level;
 }
 
+/* Public society passive hook stubs */
+int pub_society_dodge_bonus(CHAR_DATA *ch)
+{
+   (void)ch;
+   return 0;
+}
+int pub_society_extra_attack(CHAR_DATA *ch)
+{
+   (void)ch;
+   return 0;
+}
+bool pub_society_marked_strike_check(CHAR_DATA *ch, CHAR_DATA *victim)
+{
+   (void)ch;
+   (void)victim;
+   return FALSE;
+}
+
 int get_parry(CHAR_DATA *ch);
 int get_dodge(CHAR_DATA *ch);
 int get_block(CHAR_DATA *ch);

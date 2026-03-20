@@ -522,6 +522,53 @@ const struct cmd_type cmd_table[] = {
     /* Quest */
     CMD("quest", do_quest, POS_STANDING, 1, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
 
+    /* Public societies */
+    CMD("enlist", do_enlist, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
+    CMD("society", do_society, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_ALWAYS),
+
+    /* Public society skills -- Guard Command */
+    CMD("patrol", do_patrol_sense, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("fieldmend", do_field_mend, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("rallycry", do_rally_cry, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("tactical", do_tactical_assess, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("presence", do_command_presence, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+
+    /* Public society skills -- Harbor Syndics */
+    CMD("audit", do_dockside_audit, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("haggle", do_haggle, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("bondcargo", do_bonded_cargo, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("anchorslam", do_anchor_slam, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+
+    /* Public society skills -- Ember Wardens */
+    CMD("forage", do_forage, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("fieldrepair", do_field_repair, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("embersignal", do_ember_signal, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("containward", do_containment_ward, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION,
+        C_SHOW_SKILL),
+    CMD("controlburn", do_controlled_burn, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+        C_SHOW_SKILL),
+
+    /* Public society skills -- Shrine of the First Claw */
+    CMD("oathmark", do_oath_mark, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("trackquarry", do_track_quarry, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("writhold", do_writ_of_hold, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("clawspursuit", do_claws_pursuit, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("judgment", do_claws_judgment, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+
+    /* Public society skills -- Wall Command */
+    CMD("digin", do_dig_in, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("shelter", do_shelter, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("trailblaze", do_trailblaze, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("signaltower", do_signal_tower, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("rampartslam", do_rampart_slam, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+
+    /* Public society skills -- Road Wardens */
+    CMD("wayfind", do_wayfind, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("roadcamp", do_road_camp, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("forcedmarch", do_forced_march, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("dispatch", do_dispatch_rider, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD("waylay", do_waylay, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+
     /*
      * End of list.
      */

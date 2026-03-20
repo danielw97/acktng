@@ -182,6 +182,43 @@ extern sh_int gsn_pressure_point;
 extern sh_int gsn_feint;
 extern sh_int gsn_conditioning;
 
+/* Public society skills */
+extern sh_int gsn_patrol_sense;
+extern sh_int gsn_field_mend;
+extern sh_int gsn_rally_cry;
+extern sh_int gsn_shield_wall;
+extern sh_int gsn_tactical_assess;
+extern sh_int gsn_command_presence;
+extern sh_int gsn_dockside_audit;
+extern sh_int gsn_haggle;
+extern sh_int gsn_longshoreman;
+extern sh_int gsn_bonded_cargo;
+extern sh_int gsn_anchor_slam;
+extern sh_int gsn_forage;
+extern sh_int gsn_field_repair;
+extern sh_int gsn_ember_signal;
+extern sh_int gsn_ember_vitality;
+extern sh_int gsn_containment_ward;
+extern sh_int gsn_controlled_burn;
+extern sh_int gsn_oath_mark;
+extern sh_int gsn_track_quarry;
+extern sh_int gsn_writ_of_hold;
+extern sh_int gsn_marked_strike;
+extern sh_int gsn_claws_pursuit;
+extern sh_int gsn_claws_judgment;
+extern sh_int gsn_dig_in;
+extern sh_int gsn_shelter;
+extern sh_int gsn_trailblaze;
+extern sh_int gsn_bulwark;
+extern sh_int gsn_signal_tower;
+extern sh_int gsn_rampart_slam;
+extern sh_int gsn_wayfind;
+extern sh_int gsn_road_camp;
+extern sh_int gsn_forced_march;
+extern sh_int gsn_road_grit;
+extern sh_int gsn_dispatch_rider;
+extern sh_int gsn_waylay;
+
 #ifdef TFS
 extern sh_int gsn_mana_sense;
 #endif
@@ -211,6 +248,8 @@ extern const struct clan_type clan_table[MAX_CLAN];
 extern const struct cmd_type cmd_table[];
 
 extern const struct skill_type skill_table[MAX_SKILL];
+extern struct pub_society_type
+    pub_society_table[]; /* sized MAX_PUB_SOCIETY in const_pub_society.c */
 extern struct social_type *social_table;
 extern char *const title_table[MAX_CLASS][36][2];
 
@@ -743,5 +782,38 @@ DECLARE_DO_FUN(do_findreset);
 
 /* Reincarnate */
 DECLARE_DO_FUN(do_reincarnate);
+
+/* Public societies */
+DECLARE_DO_FUN(do_enlist);
+DECLARE_DO_FUN(do_society);
+DECLARE_DO_FUN(do_patrol_sense);
+DECLARE_DO_FUN(do_field_mend);
+DECLARE_DO_FUN(do_rally_cry);
+DECLARE_DO_FUN(do_tactical_assess);
+DECLARE_DO_FUN(do_command_presence);
+DECLARE_DO_FUN(do_dockside_audit);
+DECLARE_DO_FUN(do_haggle);
+DECLARE_DO_FUN(do_bonded_cargo);
+DECLARE_DO_FUN(do_anchor_slam);
+DECLARE_DO_FUN(do_forage);
+DECLARE_DO_FUN(do_field_repair);
+DECLARE_DO_FUN(do_ember_signal);
+DECLARE_DO_FUN(do_containment_ward);
+DECLARE_DO_FUN(do_controlled_burn);
+DECLARE_DO_FUN(do_oath_mark);
+DECLARE_DO_FUN(do_track_quarry);
+DECLARE_DO_FUN(do_writ_of_hold);
+DECLARE_DO_FUN(do_claws_pursuit);
+DECLARE_DO_FUN(do_claws_judgment);
+DECLARE_DO_FUN(do_dig_in);
+DECLARE_DO_FUN(do_shelter);
+DECLARE_DO_FUN(do_trailblaze);
+DECLARE_DO_FUN(do_signal_tower);
+DECLARE_DO_FUN(do_rampart_slam);
+DECLARE_DO_FUN(do_wayfind);
+DECLARE_DO_FUN(do_road_camp);
+DECLARE_DO_FUN(do_forced_march);
+DECLARE_DO_FUN(do_dispatch_rider);
+DECLARE_DO_FUN(do_waylay);
 
 bool is_player_summon_special(SPEC_FUN *spec_fun);

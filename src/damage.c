@@ -363,6 +363,9 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
    if (is_affected(ch, skill_lookup("feeble mind")) && !IS_SET(element, ELE_PHYSICAL))
       dam /= 2;
 
+   /* Public society: Wall Command bulwark 5% physical reduction */
+   dam = pub_society_damage_reduction(victim, dam, element);
+
    AFFECT_DATA *paf, *paf_next;
 
    for (paf = victim->first_affect; paf != NULL; paf = paf_next)

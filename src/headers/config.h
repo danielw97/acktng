@@ -782,6 +782,8 @@
 #define CHANNEL_LANG BIT_29
 #define CHANNEL_GAME BIT_30
 
+#define CHANNEL_PUB_SOCIETY BIT_31
+
 /*
  * NOTE 32 is the last allowable channel ZEN
  */
