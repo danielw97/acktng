@@ -57,6 +57,30 @@ Guardian Mafdet is not a deity of comfort but of enforcement: the Shrine doesn't
 
 Control access along the Saltglass Reach approaches. Some posts have collapsed and been abandoned for years — the structure at one station caved in several years ago, with roof timbers and Saltglass tablet frames still visible from the crest.
 
+### Operational History and Doctrine
+
+The Reach Wardens predate Mafdet's current governance structure. The **Littoral Branch** — the coastal extension of the Keeper-of-Measure administrative apparatus — originally maintained three tiers of posts along the Saltglass Reach approaches: **outer watch posts** on the Reach's inland edge where the desert road network transitioned into Saltglass terrain, **checkpoint cairns** at the three route-line junctions (Swift Line, Heavy Road, and Sealed Route), and **inner inspection posts** at the approach corridor's terminus near Mafdet's Landward Gate. The three-route structure itself — ascending in security and cost — was a Littoral Branch design, the same logic as the desert cistern-relay tiers adapted to the specific hazards of Saltglass terrain.
+
+The Reach Wardens inherited this post network when the Littoral Branch's administrative infrastructure collapsed during the Fracture Era. Their mandate narrowed from route administration (Littoral Branch had issued convoy formation permits, assessed cargo loads, maintained waystation cisterns, and recorded transit) to security — specifically, anti-piracy watch on the coastal approach and anti-sand-raider patrol on the inland routes.
+
+The modern doctrine is called **the Scorch Clause**: a standing post authorization to interdict any identified Reaver-banner convoy, Synod-marked cargo, or unmarked armed group larger than twelve crossing the Sealed Route without Sand-Sea Carters' Guild escort. The Scorch Clause's name comes from its original drafting context — the Ash-and-Iron Decades emergency, when Cinderteeth disruptions produced a wave of displaced and often-armed caravans that the Guild's licensing system couldn't process fast enough. Emergency authorization to stop and hold unpermitted traffic, granted to the wardens for that specific season, was never rescinded. The wardens have been operating under it for two generations.
+
+### The Post Collapse Problem
+
+The structural failures affecting the outer watch posts are not primarily geological. They are a consequence of a jurisdictional dispute between the Strandline Compact's three blocs. The **Sand-Sea Carters' Guild** controls licensed cargo movement and therefore controls the practical revenue stream of the Reach routes; the **Harbor Wardens** control maritime security and the harbor chain; and the **Ledger Houses** control the documentation. The Reach Wardens' funding comes from a line item in the Strandline Compact that was originally denominated as a percentage of Route Inspection Fees — fees assessed by the Reach Warden posts for cargo verification.
+
+When the Guild renegotiated the Route Inspection Fee structure during Era XIX's trade recovery period, the specific fee categories that funded the outer watch posts were reclassified as "discretionary cargo services" rather than mandatory Route Inspection assessments. The reclassification was procedurally valid; it reflected the Guild's position that outer-post cargo verification duplicated the Guild's own manifest documentation requirements. The practical effect was a forty percent reduction in the Reach Wardens' outer-post budget.
+
+The Harbor Wardens did not protest the reclassification. Their interests are coastal, not inland, and reducing competition from the Reach Warden jurisdiction over inland approaches was commercially convenient. The Ledger Houses noted the funding shift in their accounts and made no objection.
+
+The outer watch posts began failing within a decade. The wardens at the surviving posts are aware of the institutional reason for the failure and have developed a specific resentment toward the Guild that colors every enforcement interaction with Guild-licensed caravans — a resentment that the Guild's Dispatch desk management considers manageable because it does not have formal institutional support.
+
+### Current Operational Posture
+
+The surviving Reach Warden posts operate a modified version of the original three-tier system with the outer posts reduced to single-warden watch positions rather than full teams. The checkpoint cairns at the route-line junctions are the effective operational spine; most Reach Warden strength is concentrated there. The inner inspection posts near the Landward Gate operate under functional Harbor Warden oversight despite nominally remaining Reach Warden installations — the Harbor Wardens have absorbed gate-inspection coordination because the alternative was a documentation gap the Ledger Houses would not accept.
+
+Post wardens working alone on the outer watch positions are technically the Reach's most dangerous assignment and practically the most boring: sand-raider activity concentrates on the three-route junction points (higher value targets) rather than the outer approach corridors. A single warden at an outer post is unlikely to encounter serious combat but will have no backup if they do. The combination of isolation, reduced pay, and awareness that institutional support will not arrive produces a specific culture in the outer-post wardens: profoundly self-reliant, suspicious of Mafdet's institutional politics, and more likely to resolve ambiguous encounters through judgment than through protocol. The Sand-Sea Carters' Guild considers this a safety risk. The outer-post wardens consider the Guild to be the reason they are working alone.
+
 ---
 
 ## The Shoreward Seal
