@@ -86,6 +86,10 @@ int quest_wait = 0;       /* Min time until next quest  */
 sh_int quest_personality; /* mob's crusade personality :) */
 int quest_level_min;
 int quest_level_max;
+bool quest_ai_pending = FALSE;   /* AI generation in flight?        */
+char quest_ai_tmpfile[256] = ""; /* Temp file path for AI output    */
+pid_t quest_ai_pid = -1;         /* Child process PID               */
+time_t quest_ai_start_time = 0;  /* Time child was launched         */
 
 /* Zen mod: Diplomatics globals */
 POL_DATA politics_data;

@@ -374,44 +374,9 @@ A captured soul floats here.~
 0 0 0 0 0 0 0 0 0 0
 1
 #65446
-token quest~
-a quest token~
-A quest token lies here.~
-16 16384 16777216 0
-0 0 0 0 0 0 0 0 0 0
-1
-#65447
-token quest~
-a quest token~
-A quest token lies here.~
-16 16384 16777216 0
-0 0 0 0 0 0 0 0 0 0
-1
-#65448
-token quest~
-a quest token~
-A quest token lies here.~
-16 16384 16777216 0
-0 0 0 0 0 0 0 0 0 0
-1
-#65449
-token quest~
-a quest token~
-A quest token lies here.~
-16 16384 16777216 0
-0 0 0 0 0 0 0 0 0 0
-1
-#65450
-token quest~
-a quest token~
-A quest token lies here.~
-16 16384 16777216 0
-0 0 0 0 0 0 0 0 0 0
-1
-#65451
-token quest~
-a quest token~
-A quest token lies here.~
+crusade item~
+a crusade item~
+A crusade item lies here.~
 16 16384 16777216 0
 0 0 0 0 0 0 0 0 0 0
 1

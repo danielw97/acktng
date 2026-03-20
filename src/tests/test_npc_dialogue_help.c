@@ -20,10 +20,10 @@
  * Globals required by linked modules.
  * -------------------------------------------------------------------------*/
 
-HELP_DATA *first_help  = NULL;
-HELP_DATA *last_help   = NULL;
+HELP_DATA *first_help = NULL;
+HELP_DATA *last_help = NULL;
 HELP_DATA *first_shelp = NULL;
-HELP_DATA *last_shelp  = NULL;
+HELP_DATA *last_shelp = NULL;
 
 /* Minimal string-function stubs (avoids linking the full strfuns.o). */
 bool str_prefix(const char *astr, const char *bstr)
@@ -121,7 +121,10 @@ void do_say(CHAR_DATA *ch, char *arg)
    (void)ch;
    (void)arg;
 }
-void log_f(char *fmt, ...) { (void)fmt; }
+void log_f(char *fmt, ...)
+{
+   (void)fmt;
+}
 void bug(const char *msg, int val)
 {
    (void)msg;
@@ -148,8 +151,8 @@ static void make_help(HELP_DATA *h, const char *keyword, const char *text)
 {
    memset(h, 0, sizeof(*h));
    h->keyword = (char *)keyword;
-   h->text    = (char *)text;
-   h->level   = 0;
+   h->text = (char *)text;
+   h->level = 0;
 }
 
 /* -------------------------------------------------------------------------
@@ -169,10 +172,10 @@ static void test_spec_lookup_finds_mudschool_guide(void)
 static void test_collect_help_context_skips_greet(void)
 {
    HELP_DATA h;
-   char      out[256];
+   char out[256];
 
    make_help(&h, "MOVEMENT", "Type north/south/east/west to move.");
-   h.next    = NULL;
+   h.next = NULL;
    first_help = &h;
 
    npc_dialogue_test_collect_help_context("[GREET] Zorkin has arrived.", out, sizeof(out));
@@ -187,10 +190,10 @@ static void test_collect_help_context_skips_greet(void)
 static void test_collect_help_context_matches_help_keyword(void)
 {
    HELP_DATA h;
-   char      out[512];
+   char out[512];
 
    make_help(&h, "MOVEMENT", "Type north/south/east/west to move around the world.");
-   h.next    = NULL;
+   h.next = NULL;
    first_help = &h;
 
    npc_dialogue_test_collect_help_context("How do I use movement commands?", out, sizeof(out));
@@ -205,12 +208,12 @@ static void test_collect_help_context_matches_help_keyword(void)
 static void test_collect_help_context_deduplicates(void)
 {
    HELP_DATA h;
-   char      out[512];
-   int       count;
+   char out[512];
+   int count;
    const char *p;
 
    make_help(&h, "COMBAT", "Type kill <target> to begin fighting.");
-   h.next    = NULL;
+   h.next = NULL;
    first_help = &h;
 
    /* Message has two words that both prefix-match "COMBAT" */
@@ -235,11 +238,11 @@ static void test_collect_help_context_deduplicates(void)
 static void test_collect_help_context_searches_shelp(void)
 {
    HELP_DATA sh;
-   char      out[512];
+   char out[512];
 
-   first_help  = NULL;
+   first_help = NULL;
    make_help(&sh, "IMMORTAL", "Immortal commands begin with i");
-   sh.next     = NULL;
+   sh.next = NULL;
    first_shelp = &sh;
 
    npc_dialogue_test_collect_help_context("What immortal commands exist?", out, sizeof(out));
@@ -254,10 +257,10 @@ static void test_collect_help_context_searches_shelp(void)
 static void test_collect_help_context_respects_cap(void)
 {
    HELP_DATA h;
-   char      out[32]; /* very small cap */
+   char out[32]; /* very small cap */
 
    make_help(&h, "SCORE", "The score command shows your statistics.");
-   h.next    = NULL;
+   h.next = NULL;
    first_help = &h;
 
    npc_dialogue_test_collect_help_context("show score statistics", out, sizeof(out));

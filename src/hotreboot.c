@@ -78,9 +78,9 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
               "be back in 30 seconds!! *************\n\n\r",
               ch->name);
    else
-      sprintf(buf,
-              "\n\r**** HOTreboot: Automated Deployment - Please remain ONLINE ****\n\r*********** We will "
-              "be back in 30 seconds!! *************\n\n\r");
+      sprintf(buf, "\n\r**** HOTreboot: Automated Deployment - Please remain ONLINE "
+                   "****\n\r*********** We will "
+                   "be back in 30 seconds!! *************\n\n\r");
 
    /*
     * For each PLAYING descriptor( non-negative ), save its state

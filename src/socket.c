@@ -394,8 +394,8 @@ bool handle_websocket_handshake(DESCRIPTOR_DATA *d)
 static void send_music_play(DESCRIPTOR_DATA *d, const char *filename)
 {
    char buf[256];
-   snprintf(buf, sizeof(buf),
-            "{\"type\":\"music\",\"action\":\"play\",\"url\":\"/web/mp3/%s\"}", filename);
+   snprintf(buf, sizeof(buf), "{\"type\":\"music\",\"action\":\"play\",\"url\":\"/web/mp3/%s\"}",
+            filename);
    write_websocket_frame(d, 0x1, (const unsigned char *)buf, strlen(buf));
 }
 
@@ -800,8 +800,8 @@ void game_loop(int control)
              * Non-wait-state commands (look, score, say, etc.) fall through and
              * execute immediately.
              */
-            if (d->incomm[0] != '\0' && d->connected == CON_PLAYING
-                && command_has_wait_flag(d->character, d->incomm))
+            if (d->incomm[0] != '\0' && d->connected == CON_PLAYING &&
+                command_has_wait_flag(d->character, d->incomm))
                continue;
          }
 
