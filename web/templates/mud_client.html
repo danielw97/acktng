@@ -13,6 +13,20 @@
   <input id='mud-command' placeholder='Type a command and press Enter' style='flex:1;min-width:280px;'>
   <button id='send-btn' type='button'>Send</button>
 </div>
+<div id='music-controls' class='mud-controls' style='display:none;align-items:center;gap:8px;flex-wrap:wrap;'>
+  <span style='opacity:0.7;font-size:0.85em;'>&#9835; Music:</span>
+  <button id='music-play-btn' type='button'>&#9654; Play</button>
+  <button id='music-stop-btn' type='button'>&#9646;&#9646; Stop</button>
+  <label style='display:flex;align-items:center;gap:4px;font-size:0.85em;'>
+    Vol
+    <input id='music-volume' type='range' min='0' max='1' step='0.05' value='0.5' style='width:80px;'>
+  </label>
+  <label style='display:flex;align-items:center;gap:4px;font-size:0.85em;cursor:pointer;'>
+    <input id='music-loop' type='checkbox' checked>
+    Loop
+  </label>
+</div>
+<audio id='mud-audio'></audio>
 </div>
 <script>
 (() => {
@@ -24,7 +38,21 @@
   const output = document.getElementById('mud-output');
   const fullscreenBtn = document.getElementById('fullscreen-btn');
   const container = document.getElementById('mud-client-container');
+  const musicControls = document.getElementById('music-controls');
+  const musicPlayBtn = document.getElementById('music-play-btn');
+  const musicStopBtn = document.getElementById('music-stop-btn');
+  const musicVolume = document.getElementById('music-volume');
+  const musicLoop = document.getElementById('music-loop');
+  const audio = document.getElementById('mud-audio');
   let socket = null;
+
+  audio.volume = parseFloat(musicVolume.value);
+  audio.loop = musicLoop.checked;
+
+  musicPlayBtn.addEventListener('click', () => audio.play());
+  musicStopBtn.addEventListener('click', () => { audio.pause(); audio.currentTime = 0; });
+  musicVolume.addEventListener('input', () => { audio.volume = parseFloat(musicVolume.value); });
+  musicLoop.addEventListener('change', () => { audio.loop = musicLoop.checked; });
 
   fullscreenBtn.addEventListener('click', () => {
     const isFullscreen = container.classList.toggle('mud-fullscreen');
@@ -98,6 +126,16 @@
   worldSelect.addEventListener('change', showWorld);
   showWorld();
 
+  const handleMusicCommand = (cmd) => {
+    if (cmd.action === 'play' && cmd.url) {
+      audio.src = cmd.url;
+      audio.loop = musicLoop.checked;
+      audio.volume = parseFloat(musicVolume.value);
+      audio.play().catch(() => {});
+      musicControls.style.display = 'flex';
+    }
+  };
+
   connectBtn.addEventListener('click', () => {
     if (socket && (socket.readyState === WebSocket.OPEN || socket.readyState === WebSocket.CONNECTING)) {
       appendOutput('\n[Info] Already connected.\n');
@@ -125,6 +163,12 @@
       commandInput.focus();
     });
     socket.addEventListener('message', (event) => {
+      if (typeof event.data === 'string' && event.data.startsWith('{')) {
+        try {
+          const cmd = JSON.parse(event.data);
+          if (cmd.type === 'music') { handleMusicCommand(cmd); return; }
+        } catch (_) {}
+      }
       appendOutput(typeof event.data === 'string' ? event.data : '[Binary message received]\n');
     });
     socket.addEventListener('close', (event) => {

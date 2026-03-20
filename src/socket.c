@@ -89,6 +89,8 @@ void stop_idling(CHAR_DATA *ch);
 void new_descriptor(int control);
 void init_descriptor(DESCRIPTOR_DATA *dnew, int desc);
 bool read_from_descriptor(DESCRIPTOR_DATA *d);
+bool write_websocket_frame(DESCRIPTOR_DATA *d, unsigned char opcode, const unsigned char *payload,
+                           size_t payload_len);
 
 DESCRIPTOR_DATA *d_next; /* Next descriptor in loop      */
 
@@ -379,6 +381,12 @@ bool handle_websocket_handshake(DESCRIPTOR_DATA *d)
    d->inbuf_len -= (int)((end_headers + 4) - d->inbuf);
    memmove(d->inbuf, end_headers + 4, d->inbuf_len);
    d->inbuf[d->inbuf_len] = '\0';
+
+   {
+      const char *music_cmd =
+          "{\"type\":\"music\",\"action\":\"play\",\"url\":\"/web/mp3/theme.mp3\"}";
+      write_websocket_frame(d, 0x1, (const unsigned char *)music_cmd, strlen(music_cmd));
+   }
 
    queue_login_greeting(d);
    return TRUE;

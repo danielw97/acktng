@@ -77,6 +77,6 @@ Browsers may buffer audio autoplay until user gesture. Sending the command first
 
 **Volume slider initial value:** Defaulted to 0.5 (50%) to avoid startling users.
 
-**Loop:** The `<audio>` element has `loop` set so the theme plays continuously. The stop button provides the escape hatch.
+**Loop toggle:** A checkbox lets the player choose whether audio loops. Default is on. The `<audio>` element's `loop` property is updated in real time when toggled. The stop button provides an escape hatch regardless of loop state.
 
 **Telnet safety:** The `send_music_play()` helper is only called inside the `handle_websocket_handshake()` path, which is unreachable for plain telnet connections (telnet data never starts with `GET `). No guard macro is needed.
