@@ -867,6 +867,7 @@ void load_mobiles(FILE *fp)
       int vnum;
       char letter;
       int iHash;
+      bool is_dup;
 
       letter = fread_letter(fp);
       if (letter != '#')
@@ -881,12 +882,10 @@ void load_mobiles(FILE *fp)
          break;
 
       fBootDb = FALSE;
-      if (get_mob_index(vnum) != NULL)
-      {
-         bug("Load_mobiles: vnum %d duplicated.", vnum);
-         hang("Loading Mobiles in db.c");
-      }
+      is_dup = (get_mob_index(vnum) != NULL);
       fBootDb = TRUE;
+      if (is_dup)
+         bug("Load_mobiles: vnum %d duplicated -- skipping.", vnum);
 
       GET_FREE(pMobIndex, mid_free);
       pMobIndex->vnum = vnum;
@@ -1016,15 +1015,28 @@ void load_mobiles(FILE *fp)
       else
          ungetc(letter, fp);
 
-      iHash = vnum % MAX_KEY_HASH;
-      SING_TOPLINK(pMobIndex, mob_index_hash[iHash], next);
-      /* MAG Mod */
-      GET_FREE(pList, build_free);
-      pList->data = pMobIndex;
-      LINK(pList, area_load->first_area_mobile, area_load->last_area_mobile, next, prev);
+      if (is_dup)
+      {
+         free_string(pMobIndex->player_name);
+         free_string(pMobIndex->short_descr);
+         free_string(pMobIndex->long_descr);
+         free_string(pMobIndex->description);
+         if (pMobIndex->ai_prompt)
+            free_string(pMobIndex->ai_prompt);
+         PUT_FREE(pMobIndex, mid_free);
+      }
+      else
+      {
+         iHash = vnum % MAX_KEY_HASH;
+         SING_TOPLINK(pMobIndex, mob_index_hash[iHash], next);
+         /* MAG Mod */
+         GET_FREE(pList, build_free);
+         pList->data = pMobIndex;
+         LINK(pList, area_load->first_area_mobile, area_load->last_area_mobile, next, prev);
 
-      top_mob_index++;
-      kill_table[URANGE(0, pMobIndex->level, MAX_LEVEL - 1)].number++;
+         top_mob_index++;
+         kill_table[URANGE(0, pMobIndex->level, MAX_LEVEL - 1)].number++;
+      }
    }
 
    return;
@@ -1045,6 +1057,7 @@ void load_objects(FILE *fp)
       int vnum;
       char letter;
       int iHash;
+      bool is_dup;
 
       letter = fread_letter(fp);
       if (letter != '#')
@@ -1058,12 +1071,10 @@ void load_objects(FILE *fp)
          break;
 
       fBootDb = FALSE;
-      if (get_obj_index(vnum) != NULL)
-      {
-         bug("Load_objects: vnum %d duplicated.", vnum);
-         hang("Loading Objects in db.c");
-      }
+      is_dup = (get_obj_index(vnum) != NULL);
       fBootDb = TRUE;
+      if (is_dup)
+         bug("Load_objects: vnum %d duplicated -- skipping.", vnum);
 
       GET_FREE(pObjIndex, oid_free);
       pObjIndex->vnum = vnum;
@@ -1177,14 +1188,37 @@ void load_objects(FILE *fp)
          break;
       }
 
-      iHash = vnum % MAX_KEY_HASH;
-      SING_TOPLINK(pObjIndex, obj_index_hash[iHash], next);
-      /* MAG Mod */
-      GET_FREE(pList, build_free);
-      pList->data = pObjIndex;
-      LINK(pList, area_load->first_area_object, area_load->last_area_object, next, prev);
+      if (is_dup)
+      {
+         AFFECT_DATA *paf;
+         EXTRA_DESCR_DATA *ed;
 
-      top_obj_index++;
+         free_string(pObjIndex->name);
+         free_string(pObjIndex->short_descr);
+         free_string(pObjIndex->description);
+         while ((paf = pObjIndex->first_apply) != NULL)
+         {
+            pObjIndex->first_apply = paf->next;
+            PUT_FREE(paf, affect_free);
+         }
+         while ((ed = pObjIndex->first_exdesc) != NULL)
+         {
+            pObjIndex->first_exdesc = ed->next;
+            PUT_FREE(ed, exdesc_free);
+         }
+         PUT_FREE(pObjIndex, oid_free);
+      }
+      else
+      {
+         iHash = vnum % MAX_KEY_HASH;
+         SING_TOPLINK(pObjIndex, obj_index_hash[iHash], next);
+         /* MAG Mod */
+         GET_FREE(pList, build_free);
+         pList->data = pObjIndex;
+         LINK(pList, area_load->first_area_object, area_load->last_area_object, next, prev);
+
+         top_obj_index++;
+      }
    }
 
    return;
@@ -1366,6 +1400,7 @@ void load_rooms(FILE *fp)
       char letter;
       int door;
       int iHash;
+      bool is_dup;
 
       letter = fread_letter(fp);
       if (letter != '#')
@@ -1379,12 +1414,10 @@ void load_rooms(FILE *fp)
          break;
 
       fBootDb = FALSE;
-      if (get_room_index(vnum) != NULL)
-      {
-         bug("Load_rooms: vnum %d duplicated.", vnum);
-         hang("Loading Rooms in db.c");
-      }
+      is_dup = (get_room_index(vnum) != NULL);
       fBootDb = TRUE;
+      if (is_dup)
+         bug("Load_rooms: vnum %d duplicated -- skipping.", vnum);
 
       GET_FREE(pRoomIndex, rid_free);
       pRoomIndex->first_person = NULL;
@@ -1470,14 +1503,35 @@ void load_rooms(FILE *fp)
          }
       }
 
-      iHash = vnum % MAX_KEY_HASH;
-      SING_TOPLINK(pRoomIndex, room_index_hash[iHash], next);
-      /* MAG Mod */
-      GET_FREE(pList, build_free);
-      pList->data = pRoomIndex;
-      LINK(pList, area_load->first_area_room, area_load->last_area_room, next, prev);
+      if (is_dup)
+      {
+         EXTRA_DESCR_DATA *ed;
 
-      top_room++;
+         free_string(pRoomIndex->name);
+         free_string(pRoomIndex->description);
+         for (door = 0; door <= 5; door++)
+         {
+            if (pRoomIndex->exit[door] != NULL)
+               PUT_FREE(pRoomIndex->exit[door], exit_free);
+         }
+         while ((ed = pRoomIndex->first_exdesc) != NULL)
+         {
+            pRoomIndex->first_exdesc = ed->next;
+            PUT_FREE(ed, exdesc_free);
+         }
+         PUT_FREE(pRoomIndex, rid_free);
+      }
+      else
+      {
+         iHash = vnum % MAX_KEY_HASH;
+         SING_TOPLINK(pRoomIndex, room_index_hash[iHash], next);
+         /* MAG Mod */
+         GET_FREE(pList, build_free);
+         pList->data = pRoomIndex;
+         LINK(pList, area_load->first_area_room, area_load->last_area_room, next, prev);
+
+         top_room++;
+      }
    }
 
    return;
