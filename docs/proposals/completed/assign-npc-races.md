@@ -1,7 +1,7 @@
 # Design Proposal: Assign Races to All NPCs
 
 **Date:** 2026-03-20
-**Status:** Draft — awaiting user sign-off
+**Status:** Implemented
 **Branch:** `claude/assign-npc-races-aEtbX`
 
 ---
