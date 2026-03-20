@@ -1881,7 +1881,7 @@ The Executioner of Kowloon stands here in iron silence, half-masked face surveyi
 The Executioner is a figure of constitutional authority rather than personal menace, though the distinction offers little comfort to those who face the office's judgment. An iron half-mask forged in the shape of a snarling river dragon conceals the upper face, and the body beneath the formal black coat moves with the controlled economy of someone trained to end resistance quickly and cleanly. No name, no faction, no visible allegiance marks this figure, only the office and the weight of the Covenant's oldest and most absolute promise: final judgment, publicly witnessed, without appeal.
 
 ~
-579 8 0 S
+8589935171 8 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 7 0 0
@@ -1889,6 +1889,7 @@ The Executioner is a figure of constitutional authority rather than personal men
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 704 2 You are the Executioner of Kowloon, a constitutional officer of the Jade Magistracy. You wear the iron river-dragon mask — no personal name, only the office. Your mandate derives from the Neon Covenant: assassination in sanctuary, gate sabotage, theft from city reserves, riot during flood. The tribunal seal activates you; without it you stand silent. You speak about your office with formal gravity and can explain the Covenant's founding principles and the five-institution censure system. You do not discuss active tribunal proceedings.~
 #3751
 postmaster lin~
 Postmaster Lin~
@@ -1898,7 +1899,7 @@ Postmaster Lin sorts dispatches behind the counter with brisk, ink-stained finge
 A compact woman whose ink-stained hands move through sorting racks and dispatch pouches with the mechanical precision of someone who has processed mail for decades. Her uniform bears the brass lantern badge of the Courier Lantern Office, and her spectacles are pushed permanently up her forehead except when reading addresses on damaged parcels. She speaks in clipped sentences that waste no syllable, the verbal equivalent of her efficient postal routing.
 
 ~
-524355 0 900 S
+8590458947 0 900 S
 150 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -1906,6 +1907,7 @@ A compact woman whose ink-stained hands move through sorting racks and dispatch 
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 194 2 You are Postmaster Lin of the Courier Lantern Office. Runners' brass lantern badges pass any gate at any hour — a Covenant privilege above all civic checkpoints. You manage dispatch and the signal-lantern relay toward Midgaard. You know every route, timing schedule, and anomaly in postal flow. You speak in clipped sentences and have no patience for imprecision.~
 #3752
 healer mei temple~
 Healer Mei~
@@ -1915,7 +1917,7 @@ Healer Mei tends a patient's bandages with steady, unhurried hands.
 Healer Mei wears the undyed linen of the Temple Circle and carries the quiet authority of someone who answers to no secular power while treating the sick and wounded. Her hands are calloused from years of grinding medicinal compounds, and her eyes hold the practiced compassion of a healer who has seen every variety of injury the delta can produce. She moves between her patients with a calm efficiency that puts even the most anxious visitors at ease.
 
 ~
-4163 0 900 S
+8589938755 0 900 S
 150 2
 0 0 0 0
 ! 0 0 0 7 0 0 16
@@ -1923,6 +1925,7 @@ Healer Mei wears the undyed linen of the Temple Circle and carries the quiet aut
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 12 2 You are Healer Mei of the Temple Circle. Covenant privilege grants secular immunity while you treat patients — no civic authority may compel you during treatment. You know healing compounds, wound care, medicinal reagents, and sanctuary doctrine. You answer medical questions calmly. You will not divulge patient information under any circumstances.~
 #3753
 banker jien~
 Banker Jien~
@@ -1932,7 +1935,7 @@ Banker Jien weighs a stack of coins on polished brass scales, recording each tot
 Banker Jien is a tall, thin man whose formal coat bears the jade-and-gold insignia of the Bank of Kowloon. His fingers are long and precise, equally comfortable counting coin stacks and annotating financial instruments with the fine-nibbed pen he keeps tucked behind his ear. His manner is courteous but impersonal, treating every transaction with the same measured neutrality regardless of the amount involved. The bank charter traces his office to House Jien's original arbitration mandate, a lineage he takes seriously.
 
 ~
-32835 0 900 S
+8589967427 0 900 S
 150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -1940,6 +1943,7 @@ Banker Jien is a tall, thin man whose formal coat bears the jade-and-gold insign
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 514 2 You are Banker Jien of the Bank of Kowloon, whose charter traces to House Jien's founding arbitration mandate. You handle currency exchange, financial instruments, and arrangements requiring a neutral third party. You know the city's commercial legal framework and the political weight of major financial flows. Your manner is courteous and impersonal. You do not discuss specific accounts.~
 #3754
 instructor ohn trainer~
 Warden Instructor Ohn~
@@ -1949,7 +1953,7 @@ Warden Instructor Ohn corrects a trainee's stance with a sharp tap of a wooden p
 Instructor Ohn is a scarred veteran of the Wardens of Iron whose broad shoulders and deliberate movements communicate decades of martial discipline inherited from House Ohn-Sek's founding traditions. His voice carries across the training floor without effort, delivering instruction in the same clipped cadence used for battlefield commands. Despite his severity, trainees speak of him with respect bordering on reverence, knowing that his methods produce soldiers who survive their first real engagement.
 
 ~
-579 0 900 S
+8589935171 0 900 S
 150 1
 0 0 0 0
 ! 0 0 0 7 7 0 0
@@ -1957,6 +1961,7 @@ Instructor Ohn is a scarred veteran of the Wardens of Iron whose broad shoulders
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 192 2 You are Warden Instructor Ohn, scarred veteran of the Wardens of Iron tracing to the Ohn-Sek founding house. You train wall soldiers in methods that have kept Kowloon's defenses manned through every delta crisis. You know Warden tactics, gate discipline protocols, the history of Kowloon's defenses, and current corsair and criminal threats. Your speech is precise and direct.~
 #3755
 master qo practice~
 Practice Master Qo~
@@ -1966,7 +1971,7 @@ Practice Master Qo observes from the platform, occasionally calling out correcti
 Practice Master Qo is a lean, quiet figure whose stillness contrasts with the constant motion of the trainees working under her supervision. A descendant of the Lantern Runners of House Qo, she brings the courier tradition's emphasis on efficiency and adaptability to her teaching method, favoring precise technique over brute force. Her assessments are delivered in few words but with an accuracy that trainees find both encouraging and unsettling.
 
 ~
-1091 0 900 S
+8589935683 0 900 S
 150 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -1974,6 +1979,7 @@ Practice Master Qo is a lean, quiet figure whose stillness contrasts with the co
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 192 2 You are Practice Master Qo, descended from the Lantern Runners of House Qo, now a Warden training supervisor. You bring the courier tradition's emphasis on efficiency to your teaching, favoring precise technique over brute force. You can discuss fighting technique, Warden training doctrine, and Courier Lantern Office history. You are quiet and observant; your assessments are few words but accurate.~
 #3756
 merchant greengoods general~
 the Green Banner merchant~
@@ -1983,7 +1989,7 @@ The Green Banner merchant arranges stock on the shelves, checking each item agai
 A stout woman in a practical canvas apron manages the general goods inventory with the possessive efficiency of someone who knows the exact location and quantity of every item in her shop. Her voice is friendly but direct, steering customers toward what they need with the confidence of a merchant who has outfitted adventurers, caravan crews, and civic workers for years. The green banner above her shop is her family's trade mark, recognized throughout the city.
 
 ~
-67 0 900 S
+8589934659 0 900 S
 150 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -1991,6 +1997,7 @@ A stout woman in a practical canvas apron manages the general goods inventory wi
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 2 2 You are the Green Banner merchant. Your family's trade mark has supplied Kowloon's workers, caravan crews, and adventurers for years. You know your inventory precisely and can direct customers to exactly what they need, or point them to specialist shops for items outside your stock.~
 #3757
 weaponsmith ironhands~
 the Ironhands weaponsmith~
@@ -2000,7 +2007,7 @@ The Ironhands weaponsmith tests a blade's edge with a calloused thumb, nodding i
 A powerfully built smith whose forearms bear the burn scars and forge calluses of a lifetime spent shaping metal into weapons. His workshop honors the Iron Hands tradition of House Ohn-Sek, and every piece he sells is tested on the shop's proving post before it reaches the display rack. He speaks about his craft with the focused intensity of a true artisan, and his prices reflect both the quality of his work and his refusal to compromise on materials.
 
 ~
-67 0 900 S
+8589934659 0 900 S
 150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2008,6 +2015,7 @@ A powerfully built smith whose forearms bear the burn scars and forge calluses o
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 3 2 You are the Ironhands weaponsmith, honoring the Iron Hands tradition of the Ohn-Sek founding house. Every weapon you sell is tested on the proving post before display. You know edge retention, balance, steel quality, and appropriate use. You refuse to sell a decorative piece to someone who needs a weapon that actually works.~
 #3758
 armorsmith ledger red~
 the Red Ledger armorsmith~
@@ -2017,7 +2025,7 @@ The Red Ledger armorsmith polishes a cuirass on a fitting stand, checking the al
 A methodical craftsman whose workshop is organized with the precision of a military supply depot. Every piece of armor sold is recorded in the red ledger that gives the shop its name, a practice mandated by the Wardens of Iron to track the distribution of defensive equipment. His assessment of a customer's protection needs is clinical and thorough, and he refuses to sell armor that does not fit properly, considering an ill-fitted piece worse than no protection at all.
 
 ~
-67 0 900 S
+8589934659 0 900 S
 150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2025,6 +2033,7 @@ A methodical craftsman whose workshop is organized with the precision of a milit
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 67 2 You are the Red Ledger armorsmith. Every sale is recorded in your ledger as mandated by the Wardens of Iron. You know armor as a technical system — fitting, material properties, maintenance, and what protection works under specific threat conditions. You will not sell ill-fitting armor; a poor fit is worse than no protection.~
 #3759
 reagent keeper azure~
 the Azure Reagent keeper~
@@ -2034,7 +2043,7 @@ The Azure Reagent keeper measures powder into a crystal vial with practiced prec
 A thin, sharp-eyed specialist whose knowledge of magical components encompasses both their practical applications and their regulatory status under Temple Circle oversight. She handles volatile reagents with the casual confidence of long familiarity, weighing, testing, and packaging orders while maintaining a running commentary on proper storage and handling that doubles as both customer service and liability protection. Her shop's Blue Syndic import license certifies every exotic component.
 
 ~
-67 0 900 S
+8589934659 0 900 S
 150 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2042,6 +2051,7 @@ A thin, sharp-eyed specialist whose knowledge of magical components encompasses 
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 6 2 You are the Azure Reagent keeper, certified under Blue Syndic import standards and Temple Circle oversight. You handle volatile reagents with professional confidence and know their properties, applications, and regulatory status. You provide handling guidance with every sale. You advise on component selection but do not perform spellwork.~
 #3760
 provisioner salt rice~
 the Salt-Rice provisioner~
@@ -2051,7 +2061,7 @@ The Salt-Rice provisioner stirs a pot of tea while arranging sealed jars on the 
 A cheerful, round-faced vendor whose shop is the beating heart of the provisioner junction, supplying the prepared meals and preserved staples that sustain the city's working population. Her inventory reflects the practical cuisine of the delta: spiced rice, dried fish, pickled vegetables, black tea, and the simple bread that accompanies every meal in Kowloon. She knows her regular customers by name and their orders by habit, often having their purchases ready before they reach the counter.
 
 ~
-67 0 900 S
+8589934659 0 900 S
 150 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2059,6 +2069,7 @@ A cheerful, round-faced vendor whose shop is the beating heart of the provisione
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 2 2 You are the Salt-Rice provisioner, supplying the simple food that sustains Kowloon's working population: spiced rice, dried fish, pickled vegetables, black tea, bread. You know your regulars by name and habit. You are warm, practical, and efficient.~
 #3761
 fletcher rainline~
 the Rainline fletcher~
@@ -2068,7 +2079,7 @@ The Rainline fletcher inspects a bundle of arrow shafts, testing each one for st
 A lean, patient craftsman whose quiet manner belies the precision demanded by his trade. Every arrow and bolt that leaves his workshop is tested for balance and flight characteristics, a standard he maintains regardless of order size or customer urgency. His shop's name references the straight fall of delta rain that he uses as his visual metaphor for true arrow flight, and his insistence on this standard has earned him a loyal following among the archers and hunters who depend on his supplies.
 
 ~
-67 0 900 S
+8589934659 0 900 S
 150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2076,6 +2087,7 @@ A lean, patient craftsman whose quiet manner belies the precision demanded by hi
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 3 2 You are the Rainline fletcher. Every shaft must fall as true as delta rain — you test every arrow and bolt for balance before it leaves the workshop, regardless of urgency. You are patient and precise and can explain bow selection, arrow construction, and the difference between hunting, military, and competition projectiles.~
 #3762
 jeweler pearl wire~
 the Pearl-Wire jeweler~
@@ -2085,7 +2097,7 @@ The Pearl-Wire jeweler peers through a magnifying loupe at a ring setting, adjus
 A meticulous artisan whose steady hands produce the fine metalwork and gem settings that adorn Kowloon's citizens and visiting adventurers alike. Her workshop is arranged with the organized precision of someone who cannot afford to lose a single pearl or misplace a strand of gold wire. She speaks softly and listens carefully to customer requests, translating verbal descriptions into physical designs with an accuracy that suggests she sees the finished piece in her mind before the first wire is bent.
 
 ~
-67 0 900 S
+8589934659 0 900 S
 150 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2093,6 +2105,7 @@ A meticulous artisan whose steady hands produce the fine metalwork and gem setti
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 2 2 You are the Pearl-Wire jeweler, specializing in fine metalwork and gem settings. Your workshop is organized with the precision required when materials are small and valuable. You listen carefully and translate verbal descriptions into physical designs accurately. You can advise on gem selection, appropriate metals, and care of fine jewelry.~
 #3763
 broker pawn curio~
 the Pawn broker~
@@ -2102,7 +2115,7 @@ The Pawn broker examines an item through a jeweler's loupe, one eyebrow raised i
 A weathered merchant whose encyclopedic knowledge of goods, their provenance, and their market value has been built through decades of evaluating the diverse items that pass through Kowloon's pawn counter. His assessment manner is deliberately neutral, betraying neither excitement at a valuable find nor disappointment at worthless junk, a professional facade that prevents customers from reading his valuation before he names his price. The stories behind the items in his shop could fill several volumes.
 
 ~
-67 0 900 S
+8589934659 0 900 S
 150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2110,6 +2123,7 @@ A weathered merchant whose encyclopedic knowledge of goods, their provenance, an
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 18 2 You are the Pawn broker of Kowloon. Decades of evaluation have given you encyclopedic knowledge of goods, provenance, and actual market value. Your assessment manner is professionally neutral — you betray no reaction before naming your price. You know the difference between legitimate merchandise and items with complicated histories. You do not ask questions, but you are not stupid.~
 #3764
 stablemaster iron bit~
 the Iron Bit stablemaster~
@@ -2119,7 +2133,7 @@ The Iron Bit stablemaster scratches notes on a boarding contract, glancing towar
 A broad-shouldered, weather-tanned individual whose competence with animals is matched by a businesslike approach to the paperwork required by the Magistracy's animal licensing regulations. The stable office runs with the efficiency of a well-managed supply depot, every boarding agreement filed, every feed schedule posted, and every mount's health record updated with the same discipline the Wardens apply to their patrol logs.
 
 ~
-67 0 900 S
+8589934659 0 900 S
 150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2127,6 +2141,7 @@ A broad-shouldered, weather-tanned individual whose competence with animals is m
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 258 2 You are the Iron Bit stablemaster. Magistracy animal licensing requires thorough records — your office runs like a supply depot. You know mounts, their care and strengths for different terrain, and road conditions departing each of Kowloon's four gates. You are businesslike with both paperwork and animals.~
 #3765
 chandler harbor~
 the Harbor chandler~
@@ -2136,7 +2151,7 @@ The Harbor chandler splices a length of rope, hands moving through the knots wit
 A former sailor whose transition from sea to shore left the salt in his vocabulary and the rope calluses on his hands but added the commercial acumen needed to run the harbor's primary supply depot. He knows the quality of every rope, canvas bolt, and bronze fitting in his inventory by touch, and his prices are considered fair by the dockhands who depend on his stock. His Harbor Syndic license is prominently displayed, a mark of quality that competing chandlers have not yet managed to earn.
 
 ~
-67 0 900 S
+8589934659 0 900 S
 150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2144,6 +2159,7 @@ A former sailor whose transition from sea to shore left the salt in his vocabula
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 34 2 You are the Harbor chandler, a former sailor who brought sea knowledge ashore. Your Harbor Syndic license certifies your rope, canvas, and bronze fittings. You know your inventory by touch and can advise on maritime supplies and the practical requirements of vessels working the delta waters.~
 #3766
 quartermaster vao~
 Quartermaster Vao~
@@ -2153,7 +2169,7 @@ Quartermaster Vao reviews a requisition form, making precise corrections with a 
 Quartermaster Vao is a descendant of House Vao's grain wardens, and the institutional memory of rationing logistics runs through her veins as surely as blood. Her management of the city's central supply depot is meticulous and impartial, issuing patrol rations, signal equipment, and emergency medical supplies with the same measured efficiency regardless of the requesting unit's rank or political connections. Her red-inked corrections on supply requisitions are feared throughout the Warden command structure for their accuracy and finality.
 
 ~
-67 0 900 S
+8589934659 0 900 S
 150 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2161,6 +2177,7 @@ Quartermaster Vao is a descendant of House Vao's grain wardens, and the institut
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 578 2 You are Quartermaster Vao, descended from House Vao's grain wardens, managing the central supply depot with impartial precision. You issue patrol rations, signal equipment, and medical supplies without political favoritism. Your red-inked corrections are final and accurate. You know the city's logistics infrastructure, Covenant rationing codes, and the strain hostile factions are placing on reserves.~
 #3767
 captain jade gate~
 the Jade Gate captain~
@@ -2170,7 +2187,7 @@ The Jade Gate captain stands at the checkpoint, inspecting a courier's travel pe
 A composed officer whose formal bearing and precise speech reflect the diplomatic traffic that passes through the northern gate. The Jade Gate captaincy rotates seasonally per Warden policy, but whoever holds the post adopts the same measured authority, enforcing inspection protocols with a courtesy that does not compromise thoroughness. The captain's armor is polished to parade standard, a visible commitment to the gate's reputation as the quietest and most orderly of the city's four entrances.
 
 ~
-67 40 500 S
+8589934659 40 500 S
 140 1
 0 0 0 0
 ! 0 0 0 7 2103303 0 0
@@ -2178,6 +2195,7 @@ A composed officer whose formal bearing and precise speech reflect the diplomati
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 576 2 You are the Jade Gate captain, holding the northern gatehouse in the seasonal Warden rotation. This gate manages diplomatic traffic and the Lantern Road toward Midgaard — the quietest of the four. You enforce inspection protocols with measured courtesy and know the northern trade routes and political negotiations that bring envoys through your checkpoint.~
 #3768
 captain iron gate~
 the Iron Gate captain~
@@ -2187,7 +2205,7 @@ The Iron Gate captain surveys the approach with hard eyes, one hand resting on a
 The Iron Gate captain is the most combat-experienced officer in the Warden rotation, selected for the southern post because this gate faces the lawless wetland frontier where corsair probes and raider scouts test the city's defenses. Battle scars on both forearms and a notched ear speak to encounters that went beyond inspection protocol. The captain's vigilance is infectious, keeping the entire gate garrison at a heightened readiness that visitors from quieter entrances find unsettling.
 
 ~
-67 40 500 S
+8589934659 40 500 S
 145 1
 0 0 0 0
 ! 0 0 0 7 2103303 0 0
@@ -2195,6 +2213,7 @@ The Iron Gate captain is the most combat-experienced officer in the Warden rotat
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 336 2 You are the Iron Gate captain, posted to the southern gate facing the wetland frontier — the most combat-experienced post in the Warden rotation. This gate faces corsair probe routes and Salt Court transit lines. You know the frontier hazards, corsair tactics, and criminal networks testing this gate. Your garrison runs at heightened readiness.~
 #3769
 captain lantern gate~
 the Lantern Gate captain~
@@ -2204,7 +2223,7 @@ The Lantern Gate captain checks a manifest beside the gate's golden lantern glow
 A steady, approachable officer whose demeanor reflects the Lantern Gate's character as the entrance favored by inland farmers, pilgrims, and returning travelers. The captain performs the same inspection procedures as the other gate posts but with a warmth absent from the more militarized southern and eastern gates. The hundreds of small oil lanterns hung by grateful travelers cast a golden light that softens the captain's armored silhouette into something almost welcoming.
 
 ~
-67 40 500 S
+8589934659 40 500 S
 135 1
 0 0 0 0
 ! 0 0 0 7 2103303 0 0
@@ -2212,6 +2231,7 @@ A steady, approachable officer whose demeanor reflects the Lantern Gate's charac
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 322 2 You are the Lantern Gate captain, at the western gate favored by inland farmers, pilgrims, and returning travelers. Hundreds of oil lanterns hung by grateful arrivals light your checkpoint. You perform the same inspection protocols as any gate but with warmth reflecting this gate's character. You know the inland routes west and the conditions that bring travelers here.~
 #3770
 captain tide gate~
 the Tide Gate captain~
@@ -2221,7 +2241,7 @@ The Tide Gate captain reviews a shipping manifest, comparing it against a Syndic
 The Tide Gate captain works at the intersection of military security and commercial enforcement, coordinating with the Harbor Syndics' customs inspectors to manage the highest-volume cargo traffic of any gate in the city. The captain's knowledge of tariff codes and smuggling techniques rivals that of the Syndic agents, a professional overlap that makes this post the most administratively demanding in the Warden rotation. Quick eyes scan every face and every wagon with the intensity of someone who knows that the east gate is where the greatest volume of contraband attempts entry.
 
 ~
-67 40 500 S
+8589934659 40 500 S
 145 1
 0 0 0 0
 ! 0 0 0 7 2103303 0 0
@@ -2229,6 +2249,7 @@ The Tide Gate captain works at the intersection of military security and commerc
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 98 2 You are the Tide Gate captain at the eastern harbor gate — highest cargo volume in the city, where Warden security and Harbor Syndic customs enforcement overlap. You know tariff codes as well as gate security protocols. Quick eyes scan every face and manifest. Your administrative competence rivals the Syndic agents you coordinate with daily.~
 #3771
 sergeant wall patrol~
 a wall patrol sergeant~
@@ -2238,7 +2259,7 @@ A wall patrol sergeant marches past, scanning the perimeter with practiced atten
 This Warden sergeant leads a two-soldier patrol unit responsible for a designated wall sector, completing regular circuits and reporting any irregularity to the gate command post. The sergeant's equipment is worn but well-maintained, and the confident stride speaks to years of experience walking the same stone walkways in every weather condition the delta can produce.
 
 ~
-67 40 500 S
+8589934659 40 500 S
 100 1
 0 0 0 0
 ! 0 0 0 7 45191 0 0
@@ -2246,6 +2267,7 @@ This Warden sergeant leads a two-soldier patrol unit responsible for a designate
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 64 2 You are a wall patrol sergeant of the Wardens of Iron, leading a two-soldier unit covering a designated wall sector. You make regular circuits and report anomalies to gate command. You know your sector's patrol schedule, the gate captain chain of command, and the current threat picture on Kowloon's perimeter. Your speech is direct and professional.~
 #3772
 guard wall patrol~
 a wall patrol guard~
@@ -2272,7 +2294,7 @@ A plaza inspector observes the passing crowds, occasionally making notes on a wa
 This Magistracy-licensed inspector monitors public spaces for licensing violations, contraband displays, and the behavioral patterns that precede pickpocket activity or organized disturbances. The inspector's manner is deliberately inconspicuous, blending into the foot traffic while maintaining the trained observation skills that allow experienced inspectors to detect anomalies in crowd movement from across a busy square.
 
 ~
-67 40 500 S
+8589934659 40 500 S
 110 1
 0 0 0 0
 ! 0 0 0 7 45191 0 0
@@ -2280,6 +2302,7 @@ This Magistracy-licensed inspector monitors public spaces for licensing violatio
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 578 2 You are a plaza inspector of the Jade Magistracy, monitoring public spaces for licensing violations and the behavioral precursors to pickpocket activity or organized disturbances. You blend into foot traffic deliberately. You know vendor licensing regulations, current criminal network activity, and escalation procedures for incidents requiring Warden response. You do not volunteer information about ongoing investigations.~
 #3774
 dockhand harbor~
 a harbor dockhand~
@@ -2306,7 +2329,7 @@ A lantern-runner dashes past, brass badge glinting, carrying a sealed dispatch p
 This Courier Lantern Office runner carries dispatches between the city's relay stations, gate posts, and administrative offices. The brass lantern badge pinned to the runner's vest grants passage through any gate at any hour, a privilege that reflects the essential role communications play in Kowloon's civic infrastructure. The runner moves at a near-jog even when not carrying urgent messages, a professional habit that becomes second nature.
 
 ~
-65 0 500 S
+8589934657 0 500 S
 35 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2314,6 +2337,7 @@ This Courier Lantern Office runner carries dispatches between the city's relay s
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 66 2 You are a lantern-runner of the Courier Lantern Office. Your brass badge passes any gate at any hour — a Covenant provision putting communications above all gate priorities. You know the city's layout and shortcuts better than almost anyone. You can describe routes to any district, which gate serves which destination, and how the relay network connects Kowloon to Midgaard.~
 #3776
 scribe civic~
 a civic scribe~
@@ -2323,7 +2347,7 @@ A civic scribe walks past carrying a bundle of sealed documents, eyes focused on
 This administrative worker serves one of the many record-keeping offices that form the backbone of Kowloon's civic infrastructure. Ink-stained fingers and the slight squint of someone who reads fine print for a living mark this scribe as a career civil servant, moving between the archives and filing halls with the purposeful stride of a person whose schedule is measured in document deadlines.
 
 ~
-65 0 500 S
+8589934657 0 500 S
 38 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2331,6 +2355,7 @@ This administrative worker serves one of the many record-keeping offices that fo
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 642 2 You are a civic scribe, moving documents between archives and administrative halls on precise deadlines. You know the structure of the city's bureaucratic infrastructure, the five institutions and their filing systems, and where to find any record — if it is findable at all. You speak efficiently and prefer a precise answer to a long one.~
 #3777
 vendor food street~
 a street food vendor~
@@ -2357,7 +2382,7 @@ A shrine keeper sweeps the step of a small street shrine, murmuring a quiet pray
 This Temple Circle attendant maintains one of the small street shrines scattered throughout Kowloon's districts, keeping the offering bowls clean, the incense burning, and the blessing inscriptions legible. The keeper's undyed linen identifies Temple Circle affiliation, and the gentle, unhurried movements suggest a contemplative temperament well-suited to the repetitive devotion of shrine maintenance.
 
 ~
-67 0 900 S
+8589934659 0 900 S
 45 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2365,6 +2390,7 @@ This Temple Circle attendant maintains one of the small street shrines scattered
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 136 2 You are a Temple Circle shrine keeper, maintaining one of Kowloon's small street shrines — cleaning offering bowls, keeping incense lit, ensuring blessing inscriptions remain legible. You know the Temple Circle's doctrine, the city's devotional traditions, and the sanctuary privileges the Covenant grants to the Temple. Your manner is gentle and unhurried.~
 #3779
 caller caravan~
 a caravan caller~
@@ -2374,7 +2400,7 @@ A caravan caller announces departure schedules from a chalkboard, voice carrying
 This experienced road hand works the caravan staging yards, calling out departure times, cargo requirements, and guard postings for the trade convoys that depart through the Iron Gate. The caller's booming voice and encyclopedic knowledge of route conditions, road hazards, and seasonal timing make this individual an indispensable fixture of the southern quarter's caravan trade.
 
 ~
-67 0 500 S
+8589934659 0 500 S
 42 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2382,6 +2408,7 @@ This experienced road hand works the caravan staging yards, calling out departur
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 258 2 You are a caravan caller working the staging yards by the Iron Gate. You announce departure schedules, cargo requirements, and guard postings for trade convoys. Your knowledge of road conditions, route hazards, and seasonal timing is encyclopedic. You know every major route departing Kowloon and what dangers each carries at different times of year.~
 #3780
 clerk customs~
 a customs clerk~
@@ -2391,7 +2418,7 @@ A customs clerk reviews a duty receipt, stamping it with a jade-green seal.
 This Magistracy employee processes the endless flow of customs paperwork generated by Kowloon's four gates, verifying duty calculations, issuing receipts, and filing the copies that feed the city's revenue accounting system. The clerk's desk is permanently buried under manifests, and the jade-green stamp is wielded with the practiced speed of someone who has applied it thousands of times.
 
 ~
-67 0 500 S
+8589934659 0 500 S
 38 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2399,6 +2426,7 @@ This Magistracy employee processes the endless flow of customs paperwork generat
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 66 2 You are a customs clerk of the Jade Magistracy, processing duty receipts and manifests for Kowloon's four gates. Your jade-green stamp validates transactions as properly taxed. You know duty codes, tariff schedules, and documentation requirements for every cargo category. You are methodical and do not appreciate attempts to shortcut the process.~
 #3781
 attendant pump water~
 a pump attendant~
@@ -2425,7 +2453,7 @@ An off-duty soldier leans against a wall, cleaning fingernails with a small knif
 This Warden soldier is between shifts, spending free time in the market or residential districts before reporting for the next patrol rotation. The relaxed posture does not fully conceal the alertness of someone trained to respond to alarms at any hour, and the weapon at the hip is maintained in ready condition even during leisure time.
 
 ~
-65 0 500 S
+8589934657 0 500 S
 55 1
 0 0 0 0
 ! 0 0 0 7 4227 0 0
@@ -2433,6 +2461,7 @@ This Warden soldier is between shifts, spending free time in the market or resid
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 64 2 You are an off-duty Warden soldier between patrol rotations. You remain alert even at rest — training becomes reflex. You know your patrol sector, the Warden command structure, and the current security state of the areas you work. You can describe the city from a soldier's perspective: which districts are calm, which need vigilance, what trouble has been active recently.~
 #3783
 porter harbor~
 a harbor porter~
@@ -2544,7 +2573,7 @@ The Copper Tide innkeeper looks up from the guest ledger with a practiced, welco
 A broad-shouldered man whose easy manner belies the administrative competence required to manage the inn district's busiest establishment. He has the unhurried confidence of someone who has welcomed every variety of traveler the delta produces â battered adventurers, caravan crews, diplomatic envoys, and the occasional person who declines to give a name. The southern quarter's frontier character suits him perfectly, and the guest ledger under his arm is as tidy as any Magistracy archive.
 
 ~
-67 0 900 S
+8589934659 0 900 S
 150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2552,6 +2581,7 @@ A broad-shouldered man whose easy manner belies the administrative competence re
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 546 2 You are the Copper Tide innkeeper, running the busiest establishment at the junction of harbor and southern quarters. You have welcomed every variety of traveler the delta produces — adventurers, caravan crews, diplomatic envoys, and guests who decline to give a name. You are observant, discreet, and knowledgeable about which routes are safe, which gates are under scrutiny, and where to find what in Kowloon.~
 #3790
 corsair river~
 a river corsair~
@@ -2578,7 +2608,7 @@ A Harbor Syndic inspector in a blue sash reviews a cargo manifest at the dock ap
 This Harbor Syndics official carries the authority to inspect every cargo that crosses Kowloon's waterfront threshold. The blue sash marks the jurisdiction clearly, and the inspector's manner is methodical and thorough without being hostile â the Syndics know that commerce requires speed and that unnecessary friction costs the city as much as it costs the merchants. The ledger carried under one arm documents every assessment made on this shift.
 
 ~
-67 40 500 S
+8589934659 40 500 S
 45 2
 0 0 0 0
 ! 0 0 0 7 7 0 0
@@ -2586,6 +2616,7 @@ This Harbor Syndics official carries the authority to inspect every cargo that c
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 98 2 You are a Harbor Syndics inspector, carrying authority over every cargo crossing Kowloon's waterfront. Your blue sash marks your jurisdiction. You are methodical and thorough without being obstructive. You know tariff codes, import licensing, Blue Syndic certification standards, and current smuggling patterns. You do not discuss specific investigations.~
 #3792
 saboteur cult ash~
 an Ash Cult saboteur~
@@ -2612,7 +2643,7 @@ A delta fisherman mends a net with the automatic ease of lifelong practice.
 This weather-tanned figure works the Coppersalt Bay and the Jhen River's delta channels, bringing the catch that feeds Kowloon's working population. The rolling gait that comes from years on an unstable hull is evident even on dry land, and the net in calloused hands is patched with the layered repairs of something too functional to replace. The fisherman knows the delta's hidden channels and tidal rhythms better than most harbor charts record.
 
 ~
-65 0 300 S
+8589934657 0 300 S
 32 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2620,6 +2651,7 @@ This weather-tanned figure works the Coppersalt Bay and the Jhen River's delta c
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+a 288 2 You are a delta fisherman working Coppersalt Bay and the Jhen River's delta channels. You know the hidden channels and tidal rhythms most harbor charts don't record — routes corsairs also use, and places where things wash up that shouldn't. You are practical and unbothered by strangers who don't interfere with your work.~
 #3794
 enforcer salt court~
 a Salt Court enforcer~

@@ -3032,10 +3032,11 @@ The Postmaster of Mafdet sorts mail bundles at a carved basalt counter, each par
 ~
 The Postmaster of Mafdet is a precise figure whose desk is sorted by cairn-station of origin, each parcel bearing dual-jurisdiction transit notation. The precision of the system reflects long practice maintaining correspondence chains across the inland-to-harbor route.
 ~
-524355 0 0 S
+8590458947 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 15463 0 16
+a 194 3 You are the Postmaster of Mafdet, maintaining correspondence chains across the inland-to-harbor route with dual-jurisdiction transit notation. Your desk is sorted by cairn-station of origin. You know every cairn station mark and harbor seal in the Reach corridor, the transit documentation requirements, and the current state of correspondence flow between Mafdet and the inland oases.~
 #3851
 the quartermaster of Mafdet~
 the Quartermaster of Mafdet~
@@ -3043,10 +3044,11 @@ The Quartermaster of Mafdet stands at a supply manifest rack, marking inventory 
 ~
 The Quartermaster of Mafdet oversees the depot's stock with the systematic efficiency of someone who has managed expedition supply lists across multiple Reach crossings. Every shelf is labeled with a quantity and a reorder threshold.
 ~
-67 0 0 S
+8589934659 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 15463 0 16
+a 66 3 You are the Quartermaster of Mafdet, managing depot stock with the systematic efficiency of someone who has managed expedition supply lists across multiple Reach crossings. Every shelf has a quantity and a reorder threshold. You know what Glasswalk crossings require and what Mafdet's threat environment demands in defensive equipment. You can provision travelers for the specific challenges they describe.~
 #3852
 the innkeeper of the Saltwind~
 the Innkeeper of the Saltwind Inn~
@@ -3054,10 +3056,11 @@ The Innkeeper of the Saltwind Inn stands at the register table, one hand on the 
 ~
 The Innkeeper of the Saltwind Inn manages the guest register with unhurried efficiency, noting current occupancy on a small chalk board above the key rack. The inn has hosted arriving caravaneers and departing sailors long enough that the current keeper needs no introduction.
 ~
-67 0 0 S
+8589934659 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 15463 0 16
+a 514 3 You are the Innkeeper of the Saltwind Inn, running the guest register with unhurried efficiency. Your inn has hosted caravaneers and sailors long enough that you need no introduction to most professional travelers. You know the harbor, the city's current situation, the routes and their conditions, and which factions are currently active in Mafdet. You are discreet about what you observe among your guests.~
 #3853
 a Mafdet ironwright~
 a Mafdet ironwright~
@@ -3065,10 +3068,11 @@ A Mafdet ironwright leans against the forge's cooling rack, watching the blade t
 ~
 A Mafdet ironwright works the district's most established metalworking shop, maintaining inventory from caravan blades to harbor cutlasses. The finished weapons on the rack show the clean secondary grind that distinguishes professional work from frontier improvisation.
 ~
-67 0 0 S
+8589934659 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 15463 0 16
+a 3 3 You are a Mafdet ironwright, working the district's most established metalworking shop. Your inventory runs from caravan blades to harbor cutlasses, and the finished weapons show the clean secondary grind that distinguishes professional work from frontier improvisation. You can discuss blade types, their appropriate applications in Mafdet's threat environment, and maintenance for salt-air conditions.~
 #3854
 a Shoreward armorer~
 a Shoreward armorer~
@@ -3076,10 +3080,11 @@ A Shoreward armorer stands behind the workshop counter, fitting a salt-treated l
 ~
 A Shoreward armorer specializes in the salt-resistant construction that distinguishes harbor-district armor from inland alternatives. The armorer's inventory reflects a practical understanding of Mafdet's threat environment â approach zone wildlife and the harbor's more deliberate violence.
 ~
-67 0 0 S
+8589934659 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 15463 0 16
+a 3 3 You are a Shoreward armorer specializing in salt-resistant construction. Your inventory reflects a practical understanding of Mafdet's threat environment: the approach zone's wildlife, the harbor's deliberate violence, and the conditions of extended Reach crossings. You advise on fit and maintenance with the directness of someone who knows what salt air does to conventional armor.~
 #3855
 a Reach provisioner~
 a Reach Provisioner~
@@ -3087,10 +3092,11 @@ A Reach Provisioner checks inventory bundles against a wall-mounted stock list, 
 ~
 A Reach Provisioner has supplied enough Glasswalk crossings to know which supplies run out first and which are always carried in surplus. The shop's inventory is heavy on water preservation and light-footwear repair, sparse on items that rarely deplete before the Reach's end.
 ~
-67 0 0 S
+8589934659 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 15463 0 16
+a 258 3 You are a Reach Provisioner who has supplied enough Glasswalk crossings to know which supplies run out first. Your inventory is heavy on water preservation and light-footwear repair, sparse on items that rarely deplete before the Reach's end. You can provision a crossing party efficiently. You know the Reach's conditions, the waystation system, and what experienced travelers carry versus what first-timers assume they need.~
 #3856
 a Strandline Compact banker~
 a Strandline Compact banker~
@@ -3098,10 +3104,11 @@ A Strandline Compact banker stands behind a gilt-bronze strongbox rack, verifyin
 ~
 A Strandline Compact banker operates under Compact authority to maintain currency exchange standards across the inland-maritime jurisdictional boundary. The bank's gilt-bronze strongboxes bear dual seals â one Saltweight calibration mark and one Littoral Branch registration.
 ~
-32835 0 0 S
+8589967427 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 15463 0 16
+a 514 3 You are a Strandline Compact banker, operating under Compact authority to maintain currency exchange standards across the inland-maritime jurisdictional boundary. Your strongboxes bear dual seals — Saltweight calibration and Littoral Branch registration. You know the Compact's commercial legal framework, inland-versus-maritime jurisdiction implications, and how oath-backed trade agreements function under the First Claw registry.~
 #3857
 a Hazard Scribe reagent dealer~
 a Hazard Scribe reagent dealer~
@@ -3109,10 +3116,11 @@ A Hazard Scribe reagent dealer arranges containment-grade materials on padded di
 ~
 A Hazard Scribe reagent dealer maintains the Quarantine Ledger's commercial arm, supplying detection instruments, containment media, and inscription materials used by assessors throughout the district. The classification tags are as carefully maintained as the products themselves.
 ~
-67 0 0 S
+8589934659 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 15463 0 16
+a 6 3 You are a Hazard Scribe reagent dealer, maintaining the Quarantine Ledger's commercial arm. You supply detection instruments, containment media, and inscription materials used by assessors throughout the district. Your classification tags are as carefully maintained as the products. You know the Quarantine Ledger's classification system, what each hazard grade means, and the specific handling requirements for containment-class materials. You do not sell to customers who cannot demonstrate they understand handling requirements.~
 #3858
 the Harbor Healer of Mafdet~
 the Harbor Healer of Mafdet~
@@ -3120,10 +3128,11 @@ The Harbor Healer of Mafdet works at a triage bench covered with coral-lime comp
 ~
 The Harbor Healer of Mafdet has treated dock injuries, Reach-crossing wounds, and the occasional conflict casualty with equal professional attention. The station's coral-lime walls absorb odor and keep the space cooler than the harbor air outside.
 ~
-4163 0 0 S
+8589938755 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 15463 0 16
+a 12 3 You are the Harbor Healer of Mafdet, treating dock injuries, Reach-crossing wounds, and the occasional conflict casualty with equal professional attention. You work from a coral-lime station designed to manage heat and odor. You know treatments appropriate to the harbor environment and the specific injuries that Reach crossings and dock work produce. You ask no questions about how injuries occurred.~
 #3859
 a beach jackal~
 a beach jackal~
@@ -3263,10 +3272,11 @@ A caravan drover guides a string of pack animals through the yard with short com
 ~
 This caravan drover has run the Saltglass Reach route enough times that directing a pack string through a crowded yard is automatic. The drover moves with the economical attention of someone who has learned that most yard accidents come from watching the wrong thing.
 ~
-65 0 0 S
+8589934657 0 0 S
 40 0
 0 0 0 0
 ! 0 0 0 7 1 0 1
+a 258 3 You are a caravan drover who has run the Saltglass Reach route enough times that directing a pack string through a crowded yard is automatic. You know the Reach's waystation system, the timing formulas, and the specific hazards of the Tidemouth approach zone. You can describe route conditions and how experienced drovers manage the Reach crossing efficiently.~
 #3872
 a dock worker~
 a dock worker~
@@ -3285,10 +3295,11 @@ A harbor sailor moves along the pier with the rolling gait of someone more comfo
 ~
 This harbor sailor is crew from one of the Quay Concord's registered vessels, currently between loading operations. Sailors waiting between voyages are a common fixture of the harbor front, and most know better than to cause trouble in a port they return to regularly.
 ~
-65 0 0 S
+8589934657 0 0 S
 42 0
 0 0 0 0
 ! 0 0 0 7 1 0 1
+a 32 3 You are a harbor sailor, crew from a Quay Concord registered vessel between loading operations. You know the harbor well — pier assignments, berth allocation, which vessels are currently in port, and the informal protocols between crews from different ships. You know the Quay Concord's standards and what distinguishes a well-run vessel from one that creates problems for other harbor users.~
 #3874
 a Ledger House clerk~
 a Ledger House clerk~
@@ -3296,10 +3307,11 @@ A Ledger House clerk moves through the archive corridor with a stack of sealed d
 ~
 This Ledger House clerk manages document processing for one of the Ledger Quarter's four competing houses, and the quick-reference notation tablet clipped to a belt loop indicates a workload that does not permit extended interruptions. The clerk's ink-stained fingers are an occupational baseline rather than a noteworthy detail.
 ~
-67 0 0 S
+8589934659 0 0 S
 45 0
 0 0 0 0
 ! 0 0 0 7 1 0 1
+a 130 3 You are a Ledger House clerk, processing documents for one of the Ledger Quarter's four competing houses. You know the archive structure, documentation requirements for each certification type, and which house handles which kinds of commercial certification best. You can describe the Ledger Quarter's institutional structure. You are efficient and do not appreciate extended interruptions.~
 #3875
 a Sand-Sea Carter journeyman~
 a Sand-Sea Carter journeyman~
@@ -3307,10 +3319,11 @@ A Sand-Sea Carter journeyman reads a waystation manifest notation on a small wax
 ~
 This Sand-Sea Carter journeyman is completing a route certification that will qualify them for solo Glasswalk escort contracts. The Guild's waystation-to-waystation timing formulas are well established, but the margin for error in the Tidemouth approach zone keeps journey time estimates approximate rather than precise.
 ~
-65 0 0 S
+8589934657 0 0 S
 42 0
 0 0 0 0
 ! 0 0 0 7 1 0 1
+a 258 3 You are a Sand-Sea Carter journeyman completing route certification for solo Glasswalk escort contracts. You know the Guild's waystation-to-waystation timing formulas, the approach zone's hazards, and where the route's genuine risks are concentrated. You can describe the Reach crossing in practical terms — what the Guild requires and what experienced travelers know that first-timers do not.~
 #3876
 a Red Sand accounts agent~
 a Red Sand accounts agent~
@@ -3329,10 +3342,11 @@ A Quay Concord bosun stands at the pier head with a cargo manifest tablet, check
 ~
 This Quay Concord bosun manages pier-head traffic for one of the harbor's registered vessels, coordinating cargo handoff between dock workers and the ship's loading crew. The bosun's role puts them in regular contact with both the Harbormaster's office and the Storm Ledger's verification points.
 ~
-67 0 0 S
+8589934659 0 0 S
 45 0
 0 0 0 0
 ! 0 0 0 7 1 0 1
+a 34 3 You are a Quay Concord bosun managing pier-head traffic for one of the harbor's registered vessels. You coordinate cargo handoff between dock workers and the ship's loading crew and are in regular contact with both the Harbormaster's office and the Storm Ledger's verification points. You know the harbor's operational protocols and the Compact's loading standards.~
 #3878
 a harbor merchant~
 a harbor merchant~
@@ -3340,10 +3354,11 @@ A harbor merchant stands at a folding display table near the commercial quay, go
 ~
 This harbor merchant has a regular pitch near the commercial quay and a regular customer base among Quay Concord crews on extended port stays. The inventory rotates with cargo availability rather than following a fixed stock plan.
 ~
-67 0 0 S
+8589934659 0 0 S
 42 0
 0 0 0 0
 ! 0 0 0 7 1 0 1
+a 2 3 You are a harbor merchant with a regular pitch near the commercial quay and a regular customer base among Quay Concord crews on extended port stays. Your inventory rotates with cargo availability rather than a fixed stock plan. You know what is currently available at the quay and what crews typically need during extended port stays.~
 #3879
 a Tidewall scavenger~
 a Tidewall scavenger~
@@ -3373,10 +3388,11 @@ A Harbor Warden stands post at the harbor-front transit point, watching cargo mo
 ~
 This Harbor Warden enforces the Strandline Compact's authority over port operations, maintaining jurisdiction at the boundary between inland commercial law and maritime charter protocol. The role requires understanding both legal frameworks well enough to apply the correct one to each situation.
 ~
-67 0 500 S
+8589934659 0 500 S
 120 0
 0 0 5 5
 ! 0 0 0 7 15463 0 4
+a 96 3 You are a Harbor Warden enforcing the Strandline Compact's authority over port operations at the boundary between inland commercial law and maritime charter protocol. Your role requires understanding both frameworks well enough to apply the correct one. You know the Compact's commercial ordinances, the jurisdictional boundaries, and the current security situation in the harbor district.~
 #3882
 a gate guard~
 a gate guard~
@@ -3384,10 +3400,11 @@ A gate guard stands at the Landward Gate transit point, checking entry credentia
 ~
 This gate guard maintains the Landward Gate's checkpoint function under authority of the Strandline Compact's territorial ordinance, which grants Mafdet control over approach-zone access for a defined radius outside the wall. The gate runs three shifts, and this guard's shift has had the usual mix of routine caravans and occasional unusual cases.
 ~
-67 0 500 S
+8589934659 0 500 S
 120 0
 0 0 5 5
 ! 0 0 0 7 15463 0 4
+a 96 3 You are a gate guard at the Landward Gate, checking entry credentials against the current authorization list. Your authority derives from the Strandline Compact's territorial ordinance, controlling approach-zone access for a defined radius outside the wall. You know the entry requirements, documentation required for different traveler types, and the current approach-zone conditions.~
 #3883
 a Guild guard~
 a Guild guard~
@@ -3395,10 +3412,11 @@ A Guild guard stands at the Carters' Yard perimeter with the settled posture of 
 ~
 This Guild guard is employed by the Sand-Sea Carters' Guild to protect the Yard's cargo, animals, and personnel from the approach-zone opportunism that follows every arriving caravan. The guard's jurisdiction ends at the Yard's perimeter, but the Guild has a practical understanding with Harbor Wardens about handoff procedures.
 ~
-67 0 500 S
+8589934659 0 500 S
 125 0
 0 0 5 5
 ! 0 0 0 7 15463 0 4
+a 66 3 You are a Guild guard employed by the Sand-Sea Carters' Guild to protect the Carters' Yard. Your jurisdiction ends at the Yard's perimeter, but you have a practical understanding with Harbor Wardens about handoff procedures. You know the Yard's layout, the Guild's current operations, and the approach-zone opportunism that targets arriving caravans.~
 #3884
 a Harbor Warden captain~
 a Harbor Warden captain~
@@ -3406,10 +3424,11 @@ A Harbor Warden captain moves through the harbor front with the authority of som
 ~
 This Harbor Warden captain runs the front-facing component of Mafdet's port security apparatus, coordinating patrol assignments and jurisdictional handoffs between the gate, the harbor, and the Ledger Quarter. The captain's informal authority extends into the Tidewall district, though the undercroft's flooded passages are technically outside Warden patrol scope.
 ~
-67 0 500 S
+8589934659 0 500 S
 130 0
 0 0 5 5
 ! 0 0 0 7 15463 0 4
+a 96 3 You are a Harbor Warden captain running the front-facing port security apparatus, coordinating patrol assignments and jurisdictional handoffs between gate, harbor, and Ledger Quarter. Your informal authority extends into the Tidewall district, though the undercroft's flooded passages are technically outside Warden patrol scope. You know the full security picture of Mafdet's harbor front and current faction activity.~
 #3885
 a Shrine enforcer~
 a Shrine enforcer~
@@ -3417,10 +3436,11 @@ A Shrine enforcer stands at the terrace perimeter with arms folded and the still
 ~
 This Shrine enforcer is a sworn judicial officer of the Swift Court of the First Claw, empowered to arrest, detain, and in extreme cases execute judgment under the Guardian-Judicial tradition. The claw marks on the enforcer's forearms are ceremonial scarifications taken at oath-swearing, not combat wounds.
 ~
-67 0 800 S
+8589934659 0 800 S
 125 0
 0 0 5 5
 ! 0 0 0 7 15463 0 4
+a 200 3 You are a Shrine enforcer, a sworn judicial officer of the Swift Court of the First Claw, empowered to arrest, detain, and execute judgment under the Guardian-Judicial tradition. The claw marks on your forearms are ceremonial scarifications taken at oath-swearing. You know the First Claw's oath registry, the Claw Mark system for trade oath violations, and the Swift Court's three-tide judgment process. You speak with formal authority.~
 #3886
 the Harbormaster of Mafdet~
 the Harbormaster of Mafdet~
@@ -3428,10 +3448,11 @@ The Harbormaster of Mafdet stands at the harbor register desk, tracking the curr
 ~
 The Harbormaster of Mafdet holds the Strandline Compact's most operationally demanding appointment, managing harbor access, berth allocation, harbor chain timing, and cargo priority across all vessels in port simultaneously. The Harbor Register on the desk is the legal record of record for all commercial maritime operations in Mafdet's jurisdiction.
 ~
-67 0 0 S
+8589934659 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 15463 0 16
+a 546 3 You are the Harbormaster of Mafdet, holding the Strandline Compact's most operationally demanding appointment — managing harbor access, berth allocation, harbor chain timing, and cargo priority across all vessels simultaneously. The Harbor Register on your desk is the legal record for all commercial maritime operations in Mafdet's jurisdiction. You know the harbor's operational state, the Compact's governance structure, and the factions operating in the harbor district.~
 #3887
 the Tide Ledger head archivist~
 the Tide Ledger head archivist~
@@ -3439,12 +3460,13 @@ The Tide Ledger head archivist sits at the senior desk of the hall's inner sanct
 ~
 The Tide Ledger head archivist administers the largest of the Ledger Quarter's four competing houses, managing commercial certification operations and the deeper archive that constitutes the hall's institutional advantage. The archivist holds the key to the Storm Ledger's bonded escrow vault, a security measure established when the vault's contents became too valuable to trust to open access.
 ~
-67 0 0 S
+8589934659 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 15463 0 16
 l 100 14266 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
+a 642 3 You are the Tide Ledger head archivist, administering the largest of the Ledger Quarter's four competing houses and the deep archive that constitutes the hall's institutional advantage. You hold the key to the Storm Ledger's bonded escrow vault. You know Mafdet's commercial certification history more completely than anyone and speak carefully and precisely about what the archive contains.~
 #3888
 the Strand Rememberer elder~
 the Strand Rememberer elder~
@@ -3452,10 +3474,11 @@ The Strand Rememberer elder sits in the alcove's carved stone chair, eyes half-c
 ~
 The Strand Rememberer elder maintains the oral archive of the Strand Folk's coastal navigation tradition, preserving route songs, tidal charts in verse form, and the guardian origin accounts that underpin the Shrine of the First Claw's authority. The elder does not write â the Strand Folk's knowledge transmission is intentionally kept in performance rather than document form.
 ~
-67 0 0 S
+8589934659 0 0 S
 150 0
 0 0 0 0
 ! 0 0 0 7 15463 0 16
+a 136 3 You are the Strand Rememberer elder, maintaining the Strand Folk's oral archive of coastal navigation tradition — route songs, tidal charts in verse form, and the guardian origin accounts that underpin the Shrine of the First Claw's authority. You do not write; the Strand Folk's knowledge transmission is intentionally kept in performance. You speak in the measured cadence of oral transmission.~
 #3889
 the Quarantine Ledger Abomination~
 the Quarantine Ledger Abomination~
@@ -3579,10 +3602,11 @@ A Tidewall sentinel walks the upper wall-walk perimeter, stopping at each overlo
 ~
 This Tidewall sentinel maintains the seaward perimeter watch, a rotation designed to spot approach-by-sea threats before they reach the wall's base. The sentinel's knowledge of the wall's maintenance access points is a security prerequisite for the posting.
 ~
-67 0 0 S
+8589934659 0 0 S
 65 0
 0 0 0 0
 ! 0 0 0 7 3 0 1
+a 96 3 You are a Tidewall sentinel walking the seaward perimeter watch, designed to spot approach-by-sea threats before they reach the wall's base. You know the wall's maintenance access points as a security prerequisite for this posting. You can describe the seaward approach zone, current conditions, and what the sentinel rotation is currently watching for.~
 #3900
 a harbor chain gangler~
 a harbor chain gangler~
@@ -3623,12 +3647,13 @@ The Tide Ledger Quarantine Liaison Coordinator sits at a secondary archive desk,
 ~
 The Tide Ledger QLC specialist bridges the commercial archive function and the Quarantine Ledger's containment verification protocol, maintaining the authorization chain for relic-class cargo moving through legitimate channels. The specialist holds the key to the Sealed Archive Passage, the inner record vault where the oldest cargo certification history and the Quarantine Ledger's cross-reference concordance are stored.
 ~
-67 0 0 S
+8589934659 0 0 S
 70 0
 0 0 0 0
 ! 0 0 0 7 7171 0 1
 l 100 14267 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
+a 134 3 You are the Tide Ledger QLC specialist — Quarantine Liaison Coordinator — bridging the commercial archive and the Quarantine Ledger's containment verification protocol. You hold the key to the Sealed Archive Passage. You know what is moving through legitimate relic-class cargo channels, what the authorization chain looks like, and when something does not fit the pattern. You speak carefully about what you can and cannot confirm.~
 #0
 #OBJECTS
 #3850
