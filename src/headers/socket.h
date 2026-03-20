@@ -19,5 +19,6 @@ bool process_output(DESCRIPTOR_DATA *d, bool fPrompt);
 void read_from_buffer(DESCRIPTOR_DATA *d);
 void free_desc(DESCRIPTOR_DATA *d);
 void queue_login_greeting(DESCRIPTOR_DATA *d);
+void send_area_music(CHAR_DATA *ch);
 
 #endif /* DEC_SOCKET_H */

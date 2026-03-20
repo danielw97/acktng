@@ -274,6 +274,7 @@ static bool header_value_contains_token(const char *value, const char *token)
    return FALSE;
 }
 
+static void send_music_play(DESCRIPTOR_DATA *d, const char *filename);
 static void base64_encode(const unsigned char *in, size_t in_len, char *out, size_t out_size)
 {
    static const char table[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
@@ -384,14 +385,35 @@ bool handle_websocket_handshake(DESCRIPTOR_DATA *d)
    memmove(d->inbuf, end_headers + 4, d->inbuf_len);
    d->inbuf[d->inbuf_len] = '\0';
 
-   {
-      const char *music_cmd =
-          "{\"type\":\"music\",\"action\":\"play\",\"url\":\"/web/mp3/theme.mp3\"}";
-      write_websocket_frame(d, 0x1, (const unsigned char *)music_cmd, strlen(music_cmd));
-   }
+   send_music_play(d, "theme.mp3");
 
    queue_login_greeting(d);
    return TRUE;
+}
+
+static void send_music_play(DESCRIPTOR_DATA *d, const char *filename)
+{
+   char buf[256];
+   snprintf(buf, sizeof(buf),
+            "{\"type\":\"music\",\"action\":\"play\",\"url\":\"/web/mp3/%s\"}", filename);
+   write_websocket_frame(d, 0x1, (const unsigned char *)buf, strlen(buf));
+}
+
+void send_area_music(CHAR_DATA *ch)
+{
+   DESCRIPTOR_DATA *d;
+   const char *track;
+
+   if (IS_NPC(ch) || (d = ch->desc) == NULL || !d->websocket_active)
+      return;
+
+   track = ch->in_room->area->music; /* NULL means default theme */
+
+   if (track == d->websocket_current_music)
+      return;
+
+   send_music_play(d, track ? track : "theme.mp3");
+   d->websocket_current_music = track;
 }
 
 static size_t sanitize_websocket_text_payload(const unsigned char *src, size_t src_len,
@@ -1047,6 +1069,7 @@ void init_descriptor(DESCRIPTOR_DATA *dnew, int desc)
    dnew->websocket_active = FALSE;
    dnew->websocket_handshake_complete = FALSE;
    dnew->greeting_sent = FALSE;
+   dnew->websocket_current_music = NULL;
 }
 
 void close_socket(DESCRIPTOR_DATA *dclose)

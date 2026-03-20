@@ -268,6 +268,7 @@ struct descriptor_data
    bool websocket_active;
    bool websocket_handshake_complete;
    bool greeting_sent;
+   const char *websocket_current_music; /* mirrors area->music last sent, NULL = theme */
 };
 
 #define DESC_FLAG_PASSTHROUGH 1 /* Used when data is being passed to */
@@ -1144,6 +1145,7 @@ struct area_data
    char *can_write;
    int gold;
    char *filename;
+   char *music; /* bare mp3 filename served from /web/mp3/, or NULL for default theme */
    int flags;
    int aggro_list;
    BUILD_DATA_LIST *first_area_room;
