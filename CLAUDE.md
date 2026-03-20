@@ -155,6 +155,24 @@ The GitHub Actions workflow `.github/workflows/validate-open-prs.yml`:
 - Auto-approves PRs where tests pass; requests changes where tests fail
 - Branch protection should require this check to pass
 
+## Spells, Skills, and Commands
+
+Whenever a new spell or skill is added, a corresponding detailed help entry MUST be added to the `shelp/` directory. The help file should cover:
+- What the spell/skill does
+- How to use it (syntax, targets, etc.)
+- Any relevant mechanics (damage, duration, cooldown, mana cost, etc.)
+- Class/level availability if applicable
+
+Whenever a new player command is added, a corresponding detailed help entry MUST be added to the `help/` directory. The help file should cover:
+- What the command does
+- Full syntax and all options/arguments
+- Examples of usage
+- Any restrictions (level, class, position, etc.)
+
+Likewise, whenever a spell or skill is removed, its `shelp/` entry MUST also be removed. Whenever a command is removed, its `help/` entry MUST also be removed.
+
+These are hard requirements — no spell, skill, or command addition is complete without its help entry, and no removal is complete without also removing the corresponding help entry.
+
 ## Common Pitfalls
 
 - The server binary must run from the `area/` directory (relative paths to area files, data, player dirs)
