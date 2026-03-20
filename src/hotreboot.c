@@ -36,6 +36,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/time.h>
 #include <unistd.h>
 #include "globals.h"
 #include "socket.h"
@@ -164,6 +165,16 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
       exit(0);
    signal(SIGPROF, SIG_IGN);
 #endif
+
+   /* Stop the virtual timer before exec. POSIX preserves interval timers
+    * across execl but resets signal handlers to SIG_DFL. If the timer fires
+    * during boot_db() in the new process (before init_alarm_handler installs
+    * the SIGVTALRM handler), the default action kills the process. */
+   {
+      struct itimerval zero_timer;
+      memset(&zero_timer, 0, sizeof(zero_timer));
+      setitimer(ITIMER_VIRTUAL, &zero_timer, NULL);
+   }
 
    execl(EXE_FILE, "ACK! MUD", buf, "HOTreboot", buf2, buf3, (char *)NULL);
 
