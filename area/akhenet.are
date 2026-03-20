@@ -1843,7 +1843,7 @@ This deadly serpent has sun-bleached scales that blend perfectly with the sand. 
 97 0 0 S
 70 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 11 7 1025 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1858,7 +1858,7 @@ This oversized insect has a carapace of burnished chitin hardened by the sun. It
 97 0 0 S
 71 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 13 7 1025 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1873,7 +1873,7 @@ This animated corpse has been stripped of all flesh by the desert heat. Its bone
 16481 0 -750 S
 72 0
 0 0 0 0
-! 0 0 0 7 1025 0 4
+! 0 0 10 7 1025 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1888,7 +1888,7 @@ This spectral figure is composed of swirling sand and shadow. Its form shifts co
 16481 0 -750 S
 73 0
 0 0 0 0
-! 0 0 0 7 1025 2162688 4
+! 0 0 10 7 1025 2162688 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1903,7 +1903,7 @@ This gaunt scavenger has a spotted, dusty coat and powerful jaws. Its yellow eye
 97 0 0 S
 70 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 14 7 1025 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1918,7 +1918,7 @@ This walking corpse has been baked to a leathery husk by the desert sun. Skin sp
 16481 0 -750 S
 74 0
 0 0 0 0
-! 0 0 0 7 1025 0 4
+! 0 0 10 7 1025 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1933,7 +1933,7 @@ This undead merchant's spirit is bound to the place of its death. Tattered merch
 16481 0 -750 S
 75 0
 0 0 0 0
-! 0 0 0 7 1025 2162688 4
+! 0 0 10 7 1025 2162688 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1948,7 +1948,7 @@ Thousands of tiny, insect-like creatures form a living cloud. They swirl and dan
 97 0 0 S
 71 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 13 7 1025 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1963,7 +1963,7 @@ This stone golem-like construct appears to have been carved from a single piece 
 97 0 0 S
 76 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 7 7 1025 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -1978,7 +1978,7 @@ This oversized beetle has a carapace decorated with hieroglyphic markings. It wa
 97 0 0 S
 72 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 13 7 1025 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2023,7 +2023,7 @@ This minor elemental is a tight vortex of sand and scorching wind. Tiny rocks an
 97 0 0 S
 74 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 19 7 1025 0 0
 | 128 64 0 0 0 128 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2038,7 +2038,7 @@ This enormous bird has a wingspan of several feet. Its feathers are matted and f
 97 0 0 S
 70 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 15 7 1025 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2053,7 +2053,7 @@ This elemental construct is a towering pillar of compacted sand and stone. It mo
 97 0 0 S
 78 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 19 7 1025 0 0
 | 32 16 0 0 0 32 16
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2068,7 +2068,7 @@ This armored undead warrior still wears the corroded remnants of ceremonial plat
 16481 0 -750 S
 79 0
 10 0 0 0
-! 0 0 0 7 1025 0 4
+! 0 0 7 7 1025 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2083,7 +2083,7 @@ Wrapped in layers of stained linen, this undead cleric still carries the sacred 
 16483 0 -750 S
 77 1
 0 0 0 0
-! 0 0 0 7 1025 0 4
+! 0 0 10 7 1025 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2098,7 +2098,7 @@ This towering figure is wrapped in layers of preserved linen. Dark, leathery fle
 16481 0 -750 S
 80 1
 10 0 0 0
-! 0 0 0 7 1025 0 4
+! 0 0 10 7 1025 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2128,7 +2128,7 @@ This oversized arachnid has a ghostly white carapace and legs spanning several f
 97 0 0 S
 76 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 12 7 1025 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2143,7 +2143,7 @@ This amorphous creature is composed of compacted sand held together by eldritch 
 97 0 0 S
 79 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 19 7 1025 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2158,7 +2158,7 @@ This ancient mage transcended death through terrible magic. The body is wrapped 
 16481 0 -750 S
 81 1
 0 0 0 0
-! 0 0 0 7 1025 2162688 24
+! 0 0 10 7 1025 2162688 24
 | 260 2 0 0 0 260 2
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2173,7 +2173,7 @@ This gargantuan scorpion is the undisputed matriarch of the desert caves. Her ch
 97 0 -500 S
 80 2
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 12 7 1025 0 0
 | 512 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2188,7 +2188,7 @@ This powerful undead spirit is a swirling mass of shadow and cold. Its form sugg
 16481 0 -750 S
 82 1
 0 0 0 0
-! 0 0 0 7 1025 2162688 4
+! 0 0 10 7 1025 2162688 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2203,7 +2203,7 @@ This fire elemental has been bound to eternal service through ancient magic. Fla
 97 0 0 S
 84 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 19 7 1025 0 0
 | 128 64 0 0 0 128 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2218,7 +2218,7 @@ This construct of stone and magic has stood guard for countless ages. Its surfac
 97 0 0 S
 83 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 7 7 1025 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2233,7 +2233,7 @@ This powerful undead creature bears the marks of the desert's curse. Its body is
 16481 0 -1000 S
 85 1
 0 0 0 0
-! 0 0 0 7 1025 0 4
+! 0 0 10 7 1025 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2248,7 +2248,7 @@ This construct is carved from a single block of black obsidian stone. Its surfac
 97 0 0 S
 86 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 19 7 1025 0 0
 | 32 16 0 0 0 32 16
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2263,7 +2263,7 @@ This spectral undead creature is a remnant of the cursed civilization. Its form 
 16481 0 -750 S
 84 0
 0 0 0 0
-! 0 0 0 7 1025 0 4
+! 0 0 10 7 1025 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2277,7 +2277,7 @@ Clad in ornate golden robes tarnished by millennia, this undead vizier commands 
 67108963 0 -1000 S
 91 1
 40 -15 8 8
-! 0 0 0 7 1650432 10240 24
+! 0 0 1 7 1650432 10240 24
 | 128 64 0 0 0 162 72
 + 5 3 0 3 0 5 5 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2291,7 +2291,7 @@ This powerful elemental has the torso and arms of a muscular humanoid formed fro
 67108963 0 0 S
 91 0
 50 -20 8 10
-! 0 0 0 7 1051652 33554464 0
+! 0 0 19 7 1051652 33554464 0
 | 32 16 0 0 0 34 16
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2305,7 +2305,7 @@ This ancient undead horror transcended death long ago. The body is a twisted ama
 67108963 0 -1000 S
 93 0
 50 -15 10 8
-! 0 0 0 7 1051652 0 0
+! 0 0 19 7 1051652 0 0
 | 256 8 0 0 0 256 8
 + 5 3 0 0 0 5 5 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2319,7 +2319,7 @@ This ancient sorcerer transcended death long ago through terrible magic. The bod
 67108963 0 -1000 S
 95 1
 60 -20 12 12
-! 0 0 0 7 1651456 2162688 24
+! 0 0 1 7 1651456 2162688 24
 | 136 256 0 0 0 136 256
 + 10 3 0 5 0 3 3 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2334,7 +2334,7 @@ This thick-bodied serpent has scales mottled with darker patterns. Its triangula
 97 0 0 S
 72 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 11 7 1025 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2349,7 +2349,7 @@ This massive arachnid has a carapace of burnished gold, hardened by the undergro
 97 0 0 S
 73 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 12 7 1025 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2364,7 +2364,7 @@ This eyeless beast navigates by echolocation and tactile sensitivity. Its body i
 97 0 0 S
 74 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 12 7 1025 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2379,7 +2379,7 @@ This cobra is poised to strike with deadly accuracy. Its venom can be sprayed wi
 97 0 0 S
 76 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 11 7 1025 0 0
 | 512 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2394,7 +2394,7 @@ This scorpion's carapace is encased in mineral deposits and crystalline growths.
 97 0 0 S
 78 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 12 7 1025 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2424,7 +2424,7 @@ This massive snake is the size of a horse when fully extended. Its scales are a 
 97 0 0 S
 80 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 11 7 1025 0 0
 | 512 128 0 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2498,7 +2498,7 @@ This massive beast has been trained for combat. Its muscles are taut and ripplin
 97 0 0 S
 73 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 14 7 1025 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2572,7 +2572,7 @@ This creature has been corrupted by shadow magic. Its scales are unnaturally bla
 97 0 0 S
 76 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 17 7 1025 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2587,7 +2587,7 @@ This fey creature has been twisted by darkness. Once beautiful, she is now a thi
 97 0 -500 S
 78 2
 0 0 0 0
-! 0 0 0 7 3074 0 0
+! 0 0 22 7 3074 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2602,7 +2602,7 @@ This plant creature is a writhing mass of dark vines and petals. It moves with a
 327777 0 0 S
 77 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 21 7 1025 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2617,7 +2617,7 @@ This snake is composed of living shadow and substance. It moves without making s
 16481 0 -750 S
 79 0
 0 0 0 0
-! 0 0 0 7 1025 0 4
+! 0 0 10 7 1025 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2632,7 +2632,7 @@ This waterlogged undead creature moves with jerky, unnatural motions. Water drip
 16481 0 -750 S
 81 1
 0 0 0 0
-! 0 0 0 7 1025 2162688 4
+! 0 0 10 7 1025 2162688 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2647,7 +2647,7 @@ This elemental is composed of shadow and water in equal measure. Its form is uns
 97 0 0 S
 83 0
 0 0 0 0
-! 0 0 0 7 1025 0 0
+! 0 0 19 7 1025 0 0
 | 320 128 0 0 0 320 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2661,7 +2661,7 @@ This ancient shadow sorceress is a being of terrible power and malice. Robes of 
 67108963 0 -1000 S
 93 2
 55 -20 11 10
-! 0 0 0 7 1651456 2162688 24
+! 0 0 20 7 1651456 2162688 24
 | 320 136 0 0 0 320 136
 + 8 3 0 5 0 3 3 0 0
 l 0 0 0 0 0 0 0 0 0 0 

@@ -184,6 +184,26 @@
           incoming.src = '';
         }
       }, FADE_INTERVAL);
+    } else if (cmd.action === 'stop') {
+      /* Fade out current track and stop */
+      if (audio.paused || !audio.src) return;
+      if (fadeTimer) { clearInterval(fadeTimer); fadeTimer = null; }
+      const targetVol = parseFloat(musicVolume.value);
+      const startVol = audio.volume;
+      const steps = FADE_DURATION / FADE_INTERVAL;
+      let step = 0;
+      fadeTimer = setInterval(() => {
+        step++;
+        const t = Math.min(step / steps, 1);
+        audio.volume = startVol * (1 - t);
+        if (t >= 1) {
+          clearInterval(fadeTimer);
+          fadeTimer = null;
+          audio.pause();
+          audio.src = '';
+          audio.volume = targetVol;
+        }
+      }, FADE_INTERVAL);
     }
   };
 

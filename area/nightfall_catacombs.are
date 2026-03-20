@@ -3371,7 +3371,7 @@ A gaunt rat the size of a small cat hunches in the shadows, its fur matted with 
 97 0 -200 S
 10 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 16 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3386,7 +3386,7 @@ A pale, translucent insect the size of a clenched fist clings to the wall, its m
 97 0 -200 S
 11 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 13 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3416,7 +3416,7 @@ A large bat with mottled grey-brown fur clings to the stonework overhead, its be
 97 0 -200 S
 13 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 15 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3431,7 +3431,7 @@ This emaciated undead creature wears the tattered remnants of a registry clerk's
 16481 0 -500 S
 14 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3446,7 +3446,7 @@ This gaunt undead walks with the mechanical precision of a funeral pallbearer, i
 16481 0 -500 S
 15 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3491,7 +3491,7 @@ Dozens of small, pale creatures move together as a single entity, their collecti
 16481 0 -400 S
 17 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 13 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3506,7 +3506,7 @@ This elongated undead moves on all fours across walls and ceilings with unnatura
 16481 0 -500 S
 18 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3536,7 +3536,7 @@ This gaunt undead wears the formal robes of a Nightfall registrar, its bony fing
 16481 0 -500 S
 19 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3596,7 +3596,7 @@ This translucent apparition bears the shimmering outline of forest burial garmen
 16481 0 -400 S
 21 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3641,7 +3641,7 @@ This massive undead warrior is sheathed in armor constructed from the fused bone
 33570913 0 -700 S
 23 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3656,7 +3656,7 @@ Wearing the purple-trimmed robes of the Violet Compact administration, this unde
 33570913 0 -700 S
 23 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 4 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3686,7 +3686,7 @@ Armored in the corroded plate of a Midgaard tribunal guard, this undead warrior 
 33570913 0 -700 S
 24 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3776,7 +3776,7 @@ The senior military officer of the bellcrypt warden cadre, the Bone-Captain is e
 33570915 0 -800 S
 22 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 21025 0 0 0 0 0 0 0 0
@@ -3791,7 +3791,7 @@ Draped in the formal vestments of the Violet Compact's chief adjudicator, the Pa
 33570915 0 -800 S
 24 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3821,7 +3821,7 @@ The ultimate expression of Nightfall's institutional corruption, the Sepulcher L
 67125379 0 -1000 S
 25 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 200 21022 21021 21024 0 0 0 0 0 0
@@ -3836,7 +3836,7 @@ This ephemeral spirit manifests as a humanoid shimmer within the rootglass forma
 16481 0 -300 S
 15 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 21 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3851,7 +3851,7 @@ This transparent apparition wears the ghostly outline of forest burial garments,
 16481 0 -300 S
 17 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3881,7 +3881,7 @@ This spectral guardian was once bound to the Violet Compact vault's ward system,
 16481 0 -500 S
 19 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3896,7 +3896,7 @@ This translucent figure follows the Processional of Lantern Ash route with the m
 16481 0 -300 S
 14 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3911,7 +3911,7 @@ This undead construct appears to be part of the ossuary architecture itself, its
 16481 0 -500 S
 20 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3941,7 +3941,7 @@ This gentle apparition wears the garb of a Great Northern Forest cairn-keeper, i
 16481 0 -200 S
 18 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -3956,7 +3956,7 @@ This barely visible apparition manifests as a dim outline of a Nightfall clerk, 
 16481 0 -400 S
 15 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4076,7 +4076,7 @@ This translucent figure appears to be searching the archive cabinets with franti
 16481 0 -400 S
 19 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4091,7 +4091,7 @@ This armored apparition was bound to protect the Choir of Quiet Names from vanda
 16483 0 -500 S
 20 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4166,7 +4166,7 @@ This apparition was once a senior member of the Nightfall registry staff, its sp
 16481 0 -600 S
 22 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4196,7 +4196,7 @@ A translucent figure formed of compressed catacomb ash, the ossuary wraith moves
 97 0 -700 S
 8 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4211,7 +4211,7 @@ A shade that has adapted to catacomb vaulting, draping itself across stone arche
 97 0 -600 S
 12 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4226,7 +4226,7 @@ A bundle of animated burial cloth and dry bone, still wearing the intake tag fro
 97 0 -500 S
 14 0
 0 0 0 0
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4241,7 +4241,7 @@ A revenant formed from the unresolved grief of those buried here without proper 
 97 0 -500 S
 16 0
 200 -15 4 6
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4256,7 +4256,7 @@ A hollow formed where a lantern's light once burned long enough to leave an impr
 97 0 -500 S
 18 0
 200 -15 4 6
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4271,7 +4271,7 @@ The residual echo of the subchoir's last performance, given enough mass by accum
 97 0 -600 S
 20 0
 200 -15 4 6
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4286,7 +4286,7 @@ A phantom locked in bureaucratic habit, endlessly cataloging records that no lon
 97 0 -500 S
 21 0
 200 -15 4 6
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4301,7 +4301,7 @@ A revenant assigned in life to guard the subchoir's vault. Death did not relieve
 97 0 -500 S
 20 0
 200 -15 4 6
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4316,7 +4316,7 @@ A shade locked in the memory of a processional that ended decades ago. It walks 
 97 0 -600 S
 21 0
 200 -15 4 6
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4331,7 +4331,7 @@ Once a civic employee responsible for maintaining the catacomb registers, this k
 97 0 -500 S
 22 0
 200 -15 4 6
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4346,7 +4346,7 @@ What remains when a burial fails at every level: wrong shroud, wrong posture, wr
 97 0 -500 S
 22 0
 200 -15 4 6
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4361,7 +4361,7 @@ A wight that formed around the last bellkeeper who died at his post, still grasp
 97 0 -600 S
 23 0
 200 -15 4 6
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4376,7 +4376,7 @@ A revenant of exceptional coherence, the Warden was the highest-ranking official
 67108961 0 -900 S
 23 0
 200 -15 4 6
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4391,7 +4391,7 @@ The last official to seal the deep vault before the catacombs' abandonment, the 
 67108961 0 -900 S
 24 0
 200 -15 4 6
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -4406,7 +4406,7 @@ The chief choir master of the subchoir, the Dirge Keeper maintains the final pro
 67108961 0 -900 S
 24 0
 200 -15 4 6
-! 0 0 0 8 0 0 0
+! 0 0 10 8 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0

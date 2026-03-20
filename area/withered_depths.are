@@ -23,7 +23,7 @@ This monstrosity is the apex of what the blight can build from raw biological ma
 67108979 0 -500 S
 110 0
 2000 -40 25 30
-! 0 0 0 7 0 2097280 80
+! 0 0 21 7 0 2097280 80
 | 544 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 1002 1003 1014 0 0 0 0 0 0
@@ -38,7 +38,7 @@ She was once a fey noble of significant power before the blight rewrote her; wha
 67108979 0 -600 S
 110 2
 1800 -40 24 28
-! 0 0 0 7 0 2304 48
+! 0 0 21 7 0 2304 48
 | 34 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 1004 1005 1015 0 0 0 0 0 0
@@ -53,7 +53,7 @@ Each head operates with separate, coordinated purpose, making it impossible to w
 67371123 0 -400 S
 110 0
 2200 -35 22 35
-! 0 0 0 7 32868 4224 16
+! 0 0 22 7 32868 4224 16
 | 576 136 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 1006 1007 1016 0 0 0 0 0 0
@@ -68,7 +68,7 @@ It was the eldest guardian of this forest before the corruption took it, which m
 67108979 0 -600 S
 110 0
 1800 -40 24 28
-! 0 0 0 7 0 6144 144
+! 0 0 5 7 0 6144 144
 | 34 384 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 1008 1009 0 0 0 0 0 0 0
@@ -83,7 +83,7 @@ She is the source of this blight's current expression, the organism the corrupti
 67108979 256 -900 S
 110 2
 2500 -45 28 38
-! 0 0 0 7 569352 7340032 112
+! 0 0 21 7 569352 7340032 112
 | 800 136 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 1010 1011 1017 0 0 0 0 0 0
@@ -98,7 +98,7 @@ It has spent centuries holding the Verdant Sanctum intact against the encroachin
 67108979 0 -400 S
 110 0
 1900 -38 25 30
-! 0 0 0 7 0 8390656 176
+! 0 0 21 7 0 8390656 176
 | 40 768 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 1012 1013 0 0 0 0 0 0 0
@@ -113,7 +113,7 @@ These tree-creatures have lived in the Blightwood long enough to absorb its prop
 33554545 0 -300 S
 100 0
 1000 -30 20 20
-! 0 0 0 7 40962 0 0
+! 0 0 21 7 40962 0 0
 | 34 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1039 0 0 0 0 0 0 0 0
@@ -128,7 +128,7 @@ It was a person once; the blight dissolved the distinction between the living or
 33636465 2 -800 S
 97 0
 700 -26 17 17
-! 0 0 0 7 0 2105344 0
+! 0 0 10 7 0 2105344 0
 | 256 10 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -143,7 +143,7 @@ The thornweaver matriarchs are the apex of their species, larger and smarter tha
 33554545 0 -300 S
 98 2
 800 -26 17 17
-! 0 0 0 7 528386 0 0
+! 0 0 21 7 528386 0 0
 | 514 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -158,7 +158,7 @@ These wolves were ordinary predators before the blight warped them into somethin
 97 0 -100 S
 85 0
 150 -12 6 6
-! 0 0 0 7 32769 0 0
+! 0 0 14 7 32769 0 0
 | 2 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1019 0 0 0 0 0 0 0 0
@@ -173,7 +173,7 @@ She remembers being a forest guardian; the memories have not been erased, only r
 97 0 -200 S
 90 2
 200 -15 8 8
-! 0 0 0 7 0 1536 4
+! 0 0 21 7 0 1536 4
 | 32 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1020 0 0 0 0 0 0 0 0
@@ -188,7 +188,7 @@ These insectoid creatures emerged from deep below the Fungal Hollows after the b
 97 0 -100 S
 88 0
 170 -13 7 7
-! 0 0 0 7 129 0 0
+! 0 0 21 7 129 0 0
 | 544 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1021 0 0 0 0 0 0 0 0
@@ -203,7 +203,7 @@ The viper's venom was already potent before the blight enhanced it. What it carr
 97 0 -100 S
 92 0
 220 -16 10 10
-! 0 0 0 7 0 0 0
+! 0 0 11 7 0 0 0
 | 512 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1022 0 0 0 0 0 0 0 0
@@ -218,7 +218,7 @@ Unlike ancient treants that served as forest guardians, this one retains no memo
 97 0 -200 S
 95 0
 380 -20 12 12
-! 0 0 0 7 32770 0 0
+! 0 0 21 7 32770 0 0
 | 34 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1023 0 0 0 0 0 0 0 0
@@ -233,7 +233,7 @@ It has refined ambush to an art form, remaining submerged for hours while breath
 97 65536 -100 S
 90 0
 200 -15 8 8
-! 0 0 0 7 2049 0 0
+! 0 0 22 7 2049 0 0
 | 64 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1024 0 0 0 0 0 0 0 0
@@ -248,7 +248,7 @@ The ordinary thornweaver is already dangerous; the blight has pushed its venom p
 97 0 -100 S
 93 0
 250 -18 11 11
-! 0 0 0 7 4097 0 0
+! 0 0 12 7 4097 0 0
 | 514 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1025 0 0 0 0 0 0 0 0
@@ -263,7 +263,7 @@ The Miasma Bog preserves corpses: the anaerobic conditions of the deeper section
 16481 0 -300 S
 91 0
 210 -16 9 9
-! 0 0 0 7 129 0 0
+! 0 0 10 7 129 0 0
 | 256 8 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1026 0 0 0 0 0 0 0 0
@@ -278,7 +278,7 @@ The blight does not always improve the creatures it takes; sometimes it simply h
 97 0 -100 S
 88 0
 180 -13 7 7
-! 0 0 0 7 32769 0 0
+! 0 0 14 7 32769 0 0
 | 2 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1041 0 0 0 0 0 0 0 0
@@ -308,7 +308,7 @@ There is no longer an organism at the centre of this creature; the spores have c
 262241 0 -100 S
 86 0
 140 -12 6 6
-! 0 0 0 7 1 0 0
+! 0 0 21 7 1 0 0
 | 544 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1029 0 0 0 0 0 0 0 0
@@ -323,7 +323,7 @@ These canines are the result of thornweaver spider venom interacting with wolf b
 97 0 -100 S
 89 0
 180 -14 8 8
-! 0 0 0 7 32769 0 0
+! 0 0 14 7 32769 0 0
 | 34 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1030 0 0 0 0 0 0 0 0
@@ -338,7 +338,7 @@ The moss horror is not a single organism but a colony with emergent group behavi
 97 0 -200 S
 94 0
 300 -19 12 12
-! 0 0 0 7 32770 0 0
+! 0 0 21 7 32770 0 0
 | 34 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1031 0 0 0 0 0 0 0 0
@@ -353,7 +353,7 @@ In life this was a keeper of the deep forest rites; in unlife it retains enough 
 16481 0 -700 S
 96 0
 450 -22 14 14
-! 0 0 0 7 0 6144 16
+! 0 0 5 7 0 6144 16
 | 256 8 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 20 1001 0 0 0 0 0 0 0 0
@@ -368,7 +368,7 @@ There is no brain in the vine strangler that any anatomist would recognise; its 
 262241 0 -100 S
 87 0
 160 -12 7 7
-! 0 0 0 7 2049 0 0
+! 0 0 21 7 2049 0 0
 | 34 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1033 0 0 0 0 0 0 0 0
@@ -383,7 +383,7 @@ Will-o-wisps in a healthy bog are benign phenomena, natural electrical discharge
 65633 2 -100 S
 85 0
 120 -10 5 5
-! 0 0 0 7 0 1028 0
+! 0 0 19 7 0 1028 0
 | 16 34 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -398,7 +398,7 @@ These enormous moths are corrupted descendants of once-harmless forest moths; th
 97 0 -100 S
 90 0
 200 -15 8 8
-! 0 0 0 7 4097 0 0
+! 0 0 13 7 4097 0 0
 | 2 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1034 0 0 0 0 0 0 0 0
@@ -413,7 +413,7 @@ These are direct extensions of the Blightmother's influence, pieces of her distr
 97 0 -400 S
 96 0
 420 -22 14 14
-! 0 0 0 7 32898 0 0
+! 0 0 21 7 32898 0 0
 | 544 136 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1035 0 0 0 0 0 0 0 0
@@ -428,7 +428,7 @@ The stag retains the territorial aggression of its species but without any of th
 97 0 -100 S
 92 0
 240 -16 11 11
-! 0 0 0 7 294913 0 0
+! 0 0 16 7 294913 0 0
 | 34 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1036 0 0 0 0 0 0 0 0
@@ -443,7 +443,7 @@ The spitter's ranged attack is a pressurised jet of concentrated acid derived fr
 97 0 -100 S
 89 0
 170 -14 8 8
-! 0 0 0 7 0 128 0
+! 0 0 21 7 0 128 0
 | 544 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1040 0 0 0 0 0 0 0 0
@@ -473,7 +473,7 @@ The revenants are ancient treants that died to the blight and were risen by it Ã
 33570929 0 -800 S
 100 0
 1000 -28 20 20
-! 0 0 0 7 40996 4096 16
+! 0 0 10 7 40996 4096 16
 | 258 136 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -488,7 +488,7 @@ These creatures are not intelligent in any conventional sense; they are biologic
 33816689 0 -300 S
 99 0
 950 -27 19 19
-! 0 0 0 7 32962 0 0
+! 0 0 21 7 32962 0 0
 | 34 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -503,7 +503,7 @@ Elder dryads are rare under any circumstances; this one has survived long enough
 33554545 0 -500 S
 98 2
 800 -26 18 18
-! 0 0 0 7 0 2816 48
+! 0 0 21 7 0 2816 48
 | 32 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -518,7 +518,7 @@ These massive swamp reptiles were already the apex predators of the Miasma Bog b
 33554545 0 -200 S
 99 0
 1050 -28 20 22
-! 0 0 0 7 33060 0 0
+! 0 0 21 7 33060 0 0
 | 66 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -533,7 +533,7 @@ This winged predator has evolved for the specific ecology of the Ancient Canopy,
 33554545 0 -300 S
 97 0
 700 -24 17 17
-! 0 0 0 7 1085442 0 0
+! 0 0 21 7 1085442 0 0
 | 18 256 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -548,7 +548,7 @@ These are not intentionally created; they are what happens when the blight's gro
 33816689 0 -500 S
 100 0
 950 -28 19 21
-! 0 0 0 7 557060 0 16
+! 0 0 21 7 557060 0 16
 | 544 136 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -563,7 +563,7 @@ The briar lords are the dominant territorial creatures of the Briar Maze, indivi
 33554545 0 -400 S
 98 0
 850 -26 18 18
-! 0 0 0 7 41986 0 0
+! 0 0 21 7 41986 0 0
 | 34 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -578,7 +578,7 @@ The alpha is the pack's coordinator and primary tactician; it positions its subo
 97 0 -100 S
 90 0
 230 -15 10 10
-! 0 0 0 7 36866 0 0
+! 0 0 14 7 36866 0 0
 | 2 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1064 0 0 0 0 0 0 0 0
@@ -593,7 +593,7 @@ The mire crocodile is the conventional predator of the Miasma Bog taken to an ex
 97 0 -100 S
 93 0
 270 -18 11 11
-! 0 0 0 7 34817 0 0
+! 0 0 17 7 34817 0 0
 | 64 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1042 0 0 0 0 0 0 0 0
@@ -608,7 +608,7 @@ These raptors have been changed by the blight in ways that are primarily about e
 97 65536 -100 S
 86 0
 145 -12 6 6
-! 0 0 0 7 4097 0 0
+! 0 0 15 7 4097 0 0
 | 2 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -623,7 +623,7 @@ These elementals are not summoned; they form spontaneously when the blight densi
 262241 0 -200 S
 94 0
 300 -19 12 12
-! 0 0 0 7 32770 0 0
+! 0 0 19 7 32770 0 0
 | 34 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1043 0 0 0 0 0 0 0 0
@@ -638,7 +638,7 @@ The spore cloud is not a creature in any conventional sense; it is a mobile fung
 327777 2 -100 S
 85 0
 100 -8 4 4
-! 0 0 0 7 0 2097152 0
+! 0 0 21 7 0 2097152 0
 | 512 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -653,7 +653,7 @@ These are old treants that the blight has not yet fully claimed; they are in the
 97 0 -300 S
 95 0
 380 -20 12 12
-! 0 0 0 7 32898 0 0
+! 0 0 21 7 32898 0 0
 | 34 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1044 0 0 0 0 0 0 0 0
@@ -668,7 +668,7 @@ The swarm behaves as a single organism for predatory purposes; individual member
 97 0 -100 S
 86 0
 140 -12 6 6
-! 0 0 0 7 129 0 0
+! 0 0 16 7 129 0 0
 | 2 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -683,7 +683,7 @@ Unlike thorn elementals, which form spontaneously, bramble golems are the blight
 262241 0 -200 S
 93 0
 260 -18 11 11
-! 0 0 0 7 8225 0 0
+! 0 0 19 7 8225 0 0
 | 34 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1045 0 0 0 0 0 0 0 0
@@ -698,7 +698,7 @@ These foxes have developed a natural shadow-affinity that predates the blight; t
 97 65536 -100 S
 88 0
 180 -13 8 8
-! 0 0 0 7 6145 0 0
+! 0 0 14 7 6145 0 0
 | 2 136 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1046 0 0 0 0 0 0 0 0
@@ -713,7 +713,7 @@ The arboreal serpent has developed venom specifically adapted to the corrupted e
 97 65536 -100 S
 91 0
 210 -16 9 9
-! 0 0 0 7 1 0 0
+! 0 0 11 7 1 0 0
 | 512 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1047 0 0 0 0 0 0 0 0
@@ -728,7 +728,7 @@ The corpse flower is a fully stationary carnivore that has been given by the bli
 262241 0 -100 S
 87 0
 160 -12 7 7
-! 0 0 0 7 2049 0 0
+! 0 0 21 7 2049 0 0
 | 34 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1048 0 0 0 0 0 0 0 0
@@ -743,7 +743,7 @@ The mycelium creeper does not have a body in any conventional sense; it is a sec
 262241 0 -100 S
 90 0
 210 -15 9 9
-! 0 0 0 7 34817 0 0
+! 0 0 21 7 34817 0 0
 | 544 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1049 0 0 0 0 0 0 0 0
@@ -758,7 +758,7 @@ The hawk's corruption has made it larger, faster, and given its talons a hardnes
 97 0 -100 S
 89 0
 175 -14 8 8
-! 0 0 0 7 32769 0 0
+! 0 0 15 7 32769 0 0
 | 18 256 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -773,7 +773,7 @@ The organism inside is dead; the mushrooms use the remaining body structure as a
 16481 0 -300 S
 88 0
 180 -13 7 7
-! 0 0 0 7 129 0 0
+! 0 0 10 7 129 0 0
 | 256 8 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1050 0 0 0 0 0 0 0 0
@@ -788,7 +788,7 @@ Its skin secretes a toxin of exceptional potency; the blight has taken what was 
 97 0 -100 S
 85 0
 110 -10 5 5
-! 0 0 0 7 1 0 0
+! 0 0 17 7 1 0 0
 | 512 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -803,7 +803,7 @@ The wolf spider's corruption has taken an unusual form: instead of enhancing its
 97 0 -100 S
 91 0
 210 -16 9 9
-! 0 0 0 7 4097 0 0
+! 0 0 12 7 4097 0 0
 | 2 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -818,7 +818,7 @@ These are the spirits of those who drowned in the Miasma Bog before the blight p
 82017 2 -600 S
 93 0
 240 -18 11 11
-! 0 0 0 7 0 270336 0
+! 0 0 10 7 0 270336 0
 | 256 10 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1051 0 0 0 0 0 0 0 0
@@ -833,7 +833,7 @@ The beetle's original biology is still present beneath the fungal overgrowth, wh
 97 0 -100 S
 86 0
 145 -12 6 6
-! 0 0 0 7 32769 0 0
+! 0 0 13 7 32769 0 0
 | 34 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1065 0 0 0 0 0 0 0 0
@@ -848,7 +848,7 @@ The boar's aggression has been maximised by the blight to the point where it no 
 97 0 -100 S
 90 0
 220 -15 9 9
-! 0 0 0 7 294913 0 0
+! 0 0 16 7 294913 0 0
 | 34 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 50 1052 0 0 0 0 0 0 0 0
@@ -863,7 +863,7 @@ This is a forest spirit old enough to predate the corruption, maintaining itself
 65601 2 500 S
 87 0
 120 -12 5 5
-! 0 0 0 7 0 8389632 4
+! 0 0 19 7 0 8389632 4
 | 8 768 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -893,7 +893,7 @@ These insects are individually tiny but collectively capable of reducing a large
 97 0 -100 S
 88 0
 170 -13 7 7
-! 0 0 0 7 32769 0 0
+! 0 0 13 7 32769 0 0
 | 34 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -908,7 +908,7 @@ The mire leech feeds by attaching and drawing off biological material over exten
 97 0 -100 S
 85 0
 115 -10 5 5
-! 0 0 0 7 1 0 0
+! 0 0 22 7 1 0 0
 | 64 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -923,7 +923,7 @@ These bats have been colonised by luminescent fungal spores that coat their fur 
 97 0 -200 S
 87 0
 130 -12 7 7
-! 0 0 0 7 4097 0 0
+! 0 0 15 7 4097 0 0
 | 256 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -938,7 +938,7 @@ Each segment of this oversized arthropod has been swollen by the blight until it
 97 0 -300 S
 89 0
 160 -13 8 8
-! 0 0 0 7 1 0 0
+! 0 0 13 7 1 0 0
 | 32 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -953,7 +953,7 @@ The blight has not sped the tortoise up nor given it aggressive instincts; what 
 97 0 -200 S
 94 0
 200 -18 9 9
-! 0 0 0 7 8225 0 0
+! 0 0 17 7 8225 0 0
 | 32 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 1053 0 0 0 0 0 0 0 0
@@ -968,7 +968,7 @@ This is what remains of a druid who chose to stay when the blight came, believin
 82017 2 -500 S
 96 0
 180 -18 10 10
-! 0 0 0 7 0 1114112 8
+! 0 0 10 7 0 1114112 8
 | 256 8 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 1054 0 0 0 0 0 0 0 0
@@ -983,7 +983,7 @@ This snake has grown to dimensions that have no precedent in natural history, it
 97 0 -100 S
 88 0
 140 -12 7 7
-! 0 0 0 7 1 0 0
+! 0 0 11 7 1 0 0
 | 64 32 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -998,7 +998,7 @@ Ravens were always associated with intelligence among the forest's natural fauna
 97 0 -200 S
 85 0
 110 -10 6 6
-! 0 0 0 7 4097 0 0
+! 0 0 15 7 4097 0 0
 | 256 8 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1013,7 +1013,7 @@ These tendrils extend from the deep root network of the Blightmother far below, 
 262241 0 -400 S
 91 0
 170 -14 8 8
-! 0 0 0 7 2049 0 0
+! 0 0 21 7 2049 0 0
 | 32 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 1066 0 0 0 0 0 0 0 0
@@ -1043,7 +1043,7 @@ It is not clear whether the mold hulk is a creature covered in mold or a mold co
 262241 0 -300 S
 95 0
 220 -18 10 10
-! 0 0 0 7 32770 0 0
+! 0 0 21 7 32770 0 0
 | 544 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 1056 0 0 0 0 0 0 0 0
@@ -1058,7 +1058,7 @@ She was one of the forest's guardians in an age when the forest still had guardi
 67 0 500 S
 40 2
 30 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 21 7 0 0 0
 | 8 256 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1073,7 +1073,7 @@ She came into the Withered Depths three days ago with a specific list of fungi s
 67 0 800 S
 55 2
 50 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 5 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1088,7 +1088,7 @@ This cat has been living in the edge-zones of the Withered Depths long enough th
 65 0 0 S
 30 0
 20 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 16 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0

@@ -12,7 +12,6 @@ short int quest_tier_from_level(int mob_level);
 void quest_set_crusade_level_range_for_tier(short int tier, int *minimum_level, int *maximum_level);
 void quest_set_effective_crusade_level_range(short int tier, int highest_level_in_range,
                                              int *minimum_level, int *maximum_level);
-int crusade_level_cap_for_range(int range_minimum, int range_maximum, int highest_level_in_range);
 void quest_note_player_crusade_range(int pseudo_level, int *highest_mortal, int *highest_remortal,
                                      int *highest_adept);
 int quest_is_valid_crusade_mobile(CHAR_DATA *target, int min_level, int max_level);
@@ -54,19 +53,30 @@ static void test_range_clamps_to_valid_bounds(void)
 
 static void test_invalid_personality_resolves_from_mob_level(void)
 {
+   /* Out-of-range personalities (0 and 9+) resolve via tier */
    assert(quest_resolve_crusade_personality(0, 10) == 1);
    assert(quest_resolve_crusade_personality(0, 75) == 1);
    assert(quest_resolve_crusade_personality(0, 100) == 1);
    assert(quest_resolve_crusade_personality(0, 120) == 2);
    assert(quest_resolve_crusade_personality(0, 150) == 3);
+   assert(quest_resolve_crusade_personality(9, 50) == 1);
+   assert(quest_resolve_crusade_personality(-1, 155) == 3);
 }
 
-static void test_crusade_level_cap_for_range(void)
+static void test_effective_range_ignores_player_level(void)
 {
-   assert(crusade_level_cap_for_range(1, 100, 40) == 60);
-   assert(crusade_level_cap_for_range(101, 149, 120) == 140);
-   assert(crusade_level_cap_for_range(150, 170, 160) == 170);
-   assert(crusade_level_cap_for_range(101, 149, 90) == 110);
+   int min_level = 0;
+   int max_level = 0;
+
+   /* Low player level must not shrink the tier range */
+   quest_set_effective_crusade_level_range(1, 40, &min_level, &max_level);
+   assert(min_level == 1 && max_level == 100);
+
+   quest_set_effective_crusade_level_range(2, 110, &min_level, &max_level);
+   assert(min_level == 101 && max_level == 149);
+
+   quest_set_effective_crusade_level_range(3, 155, &min_level, &max_level);
+   assert(min_level == 150 && max_level == 170);
 }
 
 static void test_note_player_crusade_range(void)
@@ -115,7 +125,7 @@ static void test_effective_range_helper(void)
    assert(min_level == 1 && max_level == 100);
 
    quest_set_effective_crusade_level_range(2, 120, &min_level, &max_level);
-   assert(min_level == 101 && max_level == 140);
+   assert(min_level == 101 && max_level == 149);
 
    quest_set_effective_crusade_level_range(3, 155, &min_level, &max_level);
    assert(min_level == 150 && max_level == 170);
@@ -123,9 +133,15 @@ static void test_effective_range_helper(void)
 
 static void test_valid_personality_is_preserved(void)
 {
+   /* All personalities 1–8 should be passed through unchanged */
    assert(quest_resolve_crusade_personality(1, 120) == 1);
    assert(quest_resolve_crusade_personality(2, 10) == 2);
    assert(quest_resolve_crusade_personality(3, 75) == 3);
+   assert(quest_resolve_crusade_personality(4, 50) == 4);
+   assert(quest_resolve_crusade_personality(5, 130) == 5);
+   assert(quest_resolve_crusade_personality(6, 160) == 6);
+   assert(quest_resolve_crusade_personality(7, 1) == 7);
+   assert(quest_resolve_crusade_personality(8, 170) == 8);
 }
 
 static void test_crusade_mobile_validation_excludes_invaders(void)
@@ -164,7 +180,7 @@ int main(void)
    test_range_clamps_to_valid_bounds();
    test_invalid_personality_resolves_from_mob_level();
    test_valid_personality_is_preserved();
-   test_crusade_level_cap_for_range();
+   test_effective_range_ignores_player_level();
    test_note_player_crusade_range();
    test_tier_mapping_helpers();
    test_effective_range_helper();

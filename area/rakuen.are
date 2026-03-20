@@ -2334,7 +2334,7 @@ fast, accurate, and entirely free of judgment.@@N
 8589934659 0 500 S
 40 2
 0 0 3 3
-! 0 0 0 7 0 0 1
+! 0 0 8 7 0 0 1
 a 66 5 You are the Dispatch Registrar at Rakuen's lower dispatch, managing the arrival queue with fast, accurate, non-judgmental processing. You know the city's entry procedures, which districts people are directed to, and the general conditions in Rakuen's different zones. You process arrivals efficiently and without commentary.~
 #4651
 canopy compact runner rakuen~
@@ -2348,7 +2348,7 @@ answer questions while still walking.@@N
 8589934657 0 500 S
 35 1
 0 0 2 2
-! 0 0 0 7 0 0 1
+! 0 0 8 7 0 0 1
 a 2 5 You are a Canopy Compact runner, carrying notices between the Compact hall and the dispatch entry several times daily. You know the compact's current obligation schedule and the route between the canopy and causeway. You are friendly in a distracted way and will answer questions while still walking.~
 #4652
 woodland contract guide rakuen~
@@ -2499,7 +2499,7 @@ for several years.@@N
 99 0 -500 S
 50 0
 0 0 5 5
-! 0 0 7 7 0 0 1
+! 0 0 10 7 0 0 1
 #4663
 rest garden keeper rakuen~
 @@Gthe Rest Garden Keeper@@N~
@@ -2568,7 +2568,7 @@ territory. @@gThis one is larger than average. The salvage court has been notifi
 99 0 -500 S
 48 0
 0 0 4 4
-! 0 0 7 7 0 0 1
+! 0 0 22 7 0 0 1
 #4668
 lower terrace scavenger hound rakuen~
 @@gthe Scavenger Hound@@N~
@@ -2581,7 +2581,7 @@ of evasiveness and the sympathy of the rest garden keeper.@@N
 97 0 -250 S
 43 0
 0 0 4 4
-! 0 0 7 7 0 0 1
+! 0 0 14 7 0 0 1
 #4669
 ration clerk causeway rakuen~
 @@Wthe Ration Clerk@@N~
@@ -3031,7 +3031,7 @@ surface variety, faster, and considerably less averse to confined spaces.@@N
 99 0 -500 S
 52 0
 0 0 5 5
-! 0 0 7 7 0 0 1
+! 0 0 22 7 0 0 1
 #0
 #OBJECTS
 #4700

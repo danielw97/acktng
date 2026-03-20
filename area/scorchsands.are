@@ -20,7 +20,7 @@ Its carapace is matte black with ember-red seams that vent tiny threads of heat.
 97 0 0 S
 70 0
 0 0 0 0
-! 0 0 0 0 1025 0 0
+! 0 0 12 0 1025 0 0
 #5351
 cinder kite harrier~
 a cinder kite harrier~
@@ -31,7 +31,7 @@ This rangy carrion bird rides thermal updrafts with unnerving patience. Burn-sco
 97 0 0 S
 72 0
 0 0 0 0
-! 0 0 0 0 1025 0 0
+! 0 0 15 0 1025 0 0
 #5352
 kiln adder~
 a kiln adder~
@@ -42,7 +42,7 @@ The serpent's scales shine like fired ceramic, each plate edged with pale ash. I
 97 0 0 S
 74 0
 0 0 0 0
-! 0 0 0 0 1025 0 0
+! 0 0 11 0 1025 0 0
 | 128 64 0 0 0 128 64
 #5353
 ledger mummy porter~
@@ -54,7 +54,7 @@ Faded wrappings bind this undead laborer from neck to heel, and waxed tags still
 16481 0 -750 S
 73 0
 0 0 0 0
-! 0 0 0 0 1025 0 4
+! 0 0 10 0 1025 0 4
 #5354
 convoy triage marshal~
 a convoy triage marshal~
@@ -156,7 +156,7 @@ The clerk's robes are threadbare but still stamped with faded registry marks. Th
 97 0 0 S
 71 0
 0 0 0 0
-! 0 0 0 0 1025 0 0
+! 0 0 10 0 1025 0 0
 #5363
 ration adjudicator remnant~
 a ration adjudicator remnant~
@@ -167,7 +167,7 @@ Ink-streaked sleeves and a battered counting frame mark this survivor of countle
 97 0 0 S
 74 0
 0 0 0 0
-! 0 0 0 0 1025 0 0
+! 0 0 10 0 1025 0 0
 #5364
 gate scrivener remnant~
 a gate scrivener remnant~
@@ -178,7 +178,7 @@ Their workspace is a portable desk of scorched wood strapped to a reinforced fra
 97 0 -500 S
 81 1
 0 0 0 0
-! 0 0 0 0 3074 0 0
+! 0 0 10 0 3074 0 0
 #5365
 ash scorpion reaver~
 an ash scorpion reaver~
@@ -189,7 +189,7 @@ Larger than common scouts, this specimen bears old blade breaks embedded in its 
 97 0 0 S
 76 1
 0 0 0 0
-! 0 0 0 0 3074 0 0
+! 0 0 12 0 3074 0 0
 #5366
 cinder kite pack alpha~
 a cinder kite pack alpha~
@@ -200,7 +200,7 @@ Scars around one eye and a torn outer wing feather mark repeated fights over col
 65601 0 0 S
 73 0
 0 0 0 0
-! 0 0 0 0 1025 0 0
+! 0 0 15 0 1025 0 0
 #5367
 fired-clay sentinel~
 a fired-clay sentinel~
@@ -211,7 +211,7 @@ This construct was molded for kiln security and hardened in extreme heat. Hairli
 16481 0 -500 S
 80 1
 0 0 0 0
-! 0 0 0 0 3074 2162688 4
+! 0 0 19 0 3074 2162688 4
 #5368
 cauterist acolyte~
 a cauterist acolyte~

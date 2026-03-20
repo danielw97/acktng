@@ -312,12 +312,12 @@ void show_cmenu_to(DESCRIPTOR_DATA *d)
    strcat(menu, "Being a MultiClass Mud, this order is very important, as it\n\r");
    strcat(menu, "will determine how easily you progress in each class, and\n\r");
    strcat(menu, "how well you can use the skills/spells of each class.\n\r");
-   strcat(menu, "There are seven classes.  Please list, in order of best to\n\r");
+   strcat(menu, "There are eight classes.  Please list, in order of best to\n\r");
    strcat(menu, "worst, the order your 4 classes will be.\n\r");
    strcat(menu, "(The 1st you pick will be your prime class, gaining a +1 bonus.\n\r");
    strcat(menu, "For example, psi mag cle cip.\n\r");
-   strcat(menu, "Abr    Prime Atr    Name\n\r");
-   strcat(menu, "---    ---------    ----\n\r");
+   strcat(menu, "Abr    Atr    Name\n\r");
+   strcat(menu, "---    ---    ----------\n\r");
 
    for (iClass = 0; iClass < MAX_TOTAL_CLASS; iClass++)
    {
@@ -986,8 +986,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
          {
             max_players = playing_players;
             trigger_happy_hour();
-            happy_hour_ticks_remaining = 3;
-            info("New player record reached! Happy hour triggered for three in-game hours!", 1);
+            happy_hour_ticks_remaining = HAPPY_HOUR_AUTO_DURATION;
+            info("New player record reached! Happy hour triggered for half an in-game day!", 1);
          }
       }
 

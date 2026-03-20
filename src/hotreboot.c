@@ -78,9 +78,9 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
               "be back in 30 seconds!! *************\n\n\r",
               ch->name);
    else
-      sprintf(buf,
-              "\n\r**** HOTreboot: Automated Deployment - Please remain ONLINE ****\n\r*********** We will "
-              "be back in 30 seconds!! *************\n\n\r");
+      sprintf(buf, "\n\r**** HOTreboot: Automated Deployment - Please remain ONLINE "
+                   "****\n\r*********** We will "
+                   "be back in 30 seconds!! *************\n\n\r");
 
    /*
     * For each PLAYING descriptor( non-negative ), save its state
@@ -92,20 +92,21 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
 
       if (!d->character || d->connected < 0) /* drop those logging on */
       {
-         write_to_descriptor(d->descriptor,
-                             "\n\r@Sorry, ACK! MUD rebooting. Come back in a few minutes.\n\r", 0);
+         /* Use write_to_buffer so close_socket's process_output call applies
+          * WebSocket framing for clients that upgraded to WebSocket. */
+         write_to_buffer(d, "\n\r@Sorry, ACK! MUD rebooting. Come back in a few minutes.\n\r", 0);
          close_socket(d); /* throw'em out */
       }
       else
       {
-         fprintf(fp, "%d %s %s\n", d->descriptor, och->name, d->host);
+         fprintf(fp, "%d %s %s %d\n", d->descriptor, och->name, d->host,
+                 d->websocket_active ? 1 : 0);
          if (och->level == 1)
          {
-
-            write_to_descriptor(d->descriptor,
-                                "Since you are level one, and level one characters do not "
-                                "save....you have been advanced!\n\r",
-                                0);
+            write_to_buffer(d,
+                            "Since you are level one, and level one characters do not "
+                            "save....you have been advanced!\n\r",
+                            0);
             och->level = 2;
             och->class_level[och->class] = 2;
          }
@@ -113,7 +114,10 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
          och->mana = och->max_mana;
          och->move = och->max_move;
          save_char_obj(och);
-         write_to_descriptor(d->descriptor, buf, 0);
+         /* Use write_to_buffer + process_output so WebSocket clients receive a
+          * properly framed message and stay connected through the exec(). */
+         write_to_buffer(d, buf, 0);
+         process_output(d, FALSE);
       }
    }
 
@@ -203,6 +207,7 @@ void copyover_recover()
    char name[100];
    char host[MSL];
    int desc;
+   int is_websocket;
    bool fOld;
    extern bool disable_timer_abort;
    log_f("Copyover recovery initiated");
@@ -220,26 +225,33 @@ void copyover_recover()
 
    for (;;)
    {
-      if (fscanf(fp, "%d %99s %8191s\n", &desc, name, host) != 3)
+      is_websocket = 0;
+      if (fscanf(fp, "%d %99s %8191s %d\n", &desc, name, host, &is_websocket) < 3)
          break;
       if (desc == -1)
          break;
 
-      /*
-       * Write something, and check if it goes error-free
-       */
-      if (!write_to_descriptor(desc, "\n\rRestoring from HOTreboot...\n\r", 0))
-      {
-         close(desc); /* nope */
-         continue;
-      }
-
       GET_FREE(d, desc_free);
       init_descriptor(d, desc); /* set up various stuff */
 
-      /* This is a recovered connection, not a new one - skip handshake and greeting */
+      /* Restore connection type and login flags before any output so that
+       * WebSocket clients receive properly framed messages. */
+      d->websocket_active = (is_websocket ? TRUE : FALSE);
       d->websocket_handshake_complete = TRUE;
       d->greeting_sent = TRUE;
+
+      /* Liveness check — write something and verify it goes through.
+       * Use write_to_buffer + process_output so WebSocket framing is applied. */
+      write_to_buffer(d, "\n\rRestoring from HOTreboot...\n\r", 0);
+      if (!process_output(d, FALSE))
+      {
+         /* Connection is dead; clean up manually — not yet in first_desc. */
+         close(desc);
+         if (d->outbuf)
+            dispose(d->outbuf, d->outsize);
+         PUT_FREE(d, desc_free);
+         continue;
+      }
 
       d->host = str_dup(host);
       d->next = NULL;
@@ -258,8 +270,8 @@ void copyover_recover()
       if (!fOld) /* Player file not found?! */
       {
          log_f("copyover_recover: player file not found for '%s'", name);
-         write_to_descriptor(
-             desc,
+         write_to_buffer(
+             d,
              "\n\rSomehow, your character was lost in the HOTreboot. Sorry, you must relog in.\n\r",
              0);
          close_socket(d);
@@ -269,7 +281,7 @@ void copyover_recover()
          CHAR_DATA *this_char;
 
          log_f("copyover_recover: player '%s' loaded, sending recovery message", name);
-         write_to_descriptor(desc, "\n\rCopyover recovery complete.\n\r", 0);
+         write_to_buffer(d, "\n\rCopyover recovery complete.\n\r", 0);
 
          /*
           * Just In Case

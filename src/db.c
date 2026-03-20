@@ -86,6 +86,10 @@ int quest_wait = 0;       /* Min time until next quest  */
 sh_int quest_personality; /* mob's crusade personality :) */
 int quest_level_min;
 int quest_level_max;
+bool quest_ai_pending = FALSE;   /* AI generation in flight?        */
+char quest_ai_tmpfile[256] = ""; /* Temp file path for AI output    */
+pid_t quest_ai_pid = -1;         /* Child process PID               */
+time_t quest_ai_start_time = 0;  /* Time child was launched         */
 
 /* Zen mod: Diplomatics globals */
 POL_DATA politics_data;
@@ -778,24 +782,6 @@ void boot_db(void)
       {
          pMob->pub_society = PUB_SOCIETY_ROAD_WARDENS;
          pMob->pub_society_npc_role = PUB_SOC_NPC_RECRUITER;
-      }
-   }
-
-   /* Set web music track for areas that have area-specific music */
-   {
-      AREA_DATA *pArea;
-      for (pArea = first_area; pArea != NULL; pArea = pArea->next)
-      {
-         if (!str_cmp(pArea->filename, "midgaard.are") ||
-             !str_cmp(pArea->filename, "midgaard_shops.are"))
-            pArea->music = str_dup("midgaard.mp3");
-         else if (!str_cmp(pArea->filename, "kiess.are"))
-            pArea->music = str_dup("kiess.mp3");
-         else if (!str_cmp(pArea->filename, "mafdet.are"))
-            pArea->music = str_dup("mafdet.mp3");
-         else if (!str_cmp(pArea->filename, "newschool.are"))
-            pArea->music = str_dup("mudschool.mp3");
-         /* else music remains NULL → default theme */
       }
    }
 
