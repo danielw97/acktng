@@ -5,63 +5,29 @@ keywords MOTD
 @@R        |   @@eA C K ! M U D   T N G@@R  --  Message of the Day   |
 @@R        +----------------------------------------------------------+@@N
 
-@@YWelcome, traveler.@@N  Whether you ride in from the Roc Road or have just
-crossed the ash-dark passes of the Cinderteeth, you have arrived at the
-crossroads of the known world.  Lamp your bearings.  Ledger your intent.
+@@YWelcome to the crossroads.@@N  Lamp your bearings.  Ledger your intent.
 
 @@b---------------------------------------------------------------------@@N
+@@gWORLD EVENTS@@N
 
-@@gNEWS & WORLD EVENTS@@N
+  Cinderteeth seismic activity is elevated.  The Temple of the Resounding
+  Heart has the watch.  Road warden patrols on northern routes are up.
 
-  The Temple of the Resounding Heart's seismic watch has logged irregular
-  tremors from the Cinderteeth range.  Road warden dispatch is elevated on
-  the northern and western corridors.  Expect convoy advisories.
-
-  Blight reports from the Withered Depths continue.  Timber and herb
-  shipments from the northern forest are disrupted.  Herbalists in Midgaard
-  are paying premium for expedition-sourced materials.
-
-  The Violet Compact registry office is processing a backlog of arcane-
-  material documentation.  Threshold delays at room 921 are expected.
-
-  Rakuen's Amendment Track faction has retained Kiess legal counsel.
-  Midgaard's Charter Sovereignty office has been formally notified.
+  Blight from the Withered Depths is disrupting northern timber and herb
+  shipments.  Midgaard herbalists are paying well for expedition stock.
 
 @@b---------------------------------------------------------------------@@N
+@@YRULES — read them.  There are no pardons for ignorance.@@N
 
-@@YRULES — READ THEM.  Know them.  There are no pardons for ignorance.@@N
-
-  @@rPlayer Killing:@@N   PKOK is in effect.  You may only attack players who
-               have flagged themselves as PK-willing.  Loot code applies.
-               There are no immortal pardons for PK violations.
-
-  @@rStealing:@@N        Player-theft is logged and reviewed.  Repeated theft
-               will earn consequences.  Consider yourself warned.
-
-  @@rPray command:@@N    Use it when you genuinely need help.  Spam or misuse
-               will get you no_prayed — find out what that means the
-               hard way, or take the warning now.
-
-  @@rCivil conduct:@@N   Disrespect toward staff or other players is not
-               tolerated.  The immortal team works hard.  Act accordingly.
-
-  @@rBug reports:@@N     Use the bug board — posted up from the dump.  Do not
-               page staff for bugs you haven't tried to document.
-
-@@b---------------------------------------------------------------------@@N
+  Type @@cHELP RULES@@N for the full text.  Short version:
+  don't be a dick, don't make immortals step in, max 3 characters,
+  no automated play.
 
 @@gGETTING STARTED@@N
 
-  @@ctype  HELP NEWBIE@@N   — essential commands and orientation
-  @@ctype  HELP RULES@@N    — full policy text
-  @@ctype  HELP CLANS@@N    — faction and clan information
-  @@ctype  HELP IMM@@N      — staff roles and how to reach them
-
-  Your corpse is saved on death.  Reimbursements are not given for items
-  lost to combat, disconnection, or player error.  Plan accordingly.
+  @@cHELP NEWBIE@@N   — orientation and essential commands
+  @@cHELP RULES@@N    — the rules
+  @@cHELP IMM@@N      — staff and how to reach them
 
 @@b---------------------------------------------------------------------@@N
-
 @@N  @@eNo ward unlit.  No traveler uncounted.  No judgment hidden.@@N
-
-@@R        +----------------------------------------------------------+@@N
