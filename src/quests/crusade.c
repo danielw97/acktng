@@ -38,7 +38,7 @@
 
 /**** Local Functions ****/
 CHAR_DATA *get_quest_target args((int min_level, int max_level));
-CHAR_DATA *get_quest_giver args((int min_level, int max_level));
+CHAR_DATA *get_quest_giver args((void));
 OBJ_DATA *load_quest_object args((CHAR_DATA * target));
 int quest_is_valid_crusade_mobile args((CHAR_DATA * target, int min_level, int max_level));
 void clear_crusade args((void));
@@ -47,8 +47,6 @@ void quest_set_crusade_level_range_for_tier args((sh_int tier, int *minimum_leve
                                                   int *maximum_level));
 void quest_set_effective_crusade_level_range args((sh_int tier, int highest_level_in_range,
                                                    int *minimum_level, int *maximum_level));
-int crusade_level_cap_for_range args((int range_minimum, int range_maximum,
-                                      int highest_level_in_range));
 static void crusade_finalize_quest_start args((void));
 static void start_ai_crusade_generation args((void));
 static void crusade_build_conversation_context args((void));
@@ -164,28 +162,7 @@ void quest_set_crusade_level_range_for_tier(sh_int tier, int *minimum_level, int
 void quest_set_effective_crusade_level_range(sh_int tier, int highest_level_in_range,
                                              int *minimum_level, int *maximum_level)
 {
-   int capped_max;
-
    quest_set_crusade_level_range_for_tier(tier, minimum_level, maximum_level);
-
-   if (minimum_level == NULL || maximum_level == NULL)
-      return;
-
-   if (highest_level_in_range <= 0)
-      return;
-
-   capped_max = crusade_level_cap_for_range(*minimum_level, *maximum_level, highest_level_in_range);
-   *maximum_level = capped_max;
-}
-
-int crusade_level_cap_for_range(int range_minimum, int range_maximum, int highest_level_in_range)
-{
-   int cap_level;
-
-   cap_level = UMIN(range_maximum, highest_level_in_range + 20);
-   cap_level = UMAX(range_minimum, cap_level);
-
-   return cap_level;
 }
 
 void quest_note_player_crusade_range(int pseudo_level, int *highest_mortal, int *highest_remortal,
@@ -623,11 +600,10 @@ void do_iquest(CHAR_DATA *ch, char *argument)
    if (!strcmp(argument, "start"))
    {
       DESCRIPTOR_DATA *d;
-      int a = 80;
+      int a = 0;
       int b = 0;
       sh_int player_count = 0, average_level = 0, total_levels = 0;
-      int highest_mortal = 0, highest_remortal = 0, highest_adept = 0;
-      int highest_level_for_range = 0;
+      sh_int tier;
 
       /*
        * generate a new quest!
@@ -649,55 +625,31 @@ void do_iquest(CHAR_DATA *ch, char *argument)
        */
       for (d = first_desc; d; d = d->next)
       {
-         int pseudo_level;
-
          if ((d->connected != CON_PLAYING) || (d->character == NULL) || (IS_IMMORTAL(d->character)))
             continue;
          player_count += 1;
          total_levels += d->character->level;
-
-         pseudo_level = get_psuedo_level(d->character);
-         quest_note_player_crusade_range(pseudo_level, &highest_mortal, &highest_remortal,
-                                         &highest_adept);
       }
       average_level =
           (((total_levels == 0) ? 30 : total_levels) / ((player_count == 0) ? 1 : player_count));
-      a = average_level - 20;
-      b = average_level + 20;
-      quest_mob = get_quest_giver(a, b);
-      if (quest_mob == NULL)
-      {
-         send_to_char("Failed to find a quest mob\n\r", ch);
-         return;
-      }
-      quest_personality = quest_tier_from_level(quest_mob->level);
 
-      if (quest_personality == 1)
-         highest_level_for_range = highest_mortal;
-      else if (quest_personality == 2)
-         highest_level_for_range = highest_remortal;
-      else
-         highest_level_for_range = highest_adept;
-
-      quest_set_effective_crusade_level_range(quest_personality, highest_level_for_range, &a, &b);
-
+      tier = quest_tier_from_level(average_level);
+      quest_set_crusade_level_range_for_tier(tier, &a, &b);
       quest_level_min = a;
       quest_level_max = b;
 
-      if ((quest_mob->level < a) || (quest_mob->level > b))
-      {
-         quest_mob = get_quest_giver(a, b);
-         if (quest_mob == NULL)
-         {
-            send_to_char("Failed to find a quest mob\n\r", ch);
-            return;
-         }
-      }
-
       quest_target = get_quest_target(a, b);
-      if ((quest_target == NULL) || (quest_target == quest_mob))
+      if (quest_target == NULL)
       {
          send_to_char("Failed to find a quest target\n\r", ch);
+         return;
+      }
+      quest_personality = quest_tier_from_level(quest_target->level);
+
+      quest_mob = get_quest_giver();
+      if (quest_mob == NULL || quest_mob == quest_target)
+      {
+         send_to_char("Failed to find a quest mob\n\r", ch);
          return;
       }
       quest_object = load_quest_object(quest_target);
@@ -842,45 +794,37 @@ OBJ_DATA *load_quest_object(CHAR_DATA *target)
    return object;
 }
 
-CHAR_DATA *get_quest_giver(int min_level, int max_level)
+CHAR_DATA *get_quest_giver(void)
 {
-   CHAR_DATA *target;
-   int min_index = 0;
+   CHAR_DATA *candidates[256];
+   int count = 0;
+   CHAR_DATA *t;
 
-   /*   int max_distance = 20; unused */
-   /*   char *dirs = NULL; unused */
-   min_index = number_range(0, 1000);
-
-   for (target = first_char; target != NULL; target = target->next)
+   for (t = first_char; t != NULL; t = t->next)
    {
-      if (!IS_NPC(target))
+      if (!IS_NPC(t))
          continue;
-      min_index -= 1;
-
-      if (min_index > 0)
+      if (!IS_SET(t->act, ACT_AI_DIALOGUE))
          continue;
-
-      /*
-       * Check if mobile is suitable for the quest -
-       * Ignore mobs that are likely to be in well known places, such
-       * as train/prac mobs, healers, etc
-       */
-
-      if ((target->level < min_level) || (target->level > max_level) ||
-          (IS_SET(target->in_room->area->flags, AREA_NOSHOW)) ||
-          (IS_SET(target->act, ACT_SENTINEL)) || (IS_SET(target->act, ACT_PET)) ||
-          (IS_SET(target->act, ACT_INVASION)) ||
-          (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_stephen")) ||
-          (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_tax_man")))
-
+      if (IS_SET(t->in_room->area->flags, AREA_NOSHOW))
          continue;
-      {
-         if (number_percent() < 2)
-            break;
-      }
+      if (IS_SET(t->act, ACT_SENTINEL))
+         continue;
+      if (IS_SET(t->act, ACT_PET))
+         continue;
+      if (IS_SET(t->act, ACT_INVASION))
+         continue;
+      if (!str_cmp(rev_spec_lookup(t->spec_fun), "spec_stephen"))
+         continue;
+      if (!str_cmp(rev_spec_lookup(t->spec_fun), "spec_tax_man"))
+         continue;
+      if (count < 256)
+         candidates[count++] = t;
    }
 
-   return target;
+   if (count == 0)
+      return NULL;
+   return candidates[number_range(0, count - 1)];
 }
 
 /* =========================================================================
@@ -1500,13 +1444,9 @@ void generate_auto_crusade()
    int hunt_flags = 0;
    sh_int loop_counter = 0;
 
-   int a = 170;
+   int a = 0;
    int b = 0;
    sh_int player_count = 0;
-   int highest_mortal = 0;
-   int highest_remortal = 0;
-   int highest_adept = 0;
-   int highest_level_for_range = 0;
    bool has_mortal = FALSE;
    bool has_remortal = FALSE;
    bool has_adept = FALSE;
@@ -1538,9 +1478,6 @@ void generate_auto_crusade()
       player_count += 1;
       pseudo_level = get_psuedo_level(d->character);
 
-      quest_note_player_crusade_range(pseudo_level, &highest_mortal, &highest_remortal,
-                                      &highest_adept);
-
       if (pseudo_level <= 100)
          has_mortal = TRUE;
       else if (pseudo_level <= 149)
@@ -1571,51 +1508,15 @@ void generate_auto_crusade()
    selected_range = available_ranges[number_range(0, available_count - 1)];
 
    if (selected_range == 1)
-   {
-      highest_level_for_range = highest_mortal;
       hunt_flags = HUNT_WORLD | HUNT_OPENDOOR;
-   }
    else if (selected_range == 2)
-   {
-      highest_level_for_range = highest_remortal;
       hunt_flags = HUNT_WORLD | HUNT_OPENDOOR | HUNT_PICKDOOR;
-   }
    else
-   {
-      highest_level_for_range = highest_adept;
       hunt_flags = HUNT_WORLD | HUNT_OPENDOOR | HUNT_PICKDOOR | HUNT_UNLOCKDOOR;
-   }
 
-   quest_personality = selected_range;
-   quest_set_effective_crusade_level_range(selected_range, highest_level_for_range, &a, &b);
-
-   while ((quest_mob == NULL) && (loop_counter < 500))
-   {
-      loop_counter++;
-      quest_mob = get_quest_giver(a, b);
-      if ((quest_mob == NULL) ||
-          ((h_find_dir(get_room_index(ROOM_VNUM_TEMPLE), quest_mob->in_room, hunt_flags) < 0)))
-         quest_mob = NULL;
-   }
-
-   if (quest_mob == NULL)
-   {
-      quest = FALSE;
-      quest_wait = number_range(1, 3);
-      return;
-   }
-
-   quest_set_effective_crusade_level_range(selected_range, highest_level_for_range, &a, &b);
-
+   quest_set_crusade_level_range_for_tier(selected_range, &a, &b);
    quest_level_min = a;
    quest_level_max = b;
-
-   if ((quest_mob->level < a) || (quest_mob->level > b))
-   {
-      quest = FALSE;
-      quest_wait = number_range(1, 3);
-      return;
-   }
 
    loop_counter = 0;
    while ((quest_target == NULL) && (loop_counter < 500))
@@ -1623,8 +1524,7 @@ void generate_auto_crusade()
       loop_counter++;
       quest_target = get_quest_target(a, b);
       if ((quest_target == NULL) ||
-          ((h_find_dir(get_room_index(ROOM_VNUM_TEMPLE), quest_target->in_room, hunt_flags) < 0)) ||
-          (quest_target == quest_mob))
+          ((h_find_dir(get_room_index(ROOM_VNUM_TEMPLE), quest_target->in_room, hunt_flags) < 0)))
          quest_target = NULL;
    }
 
@@ -1634,6 +1534,23 @@ void generate_auto_crusade()
       quest_wait = number_range(1, 3);
       return;
    }
+   quest_personality = quest_tier_from_level(quest_target->level);
+
+   quest_mob = get_quest_giver();
+   if (quest_mob == NULL || quest_mob == quest_target)
+   {
+      quest = FALSE;
+      quest_wait = number_range(1, 3);
+      return;
+   }
+
+   if (h_find_dir(get_room_index(ROOM_VNUM_TEMPLE), quest_mob->in_room, hunt_flags) < 0)
+   {
+      quest = FALSE;
+      quest_wait = number_range(1, 3);
+      return;
+   }
+
    quest_object = load_quest_object(quest_target);
    if (quest_object == NULL)
    {
