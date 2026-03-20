@@ -1,8 +1,0 @@
-level -1
-keywords negotiate
----
-Syntax: negotiate <clan number> <peace|war|end>
-
-Clan diplomat command for changing diplomacy with another clan.
-
-Only clan diplomats can use this command.

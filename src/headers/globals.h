@@ -380,7 +380,6 @@ DECLARE_DO_FUN(do_rename);
 
 DECLARE_DO_FUN(do_sdelete);
 
-DECLARE_DO_FUN(do_accept);
 DECLARE_DO_FUN(do_adapt);
 DECLARE_DO_FUN(do_affected);
 DECLARE_DO_FUN(do_afk);
@@ -393,7 +392,6 @@ DECLARE_DO_FUN(do_assist);
 DECLARE_DO_FUN(do_bamfin);
 DECLARE_DO_FUN(do_bamfout);
 DECLARE_DO_FUN(do_bank);
-DECLARE_DO_FUN(do_banish);
 DECLARE_DO_FUN(do_bash);
 DECLARE_DO_FUN(do_beep);
 DECLARE_DO_FUN(do_beserk);
@@ -412,7 +410,6 @@ DECLARE_DO_FUN(do_colist);
 DECLARE_DO_FUN(do_color);
 DECLARE_DO_FUN(do_creator);
 DECLARE_DO_FUN(do_cset);
-DECLARE_DO_FUN(do_cwhere);
 DECLARE_DO_FUN(do_deathmatc);
 DECLARE_DO_FUN(do_deathmatch);
 DECLARE_DO_FUN(do_diagnose);
@@ -446,10 +443,7 @@ DECLARE_DO_FUN(do_resetpassword);
 DECLARE_DO_FUN(do_iscore);
 DECLARE_DO_FUN(do_isnoop);
 DECLARE_DO_FUN(do_iwhere);
-DECLARE_DO_FUN(do_leav);
-DECLARE_DO_FUN(do_leave);
 DECLARE_DO_FUN(do_lhunt);
-DECLARE_DO_FUN(do_make);
 DECLARE_DO_FUN(do_monitor);
 DECLARE_DO_FUN(do_mpcr);
 DECLARE_DO_FUN(do_music);
@@ -484,7 +478,6 @@ DECLARE_DO_FUN(do_zzz);
 DECLARE_DO_FUN(do_listspells);
 DECLARE_DO_FUN(do_reward);
 DECLARE_DO_FUN(do_togcouncil);
-DECLARE_DO_FUN(do_council);
 DECLARE_DO_FUN(do_rename);
 DECLARE_DO_FUN(do_sdelete);
 DECLARE_DO_FUN(do_warcry);
@@ -771,13 +764,6 @@ DECLARE_DO_FUN(do_enchant);
 DECLARE_DO_FUN( do_teach      );
 */
 
-/*
- *  NEW CLAN COMMANDS (ZEN)
- */
-
-DECLARE_DO_FUN(do_ctoggle);
-DECLARE_DO_FUN(do_politics);
-DECLARE_DO_FUN(do_negotiate);
 
 /*
  *   New Channels (ZEN)
