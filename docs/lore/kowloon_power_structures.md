@@ -124,7 +124,7 @@ Referenced in Kowloon's Ash Cult context as a voice of the cult's theological po
 Central supply coordination point managed by a descendant of House Vao's grain wardens. Stocks patrol rations, signal equipment, watch candles, and emergency medical supplies issued to Warden units.
 
 ### Warden's Arch of Confusion Watch
-Commemorates patrols lost to wildland surges from Evermeet's final years. Battle plaques line the inner parapet wall, each bearing a unit name and a year. The iron tablet at the base is crowded with entries spanning decades of patrol losses.
+Commemorates patrols lost to wildland surges from Evermeet's final years. Battle plaques line the inner parapet wall, each bearing a unit name and a year. The iron tablet at the base is crowded with entries spanning decades of patrol losses. The surges began when Evermeet's Merchant Council defunded frontier garrison operations — creature pressure from the western forest margins expanded outward as the outer wards were abandoned, and the resulting wildland encroachment affected patrol corridors across a wide radius. Kowloon's road-watch operations, synchronized with Midgaard's during the Lantern-Delta Expansion, brought Warden patrols into the affected region. The Arch records not just the names but the years — a forty-year span from first outer-ward abandonment to final city collapse, the duration visible in the iron tablet's crowded entries. See `kiess_lore.md` for the full account of Evermeet's staged collapse.
 
 ### Wall Command
 Sentries rotate in four-hour shifts. Parapet stones bear the carved insignia of Wall Command's founding charter. Warden patrol marks scratched into stone railings record completed circuits. Signal lantern hooks line the inner parapet.

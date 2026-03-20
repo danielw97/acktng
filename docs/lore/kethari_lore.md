@@ -177,6 +177,24 @@ Practical contact between the two peoples is infrequent — their native territo
 
 See also: `serathi_lore.md`, `saltglass_reach_lore.md`
 
+### Salt Ledger Era: The Aquifer Covenant and Desert Trade
+
+The Kethari's recorded history extends through the Salt Ledger Kingdoms — the crystalline-tablet dynasties whose road network was the dominant trade infrastructure of the eastern corridor for several centuries. The relationship predated those Kingdoms: the Aquifer Covenant governing Deepwell Confluence water claims was Kethari law before any human institution existed to recognize or contest it, and the Kings inherited it as a constraint they spent generations negotiating around.
+
+**Trading relationship:** What the Kethari traded: subsurface water access beyond the Deepwell Confluence's public springs, knowledge of secondary aquifer fractures that surface surveys had failed to locate, coastal goods from Saltglass tidemouth communities, and crystalline salt compounds extracted from subsurface mineral deposits — higher-purity salt than surface mines produced. What the Kings offered: surface goods, formal legal recognition of Kethari territorial claims along the Reach, and protection from charter road militias. The Shoreward Assessors built their translation protocols partly to handle Kethari goods, which required specialist clerks who understood both surface commercial law and Kethari covenant frameworks.
+
+The relationship was never equal. The Kethari held the aquifer; the Kings held the roads. Neither could afford to break the other. This mutual dependency produced a negotiating tradition the Kethari maintained long after the Kingdoms collapsed — the habit of dealing with surface powers from a position of knowledge-leverage rather than territorial force. It is why the Kethari survived the Charter Wars intact when surface-dependent peoples did not.
+
+**After the Ninth Meridian Collapse:** The Kethari were better positioned than anyone to survive, and they did — but not without cost. The Aquifer Covenant's legal framework had always been independent of Salt Ledger institutional backing, and the insistence on that independence proved correct. When the Kings' legal apparatus ceased to function, Kethari subsurface territorial claims did not become contested in the way surface claims did. The covenant was older than the Kings and outlasted them.
+
+What the Kethari lost was the surface economy that had made their subsurface access commercially valuable. The markets that paid premium prices for high-purity mineral salt dried up as provisioning networks collapsed. The transition from commercial partner to independent subsurface community required a generation of adjustment — a period the water-memory archives record with unusual specificity, cataloguing the closing of each surface trading relationship and the internal decisions made about what to maintain versus what to abandon.
+
+The Collapse also ended Kethari involvement in the Shoreward Assessors' translation infrastructure. The specialist clerks who had handled Kethari goods — bilingual intermediaries who understood both surface commercial law and Kethari covenant frameworks — lost their institutional context when the Assessors' offices closed. Some became independent brokers; others joined Kethari communities directly. The translation knowledge dispersed rather than disappeared, which is why later researchers have been able to reconstruct so much of the Assessors' methodology: fragments survived in too many hands to be lost entirely.
+
+**The Week of Impossible Dawns:** During the Black Sun Shard's near-containment-failure (Era VIII), the Kethari came closest of any external community to a correct interpretation — not because they understood the obelisk network but because their subsurface orientation gave them data others lacked. The aquifer resonance recorded during the seven anomalous mornings matched patterns the water-memory archives associated with large-scale geological events, but with an atypical regularity: seven mornings, not random, with a consistent resonance pattern that geological events do not produce. Several Kethari archivists produced analyses suggesting artificial rather than geological origin. They were correct in this conclusion and incorrect about nearly everything else — their best guess for the artificial cause was a large-scale Deltari agricultural engineering project they had heard about secondhand.
+
+The anomaly entries in water-memory archives from this period are unusually dense with self-corrections and amended readings, reflecting genuine analytical effort applied to phenomena outside the frameworks available to the recorders. Kethari communities near aquifer fractures also reported unusual water-sound during the anomalous mornings, suggesting the obelisk network's emergency reconfiguration propagated through geological substrate as well as atmosphere.
+
 ---
 
 ## Narrative Tone

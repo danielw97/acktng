@@ -122,6 +122,22 @@ Khephari communities near the Cinderteeth and Serathi sky-road communities that 
 
 See also: `serathi_lore.md`
 
+### Salt Ledger Era: Ochre Basin Trade and Its Aftermath
+
+The Khephari were not a unified people in the way their trading partners were. The name is a Salt Ledger administrative designation — a single entry in the Shoreward Assessors' classification system for a loose cluster of communities in the Ochre Basin who shared material culture and trade habits without sharing governance. Individual communities identified by their nearest water feature or ancestral lineage marker. The administrative category was the Kingdoms' invention; the communities it described had existed long before it.
+
+**Trading relationship:** What the Khephari traded: processed ochre pigments used in ritual contexts across the Salt Ledger Kingdoms (the staged mineral extraction technique produced a purer colorant than simple grinding could achieve, requiring less binder to adhere properly), ceramic goods fired in techniques not available in the desert (the particular silicate composition of Ochre Basin clay produced a fired surface the Kings' court workshops could not replicate), sun-dried fish from seasonal lake pools, and medicinal plants with documented therapeutic properties. What the Kings offered: salt (the Khephari had no reliable local salt source), metal tools, and road access. Road permits were controlled by the Kings' infrastructure administration and could be granted, restricted, or revoked — the Khephari traded partly under the shadow of that leverage.
+
+The Khephari communities fragmented further during the Charter Wars, when road access was disrupted and the market for their goods contracted sharply. Some communities survived by redirecting trade through Kethari subsurface corridors. Others did not survive as distinct communities at all, absorbed into larger regional populations. The Shoreward Assessors' classification system outlasted the people it classified — the administrative category "Khephari" persisted in bureaucratic records for two generations after the communities it described had ceased to exist in recognizable form.
+
+**After the Ninth Meridian Collapse:** The fragmentation that had begun during the Charter Wars accelerated sharply. The road-permit leverage that the Kings had held over Ochre Basin communities evaporated along with the administrative apparatus that enforced it — but this did not help the Khephari, because the markets those permits had provided access to also ceased to function. The removal of the constraint and the removal of the opportunity arrived simultaneously.
+
+Communities that had already established Kethari subsurface corridor access survived better than those that had not. The ochre pigment trade found a partial replacement market through Kethari intermediaries. The ceramic goods trade had no equivalent replacement — the specific market for Ochre Basin ceramics had been court-driven, and without the court, it disappeared.
+
+Two Khephari communities are documented as having survived the Collapse as distinct social units. The rest are not. The ochre processing techniques they had developed were partially preserved — Kethari communities that incorporated Khephari traders maintained some of the methodology — but the full specialized knowledge of staged mineral extraction was not reconstructed until much later, and the reconstruction was imperfect.
+
+**The Week of Impossible Dawns:** The two surviving Khephari communities left fragmentary accounts of the Black Sun Shard's near-containment-failure through the Kethari intermediary network. Both reported the visual effects — the column of light at the eastern horizon, the anomalous dawn colors — and the animal behavioral disruption. Neither attempted formal interpretation. One account, preserved in Kethari water-memory translation, states that the eastern sky was wrong for seven mornings and then was right again, and that the elders said it was something from the deep desert that had nearly gotten out. This account is anomalously accurate in its conclusion. Whether it reflects genuine knowledge, inherited tradition, or a reasonable inference from the observable evidence is not clear.
+
 ---
 
 ## Narrative Tone
