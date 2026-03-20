@@ -1,4 +1,4 @@
-# Design Proposal: Area-Specific Music — Midgaard
+# Design Proposal: Area-Specific Music — Midgaard and Kiess
 
 **Date:** 2026-03-20
 **Status:** Pending approval
@@ -7,28 +7,70 @@
 
 ## 1. Problem
 
-The web client currently plays `theme.mp3` immediately after the WebSocket handshake (implemented in `socket.c`). The request is to additionally play `midgaard.mp3` whenever the player is in the **Midgaard City Center** area, and revert to `theme.mp3` when they leave.
+The web client currently plays `theme.mp3` immediately after the WebSocket handshake (implemented in `socket.c`). The request is to play area-specific music for two areas:
 
-The feature must:
+| Area | Music |
+|---|---|
+| Midgaard City Center (`midgaard.are`, `midgaard_shops.are`) | `midgaard.mp3` |
+| Kiess (`kiess.are`) | `kiess.mp3` |
+
+All other areas continue playing `theme.mp3`. The feature must:
 - Only affect WebSocket connections (never plain telnet)
 - Not re-send the music command on every room step — only on area transitions
-- Switch back to `theme.mp3` when leaving Midgaard
+- Revert to `theme.mp3` when the player leaves a themed area
+
+**Note:** `kiess.mp3` does not yet exist in `web/mp3/`. It must be placed there before the feature is live.
 
 ---
 
 ## 2. Approach
 
-### 2.1 Tracking State
+### 2.1 Area Detection via Filename
 
-A single boolean field `websocket_in_midgaard` is added to `DESCRIPTOR_DATA`. It is initialised to `FALSE` in `init_descriptor()`. On each room change for a PC WebSocket client, the field is compared against the destination area; a music command is sent only when the value changes (i.e. on the transition, not every step).
+Area names in the file format may include color codes (e.g. Kiess is stored as `@@W@@BKiess@@N`), making name-string comparison fragile. `AREA_DATA->filename` is set from `area.lst` and is always a plain filename with no color codes, making it the reliable identifier:
 
-Using a boolean (rather than a `char *current_music_url`) keeps the change minimal and avoids string allocation bookkeeping.
+- Midgaard: `area->filename` is `"midgaard.are"` or `"midgaard_shops.are"`
+- Kiess: `area->filename` is `"kiess.are"`
 
-### 2.2 Midgaard Detection
+### 2.2 Music URL Constants
 
-The Midgaard area is identified by comparing `ch->in_room->area->name` against the string `"Midgaard City Center"` (the name loaded from the `#AREA` block of `midgaard.are`). This is preferred over a vnum range check because the area pointer is already set on `ROOM_INDEX_DATA` and the name is the canonical human-readable identifier.
+Three static string constants are defined in `socket.c`:
 
-### 2.3 Music Dispatch — `send_music_play()` in `socket.c`
+```c
+static const char MUSIC_THEME[]    = "/web/mp3/theme.mp3";
+static const char MUSIC_MIDGAARD[] = "/web/mp3/midgaard.mp3";
+static const char MUSIC_KIESS[]    = "/web/mp3/kiess.mp3";
+```
+
+A helper `music_url_for_area()` maps an `AREA_DATA *` to the appropriate constant pointer:
+
+```c
+static const char *music_url_for_area(AREA_DATA *area)
+{
+    if (area == NULL)
+        return MUSIC_THEME;
+    if (!str_cmp(area->filename, "midgaard.are") ||
+        !str_cmp(area->filename, "midgaard_shops.are"))
+        return MUSIC_MIDGAARD;
+    if (!str_cmp(area->filename, "kiess.are"))
+        return MUSIC_KIESS;
+    return MUSIC_THEME;
+}
+```
+
+### 2.3 Tracking State
+
+`DESCRIPTOR_DATA` gains one field:
+
+```c
+const char *websocket_current_music; /* points to a MUSIC_* constant, or NULL */
+```
+
+Initialised to `NULL` in `init_descriptor()`. Because this always points to a static constant (never a heap string), no `free_string` bookkeeping is needed.
+
+Change detection uses pointer equality — same constant pointer means same track, no command needed.
+
+### 2.4 Music Dispatch — `send_area_music()` in `socket.c`
 
 The existing inline music command in `handle_websocket_handshake()` is extracted into a static helper:
 
@@ -42,18 +84,18 @@ static void send_music_play(DESCRIPTOR_DATA *d, const char *url)
 }
 ```
 
-`handle_websocket_handshake()` is updated to call `send_music_play(d, "/web/mp3/theme.mp3")` in place of the inline code (no behaviour change there).
+`handle_websocket_handshake()` is updated to call `send_music_play(d, MUSIC_THEME)` and set `d->websocket_current_music = MUSIC_THEME` in place of the inline code.
 
 A new public function `void send_area_music(CHAR_DATA *ch)` is added to `socket.c` and declared in `socket.h`. It:
 
-1. Returns immediately if `ch` is an NPC or has no descriptor or is not WebSocket-active.
-2. Determines whether the player is now in Midgaard: `in_midgaard = !str_cmp(ch->in_room->area->name, "Midgaard City Center")`.
-3. Compares against `ch->desc->websocket_in_midgaard`.
-4. If the value changed, calls `send_music_play()` with the appropriate URL and updates the flag.
+1. Returns immediately if `ch` is an NPC, has no descriptor, or is not WebSocket-active.
+2. Calls `music_url_for_area(ch->in_room->area)` to determine the correct track.
+3. Compares the result against `ch->desc->websocket_current_music` by pointer.
+4. If they differ, calls `send_music_play()` with the new URL and updates `websocket_current_music`.
 
-### 2.4 Hook Point — `char_to_room()` in `handler.c`
+### 2.5 Hook Point — `char_to_room()` in `handler.c`
 
-`char_to_room()` is the single place where `ch->in_room` is updated. At the end of the function (after the room assignment and all existing side-effects), a call to `send_area_music(ch)` is added. Because `char_to_room()` is called for both PCs and NPCs, the NPC guard in `send_area_music()` keeps it a no-op for mobs.
+`char_to_room()` is the single place where `ch->in_room` is updated, covering movement, teleports, spell effects, and mob resets. A call to `send_area_music(ch)` is added at the end of the function. The NPC guard in `send_area_music()` keeps it a no-op for mobs.
 
 ---
 
@@ -61,28 +103,32 @@ A new public function `void send_area_music(CHAR_DATA *ch)` is added to `socket.
 
 | File | Change |
 |---|---|
-| `src/headers/ack.h` | Add `bool websocket_in_midgaard;` to `struct descriptor_data` |
-| `src/socket.c` | Extract `send_music_play()` helper; add `send_area_music()` function |
+| `src/headers/ack.h` | Add `const char *websocket_current_music;` to `struct descriptor_data` |
+| `src/socket.c` | Add `MUSIC_*` constants; extract `send_music_play()`; add `music_url_for_area()`; add `send_area_music()`; update handshake to use them |
 | `src/headers/socket.h` | Declare `void send_area_music(CHAR_DATA *ch);` |
-| `src/handler.c` | Call `send_area_music(ch)` at the end of `char_to_room()` |
+| `src/handler.c` | Call `send_area_music(ch)` at end of `char_to_room()` |
+| `web/mp3/kiess.mp3` | Must be provided and placed here before the feature is live |
 
-No changes to area files, help files, Makefile, or web templates are required. The `midgaard.mp3` file already exists at `web/mp3/midgaard.mp3` and the web server already serves `/web/mp3/` files.
+No changes to area files, help files, Makefile, or web templates are required. `midgaard.mp3` already exists; the web server already serves `/web/mp3/`.
 
 ---
 
 ## 4. Trade-offs and Constraints
 
-**Why `char_to_room()` and not movement commands in `act_move.c`?**
-`char_to_room()` is the single canonical point where `ch->in_room` changes, covering teleports, spell effects, mob resets, and normal movement. Hooking movement commands would miss many transition paths.
+**Why `area->filename` and not `area->name`?**
+The Kiess area name contains color codes (`@@W@@BKiess@@N`). Filenames are always plain ASCII from `area.lst` — no stripping required.
 
-**Why a boolean and not the URL string?**
-There are only two states: Midgaard music or theme music. A boolean avoids string allocation and `free_string` bookkeeping in `DESCRIPTOR_DATA`. If more areas are added later, the boolean can be replaced with an enum or `char *` at that point.
+**Why a `const char *` pointer and not a boolean or enum?**
+Two area-specific tracks plus the default makes three states. A pointer to a static constant handles any number of future areas without adding new fields or extending an enum. Pointer comparison is O(1) and allocation-free.
 
-**What plays if the player logs out and back in while in Midgaard?**
-The flag is initialised to `FALSE` on each new descriptor. The handshake unconditionally sends `theme.mp3`. Once the player enters the game and their room is restored, `char_to_room()` is called, `send_area_music()` fires, and `midgaard.mp3` starts — correct behaviour, slight delay.
+**Both Midgaard area files play the same music?**
+Yes. `midgaard_shops.are` is part of the Midgaard city experience and should share its music.
 
-**No stop command sent on disconnect.**
-The browser drops the WebSocket on disconnect, which stops audio naturally. No explicit stop message is needed.
+**What plays on login if the player's saved room is in Midgaard or Kiess?**
+The handshake sends `theme.mp3` unconditionally (before the character is loaded). When `char_to_room()` is called to restore the player's room, `send_area_music()` fires immediately and switches to the area track. There is a brief moment of theme music during login — acceptable.
+
+**No stop command on disconnect.**
+The browser drops the WebSocket on disconnect, which pauses audio naturally.
 
 **Telnet safety.**
-`send_area_music()` checks `d->websocket_active` before doing anything, so plain telnet connections are unaffected.
+`send_area_music()` checks `d->websocket_active` before doing anything.
