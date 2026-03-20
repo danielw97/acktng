@@ -1,7 +1,0 @@
-level -1
-keywords shelp
----
-*******************************************************************************
-Use `shelp <spell or skill name>` to read a specific spell/skill entry.
-Each entry shows class acquisition levels and a plain-language effect summary.
-*******************************************************************************
