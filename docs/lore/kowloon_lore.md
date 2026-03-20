@@ -30,6 +30,74 @@ The Covenant demanded three hard promises:
 
 The new city was raised on terraces, drainage vaults, and reinforced underways. Old villages were dismantled plank by plank, and their timber was recycled into a rectangular plan that could be patrolled, supplied, and defended in any season. The basalt outcrop became the foundation of the central square—the covenant stone still visible beneath the flagstones.
 
+### The Construction Years: Making the Covenant Real
+
+The Covenant had been signed on an outcrop with nothing yet built. The six houses had pledged their resources; the city was still a plan. Closing the gap between the promise and the physical reality required three years of construction work, and those three years produced the first constitutional arguments Kowloon ever had — disputes that shaped the city's institutional character as firmly as the Covenant text itself.
+
+#### The Rectangular Plan
+
+Three competing visions for the city's layout emerged immediately:
+
+**House Ohn-Sek** — the Iron Hands — proposed a fortified-ring design: a circular outer wall with radial roads leading to a central keep. The approach optimized for defense in all directions. Its weakness was commercial: a radial layout makes some districts twice as far from the harbor as others, imposing unequal transit costs on any commercial operation not located along a favored radial.
+
+**House Tahn-Rei** — the Ferry Masters — proposed a harbor-facing crescent: the city's curve following the Coppersalt Bay shoreline, maximizing water access for every district. The approach optimized for the ferry and shipping operations that Tahn-Rei controlled. Its weakness was security: a crescent's open side faces the inland, and inland is where threats came from during the Ashfall years.
+
+**House Jien** — the Jade Clerks — proposed the rectangular grid: predictable streets, clear zone assignments, consistent block widths, and a central square accessible from every district in roughly equal time. The proposal was made by **Kael Jien**, the Clerks' senior representative, on a single principle: *a city that cannot be counted cannot be governed*. A grid can be audited. Districts can be enumerated. Movement can be tracked. Threat concentrations can be identified. A ring or a crescent introduces ambiguity that record-keeping cannot resolve.
+
+The grid won, carrying the tribunal vote three seats to two with one abstention (House Mei-Lao's Temple Wardens abstained, noting that their sanctuary jurisdiction did not depend on street geometry). The argument that carried it was not military or commercial but administrative: the Jade Clerks' case was that every other governance challenge the city would face — rationing, policing, census, emergency response — would be made harder by an unpredictable layout and easier by a predictable one. Kowloon's current form is Kael Jien's design.
+
+#### The Deltari Contractors
+
+The six houses had resources and institutional authority but not the hydraulic engineering knowledge that the delta's conditions required. The Jhen River's channels shifted seasonally. Specific soil deposits would bear structural weight; others would not. Drainage vaults needed to be positioned according to subsurface water-flow patterns that took generations to learn.
+
+This knowledge belonged to the **Deltari** communities of the Shallow Thousand — the delta's oldest residents, who had maintained its water infrastructure since before any of the six houses had organized identities. The Covenant's first major infrastructure decision was to hire Deltari communities as contractors: paying them in grain rations and later in coin for the expertise that made the rectangular plan buildable.
+
+**Bai-Reth of House Vao** drafted the grain-payment framework; **Lan Qo** of the Lantern Runners conducted the initial census of Deltari contractors to establish payment rolls. The Deltari surveys of subsurface drainage conditions determined where the vaults could go and where they could not — decisions that shaped the grid's final layout more than Kael Jien's geometric preferences.
+
+The arrangement established a template. The Deltari were paid. They were consulted. They were essential. They were not invited into governance. The Jade Magistracy's founding-era labor records document Deltari workers by name, by task, and by payment received. They do not document Deltari workers as civic participants, as potential signatories to governance provisions, or as holders of any interest in the city they were building. The six houses did not discuss whether to include them. The question did not arise in the tribunal record. The Deltari's role ended when the drainage vaults were built; their expertise was then owned by the city's construction records rather than by the community that had produced it.
+
+This is the earliest version of what became Kowloon's labor-without-governance structure. It preceded the Ashborn situation by approximately one generation and established the institutional logic that the Ashborn founding dispute would later have to argue against. See also: `ashborn_kowloon_founding_dispute_lore.md`.
+
+#### The Grain Claim Dispute
+
+The second monsoon season arrived before the drainage vaults were complete. An early storm system pushed the Jhen River's channels into the southern construction terraces, flooding the incomplete lower wards before the evacuation bell had been sounded. **Durr of House Ohn-Sek**, the construction commander, invoked the Covenant's emergency defense provision — which authorized urgent resource commandeering to prevent structural failure — and took grain from House Vao's sealed emergency stores. The grain was distributed to displaced construction workers; the flooding was contained; the construction continued. No one went hungry. The invocation of emergency authority was, by every practical measure, correct.
+
+But Durr had moved the grain without documentation. No ledger entry. No Jade Clerk signature. No weighing record.
+
+When **Bai-Reth of Vao** sought restitution — the Covenant's "one ledger" principle implied that any civic transfer was accountable — there was nothing to point to except witness testimony. The grain was consumed; the record did not exist; House Vao's stores were smaller than they had been, and no document explained why.
+
+The dispute went to the covenant stone. This was the Covenant's third promise used in practice rather than in ceremony, less than two years after signing. The tribunal's resolution took three days of public argument and established three principles that remain in Kowloon's constitutional structure:
+
+First: emergency authority does not exempt the invoking party from documentation requirements; it merely permits action before documentation is complete, provided that documentation follows within one day's sun. Durr of Ohn-Sek had not followed within one day's sun. He had not followed at all.
+
+Second: undocumented transfers may be reconstructed from witness testimony, with the testimony recorded in triplicate and held by the Courier Lantern Office as the substitute ledger entry. Bai-Reth of Vao was compensated from this reconstructed record, but the reconstruction took thirty days and required testimony from eleven workers, all of whom had other things to do.
+
+Third: any future undocumented commandeering would be classified as a permanent transfer — a gift rather than a requisition — removing any claim to restitution from the commandeering party and any obligation of repayment from the receiving party. This provision was designed to make undocumented emergency action financially ruinous for the actor, creating the incentive for contemporaneous documentation that the Covenant's text alone had not created.
+
+The young Courier Lantern Office clerk who documented the tribunal proceedings added a margin note in the CLO's permanent record: *"this case will be cited in a century."* The note's author is identified only by initials — **K.Q.** — suggesting a Qo lineage connection. Whether Imani Qo-Sev, who would later formalize the Emergency Transparency Burden doctrine, was aware of this ancestor is not recorded. The doctrine she articulated and the case that seeded it are continuous in institutional memory even if the personal lineage is not. See also: the timeline's Era XIV entry on Syndic-Lector Imani Qo-Sev.
+
+#### Communities Outside the Walls
+
+Not all Shallow Thousand communities accepted incorporation into the rectangular plan. The grid required dismantling old village structures and relocating populations into district assignments. Some communities complied. Some negotiated terms and complied. Some refused.
+
+The refusals were handled differently by different houses. House Tahn-Rei offered channel access guarantees — continued right to use delta waterways that the Covenant now technically controlled — in exchange for relocation to grid districts. Most river-dependent communities accepted this trade. House Jien offered formal registration and legal standing inside the walls in exchange for compliance with the district assignment system. Most commercial communities accepted.
+
+What remained outside were communities with independent enough resource bases to decline what the Covenant offered — and communities that had been explicitly told they were not welcome.
+
+The latter category does not appear in the founding record's main body. It appears in the supplemental annex of the Courier Lantern Office's census archive — the same annex that the Jade Magistracy sealed during the Violet Compact Era. The CLO's first census, conducted by Lan Qo across the delta's remaining communities, records several groups as "classification pending: mixed composition, registration deferred." At least three of these communities had sheltered Ashfall-transformed survivors during the monsoon years. The grounds for registration deferral were not documented in the main census. They appear only in the sealed annex, in a notation that uses the administrative language of delay rather than refusal: "pending further classification standards review."
+
+The Ash Cult's reading of this notation is direct: the founding generation knew these communities existed, knew they included Ashborn survivors, and chose not to include them in the Covenant. The Jade Magistracy's reading is also direct: the Covenant was an emergency instrument convened between organized parties with established identities, and communities without recognized governance structures could not be party to governance negotiations. Both readings are correct within their own institutional frameworks, which is why the Founding Dispute has not been resolved in the eight generations since the notation was written.
+
+These outside communities became the demographic origin of Kowloon's extra-mural population — the delta wetlands' independent communities that have never fully aligned with city governance. The River Corsairs carry this origin. **Captain Blacktide Shen**'s exile reconnected a disgraced Tahn-Rei scion to channel communities that remember the founding from the outside of the walls, not the inside. The Corsairs' intimate knowledge of delta waterways is not criminal expertise; it is inherited knowledge from communities that built the city and were thanked by being told to live elsewhere.
+
+#### The First Generation's End
+
+The founding generation died largely within twenty years of the Covenant's signing. The Ashfall Monsoon had shortened lifespans across the delta; the construction period's physical demands shortened them further. The second generation inherited a functioning city — walls, drains, gates, grain stores, tribunal records — and a set of institutional promises they had not personally made or tested.
+
+This transition — from founding trauma to civic normalcy — is what the **Ashfall Vigil**'s annual hour of darkness was designed to interrupt. The founders understood that the second generation, having grown up inside walls rather than on a flooded outcrop, could not be assumed to feel the Ashfall's lessons viscerally. The ritual was designed to recreate, for one hour, the condition that had made the Covenant necessary: the darkness, the silence, the awareness that what the city protects against is still out there, and that the walls are not permanent — they are maintained.
+
+The Executioner strikes the covenant stone three times at the ritual's close. **Once for the dead. Once for the living. Once for those not yet born.** The founding generation wrote those words. The first generation to hear them was the second one — the people who had never stood on the outcrop, who knew the Ashfall only as a story, and who would be the city's stewards for the next fifty years.
+
 ### The Five Seats of Rule
 Over generations, the six founding houses dissolved into five civic institutions as intermarriage, succession crises, and institutional evolution blurred bloodline boundaries. Modern Kowloon is governed by:
 

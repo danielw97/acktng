@@ -4,11 +4,77 @@ Extracted from `kiess_plan.md`.
 
 ## Lore
 
+### Evermeet: History of the Predecessor City
+
+Evermeet predates Kiess by several centuries. It was the western terminus of Roc Road during the Lantern Reform era — not founded by design like Kiess would be, but grown organically around a fortified trade depot that caravans used as a staging point before or after the wilderness crossing. Over generations, the depot became a garrison town, the garrison town became a settlement, and the settlement became a city through the same accumulated investment that builds most frontier cities: people who went there for commercial reasons and stayed because leaving was harder than remaining.
+
+#### Evermeet at Its Height
+
+At its peak, Evermeet was the only major civic presence within a week's overland travel from the western forest margins. It served a genuine function: the frontier could not be commercially exploited without a city to process its products, provision its expeditions, and arbitrate the disputes that any commercial activity generates. Evermeet did all of these things, and for several generations did them adequately enough that the city grew rather than contracted.
+
+The city's districts, whose names now appear carved into waystones along Kiess's main avenues, were:
+
+- **First Reach** and **Second Reach** — the outermost wards, built during the expansion years for population overflow. They held the frontier-facing services: smithing operations running at scale, provisions warehousing for expeditions that couldn't afford Chandler Mile prices, and the transient worker housing that the outer garrison required. They were the wards that mattered least to the people who governed the city and most to the people who kept it functioning.
+- **Stoneback** — the garrison quarter on the western wall, where Wall Commander families lived across generations. Stoneback had its own internal culture — military lineages that had served the city for three and four generations, a civic identity distinct from the commercial interests that dominated the Merchant Council, and a genuine investment in the outer wards' survival that the Council did not share.
+- **The Chandler Mile** — the trade and provisioning artery: lamp oil, preserved goods, frontier equipment, and the caravan infrastructure that was Evermeet's primary commercial function. The Chandler Mile was what Roc Road travelers came for; its health was the city's commercial health.
+- **The Civic Hall Quarter** — administrative center, home to the civic hall whose deep cellars would eventually yield the Central Prism to Kiess's foundation excavations. The Quarter also housed Evermeet's trade magistracy — the formal arbitration apparatus that gave commercial relationships legal standing.
+- **The Merchant Spine** — the wealthy commercial core, elevated above the flood line, built in stone rather than timber. This was where Evermeet's governance actually lived, regardless of what the Merchant Council's charter said about civic representation.
+
+#### The Merchant Council and Its Structural Flaw
+
+Evermeet was governed by a **Merchant Council** of seven seats: Harbor and Roads, Provisioning and Supply, Frontier Defense, Civil Arbitration, Temple Affairs, Artisan Standards, and a seventh seat — the **Balance Seat** — held in rotation by whichever guild had contributed most in civic duties the previous fiscal year.
+
+The Balance Seat's rotation mechanism was Evermeet's structural flaw, and it was not immediately obvious as a flaw. The principle was sound: civic contribution should be rewarded with political influence, creating incentives for investment. The practice was ruinous: the wealthiest guild won the Balance Seat by contributing most, which allowed it to shape policy in ways that increased its wealth, which meant it won the Balance Seat the following year. The Merchant Spine's commercial guilds held the Balance Seat for the last forty years of Evermeet's existence. The Chandler Mile's provisioning guilds held it sporadically. Stoneback's garrison families never held it.
+
+The Conclave connection, when it came, came through the Balance Seat. The merchant guilds that controlled the seat had commercial reasons to accept Conclave financial support. The civic institutions that might have refused — the garrison commanders, the trade magistrates, the temple orders — had no structural mechanism to block the decision.
+
+#### The Conclave Arrangement
+
+During a period of significant financial pressure — Midgaard's Lantern Reforms had standardized competing trade routes, and Evermeet's caravan traffic revenue was declining in response — the Merchant Council accepted financial backing from agents representing the Spirebound Conclave. The arrangement had three documented components, as recorded in the obsidian disc now held under Compact Temple seal in Kiess's Syndic Council Annex:
+
+The first component was passage rights: unmarked Conclave supply caravans would use Roc Road's western segment under documentation that listed the goods as standard frontier provisioning. The guild clerks who processed these manifests were instructed not to inquire into cargo composition or destination.
+
+The second component was preferential pricing: Evermeet's merchants would buy specific mineral and chemical goods from Cinderteeth-adjacent suppliers that the Conclave designated, at prices the Conclave set. This made certain Merchant Spine trading houses dependent on Conclave supply chains — an arrangement that looked like commercial advantage until the Conclave's collapse, at which point it became catastrophic exposure.
+
+The third component — the one the obsidian disc documents in the most formal legal language — was the transfer authority. The Merchant Council granted the Conclave's agents authority to receive "condemned debtors": persons who had lost debt arbitration cases in the Civil Arbitration seat and had no assets for restitution. Rather than indefinite detention or indentured service to the aggrieved party, such persons would be transferred to "Conclave labor programs in the mountain academies" in exchange for Conclave financial contributions to Evermeet's civic fund.
+
+The sealed warrants that processed these transfers are the mechanism Kiess's founding charter explicitly prohibits. The anti-sealed-warrant doctrine is not an abstract legal principle: it is the direct response to the understanding that Evermeet issued these documents, that the obsidian disc records the authority under which they were issued, and that Kiess was built on foundations where the bodies of those transactions still lie. See also: `sunken_sanctum_lore.md` for documentation of the Conclave's receiving infrastructure.
+
+#### The Bell Synod Intervention
+
+In Evermeet's middle decline period — the outer wards had begun to hollow but the Chandler Mile still functioned and the Merchant Spine remained commercially active — Kel'Shadra's Ledger-Mother **Sarenne Ghael** dispatched Bell Synod missionaries to the city. Their stated mission was oath-validation services: the Bell Synod would witness and certify commercial oaths, providing third-party validation that trade agreements had been properly constituted. For a city whose arbitration apparatus was under increasing stress from debt disputes, this service had immediate practical value.
+
+The missionaries established an oath-validation office in the Civic Hall Quarter. Evermeet's trade magistrates incorporated the Bell Synod's oath-law templates into the city's legal corpus — the first time formally external legal doctrine had been incorporated into Evermeet's governance. The templates handled debt disputes better than Evermeet's own instruments, and adoption was rapid.
+
+Whether the Bell Synod missionaries knew about the Conclave arrangement when they arrived is not recorded in any surviving source. Kel'Shadra's descent-accounting archives contain entries for Evermeet transactions from this period, but those archives are not accessible to Kiess's researchers. What is known is that the missionaries departed approximately two years before Evermeet's final abandonment — a withdrawal timed closely enough to the city's terminal decline that it reads, in retrospect, as a deliberate exit rather than a coincidental departure. The oath-law templates they left behind survived in the memories of trade magistrate families who carried them to Kiess and contributed to the founding legal architecture. See also: `gloamvault_lore.md`, `kelshadra_lore.md`.
+
 ### The Fall of Evermeet and the Founding of Kiess
 
-Evermeet did not fall in a single night. Over generations, its sprawling districts grew inward-looking, its outer wards neglected. Monster pressure from the surrounding wildlands intensified each season while civic attention turned to comfort rather than defense. Districts became isolated as bridges and crossings deteriorated. Supply houses burned during successive crises with no coordinated response. The wealthy core survived longest, but the working quarters that kept Evermeet fed, armed, and connected to the frontier slowly hollowed out. Eventually the last defenders withdrew, and Evermeet was abandoned to the wildlands — its gilded parlors left to rot, its gates standing open to whatever wandered in.
+Evermeet did not fall in a single night. The collapse proceeded in stages, each stage's logic following from the previous one with the relentless coherence of institutional failure.
+
+The first stage was the abandonment of First Reach and Second Reach. The Merchant Council, facing budget pressure, voted to reduce frontier garrison funding, noting in the recorded minutes that the outer wards "produce no commercial revenue sufficient to justify the provisioning cost." The garrison withdrew to Stoneback. Creature pressure from the western forest margins — centaurs, manscorpians, and larger predators that the frontier expeditions had kept at a manageable distance — filled the vacuum. First Reach emptied within a season. Second Reach held longer because it had better stone construction; it held for five more years before the last residents retreated inward.
+
+The second stage was the Chandler Mile's commercial death. Caravan operators, who had measured Evermeet's viability by how safely they could reach it, began rerouting to Midgaard when the outer approach roads became too dangerous for unescorted passage. The provisioning operations that had sustained the Chandler Mile closed or relocated. The Chandler Mile became a street of empty storefronts.
+
+The third stage was Stoneback's slow dissolution. The garrison, now protecting a city that generated no commercial justification for its existence, requested augmented support from the Merchant Spine. The Spine declined — its guilds had commercial alternatives and no investment in a city that could no longer serve their purposes. Garrison contracts expired; soldiers did not re-enlist. The walls held because stone does not require re-enlistment. The people who had maintained them ceased.
+
+The Bell Synod missionaries withdrew in the fourth stage, recognizing what institutional observers recognize: a city that cannot be stabilized is not a city worth stationing staff in. Their departure was not a dramatic announcement but an administrative decision — the oath-validation office closed, the missionaries returned to Kel'Shadra, the templates they had embedded in Evermeet's legal corpus remained behind because there was no mechanism to extract them.
+
+The fifth stage was the Merchant Spine's quiet evacuation. The wealthy families did not mount a last stand; they left in small groups over several months, taking what they could carry, selling what they could not, and eventually leaving behind what could not be moved. The Central Prism's housing was too large to transport; the civic hall's stone was immovable. The gilded parlors were stripped; the civic infrastructure was left for whoever came next.
+
+Evermeet was abandoned to the wildlands — its gates standing open, its outer wards already claimed by forest-edge creatures, its stone foundations intact beneath the decay. It was not destroyed. It was vacated.
 
 **Kiess** rises where Evermeet once stood, built on its foundations along **Roc Road**, the ancient trade artery linking the western frontier to Midgaard in the east. The merchants, soldiers, and temple orders who had fled Evermeet's collapse returned not to restore the old city but to replace it entirely. Where Evermeet grew by accident and indulgence, Kiess was built by design. The crown-chartered guilds and the temple compact laid it out as a fortified civic grid: a walled rectangle with predictable streets, centralized services, and controlled gates. Locals describe the difference simply: "Evermeet remembered, but finally made defensible."
+
+The three-power governance structure — Compact Temples, Trade Syndics, Wall Command — was specifically designed to prevent the Merchant Council failure. No single institution controls both commercial policy and defense allocation. The Temple seat ensures that civic priorities beyond commercial revenue have a formal voice. The Wall Command seat ensures that garrison needs cannot be voted down by merchants who have already arranged their own alternative infrastructure. The founding generation's architects had Evermeet's institutional record in front of them when they drew the governance structure. They learned the right lessons.
+
+#### What the Serathi Recorded
+
+The Serathi sky-readers who maintained aerial corridors above the western territories observed Evermeet's collapse across multiple roost-chronicle generations. Their perspective is unique: they documented the city's decline from above, watching district-by-district abandonment through the same dawn-timing and atmospheric observation methodology they applied to everything else.
+
+The Serathi account characterizes Evermeet as a city that **consumed itself** — not destroyed from without but hollowed from within, its institutional claims expanding while its physical infrastructure contracted, until the gap between what the city claimed to govern and what it could actually maintain became unbridgeable. This diagnosis is more precise than the fragmentary human records, which tend to attribute the fall to "monster pressure" and "neglect" without identifying the governance mechanism that made those pressures fatal. The Merchant Council's Balance Seat, and the structural capture of civic policy by commercial guilds with no investment in frontier maintenance, is not a story that the surviving Merchant Spine families chose to document.
+
+The chronicles describe Evermeet's collapse in terms of light: the outer wards' lanterns going dark, district by district, over approximately thirty years. The final roost-chronicle entry covering Evermeet's active period notes a single light in the Civic Hall Quarter's tower burning for three nights after all other lights had gone out, then darkness. The Syndic Council's interest in obtaining access to these chronicles extends beyond historical curiosity: the Serathi records likely include observations of Conclave caravan activity along the Roc Road approaches during the transfer period — external documentation that would corroborate the obsidian disc's account without depending on Kiess's own foundation excavations for its evidentiary standing. The sky-readers understand this. The exchange they offer — recitation for corridor recognition — is calibrated accordingly. See also: `serathi_lore.md`, `skyroad_recognition_dispute_lore.md`.
 
 ### The Central Prism
 
