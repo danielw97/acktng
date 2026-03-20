@@ -27,6 +27,7 @@
   </label>
 </div>
 <audio id='mud-audio'></audio>
+<audio id='mud-audio-next'></audio>
 </div>
 <script>
 (() => {
@@ -44,15 +45,21 @@
   const musicVolume = document.getElementById('music-volume');
   const musicLoop = document.getElementById('music-loop');
   const audio = document.getElementById('mud-audio');
+  const audioNext = document.getElementById('mud-audio-next');
   let socket = null;
+  let fadeTimer = null;
 
   audio.volume = parseFloat(musicVolume.value);
   audio.loop = musicLoop.checked;
 
   musicPlayBtn.addEventListener('click', () => audio.play());
-  musicStopBtn.addEventListener('click', () => { audio.pause(); audio.currentTime = 0; });
+  musicStopBtn.addEventListener('click', () => {
+    if (fadeTimer) { clearInterval(fadeTimer); fadeTimer = null; }
+    audio.pause(); audio.currentTime = 0;
+    audioNext.pause(); audioNext.src = '';
+  });
   musicVolume.addEventListener('input', () => { audio.volume = parseFloat(musicVolume.value); });
-  musicLoop.addEventListener('change', () => { audio.loop = musicLoop.checked; });
+  musicLoop.addEventListener('change', () => { audio.loop = musicLoop.checked; audioNext.loop = musicLoop.checked; });
 
   fullscreenBtn.addEventListener('click', () => {
     const isFullscreen = container.classList.toggle('mud-fullscreen');
@@ -126,13 +133,57 @@
   worldSelect.addEventListener('change', showWorld);
   showWorld();
 
+  const FADE_DURATION = 2000;
+  const FADE_INTERVAL = 50;
+
   const handleMusicCommand = (cmd) => {
     if (cmd.action === 'play' && cmd.url) {
-      audio.src = cmd.url;
-      audio.loop = musicLoop.checked;
-      audio.volume = parseFloat(musicVolume.value);
-      audio.play().catch(() => {});
       musicControls.style.display = 'flex';
+      const targetVol = parseFloat(musicVolume.value);
+
+      /* If nothing is playing yet, start immediately with no fade */
+      if (audio.paused || !audio.src) {
+        audio.src = cmd.url;
+        audio.loop = musicLoop.checked;
+        audio.volume = targetVol;
+        audio.play().catch(() => {});
+        return;
+      }
+
+      /* Already playing the same track — do nothing */
+      if (audio.src === cmd.url) return;
+
+      /* Crossfade: load next track into audioNext, fade out audio, fade in audioNext */
+      if (fadeTimer) { clearInterval(fadeTimer); fadeTimer = null; }
+
+      const outgoing = audio;
+      const incoming = audioNext;
+      incoming.src = cmd.url;
+      incoming.loop = musicLoop.checked;
+      incoming.volume = 0;
+      incoming.play().catch(() => {});
+
+      const steps = FADE_DURATION / FADE_INTERVAL;
+      let step = 0;
+      fadeTimer = setInterval(() => {
+        step++;
+        const t = Math.min(step / steps, 1);
+        outgoing.volume = targetVol * (1 - t);
+        incoming.volume = targetVol * t;
+        if (t >= 1) {
+          clearInterval(fadeTimer);
+          fadeTimer = null;
+          outgoing.pause();
+          outgoing.src = incoming.src;
+          outgoing.loop = incoming.loop;
+          outgoing.volume = targetVol;
+          /* Swap: carry current position of incoming into the main element */
+          outgoing.currentTime = incoming.currentTime;
+          outgoing.play().catch(() => {});
+          incoming.pause();
+          incoming.src = '';
+        }
+      }, FADE_INTERVAL);
     }
   };
 
