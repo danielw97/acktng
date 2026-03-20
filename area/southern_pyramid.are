@@ -4767,7 +4767,7 @@ etched with @@yluminous lunar glyphs@@N that pulse with ancient binding magic.
 1140850879 0 0 S
 150 0
 10 10 15 15
-! 2 7 0 7 569456 6144 144
+! 2 7 7 7 569456 6144 144
 | 34 4 0 0 0 0 0
 + 5 5 5 5 5 10 10 5 0
 l 400 11450 11516 11517 11518 0 0 0 0 0 
@@ -4784,7 +4784,7 @@ a cold @@ysilver light@@N, and the air around it is devoid of all sound.
 1140850879 0 -500 S
 150 0
 10 10 15 15
-! 2 7 5 7 569448 6299648 80
+! 2 7 0 7 569448 6299648 80
 | 260 136 0 0 0 0 0
 + 5 5 5 5 5 10 10 5 0
 l 400 11451 11519 11520 11521 0 0 0 0 0 
@@ -4801,7 +4801,7 @@ new growths erupt and old ones slough away in a cycle of endless decomposition.
 1140850879 0 -500 S
 150 0
 10 10 15 15
-! 2 7 5 7 569448 2097280 24
+! 2 7 0 7 569448 2097280 24
 | 544 136 0 0 0 0 0
 + 5 5 5 5 5 10 10 5 0
 l 400 11452 11522 11523 11524 0 0 0 0 0 
@@ -4818,7 +4818,7 @@ and @@Rarcs of dark lightning@@N crackle along its edges.
 1140850879 0 -500 S
 150 0
 10 10 15 15
-! 2 7 5 7 569448 1835008 112
+! 2 7 0 7 569448 1835008 112
 | 260 8 0 0 0 0 0
 + 5 5 5 5 5 10 10 5 0
 l 400 11453 11525 11526 11527 0 0 0 0 0 
@@ -4836,7 +4836,7 @@ compressed vertebrae.
 1140850879 0 -500 S
 150 0
 10 10 15 15
-! 2 7 5 7 569448 69888 144
+! 2 7 10 7 569448 69888 144
 | 34 136 0 0 0 0 0
 + 5 5 5 5 5 10 10 5 0
 l 400 11454 11528 11529 11530 0 0 0 0 0 
@@ -4854,7 +4854,7 @@ a man's forearm.
 1140850879 0 -200 S
 150 0
 10 10 15 15
-! 2 7 0 7 569448 35651712 24
+! 2 7 10 7 569448 35651712 24
 | 576 144 0 0 0 0 0
 + 5 5 5 5 5 10 10 5 0
 l 400 11455 11531 11532 11533 0 0 0 0 0 
@@ -4872,7 +4872,7 @@ lethal heat.
 1140850879 0 0 S
 150 0
 10 10 15 15
-! 2 7 0 7 569448 50333696 32
+! 2 7 10 7 569448 50333696 32
 | 130 80 0 0 0 0 0
 + 5 5 5 5 5 10 10 5 0
 l 500 11456 11515 11534 11535 11536 0 0 0 0 
@@ -4890,7 +4890,7 @@ light@@N in its eyes holds the absolute certainty of one who has conquered death
 1140850879 0 -1000 S
 150 0
 15 15 20 20
-! 2 7 5 7 569448 49283072 240
+! 2 7 0 7 569448 49283072 240
 | 260 8 0 0 0 0 0
 + 10 10 10 10 10 15 15 10 0
 l 500 11457 11537 11538 11539 11540 0 0 0 0 
@@ -4907,7 +4907,7 @@ binding magic, its hollow eyes tracking the living with hungry malice.
 33570913 0 -500 S
 138 0
 5 5 10 10
-! 2 7 5 7 40961 2105344 16
+! 2 7 10 7 40961 2105344 16
 | 256 8 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4941,7 +4941,7 @@ it delivers is precise, measured, and aimed at permanent incapacitation.
 33570913 0 -500 S
 140 0
 5 5 10 10
-! 2 7 5 7 565252 0 1
+! 2 7 0 7 565252 0 1
 | 256 8 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4958,7 +4958,7 @@ breathes not air but @@Rsuperheated gas@@N that scorches stone.
 33554529 0 -200 S
 140 0
 5 5 10 10
-! 2 7 3 7 45060 0 1
+! 2 7 18 7 45060 0 1
 | 128 80 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4975,7 +4975,7 @@ absolute understanding of when an intruder is not worthy of passage.
 33554529 0 0 S
 142 0
 5 5 10 10
-! 2 7 0 7 45058 8392704 1
+! 2 7 7 7 45058 8392704 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4992,7 +4992,7 @@ with coordinated purpose that no individual beetle possesses.
 327777 0 0 S
 125 0
 0 0 0 0
-! 2 7 0 7 1 0 1
+! 2 7 13 7 1 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11571 0 0 0 0 0 0 0 0 
@@ -5009,7 +5009,7 @@ blade hangs from one bony hand.
 16481 0 -500 S
 127 0
 0 0 0 0
-! 2 7 5 7 129 0 1
+! 2 7 10 7 129 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5026,7 +5026,7 @@ eye sockets burning with faint @@yyellow light@@N.
 16481 0 -500 S
 128 0
 0 0 0 0
-! 2 7 5 7 32769 0 1
+! 2 7 10 7 32769 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11542 0 0 0 0 0 0 0 0 
@@ -5043,7 +5043,7 @@ drop of venom beading at the stinger's tip.
 97 0 0 S
 130 0
 0 0 0 0
-! 2 7 0 7 1 0 1
+! 2 7 12 7 1 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11543 0 0 0 0 0 0 0 0 
@@ -5060,7 +5060,7 @@ clutches at phantom treasure with insubstantial fingers.
 82017 0 -500 S
 126 0
 0 0 0 0
-! 2 7 5 7 1 1028 1
+! 2 7 10 7 1 1028 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11544 0 0 0 0 0 0 0 0 
@@ -5077,7 +5077,7 @@ gleam with feral cunning in the dim light.
 97 0 0 S
 132 0
 0 0 0 0
-! 2 7 0 7 6145 0 1
+! 2 7 16 7 6145 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11545 0 0 0 0 0 0 0 0 
@@ -5094,7 +5094,7 @@ each stone fist capable of shattering bone.
 262241 0 0 S
 135 0
 0 0 0 0
-! 2 7 0 7 32802 0 1
+! 2 7 7 7 32802 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5111,7 +5111,7 @@ resin@@N, lurching forward on limbs that were never meant to bear weight.
 278625 0 -500 S
 129 0
 0 0 0 0
-! 2 7 5 7 129 0 1
+! 2 7 10 7 129 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5128,7 +5128,7 @@ a venom potent enough to fell warriors twice its size.
 97 0 0 S
 133 0
 0 0 0 0
-! 2 7 0 7 1 0 1
+! 2 7 11 7 1 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11548 0 0 0 0 0 0 0 0 
@@ -5145,7 +5145,7 @@ the residue of its last meal.
 97 0 0 S
 136 0
 0 0 0 0
-! 2 7 0 7 4097 0 1
+! 2 7 15 7 4097 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11549 0 0 0 0 0 0 0 0 
@@ -5162,7 +5162,7 @@ can shatter stone.
 262241 0 0 S
 130 0
 0 0 0 0
-! 2 7 0 7 32770 0 1
+! 2 7 19 7 32770 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5196,7 +5196,7 @@ Its grip is crushing despite its apparent fragility.
 16481 0 -500 S
 134 0
 0 0 0 0
-! 2 7 5 7 32769 0 1
+! 2 7 10 7 32769 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11552 0 0 0 0 0 0 0 0 
@@ -5213,7 +5213,7 @@ mandibles can shear through iron.
 262241 0 0 S
 137 0
 0 0 0 0
-! 2 7 0 7 40962 0 1
+! 2 7 7 7 40962 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5230,7 +5230,7 @@ decorative motifs. Venom glistens on its fangs.
 97 0 0 S
 131 0
 0 0 0 0
-! 2 7 0 7 1 0 1
+! 2 7 11 7 1 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11554 0 0 0 0 0 0 0 0 
@@ -5247,7 +5247,7 @@ and seem to fly with preternatural accuracy in the dark.
 16481 0 -500 S
 139 0
 0 0 0 0
-! 2 7 5 7 36865 0 1
+! 2 7 0 7 36865 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11555 0 0 0 0 0 0 0 0 
@@ -5264,7 +5264,7 @@ daggers, and its beak can crack bone with a single snap.
 97 0 0 S
 140 0
 0 0 0 0
-! 2 7 0 7 1052673 0 1
+! 2 7 15 7 1052673 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11556 0 0 0 0 0 0 0 0 
@@ -5281,7 +5281,7 @@ with an unsettling, eyeless awareness. Its stone shield is raised in perpetual r
 262243 0 0 S
 136 0
 0 0 0 0
-! 2 7 0 7 8225 0 1
+! 2 7 10 7 8225 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5298,7 +5298,7 @@ with surprising force, striking at the mind as much as the body.
 82017 0 -500 S
 132 0
 0 0 0 0
-! 2 7 5 7 1 327680 1
+! 2 7 0 7 1 327680 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11558 0 0 0 0 0 0 0 0 
@@ -5315,7 +5315,7 @@ rivets@@N. Twin blades catch the faintest light as it strikes from concealment.
 97 0 -200 S
 138 0
 0 0 0 0
-! 2 7 0 7 38913 0 1
+! 2 7 10 7 38913 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11559 0 0 0 0 0 0 0 0 
@@ -5332,7 +5332,7 @@ protrusions as crude but devastating weapons. It cannot be moved from its post.
 262243 0 0 S
 140 0
 0 0 0 0
-! 2 7 0 7 32868 0 1
+! 2 7 10 7 32868 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5349,7 +5349,7 @@ jade-scaled cousins, capable of bringing down armored warriors.
 97 0 0 S
 135 0
 0 0 0 0
-! 2 7 0 7 1 0 1
+! 2 7 11 7 1 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11561 0 0 0 0 0 0 0 0 
@@ -5366,7 +5366,7 @@ channel crude destructive magic through gestures of skeletal precision.
 97 0 -200 S
 137 0
 0 0 0 0
-! 2 7 0 7 1 10 4
+! 2 7 10 7 1 10 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11562 0 0 0 0 0 0 0 0 
@@ -5383,7 +5383,7 @@ it strikes with devastating speed from above.
 97 0 0 S
 139 0
 0 0 0 0
-! 2 7 0 7 1052673 0 1
+! 2 7 15 7 1052673 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11563 0 0 0 0 0 0 0 0 
@@ -5400,7 +5400,7 @@ fights with the skill and discipline it possessed in life.
 16481 0 -500 S
 133 0
 0 0 0 0
-! 2 7 5 7 40961 0 8
+! 2 7 10 7 40961 0 8
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11564 0 0 0 0 0 0 0 0 
@@ -5417,7 +5417,7 @@ target the mind as much as the body, projecting waves of psychic anguish.
 82017 0 -500 S
 136 0
 0 0 0 0
-! 2 7 5 7 1 1114112 8
+! 2 7 10 7 1 1114112 8
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5434,7 +5434,7 @@ legs and mandibles.
 327777 0 0 S
 125 0
 0 0 0 0
-! 2 7 0 7 1 0 1
+! 2 7 13 7 1 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11572 0 0 0 0 0 0 0 0 
@@ -5451,7 +5451,7 @@ tail lashing as it seeks to trip larger prey.
 262241 0 0 S
 125 0
 0 0 0 0
-! 2 7 0 7 2049 0 1
+! 2 7 10 7 2049 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11573 0 0 0 0 0 0 0 0 
@@ -5468,7 +5468,7 @@ with disturbing speed, crushing anything in its path.
 278625 0 -500 S
 127 0
 0 0 0 0
-! 2 7 5 7 32770 0 1
+! 2 7 10 7 32770 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11574 0 0 0 0 0 0 0 0 
@@ -5485,7 +5485,7 @@ stronger by the compacted sand within, and its blows land with crushing weight.
 16481 0 -500 S
 129 0
 0 0 0 0
-! 2 7 5 7 32769 0 1
+! 2 7 10 7 32769 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11575 0 0 0 0 0 0 0 0 
@@ -5519,7 +5519,7 @@ it to attack the living with the same tools it was forced to wield in life.
 16481 0 -500 S
 130 0
 0 0 0 0
-! 2 7 5 7 32769 0 1
+! 2 7 0 7 32769 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11577 0 0 0 0 0 0 0 0 
@@ -5536,7 +5536,7 @@ even in total darkness, and its venom induces rapid paralysis.
 97 0 0 S
 128 0
 0 0 0 0
-! 2 7 0 7 4097 0 1
+! 2 7 11 7 4097 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11578 0 0 0 0 0 0 0 0 
@@ -5553,7 +5553,7 @@ powerful, and its stone fists strike with devastating force.
 262241 0 0 S
 134 0
 0 0 0 0
-! 2 7 0 7 40834 0 1
+! 2 7 7 7 40834 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5570,7 +5570,7 @@ pyramid wall itself and defends its tier with mindless, absolute devotion.
 262243 0 0 S
 135 0
 0 0 0 0
-! 2 7 0 7 32770 0 1
+! 2 7 7 7 32770 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11580 0 0 0 0 0 0 0 0 
@@ -5587,7 +5587,7 @@ deity, and it attacks by flinging itself bodily at intruders.
 82017 0 -500 S
 132 0
 0 0 0 0
-! 2 7 5 7 129 144 1
+! 2 7 0 7 129 144 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11581 0 0 0 0 0 0 0 0 
@@ -5604,7 +5604,7 @@ turns its scholarly knowledge to destructive magical attacks.
 16481 0 -500 S
 136 0
 0 0 0 0
-! 2 7 5 7 1 1026 2
+! 2 7 10 7 1 1026 2
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11582 0 0 0 0 0 0 0 0 
@@ -5621,7 +5621,7 @@ crude animation, it strikes with relentless, mindless persistence.
 16481 0 -500 S
 133 0
 0 0 0 0
-! 2 7 5 7 32769 0 1
+! 2 7 10 7 32769 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11583 0 0 0 0 0 0 0 0 
@@ -5638,7 +5638,7 @@ flesh. Its movements are more purposeful than a simple zombie's.
 16481 0 -500 S
 138 0
 0 0 0 0
-! 2 7 5 7 40961 512 1
+! 2 7 0 7 40961 512 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5655,7 +5655,7 @@ and mind with psychic projections of suffocating decay.
 82017 0 -500 S
 137 0
 0 0 0 0
-! 2 7 5 7 1 2359296 4
+! 2 7 10 7 1 2359296 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11585 0 0 0 0 0 0 0 0 
@@ -5672,7 +5672,7 @@ Sovereign's personal guard, and it fights with disciplined, relentless precision
 16481 0 -500 S
 139 0
 0 0 0 0
-! 2 7 5 7 565250 0 1
+! 2 7 10 7 565250 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11586 0 0 0 0 0 0 0 0 
@@ -5690,7 +5690,7 @@ pyramid was sealed.
 16481 0 -500 S
 138 0
 0 0 0 0
-! 2 7 5 7 45061 0 1
+! 2 7 10 7 45061 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5707,7 +5707,7 @@ compressed bone, and its fists strike with the weight of an avalanche.
 262241 0 0 S
 140 0
 0 0 0 0
-! 2 7 0 7 32868 0 1
+! 2 7 19 7 32868 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11588 0 0 0 0 0 0 0 0 
@@ -5724,7 +5724,7 @@ prey in the narrow passages, and its eyes reflect light with predatory intensity
 97 0 0 S
 136 0
 0 0 0 0
-! 2 7 0 7 6145 0 1
+! 2 7 10 7 6145 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11589 0 0 0 0 0 0 0 0 
@@ -5741,7 +5741,7 @@ to flame, and its bite delivers a dose of scalding venom.
 97 0 0 S
 137 0
 0 0 0 0
-! 2 7 0 7 4097 0 1
+! 2 7 17 7 4097 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11590 0 0 0 0 0 0 0 0 
@@ -5758,7 +5758,7 @@ within its ribcage, and its touch leaves scorch marks on stone.
 16481 0 -500 S
 139 0
 0 0 0 0
-! 2 7 5 7 32770 0 1
+! 2 7 10 7 32770 0 1
 | 128 64 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11591 0 0 0 0 0 0 0 0 
@@ -5775,7 +5775,7 @@ its movements are so smooth they seem to ignore the friction of stone on stone.
 262243 0 0 S
 140 0
 0 0 0 0
-! 2 7 0 7 40834 0 1
+! 2 7 10 7 40834 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5792,7 +5792,7 @@ elemental's form shifts constantly between vaguely humanoid and a spinning vorte
 33816673 0 0 S
 139 0
 5 5 10 10
-! 2 7 0 7 36866 144 1
+! 2 7 19 7 36866 144 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5809,7 +5809,7 @@ incorporated into the design. Its stone body is nearly indestructible.
 33816675 0 0 S
 142 0
 5 5 10 10
-! 2 7 0 7 41060 0 1
+! 2 7 7 7 41060 0 1
 | 34 4 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5826,7 +5826,7 @@ sheer necromantic authority. Its @@bbone frame@@N is reinforced with @@eiron ban
 33570913 0 -500 S
 140 0
 5 5 10 10
-! 2 7 5 7 565250 2359296 1
+! 2 7 10 7 565250 2359296 1
 | 256 8 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5843,7 +5843,7 @@ elite warrior. Its translucent blade still gleams with deadly purpose.
 16481 0 -500 S
 138 0
 0 0 0 0
-! 2 7 5 7 32769 65536 1
+! 2 7 10 7 32769 65536 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11593 0 0 0 0 0 0 0 0 
@@ -5860,7 +5860,7 @@ surface as it moves, shedding flakes of mineralized hide.
 262241 0 0 S
 134 0
 0 0 0 0
-! 2 7 0 7 32834 0 1
+! 2 7 18 7 32834 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11594 0 0 0 0 0 0 0 0 
@@ -5877,7 +5877,7 @@ Its teeth are still razor-sharp despite centuries of death.
 16481 0 -500 S
 130 0
 0 0 0 0
-! 2 7 5 7 6145 0 1
+! 2 7 14 7 6145 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11595 0 0 0 0 0 0 0 0 
@@ -5894,7 +5894,7 @@ close with bone-crushing force, animated by the pyramid's ambient curse.
 278625 0 -500 S
 133 0
 0 0 0 0
-! 2 7 5 7 32770 0 1
+! 2 7 10 7 32770 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11596 0 0 0 0 0 0 0 0 
@@ -5911,7 +5911,7 @@ body makes it difficult to strike.
 327777 0 0 S
 127 0
 0 0 0 0
-! 2 7 0 7 4097 0 1
+! 2 7 19 7 4097 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11565 0 0 0 0 0 0 0 0 
@@ -5928,7 +5928,7 @@ of debilitating weakness that sap the strength of the living.
 82017 0 -500 S
 131 0
 0 0 0 0
-! 2 7 5 7 1 0 1
+! 2 7 10 7 1 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11566 0 0 0 0 0 0 0 0 
@@ -5945,7 +5945,7 @@ petrification, it still strikes with surprising speed.
 262241 0 0 S
 129 0
 0 0 0 0
-! 2 7 0 7 4097 0 1
+! 2 7 11 7 4097 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11567 0 0 0 0 0 0 0 0 
@@ -5962,7 +5962,7 @@ carapace@@N is nearly impervious to slashing weapons.
 262241 0 0 S
 136 0
 0 0 0 0
-! 2 7 0 7 40962 0 1
+! 2 7 13 7 40962 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11568 0 0 0 0 0 0 0 0 
@@ -5979,7 +5979,7 @@ enhanced decay makes its claws particularly virulent.
 16481 0 -500 S
 135 0
 0 0 0 0
-! 2 7 5 7 32769 0 1
+! 2 7 10 7 32769 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11569 0 0 0 0 0 0 0 0 
@@ -5996,7 +5996,7 @@ skin@@N is stretched taut and weeping fluid. Each step it takes releases small g
 16481 0 -500 S
 132 0
 0 0 0 0
-! 2 7 5 7 32769 0 1
+! 2 7 10 7 32769 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11570 0 0 0 0 0 0 0 0 
@@ -6013,7 +6013,7 @@ and its bite delivers both venom and infection.
 97 0 0 S
 128 0
 0 0 0 0
-! 2 7 0 7 6145 0 1
+! 2 7 12 7 6145 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11546 0 0 0 0 0 0 0 0 
@@ -6030,7 +6030,7 @@ warmth and will from the living.
 82017 0 -500 S
 134 0
 0 0 0 0
-! 2 7 5 7 1 0 2
+! 2 7 10 7 1 0 2
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11547 0 0 0 0 0 0 0 0 
@@ -6047,7 +6047,7 @@ eyes@@N betray its position before it strikes.
 97 0 0 S
 137 0
 0 0 0 0
-! 2 7 0 7 38913 0 1
+! 2 7 14 7 38913 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11550 0 0 0 0 0 0 0 0 
@@ -6064,7 +6064,7 @@ to track intruders with mechanical precision.
 262241 0 0 S
 139 0
 0 0 0 0
-! 2 7 0 7 40994 0 1
+! 2 7 10 7 40994 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -6081,7 +6081,7 @@ between visibility and shadow, appearing solid only at the moment of impact.
 97 0 -200 S
 133 0
 0 0 0 0
-! 2 7 0 7 6145 0 1
+! 2 7 10 7 6145 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11551 0 0 0 0 0 0 0 0 
@@ -6098,7 +6098,7 @@ burns with a cold that is the opposite of fire.
 327777 0 0 S
 126 0
 0 0 0 0
-! 2 7 0 7 1 1032 1
+! 2 7 10 7 1 1032 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11553 0 0 0 0 0 0 0 0 
@@ -6115,7 +6115,7 @@ from calcium-white filaments, and its bite injects liquefied marrow.
 262241 0 0 S
 131 0
 0 0 0 0
-! 2 7 0 7 6145 0 1
+! 2 7 10 7 6145 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11557 0 0 0 0 0 0 0 0 
@@ -6132,7 +6132,7 @@ mass, dissolving flesh and bone with horrifying efficiency.
 262241 0 0 S
 138 0
 0 0 0 0
-! 2 7 0 7 32770 0 1
+! 2 7 19 7 32770 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11560 0 0 0 0 0 0 0 0 
@@ -6149,7 +6149,7 @@ that strengthens its undead allies.
 16481 0 -500 S
 134 0
 0 0 0 0
-! 2 7 5 7 32769 0 1
+! 2 7 10 7 32769 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -6200,7 +6200,7 @@ concealment, dragging prey into the toxic waters.
 97 0 0 S
 136 0
 0 0 0 0
-! 2 7 0 7 38913 0 1
+! 2 7 22 7 38913 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11501 0 0 0 0 0 0 0 0 
@@ -6217,7 +6217,7 @@ leaping bodily at targets.
 262241 0 0 S
 130 0
 0 0 0 0
-! 2 7 0 7 4097 0 1
+! 2 7 19 7 4097 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11502 0 0 0 0 0 0 0 0 
@@ -6234,7 +6234,7 @@ Its attacks suffocate and burn simultaneously.
 82017 0 -500 S
 135 0
 0 0 0 0
-! 2 7 5 7 1 2097280 4
+! 2 7 10 7 1 2097280 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11503 0 0 0 0 0 0 0 0 
@@ -6251,7 +6251,7 @@ form and break away from its hide as it moves through cooler air.
 97 0 0 S
 137 0
 0 0 0 0
-! 2 7 0 7 36865 0 1
+! 2 7 17 7 36865 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11504 0 0 0 0 0 0 0 0 
@@ -6268,7 +6268,7 @@ brute force of a skilled warrior with searing heat.
 16481 0 -500 S
 139 0
 0 0 0 0
-! 2 7 5 7 40962 16779264 1
+! 2 7 10 7 40962 16779264 1
 | 128 64 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11505 0 0 0 0 0 0 0 0 
@@ -6285,7 +6285,7 @@ are clubs of solidified lava that strike with crushing force.
 262241 0 0 S
 140 0
 0 0 0 0
-! 2 7 0 7 32868 0 1
+! 2 7 19 7 32868 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -6302,7 +6302,7 @@ sanctum, and it strikes from above with devastating speed.
 262241 0 0 S
 138 0
 0 0 0 0
-! 2 7 0 7 45058 0 1
+! 2 7 20 7 45058 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -6319,7 +6319,7 @@ preserved in a state between life and death. Its robes are @@bblack as the void@
 97 0 -500 S
 137 0
 0 0 0 0
-! 2 7 0 7 40961 1310720 16
+! 2 7 10 7 40961 1310720 16
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11506 0 0 0 0 0 0 0 0 
@@ -6336,7 +6336,7 @@ mechanical precision, and its massive halberd cleaves through armor like parchme
 262243 0 0 S
 140 0
 0 0 0 0
-! 2 7 0 7 565284 0 1
+! 2 7 7 7 565284 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -6353,7 +6353,7 @@ stinger drips with a venom enhanced by the pyramid's magic.
 97 0 0 S
 135 0
 0 0 0 0
-! 2 7 0 7 4097 0 1
+! 2 7 12 7 4097 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 11507 0 0 0 0 0 0 0 0 
@@ -6370,7 +6370,7 @@ slow but unstoppable, each strike carrying the weight of an avalanche.
 33816673 0 0 S
 142 0
 5 5 10 10
-! 2 7 0 7 565348 0 1
+! 2 7 19 7 565348 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -6387,7 +6387,7 @@ a man whole, and its coils crush with the force of a siege engine.
 33554529 0 -200 S
 140 0
 5 5 10 10
-! 2 7 0 7 45060 0 1
+! 2 7 22 7 45060 0 1
 | 576 144 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -6404,7 +6404,7 @@ erosion@@N. Each step shakes the floor.
 33816673 0 0 S
 142 0
 5 5 10 10
-! 2 7 0 7 41060 0 1
+! 2 7 7 7 41060 0 1
 | 34 4 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -6421,7 +6421,7 @@ trunk-like limbs swing with surprising speed for its bulk.
 33554529 0 -200 S
 138 0
 5 5 10 10
-! 2 7 0 7 40962 0 1
+! 2 7 21 7 40962 0 1
 | 512 128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -6438,7 +6438,7 @@ impossible angles with claws that leave wounds of frozen shadow.
 33554529 0 -200 S
 140 0
 5 5 10 10
-! 2 7 0 7 563204 0 1
+! 2 7 10 7 563204 0 1
 | 256 8 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 

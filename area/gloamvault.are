@@ -1450,7 +1450,7 @@ A novice devotee in soot-stained robes clutches a guttering censer and whispers 
 167772257 512 -500 S
 8 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30106 30108 0 0 0 0 0 0 0 
@@ -1465,7 +1465,7 @@ This gaunt usher bears a rusted halberd and a bell of black iron, corralling int
 167772257 512 -500 S
 9 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30107 30109 0 0 0 0 0 0 0 
@@ -1480,7 +1480,7 @@ Their voice is thin and cracking, but the hymn carries a predatory joy that make
 167772257 512 -500 S
 10 2
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30108 30110 0 0 0 0 0 0 0 
@@ -1495,7 +1495,7 @@ Ink-stained fingers guide a needle of silver through ancient bone, recording her
 167772257 512 -500 S
 11 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 10 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30109 30111 0 0 0 0 0 0 0 
@@ -1510,7 +1510,7 @@ Layered mail creaks as this zealot watches for trespassers, jaw wired shut with 
 167772257 512 -500 S
 12 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30110 30112 0 0 0 0 0 0 0 
@@ -1525,7 +1525,7 @@ A knight in dented plate marked by kel sigils drags a notched blade and reeks of
 167772257 512 -500 S
 13 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30111 30113 0 0 0 0 0 0 0 
@@ -1540,7 +1540,7 @@ Their blindfolded face tilts upward while they chant in a tongue that stings the
 167772257 512 -500 S
 14 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30112 30114 0 0 0 0 0 0 0 
@@ -1555,7 +1555,7 @@ Once a war-dog, now stitched with sigils and bone plates, it waits for a whisper
 167772257 512 -500 S
 15 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 14 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30113 30115 0 0 0 0 0 0 0 
@@ -1570,7 +1570,7 @@ A spear rests across this armored fanatic's lap while reliquary thorns are hamme
 167772257 512 -500 S
 16 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30114 30116 0 0 0 0 0 0 0 
@@ -1585,7 +1585,7 @@ Dark ribbons whirl around this liturgist as ghostly harmonies rise from cracked 
 167772257 512 -500 S
 17 2
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30115 30117 0 0 0 0 0 0 0 
@@ -1600,7 +1600,7 @@ Sable robes and silver fetishes mark this adept, whose fingertips leak violet sp
 167772257 512 -500 S
 18 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30116 30118 0 0 0 0 0 0 0 
@@ -1615,7 +1615,7 @@ Scarred and deliberate, the marshal wears pragmatic war-gear and barks clipped o
 167772257 512 -500 S
 19 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30117 30119 0 0 0 0 0 0 0 
@@ -1630,7 +1630,7 @@ A towering priest in layered vestments crowned with horned gold, the prelate gri
 234881123 512 -500 S
 20 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30118 30120 0 0 0 0 0 0 0 
@@ -1645,7 +1645,7 @@ Rune-etched plate and chained relics armor this hulking champion, whose helm ven
 234881123 512 -500 S
 21 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 10 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30119 30121 0 0 0 0 0 0 0 
@@ -1660,7 +1660,7 @@ High hierophant of this dungeon-cult, Velastra is robed in midnight silk and arm
 100663395 512 -500 S
 22 2
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30120 30122 0 0 0 0 0 0 0 
@@ -1675,7 +1675,7 @@ Wrapped in black gauze and grave ash, this killer moves only when candlelight fl
 167772257 512 -500 S
 16 2
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30115 30117 0 0 0 0 0 0 0 
@@ -1690,7 +1690,7 @@ This armored zealot bears ritual scars and a tower shield etched with saintly sk
 167772257 512 -500 S
 17 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30116 30118 0 0 0 0 0 0 0 
@@ -1705,7 +1705,7 @@ A hooded servant carries a lantern made from a saint's skull, trailing violet so
 167772257 512 -500 S
 15 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 10 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30114 30116 0 0 0 0 0 0 0 
@@ -1720,7 +1720,7 @@ Tools of devotion and torture hang from their belt, polished to a surgical gleam
 167772257 512 -500 S
 18 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30117 30119 0 0 0 0 0 0 0 
@@ -1735,7 +1735,7 @@ Her veil is stitched with star-metal wire, and her whispered rites bend shadows 
 167772257 512 -500 S
 19 2
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 30118 30120 0 0 0 0 0 0 0 
@@ -1750,7 +1750,7 @@ Formed from the accumulated dread of those who turned back at the Gloamvault's t
 97 0 -600 S
 5 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 10 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1765,7 +1765,7 @@ One of the outer initiates of the Gloamvault cult, assigned to the threshold for
 97 0 -500 S
 8 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1780,7 +1780,7 @@ A shade that formed at the precise boundary where the Gloamvault's influence beg
 97 0 -600 S
 7 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 10 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1795,7 +1795,7 @@ Fresh to the outer order, the initiate recites the Gloamvault's threshold rites 
 97 0 -400 S
 10 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1810,7 +1810,7 @@ A veteran of the outer order, the threshold keeper has spent years managing the 
 97 0 -500 S
 12 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1825,7 +1825,7 @@ Assigned to the vestibule to intercept intruders who slip past the threshold war
 97 0 -500 S
 14 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1840,7 +1840,7 @@ The Threshold Guardian is the oldest continuous occupant of the Gloamvault's out
 97 0 -700 S
 12 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1855,7 +1855,7 @@ Penitents assigned to the vestibule undergo a ritual of enforced stillness, knee
 97 0 -500 S
 14 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1870,7 +1870,7 @@ The outer sentinels rotate in pairs, walking a fixed patrol circuit around the g
 97 0 -500 S
 9 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1885,7 +1885,7 @@ A watchman of the outer perimeter, assigned to maintain vigil at the gate. The l
 97 0 -400 S
 11 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1900,7 +1900,7 @@ A shade that formed within the sanctum's innermost reaches, nourished by decades
 97 0 -700 S
 22 0
 200 -15 4 6
-! 0 0 0 7 0 0 0
+! 0 0 10 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1915,7 +1915,7 @@ Selected from the most devout of the inner order, the choir wardens maintain the
 97 0 -600 S
 24 0
 200 -15 4 6
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1930,7 +1930,7 @@ The sanctum stalkers are the Gloamvault's inner hunters, trained to pursue and e
 97 0 -600 S
 27 0
 600 -30 8 10
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1945,7 +1945,7 @@ The elite defenders of the Gloamvault's inner sanctum, these knights are chosen 
 97 0 -600 S
 30 0
 600 -30 8 10
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1960,7 +1960,7 @@ The High Choir Warden is the head of the sanctum's defensive order, responsible 
 67108961 0 -900 S
 32 0
 600 -30 8 10
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1975,7 +1975,7 @@ A duelist sworn to the Gloamvault's inner order, trained in the cult's fighting 
 97 0 -700 S
 32 0
 600 -30 8 10
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -1990,7 +1990,7 @@ The High Priest of the Gloamvault's sanctum has performed the inner liturgies so
 67108961 0 -1000 S
 33 0
 600 -30 8 10
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
@@ -2005,7 +2005,7 @@ The Void Sovereign is the ultimate authority of the Gloamvault's inner sanctum, 
 67108961 0 -1000 S
 34 0
 600 -30 8 10
-! 0 0 0 7 0 0 0
+! 0 0 4 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0

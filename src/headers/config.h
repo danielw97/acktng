@@ -73,7 +73,7 @@
 #define MAX_ANSI 28  /* eg red, black, etc (was 11) */
 #define MAX_ALIASES 10
 #define MAX_IGNORES 3
-#define MAX_RACE 10
+#define MAX_RACE 23
 #define MAX_CLAN 11    /* number of clans (0=None + 10 clans) */
 #define EXP_LEVEL 1000 /* exp per level */
 #define MAX_SKILL 999

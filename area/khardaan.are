@@ -23,7 +23,7 @@ Its segmented shell is the color of sun-bleached bone and its barbed tail arcs h
 131169 0 -350 S
 62 0
 0 0 0 0
-! 0 0 0 7 55 0 0
+! 0 0 12 7 55 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 #6201
@@ -36,7 +36,7 @@ Its pale scales vanish against the desert floor until it strikes, revealing fang
 131169 0 -350 S
 63 0
 0 0 0 0
-! 0 0 0 7 7 0 0
+! 0 0 11 7 7 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 #6202
@@ -49,7 +49,7 @@ Wrapped in yellowed linen that crumbles at its edges, this ancient corpse moves 
 147553 0 -500 S
 64 0
 0 0 0 0
-! 0 0 0 7 23 0 0
+! 0 0 10 7 23 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 #6203
@@ -88,7 +88,7 @@ Not yet full-grown, it is already dangerous, its six yellow eyes cycling through
 131169 0 -300 S
 67 0
 0 0 0 0
-! 0 0 0 7 7 0 0
+! 0 0 17 7 7 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 #6206
@@ -101,7 +101,7 @@ Its oil-black carapace is broader than a shield and covered in raised hieroglyph
 131169 0 -300 S
 68 0
 0 0 0 0
-! 0 0 0 7 7 0 0
+! 0 0 13 7 7 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 #6207
@@ -114,7 +114,7 @@ The shape is almost human but translucent, its edges trailing fine particles of 
 147553 0 -600 S
 69 0
 0 0 0 0
-! 0 0 0 7 7 26 0
+! 0 0 10 7 7 26 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 #6208
@@ -127,7 +127,7 @@ Assembled from the bones of multiple interments, this construct is held together
 147553 0 -500 S
 70 0
 0 0 0 0
-! 0 0 0 7 23 0 0
+! 0 0 10 7 23 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 #6209
@@ -140,7 +140,7 @@ A vortex of grit and crackling static given rough humanoid form, this being rega
 131169 0 -400 S
 71 0
 0 0 0 0
-! 0 0 0 7 3 4384 0
+! 0 0 19 7 3 4384 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 #6210
@@ -166,7 +166,7 @@ Carved from a single block of black sandstone, its face is a stylized jackal mas
 99 0 -500 S
 73 0
 0 0 0 0
-! 0 0 0 7 3847 0 4
+! 0 0 19 7 3847 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 #6212
@@ -179,7 +179,7 @@ Jet-black and deceptively slender, the asp is nonetheless large enough to rear t
 131169 0 -300 S
 74 0
 0 0 0 0
-! 0 0 0 7 7 0 0
+! 0 0 11 7 7 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 #6213
@@ -192,7 +192,7 @@ Once a traveler who died of thirst within sight of water, this gaunt revenant no
 147553 0 -600 S
 75 0
 0 0 0 0
-! 0 0 0 7 55 0 0
+! 0 0 10 7 55 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 #6214
@@ -205,7 +205,7 @@ Its wingspan blocks a full stride's worth of sunlight when it passes, and its ta
 131169 0 -250 S
 62 0
 0 0 0 0
-! 0 0 0 7 7 0 0
+! 0 0 15 7 7 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 #6215
@@ -231,7 +231,7 @@ Eight times the size of its offspring, the Basilisk King's body fills the chambe
 83886147 0 -1000 S
 85 0
 0 0 0 0
-! 0 0 0 7 1777471 0 4
+! 0 0 17 7 1777471 0 4
 | 0 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 #6217
@@ -244,7 +244,7 @@ Her carapace is the deep amber of old resin and her stinger is the size of a sho
 83886147 0 -1000 S
 85 2
 0 0 0 0
-! 0 0 0 7 1576711 384 12
+! 0 0 12 7 1576711 384 12
 | 0 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 #6218
@@ -270,7 +270,7 @@ Sethnekh was the last high priest of Khar'daan and chose mummification before de
 83886147 0 -1000 S
 85 0
 0 0 0 0
-! 0 0 0 7 3843 2528 12
+! 0 0 10 7 3843 2528 12
 | 0 0 0 0 0 2 64
 + 0 0 0 0 0 0 0 0 0
 #6220
@@ -283,7 +283,7 @@ Its bandaged form is painted with fresh ritual glyphs in dark resin, and its fin
 147553 0 -550 S
 76 0
 0 0 0 0
-! 0 0 0 7 3843 0 4
+! 0 0 2 7 3843 0 4
 | 0 0 0 0 0 0 64
 + 0 0 0 0 0 0 0 0 0
 #6221
@@ -296,7 +296,7 @@ What first appears to be stagnant runoff suddenly bulges into a low predatory ma
 131169 0 -450 S
 77 0
 0 0 0 0
-! 0 0 0 7 7 0 0
+! 0 0 22 7 7 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 #6222
@@ -309,7 +309,7 @@ Built from interlocking sandstone plates engraved with nested ankh sigils, the s
 147553 0 -650 S
 78 0
 0 0 0 0
-! 0 0 0 7 3847 0 4
+! 0 0 19 7 3847 0 4
 | 0 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 #6223
@@ -322,7 +322,7 @@ Wrapped in ragged scrolls that orbit like torn wings, this ancient record-keeper
 83886147 0 -900 S
 84 0
 0 0 0 0
-! 0 0 0 7 3843 33689600 12
+! 0 0 10 7 3843 33689600 12
 | 128 0 0 0 0 2 64
 + 0 0 0 0 0 0 0 0 0
 #6224
@@ -335,7 +335,7 @@ A towering mass of floating obelisk shards held together by a core of caged sunl
 83886147 0 -1000 S
 85 0
 0 0 0 0
-! 0 0 0 7 1777471 0 4
+! 0 0 10 7 1777471 0 4
 | 0 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 #6225
@@ -348,7 +348,7 @@ Crusted in thick bands of natron and ash, this tireless embalmer works with stai
 147553 0 -650 S
 79 0
 0 0 0 0
-! 0 0 0 7 3843 0 4
+! 0 0 10 7 3843 0 4
 | 0 0 0 0 0 2 64
 + 0 0 0 0 0 0 0 0 0
 #6226
@@ -361,7 +361,7 @@ Hundreds of translucent scarabs spill from cracks in the masonry, each shell ref
 131169 0 -500 S
 78 0
 0 0 0 0
-! 0 0 0 7 55 0 0
+! 0 0 13 7 55 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 #6227
@@ -374,7 +374,7 @@ Once sworn to guard the funerary road, this revenant now stalks it with a notche
 147553 0 -800 S
 82 0
 0 0 0 0
-! 0 0 0 7 1777471 0 4
+! 0 0 10 7 1777471 0 4
 | 0 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 #6228
@@ -387,7 +387,7 @@ Its translucent body is threaded with dark fluid and bits of funerary resin, and
 131169 0 -600 S
 80 0
 0 0 0 0
-! 0 0 0 7 55 0 0
+! 0 0 10 7 55 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 #6229
@@ -400,7 +400,7 @@ The lich's desiccated frame is draped in ceremonial linen and copper script-plat
 83886147 0 -1000 S
 85 0
 0 0 0 0
-! 0 0 0 7 3843 33689600 12
+! 0 0 10 7 3843 33689600 12
 | 128 0 0 0 0 2 64
 + 0 0 0 0 0 0 0 0 0
 #6230
@@ -413,7 +413,7 @@ A giant war-form of fitted sarcophagus plates and obelisk shards, it advances wi
 83886147 0 -1000 S
 85 0
 0 0 0 0
-! 0 0 0 7 1777471 0 4
+! 0 0 19 7 1777471 0 4
 | 0 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 #6231
@@ -426,7 +426,7 @@ Its wrappings are dusted white with natron ash, and its iron stylus scratches pr
 147553 0 -700 S
 81 0
 0 0 0 0
-! 0 0 0 7 3843 0 4
+! 0 0 10 7 3843 0 4
 | 0 0 0 0 0 2 64
 + 0 0 0 0 0 0 0 0 0
 #6232
@@ -439,7 +439,7 @@ Lean and quick despite centuries in the dark, this revenant fights with abrupt l
 147553 0 -750 S
 82 0
 0 0 0 0
-! 0 0 0 7 1777471 0 4
+! 0 0 10 7 1777471 0 4
 | 0 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 #6233
@@ -452,7 +452,7 @@ Thick preservative resin has sealed this construct into a brutal silhouette of p
 147553 0 -780 S
 83 0
 0 0 0 0
-! 0 0 0 7 3847 0 4
+! 0 0 19 7 3847 0 4
 | 0 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 #6234
@@ -465,7 +465,7 @@ Papyrus ribbons orbit the spirit like pale kelp in still water, and every whispe
 147553 0 -800 S
 83 0
 0 0 0 0
-! 0 0 0 7 3843 33562656 12
+! 0 0 10 7 3843 33562656 12
 | 128 0 0 0 0 2 64
 + 0 0 0 0 0 0 0 0 0
 #6235
@@ -478,7 +478,7 @@ Its hide is stretched tight over angular bone, and it moves with the hungry pati
 147553 0 -760 S
 82 0
 0 0 0 0
-! 0 0 0 7 55 0 0
+! 0 0 10 7 55 0 0
 | 0 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 #6236
@@ -504,7 +504,7 @@ Bronze prayer-plates ring its neck and shoulders, and each invocation brands bri
 83886147 0 -1000 S
 85 0
 0 0 0 0
-! 0 0 0 7 3843 33689600 12
+! 0 0 10 7 3843 33689600 12
 | 128 0 0 0 0 2 64
 + 0 0 0 0 0 0 0 0 0
 #6238
@@ -517,7 +517,7 @@ Built from nested coffin-lids and chained keystones, this titan advances behind 
 83886147 0 -1000 S
 85 0
 0 0 0 0
-! 0 0 0 7 1777471 0 4
+! 0 0 19 7 1777471 0 4
 | 0 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 #6239
@@ -530,7 +530,7 @@ Its lacquered mask is carved with wave-lines and funerary vows, and the water ar
 83886147 0 -1000 S
 85 0
 0 0 0 0
-! 0 0 0 7 3843 2528 12
+! 0 0 10 7 3843 2528 12
 | 128 0 0 0 0 2 64
 + 0 0 0 0 0 0 0 0 0
 #6240
@@ -543,7 +543,7 @@ A colossal guardian of chained black stone and gold ward-rings, it watches in ab
 83886147 0 -1000 S
 85 0
 0 0 0 0
-! 0 0 0 7 1777471 0 4
+! 0 0 19 7 1777471 0 4
 | 0 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 #0

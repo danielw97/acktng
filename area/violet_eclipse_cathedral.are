@@ -1763,7 +1763,7 @@ The votive bone curators maintain the reliquary wing's collection of institution
 99 0 -500 S
 27 0
 0 0 0 0
-! 0 0 0 7 129 0 4
+! 0 0 10 7 129 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2063,7 +2063,7 @@ The briar hall enforcers are the Thorned Scriptorium's most advanced operational
 33554531 0 -600 S
 32 0
 0 0 0 0
-! 0 0 0 7 4257 0 8
+! 0 0 21 7 4257 0 8
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -2138,7 +2138,7 @@ The penumbral ossuary wardens are the Moonbone Ossuary wing's senior enforcement
 33554531 0 -600 S
 32 0
 0 0 0 0
-! 0 0 0 7 4257 2048 8
+! 0 0 10 7 4257 2048 8
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 

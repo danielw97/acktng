@@ -5507,7 +5507,7 @@ ground.  The yellow eyes track your movements with predatory calculation.
 97 0 -500 S
 23 0
 0 0 0 0
-! 3 0 0 7 4481 0 0
+! 3 0 14 7 4481 0 0
 | 0 0 2 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5530,7 +5530,7 @@ chest, audible more as a feeling than a sound.
 97 0 -500 S
 30 0
 0 0 0 0
-! 3 0 0 7 4609 0 0
+! 3 0 16 7 4609 0 0
 | 0 0 2 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5553,7 +5553,7 @@ it will be without warning and with considerable force.
 97 65536 -750 S
 20 0
 0 0 0 0
-! 3 0 0 7 128 0 0
+! 3 0 11 7 128 0 0
 | 0 0 0 0 0 64 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5603,7 +5603,7 @@ travelers too weak to defend themselves.
 97 524288 -500 S
 32 0
 0 0 0 0
-! 3 0 0 7 4609 0 0
+! 3 0 15 7 4609 0 0
 | 0 0 0 0 0 64 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5680,7 +5680,7 @@ into nothing but hunger and mechanical repetition.
 16481 0 -1000 S
 55 0
 0 0 0 0
-! 3 0 0 7 37025 0 0
+! 3 0 10 7 37025 0 0
 | 256 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5732,7 +5732,7 @@ authoritative gestures that turn violent when its demands are not understood.
 16481 0 -1000 S
 52 0
 0 0 0 0
-! 3 0 0 7 37025 0 0
+! 3 0 10 7 37025 0 0
 | 256 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -6098,7 +6098,7 @@ A road warden sergeant patrols the barracks with steady purpose.  The oak-colore
 67108866 0 0 S
 35 0
 0 0 0 0
-! 2 0 1 0 0 0 7
+! 2 0 0 0 0 0 7
 | 0 0 0 0 0 2 0
 #1400
 road warden recruit~
@@ -6110,7 +6110,7 @@ A road warden recruit is in the early stages of training, their uniform still un
 67108866 0 0 S
 15 0
 0 0 0 0
-! 1 0 1 0 0 0 3
+! 1 0 0 0 0 0 3
 | 0 0 0 0 0 2 0
 #1401
 barracks weaponsmith~
@@ -6122,6 +6122,7 @@ The barracks weaponsmith is a compact and capable person with the burns and call
 3 0 500 S
 20 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1402
 barracks chaplain~
 a barracks chaplain~
@@ -6132,6 +6133,7 @@ The barracks chaplain serves the warden corps' spiritual needs, conducting simpl
 3 512 500 S
 18 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1403
 ridge hermit~
 a ridge hermit~
@@ -6142,6 +6144,7 @@ The ridge hermit has lived alone in the Banner Hills for years, by their own acc
 3 0 500 S
 32 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1404
 hill wolf~
 a hill wolf~
@@ -6152,7 +6155,7 @@ The hill wolf is a large specimen of the upland wolf pack that inhabits the Bann
 67108897 0 0 S
 25 0
 0 0 0 0
-! 0 0 1 0 0 0 0
+! 0 0 14 0 0 0 0
 | 0 0 0 0 0 2 0
 #1405
 wolf pack leader~
@@ -6164,7 +6167,7 @@ The pack leader is larger and older than the other wolves, its muzzle lightly si
 67108897 0 0 S
 38 0
 0 0 0 0
-! 1 0 1 0 0 0 0
+! 1 0 14 0 0 0 0
 | 0 0 0 0 0 2 0
 #1406
 village ferryman~
@@ -6176,6 +6179,7 @@ The village ferryman is a weathered person who has managed the river crossing fo
 3 0 500 S
 15 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1407
 river ford innkeeper~
 a river ford innkeeper~
@@ -6186,6 +6190,7 @@ The river ford innkeeper runs the Ledger Inn with cheerful efficiency, maintaini
 3 0 500 S
 15 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1408
 village council member~
 a village council member~
@@ -6196,6 +6201,7 @@ The village council member is one of the elected administrators who manage the F
 3 0 500 S
 20 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1409
 village healer~
 a village healer~
@@ -6206,6 +6212,7 @@ The village healer has served generations of families on this stretch of the roa
 3 512 500 S
 20 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1410
 dustward waystation keeper~
 a waystation keeper~
@@ -6216,6 +6223,7 @@ The waystation keeper has managed the Dustward Waystation for eleven years on ap
 3 0 500 S
 25 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1411
 dustward stablehand~
 a waystation stablehand~
@@ -6226,6 +6234,7 @@ The waystation stablehand is a young worker who knows horses and draft animals i
 3 0 500 S
 12 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1412
 dustward road merchant~
 a road merchant~
@@ -6236,6 +6245,7 @@ The road merchant is one of the independent traders who uses the Dustward Waysta
 3 0 500 S
 20 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1413
 market guild notary~
 a guild notary~
@@ -6246,6 +6256,7 @@ The guild notary represents the @@yKiess merchant guild@@N at the crossroads mar
 3 0 500 S
 25 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1414
 crossroads market warden~
 a market warden~
@@ -6256,7 +6267,7 @@ The market warden is the crossroads market's security presence â a neutral 
 67108866 0 0 S
 20 0
 0 0 0 0
-! 0 0 1 0 4096 0 3
+! 0 0 0 0 4096 0 3
 | 0 0 0 0 0 2 0
 #1415
 crossroads market trader~
@@ -6268,6 +6279,7 @@ The market trader occupies one of the regular pitches at the crossroads market, 
 3 0 500 S
 15 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1416
 kiess customs clerk~
 a customs clerk~
@@ -6278,6 +6290,7 @@ The customs clerk is one of several processing convoy arrivals at the outer gate
 3 0 500 S
 20 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1417
 kiess gate warden~
 a gate warden~
@@ -6288,7 +6301,7 @@ The gate warden controls passage through the outer gate of Kiess.  They are seni
 67108866 0 0 S
 30 0
 0 0 0 0
-! 0 0 1 0 4096 0 7
+! 0 0 0 0 4096 0 7
 | 0 0 0 0 0 2 0
 #1418
 midgaard civic guard~
@@ -6300,7 +6313,7 @@ The civic guard is part of the south gate garrison of @@BMidgaard@@N.  Their uni
 67108866 0 0 S
 32 0
 0 0 0 0
-! 0 0 1 0 4096 0 7
+! 0 0 0 0 4096 0 7
 | 0 0 0 0 0 2 0
 #1419
 midgaard registry clerk~
@@ -6312,6 +6325,7 @@ The registry clerk manages the documentation for one of the busiest commercial r
 3 0 500 S
 20 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1420
 midgaard warehouse master~
 a warehouse master~
@@ -6322,6 +6336,7 @@ The warehouse master oversees the supply district warehouses for Midgaard's civi
 3 0 500 S
 25 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1421
 cave bat colony~
 cave bats~
@@ -6332,6 +6347,7 @@ The cave bats are a small detachment from the large colony roosting in the guano
 67108929 0 0 S
 12 0
 0 0 0 0
+! 0 0 15 7 0 0 0
 #1422
 cave wolf spider~
 a cave wolf spider~
@@ -6342,7 +6358,7 @@ The cave wolf spider is a large specimen of the species that has established its
 67108897 0 0 S
 18 0
 0 0 0 0
-! 0 0 1 0 0 0 0
+! 0 0 12 0 0 0 0
 | 0 0 0 0 0 0 512
 #1423
 inlet cave explorer~
@@ -6354,6 +6370,7 @@ The cave explorer is an independent researcher mapping the Inlet cave system for
 3 0 500 S
 20 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1424
 evermeet shade~
 an Evermeet shade~
@@ -6364,7 +6381,7 @@ The Evermeet shade is what remains of a former inhabitant of the buried city, ne
 67141697 16384 -500 S
 45 0
 0 0 0 0
-! 0 0 1 0 0 0 0
+! 0 0 10 0 0 0 0
 | 0 0 0 0 0 8 256
 #1425
 evermeet remnant guardian~
@@ -6376,7 +6393,7 @@ The remnant guardian is a more cohesive manifestation than the wandering shade �
 67141729 16384 -500 S
 55 0
 0 0 0 0
-! 1 0 1 0 0 0 0
+! 1 0 0 0 0 0 0
 | 0 0 0 0 0 8 256
 #1426
 greenveil forest guardian~
@@ -6388,7 +6405,7 @@ The forest guardian of Greenveil is not easily categorized.  It appears as a fig
 67141729 524288 0 S
 45 0
 0 0 0 0
-! 1 0 1 0 0 0 0
+! 1 0 0 0 0 0 0
 | 0 0 0 256 0 0 128
 #1427
 glade wild boar~
@@ -6400,7 +6417,7 @@ The wild boar is a large male that has made the Greenveil hollow its territory. 
 67108897 0 0 S
 28 0
 0 0 0 0
-! 1 0 1 0 0 0 0
+! 1 0 16 0 0 0 0
 | 0 0 0 0 0 2 0
 #1428
 barracks training dummy~
@@ -6412,6 +6429,7 @@ The training dummy is a well-made piece of exercise equipment, weighted to appro
 3 0 0 S
 10 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1429
 dustward gate warden~
 a gate warden~
@@ -6422,7 +6440,7 @@ The gate warden manages entry to the waystation, collecting trader levies and di
 67108866 0 0 S
 18 0
 0 0 0 0
-! 0 0 1 0 4096 0 3
+! 0 0 0 0 4096 0 3
 | 0 0 0 0 0 2 0
 #1430
 cartwright apprentice~
@@ -6434,6 +6452,7 @@ The cartwright apprentice is learning the trade under a senior craftsman, handli
 3 0 500 S
 12 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1431
 market food vendor~
 a food vendor~
@@ -6444,6 +6463,7 @@ The food vendor runs one of the more popular food stalls in the market, their pi
 3 0 500 S
 15 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1432
 kiess antiquarian scholar~
 an antiquarian scholar~
@@ -6454,6 +6474,7 @@ The antiquarian scholar is a member of the @@yKiess Antiquarian Society@@N, curr
 3 0 500 S
 25 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1433
 kiess charter herald~
 a charter herald~
@@ -6464,6 +6485,7 @@ The charter herald is posted by the city of Kiess beside the charter stone as a 
 3 0 500 S
 18 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1434
 midgaard courier~
 a city courier~
@@ -6474,6 +6496,7 @@ The city courier is one of the official messengers of the @@BMidgaard@@N civic a
 67108866 0 0 S
 15 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1435
 ridge camp hunter~
 a ridge camp hunter~
@@ -6484,6 +6507,7 @@ The ridge camp hunter is one of the seasonal hunters who camp on the Banner Hill
 3 0 500 S
 22 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1436
 cave formation researcher~
 a cave researcher~
@@ -6494,6 +6518,7 @@ The cave researcher visits the Inlet cave system regularly to take measurements 
 3 0 500 S
 22 0
 0 0 0 0
+! 0 0 0 7 0 0 0
 #1437
 ridge sentry wolf~
 a sentry wolf~
@@ -6504,7 +6529,7 @@ The sentry wolf is the pack's designated perimeter animal, stationed at the den 
 67108897 0 0 S
 30 0
 0 0 0 0
-! 1 0 1 0 0 0 0
+! 1 0 14 0 0 0 0
 | 0 0 0 0 0 2 0
 #1438
 river ford militia~
@@ -6516,7 +6541,7 @@ The village militia member is one of the few organized defenders of the river fo
 67108866 0 0 S
 18 0
 0 0 0 0
-! 0 0 1 0 4096 0 3
+! 0 0 0 0 4096 0 3
 | 0 0 0 0 0 2 0
 #0
 #OBJECTS

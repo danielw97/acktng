@@ -3970,7 +3970,7 @@ spear leveled at any who dare approach without invitation.
 32835 0 -250 S
 100 0
 0 0 5 5
-! 2 7 3 7 65535 256 4
+! 2 7 7 7 65535 256 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3986,7 +3986,7 @@ purpose, the hollow eye sockets glowing with a sickly amber light.
 16483 0 -100 S
 101 0
 0 0 4 4
-! 2 3 3 7 1025 64 4
+! 2 3 10 7 1025 64 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4002,7 +4002,7 @@ nervously as though expecting the dead themselves to rise in retribution.
 32835 0 -200 S
 100 0
 0 0 4 4
-! 2 7 3 7 1089 128 4
+! 2 7 0 7 1089 128 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4018,7 +4018,7 @@ hypnotic patience, fangs gleaming with amber venom in the torchlight.
 32865 0 -50 S
 102 0
 0 0 3 3
-! 2 0 3 7 4 0 0
+! 2 0 11 7 4 0 0
 | 0 0 256 0 0 512 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4034,7 +4034,7 @@ grinding joints, hieroglyphs burnt into its exposed flesh still glowing faintly.
 16483 0 -150 S
 103 0
 0 0 5 5
-! 2 3 3 7 2049 64 6
+! 2 3 10 7 2049 64 6
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4050,7 +4050,7 @@ chittering and clicking as they surge forward in a glittering living carpet.
 32865 0 0 S
 100 0
 0 0 2 2
-! 4 0 7 7 0 0 0
+! 4 0 13 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4066,7 +4066,7 @@ of a dead language pouring from cracked lips as spectral fire dances at his fing
 16483 0 -200 S
 102 0
 0 0 4 5
-! 2 3 5 7 0 32770 6
+! 2 3 10 7 0 32770 6
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4082,7 +4082,7 @@ thunderous steps, the golden runes etched into its chest blazing with inner fire
 32835 0 -300 S
 103 0
 0 0 6 6
-! 2 3 0 7 2048 0 4
+! 2 3 19 7 2048 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4098,7 +4098,7 @@ hooded head, revealing a throat that glows with dark necrotic energy.
 32865 0 -50 S
 103 0
 0 0 4 4
-! 4 0 3 7 4 0 0
+! 4 0 11 7 4 0 0
 | 0 0 256 0 0 256 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4114,7 +4114,7 @@ within the pyramid walls, condemned to haunt these passages until judgment day.
 16483 0 -100 S
 101 0
 0 0 3 4
-! 2 3 3 7 0 8192 4
+! 2 3 10 7 0 8192 4
 | 0 32 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4130,7 +4130,7 @@ breathing, amber eyes forming and dissolving within the swirling granular mass.
 32865 0 -200 S
 104 0
 0 0 5 6
-! 2 3 0 7 1024 0 4
+! 2 3 19 7 1024 0 4
 | 0 0 32 0 0 0 32
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4146,7 +4146,7 @@ the whites of his eyes rolled back as he surrenders himself wholly to the death 
 32867 0 -200 S
 101 0
 0 0 4 4
-! 2 7 3 7 65 0 2
+! 2 7 0 7 65 0 2
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4162,7 +4162,7 @@ eight milky eyes fixed with patient malice upon those who disturb the tomb.
 32865 0 -50 S
 102 0
 0 0 3 4
-! 4 0 3 7 4 0 0
+! 4 0 12 7 4 0 0
 | 0 0 0 0 0 512 256
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4178,7 +4178,7 @@ assembled into a composite guardian, the painted colors still vivid upon their f
 32835 0 -150 S
 103 0
 0 0 5 5
-! 2 3 0 7 2049 0 4
+! 2 3 19 7 2049 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4194,7 +4194,7 @@ by dark magic, still wearing the shadow of its gold death mask in ghostly outlin
 16483 0 -250 S
 104 0
 0 0 4 5
-! 2 3 3 7 0 8192 6
+! 2 3 10 7 0 8192 6
 | 0 64 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4210,7 +4210,7 @@ has been painted in ritual patterns across their shaved skull and hollow cheeks.
 32867 0 -200 S
 102 0
 0 0 4 5
-! 2 3 5 7 0 16386 4
+! 2 3 0 7 0 16386 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4226,7 +4226,7 @@ an entire stone body that stands twice the height of any mortal, unyielding.
 32835 0 -300 S
 104 0
 0 0 7 7
-! 2 3 0 7 2048 0 4
+! 2 3 19 7 2048 0 4
 | 0 0 32 0 0 0 32
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4242,7 +4242,7 @@ absolute disdain, summoned by Thoth's priests to guard their sacred texts.
 32865 0 -100 S
 101 0
 0 0 3 3
-! 4 0 3 7 0 512 0
+! 4 0 15 7 0 512 0
 | 0 4 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4258,7 +4258,7 @@ still, the preservation magic keeping their form battle-ready for eternity.
 32835 0 -250 S
 103 0
 0 0 5 6
-! 2 7 3 7 67585 256 6
+! 2 7 7 7 67585 256 6
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4274,7 +4274,7 @@ construct slithers forward with the clink of metallic scales, striking like ligh
 32865 0 -100 S
 103 0
 0 0 5 4
-! 6 0 3 7 4 0 0
+! 6 0 11 7 4 0 0
 | 0 0 0 0 0 256 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4290,7 +4290,7 @@ bandages, one of Anubis's own servants dispatched to judge the unworthy dead.
 32835 0 -150 S
 104 0
 0 0 5 5
-! 2 3 3 7 1089 128 4
+! 2 3 14 7 1089 128 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4307,7 +4307,7 @@ it once plundered, its craving for flesh only sharpened by centuries of hunger.
 16483 0 -150 S
 101 0
 0 0 4 4
-! 2 3 3 7 1024 0 4
+! 2 3 10 7 1024 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4323,7 +4323,7 @@ in the memory of silk and gold, its face a void save for two cold burning points
 16483 0 -200 S
 104 0
 0 0 3 5
-! 2 3 3 7 0 8192 4
+! 2 3 10 7 0 8192 4
 | 0 64 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4339,7 +4339,7 @@ carries a curved khopesh that has never failed to take its appointed head.
 32867 0 -300 S
 104 0
 0 0 5 6
-! 2 7 3 7 65601 256 6
+! 2 7 0 7 65601 256 6
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4355,7 +4355,7 @@ scorch marks wherever it scuttles, drawn to living warmth like a coal to tinder.
 32865 0 0 S
 102 0
 0 0 3 3
-! 4 0 7 7 0 8 0
+! 4 0 13 7 0 8 0
 | 0 0 128 0 0 0 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4371,7 +4371,7 @@ the phylactery gem in its chest cavity pulsing with cold lavender light and stol
 16483 0 -350 S
 105 0
 0 0 6 6
-! 2 3 5 7 0 49154 6
+! 2 3 10 7 0 49154 6
 | 0 64 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4387,7 +4387,7 @@ judgment across its back and walks with the deliberate calm of divine purpose.
 32865 0 -200 S
 103 0
 0 0 5 5
-! 2 3 3 7 1025 128 4
+! 2 3 14 7 1025 128 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4404,7 +4404,7 @@ stands on guard with bow nocked, never blinking, never wavering, never resting.
 16483 0 -250 S
 102 0
 0 0 4 4
-! 2 3 3 7 65 32 4
+! 2 3 0 7 65 32 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4420,7 +4420,7 @@ weight of every curse laid upon this tomb, its joints bending at impossible angl
 16483 0 -100 S
 100 0
 0 0 4 4
-! 2 3 3 7 0 0 4
+! 2 3 10 7 0 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4436,7 +4436,7 @@ its master's burial goods with tireless supernatural devotion, black fur still p
 32835 0 -150 S
 102 0
 0 0 4 4
-! 2 3 3 7 1024 128 4
+! 2 3 14 7 1024 128 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4452,7 +4452,7 @@ golden light and scorching heat in all directions from its radiant core.
 32865 0 0 S
 104 0
 0 0 4 5
-! 2 3 0 7 0 32800 4
+! 2 3 19 7 0 32800 4
 | 0 0 128 0 0 0 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4468,7 +4468,7 @@ here, twin black blades crossed over chest, awaiting judgment upon all intruders
 32835 0 -250 S
 104 0
 0 0 6 6
-! 2 7 3 7 67585 256 6
+! 2 7 0 7 67585 256 6
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4484,7 +4484,7 @@ compulsion, decorated armor gleaming with the maintenance of obsessive undead pr
 16483 0 -300 S
 105 0
 0 0 6 6
-! 2 7 3 7 67585 384 6
+! 2 7 0 7 67585 384 6
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4500,7 +4500,7 @@ with casual ease, its hollow helmet revealing only burning amber eyes within.
 32835 0 -300 S
 105 0
 0 0 6 7
-! 2 7 3 7 67585 256 6
+! 2 7 7 7 67585 256 6
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4516,7 +4516,7 @@ from its sealed antechamber, preserved in patient malice through sheer force of 
 16483 0 -400 S
 105 0
 0 0 6 6
-! 2 3 5 7 0 49154 6
+! 2 3 10 7 0 49154 6
 | 0 64 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4533,7 +4533,7 @@ power channeled through three hundred years of undying dedication to the death c
 67108931 0 -500 S
 110 0
 5 5 10 10
-! 2 3 5 7 0 49154 6
+! 2 3 0 7 0 49154 6
 | 0 64 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4550,7 +4550,7 @@ representing one dynasty brought low through art rather than violence.
 67108931 0 -500 S
 110 0
 5 5 9 9
-! 2 7 3 7 67585 640 6
+! 2 7 0 7 67585 640 6
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4567,7 +4567,7 @@ perfect circles as divine power pours from its incandescent form without ceasing
 67108931 0 -500 S
 110 0
 5 5 9 10
-! 2 3 0 7 0 49154 4
+! 2 3 19 7 0 49154 4
 | 0 0 128 0 0 0 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4584,7 +4584,7 @@ blades are so sharp they can cut the soul free from flesh in a single perfect st
 67108931 0 -500 S
 110 0
 5 5 10 10
-! 2 7 3 7 67585 256 6
+! 2 7 7 7 67585 256 6
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4601,7 +4601,7 @@ a crook and flail of solid divine power, her roar shaking dust from the pyramid 
 67108931 0 -500 S
 110 0
 5 5 10 10
-! 2 7 3 7 65601 640 6
+! 2 7 0 7 65601 640 6
 | 0 0 128 0 0 0 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4618,7 +4618,7 @@ who dared disturb his eternal rest, a living god who will not abide the profane.
 67108931 0 -1000 S
 110 0
 10 10 15 15
-! 2 7 5 7 67585 49666 7
+! 2 7 10 7 67585 49666 7
 | 0 64 128 0 0 0 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4635,7 +4635,7 @@ and secret passage in the pyramid haunting his own masterwork for eternity.
 67108931 0 -400 S
 110 0
 4 4 8 8
-! 2 3 5 7 0 49154 6
+! 2 3 10 7 0 49154 6
 | 0 64 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4652,7 +4652,7 @@ hissing fills the chamber with a sound like all the world ending at once.
 67108931 0 -500 S
 110 0
 5 5 8 10
-! 6 0 5 7 4 16386 0
+! 6 0 11 7 4 16386 0
 | 0 64 256 0 0 512 256
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4669,7 +4669,7 @@ now devoted eternally to perfecting the death magic that keeps this pyramid aliv
 67108931 0 -500 S
 110 0
 4 4 8 10
-! 2 3 5 7 0 49154 6
+! 2 3 10 7 0 49154 6
 | 0 64 0 0 0 0 6
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4686,7 +4686,7 @@ and imbued with the strength of ten thousand men and the will of a god-king.
 67108931 0 -600 S
 110 0
 10 10 15 15
-! 2 3 0 7 2048 0 4
+! 2 3 19 7 2048 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4704,7 +4704,7 @@ compressed into a form that moves with terrible deliberate purpose.
 16451 0 -200 S
 100 0
 0 0 5 5
-! 2 7 3 7 65601 256 4
+! 2 7 10 7 65601 256 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4721,7 +4721,7 @@ being poured down a stone staircase, its many skulls all facing outward.
 16451 0 -150 S
 101 0
 0 0 4 5
-! 2 3 3 7 1025 64 4
+! 2 3 10 7 1025 64 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4738,7 +4738,7 @@ a venom that stops the heart within seconds of entering the blood.
 32865 0 -50 S
 102 0
 0 0 4 4
-! 4 0 3 7 4 0 0
+! 4 0 11 7 4 0 0
 | 0 0 256 0 0 512 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4755,7 +4755,7 @@ scorch marks wherever the blackened wrappings drag across the stone floor.
 16451 0 -250 S
 102 0
 0 0 4 5
-! 2 3 3 7 0 8 4
+! 2 3 10 7 0 8 4
 | 0 0 128 0 0 0 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4772,7 +4772,7 @@ from the thighbone of an enemy slain in life and preserved for eternal service.
 16451 0 -200 S
 101 0
 0 0 4 4
-! 2 3 3 7 65 32 4
+! 2 3 10 7 65 32 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4789,7 +4789,7 @@ it has begun consuming itself in the absence of anything else to devour.
 16451 0 -150 S
 101 0
 0 0 4 4
-! 2 3 3 7 1024 0 4
+! 2 3 10 7 1024 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4806,7 +4806,7 @@ total silence, emerging from solid shadow to strike and withdrawing without trac
 32865 0 -100 S
 102 0
 0 0 3 3
-! 4 0 7 7 0 0 0
+! 4 0 13 7 0 0 0
 | 0 256 0 0 0 0 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4823,7 +4823,7 @@ built from ten thousand years of deposited Nile silt beneath the stone.
 32865 0 -200 S
 103 0
 0 0 5 6
-! 2 3 0 7 1024 0 4
+! 2 3 19 7 1024 0 4
 | 0 0 96 0 0 0 96
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4840,7 +4840,7 @@ sharpened to an almost supernatural degree by the demands of subterranean life.
 32865 0 -50 S
 100 0
 0 0 3 3
-! 4 0 3 7 4 0 0
+! 4 0 16 7 4 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4857,7 +4857,7 @@ barely coherent, stretched thin by three thousand years of forced haunting.
 16451 0 -150 S
 102 0
 0 0 3 5
-! 2 3 3 7 0 8192 4
+! 2 3 10 7 0 8192 4
 | 0 64 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4874,7 +4874,7 @@ resentment now weaponized into an undying hatred for all living intruders.
 16451 0 -200 S
 103 0
 0 0 4 5
-! 2 3 3 7 1024 8192 6
+! 2 3 10 7 1024 8192 6
 | 0 64 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4891,7 +4891,7 @@ carved faces of a hundred different dead staring outward from its assembled form
 32835 0 -300 S
 104 0
 0 0 7 7
-! 2 3 0 7 2048 0 4
+! 2 3 19 7 2048 0 4
 | 0 0 32 0 0 0 32
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4908,7 +4908,7 @@ death and who has been punished with an eternity of visible, inescapable guilt.
 16451 0 -250 S
 103 0
 0 0 3 5
-! 2 3 3 7 0 8192 4
+! 2 3 10 7 0 8192 4
 | 0 64 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4925,7 +4925,7 @@ sun, their devotion to the death god absolute and their violence unpredictable.
 32867 0 -250 S
 102 0
 0 0 4 5
-! 2 7 3 7 65 16386 4
+! 2 7 0 7 65 16386 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4942,7 +4942,7 @@ now genuinely stone-hard, its pincers capable of cutting through bronze armor.
 32865 0 -100 S
 103 0
 0 0 4 4
-! 4 0 7 7 0 0 0
+! 4 0 13 7 0 0 0
 | 0 0 32 0 0 0 32
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4959,7 +4959,7 @@ their natron jars and linen strips ever-ready for their compulsive dark work.
 16483 0 -150 S
 101 0
 0 0 3 4
-! 2 3 3 7 0 0 4
+! 2 3 10 7 0 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4976,7 +4976,7 @@ more potent to compensate for the reduced frequency of prey in the deep dark.
 32865 0 -50 S
 103 0
 0 0 4 4
-! 4 0 3 7 4 0 0
+! 4 0 11 7 4 0 0
 | 0 0 256 0 0 512 256
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4993,7 +4993,7 @@ beneath the silence when this enormous undead warrior stalks through the catacom
 16483 0 -300 S
 104 0
 0 0 6 6
-! 2 7 3 7 67585 256 6
+! 2 7 10 7 67585 256 6
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5010,7 +5010,7 @@ into stalagmites below their roosts, their bite carrying a vicious fever.
 32865 0 -50 S
 100 0
 0 0 2 3
-! 4 0 3 7 4 0 0
+! 4 0 15 7 4 0 0
 | 0 0 0 0 0 256 512
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5027,7 +5027,7 @@ moving with the grinding slowness of a millstone but hitting with comparable for
 16483 0 -250 S
 104 0
 0 0 6 6
-! 2 3 3 7 2049 64 6
+! 2 3 10 7 2049 64 6
 | 0 0 32 0 0 0 32
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5044,7 +5044,7 @@ an exit that no longer exists, attacking anything that might know the way out.
 16451 0 -100 S
 101 0
 0 0 3 4
-! 2 3 3 7 0 8192 4
+! 2 3 10 7 0 8192 4
 | 0 64 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5061,7 +5061,7 @@ by dark sacrament, his mind fractured by centuries of chosen darkness and prayer
 16483 0 -300 S
 104 0
 0 0 5 6
-! 2 3 5 7 0 49154 6
+! 2 3 10 7 0 49154 6
 | 0 64 0 0 0 0 6
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5078,7 +5078,7 @@ thick white calcium that makes it nearly impervious to physical attack.
 16451 0 -300 S
 105 0
 0 0 6 7
-! 2 3 3 7 2049 64 6
+! 2 3 10 7 2049 64 6
 | 0 0 32 0 0 0 32
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5095,7 +5095,7 @@ flickering as they move between the material world and whatever lies adjacent.
 32865 0 -150 S
 104 0
 0 0 4 4
-! 4 0 7 7 0 0 0
+! 4 0 13 7 0 0 0
 | 0 288 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5112,7 +5112,7 @@ to be the ultimate guardian, inheriting the worst qualities of everything it con
 16451 0 -350 S
 105 0
 0 0 7 7
-! 2 3 3 7 3073 64 6
+! 2 3 10 7 3073 64 6
 | 0 64 32 0 0 256 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5129,7 +5129,7 @@ of animated funerary dust held together by pure necromantic will and spite.
 16451 0 -400 S
 105 0
 0 0 6 6
-! 2 3 5 7 0 49154 6
+! 2 3 10 7 0 49154 6
 | 0 64 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5146,7 +5146,7 @@ protective instinct, and her pincers strong enough to shear through solid bronze
 32865 0 -100 S
 102 0
 0 0 4 4
-! 4 0 7 7 0 0 0
+! 4 0 13 7 0 0 0
 | 0 256 0 0 0 0 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5163,7 +5163,7 @@ the same mechanisms that seal the pit covers, now ancient and enormous.
 32865 0 -50 S
 103 0
 0 0 4 4
-! 4 0 3 7 4 0 0
+! 4 0 11 7 4 0 0
 | 0 0 256 0 0 512 256
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5180,7 +5180,7 @@ preserved flesh over centuries, making him a walking iron-wrapped nightmare.
 16451 0 -300 S
 104 0
 0 0 6 6
-! 2 7 3 7 67585 256 6
+! 2 7 10 7 67585 256 6
 | 0 0 32 0 0 0 32
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5197,7 +5197,7 @@ form that moves with a liquid grace and strikes with the weight of the tide.
 32865 0 -200 S
 104 0
 0 0 5 6
-! 2 3 0 7 1024 0 4
+! 2 3 19 7 1024 0 4
 | 0 0 128 0 0 0 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5231,7 +5231,7 @@ visible to the living as a flickering smear of motion at the edge of light.
 16451 0 -200 S
 103 0
 0 0 5 5
-! 2 7 3 7 65537 128 4
+! 2 7 0 7 65537 128 4
 | 0 288 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5248,7 +5248,7 @@ him to partial granite, his expression of dawning horror still perfectly preserv
 16451 0 -250 S
 103 0
 0 0 5 6
-! 2 3 3 7 2049 64 6
+! 2 3 0 7 2049 64 6
 | 0 0 32 0 0 0 32
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5266,7 +5266,7 @@ cold and despair in equal measure and feeds on the fear it generates.
 16451 0 -300 S
 105 0
 0 0 4 6
-! 2 3 3 7 0 8192 4
+! 2 3 10 7 0 8192 4
 | 0 320 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5283,7 +5283,7 @@ to function, each spell cast tearing further at the fragile thread of its being.
 16483 0 -350 S
 105 0
 0 0 5 6
-! 2 3 5 7 0 49154 6
+! 2 3 0 7 0 49154 6
 | 0 64 0 0 0 0 6
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5300,7 +5300,7 @@ alone into a mobile mass of preserved tissue and ancient appetite.
 16451 0 -200 S
 102 0
 0 0 5 5
-! 2 3 3 7 1025 0 4
+! 2 3 10 7 1025 0 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5317,7 +5317,7 @@ temperature, the stolen grief of five hundred deaths given terrible coherent for
 16451 0 -400 S
 105 0
 0 0 8 8
-! 2 3 0 7 2048 0 4
+! 2 3 10 7 2048 0 4
 | 0 0 32 0 0 0 32
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5334,7 +5334,7 @@ ideas and invocations of dead texts, incomprehensible and hostile.
 16451 0 -150 S
 102 0
 0 0 3 5
-! 2 3 3 7 0 8192 4
+! 2 3 10 7 0 8192 4
 | 0 64 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5351,7 +5351,7 @@ copper, leaving behind only scattered bones and scratches in the floor.
 32865 0 -250 S
 103 0
 0 0 5 5
-! 4 0 3 7 4 128 4
+! 4 0 10 7 4 128 4
 | 0 256 0 0 0 0 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5368,7 +5368,7 @@ the missing final verse of the entombment ritual leaving a door open that should
 16483 0 -200 S
 102 0
 0 0 4 5
-! 2 3 5 7 0 32770 6
+! 2 3 10 7 0 32770 6
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5385,7 +5385,7 @@ shadow-duplicate that carries all his viciousness and none of his charm, pure ma
 67108931 0 -400 S
 110 0
 5 5 9 9
-! 2 7 3 7 67585 640 6
+! 2 7 10 7 67585 640 6
 | 0 64 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5402,7 +5402,7 @@ of every burial above, patient as stone, hungry as the void, vast beyond reckoni
 67108931 0 -500 S
 110 0
 10 10 15 15
-! 2 3 3 7 3073 64 6
+! 2 3 10 7 3073 64 6
 | 0 64 32 0 0 256 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5419,7 +5419,7 @@ free of containment, three thousand years of pent fury unleashed into the deep d
 67108931 0 -600 S
 110 0
 8 8 12 12
-! 2 3 5 7 0 49154 6
+! 2 3 10 7 0 49154 6
 | 0 64 0 0 0 0 6
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5436,7 +5436,7 @@ absorbing light, its golden eyes the only illumination in the passages it walks.
 67108931 0 -500 S
 110 0
 6 6 11 11
-! 2 3 3 7 1089 128 6
+! 2 3 14 7 1089 128 6
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5453,7 +5453,7 @@ identity, which has not diminished its power but has made it incomprehensibly an
 67108931 0 -700 S
 110 0
 10 10 15 15
-! 2 3 5 7 0 49154 6
+! 2 3 10 7 0 49154 6
 | 0 320 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5470,7 +5470,7 @@ every spirit and monster that ever entered its domain and simply became more.
 67108931 0 -800 S
 110 0
 12 12 18 18
-! 2 3 5 7 3073 49154 7
+! 2 3 10 7 3073 49154 7
 | 0 320 160 0 0 256 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -5492,7 +5492,7 @@ unmakes.
 67108931 0 -1000 S
 170 0
 15 15 22 22
-! 2 3 5 7 3073 49154 7
+! 2 3 0 7 3073 49154 7
 | 0 320 160 0 0 256 128
 + 0 0 0 0 0 0 0 0 0
 l 150 30686 30687 30688 30689 30690 30691 0 0 0 

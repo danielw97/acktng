@@ -3772,7 +3772,7 @@ light that marks its absolute sovereignty over this tomb's deeper levels.
 1140850803 0 -500 S
 130 0
 10 10 15 15
-! 2 7 5 7 569448 6299648 80
+! 2 7 10 7 569448 6299648 80
 | 260 136 0 0 0 0 0
 + 5 5 5 5 5 10 10 5 0
 l 400 10125 10140 10141 10142 0 0 0 0 0 
@@ -3789,7 +3789,7 @@ eyes glow @@Rred@@N as ancient sealing-magic activates at the intrusion of the l
 1140850803 0 -500 S
 130 0
 10 10 15 15
-! 2 7 0 7 569456 6144 144
+! 2 7 7 7 569456 6144 144
 | 34 4 0 0 0 0 0
 + 5 5 5 5 5 10 10 5 0
 l 400 10126 10143 10144 10145 0 0 0 0 0 
@@ -3806,7 +3806,7 @@ move with terrible precision, its hollow carapace venting @@Rheat@@N with each m
 1140850803 0 -500 S
 130 0
 10 10 15 15
-! 2 7 0 7 569448 33554560 96
+! 2 7 19 7 569448 33554560 96
 | 34 68 0 0 0 0 0
 + 5 5 5 5 5 10 10 5 0
 l 400 10127 10146 10147 10148 0 0 0 0 0 
@@ -3823,7 +3823,7 @@ stitched with @@cblue hieroglyphs@@N that channel the desert-gods' wrath directl
 1140850803 0 -500 S
 130 0
 10 10 15 15
-! 2 7 5 7 569448 1573120 112
+! 2 7 10 7 569448 1573120 112
 | 260 8 0 0 0 0 0
 + 5 5 5 5 5 10 10 5 0
 l 400 10128 10149 10150 10151 0 0 0 0 0 
@@ -3840,7 +3840,7 @@ still wearing its @@yyellow-gold@@N battle regalia, still able to command the py
 1140850803 0 -500 S
 130 0
 10 10 15 15
-! 2 7 5 7 569448 2424832 24
+! 2 7 10 7 569448 2424832 24
 | 256 136 0 0 0 0 0
 + 5 5 5 5 5 10 10 5 0
 l 400 10129 10152 10153 10154 0 0 0 0 0 
@@ -3857,7 +3857,7 @@ shimmers from its body continuously; it breathes @@Rembers@@N, not air.
 1140850803 0 -500 S
 130 0
 10 10 15 15
-! 2 7 3 7 569448 50331656 32
+! 2 7 18 7 569448 50331656 32
 | 130 80 0 0 0 0 0
 + 5 5 5 5 5 10 10 5 0
 l 500 10130 10155 10156 10157 10139 0 0 0 0 
@@ -3875,7 +3875,7 @@ its dominion over desert, death, and the assembled pyramid entire.
 1140850803 0 -1000 S
 130 0
 15 15 20 20
-! 2 7 5 7 569448 49283072 240
+! 2 7 10 7 569448 49283072 240
 | 164 8 0 0 0 0 0
 + 10 10 10 10 10 15 15 10 0
 l 500 10131 10158 10159 10160 10161 0 0 0 0 
@@ -3892,7 +3892,7 @@ it from rest also keeps it hostile to any who enter these passages uninvited.
 33570913 0 -500 S
 120 0
 5 5 10 10
-! 2 7 5 7 40961 2105344 16
+! 2 7 10 7 40961 2105344 16
 | 256 8 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3909,7 +3909,7 @@ same magic that raised these walls, turned toward combat with mechanical inevita
 33554529 0 0 S
 122 0
 5 5 10 10
-! 2 7 0 7 32868 0 1
+! 2 7 7 7 32868 0 1
 | 34 4 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3926,7 +3926,7 @@ precise, measured, and aimed at permanent incapacitation.
 33570913 0 -500 S
 121 0
 5 5 10 10
-! 2 7 5 7 565252 0 1
+! 2 7 10 7 565252 0 1
 | 256 8 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3943,7 +3943,7 @@ not full fire but @@Rglowing cinders@@N â enough to scorch stone.
 33554529 0 -200 S
 120 0
 5 5 10 10
-! 2 7 3 7 45060 0 1
+! 2 7 18 7 45060 0 1
 | 128 80 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3960,7 +3960,7 @@ time has developed an absolute understanding of when an intruder is not worthy o
 33554529 0 0 S
 122 0
 5 5 10 10
-! 2 7 0 7 45058 8392704 1
+! 2 7 7 7 45058 8392704 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -3977,7 +3977,7 @@ purpose that no individual beetle possesses.
 327777 0 0 S
 105 0
 0 0 0 0
-! 2 7 0 7 1 0 1
+! 2 7 13 7 1 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10192 0 0 0 0 0 0 0 0 
@@ -3994,7 +3994,7 @@ everything else from it â only the trained combat reflex survives.
 16481 0 -200 S
 107 0
 0 0 2 2
-! 2 7 5 7 129 0 1
+! 2 7 10 7 129 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4011,7 +4011,7 @@ wrappings to identify the original interment â but the name beneath has lon
 16481 0 -200 S
 108 0
 0 0 2 2
-! 2 7 5 7 32769 0 1
+! 2 7 10 7 32769 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10163 0 0 0 0 0 0 0 0 
@@ -4028,7 +4028,7 @@ immobilizes, then lets the desert's heat finish what the sting began.
 97 0 0 S
 110 0
 0 0 2 2
-! 2 7 3 7 1 0 1
+! 2 7 12 7 1 0 1
 | 0 0 0 0 0 512 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10164 0 0 0 0 0 0 0 0 
@@ -4045,7 +4045,7 @@ taken, and what it is condemned to is the memory of having stolen it.
 82017 0 -100 S
 106 0
 0 0 1 1
-! 2 7 5 7 0 1028 1
+! 2 7 10 7 0 1028 1
 | 256 2 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10165 0 0 0 0 0 0 0 0 
@@ -4062,7 +4062,7 @@ an ambush predator over a direct combatant.
 97 0 -50 S
 112 0
 0 0 3 3
-! 2 7 3 7 6145 0 1
+! 2 7 14 7 6145 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10166 0 0 0 0 0 0 0 0 
@@ -4079,7 +4079,7 @@ composite of every pharaoh who ever ruled, chosen to represent total authority.
 262241 0 0 S
 115 0
 0 0 3 3
-! 2 7 0 7 32802 0 1
+! 2 7 7 7 32802 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4096,7 +4096,7 @@ carved in an animal face that bears an expression of eternal @@Rpain@@N.
 278625 0 -200 S
 109 0
 0 0 2 2
-! 2 7 5 7 129 0 1
+! 2 7 10 7 129 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10168 0 0 0 0 0 0 0 0 
@@ -4113,7 +4113,7 @@ acts quickly on the nervous system, and it knows it has no need to hide.
 97 0 0 S
 113 0
 0 0 3 3
-! 2 7 3 7 1 0 1
+! 2 7 11 7 1 0 1
 | 0 0 0 0 0 512 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10169 0 0 0 0 0 0 0 0 
@@ -4130,7 +4130,7 @@ honed by years of use on the small creatures that also inhabit these corridors.
 97 0 0 S
 116 0
 0 0 3 3
-! 2 7 3 7 4097 0 1
+! 2 7 15 7 4097 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10170 0 0 0 0 0 0 0 0 
@@ -4147,7 +4147,7 @@ that core it is just a pile of sand; with it, it is a methodical problem.
 262241 0 0 S
 110 0
 0 0 2 2
-! 2 7 0 7 4098 0 1
+! 2 7 19 7 4098 0 1
 | 34 64 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10171 0 0 0 0 0 0 0 0 
@@ -4164,7 +4164,7 @@ training remains intact; the curse just adds additional potency to everything it
 97 0 -300 S
 118 0
 0 0 5 5
-! 2 7 3 7 32769 518 4
+! 2 7 10 7 32769 518 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4181,7 +4181,7 @@ has been turned to near-leather by the desert; it is harder to damage than it ap
 16481 0 -300 S
 114 0
 0 0 3 3
-! 2 7 5 7 32769 0 1
+! 2 7 10 7 32769 0 1
 | 256 8 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10173 0 0 0 0 0 0 0 0 
@@ -4198,7 +4198,7 @@ pyramid's middle floors, each individually less threatening than its progenitor.
 262241 0 0 S
 117 0
 0 0 4 4
-! 2 7 0 7 32930 0 1
+! 2 7 7 7 32930 0 1
 | 34 68 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4215,7 +4215,7 @@ its surface cousins. Its hood-spread is wide enough to be difficult to look away
 97 0 0 S
 111 0
 0 0 2 2
-! 2 7 3 7 1 0 1
+! 2 7 11 7 1 0 1
 | 0 0 0 0 0 512 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10175 0 0 0 0 0 0 0 0 
@@ -4232,7 +4232,7 @@ Its @@blinen wrappings@@N are reinforced at the forearm to survive continuous bo
 16481 0 -200 S
 119 0
 0 0 4 4
-! 2 7 5 7 32769 0 1
+! 2 7 10 7 32769 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10176 0 0 0 0 0 0 0 0 
@@ -4249,7 +4249,7 @@ enclosed environment it has grown massive and aggressive, now preying as much as
 97 0 0 S
 120 0
 0 0 4 4
-! 2 7 3 7 4097 0 1
+! 2 7 15 7 4097 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10177 0 0 0 0 0 0 0 0 
@@ -4266,7 +4266,7 @@ defensive ward systems. It parries with its flat stone body.
 262243 0 0 S
 116 0
 0 0 3 3
-! 2 7 0 7 8225 0 1
+! 2 7 7 7 8225 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4283,7 +4283,7 @@ no body to strike and no weight to resist; contact with it drains rather than bl
 82017 0 -400 S
 112 0
 0 0 3 3
-! 2 7 5 7 0 65664 1
+! 2 7 10 7 0 65664 1
 | 256 2 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10179 0 0 0 0 0 0 0 0 
@@ -4300,7 +4300,7 @@ Their combination of mundane skill and shadow-cult training is particularly effi
 97 0 -300 S
 118 0
 0 0 4 4
-! 2 7 3 7 36865 0 1
+! 2 7 10 7 36865 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10180 0 0 0 0 0 0 0 0 
@@ -4317,7 +4317,7 @@ swinging in ways that no living creature could survive at close range.
 262243 0 0 S
 120 0
 0 0 5 5
-! 2 7 0 7 32900 0 1
+! 2 7 19 7 32900 0 1
 | 34 4 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4334,7 +4334,7 @@ as cult animals; their size marks them as something that has outgrown that role.
 97 0 0 S
 115 0
 0 0 3 3
-! 2 7 3 7 1 0 1
+! 2 7 11 7 1 0 1
 | 0 0 0 0 0 512 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10182 0 0 0 0 0 0 0 0 
@@ -4351,7 +4351,7 @@ with @@yocre@@N and they carry consecrated implements for every ceremony require
 97 0 -300 S
 117 0
 0 0 4 4
-! 2 7 3 7 32769 10 4
+! 2 7 0 7 32769 10 4
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10183 0 0 0 0 0 0 0 0 
@@ -4368,7 +4368,7 @@ carrying the same paralytic quality that marks the upper floor's most dangerous 
 97 0 -200 S
 119 0
 0 0 4 4
-! 2 7 3 7 4097 0 1
+! 2 7 15 7 4097 0 1
 | 256 2 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10184 0 0 0 0 0 0 0 0 
@@ -4385,7 +4385,7 @@ for the spirit to persist in it. It remembers exactly how it died and is motivat
 16481 0 -300 S
 113 0
 0 0 3 3
-! 2 7 5 7 32801 0 8
+! 2 7 10 7 32801 0 8
 | 256 8 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10185 0 0 0 0 0 0 0 0 
@@ -4402,7 +4402,7 @@ to patrol even though it can no longer physically bar passage.
 82017 0 -400 S
 116 0
 0 0 3 3
-! 2 7 5 7 0 1049600 8
+! 2 7 10 7 0 1049600 8
 | 256 2 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4420,7 +4420,7 @@ the corpse-meat from burial offerings left too long.
 327777 0 0 S
 105 0
 0 0 0 0
-! 2 7 0 7 1 0 1
+! 2 7 13 7 1 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10193 0 0 0 0 0 0 0 0 
@@ -4438,7 +4438,7 @@ full undead possess.
 278625 0 0 S
 105 0
 0 0 0 0
-! 2 7 0 7 2049 0 1
+! 2 7 10 7 2049 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10194 0 0 0 0 0 0 0 0 
@@ -4455,7 +4455,7 @@ than any creature originally possessed and uses all of them simultaneously.
 278625 0 -200 S
 107 0
 0 0 2 2
-! 2 7 5 7 32770 0 1
+! 2 7 10 7 32770 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10195 0 0 0 0 0 0 0 0 
@@ -4472,7 +4472,7 @@ weight of it, and smells of baked mineral dust rather than the usual rot.
 16481 0 -300 S
 109 0
 0 0 2 2
-! 2 7 5 7 32769 0 1
+! 2 7 10 7 32769 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10196 0 0 0 0 0 0 0 0 
@@ -4489,7 +4489,7 @@ active state, making it effectively a slow but nearly impervious guardian.
 262243 0 0 S
 112 0
 0 0 3 3
-! 2 7 0 7 32802 0 1
+! 2 7 19 7 32802 0 1
 | 34 4 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10197 0 0 0 0 0 0 0 0 
@@ -4506,7 +4506,7 @@ still mimics laying blocks, and it attacks those who witness its eternal labor.
 16481 0 -200 S
 110 0
 0 0 2 2
-! 2 7 5 7 32769 514 1
+! 2 7 10 7 32769 514 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10198 0 0 0 0 0 0 0 0 
@@ -4523,7 +4523,7 @@ has found perfect hunting ground, and has grown accordingly large and patient.
 97 0 0 S
 108 0
 0 0 2 2
-! 2 7 3 7 4097 0 1
+! 2 7 11 7 4097 0 1
 | 0 0 0 0 0 512 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10199 0 0 0 0 0 0 0 0 
@@ -4541,7 +4541,7 @@ where the repairs used different stone.
 262241 0 0 S
 114 0
 0 0 3 3
-! 2 7 0 7 32930 0 1
+! 2 7 7 7 32930 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4558,7 +4558,7 @@ three-dimensional movement. Its hieroglyph surface still reads as coherent text.
 262243 0 0 S
 115 0
 0 0 3 3
-! 2 7 0 7 32770 0 1
+! 2 7 7 7 32770 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10201 0 0 0 0 0 0 0 0 
@@ -4575,7 +4575,7 @@ the jar; cracking it open would stop it but would also unleash what is inside.
 82017 0 -200 S
 112 0
 0 0 2 2
-! 2 7 5 7 129 516 1
+! 2 7 10 7 129 516 1
 | 0 0 0 0 0 0 512
 + 0 0 0 0 0 0 0 0 0
 l 100 10202 0 0 0 0 0 0 0 0 
@@ -4592,7 +4592,7 @@ writing that follows them is the content of what they knew â none of it is 
 16481 0 -300 S
 116 0
 0 0 3 3
-! 2 7 5 7 1 1026 2
+! 2 7 10 7 1 1026 2
 | 256 2 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10203 0 0 0 0 0 0 0 0 
@@ -4609,7 +4609,7 @@ undrained desert passages. It carries tools for service it can never complete.
 16481 0 -200 S
 113 0
 0 0 2 2
-! 2 7 5 7 32769 0 1
+! 2 7 10 7 32769 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10204 0 0 0 0 0 0 0 0 
@@ -4627,7 +4627,7 @@ its ritual function.
 16481 0 -400 S
 118 0
 0 0 4 4
-! 2 7 5 7 32801 512 1
+! 2 7 10 7 32801 512 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4644,7 +4644,7 @@ confusion and disorientation rather than direct physical contact.
 82017 0 -300 S
 117 0
 0 0 4 4
-! 2 7 5 7 0 262272 4
+! 2 7 10 7 0 262272 4
 | 256 2 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10206 0 0 0 0 0 0 0 0 
@@ -4661,7 +4661,7 @@ has not maintained the tissue. The curse keeps it fighting long past any rationa
 16481 0 -300 S
 119 0
 0 0 5 5
-! 2 7 5 7 524290 0 1
+! 2 7 10 7 524290 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10207 0 0 0 0 0 0 0 0 
@@ -4678,7 +4678,7 @@ It has stood upright for centuries and has not forgotten a single military disci
 16481 0 -300 S
 118 0
 0 0 5 5
-! 2 7 5 7 524290 0 1
+! 2 7 10 7 524290 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4695,7 +4695,7 @@ The rivets keep it from coming apart; the magic keeps the tissue from rotting.
 262241 0 0 S
 120 0
 0 0 5 5
-! 2 7 0 7 32900 0 1
+! 2 7 19 7 32900 0 1
 | 0 0 0 0 0 2 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10209 0 0 0 0 0 0 0 0 
@@ -4712,7 +4712,7 @@ heat and making it near-invisible in the dark. It prefers to attack from behind.
 97 0 -100 S
 116 0
 0 0 3 3
-! 2 7 3 7 6145 0 1
+! 2 7 0 7 6145 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10210 0 0 0 0 0 0 0 0 
@@ -4729,7 +4729,7 @@ Contact with its skin is uncomfortably hot; contact with its bite is worse.
 97 0 0 S
 117 0
 0 0 3 3
-! 2 7 3 7 4097 0 1
+! 2 7 17 7 4097 0 1
 | 128 64 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10211 0 0 0 0 0 0 0 0 
@@ -4746,7 +4746,7 @@ the embers do not ignite anything but they are quite hot against skin.
 16481 0 -200 S
 119 0
 0 0 4 4
-! 2 7 5 7 32770 0 1
+! 2 7 10 7 32770 0 1
 | 128 64 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10212 0 0 0 0 0 0 0 0 
@@ -4764,7 +4764,7 @@ any type of intruder that the lower sentinels might have failed to stop.
 262243 0 0 S
 120 0
 0 0 5 5
-! 2 7 0 7 32930 0 1
+! 2 7 7 7 32930 0 1
 | 34 4 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4781,7 +4781,7 @@ It guards the throne approach with the same professionalism it maintained in lif
 16481 0 -400 S
 118 0
 0 0 4 4
-! 2 7 5 7 32769 65536 1
+! 2 7 10 7 32769 65536 1
 | 256 8 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 10214 0 0 0 0 0 0 0 0 
@@ -4798,7 +4798,7 @@ with abrasive @@bsand@@N. It does not think; it simply strips whatever enters it
 33816673 0 0 S
 121 0
 5 5 10 10
-! 2 7 0 7 36866 16 1
+! 2 7 19 7 36866 16 1
 | 16 128 0 0 0 16 128
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4816,7 +4816,7 @@ its position uncertain, and it strikes first regardless.
 33816675 0 0 S
 122 0
 5 5 10 10
-! 2 7 0 7 41060 0 1
+! 2 7 19 7 41060 0 1
 | 34 4 0 0 0 2 4
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -4833,7 +4833,7 @@ battle-directives it has used for centuries. It still expects obedience.
 33570913 0 -500 S
 120 0
 5 5 10 10
-! 2 7 5 7 565250 2105344 1
+! 2 7 10 7 565250 2105344 1
 | 256 8 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 

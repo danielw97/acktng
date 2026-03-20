@@ -1454,7 +1454,7 @@ This palace retainer wears lacquered funerary steel, sea-glass silk, and bells t
 65 0 -450 S
 49 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 15 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 47 49 0 0 0 0 0 0 0 
@@ -1853,7 +1853,7 @@ This palace retainer wears lacquered funerary steel, sea-glass silk, and bells t
 65 0 -450 S
 46 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 15 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 44 46 0 0 0 0 0 0 0 
@@ -1910,7 +1910,7 @@ This palace retainer wears lacquered funerary steel, sea-glass silk, and bells t
 65 0 -450 S
 49 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 10 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 47 49 0 0 0 0 0 0 0 
@@ -2442,7 +2442,7 @@ Veteran scars and ritual tattoos mark this elite guardian as one who has survive
 65 2 -520 S
 50 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 10 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 48 50 0 0 0 0 0 0 0 

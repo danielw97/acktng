@@ -344,7 +344,7 @@ The Riddlegolem waits in silence, strange glyphs shifting across its surface.
 3 0 0 S
 155 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 19 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -359,7 +359,7 @@ A Shadow Stalker lurks near the walls, barely visible against the darkness.
 33 65536 -200 S
 162 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 10 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 9515 9520 0 0 0 0 0 0 0 
@@ -374,7 +374,7 @@ A Gravelurker hauls its bony body along the floor, searching with blind sockets.
 16417 0 -100 S
 153 0
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 10 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 100 9510 9521 0 0 0 0 0 0 0 

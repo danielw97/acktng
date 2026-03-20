@@ -441,7 +441,7 @@ A lean desert serpent with rust-red scales built for ambush in the dunes.
 97 0 0 S
 70 0
 0 0 0 0
-! 0 0 0 7 1048576 0 0
+! 0 0 11 7 1048576 0 0
 | 0 0 0 0 0 128 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -456,7 +456,7 @@ A pale-carapaced scorpion that blends almost perfectly with the desert dust.
 97 0 0 S
 72 0
 0 0 0 0
-! 0 0 0 7 9 0 0
+! 0 0 12 7 9 0 0
 | 0 0 0 0 0 128 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -471,7 +471,7 @@ A gaunt carrion bird with sun-bleached feathers and a wickedly hooked beak.
 97 0 0 S
 73 0
 0 0 0 0
-! 0 0 0 7 1024 0 0
+! 0 0 15 7 1024 0 0
 | 0 0 0 0 0 128 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -486,7 +486,7 @@ A hunched hyena-headed raider draped in stolen desert gear and bleached trophies
 2097249 0 -500 S
 74 1
 0 0 0 0
-! 0 0 0 7 1048640 0 0
+! 0 0 14 7 1048640 0 0
 | 0 0 0 0 0 128 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -501,7 +501,7 @@ A barely-visible spirit of a traveler who perished in the desert, now bound to t
 2113633 0 -750 S
 75 0
 0 0 1 1
-! 0 0 0 7 3072 2 0
+! 0 0 10 7 3072 2 0
 | 0 0 0 0 0 256 8
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -531,7 +531,7 @@ A bizarre plant-creature that has grown a crude mockery of limbs from desert cac
 97 0 0 S
 77 0
 0 0 0 0
-! 0 0 0 7 24 0 0
+! 0 0 21 7 24 0 0
 | 0 0 0 0 0 128 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -546,7 +546,7 @@ An enormous iridescent beetle the size of a large dog, armored in nigh-impenetra
 97 0 0 S
 78 0
 0 0 0 0
-! 0 0 0 7 8200 0 0
+! 0 0 13 7 8200 0 0
 | 0 0 0 0 0 32 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -561,7 +561,7 @@ A lean, vicious hyena adapted to the harsh desert, its laugh echoing off stone w
 97 0 -100 S
 79 0
 0 0 0 0
-! 0 0 0 7 1048577 0 0
+! 0 0 16 7 1048577 0 0
 | 0 0 0 0 0 128 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -576,7 +576,7 @@ The remnants of some long-dead warrior, reanimated by dark desert magic and rele
 16481 0 -1000 S
 80 0
 0 0 0 0
-! 0 0 0 7 768 0 1
+! 0 0 10 7 768 0 1
 | 0 0 0 0 0 256 8
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -621,7 +621,7 @@ A towering creature of pure desert wind and sand, holding vague humanoid form th
 2359393 0 0 S
 83 0
 2 2 2 2
-! 0 0 0 7 8200 33558528 0
+! 0 0 19 7 8200 33558528 0
 | 128 0 0 0 0 128 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -636,7 +636,7 @@ An ancient burial wrapping stretched over brittle bones, the corpse charred blac
 16481 0 -1000 S
 84 0
 2 0 0 2
-! 0 0 0 7 8960 1026 4
+! 0 0 10 7 8960 1026 4
 | 0 0 0 0 0 256 8
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -651,7 +651,7 @@ A brilliantly colored serpent whose venom can kill an ox in minutes, named for t
 97 0 0 S
 85 0
 0 0 1 1
-! 0 0 0 7 1048576 0 0
+! 0 0 11 7 1048576 0 0
 | 0 0 0 0 0 128 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -666,7 +666,7 @@ A wraith born within a killing sandstorm, forever seeking to drag the living int
 16481 0 -1000 S
 85 0
 2 0 2 2
-! 0 0 0 7 11264 131328 0
+! 0 0 19 7 11264 131328 0
 | 0 0 0 0 0 256 8
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -681,7 +681,7 @@ The awakened undead spirit of a desert pharaoh, wrapped in crackling funerary ma
 69222467 0 -1000 S
 90 1
 10 10 10 10
-! 0 0 0 7 77636 15360 24
+! 0 0 10 7 77636 15360 24
 | 0 0 0 0 0 256 8
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -696,7 +696,7 @@ An enormous scarab god made of thousands of living beetles bound together, its m
 69206083 0 -250 S
 90 0
 10 10 10 10
-! 0 0 0 7 74510 4224 8
+! 0 0 13 7 74510 4224 8
 | 0 0 0 0 0 32 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -711,7 +711,7 @@ A colossal desert scorpion, nearly ten feet tall, whose venom is said to boil th
 69206083 0 -250 S
 90 2
 10 10 10 10
-! 0 0 0 7 77594 130 8
+! 0 0 12 7 77594 130 8
 | 0 0 0 0 0 512 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -726,7 +726,7 @@ An ancient stone giant encased in fused desert rock, so large its footsteps leav
 69468227 0 0 S
 90 1
 15 15 15 15
-! 0 0 0 7 336666 33558528 24
+! 0 0 19 7 336666 33558528 24
 | 0 0 0 0 0 32 64
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
