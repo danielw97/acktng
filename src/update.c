@@ -362,7 +362,7 @@ void advance_level_adept(CHAR_DATA *ch, int class, bool show)
 
 void gain_exp(CHAR_DATA *ch, long_int gain)
 {
-   if (IS_IMMORTAL(ch))
+   if (IS_STAFF(ch))
       return;
 
    ch->exp += gain;
@@ -1471,7 +1471,7 @@ void char_update(void)
       {
          send_to_char("@@eWE HAVE CHANGED THE EXP SYSTEM. YOUR EXP HAS BEEN RESET TO 0.@@N\n\r",
                       ch);
-         send_to_char("@@ePLEASE CONACT AN IMMORTAL, AND YOU WILL BE ADVANCED ONE CLASS, UNLESS "
+         send_to_char("@@ePLEASE CONTACT STAFF, AND YOU WILL BE ADVANCED ONE CLASS, UNLESS "
                       "YOU ARE A NEW CHARACTER.@@N\n\r",
                       ch);
          send_to_char(
@@ -1529,7 +1529,7 @@ void char_update(void)
        * }
        */
 
-      if ((!IS_NPC(ch) && ch->level < LEVEL_IMMORTAL))
+      if ((!IS_NPC(ch) && ch->level < LEVEL_STAFF))
       {
 
          OBJ_DATA *obj;
@@ -1871,7 +1871,7 @@ void aggr_update(void)
          wch->last_mpact = NULL;
       }
 
-      if ((IS_NPC(wch)) || wch->level >= LEVEL_IMMORTAL || wch->in_room == NULL)
+      if ((IS_NPC(wch)) || wch->level >= LEVEL_STAFF || wch->in_room == NULL)
          continue;
       CREF(ch_next, CHAR_NEXTROOM);
       for (ch = wch->in_room->first_person; ch != NULL; ch = ch_next)
@@ -1901,7 +1901,7 @@ void aggr_update(void)
          {
             vch_next = vch->next_in_room;
 
-            if (!IS_NPC(vch) && vch->level < LEVEL_IMMORTAL &&
+            if (!IS_NPC(vch) && vch->level < LEVEL_STAFF &&
                 (!IS_SET(ch->act, ACT_WIMPY) || !IS_AWAKE(vch)) && can_see(ch, vch))
             {
                if (number_range(0, count) == 0)

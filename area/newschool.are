@@ -353,7 +353,7 @@ sign~
 
   @@yTELL <name> <msg>@@N -- Send a private message to someone
 
-  @@yPRAY <message>@@N    -- Send a message to the immortals (staff)
+  @@yPRAY <message>@@N    -- Send a message to staff
 
   @@ySAY <message>@@N     -- Speak to everyone in your room
 
@@ -985,7 +985,7 @@ sign~
 
 @@RRULE III:@@N No kill-stealing -- do not attack monsters others are fighting.
 
-@@RRULE IV:@@N  Respect the Immortals (staff).  They volunteer their time.
+@@RRULE IV:@@N  Respect the Staff.  They volunteer their time.
 
 @@RRULE V:@@N   Ask questions!  Use '@@yNEWBIE@@N' or '@@yPRAY@@N' channels for help.
 

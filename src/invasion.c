@@ -2,7 +2,7 @@
  * invasion.c -- Invasion System for Shades of Evil                        *
  *                                                                         *
  * Rules:                                                                  *
- *  - Starts only when >= 1 regular (non-immortal) player is online.       *
+ *  - Starts only when >= 1 regular (non-staff) player is online.       *
  *  - Spawns a BOSS whose level = highest player pseudo_level + 20.        *
  *    Boss has scaled hp_mod (100 to 250,000) based on level.              *
  *    Boss has unique elemental strengths, weaknesses, spells & skills.    *
@@ -172,7 +172,7 @@ static int count_regular_players(int *out_lo, int *out_hi)
       ch = d->character;
       if (ch == NULL || IS_NPC(ch))
          continue;
-      if (IS_IMMORTAL(ch))
+      if (IS_STAFF(ch))
          continue;
       pl = get_psuedo_level(ch);
       if (pl < lo)
@@ -1327,7 +1327,7 @@ static void invasion_end(bool success)
          if (d->connected != CON_PLAYING)
             continue;
          ch = d->character;
-         if (ch == NULL || IS_NPC(ch) || IS_IMMORTAL(ch))
+         if (ch == NULL || IS_NPC(ch) || IS_STAFF(ch))
             continue;
          ch->quest_points += INVASION_QP_REWARD;
          ch->pcdata->invasion_points += 1;
@@ -1620,7 +1620,7 @@ void invasion_on_death(CHAR_DATA *ch, CHAR_DATA *killer)
 }
 
 /* -----------------------------------------------------------------------
- * do_invasion() — immortal command
+ * do_invasion() — staff command
  * Usage: invasion <start | stop | status | bosses>
  * --------------------------------------------------------------------- */
 void do_invasion(CHAR_DATA *ch, char *argument)
@@ -1631,7 +1631,7 @@ void do_invasion(CHAR_DATA *ch, char *argument)
 
    one_argument(argument, arg);
 
-   if (!IS_IMMORTAL(ch))
+   if (!IS_STAFF(ch))
    {
       send_to_char("Huh?\n\r", ch);
       return;

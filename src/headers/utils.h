@@ -159,7 +159,7 @@ struct char_ref_type
  */
 #define IS_UNDEAD(ch) (IS_NPC(ch) ? IS_SET(ch->act, ACT_UNDEAD) : FALSE)
 #define IS_NPC(ch) (IS_SET((ch)->act, ACT_IS_NPC))
-#define IS_IMMORTAL(ch) (get_trust(ch) >= LEVEL_IMMORTAL)
+#define IS_STAFF(ch) (get_trust(ch) >= LEVEL_STAFF)
 #define IS_HERO(ch) (get_trust(ch) >= LEVEL_HERO)
 #define IS_AFFECTED(ch, sn) (IS_SET((ch)->affected_by, (sn)))
 #define IS_GOOD(ch) (ch->alignment >= 0)
@@ -194,7 +194,7 @@ struct char_ref_type
  */
 #define PERS(ch, looker)                                                                           \
    (can_see(looker, (ch)) ? (IS_NPC(ch) ? (ch)->short_descr : (ch)->name)                          \
-    : IS_IMMORTAL(ch)     ? "A Mystical Being"                                                     \
+    : IS_STAFF(ch)        ? "A Mystical Being"                                                     \
                           : "Someone")
 #define NAME(ch) (IS_NPC(ch) ? (ch)->short_descr : (ch)->name)
 

@@ -2201,7 +2201,7 @@ void do_help(CHAR_DATA *ch, char *argument)
 
       if (!str_cmp(argument, pHelp->keyword))
       {
-         if (pHelp->level >= 0 && str_cmp(argument, "imotd"))
+         if (pHelp->level >= 0 && str_cmp(argument, "staffmotd"))
          {
             send_to_char(pHelp->keyword, ch);
             send_to_char("\n\r", ch);
@@ -2225,7 +2225,7 @@ void do_help(CHAR_DATA *ch, char *argument)
 
       if (!str_prefix(argument, pHelp->keyword))
       {
-         if (pHelp->level >= 0 && str_cmp(argument, "imotd"))
+         if (pHelp->level >= 0 && str_cmp(argument, "staffmotd"))
          {
             send_to_char(pHelp->keyword, ch);
             send_to_char("\n\r", ch);
@@ -2252,7 +2252,7 @@ void do_help(CHAR_DATA *ch, char *argument)
  * List comes in 4 parts: Imms, Adepts, remorts then morts
  */
 
-#define SHOW_IMMORT 0
+#define SHOW_STAFF 0
 #define SHOW_ADEPT 1
 #define SHOW_REMORT 2
 #define SHOW_MORTAL 3
@@ -2339,7 +2339,7 @@ void do_who(CHAR_DATA *ch, char *argument)
             case 0:
                safe_strcat(MAX_STRING_LENGTH, buf,
                            "@@R|---------------------------------------------|----------@@"
-                           "lImmortals@@R-----"
+                           "lStaff@@R---------"
                            "----------------|@@g\n\r");
                break;
             case 1:
@@ -2365,7 +2365,7 @@ void do_who(CHAR_DATA *ch, char *argument)
 
          if (wch->level > MAX_MORTAL)
          {
-            /* Immortal: display who_name colored by rank; fall back to rank title if unset */
+            /* Staff: display who_name colored by rank; fall back to rank title if unset */
             const char *wn = str_cmp(wch->pcdata->who_name, "off") ? wch->pcdata->who_name : NULL;
             char tmp[MAX_STRING_LENGTH];
             switch (wch->level)
@@ -2383,7 +2383,7 @@ void do_who(CHAR_DATA *ch, char *argument)
                sprintf(tmp, "@@c%s@@g", wn ? wn : "Angel");
                break;
             default:
-               sprintf(tmp, "@@W%s@@g", wn ? wn : "Immortal");
+               sprintf(tmp, "@@W%s@@g", wn ? wn : "Staff");
                break;
             }
             /* Center within 24 visible chars to match mortal/adept column width */
@@ -3336,7 +3336,7 @@ struct show_cmds
 
 static char *const cmd_group_names[] = {
     "@@WMisc",    "@@aCommunication",     "@@mConfiguration", "@@eInformation",
-    "@@rActions", "@@dItem Manipulation", "@@cInterMud",      "@@yImm"};
+    "@@rActions", "@@dItem Manipulation", "@@cInterMud",      "@@yStaff"};
 
 void do_commands(CHAR_DATA *ch, char *argument)
 {
@@ -3371,7 +3371,7 @@ void do_commands(CHAR_DATA *ch, char *argument)
          show_only = 4;
       else if (!str_prefix(arg1, "objects") || !str_prefix(arg1, "manipulation"))
          show_only = 5;
-      else if (!str_prefix(arg1, "imm"))
+      else if (!str_prefix(arg1, "staff"))
          show_only = 6;
    }
 
@@ -3437,9 +3437,9 @@ struct chan_type channels[] = {
      "[ -auction  ] You don't hear biddings.\n\r"},
     {CHANNEL_MUSIC, 0, "music", "[ +MUSIC    ] You hear people's music quotes.\n\r",
      "[ -music    ] You don't hear people's music quotes.\n\r"},
-    {CHANNEL_IMMTALK, LEVEL_HERO, "immtalk",
-     "[ +IMMTALK  ] You hear what other immortals have to say.\n\r",
-     "[ -immtalk  ] You don't hear what other immortals have to say.\n\r"},
+    {CHANNEL_STAFFTALK, LEVEL_HERO, "stafftalk",
+     "[ +STAFFTALK] You hear what other staff have to say.\n\r",
+     "[ -stafftalk] You don't hear what other staff have to say.\n\r"},
     {CHANNEL_NOTIFY, LEVEL_HERO, "notify", "[ +NOTIFY   ] You hear player information.\n\r",
      "[ -notify   ] You don't hear player information.\n\r"},
     {CHANNEL_LOG, 0, "log", "[ +LOG      ] You receive LOG_FILE details.\n\r",
@@ -3764,7 +3764,7 @@ void do_config(CHAR_DATA *ch, char *argument)
          bit = CONFIG_FULL_ANSI;
       else if (!str_cmp(arg + 1, "display"))
          bit = CONFIG_MAPPER;
-      else if (IS_IMMORTAL(ch) && (!str_cmp(arg + 1, "justify")))
+      else if (IS_STAFF(ch) && (!str_cmp(arg + 1, "justify")))
          bit = CONFIG_JUSTIFY;
 
       else if (!str_prefix("rows", arg + 1))
@@ -3836,14 +3836,14 @@ void do_race_list(CHAR_DATA *ch, char *argument)
    send_to_char("    Here follows a list of current races within ACK! Mud:\n\r", ch);
    send_to_char("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\r", ch);
    send_to_char("\n\r", ch);
-   if (IS_IMMORTAL(ch))
+   if (IS_STAFF(ch))
       send_to_char("    No.   Room.    Abbr.    Name.   M/C   Classes: (Good->Bad)\n\r", ch);
    else
       send_to_char("   Abbr.    Name.  M/C  Classes: (Good->Bad)\n\r", ch);
 
    for (iRace = 0; iRace < MAX_RACE; iRace++)
    {
-      if (IS_IMMORTAL(ch))
+      if (IS_STAFF(ch))
       {
          sprintf(buf, "   %3d   %5d    %5s     %8s %2d %s %s\n\r", iRace, race_table[iRace].recall,
                  race_table[iRace].race_name, race_table[iRace].race_title,
@@ -3874,16 +3874,16 @@ void do_clan_list(CHAR_DATA *ch, char *argument)
    send_to_char("\n\r    Here follows a list of current clans for " mudnamecolor ":\n\r", ch);
    send_to_char("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\r", ch);
    send_to_char("\n\r", ch);
-   if (IS_IMMORTAL(ch))
+   if (IS_STAFF(ch))
       send_to_char("    No.   Room.   Abbr.     Leader    Name.\n\r", ch);
    else
       send_to_char("   Abbr.          Leader     Name.\n\r", ch);
 
    for (iClan = 0; iClan < MAX_CLAN; iClan++)
    {
-      if (!IS_IMMORTAL(ch) && iClan == 0)
+      if (!IS_STAFF(ch) && iClan == 0)
          continue; /* Don't list 'none' as a clan :) */
-      if (IS_IMMORTAL(ch))
+      if (IS_STAFF(ch))
          sprintf(buf, "   %3d   %5d    %s  %12s  %s\n\r", iClan, clan_table[iClan].clan_room,
                  clan_table[iClan].clan_abbr, clan_table[iClan].leader,
                  clan_table[iClan].clan_name);
@@ -4018,7 +4018,7 @@ void do_slist(CHAR_DATA *ch, char *argument)
 
    safe_strcat(MAX_STRING_LENGTH, buf1, "@@rLv          @@lSpells@@N\n\r\n\r");
 
-   for (level = 1; level < LEVEL_IMMORTAL; level++)
+   for (level = 1; level < LEVEL_STAFF; level++)
    {
 
       col = 0;
@@ -4669,7 +4669,7 @@ void do_gain(CHAR_DATA *ch, char *argument)
    if ((!adept && remort && ch->class_level[c] + 1 >= LEVEL_HERO) ||
        (!adept && !remort && ch->class_level[c] + 1 >= LEVEL_HERO))
    {
-      send_to_char("If you wish to advance this class, please ask an Immortal.\n\r", ch);
+      send_to_char("If you wish to advance this class, please ask a Staff member.\n\r", ch);
       return;
    }
    /*
@@ -5167,7 +5167,7 @@ void do_whois(CHAR_DATA *ch, char *argument)
     * Ok, so now show the details!
     */
    sprintf(buf, "-=-=-=-=-=-=-=-=-=-=- %9s -=-=-=-=-=-=-=-=-=-=-\n\r", victim->name);
-   if (IS_IMMORTAL(victim))
+   if (IS_STAFF(victim))
    {
       sprintf(buf + strlen(buf), " [ %3s ]\n\r", victim->pcdata->who_name);
    }
@@ -5226,9 +5226,9 @@ void do_whois(CHAR_DATA *ch, char *argument)
    sprintf(buf + strlen(buf), "Mobs killed: %d.  Times killed by mobs: %d.\n\r",
            victim->pcdata->mkills, victim->pcdata->mkilled);
 
-   if (IS_IMMORTAL(victim))
+   if (IS_STAFF(victim))
    {
-      sprintf(buf + strlen(buf), "%s is an Immortal.\r\n", victim->name);
+      sprintf(buf + strlen(buf), "%s is a Staff member.\r\n", victim->name);
    }
    /*
     * Description here, or email address?

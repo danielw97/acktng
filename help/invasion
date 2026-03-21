@@ -4,7 +4,7 @@ keywords invasion invasions quartermaster emblems gertrude
 Invasions are realm-wide defense events against a mythic boss and endless waves.
 
 How invasions start
-- Invasions can start only when at least one non-immortal player is online.
+- Invasions can start only when at least one non-staff player is online.
 - The system checks once per invasion tick after cooldown.
 - Each check has a 5% chance to start an invasion.
 - After an invasion ends (win/loss/cleanup), a cooldown is applied before another can start.
@@ -36,7 +36,7 @@ Gertrude pressure system
 
 Rewards
 On invasion success:
-- Every online non-immortal player receives:
+- Every online non-staff player receives:
   - 25 quest points
   - 1 invasion point
 
@@ -64,8 +64,8 @@ Current emblem costs
 - magic caster/melee/tank: 10 invasion points + 50 commendations + 5 ribbons
 - rare caster/melee/tank: 100 invasion points + 500 commendations + 50 ribbons + 5 medals
 
-Immortal control
-- Immortals can use: invasion <start|stop|status|bosses>
+Staff control
+- Staff can use: invasion <start|stop|status|bosses>
 
 Tips
 - Focus boss pressure first, but do not ignore marching waves.

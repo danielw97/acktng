@@ -50,8 +50,8 @@ void load_sysdata(void)
    {
       sh_int looper;
       sysdata.playtesters = fread_string(sysfp);
-      for (looper = 0; looper < MAX_NUM_IMMS; looper++)
-         sysdata.imms[looper].this_string = fread_string(sysfp);
+      for (looper = 0; looper < MAX_NUM_STAFF; looper++)
+         sysdata.staff[looper].this_string = fread_string(sysfp);
       sysdata.w_lock = fread_number(sysfp);
       sysdata.shownumbers = (fread_number(sysfp) == 1 ? TRUE : FALSE);
       if (sysdata.w_lock == 1)
@@ -89,8 +89,8 @@ void save_sysdata(void)
    {
       sh_int looper;
       fprintf(fp, "%s~\n\r", sysdata.playtesters);
-      for (looper = 0; looper < MAX_NUM_IMMS; looper++)
-         fprintf(fp, "%s~\n\r", sysdata.imms[looper].this_string);
+      for (looper = 0; looper < MAX_NUM_STAFF; looper++)
+         fprintf(fp, "%s~\n\r", sysdata.staff[looper].this_string);
       fprintf(fp, "%d\n\r", (wizlock ? 1 : 0));
       fprintf(fp, "%d\n\r", (sysdata.shownumbers ? 1 : 0));
       fflush(fp);
@@ -130,10 +130,10 @@ void do_sysdata(CHAR_DATA *ch, char *argument)
       sprintf(outbuf, "%s", "System data for " mudnamecolor ":\n\r");
       sprintf(catbuf, "Playtesters: %s\n\r", sysdata.playtesters);
       safe_strcat(MSL, outbuf, catbuf);
-      for (looper = 0; looper < MAX_NUM_IMMS; looper++)
+      for (looper = 0; looper < MAX_NUM_STAFF; looper++)
       {
-         sprintf(catbuf, "Level %d Immortals: %s\n\r", 81 + looper,
-                 sysdata.imms[looper].this_string);
+         sprintf(catbuf, "Level %d Staff: %s\n\r", 81 + looper,
+                 sysdata.staff[looper].this_string);
          safe_strcat(MSL, outbuf, catbuf);
       }
       sprintf(catbuf, "Wizlocked: %s\n\r", (wizlock ? "Yes" : "No"));
@@ -168,10 +168,10 @@ void do_sysdata(CHAR_DATA *ch, char *argument)
    }
    for (;;)
    {
-      sh_int imm_level = -1;
+      sh_int staff_level = -1;
       argument = one_argument(argument, arg2);
       if (is_number(arg2))
-         if ((imm_level = atoi(arg2) - 81) < 0 || imm_level >= MAX_NUM_IMMS)
+         if ((staff_level = atoi(arg2) - 81) < 0 || staff_level >= MAX_NUM_STAFF)
          {
             send_to_char("Imm levels must be 81 to 85\n\r", ch);
             return;
@@ -187,13 +187,13 @@ void do_sysdata(CHAR_DATA *ch, char *argument)
          {
             char arg3[MSL];
             strcpy(arg3, argument);
-            if ((imm_level < 0) || (imm_level >= MAX_NUM_IMMS))
+            if ((staff_level < 0) || (staff_level >= MAX_NUM_STAFF))
             {
-               send_to_char("Illegal Immortal level selected.\n\r", ch);
+               send_to_char("Illegal staff level selected.\n\r", ch);
                return;
             }
-            sysdata.imms[imm_level].this_string =
-                str_mod(sysdata.imms[imm_level].this_string, arg2);
+            sysdata.staff[staff_level].this_string =
+                str_mod(sysdata.staff[staff_level].this_string, arg2);
          }
          else
          {

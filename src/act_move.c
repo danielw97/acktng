@@ -164,15 +164,15 @@ void move_char(CHAR_DATA *ch, int door)
       return;
    }
 
-   if (room_is_private(to_room) && !IS_IMMORTAL(ch))
+   if (room_is_private(to_room) && !IS_STAFF(ch))
    {
       send_to_char("That room is private right now.\n\r", ch);
       ch->using_named_door = FALSE;
       return;
    }
-   if (IS_SET(pexit->exit_info, EX_IMMORTAL) && !IS_IMMORTAL(ch))
+   if (IS_SET(pexit->exit_info, EX_STAFF) && !IS_STAFF(ch))
    {
-      send_to_char("Only an Immortal may use that exit.\n\r", ch);
+      send_to_char("Only staff may use that exit.\n\r", ch);
       ch->using_named_door = FALSE;
       return;
    }
@@ -210,7 +210,7 @@ void move_char(CHAR_DATA *ch, int door)
       {
          if (to_room->vnum == clan_table[iClan].clan_room)
          {
-            if ((IS_NPC(ch)) || ((!IS_IMMORTAL(ch)) && (iClan != ch->pcdata->clan)))
+            if ((IS_NPC(ch)) || ((!IS_STAFF(ch)) && (iClan != ch->pcdata->clan)))
             {
                send_to_char("You aren't allowed in there.\n\r", ch);
                ch->using_named_door = FALSE;
@@ -219,7 +219,7 @@ void move_char(CHAR_DATA *ch, int door)
          }
       }
 
-      if (to_room->vnum == ROOM_VNUM_BUILDER && (!IS_IMMORTAL(ch) && !IS_SET(ch->act, PLR_BUILDER)))
+      if (to_room->vnum == ROOM_VNUM_BUILDER && (!IS_STAFF(ch) && !IS_SET(ch->act, PLR_BUILDER)))
       {
          send_to_char("The Portal allows entrance to builders only.\n\r", ch);
          ch->using_named_door = FALSE;
@@ -227,7 +227,7 @@ void move_char(CHAR_DATA *ch, int door)
       }
 
       if (to_room->vnum == ROOM_VNUM_CLAN &&
-          (IS_NPC(ch) || ((!IS_IMMORTAL(ch)) && (!IS_SET(ch->pcdata->pflags, PFLAG_CLAN_BOSS)))))
+          (IS_NPC(ch) || ((!IS_STAFF(ch)) && (!IS_SET(ch->pcdata->pflags, PFLAG_CLAN_BOSS)))))
       {
          send_to_char("Only Clan Bosses may enter this room.\n\r", ch);
          ch->using_named_door = FALSE;
@@ -281,7 +281,7 @@ void move_char(CHAR_DATA *ch, int door)
             {
                do_cast(ch, "fly");
             }
-            else if (!IS_IMMORTAL(ch))
+            else if (!IS_STAFF(ch))
             {
                send_to_char("You need a boat to go there.\n\r", ch);
                ch->using_named_door = FALSE;
@@ -1546,7 +1546,7 @@ void do_halls(CHAR_DATA *ch, char *argument)
    CHAR_DATA *victim;
 
    /*
-    * Remember to limit use of this command to immorts!
+    * Remember to limit use of this command to staff!
     */
 
    if (ch->level < 81)
@@ -1555,10 +1555,10 @@ void do_halls(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   act("$n prepares to return to the Halls of the Immortals!", ch, 0, 0, TO_ROOM);
+   act("$n prepares to return to the Halls of the Staff!", ch, 0, 0, TO_ROOM);
 
    /*
-    * Check is immort is fighting.
+    * Check if staff member is fighting.
     * * Stop fight if they are!
     */
 

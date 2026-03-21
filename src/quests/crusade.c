@@ -576,7 +576,7 @@ static void show_iquest_status(CHAR_DATA *ch)
    send_to_char(buf, ch);
 }
 
-void do_iquest(CHAR_DATA *ch, char *argument)
+void do_staffquest(CHAR_DATA *ch, char *argument)
 {
    char buf[MAX_STRING_LENGTH];
 
@@ -589,7 +589,7 @@ void do_iquest(CHAR_DATA *ch, char *argument)
    {
       if (quest)
       {
-         sprintf(buf, "@@NThe quest has been stopped by an @@mImmortal@@N. Please speak up if you "
+         sprintf(buf, "@@NThe quest has been stopped by @@mstaff@@N. Please speak up if you "
                       "have already gotten the item.\n\r");
          do_echo(ch, buf);
          clear_crusade();
@@ -625,7 +625,7 @@ void do_iquest(CHAR_DATA *ch, char *argument)
        */
       for (d = first_desc; d; d = d->next)
       {
-         if ((d->connected != CON_PLAYING) || (d->character == NULL) || (IS_IMMORTAL(d->character)))
+         if ((d->connected != CON_PLAYING) || (d->character == NULL) || (IS_STAFF(d->character)))
             continue;
          player_count += 1;
          total_levels += d->character->level;
@@ -1472,7 +1472,7 @@ void generate_auto_crusade()
    {
       int pseudo_level;
 
-      if (d->connected != CON_PLAYING || d->character == NULL || IS_IMMORTAL(d->character))
+      if (d->connected != CON_PLAYING || d->character == NULL || IS_STAFF(d->character))
          continue;
 
       player_count += 1;

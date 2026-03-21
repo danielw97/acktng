@@ -623,7 +623,7 @@ void do_hunt(CHAR_DATA *ch, char *argument)
       end_hunt(ch);
       return;
    }
-   else if (!IS_IMMORTAL(ch) && (victim != NULL) && !IS_NPC(victim) && IS_IMMORTAL(victim))
+   else if (!IS_STAFF(ch) && (victim != NULL) && !IS_NPC(victim) && IS_STAFF(victim))
    {
       sprintf(arg, "You can't hunt Immortal %s!\n\r", NAME(victim));
       send_to_char(arg, ch);

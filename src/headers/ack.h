@@ -77,7 +77,7 @@ struct sysdata_type
    bool w_lock;
    bool test_open;
    char *playtesters;
-   STR_ARRAY imms[MAX_NUM_IMMS];
+   STR_ARRAY staff[MAX_NUM_STAFF];
    bool shownumbers;
 };
 
@@ -637,7 +637,7 @@ struct char_data
    int spec_behavior2; /* secondary state for special functions (e.g., element interrupt tracking)
                         */
    int sentence;       /* For new legal system */
-   sh_int invis;       /* For wizinvis imms - lvl invis to */
+   sh_int invis;       /* For wizinvis staff - lvl invis to */
    sh_int incog;       /* Same as above except for incognito --Flar */
    sh_int trust;
    bool wizbit;
@@ -768,7 +768,7 @@ struct pc_data
    char *room_exit;
    char *bamfout;
    char *title;
-   char *immskll;
+   char *staffskll;
    char *host;      /* Used to tell PC last login site */
    sh_int failures; /* Failed logins */
    sh_int clan;     /* will be used to denote clan membership */
@@ -802,7 +802,7 @@ struct pc_data
    int mkilled;
    int pflags;
    char *lastlogin;
-   int monitor; /* monitor channel for imms */
+   int monitor; /* monitor channel for staff */
    sh_int has_exp_fix;
    sh_int quest_points;
 

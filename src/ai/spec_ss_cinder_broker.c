@@ -27,7 +27,7 @@ bool spec_ss_cinder_broker(CHAR_DATA *ch)
 
    for (victim = ch->in_room->first_person; victim != NULL; victim = victim->next_in_room)
    {
-      if (IS_NPC(victim) || victim->level >= LEVEL_IMMORTAL || number_bits(3) != 0 ||
+      if (IS_NPC(victim) || victim->level >= LEVEL_STAFF || number_bits(3) != 0 ||
           !can_see(ch, victim))
          continue;
 

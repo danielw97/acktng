@@ -241,12 +241,12 @@ static void test_collect_help_context_searches_shelp(void)
    char out[512];
 
    first_help = NULL;
-   make_help(&sh, "IMMORTAL", "Immortal commands begin with i");
+   make_help(&sh, "STAFF", "Staff commands");
    sh.next = NULL;
    first_shelp = &sh;
 
-   npc_dialogue_test_collect_help_context("What immortal commands exist?", out, sizeof(out));
-   assert(strstr(out, "[HELP: IMMORTAL]") != NULL);
+   npc_dialogue_test_collect_help_context("What staff commands exist?", out, sizeof(out));
+   assert(strstr(out, "[HELP: STAFF]") != NULL);
    first_shelp = NULL;
    printf("PASS test_collect_help_context_searches_shelp\n");
 }

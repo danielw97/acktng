@@ -920,7 +920,7 @@ bool is_same_room(CHAR_DATA *ch, CHAR_DATA *victim)
  */
 int can_carry_n(CHAR_DATA *ch)
 {
-   if (!IS_NPC(ch) && ch->level >= LEVEL_IMMORTAL)
+   if (!IS_NPC(ch) && ch->level >= LEVEL_STAFF)
       return 500;
 
    /*
@@ -936,7 +936,7 @@ int can_carry_n(CHAR_DATA *ch)
  */
 int can_carry_w(CHAR_DATA *ch)
 {
-   if (!IS_NPC(ch) && ch->level >= LEVEL_IMMORTAL)
+   if (!IS_NPC(ch) && ch->level >= LEVEL_STAFF)
       return 9999999;
 
    /*    if ( IS_NPC(ch) && IS_SET(ch->act, ACT_PET) )
@@ -1965,7 +1965,7 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 
 /* notify, auction, info, log_chan, item_has_apply have been moved to comm.c. */
 
-/* This is for immrotal authorized skills. Enables imms to set which skillks lower imms may use.
+/* This is for staff authorized skills. Enables staff to set which skills lower staff may use.
  * handy for abuse control --Flar
  */
 bool authorized(CHAR_DATA *ch, char *skllnm)

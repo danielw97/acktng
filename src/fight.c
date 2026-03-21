@@ -713,7 +713,7 @@ void check_killer(CHAR_DATA *ch, CHAR_DATA *victim)
    /*
     * NPC's are cool of course (as long as not charmed).
     * Hitting yourself is cool too (bleeding).
-    * So is being immortal (Alander's idea).
+    * So is being staff (Alander's idea).
     * BAH.  Imms get flagged too now, unless pkok.
     * And current killers stay as they are.
     */
@@ -1681,7 +1681,7 @@ void do_slay(CHAR_DATA *ch, char *argument)
 
    if (IS_HERO(victim))
    {
-      send_to_char("Not on other Immortal / Adept players!\n\r", ch);
+      send_to_char("Not on other Staff / Adept players!\n\r", ch);
       return;
    }
 

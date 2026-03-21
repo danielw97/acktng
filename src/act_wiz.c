@@ -61,7 +61,7 @@ void do_transdm(CHAR_DATA *ch, char *argument)
    {
       if (!IS_NPC(wch) && (ch != wch))
       {
-         if (IS_IMMORTAL(wch) && (wch != ch))
+         if (IS_STAFF(wch) && (wch != ch))
          {
             send_to_char("Everyone has been transferred to the DM arena.\n\r", wch);
             continue;
@@ -134,7 +134,7 @@ void do_wizhelp( CHAR_DATA *ch, char *argument )
     for ( cmd = 0; cmd_table[cmd].name[0] != '\0'; cmd++ )
     {
         if ( cmd_table[cmd].level < LEVEL_HERO
-       || str_infix( cmd_table[cmd].name, rch->pcdata->immskll ) )
+       || str_infix( cmd_table[cmd].name, rch->pcdata->staffskll ) )
        continue;
    sprintf( buf, "%-10s", cmd_table[cmd].name );
    strcat( buf1, buf );
@@ -393,7 +393,7 @@ void do_transfer(CHAR_DATA *ch, char *argument)
    {
       for (d = first_desc; d != NULL; d = d->next)
       {
-         if (d->connected == CON_PLAYING && !IS_IMMORTAL(d->character) && d->character != ch &&
+         if (d->connected == CON_PLAYING && !IS_STAFF(d->character) && d->character != ch &&
              d->character->in_room != NULL && can_see(ch, d->character))
          {
             char buf[MAX_STRING_LENGTH];
@@ -1738,7 +1738,7 @@ void do_restore(CHAR_DATA *ch, char *argument)
          vch_next = vch->next;
          if (!IS_NPC(vch))
          {
-            if (IS_IMMORTAL(vch) && (vch != ch))
+            if (IS_STAFF(vch) && (vch != ch))
             {
                act("Everyone has been restored by $n.", ch, NULL, vch, TO_VICT);
             }
@@ -2188,7 +2188,7 @@ void do_deathmatch(CHAR_DATA *ch, char *argument)
    /*
     * This basically locks the mud, and stops saving.
     * * PKing is allowed with no limits ;)
-    * * Only allow HIGHEST level imms to use...
+    * * Only allow HIGHEST level staff to use...
     */
 
    extern bool deathmatch;
@@ -2733,7 +2733,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
       if (get_trust(ch) < MAX_LEVEL - 1)
       {
-         send_to_char("Only supreme or creator level immortals may use this.\n\r", ch);
+         send_to_char("Only supreme or creator level staff may use this.\n\r", ch);
          return;
       }
 
@@ -3361,7 +3361,7 @@ void do_force(CHAR_DATA *ch, char *argument)
       {
          vch_next = vch->next;
 
-         if (!IS_NPC(vch) && !IS_IMMORTAL(vch))
+         if (!IS_NPC(vch) && !IS_STAFF(vch))
          {
             act("$n forces you to '$t'.", ch, argument, vch, TO_VICT);
             interpret(vch, argument);
@@ -3649,7 +3649,7 @@ void do_resetpassword(CHAR_DATA *ch, char *argument)
    }
    if ((ch->level != L_GOD) && ch->level < victim->level)
    {
-      send_to_char("You cannot change the password of immortals!\n\r", ch);
+      send_to_char("You cannot change the password of staff!\n\r", ch);
       return;
    }
    if (IS_NPC(victim))
@@ -3679,11 +3679,11 @@ void do_resetpassword(CHAR_DATA *ch, char *argument)
    return;
 }
 
-void do_iscore(CHAR_DATA *ch, char *argument)
+void do_staffscore(CHAR_DATA *ch, char *argument)
 {
    /*
-    * Show the imm bamfin/out if invis, and if wizlock/deathmatch
-    * * iscore = immortal 'score' --Stephen
+    * Show the staff bamfin/out if invis, and if wizlock/deathmatch
+    * * staffscore = staff 'score' --Stephen
     */
 
    char buf[MAX_STRING_LENGTH];
@@ -3757,7 +3757,7 @@ void do_fights(CHAR_DATA *ch, char *argument)
    return;
 }
 
-void do_iwhere(CHAR_DATA *ch, char *argument)
+void do_staffwhere(CHAR_DATA *ch, char *argument)
 {
    /*
     * Like WHERE, except is global, and shows area & room.
@@ -4496,9 +4496,9 @@ struct monitor_type monitor_table[] = {
     {"magic", MONITOR_MAGIC, 83, "@@a", "MAGIC",
      "[ MAGIC        ] You are informed of various spell casting info.\n\r",
      "[ magic        ] Not informed of spell casting info.\n\r"},
-    {"imm_general", MONITOR_GEN_IMM, 85, "@@y", "IMM_GEN",
-     "[ IMM_GENERAL  ] You are notified of use of logged immortal commands.\n\r",
-     "[ imm_general  ] You are not told of the use of logged immortal commands.\n\r"},
+    {"staff_general", MONITOR_GEN_STAFF, 85, "@@y", "STAFF_GEN",
+     "[ STAFF_GENERAL] You are notified of use of logged staff commands.\n\r",
+     "[ staff_general] You are not told of the use of logged staff commands.\n\r"},
 
     {"mort_general", MONITOR_GEN_MORT, 84, "@@y", "MORT_GEN",
      "[ MORT_GENERAL ] You are notified of use of logged mortal commands.\n\r",
@@ -4860,7 +4860,7 @@ void do_togcouncil(CHAR_DATA *ch, char *argument)
    return;
 }
 
-void do_imtlset(CHAR_DATA *ch, char *argument)
+void do_staffset(CHAR_DATA *ch, char *argument)
 {
 
    CHAR_DATA *rch;
@@ -4877,16 +4877,16 @@ void do_imtlset(CHAR_DATA *ch, char *argument)
 
    rch = get_char(ch);
 
-   if (!authorized(rch, "imtlset"))
+   if (!authorized(rch, "staffset"))
       return;
 
    argument = one_argument(argument, arg1);
 
    if (arg1[0] == '\0')
    {
-      send_to_char("Syntax: imtlset <victim> +|- <immortal skill>\n\r", ch);
-      send_to_char("or:     imtlset <victim> +|- all\n\r", ch);
-      send_to_char("or:     imtlset <victim>\n\r", ch);
+      send_to_char("Syntax: staffset <victim> +|- <staff skill>\n\r", ch);
+      send_to_char("or:     staffset <victim> +|- all\n\r", ch);
+      send_to_char("or:     staffset <victim>\n\r", ch);
       return;
    }
 
@@ -4904,13 +4904,13 @@ void do_imtlset(CHAR_DATA *ch, char *argument)
 
    if (get_trust(rch) <= get_trust(victim) && rch != victim)
    {
-      send_to_char("You may not imtlset your peer nor your superior.\n\r", ch);
+      send_to_char("You may not staffset your peer nor your superior.\n\r", ch);
       return;
    }
 
    if ((rch == victim) && (rch->level != MAX_LEVEL))
    {
-      send_to_char("You may not set your own immortal skills.\n\r", ch);
+      send_to_char("You may not set your own staff skills.\n\r", ch);
       return;
    }
 
@@ -4937,8 +4937,8 @@ void do_imtlset(CHAR_DATA *ch, char *argument)
          }
          else
          {
-            if (victim->pcdata->immskll)
-               strcat(buf, victim->pcdata->immskll);
+            if (victim->pcdata->staffskll)
+               strcat(buf, victim->pcdata->staffskll);
             while (isspace(*argument))
                argument++;
             for (cmd = 0; cmd_table[cmd].name[0] != '\0'; cmd++)
@@ -4950,10 +4950,10 @@ void do_imtlset(CHAR_DATA *ch, char *argument)
             }
             if (cmd_table[cmd].name[0] == '\0')
             {
-               send_to_char("That is not an immskill.\n\r", ch);
+               send_to_char("That is not an staffskill.\n\r", ch);
                return;
             }
-            if (!str_infix(argument, victim->pcdata->immskll))
+            if (!str_infix(argument, victim->pcdata->staffskll))
             {
                send_to_char("That skill has already been set.\n\r", ch);
                return;
@@ -4969,24 +4969,24 @@ void do_imtlset(CHAR_DATA *ch, char *argument)
          one_argument(argument, arg1);
          if (!str_cmp("all", arg1))
          {
-            free_string(victim->pcdata->immskll);
-            victim->pcdata->immskll = str_dup("");
-            send_to_char("All immskills have been deleted.\n\r", ch);
+            free_string(victim->pcdata->staffskll);
+            victim->pcdata->staffskll = str_dup("");
+            send_to_char("All staffskills have been deleted.\n\r", ch);
             return;
          }
          else if (arg1[0] != '\0')
          {
             /*
-             * Cool great imtlset <victim> - <skill> code...
+             * Cool great staffset <victim> - <skill> code...
              * Idea from Canth (phule@xs4all.nl)
              * Code by Vego (v942429@si.hhs.nl)
              * Still needs memory improvements.... (I think)
              */
-            buf2 = str_dup(victim->pcdata->immskll);
+            buf2 = str_dup(victim->pcdata->staffskll);
             buf3 = buf2;
             if ((skill = strstr(buf2, arg1)) == NULL)
             {
-               send_to_char("That person doesn't have that immskill", ch);
+               send_to_char("That person doesn't have that staffskill", ch);
                return;
             }
             else
@@ -5001,24 +5001,24 @@ void do_imtlset(CHAR_DATA *ch, char *argument)
          }
          else
          {
-            send_to_char("That's not an immskill\n\r", ch);
+            send_to_char("That's not an staffskill\n\r", ch);
             return;
          }
       }
 
       free_string(buf3);
       skill = buf2 = buf3 = NULL;
-      free_string(victim->pcdata->immskll);
-      victim->pcdata->immskll = str_dup(buf);
+      free_string(victim->pcdata->staffskll);
+      victim->pcdata->staffskll = str_dup(buf);
    }
 
-   sprintf(buf, "Immortal skills set for %s:\n\r", victim->name);
+   sprintf(buf, "Staff skills set for %s:\n\r", victim->name);
    send_to_char(buf, ch);
    buf1[0] = '\0';
    for (cmd = 0; cmd_table[cmd].name[0] != '\0'; cmd++)
    {
       if (cmd_table[cmd].level < LEVEL_HERO ||
-          str_infix(cmd_table[cmd].name, victim->pcdata->immskll))
+          str_infix(cmd_table[cmd].name, victim->pcdata->staffskll))
          continue;
 
       sprintf(buf, "%-10s", cmd_table[cmd].name);
@@ -5195,9 +5195,9 @@ void do_for(CHAR_DATA *ch, char *argument)
 
          if (IS_NPC(p) && fMobs)
             found = TRUE;
-         else if (!IS_NPC(p) && p->level >= LEVEL_IMMORTAL && fGods)
+         else if (!IS_NPC(p) && p->level >= LEVEL_STAFF && fGods)
             found = TRUE;
-         else if (!IS_NPC(p) && p->level < LEVEL_IMMORTAL && fMortals)
+         else if (!IS_NPC(p) && p->level < LEVEL_STAFF && fMortals)
             found = TRUE;
 
          /*
@@ -5267,9 +5267,9 @@ void do_for(CHAR_DATA *ch, char *argument)
 
                if (IS_NPC(p) && fMobs)
                   found = TRUE;
-               else if (!IS_NPC(p) && (p->level >= LEVEL_IMMORTAL) && fGods)
+               else if (!IS_NPC(p) && (p->level >= LEVEL_STAFF) && fGods)
                   found = TRUE;
-               else if (!IS_NPC(p) && (p->level <= LEVEL_IMMORTAL) && fMortals)
+               else if (!IS_NPC(p) && (p->level <= LEVEL_STAFF) && fMortals)
                   found = TRUE;
             } /* for everyone inside the room */
 

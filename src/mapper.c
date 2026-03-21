@@ -783,7 +783,7 @@ void do_mapper(CHAR_DATA *ch, char *argument)
 
    if (size != 7)
    {
-      size = IS_IMMORTAL(ch)
+      size = IS_STAFF(ch)
                  ? size
                  : get_curr_int(ch) / 2 + ((!IS_NPC(ch)) ? ch->pcdata->learned[gsn_scout] / 25 : 0);
       if (size % 2 == 0)

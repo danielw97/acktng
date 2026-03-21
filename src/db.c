@@ -808,7 +808,7 @@ void boot_db(void)
       load_bans();
       log_f("Loading ruler data.");
       load_rulers();
-      log_f("Loading imm brands.");
+      log_f("Loading staff brands.");
       load_brands();
       log_f("Loading System Data.");
       load_sysdata();

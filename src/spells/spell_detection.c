@@ -50,7 +50,7 @@ bool spell_detection(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
       for (in_obj = ob; in_obj->in_obj != NULL; in_obj = in_obj->in_obj)
          ;
-      if ((in_obj->carried_by != NULL) && IS_IMMORTAL(in_obj->carried_by))
+      if ((in_obj->carried_by != NULL) && IS_STAFF(in_obj->carried_by))
          break;
 
       if (in_obj->carried_by != NULL)

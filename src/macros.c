@@ -147,7 +147,7 @@ bool check_level_use(CHAR_DATA *ch, int level)
       strcat(out, "Dieties or higher.\n\r");
       break;
    case 82:
-      strcat(out, "Immortals or higher.\n\r");
+      strcat(out, "Staff or higher.\n\r");
       break;
    case 81:
       strcat(out, "Adepts or higher.\n\r");

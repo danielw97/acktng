@@ -9,6 +9,6 @@ EXIT FLAGS:
 | CLOSED	| This exit can be closed.				|
 | LOCKED	| This exit can be locked.				|
 | CLIMB		| Climb skill or fly spell required to use this exit.	|
-| IMMORTAL	| Only Immortal players may use this exit.		|
+| IMMORTAL	| Only staff may use this exit.		|
 | PICKPROOF	| The lock on this exit cannot be picked.		|
 +===============+=======================================================+
