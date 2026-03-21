@@ -432,8 +432,8 @@ const struct lookup_type tab_drink_types[] = {{"Water", 0, 10},
 
 const struct lookup_type tab_weapon_types[] = {
     {"hit", 0, 10},   {"slice", 1, 10},   {"stab", 2, 30},     {"slash", 3, 30}, {"whip", 4, 10},
-    {"claw", 5, 10},  {"blast", 6, 10},   {"pound", 7, 10},    {"crush", 8, 10}, {"grep", 9, 10},
-    {"bite", 10, 10}, {"pierce", 11, 10}, {"suction", 12, 10}, /* kinky */
+    {"claw", 5, 10},  {"blast", 6, 10},   {"pound", 7, 10},    {"crush", 8, 10}, {"rend", 9, 10},
+    {"bite", 10, 10}, {"pierce", 11, 10}, {"drain", 12, 10},   {"sear", 13, 10},
     {NULL, 0}};
 
 const struct lookup_type tab_mob_flags[] = {

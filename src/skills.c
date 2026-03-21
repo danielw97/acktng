@@ -340,8 +340,8 @@ char *get_dt_name(int sn)
 {
    static char *const attack_table[] = {
        "hit",          "slice",          "stab",       "slash",        "whip",       "claw",
-       "blast",        "pound",          "crush",      "grip",         "bite",       "pierce",
-       "suction",      "tail whip",      "head punch", "high kick",    "vital kick", "head bash",
+       "blast",        "pound",          "crush",      "rend",         "bite",       "pierce",
+       "drain",        "sear",           "tail whip",  "head punch",   "high kick",  "vital kick", "head bash",
        "side kick",    "spinning elbow", "body punch", "low kick",     "foot stomp", "knee smash",
        "kidney punch", "arm twist",      "uppercut",   "rabbit punch", "foot sweep"};
    const size_t attack_count = sizeof(attack_table) / sizeof(attack_table[0]);
