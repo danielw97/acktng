@@ -79,9 +79,28 @@ Always validate changes with:
 cd src && make unit-tests
 ```
 
-This runs all unit tests and the integration test. The CI workflow (`.github/workflows/validate-open-prs.yml`) runs this same command on every open PR.
+This runs all unit tests and the integration test. The CI workflow (`.github/workflows/validate-pr.yml`) runs this same command on every open PR.
 
 **Unit tests should always be written for changes where possible.** When modifying or adding functionality, add a corresponding unit test in `src/tests/` to cover the new or changed behavior.
+
+## Pre-Push Requirements
+
+**Before committing or pushing any change, ALL of the following must pass — no exceptions:**
+
+```sh
+cd src
+make lint         # Code must be correctly formatted (fails if any file differs from .clang-format)
+make ack          # Build must succeed with zero errors
+make unit-tests   # All unit tests and both integration tests must pass
+```
+
+Run these in order. Do not push if any step fails. Fix the failure first.
+
+- A build that does not compile is never acceptable.
+- Code that does not pass `make lint` must be reformatted with `make format` before pushing.
+- Changes that break any unit test or integration test must not be pushed until fixed.
+
+The CI workflow enforces these same checks on every PR. A PR will not be merged if any check fails.
 
 ## Repository Structure
 
