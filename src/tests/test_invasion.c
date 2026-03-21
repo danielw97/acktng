@@ -7,6 +7,43 @@
 #include "ack.h"
 #include "invasion.h"
 
+/* Globals required by invasion.c functions under test */
+DESCRIPTOR_DATA *first_desc = NULL;
+
+/* Stubs for external functions referenced by invasion_start code paths */
+sh_int get_psuedo_level(CHAR_DATA *ch)
+{
+   return ch->level;
+}
+
+int get_trust(CHAR_DATA *ch)
+{
+   return ch->level;
+}
+
+void send_to_char(const char *txt, CHAR_DATA *ch)
+{
+   (void)txt;
+   (void)ch;
+}
+
+int number_range(int lo, int hi)
+{
+   (void)hi;
+   return lo;
+}
+
+void bug(const char *str, int param)
+{
+   (void)str;
+   (void)param;
+}
+
+/* Test helpers exposed from invasion.c under UNIT_TEST_INVASION */
+bool invasion_start_for_test(void);
+bool invasion_is_active_for_test(void);
+void invasion_reset_for_test(void);
+
 int invasion_boss_spawn_count_for_tick(int boss_ticks_up);
 int invasion_spawn_mode_for_respawn_index(int spawns_this_reset);
 int invasion_wave_progress_tier_for_respawn_index(int spawns_this_reset);
@@ -237,6 +274,42 @@ static void test_gertrude_explosion_counter_and_thresholds(void)
    assert(invasion_gertrude_should_fall_for_explosions(25) == TRUE);
 }
 
+static void test_invasion_start_fails_with_no_players(void)
+{
+   /* first_desc is NULL (no players), so invasion_start should return FALSE
+    * and leave invasion_active = FALSE.  This is the bug: do_invasion used to
+    * print "Invasion started." unconditionally even in this case. */
+   first_desc = NULL;
+   invasion_reset_for_test();
+   assert(invasion_start_for_test() == FALSE);
+   assert(invasion_is_active_for_test() == FALSE);
+}
+
+static void test_invasion_start_fails_when_boss_spawn_returns_null(void)
+{
+   /* Under UNIT_TEST_INVASION, spawn_invasion_mob() always returns NULL.
+    * Provide one non-staff descriptor so the player-count check passes;
+    * invasion_start must still return FALSE because the boss spawn fails,
+    * and invasion_active must remain FALSE. */
+   static CHAR_DATA player;
+   static PC_DATA pcdata;
+   static DESCRIPTOR_DATA desc;
+
+   player.level = 10; /* below LEVEL_STAFF, so counted as a regular player */
+   player.act = 0;    /* not NPC */
+   player.pcdata = &pcdata;
+
+   desc.character = &player;
+   desc.connected = CON_PLAYING;
+   desc.next = NULL;
+
+   first_desc = &desc;
+   invasion_reset_for_test();
+   assert(invasion_start_for_test() == FALSE);
+   assert(invasion_is_active_for_test() == FALSE);
+   first_desc = NULL;
+}
+
 int main(void)
 {
    test_invasion_target_room_vnum();
@@ -253,6 +326,8 @@ int main(void)
    test_invasion_reward_tiers_and_boss_exclusion();
    test_boss_trash_talk_pending_schedule();
    test_gertrude_explosion_counter_and_thresholds();
+   test_invasion_start_fails_with_no_players();
+   test_invasion_start_fails_when_boss_spawn_returns_null();
 
    puts("test_invasion: all tests passed");
    return 0;

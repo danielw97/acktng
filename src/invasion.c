@@ -98,7 +98,7 @@ static bool invasion_crusade_activity_since_last_room_tick = FALSE;
  * --------------------------------------------------------------------- */
 static ROOM_INDEX_DATA *pick_boss_room(int boss_level);
 static ROOM_INDEX_DATA *pick_random_room_in_area(AREA_DATA *area);
-static void invasion_start(void);
+static bool invasion_start(void);
 static void invasion_end(bool success);
 static CHAR_DATA *spawn_invasion_mob(int level, bool is_boss, int prof_idx,
                                      bool allow_wide_area_spawn, int spawns_this_reset);
@@ -1151,6 +1151,7 @@ static ROOM_INDEX_DATA *pick_random_room_in_area(AREA_DATA *area)
  * Wave mobs: placed in INVASION_START_VNUM as before.
  * All mobs : flagged ACT_UNDEAD, ACT_SENTINEL, ACT_NOASSIST.
  * --------------------------------------------------------------------- */
+#ifndef UNIT_TEST_INVASION
 static CHAR_DATA *spawn_invasion_mob(int level, bool is_boss, int prof_idx,
                                      bool allow_wide_area_spawn, int spawns_this_reset)
 {
@@ -1268,18 +1269,30 @@ static CHAR_DATA *spawn_invasion_mob(int level, bool is_boss, int prof_idx,
    char_to_room(mob, spawn_room);
    return mob;
 }
+#else  /* UNIT_TEST_INVASION */
+static CHAR_DATA *spawn_invasion_mob(int level, bool is_boss, int prof_idx,
+                                     bool allow_wide_area_spawn, int spawns_this_reset)
+{
+   (void)level;
+   (void)is_boss;
+   (void)prof_idx;
+   (void)allow_wide_area_spawn;
+   (void)spawns_this_reset;
+   return NULL;
+}
+#endif /* UNIT_TEST_INVASION */
 
 /* -----------------------------------------------------------------------
  * invasion_start()
  * --------------------------------------------------------------------- */
-static void invasion_start(void)
+static bool invasion_start(void)
 {
    int lo = 1, hi = 1, player_count, boss_level, prof;
    char buf[MAX_STRING_LENGTH];
 
    player_count = count_regular_players(&lo, &hi);
    if (player_count < 1)
-      return;
+      return FALSE;
 
    prof = number_range(0, NUM_BOSSES - 1);
    boss_level = hi + INVASION_BOSS_OFFSET;
@@ -1300,11 +1313,12 @@ static void invasion_start(void)
       bug("invasion_start: failed to spawn boss.", 0);
       invasion_active = FALSE;
       invasion_boss_profile = -1;
-      return;
+      return FALSE;
    }
 
    snprintf(buf, sizeof(buf), "%s", boss_profiles[prof].announce_msg);
    announce(buf);
+   return TRUE;
 }
 
 /* -----------------------------------------------------------------------
@@ -1645,7 +1659,11 @@ void do_invasion(CHAR_DATA *ch, char *argument)
          return;
       }
       invasion_timer = 0;
-      invasion_start();
+      if (!invasion_start())
+      {
+         send_to_char("Invasion could not be started: no eligible players online.\n\r", ch);
+         return;
+      }
       send_to_char("Invasion started.\n\r", ch);
    }
    else if (!str_cmp(arg, "stop"))
@@ -1736,3 +1754,28 @@ void do_invasion(CHAR_DATA *ch, char *argument)
       send_to_char("Usage: invasion <start|stop|status|bosses>\n\r", ch);
    }
 }
+
+#ifdef UNIT_TEST_INVASION
+bool invasion_start_for_test(void)
+{
+   return invasion_start();
+}
+
+bool invasion_is_active_for_test(void)
+{
+   return invasion_active;
+}
+
+void invasion_reset_for_test(void)
+{
+   invasion_active = FALSE;
+   invasion_timer = 0;
+   invasion_boss = NULL;
+   invasion_boss_profile = -1;
+   invasion_boss_ticks_up = 0;
+   invasion_room_ticks = 0;
+   invasion_wave_respawns = 0;
+   invasion_gertrude_explosions = 0;
+   invasion_pending_trash_talks = 0;
+}
+#endif /* UNIT_TEST_INVASION */
