@@ -6,12 +6,13 @@
  */
 
 extern int global_port;
+extern int global_ws_port;
 extern const char echo_off_str[];
 extern const char echo_on_str[];
 extern const char go_ahead_str[];
 
-int init_socket(int port);
-void game_loop(int control);
+int init_socket(int port, unsigned long bind_addr);
+void game_loop(int control, int control_ws);
 void init_descriptor(DESCRIPTOR_DATA *dnew, int desc);
 bool write_to_descriptor(int desc, char *txt, int length);
 void write_to_buffer(DESCRIPTOR_DATA *d, const char *txt, int length);
