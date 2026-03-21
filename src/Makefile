@@ -129,7 +129,9 @@ SPELL_OBJS = \
 	spells/spell_sacred_ward.o \
 	spells/spell_momentum_drain.o spells/spell_entropic_shield.o \
 	spells/spell_cognitive_disruption.o spells/spell_predictive_collapse.o \
-	spells/spell_druid.o
+	spells/spell_druid.o \
+	spells/spell_ember_spark.o spells/spell_solar_brand.o \
+	spells/spell_cognitive_pressure.o
 
 SKILL_OBJS = \
 	skills/do_anti_magic_shell.o skills/do_aurabolt.o skills/do_backstab.o \
@@ -168,7 +170,9 @@ SKILL_OBJS = \
 	skills/do_dig_in.o skills/do_shelter.o skills/do_trailblaze.o \
 	skills/do_signal_tower.o skills/do_rampart_slam.o \
 	skills/do_wayfind.o skills/do_road_camp.o skills/do_forced_march.o \
-	skills/do_dispatch_rider.o skills/do_waylay.o
+	skills/do_dispatch_rider.o skills/do_waylay.o \
+	skills/do_duty_strike.o skills/do_gap_probe.o \
+	skills/do_primary_motion.o skills/do_vigil_strike.o
 
 QUEST_OBJS = quests/template.o quests/state.o quests/cartography.o quests/notify.o quests/commands.o quests/crusade.o
 

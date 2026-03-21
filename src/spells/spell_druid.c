@@ -29,8 +29,25 @@ static int druid_level(CHAR_DATA *ch)
 }
 
 /* ========================================================================
- * OFFENSIVE SPELLS (14)
+ * OFFENSIVE SPELLS
  * ======================================================================== */
+
+/*
+ * Root Touch — the Druid's level 1 combat spell.
+ *
+ * The most basic Overgrowth expression: channelling living-world vitality
+ * into a physical contact strike. Costs HP (growth mechanic), not mana.
+ * Does not scale with level — the Druid's control is limited at first.
+ */
+bool spell_root_touch(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+{
+   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   int dam = dice(2, 4);
+   if (saves_spell(level, victim))
+      dam /= 2;
+   sp_damage(obj, ch, victim, dam, ELEMENT_EARTH, sn, TRUE);
+   return TRUE;
+}
 
 bool spell_thornlash(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
