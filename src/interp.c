@@ -596,6 +596,13 @@ const struct cmd_type cmd_table[] = {
     CMD("forcedmarch", do_forced_march, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
     CMD("dispatch", do_dispatch_rider, POS_STANDING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
     CMD("waylay", do_waylay, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("duty strike", do_duty_strike, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+             C_SHOW_SKILL),
+    CMD_WAIT("gap probe", do_gap_probe, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION, C_SHOW_SKILL),
+    CMD_WAIT("primary motion", do_primary_motion, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+             C_SHOW_SKILL),
+    CMD_WAIT("vigil strike", do_vigil_strike, POS_FIGHTING, 0, LOG_NORMAL, C_TYPE_ACTION,
+             C_SHOW_SKILL),
 
     /*
      * End of list.

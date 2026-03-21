@@ -295,6 +295,12 @@ sh_int gsn_road_grit;
 sh_int gsn_dispatch_rider;
 sh_int gsn_waylay;
 
+/* Level 1 active skills for mortal skill-based classes */
+sh_int gsn_duty_strike;
+sh_int gsn_gap_probe;
+sh_int gsn_primary_motion;
+sh_int gsn_vigil_strike;
+
 #ifdef TFS
 sh_int gsn_mana_sense;
 #endif

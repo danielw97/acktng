@@ -242,6 +242,12 @@ extern sh_int gsn_road_grit;
 extern sh_int gsn_dispatch_rider;
 extern sh_int gsn_waylay;
 
+/* Level 1 active skills for mortal skill-based classes */
+extern sh_int gsn_duty_strike;
+extern sh_int gsn_gap_probe;
+extern sh_int gsn_primary_motion;
+extern sh_int gsn_vigil_strike;
+
 #ifdef TFS
 extern sh_int gsn_mana_sense;
 #endif
@@ -840,5 +846,9 @@ DECLARE_DO_FUN(do_road_camp);
 DECLARE_DO_FUN(do_forced_march);
 DECLARE_DO_FUN(do_dispatch_rider);
 DECLARE_DO_FUN(do_waylay);
+DECLARE_DO_FUN(do_duty_strike);
+DECLARE_DO_FUN(do_gap_probe);
+DECLARE_DO_FUN(do_primary_motion);
+DECLARE_DO_FUN(do_vigil_strike);
 
 bool is_player_summon_special(SPEC_FUN *spec_fun);
