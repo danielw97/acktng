@@ -1624,7 +1624,7 @@ void do_flee(CHAR_DATA *ch, char *argument)
          send_to_char(buf, ch);
          gain_exp(ch, (0 - cost));
       }
-      if ((is_fighting(ch)) && (AI_MOB(ch->fighting)))
+      if ((is_fighting(ch)) && (IS_NPC(ch->fighting)))
       {
          ch->fighting->ngroup->state = GRP_STATE_HUNTING;
          ch->fighting->ngroup->leader->hunting = ch;

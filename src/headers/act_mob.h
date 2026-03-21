@@ -44,7 +44,7 @@
 #define NPC_STATE_CRIT_HEAL 1
 #define NPC_STATE_CRIT_MANA 2
 
-#define AI_MOB(ch) (IS_NPC((ch)))
+/* AI_MOB was a redundant alias for IS_NPC — use IS_NPC directly */
 
 typedef struct npc_group_data NPC_GROUP_DATA;
 

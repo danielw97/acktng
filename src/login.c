@@ -87,8 +87,9 @@ bool is_parse_name_syntax_valid(const char *name)
 
 static bool is_reserved_login_name(const char *name)
 {
-   static const char *const reserved_names[] = {"all", "auto", "everymob", "localmobs", "immortal",
-                                                "staff", "zen", "self", "someone", "tank", "enemy"};
+   static const char *const reserved_names[] = {"all",      "auto",  "everymob", "localmobs",
+                                                "immortal", "staff", "zen",      "self",
+                                                "someone",  "tank",  "enemy"};
    size_t i;
 
    if (name == NULL || name[0] == '\0')

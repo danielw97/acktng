@@ -25,6 +25,13 @@
  ***************************************************************************/
 #define DEC_GLOBALS_H 1
 
+/*
+ * Sentinel: set immediately so that ack.h's end-of-file inlines_globals.h
+ * include can detect that globals.h was actually loaded (vs. pre-suppressed
+ * by unit tests via `#define DEC_GLOBALS_H 1` before `#include "ack.h"`).
+ */
+#define DEC_GLOBALS_H_LOADED 1
+
 #ifndef DEC_TYPEDEFS_H
 #include "typedefs.h"
 #endif
@@ -766,7 +773,6 @@ DECLARE_DO_FUN(do_enchant);
 DECLARE_DO_FUN( do_teach      );
 */
 
-
 /*
  *   New Channels (ZEN)
  */
@@ -786,7 +792,7 @@ DECLARE_DO_FUN(do_alink);
 DECLARE_DO_FUN(do_for);       /* Flar */
 DECLARE_DO_FUN(do_hotreboo);  /* Flar */
 DECLARE_DO_FUN(do_hotreboot); /* Flar */
-DECLARE_DO_FUN(do_staffset);   /* Flar */
+DECLARE_DO_FUN(do_staffset);  /* Flar */
 DECLARE_DO_FUN(do_gain_stat_reset);
 DECLARE_DO_FUN(do_sedit);
 DECLARE_DO_FUN(do_olmsg);

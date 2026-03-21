@@ -85,8 +85,7 @@
 #define WEAPON_TYPE_SWORD 3
 
 /* ── Bonded weapon marker: uses ITEM_BONDED extra flag (BIT_33) ── */
-
-#define IS_OBJ_BONDED(obj) (!!(IS_SET((obj)->extra_flags, ITEM_BONDED)))
+/* IS_OBJ_BONDED is implemented as a static inline function in inlines.h */
 
 /* ── Bond Data (stored on PC_DATA, persisted in player files) ─── */
 
