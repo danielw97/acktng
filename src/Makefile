@@ -204,7 +204,7 @@ integration-test-telnet: ack
 	cd .. && ./integration-test-telnet.sh
 
 web:
-	$(MAKE) -C ../web
+	@test -f ../web/Makefile && $(MAKE) -C ../web || true
 
 ifdef CYGWIN
 ack: $(MAIN_OBJS)
@@ -224,11 +224,11 @@ endif
 
 clean:
 	rm -rf $(OBJDIR) tests/unit-test-* ack ack.exe ../area/core *~
-	$(MAKE) -C ../web clean
+	@test -f ../web/Makefile && $(MAKE) -C ../web clean || true
 
 purge:
 	rm -rf $(OBJDIR) tests/unit-test-* ack ack.exe ../area/core *~
-	$(MAKE) -C ../web clean
+	@test -f ../web/Makefile && $(MAKE) -C ../web clean || true
 
 $(OBJDIR)/%.o: %.c headers/ack.h
 	@mkdir -p $(dir $@)
