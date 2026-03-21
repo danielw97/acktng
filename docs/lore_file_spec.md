@@ -183,20 +183,116 @@ would plausibly ask about. When in doubt about whether a topic warrants its own
 entry, check `docs/lore/timeline.md` for significance and whether existing lore
 files already cover the topic adequately.
 
-1. Create a file in `lore/` named after the topic (lowercase, underscores for
-   spaces; e.g., `lore/caleph_dunmar`, `lore/charter_wars`).
-2. Start with a single `keywords` line listing all search keywords.
-3. Write the default entry (required) — general-purpose overview of the topic.
-4. Write all 5 city entries (required, in order: MIDGAARD, KIESS, KOWLOON,
-   RAKUEN, MAFDET). Apply city voice from `docs/perspective.md`.
-5. Write city+race entries only where the race's cognitive posture produces a
-   meaningfully distinct perspective. Apply race profiles from
-   `docs/perspective.md`. Omit entries that would merely restate the city entry.
-6. Keep each entry to 10-15 lines of dense, factual content.
-7. Do not include `@@` color codes anywhere.
-8. Run `make unit-tests` from `src/` to validate format.
-
 **Source material:** `docs/lore/` contains expanded worldbuilding documentation.
 `docs/lore/timeline.md` is the master chronology. These are authoritative
-references for lore content. `/lore/` files are generated from this source
-material; they should accurately reflect it.
+references for lore content.
+
+### Database workflow (authoritative)
+
+All lore content lives in the PostgreSQL database (`lore_topics` and `lore_entries`
+tables). The flat files in `lore/` are legacy source material; the database is
+authoritative.
+
+**Step 1 — Insert the topic:**
+
+```sql
+INSERT INTO lore_topics (filename, keywords)
+VALUES ('charter_wars', 'charter wars oasis conflict');
+-- Note the returned id for use in the entries below.
+```
+
+**Step 2 — Insert the default entry (required, seq=1, flags=0):**
+
+```sql
+INSERT INTO lore_entries (topic_id, seq, flags, body)
+VALUES (
+    (SELECT id FROM lore_topics WHERE filename = 'charter_wars'),
+    1, 0,
+    'The Charter Wars were a series of conflicts...\n[10-15 lines of dense factual content]'
+);
+```
+
+**Step 3 — Insert city entries (required, one per city, in order):**
+
+City flag values (from `docs/lore_file_spec.md`): MIDGAARD=1, KIESS=2, KOWLOON=4, RAKUEN=8, MAFDET=16.
+
+```sql
+-- MIDGAARD entry (flags = 1)
+INSERT INTO lore_entries (topic_id, seq, flags, body)
+VALUES ((SELECT id FROM lore_topics WHERE filename = 'charter_wars'), 2, 1, 'Midgaard perspective...');
+
+-- KIESS entry (flags = 2)
+INSERT INTO lore_entries (topic_id, seq, flags, body)
+VALUES ((SELECT id FROM lore_topics WHERE filename = 'charter_wars'), 3, 2, 'Kiess perspective...');
+
+-- KOWLOON (4), RAKUEN (8), MAFDET (16) follow the same pattern at seq 4, 5, 6.
+```
+
+**Step 4 — Insert city+race entries (only where meaningfully distinct):**
+
+Race flag values: HUMAN=32, KHENARI=64, KHEPHARI=128, ASHBORN=256, UMBRAL=512,
+RIVENNID=1024, DELTARI=2048, USHABTI=4096, SERATHI=8192, KETHARI=16384.
+
+Combine flags with `|`. A MIDGAARD+KHEPHARI entry has `flags = 1 | 128 = 129`.
+
+```sql
+INSERT INTO lore_entries (topic_id, seq, flags, body)
+VALUES ((SELECT id FROM lore_topics WHERE filename = 'charter_wars'), 7, 129,
+        'What a Khephari in Midgaard knows about the Charter Wars...');
+```
+
+**Step 5 — Validate:**
+
+```sql
+-- Confirm all required entries exist
+SELECT seq, flags, LEFT(body, 60) FROM lore_entries
+WHERE topic_id = (SELECT id FROM lore_topics WHERE filename = 'charter_wars')
+ORDER BY seq;
+```
+
+Rules:
+- Keep each entry to 10-15 lines of dense, factual content.
+- Do not include `@@` color codes anywhere.
+- The default entry (seq=1, flags=0) is required.
+- All 5 city entries are required (flags 1, 2, 4, 8, 16 at minimum).
+- City+race entries only where the race cognitive posture produces a meaningfully
+  distinct perspective. See `docs/perspective.md`.
+- Maximum 56 entries per topic (1 default + 5 city + up to 50 city+race).
+
+### Adding a new lore source document
+
+Source documents in `docs/lore/` (Markdown) are the worldbuilding reference that
+lore entries are written from. They are not loaded by the server; they inform the
+content that goes into the database.
+
+1. Create `docs/lore/<topic>_lore.md` with full worldbuilding detail.
+2. From the source document, write the lore entries into the database following
+   the steps above.
+
+### Editing an existing lore entry
+
+```sql
+UPDATE lore_entries SET body = 'Revised text...'
+WHERE topic_id = (SELECT id FROM lore_topics WHERE filename = 'charter_wars')
+  AND seq = 1;
+```
+
+### Removing a lore topic
+
+```sql
+DELETE FROM lore_entries
+WHERE topic_id = (SELECT id FROM lore_topics WHERE filename = 'old_topic');
+DELETE FROM lore_topics WHERE filename = 'old_topic';
+```
+
+### Querying lore
+
+```sql
+-- Find topics matching a keyword
+SELECT filename, keywords FROM lore_topics WHERE keywords ILIKE '%oasis%';
+
+-- Count entries per topic (check all have at least 6: default + 5 cities)
+SELECT t.filename, COUNT(e.id) AS entry_count
+FROM lore_topics t LEFT JOIN lore_entries e ON e.topic_id = t.id
+GROUP BY t.filename ORDER BY entry_count;
+```

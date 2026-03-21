@@ -1,4 +1,4 @@
-# Proposal: Move Area Data to SQLite Database
+# Proposal: Move Area, Help, Shelp, and Lore Data to PostgreSQL
 
 **Status:** Draft
 **Branch:** `claude/database-schema-areas-vEeBw`
@@ -7,21 +7,28 @@
 
 ## 1. Problem Statement & Motivation
 
-ACK!TNG currently stores all area data — rooms, mobs, objects, resets, shops, and specials — in 45 hand-edited `.are` text files. This works, but creates friction as the game world grows:
+ACK!TNG currently stores all game content in flat text files:
 
-- **No referential integrity.** A reset can reference a mob vnum that doesn't exist; the server silently skips it or crashes. Cross-area exit vnums can point nowhere. There is no enforcement layer.
-- **No queryability.** Finding all mobs with a given act flag, all rooms in a given sector type, or all objects of a given item type requires `grep` over 45 files.
-- **No atomic updates.** Editing an area requires rewriting the entire `.are` file and hot-rebooting the server. There is no transactional safety.
-- **No auditability.** Git diffs of `.are` files are human-readable but contain no structured metadata (who changed what, when, why).
-- **Tooling friction.** Future Claude sessions, web-based area editors, or admin tools must all re-implement the same bespoke parser. A database provides a single source of truth with a standard access layer.
-- **Performance ceiling.** At boot, the server parses all 45 files sequentially. A database allows indexed lookups and partial loading.
+- **45 `.are` files** — area data (rooms, mobs, objects, resets, shops, specials)
+- **422 `help/` files** — in-game player help entries
+- **401 `shelp/` files** — staff/spell/skill help entries
+- **100 `docs/lore/` files** — world-building source material that generates `lore/` runtime files
 
-The goal of this proposal is to define a SQLite database schema and migration strategy that:
+All four stores share the same friction points as the game world grows:
 
-1. Captures 100% of the semantic content currently stored in `.are` files.
-2. Allows future Claude sessions (and any other tooling) to read and write area data via standard SQL.
-3. Keeps the C server's load path simple — replacing file I/O with SQLite calls using the existing `sqlite3` library.
-4. Is fully reversible: the database can regenerate `.are` files for inspection or rollback.
+- **No referential integrity.** A reset can reference a mob vnum that doesn't exist. Cross-area exits can point nowhere. There is no enforcement layer.
+- **No queryability.** Finding all mobs with a given act flag, all help entries with a given keyword, or all lore entries for a specific city requires `grep` over hundreds of files.
+- **No atomic updates.** Editing any content requires rewriting an entire file and rebooting or reloading. There is no transactional safety.
+- **No auditability.** Git diffs are human-readable but carry no structured metadata (who changed what, when, why).
+- **Tooling friction.** Future Claude sessions, web-based editors, and admin tools must all re-implement the same bespoke parsers. A database provides a single source of truth with a standard access layer.
+- **No remote access.** The database must be queryable from a machine other than the game host — flat files and embedded databases (SQLite) cannot satisfy this requirement.
+
+The goal of this proposal is to define a PostgreSQL database schema and migration strategy that:
+
+1. Captures 100% of the semantic content currently stored in `.are`, `help/`, `shelp/`, and `lore/` files.
+2. Allows future Claude sessions (and any other tooling) to read and write content via standard SQL from any machine.
+3. Keeps the C server's load path simple — replacing file I/O with `libpq` calls.
+4. Is fully reversible: the database can regenerate the original flat files for inspection or rollback.
 
 ---
 
@@ -29,39 +36,50 @@ The goal of this proposal is to define a SQLite database schema and migration st
 
 ### In Scope
 - All 45 `.are` files listed in `area/area.lst`
-- All section types: `#AREA`, `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`
-- All sub-records: room exits, extra descriptions, object affects, mobile loot tables, AI prompts
-- A migration tool (`src/tools/are_to_db.c`) to import existing `.are` files into the database
-- An export tool (`src/tools/db_to_are.c`) to regenerate `.are` files from the database
-- Updated `src/db.c` load functions to read from the database instead of flat files
+- All `.are` section types: `#AREA`, `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`
+- All `.are` sub-records: room exits, extra descriptions, object affects, mobile loot tables, AI prompts
+- All 422 `help/` files
+- All 401 `shelp/` files
+- All 100 `docs/lore/` source files (and the derived `lore/` runtime files)
+- A unified migration tool (`src/tools/import_to_db.c`) to import all four content stores
+- An export tool (`src/tools/db_to_files.c`) to regenerate flat files from the database
+- Updated `src/db.c` load functions to read from PostgreSQL
 - Unit tests for the migration and export round-trip
 
 ### Out of Scope
-- Player save files (`player/` directory) — these remain as flat files
+- Player save files (`player/` directory) — remain as flat files
 - Runtime data files (`data/` directory — bans, clans, socials, etc.)
-- The `help/` and `shelp/` directories
 - Online area editing commands (OLC) — a follow-on proposal
 
 ---
 
-## 3. Technology Choice: SQLite
+## 3. Technology Choice: PostgreSQL
 
-SQLite is chosen for the following reasons:
+PostgreSQL is chosen because:
 
-- **Zero server infrastructure.** The database is a single file (`area/areas.db`). No daemon, no authentication, no network port.
-- **Single-file distribution.** The game already ships as a single directory; `areas.db` fits that model.
-- **C API.** The `sqlite3` C library is well-documented, widely available, and links cleanly with GCC.
-- **ACID transactions.** Writes are atomic; a partial update (e.g., mid-reset load crash) cannot corrupt the database.
-- **Schema introspection.** Future tools can `SELECT * FROM sqlite_master` to discover the schema without reading source code.
-- **No licensing friction.** SQLite is public domain.
+- **Network protocol.** PostgreSQL listens on TCP port 5432 and is accessible from any machine on the network, satisfying the remote-access requirement that ruled out SQLite.
+- **ACID transactions.** Writes are atomic; a partial update cannot corrupt content.
+- **Full SQL.** Views, CTEs, window functions, `LIKE`, `SIMILAR TO`, and full-text search are all available for content queries.
+- **Mature C API.** `libpq` is the standard C client library, well-documented, available on every Linux distribution, and links cleanly with GCC.
+- **Foreign keys enforced by default.** No pragma required; referential integrity is on from the start.
+- **Schema introspection.** `\d tablename` and `information_schema` allow any tool to discover the schema without reading source code.
+- **Standard tooling.** `psql`, pgAdmin, DBeaver, TablePlus — any SQL client works.
 
-The database file will live at `area/areas.db`. The existing `.are` files will be retained as a reference archive in `area/legacy/` after migration, but will not be read by the server.
+### Connection Configuration
+
+The C server reads the connection string from `area/db.conf`, a single line in libpq connection-string format:
+
+```
+host=db.example.com port=5432 dbname=acktng user=ack password=secret sslmode=require
+```
+
+The standard PostgreSQL environment variables (`PGHOST`, `PGPORT`, `PGDATABASE`, `PGUSER`, `PGPASSWORD`) are also supported as a fallback (libpq reads them automatically when `db.conf` is absent). `area/db.conf` is gitignored.
 
 ---
 
 ## 4. Database Schema
 
-The schema below maps every field from the current `.are` format to a normalized relational structure. All vnums are stored as `INTEGER` (SQLite's native 64-bit integer). All text strings are `TEXT`. Bitvectors are stored as `INTEGER` (64-bit where needed for the `act` field on mobiles).
+All vnums and integer flags are `INTEGER` (32-bit) unless noted as `BIGINT` (64-bit). All text strings are `TEXT`. Auto-increment primary keys use `SERIAL`. Timestamps use `TIMESTAMP WITH TIME ZONE`.
 
 ### 4.1 `areas` Table
 
@@ -69,8 +87,8 @@ Corresponds to the `#AREA` section header.
 
 ```sql
 CREATE TABLE areas (
-    id          INTEGER PRIMARY KEY,  -- internal row id
-    name        TEXT    NOT NULL,     -- display name (tilde-terminated in .are)
+    id          SERIAL  PRIMARY KEY,
+    name        TEXT    NOT NULL,     -- display name
     min_vnum    INTEGER NOT NULL,     -- V directive lower bound
     max_vnum    INTEGER NOT NULL,     -- V directive upper bound
     keyword     TEXT,                 -- K directive
@@ -81,24 +99,18 @@ CREATE TABLE areas (
     map_offset  INTEGER,              -- X directive
     reset_rate  INTEGER,              -- F directive (ticks between resets)
     reset_msg   TEXT,                 -- U directive
-    owner       TEXT,                 -- O directive (should be 'Virant')
+    owner       TEXT,                 -- O directive
     can_read    TEXT,                 -- R directive (ACL string)
     can_write   TEXT,                 -- W directive (ACL string)
     music       TEXT,                 -- C directive (mp3 filename)
-    flags       INTEGER DEFAULT 0,   -- area flags bitvector (pay/teleport/building/etc.)
+    flags       INTEGER NOT NULL DEFAULT 0,  -- P/T/B/S/M boolean directives as bits
     UNIQUE(min_vnum),
     UNIQUE(max_vnum),
     CHECK(min_vnum <= max_vnum)
 );
 ```
 
-**Notes:**
-- `flags` encodes the boolean directives `P` (pay-area), `T` (teleport), `B` (building), `S` (no-show), `M` (no-room-affects) as individual bits.
-- `UNIQUE(min_vnum)` and `UNIQUE(max_vnum)` enforce non-overlapping vnum envelopes at the database level.
-
 ### 4.2 `rooms` Table
-
-Corresponds to entries in `#ROOMS`.
 
 ```sql
 CREATE TABLE rooms (
@@ -106,40 +118,32 @@ CREATE TABLE rooms (
     area_id      INTEGER NOT NULL REFERENCES areas(id),
     name         TEXT    NOT NULL,
     description  TEXT    NOT NULL,
-    room_flags   INTEGER NOT NULL DEFAULT 0,  -- bitvector
+    room_flags   INTEGER NOT NULL DEFAULT 0,
     sector_type  INTEGER NOT NULL DEFAULT 0
 );
 ```
 
 ### 4.3 `room_exits` Table
 
-Corresponds to `D<n>` exit records within a room.
-
 ```sql
 CREATE TABLE room_exits (
-    id          INTEGER PRIMARY KEY,
+    id          SERIAL  PRIMARY KEY,
     room_vnum   INTEGER NOT NULL REFERENCES rooms(vnum),
-    direction   INTEGER NOT NULL,  -- 0=N, 1=E, 2=S, 3=W, 4=U, 5=D
-    dest_vnum   INTEGER,           -- destination room vnum (may be cross-area; NULL = no exit)
-    exit_flags  INTEGER NOT NULL DEFAULT 0,  -- locks bitvector (door/closed/locked/etc.)
-    key_vnum    INTEGER,           -- key object vnum (0 = no key)
-    keyword     TEXT,              -- door keyword(s)
-    description TEXT,              -- exit description
+    direction   INTEGER NOT NULL,  -- 0=N 1=E 2=S 3=W 4=U 5=D
+    dest_vnum   INTEGER,           -- NULL = no exit; not FK (cross-area exits)
+    exit_flags  INTEGER NOT NULL DEFAULT 0,
+    key_vnum    INTEGER,           -- NULL or 0 = no key
+    keyword     TEXT,
+    description TEXT,
     UNIQUE(room_vnum, direction)
 );
 ```
 
-**Notes:**
-- `dest_vnum` is not a foreign key because exits may point to rooms in other areas that are loaded in a different order. Referential integrity is enforced at load time by the C code (existing behavior).
-- `key_vnum` of 0 or NULL means no key required.
-
 ### 4.4 `room_extra_descs` Table
-
-Corresponds to `E` extra-description records on rooms.
 
 ```sql
 CREATE TABLE room_extra_descs (
-    id          INTEGER PRIMARY KEY,
+    id          SERIAL  PRIMARY KEY,
     room_vnum   INTEGER NOT NULL REFERENCES rooms(vnum),
     keyword     TEXT    NOT NULL,
     description TEXT    NOT NULL
@@ -148,21 +152,19 @@ CREATE TABLE room_extra_descs (
 
 ### 4.5 `mobiles` Table
 
-Corresponds to entries in `#MOBILES`.
-
 ```sql
 CREATE TABLE mobiles (
     vnum          INTEGER PRIMARY KEY,
     area_id       INTEGER NOT NULL REFERENCES areas(id),
-    player_name   TEXT    NOT NULL,   -- keyword list (e.g. "guard city")
-    short_descr   TEXT    NOT NULL,   -- e.g. "a city guard"
-    long_descr    TEXT    NOT NULL,   -- one-line room description + newline
-    description   TEXT    NOT NULL,   -- full description block
-    act_flags     INTEGER NOT NULL DEFAULT 0,   -- 64-bit act bitvector
-    affected_by   INTEGER NOT NULL DEFAULT 0,   -- bitvector
+    player_name   TEXT    NOT NULL,
+    short_descr   TEXT    NOT NULL,
+    long_descr    TEXT    NOT NULL,
+    description   TEXT    NOT NULL,
+    act_flags     BIGINT  NOT NULL DEFAULT 0,  -- 64-bit act bitvector
+    affected_by   INTEGER NOT NULL DEFAULT 0,
     alignment     INTEGER NOT NULL DEFAULT 0,
     level         INTEGER NOT NULL DEFAULT 1,
-    sex           INTEGER NOT NULL DEFAULT 0,   -- 0=neutral, 1=male, 2=female
+    sex           INTEGER NOT NULL DEFAULT 0,
     hp_mod        INTEGER NOT NULL DEFAULT 0,
     ac_mod        INTEGER NOT NULL DEFAULT 0,
     hr_mod        INTEGER NOT NULL DEFAULT 0,
@@ -172,17 +174,17 @@ CREATE TABLE mobiles (
     clan          INTEGER NOT NULL DEFAULT 0,
     race          INTEGER NOT NULL DEFAULT 0,
     position      INTEGER NOT NULL DEFAULT 0,
-    skills        INTEGER NOT NULL DEFAULT 0,   -- bitvector
-    cast          INTEGER NOT NULL DEFAULT 0,   -- bitvector
-    def           INTEGER NOT NULL DEFAULT 0,   -- bitvector
+    skills        INTEGER NOT NULL DEFAULT 0,
+    cast          INTEGER NOT NULL DEFAULT 0,
+    def           INTEGER NOT NULL DEFAULT 0,
     -- '|' extension fields
-    strong_magic  INTEGER NOT NULL DEFAULT 0,   -- bitvector
-    weak_magic    INTEGER NOT NULL DEFAULT 0,   -- bitvector
+    strong_magic  INTEGER NOT NULL DEFAULT 0,
+    weak_magic    INTEGER NOT NULL DEFAULT 0,
     race_mods     INTEGER NOT NULL DEFAULT 0,
     power_skills  INTEGER NOT NULL DEFAULT 0,
     power_cast    INTEGER NOT NULL DEFAULT 0,
-    resist        INTEGER NOT NULL DEFAULT 0,   -- bitvector
-    suscept       INTEGER NOT NULL DEFAULT 0,   -- bitvector
+    resist        INTEGER NOT NULL DEFAULT 0,
+    suscept       INTEGER NOT NULL DEFAULT 0,
     -- '+' extension fields
     spellpower    INTEGER NOT NULL DEFAULT 0,
     crit          INTEGER NOT NULL DEFAULT 0,
@@ -194,9 +196,9 @@ CREATE TABLE mobiles (
     block         INTEGER NOT NULL DEFAULT 0,
     pierce        INTEGER NOT NULL DEFAULT 0,
     -- 'a' AI extension fields
-    ai_knowledge  INTEGER NOT NULL DEFAULT 0,   -- bitmask
-    ai_prompt     TEXT,                          -- NULL if no AI prompt
-    -- loot table
+    ai_knowledge  INTEGER NOT NULL DEFAULT 0,
+    ai_prompt     TEXT,
+    -- loot table (denormalized to match MAX_LOOT=9 fixed array in C)
     loot_amount   INTEGER NOT NULL DEFAULT 0,
     loot_0        INTEGER NOT NULL DEFAULT 0,
     loot_1        INTEGER NOT NULL DEFAULT 0,
@@ -220,25 +222,22 @@ CREATE TABLE mobiles (
 ```
 
 **Notes:**
-- `act_flags` is declared as `INTEGER` but holds a 64-bit value (SQLite integers are up to 8 bytes).
-- The loot table is denormalized (9 fixed columns each for vnums and chances) rather than a separate join table, matching the fixed `MAX_LOOT=9` array in the C struct. This simplifies both import and load.
-- Extension line fields (`!`, `|`, `+`, `a`) default to 0/NULL; if the extension was absent in the original `.are` file that is faithfully represented.
+- `act_flags` is `BIGINT` (64-bit signed). The C field is `unsigned long long`; values using bit 63 would be stored as negative. The load code must cast via `(unsigned long long)(int64_t)value` when reading.
+- The loot table is denormalized (9 fixed columns each for vnums and chances) to match the fixed `MAX_LOOT=9` array in the C struct.
 
 ### 4.6 `objects` Table
-
-Corresponds to entries in `#OBJECTS`.
 
 ```sql
 CREATE TABLE objects (
     vnum         INTEGER PRIMARY KEY,
     area_id      INTEGER NOT NULL REFERENCES areas(id),
-    name         TEXT    NOT NULL,        -- keyword list
-    short_descr  TEXT    NOT NULL,        -- e.g. "a rusty sword"
-    description  TEXT    NOT NULL,        -- room-look description
-    item_type    INTEGER NOT NULL,        -- item type constant (1-33)
-    extra_flags  INTEGER NOT NULL DEFAULT 0,  -- 64-bit bitvector
-    wear_flags   INTEGER NOT NULL DEFAULT 0,  -- bitvector
-    item_apply   INTEGER NOT NULL DEFAULT 0,  -- bitvector
+    name         TEXT    NOT NULL,
+    short_descr  TEXT    NOT NULL,
+    description  TEXT    NOT NULL,
+    item_type    INTEGER NOT NULL,
+    extra_flags  BIGINT  NOT NULL DEFAULT 0,  -- 64-bit
+    wear_flags   INTEGER NOT NULL DEFAULT 0,
+    item_apply   INTEGER NOT NULL DEFAULT 0,
     value_0      INTEGER NOT NULL DEFAULT 0,
     value_1      INTEGER NOT NULL DEFAULT 0,
     value_2      INTEGER NOT NULL DEFAULT 0,
@@ -254,17 +253,11 @@ CREATE TABLE objects (
 );
 ```
 
-**Notes:**
-- `value_0` through `value_9` map to the 10-element `value[]` array. Semantics depend on `item_type` (e.g., for weapons, value_0=weapon type, value_1=num dice, value_2=size dice, value_3=damage type).
-- `extra_flags` is 64-bit (stored as SQLite INTEGER).
-
 ### 4.7 `object_extra_descs` Table
-
-Corresponds to `E` records on objects.
 
 ```sql
 CREATE TABLE object_extra_descs (
-    id          INTEGER PRIMARY KEY,
+    id          SERIAL  PRIMARY KEY,
     obj_vnum    INTEGER NOT NULL REFERENCES objects(vnum),
     keyword     TEXT    NOT NULL,
     description TEXT    NOT NULL
@@ -273,24 +266,20 @@ CREATE TABLE object_extra_descs (
 
 ### 4.8 `object_affects` Table
 
-Corresponds to `A` records on objects (stat modifiers).
-
 ```sql
 CREATE TABLE object_affects (
-    id        INTEGER PRIMARY KEY,
+    id        SERIAL  PRIMARY KEY,
     obj_vnum  INTEGER NOT NULL REFERENCES objects(vnum),
-    location  INTEGER NOT NULL,  -- apply location constant (APPLY_STR, APPLY_DEX, etc.)
-    modifier  INTEGER NOT NULL   -- amount added/subtracted
+    location  INTEGER NOT NULL,
+    modifier  INTEGER NOT NULL
 );
 ```
 
 ### 4.9 `shops` Table
 
-Corresponds to entries in `#SHOPS`.
-
 ```sql
 CREATE TABLE shops (
-    id           INTEGER PRIMARY KEY,
+    id           SERIAL  PRIMARY KEY,
     keeper_vnum  INTEGER NOT NULL REFERENCES mobiles(vnum),
     buy_type_0   INTEGER NOT NULL DEFAULT 0,
     buy_type_1   INTEGER NOT NULL DEFAULT 0,
@@ -305,20 +294,14 @@ CREATE TABLE shops (
 );
 ```
 
-**Notes:**
-- `buy_type_0` through `buy_type_4` map to `buy_type[MAX_TRADE]`. The value of `MAX_TRADE` must be confirmed from `typedefs.h` — the schema uses 5 slots to match the current constant.
-- `profit_buy`/`profit_sell` are percentage multipliers (100 = no markup/markdown).
-
 ### 4.10 `resets` Table
-
-Corresponds to entries in `#RESETS`.
 
 ```sql
 CREATE TABLE resets (
-    id        INTEGER PRIMARY KEY,
+    id        SERIAL  PRIMARY KEY,
     area_id   INTEGER NOT NULL REFERENCES areas(id),
-    seq       INTEGER NOT NULL,   -- ordering within the area (1-based, preserves file order)
-    command   TEXT    NOT NULL CHECK(command IN ('M','O','G','E','D','R','P','A')),
+    seq       INTEGER NOT NULL,  -- 1-based; preserves file order
+    command   CHAR(1) NOT NULL CHECK(command IN ('M','O','G','E','D','R','P','A')),
     ifflag    INTEGER NOT NULL DEFAULT 0,
     arg1      INTEGER NOT NULL DEFAULT 0,
     arg2      INTEGER NOT NULL DEFAULT 0,
@@ -329,60 +312,104 @@ CREATE TABLE resets (
 );
 ```
 
-**Notes:**
-- `seq` preserves the original file ordering of reset commands. This is critical because reset semantics are positional: `G` and `E` commands apply to the most recently loaded mob from a preceding `M` command.
-- `command` is constrained to valid single-character codes.
-- `arg3` is stored for all commands (defaulting to 0 for `G` and `R` which have no third argument).
+**Note:** `seq` is critical. Reset semantics are positional: `G` and `E` commands apply to the most recently loaded mob from a preceding `M` command. The server must load resets `ORDER BY seq`.
 
 ### 4.11 `mobile_specials` Table
 
-Corresponds to entries in `#SPECIALS`.
-
 ```sql
 CREATE TABLE mobile_specials (
-    mob_vnum   INTEGER PRIMARY KEY REFERENCES mobiles(vnum),
-    spec_name  TEXT    NOT NULL   -- e.g. "spec_breath_fire"
+    mob_vnum  INTEGER PRIMARY KEY REFERENCES mobiles(vnum),
+    spec_name TEXT    NOT NULL
+);
+```
+
+### 4.12 `object_functions` Table
+
+```sql
+CREATE TABLE object_functions (
+    obj_vnum  INTEGER PRIMARY KEY REFERENCES objects(vnum),
+    fun_name  TEXT    NOT NULL
+);
+```
+
+### 4.13 `help_entries` Table
+
+Corresponds to files in `help/`. One row per file.
+
+```sql
+CREATE TABLE help_entries (
+    id       SERIAL  PRIMARY KEY,
+    filename TEXT    NOT NULL UNIQUE,  -- source filename (e.g. "alias")
+    level    INTEGER NOT NULL,         -- trust level required to see this help
+    keywords TEXT    NOT NULL,         -- space-separated keyword list
+    body     TEXT    NOT NULL          -- full help text (everything after "---")
+);
+```
+
+### 4.14 `shelp_entries` Table
+
+Corresponds to files in `shelp/`. One row per file.
+
+```sql
+CREATE TABLE shelp_entries (
+    id       SERIAL  PRIMARY KEY,
+    filename TEXT    NOT NULL UNIQUE,  -- e.g. "shelp_fireball"
+    level    INTEGER NOT NULL,
+    keywords TEXT    NOT NULL,
+    body     TEXT    NOT NULL
+);
+```
+
+### 4.15 `lore_topics` Table
+
+Corresponds to individual files in `lore/`. One row per file; holds the shared keyword list.
+
+```sql
+CREATE TABLE lore_topics (
+    id       SERIAL PRIMARY KEY,
+    filename TEXT   NOT NULL UNIQUE,  -- e.g. "cinderteeth"
+    keywords TEXT   NOT NULL          -- space-separated keyword list
+);
+```
+
+### 4.16 `lore_entries` Table
+
+Each row is one flagged entry within a topic file. The default (unflagged) entry has `flags = 0`.
+
+```sql
+CREATE TABLE lore_entries (
+    id        SERIAL  PRIMARY KEY,
+    topic_id  INTEGER NOT NULL REFERENCES lore_topics(id),
+    seq       INTEGER NOT NULL,         -- 1-based order within topic (1 = default)
+    flags     BIGINT  NOT NULL DEFAULT 0,  -- lore flags bitvector (0 = default entry)
+    body      TEXT    NOT NULL,
+    UNIQUE(topic_id, seq)
 );
 ```
 
 **Notes:**
-- One row per mobile (a mobile can have at most one special function). `PRIMARY KEY` on `mob_vnum` enforces this.
-- `spec_name` is the string key used to look up the function pointer in the `spec_table` array (existing C infrastructure).
+- `flags` encodes city and race bits as defined in `docs/lore_file_spec.md` (bits 0–4 = cities, bits 5–14 = races).
+- The default entry always has `seq = 1` and `flags = 0`. The server selects the best match by flag specificity at runtime — this logic is unchanged; only the data source changes.
 
-### 4.12 `object_functions` Table
-
-Corresponds to entries in `#OBJFUNS`.
-
-```sql
-CREATE TABLE object_functions (
-    obj_vnum   INTEGER PRIMARY KEY REFERENCES objects(vnum),
-    fun_name   TEXT    NOT NULL   -- e.g. "objfun_flaming"
-);
-```
-
-### 4.13 Schema Version Table
+### 4.17 `schema_version` Table
 
 ```sql
 CREATE TABLE schema_version (
-    version     INTEGER NOT NULL,
-    applied_at  TEXT    NOT NULL DEFAULT (datetime('now'))
+    version    INTEGER                  NOT NULL,
+    applied_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW()
 );
 INSERT INTO schema_version (version) VALUES (1);
 ```
-
-This allows future migrations to gate on the current version.
 
 ---
 
 ## 5. Per-Area Views
 
-Each area gets a set of named views generated automatically during migration. These provide logical isolation — working on Midgaard means querying `midgaard_rooms`, `midgaard_mobiles`, etc. — while the data physically lives in a single file with one schema version and full cross-area foreign key support.
+Each area gets a set of named views generated automatically during migration. These provide logical isolation — working on Midgaard means querying `midgaard_rooms`, `midgaard_mobiles`, etc. — while the data physically lives in a single schema with full cross-area foreign key support.
 
 Views are named `<keyword>_<entity>` where `keyword` is the area's `keyword` field (lowercased, spaces replaced with underscores). For areas without a keyword, the area `name` is slugified instead.
 
 ### 5.1 View Pattern
-
-For each area, the migration tool generates:
 
 ```sql
 -- Example for the area with keyword "midgaard"
@@ -441,188 +468,184 @@ CREATE VIEW midgaard_object_functions AS
 
 ### 5.2 View Generation
 
-Views are created by `are_to_db.c` immediately after importing each area, and can be regenerated at any time with:
+Views are created by `import_to_db.c` immediately after importing each area, and can be regenerated at any time:
 
 ```sh
-./tools/db_to_are --views-only
+./tools/db_to_files --views-only
 ```
 
-This is useful after a schema migration that drops and recreates views.
-
-### 5.3 Using Views for Editing
-
-A future Claude session editing Midgaard can work entirely through the views:
+### 5.3 Cross-Area Queries
 
 ```sql
--- Find all mobs in Midgaard above level 20
-SELECT vnum, short_descr, level FROM midgaard_mobiles WHERE level > 20;
-
--- Find all locked doors in Midgaard
-SELECT r.name, re.direction, re.dest_vnum
-FROM midgaard_room_exits re
-JOIN midgaard_rooms r ON re.room_vnum = r.vnum
-WHERE re.exit_flags & 4 != 0;  -- bit 2 = locked
-
--- Add a new room to Midgaard
-INSERT INTO rooms (vnum, area_id, name, description, room_flags, sector_type)
-VALUES (3099, (SELECT id FROM areas WHERE keyword = 'midgaard'),
-        'The Back Alley', 'A narrow alley behind the inn.\n', 0, 1);
-```
-
-Views are read-only (SQLite does not support updatable views without triggers), so all writes go to the underlying tables directly — but the `area_id` is always discoverable via `SELECT id FROM areas WHERE keyword = 'midgaard'`.
-
-### 5.4 Cross-Area Queries Still Work
-
-Because the views are just filters on the shared tables, cross-area queries require no special tooling:
-
-```sql
--- Find all mobs named 'guard' across all areas
+-- All mobs named 'guard' across all areas
 SELECT m.vnum, m.short_descr, a.name AS area
 FROM mobiles m JOIN areas a ON m.area_id = a.id
-WHERE m.player_name LIKE '%guard%';
+WHERE m.player_name ILIKE '%guard%';
 
--- Find all cross-area exits (exits where dest_vnum is in a different area)
+-- All cross-area exits
 SELECT re.room_vnum, re.dest_vnum, a1.name AS from_area, a2.name AS to_area
 FROM room_exits re
-JOIN rooms r ON re.room_vnum = r.vnum
+JOIN rooms r  ON re.room_vnum = r.vnum
 JOIN areas a1 ON r.area_id = a1.id
-LEFT JOIN rooms r2 ON re.dest_vnum = r2.vnum
-LEFT JOIN areas a2 ON r2.area_id = a2.id
-WHERE a1.id != a2.id;
+LEFT JOIN rooms r2  ON re.dest_vnum = r2.vnum
+LEFT JOIN areas a2  ON r2.area_id = a2.id
+WHERE a1.id IS DISTINCT FROM a2.id;
 ```
 
 ---
 
-## 6. Full Schema DDL (for reference)
+## 6. Full Schema DDL
 
-The complete `CREATE TABLE` statements above, assembled in dependency order, will be written to `area/schema.sql`. The server will create the database from this file on first boot if `areas.db` does not exist, then refuse to start if the schema version does not match the compiled-in expected version.
+The complete `CREATE TABLE` and `CREATE VIEW` statements, in dependency order, are stored in `area/schema.sql`. This file is the authoritative schema definition. The server applies it on first connect if the `schema_version` table does not exist; otherwise it checks that the current version matches the compiled-in expected version and refuses to start if they differ.
 
 ---
 
-## 6. Migration Strategy
+## 7. Migration Strategy
 
-### 6.1 Import Tool: `src/tools/are_to_db.c`
+### 7.1 Import Tool: `src/tools/import_to_db.c`
 
-A standalone C program (not linked into the server binary) that:
+A standalone C program (not linked into the server binary) that imports all four content stores:
 
-1. Reads `area/area.lst` to enumerate all `.are` files.
-2. For each file, runs the same parsing logic as the current `db.c` loaders (factored into shared helper functions).
-3. Writes all parsed data into `area/areas.db` using `sqlite3_exec()` and prepared statements.
-4. Reports any validation errors (unknown vnums, duplicate vnums, missing cross-references) to stderr.
+1. Reads `area/area.lst` and parses all `.are` files using the same logic as `db.c` loaders.
+2. Reads all files from `help/` and parses the `level / keywords / --- / body` format.
+3. Reads all files from `shelp/` with the same format.
+4. Reads all files from `lore/` and parses the multi-entry `keywords / [flags / ---] / body` format.
+5. Writes everything to PostgreSQL using `libpq` prepared statements inside a single transaction.
+6. Generates per-area views after all areas are inserted.
+7. Reports validation errors (duplicate vnums, malformed files, unknown flags) to stderr.
 
-Build target: `make tools/are_to_db`
+Build target: `make tools/import_to_db`
+Usage: `./tools/import_to_db "host=... dbname=acktng user=ack"`
 
-### 6.2 Export Tool: `src/tools/db_to_are.c`
+### 7.2 Export Tool: `src/tools/db_to_files.c`
 
-A standalone C program that reads `areas.db` and regenerates `.are` files in `area/export/`. The output is semantically identical to the originals (same section order, same field layout, tilde terminators). This serves as:
+A standalone C program that reads from PostgreSQL and regenerates the original flat files:
 
-- A regression test (import → export should round-trip with no semantic diff).
-- A rollback path if the database approach is abandoned.
-- A human-readable snapshot for debugging.
+- `.are` files → `area/export/` (same section order, tilde terminators, field layout)
+- `help/` files → `help/export/`
+- `shelp/` files → `shelp/export/`
+- `lore/` files → `lore/export/` (multi-entry format with flags lines)
 
-Build target: `make tools/db_to_are`
+The exported files are semantically identical to the originals. This serves as a round-trip regression test and a rollback path.
 
-### 6.3 Server Load Path Changes: `src/db.c`
+Build target: `make tools/db_to_files`
+Flags: `--areas-only`, `--help-only`, `--lore-only`, `--views-only`
 
-The existing functions `load_area()`, `load_rooms()`, `load_mobiles()`, `load_objects()`, `load_resets()`, `load_shops()`, `load_specials()` are replaced with database-backed equivalents:
+### 7.3 Server Load Path Changes: `src/db.c`
+
+The existing file-based loaders are replaced with PostgreSQL-backed equivalents:
 
 ```
-db_load_areas_from_db()      -- replaces file enumeration + load_area()
+db_load_areas_from_db()      -- replaces load_area() + area.lst enumeration
 db_load_rooms_from_db()      -- replaces load_rooms()
 db_load_mobiles_from_db()    -- replaces load_mobiles()
 db_load_objects_from_db()    -- replaces load_objects()
-db_load_resets_from_db()     -- replaces load_resets()
+db_load_resets_from_db()     -- replaces load_resets()  [ORDER BY seq]
 db_load_shops_from_db()      -- replaces load_shops()
 db_load_specials_from_db()   -- replaces load_specials()
 db_load_objfuns_from_db()    -- replaces load_objfuns()
+db_load_helps_from_db()      -- replaces file-based help/ loading
+db_load_shelps_from_db()     -- replaces file-based shelp/ loading
+db_load_lore_from_db()       -- replaces file-based lore/ loading
 ```
 
-Each function opens a single `SELECT` statement, iterates rows, and populates the in-memory linked lists and hash tables exactly as before. The `AREA_DATA`, `ROOM_INDEX_DATA`, `MOB_INDEX_DATA`, etc. structs are unchanged — only the source of data changes.
+Each function opens a `PQexec()` SELECT, iterates rows via `PQgetvalue()`, and populates the same in-memory structs as before. The `AREA_DATA`, `ROOM_INDEX_DATA`, `MOB_INDEX_DATA`, `HELP_DATA`, `LORE_DATA`, etc. structs are unchanged — only the data source changes.
 
-The `area.lst` file is retired; the `areas` table sorted by `min_vnum` serves the same purpose.
+On boot, the server:
+1. Opens the connection using the string in `area/db.conf` (falling back to PG environment variables).
+2. Checks `schema_version` — aborts if the version does not match `DB_SCHEMA_VERSION` compiled into the binary.
+3. Runs all `db_load_*` functions in dependency order (areas → rooms → mobiles → objects → resets → shops → specials → objfuns → helps → shelps → lore).
+4. Closes the connection. The server does not hold an open DB connection during normal play.
 
-### 6.4 Migration Phases
+### 7.4 Migration Phases
 
 | Phase | Action | Reversible? |
 |-------|--------|-------------|
-| 1 | Add `sqlite3` as a build dependency (link `-lsqlite3`) | Yes |
-| 2 | Write `are_to_db.c` migration tool | Yes |
-| 3 | Run migration on all 45 `.are` files; verify round-trip with `db_to_are` | Yes |
-| 4 | Write new `db.c` load functions reading from SQLite | Yes |
-| 5 | Add `#ifdef USE_DB_LOAD` compile-time switch to toggle old vs. new path | Yes |
-| 6 | Run integration tests with `USE_DB_LOAD` enabled | Yes |
-| 7 | Remove `#ifdef` and old file-based load code | No (but `.are` files retained in `area/legacy/`) |
-
-Phase 5 (compile-time flag) means both load paths exist simultaneously during testing, making rollback trivial.
+| 1 | Provision PostgreSQL instance; create `acktng` database and `ack` role | Yes |
+| 2 | Add `libpq` as a build dependency (`-lpq`) | Yes |
+| 3 | Write `area/schema.sql` and apply it | Yes |
+| 4 | Write and run `import_to_db` on all content stores; verify row counts | Yes |
+| 5 | Write `db_to_files`; verify round-trip diff against originals | Yes |
+| 6 | Write new `db.c` load functions behind `#ifdef USE_DB_LOAD` | Yes |
+| 7 | Run integration tests with `USE_DB_LOAD` enabled | Yes |
+| 8 | Remove `#ifdef` and old file-based load code | No (originals retained in `*/legacy/`) |
 
 ---
 
-## 7. Affected Files
+## 8. Affected Files
 
 | File | Change |
 |------|--------|
-| `src/db.c` | Replace file-based loaders with SQLite-backed equivalents |
-| `src/Makefile` | Add `-lsqlite3` to `LIBS`; add `tools/` build targets |
-| `src/tools/are_to_db.c` | New: import tool |
-| `src/tools/db_to_are.c` | New: export/round-trip tool |
+| `src/db.c` | Replace all file-based loaders with `libpq`-backed equivalents |
+| `src/Makefile` | Add `-lpq` to `LIBS`; add `tools/` build targets |
+| `src/tools/import_to_db.c` | New: import all four content stores |
+| `src/tools/db_to_files.c` | New: export all four content stores |
 | `src/tests/test_db_roundtrip.c` | New: unit test for import→export round-trip |
 | `area/schema.sql` | New: canonical schema DDL |
-| `area/areas.db` | New: the database (gitignored; generated by migration) |
-| `area/area.lst` | Retired (kept for reference, not read by server) |
-| `area/legacy/` | New directory; all original `.are` files moved here |
-| `docs/area_db_spec.md` | New: this document (promoted from proposal) |
+| `area/db.conf` | New: libpq connection string (gitignored) |
+| `area/area.lst` | Retired (kept in `area/legacy/`) |
+| `area/legacy/` | New: all original `.are` files |
+| `help/legacy/` | New: all original `help/` files |
+| `shelp/legacy/` | New: all original `shelp/` files |
+| `lore/legacy/` | New: all original `lore/` files |
+| `docs/area_db_spec.md` | New: promoted from this proposal after implementation |
+| `docs/help_file_spec.md` | Update: add database authoring section |
+| `docs/lore_file_spec.md` | Update: add database authoring section |
 
-The `area/areas.db` file will be added to `.gitignore`. The canonical source of truth becomes the `.are` files in `area/legacy/` (the migration input) plus the schema in `area/schema.sql`. The database is a derived artifact that any developer can regenerate with `make migrate`.
+`area/db.conf` is added to `.gitignore`. The canonical source of truth for schema structure is `area/schema.sql`; for content, the database itself is authoritative (the flat files in `*/legacy/` serve only as the migration input and rollback archive).
 
 ---
 
-## 8. Trade-offs and Risks
+## 9. Trade-offs and Risks
 
 ### Advantages
-- Referential integrity enforced at the database layer (foreign keys, unique constraints).
-- Area data is queryable with standard SQL tools (`sqlite3` CLI, DB Browser for SQLite, etc.).
-- Transactional writes: partial updates cannot corrupt area data.
-- Future tooling (web editor, admin panel, Claude sessions) can use SQL instead of a bespoke parser.
-- Performance: indexed lookups by vnum are O(log n) rather than O(n) hash scan.
+- Referential integrity enforced at the database layer.
+- All content queryable via standard SQL from any machine.
+- Transactional writes: partial updates cannot corrupt content.
+- Future tooling (web editor, admin panel, Claude sessions) needs no bespoke parser.
+- Help and lore content is queryable alongside area data in joins.
 
 ### Risks and Mitigations
 
 | Risk | Mitigation |
 |------|-----------|
-| SQLite not available on all build hosts | Document dependency; SQLite is in every major Linux distro's default package set |
-| Migration loses data (parsing edge cases) | Round-trip test: import all 45 files, export back, diff against originals |
-| `reset.seq` ordering fragile if rows reordered | `seq` is immutable once set; INSERT order is preserved by `seq` column |
-| 64-bit `act_flags` exceeds SQLite INTEGER range | SQLite INTEGER is 8 bytes (64-bit signed); max value 2^63-1. The `act` field in C is `unsigned long long` (64-bit). Values using bit 63 would overflow signed storage. Audit current areas for bit 63 usage before migration. |
-| Increased build complexity | The `sqlite3` single-file amalgamation can be vendored into `src/` to eliminate the external dependency entirely |
-
-### Alternative: Vendor `sqlite3` Amalgamation
-To avoid the `-lsqlite3` external dependency, the `sqlite3.c` + `sqlite3.h` amalgamation (single ~250 KB C file) can be copied into `src/` and compiled directly. This makes the build fully self-contained. Given the project's existing self-contained posture, this is the recommended approach.
+| PostgreSQL not available on build host | Available in every major Linux distro (`apt install postgresql libpq-dev`) |
+| Network partition between game host and DB host at boot | Server aborts cleanly with a clear error message; keep DB on LAN or same host if desired |
+| Migration loses data (parsing edge cases) | Round-trip test: import all files, export back, diff against originals |
+| `resets.seq` ordering fragile if rows are reordered | Load always uses `ORDER BY seq`; `seq` is immutable once set |
+| 64-bit `act_flags` / `extra_flags` stored as signed `BIGINT` | C load code casts via `(unsigned long long)(int64_t)`; audit areas for bit-63 usage before migration |
+| `db.conf` contains credentials | Gitignored; use `sslmode=require` and a restricted DB role with SELECT/INSERT/UPDATE on area tables only |
 
 ---
 
-## 9. Future Work (Out of Scope for This Proposal)
+## 10. Future Work (Out of Scope)
 
-- **Online Area Editor (OLC):** Admin commands to edit rooms, mobs, objects in-game, writing changes directly to the database without requiring a server restart.
-- **Area versioning:** Using SQLite's WAL mode and a `changelog` table to record who changed what and when.
-- **Area hot-reload:** Re-loading a single area from the database at runtime without a full hot-reboot.
-- **Web-based area editor:** A REST API over the SQLite database for browser-based editing.
+- **Online Area Editor (OLC):** Admin commands to edit rooms/mobs/objects in-game, writing directly to the database.
+- **Area hot-reload:** Re-loading a single area from the database without a full reboot.
+- **Area versioning:** A `changelog` table recording who changed what and when.
+- **Web-based editor:** A REST API over the database for browser-based area and lore editing.
+- **Full-text search:** PostgreSQL `tsvector` indexes over room descriptions and lore bodies.
 
 ---
 
-## 10. Implementation Checklist
+## 11. Implementation Checklist
 
 For the implementing Claude session:
 
-- [ ] Vendor `sqlite3` amalgamation into `src/sqlite3.c` and `src/sqlite3.h`
-- [ ] Update `src/Makefile` to compile `sqlite3.c` and link it
-- [ ] Write `area/schema.sql` with all `CREATE TABLE` statements from Section 4
-- [ ] Write `src/tools/are_to_db.c`: import tool (generates per-area views after each area import)
-- [ ] Write `src/tools/db_to_are.c`: export/round-trip tool (include `--views-only` flag)
+- [ ] Provision PostgreSQL; create `acktng` database and `ack` role with appropriate grants
+- [ ] Add `area/db.conf` to `.gitignore`
+- [ ] Add `-lpq` to `src/Makefile` `LIBS`
+- [ ] Write `area/schema.sql` with all DDL from Section 4
+- [ ] Apply `schema.sql` to the database
+- [ ] Write `src/tools/import_to_db.c`: import areas, help, shelp, lore
+- [ ] Write `src/tools/db_to_files.c`: export all four stores + `--views-only`
 - [ ] Write `src/tests/test_db_roundtrip.c`: unit test
-- [ ] Modify `src/db.c`: add SQLite load functions behind `#ifdef USE_DB_LOAD`
+- [ ] Run import; verify row counts against file counts
+- [ ] Run export; diff against originals (no semantic differences expected)
+- [ ] Write `db_load_*` functions in `src/db.c` behind `#ifdef USE_DB_LOAD`
 - [ ] Run `make unit-tests` with `USE_DB_LOAD` enabled
-- [ ] Verify round-trip: `are_to_db` → `db_to_are` → diff against originals
-- [ ] Move `.are` files to `area/legacy/`
-- [ ] Add `area/areas.db` to `.gitignore`
 - [ ] Remove `#ifdef USE_DB_LOAD` and old file-based load code
+- [ ] Move flat files to `*/legacy/` directories
 - [ ] Update `docs/area_db_spec.md` with finalized schema
+- [ ] Update `docs/help_file_spec.md` with database authoring workflow
+- [ ] Update `docs/lore_file_spec.md` with database authoring workflow
