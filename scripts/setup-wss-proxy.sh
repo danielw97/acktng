@@ -5,7 +5,7 @@
 # Safe to re-run: all steps are idempotent.
 #
 # What this script does:
-#   1. Writes /etc/nginx/conf.d/ackmud-wss.conf  (wss:// → ws://127.0.0.1:18890)
+#   1. Writes /etc/nginx/conf.d/ackmud-wss.conf  (wss://:9890 → ws://127.0.0.1:18890)
 #   2. Tests and reloads nginx
 #   3. Adds iptables rule to block port 18890 from external traffic
 #   4. Persists iptables rules (Debian/Ubuntu: iptables-save)
@@ -16,7 +16,7 @@ set -euo pipefail
 # ── Configuration ────────────────────────────────────────────────────────────
 
 DOMAIN="ackmud.com"
-PUBLIC_WS_PORT="8890"
+PUBLIC_WS_PORT="9890"
 LOOPBACK_WS_PORT="18890"
 CERT_DIR="/etc/letsencrypt/live/${DOMAIN}"
 NGINX_CONF="/etc/nginx/conf.d/ackmud-wss.conf"

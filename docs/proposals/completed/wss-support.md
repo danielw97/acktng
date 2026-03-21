@@ -15,7 +15,7 @@ connecting directly via telnet must not be disrupted by this change.
 
 ## Goals
 
-1. Browser clients connecting via `wss://ackmud.com:8890/` can reach the game.
+1. Browser clients connecting via `wss://ackmud.com:9890/` can reach the game.
 2. All traffic between browser and server is TLS-encrypted.
 3. Telnet players can continue connecting directly on a separate public port.
 4. The WebSocket protocol layer and MUD game logic inside the server are unchanged.
@@ -31,16 +31,16 @@ the server still binds to `0.0.0.0`.
 
 ```
 Telnet client
-  │  telnet ackmud.com:4000  (plain TCP, public internet)
+  │  telnet ackmud.com:8890  (plain TCP, public internet)
   ▼
-ACK!TNG game server  ←── 0.0.0.0:4000 (telnet socket)
+ACK!TNG game server  ←── 0.0.0.0:8890 (telnet socket)
   ▲
   └── 127.0.0.1:18890 (WebSocket socket, loopback only)
   ▲
 nginx  (same host)           ← terminates TLS
   ▲
 Browser
-  │  wss://ackmud.com:8890  (TLS, public internet)
+  │  wss://ackmud.com:9890  (TLS, public internet)
 ```
 
 The server opens **two listening sockets simultaneously**: one for telnet on the
@@ -57,8 +57,8 @@ listening socket bound to `127.0.0.1:<port>` in addition to the existing telnet
 socket.
 
 ```sh
-# Telnet on 4000 (public), WebSocket on 18890 (loopback for nginx proxy)
-cd area && ../src/ack 4000 --ws-loopback 18890
+# Telnet on 8890 (public), WebSocket on 18890 (loopback for nginx proxy)
+cd area && ../src/ack 8890 --ws-loopback 18890
 ```
 
 The first positional argument remains the telnet port (default 1234 if omitted).
@@ -135,7 +135,7 @@ port=8890
 ../src/ack $port >$logfile 2>&1
 
 # After
-port=4000
+port=8890
 ws_port=18890
 ...
 ../src/ack $port --ws-loopback $ws_port >$logfile 2>&1
@@ -171,7 +171,7 @@ used for `https://ackmud.com` is reused — no separate certificate is needed.
 ```nginx
 # /etc/nginx/conf.d/ackmud-wss.conf
 server {
-    listen      8890 ssl;
+    listen      9890 ssl;
     server_name ackmud.com;
 
     ssl_certificate     /etc/letsencrypt/live/ackmud.com/fullchain.pem;
@@ -202,7 +202,7 @@ sudo nginx -t && sudo systemctl reload nginx
 
 Port `18890` must not be reachable from the public internet — only the nginx
 proxy (on loopback) should reach the game server on that port. The telnet port
-(`4000`) remains open as before.
+(`8890`) remains open as before.
 
 ```bash
 sudo iptables -A INPUT -p tcp --dport 18890 ! -s 127.0.0.1 -j DROP
@@ -249,6 +249,6 @@ is reused directly.
 | `src/comm.c` | Parse `--ws-loopback <port>`; open second loopback socket; pass both to `game_loop()` |
 | `src/socket.c` | `init_socket()` gains `bind_addr` param; `game_loop()` selects on two control fds |
 | `src/startup` | Add `ws_port=18890`; update run line to pass `--ws-loopback` |
-| nginx config | New `ackmud-wss.conf` — proxy `8890 (wss)` → `18890 (ws loopback)` |
+| nginx config | New `ackmud-wss.conf` — proxy `9890 (wss)` → `18890 (ws loopback)` |
 | Firewall | Block `18890` from external traffic; telnet port remains open |
 | TLS certificate | Reuse existing Let's Encrypt cert; add post-renewal reload hook |
