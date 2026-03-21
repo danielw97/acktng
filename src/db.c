@@ -711,6 +711,8 @@ void boot_db(void)
                load_shops(fpArea);
             else if (!str_cmp(word, "SPECIALS"))
                load_specials(fpArea);
+            else if (!str_cmp(word, "SPEECH"))
+               load_speech(fpArea);
             else if (!str_cmp(word, "OBJFUNS"))
                load_objfuns(fpArea);
             else
@@ -1897,6 +1899,7 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
    mob->switched = FALSE;
    mob->old_body = NULL;
    mob->spec_fun = pMobIndex->spec_fun;
+   mob->speech_fun = pMobIndex->speech_fun;
    mob->sitting = NULL;
    mob->prompt = str_dup("<%h %m %v> ");
    mob->first_shield = NULL;

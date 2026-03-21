@@ -59,12 +59,14 @@
 #define DECLARE_SPEC_FUN(fun) bool fun()
 #define DECLARE_SPELL_FUN(fun) bool fun()
 #define DECLARE_OBJ_FUN(fun) void fun()
+#define DECLARE_SPEECH_FUN(fun) bool fun()
 #else
 #define args(list) list
 #define DECLARE_DO_FUN(fun) DO_FUN fun
 #define DECLARE_SPEC_FUN(fun) SPEC_FUN fun
 #define DECLARE_SPELL_FUN(fun) SPELL_FUN fun
 #define DECLARE_OBJ_FUN(fun) OBJ_FUN fun
+#define DECLARE_SPEECH_FUN(fun) SPEECH_FUN fun
 #endif
 
 /*
@@ -248,5 +250,6 @@ typedef struct quest_data QUEST_DATA;
  */
 typedef void DO_FUN args((CHAR_DATA * ch, char *argument));
 typedef bool SPEC_FUN args((CHAR_DATA * ch));
+typedef bool SPEECH_FUN args((CHAR_DATA * mob, CHAR_DATA *player, const char *message));
 typedef bool SPELL_FUN args((int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj));
 typedef void OBJ_FUN args((OBJ_DATA * obj, CHAR_DATA *keeper));
