@@ -518,6 +518,7 @@ struct mob_index_data
    bool is_free; /* Ramias:for run-time checks of LINK/UNLINK */
    MOB_INDEX_DATA *next;
    SPEC_FUN *spec_fun;
+   SPEECH_FUN *speech_fun;
    SHOP_DATA *pShop;
    AREA_DATA *area; /* MAG Mod */
    char *player_name;
@@ -624,6 +625,7 @@ struct char_data
    int poly_level;
 
    SPEC_FUN *spec_fun;
+   SPEECH_FUN *speech_fun;
    MOB_INDEX_DATA *pIndexData;
    DESCRIPTOR_DATA *desc;
    AFFECT_DATA *first_affect;
@@ -1182,6 +1184,8 @@ struct area_data
    BUILD_DATA_LIST *last_area_shop;
    BUILD_DATA_LIST *first_area_specfunc;
    BUILD_DATA_LIST *last_area_specfunc;
+   BUILD_DATA_LIST *first_area_speechfun;
+   BUILD_DATA_LIST *last_area_speechfun;
    BUILD_DATA_LIST *first_area_objfunc;
    BUILD_DATA_LIST *last_area_objfunc;
    /*
@@ -1672,6 +1676,7 @@ void load_resets args((FILE * fp));
 void load_rooms args((FILE * fp));
 void load_shops args((FILE * fp));
 void load_specials args((FILE * fp));
+void load_speech args((FILE * fp));
 void load_objfuns args((FILE * fp));
 char *initial args((const char *str));
 

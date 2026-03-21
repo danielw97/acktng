@@ -30,6 +30,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "globals.h"
+#include "special.h"
 
 /* Way this works:
    Mud reads in area files, stores details in data lists.
@@ -54,8 +55,9 @@
 #define BUILD_SEC_SHOPS 5
 #define BUILD_SEC_RESETS 6
 #define BUILD_SEC_SPECIALS 7
-#define BUILD_SEC_OBJFUNS 8 /* -S- Mod */
-#define BUILD_SEC_END 9
+#define BUILD_SEC_SPEECH 8
+#define BUILD_SEC_OBJFUNS 9 /* -S- Mod */
+#define BUILD_SEC_END 10
 #define AREA_VERSION 16
 
 struct save_queue_type
@@ -91,6 +93,7 @@ void build_save_rooms(void);
 void build_save_shops(void);
 void build_save_resets(void);
 void build_save_specs(void);
+void build_save_speech(void);
 void build_save_objfuns(void);
 void build_save_end(void);
 void vuild_save_flush(void);
@@ -220,6 +223,9 @@ void build_save()
          break;
       case BUILD_SEC_SPECIALS:
          build_save_specs();
+         break;
+      case BUILD_SEC_SPEECH:
+         build_save_speech();
          break;
       case BUILD_SEC_OBJFUNS:
          build_save_objfuns();
@@ -752,6 +758,8 @@ void load_area(FILE *fp)
    pArea->last_area_shop = NULL;
    pArea->first_area_specfunc = NULL;
    pArea->last_area_specfunc = NULL;
+   pArea->first_area_speechfun = NULL;
+   pArea->last_area_speechfun = NULL;
    area_revision = -1;
 
    /* MAG Mod for optionals additions to area headers. */
@@ -1625,6 +1633,79 @@ void load_specials(FILE *fp)
       /*
        * NB. Comments will not be saved when using areasave - MAG.
        */
+      fread_to_eol(fp);
+   }
+}
+
+void build_save_speech()
+{
+   MOB_INDEX_DATA *pMob;
+
+   if (Pointer == NULL) /* Start */
+   {
+      if (CurSaveArea->first_area_speechfun == NULL)
+      {
+         Section++;
+         return;
+      }
+      send_to_char("Saving speech handlers.\n", CurSaveChar);
+      fprintf(SaveFile, "#SPEECH\n");
+      Pointer = CurSaveArea->first_area_speechfun;
+   }
+
+   pMob = Pointer->data;
+
+   fprintf(SaveFile, "M %i ", pMob->vnum);
+   fprintf(SaveFile, "%s\n", speech_name(pMob->speech_fun));
+
+   Pointer = Pointer->next;
+   if (Pointer == NULL) /* End */
+   {
+      fprintf(SaveFile, "S\n");
+      Section++;
+   }
+   return;
+}
+
+/* Snarf speech handler declarations. */
+
+void load_speech(FILE *fp)
+{
+   for (;;)
+   {
+      MOB_INDEX_DATA *pMobIndex;
+      char letter;
+
+      switch (letter = fread_letter(fp))
+      {
+      default:
+         bug("Load_speech: letter '%c' not *, M, or S.", letter);
+         hang("Loading Speech in db.c");
+
+      case 'S':
+         return;
+
+      case '*':
+         break;
+
+      case 'M':
+         pMobIndex = get_mob_index(fread_number(fp));
+         pMobIndex->speech_fun = speech_lookup(fread_word(fp));
+         if (pMobIndex->speech_fun == 0)
+         {
+            bug("Load_speech(mob): 'M': vnum %d.", pMobIndex->vnum);
+         }
+         else
+         {
+            BUILD_DATA_LIST *pList;
+
+            GET_FREE(pList, build_free);
+            pList->data = pMobIndex;
+            LINK(pList, area_load->first_area_speechfun, area_load->last_area_speechfun, next,
+                 prev);
+         }
+         break;
+      }
       fread_to_eol(fp);
    }
 }

@@ -1089,6 +1089,8 @@ void do_say(CHAR_DATA *ch, char *argument)
       {
          if (IS_NPC(ppl) && IS_SET(ppl->act, ACT_AI_DIALOGUE))
          {
+            if (ppl->speech_fun != NULL && (*ppl->speech_fun)(ppl, ch, argument))
+               break;
             npc_dialogue_dispatch(ppl, ch, argument);
             break;
          }

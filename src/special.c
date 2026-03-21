@@ -579,6 +579,20 @@ char *rev_spec_lookup(void *func)
    return 0;
 }
 
+SPEECH_FUN *speech_lookup(const char *name)
+{
+   if (!str_cmp(name, "speech_mudschool_guide"))
+      return speech_mudschool_guide;
+   return 0;
+}
+
+const char *speech_name(SPEECH_FUN *func)
+{
+   if (func == speech_mudschool_guide)
+      return "speech_mudschool_guide";
+   return 0;
+}
+
 void print_spec_lookup(char *buf)
 {
    strcat(buf, "       spec_breath_any         \n\r");

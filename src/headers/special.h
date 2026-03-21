@@ -157,4 +157,10 @@ void spec_cinderteeth_anchor_damage(CHAR_DATA *ch, int element, int dam);
 
 DECLARE_SPEC_FUN(spec_mudschool_guide);
 
+/* Speech handlers — called from do_say() before LLM dispatch */
+DECLARE_SPEECH_FUN(speech_mudschool_guide);
+
+SPEECH_FUN *speech_lookup args((const char *name));
+const char *speech_name args((SPEECH_FUN * func));
+
 #endif

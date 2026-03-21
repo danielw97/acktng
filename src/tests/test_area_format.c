@@ -868,6 +868,11 @@ static void assert_area_matches_spec(const char *area_path, const VNUM_NODE *glo
          parse_specials_section(fp, line, &line_number, area_path, "MOE");
          continue;
       }
+      if (starts_with(trimmed, "#SPEECH"))
+      {
+         parse_specials_section(fp, line, &line_number, area_path, "M");
+         continue;
+      }
       if (starts_with(trimmed, "#OBJFUNS"))
       {
          parse_specials_section(fp, line, &line_number, area_path, "O");
