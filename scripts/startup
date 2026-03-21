@@ -4,7 +4,9 @@
 #
 
 # Telnet port (public, all interfaces)
-port=4000
+# Note: when the nginx WSS proxy is active, nginx occupies port 8890 for
+# wss:// connections. In that deployment the telnet port must differ from 8890.
+port=8890
 # WebSocket loopback port (127.0.0.1 only; nginx TLS proxy forwards wss://ackmud.com:8890 here)
 ws_port=18890
 
