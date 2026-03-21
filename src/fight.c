@@ -1577,7 +1577,7 @@ void do_flee(CHAR_DATA *ch, char *argument)
       }
    }
 
-   if (is_affected(ch, skill_lookup("flee timer")))
+   if (IS_NPC(ch) && is_affected(ch, skill_lookup("flee timer")))
    {
       send_to_char("You can't flee again so soon, your flee timer has not expired!\n\r", ch);
       return;
@@ -1605,14 +1605,17 @@ void do_flee(CHAR_DATA *ch, char *argument)
       act("$n has fled!", ch, NULL, NULL, TO_ROOM);
       ch->in_room = now_in;
 
-      af.type = gsn_flee_timer;
-      af.duration = number_range(2, 4);
-      af.location = APPLY_NONE;
-      af.duration_type = DURATION_ROUND;
-      af.modifier = 0;
-      af.bitvector = 0;
-      af.caster = ch;
-      affect_to_char(ch, &af);
+      if (IS_NPC(ch))
+      {
+         af.type = gsn_flee_timer;
+         af.duration = number_range(2, 4);
+         af.location = APPLY_NONE;
+         af.duration_type = DURATION_ROUND;
+         af.modifier = 0;
+         af.bitvector = 0;
+         af.caster = ch;
+         affect_to_char(ch, &af);
+      }
 
       if (!IS_NPC(ch))
       {
