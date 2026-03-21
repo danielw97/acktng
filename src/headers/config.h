@@ -147,7 +147,8 @@
 /* Total class count across all tiers */
 #define MAX_TOTAL_CLASS 29
 
-/* Helper macros to determine which tier a class ID belongs to */
+/* Class-tier helper macros — kept as macros because gclass_table is declared
+ * in globals.h which is sometimes suppressed in unit tests. */
 #define IS_MORTAL_CLASS(c) (gclass_table[c].tier == MORTAL)
 #define IS_REMORT_CLASS(c) (gclass_table[c].tier == REMORT)
 #define IS_ADEPT_CLASS(c) (gclass_table[c].tier == ADEPT)

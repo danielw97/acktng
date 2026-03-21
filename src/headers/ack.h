@@ -1768,6 +1768,14 @@ void save_brands args((void));
 void load_sysdata args((void));
 void save_sysdata args((void));
 
+/*
+ * Inline function definitions for character/object checks, name helpers,
+ * and class-tier queries.  Must be included after all struct definitions.
+ */
+#ifndef DEC_INLINES_H
+#include "inlines.h"
+#endif
+
 #undef CD
 #undef MID
 #undef OD

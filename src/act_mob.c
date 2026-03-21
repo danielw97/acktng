@@ -115,7 +115,7 @@ void mob_group_follow(CHAR_DATA *ch, CHAR_DATA *target)
 
    for (vch = ch->in_room->first_person; vch != NULL; vch = vch->next_in_room)
    {
-      if ((ch != vch) && (AI_MOB(vch)) && (is_same_group(ch, vch)))
+      if ((ch != vch) && (IS_NPC(vch)) && (is_same_group(ch, vch)))
       {
          if (vch->position != POS_STANDING)
             do_stand(vch, "");
@@ -174,7 +174,7 @@ void get_mob_group(CHAR_DATA *ch, CHAR_DATA *target)
    {
       for (vch = ch->in_room->first_person; vch != NULL; vch = vch->next_in_room)
       {
-         if (!AI_MOB(vch))
+         if (!IS_NPC(vch))
          {
             continue;
          }
@@ -367,7 +367,7 @@ void need_to_stand(CHAR_DATA *ch)
    {
       for (vch = ch->in_room->first_person; vch != NULL; vch = vch->next_in_room)
       {
-         if ((AI_MOB(vch)) && (vch->leader == NULL) && (!is_same_group(vch, ch)) && (vch != ch) &&
+         if ((IS_NPC(vch)) && (vch->leader == NULL) && (!is_same_group(vch, ch)) && (vch != ch) &&
              ((get_psuedo_level(vch) - get_psuedo_level(ch) <= 20) &&
               (get_psuedo_level(vch) - get_psuedo_level(ch) >= -20)))
          {

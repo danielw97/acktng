@@ -1979,7 +1979,7 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
 
    //  Create group data for mob
 
-   if (AI_MOB(mob))
+   if (IS_NPC(mob))
    {
       NPC_GROUP_DATA *ngroup;
       GET_FREE(ngroup, npc_group_free);

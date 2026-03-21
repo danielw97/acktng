@@ -339,11 +339,11 @@ bool skill_success(CHAR_DATA *ch, CHAR_DATA *victim, int gsn, int bonus)
 char *get_dt_name(int sn)
 {
    static char *const attack_table[] = {
-       "hit",          "slice",          "stab",       "slash",        "whip",       "claw",
-       "blast",        "pound",          "crush",      "rend",         "bite",       "pierce",
-       "drain",        "sear",           "tail whip",  "head punch",   "high kick",  "vital kick", "head bash",
-       "side kick",    "spinning elbow", "body punch", "low kick",     "foot stomp", "knee smash",
-       "kidney punch", "arm twist",      "uppercut",   "rabbit punch", "foot sweep"};
+       "hit",        "slice",        "stab",           "slash",      "whip",         "claw",
+       "blast",      "pound",        "crush",          "rend",       "bite",         "pierce",
+       "drain",      "sear",         "tail whip",      "head punch", "high kick",    "vital kick",
+       "head bash",  "side kick",    "spinning elbow", "body punch", "low kick",     "foot stomp",
+       "knee smash", "kidney punch", "arm twist",      "uppercut",   "rabbit punch", "foot sweep"};
    const size_t attack_count = sizeof(attack_table) / sizeof(attack_table[0]);
 
    if (sn < MAX_SKILL && sn > 0)

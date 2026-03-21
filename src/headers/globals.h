@@ -766,7 +766,6 @@ DECLARE_DO_FUN(do_enchant);
 DECLARE_DO_FUN( do_teach      );
 */
 
-
 /*
  *   New Channels (ZEN)
  */
@@ -786,7 +785,7 @@ DECLARE_DO_FUN(do_alink);
 DECLARE_DO_FUN(do_for);       /* Flar */
 DECLARE_DO_FUN(do_hotreboo);  /* Flar */
 DECLARE_DO_FUN(do_hotreboot); /* Flar */
-DECLARE_DO_FUN(do_staffset);   /* Flar */
+DECLARE_DO_FUN(do_staffset);  /* Flar */
 DECLARE_DO_FUN(do_gain_stat_reset);
 DECLARE_DO_FUN(do_sedit);
 DECLARE_DO_FUN(do_olmsg);
