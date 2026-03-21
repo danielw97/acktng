@@ -148,12 +148,27 @@ static void write_gsgp_board(FILE *fp, const char *board_name, struct gsgp_entry
    fprintf(fp, "\n");
 }
 
+static const char *expand_tilde(const char *path, char *buf, size_t bufsz)
+{
+   const char *home;
+   if (path[0] != '~')
+      return path;
+   home = getenv("HOME");
+   if (home == NULL)
+      return path;
+   snprintf(buf, bufsz, "%s%s", home, path + 1);
+   return buf;
+}
+
 static void write_gsgp_data(int online_count, struct gsgp_entry *entries, int n)
 {
    FILE *fp;
-   char tmp_file[] = GSGP_JSON_FILE ".tmp";
+   char gsgp_path[256];
+   char tmp_path[260];
+   const char *gsgp_file = expand_tilde(GSGP_JSON_FILE, gsgp_path, sizeof(gsgp_path));
 
-   fp = fopen(tmp_file, "w");
+   snprintf(tmp_path, sizeof(tmp_path), "%s.tmp", gsgp_file);
+   fp = fopen(tmp_path, "w");
    if (fp == NULL)
       return;
 
@@ -167,19 +182,19 @@ static void write_gsgp_data(int online_count, struct gsgp_entry *entries, int n)
    fprintf(fp, "  ]\n");
    fprintf(fp, "}\n");
    fclose(fp);
-   rename(tmp_file, GSGP_JSON_FILE);
+   rename(tmp_path, gsgp_file);
 }
 
 void list_who_to_output(void)
 {
    DESCRIPTOR_DATA *d;
    FILE *who_html;
-   FILE *who_count;
+   char who_path[256];
    struct gsgp_entry gsgp_entries[GSGP_PLAYERS_MAX];
    int online_count = 0;
    int gsgp_n = 0;
 
-   who_html = fopen(WHO_HTML_FILE, "w");
+   who_html = fopen(expand_tilde(WHO_HTML_FILE, who_path, sizeof(who_path)), "w");
    if (who_html == NULL)
       return;
 
@@ -213,13 +228,6 @@ void list_who_to_output(void)
 
    fprintf(who_html, "</ul>\n");
    fclose(who_html);
-
-   who_count = fopen(WHO_COUNT_FILE, "w");
-   if (who_count == NULL)
-      return;
-
-   fprintf(who_count, "<p>Players online: %d</p>\n", online_count);
-   fclose(who_count);
 
    write_gsgp_data(online_count, gsgp_entries, gsgp_n);
 }

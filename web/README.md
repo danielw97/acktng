@@ -5,7 +5,7 @@ for consumption by external web services, dashboards, and monitoring tools.
 
 ## Purpose
 
-`web/` is a **runtime output** directory — the MUD server writes structured data here so
+`~/web/data/` is a **runtime output** directory — the MUD server writes structured data here so
 that web servers, stats pages, and third-party integrations can read it without having
 to connect to or query the game directly.
 
@@ -17,24 +17,14 @@ owned by the server and overwritten on each update cycle.
 | File | Written by | Description |
 |------|-----------|-------------|
 | `gsgp.json` | MUD server | **Game State / General-Purpose** JSON feed.  Contains the server name, current active player count, and leaderboard snapshots (top players by level, top PKillers, top quest-point earners).  Updated on every game tick that changes one of those values. |
-| `soewholist.html` | MUD server (`act_info.c`) | HTML fragment — an `<h2>` heading and a `<ul>` list of currently online players, suitable for embedding directly into a web page.  Regenerated on every `who` update. |
-| `whocount.html` | MUD server (`act_info.c`) | Single `<p>` tag with the current online player count.  Regenerated in sync with `soewholist.html`. |
+| `wholist.html` | MUD server (`comm.c`) | HTML fragment — an `<h2>` heading and a `<ul>` list of currently online players, suitable for embedding directly into a web page.  Regenerated on every `who` update. |
 
 Additional files may appear here as new web-export features are added; they follow the
 same rule — machine-written, human-readable, no manual editing required.
 
-## Usage
+## Output Location
 
-A companion web server (run separately, not part of this repository) reads these files
-to serve the ACKMUD public website.  The expected environment variables it honours are:
-
-```
-ACK_WHO_HTML_FILE   path to soewholist.html  (default: web/soewholist.html)
-ACK_WHO_COUNT_FILE  path to whocount.html    (default: web/whocount.html)
-```
-
-The `gsgp.json` file can be fetched directly by any HTTP client or JavaScript front-end
-that wants live server statistics without maintaining a persistent telnet connection.
+All files are written to `~/web/data/` (i.e. `/home/user/web/data/`).
 
 ## What Does NOT Belong Here
 
