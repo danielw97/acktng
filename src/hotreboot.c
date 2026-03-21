@@ -427,3 +427,28 @@ void copyover_recover()
    log_f("copyover_recover: all players recovered");
    disable_timer_abort = FALSE;
 }
+
+void do_cancelhotreboot(CHAR_DATA *ch, char *argument)
+{
+   CHAR_DATA *c;
+   CHAR_DATA *c_next;
+   char buf[MAX_STRING_LENGTH];
+
+   if (hotreboot_countdown <= 0)
+   {
+      send_to_char("There is no automated hotreboot in progress.\n\r", ch);
+      return;
+   }
+
+   hotreboot_countdown = 0;
+
+   sprintf(buf, "Automated hotreboot cancelled by %s.", ch->name);
+   log_string(buf);
+
+   for (c = first_char; c != NULL; c = c_next)
+   {
+      c_next = c->next;
+      if (!IS_NPC(c))
+         send_to_char("\n\r@@e** The automated hotreboot has been cancelled. **@@N\n\r", c);
+   }
+}

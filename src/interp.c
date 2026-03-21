@@ -470,6 +470,8 @@ const struct cmd_type cmd_table[] = {
     CMD("reboot", do_reboot, POS_DEAD, L_GOD, LOG_ALWAYS, C_TYPE_STAFF, C_SHOW_ALWAYS),
     CMD("hotreboo", do_hotreboo, POS_DEAD, L_GOD, LOG_ALWAYS, C_TYPE_STAFF, C_SHOW_NEVER),
     CMD("hotreboot", do_hotreboot, POS_DEAD, L_GOD, LOG_ALWAYS, C_TYPE_STAFF, C_SHOW_ALWAYS),
+    CMD("cancelhotreboot", do_cancelhotreboot, POS_DEAD, L_GOD, LOG_ALWAYS, C_TYPE_STAFF,
+        C_SHOW_ALWAYS),
     CMD("shutdow", do_shutdow, POS_DEAD, L_GOD, LOG_NORMAL, C_TYPE_STAFF, C_SHOW_NEVER),
     CMD("shutdown", do_shutdown, POS_DEAD, L_GOD, LOG_ALWAYS, C_TYPE_STAFF, C_SHOW_ALWAYS),
     CMD("users", do_users, POS_DEAD, L_GOD, LOG_NORMAL, C_TYPE_STAFF, C_SHOW_ALWAYS),
