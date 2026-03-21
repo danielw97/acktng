@@ -3764,7 +3764,7 @@ void do_config(CHAR_DATA *ch, char *argument)
          bit = CONFIG_FULL_ANSI;
       else if (!str_cmp(arg + 1, "display"))
          bit = CONFIG_MAPPER;
-      else if (IS_STAFF(ch) && (!str_cmp(arg + 1, "justify")))
+      else if (!str_cmp(arg + 1, "justify"))
          bit = CONFIG_JUSTIFY;
 
       else if (!str_prefix("rows", arg + 1))
