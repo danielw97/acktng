@@ -596,7 +596,116 @@ On boot, the server:
 
 ---
 
-## 9. Trade-offs and Risks
+## 9. Integration Testing Strategy
+
+The existing integration test (`integration-test.sh`) boots the server, walks the full new-player login flow over WebSocket, and monitors for crashes. It currently assumes the server can boot by reading flat files from `area/`. The DB migration breaks this assumption: once the flat-file load code is removed, the server needs a live PostgreSQL instance to boot at all.
+
+The strategy is divided into two phases matching the migration phases in Section 7.4.
+
+### 9.1 Phases 1–7: Flat-file fallback (transitional)
+
+During migration Phases 1–7, the new DB load functions live behind `#ifdef USE_DB_LOAD` while the flat-file loaders remain in the binary. The server checks for `area/db.conf` at boot:
+
+- If `area/db.conf` **exists** → open the PostgreSQL connection and use the DB loaders.
+- If `area/db.conf` **is absent** → fall back to the flat-file loaders.
+
+The integration test never places a `db.conf`, so it always takes the flat-file path. No changes to `integration-test.sh` or CI are required through Phase 7. The DB code path is exercised separately by the round-trip unit test (`test_db_roundtrip.c`) and by manual developer testing against a local PostgreSQL instance.
+
+### 9.2 Phase 8+: Self-contained PostgreSQL in `integration-test.sh`
+
+When Phase 8 is reached (flat-file load code removed, `#ifdef USE_DB_LOAD` stripped), the integration test must provide its own PostgreSQL instance. The test script gains a DB setup phase that runs before the server boots, and tears down cleanly on exit.
+
+#### Changes to `integration-test.sh`
+
+**New dependency check (near the top):**
+
+```sh
+# Require PostgreSQL tools for the DB-backed integration test.
+if ! command -v initdb >/dev/null 2>&1 || ! command -v pg_ctl >/dev/null 2>&1; then
+    echo "integration-test: FAILED - initdb/pg_ctl not found (install postgresql)"
+    exit 1
+fi
+```
+
+**New variables:**
+
+```sh
+PG_DATA="/tmp/mud-test-pgdata-$$"
+PG_PORT=$(python3 -c \
+    "import socket; s=socket.socket(); s.bind(('', 0)); print(s.getsockname()[1]); s.close()")
+DB_CONF="$AREA_DIR/db.conf"
+```
+
+**Extended `cleanup` function:**
+
+```sh
+cleanup() {
+    # ... existing MUD_PID kill ...
+    if [ -n "$PG_DATA" ] && [ -d "$PG_DATA" ]; then
+        pg_ctl stop -D "$PG_DATA" -m immediate -s 2>/dev/null || true
+        rm -rf "$PG_DATA"
+    fi
+    rm -f "$DB_CONF"
+    rm -f "$LOG_FILE"
+}
+```
+
+**New Step 1a — spin up a temp PostgreSQL cluster:**
+
+```sh
+echo "integration-test: initializing temp PostgreSQL cluster..."
+initdb -D "$PG_DATA" -U ack --no-instructions -q
+cat >>"$PG_DATA/postgresql.conf" <<EOF
+port = $PG_PORT
+unix_socket_directories = '/tmp'
+EOF
+pg_ctl start -D "$PG_DATA" -l "$PG_DATA/pg.log" -s -w
+createdb -h /tmp -p "$PG_PORT" -U ack acktng
+
+echo "integration-test: applying schema and importing content..."
+psql -h /tmp -p "$PG_PORT" -U ack -d acktng -f "$AREA_DIR/schema.sql" -q
+"$SCRIPT_DIR/tools/import_to_db" "host=/tmp port=$PG_PORT dbname=acktng user=ack"
+
+# Write db.conf so the server finds the cluster.
+echo "host=/tmp port=$PG_PORT dbname=acktng user=ack" > "$DB_CONF"
+```
+
+The existing build, launch, wait-for-ready, WebSocket login, and crash-monitor steps are unchanged. The `cleanup` trap handles teardown whether the test passes or fails.
+
+#### Why this approach
+
+- **Self-contained.** No external service required. The test spins up and tears down its own PostgreSQL instance in `/tmp`. Works identically in CI and on any developer machine.
+- **No CI service dependencies.** The GitHub Actions Ubuntu runner ships `postgresql` in its default tool cache (`postgresql-*` packages, `initdb`/`pg_ctl` on `PATH`). No workflow changes are needed beyond confirming `postgresql` is installed — which it is by default on `ubuntu-latest`.
+- **Exercises the real code path.** The test runs the actual `import_to_db` tool and the actual `db_load_*` functions, not stubs.
+- **Adds ~10–15 seconds** to test runtime (cluster init + import). Acceptable given the existing 90-second boot timeout budget.
+
+#### Local developer setup
+
+No special setup is required to run `make unit-tests` locally — the integration test manages its own cluster. The only prerequisite is that `postgresql` is installed:
+
+```sh
+# Debian/Ubuntu
+sudo apt install postgresql
+
+# macOS (Homebrew)
+brew install postgresql
+```
+
+#### Validation query run at the end of import
+
+After `import_to_db` completes, the tool prints a summary row count. The integration test checks the exit code of `import_to_db` and aborts if it is non-zero:
+
+```sh
+if ! "$SCRIPT_DIR/tools/import_to_db" \
+        "host=/tmp port=$PG_PORT dbname=acktng user=ack"; then
+    echo "integration-test: FAILED - import_to_db failed"
+    exit 1
+fi
+```
+
+---
+
+## 10. Trade-offs and Risks
 
 ### Advantages
 - Referential integrity enforced at the database layer.
@@ -618,7 +727,7 @@ On boot, the server:
 
 ---
 
-## 10. Future Work (Out of Scope)
+## 11. Future Work (Out of Scope)
 
 - **Online Area Editor (OLC):** Admin commands to edit rooms/mobs/objects in-game, writing directly to the database.
 - **Area hot-reload:** Re-loading a single area from the database without a full reboot.
@@ -628,7 +737,7 @@ On boot, the server:
 
 ---
 
-## 11. Implementation Checklist
+## 12. Implementation Checklist
 
 For the implementing Claude session:
 
@@ -643,8 +752,10 @@ For the implementing Claude session:
 - [ ] Run import; verify row counts against file counts
 - [ ] Run export; diff against originals (no semantic differences expected)
 - [ ] Write `db_load_*` functions in `src/db.c` behind `#ifdef USE_DB_LOAD`
-- [ ] Run `make unit-tests` with `USE_DB_LOAD` enabled
-- [ ] Remove `#ifdef USE_DB_LOAD` and old file-based load code
+- [ ] Run `make unit-tests` with `USE_DB_LOAD` enabled (flat-file fallback active; integration test unaffected)
+- [ ] Remove `#ifdef USE_DB_LOAD` and old file-based load code (Phase 8)
+- [ ] Update `integration-test.sh` with PostgreSQL setup/teardown phase (Section 9.2)
+- [ ] Verify `make unit-tests` still passes (integration test now spins up its own cluster)
 - [ ] Move flat files to `*/legacy/` directories
 - [ ] Update `docs/area_db_spec.md` with finalized schema
 - [ ] Update `docs/help_file_spec.md` with database authoring workflow
