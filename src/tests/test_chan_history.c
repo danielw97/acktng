@@ -31,7 +31,7 @@ void send_to_char(const char *txt, CHAR_DATA *ch)
 /* Forward declarations of the functions under test                    */
 /* ------------------------------------------------------------------ */
 
-int  channel_to_hist_idx(int channel);
+int channel_to_hist_idx(int channel);
 void chan_history_add(int channel, const char *speaker, const char *message);
 void chan_history_show(CHAR_DATA *ch, int channel, const char *verb);
 
@@ -106,9 +106,9 @@ static void test_multiple_messages_appear_in_order(void)
    memset(&ch, 0, sizeof(ch));
    chan_history_show(&ch, CHANNEL_FLAME, "flame");
 
-   char *p_first  = strstr(captured, "first");
+   char *p_first = strstr(captured, "first");
    char *p_second = strstr(captured, "second");
-   char *p_third  = strstr(captured, "third");
+   char *p_third = strstr(captured, "third");
    assert(p_first != NULL);
    assert(p_second != NULL);
    assert(p_third != NULL);
