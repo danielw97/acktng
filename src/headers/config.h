@@ -1453,12 +1453,12 @@
 #define SYSDAT_FILE DATA_DIR "system.dat"
 
 #if defined(SOE) && !defined(SOETEST) && !defined(SOEBLD)
-#define WHO_HTML_FILE "/home/user/web/data/wholist.html" /* for ftping who list to html web page :) */
+#define WHO_HTML_FILE "~/web/data/wholist.html" /* for ftping who list to html web page :) */
 #endif
 #if !defined(WHO_HTML_FILE)
-#define WHO_HTML_FILE "/home/user/web/data/wholist.html" /* for ftping who list to html web page :) */
+#define WHO_HTML_FILE "~/web/data/wholist.html" /* for ftping who list to html web page :) */
 #endif
-#define GSGP_JSON_FILE "/home/user/web/data/gsgp.json" /* Game Scry Game Protocol endpoint data */
+#define GSGP_JSON_FILE "~/web/data/gsgp.json" /* Game Scry Game Protocol endpoint data */
 /* Other Stuff - Flar */
 #define COPYOVER_FILE "COPYOVER.TXT"               /* Temp data file used for copyover */
 #define EXE_FILE "../src/ack"                      /* The one that runs the ACK! */
