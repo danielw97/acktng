@@ -25,12 +25,22 @@ PROF    =
 OPENSSL_CFLAGS := $(shell pkg-config --cflags openssl 2>/dev/null)
 OPENSSL_LIBS   := $(shell pkg-config --libs   openssl 2>/dev/null)
 
+LIBPQ_CFLAGS := $(shell pkg-config --cflags libpq 2>/dev/null)
+LIBPQ_LIBS   := $(shell pkg-config --libs   libpq 2>/dev/null || echo -lpq)
+
 C_FLAGS = -O -g2 -Wall -DACK_43 $(PROF) $(SOLARIS_FLAG) -Iheaders -Iai/headers -Itests/headers -Iquests
 L_FLAGS = -O -g2 -lcrypt -lpthread $(PROF) $(SOLARIS_LINK) -lz
 
 ifneq ($(OPENSSL_LIBS),)
     C_FLAGS += -DHAVE_OPENSSL $(OPENSSL_CFLAGS)
     L_FLAGS += $(OPENSSL_LIBS)
+endif
+
+# Uncomment (or pass USE_DB_LOAD=1 on the command line) to enable PostgreSQL support.
+# Requires libpq-dev: apt-get install libpq-dev
+ifdef USE_DB_LOAD
+    C_FLAGS += -DUSE_DB_LOAD $(LIBPQ_CFLAGS)
+    L_FLAGS += $(LIBPQ_LIBS)
 endif
 
 OBJDIR = build/obj
@@ -179,7 +189,7 @@ QUEST_OBJS = quests/template.o quests/state.o quests/cartography.o quests/notify
 O_FILES = affect.o ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_pub_society.o act_wiz.o npc_dialogue.o \
 	  areachk.o board.o build.o buildare.o buildtab.o caravan.o clutch.o comm.o hotreboot.o login.o socket.o prompt.o \
 	  const.o const_color.o const_class.o const_race.o const_clan.o const_exp.o const_liq.o const_pub_society.o \
-	  damage.o cloak.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
+	  damage.o cloak.o death.o db.o db_worker.o email.o enchant.o fight.o handler.o hash.o hunt.o \
 	  heal.o interp.o invasion.o item_generation.o item_generation_tables.o keep.o lists.o lookup.o macros.o magic.o mapper.o \
 	  obj_fun.o pdelete.o $(QUEST_OBJS) reincarnate.o revenant.o \
 	  save/save.o save/save_players.o save/save_objects.o save/save_mobs.o save/save_areas.o \
@@ -244,3 +254,18 @@ lint:
 # Auto-apply the .clang-format style to all source files
 format:
 	clang-format -i $(LINT_SOURCES)
+
+# -----------------------------------------------------------------------
+# PostgreSQL tools (only built when USE_DB_LOAD=1)
+# -----------------------------------------------------------------------
+ifdef USE_DB_LOAD
+
+tools/import_to_db: tools/import_to_db.c
+	@mkdir -p tools
+	$(CC) $(C_FLAGS) -o tools/import_to_db tools/import_to_db.c $(L_FLAGS)
+
+tools/db_to_files: tools/db_to_files.c
+	@mkdir -p tools
+	$(CC) $(C_FLAGS) -o tools/db_to_files tools/db_to_files.c $(L_FLAGS)
+
+endif
