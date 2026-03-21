@@ -142,17 +142,19 @@ struct char_ref_type
 #define CUREF(var) char_unreference(&var);
 
 /*
- * Utility macros.
+ * Bit manipulation macros (must stay as macros: SET_BIT/REMOVE_BIT modify
+ * an lvalue; IS_SET is type-generic across int/long/sh_int flag fields).
  */
-#define UMIN(a, b) ((a) < (b) ? (a) : (b))
-#define UMAX(a, b) ((a) > (b) ? (a) : (b))
-#define URANGE(a, b, c) ((b) < (a) ? (a) : ((b) > (c) ? (c) : (b)))
-#define LOWER(c) ((c) >= 'A' && (c) <= 'Z' ? (c) + 'a' - 'A' : (c))
-#define UPPER(c) ((c) >= 'a' && (c) <= 'z' ? (c) + 'A' - 'a' : (c))
 #define IS_SET(flag, bit) ((flag) & (bit))
 #define SET_BIT(var, bit) ((var) |= (bit))
 #define REMOVE_BIT(var, bit) ((var) &= ~(bit))
-#define IS_LETTER(c) (((c) >= 'A' && (c) <= 'Z') || ((c) >= 'a' && (c) <= 'z'))
+
+/*
+ * UMIN, UMAX, URANGE, LOWER, UPPER, IS_LETTER are implemented as static
+ * inline functions in inlines.h (included at the end of ack.h after all
+ * struct definitions are complete).  The names are identical to the former
+ * macros so no call-site changes are required.
+ */
 
 /*
  * Character checks, object checks, name helpers, and class-tier queries are

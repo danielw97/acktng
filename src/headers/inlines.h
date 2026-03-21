@@ -117,6 +117,40 @@ static inline int ADEPT_LEVEL(const CHAR_DATA *ch)
    return IS_NPC(ch) ? ch->level / 7 : ch->adept_level;
 }
 
+/* ── Numeric utilities ────────────────────────────────────────────────── */
+
+static inline int UMIN(int a, int b)
+{
+   return a < b ? a : b;
+}
+
+static inline int UMAX(int a, int b)
+{
+   return a > b ? a : b;
+}
+
+static inline int URANGE(int a, int b, int c)
+{
+   return b < a ? a : (b > c ? c : b);
+}
+
+/* ── Character utilities ──────────────────────────────────────────────── */
+
+static inline char LOWER(char c)
+{
+   return (c >= 'A' && c <= 'Z') ? (char)(c + 'a' - 'A') : c;
+}
+
+static inline char UPPER(char c)
+{
+   return (c >= 'a' && c <= 'z') ? (char)(c + 'A' - 'a') : c;
+}
+
+static inline bool IS_LETTER(char c)
+{
+   return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z');
+}
+
 static inline void WAIT_STATE(CHAR_DATA *ch, int npulse)
 {
    ch->wait = UMAX(ch->wait, npulse);
