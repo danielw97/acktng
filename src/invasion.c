@@ -1163,7 +1163,7 @@ static CHAR_DATA *spawn_invasion_mob(int level, bool is_boss, int prof_idx,
    char short_buf[MAX_STRING_LENGTH];
    char long_buf[MAX_STRING_LENGTH];
 
-#define INVASION_TEMPLATE_MOB 32565 /* <-- set to a real mob vnum in your world */
+#define INVASION_TEMPLATE_MOB 65399 /* invasion template mob in ceiling.are */
 
    if ((pIndex = get_mob_index(INVASION_TEMPLATE_MOB)) == NULL)
    {
