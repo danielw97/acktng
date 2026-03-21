@@ -97,6 +97,7 @@ bool write_websocket_frame(DESCRIPTOR_DATA *d, unsigned char opcode, const unsig
 DESCRIPTOR_DATA *d_next; /* Next descriptor in loop      */
 
 int global_port;
+int global_ws_port = -1;
 
 static const char websocket_guid[] = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
 
@@ -588,7 +589,7 @@ bool process_websocket_input(DESCRIPTOR_DATA *d)
    return TRUE;
 }
 
-int init_socket(int port)
+int init_socket(int port, unsigned long bind_addr)
 {
    static struct sockaddr_in sa_zero;
    struct sockaddr_in sa;
@@ -625,6 +626,7 @@ int init_socket(int port)
 #endif
    sa = sa_zero;
    sa.sin_family = AF_INET;
+   sa.sin_addr.s_addr = htonl(bind_addr);
    sa.sin_port = htons(port);
 
    if (bind(fd, (struct sockaddr *)&sa, sizeof(sa)) < 0)
@@ -657,7 +659,7 @@ void reopen_socket(int sig)
 
 /* + */
 
-void game_loop(int control)
+void game_loop(int control, int control_ws)
 {
    static struct timeval null_time;
    struct timeval last_time;
@@ -696,7 +698,12 @@ void game_loop(int control)
       {
          log_string("SIGUSR1 received, reopening control socket");
          close(control);
-         control = init_socket(global_port);
+         control = init_socket(global_port, INADDR_ANY);
+         if (control_ws >= 0)
+         {
+            close(control_ws);
+            control_ws = init_socket(global_ws_port, INADDR_LOOPBACK);
+         }
          reopen_flag = 0;
       }
 
@@ -708,6 +715,11 @@ void game_loop(int control)
       FD_ZERO(&exc_set);
       FD_SET(control, &in_set);
       maxdesc = control;
+      if (control_ws >= 0)
+      {
+         FD_SET(control_ws, &in_set);
+         maxdesc = UMAX(maxdesc, control_ws);
+      }
 
       for (d = first_desc; d; d = d->next)
       {
@@ -745,6 +757,8 @@ void game_loop(int control)
        */
       if (FD_ISSET(control, &in_set))
          new_descriptor(control);
+      if (control_ws >= 0 && FD_ISSET(control_ws, &in_set))
+         new_descriptor(control_ws);
 
       /*
        * Kick out the freaky folks.

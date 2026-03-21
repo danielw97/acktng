@@ -3,8 +3,10 @@
 # /bin/sh replacement for startup, by Spectrum
 #
 
-# grab the port number
-port=8890
+# Telnet port (public, all interfaces)
+port=4000
+# WebSocket loopback port (127.0.0.1 only; nginx TLS proxy forwards wss://ackmud.com:8890 here)
+ws_port=18890
 
 # set up
 cd ../reports
@@ -47,7 +49,7 @@ do
   done
 
   # run the mud
-  ../src/ack $port >$logfile 2>&1
+  ../src/ack $port --ws-loopback $ws_port >$logfile 2>&1
 
   # shutdown?
 

@@ -44,6 +44,7 @@
 
 #include <sys/types.h>
 #include <sys/time.h>
+#include <netinet/in.h>
 #include <ctype.h>
 #include <errno.h>
 #include <stdio.h>
@@ -133,6 +134,8 @@ int main(int argc, char **argv)
    struct timeval now_time;
    bool fCopyOver = FALSE; /* HOTreboot??? Well is it...is it???? - Flar */
    extern int abort_threshold;
+   int control_ws = -1;
+   int ws_port = -1;
 
    /*
     * Init time.
@@ -158,8 +161,29 @@ int main(int argc, char **argv)
          exit(1);
       }
    }
+
+   /*
+    * Parse --ws-loopback <port>: open a second socket bound to 127.0.0.1
+    * for WebSocket connections forwarded by a TLS proxy (e.g. nginx).
+    */
+   {
+      int i;
+      for (i = 2; i < argc; i++)
+      {
+         if (!strcmp(argv[i], "--ws-loopback") && i + 1 < argc)
+         {
+            ws_port = atoi(argv[++i]);
+            if (ws_port <= 1024)
+            {
+               fprintf(stderr, "--ws-loopback port must be above 1024.\n");
+               exit(1);
+            }
+         }
+      }
+   }
+
    /* Check for HOTreboot parameter - Flar */
-   if (argv[2] && argv[2][0])
+   if (argv[2] && argv[2][0] && strcmp(argv[2], "--ws-loopback") != 0)
    {
       fCopyOver = TRUE;
       control = atoi(argv[3]);
@@ -176,9 +200,12 @@ int main(int argc, char **argv)
     */
    if (!fCopyOver) /* We already have the port if Copyovered. */
    {
-      control = init_socket(port);
+      control = init_socket(port, INADDR_ANY);
+      if (ws_port > 0)
+         control_ws = init_socket(ws_port, INADDR_LOOPBACK);
    }
    global_port = port;
+   global_ws_port = ws_port;
    if (fCopyOver)
       abort_threshold = BOOT_DB_ABORT_THRESHOLD;
    boot_db();
@@ -186,7 +213,11 @@ int main(int argc, char **argv)
 #ifndef WIN32
    init_alarm_handler();
 #endif
-   sprintf(log_buf, "ACK! MUD is ready on port %d.", port);
+   if (ws_port > 0)
+      sprintf(log_buf, "ACK! MUD is ready on port %d (telnet) and %d (WebSocket loopback).", port,
+              ws_port);
+   else
+      sprintf(log_buf, "ACK! MUD is ready on port %d.", port);
    log_string(log_buf);
    if (fCopyOver)
    {
@@ -202,8 +233,10 @@ int main(int argc, char **argv)
    /* Seed WHO web output immediately on boot/copyover recovery. */
    list_who_to_output();
 
-   game_loop(control);
+   game_loop(control, control_ws);
    close(control);
+   if (control_ws >= 0)
+      close(control_ws);
 
    /*
     * That's all, folks.
