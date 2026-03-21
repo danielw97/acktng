@@ -174,7 +174,6 @@ void list_who_to_output(void)
 {
    DESCRIPTOR_DATA *d;
    FILE *who_html;
-   FILE *who_count;
    struct gsgp_entry gsgp_entries[GSGP_PLAYERS_MAX];
    int online_count = 0;
    int gsgp_n = 0;
@@ -213,13 +212,6 @@ void list_who_to_output(void)
 
    fprintf(who_html, "</ul>\n");
    fclose(who_html);
-
-   who_count = fopen(WHO_COUNT_FILE, "w");
-   if (who_count == NULL)
-      return;
-
-   fprintf(who_count, "<p>Players online: %d</p>\n", online_count);
-   fclose(who_count);
 
    write_gsgp_data(online_count, gsgp_entries, gsgp_n);
 }
