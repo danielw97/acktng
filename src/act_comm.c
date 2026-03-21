@@ -41,6 +41,124 @@ void note_attach args((CHAR_DATA * ch));
 void note_remove args((CHAR_DATA * ch, NOTE_DATA *pnote));
 void talk_channel args((CHAR_DATA * ch, char *argument, int channel, const char *verb));
 
+/* ----------------------------------------------------------------------- *
+ * Channel history — in-memory ring buffer, 15 messages per channel
+ * ----------------------------------------------------------------------- */
+#define CHAN_HIST_SIZE 15
+#define CHAN_HIST_NUM  20
+
+typedef struct chan_history_entry CHAN_HISTORY_ENTRY;
+struct chan_history_entry
+{
+   char speaker[64];
+   char message[MAX_INPUT_LENGTH];
+};
+
+static CHAN_HISTORY_ENTRY chan_history[CHAN_HIST_NUM][CHAN_HIST_SIZE];
+static int                chan_hist_pos[CHAN_HIST_NUM];   /* next write index (circular) */
+static int                chan_hist_count[CHAN_HIST_NUM]; /* entries stored, capped at CHAN_HIST_SIZE */
+
+int channel_to_hist_idx(int channel)
+{
+   switch (channel)
+   {
+   case CHANNEL_AUCTION:
+      return 0;
+   case CHANNEL_GOSSIP:
+      return 1;
+   case CHANNEL_MUSIC:
+      return 2;
+   case CHANNEL_STAFFTALK:
+      return 3;
+   case CHANNEL_NEWBIE:
+      return 4;
+   case CHANNEL_QUESTION:
+      return 5;
+   case CHANNEL_SHOUT:
+      return 6;
+   case CHANNEL_YELL:
+      return 7;
+   case CHANNEL_FLAME:
+      return 8;
+   case CHANNEL_ZZZ:
+      return 9;
+   case CHANNEL_RACE:
+      return 10;
+   case CHANNEL_CLAN:
+      return 11;
+   case CHANNEL_CREATOR:
+      return 12;
+   case CHANNEL_DIPLOMAT:
+      return 13;
+   case CHANNEL_CRUSADE:
+      return 14;
+   case CHANNEL_REMORTTALK:
+      return 15;
+   case CHANNEL_ADEPT:
+      return 16;
+   case CHANNEL_OOC:
+      return 17;
+   case CHANNEL_INVASION:
+      return 18;
+   case CHANNEL_GAME:
+      return 19;
+   default:
+      return -1;
+   }
+}
+
+void chan_history_add(int channel, const char *speaker, const char *message)
+{
+   int idx = channel_to_hist_idx(channel);
+   if (idx < 0)
+      return;
+   strncpy(chan_history[idx][chan_hist_pos[idx]].speaker, speaker,
+           sizeof(chan_history[idx][0].speaker) - 1);
+   chan_history[idx][chan_hist_pos[idx]].speaker[sizeof(chan_history[idx][0].speaker) - 1] = '\0';
+   strncpy(chan_history[idx][chan_hist_pos[idx]].message, message,
+           sizeof(chan_history[idx][0].message) - 1);
+   chan_history[idx][chan_hist_pos[idx]].message[sizeof(chan_history[idx][0].message) - 1] = '\0';
+   chan_hist_pos[idx] = (chan_hist_pos[idx] + 1) % CHAN_HIST_SIZE;
+   if (chan_hist_count[idx] < CHAN_HIST_SIZE)
+      chan_hist_count[idx]++;
+}
+
+void chan_history_show(CHAR_DATA *ch, int channel, const char *verb)
+{
+   char buf[MAX_STRING_LENGTH];
+   int  idx   = channel_to_hist_idx(channel);
+   int  count = (idx >= 0) ? chan_hist_count[idx] : 0;
+   int  start, i;
+
+   if (idx < 0)
+   {
+      sprintf(buf, "%s what?\n\r", verb);
+      buf[0] = UPPER(buf[0]);
+      send_to_char(buf, ch);
+      return;
+   }
+
+   if (count == 0)
+   {
+      sprintf(buf, "No %s history yet.\n\r", verb);
+      send_to_char(buf, ch);
+      return;
+   }
+
+   sprintf(buf, "[%s history]\n\r", verb);
+   buf[1] = UPPER(buf[1]);
+   send_to_char(buf, ch);
+
+   start = (chan_hist_pos[idx] - count + CHAN_HIST_SIZE) % CHAN_HIST_SIZE;
+   for (i = 0; i < count; i++)
+   {
+      int pos = (start + i) % CHAN_HIST_SIZE;
+      sprintf(buf, "  %s %ss '%s'\n\r", chan_history[idx][pos].speaker, verb,
+              chan_history[idx][pos].message);
+      send_to_char(buf, ch);
+   }
+}
+
 /* Added back-in the note code, but made more like PO system */
 bool is_note_to(CHAR_DATA *ch, NOTE_DATA *pnote)
 {
@@ -486,8 +604,7 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
 
    if (argument[0] == '\0')
    {
-      sprintf(buf, "%s what?\n\r", verb);
-      buf[0] = UPPER(buf[0]);
+      chan_history_show(ch, channel, verb);
       return;
    }
 
@@ -632,6 +749,7 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
       ch->position = position;
       break;
    }
+   chan_history_add(channel, ch->name, argument);
    {
       for (d = first_desc; d != NULL; d = d->next)
       {
