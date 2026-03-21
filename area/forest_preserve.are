@@ -23,8 +23,8 @@ A trailhead squirrel sits on a stump near the entrance, watching quietly.
 This gray squirrel clutches an acorn and remains perfectly still unless startled by loud steps.
 
 ~
-67 0 0 S
-3 0
+1073741891 0 0 S
+4 0
 18 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -40,7 +40,7 @@ A moss rabbit crouches near the roots of a cedar.
 Its mottled fur blends with damp moss, and it stays frozen in place for long stretches.
 
 ~
-67 0 0 S
+1073741891 0 0 S
 4 0
 24 0 0 0
 ! 0 0 0 7 0 0 0
@@ -57,7 +57,7 @@ A junior trail ranger stands guard beside the path.
 Leather-clad and attentive, this ranger keeps a calm, unmoving watch over passing visitors.
 
 ~
-67 0 0 S
+1073741891 0 0 S
 5 0
 38 5 5 5
 ! 0 0 0 7 0 0 0
@@ -74,7 +74,7 @@ A wetland observer notes movement among the reeds.
 This preserve watcher remains near the boardwalk, eyes fixed on the marsh channels below.
 
 ~
-67 0 2 S
+1073741891 0 2 S
 7 2
 50 0 0 10
 ! 0 0 0 7 0 0 0
@@ -91,7 +91,7 @@ A grove sentry stands at rigid attention here.
 Armored in layered bark and hide, this sentry does not stray from its assigned post.
 
 ~
-33554531 0 0 S
+1107296323 0 0 S
 9 0
 70 10 10 0
 ! 0 0 0 7 0 0 0
@@ -108,8 +108,8 @@ A young preserve fox watches from the brush at the trail edge.
 A small red fox with bright eyes and muddy paws sits alertly in the undergrowth.
 
 ~
-67 0 0 S
-2 0
+1073741891 0 0 S
+4 0
 20 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -125,7 +125,7 @@ A preserve owl guide perches on a low branch here.
 This broad-winged owl watches the paths and keeps perfectly still for long stretches.
 
 ~
-67 0 0 S
+1073741891 0 0 S
 4 0
 28 0 0 5
 ! 0 0 0 7 0 0 0
@@ -142,7 +142,7 @@ A junior preserve ranger stands on trail duty here.
 Wearing practical field gear, this ranger scans visitors and monitors wildlife routes.
 
 ~
-67 0 0 S
+1073741891 0 0 S
 6 0
 45 5 5 5
 ! 0 0 0 7 0 0 0
@@ -159,7 +159,7 @@ A preserve herbalist arranges bundles of drying herbs nearby.
 The herbalist keeps organized pouches and a practiced eye for medicinal plants.
 
 ~
-67 0 0 S
+1073741891 0 0 S
 8 2
 35 0 0 10
 ! 0 0 0 7 0 0 0
@@ -176,8 +176,8 @@ An ancient bark guardian stands sentinel here, unmoving.
 Shaped from cedar and stone, this patient guardian barely stirs as it watches.
 
 ~
-33554531 0 0 S
-10 0
+1107296323 0 0 S
+9 0
 80 10 10 0
 ! 0 0 0 7 0 0 0
 | 256 8 0 0 0 256 8
@@ -193,8 +193,8 @@ The Warden of the Whispering Preserve stands watch over the sacred grove.
 A veteran protector in handcrafted preserve gear, the warden surveys every approach.
 
 ~
-67108963 0 0 S
-12 2
+1140850755 0 0 S
+10 2
 120 15 15 20
 ! 0 0 0 7 0 0 0
 | 256 8 0 0 0 256 8
@@ -210,7 +210,7 @@ A preserve beaver waits near the waterline, watching the pond.
 This stocky beaver keeps close to its dam and chewed branch piles.
 
 ~
-67 0 0 S
+1073741891 0 0 S
 5 0
 30 0 0 0
 ! 0 0 0 7 0 0 0
@@ -227,7 +227,7 @@ A preserve tracker studies tracks left in the mud.
 A quiet tracker stands still while reading signs left by passing animals.
 
 ~
-67 0 0 S
+1073741891 0 0 S
 7 0
 40 5 5 5
 ! 0 0 0 7 0 0 0
@@ -244,7 +244,7 @@ A preserve falconer keeps station here beneath the open sky.
 A leather-gloved falconer remains motionless while observing the sky corridors above.
 
 ~
-67 0 0 S
+1073741891 0 0 S
 9 0
 55 5 5 5
 ! 0 0 0 7 0 0 0
@@ -261,62 +261,11 @@ A bog sentinel watches from the edge of the boardwalk.
 Coated in mud-hardened bark plates, this sentinel guards the wetland approaches.
 
 ~
-33554531 0 0 S
-11 0
+1107296323 0 0 S
+9 0
 90 10 10 0
 ! 0 0 0 7 0 0 0
 | 256 8 0 0 0 256 8
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#20814
-preserve warden ancient~
-a preserve warden~
-A preserve warden patrols the protected grove with absolute authority.
-
-~
-The preserve wardens are the oldest continuous guardians of the forest preserve, having served through the succession of authorities that have claimed nominal ownership of the preserve while the wardens simply continued their work. They do not acknowledge claims they did not recognize when the claimants were born.
-
-~
-97 0 -300 S
-90 0
-3500 -80 25 32
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#20815
-elder preserve guardian ancient~
-an elder preserve guardian~
-An elder preserve guardian stands in the deepest grove, watching.
-
-~
-An elder of the preserve's guardian order, the elder preserve guardian has maintained vigil in the deepest groves for so long that the groves have grown around them rather than the reverse. They are less visitor than feature of the preserve.
-
-~
-65 0 -300 S
-10 0
-3500 -80 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#20819
-Ancient Grove Sovereign preserve~
-the Ancient Grove Sovereign~
-The Ancient Grove Sovereign commands the preserve's heart grove from an ancient throne of roots.
-
-~
-The Sovereign of the ancient grove predates the preserve designation and may predate the grove itself, though this is disputed by those who have not tried to leave. It rules the preserve's heart through a combination of absolute authority and the fact that the grove's root network responds to its will. Nothing that has disrespected the Sovereign has remained in a condition to discuss the experience.
-
-~
-97 0 -500 S
-120 0
-5500 -95 30 40
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
@@ -1897,12 +1846,6 @@ E 0 5046 0 21   (null)
 E 0 5030 0 10   (null)
 
 E 0 5037 0 24   (null)
-
-M 0 20814 3 5010   preserve warden in protected grove
-
-M 0 20815 2 5020   elder preserve guardian in deep grove
-
-M 0 20819 3 5030   Ancient Grove Sovereign in heart grove
 
 S
 #$
