@@ -170,7 +170,10 @@ static void write_gsgp_data(int online_count, struct gsgp_entry *entries, int n)
    snprintf(tmp_path, sizeof(tmp_path), "%s.tmp", gsgp_file);
    fp = fopen(tmp_path, "w");
    if (fp == NULL)
+   {
+      bugf("write_gsgp_data: cannot open %s for writing", tmp_path);
       return;
+   }
 
    fprintf(fp, "{\n");
    fprintf(fp, "  \"name\":\"ACK!MUD TNG\",\n");
@@ -196,7 +199,10 @@ void list_who_to_output(void)
 
    who_html = fopen(expand_tilde(WHO_HTML_FILE, who_path, sizeof(who_path)), "w");
    if (who_html == NULL)
+   {
+      bugf("list_who_to_output: cannot open %s for writing", who_path);
       return;
+   }
 
    fprintf(who_html, "<h2>Players Online</h2>\n");
    fprintf(who_html, "<ul>\n");
