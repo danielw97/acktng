@@ -149,6 +149,9 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
       }
    }
 
+   /* Persist corpses so they survive the exec() */
+   save_corpses();
+
    /*
     * Close reserve and other always-open files and release other resources
     */
