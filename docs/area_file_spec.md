@@ -424,3 +424,124 @@ Area quest design (when authoring quest sets for an area) must satisfy all of th
 9. `#$`
 
 Using this order is recommended for consistency, even though the loader dispatch is name-based.
+
+
+---
+
+## 15) Database authoring workflow
+
+All area content lives in the PostgreSQL database. The flat `.are` files in `area/legacy/` are
+retained as migration source and rollback archive; the database is authoritative.
+
+### Adding a new area
+
+**Step 1 — Reserve a vnum range.** Check `area/area_index.md` for available ranges and claim
+one by inserting the area header:
+
+```sql
+INSERT INTO areas (name, min_vnum, max_vnum, keyword, level_min, level_max, reset_rate, owner)
+VALUES ('The Sunken City', 9000, 9099, 'sunkencity', 20, 30, 15, 'Virant');
+-- Note the returned id.
+```
+
+**Step 2 — Add rooms.** Each room must have a vnum within the area's `[min_vnum, max_vnum]` range:
+
+```sql
+INSERT INTO rooms (vnum, area_id, name, description, room_flags, sector_type)
+VALUES (9000,
+        (SELECT id FROM areas WHERE keyword = 'sunkencity'),
+        'The Gate of the Sunken City',
+        'Corroded bronze gates loom before you...\n',
+        0, 6);  -- sector_type 6 = underwater
+```
+
+**Step 3 — Add exits.** Connect rooms via `room_exits`:
+
+```sql
+INSERT INTO room_exits (room_vnum, direction, dest_vnum, exit_flags, key_vnum)
+VALUES (9000, 1, 9001, 0, NULL);  -- direction 1 = east
+```
+
+**Step 4 — Add mobiles.**
+
+```sql
+INSERT INTO mobiles (vnum, area_id, player_name, short_descr, long_descr, description,
+                     act_flags, level, alignment)
+VALUES (9001,
+        (SELECT id FROM areas WHERE keyword = 'sunkencity'),
+        'drowned guardian',
+        'a drowned guardian',
+        'A drowned guardian floats here, trailing kelp.\n',
+        'Its hollow eyes fix on you with cold recognition.\n',
+        0, 25, -500);
+```
+
+**Step 5 — Add objects.**
+
+```sql
+INSERT INTO objects (vnum, area_id, name, short_descr, description,
+                     item_type, extra_flags, wear_flags, value_0, weight, level)
+VALUES (9010,
+        (SELECT id FROM areas WHERE keyword = 'sunkencity'),
+        'coral blade',
+        'a blade of black coral',
+        'A blade carved from black coral rests here.\n',
+        5,   -- item_type 5 = weapon
+        0, 8192,  -- wear_flags: WEAR_WIELD
+        3, 10, 20);  -- value_0=weapon type, weight, level
+```
+
+**Step 6 — Add resets.** `seq` must be globally unique per area and reflect intended order:
+
+```sql
+-- Place mob 9001 in room 9000, max 3 in world, max 1 in room
+INSERT INTO resets (area_id, seq, command, arg1, arg2, arg3)
+VALUES ((SELECT id FROM areas WHERE keyword = 'sunkencity'), 1, 'M', 9001, 3, 9000);
+
+-- Give that mob object 9010
+INSERT INTO resets (area_id, seq, command, arg1, arg2, arg3)
+VALUES ((SELECT id FROM areas WHERE keyword = 'sunkencity'), 2, 'G', 9010, 1, 0);
+```
+
+**Step 7 — Validate:**
+
+```sql
+-- Confirm all rooms are within the area's vnum range
+SELECT vnum FROM rooms
+WHERE area_id = (SELECT id FROM areas WHERE keyword = 'sunkencity')
+  AND (vnum < (SELECT min_vnum FROM areas WHERE keyword = 'sunkencity')
+    OR vnum > (SELECT max_vnum FROM areas WHERE keyword = 'sunkencity'));
+-- Should return 0 rows.
+
+-- Check all resets reference valid vnums
+SELECT r.seq, r.command, r.arg1
+FROM resets r
+WHERE r.area_id = (SELECT id FROM areas WHERE keyword = 'sunkencity')
+  AND r.command = 'M'
+  AND r.arg1 NOT IN (SELECT vnum FROM mobiles);
+-- Should return 0 rows.
+```
+
+**Step 8 — Use the per-area view for convenience:**
+
+The migration tool generates a `sunkencity_rooms`, `sunkencity_mobiles`, etc. view for every area.
+After the area is created, regenerate views:
+
+```sh
+./tools/db_to_files --views-only
+```
+
+Then query the new area naturally:
+
+```sql
+SELECT vnum, name FROM sunkencity_rooms ORDER BY vnum;
+```
+
+### Constraints to always satisfy
+
+- All room, mob, and object vnums must fall within the area's `[min_vnum, max_vnum]` range.
+- `resets.seq` values must be unique within the area and in the intended load order.
+  `G` and `E` resets must immediately follow the `M` reset they modify.
+- Do not leave gaps in vnum sequences (fill lower vnums before higher ones).
+- Every area must include at least one boss mob and one quest (see Section 13.2).
+- Changes take effect on the next server boot (the server loads all area data on startup).
