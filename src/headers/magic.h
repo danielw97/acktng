@@ -419,7 +419,7 @@ DECLARE_SPELL_FUN(spell_call_of_the_wild);
 DECLARE_SPELL_FUN(spell_living_bridge);
 
 /* Level 1 mortal class active spells (slots 843-846) */
-DECLARE_SPELL_FUN(spell_ember_spark);       /* slot 843 — Magi */
-DECLARE_SPELL_FUN(spell_solar_brand);       /* slot 844 — Cleric */
+DECLARE_SPELL_FUN(spell_ember_spark);        /* slot 843 — Magi */
+DECLARE_SPELL_FUN(spell_solar_brand);        /* slot 844 — Cleric */
 DECLARE_SPELL_FUN(spell_cognitive_pressure); /* slot 845 — Psionicist */
-DECLARE_SPELL_FUN(spell_root_touch);        /* slot 846 — Druid */
+DECLARE_SPELL_FUN(spell_root_touch);         /* slot 846 — Druid */

@@ -45,7 +45,7 @@ void talk_channel args((CHAR_DATA * ch, char *argument, int channel, const char 
  * Channel history — in-memory ring buffer, 15 messages per channel
  * ----------------------------------------------------------------------- */
 #define CHAN_HIST_SIZE 15
-#define CHAN_HIST_NUM  20
+#define CHAN_HIST_NUM 20
 
 typedef struct chan_history_entry CHAN_HISTORY_ENTRY;
 struct chan_history_entry
@@ -55,8 +55,8 @@ struct chan_history_entry
 };
 
 static CHAN_HISTORY_ENTRY chan_history[CHAN_HIST_NUM][CHAN_HIST_SIZE];
-static int                chan_hist_pos[CHAN_HIST_NUM];   /* next write index (circular) */
-static int                chan_hist_count[CHAN_HIST_NUM]; /* entries stored, capped at CHAN_HIST_SIZE */
+static int chan_hist_pos[CHAN_HIST_NUM];   /* next write index (circular) */
+static int chan_hist_count[CHAN_HIST_NUM]; /* entries stored, capped at CHAN_HIST_SIZE */
 
 int channel_to_hist_idx(int channel)
 {
@@ -126,9 +126,9 @@ void chan_history_add(int channel, const char *speaker, const char *message)
 void chan_history_show(CHAR_DATA *ch, int channel, const char *verb)
 {
    char buf[MAX_STRING_LENGTH];
-   int  idx   = channel_to_hist_idx(channel);
-   int  count = (idx >= 0) ? chan_hist_count[idx] : 0;
-   int  start, i;
+   int idx = channel_to_hist_idx(channel);
+   int count = (idx >= 0) ? chan_hist_count[idx] : 0;
+   int start, i;
 
    if (idx < 0)
    {
