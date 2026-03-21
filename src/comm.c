@@ -241,8 +241,10 @@ int main(int argc, char **argv)
    int ws_port = -1;
    int control_tls = -1;
    int tls_port = -1;
+#ifdef HAVE_OPENSSL
    const char *tls_cert = "../data/tls/cert.pem";
    const char *tls_key = "../data/tls/key.pem";
+#endif
 
    /*
     * Init time.
@@ -295,10 +297,12 @@ int main(int argc, char **argv)
                exit(1);
             }
          }
+#ifdef HAVE_OPENSSL
          else if (!strcmp(argv[i], "--tls-cert") && i + 1 < argc)
             tls_cert = argv[++i];
          else if (!strcmp(argv[i], "--tls-key") && i + 1 < argc)
             tls_key = argv[++i];
+#endif
       }
    }
 

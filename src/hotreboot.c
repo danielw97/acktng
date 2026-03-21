@@ -32,6 +32,7 @@
  * copyover_recover() - restores player connections after exec()
  */
 
+#include <limits.h>
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -227,13 +228,29 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
       }
    }
 
-   execl(EXE_FILE, "ACK! MUD", buf, "HOTreboot", buf2, buf3, (char *)NULL);
+   /* Resolve the absolute path of the running binary via /proc/self/exe so
+    * hotreboot works regardless of how or from where the server was started.
+    * Fall back to the compiled-in EXE_FILE path if readlink fails. */
+   {
+      char exe_path[PATH_MAX + 1];
+      ssize_t exe_len = readlink("/proc/self/exe", exe_path, PATH_MAX);
+      if (exe_len > 0 && exe_len < PATH_MAX)
+      {
+         exe_path[exe_len] = '\0';
+         execl(exe_path, exe_path, buf, "HOTreboot", buf2, buf3, (char *)NULL);
+         log_f("do_hotreboot: execl(%s) failed: %m; retrying with EXE_FILE", exe_path);
+      }
+      else
+         log_f("do_hotreboot: readlink /proc/self/exe failed (%m); falling back to EXE_FILE");
+   }
+   execl(EXE_FILE, EXE_FILE, buf, "HOTreboot", buf2, buf3, (char *)NULL);
 
    /*
     * Failed - sucessful exec will not return
     */
 
    perror("do_copyover: execl");
+   log_f("do_hotreboot: execl failed: EXE_FILE=%s port=%s control=%s", EXE_FILE, buf, buf2);
    send_to_char("HOTreboot FAILED! Something is wrong in the shell!\n\r", ch);
 }
 
