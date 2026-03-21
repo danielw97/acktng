@@ -187,13 +187,12 @@ O_FILES = affect.o ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o ac
 # Source files for linting (all .c and .h excluding third-party sha256 and build artifacts)
 LINT_SOURCES = $(shell find . -name '*.c' -o -name '*.h' | grep -v sha256 | grep -v './build/' | sort)
 
-.PHONY: all clean purge unit-tests integration-test integration-test-telnet web lint format
+.PHONY: all clean purge unit-tests integration-test integration-test-telnet lint format
 
 all:
 	$(MAKE) clean
 	$(MAKE) format
 	$(MAKE) lint
-	$(MAKE) web
 	$(MAKE) ack
 	$(MAKE) unit-tests
 
@@ -203,8 +202,6 @@ integration-test: ack
 integration-test-telnet: ack
 	cd .. && ./integration-test-telnet.sh
 
-web:
-	$(MAKE) -C ../web
 
 ifdef CYGWIN
 ack: $(MAIN_OBJS)
@@ -224,11 +221,9 @@ endif
 
 clean:
 	rm -rf $(OBJDIR) tests/unit-test-* ack ack.exe ../area/core *~
-	$(MAKE) -C ../web clean
 
 purge:
 	rm -rf $(OBJDIR) tests/unit-test-* ack ack.exe ../area/core *~
-	$(MAKE) -C ../web clean
 
 $(OBJDIR)/%.o: %.c headers/ack.h
 	@mkdir -p $(dir $@)
