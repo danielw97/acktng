@@ -269,6 +269,30 @@ struct descriptor_data
    bool websocket_handshake_complete;
    bool greeting_sent;
    const char *websocket_current_music; /* mirrors area->music last sent, NULL = theme */
+
+   /* TLS (native OpenSSL encryption) */
+#ifdef HAVE_OPENSSL
+   struct ssl_st *ssl;
+#endif
+   bool tls_active;
+
+   /* MSDP (telnet option 69) */
+   bool msdp_active;
+   unsigned int msdp_reported;
+   unsigned short msdp_last_room;
+
+   /* GMCP (telnet option 201) */
+   bool gmcp_active;
+   unsigned int gmcp_supports;
+   unsigned short gmcp_last_room;
+
+   /* MCCP2 (server->client compression, telnet option 86) */
+   bool mccp2_active;
+   void *mccp2_zout;
+
+   /* MCCP3 (client->server compression, telnet option 87) */
+   bool mccp3_active;
+   void *mccp3_zin;
 };
 
 #define DESC_FLAG_PASSTHROUGH 1 /* Used when data is being passed to */

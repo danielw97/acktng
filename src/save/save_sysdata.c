@@ -132,8 +132,7 @@ void do_sysdata(CHAR_DATA *ch, char *argument)
       safe_strcat(MSL, outbuf, catbuf);
       for (looper = 0; looper < MAX_NUM_STAFF; looper++)
       {
-         sprintf(catbuf, "Level %d Staff: %s\n\r", 81 + looper,
-                 sysdata.staff[looper].this_string);
+         sprintf(catbuf, "Level %d Staff: %s\n\r", 81 + looper, sysdata.staff[looper].this_string);
          safe_strcat(MSL, outbuf, catbuf);
       }
       sprintf(catbuf, "Wizlocked: %s\n\r", (wizlock ? "Yes" : "No"));

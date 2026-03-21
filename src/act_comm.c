@@ -32,6 +32,7 @@
 #include <time.h>
 #include "globals.h"
 #include "npc_dialogue.h"
+#include "socket.h"
 
 /*
  * Local functions.
@@ -711,6 +712,9 @@ void talk_channel(CHAR_DATA *ch, char *argument, int channel, const char *verb)
             }
             act(ansi, ch, argument, vch, TO_VICT);
             vch->position = position;
+            /* Send GMCP Comm.Channel notification if client supports it */
+            if (d->gmcp_active && (d->gmcp_supports & GMCP_PKG_COMM))
+               gmcp_send_channel(d, verb, ch->name, argument);
          }
       }
 

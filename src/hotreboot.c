@@ -38,6 +38,11 @@
 #include <string.h>
 #include <sys/time.h>
 #include <unistd.h>
+#include <zlib.h>
+#ifdef HAVE_OPENSSL
+#include <openssl/ssl.h>
+#endif
+#include <arpa/telnet.h>
 #include "globals.h"
 #include "socket.h"
 
@@ -187,6 +192,39 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
       struct itimerval zero_timer;
       memset(&zero_timer, 0, sizeof(zero_timer));
       setitimer(ITIMER_VIRTUAL, &zero_timer, NULL);
+   }
+
+   /* Tear down TLS and MCCP streams that can't survive exec() */
+   {
+      DESCRIPTOR_DATA *htls;
+      for (htls = first_desc; htls; htls = htls->next)
+      {
+#ifdef HAVE_OPENSSL
+         if (htls->tls_active && htls->ssl)
+         {
+            SSL_shutdown((SSL *)htls->ssl);
+            SSL_free((SSL *)htls->ssl);
+            htls->ssl = NULL;
+            htls->tls_active = FALSE;
+         }
+#endif
+         if (htls->mccp2_active && htls->mccp2_zout)
+         {
+            deflateEnd((z_stream *)htls->mccp2_zout);
+            free(htls->mccp2_zout);
+            htls->mccp2_zout = NULL;
+            htls->mccp2_active = FALSE;
+         }
+         if (htls->mccp3_active && htls->mccp3_zin)
+         {
+            const unsigned char wont_mccp3[] = {IAC, WONT, TELOPT_MCCP3};
+            write_to_descriptor(htls, (char *)wont_mccp3, 3);
+            inflateEnd((z_stream *)htls->mccp3_zin);
+            free(htls->mccp3_zin);
+            htls->mccp3_zin = NULL;
+            htls->mccp3_active = FALSE;
+         }
+      }
    }
 
    execl(EXE_FILE, "ACK! MUD", buf, "HOTreboot", buf2, buf3, (char *)NULL);

@@ -893,8 +893,8 @@ void do_enchant(CHAR_DATA *ch, char *argument)
          brand_member->this_one = brand;
          LINK(brand_member, first_brand, last_brand, next, prev);
          save_brands();
-         send_to_char(
-             "Your messages have been updated, and logged for inspection by staff.\n\r", ch);
+         send_to_char("Your messages have been updated, and logged for inspection by staff.\n\r",
+                      ch);
       }
       return;
    }

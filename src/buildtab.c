@@ -431,10 +431,9 @@ const struct lookup_type tab_drink_types[] = {{"Water", 0, 10},
                                               {NULL, 0, 0}};
 
 const struct lookup_type tab_weapon_types[] = {
-    {"hit", 0, 10},   {"slice", 1, 10},   {"stab", 2, 30},     {"slash", 3, 30}, {"whip", 4, 10},
-    {"claw", 5, 10},  {"blast", 6, 10},   {"pound", 7, 10},    {"crush", 8, 10}, {"rend", 9, 10},
-    {"bite", 10, 10}, {"pierce", 11, 10}, {"drain", 12, 10},   {"sear", 13, 10},
-    {NULL, 0}};
+    {"hit", 0, 10},   {"slice", 1, 10},   {"stab", 2, 30},   {"slash", 3, 30}, {"whip", 4, 10},
+    {"claw", 5, 10},  {"blast", 6, 10},   {"pound", 7, 10},  {"crush", 8, 10}, {"rend", 9, 10},
+    {"bite", 10, 10}, {"pierce", 11, 10}, {"drain", 12, 10}, {"sear", 13, 10}, {NULL, 0}};
 
 const struct lookup_type tab_mob_flags[] = {
     {"nada", 0, 0},
@@ -797,11 +796,11 @@ const struct lookup_type tab_door_types[] = {
     /*
      * { "nada",        0, NO_USE },
      */
-    {"door", 1, 50},          {"closed", 2, 0},
-    {"locked", 4, 0},         {"climb", 8, 0},
-    {"staff", 16, NO_USE}, {"pickproof", 32, 500},
-    {"smashproof", 64, 500},  {"passproof", 128, 500},
-    {"nodetect", 256, 900},   {NULL, 0}};
+    {"door", 1, 50},         {"closed", 2, 0},
+    {"locked", 4, 0},        {"climb", 8, 0},
+    {"staff", 16, NO_USE},   {"pickproof", 32, 500},
+    {"smashproof", 64, 500}, {"passproof", 128, 500},
+    {"nodetect", 256, 900},  {NULL, 0}};
 
 const struct lookup_type tab_door_states[] = {
     {"open", 0, 0}, {"closed", 1, 0}, {"locked", 2, 0}, {NULL, 0}};

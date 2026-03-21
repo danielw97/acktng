@@ -2133,6 +2133,10 @@ void update_handler(void)
       violence_update();
       log_f("update: round_update");
       round_update();
+      log_f("update: msdp_update");
+      msdp_update();
+      log_f("update: gmcp_update");
+      gmcp_update();
       log_f("update: violence block done");
    }
 
