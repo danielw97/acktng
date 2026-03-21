@@ -792,14 +792,15 @@ db_save_clans()              -- replaces save_clans()      (live writes)
 db_save_corpses()            -- replaces save_corpses()    (live writes)
 ```
 
-Unlike area/help/shelp/lore (which are read-only at boot), the data/ and player/ stores are written during normal play. The DB-backed save functions must update the database immediately on each write event — the existing file-write semantics (write to `.temp`, then rename) are replaced with a single `UPDATE` or `INSERT ... ON CONFLICT DO UPDATE` within a transaction.
+Unlike area/help/shelp/lore (which are read-only at boot), the data/ and player/ stores are written during normal play. These writes are **asynchronous** — the game thread never blocks on a database call. See §7.5 for the async writer design.
 
 #### Boot sequence
 
-1. Open the connection using `area/db.conf` (falling back to PG environment variables).
+1. Open a synchronous boot connection using `area/db.conf` (falling back to PG environment variables).
 2. Check `schema_version` — abort if it does not match `DB_SCHEMA_VERSION` compiled into the binary.
 3. Run all `db_load_*` functions in dependency order: areas → rooms → mobiles → objects → resets → shops → specials → objfuns → helps → shelps → lore → bans → socials → clans → rulers → brands → room marks → corpses → sysdata.
-4. Close the boot-time connection. Player loads (`db_load_char_obj`) and live saves (`db_save_*`) open short-lived connections for each operation. (A connection pool is out of scope for this proposal.)
+4. Close the boot connection.
+5. Start the async writer thread (§7.5). All subsequent writes go through the writer queue.
 
 ### 7.4 Migration Phases
 
@@ -814,6 +815,87 @@ Unlike area/help/shelp/lore (which are read-only at boot), the data/ and player/
 | 7 | Run integration tests with `USE_DB_LOAD` enabled | Yes |
 | 8 | Remove `#ifdef` and old file-based load/save code | No (originals retained in `*/legacy/`) |
 
+### 7.5 Async Writer Architecture
+
+The MUD runs a single-threaded game loop. A synchronous `libpq` write on every player save or clan update would block `select()` and cause visible lag for all connected players. All database writes therefore go through a dedicated writer thread that owns the DB connection — the game thread never touches `libpq` after boot.
+
+#### Components
+
+**`src/db_writer.c` / `src/db_writer.h`** — a new module providing:
+
+```c
+/* Called at server startup, after boot loads complete. */
+void db_writer_start(void);
+
+/* Called at server shutdown — flushes the queue then joins the thread. */
+void db_writer_stop(void);
+
+/* Enqueue a save request. Returns immediately; the game thread never blocks.
+ * data is deep-copied into the queue entry; caller retains ownership. */
+void db_writer_enqueue(DB_WRITE_TYPE type, const void *data);
+```
+
+`DB_WRITE_TYPE` is an enum covering all write operations:
+
+```c
+typedef enum {
+    DB_WRITE_PLAYER,      /* save_char_obj   */
+    DB_WRITE_CLANS,       /* save_clans      */
+    DB_WRITE_BANS,        /* save_bans       */
+    DB_WRITE_SOCIALS,     /* save_socials    */
+    DB_WRITE_CORPSES,     /* save_corpses    */
+    DB_WRITE_SYSDATA,     /* save_sysdata    */
+    DB_WRITE_RULERS,      /* save_rulers     */
+    DB_WRITE_BRANDS,      /* save_brands     */
+    DB_WRITE_ROOM_MARKS,  /* save_room_marks */
+} DB_WRITE_TYPE;
+```
+
+#### Queue design
+
+The queue is a singly-linked list protected by a `pthread_mutex_t` with a `pthread_cond_t` for wakeup. Each entry carries a deep copy of the data to be written.
+
+**Last-write-wins coalescing for player saves:** Before appending a new `DB_WRITE_PLAYER` entry for a given character name, the writer checks whether an unprocessed entry for the same name already exists in the queue. If it does, the new data replaces the existing entry in-place. This prevents the queue from growing unboundedly during tick saves when many players are online simultaneously.
+
+```
+Game thread                         Writer thread
+──────────────────────────────────  ──────────────────────────────────
+save_char_obj(ch)
+  → serialise ch into a DB_ENTRY    (sleeping on cond)
+  → lock mutex
+  → coalesce or append to queue
+  → signal cond
+  → unlock mutex
+  → return to game loop
+                                    wake up
+                                    lock mutex; dequeue entry; unlock
+                                    PQexecPrepared(INSERT ... ON CONFLICT)
+                                    on error: log + write emergency .plr
+                                    loop
+```
+
+The writer thread holds a **persistent** `PGconn *` open for the lifetime of the server. This avoids per-write connection overhead and is safe because the writer thread is the only caller of `libpq` after boot.
+
+#### Player load
+
+`db_load_char_obj()` is the one read-path function that runs outside boot (called when a player logs in). It opens a short-lived synchronous connection on the game thread. Login is already gated behind the character selection loop, so blocking for a single indexed `SELECT` on `players WHERE name = $1` is acceptable — the latency is in the low-millisecond range and affects only the connecting player.
+
+An alternative (opening a non-blocking async query via `PQsendQuery`/`PQgetResult` polled inside `game_loop`'s `select()`) is left as a follow-on optimisation.
+
+#### Shutdown flush
+
+`db_writer_stop()` enqueues a sentinel `DB_WRITE_SHUTDOWN` entry, then `pthread_join()`s the writer thread. The writer drains all pending entries before processing the sentinel and exiting. This guarantees no saves are lost on clean shutdown.
+
+#### Emergency fallback
+
+If the writer thread encounters a connection error it cannot recover from (three consecutive `PQexec` failures), it:
+
+1. Logs the error to `log/db_writer_error.log`.
+2. Writes each pending entry to an emergency flat file using the original `fwrite_char` / `save_*.c` file logic (compiled in behind `#ifdef DB_WRITER_FALLBACK`).
+3. Signals the game thread via a global `db_writer_failed` flag; the game thread logs a monitor channel warning and switches subsequent saves to call the flat-file functions directly.
+
+This fallback keeps the server running through a DB outage at the cost of reverting to flat-file saves temporarily.
+
 ---
 
 ## 8. Affected Files
@@ -821,12 +903,14 @@ Unlike area/help/shelp/lore (which are read-only at boot), the data/ and player/
 | File | Change |
 |------|--------|
 | `src/db.c` | Replace all file-based area/help/shelp/lore loaders with `libpq`-backed equivalents |
-| `src/save/save_players.c` | Replace `load_char_obj`/`save_char_obj` with DB-backed equivalents |
-| `src/save/save_socials.c` | Replace `load_socials`/`save_socials` with DB-backed equivalents |
-| `src/save/save_rulers.c` | Replace `load_rulers`/`save_rulers` with DB-backed equivalents |
-| `src/save/save_sysdata.c` | Replace `load_sysdata`/`save_sysdata` with DB-backed equivalents |
-| `src/save/save_area_files.c` | Replace `load_bans`/`save_bans`, `load_clans`/`save_clans` with DB-backed equivalents |
-| `src/Makefile` | Add `-lpq` to `LIBS`; add `tools/` build targets |
+| `src/db_writer.c` | New: async writer thread, queue, coalescing, emergency fallback |
+| `src/db_writer.h` | New: `db_writer_start/stop/enqueue` API |
+| `src/save/save_players.c` | Replace `save_char_obj` with `db_writer_enqueue(DB_WRITE_PLAYER, ...)`; `load_char_obj` with synchronous SELECT |
+| `src/save/save_socials.c` | Replace `save_socials` with writer enqueue |
+| `src/save/save_rulers.c` | Replace `save_rulers` with writer enqueue |
+| `src/save/save_sysdata.c` | Replace `save_sysdata` with writer enqueue |
+| `src/save/save_area_files.c` | Replace `save_bans`, `save_clans` with writer enqueue |
+| `src/Makefile` | Add `-lpq -lpthread` to `LIBS`; add `tools/` and `db_writer.o` build targets |
 | `src/tools/import_to_db.c` | New: import all six content stores |
 | `src/tools/db_to_files.c` | New: export all six content stores |
 | `src/tests/test_db_roundtrip.c` | New: unit test for import→export round-trip |
@@ -968,6 +1052,7 @@ fi
 - Future tooling (web editor, admin panel, Claude sessions) needs no bespoke parser.
 - Help, lore, player, and area data are all queryable in joins.
 - Player character data gains ACID durability — no more half-written `.temp` files.
+- Database writes never block the game thread — saves are decoupled via the async writer queue (§7.5).
 
 ### Risks and Mitigations
 
@@ -975,7 +1060,9 @@ fi
 |------|-----------|
 | PostgreSQL not available on build host | Available in every major Linux distro (`apt install postgresql libpq-dev`) |
 | Network partition between game host and DB host at boot | Server aborts cleanly with a clear error message; keep DB on LAN or same host if desired |
-| Network partition during live player save | `db_save_char_obj()` retries once; on second failure logs and falls back to writing `raw_save` text to a local emergency `.plr` file |
+| Network partition during live saves | Writer thread detects failure after three retries; falls back to flat-file saves via `DB_WRITER_FALLBACK` and sets `db_writer_failed` flag; server continues running |
+| Queued saves lost on crash (not clean shutdown) | Writer queue is in-memory only; a hard crash can lose the last few seconds of saves. Mitigated by tick saves (saves happen on every pulse for online players) keeping the queue shallow |
+| Queue growth during tick saves with many players | Last-write-wins coalescing (§7.5) ensures at most one pending entry per player name at any time |
 | Migration loses data (parsing edge cases) | Round-trip test: import all files, export back, diff against originals; `raw_save` column preserved during transition |
 | `resets.seq` ordering fragile if rows are reordered | Load always uses `ORDER BY seq`; `seq` is immutable once set |
 | 64-bit `act_flags` / `extra_flags` stored as signed `BIGINT` | C load code casts via `(unsigned long long)(int64_t)`; audit areas for bit-63 usage before migration |
@@ -1017,9 +1104,16 @@ For the implementing Claude session:
 - [ ] Write `db_load_*` functions in `src/db.c` behind `#ifdef USE_DB_LOAD`
 - [ ] Run `make unit-tests` with `USE_DB_LOAD` enabled (flat-file fallback active)
 
+**Async writer**
+- [ ] Write `src/db_writer.c` and `src/db_writer.h`: queue, coalescing, writer thread, shutdown flush
+- [ ] Implement emergency flat-file fallback behind `DB_WRITER_FALLBACK` in `db_writer.c`
+- [ ] Add `db_writer_start()` call to boot sequence (after all `db_load_*` complete)
+- [ ] Add `db_writer_stop()` call to `do_shutdown` / signal handler
+- [ ] Add `-lpthread` to `src/Makefile` `LIBS`
+
 **Server integration — data/ and player/**
-- [ ] Write `db_load_*` / `db_save_*` functions in `src/save/` behind `#ifdef USE_DB_LOAD`
-- [ ] Implement emergency fallback in `db_save_char_obj()` (write raw `.plr` on DB failure)
+- [ ] Write `db_load_*` functions in `src/save/` behind `#ifdef USE_DB_LOAD`
+- [ ] Replace all `save_*` call sites with `db_writer_enqueue(...)` calls
 - [ ] Run `make unit-tests` with `USE_DB_LOAD` enabled
 
 **Phase 8 cut-over**
