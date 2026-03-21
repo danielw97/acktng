@@ -25,6 +25,13 @@
  ***************************************************************************/
 #define DEC_GLOBALS_H 1
 
+/*
+ * Sentinel: set immediately so that ack.h's end-of-file inlines_globals.h
+ * include can detect that globals.h was actually loaded (vs. pre-suppressed
+ * by unit tests via `#define DEC_GLOBALS_H 1` before `#include "ack.h"`).
+ */
+#define DEC_GLOBALS_H_LOADED 1
+
 #ifndef DEC_TYPEDEFS_H
 #include "typedefs.h"
 #endif

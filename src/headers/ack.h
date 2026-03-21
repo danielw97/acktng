@@ -1770,10 +1770,23 @@ void save_sysdata args((void));
 
 /*
  * Inline function definitions for character/object checks, name helpers,
- * and class-tier queries.  Must be included after all struct definitions.
+ * and weather/skill/class-tier queries.  Must be included after all struct
+ * definitions so function bodies can safely dereference struct fields.
  */
 #ifndef DEC_INLINES_H
 #include "inlines.h"
+#endif
+
+/*
+ * Inline functions that reference global tables (skill_table, weather_info,
+ * gclass_table).  Only included when globals.h was actually loaded — unit
+ * tests that suppress globals.h and stub those tables themselves will not
+ * see conflicting extern declarations.
+ */
+#ifdef DEC_GLOBALS_H_LOADED
+#ifndef DEC_INLINES_GLOBALS_H
+#include "inlines_globals.h"
+#endif
 #endif
 
 #undef CD

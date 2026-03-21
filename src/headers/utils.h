@@ -167,13 +167,10 @@ struct char_ref_type
  */
 
 /*
- * These macros reference globals declared in globals.h, which is sometimes
- * suppressed in unit tests.  Keeping them as macros ensures they expand at
- * the call site where those globals are always visible.
+ * MANA_COST, IS_DAYTIME, IS_NIGHTTIME, IS_MORTAL_CLASS, IS_REMORT_CLASS,
+ * IS_ADEPT_CLASS, and CLASS_TIER are implemented as static inline functions
+ * in inlines_globals.h, included from ack.h whenever globals.h is loaded.
  */
-#define MANA_COST(ch, sn) (IS_NPC(ch) ? 0 : UMAX(50, skill_table[sn].min_mana))
-#define IS_DAYTIME() (weather_info.sunlight == SUN_RISE || weather_info.sunlight == SUN_LIGHT)
-#define IS_NIGHTTIME() (!IS_DAYTIME())
 
 /*
  * Linked list macros, -- Altrag
