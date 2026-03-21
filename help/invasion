@@ -65,7 +65,7 @@ Current emblem costs
 - rare caster/melee/tank: 100 invasion points + 500 commendations + 50 ribbons + 5 medals
 
 Staff control
-- Staff can use: invasion <start|stop|status|bosses>
+- Staff can use: iinvasion <start|stop|status|bosses>
 
 Tips
 - Focus boss pressure first, but do not ignore marching waves.
