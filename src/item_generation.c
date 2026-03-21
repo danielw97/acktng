@@ -22,6 +22,7 @@ OBJ_DATA *generate_item(int level)
    obj->weight = number_range(1, 15);
    SET_BIT(obj->extra_flags, ITEM_GENERATED);
    SET_BIT(obj->extra_flags, ITEM_BIND_EQUIP);
+   SET_BIT(obj->wear_flags, ITEM_TAKE);
    obj->item_type = ITEM_ARMOR;
 
    switch (number_range(1, 26))
