@@ -1163,7 +1163,7 @@ static CHAR_DATA *spawn_invasion_mob(int level, bool is_boss, int prof_idx,
    char short_buf[MAX_STRING_LENGTH];
    char long_buf[MAX_STRING_LENGTH];
 
-#define INVASION_TEMPLATE_MOB 32565 /* <-- set to a real mob vnum in your world */
+#define INVASION_TEMPLATE_MOB 65399 /* invasion template mob in ceiling.are */
 
    if ((pIndex = get_mob_index(INVASION_TEMPLATE_MOB)) == NULL)
    {
@@ -1653,15 +1653,21 @@ void do_invasion(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg, "start"))
    {
+      int lo = 0, hi = 0;
       if (invasion_active)
       {
          send_to_char("An invasion is already underway.\n\r", ch);
          return;
       }
+      if (count_regular_players(&lo, &hi) < 1)
+      {
+         send_to_char("Invasion could not be started: no eligible players online.\n\r", ch);
+         return;
+      }
       invasion_timer = 0;
       if (!invasion_start())
       {
-         send_to_char("Invasion could not be started: no eligible players online.\n\r", ch);
+         send_to_char("Invasion could not be started: boss spawn failed.\n\r", ch);
          return;
       }
       send_to_char("Invasion started.\n\r", ch);

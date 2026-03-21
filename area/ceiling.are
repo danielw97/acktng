@@ -224,6 +224,20 @@ A caravan drover stands here, ready to move goods.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
+#65399
+invasion template~
+an invasion mob~
+An invasion mob stands here.
+~
+~
+1 0 0 S
+1 0
+1 6 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
 #65402
