@@ -10,8 +10,8 @@
  *   - shortfight_should_suppress_watched_autoattack  →  fight.c / test_fight.c
  *
  * The remaining public surface of comm.c (send_to_char, show_string, act,
- * list_who_to_output) all require a live descriptor/character tree and are
- * covered by the integration test instead.
+ * list_who_to_output, write_gsgp_data) all require a live descriptor/character
+ * tree and are covered by the integration test instead.
  */
 
 int main(void)
