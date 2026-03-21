@@ -1385,6 +1385,30 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
    d->inbuf_len = iStart;
    d->inbuf[iStart] = '\0';
 
+   /* MCCP3: decompress client-to-server data in place */
+   if (d->mccp3_active && d->mccp3_zin && d->inbuf_len > 0)
+   {
+      z_stream *z = (z_stream *)d->mccp3_zin;
+      unsigned char dbuf[sizeof(d->inbuf) - 10];
+
+      z->next_in = (Bytef *)d->inbuf;
+      z->avail_in = (uInt)d->inbuf_len;
+      z->next_out = dbuf;
+      z->avail_out = sizeof(dbuf);
+
+      int ret = inflate(z, Z_SYNC_FLUSH);
+      if (ret < 0)
+      {
+         log_string("MCCP3: inflate error, closing connection.");
+         return FALSE;
+      }
+
+      int produced = (int)(sizeof(dbuf) - z->avail_out);
+      memcpy(d->inbuf, dbuf, produced);
+      d->inbuf[produced] = '\0';
+      d->inbuf_len = produced;
+   }
+
    if (!d->websocket_handshake_complete)
    {
       if (!handle_websocket_handshake(d))
@@ -1761,19 +1785,14 @@ void write_to_buffer(DESCRIPTOR_DATA *d, const char *txt, int length)
 }
 
 /*
- * Lowest level output function.
- * Write a block of text to the file descriptor.
- * If this gives errors on very long blocks (like 'ofind all'),
- *   try lowering the max block size.
+ * Raw socket write — no compression, no framing.  Used internally and by
+ * write_to_descriptor when MCCP2 compression is not active.
  */
-bool write_to_descriptor(DESCRIPTOR_DATA *d, char *txt, int length)
+static bool write_raw_to_socket(DESCRIPTOR_DATA *d, const char *txt, int length)
 {
    int iStart;
    int nWrite;
    int nBlock;
-
-   if (length <= 0)
-      length = strlen(txt);
 
    for (iStart = 0; iStart < length; iStart += nWrite)
    {
@@ -1799,6 +1818,49 @@ bool write_to_descriptor(DESCRIPTOR_DATA *d, char *txt, int length)
       }
    }
    return TRUE;
+}
+
+/*
+ * Lowest level output function.
+ * Write a block of text to the file descriptor.
+ * If MCCP2 compression is active the data is zlib-deflated before writing.
+ */
+bool write_to_descriptor(DESCRIPTOR_DATA *d, char *txt, int length)
+{
+   if (length <= 0)
+      length = strlen(txt);
+
+   if (d->mccp2_active && d->mccp2_zout)
+   {
+      /* Compress through the persistent deflate stream, flushing after each
+       * call so the client receives a complete, decompressible chunk. */
+      z_stream *z = (z_stream *)d->mccp2_zout;
+      unsigned char cbuf[8192];
+
+      z->next_in = (Bytef *)txt;
+      z->avail_in = (uInt)length;
+
+      do
+      {
+         z->next_out = cbuf;
+         z->avail_out = sizeof(cbuf);
+
+         int ret = deflate(z, Z_SYNC_FLUSH);
+         if (ret < 0)
+            return FALSE;
+
+         int produced = (int)(sizeof(cbuf) - z->avail_out);
+         if (produced > 0)
+         {
+            if (!write_raw_to_socket(d, (char *)cbuf, produced))
+               return FALSE;
+         }
+      } while (z->avail_out == 0); /* output buffer was full; more may remain */
+
+      return TRUE;
+   }
+
+   return write_raw_to_socket(d, txt, length);
 }
 
 /*

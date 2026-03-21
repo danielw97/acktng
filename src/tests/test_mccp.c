@@ -174,6 +174,178 @@ static void test_inflate_init_end(void)
    assert(inflateEnd(&z) == Z_OK);
 }
 
+/*
+ * Simulate the MCCP2 write path: a persistent deflate stream with
+ * Z_SYNC_FLUSH after each write, as used in write_to_descriptor().
+ * Returns number of compressed bytes written into dst, or 0 on error.
+ */
+static int mccp2_write(z_stream *z, const unsigned char *src, int src_len, unsigned char *dst,
+                       int dst_cap)
+{
+   int total = 0;
+
+   z->next_in = (Bytef *)src;
+   z->avail_in = (uInt)src_len;
+
+   do
+   {
+      z->next_out = dst + total;
+      z->avail_out = (uInt)(dst_cap - total);
+
+      int ret = deflate(z, Z_SYNC_FLUSH);
+      if (ret < 0)
+         return 0;
+
+      total += (dst_cap - total) - (int)z->avail_out;
+   } while (z->avail_out == 0);
+
+   return total;
+}
+
+/*
+ * Simulate the MCCP3 read path: a persistent inflate stream, as used in
+ * read_from_descriptor().
+ * Returns decompressed length, or -1 on error.
+ */
+static int mccp3_read(z_stream *z, const unsigned char *src, int src_len, unsigned char *dst,
+                      int dst_cap)
+{
+   z->next_in = (Bytef *)src;
+   z->avail_in = (uInt)src_len;
+   z->next_out = (Bytef *)dst;
+   z->avail_out = (uInt)dst_cap;
+
+   int ret = inflate(z, Z_SYNC_FLUSH);
+   if (ret < 0)
+      return -1;
+
+   return dst_cap - (int)z->avail_out;
+}
+
+/*
+ * MCCP2: single write compressed with persistent stream round-trips correctly.
+ */
+static void test_mccp2_single_write(void)
+{
+   z_stream zout, zin;
+   memset(&zout, 0, sizeof(zout));
+   memset(&zin, 0, sizeof(zin));
+   assert(deflateInit(&zout, Z_DEFAULT_COMPRESSION) == Z_OK);
+   assert(inflateInit(&zin) == Z_OK);
+
+   const char *msg = "You strike the goblin for 12 damage!\r\n";
+   int msglen = (int)strlen(msg);
+   unsigned char cbuf[512], dbuf[512];
+
+   int clen = mccp2_write(&zout, (const unsigned char *)msg, msglen, cbuf, sizeof(cbuf));
+   assert(clen > 0);
+
+   int dlen = decompress_buf(cbuf, clen, dbuf, sizeof(dbuf));
+   assert(dlen == msglen);
+   assert(memcmp(msg, dbuf, msglen) == 0);
+
+   deflateEnd(&zout);
+   inflateEnd(&zin);
+}
+
+/*
+ * MCCP2: multiple sequential writes through the same persistent stream all
+ * decompress correctly when concatenated.
+ */
+static void test_mccp2_multiple_writes(void)
+{
+   z_stream zout;
+   memset(&zout, 0, sizeof(zout));
+   assert(deflateInit(&zout, Z_DEFAULT_COMPRESSION) == Z_OK);
+
+   const char *msgs[] = {
+       "You are in the town square.\r\n",
+       "Exits: north south east west\r\n",
+       "HP: 100/100  MP: 80/80\r\n> ",
+   };
+   unsigned char cbuf[2048];
+   int ctotal = 0;
+   int expected_total = 0;
+   char expected[2048];
+
+   for (int i = 0; i < 3; i++)
+   {
+      int mlen = (int)strlen(msgs[i]);
+      int clen = mccp2_write(&zout, (const unsigned char *)msgs[i], mlen, cbuf + ctotal,
+                             sizeof(cbuf) - ctotal);
+      assert(clen > 0);
+      ctotal += clen;
+      memcpy(expected + expected_total, msgs[i], mlen);
+      expected_total += mlen;
+   }
+
+   /* The entire compressed stream should decompress to all three messages */
+   unsigned char dbuf[2048];
+   int dlen = decompress_buf(cbuf, ctotal, dbuf, sizeof(dbuf));
+   assert(dlen == expected_total);
+   assert(memcmp(expected, dbuf, expected_total) == 0);
+
+   deflateEnd(&zout);
+}
+
+/*
+ * MCCP3: client-to-server compressed data decompresses correctly through the
+ * persistent inflate stream used in read_from_descriptor().
+ */
+static void test_mccp3_single_read(void)
+{
+   z_stream zin;
+   memset(&zin, 0, sizeof(zin));
+   assert(inflateInit(&zin) == Z_OK);
+
+   const char *cmd = "north\r\n";
+   int cmdlen = (int)strlen(cmd);
+   unsigned char cbuf[256], dbuf[256];
+
+   int clen = compress_buf((const unsigned char *)cmd, cmdlen, cbuf, sizeof(cbuf));
+   assert(clen > 0);
+
+   int dlen = mccp3_read(&zin, cbuf, clen, dbuf, sizeof(dbuf));
+   assert(dlen == cmdlen);
+   assert(memcmp(cmd, dbuf, cmdlen) == 0);
+
+   inflateEnd(&zin);
+}
+
+/*
+ * MCCP3: multiple compressed reads through the same persistent inflate stream.
+ * The client uses a single persistent deflate stream and Z_SYNC_FLUSH so that
+ * each flush produces a self-contained decompressible chunk — mirroring real
+ * MCCP3 behaviour.
+ */
+static void test_mccp3_multiple_reads(void)
+{
+   z_stream zout, zin;
+   memset(&zout, 0, sizeof(zout));
+   memset(&zin, 0, sizeof(zin));
+   assert(deflateInit(&zout, Z_DEFAULT_COMPRESSION) == Z_OK);
+   assert(inflateInit(&zin) == Z_OK);
+
+   const char *cmds[] = {"look\r\n", "score\r\n", "north\r\n"};
+
+   for (int i = 0; i < 3; i++)
+   {
+      int cmdlen = (int)strlen(cmds[i]);
+      unsigned char cbuf[256], dbuf[256];
+
+      /* Compress with the persistent client stream, flushing after each cmd */
+      int clen = mccp2_write(&zout, (const unsigned char *)cmds[i], cmdlen, cbuf, sizeof(cbuf));
+      assert(clen > 0);
+
+      int dlen = mccp3_read(&zin, cbuf, clen, dbuf, sizeof(dbuf));
+      assert(dlen == cmdlen);
+      assert(memcmp(cmds[i], dbuf, cmdlen) == 0);
+   }
+
+   deflateEnd(&zout);
+   inflateEnd(&zin);
+}
+
 int main(void)
 {
    test_deflate_init_end();
@@ -183,6 +355,10 @@ int main(void)
    test_roundtrip_repeated();
    test_roundtrip_mud_output();
    test_compress_produces_different_bytes();
+   test_mccp2_single_write();
+   test_mccp2_multiple_writes();
+   test_mccp3_single_read();
+   test_mccp3_multiple_reads();
 
    puts("test_mccp: all tests passed");
    return 0;
