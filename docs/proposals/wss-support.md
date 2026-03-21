@@ -10,85 +10,133 @@ server binds to all interfaces (`0.0.0.0:8890`), accepting unencrypted connectio
 only. As soon as `ackmud.com` is served over HTTPS, the in-browser MUD client
 becomes completely non-functional.
 
+Telnet access must remain available at all times — traditional MUD clients
+connecting directly via telnet must not be disrupted by this change.
+
 ## Goals
 
 1. Browser clients connecting via `wss://ackmud.com:8890/` can reach the game.
 2. All traffic between browser and server is TLS-encrypted.
-3. The WebSocket protocol layer and MUD game logic inside the server are unchanged.
-4. The solution is maintainable and straightforward to operate.
+3. Telnet players can continue connecting directly on a separate public port.
+4. The WebSocket protocol layer and MUD game logic inside the server are unchanged.
+5. The solution is maintainable and straightforward to operate.
 
 ## Approach
 
 The TLS handshake is handled by a **reverse proxy** (nginx, already present for
 the HTTPS web server) running on the same host. The proxy terminates TLS on the
-public port and forwards plain WebSocket frames to the game server on a loopback
-port. This is the architecture the web-client proposal documents:
+public WebSocket port and forwards plain WebSocket frames to the game server on a
+loopback port. Telnet clients continue to connect on a separate public port that
+the server still binds to `0.0.0.0`.
 
 ```
+Telnet client
+  │  telnet ackmud.com:4000  (plain TCP, public internet)
+  ▼
+ACK!TNG game server  ←── 0.0.0.0:4000 (telnet socket)
+  ▲
+  └── 127.0.0.1:18890 (WebSocket socket, loopback only)
+  ▲
+nginx  (same host)           ← terminates TLS
+  ▲
 Browser
   │  wss://ackmud.com:8890  (TLS, public internet)
-  ▼
-nginx  (same host)           ← terminates TLS
-  │  ws://127.0.0.1:18890   (plain WebSocket, loopback)
-  ▼
-ACK!TNG game server
 ```
 
-The game server's WebSocket implementation, MUD logic, and message protocol are
-completely unchanged. The only code change is to the bind address so the server
-listens on `127.0.0.1:18890` instead of `0.0.0.0:8890`.
+The server opens **two listening sockets simultaneously**: one for telnet on the
+public interface, one for WebSocket on loopback. The `game_loop()` select loop
+already multiplexes arbitrary numbers of descriptors; it needs only to also watch
+two control sockets instead of one.
 
-## src/ Change: Bind Address
+## src/ Changes
 
-### Current behaviour
+### 1. Command-line arguments
 
-`init_socket()` in `socket.c` zero-initialises the `sockaddr_in` struct, leaving
-`sin_addr` as `INADDR_ANY` (0.0.0.0):
+Add a `--ws-loopback <port>` option. When present, the server opens a second
+listening socket bound to `127.0.0.1:<port>` in addition to the existing telnet
+socket.
 
-```c
-sa = sa_zero;          /* sin_addr is 0 → INADDR_ANY */
-sa.sin_family = AF_INET;
-sa.sin_port = htons(port);
-bind(fd, (struct sockaddr *)&sa, sizeof(sa));
+```sh
+# Telnet on 4000 (public), WebSocket on 18890 (loopback for nginx proxy)
+cd area && ../src/ack 4000 --ws-loopback 18890
 ```
 
-### Proposed change
+The first positional argument remains the telnet port (default 1234 if omitted).
+Running without `--ws-loopback` is fully backward-compatible.
 
-Add an optional `--loopback` / `-l` command-line flag. When present, the server
-sets `sin_addr` to `INADDR_LOOPBACK` (127.0.0.1) before calling `bind()`. The
-default (no flag) keeps the existing all-interfaces behaviour so local development
-and the telnet port are unaffected.
+### 2. `init_socket()` — accept a bind address parameter
+
+Add an `in_addr_t bind_addr` parameter to `init_socket()` so callers can specify
+`INADDR_ANY` (telnet) or `INADDR_LOOPBACK` (WebSocket):
 
 ```c
-/* in main(), alongside the existing port argument parsing */
-bool bind_loopback = FALSE;
-for (int i = 1; i < argc; i++) {
-    if (!strcmp(argv[i], "--loopback") || !strcmp(argv[i], "-l"))
-        bind_loopback = TRUE;
-    else if (is_number(argv[i]))
-        port = atoi(argv[i]);
+int init_socket(int port, in_addr_t bind_addr)
+{
+    ...
+    sa.sin_addr.s_addr = htonl(bind_addr);
+    sa.sin_port        = htons(port);
+    bind(fd, (struct sockaddr *)&sa, sizeof(sa));
+    ...
 }
 ```
 
+Existing call sites pass `INADDR_ANY`; the new WebSocket call passes
+`INADDR_LOOPBACK`.
+
+### 3. `game_loop()` — select on two control sockets
+
+`game_loop()` currently takes a single `int control` fd. Extend it to accept a
+second `int control_ws` fd (or `-1` when not configured). Both fds are added to
+`in_set` in the select loop, and `new_descriptor()` is called for whichever fires:
+
 ```c
-/* in init_socket(), new parameter or use a global like global_port */
-sa.sin_addr.s_addr = bind_loopback ? htonl(INADDR_LOOPBACK) : htonl(INADDR_ANY);
+void game_loop(int control, int control_ws)
+{
+    ...
+    FD_SET(control, &in_set);
+    if (control_ws >= 0)
+        FD_SET(control_ws, &in_set);
+    maxdesc = UMAX(control, control_ws);
+    ...
+    if (FD_ISSET(control, &in_set))
+        new_descriptor(control);
+    if (control_ws >= 0 && FD_ISSET(control_ws, &in_set))
+        new_descriptor(control_ws);
+    ...
+}
 ```
 
-Production startup becomes:
+The SIGUSR1 socket-reopen path also needs to reopen both sockets if both are
+active.
 
-```sh
-cd area && ../src/ack 18890 --loopback
+### 4. `main()` — parse `--ws-loopback` and open both sockets
+
+```c
+int ws_port = -1;
+/* argument parsing loop */
+if (!strcmp(argv[i], "--ws-loopback") && i + 1 < argc)
+    ws_port = atoi(argv[++i]);
+
+control    = init_socket(port, INADDR_ANY);
+control_ws = (ws_port > 0) ? init_socket(ws_port, INADDR_LOOPBACK) : -1;
+game_loop(control, control_ws);
 ```
 
 ### Affected files
 
 | File | Change |
 |------|--------|
-| `src/comm.c` | Parse `--loopback` / `-l` flag in `main()`; store in a global (`bind_loopback`) |
-| `src/socket.c` | Use `bind_loopback` in `init_socket()` to set `sin_addr` |
+| `src/comm.c` | Parse `--ws-loopback <port>`; open second socket; pass both fds to `game_loop()` |
+| `src/socket.c` | Add `bind_addr` parameter to `init_socket()`; extend `game_loop()` to select on two control fds; update SIGUSR1 reopen path |
 
-No other source files change. No struct changes. No protocol changes.
+No other source files change. No structs change. No protocol or MUD logic changes.
+
+### Unit test coverage
+
+A unit test should verify that `init_socket()` correctly sets `sin_addr` for both
+`INADDR_ANY` and `INADDR_LOOPBACK`. The dual-`game_loop()` select path does not
+require new tests beyond the existing integration test (boot + login), which
+exercises the code end-to-end.
 
 ## Infrastructure Changes (outside src/)
 
@@ -130,10 +178,11 @@ Validate and reload:
 sudo nginx -t && sudo systemctl reload nginx
 ```
 
-### 2. Firewall: block inner port from the internet
+### 2. Firewall: block inner WebSocket port from the internet
 
 Port `18890` must not be reachable from the public internet — only the nginx
-proxy (on loopback) should reach the game server directly.
+proxy (on loopback) should reach the game server on that port. The telnet port
+(`4000`) remains open as before.
 
 ```bash
 sudo iptables -A INPUT -p tcp --dport 18890 ! -s 127.0.0.1 -j DROP
@@ -158,16 +207,17 @@ sudo certbot renew --dry-run   # confirm the hook fires
 
 ### 4. Startup script update
 
-Update whatever init script or process manager launches ACK!TNG to pass the new
-port and flag:
+Update whatever init script or process manager launches ACK!TNG:
 
 ```sh
 # Before
 cd /home/mud/acktng/area && ../src/ack 8890
 
 # After
-cd /home/mud/acktng/area && ../src/ack 18890 --loopback
+cd /home/mud/acktng/area && ../src/ack 4000 --ws-loopback 18890
 ```
+
+(Replace `4000` with whatever telnet port is desired.)
 
 ## Trade-offs
 
@@ -185,9 +235,9 @@ is reused directly.
 
 | Component | Change |
 |-----------|--------|
-| `src/comm.c` | Parse `--loopback` / `-l` flag |
-| `src/socket.c` | Bind to `127.0.0.1` when flag is set |
+| `src/comm.c` | Parse `--ws-loopback <port>`; open second loopback socket; pass both to `game_loop()` |
+| `src/socket.c` | `init_socket()` gains `bind_addr` param; `game_loop()` selects on two control fds |
 | nginx config | New `ackmud-wss.conf` — proxy `8890 (wss)` → `18890 (ws loopback)` |
-| Firewall | Block `18890` from external traffic |
-| Startup command | `ack 18890 --loopback` |
+| Firewall | Block `18890` from external traffic; telnet port remains open |
+| Startup command | `ack 4000 --ws-loopback 18890` |
 | TLS certificate | Reuse existing Let's Encrypt cert; add post-renewal reload hook |
