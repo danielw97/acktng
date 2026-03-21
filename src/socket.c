@@ -1939,11 +1939,28 @@ static void telnet_send_raw(DESCRIPTOR_DATA *d, const unsigned char *bytes, int 
  * MSSP (Mud Server Status Protocol, telnet option 70)
  * =========================================================================
  */
+
+static void mssp_append_str(unsigned char *buf, int *i, const char *name, const char *val)
+{
+   buf[(*i)++] = MSSP_BYTE_VAR;
+   while (*name)
+      buf[(*i)++] = (unsigned char)*name++;
+   buf[(*i)++] = MSSP_BYTE_VAL;
+   while (*val)
+      buf[(*i)++] = (unsigned char)*val++;
+}
+
+static void mssp_append_int(unsigned char *buf, int *i, const char *name, int val)
+{
+   char tmp[64];
+   snprintf(tmp, sizeof(tmp), "%d", val);
+   mssp_append_str(buf, i, name, tmp);
+}
+
 void send_mssp_data(DESCRIPTOR_DATA *d)
 {
    unsigned char buf[4096];
    int i = 0;
-   char tmp[64];
    time_t uptime;
    extern int cur_players;
    extern int max_players;
@@ -1953,59 +1970,36 @@ void send_mssp_data(DESCRIPTOR_DATA *d)
    buf[i++] = (unsigned char)SB;
    buf[i++] = (unsigned char)TELOPT_MSSP;
 
-#define MSSP_VAR_STR(name, val)                                                                    \
-   do                                                                                              \
-   {                                                                                               \
-      const char *__n = (name);                                                                    \
-      const char *__v = (val);                                                                     \
-      buf[i++] = MSSP_BYTE_VAR;                                                                    \
-      while (*__n)                                                                                 \
-         buf[i++] = (unsigned char)*__n++;                                                         \
-      buf[i++] = MSSP_BYTE_VAL;                                                                    \
-      while (*__v)                                                                                 \
-         buf[i++] = (unsigned char)*__v++;                                                         \
-   } while (0)
-
-#define MSSP_VAR_INT(name, val)                                                                    \
-   do                                                                                              \
-   {                                                                                               \
-      snprintf(tmp, sizeof(tmp), "%d", (val));                                                     \
-      MSSP_VAR_STR((name), tmp);                                                                   \
-   } while (0)
-
-   MSSP_VAR_STR("NAME", mudnamenocolor);
-   MSSP_VAR_STR("CODEBASE", "ACK!TNG 4.3.1");
-   MSSP_VAR_STR("CONTACT", MSSP_CONTACT);
-   MSSP_VAR_STR("WEBSITE", MSSP_WEBSITE);
-   MSSP_VAR_STR("ICON", MSSP_ICON_URL);
-   MSSP_VAR_STR("LOCATION", MSSP_LOCATION);
-   MSSP_VAR_STR("LANGUAGE", "English");
-   MSSP_VAR_STR("GENRE", "Fantasy");
-   MSSP_VAR_STR("GAMEPLAY", "Hack and Slash");
-   MSSP_VAR_STR("STATUS", "Live");
-   MSSP_VAR_STR("FAMILY", "Diku");
-   MSSP_VAR_STR("SUBGENRE", "Merc");
-   MSSP_VAR_INT("PORT", global_port);
-   MSSP_VAR_INT("PLAYERS", cur_players);
-   MSSP_VAR_INT("MAXPLAYERS", max_players);
-   MSSP_VAR_INT("AREAS", mssp_area_count);
-   MSSP_VAR_INT("HELPFILES", mssp_help_count);
-   MSSP_VAR_INT("MOBILES", mssp_mob_count);
-   MSSP_VAR_INT("OBJECTS", mssp_obj_count);
-   MSSP_VAR_INT("ROOMS", mssp_room_count);
-   MSSP_VAR_INT("CLASSES", MAX_CLASS);
-   MSSP_VAR_INT("RACES", mssp_race_count);
-   MSSP_VAR_INT("SKILLS", mssp_skill_count);
+   mssp_append_str(buf, &i, "NAME", mudnamenocolor);
+   mssp_append_str(buf, &i, "CODEBASE", "ACK!TNG 4.3.1");
+   mssp_append_str(buf, &i, "CONTACT", MSSP_CONTACT);
+   mssp_append_str(buf, &i, "WEBSITE", MSSP_WEBSITE);
+   mssp_append_str(buf, &i, "ICON", MSSP_ICON_URL);
+   mssp_append_str(buf, &i, "LOCATION", MSSP_LOCATION);
+   mssp_append_str(buf, &i, "LANGUAGE", "English");
+   mssp_append_str(buf, &i, "GENRE", "Fantasy");
+   mssp_append_str(buf, &i, "GAMEPLAY", "Hack and Slash");
+   mssp_append_str(buf, &i, "STATUS", "Live");
+   mssp_append_str(buf, &i, "FAMILY", "Diku");
+   mssp_append_str(buf, &i, "SUBGENRE", "Merc");
+   mssp_append_int(buf, &i, "PORT", global_port);
+   mssp_append_int(buf, &i, "PLAYERS", cur_players);
+   mssp_append_int(buf, &i, "MAXPLAYERS", max_players);
+   mssp_append_int(buf, &i, "AREAS", mssp_area_count);
+   mssp_append_int(buf, &i, "HELPFILES", mssp_help_count);
+   mssp_append_int(buf, &i, "MOBILES", mssp_mob_count);
+   mssp_append_int(buf, &i, "OBJECTS", mssp_obj_count);
+   mssp_append_int(buf, &i, "ROOMS", mssp_room_count);
+   mssp_append_int(buf, &i, "CLASSES", MAX_CLASS);
+   mssp_append_int(buf, &i, "RACES", mssp_race_count);
+   mssp_append_int(buf, &i, "SKILLS", mssp_skill_count);
    uptime = (boot_time > 0) ? (time(NULL) - boot_time) : 0;
-   MSSP_VAR_INT("UPTIME", (int)uptime);
-   MSSP_VAR_STR("SSL", (global_tls_port > 0) ? "1" : "0");
-   MSSP_VAR_STR("ANSI", "1");
-   MSSP_VAR_STR("MCCP", "1");
-   MSSP_VAR_STR("MSDP", "1");
-   MSSP_VAR_STR("GMCP", "1");
-
-#undef MSSP_VAR_STR
-#undef MSSP_VAR_INT
+   mssp_append_int(buf, &i, "UPTIME", (int)uptime);
+   mssp_append_str(buf, &i, "SSL", (global_tls_port > 0) ? "1" : "0");
+   mssp_append_str(buf, &i, "ANSI", "1");
+   mssp_append_str(buf, &i, "MCCP", "1");
+   mssp_append_str(buf, &i, "MSDP", "1");
+   mssp_append_str(buf, &i, "GMCP", "1");
 
    /* IAC SE */
    buf[i++] = (unsigned char)IAC;
