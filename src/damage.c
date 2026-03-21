@@ -1196,7 +1196,7 @@ void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critica
     */
 
    if (dt == TYPE_MARTIAL)
-      dt = TYPE_HIT + 13 + number_range(0, 14);
+      dt = TYPE_HIT + 14 + number_range(0, 14);
 
    attack = get_dt_name(dt);
 
@@ -1601,7 +1601,32 @@ void death_message(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
             break;
          }
          break;
-      default: /* grep, bite, suction */
+      case 13: /* sear */
+         switch (number_range(0, 3))
+         {
+         case 0:
+            sprintf(buf1, "$n's flames consume $N entirely, leaving only charred bone!");
+            sprintf(buf2, "Your flames consume $N entirely, leaving only charred bone!");
+            sprintf(buf3, "$n's flames consume you entirely, leaving only charred bone!");
+            break;
+         case 1:
+            sprintf(buf1, "$n sears through $N's chest, scorching $S heart to cinders!");
+            sprintf(buf2, "You sear through $N's chest, scorching $S heart to cinders!");
+            sprintf(buf3, "$n sears through your chest, scorching your heart to cinders!");
+            break;
+         case 2:
+            sprintf(buf1, "$N's skin blackens and splits as $n burns $M to the bone!");
+            sprintf(buf2, "$N's skin blackens and splits as you burn $M to the bone!");
+            sprintf(buf3, "Your skin blackens and splits as $n burns you to the bone!");
+            break;
+         case 3:
+            sprintf(buf1, "$n brands $N's face with searing heat, melting $S skull!");
+            sprintf(buf2, "You brand $N's face with searing heat, melting $S skull!");
+            sprintf(buf3, "$n brands your face with searing heat, melting your skull!");
+            break;
+         }
+         break;
+      default: /* rend, bite, drain */
          switch (number_range(0, 3))
          {
          case 0:

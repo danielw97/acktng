@@ -393,7 +393,7 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
       one_hit(ch, victim, dt);
 
    if (IS_SET(race_table[ch->race].race_flags, RACE_MOD_TAIL) && number_percent() < 25)
-      one_hit(ch, victim, TYPE_HIT + 13);
+      one_hit(ch, victim, TYPE_HIT + 14);
 
    shortfight_emit_autoattack_summary(ch, victim);
 

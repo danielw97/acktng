@@ -247,7 +247,8 @@ Area policy constraints for `ITEM_WEAPON`:
 - `6`: `blast`
 - `7`: `pound`
 - `8`: `crush`
-- `9`: `grep`
+- `9`: `rend`
 - `10`: `bite`
 - `11`: `pierce`
-- `12`: `suction`
+- `12`: `drain`
+- `13`: `sear`
