@@ -1454,6 +1454,7 @@
 #define WHO_HTML_FILE "../web/soewholist.html" /* for ftping who list to html web page :) */
 #define WHO_COUNT_FILE "../web/whocount.html"
 #endif
+#define GSGP_JSON_FILE "../web/gsgp.json" /* Game Scry Game Protocol endpoint data */
 /* Other Stuff - Flar */
 #define COPYOVER_FILE "COPYOVER.TXT"               /* Temp data file used for copyover */
 #define EXE_FILE "../src/ack"                      /* The one that runs the ACK! */

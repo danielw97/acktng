@@ -69,7 +69,36 @@
 void trigger_happy_hour(void);
 void copyover_recover args((void));
 
+/* ---- GSGP (Game Scry Game Protocol) support ---- */
+
+#define GSGP_BOARD_MAX 10
+#define GSGP_PLAYERS_MAX 200
+#define GSGP_NAME_LEN 14 /* player names are max 12 chars; +2 for safety */
+
+struct gsgp_entry
+{
+   char name[GSGP_NAME_LEN];
+   int level;
+   int pkills;
+   int qpts;
+};
+
 #ifndef UNIT_TEST_COMM
+
+static int gsgp_by_level(const void *a, const void *b)
+{
+   return ((const struct gsgp_entry *)b)->level - ((const struct gsgp_entry *)a)->level;
+}
+
+static int gsgp_by_pkills(const void *a, const void *b)
+{
+   return ((const struct gsgp_entry *)b)->pkills - ((const struct gsgp_entry *)a)->pkills;
+}
+
+static int gsgp_by_qpts(const void *a, const void *b)
+{
+   return ((const struct gsgp_entry *)b)->qpts - ((const struct gsgp_entry *)a)->qpts;
+}
 
 /*
  * Global variables.
@@ -89,12 +118,66 @@ int control;
 int max_players = 0;
 int hotreboot_countdown = 0; /* Pulses remaining until automatic hotreboot; 0 = inactive */
 
+static void write_gsgp_board(FILE *fp, const char *board_name, struct gsgp_entry *arr, int n,
+                             int (*cmp)(const void *, const void *), bool skip_zero, bool last)
+{
+   struct gsgp_entry sorted[GSGP_PLAYERS_MAX];
+   int i, written = 0;
+
+   if (n > GSGP_PLAYERS_MAX)
+      n = GSGP_PLAYERS_MAX;
+   memcpy(sorted, arr, (size_t)n * sizeof(struct gsgp_entry));
+   qsort(sorted, (size_t)n, sizeof(struct gsgp_entry), cmp);
+
+   fprintf(fp, "    {\"name\":\"%s\",\"entries\":[", board_name);
+   for (i = 0; i < n && written < GSGP_BOARD_MAX; i++)
+   {
+      int val = (cmp == gsgp_by_level)    ? sorted[i].level
+                : (cmp == gsgp_by_pkills) ? sorted[i].pkills
+                                          : sorted[i].qpts;
+      if (skip_zero && val == 0)
+         continue;
+      if (written > 0)
+         fprintf(fp, ",");
+      fprintf(fp, "{\"name\":\"%s\",\"value\":%d}", sorted[i].name, val);
+      written++;
+   }
+   fprintf(fp, "]}");
+   if (!last)
+      fprintf(fp, ",");
+   fprintf(fp, "\n");
+}
+
+static void write_gsgp_data(int online_count, struct gsgp_entry *entries, int n)
+{
+   FILE *fp;
+   char tmp_file[] = GSGP_JSON_FILE ".tmp";
+
+   fp = fopen(tmp_file, "w");
+   if (fp == NULL)
+      return;
+
+   fprintf(fp, "{\n");
+   fprintf(fp, "  \"name\":\"ACK!MUD TNG\",\n");
+   fprintf(fp, "  \"active_players\":%d,\n", online_count);
+   fprintf(fp, "  \"leaderboards\":[\n");
+   write_gsgp_board(fp, "Top Players by Level", entries, n, gsgp_by_level, FALSE, FALSE);
+   write_gsgp_board(fp, "Top PKillers", entries, n, gsgp_by_pkills, TRUE, FALSE);
+   write_gsgp_board(fp, "Top Quest Point Earners", entries, n, gsgp_by_qpts, FALSE, TRUE);
+   fprintf(fp, "  ]\n");
+   fprintf(fp, "}\n");
+   fclose(fp);
+   rename(tmp_file, GSGP_JSON_FILE);
+}
+
 void list_who_to_output(void)
 {
    DESCRIPTOR_DATA *d;
    FILE *who_html;
    FILE *who_count;
+   struct gsgp_entry gsgp_entries[GSGP_PLAYERS_MAX];
    int online_count = 0;
+   int gsgp_n = 0;
 
    who_html = fopen(WHO_HTML_FILE, "w");
    if (who_html == NULL)
@@ -116,6 +199,16 @@ void list_who_to_output(void)
 
       fprintf(who_html, "<li>%s</li>\n", who_ch->name);
       online_count++;
+
+      if (gsgp_n < GSGP_PLAYERS_MAX)
+      {
+         strncpy(gsgp_entries[gsgp_n].name, who_ch->name, GSGP_NAME_LEN - 1);
+         gsgp_entries[gsgp_n].name[GSGP_NAME_LEN - 1] = '\0';
+         gsgp_entries[gsgp_n].level = who_ch->level;
+         gsgp_entries[gsgp_n].pkills = who_ch->pcdata->pkills;
+         gsgp_entries[gsgp_n].qpts = who_ch->quest_points;
+         gsgp_n++;
+      }
    }
 
    fprintf(who_html, "</ul>\n");
@@ -127,6 +220,8 @@ void list_who_to_output(void)
 
    fprintf(who_count, "<p>Players online: %d</p>\n", online_count);
    fclose(who_count);
+
+   write_gsgp_data(online_count, gsgp_entries, gsgp_n);
 }
 
 int main(int argc, char **argv)
