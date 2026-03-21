@@ -231,6 +231,10 @@ int main(int argc, char **argv)
    extern int abort_threshold;
    int control_ws = -1;
    int ws_port = -1;
+   int control_tls = -1;
+   int tls_port = -1;
+   const char *tls_cert = "../data/tls/cert.pem";
+   const char *tls_key = "../data/tls/key.pem";
 
    /*
     * Init time.
@@ -274,6 +278,19 @@ int main(int argc, char **argv)
                exit(1);
             }
          }
+         else if (!strcmp(argv[i], "--tls-port") && i + 1 < argc)
+         {
+            tls_port = atoi(argv[++i]);
+            if (tls_port <= 1024)
+            {
+               fprintf(stderr, "--tls-port must be above 1024.\n");
+               exit(1);
+            }
+         }
+         else if (!strcmp(argv[i], "--tls-cert") && i + 1 < argc)
+            tls_cert = argv[++i];
+         else if (!strcmp(argv[i], "--tls-key") && i + 1 < argc)
+            tls_key = argv[++i];
       }
    }
 
@@ -298,19 +315,37 @@ int main(int argc, char **argv)
       control = init_socket(port, INADDR_ANY);
       if (ws_port > 0)
          control_ws = init_socket(ws_port, INADDR_LOOPBACK);
+      if (tls_port > 0)
+      {
+#ifdef HAVE_OPENSSL
+         if (init_tls_context(tls_cert, tls_key))
+            control_tls = init_socket(tls_port, INADDR_ANY);
+         else
+            fprintf(stderr, "Warning: TLS context init failed; --tls-port ignored.\n");
+#else
+         fprintf(stderr, "Warning: OpenSSL not compiled in; --tls-port ignored.\n");
+#endif
+      }
    }
    global_port = port;
    global_ws_port = ws_port;
+   global_tls_port = tls_port;
    if (fCopyOver)
       abort_threshold = BOOT_DB_ABORT_THRESHOLD;
    boot_db();
    npc_dialogue_init();
+   init_mssp_counts();
 #ifndef WIN32
    init_alarm_handler();
 #endif
-   if (ws_port > 0)
+   if (ws_port > 0 && tls_port > 0)
+      sprintf(log_buf, "ACK! MUD is ready on port %d (telnet), %d (WebSocket loopback), %d (TLS).",
+              port, ws_port, tls_port);
+   else if (ws_port > 0)
       sprintf(log_buf, "ACK! MUD is ready on port %d (telnet) and %d (WebSocket loopback).", port,
               ws_port);
+   else if (tls_port > 0)
+      sprintf(log_buf, "ACK! MUD is ready on port %d (telnet) and %d (TLS).", port, tls_port);
    else
       sprintf(log_buf, "ACK! MUD is ready on port %d.", port);
    log_string(log_buf);
@@ -328,10 +363,12 @@ int main(int argc, char **argv)
    /* Seed WHO web output immediately on boot/copyover recovery. */
    list_who_to_output();
 
-   game_loop(control, control_ws);
+   game_loop(control, control_ws, control_tls);
    close(control);
    if (control_ws >= 0)
       close(control_ws);
+   if (control_tls >= 0)
+      close(control_tls);
 
    /*
     * That's all, folks.

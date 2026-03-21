@@ -439,8 +439,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
                char buf[MAX_STRING_LENGTH];
                sprintf(buf, "Denying access to banned site %s", d->host);
                monitor_chan(buf, MONITOR_CONNECT);
-               write_to_descriptor(d->descriptor,
-                                   "Your site has been banned from this Mud.  BYE BYE!\n\r", 0);
+               write_to_descriptor(d, "Your site has been banned from this Mud.  BYE BYE!\n\r", 0);
                d->connected = CON_QUITTING;
                close_socket(d);
                return;
@@ -475,8 +474,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
                char buf[MAX_STRING_LENGTH];
                sprintf(buf, "Denying access to banned site %s", d->host);
                monitor_chan(buf, MONITOR_CONNECT);
-               write_to_descriptor(d->descriptor,
-                                   "Your site has been banned from this Mud.  BYE BYE!\n\r", 0);
+               write_to_descriptor(d, "Your site has been banned from this Mud.  BYE BYE!\n\r", 0);
                d->connected = CON_QUITTING;
                close_socket(d);
                return;

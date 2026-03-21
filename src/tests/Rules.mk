@@ -384,7 +384,19 @@ unit-test-inlines: $(OBJDIR)/tests/test_inlines.o
 	rm -f tests/unit-test-inlines
 	$(CC) -o tests/unit-test-inlines $(OBJDIR)/tests/test_inlines.o $(L_FLAGS)
 
-unit-tests: unit-test-inlines unit-test-sentinel unit-test-clandata unit-test-act-clan unit-test-weapon-bond unit-test-handler unit-test-skills unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-login unit-test-websocket-validation unit-test-websocket-sanitize unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns unit-test-prompt unit-test-revenant unit-test-adept-skills unit-test-skill-renames unit-test-caravan-travel unit-test-overgrowth unit-test-npc-dialogue-help
+unit-test-mssp: $(OBJDIR)/tests/test_mssp.o
+	rm -f tests/unit-test-mssp
+	$(CC) -o tests/unit-test-mssp $(OBJDIR)/tests/test_mssp.o $(L_FLAGS)
+
+unit-test-gmcp: $(OBJDIR)/tests/test_gmcp.o
+	rm -f tests/unit-test-gmcp
+	$(CC) -o tests/unit-test-gmcp $(OBJDIR)/tests/test_gmcp.o $(L_FLAGS)
+
+unit-test-mccp: $(OBJDIR)/tests/test_mccp.o
+	rm -f tests/unit-test-mccp
+	$(CC) -o tests/unit-test-mccp $(OBJDIR)/tests/test_mccp.o $(L_FLAGS) -lz
+
+unit-tests: unit-test-inlines unit-test-sentinel unit-test-mssp unit-test-gmcp unit-test-mccp unit-test-clandata unit-test-act-clan unit-test-weapon-bond unit-test-handler unit-test-skills unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-login unit-test-websocket-validation unit-test-websocket-sanitize unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns unit-test-prompt unit-test-revenant unit-test-adept-skills unit-test-skill-renames unit-test-caravan-travel unit-test-overgrowth unit-test-npc-dialogue-help
 	./tests/unit-test-inlines
 	./tests/unit-test-handler
 	./tests/unit-test-skills
@@ -438,5 +450,8 @@ unit-tests: unit-test-inlines unit-test-sentinel unit-test-clandata unit-test-ac
 	./tests/unit-test-clandata
 	./tests/unit-test-sentinel
 	./tests/unit-test-npc-dialogue-help
+	./tests/unit-test-mssp
+	./tests/unit-test-gmcp
+	./tests/unit-test-mccp
 	$(MAKE) integration-test
 	$(MAKE) integration-test-telnet

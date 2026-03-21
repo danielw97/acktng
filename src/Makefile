@@ -22,8 +22,16 @@ PROF    =
 #SOLARIS_FLAG = -Dsun -DSYSV -Wno-char-subscripts
 #SOLARIS_LINK = -lnsl -lsocket -lresolv
 
+OPENSSL_CFLAGS := $(shell pkg-config --cflags openssl 2>/dev/null)
+OPENSSL_LIBS   := $(shell pkg-config --libs   openssl 2>/dev/null)
+
 C_FLAGS = -O -g2 -Wall -DACK_43 $(PROF) $(SOLARIS_FLAG) -Iheaders -Iai/headers -Itests/headers -Iquests
-L_FLAGS = -O -g2 -lcrypt -lpthread $(PROF) $(SOLARIS_LINK)
+L_FLAGS = -O -g2 -lcrypt -lpthread $(PROF) $(SOLARIS_LINK) -lz
+
+ifneq ($(OPENSSL_LIBS),)
+    C_FLAGS += -DHAVE_OPENSSL $(OPENSSL_CFLAGS)
+    L_FLAGS += $(OPENSSL_LIBS)
+endif
 
 OBJDIR = build/obj
 

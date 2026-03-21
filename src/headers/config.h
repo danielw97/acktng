@@ -32,6 +32,12 @@
 
 #define mudnamecolor "@@lACK!TNG@@N"
 #define mudnamenocolor "ACK!TNG"
+
+/* MSSP listing-site metadata */
+#define MSSP_CONTACT "admin@ackmud.com"
+#define MSSP_WEBSITE "https://ackmud.com"
+#define MSSP_ICON_URL "https://ackmud.com/icon.png"
+#define MSSP_LOCATION "United States"
 #define sacgodname "Cyberlich"
 #define goodgodname "Freyja"
 #define neutralgodname "Zenithar"

@@ -70,13 +70,17 @@ bool command_has_wait_flag args((CHAR_DATA * ch, const char *argument));
 #include <netinet/in.h>
 #include <sys/socket.h>
 #include <arpa/telnet.h>
+#include <zlib.h>
+#ifdef HAVE_OPENSSL
+#include <openssl/ssl.h>
+#include <openssl/err.h>
+#endif
+#include "socket.h"
+#include "prompt.h"
 
 const char echo_off_str[] = {IAC, WILL, TELOPT_ECHO, '\0'};
 const char echo_on_str[] = {IAC, WONT, TELOPT_ECHO, '\0'};
 const char go_ahead_str[] = {IAC, GA, '\0'};
-
-#include "socket.h"
-#include "prompt.h"
 
 /*
  * Forward declarations for functions defined in comm.c but called from socket.c
@@ -88,16 +92,37 @@ void stop_idling(CHAR_DATA *ch);
 /*
  * Forward declarations for socket.c-internal functions used before their definitions
  */
-void new_descriptor(int control);
+void new_descriptor(int control, bool is_tls);
 void init_descriptor(DESCRIPTOR_DATA *dnew, int desc);
 bool read_from_descriptor(DESCRIPTOR_DATA *d);
 bool write_websocket_frame(DESCRIPTOR_DATA *d, unsigned char opcode, const unsigned char *payload,
                            size_t payload_len);
+void process_telnet_options(DESCRIPTOR_DATA *d);
+void send_mssp_data(DESCRIPTOR_DATA *d);
+void process_msdp_subneg(DESCRIPTOR_DATA *d, unsigned char *payload, int len);
+void process_gmcp_subneg(DESCRIPTOR_DATA *d, unsigned char *payload, int len);
+void mccp2_start(DESCRIPTOR_DATA *d);
+void mccp3_init(DESCRIPTOR_DATA *d);
 
 DESCRIPTOR_DATA *d_next; /* Next descriptor in loop      */
 
 int global_port;
 int global_ws_port = -1;
+int global_tls_port = -1;
+
+#ifdef HAVE_OPENSSL
+static SSL_CTX *global_ssl_ctx = NULL;
+#endif
+
+/* MSSP boot-time counters (populated by init_mssp_counts()) */
+static int mssp_area_count = 0;
+static int mssp_mob_count = 0;
+static int mssp_obj_count = 0;
+static int mssp_room_count = 0;
+static int mssp_help_count = 0;
+static int mssp_race_count = 0;
+static int mssp_skill_count = 0;
+static time_t boot_time = 0;
 
 static const char websocket_guid[] = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
 
@@ -310,6 +335,24 @@ void queue_login_greeting(DESCRIPTOR_DATA *d)
       return;
 
    d->greeting_sent = TRUE;
+
+   /* Send telnet protocol offers on plain/TLS telnet connections */
+   if (!d->websocket_active)
+   {
+      static const char will_echo[] = {IAC, WILL, TELOPT_ECHO, '\0'};
+      static const char will_mssp[] = {IAC, WILL, TELOPT_MSSP, '\0'};
+      static const char will_msdp[] = {IAC, WILL, TELOPT_MSDP, '\0'};
+      static const char will_gmcp[] = {IAC, WILL, TELOPT_GMCP, '\0'};
+      static const char will_mccp2[] = {IAC, WILL, TELOPT_MCCP2, '\0'};
+      static const char will_mccp3[] = {IAC, WILL, TELOPT_MCCP3, '\0'};
+      write_to_descriptor(d, (char *)will_echo, 3);
+      write_to_descriptor(d, (char *)will_mssp, 3);
+      write_to_descriptor(d, (char *)will_msdp, 3);
+      write_to_descriptor(d, (char *)will_gmcp, 3);
+      write_to_descriptor(d, (char *)will_mccp2, 3);
+      write_to_descriptor(d, (char *)will_mccp3, 3);
+   }
+
    sprintf(buf, "greeting%d", number_range(1, 6));
 
    for (pHelp = first_help; pHelp != NULL; pHelp = pHelp->next)
@@ -376,7 +419,7 @@ bool handle_websocket_handshake(DESCRIPTOR_DATA *d)
             "Sec-WebSocket-Accept: %s\r\n\r\n",
             accept_key);
 
-   if (!write_to_descriptor(d->descriptor, response, 0))
+   if (!write_to_descriptor(d, response, 0))
       return FALSE;
 
    d->websocket_active = TRUE;
@@ -505,9 +548,9 @@ bool write_websocket_frame(DESCRIPTOR_DATA *d, unsigned char opcode, const unsig
       hlen = 4;
    }
 
-   if (!write_to_descriptor(d->descriptor, (char *)header, (int)hlen))
+   if (!write_to_descriptor(d, (char *)header, (int)hlen))
       return FALSE;
-   if (payload_len > 0 && !write_to_descriptor(d->descriptor, (char *)payload, (int)payload_len))
+   if (payload_len > 0 && !write_to_descriptor(d, (char *)payload, (int)payload_len))
       return FALSE;
 
    return TRUE;
@@ -561,7 +604,7 @@ bool process_websocket_input(DESCRIPTOR_DATA *d)
       else if (opcode == 0x1 || opcode == 0x0 || opcode == 0x2)
       {
          if (payload_len >= MAX_INPUT_LENGTH - 1)
-            write_to_descriptor(d->descriptor, "Line too long.\n\r", 0);
+            write_to_descriptor(d, "Line too long.\n\r", 0);
          else
          {
             for (i = 0; i < (int)payload_len; i++)
@@ -659,7 +702,7 @@ void reopen_socket(int sig)
 
 /* + */
 
-void game_loop(int control, int control_ws)
+void game_loop(int control, int control_ws, int control_tls)
 {
    static struct timeval null_time;
    struct timeval last_time;
@@ -704,6 +747,11 @@ void game_loop(int control, int control_ws)
             close(control_ws);
             control_ws = init_socket(global_ws_port, INADDR_LOOPBACK);
          }
+         if (control_tls >= 0)
+         {
+            close(control_tls);
+            control_tls = init_socket(global_tls_port, INADDR_ANY);
+         }
          reopen_flag = 0;
       }
 
@@ -719,6 +767,11 @@ void game_loop(int control, int control_ws)
       {
          FD_SET(control_ws, &in_set);
          maxdesc = UMAX(maxdesc, control_ws);
+      }
+      if (control_tls >= 0)
+      {
+         FD_SET(control_tls, &in_set);
+         maxdesc = UMAX(maxdesc, control_tls);
       }
 
       for (d = first_desc; d; d = d->next)
@@ -756,9 +809,11 @@ void game_loop(int control, int control_ws)
        * New connection?
        */
       if (FD_ISSET(control, &in_set))
-         new_descriptor(control);
+         new_descriptor(control, FALSE);
       if (control_ws >= 0 && FD_ISSET(control_ws, &in_set))
-         new_descriptor(control_ws);
+         new_descriptor(control_ws, FALSE);
+      if (control_tls >= 0 && FD_ISSET(control_tls, &in_set))
+         new_descriptor(control_tls, TRUE);
 
       /*
        * Kick out the freaky folks.
@@ -859,7 +914,7 @@ void game_loop(int control, int control_ws)
                write_websocket_frame(d, 0x1, (const unsigned char *)"Login timeout (180s)\n\r",
                                      strlen("Login timeout (180s)\n\r"));
             else
-               write_to_descriptor(d->descriptor, "Login timeout (180s)\n\r", 0);
+               write_to_descriptor(d, "Login timeout (180s)\n\r", 0);
             close_socket(d);
             continue;
          }
@@ -962,7 +1017,7 @@ void free_desc(DESCRIPTOR_DATA *d)
       dispose(d->outbuf, d->outsize);
 }
 
-void new_descriptor(int control)
+void new_descriptor(int control, bool is_tls)
 {
    static DESCRIPTOR_DATA d_zero;
    char buf[MSL];
@@ -1005,6 +1060,59 @@ void new_descriptor(int control)
    dnew->outsize = 2000;
    dnew->flags = 0;
    dnew->childpid = 0;
+
+#ifdef HAVE_OPENSSL
+   if (is_tls && global_ssl_ctx != NULL)
+   {
+      SSL *ssl;
+      int ret, err, tries = 0;
+      fd_set fds;
+      struct timeval tv;
+
+      ssl = SSL_new(global_ssl_ctx);
+      SSL_set_fd(ssl, desc);
+      do
+      {
+         ret = SSL_accept(ssl);
+         if (ret <= 0)
+         {
+            err = SSL_get_error(ssl, ret);
+            if (err == SSL_ERROR_WANT_READ || err == SSL_ERROR_WANT_WRITE)
+            {
+               FD_ZERO(&fds);
+               FD_SET(desc, &fds);
+               tv.tv_sec = 1;
+               tv.tv_usec = 0;
+               if (err == SSL_ERROR_WANT_READ)
+                  select(desc + 1, &fds, NULL, NULL, &tv);
+               else
+                  select(desc + 1, NULL, &fds, NULL, &tv);
+               tries++;
+            }
+            else
+            {
+               ERR_print_errors_fp(stderr);
+               SSL_free(ssl);
+               close(desc);
+               PUT_FREE(dnew, desc_free);
+               return;
+            }
+         }
+      } while (ret <= 0 && tries < 5);
+
+      if (ret <= 0)
+      {
+         SSL_free(ssl);
+         close(desc);
+         PUT_FREE(dnew, desc_free);
+         return;
+      }
+      dnew->ssl = ssl;
+      dnew->tls_active = TRUE;
+   }
+#else
+   (void)is_tls;
+#endif
 
    size = sizeof(sock);
    if (getpeername(desc, (struct sockaddr *)&sock, &size) < 0)
@@ -1104,6 +1212,20 @@ void init_descriptor(DESCRIPTOR_DATA *dnew, int desc)
    dnew->websocket_handshake_complete = FALSE;
    dnew->greeting_sent = FALSE;
    dnew->websocket_current_music = NULL;
+   dnew->tls_active = FALSE;
+#ifdef HAVE_OPENSSL
+   dnew->ssl = NULL;
+#endif
+   dnew->msdp_active = FALSE;
+   dnew->msdp_reported = 0;
+   dnew->msdp_last_room = 0;
+   dnew->gmcp_active = FALSE;
+   dnew->gmcp_supports = 0;
+   dnew->gmcp_last_room = 0;
+   dnew->mccp2_active = FALSE;
+   dnew->mccp2_zout = NULL;
+   dnew->mccp3_active = FALSE;
+   dnew->mccp3_zin = NULL;
 }
 
 void close_socket(DESCRIPTOR_DATA *dclose)
@@ -1162,6 +1284,31 @@ void close_socket(DESCRIPTOR_DATA *dclose)
    if (d_next == dclose)
       d_next = d_next->next;
 
+   /* Tear down compression and TLS before closing the fd */
+   if (dclose->mccp2_active && dclose->mccp2_zout)
+   {
+      deflateEnd((z_stream *)dclose->mccp2_zout);
+      free(dclose->mccp2_zout);
+      dclose->mccp2_zout = NULL;
+      dclose->mccp2_active = FALSE;
+   }
+   if (dclose->mccp3_active && dclose->mccp3_zin)
+   {
+      inflateEnd((z_stream *)dclose->mccp3_zin);
+      free(dclose->mccp3_zin);
+      dclose->mccp3_zin = NULL;
+      dclose->mccp3_active = FALSE;
+   }
+#ifdef HAVE_OPENSSL
+   if (dclose->tls_active && dclose->ssl)
+   {
+      SSL_shutdown((SSL *)dclose->ssl);
+      SSL_free((SSL *)dclose->ssl);
+      dclose->ssl = NULL;
+      dclose->tls_active = FALSE;
+   }
+#endif
+
    UNLINK(dclose, first_desc, last_desc, next, prev);
    close(dclose->descriptor);
    free_string(dclose->host);
@@ -1197,7 +1344,7 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
       sprintf(log_buf, "input overflow by %s (%s)",
               (d->character == NULL) ? "[login]" : d->character->name, d->host);
       monitor_chan(log_buf, MONITOR_CONNECT);
-      write_to_descriptor(d->descriptor, "\n\r SPAMMING IS RUDE, BYE BYE! \n\r", 0);
+      write_to_descriptor(d, "\n\r SPAMMING IS RUDE, BYE BYE! \n\r", 0);
       return FALSE;
    }
 
@@ -1208,7 +1355,12 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
    {
       int nRead;
 
-      nRead = read(d->descriptor, d->inbuf + iStart, sizeof(d->inbuf) - 10 - iStart);
+#ifdef HAVE_OPENSSL
+      if (d->tls_active)
+         nRead = SSL_read((SSL *)d->ssl, d->inbuf + iStart, sizeof(d->inbuf) - 10 - iStart);
+      else
+#endif
+         nRead = read(d->descriptor, d->inbuf + iStart, sizeof(d->inbuf) - 10 - iStart);
       if (nRead > 0)
       {
          iStart += nRead;
@@ -1263,6 +1415,9 @@ void read_from_buffer(DESCRIPTOR_DATA *d)
       return;
    }
 
+   /* Strip and dispatch IAC telnet sequences before parsing player input */
+   process_telnet_options(d);
+
    /*
     * Look for at least one new line.
     */
@@ -1278,7 +1433,7 @@ void read_from_buffer(DESCRIPTOR_DATA *d)
    {
       if (k >= MAX_INPUT_LENGTH - 2)
       {
-         write_to_descriptor(d->descriptor, "Line too long.\n\r", 0);
+         write_to_descriptor(d, "Line too long.\n\r", 0);
 
          /*
           * skip the rest of the line
@@ -1323,7 +1478,7 @@ void read_from_buffer(DESCRIPTOR_DATA *d)
                log_string(log_buf);
                monitor_chan(log_buf, MONITOR_CONNECT);
             }
-            write_to_descriptor(d->descriptor, "\n\r***** SHUT UP!! *****\n\r", 0);
+            write_to_descriptor(d, "\n\r***** SHUT UP!! *****\n\r", 0);
             close_socket(d);
             /*
              * old way: strcpy( d->incomm, "quit" );
@@ -1427,7 +1582,7 @@ bool process_output(DESCRIPTOR_DATA *d, bool fPrompt)
       d->outtop = 0;
       return TRUE;
    }
-   else if (!write_to_descriptor(d->descriptor, d->outbuf, d->outtop))
+   else if (!write_to_descriptor(d, d->outbuf, d->outtop))
    {
       d->outtop = 0;
       return FALSE;
@@ -1611,7 +1766,7 @@ void write_to_buffer(DESCRIPTOR_DATA *d, const char *txt, int length)
  * If this gives errors on very long blocks (like 'ofind all'),
  *   try lowering the max block size.
  */
-bool write_to_descriptor(int desc, char *txt, int length)
+bool write_to_descriptor(DESCRIPTOR_DATA *d, char *txt, int length)
 {
    int iStart;
    int nWrite;
@@ -1623,11 +1778,842 @@ bool write_to_descriptor(int desc, char *txt, int length)
    for (iStart = 0; iStart < length; iStart += nWrite)
    {
       nBlock = UMIN(length - iStart, 4096);
-      if ((nWrite = write(desc, txt + iStart, nBlock)) < 0)
+#ifdef HAVE_OPENSSL
+      if (d->tls_active)
       {
-         perror("Write_to_descriptor");
-         return FALSE;
+         nWrite = SSL_write((SSL *)d->ssl, txt + iStart, nBlock);
+         if (nWrite <= 0)
+         {
+            ERR_print_errors_fp(stderr);
+            return FALSE;
+         }
+      }
+      else
+#endif
+      {
+         if ((nWrite = write(d->descriptor, txt + iStart, nBlock)) < 0)
+         {
+            perror("Write_to_descriptor");
+            return FALSE;
+         }
       }
    }
    return TRUE;
+}
+
+/*
+ * =========================================================================
+ * TLS context initialization
+ * =========================================================================
+ */
+#ifdef HAVE_OPENSSL
+bool init_tls_context(const char *cert_file, const char *key_file)
+{
+   SSL_CTX *ctx;
+   SSL_library_init();
+   OpenSSL_add_all_algorithms();
+   SSL_load_error_strings();
+   ctx = SSL_CTX_new(TLS_server_method());
+   if (!ctx)
+   {
+      ERR_print_errors_fp(stderr);
+      return FALSE;
+   }
+   SSL_CTX_set_min_proto_version(ctx, TLS1_2_VERSION);
+   if (SSL_CTX_use_certificate_file(ctx, cert_file, SSL_FILETYPE_PEM) <= 0 ||
+       SSL_CTX_use_PrivateKey_file(ctx, key_file, SSL_FILETYPE_PEM) <= 0)
+   {
+      ERR_print_errors_fp(stderr);
+      SSL_CTX_free(ctx);
+      return FALSE;
+   }
+   global_ssl_ctx = ctx;
+   return TRUE;
+}
+#endif /* HAVE_OPENSSL */
+
+/*
+ * =========================================================================
+ * MSSP boot-time counting
+ * =========================================================================
+ */
+void init_mssp_counts(void)
+{
+   extern int top_area;
+   extern int top_mob_index;
+   extern int top_obj_index;
+   extern int top_room;
+   extern int top_help;
+   int i;
+
+   mssp_area_count = top_area;
+   mssp_mob_count = top_mob_index;
+   mssp_obj_count = top_obj_index;
+   mssp_room_count = top_room;
+   mssp_help_count = top_help;
+   mssp_race_count = MAX_RACE;
+   mssp_skill_count = 0;
+   for (i = 0; i < MAX_SKILL; i++)
+   {
+      extern const struct skill_type skill_table[];
+      if (skill_table[i].name != NULL)
+         mssp_skill_count++;
+   }
+   boot_time = time(NULL);
+}
+
+/*
+ * =========================================================================
+ * Low-level telnet write helpers
+ * =========================================================================
+ */
+static void telnet_send_raw(DESCRIPTOR_DATA *d, const unsigned char *bytes, int len)
+{
+   write_to_descriptor(d, (char *)bytes, len);
+}
+
+/*
+ * =========================================================================
+ * MSSP (Mud Server Status Protocol, telnet option 70)
+ * =========================================================================
+ */
+void send_mssp_data(DESCRIPTOR_DATA *d)
+{
+   unsigned char buf[4096];
+   int i = 0;
+   char tmp[64];
+   time_t uptime;
+   extern int cur_players;
+   extern int max_players;
+
+   /* IAC SB MSSP */
+   buf[i++] = (unsigned char)IAC;
+   buf[i++] = (unsigned char)SB;
+   buf[i++] = (unsigned char)TELOPT_MSSP;
+
+#define MSSP_VAR_STR(name, val)                                                                    \
+   do                                                                                              \
+   {                                                                                               \
+      const char *__n = (name);                                                                    \
+      const char *__v = (val);                                                                     \
+      buf[i++] = MSSP_BYTE_VAR;                                                                    \
+      while (*__n)                                                                                 \
+         buf[i++] = (unsigned char)*__n++;                                                         \
+      buf[i++] = MSSP_BYTE_VAL;                                                                    \
+      while (*__v)                                                                                 \
+         buf[i++] = (unsigned char)*__v++;                                                         \
+   } while (0)
+
+#define MSSP_VAR_INT(name, val)                                                                    \
+   do                                                                                              \
+   {                                                                                               \
+      snprintf(tmp, sizeof(tmp), "%d", (val));                                                     \
+      MSSP_VAR_STR((name), tmp);                                                                   \
+   } while (0)
+
+   MSSP_VAR_STR("NAME", mudnamenocolor);
+   MSSP_VAR_STR("CODEBASE", "ACK!TNG 4.3.1");
+   MSSP_VAR_STR("CONTACT", MSSP_CONTACT);
+   MSSP_VAR_STR("WEBSITE", MSSP_WEBSITE);
+   MSSP_VAR_STR("ICON", MSSP_ICON_URL);
+   MSSP_VAR_STR("LOCATION", MSSP_LOCATION);
+   MSSP_VAR_STR("LANGUAGE", "English");
+   MSSP_VAR_STR("GENRE", "Fantasy");
+   MSSP_VAR_STR("GAMEPLAY", "Hack and Slash");
+   MSSP_VAR_STR("STATUS", "Live");
+   MSSP_VAR_STR("FAMILY", "Diku");
+   MSSP_VAR_STR("SUBGENRE", "Merc");
+   MSSP_VAR_INT("PORT", global_port);
+   MSSP_VAR_INT("PLAYERS", cur_players);
+   MSSP_VAR_INT("MAXPLAYERS", max_players);
+   MSSP_VAR_INT("AREAS", mssp_area_count);
+   MSSP_VAR_INT("HELPFILES", mssp_help_count);
+   MSSP_VAR_INT("MOBILES", mssp_mob_count);
+   MSSP_VAR_INT("OBJECTS", mssp_obj_count);
+   MSSP_VAR_INT("ROOMS", mssp_room_count);
+   MSSP_VAR_INT("CLASSES", MAX_CLASS);
+   MSSP_VAR_INT("RACES", mssp_race_count);
+   MSSP_VAR_INT("SKILLS", mssp_skill_count);
+   uptime = (boot_time > 0) ? (time(NULL) - boot_time) : 0;
+   MSSP_VAR_INT("UPTIME", (int)uptime);
+   MSSP_VAR_STR("SSL", (global_tls_port > 0) ? "1" : "0");
+   MSSP_VAR_STR("ANSI", "1");
+   MSSP_VAR_STR("MCCP", "1");
+   MSSP_VAR_STR("MSDP", "1");
+   MSSP_VAR_STR("GMCP", "1");
+
+#undef MSSP_VAR_STR
+#undef MSSP_VAR_INT
+
+   /* IAC SE */
+   buf[i++] = (unsigned char)IAC;
+   buf[i++] = (unsigned char)SE;
+
+   telnet_send_raw(d, buf, i);
+}
+
+/*
+ * =========================================================================
+ * MSDP (Mud Server Data Protocol, telnet option 69)
+ * =========================================================================
+ */
+void msdp_send_var(DESCRIPTOR_DATA *d, const char *name, const char *value)
+{
+   unsigned char buf[1024];
+   int i = 0;
+
+   buf[i++] = (unsigned char)IAC;
+   buf[i++] = (unsigned char)SB;
+   buf[i++] = (unsigned char)TELOPT_MSDP;
+   buf[i++] = MSDP_BYTE_VAR;
+   while (*name)
+      buf[i++] = (unsigned char)*name++;
+   buf[i++] = MSDP_BYTE_VAL;
+   while (*value)
+      buf[i++] = (unsigned char)*value++;
+   buf[i++] = (unsigned char)IAC;
+   buf[i++] = (unsigned char)SE;
+   telnet_send_raw(d, buf, i);
+}
+
+void msdp_send_var_int(DESCRIPTOR_DATA *d, const char *name, int value)
+{
+   char tmp[32];
+   snprintf(tmp, sizeof(tmp), "%d", value);
+   msdp_send_var(d, name, tmp);
+}
+
+void msdp_send_room_exits(DESCRIPTOR_DATA *d, CHAR_DATA *ch)
+{
+   unsigned char buf[1024];
+   int i = 0;
+   int door;
+   static const char *const dir_name[] = {"north", "east", "south", "west", "up", "down"};
+
+   if (!ch || !ch->in_room)
+      return;
+
+   buf[i++] = (unsigned char)IAC;
+   buf[i++] = (unsigned char)SB;
+   buf[i++] = (unsigned char)TELOPT_MSDP;
+   buf[i++] = MSDP_BYTE_VAR;
+   {
+      const char *n = "ROOM_EXITS";
+      while (*n)
+         buf[i++] = (unsigned char)*n++;
+   }
+   buf[i++] = MSDP_BYTE_VAL;
+   buf[i++] = MSDP_TABLE_OPEN;
+
+   for (door = 0; door < 6; door++)
+   {
+      EXIT_DATA *pexit = ch->in_room->exit[door];
+      if (pexit && pexit->to_room)
+      {
+         char vnum_str[16];
+         const char *dname = dir_name[door];
+         snprintf(vnum_str, sizeof(vnum_str), "%d", pexit->to_room->vnum);
+         buf[i++] = MSDP_BYTE_VAR;
+         while (*dname)
+            buf[i++] = (unsigned char)*dname++;
+         buf[i++] = MSDP_BYTE_VAL;
+         {
+            const char *v = vnum_str;
+            while (*v)
+               buf[i++] = (unsigned char)*v++;
+         }
+      }
+   }
+
+   buf[i++] = MSDP_TABLE_CLOSE;
+   buf[i++] = (unsigned char)IAC;
+   buf[i++] = (unsigned char)SE;
+   telnet_send_raw(d, buf, i);
+}
+
+void process_msdp_subneg(DESCRIPTOR_DATA *d, unsigned char *payload, int len)
+{
+   int i = 0;
+
+   if (!d->msdp_active)
+   {
+      d->msdp_active = TRUE;
+      d->msdp_reported = 0;
+   }
+
+   while (i < len)
+   {
+      if (payload[i] == MSDP_BYTE_VAR && i + 1 < len)
+      {
+         char var_name[128];
+         int vi = 0;
+         i++;
+         while (i < len && payload[i] != MSDP_BYTE_VAL && vi < (int)sizeof(var_name) - 1)
+            var_name[vi++] = (char)payload[i++];
+         var_name[vi] = '\0';
+         if (i < len && payload[i] == MSDP_BYTE_VAL)
+         {
+            char val_str[256];
+            int vsi = 0;
+            i++;
+            while (i < len && payload[i] != MSDP_BYTE_VAR && vsi < (int)sizeof(val_str) - 1)
+               val_str[vsi++] = (char)payload[i++];
+            val_str[vsi] = '\0';
+
+            if (!strcmp(var_name, "REPORT"))
+            {
+               if (!strcmp(val_str, "CHARACTER_NAME"))
+                  d->msdp_reported |= MSDP_BIT_CHARACTER_NAME;
+               else if (!strcmp(val_str, "HEALTH"))
+                  d->msdp_reported |= MSDP_BIT_HEALTH;
+               else if (!strcmp(val_str, "HEALTH_MAX"))
+                  d->msdp_reported |= MSDP_BIT_HEALTH_MAX;
+               else if (!strcmp(val_str, "MANA"))
+                  d->msdp_reported |= MSDP_BIT_MANA;
+               else if (!strcmp(val_str, "MANA_MAX"))
+                  d->msdp_reported |= MSDP_BIT_MANA_MAX;
+               else if (!strcmp(val_str, "MOVEMENT"))
+                  d->msdp_reported |= MSDP_BIT_MOVEMENT;
+               else if (!strcmp(val_str, "MOVEMENT_MAX"))
+                  d->msdp_reported |= MSDP_BIT_MOVEMENT_MAX;
+               else if (!strcmp(val_str, "LEVEL"))
+                  d->msdp_reported |= MSDP_BIT_LEVEL;
+               else if (!strcmp(val_str, "EXPERIENCE"))
+                  d->msdp_reported |= MSDP_BIT_EXPERIENCE;
+               else if (!strcmp(val_str, "EXPERIENCE_TNL"))
+                  d->msdp_reported |= MSDP_BIT_EXPERIENCE_TNL;
+               else if (!strcmp(val_str, "GOLD"))
+                  d->msdp_reported |= MSDP_BIT_GOLD;
+               else if (!strcmp(val_str, "ALIGNMENT"))
+                  d->msdp_reported |= MSDP_BIT_ALIGNMENT;
+               else if (!strcmp(val_str, "HITROLL"))
+                  d->msdp_reported |= MSDP_BIT_HITROLL;
+               else if (!strcmp(val_str, "DAMROLL"))
+                  d->msdp_reported |= MSDP_BIT_DAMROLL;
+               else if (!strcmp(val_str, "AC"))
+                  d->msdp_reported |= MSDP_BIT_AC;
+               else if (!strcmp(val_str, "ROOM_NAME"))
+                  d->msdp_reported |= MSDP_BIT_ROOM_NAME;
+               else if (!strcmp(val_str, "ROOM_VNUM"))
+                  d->msdp_reported |= MSDP_BIT_ROOM_VNUM;
+               else if (!strcmp(val_str, "ROOM_TERRAIN"))
+                  d->msdp_reported |= MSDP_BIT_ROOM_TERRAIN;
+               else if (!strcmp(val_str, "ROOM_EXITS"))
+                  d->msdp_reported |= MSDP_BIT_ROOM_EXITS;
+            }
+            else if (!strcmp(var_name, "UNREPORT"))
+            {
+               if (!strcmp(val_str, "CHARACTER_NAME"))
+                  d->msdp_reported &= ~MSDP_BIT_CHARACTER_NAME;
+               /* etc. — clear the matching bit */
+            }
+            else if (!strcmp(var_name, "SEND"))
+            {
+               /* Immediate one-shot send */
+               CHAR_DATA *ch = d->character;
+               if (ch != NULL && !IS_NPC(ch))
+               {
+                  if (!strcmp(val_str, "HEALTH"))
+                     msdp_send_var_int(d, "HEALTH", ch->hit);
+                  else if (!strcmp(val_str, "LEVEL"))
+                     msdp_send_var_int(d, "LEVEL", ch->level);
+               }
+            }
+            else if (!strcmp(var_name, "RESET"))
+            {
+               d->msdp_reported = 0;
+            }
+            else if (!strcmp(var_name, "LIST"))
+            {
+               /* Send supported variable list */
+               msdp_send_var(d, "REPORTABLE_VARIABLES",
+                             "CHARACTER_NAME HEALTH HEALTH_MAX MANA MANA_MAX MOVEMENT MOVEMENT_MAX "
+                             "LEVEL EXPERIENCE EXPERIENCE_TNL GOLD ALIGNMENT HITROLL DAMROLL AC "
+                             "ROOM_NAME ROOM_VNUM ROOM_TERRAIN ROOM_EXITS");
+            }
+         }
+      }
+      else
+         i++;
+   }
+}
+
+void msdp_update(void)
+{
+   DESCRIPTOR_DATA *d;
+
+   for (d = first_desc; d != NULL; d = d->next)
+   {
+      CHAR_DATA *ch;
+
+      if (!d->msdp_active || d->connected != CON_PLAYING)
+         continue;
+
+      ch = d->character;
+      if (ch == NULL || IS_NPC(ch))
+         continue;
+
+      if (d->msdp_reported & MSDP_BIT_CHARACTER_NAME)
+         msdp_send_var(d, "CHARACTER_NAME", ch->name ? ch->name : "");
+      if (d->msdp_reported & MSDP_BIT_HEALTH)
+         msdp_send_var_int(d, "HEALTH", ch->hit);
+      if (d->msdp_reported & MSDP_BIT_HEALTH_MAX)
+         msdp_send_var_int(d, "HEALTH_MAX", ch->max_hit);
+      if (d->msdp_reported & MSDP_BIT_MANA)
+         msdp_send_var_int(d, "MANA", ch->mana);
+      if (d->msdp_reported & MSDP_BIT_MANA_MAX)
+         msdp_send_var_int(d, "MANA_MAX", ch->max_mana);
+      if (d->msdp_reported & MSDP_BIT_MOVEMENT)
+         msdp_send_var_int(d, "MOVEMENT", ch->move);
+      if (d->msdp_reported & MSDP_BIT_MOVEMENT_MAX)
+         msdp_send_var_int(d, "MOVEMENT_MAX", ch->max_move);
+      if (d->msdp_reported & MSDP_BIT_LEVEL)
+         msdp_send_var_int(d, "LEVEL", ch->level);
+      if (d->msdp_reported & MSDP_BIT_EXPERIENCE)
+         msdp_send_var_int(d, "EXPERIENCE", ch->exp);
+      if (d->msdp_reported & MSDP_BIT_GOLD)
+         msdp_send_var_int(d, "GOLD", ch->gold);
+      if (d->msdp_reported & MSDP_BIT_ALIGNMENT)
+         msdp_send_var_int(d, "ALIGNMENT", ch->alignment);
+      if (d->msdp_reported & MSDP_BIT_HITROLL)
+         msdp_send_var_int(d, "HITROLL", ch->hitroll);
+      if (d->msdp_reported & MSDP_BIT_DAMROLL)
+         msdp_send_var_int(d, "DAMROLL", ch->damroll);
+      if (d->msdp_reported & MSDP_BIT_AC)
+         msdp_send_var_int(d, "AC", ch->armor);
+      if (d->msdp_reported & MSDP_BIT_ROOM_NAME && ch->in_room)
+         msdp_send_var(d, "ROOM_NAME", ch->in_room->name ? ch->in_room->name : "");
+      if (d->msdp_reported & MSDP_BIT_ROOM_VNUM && ch->in_room)
+         msdp_send_var_int(d, "ROOM_VNUM", ch->in_room->vnum);
+      if (d->msdp_reported & MSDP_BIT_ROOM_EXITS)
+         msdp_send_room_exits(d, ch);
+   }
+}
+
+/*
+ * =========================================================================
+ * GMCP (Generic Mud Communication Protocol, telnet option 201)
+ * =========================================================================
+ */
+
+/* JSON builder helpers */
+static void json_append(char *buf, int *pos, int buf_size, const char *s)
+{
+   while (*s && *pos < buf_size - 1)
+      buf[(*pos)++] = *s++;
+   buf[*pos] = '\0';
+}
+
+static void json_str_escape(char *buf, int *pos, int buf_size, const char *s)
+{
+   json_append(buf, pos, buf_size, "\"");
+   while (*s && *pos < buf_size - 2)
+   {
+      char c = *s++;
+      if (c == '"' || c == '\\')
+      {
+         buf[(*pos)++] = '\\';
+      }
+      buf[(*pos)++] = c;
+   }
+   buf[*pos] = '\0';
+   json_append(buf, pos, buf_size, "\"");
+}
+
+static void json_int_val(char *buf, int *pos, int buf_size, int val)
+{
+   char tmp[32];
+   snprintf(tmp, sizeof(tmp), "%d", val);
+   json_append(buf, pos, buf_size, tmp);
+}
+
+void gmcp_send(DESCRIPTOR_DATA *d, const char *package, const char *json)
+{
+   unsigned char buf[4096];
+   int i = 0;
+
+   buf[i++] = (unsigned char)IAC;
+   buf[i++] = (unsigned char)SB;
+   buf[i++] = (unsigned char)TELOPT_GMCP;
+   while (*package && i < (int)sizeof(buf) - 4)
+      buf[i++] = (unsigned char)*package++;
+   buf[i++] = ' ';
+   while (*json && i < (int)sizeof(buf) - 3)
+      buf[i++] = (unsigned char)*json++;
+   buf[i++] = (unsigned char)IAC;
+   buf[i++] = (unsigned char)SE;
+   telnet_send_raw(d, buf, i);
+}
+
+void process_gmcp_subneg(DESCRIPTOR_DATA *d, unsigned char *payload, int len)
+{
+   char pkg[128];
+   int pi = 0;
+   int i = 0;
+
+   if (!d->gmcp_active)
+      d->gmcp_active = TRUE;
+
+   /* Extract package name (up to first space or end) */
+   while (i < len && payload[i] != ' ' && pi < (int)sizeof(pkg) - 1)
+      pkg[pi++] = (char)payload[i++];
+   pkg[pi] = '\0';
+
+   if (!strcmp(pkg, "Core.Supports.Set") || !strcmp(pkg, "Core.Supports.Add"))
+   {
+      /* Parse JSON array of "Package N" strings — very simple scan */
+      char data[1024];
+      int di = 0;
+      while (i < len && di < (int)sizeof(data) - 1)
+         data[di++] = (char)payload[i++];
+      data[di] = '\0';
+      if (strstr(data, "Char"))
+         d->gmcp_supports |= GMCP_PKG_CHAR;
+      if (strstr(data, "Room"))
+         d->gmcp_supports |= GMCP_PKG_ROOM;
+      if (strstr(data, "Comm"))
+         d->gmcp_supports |= GMCP_PKG_COMM;
+   }
+   else if (!strcmp(pkg, "Core.Supports.Remove"))
+   {
+      char data[1024];
+      int di = 0;
+      while (i < len && di < (int)sizeof(data) - 1)
+         data[di++] = (char)payload[i++];
+      data[di] = '\0';
+      if (strstr(data, "Char"))
+         d->gmcp_supports &= ~GMCP_PKG_CHAR;
+      if (strstr(data, "Room"))
+         d->gmcp_supports &= ~GMCP_PKG_ROOM;
+      if (strstr(data, "Comm"))
+         d->gmcp_supports &= ~GMCP_PKG_COMM;
+   }
+   else if (!strcmp(pkg, "Core.Hello"))
+   {
+      /* Acknowledge with server info */
+      char json[256];
+      int jp = 0;
+      json_append(json, &jp, sizeof(json), "{");
+      json_append(json, &jp, sizeof(json), "\"name\":");
+      json_str_escape(json, &jp, sizeof(json), mudnamenocolor);
+      json_append(json, &jp, sizeof(json), ",\"version\":\"4.3.1\"}");
+      gmcp_send(d, "Core.Goodbye", json);
+   }
+}
+
+void gmcp_send_vitals(DESCRIPTOR_DATA *d, CHAR_DATA *ch)
+{
+   char json[512];
+   int jp = 0;
+
+   json_append(json, &jp, sizeof(json), "{");
+   json_append(json, &jp, sizeof(json), "\"hp\":");
+   json_int_val(json, &jp, sizeof(json), ch->hit);
+   json_append(json, &jp, sizeof(json), ",\"hpmax\":");
+   json_int_val(json, &jp, sizeof(json), ch->max_hit);
+   json_append(json, &jp, sizeof(json), ",\"mp\":");
+   json_int_val(json, &jp, sizeof(json), ch->mana);
+   json_append(json, &jp, sizeof(json), ",\"mpmax\":");
+   json_int_val(json, &jp, sizeof(json), ch->max_mana);
+   json_append(json, &jp, sizeof(json), ",\"mv\":");
+   json_int_val(json, &jp, sizeof(json), ch->move);
+   json_append(json, &jp, sizeof(json), ",\"mvmax\":");
+   json_int_val(json, &jp, sizeof(json), ch->max_move);
+   json_append(json, &jp, sizeof(json), "}");
+   gmcp_send(d, "Char.Vitals", json);
+}
+
+void gmcp_send_status(DESCRIPTOR_DATA *d, CHAR_DATA *ch)
+{
+   char json[512];
+   int jp = 0;
+
+   json_append(json, &jp, sizeof(json), "{");
+   json_append(json, &jp, sizeof(json), "\"name\":");
+   json_str_escape(json, &jp, sizeof(json), ch->name ? ch->name : "");
+   json_append(json, &jp, sizeof(json), ",\"level\":");
+   json_int_val(json, &jp, sizeof(json), ch->level);
+   json_append(json, &jp, sizeof(json), ",\"gold\":");
+   json_int_val(json, &jp, sizeof(json), ch->gold);
+   json_append(json, &jp, sizeof(json), ",\"exp\":");
+   json_int_val(json, &jp, sizeof(json), ch->exp);
+   json_append(json, &jp, sizeof(json), "}");
+   gmcp_send(d, "Char.Status", json);
+}
+
+void gmcp_send_room(DESCRIPTOR_DATA *d, CHAR_DATA *ch)
+{
+   char json[1024];
+   int jp = 0;
+   ROOM_INDEX_DATA *room;
+   int door;
+   bool first_exit = TRUE;
+   static const char *const dir_name[] = {"north", "east", "south", "west", "up", "down"};
+
+   if (!ch || !ch->in_room)
+      return;
+   room = ch->in_room;
+
+   json_append(json, &jp, sizeof(json), "{");
+   json_append(json, &jp, sizeof(json), "\"name\":");
+   json_str_escape(json, &jp, sizeof(json), room->name ? room->name : "");
+   json_append(json, &jp, sizeof(json), ",\"vnum\":");
+   json_int_val(json, &jp, sizeof(json), room->vnum);
+   json_append(json, &jp, sizeof(json), ",\"exits\":{");
+
+   for (door = 0; door < 6; door++)
+   {
+      EXIT_DATA *pexit = room->exit[door];
+      if (pexit && pexit->to_room)
+      {
+         if (!first_exit)
+            json_append(json, &jp, sizeof(json), ",");
+         first_exit = FALSE;
+         json_str_escape(json, &jp, sizeof(json), dir_name[door]);
+         json_append(json, &jp, sizeof(json), ":");
+         json_int_val(json, &jp, sizeof(json), pexit->to_room->vnum);
+      }
+   }
+
+   json_append(json, &jp, sizeof(json), "}}");
+   gmcp_send(d, "Room.Info", json);
+}
+
+void gmcp_update(void)
+{
+   DESCRIPTOR_DATA *d;
+
+   for (d = first_desc; d != NULL; d = d->next)
+   {
+      CHAR_DATA *ch;
+
+      if (!d->gmcp_active || d->connected != CON_PLAYING)
+         continue;
+
+      ch = d->character;
+      if (ch == NULL || IS_NPC(ch))
+         continue;
+
+      if (d->gmcp_supports & GMCP_PKG_CHAR)
+      {
+         gmcp_send_vitals(d, ch);
+         gmcp_send_status(d, ch);
+      }
+
+      if (d->gmcp_supports & GMCP_PKG_ROOM)
+      {
+         if (ch->in_room)
+         {
+            unsigned short vnum = (unsigned short)ch->in_room->vnum;
+            if (vnum != d->gmcp_last_room)
+            {
+               d->gmcp_last_room = vnum;
+               gmcp_send_room(d, ch);
+            }
+         }
+      }
+   }
+}
+
+void gmcp_send_channel(DESCRIPTOR_DATA *d, const char *channel, const char *talker,
+                       const char *text)
+{
+   char json[1024];
+   int jp = 0;
+
+   if (!d->gmcp_active || !(d->gmcp_supports & GMCP_PKG_COMM))
+      return;
+
+   json_append(json, &jp, sizeof(json), "{");
+   json_append(json, &jp, sizeof(json), "\"channel\":");
+   json_str_escape(json, &jp, sizeof(json), channel ? channel : "");
+   json_append(json, &jp, sizeof(json), ",\"talker\":");
+   json_str_escape(json, &jp, sizeof(json), talker ? talker : "");
+   json_append(json, &jp, sizeof(json), ",\"text\":");
+   json_str_escape(json, &jp, sizeof(json), text ? text : "");
+   json_append(json, &jp, sizeof(json), "}");
+   gmcp_send(d, "Comm.Channel", json);
+}
+
+/*
+ * =========================================================================
+ * MCCP2 (server->client zlib compression, telnet option 86)
+ * =========================================================================
+ */
+void mccp2_start(DESCRIPTOR_DATA *d)
+{
+   unsigned char header[5];
+   z_stream *zout;
+
+   if (d->mccp2_active)
+      return;
+
+   /* Send IAC SB MCCP2 IAC SE to signal start of compression */
+   header[0] = (unsigned char)IAC;
+   header[1] = (unsigned char)SB;
+   header[2] = (unsigned char)TELOPT_MCCP2;
+   header[3] = (unsigned char)IAC;
+   header[4] = (unsigned char)SE;
+   telnet_send_raw(d, header, 5);
+
+   zout = (z_stream *)malloc(sizeof(z_stream));
+   if (!zout)
+      return;
+   memset(zout, 0, sizeof(z_stream));
+   if (deflateInit(zout, Z_DEFAULT_COMPRESSION) != Z_OK)
+   {
+      free(zout);
+      return;
+   }
+   d->mccp2_zout = zout;
+   d->mccp2_active = TRUE;
+}
+
+/*
+ * =========================================================================
+ * MCCP3 (client->server zlib compression, telnet option 87)
+ * =========================================================================
+ */
+void mccp3_init(DESCRIPTOR_DATA *d)
+{
+   z_stream *zin;
+
+   if (d->mccp3_active)
+      return;
+
+   zin = (z_stream *)malloc(sizeof(z_stream));
+   if (!zin)
+      return;
+   memset(zin, 0, sizeof(z_stream));
+   if (inflateInit(zin) != Z_OK)
+   {
+      free(zin);
+      return;
+   }
+   d->mccp3_zin = zin;
+   d->mccp3_active = TRUE;
+}
+
+/*
+ * =========================================================================
+ * Telnet IAC option processing — strips IAC sequences from inbuf and
+ * dispatches WILL/DO/DONT/WONT and subnegotiations to protocol handlers.
+ * =========================================================================
+ */
+void process_telnet_options(DESCRIPTOR_DATA *d)
+{
+   unsigned char *buf = (unsigned char *)d->inbuf;
+   int len = d->inbuf_len;
+   int i = 0, out = 0;
+
+   while (i < len)
+   {
+      if (buf[i] != (unsigned char)IAC)
+      {
+         buf[out++] = buf[i++];
+         continue;
+      }
+
+      /* We have IAC */
+      if (i + 1 >= len)
+      {
+         /* Incomplete — leave it */
+         buf[out++] = buf[i++];
+         break;
+      }
+
+      unsigned char cmd = buf[i + 1];
+
+      if (cmd == (unsigned char)IAC)
+      {
+         /* Escaped IAC — pass one through */
+         buf[out++] = (unsigned char)IAC;
+         i += 2;
+         continue;
+      }
+
+      if (cmd == (unsigned char)GA || cmd == (unsigned char)NOP)
+      {
+         /* Suppress — just skip */
+         i += 2;
+         continue;
+      }
+
+      if (cmd == (unsigned char)WILL || cmd == (unsigned char)WONT || cmd == (unsigned char)DO ||
+          cmd == (unsigned char)DONT)
+      {
+         if (i + 2 >= len)
+         {
+            /* Incomplete — leave it */
+            buf[out++] = buf[i++];
+            break;
+         }
+
+         unsigned char opt = buf[i + 2];
+         i += 3;
+
+         if (cmd == (unsigned char)DO)
+         {
+            if (opt == (unsigned char)TELOPT_MSSP)
+               send_mssp_data(d);
+            else if (opt == (unsigned char)TELOPT_MSDP)
+               d->msdp_active = TRUE;
+            else if (opt == (unsigned char)TELOPT_GMCP)
+               d->gmcp_active = TRUE;
+            else if (opt == (unsigned char)TELOPT_MCCP2)
+               mccp2_start(d);
+            else if (opt == (unsigned char)TELOPT_MCCP3)
+               mccp3_init(d);
+         }
+         /* WILL/WONT/DONT — no response needed for now */
+         continue;
+      }
+
+      if (cmd == (unsigned char)SB)
+      {
+         /* Find IAC SE end of subnegotiation */
+         int sb_start = i + 2;
+         int j = sb_start;
+         bool found_se = FALSE;
+
+         while (j < len - 1)
+         {
+            if (buf[j] == (unsigned char)IAC && buf[j + 1] == (unsigned char)SE)
+            {
+               found_se = TRUE;
+               break;
+            }
+            j++;
+         }
+
+         if (!found_se)
+         {
+            /* Incomplete — leave it */
+            buf[out++] = buf[i++];
+            break;
+         }
+
+         unsigned char opt = buf[sb_start];
+         unsigned char *payload = buf + sb_start + 1;
+         int plen = j - sb_start - 1;
+
+         if (opt == (unsigned char)TELOPT_MSDP)
+            process_msdp_subneg(d, payload, plen);
+         else if (opt == (unsigned char)TELOPT_GMCP)
+            process_gmcp_subneg(d, payload, plen);
+
+         i = j + 2; /* skip past IAC SE */
+         continue;
+      }
+
+      /* Unknown IAC command — skip just the IAC byte */
+      buf[out++] = buf[i++];
+   }
+
+   /* Copy any remaining bytes that weren't processed */
+   while (i < len)
+      buf[out++] = buf[i++];
+
+   d->inbuf_len = out;
+   d->inbuf[out] = '\0';
 }
