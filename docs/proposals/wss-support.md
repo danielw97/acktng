@@ -122,12 +122,32 @@ control_ws = (ws_port > 0) ? init_socket(ws_port, INADDR_LOOPBACK) : -1;
 game_loop(control, control_ws);
 ```
 
+### 5. `src/startup` — pass both ports to the server
+
+The startup script currently hardcodes `port=8890` and runs `../src/ack $port`.
+It needs a second variable for the WebSocket loopback port, and the run line must
+pass `--ws-loopback`:
+
+```sh
+# Before
+port=8890
+...
+../src/ack $port >$logfile 2>&1
+
+# After
+port=4000
+ws_port=18890
+...
+../src/ack $port --ws-loopback $ws_port >$logfile 2>&1
+```
+
 ### Affected files
 
 | File | Change |
 |------|--------|
 | `src/comm.c` | Parse `--ws-loopback <port>`; open second socket; pass both fds to `game_loop()` |
 | `src/socket.c` | Add `bind_addr` parameter to `init_socket()`; extend `game_loop()` to select on two control fds; update SIGUSR1 reopen path |
+| `src/startup` | Add `ws_port=18890`; change run line to `../src/ack $port --ws-loopback $ws_port` |
 
 No other source files change. No structs change. No protocol or MUD logic changes.
 
@@ -207,17 +227,8 @@ sudo certbot renew --dry-run   # confirm the hook fires
 
 ### 4. Startup script update
 
-Update whatever init script or process manager launches ACK!TNG:
-
-```sh
-# Before
-cd /home/mud/acktng/area && ../src/ack 8890
-
-# After
-cd /home/mud/acktng/area && ../src/ack 4000 --ws-loopback 18890
-```
-
-(Replace `4000` with whatever telnet port is desired.)
+`src/startup` is updated as part of the src/ changes above — no separate
+operational step is needed.
 
 ## Trade-offs
 
@@ -237,7 +248,7 @@ is reused directly.
 |-----------|--------|
 | `src/comm.c` | Parse `--ws-loopback <port>`; open second loopback socket; pass both to `game_loop()` |
 | `src/socket.c` | `init_socket()` gains `bind_addr` param; `game_loop()` selects on two control fds |
+| `src/startup` | Add `ws_port=18890`; update run line to pass `--ws-loopback` |
 | nginx config | New `ackmud-wss.conf` — proxy `8890 (wss)` → `18890 (ws loopback)` |
 | Firewall | Block `18890` from external traffic; telnet port remains open |
-| Startup command | `ack 4000 --ws-loopback 18890` |
 | TLS certificate | Reuse existing Let's Encrypt cert; add post-renewal reload hook |
