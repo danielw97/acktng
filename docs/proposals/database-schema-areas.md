@@ -1,4 +1,4 @@
-# Proposal: Move Area, Help, Shelp, and Lore Data to PostgreSQL
+# Proposal: Move Area, Help, Shelp, Lore, Data, and Player Files to PostgreSQL
 
 **Status:** Draft
 **Branch:** `claude/database-schema-areas-vEeBw`
@@ -12,9 +12,11 @@ ACK!TNG currently stores all game content in flat text files:
 - **45 `.are` files** — area data (rooms, mobs, objects, resets, shops, specials)
 - **422 `help/` files** — in-game player help entries
 - **401 `shelp/` files** — staff/spell/skill help entries
-- **100 `docs/lore/` files** — world-building source material that generates `lore/` runtime files
+- **144 `lore/` files** — runtime world lore entries served to players in-game
+- **9 `data/` files** — runtime server state: bans, clans, socials, corpses, brands, room marks, rulers, system data
+- **`player/` directory** — one flat text file per player character
 
-All four stores share the same friction points as the game world grows:
+All six stores share the same friction points as the game world grows:
 
 - **No referential integrity.** A reset can reference a mob vnum that doesn't exist. Cross-area exits can point nowhere. There is no enforcement layer.
 - **No queryability.** Finding all mobs with a given act flag, all help entries with a given keyword, or all lore entries for a specific city requires `grep` over hundreds of files.
@@ -25,7 +27,7 @@ All four stores share the same friction points as the game world grows:
 
 The goal of this proposal is to define a PostgreSQL database schema and migration strategy that:
 
-1. Captures 100% of the semantic content currently stored in `.are`, `help/`, `shelp/`, and `lore/` files.
+1. Captures 100% of the semantic content currently stored in `.are`, `help/`, `shelp/`, `lore/`, `data/`, and `player/` files.
 2. Allows future Claude sessions (and any other tooling) to read and write content via standard SQL from any machine.
 3. Keeps the C server's load path simple — replacing file I/O with `libpq` calls.
 4. Is fully reversible: the database can regenerate the original flat files for inspection or rollback.
@@ -40,16 +42,19 @@ The goal of this proposal is to define a PostgreSQL database schema and migratio
 - All `.are` sub-records: room exits, extra descriptions, object affects, mobile loot tables, AI prompts
 - All 422 `help/` files
 - All 401 `shelp/` files
-- All 100 `docs/lore/` source files (and the derived `lore/` runtime files)
-- A unified migration tool (`src/tools/import_to_db.c`) to import all four content stores
+- All 144 `lore/` runtime files (the files the server reads at boot; `docs/lore/` source files are **not** touched)
+- All `data/` runtime state files: `bans.lst`, `brands.lst`, `corpses.lst`, `roommarks.lst`, `rulers.lst`, `clandata.dat`, `socials.txt`, `sysdat.bln`, `system.dat`
+- All player character files under `player/`
+- A unified migration tool (`src/tools/import_to_db.c`) to import all six content stores
 - An export tool (`src/tools/db_to_files.c`) to regenerate flat files from the database
-- Updated `src/db.c` load functions to read from PostgreSQL
+- Updated load functions in `src/db.c` and `src/save/` to read from PostgreSQL
 - Unit tests for the migration and export round-trip
 
 ### Out of Scope
-- Player save files (`player/` directory) — remain as flat files
-- Runtime data files (`data/` directory — bans, clans, socials, etc.)
+- `docs/lore/` — the human-authored source documents; these remain in `docs/lore/` and in version control unchanged
 - Online area editing commands (OLC) — a follow-on proposal
+- `data/training/` and `data/knowledge/` — generated ML datasets, not server runtime state
+- `data/chest/` — player-owned in-game chests (complex nested format; follow-on proposal)
 
 ---
 
@@ -362,7 +367,7 @@ CREATE TABLE shelp_entries (
 
 ### 4.15 `lore_topics` Table
 
-Corresponds to individual files in `lore/`. One row per file; holds the shared keyword list.
+Corresponds to individual runtime files in `lore/` (not `docs/lore/`). One row per file; holds the shared keyword list.
 
 ```sql
 CREATE TABLE lore_topics (
@@ -391,7 +396,216 @@ CREATE TABLE lore_entries (
 - `flags` encodes city and race bits as defined in `docs/lore_file_spec.md` (bits 0–4 = cities, bits 5–14 = races).
 - The default entry always has `seq = 1` and `flags = 0`. The server selects the best match by flag specificity at runtime — this logic is unchanged; only the data source changes.
 
-### 4.17 `schema_version` Table
+### 4.17 `bans` Table
+
+Corresponds to `data/bans.lst`. One row per ban entry.
+
+```sql
+CREATE TABLE bans (
+    id         SERIAL  PRIMARY KEY,
+    ban_type   INTEGER NOT NULL DEFAULT 0,  -- 0=IP, 1=prefix, 2=all
+    address    TEXT    NOT NULL,            -- IP or hostname pattern
+    banned_by  TEXT    NOT NULL DEFAULT ''  -- immortal who set the ban
+);
+```
+
+### 4.18 `socials` Table
+
+Corresponds to `data/socials.txt`. One row per social command. The count line at the top of the file is derived from `COUNT(*)` and not stored.
+
+```sql
+CREATE TABLE socials (
+    id            SERIAL PRIMARY KEY,
+    name          TEXT   NOT NULL UNIQUE,
+    char_no_arg   TEXT   NOT NULL DEFAULT '',
+    others_no_arg TEXT   NOT NULL DEFAULT '',
+    char_found    TEXT   NOT NULL DEFAULT '',
+    others_found  TEXT   NOT NULL DEFAULT '',
+    vict_found    TEXT   NOT NULL DEFAULT '',
+    char_auto     TEXT   NOT NULL DEFAULT '',
+    others_auto   TEXT   NOT NULL DEFAULT ''
+);
+```
+
+Each tilde-terminated field from the file maps to one column. The nine fields correspond to the nine `~`-terminated lines in `socials.txt` order.
+
+### 4.19 `clans` Table
+
+Corresponds to `data/clandata.dat`. The file stores a fixed 11-clan array with per-clan war matrices and counters.
+
+```sql
+CREATE TABLE clans (
+    id            INTEGER PRIMARY KEY,   -- 0-based clan index (matches C array)
+    name          TEXT    NOT NULL DEFAULT '',
+    war_count     INTEGER NOT NULL DEFAULT 0,
+    win_count     INTEGER NOT NULL DEFAULT 0,
+    loss_count    INTEGER NOT NULL DEFAULT 0,
+    member_count  INTEGER NOT NULL DEFAULT 0,
+    gold          INTEGER NOT NULL DEFAULT 0,
+    -- war relationship matrix (11 slots × 11 slots stored as flat arrays)
+    war_matrix    INTEGER[] NOT NULL DEFAULT '{}'  -- 11 elements
+);
+```
+
+**Note:** `war_matrix` is a PostgreSQL `INTEGER[]` array of 11 elements (one slot per possible opponent clan). The C load code reads this as a fixed-size `int[MAX_CLAN][MAX_CLAN]` matrix.
+
+### 4.20 `rulers` Table
+
+Corresponds to `data/rulers.lst`. Stores named ruler entries (empty file = no rulers).
+
+```sql
+CREATE TABLE rulers (
+    id    SERIAL PRIMARY KEY,
+    name  TEXT   NOT NULL UNIQUE
+);
+```
+
+### 4.21 `brands` Table
+
+Corresponds to `data/brands.lst`. Each brand record documents an item that has been branded by an immortal.
+
+```sql
+CREATE TABLE brands (
+    id          SERIAL PRIMARY KEY,
+    branded_by  TEXT   NOT NULL,
+    item_name   TEXT   NOT NULL,
+    brand_date  TEXT   NOT NULL,
+    description TEXT   NOT NULL DEFAULT ''
+);
+```
+
+### 4.22 `room_marks` Table
+
+Corresponds to `data/roommarks.lst`. Stores persistent room marks set by players or staff.
+
+```sql
+CREATE TABLE room_marks (
+    id        SERIAL  PRIMARY KEY,
+    room_vnum INTEGER NOT NULL,
+    mark_text TEXT    NOT NULL
+);
+```
+
+### 4.23 `corpses` Table
+
+Corresponds to `data/corpses.lst`. Each row is one persisted corpse object with its nested inventory.
+
+```sql
+CREATE TABLE corpses (
+    id           SERIAL  PRIMARY KEY,
+    where_vnum   INTEGER NOT NULL,
+    nest         INTEGER NOT NULL DEFAULT 0,  -- nesting depth (0 = top-level)
+    name         TEXT    NOT NULL,
+    short_descr  TEXT    NOT NULL,
+    description  TEXT    NOT NULL,
+    vnum         INTEGER NOT NULL DEFAULT 0,
+    extra_flags  BIGINT  NOT NULL DEFAULT 0,
+    wear_flags   INTEGER NOT NULL DEFAULT 0,
+    wear_loc     INTEGER NOT NULL DEFAULT -1,
+    class_flags  INTEGER NOT NULL DEFAULT 0,
+    item_type    INTEGER NOT NULL DEFAULT 0,
+    weight       INTEGER NOT NULL DEFAULT 0,
+    level        INTEGER NOT NULL DEFAULT 0,
+    timer        INTEGER NOT NULL DEFAULT 0,
+    cost         INTEGER NOT NULL DEFAULT 0,
+    value_0      INTEGER NOT NULL DEFAULT 0,
+    value_1      INTEGER NOT NULL DEFAULT 0,
+    value_2      INTEGER NOT NULL DEFAULT 0,
+    value_3      INTEGER NOT NULL DEFAULT 0,
+    parent_id    INTEGER REFERENCES corpses(id)  -- NULL = top-level corpse
+);
+```
+
+Nested inventory objects (items inside a corpse container) are stored as rows with `parent_id` pointing to their containing corpse row.
+
+### 4.24 `sysdata` Table
+
+Corresponds to `data/sysdat.bln` and `data/system.dat`. Stores server-wide scalar configuration values as a single row.
+
+```sql
+CREATE TABLE sysdata (
+    id             INTEGER PRIMARY KEY DEFAULT 1 CHECK(id = 1),  -- singleton
+    -- system.dat fields (tilde-terminated strings)
+    mud_name       TEXT    NOT NULL DEFAULT '',
+    admin_email    TEXT    NOT NULL DEFAULT '',
+    login_msg      TEXT    NOT NULL DEFAULT '',
+    motd           TEXT    NOT NULL DEFAULT '',
+    welcome        TEXT    NOT NULL DEFAULT '',
+    news           TEXT    NOT NULL DEFAULT '',
+    int_val_1      INTEGER NOT NULL DEFAULT 0,
+    int_val_2      INTEGER NOT NULL DEFAULT 0,
+    -- sysdat.bln fields (8 integers)
+    bln_val_0      INTEGER NOT NULL DEFAULT 0,
+    bln_val_1      INTEGER NOT NULL DEFAULT 0,
+    bln_val_2      INTEGER NOT NULL DEFAULT 0,
+    bln_val_3      INTEGER NOT NULL DEFAULT 0,
+    bln_val_4      INTEGER NOT NULL DEFAULT 0,
+    bln_val_5      INTEGER NOT NULL DEFAULT 0,
+    bln_val_6      INTEGER NOT NULL DEFAULT 0,
+    bln_val_7      INTEGER NOT NULL DEFAULT 0
+);
+INSERT INTO sysdata (id) VALUES (1);
+```
+
+The `CHECK(id = 1)` constraint enforces the singleton pattern — there is exactly one system data row.
+
+### 4.25 `players` Table
+
+Corresponds to flat files under `player/<initial>/<Name>`. One row per player character. Fields map 1:1 to the sections written by `fwrite_char()` in `src/save/save_players.c`.
+
+```sql
+CREATE TABLE players (
+    id              SERIAL  PRIMARY KEY,
+    name            TEXT    NOT NULL UNIQUE,
+    pwd_hash        TEXT    NOT NULL,          -- crypt(3) hash
+    title           TEXT    NOT NULL DEFAULT '',
+    description     TEXT    NOT NULL DEFAULT '',
+    race            INTEGER NOT NULL DEFAULT 0,
+    sex             INTEGER NOT NULL DEFAULT 0,
+    class           INTEGER NOT NULL DEFAULT 0,
+    level           INTEGER NOT NULL DEFAULT 0,
+    trust           INTEGER NOT NULL DEFAULT 0,
+    played          INTEGER NOT NULL DEFAULT 0,  -- seconds of play time
+    last_login      TIMESTAMP WITH TIME ZONE,
+    hit             INTEGER NOT NULL DEFAULT 0,
+    max_hit         INTEGER NOT NULL DEFAULT 0,
+    mana            INTEGER NOT NULL DEFAULT 0,
+    max_mana        INTEGER NOT NULL DEFAULT 0,
+    move            INTEGER NOT NULL DEFAULT 0,
+    max_move        INTEGER NOT NULL DEFAULT 0,
+    gold            INTEGER NOT NULL DEFAULT 0,
+    exp             INTEGER NOT NULL DEFAULT 0,
+    act_flags       BIGINT  NOT NULL DEFAULT 0,
+    affected_by     INTEGER NOT NULL DEFAULT 0,
+    position        INTEGER NOT NULL DEFAULT 0,
+    practice        INTEGER NOT NULL DEFAULT 0,
+    quest_points    INTEGER NOT NULL DEFAULT 0,
+    str             INTEGER NOT NULL DEFAULT 0,
+    int_            INTEGER NOT NULL DEFAULT 0,  -- "int" is a reserved word
+    wis             INTEGER NOT NULL DEFAULT 0,
+    dex             INTEGER NOT NULL DEFAULT 0,
+    con             INTEGER NOT NULL DEFAULT 0,
+    str_mod         INTEGER NOT NULL DEFAULT 0,
+    int_mod         INTEGER NOT NULL DEFAULT 0,
+    wis_mod         INTEGER NOT NULL DEFAULT 0,
+    dex_mod         INTEGER NOT NULL DEFAULT 0,
+    con_mod         INTEGER NOT NULL DEFAULT 0,
+    -- serialised blobs for variable-length sub-structures
+    skills          JSONB   NOT NULL DEFAULT '{}',  -- learned[] array: {name: pct}
+    affects         JSONB   NOT NULL DEFAULT '[]',  -- AFFECT_DATA list
+    inventory       JSONB   NOT NULL DEFAULT '[]',  -- worn + carried objects (recursive)
+    -- raw save file preserved for round-trip fidelity during transition
+    raw_save        TEXT
+);
+```
+
+**Notes:**
+- `skills` is a JSONB object mapping skill name → learned percentage (e.g. `{"sword": 75, "dodge": 50}`).
+- `affects` is a JSONB array of affect records: `[{"type": 3, "duration": 20, "location": 1, "modifier": 5, "bitvector": 0}]`.
+- `inventory` is a JSONB array of object trees mirroring the C `OBJ_DATA` structure, with nested `contains` arrays for containers. The full object schema matches the fields in `corpses` (§4.23) plus wear location.
+- `raw_save` stores the original flat-file text verbatim. During Phase 6 (transition), the server can fall back to re-parsing `raw_save` if any field is missing or malformed. It is set to NULL once the row has been fully round-tripped.
+
+### 4.26 `schema_version` Table
 
 ```sql
 CREATE TABLE schema_version (
@@ -498,21 +712,25 @@ WHERE a1.id IS DISTINCT FROM a2.id;
 
 The complete `CREATE TABLE` and `CREATE VIEW` statements, in dependency order, are stored in `area/schema.sql`. This file is the authoritative schema definition. The server applies it on first connect if the `schema_version` table does not exist; otherwise it checks that the current version matches the compiled-in expected version and refuses to start if they differ.
 
+The schema covers all six content stores: areas (§4.1–§4.12), help/shelp (§4.13–§4.14), lore (§4.15–§4.16), data/ runtime state (§4.17–§4.24), and player characters (§4.25).
+
 ---
 
 ## 7. Migration Strategy
 
 ### 7.1 Import Tool: `src/tools/import_to_db.c`
 
-A standalone C program (not linked into the server binary) that imports all four content stores:
+A standalone C program (not linked into the server binary) that imports all six content stores:
 
 1. Reads `area/area.lst` and parses all `.are` files using the same logic as `db.c` loaders.
 2. Reads all files from `help/` and parses the `level / keywords / --- / body` format.
 3. Reads all files from `shelp/` with the same format.
-4. Reads all files from `lore/` and parses the multi-entry `keywords / [flags / ---] / body` format.
-5. Writes everything to PostgreSQL using `libpq` prepared statements inside a single transaction.
-6. Generates per-area views after all areas are inserted.
-7. Reports validation errors (duplicate vnums, malformed files, unknown flags) to stderr.
+4. Reads all files from `lore/` (the runtime files, **not** `docs/lore/`) and parses the multi-entry `keywords / [flags / ---] / body` format.
+5. Reads all `data/` runtime state files: `bans.lst`, `brands.lst`, `corpses.lst`, `roommarks.lst`, `rulers.lst`, `clandata.dat`, `socials.txt`, `sysdat.bln`, `system.dat`.
+6. Reads all player character files under `player/<initial>/<Name>` using the same field-by-field parsing as `fread_char()` in `src/save/save_players.c`; stores the raw file text in `players.raw_save` as a fallback.
+7. Writes everything to PostgreSQL using `libpq` prepared statements inside a single transaction per content store.
+8. Generates per-area views after all areas are inserted.
+9. Reports validation errors (duplicate vnums, malformed files, unknown flags, unresolvable player skill names) to stderr.
 
 Build target: `make tools/import_to_db`
 Usage: `./tools/import_to_db "host=... dbname=acktng user=ack"`
@@ -525,13 +743,17 @@ A standalone C program that reads from PostgreSQL and regenerates the original f
 - `help/` files → `help/export/`
 - `shelp/` files → `shelp/export/`
 - `lore/` files → `lore/export/` (multi-entry format with flags lines)
+- `data/` files → `data/export/` (each file in its original format)
+- `player/` files → `player/export/<initial>/<Name>` (same field layout as original save files)
 
 The exported files are semantically identical to the originals. This serves as a round-trip regression test and a rollback path.
 
 Build target: `make tools/db_to_files`
-Flags: `--areas-only`, `--help-only`, `--lore-only`, `--views-only`
+Flags: `--areas-only`, `--help-only`, `--lore-only`, `--data-only`, `--players-only`, `--views-only`
 
-### 7.3 Server Load Path Changes: `src/db.c`
+### 7.3 Server Load Path Changes
+
+#### `src/db.c` — area, help, shelp, lore
 
 The existing file-based loaders are replaced with PostgreSQL-backed equivalents:
 
@@ -549,13 +771,35 @@ db_load_shelps_from_db()     -- replaces file-based shelp/ loading
 db_load_lore_from_db()       -- replaces file-based lore/ loading
 ```
 
-Each function opens a `PQexec()` SELECT, iterates rows via `PQgetvalue()`, and populates the same in-memory structs as before. The `AREA_DATA`, `ROOM_INDEX_DATA`, `MOB_INDEX_DATA`, `HELP_DATA`, `LORE_DATA`, etc. structs are unchanged — only the data source changes.
+#### `src/save/` — data/ runtime state and player files
 
-On boot, the server:
-1. Opens the connection using the string in `area/db.conf` (falling back to PG environment variables).
-2. Checks `schema_version` — aborts if the version does not match `DB_SCHEMA_VERSION` compiled into the binary.
-3. Runs all `db_load_*` functions in dependency order (areas → rooms → mobiles → objects → resets → shops → specials → objfuns → helps → shelps → lore).
-4. Closes the connection. The server does not hold an open DB connection during normal play.
+The existing `src/save/save_*.c` file-based functions are replaced with PostgreSQL-backed equivalents:
+
+```
+db_load_bans()               -- replaces load_bans()       in save_area_files.c
+db_load_socials()            -- replaces load_socials()    in save_socials.c
+db_load_clans()              -- replaces load_clans()      in save_area_files.c
+db_load_rulers()             -- replaces load_rulers()     in save_rulers.c
+db_load_brands()             -- replaces load_brands()     (data/brands.lst)
+db_load_room_marks()         -- replaces load_room_marks() (data/roommarks.lst)
+db_load_corpses()            -- replaces load_corpses()    (data/corpses.lst)
+db_load_sysdata()            -- replaces load_sysdata()    in save_sysdata.c
+db_load_char_obj()           -- replaces load_char_obj()   in save_players.c
+db_save_char_obj()           -- replaces save_char_obj()   in save_players.c (live writes)
+db_save_bans()               -- replaces save_bans()       (live writes)
+db_save_socials()            -- replaces save_socials()    (live writes)
+db_save_clans()              -- replaces save_clans()      (live writes)
+db_save_corpses()            -- replaces save_corpses()    (live writes)
+```
+
+Unlike area/help/shelp/lore (which are read-only at boot), the data/ and player/ stores are written during normal play. The DB-backed save functions must update the database immediately on each write event — the existing file-write semantics (write to `.temp`, then rename) are replaced with a single `UPDATE` or `INSERT ... ON CONFLICT DO UPDATE` within a transaction.
+
+#### Boot sequence
+
+1. Open the connection using `area/db.conf` (falling back to PG environment variables).
+2. Check `schema_version` — abort if it does not match `DB_SCHEMA_VERSION` compiled into the binary.
+3. Run all `db_load_*` functions in dependency order: areas → rooms → mobiles → objects → resets → shops → specials → objfuns → helps → shelps → lore → bans → socials → clans → rulers → brands → room marks → corpses → sysdata.
+4. Close the boot-time connection. Player loads (`db_load_char_obj`) and live saves (`db_save_*`) open short-lived connections for each operation. (A connection pool is out of scope for this proposal.)
 
 ### 7.4 Migration Phases
 
@@ -564,11 +808,11 @@ On boot, the server:
 | 1 | Provision PostgreSQL instance; create `acktng` database and `ack` role | Yes |
 | 2 | Add `libpq` as a build dependency (`-lpq`) | Yes |
 | 3 | Write `area/schema.sql` and apply it | Yes |
-| 4 | Write and run `import_to_db` on all content stores; verify row counts | Yes |
+| 4 | Write and run `import_to_db` on all six content stores; verify row counts | Yes |
 | 5 | Write `db_to_files`; verify round-trip diff against originals | Yes |
-| 6 | Write new `db.c` load functions behind `#ifdef USE_DB_LOAD` | Yes |
+| 6 | Write new `db.c` and `save/` DB load/save functions behind `#ifdef USE_DB_LOAD` | Yes |
 | 7 | Run integration tests with `USE_DB_LOAD` enabled | Yes |
-| 8 | Remove `#ifdef` and old file-based load code | No (originals retained in `*/legacy/`) |
+| 8 | Remove `#ifdef` and old file-based load/save code | No (originals retained in `*/legacy/`) |
 
 ---
 
@@ -576,10 +820,15 @@ On boot, the server:
 
 | File | Change |
 |------|--------|
-| `src/db.c` | Replace all file-based loaders with `libpq`-backed equivalents |
+| `src/db.c` | Replace all file-based area/help/shelp/lore loaders with `libpq`-backed equivalents |
+| `src/save/save_players.c` | Replace `load_char_obj`/`save_char_obj` with DB-backed equivalents |
+| `src/save/save_socials.c` | Replace `load_socials`/`save_socials` with DB-backed equivalents |
+| `src/save/save_rulers.c` | Replace `load_rulers`/`save_rulers` with DB-backed equivalents |
+| `src/save/save_sysdata.c` | Replace `load_sysdata`/`save_sysdata` with DB-backed equivalents |
+| `src/save/save_area_files.c` | Replace `load_bans`/`save_bans`, `load_clans`/`save_clans` with DB-backed equivalents |
 | `src/Makefile` | Add `-lpq` to `LIBS`; add `tools/` build targets |
-| `src/tools/import_to_db.c` | New: import all four content stores |
-| `src/tools/db_to_files.c` | New: export all four content stores |
+| `src/tools/import_to_db.c` | New: import all six content stores |
+| `src/tools/db_to_files.c` | New: export all six content stores |
 | `src/tests/test_db_roundtrip.c` | New: unit test for import→export round-trip |
 | `area/schema.sql` | New: canonical schema DDL |
 | `area/db.conf` | New: libpq connection string (gitignored) |
@@ -587,10 +836,15 @@ On boot, the server:
 | `area/legacy/` | New: all original `.are` files |
 | `help/legacy/` | New: all original `help/` files |
 | `shelp/legacy/` | New: all original `shelp/` files |
-| `lore/legacy/` | New: all original `lore/` files |
+| `lore/legacy/` | New: all original `lore/` runtime files |
+| `data/legacy/` | New: all original `data/` runtime state files |
+| `player/legacy/` | New: snapshot of all player files at migration time |
 | `docs/area_db_spec.md` | New: promoted from this proposal after implementation |
 | `docs/help_file_spec.md` | Update: add database authoring section |
 | `docs/lore_file_spec.md` | Update: add database authoring section |
+| `docs/player_file_spec.md` | New: document player save file format and DB schema |
+
+**Not affected:** `docs/lore/` — source lore documents remain unchanged in version control.
 
 `area/db.conf` is added to `.gitignore`. The canonical source of truth for schema structure is `area/schema.sql`; for content, the database itself is authoritative (the flat files in `*/legacy/` serve only as the migration input and rollback archive).
 
@@ -712,7 +966,8 @@ fi
 - All content queryable via standard SQL from any machine.
 - Transactional writes: partial updates cannot corrupt content.
 - Future tooling (web editor, admin panel, Claude sessions) needs no bespoke parser.
-- Help and lore content is queryable alongside area data in joins.
+- Help, lore, player, and area data are all queryable in joins.
+- Player character data gains ACID durability — no more half-written `.temp` files.
 
 ### Risks and Mitigations
 
@@ -720,10 +975,13 @@ fi
 |------|-----------|
 | PostgreSQL not available on build host | Available in every major Linux distro (`apt install postgresql libpq-dev`) |
 | Network partition between game host and DB host at boot | Server aborts cleanly with a clear error message; keep DB on LAN or same host if desired |
-| Migration loses data (parsing edge cases) | Round-trip test: import all files, export back, diff against originals |
+| Network partition during live player save | `db_save_char_obj()` retries once; on second failure logs and falls back to writing `raw_save` text to a local emergency `.plr` file |
+| Migration loses data (parsing edge cases) | Round-trip test: import all files, export back, diff against originals; `raw_save` column preserved during transition |
 | `resets.seq` ordering fragile if rows are reordered | Load always uses `ORDER BY seq`; `seq` is immutable once set |
 | 64-bit `act_flags` / `extra_flags` stored as signed `BIGINT` | C load code casts via `(unsigned long long)(int64_t)`; audit areas for bit-63 usage before migration |
-| `db.conf` contains credentials | Gitignored; use `sslmode=require` and a restricted DB role with SELECT/INSERT/UPDATE on area tables only |
+| `db.conf` contains credentials | Gitignored; use `sslmode=require` and a restricted DB role with SELECT/INSERT/UPDATE/DELETE on all tables |
+| Player inventory JSONB is opaque to SQL queries | A follow-on `player_items` normalisation table can be added without changing the server code path |
+| `data/chest/` contains nested objects not covered by this proposal | `data/chest/` left as flat files; added to future work |
 
 ---
 
@@ -741,22 +999,37 @@ fi
 
 For the implementing Claude session:
 
+**Setup**
 - [ ] Provision PostgreSQL; create `acktng` database and `ack` role with appropriate grants
 - [ ] Add `area/db.conf` to `.gitignore`
 - [ ] Add `-lpq` to `src/Makefile` `LIBS`
-- [ ] Write `area/schema.sql` with all DDL from Section 4
+- [ ] Write `area/schema.sql` with all DDL from Section 4 (all 26 tables)
 - [ ] Apply `schema.sql` to the database
-- [ ] Write `src/tools/import_to_db.c`: import areas, help, shelp, lore
-- [ ] Write `src/tools/db_to_files.c`: export all four stores + `--views-only`
+
+**Migration tools**
+- [ ] Write `src/tools/import_to_db.c`: import areas, help, shelp, `lore/` (runtime), `data/`, `player/`
+- [ ] Write `src/tools/db_to_files.c`: export all six stores + `--views-only`
 - [ ] Write `src/tests/test_db_roundtrip.c`: unit test
-- [ ] Run import; verify row counts against file counts
+- [ ] Run import; verify row counts against file counts for all six stores
 - [ ] Run export; diff against originals (no semantic differences expected)
+
+**Server integration — area/help/shelp/lore**
 - [ ] Write `db_load_*` functions in `src/db.c` behind `#ifdef USE_DB_LOAD`
-- [ ] Run `make unit-tests` with `USE_DB_LOAD` enabled (flat-file fallback active; integration test unaffected)
-- [ ] Remove `#ifdef USE_DB_LOAD` and old file-based load code (Phase 8)
+- [ ] Run `make unit-tests` with `USE_DB_LOAD` enabled (flat-file fallback active)
+
+**Server integration — data/ and player/**
+- [ ] Write `db_load_*` / `db_save_*` functions in `src/save/` behind `#ifdef USE_DB_LOAD`
+- [ ] Implement emergency fallback in `db_save_char_obj()` (write raw `.plr` on DB failure)
+- [ ] Run `make unit-tests` with `USE_DB_LOAD` enabled
+
+**Phase 8 cut-over**
+- [ ] Remove `#ifdef USE_DB_LOAD` and old file-based load/save code
 - [ ] Update `integration-test.sh` with PostgreSQL setup/teardown phase (Section 9.2)
 - [ ] Verify `make unit-tests` still passes (integration test now spins up its own cluster)
-- [ ] Move flat files to `*/legacy/` directories
+- [ ] Move flat files to `*/legacy/` directories (`area/`, `help/`, `shelp/`, `lore/`, `data/`, `player/`)
+
+**Documentation**
+- [ ] Write `docs/player_file_spec.md` documenting player save format and DB schema
 - [ ] Update `docs/area_db_spec.md` with finalized schema
 - [ ] Update `docs/help_file_spec.md` with database authoring workflow
-- [ ] Update `docs/lore_file_spec.md` with database authoring workflow
+- [ ] Update `docs/lore_file_spec.md` with database authoring workflow (runtime `lore/` only; `docs/lore/` unchanged)
