@@ -1247,7 +1247,6 @@ struct lookup_extended_type
  * skill_level array.  The tier is the range (0-5, 6-17, or 18-23) that
  * has at least one non-NO_USE entry.  Returns 0 if no valid entry found.
  */
-#define SKILL_TIER(sn) skill_get_tier(sn)
 int skill_get_tier(int sn);
 
 struct skill_type

@@ -129,7 +129,10 @@ char *get_sector_name(int sector)
  * This code written by Altrag for Ack!Mud
  */
 
-#define iseol(c) ((c) == '\n' || (c) == '\r')
+static inline bool iseol(char c)
+{
+   return c == '\n' || c == '\r';
+}
 
 /* Like one_argument but saves case, and if len isnt NULL, fills it in
  * with the length.  Also accounts for color.  Does NOT account for

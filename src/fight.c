@@ -257,9 +257,9 @@ void violence_update(void)
             }
          }
       }
-      CUREF(rch_next);
+      char_unreference(&rch_next);
    }
-   CUREF(ch_next);
+   char_unreference(&ch_next);
    return;
 }
 
@@ -1398,7 +1398,7 @@ void stop_fighting(CHAR_DATA *ch, bool fBoth)
          update_pos(fch);
       }
    }
-   CUREF(fch_next);
+   char_unreference(&fch_next);
    return;
 }
 

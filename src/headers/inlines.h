@@ -50,12 +50,12 @@ bool can_see(CHAR_DATA *looker, CHAR_DATA *victim);
 
 static inline bool IS_NPC(const CHAR_DATA *ch)
 {
-   return IS_SET(ch->act, ACT_IS_NPC);
+   return IS_SET(ch->act, ACT_IS_NPC) != 0;
 }
 
 static inline bool IS_AFFECTED(const CHAR_DATA *ch, int sn)
 {
-   return IS_SET(ch->affected_by, sn);
+   return IS_SET(ch->affected_by, sn) != 0;
 }
 
 static inline bool IS_GOOD(const CHAR_DATA *ch)
@@ -75,12 +75,12 @@ static inline bool IS_AWAKE(const CHAR_DATA *ch)
 
 static inline bool IS_OUTSIDE(const CHAR_DATA *ch)
 {
-   return !IS_SET(ch->in_room->room_flags, ROOM_INDOORS);
+   return IS_SET(ch->in_room->room_flags, ROOM_INDOORS) == 0;
 }
 
 static inline bool IS_UNDEAD(const CHAR_DATA *ch)
 {
-   return IS_NPC(ch) && IS_SET(ch->act, ACT_UNDEAD);
+   return IS_NPC(ch) && IS_SET(ch->act, ACT_UNDEAD) != 0;
 }
 
 /*
@@ -99,17 +99,17 @@ static inline bool IS_HERO(const CHAR_DATA *ch)
 
 static inline bool PLAYTESTER(const CHAR_DATA *ch)
 {
-   return !IS_NPC(ch) && IS_SET(ch->pcdata->pflags, PFLAG_TESTER);
+   return !IS_NPC(ch) && IS_SET(ch->pcdata->pflags, PFLAG_TESTER) != 0;
 }
 
 static inline bool HAS_BODY(const CHAR_DATA *ch)
 {
-   return !IS_NPC(ch) || !IS_SET(ch->act, ACT_NO_BODY);
+   return !IS_NPC(ch) || IS_SET(ch->act, ACT_NO_BODY) == 0;
 }
 
 static inline bool HAS_MIND(const CHAR_DATA *ch)
 {
-   return !IS_NPC(ch) || !IS_SET(ch->act, ACT_NOMIND);
+   return !IS_NPC(ch) || IS_SET(ch->act, ACT_NOMIND) == 0;
 }
 
 static inline int ADEPT_LEVEL(const CHAR_DATA *ch)
@@ -184,12 +184,12 @@ static inline char *PERS(const CHAR_DATA *ch, CHAR_DATA *looker)
 
 static inline bool CAN_WEAR(const OBJ_DATA *obj, int part)
 {
-   return IS_SET(obj->wear_flags, part);
+   return IS_SET(obj->wear_flags, part) != 0;
 }
 
 static inline bool IS_OBJ_STAT(const OBJ_DATA *obj, int stat)
 {
-   return IS_SET(obj->extra_flags, stat);
+   return IS_SET(obj->extra_flags, stat) != 0;
 }
 
 static inline bool IS_WEAPON(const OBJ_DATA *eq)

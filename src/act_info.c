@@ -4030,7 +4030,7 @@ void do_slist(CHAR_DATA *ch, char *argument)
             break;
          if (skill_table[sn].skill_level[class] != level)
             continue;
-         if ((adept_class) && (SKILL_TIER(sn) == ADEPT))
+         if ((adept_class) && (skill_get_tier(sn) == ADEPT))
          {
 
             if (skill_table[sn].skill_level[class] > MAX_ADEPT)
@@ -4065,7 +4065,7 @@ void do_slist(CHAR_DATA *ch, char *argument)
             if (col % 4 == 0)
                safe_strcat(MAX_STRING_LENGTH, buf1, "\n\r");
          }
-         else if ((remort_class) && (SKILL_TIER(sn) == REMORT))
+         else if ((remort_class) && (skill_get_tier(sn) == REMORT))
          {
 
             if (pSpell)
@@ -4097,7 +4097,7 @@ void do_slist(CHAR_DATA *ch, char *argument)
             if (col % 4 == 0)
                safe_strcat(MAX_STRING_LENGTH, buf1, "\n\r");
          }
-         else if ((!remort_class) && (!adept_class) && (SKILL_TIER(sn) == MORTAL))
+         else if ((!remort_class) && (!adept_class) && (skill_get_tier(sn) == MORTAL))
          {
             if (pSpell)
             {

@@ -2293,7 +2293,7 @@ void do_brandish(CHAR_DATA *ch, char *argument)
 
          obj_cast_spell(staff->value[3], staff->value[0], ch, vch, staff);
       }
-      CUREF(vch_next);
+      char_unreference(&vch_next);
    }
 
    if (--staff->value[2] <= 0)

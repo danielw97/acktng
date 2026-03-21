@@ -65,6 +65,6 @@ bool spell_shard_ward(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       if (vch->in_room->area == ch->in_room->area && IS_AWAKE(vch))
          send_to_char("A distant radiance pulses through the air.\n\r", vch);
    }
-   CUREF(vch_next);
+   char_unreference(&vch_next);
    return TRUE;
 }

@@ -811,7 +811,7 @@ static void purge_time_restricted_mobs(bool keep_fighting)
 
       extract_char(ch, TRUE);
    }
-   CUREF(ch_next);
+   char_unreference(&ch_next);
 }
 
 void mobile_update(void)
@@ -1003,7 +1003,7 @@ void mobile_update(void)
             move_char(ch, door);
       }
    }
-   CUREF(ch_next);
+   char_unreference(&ch_next);
    return;
 }
 
@@ -1038,7 +1038,7 @@ void clean_donate_rooms(void)
             if (number_range(0, 99) < chance)
                extract_obj(object);
          }
-         OUREF(obj_next);
+         obj_unreference(&obj_next);
       }
    }
    if ((room = get_room_index(ROOM_VNUM_WEAPON_DONATE)) != NULL)
@@ -1061,7 +1061,7 @@ void clean_donate_rooms(void)
             if (number_range(0, 99) < chance)
                extract_obj(object);
          }
-         OUREF(obj_next);
+         obj_unreference(&obj_next);
       }
    }
    if ((room = get_room_index(ROOM_VNUM_ARMOR_DONATE)) != NULL)
@@ -1084,7 +1084,7 @@ void clean_donate_rooms(void)
             if (number_range(0, 99) < chance)
                extract_obj(object);
          }
-         OUREF(obj_next);
+         obj_unreference(&obj_next);
       }
    }
 
@@ -1115,7 +1115,7 @@ void clean_donate_rooms(void)
                if (number_range(0, 99) < chance)
                   extract_obj(object);
             }
-            OUREF(obj_next);
+            obj_unreference(&obj_next);
          }
       }
    }
@@ -1630,7 +1630,7 @@ void char_update(void)
          damage(ch, ch, number_range(5, 10), TYPE_UNDEFINED);
       }
    }
-   CUREF(ch_next);
+   char_unreference(&ch_next);
 
    /*
     * Autosave and autoquit.
@@ -1651,7 +1651,7 @@ void char_update(void)
             do_quit(ch, "");
          }
       }
-      CUREF(ch_next);
+      char_unreference(&ch_next);
    }
 
    return;
@@ -1909,7 +1909,7 @@ void aggr_update(void)
                count++;
             }
          }
-         CUREF(vch_next);
+         char_unreference(&vch_next);
          if (victim == NULL)
          {
             /*
@@ -1931,9 +1931,9 @@ void aggr_update(void)
          else
             multi_hit(ch, victim, TYPE_UNDEFINED);
       }
-      CUREF(ch_next);
+      char_unreference(&ch_next);
    }
-   CUREF(wch_next);
+   char_unreference(&wch_next);
    return;
 }
 
