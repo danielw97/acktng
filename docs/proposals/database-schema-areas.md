@@ -374,7 +374,126 @@ This allows future migrations to gate on the current version.
 
 ---
 
-## 5. Full Schema DDL (for reference)
+## 5. Per-Area Views
+
+Each area gets a set of named views generated automatically during migration. These provide logical isolation — working on Midgaard means querying `midgaard_rooms`, `midgaard_mobiles`, etc. — while the data physically lives in a single file with one schema version and full cross-area foreign key support.
+
+Views are named `<keyword>_<entity>` where `keyword` is the area's `keyword` field (lowercased, spaces replaced with underscores). For areas without a keyword, the area `name` is slugified instead.
+
+### 5.1 View Pattern
+
+For each area, the migration tool generates:
+
+```sql
+-- Example for the area with keyword "midgaard"
+CREATE VIEW midgaard_rooms AS
+    SELECT * FROM rooms
+    WHERE area_id = (SELECT id FROM areas WHERE keyword = 'midgaard');
+
+CREATE VIEW midgaard_mobiles AS
+    SELECT * FROM mobiles
+    WHERE area_id = (SELECT id FROM areas WHERE keyword = 'midgaard');
+
+CREATE VIEW midgaard_objects AS
+    SELECT * FROM objects
+    WHERE area_id = (SELECT id FROM areas WHERE keyword = 'midgaard');
+
+CREATE VIEW midgaard_resets AS
+    SELECT * FROM resets
+    WHERE area_id = (SELECT id FROM areas WHERE keyword = 'midgaard')
+    ORDER BY seq;
+
+CREATE VIEW midgaard_shops AS
+    SELECT s.* FROM shops s
+    JOIN mobiles m ON s.keeper_vnum = m.vnum
+    WHERE m.area_id = (SELECT id FROM areas WHERE keyword = 'midgaard');
+
+CREATE VIEW midgaard_room_exits AS
+    SELECT re.* FROM room_exits re
+    JOIN rooms r ON re.room_vnum = r.vnum
+    WHERE r.area_id = (SELECT id FROM areas WHERE keyword = 'midgaard');
+
+CREATE VIEW midgaard_room_extra_descs AS
+    SELECT red.* FROM room_extra_descs red
+    JOIN rooms r ON red.room_vnum = r.vnum
+    WHERE r.area_id = (SELECT id FROM areas WHERE keyword = 'midgaard');
+
+CREATE VIEW midgaard_object_affects AS
+    SELECT oa.* FROM object_affects oa
+    JOIN objects o ON oa.obj_vnum = o.vnum
+    WHERE o.area_id = (SELECT id FROM areas WHERE keyword = 'midgaard');
+
+CREATE VIEW midgaard_object_extra_descs AS
+    SELECT oed.* FROM object_extra_descs oed
+    JOIN objects o ON oed.obj_vnum = o.vnum
+    WHERE o.area_id = (SELECT id FROM areas WHERE keyword = 'midgaard');
+
+CREATE VIEW midgaard_mobile_specials AS
+    SELECT ms.* FROM mobile_specials ms
+    JOIN mobiles m ON ms.mob_vnum = m.vnum
+    WHERE m.area_id = (SELECT id FROM areas WHERE keyword = 'midgaard');
+
+CREATE VIEW midgaard_object_functions AS
+    SELECT of.* FROM object_functions of
+    JOIN objects o ON of.obj_vnum = o.vnum
+    WHERE o.area_id = (SELECT id FROM areas WHERE keyword = 'midgaard');
+```
+
+### 5.2 View Generation
+
+Views are created by `are_to_db.c` immediately after importing each area, and can be regenerated at any time with:
+
+```sh
+./tools/db_to_are --views-only
+```
+
+This is useful after a schema migration that drops and recreates views.
+
+### 5.3 Using Views for Editing
+
+A future Claude session editing Midgaard can work entirely through the views:
+
+```sql
+-- Find all mobs in Midgaard above level 20
+SELECT vnum, short_descr, level FROM midgaard_mobiles WHERE level > 20;
+
+-- Find all locked doors in Midgaard
+SELECT r.name, re.direction, re.dest_vnum
+FROM midgaard_room_exits re
+JOIN midgaard_rooms r ON re.room_vnum = r.vnum
+WHERE re.exit_flags & 4 != 0;  -- bit 2 = locked
+
+-- Add a new room to Midgaard
+INSERT INTO rooms (vnum, area_id, name, description, room_flags, sector_type)
+VALUES (3099, (SELECT id FROM areas WHERE keyword = 'midgaard'),
+        'The Back Alley', 'A narrow alley behind the inn.\n', 0, 1);
+```
+
+Views are read-only (SQLite does not support updatable views without triggers), so all writes go to the underlying tables directly — but the `area_id` is always discoverable via `SELECT id FROM areas WHERE keyword = 'midgaard'`.
+
+### 5.4 Cross-Area Queries Still Work
+
+Because the views are just filters on the shared tables, cross-area queries require no special tooling:
+
+```sql
+-- Find all mobs named 'guard' across all areas
+SELECT m.vnum, m.short_descr, a.name AS area
+FROM mobiles m JOIN areas a ON m.area_id = a.id
+WHERE m.player_name LIKE '%guard%';
+
+-- Find all cross-area exits (exits where dest_vnum is in a different area)
+SELECT re.room_vnum, re.dest_vnum, a1.name AS from_area, a2.name AS to_area
+FROM room_exits re
+JOIN rooms r ON re.room_vnum = r.vnum
+JOIN areas a1 ON r.area_id = a1.id
+LEFT JOIN rooms r2 ON re.dest_vnum = r2.vnum
+LEFT JOIN areas a2 ON r2.area_id = a2.id
+WHERE a1.id != a2.id;
+```
+
+---
+
+## 6. Full Schema DDL (for reference)
 
 The complete `CREATE TABLE` statements above, assembled in dependency order, will be written to `area/schema.sql`. The server will create the database from this file on first boot if `areas.db` does not exist, then refuse to start if the schema version does not match the compiled-in expected version.
 
@@ -497,8 +616,8 @@ For the implementing Claude session:
 - [ ] Vendor `sqlite3` amalgamation into `src/sqlite3.c` and `src/sqlite3.h`
 - [ ] Update `src/Makefile` to compile `sqlite3.c` and link it
 - [ ] Write `area/schema.sql` with all `CREATE TABLE` statements from Section 4
-- [ ] Write `src/tools/are_to_db.c`: import tool
-- [ ] Write `src/tools/db_to_are.c`: export/round-trip tool
+- [ ] Write `src/tools/are_to_db.c`: import tool (generates per-area views after each area import)
+- [ ] Write `src/tools/db_to_are.c`: export/round-trip tool (include `--views-only` flag)
 - [ ] Write `src/tests/test_db_roundtrip.c`: unit test
 - [ ] Modify `src/db.c`: add SQLite load functions behind `#ifdef USE_DB_LOAD`
 - [ ] Run `make unit-tests` with `USE_DB_LOAD` enabled
