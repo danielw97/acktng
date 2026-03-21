@@ -6,11 +6,7 @@
   <select id='world-select'>__WORLD_OPTIONS__</select>
   <button id='connect-btn' type='button'>Connect</button>
   <button id='disconnect-btn' type='button'>Disconnect</button>
-  <span style='margin-left:auto;display:flex;gap:.4rem;flex-wrap:wrap;'>
-    <button id='terrain-toggle-btn' type='button' style='display:none'>&#x1F5FA; Terrain</button>
-    <button id='look-toggle-btn' type='button' style='display:none'>&#x1F441; Look</button>
-    <button id='fullscreen-btn' type='button'>&#x26F6; Fullscreen</button>
-  </span>
+  <button id='fullscreen-btn' type='button' style='margin-left:auto'>&#x26F6; Fullscreen</button>
 </div>
 <pre id='mud-output' class='mud-output'>Ready.</pre>
 <div class='mud-controls'>
@@ -33,28 +29,6 @@
 <audio id='mud-audio'></audio>
 <audio id='mud-audio-next'></audio>
 </div>
-
-<!-- Floating windows — fixed to viewport, draggable by their title bar -->
-<div class='float-window' id='terrain-window'>
-  <div class='float-window-header'>
-    <span class='float-window-title'>&#x1F5FA; Terrain</span>
-    <button class='float-window-close' data-target='terrain-window' type='button'>&#x2715;</button>
-  </div>
-  <div class='float-window-body'>
-    <pre id='terrain-output' class='float-window-pre'>No terrain data.</pre>
-  </div>
-</div>
-
-<div class='float-window' id='look-window'>
-  <div class='float-window-header'>
-    <span class='float-window-title'>&#x1F441; Look</span>
-    <button class='float-window-close' data-target='look-window' type='button'>&#x2715;</button>
-  </div>
-  <div class='float-window-body'>
-    <pre id='look-output' class='float-window-pre'>No room data.</pre>
-  </div>
-</div>
-
 <script>
 (() => {
   const worldSelect = document.getElementById('world-select');
@@ -159,116 +133,6 @@
   worldSelect.addEventListener('change', showWorld);
   showWorld();
 
-  /* ── Floating window management ── */
-  let topZ = 10000;
-
-  const bringToFront = (win) => { win.style.zIndex = ++topZ; };
-
-  const makeDraggable = (win) => {
-    const header = win.querySelector('.float-window-header');
-    let dragging = false, sx, sy, ox, oy;
-
-    const startDrag = (cx, cy) => {
-      dragging = true;
-      sx = cx; sy = cy;
-      ox = win.offsetLeft; oy = win.offsetTop;
-      bringToFront(win);
-    };
-    const moveDrag = (cx, cy) => {
-      if (!dragging) return;
-      win.style.left = Math.max(0, ox + cx - sx) + 'px';
-      win.style.top  = Math.max(0, oy + cy - sy) + 'px';
-    };
-    const endDrag = () => { dragging = false; };
-
-    header.addEventListener('mousedown', (e) => {
-      if (e.target.classList.contains('float-window-close')) return;
-      startDrag(e.clientX, e.clientY);
-      e.preventDefault();
-    });
-    header.addEventListener('touchstart', (e) => {
-      if (e.target.classList.contains('float-window-close')) return;
-      const t = e.touches[0];
-      startDrag(t.clientX, t.clientY);
-    }, { passive: true });
-
-    document.addEventListener('mousemove', (e) => moveDrag(e.clientX, e.clientY));
-    document.addEventListener('touchmove', (e) => {
-      const t = e.touches[0];
-      moveDrag(t.clientX, t.clientY);
-    }, { passive: true });
-    document.addEventListener('mouseup', endDrag);
-    document.addEventListener('touchend', endDrag);
-
-    win.addEventListener('mousedown', () => bringToFront(win));
-  };
-
-  const positionAndShow = (win, defaultLeft, defaultTop) => {
-    if (!win.dataset.positioned) {
-      win.style.left = Math.max(0, Math.min(defaultLeft, window.innerWidth - 300)) + 'px';
-      win.style.top  = Math.max(0, defaultTop) + 'px';
-      win.dataset.positioned = '1';
-    }
-    win.classList.add('visible');
-    bringToFront(win);
-  };
-
-  const toggleWindow = (id, defaultLeft, defaultTop) => {
-    const win = document.getElementById(id);
-    if (win.classList.contains('visible')) {
-      win.classList.remove('visible');
-    } else {
-      positionAndShow(win, defaultLeft, defaultTop);
-    }
-  };
-
-  document.querySelectorAll('.float-window').forEach(makeDraggable);
-
-  document.querySelectorAll('.float-window-close').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      document.getElementById(btn.dataset.target).classList.remove('visible');
-    });
-  });
-
-  document.getElementById('terrain-toggle-btn').addEventListener('click', () => {
-    toggleWindow('terrain-window', window.innerWidth - 340, 80);
-  });
-  document.getElementById('look-toggle-btn').addEventListener('click', () => {
-    toggleWindow('look-window', window.innerWidth - 340, 340);
-  });
-
-  const terrainToggleBtn = document.getElementById('terrain-toggle-btn');
-  const lookToggleBtn = document.getElementById('look-toggle-btn');
-
-  const handleFloatCommand = (cmd) => {
-    if (cmd.type === 'terrain' && cmd.data !== undefined) {
-      document.getElementById('terrain-output').innerHTML = ansiToHtml(cmd.data);
-      terrainToggleBtn.style.display = '';
-      const win = document.getElementById('terrain-window');
-      if (!win.classList.contains('visible')) positionAndShow(win, window.innerWidth - 340, 80);
-      else bringToFront(win);
-      return true;
-    }
-    if (cmd.type === 'look' && cmd.data !== undefined) {
-      document.getElementById('look-output').innerHTML = ansiToHtml(cmd.data);
-      lookToggleBtn.style.display = '';
-      const win = document.getElementById('look-window');
-      if (!win.classList.contains('visible')) positionAndShow(win, window.innerWidth - 340, 340);
-      else bringToFront(win);
-      return true;
-    }
-    return false;
-  };
-
-  /* Hide float windows and their toggle buttons when disconnected */
-  const hideFloatWindows = () => {
-    terrainToggleBtn.style.display = 'none';
-    lookToggleBtn.style.display = 'none';
-    document.getElementById('terrain-window').classList.remove('visible');
-    document.getElementById('look-window').classList.remove('visible');
-  };
-
-  /* ── Music ── */
   const FADE_DURATION = 2000;
   const FADE_INTERVAL = 50;
 
@@ -343,7 +207,6 @@
     }
   };
 
-  /* ── Connection ── */
   connectBtn.addEventListener('click', () => {
     if (socket && (socket.readyState === WebSocket.OPEN || socket.readyState === WebSocket.CONNECTING)) {
       appendOutput('\n[Info] Already connected.\n');
@@ -357,8 +220,6 @@
     }
 
     output.textContent = '';
-    /* Reset float windows for fresh connection */
-    document.querySelectorAll('.float-window').forEach((w) => { delete w.dataset.positioned; });
     appendOutput(`[Connecting] ${wsUrl}\n`);
     try {
       socket = new WebSocket(wsUrl);
@@ -376,7 +237,6 @@
       if (typeof event.data === 'string' && event.data.startsWith('{')) {
         try {
           const cmd = JSON.parse(event.data);
-          if (handleFloatCommand(cmd)) return;
           if (cmd.type === 'music') { handleMusicCommand(cmd); return; }
         } catch (_) {}
       }
@@ -385,7 +245,6 @@
     socket.addEventListener('close', (event) => {
       appendOutput(`\n[Disconnected] code=${event.code} reason=${event.reason || 'none'}\n`);
       socket = null;
-      hideFloatWindows();
     });
     socket.addEventListener('error', () => {
       appendOutput('\n[Error] WebSocket handshake failed for this endpoint.\n');
@@ -400,7 +259,6 @@
     }
     closeSocket();
     appendOutput('\n[Disconnected by user]\n');
-    hideFloatWindows();
   });
 
   const sendCommand = () => {
