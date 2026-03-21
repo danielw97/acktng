@@ -130,8 +130,6 @@ struct char_ref_type
       s.var = &v;                                                                                  \
       obj_reference(&s);                                                                           \
    } while (0)
-#define OUREF(var) obj_unreference(&var);
-
 #define CREF(v, type)                                                                              \
    do                                                                                              \
    {                                                                                               \
@@ -139,67 +137,39 @@ struct char_ref_type
       s.var = &v;                                                                                  \
       char_reference(&s);                                                                          \
    } while (0)
-#define CUREF(var) char_unreference(&var);
 
 /*
- * Utility macros.
+ * Bit manipulation macros (must stay as macros: SET_BIT/REMOVE_BIT modify
+ * an lvalue; IS_SET is type-generic across int/long/sh_int flag fields).
  */
-#define UMIN(a, b) ((a) < (b) ? (a) : (b))
-#define UMAX(a, b) ((a) > (b) ? (a) : (b))
-#define URANGE(a, b, c) ((b) < (a) ? (a) : ((b) > (c) ? (c) : (b)))
-#define LOWER(c) ((c) >= 'A' && (c) <= 'Z' ? (c) + 'a' - 'A' : (c))
-#define UPPER(c) ((c) >= 'a' && (c) <= 'z' ? (c) + 'A' - 'a' : (c))
 #define IS_SET(flag, bit) ((flag) & (bit))
 #define SET_BIT(var, bit) ((var) |= (bit))
 #define REMOVE_BIT(var, bit) ((var) &= ~(bit))
-#define IS_LETTER(c) (((c) >= 'A' && (c) <= 'Z') || ((c) >= 'a' && (c) <= 'z'))
 
 /*
- * Character macros.
+ * UMIN, UMAX, URANGE, LOWER, UPPER, IS_LETTER are implemented as static
+ * inline functions in inlines.h (included at the end of ack.h after all
+ * struct definitions are complete).  The names are identical to the former
+ * macros so no call-site changes are required.
  */
-#define IS_UNDEAD(ch) (IS_NPC(ch) ? IS_SET(ch->act, ACT_UNDEAD) : FALSE)
-#define IS_NPC(ch) (IS_SET((ch)->act, ACT_IS_NPC))
-#define IS_STAFF(ch) (get_trust(ch) >= LEVEL_STAFF)
-#define IS_HERO(ch) (get_trust(ch) >= LEVEL_HERO)
-#define IS_AFFECTED(ch, sn) (IS_SET((ch)->affected_by, (sn)))
-#define IS_GOOD(ch) (ch->alignment >= 0)
-#define IS_EVIL(ch) (ch->alignment < 0)
-
-#define IS_AWAKE(ch) (ch->position > POS_SLEEPING)
-
-#define IS_OUTSIDE(ch) (!IS_SET((ch)->in_room->room_flags, ROOM_INDOORS))
-
-#define WAIT_STATE(ch, npulse) ((ch)->wait = UMAX((ch)->wait, (npulse)))
-
-#define MANA_COST(ch, sn) (IS_NPC(ch) ? 0 : UMAX(50, skill_table[sn].min_mana))
-
-#define ADEPT_LEVEL(ch) (IS_NPC(ch) ? (ch)->level / 7 : (ch)->adept_level)
-
-#define PLAYTESTER(ch) (!IS_NPC(ch) && IS_SET((ch)->pcdata->pflags, PFLAG_TESTER))
-#define HAS_BODY(ch) (!IS_NPC(ch) || !IS_SET((ch)->act, ACT_NO_BODY))
-#define HAS_MIND(ch) (!IS_NPC(ch) || !IS_SET((ch)->act, ACT_NOMIND))
-#define IS_DAYTIME() (weather_info.sunlight == SUN_RISE || weather_info.sunlight == SUN_LIGHT)
-#define IS_NIGHTTIME() (!IS_DAYTIME())
-#define IS_WEAPON(eq) ((eq) != NULL ? (eq)->item_type == ITEM_WEAPON : FALSE)
-#define IS_SHIELD(eq) ((eq) != NULL ? (eq)->item_type == ITEM_ARMOR : FALSE)
 
 /*
- * Object macros.
+ * Character checks, object checks, name helpers, and class-tier queries are
+ * implemented as static inline functions in inlines.h (included at the end of
+ * ack.h after all struct definitions are complete).  The names are identical to
+ * the former macros so no call-site changes are required:
+ *
+ *   IS_NPC, IS_UNDEAD, IS_AFFECTED, IS_GOOD, IS_EVIL, IS_AWAKE, IS_OUTSIDE,
+ *   IS_STAFF, IS_HERO, PLAYTESTER, HAS_BODY, HAS_MIND, ADEPT_LEVEL,
+ *   WAIT_STATE, NAME, CH, PERS,
+ *   CAN_WEAR, IS_OBJ_STAT, IS_WEAPON, IS_SHIELD, IS_OBJ_BONDED
  */
-#define CAN_WEAR(obj, part) (IS_SET((obj)->wear_flags, (part)))
-#define IS_OBJ_STAT(obj, stat) (IS_SET((obj)->extra_flags, (stat)))
 
 /*
- * Description macros.
+ * MANA_COST, IS_DAYTIME, IS_NIGHTTIME, IS_MORTAL_CLASS, IS_REMORT_CLASS,
+ * IS_ADEPT_CLASS, and CLASS_TIER are implemented as static inline functions
+ * in inlines_globals.h, included from ack.h whenever globals.h is loaded.
  */
-#define PERS(ch, looker)                                                                           \
-   (can_see(looker, (ch)) ? (IS_NPC(ch) ? (ch)->short_descr : (ch)->name)                          \
-    : IS_STAFF(ch)        ? "A Mystical Being"                                                     \
-                          : "Someone")
-#define NAME(ch) (IS_NPC(ch) ? (ch)->short_descr : (ch)->name)
-
-/* Added stuff - Flar */
-#define CH(descriptor) ((descriptor)->original ? (descriptor)->original : (descriptor)->character)
 
 /*
  * Linked list macros, -- Altrag

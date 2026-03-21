@@ -153,11 +153,8 @@
 /* Total class count across all tiers */
 #define MAX_TOTAL_CLASS 29
 
-/* Helper macros to determine which tier a class ID belongs to */
-#define IS_MORTAL_CLASS(c) (gclass_table[c].tier == MORTAL)
-#define IS_REMORT_CLASS(c) (gclass_table[c].tier == REMORT)
-#define IS_ADEPT_CLASS(c) (gclass_table[c].tier == ADEPT)
-#define CLASS_TIER(c) (gclass_table[c].tier)
+/* IS_MORTAL_CLASS, IS_REMORT_CLASS, IS_ADEPT_CLASS, CLASS_TIER are
+ * implemented as static inline functions in inlines_globals.h. */
 
 #define MAX_NUM_STAFF 5
 
@@ -231,7 +228,7 @@
 #define TAR_OBJ_INV 4
 #define TAR_CHAR_NOTSELF 5
 
-/* Class tier constants (returned by CLASS_TIER / SKILL_TIER) */
+/* Class tier constants (returned by CLASS_TIER / skill_get_tier) */
 #define MORTAL 1
 #define REMORT 2
 #define ADEPT 3
@@ -1463,6 +1460,7 @@
 #define WHO_HTML_FILE "../web/soewholist.html" /* for ftping who list to html web page :) */
 #define WHO_COUNT_FILE "../web/whocount.html"
 #endif
+#define GSGP_JSON_FILE "../web/gsgp.json" /* Game Scry Game Protocol endpoint data */
 /* Other Stuff - Flar */
 #define COPYOVER_FILE "COPYOVER.TXT"               /* Temp data file used for copyover */
 #define EXE_FILE "../src/ack"                      /* The one that runs the ACK! */

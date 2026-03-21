@@ -257,9 +257,9 @@ void violence_update(void)
             }
          }
       }
-      CUREF(rch_next);
+      char_unreference(&rch_next);
    }
-   CUREF(ch_next);
+   char_unreference(&ch_next);
    return;
 }
 
@@ -1398,7 +1398,7 @@ void stop_fighting(CHAR_DATA *ch, bool fBoth)
          update_pos(fch);
       }
    }
-   CUREF(fch_next);
+   char_unreference(&fch_next);
    return;
 }
 
@@ -1624,7 +1624,7 @@ void do_flee(CHAR_DATA *ch, char *argument)
          send_to_char(buf, ch);
          gain_exp(ch, (0 - cost));
       }
-      if ((is_fighting(ch)) && (AI_MOB(ch->fighting)))
+      if ((is_fighting(ch)) && (IS_NPC(ch->fighting)))
       {
          ch->fighting->ngroup->state = GRP_STATE_HUNTING;
          ch->fighting->ngroup->leader->hunting = ch;

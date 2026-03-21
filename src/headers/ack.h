@@ -1271,7 +1271,6 @@ struct lookup_extended_type
  * skill_level array.  The tier is the range (0-5, 6-17, or 18-23) that
  * has at least one non-NO_USE entry.  Returns 0 if no valid entry found.
  */
-#define SKILL_TIER(sn) skill_get_tier(sn)
 int skill_get_tier(int sn);
 
 struct skill_type
@@ -1791,6 +1790,27 @@ void save_brands args((void));
  */
 void load_sysdata args((void));
 void save_sysdata args((void));
+
+/*
+ * Inline function definitions for character/object checks, name helpers,
+ * and weather/skill/class-tier queries.  Must be included after all struct
+ * definitions so function bodies can safely dereference struct fields.
+ */
+#ifndef DEC_INLINES_H
+#include "inlines.h"
+#endif
+
+/*
+ * Inline functions that reference global tables (skill_table, weather_info,
+ * gclass_table).  Only included when globals.h was actually loaded — unit
+ * tests that suppress globals.h and stub those tables themselves will not
+ * see conflicting extern declarations.
+ */
+#ifdef DEC_GLOBALS_H_LOADED
+#ifndef DEC_INLINES_GLOBALS_H
+#include "inlines_globals.h"
+#endif
+#endif
 
 #undef CD
 #undef MID

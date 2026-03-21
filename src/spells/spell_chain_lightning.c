@@ -71,7 +71,7 @@ bool spell_chain_lightning(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA 
          dam = (4 * dam / 5);
       }
    }
-   CUREF(vch_next);
+   char_unreference(&vch_next);
 
    /*
     * Now see if caster gets hit.

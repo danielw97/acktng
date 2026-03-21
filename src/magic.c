@@ -46,7 +46,7 @@ static bool npc_remort_cast_blocked(const CHAR_DATA *ch, int sn)
    if (!IS_NPC(ch))
       return FALSE;
 
-   if (SKILL_TIER(sn) != REMORT && SKILL_TIER(sn) != ADEPT)
+   if (skill_get_tier(sn) != REMORT && skill_get_tier(sn) != ADEPT)
       return FALSE;
 
    return IS_SET(ch->act, ACT_PET) || IS_AFFECTED(ch, AFF_CHARM);
@@ -807,7 +807,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
             break;
          }
       }
-      CUREF(vch_next);
+      char_unreference(&vch_next);
    }
 
    return;
@@ -962,7 +962,7 @@ void aoe_damage(CHAR_DATA *ch, OBJ_DATA *obj, int sn, int level, int min_dam, in
 
       sp_damage(obj, ch, vch, dam, element, sn, TRUE);
    }
-   CUREF(vch_next);
+   char_unreference(&vch_next);
 }
 
 static bool is_grand_magi_elemental_spell(int sn)
