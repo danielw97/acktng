@@ -422,7 +422,6 @@ void do_get(CHAR_DATA *ch, char *argument)
    OBJ_DATA *obj;
    OBJ_DATA *obj_next;
    OBJ_DATA *container = NULL;
-   CHAR_DATA *victim;
    bool found = FALSE;
    bool get_ok = FALSE;
    bool found_money = FALSE;
@@ -446,41 +445,35 @@ void do_get(CHAR_DATA *ch, char *argument)
 
    if ((container != NULL) && (container->item_type == ITEM_CORPSE_PC))
    {
-      char name[MSL];
-      CHAR_DATA *gch;
-      char *pd;
       if (IS_NPC(ch))
       {
          send_to_char("You can't do that.\n\r", ch);
          return;
       }
-      pd = container->short_descr;
-      pd = one_argument(pd, name);
-      pd = one_argument(pd, name);
-      pd = one_argument(pd, name);
-      if (str_cmp(name, ch->name) && !IS_STAFF(ch))
+      if (str_cmp(container->owner, ch->name) && !IS_STAFF(ch))
       {
-         bool fGroup = FALSE;
-         victim = NULL;
+         send_to_char("You can't do that.\n\r", ch);
+         return;
+      }
+   }
+   if ((container != NULL) && (container->item_type == ITEM_CORPSE_NPC))
+   {
+      if (!IS_NPC(ch) && container->owner != NULL && container->owner[0] != '\0' && !IS_STAFF(ch) &&
+          str_cmp(container->owner, ch->name))
+      {
+         CHAR_DATA *owner_ch = NULL;
+         CHAR_DATA *gch;
          for (gch = first_char; gch != NULL; gch = gch->next)
          {
-            if (!IS_NPC(gch) && !str_cmp(name, gch->name))
+            if (!IS_NPC(gch) && !str_cmp(container->owner, gch->name))
             {
-               victim = gch;
+               owner_ch = gch;
                break;
             }
          }
-
-         /*
-          * if (victim !=NULL && is_same_group(ch, gch))
-          * fGroup = TRUE;
-          */
-
-         if (!fGroup)
+         if (owner_ch == NULL || !is_same_group(ch, owner_ch))
          {
-            if (victim == NULL || !IS_SET(victim->pcdata->pflags, PFLAG_PKOK) ||
-                !IS_SET(ch->pcdata->pflags, PFLAG_PKOK))
-               send_to_char("You can't do that.\n\r", ch);
+            send_to_char("You can't do that.\n\r", ch);
             return;
          }
       }

@@ -77,6 +77,11 @@ void make_corpse(CHAR_DATA *ch, char *argument)
          corpse = create_object(get_obj_index(OBJ_VNUM_CORPSE_NPC), 0);
          corpse->timer = number_range(3, 6);
          corpse->level = ch->level; /* for animate/revenant spell */
+         if (arg[0] != '\0')
+         {
+            free_string(corpse->owner);
+            corpse->owner = str_dup(arg);
+         }
          if (ch->pIndexData != NULL)
             corpse->value[4] = ch->pIndexData->vnum; /* original mob vnum for revenant */
          /*
