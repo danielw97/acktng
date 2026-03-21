@@ -365,14 +365,16 @@ Add `IAC WILL MSSP` and `IAC WILL MSDP` to the telnet greeting, immediately afte
 ```c
 /* Existing */
 write_to_descriptor(d, echo_off_str, 0);    /* IAC WILL ECHO */
-/* New — advertise MSSP and MSDP */
+/* New — advertise all supported telnet options */
 {
     const char proto_will[] = {
         IAC, WILL, TELOPT_MSSP,
         IAC, WILL, TELOPT_MSDP,
-        '\0'
+        IAC, WILL, TELOPT_GMCP,
+        IAC, WILL, TELOPT_MCCP2,
+        IAC, WILL, TELOPT_MCCP3,
     };
-    write_to_descriptor(d, (char *)proto_will, 6);
+    write_to_descriptor(d, (char *)proto_will, sizeof(proto_will));
 }
 ```
 
@@ -426,8 +428,8 @@ static void send_mssp_data(DESCRIPTOR_DATA *d)
 
     /* --- Protocol feature flags --- */
     MVAR("ANSI");              MVAL("1");
-    MVAR("GMCP");              MVAL("0");
-    MVAR("MCCP");              MVAL("0");
+    MVAR("GMCP");              MVAL("1");
+    MVAR("MCCP");              MVAL("1");
     MVAR("MCP");               MVAL("0");
     MVAR("MSDP");              MVAL("1");
     MVAR("MSSP");              MVAL("1");
@@ -748,26 +750,474 @@ static const char *sector_names[] = {
 
 ---
 
+## Part D — GMCP (Generic Mud Communication Protocol)
+
+GMCP (telnet option 201) is a bidirectional JSON-over-telnet protocol. The server sends
+structured game-state data (character vitals, room info, channel messages) inside named
+namespaces; clients subscribe to the namespaces they want. Feature-rich clients such as Mudlet,
+MUSHclient, and BlowTorch use GMCP to drive gauges, maps, and triggers entirely from structured
+data rather than parsing raw text.
+
+### D1. Protocol constants (`src/headers/socket.h`)
+
+```c
+/* GMCP telnet option 201 */
+#define TELOPT_GMCP  201
+
+/* GMCP package subscription bits */
+#define GMCP_PKG_CHAR   (1U << 0)   /* Char.* — vitals, stats, status */
+#define GMCP_PKG_ROOM   (1U << 1)   /* Room.* — room info and exits */
+#define GMCP_PKG_COMM   (1U << 2)   /* Comm.* — channel messages */
+```
+
+The `Core` namespace is always active once GMCP is negotiated and has no bit.
+
+### D2. `DESCRIPTOR_DATA` additions (`src/headers/ack.h`)
+
+```c
+    bool         gmcp_active;    /* TRUE after client sends IAC DO GMCP */
+    unsigned int gmcp_supports;  /* bitmask of GMCP_PKG_* the client subscribed to */
+    unsigned short gmcp_last_room; /* last room vnum pushed via Room.Info */
+```
+
+### D3. Telnet negotiation
+
+`IAC WILL GMCP` is added to the greeting sequence in `queue_login_greeting()` alongside the
+existing MSSP/MSDP advertisements. In `process_telnet_options()`, `IAC DO GMCP` activates the
+protocol and triggers the mandatory `Core.Hello` server→client message:
+
+```c
+else if (cmd == DO && opt == TELOPT_GMCP)
+{
+    d->gmcp_active = TRUE;
+    gmcp_send(d, "Core.Hello",
+        "{\"client\":\"" MUDNAME_PLAIN "\",\"version\":\"4.3.1\"}");
+}
+```
+
+Incoming `IAC SB GMCP` payloads are routed to `process_gmcp_subneg()` from the SB branch of
+`process_telnet_options()`, exactly as MSDP subneg is handled.
+
+### D4. Incoming subneg handler — `process_gmcp_subneg()` (`src/socket.c`)
+
+The payload of every `IAC SB GMCP … IAC SE` block is a UTF-8 string of the form
+`"Package.Name"` or `"Package.Name {json}"`. The handler extracts the package name and optional
+JSON body:
+
+| Client sends | Server action |
+|-------------|---------------|
+| `Core.Supports.Set ["Char 1","Room 1","Comm 1"]` | Set `gmcp_supports` bitmask from array; clear and rebuild from scratch |
+| `Core.Supports.Add ["Char 1"]` | OR the named package bits into `gmcp_supports` |
+| `Core.Supports.Remove ["Room 1"]` | Clear the named package bits from `gmcp_supports` |
+| `Core.Keepalive` | No-op (ignore; some clients send periodically) |
+
+Unrecognised package names are silently ignored. The server never sends error responses for
+unknown packages.
+
+### D5. Outgoing sender — `gmcp_send()` (`src/socket.c`)
+
+```c
+static void gmcp_send(DESCRIPTOR_DATA *d, const char *package, const char *json)
+{
+    char buf[4096];
+    int n = 0;
+    buf[n++] = IAC; buf[n++] = SB; buf[n++] = TELOPT_GMCP;
+    /* "Package.Name {json}" or just "Package.Name" */
+    memcpy(buf+n, package, strlen(package)); n += strlen(package);
+    if (json && *json)
+    {
+        buf[n++] = ' ';
+        memcpy(buf+n, json, strlen(json)); n += strlen(json);
+    }
+    buf[n++] = IAC; buf[n++] = SE;
+    write_to_descriptor(d, buf, n);
+}
+```
+
+A companion `gmcp_sendf()` uses `sprintf` to build the JSON payload inline for simple cases.
+
+### D6. Supported packages and payloads
+
+**`Char.Vitals`** — sent after every command and at `PULSE_VIOLENCE` during combat:
+
+```json
+{"hp": 120, "maxhp": 150, "mp": 80, "maxmp": 100, "mv": 45, "maxmv": 100}
+```
+
+Sources: `ch->hit`, `ch->max_hit`, `ch->mana`, `ch->max_mana`, `ch->move`, `ch->max_move`.
+
+**`Char.Status`** — sent once on login and when key fields change (level-up, alignment shift):
+
+```json
+{"name": "Alara", "level": 25, "class": "Mage", "race": "Elf",
+ "align": 500, "gold": 1200, "tnl": 34000}
+```
+
+Sources: `ch->name`, `ch->level`, class/race name strings from tables, `ch->alignment`,
+`ch->gold`, experience-to-next-level calculation.
+
+**`Char.Stats`** — sent once on login; resent after equipment changes:
+
+```json
+{"str": 18, "int": 17, "wis": 14, "dex": 16, "con": 15,
+ "hitroll": 4, "damroll": 6, "ac": -20}
+```
+
+Sources: `ch->perm_str` etc. (ability scores), `ch->hitroll`, `ch->damroll`, `ch->armor`.
+
+**`Room.Info`** — sent when the player enters a new room (same room-change trigger as MSDP):
+
+```json
+{"num": 1001, "name": "The Town Square",
+ "exits": {"n": 1002, "e": 1005, "s": 999}}
+```
+
+Sources: `ch->in_room->vnum`, `ch->in_room->name`, `ch->in_room->exit[]` direction→to_room->vnum.
+
+**`Comm.Channel`** — sent when a public channel message is broadcast to the descriptor; allows
+clients to route channels to separate panels:
+
+```json
+{"channel": "gossip", "talker": "Alara", "text": "Hello world!"}
+```
+
+This requires a hook in the channel-output path (`act_comm.c`) to call `gmcp_send_channel()`
+for each descriptor that has `GMCP_PKG_COMM` set.
+
+### D7. Update cycle
+
+`gmcp_update()` is called from `update_handler()` at `PULSE_VIOLENCE` frequency (same as
+`msdp_update()`). It sends `Char.Vitals` to every playing descriptor with `GMCP_PKG_CHAR` set.
+Room pushes are driven by the same `gmcp_last_room != ch->in_room->vnum` room-change check
+used for MSDP.
+
+A post-command hook in the game loop (after `nanny()` dispatches a command) also calls
+`gmcp_send_vitals(d)` so gauges update immediately after each player action, not just on the
+next pulse.
+
+### D8. JSON generation
+
+All JSON is produced with a small set of inline helpers in `socket.c` — no external JSON library
+is required. The payloads are simple flat objects with string and integer values; no nested
+structures beyond the `exits` object in `Room.Info`. A minimal builder:
+
+```c
+/* Begin/end a JSON object into a fixed buffer */
+static int json_begin(char *buf) { buf[0]='{'; return 1; }
+static int json_end(char *buf, int n)
+{
+    if (buf[n-1] == ',') n--;  /* trim trailing comma */
+    buf[n++] = '}';
+    buf[n]   = '\0';
+    return n;
+}
+static int json_str(char *buf, int n, const char *k, const char *v)
+{
+    return n + sprintf(buf+n, "\"%s\":\"%s\",", k, v);
+}
+static int json_int(char *buf, int n, const char *k, int v)
+{
+    return n + sprintf(buf+n, "\"%s\":%d,", k, v);
+}
+```
+
+String values are not escaped beyond replacing `"` with `\"` — sufficient for all player names,
+room names, and channel text produced by this codebase.
+
+---
+
+## Part E — MCCP2 (Server→Client Compression)
+
+MCCP2 (telnet option 86 / `COMPRESS2`) allows the server to compress all output sent to a
+client using zlib's DEFLATE algorithm. This substantially reduces bandwidth for verbose clients
+and players in high-output situations (combat, `look` in a busy room). MCCP2 is the most
+widely supported compression protocol in MUD clients.
+
+### E1. Protocol constants (`src/headers/socket.h`)
+
+```c
+#define TELOPT_MCCP2  86   /* COMPRESS2 — server→client zlib compression */
+```
+
+### E2. `DESCRIPTOR_DATA` additions (`src/headers/ack.h`)
+
+```c
+    bool  mccp2_active;  /* TRUE after compression stream is started */
+    void *mccp2_zout;    /* opaque z_stream* for deflate; NULL if inactive */
+```
+
+Using `void *` keeps `zlib.h` out of `ack.h`; the pointer is cast to `z_stream *` inside
+`socket.c` only.
+
+### E3. Telnet negotiation
+
+`IAC WILL MCCP2` is added to the greeting sequence. When `process_telnet_options()` sees
+`IAC DO MCCP2` it calls `mccp2_start(d)`:
+
+```c
+else if (cmd == DO && opt == TELOPT_MCCP2)
+    mccp2_start(d);
+```
+
+### E4. Starting compression — `mccp2_start()` (`src/socket.c`)
+
+```c
+#include <zlib.h>
+
+static void mccp2_start(DESCRIPTOR_DATA *d)
+{
+    z_stream *zout;
+    /* Send the start-of-compression subneg UNCOMPRESSED */
+    const char start[] = {IAC, SB, TELOPT_MCCP2, IAC, SE};
+    write_to_descriptor(d, (char *)start, sizeof(start));
+
+    zout = calloc(1, sizeof(z_stream));
+    zout->zalloc = Z_NULL; zout->zfree = Z_NULL; zout->opaque = Z_NULL;
+    if (deflateInit(zout, Z_DEFAULT_COMPRESSION) != Z_OK)
+    {
+        free(zout);
+        log_string("mccp2_start: deflateInit failed");
+        return;
+    }
+    d->mccp2_zout   = zout;
+    d->mccp2_active = TRUE;
+}
+```
+
+The `IAC SB MCCP2 IAC SE` sequence is sent **before** compression starts; all subsequent bytes
+go through zlib.
+
+### E5. Compressed write path — `write_to_descriptor()` (`src/socket.c`)
+
+When `d->mccp2_active`, the data is deflated before the raw `write()` call:
+
+```c
+if (d->mccp2_active && d->mccp2_zout)
+{
+    z_stream *zout = (z_stream *)d->mccp2_zout;
+    unsigned char zbuf[8192];
+    zout->next_in  = (Bytef *)txt + iStart;
+    zout->avail_in = (uInt)nBlock;
+    do {
+        zout->next_out  = zbuf;
+        zout->avail_out = sizeof(zbuf);
+        deflate(zout, Z_SYNC_FLUSH);
+        int have = sizeof(zbuf) - zout->avail_out;
+        if (have > 0 && write(d->descriptor, zbuf, have) < 0)
+        {
+            perror("write (mccp2)");
+            return FALSE;
+        }
+    } while (zout->avail_in > 0);
+    nWrite = nBlock;  /* all input consumed */
+}
+else
+    nWrite = write(d->descriptor, txt + iStart, nBlock);
+```
+
+`Z_SYNC_FLUSH` ensures each write is fully flushed to the network (no buffering inside zlib).
+
+### E6. Teardown — `close_socket()` (`src/socket.c`)
+
+```c
+if (d->mccp2_active && d->mccp2_zout)
+{
+    deflateEnd((z_stream *)d->mccp2_zout);
+    free(d->mccp2_zout);
+    d->mccp2_zout   = NULL;
+    d->mccp2_active = FALSE;
+}
+```
+
+### E7. Makefile — add zlib linkage (`src/Makefile`)
+
+```makefile
+L_FLAGS += -lz
+```
+
+zlib is a standard system library on all Linux distributions and requires no conditional
+detection; it is always linked.
+
+### E8. MCCP2 + TLS interaction
+
+Combining transport-layer compression (zlib) with TLS can enable CRIME/BREACH-class attacks in
+environments where an attacker can inject chosen plaintexts and observe compressed ciphertext
+lengths. For a MUD the practical risk is low (no cookies or CSRF tokens), but the proposal
+conservatively disables MCCP2 when TLS is active:
+
+```c
+if (cmd == DO && opt == TELOPT_MCCP2)
+{
+    if (d->tls_active)
+    {
+        /* Decline: MCCP2 + TLS is inadvisable */
+        const char wont[] = {IAC, WONT, TELOPT_MCCP2};
+        write_to_descriptor(d, (char *)wont, 3);
+    }
+    else
+        mccp2_start(d);
+}
+```
+
+Operators who want to override this (e.g. on a trusted internal network) can remove the guard.
+
+### E9. Hotreboot
+
+Like TLS, an active MCCP2 compression stream cannot be serialised across `execl()`. Before
+hotreboot, MCCP2 is torn down with `deflateEnd()` for each active descriptor.
+
+---
+
+## Part F — MCCP3 (Client→Server Compression)
+
+MCCP3 (telnet option 87) is the complement to MCCP2: the **client** compresses its output to
+the server. This is useful primarily for players on very limited uplinks (mobile connections)
+where typed commands and passwords cross the wire unencrypted without MCCP3. MCCP3 is
+supported by TinTin++ and a few other clients; Mudlet does not currently support it.
+
+### F1. Protocol constants (`src/headers/socket.h`)
+
+```c
+#define TELOPT_MCCP3  87   /* client→server zlib compression */
+```
+
+### F2. `DESCRIPTOR_DATA` additions (`src/headers/ack.h`)
+
+```c
+    bool  mccp3_active;  /* TRUE after client sends SB MCCP3 IAC SE */
+    void *mccp3_zin;     /* opaque z_stream* for inflate; NULL if inactive */
+```
+
+### F3. Telnet negotiation
+
+`IAC WILL MCCP3` is added to the greeting sequence. In `process_telnet_options()`:
+
+```c
+else if (cmd == DO && opt == TELOPT_MCCP3)
+{
+    /* Server acknowledges; client drives when to start compressing */
+    /* Initialise the inflate stream pre-emptively */
+    mccp3_init(d);
+}
+```
+
+The client then sends `IAC SB MCCP3 IAC SE` when it is ready to begin compressing its output.
+This is detected in the `SB` branch of `process_telnet_options()`:
+
+```c
+if (opt == TELOPT_MCCP3)
+{
+    /* payload is empty; client is signalling start of compression */
+    d->mccp3_active = TRUE;
+}
+```
+
+### F4. Inflate stream initialisation — `mccp3_init()` (`src/socket.c`)
+
+```c
+static void mccp3_init(DESCRIPTOR_DATA *d)
+{
+    z_stream *zin = calloc(1, sizeof(z_stream));
+    zin->zalloc = Z_NULL; zin->zfree = Z_NULL; zin->opaque = Z_NULL;
+    zin->next_in  = Z_NULL;
+    zin->avail_in = 0;
+    if (inflateInit(zin) != Z_OK)
+    {
+        free(zin);
+        log_string("mccp3_init: inflateInit failed");
+        return;
+    }
+    d->mccp3_zin = zin;
+}
+```
+
+### F5. Decompressed read path — `read_from_descriptor()` (`src/socket.c`)
+
+When `d->mccp3_active`, incoming bytes are decompressed after the raw `read()` into a temporary
+buffer, then copied into `d->inbuf`:
+
+```c
+if (d->mccp3_active && d->mccp3_zin && nRead > 0)
+{
+    z_stream *zin = (z_stream *)d->mccp3_zin;
+    unsigned char plain[sizeof(d->inbuf)];
+    zin->next_in  = (Bytef *)(d->inbuf + iStart);
+    zin->avail_in = (uInt)nRead;
+    zin->next_out  = plain;
+    zin->avail_out = sizeof(plain);
+    int ret = inflate(zin, Z_SYNC_FLUSH);
+    if (ret == Z_STREAM_ERROR || ret == Z_DATA_ERROR)
+    {
+        /* Decompression failure — send WONT MCCP3 and disable */
+        const char wont[] = {IAC, WONT, TELOPT_MCCP3};
+        write_to_descriptor(d, (char *)wont, 3);
+        inflateEnd(zin); free(d->mccp3_zin);
+        d->mccp3_zin = NULL; d->mccp3_active = FALSE;
+        return FALSE;
+    }
+    int have = sizeof(plain) - zin->avail_out;
+    memmove(d->inbuf + iStart, plain, have);
+    nRead = have;
+}
+```
+
+### F6. Teardown — `close_socket()` and hotreboot (`src/socket.c`, `src/hotreboot.c`)
+
+```c
+if (d->mccp3_active && d->mccp3_zin)
+{
+    inflateEnd((z_stream *)d->mccp3_zin);
+    free(d->mccp3_zin);
+    d->mccp3_zin   = NULL;
+    d->mccp3_active = FALSE;
+}
+```
+
+To signal the client to stop compressing before hotreboot, the server sends `IAC WONT MCCP3`
+per the MCCP3 spec, then tears down the inflate stream.
+
+### F7. MCCP3 + TLS interaction
+
+Same CRIME/BREACH concern as MCCP2. MCCP3 is declined over TLS connections:
+
+```c
+if (cmd == DO && opt == TELOPT_MCCP3)
+{
+    if (d->tls_active)
+    {
+        const char wont[] = {IAC, WONT, TELOPT_MCCP3};
+        write_to_descriptor(d, (char *)wont, 3);
+    }
+    else
+        mccp3_init(d);
+}
+```
+
+---
+
 ## Affected Files
 
 | File | Change |
 |------|--------|
-| `src/headers/ack.h` | Add `struct ssl_st *ssl`, `bool tls_active`, `bool msdp_active`, `unsigned int msdp_reported`, `unsigned short msdp_last_room` to `DESCRIPTOR_DATA` |
-| `src/headers/socket.h` | Update `game_loop`, `write_to_descriptor` prototypes; add MSSP/MSDP constants and bitmask defines; declare `msdp_update()` |
+| `src/headers/ack.h` | Add TLS (`ssl*`, `tls_active`), MSDP (`msdp_active`, `msdp_reported`, `msdp_last_room`), GMCP (`gmcp_active`, `gmcp_supports`, `gmcp_last_room`), MCCP2 (`mccp2_active`, `mccp2_zout`), MCCP3 (`mccp3_active`, `mccp3_zin`) to `DESCRIPTOR_DATA` |
+| `src/headers/socket.h` | Update `game_loop`, `write_to_descriptor` prototypes; add all protocol constants (MSSP/MSDP/GMCP/MCCP2/MCCP3); declare `msdp_update()`, `gmcp_update()` |
 | `src/headers/config.h` | Add `MSSP_CONTACT`, `MSSP_WEBSITE`, `MSSP_ICON_URL`, `MSSP_LOCATION` |
-| `src/socket.c` | `init_tls_context()`, TLS accept in `new_descriptor()`, TLS I/O in read/write, `close_socket()` teardown, `process_telnet_options()`, `process_msdp_subneg()`, `send_mssp_data()`, `msdp_send_var()`, `msdp_send_var_int()`, `msdp_send_room_exits()`, `msdp_update()`, MSSP boot counters, `game_loop()` third socket, `queue_login_greeting()` WILL MSSP/MSDP |
+| `src/socket.c` | TLS: `init_tls_context()`, accept/handshake, read/write wrappers, teardown. MSSP: `send_mssp_data()`, boot counters. MSDP: `process_msdp_subneg()`, `msdp_send_var()`, `msdp_send_room_exits()`, `msdp_update()`. GMCP: `process_gmcp_subneg()`, `gmcp_send()`, `gmcp_sendf()`, `gmcp_send_vitals()`, `gmcp_send_status()`, `gmcp_send_room()`, `gmcp_update()`. MCCP2: `mccp2_start()`, compressed write path. MCCP3: `mccp3_init()`, decompressed read path. All: `process_telnet_options()`, `queue_login_greeting()`, `game_loop()` third socket, `close_socket()` teardown, JSON builder helpers |
 | `src/comm.c` | CLI parsing for `--tls-port`, `--tls-cert`, `--tls-key`; `game_loop()` call updated |
+| `src/act_comm.c` | `gmcp_send_channel()` hook in channel broadcast path for `Comm.Channel` |
 | `src/db.c` | `init_mssp_counts()` called from `boot_db()` |
-| `src/update.c` | Call `msdp_update()` at `PULSE_VIOLENCE` frequency in `update_handler()` |
-| `src/hotreboot.c` | Close TLS descriptors gracefully before `execl()` |
-| `src/Makefile` | Conditional `HAVE_OPENSSL` detection via `pkg-config`; add `-lssl -lcrypto` |
-| `src/tests/test_mssp.c` | Unit tests for `process_telnet_options()`, `send_mssp_data()`, `process_msdp_subneg()`, and `msdp_send_var()` output |
+| `src/update.c` | Call `msdp_update()` and `gmcp_update()` at `PULSE_VIOLENCE` in `update_handler()` |
+| `src/hotreboot.c` | Graceful teardown of TLS, MCCP2, MCCP3 before `execl()`; send `IAC WONT MCCP3` before tearing down inflate stream |
+| `src/Makefile` | Conditional `HAVE_OPENSSL` via `pkg-config`; add `-lssl -lcrypto`; add `-lz` unconditionally |
+| `src/tests/test_mssp.c` | Unit tests for MSSP and MSDP: `process_telnet_options()`, `send_mssp_data()`, `process_msdp_subneg()`, `msdp_send_var()` |
+| `src/tests/test_gmcp.c` | Unit tests for GMCP: `process_gmcp_subneg()`, `gmcp_send()` framing, `Core.Supports.Set` bitmask, `Char.Vitals` JSON output |
+| `src/tests/test_mccp.c` | Unit tests for MCCP2/3: `mccp2_start()` subneg bytes, round-trip compress/decompress of a sample string, CRIME guard (TLS + MCCP2 → WONT) |
 
 ---
 
 ## Unit Test Coverage
 
-A new `src/tests/test_mssp.c` tests:
+**`src/tests/test_mssp.c`** — MSSP and MSDP:
 
 1. **`process_telnet_options()` IAC stripping** — buffer with `IAC DO MSSP` mixed with normal
    text; verify the IAC sequence is removed and text chars remain intact.
@@ -776,16 +1226,37 @@ A new `src/tests/test_mssp.c` tests:
    verifies the payload is extracted and routed to `process_msdp_subneg()` (stubbed in test).
 4. **`send_mssp_data()` framing** — verify output starts with `IAC SB TELOPT_MSSP` and ends
    with `IAC SE`.
-5. **`send_mssp_data()` mandatory keys** — verify NAME, PLAYERS, and UPTIME are present in the
-   subneg payload.
-6. **`msdp_send_var()` framing** — verify `IAC SB MSDP_VAR <name> MSDP_VAL <val> IAC SE`
-   structure for a simple string variable.
+5. **`send_mssp_data()` mandatory keys** — verify NAME, PLAYERS, and UPTIME are present.
+6. **`msdp_send_var()` framing** — verify `IAC SB MSDP_VAR "x" MSDP_VAL "y" IAC SE` structure.
 7. **`process_msdp_subneg()` REPORT** — feed `MSDP_VAR "REPORT" MSDP_VAL "HEALTH"`; verify
-   `MSDP_BIT_HEALTH` is set in `d->msdp_reported` and a response is queued.
+   `MSDP_BIT_HEALTH` is set in `d->msdp_reported`.
 8. **`process_msdp_subneg()` UNREPORT** — verify the bit is cleared.
 9. **`process_msdp_subneg()` RESET** — verify all bits cleared.
-10. **`process_msdp_subneg()` LIST COMMANDS** — verify the reply contains the five command names
-    in an MSDP array.
+10. **`process_msdp_subneg()` LIST COMMANDS** — verify array reply contains all five command names.
+
+**`src/tests/test_gmcp.c`** — GMCP:
+
+11. **`gmcp_send()` framing** — verify `IAC SB GMCP "Pkg.Cmd" {json} IAC SE` structure.
+12. **`process_gmcp_subneg()` Core.Supports.Set** — feed `["Char 1","Room 1"]`; verify
+    `GMCP_PKG_CHAR` and `GMCP_PKG_ROOM` bits set, `GMCP_PKG_COMM` clear.
+13. **`process_gmcp_subneg()` Core.Supports.Add** — verify bit OR'd in without clearing others.
+14. **`process_gmcp_subneg()` Core.Supports.Remove** — verify bit cleared.
+15. **`gmcp_send()` Char.Vitals JSON** — verify output contains `"hp"`, `"mp"`, `"mv"` keys
+    with correct integer values from a stub `CHAR_DATA`.
+16. **`process_gmcp_subneg()` unknown package** — verify no crash and no reply sent.
+
+**`src/tests/test_mccp.c`** — MCCP2 and MCCP3:
+
+17. **`mccp2_start()` subneg bytes** — verify the bytes `IAC SB TELOPT_MCCP2 IAC SE` are sent
+    before the deflate stream begins.
+18. **MCCP2 round-trip** — compress a sample string with `mccp2_start()` write path; inflate
+    with raw `inflate()` in the test; verify the result matches the original string.
+19. **MCCP2 + TLS guard** — set `d->tls_active = TRUE`; send `IAC DO MCCP2`; verify
+    `IAC WONT MCCP2` is returned and `d->mccp2_active` remains FALSE.
+20. **MCCP3 round-trip** — deflate a sample string externally; feed into `read_from_descriptor()`
+    stub with `mccp3_active = TRUE`; verify the inflated result appears in `d->inbuf`.
+21. **MCCP3 decompression error** — feed corrupt data; verify `IAC WONT MCCP3` is sent and
+    `mccp3_active` is cleared.
 
 The TLS handshake path is exercised by the existing integration test: if OpenSSL is available and
 a self-signed certificate is placed at the default paths, the integration test can optionally
@@ -804,6 +1275,11 @@ connect via `openssl s_client` to verify the TLS port.
 | MSSP count freshness | Cached at boot (static counts) | Re-counted on every crawl — unnecessary overhead; static game geometry rarely changes |
 | MSDP update frequency | Every `PULSE_VIOLENCE` (0.25 s) for all subscribed vars | Track last-sent values and only push on change — reduces bandwidth but adds per-descriptor state bloat |
 | MSDP room change detection | Compare `in_room->vnum` to `msdp_last_room` | Hook into `move_char()` directly — cleaner but more invasive |
+| GMCP JSON generation | Inline helpers (`json_str`, `json_int`) — no library | cJSON single-file library — cleaner API but adds a source dependency |
+| GMCP update trigger | Post-command hook + `PULSE_VIOLENCE` periodic | Only periodic — less responsive; only post-command — misses combat tick changes |
+| MCCP2 flush strategy | `Z_SYNC_FLUSH` per write — full flush each call | `Z_NO_FLUSH` with periodic `Z_SYNC_FLUSH` — better compression but complex buffering |
+| MCCP2/3 + TLS | Disabled (CRIME/BREACH conservative guard) | Allowed with a config flag — lower security but more flexibility for operators |
+| zlib linkage | `-lz` always linked | Conditional like OpenSSL — unnecessary; zlib is universally available on Linux |
 | Conditional compilation | `#ifdef HAVE_OPENSSL` throughout `socket.c` | Separate `socket_tls.c` file — cleaner but more build system complexity |
 
 ---
@@ -825,5 +1301,15 @@ connect via `openssl s_client` to verify the TLS port.
    contains all expected variable names.
 9. **MSDP room change:** walk between rooms; verify `ROOM_NAME`, `ROOM_VNUM`, and `ROOM_EXITS`
    update only on movement, not on every pulse.
-10. **WebSocket:** browser client — no change to WebSocket or music behaviour.
-11. **Integration test:** `make integration-test` — boot, login, 8-second crash check all pass.
+10. **GMCP negotiation:** in Mudlet, enable GMCP; confirm `Core.Hello` received on connect;
+    subscribe to `Char 1` and `Room 1`; verify `Char.Vitals` updates combat HP gauge and
+    `Room.Info` fires on room entry.
+11. **GMCP Comm.Channel:** enable `Comm 1`; gossip on a second client; verify the first client
+    receives `Comm.Channel {"channel":"gossip","talker":"...","text":"..."}`.
+12. **MCCP2 negotiation:** use `telnet` with MCCP2-aware client (e.g. Mudlet); verify the data
+    stream becomes compressed after `IAC SB MCCP2 IAC SE`; confirm text is still readable
+    after decompression. Verify `IAC DO MCCP2` on a TLS connection returns `IAC WONT MCCP2`.
+13. **MCCP3 negotiation:** use TinTin++ with MCCP3 support; verify server inflates incoming
+    client commands correctly; verify a corrupt compressed byte triggers graceful disable.
+14. **WebSocket:** browser client — no change to WebSocket or music behaviour.
+15. **Integration test:** `make integration-test` — boot, login, 8-second crash check all pass.
