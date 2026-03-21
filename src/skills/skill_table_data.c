@@ -3,26 +3,11 @@
  * Fighter and thief skills.
  */
 
-{NORM,
- "appraise",
- {LEVELS_INIT, L(CLASS_CIP, 12)},
- spell_null,
- TAR_IGNORE,
- POS_STANDING,
- &gsn_appraise,
- SLOT(0),
- 0,
- 24,
- FALSE,
- "",
- "!Appraise!",
- ""},
-
-    {NORM,       "bash",     {LEVELS_INIT, L(CLASS_WAR, 28)},
-     spell_null, TAR_IGNORE, POS_FIGHTING,
-     &gsn_bash,  SLOT(0),    0,
-     24,         TRUE,       "bash",
-     "!bash!",   ""},
+{NORM,       "bash",     {LEVELS_INIT, L(CLASS_WAR, 28)},
+ spell_null, TAR_IGNORE, POS_FIGHTING,
+ &gsn_bash,  SLOT(0),    0,
+ 24,         TRUE,       "bash",
+ "!bash!",   ""},
 
     {NORM,
      "berserk",

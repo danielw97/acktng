@@ -97,12 +97,11 @@ void pub_society_boot_init(void)
    pub_society_table[PUB_SOCIETY_GUARD_COMMAND].skill_gsns[5] = gsn_command_presence;
 
    /* Harbor Syndics */
-   pub_society_table[PUB_SOCIETY_HARBOR_SYNDICS].skill_gsns[0] = gsn_appraise;
-   pub_society_table[PUB_SOCIETY_HARBOR_SYNDICS].skill_gsns[1] = gsn_dockside_audit;
-   pub_society_table[PUB_SOCIETY_HARBOR_SYNDICS].skill_gsns[2] = gsn_haggle;
-   pub_society_table[PUB_SOCIETY_HARBOR_SYNDICS].skill_gsns[3] = gsn_longshoreman;
-   pub_society_table[PUB_SOCIETY_HARBOR_SYNDICS].skill_gsns[4] = gsn_bonded_cargo;
-   pub_society_table[PUB_SOCIETY_HARBOR_SYNDICS].skill_gsns[5] = gsn_anchor_slam;
+   pub_society_table[PUB_SOCIETY_HARBOR_SYNDICS].skill_gsns[0] = gsn_dockside_audit;
+   pub_society_table[PUB_SOCIETY_HARBOR_SYNDICS].skill_gsns[1] = gsn_haggle;
+   pub_society_table[PUB_SOCIETY_HARBOR_SYNDICS].skill_gsns[2] = gsn_longshoreman;
+   pub_society_table[PUB_SOCIETY_HARBOR_SYNDICS].skill_gsns[3] = gsn_bonded_cargo;
+   pub_society_table[PUB_SOCIETY_HARBOR_SYNDICS].skill_gsns[4] = gsn_anchor_slam;
 
    /* Ember Wardens */
    pub_society_table[PUB_SOCIETY_EMBER_WARDENS].skill_gsns[0] = gsn_forage;

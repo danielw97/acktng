@@ -51,7 +51,6 @@ extern sh_int gsn_martial_arts; /* For unarmed fighting */
 extern sh_int gsn_dualwield;
 extern sh_int gsn_stun;
 extern sh_int gsn_shadow;
-extern sh_int gsn_appraise;
 extern sh_int gsn_climb;
 extern sh_int gsn_find_doors;
 extern sh_int gsn_smash;

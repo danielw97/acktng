@@ -113,7 +113,6 @@ sh_int gsn_dualwield;
 sh_int gsn_stun;
 sh_int gsn_knee;
 sh_int gsn_shadow;
-sh_int gsn_appraise;
 sh_int gsn_climb;
 sh_int gsn_find_doors;
 sh_int gsn_bash;
