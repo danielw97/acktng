@@ -5,7 +5,7 @@
 
 # Telnet port (public, all interfaces)
 port=8890
-# WebSocket loopback port (127.0.0.1 only; nginx TLS proxy forwards wss://ackmud.com:8890 here)
+# WebSocket loopback port (127.0.0.1 only; nginx TLS proxy forwards wss://ackmud.com:9890 here)
 ws_port=18890
 
 # set up
