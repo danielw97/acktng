@@ -117,6 +117,10 @@ acktng/
 ├── player/           # Player save directory (subdirectories a-z)
 ├── log/              # Server log directory
 ├── reports/          # Report files
+├── web/              # Game-generated web data output (see web/README.md)
+│   ├── gsgp.json         # Game State / General-Purpose JSON feed (active players, leaderboards)
+│   ├── soewholist.html   # HTML fragment: list of currently online players
+│   └── whocount.html     # HTML fragment: current online player count
 ├── integration-test.sh  # Integration test script
 └── .github/workflows/   # CI: validate-open-prs.yml
 ```
