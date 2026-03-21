@@ -422,7 +422,7 @@ int skill_table_lookup(CHAR_DATA *ch, int sn, int return_type)
        * Check normal classes first
        */
 
-      switch (SKILL_TIER(sn))
+      switch (skill_get_tier(sn))
       {
       case MORTAL:
          for (cnt = 0; cnt < MAX_CLASS; cnt++)

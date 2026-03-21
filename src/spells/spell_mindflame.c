@@ -77,6 +77,6 @@ bool spell_recurrence_loop(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA 
       if (vch->in_room->area == ch->in_room->area)
          send_to_char("A distant repetitive pressure brushes the edge of your mind.\n\r", vch);
    }
-   CUREF(vch_next);
+   char_unreference(&vch_next);
    return TRUE;
 }

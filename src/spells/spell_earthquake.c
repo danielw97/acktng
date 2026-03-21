@@ -75,6 +75,6 @@ bool spell_jackal_verdict(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *
       if (vch->in_room->area == ch->in_room->area)
          send_to_char("A distant sense of judgment settles over you briefly.\n\r", vch);
    }
-   CUREF(vch_next);
+   char_unreference(&vch_next);
    return TRUE;
 }

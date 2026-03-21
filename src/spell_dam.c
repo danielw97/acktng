@@ -168,7 +168,7 @@ int get_spell_damage(CHAR_DATA *ch, int gsn)
    int d1;
    int d2;
 
-   spell_dam_damage_params(SKILL_TIER(gsn), get_best_level(ch, gsn), &base, &d1, &d2);
+   spell_dam_damage_params(skill_get_tier(gsn), get_best_level(ch, gsn), &base, &d1, &d2);
 
    return dice(d1, d2) + base;
 }
@@ -177,7 +177,7 @@ int get_best_level(CHAR_DATA *ch, int gsn)
 {
    int best = -1;
 
-   if (SKILL_TIER(gsn) == MORTAL)
+   if (skill_get_tier(gsn) == MORTAL)
    {
       for (int i = 0; i < MAX_CLASS; i++)
       {
@@ -190,7 +190,7 @@ int get_best_level(CHAR_DATA *ch, int gsn)
             best = ch->class_level[i];
       }
    }
-   else if (SKILL_TIER(gsn) == REMORT)
+   else if (skill_get_tier(gsn) == REMORT)
    {
       for (int i = CLASS_SOR; i < CLASS_SOR + MAX_REMORT; i++)
       {
@@ -203,7 +203,7 @@ int get_best_level(CHAR_DATA *ch, int gsn)
             best = ch->class_level[i];
       }
    }
-   else if (SKILL_TIER(gsn) == ADEPT)
+   else if (skill_get_tier(gsn) == ADEPT)
    {
       for (int i = CLASS_GMA; i < CLASS_GMA + MAX_CLASS; i++)
       {

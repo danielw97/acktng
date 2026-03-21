@@ -99,20 +99,20 @@ be32dec_vect(int *dst, const unsigned char *src, size_t len)
 #endif /* BYTE_ORDER != BIG_ENDIAN */
 
 /* Elementary functions used by SHA256 */
-#define Ch(x, y, z) ((x & (y ^ z)) ^ z)
-#define Maj(x, y, z) ((x & (y | z)) | (y & z))
-#define SHR(x, n) (x >> n)
-#define ROTR(x, n) ((x >> n) | (x << (32 - n)))
-#define S0(x) (ROTR(x, 2) ^ ROTR(x, 13) ^ ROTR(x, 22))
-#define S1(x) (ROTR(x, 6) ^ ROTR(x, 11) ^ ROTR(x, 25))
-#define s0(x) (ROTR(x, 7) ^ ROTR(x, 18) ^ SHR(x, 3))
-#define s1(x) (ROTR(x, 17) ^ ROTR(x, 19) ^ SHR(x, 10))
+static inline int sha256_Ch(int x, int y, int z)  { return (x & (y ^ z)) ^ z; }
+static inline int sha256_Maj(int x, int y, int z) { return (x & (y | z)) | (y & z); }
+static inline int sha256_SHR(int x, int n)        { return x >> n; }
+static inline int sha256_ROTR(int x, int n)       { return (x >> n) | (x << (32 - n)); }
+static inline int sha256_S0(int x) { return sha256_ROTR(x, 2)  ^ sha256_ROTR(x, 13) ^ sha256_ROTR(x, 22); }
+static inline int sha256_S1(int x) { return sha256_ROTR(x, 6)  ^ sha256_ROTR(x, 11) ^ sha256_ROTR(x, 25); }
+static inline int sha256_s0(int x) { return sha256_ROTR(x, 7)  ^ sha256_ROTR(x, 18) ^ sha256_SHR(x, 3); }
+static inline int sha256_s1(int x) { return sha256_ROTR(x, 17) ^ sha256_ROTR(x, 19) ^ sha256_SHR(x, 10); }
 
 /* SHA256 round function */
-#define RND(a, b, c, d, e, f, g, h, k) \
-	t0 = h + S1(e) + Ch(e, f, g) + k;  \
-	t1 = S0(a) + Maj(a, b, c);         \
-	d += t0;                           \
+#define RND(a, b, c, d, e, f, g, h, k)              \
+	t0 = h + sha256_S1(e) + sha256_Ch(e, f, g) + k; \
+	t1 = sha256_S0(a) + sha256_Maj(a, b, c);         \
+	d += t0;                                         \
 	h = t0 + t1;
 
 /* Adjusted round function for rotating state */
@@ -138,7 +138,7 @@ SHA256_Transform(int *state, const unsigned char block[64])
 	/* 1. Prepare message schedule W. */
 	be32dec_vect(W, block, 64);
 	for (i = 16; i < 64; i++)
-		W[i] = s1(W[i - 2]) + W[i - 7] + s0(W[i - 15]) + W[i - 16];
+		W[i] = sha256_s1(W[i - 2]) + W[i - 7] + sha256_s0(W[i - 15]) + W[i - 16];
 
 	/* 2. Initialize working variables. */
 	memcpy(S, state, 32);

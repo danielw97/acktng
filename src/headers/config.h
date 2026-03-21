@@ -222,7 +222,7 @@
 #define TAR_OBJ_INV 4
 #define TAR_CHAR_NOTSELF 5
 
-/* Class tier constants (returned by CLASS_TIER / SKILL_TIER) */
+/* Class tier constants (returned by CLASS_TIER / skill_get_tier) */
 #define MORTAL 1
 #define REMORT 2
 #define ADEPT 3

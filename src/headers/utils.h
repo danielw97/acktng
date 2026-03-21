@@ -130,8 +130,6 @@ struct char_ref_type
       s.var = &v;                                                                                  \
       obj_reference(&s);                                                                           \
    } while (0)
-#define OUREF(var) obj_unreference(&var);
-
 #define CREF(v, type)                                                                              \
    do                                                                                              \
    {                                                                                               \
@@ -139,7 +137,6 @@ struct char_ref_type
       s.var = &v;                                                                                  \
       char_reference(&s);                                                                          \
    } while (0)
-#define CUREF(var) char_unreference(&var);
 
 /*
  * Bit manipulation macros (must stay as macros: SET_BIT/REMOVE_BIT modify

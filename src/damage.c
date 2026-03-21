@@ -554,7 +554,7 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
    {
       dam_mod += ch->class_level[CLASS_WAR] / 100;
 
-      if (SKILL_TIER(dt) == REMORT || SKILL_TIER(dt) == ADEPT)
+      if (skill_get_tier(dt) == REMORT || skill_get_tier(dt) == ADEPT)
       {
          dam_mod += ch->class_level[CLASS_KNI] / 50;
          dam_mod += ch->class_level[CLASS_SWO] / 50;
@@ -567,7 +567,7 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
    {
       dam_mod += ch->class_level[CLASS_PUG] / 200;
 
-      if (SKILL_TIER(dt) == REMORT || SKILL_TIER(dt) == ADEPT)
+      if (skill_get_tier(dt) == REMORT || skill_get_tier(dt) == ADEPT)
       {
          dam_mod += ch->class_level[CLASS_MON] / 200;
          dam_mod += ch->class_level[CLASS_BRA] / 200 * 0.75;
@@ -621,7 +621,8 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
       dam_mod += ch->class_level[CLASS_PRI] / 100;
    }
 
-   if (!IS_SET(element, ELE_PHYSICAL) && (SKILL_TIER(dt) == REMORT || SKILL_TIER(dt) == ADEPT))
+   if (!IS_SET(element, ELE_PHYSICAL) &&
+       (skill_get_tier(dt) == REMORT || skill_get_tier(dt) == ADEPT))
    {
       dam_mod += ch->class_level[CLASS_SOR] / 100 * 0.5;
       dam_mod += ch->class_level[CLASS_WIZ] / 100 * 0.5;

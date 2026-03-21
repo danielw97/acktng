@@ -106,7 +106,7 @@ bool spell_retri_strike(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
                       vch);
    }
 
-   CUREF(vch_next);
+   char_unreference(&vch_next);
    extract_obj(staff_obj);
    return TRUE;
 }

@@ -66,6 +66,6 @@ bool spell_nerve_fire(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       if (vch->in_room->area == ch->in_room->area)
          send_to_char("You notice a slight burning feeling in your body.\n\r", vch);
    }
-   CUREF(vch_next);
+   char_unreference(&vch_next);
    return TRUE;
 }

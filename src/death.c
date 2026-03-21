@@ -53,7 +53,7 @@ void make_corpse(CHAR_DATA *ch, char *argument)
             obj_from_char(obj);
             extract_obj(obj);
          }
-         OUREF(obj_next);
+         obj_unreference(&obj_next);
          act("@@eAs $n's soul attempts to fade from the room, the @@dSoul Net@@e quickly "
              "collapses, entombing the soul into a small figurine!!",
              ch, NULL, NULL, TO_ROOM);
@@ -180,7 +180,7 @@ void make_corpse(CHAR_DATA *ch, char *argument)
       else
          obj_to_obj(obj, corpse);
    }
-   OUREF(obj_next);
+   obj_unreference(&obj_next);
 
    if (!IS_AFFECTED(ch, AFF_CHARM) && number_percent() < get_generation_chance())
    {

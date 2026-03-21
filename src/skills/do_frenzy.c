@@ -78,7 +78,7 @@ void do_frenzy(CHAR_DATA *ch, char *argument)
          }
       }
    }
-   CUREF(vch_next);
+   char_unreference(&vch_next);
 
    return;
 }

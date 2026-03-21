@@ -119,7 +119,7 @@ bool spell_dispel_magic(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
                break;
             }
          }
-         CUREF(vch_next);
+         char_unreference(&vch_next);
          return TRUE;
       }
 
@@ -145,7 +145,7 @@ bool spell_dispel_magic(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
                break;
             }
          }
-         CUREF(vch_next);
+         char_unreference(&vch_next);
 
          return TRUE;
       }
@@ -257,7 +257,7 @@ bool spell_dispel_magic(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
             break;
          }
       }
-      CUREF(vch_next);
+      char_unreference(&vch_next);
 
       return TRUE;
    }
