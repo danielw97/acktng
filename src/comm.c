@@ -127,7 +127,7 @@ time_t current_time; /* Time of this pulse           */
 
 /* port and control moved from local to global for HOTreboot - Flar */
 int port;
-int control;
+int control = -1;
 
 int max_players = 0;
 int hotreboot_countdown = 0; /* Pulses remaining until automatic hotreboot; 0 = inactive */
