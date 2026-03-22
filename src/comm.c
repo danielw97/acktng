@@ -324,7 +324,7 @@ int main(int argc, char **argv)
    }
 
    /* Check for HOTreboot parameter - Flar */
-   if (argv[2] && argv[2][0] && strcmp(argv[2], "--ws-loopback") != 0)
+   if (argv[2] && !strcmp(argv[2], "HOTreboot"))
    {
       fCopyOver = TRUE;
       control = atoi(argv[3]);
