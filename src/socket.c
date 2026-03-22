@@ -764,8 +764,11 @@ void game_loop(int control, int control_ws, int control_tls, int control_sniff)
       if (reopen_flag)
       {
          log_string("SIGUSR1 received, reopening control socket");
-         close(control);
-         control = init_socket(global_port, INADDR_ANY);
+         if (control >= 0)
+         {
+            close(control);
+            control = init_socket(global_port, INADDR_ANY);
+         }
          if (control_ws >= 0)
          {
             close(control_ws);
@@ -790,8 +793,12 @@ void game_loop(int control, int control_ws, int control_tls, int control_sniff)
       FD_ZERO(&in_set);
       FD_ZERO(&out_set);
       FD_ZERO(&exc_set);
-      FD_SET(control, &in_set);
-      maxdesc = control;
+      maxdesc = 0;
+      if (control >= 0)
+      {
+         FD_SET(control, &in_set);
+         maxdesc = control;
+      }
       if (control_ws >= 0)
       {
          FD_SET(control_ws, &in_set);
@@ -842,14 +849,63 @@ void game_loop(int control, int control_ws, int control_tls, int control_sniff)
       /*
        * New connection?
        */
-      if (FD_ISSET(control, &in_set))
-         new_descriptor(control, FALSE, FALSE);
+      if (control >= 0 && FD_ISSET(control, &in_set))
+         new_descriptor(control, FALSE, TRUE);
       if (control_ws >= 0 && FD_ISSET(control_ws, &in_set))
          new_descriptor(control_ws, FALSE, FALSE);
       if (control_tls >= 0 && FD_ISSET(control_tls, &in_set))
          new_descriptor(control_tls, TRUE, FALSE);
       if (control_sniff >= 0 && FD_ISSET(control_sniff, &in_set))
          new_descriptor(control_sniff, FALSE, TRUE);
+
+         /*
+          * Advance any pending TLS handshakes non-blockingly.
+          * SSL_accept was deferred from new_descriptor to avoid blocking the
+          * game loop.  Each iteration we try to complete the handshake when the
+          * socket is ready, or time out after a short deadline.
+          */
+#ifdef HAVE_OPENSSL
+      for (d = first_desc; d != NULL; d = d_next)
+      {
+         d_next = d->next;
+         if (!d->tls_handshake_pending)
+            continue;
+
+         /* Enforce the short handshake deadline */
+         if (current_time >= d->timeout)
+         {
+            d->outtop = 0;
+            close_socket(d);
+            continue;
+         }
+
+         /* Only try when the socket signals readiness */
+         if (!FD_ISSET(d->descriptor, &in_set) && !FD_ISSET(d->descriptor, &out_set))
+            continue;
+
+         {
+            int ret = SSL_accept((SSL *)d->ssl);
+            if (ret > 0)
+            {
+               d->tls_handshake_pending = FALSE;
+               d->tls_active = TRUE;
+               d->timeout = current_time + 180;
+               queue_login_greeting(d);
+            }
+            else
+            {
+               int err = SSL_get_error((SSL *)d->ssl, ret);
+               if (err != SSL_ERROR_WANT_READ && err != SSL_ERROR_WANT_WRITE)
+               {
+                  ERR_print_errors_fp(stderr);
+                  d->outtop = 0;
+                  close_socket(d);
+               }
+               /* else: keep waiting until next tick */
+            }
+         }
+      }
+#endif
 
       /*
        * Kick out the freaky folks.
@@ -874,6 +930,10 @@ void game_loop(int control, int control_ws, int control_tls, int control_sniff)
       for (d = first_desc; d != NULL; d = d_next)
       {
          d_next = d->next;
+#ifdef HAVE_OPENSSL
+         if (d->tls_handshake_pending)
+            continue;
+#endif
          d->fcommand = FALSE;
 
          if (FD_ISSET(d->descriptor, &in_set))
@@ -940,6 +1000,10 @@ void game_loop(int control, int control_ws, int control_tls, int control_sniff)
       for (d = first_desc; d != NULL; d = d_next)
       {
          d_next = d->next;
+#ifdef HAVE_OPENSSL
+         if (d->tls_handshake_pending)
+            continue;
+#endif
 
          /*
           * spec: disconnect people idling on login
@@ -1103,50 +1167,40 @@ void new_descriptor(int control, bool is_tls, bool do_sniff)
    if (is_tls && global_ssl_ctx != NULL)
    {
       SSL *ssl;
-      int ret, err, tries = 0;
-      fd_set fds;
-      struct timeval tv;
+      int ret, err;
 
       ssl = SSL_new(global_ssl_ctx);
       SSL_set_fd(ssl, desc);
-      do
+      ret = SSL_accept(ssl);
+      if (ret > 0)
       {
-         ret = SSL_accept(ssl);
-         if (ret <= 0)
-         {
-            err = SSL_get_error(ssl, ret);
-            if (err == SSL_ERROR_WANT_READ || err == SSL_ERROR_WANT_WRITE)
-            {
-               FD_ZERO(&fds);
-               FD_SET(desc, &fds);
-               tv.tv_sec = 1;
-               tv.tv_usec = 0;
-               if (err == SSL_ERROR_WANT_READ)
-                  select(desc + 1, &fds, NULL, NULL, &tv);
-               else
-                  select(desc + 1, NULL, &fds, NULL, &tv);
-               tries++;
-            }
-            else
-            {
-               ERR_print_errors_fp(stderr);
-               SSL_free(ssl);
-               close(desc);
-               PUT_FREE(dnew, desc_free);
-               return;
-            }
-         }
-      } while (ret <= 0 && tries < 5);
-
-      if (ret <= 0)
-      {
-         SSL_free(ssl);
-         close(desc);
-         PUT_FREE(dnew, desc_free);
-         return;
+         dnew->ssl = ssl;
+         dnew->tls_active = TRUE;
       }
-      dnew->ssl = ssl;
-      dnew->tls_active = TRUE;
+      else
+      {
+         err = SSL_get_error(ssl, ret);
+         if (err == SSL_ERROR_WANT_READ || err == SSL_ERROR_WANT_WRITE)
+         {
+            /*
+             * Handshake not yet complete on a non-blocking socket.
+             * Store the SSL object and mark the descriptor so game_loop
+             * advances the handshake without blocking the main thread.
+             * Greeting is deferred until the handshake finishes.
+             */
+            dnew->ssl = ssl;
+            dnew->tls_handshake_pending = TRUE;
+            dnew->timeout = current_time + 10; /* short handshake deadline */
+         }
+         else
+         {
+            ERR_print_errors_fp(stderr);
+            SSL_free(ssl);
+            close(desc);
+            PUT_FREE(dnew, desc_free);
+            return;
+         }
+      }
    }
 #else
    (void)is_tls;
@@ -1223,11 +1277,19 @@ void new_descriptor(int control, bool is_tls, bool do_sniff)
    LINK(dnew, first_desc, last_desc, next, prev);
 
    /*
-    * spec: set initial login timeout
+    * spec: set initial login timeout (may have been overridden above to a
+    * short TLS handshake deadline; restored to 180s after handshake done).
+    * When HAVE_OPENSSL is not defined there is no TLS, so always set now.
     */
-   dnew->timeout = current_time + 180;
+#ifdef HAVE_OPENSSL
+   if (!dnew->tls_handshake_pending)
+#endif
+      dnew->timeout = current_time + 180;
 
-   queue_login_greeting(dnew);
+#ifdef HAVE_OPENSSL
+   if (!dnew->tls_handshake_pending)
+#endif
+      queue_login_greeting(dnew);
 
    cur_players++;
 
@@ -1254,6 +1316,7 @@ void init_descriptor(DESCRIPTOR_DATA *dnew, int desc)
    dnew->tls_active = FALSE;
 #ifdef HAVE_OPENSSL
    dnew->ssl = NULL;
+   dnew->tls_handshake_pending = FALSE;
 #endif
    dnew->msdp_active = FALSE;
    dnew->msdp_reported = 0;
@@ -1339,12 +1402,14 @@ void close_socket(DESCRIPTOR_DATA *dclose)
       dclose->mccp3_active = FALSE;
    }
 #ifdef HAVE_OPENSSL
-   if (dclose->tls_active && dclose->ssl)
+   if (dclose->ssl)
    {
-      SSL_shutdown((SSL *)dclose->ssl);
+      if (dclose->tls_active)
+         SSL_shutdown((SSL *)dclose->ssl);
       SSL_free((SSL *)dclose->ssl);
       dclose->ssl = NULL;
       dclose->tls_active = FALSE;
+      dclose->tls_handshake_pending = FALSE;
    }
 #endif
 

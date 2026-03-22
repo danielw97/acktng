@@ -273,6 +273,7 @@ struct descriptor_data
    /* TLS (native OpenSSL encryption) */
 #ifdef HAVE_OPENSSL
    struct ssl_st *ssl;
+   bool tls_handshake_pending; /* SSL_accept in progress; advanced in game loop */
 #endif
    bool tls_active;
 

@@ -1,7 +1,8 @@
 #!/bin/sh
 #
 # Integration test: build, start, boot, log in as a new player, validate
-# WebSocket connectivity, and run for 2 seconds checking for crashes.
+# WebSocket connectivity, validate TLS connectivity (if available), and run
+# for 2 seconds checking for crashes.
 #
 # Exit codes:
 #   0 - MUD booted, accepted a player login, and ran without crashing
@@ -18,13 +19,32 @@ LOG_FILE="/tmp/mud-integration-test-$$.log"
 # with any mob name).
 TEST_PLAYER="Integrat"
 TEST_PASSWORD="integrationpass"
+TLS_TEST_PLAYER="Tlsconn"
 
 # Ask the OS for a free ephemeral port to avoid collisions on shared CI hosts.
 if command -v python3 >/dev/null 2>&1; then
     TEST_PORT=$(python3 -c \
         "import socket; s=socket.socket(); s.bind(('', 0)); print(s.getsockname()[1]); s.close()")
+    TLS_PORT=$(python3 -c \
+        "import socket; s=socket.socket(); s.bind(('', 0)); print(s.getsockname()[1]); s.close()")
 else
     TEST_PORT=$((RANDOM % 16383 + 49152))
+    TLS_PORT=$((RANDOM % 16383 + 49152))
+fi
+
+# Try to generate a self-signed certificate for TLS testing.
+# If openssl is unavailable or cert generation fails, TLS test is skipped.
+TLS_CERT="/tmp/mud-tls-cert-$$.pem"
+TLS_KEY="/tmp/mud-tls-key-$$.pem"
+TLS_ARGS=""
+HAS_TLS=0
+
+if command -v openssl >/dev/null 2>&1; then
+    if openssl req -x509 -newkey rsa:2048 \
+           -keyout "$TLS_KEY" -out "$TLS_CERT" \
+           -days 1 -nodes -subj '/CN=localhost' >/dev/null 2>&1; then
+        TLS_ARGS="--tls-port $TLS_PORT --tls-cert $TLS_CERT --tls-key $TLS_KEY"
+    fi
 fi
 
 # ---------------------------------------------------------------------------
@@ -35,7 +55,7 @@ cleanup() {
         kill "$MUD_PID" 2>/dev/null || true
         wait "$MUD_PID" 2>/dev/null || true
     fi
-    rm -f "$LOG_FILE"
+    rm -f "$LOG_FILE" "$TLS_CERT" "$TLS_KEY"
 }
 trap cleanup EXIT
 
@@ -49,21 +69,27 @@ if ! (cd "$SRC_DIR" && make ack); then
 fi
 
 # ---------------------------------------------------------------------------
-# Step 2: remove any leftover player file so the login flow is always the
+# Step 2: remove any leftover player files so the login flows are always the
 # new-character path (idempotent test runs).
 # ---------------------------------------------------------------------------
 player_lower=$(echo "$TEST_PLAYER" | tr '[:upper:]' '[:lower:]')
 first_letter=$(echo "$player_lower" | cut -c1)
 rm -f "$PLAYER_DIR/$first_letter/$player_lower"
 
+tls_player_lower=$(echo "$TLS_TEST_PLAYER" | tr '[:upper:]' '[:lower:]')
+tls_first_letter=$(echo "$tls_player_lower" | cut -c1)
+rm -f "$PLAYER_DIR/$tls_first_letter/$tls_player_lower"
+
 # ---------------------------------------------------------------------------
 # Step 3: launch
 # The startup script runs the binary from the area/ directory so that
 # relative paths to area files, data files, and player directories resolve
-# correctly.
+# correctly.  TLS_ARGS is empty if cert generation failed or openssl is
+# absent; the server will simply not open a TLS port in that case.
 # ---------------------------------------------------------------------------
 echo "integration-test: starting MUD on port $TEST_PORT..."
-(cd "$AREA_DIR" && ../src/ack "$TEST_PORT") >"$LOG_FILE" 2>&1 &
+# shellcheck disable=SC2086
+(cd "$AREA_DIR" && ../src/ack "$TEST_PORT" $TLS_ARGS) >"$LOG_FILE" 2>&1 &
 MUD_PID=$!
 
 echo "integration-test: MUD started (PID $MUD_PID), waiting for boot..."
@@ -100,6 +126,15 @@ if [ "$boot_wait" -ge 90 ]; then
     exit 1
 fi
 
+# Determine whether the server actually opened the TLS port.  It will if and
+# only if it was compiled with OpenSSL AND cert/key loading succeeded.
+if [ -n "$TLS_ARGS" ] && grep -q "(TLS)" "$LOG_FILE" 2>/dev/null; then
+    HAS_TLS=1
+    echo "integration-test: TLS port $TLS_PORT is active."
+else
+    echo "integration-test: TLS not available in this build; skipping TLS test."
+fi
+
 echo "integration-test: MUD is up, validating websocket login flow for '${TEST_PLAYER}'..."
 
 # ---------------------------------------------------------------------------
@@ -116,222 +151,7 @@ echo "integration-test: MUD is up, validating websocket login flow for '${TEST_P
 #   CON_READ_MOTD         -> any input -> CON_PLAYING
 #   CON_PLAYING           -> server sends "Welcome to ACK!TNG" + room look
 # ---------------------------------------------------------------------------
-python3 - "$TEST_PORT" "$TEST_PLAYER" "$TEST_PASSWORD" <<'PYEOF'
-import base64
-import os
-import socket
-import sys
-import time
-
-PORT     = int(sys.argv[1])
-PLAYER   = sys.argv[2]
-PASSWORD = sys.argv[3]
-
-def fail(msg, context=""):
-    print(f"integration-test: FAILED - {msg}", flush=True)
-    if context:
-        print(f"  received: {repr(context[-300:])}", flush=True)
-    sys.exit(1)
-
-class WSClient:
-    def __init__(self, sock):
-        self.s = sock
-        self.pending = bytearray()
-
-    def recv_exact(self, n, timeout=5.0):
-        deadline = time.time() + timeout
-        while len(self.pending) < n:
-            remaining = deadline - time.time()
-            if remaining <= 0:
-                break
-            self.s.settimeout(min(0.25, remaining))
-            try:
-                chunk = self.s.recv(4096)
-            except socket.timeout:
-                continue
-            if not chunk:
-                break
-            self.pending.extend(chunk)
-        if len(self.pending) < n:
-            raise RuntimeError("socket closed before expected bytes")
-        data = bytes(self.pending[:n])
-        del self.pending[:n]
-        return data
-
-    def recv_http_headers(self, timeout=5.0):
-        deadline = time.time() + timeout
-        marker = b"\r\n\r\n"
-        while marker not in self.pending:
-            remaining = deadline - time.time()
-            if remaining <= 0:
-                break
-            self.s.settimeout(min(0.25, remaining))
-            try:
-                chunk = self.s.recv(4096)
-            except socket.timeout:
-                continue
-            if not chunk:
-                break
-            self.pending.extend(chunk)
-        idx = self.pending.find(marker)
-        if idx == -1:
-            return ""
-        end = idx + len(marker)
-        headers = bytes(self.pending[:end])
-        del self.pending[:end]
-        return headers.decode('latin-1', errors='replace')
-
-    def send_text(self, msg):
-        payload = msg.encode('latin-1')
-        mask = os.urandom(4)
-        frame = bytearray()
-        frame.append(0x81)
-        length = len(payload)
-        if length < 126:
-            frame.append(0x80 | length)
-        elif length <= 0xFFFF:
-            frame.append(0x80 | 126)
-            frame.extend(length.to_bytes(2, 'big'))
-        else:
-            raise RuntimeError("payload too large")
-        frame.extend(mask)
-        frame.extend(bytes(payload[i] ^ mask[i % 4] for i in range(length)))
-        self.s.sendall(frame)
-
-    def send_pong(self, payload=b""):
-        mask = os.urandom(4)
-        frame = bytearray()
-        frame.append(0x8A)
-        length = len(payload)
-        if length < 126:
-            frame.append(0x80 | length)
-        elif length <= 0xFFFF:
-            frame.append(0x80 | 126)
-            frame.extend(length.to_bytes(2, 'big'))
-        else:
-            raise RuntimeError("pong payload too large")
-        frame.extend(mask)
-        frame.extend(bytes(payload[i] ^ mask[i % 4] for i in range(length)))
-        self.s.sendall(frame)
-
-    def read_text_frame(self, timeout=5.0):
-        deadline = time.time() + timeout
-        while time.time() < deadline:
-            try:
-                b0, b1 = self.recv_exact(2, timeout=deadline - time.time())
-            except Exception:
-                return ""
-
-            opcode = b0 & 0x0F
-            masked = (b1 & 0x80) != 0
-            length = b1 & 0x7F
-            if length == 126:
-                length = int.from_bytes(self.recv_exact(2, timeout=deadline - time.time()), 'big')
-            elif length == 127:
-                length = int.from_bytes(self.recv_exact(8, timeout=deadline - time.time()), 'big')
-
-            mask = self.recv_exact(4, timeout=deadline - time.time()) if masked else b""
-            payload = self.recv_exact(length, timeout=deadline - time.time()) if length > 0 else b""
-            if masked:
-                payload = bytes(payload[i] ^ mask[i % 4] for i in range(length))
-
-            if opcode == 0x8:
-                return ""
-            if opcode == 0x9:
-                self.send_pong(payload)
-                continue
-            if opcode in (0x1, 0x0, 0x2):
-                return payload.decode('latin-1', errors='replace')
-        return ""
-
-    def recv_until(self, marker, timeout=10.0):
-        marker_lower = marker.lower()
-        data = ""
-        deadline = time.time() + timeout
-        while time.time() < deadline:
-            chunk = self.read_text_frame(timeout=min(0.5, deadline - time.time()))
-            if chunk:
-                data += chunk
-                if marker_lower in data.lower():
-                    return data
-        return data
-
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect(('127.0.0.1', PORT))
-ws = WSClient(s)
-
-key = base64.b64encode(os.urandom(16)).decode('ascii')
-request = (
-    "GET / HTTP/1.1\r\n"
-    f"Host: 127.0.0.1:{PORT}\r\n"
-    "Upgrade: websocket\r\n"
-    "Connection: Upgrade\r\n"
-    f"Sec-WebSocket-Key: {key}\r\n"
-    "Sec-WebSocket-Version: 13\r\n"
-    "\r\n"
-)
-s.sendall(request.encode('ascii'))
-
-headers = ws.recv_http_headers(timeout=5.0)
-if '101 Switching Protocols' not in headers or 'Sec-WebSocket-Accept:' not in headers:
-    fail("expected successful websocket handshake", headers)
-
-def send(msg):
-    ws.send_text(msg + '\n')
-
-# Wait for the greeting to finish; greeting0 ends with "What is your name?"
-data = ws.recv_until('name', timeout=10.0)
-if 'name' not in data.lower():
-    fail("expected name prompt in greeting", data)
-
-send(PLAYER)
-data = ws.recv_until('y/n', timeout=5.0)
-if 'y/n' not in data.lower():
-    fail("expected name confirmation (Y/N)", data)
-
-send('Y')
-data = ws.recv_until('assword', timeout=5.0)
-if 'assword' not in data:
-    fail("expected password prompt", data)
-
-send(PASSWORD)
-data = ws.recv_until('etype', timeout=5.0)
-if 'etype' not in data:
-    fail("expected retype-password prompt", data)
-
-send(PASSWORD)
-data = ws.recv_until('elect', timeout=5.0)
-if 'elect' not in data.lower():
-    fail("expected character-creation menu", data)
-
-send('1')
-_ = ws.recv_until('ex', timeout=5.0)
-send('M')
-_ = ws.recv_until('elect', timeout=5.0)
-
-send('2')
-_ = ws.recv_until('ace', timeout=5.0)
-send('Hmn')
-_ = ws.recv_until('elect', timeout=5.0)
-
-send('3')
-_ = ws.recv_until('lass', timeout=5.0)
-send('War Mag Cle Sen')
-_ = ws.recv_until('elect', timeout=5.0)
-
-send('4')
-_ = ws.recv_until('\n', timeout=5.0)
-
-send('')
-data = ws.recv_until('welcome', timeout=10.0)
-if 'welcome' not in data.lower():
-    fail("expected 'Welcome' message after entering game", data)
-
-time.sleep(2.0)
-print(f"integration-test: websocket login successful - '{PLAYER}' reached playing state and stayed connected for 2s", flush=True)
-s.close()
-sys.exit(0)
-PYEOF
+python3 "$SCRIPT_DIR/websocket-test-client.py" "$TEST_PORT" "$TEST_PLAYER" "$TEST_PASSWORD"
 
 LOGIN_STATUS=$?
 if [ "$LOGIN_STATUS" -ne 0 ]; then
@@ -343,7 +163,27 @@ if [ "$LOGIN_STATUS" -ne 0 ]; then
 fi
 
 # ---------------------------------------------------------------------------
-# Step 6: let the MUD keep running and watch for crashes.
+# Step 6: TLS login flow (skipped if OpenSSL not compiled in).
+#
+# Connects via raw TLS telnet (no WebSocket) and walks the same new-player
+# creation flow, stripping telnet IAC negotiation bytes along the way.
+# ---------------------------------------------------------------------------
+if [ "$HAS_TLS" -eq 1 ]; then
+    echo "integration-test: validating TLS login flow for '${TLS_TEST_PLAYER}'..."
+    python3 "$SCRIPT_DIR/tls-test-client.py" "$TLS_PORT" "$TLS_TEST_PLAYER" "$TEST_PASSWORD"
+
+    TLS_STATUS=$?
+    if [ "$TLS_STATUS" -ne 0 ]; then
+        echo "integration-test: FAILED - TLS login sequence did not complete"
+        echo "--- MUD output ---"
+        cat "$LOG_FILE"
+        echo "------------------"
+        exit 1
+    fi
+fi
+
+# ---------------------------------------------------------------------------
+# Step 7: let the MUD keep running and watch for crashes.
 # ---------------------------------------------------------------------------
 echo "integration-test: monitoring MUD for ${RUN_SECONDS}s..."
 elapsed=0

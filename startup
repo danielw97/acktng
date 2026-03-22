@@ -1,0 +1,81 @@
+#!/bin/sh
+#
+# ACK!MUD TNG startup script.
+#
+# Run this from the repository root:
+#
+#   ./startup
+#
+# The script will:
+#   1. Build the server binary (if out of date).
+#   2. Create data/tls/ and generate a self-signed TLS certificate if none
+#      exists.  Replace the generated cert with a real CA-signed one for
+#      production use.
+#   3. Launch the server on port 8890.  Each new connection is sniffed: if
+#      the first byte is 0x16 (TLS ClientHello) within 500 ms the connection
+#      is upgraded to TLS; otherwise it is treated as plain telnet.  Mudlet
+#      "connect securely" and any plain-telnet client both use port 8890.
+#
+# The process runs in the foreground.  Use a process supervisor (systemd,
+# screen, tmux, etc.) to keep it running in the background.
+#
+# Environment overrides:
+#   PORT      port to listen on (default: 8890)
+#   TLS_CERT  path to PEM cert  (default: data/tls/cert.pem)
+#   TLS_KEY   path to PEM key   (default: data/tls/key.pem)
+
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+SRC_DIR="$SCRIPT_DIR/src"
+AREA_DIR="$SCRIPT_DIR/area"
+
+PORT="${PORT:-8890}"
+TLS_CERT="${TLS_CERT:-$SCRIPT_DIR/data/tls/cert.pem}"
+TLS_KEY="${TLS_KEY:-$SCRIPT_DIR/data/tls/key.pem}"
+
+# ---------------------------------------------------------------------------
+# Step 1: build
+# ---------------------------------------------------------------------------
+echo "startup: building server..."
+(cd "$SRC_DIR" && make ack)
+
+# ---------------------------------------------------------------------------
+# Step 2: TLS certificate setup
+#
+# Only generated when OpenSSL is compiled in.  The self-signed cert is
+# adequate for encrypted connections but clients will see a certificate
+# warning; replace with a CA-signed cert (e.g. from Let's Encrypt) for
+# production.
+# ---------------------------------------------------------------------------
+EXTRA_ARGS=""
+
+if pkg-config --libs openssl >/dev/null 2>&1; then
+    mkdir -p "$(dirname "$TLS_CERT")"
+
+    if [ ! -f "$TLS_CERT" ] || [ ! -f "$TLS_KEY" ]; then
+        echo "startup: generating self-signed TLS certificate..."
+        echo "         (replace $TLS_CERT / $TLS_KEY with a CA-signed cert for production)"
+        openssl req -x509 -newkey rsa:2048 \
+            -keyout "$TLS_KEY" -out "$TLS_CERT" \
+            -days 3650 -nodes \
+            -subj "/CN=ackmud.com" \
+            2>/dev/null
+        echo "startup: certificate written to $TLS_CERT"
+    fi
+
+    EXTRA_ARGS="--tls-cert $TLS_CERT --tls-key $TLS_KEY"
+fi
+
+# ---------------------------------------------------------------------------
+# Step 3: launch
+#
+# Port 8890 sniffs each new connection: waits up to 500 ms for the first
+# byte.  0x16 → TLS handshake.  Anything else → plain telnet.
+#
+# The binary must run from area/ so relative paths to area files, data
+# files, and player directories resolve correctly.
+# ---------------------------------------------------------------------------
+echo "startup: starting ACK!MUD on port $PORT..."
+# shellcheck disable=SC2086
+exec sh -c "cd '$AREA_DIR' && exec ../src/ack '$PORT' $EXTRA_ARGS"
