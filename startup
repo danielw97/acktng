@@ -8,21 +8,21 @@
 #
 # The script will:
 #   1. Build the server binary (if out of date).
-#   2. Create data/tls/ and generate a self-signed TLS certificate if none
-#      exists.  Replace the generated cert with a real CA-signed one for
-#      production use.
-#   3. Launch the server on port 8890.  Each new connection is sniffed: if
-#      the first byte is 0x16 (TLS ClientHello) within 500 ms the connection
-#      is upgraded to TLS; otherwise it is treated as plain telnet.  Mudlet
-#      "connect securely" and any plain-telnet client both use port 8890.
+#   2. Validate or generate a self-signed TLS certificate.
+#      Replace the generated cert with a real CA-signed one for production.
+#   3. Launch the server:
+#        Port 8890 — plain telnet
+#        Port 9890 — TLS (telnet-TLS and WSS; cert/key required)
 #
 # The process runs in the foreground.  Use a process supervisor (systemd,
 # screen, tmux, etc.) to keep it running in the background.
 #
 # Environment overrides:
-#   PORT      port to listen on (default: 8890)
+#   PORT      plain-telnet port (default: 8890)
+#   TLS_PORT  TLS/WSS port      (default: 9890)
 #   TLS_CERT  path to PEM cert  (default: data/tls/cert.pem)
 #   TLS_KEY   path to PEM key   (default: data/tls/key.pem)
+#   TEST      set to 1 to use ephemeral OS-assigned ports (for testing)
 
 set -e
 
@@ -30,7 +30,19 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SRC_DIR="$SCRIPT_DIR/src"
 AREA_DIR="$SCRIPT_DIR/area"
 
-PORT="${PORT:-8890}"
+if [ "${TEST:-0}" = "1" ]; then
+    # Ask the OS for free ephemeral ports to avoid collisions on shared hosts.
+    _ephemeral() {
+        python3 -c "import socket; s=socket.socket(); s.bind(('',0)); print(s.getsockname()[1]); s.close()" \
+            2>/dev/null || echo $((RANDOM % 16383 + 49152))
+    }
+    PORT="${PORT:-$(_ephemeral)}"
+    TLS_PORT="${TLS_PORT:-$(_ephemeral)}"
+else
+    PORT="${PORT:-8890}"
+    TLS_PORT="${TLS_PORT:-9890}"
+fi
+
 TLS_CERT="${TLS_CERT:-$SCRIPT_DIR/data/tls/cert.pem}"
 TLS_KEY="${TLS_KEY:-$SCRIPT_DIR/data/tls/key.pem}"
 
@@ -42,50 +54,20 @@ echo "startup: building server..."
 
 # ---------------------------------------------------------------------------
 # Step 2: TLS certificate setup
-#
-# Only generated when OpenSSL is compiled in.  The self-signed cert is
-# adequate for encrypted connections but clients will see a certificate
-# warning; replace with a CA-signed cert (e.g. from Let's Encrypt) for
-# production.
 # ---------------------------------------------------------------------------
 EXTRA_ARGS=""
 
 if pkg-config --libs openssl >/dev/null 2>&1; then
-    mkdir -p "$(dirname "$TLS_CERT")"
-
-    if [ ! -f "$TLS_CERT" ] || [ ! -f "$TLS_KEY" ]; then
-        echo "startup: generating self-signed TLS certificate..."
-        echo "         (replace $TLS_CERT / $TLS_KEY with a CA-signed cert for production)"
-        openssl req -x509 -newkey rsa:2048 \
-            -keyout "$TLS_KEY" -out "$TLS_CERT" \
-            -days 3650 -nodes \
-            -subj "/CN=ackmud.com" \
-            2>/dev/null
-        echo "startup: certificate written to $TLS_CERT"
-    fi
-
-    EXTRA_ARGS="--tls-cert $TLS_CERT --tls-key $TLS_KEY"
+    "$SCRIPT_DIR/data/tls/generate-certs.sh" --cert "$TLS_CERT" --key "$TLS_KEY"
+    EXTRA_ARGS="--tls-port $TLS_PORT --tls-cert $TLS_CERT --tls-key $TLS_KEY"
 fi
 
 # ---------------------------------------------------------------------------
 # Step 3: launch
 #
-# --sniff-port is required (not a positional plain-telnet port) so that the
-# TLS context is initialised.  When a positional port is used the server
-# opens it as a plain-telnet control socket; init_tls_context() is only
-# called when tls_port > 0 || sniff_port > 0, so global_ssl_ctx remains
-# NULL and TLS clients are erroneously sent plain text instead of a TLS
-# server hello, producing no visible output in the client.
-#
-# With --sniff-port the server peeks at the first byte of each connection:
-#   0x16 → TLS handshake (requires valid cert/key).
-#   anything else → plain telnet.
-# Both Mudlet "connect securely" and plain telnet/telnet-TLS clients work
-# on the same port.
-#
 # The binary must run from area/ so relative paths to area files, data
 # files, and player directories resolve correctly.
 # ---------------------------------------------------------------------------
-echo "startup: starting ACK!MUD on port $PORT..."
+echo "startup: starting ACK!MUD — telnet port $PORT, TLS/WSS port $TLS_PORT..."
 # shellcheck disable=SC2086
-exec sh -c "cd '$AREA_DIR' && exec ../src/ack --sniff-port '$PORT' $EXTRA_ARGS"
+exec sh -c "cd '$AREA_DIR' && exec ../src/ack '$PORT' $EXTRA_ARGS"
