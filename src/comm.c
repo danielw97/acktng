@@ -132,6 +132,76 @@ int control;
 int max_players = 0;
 int hotreboot_countdown = 0; /* Pulses remaining until automatic hotreboot; 0 = inactive */
 
+/* Write HTML-escaped version of src into dst.  Replaces < > & " ' with
+ * their HTML entity equivalents to prevent XSS in the /who endpoint. */
+static void html_escape_name(const char *src, char *dst, size_t dstsz)
+{
+   size_t out = 0;
+   if (dstsz == 0)
+      return;
+   while (*src != '\0' && out + 7 < dstsz)
+   {
+      switch (*src)
+      {
+      case '<':
+         memcpy(dst + out, "&lt;", 4);
+         out += 4;
+         break;
+      case '>':
+         memcpy(dst + out, "&gt;", 4);
+         out += 4;
+         break;
+      case '&':
+         memcpy(dst + out, "&amp;", 5);
+         out += 5;
+         break;
+      case '"':
+         memcpy(dst + out, "&quot;", 6);
+         out += 6;
+         break;
+      case '\'':
+         memcpy(dst + out, "&#39;", 5);
+         out += 5;
+         break;
+      default:
+         dst[out++] = *src;
+         break;
+      }
+      src++;
+   }
+   dst[out] = '\0';
+}
+
+/* Write JSON-escaped version of src into dst.  Escapes backslash,
+ * double-quote, and ASCII control characters to prevent JSON injection
+ * in the /gsgp endpoint. */
+static void json_escape_name(const char *src, char *dst, size_t dstsz)
+{
+   size_t out = 0;
+   if (dstsz == 0)
+      return;
+   while (*src != '\0' && out + 7 < dstsz)
+   {
+      unsigned char c = (unsigned char)*src;
+      if (c == '"' || c == '\\')
+      {
+         dst[out++] = '\\';
+         dst[out++] = (char)c;
+      }
+      else if (c < 0x20)
+      {
+         snprintf(dst + out, dstsz - out, "\\u%04x", c);
+         out += 6;
+      }
+      else
+      {
+         dst[out++] = (char)c;
+      }
+      src++;
+   }
+   dst[out] = '\0';
+}
+
 static void write_gsgp_board(char *buf, size_t bufsz, size_t *off, const char *board_name,
                              struct gsgp_entry *arr, int n, int (*cmp)(const void *, const void *),
                              bool skip_zero, bool last)
@@ -160,7 +230,11 @@ static void write_gsgp_board(char *buf, size_t bufsz, size_t *off, const char *b
          if (r > 0)
             *off += (size_t)r;
       }
-      r = snprintf(buf + *off, bufsz - *off, "{\"name\":\"%s\",\"value\":%d}", sorted[i].name, val);
+      {
+         char safe_name[128];
+         json_escape_name(sorted[i].name, safe_name, sizeof(safe_name));
+         r = snprintf(buf + *off, bufsz - *off, "{\"name\":\"%s\",\"value\":%d}", safe_name, val);
+      }
       if (r > 0)
          *off += (size_t)r;
       written++;
@@ -236,7 +310,11 @@ void list_who_to_output(void)
       if (who_ch == NULL || IS_NPC(who_ch))
          continue;
 
-      r = snprintf(wholist_html_cache + off, WHO_BUF_MAX - off, "<li>%s</li>\n", who_ch->name);
+      {
+         char safe_name[128];
+         html_escape_name(who_ch->name, safe_name, sizeof(safe_name));
+         r = snprintf(wholist_html_cache + off, WHO_BUF_MAX - off, "<li>%s</li>\n", safe_name);
+      }
       if (r > 0)
          off += (size_t)r;
       online_count++;
