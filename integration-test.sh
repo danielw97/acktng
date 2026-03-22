@@ -1,7 +1,8 @@
 #!/bin/sh
 #
 # Integration test: build, start, boot, log in as a new player, validate
-# WebSocket connectivity, and run for 2 seconds checking for crashes.
+# WebSocket connectivity, validate TLS connectivity (if available), and run
+# for 2 seconds checking for crashes.
 #
 # Exit codes:
 #   0 - MUD booted, accepted a player login, and ran without crashing
@@ -18,13 +19,32 @@ LOG_FILE="/tmp/mud-integration-test-$$.log"
 # with any mob name).
 TEST_PLAYER="Integrat"
 TEST_PASSWORD="integrationpass"
+TLS_TEST_PLAYER="Tlsconn"
 
 # Ask the OS for a free ephemeral port to avoid collisions on shared CI hosts.
 if command -v python3 >/dev/null 2>&1; then
     TEST_PORT=$(python3 -c \
         "import socket; s=socket.socket(); s.bind(('', 0)); print(s.getsockname()[1]); s.close()")
+    TLS_PORT=$(python3 -c \
+        "import socket; s=socket.socket(); s.bind(('', 0)); print(s.getsockname()[1]); s.close()")
 else
     TEST_PORT=$((RANDOM % 16383 + 49152))
+    TLS_PORT=$((RANDOM % 16383 + 49152))
+fi
+
+# Try to generate a self-signed certificate for TLS testing.
+# If openssl is unavailable or cert generation fails, TLS test is skipped.
+TLS_CERT="/tmp/mud-tls-cert-$$.pem"
+TLS_KEY="/tmp/mud-tls-key-$$.pem"
+TLS_ARGS=""
+HAS_TLS=0
+
+if command -v openssl >/dev/null 2>&1; then
+    if openssl req -x509 -newkey rsa:2048 \
+           -keyout "$TLS_KEY" -out "$TLS_CERT" \
+           -days 1 -nodes -subj '/CN=localhost' >/dev/null 2>&1; then
+        TLS_ARGS="--tls-port $TLS_PORT --tls-cert $TLS_CERT --tls-key $TLS_KEY"
+    fi
 fi
 
 # ---------------------------------------------------------------------------
@@ -35,7 +55,7 @@ cleanup() {
         kill "$MUD_PID" 2>/dev/null || true
         wait "$MUD_PID" 2>/dev/null || true
     fi
-    rm -f "$LOG_FILE"
+    rm -f "$LOG_FILE" "$TLS_CERT" "$TLS_KEY"
 }
 trap cleanup EXIT
 
@@ -49,21 +69,27 @@ if ! (cd "$SRC_DIR" && make ack); then
 fi
 
 # ---------------------------------------------------------------------------
-# Step 2: remove any leftover player file so the login flow is always the
+# Step 2: remove any leftover player files so the login flows are always the
 # new-character path (idempotent test runs).
 # ---------------------------------------------------------------------------
 player_lower=$(echo "$TEST_PLAYER" | tr '[:upper:]' '[:lower:]')
 first_letter=$(echo "$player_lower" | cut -c1)
 rm -f "$PLAYER_DIR/$first_letter/$player_lower"
 
+tls_player_lower=$(echo "$TLS_TEST_PLAYER" | tr '[:upper:]' '[:lower:]')
+tls_first_letter=$(echo "$tls_player_lower" | cut -c1)
+rm -f "$PLAYER_DIR/$tls_first_letter/$tls_player_lower"
+
 # ---------------------------------------------------------------------------
 # Step 3: launch
 # The startup script runs the binary from the area/ directory so that
 # relative paths to area files, data files, and player directories resolve
-# correctly.
+# correctly.  TLS_ARGS is empty if cert generation failed or openssl is
+# absent; the server will simply not open a TLS port in that case.
 # ---------------------------------------------------------------------------
 echo "integration-test: starting MUD on port $TEST_PORT..."
-(cd "$AREA_DIR" && ../src/ack "$TEST_PORT") >"$LOG_FILE" 2>&1 &
+# shellcheck disable=SC2086
+(cd "$AREA_DIR" && ../src/ack "$TEST_PORT" $TLS_ARGS) >"$LOG_FILE" 2>&1 &
 MUD_PID=$!
 
 echo "integration-test: MUD started (PID $MUD_PID), waiting for boot..."
@@ -98,6 +124,15 @@ if [ "$boot_wait" -ge 90 ]; then
     cat "$LOG_FILE"
     echo "------------------"
     exit 1
+fi
+
+# Determine whether the server actually opened the TLS port.  It will if and
+# only if it was compiled with OpenSSL AND cert/key loading succeeded.
+if [ -n "$TLS_ARGS" ] && grep -q "(TLS)" "$LOG_FILE" 2>/dev/null; then
+    HAS_TLS=1
+    echo "integration-test: TLS port $TLS_PORT is active."
+else
+    echo "integration-test: TLS not available in this build; skipping TLS test."
 fi
 
 echo "integration-test: MUD is up, validating websocket login flow for '${TEST_PLAYER}'..."
@@ -343,7 +378,176 @@ if [ "$LOGIN_STATUS" -ne 0 ]; then
 fi
 
 # ---------------------------------------------------------------------------
-# Step 6: let the MUD keep running and watch for crashes.
+# Step 6: TLS login flow (skipped if OpenSSL not compiled in).
+#
+# Connects via raw TLS telnet (no WebSocket) and walks the same new-player
+# creation flow, stripping telnet IAC negotiation bytes along the way.
+# ---------------------------------------------------------------------------
+if [ "$HAS_TLS" -eq 1 ]; then
+    echo "integration-test: validating TLS login flow for '${TLS_TEST_PLAYER}'..."
+    python3 - "$TLS_PORT" "$TLS_TEST_PLAYER" "$TEST_PASSWORD" <<'TLSPYEOF'
+import socket
+import ssl
+import sys
+import time
+
+PORT     = int(sys.argv[1])
+PLAYER   = sys.argv[2]
+PASSWORD = sys.argv[3]
+
+# Telnet protocol constants for IAC stripping
+IAC  = 0xFF
+SE   = 0xF0
+SB   = 0xFA
+WILL = 0xFB
+WONT = 0xFC
+DO   = 0xFD
+DONT = 0xFE
+
+def strip_iac(buf):
+    """Remove telnet IAC sequences from a bytearray.
+
+    Returns (text, remaining_buf) where remaining_buf holds any trailing
+    bytes that form an incomplete IAC sequence (not yet safe to discard).
+    """
+    out = bytearray()
+    i = 0
+    while i < len(buf):
+        b = buf[i]
+        if b == IAC:
+            if i + 1 >= len(buf):
+                break                        # incomplete – keep for next read
+            cmd = buf[i + 1]
+            if cmd == IAC:                   # escaped 0xFF literal
+                out.append(IAC)
+                i += 2
+            elif cmd in (WILL, WONT, DO, DONT):
+                if i + 2 >= len(buf):
+                    break                    # incomplete option byte
+                i += 3
+            elif cmd == SB:
+                # Skip subnegotiation block until IAC SE
+                j = i + 2
+                found_se = False
+                while j + 1 < len(buf):
+                    if buf[j] == IAC and buf[j + 1] == SE:
+                        j += 2
+                        found_se = True
+                        break
+                    j += 1
+                if not found_se:
+                    break                    # incomplete subnegotiation
+                i = j
+            else:
+                i += 2                       # other 2-byte commands (GA, NOP…)
+        else:
+            out.append(b)
+            i += 1
+    return out.decode('latin-1', errors='replace'), bytearray(buf[i:])
+
+def fail(msg, context=""):
+    print(f"integration-test: FAILED (TLS) - {msg}", flush=True)
+    if context:
+        print(f"  received: {repr(context[-300:])}", flush=True)
+    sys.exit(1)
+
+# Open a TLS connection, accepting any certificate (self-signed test cert).
+raw = socket.create_connection(('127.0.0.1', PORT), timeout=10)
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
+sock = ctx.wrap_socket(raw, server_hostname='127.0.0.1')
+
+buf = bytearray()
+
+def recv_until(marker, timeout=10.0):
+    """Read from the TLS socket until marker appears in stripped text."""
+    global buf
+    local_text = ""
+    deadline = time.time() + timeout
+    while time.time() < deadline:
+        sock.settimeout(min(0.5, deadline - time.time()))
+        try:
+            chunk = sock.recv(4096)
+            if chunk:
+                buf.extend(chunk)
+        except (socket.timeout, ssl.SSLError, OSError):
+            pass
+        text, buf = strip_iac(buf)
+        local_text += text
+        if marker.lower() in local_text.lower():
+            return local_text
+    return local_text
+
+def send(msg):
+    sock.sendall((msg + '\n').encode('latin-1'))
+
+# Walk the same new-player creation flow as the WebSocket test.
+data = recv_until('name', timeout=10.0)
+if 'name' not in data.lower():
+    fail("expected name prompt in greeting", data)
+
+send(PLAYER)
+data = recv_until('y/n', timeout=5.0)
+if 'y/n' not in data.lower():
+    fail("expected name confirmation (Y/N)", data)
+
+send('Y')
+data = recv_until('assword', timeout=5.0)
+if 'assword' not in data:
+    fail("expected password prompt", data)
+
+send(PASSWORD)
+data = recv_until('etype', timeout=5.0)
+if 'etype' not in data:
+    fail("expected retype-password prompt", data)
+
+send(PASSWORD)
+data = recv_until('elect', timeout=5.0)
+if 'elect' not in data.lower():
+    fail("expected character-creation menu", data)
+
+send('1')
+recv_until('ex', timeout=5.0)
+send('M')
+recv_until('elect', timeout=5.0)
+
+send('2')
+recv_until('ace', timeout=5.0)
+send('Hmn')
+recv_until('elect', timeout=5.0)
+
+send('3')
+recv_until('lass', timeout=5.0)
+send('War Mag Cle Sen')
+recv_until('elect', timeout=5.0)
+
+send('4')
+recv_until('\n', timeout=5.0)
+
+send('')
+data = recv_until('welcome', timeout=10.0)
+if 'welcome' not in data.lower():
+    fail("expected 'Welcome' message after entering game", data)
+
+time.sleep(2.0)
+print(f"integration-test: TLS login successful - '{PLAYER}' reached playing state over TLS and stayed connected for 2s", flush=True)
+sock.close()
+sys.exit(0)
+TLSPYEOF
+
+    TLS_STATUS=$?
+    if [ "$TLS_STATUS" -ne 0 ]; then
+        echo "integration-test: FAILED - TLS login sequence did not complete"
+        echo "--- MUD output ---"
+        cat "$LOG_FILE"
+        echo "------------------"
+        exit 1
+    fi
+fi
+
+# ---------------------------------------------------------------------------
+# Step 7: let the MUD keep running and watch for crashes.
 # ---------------------------------------------------------------------------
 echo "integration-test: monitoring MUD for ${RUN_SECONDS}s..."
 elapsed=0
