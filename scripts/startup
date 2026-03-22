@@ -73,17 +73,22 @@ do
     ack_snapshot=../cores/ack.hotreboot
   fi
 
-  # collect any core dumps into ../cores/<timestamp>/
+  # collect all core dumps into a single ../cores/<timestamp>/ directory
+  coredir=""
   for corefile in core core.*; do
     if [ -f "$corefile" ]; then
-      coredir=../cores/$(date +%Y%m%d_%H%M%S)_$$
-      mkdir -p "$coredir"
+      if [ -z "$coredir" ]; then
+        coredir=../cores/$(date +%Y%m%d_%H%M%S)_$$
+        mkdir -p "$coredir"
+        mv "$ack_snapshot" "$coredir/ack"
+        ack_snapshot=""
+      fi
       mv "$corefile" "$coredir/"
-      mv "$ack_snapshot" "$coredir/ack"
-      ack_snapshot=""
-      echo "startup: core dump saved to $coredir" >>$logfile
     fi
   done
+  if [ -n "$coredir" ]; then
+    echo "startup: core dump(s) saved to $coredir" >>$logfile
+  fi
 
   # discard whichever snapshot was not consumed by a core
   rm -f "$ack_snapshot" ../cores/ack.hotreboot
