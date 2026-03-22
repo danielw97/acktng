@@ -253,8 +253,8 @@ scan: $(OBJDIR)/scan.o
 	$(CC) $(L_FLAGS) -o scan $(OBJDIR)/scan.o
 
 # Migration / DB tools (require HAVE_LIBPQ)
-scripts/import_to_db: ../scripts/import_to_db.c
-	$(CC) -O -g2 -Wall $(LIBPQ_CFLAGS) -o ../scripts/import_to_db ../scripts/import_to_db.c $(LIBPQ_LIBS)
+tools/import_to_db: tools/import_to_db.c
+	$(CC) -O -g2 -Wall $(LIBPQ_CFLAGS) -o tools/import_to_db tools/import_to_db.c $(LIBPQ_LIBS)
 
 # Check that all source files match the .clang-format style (fails if any differ)
 lint:
