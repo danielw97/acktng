@@ -525,9 +525,6 @@
  */
 #define CON_QUITTING -15
 #define CON_RECONNECTING -16
-/* Async DB player load in progress (USE_DB_LOAD path).
- * Descriptor parks here until db_worker_poll_results() picks up the result. */
-#define CON_LOADING_FROM_DB -17
 #define CON_SETTING_STATS 1
 
 /* values used to check a new player has selected all options.... */

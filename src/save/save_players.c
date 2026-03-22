@@ -35,11 +35,6 @@
 
 #include "save.h"
 #include "weapon_bond.h"
-#ifdef USE_DB_LOAD
-#include <stdio.h>
-#include <stdlib.h>
-#include "db_worker.h"
-#endif
 
 /*
  * skill_name_legacy -- maps a pre-rename skill name to its current name.
@@ -228,36 +223,6 @@ void save_char_obj(CHAR_DATA *ch)
     */
 
    rename(tempstrsave, strsave);
-
-#ifdef USE_DB_LOAD
-   /* Mirror the flat-file save to the async DB worker. */
-   if (!db_worker_failed && strsave[0] && ch->name)
-   {
-      FILE *fpdb = fopen(strsave, "r");
-      if (fpdb)
-      {
-         long raw_len;
-         char *raw = NULL;
-         fseek(fpdb, 0, SEEK_END);
-         raw_len = ftell(fpdb);
-         if (raw_len > 0)
-         {
-            rewind(fpdb);
-            raw = malloc((size_t)raw_len + 1);
-            if (raw)
-            {
-               if (fread(raw, 1, (size_t)raw_len, fpdb) == (size_t)raw_len)
-               {
-                  raw[raw_len] = '\0';
-                  db_worker_enqueue_write(DB_WRITE_PLAYER, cap_nocol(ch->name), raw);
-               }
-               free(raw);
-            }
-         }
-         fclose(fpdb);
-      }
-   }
-#endif
 }
 
 /*
