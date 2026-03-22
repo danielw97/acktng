@@ -347,7 +347,7 @@ int main(int argc, char **argv)
    int control_sniff = -1;
    int sniff_port = -1;
    int control_http = -1;
-   int http_port = 80;
+   int http_port = 8080;
    int flag_start = 1; /* argv index where flag parsing begins */
 #ifdef HAVE_OPENSSL
    const char *tls_cert = "../data/tls/cert.pem";
