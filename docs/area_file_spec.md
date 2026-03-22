@@ -1,417 +1,405 @@
-# Area File Specification (derived from `src/`)
+# Area File Specification
 
-This document specifies the on-disk area format currently accepted by the loader in `src/db.c` and written by `src/areasave.c`.
+**Version:** strict ingestion format, aligned with the PostgreSQL migration (see `docs/proposals/database-schema-areas.md`).
 
-## 1) Top-level file structure
+This document is the authoritative specification for `.are` area files in ACK!TNG. Every rule here is a hard requirement. The ingestion validator (`src/areaingest.c`) rejects any file that violates any rule. There are no warnings; a file either passes all rules and is imported, or it fails with an error message and is moved to `area/incoming/failed/`.
 
-An area file is a sequence of named sections. Each section starts with `#<NAME>` and is parsed by `boot_db()`.
+---
 
-Recognized section names (saver order shown):
+## 1. File Structure
 
-- `#AREA`
-- `#ROOMS`
-- `#MOBILES`
-- `#OBJECTS`
-- `#SHOPS`
-- `#RESETS`
-- `#SPECIALS`
-- `#OBJFUNS`
-- `#$` (end-of-file marker)
+An area file is a plain-text UTF-8 file. Lines must end with `\n` (Unix). `\r\n` is stripped silently on read; bare `\r` is a rejection. Null bytes are a rejection. Maximum file size: 4 MB.
 
-Notes:
+The file consists of named **sections**. Each section starts with `#<NAME>` on its own line. Sections are parsed by name; order is flexible for the loader but the canonical saver order (see §14) must be used for authored files.
 
-- Section order is flexible for loading (the loader dispatches by section name).
-- Some sections are optional.
-- Section names are case-sensitive in area files as written.
-- Area files must not contain comments of any kind. No section accepts comment lines. This applies to all sections including `#MOBILES`, `#OBJECTS`, `#RESETS`, `#SPECIALS`, and `#OBJFUNS`.
+Required section: `#ROOMS`
+Optional sections: `#AREA`, `#MOBILES`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`
+End-of-file marker: `#$`
 
-## 2) String encoding
+### Rejection rules
 
-Most text fields are read with `fread_string()`: they must be terminated by `~`.
+- Any section name not in the list above is a rejection.
+- `#ROOMS` absent → rejection.
+- `#ROOMS` empty (no rooms) → rejection.
+- File larger than 4 MB → rejection.
+- Non-UTF-8 bytes → rejection.
+- Bare `\r` → rejection.
+- Null bytes → rejection.
+- Comments of any kind anywhere in the file → rejection. No section accepts comment lines.
 
-Implications:
+---
 
-- Single-line and multi-line strings are allowed, but a terminating `~` is required.
-- Strings must not contain back-to-back newlines (no blank lines represented by `\n\n`).
-- A missing `~` causes parse failure.
-- Mobile `long_descr` has a strict format: exactly one text line, then a newline, then a line containing only `~`. No other `long_descr` format is valid, and multi-line `long_descr` text is never allowed.
-- Mobile `description` must end with exactly one newline immediately before the terminating `~` (i.e., the final line is just `~`, with no extra trailing blank lines).
-- Vnums must never be mentioned in in-world description text. This includes room descriptions, mobile descriptions (`long_descr`/`description`), object descriptions, extra descriptions, and exit descriptions.
+## 2. String Encoding
 
-### 2.1) In-string color codes (`colist`)
+Most text fields are tilde-terminated strings. A tilde-terminated string is read until the next bare `~` character. Rules:
 
-Area strings may include inline color escapes using `@@<code>`. The runtime/player `colist` command exposes this same palette (`do_colist()` over `ansi_table`).
+- The terminating `~` is mandatory. A missing `~` is a parse error and a rejection.
+- Embedded bare tildes are forbidden within string content.
+- Embedded `\n\n` (blank line within a string) is forbidden — rejection.
+- Maximum length per string: 4096 bytes excluding the terminator.
+- `long_descr` strict format: exactly one text line (non-empty), followed by `\n`, followed by `~` on its own line. Multi-line `long_descr` is a rejection.
+- `description` (for mobiles): must end with exactly one `\n` immediately before the terminating `~`. Double-newline before `~` is a rejection; missing trailing newline before `~` is a rejection.
+- Room/extra description `<description>`: must end with exactly one `\n` immediately before the terminating `~`. Same rules as mobile description.
+- Vnums must never appear in any in-world description text (room descriptions, mobile descriptions, object descriptions, extra descriptions, exit descriptions). A vnum in descriptive text is a rejection.
 
-Supported `colist` codes:
+### 2.1. Color Codes
 
-- `g` gray
-- `R` red
-- `G` green
-- `b` brown
-- `B` blue
-- `m` magenta
-- `c` cyan
-- `k` black
-- `y` yellow
-- `W` white
-- `N` normal (reset)
-- `p` purple
-- `d` dark_grey
-- `l` light_blue
-- `r` light_green
-- `a` light_cyan
-- `e` light_red
-- `x` bold
-- `f` flashing
-- `i` inverse
-- `2` back_red
-- `3` back_green
-- `4` back_yellow
-- `1` back_blue
-- `5` back_magenta
-- `6` back_cyan
-- `0` back_black
-- `7` back_white
+Area strings may include inline color escapes using `@@<code>`. Each code consists of `@@` followed by exactly one character:
 
-Color theme policy:
+| Code | Color |
+|------|-------|
+| `g` | gray |
+| `R` | red |
+| `G` | green |
+| `b` | brown |
+| `B` | blue |
+| `m` | magenta |
+| `c` | cyan |
+| `k` | black foreground (**forbidden in area files — see below**) |
+| `y` | yellow |
+| `W` | white |
+| `N` | normal (reset) |
+| `p` | purple |
+| `d` | dark grey |
+| `l` | light blue |
+| `r` | light green |
+| `a` | light cyan |
+| `e` | light red |
+| `x` | bold |
+| `f` | flashing (**forbidden in area files — see below**) |
+| `i` | inverse |
+| `2` | background red (**forbidden in area files — see below**) |
+| `3` | background green (**forbidden in area files — see below**) |
+| `4` | background yellow (**forbidden in area files — see below**) |
+| `1` | background blue (**forbidden in area files — see below**) |
+| `5` | background magenta (**forbidden in area files — see below**) |
+| `6` | background cyan (**forbidden in area files — see below**) |
+| `0` | background black (**forbidden in area files — see below**) |
+| `7` | background white (**forbidden in area files — see below**) |
 
-- Every area must have a defined color theme.
-- Theme usage can be sparse or strict, but should be intentional and consistent with the area's identity.
-- Black foreground (`@@k`) must not be used as a thematic color in area-authored strings.
-- Keep control codes readable/maintainable: avoid noisy color-code churn that obscures base text.
-- Automatic tools must not add background color codes (`back_*`, codes `0`-`7`) or the flashing code (`f`).
-- Background/flashing codes are allowed only when explicitly added manually by a human author.
+**Rejection rules for color codes:**
+- `@@k` (black foreground) is forbidden in all area-authored strings → rejection.
+- `@@f` (flashing) is forbidden in all area-authored strings → rejection.
+- All background codes (`@@0`–`@@7`) are forbidden in all area-authored strings → rejection.
+- An unrecognized `@@<x>` code where `x` is not in the table above → rejection.
 
+---
 
-## 3) `#AREA` section
+## 3. `#AREA` Section
 
-`#AREA` contains one required string, followed by directives. The `Q` directive is mandatory and must be set to version `16`:
+Required. Must appear once. Must appear before any other section in files authored for ingestion.
 
-```text
+```
 #AREA
 <name>~
 <directives...>
 ```
 
-Supported directives:
+`<name>` is a tilde-terminated string: the area's display name.
 
-- `Q 16`: required area revision/version (other values are out of spec)
-- `K <string>~`: keyword
-- `L <string>~`: level label
-- `N <int>`: area number
-- `I <int> <int>`: min/max level
-- `V <int> <int>`: min/max vnum
-- `X <int>`: map offset
-- `F <int>`: reset rate
-- `U <string>~`: reset message
-- `O <string>~`: owner
-  - Owner policy: area headers must use `O Virant~`.
-- `R <string>~`: can_read ACL
-- `W <string>~`: can_write ACL
-- `P ...`: pay-area flag (rest of line ignored)
-- `T ...`: teleport flag (rest of line ignored)
-- `B ...`: building flag (rest of line ignored)
-- `S ...`: no-show flag (rest of line ignored)
-- `M ...`: no-room-affects flag (rest of line ignored)
-- `C <string>~`: theme song — bare mp3 filename served from `/web/mp3/` (e.g. `C midgaard.mp3~`). When a WebSocket client enters this area the server sends a play command for that track. If absent, the server sends a stop command and music fades out.
+### 3.1. Directives
 
-Parsing stops when the next `#` section header is encountered.
+Directives are single-character identifiers followed by their argument(s). They are case-sensitive. Parsing continues until the next `#` section header.
 
-`V` defines the area's assigned vnum envelope. Area-owned entries must stay inside that envelope (see Structural constraints).
+#### Required directives
 
-## 4) `#MOBILES` section
+All of the following are required. A missing required directive is a rejection.
 
-Mobile section details were extracted to [docs/mob_spec.md](mob_spec.md).
+| Directive | Syntax | Rules |
+|-----------|--------|-------|
+| `Q` | `Q 16` | Literal `Q 16`. Any other value is a rejection. |
+| `V` | `V <min> <max>` | Two integers. `min < max` required. `max - min >= 9` required. Overlap with any existing area's V range is a rejection. |
+| `K` | `K <keyword>~` | Non-empty, lowercase, no spaces, no special characters except `_`. Must be unique across all areas in the database. |
+| `L` | `L <label>~` | Non-empty string. |
+| `N` | `N <int>` | Integer `>= 0`. |
+| `I` | `I <min_level> <max_level>` | Two integers. `0 <= min_level <= max_level <= 105`. |
+| `O` | `O Virant~` | Literal `O Virant~`. Any other owner string is a rejection. |
+| `F` | `F <rate>` | Integer `>= 1`. |
 
-## 7) `#OBJECTS` section
+#### Optional directives
 
-Object section details were extracted to [docs/object_spec.md](object_spec.md).
+| Directive | Syntax | Rules |
+|-----------|--------|-------|
+| `U` | `U <message>~` | Reset message string. |
+| `R` | `R <acl>~` | Read ACL string. |
+| `W` | `W <acl>~` | Write ACL string. |
+| `X` | `X <int>` | Map offset integer. |
+| `P` | `P` | Pay-area flag. Rest of line ignored. |
+| `T` | `T` | Teleport flag. Rest of line ignored. |
+| `B` | `B` | Building flag. Rest of line ignored. |
+| `S` | `S` | No-show flag. Rest of line ignored. |
+| `M` | `M` | No-room-affects flag. Rest of line ignored. |
+| `C` | `C <filename>~` | Theme music. Bare MP3 filename (no path, no directory component). Served from `/web/mp3/`. |
 
-## 8) `#ROOMS` section
+Any directive letter not in the table above is a rejection.
 
-Room section details were extracted to [docs/room_spec.md](room_spec.md).
+---
 
-## 9) `#SHOPS` section
+## 4. `#ROOMS` Section
 
-Terminated by keeper `0`:
+Required. A list of room records terminated by `#0`:
 
-```text
+```
+#ROOMS
+#<vnum>
+<name>~
+<description>~
+<room_flags> <sector_type>
+[zero or more D/E entries]
+S
+...
+#0
+```
+
+See `docs/room_spec.md` for the complete room format specification, all bitvector definitions, and validation rules. All rules in `room_spec.md` are enforced by the ingestion validator.
+
+---
+
+## 5. `#MOBILES` Section
+
+Optional. A list of mobile records terminated by `#0`.
+
+See `docs/mob_spec.md` for the complete mobile format specification, all extension line formats, bitvector definitions, and validation rules. All rules in `mob_spec.md` are enforced by the ingestion validator.
+
+---
+
+## 6. `#OBJECTS` Section
+
+Optional. A list of object records terminated by `#0`.
+
+See `docs/object_spec.md` for the complete object format specification, all bitvector definitions, value semantics, and validation rules. All rules in `object_spec.md` are enforced by the ingestion validator.
+
+---
+
+## 7. `#SHOPS` Section
+
+Optional. Terminated by a line containing only `0`:
+
+```
 #SHOPS
-<keeper> <buy_type_0> ... <buy_type_(MAX_TRADE-1)> <profit_buy> <profit_sell> <open_hour> <close_hour>
+<keeper_vnum> <buy_type_0> <buy_type_1> <buy_type_2> <buy_type_3> <buy_type_4> <profit_buy> <profit_sell> <open_hour> <close_hour>
 ...
 0
 ```
 
-## 10) `#SPECIALS` section
+`MAX_TRADE = 5`. Each shop line has exactly 10 integer fields in the order above.
 
-Terminated by `S`:
+### Rejection rules
 
-```text
+- `keeper_vnum` must be a mobile vnum defined in `#MOBILES` in this file or already in the database → rejection if not found.
+- `keeper_vnum` must be within the area's `V` range → rejection if outside.
+- Each `buy_type_N` must be a valid `item_type` integer (1–33) or `0` (any) → rejection for out-of-range values.
+- `profit_buy` must be `>= 100` (shopkeepers buy at or below face value) → rejection.
+- `profit_sell` must be `>= 100` (shopkeepers sell at or above face value) → rejection.
+- `open_hour` must be `0–23`; `close_hour` must be `0–23` → rejection for out-of-range values.
+- Fewer than 10 integer fields on a shop line → rejection.
+
+---
+
+## 8. `#SPECIALS` Section
+
+Optional. Terminated by `S`:
+
+```
 #SPECIALS
 M <mob_vnum> <spec_fun_name>
 ...
 S
 ```
 
-Allowed `<spec_fun_name>` values (from `spec_lookup()` in `src/special.c`):
+### Allowed `spec_fun_name` values
 
-For full descriptions of each special's behavior, builder policies, and usage
-guidance, see **`docs/mob_specials_spec.md`**.
+Any name not in this list is a rejection.
 
-Builder policy: mob specials beginning with `spec_summon_` must **never** be set in area files. These are assigned at runtime by summon systems only.
-Builder policy: any mob special beginning with `spec_keep_` may only be assigned manually by a human (not by automation/tools).
+**Breath weapon:**
+`spec_breath_any`, `spec_breath_acid`, `spec_breath_fire`, `spec_breath_frost`, `spec_breath_gas`, `spec_breath_lightning`
 
-**Breath weapon specials:**
-- `spec_breath_any`
-- `spec_breath_acid`
-- `spec_breath_fire`
-- `spec_breath_frost`
-- `spec_breath_gas`
-- `spec_breath_lightning`
+**Combat caster:**
+`spec_cast_adept`, `spec_cast_cleric`, `spec_cast_judge`, `spec_cast_mage`, `spec_cast_undead`, `spec_cast_cadaver`, `spec_cast_bigtime`
 
-**Combat caster specials:**
-- `spec_cast_adept`
-- `spec_cast_cleric`
-- `spec_cast_judge`
-- `spec_cast_mage`
-- `spec_cast_undead`
-- `spec_cast_cadaver`
-- `spec_cast_bigtime`
+**Law enforcement:**
+`spec_executioner`, `spec_guard`, `spec_policeman`, `spec_mino_guard`
 
-**Law enforcement specials:**
-- `spec_executioner`
-- `spec_guard` (alias of `spec_policeman` in lookup return)
-- `spec_policeman`
-- `spec_mino_guard`
+**NPC behavior:**
+`spec_fido`, `spec_janitor`, `spec_mayor`, `spec_poison`, `spec_thief`, `spec_rewield`, `spec_undead`, `spec_stephen`, `spec_sage`, `spec_wizardofoz`, `spec_tax_man`, `spec_sylai_priest`
 
-**NPC behavior specials:**
-- `spec_fido`
-- `spec_janitor`
-- `spec_mayor`
-- `spec_poison`
-- `spec_thief`
-- `spec_rewield`
-- `spec_undead`
-- `spec_stephen`
-- `spec_sage`
-- `spec_wizardofoz`
-- `spec_tax_man`
-- `spec_sylai_priest`
-- `spec_keep_physical_captain` (human-assignment only)
+**Ambient:**
+`spec_lamplighter`, `spec_warden`, `spec_vendor`, `spec_lay_sister`, `spec_laborer`
 
-**Ambient city specials:**
-- `spec_lamplighter`
-- `spec_warden`
-- `spec_vendor`
-- `spec_lay_sister`
-- `spec_laborer`
+**Scorching Sands:**
+`spec_ss_cinder_broker`, `spec_ss_manifest_warden`, `spec_ss_kiln_overseer`
 
-**Scorching Sands ambient specials:**
-- `spec_ss_cinder_broker`
-- `spec_ss_manifest_warden`
-- `spec_ss_kiln_overseer`
+**Kiess:**
+`spec_kiess_shopkeeper`, `spec_kiess_innkeeper`, `spec_kiess_scout`, `spec_kiess_orator`, `spec_kiess_wall_officer`
 
-**Kiess ambient specials:**
-- `spec_kiess_shopkeeper`
-- `spec_kiess_innkeeper`
-- `spec_kiess_scout`
-- `spec_kiess_orator`
-- `spec_kiess_wall_officer`
+**Keep:**
+`spec_keep_physical_captain` — **human-assignment only; must not be set by automated tools or Claude sessions**
 
-**Summon specials (runtime-only — do not set in area files):**
-- `spec_summon_water`
-- `spec_summon_fire`
-- `spec_summon_earth`
-- `spec_summon_undead`
-- `spec_summon_holy`
-- `spec_summon_shadow`
-- `spec_summon_metal`
-- `spec_summon_animate`
-- `spec_summon_thought`
+**Forbidden (runtime-only — rejection if present in area file):**
+`spec_summon_water`, `spec_summon_fire`, `spec_summon_earth`, `spec_summon_undead`, `spec_summon_holy`, `spec_summon_shadow`, `spec_summon_metal`, `spec_summon_animate`, `spec_summon_thought`
 
-## 11) `#OBJFUNS` section
+### Rejection rules
 
-Terminated by `S`:
+- `mob_vnum` must be within the area's `V` range → rejection.
+- `mob_vnum` must be defined in `#MOBILES` in this file or already in the database → rejection.
+- Any `spec_summon_*` name → rejection.
+- Any name not in the allowed list above → rejection.
 
-```text
+---
+
+## 9. `#OBJFUNS` Section
+
+Optional. Terminated by `S`:
+
+```
 #OBJFUNS
 O <obj_vnum> <obj_fun_name>
 ...
 S
 ```
 
-Allowed `<obj_fun_name>` values (from `obj_fun_lookup()` in `src/obj_fun.c`):
+### Allowed `obj_fun_name` values
 
-Builder policy constraints for object-function/flag alignment:
+Any name not in this list is a rejection: `objfun_giggle`, `objfun_cast_fight`, `objfun_sword_aggro`, `objfun_soul_moan`, `objfun_infused_soul`, `objfun_flaming`, `objfun_healing`, `objfun_dispeller`, `objfun_regen`, `objfun_clan`
 
-- Any object with `ITEM_LIFESTEALER` in `extra_flags` must also include `ITEM_ANTI_GOOD`.
-- Any object assigned `objfun_healing` in `#OBJFUNS` must include `ITEM_ANTI_EVIL` in `extra_flags`.
+### Rejection rules
 
-- `objfun_giggle`
-- `objfun_cast_fight`
-- `objfun_sword_aggro`
-- `objfun_soul_moan`
-- `objfun_infused_soul`
-- `objfun_flaming`
-- `objfun_healing`
-- `objfun_dispeller`
-- `objfun_regen`
-- `objfun_clan`
+- `obj_vnum` must be within the area's `V` range → rejection.
+- `obj_vnum` must be defined in `#OBJECTS` in this file or already in the database → rejection.
+- `objfun_healing` assigned to an object → that object must have `ITEM_ANTI_EVIL` in `extra_flags` → rejection if not.
+- Any name not in the allowed list above → rejection.
 
-## 12) `#RESETS` section
+---
 
-Terminated by `S`:
+## 10. `#RESETS` Section
 
-```text
+Optional. Terminated by `S`. **No blank lines within `#RESETS`** — a blank line is a rejection.
+
+```
 #RESETS
-<command> <ifflag> <arg1> <arg2> [arg3] <notes...>
+<command> <ifflag> <arg1> <arg2> [<arg3>] [<notes...>]
 ...
 S
 ```
 
-Encoding details:
+For `G` and `R` commands there is no `arg3` in the file; the parser sets it to `0` internally. For all other commands `arg3` is required.
 
-- `#RESETS` must not contain blank lines.
-- For commands `G` and `R`, there is **no** `arg3` in file; parser sets it to `0`.
-- For other commands, `arg3` is required.
-- Remaining text on the line is stored as `notes`.
+Remaining text on the line after all required integer fields is stored as `notes`. Notes are free-form text and may be empty.
 
-Commands used by validation/editor paths:
+### Commands
 
-- `M`: load mob (`arg1` mob vnum, `arg2` limit, `arg3` room vnum)
-- `O`: load object into room (`arg1` obj vnum, `arg2` limit, `arg3` room vnum)
-- `G`: give object to previous mob (`arg1` obj vnum, `arg2` limit)
-- `E`: equip object on previous mob (`arg1` obj vnum, `arg2` limit, `arg3` wear_loc)
-- `D`: set door state (`arg1` room vnum, `arg2` door 0..5, `arg3` state 0..2)
-- `R`: randomize exits (`arg1` room vnum, `arg2` max door)
-- `P`: put object into previous room-reset object/container (`arg1` object vnum, `arg2` limit, `arg3` container object vnum)
-- `A`: obsolete; loader/checker still recognize it
+| Cmd | Meaning | `arg1` | `arg2` | `arg3` |
+|-----|---------|--------|--------|--------|
+| `M` | Load mob in room | mob vnum | world limit | room vnum |
+| `O` | Load object in room | obj vnum | limit | room vnum |
+| `G` | Give object to previous mob | obj vnum | limit | *(none)* |
+| `E` | Equip object on previous mob | obj vnum | limit | wear_loc (0–30) |
+| `D` | Set door state | room vnum | door dir (0–5) | state (0=open, 1=closed, 2=locked) |
+| `R` | Randomize exits | room vnum | max door | *(none)* |
+| `P` | Put object in container | obj vnum | limit | container obj vnum |
+| `A` | Obsolete; recognized but ignored | — | — | — |
 
-### `E` command wear_loc values
+### `E` wear_loc values
 
-`wear_loc` in the `E` reset command maps to `WEAR_*` constants from `src/headers/config.h`:
+| Value | Slot | Value | Slot |
+|------:|------|------:|------|
+| 0 | light | 16 | hands |
+| 1 | halo | 17 | left finger |
+| 2 | aura | 18 | right finger |
+| 3 | horns | 19 | claws |
+| 4 | head | 20 | left hold |
+| 5 | face | 21 | right hold |
+| 6 | beak | 22 | two-handed |
+| 7 | left ear | 23 | buckler |
+| 8 | right ear | 24 | about (cloak) |
+| 9 | neck 1 | 25 | waist |
+| 10 | neck 2 | 26 | body |
+| 11 | wings | 27 | tail |
+| 12 | shoulders | 28 | legs |
+| 13 | arms | 29 | feet |
+| 14 | left wrist | 30 | hooves |
+| 15 | right wrist | | |
 
-| Value | Constant | Slot |
-|------:|----------|------|
-| 0 | `WEAR_LIGHT` | light source |
-| 1 | `WEAR_HALO` | halo |
-| 2 | `WEAR_AURA` | aura |
-| 3 | `WEAR_HORNS` | horns |
-| 4 | `WEAR_HEAD` | head |
-| 5 | `WEAR_FACE` | face |
-| 6 | `WEAR_BEAK` | beak |
-| 7 | `WEAR_EAR_L` | left ear |
-| 8 | `WEAR_EAR_R` | right ear |
-| 9 | `WEAR_NECK_1` | neck (first) |
-| 10 | `WEAR_NECK_2` | neck (second) |
-| 11 | `WEAR_WINGS` | wings |
-| 12 | `WEAR_SHOULDERS` | shoulders |
-| 13 | `WEAR_ARMS` | arms |
-| 14 | `WEAR_WRIST_L` | left wrist |
-| 15 | `WEAR_WRIST_R` | right wrist |
-| 16 | `WEAR_HANDS` | hands |
-| 17 | `WEAR_FINGER_L` | left finger |
-| 18 | `WEAR_FINGER_R` | right finger |
-| 19 | `WEAR_CLAWS` | claws |
-| 20 | `WEAR_HOLD_HAND_L` | left hand hold |
-| 21 | `WEAR_HOLD_HAND_R` | right hand hold (primary weapon/shield slot) |
-| 22 | `WEAR_TWO_HANDED` | two-handed weapon |
-| 23 | `WEAR_BUCKLER` | buckler |
-| 24 | `WEAR_ABOUT` | about body (cloak) |
-| 25 | `WEAR_WAIST` | waist |
-| 26 | `WEAR_BODY` | body |
-| 27 | `WEAR_TAIL` | tail |
-| 28 | `WEAR_LEGS` | legs |
-| 29 | `WEAR_FEET` | feet |
-| 30 | `WEAR_HOOVES` | hooves |
+`wear_loc` 31 (`clan_colors`) and 32 (`invasion_emblem`) are runtime-only and must not appear in `E` resets → rejection.
 
-The object's `wear_flags` must include the corresponding `ITEM_WEAR_*` bit for the chosen `wear_loc`, or the equip will silently fail at runtime. `WEAR_CLAN_COLORS` (31) and `WEAR_INVASION_EMBLEM` (32) are runtime-only and must not be used in `E` resets.
+### Rejection rules
 
-Builder editor mapping:
+- Blank line within `#RESETS` → rejection.
+- Unknown command letter → rejection.
+- `M` arg1 (mob vnum): must be in this file or in the database → rejection.
+- `M` arg3 (room vnum): must be in this file or in the database → rejection.
+- `O` arg1 (obj vnum): must be in this file or in the database → rejection.
+- `O` arg3 (room vnum): must be in this file or in the database → rejection.
+- `G` arg1 (obj vnum): must be in this file or in the database → rejection.
+- `E` arg1 (obj vnum): must be in this file or in the database → rejection.
+- `E` arg3 (wear_loc): must be 0–30 → rejection.
+- `E` arg1 object's `wear_flags` must include the bit for the specified `wear_loc` → rejection.
+- `D` arg1 (room vnum): must be in this file or in the database → rejection.
+- `D` arg2 (door): must be 0–5 → rejection.
+- `D` arg3 (state): must be 0, 1, or 2 → rejection.
+- `D` state 2 (locked): the exit at that room/direction must have `EX_ISDOOR` set, and a valid key vnum must be defined → rejection.
+- `P` arg1 (obj vnum): must be in this file or in the database → rejection.
+- `P` arg3 (container obj vnum): must be in this file or in the database → rejection.
+- `G` or `E` with no preceding `M` reset in the same area's reset list → rejection.
+- Door reset for state `closed` or `locked`: both sides of the door must have a matching `D` reset → rejection if only one side is reset.
+- Any vnum in a reset command that is outside the area's `V` range and not in the database → rejection.
 
-- `addreset put <obj-vnum> <container-vnum>` emits reset command `P` with `arg1=<obj-vnum>`, `arg2=0`, and `arg3=<container-vnum>`.
+---
 
-Shop inventory stocking pattern:
+## 11. Vnum Constraints
 
-- Shop inventory is stocked by issuing `G` resets (give to previous mob) immediately after the `M` reset that spawns the shopkeeper mob.
-- Each `G` reset gives one object type to that shopkeeper; the shopkeeper then sells those items.
-- Use `G 0 <obj_vnum> <limit>` where limit is typically 5 to allow multiple simultaneous copies.
-- Example sequence: `M 0 <keeper_vnum> 1 <room_vnum>` followed by one or more `G 0 <item_vnum> 5` lines.
+All vnum constraints are enforced before the DB transaction.
 
-Door reset both-sides requirement:
+- Every `#ROOMS`, `#MOBILES`, and `#OBJECTS` vnum must be within `[V_min, V_max]` inclusive → rejection.
+- No vnum may duplicate an existing vnum of the same type in the database → rejection (with error naming the conflict).
+- Cross-type overlap (same integer used as a room vnum and a mob vnum) is allowed.
+- Vnums within a section must be assigned in ascending sequential order → rejection if out of order.
+- Gaps in sequences are allowed but should be minimized.
 
-- When a door is reset to `closed` (state 1) or `locked` (state 2) via `D`, both sides of the door must be reset with matching `D` commands.
-- For a door between rooms A and B: issue `D 0 <roomA> <dir_to_B> <state>` and `D 0 <roomB> <dir_to_A> <state>`.
-- Both exits must also have the `door` (`EX_ISDOOR`, bit `1`) flag set in their room `D<door>` entries.
+---
 
-Reset vnum validity rule:
+## 12. Quest Design Requirements
 
-- Resets must reference valid vnums for the target type required by the command (room/mobile/object as applicable).
+Every area submitted via ingestion must satisfy all of the following → rejection otherwise:
 
-Cross-area object dependency warning:
-
-- When rebuilding an area and changing its object vnum layout, other area files may contain `G`, `E`, or `P` resets that reference the old object vnums. Such references become invalid and cause `test_db` to fail with "reset references undefined object vnum". Before finalising a vnum reassignment, search all `.are` files for `G`, `E`, and `P` lines that reference any vnum in the rebuilt area's envelope, and update or remove those references. The `area/area_index.md` and `docs/world_links.md` documents can help identify which areas are likely to have cross-area dependencies.
-
-Cross-area exit destination validation:
-
-- `test_db` validates that every room exit destination vnum resolves to a room defined in a loaded area (i.e., present in `area/area.lst`). If an exit's destination vnum belongs to an area that does not exist or is not listed in `area.lst`, the test fails with a message like: `exit destination vnum <N> is not a defined room`.
-- **Builder policy:** Do not author room exits that point to areas not yet built or not currently loaded. If a planned cross-area link exists (e.g., documented in `docs/world_links.md`), omit the exit from the `.are` file until the target area is implemented and added to `area.lst`. Describe the connection in room text or notes only. Mark the link as **Planned** in `world_links.md` until both sides exist.
-
-## 13) Structural constraints enforced by tests
-
-From `src/test_area_format.c`, `src/test_wood_area.c`, and `src/test_db.c`:
-
-### area.lst ordering constraint
-
-The `area/area.lst` file must list areas in non-decreasing order by `V` minimum vnum. Ties (same minimum) are further resolved by non-decreasing `V` maximum vnum. `test_area_format.c` enforces this at every test run and will fail with a diagnostic if the order is violated.
-
-Practical rule: when inserting a new area or expanding an existing area's `V` range, verify that its position in `area.lst` remains consistent with its new minimum vnum. See `docs/area_index.md` for the current ordered list.
-
-Note: `V` envelopes may overlap between areas (e.g., two areas can both declare ranges that share an integer). The ordering check is on minimum vnums only, not on range exclusivity. What must remain globally unique are the individual room, mobile, and object vnums actually defined inside each area's `#ROOMS`, `#MOBILES`, and `#OBJECTS` sections.
-
-- `#ROOMS` must exist.
-- `#ROOMS` must end with `#0` before the next section header.
-- Inside `#ROOMS`, each room body may contain only `D`, `E`, or `S` entries.
-- `D` entries must include two `~` strings and a destination line with exactly three integers.
-- If `#MOBILES` exists, it must terminate with `#0` before `#OBJECTS`.
-- If `#OBJECTS` exists, it must terminate with `#0` before `#RESETS`.
-- `#OBJECTS` must not contain blank lines between object records.
-- `#ROOMS` must contain at least one room in listed area files.
-- Area-owned vnums must stay inside the `#AREA` `V <min> <max>` range:
-  - `#ROOMS`, `#MOBILES`, and `#OBJECTS` entry headers (`#<vnum>`)
-  - `#SHOPS` shopkeeper vnums (first integer on each shop line)
-  - `#SPECIALS` targets for `M` and `O` lines
-- Duplicate index vnums are invalid for `#ROOMS`, `#MOBILES`, and `#OBJECTS`:
-  - A given room vnum may appear only once across all loaded area files.
-  - A given mobile vnum may appear only once across all loaded area files.
-  - A given object vnum may appear only once across all loaded area files.
-  - Cross-type overlap is allowed: a room, mobile, and object may share the same numeric vnum as long as each remains unique within its own index type.
-- Bitvector hygiene: undefined bits must be removed from serialized fields when detected.
-  - Do not persist undefined/unknown bits in any bitvector-backed area field.
-  - Keep only bits explicitly defined for that field (or documented runtime-only exceptions where applicable).
-- `area/area.lst` must list area files in strictly ascending order by their `V <min>` vnum. Inserting an area out of vnum order causes the `unit-test-area-format` check to fail.
-
-## 13.1) Vnum allocation policy
-
-For all content types (`#MOBILES`, `#ROOMS`, and `#OBJECTS`), vnums must be assigned in ascending sequential order.
-
-- Use lower available vnums before higher ones (i.e., use `1` before `2`, `2` before `3`, and so on).
-- Do not leave gaps in vnum sequences.
-- When gaps exist in an area's assigned vnum range, fill those gaps wherever possible before assigning new higher vnums.
-- For `#ROOMS`, attempt to use all room vnums in the area's assigned range (i.e., fill every available room-vnum slot where practical).
-
-## 13.2) Area quest design constraints
-
-Area quest design (when authoring quest sets for an area) must satisfy all of the following:
-
-- Every area must include at least one quest whose target is a boss.
-- New areas must include at least one cartography quest, unless explicitly specified otherwise.
+- At least one mob in `#MOBILES` must be flagged `boss`.
+- At least one mob flagged `boss` must have a loot table (`l`/`L` extension).
+- At least one quest in the area's quest definitions must target a boss mob.
+- At least one cartography quest must be defined, unless the area header includes a note explicitly waiving this (contact project maintainer).
 - The final quest in any quest chain must reward a piece of equipment.
-- Any quest that targets a boss must reward a piece of equipment.
+- Any quest targeting a boss must reward a piece of equipment.
 
-## 14) Canonical section order emitted by saver
+---
 
-`areasave.c` writes sections in this order when present:
+## 13. Structural Constraints
+
+### 13.1. Section termination
+
+- `#ROOMS` must end with `#0` before the next section or `#$` → rejection.
+- `#MOBILES`, if present, must end with `#0` → rejection.
+- `#OBJECTS`, if present, must end with `#0` → rejection.
+- `#SHOPS` must end with a line containing only `0` → rejection.
+- `#SPECIALS` must end with a line containing only `S` → rejection.
+- `#OBJFUNS` must end with a line containing only `S` → rejection.
+- `#RESETS` must end with a line containing only `S` → rejection.
+
+### 13.2. Blank lines
+
+- Blank lines between section headers are allowed.
+- Blank lines within `#RESETS` are a rejection.
+- Blank lines within `#OBJECTS` between records are a rejection.
+- Blank lines within `#MOBILES` between records are a rejection.
+- Blank lines between other section content and their terminators are a rejection.
+
+### 13.3. `area.lst` ordering
+
+When the area is successfully ingested and added to the runtime area list, its position in the in-memory area list is determined by `V_min`. Areas are kept in non-decreasing order by `V_min`. The ingestion validator verifies that the new area's `V` range does not conflict with any existing area.
+
+---
+
+## 14. Canonical Section Order
+
+Area files must be authored in this section order:
 
 1. `#AREA`
 2. `#ROOMS`
@@ -423,125 +411,12 @@ Area quest design (when authoring quest sets for an area) must satisfy all of th
 8. `#OBJFUNS`
 9. `#$`
 
-Using this order is recommended for consistency, even though the loader dispatch is name-based.
-
+A file with sections in any other order is a rejection.
 
 ---
 
-## 15) Database authoring workflow
+## 15. Database Authoring
 
-All area content lives in the PostgreSQL database. The flat `.are` files in `area/legacy/` are
-retained as migration source and rollback archive; the database is authoritative.
+Once the database migration is complete, new areas are authored directly via SQL and the ingestion pipeline. See the per-entity specs (`room_spec.md`, `mob_spec.md`, `object_spec.md`) for field-level SQL examples.
 
-### Adding a new area
-
-**Step 1 — Reserve a vnum range.** Check `area/area_index.md` for available ranges and claim
-one by inserting the area header:
-
-```sql
-INSERT INTO areas (name, min_vnum, max_vnum, keyword, level_min, level_max, reset_rate, owner)
-VALUES ('The Sunken City', 9000, 9099, 'sunkencity', 20, 30, 15, 'Virant');
--- Note the returned id.
-```
-
-**Step 2 — Add rooms.** Each room must have a vnum within the area's `[min_vnum, max_vnum]` range:
-
-```sql
-INSERT INTO rooms (vnum, area_id, name, description, room_flags, sector_type)
-VALUES (9000,
-        (SELECT id FROM areas WHERE keyword = 'sunkencity'),
-        'The Gate of the Sunken City',
-        'Corroded bronze gates loom before you...\n',
-        0, 6);  -- sector_type 6 = underwater
-```
-
-**Step 3 — Add exits.** Connect rooms via `room_exits`:
-
-```sql
-INSERT INTO room_exits (room_vnum, direction, dest_vnum, exit_flags, key_vnum)
-VALUES (9000, 1, 9001, 0, NULL);  -- direction 1 = east
-```
-
-**Step 4 — Add mobiles.**
-
-```sql
-INSERT INTO mobiles (vnum, area_id, player_name, short_descr, long_descr, description,
-                     act_flags, level, alignment)
-VALUES (9001,
-        (SELECT id FROM areas WHERE keyword = 'sunkencity'),
-        'drowned guardian',
-        'a drowned guardian',
-        'A drowned guardian floats here, trailing kelp.\n',
-        'Its hollow eyes fix on you with cold recognition.\n',
-        0, 25, -500);
-```
-
-**Step 5 — Add objects.**
-
-```sql
-INSERT INTO objects (vnum, area_id, name, short_descr, description,
-                     item_type, extra_flags, wear_flags, value_0, weight, level)
-VALUES (9010,
-        (SELECT id FROM areas WHERE keyword = 'sunkencity'),
-        'coral blade',
-        'a blade of black coral',
-        'A blade carved from black coral rests here.\n',
-        5,   -- item_type 5 = weapon
-        0, 8192,  -- wear_flags: WEAR_WIELD
-        3, 10, 20);  -- value_0=weapon type, weight, level
-```
-
-**Step 6 — Add resets.** `seq` must be globally unique per area and reflect intended order:
-
-```sql
--- Place mob 9001 in room 9000, max 3 in world, max 1 in room
-INSERT INTO resets (area_id, seq, command, arg1, arg2, arg3)
-VALUES ((SELECT id FROM areas WHERE keyword = 'sunkencity'), 1, 'M', 9001, 3, 9000);
-
--- Give that mob object 9010
-INSERT INTO resets (area_id, seq, command, arg1, arg2, arg3)
-VALUES ((SELECT id FROM areas WHERE keyword = 'sunkencity'), 2, 'G', 9010, 1, 0);
-```
-
-**Step 7 — Validate:**
-
-```sql
--- Confirm all rooms are within the area's vnum range
-SELECT vnum FROM rooms
-WHERE area_id = (SELECT id FROM areas WHERE keyword = 'sunkencity')
-  AND (vnum < (SELECT min_vnum FROM areas WHERE keyword = 'sunkencity')
-    OR vnum > (SELECT max_vnum FROM areas WHERE keyword = 'sunkencity'));
--- Should return 0 rows.
-
--- Check all resets reference valid vnums
-SELECT r.seq, r.command, r.arg1
-FROM resets r
-WHERE r.area_id = (SELECT id FROM areas WHERE keyword = 'sunkencity')
-  AND r.command = 'M'
-  AND r.arg1 NOT IN (SELECT vnum FROM mobiles);
--- Should return 0 rows.
-```
-
-**Step 8 — Use the per-area view for convenience:**
-
-The migration tool generates a `sunkencity_rooms`, `sunkencity_mobiles`, etc. view for every area.
-After the area is created, regenerate views:
-
-```sh
-./tools/db_to_files --views-only
-```
-
-Then query the new area naturally:
-
-```sql
-SELECT vnum, name FROM sunkencity_rooms ORDER BY vnum;
-```
-
-### Constraints to always satisfy
-
-- All room, mob, and object vnums must fall within the area's `[min_vnum, max_vnum]` range.
-- `resets.seq` values must be unique within the area and in the intended load order.
-  `G` and `E` resets must immediately follow the `M` reset they modify.
-- Do not leave gaps in vnum sequences (fill lower vnums before higher ones).
-- Every area must include at least one boss mob and one quest (see Section 13.2).
-- Changes take effect on the next server boot (the server loads all area data on startup).
+The `area/incoming/` pipeline accepts a `.are` file, validates it against this spec, imports it into the database transactionally, hot-loads it into the running server, and deletes the staging file. See `docs/proposals/database-schema-areas.md §10` for the full pipeline design.
