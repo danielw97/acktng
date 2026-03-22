@@ -363,7 +363,7 @@ void db_worker_enqueue_write(DB_OP_TYPE type, const void *buf, size_t len, const
       DB_REQUEST *p;
       for (p = req_head; p; p = p->next)
       {
-         if (p->type == DB_WRITE_PLAYER && strncmp(p->name, name, sizeof(p->name)) == 0)
+         if (p->type == DB_WRITE_PLAYER && strcmp(p->name, name) == 0)
          {
             /* Replace buffer */
             free(p->buf);

@@ -17,7 +17,8 @@ static char *read_db_conf(const char *area_dir)
 {
    char path[512];
    FILE *fp;
-   char buf[1024];
+   long file_size;
+   char *buf;
    size_t n;
 
    snprintf(path, sizeof(path), "%s/../data/db.conf", area_dir);
@@ -25,10 +26,35 @@ static char *read_db_conf(const char *area_dir)
    if (!fp)
       return NULL;
 
-   n = fread(buf, 1, sizeof(buf) - 1, fp);
-   fclose(fp);
-   if (n == 0)
+   if (fseek(fp, 0, SEEK_END) != 0)
+   {
+      fclose(fp);
       return NULL;
+   }
+   file_size = ftell(fp);
+   rewind(fp);
+
+   if (file_size <= 0)
+   {
+      fclose(fp);
+      return NULL;
+   }
+
+   buf = malloc((size_t)file_size + 1);
+   if (!buf)
+   {
+      fclose(fp);
+      return NULL;
+   }
+
+   n = fread(buf, 1, (size_t)file_size, fp);
+   fclose(fp);
+
+   if (n == 0)
+   {
+      free(buf);
+      return NULL;
+   }
 
    buf[n] = '\0';
    /* Strip trailing whitespace / newline */
@@ -37,7 +63,7 @@ static char *read_db_conf(const char *area_dir)
    {
       buf[--n] = '\0';
    }
-   return strdup(buf);
+   return buf;
 }
 
 int db_conn_open(const char *area_dir)

@@ -30,7 +30,8 @@ LIBPQ_LIBS     := $(shell pkg-config --libs   libpq 2>/dev/null)
 ifeq ($(LIBPQ_LIBS),)
     LIBPQ_HEADER := $(shell find /usr/include -name libpq-fe.h 2>/dev/null | head -1)
     ifneq ($(LIBPQ_HEADER),)
-        LIBPQ_LIBS := -lpq
+        LIBPQ_LIBS   := -lpq
+        LIBPQ_CFLAGS := -I$(dir $(LIBPQ_HEADER))
     endif
 endif
 

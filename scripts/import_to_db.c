@@ -29,31 +29,6 @@
 static PGconn *conn;
 static int errors;
 
-static void die(const char *msg)
-{
-   fprintf(stderr, "FATAL: %s\n", msg);
-   if (conn)
-      PQfinish(conn);
-   exit(1);
-}
-
-static void check(PGresult *res, const char *ctx)
-{
-   ExecStatusType s;
-   if (!res)
-   {
-      fprintf(stderr, "ERROR [%s]: null result from libpq\n", ctx);
-      errors++;
-      return;
-   }
-   s = PQresultStatus(res);
-   if (s != PGRES_COMMAND_OK && s != PGRES_TUPLES_OK)
-   {
-      fprintf(stderr, "ERROR [%s]: %s\n", ctx, PQresultErrorMessage(res));
-      errors++;
-   }
-}
-
 static int exec_sql(const char *sql)
 {
    PGresult *res = PQexec(conn, sql);
@@ -150,9 +125,10 @@ static int import_one_helpfile(const char *path, const char *filename, const cha
    in_header = 1;
    while (in_header && *p)
    {
+      char *eol;
       line_end = strchr(p, '\n');
-      if (line_end)
-         *line_end = '\0';
+      eol = line_end ? line_end : p + strlen(p);
+      *eol = '\0';
       strip_trailing(p);
 
       if (strncmp(p, "level ", 6) == 0)
@@ -170,13 +146,13 @@ static int import_one_helpfile(const char *path, const char *filename, const cha
          in_header = 0;
          if (line_end)
             *line_end = '\n'; /* restore for body extraction */
-         p = line_end ? line_end + 1 : p + 3;
+         p = line_end ? line_end + 1 : eol;
          break;
       }
 
       if (line_end)
          *line_end = '\n';
-      p = line_end ? line_end + 1 : p + strlen(p);
+      p = line_end ? line_end + 1 : eol;
    }
 
    body_start = p;
@@ -275,9 +251,10 @@ static int import_one_lorefile(const char *path, const char *filename)
    p = buf;
    while (in_header && *p)
    {
+      char *eol;
       line_end = strchr(p, '\n');
-      if (line_end)
-         *line_end = '\0';
+      eol = line_end ? line_end : p + strlen(p);
+      *eol = '\0';
       strip_trailing(p);
       if (strncmp(p, "keywords ", 9) == 0)
       {
@@ -288,19 +265,13 @@ static int import_one_lorefile(const char *path, const char *filename)
       {
          in_header = 0;
          if (line_end)
-         {
             *line_end = '\n';
-            p = line_end + 1;
-         }
-         else
-         {
-            p += 3;
-         }
+         p = line_end ? line_end + 1 : eol;
          break;
       }
       if (line_end)
          *line_end = '\n';
-      p = line_end ? line_end + 1 : p + strlen(p);
+      p = line_end ? line_end + 1 : eol;
    }
 
    /* Upsert topic */

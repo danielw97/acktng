@@ -374,7 +374,7 @@ CREATE TABLE IF NOT EXISTS brands (
     id          SERIAL PRIMARY KEY,
     branded_by  TEXT   NOT NULL,
     item_name   TEXT   NOT NULL,
-    brand_date  TEXT   NOT NULL,
+    brand_date  TIMESTAMP WITH TIME ZONE NOT NULL,
     description TEXT   NOT NULL DEFAULT ''
 );
 
@@ -383,7 +383,7 @@ CREATE TABLE IF NOT EXISTS brands (
 -- -----------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS room_marks (
     id        SERIAL  PRIMARY KEY,
-    room_vnum INTEGER NOT NULL,
+    room_vnum INTEGER NOT NULL REFERENCES rooms(vnum),
     mark_text TEXT    NOT NULL
 );
 
@@ -392,7 +392,7 @@ CREATE TABLE IF NOT EXISTS room_marks (
 -- -----------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS corpses (
     id           SERIAL  PRIMARY KEY,
-    where_vnum   INTEGER NOT NULL,
+    where_vnum   INTEGER NOT NULL REFERENCES rooms(vnum),
     nest         INTEGER NOT NULL DEFAULT 0,
     name         TEXT    NOT NULL,
     short_descr  TEXT    NOT NULL,
@@ -433,14 +433,14 @@ CREATE TABLE IF NOT EXISTS sysdata (
     news           TEXT    NOT NULL DEFAULT '',
     int_val_1      INTEGER NOT NULL DEFAULT 0,
     int_val_2      INTEGER NOT NULL DEFAULT 0,
-    bln_val_0      INTEGER NOT NULL DEFAULT 0,
-    bln_val_1      INTEGER NOT NULL DEFAULT 0,
-    bln_val_2      INTEGER NOT NULL DEFAULT 0,
-    bln_val_3      INTEGER NOT NULL DEFAULT 0,
-    bln_val_4      INTEGER NOT NULL DEFAULT 0,
-    bln_val_5      INTEGER NOT NULL DEFAULT 0,
-    bln_val_6      INTEGER NOT NULL DEFAULT 0,
-    bln_val_7      INTEGER NOT NULL DEFAULT 0
+    bln_val_0      BOOLEAN NOT NULL DEFAULT FALSE,
+    bln_val_1      BOOLEAN NOT NULL DEFAULT FALSE,
+    bln_val_2      BOOLEAN NOT NULL DEFAULT FALSE,
+    bln_val_3      BOOLEAN NOT NULL DEFAULT FALSE,
+    bln_val_4      BOOLEAN NOT NULL DEFAULT FALSE,
+    bln_val_5      BOOLEAN NOT NULL DEFAULT FALSE,
+    bln_val_6      BOOLEAN NOT NULL DEFAULT FALSE,
+    bln_val_7      BOOLEAN NOT NULL DEFAULT FALSE
 );
 INSERT INTO sysdata (id) VALUES (1) ON CONFLICT DO NOTHING;
 
