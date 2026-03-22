@@ -408,54 +408,46 @@ int main(int argc, char **argv)
 #ifndef WIN32
    init_alarm_handler();
 #endif
-   if (port > 0)
    {
-      if (ws_port > 0 && tls_port > 0 && sniff_port > 0)
-         sprintf(log_buf,
-                 "ACK! MUD is ready on port %d (telnet), %d (WebSocket loopback), %d (TLS), %d "
-                 "(auto).",
-                 port, ws_port, tls_port, sniff_port);
-      else if (ws_port > 0 && tls_port > 0)
-         sprintf(log_buf,
-                 "ACK! MUD is ready on port %d (telnet), %d (WebSocket loopback), %d (TLS).", port,
-                 ws_port, tls_port);
-      else if (ws_port > 0 && sniff_port > 0)
-         sprintf(log_buf,
-                 "ACK! MUD is ready on port %d (telnet), %d (WebSocket loopback), %d (auto).", port,
-                 ws_port, sniff_port);
-      else if (tls_port > 0 && sniff_port > 0)
-         sprintf(log_buf, "ACK! MUD is ready on port %d (telnet), %d (TLS), %d (auto).", port,
-                 tls_port, sniff_port);
-      else if (ws_port > 0)
-         sprintf(log_buf, "ACK! MUD is ready on port %d (telnet) and %d (WebSocket loopback).",
-                 port, ws_port);
-      else if (tls_port > 0)
-         sprintf(log_buf, "ACK! MUD is ready on port %d (telnet) and %d (TLS).", port, tls_port);
-      else if (sniff_port > 0)
-         sprintf(log_buf, "ACK! MUD is ready on port %d (telnet) and %d (auto).", port, sniff_port);
+      /* Build the "ready" message from an array of "port (label)" tokens. */
+      struct
+      {
+         int port;
+         const char *label;
+      } listeners[] = {
+          {port, "telnet"},
+          {ws_port, "WebSocket loopback"},
+          {tls_port, "TLS"},
+          {sniff_port, "auto"},
+      };
+      int n = sizeof(listeners) / sizeof(listeners[0]);
+      int pos = sprintf(log_buf, "ACK! MUD is ready");
+      int count = 0;
+      int i;
+      for (i = 0; i < n; i++)
+      {
+         if (listeners[i].port > 0)
+            count++;
+      }
+      if (count == 0)
+      {
+         pos += sprintf(log_buf + pos, " (HOTreboot recovery, no plain-telnet port)");
+      }
       else
-         sprintf(log_buf, "ACK! MUD is ready on port %d.", port);
-   }
-   else
-   {
-      /* No plain-telnet port – sniff/TLS port(s) only */
-      if (ws_port > 0 && sniff_port > 0)
-         sprintf(log_buf, "ACK! MUD is ready on port %d (WebSocket loopback) and %d (auto).",
-                 ws_port, sniff_port);
-      else if (ws_port > 0 && tls_port > 0)
-         sprintf(log_buf, "ACK! MUD is ready on port %d (WebSocket loopback) and %d (TLS).",
-                 ws_port, tls_port);
-      else if (sniff_port > 0 && tls_port > 0)
-         sprintf(log_buf, "ACK! MUD is ready on port %d (TLS) and %d (auto).", tls_port,
-                 sniff_port);
-      else if (sniff_port > 0)
-         sprintf(log_buf, "ACK! MUD is ready on port %d (auto).", sniff_port);
-      else if (tls_port > 0)
-         sprintf(log_buf, "ACK! MUD is ready on port %d (TLS).", tls_port);
-      else if (ws_port > 0)
-         sprintf(log_buf, "ACK! MUD is ready on port %d (WebSocket loopback).", ws_port);
-      else
-         sprintf(log_buf, "ACK! MUD is ready (HOTreboot recovery, no plain-telnet port).");
+      {
+         int seen = 0;
+         pos += sprintf(log_buf + pos, " on port");
+         for (i = 0; i < n; i++)
+         {
+            if (listeners[i].port <= 0)
+               continue;
+            if (seen > 0)
+               pos += sprintf(log_buf + pos, (seen == count - 1) ? " and" : ",");
+            pos += sprintf(log_buf + pos, " %d (%s)", listeners[i].port, listeners[i].label);
+            seen++;
+         }
+      }
+      sprintf(log_buf + pos, ".");
    }
    log_string(log_buf);
    if (fCopyOver)
