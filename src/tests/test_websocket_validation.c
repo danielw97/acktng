@@ -226,11 +226,11 @@ static void test_get_request_path_gsgp(void)
    assert(strcmp(path, "/gsgp") == 0);
 }
 
-static void test_get_request_path_wholist(void)
+static void test_get_request_path_who(void)
 {
    char path[64];
-   get_request_path("GET /wholist HTTP/1.0\r\nHost: x\r\n\r\n", path, sizeof(path));
-   assert(strcmp(path, "/wholist") == 0);
+   get_request_path("GET /who HTTP/1.0\r\nHost: x\r\n\r\n", path, sizeof(path));
+   assert(strcmp(path, "/who") == 0);
 }
 
 static void test_get_request_path_root(void)
@@ -257,7 +257,7 @@ int main(void)
    test_rejects_missing_required_headers();
    test_rejects_oversized_key_buffer();
    test_get_request_path_gsgp();
-   test_get_request_path_wholist();
+   test_get_request_path_who();
    test_get_request_path_root();
    test_get_request_path_truncates();
 

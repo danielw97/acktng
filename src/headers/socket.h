@@ -9,6 +9,7 @@ extern int global_port;
 extern int global_ws_port;
 extern int global_tls_port;
 extern int global_sniff_port;
+extern int global_http_port;
 extern const char echo_off_str[];
 extern const char echo_on_str[];
 extern const char go_ahead_str[];
@@ -70,7 +71,7 @@ int init_socket(int port, unsigned long bind_addr);
 #ifdef HAVE_OPENSSL
 bool init_tls_context(const char *cert_file, const char *key_file);
 #endif
-void game_loop(int control, int control_ws, int control_tls, int control_sniff);
+void game_loop(int control, int control_ws, int control_tls, int control_sniff, int control_http);
 void init_descriptor(DESCRIPTOR_DATA *dnew, int desc);
 bool write_to_descriptor(DESCRIPTOR_DATA *d, char *txt, int length);
 void write_to_buffer(DESCRIPTOR_DATA *d, const char *txt, int length);

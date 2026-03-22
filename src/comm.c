@@ -268,6 +268,8 @@ int main(int argc, char **argv)
    int tls_port = -1;
    int control_sniff = -1;
    int sniff_port = -1;
+   int control_http = -1;
+   int http_port = 80;
    int flag_start = 1; /* argv index where flag parsing begins */
 #ifdef HAVE_OPENSSL
    const char *tls_cert = "../data/tls/cert.pem";
@@ -355,6 +357,17 @@ int main(int argc, char **argv)
                exit(1);
             }
          }
+         else if (!strcmp(argv[i], "--http-port") && i + 1 < argc)
+         {
+            http_port = atoi(argv[++i]);
+            if (http_port <= 0)
+            {
+               fprintf(stderr, "--http-port must be a positive integer.\n");
+               exit(1);
+            }
+         }
+         else if (!strcmp(argv[i], "--no-http"))
+            http_port = -1;
 #ifdef HAVE_OPENSSL
          else if (!strcmp(argv[i], "--tls-cert") && i + 1 < argc)
             tls_cert = argv[++i];
@@ -384,6 +397,8 @@ int main(int argc, char **argv)
          control = init_socket(port, INADDR_ANY);
       if (ws_port > 0)
          control_ws = init_socket(ws_port, INADDR_LOOPBACK);
+      if (http_port > 0)
+         control_http = init_socket(http_port, INADDR_ANY);
       if (tls_port > 0 || sniff_port > 0)
       {
 #ifdef HAVE_OPENSSL
@@ -419,6 +434,7 @@ int main(int argc, char **argv)
    global_ws_port = ws_port;
    global_tls_port = tls_port;
    global_sniff_port = sniff_port;
+   global_http_port = http_port;
    if (fCopyOver)
       abort_threshold = BOOT_DB_ABORT_THRESHOLD;
    boot_db();
@@ -483,7 +499,7 @@ int main(int argc, char **argv)
    /* Seed WHO web output immediately on boot/copyover recovery. */
    list_who_to_output();
 
-   game_loop(control, control_ws, control_tls, control_sniff);
+   game_loop(control, control_ws, control_tls, control_sniff, control_http);
    if (control >= 0)
       close(control);
    if (control_ws >= 0)
@@ -492,6 +508,8 @@ int main(int argc, char **argv)
       close(control_tls);
    if (control_sniff >= 0)
       close(control_sniff);
+   if (control_http >= 0)
+      close(control_http);
 
    /*
     * That's all, folks.
