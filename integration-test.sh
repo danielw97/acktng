@@ -27,9 +27,12 @@ if command -v python3 >/dev/null 2>&1; then
         "import socket; s=socket.socket(); s.bind(('', 0)); print(s.getsockname()[1]); s.close()")
     TLS_PORT=$(python3 -c \
         "import socket; s=socket.socket(); s.bind(('', 0)); print(s.getsockname()[1]); s.close()")
+    HTTP_PORT=$(python3 -c \
+        "import socket; s=socket.socket(); s.bind(('', 0)); print(s.getsockname()[1]); s.close()")
 else
     TEST_PORT=$((RANDOM % 16383 + 49152))
     TLS_PORT=$((RANDOM % 16383 + 49152))
+    HTTP_PORT=$((RANDOM % 16383 + 49152))
 fi
 
 # Try to generate a self-signed certificate for TLS testing.
@@ -89,7 +92,7 @@ rm -f "$PLAYER_DIR/$tls_first_letter/$tls_player_lower"
 # ---------------------------------------------------------------------------
 echo "integration-test: starting MUD on port $TEST_PORT..."
 # shellcheck disable=SC2086
-(cd "$AREA_DIR" && ../src/ack "$TEST_PORT" $TLS_ARGS) >"$LOG_FILE" 2>&1 &
+(cd "$AREA_DIR" && ../src/ack "$TEST_PORT" $TLS_ARGS --http-port "$HTTP_PORT") >"$LOG_FILE" 2>&1 &
 MUD_PID=$!
 
 echo "integration-test: MUD started (PID $MUD_PID), waiting for boot..."
