@@ -40,9 +40,14 @@ TLS_ARGS=""
 HAS_TLS=0
 
 if command -v openssl >/dev/null 2>&1; then
-    if openssl req -x509 -newkey rsa:2048 \
-           -keyout "$TLS_KEY" -out "$TLS_CERT" \
-           -days 1 -nodes -subj '/CN=localhost' >/dev/null 2>&1; then
+    # Generate a traditional PKCS#1 RSA private key first, then the self-signed cert.
+    # openssl genrsa -traditional forces "BEGIN RSA PRIVATE KEY" format on OpenSSL 3.0+;
+    # older versions produce that format by default.  A PKCS#1 key is compatible with
+    # all OpenSSL versions that the MUD server might have been compiled against.
+    if (openssl genrsa -traditional -out "$TLS_KEY" 2048 2>/dev/null || \
+        openssl genrsa -out "$TLS_KEY" 2048 2>/dev/null) && \
+       openssl req -x509 -new -key "$TLS_KEY" -out "$TLS_CERT" \
+           -days 1 -subj '/CN=localhost' >/dev/null 2>&1; then
         TLS_ARGS="--tls-port $TLS_PORT --tls-cert $TLS_CERT --tls-key $TLS_KEY"
     fi
 fi
