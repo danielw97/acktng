@@ -525,6 +525,8 @@
  */
 #define CON_QUITTING -15
 #define CON_RECONNECTING -16
+/* Descriptor is waiting for an async player load from the DB */
+#define CON_LOADING_FROM_DB -17
 #define CON_SETTING_STATS 1
 
 /* values used to check a new player has selected all options.... */
