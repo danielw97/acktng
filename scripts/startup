@@ -5,6 +5,10 @@
 
 # Telnet port (public, all interfaces)
 port=8890
+# TLS port (public, all interfaces)
+tls_port=8880
+tls_cert=/etc/letsencrypt/live/ackmud.com/fullchain.pem
+tls_key=/etc/letsencrypt/live/ackmud.com/privkey.pem
 # WebSocket loopback port (127.0.0.1 only; nginx TLS proxy forwards wss://ackmud.com:9890 here)
 ws_port=18890
 
@@ -49,7 +53,7 @@ do
   done
 
   # run the mud
-  ../src/ack $port --ws-loopback $ws_port >$logfile 2>&1
+  ../src/ack $port --ws-loopback $ws_port --tls-port $tls_port --tls-cert $tls_cert --tls-key $tls_key >$logfile 2>&1
 
   # shutdown?
 
