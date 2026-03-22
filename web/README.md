@@ -4,7 +4,7 @@ This directory contains web-related assets served by the MUD's HTTP layer.
 
 ## HTTP Endpoints
 
-The MUD server exposes two plain-HTTP endpoints on a dedicated port (default: 80).
+The MUD server exposes two plain-HTTP endpoints on a dedicated port (default: 8080).
 Responses are served directly from in-memory buffers updated on every game tick —
 no files are written to disk.
 
@@ -20,11 +20,11 @@ the `/gsgp` response to allow cross-origin JavaScript access.
 ## Usage
 
 ```sh
-curl http://localhost/gsgp
-curl http://localhost/who
+curl http://localhost:8080/gsgp
+curl http://localhost:8080/who
 ```
 
-The HTTP port defaults to 80.  To override, start the server with `--http-port N`.
+The HTTP port defaults to 8080.  To override, start the server with `--http-port N`.
 To disable the HTTP listener entirely, pass `--no-http`.
 
 ## What Does NOT Belong Here
