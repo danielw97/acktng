@@ -203,6 +203,7 @@ CREATE TABLE mobiles (
     pierce        INTEGER NOT NULL DEFAULT 0,
     -- 'a' AI extension fields
     ai_knowledge  INTEGER NOT NULL DEFAULT 0,
+    accent        INTEGER NOT NULL DEFAULT 0,
     ai_prompt     TEXT,
     -- loot table (denormalized to match MAX_LOOT=9 fixed array in C)
     loot_amount   INTEGER NOT NULL DEFAULT 0,
@@ -329,7 +330,28 @@ CREATE TABLE mobile_specials (
 );
 ```
 
-### 4.12 `object_functions` Table
+### 4.12 `mob_scripts` Table
+
+Each row is one inline mob program attached to a mobile. Inline scripts are the `scripts` sequence in `mobs.yaml` (§II.3.8) and correspond to `>` extension blocks in the legacy area file format.
+
+```sql
+CREATE TABLE mob_scripts (
+    id       SERIAL  PRIMARY KEY,
+    mob_vnum INTEGER NOT NULL REFERENCES mobiles(vnum),
+    seq      INTEGER NOT NULL,  -- 1-based; preserves authored order within the mob
+    trigger  TEXT    NOT NULL,  -- trigger name from tab_trigger (§III.11)
+    args     TEXT    NOT NULL DEFAULT '',  -- trigger arguments string
+    commands TEXT    NOT NULL,  -- MUD script command block
+    UNIQUE(mob_vnum, seq)
+);
+```
+
+**Notes:**
+- `seq` preserves the authored order of scripts within a single mob. Scripts with lower `seq` are evaluated first on the same trigger.
+- `trigger` must match a valid name from `tab_trigger` (the source table for §III.11 in `area_file_spec.md`).
+- `commands` is the raw MUD script text. No reformatting is applied; the text is stored verbatim.
+
+### 4.13 `object_functions` Table
 
 ```sql
 CREATE TABLE object_functions (
@@ -338,7 +360,7 @@ CREATE TABLE object_functions (
 );
 ```
 
-### 4.13 `help_entries` Table
+### 4.14 `help_entries` Table
 
 Corresponds to files in `help/`. One row per file.
 
@@ -352,7 +374,7 @@ CREATE TABLE help_entries (
 );
 ```
 
-### 4.14 `shelp_entries` Table
+### 4.15 `shelp_entries` Table
 
 Corresponds to files in `shelp/`. One row per file.
 
@@ -366,7 +388,7 @@ CREATE TABLE shelp_entries (
 );
 ```
 
-### 4.15 `lore_topics` Table
+### 4.16 `lore_topics` Table
 
 Corresponds to individual runtime files in `lore/` (not `docs/lore/`). One row per file; holds the shared keyword list.
 
@@ -378,7 +400,7 @@ CREATE TABLE lore_topics (
 );
 ```
 
-### 4.16 `lore_entries` Table
+### 4.17 `lore_entries` Table
 
 Each row is one flagged entry within a topic file. The default (unflagged) entry has `flags = 0`.
 
@@ -397,7 +419,7 @@ CREATE TABLE lore_entries (
 - `flags` encodes city and race bits as defined in `docs/lore_file_spec.md` (bits 0–4 = cities, bits 5–14 = races).
 - The default entry always has `seq = 1` and `flags = 0`. The server selects the best match by flag specificity at runtime — this logic is unchanged; only the data source changes.
 
-### 4.17 `bans` Table
+### 4.18 `bans` Table
 
 Corresponds to `data/bans.lst`. One row per ban entry.
 
@@ -410,7 +432,7 @@ CREATE TABLE bans (
 );
 ```
 
-### 4.18 `socials` Table
+### 4.19 `socials` Table
 
 Corresponds to `data/socials.txt`. One row per social command. The count line at the top of the file is derived from `COUNT(*)` and not stored.
 
@@ -430,7 +452,7 @@ CREATE TABLE socials (
 
 Each tilde-terminated field from the file maps to one column. The nine fields correspond to the nine `~`-terminated lines in `socials.txt` order.
 
-### 4.19 `boards` Table
+### 4.20 `boards` Table
 
 Corresponds to the header section of each `area/boards/board.{vnum}` file. One row per board object — configuration only; messages are in `board_messages`.
 
@@ -447,7 +469,7 @@ CREATE TABLE boards (
 
 `vnum` is the board's virtual number (stored in `OBJ_DATA->value[3]` for ITEM_BOARD objects). It is the stable identifier used when loading a board on demand.
 
-### 4.20 `board_messages` Table
+### 4.21 `board_messages` Table
 
 Corresponds to the `Messages` section of each `board.{vnum}` file.
 
@@ -466,7 +488,7 @@ CREATE INDEX board_messages_board_id_seq ON board_messages(board_id, seq);
 
 `seq` preserves the original file ordering so display order matches what players are used to. `posted_at` is the raw Unix timestamp from the `M<timestamp>` line; no conversion is applied.
 
-### 4.21 `clans` Table
+### 4.22 `clans` Table
 
 Corresponds to `data/clandata.dat`. The file stores a fixed 11-clan array with per-clan war matrices and counters.
 
@@ -486,7 +508,7 @@ CREATE TABLE clans (
 
 **Note:** `war_matrix` is a PostgreSQL `INTEGER[]` array of 11 elements (one slot per possible opponent clan). The C load code reads this as a fixed-size `int[MAX_CLAN][MAX_CLAN]` matrix.
 
-### 4.22 `rulers` Table
+### 4.23 `rulers` Table
 
 Corresponds to `data/rulers.lst`. Stores named ruler entries (empty file = no rulers).
 
@@ -497,7 +519,7 @@ CREATE TABLE rulers (
 );
 ```
 
-### 4.23 `brands` Table
+### 4.24 `brands` Table
 
 Corresponds to `data/brands.lst`. Each brand record documents an item that has been branded by an immortal.
 
@@ -511,7 +533,7 @@ CREATE TABLE brands (
 );
 ```
 
-### 4.24 `room_marks` Table
+### 4.25 `room_marks` Table
 
 Corresponds to `data/roommarks.lst`. Stores persistent room marks set by players or staff.
 
@@ -523,7 +545,7 @@ CREATE TABLE room_marks (
 );
 ```
 
-### 4.25 `corpses` Table
+### 4.26 `corpses` Table
 
 Corresponds to `data/corpses.lst`. Each row is one persisted corpse object with its nested inventory.
 
@@ -561,7 +583,7 @@ CREATE TABLE corpses (
 
 Nested inventory objects (items inside a corpse container) are stored as rows with `parent_id` pointing to their containing corpse row.
 
-### 4.26 `sysdata` Table
+### 4.27 `sysdata` Table
 
 Corresponds to `data/sysdat.bln` and `data/system.dat`. Stores server-wide scalar configuration values as a single row.
 
@@ -592,7 +614,7 @@ INSERT INTO sysdata (id) VALUES (1);
 
 The `CHECK(id = 1)` constraint enforces the singleton pattern — there is exactly one system data row.
 
-### 4.27 `players` Table
+### 4.28 `players` Table
 
 Corresponds to flat files under `player/<initial>/<Name>`. One row per player character. Fields map 1:1 to the sections written by `fwrite_char()` in `src/save/save_players.c`.
 
@@ -648,7 +670,7 @@ CREATE TABLE players (
 - `inventory` is a JSONB array of object trees mirroring the C `OBJ_DATA` structure, with nested `contains` arrays for containers. The full object schema matches the fields in `corpses` (§4.23) plus wear location.
 - `raw_save` stores the original flat-file text verbatim. During Phase 6 (transition), the server can fall back to re-parsing `raw_save` if any field is missing or malformed. It is set to NULL once the row has been fully round-tripped.
 
-### 4.28 `keep_chests` Table
+### 4.29 `keep_chests` Table
 
 Corresponds to `data/chest/<vnum>` flat files. Each row represents one player-owned keep
 chest. Chest contents are stored in `keep_chest_items` (§4.29).
@@ -674,7 +696,7 @@ CREATE TABLE keep_chests (
 
 ---
 
-### 4.29 `keep_chest_items` Table
+### 4.30 `keep_chest_items` Table
 
 Each row is one object inside a keep chest (or nested inside a container within a chest).
 The structure mirrors `fwrite_chest` output, extended to cover all ten value slots.
@@ -727,14 +749,14 @@ Notes:
 
 ---
 
-### 4.30 `schema_version` Table
+### 4.31 `schema_version` Table
 
 ```sql
 CREATE TABLE schema_version (
     version    INTEGER                  NOT NULL,
     applied_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW()
 );
-INSERT INTO schema_version (version) VALUES (1);
+INSERT INTO schema_version (version) VALUES (2);
 ```
 
 ---

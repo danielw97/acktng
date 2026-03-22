@@ -2,11 +2,11 @@
 -- Canonical DDL for all game content stores.
 -- Apply with: psql -d acktng -f schema.sql
 --
--- Schema version: 1
+-- Schema version: 2
 -- See docs/proposals/database-schema-areas.md for full specification.
 
 -- ---------------------------------------------------------------------------
--- 4.26  schema_version  (checked at boot; must match DB_SCHEMA_VERSION in C)
+-- 4.31  schema_version  (checked at boot; must match DB_SCHEMA_VERSION in C)
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS schema_version (
     version    INTEGER                  NOT NULL,
@@ -119,6 +119,7 @@ CREATE TABLE IF NOT EXISTS mobiles (
     block         INTEGER NOT NULL DEFAULT 0,
     pierce        INTEGER NOT NULL DEFAULT 0,
     ai_knowledge  INTEGER NOT NULL DEFAULT 0,
+    accent        INTEGER NOT NULL DEFAULT 0,
     ai_prompt     TEXT,
     loot_amount   INTEGER NOT NULL DEFAULT 0,
     loot_0        INTEGER NOT NULL DEFAULT 0,
@@ -232,7 +233,20 @@ CREATE TABLE IF NOT EXISTS mobile_specials (
 );
 
 -- ---------------------------------------------------------------------------
--- 4.12  object_functions
+-- 4.12  mob_scripts
+-- ---------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS mob_scripts (
+    id          SERIAL  PRIMARY KEY,
+    mob_vnum    INTEGER NOT NULL REFERENCES mobiles (vnum),
+    seq         INTEGER NOT NULL,
+    trigger     TEXT    NOT NULL,
+    args        TEXT    NOT NULL DEFAULT '',
+    commands    TEXT    NOT NULL,
+    UNIQUE (mob_vnum, seq)
+);
+
+-- ---------------------------------------------------------------------------
+-- 4.13  object_functions
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS object_functions (
     obj_vnum INTEGER PRIMARY KEY REFERENCES objects (vnum),
@@ -240,7 +254,7 @@ CREATE TABLE IF NOT EXISTS object_functions (
 );
 
 -- ---------------------------------------------------------------------------
--- 4.13  help_entries
+-- 4.14  help_entries
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS help_entries (
     id       SERIAL  PRIMARY KEY,
@@ -251,7 +265,7 @@ CREATE TABLE IF NOT EXISTS help_entries (
 );
 
 -- ---------------------------------------------------------------------------
--- 4.14  shelp_entries
+-- 4.15  shelp_entries
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS shelp_entries (
     id       SERIAL  PRIMARY KEY,
@@ -262,7 +276,7 @@ CREATE TABLE IF NOT EXISTS shelp_entries (
 );
 
 -- ---------------------------------------------------------------------------
--- 4.15  lore_topics
+-- 4.16  lore_topics
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS lore_topics (
     id       SERIAL PRIMARY KEY,
@@ -271,7 +285,7 @@ CREATE TABLE IF NOT EXISTS lore_topics (
 );
 
 -- ---------------------------------------------------------------------------
--- 4.16  lore_entries
+-- 4.17  lore_entries
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS lore_entries (
     id       SERIAL  PRIMARY KEY,
@@ -283,7 +297,7 @@ CREATE TABLE IF NOT EXISTS lore_entries (
 );
 
 -- ---------------------------------------------------------------------------
--- 4.17  bans
+-- 4.18  bans
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS bans (
     id        SERIAL  PRIMARY KEY,
@@ -293,7 +307,7 @@ CREATE TABLE IF NOT EXISTS bans (
 );
 
 -- ---------------------------------------------------------------------------
--- 4.18  socials
+-- 4.19  socials
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS socials (
     id            SERIAL PRIMARY KEY,
@@ -308,7 +322,33 @@ CREATE TABLE IF NOT EXISTS socials (
 );
 
 -- ---------------------------------------------------------------------------
--- 4.19  clans
+-- 4.20  boards
+-- ---------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS boards (
+    id              SERIAL  PRIMARY KEY,
+    vnum            INTEGER NOT NULL UNIQUE,
+    expiry_days     INTEGER NOT NULL DEFAULT 10,
+    min_read_lev    INTEGER NOT NULL DEFAULT 0,
+    min_write_lev   INTEGER NOT NULL DEFAULT 0,
+    clan            INTEGER NOT NULL DEFAULT 0
+);
+
+-- ---------------------------------------------------------------------------
+-- 4.21  board_messages
+-- ---------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS board_messages (
+    id          SERIAL  PRIMARY KEY,
+    board_id    INTEGER NOT NULL REFERENCES boards (id) ON DELETE CASCADE,
+    posted_at   BIGINT  NOT NULL,
+    author      TEXT    NOT NULL,
+    title       TEXT    NOT NULL DEFAULT '',
+    body        TEXT    NOT NULL DEFAULT '',
+    seq         INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS board_messages_board_id_seq ON board_messages (board_id, seq);
+
+-- ---------------------------------------------------------------------------
+-- 4.22  clans
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS clans (
     id           INTEGER PRIMARY KEY,
@@ -322,7 +362,7 @@ CREATE TABLE IF NOT EXISTS clans (
 );
 
 -- ---------------------------------------------------------------------------
--- 4.20  rulers
+-- 4.23  rulers
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS rulers (
     id   SERIAL PRIMARY KEY,
@@ -330,7 +370,7 @@ CREATE TABLE IF NOT EXISTS rulers (
 );
 
 -- ---------------------------------------------------------------------------
--- 4.21  brands
+-- 4.24  brands
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS brands (
     id          SERIAL PRIMARY KEY,
@@ -341,7 +381,7 @@ CREATE TABLE IF NOT EXISTS brands (
 );
 
 -- ---------------------------------------------------------------------------
--- 4.22  room_marks
+-- 4.25  room_marks
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS room_marks (
     id        SERIAL  PRIMARY KEY,
@@ -350,7 +390,7 @@ CREATE TABLE IF NOT EXISTS room_marks (
 );
 
 -- ---------------------------------------------------------------------------
--- 4.23  corpses
+-- 4.26  corpses
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS corpses (
     id          SERIAL  PRIMARY KEY,
@@ -383,7 +423,7 @@ CREATE TABLE IF NOT EXISTS corpses (
 );
 
 -- ---------------------------------------------------------------------------
--- 4.24  keep_chests
+-- 4.27  keep_chests
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS keep_chests (
     id           SERIAL  PRIMARY KEY,
@@ -395,7 +435,7 @@ CREATE TABLE IF NOT EXISTS keep_chests (
 );
 
 -- ---------------------------------------------------------------------------
--- 4.25  keep_chest_items
+-- 4.28  keep_chest_items
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS keep_chest_items (
     id          SERIAL  PRIMARY KEY,
@@ -430,7 +470,7 @@ CREATE TABLE IF NOT EXISTS keep_chest_items (
 );
 
 -- ---------------------------------------------------------------------------
--- 4.26  sysdata  (singleton: id must always be 1)
+-- 4.29  sysdata  (singleton: id must always be 1)
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS sysdata (
     id          INTEGER PRIMARY KEY DEFAULT 1 CHECK (id = 1),
@@ -456,7 +496,7 @@ INSERT INTO sysdata (id)
 VALUES (1) ON CONFLICT (id) DO NOTHING;
 
 -- ---------------------------------------------------------------------------
--- 4.25  players
+-- 4.30  players
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS players (
     id          SERIAL  PRIMARY KEY,
@@ -504,4 +544,4 @@ CREATE TABLE IF NOT EXISTS players (
 -- Schema version record
 -- ---------------------------------------------------------------------------
 INSERT INTO schema_version (version)
-VALUES (1);
+VALUES (2);
