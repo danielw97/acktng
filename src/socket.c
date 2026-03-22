@@ -850,7 +850,7 @@ void game_loop(int control, int control_ws, int control_tls, int control_sniff)
        * New connection?
        */
       if (control >= 0 && FD_ISSET(control, &in_set))
-         new_descriptor(control, FALSE, FALSE);
+         new_descriptor(control, FALSE, TRUE);
       if (control_ws >= 0 && FD_ISSET(control_ws, &in_set))
          new_descriptor(control_ws, FALSE, FALSE);
       if (control_tls >= 0 && FD_ISSET(control_tls, &in_set))

@@ -11,10 +11,10 @@
 #   2. Create data/tls/ and generate a self-signed TLS certificate if none
 #      exists.  Replace the generated cert with a real CA-signed one for
 #      production use.
-#   3. Launch the server listening on port 8890 only, using sniff mode so
-#      both plain telnet and TLS (secure) connections are accepted on the
-#      same port.  Mudlet's "connect securely" and any plain telnet client
-#      both connect to port 8890.
+#   3. Launch the server on port 8890.  Each new connection is sniffed: if
+#      the first byte is 0x16 (TLS ClientHello) within 500 ms the connection
+#      is upgraded to TLS; otherwise it is treated as plain telnet.  Mudlet
+#      "connect securely" and any plain-telnet client both use port 8890.
 #
 # The process runs in the foreground.  Use a process supervisor (systemd,
 # screen, tmux, etc.) to keep it running in the background.
@@ -70,14 +70,12 @@ fi
 # ---------------------------------------------------------------------------
 # Step 3: launch
 #
-# Port 8890 runs in sniff mode: the server peeks at the first byte of each
-# new connection.  A TLS ClientHello (0x16) triggers an SSL handshake;
-# anything else is treated as plain telnet.  Both Mudlet "secure" and
-# any plain-telnet client work on the same port.
+# Port 8890 sniffs each new connection: waits up to 500 ms for the first
+# byte.  0x16 → TLS handshake.  Anything else → plain telnet.
 #
 # The binary must run from area/ so relative paths to area files, data
 # files, and player directories resolve correctly.
 # ---------------------------------------------------------------------------
-echo "startup: starting ACK!MUD on port $PORT (plain telnet + TLS)..."
+echo "startup: starting ACK!MUD on port $PORT..."
 # shellcheck disable=SC2086
-exec sh -c "cd '$AREA_DIR' && exec ../src/ack --sniff-port '$PORT' $EXTRA_ARGS"
+exec sh -c "cd '$AREA_DIR' && exec ../src/ack '$PORT' $EXTRA_ARGS"
