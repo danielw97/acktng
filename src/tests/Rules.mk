@@ -403,7 +403,15 @@ unit-test-mccp: $(OBJDIR)/tests/test_mccp.o
 	rm -f tests/unit-test-mccp
 	$(CC) -o tests/unit-test-mccp $(OBJDIR)/tests/test_mccp.o $(L_FLAGS) -lz
 
-unit-tests: unit-test-inlines unit-test-sentinel unit-test-mssp unit-test-gmcp unit-test-mccp unit-test-clandata unit-test-act-clan unit-test-weapon-bond unit-test-handler unit-test-skills unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-login unit-test-websocket-validation unit-test-websocket-sanitize unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns unit-test-prompt unit-test-revenant unit-test-adept-skills unit-test-skill-renames unit-test-caravan-travel unit-test-overgrowth unit-test-npc-dialogue-help unit-test-chan-history
+$(OBJDIR)/tests/test_db_roundtrip.o: tests/test_db_roundtrip.c
+	@mkdir -p $(dir $@)
+	$(CC) -c $(C_FLAGS) -I. -o $@ $<
+
+unit-test-db-roundtrip: $(OBJDIR)/tests/test_db_roundtrip.o
+	rm -f tests/unit-test-db-roundtrip
+	$(CC) -o tests/unit-test-db-roundtrip $(OBJDIR)/tests/test_db_roundtrip.o $(L_FLAGS)
+
+unit-tests: unit-test-inlines unit-test-sentinel unit-test-mssp unit-test-gmcp unit-test-mccp unit-test-clandata unit-test-act-clan unit-test-weapon-bond unit-test-handler unit-test-skills unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-login unit-test-websocket-validation unit-test-websocket-sanitize unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp unit-test-strfuns unit-test-prompt unit-test-revenant unit-test-adept-skills unit-test-skill-renames unit-test-caravan-travel unit-test-overgrowth unit-test-npc-dialogue-help unit-test-chan-history unit-test-db-roundtrip
 	./tests/unit-test-inlines
 	./tests/unit-test-handler
 	./tests/unit-test-skills
@@ -461,5 +469,6 @@ unit-tests: unit-test-inlines unit-test-sentinel unit-test-mssp unit-test-gmcp u
 	./tests/unit-test-gmcp
 	./tests/unit-test-mccp
 	./tests/unit-test-chan-history
+	./tests/unit-test-db-roundtrip
 	$(MAKE) integration-test
 	$(MAKE) integration-test-telnet

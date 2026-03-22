@@ -47,6 +47,13 @@
 #include "act_mob.h"
 #endif
 
+#ifdef USE_DB_LOAD
+#include <libpq-fe.h>
+#include "db_worker.h"
+/* Forward declaration for the DB boot orchestrator defined at EOF. */
+static int db_boot_from_postgres(void);
+#endif
+
 #if !defined(macintosh)
 extern int _filbuf args((FILE *));
 #endif
@@ -646,93 +653,104 @@ void boot_db(void)
 
    /*
     * Read in all the area files.
+    * When USE_DB_LOAD is compiled in and area/db.conf is present, the DB
+    * loaders run instead.  If they succeed, db_booted is set to 1 and the
+    * flat-file loading section is skipped entirely.
     */
+#ifdef USE_DB_LOAD
+   int db_booted = db_boot_from_postgres();
+   if (!db_booted)
    {
-      FILE *fpList;
-      log_f("Reading Area Files...");
-
-      if ((fpList = fopen(AREA_LIST, "r")) == NULL)
+#endif
       {
-         perror(AREA_LIST);
-         log_f("Unable to open area.lst, aborting bootup.");
-         kill(getpid(), SIGQUIT);
-      }
+         FILE *fpList;
+         log_f("Reading Area Files...");
 
-      for (;;)
-      {
-         char areaBuf[MAX_STRING_LENGTH];
-         strcpy(strArea, fread_word(fpList));
-         if (strArea[0] == '$')
-            break;
-
-         if (strArea[0] == '-')
+         if ((fpList = fopen(AREA_LIST, "r")) == NULL)
          {
-            fpArea = stdin;
-         }
-         else
-         {
-            strcpy(areaBuf, AREA_DIR);
-            strcat(areaBuf, strArea);
-            if ((fpArea = fopen(areaBuf, "r")) == NULL)
-            {
-               log_string(areaBuf);
-               kill(getpid(), SIGQUIT);
-            }
-
-            log_f("%s successfully loaded.", areaBuf);
+            perror(AREA_LIST);
+            log_f("Unable to open area.lst, aborting bootup.");
+            kill(getpid(), SIGQUIT);
          }
 
          for (;;)
          {
-            char *word;
-
-            if (fread_letter(fpArea) != '#')
-            {
-               bug("Boot_db: # not found.", 0);
-               kill(getpid(), SIGQUIT);
-            }
-
-            word = fread_word(fpArea);
-
-            if (word[0] == '$')
+            char areaBuf[MAX_STRING_LENGTH];
+            strcpy(strArea, fread_word(fpList));
+            if (strArea[0] == '$')
                break;
-            else if (!str_cmp(word, "AREA"))
-               load_area(fpArea);
-            else if (!str_cmp(word, "MOBILES"))
-               load_mobiles(fpArea);
-            else if (!str_cmp(word, "OBJECTS"))
-               load_objects(fpArea);
-            else if (!str_cmp(word, "RESETS"))
-               load_resets(fpArea);
-            else if (!str_cmp(word, "ROOMS"))
-               load_rooms(fpArea);
-            else if (!str_cmp(word, "SHOPS"))
-               load_shops(fpArea);
-            else if (!str_cmp(word, "SPECIALS"))
-               load_specials(fpArea);
-            else if (!str_cmp(word, "SPEECH"))
-               load_speech(fpArea);
-            else if (!str_cmp(word, "OBJFUNS"))
-               load_objfuns(fpArea);
+
+            if (strArea[0] == '-')
+            {
+               fpArea = stdin;
+            }
             else
             {
-               bug("Boot_db: bad section name.", 0);
-               exit(1);
+               strcpy(areaBuf, AREA_DIR);
+               strcat(areaBuf, strArea);
+               if ((fpArea = fopen(areaBuf, "r")) == NULL)
+               {
+                  log_string(areaBuf);
+                  kill(getpid(), SIGQUIT);
+               }
+
+               log_f("%s successfully loaded.", areaBuf);
             }
+
+            for (;;)
+            {
+               char *word;
+
+               if (fread_letter(fpArea) != '#')
+               {
+                  bug("Boot_db: # not found.", 0);
+                  kill(getpid(), SIGQUIT);
+               }
+
+               word = fread_word(fpArea);
+
+               if (word[0] == '$')
+                  break;
+               else if (!str_cmp(word, "AREA"))
+                  load_area(fpArea);
+               else if (!str_cmp(word, "MOBILES"))
+                  load_mobiles(fpArea);
+               else if (!str_cmp(word, "OBJECTS"))
+                  load_objects(fpArea);
+               else if (!str_cmp(word, "RESETS"))
+                  load_resets(fpArea);
+               else if (!str_cmp(word, "ROOMS"))
+                  load_rooms(fpArea);
+               else if (!str_cmp(word, "SHOPS"))
+                  load_shops(fpArea);
+               else if (!str_cmp(word, "SPECIALS"))
+                  load_specials(fpArea);
+               else if (!str_cmp(word, "SPEECH"))
+                  load_speech(fpArea);
+               else if (!str_cmp(word, "OBJFUNS"))
+                  load_objfuns(fpArea);
+               else
+               {
+                  bug("Boot_db: bad section name.", 0);
+                  exit(1);
+               }
+            }
+
+            if (fpArea != stdin)
+               fclose(fpArea);
+            fpArea = NULL;
          }
-
-         if (fpArea != stdin)
-            fclose(fpArea);
-         fpArea = NULL;
+         if (fpList != NULL)
+         {
+            fclose(fpList);
+            fpList = NULL;
+         }
       }
-      if (fpList != NULL)
-      {
-         fclose(fpList);
-         fpList = NULL;
-      }
-   }
 
-   load_help_files();
+      load_help_files();
+#ifdef USE_DB_LOAD
+   } /* if (!db_booted) */
+#endif
    log_f("Loading quest templates.");
    quest_load_templates();
 
@@ -3367,3 +3385,907 @@ void message_update(void)
    }
    return;
 }
+
+/* =========================================================================
+ * USE_DB_LOAD — PostgreSQL-backed boot loaders (Phase 6)
+ *
+ * All functions in this block read from PostgreSQL via the boot connection
+ * opened by db_boot_from_postgres().  They populate the same in-memory data
+ * structures as the flat-file loaders so the rest of the server is unaware
+ * of the data source.
+ *
+ * db_boot_from_postgres() is called from boot_db() when USE_DB_LOAD is
+ * compiled in AND area/db.conf is present.  Returns 1 on success, 0 on
+ * failure (which causes boot_db() to fall through to the flat-file path).
+ * ========================================================================= */
+#ifdef USE_DB_LOAD
+
+#define DB_SCHEMA_VERSION 1
+
+/* ---------------------------------------------------------------------- */
+/* Helpers                                                                  */
+/* ---------------------------------------------------------------------- */
+
+/* Return the string value of column col in row row, or "" if NULL. */
+static const char *db_val(PGresult *res, int row, int col)
+{
+   if (PQgetisnull(res, row, col))
+      return "";
+   return PQgetvalue(res, row, col);
+}
+
+static int db_int(PGresult *res, int row, int col)
+{
+   return atoi(db_val(res, row, col));
+}
+
+static long long db_ll(PGresult *res, int row, int col)
+{
+   return (long long)strtoll(db_val(res, row, col), NULL, 10);
+}
+
+/* Map from DB area.id (1-based) → in-memory AREA_DATA*.
+ * Sized generously; only areas[0..MAX_AREAS-1] are used. */
+static AREA_DATA *db_area_map[MAX_AREAS + 1];
+static int db_area_map_size = 0;
+
+static AREA_DATA *db_find_area_by_id(int id)
+{
+   if (id < 0 || id > db_area_map_size)
+      return NULL;
+   return db_area_map[id];
+}
+
+/* ---------------------------------------------------------------------- */
+/* Open boot connection from area/db.conf                                   */
+/* ---------------------------------------------------------------------- */
+
+static PGconn *db_open_boot_connection(void)
+{
+   char confpath[256];
+   char connstr[1024];
+   FILE *fp;
+
+   snprintf(confpath, sizeof(confpath), "../data/db.conf");
+   fp = fopen(confpath, "r");
+   if (!fp)
+      return NULL; /* no db.conf → flat-file boot */
+
+   if (!fgets(connstr, sizeof(connstr), fp))
+   {
+      fclose(fp);
+      return NULL;
+   }
+   fclose(fp);
+
+   /* Strip trailing whitespace / newline. */
+   char *p = connstr + strlen(connstr);
+   while (p > connstr && (p[-1] == '\n' || p[-1] == '\r' || p[-1] == ' '))
+      *(--p) = '\0';
+
+   PGconn *conn = PQconnectdb(connstr);
+   if (PQstatus(conn) != CONNECTION_OK)
+   {
+      log_f("db_boot: connection failed: %s", PQerrorMessage(conn));
+      PQfinish(conn);
+      return NULL;
+   }
+
+   /* Save connstr for db_worker thread. */
+   if (db_worker_connstr)
+      free(db_worker_connstr);
+   db_worker_connstr = strdup(connstr);
+
+   return conn;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Check schema version                                                     */
+/* ---------------------------------------------------------------------- */
+
+static int db_check_schema_version(PGconn *conn)
+{
+   PGresult *res =
+       PQexec(conn, "SELECT version FROM schema_version ORDER BY applied_at DESC LIMIT 1");
+   if (PQresultStatus(res) != PGRES_TUPLES_OK || PQntuples(res) == 0)
+   {
+      log_f("db_boot: cannot read schema_version: %s", PQerrorMessage(conn));
+      PQclear(res);
+      return 0;
+   }
+   int ver = atoi(PQgetvalue(res, 0, 0));
+   PQclear(res);
+   if (ver != DB_SCHEMA_VERSION)
+   {
+      log_f("db_boot: schema version mismatch (DB=%d, code=%d) — aborting DB boot", ver,
+            DB_SCHEMA_VERSION);
+      return 0;
+   }
+   return 1;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Load areas                                                               */
+/* ---------------------------------------------------------------------- */
+
+static int db_load_areas_from_db(PGconn *conn)
+{
+   PGresult *res =
+       PQexec(conn, "SELECT id, name, min_vnum, max_vnum, keyword, level_label, area_number,"
+                    "       level_min, level_max, map_offset, reset_rate, reset_msg,"
+                    "       owner, can_read, can_write, music, flags"
+                    "  FROM areas ORDER BY id");
+   if (PQresultStatus(res) != PGRES_TUPLES_OK)
+   {
+      log_f("db_load_areas_from_db: %s", PQerrorMessage(conn));
+      PQclear(res);
+      return 0;
+   }
+
+   int n = PQntuples(res);
+   int c_id = 0, c_name = 1, c_min_vnum = 2, c_max_vnum = 3, c_keyword = 4, c_level_label = 5,
+       c_area_num = 6, c_level_min = 7, c_level_max = 8, c_map_offset = 9, c_reset_rate = 10,
+       c_reset_msg = 11, c_owner = 12, c_can_read = 13, c_can_write = 14, c_music = 15,
+       c_flags = 16;
+
+   log_f("db_load_areas_from_db: loading %d areas", n);
+
+   for (int row = 0; row < n; row++)
+   {
+      AREA_DATA *pArea;
+      GET_FREE(pArea, area_free);
+
+      pArea->first_reset = NULL;
+      pArea->last_reset = NULL;
+      pArea->first_area_room = NULL;
+      pArea->last_area_room = NULL;
+      pArea->first_area_object = NULL;
+      pArea->last_area_object = NULL;
+      pArea->first_area_mobile = NULL;
+      pArea->last_area_mobile = NULL;
+      pArea->first_area_shop = NULL;
+      pArea->last_area_shop = NULL;
+      pArea->first_area_specfunc = NULL;
+      pArea->last_area_specfunc = NULL;
+      pArea->first_area_speechfun = NULL;
+      pArea->last_area_speechfun = NULL;
+      pArea->first_area_objfunc = NULL;
+      pArea->last_area_objfunc = NULL;
+
+      int db_id = db_int(res, row, c_id);
+      pArea->name = str_dup(db_val(res, row, c_name));
+      pArea->min_vnum = db_int(res, row, c_min_vnum);
+      pArea->max_vnum = db_int(res, row, c_max_vnum);
+      pArea->keyword = str_dup(db_val(res, row, c_keyword));
+      pArea->level_label = str_dup(db_val(res, row, c_level_label));
+      pArea->area_num = db_int(res, row, c_area_num);
+      pArea->min_level = (sh_int)db_int(res, row, c_level_min);
+      pArea->max_level = (sh_int)db_int(res, row, c_level_max);
+      pArea->offset = db_int(res, row, c_map_offset);
+      pArea->reset_rate = (sh_int)db_int(res, row, c_reset_rate);
+      pArea->reset_msg = str_dup(db_val(res, row, c_reset_msg));
+      pArea->owner = str_dup(db_val(res, row, c_owner));
+      pArea->can_read = str_dup(db_val(res, row, c_can_read));
+      pArea->can_write = str_dup(db_val(res, row, c_can_write));
+      {
+         const char *music = db_val(res, row, c_music);
+         pArea->music = (music && *music) ? str_dup(music) : NULL;
+      }
+      pArea->flags = db_int(res, row, c_flags);
+
+      pArea->age = 15;
+      pArea->nplayer = 0;
+      pArea->gold = 0;
+      pArea->aggro_list = 0;
+      pArea->filename = str_dup("(db)");
+      pArea->control = NULL;
+
+      /* Assign area_num and register in area_used[]. */
+      if (pArea->area_num == 0)
+      {
+         int a;
+         for (a = 0; a < MAX_AREAS; a++)
+            if (area_used[a] == NULL)
+               break;
+         pArea->area_num = a;
+      }
+      if (pArea->area_num < MAX_AREAS)
+         area_used[pArea->area_num] = pArea;
+
+      /* Store the db_id → pArea mapping for later loaders. */
+      if (db_id <= MAX_AREAS)
+      {
+         db_area_map[db_id] = pArea;
+         if (db_id > db_area_map_size)
+            db_area_map_size = db_id;
+      }
+
+      LINK(pArea, first_area, last_area, next, prev);
+      top_area++;
+   }
+   PQclear(res);
+   return 1;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Load rooms                                                               */
+/* ---------------------------------------------------------------------- */
+
+static int db_load_rooms_from_db(PGconn *conn)
+{
+   /* Rooms */
+   PGresult *res = PQexec(conn, "SELECT vnum, area_id, name, description, room_flags, sector_type"
+                                "  FROM rooms ORDER BY vnum");
+   if (PQresultStatus(res) != PGRES_TUPLES_OK)
+   {
+      log_f("db_load_rooms: %s", PQerrorMessage(conn));
+      PQclear(res);
+      return 0;
+   }
+   int n = PQntuples(res);
+   log_f("db_load_rooms_from_db: loading %d rooms", n);
+
+   for (int row = 0; row < n; row++)
+   {
+      int vnum = db_int(res, row, 0);
+      int area_id = db_int(res, row, 1);
+      AREA_DATA *pArea = db_find_area_by_id(area_id);
+      if (!pArea)
+      {
+         bug("db_load_rooms: room %d has unknown area_id %d", vnum, area_id);
+         continue;
+      }
+
+      ROOM_INDEX_DATA *pRoomIndex;
+      BUILD_DATA_LIST *pList;
+      GET_FREE(pRoomIndex, rid_free);
+
+      pRoomIndex->first_person = NULL;
+      pRoomIndex->last_person = NULL;
+      pRoomIndex->first_content = NULL;
+      pRoomIndex->last_content = NULL;
+      pRoomIndex->first_exdesc = NULL;
+      pRoomIndex->last_exdesc = NULL;
+      pRoomIndex->first_room_affect = NULL;
+      pRoomIndex->last_room_affect = NULL;
+      pRoomIndex->first_room_reset = NULL;
+      pRoomIndex->last_room_reset = NULL;
+      pRoomIndex->first_mark_list = NULL;
+      pRoomIndex->last_mark_list = NULL;
+      pRoomIndex->area = pArea;
+      pRoomIndex->vnum = (unsigned short)vnum;
+      pRoomIndex->name = str_dup(db_val(res, row, 2));
+      pRoomIndex->description = str_dup(db_val(res, row, 3));
+      pRoomIndex->room_flags = db_int(res, row, 4);
+      pRoomIndex->sector_type = (sh_int)db_int(res, row, 5);
+      if (pRoomIndex->sector_type == SECT_NULL)
+         pRoomIndex->sector_type = SECT_INSIDE;
+      pRoomIndex->light = 0;
+      pRoomIndex->affected_by = ROOM_BV_NONE;
+      pRoomIndex->gold = 0;
+      pRoomIndex->auto_message = NULL;
+      pRoomIndex->block_timer = 0;
+
+      for (int door = 0; door <= 5; door++)
+         pRoomIndex->exit[door] = NULL;
+
+      int iHash = vnum % MAX_KEY_HASH;
+      SING_TOPLINK(pRoomIndex, room_index_hash[iHash], next);
+
+      GET_FREE(pList, build_free);
+      pList->data = pRoomIndex;
+      LINK(pList, pArea->first_area_room, pArea->last_area_room, next, prev);
+
+      top_room++;
+   }
+   PQclear(res);
+
+   /* Room exits */
+   res = PQexec(conn,
+                "SELECT room_vnum, direction, dest_vnum, exit_flags, key_vnum, keyword, description"
+                "  FROM room_exits ORDER BY room_vnum, direction");
+   if (PQresultStatus(res) != PGRES_TUPLES_OK)
+   {
+      log_f("db_load_rooms exits: %s", PQerrorMessage(conn));
+      PQclear(res);
+      return 0;
+   }
+   n = PQntuples(res);
+   for (int row = 0; row < n; row++)
+   {
+      int room_vnum = db_int(res, row, 0);
+      int dir = db_int(res, row, 1);
+      ROOM_INDEX_DATA *pRoom = get_room_index(room_vnum);
+      if (!pRoom || dir < 0 || dir > 5)
+         continue;
+
+      EXIT_DATA *pexit;
+      GET_FREE(pexit, exit_free);
+      pexit->to_room = NULL; /* resolved by fix_exits() */
+      pexit->vnum = (unsigned short)db_int(res, row, 2);
+      pexit->exit_info = (sh_int)db_int(res, row, 3);
+      pexit->key = (sh_int)db_int(res, row, 4);
+      pexit->keyword = str_dup(db_val(res, row, 5));
+      pexit->description = str_dup(db_val(res, row, 6));
+      pRoom->exit[dir] = pexit;
+      top_exit++;
+   }
+   PQclear(res);
+
+   /* Room extra descs */
+   res = PQexec(conn,
+                "SELECT room_vnum, keyword, description FROM room_extra_descs ORDER BY room_vnum");
+   if (PQresultStatus(res) != PGRES_TUPLES_OK)
+   {
+      log_f("db_load_rooms extra_descs: %s", PQerrorMessage(conn));
+      PQclear(res);
+      return 0;
+   }
+   n = PQntuples(res);
+   for (int row = 0; row < n; row++)
+   {
+      int room_vnum = db_int(res, row, 0);
+      ROOM_INDEX_DATA *pRoom = get_room_index(room_vnum);
+      if (!pRoom)
+         continue;
+      EXTRA_DESCR_DATA *ed;
+      GET_FREE(ed, exdesc_free);
+      ed->keyword = str_dup(db_val(res, row, 1));
+      ed->description = str_dup(db_val(res, row, 2));
+      LINK(ed, pRoom->first_exdesc, pRoom->last_exdesc, next, prev);
+      top_ed++;
+   }
+   PQclear(res);
+   return 1;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Load mobiles                                                              */
+/* ---------------------------------------------------------------------- */
+
+static int db_load_mobiles_from_db(PGconn *conn)
+{
+   PGresult *res =
+       PQexec(conn, "SELECT vnum, area_id, player_name, short_descr, long_descr, description,"
+                    "       act_flags, affected_by, alignment, level, sex,"
+                    "       hp_mod, ac_mod, hr_mod, dr_mod,"
+                    "       class, clan, race, position, skills, cast, def,"
+                    "       strong_magic, weak_magic, race_mods, power_skills, power_cast,"
+                    "       resist, suscept, spellpower, crit, crit_mult, spell_crit, spell_mult,"
+                    "       parry, dodge, block, pierce,"
+                    "       ai_knowledge, ai_prompt,"
+                    "       loot_amount,"
+                    "       loot_0,loot_1,loot_2,loot_3,loot_4,loot_5,loot_6,loot_7,loot_8,"
+                    "       loot_chance_0,loot_chance_1,loot_chance_2,loot_chance_3,loot_chance_4,"
+                    "       loot_chance_5,loot_chance_6,loot_chance_7,loot_chance_8"
+                    "  FROM mobiles ORDER BY vnum");
+   if (PQresultStatus(res) != PGRES_TUPLES_OK)
+   {
+      log_f("db_load_mobiles: %s", PQerrorMessage(conn));
+      PQclear(res);
+      return 0;
+   }
+   int n = PQntuples(res);
+   log_f("db_load_mobiles_from_db: loading %d mobiles", n);
+
+   for (int row = 0; row < n; row++)
+   {
+      int col = 0;
+      int vnum = db_int(res, row, col++);
+      int area_id = db_int(res, row, col++);
+      AREA_DATA *pArea = db_find_area_by_id(area_id);
+      if (!pArea)
+      {
+         bug("db_load_mobiles: mob %d has unknown area_id %d", vnum, area_id);
+         continue;
+      }
+
+      MOB_INDEX_DATA *pMob;
+      BUILD_DATA_LIST *pList;
+      GET_FREE(pMob, mid_free);
+      memset(pMob, 0, sizeof(*pMob));
+
+      pMob->vnum = (unsigned short)vnum;
+      pMob->area = pArea;
+      pMob->player_name = str_dup(db_val(res, row, col++));
+      pMob->short_descr = str_dup(db_val(res, row, col++));
+      pMob->long_descr = str_dup(db_val(res, row, col++));
+      pMob->description = str_dup(db_val(res, row, col++));
+
+      if (pMob->long_descr[0])
+         pMob->long_descr[0] = UPPER(pMob->long_descr[0]);
+      if (pMob->description[0])
+         pMob->description[0] = UPPER(pMob->description[0]);
+
+      pMob->act = (unsigned long long)db_ll(res, row, col++) | ACT_IS_NPC;
+      pMob->affected_by = db_int(res, row, col++);
+      pMob->alignment = (sh_int)db_int(res, row, col++);
+      pMob->level = (sh_int)db_int(res, row, col++);
+      pMob->sex = (sh_int)db_int(res, row, col++);
+      pMob->hp_mod = db_int(res, row, col++);
+      pMob->ac_mod = db_int(res, row, col++);
+      pMob->hr_mod = db_int(res, row, col++);
+      pMob->dr_mod = db_int(res, row, col++);
+      pMob->class = (sh_int)db_int(res, row, col++);
+      pMob->clan = (sh_int)db_int(res, row, col++);
+      pMob->race = (sh_int)db_int(res, row, col++);
+      pMob->position = (sh_int)db_int(res, row, col++);
+      pMob->skills = db_int(res, row, col++);
+      pMob->cast = db_int(res, row, col++);
+      pMob->def = db_int(res, row, col++);
+      pMob->strong_magic = db_int(res, row, col++);
+      pMob->weak_magic = db_int(res, row, col++);
+      pMob->race_mods = db_int(res, row, col++);
+      pMob->power_skills = db_int(res, row, col++);
+      pMob->power_cast = db_int(res, row, col++);
+      pMob->resist = db_int(res, row, col++);
+      pMob->suscept = db_int(res, row, col++);
+      pMob->spellpower_mod = db_int(res, row, col++);
+      pMob->crit_mod = db_int(res, row, col++);
+      pMob->crit_mult_mod = db_int(res, row, col++);
+      pMob->spell_crit_mod = db_int(res, row, col++);
+      pMob->spell_mult_mod = db_int(res, row, col++);
+      pMob->parry_mod = db_int(res, row, col++);
+      pMob->dodge_mod = db_int(res, row, col++);
+      pMob->block_mod = db_int(res, row, col++);
+      pMob->pierce_mod = db_int(res, row, col++);
+      pMob->ai_knowledge = db_int(res, row, col++);
+      {
+         const char *prompt = db_val(res, row, col++);
+         pMob->ai_prompt = (prompt && *prompt) ? str_dup(prompt) : NULL;
+      }
+      pMob->loot_amount = db_int(res, row, col++);
+      for (int i = 0; i < MAX_LOOT; i++)
+         pMob->loot[i] = db_int(res, row, col++);
+      for (int i = 0; i < MAX_LOOT; i++)
+         pMob->loot_chance[i] = db_int(res, row, col++);
+
+      pMob->spec_fun = NULL;
+      pMob->speech_fun = NULL;
+      pMob->pShop = NULL;
+      pMob->first_mprog = NULL;
+      pMob->last_mprog = NULL;
+      pMob->target = str_dup("");
+
+      int iHash = vnum % MAX_KEY_HASH;
+      SING_TOPLINK(pMob, mob_index_hash[iHash], next);
+
+      GET_FREE(pList, build_free);
+      pList->data = pMob;
+      LINK(pList, pArea->first_area_mobile, pArea->last_area_mobile, next, prev);
+
+      top_mob_index++;
+      kill_table[URANGE(0, pMob->level, MAX_LEVEL - 1)].number++;
+   }
+   PQclear(res);
+   return 1;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Load objects                                                              */
+/* ---------------------------------------------------------------------- */
+
+static int db_load_objects_from_db(PGconn *conn)
+{
+   PGresult *res = PQexec(
+       conn,
+       "SELECT vnum, area_id, name, short_descr, description,"
+       "       item_type, extra_flags, wear_flags, item_apply,"
+       "       value_0,value_1,value_2,value_3,value_4,value_5,value_6,value_7,value_8,value_9,"
+       "       weight, level"
+       "  FROM objects ORDER BY vnum");
+   if (PQresultStatus(res) != PGRES_TUPLES_OK)
+   {
+      log_f("db_load_objects: %s", PQerrorMessage(conn));
+      PQclear(res);
+      return 0;
+   }
+   int n = PQntuples(res);
+   log_f("db_load_objects_from_db: loading %d objects", n);
+
+   for (int row = 0; row < n; row++)
+   {
+      int col = 0;
+      int vnum = db_int(res, row, col++);
+      int area_id = db_int(res, row, col++);
+      AREA_DATA *pArea = db_find_area_by_id(area_id);
+      if (!pArea)
+      {
+         bug("db_load_objects: obj %d has unknown area_id %d", vnum, area_id);
+         continue;
+      }
+
+      OBJ_INDEX_DATA *pObj;
+      BUILD_DATA_LIST *pList;
+      GET_FREE(pObj, oid_free);
+      memset(pObj, 0, sizeof(*pObj));
+
+      pObj->vnum = vnum;
+      pObj->area = pArea;
+      pObj->name = str_dup(db_val(res, row, col++));
+      pObj->short_descr = str_dup(db_val(res, row, col++));
+      pObj->description = str_dup(db_val(res, row, col++));
+
+      if (pObj->short_descr[0])
+         pObj->short_descr[0] = LOWER(pObj->short_descr[0]);
+      if (pObj->description[0])
+         pObj->description[0] = UPPER(pObj->description[0]);
+
+      pObj->item_type = db_int(res, row, col++);
+      pObj->extra_flags = (unsigned long long)db_ll(res, row, col++);
+      pObj->wear_flags = db_int(res, row, col++);
+      pObj->item_apply = db_int(res, row, col++);
+      for (int i = 0; i < 10; i++)
+         pObj->value[i] = db_int(res, row, col++);
+      pObj->weight = db_int(res, row, col++);
+      pObj->level = db_int(res, row, col++);
+
+      pObj->first_apply = NULL;
+      pObj->last_apply = NULL;
+      pObj->first_exdesc = NULL;
+      pObj->last_exdesc = NULL;
+      pObj->obj_fun = NULL;
+      pObj->count = 0;
+      pObj->cost = 0;
+
+      int iHash = vnum % MAX_KEY_HASH;
+      SING_TOPLINK(pObj, obj_index_hash[iHash], next);
+
+      GET_FREE(pList, build_free);
+      pList->data = pObj;
+      LINK(pList, pArea->first_area_object, pArea->last_area_object, next, prev);
+
+      top_obj_index++;
+   }
+   PQclear(res);
+
+   /* Object affects */
+   res = PQexec(conn, "SELECT obj_vnum, location, modifier FROM object_affects ORDER BY obj_vnum");
+   if (PQresultStatus(res) != PGRES_TUPLES_OK)
+   {
+      log_f("db_load_objects affects: %s", PQerrorMessage(conn));
+      PQclear(res);
+      return 0;
+   }
+   n = PQntuples(res);
+   for (int row = 0; row < n; row++)
+   {
+      int obj_vnum = db_int(res, row, 0);
+      OBJ_INDEX_DATA *pObj = get_obj_index(obj_vnum);
+      if (!pObj)
+         continue;
+      AFFECT_DATA *paf;
+      GET_FREE(paf, affect_free);
+      paf->type = -1;
+      paf->duration = -1;
+      paf->location = db_int(res, row, 1);
+      paf->modifier = db_int(res, row, 2);
+      paf->bitvector = 0;
+      paf->caster = NULL;
+      LINK(paf, pObj->first_apply, pObj->last_apply, next, prev);
+      top_affect++;
+   }
+   PQclear(res);
+
+   /* Object extra descs */
+   res = PQexec(conn,
+                "SELECT obj_vnum, keyword, description FROM object_extra_descs ORDER BY obj_vnum");
+   if (PQresultStatus(res) != PGRES_TUPLES_OK)
+   {
+      log_f("db_load_objects extra_descs: %s", PQerrorMessage(conn));
+      PQclear(res);
+      return 0;
+   }
+   n = PQntuples(res);
+   for (int row = 0; row < n; row++)
+   {
+      int obj_vnum = db_int(res, row, 0);
+      OBJ_INDEX_DATA *pObj = get_obj_index(obj_vnum);
+      if (!pObj)
+         continue;
+      EXTRA_DESCR_DATA *ed;
+      GET_FREE(ed, exdesc_free);
+      ed->keyword = str_dup(db_val(res, row, 1));
+      ed->description = str_dup(db_val(res, row, 2));
+      LINK(ed, pObj->first_exdesc, pObj->last_exdesc, next, prev);
+      top_ed++;
+   }
+   PQclear(res);
+   return 1;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Load resets                                                               */
+/* ---------------------------------------------------------------------- */
+
+static int db_load_resets_from_db(PGconn *conn)
+{
+   PGresult *res =
+       PQexec(conn, "SELECT area_id, seq, command, ifflag, arg1, arg2, arg3, notes, auto_msg"
+                    "  FROM resets ORDER BY area_id, seq");
+   if (PQresultStatus(res) != PGRES_TUPLES_OK)
+   {
+      log_f("db_load_resets: %s", PQerrorMessage(conn));
+      PQclear(res);
+      return 0;
+   }
+   int n = PQntuples(res);
+   log_f("db_load_resets_from_db: loading %d resets", n);
+
+   for (int row = 0; row < n; row++)
+   {
+      int area_id = db_int(res, row, 0);
+      AREA_DATA *pArea = db_find_area_by_id(area_id);
+      if (!pArea)
+         continue;
+
+      RESET_DATA *pReset;
+      BUILD_DATA_LIST *pList;
+      GET_FREE(pReset, reset_free);
+
+      pReset->command = db_val(res, row, 2)[0];
+      pReset->ifflag = (sh_int)db_int(res, row, 3);
+      pReset->arg1 = db_int(res, row, 4);
+      pReset->arg2 = db_int(res, row, 5);
+      pReset->arg3 = db_int(res, row, 6);
+      {
+         const char *notes = db_val(res, row, 7);
+         pReset->notes = (notes && *notes) ? str_dup(notes) : str_dup("");
+      }
+      {
+         const char *amsg = db_val(res, row, 8);
+         pReset->auto_message = (amsg && *amsg) ? str_dup(amsg) : NULL;
+      }
+
+      LINK(pReset, pArea->first_reset, pArea->last_reset, next, prev);
+
+      GET_FREE(pList, build_free);
+      pList->data = pReset;
+      LINK(pList, pArea->first_area_room, pArea->last_area_room, next, prev);
+   }
+   PQclear(res);
+   return 1;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Load shops                                                                */
+/* ---------------------------------------------------------------------- */
+
+static int db_load_shops_from_db(PGconn *conn)
+{
+   PGresult *res = PQexec(
+       conn, "SELECT keeper_vnum, buy_type_0, buy_type_1, buy_type_2, buy_type_3, buy_type_4,"
+             "       profit_buy, profit_sell, open_hour, close_hour"
+             "  FROM shops");
+   if (PQresultStatus(res) != PGRES_TUPLES_OK)
+   {
+      log_f("db_load_shops: %s", PQerrorMessage(conn));
+      PQclear(res);
+      return 0;
+   }
+   int n = PQntuples(res);
+   log_f("db_load_shops_from_db: loading %d shops", n);
+
+   for (int row = 0; row < n; row++)
+   {
+      int keeper_vnum = db_int(res, row, 0);
+      MOB_INDEX_DATA *pMob = get_mob_index(keeper_vnum);
+      if (!pMob)
+      {
+         bug("db_load_shops: keeper vnum %d not found", keeper_vnum);
+         continue;
+      }
+
+      SHOP_DATA *pShop;
+      BUILD_DATA_LIST *pList;
+      GET_FREE(pShop, shop_free);
+
+      pShop->keeper = (sh_int)keeper_vnum;
+      for (int i = 0; i < MAX_TRADE; i++)
+         pShop->buy_type[i] = (sh_int)db_int(res, row, 1 + i);
+      pShop->profit_buy = (sh_int)db_int(res, row, 6);
+      pShop->profit_sell = (sh_int)db_int(res, row, 7);
+      pShop->open_hour = (sh_int)db_int(res, row, 8);
+      pShop->close_hour = (sh_int)db_int(res, row, 9);
+
+      pMob->pShop = pShop;
+
+      GET_FREE(pList, build_free);
+      pList->data = pShop;
+      LINK(pList, pMob->area->first_area_shop, pMob->area->last_area_shop, next, prev);
+
+      LINK(pShop, first_shop, last_shop, next, prev);
+      top_shop++;
+   }
+   PQclear(res);
+   return 1;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Load specials and objfuns                                                 */
+/* ---------------------------------------------------------------------- */
+
+static int db_load_specials_from_db(PGconn *conn)
+{
+   PGresult *res = PQexec(conn, "SELECT mob_vnum, spec_name FROM mobile_specials");
+   if (PQresultStatus(res) != PGRES_TUPLES_OK)
+   {
+      log_f("db_load_specials: %s", PQerrorMessage(conn));
+      PQclear(res);
+      return 0;
+   }
+   int n = PQntuples(res);
+   log_f("db_load_specials_from_db: loading %d specials", n);
+
+   for (int row = 0; row < n; row++)
+   {
+      int mob_vnum = db_int(res, row, 0);
+      MOB_INDEX_DATA *pMob = get_mob_index(mob_vnum);
+      if (!pMob)
+         continue;
+      pMob->spec_fun = spec_lookup(db_val(res, row, 1));
+      if (pMob->spec_fun)
+      {
+         BUILD_DATA_LIST *pList;
+         GET_FREE(pList, build_free);
+         pList->data = pMob;
+         LINK(pList, pMob->area->first_area_specfunc, pMob->area->last_area_specfunc, next, prev);
+      }
+   }
+   PQclear(res);
+   return 1;
+}
+
+static int db_load_objfuns_from_db(PGconn *conn)
+{
+   PGresult *res = PQexec(conn, "SELECT obj_vnum, fun_name FROM object_functions");
+   if (PQresultStatus(res) != PGRES_TUPLES_OK)
+   {
+      log_f("db_load_objfuns: %s", PQerrorMessage(conn));
+      PQclear(res);
+      return 0;
+   }
+   int n = PQntuples(res);
+   log_f("db_load_objfuns_from_db: loading %d objfuns", n);
+
+   for (int row = 0; row < n; row++)
+   {
+      int obj_vnum = db_int(res, row, 0);
+      OBJ_INDEX_DATA *pObj = get_obj_index(obj_vnum);
+      if (!pObj)
+         continue;
+      pObj->obj_fun = obj_fun_lookup(db_val(res, row, 1));
+      if (pObj->obj_fun)
+      {
+         BUILD_DATA_LIST *pList;
+         GET_FREE(pList, build_free);
+         pList->data = pObj;
+         LINK(pList, pObj->area->first_area_objfunc, pObj->area->last_area_objfunc, next, prev);
+      }
+   }
+   PQclear(res);
+   return 1;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Load help / shelp / lore                                                  */
+/* ---------------------------------------------------------------------- */
+
+static int db_load_helps_from_db(PGconn *conn)
+{
+   PGresult *res = PQexec(conn, "SELECT level, keywords, body FROM help_entries ORDER BY id");
+   if (PQresultStatus(res) != PGRES_TUPLES_OK)
+   {
+      log_f("db_load_helps: %s", PQerrorMessage(conn));
+      PQclear(res);
+      return 0;
+   }
+   int n = PQntuples(res);
+   log_f("db_load_helps_from_db: loading %d help entries", n);
+   for (int row = 0; row < n; row++)
+      link_help_entry(db_int(res, row, 0), 0, db_val(res, row, 1), db_val(res, row, 2), &first_help,
+                      &last_help);
+   PQclear(res);
+   return 1;
+}
+
+static int db_load_shelps_from_db(PGconn *conn)
+{
+   PGresult *res = PQexec(conn, "SELECT level, keywords, body FROM shelp_entries ORDER BY id");
+   if (PQresultStatus(res) != PGRES_TUPLES_OK)
+   {
+      log_f("db_load_shelps: %s", PQerrorMessage(conn));
+      PQclear(res);
+      return 0;
+   }
+   int n = PQntuples(res);
+   log_f("db_load_shelps_from_db: loading %d shelp entries", n);
+   for (int row = 0; row < n; row++)
+      link_help_entry(db_int(res, row, 0), 0, db_val(res, row, 1), db_val(res, row, 2),
+                      &first_shelp, &last_shelp);
+   PQclear(res);
+   return 1;
+}
+
+static int db_load_lore_from_db(PGconn *conn)
+{
+   /* Each topic becomes a set of HELP_DATA entries with shared keywords.
+    * We join topics and entries and process them in topic order. */
+   PGresult *res = PQexec(conn, "SELECT lt.keywords, le.flags, le.body"
+                                "  FROM lore_entries le JOIN lore_topics lt ON le.topic_id = lt.id"
+                                "  ORDER BY le.topic_id, le.seq");
+   if (PQresultStatus(res) != PGRES_TUPLES_OK)
+   {
+      log_f("db_load_lore: %s", PQerrorMessage(conn));
+      PQclear(res);
+      return 0;
+   }
+   int n = PQntuples(res);
+   log_f("db_load_lore_from_db: loading %d lore entries", n);
+   for (int row = 0; row < n; row++)
+   {
+      long flags = (long)db_ll(res, row, 1);
+      link_help_entry(0, flags, db_val(res, row, 0), db_val(res, row, 2), &first_lore, &last_lore);
+   }
+   PQclear(res);
+   return 1;
+}
+
+/* ---------------------------------------------------------------------- */
+/* db_boot_from_postgres() — orchestrate the full DB boot                   */
+/* ---------------------------------------------------------------------- */
+
+static int db_boot_from_postgres(void)
+{
+   PGconn *conn = db_open_boot_connection();
+   if (!conn)
+      return 0; /* no db.conf or connection failed → flat-file boot */
+
+   log_string("db_boot: Connected to PostgreSQL; loading world from database.");
+
+   if (!db_check_schema_version(conn))
+   {
+      PQfinish(conn);
+      return 0;
+   }
+
+   /* Load in dependency order. */
+   if (!db_load_areas_from_db(conn))
+      goto fail;
+   if (!db_load_rooms_from_db(conn))
+      goto fail;
+   if (!db_load_mobiles_from_db(conn))
+      goto fail;
+   if (!db_load_objects_from_db(conn))
+      goto fail;
+   if (!db_load_resets_from_db(conn))
+      goto fail;
+   if (!db_load_shops_from_db(conn))
+      goto fail;
+   if (!db_load_specials_from_db(conn))
+      goto fail;
+   if (!db_load_objfuns_from_db(conn))
+      goto fail;
+   if (!db_load_helps_from_db(conn))
+      goto fail;
+   if (!db_load_shelps_from_db(conn))
+      goto fail;
+   if (!db_load_lore_from_db(conn))
+      goto fail;
+
+   PQfinish(conn);
+
+   log_string("db_boot: World loaded from PostgreSQL successfully.");
+
+   /* Start the async worker thread for runtime saves/loads. */
+   db_worker_start();
+
+   return 1;
+
+fail:
+   log_string("db_boot: Load failed — falling back to flat-file boot.");
+   PQfinish(conn);
+   return 0;
+}
+
+#endif /* USE_DB_LOAD */
