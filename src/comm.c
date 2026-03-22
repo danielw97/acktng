@@ -249,6 +249,7 @@ int main(int argc, char **argv)
    int tls_port = -1;
    int control_sniff = -1;
    int sniff_port = -1;
+   int flag_start = 1; /* argv index where flag parsing begins */
 #ifdef HAVE_OPENSSL
    const char *tls_cert = "../data/tls/cert.pem";
    const char *tls_key = "../data/tls/key.pem";
@@ -263,21 +264,42 @@ int main(int argc, char **argv)
 
    /*
     * Get the port number.
+    *
+    * The plain-telnet port is optional.  When omitted, the server opens no
+    * plain-telnet listening socket; pass --sniff-port or --tls-port instead.
+    *
+    * HOTreboot exec format: <exe> <port|-1> HOTreboot <control_fd> <ws_fd>
+    * Detect HOTreboot first so port=-1 round-trips without a validation error.
     */
-   port = 1234;
-   if (argc > 1)
+   port = -1; /* -1 = no plain-telnet socket */
+
+   if (argc > 2 && argv[2] && !strcmp(argv[2], "HOTreboot"))
    {
-      if (!is_number(argv[1]))
-      {
-         fprintf(stderr, "Usage: %s [port #]\n", argv[0]);
-         exit(1);
-      }
-      else if ((port = atoi(argv[1])) <= 1024)
+      /* HOTreboot path: inherit control socket, no flag parsing needed */
+      fCopyOver = TRUE;
+      port = atoi(argv[1]);    /* may be -1 */
+      control = atoi(argv[3]); /* inherited fd */
+      flag_start = argc;       /* skip flags */
+   }
+   else if (argc > 1 && is_number(argv[1]) && argv[1][0] != '-')
+   {
+      /* Normal start with explicit plain-telnet port */
+      port = atoi(argv[1]);
+      if (port <= 1024)
       {
          fprintf(stderr, "Port number must be above 1024.\n");
          exit(1);
       }
+      flag_start = 2;
    }
+   else if (argc > 1 && argv[1][0] != '-')
+   {
+      /* Non-numeric, non-flag first argument */
+      fprintf(stderr, "Usage: %s [port] [--sniff-port N] [--tls-port N] [--ws-loopback N]\n",
+              argv[0]);
+      exit(1);
+   }
+   /* else: no positional arg – port stays -1, flag_start stays 1 */
 
    /*
     * Parse --ws-loopback <port>: open a second socket bound to 127.0.0.1
@@ -285,7 +307,7 @@ int main(int argc, char **argv)
     */
    {
       int i;
-      for (i = 2; i < argc; i++)
+      for (i = flag_start; i < argc; i++)
       {
          if (!strcmp(argv[i], "--ws-loopback") && i + 1 < argc)
          {
@@ -323,15 +345,13 @@ int main(int argc, char **argv)
       }
    }
 
-   /* Check for HOTreboot parameter - Flar */
-   if (argv[2] && !strcmp(argv[2], "HOTreboot"))
+   /* Require at least one listening port */
+   if (!fCopyOver && port <= 0 && sniff_port <= 0 && tls_port <= 0 && ws_port <= 0)
    {
-      fCopyOver = TRUE;
-      control = atoi(argv[3]);
+      fprintf(stderr,
+              "Error: no listening port.  Specify a port number or --sniff-port / --tls-port.\n");
+      exit(1);
    }
-
-   else
-      fCopyOver = FALSE;
 
    rename("../log/comlog.old", "../log/comlog.crash");
    rename("../log/comlog.txt", "../log/comlog.old");
@@ -341,7 +361,8 @@ int main(int argc, char **argv)
     */
    if (!fCopyOver) /* We already have the port if Copyovered. */
    {
-      control = init_socket(port, INADDR_ANY);
+      if (port > 0)
+         control = init_socket(port, INADDR_ANY);
       if (ws_port > 0)
          control_ws = init_socket(ws_port, INADDR_LOOPBACK);
       if (tls_port > 0 || sniff_port > 0)
@@ -387,29 +408,55 @@ int main(int argc, char **argv)
 #ifndef WIN32
    init_alarm_handler();
 #endif
-   if (ws_port > 0 && tls_port > 0 && sniff_port > 0)
-      sprintf(
-          log_buf,
-          "ACK! MUD is ready on port %d (telnet), %d (WebSocket loopback), %d (TLS), %d (auto).",
-          port, ws_port, tls_port, sniff_port);
-   else if (ws_port > 0 && tls_port > 0)
-      sprintf(log_buf, "ACK! MUD is ready on port %d (telnet), %d (WebSocket loopback), %d (TLS).",
-              port, ws_port, tls_port);
-   else if (ws_port > 0 && sniff_port > 0)
-      sprintf(log_buf, "ACK! MUD is ready on port %d (telnet), %d (WebSocket loopback), %d (auto).",
-              port, ws_port, sniff_port);
-   else if (tls_port > 0 && sniff_port > 0)
-      sprintf(log_buf, "ACK! MUD is ready on port %d (telnet), %d (TLS), %d (auto).", port,
-              tls_port, sniff_port);
-   else if (ws_port > 0)
-      sprintf(log_buf, "ACK! MUD is ready on port %d (telnet) and %d (WebSocket loopback).", port,
-              ws_port);
-   else if (tls_port > 0)
-      sprintf(log_buf, "ACK! MUD is ready on port %d (telnet) and %d (TLS).", port, tls_port);
-   else if (sniff_port > 0)
-      sprintf(log_buf, "ACK! MUD is ready on port %d (telnet) and %d (auto).", port, sniff_port);
+   if (port > 0)
+   {
+      if (ws_port > 0 && tls_port > 0 && sniff_port > 0)
+         sprintf(log_buf,
+                 "ACK! MUD is ready on port %d (telnet), %d (WebSocket loopback), %d (TLS), %d "
+                 "(auto).",
+                 port, ws_port, tls_port, sniff_port);
+      else if (ws_port > 0 && tls_port > 0)
+         sprintf(log_buf,
+                 "ACK! MUD is ready on port %d (telnet), %d (WebSocket loopback), %d (TLS).", port,
+                 ws_port, tls_port);
+      else if (ws_port > 0 && sniff_port > 0)
+         sprintf(log_buf,
+                 "ACK! MUD is ready on port %d (telnet), %d (WebSocket loopback), %d (auto).", port,
+                 ws_port, sniff_port);
+      else if (tls_port > 0 && sniff_port > 0)
+         sprintf(log_buf, "ACK! MUD is ready on port %d (telnet), %d (TLS), %d (auto).", port,
+                 tls_port, sniff_port);
+      else if (ws_port > 0)
+         sprintf(log_buf, "ACK! MUD is ready on port %d (telnet) and %d (WebSocket loopback).",
+                 port, ws_port);
+      else if (tls_port > 0)
+         sprintf(log_buf, "ACK! MUD is ready on port %d (telnet) and %d (TLS).", port, tls_port);
+      else if (sniff_port > 0)
+         sprintf(log_buf, "ACK! MUD is ready on port %d (telnet) and %d (auto).", port, sniff_port);
+      else
+         sprintf(log_buf, "ACK! MUD is ready on port %d.", port);
+   }
    else
-      sprintf(log_buf, "ACK! MUD is ready on port %d.", port);
+   {
+      /* No plain-telnet port – sniff/TLS port(s) only */
+      if (ws_port > 0 && sniff_port > 0)
+         sprintf(log_buf, "ACK! MUD is ready on port %d (WebSocket loopback) and %d (auto).",
+                 ws_port, sniff_port);
+      else if (ws_port > 0 && tls_port > 0)
+         sprintf(log_buf, "ACK! MUD is ready on port %d (WebSocket loopback) and %d (TLS).",
+                 ws_port, tls_port);
+      else if (sniff_port > 0 && tls_port > 0)
+         sprintf(log_buf, "ACK! MUD is ready on port %d (TLS) and %d (auto).", tls_port,
+                 sniff_port);
+      else if (sniff_port > 0)
+         sprintf(log_buf, "ACK! MUD is ready on port %d (auto).", sniff_port);
+      else if (tls_port > 0)
+         sprintf(log_buf, "ACK! MUD is ready on port %d (TLS).", tls_port);
+      else if (ws_port > 0)
+         sprintf(log_buf, "ACK! MUD is ready on port %d (WebSocket loopback).", ws_port);
+      else
+         sprintf(log_buf, "ACK! MUD is ready (HOTreboot recovery, no plain-telnet port).");
+   }
    log_string(log_buf);
    if (fCopyOver)
    {
@@ -426,7 +473,8 @@ int main(int argc, char **argv)
    list_who_to_output();
 
    game_loop(control, control_ws, control_tls, control_sniff);
-   close(control);
+   if (control >= 0)
+      close(control);
    if (control_ws >= 0)
       close(control_ws);
    if (control_tls >= 0)

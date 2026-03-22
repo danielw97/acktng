@@ -764,8 +764,11 @@ void game_loop(int control, int control_ws, int control_tls, int control_sniff)
       if (reopen_flag)
       {
          log_string("SIGUSR1 received, reopening control socket");
-         close(control);
-         control = init_socket(global_port, INADDR_ANY);
+         if (control >= 0)
+         {
+            close(control);
+            control = init_socket(global_port, INADDR_ANY);
+         }
          if (control_ws >= 0)
          {
             close(control_ws);
@@ -790,8 +793,12 @@ void game_loop(int control, int control_ws, int control_tls, int control_sniff)
       FD_ZERO(&in_set);
       FD_ZERO(&out_set);
       FD_ZERO(&exc_set);
-      FD_SET(control, &in_set);
-      maxdesc = control;
+      maxdesc = 0;
+      if (control >= 0)
+      {
+         FD_SET(control, &in_set);
+         maxdesc = control;
+      }
       if (control_ws >= 0)
       {
          FD_SET(control_ws, &in_set);
@@ -842,7 +849,7 @@ void game_loop(int control, int control_ws, int control_tls, int control_sniff)
       /*
        * New connection?
        */
-      if (FD_ISSET(control, &in_set))
+      if (control >= 0 && FD_ISSET(control, &in_set))
          new_descriptor(control, FALSE, FALSE);
       if (control_ws >= 0 && FD_ISSET(control_ws, &in_set))
          new_descriptor(control_ws, FALSE, FALSE);
