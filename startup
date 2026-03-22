@@ -10,19 +10,20 @@
 #   1. Build the server binary (if out of date).
 #   2. Validate or generate a self-signed TLS certificate.
 #      Replace the generated cert with a real CA-signed one for production.
-#   3. Launch the server:
-#        Port 8890 — plain telnet
-#        Port 9890 — TLS (telnet-TLS and WSS; cert/key required)
+#   3. Launch the server on port 8890 (sniff port).
+#      The sniff port auto-detects each new connection:
+#        0x16 as first byte → TLS handshake (Mudlet "connect securely")
+#        anything else      → plain telnet
+#      Both Mudlet secure connections and plain telnet clients use port 8890.
 #
 # The process runs in the foreground.  Use a process supervisor (systemd,
 # screen, tmux, etc.) to keep it running in the background.
 #
 # Environment overrides:
-#   PORT      plain-telnet port (default: 8890)
-#   TLS_PORT  TLS/WSS port      (default: 9890)
+#   PORT      sniff port for plain + TLS telnet (default: 8890)
 #   TLS_CERT  path to PEM cert  (default: data/tls/cert.pem)
 #   TLS_KEY   path to PEM key   (default: data/tls/key.pem)
-#   TEST      set to 1 to use ephemeral OS-assigned ports (for testing)
+#   TEST      set to 1 to use an ephemeral OS-assigned port (for testing)
 
 set -e
 
@@ -31,16 +32,11 @@ SRC_DIR="$SCRIPT_DIR/src"
 AREA_DIR="$SCRIPT_DIR/area"
 
 if [ "${TEST:-0}" = "1" ]; then
-    # Ask the OS for free ephemeral ports to avoid collisions on shared hosts.
-    _ephemeral() {
-        python3 -c "import socket; s=socket.socket(); s.bind(('',0)); print(s.getsockname()[1]); s.close()" \
-            2>/dev/null || echo $((RANDOM % 16383 + 49152))
-    }
-    PORT="${PORT:-$(_ephemeral)}"
-    TLS_PORT="${TLS_PORT:-$(_ephemeral)}"
+    # Ask the OS for a free ephemeral port to avoid collisions on shared hosts.
+    PORT="${PORT:-$(python3 -c "import socket; s=socket.socket(); s.bind(('',0)); print(s.getsockname()[1]); s.close()" \
+        2>/dev/null || echo $((RANDOM % 16383 + 49152)))}"
 else
     PORT="${PORT:-8890}"
-    TLS_PORT="${TLS_PORT:-9890}"
 fi
 
 TLS_CERT="${TLS_CERT:-$SCRIPT_DIR/data/tls/cert.pem}"
@@ -59,15 +55,21 @@ EXTRA_ARGS=""
 
 if pkg-config --libs openssl >/dev/null 2>&1; then
     "$SCRIPT_DIR/data/tls/generate-certs.sh" --cert "$TLS_CERT" --key "$TLS_KEY"
-    EXTRA_ARGS="--tls-port $TLS_PORT --tls-cert $TLS_CERT --tls-key $TLS_KEY"
+    EXTRA_ARGS="--tls-cert $TLS_CERT --tls-key $TLS_KEY"
 fi
 
 # ---------------------------------------------------------------------------
 # Step 3: launch
 #
+# --sniff-port is required (not a positional plain-telnet port) so that the
+# TLS context is initialised.  A positional port opens a plain-telnet socket
+# only; init_tls_context() is called only when sniff_port > 0 || tls_port > 0,
+# so without --sniff-port or --tls-port global_ssl_ctx stays NULL and TLS
+# clients receive plain text instead of a TLS server hello — blank screen.
+#
 # The binary must run from area/ so relative paths to area files, data
 # files, and player directories resolve correctly.
 # ---------------------------------------------------------------------------
-echo "startup: starting ACK!MUD — telnet port $PORT, TLS/WSS port $TLS_PORT..."
+echo "startup: starting ACK!MUD on port $PORT (plain + TLS)..."
 # shellcheck disable=SC2086
-exec sh -c "cd '$AREA_DIR' && exec ../src/ack '$PORT' $EXTRA_ARGS"
+exec sh -c "cd '$AREA_DIR' && exec ../src/ack --sniff-port '$PORT' $EXTRA_ARGS"
