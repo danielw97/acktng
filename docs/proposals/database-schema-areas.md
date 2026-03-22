@@ -549,6 +549,12 @@ CREATE TABLE corpses (
     value_1      INTEGER NOT NULL DEFAULT 0,
     value_2      INTEGER NOT NULL DEFAULT 0,
     value_3      INTEGER NOT NULL DEFAULT 0,
+    value_4      INTEGER NOT NULL DEFAULT 0,
+    value_5      INTEGER NOT NULL DEFAULT 0,
+    value_6      INTEGER NOT NULL DEFAULT 0,
+    value_7      INTEGER NOT NULL DEFAULT 0,
+    value_8      INTEGER NOT NULL DEFAULT 0,
+    value_9      INTEGER NOT NULL DEFAULT 0,
     parent_id    INTEGER REFERENCES corpses(id)  -- NULL = top-level corpse
 );
 ```
