@@ -730,3 +730,783 @@ table (`src/special.c` or equivalent). Currently valid names: `objfun_healing`,
 `objfun_cast_fight`. Any unrecognized name → rejection.
 
 ---
+## III. Flag and Enum Reference Tables
+
+All string values used in flag lists and enum fields throughout §II are defined here.
+Every table lists the **exact lowercase name** to use in YAML. Any name not present in the
+relevant table is a rejection. Integer values are never accepted in place of names.
+
+### III.1. Room Flags (`flags` in `rooms.yaml`)
+
+Source: `tab_room_flags` in `src/buildtab.c`.
+
+| Name | Bit value | Notes |
+|------|----------:|-------|
+| `nada` | 0 | No flags (equivalent to empty list `[]`) |
+| `dark` | 1 | Room is always dark |
+| `regen` | 2 | Enhanced HP/mana regeneration |
+| `no_mob` | 4 | Mobs cannot enter or wander in; required for boss rooms |
+| `indoors` | 8 | Indoor room (weather not shown) |
+| `no_magic` | 16 | Spells cannot be cast here |
+| `hot` | 32 | Room is hot — players lose HP each tick |
+| `cold` | 64 | Room is cold — players lose HP each tick |
+| `pk` | 128 | PK-enabled room |
+| `quiet` | 256 | Suppresses some ambient messages |
+| `private` | 512 | Limited-entry room |
+| `safe` | 1024 | Safe room — no combat |
+| `solitary` | 2048 | Maximum 1 player |
+| `pet_shop` | 4096 | Pet shop room |
+| `no_recall` | 8192 | Players cannot recall from here |
+| `no_teleport` | 16384 | Players cannot teleport to/from here |
+| `hunt_hunt` | 32768 | Mobs hunt aggressively here |
+| `no_bloodwalk` | 65536 | Bloodwalk travel blocked |
+| `no_portal` | 131072 | Portal creation/entry blocked |
+| `no_repop` | 524288 | Area resets do not repopulate this room |
+| `maze` | 1048576 | Part of a maze — all rooms in the set must have this flag |
+
+**Rejection rules:**
+- Any name not in this table → rejection.
+- `maze` set: every room in the maze vnum group must also have `maze` → rejection if any
+  room in the set lacks it.
+- Boss mob spawn rooms (any room receiving a boss mob via a reset `M` command) must have
+  `no_mob` → rejection if missing.
+
+---
+
+### III.2. Sector Type (`sector` in `rooms.yaml`)
+
+Source: `tab_sector_types` in `src/buildtab.c`. Single string value (enum, not a list).
+
+| Name | Integer |
+|------|--------:|
+| `nada` | 0 |
+| `city` | 1 |
+| `field` | 2 |
+| `forest` | 3 |
+| `hills` | 4 |
+| `mountain` | 5 |
+| `water_swim` | 6 |
+| `water_noswim` | 7 |
+| `recall_set` | 8 |
+| `air` | 9 |
+| `desert` | 10 |
+| `inside` | 11 |
+
+Any name not in this table → rejection.
+
+---
+
+### III.3. Door Lock Flags (`locks` in room exits)
+
+Source: `tab_door_types` in `src/buildtab.c`.
+
+| Name | Bit value | Notes |
+|------|----------:|-------|
+| `door` | 1 | Exit behaves as a door (can open/close/lock) |
+| `closed` | 2 | **Runtime state — must not be authored → rejection** |
+| `locked` | 4 | **Runtime state — must not be authored → rejection** |
+| `climb` | 8 | Requires climbing to traverse |
+| `staff` | 16 | Staff-only exit |
+| `pickproof` | 32 | Cannot be picked |
+| `smashproof` | 64 | Cannot be bashed open |
+| `passproof` | 128 | Pass-door spell does not work here |
+| `nodetect` | 256 | Exit not shown in `exits` command |
+
+`closed` or `locked` authored in an exit → rejection. Set initial door state via
+`resets.yaml` `D` commands instead.
+
+---
+
+### III.4. Act Flags (`act` in `mobs.yaml`)
+
+Source: `tab_mob_flags` in `src/buildtab.c`.
+
+| Name | Notes |
+|------|-------|
+| `is_npc` | **Required on every mob — rejection if absent** |
+| `sentinel` | Mob does not wander; required on all boss mobs |
+| `scavenger` | Mob picks up objects |
+| `remember` | Mob remembers attackers |
+| `no_flee` | Mob never flees |
+| `aggressive` | Mob attacks players on sight |
+| `stay_area` | **Required on every mob — rejection if absent** |
+| `wimpy` | Mob flees at low HP |
+| `pet` | Mob is a pet |
+| `train` | Mob can train player stats |
+| `practice` | Mob can teach skills |
+| `mercenary` | Mob is a mercenary |
+| `heal` | Mob sells heals |
+| `adapt` | Mob adapts to player damage types |
+| `undead` | Mob is undead |
+| `bank` | Mob is a banker |
+| `no_body` | Mob leaves no corpse |
+| `hunter` | Mob actively hunts enemies |
+| `no_mind` | Mob is mindless (immune to some psionic spells) |
+| `postman` | Mob handles letters |
+| `rewield` | Mob rewields weapons if disarmed |
+| `reequip` | Mob reequips gear if removed |
+| `no_hunt` | Mob cannot be hunted by the `hunt` command |
+| `solo` | Mob is designed to fight solo; required on level ≥ 50 non-boss mobs |
+| `no_blood` | Mob does not bleed |
+| `boss` | Boss mob; requires `sentinel` and a loot table |
+| `quartermaster` | Mob is a quartermaster NPC |
+| `invasion` | **Runtime-only — must not be authored → rejection** |
+| `noassist` | Mob does not assist allies |
+| `day_only` | Mob is daytime-only |
+| `night_only` | Mob is nighttime-only |
+| `ai_dialogue` | Mob uses AI dialogue |
+
+**Rejection rules:**
+- `is_npc` absent → rejection.
+- `stay_area` absent → rejection.
+- `invasion` present → rejection.
+- `day_only` + `night_only` both present → rejection.
+- `boss` present without `sentinel` → rejection.
+- `boss` present without a `loot` block → rejection.
+- Level ≥ 50, `boss` absent, `solo` absent → rejection.
+
+---
+
+### III.5. Affected-By Flags (`affected_by` in `mobs.yaml`)
+
+Source: `tab_affected_by` in `src/buildtab.c` and `AFF_*` defines in
+`src/headers/config.h`.
+
+| Name | Bit value |
+|------|----------:|
+| `blind` | 1 |
+| `invisible` | 2 |
+| `detect_evil` | 4 |
+| `detect_invis` | 8 |
+| `detect_magic` | 16 |
+| `detect_hidden` | 32 |
+| `cloak:reflection` | 64 |
+| `sanctuary` | 128 |
+| `faerie_fire` | 256 |
+| `infrared` | 512 |
+| `curse` | 1024 |
+| `cloak:flaming` | 2048 |
+| `poison` | 4096 |
+| `protect` | 8192 |
+| `cloak:absorption` | 16384 |
+| `sneak` | 32768 |
+| `hide` | 65536 |
+| `sleep` | 131072 |
+| `charm` | 262144 |
+| `flying` | 524288 |
+| `pass_door` | 1048576 |
+| `anti_magic` | 2097152 |
+| `blasted` | 4194304 |
+| `remort_curse` | 8388608 |
+| `confused` | 16777216 |
+| `hold` | 67108864 |
+| `paralysis` | 134217728 |
+| `cloak:adept` | 268435456 |
+
+Any name not in this table → rejection. Colon-containing names (`cloak:reflection`,
+`cloak:flaming`, `cloak:absorption`, `cloak:adept`) must be quoted in YAML if used as
+bare strings; flow-sequence form is recommended: `["cloak:reflection"]`.
+
+---
+
+### III.6. Skills Bitvector (`skills` in `class_line`)
+
+Source: `tab_mob_skill` in `src/buildtab.c`.
+
+| Name | Min level |
+|------|----------:|
+| `2_attack` | 1 |
+| `3_attack` | 1 |
+| `4_attack` | 20 |
+| `punch` | 1 |
+| `headbutt` | 1 |
+| `knee` | 1 |
+| `disarm` | 1 |
+| `trip` | 1 |
+| `nodisarm` | 1 |
+| `notrip` | 1 |
+| `dodge` | 1 |
+| `parry` | 1 |
+| `martial` | 1 |
+| `enhanced` | 1 |
+| `dualwield` | 1 |
+| `dirt` | 1 |
+| `5_attack` | 30 |
+| `6_attack` | 50 |
+| `charge` | 1 |
+| `counter` | 1 |
+| `kick` | 1 |
+
+Skill set on a mob below the minimum level → rejection.
+
+---
+
+### III.7. Cast Bitvector (`cast` in `class_line`)
+
+Source: `tab_mob_cast` in `src/buildtab.c`.
+
+| Name |
+|------|
+| `mag_missile` |
+| `shock_grasp` |
+| `burn_hands` |
+| `col_spray` |
+| `fireball` |
+| `hellspawn` |
+| `acid_blast` |
+| `chain_light` |
+| `faerie_fire` |
+| `flare` |
+| `flamestrike` |
+| `earthquake` |
+| `mind_flail` |
+| `planergy` |
+| `phobia` |
+| `mind_bolt` |
+| `static` |
+| `ego_whip` |
+| `bloody_tears` |
+| `mindflame` |
+| `suffocate` |
+| `nerve_fire` |
+| `light_bolt` |
+| `heat_armor` |
+| `lava_burst` |
+
+Empty list `[]` means no offensive spells. `nada` and `placeholder` from the legacy format
+are not valid YAML cast entries; use `[]` instead.
+
+---
+
+### III.8. Def Bitvector (`def` in `class_line`)
+
+Source: `tab_mob_def` in `src/buildtab.c`.
+
+| Name | Notes |
+|------|-------|
+| `nada` | No defensive spells. Must be the only entry if present. |
+| `cure_light` | |
+| `cure_serious` | |
+| `cure_critic` | |
+| `heal` | |
+| `fireshield` | |
+| `iceshield` | |
+| `shockshield` | |
+
+Use `[nada]` when a mob has no defensive spells. `[]` (empty list) → rejection; at least
+one entry is required when `class_line` is present.
+
+---
+
+### III.9. Element Bitvectors (`strong_magic`, `weak_magic`, `resist`, `suscept`)
+
+Source: `tab_magic_realms` in `src/buildtab.c`.
+
+| Name |
+|------|
+| `nada` |
+| `fire` |
+| `shock` |
+| `light` |
+| `gas` |
+| `poison` |
+| `cold` |
+| `sound` |
+| `acid` |
+| `negation` |
+| `impact` |
+| `psionic` |
+| `holy` |
+
+`nada` in any of these lists means "none" (equivalent to `[]`). Do not combine `nada` with
+other elements → rejection. `strong_magic` and `weak_magic` must not share any element →
+rejection. `resist` and `suscept` must not share any element → rejection.
+
+---
+
+### III.10. Race Mods (`race_mods` in `element_line`)
+
+Source: `tab_mob_race_mods` in `src/buildtab.c`. The `race_mods` field in `element_line`
+accepts either the integer `0` (for none) or a list of the following names.
+
+| Name |
+|------|
+| `nada` |
+| `fast_heal` |
+| `slow_heal` |
+| `strong_magic` |
+| `weak_magic` |
+| `no_magic` |
+| `immune_poison` |
+| `resist_spell` |
+| `woodland` |
+| `darkness` |
+| `huge` |
+| `large` |
+| `tiny` |
+| `small` |
+| `tail` |
+| `tough_skin` |
+| `stone_skin` |
+| `iron_skin` |
+
+When provided as a list, the YAML schema is: `race_mods: [tough_skin, large]`. When
+provided as the integer `0`, it is treated as `nada`. Mixing integer and list forms →
+rejection.
+
+---
+
+### III.11. AI Knowledge (`ai_knowledge` in `ai_line`)
+
+Source: `tab_knowledge` in `src/buildtab.c`. The `ai_knowledge` field accepts either the
+integer `0` (for none) or a list of the following names.
+
+| Name |
+|------|
+| `weapons` |
+| `trade` |
+| `magic` |
+| `temple` |
+| `underworld` |
+| `harbor` |
+| `guard` |
+| `history` |
+| `wilderness` |
+| `politics` |
+| `helps` |
+
+---
+
+### III.12. Accent (`accent` in `ai_line`)
+
+Source: `tab_accent` in `src/buildtab.c`. String enum.
+
+| Name |
+|------|
+| `none` |
+| `midgaard` |
+| `kowloon` |
+| `mafdet` |
+| `kiess` |
+| `rakuen` |
+
+---
+
+### III.13. Lore Flags (`lore_flags` in `mobs.yaml`)
+
+Source: `LORE_FLAG_*` defines in `src/headers/typedefs.h`.
+
+| Name | Bit |
+|------|----:|
+| `midgaard` | 1 |
+| `kiess` | 2 |
+| `kowloon` | 4 |
+| `rakuen` | 8 |
+| `mafdet` | 16 |
+| `human` | 32 |
+| `khenari` | 64 |
+| `khephari` | 128 |
+| `ashborn` | 256 |
+| `umbral` | 512 |
+| `rivennid` | 1024 |
+| `deltari` | 2048 |
+| `ushabti` | 4096 |
+| `serathi` | 8192 |
+| `kethari` | 16384 |
+
+---
+
+### III.14. Script Trigger Names (`trigger` in mob `scripts`)
+
+| Name |
+|------|
+| `in_file_prog` |
+| `act_prog` |
+| `speech_prog` |
+| `rand_prog` |
+| `fight_prog` |
+| `hitprcnt_prog` |
+| `death_prog` |
+| `entry_prog` |
+| `greet_prog` |
+| `all_greet_prog` |
+| `give_prog` |
+| `bribe_prog` |
+
+Any other name → rejection.
+
+---
+
+### III.15. Item Type (`item_type` in `objects.yaml`)
+
+Source: `tab_item_types` in `src/buildtab.c`. Single string value (enum).
+
+| Name | Integer | Notes |
+|------|--------:|-------|
+| `light` | 1 | |
+| `scroll` | 2 | |
+| `null` | 3 | Legacy placeholder; no effect |
+| `staff` | 4 | |
+| `weapon` | 5 | Requires `hold` and `take` in `wear_flags` |
+| `beacon` | 6 | |
+| `portal` | 7 | |
+| `treasure` | 8 | |
+| `armor` | 9 | |
+| `potion` | 10 | |
+| `clutch` | 11 | |
+| `furniture` | 12 | |
+| `trash` | 13 | |
+| `trigger` | 14 | |
+| `container` | 15 | |
+| `quest` | 16 | |
+| `drink_con` | 17 | |
+| `key` | 18 | |
+| `food` | 19 | |
+| `money` | 20 | |
+| `stake` | 21 | |
+| `boat` | 22 | |
+| `corpse_npc` | 23 | **Must not be authored → rejection** |
+| `corpse_pc` | 24 | **Must not be authored → rejection** |
+| `fountain` | 25 | |
+| `pill` | 26 | |
+| `board` | 27 | |
+| `soul` | 28 | |
+| `piece` | 29 | |
+| `matrix` | 30 | |
+| `enchantment` | 31 | |
+| `present` | 32 | |
+| `stash` | 33 | |
+
+---
+
+### III.16. Extra Flags (`extra_flags` in `objects.yaml`)
+
+Source: `tab_obj_flags` in `src/buildtab.c`.
+
+| Name | Notes |
+|------|-------|
+| `generated` | **Runtime-only → rejection** |
+| `bind-on-equip` | Binds on equip |
+| `nodisarm` | Cannot be disarmed |
+| `lock` | Locked item |
+| `evil` | Evil-aligned object |
+| `invis` | Invisible object |
+| `magic` | Magical object |
+| `nodrop` | Cannot be dropped |
+| `bless` | Blessed object |
+| `anti_good` | Good-aligned characters cannot use |
+| `anti_evil` | Evil-aligned characters cannot use |
+| `noremove` | Cannot be removed once equipped |
+| `inventory` | Part of mob inventory |
+| `nosave` | Not saved to player file |
+| `trigger:destroy` | Destroyed on use trigger |
+| `no_auction` | Cannot be auctioned |
+| `mythic` | Mythic rarity |
+| `legendary` | Legendary rarity |
+| `rare` | Rare rarity |
+| `vamp` | Vampire-associated item |
+| `noloot` | Cannot be looted from corpse |
+| `nosac` | Cannot be sacrificed |
+| `unique` | Unique (one per player) |
+| `lifestealer` | Lifestealer weapon; requires `anti_good` |
+| `loot` | Loot-table item; required on all mob loot objects |
+| `boss` | Boss drop; required on all boss loot objects |
+| `buckler` | Buckler shield type |
+| `wand` | Wand extra flag |
+| `fist` | Fist weapon; required when `value3 = 0` (hit) |
+| `two-handed` | Two-handed weapon |
+| `bonded` | Bonded item |
+
+Flags `claneq`, `unused_anti_neutral` are present in the legacy format but marked
+`NO_USE` in the builder table. They must not be authored → rejection.
+
+**Rejection rules:**
+- `generated` → rejection.
+- `lifestealer` without `anti_good` → rejection.
+- Any object on a mob loot table without `loot` → rejection.
+- Any object on a boss mob loot table without `boss` → rejection.
+
+---
+
+### III.17. Wear Flags (`wear_flags` in `objects.yaml`)
+
+Source: `tab_wear_flags` in `src/buildtab.c`.
+
+| Name | Slot |
+|------|------|
+| `halo` | Halo |
+| `aura` | Aura |
+| `horns` | Horns |
+| `head` | Head |
+| `face` | Face |
+| `beak` | Beak |
+| `ear` | Ear |
+| `neck` | Neck |
+| `wings` | Wings |
+| `shoulders` | Shoulders |
+| `arms` | Arms |
+| `wrist` | Wrist |
+| `hands` | Hands |
+| `finger` | Finger |
+| `claws` | Claws |
+| `hold` | Held in hand |
+| `about` | About body (cloak slot) |
+| `waist` | Waist |
+| `body` | Body |
+| `tail` | Tail |
+| `legs` | Legs |
+| `feet` | Feet |
+| `hooves` | Hooves |
+| `take` | Takeable; **required on every authored object** |
+| `clan_colors` | **Runtime-only → rejection** |
+| `invasion_emblem` | **Runtime-only → rejection** |
+
+---
+
+### III.18. Item Apply (`item_apply` in `objects.yaml`)
+
+Source: `tab_item_apply` in `src/buildtab.c`.
+
+| Name |
+|------|
+| `nada` |
+| `infra` |
+| `invis` |
+| `det_invis` |
+| `sanc` |
+| `sneak` |
+| `hide` |
+| `prot` |
+| `enhanced` |
+| `det_mag` |
+| `det_hid` |
+| `det_evil` |
+| `pass_door` |
+| `det_poison` |
+| `fly` |
+| `know_align` |
+| `detect_undead` |
+| `heated` |
+
+Use `[nada]` when no apply effects are needed. `[]` (empty list) is also accepted and
+treated as `nada`.
+
+---
+
+### III.19. Object Affect Locations (`location` in `affects`)
+
+Source: `tab_obj_aff` in `src/buildtab.c`.
+
+| Name | Notes |
+|------|-------|
+| `nada` | No location (no-op) |
+| `str` | Strength |
+| `dex` | Dexterity |
+| `int` | Intelligence |
+| `wis` | Wisdom |
+| `con` | Constitution |
+| `sex` | Sex |
+| `class` | Class |
+| `level` | Level |
+| `age` | Age |
+| `height` | Height |
+| `weight` | Weight stat |
+| `mana` | Mana |
+| `hit` | HP |
+| `move` | Movement |
+| `gold` | Gold |
+| `exp` | Experience |
+| `ac` | Armor class |
+| `hitroll` | Hit roll |
+| `damroll` | Damage roll |
+| `saving_para` | Save vs paralysis |
+| `saving_rod` | Save vs rod |
+| `saving_petri` | Save vs petrification |
+| `saving_breath` | Save vs breath |
+| `saving_spell` | Save vs spell |
+| `spellpower` | Spell power |
+
+`modifier` must be `0` for all authored objects. Area files must not set fixed stat
+modifiers → rejection if non-zero.
+
+---
+
+### III.20. Wear Locations (`wear_loc` in reset `E` commands)
+
+Source: `tab_wear_loc` in `src/buildtab.c`.
+
+| Name | Slot |
+|------|------|
+| `halo` | Halo |
+| `aura` | Aura |
+| `horns` | Horns |
+| `head` | Head |
+| `face` | Face |
+| `beak` | Beak |
+| `ear_l` | Left ear |
+| `ear_r` | Right ear |
+| `neck_1` | First neck |
+| `neck_2` | Second neck |
+| `wings` | Wings |
+| `shoulders` | Shoulders |
+| `arms` | Arms |
+| `wrist_l` | Left wrist |
+| `wrist_r` | Right wrist |
+| `hands` | Hands |
+| `finger_l` | Left finger |
+| `finger_r` | Right finger |
+| `claws` | Claws |
+| `hold_l` | Left hand |
+| `hold_r` | Right hand |
+| `cape` | Cape/cloak |
+| `waist` | Waist |
+| `body` | Body |
+| `tail` | Tail |
+| `legs` | Legs |
+| `feet` | Feet |
+| `hooves` | Hooves |
+| `clan_colors` | **Must not be authored → rejection** |
+| `invasion_emblem` | **Must not be authored → rejection** |
+
+---
+
+### III.21. Weapon Attack Types (`values[3]` for `item_type: weapon`)
+
+Source: `tab_weapon_types` in `src/buildtab.c`.
+
+| Name | Integer | Notes |
+|------|--------:|-------|
+| `hit` | 0 | **Only valid when `fist` is in `extra_flags` → rejection otherwise** |
+| `slice` | 1 | |
+| `stab` | 2 | |
+| `slash` | 3 | |
+| `whip` | 4 | |
+| `claw` | 5 | |
+| `blast` | 6 | |
+| `pound` | 7 | |
+| `crush` | 8 | |
+| `rend` | 9 | |
+| `bite` | 10 | |
+| `pierce` | 11 | |
+| `drain` | 12 | |
+| `sear` | 13 | |
+
+For weapon objects, `values[3]` accepts either the integer value or the name string. Name
+strings are preferred in YAML. Must be thematically consistent with the weapon's name and
+description → rejection if clearly inconsistent.
+
+---
+
+### III.22. Mob Class (`class` in `class_line`)
+
+Source: `tab_mob_class` in `src/buildtab.c`. Single string name or integer.
+
+| Name | Integer |
+|------|--------:|
+| `magi` | 0 |
+| `cleric` | 1 |
+| `cipher` | 2 |
+| `warden` | 3 |
+| `psionicist` | 4 |
+| `sorcerer` | 5 |
+| `assassin` | 6 |
+| `knight` | 7 |
+| `necromancer` | 8 |
+| `monk` | 9 |
+
+Legacy aliases `mage` (→ `magi`), `thief` (→ `cipher`), `warrior` (→ `warden`) are
+accepted on import but normalized to the canonical name on export. Use canonical names
+in new files.
+
+---
+
+### III.23. Valid Special Functions (`spec_fun` in `specials.yaml`)
+
+All functions currently registered in `src/headers/special.h`. Functions marked
+**restricted** may not be used in area files.
+
+**Generic / cross-area:**
+`spec_breath_any`, `spec_breath_acid`, `spec_breath_fire`, `spec_breath_frost`,
+`spec_breath_gas`, `spec_breath_lightning`, `spec_cast_adept`, `spec_cast_bigtime`,
+`spec_cast_cadaver`, `spec_cast_cleric`, `spec_cast_judge`, `spec_cast_mage`,
+`spec_cast_undead`, `spec_executioner`, `spec_fido`, `spec_guard`, `spec_janitor`,
+`spec_lamplighter`, `spec_laborer`, `spec_lay_sister`, `spec_mayor`, `spec_mino_guard`,
+`spec_poison`, `spec_policeman`, `spec_postman`, `spec_posting_clerk`, `spec_records_keeper`,
+`spec_rewield`, `spec_sage`, `spec_tax_man`, `spec_thief`, `spec_undead`,
+`spec_vamp_hunter`, `spec_vendor`, `spec_warden`, `spec_city_messenger`,
+`spec_harbor_hand`, `spec_park_keeper`, `spec_wizardofoz`, `spec_hermit_archon`,
+`spec_mudschool_guide`, `spec_sanctum_keeper`
+
+**Midgaard-specific:**
+`spec_midgaard_beggar`, `spec_midgaard_caravan_master`, `spec_midgaard_city_guard`,
+`spec_midgaard_executioner`, `spec_midgaard_gate_warden`, `spec_midgaard_healer`,
+`spec_midgaard_invasion_warden`, `spec_midgaard_pilgrim`, `spec_midgaard_postmaster`,
+`spec_midgaard_quartermaster`, `spec_midgaard_shopkeeper`, `spec_midgaard_street_vendor`,
+`spec_midgaard_temple_guardian`, `spec_midgaard_temple_priest`
+
+**Kiess-specific:**
+`spec_kiess_innkeeper`, `spec_kiess_orator`, `spec_kiess_scout`, `spec_kiess_shopkeeper`,
+`spec_kiess_wall_officer`
+
+**Kowloon-specific:**
+`spec_kowloon_corsair`, `spec_kowloon_courier`, `spec_kowloon_gate_captain`,
+`spec_kowloon_innkeeper`, `spec_kowloon_laborer`, `spec_kowloon_magistracy`,
+`spec_kowloon_shopkeeper`, `spec_kowloon_shrine`, `spec_kowloon_sweeper`,
+`spec_kowloon_vendor`
+
+**Great Northern Forest-specific:**
+`spec_gnf_courier`, `spec_gnf_customs`, `spec_gnf_everkeeper`, `spec_gnf_joint_scout`,
+`spec_gnf_lamplighter`, `spec_gnf_mire_speaker`, `spec_gnf_peddler`,
+`spec_gnf_road_warden`, `spec_gnf_toll_collector`
+
+**Roc Road-specific:**
+`spec_rr_byways_ferryman`, `spec_rr_byways_hermit`, `spec_rr_byways_innkeeper`,
+`spec_rr_byways_kiess_clerk`, `spec_rr_byways_market`, `spec_rr_byways_midgaard_guard`,
+`spec_rr_byways_scholar`, `spec_rr_byways_warden`, `spec_rr_camp_cook`,
+`spec_rr_charter_keeper`, `spec_rr_convoy_marshal`, `spec_rr_ferryman`, `spec_rr_peddler`,
+`spec_rr_pilgrim`, `spec_rr_road_clerk`, `spec_rr_ruin_scavenger`, `spec_rr_shrine_keeper`,
+`spec_rr_warden_captain`
+
+**Saltglass Reach-specific:**
+`spec_reach_assessor`, `spec_reach_carter`, `spec_reach_guide`, `spec_reach_outrider`,
+`spec_reach_scavenger`, `spec_reach_smuggler`, `spec_reach_tidewright`, `spec_reach_warden`
+
+**Cinderteeth Mountains-specific:**
+`spec_cinderteeth_anchor`, `spec_cinderteeth_caldera_watcher`, `spec_cinderteeth_oracle`,
+`spec_cinderteeth_patriarch`, `spec_cinderteeth_sulfur_colossus`,
+`spec_cinderteeth_ventspeaker`, `spec_cinderteeth_warden_cmd`, `spec_cinderteeth_warlord`
+
+**Saltglass Salt-and-Sinter:**
+`spec_ss_cinder_broker`, `spec_ss_kiln_overseer`, `spec_ss_manifest_warden`
+
+**Pyramid:**
+`spec_pyramid_black_sun_shard`
+
+**Summon specials — RESTRICTED, must not be authored:**
+`spec_summon_water`, `spec_summon_fire`, `spec_summon_earth`, `spec_summon_undead`,
+`spec_summon_holy`, `spec_summon_shadow`, `spec_summon_metal`, `spec_summon_animate`,
+`spec_summon_thought`, `spec_summon_revenant`
+
+**Keep specials — human builders only, must not appear in generated files:**
+`spec_keep_physical_captain`, `spec_keep_elemental_captain`
+
+Any name not in the above lists → rejection. `spec_summon_*` → rejection. `spec_keep_*`
+in generated files → rejection.
+
+**Area-specific specials should only be used in the area they were written for.** Using
+a Midgaard-specific special in a Kiess area produces anachronistic dialogue.
+
+---
+
+### III.24. Valid Object Functions (`objfun` in `objfuns.yaml`)
+
+Currently registered names:
+
+| Name | Effect |
+|------|--------|
+| `objfun_healing` | Object provides a healing effect when used |
+| `objfun_cast_fight` | Object casts a fight spell when triggered |
+
+Any other name → rejection.
+
+---
