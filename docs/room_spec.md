@@ -1,187 +1,201 @@
 # Room Specification
 
-Extracted from `docs/area_file_spec.md`.
+**Version:** strict ingestion format. All rules here are hard requirements enforced by the ingestion validator (`src/areaingest.c`). Violations are rejections; there are no warnings.
 
-## 8) `#ROOMS` section
+---
 
-A list of room records terminated by `#0`:
+## 1. Section Structure
 
-```text
+```
 #ROOMS
 #<vnum>
 <name>~
 <description>~
 <room_flags> <sector_type>
-[zero or more room entries]
+[zero or more D/E entries]
 S
 ...
 #0
 ```
 
-Room entries are one of:
+- Each room is introduced by `#<vnum>` on its own line.
+- `<name>` is a tilde-terminated string.
+- `<description>` is a tilde-terminated string. Must end with exactly one `\n` before the `~` (see §1.1).
+- `<room_flags>` and `<sector_type>` are integers on a single line.
+- Room entries consist of zero or more `D` (exit) and `E` (extra description) lines in any order.
+- Each room record ends with `S` on its own line.
+- The section ends with `#0`.
 
-- Exit:
-  ```text
-  D<door>
-  <exit_description>~
-  <exit_keyword>~
-  <locks> <key_vnum> <to_room_vnum>
-  ```
-  - `door` must be 0..5.
-  - **Both tilde-terminated lines are required** — the exit definition always occupies exactly two `~`-terminated lines before the numeric data line. Omitting either `~` line is a parse error.
-  - `<exit_description>` is the passage description text shown when examining the exit (may be empty — just `~` on its own line).
-  - `<exit_keyword>` is the player-facing noun used in movement and door commands (may be empty — just `~` on its own line). Named exits are allowed when it improves room flavor/clarity.
-  - For door-style named exits, prefix the keyword with `^` (for example, `^iron gate`) so movement messaging treats it as a standalone noun phrase.
-  - `<key_vnum>` must be the vnum of a key object that unlocks this exit. Use `-1` when no key exists for the exit.
-  - destination line must be exactly 3 integers.
+### 1.1. Description Format Requirements
 
-  Worked examples:
+- The `<description>~` must end with exactly one trailing `\n` immediately before the terminating `~`.
+  - Missing trailing newline → rejection.
+  - Double newline (`\n\n`) before `~` → rejection.
+- The `<description>~` must contain at least 3 sentences of text → rejection if fewer.
+- The `<description>~` must be unique to that room. Identical descriptions across two rooms in the same file → rejection.
+- Placeholder or procedural naming is forbidden. Names and descriptions like `Room 7`, `Staging Corridor 12`, `Passage 3`, or any equivalent indexed-template pattern → rejection.
+- Vnums must not appear in the description text → rejection.
 
-  Plain unnamed exit (no door, no key):
-  ```text
-  D2
-  ~
-  ~
-  0 -1 4240
-  ```
+### 1.2. Name Requirements
 
-  Named door with a key (the `^` prefix makes `unlock cistern hatch` work):
-  ```text
-  D5
-  ~
-  ^cistern hatch~
-  1 4435 4334
-  ```
-  (`locks=1` = `EX_ISDOOR`, `key_vnum=4435`, `dest=4334`)
+- `<name>` must be non-empty → rejection.
+- Placeholder names (`Room 1`, `Area N`, etc.) → rejection.
+- Maximum name length: 80 characters.
 
-  A common mistake is placing the keyword text on the first (description) line and leaving the second line empty. This passes the validator because both `~` strings are present, but the exit name will not be recognized in door commands.
-- Extra description:
-  ```text
-  E
-  <keyword>~
-  <description>~
-  ```
-  - Extra-description `<keyword>` names must be discoverable in-room. Chained `E` references are allowed (for example, extra 1 keyword appears in the room description, extra 1 text mentions extra 2 keyword, extra 2 text mentions extra 3 keyword), but each chain must be anchored: at least one keyword in the chain must appear in the room's main `<description>~`.
-  - `<description>` must include exactly one trailing newline before the terminating `~`.
-- End of room: `S`
+---
 
-Any other token in a room body is invalid.
+## 2. Exit Entry (`D`)
 
-Room description content requirements:
+```
+D<door>
+<exit_description>~
+<exit_keyword>~
+<locks> <key_vnum> <to_room_vnum>
+```
 
-- Each room's main `<description>~` must end with exactly one trailing newline immediately before the terminating `~`.
-- Each room's main `<description>~` must contain at least 3 sentences of text.
-- Important rooms must contain at least 5 sentences of text in the main `<description>~`.
-- Each room's main `<description>~` must be unique to that room (do not reuse identical room descriptions across rooms).
-- Room names and descriptions must not use placeholder/procedural naming patterns (for example, `Staging Corridor 12`, `Room 7`, `Passage 3`) or any equivalent numbered-template text. Names and prose must be authored as in-world, thematic content rather than indexed placeholders.
-- When a room uses a named exit (non-empty `<exit_keyword>`), that exit name must appear in at least one of:
-  - the room's main `<description>~`,
-  - an object that spawns in the room, or
-  - an `E` extra description in the room.
-- Puzzle guidance: you may chain details across multiple `E` extra descriptions; this is acceptable as long as each extra-description chain is anchored in the room's main `<description>~` and any named exit remains discoverable through the room/object/extra-description text.
+- `D` immediately followed by the door direction integer (no space): `D0`, `D1`, ..., `D5`.
+- `<exit_description>` is a tilde-terminated string. May be empty (just `~`).
+- `<exit_keyword>` is a tilde-terminated string. May be empty (just `~`).
+- Both tilde-terminated lines are required. Omitting either is a rejection.
+- `<locks> <key_vnum> <to_room_vnum>` is a line of exactly three integers.
+- `<to_room_vnum>` must reference a room in this file or already in the database → rejection.
 
-Directional traversal constraints:
+### 2.1. Door Direction Values
 
-- Except in mazes, exits are expected to be bi-directional: if room `A` connects to room `B` through direction `X`, room `B` should provide the opposite-direction exit back to room `A`.
-- This bi-directional expectation also applies to planned cross-area/world links (for example, Area A -> Area B): if an authored connection is intended as a traversable world route, the reverse link in the connected area must be added as part of the same content change.
-- Mazes are explicitly exempt from the bi-directional expectation and may use one-way, asymmetric, or otherwise non-reciprocal exits.
-- Room connections must not loop back in non-linear patterns (for example, `a -> b -> c -> d -> e -> a -> b`) unless the involved vnum set is a maze and every room in that set has `ROOM_MAZE` set.
-- Repeated movement in the same direction must not enter a directional loop unless the involved vnum set is a maze and every room in that set has `ROOM_MAZE` set.
-- Example (disallowed outside `ROOM_MAZE`-flagged maze vnum sets): repeatedly taking `east` yields `a -> b -> c -> a`.
-- Rooms that are part of a maze must be flagged `ROOM_MAZE`.
-- Every vnum in a maze vnum set must be flagged `ROOM_MAZE`.
+| Value | Direction |
+|------:|-----------|
+| 0 | north |
+| 1 | east |
+| 2 | south |
+| 3 | west |
+| 4 | up |
+| 5 | down |
 
-### 8.1) `room_flags` bitvector
+Direction outside 0–5 → rejection.
 
-`room_flags` is a bitvector field in room headers (`<room_flags> <sector_type>`). Builder-facing names and values are defined by `tab_room_flags` in `src/buildtab.c`:
+### 2.2. Exit Keyword Rules
 
-- `nada` = `0`
-- `dark` = `1`
-- `regen` = `2`
-- `no_mob` = `4`
-- `indoors` = `8`
-- `no_magic` = `16`
-- `hot` = `32`
-- `cold` = `64`
-- `pk` = `128`
-- `quiet` = `82`
-- `private` = `512`
-- `safe` = `315`
-- `solitary` = `840`
-- `pet_shop` = `4096`
-- `no_recall` = `8192`
-- `no_teleport` = `16384`
-- `hunt_hunt` = `32768`
-- `no_bloodwalk` = `65536`
-- `no_portal` = `131072`
-- `no_repop` = `262144`
-- `maze` = `524288` (`ROOM_MAZE`)
+- If `<exit_keyword>` is non-empty, it must appear in at least one of: the room's `<description>~`, an `E` extra description keyword in the same room, or an object that spawns in this room via `#RESETS`. → rejection if none of these apply.
+- For door-style named exits (exits that are also doors), prefix the keyword with `^` (e.g., `^iron gate`) so movement messaging treats it as a standalone noun phrase.
 
-Maze flag requirements:
+### 2.3. `<locks>` Bitvector
 
-- Rooms that are part of a maze must have `ROOM_MAZE` set.
-- Every vnum in a maze vnum set must have `ROOM_MAZE` set.
-- Only `ROOM_MAZE` rooms may use non-linear or looping exits.
+`<locks>` is a bitvector. Bits are defined in `src/buildtab.c` (`tab_door_types`):
 
-### 8.2) `sector_type` values
+| Bit | Name | Meaning |
+|----:|------|---------|
+| 1 | `door` | Exit behaves as a door (can open/close/lock) |
+| 2 | `closed` | **Runtime state — stripped on save; do not author** |
+| 4 | `locked` | **Runtime state — stripped on save; do not author** |
+| 8 | `climb` | Requires climbing to traverse |
+| 16 | `immortal` | Immortal-only exit |
+| 32 | `pickproof` | Cannot be picked |
+| 64 | `smashproof` | Cannot be bashed open |
+| 128 | `passproof` | Pass-door spell does not work here |
+| 82 | `nodetect` | Exit not shown in `exits` command |
 
-`sector_type` is a numeric enum in room headers. Builder-facing names and values are defined by `tab_sector_types` in `src/buildtab.c`:
+**Rejection rules:**
+- `closed` (bit 2) or `locked` (bit 4) set in an authored area file → rejection. These are runtime state bits and must not be authored. Initial door state is set via `#RESETS` command `D`.
+- Any exit reset to `locked` via `#RESETS D` state 2 must have `door` (bit 1) set in `<locks>` → rejection.
+- Any undefined bit set → rejection.
 
-- `nada` = `0`
-- `city` = `1`
-- `field` = `2`
-- `forest` = `3`
-- `hills` = `4`
-- `mountain` = `5`
-- `water_swim` = `6`
-- `water_noswim` = `7`
-- `recall_set` = `8`
-- `air` = `9`
-- `desert` = `10`
-- `inside` = `11`
+### 2.4. `<key_vnum>` Rules
 
-### 8.3) Exit `locks` and reset door state values
+- Use `-1` when no key exists for the exit.
+- If `<key_vnum>` is `>= 0`, the referenced object must be defined in `#OBJECTS` in this file or in the database → rejection.
+- If a `D` reset sets this door to state 2 (locked), `<key_vnum>` must be `>= 0` and must reference a valid key object → rejection.
 
-Door indices in `D<door>` lines map to movement directions (from `compass_name` in `src/act_move.c`):
+---
 
-- `0` = north
-- `1` = east
-- `2` = south
-- `3` = west
-- `4` = up
-- `5` = down
+## 3. Extra Description Entry (`E`)
 
-In room `D<door>` entries, the destination line field `<locks>` is a bitvector over `tab_door_types` in `src/buildtab.c`:
+```
+E
+<keyword>~
+<description>~
+```
 
-- `door` = `1`
-- `closed` = `2`
-- `locked` = `4`
-- `climb` = `8`
-- `immortal` = `16`
-- `pickproof` = `32`
-- `smashproof` = `64`
-- `passproof` = `128`
-- `nodetect` = `82`
+- `E` on its own line.
+- `<keyword>` is a tilde-terminated string. Must be non-empty → rejection.
+- `<description>` is a tilde-terminated string. Must end with exactly one `\n` before `~` → rejection.
+- `<keyword>` must appear in the room's main `<description>~`, or in another `E` entry whose keyword chain anchors back to the main description. Unchored extra descriptions → rejection.
 
-Practical door behavior in area files/runtime:
+---
 
-- Set `<locks>` bit `door` (`EX_ISDOOR`) when the exit must behave like an actual door/gate that can be opened/closed/locked.
-- Exit keywords and doors are independent:
-  - A named exit can exist without a door by setting `<exit_keyword>` and leaving `door` (`EX_ISDOOR`) unset.
-  - A door can be unnamed by leaving `<exit_keyword>` empty.
-  - When a named door is used, start the keyword with `^` (for example, `^stone hatch`) so movement messaging treats it as a standalone noun phrase.
-- `closed`/`locked` are runtime state bits (`EX_CLOSED`/`EX_LOCKED`). On save, the area writer strips these two bits from `<locks>`, so persistent initial door state must be authored through `#RESETS` command `D`, not by relying on `closed`/`locked` in the room exit line.
-- Any exit that is set to `closed` or `locked` on area reset via `#RESETS` command `D` MUST also have `<locks>` bit `door` (`EX_ISDOOR`) set in its room `D<door>` definition.
-- During gameplay, opening/closing/locking/unlocking an exit updates the reverse side too when the reverse exit exists and points back to the source room.
-- Locking rules depend on both `<locks>` and `<key_vnum>`:
-  - If the exit is not marked as a door (`EX_ISDOOR` unset), lock/unlock/open/close door commands do not apply.
-  - If `<key_vnum>` is `< 0`, players will be told the exit cannot be locked/unlocked with a key.
-  - If `<key_vnum>` is set, it should match the intended key object's vnum exactly; otherwise unlock/lock attempts with the thematic key will fail.
-  - If a door is reset to `locked` via `#RESETS` command `D` state `2`, `<key_vnum>` MUST be set to a valid key object vnum (not `-1`).
-  - For every such locked-on-reset door, an object record for that exact key vnum MUST exist in `#OBJECTS` (create the key item if it does not already exist).
+## 4. Room Record Terminator
 
-In `#RESETS`, command `D` uses door state enum values from `tab_door_states` in `src/buildtab.c`:
+Each room ends with `S` on its own line. Any other token in a room body (other than `D` or `E` entries and `S`) is a rejection.
 
-- `open` = `0`
-- `closed` = `1`
-- `locked` = `2`
+---
+
+## 5. `room_flags` Bitvector
+
+`room_flags` is the first integer on the `<room_flags> <sector_type>` line. Defined by `tab_room_flags` in `src/buildtab.c`:
+
+| Bit | Name | Meaning |
+|----:|------|---------|
+| 0 | `nada` | No flags |
+| 1 | `dark` | Room is always dark |
+| 2 | `regen` | Enhanced HP/mana regeneration |
+| 4 | `no_mob` | Mobs cannot enter or wander into this room |
+| 8 | `indoors` | Indoor room (weather not shown) |
+| 16 | `no_magic` | Spells cannot be cast here |
+| 32 | `hot` | Room is hot (environmental) |
+| 64 | `cold` | Room is cold (environmental) |
+| 128 | `pk` | PK-enabled room |
+| 82 | `quiet` | Composite: suppresses some ambient messages |
+| 512 | `private` | Room is private (limited entry) |
+| 315 | `safe` | Composite: safe room (no combat) |
+| 840 | `solitary` | Composite: maximum 1 player |
+| 4096 | `pet_shop` | Pet shop room |
+| 8192 | `no_recall` | Players cannot recall from here |
+| 16384 | `no_teleport` | Players cannot teleport to/from here |
+| 32768 | `hunt_hunt` | Mobs hunt aggressively here |
+| 65536 | `no_bloodwalk` | Bloodwalk travel blocked |
+| 131072 | `no_portal` | Portal creation/entry blocked |
+| 262144 | `no_repop` | Area resets do not repopulate this room |
+| 524288 | `maze` | Room is part of a maze (`ROOM_MAZE`) |
+
+**Rejection rules:**
+- Any bit not in the table above → rejection.
+- `maze` (`524288`) set on a room → every room in the maze vnum set must also have `maze` set → rejection if any room in the set lacks it.
+- Non-maze rooms with looping or non-reciprocal exits → rejection (see §7).
+
+---
+
+## 6. `sector_type` Enum
+
+`sector_type` is the second integer on the `<room_flags> <sector_type>` line. Defined by `tab_sector_types` in `src/buildtab.c`:
+
+| Value | Name |
+|------:|------|
+| 0 | `nada` (default) |
+| 1 | `city` |
+| 2 | `field` |
+| 3 | `forest` |
+| 4 | `hills` |
+| 5 | `mountain` |
+| 6 | `water_swim` |
+| 7 | `water_noswim` |
+| 8 | `recall_set` |
+| 9 | `air` |
+| 10 | `desert` |
+| 11 | `inside` |
+
+Value outside 0–11 → rejection.
+
+---
+
+## 7. Directional Traversal Constraints
+
+- Except in maze rooms, exits must be bi-directional: if room A connects to room B via direction X, room B must have the opposite-direction exit back to room A → rejection if the reverse exit is missing (except for cross-area exits where the target area is not in this file).
+- For planned cross-area exits where the target is not yet in the database, the exit must be omitted from the area file entirely. Document the planned connection in `docs/world_links.md` as **Planned**.
+- Non-maze rooms must not form directional loops (e.g., going east from A → B → C → A) → rejection.
+- All rooms in a maze set must have `ROOM_MAZE` set → rejection if any room in the set lacks it.
+- Non-`ROOM_MAZE` rooms must not use asymmetric or one-way exits → rejection.
+
+---
+
+## 8. Boss Room Requirement
+
+- Every boss mob (any mob with the `boss` act flag) must be placed in a room flagged `no_mob` → rejection if a boss mob's spawn room in `#RESETS` lacks `no_mob`.

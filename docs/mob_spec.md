@@ -1,12 +1,12 @@
 # Mobile Specification
 
-Extracted from `docs/area_file_spec.md`.
+**Version:** strict ingestion format. All rules here are hard requirements enforced by the ingestion validator (`src/areaingest.c`). Violations are rejections; there are no warnings.
 
-## 4) `#MOBILES` section
+---
 
-A list of mobile records, each introduced by `#<vnum>`, terminated by `#0`:
+## 1. Section Structure
 
-```text
+```
 #MOBILES
 #<vnum>
 <player_name>~
@@ -22,362 +22,423 @@ A list of mobile records, each introduced by `#<vnum>`, terminated by `#0`:
 #0
 ```
 
-`<description>` must include exactly one trailing newline before the terminating `~`.
-`<long_descr>` is stricter: it must be exactly one text line, followed by a newline, followed by a line containing only `~`.
-There is no valid multi-line alternative for mob `<long_descr>`; under no circumstances may `<long_descr>` text span multiple lines.
+The section ends with `#0`.
 
-Authoring quality policy for mob text fields:
+---
 
-- Mobile `description` strings must not be mass-templated boilerplate reused with only the mob name swapped.
-- Mobile `description` strings should be concise (prefer 1-2 sentences) and should highlight immediately visible identity/behavior rather than repeating generic area prose.
-- Mobile `long_descr` strings should be short ambient lines suitable for in-room presence text; avoid overlong lore paragraphs in `long_descr`.
-- `long_descr` format is strict: one text line, then exactly one newline, then `~` on the next line (no blank spacer line between text and terminator).
+## 2. Core Fields
 
-`<act>` is parsed as an unsigned 64-bit bitvector. This allows mobile flags above the legacy 32-bit range (for example `day_only`/`night_only`) to be saved and loaded correctly.
+### 2.1. `<player_name>~`
 
-### Mobile stat modifier line (`hp_mod ac_mod hr_mod dr_mod`)
+- Tilde-terminated. Non-empty → rejection.
+- The keyword list by which players refer to this mob (e.g., `guard city warrior`).
+- All lowercase → rejection if any uppercase.
+- Must not contain vnums → rejection.
 
-The `<hp_mod> <ac_mod> <hr_mod> <dr_mod>` line is required for every mobile record. All four values are signed integers:
+### 2.2. `<short_descr>~`
 
-- `hp_mod`: added to the mob's base hit-point roll. Positive values increase HP, negative reduce it. Use `0` for an average mob of its level.
-- `ac_mod`: added to the mob's armor class. Negative values improve AC (harder to hit); positive values worsen it. Use `0` for average, `-50` to `-100` for a notably tough mob, `-100` to `-150` for a boss.
-- `hr_mod`: added to the mob's hitroll (accuracy). Use `0` for average; `5`–`10` for a skilled combatant; bosses may use `8`–`12`.
-- `dr_mod`: added to the mob's damroll (damage output). Use `0` for average; `5`–`10` for a hard-hitting mob; bosses may use `8`–`12`.
+- Tilde-terminated. Non-empty → rejection.
+- Shown in combat, inventory, etc. Should begin with lowercase article (`a`, `an`, `the`) or a lowercase word.
+- Must not contain vnums → rejection.
 
-Practical authoring guidelines:
-- Normal-difficulty mobs: `0 0 2 2` through `0 0 5 5` scaled by level tier.
-- Elite (solo) mobs: add `0 -50 5 5` or similar.
-- Boss mobs: use `0 -100 8 8` through `0 -100 12 12` depending on the boss's tier.
+### 2.3. `<long_descr>~`
 
-Optional extension blocks (detected by leading marker):
+**Strict format:** exactly one text line, followed by `\n`, followed by `~` on its own line. No other format is valid.
 
-- `! <class> <clan> <race> <position> <skills> <cast> <def>`
-  - `<position>` is read from the file but **always discarded**: the loader unconditionally sets the mob's position to `POS_STANDING` (7). Use `7` for clarity.
-  - `<class>` and `<clan>` are read as integers; use `0` for default/unset.
-  - `<race>` must be `>= 0`; use `0` for default. Negative values are reset to `0` by the loader.
-- `| <strong_magic> <weak_magic> <race_mods> <power_skills> <power_cast> <resist> <suscept>`
-- `+ <spellpower_mod> <crit_mod> <crit_mult_mod> <spell_crit_mod> <spell_mult_mod> <parry_mod> <dodge_mod> <block_mod> <pierce_mod>`
-- `l <loot_amount> <loot[0..MAX_LOOT-1]>`
-- `L <loot_chance[0..MAX_LOOT-1]>`
-
-**`MAX_LOOT = 9`**: the loot array always has exactly 9 slots. Both the `l` and `L` lines must contain exactly 9 values after their leading field, with unused slots padded to `0`. The file validator enforces this strictly.
-
-Concrete field counts:
-- `l` line: `l <loot_amount> <v0> <v1> <v2> <v3> <v4> <v5> <v6> <v7> <v8>` — 10 fields total
-- `L` line: `L <c0> <c1> <c2> <c3> <c4> <c5> <c6> <c7> <c8>` — exactly 9 fields
-
-Example (one guaranteed drop, all other slots unused):
 ```
-l 100 496 0 0 0 0 0 0 0 0
-L 100 0 0 0 0 0 0 0 0
+A guard stands here, watching the gate.
+~
 ```
 
-Example (two-item pool, slots 0 and 1, rates 60/40):
+- Multi-line `long_descr` → rejection.
+- Empty first line → rejection.
+- Extra blank line before `~` → rejection.
+- Must not contain vnums → rejection.
+- Must not be a mass-templated boilerplate string reused from another mob with only the name swapped → rejection (validator checks for exact duplicates within the file).
+
+### 2.4. `<description>~`
+
+- Tilde-terminated multi-line string.
+- Must end with exactly one `\n` before the `~`. Missing trailing newline → rejection. Double newline before `~` → rejection.
+- Must be concise (1–4 sentences). More than 8 sentences → rejection.
+- Must not reuse an identical description from another mob in the same file → rejection.
+- Must not contain vnums → rejection.
+
+### 2.5. Stat line: `<act> <affected_by> <alignment> S`
+
+- Four tokens: two unsigned 64-bit integers, one signed integer, and the literal character `S`.
+- Missing `S` → rejection.
+- `alignment` must be in range `[-1000, 1000]` → rejection outside this range.
+- See §4 and §5 for `act` and `affected_by` bitvectors.
+
+### 2.6. `<level> <sex>` line
+
+- Two integers.
+- `level` must be `1–155` → rejection outside range.
+- `sex` must be `0` (neutral), `1` (male), or `2` (female) → rejection for other values.
+
+### 2.7. `<hp_mod> <ac_mod> <hr_mod> <dr_mod>` line
+
+- Four signed integers.
+- `hp_mod`: `-500` to `500` → rejection outside range.
+- `ac_mod`: `-300` to `300` → rejection outside range.
+- `hr_mod`: `-50` to `50` → rejection outside range.
+- `dr_mod`: `-50` to `50` → rejection outside range.
+
+---
+
+## 3. Optional Extension Lines
+
+Extension lines appear after the four core data lines. They are detected by their leading marker character. Any line that begins with an unrecognized marker at the extension position is treated as the end of this mobile record (start of the next record).
+
+All extension lines are optional. When present, they must be well-formed per the rules below; malformed extension lines are rejections.
+
+### 3.1. `!` — Class/Clan/Race/Skills line
+
 ```
-l 100 506 507 0 0 0 0 0 0 0
-L 60 40 0 0 0 0 0 0 0
+! <class> <clan> <race> <position> <skills> <cast> <def>
 ```
 
-Example (pool of 3 items, drop rates 20/34/46):
+Seven integers in that exact order.
+
+- `class`: integer `>= 0`. Use `0` for default/unset.
+- `clan`: integer `>= 0`. Use `0` for default/unset.
+- `race`: integer `>= 0`. Negative values → rejection.
+- `position`: integer. **Always discarded by the loader** — the mob's position is unconditionally set to `POS_STANDING` (7) at runtime. Use `7`.
+- `skills`: bitvector — see §6.
+- `cast`: bitvector — see §7.
+- `def`: bitvector — see §8.
+
+Rejection rules:
+- `race < 0` → rejection.
+- `position` outside `0–9` → rejection (even though it is discarded, invalid values indicate a malformed file).
+- Any bit set in `skills`, `cast`, or `def` that is not defined in §6, §7, or §8 respectively → rejection.
+
+### 3.2. `|` — Element/Resistance line
+
 ```
-l 1 441 442 443 0 0 0 0 0 0
-L 20 34 46 0 0 0 0 0 0
+| <strong_magic> <weak_magic> <race_mods> <power_skills> <power_cast> <resist> <suscept>
 ```
 
+Seven integers in that exact order.
 
-Loot table semantics:
-- `loot_amount` must be greater than 0 for loot drops to be attempted.
-- `loot_amount` is percent-based with overflow in 100-point chunks: `50` = 50% chance to drop one item, `100` = exactly one item, `150` = one guaranteed + 50% chance for a second, `300` = exactly three items.
-- `loot[x]` contains the object vnum for each loot slot.
-- `loot_chance[x]` contains each slot's weight in integer percent points for selection.
-- The sum of all `loot_chance[x]` values on an `L` line must be `<= 100`.
-- Items referenced by loot tables should have `ITEM_LOOT` set in `extra_flags`.
+- `strong_magic`, `weak_magic`, `resist`, `suscept`: element bitvectors — see §9.
+- `race_mods`: integer. Race modification flags. Use `0` for none.
+- `power_skills`: integer. **Loaded but not used at runtime.** Present for file compatibility; use `0`.
+- `power_cast`: integer. **Loaded but not used at runtime.** Present for file compatibility; use `0`.
 
-### 4.1) Mobile `skills` bitvector (`!` extension)
+Rejection rules:
+- Any bit in `strong_magic`, `weak_magic`, `resist`, or `suscept` not defined in §9 → rejection.
+- `strong_magic` and `weak_magic` must not overlap (same element flagged in both) → rejection.
+- `resist` and `suscept` must not overlap (same element flagged in both) → rejection.
 
-`skills` in the `!` extension line is a bitvector. Known flags (from builder lookup tables) are:
+### 3.3. `+` — Combat modifier line
 
-### 4.1.a) Mobile skill level policy (floors and ceilings)
+```
++ <spellpower_mod> <crit_mod> <crit_mult_mod> <spell_crit_mod> <spell_mult_mod> <parry_mod> <dodge_mod> <block_mod> <pierce_mod>
+```
 
-For generated mobs (AI-generated skill loadouts), combat-skill assignment uses two level gates per skill:
+Nine signed integers in that exact order.
 
-- **chance floor**: minimum level where the skill can start rolling randomly.
-- **guaranteed floor**: level where the skill is always set.
+- All values: `-500` to `500` → rejection outside range.
+- `spellpower_mod`: additive bonus to spell power.
+- `crit_mod`: additive bonus to physical crit chance.
+- `crit_mult_mod`: additive bonus to physical crit multiplier.
+- `spell_crit_mod`: additive bonus to spell crit chance.
+- `spell_mult_mod`: additive bonus to spell crit multiplier.
+- `parry_mod`: additive bonus to parry.
+- `dodge_mod`: additive bonus to dodge.
+- `block_mod`: additive bonus to block.
+- `pierce_mod`: additive bonus to armor penetration.
 
-The floor policy now depends on AI archetype:
+### 3.4. `l` — Loot vnum line
 
-- **Melee profile** (`generate_phys` only): earlier physical-skill access and stronger guaranteed combat baseline.
-- **Hybrid profile** (`generate_phys` + casting): mid/late physical-skill access, preserving mixed-role identity.
-- **Caster profile** (physical policy defined for completeness): very late physical-skill access, prioritizing spell identity.
+```
+l <loot_amount> <v0> <v1> <v2> <v3> <v4> <v5> <v6> <v7> <v8>
+```
 
-Current policy (mobs can scale to level 5):
+`MAX_LOOT = 9`. Exactly 10 integers (1 + 9 slots). Unused slots must be `0`.
 
-#### Melee profile
+- `loot_amount`: percent-based. `50` = 50% chance for one item, `100` = one guaranteed, `150` = one guaranteed + 50% chance for a second, `300` = three guaranteed. Must be `>= 0` → rejection.
+- `v0`–`v8`: object vnums for loot slots. Each non-zero value must reference an object vnum defined in `#OBJECTS` in this file or in the database → rejection.
+- Non-zero loot slot values must reference objects with `ITEM_LOOT` set in `extra_flags` → rejection.
 
-| Skill | Chance floor | Guaranteed floor |
-|---|---:|---:|
-| `2_attack` | 20 | 70 |
-| `3_attack` | 40 | 85 |
-| `4_attack` | 80 | 105 |
-| `5_attack` | 110 | 130 |
-| `6_attack` | 150 | 155 |
-| `nodisarm` | 35 | 85 |
-| `notrip` | 35 | 85 |
-| `punch` | 15 | 60 |
-| `headbutt` | 20 | 70 |
-| `knee` | 35 | 90 |
-| `disarm` | 45 | 100 |
-| `trip` | 45 | 100 |
-| `dodge` | 30 | 80 |
-| `parry` | 55 | 110 |
-| `martial` | 65 | 120 |
-| `enhanced` | 40 | 95 |
-| `dualwield` | 75 | 125 |
-| `dirt` | 50 | 105 |
-| `counter` | 60 | 115 |
-| `kick` | 25 | 75 |
-| `charge` | 80 | 135 |
+Fewer than 10 integers → rejection.
 
-#### Hybrid profile
+### 3.5. `L` — Loot chance line
 
-| Skill | Chance floor | Guaranteed floor |
-|---|---:|---:|
-| `2_attack` | 35 | 85 |
-| `3_attack` | 45 | 95 |
-| `4_attack` | 90 | 120 |
-| `5_attack` | 120 | 145 |
-| `6_attack` | 160 | 5 |
-| `nodisarm` | 45 | 95 |
-| `notrip` | 45 | 95 |
-| `punch` | 25 | 70 |
-| `headbutt` | 30 | 80 |
-| `knee` | 45 | 100 |
-| `disarm` | 55 | 110 |
-| `trip` | 55 | 110 |
-| `dodge` | 40 | 90 |
-| `parry` | 70 | 125 |
-| `martial` | 80 | 135 |
-| `enhanced` | 55 | 105 |
-| `dualwield` | 95 | 145 |
-| `dirt` | 65 | 115 |
-| `counter` | 80 | 130 |
-| `kick` | 35 | 85 |
-| `charge` | 100 | 150 |
+```
+L <c0> <c1> <c2> <c3> <c4> <c5> <c6> <c7> <c8>
+```
 
-#### Caster profile
+Exactly 9 integers. Unused slots must be `0`.
 
-| Skill | Chance floor | Guaranteed floor |
-|---|---:|---:|
-| `2_attack` | 45 | 95 |
-| `3_attack` | 55 | 105 |
-| `4_attack` | 100 | 130 |
-| `5_attack` | 130 | 155 |
-| `6_attack` | 165 | 5 |
-| `nodisarm` | 55 | 105 |
-| `notrip` | 55 | 105 |
-| `punch` | 35 | 80 |
-| `headbutt` | 40 | 90 |
-| `knee` | 55 | 110 |
-| `disarm` | 65 | 120 |
-| `trip` | 65 | 120 |
-| `dodge` | 50 | 100 |
-| `parry` | 80 | 135 |
-| `martial` | 90 | 145 |
-| `enhanced` | 65 | 115 |
-| `dualwield` | 105 | 155 |
-| `dirt` | 75 | 125 |
-| `counter` | 90 | 140 |
-| `kick` | 45 | 95 |
-| `charge` | 110 | 160 |
+- Each `cN` must be `0–100`.
+- Sum of all 9 values must be `<= 100` → rejection if sum exceeds 100.
+- A non-zero `cN` must correspond to a non-zero `vN` on the `l` line → rejection if a chance is set but no vnum.
 
-This prevents low-level mobs from rolling late-game skills and guarantees baseline skill sets for high-level mobs.
+Fewer than 9 integers → rejection.
 
-Note: this table intentionally uses the historical non-sequential bit assignments from `tab_mob_skill`/`MOB_*`; do not renumber by position.
+`l` and `L` must both be present if either is present → rejection if only one appears.
 
-- `2_attack` = `1`
-- `3_attack` = `2`
-- `4_attack` = `4`
-- `punch` = `128`
-- `headbutt` = `82`
-- `knee` = `512`
-- `disarm` = `315`
-- `trip` = `840`
-- `nodisarm` = `32`
-- `notrip` = `64`
-- `dodge` = `4096`
-- `parry` = `8192`
-- `martial` = `16384`
-- `enhanced` = `32768`
-- `dualwield` = `65536`
-- `dirt` = `131072`
-- `5_attack` = `8`
-- `6_attack` = `16`
-- `charge` = `262144`
-- `counter` = `524288`
-- `kick` = `1048576`
+### 3.6. `a` — AI prompt line
 
-### 4.2) Mobile `cast` bitvector (`!` extension)
+```
+a <ai_knowledge> <accent> <ai_prompt>~
+```
 
-`cast` in the `!` extension line is a bitvector of offensive spells the mobile may use:
+Two integers followed by a tilde-terminated string, all on the same line.
 
-- `nada` = `0`
-- `placeholder` = `1`
-- `mag_missile` = `2`
-- `shock_grasp` = `4`
-- `burn_hands` = `8`
-- `col_spray` = `16`
-- `fireball` = `32`
-- `hellspawn` = `64`
-- `acid_blast` = `128`
-- `chain_light` = `82`
-- `faerie_fire` = `512`
-- `flare` = `315`
-- `flamestrike` = `840`
-- `earthquake` = `4096`
-- `mind_flail` = `8192`
-- `planergy` = `16384`
-- `phobia` = `32768`
-- `mind_bolt` = `65536`
-- `static` = `131072`
-- `ego_whip` = `262144`
-- `bloody_tears` = `524288`
-- `mindflame` = `1048576`
-- `suffocate` = `2097152`
-- `nerve_fire` = `4194304`
-- `light_bolt` = `8388608`
-- `heat_armor` = `16777216`
-- `lava_burst` = `33554432`
+- `ai_knowledge`: integer `>= 0`. Controls which knowledge categories the mob's AI can access.
+- `accent`: integer `>= 0`. Dialect/accent index.
+- `ai_prompt`: tilde-terminated string. The system prompt for this mob's NPC dialogue AI.
 
-### 5.3) Mobile `def` bitvector (`!` extension)
+Rejection rules:
+- Missing the tilde terminator on the same line → rejection.
+- Fewer than 2 integers before the string → rejection.
+- `ai_knowledge < 0` or `accent < 0` → rejection.
 
-`def` in the `!` extension line is a bitvector of defensive spells/abilities:
+### 3.7. `^` — Lore flags line
 
-- `nada` = `1`
-- `cure_light` = `2`
-- `cure_serious` = `4`
-- `cure_critic` = `8`
-- `heal` = `16`
-- `fireshield` = `32`
-- `iceshield` = `64`
-- `shockshield` = `128`
+```
+^ <lore_flags>
+```
 
-### 5.4) Mobile `act` flags bitvector
+One integer.
 
-`act` on the main mobile data line (`<act> <affected_by> <alignment> S`) is a bitvector. Runtime flags are defined in `src/config.h` (builder keywords are mapped in `tab_mob_flags`):
+- `lore_flags`: bitvector controlling which lore categories this mob is associated with. Use `0` for none. Undefined bits → rejection.
 
-Builder note: set the `aggressive` flag for mobs whose intended behavior is to initiate combat on sight (for example, feral beasts in dangerous wilds, hostile undead in cursed ruins, or demonic sentries in enemy strongholds), and leave it unset for neutral/civilian roles (for example, townsfolk, merchants, quest givers, and guards meant to react only when provoked).
+### 3.8. `>` — Inline script block
 
-Builder note: mobs that should remain in place and not wander (for example, gate guards) should be flagged with `act sentinel`.
+```
+> <prog_type_name> <arglist>~
+<comlist>~
+...
+|
+```
 
-Builder note: if a mob is intended to appear only during daytime, it must include the `DAYONLY`/`day_only` act flag. If a mob is intended to appear only during nighttime, it must include the `NIGHTONLY`/`night_only` act flag.
+- `>` introduces an inline mobile program.
+- `<prog_type_name>` must be one of the valid trigger names (see §10) → rejection for unknown names.
+- `<arglist>~` is a tilde-terminated argument string on the same line as `>`.
+- `<comlist>~` is a tilde-terminated command list (may span multiple lines).
+- The block terminates with `|` on its own line.
+- Missing `~` on the trigger header line → rejection.
+- Missing `~` on the command list → rejection.
+- Missing `|` terminator → rejection.
+- Unknown `prog_type_name` → rejection.
 
-- `is_npc` = `1`
-- `sentinel` = `2`
-- `scavenger` = `4`
-- `remember` = `8`
-- `no_flee` = `16`
-- `aggressive` = `32`
-- `stay_area` = `64`
-- `wimpy` = `128`
-- `pet` = `82`
-- `train` = `512`
-- `practice` = `315`
-- `mercenary` = `840`
-- `heal` = `4096`
-- `adapt` = `8192`
-- `undead` = `16384`
-- `bank` = `32768`
-- `no_body` = `65536`
-- `hunter` = `131072`
-- `no_mind` = `262144`
-- `postman` = `524288`
-- `rewield` = `1048576`
-- `reequip` = `2097152`
-- `no_hunt` = `16777216`
-- `solo` = `33554432`
-- `boss` = `67108864`
-- `no_blood` = `268435456`
-- `invasion` = `536870912` (runtime-only flag; do not set in area files)
-- `noassist` = `1073741824`
-- `day_only` = `2147483648`
-- `night_only` = `4294967296`
+---
 
-Time-restriction behavior for `day_only` / `night_only`:
+## 4. `act` Flags Bitvector
 
-- `day_only`: mobile can only spawn and remain active during daytime.
-- `night_only`: mobile can only spawn and remain active during nighttime.
-- If day/night changes while the mobile is fighting, it is not extracted mid-combat; it is extracted as soon as it is no longer fighting.
-- If both flags are set simultaneously, runtime treats the mobile as unrestricted (conflicting configuration fallback).
+`act` is an unsigned 64-bit bitvector (field 1 of the stat line). Defined in `src/config.h`:
 
-Legacy keyword note from `tab_mob_flags` in `src/buildtab.c`:
+| Bit | Name | Notes |
+|----:|------|-------|
+| 1 | `is_npc` | **Always set; do not set manually — rejection if unset** |
+| 2 | `sentinel` | Mob does not wander |
+| 4 | `scavenger` | Mob picks up objects |
+| 8 | `remember` | Mob remembers attackers |
+| 16 | `no_flee` | Mob never flees |
+| 32 | `aggressive` | Mob attacks players on sight |
+| 64 | `stay_area` | **Required on all mobs — see below** |
+| 128 | `wimpy` | Mob flees at low HP |
+| 82 | `pet` | Mob is a pet |
+| 512 | `train` | Mob can train stats |
+| 315 | `practice` | Mob can teach skills |
+| 840 | `mercenary` | Mob is a mercenary |
+| 4096 | `heal` | Mob heals itself/allies |
+| 8192 | `adapt` | Mob adapts to player damage types |
+| 16384 | `undead` | Mob is undead |
+| 32768 | `bank` | Mob is a banker |
+| 65536 | `no_body` | Mob leaves no corpse |
+| 131072 | `hunter` | Mob actively hunts enemies |
+| 262144 | `no_mind` | Mob is mindless (immune to mental spells) |
+| 524288 | `postman` | Mob is a postman NPC |
+| 1048576 | `rewield` | Mob rewields weapons if disarmed |
+| 2097152 | `reequip` | Mob reequips gear if removed |
+| 16777216 | `no_hunt` | Mob cannot be hunted by `hunt` command |
+| 33554432 | `solo` | **Required on strong non-boss mobs — see below** |
+| 67108864 | `boss` | **Required on boss mobs — see below** |
+| 268435456 | `no_blood` | Mob does not bleed |
+| 536870912 | `invasion` | **Runtime-only — forbidden in area files → rejection** |
+| 1073741824 | `noassist` | Mob does not assist allies |
+| 2147483648 | `day_only` | Mob is daytime-only |
+| 4294967296 | `night_only` | Mob is nighttime-only |
 
-- `intelligent` and `mount` appear in the builder lookup table as legacy keywords, but they do not have active `ACT_*` definitions in `src/config.h` in this codebase, so they must not be used in area files.
+**Rejection rules:**
+- `is_npc` (bit 1) not set → rejection. All mobs must have this bit.
+- `stay_area` (bit 64) not set → rejection. All mobs must be flagged `stay_area`.
+- `invasion` (bit 536870912) set → rejection. Runtime-only; must never be authored.
+- `day_only` and `night_only` both set → rejection. Conflicting configuration is meaningless and disallowed.
+- `intelligent` or `mount` (legacy keywords with no active `ACT_*` definitions) → rejection if encountered; these bits are no longer valid.
+- Any undefined bit → rejection.
 
-Builder policy for special difficulty mobs:
+**Policy rules (hard requirements):**
+- Boss mobs must have `boss` and `sentinel` set → rejection if a mob with `boss` lacks `sentinel`.
+- Boss mobs must be placed only in rooms with `no_mob` set → rejection if `#RESETS` places a boss in a room without `no_mob`.
+- Strong non-boss mobs (level `>= 50` without `boss`) must have `solo` set → rejection if missing.
 
-- All mobs must be flagged `stay_area` so they do not wander out of their home area.
-- Within a sub-region of an area, mobs must either be flagged `sentinel` or the sub-region must be enclosed by rooms flagged `no_mob`, so mobs cannot wander out of their sub-region.
-- Boss mobs must be flagged `sentinel` and `boss` and must be placed only in rooms flagged `no_mob`.
-- `invasion` must never be set by builders in area files; it is set/cleared by runtime invasion systems only.
-- Strong (non-boss) mobs must be flagged `solo`.
+---
 
-### 5.4a) Mobile `affected_by` bitvector
+## 5. `affected_by` Bitvector
 
-`affected_by` on the main mobile data line (`<act> <affected_by> <alignment> S`) is a bitvector. Flags are defined in `src/config.h` as `AFF_*`:
+`affected_by` is the second field of the stat line. Defined in `src/config.h` as `AFF_*`:
 
-- `blind` = `1` (`AFF_BLIND`)
-- `invisible` = `2` (`AFF_INVISIBLE`)
-- `detect_evil` = `4` (`AFF_DETECT_EVIL`)
-- `detect_invis` = `8` (`AFF_DETECT_INVIS`)
-- `detect_magic` = `16` (`AFF_DETECT_MAGIC`)
-- `detect_hidden` = `32` (`AFF_DETECT_HIDDEN`)
-- `cloak_reflection` = `64` (`AFF_CLOAK_REFLECTION`)
-- `sanctuary` = `128` (`AFF_SANCTUARY`)
-- `faerie_fire` = `82` (`AFF_FAERIE_FIRE`)
-- `infrared` = `512` (`AFF_INFRARED`)
-- `curse` = `315` (`AFF_CURSE`)
-- `cloak_flaming` = `840` (`AFF_CLOAK_FLAMING`)
-- `poison` = `4096` (`AFF_POISON`)
-- `protect` = `8192` (`AFF_PROTECT`)
-- `cloak_absorption` = `16384` (`AFF_CLOAK_ABSORPTION`)
-- `sneak` = `32768` (`AFF_SNEAK`)
-- `hide` = `65536` (`AFF_HIDE`)
-- `sleep` = `131072` (`AFF_SLEEP`)
-- `charm` = `262144` (`AFF_CHARM`)
-- `flying` = `524288` (`AFF_FLYING`)
-- `pass_door` = `1048576` (`AFF_PASS_DOOR`)
-- `anti_magic` = `2097152` (`AFF_ANTI_MAGIC`)
-- `blasted` = `4194304` (`AFF_BLASTED`)
-- `remort_curse` = `8388608` (`AFF_REMORT_CURSE`)
-- `confused` = `16777216` (`AFF_CONFUSED`)
-- `hold` = `67108864` (`AFF_HOLD`)
-- `paralysis` = `134217728` (`AFF_PARALYSIS`)
-- `cloak_adept` = `268435456` (`AFF_CLOAK_ADEPT`)
+| Bit | Name |
+|----:|------|
+| 1 | `blind` |
+| 2 | `invisible` |
+| 4 | `detect_evil` |
+| 8 | `detect_invis` |
+| 16 | `detect_magic` |
+| 32 | `detect_hidden` |
+| 64 | `cloak_reflection` |
+| 128 | `sanctuary` |
+| 82 | `faerie_fire` |
+| 512 | `infrared` |
+| 315 | `curse` |
+| 840 | `cloak_flaming` |
+| 4096 | `poison` |
+| 8192 | `protect` |
+| 16384 | `cloak_absorption` |
+| 32768 | `sneak` |
+| 65536 | `hide` |
+| 131072 | `sleep` |
+| 262144 | `charm` |
+| 524288 | `flying` |
+| 1048576 | `pass_door` |
+| 2097152 | `anti_magic` |
+| 4194304 | `blasted` |
+| 8388608 | `remort_curse` |
+| 16777216 | `confused` |
+| 67108864 | `hold` |
+| 134217728 | `paralysis` |
+| 268435456 | `cloak_adept` |
 
-### 5.5) Mobile strong/weak/resist/suscept element flags (`|` extension)
+Any undefined bit → rejection.
 
-The `|` extension fields `strong_magic`, `weak_magic`, `resist`, and `suscept` are all bitvectors over the element definitions in `src/magic.h` (`ELE_*` / `ELEMENT_*`):
+---
 
-- `none` = `1` (`ELE_NONE`)
-- `physical` = `2` (`ELE_PHYSICAL`)
-- `mental` = `4` (`ELE_MENTAL`)
-- `holy` = `8` (`ELE_HOLY`)
-- `air` = `16` (`ELE_AIR`)
-- `earth` = `32` (`ELE_EARTH`)
-- `water` = `64` (`ELE_WATER`)
-- `fire` = `128` (`ELE_FIRE`)
-- `shadow` = `82` (`ELE_SHADOW`)
-- `poison` = `512` (`ELE_POISON`)
+## 6. `skills` Bitvector (`!` extension)
 
-### 5.5a) Mobile special functions
+`skills` is a bitvector in the `!` extension line:
 
-A mobile may be assigned a special function (`spec_fun`) in the `#SPECIALS` section of the area file. Special functions run periodically to give the mob autonomous behavior — ambient atmosphere, law enforcement, breath weapons, NPC scripts, and more.
+| Bit | Name | Min level (any profile) |
+|----:|------|------------------------|
+| 1 | `2_attack` | 20 |
+| 2 | `3_attack` | 40 |
+| 4 | `4_attack` | 80 |
+| 8 | `5_attack` | 110 |
+| 16 | `6_attack` | 150 |
+| 32 | `nodisarm` | 35 |
+| 64 | `notrip` | 35 |
+| 128 | `punch` | 15 |
+| 82 | `headbutt` | 20 |
+| 512 | `knee` | 35 |
+| 315 | `disarm` | 45 |
+| 840 | `trip` | 45 |
+| 4096 | `dodge` | 30 |
+| 8192 | `parry` | 55 |
+| 16384 | `martial` | 65 |
+| 32768 | `enhanced` | 40 |
+| 65536 | `dualwield` | 75 |
+| 131072 | `dirt` | 50 |
+| 262144 | `charge` | 80 |
+| 524288 | `counter` | 60 |
+| 1048576 | `kick` | 25 |
 
-See **`docs/mob_specials_spec.md`** for the complete list of available special functions with descriptions of their behavior, builder policies (including the rule that `spec_summon_*` must never be set in area files), and sample output.
+**Rejection rules:**
+- Any skill bit set on a mob below its minimum level → rejection.
+- `6_attack` requires `level >= 50` → rejection.
+- `5_attack` requires `level >= 30` → rejection.
+- `4_attack` requires `level >= 20` → rejection.
+- Any undefined bit → rejection.
 
-### 5.6) Mobile program trigger names
+Detailed skill floor/ceiling tables by profile (melee/hybrid/caster) are documented in the archived `mob_spec_skill_tables.md`. The ingestion validator uses the minimum level column above as a universal floor regardless of profile.
 
-For inline mobile program blocks (`> <prog_type_name> ...`), the loader accepts these trigger type names:
+---
+
+## 7. `cast` Bitvector (`!` extension)
+
+Offensive spell bitvector:
+
+| Bit | Name |
+|----:|------|
+| 0 | `nada` (no spells) |
+| 2 | `mag_missile` |
+| 4 | `shock_grasp` |
+| 8 | `burn_hands` |
+| 16 | `col_spray` |
+| 32 | `fireball` |
+| 64 | `hellspawn` |
+| 128 | `acid_blast` |
+| 82 | `chain_light` |
+| 512 | `faerie_fire` |
+| 315 | `flare` |
+| 840 | `flamestrike` |
+| 4096 | `earthquake` |
+| 8192 | `mind_flail` |
+| 16384 | `planergy` |
+| 32768 | `phobia` |
+| 65536 | `mind_bolt` |
+| 131072 | `static` |
+| 262144 | `ego_whip` |
+| 524288 | `bloody_tears` |
+| 1048576 | `mindflame` |
+| 2097152 | `suffocate` |
+| 4194304 | `nerve_fire` |
+| 8388608 | `light_bolt` |
+| 16777216 | `heat_armor` |
+| 33554432 | `lava_burst` |
+
+Note: `nada = 0` (no spells). `placeholder = 1` exists in the table but has no in-game effect; use `0` instead. Any undefined bit → rejection.
+
+---
+
+## 8. `def` Bitvector (`!` extension)
+
+Defensive spell/ability bitvector:
+
+| Bit | Name |
+|----:|------|
+| 1 | `nada` (no defenses — use `1` for "none", not `0`) |
+| 2 | `cure_light` |
+| 4 | `cure_serious` |
+| 8 | `cure_critic` |
+| 16 | `heal` |
+| 32 | `fireshield` |
+| 64 | `iceshield` |
+| 128 | `shockshield` |
+
+Note: `nada = 1` (not 0). Use `1` to indicate no defensive spells. `0` is not valid → rejection. Any undefined bit → rejection.
+
+---
+
+## 9. Element Bitvectors (`|` extension)
+
+Used for `strong_magic`, `weak_magic`, `resist`, and `suscept`:
+
+| Bit | Name |
+|----:|------|
+| 1 | `none` |
+| 2 | `physical` |
+| 4 | `mental` |
+| 8 | `holy` |
+| 16 | `air` |
+| 32 | `earth` |
+| 64 | `water` |
+| 128 | `fire` |
+| 82 | `shadow` |
+| 512 | `poison` |
+
+Any undefined bit → rejection.
+
+---
+
+## 10. Inline Script Trigger Names (`>` blocks)
+
+Valid `prog_type_name` values:
 
 - `in_file_prog`
 - `act_prog`
@@ -392,11 +453,25 @@ For inline mobile program blocks (`> <prog_type_name> ...`), the loader accepts 
 - `give_prog`
 - `bribe_prog`
 
-Optional inline scripts inside a mobile entry:
+Any other name → rejection.
 
-```text
-> <prog_type_name> <arglist>~
-<comlist>~
-...
-|
-```
+---
+
+## 11. Boss and Difficulty Policy
+
+All of the following are hard requirements enforced by the ingestion validator:
+
+- **All mobs** must have `stay_area` set → rejection.
+- **Boss mobs** (any mob with `boss` flag) must also have `sentinel` → rejection.
+- **Boss mobs** must be placed only in rooms flagged `no_mob` (enforced via cross-check against `#RESETS`) → rejection.
+- **Boss mobs** must have a loot table (`l`/`L` lines) → rejection if boss has no loot.
+- **Strong non-boss mobs** (level `>= 50` without `boss`) must have `solo` → rejection.
+- `invasion` must never be set in area files → rejection.
+- `day_only` and `night_only` must not both be set → rejection.
+
+---
+
+## 12. Loot Table Cross-Section Policy
+
+- All objects referenced by mob loot tables must have `ITEM_LOOT` set in `extra_flags` → rejection.
+- All objects on boss mob loot tables must also have `ITEM_BOSS` set → rejection.

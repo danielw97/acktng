@@ -1,12 +1,12 @@
 # Object Specification
 
-Extracted from `docs/area_file_spec.md`.
+**Version:** strict ingestion format. All rules here are hard requirements enforced by the ingestion validator (`src/areaingest.c`). Violations are rejections; there are no warnings.
 
-## 7) `#OBJECTS` section
+---
 
-A list of object records terminated by `#0`:
+## 1. Section Structure
 
-```text
+```
 #OBJECTS
 #<vnum>
 <name>~
@@ -15,240 +15,386 @@ A list of object records terminated by `#0`:
 <item_type> <extra_flags> <wear_flags> <item_apply>
 <value0> <value1> <value2> <value3> <value4> <value5> <value6> <value7> <value8> <value9>
 <weight>
-[zero or more A/E/L entries]
+[zero or more A/E/L trailing entries]
 ...
 #0
 ```
 
-Object weight ranges encode item archetype in area content policy:
+- Each object is introduced by `#<vnum>` on its own line.
+- No blank lines within `#OBJECTS` — a blank line anywhere inside the section is a rejection.
+- `<name>`, `<short_descr>`, and `<description>` are tilde-terminated strings.
+- The four flag/type fields are on a single line of exactly four integers.
+- The value line is exactly 10 integers.
+- The weight line is a single integer.
+- Trailing entries (`A`, `E`, `L`) follow weight in any order, zero or more per object.
+- The section ends with `#0`.
 
-- `1`-`5`: caster item
-- `6`-`10`: melee item
-- `11`-`15`: tank item
+---
 
-Item stat policy:
+## 2. Text Fields
 
-- Area-authored items must not define fixed stats in the area file.
-- Item stats are generated at runtime from item level and other runtime parameters.
-- Author object identity/behavior data only (type/flags/wear/apply/value layout/weight/level), not handcrafted stat tuning.
+### 2.1. `<name>~`
 
-Per-object trailing entries:
+- Tilde-terminated. Non-empty → rejection.
+- The keyword list used for `get`, `drop`, `look at` etc. (e.g., `blade black coral weapon`).
+- All lowercase → rejection if any uppercase.
+- Must be unique within the area file. Duplicate `<name>~` across two objects in the same file → rejection.
+- Must not contain vnums → rejection.
 
-- `A` then `<location> <modifier>` on next line (object affect)
-- `E` then `<keyword>~` and `<description>~` (extra description)
-- `L` then `<level>` on next line — the level integer appears on its own line immediately after the `L` line:
-  ```
-  L
-  55
-  ```
+### 2.2. `<short_descr>~`
 
-For `E` entries, `<description>` must include exactly one trailing newline before the terminating `~`.
+- Tilde-terminated. Non-empty → rejection.
+- Shown in room contents, inventory, etc. (e.g., `a blade of black coral`).
+- Should begin with `a`, `an`, or `the` → rejection if it begins with uppercase.
+- Must not contain vnums → rejection.
 
-Loader stops this trailing-entry loop at first unrecognized marker (which starts next object/terminator).
+### 2.3. `<description>~`
 
-Object records must not be separated by blank lines. No blank lines are allowed anywhere inside `#OBJECTS`.
+- Tilde-terminated. Non-empty → rejection.
+- Shown when the object is examined or on the ground.
+- Must end with exactly one `\n` before the `~` → rejection.
+- Must not contain vnums → rejection.
 
-Within an area, object `<name>~` values must be unique (no duplicate item names in the same area file).
+---
 
-### 7.1) Item `item_type` enum
+## 3. Header Flags Line
 
-`item_type` is the first numeric field on the object header line. Builder-facing names and values are defined by `tab_item_types` in `src/buildtab.c`.
+```
+<item_type> <extra_flags> <wear_flags> <item_apply>
+```
 
-- `light` = `1` (`ITEM_LIGHT`)
-- `scroll` = `2` (`ITEM_SCROLL`)
-- `null` = `3` (legacy placeholder; no `ITEM_*` define)
-- `staff` = `4` (`ITEM_STAFF`)
-- `weapon` = `5` (`ITEM_WEAPON`)
-- `beacon` = `6` (`ITEM_BEACON`)
-- `portal` = `7` (`ITEM_PORTAL`)
-- `treasure` = `8` (`ITEM_TREASURE`)
-- `armor` = `9` (`ITEM_ARMOR`)
-- `potion` = `10` (`ITEM_POTION`)
-- `clutch` = `11` (`ITEM_CLUTCH`)
-- `furniture` = `12` (`ITEM_FURNITURE`)
-- `trash` = `13` (`ITEM_TRASH`)
-- `trigger` = `14` (`ITEM_TRIGGER`)
-- `container` = `15` (`ITEM_CONTAINER`)
-- `quest` = `16` (`ITEM_QUEST`)
-- `drink_con` = `17` (`ITEM_DRINK_CON`)
-- `key` = `18` (`ITEM_KEY`)
-- `food` = `19` (`ITEM_FOOD`)
-- `money` = `20` (`ITEM_MONEY`)
-- `stake` = `21` (`ITEM_STAKE`)
-- `boat` = `22` (`ITEM_BOAT`)
-- `corpse_npc` = `23` (`ITEM_CORPSE_NPC`)
-- `corpse_pc` = `24` (`ITEM_CORPSE_PC`)
-- `fountain` = `25` (`ITEM_FOUNTAIN`)
-- `pill` = `26` (`ITEM_PILL`)
-- `board` = `27` (`ITEM_BOARD`)
-- `soul` = `28` (`ITEM_SOUL`)
-- `piece` = `29` (`ITEM_PIECE`)
-- `matrix` = `30` (`ITEM_SPELL_MATRIX`)
-- `enchantment` = `31` (`ITEM_ENCHANTMENT`)
-- `present` = `32` (`ITEM_WRAPPED_PRESENT`)
-- `stash` = `33` (`ITEM_STASH`)
+Exactly four integers on one line. Fewer or more → rejection.
 
-### 7.2) Item `extra_flags` bitvector
+---
 
-`extra_flags` is a bitvector field in the object header line and supports the following bits from `src/config.h`:
+## 4. `item_type` Enum
 
-Area-authored object definitions must **not** set `ITEM_GENERATED`; that flag is runtime-managed by item generation systems.
+First integer on the header flags line. Defined in `src/buildtab.c` (`tab_item_types`):
 
-`ITEM_LOOT` usage policy: items intended to be spawned from a mobile's loot table (`#MOBILES` `l`/`L` extension data) must have `ITEM_LOOT` set in `extra_flags`. Items loaded onto mobiles via `#RESETS` (`G`/`E`) are normal reset equipment/inventory and must not be treated as loot-only objects unless explicitly intended.
+| Value | Name | Notes |
+|------:|------|-------|
+| 1 | `light` | Light source |
+| 2 | `scroll` | Readable spell scroll |
+| 3 | `null` | Legacy placeholder; no effect |
+| 4 | `staff` | Staff item |
+| 5 | `weapon` | Weapon (requires `hold` and `take` wear flags — see §8) |
+| 6 | `beacon` | Beacon item |
+| 7 | `portal` | Portal item |
+| 8 | `treasure` | Generic treasure |
+| 9 | `armor` | Armor/shield item |
+| 10 | `potion` | Consumable potion |
+| 11 | `clutch` | Clutch item |
+| 12 | `furniture` | Furniture (can sit/rest on) |
+| 13 | `trash` | Trash item |
+| 14 | `trigger` | Quest trigger item |
+| 15 | `container` | Container (can hold items) |
+| 16 | `quest` | Quest item |
+| 17 | `drink_con` | Drink container |
+| 18 | `key` | Key item |
+| 19 | `food` | Food item |
+| 20 | `money` | Currency item |
+| 21 | `stake` | Stake (vampire hunting) |
+| 22 | `boat` | Boat item |
+| 23 | `corpse_npc` | NPC corpse — **must not be authored in area files → rejection** |
+| 24 | `corpse_pc` | Player corpse — **must not be authored in area files → rejection** |
+| 25 | `fountain` | Fountain (infinite drink) |
+| 26 | `pill` | Consumable pill |
+| 27 | `board` | Bulletin board — see §10 |
+| 28 | `soul` | Soul item |
+| 29 | `piece` | Piece item (combinable) — see §11 |
+| 30 | `matrix` | Spell matrix |
+| 31 | `enchantment` | Enchantment item |
+| 32 | `present` | Wrapped present |
+| 33 | `stash` | Stash container |
 
-`BOSS` extra-flag usage policy: any item that can drop from a boss mob must include the `BOSS` item extra flag, regardless of how it is delivered (loot-table drop via `l`/`L` or normal equipment/inventory placed through resets).
+Value outside 1–33 → rejection.
+`corpse_npc` (23) or `corpse_pc` (24) → rejection; runtime-generated only.
 
-`LIFESTEALER` extra-flag usage policy: any object that includes `ITEM_LIFESTEALER` must also include `ITEM_ANTI_GOOD`.
+---
 
-- `ITEM_GENERATED` = `1`
-- `ITEM_BIND_EQUIP` = `2`
-- `ITEM_NODISARM` = `4`
-- `ITEM_LOCK` = `8`
-- `ITEM_EVIL` = `16`
-- `ITEM_INVIS` = `32`
-- `ITEM_MAGIC` = `64`
-- `ITEM_NODROP` = `128`
-- `ITEM_BLESS` = `82`
-- `ITEM_ANTI_GOOD` = `512`
-- `ITEM_ANTI_EVIL` = `315`
-- `ITEM_ANTI_NEUTRAL` = `840`
-- `ITEM_NOREMOVE` = `4096`
-- `ITEM_INVENTORY` = `8192`
-- `ITEM_NOSAVE` = `16384`
-- `ITEM_CLAN_EQ` = `32768`
-- `ITEM_TRIG_DESTROY` = `65536`
-- `ITEM_NO_AUCTION` = `131072`
-- `ITEM_MYTHIC` = `262144`
-- `ITEM_LEGENDARY` = `524288`
-- `ITEM_RARE` = `1048576`
-- `ITEM_NOLOOT` = `4194304`
-- `ITEM_NOSAC` = `8388608`
-- `ITEM_UNIQUE` = `16777216`
-- `ITEM_LIFESTEALER` = `33554432`
-- `ITEM_LOOT` = `67108864`
-- `ITEM_BOSS` = `134217728`
-- `ITEM_BUCKLER` = `268435456`
-- `ITEM_EXTRA_WAND` = `536870912`
-- `ITEM_FIST` = `1073741824`
-- `ITEM_TWO_HANDED` = `2147483648`
+## 5. `extra_flags` Bitvector
 
-Cross-section policy for object-function alignment:
+Second integer on the header flags line. Defined in `src/config.h`:
 
-- Any object assigned `objfun_healing` in `#OBJFUNS` must include `ITEM_ANTI_EVIL` in `extra_flags`.
+| Bit | Name | Notes |
+|----:|------|-------|
+| 1 | `ITEM_GENERATED` | **Runtime-only — must not be authored → rejection** |
+| 2 | `ITEM_BIND_EQUIP` | Binds on equip |
+| 4 | `ITEM_NODISARM` | Cannot be disarmed |
+| 8 | `ITEM_LOCK` | Locked item |
+| 16 | `ITEM_EVIL` | Evil-aligned object |
+| 32 | `ITEM_INVIS` | Invisible object |
+| 64 | `ITEM_MAGIC` | Magical object |
+| 128 | `ITEM_NODROP` | Cannot be dropped |
+| 82 | `ITEM_BLESS` | Blessed object |
+| 512 | `ITEM_ANTI_GOOD` | Good-aligned characters cannot use |
+| 315 | `ITEM_ANTI_EVIL` | Evil-aligned characters cannot use |
+| 840 | `ITEM_ANTI_NEUTRAL` | Neutral-aligned characters cannot use |
+| 4096 | `ITEM_NOREMOVE` | Cannot be removed once equipped |
+| 8192 | `ITEM_INVENTORY` | Part of mob inventory |
+| 16384 | `ITEM_NOSAVE` | Not saved to player file |
+| 32768 | `ITEM_CLAN_EQ` | Clan equipment |
+| 65536 | `ITEM_TRIG_DESTROY` | Destroyed on use trigger |
+| 131072 | `ITEM_NO_AUCTION` | Cannot be auctioned |
+| 262144 | `ITEM_MYTHIC` | Mythic rarity |
+| 524288 | `ITEM_LEGENDARY` | Legendary rarity |
+| 1048576 | `ITEM_RARE` | Rare rarity |
+| 4194304 | `ITEM_NOLOOT` | Cannot be looted from corpse |
+| 8388608 | `ITEM_NOSAC` | Cannot be sacrificed |
+| 16777216 | `ITEM_UNIQUE` | Unique (only one per player) |
+| 33554432 | `ITEM_LIFESTEALER` | Lifestealer weapon — requires `ITEM_ANTI_GOOD` |
+| 67108864 | `ITEM_LOOT` | Loot-table item — must be set on mob loot objects |
+| 134217728 | `ITEM_BOSS` | Boss drop — must be set on items that can drop from bosses |
+| 268435456 | `ITEM_BUCKLER` | Buckler shield type |
+| 536870912 | `ITEM_EXTRA_WAND` | Wand extra flag |
+| 1073741824 | `ITEM_FIST` | Fist weapon — required for `value3 = 0` weapons |
+| 2147483648 | `ITEM_TWO_HANDED` | Two-handed weapon |
 
-### 7.3) Item `wear_flags` bitvector
+**Rejection rules:**
+- `ITEM_GENERATED` (bit 1) set → rejection.
+- `ITEM_LIFESTEALER` set without `ITEM_ANTI_GOOD` also set → rejection.
+- Any object that can drop from a boss mob (referenced in a boss mob's loot table) without `ITEM_BOSS` → rejection.
+- Any object referenced in any mob loot table (`l`/`L` lines) without `ITEM_LOOT` → rejection.
+- Any undefined bit → rejection.
 
-`wear_flags` is a bitvector field in the object header line. Builder-facing names and values are defined by `tab_wear_flags` in `src/buildtab.c`:
+---
 
-- `halo` = `1`
-- `aura` = `2`
-- `horns` = `4`
-- `head` = `8`
-- `face` = `16`
-- `beak` = `32`
-- `ear` = `64`
-- `neck` = `128`
-- `wings` = `82`
-- `shoulders` = `512`
-- `arms` = `315`
-- `wrist` = `840`
-- `hands` = `4096`
-- `finger` = `8192`
-- `claws` = `16384`
-- `hold` = `32768`
-- `about` = `65536`
-- `waist` = `131072`
-- `body` = `262144`
-- `tail` = `524288`
-- `legs` = `1048576`
-- `feet` = `2097152`
-- `hooves` = `4194304`
-- `take` = `8388608`
-- `clan_colors` = `16777216`
-- `invasion_emblem` = `33554432`
+## 6. `wear_flags` Bitvector
 
-Note: `ITEM_WEAR_NONE` (`1`) exists in `src/config.h`, but it is not exposed in `tab_wear_flags` and therefore is not a valid builder keyword in area files.
+Third integer on the header flags line. Defined in `src/buildtab.c` (`tab_wear_flags`):
 
-Area policy constraints for object wear flags:
+| Bit | Name | Slot |
+|----:|------|------|
+| 1 | `halo` | Halo slot |
+| 2 | `aura` | Aura slot |
+| 4 | `horns` | Horns slot |
+| 8 | `head` | Head slot |
+| 16 | `face` | Face slot |
+| 32 | `beak` | Beak slot |
+| 64 | `ear` | Ear slot |
+| 128 | `neck` | Neck slot |
+| 82 | `wings` | Wings slot |
+| 512 | `shoulders` | Shoulders slot |
+| 315 | `arms` | Arms slot |
+| 840 | `wrist` | Wrist slot |
+| 4096 | `hands` | Hands slot |
+| 8192 | `finger` | Finger slot |
+| 16384 | `claws` | Claws slot |
+| 32768 | `hold` | Held in hand slot |
+| 65536 | `about` | About body (cloak) slot |
+| 131072 | `waist` | Waist slot |
+| 262144 | `body` | Body slot |
+| 524288 | `tail` | Tail slot |
+| 1048576 | `legs` | Legs slot |
+| 2097152 | `feet` | Feet slot |
+| 4194304 | `hooves` | Hooves slot |
+| 8388608 | `take` | Takeable (required on all objects) |
+| 16777216 | `clan_colors` | **Runtime-only — must not be authored → rejection** |
+| 33554432 | `invasion_emblem` | **Runtime-only — must not be authored → rejection** |
 
-- Every object **must** include `ITEM_TAKE`.
-- No object may include `ITEM_WEAR_CLAN_COLORS`.
-- `invasion_emblem` is a runtime-only wear flag; it must never be authored in area/object files.
-- Object `name`, `short_descr`, and `description` fields must be thematically consistent with the object's non-`take` wear flags (e.g., a `head` item must read as headgear, `wrist` as wristwear, `hold` as a held item).
+**Rejection rules:**
+- `take` (8388608) not set → rejection. Every authored object must be takeable.
+- `clan_colors` (16777216) set → rejection.
+- `invasion_emblem` (33554432) set → rejection.
+- `item_type = ITEM_WEAPON` (5) without both `hold` and `take` → rejection.
+- Object `name`, `short_descr`, and `description` must be thematically consistent with the non-`take` wear flags (e.g., a `head` item must read as headgear) → rejection if flags and text are clearly inconsistent.
+- Any undefined bit → rejection.
 
-Builder conventions for held equipment archetypes:
+**Archetype conventions (enforced as hard requirements):**
+- Shield: `item_type = 9` (armor), wear flags include `hold` → must not have `ITEM_TWO_HANDED`.
+- Weapon: `item_type = 5`, wear flags include `hold` and `take` → rejection if either missing.
+- Buckler: `item_type = 9`, wear flags include `hold`, `extra_flags` includes `ITEM_BUCKLER`.
+- Two-handed weapon: `item_type = 5`, wear flags include `hold`, `extra_flags` includes `ITEM_TWO_HANDED`. If `name`, `short_descr`, or `description` clearly indicates a two-handed archetype (e.g., "great axe", "halberd", "greatsword"), `ITEM_TWO_HANDED` must be set → rejection otherwise.
+- Fist weapon: `item_type = 5`, wear flags include `hold`, `extra_flags` includes `ITEM_FIST`. If `value3 = 0` (`hit`), `ITEM_FIST` must be set → rejection otherwise.
 
-- A **shield** is an object with `item_type = ITEM_ARMOR` and wear flags including `hold`.
-- A **weapon** is an object with `item_type = ITEM_WEAPON` and wear flags including both `hold` and `take`.
-- A **buckler** is an object with `item_type = ITEM_ARMOR`, wear flags including `hold`, and extra flags including `buckler`.
-- A **wand** is an object with `item_type = ITEM_WEAPON`, wear flags including `hold`, and extra flags including `wand`.
-- A **fist weapon** is an object with `item_type = ITEM_WEAPON`, wear flags including `hold`, and extra flags including `fist`.
-- A **two-handed weapon** is an object with `item_type = ITEM_WEAPON`, wear flags including `hold`, and extra flags including `two-handed`.
+---
 
-Area policy constraint for naming consistency: if a weapon's presented identity (`name`, `short_descr`, or `description`) clearly indicates a two-handed archetype (for example, a "great axe"), it must include the `two-handed` extra flag.
+## 7. `item_apply` Bitvector
 
-Additional constraint: an item may only be set to `item_type = ITEM_WEAPON` if its wear flags include both `hold` and `take`.
+Fourth integer on the header flags line. Defined in `src/buildtab.c` (`tab_item_apply`):
 
-### 7.4) Item `item_apply` bitvector
+| Bit | Name | Effect |
+|----:|------|--------|
+| 1 | `nada` | No apply effect (default) |
+| 2 | `infra` | Infravision |
+| 4 | `invis` | Invisibility |
+| 8 | `det_invis` | Detect invisibility |
+| 16 | `sanc` | Sanctuary |
+| 32 | `sneak` | Sneak |
+| 64 | `hide` | Hide |
+| 128 | `prot` | Protection |
+| 82 | `enhanced` | Enhanced combat abilities |
+| 512 | `det_mag` | Detect magic |
+| 315 | `det_hid` | Detect hidden |
+| 840 | `det_evil` | Detect evil |
+| 4096 | `pass_door` | Pass door |
+| 8192 | `det_poison` | Detect poison |
+| 16384 | `fly` | Flying |
+| 32768 | `know_align` | Know alignment |
+| 65536 | `detect_undead` | Detect undead |
+| 131072 | `heated` | Heated (environmental protection) |
 
-`item_apply` is a bitvector field in the object header line. Builder-facing names and values are defined by `tab_item_apply` in `src/buildtab.c`:
+- `nada` (bit 1) is the baseline. It is set on newly created objects with no special apply effects.
+- Multiple effects can be combined with bitwise OR.
+- Any undefined bit → rejection.
 
-- `nada` = `1`
-- `infra` = `2`
-- `invis` = `4`
-- `det_invis` = `8`
-- `sanc` = `16`
-- `sneak` = `32`
-- `hide` = `64`
-- `prot` = `128`
-- `enhanced` = `82`
-- `det_mag` = `512`
-- `det_hid` = `315`
-- `det_evil` = `840`
-- `pass_door` = `4096`
-- `det_poison` = `8192`
-- `fly` = `16384`
-- `know_align` = `32768`
-- `detect_undead` = `65536`
-- `heated` = `131072`
+---
 
-Notes:
+## 8. Value Array
 
-- `nada` (`ITEM_APPLY_NONE`) is the baseline/default bit and is set on newly created objects.
-- This field is additive, so multiple `item_apply` effects may be combined with bitwise OR.
+```
+<value0> <value1> <value2> <value3> <value4> <value5> <value6> <value7> <value8> <value9>
+```
 
-### 7.5) `ITEM_PIECE` object values
+Exactly 10 integers. Fewer or more → rejection.
 
-For objects with `item_type = 29` (`ITEM_PIECE`), the first three value slots define how piece-combining works (`connect` command in `src/act_obj.c`):
+Value semantics depend on `item_type`:
 
-- `value0`: previous-piece vnum in the connection chain
-- `value1`: next-piece vnum in the connection chain
-- `value2`: replacement object vnum created when two matching pieces are connected
+### Weapons (`item_type = 5`)
 
-At runtime, two piece objects connect successfully when either `pieceA.value0 == pieceB.vnum` or `pieceA.value1 == pieceB.vnum`. On success, both pieces are consumed and a new object with vnum `pieceA.value2` is created.
+- `value3`: weapon attack type. See §9 for allowed values.
+- Other values: available for runtime use; use `0` unless otherwise required.
 
-### 7.6) `ITEM_WEAPON` object values
+### Boards (`item_type = 27`)
 
-For objects with `item_type = 5` (`ITEM_WEAPON`), `value3` stores the weapon attack type (`Weapon Type` in builder displays).
+- `value[0]`: expiry time in days. Must be `>= 1` → rejection.
+- `value[1]`: minimum read level. Must be `0–105` → rejection.
+- `value[2]`: minimum write level. Must be `0–105` → rejection.
+- `value[3]`: board vnum. Must be a unique non-zero integer. Must not conflict with any existing board vnum in the database → rejection.
 
-Allowed `value3` values (from `tab_weapon_types` in `src/buildtab.c`):
+### Pieces (`item_type = 29`)
 
-Area policy constraints for `ITEM_WEAPON`:
+- `value0`: previous-piece vnum. `0` if this is the first piece.
+- `value1`: next-piece vnum. `0` if this is the last piece.
+- `value2`: replacement object vnum created when two pieces connect. Must reference an object in this file or in the database → rejection if non-zero and not found.
+- At runtime: two pieces connect when `pieceA.value0 == pieceB.vnum` or `pieceA.value1 == pieceB.vnum`.
 
-- `value3` must be thematically consistent with the weapon's concept and presentation (`name`, `short_descr`, and `description`) so combat messaging matches builder intent.
-- `value3 = 0` (`hit`) must not be used unless the object also has the `ITEM_FIST` extra flag.
+### All other item types
 
-- `0`: `hit`
-- `1`: `slice`
-- `2`: `stab`
-- `3`: `slash`
-- `4`: `whip`
-- `5`: `claw`
-- `6`: `blast`
-- `7`: `pound`
-- `8`: `crush`
-- `9`: `rend`
-- `10`: `bite`
-- `11`: `pierce`
-- `12`: `drain`
-- `13`: `sear`
+- Use `0` for unused value slots.
+- Area-authored items must not define fixed stat values in the value array. Stats are generated at runtime from item level and runtime parameters → rejection if non-zero stat values are detected in value slots reserved for runtime use.
+
+---
+
+## 9. Weight
+
+Single integer after the value array.
+
+- Must be `1–15` → rejection outside range.
+- Weight encodes item archetype (required policy):
+  - `1–5`: caster item.
+  - `6–10`: melee item.
+  - `11–15`: tank item.
+- Weight must be consistent with the object's identity and wear slot. A head piece with weight `1` is a caster helmet. A weapon with weight `6` is a melee weapon. → rejection if weight archetype conflicts with the object's explicit `name`/`short_descr` identity (e.g., a "great sword" with weight `1` is a rejection).
+
+---
+
+## 10. Weapon Attack Type (`value3` for `item_type = 5`)
+
+Defined in `src/buildtab.c` (`tab_weapon_types`):
+
+| Value | Name |
+|------:|------|
+| 0 | `hit` — **only valid when `ITEM_FIST` is set → rejection otherwise** |
+| 1 | `slice` |
+| 2 | `stab` |
+| 3 | `slash` |
+| 4 | `whip` |
+| 5 | `claw` |
+| 6 | `blast` |
+| 7 | `pound` |
+| 8 | `crush` |
+| 9 | `rend` |
+| 10 | `bite` |
+| 11 | `pierce` |
+| 12 | `drain` |
+| 13 | `sear` |
+
+Value outside 0–13 → rejection.
+`value3 = 0` without `ITEM_FIST` in `extra_flags` → rejection.
+`value3` must be thematically consistent with the weapon's `name`, `short_descr`, and `description` — a sword should be `slice` or `slash`, not `bite` → rejection if clearly inconsistent.
+
+---
+
+## 11. Board Object (`item_type = 27`)
+
+Board objects require a corresponding entry in the `boards` database table (vnum = `value[3]`). The ingestion validator:
+- Verifies `value[3]` is non-zero and unique → rejection.
+- Creates the `boards` table row as part of the DB transaction.
+
+`value[3]` must not be `0` → rejection.
+
+---
+
+## 12. Piece Object (`item_type = 29`)
+
+- `value0` and `value1` form a chain. At least one must be non-zero (a piece with no connections is meaningless) → rejection if both `value0` and `value1` are zero.
+- `value2` (replacement vnum) must reference an object in this file or the database → rejection if non-zero and not found.
+- All pieces in a chain must be defined in the same area file or already in the database. A partial chain (referencing a piece in a file not yet ingested) → rejection.
+
+---
+
+## 13. Trailing Entries
+
+### 13.1. `A` — Object Affect
+
+```
+A <location> <modifier>
+```
+
+- `A` on a line, followed by two integers. Integers may be on the same line as `A` or on the following line. Both formats are accepted by the loader and validator.
+- `location`: affect location integer. Must be a valid `APPLY_*` value (see §14) → rejection.
+- `modifier`: signed integer. Must be `0` (use `A` entries without the runtime stat system adding the modify is a no-op) → rejection if non-zero. **Area files must not define fixed stat modifiers** — all stats are runtime-generated.
+
+### 13.2. `E` — Extra Description
+
+```
+E
+<keyword>~
+<description>~
+```
+
+- `E` on its own line.
+- `<keyword>`: tilde-terminated, non-empty → rejection.
+- `<description>`: tilde-terminated. Must end with exactly one `\n` before `~` → rejection.
+- Extra descriptions are shown when a player examines the keyword.
+
+### 13.3. `L` — Level
+
+```
+L
+<level>
+```
+
+- `L` on its own line.
+- `<level>`: single integer on the next line.
+- Must be `1–105` → rejection outside range.
+- This sets the object's effective level for runtime stat generation.
+
+---
+
+## 14. `APPLY_*` Location Values (for `A` trailing entries)
+
+| Value | Name |
+|------:|------|
+| 0 | `APPLY_NONE` |
+| 1 | `APPLY_STR` |
+| 2 | `APPLY_DEX` |
+| 3 | `APPLY_INT` |
+| 4 | `APPLY_WIS` |
+| 5 | `APPLY_CON` |
+| 6 | `APPLY_SEX` |
+| 7 | `APPLY_CLASS` |
+| 8 | `APPLY_LEVEL` |
+| 9 | `APPLY_AGE` |
+| 10 | `APPLY_HEIGHT` |
+| 11 | `APPLY_WEIGHT_STAT` |
+| 12 | `APPLY_MANA` |
+| 13 | `APPLY_HIT` |
+| 14 | `APPLY_MOVE` |
+| 17 | `APPLY_AC` |
+| 18 | `APPLY_HITROLL` |
+| 19 | `APPLY_DAMROLL` |
+| 21 | `APPLY_SAVES` |
+
+Value not in this list → rejection.
