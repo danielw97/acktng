@@ -6,4 +6,5 @@ __pycache__/
 player/
 area/core
 area/core.*
-cores/*/
+cores/*
+!cores/.gitkeep
