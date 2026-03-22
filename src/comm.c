@@ -417,7 +417,7 @@ int main(int argc, char **argv)
       } listeners[] = {
           {port, "telnet"},
           {ws_port, "WebSocket loopback"},
-          {tls_port, "TLS"},
+          {control_tls >= 0 ? tls_port : -1, "TLS"},
           {sniff_port, "auto"},
       };
       int n = sizeof(listeners) / sizeof(listeners[0]);
