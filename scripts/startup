@@ -3,9 +3,13 @@
 # /bin/sh replacement for startup, by Spectrum
 #
 
-# Telnet port (public, all interfaces)
+# Public port: auto-detects TLS or plain telnet (sniff port).
+# Mudlet "secure" connections and plain telnet both work on this port.
 port=8890
-# TLS port (public, all interfaces)
+# Internal plain-telnet port (bound to all interfaces; can be firewalled from outside).
+# Required as the server's first positional argument.
+plain_port=4000
+# Dedicated TLS-only port (public, all interfaces)
 tls_port=8880
 tls_cert=/etc/letsencrypt/live/ackmud.com/fullchain.pem
 tls_key=/etc/letsencrypt/live/ackmud.com/privkey.pem
@@ -53,7 +57,7 @@ do
   done
 
   # run the mud
-  ../src/ack $port --ws-loopback $ws_port --tls-port $tls_port --tls-cert $tls_cert --tls-key $tls_key >$logfile 2>&1
+  ../src/ack $plain_port --sniff-port $port --ws-loopback $ws_port --tls-port $tls_port --tls-cert $tls_cert --tls-key $tls_key >$logfile 2>&1
 
   # shutdown?
 
