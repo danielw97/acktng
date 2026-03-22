@@ -36,7 +36,6 @@ fi
 TLS_CERT="/tmp/mud-sniff-tls-cert-$$.pem"
 TLS_KEY="/tmp/mud-sniff-tls-key-$$.pem"
 TLS_ARGS=""
-HAS_TLS=0
 
 if command -v openssl >/dev/null 2>&1; then
     if openssl req -x509 -newkey rsa:2048 \
@@ -45,6 +44,15 @@ if command -v openssl >/dev/null 2>&1; then
         TLS_ARGS="--tls-cert $TLS_CERT --tls-key $TLS_KEY"
     fi
 fi
+
+# ---------------------------------------------------------------------------
+# remove_player_file <NAME> — delete saved player file so every run starts
+# the new-character login flow (idempotent test runs).
+# ---------------------------------------------------------------------------
+remove_player_file() {
+    _lower=$(echo "$1" | tr '[:upper:]' '[:lower:]')
+    rm -f "$PLAYER_DIR/$(echo "$_lower" | cut -c1)/$_lower"
+}
 
 # ---------------------------------------------------------------------------
 # Cleanup helper – always runs on exit to stop a stray server process.
@@ -68,16 +76,11 @@ if ! (cd "$SRC_DIR" && make ack); then
 fi
 
 # ---------------------------------------------------------------------------
-# Step 2: remove any leftover player file so the login flow is always the
+# Step 2: remove any leftover player files so the login flow is always the
 # new-character path (idempotent test runs).
 # ---------------------------------------------------------------------------
-player_lower=$(echo "$TEST_PLAYER" | tr '[:upper:]' '[:lower:]')
-first_letter=$(echo "$player_lower" | cut -c1)
-rm -f "$PLAYER_DIR/$first_letter/$player_lower"
-
-tls_player_lower=$(echo "$TLS_TEST_PLAYER" | tr '[:upper:]' '[:lower:]')
-tls_first_letter=$(echo "$tls_player_lower" | cut -c1)
-rm -f "$PLAYER_DIR/$tls_first_letter/$tls_player_lower"
+remove_player_file "$TEST_PLAYER"
+remove_player_file "$TLS_TEST_PLAYER"
 
 # ---------------------------------------------------------------------------
 # Step 3: launch
@@ -336,22 +339,16 @@ fi
 # no visible output on the TLS client side.
 # ---------------------------------------------------------------------------
 if [ -n "$TLS_ARGS" ] && grep -q "(auto)" "$LOG_FILE" 2>/dev/null; then
-    HAS_TLS=1
     echo "integration-test-telnet: TLS on sniff port is active, validating TLS login for '${TLS_TEST_PLAYER}'..."
-else
-    echo "integration-test-telnet: TLS not available; skipping TLS-on-sniff test."
-fi
-
-if [ "$HAS_TLS" -eq 1 ]; then
-    python3 "$SCRIPT_DIR/tls-test-client.py" "$TEST_PORT" "$TLS_TEST_PLAYER" "$TEST_PASSWORD"
-    TLS_STATUS=$?
-    if [ "$TLS_STATUS" -ne 0 ]; then
+    if ! python3 "$SCRIPT_DIR/tls-test-client.py" "$TEST_PORT" "$TLS_TEST_PLAYER" "$TEST_PASSWORD"; then
         echo "integration-test-telnet: FAILED - TLS-on-sniff login did not complete"
         echo "--- MUD output ---"
         cat "$LOG_FILE"
         echo "------------------"
         exit 1
     fi
+else
+    echo "integration-test-telnet: TLS not available; skipping TLS-on-sniff test."
 fi
 
 # ---------------------------------------------------------------------------
