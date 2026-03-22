@@ -88,10 +88,10 @@ remove_player_file "$TLS_TEST_PLAYER"
 # ---------------------------------------------------------------------------
 # Step 3: launch
 #
-# Use --sniff-port (matching the production startup script) so that the TLS
-# context is initialised when cert/key are provided.  A positional plain-telnet
-# port leaves global_ssl_ctx NULL, causing TLS clients to receive plain text
-# instead of a TLS server hello and appear to produce no output.
+# Use --sniff-port so the TLS context is initialised when cert/key are
+# provided.  A positional plain-telnet port leaves global_ssl_ctx NULL,
+# causing TLS clients to receive plain text instead of a TLS server hello
+# and appear to produce no output.  Both startup scripts use --sniff-port.
 # ---------------------------------------------------------------------------
 echo "integration-test-telnet: starting MUD on port $TEST_PORT..."
 # shellcheck disable=SC2086
