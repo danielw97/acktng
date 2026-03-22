@@ -21,6 +21,7 @@ LOG_FILE="/tmp/mud-integration-test-telnet-$$.log"
 # when both tests run in the same session.
 TEST_PLAYER="Telnetrat"
 TEST_PASSWORD="telnetpass"
+TLS_TEST_PLAYER="Snifftls"
 
 # Ask the OS for a free ephemeral port to avoid collisions on shared CI hosts.
 if command -v python3 >/dev/null 2>&1; then
@@ -30,6 +31,29 @@ else
     TEST_PORT=$((RANDOM % 16383 + 49152))
 fi
 
+# Try to generate a self-signed certificate for TLS-on-sniff testing.
+# If openssl is unavailable or cert generation fails, TLS test is skipped.
+TLS_CERT="/tmp/mud-sniff-tls-cert-$$.pem"
+TLS_KEY="/tmp/mud-sniff-tls-key-$$.pem"
+TLS_ARGS=""
+
+if command -v openssl >/dev/null 2>&1; then
+    if openssl req -x509 -newkey rsa:2048 \
+           -keyout "$TLS_KEY" -out "$TLS_CERT" \
+           -days 1 -nodes -subj '/CN=localhost' >/dev/null 2>&1; then
+        TLS_ARGS="--tls-cert $TLS_CERT --tls-key $TLS_KEY"
+    fi
+fi
+
+# ---------------------------------------------------------------------------
+# remove_player_file <NAME> — delete saved player file so every run starts
+# the new-character login flow (idempotent test runs).
+# ---------------------------------------------------------------------------
+remove_player_file() {
+    _lower=$(echo "$1" | tr '[:upper:]' '[:lower:]')
+    rm -f "$PLAYER_DIR/$(echo "$_lower" | cut -c1)/$_lower"
+}
+
 # ---------------------------------------------------------------------------
 # Cleanup helper – always runs on exit to stop a stray server process.
 # ---------------------------------------------------------------------------
@@ -38,7 +62,7 @@ cleanup() {
         kill "$MUD_PID" 2>/dev/null || true
         wait "$MUD_PID" 2>/dev/null || true
     fi
-    rm -f "$LOG_FILE"
+    rm -f "$LOG_FILE" "$TLS_CERT" "$TLS_KEY"
 }
 trap cleanup EXIT
 
@@ -52,18 +76,23 @@ if ! (cd "$SRC_DIR" && make ack); then
 fi
 
 # ---------------------------------------------------------------------------
-# Step 2: remove any leftover player file so the login flow is always the
+# Step 2: remove any leftover player files so the login flow is always the
 # new-character path (idempotent test runs).
 # ---------------------------------------------------------------------------
-player_lower=$(echo "$TEST_PLAYER" | tr '[:upper:]' '[:lower:]')
-first_letter=$(echo "$player_lower" | cut -c1)
-rm -f "$PLAYER_DIR/$first_letter/$player_lower"
+remove_player_file "$TEST_PLAYER"
+remove_player_file "$TLS_TEST_PLAYER"
 
 # ---------------------------------------------------------------------------
 # Step 3: launch
+#
+# Use --sniff-port (matching the production startup script) so that the TLS
+# context is initialised when cert/key are provided.  A positional plain-telnet
+# port leaves global_ssl_ctx NULL, causing TLS clients to receive plain text
+# instead of a TLS server hello and appear to produce no output.
 # ---------------------------------------------------------------------------
 echo "integration-test-telnet: starting MUD on port $TEST_PORT..."
-(cd "$AREA_DIR" && ../src/ack "$TEST_PORT") >"$LOG_FILE" 2>&1 &
+# shellcheck disable=SC2086
+(cd "$AREA_DIR" && ../src/ack --sniff-port "$TEST_PORT" $TLS_ARGS) >"$LOG_FILE" 2>&1 &
 MUD_PID=$!
 
 echo "integration-test-telnet: MUD started (PID $MUD_PID), waiting for boot..."
@@ -300,7 +329,30 @@ if [ "$LOGIN_STATUS" -ne 0 ]; then
 fi
 
 # ---------------------------------------------------------------------------
-# Step 6: let the MUD keep running and watch for crashes.
+# Step 6: TLS-on-sniff-port login flow.
+#
+# This specifically tests the production configuration where a single sniff
+# port serves both plain-telnet and TLS clients.  The bug being caught here:
+# when a positional plain-telnet port was used instead of --sniff-port,
+# global_ssl_ctx was never initialised, so TLS clients received plain text
+# (the telnet IAC bytes + banner) instead of a TLS server hello, producing
+# no visible output on the TLS client side.
+# ---------------------------------------------------------------------------
+if [ -n "$TLS_ARGS" ] && grep -q "(auto)" "$LOG_FILE" 2>/dev/null; then
+    echo "integration-test-telnet: TLS on sniff port is active, validating TLS login for '${TLS_TEST_PLAYER}'..."
+    if ! python3 "$SCRIPT_DIR/tls-test-client.py" "$TEST_PORT" "$TLS_TEST_PLAYER" "$TEST_PASSWORD"; then
+        echo "integration-test-telnet: FAILED - TLS-on-sniff login did not complete"
+        echo "--- MUD output ---"
+        cat "$LOG_FILE"
+        echo "------------------"
+        exit 1
+    fi
+else
+    echo "integration-test-telnet: TLS not available; skipping TLS-on-sniff test."
+fi
+
+# ---------------------------------------------------------------------------
+# Step 7: let the MUD keep running and watch for crashes.
 # ---------------------------------------------------------------------------
 echo "integration-test-telnet: monitoring MUD for ${RUN_SECONDS}s..."
 elapsed=0
