@@ -41,6 +41,8 @@ ulimit -c 50000
 # stack limit
 ulimit -s 1500
 
+mkdir -p ../cores
+
 renice +5 -p $$
 
 # loop indefinately
@@ -56,8 +58,40 @@ do
     index=$((index+1))
   done
 
+  # snapshot the executable before launching so we have the exact binary
+  # that ran if a core dump is produced
+  ack_snapshot=$(mktemp ../cores/ack.XXXXXX)
+  cp ../src/ack "$ack_snapshot"
+
   # run the mud
   ../src/ack $plain_port --sniff-port $port --ws-loopback $ws_port --tls-port $tls_port --tls-cert $tls_cert --tls-key $tls_key >$logfile 2>&1
+
+  # If do_hotreboot() ran, it wrote a snapshot of the binary it exec'd;
+  # that is more accurate than our startup-time snapshot, so prefer it.
+  if [ -f ../cores/ack.hotreboot ]; then
+    rm -f "$ack_snapshot"
+    ack_snapshot=../cores/ack.hotreboot
+  fi
+
+  # collect all core dumps into a single ../cores/<timestamp>/ directory
+  coredir=""
+  for corefile in core core.*; do
+    if [ -f "$corefile" ]; then
+      if [ -z "$coredir" ]; then
+        coredir=../cores/$(date +%Y%m%d_%H%M%S)_$$
+        mkdir -p "$coredir"
+        mv "$ack_snapshot" "$coredir/ack"
+        ack_snapshot=""
+      fi
+      mv "$corefile" "$coredir/"
+    fi
+  done
+  if [ -n "$coredir" ]; then
+    echo "startup: core dump(s) saved to $coredir" >>$logfile
+  fi
+
+  # discard whichever snapshot was not consumed by a core
+  rm -f "$ack_snapshot" ../cores/ack.hotreboot
 
   # shutdown?
 
