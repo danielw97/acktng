@@ -10,20 +10,27 @@
 #   1. Build the server binary (if out of date).
 #   2. Validate or generate a self-signed TLS certificate.
 #      Replace the generated cert with a real CA-signed one for production.
-#   3. Launch the server on port 8890 (sniff port).
-#      The sniff port auto-detects each new connection:
-#        0x16 as first byte → TLS handshake (Mudlet "connect securely")
-#        anything else      → plain telnet
-#      Both Mudlet secure connections and plain telnet clients use port 8890.
+#   3. Launch the server on three fixed ports:
+#        8890  — plain telnet  (always plain, never TLS)
+#        9890  — telnet-TLS    (Mudlet "connect securely"; requires cert/key)
+#        18890 — WebSocket     (ws://, plain; wss:// not yet implemented)
 #
 # The process runs in the foreground.  Use a process supervisor (systemd,
 # screen, tmux, etc.) to keep it running in the background.
 #
+# PORT ASSIGNMENTS ARE FIXED — do not change them:
+#   8890  plain telnet   passed as the positional port argument
+#   9890  TLS telnet     --tls-port
+#   18890 WebSocket      --ws-loopback (binds to 127.0.0.1; public access
+#                        requires a WSS proxy or future --wss-port support)
+#
 # Environment overrides:
-#   PORT      sniff port for plain + TLS telnet (default: 8890)
-#   TLS_CERT  path to PEM cert  (default: data/tls/cert.pem)
-#   TLS_KEY   path to PEM key   (default: data/tls/key.pem)
-#   TEST      set to 1 to use an ephemeral OS-assigned port (for testing)
+#   PORT      plain-telnet port      (default: 8890)
+#   TLS_PORT  TLS telnet port        (default: 9890)
+#   WS_PORT   WebSocket loopback port (default: 18890)
+#   TLS_CERT  path to PEM cert       (default: data/tls/cert.pem)
+#   TLS_KEY   path to PEM key        (default: data/tls/key.pem)
+#   TEST      set to 1 to use ephemeral OS-assigned ports (for testing)
 
 set -e
 
@@ -32,11 +39,18 @@ SRC_DIR="$SCRIPT_DIR/src"
 AREA_DIR="$SCRIPT_DIR/area"
 
 if [ "${TEST:-0}" = "1" ]; then
-    # Ask the OS for a free ephemeral port to avoid collisions on shared hosts.
-    PORT="${PORT:-$(python3 -c "import socket; s=socket.socket(); s.bind(('',0)); print(s.getsockname()[1]); s.close()" \
-        2>/dev/null || echo $((RANDOM % 16383 + 49152)))}"
+    # Ask the OS for free ephemeral ports to avoid collisions on shared hosts.
+    _ephemeral() {
+        python3 -c "import socket; s=socket.socket(); s.bind(('',0)); print(s.getsockname()[1]); s.close()" \
+            2>/dev/null || echo $((RANDOM % 16383 + 49152))
+    }
+    PORT="${PORT:-$(_ephemeral)}"
+    TLS_PORT="${TLS_PORT:-$(_ephemeral)}"
+    WS_PORT="${WS_PORT:-$(_ephemeral)}"
 else
     PORT="${PORT:-8890}"
+    TLS_PORT="${TLS_PORT:-9890}"
+    WS_PORT="${WS_PORT:-18890}"
 fi
 
 TLS_CERT="${TLS_CERT:-$SCRIPT_DIR/data/tls/cert.pem}"
@@ -51,25 +65,23 @@ echo "startup: building server..."
 # ---------------------------------------------------------------------------
 # Step 2: TLS certificate setup
 # ---------------------------------------------------------------------------
-EXTRA_ARGS=""
+TLS_ARGS=""
 
 if pkg-config --libs openssl >/dev/null 2>&1; then
     "$SCRIPT_DIR/data/tls/generate-certs.sh" --cert "$TLS_CERT" --key "$TLS_KEY"
-    EXTRA_ARGS="--tls-cert $TLS_CERT --tls-key $TLS_KEY"
+    TLS_ARGS="--tls-port $TLS_PORT --tls-cert $TLS_CERT --tls-key $TLS_KEY"
 fi
 
 # ---------------------------------------------------------------------------
 # Step 3: launch
 #
-# --sniff-port is required (not a positional plain-telnet port) so that the
-# TLS context is initialised.  A positional port opens a plain-telnet socket
-# only; init_tls_context() is called only when sniff_port > 0 || tls_port > 0,
-# so without --sniff-port or --tls-port global_ssl_ctx stays NULL and TLS
-# clients receive plain text instead of a TLS server hello — blank screen.
+# Port 8890 is passed as the positional argument for plain telnet.
+# Port 9890 is the dedicated TLS telnet port (Mudlet "connect securely").
+# Port 18890 is the WebSocket loopback port (ws://).
 #
 # The binary must run from area/ so relative paths to area files, data
 # files, and player directories resolve correctly.
 # ---------------------------------------------------------------------------
-echo "startup: starting ACK!MUD on port $PORT (plain + TLS)..."
+echo "startup: starting ACK!MUD — telnet $PORT, TLS $TLS_PORT, WS $WS_PORT..."
 # shellcheck disable=SC2086
-exec sh -c "cd '$AREA_DIR' && exec ../src/ack --sniff-port '$PORT' $EXTRA_ARGS"
+exec sh -c "cd '$AREA_DIR' && exec ../src/ack '$PORT' --ws-loopback '$WS_PORT' $TLS_ARGS"
