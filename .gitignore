@@ -8,3 +8,5 @@ area/core
 area/core.*
 cores/*
 !cores/.gitkeep
+data/tls/key.pem
+data/tls/cert.pem
