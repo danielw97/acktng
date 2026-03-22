@@ -110,6 +110,7 @@ int global_port;
 int global_ws_port = -1;
 int global_tls_port = -1;
 int global_sniff_port = -1;
+int global_http_port = -1;
 
 #ifdef HAVE_OPENSSL
 static SSL_CTX *global_ssl_ctx = NULL;
@@ -407,6 +408,56 @@ static void get_request_path(const char *request, char *out, size_t outsz)
    out[len] = '\0';
 }
 
+static void handle_http_request(int desc)
+{
+   char buf[4096];
+   int n;
+   char path[64];
+   const char *body;
+   char header[256];
+
+   n = recv(desc, buf, (int)sizeof(buf) - 1, 0);
+   if (n <= 0)
+      return;
+   buf[n] = '\0';
+
+   if (strncmp(buf, "GET ", 4) != 0)
+      return;
+
+   get_request_path(buf, path, sizeof(path));
+
+   if (strcmp(path, "/gsgp") == 0 || strcmp(path, "/gsgp/") == 0)
+   {
+      body = get_gsgp_json();
+      snprintf(header, sizeof(header),
+               "HTTP/1.0 200 OK\r\n"
+               "Content-Type: application/json\r\n"
+               "Access-Control-Allow-Origin: *\r\n"
+               "Content-Length: %d\r\n"
+               "\r\n",
+               (int)strlen(body));
+      send(desc, header, strlen(header), 0);
+      send(desc, body, strlen(body), 0);
+   }
+   else if (strcmp(path, "/who") == 0 || strcmp(path, "/who/") == 0)
+   {
+      body = get_wholist_html();
+      snprintf(header, sizeof(header),
+               "HTTP/1.0 200 OK\r\n"
+               "Content-Type: text/html; charset=utf-8\r\n"
+               "Content-Length: %d\r\n"
+               "\r\n",
+               (int)strlen(body));
+      send(desc, header, strlen(header), 0);
+      send(desc, body, strlen(body), 0);
+   }
+   else
+   {
+      const char *not_found = "HTTP/1.0 404 Not Found\r\nContent-Length: 0\r\n\r\n";
+      send(desc, not_found, strlen(not_found), 0);
+   }
+}
+
 bool handle_websocket_handshake(DESCRIPTOR_DATA *d)
 {
    char *end_headers;
@@ -430,41 +481,6 @@ bool handle_websocket_handshake(DESCRIPTOR_DATA *d)
    end_headers = strstr(d->inbuf, "\r\n\r\n");
    if (end_headers == NULL)
       return TRUE;
-
-   /* Check for plain HTTP endpoint requests before WebSocket upgrade */
-   {
-      char path[64];
-      get_request_path(d->inbuf, path, sizeof(path));
-      if (strcmp(path, "/gsgp") == 0 || strcmp(path, "/gsgp/") == 0)
-      {
-         const char *body = get_gsgp_json();
-         char header[256];
-         snprintf(header, sizeof(header),
-                  "HTTP/1.0 200 OK\r\n"
-                  "Content-Type: application/json\r\n"
-                  "Access-Control-Allow-Origin: *\r\n"
-                  "Content-Length: %d\r\n"
-                  "\r\n",
-                  (int)strlen(body));
-         write_to_descriptor(d, header, 0);
-         write_to_descriptor(d, (char *)body, 0);
-         return FALSE;
-      }
-      if (strcmp(path, "/wholist") == 0 || strcmp(path, "/wholist/") == 0)
-      {
-         const char *body = get_wholist_html();
-         char header[256];
-         snprintf(header, sizeof(header),
-                  "HTTP/1.0 200 OK\r\n"
-                  "Content-Type: text/html; charset=utf-8\r\n"
-                  "Content-Length: %d\r\n"
-                  "\r\n",
-                  (int)strlen(body));
-         write_to_descriptor(d, header, 0);
-         write_to_descriptor(d, (char *)body, 0);
-         return FALSE;
-      }
-   }
 
    key_line = (char *)find_http_header_value(d->inbuf, "Upgrade");
    if (key_line == NULL || !header_value_contains_token(key_line, "websocket"))
@@ -778,7 +794,7 @@ void reopen_socket(int sig)
 
 /* + */
 
-void game_loop(int control, int control_ws, int control_tls, int control_sniff)
+void game_loop(int control, int control_ws, int control_tls, int control_sniff, int control_http)
 {
    static struct timeval null_time;
    struct timeval last_time;
@@ -836,6 +852,11 @@ void game_loop(int control, int control_ws, int control_tls, int control_sniff)
             close(control_sniff);
             control_sniff = init_socket(global_sniff_port, INADDR_ANY);
          }
+         if (control_http >= 0)
+         {
+            close(control_http);
+            control_http = init_socket(global_http_port, INADDR_ANY);
+         }
          reopen_flag = 0;
       }
 
@@ -865,6 +886,11 @@ void game_loop(int control, int control_ws, int control_tls, int control_sniff)
       {
          FD_SET(control_sniff, &in_set);
          maxdesc = UMAX(maxdesc, control_sniff);
+      }
+      if (control_http >= 0)
+      {
+         FD_SET(control_http, &in_set);
+         maxdesc = UMAX(maxdesc, control_http);
       }
 
       for (d = first_desc; d; d = d->next)
@@ -909,13 +935,24 @@ void game_loop(int control, int control_ws, int control_tls, int control_sniff)
          new_descriptor(control_tls, TRUE, FALSE);
       if (control_sniff >= 0 && FD_ISSET(control_sniff, &in_set))
          new_descriptor(control_sniff, FALSE, TRUE);
+      if (control_http >= 0 && FD_ISSET(control_http, &in_set))
+      {
+         struct sockaddr_in sa;
+         socklen_t size = sizeof(sa);
+         int desc = accept(control_http, (struct sockaddr *)&sa, &size);
+         if (desc >= 0)
+         {
+            handle_http_request(desc);
+            close(desc);
+         }
+      }
 
-         /*
-          * Advance any pending TLS handshakes non-blockingly.
-          * SSL_accept was deferred from new_descriptor to avoid blocking the
-          * game loop.  Each iteration we try to complete the handshake when the
-          * socket is ready, or time out after a short deadline.
-          */
+      /*
+       * Advance any pending TLS handshakes non-blockingly.
+       * SSL_accept was deferred from new_descriptor to avoid blocking the
+       * game loop.  Each iteration we try to complete the handshake when the
+       * socket is ready, or time out after a short deadline.
+       */
 #ifdef HAVE_OPENSSL
       for (d = first_desc; d != NULL; d = d_next)
       {

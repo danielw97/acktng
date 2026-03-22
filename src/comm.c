@@ -132,6 +132,76 @@ int control;
 int max_players = 0;
 int hotreboot_countdown = 0; /* Pulses remaining until automatic hotreboot; 0 = inactive */
 
+/* Write HTML-escaped version of src into dst.  Replaces < > & " ' with
+ * their HTML entity equivalents to prevent XSS in the /who endpoint. */
+static void html_escape_name(const char *src, char *dst, size_t dstsz)
+{
+   size_t out = 0;
+   if (dstsz == 0)
+      return;
+   while (*src != '\0' && out + 7 < dstsz)
+   {
+      switch (*src)
+      {
+      case '<':
+         memcpy(dst + out, "&lt;", 4);
+         out += 4;
+         break;
+      case '>':
+         memcpy(dst + out, "&gt;", 4);
+         out += 4;
+         break;
+      case '&':
+         memcpy(dst + out, "&amp;", 5);
+         out += 5;
+         break;
+      case '"':
+         memcpy(dst + out, "&quot;", 6);
+         out += 6;
+         break;
+      case '\'':
+         memcpy(dst + out, "&#39;", 5);
+         out += 5;
+         break;
+      default:
+         dst[out++] = *src;
+         break;
+      }
+      src++;
+   }
+   dst[out] = '\0';
+}
+
+/* Write JSON-escaped version of src into dst.  Escapes backslash,
+ * double-quote, and ASCII control characters to prevent JSON injection
+ * in the /gsgp endpoint. */
+static void json_escape_name(const char *src, char *dst, size_t dstsz)
+{
+   size_t out = 0;
+   if (dstsz == 0)
+      return;
+   while (*src != '\0' && out + 7 < dstsz)
+   {
+      unsigned char c = (unsigned char)*src;
+      if (c == '"' || c == '\\')
+      {
+         dst[out++] = '\\';
+         dst[out++] = (char)c;
+      }
+      else if (c < 0x20)
+      {
+         snprintf(dst + out, dstsz - out, "\\u%04x", c);
+         out += 6;
+      }
+      else
+      {
+         dst[out++] = (char)c;
+      }
+      src++;
+   }
+   dst[out] = '\0';
+}
+
 static void write_gsgp_board(char *buf, size_t bufsz, size_t *off, const char *board_name,
                              struct gsgp_entry *arr, int n, int (*cmp)(const void *, const void *),
                              bool skip_zero, bool last)
@@ -160,7 +230,11 @@ static void write_gsgp_board(char *buf, size_t bufsz, size_t *off, const char *b
          if (r > 0)
             *off += (size_t)r;
       }
-      r = snprintf(buf + *off, bufsz - *off, "{\"name\":\"%s\",\"value\":%d}", sorted[i].name, val);
+      {
+         char safe_name[128];
+         json_escape_name(sorted[i].name, safe_name, sizeof(safe_name));
+         r = snprintf(buf + *off, bufsz - *off, "{\"name\":\"%s\",\"value\":%d}", safe_name, val);
+      }
       if (r > 0)
          *off += (size_t)r;
       written++;
@@ -236,7 +310,11 @@ void list_who_to_output(void)
       if (who_ch == NULL || IS_NPC(who_ch))
          continue;
 
-      r = snprintf(wholist_html_cache + off, WHO_BUF_MAX - off, "<li>%s</li>\n", who_ch->name);
+      {
+         char safe_name[128];
+         html_escape_name(who_ch->name, safe_name, sizeof(safe_name));
+         r = snprintf(wholist_html_cache + off, WHO_BUF_MAX - off, "<li>%s</li>\n", safe_name);
+      }
       if (r > 0)
          off += (size_t)r;
       online_count++;
@@ -268,6 +346,8 @@ int main(int argc, char **argv)
    int tls_port = -1;
    int control_sniff = -1;
    int sniff_port = -1;
+   int control_http = -1;
+   int http_port = 80;
    int flag_start = 1; /* argv index where flag parsing begins */
 #ifdef HAVE_OPENSSL
    const char *tls_cert = "../data/tls/cert.pem";
@@ -355,6 +435,17 @@ int main(int argc, char **argv)
                exit(1);
             }
          }
+         else if (!strcmp(argv[i], "--http-port") && i + 1 < argc)
+         {
+            http_port = atoi(argv[++i]);
+            if (http_port <= 0)
+            {
+               fprintf(stderr, "--http-port must be a positive integer.\n");
+               exit(1);
+            }
+         }
+         else if (!strcmp(argv[i], "--no-http"))
+            http_port = -1;
 #ifdef HAVE_OPENSSL
          else if (!strcmp(argv[i], "--tls-cert") && i + 1 < argc)
             tls_cert = argv[++i];
@@ -384,6 +475,8 @@ int main(int argc, char **argv)
          control = init_socket(port, INADDR_ANY);
       if (ws_port > 0)
          control_ws = init_socket(ws_port, INADDR_LOOPBACK);
+      if (http_port > 0)
+         control_http = init_socket(http_port, INADDR_ANY);
       if (tls_port > 0 || sniff_port > 0)
       {
 #ifdef HAVE_OPENSSL
@@ -419,6 +512,7 @@ int main(int argc, char **argv)
    global_ws_port = ws_port;
    global_tls_port = tls_port;
    global_sniff_port = sniff_port;
+   global_http_port = http_port;
    if (fCopyOver)
       abort_threshold = BOOT_DB_ABORT_THRESHOLD;
    boot_db();
@@ -483,7 +577,7 @@ int main(int argc, char **argv)
    /* Seed WHO web output immediately on boot/copyover recovery. */
    list_who_to_output();
 
-   game_loop(control, control_ws, control_tls, control_sniff);
+   game_loop(control, control_ws, control_tls, control_sniff, control_http);
    if (control >= 0)
       close(control);
    if (control_ws >= 0)
@@ -492,6 +586,8 @@ int main(int argc, char **argv)
       close(control_tls);
    if (control_sniff >= 0)
       close(control_sniff);
+   if (control_http >= 0)
+      close(control_http);
 
    /*
     * That's all, folks.
