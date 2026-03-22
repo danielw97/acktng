@@ -202,6 +202,53 @@ static void test_rejects_oversized_key_buffer(void)
    assert(!validate_websocket_handshake_request(request, tiny_key, sizeof(tiny_key), NULL));
 }
 
+/* Replica of get_request_path() from socket.c for unit testing */
+static void get_request_path(const char *request, char *out, size_t outsz)
+{
+   const char *start, *end;
+   size_t len;
+
+   start = request + 4;
+   end = start;
+   while (*end != '\0' && *end != ' ' && *end != '\r' && *end != '\n')
+      end++;
+   len = (size_t)(end - start);
+   if (len >= outsz)
+      len = outsz - 1;
+   memcpy(out, start, len);
+   out[len] = '\0';
+}
+
+static void test_get_request_path_gsgp(void)
+{
+   char path[64];
+   get_request_path("GET /gsgp HTTP/1.0\r\nHost: x\r\n\r\n", path, sizeof(path));
+   assert(strcmp(path, "/gsgp") == 0);
+}
+
+static void test_get_request_path_wholist(void)
+{
+   char path[64];
+   get_request_path("GET /wholist HTTP/1.0\r\nHost: x\r\n\r\n", path, sizeof(path));
+   assert(strcmp(path, "/wholist") == 0);
+}
+
+static void test_get_request_path_root(void)
+{
+   char path[64];
+   get_request_path("GET / HTTP/1.1\r\n\r\n", path, sizeof(path));
+   assert(strcmp(path, "/") == 0);
+}
+
+static void test_get_request_path_truncates(void)
+{
+   char path[4];
+   get_request_path("GET /gsgp HTTP/1.0\r\n\r\n", path, sizeof(path));
+   /* truncated to 3 chars + NUL */
+   assert(path[3] == '\0');
+   assert(path[0] == '/');
+}
+
 int main(void)
 {
    test_accepts_valid_request();
@@ -209,6 +256,10 @@ int main(void)
    test_rejects_non_get_or_incomplete();
    test_rejects_missing_required_headers();
    test_rejects_oversized_key_buffer();
+   test_get_request_path_gsgp();
+   test_get_request_path_wholist();
+   test_get_request_path_root();
+   test_get_request_path_truncates();
 
    puts("test_websocket_validation: all tests passed");
    return 0;

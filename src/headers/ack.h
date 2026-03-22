@@ -1348,6 +1348,8 @@ bool is_same_group args((CHAR_DATA * ach, CHAR_DATA *bch));
 bool is_group_leader args((CHAR_DATA * ch));
 void send_to_room args((char *message, ROOM_INDEX_DATA *room));
 void list_who_to_output args((void));
+const char *get_gsgp_json args((void));
+const char *get_wholist_html args((void));
 
 /* fight.c */
 bool shortfight_should_suppress_watched_autoattack args((int observer_is_npc,
