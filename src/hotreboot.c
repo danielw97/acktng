@@ -32,6 +32,7 @@
  * copyover_recover() - restores player connections after exec()
  */
 
+#include <fcntl.h>
 #include <limits.h>
 #include <signal.h>
 #include <stdio.h>
@@ -49,6 +50,42 @@
 
 extern int port, control;
 extern FILE *fpReserve;
+
+/* Copy the about-to-be-exec'd binary to ../cores/ack.hotreboot so the
+ * startup script can pair it with any core produced by the new process
+ * image.  Failures are logged but do not abort the hotreboot. */
+static void snapshot_exe_for_coredump(const char *exe_path)
+{
+   char buf[4096];
+   int src_fd, dst_fd;
+   ssize_t nr, nw;
+
+   src_fd = open(exe_path, O_RDONLY);
+   if (src_fd < 0)
+   {
+      log_f("snapshot_exe_for_coredump: open(%s): %m", exe_path);
+      return;
+   }
+   dst_fd = open("../cores/ack.hotreboot", O_WRONLY | O_CREAT | O_TRUNC, 0755);
+   if (dst_fd < 0)
+   {
+      log_f("snapshot_exe_for_coredump: open ../cores/ack.hotreboot: %m");
+      close(src_fd);
+      return;
+   }
+   while ((nr = read(src_fd, buf, sizeof(buf))) > 0)
+   {
+      nw = write(dst_fd, buf, (size_t)nr);
+      if (nw != nr)
+      {
+         log_f("snapshot_exe_for_coredump: short write");
+         break;
+      }
+   }
+   close(src_fd);
+   close(dst_fd);
+   log_f("snapshot_exe_for_coredump: saved %s -> ../cores/ack.hotreboot", exe_path);
+}
 
 /* Here it is boys and girls the HOT reboot function and all its nifty
  * little parts!! - Flar
@@ -240,12 +277,14 @@ void do_hotreboot(CHAR_DATA *ch, char *argument)
       if (exe_len > 0 && exe_len < PATH_MAX)
       {
          exe_path[exe_len] = '\0';
+         snapshot_exe_for_coredump(exe_path);
          execl(exe_path, exe_path, buf, "HOTreboot", buf2, buf3, (char *)NULL);
          log_f("do_hotreboot: execl(%s) failed: %m; retrying with EXE_FILE", exe_path);
       }
       else
          log_f("do_hotreboot: readlink /proc/self/exe failed (%m); falling back to EXE_FILE");
    }
+   snapshot_exe_for_coredump(EXE_FILE);
    execl(EXE_FILE, EXE_FILE, buf, "HOTreboot", buf2, buf3, (char *)NULL);
 
    /*

@@ -66,6 +66,13 @@ do
   # run the mud
   ../src/ack $plain_port --sniff-port $port --ws-loopback $ws_port --tls-port $tls_port --tls-cert $tls_cert --tls-key $tls_key >$logfile 2>&1
 
+  # If do_hotreboot() ran, it wrote a snapshot of the binary it exec'd;
+  # that is more accurate than our startup-time snapshot, so prefer it.
+  if [ -f ../cores/ack.hotreboot ]; then
+    rm -f "$ack_snapshot"
+    ack_snapshot=../cores/ack.hotreboot
+  fi
+
   # collect any core dumps into ../cores/<timestamp>/
   for corefile in core core.*; do
     if [ -f "$corefile" ]; then
@@ -78,8 +85,8 @@ do
     fi
   done
 
-  # no core dump — discard the snapshot
-  rm -f "$ack_snapshot"
+  # discard whichever snapshot was not consumed by a core
+  rm -f "$ack_snapshot" ../cores/ack.hotreboot
 
   # shutdown?
 
