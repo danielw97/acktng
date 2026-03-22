@@ -59,9 +59,6 @@
 #include <unistd.h> /* for execl */
 #include "globals.h"
 #include "cursor.h"
-#ifdef USE_DB_LOAD
-#include "db_worker.h"
-#endif
 
 bool command_has_wait_flag args((CHAR_DATA * ch, const char *argument));
 
@@ -894,14 +891,6 @@ void game_loop(int control, int control_ws, int control_tls)
             d->incomm[0] = '\0';
          }
       }
-
-      /*
-       * Drain async DB results (player loads) before the game update.
-       * No-op when USE_DB_LOAD is not compiled in or db_worker has failed.
-       */
-#ifdef USE_DB_LOAD
-      db_worker_poll_results();
-#endif
 
       /*
        * Autonomous game motion.

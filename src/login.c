@@ -49,9 +49,6 @@
 #include "cursor.h"
 #include "socket.h"
 #include "prompt.h"
-#ifdef USE_DB_LOAD
-#include "db_worker.h"
-#endif
 
 /* Forward declarations for functions defined later in this file. */
 bool check_parse_name(char *name);
@@ -361,12 +358,6 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
       argument++;
 
    ch = d->character;
-
-   /* Block all input while an async DB player load is in progress.
-    * db_worker_poll_results() (called from game_loop) will advance
-    * d->connected once the result arrives. */
-   if (d->connected == CON_LOADING_FROM_DB)
-      return;
 
    if (d->connected == CON_GET_NAME)
    {
