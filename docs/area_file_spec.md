@@ -1510,3 +1510,306 @@ Currently registered names:
 Any other name → rejection.
 
 ---
+## IV. Content Validation Rules
+
+These rules are enforced after parsing and flag resolution, before the database transaction
+opens. They apply across all files in a single submission. Failures produce a rejection
+with the offending file, entity type, and vnum named.
+
+### IV.1. Text Quality Rules (all text fields)
+
+These rules apply to every `name`, `short_descr`, `long_descr`, `description`, and
+`extra_desc` field across all files.
+
+#### IV.1.1. Placeholder Detection
+
+Any name or description that matches a placeholder or procedural pattern → rejection.
+Patterns that trigger rejection:
+
+- Contains a bare integer suffix matching the entity's own vnum or a sequential index
+  (e.g., `Room 7`, `Guard 12`, `Passage 3`).
+- Follows the pattern `<word> <integer>` where `<word>` is a generic category word
+  (`room`, `area`, `mob`, `npc`, `corridor`, `passage`, `object`, `item`, `guard`,
+  `monster`, `creature`, `zone`, `region`, `chamber`) → rejection.
+- Is identical to a field on a different entity of the same type within the same file
+  (exact-duplicate check). Applies to: room `description`, room `name`, mob `long_descr`,
+  mob `description`, object `name` → rejection on duplicate.
+
+#### IV.1.2. Vnum Leak
+
+Any text field containing a bare integer that matches any vnum in the file's declared
+range `[vnum_min, vnum_max]` → rejection. This prevents vnums from leaking into player-
+visible text.
+
+#### IV.1.3. Description Length
+
+| Field | Minimum | Maximum |
+|-------|---------|---------|
+| Room `description` | 3 sentences | — |
+| Mob `description` | 1 sentence | 8 sentences |
+| Object `description` | 1 sentence | — |
+| Mob `long_descr` | 1 line (no `\n`) | 1 line |
+
+Sentence count is estimated by counting terminal punctuation (`.`, `!`, `?`) followed by
+whitespace or end-of-string.
+
+#### IV.1.4. Case Requirements
+
+| Field | Rule |
+|-------|------|
+| Room `name` | May begin with any case. Must not be entirely uppercase. |
+| Mob `player_name` | All lowercase → rejection if any uppercase. |
+| Mob `short_descr` | Must not begin with uppercase → rejection. |
+| Object `name` | All lowercase → rejection if any uppercase. |
+| Object `short_descr` | Must not begin with uppercase → rejection. |
+
+#### IV.1.5. Trailing Newline
+
+All `description` block scalars must end with exactly one `\n` after YAML parsing →
+rejection if missing or doubled. This applies to: room `description`, mob `description`,
+object `description`, room extra-desc `description`, object extra-desc `description`,
+mob `long_descr` does *not* require a trailing newline (single line only).
+
+---
+
+### IV.2. Room Validation
+
+#### IV.2.1. Exits
+
+- `direction` must be one of: `north east south west up down` → rejection otherwise.
+- Each direction may appear at most once per room → rejection if duplicated.
+- `to_vnum` must reference a room in `rooms.yaml` in this directory or in the database →
+  rejection if the target room cannot be found.
+- `closed` or `locked` in the `locks` list → rejection (runtime state bits).
+- If `key_vnum >= 0`, the referenced object must be `item_type: key` and must exist in
+  `objects.yaml` in this directory or in the database → rejection otherwise.
+
+#### IV.2.2. Bidirectionality
+
+Except in rooms flagged `maze`:
+
+- If room A has an exit in direction X to room B, room B must have the opposite exit back
+  to room A. Opposite directions: north↔south, east↔west, up↔down → rejection if the
+  reverse exit is missing.
+- Exception: cross-area exits where room B is not in this directory and not in the
+  database. These exits are permitted but must be documented in `docs/world_links.md` as
+  **Planned**.
+- Rooms must not form one-directional loops (going north repeatedly and arriving back
+  at the start without a matching reverse path) → rejection.
+
+#### IV.2.3. Extra Descriptions
+
+Each extra-desc `keywords` string must have at least one word that appears in the room's
+main `description` text or in the keyword string of another extra-desc in the same room
+→ rejection if no anchor can be found.
+
+#### IV.2.4. Boss Room Flag
+
+Any room that receives a boss mob (a mob with `boss` in `act`) via a reset `M` command
+must have `no_mob` in `flags` → rejection if the room lacks `no_mob`.
+
+---
+
+### IV.3. Mob Validation
+
+#### IV.3.1. Required Flags
+
+- `is_npc` must be in `act` → rejection.
+- `stay_area` must be in `act` → rejection.
+- `invasion` must not be in `act` → rejection.
+- `day_only` and `night_only` must not both be in `act` → rejection.
+- If `boss` in `act`: `sentinel` must also be in `act` → rejection.
+- If `boss` in `act`: a `loot` block must be present → rejection.
+- If `level >= 50` and `boss` not in `act`: `solo` must be in `act` → rejection.
+
+#### IV.3.2. Stat Ranges
+
+| Field | Range |
+|-------|-------|
+| `alignment` | −1000 to 1000 |
+| `level` | 1 to 155 |
+| `hp_mod` | −500 to 500 |
+| `ac_mod` | −300 to 300 |
+| `hr_mod` | −50 to 50 |
+| `dr_mod` | −50 to 50 |
+
+Values outside range → rejection.
+
+#### IV.3.3. `class_line` Validation
+
+When present:
+
+- `race >= 0` → rejection if negative.
+- `position` must be `0–9` → rejection outside range.
+- Skills listed in `skills` must be appropriate for the mob's `level`; see minimum levels
+  in §III.6 → rejection if skill requires higher level than mob has.
+- `def` must contain at least one entry; `[nada]` is the explicit "no defensive spells"
+  choice → rejection if `def` is an empty list.
+- If `def` contains `nada`, no other entries may be present → rejection.
+
+#### IV.3.4. `element_line` Validation
+
+When present:
+
+- `strong_magic` ∩ `weak_magic` must be empty → rejection if any element appears in both.
+- `resist` ∩ `suscept` must be empty → rejection if any element appears in both.
+
+#### IV.3.5. `loot` Validation
+
+When present:
+
+- `loot_amount >= 0` → rejection if negative.
+- Maximum 9 slots → rejection if more than 9 items in `slots`.
+- Sum of all `chance` values across `slots` must be `<= 100` → rejection if sum exceeds 100.
+- Each `vnum` in `slots` must reference an object that exists in `objects.yaml` in this
+  directory or in the database → rejection if not found.
+- Each loot object must have `loot` in `extra_flags` → rejection if missing.
+- If the mob has `boss` in `act`, each loot object must also have `boss` in `extra_flags`
+  → rejection if missing.
+
+#### IV.3.6. Scripts Validation
+
+Each script block:
+
+- `trigger` must be a name from §III.14 → rejection if unrecognized.
+- `commands` must be non-empty → rejection.
+- `args` field is optional; empty string `""` is valid.
+
+---
+
+### IV.4. Object Validation
+
+#### IV.4.1. Required Flags
+
+- `take` must be in `wear_flags` → rejection if missing.
+- `generated` must not be in `extra_flags` → rejection.
+- `clan_colors` must not be in `wear_flags` → rejection.
+- `invasion_emblem` must not be in `wear_flags` → rejection.
+
+#### IV.4.2. Item Type Restrictions
+
+- `item_type: corpse_npc` or `item_type: corpse_pc` → rejection (runtime-generated only).
+
+#### IV.4.3. Weapon Rules
+
+When `item_type: weapon`:
+
+- `hold` and `take` must both be in `wear_flags` → rejection if either is missing.
+- `values[3]` (the attack type) must be a valid weapon attack type name or integer (§III.21)
+  → rejection if not recognized.
+- `values[3]: hit` (integer `0`) requires `fist` in `extra_flags` → rejection otherwise.
+- `values[3]` must be thematically consistent with the weapon's `name`, `short_descr`,
+  and `description`. A longsword with `bite` is a rejection. A fang with `slash` is a
+  rejection. The validator checks a fixed list of thematic-conflict patterns.
+- If `name`, `short_descr`, or `description` contains a two-handed archetype keyword
+  (`great sword`, `greatsword`, `halberd`, `greataxe`, `great axe`, `war scythe`,
+  `two-handed`, `two handed`), `two-handed` must be in `extra_flags` → rejection if missing.
+
+#### IV.4.4. Shield and Buckler Rules
+
+When `item_type: armor` and `hold` in `wear_flags`:
+
+- Object must not have `two-handed` in `extra_flags` → rejection.
+- If `buckler` is in `extra_flags`, the object's `name`/`short_descr` must not describe a
+  full shield → rejection.
+
+#### IV.4.5. `lifestealer` Rule
+
+`lifestealer` in `extra_flags` without `anti_good` also in `extra_flags` → rejection.
+
+#### IV.4.6. Loot Flag Consistency
+
+Any object referenced in a mob's `loot.slots` must have `loot` in `extra_flags` →
+rejection if not set. Any object referenced in a boss mob's loot table must have `boss`
+in `extra_flags` → rejection if not set.
+
+#### IV.4.7. Weight Archetype Consistency
+
+`weight` must be consistent with the object's evident purpose as determined by its
+`name`, `short_descr`, `wear_flags`, and `item_type`. The validator checks:
+
+- A weapon (`item_type: weapon`) whose `name`/`short_descr` contains a heavy-weapon
+  keyword (`greatsword`, `halberd`, `greataxe`, `maul`, `warhammer`) must have
+  `weight >= 6` → rejection if lighter.
+- An explicitly magical item (`name`/`short_descr` contains `arcane`, `mage`, `sorcerer`,
+  `wizard`, `runic`, `spellbound`, `enchanted staff`, `grimoire`) must have `weight <= 5`
+  → rejection if heavier.
+
+---
+
+### IV.5. Shop Validation
+
+- `keeper_vnum` must reference a mob in `mobs.yaml` in this directory or the database →
+  rejection if not found.
+- `buy_types` may contain at most 5 entries → rejection if more than 5.
+- Each `buy_type` name must be a valid `item_type` name from §III.15 → rejection if
+  unrecognized.
+- `sell_profit` must be `50–300` → rejection outside range.
+- `buy_profit` must be `50–300` → rejection outside range.
+- `buy_profit >= sell_profit` → rejection. The shop must buy for less than (or equal to)
+  what it sells for.
+- `open_hour` must be `0–24` → rejection outside range.
+- `close_hour` must be `0–24` → rejection outside range.
+- `open_hour < close_hour` → rejection if reversed.
+
+---
+
+### IV.6. Reset Validation
+
+#### IV.6.1. Ordering Constraints
+
+- `G` (give object to mob) must follow an `M` (spawn mob) command somewhere earlier in
+  the reset list, with only `G` or `E` commands intervening since the most recent `M` →
+  rejection if `G` appears before any `M` or after a non-`G`/non-`E` command since the
+  last `M`.
+- `E` (equip object on mob) follows the same ordering rule as `G` → rejection if `E`
+  appears out of context.
+
+#### IV.6.2. Vnum References
+
+- `cmd: M` — `mob_vnum` must reference a mob in `mobs.yaml` or the database; `room_vnum`
+  must reference a room in `rooms.yaml` or the database → rejection if either not found.
+- `cmd: G` — `obj_vnum` must reference an object in `objects.yaml` or the database →
+  rejection if not found.
+- `cmd: E` — `obj_vnum` must exist; `wear_loc` must be a valid name from §III.20;
+  `clan_colors` and `invasion_emblem` → rejection → rejection if either used.
+- `cmd: O` — `obj_vnum` and `room_vnum` must exist → rejection if not found.
+- `cmd: D` — `room_vnum` must exist; the named direction must exist as an exit in that
+  room; the exit must have `door` in `locks` → rejection if the exit is not a door.
+- `cmd: P` — `obj_vnum` and `container_vnum` must exist; `container_vnum` must reference
+  an object with `item_type: container` → rejection otherwise.
+
+#### IV.6.3. `cmd: D` Door State Cross-Check
+
+- If `state: locked`, the exit must have `key_vnum >= 0` and `door` in `locks` →
+  rejection if key is absent or exit is not a door.
+- If `state: closed` or `state: locked`, the exit must have `door` in `locks` →
+  rejection otherwise.
+
+#### IV.6.4. Max Count Rules
+
+- `max_count >= 1` for `cmd: M` → rejection if `< 1`.
+- `max_count >= 0` for all other commands → rejection if negative.
+
+---
+
+### IV.7. Specials Validation
+
+- `mob_vnum` must reference a mob in `mobs.yaml` in this directory or the database →
+  rejection if not found.
+- Each `mob_vnum` may appear at most once in `specials.yaml` → rejection if duplicated.
+- `spec_fun` must be a name from §III.23 → rejection if unrecognized.
+- `spec_summon_*` → rejection. `spec_keep_*` → rejection.
+- Area-specific specials used in the wrong area produce a validator warning (not a
+  rejection) naming the mismatch.
+
+---
+
+### IV.8. Objfuns Validation
+
+- `obj_vnum` must reference an object in `objects.yaml` in this directory or the database
+  → rejection if not found.
+- Each `obj_vnum` may appear at most once in `objfuns.yaml` → rejection if duplicated.
+- `objfun` must be a name from §III.24 → rejection if unrecognized.
+
+---
