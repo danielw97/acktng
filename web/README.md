@@ -1,30 +1,30 @@
-# ACK!TNG Web Data Output Directory
+# ACK!TNG Web Data
 
-This directory contains **game-generated data files** written by the running MUD server
-for consumption by external web services, dashboards, and monitoring tools.
+This directory contains web-related assets served by the MUD's HTTP layer.
 
-## Purpose
+## HTTP Endpoints
 
-`~/web/data/` is a **runtime output** directory — the MUD server writes structured data here so
-that web servers, stats pages, and third-party integrations can read it without having
-to connect to or query the game directly.
+The MUD server exposes two plain-HTTP endpoints on its game port alongside WebSocket
+and telnet traffic.  These endpoints are served directly from in-memory buffers updated
+on every game tick — no files are written to disk.
 
-**Nothing in this directory is hand-edited during normal operation.**  The files here are
-owned by the server and overwritten on each update cycle.
+| Endpoint | Content-Type | Description |
+|----------|-------------|-------------|
+| `GET /gsgp` | `application/json` | **Game Scry Game Protocol** JSON feed. Contains the server name, current active player count, and leaderboard snapshots (top players by level, top PKillers, top quest-point earners). |
+| `GET /wholist` | `text/html; charset=utf-8` | HTML fragment — an `<h2>` heading and a `<ul>` list of currently online players, suitable for embedding directly into a web page. |
 
-## Files
+Both endpoints return HTTP/1.0 responses and close the connection immediately after
+the response body is sent.  The `Access-Control-Allow-Origin: *` header is included on
+the `/gsgp` response to allow cross-origin JavaScript access.
 
-| File | Written by | Description |
-|------|-----------|-------------|
-| `gsgp.json` | MUD server | **Game State / General-Purpose** JSON feed.  Contains the server name, current active player count, and leaderboard snapshots (top players by level, top PKillers, top quest-point earners).  Updated on every game tick that changes one of those values. |
-| `wholist.html` | MUD server (`comm.c`) | HTML fragment — an `<h2>` heading and a `<ul>` list of currently online players, suitable for embedding directly into a web page.  Regenerated on every `who` update. |
+## Usage
 
-Additional files may appear here as new web-export features are added; they follow the
-same rule — machine-written, human-readable, no manual editing required.
+```sh
+curl http://localhost:PORT/gsgp
+curl http://localhost:PORT/wholist
+```
 
-## Output Location
-
-All files are written to `~/web/data/` (i.e. `/home/user/web/data/`).
+Replace `PORT` with the game port (e.g. 4000).
 
 ## What Does NOT Belong Here
 

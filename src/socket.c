@@ -390,6 +390,23 @@ void queue_login_greeting(DESCRIPTOR_DATA *d)
       }
 }
 
+static void get_request_path(const char *request, char *out, size_t outsz)
+{
+   const char *start, *end;
+   size_t len;
+
+   /* request starts with "GET " */
+   start = request + 4;
+   end = start;
+   while (*end != '\0' && *end != ' ' && *end != '\r' && *end != '\n')
+      end++;
+   len = (size_t)(end - start);
+   if (len >= outsz)
+      len = outsz - 1;
+   memcpy(out, start, len);
+   out[len] = '\0';
+}
+
 bool handle_websocket_handshake(DESCRIPTOR_DATA *d)
 {
    char *end_headers;
@@ -413,6 +430,41 @@ bool handle_websocket_handshake(DESCRIPTOR_DATA *d)
    end_headers = strstr(d->inbuf, "\r\n\r\n");
    if (end_headers == NULL)
       return TRUE;
+
+   /* Check for plain HTTP endpoint requests before WebSocket upgrade */
+   {
+      char path[64];
+      get_request_path(d->inbuf, path, sizeof(path));
+      if (strcmp(path, "/gsgp") == 0 || strcmp(path, "/gsgp/") == 0)
+      {
+         const char *body = get_gsgp_json();
+         char header[256];
+         snprintf(header, sizeof(header),
+                  "HTTP/1.0 200 OK\r\n"
+                  "Content-Type: application/json\r\n"
+                  "Access-Control-Allow-Origin: *\r\n"
+                  "Content-Length: %d\r\n"
+                  "\r\n",
+                  (int)strlen(body));
+         write_to_descriptor(d, header, 0);
+         write_to_descriptor(d, (char *)body, 0);
+         return FALSE;
+      }
+      if (strcmp(path, "/wholist") == 0 || strcmp(path, "/wholist/") == 0)
+      {
+         const char *body = get_wholist_html();
+         char header[256];
+         snprintf(header, sizeof(header),
+                  "HTTP/1.0 200 OK\r\n"
+                  "Content-Type: text/html; charset=utf-8\r\n"
+                  "Content-Length: %d\r\n"
+                  "\r\n",
+                  (int)strlen(body));
+         write_to_descriptor(d, header, 0);
+         write_to_descriptor(d, (char *)body, 0);
+         return FALSE;
+      }
+   }
 
    key_line = (char *)find_http_header_value(d->inbuf, "Upgrade");
    if (key_line == NULL || !header_value_contains_token(key_line, "websocket"))
