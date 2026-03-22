@@ -1813,3 +1813,196 @@ in `extra_flags` → rejection if not set.
 - `objfun` must be a name from §III.24 → rejection if unrecognized.
 
 ---
+## V. Cross-Section Consistency Rules
+
+These rules are checked after all individual files have been validated. They verify that
+entities referenced across files form a consistent, coherent set. All cross-section checks
+run before the database transaction opens.
+
+### V.1. Vnum Range Compliance (all files)
+
+Every vnum that appears in any field of any file — including `to_vnum` in exits, `mob_vnum`
+and `room_vnum` in resets, `keeper_vnum` in shops, `mob_vnum` in specials, `obj_vnum` in
+objfuns, and all cross-references in object `values[]` — must either:
+
+1. Fall within `[vnum_min, vnum_max]` from `area.yaml` (it belongs to this area), **or**
+2. Already exist in the database (it is a cross-area reference to an already-imported area).
+
+Any vnum that satisfies neither condition → rejection naming the field, file, and referencing
+entity.
+
+---
+
+### V.2. Room ↔ Reset Consistency
+
+#### V.2.1. Room Receives a Mob
+
+Every room referenced in a `cmd: M` reset must exist in `rooms.yaml` or the database.
+
+#### V.2.2. Boss Mob Placement
+
+If any mob referenced in a `cmd: M` reset has `boss` in its `act` flags:
+
+- The target room must have `no_mob` in `flags` → rejection if the room lacks `no_mob`.
+
+This cross-check is run after both `rooms.yaml` and `mobs.yaml` are loaded. It catches
+cases where `no_mob` was omitted from a room that receives a boss mob.
+
+#### V.2.3. Object Placement in Rooms
+
+Every room referenced in a `cmd: O` reset must exist in `rooms.yaml` or the database.
+
+#### V.2.4. Door State Application
+
+Every `cmd: D` reset must target a room that exists in `rooms.yaml` or the database, and
+the named direction must be an exit in that room that has `door` in its `locks` list →
+rejection if the exit is not a door.
+
+---
+
+### V.3. Mob ↔ Object (Loot Table)
+
+For every mob in `mobs.yaml` that has a `loot` block:
+
+- Every non-zero `vnum` in `slots` must resolve to an object in `objects.yaml` in this
+  directory or in the database → rejection if the object cannot be found.
+- Every such object must have `loot` in `extra_flags` → rejection if missing.
+- If the mob has `boss` in `act`, every loot-slot object must also have `boss` in
+  `extra_flags` → rejection if missing.
+
+---
+
+### V.4. Shop ↔ Mob
+
+For every shop in `shops.yaml`:
+
+- `keeper_vnum` must reference a mob that exists in `mobs.yaml` in this directory or in
+  the database → rejection if not found.
+- The keeper mob must not have `boss` in `act` — boss mobs cannot be shopkeepers →
+  rejection.
+- The keeper mob should have either `sentinel` in `act` (it stays in one room) or a
+  matching `cmd: M` reset that places it in a fixed room. A shop whose keeper has no
+  `sentinel` and no reset → validator warning (not rejection).
+
+---
+
+### V.5. Specials ↔ Mob
+
+For every entry in `specials.yaml`:
+
+- `mob_vnum` must reference a mob that exists in `mobs.yaml` in this directory or in the
+  database → rejection if not found.
+- The same `mob_vnum` must not appear more than once → rejection.
+- If the spec_fun name is area-specific (contains a known area keyword like `midgaard_`,
+  `kiess_`, `kowloon_`, `gnf_`, `rr_`, `reach_`, `cinderteeth_`, `ss_`, `pyramid_`),
+  the spec_fun's area prefix must match the area's `keyword` → validation warning naming
+  the mismatch. This is a warning, not a rejection, to allow intentional cross-area NPCs.
+
+---
+
+### V.6. Objfuns ↔ Object
+
+For every entry in `objfuns.yaml`:
+
+- `obj_vnum` must reference an object that exists in `objects.yaml` in this directory or
+  in the database → rejection if not found.
+- The same `obj_vnum` must not appear more than once → rejection.
+
+---
+
+### V.7. Reset Sequencing (Mob-Object Association)
+
+The `G` and `E` reset commands implicitly target the mob spawned by the most recent `M`
+command in the sequence. The cross-section rule:
+
+- A `G` command's `obj_vnum` must reference an object that exists (in this directory or
+  the database) → rejection if not found.
+- An `E` command's `obj_vnum` must reference an object that exists → rejection if not
+  found.
+- An `E` command's `wear_loc` must be compatible with the object's `wear_flags`. The
+  YAML wear-loc name (e.g., `body`) must match one of the wear flags on the referenced
+  object (e.g., the object must have `body` in `wear_flags`) → rejection if the object
+  cannot be worn in the specified location.
+
+---
+
+### V.8. Container ↔ Object (`cmd: P`)
+
+For every `cmd: P` reset:
+
+- `container_vnum` must reference an object with `item_type: container` → rejection if
+  the referenced object has any other item type.
+- The contained object (`obj_vnum`) must have `take` in `wear_flags` → rejection otherwise.
+
+---
+
+### V.9. Piece Chain Completeness (`item_type: piece`)
+
+For every object with `item_type: piece`:
+
+- If `values[0]` (previous piece) is non-zero, the referenced object must also be
+  `item_type: piece` and must exist in `objects.yaml` in this directory or the database →
+  rejection.
+- If `values[1]` (next piece) is non-zero, the same rule applies.
+- If `values[2]` (replacement vnum on connect) is non-zero, the referenced object must
+  exist in `objects.yaml` or the database → rejection.
+- A piece with both `values[0]` and `values[1]` equal to `0` → rejection. A piece must
+  connect to at least one other piece.
+
+---
+
+### V.10. Board Object ↔ Board Table (`item_type: board`)
+
+For every object with `item_type: board`:
+
+- `values[3]` (board vnum) must be non-zero → rejection.
+- `values[3]` must not conflict with any existing board vnum in the database → rejection.
+- `values[0]` (expiry days) must be `>= 1` → rejection.
+- `values[1]` (min read level) must be `0–105` → rejection.
+- `values[2]` (min write level) must be `0–105` → rejection.
+- The ingestion pipeline creates the board database row as part of the import transaction.
+  On update (replace), the existing board rows are dropped and re-created.
+
+---
+
+### V.11. Key Object Consistency
+
+For every room exit with `key_vnum >= 0`:
+
+- The referenced object must exist in `objects.yaml` in this directory or the database →
+  rejection.
+- The referenced object must have `item_type: key` → rejection if any other type.
+
+For every `cmd: D` reset with `state: locked`:
+
+- The exit must have `key_vnum >= 0` → rejection if no key is defined for the exit.
+- The referenced key object must exist (same rule as above) → rejection.
+
+---
+
+### V.12. Maze Set Completeness
+
+If any room in `rooms.yaml` has `maze` in `flags`:
+
+- Every room in the contiguous vnum group that forms the maze must also have `maze` in
+  `flags`. Contiguity is defined as: rooms that are reachable from one another via exits
+  within the file. → rejection if any reachable room in a maze cluster lacks `maze`.
+- Maze rooms are exempt from the bidirectionality rule (§IV.2.2).
+- Maze rooms must not form exits that leave the maze set and point to non-maze rooms
+  without the non-maze room being explicitly authored as the maze entrance/exit. The
+  entrance/exit room does not require `maze` but must not be in the maze cluster.
+
+---
+
+### V.13. World Link Documentation
+
+For every room exit whose `to_vnum` does not exist in `rooms.yaml` in this directory
+and does not exist in the database:
+
+- The exit must be documented in `docs/world_links.md` as **Planned**, with the source
+  room vnum, direction, and intended target → rejection if the link is not documented.
+
+This prevents dangling exits from accumulating silently. Cross-area exits to already-
+imported areas (present in the database) do not require a `world_links.md` entry.
+
+---
