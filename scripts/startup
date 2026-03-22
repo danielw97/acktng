@@ -41,6 +41,8 @@ ulimit -c 50000
 # stack limit
 ulimit -s 1500
 
+mkdir -p ../cores
+
 renice +5 -p $$
 
 # loop indefinately
@@ -58,6 +60,17 @@ do
 
   # run the mud
   ../src/ack $plain_port --sniff-port $port --ws-loopback $ws_port --tls-port $tls_port --tls-cert $tls_cert --tls-key $tls_key >$logfile 2>&1
+
+  # collect any core dumps into ../cores/<timestamp>/
+  for corefile in core core.*; do
+    if [ -f "$corefile" ]; then
+      coredir=../cores/$(date +%Y%m%d_%H%M%S)_$$
+      mkdir -p "$coredir"
+      mv "$corefile" "$coredir/"
+      cp ../src/ack "$coredir/"
+      echo "startup: core dump saved to $coredir" >>$logfile
+    fi
+  done
 
   # shutdown?
 

@@ -4,3 +4,6 @@ web/whocount.html
 __pycache__/
 .claude/
 player/
+area/core
+area/core.*
+cores/*/
