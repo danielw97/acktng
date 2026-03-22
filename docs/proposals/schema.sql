@@ -383,7 +383,54 @@ CREATE TABLE IF NOT EXISTS corpses (
 );
 
 -- ---------------------------------------------------------------------------
--- 4.24  sysdata  (singleton: id must always be 1)
+-- 4.24  keep_chests
+-- ---------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS keep_chests (
+    id           SERIAL  PRIMARY KEY,
+    vnum         INTEGER NOT NULL UNIQUE,
+    owner_name   TEXT    NOT NULL,
+    max_items    INTEGER NOT NULL DEFAULT 50,
+    created_at   TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
+    updated_at   TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW()
+);
+
+-- ---------------------------------------------------------------------------
+-- 4.25  keep_chest_items
+-- ---------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS keep_chest_items (
+    id          SERIAL  PRIMARY KEY,
+    chest_id    INTEGER NOT NULL REFERENCES keep_chests (id) ON DELETE CASCADE,
+    nest        INTEGER NOT NULL DEFAULT 0,
+    parent_id   INTEGER REFERENCES keep_chest_items (id),
+    name        TEXT    NOT NULL,
+    short_descr TEXT    NOT NULL,
+    description TEXT    NOT NULL,
+    vnum        INTEGER NOT NULL DEFAULT 0,
+    extra_flags BIGINT  NOT NULL DEFAULT 0,
+    wear_flags  INTEGER NOT NULL DEFAULT 0,
+    wear_loc    INTEGER NOT NULL DEFAULT -1,
+    class_flags INTEGER NOT NULL DEFAULT 0,
+    item_type   INTEGER NOT NULL DEFAULT 0,
+    weight      INTEGER NOT NULL DEFAULT 0,
+    level       INTEGER NOT NULL DEFAULT 0,
+    timer       INTEGER NOT NULL DEFAULT -1,
+    cost        INTEGER NOT NULL DEFAULT 0,
+    value_0     INTEGER NOT NULL DEFAULT 0,
+    value_1     INTEGER NOT NULL DEFAULT 0,
+    value_2     INTEGER NOT NULL DEFAULT 0,
+    value_3     INTEGER NOT NULL DEFAULT 0,
+    value_4     INTEGER NOT NULL DEFAULT 0,
+    value_5     INTEGER NOT NULL DEFAULT 0,
+    value_6     INTEGER NOT NULL DEFAULT 0,
+    value_7     INTEGER NOT NULL DEFAULT 0,
+    value_8     INTEGER NOT NULL DEFAULT 0,
+    value_9     INTEGER NOT NULL DEFAULT 0,
+    objfun      TEXT,
+    sort_order  INTEGER NOT NULL DEFAULT 0
+);
+
+-- ---------------------------------------------------------------------------
+-- 4.26  sysdata  (singleton: id must always be 1)
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS sysdata (
     id          INTEGER PRIMARY KEY DEFAULT 1 CHECK (id = 1),

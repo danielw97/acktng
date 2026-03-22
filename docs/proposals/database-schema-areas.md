@@ -648,7 +648,86 @@ CREATE TABLE players (
 - `inventory` is a JSONB array of object trees mirroring the C `OBJ_DATA` structure, with nested `contains` arrays for containers. The full object schema matches the fields in `corpses` (§4.23) plus wear location.
 - `raw_save` stores the original flat-file text verbatim. During Phase 6 (transition), the server can fall back to re-parsing `raw_save` if any field is missing or malformed. It is set to NULL once the row has been fully round-tripped.
 
-### 4.28 `schema_version` Table
+### 4.28 `keep_chests` Table
+
+Corresponds to `data/chest/<vnum>` flat files. Each row represents one player-owned keep
+chest. Chest contents are stored in `keep_chest_items` (§4.29).
+
+```sql
+CREATE TABLE keep_chests (
+    id           SERIAL  PRIMARY KEY,
+    vnum         INTEGER NOT NULL UNIQUE,  -- object prototype vnum (the chest container)
+    owner_name   TEXT    NOT NULL,         -- owning player's name
+    max_items    INTEGER NOT NULL DEFAULT 50,  -- current storage-tier capacity (value[3])
+    created_at   TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
+    updated_at   TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW()
+);
+```
+
+- `vnum` is the object prototype vnum allocated by `create_keep_chest_index()`. It falls
+  within the keep area's vnum range.
+- `owner_name` matches `ch->name` of the owning player. Case-sensitive; must match the
+  player name exactly.
+- `max_items` mirrors `chest->value[3]` — the current storage tier capacity. Starts at
+  the result of `keep_chest_max_items()` (50) and increases by 5 per storage upgrade.
+- `updated_at` is refreshed on every `save_chest()` call.
+
+---
+
+### 4.29 `keep_chest_items` Table
+
+Each row is one object inside a keep chest (or nested inside a container within a chest).
+The structure mirrors `fwrite_chest` output, extended to cover all ten value slots.
+
+```sql
+CREATE TABLE keep_chest_items (
+    id          SERIAL  PRIMARY KEY,
+    chest_id    INTEGER NOT NULL REFERENCES keep_chests (id) ON DELETE CASCADE,
+    nest        INTEGER NOT NULL DEFAULT 0,  -- 0 = direct chest content; >0 = inside a container
+    parent_id   INTEGER REFERENCES keep_chest_items (id),  -- NULL for top-level items
+    name        TEXT    NOT NULL,
+    short_descr TEXT    NOT NULL,
+    description TEXT    NOT NULL,
+    vnum        INTEGER NOT NULL DEFAULT 0,  -- object prototype vnum; 0 for temp/generated
+    extra_flags BIGINT  NOT NULL DEFAULT 0,
+    wear_flags  INTEGER NOT NULL DEFAULT 0,
+    wear_loc    INTEGER NOT NULL DEFAULT -1,
+    class_flags INTEGER NOT NULL DEFAULT 0,  -- item_apply bitvector
+    item_type   INTEGER NOT NULL DEFAULT 0,
+    weight      INTEGER NOT NULL DEFAULT 0,
+    level       INTEGER NOT NULL DEFAULT 0,
+    timer       INTEGER NOT NULL DEFAULT -1,
+    cost        INTEGER NOT NULL DEFAULT 0,
+    value_0     INTEGER NOT NULL DEFAULT 0,
+    value_1     INTEGER NOT NULL DEFAULT 0,
+    value_2     INTEGER NOT NULL DEFAULT 0,
+    value_3     INTEGER NOT NULL DEFAULT 0,
+    value_4     INTEGER NOT NULL DEFAULT 0,
+    value_5     INTEGER NOT NULL DEFAULT 0,
+    value_6     INTEGER NOT NULL DEFAULT 0,
+    value_7     INTEGER NOT NULL DEFAULT 0,
+    value_8     INTEGER NOT NULL DEFAULT 0,
+    value_9     INTEGER NOT NULL DEFAULT 0,
+    objfun      TEXT,                        -- objfun name string; NULL if none
+    sort_order  INTEGER NOT NULL DEFAULT 0   -- preserves insertion order within a nest level
+);
+```
+
+Notes:
+
+- `nest = 0`: item is directly inside the keep chest container.
+- `nest > 0`: item is inside a container that is itself inside the chest. `parent_id`
+  points to the containing `keep_chest_items` row.
+- `sort_order` preserves the order items appear in the chest so round-trip fidelity is
+  maintained on export.
+- `value_0–value_3` cover all fields that the legacy `fwrite_chest` `Values` line writes.
+  `value_4–value_9` are added for consistency with the `objects` table; they are
+  initialized to `0` on migration from legacy files and may be populated in future.
+- The legacy format wrote only `value[0]–value[3]`; this table is a strict superset.
+
+---
+
+### 4.30 `schema_version` Table
 
 ```sql
 CREATE TABLE schema_version (
@@ -657,6 +736,221 @@ CREATE TABLE schema_version (
 );
 INSERT INTO schema_version (version) VALUES (1);
 ```
+
+---
+
+## 4A. Keep Chest YAML Format
+
+Keep chests support YAML import and export independently of area files. A chest YAML file
+is a standalone file (not part of an area directory) that can be used to back up, restore,
+or transfer a chest's contents.
+
+### 4A.1. File Structure
+
+Chest YAML files are placed in `data/chest/incoming/` for import and written to
+`data/chest/export/` for export. A chest YAML file contains exactly one chest and all its
+nested contents.
+
+```yaml
+chest:
+  vnum:       1500
+  owner:      "Aerindel"
+  max_items:  55
+  contents:
+    - vnum:        1200
+      name:        "blade black coral weapon"
+      short_descr: "a blade of black coral"
+      description: |
+        The blade is carved from a single length of black coral.
+      extra_flags:  [magic, loot, boss]
+      wear_flags:   [hold, take]
+      wear_loc:     none
+      class_flags:  [nada]
+      item_type:    weapon
+      weight:       6
+      level:        80
+      timer:        -1
+      cost:         0
+      values:       [0, 0, 0, 3, 0, 0, 0, 0, 0, 0]
+      contents:     []
+    - vnum:        1201
+      name:        "small pouch leather"
+      short_descr: "a small leather pouch"
+      description: |
+        A simple leather pouch drawn closed with a cord.
+      extra_flags:  []
+      wear_flags:   [take]
+      wear_loc:     none
+      class_flags:  [nada]
+      item_type:    container
+      weight:       3
+      level:        0
+      timer:        -1
+      cost:         0
+      values:       [10, 1, -1, 0, 0, 0, 0, 0, 0, 0]
+      contents:
+        - vnum:       1210
+          name:       "coin gold"
+          short_descr: "a gold coin"
+          description: |
+            A standard gold coin bearing the city seal.
+          extra_flags:  []
+          wear_flags:   [take]
+          wear_loc:     none
+          class_flags:  [nada]
+          item_type:    money
+          weight:       1
+          level:        0
+          timer:        -1
+          cost:         1
+          values:       [100, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+          contents:     []
+```
+
+### 4A.2. YAML Field Definitions
+
+**Top-level `chest` mapping:**
+
+| Field | Required | Notes |
+|-------|----------|-------|
+| `vnum` | Yes | The chest's prototype vnum. Must exist in the database as an object with `ITEM_CONTAINER` and `CONT_KEEP_CHEST` set. |
+| `owner` | Yes | Player name string. |
+| `max_items` | Yes | Current storage capacity integer. |
+| `contents` | Yes | Sequence of item mappings. May be empty `[]`. |
+
+**Per-item mapping (recursive; same structure for nested items via `contents`):**
+
+| Field | Required | Notes |
+|-------|----------|-------|
+| `vnum` | Yes | Object prototype vnum. `0` for runtime-generated objects. |
+| `name` | Yes | Current name string. |
+| `short_descr` | Yes | Current short description. |
+| `description` | Yes | Block scalar. |
+| `extra_flags` | Yes | List of extra-flag names from §III.16, or `[]`. |
+| `wear_flags` | Yes | List of wear-flag names from §III.17, or `[]`. |
+| `wear_loc` | Yes | Wear location name from §III.20, or `none` if not worn. |
+| `class_flags` | Yes | List of item-apply names from §III.18. |
+| `item_type` | Yes | Item type name from §III.15. |
+| `weight` | Yes | Integer. |
+| `level` | Yes | Integer. |
+| `timer` | Yes | Integer. `-1` means no timer. |
+| `cost` | Yes | Integer. |
+| `values` | Yes | List of exactly 10 integers. |
+| `contents` | Yes | Sequence of nested item mappings. `[]` if not a container or empty. |
+| `objfun` | No | Objfun name string from §III.24, or omitted/null. |
+
+### 4A.3. Import and Export Commands
+
+**Export (wizard command):**
+```
+chest export <player-name>    — Write player's chest to data/chest/export/<name>.yaml
+chest export all              — Export all chests to data/chest/export/
+```
+
+**Import (wizard command):**
+```
+chest import <player-name>    — Import data/chest/incoming/<name>.yaml into the database
+                                 and hot-reload the chest in-world if the player is online
+```
+
+**Offline export tool:**
+```
+db_to_files --yaml --chest <player-name>     Export one chest by owner name
+db_to_files --yaml --chest --vnum <N>        Export one chest by vnum
+db_to_files --yaml --all-chests              Export all chests
+```
+
+Round-trip fidelity is required: `import(export(chest))` must produce an identical
+database state.
+
+---
+
+## 4B. Keep Chest Migration Path
+
+### 4B.1. Overview
+
+Legacy chest data lives in `data/chest/<vnum>` flat files (one file per chest). The
+migration moves these files into the database. The migration is performed once, during the
+Phase 7 → Phase 8 cutover, and is non-destructive: the original flat files are renamed to
+`data/chest.legacy/<vnum>` after a successful import.
+
+### 4B.2. Migration Script
+
+A standalone migration binary (`src/tools/migrate_chests.c`) is built alongside the server.
+
+```
+migrate_chests --dry-run          Scan data/chest/ and report what would be migrated
+migrate_chests                    Migrate all chest files into the database
+migrate_chests --vnum <N>         Migrate one chest file by vnum
+```
+
+The migration script:
+
+1. Reads each `data/chest/<vnum>` file using the existing `fread_chest_item()` logic.
+2. Resolves the chest prototype vnum to the owning player's name by scanning
+   `data/chest/<vnum>` for a Nest=0 item and extracting its `ShortDescr` field (formatted
+   as `<name>'s Keep Chest`). If the owner cannot be determined, the chest is skipped with
+   a warning.
+3. Inserts a `keep_chests` row for the chest.
+4. Inserts `keep_chest_items` rows for each item, preserving nesting structure.
+5. On success, renames `data/chest/<vnum>` to `data/chest.legacy/<vnum>`.
+6. Logs each migrated chest to stdout.
+
+Failures are non-fatal per-chest: if one chest file fails to parse, the migration logs the
+error and continues with the next file.
+
+### 4B.3. Server Boot Fallback
+
+During the transition period (Phase 7), the server boot sequence is:
+
+1. Try `db_load_chests()` — read chest data from the `keep_chests` /
+   `keep_chest_items` tables.
+2. For any chest vnum that is in the database but whose `data/chest/<vnum>` file still
+   exists, skip the flat file (DB takes precedence).
+3. For any chest vnum found only in `data/chest/` (not yet migrated), fall back to
+   `load_chest()` (the existing flat-file loader). Log a warning for each flat-file
+   fallback so operators can track migration progress.
+
+Once all chests are migrated (no more fallbacks), `data/chest/` is empty (or contains
+only `data/chest.legacy/`) and the fallback code can be removed in Phase 8.
+
+### 4B.4. Save Path Cutover
+
+After migration, `save_chest()` is replaced with a DB write:
+
+```
+save_chest(chest)   →   db_worker_enqueue_write(DB_WRITE_CHEST, chest)
+```
+
+The worker handler serializes the chest and its contents into a single transaction:
+deletes all `keep_chest_items` rows for this chest's `chest_id`, then re-inserts the
+current contents. This is safe because `keep_chest_items` has `ON DELETE CASCADE` on
+`chest_id`.
+
+The legacy `save_chest()` flat-file writer is removed once the DB write path is live and
+has been verified in production.
+
+### 4B.5. Load Path Cutover
+
+After migration, `load_chest(vnum)` is replaced with a DB read that hydrates the
+`OBJ_DATA` tree from `keep_chest_items` rows. The DB read is performed at server boot as
+part of `db_load_chests()`, replacing the per-vnum `load_chest()` call in `db.c`.
+
+### 4B.6. Checklist
+
+- [ ] Add `keep_chests` and `keep_chest_items` tables to `schema.sql`
+- [ ] Implement `migrate_chests` binary in `src/tools/`
+- [ ] Run `migrate_chests --dry-run` in staging and verify all chests are found
+- [ ] Run `migrate_chests` in production during a maintenance window
+- [ ] Verify `db_load_chests()` in Phase 7 fallback mode loads all chests correctly
+- [ ] Replace `save_chest()` with `db_worker_enqueue_write(DB_WRITE_CHEST, ...)`
+- [ ] Add `DB_WRITE_CHEST`, `DB_DELETE_CHEST` to `DB_OP_TYPE` enum in `db_worker.h`
+- [ ] Add `DB_WRITE_CHEST` handler to `db_worker.c`
+- [ ] Replace `load_chest(vnum)` call in `db.c` with `db_load_chests()` at boot
+- [ ] Implement `chest export` and `chest import` wizard commands
+- [ ] Implement `db_to_files --yaml --chest` in the offline export tool
+- [ ] Remove flat-file fallback code after Phase 8 cut-over is confirmed stable
+- [ ] Add `docs/proposals/schema.sql` `keep_chests` and `keep_chest_items` table DDL
 
 ---
 
