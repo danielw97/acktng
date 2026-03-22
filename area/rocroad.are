@@ -6925,7 +6925,7 @@ ridge herb bundle~
 a bundle of ridge herbs~
 A bundle of ridge herbs rests here, tied with a length of river reed.
 ~
-19 0 8388608 1
+8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 2
 L
@@ -7007,7 +7007,7 @@ waystation provisions sack~
 a provisions sack~
 A provisions sack rests here, its contents a selection of preserved road rations.
 ~
-19 0 8388608 1
+8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 3
 L

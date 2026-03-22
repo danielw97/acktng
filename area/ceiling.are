@@ -307,14 +307,14 @@ A final turd lies here.~
 spring water~
 a spring of fresh water~
 A spring of fresh water flows here.~
-17 16384 16777216 0
+8 16384 16777216 0
 100 100 0 0 0 0 0 0 0 0
 5
 #65420
 mushroom~
 a mushroom~
 A mushroom grows here.~
-19 16384 16777216 0
+8 16384 16777216 0
 5 0 0 0 0 0 0 0 0 0
 1
 #65421
@@ -335,7 +335,7 @@ A message board stands here.~
 food~
 some food~
 Some food lies here.~
-19 16384 16777216 0
+8 16384 16777216 0
 10 0 0 0 0 0 0 0 0 0
 1
 #65428
