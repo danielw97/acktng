@@ -48,11 +48,11 @@ The goal of this proposal is to define a PostgreSQL database schema and migratio
 - A unified migration tool (`src/tools/import_to_db.c`) to import all six content stores
 - An export tool (`src/tools/db_to_files.c`) to regenerate flat files from the database
 - Updated load functions in `src/db.c` and `src/save/` to read from PostgreSQL
+- Updated OLC save path in `src/save/save_area_files.c` to write to PostgreSQL instead of `.are` files
 - Unit tests for the migration and export round-trip
 
 ### Out of Scope
 - `docs/lore/` — the human-authored source documents; these remain in `docs/lore/` and in version control unchanged
-- Online area editing commands (OLC) — a follow-on proposal
 - `data/training/` and `data/knowledge/` — generated ML datasets, not server runtime state
 - `data/chest/` — player-owned in-game chests (complex nested format; follow-on proposal)
 
@@ -950,7 +950,57 @@ This keeps the server running through a DB outage at the cost of reverting to fl
 
 ---
 
-## 8. Affected Files
+## 8. OLC Write Path
+
+The in-game builder system (`src/build.c`, `src/buildare.c`, `src/save/save_area_files.c`) currently saves areas by rewriting entire `.are` files to disk. Once the database is the authoritative source for area content, this write path must be replaced with direct `libpq` updates.
+
+### 8.1 Current Save Path
+
+When a builder edits a room, mob, or object in-game:
+
+1. Any `build_set*()` function calls `area_modified(pArea)`, setting `pArea->modified = 1`.
+2. `build_save()` is called every game loop tick (from `update.c`). When `saving_area` is set, it opens `<area>.new`, calls `build_save_area()` → `build_save_mobs()` → `build_save_objects()` → `build_save_rooms()` → `build_save_shops()` → `build_save_resets()` → `build_save_end()`, which renames `<area>.new` over `<area>.are`.
+3. `build_save_flush()` is called every `PULSE_AREA` tick. It iterates all areas with `modified == 1` and queues each for the above file-write cycle.
+
+### 8.2 Replacement: Per-Entity DB Writes
+
+After Phase 8 cut-over, the OLC save path is replaced as follows:
+
+**`build_save_rooms()`** → per-room `UPDATE rooms SET ...` (or `INSERT ... ON CONFLICT UPDATE`).
+
+**`build_save_mobs()`** → per-mob `UPDATE mobiles SET ...`.
+
+**`build_save_objects()`** → per-object `UPDATE objects SET ...`.
+
+**`build_save_resets()`** → `DELETE FROM resets WHERE area_id = $1` followed by bulk `INSERT INTO resets ...` for the current reset list (resets have no stable primary key — the whole list is the value).
+
+**`build_save_shops()`** → per-shop `UPDATE shops SET ...`.
+
+**`build_save_area()`** → `UPDATE areas SET ... WHERE id = $1`.
+
+All of these writes go through the async DB worker (`db_worker_enqueue_write()`), exactly as player saves do. The game thread never blocks.
+
+The `build_save_end()` file-rename logic and the `SaveFile` / `saving_area` / `SaveQ[]` queue mechanism in `save_area_files.c` are removed entirely. `area_modified()` becomes a no-op stub (or is removed).
+
+### 8.3 OLC Creates (New Rooms/Mobs/Objects)
+
+When a builder uses `addroom`, `addmob`, or `addobject` to create a new entity:
+
+- The entity is allocated in memory as normal (existing `build_addroom()` etc. logic unchanged).
+- A `db_worker_enqueue_write(DB_WRITE_ROOM, ...)` / `DB_WRITE_MOB` / `DB_WRITE_OBJ` call is made immediately after the entity is linked into the world.
+- The worker does `INSERT INTO rooms/mobiles/objects ... ON CONFLICT DO NOTHING`.
+
+### 8.4 OLC Deletes
+
+When a builder deletes a room, mob, or object, a `DB_DELETE_ROOM` / `DB_DELETE_MOB` / `DB_DELETE_OBJ` operation type is enqueued. The worker issues `DELETE FROM rooms/mobiles/objects WHERE vnum = $1`.
+
+### 8.5 No `areasave` Command After Cut-Over
+
+The `do_areasave` command in `src/act_wiz.c` becomes a no-op after Phase 8. Edits are persisted to the database immediately (via the worker queue) — there is no separate "save" step. The command can be removed or repurposed to display DB write queue depth as a diagnostic.
+
+---
+
+## 9. Affected Files
 
 | File | Change |
 |------|--------|
@@ -963,7 +1013,9 @@ This keeps the server running through a DB outage at the cost of reverting to fl
 | `src/save/save_socials.c` | Replace `save_socials` with worker enqueue |
 | `src/save/save_rulers.c` | Replace `save_rulers` with worker enqueue |
 | `src/save/save_sysdata.c` | Replace `save_sysdata` with worker enqueue |
-| `src/save/save_area_files.c` | Replace `save_bans`, `save_clans` with worker enqueue |
+| `src/save/save_area_files.c` | Replace `save_bans`, `save_clans` with worker enqueue; replace `build_save_*` file-write functions with per-entity DB worker enqueue calls; remove `SaveFile`/`saving_area`/`SaveQ[]` queue mechanism |
+| `src/build.c` | Remove `do_areasave` (or make no-op); call `db_worker_enqueue_write` from `build_addroom/mob/obj` and OLC delete paths |
+| `src/act_wiz.c` | Remove or stub `do_areasave` after Phase 8 cut-over |
 | `src/Makefile` | Add `-lpq -lpthread` to `LIBS`; add `tools/` and `db_worker.o` build targets |
 | `src/tools/import_to_db.c` | New: import all six content stores |
 | `src/tools/db_to_files.c` | New: export all six content stores |
@@ -988,7 +1040,7 @@ This keeps the server running through a DB outage at the cost of reverting to fl
 
 ---
 
-## 9. Integration Testing Strategy
+## 10. Integration Testing Strategy
 
 The existing integration test (`integration-test.sh`) boots the server, walks the full new-player login flow over WebSocket, and monitors for crashes. It currently assumes the server can boot by reading flat files from `area/`. The DB migration breaks this assumption: once the flat-file load code is removed, the server needs a live PostgreSQL instance to boot at all.
 
@@ -1097,7 +1149,7 @@ fi
 
 ---
 
-## 10. Trade-offs and Risks
+## 11. Trade-offs and Risks
 
 ### Advantages
 - Referential integrity enforced at the database layer.
@@ -1126,9 +1178,8 @@ fi
 
 ---
 
-## 11. Future Work (Out of Scope)
+## 12. Future Work (Out of Scope)
 
-- **Online Area Editor (OLC):** Admin commands to edit rooms/mobs/objects in-game, writing directly to the database.
 - **Area hot-reload:** Re-loading a single area from the database without a full reboot.
 - **Area versioning:** A `changelog` table recording who changed what and when.
 - **Web-based editor:** A REST API over the database for browser-based area and lore editing.
@@ -1136,7 +1187,7 @@ fi
 
 ---
 
-## 12. Implementation Checklist
+## 13. Implementation Checklist
 
 For the implementing Claude session:
 
@@ -1174,9 +1225,18 @@ For the implementing Claude session:
 - [ ] Replace `load_char_obj()` call site with `db_worker_enqueue_load_player()`
 - [ ] Run `make unit-tests` with `USE_DB_LOAD` enabled
 
+**OLC write path (Phase 8)**
+- [ ] Replace `build_save_rooms/mobs/objects/resets/shops/area()` with per-entity `db_worker_enqueue_write()` calls
+- [ ] Add `DB_WRITE_ROOM`, `DB_WRITE_MOB`, `DB_WRITE_OBJ`, `DB_WRITE_RESET_LIST`, `DB_WRITE_SHOP`, `DB_DELETE_ROOM`, `DB_DELETE_MOB`, `DB_DELETE_OBJ` to `DB_OP_TYPE` enum
+- [ ] Implement worker handlers for each new op type in `db_worker.c`
+- [ ] Add `db_worker_enqueue_write()` calls to `build_addroom()`, `build_addmob()`, `build_addobj()` in `build.c`
+- [ ] Add `db_worker_enqueue_write(DB_DELETE_*)` calls to OLC delete paths in `build.c`
+- [ ] Remove `SaveFile`, `saving_area`, `SaveQ[]` queue mechanism from `save_area_files.c`
+- [ ] Remove or stub `do_areasave` in `act_wiz.c`
+
 **Phase 8 cut-over**
 - [ ] Remove `#ifdef USE_DB_LOAD` and old file-based load/save code
-- [ ] Update `integration-test.sh` with PostgreSQL setup/teardown phase (Section 9.2)
+- [ ] Update `integration-test.sh` with PostgreSQL setup/teardown phase (Section 10.2)
 - [ ] Verify `make unit-tests` still passes (integration test now spins up its own cluster)
 - [ ] Move flat files to `*/legacy/` directories (`area/`, `help/`, `shelp/`, `lore/`, `data/`, `player/`)
 
