@@ -44,6 +44,7 @@ The goal of this proposal is to define a PostgreSQL database schema and migratio
 - All 401 `shelp/` files
 - All 144 `lore/` runtime files (the files the server reads at boot; `docs/lore/` source files are **not** touched)
 - All `data/` runtime state files: `bans.lst`, `brands.lst`, `corpses.lst`, `roommarks.lst`, `rulers.lst`, `clandata.dat`, `socials.txt`, `sysdat.bln`, `system.dat`
+- All board files in `area/boards/` (`board.{vnum}` — one per board object)
 - All player character files under `player/`
 - A unified migration tool (`src/tools/import_to_db.c`) to import all six content stores
 - An export tool (`src/tools/db_to_files.c`) to regenerate flat files from the database
@@ -429,7 +430,43 @@ CREATE TABLE socials (
 
 Each tilde-terminated field from the file maps to one column. The nine fields correspond to the nine `~`-terminated lines in `socials.txt` order.
 
-### 4.19 `clans` Table
+### 4.19 `boards` Table
+
+Corresponds to the header section of each `area/boards/board.{vnum}` file. One row per board object — configuration only; messages are in `board_messages`.
+
+```sql
+CREATE TABLE boards (
+    id            SERIAL  PRIMARY KEY,
+    vnum          INTEGER NOT NULL UNIQUE,  -- matches OBJ value[3]
+    expiry_days   INTEGER NOT NULL DEFAULT 10,
+    min_read_lev  INTEGER NOT NULL DEFAULT 0,
+    min_write_lev INTEGER NOT NULL DEFAULT 0,
+    clan          INTEGER NOT NULL DEFAULT 0
+);
+```
+
+`vnum` is the board's virtual number (stored in `OBJ_DATA->value[3]` for ITEM_BOARD objects). It is the stable identifier used when loading a board on demand.
+
+### 4.20 `board_messages` Table
+
+Corresponds to the `Messages` section of each `board.{vnum}` file.
+
+```sql
+CREATE TABLE board_messages (
+    id         SERIAL      PRIMARY KEY,
+    board_id   INTEGER     NOT NULL REFERENCES boards(id) ON DELETE CASCADE,
+    posted_at  BIGINT      NOT NULL,   -- Unix timestamp (matches M<timestamp> line)
+    author     TEXT        NOT NULL,
+    title      TEXT        NOT NULL DEFAULT '',
+    body       TEXT        NOT NULL DEFAULT '',
+    seq        INTEGER     NOT NULL   -- original file order, for stable display order
+);
+CREATE INDEX board_messages_board_id_seq ON board_messages(board_id, seq);
+```
+
+`seq` preserves the original file ordering so display order matches what players are used to. `posted_at` is the raw Unix timestamp from the `M<timestamp>` line; no conversion is applied.
+
+### 4.21 `clans` Table
 
 Corresponds to `data/clandata.dat`. The file stores a fixed 11-clan array with per-clan war matrices and counters.
 
@@ -449,7 +486,7 @@ CREATE TABLE clans (
 
 **Note:** `war_matrix` is a PostgreSQL `INTEGER[]` array of 11 elements (one slot per possible opponent clan). The C load code reads this as a fixed-size `int[MAX_CLAN][MAX_CLAN]` matrix.
 
-### 4.20 `rulers` Table
+### 4.22 `rulers` Table
 
 Corresponds to `data/rulers.lst`. Stores named ruler entries (empty file = no rulers).
 
@@ -460,7 +497,7 @@ CREATE TABLE rulers (
 );
 ```
 
-### 4.21 `brands` Table
+### 4.23 `brands` Table
 
 Corresponds to `data/brands.lst`. Each brand record documents an item that has been branded by an immortal.
 
@@ -474,7 +511,7 @@ CREATE TABLE brands (
 );
 ```
 
-### 4.22 `room_marks` Table
+### 4.24 `room_marks` Table
 
 Corresponds to `data/roommarks.lst`. Stores persistent room marks set by players or staff.
 
@@ -486,7 +523,7 @@ CREATE TABLE room_marks (
 );
 ```
 
-### 4.23 `corpses` Table
+### 4.25 `corpses` Table
 
 Corresponds to `data/corpses.lst`. Each row is one persisted corpse object with its nested inventory.
 
@@ -518,7 +555,7 @@ CREATE TABLE corpses (
 
 Nested inventory objects (items inside a corpse container) are stored as rows with `parent_id` pointing to their containing corpse row.
 
-### 4.24 `sysdata` Table
+### 4.26 `sysdata` Table
 
 Corresponds to `data/sysdat.bln` and `data/system.dat`. Stores server-wide scalar configuration values as a single row.
 
@@ -549,7 +586,7 @@ INSERT INTO sysdata (id) VALUES (1);
 
 The `CHECK(id = 1)` constraint enforces the singleton pattern — there is exactly one system data row.
 
-### 4.25 `players` Table
+### 4.27 `players` Table
 
 Corresponds to flat files under `player/<initial>/<Name>`. One row per player character. Fields map 1:1 to the sections written by `fwrite_char()` in `src/save/save_players.c`.
 
@@ -605,7 +642,7 @@ CREATE TABLE players (
 - `inventory` is a JSONB array of object trees mirroring the C `OBJ_DATA` structure, with nested `contains` arrays for containers. The full object schema matches the fields in `corpses` (§4.23) plus wear location.
 - `raw_save` stores the original flat-file text verbatim. During Phase 6 (transition), the server can fall back to re-parsing `raw_save` if any field is missing or malformed. It is set to NULL once the row has been fully round-tripped.
 
-### 4.26 `schema_version` Table
+### 4.28 `schema_version` Table
 
 ```sql
 CREATE TABLE schema_version (
@@ -798,7 +835,7 @@ Unlike area/help/shelp/lore (which are read-only at boot), the data/ and player/
 
 1. Open a synchronous boot connection using `/data/db.conf` (falling back to PG environment variables).
 2. Check `schema_version` — abort if it does not match `DB_SCHEMA_VERSION` compiled into the binary.
-3. Run all `db_load_*` functions in dependency order: areas → rooms → mobiles → objects → resets → shops → specials → objfuns → helps → shelps → lore → bans → socials → clans → rulers → brands → room marks → corpses → sysdata.
+3. Run all `db_load_*` functions in dependency order: areas → rooms → mobiles → objects → resets → shops → specials → objfuns → helps → shelps → lore → bans → socials → boards → clans → rulers → brands → room marks → corpses → sysdata.
 4. Close the boot connection.
 5. Start the async writer thread (§7.5). All subsequent writes go through the writer queue.
 
@@ -994,7 +1031,29 @@ When a builder uses `addroom`, `addmob`, or `addobject` to create a new entity:
 
 When a builder deletes a room, mob, or object, a `DB_DELETE_ROOM` / `DB_DELETE_MOB` / `DB_DELETE_OBJ` operation type is enqueued. The worker issues `DELETE FROM rooms/mobiles/objects WHERE vnum = $1`.
 
-### 8.5 No `areasave` Command After Cut-Over
+### 8.5 Social Editor (`sedit`)
+
+`sedit` currently calls `save_social_table()` synchronously after every edit — it rewrites the entire `data/socials.txt` file in-place. After cut-over, `save_social_table()` is replaced:
+
+- `sedit new <name>` → `db_worker_enqueue_write(DB_WRITE_SOCIAL, ...)` using `INSERT INTO socials ...`
+- `sedit delete <name>` → `db_worker_enqueue_write(DB_DELETE_SOCIAL, ...)` using `DELETE FROM socials WHERE name = $1`
+- Any `sedit <field>` edit → `db_worker_enqueue_write(DB_WRITE_SOCIAL, ...)` using `UPDATE socials SET <field> = $1 WHERE name = $2`
+
+The in-memory `social_table` array continues to be updated immediately (as it is today) so the change takes effect at once. The DB write is asynchronous and does not block the game loop.
+
+### 8.6 Board Writes
+
+Boards are currently written by `save_board()` in `src/board.c`, which opens and overwrites `area/boards/board.{vnum}` synchronously after any post, delete, or edit. After cut-over:
+
+- **New post** (`finished_editing()`) → `db_worker_enqueue_write(DB_WRITE_BOARD_MESSAGE, ...)` using `INSERT INTO board_messages ...`
+- **Delete message** (`do_delete()`) → `db_worker_enqueue_write(DB_DELETE_BOARD_MESSAGE, ...)` using `DELETE FROM board_messages WHERE id = $1`
+- **Board config change** (if board metadata is edited) → `db_worker_enqueue_write(DB_WRITE_BOARD, ...)` using `UPDATE boards SET ... WHERE vnum = $1`
+
+`save_board()` is removed. The in-memory `BOARD_DATA` / `MESSAGE_DATA` linked lists continue to be updated immediately before the enqueue, so players see changes at once without waiting for the DB write.
+
+**Boot-time loading:** Unlike the current on-demand file read, boards are loaded at boot from the `boards` and `board_messages` tables (as part of the standard boot sequence in §7.3). This eliminates the edge case where the first player to touch a board triggers a file read mid-session, and allows expiry filtering to be done in SQL (`WHERE posted_at > $1`) rather than in C.
+
+### 8.8 No `areasave` Command After Cut-Over
 
 The `do_areasave` command in `src/act_wiz.c` becomes a no-op after Phase 8. Edits are persisted to the database immediately (via the worker queue) — there is no separate "save" step. The command can be removed or repurposed to display DB write queue depth as a diagnostic.
 
@@ -1010,7 +1069,8 @@ The `do_areasave` command in `src/act_wiz.c` becomes a no-op after Phase 8. Edit
 | `src/comm.c` | Add `db_worker_poll_results()` call in `game_loop()`; add `CON_LOADING_FROM_DB` handling |
 | `src/typedefs.h` | Add `CON_LOADING_FROM_DB` to the `connected` enum |
 | `src/save/save_players.c` | Replace `save_char_obj` with `db_worker_enqueue_write(DB_WRITE_PLAYER, ...)`; replace `load_char_obj` with `db_worker_enqueue_load_player()` |
-| `src/save/save_socials.c` | Replace `save_socials` with worker enqueue |
+| `src/save/save_socials.c` | Replace `save_social_table()` with per-operation worker enqueue (`DB_WRITE_SOCIAL`, `DB_DELETE_SOCIAL`) |
+| `src/board.c` | Replace `save_board()` with `db_worker_enqueue_write(DB_WRITE_BOARD_MESSAGE / DB_DELETE_BOARD_MESSAGE)`; move board loading to boot-time `db_load_boards()` |
 | `src/save/save_rulers.c` | Replace `save_rulers` with worker enqueue |
 | `src/save/save_sysdata.c` | Replace `save_sysdata` with worker enqueue |
 | `src/save/save_area_files.c` | Replace `save_bans`, `save_clans` with worker enqueue; replace `build_save_*` file-write functions with per-entity DB worker enqueue calls; remove `SaveFile`/`saving_area`/`SaveQ[]` queue mechanism |
@@ -1028,6 +1088,7 @@ The `do_areasave` command in `src/act_wiz.c` becomes a no-op after Phase 8. Edit
 | `shelp/legacy/` | New: all original `shelp/` files |
 | `lore/legacy/` | New: all original `lore/` runtime files |
 | `data/legacy/` | New: all original `data/` runtime state files |
+| `area/boards/legacy/` | New: all original `board.{vnum}` files |
 | `player/legacy/` | New: snapshot of all player files at migration time |
 | `docs/area_db_spec.md` | New: promoted from this proposal after implementation |
 | `docs/help_file_spec.md` | Update: add database authoring section |
@@ -1199,7 +1260,7 @@ For the implementing Claude session:
 - [ ] Apply `schema.sql` to the database
 
 **Migration tools**
-- [ ] Write `src/tools/import_to_db.c`: import areas, help, shelp, `lore/` (runtime), `data/`, `player/`
+- [ ] Write `src/tools/import_to_db.c`: import areas, help, shelp, `lore/` (runtime), `data/`, `player/`, `area/boards/`
 - [ ] Write `src/tools/db_to_files.c`: export all six stores + `--views-only`
 - [ ] Write `src/tests/test_db_roundtrip.c`: unit test
 - [ ] Run import; verify row counts against file counts for all six stores
@@ -1234,11 +1295,18 @@ For the implementing Claude session:
 - [ ] Remove `SaveFile`, `saving_area`, `SaveQ[]` queue mechanism from `save_area_files.c`
 - [ ] Remove or stub `do_areasave` in `act_wiz.c`
 
+**Socials and boards write path (Phase 8)**
+- [ ] Add `DB_WRITE_SOCIAL`, `DB_DELETE_SOCIAL`, `DB_WRITE_BOARD_MESSAGE`, `DB_DELETE_BOARD_MESSAGE`, `DB_WRITE_BOARD` to `DB_OP_TYPE` enum
+- [ ] Implement worker handlers for each new op type in `db_worker.c`
+- [ ] Replace `save_social_table()` in `save_socials.c` with per-operation worker enqueue calls
+- [ ] Replace `save_board()` in `board.c` with per-message worker enqueue calls
+- [ ] Move board loading from on-demand `load_board()` to boot-time `db_load_boards()` in `db.c`; boards and messages loaded at boot, expiry filter applied in SQL
+
 **Phase 8 cut-over**
 - [ ] Remove `#ifdef USE_DB_LOAD` and old file-based load/save code
 - [ ] Update `integration-test.sh` with PostgreSQL setup/teardown phase (Section 10.2)
 - [ ] Verify `make unit-tests` still passes (integration test now spins up its own cluster)
-- [ ] Move flat files to `*/legacy/` directories (`area/`, `help/`, `shelp/`, `lore/`, `data/`, `player/`)
+- [ ] Move flat files to `*/legacy/` directories (`area/`, `help/`, `shelp/`, `lore/`, `data/`, `player/`, `area/boards/`)
 
 **Documentation**
 - [ ] Write `docs/player_file_spec.md` documenting player save format and DB schema
