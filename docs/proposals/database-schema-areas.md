@@ -954,7 +954,644 @@ part of `db_load_chests()`, replacing the per-vnum `load_chest()` call in `db.c`
 
 ---
 
-## 5. Per-Area Views
+## 4C. YAML Import/Export: All Remaining Data Types
+
+This section specifies YAML schemas and import/export/update operations for every data
+type that is ingested into the database, except:
+
+- **Area content** (areas, rooms, mobs, objects, shops, resets, specials, objfuns) —
+  covered by `docs/area_file_spec.md`.
+- **Keep chests** — covered by §4A and §4B above.
+- **Players** — covered by the forthcoming `docs/player_file_spec.md`.
+
+All operations share a common invocation pattern:
+
+```
+db_to_files --yaml --<type>          Export one or all records of that type
+db_import   --yaml --<type> <file>   Import/replace from a YAML file
+```
+
+Wizard in-game commands follow the pattern `dbadmin export <type>` and
+`dbadmin import <type> <file>`. Minimum wizard level: 60.
+
+All YAML files use UTF-8, Unix line endings, YAML 1.2. All imports are atomic: the
+relevant table rows are deleted and re-inserted within a single transaction. Validation
+failures abort the transaction and produce an error report to the issuing wizard or tool.
+
+---
+
+### 4C.1. Help Entries (`help_entries` table)
+
+**Source files:** `help/<filename>` — one file may contain multiple entries delimited by
+`---` lines.
+
+**Export path:** `data/export/help.yaml`
+**Import path:** `data/import/help.yaml`
+
+#### YAML Schema
+
+```yaml
+help_entries:
+  - filename:  keep
+    level:     0
+    keywords:  "keep"
+    body: |
+      KEEP
+      ...
+
+  - filename:  keep-chest
+    level:     0
+    keywords:  "keep chest"
+    body: |
+      KEEP CHEST
+      ...
+```
+
+| Field | Type | Constraint |
+|-------|------|------------|
+| `filename` | string | Base filename without path. Must match `/^[a-z0-9_\-]+$/`. Unique within the file. |
+| `level` | integer | `−1` to `105`. `-1` = staff-only. |
+| `keywords` | string | Space-separated keywords used by the `help` command. Non-empty. |
+| `body` | string | Block scalar. The help text body. Non-empty. |
+
+#### Operations
+
+- **Export:** `db_to_files --yaml --help` writes all rows to `data/export/help.yaml`.
+  Individual file: `db_to_files --yaml --help-file <filename>`.
+- **Import (replace-all):** `db_import --yaml --help data/import/help.yaml` deletes all
+  `help_entries` rows and re-inserts from the file.
+- **Upsert:** `db_import --yaml --help --upsert data/import/help.yaml` inserts or updates
+  by `filename`, leaving unmentioned rows intact.
+- **Wizard commands:** `dbadmin export help`, `dbadmin import help`, `dbadmin upsert help`.
+
+#### Validation
+
+- `filename` must be unique within the import file → rejection.
+- `level` must be `−1–105` → rejection outside range.
+- `keywords` must be non-empty → rejection.
+- `body` must be non-empty → rejection.
+
+---
+
+### 4C.2. Staff Help Entries (`shelp_entries` table)
+
+**Source files:** `shelp/<filename>` — same format as help files.
+
+**Export path:** `data/export/shelp.yaml`
+**Import path:** `data/import/shelp.yaml`
+
+#### YAML Schema
+
+```yaml
+shelp_entries:
+  - filename:  spec-midgaard-city-guard
+    level:     -1
+    keywords:  "spec_midgaard_city_guard"
+    body: |
+      spec_midgaard_city_guard
+      ...
+```
+
+Fields, operations, and validation are identical to §4C.1, substituting `shelp` for
+`help` throughout. All `shelp_entries` rows have `level: -1` (staff-only) → rejection
+if any entry has `level >= 0`.
+
+---
+
+### 4C.3. Lore Topics and Entries (`lore_topics` + `lore_entries` tables)
+
+**Source files:** `docs/lore/<category>/<filename>.md` — canonical source in `docs/lore/`;
+runtime `lore/` is generated from it.
+
+**Export path:** `data/export/lore.yaml`
+**Import path:** `data/import/lore.yaml`
+
+#### YAML Schema
+
+```yaml
+lore:
+  - filename:  midgaard-founding
+    keywords:  "midgaard founding history"
+    entries:
+      - seq:   1
+        flags: 0
+        body: |
+          The city of Midgaard was founded in the age of the Lantern Reform...
+
+      - seq:   2
+        flags: 0
+        body: |
+          The second district was established by the merchant guilds...
+```
+
+| Field | Type | Constraint |
+|-------|------|------------|
+| `filename` | string | Unique. Matches the source file basename without extension. |
+| `keywords` | string | Space-separated keywords. Non-empty. |
+| `entries` | sequence | One or more entry mappings. |
+| `entries[].seq` | integer | `>= 1`. Ascending order within each topic. |
+| `entries[].flags` | integer | Access/visibility bitvector. `0` = no restriction. |
+| `entries[].body` | string | Block scalar. Non-empty. |
+
+#### Operations
+
+- **Export:** `db_to_files --yaml --lore` writes all topics and entries.
+- **Import (replace-all):** Deletes all `lore_topics` and `lore_entries` rows, re-inserts.
+  Cascade delete handles entries when a topic is removed.
+- **Upsert:** Insert or update by `filename`; insert or update entries by `(topic_id, seq)`.
+
+---
+
+### 4C.4. Bans (`bans` table)
+
+**Source file:** `data/bans.lst`
+
+**Export path:** `data/export/bans.yaml`
+**Import path:** `data/import/bans.yaml`
+
+#### YAML Schema
+
+```yaml
+bans:
+  - ban_type:  0
+    address:   "69.164.207.70"
+    banned_by: "Virant"
+```
+
+| Field | Type | Constraint |
+|-------|------|------------|
+| `ban_type` | integer | `0` = IP ban, `1` = name ban, `2` = class ban. |
+| `address` | string | IP address, hostname, or name. Non-empty. |
+| `banned_by` | string | Staff name who placed the ban. May be empty `""`. |
+
+#### Operations
+
+- **Export:** `db_to_files --yaml --bans` writes all rows.
+- **Import (replace-all):** Replaces entire `bans` table.
+- **Append:** `db_import --yaml --bans --append` inserts new bans without removing existing.
+- **Wizard commands:** `dbadmin export bans`, `dbadmin import bans`.
+
+#### Validation
+
+- `address` must be non-empty → rejection.
+- `ban_type` must be `0–2` → rejection outside range.
+- Duplicate `address` within the import file → rejection.
+
+---
+
+### 4C.5. Socials (`socials` table)
+
+**Source file:** `data/socials.txt`
+
+**Export path:** `data/export/socials.yaml`
+**Import path:** `data/import/socials.yaml`
+
+#### YAML Schema
+
+```yaml
+socials:
+  - name:          accuse
+    char_no_arg:   "Accuse whom?"
+    others_no_arg: "$n is in an accusing mood."
+    char_found:    "You look accusingly at $M."
+    others_found:  "$n looks accusingly at $N."
+    vict_found:    "$n looks accusingly at you."
+    char_auto:     "You accuse yourself."
+    others_auto:   "$n seems to have a bad conscience."
+```
+
+| Field | Type | Constraint |
+|-------|------|------------|
+| `name` | string | Social name (lowercase). Unique. Non-empty. |
+| `char_no_arg` | string | Shown to actor when no target is given. |
+| `others_no_arg` | string | Shown to room when no target is given. |
+| `char_found` | string | Shown to actor when a target is found. |
+| `others_found` | string | Shown to room (excluding target). |
+| `vict_found` | string | Shown to the target. |
+| `char_auto` | string | Shown to actor when they target themselves. |
+| `others_auto` | string | Shown to room when actor targets themselves. |
+
+All text fields may be empty `""` (the social has no message for that case). The
+tilde-terminated format from the legacy file maps directly: each tilde-terminated string
+becomes the corresponding YAML field value with the tilde stripped.
+
+#### Operations
+
+- **Export:** `db_to_files --yaml --socials`.
+- **Import (replace-all):** Replaces entire `socials` table. The runtime social table is
+  hot-reloaded after import.
+- **Upsert:** `db_import --yaml --socials --upsert` inserts or updates by `name`.
+- **Single social:** `dbadmin export social <name>` / `dbadmin import social <name>`.
+
+#### Validation
+
+- `name` must be unique within import file → rejection.
+- `name` must be lowercase, no spaces → rejection.
+
+---
+
+### 4C.6. Boards and Messages (`boards` + `board_messages` tables)
+
+**Source files:** `area/boards/board.<vnum>` — one file per board.
+
+**Export path:** `data/export/boards.yaml`
+**Import path:** `data/import/boards.yaml`
+
+#### YAML Schema
+
+```yaml
+boards:
+  - vnum:            1100
+    expiry_days:     30
+    min_read_level:  35
+    min_write_level: 35
+    clan_id:         0
+    messages:
+      - message_id:  894782732
+        from_name:   "Zorn"
+        subject:     ":) @@aSun May 10 01:45:32 1998\n@@N"
+        body: |
+          *plants a flag in the ground*
+          *ahem*
+          I hereby claim this board and the room it rests in as property of
+          Zorn and the LSK.
+```
+
+| Field | Type | Constraint |
+|-------|------|------------|
+| `vnum` | integer | Board object vnum. Must exist in `objects` table with `item_type = 27`. |
+| `expiry_days` | integer | `>= 1`. Messages older than this many days are purged at reset. |
+| `min_read_level` | integer | `0–105`. |
+| `min_write_level` | integer | `0–105`. |
+| `clan_id` | integer | `0` = no clan restriction. |
+| `messages` | sequence | Zero or more message mappings. |
+| `messages[].message_id` | integer | Unique message identifier (legacy timestamp-based ID). |
+| `messages[].from_name` | string | Author's player name. |
+| `messages[].subject` | string | Message subject line. May contain color codes. |
+| `messages[].body` | string | Block scalar. The message body. |
+
+#### Operations
+
+- **Export:** `db_to_files --yaml --boards` writes all boards and their messages.
+  Single board: `db_to_files --yaml --board <vnum>`.
+- **Import (replace-all):** Replaces all `boards` and `board_messages` rows. The board
+  runtime state is hot-reloaded after import.
+- **Upsert:** `db_import --yaml --boards --upsert` inserts/updates boards by `vnum`,
+  inserts/updates messages by `message_id`.
+- **Single board:** `dbadmin import board <vnum>`.
+
+#### Validation
+
+- `vnum` must reference an object in the `objects` table with `item_type = 27` (board)
+  → rejection if not found.
+- `expiry_days >= 1` → rejection.
+- `min_read_level` and `min_write_level` must be `0–105` → rejection.
+- `message_id` must be unique within its board → rejection.
+
+---
+
+### 4C.7. Clans (`clans` table)
+
+**Source file:** `data/clandata.dat`
+
+**Export path:** `data/export/clans.yaml`
+**Import path:** `data/import/clans.yaml`
+
+#### YAML Schema
+
+```yaml
+clans:
+  - id:           1
+    name:         "Order of the Iron Circle"
+    war_count:    0
+    win_count:    0
+    loss_count:   0
+    member_count: 0
+    gold:         0
+    war_matrix:   []
+```
+
+| Field | Type | Constraint |
+|-------|------|------------|
+| `id` | integer | Clan ID `1–MAX_CLAN`. Must be unique. |
+| `name` | string | Clan name. May be empty `""` for unused clan slots. |
+| `war_count` | integer | `>= 0`. |
+| `win_count` | integer | `>= 0`. |
+| `loss_count` | integer | `>= 0`. |
+| `member_count` | integer | `>= 0`. |
+| `gold` | integer | `>= 0`. |
+| `war_matrix` | list of integers | Flat array of war status entries. May be `[]`. |
+
+#### Operations
+
+- **Export:** `db_to_files --yaml --clans`.
+- **Import (replace-all):** Replaces the entire `clans` table. Clan data is hot-reloaded.
+- **Upsert:** `db_import --yaml --clans --upsert` inserts/updates by `id`.
+
+#### Validation
+
+- `id` must be unique within the import file → rejection.
+- All integer counters `>= 0` → rejection if negative.
+
+---
+
+### 4C.8. Rulers (`rulers` table)
+
+**Source file:** `data/rulers.lst`
+
+**Export path:** `data/export/rulers.yaml`
+**Import path:** `data/import/rulers.yaml`
+
+#### YAML Schema
+
+```yaml
+rulers:
+  - name: "Aerindel"
+  - name: "Zorn"
+```
+
+| Field | Type | Constraint |
+|-------|------|------------|
+| `name` | string | Player name. Non-empty. Unique. |
+
+#### Operations
+
+- **Export:** `db_to_files --yaml --rulers`.
+- **Import (replace-all):** Replaces all `rulers` rows.
+- **Append:** `db_import --yaml --rulers --append` inserts new rulers without removing existing.
+- **Wizard commands:** `dbadmin export rulers`, `dbadmin import rulers`.
+
+#### Validation
+
+- `name` must be non-empty → rejection.
+- `name` must be unique within the import file → rejection.
+
+---
+
+### 4C.9. Brands (`brands` table)
+
+**Source file:** `data/brands.lst`
+
+**Export path:** `data/export/brands.yaml`
+**Import path:** `data/import/brands.yaml`
+
+#### YAML Schema
+
+```yaml
+brands:
+  - branded_by:  "Tester"
+    item_name:   "@@rSystem@@N"
+    brand_date:  "Tue Jun 17 06:59:13 2025"
+    description: |
+      UNIQUE ITEM: keyword: diploma, Name: @@pA SoESHM Diploma@@N, flags: magic unique
+       level: 100, affects:
+      Affects strength by 10.
+```
+
+| Field | Type | Constraint |
+|-------|------|------------|
+| `branded_by` | string | Staff name who issued the brand. Non-empty. |
+| `item_name` | string | Display name of the branded item. May contain color codes. Non-empty. |
+| `brand_date` | string | Date string as recorded at brand time. Non-empty. |
+| `description` | string | Block scalar. Full brand description text. Non-empty. |
+
+#### Operations
+
+- **Export:** `db_to_files --yaml --brands`.
+- **Import (replace-all):** Replaces all `brands` rows.
+- **Append:** `db_import --yaml --brands --append` appends new brand records without
+  removing existing ones. Brands are append-only in normal operation; replace-all is for
+  disaster recovery only.
+- **Wizard commands:** `dbadmin export brands`, `dbadmin import brands`.
+
+#### Validation
+
+- `branded_by`, `item_name`, and `brand_date` must be non-empty → rejection.
+
+---
+
+### 4C.10. Room Marks (`room_marks` table)
+
+**Source file:** `data/roommarks.lst`
+
+**Export path:** `data/export/roommarks.yaml`
+**Import path:** `data/import/roommarks.yaml`
+
+#### YAML Schema
+
+```yaml
+room_marks:
+  - room_vnum: 1150
+    mark_text: "The adventurers' guild charter hangs here, inscribed with names."
+```
+
+| Field | Type | Constraint |
+|-------|------|------------|
+| `room_vnum` | integer | Must reference a room in the `rooms` table → rejection if not found. |
+| `mark_text` | string | Non-empty. |
+
+#### Operations
+
+- **Export:** `db_to_files --yaml --roommarks`.
+- **Import (replace-all):** Replaces all `room_marks` rows.
+- **Upsert:** `db_import --yaml --roommarks --upsert` inserts/updates by `room_vnum`.
+- **Wizard commands:** `dbadmin export roommarks`, `dbadmin import roommarks`.
+
+#### Validation
+
+- `room_vnum` must exist in the `rooms` table → rejection.
+- `mark_text` must be non-empty → rejection.
+
+---
+
+### 4C.11. Corpses (`corpses` table)
+
+**Source file:** `data/corpses.lst`
+
+**Export path:** `data/export/corpses.yaml`
+**Import path:** `data/import/corpses.yaml`
+
+Corpses are transient (they decay and disappear). Persisting them to the database allows
+the server to restore corpses after a crash or reboot. The YAML export is primarily a
+backup/restore format, not a regular authoring format.
+
+#### YAML Schema
+
+```yaml
+corpses:
+  - where_vnum:  3300
+    nest:        0
+    name:        "Corpse"
+    short_descr: "corpse of Virant"
+    description: "The corpse of Virant is lying here."
+    vnum:        11
+    extra_flags: 0
+    wear_flags:  0
+    wear_loc:    -1
+    class_flags: 1
+    item_type:   24
+    weight:      13
+    level:       1
+    timer:       0
+    cost:        86
+    values:      [0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+    parent_id:   null   # null for top-level corpse; integer for nested items
+```
+
+| Field | Type | Constraint |
+|-------|------|------------|
+| `where_vnum` | integer | Room vnum where the corpse rests. |
+| `nest` | integer | `0` = top-level corpse or direct content; `> 0` = nested inside a container. |
+| `name` | string | Object name. |
+| `short_descr` | string | Short description. |
+| `description` | string | Long description. |
+| `vnum` | integer | Object prototype vnum. `0` for generated objects without a prototype. |
+| `extra_flags` | integer | Extra flags bitvector. |
+| `wear_flags` | integer | Wear flags bitvector. |
+| `wear_loc` | integer | Wear location integer. `-1` if not worn. |
+| `class_flags` | integer | `item_apply` bitvector. |
+| `item_type` | integer | Item type integer. |
+| `weight` | integer | Item weight. |
+| `level` | integer | Item level. |
+| `timer` | integer | Decay timer ticks. |
+| `cost` | integer | Gold value. |
+| `values` | list of 10 integers | The ten value slots. |
+| `parent_id` | integer or null | Row `id` of the containing object, or `null` for top-level. |
+
+Integer bitvectors are stored raw (not as name lists) in the corpses format because
+corpses are runtime objects that may have flag combinations not valid in authored content.
+
+#### Operations
+
+- **Export:** `db_to_files --yaml --corpses`.
+- **Import (replace-all):** Replaces all `corpses` rows. Used for crash recovery. The
+  server must not be running (or must be in maintenance mode) when restoring corpses,
+  as hot-loading corpses into a live world requires careful conflict resolution.
+- **Wizard command:** `dbadmin export corpses` (export only; import is an offline operation).
+
+#### Validation
+
+- `where_vnum` may reference rooms that no longer exist (corpse in a demolished room); no
+  rejection — the corpse is placed in the default limbo room on load.
+- `values` must be exactly 10 integers → rejection.
+- `parent_id` must reference another row in the same import file (by import order) if
+  non-null → rejection if the referenced row is not present earlier in the file.
+
+---
+
+### 4C.12. System Data (`sysdata` table)
+
+**Source files:** `data/sysdat.bln` (boolean flags) + `data/system.dat` (text fields)
+
+**Export path:** `data/export/sysdata.yaml`
+**Import path:** `data/import/sysdata.yaml`
+
+#### YAML Schema
+
+```yaml
+sysdata:
+  mud_name:    "ACK!TNG"
+  admin_email: "admin@example.com"
+  login_msg:   ""
+  motd:        ""
+  welcome:     ""
+  news:        ""
+  int_val_1:   0
+  int_val_2:   0
+  bln_val_0:   false
+  bln_val_1:   false
+  bln_val_2:   false
+  bln_val_3:   false
+  bln_val_4:   false
+  bln_val_5:   false
+  bln_val_6:   false
+  bln_val_7:   false
+```
+
+| Field | Type | Constraint |
+|-------|------|------------|
+| `mud_name` | string | MUD display name. Non-empty. |
+| `admin_email` | string | Admin contact email. May be empty. |
+| `login_msg` | string | Message shown at the login prompt. May be empty. Block scalar allowed. |
+| `motd` | string | Message of the day. May be empty. Block scalar allowed. |
+| `welcome` | string | Post-login welcome text. May be empty. Block scalar allowed. |
+| `news` | string | News text. May be empty. Block scalar allowed. |
+| `int_val_1`, `int_val_2` | integer | Reserved integer values. |
+| `bln_val_0`–`bln_val_7` | boolean | Reserved boolean flags. |
+
+#### Operations
+
+- **Export:** `db_to_files --yaml --sysdata`.
+- **Import (replace-all):** Updates the single `sysdata` row. The runtime sysdata
+  singleton is hot-reloaded after import.
+- **Wizard commands:** `dbadmin export sysdata`, `dbadmin import sysdata`.
+
+#### Validation
+
+- `mud_name` must be non-empty → rejection.
+- Boolean fields accept `true`/`false` or `1`/`0` → rejection for other values.
+
+---
+
+### 4C.13. Summary: All Data Types and Their YAML Paths
+
+| Data type | DB table(s) | Export path | Import path | Hot-reload |
+|-----------|-------------|-------------|-------------|------------|
+| Area content | areas + 11 sub-tables | `area/export/<keyword>/` | `area/incoming/<keyword>/` | Yes |
+| Keep chests | keep_chests + keep_chest_items | `data/chest/export/<name>.yaml` | `data/chest/incoming/<name>.yaml` | Yes (if owner online) |
+| Help entries | help_entries | `data/export/help.yaml` | `data/import/help.yaml` | Yes |
+| Staff help | shelp_entries | `data/export/shelp.yaml` | `data/import/shelp.yaml` | Yes |
+| Lore | lore_topics + lore_entries | `data/export/lore.yaml` | `data/import/lore.yaml` | Yes |
+| Bans | bans | `data/export/bans.yaml` | `data/import/bans.yaml` | Yes |
+| Socials | socials | `data/export/socials.yaml` | `data/import/socials.yaml` | Yes |
+| Boards + messages | boards + board_messages | `data/export/boards.yaml` | `data/import/boards.yaml` | Yes |
+| Clans | clans | `data/export/clans.yaml` | `data/import/clans.yaml` | Yes |
+| Rulers | rulers | `data/export/rulers.yaml` | `data/import/rulers.yaml` | Yes |
+| Brands | brands | `data/export/brands.yaml` | `data/import/brands.yaml` | Yes (append) |
+| Room marks | room_marks | `data/export/roommarks.yaml` | `data/import/roommarks.yaml` | Yes |
+| Corpses | corpses | `data/export/corpses.yaml` | `data/import/corpses.yaml` | No (offline) |
+| System data | sysdata | `data/export/sysdata.yaml` | `data/import/sysdata.yaml` | Yes |
+| Players | players | `data/export/players/` | `data/import/players/` | Yes (if online) |
+
+All export and import paths are relative to the server's working directory (`area/` for
+area data; repository root for all others).
+
+### 4C.14. `db_import` Tool Reference
+
+```
+db_import --yaml --<type> [--upsert|--append] <file>
+```
+
+| Flag | Behavior |
+|------|----------|
+| _(no flag)_ | Replace-all: delete existing rows for the type, insert all from file. |
+| `--upsert` | Insert or update by natural key; leave unmentioned rows intact. |
+| `--append` | Insert only; skip rows whose natural key already exists. |
+| `--dry-run` | Validate the file and report what would change without writing to DB. |
+
+`db_import` connects to the database directly (same credentials as the server) and runs
+outside the server process. Hot-reload of live data requires the server to be running and
+receiving its notification socket; if the server is not running, the import still succeeds
+and the data is available at next boot.
+
+### 4C.15. `dbadmin` Wizard Command Reference
+
+```
+dbadmin export <type> [<identifier>]    — Export to data/export/<type>.yaml
+dbadmin import <type> [--upsert]        — Import from data/import/<type>.yaml
+dbadmin status <type>                   — Show last import/export timestamp
+dbadmin validate <type>                 — Validate data/import/<type>.yaml without writing
+```
+
+`<type>` is one of: `areas`, `help`, `shelp`, `lore`, `bans`, `socials`, `boards`,
+`clans`, `rulers`, `brands`, `roommarks`, `corpses`, `sysdata`, `chests`.
+
+`<identifier>` is optional and type-specific: for areas it is the keyword, for boards it
+is the vnum, for chests it is the owner name.
+
+Minimum wizard level: 60 for all `dbadmin` subcommands.
+
+---
 
 Each area gets a set of named views generated automatically during migration. These provide logical isolation — working on Midgaard means querying `midgaard_rooms`, `midgaard_mobiles`, etc. — while the data physically lives in a single schema with full cross-area foreign key support.
 
