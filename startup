@@ -70,12 +70,22 @@ fi
 # ---------------------------------------------------------------------------
 # Step 3: launch
 #
-# Port 8890 sniffs each new connection: waits up to 500 ms for the first
-# byte.  0x16 → TLS handshake.  Anything else → plain telnet.
+# --sniff-port is required (not a positional plain-telnet port) so that the
+# TLS context is initialised.  When a positional port is used the server
+# opens it as a plain-telnet control socket; init_tls_context() is only
+# called when tls_port > 0 || sniff_port > 0, so global_ssl_ctx remains
+# NULL and TLS clients are erroneously sent plain text instead of a TLS
+# server hello, producing no visible output in the client.
+#
+# With --sniff-port the server peeks at the first byte of each connection:
+#   0x16 → TLS handshake (requires valid cert/key).
+#   anything else → plain telnet.
+# Both Mudlet "connect securely" and plain telnet/telnet-TLS clients work
+# on the same port.
 #
 # The binary must run from area/ so relative paths to area files, data
 # files, and player directories resolve correctly.
 # ---------------------------------------------------------------------------
 echo "startup: starting ACK!MUD on port $PORT..."
 # shellcheck disable=SC2086
-exec sh -c "cd '$AREA_DIR' && exec ../src/ack '$PORT' $EXTRA_ARGS"
+exec sh -c "cd '$AREA_DIR' && exec ../src/ack --sniff-port '$PORT' $EXTRA_ARGS"
