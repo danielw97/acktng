@@ -2006,3 +2006,220 @@ This prevents dangling exits from accumulating silently. Cross-area exits to alr
 imported areas (present in the database) do not require a `world_links.md` entry.
 
 ---
+## VI. Ingestion Pipeline Mechanics
+
+### VI.1. Directory Detection
+
+The server scans `area/incoming/` once per `PULSE_AREA` tick (approximately every 60
+seconds of game time). A directory is eligible for processing when:
+
+1. It is a directory (not a file).
+2. Its name matches `/^[a-z0-9_]+$/`.
+3. It does not have a `.lock` file inside it. (The author may drop a `.lock` file to
+   prevent premature processing while still writing files into the directory.)
+
+The wizard command `areaingest run <keyword>` bypasses the tick-based scan and processes
+the named directory immediately. The wizard must be at least level 60.
+
+---
+
+### VI.2. Processing Phases
+
+Each submitted directory passes through the following phases in order. Failure at any
+phase immediately produces a rejection and halts further processing.
+
+#### Phase 1: Directory Pre-Check
+
+- Directory name matches `/^[a-z0-9_]+$/` → rejection if not.
+- Directory name length `1–32` characters → rejection if out of range.
+- No files present other than the eight permitted names → rejection if any unexpected
+  file is found.
+- Total directory size `<= 16 MB` → rejection if over limit.
+- Each file size `<= 4 MB` → rejection if any individual file exceeds the limit.
+- `area.yaml` is present → rejection if missing.
+- `rooms.yaml` is present → rejection if missing.
+
+#### Phase 2: YAML Parse
+
+Each present file is parsed as YAML 1.2. Errors produce a rejection naming the file,
+line number, and the YAML parser error message. Files are parsed in this order:
+`area.yaml`, `rooms.yaml`, `mobs.yaml`, `objects.yaml`, `shops.yaml`, `resets.yaml`,
+`specials.yaml`, `objfuns.yaml`.
+
+Parse errors in any file → rejection immediately. The remaining files are not parsed.
+
+#### Phase 3: Schema Validation
+
+For each parsed file, the top-level structure is validated:
+
+- Top-level key matches the expected name (e.g., `area`, `rooms`, `mobs`) → rejection
+  if wrong key or extra top-level keys.
+- For sequence files (`rooms`, `mobs`, etc.), the top-level value must be a sequence →
+  rejection if it is a mapping or scalar.
+- Required fields are present in each record → rejection with the missing field name.
+- Field types match (string where string expected, integer where integer expected,
+  list where list expected) → rejection with the mismatched field name.
+
+#### Phase 4: Flag and Enum Resolution
+
+All string flag names and enum values are resolved against the tables in §III. Unknown
+names → rejection. Integer values in flag-list fields → rejection. `null` where a
+required field is expected → rejection.
+
+#### Phase 5: Vnum Ordering and Range Check
+
+- Within each file, vnums must appear in ascending order → rejection if out of order.
+- Every vnum in all files must fall within `[vnum_min, vnum_max]` declared in `area.yaml`
+  → rejection if any vnum falls outside the range.
+- `[vnum_min, vnum_max]` must not overlap any area already in the database (excluding the
+  area being updated if `update_existing: true`) → rejection naming the conflicting area.
+
+#### Phase 6: Content Validation
+
+All per-entity rules from §IV are applied. Failures produce a rejection naming the
+file, entity type, vnum, and specific rule violated.
+
+#### Phase 7: Cross-Section Consistency
+
+All cross-file rules from §V are applied. Failures produce a rejection naming both the
+referencing and referenced entities.
+
+#### Phase 8: Operation Mode Check
+
+- If `update_existing: false` (default): the area `keyword` must not already exist in
+  the database → rejection if it does.
+- If `update_existing: true`: the area `keyword` must already exist in the database →
+  rejection if it does not.
+
+#### Phase 9: Database Transaction
+
+A single atomic database transaction begins. The following actions occur inside the
+transaction:
+
+1. If `update_existing: true`: all existing database rows for the area (rooms, exits,
+   extra descriptions, mobiles, objects, object affects, object extra descriptions,
+   shops, resets, specials, objfuns, board records) are deleted.
+2. The area header row is inserted or updated.
+3. All rooms, exits, and extra descriptions are inserted.
+4. All mobs, with all extension data (class line, element line, combat line, loot tables,
+   AI line, lore flags, inline scripts) are inserted.
+5. All objects, with all trailing entries (affects, extra descriptions, level) are inserted.
+6. All shops are inserted.
+7. All resets are inserted in their authored order.
+8. All specials are inserted.
+9. All objfuns are inserted.
+10. Board records for `item_type: board` objects are inserted.
+11. World-link records for planned cross-area exits are updated in
+    `docs/world_links.md` (pending entries → imported entries).
+
+If any step fails, the transaction is rolled back entirely. No partial data is left.
+
+#### Phase 10: Hot-Load
+
+After the transaction commits:
+
+1. For new areas: the area is allocated in the server's in-memory area list. All rooms
+   are instantiated, all mob and object prototypes are loaded, and resets are run
+   immediately.
+2. For updates: the existing in-memory area is quiesced (all mobs and objects currently
+   in-world that originated from this area are extracted and freed), then the area is
+   re-instantiated from the newly loaded database data, and resets are run immediately.
+3. Connected players in rooms within the updated area are moved to their configured recall
+   room before the area is quiesced, with a brief message explaining the area refresh.
+
+#### Phase 11: Cleanup
+
+The submitted directory is deleted from `area/incoming/`. On success, no trace of the
+submission remains in `area/incoming/`.
+
+---
+
+### VI.3. Failure Handling
+
+On failure at any phase:
+
+1. The transaction (if opened) is rolled back.
+2. The in-memory world is not modified.
+3. The submitted directory is moved to `area/incoming/failed/<keyword>/`.
+4. An error file is written to `area/incoming/failed/<keyword>.error` containing:
+   - ISO 8601 timestamp.
+   - Phase name and number where the failure occurred.
+   - Exact error message.
+   - File name (for parse and schema errors).
+   - Line number within the file (for parse errors).
+   - Entity type, vnum, and field name (for content and cross-section errors).
+5. A log message is written to the server log at `WARN` level.
+6. If the submission was triggered via `areaingest run`, the error is also sent to the
+   issuing wizard's terminal via `send_to_char`.
+
+---
+
+### VI.4. Export Mechanics (`areaingest export`)
+
+The export command (`areaingest export <keyword>` or `db_to_files --yaml --area <keyword>`)
+reads all database rows for the named area and produces a complete directory at
+`area/export/<keyword>/`.
+
+Export rules:
+
+- All eight files are always written, even if some contain empty sequences.
+  Empty optional files have the form `mobs: []` (one line, no entries).
+- Exported YAML uses block scalars (`|`) for all description fields.
+- Flag lists are written as flow sequences: `flags: [dark, no_mob]`.
+- Vnums within each file are written in ascending order.
+- String enum and flag names are always used (integers are never emitted for named fields).
+- The exported directory passes ingestion validation without modification. Round-trip
+  fidelity is a hard requirement of the export tool: `import(export(area))` must produce
+  no validation errors and must result in an identical database state.
+- If `area/export/<keyword>/` already exists, it is overwritten.
+
+---
+
+### VI.5. `areaingest` Wizard Command Reference
+
+```
+areaingest list              — List all directories currently in area/incoming/
+areaingest run <keyword>     — Immediately process area/incoming/<keyword>/
+areaingest export <keyword>  — Export <keyword> to area/export/<keyword>/
+areaingest status <keyword>  — Show last ingestion result for <keyword>
+areaingest failures          — List all entries in area/incoming/failed/
+areaingest clear <keyword>   — Remove area/incoming/failed/<keyword>/ and its .error file
+```
+
+Minimum wizard level: 60 for all subcommands. `areaingest run` and `areaingest export`
+are logged to the wizard log at `INFO` level with the issuing character's name.
+
+---
+
+### VI.6. `db_to_files` Offline Tool Reference
+
+`db_to_files` is a standalone binary (built alongside the server) that connects to the
+database without a running server instance.
+
+```
+db_to_files --yaml --area <keyword>           Export one area
+db_to_files --yaml --all                      Export all areas
+db_to_files --yaml --area <keyword> --out <dir>  Export to a specific directory
+db_to_files --validate --area <keyword>       Validate the area directory without importing
+```
+
+`--validate` runs all phases up to but not including the database transaction, then reports
+pass/fail with the full error list. This allows authors to validate locally before
+submitting to a live server.
+
+---
+
+### VI.7. Tick Interval and Locking
+
+The scan interval is `PULSE_AREA` (configurable in `src/headers/config.h`,
+default 75 game pulses, approximately 75 seconds real time). Only one directory is
+processed per tick. If multiple directories are present in `area/incoming/`, they are
+processed in alphabetical order, one per tick.
+
+To prevent the server from processing a directory while the author is still copying files
+into it, the author may create a file named `.lock` inside the directory. The scanner
+skips any directory containing a `.lock` file. The author removes `.lock` when the
+directory is ready. The `.lock` file is automatically removed along with the directory on
+successful ingestion.
+
+---
