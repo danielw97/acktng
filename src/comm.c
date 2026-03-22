@@ -247,6 +247,8 @@ int main(int argc, char **argv)
    int ws_port = -1;
    int control_tls = -1;
    int tls_port = -1;
+   int control_sniff = -1;
+   int sniff_port = -1;
 #ifdef HAVE_OPENSSL
    const char *tls_cert = "../data/tls/cert.pem";
    const char *tls_key = "../data/tls/key.pem";
@@ -303,6 +305,15 @@ int main(int argc, char **argv)
                exit(1);
             }
          }
+         else if (!strcmp(argv[i], "--sniff-port") && i + 1 < argc)
+         {
+            sniff_port = atoi(argv[++i]);
+            if (sniff_port <= 1024)
+            {
+               fprintf(stderr, "--sniff-port must be above 1024.\n");
+               exit(1);
+            }
+         }
 #ifdef HAVE_OPENSSL
          else if (!strcmp(argv[i], "--tls-cert") && i + 1 < argc)
             tls_cert = argv[++i];
@@ -333,21 +344,41 @@ int main(int argc, char **argv)
       control = init_socket(port, INADDR_ANY);
       if (ws_port > 0)
          control_ws = init_socket(ws_port, INADDR_LOOPBACK);
-      if (tls_port > 0)
+      if (tls_port > 0 || sniff_port > 0)
       {
 #ifdef HAVE_OPENSSL
-         if (init_tls_context(tls_cert, tls_key))
-            control_tls = init_socket(tls_port, INADDR_ANY);
-         else
-            fprintf(stderr, "Warning: TLS context init failed; --tls-port ignored.\n");
+         bool tls_ctx_ok = init_tls_context(tls_cert, tls_key);
+         if (tls_port > 0)
+         {
+            if (tls_ctx_ok)
+               control_tls = init_socket(tls_port, INADDR_ANY);
+            else
+               fprintf(stderr, "Warning: TLS context init failed; --tls-port ignored.\n");
+         }
+         if (sniff_port > 0)
+         {
+            if (!tls_ctx_ok)
+               fprintf(stderr,
+                       "Warning: TLS context init failed; sniff port will serve plain only.\n");
+            control_sniff = init_socket(sniff_port, INADDR_ANY);
+         }
 #else
-         fprintf(stderr, "Warning: OpenSSL not compiled in; --tls-port ignored.\n");
+         if (tls_port > 0)
+            fprintf(stderr, "Warning: OpenSSL not compiled in; --tls-port ignored.\n");
+         if (sniff_port > 0)
+         {
+            fprintf(
+                stderr,
+                "Note: OpenSSL not compiled in; sniff port will serve plain connections only.\n");
+            control_sniff = init_socket(sniff_port, INADDR_ANY);
+         }
 #endif
       }
    }
    global_port = port;
    global_ws_port = ws_port;
    global_tls_port = tls_port;
+   global_sniff_port = sniff_port;
    if (fCopyOver)
       abort_threshold = BOOT_DB_ABORT_THRESHOLD;
    boot_db();
@@ -356,14 +387,27 @@ int main(int argc, char **argv)
 #ifndef WIN32
    init_alarm_handler();
 #endif
-   if (ws_port > 0 && tls_port > 0)
+   if (ws_port > 0 && tls_port > 0 && sniff_port > 0)
+      sprintf(
+          log_buf,
+          "ACK! MUD is ready on port %d (telnet), %d (WebSocket loopback), %d (TLS), %d (auto).",
+          port, ws_port, tls_port, sniff_port);
+   else if (ws_port > 0 && tls_port > 0)
       sprintf(log_buf, "ACK! MUD is ready on port %d (telnet), %d (WebSocket loopback), %d (TLS).",
               port, ws_port, tls_port);
+   else if (ws_port > 0 && sniff_port > 0)
+      sprintf(log_buf, "ACK! MUD is ready on port %d (telnet), %d (WebSocket loopback), %d (auto).",
+              port, ws_port, sniff_port);
+   else if (tls_port > 0 && sniff_port > 0)
+      sprintf(log_buf, "ACK! MUD is ready on port %d (telnet), %d (TLS), %d (auto).", port,
+              tls_port, sniff_port);
    else if (ws_port > 0)
       sprintf(log_buf, "ACK! MUD is ready on port %d (telnet) and %d (WebSocket loopback).", port,
               ws_port);
    else if (tls_port > 0)
       sprintf(log_buf, "ACK! MUD is ready on port %d (telnet) and %d (TLS).", port, tls_port);
+   else if (sniff_port > 0)
+      sprintf(log_buf, "ACK! MUD is ready on port %d (telnet) and %d (auto).", port, sniff_port);
    else
       sprintf(log_buf, "ACK! MUD is ready on port %d.", port);
    log_string(log_buf);
@@ -381,12 +425,14 @@ int main(int argc, char **argv)
    /* Seed WHO web output immediately on boot/copyover recovery. */
    list_who_to_output();
 
-   game_loop(control, control_ws, control_tls);
+   game_loop(control, control_ws, control_tls, control_sniff);
    close(control);
    if (control_ws >= 0)
       close(control_ws);
    if (control_tls >= 0)
       close(control_tls);
+   if (control_sniff >= 0)
+      close(control_sniff);
 
    /*
     * That's all, folks.
