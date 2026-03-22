@@ -58,6 +58,11 @@ do
     index=$((index+1))
   done
 
+  # snapshot the executable before launching so we have the exact binary
+  # that ran if a core dump is produced
+  ack_snapshot=$(mktemp ../cores/ack.XXXXXX)
+  cp ../src/ack "$ack_snapshot"
+
   # run the mud
   ../src/ack $plain_port --sniff-port $port --ws-loopback $ws_port --tls-port $tls_port --tls-cert $tls_cert --tls-key $tls_key >$logfile 2>&1
 
@@ -67,10 +72,14 @@ do
       coredir=../cores/$(date +%Y%m%d_%H%M%S)_$$
       mkdir -p "$coredir"
       mv "$corefile" "$coredir/"
-      cp ../src/ack "$coredir/"
+      mv "$ack_snapshot" "$coredir/ack"
+      ack_snapshot=""
       echo "startup: core dump saved to $coredir" >>$logfile
     fi
   done
+
+  # no core dump — discard the snapshot
+  rm -f "$ack_snapshot"
 
   # shutdown?
 
