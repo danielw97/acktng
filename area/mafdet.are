@@ -3949,7 +3949,7 @@ L
 salt-dried trail rations~
 salt-dried trail rations~
 A packet of salt-dried trail rations wrapped in waxed sailcloth lies here.~
-19 0 8388608 1
+8 0 8388608 1
 8 0 0 0 0 0 0 0 0 0
 1
 L
@@ -3958,7 +3958,7 @@ L
 reach road waterskin~
 a reach road waterskin~
 A heavy-stitched waterskin treated inside with salt-tamarisk resin lies here.~
-17 0 8388608 1
+8 0 8388608 1
 5 5 0 0 0 0 0 0 0 0
 1
 L
@@ -4361,7 +4361,7 @@ The surviving text reads in Survey-Administrative voice: "Waystation Levy Schedu
 salt-crusted waterskin~
 a salt-crusted waterskin~
 A waterskin sealed with salt crystal deposits from extended desert use lies here.~
-17 67108864 8388608 1
+8 67108864 8388608 1
 5 5 0 0 0 0 0 0 0 0
 1
 L

@@ -3107,7 +3107,7 @@ cracked water flask~
 @@ba cracked water flask@@N~
 A leather flask cracked along the seams with age, still serviceable enough to carry water through the wastes.
 ~
-17 128 8388608 1
+8 128 8388608 1
 50 1 0 0 0 0 0 0 0 0
 2
 L
@@ -3117,7 +3117,7 @@ dried desert rations~
 @@ydried desert rations@@N~
 Hard tack and dried meat preserved for desert travel, tasteless but sustaining enough to keep you moving.
 ~
-19 128 8388608 1
+8 128 8388608 1
 3 0 0 0 0 0 0 0 0 0
 1
 L

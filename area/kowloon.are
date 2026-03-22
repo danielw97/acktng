@@ -3134,7 +3134,7 @@ L
 waterskin leather~
 a leather waterskin~
 A leather waterskin with a cork stopper lies here.~
-17 0 8388608 1
+8 0 8388608 1
 12 12 0 0 0 0 0 0 0 0
 3
 L
@@ -3143,7 +3143,7 @@ L
 rations trail pack~
 a trail rations pack~
 A waxed-cloth pack of dried trail rations lies here.~
-19 0 8388608 1
+8 0 8388608 1
 24 0 0 0 0 0 0 0 0 0
 4
 L
@@ -3179,7 +3179,7 @@ L
 rice spiced bowl~
 a bowl of spiced rice~
 A steaming bowl of spiced rice sits here.~
-19 0 8388608 1
+8 0 8388608 1
 12 0 0 0 0 0 0 0 0 0
 2
 L
@@ -3188,7 +3188,7 @@ L
 fish dried bundle~
 a dried fish bundle~
 A bundle of salt-dried fish wrapped in oiled paper lies here.~
-19 0 8388608 1
+8 0 8388608 1
 18 0 0 0 0 0 0 0 0 0
 3
 L
@@ -3197,7 +3197,7 @@ L
 tea black pot~
 a pot of black tea~
 A small clay pot of brewed black tea sits here.~
-17 0 8388608 1
+8 0 8388608 1
 6 6 0 0 0 0 0 0 0 0
 2
 L
@@ -3206,7 +3206,7 @@ L
 plums pickled jar~
 a jar of pickled plums~
 A ceramic jar of pickled plums sealed with wax lies here.~
-19 0 8388608 1
+8 0 8388608 1
 12 0 0 0 0 0 0 0 0 0
 3
 L
@@ -3215,7 +3215,7 @@ L
 wine rice flask~
 a flask of rice wine~
 A small ceramic flask of rice wine lies here.~
-17 0 8388608 1
+8 0 8388608 1
 8 8 0 0 0 0 0 0 0 0
 3
 L
@@ -3224,7 +3224,7 @@ L
 bread sesame loaf~
 a sesame bread loaf~
 A round loaf of sesame-crusted bread lies here.~
-19 0 8388608 1
+8 0 8388608 1
 10 0 0 0 0 0 0 0 0 0
 2
 L
@@ -3404,7 +3404,7 @@ L
 biscuit barrel ship~
 a ship's biscuit barrel~
 A small sealed barrel of ship's biscuits lies here.~
-19 0 8388608 1
+8 0 8388608 1
 24 0 0 0 0 0 0 0 0 0
 5
 L
@@ -3413,7 +3413,7 @@ L
 rations patrol kit~
 a patrol ration kit~
 A sealed canvas kit containing standard patrol rations lies here.~
-19 0 8388608 1
+8 0 8388608 1
 18 0 0 0 0 0 0 0 0 0
 4
 L
@@ -3503,7 +3503,7 @@ L
 fountain public water~
 a public water fountain~
 A stone water fountain fed by an underground pipe stands here.~
-25 0 8388608 1
+12 0 8388608 1
 50 50 0 0 0 0 0 0 0 0
 15
 L

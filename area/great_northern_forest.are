@@ -10445,7 +10445,7 @@ rations trail warden~
 a pack of warden's trail rations~
 A pack of warden's trail rations sits here, neatly wrapped.
 ~
-19 0 8388608 1
+8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 6
 L
@@ -10455,7 +10455,7 @@ flask resin mire clan~
 a mire-clan resin flask~
 A mire-clan resin flask sits here, sealed with wax.
 ~
-17 0 8388608 1
+8 0 8388608 1
 0 10 2 0 0 0 0 0 0 0
 4
 L
@@ -10465,7 +10465,7 @@ mushroom forest edible~
 an edible forest mushroom~
 An edible forest mushroom grows here at the base of a tree.
 ~
-19 0 8388608 1
+8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 2
 L
@@ -10475,7 +10475,7 @@ tea pine northern~
 a pouch of northern pine tea~
 A pouch of northern pine tea lies here, fragrant and dry.
 ~
-19 0 8388608 1
+8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 2
 L
@@ -10485,7 +10485,7 @@ bandage herb poultice~
 a herbal poultice bandage~
 A herbal poultice bandage lies here, smelling of marsh herbs.
 ~
-19 0 8388608 1
+8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 3
 L

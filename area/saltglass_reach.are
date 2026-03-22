@@ -9104,7 +9104,7 @@ L
 reach warden's ration brick~
 @@yReach Warden'S Ration Brick@@N~
 a reach warden's ration brick lies here.~
-19 0 8388608 1
+8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9113,7 +9113,7 @@ L
 salt-preserved caravan jerky~
 @@ySalt-Preserved Caravan Jerky@@N~
 a salt-preserved caravan jerky lies here.~
-19 0 8388608 1
+8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 2
 L
@@ -9122,7 +9122,7 @@ L
 brackish well water flask~
 @@yBrackish Well Water Flask@@N~
 a brackish well water flask lies here.~
-17 0 8388608 1
+8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 4
 L
