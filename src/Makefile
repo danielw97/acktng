@@ -25,12 +25,27 @@ PROF    =
 OPENSSL_CFLAGS := $(shell pkg-config --cflags openssl 2>/dev/null)
 OPENSSL_LIBS   := $(shell pkg-config --libs   openssl 2>/dev/null)
 
+LIBPQ_CFLAGS   := $(shell pkg-config --cflags libpq 2>/dev/null)
+LIBPQ_LIBS     := $(shell pkg-config --libs   libpq 2>/dev/null)
+ifeq ($(LIBPQ_LIBS),)
+    LIBPQ_HEADER := $(shell find /usr/include -name libpq-fe.h 2>/dev/null | head -1)
+    ifneq ($(LIBPQ_HEADER),)
+        LIBPQ_LIBS   := -lpq
+        LIBPQ_CFLAGS := -I$(dir $(LIBPQ_HEADER))
+    endif
+endif
+
 C_FLAGS = -O -g2 -Wall -DACK_43 $(PROF) $(SOLARIS_FLAG) -Iheaders -Iai/headers -Itests/headers -Iquests
 L_FLAGS = -O -g2 -lcrypt -lpthread $(PROF) $(SOLARIS_LINK) -lz
 
 ifneq ($(OPENSSL_LIBS),)
     C_FLAGS += -DHAVE_OPENSSL $(OPENSSL_CFLAGS)
     L_FLAGS += $(OPENSSL_LIBS)
+endif
+
+ifneq ($(LIBPQ_LIBS),)
+    C_FLAGS += -DHAVE_LIBPQ $(LIBPQ_CFLAGS)
+    L_FLAGS += $(LIBPQ_LIBS)
 endif
 
 OBJDIR = build/obj
@@ -176,7 +191,7 @@ SKILL_OBJS = \
 
 QUEST_OBJS = quests/template.o quests/state.o quests/cartography.o quests/notify.o quests/commands.o quests/crusade.o
 
-O_FILES = affect.o ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_pub_society.o act_wiz.o npc_dialogue.o \
+O_FILES = affect.o ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_pub_society.o act_wiz.o npc_dialogue.o db/db_conn.o db/db_worker.o \
 	  areachk.o board.o build.o buildare.o buildtab.o caravan.o clutch.o comm.o hotreboot.o login.o socket.o prompt.o \
 	  const.o const_color.o const_class.o const_race.o const_clan.o const_exp.o const_liq.o const_pub_society.o \
 	  damage.o cloak.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
@@ -236,6 +251,10 @@ $(OBJDIR)/%.o: %.c headers/ack.h
 scan: $(OBJDIR)/scan.o
 	rm -f scan
 	$(CC) $(L_FLAGS) -o scan $(OBJDIR)/scan.o
+
+# Migration / DB tools (require HAVE_LIBPQ)
+tools/import_to_db: tools/import_to_db.c
+	$(CC) -O -g2 -Wall $(LIBPQ_CFLAGS) -o tools/import_to_db tools/import_to_db.c $(LIBPQ_LIBS)
 
 # Check that all source files match the .clang-format style (fails if any differ)
 lint:
