@@ -1101,7 +1101,176 @@ The `do_areasave` command in `src/act_wiz.c` becomes a no-op after Phase 8. Edit
 
 ---
 
-## 10. Integration Testing Strategy
+## 10. Area Ingestion Pipeline
+
+Once the database is the authoritative source for area content, a mechanism is needed to add new areas without a full server reboot and without manually running SQL. The ingestion pipeline provides a file-drop interface: a `.are` file placed in a staging directory is validated, imported into the database, loaded into the live server, and deleted — atomically, from the server's perspective.
+
+### 10.1 Staging Directory
+
+New area files are placed in **`area/incoming/`**.
+
+This co-locates the staging area with the existing `area/` directory (where the server runs from) and keeps all area-related files together. Two subdirectories are created by the server at boot if they do not exist:
+
+```
+area/incoming/          ← author drops .are files here
+area/incoming/failed/   ← failed ingestions moved here, with an error log alongside
+```
+
+`area/incoming/` and `area/incoming/failed/` are both gitignored.
+
+### 10.2 Detection: Polling in the Update Loop
+
+The server polls `area/incoming/` on every `PULSE_AREA` tick (the same timer that drives area resets). The polling function `area_incoming_poll()` is called from `area_update()` in `update.c`.
+
+`opendir()` / `readdir()` is used to scan for `*.are` files. Processing is limited to **one file per tick** to bound the work done in a single game loop iteration. If multiple files are present, each subsequent file is handled on the next tick.
+
+inotify is explicitly not used. It would require either a thread (complicating the single-threaded game loop) or integration into the `select()` fd set in `comm.c`. Polling on `PULSE_AREA` is already the model for periodic file-system work in this codebase and avoids that complexity entirely.
+
+### 10.3 Strict Format Requirements
+
+Current `.are` file loading crashes the server on parse errors (`kill(getpid(), SIGQUIT)` or `exit(1)`). The ingestion pipeline cannot tolerate this — a malformed drop file must be rejected cleanly, not crash the live server.
+
+The ingestion validator therefore enforces a **strict superset** of the format checked by `test_area_format.c`. Every rule below is a hard rejection (no warnings, no partial loads):
+
+#### Required `#AREA` directives
+
+All of the following must be present and well-formed:
+
+| Directive | Requirement |
+|-----------|-------------|
+| `Q 16` | Exact string. Any other value is rejected. |
+| `V <min> <max>` | Both integers present; `min < max`; `max - min >= 9` (minimum viable range). |
+| `K <keyword>~` | Non-empty, lowercase, no spaces, unique across all loaded areas. |
+| `L <label>~` | Non-empty. |
+| `N <number>` | Integer. |
+| `I <min_level> <max_level>` | Both integers; `0 <= min_level <= max_level <= 105`. |
+| `O Virant~` | Exact string. Any other owner is rejected. |
+| `F <rate>` | Integer `>= 1`. |
+
+#### Vnum envelope
+
+- The `V <min> <max>` range must **not overlap** any existing area already in the database. Overlap is tested as `new_min <= existing_max AND new_max >= existing_min`.
+- Every room, mobile, and object vnum in the file must fall within `[V_min, V_max]` inclusive.
+- Vnum ranges are not pre-provisioned — the submitter is responsible for choosing a non-conflicting range. The error message on conflict names the existing area whose range it overlaps.
+
+#### Section requirements
+
+- `#ROOMS` must be present and contain at least one room.
+- All string fields must be tilde-terminated with no embedded bare tildes.
+- No blank lines within `#RESETS` (blank lines are valid between sections, not within them).
+- Mobile `long_descr` must follow the exact format: one line of text, then a newline, then `~` on its own line.
+- No double newlines (`\n\n`) within any tilde-delimited string.
+- Exit destination vnums must reference either: (a) a room in the same file, or (b) a room vnum already present in the `rooms` table. Forward references within the same file are allowed; references to non-existent rooms in external areas are rejected.
+- Reset `M` and `O` commands must reference vnums defined in this file or already in the database.
+- `#SPECIALS` entries must name a valid `spec_*` function (validated against the same table `test_area_format.c` uses).
+
+#### Encoding
+
+- All text is UTF-8. Null bytes are rejected.
+- Lines must end with `\n` (Unix line endings). `\r\n` is stripped silently; bare `\r` is rejected.
+
+### 10.4 Validation and Ingestion Flow
+
+Processing a file in `area/incoming/foo.are` proceeds in three phases. Any failure in any phase aborts and moves the file to `area/incoming/failed/`.
+
+**Phase 1 — Pre-parse validation (no DB contact)**
+
+1. Open the file. If it cannot be opened, abort.
+2. Read the entire file into memory (max 4 MB; larger files are rejected).
+3. Run the strict format validator (§10.3) on the in-memory buffer. This catches all structural and encoding errors without touching the database or the live world.
+4. If any error is found, write `area/incoming/failed/foo.are.error` with the line number and error message, move `foo.are` to `area/incoming/failed/foo.are`, log to the server log, and return.
+
+**Phase 2 — DB ingestion (inside a transaction)**
+
+1. Open a synchronous `libpq` connection (same pattern as the boot connection in §7.3 — this is a rare, staff-triggered operation and blocking is acceptable).
+2. `BEGIN`.
+3. Call the same import logic used by `import_to_db` for the area, mob, room, object, reset, shop, specials, and objfuns tables. All inserts go into the transaction.
+4. If any insert fails (constraint violation, duplicate vnum, etc.), `ROLLBACK`, write the error file, move the `.are` to `failed/`, and return.
+5. `COMMIT`.
+
+**Phase 3 — Hot-load into memory**
+
+1. Call the existing `db_load_*` functions for the newly inserted area (same functions used at boot), selecting `WHERE area_id = <new_id>`. This populates the in-memory room, mob, and object hash tables.
+2. Link the new `AREA_DATA` into the `area_list` linked list in the correct sorted position.
+3. Log success: `"area_incoming: loaded area '<name>' vnums %d-%d"`.
+4. Delete `area/incoming/foo.are`.
+
+The entire ingestion — including Phase 2 and Phase 3 — runs on the game thread during a single `PULSE_AREA` tick. Phase 2 is synchronous on the boot connection pattern; the game loop stalls for the duration of the DB round-trip. This is acceptable because ingestion is rare (staff-only, infrequent) and the window is bounded by a single area's worth of inserts (hundreds of rows, not millions). A log message is emitted before and after so operators can see the stall in the log.
+
+### 10.5 Failure Handling
+
+On any failure:
+
+- The `.are` file is moved to `area/incoming/failed/<filename>`.
+- A companion `area/incoming/failed/<filename>.error` is written with:
+  - The phase that failed (pre-parse / DB ingestion / hot-load)
+  - The exact error message and line number (for pre-parse failures)
+  - The PostgreSQL error string (for DB failures)
+  - A timestamp
+- A `log_f()` message is emitted to the server log at `LOGLEV_WARN` level.
+- The database transaction is rolled back (Phase 2 failures). No partial data is left.
+- The in-memory world is unaffected (Phase 3 failures leave the DB updated but the in-memory load incomplete — this is logged as a critical error and the area's DB rows are deleted to keep DB and memory in sync).
+
+### 10.6 Schema Addition: `area_incoming_log` Table
+
+A lightweight audit log for all ingestion attempts:
+
+```sql
+CREATE TABLE area_incoming_log (
+    id          SERIAL                   PRIMARY KEY,
+    filename    TEXT                     NOT NULL,
+    attempted_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
+    success     BOOLEAN                  NOT NULL,
+    area_id     INTEGER                  REFERENCES areas(id) ON DELETE SET NULL,
+    error_phase TEXT,                    -- 'preparse', 'db', 'hotload', or NULL on success
+    error_msg   TEXT                     -- full error text, or NULL on success
+);
+```
+
+This lets operators query what was ingested and when, and diagnose past failures, without parsing log files.
+
+### 10.7 Staff Command: `areaingest`
+
+A new wizard command `do_areaingest` provides manual control:
+
+```
+areaingest list          — list files currently in area/incoming/
+areaingest run <file>    — immediately process a specific file (bypass the poll timer)
+areaingest failures      — list files in area/incoming/failed/ with error summaries
+areaingest retry <file>  — move a failed file back to area/incoming/ for re-processing
+areaingest purge         — delete all files in area/incoming/failed/
+```
+
+`areaingest run` is the primary workflow for interactive use: a builder drops a file into `area/incoming/`, then types `areaingest run foo.are` to ingest it immediately without waiting for the next `PULSE_AREA` tick. The poll-based auto-ingest is a background convenience for automated pipelines.
+
+### 10.8 Affected Files (Ingestion Pipeline)
+
+| File | Change |
+|------|--------|
+| `src/update.c` | Add `area_incoming_poll()` call in `area_update()` |
+| `src/areaingest.c` | New: ingestion validator, DB import, hot-load, failure handling |
+| `src/areaingest.h` | New: `area_incoming_poll()`, `do_areaingest()` declarations |
+| `src/act_wiz.c` | Register `do_areaingest` command |
+| `src/db.c` | Expose `db_load_area_by_id()` for hot-load use by ingestion |
+| `area/schema.sql` | Add `area_incoming_log` table |
+| `.gitignore` | Add `area/incoming/` and `area/incoming/failed/` |
+
+### 10.9 Checklist (Ingestion Pipeline)
+
+- [ ] Create `area/incoming/` and `area/incoming/failed/` directories; add both to `.gitignore`
+- [ ] Add `area_incoming_log` table to `area/schema.sql`
+- [ ] Write `src/areaingest.c`: Phase 1 validator (strict rules from §10.3), Phase 2 DB transaction, Phase 3 hot-load, failure handler
+- [ ] Write `src/areaingest.h`
+- [ ] Add `area_incoming_poll()` call to `area_update()` in `src/update.c`
+- [ ] Implement `do_areaingest` with `list`, `run`, `failures`, `retry`, `purge` subcommands in `src/areaingest.c`
+- [ ] Register `do_areaingest` in `src/act_wiz.c`
+- [ ] Expose `db_load_area_by_id(PGconn *conn, int area_id)` in `src/db.c`
+- [ ] Write `src/tests/test_areaingest.c`: unit tests for the Phase 1 validator (good file, each rejection case)
+- [ ] Add `areaingest` help file to `shelp/`
+
+---
+
+## 11. Integration Testing Strategy
 
 The existing integration test (`integration-test.sh`) boots the server, walks the full new-player login flow over WebSocket, and monitors for crashes. It currently assumes the server can boot by reading flat files from `area/`. The DB migration breaks this assumption: once the flat-file load code is removed, the server needs a live PostgreSQL instance to boot at all.
 
@@ -1210,7 +1379,7 @@ fi
 
 ---
 
-## 11. Trade-offs and Risks
+## 12. Trade-offs and Risks
 
 ### Advantages
 - Referential integrity enforced at the database layer.
@@ -1239,7 +1408,7 @@ fi
 
 ---
 
-## 12. Future Work (Out of Scope)
+## 13. Future Work (Out of Scope)
 
 - **Area hot-reload:** Re-loading a single area from the database without a full reboot.
 - **Area versioning:** A `changelog` table recording who changed what and when.
@@ -1248,7 +1417,7 @@ fi
 
 ---
 
-## 13. Implementation Checklist
+## 14. Implementation Checklist
 
 For the implementing Claude session:
 
