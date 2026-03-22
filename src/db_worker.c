@@ -31,7 +31,7 @@
 int db_worker_failed = 0; /* set to 1 on unrecoverable DB error      */
 
 /*
- * Connection string read from area/db.conf at boot.  Set by
+ * Connection string read from /data/db.conf at boot.  Set by
  * db_open_boot_connection() in db.c before db_worker_start() is called.
  */
 char *db_worker_connstr = NULL;

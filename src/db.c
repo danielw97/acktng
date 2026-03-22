@@ -653,7 +653,7 @@ void boot_db(void)
 
    /*
     * Read in all the area files.
-    * When USE_DB_LOAD is compiled in and area/db.conf is present, the DB
+    * When USE_DB_LOAD is compiled in and /data/db.conf is present, the DB
     * loaders run instead.  If they succeed, db_booted is set to 1 and the
     * flat-file loading section is skipped entirely.
     */
@@ -3395,7 +3395,7 @@ void message_update(void)
  * of the data source.
  *
  * db_boot_from_postgres() is called from boot_db() when USE_DB_LOAD is
- * compiled in AND area/db.conf is present.  Returns 1 on success, 0 on
+ * compiled in AND /data/db.conf is present.  Returns 1 on success, 0 on
  * failure (which causes boot_db() to fall through to the flat-file path).
  * ========================================================================= */
 #ifdef USE_DB_LOAD
@@ -3437,7 +3437,7 @@ static AREA_DATA *db_find_area_by_id(int id)
 }
 
 /* ---------------------------------------------------------------------- */
-/* Open boot connection from area/db.conf                                   */
+/* Open boot connection from /data/db.conf                                  */
 /* ---------------------------------------------------------------------- */
 
 static PGconn *db_open_boot_connection(void)
@@ -3446,10 +3446,10 @@ static PGconn *db_open_boot_connection(void)
    char connstr[1024];
    FILE *fp;
 
-   snprintf(confpath, sizeof(confpath), "%sdb.conf", AREA_DIR);
+   snprintf(confpath, sizeof(confpath), "/data/db.conf");
    fp = fopen(confpath, "r");
    if (!fp)
-      return NULL; /* no db.conf → flat-file boot */
+      return NULL; /* no /data/db.conf → flat-file boot */
 
    if (!fgets(connstr, sizeof(connstr), fp))
    {
@@ -4240,7 +4240,7 @@ static int db_boot_from_postgres(void)
 {
    PGconn *conn = db_open_boot_connection();
    if (!conn)
-      return 0; /* no db.conf or connection failed → flat-file boot */
+      return 0; /* no /data/db.conf or connection failed → flat-file boot */
 
    log_string("db_boot: Connected to PostgreSQL; loading world from database.");
 

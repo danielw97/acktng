@@ -2,8 +2,8 @@
  * test_db_roundtrip.c — Basic connectivity and schema round-trip test.
  *
  * Verifies that:
- *   1. area/db.conf exists (if not, SKIP)
- *   2. The connection string in db.conf can reach PostgreSQL
+ *   1. /data/db.conf exists (if not, SKIP)
+ *   2. The connection string in /data/db.conf can reach PostgreSQL
  *   3. The expected tables exist (schema was applied)
  *   4. A player row can be inserted, read back, and deleted (write→read round-trip)
  *
@@ -245,10 +245,10 @@ static void test_schema_version(PGconn *conn)
 
 int main(void)
 {
-   printf("test_db_roundtrip: looking for area/db.conf ...\n");
+   printf("test_db_roundtrip: looking for /data/db.conf ...\n");
 
    char connstr[1024] = {0};
-   const char *paths[] = {"../area/db.conf", "area/db.conf", NULL};
+   const char *paths[] = {"/data/db.conf", NULL};
    int found = 0;
    for (int i = 0; paths[i]; i++)
    {
@@ -262,7 +262,7 @@ int main(void)
 
    if (!found)
    {
-      printf("test_db_roundtrip: SKIP — no area/db.conf (normal for CI)\n");
+      printf("test_db_roundtrip: SKIP — no /data/db.conf (normal for CI)\n");
       return 0;
    }
 

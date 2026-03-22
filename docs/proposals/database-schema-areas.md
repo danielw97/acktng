@@ -72,13 +72,13 @@ PostgreSQL is chosen because:
 
 ### Connection Configuration
 
-The C server reads the connection string from `area/db.conf`, a single line in libpq connection-string format:
+The C server reads the connection string from `/data/db.conf`, a single line in libpq connection-string format:
 
 ```
 host=db.example.com port=5432 dbname=acktng user=ack password=secret sslmode=require
 ```
 
-The standard PostgreSQL environment variables (`PGHOST`, `PGPORT`, `PGDATABASE`, `PGUSER`, `PGPASSWORD`) are also supported as a fallback (libpq reads them automatically when `db.conf` is absent). `area/db.conf` is gitignored.
+The standard PostgreSQL environment variables (`PGHOST`, `PGPORT`, `PGDATABASE`, `PGUSER`, `PGPASSWORD`) are also supported as a fallback (libpq reads them automatically when `/data/db.conf` is absent). `/data/db.conf` is gitignored.
 
 ---
 
@@ -796,7 +796,7 @@ Unlike area/help/shelp/lore (which are read-only at boot), the data/ and player/
 
 #### Boot sequence
 
-1. Open a synchronous boot connection using `area/db.conf` (falling back to PG environment variables).
+1. Open a synchronous boot connection using `/data/db.conf` (falling back to PG environment variables).
 2. Check `schema_version` — abort if it does not match `DB_SCHEMA_VERSION` compiled into the binary.
 3. Run all `db_load_*` functions in dependency order: areas → rooms → mobiles → objects → resets → shops → specials → objfuns → helps → shelps → lore → bans → socials → clans → rulers → brands → room marks → corpses → sysdata.
 4. Close the boot connection.
@@ -969,7 +969,7 @@ This keeps the server running through a DB outage at the cost of reverting to fl
 | `src/tools/db_to_files.c` | New: export all six content stores |
 | `src/tests/test_db_roundtrip.c` | New: unit test for import→export round-trip |
 | `area/schema.sql` | New: canonical schema DDL |
-| `area/db.conf` | New: libpq connection string (gitignored) |
+| `/data/db.conf` | New: libpq connection string (gitignored) |
 | `area/area.lst` | Retired (kept in `area/legacy/`) |
 | `area/legacy/` | New: all original `.are` files |
 | `help/legacy/` | New: all original `help/` files |
@@ -984,7 +984,7 @@ This keeps the server running through a DB outage at the cost of reverting to fl
 
 **Not affected:** `docs/lore/` — source lore documents remain unchanged in version control.
 
-`area/db.conf` is added to `.gitignore`. The canonical source of truth for schema structure is `area/schema.sql`; for content, the database itself is authoritative (the flat files in `*/legacy/` serve only as the migration input and rollback archive).
+`/data/db.conf` is added to `.gitignore`. The canonical source of truth for schema structure is `area/schema.sql`; for content, the database itself is authoritative (the flat files in `*/legacy/` serve only as the migration input and rollback archive).
 
 ---
 
@@ -996,12 +996,12 @@ The strategy is divided into two phases matching the migration phases in Section
 
 ### 9.1 Phases 1–7: Flat-file fallback (transitional)
 
-During migration Phases 1–7, the new DB load functions live behind `#ifdef USE_DB_LOAD` while the flat-file loaders remain in the binary. The server checks for `area/db.conf` at boot:
+During migration Phases 1–7, the new DB load functions live behind `#ifdef USE_DB_LOAD` while the flat-file loaders remain in the binary. The server checks for `/data/db.conf` at boot:
 
-- If `area/db.conf` **exists** → open the PostgreSQL connection and use the DB loaders.
-- If `area/db.conf` **is absent** → fall back to the flat-file loaders.
+- If `/data/db.conf` **exists** → open the PostgreSQL connection and use the DB loaders.
+- If `/data/db.conf` **is absent** → fall back to the flat-file loaders.
 
-The integration test never places a `db.conf`, so it always takes the flat-file path. No changes to `integration-test.sh` or CI are required through Phase 7. The DB code path is exercised separately by the round-trip unit test (`test_db_roundtrip.c`) and by manual developer testing against a local PostgreSQL instance.
+The integration test never places a `/data/db.conf`, so it always takes the flat-file path. No changes to `integration-test.sh` or CI are required through Phase 7. The DB code path is exercised separately by the round-trip unit test (`test_db_roundtrip.c`) and by manual developer testing against a local PostgreSQL instance.
 
 ### 9.2 Phase 8+: Self-contained PostgreSQL in `integration-test.sh`
 
@@ -1025,7 +1025,7 @@ fi
 PG_DATA="/tmp/mud-test-pgdata-$$"
 PG_PORT=$(python3 -c \
     "import socket; s=socket.socket(); s.bind(('', 0)); print(s.getsockname()[1]); s.close()")
-DB_CONF="$AREA_DIR/db.conf"
+DB_CONF="/data/db.conf"
 ```
 
 **Extended `cleanup` function:**
@@ -1058,7 +1058,7 @@ echo "integration-test: applying schema and importing content..."
 psql -h /tmp -p "$PG_PORT" -U ack -d acktng -f "$AREA_DIR/schema.sql" -q
 "$SCRIPT_DIR/tools/import_to_db" "host=/tmp port=$PG_PORT dbname=acktng user=ack"
 
-# Write db.conf so the server finds the cluster.
+# Write /data/db.conf so the server finds the cluster.
 echo "host=/tmp port=$PG_PORT dbname=acktng user=ack" > "$DB_CONF"
 ```
 
@@ -1120,7 +1120,7 @@ fi
 | Migration loses data (parsing edge cases) | Round-trip test: import all files, export back, diff against originals; `raw_save` column preserved during transition |
 | `resets.seq` ordering fragile if rows are reordered | Load always uses `ORDER BY seq`; `seq` is immutable once set |
 | 64-bit `act_flags` / `extra_flags` stored as signed `BIGINT` | C load code casts via `(unsigned long long)(int64_t)`; audit areas for bit-63 usage before migration |
-| `db.conf` contains credentials | Gitignored; use `sslmode=require` and a restricted DB role with SELECT/INSERT/UPDATE/DELETE on all tables |
+| `/data/db.conf` contains credentials | Gitignored; use `sslmode=require` and a restricted DB role with SELECT/INSERT/UPDATE/DELETE on all tables |
 | Player inventory JSONB is opaque to SQL queries | A follow-on `player_items` normalisation table can be added without changing the server code path |
 | `data/chest/` contains nested objects not covered by this proposal | `data/chest/` left as flat files; added to future work |
 
@@ -1142,7 +1142,7 @@ For the implementing Claude session:
 
 **Setup**
 - [ ] Provision PostgreSQL; create `acktng` database and `ack` role with appropriate grants
-- [ ] Add `area/db.conf` to `.gitignore`
+- [ ] Add `/data/db.conf` to `.gitignore`
 - [ ] Add `-lpq` to `src/Makefile` `LIBS`
 - [ ] Write `area/schema.sql` with all DDL from Section 4 (all 26 tables)
 - [ ] Apply `schema.sql` to the database
