@@ -92,7 +92,7 @@ void stop_idling(CHAR_DATA *ch);
 /*
  * Forward declarations for socket.c-internal functions used before their definitions
  */
-void new_descriptor(int control, bool is_tls);
+void new_descriptor(int control, bool is_tls, bool do_sniff);
 void init_descriptor(DESCRIPTOR_DATA *dnew, int desc);
 bool read_from_descriptor(DESCRIPTOR_DATA *d);
 bool write_websocket_frame(DESCRIPTOR_DATA *d, unsigned char opcode, const unsigned char *payload,
@@ -109,9 +109,33 @@ DESCRIPTOR_DATA *d_next; /* Next descriptor in loop      */
 int global_port;
 int global_ws_port = -1;
 int global_tls_port = -1;
+int global_sniff_port = -1;
 
 #ifdef HAVE_OPENSSL
 static SSL_CTX *global_ssl_ctx = NULL;
+
+/*
+ * Peek at the first byte of the connection to detect a TLS ClientHello (0x16).
+ * Waits up to 500ms for data to arrive.  Returns TRUE if TLS, FALSE otherwise.
+ */
+static bool sniff_is_tls(int fd)
+{
+   fd_set fds;
+   struct timeval tv;
+   unsigned char byte;
+   int n;
+
+   FD_ZERO(&fds);
+   FD_SET(fd, &fds);
+   tv.tv_sec = 0;
+   tv.tv_usec = 500000; /* 500ms */
+   if (select(fd + 1, &fds, NULL, NULL, &tv) <= 0)
+      return FALSE;
+   n = recv(fd, &byte, 1, MSG_PEEK);
+   if (n <= 0)
+      return FALSE;
+   return byte == 0x16;
+}
 #endif
 
 /* MSSP boot-time counters (populated by init_mssp_counts()) */
@@ -702,7 +726,7 @@ void reopen_socket(int sig)
 
 /* + */
 
-void game_loop(int control, int control_ws, int control_tls)
+void game_loop(int control, int control_ws, int control_tls, int control_sniff)
 {
    static struct timeval null_time;
    struct timeval last_time;
@@ -752,6 +776,11 @@ void game_loop(int control, int control_ws, int control_tls)
             close(control_tls);
             control_tls = init_socket(global_tls_port, INADDR_ANY);
          }
+         if (control_sniff >= 0)
+         {
+            close(control_sniff);
+            control_sniff = init_socket(global_sniff_port, INADDR_ANY);
+         }
          reopen_flag = 0;
       }
 
@@ -772,6 +801,11 @@ void game_loop(int control, int control_ws, int control_tls)
       {
          FD_SET(control_tls, &in_set);
          maxdesc = UMAX(maxdesc, control_tls);
+      }
+      if (control_sniff >= 0)
+      {
+         FD_SET(control_sniff, &in_set);
+         maxdesc = UMAX(maxdesc, control_sniff);
       }
 
       for (d = first_desc; d; d = d->next)
@@ -809,11 +843,13 @@ void game_loop(int control, int control_ws, int control_tls)
        * New connection?
        */
       if (FD_ISSET(control, &in_set))
-         new_descriptor(control, FALSE);
+         new_descriptor(control, FALSE, FALSE);
       if (control_ws >= 0 && FD_ISSET(control_ws, &in_set))
-         new_descriptor(control_ws, FALSE);
+         new_descriptor(control_ws, FALSE, FALSE);
       if (control_tls >= 0 && FD_ISSET(control_tls, &in_set))
-         new_descriptor(control_tls, TRUE);
+         new_descriptor(control_tls, TRUE, FALSE);
+      if (control_sniff >= 0 && FD_ISSET(control_sniff, &in_set))
+         new_descriptor(control_sniff, FALSE, TRUE);
 
       /*
        * Kick out the freaky folks.
@@ -1017,7 +1053,7 @@ void free_desc(DESCRIPTOR_DATA *d)
       dispose(d->outbuf, d->outsize);
 }
 
-void new_descriptor(int control, bool is_tls)
+void new_descriptor(int control, bool is_tls, bool do_sniff)
 {
    static DESCRIPTOR_DATA d_zero;
    char buf[MSL];
@@ -1062,6 +1098,8 @@ void new_descriptor(int control, bool is_tls)
    dnew->childpid = 0;
 
 #ifdef HAVE_OPENSSL
+   if (do_sniff)
+      is_tls = sniff_is_tls(desc);
    if (is_tls && global_ssl_ctx != NULL)
    {
       SSL *ssl;
@@ -1112,6 +1150,7 @@ void new_descriptor(int control, bool is_tls)
    }
 #else
    (void)is_tls;
+   (void)do_sniff;
 #endif
 
    size = sizeof(sock);
